@@ -1,67 +1,64 @@
 ---
-title: "^= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.^="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "assignment statements, compound"
-  - "statements [Visual Basic], compound assignment"
-  - "^= operator [Visual Basic]"
-  - "compound assignment statements"
+title: ^=-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.^=
+helpviewer_keywords:
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- ^= operator [Visual Basic]
+- compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fa9d87d2f090a8c18aaab742e73878c7b80f55c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ^= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Erhebt den Wert einer Variablen oder Eigenschaft zur Potenz eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft zu.  
+# <a name="-operator-visual-basic"></a>^=-Operator (Visual Basic)
+Löst den Wert einer Variablen oder Eigenschaft, um die Leistungsfähigkeit eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 variableorproperty ^= expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich.  Beliebige numerische Variable oder Eigenschaft.  
+ Erforderlich. Eine beliebige numerische Variable oder eine Eigenschaft.  
   
  `expression`  
- Erforderlich.  Ein beliebiger numerischer Ausdruck.  
+ Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
-## Hinweise  
- Das Element auf der linken Seite des Operators `^=` kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.  Die Variable oder die Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)sein.  
+## <a name="remarks"></a>Hinweise  
+ Das Element auf der linken Seite von der `^=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Der Operator `^=` wird anfänglich den Wert der Variablen oder Eigenschaft auf der linken Seite des Operators\) mit dem Wert des Ausdrucks durch \(auf der rechten Seite des Operators\).  Der Operator weist dann das Ergebnis dieses Vorgangs wieder in der Variablen oder Eigenschaft zu.  
+ Die `^=` löst der Operator zuerst den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators) mit der der Wert des Ausdrucks (auf der rechten Seite des Operators). Der Operator weist das Ergebnis dieses Vorgangs dann der Variablen oder Eigenschaft an.  
   
- Visual Basic führt eine Potenzierung immer mit dem [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md) aus.  Operanden eines anderen Typs werden in `Double` konvertiert. Als Ergebnis wird immer ein Wert vom `Double`\-Typ ermittelt.  
+ Visual Basic führt immer Potenzierung der [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md). Die Operanden eines anderen Typs konvertiert werden `Double`, und das Ergebnis ist immer `Double`.  
   
- Der Wert von `expression` kann ein Bruch, negativ oder beides sein.  
+ Der Wert des `expression` kann Bruch, negativ oder beides.  
   
-## Überladen  
- Der [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `^` hat Auswirkungen auf das Verhalten des Operators `^=`.  Wenn im Code `^=` auf eine Klasse oder Struktur angewendet wird, die `^` überlädt, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Überladen  
+ Die [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Überladen der `^` Operator wirkt sich auf das Verhalten der `^=` Operator. Wenn im Code verwendet `^=` auf eine Klasse oder Struktur, die Überladungen `^`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird der Operator `^=` verwendet, um den Wert einer `Integer`\-Variablen mit einer zweiten Variablen zu potenzieren und das Ergebnis der ersten Variablen zuzuweisen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `^=` Operator zum Auslösen des Wertes eines `Integer` Variable mit einer zweiten Variable und das Ergebnis die erste Variable zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
   
-## Siehe auch  
- [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Siehe auch  
+ [^-Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
+ [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

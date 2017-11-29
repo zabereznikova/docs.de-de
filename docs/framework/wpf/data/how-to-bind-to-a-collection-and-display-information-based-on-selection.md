@@ -1,57 +1,63 @@
 ---
-title: "Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbindung, Binden an Auflistungen"
-  - "Datenbindung, Erstellen von Ansichten von Datenauflistungen"
-  - "Datenbindung, Auswählen von Daten für Ansichten"
-  - "Datenauflistungen, Auswählen von Daten für Ansichten"
+title: 'Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data collections [WPF], selecting data for views
+- data binding [WPF], creating views of data collections
+- data binding [WPF], selecting data for views
+- data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e92621e7e62750ae5ad73158232ccdabfb22287a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl
-In einem einfachen Master\/Detail\-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl>\-Element, z. B. ein <xref:System.Windows.Controls.ListBox>.  Auf Grundlage der Benutzerauswahl zeigen Sie weitere Informationen über das ausgewählte Element an.  In diesem Beispiel wird gezeigt, wie dieses Szenario implementiert wird.  
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl
+In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox>. Basierend auf der Auswahl des Benutzers, zeigen Sie weitere Informationen zum ausgewählten Element. In diesem Beispiel wird gezeigt, wie dieses Szenario implementiert wird.  
   
-## Beispiel  
- In diesem Beispiel ist `People` eine <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Person`\-Klassen.  Diese `Person`\-Klasse enthält drei Eigenschaften: `FirstName`, `LastName` und `HomeTown`, alle vom Typ `string`.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel `People` ist ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Person` Klassen. Dies `Person` Klasse enthält drei Eigenschaften: `FirstName`, `LastName`, und `HomeTown`, alle vom Typ `string`.  
   
- [!code-xml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
-[!code-xml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
+ [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
+[!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
- Das <xref:System.Windows.Controls.ContentControl> verwendet die folgende <xref:System.Windows.DataTemplate>, die definiert, wie die Informationen einer `Person` präsentiert werden:  
+ Die <xref:System.Windows.Controls.ContentControl> verwendet die folgenden <xref:System.Windows.DataTemplate> , definiert, wie die Informationen des ein `Person` wird angezeigt:  
   
- [!code-xml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
+ [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- Im Folgenden finden Sie eine Bildschirmaufnahme der Ausgabe des Beispiels.  Das <xref:System.Windows.Controls.ContentControl>\-Element zeigt die anderen Eigenschaften der ausgewählten Person.  
+ Im folgenden finden einen Screenshot der Ausgabe des Beispiels. Die <xref:System.Windows.Controls.ContentControl> zeigt die anderen Eigenschaften der ausgewählten Person.  
   
- ![Binden an eine Auflistung](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding\_CollectionBindingSample")  
+ ![Binden an eine Auflistung](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
- Zwei Punkte sind in diesem Beispiel zu beachten:  
+ Die zwei Punkte zu beachten in diesem Beispiel sind:  
   
-1.  Das <xref:System.Windows.Controls.ListBox> und das <xref:System.Windows.Controls.ContentControl> werden an dieselbe Quelle gebunden.  Die <xref:System.Windows.Data.Binding.Path%2A>\-Eigenschaften beider Bindungen sind nicht angegeben, da beide Steuerelemente an das gesamte Auflistungsobjekt gebunden werden.  
+1.  Die <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ContentControl> mit der gleichen Quelle zu binden. Die <xref:System.Windows.Data.Binding.Path%2A> Eigenschaften der beiden Bindungen sind nicht angegeben werden, da beide Steuerelemente an das gesamte Collection-Objekt gebunden werden.  
   
-2.  Damit dies funktioniert, muss die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>\-Eigenschaft auf `true` festgelegt werden.  Durch Festlegen dieser Eigenschaft wird sichergestellt, dass das ausgewählte Element immer als <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A> festgelegt wird.  Wenn hingegen das <xref:System.Windows.Controls.ListBox> die Daten von <xref:System.Windows.Data.CollectionViewSource> abruft, werden Auswahl und Währung automatisch synchronisiert.  
+2.  Sie müssen festlegen, die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> Eigenschaft `true` damit dies funktioniert. Durch Festlegen dieser Eigenschaft wird sichergestellt, dass das ausgewählte Element immer, als festgelegt ist die <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Auch wenn die <xref:System.Windows.Controls.ListBox> ruft es Daten aus einer <xref:System.Windows.Data.CollectionViewSource>, es Auswahl und Währung automatisch synchronisiert.  
   
- Beachten Sie, dass die `Person`\-Klasse die `ToString`\-Methode auf folgende Weise überschreibt.  Standardmäßig ruft das <xref:System.Windows.Controls.ListBox> `ToString` auf und zeigt eine Zeichenfolgendarstellung jedes Objekts in der gebundenen Auflistung an.  Aus diesem Grund wird jede `Person` im <xref:System.Windows.Controls.ListBox> als Vorname angezeigt.  
+ Beachten Sie, dass die `Person` -Klasse überschreibt die `ToString` Methode wie folgt. Wird standardmäßig die <xref:System.Windows.Controls.ListBox> Aufrufe `ToString` und eine Zeichenfolgendarstellung für jedes Objekt in der gebundenen Auflistung angezeigt. Deshalb jedes `Person` erscheint als erste Name in der <xref:System.Windows.Controls.ListBox>.  
   
  [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
-## Siehe auch  
- [Verwenden des Master\-\/Detailmusters mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)   
- [Verwenden des Master\-\/Detailmusters mit hierarchischen XML\-Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden des Master-/Detailmusters mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

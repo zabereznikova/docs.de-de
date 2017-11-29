@@ -1,161 +1,159 @@
 ---
-title: "Declare Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Declare"
-  - "vb.Lib"
-  - "vb.Any"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Lib keyword"
-  - "declaring procedures, Declare statement"
-  - "functions [Visual Basic], function procedures"
-  - "declarations, procedures"
-  - "procedures, declaration"
-  - "procedures, external"
-  - "Alias keyword"
-  - "external references, Visual Basic"
-  - "DLLs, declaring procedures"
-  - "Declare statement"
-  - "declarations, external"
-  - "Visual Basic code, Function procedures"
-  - "As keyword, in Declare statement"
-  - "resources [Visual Basic], declaring"
-  - "Public keyword, Declare statement"
-  - "platform invoke, Visual Basic external references"
-  - "Sub procedures, declarations"
-  - "APIs, declaring API functions"
-  - "Visual Basic code, Sub procedures"
-  - "Function procedures, declaring"
+title: Declare Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Declare
+- vb.Lib
+- vb.Any
+helpviewer_keywords:
+- Lib keyword [Visual Basic]
+- declaring procedures [Visual Basic], Declare statement
+- functions [Visual Basic], function procedures
+- declarations [Visual Basic], procedures
+- procedures [Visual Basic], declaration
+- procedures [Visual Basic], external
+- Alias keyword [Visual Basic]
+- external references [Visual Basic], Visual Basic
+- DLLs, declaring procedures
+- Declare statement [Visual Basic]
+- declarations [Visual Basic], external
+- Visual Basic code, Function procedures
+- As keyword [Visual Basic], in Declare statement
+- resources [Visual Basic], declaring
+- Public keyword [Visual Basic], Declare statement
+- platform invoke, Visual Basic external references
+- Sub procedures [Visual Basic], declarations
+- APIs, declaring API functions
+- Visual Basic code, Sub procedures
+- Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Declare Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Deklariert einen Verweis auf eine Prozedur, die in einer externen Datei implementiert ist.  
+# <a name="declare-statement"></a>Declare Statement
+Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
 ' -or-  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`attributelist`|Optional.  Siehe [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional.  Einer der folgenden Werte ist möglich:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Weitere Informationen finden Sie unter [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Optional.  Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Optional.  Gibt Informationen über Zeichensätze und die Dateisuche an.  Einer der folgenden Werte ist möglich:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) \(Standardwert\)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
-|`Sub`|Optional \(entweder muss `Sub` oder `Function` angegeben werden\).  Gibt an, dass die externe Prozedur keinen Wert zurückgibt.|  
-|`Function`|Optional \(entweder muss `Sub` oder `Function` angegeben werden\).  Gibt an, dass die externe Prozedur einen Wert zurückgibt.|  
-|`name`|Erforderlich.  Name dieses externen Verweises.  Weitere Informationen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Erforderlich.  Leitet eine `Lib`\-Klausel ein. Diese kennzeichnet die externe Datei \(DLL oder Coderessource\), die eine externe Prozedur enthält.|  
-|`libname`|Erforderlich.  Name der Datei, die die deklarierte Prozedur enthält.|  
-|`Alias`|Optional.  Gibt an, dass die zu deklarierende Prozedur in der zugehörigen Datei nicht mit dem in `name` angegebenen Namen bezeichnet werden kann.  Sie geben ihre Bezeichnung in `aliasname` an.|  
-|`aliasname`|Erforderlich, wenn Sie das `Alias`\-Schlüsselwort verwenden.  Zeichenfolge, die die Prozedur in einer von zwei Formen bezeichnet:<br /><br /> Der Name für den Einstiegspunkt der Prozedur in ihrer Datei in Anführungszeichen \(`""`\)<br /><br /> \- oder \-<br /><br /> Ein Nummernzeichen \(`#`\) vor einer ganzen Zahl, die die Ordinalzahl des Einstiegspunkts der Prozedur in ihrer Datei angibt.|  
-|`parameterlist`|Erforderlich, wenn die Prozedur Parameter akzeptiert.  Weitere Informationen finden Sie unter [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`returntype`|Erforderlich, wenn `Function` angegeben ist und `Option Strict` den Wert `On` aufweist.  Datentyp des von der Prozedur zurückgegebenen Werts.|  
+|---|---|  
+|`attributelist`|Dies ist optional. Finden Sie unter [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Dies ist optional. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Dies ist optional. Finden Sie unter [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`charsetmodifier`|Dies ist optional. Zeichensätze und gibt Informationen zu suchen. Einer der folgenden Werte ist möglich:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (Standard)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`Sub`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Gibt an, dass die externe Prozedur keinen Wert zurückgibt.|  
+|`Function`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Gibt an, dass die externe Prozedur einen Wert zurückgibt.|  
+|`name`|Erforderlich. Name des diesen externen Verweis. Weitere Informationen finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Lib`|Erforderlich. Führt eine `Lib` -Klausel, die die externe Datei (DLL oder die Ressource) identifiziert, die eine externe Prozedur enthält.|  
+|`libname`|Erforderlich. Der Name der Datei, die die deklarierte Prozedur enthält.|  
+|`Alias`|Dies ist optional. Gibt an, dass die Prozedur deklariert wird innerhalb einer Datei mit dem Namen im angegebenen identifiziert werden kann `name`. Geben Sie die Kennung in `aliasname`.|  
+|`aliasname`|Erforderlich, wenn Sie mithilfe der `Alias` Schlüsselwort. Eine Zeichenfolge, die die Prozedur in einer von zwei Methoden identifiziert:<br /><br /> Der Name des Einstiegspunkts der Prozedur in ihrer Datei in Anführungszeichen (`""`)<br /><br /> - oder - <br /><br /> Ein Nummernzeichen (`#`) gefolgt von einer Ganzzahl, die die Ordinalzahl der Prozedureinstiegspunkt innerhalb einer Datei angeben|  
+|`parameterlist`|Erforderlich, wenn die Prozedur Parameter annimmt. Finden Sie unter [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`returntype`|Erforderlich, wenn `Function` angegeben ist und `Option Strict` ist `On`. Der Datentyp des Werts von der Prozedur zurückgegeben.|  
   
-## Hinweise  
- Zuweilen müssen Sie eine Prozedur aufrufen, die in einer Datei \(z. B. eine DLL oder eine Coderessource\) außerhalb des Projekts definiert ist.  In diesem Fall kann der Visual Basic Compiler nicht auf die Informationen zugreifen, die zum ordnungsgemäßen Aufrufen der Prozedur erforderlich sind, z. B. den Speicherort der Prozedur, ihre Identifikationsmerkmale, ihre Aufruffolge und ihren Rückgabetyp sowie den von der Prozedur für Zeichenfolgen verwendeten Zeichensatz.  Die `Declare`\-Anweisung erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
+## <a name="remarks"></a>Hinweise  
+ In einigen Fällen müssen Sie zum Aufrufen einer Prozedur in einer Datei (z. B. eine DLL oder Code-Ressource) außerhalb des Projekts definiert. Wenn Sie dies tun, Visual Basic-Compiler keinen Zugriff auf die Informationen zum ordnungsgemäßen Aufrufen der Prozedur erforderlich, z. B. auf dem sich die Prozedur befindet, wie festgestellt wird, die Aufrufsequenz und Rückgabetyp und den String-Zeichensatz verwendet. Die `Declare` -Anweisung erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
   
- `Declare` kann nur auf Modulebene verwendet werden.  Dies bedeutet, dass der *Deklarationskontext* für einen externen Verweis eine Klasse, eine Struktur oder ein Modul sein muss und keine Quelldatei, kein Namespace, keine Schnittstelle, keine Prozedur und kein Block sein kann.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können `Declare` nur auf Modulebene verwenden. Dies bedeutet, dass die *Deklarationskontext* für ein externer Verweis muss eine Klasse, Struktur oder Modul, und nicht mit einer Quelldatei, Namespace, Schnittstelle, Prozedur oder Block. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Der Standardzugriff für externe Verweise ist [Public](../../../visual-basic/language-reference/modifiers/public.md).  Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
+ Standardzugriff für externe Verweise [öffentlichen](../../../visual-basic/language-reference/modifiers/public.md) Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
   
-## Regeln  
+## <a name="rules"></a>Regeln  
   
--   **Attribute.** Sie können Attribute auf einen externen Verweis anwenden.  Jedes angewendete Attribut wirkt sich nur im Projekt und nicht in der externen Datei aus.  
+-   **Attribute.** Sie können Attribute auf ein externer Verweis anwenden. Jedes Attribut, die Sie vornehmen, wirkt sich nur in Ihrem Projekt, nicht in der externen Datei.  
   
--   **Modifizierer.** Externe Prozeduren sind implizit [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  Sie können beim Deklarieren eines externen Verweises nicht das `Shared`\-Schlüsselwort verwenden, und Sie können den freigegebenen Status des Verweises nicht ändern.  
+-   **Modifizierer.** Externe Prozeduren sind implizit [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Sie können keine der `Shared` -Schlüsselwort, wenn ein externer Verweis, und Sie deklarieren den freigegebenen Status nicht ändern können.  
   
-     Eine externe Prozedur kann nicht für Überschreibungen verwendet werden, keine Schnittstellenmember implementieren und keine Ereignisse behandeln.  Daher können Sie die Schlüsselwörter `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` und `Handles` in einer `Declare`\-Anweisung nicht verwenden.  
+     Eine externe Prozedur kann nicht überschreiben teilnehmen, Implementieren von Schnittstellenmembern oder Ereignisse zu behandeln. Entsprechend können Sie keine der `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, oder `Handles` -Schlüsselwort in einer `Declare` Anweisung.  
   
--   **Name der externen Prozedur.** Sie müssen für den externen Verweis nicht einen Namen festlegen \(in `name`\), der mit dem Namen des Einstiegspunkts der Prozedur in ihrer externen Datei \(`aliasname`\) übereinstimmt.  Sie können den Namen des Einstiegspunkts mit einer `Alias`\-Klausel angeben.  Dies kann sinnvoll sein, wenn die externe Prozedur einen Namen aufweist, der mit dem Namen eines in Visual Basic reservierten Modifizierers, einer Variablen, Prozedur oder eines beliebigen anderen Programmierelements in demselben Gültigkeitsbereich übereinstimmt.  
-  
-    > [!NOTE]
-    >  In den meisten DLLs wird bei Einstiegspunktnamen die Groß\-\/Kleinschreibung beachtet.  
-  
--   **Nummer der externen Prozedur.** Stattdessen können Sie auch mit einer `Alias`\-Klausel die Ordinalzahl des Einstiegspunkts in der Exporttabelle der externen Datei angeben.  Zu diesem Zweck beginnen Sie `aliasname` mit einem Nummernzeichen \(`#`\).  Dies kann sich als sinnvoll erweisen, wenn ein bestimmtes Zeichen im Namen der externen Prozedur in Visual Basic nicht zulässig ist oder wenn die Prozedur ohne Namen aus der externen Datei exportiert wird.  
-  
-## Datentypregeln  
-  
--   **Datentypen von Parametern.** Wenn `Option Strict` den Wert `On` aufweist, müssen Sie den Datentyp jedes Parameters in `parameterlist` angeben.  Dies kann ein beliebiger Datentyp oder der Name einer Enumeration, Struktur, Klasse oder Schnittstelle sein.  In `parameterlist` können Sie den Datentyp des an jeden Parameter zu übergebenden Arguments mit einer `As`\-Klausel angeben.  
+-   **Name der externen Prozedur.** Sie müssen keine diesen externen Verweis auf den gleichen Namen geben (in `name`) als der Name der Prozedur Einstiegspunkt in die externe Datei (`aliasname`). Sie können eine `Alias` -Klausel, um den Einstiegspunkt Namen angeben. Dies kann sinnvoll, wenn die externe Prozedur den gleichen Namen wie eine reservierte Visual Basic-Modifizierer oder eine Variable, Prozedur oder eines anderen Programmierelements im selben Bereich haben.  
   
     > [!NOTE]
-    >  Wenn die externe Prozedur nicht für .NET Framework geschrieben wurde, müssen Sie darauf achten, dass sich die Datentypen entsprechen.  Wenn Sie z. B. einen externen Verweis auf eine Visual Basic 6.0\-Prozedur mit einem `Integer`\-Parameter \(16 Bits in Visual Basic 6.0\) deklarieren, müssen Sie das entsprechende Argument in der `Declare`\-Anweisung als `Short` festlegen, da dies in Visual Basic der 16\-Bit\-Ganzzahltyp ist.  Entsprechend weist `Long` in Visual Basic 6.0 eine andere Datenbreite auf, und `Date` wird auf andere Weise implementiert.  
+    >  Einstiegspunktfunktion mit dem Namen in den meisten DLLs sind Groß-/Kleinschreibung beachtet.  
   
--   **Rückgabedatentyp.** Wenn die externe Prozedur eine `Function` ist und für `Option Strict` der Wert `On` festgelegt ist, müssen Sie den Datentyp des an den aufrufenden Code zurückgegebenen Werts angeben.  Dies kann ein beliebiger Datentyp oder der Name einer Enumeration, Struktur, Klasse oder Schnittstelle sein.  
+-   **Externe Prozedurnummer.** Alternativ können Sie eine `Alias` -Klausel, um die Ordinalzahl des Einstiegspunkts in der Exporttabelle der externen Datei anzugeben. Dazu starten Sie `aliasname` mit einem Nummernzeichen (`#`). Dies kann nützlich sein, wenn alle Zeichen im Namen externen Prozedur in Visual Basic nicht zulässig ist, oder wenn die Prozedur ohne Namen können die externe Datei exportieren.  
+  
+## <a name="data-type-rules"></a>Regeln für die Art von Daten  
+  
+-   **Parameterdatentypen.** Wenn `Option Strict` ist `On`, geben Sie den Datentyp jedes Parameters im `parameterlist`. Dies kann einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle sein. In `parameterlist`, Sie verwenden eine `As` -Klausel, um den Datentyp des Arguments an jeden Parameter zu übergebenden angeben.  
   
     > [!NOTE]
-    >  Der Visual Basic\-Compiler überprüft nicht, ob die von Ihnen angegebenen Datentypen mit den Datentypen der externen Prozedur kompatibel sind.  Bei nicht übereinstimmenden Datentypen generiert die Common Language Runtime zur Laufzeit eine <xref:System.Runtime.InteropServices.MarshalDirectiveException>\-Ausnahme.  
+    >  Wenn die externe Prozedur nicht für .NET Framework geschrieben wurde, Sie müssen darauf achten, die die Datentypen entsprechen. Angenommen, Sie deklarieren, dass einen externen Verweis auf eine Visual Basic 6.0-Prozedur mit einer `Integer` Parameter (16 Bits in Visual Basic 6.0), müssen Sie das entsprechende Argument als identifizieren `Short` in der `Declare` -Anweisung, da dies die 16 - in Visual Basic-Bit-Ganzzahl-Typ. Auf ähnliche Weise `Long` verfügt über eine andere Datenbreite in Visual Basic 6.0, und `Date` wird anders implementiert.  
   
--   **Standarddatentypen.** Wenn `Option Strict` den Wert `Off` aufweist und Sie den Datentyp eines Parameters in `parameterlist` nicht angeben, konvertiert der Visual Basic\-Compiler das entsprechende Argument in den [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md).  Ebenso geht der Compiler davon aus, dass der Rückgabedatentyp `Object` ist, wenn Sie `returntype` nicht angeben.  
+-   **Datentyp zurück.** Wenn die externe Prozedur ist eine `Function` und `Option Strict` ist `On`, geben Sie den Datentyp des Werts an den aufrufenden Code zurückgegeben. Dies kann einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle sein.  
   
     > [!NOTE]
-    >  Da Sie eine externe Prozedur verwenden, die möglicherweise auf einer anderen Plattform geschrieben wurde, ist es riskant, bestimmte Datentypen vorauszusetzen oder Standarddatentypen für sie zuzulassen.  Es ist weitaus sicherer, den Datentyp jedes Parameters und ggf. des Rückgabewerts anzugeben.  Dadurch wird außerdem die Lesbarkeit des Codes verbessert.  
+    >  Visual Basic-Compiler überprüft nicht, dass Ihre Datentypen mit denen die externe Prozedur kompatibel sind. Wenn es ein Konflikt besteht, die common Language Runtime generiert eine <xref:System.Runtime.InteropServices.MarshalDirectiveException> -Ausnahme zur Laufzeit.  
   
-## Verhalten  
+-   **Standarddatentypen.** Wenn `Option Strict` ist `Off` und Sie keinen angeben, dass der Datentyp eines Parameters in `parameterlist`, Visual Basic-Compiler konvertiert das entsprechende Argument in der [Object-Datentyp](../../../visual-basic/language-reference/data-types/object-data-type.md). Auf ähnliche Weise, wenn Sie keinen angeben `returntype`, nimmt der Compiler den Datentyp des Rückgabewerts zu `Object`.  
   
--   **Gültigkeitsbereich.** Der Gültigkeitsbereich eines externen Verweises umfasst seine Klasse, seine Struktur oder sein Modul.  
+    > [!NOTE]
+    >  Da Sie mit einer externen Prozedur arbeiten, die auf einer anderen Plattform geschrieben wurden, ist es gefährlich, damit keine Annahmen über Datentypen oder auf den Standardwert zu können. Es ist wesentlich sicherer, den Datentyp jedes Parameters und des Rückgabewerts, angeben, sofern vorhanden. Dies wird auch verbessert die Lesbarkeit des Codes.  
   
--   **Lebensdauer.** Ein externer Verweis verfügt über dieselbe Lebensdauer wie die Klasse, die Struktur oder das Modul, in der bzw. dem er deklariert ist.  
+## <a name="behavior"></a>Verhalten  
   
--   **Aufrufen einer externen Prozedur.** Sie rufen eine externe Prozedur auf dieselbe Weise wie eine `Function`\-Prozedur oder eine `Sub`\-Prozedur auf, indem Sie sie in einem Ausdruck verwenden, wenn sie einen Wert zurückgibt, oder indem Sie sie in einer [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) angeben, wenn sie keinen Wert zurückgibt.  
+-   **Bereich.** Ein externer Verweis ist der Gültigkeitsbereich der Klasse, Struktur oder Modul.  
   
-     Sie übergeben Argumente an die externe Prozedur genau wie von `parameterlist` in der `Declare`\-Anweisung angegeben.  Lassen Sie außer acht, wie die Parameter ursprünglich in der externen Datei deklariert wurden.  Ebenso verwenden Sie einen Rückgabewert, sofern vorhanden, genau wie von `returntype` in der `Declare`\-Anweisung angegeben.  
+-   **Lebensdauer.** Ein externer Verweis verfügt über dieselbe Lebensdauer wie die Klasse, Struktur oder Modul, in dem sie deklariert ist.  
   
--   **Zeichensätze.** Sie können in `charsetmodifier` angeben, wie Visual Basic Zeichenfolgen beim Aufruf der externen Prozedur marshallen soll.  Mit dem `Ansi`\-Modifizierer marshallt Visual Basic alle Zeichenfolgen in ANSI\-Werte, und mit dem `Unicode`\-Modifizierer werden alle Zeichenfolgen in Unicode\-Werte gemarshallt.  Mit dem `Auto`\-Modifizierer marshallt Visual Basic Zeichenfolgen gemäß den .NET Framework\-Regeln, die auf dem `name` des externen Verweises oder ggf. auf `aliasname` beruhen.  Der Standardwert ist `Ansi`.  
+-   **Aufrufen einer externen Prozedur an.** Sie rufen eine externe Prozedur auf die gleiche Weise, die Sie Aufrufen einer `Function` oder `Sub` Prozedur – indem Sie diesen in einem Ausdruck verwenden, wenn es sich um einen Wert zurückgibt, oder durch Angabe in einen [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md) , wenn sie keinen Wert zurückgibt.  
   
-     `charsetmodifier` gibt auch an, wie Visual Basic die externe Prozedur innerhalb seiner externen Datei nachschlagen sollte.  `Ansi` und `Unicode` weisen Visual Basic an nachzuschlagen, ohne seinen Namen während der Suche zu ändern.  `Auto` weist Visual Basic an, den Basiszeichensatz von der Laufzeitplattform zu bestimmen und ändert möglicherweise den externen Verfahrensnamen, wie folgt:  
+     Übergeben Sie Argumente an die externe Prozedur genau entsprechend den Angaben von `parameterlist` in der `Declare` Anweisung. Führen Sie nicht berücksichtigen Sie wie die Parameter in der externen Datei ursprünglich deklariert wurden. Ebenso ist ein Wert zurückgegeben, verwenden sie genau entsprechend den Angaben von `returntype` in der `Declare` Anweisung.  
   
-    -   Auf einer ANSI\-Plattform, z. B. Windows 95, Windows 98 oder Windows Millennium Edition, wird zunächst die externe Prozedur ohne Namensänderung gesucht.  Wenn dies fehlschlägt, wird an den Namen der externen Prozedur "A" angefügt und die Suche wiederholt.  
+-   **Zeichensätze.** Sie können angeben, `charsetmodifier` wie Visual Basic Zeichenfolgen marshallen soll, wenn sie die externe Prozedur aufruft. Die `Ansi` Modifizierer marshallt Visual Basic alle Zeichenfolgen in ANSI-Werte und die `Unicode` Modifizierer leitet er alle Zeichenfolgen in Unicode-Werte. Die `Auto` Modifizierer leitet Visual Basic zum Marshallen von Zeichenfolgen gemäß der .NET Framework-Regeln basierend auf der externen Verweis `name`, oder `aliasname` angegeben. Der Standardwert ist `Ansi`.  
   
-    -   Auf einer Unicode\-Plattform, z. B. Windows NT, Windows 2000 oder Windows XP, wird zunächst die externe Prozedur ohne Namensänderung gesucht.  Wenn dies fehlschlägt, wird an den Namen der externen Prozedur "W" angefügt und die Suche wiederholt.  
+     `charsetmodifier`gibt auch an, wie Visual Basic die externe Prozedur innerhalb einer externen Datei aussehen soll. `Ansi`und `Unicode` weisen Visual Basic, die ohne den Namen ändern, während der Suche gesucht. `Auto`weist Visual Basic Basiszeichensatz der Plattform zur Laufzeit bestimmen und ändern Sie den Namen der externen Prozedur, möglicherweise wie folgt:  
   
--   **Mechanismus.** Visual Basic verwendet den Mechanismus des *Plattformaufrufs* \(PInvoke\) von .NET Framework, um externe Prozeduren aufzulösen und auf sie zuzugreifen.  Sowohl die `Declare`\-Anweisung als auch die <xref:System.Runtime.InteropServices.DllImportAttribute>\-Klasse verwenden diesen Mechanismus automatisch, und Sie benötigen keine Kenntnisse über PInvoke.  Weitere Informationen finden Sie unter [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+    -   Auf einer ANSI-Plattform, z. B. Windows 95, Windows 98 oder Windows Millennium Edition müssen Sie zunächst die externe Prozedur ohne Namensänderung gesucht. Schlägt dies fehl, fügen Sie an "A" bis zum Ende der externen Prozedurnamen und suchen Sie erneut.  
+  
+    -   Auf einer Unicode-Plattform, z. B. Windows NT, Windows 2000 oder Windows XP müssen Sie zunächst die externe Prozedur ohne Namensänderung gesucht. Wenn dies fehlschlägt, hängen Sie "W" bis zum Ende der externe Prozedur benennen, und suchen Sie erneut.  
+  
+-   **Mechanismus.** Visual Basic verwendet .NET Framework *Plattformaufruf* (PInvoke)-Mechanismus zum Auflösen und externe Prozeduren zugreifen. Die `Declare` Anweisung und die <xref:System.Runtime.InteropServices.DllImportAttribute> Klasse sowohl automatisch diesen Mechanismus verwenden, und Sie benötigen keine Kenntnis von PInvoke. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Wenn die externe Prozedur außerhalb der Common Language Runtime \(CLR\) ausgeführt wird, handelt es sich um *nicht verwalteten Code*.  Bei dem Aufruf einer solchen Prozedur, z. B. einer Win32\-API\-Funktion oder einer COM\-Methode, setzen Sie die Anwendung möglicherweise einem Sicherheitsrisiko aus.  Weitere Informationen finden Sie unter [Secure Coding Guidelines for Unmanaged Code](../Topic/Secure%20Coding%20Guidelines%20for%20Unmanaged%20Code.md).  
+>  Wenn die externe Prozedur außerhalb der common Language Runtime (CLR) ausgeführt wird, ist es *nicht verwaltetem Code*. Wenn Sie eine solche Prozedur, z. B. eine Win32-API-Funktion oder eine COM-Methode aufrufen können Sie Ihre Anwendung Sicherheitsrisiken verfügbar machen. Weitere Informationen finden Sie unter [Codierungsrichtlinien für nicht verwalteten Code Secure](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird ein externer Verweis auf eine `Function`\-Prozedur deklariert, die den aktuellen Benutzernamen zurückgibt.  Anschließend wird die externe Prozedur `GetUserNameA` als Bestandteil der `getUser`\-Prozedur aufgerufen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel deklariert einen externen Verweis auf eine `Function` Prozedur, die den aktuellen Benutzernamen zurückgibt. Er ruft dann die externe Prozedur `GetUserNameA` als Teil der `getUser` Prozedur.  
   
  [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
-## Beispiel  
- Das <xref:System.Runtime.InteropServices.DllImportAttribute> bietet eine alternative Möglichkeit der Verwendung von Funktionen in nicht verwaltetem Code.  Im folgenden Beispiel wird eine importierte Funktion ohne Verwendung einer `Declare`\-Anweisung deklariert.  
+## <a name="example"></a>Beispiel  
+ Die <xref:System.Runtime.InteropServices.DllImportAttribute> bietet eine alternative Möglichkeit der Verwendung von Funktionen in nicht verwaltetem Code. Das folgende Beispiel deklariert eine importierte Funktion ohne Verwendung einer `Declare` Anweisung.  
   
  [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md)   
- [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

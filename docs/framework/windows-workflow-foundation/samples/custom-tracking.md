@@ -1,46 +1,50 @@
 ---
-title: "Benutzerdefinierte Nachverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierte Nachverfolgung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a32e76bdee87d6f00a5f01893e76ccb3de9ef51
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierte Nachverfolgung
-Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird.Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>\-Objekte ausgegeben werden.Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>\-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.  
+# <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
+Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird. Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte ausgegeben werden. Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.  
   
-## Beispieldetails  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] stellt eine Infrastruktur zur Nachverfolgung der Ausführung einer Workflowinstanz bereit.Die Nachverfolgungslaufzeit implementiert eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Nachverfolgungsereignisse auszugeben.In der folgenden Tabelle sind die primären Komponenten der Nachverfolgungsinfrastruktur aufgeführt.  
+## <a name="sample-details"></a>Beispieldetails  
+ [!INCLUDE[wf](../../../../includes/wf-md.md)] stellt eine Infrastruktur zur Nachverfolgung der Ausführung einer Workflowinstanz bereit. Die Nachverfolgungslaufzeit implementiert eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Nachverfolgungsereignisse auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.  
   
 |Komponente|Beschreibung|  
-|----------------|------------------|  
-|Überwachungslaufzeit|Stellt die Infrastruktur zur Ausgabe von Nachverfolgungsdatensätzen bereit.|  
-|Nachverfolgungskomponente|Verwendet die Nachverfolgungsdatensätze.[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows \(ETW\) schreibt.|  
+|---------------|-----------------|  
+|Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|  
+|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|  
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|  
   
- In der folgenden Tabelle werden die Nachverfolgungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.  
+ In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.  
   
 |Nachverfolgungsdatensatz|Beschreibung|  
-|------------------------------|------------------|  
-|Nachverfolgungsdatensätze zur Workflowinstanz.|Beschreiben den Lebenszyklus der Workflowinstanz.Wenn der Workflow gestartet oder abgeschlossen wird, wird beispielsweise ein Instanzdatensatz ausgegeben.|  
-|Nachverfolgungsdatensätze zum Aktivitätszustand.|Führen Einzelheiten zur Aktivitätsausführung auf.Diese Datensätze geben den Zustand einer Workflowaktivität an, z. B. wenn eine Aktivität geplant oder abgeschlossen wird oder wenn ein Fehler ausgelöst wird.|  
+|---------------------|-----------------|  
+|Überwachungsdatensätze zur Workflowinstanz.|Beschreiben den Lebenszyklus der Workflowinstanz. Wenn der Workflow gestartet oder abgeschlossen wird, wird beispielsweise ein Instanzdatensatz ausgegeben.|  
+|Nachverfolgungsdatensätze zum Aktivitätszustand.|Führen Einzelheiten zur Aktivitätsausführung auf. Diese Datensätze geben den Zustand einer Workflowaktivität an, z. B. wenn eine Aktivität geplant oder abgeschlossen wird oder wenn ein Fehler ausgelöst wird.|  
 |Datensatz zur Wiederaufnahme von Lesezeichen.|Wird immer dann ausgegeben, wenn ein Lesezeichen in einer Workflowinstanz wieder aufgenommen wird.|  
 |Benutzerdefinierte Nachverfolgungsdatensätze.|Ein Workflowautor kann benutzerdefinierte Nachverfolgungsdatensätze erstellen und in einer benutzerdefinierten Aktivität ausgeben.|  
   
- Die Nachverfolgungskomponente abonniert eine Teilmenge der ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>\-Objekte mit Nachverfolgungsprofilen.Ein Nachverfolgungsprofil enthält Nachverfolgungsabfragen, die das Abonnieren eines bestimmten Typs von Nachverfolgungsdatensätzen ermöglichen.Nachverfolgungsprofile können im Code oder in der Konfiguration angegeben werden.  
+ Die Nachverfolgungskomponente abonniert eine Teilmenge der ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit Nachverfolgungsprofilen. Ein Überwachungsprofil enthält Überwachungsabfragen, die das Abonnieren eines bestimmten Typs von Überwachungsdatensätzen ermöglichen. Überwachungsprofile können im Code oder in der Konfiguration angegeben werden.  
   
-### Benutzerdefinierte Nachverfolgungskomponente  
- Die API der Nachverfolgungskomponente ermöglicht eine Erweiterung der Nachverfolgungslaufzeit mit einer vom Benutzer bereitgestellten Nachverfolgungskomponente. Diese kann benutzerdefinierte Logik enthalten, mit der von der Workflowlaufzeit ausgegebene <xref:System.Activities.Tracking.TrackingRecord>\-Objekte behandelt werden.  
+### <a name="custom-tracking-participant"></a>Benutzerdefinierte Nachverfolgungskomponente  
+ Die API der Nachverfolgungskomponente ermöglicht eine Erweiterung der Nachverfolgungslaufzeit mit einer vom Benutzer bereitgestellten Nachverfolgungskomponente. Diese kann benutzerdefinierte Logik enthalten, mit der von der Workflowlaufzeit ausgegebene <xref:System.Activities.Tracking.TrackingRecord>-Objekte behandelt werden.  
   
- Zum Schreiben einer Nachverfolgungskomponente muss der Benutzer <xref:System.Activities.Tracking.TrackingParticipant> implementieren.Die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>\-Methode muss von der benutzerdefinierten Komponente implementiert werden.Diese Methode wird aufgerufen, wenn ein <xref:System.Activities.Tracking.TrackingRecord>\-Objekt von der Workflowlaufzeit ausgegeben wird.  
+ Zum Schreiben einer Nachverfolgungskomponente muss der Benutzer <xref:System.Activities.Tracking.TrackingParticipant> implementieren. Die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>-Methode muss von der benutzerdefinierten Komponente implementiert werden. Diese Methode wird aufgerufen, wenn ein <xref:System.Activities.Tracking.TrackingRecord>-Objekt von der Workflowlaufzeit ausgegeben wird.  
   
 ```csharp  
 public abstract class TrackingParticipant  
@@ -50,10 +54,9 @@ public abstract class TrackingParticipant
     public virtual TrackingProfile TrackingProfile { get; set; }  
     public abstract void Track(TrackingRecord record, TimeSpan timeout);  
 }  
-  
 ```  
   
- Die vollständige Nachverfolgungskomponente wird in der Datei "ConsoleTrackingParticipant.cs" implementiert. Das folgende Codebeispiel enthält die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>\-Methode für die benutzerdefinierte Nachverfolgungskomponente.  
+ Die vollständige Nachverfolgungskomponente wird in der Datei "ConsoleTrackingParticipant.cs" implementiert. Das folgende Codebeispiel enthält die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>-Methode für die benutzerdefinierte Nachverfolgungskomponente.  
   
 ```csharp  
 protected override void Track(TrackingRecord record, TimeSpan timeout)  
@@ -97,10 +100,9 @@ protected override void Track(TrackingRecord record, TimeSpan timeout)
     Console.WriteLine();  
   
 }  
-  
 ```  
   
- Im folgenden Codebeispiel wird die Konsolenkomponente der aufrufenden Instanz für den Workflowvorgang hinzugefügt.  
+ Im folgenden Codebeispiel wird die Konsolenkomponente der Workflowaufrufinstanz hinzugefügt.  
   
 ```csharp  
 ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()  
@@ -112,17 +114,16 @@ ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingPartic
   
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
 invoker.Extensions.Add(customTrackingParticipant);  
-  
 ```  
   
-### Ausgeben von benutzerdefinierten Nachverfolgungsdatensätzen  
- In diesem Beispiel wird auch die Fähigkeit zur Ausgabe von <xref:System.Activities.Tracking.CustomTrackingRecord>\-Objekten aus einer benutzerdefinierten Workflowaktivität veranschaulicht:  
+### <a name="emitting-custom-tracking-records"></a>Ausgeben von benutzerdefinierten Nachverfolgungsdatensätzen  
+ In diesem Beispiel wird auch die Fähigkeit zur Ausgabe von <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekten aus einer benutzerdefinierten Workflowaktivität veranschaulicht:  
   
--   Die <xref:System.Activities.Tracking.CustomTrackingRecord>\-Objekte werden erstellt und mit benutzerdefinierten Daten aufgefüllt, die mit dem Datensatz ausgegeben werden sollen.  
+-   Die <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte werden erstellt und mit benutzerdefinierten Daten aufgefüllt, die mit dem Datensatz ausgegeben werden sollen.  
   
--   Das <xref:System.Activities.Tracking.CustomTrackingRecord>\-Objekt wird durch Aufrufen der Nachverfolgungsmethode des <xref:System.Activities.ActivityContext> ausgegeben.  
+-   Die <xref:System.Activities.Tracking.CustomTrackingRecord> wird ausgegeben, durch Aufrufen der Nachverfolgungsmethode des der <xref:System.Activities.ActivityContext>.  
   
- Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Activities.Tracking.CustomTrackingRecord>\-Objekte innerhalb einer benutzerdefinierten Aktivität ausgegeben werden.  
+ Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte innerhalb einer benutzerdefinierten Aktivität ausgegeben werden.  
   
 ```csharp  
 // Create the Custom Tracking Record  
@@ -137,25 +138,24 @@ CustomTrackingRecord customRecord = new CustomTrackingRecord("OrderIn")
   
 // Emit custom tracking record  
 context.Track(customRecord);  
-  
 ```  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
 1.  Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "CustomTrackingSample.sln".  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## Siehe auch  
- [AppFabric\-Überwachungsbeispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Siehe auch  
+ [Überwachen der AppFabric-Beispiele](http://go.microsoft.com/fwlink/?LinkId=193959)

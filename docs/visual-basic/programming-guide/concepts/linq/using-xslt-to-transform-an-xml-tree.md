@@ -1,33 +1,25 @@
 ---
-title: Verwenden von XSLT zum Transformieren einer XML-Struktur (Visual Basic) | Microsoft-Dokumentation
+title: Verwenden von XSLT zum Transformieren einer XML-Struktur (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 226a802cd640f2f251e1849486dab4a5c4af3497
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 18637ecf786c3e44e7a07b5a1ca48cf3c8a4ae35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Verwenden von XSLT zum Transformieren einer XML-Struktur (Visual Basic)
-Sie können eine XML-Struktur erstellen, erstellen Sie eine <xref:System.Xml.XmlReader>aus der XML-Struktur, erstellen Sie ein neues Dokument erstellen und einen <xref:System.Xml.XmlWriter>, der in das neue Dokument schreibt.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Anschließend können Sie die XSLT-Transformation übergeben Aufrufen der <xref:System.Xml.XmlReader>und <xref:System.Xml.XmlWriter>der Transformation.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
+Sie können eine XML-Struktur erstellen, einen <xref:System.Xml.XmlReader> aus der XML-Struktur erstellen, ein neues Dokument erstellen und dann einen <xref:System.Xml.XmlWriter> erstellen, der in das neue Dokument schreibt. Anschließend können Sie die XSLT-Transformation aufrufen und den <xref:System.Xml.XmlReader> sowie den <xref:System.Xml.XmlWriter> an die Transformation übergeben. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -78,6 +70,6 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
  [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

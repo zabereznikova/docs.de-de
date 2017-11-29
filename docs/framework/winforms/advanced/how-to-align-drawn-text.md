@@ -1,47 +1,51 @@
 ---
-title: "Gewusst wie: Ausrichten von gezeichnetem Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Text, Ausrichten"
-  - "Windows Forms, Ausrichten von gezeichnetem Text"
+title: 'Gewusst wie: Ausrichten von gezeichnetem Text'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], aligning
+- Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a2f2f6bd088ad58277839cf7e32a98d67ca3bd15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ausrichten von gezeichnetem Text
-Beim benutzerdefinierten Zeichnen ist das Zentrieren von gezeichnetem Text in einem Formular oder Steuerelement häufig erwünscht.  Sie können Text, der mit der <xref:System.Drawing.Graphics.DrawString%2A>\-Methode oder <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode gezeichnet wurde, problemlos ausrichten, indem Sie das richtige Formatierungsobjekt erstellen und die erforderlichen Formatflags festlegen.  
+# <a name="how-to-align-drawn-text"></a>Gewusst wie: Ausrichten von gezeichnetem Text
+Wenn Sie benutzerdefinierte Zeichnung zu erstellen, möchten Sie möglicherweise häufig gezeichnetem Text in einem Formular oder Steuerelement zu zentrieren. Sie können problemlos mit gezeichneter Text Ausrichten der <xref:System.Drawing.Graphics.DrawString%2A> oder <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden durch die richtige Formatierungsobjekt erstellen und die Kultur spezifische Formatflags festlegen.  
   
-### So zeichnen Sie zentrierten Text mit GDI\+ \(DrawString\)  
+### <a name="to-draw-centered-text-with-gdi-drawstring"></a>So zeichnen Sie zentrierten Text mit GDI + (DrawString)  
   
-1.  Verwenden Sie <xref:System.Drawing.StringFormat> mit der entsprechenden <xref:System.Drawing.Graphics.DrawString%2A>\-Methode, um zentrierten Text anzugeben.  
+1.  Verwenden einer <xref:System.Drawing.StringFormat> mit dem entsprechenden <xref:System.Drawing.Graphics.DrawString%2A> Methode, um zentriert Text anzugeben.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#10)]
      [!code-vb[System.Drawing.AlignDrawnText#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#10)]  
   
-### So zeichnen Sie zentrierten Text mit GDI \(DrawText\)  
+### <a name="to-draw-centered-text-with-gdi-drawtext"></a>So zeichnen Sie zentrierten Text mit GDI (DrawText)  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.TextFormatFlags>\-Enumeration zum Umbrechen sowie zum vertikalen oder horizontalen Zentrieren von Text mit der entsprechenden <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode.  
+1.  Verwenden der <xref:System.Windows.Forms.TextFormatFlags> Enumeration für wrapping als auch vertikal und horizontal zentrieren von Text mit dem entsprechenden <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#20)]
      [!code-vb[System.Drawing.AlignDrawnText#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
-## Kompilieren des Codes  
- Die vorangehenden Codebeispiele sind für die Verwendung mit Windows Forms vorgesehen und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Die vorherigen Codebeispiele sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Siehe auch  
- [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)   
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)

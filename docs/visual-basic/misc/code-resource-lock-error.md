@@ -1,25 +1,27 @@
 ---
-title: "Fehler durch gesperrte Coderessource. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID455"
+title: Fehler durch gesperrte Coderessource.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID455
 ms.assetid: 67a269bf-f436-4913-bc3c-af7f68116b7d
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 70698e2a2540df6e380f8d06fc64fc69496f7f54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Fehler durch gesperrte Coderessource.
+# <a name="code-resource-lock-error"></a>Fehler durch gesperrte Coderessource.
 Eine Prozedur in einer Coderessource wurde aufgerufen. Die Coderessource wurde gefunden, beim Versuch, die Ressource zu sperren, ist jedoch ein Fehler aufgetreten. Dies kann daran liegen, dass die Ressource verwendet wird.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Überprüfen Sie die Ressource, um die Fehlerursache festzustellen.  
   
-## Siehe auch  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER Produktsupport und Barrierefreiheit](http://msdn.microsoft.com/de-de/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [PAVEOVER Produktsupport und Barrierefreiheit](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)

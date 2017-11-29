@@ -1,55 +1,58 @@
 ---
-title: "WAS-Aktivierungsarchitektur | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WAS-Aktivierungsarchitektur
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3ecd0ab8e285ff8c05ad8b39f68e5b2d0a3c7886
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# WAS-Aktivierungsarchitektur
-In diesem Thema werden die einzelnen Komponenten des Windows\-Prozessaktivierungsdiensts \(auch WAS genannt\) aufgeführt und erläutert.  
+# <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
+In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
   
-## Aktivierungskomponenten  
+## <a name="activation-components"></a>Aktivierungskomponenten  
  WAS umfasst mehrere Architekturkomponenten:  
   
--   Listeneradapter.Windows\-Dienste, die Nachrichten über bestimmte Netzwerkprotokolle empfangen und mit WAS kommunizieren, leiten eingehende Nachrichten an den richtigen Arbeitsprozess weiter.  
+-   Listeneradapter. Windows-Dienste, die Nachrichten über bestimmte Netzwerkprotokolle empfangen und mit WAS kommunizieren, leiten eingehende Nachrichten an den richtigen Arbeitsprozess weiter.  
   
--   WAS.Der Windows\-Dienst, der die Erstellung und die Lebensdauer von Arbeitsprozessen verwaltet.  
+-   WAS. Der Windows-Dienst, der die Erstellung und die Lebensdauer von Arbeitsprozessen verwaltet.  
   
--   Die ausführbare Datei für generische Arbeitsprozesse \(w3wp.exe\).  
+-   Die ausführbare Datei für generische Arbeitsprozesse (w3wp.exe).  
   
--   Anwendungs\-ManagerVerwaltet die Erstellung und die Lebensdauer der Anwendungsdomänen, die innerhalb des Arbeitsprozesses als Host von Anwendungen fungieren.  
+-   Anwendungs-Manager Verwaltet die Erstellung und die Lebensdauer der Anwendungsdomänen, die innerhalb des Arbeitsprozesses als Host von Anwendungen fungieren.  
   
--   Protokollhandler.Protokollspezifische Komponenten, die im Arbeitsprozess ausgeführt werden und die Kommunikation zwischen Arbeitsprozess und den einzelnen Listeneradaptern verwalten.Es sind zwei Typen von Protokollhandlern verfügbar: Prozessprotokollhandler und AppDomain\-Protokollhandler.  
+-   Protokollhandler. Protokollspezifische Komponenten, die im Arbeitsprozess ausgeführt werden und die Kommunikation zwischen Arbeitsprozess und den einzelnen Listeneradaptern verwalten. Es sind zwei Typen von Protokollhandlern verfügbar: Prozessprotokollhandler und AppDomain-Protokollhandler.  
   
- Wenn WAS eine Arbeitsprozessinstanz aktiviert, werden die erforderlichen Prozessprotokollhandler in den Arbeitsprozess geladen, und mit dem Anwendungs\-Manager wird eine Anwendungsdomäne erstellt, in der die Anwendung gehostet wird.Die Anwendungsdomäne lädt sowohl den Anwendungscode als auch die AppDomain\-Protokollhandler, die für die von der Anwendung verwendeten Netzwerkprotokolle erforderlich sind.  
+ Wenn WAS eine Arbeitsprozessinstanz aktiviert, werden die erforderlichen Prozessprotokollhandler in den Arbeitsprozess geladen, und mit dem Anwendungs-Manager wird eine Anwendungsdomäne erstellt, in der die Anwendung gehostet wird. Die Anwendungsdomäne lädt sowohl den Anwendungscode als auch die AppDomain-Protokollhandler, die für die von der Anwendung verwendeten Netzwerkprotokolle erforderlich sind.  
   
- ![WAS&#45;Architektur](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![WAS-Architektur](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
-### Listeneradapter  
- Listeneradapter sind einzelne Windows\-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren.In der folgenden Tabelle sind die Listeneradapter für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aufgeführt.  
+### <a name="listener-adapters"></a>Listeneradapter  
+ Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aufgeführt.  
   
-|Dienstname des Listeneradapters|Protokoll|Hinweise|  
-|-------------------------------------|---------------|--------------|  
-|W3SVC|http|Allgemeine Komponente, die sowohl für IIS 7.0 als auch für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die HTTP\-Aktivierung bereitstellt.|  
-|NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing\-Dienst ab.|  
+|Dienstname des Listeneradapters|Protokoll|Notizen|  
+|-----------------------------------|--------------|-----------|  
+|W3SVC|http|Allgemeine Komponente, die sowohl für IIS&#160;7.0 als auch für [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] die HTTP-Aktivierung bereitstellt.|  
+|NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Für die Verwendung mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-basierten Message Queuing\-Anwendungen.|  
-|NetMsmqActivator|msmq.formatname|Stellt Abwärtskompatibilität mit vorhandenen Message Queuing\-Anwendungen bereit.|  
+|NetMsmqActivator|net.msmq|Für die Verwendung mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-basierten Message Queuing-Anwendungen.|  
+|NetMsmqActivator|msmq.formatname|Stellt Abwärtskompatibilität mit vorhandenen Message Queuing-Anwendungen bereit.|  
   
- Listeneradapter für bestimmte Protokolle werden während der Installation in der Datei applicationHost.config registriert. Dies wird im folgenden XML\-Beispiel veranschaulicht.  
+ Listeneradapter für bestimmte Protokolle werden während der Installation in der Datei applicationHost.config registriert. Dies wird im folgenden XML-Beispiel veranschaulicht.  
   
-```  
+```xml  
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
@@ -65,10 +68,10 @@ In diesem Thema werden die einzelnen Komponenten des Windows\-Prozessaktivierung
 </system.applicationHost>  
 ```  
   
-### Protokollhandler  
- Prozess\- und AppDomain\-Protokollhandler für bestimmte Protokolle werden in der Datei Web.config auf Computerebene registriert.  
+### <a name="protocol-handlers"></a>Protokollhandler  
+ Prozess- und AppDomain-Protokollhandler für bestimmte Protokolle werden in der Datei Web.config auf Computerebene registriert.  
   
-```  
+```xml  
 <system.web>  
    <protocols>  
       <add name="net.tcp"   
@@ -81,7 +84,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows\-Prozessaktivierung
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  
-           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler”/>  
+           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler"/>  
       <add name="net.msmq"  
         processHandlerType=  
          "System.ServiceModel.WasHosting.MsmqProcessProtocolHandler"  
@@ -92,6 +95,6 @@ In diesem Thema werden die einzelnen Komponenten des Windows\-Prozessaktivierung
 </system.web>  
 ```  
   
-## Siehe auch  
- [Konfigurieren von WAS zur Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
- [Windows Server AppFabric\-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Siehe auch  
+ [Konfigurieren von WAS zur Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)

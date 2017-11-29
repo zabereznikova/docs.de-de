@@ -1,80 +1,80 @@
 ---
-title: "Virtueller Modus im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView-Steuerelement [Windows Forms], Virtueller Modus"
+title: Virtueller Modus im DataGridView-Steuerelement in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Virtueller Modus im DataGridView-Steuerelement in Windows Forms
-Mit dem virtuellen Modus können Sie die Interaktion zwischen dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement und einem benutzerdefinierten Datencache verwalten.  Um den virtuellen Modus zu implementieren, legen Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft auf `true` fest, und behandeln Sie eines oder mehrere der Ereignisse, die weiter unten in diesem Thema beschrieben werden.  Für gewöhnlich behandeln Sie zumindest das `CellValueNeeded`\-Ereignis, das es dem Steuerelement ermöglicht, Werte im Datencache zu suchen.  
+# <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Virtueller Modus im DataGridView-Steuerelement in Windows Forms
+Mit dem virtuellen Modus können Sie verwalten die Interaktion zwischen der <xref:System.Windows.Forms.DataGridView> -Steuerelement und einen benutzerdefinierten Datencache. Zum Implementieren des virtuellen Modus legen die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und eine oder mehrere der in diesem Thema beschriebenen Ereignisse zu behandeln. Behandeln Sie in der Regel mindestens die `CellValueNeeded` Ereignis, das Werte im Datencache Steuerelement suchen kann.  
   
-## Gebundener Modus und virtueller Modus  
- Der virtuelle Modus ist nur erforderlich, wenn Sie den gebundenen Modus ergänzen oder ersetzen müssen.  Im gebundenen Modus legen Sie die <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft fest, sodass das Steuerelement die Daten automatisch aus der angegebenen Quelle lädt und Änderungen des Benutzers an diese zurücksendet.  Sie können steuern, welche der gebundenen Spalten angezeigt werden. Die Datenquelle selbst behandelt für gewöhnlich Operationen, z. B. Sortiervorgänge.  
+## <a name="bound-mode-and-virtual-mode"></a>Gebundene und virtueller Modus  
+ Virtueller Modus ist erforderlich, lediglich bei Bedarf zu ergänzen oder Ersetzen von gebundenen Modus. In den gebundenen Modus legen Sie die <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft und das Steuerelement automatisch lädt die Daten aus der angegebenen Quelle und sendet Benutzer ändert, zurück an. Sie können steuern, welche die gebundenen Spalten angezeigt werden, und die Datenquelle selbst behandelt normalerweise Vorgänge wie das Sortieren.  
   
-## Ergänzen des gebundenen Modus  
- Sie können den gebundenen Modus ergänzen, indem Sie ungebundene Spalten zusammen mit den gebundenen Spalten anzeigen.  Dies wird manchmal als "gemischter Modus" bezeichnet und eignet sich beispielsweise zum Anzeigen von berechneten Werten oder UI\-Steuerelementen.  
+## <a name="supplementing-bound-mode"></a>Ergänzen von gebundenen Modus  
+ Gebundene Modus können Sie durch Anzeigen von ungebundenen Spalten zusammen mit gebundenen Spalten ergänzen. Dies wird manchmal als "gemischt" bezeichnet und eignet sich zum Anzeigen von z. B. berechnete Werte oder die Benutzeroberfläche (UI) gesteuert.  
   
- Da ungebundene Spalten sich außerhalb der Datenquelle befinden, werden sie von den Sortiervorgängen der Datenquelle ignoriert.  Wenn Sie das Sortieren im gemischten Modus aktivieren, müssen Sie daher die ungebundenen Daten in einem lokalen Cache verwalten und den virtuellen Modus implementieren, damit das <xref:System.Windows.Forms.DataGridView>\-Steuerelement damit interagiert.  
+ Da ungebundene Spalten außerhalb der Datenquelle sind, werden sie von der Datenquelle Sortieroperationen ignoriert. Deshalb beim Sortieren im gemischten Modus aktivieren, müssen Sie die ungebundenen Daten in einem lokalen Cache verwalten und virtuellen Modus implementieren, können die <xref:System.Windows.Forms.DataGridView> Steuerelement interagieren.  
   
- Weitere Informationen über die Verwendung des virtuellen Modus zur Erhaltung der Werte in ungebundenen Spalten finden Sie in den Beispielen in der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=fullName>\-Eigenschaft und den Referenzthemen zur <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=fullName>\-Klasse.  
+ Weitere Informationen zur Verwendung des virtuellen Modus zur Erhaltung der Werte in ungebundenen Spalten finden Sie unter den Beispielen in der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=nameWithType> Eigenschaft und <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType> – Referenzthemen zur Klasse.  
   
-## Ersetzen des gebundenen Modus  
- Wenn der gebundene Modus Ihre Leistungsanforderungen nicht erfüllt, können Sie sämtliche Daten in einem benutzerdefinierten Cache mithilfe von Ereignishandlern des virtuellen Modus verwalten.  Beispielsweise können Sie den virtuellen Modus verwenden, um das Just\-In\-Time\-Laden von Daten zu implementieren, wodurch nur so viele Daten aus einer Netzwerkdatenbank abgerufen werden, wie zur Erhaltung der optimalen Leistung möglich sind.  Dieses Szenario eignet sich insbesondere bei der Arbeit mit großen Datenmengen, die über eine langsame Netzwerkverbindung übertragen werden, oder mit Clientrechnern, die über eine begrenzte Menge an Arbeitsspeicher oder Speicherplatz verfügen.  
+## <a name="replacing-bound-mode"></a>Ersetzen des gebundenen Modus  
+ Wenn gebundene Modus Ihren leistungsanforderungen müssen nicht erfüllt, können Sie alle Ihre Daten in einem benutzerdefinierten Cache über Virtueller Modus Ereignishandler verwalten. Beispielsweise können virtuellen Modus implementieren eine just-in-Time Datenladevorgangs-Mechanismus, der nur Ruft Daten aus einer Datenbank im Netzwerk für eine optimale Leistung erforderlich ist. Dieses Szenario ist besonders nützlich, bei der Arbeit mit großen Mengen von Daten über eine langsame Netzwerkverbindung oder Clientcomputer, auf denen eine begrenzte Menge an Arbeitsspeicher oder Speicherplatz.  
   
- Weitere Informationen über die Verwendung des virtuellen Modus in einem Just\-In\-Time\-Szenario finden Sie unter [Implementieren des virtuellen Modus mit Just\-In\-Time\-Laden von Daten in das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Weitere Informationen zur Verwendung des virtuellen Modus in einem Just-in-Time-Szenario finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
-## Ereignisse im virtuellen Modus  
- Wenn Sie nur lesend auf die Daten zugreifen, müssen Sie unter Umständen nur das `CellValueNeeded`\-Ereignis behandeln.  Andere Ereignisse im virtuellen Modus ermöglichen es Ihnen, bestimmte Funktionen zu aktivieren, z. B. Bearbeitungen durch den Benutzer, das Hinzufügen und Löschen von Zeilen und Transaktionen auf Zeilenebene.  
+## <a name="virtual-mode-events"></a>Ereignisse des virtuellen Modus  
+ Wenn Ihre Daten nur lesen, ist die `CellValueNeeded` Ereignis möglicherweise das einzige Ereignis, das Sie behandeln müssen. Virtueller Modus Ereignisse können Sie bestimmte Funktionen wie die benutzerbearbeitungen, Zeile hinzufügen und löschen und Transaktionen auf Zeilenebene zu ermöglichen.  
   
- Einige standardmäßige <xref:System.Windows.Forms.DataGridView>\-Ereignisse \(z. B. Ereignisse, die auftreten, wenn Benutzer Zeilen hinzufügen oder löschen oder wenn Zellenwerte bearbeitet, analysiert, überprüft oder formatiert werden\) sind im virtuellen Modus ebenfalls hilfreich.  Sie können auch Ereignisse behandeln, mit denen Sie Werte erhalten können, die normalerweise nicht in einer gebundenen Datenquelle gespeichert sind, z. B. QuickInfo\-Zellentext, Zellen\- und Zeilenfehlertext, Zellen\- und Zeilenkontextmenüdaten und Zeilenhöhendaten.  
+ Einige Standard <xref:System.Windows.Forms.DataGridView> Ereignisse (z. B. Ereignisse, die auftreten, wenn Benutzer hinzufügen oder Löschen von Zeilen oder wenn Zellenwerte bearbeitet, analysiert, überprüft oder formatiert werden) im virtuellen Modus auch hilfreich sind. Sie können auch Ereignisse behandeln, mit denen Sie in der Regel nicht in einer gebundenen Datenquelle, wie Zelle QuickInfo-Text, Zelle und Zeilenfehlertext Zelle und Zeilendaten Verknüpfung-Menü und Höhe Zeilendaten gespeicherten Werte beibehalten.  
   
- Weitere Informationen über das Implementieren des virtuellen Modus zur Verwaltung von Lese\-\/Schreibdaten mit einem Commit\-Bereich auf Zeilenebene finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Weitere Informationen zum Implementieren des virtuellen Modus zum Verwalten von Lese-Schreib-Daten mit einem Bereich auf Zeilenebene Commit finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
- Ein Beispiel zur Implementierung des virtuellen Modus mit einem Commit\-Bereich auf Zellenebene finden Sie im Referenzthema zur <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft.  
+ Ein Beispiel für die Implementierung des virtuellen Modus mit einem Bereich auf Zellenebene Commit, finden Sie unter der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Referenzthemen.  
   
- Die folgenden Ereignisse treten nur auf, wenn die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft auf `true` festgelegt ist.  
+ Die folgenden Ereignisse treten nur bei der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> -Eigenschaftensatz auf `true`.  
   
 |Ereignis|Beschreibung|  
-|--------------|------------------|  
-|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Wird vom Steuerelement verwendet, um einen Zellenwert zur Anzeige aus dem Datencache abzurufen.  Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten auf.|  
-|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Wird vom Steuerelement verwendet, um Benutzereingaben für eine Zelle an den Datencache zu übergeben.  Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten auf.<br /><br /> Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>\-Methode auf, wenn Sie einen zwischengespeicherten Wert außerhalb eines <xref:System.Windows.Forms.DataGridView.CellValuePushed>\-Ereignishandlers ändern, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird und einen automatischen Größenanpassungsmodus anzuwenden.|  
-|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|Wird vom Steuerelement verwendet, um darauf hinzuweisen, dass im Datencache eine neue Zeile benötigt wird.|  
-|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|Wird vom Steuerelement verwendet, um zu bestimmen, ob eine Zeile über nicht gespeicherte Änderungen verfügt.|  
-|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|Wird vom Steuerelement verwendet, um anzugeben, dass die zwischengespeicherten Werte einer Zeile wiederhergestellt werden sollten.|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Vom Steuerelement verwendeten, um einen Zellenwert aus dem Datencache für die Anzeige abzurufen. Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten.|  
+|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Vom Steuerelement verwendeten, um Benutzereingaben für eine Zelle für den Datencache zu übernehmen. Dieses Ereignis tritt nur für Zellen in ungebundenen Spalten.<br /><br /> Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> Methode, wenn einen zwischengespeicherten Wert außerhalb des ändern eine <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignishandler, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird und alle aktuell aktiven Größenänderung Modi anzuwenden.|  
+|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|Vom Steuerelement verwendeten, um die Notwendigkeit für eine neue Zeile im Datencache anzugeben.|  
+|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|Vom Steuerelement verwendeten, um festzustellen, ob eine Zeile nicht gespeicherte Änderungen verfügt.|  
+|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|Vom Steuerelement verwendeten, um anzugeben, dass eine Zeile die zwischengespeicherten Werte zurückgesetzt werden soll.|  
   
- Die folgenden Ereignisse sind im virtuellen Modus hilfreich, können aber unabhängig von der Einstellung der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft verwendet werden.  
+ Die folgenden Ereignisse eignen sich in der virtuelle Modus, jedoch kann verwendet werden, unabhängig von der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Einstellung der Eigenschaft.  
   
 |Ereignisse|Beschreibung|  
-|----------------|------------------|  
-|<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Wird vom Steuerelement verwendet, um anzugeben, wann Zeilen gelöscht oder hinzugefügt werden, und um den Datencache entsprechend zu aktualisieren.|  
-|<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Wird vom Steuerelement verwendet, um Zellenwerte für die Anzeige zu formatieren und Benutzereingaben zu analysieren und zu überprüfen.|  
-|<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>|Wird vom Steuerelement verwendet, um QuickInfo\-Zellentext abzurufen, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft `true` lautet.<br /><br /> Zellen\-QuickInfos werden nur angezeigt, wenn der <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A>\-Eigenschaftswert `true` lautet.|  
-|<xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded>|Wird vom Steuerelement verwendet, um Zellen\- oder Zeilenfehlertext abzurufen, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft `true` lautet.<br /><br /> Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateCellErrorText%2A>\-Methode oder die <xref:System.Windows.Forms.DataGridView.UpdateRowErrorText%2A>\-Methode auf, wenn Sie den Zellen\- oder Zeilenfehlertext ändern, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird.<br /><br /> Zellen\- und Zeilenfehlersymbole werden angezeigt, wenn der <xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A>\-Eigenschaftswert und der <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A>\-Eigenschaftswert `true` lauten.|  
-|<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>|Wird vom Steuerelement verwendet, um ein <xref:System.Windows.Forms.ContextMenuStrip> für eine Zelle oder Zeile abzurufen, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft des Steuerelements festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft `true` lautet.|  
-|<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Wird vom Steuerelement verwendet, um Zeilenhöheninformationen im Datencache abzurufen oder zu speichern.  Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A>\-Methode auf, wenn Sie die zwischengespeicherten Zeilenhöheninformationen außerhalb eines <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>\-Ereignishandlers ändern, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird.|  
+|------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Vom Steuerelement verwendeten, um anzugeben, wenn Zeilen gelöscht oder hinzugefügt werden, und Sie den Datencache entsprechend aktualisieren.|  
+|<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Vom Steuerelement formatiert Zellenwerte verwendeten für die Anzeige und zu analysieren und Validieren von Benutzereingaben.|  
+|<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>|Zum Abrufen der Zelle QuickInfo-Text vom Steuerelement verwendeten bei der <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft ist `true`.<br /><br /> Zelle QuickInfos angezeigt werden nur, wenn die <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> Eigenschaftswert ist `true`.|  
+|<xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded>|Zum Abrufen der Zelle oder Zeile Fehlertext vom Steuerelement verwendeten bei der <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft ist `true`.<br /><br /> Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateCellErrorText%2A> Methode oder die <xref:System.Windows.Forms.DataGridView.UpdateRowErrorText%2A> Methode, wenn Sie ändern den Fehlertext Zelle oder Zeile, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird.<br /><br /> Zellen- und Fehlersymbole angezeigt werden bei der <xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A> und <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A> Eigenschaftswerte sind `true`.|  
+|<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>|Zum Abrufen einer Zelle oder Zeile vom Steuerelement verwendeten <xref:System.Windows.Forms.ContextMenuStrip> Wenn das Steuerelement <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft festgelegt ist oder die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft ist `true`.|  
+|<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Vom Steuerelement verwendeten, zum Abrufen oder Speichern von Informationen über die Zeilenhöhe im Datencache. Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> Methode, wenn die zwischengespeicherten Informationen über die Zeilenhöhe außerhalb von Ändern einer <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> -Ereignishandler, um sicherzustellen, dass der aktuelle Wert in der Anzeige des Steuerelements verwendet wird.|  
   
-## Empfohlene Vorgehensweisen im virtuellen Modus  
- Wenn Sie den virtuellen Modus implementieren, um effektiv mit großen Datenmengen zu arbeiten, sollten Sie außerdem sicherstellen, dass Sie auch mit dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement effektiv arbeiten.  Weitere Informationen über die effektive Verwendung von Zellenstilen, automatischer Größenanpassung, Auswahlmöglichkeiten und Zeilenfreigabe finden Sie unter [Empfohlene Vorgehensweisen für das Skalieren des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="best-practices-in-virtual-mode"></a>Empfohlene Vorgehensweisen in Virtueller Modus  
+ Wenn Sie damit die effiziente Zusammenarbeit mit großen Mengen von Daten des virtuellen Modus implementieren, sollten Sie auch Stellen Sie sicher, dass Sie effizient arbeiten die <xref:System.Windows.Forms.DataGridView> selbst zu steuern. Weitere Informationen über die effiziente Verwendung von Zellenstilen, Größenänderung, Auswahl und Freigeben von Zeilen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- [Leistungsoptimierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Empfohlene Vorgehensweisen für das Skalieren des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [Implementieren des virtuellen Modus mit Just\-In\-Time\-Laden von Daten in das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

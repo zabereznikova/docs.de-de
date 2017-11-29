@@ -1,84 +1,67 @@
 ---
-title: "Gültigkeitsbereich in Visual Basic | Microsoft-Dokumentation"
+title: "Gültigkeitsbereich in Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- module scope
-- scope, levels
+- module scope [Visual Basic]
+- scope [Visual Basic], levels
 - module level
-- procedures, scope
-- declared elements, scope
-- namespaces, scope
-- scope, declared elements
-- scope, about scope
-- levels of scope
-- block scope
-- scope, Visual Basic
-- procedure scope
+- procedures [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- namespaces [Visual Basic], scope
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], about scope
+- levels of scope [Visual Basic]
+- block scope [Visual Basic]
+- scope [Visual Basic], Visual Basic
+- procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28e096f9e35a4981d66752f204ed57b25116e8c8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="scope-in-visual-basic"></a>Gültigkeitsbereich in Visual Basic
-Die *Bereich* eines deklarierten Elements ist ein Satz von Code, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen, einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann an einem der folgenden Ebenen Bereich aufweisen:  
+Die *Bereich* eines deklarierten Elements ist die Menge des gesamten Codes, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann in einem der folgenden Ebenen Bereich aufweisen:  
   
 |Ebene|Beschreibung|  
 |-----------|-----------------|  
-|Blockbereich|Verfügbar nur innerhalb des Codes blockieren, in dem sie deklariert ist|  
-|Prozedurbereich|Für sämtlichen Code innerhalb der Prozedur, in der sie deklariert ist, verfügbar|  
-|Modulbereich|Für den gesamten Code im Modul, Klasse oder Struktur, in der sie deklariert ist, verfügbar|  
-|Namespace-Bereich|Für den gesamten Code im Namespace, in dem sie deklariert ist, verfügbar|  
+|Blockbereich|Verfügbar nur innerhalb des Codes blockiert, in dem sie deklariert ist|  
+|Prozedurbereich|Verfügbar für sämtlichen Code innerhalb der Prozedur, die in der sie deklariert ist|  
+|Modulbereich|Verfügbar für sämtlichen Code innerhalb das Modul, Klasse oder Struktur, die in der sie deklariert ist|  
+|Namespace-Gültigkeitsbereich|Verfügbar für den gesamten Code im Namespace, in dem sie deklariert ist|  
   
- Diese Ebenen des Gültigkeitsbereichs steigern vom engsten (Block) auf den längsten (Namespace), wobei *engsten Gültigkeitsbereich* bedeutet, dass die kleinste Menge der Code, der ohne Qualifizierung auf dieses Element verweisen kann. Weitere Informationen finden Sie unter "Ebenen des Gültigkeitsbereichs" auf dieser Seite.  
+ Diese Ebenen Bereich Status aus dem engsten (Block) auf den umfassendsten (Namespace), in denen *engsten Gültigkeitsbereich* bedeutet, dass die kleinste Menge der Code, der auf das Element ohne Qualifizierung verweisen kann. Weitere Informationen finden Sie unter "Ebenen Scope" auf dieser Seite.  
   
 ## <a name="specifying-scope-and-defining-variables"></a>Festlegen des Gültigkeitsbereichs und Definieren von Variablen  
- Sie geben den Umfang eines Elements, wenn Sie deklariert werden. Der Bereich kann von folgenden Faktoren abhängen:  
+ Wenn Sie deklariert werden, geben Sie den Bereich eines Elements. Der Bereich kann die folgenden Faktoren abhängig:  
   
--   Die Region (Block, Prozedur, Modul, Klasse oder Struktur), in der Sie das Element deklarieren  
+-   Die Region (Block, Prozedur, Modul, Klasse oder Struktur), in der Sie das Element deklariert werden  
   
 -   Der Namespace, die die Deklaration des Elements enthält.  
   
 -   Die Zugriffsebene, die Sie für das Element deklarieren  
   
- Gehen Sie sorgfältig vor, wenn Sie Variablen mit demselben Namen, aber andere Bereiche definieren, da dies kann zu unerwarteten Ergebnissen führen. Weitere Informationen finden Sie unter [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Gehen Sie sorgfältig vor, wenn Sie Variablen mit dem gleichen Namen, aber andere Bereiche definieren, da dies zu erheblichen kann zu unerwarteten Ergebnissen führen. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="levels-of-scope"></a>Ebenen des Gültigkeitsbereichs  
- Ein Programmierelement steht innerhalb der Region, in der Sie deklariert werden. Der gesamte Code in der gleichen Region kann auf das Element verweisen, ohne dessen Namen zu qualifizieren.  
+ Ein Programmierelement ist verfügbar in der Region, in der Sie deklariert werden. Der gesamte Code in der gleichen Region kann auf das Element verweisen, ohne dessen Namen zu qualifizieren.  
   
 ### <a name="block-scope"></a>Blockbereich  
- Ein Block ist eine Gruppe von Anweisungen, die innerhalb der starten und Beenden von deklarationsanweisungen, wie z. B. die folgenden:  
+ Ein Block ist eine Reihe von Anweisungen eingefasst initiiert und beendet deklarationsanweisungen, wie z. B. die folgenden:  
   
 -   `Do` und `Loop`  
   
--   `For`[`Each`] and`Next`  
+-   `For`[`Each`] und`Next`  
   
 -   `If` und `End If`  
   
@@ -92,7 +75,7 @@ Die *Bereich* eines deklarierten Elements ist ein Satz von Code, die darauf verw
   
 -   `With` und `End With`  
   
- Wenn Sie eine Variable innerhalb eines Blocks zu deklarieren, können Sie es nur innerhalb dieses Blocks. Im folgenden Beispiel den Bereich der ganzzahligen Variable `cube` der Block zwischen `If` und `End If`, und Sie können nicht mehr verweisen `cube` bei Ausführung aus dem Block weitergegeben.  
+ Wenn Sie eine Variable innerhalb eines Blocks zu deklarieren, können Sie es nur innerhalb dieses Blocks verwenden. Im folgenden Beispiel, den Bereich der ganzzahligen Variablen `cube` wird der Block zwischen `If` und `End If`, und Sie können nicht mehr beziehen sich auf `cube` Wenn die Ausführung aus dem Block übergeben.  
   
 ```  
 If n < 1291 Then  
@@ -102,24 +85,24 @@ End If
 ```  
   
 > [!NOTE]
->  Auch wenn der Gültigkeitsbereich einer Variablen auf einen Block beschränkt ist, ist seine Lebensdauer immer noch die gesamte Prozedur. Wenn Sie den Block mehrmals während des Verfahrens eingeben, behält jede Blockvariable den vorhergehenden Wert. Um unerwartete Ergebnisse in einem solchen Fall zu vermeiden, ist es ratsam, Block Variablen am Anfang des Blocks zu initialisieren.  
+>  Auch wenn der Gültigkeitsbereich einer Variablen auf einen Block beschränkt ist, ist seine Lebensdauer immer noch der gesamten Prozedur. Wenn Sie den Block während der Prozedur mehr als einmal eingeben, behält jede Blockvariable seinen ursprünglichen Wert. Um unerwartete Ergebnisse in einem solchen Fall zu vermeiden, ist es ratsam, Block Variablen am Anfang des Blocks zu initialisieren.  
   
 ### <a name="procedure-scope"></a>Prozedurbereich  
- Ein Element innerhalb einer Prozedur ist nicht außerhalb dieser Prozedur verfügbar. Nur die Prozedur, die die Deklaration enthält können. Elemente auf dieser Ebene werden auch bekannt als *lokale Variablen*. Sie deklarieren sie mit der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)mit oder ohne den [statische](../../../../visual-basic/language-reference/modifiers/static.md) Schlüsselwort.  
+ Ein Element innerhalb einer Prozedur deklariert ist nicht außerhalb dieser Prozedur verfügbar. Nur die Prozedur, die die Deklaration enthält können. Variablen, die auf dieser Ebene werden auch bezeichnet als *lokale Variablen*. Sie deklarieren sie mit der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)mit oder ohne die [statische](../../../../visual-basic/language-reference/modifiers/static.md) Schlüsselwort.  
   
- Verfahren und der Blockbereich sind eng miteinander verknüpft. Wenn Sie eine Variable innerhalb einer Prozedur, aber außerhalb aller Blöcke in dieser Prozedur deklarieren, können Sie sich vorstellen der Variablen Blockbereich, wobei der Block die gesamte Prozedur ist.  
+ Verfahren und der Blockbereich sind eng miteinander verknüpft. Wenn Sie eine Variable innerhalb einer Prozedur deklarieren, jedoch außerhalb aller Blöcke innerhalb der Prozedur, können Sie die Variable als Blockbereich, wobei der Block die gesamte Prozedur ist vorstellen.  
   
 > [!NOTE]
->  Alle lokalen Elemente, auch wenn sie sind `Static` Variablen, für die Prozedur, in der sie erscheinen, privat sind. Kann nicht deklariert werden jedem Element mithilfe der [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Schlüsselwort innerhalb einer Prozedur.  
+>  Alle lokalen Elemente, auch wenn sie sind `Static` Variablen sind privat, an die Prozedur in der sie angezeigt werden. Sie können nicht deklariert werden alle-Element mithilfe der [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) Schlüsselwort innerhalb einer Prozedur.  
   
 ### <a name="module-scope"></a>Modulbereich  
- Der Einfachheit halber der Begriff *Modulebene* gilt gleichermaßen für Module, Klassen und Strukturen. Sie können Elemente auf dieser Ebene die Deklaration-Anweisung außerhalb jeder Prozedur oder eines Blocks jedoch in Modul, Klasse oder Struktur deklarieren.  
+ Der Einfachheit halber einen einzelnen Ausdruck *Modulebene* gilt gleichermaßen für Module, Klassen und Strukturen. Sie können Elemente auf dieser Ebene platzieren der deklarationsanweisung außerhalb von Prozeduren oder Block, jedoch innerhalb das Modul, Klasse oder Struktur deklarieren.  
   
- Wenn Sie eine Deklaration auf Modulebene vornehmen, bestimmt die Zugriffsebene, die Sie wählen den Bereich. Der Namespace, der das Modul, Klasse oder Struktur enthält, wirkt sich auch auf den Bereich aus.  
+ Wenn Sie eine Deklaration auf Modulebene vornehmen, bestimmt die Zugriffsebene, die Sie auswählen, den Bereich an. Der Namespace, der das Modul, Klasse oder Struktur enthält, wirkt sich auch auf den Bereich aus.  
   
- Elemente, für die Sie deklarieren [Private](../../../../visual-basic/language-reference/modifiers/private.md) Zugriffsebene auf alle Prozeduren in diesem Modul, jedoch nicht für den gesamten Code in einem anderen Modul verfügbar sind. Die `Dim` -Anweisung auf Modulebene Standardwert `Private` , wenn Sie keine Zugriffsebenen-Schlüsselwörter verwenden. Allerdings Sie können den Gültigkeitsbereich und Zugriffsebene deutlicher über stellen die `Private` -Schlüsselwort in der `Dim` Anweisung.  
+ Elemente, die für die Sie deklarieren [Private](../../../../visual-basic/language-reference/modifiers/private.md) Zugriffsebene zur Verfügung stehen, um jede Prozedur in diesem Modul, jedoch nicht zu jedem Code in einem anderen Modul. Die `Dim` Anweisung auf Modulebene standardmäßig `Private` , wenn Sie keine Zugriffsebenen-Schlüsselwörter verwenden. Allerdings möglich den Bereich und die erforderlichen Zugriffsebenen leichter mithilfe der `Private` -Schlüsselwort in der `Dim` Anweisung.  
   
- Im folgenden Beispiel können alle im Modul definierte Prozeduren finden Sie in der Zeichenfolgenvariablen `strMsg`. Wenn die zweite Prozedur aufgerufen wird, wird es zeigt den Inhalt der Zeichenfolgenvariablen `strMsg` in einem Dialogfeld.  
+ Im folgenden Beispiel können alle im Modul definierte Prozeduren verweisen, der Zeichenfolgenvariablen `strMsg`. Wenn die zweite Prozedur aufgerufen wird, zeigt er den Inhalt der Zeichenfolgenvariablen `strMsg` in einem Dialogfeld.  
   
 ```  
 ' Put the following declaration at module level (not in any procedure).  
@@ -134,35 +117,35 @@ Sub usePrivateVariable()
 End Sub  
 ```  
   
-### <a name="namespace-scope"></a>Namespace-Bereich  
- Wenn Sie ein Element an das Modul mit deklarieren die [Freund](../../../../visual-basic/language-reference/modifiers/friend.md) oder [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort, steht es allen Prozeduren des gesamten Namespace, in dem das Element deklariert wird. Durch die folgende Änderung zum vorherigen Beispiel, die Zeichenfolgenvariable `strMsg` können durch Code an einer beliebigen Stelle im Namespace der Deklaration bezeichnet werden.  
+### <a name="namespace-scope"></a>Namespace-Gültigkeitsbereich  
+ Wenn Sie ein Element an das Modul mit deklarieren die ["Friend"](../../../../visual-basic/language-reference/modifiers/friend.md) oder [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort verwenden, steht es für alle Prozeduren in der gesamten den Namespace, in dem das Element deklariert wird. Mit der folgenden Änderung im vorhergehenden Beispiel, die Zeichenfolgenvariable `strMsg` können von Code an einer beliebigen Stelle in den Namespace der Deklaration bezeichnet werden.  
   
 ```  
 ' Include this declaration at module level (not inside any procedure).  
 Public strMsg As String  
 ```  
   
- Namespace-Bereich enthält geschachtelte Namespaces. Ein Element innerhalb eines Namespace verfügbar ist auch in jedem innerhalb dieses Namespace geschachtelten Namespace verfügbar.  
+ Namespace-Gültigkeitsbereich enthält geschachtelte Namespaces. Ein Element innerhalb eines Namespaces zur Verfügung steht auch auf in allen Namespaces, die in diesem Namespace geschachtelt.  
   
- Wenn das Projekt keine enthält [Namespace-Anweisung](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, alles im Projekt ist im selben Namespace. In diesem Fall kann der Namespacebereich als Projektumfang betrachtet werden. `Public`Elemente in einem Modul, Klasse oder Struktur stehen auch jedem Projekt, das auf ihr Projekt verweist.  
+ Wenn Ihr Projekt keine enthält [Namespace-Anweisung](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, alles im Projekt befindet sich im gleichen Namespace. In diesem Fall kann der Namespace-Gültigkeitsbereich als Projektumfang betrachtet werden. `Public`Elemente in einem Modul, Klasse oder Struktur stehen auch zu einem Projekt, die ihr Projekt verweist.  
   
-## <a name="choice-of-scope"></a>Auswahl des Gültigkeitsbereichs  
- Wenn Sie eine Variable deklarieren, sollten Sie die folgenden Punkte bedenken bei der Auswahl des Gültigkeitsbereichs.  
+## <a name="choice-of-scope"></a>Auswahl eines Bereichs  
+ Wenn Sie eine Variable deklarieren, sollten Sie die folgenden Punkte bedenken bei der Auswahl des Bereichs.  
   
 ### <a name="advantages-of-local-variables"></a>Vorteile von lokalen Variablen  
- Lokale Variablen sind eine gute Wahl für alle Arten von temporären Berechnung aus den folgenden Gründen:  
+ Lokale Variablen sind eine gute Wahl für alle Arten von temporären Berechnung folgende Gründe vorliegen:  
   
--   **Vermeidung von Namenskonflikten.** Namen lokaler Variable sind nicht anfällig für in Konflikt stehen. Sie können z. B. mehrere verschiedene Prozeduren, die eine Variable namens erstellen `intTemp`. Solange jeder `intTemp` wird als deklariert eine lokale Variable, erkennen die einzelnen Prozeduren nur ihre eigene Version der `intTemp`. Jede Prozedur ändern, kann den Wert in der lokalen `intTemp` ohne `intTemp` -Variablen in anderen Prozeduren.  
+-   **Vermeidung von Namenskonflikten.** Namen lokaler Variable sind nicht anfällig für in Konflikt stehen. Sie können z. B. mehrere unterschiedliche Verfahren, die eine Variable Namens enthält erstellen `intTemp`. Solange jeder `intTemp` wird deklariert als lokale Variable, jede Prozedur erkennt nur ihre eigene Version der `intTemp`. Jede Prozedur ändern, kann den Wert in der lokalen `intTemp` ohne `intTemp` Variablen in anderen Prozeduren.  
   
--   **Speicherverbrauch.** Lokale Variablen belegen Arbeitsspeicher nur, wenn ihre Prozedur aktiv ist. Ihre Speicher wird freigegeben, wenn die Prozedur an den aufrufenden Code zurückgegeben. Im Gegensatz dazu [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) und [statische](../../../../visual-basic/language-reference/modifiers/static.md) Variablen Speicherressourcen beanspruchen, bis die Anwendung beendet wird, werden daher nur bei Bedarf verwendet. *Instanzvariablen* verbrauchen Speicher während ihrer Instanz vorhanden weiterhin, sodass sie weniger effizient als lokale Variablen, aber möglicherweise effizienter als `Shared` oder `Static` Variablen.  
+-   **Speicherverbrauch.** Lokale Variablen belegt Arbeitsspeicher nur, wenn die Prozedur ausgeführt wird. Ihre Arbeitsspeicher wird freigegeben, wenn die Prozedur an den aufrufenden Code zurückgibt. Im Gegensatz dazu [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) und [statische](../../../../visual-basic/language-reference/modifiers/static.md) Variablen Arbeitsspeicherressourcen beanspruchen, bis die Anwendung beendet wird, werden daher nur bei Bedarf verwendet. *Instanzvariablen* belegt Arbeitsspeicher während ihrer Instanz vorhanden weiterhin, sodass sie weniger effizient als lokale Variablen, aber möglicherweise effizienter als `Shared` oder `Static` Variablen.  
   
 ### <a name="minimizing-scope"></a>Minimieren des Gültigkeitsbereichs  
- Wenn Sie eine Variable oder Konstante deklarieren, ist es im Allgemeinen guter Programmierstil, den Bereich so eng wie möglich machen (Blockbereich ist der engste). Dadurch wird Speicherplatz gespart und minimiert die Wahrscheinlichkeit des Codes fälschlicherweise auf die falsche Variable verweisen. Ebenso sollten Sie eine Variable deklarieren [statische](../../../../visual-basic/language-reference/modifiers/static.md) nur wenn es ihr Wert über mehrere Prozeduraufrufe hinweg erhalten bleiben muss.  
+ Wenn Sie eine Variable oder Konstante deklarieren, wird es im Allgemeinen als guter Programmierstil, um den Bereich so eng wie möglich zu machen (Blockbereich ist die engste). Dies hilft, Speicherplatz zu sparen und minimiert die Wahrscheinlichkeit des Codes, die fälschlicherweise auf die falsche Variable verweisen. Ebenso sollten Sie eine Variable deklarieren [statische](../../../../visual-basic/language-reference/modifiers/static.md) nur wenn Objektwerts zwischen Prozeduraufrufe beibehalten werden muss.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Gewusst wie: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
+ [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Gewusst wie: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

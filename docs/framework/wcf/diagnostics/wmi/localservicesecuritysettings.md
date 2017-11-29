@@ -1,25 +1,28 @@
 ---
-title: "LocalServiceSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LocalServiceSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# LocalServiceSecuritySettings
+# <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -41,115 +44,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## Methoden  
- Die LocalServiceSecuritySettings\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die LocalServiceSecuritySettings-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die LocalServiceSecuritySettings\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die LocalServiceSecuritySettings-Klasse verfügt über die folgenden Eigenschaften:  
   
-### DetectReplays  
- Datentyp: boolean \(boolescher Wert\)  
-  
- Zugriffstyp: Schreibgeschützt  
-  
- Ein boolescher Wert, der angibt, ob Replay\-Angriffe auf den Kanal automatisch erkannt und behandelt werden.  
-  
-### InactivityTimeout  
- Datentyp: datetime \(Datum und Uhrzeit\)  
+### <a name="detectreplays"></a>DetectReplays  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die maximale Anzahl ausstehender Sicherheitssitzungen, die vom Dienst unterstützt wird.  
+ Ein boolescher Wert, der angibt, ob Replay-Angriffe auf den Kanal automatisch erkannt und behandelt werden.  
   
-### IssuedCookieLifetime  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
+  
+ Zugriffstyp: Schreibgeschützt  
+  
+ Die maximale Anzahl von ausstehenden Sicherheitssitzungen, die der Dienst unterstützt.  
+  
+### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die die für alle neuen Sicherheitscookies ausgestellte Lebensdauer angibt.  
   
-### MaxCachedCookies  
+### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die maximale Anzahl von Cookies, die zwischengespeichert werden kann.  
+ Die maximale Anzahl von Cookies, die zwischengespeichert werden können.  
   
-### MaxClockSkew  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="maxclockskew"></a>MaxClockSkew  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die den maximal zulässigen Zeitunterschied zwischen den Systemuhren der beiden Kommunikationspartner angibt.  
   
-### MaxPendingSessions  
+### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Anzahl ausstehender Verbindungen für den Dienst.  
   
-### MaxStatefulNegotiations  
+### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Anzahl von Sicherheitsaushandlungen, die gleichzeitig aktiv sein können.  
+ Die Anzahl von Sicherheitsverhandlungen, die gleichzeitig aktiv sein können.  
   
-### NegotiationTimeout  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="negotiationtimeout"></a>NegotiationTimeout  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die die maximale Dauer der Sicherheitsaushandlungsphase zwischen Server und Client angibt.  
   
-### ReconnectTransportOnFailure  
+### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Ein boolescher Wert, der angibt, ob mit zuverlässigem WS\-Messaging hergestellte Verbindungen nach Transportfehlern erneut versuchen, eine Verbindung herzustellen.  
+ Ein boolescher Wert, der angibt, ob mit zuverlässigem WS-Messaging hergestellte Verbindungen nach Transportfehlern erneut versuchen, eine Verbindung herzustellen.  
   
-### ReplayCacheSize  
+### <a name="replaycachesize"></a>ReplayCacheSize  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Anzahl von zwischengespeicherten Nonces für die Replay\-Erkennung.  
+ Die Anzahl zwischengespeicherter Nonces, die für die Wiedergabeerkennung verwendet werden.  
   
-### ReplayWindow  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="replaywindow"></a>ReplayWindow  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die angibt, wie lange individuelle Nachrichtennonces gültig sind.  
   
-### SessionKeyRenewalInterval  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die die Dauer angibt, nach der der Initiator den Schlüssel für die Sicherheitssitzung erneuert.  
   
-### SessionKeyRolloverInterval  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die das Zeitintervall angibt, in dem ein alter Sitzungsschlüssel während der Schlüsselerneuerung für eingehende Nachrichten gültig ist.  
   
-### TimestampValidityDuration  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Eine Zeitspanne, die angibt, wie lange ein Zeitstempel gültig ist.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
-|MOF|Deklariert in Servicemodel.mof|  
-|---------|------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|MOF|Deklariert in Servicemodel.mof.|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

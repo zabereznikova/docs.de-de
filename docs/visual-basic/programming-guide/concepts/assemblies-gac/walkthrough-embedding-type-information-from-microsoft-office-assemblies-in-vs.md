@@ -1,31 +1,22 @@
 ---
-title: 'Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 26e6fee5147e8477c64f7eaf0dc2aeb928c13e15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)
 Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verweist, ist die Verwendung einer primären Interopassembly (PIA) nicht mehr erforderlich. Darüber hinaus wird die Anwendung durch die eingebetteten Typinformationen versionsunabhängig. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer COM-Bibliothek geschrieben werden; eine versionsspezifische PIA ist nicht erforderlich. Dies ist ein allgemeines Szenario für Anwendungen, die Objekte aus Microsoft Office-Bibliotheken verwenden. Mithilfe von eingebetteten Typinformationen kann ein Build eines Programms verschiedene Versionen von Microsoft Office auf unterschiedlichen Computern verwenden, ohne dass das Programm oder die PIA für jede Version von Microsoft Office erneut bereitgestellt werden müssen.  
@@ -39,19 +30,19 @@ Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verwe
   
 -   Ein zweiter Computer, auf dem .NET Framework 4 oder höher und eine andere Version von Excel installiert sind.  
   
-##  <a name="BKMK_createapp"></a>Zum Erstellen einer Anwendung, die mit mehreren Versionen von Microsoft Office  
+##  <a name="BKMK_createapp"></a> So erstellen Sie eine Anwendung, die mit mehreren Versionen von Microsoft Office kompatibel ist  
   
 1.  Starten Sie Visual Studio auf einem Computer, auf dem Excel installiert ist.  
   
 2.  Wählen Sie im Menü **Datei** die Optionsfolge **Neu**, **Projekt**aus.  
   
-3.  In der **neues Projekt** im Feld der **Projekttypen** Bereich, stellen Sie sicher, dass **Windows** ausgewählt ist. Wählen Sie **Konsolenanwendung** in der **Vorlagen** Bereich. In der **Namen** geben `CreateExcelWorkbook`, und wählen Sie dann die **OK** Schaltfläche. Das neue Projekt wird erstellt.  
+3.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Konsolenanwendung** aus. Geben Sie im Feld **Name** `CreateExcelWorkbook` ein, und wählen Sie dann die Schaltfläche **OK** aus. Das neue Projekt wird erstellt.  
   
 4.  Öffnen Sie das Kontextmenü für das CreateExcelWorkbook-Projekt, und wählen Sie dann **Eigenschaften**. Wählen Sie die **Verweise** Registerkarte. Wählen Sie die Schaltfläche **Hinzufügen** aus.  
   
-5.  Auf der **.NET** Registerkarte, und wählen Sie die neueste Version von `Microsoft.Office.Interop.Excel`. Beispielsweise **Microsoft.Office.Interop.Excel 14.0.0.0.**. Klicken Sie auf die Schaltfläche **OK** .  
+5.  Wählen Sie auf der Registerkarte **.NET** die aktuellste Version von `Microsoft.Office.Interop.Excel` aus. Beispiel: **Microsoft.Office.Interop.Excel 14.0.0.0**. Klicken Sie auf die Schaltfläche **OK** .  
   
-6.  In der Liste der Verweise für die **CreateExcelWorkbook** Projekt, wählen Sie den Verweis für `Microsoft.Office.Interop.Excel` , die Sie im vorherigen Schritt hinzugefügt. In der **Eigenschaften** Fenster, stellen Sie sicher, dass die `Embed Interop Types` -Eigenschaft auf festgelegt ist `True`.  
+6.  Wählen Sie in der Liste der Verweise für das **CreateExcelWorkbook**-Projekt den Verweis für `Microsoft.Office.Interop.Excel` aus, den Sie im vorherigen Schritt hinzugefügt haben. Vergewissern Sie sich, dass die `Embed Interop Types`-Eigenschaft im Fester **Eigenschaften** auf `True` festgelegt ist.  
   
     > [!NOTE]
     >  Die in dieser exemplarischen Vorgehensweise erstellte Anwendung kann aufgrund der eingebetteten Interop-Typinformationen mit verschiedenen Versionen von Microsoft Office ausgeführt werden. Wenn die `Embed Interop Types`-Eigenschaft auf `False` festgelegt ist, müssen Sie eine PIA für jede Version von Microsoft Office einschließen, mit der die Anwendung ausgeführt wird.  
@@ -115,11 +106,11 @@ Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verwe
   
 9. Drücken Sie STRG+F5, um das Projekt zu erstellen und auszuführen. Überprüfen Sie, ob eine Excel-Arbeitsmappe an dem Speicherort erstellt wurde, der im Beispielcode angegebenen ist: C:\SampleFolder\SampleWorkbook.xls.  
   
-##  <a name="BKMK_publishapp"></a>Veröffentlichen die Anwendung auf einem Computer, auf dem eine andere Version von Microsoft Office installiert ist  
+##  <a name="BKMK_publishapp"></a> So veröffentlichen Sie die Anwendung auf einem Computer, auf dem eine andere Version von Microsoft Office installiert ist  
   
-1.  Öffnen Sie das Projekt in dieser exemplarischen Vorgehensweise in Visual Studio erstellt haben.  
+1.  Öffnen Sie das Projekt, das Sie in dieser exemplarischen Vorgehensweise erstellt haben, in Visual Studio.  
   
-2.  Auf der **erstellen** Menü wählen **CreateExcelWorkbook veröffentlichen**. Führen Sie die Schritte des Webpublishing-Assistenten aus, um eine installierbare Version der Anwendung zu erstellen. Weitere Informationen finden Sie unter [Webpublishing-Assistent (Office-Entwicklung in Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  Wählen Sie im Menü **Erstellen** die Option **CreateExcelWorkbook veröffentlichen** aus. Führen Sie die Schritte des Webpublishing-Assistenten aus, um eine installierbare Version der Anwendung zu erstellen. Weitere Informationen finden Sie unter [Veröffentlichungs-Assistent (Office-Entwicklung in Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
   
 3.  Installieren Sie die Anwendung auf einem Computer, auf dem .NET Framework 4 oder höher und eine andere Version von Excel installiert sind.  
   
@@ -128,6 +119,5 @@ Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verwe
 5.  Überprüfen Sie, ob eine Excel-Arbeitsmappe an dem Speicherort erstellt wurde, der im Beispielcode angegebenen ist: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
-
+ [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+ [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

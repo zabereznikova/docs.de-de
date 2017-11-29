@@ -1,45 +1,49 @@
 ---
-title: "117 - WorkflowInstanceTerminatedRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 117 - WorkflowInstanceTerminatedRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e68539d0-5338-468a-9f75-7e5b09d39a3c
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c8b2bc6325ec6f5cf1c3af8b7748a45ad21809cd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 117 - WorkflowInstanceTerminatedRecordWithId
-## Eigenschaften  
+# <a name="117---workflowinstanceterminatedrecordwithid"></a>117 - WorkflowInstanceTerminatedRecordWithId
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|117|  
 |Schlüsselwörter|HealthMonitoring, WFTracking|  
 |Ebene|Fehler|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Beschreibung  
- Dieses Ereignis wird vom ETW\-Überwachungsteilnehmer ausgegeben, wenn eine Workflowinstanz WorkflowInstanceTerminatedRecord ausgibt.  
+## <a name="description"></a>Beschreibung  
+ Dieses Ereignis wird vom ETW-Überwachungsteilnehmer ausgegeben, wenn eine Workflowinstanz WorkflowInstanceTerminatedRecord ausgibt.  
   
-## Meldung  
- TrackRecord \= WorkflowInstanceTerminatedRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, Reason \= %5, Annotations \= %6, ProfileName \= %7, WorkflowDefinitionIdentity \= %8  
+## <a name="message"></a>Meldung  
+ TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8  
   
-## Details  
+## <a name="details"></a>Details  
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|InstanceId|xs:GUID|Die Instanz\-ID für den Workflow.|  
+|--------------------|--------------------|-----------------|  
+|InstanceId|xs:GUID|Die Instanz-ID für den Workflow.|  
 |RecordNumber|xs:long|Die Sequenznummer des ausgegebenen Datensatzes.|  
 |EventTime|xs:dateTime|Die Zeit in UTC, als das Ereignis ausgegeben wurde.|  
 |ActivityDefinitionId|xs:string|Der Name der Stammaktivität im Workflow.|  
 |Zustand|xs:string|Der aktuelle Zustand des Workflows.|  
-|Anmerkungen|xs:string|Die Anmerkungen, die diesem Ereignis hinzugefügt wurden.  Die Werte werden in einem XML\-Element im Format \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\> gespeichert.  Wenn keine Anmerkungen angegeben werden, enthält die Zeichenfolge \<items\/\>.  Die ETW\-Ereignisgröße wird von der ETW\-Puffergröße oder der maximalen Nutzlast für ein ETW\-Ereignis beschränkt.  Wenn die Größe des Ereignisses die ETW\-Beschränkung überschreitet, wird das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert durch \<items\>...\<\/items\> ersetzt wird.|  
+|Anmerkungen|xs:string|Die Anmerkungen, die diesem Ereignis hinzugefügt wurden. Die Werte werden in einem XML-Element im Format gespeichert \<Elemente >\< Elementname = "AnnotationName" Type = "> AnnotationValue\</item > \< /items >. Wenn keine Anmerkungen angegeben werden, die Zeichenfolge enthält \<Elemente / >. Die ETW-Ereignisgröße wird von der ETW-Puffergröße oder der maximalen Nutzlast für ein ETW-Ereignis beschränkt. Wenn die Größe des Ereignisses die ETW-Beschränkung überschreitet, und klicken Sie dann das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert mit ersetzen \<Elemente >...  \< /items >.|  
 |ProfileName|xs:string|Der Name oder das Überwachungsprofil, das zur Ausgabe dieses Ereignisses geführt hat.|  
 |WorkflowDefinitionIdentity|xs:string|Die ID der Workflowdefinition.|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

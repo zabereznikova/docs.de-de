@@ -1,51 +1,50 @@
 ---
-title: "&lt;permission&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<permission> XML tag"
-  - "permission XML tag"
+title: '&lt;Berechtigung&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <permission> XML tag
+- permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 67e11998e43a43f92c26eb5f7daa488d288823c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;permission&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt eine erforderliche Berechtigung für den Member an.  
+# <a name="ltpermissiongt-visual-basic"></a>&lt;Berechtigung&gt; (Visual Basic)
+Gibt eine erforderliche Berechtigung für das Element an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `member`  
- Ein Verweis auf einen Member oder ein Feld, der bzw. das von der aktuellen Kompilierungsumgebung aufgerufen werden kann.  Der Compiler überprüft, ob das angegebene Codeelement vorhanden ist, und übersetzt `member` in den in der XML\-Ausgabe enthaltenen kanonischen Elementnamen.  Schließen Sie `member` in Anführungszeichen \(" "\) ein.  
+ Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. Schließen Sie `member` in Anführungszeichen ("").  
   
  `description`  
- Eine Beschreibung des Zugriffs auf den Member.  
+ Eine Beschreibung des Zugriffs auf den Member  
   
-## Hinweise  
- Verwenden Sie das `<permission>`\-Tag, um den Zugriff eines Members zu dokumentieren.  Verwenden Sie die <xref:System.Security.PermissionSet>\-Klasse, um den Zugriff auf einen Member anzugeben.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden der `<permission>` -Tag, um den Zugriff auf ein Element zu dokumentieren. Verwenden der <xref:System.Security.PermissionSet> Klasse, um den Zugriff auf ein Element anzugeben.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
   
-## Beispiel  
- In diesem Beispiel wird mithilfe des `<permission>`\-Tags beschrieben, dass <xref:System.Security.Permissions.FileIOPermission> von der `ReadFile`\-Methode benötigt wird.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet die `<permission>` Tag beschrieben, dass die <xref:System.Security.Permissions.FileIOPermission> erforderlich ist der `ReadFile` Methode.  
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
-## Siehe auch  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

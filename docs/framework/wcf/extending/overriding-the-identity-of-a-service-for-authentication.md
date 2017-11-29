@@ -1,36 +1,42 @@
 ---
-title: "&#220;berschreiben der Identit&#228;t eines Dienstes zur Authentifizierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überschreiben der Identität eines Dienstes zur Authentifizierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a3125504326f2cb129fef6f1f3e01dba577f599
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berschreiben der Identit&#228;t eines Dienstes zur Authentifizierung
-In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legt die `clientCredentialType` -Attribut auf Windows.  
+# <a name="overriding-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes zur Authentifizierung
+In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legt die `clientCredentialType` -Attribut auf Windows.  
   
   
   
- Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst als selbst gehosteter Dienst unter einem bestimmten Benutzerkonto ausgeführt (username@contoso.com) und daher die Identität des Benutzers Benutzerprinzipalnamen (UPN) enthält den Kontonamen. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
+ Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst ausgeführt wird, als ein selbst gehosteter Dienst unter einem bestimmten Benutzerkonto (username@contoso.com) und aus diesem Grund enthält die Identität des Benutzers Benutzerprinzipalnamen (UPN) des Kontonamens. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
   
   
   
- Ein beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Dienstidentität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Dienstidentität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos-Authentifizierung und Identität  
- Wenn ein Dienst so konfiguriert ist, Windows-Anmeldeinformationen verwenden, wird standardmäßig ein [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element, enthält eine [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) oder [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element in die WSDL-Datei generiert wird. Wenn der Dienst, unter ausgeführt wird der `LocalSystem`, `LocalService`, oder `NetworkService` -Konto, ein Dienst, der Dienstprinzipalnamen (SPN) wird standardmäßig, in Form von generiert `host/` \< *Hostname*> da diese Konten Zugriff auf den Computer-SPN-Daten haben. Wenn der Dienst unter einem anderen Konto ausgeführt wird [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] generiert einen UPN im Format *Benutzername*>@<*DomainName*`>`. Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
+ In der Standardeinstellung, wenn ein Dienst so konfiguriert ist, ein Windows-Anmeldeinformationen verwendet ein [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element, enthält eine [ \<"userPrincipalName" >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) oder [ \<ServicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element in die WSDL-Datei generiert wird. Wenn der Dienst, unter ausgeführt wird der `LocalSystem`, `LocalService`, oder `NetworkService` Konto, einen Dienst mit dem Dienstprinzipalnamen (SPN) wird standardmäßig, in Form von generiert `host/` \< *Hostname*> da Diese Konten haben Zugriff auf den Computer-SPN-Daten. Wenn der Dienst unter einem anderen Konto ausgeführt wird [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] generiert einen UPN im Format \< *Benutzername*>@<*DomainName*`>`. Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
   
- Sie können auch das Tool Setspn.exe zur Registrierung eines zusätzlichen SPN beim Konto eines Dienstes in einer Domäne verwenden. Sie können dann den SPN als die Identität des Dienstes verwenden. Zum Herunterladen des Tools finden Sie unter [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Das Tool finden Sie unter [Setspn Overview](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ Sie können auch das Tool Setspn.exe zur Registrierung eines zusätzlichen SPN beim Konto eines Dienstes in einer Domäne verwenden. Sie können dann den SPN als die Identität des Dienstes verwenden. Zum Herunterladen des Tools finden Sie unter [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Das Tool finden Sie unter [Übersicht über Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Dienstes Zugriff auf den bei der Active Directory-Domäne registrierten SPN haben. Dazu stehen Ihnen folgende Möglichkeiten zur Verfügung:  
@@ -39,7 +45,7 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 -   Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. Erstellen Sie in diesem Fall mit dem Tool Setspn.exe einen SPN für dieses Domänenkonto. Konfigurieren Sie nach dem Erstellen des SPN für das Konto des Dienstes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] so, dass dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht wird. Legen Sie dazu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPNs, Kerberos-Protokoll und Active Directory finden Sie unter [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPNs, Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Wenn SPN oder UPN der leeren Zeichenfolge entspricht  
  Das Festlegen von SPN oder UPN gleich einer leeren Zeichenfolge führt abhängig von der Sicherheitsebene und dem verwendeten Authentifizierungsmodus zu verschiedenen Ergebnissen:  
@@ -54,7 +60,7 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 -   Wenn Sie Kerberos direkt (wird auch als "One-Shot" bezeichnet) verwenden, schlägt die Authentifizierung fehl.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Mithilfe der <> \> Element in der Konfiguration  
+### <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Elements in der Konfiguration  
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung zu Certificate`,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
   
   
@@ -70,5 +76,5 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: erstellen eine benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)   
+ [Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

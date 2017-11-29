@@ -1,43 +1,35 @@
 ---
-title: "Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
-Dieses Beispiel zeigt, wie Sie Daten aus verschiedenen Quellen in eine Sequenz neuer Typen zusammenführen.  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
+In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in einer Sequenz aus neuen Typen zusammenführen können.  
   
 > [!NOTE]
->  Versuchen Sie nicht, Daten im Speicher oder Daten im Dateisystem mit Daten zu verknüpfen, noch in einer Datenbank ist. Solche domänenübergreifenden Joins können nicht definierte Ergebnisse aufgrund unterschiedlich erzielt werden, in der Join-Vorgänge für die Datenbankabfragen und andere Typen von Datenquellen definiert werden können. Darüber hinaus besteht ein Risiko, dass dieser Vorgang eine Out-of-Memory-Ausnahme auslösen könnte, wenn die Menge der Daten in der Datenbank groß genug ist. Um Daten aus einer Datenbank mit Daten im Speicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbank abzufragen, und führen Sie dann den Join für die zurückgegebene Auflistung.  
+>  Versuchen Sie nicht, Daten im Arbeitsspeicher oder Daten im Dateisystem mit Daten, die sich noch in der Datenbank befinden, zusammenzuführen. Derartige domänenübergreifende Verknüpfungen können aufgrund von möglichen unterschiedlichen Definitionen von Verknüpfungsvorgänge für Datenbankabfragen und anderen Quelltypen zu undefinierten Ergebnissen führen. Zusätzlich kann eine derartige Verknüpfung eine Ausnahme außerhalb des Speichers verursachen, wenn die Datenmenge in der Datenbank groß genug ist. Um Daten aus einer Datenbank mit Daten im Arbeitsspeicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbankabfrage auf, und führen Sie dann die Verknüpfung in der zurückgegebenen Auflistung durch.  
   
 ### <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei  
   
--   Die names.csv- und scores.csv-Dateien in den Projektordner kopieren, wie im [How to: Join Content aus mehreren unähnlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
+-   Kopieren Sie die names.csv und scores.csv-Dateien in den Projektordner, wie in beschrieben [wie: Verknüpfen Inhalte aus unterschiedlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie einen benannten Typ `Student` zusammengeführte Daten von zwei speicherinterne Auflistungen von Zeichenfolgen zu speichern, die Tabellendaten im CSV-Format zu simulieren. Die erste Auflistung von Zeichenfolgen darstellt, die Schüler-Namen und IDs und die zweite Auflistung dar, die Schüler-ID (in der ersten Spalte) und vier Prüfungsergebnisse. Die ID wird als Fremdschlüssel verwendet.  
+ In folgendem Beispiel erfahren Sie, wie Sie einen benannten Typ `Student` zum Speichern zusammengeführter Daten aus zwei Zeichenfolgeauflistungen, die Arbeitsblätter im .csv-Format simulieren, im Arbeitsspeicher verwenden könne. Die erste Zeichenfolgeauflistung stellt die Namen der Studenten und deren Matrikelnummer dar, und die zweite Zeichenfolgeauflistung stellt die Matrikelnummer (in der ersten Spalte) und vier Prüfungsergebnisse dar. Die Matrikelnummer wird als Fremdschlüssel verwendet.  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) -Klausel eines Objektinitialisierers wird zum Instanziieren jedes neuen `Student` Objekt mit den Daten aus beiden Quellen.  
+ In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) -Klausel ein Objektinitialisierer wird verwendet, um instanziieren jedes neuen `Student` Objekt, indem Sie die Daten aus beiden Quellen verwenden.  
   
- Wenn Sie nicht zum Speichern der Ergebnisse einer Abfrage verfügen, können anonyme Typen besser geeignet als die benannte Typen sein. Benannte Typen sind erforderlich, wenn Sie die Abfrageergebnisse außerhalb der Methode übergeben, in denen die Abfrage ausgeführt wird. Das folgende Beispiel führt die gleiche Aufgabe wie im vorherigen Beispiel, jedoch anonyme Typen statt benannter Typen verwendet:  
+ Wenn Sie die Ergebnisse einer Abfrage nicht speichern müssen, können anonyme Typen praktischer als benannte Typen sein. Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich. In folgendem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt; allerdings werden statt benannter anonyme Typen verwendet:  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -141,7 +133,7 @@ Next
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

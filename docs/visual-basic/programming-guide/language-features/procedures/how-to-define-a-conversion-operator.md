@@ -1,53 +1,52 @@
 ---
-title: "How to: Define a Conversion Operator (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "operators [Visual Basic], defining"
-  - "procedures, operator"
-  - "operators [Visual Basic], overloading"
-  - "return values, Operator procedures"
-  - "operator overloading"
+title: 'Gewusst wie: Definieren eines Konvertierungsoperators (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- operators [Visual Basic], defining
+- procedures [Visual Basic], operator
+- operators [Visual Basic], overloading
+- return values [Visual Basic], Operator procedures
+- operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b0f9e63ba039a48226186fa4ce118d3e47b5673e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Define a Conversion Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn Sie eine Klasse oder Struktur definiert haben, können Sie für die Konvertierung vom Typ der Klasse bzw. Struktur in einen anderen Datentyp \(z. B. `Integer`, `Double` oder `String`\) einen Typkonvertierungsoperator definieren.  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Gewusst wie: Definieren eines Konvertierungsoperators (Visual Basic)
+Wenn Sie eine Klasse oder Struktur definiert haben, können Sie einen Operator für die Konvertierung zwischen dem Typ der Klasse oder Struktur und einen anderen Datentyp definieren (z. B. `Integer`, `Double`, oder `String`).  
   
- Definieren Sie die Typkonvertierung als eine [CType\-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)\-Prozedur innerhalb der Klasse oder der Struktur.  Alle Konvertierungsprozeduren müssen `Public Shared` sein, und jede muss entweder [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) oder [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md) angeben.  
+ Definieren Sie die Konvertierung vom Typ als ein [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) Prozedur innerhalb der Klasse oder Struktur. Alle Konvertierungsprozeduren muss `Public Shared`, und geben jeweils [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) oder [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- Das Definieren eines Operators für eine Klasse oder Struktur wird auch als *Überladen* bezeichnet.  
+ Definieren eines Operators in einer Klasse oder Struktur ist so genannte *überladen* den Operator.  
   
-## Beispiel  
- Im folgenden Beispiel werden Operatoren für die Konvertierung zwischen einer Struktur mit dem Namen `digit` und einem `Byte` definiert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel definiert die Operatoren für die Konvertierung zwischen einer Struktur mit dem Namen `digit` und ein `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
   
- Sie können die Struktur `digit` mit dem folgenden Code testen.  
+ Sie können die Struktur testen `digit` durch den folgenden Code.  
   
  [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
   
-## Siehe auch  
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define an Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [How to: Call an Operator Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
- [How to: Use a Class that Defines Operators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)   
- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Gewusst wie: Definieren eines Operators](./how-to-define-an-operator.md)  
+ [Gewusst wie: Aufrufen einer Operatorprozedur](./how-to-call-an-operator-procedure.md)  
+ [Gewusst wie: Verwenden einer Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md)  
+ [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

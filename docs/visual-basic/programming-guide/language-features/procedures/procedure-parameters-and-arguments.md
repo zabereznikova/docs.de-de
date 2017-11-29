@@ -1,81 +1,80 @@
 ---
-title: "Procedure Parameters and Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, argument lists"
-  - "values, passing to procedures"
-  - "arguments [Visual Basic], passing"
-  - "procedures, parameters"
-  - "Visual Basic code, argument lists"
-  - "Visual Basic code, procedures"
-  - "parameters, Visual Basic procedures"
-  - "parameters, lists"
-  - "arguments [Visual Basic], Visual Basic procedures"
-  - "arguments [Visual Basic], procedures"
-  - "parameter lists"
-  - "Visual Basic code, parameter lists"
-  - "argument lists"
-  - "procedures, parameter lists"
+title: Parameter und Argumente von Prozeduren (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], argument lists
+- values [Visual Basic], passing to procedures
+- arguments [Visual Basic], passing
+- procedures [Visual Basic], parameters
+- Visual Basic code, argument lists
+- Visual Basic code, procedures
+- parameters [Visual Basic], Visual Basic procedures
+- parameters [Visual Basic], lists
+- arguments [Visual Basic], Visual Basic procedures
+- arguments [Visual Basic], procedures
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- argument lists [Visual Basic]
+- procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Procedure Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-In den meisten Fällen benötigen Prozeduren einige Informationen zu den Umständen, unter denen sie aufgerufen wurden.  Prozeduren, die sich wiederholende und freigegebene Aufgaben ausführen, verwenden für jeden Aufruf andere Informationen.  Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücken, die beim Aufruf an die Prozedur übergeben werden.  
+# <a name="procedure-parameters-and-arguments-visual-basic"></a>Parameter und Argumente von Prozeduren (Visual Basic)
+In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umständen zusammen, in welcher er aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, werden unterschiedliche Informationen für jeden Aufruf verwendet. Diese Informationen besteht aus Variablen, Konstanten und Ausdrücke, die Sie an die Prozedur übergeben, wenn Sie sie aufrufen.  
   
- Ein *Parameter* stellt einen Wert dar, der der Prozedur angegeben werden muss, wenn sie aufgerufen wird.  Die Parameter der Prozedur werden in der Deklaration der Prozedur definiert.  
+ Ein *Parameter* stellt einen Wert, der die Prozedur erwartet, Sie angeben dass, wenn Sie sie aufrufen. Die Deklaration der Prozedur definiert seine Parameter.  
   
- Sie können eine Prozedur ohne Parameter, mit einem Parameter oder mehreren Parametern definieren.  Der Teil der Prozedurdefinition, der die Parameter angibt, wird *Parameterliste* genannt.  
+ Sie können eine Prozedur ohne Parameter, einen Parameter oder mehrere definieren. Wird aufgerufen, der Teil der Definition der Prozedur, der angibt, die Parameter der *Parameterliste*.  
   
- Ein *Argument* stellt den Wert dar, der im Prozeduraufruf für einen Prozedurparameter angegeben wird.  Der Aufrufcode stellt beim Aufrufen der Prozedur die Argumente zur Verfügung.  Der Teil des Prozeduraufrufs, der die Argumente angibt, wird *Argumentliste* genannt.  
+ Ein *Argument* stellt den Wert, die Sie angeben, einen Prozedurparameter dar, wenn Sie die Prozedur aufrufen. Der aufrufende Code bereitstellt die Argumente, wenn er die Prozedur aufruft. Wird aufgerufen, der Teil des Prozeduraufrufs, der angibt, die Argumente der *Argumentliste*.  
   
- Die folgende Darstellung zeigt Code, der die `safeSquareRoot`\-Prozedur von zwei verschiedenen Stellen aus aufruft.  Im ersten Aufruf wird der Wert der `x`\-Variablen \(4,0\) an den `number`\-Parameter übergeben. Der in `root` gespeicherte Rückgabewert \(2,0\) wird der `y`\-Variablen zugewiesen.  Im zweiten Aufruf wird der Literalwert 9,0 an `number` übergeben und der `z`\-Variablen der Rückgabewert \(3,0\) zugewiesen.  
+ Die folgende Abbildung zeigt den Aufruf der Prozedur Code `safeSquareRoot` aus zwei verschiedenen Orten. Der erste Aufruf übergibt den Wert der Variablen `x` (4.0) an den Parameter `number`, und der Rückgabewert in `root` (2.0) wird der Variablen zugewiesen `y`. Der zweite Aufruf übergibt den Literalwert 9.0, `number`, und weist den Rückgabewert (3.0) Variablen `z`.  
   
- ![Grafisches Diagramm der Argumentübergabe an Parameter](../../../../visual-basic/programming-guide/language-features/procedures/media/parametersargue.gif "ParametersArgue")  
-Übergeben eines Arguments an einen Parameter  
+ ![Grafisches Diagramm der Argumentübergabe an Parameter](./media/parametersargue.gif "ParametersArgue")  
+Ein Argument übergeben an einen parameter  
   
- Weitere Informationen finden Sie unter [Differences Between Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
+ Weitere Informationen finden Sie unter [Unterschiede zwischen Parametern und Argumenten](./differences-between-parameters-and-arguments.md).  
   
-## Parameterdatentyp  
- Der Datentyp eines Parameters wird mithilfe der `As`\-Klausel in seiner Deklaration definiert.  Die folgende Funktion akzeptiert z. B. eine Zeichenfolge und eine ganze Zahl.  
+## <a name="parameter-data-type"></a>Datentyp des Parameters  
+ Definieren Sie einen Datentyp für einen Parameter mithilfe der `As` -Klausel in der Deklaration. Die folgende Funktion akzeptiert z. B. eine Zeichenfolge und eine ganze Zahl.  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- Wenn die Typüberprüfung \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) den Wert `Off,` hat, ist die `As`\-Klausel optional, sofern sie nicht für einen Parameter angegeben wird. In diesem Fall gilt, dass sie für alle Parameter angegeben werden muss.  Wenn die Typüberprüfung den Wert `On` hat, muss die `As`\-Klausel für alle Prozedurparameter angegeben werden.  
+ Wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `Off,` der `As` -Klausel ist optional, außer, dass wenn ein Parameter verwendet wird, alle Parameter muss verwendet werden. Wenn die typüberprüfung `On`, die `As` -Klausel ist für alle Parameter der Prozedur erforderlich.  
   
- Wenn im Aufrufcode ein Argument mit einem anderen Datentyp als dem des zugehörigen Parameters angegeben werden soll, z. B. `Byte` für einen `String`\-Parameter, muss eines der folgenden Verfahren angewendet werden:  
+ Wenn der aufrufende Code erwartet ein Argument mit einem Datentyp unterscheiden, die von den entsprechenden Parameter anzugeben, wie z. B. `Byte` auf eine `String` Parameter, sie müssen einen der folgenden Schritte ausführen:  
   
--   Geben Sie nur Argumente mit Datentypen an, die zum Parameterdatentyp erweitert werden können.  
+-   Geben Sie nur Argumente mit Datentypen, die auf den Parameterdatentyp erweitert werden;  
   
--   Legen Sie `Option Strict Off` fest, um implizite einschränkende Konvertierungen zu ermöglichen, oder  
+-   Legen Sie `Option Strict Off` ermöglicht implizite einschränkende Konvertierungen; oder  
   
--   verwenden Sie ein Konvertierungsschlüsselwort, um den Datentyp explizit zu konvertieren.  
+-   Verwenden Sie ein Konvertierungsschlüsselwort, um den Datentyp explizit zu konvertieren.  
   
-### Typparameter  
- Zudem definiert eine *generische Prozedur* neben den normalen Parametern einen oder mehrere *Typparameter*.  Mit einer generischen Prozedur kann der aufrufende Code bei jedem Aufruf der Prozedur verschiedene Datentypen übergeben. Folglich können die Datentypen an die Anforderungen der einzelnen Aufrufe angepasst werden.  Weitere Informationen finden Sie unter [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+### <a name="type-parameters"></a>Typparameter  
+ Ein *generische Prozedur* definiert auch eine oder mehrere *Typparameter* zusätzlich zu den normalen Parametern. Eine generische Prozedur kann der aufrufenden Code unterschiedliche Datentypen jedes Mal übergeben sie die Prozedur aufruft, damit sie die Datentypen jeder einzelne Aufruf-Anforderungen anpassen kann. Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define a Parameter for a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Function-Prozeduren](./function-procedures.md)  
+ [Eigenschaftenprozeduren](./property-procedures.md)  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Gewusst wie: Definieren eines Parameters für eine Prozedur](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)  
+ [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Konvertierungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

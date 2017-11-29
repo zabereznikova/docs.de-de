@@ -1,46 +1,50 @@
 ---
-title: "Gewusst wie: Verwenden einer Farbmatrix zum Festlegen von Alphawerten in Bildern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bitmaps [Windows Forms], Verwenden von Farbmatrizen für halbtransparente"
-  - "Bilder [Windows Forms], Verwenden von Farbmatrizen für halbtransparente"
-  - "Matrizen, Alphawerte"
-  - "Transparenz, Farbmatrizen"
+title: 'Gewusst wie: Verwenden einer Farbmatrix zum Festlegen von Alphawerten in Bildern'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using color matrices for semi-transparent
+- transparency [Windows Forms], color matrices
+- matrices [Windows Forms], alpha values
+- bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba7a016c96556f2719d4a247c93df7ac698b24fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden einer Farbmatrix zum Festlegen von Alphawerten in Bildern
-Die <xref:System.Drawing.Bitmap>\-Klasse \(die von der <xref:System.Drawing.Image>\-Klasse erbt\) und die <xref:System.Drawing.Imaging.ImageAttributes>\-Klasse bieten Funktionen zum Abrufen und Festlegen von Pixelwerten.  Mithilfe der <xref:System.Drawing.Imaging.ImageAttributes>\-Klasse können Sie die Alphawerte für ein vollständiges Bild ändern. Alternativ können Sie auch die <xref:System.Drawing.Bitmap.SetPixel%2A>\-Methode der <xref:System.Drawing.Bitmap>\-Klasse aufrufen, um einzelne Pixelwerte zu ändern.  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Gewusst wie: Verwenden einer Farbmatrix zum Festlegen von Alphawerten in Bildern
+Die <xref:System.Drawing.Bitmap> Klasse (geerbt von der <xref:System.Drawing.Image> Klasse) und die <xref:System.Drawing.Imaging.ImageAttributes> Klasse bieten Funktionen für Pixelwerte festlegen und abrufen. Können Sie die <xref:System.Drawing.Imaging.ImageAttributes> Klasse so ändern Sie den Alpha-Werte für ein vollständiges Bild, oder Sie rufen die <xref:System.Drawing.Bitmap.SetPixel%2A> Methode der <xref:System.Drawing.Bitmap> Klasse, um die einzelnen Pixels-Werte zu ändern.  
   
-## Beispiel  
- Die <xref:System.Drawing.Imaging.ImageAttributes>\-Klasse verfügt über zahlreiche Eigenschaften, mit denen Sie Bilder beim Rendern ändern können.  Im folgenden Beispiel wird für alle Alphawerte mithilfe eines <xref:System.Drawing.Imaging.ImageAttributes>\-Objekts 80 Prozent ihres Originalwerts festgelegt.  Dazu wird eine Farbmatrix initialisiert und als Wert für die Alphaskalierung in der Matrix 0,8 festgelegt.  Die Adresse der Farbmatrix wird an die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>\-Methode des <xref:System.Drawing.Imaging.ImageAttributes>\-Objekts und das <xref:System.Drawing.Imaging.ImageAttributes>\-Objekt an die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode des <xref:System.Drawing.Graphics>\-Objekts übergeben.  
+## <a name="example"></a>Beispiel  
+ Die <xref:System.Drawing.Imaging.ImageAttributes> -Klasse verfügt über zahlreiche Eigenschaften, die Sie verwenden können, während des Renderings Bilder ändern. Im folgenden Beispiel ein <xref:System.Drawing.Imaging.ImageAttributes> Objekt wird verwendet, um alle Alphawerte auf 80 Prozent des Originalwerts festgelegt. Dies erfolgt durch Initialisieren einer Farbmatrix und den Wert in der Matrix mit 0,8 Skalierung Alpha festlegen. An die Adresse der Farbmatrix übergeben wird die <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> Methode der <xref:System.Drawing.Imaging.ImageAttributes> -Objekt, und die <xref:System.Drawing.Imaging.ImageAttributes> -Objekt übergeben wird die <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> Objekt.  
   
- Beim Rendern werden die Alphawerte in der Bitmap in den 80\-prozentigen Wert des Originals konvertiert.  Dies ergibt ein Bild, dessen Farben mit den Hintergrundfarben gemischt sind.  Wie in der folgenden Abbildung dargestellt, ist das Bitmapbild transparent; die durchgehende schwarze Linie scheint also durch.  
+ Beim Rendern, werden die Alphawerte in der Bitmap-80 % des Originalwerts konvertiert. Dies führt zu einem Bild, das mit dem Hintergrund gemischt ist. Wie in die folgende Abbildung gezeigt, sieht das Bitmap-Bild transparent; Sie können die durchgehende schwarze Linie durchzogen sehen.  
   
- ![Alphablending mit einer Matrix](../../../../docs/framework/winforms/advanced/media/image2.png "image2")  
+ ![Alphablending mit einer Matrix](../../../../docs/framework/winforms/advanced/media/image2.png "Bild2")  
   
- In Bereichen, in denen sich das Bild über dem weißen Bereich des Hintergrunds befindet, wurde das Bild mit der Farbe Weiß gemischt.  Dort, wo das Bild auf der schwarzen Linie liegt, wird es mit der Farbe Schwarz gemischt.  
+ Das Bild über den weißen Bereich des Hintergrunds vorhanden ist, hat das Bild mit der Farbe Weiß gemischt wurden. In dem das Bild für die schwarze Linie schneidet wird das Abbild mit der Farbe Schwarz gemischt.  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs>`e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
-## Siehe auch  
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Alphablending von Linien und Füllungen](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

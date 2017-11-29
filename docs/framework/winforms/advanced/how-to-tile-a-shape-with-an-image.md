@@ -1,70 +1,74 @@
 ---
-title: "Gewusst wie: Kacheln einer Form mit einem Bild | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bitmaps [Windows Forms], Füllen von Formen mit"
-  - "Bilder [Windows Forms], Füllen von Formen mit"
-  - "Formen, Kacheln mit Bildern"
-  - "Strukturpinsel, Kacheln mit Bildern mithilfe von"
+title: 'Gewusst wie: Kacheln einer Form mit einem Bild'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- texture brushes [Windows Forms], tiling images with
+- images [Windows Forms], filling shapes with
+- shapes [Windows Forms], tiling with images
+- bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Kacheln einer Form mit einem Bild
-Genauso wie ein Fußboden mit nebeneinander liegenden Fliesen gekachelt sein kann, kann eine Form durch nebeneinander liegende rechteckige Bilder ausgefüllt \("gekachelt"\) werden.  Um das Innere einer Form zu kacheln, verwenden Sie einen Strukturpinsel.  Wenn Sie ein <xref:System.Drawing.TextureBrush>\-Objekt erstellen, ist eines der an den Konstruktor übergebenen Argumente ein <xref:System.Drawing.Image>\-Objekt.  Wenn Sie das Innere einer Form mit dem Strukturpinsel zeichnen, wird die Form mit wiederholten Kopien dieses Bildes ausgefüllt.  
+# <a name="how-to-tile-a-shape-with-an-image"></a>Gewusst wie: Kacheln einer Form mit einem Bild
+Wie Kacheln eine Etage abdecken nebeneinander platziert werden können, können rechteckige Bilder zum Füllen (Kachel) eine Form vom Typ nebeneinander platziert werden. Um das Innere einer Form gekachelt, verwenden Sie einen Strukturpinsel. Bei der Erstellung einer <xref:System.Drawing.TextureBrush> Objekt eines der Argumente, die Sie an den Konstruktor übergeben, wird ein <xref:System.Drawing.Image> Objekt. Wenn Sie die Strukturpinsel verwenden, um das Innere einer Form zu zeichnen, wird die Form mit wiederholten Kopien dieses Bild gefüllt.  
   
- Durch die Umbruchmoduseigenschaft des <xref:System.Drawing.TextureBrush>\-Objekts wird bestimmt, mit welcher Ausrichtung ein Bild in einem rechteckigen Raster wiederholt wird.  Alle Kacheln im Raster können entweder dieselbe Ausrichtung haben, oder Sie lassen das Bild von einer Rasterposition zur nächsten kippen.  Das Kippen kann horizontal, vertikal oder in beide Richtungen erfolgen.  Im folgenden Beispiel wird veranschaulicht, wie eine Form mit verschiedenen Kipparten gekachelt wird.  
+ Der Wrap-Mode-Eigenschaft von der <xref:System.Drawing.TextureBrush> Objekt bestimmt, wie das Bild ausgerichtet ist, da es in einem rechteckigen Raster wiederholt wird. Können Sie alles, was die Kacheln im Raster sind die gleiche Ausrichtung vornehmen können, oder Sie das Image von einer Rasterseite Position zur nächsten kippen. Die kippen kann horizontal, vertikal oder beides. Die folgenden Beispiele zeigen die Kacheln mit verschiedenen Typen von spiegeln.  
   
-### So kacheln Sie ein Bild  
+### <a name="to-tile-an-image"></a>Um ein Bild Kachel  
   
--   In diesem Beispiel wird das folgende 75×75\-Bild verwendet, um ein 200×200\-Rechteck zu kacheln.  
+-   In diesem Beispiel verwendet Abbildung 75 × 75, um ein Rechteck 200 x 200 Kachel.  
   
- ![Fläche 1](../../../../docs/framework/winforms/advanced/media/tile1.png "tile1")  
+ ![Kachel 1](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")  
   
--   In der folgenden Abbildung wird gezeigt, wie das Rechteck mit dem Bild gekachelt wird.  Beachten Sie, dass alle Kacheln dieselbe Ausrichtung haben; es wird also keine Kachel gekippt.  
+-   Die folgende Abbildung zeigt, wie das Rechteck mit dem Bild gekachelt wird. Beachten Sie, dass alle Kacheln dieselbe Ausrichtung haben. Es gibt keine ein umlegen.  
   
- ![Fläche 2](../../../../docs/framework/winforms/advanced/media/tile2.png "tile2")  
+ ![Kachel 2](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")  
   
  [!code-csharp[System.Drawing.UsingABrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
   
-### So kippen Sie ein Bild für das Kacheln horizontal  
+### <a name="to-flip-an-image-horizontally-while-tiling"></a>Um ein Bild Kacheln horizontal gekippt.  
   
--   In diesem Beispiel wird dasselbe 75×75\-Bild verwendet, um ein 200×200\-Rechteck auszufüllen.  Der Umbruchmodus ist so festgelegt, dass das Bild horizontal gekippt wird.  In der folgenden Abbildung wird gezeigt, wie das Rechteck mit dem Bild gekachelt wird.  Beachten Sie, während Sie in einer bestimmten Zeile von einer Kachel zur nächsten übergehen, dass das Bild horizontal gekippt ist.  
+-   Dieses Beispiel verwendet das gleiche 75 × 75 Bild zum Ausfüllen eines Rechtecks 200 x 200. Der Wrap-Modus festgelegt ist, das Bild horizontal gekippt. Die folgende Abbildung zeigt, wie das Rechteck mit dem Bild gekachelt wird. Beachten Sie, wie Sie eine Kachel zur nächsten in einer bestimmten Zeile verschieben, wird das Bild horizontal gekippt.  
   
- ![Fläche 3](../../../../docs/framework/winforms/advanced/media/tile3.png "tile3")  
+ ![Kachel 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")  
   
  [!code-csharp[System.Drawing.UsingABrush#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
   
-### So kippen Sie ein Bild für das Kacheln vertikal  
+### <a name="to-flip-an-image-vertically-while-tiling"></a>Um ein Bild Kacheln vertikal kippen  
   
--   In diesem Beispiel wird dasselbe 75×75\-Bild verwendet, um ein 200×200\-Rechteck auszufüllen.  Der Umbruchmodus ist so festgelegt, dass das Bild vertikal gekippt wird.  
+-   Dieses Beispiel verwendet das gleiche 75 × 75 Bild zum Ausfüllen eines Rechtecks 200 x 200. Der Wrap-Modus festgelegt ist, das Bild vertikal gekippt.  
   
      [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
      [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
-### So kippen Sie ein Bild für das Kacheln horizontal und vertikal  
+### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a>Um ein Bild Kacheln horizontal und vertikal kippen  
   
--   In diesem Beispiel wird dasselbe 75×75\-Bild verwendet, um ein 200×200\-Rechteck zu kacheln.  Der Umbruchmodus ist so festgelegt, dass das Bild sowohl horizontal als auch vertikal gekippt wird.  In der folgenden Abbildung wird gezeigt, wie das Rechteck mit dem Bild gekachelt wird.  Beachten Sie, während Sie in einer bestimmten Zeile von einer Kachel zur nächsten übergehen, dass das Bild horizontal gekippt ist, und dass es vertikal gekippt ist, wenn Sie in einer bestimmten Spalte von einer Kachel zur nächsten übergehen.  
+-   In diesem Beispiel verwendet dasselbe 75 × 75 Bild, um ein Rechteck 200 x 200 Kachel. Der Umbruchmodus wird festgelegt, um das Bild horizontal und vertikal gekippt. Die folgende Abbildung zeigt, wie das Rechteck mit dem Bild gekachelt wird. Beachten Sie, wie Sie eine Kachel zur nächsten in einer bestimmten Zeile verschieben, wird das Bild horizontal gekippt, und wie Sie eine Kachel zur nächsten in einer bestimmten Spalte verschieben, wird das Bild vertikal gekippt.  
   
- ![Fläche 5](../../../../docs/framework/winforms/advanced/media/tile5.png "tile5")  
+ ![Kachel 5](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")  
   
  [!code-csharp[System.Drawing.UsingABrush#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden eines Pinsels zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

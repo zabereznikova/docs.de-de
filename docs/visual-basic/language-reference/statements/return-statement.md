@@ -1,33 +1,31 @@
 ---
-title: "Return Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Return"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Return statement, syntax"
-  - "control flow, returning control to expressions"
-  - "Return statement"
-  - "expressions [Visual Basic], returning control to"
+title: Return-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Return
+helpviewer_keywords:
+- Return statement [Visual Basic], syntax
+- control flow [Visual Basic], returning control to expressions
+- Return statement [Visual Basic]
+- expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b66d16a249164b8989f05f10c785b97055bfde9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Return Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt die Steuerung an den Code zurück, mit dem eine der Prozeduren `Function`, `Sub`, `Get`, `Set` oder `Operator` aufgerufen wurde.  
+# <a name="return-statement-visual-basic"></a>Return-Anweisung (Visual Basic)
+Die Steuerung an den Code, aufgerufen zurückgegeben eine `Function`, `Sub`, `Get`, `Set`, oder `Operator` Prozedur.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Return  
@@ -35,31 +33,31 @@ Return
 Return expression  
 ```  
   
-## Bestandteil  
+## <a name="part"></a>Segment  
  `expression`  
- In den Prozeduren `Function`, `Get` oder `Operator` erforderlich.  Ausdruck, der den Wert darstellt, der an den aufrufenden Code zurückgegeben werden soll.  
+ Erforderlich einer `Function`, `Get`, oder `Operator` Prozedur. Der Ausdruck den Wert an den aufrufenden Code zurückgegeben werden.  
   
-## Hinweise  
- In einer `Sub`\-Prozedur oder einer `Set`\-Prozedur entspricht die `Return`\-Anweisung einer `Exit Sub`\-Anweisung oder einer `Exit Property`\-Anweisung, und `expression` muss nicht angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ In einer `Sub` oder `Set` Prozedur, die `Return` Anweisung entspricht einer `Exit Sub` oder `Exit Property` -Anweisung und `expression` muss nicht angegeben werden.  
   
- In den Prozeduren `Function`, `Get` oder `Operator` muss die `Return`\-Anweisung `expression` enthalten, und `expression` muss einen Datentyp ergeben, der in den Rückgabetyp der Prozedur konvertiert werden kann.  In einer `Function`\-Prozedur oder einer `Get`\-Prozedur können Sie auch stattdessen dem Prozedurnamen einen Ausdruck zuweisen, der als Rückgabewert fungiert, und anschließend eine `Exit Function`\-Anweisung oder eine `Exit Property`\-Anweisung ausführen.  In einer `Operator`\-Prozedur müssen Sie `Return` `expression` verwenden.  
+ In einem `Function`, `Get`, oder `Operator` Prozedur, die `Return` -Anweisung muss enthalten `expression`, und `expression` muss in einen Datentyp, der in den Rückgabetyp der Prozedur konvertiert werden ausgewertet. In einem `Function` oder `Get` Prozedur, Sie haben auch die Alternative einen Ausdruck zuweisen, um den Namen der Prozedur, die als Rückgabewert dient, und klicken Sie dann Ausführen einer `Exit Function` oder `Exit Property` Anweisung. In einer `Operator` Verfahren verwenden Sie `Return``expression`.  
   
- Sie können in eine Prozedur so viele `Return`\-Anweisungen wie erforderlich einfügen.  
+ Sie können beliebig viele einschließen `Return` Anweisungen nach Bedarf in der gleichen Prozedur.  
   
 > [!NOTE]
->  Der Code in einem `Finally`\-Block wird ausgeführt, nachdem eine `Return`\-Anweisung in einem `Try`\-Block oder einem `Catch`\-Block erreicht wurde, jedoch vor dem Ausführen der `Return`\-Anweisung.  Eine `Return`\-Anweisung kann nicht in einem `Finally`\-Block eingeschlossen werden.  
+>  Der Code in eine `Finally` Block ausgeführt wird, nachdem ein `Return` -Anweisung in einer `Try` oder `Catch` Block ist aufgetreten, aber vor, `Return` -Anweisung ausführt. Ein `Return` -Anweisung kann nicht eingefügt werden, einem `Finally` Block.  
   
-## Beispiel  
- Im folgenden Beispiel kehrt die Prozedur mehrmals mit der `Return`\-Anweisung zum aufrufenden Code zurück, wenn keine weiteren Aufgaben auszuführen sind.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `Return` Anweisung mehrmals an den aufrufenden Code zurückgegeben werden soll, wenn die Prozedur keinen nichts weiter tun.  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## Siehe auch  
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -1,46 +1,38 @@
 ---
-title: "Gewusst wie: Abfragen der größten Datei oder Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic) | Microsoft-Dokumentation"
+title: "How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic))"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic))
-Dieses Beispiel zeigt fünf Abfragen in Bezug auf die Dateigröße in Bytes.  
+Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:  
   
--   So rufen Sie die Größe in Bytes der größten Datei ab.  
+-   So rufen Sie die Größe in Bytes der größten Datei ab  
   
--   So rufen Sie die Größe in Bytes der kleinsten Datei ab.  
+-   So rufen Sie die Größe in Bytes der kleinsten Datei ab  
   
--   Gewusst wie: Abrufen der <xref:System.IO.FileInfo>Objektdatei größten oder kleinsten aus einem oder mehreren Ordnern unter einem angegebenen Stammordner.</xref:System.IO.FileInfo>  
+-   So rufen Sie das <xref:System.IO.FileInfo>-Objekt der größten oder kleinsten Datei aus einem oder mehreren Ordnern unter einem bestimmten Stammordner ab  
   
--   So rufen Sie eine Sequenz, wie z. B. die 10 größten Dateien ab.  
+-   So rufen Sie eine Sequenz ab, wie z.B. die 10 größten Dateien  
   
--   So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes, der Dateien, die kleiner als eine angegebene Größe werden ignoriert.  
+-   So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes und ignorieren dabei die Dateien, die kleiner als eine angegebene Größe sind  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Abfragen und Gruppendateien, abhängig von ihrer Dateigröße in Bytes. Sie können diese Beispiele, um die Abfrage auf eine andere Eigenschaft des problemlos ändern die <xref:System.IO.FileInfo>Objekt.</xref:System.IO.FileInfo>  
+ Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Dateien je nach ihrer Dateigröße in Bytes abfragen und gruppieren. Sie können diese Beispiele ganz einfach verändern, um die Abfrage auf eine andere Eigenschaft des <xref:System.IO.FileInfo>-Objekts anzuwenden.  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Zurückgeben, führen Sie eine oder mehrere <xref:System.IO.FileInfo>Objekte, die Abfrage zuerst prüft jedes einzelne Objekt in der Datenquelle, und sie dann den Wert der Length-Eigenschaft sortieren.</xref:System.IO.FileInfo> Anschließend kann das einzelne Objekt oder die Sequenz mit den größten Längen zurückgegeben werden. Mit <xref:System.Linq.Enumerable.First%2A>auf das erste Element in einer Liste zurück.</xref:System.Linq.Enumerable.First%2A> Verwendung <xref:System.Linq.Enumerable.Take%2A>auf die ersten n Elemente zurückzugeben.</xref:System.Linq.Enumerable.Take%2A> Geben Sie eine absteigende Sortierreihenfolge die kleinsten Elemente am Anfang der Liste platzieren.  
+ Um mindestens ein abgeschlossenes <xref:System.IO.FileInfo>-Objekt zurückzugeben, muss die Abfrage jedes in der Datenquelle untersuchen und die Objekte dann nach Wert ihrer Length-Eigenschaft sortieren. Anschließend kann das einzelne Objekt oder die Sequenz mit den größten Längen zurückgegeben werden. Verwenden Sie <xref:System.Linq.Enumerable.First%2A>, um das erste Element in einer Liste zurückzugeben. Verwenden Sie <xref:System.Linq.Enumerable.Take%2A>, um die ersten n Elemente zurückzugeben. Geben Sie eine absteigende Sortierreihenfolge an, um die kleinsten Elemente zu Beginn der Liste anzuzeigen.  
   
- Die Abfrage ruft eine separate Methode zum Abrufen der Dateigröße in Bytes, die mögliche Ausnahme eintritt, die in dem Fall ausgelöst werden, in dem eine Datei in einem anderen Thread in der Zeit gelöscht wurde, die <xref:System.IO.FileInfo>Objekt erstellt wurde, im Aufruf von `GetFiles`.</xref:System.IO.FileInfo> Auch die <xref:System.IO.FileInfo>Objekt bereits erstellt wurde, kann die Ausnahme auftreten, da ein <xref:System.IO.FileInfo>Objekt versucht, aktualisieren Sie die <xref:System.IO.FileInfo.Length%2A>Eigenschaft, indem die aktuellste Größe in Bytes beim ersten Zugriff auf die Eigenschaft.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Indem diese Operation in einen Try-Catch-Block außerhalb der Abfrage, folgen wir die Regel vermeiden Vorgänge in Abfragen, die Nebeneffekte verursachen können. Im Allgemeinen geboten große Sorgfalt beim Behandeln von Ausnahmen sicherstellen, dass eine Anwendung nicht in einem unbekannten Zustand gelassen wird.  
+ Die Abfrage ruft eine separate Methode zum Abrufen der Dateigröße in Bytes auf, um die mögliche Ausnahme zu verwenden, die in dem Fall ausgelöst wird, wenn eine Datei auf einem anderen Thread im Zeitraum, in dem das <xref:System.IO.FileInfo>-Objekt im Aufruf an `GetFiles` erstellt wurde, gelöscht wurde. Obwohl das <xref:System.IO.FileInfo>-Objekt bereits erstellt wurde, kann die Ausnahme auftreten, weil ein <xref:System.IO.FileInfo>-Objekt versucht, seine <xref:System.IO.FileInfo.Length%2A>-Eigenschaft mithilfe der aktuellsten Größe in Bytes beim ersten Zugriff auf die Eigenschaft zu aktualisieren. Indem dieser Vorgang in einen Try-Catch-Block außerhalb der Abfrage erfolgt, folgt der Code der Regel zum Vermeiden von Vorgängen in Abfragen, die Nebeneffekte verursachen können. Im Allgemeinen ist beim Abfangen von Ausnahmen große Sorgfalt geboten, damit einen Anwendung nicht in einem unbekannten Zustand gelassen wird.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+ Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
   
 ## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

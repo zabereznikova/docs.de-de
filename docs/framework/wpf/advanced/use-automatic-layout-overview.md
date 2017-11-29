@@ -1,103 +1,91 @@
 ---
-title: "&#220;bersicht &#252;ber die Verwendung eines automatischen Layouts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Automatisches Layout"
-  - "Layout, Automatisch"
+title: "Übersicht über die Verwendung eines automatischen Layouts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [WPF], automatic
+- automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber die Verwendung eines automatischen Layouts
-Dieses Thema enthält Richtlinien für Entwickler zum Schreiben von Anwendungen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mit lokalisierbaren [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)].  In der Vergangenheit nahm die Lokalisierung einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sehr viel Zeit in Anspruch.  Für jede Sprache, für die eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\-Anpassung durchgeführt wurde, musste eine Pixelanpassung vorgenommen werden.  Jetzt können die [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] mit dem geeigneten Layout und den entsprechenden Codierungsstandards so aufgebaut werden, dass die Lokalisierungsspezialisten weniger Größenänderungen und Neupositionierungen durchführen müssen.  Der Ansatz, Anwendungen zu schreiben, bei denen Größenänderungen und Neupositionierungen einfacher ausgeführt werden können, wird als automatisches Layout bezeichnet und mithilfe des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungsentwurfs erzielt.  
-  
- Dieses Thema enthält folgende Abschnitte.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [Vorteile der Verwendung eines automatischen Layouts](#advantages_of_autolayout)  
-  
--   [Automatisches Layout und Steuerelemente](#autolayout_controls)  
-  
--   [Automatisches Layout und Codierungsstandards](#autolayout_coding)  
-  
--   [Automatisches Layout und Raster](#autolay_grids)  
-  
--   [Automatisches Layout und Raster mit der IsSharedSizeScope\-Eigenschaft](#autolay_grids_issharedsizescope)  
-  
--   [Verwandte Themen](#seeAlsoToggle)  
+# <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
+Dieses Thema enthält Richtlinien für Entwickler zum Schreiben [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen in lokalisierbare [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In der Vergangenheit Lokalisierung von einem [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wurde eine Zeit in Anspruch. Jede Sprache, die die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] angepasst wurde, für eine Anpassung x Pixel erforderlich. Heute mit der rechten Entwurf und rechts Codierungsstandards, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konstruiert werden kann, sodass Lokalisierungsexperten kleiner hierzu neu positionieren und ihre Größe haben. Der Ansatz zum Schreiben von Anwendungen, die leichter dessen Größe geändert wurde und neu positioniert werden können Automatisches Layout aufgerufen wird, und kann erreicht werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsentwurf.  
   
 <a name="advantages_of_autolayout"></a>   
-## Vorteile der Verwendung eines automatischen Layouts  
- Mit seiner Leistungsfähigkeit und Flexibilität bietet das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Präsentationssystem die Möglichkeit, die Elemente in einer Anwendung so auszulegen, dass sie entsprechend den Anforderungen der unterschiedlichen Sprachen angepasst werden können.  Die folgende Auflistung enthält einige der Vorteile von automatischen Layouts.  
+## <a name="advantages-of-using-automatic-layout"></a>Vorteile der Verwendung des automatischen Layouts  
+ Da die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Präsentation leistungsstark und flexibel, werden diese bietet die Möglichkeit, Layoutelemente in einer Anwendung, die entsprechend die Anforderungen der verschiedenen Sprachen angepasst werden kann. Die folgende Liste hebt einige der Vorteile des automatischen Layouts hervor.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kann in jeder beliebigen Sprache gut angezeigt werden.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kann in jeder Sprache gut angezeigt werden.  
   
--   Verringert nach der Übersetzung der textlichen Inhalte die Notwendigkeit zur erneuten Anpassung der Positionen und der Größe von Steuerelementen.  
+-   Reduziert nach der Übersetzung des Text die Notwendigkeit der Anpassung von Position und Größe von Steuerelementen.  
   
--   Reduziert die Notwendigkeit zur erneuten Anpassung der Fenstergröße.  
+-   Reduziert die Notwendigkeit zur Anpassung der Fenstergröße.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\-Layout kann in jede Sprache korrekt gerendert werden.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Layout kann in jede beliebige Sprache korrekt gerendert werden.  
   
--   Die Lokalisierung kann so vereinfacht werden, dass sie nur wenig komplexer als eine Zeichenfolgenübersetzung ist.  
+-   Die Lokalisierung kann bis zu dem Punkt reduziert werden, dass sie nur wenig komplexer als eine Zeichenfolgeübersetzung ist.  
   
 <a name="autolayout_controls"></a>   
-## Automatisches Layout und Steuerelemente  
- Ein automatisches Layout ermöglicht es einer Anwendung, die Größe eines Steuerelements automatisch einzustellen.  Ein Steuerelement kann sich beispielsweise so ändern, dass es die Länge einer Zeichenfolge anzeigt.  Mithilfe dieser Funktion können die Lokalisierungsspezialisten die Zeichenfolge übersetzen und müssen das Steuerelement nicht mehr entsprechend der Länge der Zeichenfolge anpassen.  Im folgenden Beispiel wird eine Schaltfläche mit englischem Inhalt erstellt.  
+## <a name="automatic-layout-and-controls"></a>Automatisches Layout und Steuerelemente  
+ Das automatische Layout ermöglicht einer Anwendung die automatisch Anpassung der Größe eines Steuerelements. Beispielsweise kann ein Steuerelement so geändert werden, dass es die Länge einer Zeichenfolge aufnimmt. Diese Funktion ermöglicht Lokalisierern die Übersetzung der Zeichenfolge. Es ist nicht mehr notwendig, die Größe des Steuerelements an den übersetzten Text anzupassen. Im folgende Beispiel wird eine Schaltfläche mit englischen Inhalt erstellt.  
   
- [!code-xml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- Wenn Sie für das Beispiel eine Schaltfläche mit spanischem Inhalt erstellen möchten, müssen Sie nur noch den Textinhalt ändern.  Beispiel:  
+ Alles, was Sie in diesem Beispiel tun müssen, um eine spanische Schaltfläche zu erstellen, ist das Ändern des Texts. Beispiel:  
   
- [!code-xml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  Die folgende Grafik zeigt die Ausgabe der Codebeispiele.  
   
  ![Die gleiche Schaltfläche mit Text in unterschiedlichen Sprachen](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
-Automatische Anpassung der Schaltflächengröße  
+Schaltfläche zur automatischen Größenanpassung  
   
 <a name="autolayout_coding"></a>   
-## Automatisches Layout und Codierungsstandards  
- Für die Verwendung des automatischen Layoutansatzes sind Codierungs\- und Entwurfsstandards sowie Regeln erforderlich, um eine völlig lokalisierbare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zu erstellen.  Die folgenden Richtlinien unterstützen die automatische Layoutcodierung.  
+## <a name="automatic-layout-and-coding-standards"></a>Automatisches Layout und Codierungsstandards  
+ Mit dem Automatisches Layoutansatz erfordert einen Satz von Schreiben von Code und Entwurf Standards und Regeln eine vollständig lokalisiert erzeugt [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Die folgenden Richtlinien werden Ihnen bei der automatischen Layoutcodierung helfen .  
   
 |Codierungsstandards|Beschreibung|  
-|-------------------------|------------------|  
-|Verwenden Sie keine absoluten Positionen.|-   Verwenden Sie nicht das <xref:System.Windows.Controls.Canvas>\-Objekt, weil Elemente damit absolut positioniert werden.<br />-   Verwenden Sie zur Positionierung der Steuerelemente <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel> und <xref:System.Windows.Controls.Grid>.<br />-   Die verschiedenen Bereichstypen werden unter [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md) erläutert.|  
-|Legen Sie keine feste Größe für ein Fenster fest.|-   Verwenden Sie die <xref:System.Windows.Window.SizeToContent%2A>\-Eigenschaft.<br />-   Beispiele:<br /><br /> [!code-xml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Fügen Sie eine <xref:System.Windows.FrameworkElement.FlowDirection%2A>\-Eigenschaft hinzu.|<ul><li>Fügen Sie dem Stammelement der Anwendung eine <xref:System.Windows.FrameworkElement.FlowDirection%2A> hinzu.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine komfortable Möglichkeit zur Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts.  In PresentationFramework kann die <xref:System.Windows.FrameworkElement.FlowDirection%2A>\-Eigenschaft zur Definition des Layouts verwendet werden.  Folgende Flussrichtungsmuster stehen zur Verfügung:<br /><br /> <ul><li><xref:System.Windows.FlowDirection> \(LrTb\) —horizontales Layout für Lateinisch, ostasiatische Sprachen usw.</li><li><xref:System.Windows.FlowDirection> \(RlTb\) — bidirektional für Arabisch, Hebräisch usw.</li></ul></li></ul>|  
-|Verwenden Sie zusammengesetzte Schriftarten statt physischer Schriftarten.|<ul><li>Bei zusammengesetzten Schriftarten muss die <xref:System.Windows.Controls.Control.FontFamily%2A>\-Eigenschaft nicht lokalisiert werden.</li><li>Entwickler können eine der folgenden Schriftarten verwenden oder ihre eigenen erstellen.<br /><br /> <ul><li>Global User Interface</li><li>Global Sans Serif</li><li>Global Serif</li></ul></li></ul>|  
-|Fügen Sie xml:lang hinzu.|-   Fügen Sie das `xml:lang`\-Attribut im [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\-Stammelement hinzu, z. B. `xml:lang="en-US"` für eine englische Anwendung.<br />-   Da `xml:lang` von zusammengesetzten Schriftarten für die Bestimmung der zu verwendenden Schriftarten herangezogen wird, legen Sie diese Eigenschaft so fest, dass sie mehrsprachige Szenarien unterstützt.|  
+|----------------------|-----------------|  
+|Verwenden Sie keine absoluten Positionen.|-Verwenden Sie keine <xref:System.Windows.Controls.Canvas> weil Elemente absolut positioniert.<br />– Verwenden Sie <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, und <xref:System.Windows.Controls.Grid> um Steuerelemente zu positionieren.<br />-Weitere Informationen zu den verschiedenen Typen von Bereichen, finden Sie unter [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md).|  
+|Legen Sie keine feste Größe für ein Fenster fest.|– Verwenden Sie <xref:System.Windows.Window.SizeToContent%2A>.<br />-Zum Beispiel:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
+|Fügen Sie ein <xref:System.Windows.FrameworkElement.FlowDirection%2A> hinzu.|<ul><li>Hinzufügen einer <xref:System.Windows.FrameworkElement.FlowDirection%2A> dem Stammelement der Anwendung.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine bequeme Möglichkeit zur Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In zu testendes Präsentationsframework das <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:Die flussrichtung Muster sind:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) – horizontales Layout für Lateinisch, ostasiatische Sprachen und So weiter.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) – bidirektional für Arabisch, Hebräisch und So weiter.</li></ul></li></ul>|  
+|Verwenden Sie zusammengesetzte Schriftarten anstelle von physischen Schriftarten.|<ul><li>Bei zusammengesetzten Schriftarten der <xref:System.Windows.Controls.Control.FontFamily%2A> Eigenschaft muss nicht lokalisiert werden soll.</li><li>Entwickler können eine der folgenden Schriftarten verwenden oder ihre eigenen erstellen.<br /><br /> <ul><li>Globale Benutzeroberfläche</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul>|  
+|Fügen Sie xml:lang hinzu.|-Hinzufügen der `xml:lang` Attribut im Stammelement des Ihrer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], wie z. B. `xml:lang="en-US"` für eine englische Anwendung.<br />– Da es sich um eine zusammengesetzte Schriftarten verwenden `xml:lang` um zu bestimmen, welche Schriftart verwendet, legen Sie diese Eigenschaft zur Unterstützung mehrsprachiger Szenarien.|  
   
 <a name="autolay_grids"></a>   
-## Automatisches Layout und Raster  
- Das <xref:System.Windows.Controls.Grid>\-Element eignet sich für automatische Layouts, da es die Positionierung von Elementen ermöglicht.  Ein <xref:System.Windows.Controls.Grid>\-Steuerelement kann den verfügbaren Leerraum mit einer Spalten\- und Zeilenanordnung auf seine untergeordneten Elemente verteilen.  Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]\-Elemente können sich über mehrere Zellen erstrecken und verschachtelte Raster aufweisen.  Raster sind sehr hilfreich, da Sie mit deren Hilfe eine komplexe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] erstellen und positionieren können.  Im folgenden Beispiel wird veranschaulicht, wie mit einem Raster einige Schaltflächen und Text positioniert werden.  Beachten Sie, dass Höhe und Breite der Zellen auf <xref:System.Windows.GridUnitType> festgelegt sind. Daher wird die Größe der Zelle, die die Schaltfläche mit einem Bild enthält, an das Bild angepasst.  
+## <a name="automatic-layout-and-grids"></a>Automatisches Layout und Raster  
+ Die <xref:System.Windows.Controls.Grid> -Element, eignet sich für automatisches Layout, da es die Positionierung von Elementen ermöglicht. Ein <xref:System.Windows.Controls.Grid> Steuerelement ist in der Lage, den verfügbaren Platz auf seine untergeordneten Elemente mit einer Spalte und Zeile Anordnung verteilt. Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente können mehrere Zellen umfassen, und es ist möglich, eine verschachtelte Raster aufweisen. Raster sind nützlich, da sie Ihnen ermöglichen das Erstellen und positionieren Sie komplexe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Im folgende Beispiel wird veranschaulicht, wie mit einem Raster einige Schaltflächen und Text positioniert werden. Beachten Sie, dass die Höhe und Breite der Zellen werden zu <xref:System.Windows.GridUnitType.Auto>; daher wird die Zelle mit der Schaltfläche mit einem Bild, das Abbild angepasst.  
   
- [!code-xml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
- Die folgende Grafik zeigt das vom vorherigen Code erzeugte Raster.  
+ Die folgende Grafik zeigt die vom vorherigen Code erzeugten Raster.  
   
- ![Rasterbeispiel](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob\_grid")  
+ ![Rasterbeispiel](../../../../docs/framework/wpf/advanced/media/glob-grid.png "Glob_grid")  
 Raster  
   
 <a name="autolay_grids_issharedsizescope"></a>   
-## Automatisches Layout und Raster mit der IsSharedSizeScope\-Eigenschaft  
- Ein <xref:System.Windows.Controls.Grid>\-Element ist in lokalisierbaren Anwendungen sehr hilfreich, um Steuerelemente zu erstellen, die sich an den entsprechenden Inhalt anpassen.  Zuweilen ist es jedoch erforderlich, dass die Steuerelemente unabhängig vom Inhalt eine bestimmte Größe beibehalten.  So sollen beispielsweise die Schaltflächen "OK", "Abbrechen" und "Durchsuchen" wahrscheinlich nicht an den entsprechenden Inhalt angepasst werden.  In diesem Fall kann die angehängte Eigenschaft <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=fullName> verwendet werden, um dieselbe Größe in mehreren Rasterelementen zu nutzen.  Im folgenden Beispiel wird veranschaulicht, wie dieselbe Spalten\- und Zeilengröße in mehreren <xref:System.Windows.Controls.Grid>\-Elementen gemeinsam genutzt werden kann.  
+## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Automatisches Layout und Raster mit der IsSharedSizeScope-Eigenschaft  
+ Ein <xref:System.Windows.Controls.Grid> Element ist nützlich in lokalisierbare Anwendungen um Steuerelemente zu erstellen, die an Inhalt anpassen. Manchmal ist es jedoch notwendig, dass Steuerelemente unabhängig vom Inhalt eine bestimmte Größe beibehalten. Beispielsweise sollen die Schaltflächen „OK“, „Abbrechen“ und „Durchsuchen“ wahrscheinlich nicht die Größe des Inhalts angepasst werden. In diesem Fall die <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> angefügte Eigenschaft ist nützlich für die gemeinsame Nutzung der gleichen Größe zwischen mehreren Datenblattelementen. Im folgenden Beispiel wird veranschaulicht, wie Spalten- und Größe der Daten zwischen mehreren Teilen <xref:System.Windows.Controls.Grid> Elemente.  
   
- [!code-xml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Hinweis:** Das vollständige Codebeispiel finden Sie unter [Freigeben von Größeneigenschaften zwischen Grids](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md).  
+ **Hinweis** das vollständige Codebeispiel finden Sie unter [Freigabe Sizing Eigenschaften zwischen Datenblättern](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## Siehe auch  
- [Globalisierung für WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [Verwenden des automatischen Layouts zum Erstellen einer Schaltfläche](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Globalisierung für WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [Verwenden des automatischen Layouts zum Erstellen einer Schaltfläche](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
  [Verwenden eines Rasters für automatisches Layout](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

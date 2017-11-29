@@ -1,45 +1,27 @@
 ---
 title: Prozeduren in Visual Basic
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
 Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden. Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen sich in einer Prozedur befinden.  
@@ -88,14 +70,13 @@ Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-An
 -   Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen einer Prozedur](./how-to-create-a-procedure.md)   
- [Sub-Prozeduren](./sub-procedures.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Eigenschaftenprozeduren](./property-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)   
- [Rekursive Prozeduren](./recursive-procedures.md)   
- [Prozedurüberladung](./procedure-overloading.md)   
- [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+ [Gewusst wie: Erstellen einer Prozedur](./how-to-create-a-procedure.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Function-Prozeduren](./function-procedures.md)  
+ [Eigenschaftenprozeduren](./property-procedures.md)  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Rekursive Prozeduren](./recursive-procedures.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-

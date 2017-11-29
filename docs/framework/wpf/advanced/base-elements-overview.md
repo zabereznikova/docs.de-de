@@ -1,112 +1,113 @@
 ---
-title: "&#220;bersicht &#252;ber Basiselemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Basiselemente"
+title: "Übersicht über Basiselemente"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 270388b8e3dda0342ba74187d8dc45616d0e769d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber Basiselemente
-Ein sehr großer Teil der Klassen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist von vier Klassen abgeleitet, die im Allgemeinen in der [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]\-Dokumentation als Basiselementklassen bezeichnet werden.  Diese Klassen sind <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement> und <xref:System.Windows.FrameworkContentElement>.  Die <xref:System.Windows.DependencyObject>\-Klasse ist ebenfalls in diesem Zusammenhang zu sehen, da es sich dabei um eine allgemeine Basisklasse von <xref:System.Windows.UIElement> und von <xref:System.Windows.ContentElement> handelt.  
-  
-   
+# <a name="base-elements-overview"></a>Übersicht über Basiselemente
+Ein hoher Prozentsatz der Klassen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stammen von vier Klassen ab, die häufig in der [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]-Dokumentation als Basiselementklassen bezeichnet werden. Diese Klassen sind <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, und <xref:System.Windows.FrameworkContentElement>. Die <xref:System.Windows.DependencyObject> Klasse auch verknüpft ist, da es sich um eine allgemeine Basisklasse beider ist <xref:System.Windows.UIElement> und<xref:System.Windows.ContentElement>  
+ 
   
 <a name="base_apis"></a>   
-## Basiselement\-APIs in WPF\-Klassen  
- Sowohl <xref:System.Windows.UIElement> als auch <xref:System.Windows.ContentElement> werden von dem <xref:System.Windows.DependencyObject> abgeleitet, auf leicht unterschiedlichen Wegen.  Die Aufteilung auf dieser Ebene bezieht sich darauf, wie ein <xref:System.Windows.UIElement>\- oder <xref:System.Windows.ContentElement>\-Element in einer Benutzeroberfläche verwendet wird und zu welchem Zweck diese in einer Anwendung dienen.  Das <xref:System.Windows.UIElement>\-Element hat außerdem das <xref:System.Windows.Media.Visual>\-Element in seiner Klassenhierarchie. Dabei handelt es sich um eine Klasse, die die dem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zugrunde liegende Unterstützung für Grafiken auf niedrigerer Ebene verfügbar macht.  Das <xref:System.Windows.Media.Visual>\-Element stellt ein Renderingframework durch die Definition unabhängiger rechteckiger Bildschirmbereiche bereit.  In der Praxis wird das <xref:System.Windows.UIElement>\-Objekt für Elemente verwendet, die ein größeres Objektmodell unterstützen, für das Rendering und Layout in als rechteckige Bildschirmbereiche beschreibbaren Bereichen vorgesehen sind und ein absichtlich offeneres Inhaltsmodell verwenden, um verschiedene Kombinationen von Elementen zu ermöglichen.  Ein <xref:System.Windows.ContentElement>\-Element wird nicht von <xref:System.Windows.Media.Visual> abgeleitet. Es folgt einem Modell, bei dem ein <xref:System.Windows.ContentElement>\-Element durch etwas anderes, z. B. einen Reader oder Viewer, verarbeitet wird, der dann die Elemente interpretieren und das gesamte <xref:System.Windows.Media.Visual>\-Objekt für die Verarbeitung durch [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] erzeugt.  Bestimmte <xref:System.Windows.UIElement>\-Klassen sind als Inhaltshosts gedacht: Sie stellen das Hosting und Rendering für eine oder mehrere <xref:System.Windows.ContentElement> \-Klassen bereit \(<xref:System.Windows.Controls.DocumentViewer> ist ein Beispiel für eine solche Klasse\).  <xref:System.Windows.ContentElement> wird als Basisklasse für Elemente mit eher kleineren Objektmodellen verwendet, die sich mehr auf den Text, die Informationen oder den Dokumentinhalt beziehen, die innerhalb eines <xref:System.Windows.UIElement>\-Elements gehostet werden könnten.  
+## <a name="base-element-apis-in-wpf-classes"></a>Basiselement-APIs in WPF-Klassen  
+ Beide <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> abgeleitet sind <xref:System.Windows.DependencyObject>, über etwas andere Pfade zur Verfügung. Die Aufteilung auf dieser Ebene behandelt wie eine <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in einer Benutzeroberfläche und zu welchem Zweck sie dienen in einer Anwendung verwendet werden. <xref:System.Windows.UIElement>verfügt auch über <xref:System.Windows.Media.Visual> in der Klassenhierarchie, also in einer Klasse, die die zugrunde liegende auf niedrigerer Ebene Graphics-Unterstützung verfügbar macht die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual>Stellt ein Framework Rendering durch die Definition unabhängig rechteckige Bildschirmbereiche bereit. In der Praxis <xref:System.Windows.UIElement> ist für Elemente, die ein größeres Objektmodell unterstützen, sind vorgesehen, die zum Rendern und Layout in Regionen, die als rechteckige Bildschirmbereiche beschrieben werden kann, und, in dem das Inhaltsmodell ist absichtlich mehr öffnen, um verschiedene ermöglichen, Kombinationen von Elementen. <xref:System.Windows.ContentElement>ist nicht von abgeleitet <xref:System.Windows.Media.Visual>; das Modell ist, die eine <xref:System.Windows.ContentElement> würde von etwas anderem, wie z. B. einen Reader oder Viewer, die dann die Elemente interpretieren und erzeugt die vollständige genutzt werden <xref:System.Windows.Media.Visual> für [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nutzen. Bestimmte <xref:System.Windows.UIElement> Klassen sollten Content-Hosts verwendet werden: sie bieten das hosting und das Rendering für eine oder mehrere <xref:System.Windows.ContentElement> Klassen (<xref:System.Windows.Controls.DocumentViewer> ist ein Beispiel einer solchen Klasse). <xref:System.Windows.ContentElement>Dient als Basisklasse für Elemente mit etwas kleiner Objektmodelle und dass weitere-der Text, die Informationen oder den Dokumentinhalt, die in gehostet werden, können eine <xref:System.Windows.UIElement>.  
   
-### Frameworkebene und Kernebene  
- <xref:System.Windows.UIElement> dient als Basisklasse für <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.ContentElement> dient als Basisklasse für <xref:System.Windows.FrameworkContentElement>.  Diese nächste Ebene von Klassen dient dazu, eine [WPF\-Kernebene](GTMT) zu unterstützen, die von einer [WPF\-Frameworkebene](GTMT) getrennt ist. Diese Trennung besteht auch bei der Aufteilung der [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zwischen den PresentationCore\- und den PresentationFramework\-Assemblys.  Die [WPF\-Frameworkebene](GTMT) stellt eine umfassendere Lösung für die grundlegenden Anforderungen von Anwendungen dar, einschließlich der Implementierung eines Layoutmanagers für die Präsentation.  Die [WPF\-Kernebene](GTMT) bietet eine Möglichkeit, einen großen Teil von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu nutzen, ohne den Aufwand der zusätzlichen Assembly übernehmen zu müssen.  Die Unterscheidung zwischen diesen beiden Ebenen spielt in den meisten üblichen Anwendungsentwicklungsszenarien kaum eine Rolle. Im Allgemeinen reicht es, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] als Gesamtheit zu sehen und dem Unterschied zwischen [WPF\-Frameworkebene](GTMT) und [WPF\-Kernebene](GTMT) keine große Bedeutung beizumessen.  Sie müssen die Unterscheidung zwischen diesen Ebenen möglicherweise kennen, wenn in Ihrem Anwendungsentwurf die Funktionen der [WPF\-Frameworkebene](GTMT) in größerem Umfang ersetzt werden, beispielsweise, wenn Ihre Gesamtlösung eigene Implementierungen von [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]\-Zusammensetzung und \-Layout hat.  
+### <a name="framework-level-and-core-level"></a>Frameworkebene und Kernebene  
+ <xref:System.Windows.UIElement>Dient als Basisklasse für <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.ContentElement> dient als Basisklasse für <xref:System.Windows.FrameworkContentElement>. Der Grund für diese nächste Klassenebene ist die Unterstützung einer WPF-Kernebene, die unabhängig von einer WPF-Frameworkebene ist. Diese Unterteilung ist auch relevant, in wie weit [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zwischen den Assembys PresentationCore und PresentationFramework getrennt sind. Die WPF-Frameworkebene stellt eine vollständigere Lösung für grundlegende Anwendungsanforderungen dar, einschließlich die Implementierung des Layout-Managers für die Darstellung. Die WPF-Kernebene bietet eine Möglichkeit, mehr von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu verwenden, ohne den Mehraufwand der zusätzlichen Assembly. Der Unterschied zwischen diesen Ebenen spielt für die meisten Anwendungsentwicklungsszenarios in den seltensten Fällen eine Rolle. Allgemein sollten Sie die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] als Ganzes betrachten und sich keine Sorgen über den Unterschied zwischen der WPF-Frameworkebene und der -Kernebene machen. Sie müssen möglicherweise über die Unterschiede der Ebenen Bescheid wissen, wenn Ihr Anwendungsentwurf eine Vielzahl von Funktionen der WPF-Frameworkebene ersetzt, z.B. wenn Ihre allgemeine Projektmappe schon über eigene Implementierungen der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Zusammenstellung und des -Layouts verfügt.  
   
 <a name="subclassing_elements"></a>   
-## Auswählen der Elemente für die Ableitung  
- In der Praxis lässt sich eine benutzerdefinierte Klasse, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erweitert, am einfachsten erstellen, indem sie von einer der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Klassen abgeleitet wird, bei der Sie möglichst viele der gewünschten Funktionen über die vorhandene Klassenhierarchie erhalten.  In diesem Abschnitt werden die Funktionen aufgeführt, die drei der wichtigsten Elementklassen liefern, um Ihnen die Entscheidung für die Klasse zu erleichtern, von der geerbt werden soll.  
+## <a name="choosing-which-element-to-derive-from"></a>Auswählen des Elements für die Ableitung  
+ Der praktischste Weg, eine benutzerdefinierte Klasse zu erstellen, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erweitert, ist durch Ableiten von einer der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen, wobei Sie so viel Funktionalität wie möglich durch die vorhandene Klassenhierarchie erhalten. In diesem Abschnitt sind die Funktionen aufgeführt, die mit drei der wichtigsten Elementklassen geliefert werden, um Ihnen bei der Entscheidung zu helfen, von welcher Klasse geerbt werden soll.  
   
- Wenn Sie ein Steuerelement implementieren \(ein recht häufiger Grund für die Ableitung von einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Klasse\), sollten Sie das Steuerelement von einer Klasse ableiten, die ein geeignetes Steuerelement, eine Steuerelementfamilien\-Basisklasse oder zumindest eine <xref:System.Windows.Controls.Control>\-Basisklasse ist.  Anweisungen und praktische Beispiele finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Wenn Sie ein Steuerelement implementieren also eigentlich einem häufiger Grund für die Ableitung von einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Klasse, möchten Sie wahrscheinlich leiten Sie von einer Klasse, die eine praktische Steuerelement, eine Basisklasse, oder auf von mindestens die <xref:System.Windows.Controls.Control> Basisklasse. Einige Leitfäden und praktische Beispiele finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
- Wenn Sie kein Steuerelement erstellen und von einer Klasse ableiten möchten, die in der Hierarchie höher steht, finden Sie in den folgenden Abschnitten einen Leitfaden, welche Eigenschaften in den einzelnen Basiselementklassen definiert sind.  
+ Wenn Sie kein Steuerelement erstellen und von einer Klasse ableiten müssen, die in der Hierarchie höher gestellt ist, sollen Ihnen die folgenden Abschnitte als Leitfaden für die Eigenschaften dienen, die in jeder Basiselementklasse definiert sind.  
   
- Wenn Sie eine Klasse erstellen, die von <xref:System.Windows.DependencyObject> abgeleitet wird, erben Sie die folgenden Funktionen:  
+ Wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Windows.DependencyObject>, Sie erben die folgende Funktionen:  
   
--   Unterstützung von <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> sowie allgemeine Unterstützung des Eigenschaftensystems.  
+-   <xref:System.Windows.DependencyObject.GetValue%2A>und <xref:System.Windows.DependencyObject.SetValue%2A> und allgemeine Eigenschaft systemunterstützung.  
   
--   Fähigkeit zur Verwendung von [Abhängigkeitseigenschaften](GTMT) und [angefügten Eigenschaften](GTMT), die als [Abhängigkeitseigenschaften](GTMT) implementiert sind.  
+-   Fähigkeit zum Verwenden von Abhängigkeitseigenschaften und angefügten Eigenschaften, die als Abhängigkeitseigenschaften implementiert sind  
   
- Wenn Sie eine Klasse erstellen, die von <xref:System.Windows.UIElement> abgeleitet wird, erben Sie zusätzlich zu den Funktionen, die <xref:System.Windows.DependencyObject> bereitstellt, die folgenden Funktionen:  
+ Wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Windows.UIElement>, Sie erben die folgende Funktionen zusätzlich zu den bereitgestellten <xref:System.Windows.DependencyObject>:  
   
--   Grundlegende Unterstützung von animierten Eigenschaftswerten.  Weitere Informationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Grundlegende Unterstützung für animierte Eigenschaftswerte. Weitere Informationen finden Sie unter [Übersicht über Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
--   Grundlegende Unterstützung von Eingabeereignissen und Unterstützung von Befehlen.  Weitere Informationen finden Sie unter [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md) und [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Grundlegende Unterstützung für Eingabeereignisse und Unterstützung für Befehle. Weitere Informationen finden Sie unter [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md) und [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
 -   Virtuelle Methoden, die überschrieben werden können, um Informationen für ein Layoutsystem bereitzustellen.  
   
- Wenn Sie eine Klasse erstellen, die von <xref:System.Windows.FrameworkElement> abgeleitet wird, erben Sie zusätzlich zu den Funktionen, die <xref:System.Windows.UIElement> bereitstellt, die folgenden Funktionen:  
+ Wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Windows.FrameworkElement>, Sie erben die folgende Funktionen zusätzlich zu den bereitgestellten <xref:System.Windows.UIElement>:  
   
--   Unterstützung von Formatierung und Storyboards.  Weitere Informationen finden Sie unter <xref:System.Windows.Style> und [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+-   Unterstützung für Formatierung und Storyboards. Weitere Informationen finden Sie unter <xref:System.Windows.Style> und [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
--   Unterstützung von Datenbindung.  Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
--   Unterstützung von dynamischen Ressourcenverweisen.  Weitere Informationen finden Sie unter [XAML\-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Unterstützung für dynamische Ressourcenverweise. Weitere Informationen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
--   Unterstützung der Vererbung von Eigenschaftswerten und weitere Flags in den Metadaten, die die Meldung von Bedingungen für Eigenschaften an Frameworkdienste unterstützen, z. B. Datenbindung, Stile oder die Frameworkimplementierung von Layout.  Weitere Informationen hierzu finden Sie unter [Framework\-Eigenschaftenmetadaten](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Unterstützung für die Eigenschaftswertvererbung und andere Flags in den Metadaten, die Ihnen beim Melden von Bedingungen über Eigenschaften für Frameworkdienste helfen, z.B. Datenbindung, Stile oder die Frameworkimplementierung des Layouts. Weitere Informationen finden Sie unter [Framework-Eigenschaftenmetadaten](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
   
--   Das Konzept der [logischen Struktur](GTMT).  Weitere Informationen hierzu finden Sie unter [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+-   Das Konzept der logischen Struktur. Weitere Informationen finden Sie unter [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
--   Unterstützung der praktischen [WPF\-Frameworkebenen](GTMT)\-Implementierung des Layoutsystems, einschließlich einer <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>\-Überschreibung, die Änderungen an Eigenschaften mit Auswirkungen auf das Layout erkennen kann.  
+-   Unterstützung für die praktische WPF-Frameworkebene vorgenommene Implementierung des Layoutsystems, einschließlich einer <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> überschreiben, die erkennen, kann Änderungen an diesem Layout beeinflussen.  
   
- Wenn Sie eine Klasse erstellen, die von <xref:System.Windows.ContentElement> abgeleitet wird, erben Sie zusätzlich zu den Funktionen, die <xref:System.Windows.DependencyObject> bereitstellt, die folgenden Funktionen:  
+ Wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Windows.ContentElement>, Sie erben die folgende Funktionen zusätzlich zu den bereitgestellten <xref:System.Windows.DependencyObject>:  
   
--   Unterstützung von Animationen.  Weitere Informationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Unterstützung für Animationen. Weitere Informationen finden Sie unter [Übersicht über Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
--   Grundlegende Unterstützung von Eingabeereignissen und Unterstützung von Befehlen.  Weitere Informationen finden Sie unter [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md) und [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Grundlegende Unterstützung für Eingabeereignisse und Unterstützung für Befehle. Weitere Informationen finden Sie unter [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md) und [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
- Wenn Sie eine Klasse erstellen, die von <xref:System.Windows.FrameworkContentElement> abgeleitet wird, erhalten Sie zusätzlich zu den Funktionen, die <xref:System.Windows.ContentElement> bereitstellt, die folgenden Funktionen:  
+ Wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Windows.FrameworkContentElement>, erhalten Sie die folgende Funktionen zusätzlich zu den bereitgestellten <xref:System.Windows.ContentElement>:  
   
--   Unterstützung von Formatierung und Storyboards.  Weitere Informationen finden Sie unter <xref:System.Windows.Style> und [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Unterstützung für Formatierung und Storyboards. Weitere Informationen finden Sie unter <xref:System.Windows.Style> und [Übersicht über Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
--   Unterstützung von Datenbindung.  Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
--   Unterstützung von dynamischen Ressourcenverweisen.  Weitere Informationen finden Sie unter [XAML\-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Unterstützung für dynamische Ressourcenverweise. Weitere Informationen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
--   Unterstützung der Vererbung von Eigenschaftswerten und weitere Flags in den Metadaten, die die Meldung von Bedingungen für Eigenschaften an Frameworkdienste unterstützen, z. B. Datenbindung, Stile oder die Frameworkimplementierung von Layout.  Weitere Informationen hierzu finden Sie unter [Framework\-Eigenschaftenmetadaten](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Unterstützung für die Eigenschaftswertvererbung und andere Flags in den Metadaten, die Ihnen beim Melden von Bedingungen über Eigenschaften für Frameworkdienste helfen, z.B. Datenbindung, Stile oder die Frameworkimplementierung des Layouts. Weitere Informationen finden Sie unter [Framework-Eigenschaftenmetadaten](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
   
--   Sie erben keinen Zugriff auf Layoutsystemänderungen \(wie <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>\).  Layoutsystemimplementierungen sind nur für <xref:System.Windows.FrameworkElement> verfügbar.  Sie erben jedoch eine <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>\-Überschreibung, die Änderungen an Eigenschaften mit Auswirkungen auf das Layout erkennen und diese Änderungen an Inhaltshosts melden kann.  
+-   Sie erben nicht den Zugriff auf Layout System Änderungen (z. B. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). System layoutimplementierungen stehen nur auf <xref:System.Windows.FrameworkElement>. Erben Sie jedoch eine <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> überschreiben, die Änderungen an den Eigenschaften, die beeinflussen, Layout, und melden diese auf alle Inhalte Hosts erkannt werden kann.  
   
- Inhaltsmodelle sind für eine Vielzahl von Klassen dokumentiert.  Das Inhaltsmodell für eine Klasse ist ein möglicher Faktor, den Sie betrachten sollten, wenn Sie eine geeignete Klasse als Basis für die Ableitung suchen.  Weitere Informationen finden Sie unter [WPF\-Inhaltsmodell](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+ Inhaltsmodelle sind für eine Vielzahl von Klassen dokumentiert. Das Inhaltsmodell für eine Klasse ist ein möglicher Faktor, den Sie berücksichtigen sollten, wenn Sie eine entsprechende Klasse finden möchten, von der Sie ableiten möchten. Weitere Informationen finden Sie unter [WPF-Inhaltsmodell](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 <a name="other_base_classes"></a>   
-## Andere Basisklassen  
+## <a name="other-base-classes"></a>Andere Basisklassen  
   
-### DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject> bietet Unterstützung für das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Threadingmodell und ermöglicht allen Objekten, die für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen erstellt werden, die Zuordnung zu einem <xref:System.Windows.Threading.Dispatcher>.  Auch wenn Sie nicht von den Objekten <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject> oder <xref:System.Windows.Media.Visual> ableiten, sollten Sie eine Ableitung von dem <xref:System.Windows.Threading.DispatcherObject>\-Objekt in Betracht ziehen, um diese Unterstützung für das Threadingmodell zu erhalten.  Weitere Informationen hierzu finden Sie unter [Threading\-Modell](../../../../docs/framework/wpf/advanced/threading-model.md).  
+### <a name="dispatcherobject"></a>DispatcherObject  
+ <xref:System.Windows.Threading.DispatcherObject>bietet Unterstützung für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Threadmodell ermöglicht, die für alle Objekte erstellt und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen verknüpft werden soll eine <xref:System.Windows.Threading.Dispatcher>. Auch wenn Sie nicht von abgeleitet sind, <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, oder <xref:System.Windows.Media.Visual>, sollten Sie erwägen, ableiten von <xref:System.Windows.Threading.DispatcherObject> ändern, um diese Unterstützung für das Threadingmodell zu erhalten. Weitere Informationen finden Sie unter [Threading-Modell](../../../../docs/framework/wpf/advanced/threading-model.md).  
   
-### Visual  
- <xref:System.Windows.Media.Visual> implementiert das Konzept eines 2D\-Objekts, für das im Allgemeinen die visuelle Präsentation in einem etwa rechteckigen Bereich erforderlich ist.  Das tatsächliche Rendern eines <xref:System.Windows.Media.Visual>\-Elements geschieht in anderen Klassen \(d. h., es erfolgt nicht unabhängig\), aber die <xref:System.Windows.Media.Visual>\-Klasse liefert einen bekannten Typ, der von Renderingprozessen auf verschiedenen Ebenen verwendet wird.  Das <xref:System.Windows.Media.Visual>\-Element implementiert Treffertests, macht jedoch keine Ereignisse verfügbar, die positive Treffertestergebnisse melden \(diese sind im <xref:System.Windows.UIElement>\-Element enthalten\).  Weitere Informationen hierzu finden Sie unter [Programmierung auf visueller Ebene](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md).  
+### <a name="visual"></a>Grafisches Element  
+ <xref:System.Windows.Media.Visual>implementiert das Konzept eines 2D-Objekts, die visuelle Darstellung in einem etwa rechteckigen Bereich in der Regel erfordert. Die tatsächliche Darstellung einer <xref:System.Windows.Media.Visual> geschieht in anderen Klassen (es ist kein eigenständiger), aber die <xref:System.Windows.Media.Visual> Klasse bietet einen bekannten Typ, der von Renderingprozessen auf verschiedenen Ebenen verwendet wird. <xref:System.Windows.Media.Visual>implementiert Treffertests, es macht jedoch nicht Ereignisse, die Treffertests Interpretationen (these <xref:System.Windows.UIElement>). Weitere Informationen finden Sie unter [Programmierung auf visueller Ebene](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md).  
   
-### Freezable  
- <xref:System.Windows.Freezable> simuliert Unveränderlichkeit in einem änderbaren Objekt durch Bereitstellung der Möglichkeit zum Generieren von Kopien des Objekts, wenn ein unveränderliches Objekt erforderlich oder aus Leistungsgründen erwünscht ist.  Der <xref:System.Windows.Freezable>\-Typ liefert eine gemeinsame Basis für bestimmte Grafikelemente wie Geometrien und Pinsel sowie Animationen.  Insbesondere ist ein <xref:System.Windows.Freezable>\-Objekt kein <xref:System.Windows.Media.Visual>\-Objekt. Es kann Eigenschaften speichern, die zu untergeordneten Eigenschaften werden, wenn <xref:System.Windows.Freezable> verwendet wird, um einen Eigenschaftswert für ein anderes Objekt zu liefern, und diese untergeordneten Eigenschaften können das Rendern beeinträchtigen.  Weitere Informationen finden Sie unter [Übersicht über Freezable\-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+### <a name="freezable"></a>Freezable-Objekt  
+ <xref:System.Windows.Freezable>simuliert Unveränderlichkeit in ein änderbares Objekt durch Bereitstellen der Möglichkeit zum Generieren von Kopien des Objekts, wenn ein unveränderliches Objekt erforderlich oder zur Verbesserung der Leistung gewünscht. Die <xref:System.Windows.Freezable> Typ bietet eine gemeinsame Basis für bestimmte Grafikelemente wie Geometrien und Pinsel sowie Animationen. Insbesondere werden eine <xref:System.Windows.Freezable> ist keine <xref:System.Windows.Media.Visual>; kann enthalten Eigenschaften, die untergeordneten Eigenschaften werden beim der <xref:System.Windows.Freezable> wird angewendet, um einen Eigenschaftswert eines anderen Objekts zu füllen und diese untergeordneten Eigenschaften wirkt sich möglicherweise auf rendern. Weitere Informationen finden Sie unter der [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
- <xref:System.Windows.Media.Animation.Animatable> ist eine von <xref:System.Windows.Freezable> abgeleitete Klasse, die insbesondere die Animationssteuerungsebene sowie einige Dienstprogramm\-Member hinzufügt, sodass gegenwärtig animierte Eigenschaften von nicht animierten Eigenschaften unterschieden werden können.  
+ <xref:System.Windows.Media.Animation.Animatable>ist eine <xref:System.Windows.Freezable> abgeleitete Klasse, die speziell die Steuerungsebene für Animation und einige Dienstprogramm-Member hinzufügt, sodass gerade animierte Eigenschaften unterschieden werden können aus Animationssteuerungsebene.  
   
-### Steuerelement  
- <xref:System.Windows.Controls.Control> ist die intendierte Basisklasse für den Objekttyp, der je nach Technologie als Steuerelement oder Komponente bezeichnet wird.  Im Allgemeinen sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelementklassen Klassen, die entweder direkt ein Steuerelement der Benutzeroberfläche darstellen oder eng an der Steuerelementzusammensetzung beteiligt sind.  Durch das <xref:System.Windows.Controls.Control>\-Element wird in erster Linie die Funktion der Steuerelementvorlagen aktiviert.  
+### <a name="control"></a>Steuerelement  
+ <xref:System.Windows.Controls.Control>ist die Basisklasse für den Typ des Objekts, die ein Steuerelement oder eine Komponente, je nach Technologie unterschiedlich bezeichnet wird. Im allgemeinen sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementklassen Klassen, die entweder direkt ein UI-Steuerelement darstellen oder in der Zusammenstellung der Steuerelemente eng beteiligt sind. Der Hauptfunktionen, <xref:System.Windows.Controls.Control> aktiviert ist, Steuerelementvorlagen.  
   
-## Siehe auch  
- <xref:System.Windows.Controls.Control>   
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)   
- [WPF\-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.Control>  
+ [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

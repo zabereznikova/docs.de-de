@@ -1,23 +1,26 @@
 ---
-title: "DataContract-Ersatzzeichen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataContract-Ersatzzeichen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77eee3172b24bc0252ecb18d9ce6b283ba6e5c93
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# DataContract-Ersatzzeichen
-In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag\-Ersatzzeichenklasse angepasst werden können.In diesem Beispiel wird die Verwendung eines Ersatzzeichens in einem Client\- und Serverszenario veranschaulicht, in dem Daten serialisiert und zwischen einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Client und \-Dienst übertragen werden.  
+# <a name="datacontract-surrogate"></a>DataContract-Ersatzzeichen
+In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können. In diesem Beispiel wird die Verwendung eines Ersatzzeichens in einem Client- und Serverszenario veranschaulicht, in dem Daten serialisiert und zwischen einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client und -Dienst übertragen werden.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -37,7 +40,7 @@ public interface IPersonnelDataService
 }  
 ```  
   
- Mit dem `AddEmployee`\-Vorgang können Benutzer Daten zu neuen Mitarbeitern hinzufügen. Der `GetEmployee`\-Vorgang unterstützt das Suchen von Mitarbeitern nach Namen.  
+ Mit dem `AddEmployee`-Vorgang können Benutzer Daten zu neuen Mitarbeitern hinzufügen. Der `GetEmployee`-Vorgang unterstützt das Suchen von Mitarbeitern nach Namen.  
   
  In diesen Vorgängen wird der folgende Datentyp verwendet:  
   
@@ -54,10 +57,9 @@ class Employee
     [DataMember]  
     public Person person;  
 }  
-  
 ```  
   
- Im `Employee`\-Typ kann die `Person`\-Klasse \(im folgenden Beispielcode dargestellt\) nicht von <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert werden, da es sich nicht um eine gültige Datenvertragsklasse handelt.  
+ Im `Employee`-Typ kann die `Person`-Klasse (im folgenden Beispielcode dargestellt) nicht von <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert werden, da es sich nicht um eine gültige Datenvertragsklasse handelt.  
   
 ```  
 public class Person  
@@ -72,11 +74,11 @@ public class Person
 }  
 ```  
   
- Sie können das `DataContract`\-Attribut auf die `Person`\-Klasse anwenden, dies ist jedoch nicht immer möglich.Die `Person`\-Klasse kann beispielsweise in einer separaten Assembly definiert sein, auf die Sie keinen Einfluss haben.  
+ Sie können das `DataContract`-Attribut auf die `Person`-Klasse anwenden, dies ist jedoch nicht immer möglich. Die `Person`-Klasse kann beispielsweise in einer separaten Assembly definiert sein, auf die Sie keinen Einfluss haben.  
   
- Wenn diese Einschränkung vorliegt, besteht eine Möglichkeit zum Serialisieren der `Person`\-Klasse darin, sie durch eine andere Klasse zu ersetzen, die mit `DataContractAttribute` markiert ist, und erforderliche Daten in die neue Klasse zu kopieren.Das Ziel ist dabei, die `Person`\-Klasse für <xref:System.Runtime.Serialization.DataContractSerializer> als DataContract erscheinen zu lassen.Beachten Sie, dass dies eine Möglichkeit zum Serialisieren von Klassen ist, bei denen es sich nicht um Datenvertragsklassen handelt.  
+ Wenn diese Einschränkung vorliegt, besteht eine Möglichkeit zum Serialisieren der `Person`-Klasse darin, sie durch eine andere Klasse zu ersetzen, die mit `DataContractAttribute` markiert ist, und erforderliche Daten in die neue Klasse zu kopieren. Das Ziel ist dabei, die `Person`-Klasse für <xref:System.Runtime.Serialization.DataContractSerializer> als DataContract erscheinen zu lassen. Beachten Sie, dass dies eine Möglichkeit zum Serialisieren von Klassen ist, bei denen es sich nicht um Datenvertragsklassen handelt.  
   
- Im Beispiel wird die `Person`\-Klasse logisch durch eine andere Klasse namens `PersonSurrogated` ersetzt.  
+ Im Beispiel wird die `Person`-Klasse logisch durch eine andere Klasse namens `PersonSurrogated` ersetzt.  
   
 ```  
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -91,12 +93,11 @@ public class PersonSurrogated
     [DataMember]  
     public int Age;  
 }  
-  
 ```  
   
- Zum Durchführen dieser Ersetzung wird das Datenvertrag\-Ersatzzeichen verwendet.Ein Datenvertrag\-Ersatzzeichen ist eine Klasse, die <xref:System.Runtime.Serialization.IDataContractSurrogate> implementiert.In diesem Beispiel implementiert die `AllowNonSerializableTypesSurrogate`\-Klasse diese Schnittstelle.  
+ Zum Durchführen dieser Ersetzung wird das Datenvertrag-Ersatzzeichen verwendet. Ein Datenvertrag-Ersatzzeichen ist eine Klasse, die <xref:System.Runtime.Serialization.IDataContractSurrogate> implementiert. In diesem Beispiel implementiert die `AllowNonSerializableTypesSurrogate`-Klasse diese Schnittstelle.  
   
- In der Schnittstellenimplementierung ist die erste Aufgabe das Einrichten einer Typzuordnung von `Person` zu `PersonSurrogated`.Dies wird bei der Serialisierung sowie beim Schemaexport verwendet.Diese Zuordnung erfolgt durch das Implementieren der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>\-Methode.  
+ In der Schnittstellenimplementierung ist die erste Aufgabe das Einrichten einer Typzuordnung von `Person` zu `PersonSurrogated`. Dies wird bei der Serialisierung sowie beim Schemaexport verwendet. Diese Zuordnung erfolgt durch das Implementieren der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>-Methode.  
   
 ```  
 public Type GetDataContractType(Type type)  
@@ -107,10 +108,9 @@ public Type GetDataContractType(Type type)
     }  
     return type;  
 }  
-  
 ```  
   
- Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29>\-Methode ordnet bei der Serialisierung eine `Person`\-Instanz einer `PersonSurrogated`\-Instanz zu, wie im folgenden Beispielcode dargestellt.  
+ Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29>-Methode ordnet bei der Serialisierung eine `Person`-Instanz einer `PersonSurrogated`-Instanz zu, wie im folgenden Beispielcode dargestellt.  
   
 ```  
 public object GetObjectToSerialize(object obj, Type targetType)  
@@ -126,10 +126,9 @@ public object GetObjectToSerialize(object obj, Type targetType)
     }  
     return obj;  
 }  
-  
 ```  
   
- Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29>\-Methode stellt die umgekehrte Zuordnung für die Deserialisierung bereit, wie im folgenden Beispielcode gezeigt.  
+ Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29>-Methode stellt die umgekehrte Zuordnung für die Deserialisierung bereit, wie im folgenden Beispielcode gezeigt.  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -146,10 +145,9 @@ Type targetType)
     }  
     return obj;  
 }  
-  
 ```  
   
- Zum Zuordnen des `PersonSurrogated`\-Datenvertrags zu der vorhandenen `Person`\-Klasse beim Schemaimport wird im Beispiel die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29>\-Methode implementiert, wie im folgenden Beispielcode veranschaulicht.  
+ Zum Zuordnen des `PersonSurrogated`-Datenvertrags zu der vorhandenen `Person`-Klasse beim Schemaimport wird im Beispiel die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29>-Methode implementiert, wie im folgenden Beispielcode veranschaulicht.  
   
 ```  
 public Type GetReferencedTypeOnImport(string typeName,   
@@ -166,10 +164,9 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
      }  
      return null;  
 }  
-  
 ```  
   
- Im folgenden Beispielcode wird die Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate>\-Schnittstelle abgeschlossen.  
+ Im folgenden Beispielcode wird die Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate>-Schnittstelle abgeschlossen.  
   
 ```  
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
@@ -195,14 +192,13 @@ public void GetKnownCustomDataTypes(
     // It does not matter what we do here.  
     throw new NotImplementedException();  
 }  
-  
 ```  
   
- In diesem Beispiel wird das Ersatzzeichen in ServiceModel von dem Attribut `AllowNonSerializableTypesAttribute` aktiviert.Entwickler müssten dieses Attribut auf ihren Dienstvertrag anwenden, wie oben im `IPersonnelDataService`\-Dienstvertrag dargestellt.Dieses Attribut implementiert `IContractBehavior` und richtet das Ersatzzeichen bei Vorgängen in der `ApplyClientBehavior`\-Methode und der `ApplyDispatchBehavior`\-Methode ein.  
+ In diesem Beispiel wird das Ersatzzeichen in ServiceModel von dem Attribut `AllowNonSerializableTypesAttribute` aktiviert. Entwickler müssten dieses Attribut auf ihren Dienstvertrag anwenden, wie oben im `IPersonnelDataService`-Dienstvertrag dargestellt. Dieses Attribut implementiert `IContractBehavior` und richtet das Ersatzzeichen bei Vorgängen in der `ApplyClientBehavior`-Methode und der `ApplyDispatchBehavior`-Methode ein.  
   
- Das Attribut ist in diesem Fall nicht erforderlich. Es wird in diesem Beispiel nur zur Veranschaulichung verwendet.Die Benutzer können ein Ersatzzeichen auch aktivieren, indem sie mithilfe von Code oder Konfiguration ein ähnliches `IContractBehavior`, `IEndpointBehavior` oder `IOperationBehavior` hinzufügen.  
+ Das Attribut ist in diesem Fall nicht erforderlich. Es wird in diesem Beispiel nur zur Veranschaulichung verwendet. Die Benutzer können ein Ersatzzeichen auch aktivieren, indem sie mithilfe von Code oder Konfiguration ein ähnliches `IContractBehavior`, `IEndpointBehavior` oder `IOperationBehavior` hinzufügen.  
   
- Die `IContractBehavior`\-Implementierung sucht nach Vorgängen, die DataContract verwenden, indem überprüft wird, ob `DataContractSerializerOperationBehavior` registriert ist.Wenn dies der Fall ist, wird die `DataContractSurrogate`\-Eigenschaft auf dieses Verhalten festgelegt.Der folgende Beispielcode zeigt die Vorgehensweise.Durch das Festlegen des Ersatzzeichens auf dieses Vorgangsverhalten wird es für die Serialisierung und die Deserialisierung aktiviert.  
+ Die `IContractBehavior`-Implementierung sucht nach Vorgängen, die DataContract verwenden, indem überprüft wird, ob `DataContractSerializerOperationBehavior` registriert ist. Wenn dies der Fall ist, wird die `DataContractSurrogate`-Eigenschaft auf dieses Verhalten festgelegt. Der folgende Beispielcode zeigt die Vorgehensweise. Durch das Festlegen des Ersatzzeichens auf dieses Vorgangsverhalten wird es für die Serialisierung und die Deserialisierung aktiviert.  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -232,9 +228,9 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
 }  
 ```  
   
- Damit das Ersatzzeichen für die Verwendung bei der Metadaten\-Generierung eingebunden werden kann, sind zusätzliche Schritte erforderlich.Ein Mechanismus hierfür ist das Bereitstellen einer `IWsdlExportExtension`. Dies wird in diesem Beispiel veranschaulicht.Eine andere Möglichkeit ist das direkte Ändern von `WsdlExporter`.  
+ Damit das Ersatzzeichen für die Verwendung bei der Metadaten-Generierung eingebunden werden kann, sind zusätzliche Schritte erforderlich. Ein Mechanismus hierfür ist das Bereitstellen einer `IWsdlExportExtension`. Dies wird in diesem Beispiel veranschaulicht. Eine andere Möglichkeit ist das direkte Ändern von `WsdlExporter`.  
   
- Das Attribut `AllowNonSerializableTypesAttribute` implementiert `IWsdlExportExtension` und `IContractBehavior`.Die Erweiterung kann ein `IContractBehavior` oder \(in diesem Fall\) `IEndpointBehavior` sein.Die Implementierung der `IWsdlExportExtension.ExportContract`\-Methode aktiviert das Ersatzzeichen, indem es dem bei der Schemagenerierung für DataContract verwendeten `XsdDataContractExporter` hinzugefügt wird.Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
+ Die `AllowNonSerializableTypesAttribute` -Attribut implementiert `IWsdlExportExtension` und `IContractBehavior`. Die Erweiterung kann es sich um eine `IContractBehavior` oder `IEndpointBehavior` in diesem Fall. Die Implementierung der `IWsdlExportExtension.ExportContract`-Methode aktiviert das Ersatzzeichen, indem es dem bei der Schemagenerierung für DataContract verwendeten `XsdDataContractExporter` hinzugefügt wird. Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -261,26 +257,26 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, ruft der Client AddEmployee auf. Danach folgt ein Aufruf von GetEmployee, um zu überprüfen, ob der erste Aufruf erfolgreich war.Das Ergebnis der GetEmployee\-Vorgangsanforderung wird im Clientkonsolenfenster angezeigt.Der GetEmployee\-Vorgang muss den Mitarbeiter finden und "found" ausgeben.  
+ Wenn Sie das Beispiel ausführen, ruft der Client AddEmployee auf. Danach folgt ein Aufruf von GetEmployee, um zu überprüfen, ob der erste Aufruf erfolgreich war. Das Ergebnis der GetEmployee-Vorgangsanforderung wird im Clientkonsolenfenster angezeigt. Der GetEmployee-Vorgang muss erfolgreich sein, den Mitarbeiter und Drucken "gefunden".  
   
 > [!NOTE]
->  In diesem Beispiel wird das Einbinden eines Ersatzzeichens zum Serialisieren, Deserialisieren und für die Metadatengenerierung veranschaulicht.Das Einbinden eines Ersatzzeichens für die Codegenerierung aus Metadaten wird nicht dargestellt.Ein Beispiel für die Verwendung eines Ersatzzeichens zum Einbinden in die Clientcodegenerierung finden Sie im Beispiel [Benutzerdefinierte WSDL\-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md).  
+>  In diesem Beispiel wird das Einbinden eines Ersatzzeichens zum Serialisieren, Deserialisieren und für die Metadatengenerierung veranschaulicht. Das Einbinden eines Ersatzzeichens für die Codegenerierung aus Metadaten wird nicht dargestellt. Ein Beispiel, wie ein Ersatzzeichen verwendet werden kann, um in clientcodegenerierung eingebunden werden, finden Sie unter der [benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) Beispiel.  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Zum Erstellen der C\#\-Version der Projektmappe folgen Sie den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  Führen Sie zum Erstellen der C#-Edition der Lösung die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder über Computer hinweg ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

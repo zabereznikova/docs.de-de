@@ -1,41 +1,41 @@
 ---
-title: "&#220;bersicht &#252;ber die ErrorProvider-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ErrorProvider"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Fehlermeldungen, Anzeigen"
-  - "ErrorProvider-Komponente [Windows Forms], Informationen über die ErrorProvider-Komponente"
-  - "Fehler [Windows Forms], Anzeigen für Benutzer"
+title: "Übersicht über die ErrorProvider-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ErrorProvider
+helpviewer_keywords:
+- errors [Windows Forms], displaying to users
+- error messages [Windows Forms], displaying
+- ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber die ErrorProvider-Komponente (Windows&#160;Forms)
-Mit der [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)\-Komponente von Windows Forms wird die Benutzereingabe in einem Formular oder für ein Steuerelement überprüft.  Diese wird üblicherweise bei der Validierung der Benutzereingabe in einem Formular oder beim Anzeigen von Fehlern innerhalb eines Datasets verwendet.  Ein **ErrorProvider**\-Steuerelement ist im Vergleich zu einer Fehlermeldung in einem Meldungsfeld die bessere Alternative, da die Fehlermeldung nach dem Schließen des Meldungsfelds nicht mehr angezeigt wird.  Die <xref:System.Windows.Forms.ErrorProvider>\-Komponente zeigt neben dem betreffenden Steuerelement, z. B. einem Textfeld, ein Fehlersymbol \(![Symbol "ErrorProvider"](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.png "vbErrorProviderIcon")\) an. Wenn der Benutzer den Mauszeiger über das Fehlersymbol bewegt, wird eine QuickInfo mit der Fehlermeldung angezeigt.  
+# <a name="errorprovider-component-overview-windows-forms"></a>Übersicht über die ErrorProvider-Komponente (Windows Forms)
+Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) Komponente dient zum Überprüfen von Benutzereingaben in einem Formular oder Steuerelement. Es wird in der Regel in Verbindung mit Validieren von Benutzereingaben in einem Formular oder die Anzeige von Fehlern innerhalb eines Datasets verwendet. Ein ErrorProvider-Symbol ist eine bessere Alternative als eine Fehlermeldung in einem Meldungsfeld angezeigt, da sobald ein Meldungsfeld geschlossen wird, die Fehlermeldung nicht mehr sichtbar ist. Die <xref:System.Windows.Forms.ErrorProvider> Komponente zeigt ein Fehlersymbol (![Symbol "ErrorProvider"](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "VbErrorProviderIcon")) neben dem betreffenden Steuerelement, z. B. ein Textfeld; Wenn der Benutzer den Mauszeiger über positioniert das Symbol für Zertifikatfehler, wird eine QuickInfo, die Zeichenfolge der Fehlermeldung angezeigt.  
   
-## Haupteigenschaften  
- Die Haupteigenschaften der <xref:System.Windows.Forms.ErrorProvider>\-Komponente sind die Eigenschaften <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> und <xref:System.Windows.Forms.ErrorProvider.Icon%2A>.  Bei der Verwendung der <xref:System.Windows.Forms.ErrorProvider>\-Komponente mit datengebundenen Steuerelementen muss für die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>\-Eigenschaft der entsprechende Container \(üblicherweise Windows Form\) festgelegt werden, damit die Komponente ein Fehlersymbol auf dem Formular anzeigt.  Wenn die Komponente im Designer hinzugefügt wird, wird für die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>\-Eigenschaft das zugehörige Formular festgelegt. Wenn Sie das Steuerelement in Code hinzufügen, müssen Sie es selbst festlegen.  
+## <a name="key-properties"></a>Wichtige Eigenschaften  
+ Die <xref:System.Windows.Forms.ErrorProvider> sind wichtige Komponenteneigenschaften <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, und <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Bei Verwendung <xref:System.Windows.Forms.ErrorProvider> Komponente mit dem von datengebundenen Steuerelementen, die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Eigenschaft muss auf den entsprechenden Container (in der Regel das Windows Form) festgelegt werden, in der Reihenfolge für die Komponente auf dem Formular ein Fehlersymbol angezeigt. Wenn die Komponente im Designer hinzugefügt wird die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Eigenschaft das zugehörige Formular festgelegt wird; Wenn Sie das Steuerelement im Code hinzufügen, müssen Sie es selbst festlegen.  
   
- Für die <xref:System.Windows.Forms.ErrorProvider.Icon%2A>\-Eigenschaft kann anstelle des Standardfehlersymbols ein benutzerdefiniertes Fehlersymbol festgelegt werden.  Nachdem die <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>\-Eigenschaft festgelegt wurde, kann die <xref:System.Windows.Forms.ErrorProvider>\-Komponente Fehlermeldungen für ein Dataset anzeigen.  Die Hauptmethode der <xref:System.Windows.Forms.ErrorProvider>\-Komponente ist die <xref:System.Windows.Forms.ErrorProvider.SetError%2A>\-Methode, die die Fehlermeldungszeichenfolge und die Anzeigeposition des Fehlersymbols angibt.  
+ Die <xref:System.Windows.Forms.ErrorProvider.Icon%2A> Eigenschaft kann auf ein benutzerdefiniertes Fehlersymbol anstelle des standardmäßigen festgelegt werden. Wenn die <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Forms.ErrorProvider> Komponente kann Fehlermeldungen für ein Dataset angezeigt. Die wichtigste Methode der der <xref:System.Windows.Forms.ErrorProvider> Komponente ist die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> -Methode, die angibt, dass die Zeichenfolge der Fehlermeldung und, in dem das Symbol "Fehler" angezeigt werden soll.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.ErrorProvider>\-Komponente bietet keine integrierte Unterstützung für Clients für die Barrierefreiheit.  Wenn Ihre Anwendung bei der Verwendung dieser Komponente barrierefrei sein soll, müssen Sie einen zusätzlichen barrierefreien Feedbackmechanismus bereitstellen.  
+>  Die <xref:System.Windows.Forms.ErrorProvider> Komponente leistet keine integrierten Unterstützung für Eingabehilfen-Clients. Um die Anwendung zugreifen können, wenn diese Komponente verwenden, müssen Sie einen zusätzliche zugänglichen Feedbackmechanismus bereitstellen.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ErrorProvider>   
- [Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)   
- [Gewusst wie: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ErrorProvider>  
+ [Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ [Gewusst wie: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

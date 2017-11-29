@@ -1,58 +1,60 @@
 ---
-title: "&lt;add&gt; von &lt;namespaceTable&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt; von &lt;namespaceTable&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f08f4b46c6e6290602fc78a2f06954b9cf0b07d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt; von &lt;namespaceTable&gt;
-Stellt ein Konfigurationselement dar, das eine Namespace\-\/Präfix\-Zuordnung enthält, die zu Routingzwecken in XPath\-Filtern verwendet werden kann.  
+# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;add&gt; von &lt;namespaceTable&gt;
+Stellt ein Konfigurationselement dar, das eine Namespace-/Präfix-Zuordnung enthält, die zu Routingzwecken in XPath-Filtern verwendet werden kann.  
   
-## Syntax  
+ \<system.serviceModel >  
+\<Routing >  
+\<NamespaceTable >  
+\<add>  
   
-```vb  
+## <a name="syntax"></a>Syntax  
   
-<routing>  
-   <namespaceTable>  
-     <add namespace="String" prefix="String" />   
-   </namespaceTable>  
-</routing>  
-  
+```xml  
+   <routing>   <namespaceTable>  
+     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
 ```  
   
 ```csharp  
-  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
+|---------------|-----------------|  
 |namespace|Eine Zeichenfolge, die den Namespace enthält.|  
 |prefix|Eine Zeichenfolge, die das Präfix für diesen Namespace enthält.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<namespaceTable\>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Elementen dar, die Namespace\-\/Präfix\-Zuordnungen enthalten, die zu Routingzwecken in XPath\-Filtern verwendet werden können.|  
+|-------------|-----------------|  
+|[\<NamespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Elementen dar, die Namespace-/Präfix-Zuordnungen enthalten, die zu Routingzwecken in XPath-Filtern verwendet werden können.|  
   
-## Siehe auch  
- [System.ServiceModel.Routing.Configuration.NamespaceElement](assetId:///System.ServiceModel.Routing.Configuration.NamespaceElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    

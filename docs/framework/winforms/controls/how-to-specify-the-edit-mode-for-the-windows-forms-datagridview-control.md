@@ -1,56 +1,60 @@
 ---
-title: "Gewusst wie: Festlegen des Bearbeitungsmodus f&#252;r das DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Bearbeitungsmodus"
-  - "DataGridView-Steuerelement [Windows Forms], Bearbeitungsmodus"
+title: "Gewusst wie: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], edit mode
+- data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 70bf241865eef3366444e1b4dc20c19adaff983e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen des Bearbeitungsmodus f&#252;r das DataGridView-Steuerelement in Windows Forms
-Standardmäßig können Benutzer den Inhalt der aktuellen <xref:System.Windows.Forms.DataGridView>\-Textfeldzelle bearbeiten, indem Sie Eingaben darin vornehmen oder F2 drücken.  Dadurch wird für die Zelle der Bearbeitungsmodus aktiviert, sofern alle der folgenden Bedingungen erfüllt sind:  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms
+Standardmäßig können Benutzer den Inhalt des aktuellen bearbeiten <xref:System.Windows.Forms.DataGridView> Text im Feld Zelle durch darin eingeben oder durch Drücken von F2. Dies versetzt die Zelle im Bearbeitungsmodus befindet, wenn alle der folgenden Bedingungen erfüllt sind:  
   
--   Die zugrunde liegende Datenquelle unterstützt Bearbeitungen.  
+-   Die zugrunde liegenden Datenquelle unterstützt bearbeiten.  
   
--   Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ist aktiviert.  
+-   Die <xref:System.Windows.Forms.DataGridView> Steuerelement aktiviert ist.  
   
--   Der <xref:System.Windows.Forms.DataGridView.EditMode%2A>\-Eigenschaftswert lautet nicht <xref:System.Windows.Forms.DataGridViewEditMode>.  
+-   Die <xref:System.Windows.Forms.DataGridView.EditMode%2A> -Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
--   Die `ReadOnly`\-Eigenschaften von Zelle, Zeile, Spalte und Steuerelement sind alle auf `false` festgelegt.  
+-   Die `ReadOnly` Eigenschaften der Zelle, Zeile, Spalte und Steuerelement sind auf `false`.  
   
- Im Bearbeitungsmodus kann der Benutzer den Zellenwert ändern und die EINGABETASTE drücken, um die Änderung zu übernehmen, oder die ESC\-TASTE drücken, um den ursprünglichen Zellenwert wiederherzustellen.  
+ Der Benutzer kann in den Bearbeitungsmodus wechseln ändern Sie den Zellenwert und drücken Sie EINGABETASTE, um einen commit der Änderung oder die ESC-Taste, um die Zelle auf den ursprünglichen Wert zurückzusetzen.  
   
- Sie können ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement so konfigurieren, dass für die Zelle der Bearbeitungsmodus aktiviert wird, sobald sie aktiv ist.  In diesem Fall ist das Verhalten der EINGABETASTE und der ESC\-TASTE unverändert. Die Zelle bleibt jedoch auch dann noch im Bearbeitungsmodus, wenn der Wert übernommen oder zurückgesetzt wurde.  Sie können das Steuerelement auch so konfigurieren, dass für die Zelle nur dann der Bearbeitungsmodus aktiviert wird, wenn etwas in die Zelle eingegeben oder F2 gedrückt wird.  Schließlich können Sie verhindern, dass für Zellen der Bearbeitungsmodus aktiviert wird, außer beim Aufrufen der <xref:System.Windows.Forms.DataGridView.BeginEdit%2A>\-Methode.  
+ Sie können konfigurieren, eine <xref:System.Windows.Forms.DataGridView> steuern, sodass eine Zelle den Bearbeitungsmodus wechselt, sobald er zur aktiven Zelle wird. Das Verhalten der EINGABETASTE und ESC-Taste wird in diesem Fall nicht geändert, aber die Zelle im Bearbeitungsmodus bleibt, nachdem der Wert übernommen oder zurückgesetzt wird. Sie können auch das Steuerelement konfigurieren, sodass Zellen Bearbeitungsmodus nur, wenn Benutzer geben Sie in die Zelle oder nur, wenn Benutzer F2 drücken. Schließlich können Sie verhindern Zellen in den Bearbeitungsmodus wechselt, außer beim Aufrufen der <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> Methode.  
   
-### So ändern Sie den Bearbeitungsmodus eines DataGridView\-Steuerelements  
+### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>So ändern Sie den Bearbeitungsmodus eines DataGridView-Steuerelements  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=fullName>\-Eigenschaft auf die geeignete <xref:System.Windows.Forms.DataGridViewEditMode>\-Enumeration fest.  
+-   Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.DataGridViewEditMode> Enumeration.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen`dataGridView1` muss vorhanden sein.  
+-   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
--   Verweise auf die <xref:System>\-Assembly und die <xref:System.Windows.Forms>\-Assembly.  
+-   Verweise auf die <xref:System>-Assembly und die <xref:System.Windows.Forms>-Assembly.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=fullName>   
- [Dateneingabe im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
+ [Dateneingabe im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)

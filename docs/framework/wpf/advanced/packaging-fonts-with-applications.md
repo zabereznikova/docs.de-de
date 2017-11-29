@@ -1,48 +1,55 @@
 ---
-title: "Verpacken von Schriftarten mit Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungen, Verpacken von Schriftarten mit"
-  - "Schriftarten, Verpacken mit Anwendungen"
-  - "Verpacken von Schriftarten mit Anwendungen"
-  - "Typografie, Verpacken von Schriftarten mit Anwendungen"
+title: Verpacken von Schriftarten mit Anwendungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- applications [WPF], packaging fonts with
+- fonts [WPF], packaging with applications
+- typography [WPF], packaging fonts with applications
+- packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f60668f1bdac6607383b2ddf5c5ab1e41e31862b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verpacken von Schriftarten mit Anwendungen
-Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Anwendung.  
+# <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
+Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  
   
 > [!NOTE]
->  Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft.  Lizenzen, die die Verwendung von Schriftarten steuern, sind von Anbieter zu Anbieter unterschiedlich. Im Allgemeinen lassen es die meisten Lizenzen, darunter auch die für die von [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] in Anwendungen und [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] bereitgestellten Schriftarten, nicht zu, dass die Schriftarten in Anwendungen eingebettet oder anders verbreitet werden.  Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anders verteilen.  
+>  Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, von Anbieter zu Anbieter jedoch im Allgemeinen die meisten Lizenzen, einschließlich der für die Schriftarten variieren [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] bereitstellt, mit Anwendungen und [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], lassen sich nicht auf die Schriftarten eingebettet in Anwendungen oder anderweitig sein neu verteilt. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
   
-   
+
   
 <a name="introduction_to_packaging_fonts"></a>   
-## Einführung in das Verpacken von Schriftarten  
- Sie können Schriftarten leicht als Ressourcen in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen verpacken, um den Text der Benutzeroberfläche und anderen textbasierten Inhalt anzuzeigen.  Die Schriftarten können getrennt von den oder eingebettet in die Assemblydateien der Anwendung vorkommen.  Sie können auch eine reine Ressourcenbibliothek für Schriftarten erstellen, auf die die Anwendung verweisen kann.  
+## <a name="introduction-to-packaging-fonts"></a>Einführung in das Verpacken von Schriftarten  
+ Sie können problemlos Schriftarten Verpacken, als Ressourcen innerhalb Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] basierende Anwendungen anzuzeigenden Text der Benutzeroberfläche und anderen Typen von Text-Inhalt. Die Schriftarten können getrennt von den Assemblydateien oder eingebettet in die Assemblydateien der Anwendung vorkommen. Sie können auch eine Schriftartenbibliothek nur für Ressourcen erstellen, auf die die Anwendung verweisen kann.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\- und [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]\-Schriftarten enthalten ein Typflag, fsType, mit dem für die Schriftart die Lizenzierungsrechte zur Einbettung der Schriftart angegeben werden.  Dieses Typflag bezieht sich jedoch nur auf eingebettete Schriftarten, die in einem Dokument gespeichert sind. Es bezieht sich nicht auf Schriftarten, die in eine Anwendung eingebettet sind.  Sie können die Rechte für die Schriftarteneinbettung für eine Schriftart abrufen, indem Sie ein <xref:System.Windows.Media.GlyphTypeface>\-Objekt erstellen und auf dessen <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>\-Eigenschaft verweisen.  Weitere Informationen zum fsType\-Flag finden Sie im Abschnitt "OS\/2 and Windows Metrics" der [OpenType\-Spezifikation](http://www.microsoft.com/typography/otspec/os2.htm).  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]und [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftarten enthalten ein Typflag FsType, der Schriftart einbetten, Lizenzierung für Rechte für die Schriftart angibt. Dieses Typflag bezieht sich jedoch nur auf eingebettete Schriftarten, die in einem Dokument gespeichert sind, und nicht auf Schriftarten, die in eine Anwendung eingebettet sind. Sie können die Schriftart einbetten Rechte für eine Schriftart durch das Erstellen von Abrufen einer <xref:System.Windows.Media.GlyphTypeface> Objekt und verweisen auf die <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> Eigenschaft. Finden Sie im Abschnitt "OS/2 und Windows-Metriken" von der [OpenType-Spezifikation](http://www.microsoft.com/typography/otspec/os2.htm) für Weitere Informationen zum FsType-Flag.  
   
- Die Website [Microsoft\-Typografie](http://www.microsoft.com/typography/links/) enthält Kontaktinformationen, damit Sie einen bestimmten Schriftartanbieter leichter finden können oder damit Sie einen Schriftartanbieter für benutzerdefinierte Schriftarten finden können.  
+ Die [Microsoft Typography](http://www.microsoft.com/typography/links/) Website enthält Kontaktinformationen, mit denen Sie suchen einen bestimmten Hersteller oder suchen einen Hersteller für benutzerdefinierte.  
   
 <a name="adding_fonts_as_content_items"></a>   
-## Hinzufügen von Schriftarten als Inhaltselemente  
- Sie können Ihrer Anwendung Schriftarten als Projektinhaltselemente hinzufügen, die von den Assemblydateien der Anwendung getrennt sind.  Dies bedeutet, dass Inhaltselemente nicht als Ressourcen in eine Assembly eingebettet werden.  Im folgenden Projektdateibeispiel wird gezeigt, wie Inhaltselemente definiert werden.  
+## <a name="adding-fonts-as-content-items"></a>Hinzufügen von Schriftarten als Inhaltselemente  
+ Sie können Schriftarten als Projektinhaltselemente zu Ihrer Anwendung hinzufügen, die von den Assemblydateien der Anwendung getrennt sind. Dies bedeutet, dass Inhaltselemente nicht als Ressourcen in eine Assembly eingebettet werden. In der folgenden Beispielprojektdatei wird veranschaulicht, wie Inhaltselemente definiert werden.  
   
-```  
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+```xml  
+<Project DefaultTargets="Build"  
+                xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <!-- Other project build settings ... -->  
   
   <ItemGroup>  
@@ -52,9 +59,9 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 </Project>  
 ```  
   
- Um sicherzustellen, dass die Anwendung die Schriftarten zur Laufzeit verwenden kann, muss ein Zugriff auf die Schriftarten über das Bereitstellungsverzeichnis der Anwendung möglich sein.  Mit dem `<CopyToOutputDirectory>`\-Element in der Projektdatei der Anwendung können Sie die Schriftarten automatisch während des Buildprozesses in das Bereitstellungsverzeichnis der Anwendung kopieren.  Im folgenden Projektdateibeispiel wird gezeigt, wie Schriftarten ins Bereitstellungsverzeichnis kopiert werden.  
+ Um sicherzustellen, dass die Anwendung die Schriftarten zur Laufzeit verwenden kann, müssen die Schriftarten im Bereitstellungsverzeichnis der Anwendung zugänglich sein. Die `<CopyToOutputDirectory>` Element in der Projektdatei für die Anwendung können Sie die Schriftarten automatisch in den Bereitstellungsordner für die Anwendung während des Buildprozesses kopiert. In der folgenden Beispielprojektdatei wird veranschaulicht, wie Schriftarten in das Bereitstellungsverzeichnis kopiert werden.  
   
-```  
+```xml  
 <ItemGroup>  
   <Content Include="Peric.ttf">  
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>  
@@ -65,16 +72,17 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 </ItemGroup>  
 ```  
   
- Mit dem folgenden Codebeispiel wird gezeigt, wie auf die Schriftart einer Anwendung als Inhaltselement verwiesen wird \(das Inhaltselement, auf das verwiesen wird, muss sich im gleichen Verzeichnis befinden wie die Assemblydateien der Anwendung\).  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf die Schriftart der Anwendung als Inhaltselement verwiesen wird. Das Inhaltselement, auf das verwiesen wird, muss sich im selben Verzeichnis wie die Assemblydateien der Anwendung befinden.  
   
- [!code-xml[FontSnippets#FontPackageSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
   
 <a name="adding_fonts_as_resource_items"></a>   
-## Hinzufügen von Schriftarten als Ressourcenelemente  
- Sie können Ihrer Anwendung Schriftarten als Projektressourcenelemente hinzufügen, die in die Assemblydateien der Anwendung eingebettet sind.  Die Verwendung eines separaten Unterverzeichnisses für Ressourcen hilft bei der Strukturierung der Projektdateien der Anwendung.  Im folgenden Projektdateibeispiel wird gezeigt, wie Schriftarten als Ressourcenelemente in einem separaten Unterverzeichnis definiert werden.  
+## <a name="adding-fonts-as-resource-items"></a>Hinzufügen von Schriftarten als Ressourcenelemente  
+ Sie können Schriftarten als Projektressourcenelemente zu Ihrer Anwendung hinzufügen, die in die Assemblydateien der Anwendung eingebettet werden. Die Verwendung eines separaten Unterverzeichnisses für Ressourcen hilft beim Organisieren der Projektdateien der Anwendung. In der folgenden Beispielprojektdatei wird veranschaulicht, wie Schriftarten als Ressourcenelemente in einem separaten Unterverzeichnis definiert werden.  
   
-```  
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+```xml  
+<Project DefaultTargets="Build"  
+                xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <!-- Other project build settings ... -->  
   
   <ItemGroup>  
@@ -85,27 +93,27 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 ```  
   
 > [!NOTE]
->  Wenn Sie der Anwendung Schriftarten als Ressourcen hinzufügen, stellen Sie sicher, dass Sie das `<Resource>`\-Element festlegen, und nicht das `<EmbeddedResource>`\-Element in der Projektdatei der Anwendung.  Das `<EmbeddedResource>`\-Element für den Buildvorgang wird nicht unterstützt.  
+>  Wenn Sie Ihre Anwendung Schriftarten als Ressourcen hinzufügen, stellen Sie sicher, dass beim Festlegen der `<Resource>` Element, und nicht die `<EmbeddedResource>` Element in der Projektdatei für Ihre Anwendung. Die `<EmbeddedResource>` -Element für den Buildvorgang wird nicht unterstützt.  
   
- Im folgenden Markupbeispiel wird gezeigt, wie auf die Schriftartressourcen der Anwendung verwiesen wird.  
+ Im folgenden Markupbeispiel wird veranschaulicht, wie auf die Schriftartenressourcen der Anwendung verwiesen wird.  
   
- [!code-xml[FontSnippets#FontPackageSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
-### Verweisen auf Schriftartressourcen\-Elemente über Code  
- Um über Code auf Schriftartressourcen\-Elemente zu verweisen, müssen Sie einen zweiteiligen Schriftartressourcen\-Verweis angeben: den grundlegenden [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] und den Verweis auf den Speicherort der Schriftart.  Diese Werte werden als Parameter für die <xref:System.Windows.Media.FontFamily.%23ctor%2A>\-Methode verwendet.  Das folgende Codebeispiel veranschaulicht, wie auf die Schriftartressourcen der Anwendung im Projektunterverzeichnis namens `resources` verwiesen wird.  
+### <a name="referencing-font-resource-items-from-code"></a>Verweisen auf Schriftartenressourcenelemente aus Code  
+ Um Schriftart Ressourcenelemente aus Code verweisen, müssen Sie einen zweiteiligen Schriftart Ressourcenverweis angeben: die Basis [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; und den Speicherortverweis Schriftart. Diese Werte dienen als Parameter für die <xref:System.Windows.Media.FontFamily.%23ctor%2A> Methode. Im folgenden Codebeispiel wird veranschaulicht, wie auf die Ressourcen der Anwendung Schriftart in das Projektunterverzeichnis mit dem Namen verweisen `resources`.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- Der grundlegende [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] kann das Anwendungsunterverzeichnis einschließen, in dem sich die Schriftartressource befindet.  In diesem Fall müsste der Verweis auf den Speicherort der Schriftart kein Verzeichnis angeben, sondern müsste ein führendes "`./`"\-Zeichen aufweisen, mit dem gekennzeichnet wird, dass sich die Schriftartressource in dem Verzeichnis befindet, das vom grundlegenden [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] angegeben wird.  Das folgende Codebeispiel zeigt eine andere Möglichkeit, auf das Schriftartressourcen\-Element zu verweisen. Es entspricht dem vorherigen Beispiel.  
+ Die Basis [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] zählen Anwendungsunterverzeichnis, in dem sich die Schriftartressource befindet. In diesem Fall der Speicherortverweis Schriftart müssten nicht zum Angeben eines Verzeichnisses allerdings müsste ein führendes enthalten "`./`", gibt die Schriftartressource an befindet sich im gleichen Verzeichnis vom Basistyp angegeben [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]. Im folgenden Codebeispiel wird eine alternative Möglichkeit veranschaulicht, wie auf das Schriftartenressourcenelement verwiesen werden kann. Es entspricht dem vorherigen Codebeispiel.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
   
-### Verweisen auf Schriftarten über das gleiche Anwendungsunterverzeichnis  
- Sie können den Anwendungsinhalt und die Ressourcendateien im gleichen benutzerdefinierten Unterverzeichnis Ihres Anwendungsprojekts platzieren.  Das folgende Projektdateibeispiel zeigt eine Inhaltsseite und Schriftartressourcen an, die im gleichen Unterverzeichnis definiert werden.  
+### <a name="referencing-fonts-from-the-same-application-subdirectory"></a>Verweisen auf Schriftarten aus dem gleichen Anwendungsunterverzeichnis  
+ Sie können Anwendungsinhalt und Ressourcendateien im selben benutzerdefinierten Unterverzeichnis Ihres Anwendungsprojekts platzieren. In der folgenden Beispielprojektdatei wird veranschaulicht, wie eine Inhaltsseite und Schriftartenressourcen im selben Unterverzeichnis definiert werden.  
   
-```  
+```xml  
 <ItemGroup>  
   <Page Include="pages\HomePage.xaml" />  
 </ItemGroup>  
@@ -115,29 +123,29 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 </ItemGroup>  
 ```  
   
- Da sich der Anwendungsinhalt und die Schriftart im gleichen Unterverzeichnis befinden, ist der Schriftartverweis relativ zum Anwendungsinhalt.  Das folgende Beispiel veranschaulicht, wie auf die Schriftartressourcen der Anwendung verwiesen wird, wenn sich die Schriftart im gleichen Verzeichnis befindet wie die Anwendung.  
+ Da sich Anwendungsinhalt und Schriftart im selben Unterverzeichnis befinden, ist der Schriftartenverweis relativ zum Anwendungsinhalt. In den folgenden Beispielen wird veranschaulicht, wie auf die Schriftartenressource der Anwendung verwiesen werden kann, wenn sich die Schriftart im selben Verzeichnis wie die Anwendung befindet.  
   
- [!code-xml[FontSnippets#FontPackageSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
   
  [!code-csharp[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
  [!code-vb[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
-### Auflisten von Schriftarten in einer Anwendung  
- Verwenden Sie zum Auflisten von Schriftarten als Ressourcenelemente in der Anwendung die <xref:System.Windows.Media.Fonts.GetFontFamilies%2A>\-Methode oder die <xref:System.Windows.Media.Fonts.GetTypefaces%2A>\-Methode.  Im folgenden Beispiel wird veranschaulicht, wie Sie mit der <xref:System.Windows.Media.Fonts.GetFontFamilies%2A>\-Methode die Auflistung von <xref:System.Windows.Media.FontFamily>\-Objekten aus dem Schriftartspeicherort der Anwendung zurückgeben.  In diesem Fall enthält die Anwendung ein Unterverzeichnis mit dem Namen "resources".  
+### <a name="enumerating-fonts-in-an-application"></a>Auflisten von Schriftarten in einer Anwendung  
+ Zum Auflisten von Schriftarten als Ressourcenelemente in Ihrer Anwendung verwenden Sie entweder die <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> oder <xref:System.Windows.Media.Fonts.GetTypefaces%2A> Methode. Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> Methode zum Zurückgeben der Auflistung der <xref:System.Windows.Media.FontFamily> Objekte aus den Speicherort der Anwendung Schriftarten. In diesem Fall enthält die Anwendung ein Unterverzeichnis mit dem Namen „Ressourcen“.  
   
  [!code-csharp[FontSnippets#FontsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- Im folgenden Beispiel wird veranschaulicht, wie Sie mit der <xref:System.Windows.Media.Fonts.GetTypefaces%2A>\-Methode die Auflistung von <xref:System.Windows.Media.Typeface>\-Objekten aus dem Schriftartspeicherort der Anwendung zurückgeben.  In diesem Fall enthält die Anwendung ein Unterverzeichnis mit dem Namen "resources".  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.Fonts.GetTypefaces%2A> Methode zum Zurückgeben der Auflistung der <xref:System.Windows.Media.Typeface> Objekte aus den Speicherort der Anwendung Schriftarten. In diesem Fall enthält die Anwendung ein Unterverzeichnis mit dem Namen „Ressourcen“.  
   
  [!code-csharp[FontSnippets#FontsSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
   
 <a name="creating_a_font_resource_library"></a>   
-## Erstellen einer Schriftartressourcen\-Bibliothek  
- Sie können eine reine Ressourcenbibliothek erstellen, die ausschließlich Schriftarten enthält. Code ist nicht Bestandteil eines solchen Bibliothekprojekts.  Das Erstellen einer reinen Ressourcenbibliothek ist eine verbreitete Technik für das Entkoppeln von Ressourcen vom Anwendungscode, in dem sie verwendet werden.  Dadurch ist es auch möglich, dass die Bibliotheksassembly in mehrere Anwendungsprojekte aufgenommen werden kann.  Im folgenden Projektdateibeispiel werden die Hauptbestandteile eines reinen Ressourcenbibliotheksprojekts veranschaulicht.  
+## <a name="creating-a-font-resource-library"></a>Erstellen einer Schriftartenressourcenbibliothek  
+ Sie können eine Bibliothek nur für Ressourcen erstellen, die ausschließlich Schriftarten enthält. In dieser Art von Bibliothek ist kein Code enthalten. Das Erstellen einer Bibliothek nur für Ressourcen dient häufig dem Entkoppeln von Ressourcen vom Anwendungscode, der sie verwendet. Dies ermöglicht außerdem, dass die Bibliotheksassembly in mehreren Anwendungsprojekten enthalten sein kann. In der folgenden Beispielprojektdatei werden die Hauptbestandteile einer Bibliothek nur für Ressourcen gezeigt.  
   
-```  
+```xml  
 <PropertyGroup>  
   <AssemblyName>FontLibrary</AssemblyName>  
   <OutputType>library</OutputType>  
@@ -150,34 +158,34 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit d
 </ItemGroup  
 ```  
   
-### Verweisen auf eine Schriftart in einer Ressourcenbibliothek  
- Um über die Anwendung auf eine Schriftart in einer Ressourcenbibliothek zu verweisen, müssen Sie dem Schriftartverweis den Namen der Bibliotheksassembly voranstellen.  In diesem Fall ist die Schriftartressourcen\-Assembly "FontLibrary".  Um den Assemblynamen innerhalb der Assembly vom Verweis zu trennen, verwenden Sie ein ";"\-Zeichen.  Durch Hinzufügen des Schlüsselworts "Component" gefolgt vom Verweis auf den Schriftartnamen wird der Verweis auf die Ressource der Schriftartbibliothek vervollständigt.  Im folgenden Codebeispiel wird gezeigt, wie auf eine Schriftart in einer Ressourcenbibliotheksassembly verwiesen wird.  
+### <a name="referencing-a-font-in-a-resource-library"></a>Verweisen auf eine Schriftart in einer Ressourcenbibliothek  
+ Um aus Ihrer Anwendung auf eine Schriftart in einer Ressourcenbibliothek zu verweisen, müssen Sie dem Verweis auf die Schriftart den Namen der Bibliotheksassembly voranstellen. In diesem Fall ist die Schriftartenressourcenassembly „FontLibrary“. Verwenden Sie ein Semikolon (;), um den Assemblynamen vom Verweis innerhalb der Assembly zu trennen. Durch Hinzufügen des Schlüsselworts „Component“ gefolgt vom Verweis auf den Namen der Schriftart wird der Verweis auf die Ressource der Schriftartenbibliothek vervollständigt. Im folgenden Codebeispiel wird veranschaulicht, wie auf eine Schriftart in einer Ressourcenbibliotheksassembly verwiesen wird.  
   
- [!code-xml[OpenTypeFontsSample#OpenTypeFontsSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
+ [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Dieses SDK enthält einen Satz von Beispielen für [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]\-Schriftarten, die Sie in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen verwenden können.  Die Schriftarten werden in einer reinen Ressourcenbibliothek definiert.  Weitere Informationen finden Sie unter [OpenType\-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+>  Dieses SDK enthält eine Reihe von Beispiel [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen. Die Schriftarten werden in einer Bibliothek nur für Ressourcen definiert. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
-## Einschränkungen der Schriftartverwendung  
- In der folgenden Liste werden mehrere Einschränkungen des Verpackens und Verwendens von Schriftarten in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen beschrieben:  
+## <a name="limitations-on-font-usage"></a>Einschränkungen der Verwendung von Schriftarten  
+ Die folgende Liste beschreibt einige Einschränkungen auf die Verpackung und die Verwendung von Schriftarten in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen:  
   
--   **Berechtigungsbits für die Schriftarteinbettung:** Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen werden Berechtigungsbits für die Schriftarteinbettung nicht überprüft oder durchgesetzt.  Weitere Informationen finden Sie unter [Einführung in das Verpacken von Schriftarten](#introduction_to_packaging_fonts).  
+-   **Berechtigungsbits für die Schriftarteneinbettung:** Von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen werden keine Berechtigungsbits für die Schriftarteneinbettung überprüft oder durchgesetzt. Finden Sie unter der [Introduction_to_Packing Schriftarten](#introduction_to_packaging_fonts) Abschnitt, um weitere Informationen.  
   
--   **Site der Ursprungsschriftarten:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen lassen keine Schriftartenverweise auf einen http\- oder ftp\-[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] zu.  
+-   **Standort der Ursprungsschriftarten:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen lassen sich nicht auf einen Schriftartverweis auf eine HTTP- oder FTP- [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Absoluter URI mit der pack:\-Notation:** Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen können Sie programmgesteuert kein <xref:System.Windows.Media.FontFamily>\-Objekt mit "pack:" als Bestandteil des absoluten [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]\-Verweises auf eine Schriftart erstellen.  Beispielsweise ist `"pack://application:,,,/resources/#Pericles Light"` ein ungültiger Schriftartverweis.  
+-   **Absoluter URI mit dem Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen nicht erlauben Ihnen die Erstellung einer <xref:System.Windows.Media.FontFamily> -Objekt programmgesteuert mithilfe von "Pack:" als Teil der Absolute [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Verweis auf eine Schriftart. Beispielsweise `"pack://application:,,,/resources/#Pericles Light"` ist ein ungültiger Schriftartverweis.  
   
--   **Automatische Schriftarteinbettung:** Zur Entwurfszeit erfolgt keine Unterstützung für die Suche der Schriftartverwendung einer Anwendung und für das automatische Einbetten der Schriftarten in die Ressourcen der Anwendung.  
+-   **Automatische Schriftarteneinbettung:** Zur Entwurfszeit werden die Suche nach der Schriftartenverwendung einer Anwendung und das automatische Einbetten der Schriftarten in die Ressourcen der Anwendung nicht unterstützt.  
   
--   **Schriftartteilmengen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungen unterstützen die Erstellung von Schriftartteilmengen für nicht einheitlich dargestellte Dokumente nicht.  
+-   **Schriftartteilmengen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen unterstützen keine Erstellung von Schriftartteilmengen für Dokumente ohne festes Format.  
   
--   Bei einem falschen Verweis greift die Anwendung wieder auf die Verwendung einer verfügbaren Schriftart zurück.  
+-   Bei einem falschen Verweis greift die Anwendung auf eine verfügbare Schriftart zurück.  
   
-## Siehe auch  
- <xref:System.Windows.Documents.Typography>   
- <xref:System.Windows.Media.FontFamily>   
- [Microsoft\-Typografie: Links, Neuigkeiten und Kontakte](http://www.microsoft.com/typography/links/)   
- [OpenType\-Spezifikation](http://www.microsoft.com/typography/otspec/)   
- [Features für OpenType\-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)   
- [OpenType\-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Documents.Typography>  
+ <xref:System.Windows.Media.FontFamily>  
+ [Microsoft-Typografie: Links, News und Kontakte](http://www.microsoft.com/typography/links/)  
+ [OpenType-Spezifikation](http://www.microsoft.com/typography/otspec/)  
+ [Features für OpenType-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [OpenType-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

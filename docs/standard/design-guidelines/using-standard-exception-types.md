@@ -1,78 +1,76 @@
 ---
-title: "Verwenden von Standardausnahmetypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Auslösen von Ausnahmen, Standardtypen"
-  - "Abfangen von Ausnahmen"
-  - "Abfangen von Ausnahmen"
-  - "Auslösen von Ausnahmen"
+title: Verwenden von Standardausnahmetypen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- throwing exceptions, standard types
+- catching exceptions
+- exceptions, catching
+- exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden von Standardausnahmetypen
-Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework und die Details ihrer Verwendung bereitgestellt. Die Liste ist nicht vollständig. Sie finden Sie in der .NET Framework\-Referenzdokumentation für die Verwendung der anderen Framework\-Ausnahmetypen.  
+# <a name="using-standard-exception-types"></a>Verwenden von Standardausnahmetypen
+Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework und die Details zu ihrer Verwendung bereitgestellt. Die Liste ist nicht vollständig. Finden Sie in der .NET Framework-Referenzdokumentation für die Verwendung von anderen Framework-Ausnahmetypen.  
   
-## Exception und SystemException  
- **X nicht** auslösen <xref:System.Exception?displayProperty=fullName> oder <xref:System.SystemException?displayProperty=fullName>.  
+## <a name="exception-and-systemexception"></a>Diese Ausnahme und SystemException  
+ **X nicht** auslösen <xref:System.Exception?displayProperty=nameWithType> oder <xref:System.SystemException?displayProperty=nameWithType>.  
   
  **X nicht** catch `System.Exception` oder `System.SystemException` in Frameworkcode, es sei denn, Sie erneut auslösen möchten.  
   
- **X vermeiden** Abfangen von `System.Exception` oder `System.SystemException`, außer im Ausnahmehandler der obersten Ebene.  
+ **X vermeiden** abfangen `System.Exception` oder `System.SystemException`, außer bei Ausnahmehandler der obersten Ebene.  
   
-## ApplicationException  
- **X nicht** auslösen oder eine Ableitung von <xref:System.ApplicationException>.  
+## <a name="applicationexception"></a>ApplicationException  
+ **X nicht** lösen oder eine Ableitung von <xref:System.ApplicationException>.  
   
-## InvalidOperationException  
- **✓ führen** Auslösen einer <xref:System.InvalidOperationException> wenn das Objekt in einem unzulässigen Zustand befindet.  
+## <a name="invalidoperationexception"></a>InvalidOperationException  
+ **✓ FÜHREN** Auslösen einer <xref:System.InvalidOperationException> , wenn das Objekt in einem unzulässigen Zustand ist.  
   
-## ArgumentException, ArgumentNullException und ArgumentOutOfRangeException  
- **✓ führen** auslösen <xref:System.ArgumentException> oder einem seiner Untertypen, wenn ungültige Argumente an einen Member übergeben werden. Möchten Sie am weitesten abgeleiteten Ausnahmetyp, falls zutreffend.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException und ArgumentOutOfRangeException  
+ **Führen Sie ✓** auslösen <xref:System.ArgumentException> oder einem seiner Untertypen, wenn ungültige Argumente auf einen Member übergeben werden. Bevorzugen Sie am weitesten abgeleiteten Ausnahmetyp, falls zutreffend.  
   
- **✓ führen** legen Sie die `ParamName` Eigenschaft beim Auslösen einer der Unterklassen von `ArgumentException`.  
+ **✓ FÜHREN** legen Sie die `ParamName` Eigenschaft, die beim Auslösen einer die Unterklasse von `ArgumentException`.  
   
- Diese Eigenschaft stellt den Namen des Parameters, der die Ausnahme ausgelöst hat. Beachten Sie, dass die Eigenschaft mit einer der Konstruktorüberladungen festgelegt werden kann.  
+ Diese Eigenschaft stellt den Namen des Parameters, der die Ausnahme ausgelöst wird, verursacht hat. Beachten Sie, dass die Eigenschaft mit einer der Konstruktorüberladungen festgelegt werden kann.  
   
- **✓ führen** verwenden `value` für den Namen des impliziten Wertparameters von Eigenschaftensettern.  
+ **Führen Sie ✓** verwenden `value` für den Namen des Parameters impliziter Wert der Eigenschaftensetter.  
   
-## NullReferenceException IndexOutOfRangeException und AccessViolationException  
- **X nicht** dass öffentlich aufrufbare APIs explizit oder implizit auslösen <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, oder <xref:System.IndexOutOfRangeException>. Diese Ausnahmen sind reserviert und das Ausführungsmodul ausgelöst und in den meisten Fällen einen Fehler anzugeben.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException IndexOutOfRangeException und AccessViolationException  
+ **X nicht** ermöglichen öffentlich aufrufbare APIs explizit oder implizit auslöst <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, oder <xref:System.IndexOutOfRangeException>. Diese Ausnahmen sind reserviert und das Ausführungsmodul ausgelöst und in den meisten Fällen einen Fehler anzugeben.  
   
- Führen Sie die Überprüfung, um zu vermeiden, diese Ausnahmen auslösen. Diese Ausnahmen auslösen stellt Details zur Implementierung der Methode, die mit der Zeit ändern können.  
+ Führen Sie Argument wird überprüft, um zu vermeiden, diese Ausnahmen auslösen. Lösen Sie diese Ausnahmen stellt Details zur Implementierung der Methode, die mit der Zeit ändern können.  
   
-## StackOverflowException  
- **X nicht** Explizites Auslösen von <xref:System.StackOverflowException>. Diese Ausnahme sollte nur von der CLR explizit ausgelöst werden.  
+## <a name="stackoverflowexception"></a>StackOverflowException  
+ **X nicht** explizit auslösen <xref:System.StackOverflowException>. Die Ausnahme sollte nur von der CLR explizit ausgelöst werden.  
   
  **X nicht** catch `StackOverflowException`.  
   
- Es ist fast unmöglich, verwalteten Code zu schreiben, die in beliebigen Stapelüberläufe konsistent bleiben. Prüfpunkte zum Verschieben von klar definierten stellen Stapelüberläufe über statt aus beliebigen Stapelüberläufe Rückgängigmachen bleiben der nicht verwalteten Teile der CLR konsistent.  
+ Es ist nahezu unmöglich, verwalteten Code schreiben, der bei beliebigen Stapelüberläufe konsistent bleibt. Über Prüfpunkte verschoben werden, klar definierte stellen Stapelüberläufe statt aus beliebigen Stapelüberläufe Rückgängigmachen bleiben der nicht verwalteten Teile der CLR konsistent.  
   
-## OutOfMemoryException  
- **X nicht** Explizites Auslösen von <xref:System.OutOfMemoryException>. Diese Ausnahme wird nur von der CLR\-Infrastruktur ausgelöst werden.  
+## <a name="outofmemoryexception"></a>OutOfMemoryException  
+ **X nicht** explizit auslösen <xref:System.OutOfMemoryException>. Diese Ausnahme wird nur von der CLR-Infrastruktur ausgelöst werden.  
   
-## ComException und SEHException ExecutionEngineException  
- **X nicht** Explizites Auslösen von <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, und <xref:System.Runtime.InteropServices.SEHException>. Diese Ausnahmen werden nur von der CLR\-Infrastruktur ausgelöst werden.  
+## <a name="comexception-sehexception-and-executionengineexception"></a>ComException und SEHException ExecutionEngineException  
+ **X nicht** explizit auslösen <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, und <xref:System.Runtime.InteropServices.SEHException>. Diese Ausnahmen werden nur von der CLR-Infrastruktur ausgelöst werden.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
  [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)

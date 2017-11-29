@@ -1,36 +1,34 @@
 ---
-title: "Clipboard format is not valid | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID460"
-dev_langs: 
-  - "VB"
+title: "Das Format der Zwischenablage ist ungültig."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7adc417d962de35272319d7dc976b237c7e2b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Clipboard format is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Das angegebene Format der Zwischenablage ist nicht mit der ausgeführten Methode kompatibel.  Dieser Fehler kann folgende Ursachen haben:  
+# <a name="clipboard-format-is-not-valid"></a>Das Format der Zwischenablage ist ungültig.
+Das angegebene Format der Zwischenablage ist nicht kompatibel mit der Methode, die gerade ausgeführt wird. Zu den möglichen Ursachen für diesen Fehler sind:  
   
--   Verwenden der `GetText`\-Methode oder der `SetText`\-Methode der Zwischenablage mit einem anderen Zwischenablageformat als `vbCFText` oder `vbCFLink`.  
+-   Verwenden der Zwischenablage `GetText` oder `SetText` Methode mit einem Zwischenablageformat außer `vbCFText` oder `vbCFLink`.  
   
--   Verwenden der `GetData`\-Methode oder der `SetData`\-Methode der Zwischenablage mit einem anderen Zwischenablageformat als `vbCFBitmap`, `vbCFDIB` oder `vbCFMetafile`.  
+-   Verwenden der Zwischenablage `GetData` oder `SetData` Methode mit einem Zwischenablageformat außer `vbCFBitmap`, `vbCFDIB`, oder `vbCFMetafile`.  
   
--   Verwenden der `GetData`\-Methode oder der `SetData`\-Methode von `DataObject` mit einem Zwischenablageformat im Bereich, der von Microsoft Windows für registrierte Formate \(&HC000\-&HFFFF\) reserviert ist, obwohl dieses Zwischenablagenformat nicht für Microsoft Windows registriert wurde.  
+-   Mithilfe der `DataObject``GetData` Methode oder `SetData` Methode mit einem Zwischenablageformat im Bereich von Microsoft Windows für registrierte Formate (& HC000- & HFFFF reserviert), wenn dieses Format der Zwischenablage wurde noch nicht registriert mit Microsoft Windows.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Entfernen Sie das ungültige Format, und geben Sie ein gültiges Format an.  
+-   Entfernen Sie das ungültige Format, und geben Sie einen gültigen.  
   
-## Siehe auch  
- [Zwischenablage: Hinzufügen anderer Formate](../Topic/Clipboard:%20Adding%20Other%20Formats.md)
+## <a name="see-also"></a>Siehe auch  
+ [Zwischenablage: Hinzufügen anderer Formate](/cpp/mfc/clipboard-adding-other-formats)

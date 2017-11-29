@@ -1,51 +1,54 @@
 ---
-title: "Bedeutung der Transformationsreihenfolge | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Transformationen, Reihenfolge"
+title: Bedeutung der Transformationsreihenfolge
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bedeutung der Transformationsreihenfolge
-In einem einzelnen <xref:System.Drawing.Drawing2D.Matrix>\-Objekt kann entweder eine einzelne Transformation oder eine Abfolge von Transformationen gespeichert werden.  Der zweite Vorgang wird als zusammengesetzte Transformation bezeichnet.  Die Matrix einer zusammengesetzten Transformation ergibt sich aus der Multiplikation der Matrizen der einzelnen Transformationen.  
+# <a name="why-transformation-order-is-significant"></a>Bedeutung der Transformationsreihenfolge
+Ein einzelnes <xref:System.Drawing.Drawing2D.Matrix> Objekt kann eine einzelne Transformation oder eine Sequenz von Transformationen zu speichern. Der zweite Wert ist eine zusammengesetzte Transformation aufgerufen. Die Matrix eine zusammengesetzte Transformation wird durch Multiplikation der Matrizen der einzelnen Transformationen abgerufen.  
   
-## Beispiele für zusammengesetzte Transformationen  
- In einer zusammengesetzten Transformation ist die Reihenfolge der einzelnen Transformationen von Bedeutung.  Wenn Sie beispielsweise zuerst eine Drehung, dann eine Skalierung und zuletzt eine Verschiebung durchführen, erhalten Sie ein anderes Ergebnis, als wenn Sie zuerst eine Verschiebung, dann eine Drehung und zuletzt eine Skalierung durchführen.  In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sind zusammengesetzte Transformationen von links nach rechts aufgebaut.  Wenn S, D und Ü der Skalierungs\-, Drehungs\- und Verschiebungsmatrix entsprechen, dann ist das Produkt SDÜ \(in dieser Reihenfolge\) die Matrix der zusammengesetzten Transformation, bei der zunächst die Skalierung, dann die Drehung und zuletzt die Verschiebung erfolgt.  Die Matrix, die das Ergebnis des Produkts SDÜ ist, unterscheidet sich von der Matrix, die das Ergebnis des Produkts ÜDS ist.  
+## <a name="composite-transform-examples"></a>Beispiele für zusammengesetzte Transformationen  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], zusammengesetzte Transformationen werden von links nach rechts erstellt. Wenn S und R, T Skalierung, Drehung und Übersetzung Matrizen sind, klicken Sie dann das Produkt SRT (in dieser Reihenfolge) wird die Matrix der zusammengesetzte Transformation dieser ersten Skalen, klicken Sie dann dreht und übersetzt. Die Matrix, die das Produkt unterscheidet sich SRT aus der Matrix mit dem Produkt TRS erzeugt.  
   
- Ein Grund, warum die Reihenfolge von Transformationen, wie Drehungen und Skalierungen, wichtig ist, liegt darin, dass sie mit Bezug auf den Ursprung des Koordinatensystems durchgeführt werden.  Die Skalierung eines Objekts, dessen Mittelpunkt im Ursprung liegt, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde.  Analog dazu ergibt die Drehung eines Objekts, dessen Mittelpunkt im Ursprung liegt, ein anderes Ergebnis als die Drehung eines Objekts, das vom Ursprung verschoben wurde.  
+ Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
   
- Im folgenden Beispiel bildet die Aneinanderreihung von Skalierung, Drehung und Verschiebung \(in dieser Reihenfolge\) eine zusammengesetzte Transformation.  Das Argument <xref:System.Drawing.Drawing2D.MatrixOrder>, das an die <xref:System.Drawing.Graphics.RotateTransform%2A>\-Methode übergeben wird, zeigt an, dass die Drehung im Anschluss an die Skalierung erfolgt.  Dementsprechend zeigt das Argument <xref:System.Drawing.Drawing2D.MatrixOrder>, das an die <xref:System.Drawing.Graphics.TranslateTransform%2A>\-Methode übergeben wird, an, dass die Verschiebung im Anschluss an die Drehung erfolgt.  <xref:System.Drawing.Drawing2D.MatrixOrder> und <xref:System.Drawing.Drawing2D.MatrixOrder> sind Member der <xref:System.Drawing.Drawing2D.MatrixOrder>\-Enumeration.  
+ Das folgende Beispiel kombiniert die Skalierung, Drehung und Verschiebung (in dieser Reihenfolge), um eine zusammengesetzte Transformation. Das Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.RotateTransform%2A> Methode gibt an, dass die Drehung der Skalierung folgen. Entsprechend dem Argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> übergeben, um die <xref:System.Drawing.Graphics.TranslateTransform%2A> Methode gibt an, dass die Übersetzung die Rotation folgen. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>und <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sind Mitglied der <xref:System.Drawing.Drawing2D.MatrixOrder> Enumeration.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
   
- Im folgenden Beispiel werden die gleichen Methoden wie im vorherigen Beispiel aufgerufen, allerdings in umgekehrter Reihenfolge.  Daraus ergibt sich die folgende Reihenfolge der Operationen: erst Verschiebung, dann Drehung und dann Skalierung. Das auf diese Weise produzierte Ergebnis unterscheidet sich erheblich von der Reihenfolge Skalierung, dann Drehung, dann Verschiebung.  
+ Im folgenden Beispiel wird die gleiche Methodenaufrufe wie im vorangehenden Beispiel, aber die Reihenfolge der Aufrufe wird umgekehrt. Die sich ergebende Reihenfolge der Vorgänge wird zuerst zu übersetzen, drehen, Skalierung, das ein sehr unterschiedliche Ergebnis als ersten Skala ergibt, dann zu rotieren, und dann zu übersetzen.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#22)]  
   
- Eine Möglichkeit, die Reihenfolge der einzelnen Transformationen in einer zusammengesetzten Transformation umzukehren, besteht darin, die Reihenfolge der aufeinander folgenden Methodenaufrufe umzukehren.  Eine zweite Möglichkeit, die Operationsreihenfolge zu steuern, besteht darin, das Argument für die Matrixreihenfolge zu ändern.  Das folgende Beispiel ist mit dem vorangehenden Beispiel identisch, abgesehen davon, dass <xref:System.Drawing.Drawing2D.MatrixOrder> in <xref:System.Drawing.Drawing2D.MatrixOrder> geändert wurde.  Die Matrixmultiplikation erfolgt in der Reihenfolge SDV, wobei S, D und V jeweils den Matrizen für Skalierung, Drehung und Verschiebung entsprechen.  Die Reihenfolge der zusammengesetzten Transformation lautet: zuerst Skalierung, dann Drehung, dann Verschiebung.  
+ Eine Möglichkeit, die Reihenfolge der einzelnen Transformationen in einer zusammengesetzten Transformation umzukehren, wird um die Reihenfolge einer Sequenz von Methodenaufrufen umzukehren. Eine zweite Möglichkeit zur Steuerung der Reihenfolge der Vorgänge ist so ändern Sie die Matrix Order-Argument. Im folgende Beispiel entspricht dem vorherigen Beispiel, außer dass <xref:System.Drawing.Drawing2D.MatrixOrder.Append> wurde geändert in <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>. Die Matrixmultiplikation erfolgt in der Reihenfolge SRT, S und R, T die Matrizen für Skalierung gegangenem, zu drehen und bzw. zu übersetzen. Die Reihenfolge der zusammengesetzten Transformation ist der ersten Skala drehen, und dann zu übersetzen.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#23)]  
   
- Das Ergebnis des unmittelbar vorangehenden Beispiels ist identisch mit dem Ergebnis des ersten Beispiels in diesem Thema.  Das liegt daran, dass sowohl die Reihenfolge der Methodenaufrufe als auch die Reihenfolge der Matrixmultiplikation umgekehrt wurde.  
+ Das Ergebnis des unmittelbar vorangehenden Beispiel entspricht dem als Ergebnis der im ersten Beispiel in diesem Thema. Dies ist, da wir die Reihenfolge der Aufrufe der-Methode und die Reihenfolge der Matrixmultiplikation umgekehrt.  
   
-## Siehe auch  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Verwenden von Transformationen in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Verwenden von Transformationen in Managed GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

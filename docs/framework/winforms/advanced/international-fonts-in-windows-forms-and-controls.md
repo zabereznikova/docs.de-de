@@ -1,38 +1,39 @@
 ---
-title: "Internationale Schriftarten in Windows&#160;Forms und Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schriftart-Fallback in Windows Forms"
-  - "Schriftarten, Überlegungen zur Globalisierung"
-  - "Schriftarten, International"
-  - "Globalisierung [Windows Forms], Zeichensätze"
-  - "Internationale Anwendungen [Windows Forms], Zeichenanzeige"
-  - "Lokalisierung [Windows Forms], Schriftarten"
-  - "Windows Forms-Steuerelemente, Bezeichnungen"
+title: "Internationale Schriftarten in Windows Forms und Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fonts [Windows Forms], international
+- international applications [Windows Forms], character display
+- fonts [Windows Forms], globalization considerations
+- localization [Windows Forms], fonts
+- Windows Forms controls, labels
+- font fallback in Windows Forms
+- globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Internationale Schriftarten in Windows&#160;Forms und Steuerelementen
-Für internationale Anwendungen sollte möglichst die automatische Schriftartauswahl verwendet werden.  Automatische Schriftartauswahl bedeutet, dass das System bestimmt, zu welcher Schrift ein Zeichen gehört.  
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Internationale Schriftarten in Windows Forms und Steuerelementen
+Die empfohlene Methode zum Auswählen von Schriftarten werden in internationalen Anwendungen Schriftartauswahl transaktionsanweisungen verwendet werden. Automatische Schriftartauswahl bedeutet, dass das System bestimmt, was das Zeichen Skript gehört.  
   
-## Verwenden der automatischen Schriftartauswahl  
- Legen Sie die <xref:System.Drawing.Font>\-Eigenschaft für das Formular oder ein beliebiges anderes Element nicht fest, wenn Sie dieses Feature nutzen möchten.  Die Anwendung greift in diesem Fall automatisch auf die Standardschrift des Systems zurück, die sich nach der Sprache richtet, in die das Betriebsystem lokalisiert wurde.  Wenn die Anwendung ausgeführt wird, stellt das System automatisch die richtige Schrift für die im Betriebssystem ausgewählte Kultur bereit.  
+## <a name="using-font-fallback"></a>Verwenden Schriftart-Fallback  
+ Um dieses Feature nutzen zu können, stellen Sie keine der <xref:System.Drawing.Font> -Eigenschaft für das Formular oder ein anderes Element. Die Anwendung wird automatisch der Standardsystemschriftart verwenden, die von einer lokalisierten Sprache des Betriebssystems auf einen anderen abweicht. Wenn die Anwendung ausgeführt wird, wird das System automatisch die richtige Schriftart für die Kultur, die im Betriebssystem aktiviert bereitstellen.  
   
- Es gibt jedoch eine Ausnahme zu der Regel, dass die Schrift nicht festgelegt wird. Sie betrifft die Änderung des Schriftschnitts.  In einer Anwendung kommt sie dann zum Tragen, wenn der Benutzer auf eine Schaltfläche klickt, um Text in einem Textfeld in Fettschrift darzustellen.  Dazu würden Sie eine Funktion schreiben, die auf der Grundlage der Formularschrift den Schriftschnitt des Textfelds in fett ändert.  Diese Funktion muss unbedingt an zwei Stellen aufgerufen werden: im <xref:System.Windows.Forms.Control.Click>\-Ereignishandler der Schaltfläche und im <xref:System.Windows.Forms.Control.FontChanged>\-Ereignishandler.  Wenn die Funktion nur im <xref:System.Windows.Forms.Control.Click>\-Ereignishandler aufgerufen und die Schriftfamilie des gesamten Formulars durch anderen Code geändert wird, ändert sich das Textfeld nicht mit dem restlichen Formular.  
+ Es wird eine Ausnahme von der Regel der Schriftart an, die zum Ändern der Schriftart wird nicht festlegen. Dies könnte wichtig für eine Anwendung sein in dem der Benutzer eine Schaltfläche, um Text in einem Textfeld angezeigt werden in Fettschrift klickt. Dazu würden Sie eine Funktion zum Ändern der Schriftart fett formatiert, das Textfeld schreiben, basierend auf den des Formulars Schriftart ist. Es ist wichtig, diesen Funktionsaufruf an zwei Orten: in der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignishandler und klicken Sie in der <xref:System.Windows.Forms.Control.FontChanged> -Ereignishandler. Wenn die Funktion, nur in aufgerufen wird der <xref:System.Windows.Forms.Control.Click> -Ereignishandler und einigen anderen Codeabschnitt ändert die Schriftfamilie des gesamten Formulars, im Textfeld wird nicht mit dem Rest des Formulars ändern.  
   
 ```  
 ' Visual Basic  
@@ -78,7 +79,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }  
 ```  
   
- Beim Lokalisieren der Anwendung wird die Fettschrift jedoch in bestimmten Sprachen möglicherweise nur mangelhaft dargestellt.  Wenn dies Probleme aufwirft, sollten die Lokalisierungsspezialisten die Möglichkeit haben, die Schrift von fett auf normalen Text umzuschalten.  Da Lokalisierungsspezialisten in der Regel keine Entwickler sind und nur Zugriff auf die Ressourcendateien, jedoch nicht auf den Quellcode haben, muss diese Option in den Ressourcendateien festgelegt werden.  Zu diesem Zweck würden Sie die <xref:System.Drawing.Font.Bold%2A>\-Eigenschaft auf `true` festlegen.  Dadurch wird die Schrifteinstellung in die Ressourcendateien geschrieben, wo sie von den Lokalisierungsspezialisten bearbeitet werden kann.  Fügen Sie anschließend nach der `InitializeComponent` \-Methode Code ein, der die Schriftart auf die Formularschrift zurücksetzt, dabei jedoch den in der Ressourcendatei festgelegten Schriftschnitt verwendet.  
+ Jedoch, wenn Sie die Anwendung zu lokalisieren, möglicherweise die fettformatierung Verschlechterung der Leistung für bestimmte Sprachen angezeigt. Wenn dies eine wichtige Überlegung ist, sollen die Lokalisierungsexperten haben die Möglichkeit, wechseln die Schriftart von fetter zu normaler Text. Da Lokalisierungsexperten nicht in der Regel Entwickler sind und haben keinen Zugriff auf den Quellcode, muss diese Option nur für Ressourcendateien, in den Ressourcendateien festgelegt werden. Zu diesem Zweck legen Sie die <xref:System.Drawing.Font.Bold%2A> Eigenschaft `true`. Dadurch wird der Einstellung "Schriftart" in die Ressourcendateien, in dem Sie Lokalisierungsexperten bearbeiten können geschrieben werden. Anschließend schreiben Sie Code nach der `InitializeComponent` Methode, um die Schriftart basierend auf beliebigen des Formulars Schriftart ist, jedoch mit den Schriftschnitt in der Ressourcendatei angegeben.  
   
 ```  
 ' Visual Basic  
@@ -88,6 +89,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## Siehe auch  
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

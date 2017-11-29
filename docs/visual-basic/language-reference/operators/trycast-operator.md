@@ -1,53 +1,50 @@
 ---
-title: "TryCast Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.trycast"
-  - "trycast"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "TryCast keyword"
+title: TryCast-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.trycast
+- trycast
+helpviewer_keywords: TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b6be11b49eb3b9d98e3bf147e9b1026d4ffc860c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# TryCast Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Leitet eine Typkonvertierungsoperation ein, die keine Ausnahme auslöst.  
+# <a name="trycast-operator-visual-basic"></a>TryCast-Operator (Visual Basic)
+Führt einen Typkonvertierungsvorgang, der keine Ausnahme auslöst.  
   
-## Hinweise  
- Wenn eine Konvertierungsversuch fehlschlägt, lösen sowohl `CType` als auch `DirectCast` einen <xref:System.InvalidCastException>\-Fehler aus.  Dies kann die Leistung Ihrer Anwendung beeinträchtigen.  `TryCast` gibt [Nothing](../../../visual-basic/language-reference/nothing.md) zurück, sodass Sie keine Ausnahme behandeln, sondern nur das zurückgegebene Ergebnis mit `Nothing` testen müssen.  
+## <a name="remarks"></a>Hinweise  
+ Wenn eine versuchte Konvertierung ein Fehler auftritt, `CType` und `DirectCast` sowohl Auslösen einer <xref:System.InvalidCastException> Fehler. Dies kann die Leistung der Anwendung beeinträchtigen. `TryCast`Gibt [nichts](../../../visual-basic/language-reference/nothing.md), sodass anstatt auf eine mögliche Ausnahme behandeln Sie nur das zurückgegebene Ergebnis mit testen müssen `Nothing`.  
   
- Sie verwenden das `TryCast`\-Schlüsselwort auf die gleiche Weise wie die [CType\-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md) und das [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)\-Schlüsselwort.  Als erstes Argument ist ein Ausdruck anzugeben und als zweites Argument ein Typ, in den dieser Ausdruck konvertiert werden soll.  `TryCast` kann nur für Verweistypen, z. B. Klassen und Schnittstellen, verwendet werden.  Es erfordert eine Vererbungs\- oder Implementierungsbeziehung zwischen den beiden Typen.  Dies bedeutet, dass ein Typ von dem anderen erben bzw. ein Typ den anderen implementieren muss.  
+ Verwenden Sie die `TryCast` Schlüsselwort die gleiche Weise, die Sie verwenden die [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md) und [DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) Schlüsselwort. Sie geben einen Ausdruck als erstes Argument und einen Typ als zweites Argument umzuwandeln. `TryCast`kann nur für Verweistypen, z. B. Klassen und Schnittstellen. Voraussetzung hierfür ist eine Beziehung vererbungs- oder implementierungsbeziehung zwischen den beiden Typen. Dies bedeutet, dass ein Typ den anderen implementieren oder davon erben muss.  
   
-## Fehler  
- `TryCast` generiert einen Compilerfehler, wenn festgestellt wird, dass keine Vererbungs\- oder Implementierungsbeziehung vorhanden ist.  Das Ausbleiben eines Compilerfehlers ist jedoch keine Garantie für eine erfolgreiche Konvertierung.  Wenn die gewünschte Konvertierung eingrenzend ist, kann sie zur Laufzeit fehlschlagen.  In diesem Fall gibt `TryCast` [Nothing](../../../visual-basic/language-reference/nothing.md) zurück.  
+## <a name="errors-and-failures"></a>Fehler und Ausfälle  
+ `TryCast`generiert einen Compilerfehler, wenn er erkennt, dass keine Vererbung oder Implementierung Beziehung vorhanden. Der Mangel an einen Compilerfehler gewährleistet jedoch keine erfolgreiche Konvertierung. Wenn die gewünschte Konvertierung einschränkend ist, kann sie zur Laufzeit fehlschlagen. In diesem Fall `TryCast` gibt [nichts](../../../visual-basic/language-reference/nothing.md).  
   
-## Konvertierungsschlüsselwörter  
- Im Folgenden werden die Typkonvertierungsschlüsselwörter miteinander verglichen.  
+## <a name="conversion-keywords"></a>Konvertierungsschlüsselwörter  
+ Ein Vergleich der Schlüsselwörter für die typkonvertierung lautet wie folgt.  
   
-|||||  
-|-|-|-|-|  
-|Schlüsselwort|Datentypen|Argumentbeziehung|Laufzeitfehler|  
-|[CType\-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)|Beliebige Datentypen|Zwischen den beiden Datentypen muss eine erweiternde oder eingrenzende Konvertierung definiert werden.|Löst <xref:System.InvalidCastException> aus.|  
-|[DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)|Beliebige Datentypen|Ein Datentyp muss von dem anderen Datentyp erben oder den anderen Datentyp implementieren.|Löst <xref:System.InvalidCastException> aus.|  
-|`TryCast`|Nur Verweise auf Typen|Ein Datentyp muss von dem anderen Datentyp erben oder den anderen Datentyp implementieren.|Gibt [Nothing](../../../visual-basic/language-reference/nothing.md) zurück.|  
+|Stichwort|Datentypen|Arguments-Beziehung|Laufzeitfehler|  
+|---|---|---|---|  
+|[CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)|Alle Datentypen|Zwischen den beiden Datentypen muss eine erweiternde oder einschränkende Konvertierung definiert sein|Löst aus<xref:System.InvalidCastException>|  
+|[DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md)|Alle Datentypen|Einen müssen anderen Typ zu implementieren oder davon erben|Löst aus<xref:System.InvalidCastException>|  
+|`TryCast`|Nur Verweistypen|Einen müssen anderen Typ zu implementieren oder davon erben|Gibt [nichts](../../../visual-basic/language-reference/nothing.md)|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `TryCast`.  
   
  [!code-vb[VbVbalrKeywords#6](../../../visual-basic/language-reference/codesnippet/VisualBasic/trycast-operator_1.vb)]  
   
-## Siehe auch  
- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erweiternde und eingrenzende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

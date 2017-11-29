@@ -1,64 +1,67 @@
 ---
-title: "Vorgehensweise: Erstellen eines benutzerdefinierten Aktivit&#228;tsdesigners | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cdf64dd7aca82fb0d0b3111832aca863a327270b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Erstellen eines benutzerdefinierten Aktivit&#228;tsdesigners
-Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die zugehörigen Aktivitäten mit anderen Aktivitäten zusammenzusetzen, deren Designer mit ihnen auf der Entwurfsoberfläche abgelegt werden können.Für diese Funktionalität muss ein benutzerdefinierter Aktivitätsdesigner eine "Ablagezone" bereitstellen, in der eine beliebige Aktivität platziert werden kann, sowie die Funktionen zur Verwaltung der daraus resultierenden Auflistung von Elementen auf der Entwurfsoberfläche.In diesem Thema wird beschrieben, wie ein benutzerdefinierter Aktivitätsdesigner erstellt wird, der eine solche Ablagezone enthält und die Bearbeitungsfunktionen zur Verwaltung der Auflistung von Designerelementen bereitstellt.  
+# <a name="how-to-create-a-custom-activity-designer"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners
+Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die zugehörigen Aktivitäten mit anderen Aktivitäten zusammenzusetzen, deren Designer mit ihnen auf der Entwurfsoberfläche abgelegt werden können. Diese Funktionalität muss ein benutzerdefinierter Aktivitätsdesigner bereitstellen, eine "Ablagezone", in denen eine beliebige Aktivität platziert werden kann, sowie die Möglichkeit zum Verwalten der resultierenden Auflistung von Elementen auf der Entwurfsoberfläche angezeigt. In diesem Thema wird beschrieben, wie ein benutzerdefinierter Aktivitätsdesigner erstellt wird, der eine solche Ablagezone enthält und die Bearbeitungsfunktionen zur Verwaltung der Auflistung von Designerelementen bereitstellt.  
   
- Benutzerdefinierte Aktivitätsdesigner erben in der Regel von <xref:System.Activities.Presentation.ActivityDesigner>. Dies ist der standardmäßige Designertyp für alle Aktivitäten ohne bestimmten Designer.Dieser Typ stellt Entwurfszeitfunktionen für die Interaktion mit dem Eigenschaftenraster und die Konfiguration von grundlegenden Aspekten wie Farbe und Symbole bereit.  
+ Benutzerdefinierte Aktivitätsdesigner erben in der Regel von <xref:System.Activities.Presentation.ActivityDesigner>. Dies ist der standardmäßige Designertyp für alle Aktivitäten ohne bestimmten Designer. Dieser Typ stellt Entwurfszeitfunktionen für die Interaktion mit dem Eigenschaftenraster und die Konfiguration von grundlegenden Aspekten wie Farbe und Symbole bereit.  
   
- <xref:System.Activities.Presentation.ActivityDesigner> verwendet zwei Hilfssteuerelemente \(<xref:System.Activities.Presentation.WorkflowItemPresenter> und <xref:System.Activities.Presentation.WorkflowItemsPresenter>\), die das Entwickeln benutzerdefinierter Aktivitätsdesigner vereinfachen.Sie behandeln die allgemeine Funktionalität wie Ziehen und Ablegen von untergeordneten Elementen sowie Löschen, Auswählen und Hinzufügen dieser untergeordneten Elemente.Das <xref:System.Activities.Presentation.WorkflowItemPresenter>\-Element unterstützt ein einzelnes untergeordnetes Benutzeroberflächenelement, das die "Ablagezone" bereitstellt. <xref:System.Activities.Presentation.WorkflowItemsPresenter> unterstützt mehrere Benutzeroberflächenelemente, darunter zusätzliche Funktionalität z. B. zum Sortieren, Verschieben, Löschen und Hinzufügen von untergeordneten Elementen.  
+ <xref:System.Activities.Presentation.ActivityDesigner> verwendet zwei Hilfssteuerelemente (<xref:System.Activities.Presentation.WorkflowItemPresenter> und <xref:System.Activities.Presentation.WorkflowItemsPresenter>), die das Entwickeln benutzerdefinierter Aktivitätsdesigner vereinfachen. Sie behandeln die allgemeine Funktionalität wie Ziehen und Ablegen von untergeordneten Elementen sowie Löschen, Auswählen und Hinzufügen dieser untergeordneten Elemente. Die <xref:System.Activities.Presentation.WorkflowItemPresenter> unterstützt ein einzelnes untergeordnetes Benutzeroberflächenelement, "Ablagezone" bereitstellt es während der <xref:System.Activities.Presentation.WorkflowItemsPresenter> unterstützt mehrere Benutzeroberflächenelemente, darunter zusätzliche Funktionalität z. B. zum Sortieren, verschieben, löschen und Hinzufügen von untergeordneten Elementen.  
   
- Der zweite Hauptaspekt bei der Implementierung eines benutzerdefinierten Aktivitätsdesigners betrifft die Methode zur Bindung der grafischen Bearbeitungen an die Instanz der im Designer bearbeiteten Objekte im Arbeitsspeicher mit der [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]\-Datenbindung.Hierzu dient die Modellelementstruktur, die auch zur Aktivierung der Änderungsbenachrichtigung und der Nachverfolgung von Ereignissen wie Zustandsänderungen verwendet wird.  
+ Der zweite Hauptaspekt bei der Implementierung eines benutzerdefinierten Aktivitätsdesigners betrifft die Methode zur Bindung der grafischen Bearbeitungen an die Instanz der im Designer bearbeiteten Objekte im Arbeitsspeicher mit der [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Datenbindung. Hierzu dient die Modellelementstruktur, die auch zur Aktivierung der Änderungsbenachrichtigung und der Nachverfolgung von Ereignissen wie Zustandsänderungen verwendet wird.  
   
  In diesem Thema werden zwei Prozeduren beschrieben.  
   
-1.  Die erste Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemPresenter> erstellt wird, der die Ablagezone für andere Aktivitäten bereitstellt.Diese Prozedur basiert auf dem [Benutzerdefinierte zusammengesetzte Designer \- Workflowelementpräsentation](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)\-Beispiel.  
+1.  Die erste Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemPresenter> erstellt wird, der die Ablagezone für andere Aktivitäten bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer - Workflow Element Vortragende](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) Beispiel.  
   
-2.  Die zweite Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemsPresenter> erstellt wird, der die zur Bearbeitung einer Auflistung von Elementen benötigten Funktionen bereitstellt.Diese Prozedur basiert auf dem [Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)\-Beispiel.  
+2.  Die zweite Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemsPresenter> erstellt wird, der die zur Bearbeitung einer Auflistung von Elementen benötigten Funktionen bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer - Workflowelementpräsentation](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) Beispiel.  
   
-### So erstellen Sie einen benutzerdefinierten Aktivitätsdesigner, der eine Ablagezone bereitstellt, mit WorkflowItemPresenter  
+### <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>So erstellen Sie einen benutzerdefinierten Aktivitätsdesigner, der eine Ablagezone bereitstellt, mit WorkflowItemPresenter  
   
 1.  Starten Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
+2.  Auf der **Datei** Sie im Menü **neu**, und wählen Sie dann **Projekt...** .  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  Wählen Sie im Bereich **Installierte Vorlagen** in der von Ihnen bevorzugten Sprachkategorie die Option **Windows**.  
+3.  In der **installierte Vorlagen** klicken Sie im Bereich **Windows** von Ihnen bevorzugten Sprachkategorie.  
   
-4.  Wählen Sie im Bereich **Vorlagen** die Option **WPF\-Anwendung** aus.  
+4.  In der **Vorlagen** klicken Sie im Bereich **WPF-Anwendung**.  
   
-5.  Geben Sie im Feld **Name**`UsingWorkflowItemPresenter` ein.  
+5.  In der **Namen** geben `UsingWorkflowItemPresenter`.  
   
-6.  Geben Sie im Feld **Speicherort** das Verzeichnis ein, in dem das Projekt gespeichert werden soll, oder klicken Sie auf **Durchsuchen**, um zu dem Verzeichnis zu navigieren.  
+6.  In der **Speicherort** Geben Sie das Verzeichnis, in dem Sie das Projekt gespeichert werden soll, oder klicken möchten **Durchsuchen** navigieren.  
   
-7.  Akzeptieren Sie im Feld **Projektmappe** den Standardwert.  
+7.  In der **Lösung** Feld, akzeptieren Sie den Standardwert.  
   
 8.  Klicken Sie auf **OK**.  
   
-9. Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf die Datei "MainWindows.xaml", wählen Sie **Löschen**, und bestätigen Sie den Vorgang im Dialogfeld **Microsoft Visual Studio** mit **OK**.  
+9. Mit der rechten Maustaste in der Datei "MainWindows.xaml" in der **Projektmappen-Explorer**Option **löschen** und vergewissern Sie sich **OK** in die **Microsoft Visual Studio**im Dialogfeld.  
   
-10. Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf das Projekt "UsingWorkflowItemPresenter", und wählen Sie **Hinzufügen** und dann **Neues Element…**, um das Dialogfeld **Neues Element hinzufügen** zu öffnen. Wählen Sie dann im Abschnitt **Installierte Vorlagen** auf der linken Seite die Kategorie **WPF**.  
+10. Mit der rechten Maustaste des Projekts "UsingWorkflowItemPresenter" im **Projektmappen-Explorer**Option **hinzufügen**, klicken Sie dann **neues Element...** um die **neues Element hinzufügen** Dialog, und wählen Sie die **WPF** Kategorie aus der **installierte Vorlagen** Abschnitt auf der linken Seite.  
   
-11. Wählen Sie die Vorlage **Fenster \(WPF\)** aus, benennen Sie sie in `RehostingWFDesigner` um, und klicken Sie auf **Hinzufügen**.  
+11. Wählen Sie die **Fenster (WPF)** Vorlage, nennen Sie sie `RehostingWFDesigner`, und klicken Sie auf **hinzufügen**.  
   
 12. Öffnen Sie die Datei "RehostingWFDesigner.xaml", und fügen Sie den folgenden Code ein, um die Benutzeroberfläche für die Anwendung zu definieren.  
   
-    ```  
-  
+    ```xml  
     <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -107,13 +110,11 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
             <Border Grid.Column="2" Name="PropertyBorder"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
-13. Um einem Aktivitätsdesigner einen Aktivitätstyp zuzuordnen, müssen Sie den Aktivitätsdesigner im Metadatenspeicher registrieren.Fügen Sie hierzu der `RehostingWFDesigner`\-Klasse die `RegisterMetadata`\-Methode hinzu.Erstellen Sie innerhalb des Bereichs der `RegisterMetadata`\-Methode ein <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder>\-Objekt, und rufen Sie die <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A>\-Methode auf, um dem Objekt die Attribute hinzuzufügen.Rufen Sie die <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A>\-Methode auf, um dem Metadatenspeicher das <xref:System.Activities.Presentation.Metadata.AttributeTable>\-Objekt hinzuzufügen.Der folgende Code enthält die Rehosting\-Logik für den Designer.Damit werden die Metadaten registriert, die `SimpleNativeActivity` wird in die Toolbox eingefügt und der Workflow wird erstellt.Fügen Sie diesen Code in die Datei "RehostingWFDesigner.xaml.cs" ein.  
+13. Um einem Aktivitätsdesigner einen Aktivitätstyp zuzuordnen, müssen Sie den Aktivitätsdesigner im Metadatenspeicher registrieren. Fügen Sie hierzu der `RegisterMetadata`-Klasse die `RehostingWFDesigner`-Methode hinzu. Erstellen Sie innerhalb des Bereichs der `RegisterMetadata`-Methode ein <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder>-Objekt, und rufen Sie die <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A>-Methode auf, um dem Objekt die Attribute hinzuzufügen. Rufen Sie die <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A>-Methode auf, um dem Metadatenspeicher das <xref:System.Activities.Presentation.Metadata.AttributeTable>-Objekt hinzuzufügen. Der folgende Code enthält die Rehosting-Logik für den Designer. Damit werden die Metadaten registriert, die `SimpleNativeActivity` wird in die Toolbox eingefügt und der Workflow wird erstellt. Fügen Sie diesen Code in die Datei "RehostingWFDesigner.xaml.cs" ein.  
   
     ```  
-  
     using System;  
     using System.Activities.Core.Presentation;  
     using System.Activities.Presentation;  
@@ -159,12 +160,11 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
             }  
         }  
     }  
-  
     ```  
   
-14. Klicken Sie im Projektmappen\-Explorer mit der rechten Maustaste auf das Verzeichnis "References", und wählen Sie **Verweis hinzufügen…**, um das Dialogfeld **Verweis hinzufügen** zu öffnen.  
+14. Mit der rechten Maustaste in das Verzeichnis "Verweise" im Projektmappen-Explorer, und wählen Sie **Verweis hinzufügen...** um die **Verweis hinzufügen** Dialog.  
   
-15. Klicken Sie auf die Registerkarte **.NET**, suchen Sie die Assembly mit dem Namen **System.Activities.Core.Presentation**, wählen Sie sie aus, und klicken Sie auf **OK**.  
+15. Klicken Sie auf die **.NET** Registerkarte, suchen Sie die Assembly mit dem Namen **System.Activities.Core.Presentation**, wählen Sie ihn, und klicken Sie auf **OK**.  
   
 16. Fügen Sie auf die gleiche Weise den folgenden Assemblys Verweise hinzu:  
   
@@ -174,19 +174,18 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
   
     3.  System.ServiceModel.Activities.dll  
   
-17. Öffnen Sie die Datei "App.xaml", und ändern Sie den StartUpUri\-Wert in "RehostingWFDesigner.xaml".  
+17. Öffnen Sie die Datei "App.xaml", und ändern Sie den Wert, der den StartupUri-Wert in "RehostingWFDesigner.xaml".  
   
-18. Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf das Projekt "UsingWorkflowItemPresenter", und wählen Sie **Hinzufügen** und dann **Neues Element…**, um das Dialogfeld **Neues Element hinzufügen** zu öffnen. Wählen Sie dann im Abschnitt **Installierte Vorlagen** auf der linken Seite die Kategorie **Workflow**.  
+18. Mit der rechten Maustaste des Projekts "UsingWorkflowItemPresenter" im **Projektmappen-Explorer**Option **hinzufügen**, klicken Sie dann **neues Element...** um die **neues Element hinzufügen** Dialog, und wählen Sie die **Workflow** Kategorie Form der **installierte Vorlagen** Abschnitt auf der linken Seite.  
   
-19. Wählen Sie die Vorlage **Aktivitätsdesigner** aus, weisen Sie ihr den Namen `SimpleNativeDesigner` zu, und klicken Sie auf **Hinzufügen**.  
+19. Wählen Sie die **Aktivitäts-Designer** Vorlage, nennen Sie sie `SimpleNativeDesigner`, und klicken Sie auf **hinzufügen**.  
   
-20. Öffnen Sie die Datei "SimpleNativeDesigner.xaml", und fügen Sie den folgenden Code ein.Beachten Sie, dass in diesem Code <xref:System.Activities.Presentation.ActivityDesigner> als Stammelement verwendet wird. Er zeigt, wie <xref:System.Activities.Presentation.WorkflowItemPresenter> mithilfe von Bindung in Ihren Designer integriert wird, sodass im zusammengesetzten Aktivitätsdesigner ein untergeordneter Typ angezeigt werden kann.  
+20. Öffnen Sie die Datei "SimpleNativeDesigner.xaml", und fügen Sie den folgenden Code ein. Beachten Sie, dass in diesem Code <xref:System.Activities.Presentation.ActivityDesigner> als Stammelement verwendet wird. Er zeigt, wie <xref:System.Activities.Presentation.WorkflowItemPresenter> mithilfe von Bindung in Ihren Designer integriert wird, sodass im zusammengesetzten Aktivitätsdesigner ein untergeordneter Typ angezeigt werden kann.  
   
     > [!NOTE]
     >  Mit dem Schema für <xref:System.Activities.Presentation.ActivityDesigner> können Sie dem benutzerdefinierten Aktivitätsdesigner nur ein untergeordnetes Element hinzufügen. Bei diesem Element kann es sich jedoch um ein `StackPanel`, ein `Grid` oder um ein anderes zusammengesetztes Benutzeroberflächenelement handeln.  
   
-    ```  
-  
+    ```xml  
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -218,17 +217,15 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
             <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}" />  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-21. Klicken Sie im **Projektmappen\-Explorer** mit der rechten Maustaste auf das Projekt "UsingWorkflowItemPresenter", und wählen Sie **Hinzufügen** und dann **Neues Element…**, um das Dialogfeld **Neues Element hinzufügen** zu öffnen. Wählen Sie dann im Abschnitt **Installierte Vorlagen** auf der linken Seite die Kategorie **Workflow**.  
+21. Mit der rechten Maustaste des Projekts "UsingWorkflowItemPresenter" im **Projektmappen-Explorer**Option **hinzufügen**, klicken Sie dann **neues Element...** um die **neues Element hinzufügen** Dialog, und wählen Sie die **Workflow** Kategorie Form der **installierte Vorlagen** Abschnitt auf der linken Seite.  
   
-22. Wählen Sie die Vorlage **Codeaktivität** aus, weisen Sie ihr den Namen `SimpleNativeActivity` zu, und klicken Sie auf **Hinzufügen**.  
+22. Wählen Sie die **Codeaktivität** Vorlage, nennen Sie sie `SimpleNativeActivity`, und klicken Sie auf **hinzufügen**.  
   
-23. Implementieren Sie die `SimpleNativeActivity`\-Klasse, indem Sie den folgenden Code in die Datei "SimpleNativeActivity.cs" einfügen.  
+23. Implementieren Sie die `SimpleNativeActivity`-Klasse, indem Sie den folgenden Code in die Datei "SimpleNativeActivity.cs" einfügen.  
   
     ```  
-  
     using System.Activities;  
   
     namespace UsingWorkflowItemPresenter  
@@ -253,20 +250,19 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
             }  
         }  
     }  
-  
     ```  
   
-24. Wählen Sie im Menü **Erstellen** die Option **Projektmappe erstellen** aus.  
+24. Wählen Sie **Projektmappe** aus der **erstellen** Menü.  
   
-25. Wählen Sie im Menü **Debuggen** die Option **Starten ohne Debugging** aus, um das neu gehostete benutzerdefinierte Entwurfsfenster zu öffnen.  
+25. Wählen Sie **Starten ohne Debugging** aus der **Debuggen** Menü, um das neu gehostete benutzerdefinierte Entwurfsfenster zu öffnen.  
   
-### So erstellen Sie einen benutzerdefinierten Aktivitätsdesigner mit WorkflowItemsPresenter  
+### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>So erstellen Sie einen benutzerdefinierten Aktivitätsdesigner mit WorkflowItemsPresenter  
   
-1.  Die Prozedur für den zweiten benutzerdefinierten Aktivitätsdesigner ist bis auf wenige Änderungen identisch mit der ersten Prozedur. Die erste Änderung besteht darin, der zweiten Anwendung den Namen `UsingWorkflowItemsPresenter` zuzuweisen.Außerdem wird mit dieser Anwendung keine neue benutzerdefinierte Aktivität definiert.  
+1.  Die Prozedur für den zweiten benutzerdefinierten Aktivitätsdesigner ist die erste mit wenigen Änderungen, von denen der erste besteht in der zweiten Anwendung den Namen `UsingWorkflowItemsPresenter`. Außerdem wird mit dieser Anwendung keine neue benutzerdefinierte Aktivität definiert.  
   
-2.  Die Hauptunterschiede sind in den Dateien "CustomParallelDesigner.xaml" und "RehostingWFDesigner.xaml.cs" enthalten.Hier stammt der Code aus der Datei "CustomParallelDesigne.xaml" zur Definition der Benutzeroberfläche.  
+2.  Die Hauptunterschiede sind in den Dateien "CustomParallelDesigner.xaml" und "RehostingWFDesigner.xaml.cs" enthalten. Hier stammt der Code aus der Datei "CustomParallelDesigne.xaml" zur Definition der Benutzeroberfläche.  
   
-    ```  
+    ```xml  
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -308,13 +304,11 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
             <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-3.  Hier stammt der Code aus der Datei "RehostingWFDesigner.xaml.cs" zur Bereitstellung der Rehosting\-Logik.  
+3.  Hier stammt der Code aus der Datei "RehostingWFDesigner.xaml.cs" zur Bereitstellung der Rehosting-Logik.  
   
     ```  
-  
     using System;  
     using System.Activities.Core.Presentation;  
     using System.Activities.Presentation;  
@@ -357,10 +351,10 @@ Benutzerdefinierte Aktivitätsdesigner werden in der Regel implementiert, um die
     }  
     ```  
   
-## Siehe auch  
- <xref:System.Activities.Presentation.ActivityDesigner>   
- <xref:System.Activities.Presentation.WorkflowItemPresenter>   
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>   
- <xref:System.Activities.Presentation.WorkflowViewElement>   
- <xref:System.Activities.Presentation.Model.ModelItem>   
- [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation//customizing-the-workflow-design-experience.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Activities.Presentation.ActivityDesigner>  
+ <xref:System.Activities.Presentation.WorkflowItemPresenter>  
+ <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
+ <xref:System.Activities.Presentation.WorkflowViewElement>  
+ <xref:System.Activities.Presentation.Model.ModelItem>  
+ [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

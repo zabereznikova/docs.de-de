@@ -1,77 +1,59 @@
 ---
-title: Erstellen von der Befehlszeile aus (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Erstellen von der Befehlszeile aus (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - builds [Visual Basic], command-line
 - Visual Basic compiler, about Visual Basic compiler
 - command line [Visual Basic], compilers
 - command line [Visual Basic], building from
 - command line [Visual Basic], builds
-- compilers, invoking from command line
+- compilers [Visual Basic], invoking from command line
 - command-line builds
 - compiling source code
-- command-line compilers, Visual Basic
+- command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 49f84c221e18457ab46534ca46da7c4764a8ee40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d982506af2c4f01e80ae5b3862fcbcfff2aa9d99
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
-Ein [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Projekt besteht aus einem oder mehreren separaten Quelldateien. Bei der Kompilierung genannt, werden diese Dateien in einem Paket zusammengefasst – einer einzelnen ausführbaren Datei, die als eine Anwendung ausgeführt werden kann.  
+Ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projekt besteht aus einem oder mehreren separaten Quelldateien. Während des Prozesses, der als Kompilierung bezeichnet wird, werden diese Dateien in einem Paket zusammengefasst – eine einzelne ausführbare Datei, die als eine Anwendung ausgeführt werden kann.  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] integrierten Entwicklungsumgebung (IDE). Der Befehlszeilencompiler eignet sich für Situationen, in dem Sie den vollständigen Satz von Funktionen in der IDE nicht benötigen, z. B. Wenn Sie mithilfe von oder für Computer mit begrenztem Arbeitsspeicher oder ein Speicherplatz schreiben.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Stellt einen Befehlszeilencompiler als Alternative zum Kompilieren von Programmen in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrierten Entwicklungsumgebung (IDE). Der Befehlszeilencompiler eignet sich für Situationen, in dem Sie den vollständigen Satz von Funktionen der IDE nicht benötigen – z. B. Wenn Sie mithilfe von oder Schreiben von für Computer mit begrenztem Arbeitsspeicher oder Speicherplatz.  
   
- Beim Kompilieren von der Befehlszeile aus müssen Sie explizit verweisen, auf die Microsoft [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Laufzeitbibliothek über die `/reference` -Compileroption.  
+ Beim Kompilieren von der Befehlszeile aus müssen Sie explizit die Microsoft verweisen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Laufzeit-Bibliothek über die `/reference` -Compileroption.  
   
- Zum Kompilieren von Quelldateien in der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] IDE, wählen Sie die **erstellen** Befehl die **erstellen** im Menü.  
+ Zum Kompilieren von Quelldateien in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, wählen Sie die **erstellen** Befehl die **erstellen** Menü.  
   
 > [!TIP]
->  Wenn Sie Dateien mithilfe von Visual Studio-IDE erstellen, können Sie anzeigen, Informationen zum zugehörigen **Vbc** Befehl und Schaltern im Ausgabefenster angezeigt. Öffnen Sie zum Anzeigen dieser Informationen die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](https://docs.microsoft.com/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild-Projektbuilds Ausgabe Ausführlichkeit** auf **Normal** oder eine höhere Stufe der Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
+>  Wenn Sie über die Visual Studio-IDE Projektdateien erstellen, können Sie Informationen zum zugehörigen anzeigen **Vbc** Befehl und seine Switches im Ausgabefenster angezeigt. Öffnen Sie zum Anzeigen dieser Informationen die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild-Projektbuilds Ausgabe Ausführlichkeit** auf **Normal** oder ein höheres Maß an Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
   
- Sie können Projektdateien (.vbproj) in einer Befehlszeile kompilieren, mithilfe von MSBuild. Weitere Informationen finden Sie unter [-Befehlszeilenreferenz](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference) und [Exemplarische Vorgehensweise: Verwenden von MSBuild](http://msdn.microsoft.com/library/b8a8b866-bb07-4abf-b9ec-0b40d281c310).  
+ Sie können die Projektdateien (.vbproj) an einer Eingabeaufforderung kompilieren, mithilfe von MSBuild. Weitere Informationen finden Sie unter [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) und [Exemplarische Vorgehensweise: Verwenden von MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Aufrufen des Befehlszeilencompilers](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
- Beschreibt das Aufrufen des Befehlszeilencompilers auf MS-DOS oder von einem bestimmten Unterverzeichnis.  
+ Beschreibt, wie zum Aufrufen des Befehlszeilencompilers an der MS-DOS-Eingabeaufforderung oder von einem bestimmten Unterverzeichnis.  
   
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- Enthält eine Liste mit Beispielbefehlszeilen, die Sie für Ihre eigenen Zwecke ändern können.  
+ Enthält eine Liste der Beispielbefehlszeilen, die Sie für Ihre eigenen Zwecke ändern können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- Enthält eine Liste der Compileroptionen alphabetisch oder nach ihrem Zweck geordnet sind.  
+ Enthält Listen von Compileroptionen alphabetisch oder nach ihrem Zweck organisiert.  
   
  [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Beschreibt, wie bestimmte Codeabschnitte kompiliert.  
+ Beschreibt, wie bestimmte Codeabschnitte zu kompilieren.  
   
- [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
- Beschreibt das Organisieren, was in verschiedenen Builds eingeschlossen, Projekteigenschaften auswählen und sicherstellen, dass Projekte in der richtigen Reihenfolge erstellen.
+ [Erstellen und Bereinigen von Projekten und Projektmappen in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ Beschreibt, wie zum Organisieren, was in verschiedene Builds enthalten, wählen Sie die Projekteigenschaften und stellen Sie sicher, dass Projekte in der richtigen Reihenfolge erstellen.

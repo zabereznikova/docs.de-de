@@ -1,52 +1,44 @@
 ---
-title: Threadsynchronisierung (Visual Basic) | Microsoft-Dokumentation
+title: Threadsynchronisierung (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ec8fa89c8921eadee428a90971d9ae4ce305a109
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-visual-basic"></a>Threadsynchronisierung (Visual Basic)
-In den folgenden Abschnitten wird beschrieben, Funktionen und Klassen, die zum Synchronisieren des Zugriffs auf Ressourcen in Multithreadanwendungen verwendet werden können.  
+In den folgenden Abschnitten werden Funktionen und Klassen beschrieben, die zum Synchronisieren des Zugriffs auf Ressourcen in Multithreadanwendungen verwendet werden können.  
   
- Einer der Vorteile der Verwendung von mehreren Threads in einer Anwendung ist, dass jeder Thread asynchron ausgeführt wird. Für Windows-Clientanwendungen können zeitintensive Aufgaben im Hintergrund während des Anwendungsfensters ausgeführt werden, und Steuerelemente reaktionsfähig bleiben. Für Server-Applications multithreading bietet die Möglichkeit, jede eingehende Anforderung mit einem anderen Thread zu behandeln. Andernfalls würde jede neue Anforderung erst verarbeitet, erhalten die vorherige Anforderung vollständig erfüllt wurde.  
+ Einer der Vorteile bei der Verwendung von mehreren Threads in einer Anwendung ist, dass jeder Thread asynchron ausgeführt wird. Für Windows-Anwendungen können zeitintensive Aufgaben im Hintergrund ausgeführt werden, während das Anwendungsfenster und Steuerelement reaktionsfähig bleiben. Für Serveranwendungen bietet Multithreading die Möglichkeit, jede eingehende Aufforderung mit einem anderen Thread zu bearbeiten. Andernfalls würde jede neue Anforderung erst dann bearbeitet werden, nachdem die vorherige Anforderung vollständig erfüllt wurde.  
   
- Allerdings muss der asynchrone Natur des Threads bedeutet, die Zugriff auf Ressourcen wie Dateihandles, Netzwerkschnittstellen und Speicher koordiniert werden. Andernfalls konnte in zwei oder mehr Threads dieselbe Ressource zur gleichen Zeit, jede keine Kenntnis von den anderen Aktionen zugegriffen werden. Das Ergebnis ist unvorhersehbar Daten beschädigt.  
+ Die asynchrone Eigenschaft des Threads bedeutet jedoch, dass Zugriff auf Ressourcen, wie z.B. Dateihandles, Netzwerkverbindungen und Arbeitsspeicher, koordiniert werden muss. Andernfalls könnten zwei oder mehr Threads auf die selbe Ressource zugreifen, wobei kein Thread weiß, was der andere macht. Die Folge ist eine unvorhersehbare Datenbeschädigung.  
   
- Für einfache Operationen für ganzzahlige numerische Datentypen Synchronisieren von Threads mit Mitgliedern der <xref:System.Threading.Interlocked>Klasse</xref:System.Threading.Interlocked> möglich Für alle anderen Daten können Typen und nicht threadsicheren Ressourcen kann multithreading nur sicher ausgeführt werden mit den Konstrukten in diesem Thema.  
+ Für einfache Operationen bei ganzzahligen numerischen Datentypen kann das Synchronisieren von Threads mit Membern der Klasse <xref:System.Threading.Interlocked> erreicht werden. Für alle anderen Datentypen sowie nicht threadsichere Ressourcen kann Multithreading nur mithilfe der Konstrukte in diesem Thema ausgeführt werden.  
   
  Hintergrundinformationen zur Multithreadprogrammierung finden Sie unter:  
   
--   [Grundlagen des verwalteten Threadings](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [Grundlagen des verwalteten Threadings](../../../../standard/threading/managed-threading-basics.md)  
   
--   [Verwenden von Threads und Threading](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [Verwenden von Threads und Threading](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Verwaltetes Threading Best Practices](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [Empfohlene Vorgehensweise für das verwaltete Threading](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Die lock- und SyncLock-Schlüsselwörter  
- Visual Basic `SyncLock` Anweisung um sicherzustellen, dass ein Codeblock ohne Unterbrechung vollständig ausgeführt wird von anderen Threads verwendet werden kann. Dies geschieht durch Abrufen einer Sperre gegenseitigen Ausschluss für ein bestimmtes Objekt für die Dauer des Codeblocks.  
+## <a name="the-lock-and-synclock-keywords"></a>Die Sperre und SyncLock-Schlüsselwörter  
+ Visual Basic `SyncLock` Anweisung um sicherzustellen, dass ein Codeblock bis zum Abschluss ohne Unterbrechung ausgeführt wird von anderen Threads verwendet werden kann. Dies geschieht durch das Abrufen einer Sperre für gegenseitigen Ausschluss für ein bestimmtes Objekt für die Dauer des Codeblocks.  
   
- Ein `SyncLock` -Anweisung wird ein Objekt als Argument zugewiesen, und ist ein Codeblock, der nur von einem Thread zu einem Zeitpunkt ausgeführt werden soll. Zum Beispiel:  
+ Einer `SyncLock`-Anweisung wird ein Objekt als Argument zugewiesen, gefolgt von einem Codeblock, der nur von einem Thread ausgeführt werden soll. Zum Beispiel:  
   
 ```vb  
 Public Class TestThreading  
@@ -60,18 +52,18 @@ Public Class TestThreading
 End Class  
 ```  
   
- Das Argument bereitgestellt, um die `SyncLock` Schlüsselwort muss ein Objekt basierend auf ein Verweistyp sein und wird verwendet, um den Umfang der Sperre zu definieren. Im obigen Beispiel der sperrenbereich ist für diese Funktion beschränkt, da keine Verweise auf das Objekt `lockThis` außerhalb der Funktion vorhanden ist. Wenn Sie ein solchen Verweis vorhanden war, würde Sperre auf dieses Objekt erweitern. Genau genommen wird das bereitgestellte Objekt verwendet, ausschließlich für die Identifizierung der Ressourcen von mehreren Threads freigegeben wird, sodass sie bezeichnen werden kann. In der Praxis jedoch dieses Objekt dargestellt in der Regel die Ressource, für die die Threadaktivität Synchronisierung erforderlich ist. Beispielsweise ist ein Container-Objekt von mehreren Threads verwendet werden, dann kann der Container übergeben werden, um Sperren und der synchronisierte Codeblock hinter der Sperre werden auf den Container zugreifen. Solange andere Threads Sperren für die gleiche enthalten, bevor Sie darauf zugreifen und dann Zugriff auf das Objekt sicher synchronisiert.  
+ Das Argument, das dem Schlüsselwort `SyncLock` bereitgestellt wird, muss ein Objekt sein, dass auf einem Verweistyp basiert und zur Definition des Geltungsbereichs der Sperre verwendet wird. Im obigen Beispiel ist der Geltungsbereich der Sperre auf die Funktion begrenzt, da kein Verweis auf das Objekt `lockThis` außerhalb der Funktion existiert. Wenn solch ein Verweis existieren würde, würde sich der Geltungsbereich der Sperre bis zu diesem Objekt erweitern. Genau genommen wird das bereitgestellte Objekt nur verwendet, um ausschließlich die Ressource zu identifizieren, die in mehreren Threads vorkommt, sodass sie eine beliebige Klasseninstanz sein kann. Jedoch stellt dieses Objekt in der Praxis normalerweise die Ressource dar, für die die Threadsynchronisierung benötigt wird. Wenn z.B. ein Containerobjekt von mehreren Threads verwendet werden soll, kann der Container anschließend zum Sperren übergeben werden, und der synchronisierte Codeblock, der der Sperre folgt, würde dem Container folgen. Solange andere Threads denselben Container sperren, bevor sie darauf zugreifen, ist der Zugriff auf das Objekt anschließend sicher synchronisiert.  
   
- Im Allgemeinen ist es am besten vermeiden Sie das Sperren auf einer `public` Typ oder Objektinstanzen außerhalb der Kontrolle Ihrer Anwendung. Z. B. `lockThis` kann da Sperrung Code außerhalb Ihrer Kontrolle auf das Objekt ebenfalls problematisch, wenn die Instanz öffentlich zugegriffen werden kann. Dies könnte Deadlocks verursachen, in denen zwei oder mehr Threads für die Version des gleichen Objekts warten. Sperren von öffentlichen Datentypen, im Gegensatz zu einem Objekt können Sie aus demselben Grund Probleme verursachen. Sperren von Zeichenfolgenliteralen ist besonders riskant, da Literalzeichenfolgen sind *Internpool* von der common Language Runtime (CLR). Dies bedeutet, dass eine Instanz von jedem Zeichenfolgenliteral für das gesamte Programm vorhanden ist, genaue das gleiche Objekt dar, das Literal in allen Anwendungsdomänen, die auf allen Threads ausgeführt. Daher führt eine Sperre für eine Zeichenfolge mit dem gleichen Inhalt an einer beliebigen Stelle in den Prozess Anwendungssperren alle Instanzen der Zeichenfolge in der Anwendung. Daher empfiehlt es sich um eine private oder geschützte Member zu sperren, der nicht intern gespeichert werden. Einige Klassen bieten Member speziell für Sperren. Der <xref:System.Array>Typ, z. B. bietet <xref:System.Array.SyncRoot%2A>.</xref:System.Array.SyncRoot%2A> </xref:System.Array> Viele Auflistungstypen bieten eine `SyncRoot` auch Member.  
+ Es ist allgemein am Besten, das Sperren eines `public`-Typs oder einer Objektinstanz außerhalb der Kontrolle Ihrer Anwendung zu vermeiden. `lockThis` kann z.B. problematisch sein, wenn auf die Instanz öffentlich zugegriffen werden kann, da ein Code außerhalb Ihrer Kontrolle vielleicht auch das Objekt sperrt. Das könnte eine Deadlock-Situation erzeugen, bei der zwei oder mehr Threads auf die Freigabe des gleichen Objekts warten. Das Sperren von öffentlichen Datentypen kann im Gegensatz zu einem Objekt aus demselben Grund Probleme verursachen. Sperren von Zeichenfolgenliteralen ist besonders riskant, da Literalzeichenfolgen von der Common Language Runtime (CLR) *internalisiert* sind. Das bedeutet, dass es eine Instanz jedes Zeichenfolgenliterals für das gesamte Programm gibt. Dieselben Objekte stellen das Literal in jeder laufenden Anwendungsdomäne bei allen Threads dar. Daher sperrt eine Sperre, die an einer Zeichenfolge mit dem gleichen Inhalt an einer beliebigen Stelle angebracht wurde, jede Instanz des Strings in der Anwendung. Deshalb ist es am Besten, ein privates oder geschütztes Member zu sperren, dass nicht internalisiert ist. Einige Klassen bieten Member, die speziell fürs Sperren vorgesehen sind. Der <xref:System.Array>-Typ stellt z.B. <xref:System.Array.SyncRoot%2A> bereit. Viele Auflistungstypen stellen auch einen `SyncRoot`-Member bereit.  
   
- Weitere Informationen zu den `SyncLock` -Anweisung finden Sie unter den folgenden Themen:  
+ Weitere Informationen zur `SyncLock`-Anweisung finden Sie unter den folgenden Themen:  
   
 -   [SyncLock-Anweisung](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>Monitore  
- Wie die `SyncLock` Schlüsselwort Monitore verhindern von Codeblöcken gleichzeitige Ausführung von mehreren Threads. Die <xref:System.Threading.Monitor.Enter%2A>Methode kann nur ein Thread in die folgenden Anweisungen fortgesetzt; alle anderen Threads werden blockiert, bis der Ausführende Thread <xref:System.Threading.Monitor.Exit%2A>.</xref:System.Threading.Monitor.Exit%2A> ruft</xref:System.Threading.Monitor.Enter%2A> Dies ist vergleichbar mit dem `SyncLock` Schlüsselwort. Zum Beispiel:  
+ Monitore verhindern, so wie das Schlüsselwort `SyncLock`, dass Codeblöcke von mehreren Threads gleichzeitig ausgeführt werden. Die Methode <xref:System.Threading.Monitor.Enter%2A> ermöglicht es einem einzigen Thread, mit den folgenden Anweisungen fortzufahren, bis der auszuführende Thread <xref:System.Threading.Monitor.Exit%2A> aufruft. Dies ist vergleichbar mit dem Einsatz des Schlüsselworts `SyncLock`. Zum Beispiel:  
   
 ```vb  
 SyncLock x  
@@ -79,7 +71,7 @@ SyncLock x
 End SyncLock  
 ```  
   
- Dies ist äquivalent zu:  
+ Das entspricht:  
   
 ```vb  
 Dim obj As Object = CType(x, Object)  
@@ -91,16 +83,16 @@ Finally
 End Try  
 ```  
   
- Mithilfe der `SyncLock` Schlüsselwort ist im allgemeinen Verwendung der <xref:System.Threading.Monitor>direkte, sowohl da `SyncLock` ist präziser, und da `SyncLock` wird sichergestellt, dass der zugrunde liegenden Monitor freigegeben wird, selbst wenn der geschützte Code eine Ausnahme auslöst.</xref:System.Threading.Monitor> Dies erfolgt mit der `Finally` -Schlüsselwort, die ausgeführt werden, den zugehörigen Codeblock unabhängig davon, ob eine Ausnahme ausgelöst wird.  
+ Die Verwendung des Schlüsselworts `SyncLock` statt des direkten Gebrauchs der Klasse <xref:System.Threading.Monitor> wird allgemein bevorzugt, da `SyncLock` präziser ist und `SyncLock` sicherstellt, dass der zugrunde liegende Monitor freigegeben wird, auch wenn der geschützte Code eine Ausnahme auslöst. Dies erfolgt mit dem Schlüsselwort `Finally`, das seinen zugehörigen Codeblock ausführt, egal ob eine Ausnahme ausgelöst wird.  
   
 ## <a name="synchronization-events-and-wait-handles"></a>Synchronisierungsereignisse und Wait-Handles  
- Mithilfe einer Sperre oder einem Monitor wird verhindert, dass die gleichzeitige Ausführung von Codeblöcken Thread unterschieden, aber diese Konstrukte lassen sich nicht auf einen Thread ein Ereignis in einen anderen zu kommunizieren. Dies erfordert *Synchronisierungsereignisse*, sind Objekte, die einen der beiden Zustände haben signalisiert "und" nicht signalisiert ", können, zu aktivieren und Anhalten von Threads verwendet werden. Threads können vom wird versucht, auf die Synchronisation warten, die zwischen unterbrochen, und durch Ändern des Ereignisstatus signalisiert aktiviert werden können. Wenn ein Thread versucht, auf ein Ereignis zu warten, das bereits signalisiert wird, wird der Thread ohne Verzögerung fortgesetzt.  
+ Das Verwenden einer Sperre oder eines Monitors ist nützlich, um die gleichzeitige Ausführung einer threadempfindlichen Codesperre zu verhindern. Jedoch erlauben diese Konstrukte nicht, dass ein Thread ein Ereignis an einen anderen weitergibt. Dafür sind *Synchronisierungsereignisse* erforderlich, die Objekte sind, die aus einem oder zwei Zuständen – signalisiert und nicht signalisiert – bestehen, die zum Aktivieren und Anhalten von Threads verwendet werden können. Threads können angehalten werden, indem man sie auf ein nicht signalisiertes Synchronisierungsereignis warten lässt, und können aktiviert werden, indem der Ereigniszustand in „signalisiert“ geändert wird. Wenn ein Thread versucht, auf ein Ereignis zu warten, das bereits signalisiert ist, wird der Thread ohne Verzögerung fortgesetzt.  
   
- Es gibt zwei Arten von Synchronisierungsereignisse: <xref:System.Threading.AutoResetEvent>, und <xref:System.Threading.ManualResetEvent>.</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent> Unterscheiden sich nur in <xref:System.Threading.AutoResetEvent>ändert sich von signalisiert zu nicht signalisierten automatisch es jeweils einen Thread aktiviert.</xref:System.Threading.AutoResetEvent> Dagegen eine <xref:System.Threading.ManualResetEvent>kann eine beliebige Anzahl von Threads über den signalisierten Zustand zu aktivieren und wird nur in den signalisierten Zustand über, wenn die <xref:System.Threading.EventWaitHandle.Reset%2A>wird aufgerufen.</xref:System.Threading.EventWaitHandle.Reset%2A> </xref:System.Threading.ManualResetEvent>  
+ Es gibt zwei Arten von Synchronisierungsereignissen: <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent>. Sie unterscheiden sich nur dadurch, dass <xref:System.Threading.AutoResetEvent> jedes Mal, wenn es einen Thread aktiviert, automatisch von „signalisiert“ auf „nicht signalisiert“ wechselt. Dagegen erlaubt <xref:System.Threading.ManualResetEvent> es, eine beliebige Anzahl von Threads über den signalisierten Zustand zu aktivieren, und es wird nur in den signalisierten Zustand zurückkehren, wenn die Methode <xref:System.Threading.EventWaitHandle.Reset%2A> aufgerufen wird.  
   
- Threads können erfolgen, und Warten auf Ereignisse durch Aufrufen einer der Wait-Methoden, wie z. B. <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, oder <xref:System.Threading.WaitHandle.WaitAll%2A>.</xref:System.Threading.WaitHandle.WaitAll%2A> </xref:System.Threading.WaitHandle.WaitAny%2A> </xref:System.Threading.WaitHandle.WaitOne%2A> <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>bewirkt, dass der Thread wartet, bis ein einzelnes Ereignis signalisiert wird, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>blockiert einen Thread, bis ein oder mehrere angegebene Ereignisse signalisiert werden, und <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>den Thread blockiert, bis alle angegebenen Ereignisse signalisiert werden.</xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> </xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName></xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> Ein Ereignis wird signalisiert, wenn seine <xref:System.Threading.EventWaitHandle.Set%2A>wird aufgerufen.</xref:System.Threading.EventWaitHandle.Set%2A>  
+ Threads können zum Warten auf Ereignisse durch Aufrufen einer der Wait-Methoden, wie <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> oder <xref:System.Threading.WaitHandle.WaitAll%2A>, veranlasst werden. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> bewirkt, dass der Thread wartet, bis ein einzelnes Ereignis signalisiert wird, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> blockiert einen Thread, bis ein oder mehrere angegebene Ereignisse signalisiert werden, und <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> blockiert den Thread, bis alle angegebenen Ereignisse signalisiert werden. Ein Ereignis wird signalisiert, wenn seine Methode <xref:System.Threading.EventWaitHandle.Set%2A> aufgerufen wird.  
   
- Im folgenden Beispiel ein Thread erstellt und gestartet, indem die `Main` Funktion. Der neue Thread wartet auf ein Ereignis mit der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode.</xref:System.Threading.WaitHandle.WaitOne%2A> Der Thread wird angehalten, bis das Ereignis durch den primären Thread signalisiert wird, die ausgeführt wird, die `Main` Funktion. Sobald das Ereignis signalisiert wird, gibt die zusätzlichen Threads zurück. In diesem Fall, da das Ereignis nur entweder für einen Thread-Aktivierung verwendet wird die <xref:System.Threading.AutoResetEvent>oder <xref:System.Threading.ManualResetEvent>Klassen verwendet werden.</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent>  
+ Im folgenden Beispiel wird ein Thread von der Funktion `Main` erstellt und gestartet. Der neue Thread wartet mithilfe der Methode <xref:System.Threading.WaitHandle.WaitOne%2A> auf ein Ereignis. Der Thread wird angehalten, bis das Ereignis durch den primären Thread, der die Funktion `Main` ausführt, signalisiert wird. Sobald das Ereignis signalisiert wird, kommt der Hilfsthread zurück. In diesem Fall, da das Ereignis nur für eine Thread-Aktivierung verwendet wird, können entweder die Klassen <xref:System.Threading.AutoResetEvent> oder <xref:System.Threading.ManualResetEvent> verwendet werden.  
   
 ```vb  
 Imports System.Threading  
@@ -131,42 +123,42 @@ End Module
 ```  
   
 ## <a name="mutex-object"></a>Mutex-Objekt  
- Ein *Mutex* ähnelt einem Monitor; es wird verhindert, dass die gleichzeitige Ausführung eines Codeblocks durch mehrere Threads gleichzeitig. Tatsächlich ist der Name "Mutex" eine Kurzform des Begriffs "sich gegenseitig ausschließende." Im Gegensatz zu Monitoren kann jedoch ein Mutex verwendet werden, prozessübergreifend Threads zu synchronisieren. Ein Mutex wird durch die <xref:System.Threading.Mutex>Klasse</xref:System.Threading.Mutex> dargestellt.  
+ Ein *Mutex* ähnelt einem Monitor; es wird verhindert, dass die gleichzeitige Ausführung eines Codeblocks durch mehrere Threads zur selben Zeit erfolgt. Tatsächlich ist der Name „Mutex“ eine Kurzform der Bezeichnung „mutually exclusive“ (einander ausschließend). Im Gegensatz zu Monitoren kann ein Mutex jedoch verwendet werden, um Threads prozessübergreifend zu synchronisieren. Ein Mutex wird durch die Klasse <xref:System.Threading.Mutex> dargestellt.  
   
- Ein Mutex wird aufgerufen, wenn für die prozessübergreifende Synchronisierung verwendet wird, eine *benannten Mutex* daran, dass es in einer anderen Anwendung verwendet wird und daher nicht mithilfe einer globalen oder statischen Variablen gemeinsam genutzt werden kann. Es muss ein Name zugewiesen werden, so, dass beide Anwendungen dieselbe Mutex-Objekt zugreifen können.  
+ Wenn ein Mutex für prozessübergreifende Synchronisierungen verwendet wird, wird es als *benanntes Mutex* bezeichnet, da es in einer anderen Anwendung verwendet werden soll, und deshalb nicht durch eine globale oder statische Variable geteilt werden kann. Es muss benannt werden, sodass beide Anwendungen auf das gleiche Mutex-Objekt zugreifen können.  
   
- Obwohl ein Mutex für die prozessinterne Threadsynchronisierung verwendet werden kann, <xref:System.Threading.Monitor>wird im Allgemeinen empfohlen, da Monitore speziell für .NET Framework entwickelt wurden und daher eine bessere Nutzung der Ressourcen.</xref:System.Threading.Monitor> Im Gegensatz dazu die <xref:System.Threading.Mutex>ist ein Wrapper für ein Win32-Konstrukt.</xref:System.Threading.Mutex> Zwar leistungsstärker als ein Monitor, benötigt ein Mutex Interop-Übergänge, die rechenintensiver sind als die von der <xref:System.Threading.Monitor>Klasse.</xref:System.Threading.Monitor> Ein Beispiel für die Verwendung eines Mutex, finden Sie unter [Mutexe](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2).  
+ Obwohl ein Mutex für prozessübergreifende Threadsynchronisierung verwendet werden kann, wird die Verwendung von <xref:System.Threading.Monitor> generell bevorzugt, da Monitore speziell für .NET Framework entwickelt wurden und deshalb Ressourcen besser verwenden. Im Gegensatz dazu ist die Klasse <xref:System.Threading.Mutex> ein Wrapper für ein Win32-Konstrukt. Obwohl es leistungsstärker als ein Monitor ist, braucht ein Mutex Interop-Übergänge, die rechenintensiver sind, als diejenigen, die von der Klasse <xref:System.Threading.Monitor> benötigt werden. Ein Beispiel für die Verwendung eines Mutex finden Sie unter [Mutexe](../../../../standard/threading/mutexes.md).  
   
 ## <a name="interlocked-class"></a>Interlocked-Klasse  
- Sie können die Methoden der die <xref:System.Threading.Interlocked>Klasse, um Probleme zu vermeiden, die auftreten können, wenn mehrere Threads gleichzeitig versuchen, aktualisieren oder den gleichen Wert vergleichen.</xref:System.Threading.Interlocked> Die Methoden dieser Klasse können Sie problemlos erhöhen, verringern, austauschen und Vergleichen von Werten aus einem beliebigen Thread.  
+ Sie können die Methoden der Klasse <xref:System.Threading.Interlocked> verwenden, um Probleme zu verhindern, die auftreten, wenn mehrere Threads gleichzeitig versuchen, den selben Wert zu aktualisieren oder zu vergleichen. Mit den Methoden dieser Klasse können Sie auf sichere Weise Werte eines beliebigen Threads erhöhen, verringern, tauschen und vergleichen.  
   
 ## <a name="readerwriter-locks"></a>ReaderWriter-Sperren  
- In einigen Fällen empfiehlt es sich um eine Ressource zu sperren, nur, wenn Daten geschrieben werden und mehrere Clients gleichzeitig Daten lesen, wenn Daten nicht aktualisiert werden. Die <xref:System.Threading.ReaderWriterLock>-Klasse gewährleistet exklusiven Zugriff auf eine Ressource, während ein Thread die Ressource ändert, erlaubt jedoch einen nicht exklusiven Zugriff beim Lesen der Ressource.</xref:System.Threading.ReaderWriterLock> ReaderWriter-Sperren sind eine nützliche Alternative zu exklusiven Sperren, die andere Threads wartet, selbst wenn diese Threads keine Daten aktualisieren müssen.  
+ In einigen Fällen möchten Sie möglicherweise eine Ressource nur dann sperren, wenn Daten gerade geschrieben werden, und mehreren Clients erlauben, gleichzeitig Daten zu lesen, wenn sie nicht aktualisiert werden. Die Klasse <xref:System.Threading.ReaderWriterLock> gewährt exklusiven Zugriff auf eine Ressource, während ein Thread die Ressource ändert, erlaubt jedoch einen nicht exklusiven Zugriff beim Lesen der Ressource. Reader/Writer-Sperren sind eine nützliche Alternative zu exklusiven Sperren, die andere Threads warten lassen, selbst wenn diese Threads keine Daten aktualisieren müssen.  
   
 ## <a name="deadlocks"></a>Deadlocks  
- Threadsynchronisierung in Multithreadanwendungen sehr nützlich ist, aber es besteht immer die Gefahr einer `deadlock`, bei dem mehrere Threads aufeinander warten und die Anwendung zu unterbrechen. Ein Deadlock ist analog zu einer Situation, in der Autos an eine vier-Wege-Stop beendet werden, und jede Person wartet auf den anderen wechseln. Vermeiden von Deadlocks ist wichtig. der Schlüssel ist eine sorgfältige Planung. Sie können häufig Deadlocks Vorhersagen von Multithreadanwendungen abbilden, bevor Sie mit dem Programmieren beginnen.  
+ Threadsynchronisierung ist in Multithreadanwendungen unabdingbar; es besteht jedoch immer die Gefahr, eine `deadlock` zu erzeugen, bei dem mehrere Threads aufeinander warten, und die Anwendung unterbrochen wird. Ein Deadlock kann mit einer Situation verglichen werden, bei der Autos an einer Kreuzung halten und jede Person darauf wartet, dass die andere losfährt. Es ist wichtig, Deadlocks zu vermeiden; der Schlüssel liegt in der sorgfältigen Planung. Sie können häufig Deadlock-Situationen vorhersehen, indem Sie Multithreadanwendungen abbilden, bevor Sie mit dem Programmieren beginnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Thread></xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A></xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A></xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A></xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A></xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A></xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor></xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent></xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked></xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle></xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle></xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [SyncLock-Anweisung](../../../../visual-basic/language-reference/statements/synclock-statement.md)   
- [Mutexe](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
- @System.Threading.Monitor   
- [Interlocked-Vorgänge](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [Synchronisieren von Daten für Multithreading](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [SyncLock-Anweisung](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+ [Mutexe](../../../../standard/threading/mutexes.md)  
+ [Interlocked-Vorgänge](../../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+ [Datensynchronisierung für Multithreading](../../../../standard/threading/synchronizing-data-for-multithreading.md)

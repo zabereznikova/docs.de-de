@@ -1,46 +1,29 @@
 ---
-title: Option Infer-Anweisung | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Option Infer-Anweisung
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
 - vb.Infer
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- Option Infer statement
-- Infer keyword
-- declaring variables, inferred
+- Option Infer statement [Visual Basic]
+- Infer keyword [Visual Basic]
+- declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6074ad44b94c80f275af562edef2dcd1173c0c3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -65,33 +48,33 @@ Option Infer { On | Off }
   
  In der folgenden Abbildung ist `Option Infer` eingeschaltet. Die Variable in der Deklaration `Dim someVar = 2` wird als ganze Zahl durch Typrückschluss deklariert.  
   
- ![IntelliSense-Ansicht der Deklaration.](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![IntelliSense-Ansicht der Deklaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "OptionInferAsInteger")  
 IntelliSense, wenn die Option Infer aktiviert ist.  
   
- In der folgenden Abbildung ist `Option Infer` deaktiviert. Die Variable in der Deklaration `Dim someVar = 2` ist durch Typrückschluss als `Object` deklariert. In diesem Beispiel die **Option Strict** eingestellt sind **aus** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+ In der folgenden Abbildung ist `Option Infer` deaktiviert. Die Variable in der Deklaration `Dim someVar = 2` ist durch Typrückschluss als `Object` deklariert. In diesem Beispiel wird die **Option Strict** eingestellt **deaktiviert** auf die [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![IntelliSense-Ansicht der Deklaration.](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![IntelliSense-Ansicht der Deklaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "OptionInferAsObject")  
 IntelliSense, wenn Option Infer deaktiviert ist  
   
 > [!NOTE]
->  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Führt Operationen mit Bezeichnung *Boxing* und *unboxing* zum Konvertieren zwischen einer `Object` und ein Werttyp, der Ausführung langsamer macht. Informationen zu Boxing und unboxing finden Sie unter der [Visual Basic Language Specification](../../../visual-basic/reference/language-specification.md).  
+>  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]führt Vorgänge aufgerufen *Boxing* und *unboxing* zum Konvertieren zwischen einer `Object` und einen Werttyp, wodurch Ausführung langsamer. Informationen zu Boxing und unboxing finden Sie unter der [Visual Basic-Sprachspezifikation](../../../visual-basic/reference/language-specification/index.md).
   
  Typrückschluss findet auf Prozedurebene Anwendung und nicht außerhalb einer Prozedur in einer Klasse, Struktur, Modul oder Schnittstelle.  
   
  Weitere Informationen finden Sie unter [lokalen Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Wenn eine Option Infer-Anweisung nicht vorhanden ist  
- Enthält der Quellcode kein `Option Infer` -Anweisung, die **Option Infer** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet wird. Wenn der Befehlszeile-Compiler verwendet wird, die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption verwendet wird.  
+ Wenn der Quellcode nicht enthält ein `Option Infer` -Anweisung, die **Option Infer** festlegen für die [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet wird. Wenn Sie der Befehlszeilencompiler verwendet wird, die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption verwendet wird.  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Festlegen der Option Infer in der IDE  
   
-1.  In **Projektmappen-Explorer**, wählen Sie ein Projekt. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften**. Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen finden Sie unter [NIB: Verwalten von Projekteigenschaften mit dem Projekt-Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
-2.  Klicken Sie auf die **Kompilieren** Registerkarte.  
+2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
   
 3.  Legen Sie den Wert der **Option infer** Feld.  
   
- Wenn Sie ein neues Projekt erstellen die **Option Infer** auf der **Kompilieren** Registerkarte auf festgelegt ist die **Option Infer** festlegen in der **VB-Standard** (Dialogfeld). Für den Zugriff auf die **VB-Standard** Dialogfelds die **Tools** Menü klicken Sie auf **Optionen**. In der **Optionen** Dialogfeld erweitern Sie **Projekte und Projektmappen**, und klicken Sie dann auf **VB-Standard**. Die ursprüngliche Standardeinstellung in **VB-Standard** ist `On`.  
+ Bei der Erstellung eines neuen Projekts die **Option Infer** festlegen, auf die **Kompilieren** auf die Registerkarte "festgelegt ist die **Option Infer** festlegen in der **VB Defaults** Das Dialogfeld. Für den Zugriff auf die **VB Defaults** Dialogfeld auf die **Tools** Menü klicken Sie auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB-Standard** ist `On`.  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Festlegen der Option Infer in der Befehlszeile.  
   
@@ -110,19 +93,19 @@ IntelliSense, wenn Option Infer deaktiviert ist
 ## <a name="example"></a>Beispiel  
  Die folgenden Beispiele veranschaulichen, wie die `Option Infer`-Anweisung den lokalen Typrückschluss ermöglicht.  
   
- [!code-vb[VbVbalrTypeInference&6;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, dass der Laufzeittyp abweichen kann, wenn eine Variable als ein `Object` gekennzeichnet ist.  
   
- [!code-vb[VbVbalrTypeInference&#11;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Visual Basic Standard, Projekte, Optionen (Dialogfeld)](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)   
- [/ optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
+ [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
+ [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

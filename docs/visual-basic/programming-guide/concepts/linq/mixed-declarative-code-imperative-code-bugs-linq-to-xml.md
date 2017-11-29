@@ -1,39 +1,30 @@
 ---
-title: Fehler durch Vermischung deklarativen Code imperativem Code (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation
+title: Fehler durch Vermischung deklarativen Code imperativem Code (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Fehler durch Vermischung deklarativem und imperativem Code (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] enthält verschiedene Methoden, mit denen Sie eine XML-Struktur direkt ändern können. Sie können Elemente hinzufügen, Elemente löschen, den Inhalt eines Elements ändern, Attribute hinzufügen usw. Diese Programmierschnittstelle wird in beschrieben [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Wenn Sie eine der Achsen, z. B. durchlaufen werden <xref:System.Xml.Linq.XContainer.Elements%2A>, und ändern Sie die XML-Struktur beim Durchlaufen der Achse, Sie können mit einer Reihe eigenartiger Fehler.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält verschiedene Methoden, mit denen Sie eine XML-Struktur direkt ändern können. Sie können Elemente hinzufügen, Elemente löschen, den Inhalt eines Elements ändern, Attribute hinzufügen usw. Diese Programmierschnittstelle wird in der beschriebenen [Ändern von XML-Strukturen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Wenn Sie eine Iteration durch eine der Achsen, z. B. <xref:System.Xml.Linq.XContainer.Elements%2A> durchlaufen, und Sie dabei die XML-Struktur ändern, kann es zu einer Reihe eigenartiger Fehler kommen.  
   
  Dieses Problem wird manchmal als "Halloween-Problem" bezeichnet.  
   
 ## <a name="definition-of-the-problem"></a>Definition des Problems  
- Wenn Sie unter Verwendung von LINQ Code schreiben, der eine Auflistung durchläuft, schreiben Sie Code in einem deklarativen Stil. Es ist, beschreibt *was* Sie möchten, statt, die *wie* erledigt abgerufen werden soll. Wenn Sie Code schreiben würden, der 1.) das erste Element abruft, 2.) das Element auf bestimmte Bedingungen testet, 3.) das Element modifiziert und 4.) das Element dann wieder in die Liste setzt, wäre dies imperativer Code. Veranlassen Sie, dass den Computer *wie* zu tun, was geschehen soll.  
+ Wenn Sie unter Verwendung von LINQ Code schreiben, der eine Auflistung durchläuft, schreiben Sie Code in einem deklarativen Stil. Dabei beschreiben Sie eher, *was* Sie möchten, statt zu beschreiben, *wie* Sie es möchten. Wenn Sie Code schreiben würden, der 1.) das erste Element abruft, 2.) das Element auf bestimmte Bedingungen testet, 3.) das Element modifiziert und 4.) das Element dann wieder in die Liste setzt, wäre dies imperativer Code. Sie würden dem Computer damit sagen, *wie* er die von Ihnen gestellte Aufgabe ausführen soll.  
   
  Wenn nun diese Formen von Code in ein und derselben Operation miteinander vermischt werden, treten Probleme auf. Nehmen wir einmal die folgende Situation:  
   
@@ -66,7 +57,7 @@ Next
   
  Dieser Code führt zu einer Endlosschleife. Die `foreach`-Anweisung durchläuft die `Elements()`-Achse und fügt dabei dem `doc`-Element neue Elemente hinzu. Das Ergebnis ist, dass die Anweisung auch die gerade hinzugefügten Elemente durchläuft und bei jedem Durchlaufen der Schleife neue Objekte zuweist. Irgendwann wird der gesamte verfügbare Arbeitsspeicher dafür in Beschlag genommen.  
   
- Sie können dieses Problem beheben, indem Sie die Auflistung in Speicher mithilfe von Pull die <xref:System.Linq.Enumerable.ToList%2A>Standardabfrageoperator, wie folgt:</xref:System.Linq.Enumerable.ToList%2A>  
+ Dieses Problem können Sie beheben, indem Sie die Auflistung mit dem <xref:System.Linq.Enumerable.ToList%2A>-Standardabfrageoperator in den Arbeitsspeicher ziehen. Dies ist im Folgenden dargestellt:  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Die Lösung darin, rufen Sie <xref:System.Linq.Enumerable.ToList%2A>auf die Auflistung wie folgt zu materialisieren:</xref:System.Linq.Enumerable.ToList%2A>  
+ Auch hier besteht die Lösung darin, <xref:System.Linq.Enumerable.ToList%2A> aufzurufen, um die Auflistung wie folgt zu materialisieren:  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- Alternativ können Sie die Iteration ganz eliminieren durch Aufrufen von <xref:System.Xml.Linq.XElement.RemoveAll%2A>auf dem übergeordneten Element:</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ Alternativ dazu können Sie die Iteration ganz eliminieren, indem Sie für das übergeordnete Element <xref:System.Xml.Linq.XElement.RemoveAll%2A> aufrufen:  
   
 ```vb  
 Dim root As XElement = _  
@@ -196,4 +187,3 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

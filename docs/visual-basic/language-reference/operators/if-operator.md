@@ -1,76 +1,73 @@
 ---
-title: "If Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.IfOperator"
-  - "IfOperator"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ternary operators"
-  - "conditional execution"
-  - "If expressions [Visual Basic]"
-  - "conditional operator [Visual Basic]"
-  - "If Operator [Visual Basic]"
+title: If-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.IfOperator
+- IfOperator
+helpviewer_keywords:
+- ternary operators [Visual Basic]
+- conditional execution
+- If expressions [Visual Basic]
+- conditional operator [Visual Basic]
+- If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# If Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Verwendet eine Kurzschlussauswertung, um einen von zwei Werten in Abhängigkeit von Bedingungen zurückzugeben.  Der Operator `If` kann mit drei oder zwei Argumenten aufgerufen werden.  
+# <a name="if-operator-visual-basic"></a>If-Operator (Visual Basic)
+Verwendet kurzschlussauswertung bedingt einen von zwei Werten zurück. Die `If` Operator kann mit drei Argumenten oder mit zwei Argumenten aufgerufen werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## Aufruf des Operators 'If' mit drei Argumenten  
- Wenn `If` mit drei Argumenten aufgerufen wird, muss die Auswertung des ersten Arguments einen Wert ergeben, der in einen `Boolean` umgewandelt werden kann.  Dieser `Boolean`\-Wert legt fest, welches der anderen beiden Argumente ausgewertet und zurückgegeben wird.  Die folgende Liste gilt nur, wenn der Operator `If` mit drei Argumenten aufgerufen wird.  
+## <a name="if-operator-called-with-three-arguments"></a>Wenn-Operator mit drei Argumenten aufgerufen.  
+ Wenn `If` heißt mithilfe von drei Argumenten muss das erste Argument ausgewertet werden, ein Wert, der umgewandelt werden kann eine `Boolean`. Dass `Boolean` Wert wird bestimmt, welche der beiden anderen Argumente ausgewertet und zurückgegeben wird. Die folgende Liste gilt nur, wenn die `If` -Operator mit drei Argumenten aufgerufen wird.  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`argument1`|Erforderlich.  `Boolean`.  Bestimmt, welches der anderen Argumente ausgewertet und zurückgegeben wird.|  
-|`argument2`|Erforderlich.  `Object`.  Wird ausgewertet und zurückgegeben, wenn die Auswertung von `argument1` `True` ergibt.|  
-|`argument3`|Erforderlich.  `Object`.  Ausgewertet und zurückgegeben, wenn auf `argument1``False` ausgewertet wird oder wenn `argument1` eine Variable [Auf NULL festlegbare](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` ist, die mit [Nichts](../../../visual-basic/language-reference/nothing.md)ergibt.|  
+|---|---|  
+|`argument1`|Erforderlich. `Boolean`. Bestimmt, welche Argumente um auszuwerten und zurückzugeben.|  
+|`argument2`|Erforderlich. `Object`. Ausgewertet und zurückgegeben, wenn `argument1` ergibt `True`.|  
+|`argument3`|Erforderlich. `Object`. Ausgewertet und zurückgegeben, wenn `argument1` ergibt `False` oder, wenn `argument1` ist ein [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` Variable, der ergibt [nichts](../../../visual-basic/language-reference/nothing.md).|  
   
- Ein Operator `If`, der mit drei Argumenten aufgerufen wird, funktioniert wie eine `IIf`\-Funktion, mit dem Unterschied, dass die Kurzschlussauswertung verwendet wird.  Eine `IIf`\-Funktion wertet stets alle drei Argumente aus, während ein Operator `If` mit drei Argumenten nur zwei davon auswertet.  Das erste Argument von `If` wird ausgewertet, und das Ergebnis wird in einen `Boolean`\-Wert umgewandelt: `True` oder `False`.  Wenn der Wert `True` ist, wird `argument2` ausgewertet und der Wert zurückgegeben. `argument3` wird jedoch nicht ausgewertet.  Wenn der Wert des `Boolean`\-Ausdrucks `False` ist, wird `argument3` ausgewertet und der Wert zurückgegeben. In diesem Fall wird `argument2` nicht ausgewertet.  In den folgenden Beispielen wird die Verwendung von `If` mit drei Argumenten veranschaulicht:  
+ Ein `If` Operator, der mit drei Argumenten aufgerufen wird, funktioniert wie ein `IIf` Funktion identisch, verwendet jedoch kurzschlussauswertung. Ein `IIf` Funktion wertet immer alle drei Argumente, während ein `If` Operator, der drei Argumente ausgewertet werden nur zwei davon. Das erste `If` Argument ausgewertet wird und das Ergebnis wird umgewandelt in ein `Boolean` Wert `True` oder `False`. Wenn der Wert `True`, `argument2` wird ausgewertet, und sein Wert wird zurückgegeben, aber `argument3` wird nicht ausgewertet. Wenn der Wert von der `Boolean` Ausdruck ist `False`, `argument3` wird ausgewertet, und sein Wert wird zurückgegeben, aber `argument2` wird nicht ausgewertet. Die folgenden Beispiele veranschaulichen die Verwendung von `If` drei Argumente werden verwendet, wenn:  
   
  [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
   
- Im folgenden Beispiel wird die Bedeutung der Kurzschlussauswertung veranschaulicht.  Im Beispiel werden zwei Versuche dargestellt, die Variable `number` durch die Variable `divisor` zu teilen, es sei denn, `divisor` hat den Wert 0 \(null\).  In diesem Fall soll 0 zurückgegeben werden, und die Division soll nicht durchgeführt werden, da dies einen Laufzeitfehler zur Folge hätte.  Da der `If`\-Ausdruck die Kurzschlussauswertung verwendet, wertet er, je nach Wert des ersten Arguments, entweder das zweite oder das dritte Argument aus.  Wenn das Ergebnis des ersten Arguments True ist, ist der Divisor nicht null. Dann kann das zweite Argument ausgewertet und die Division ausgeführt werden.  Wenn das erste Argument False ergibt, wird nur das dritte Argument ausgewertet und 0 \(null\) zurückgegeben.  Wenn der Divisor 0 ist, wird daher nicht versucht, die Division durchzuführen, und es tritt kein Fehler auf.  Da `IIf` keine Kurzschlussauswertung verwendet, wird das zweite Argument auch dann ausgewertet, wenn das erste Argument den Wert False hat.  Dies verursacht einen Laufzeitfehler aufgrund einer Division durch 0.  
+ Das folgende Beispiel veranschaulicht den Wert des kurzschlussauswertung. Das Beispiel zeigt zwei Versuche zum Unterteilen der Variable `number` Variable `divisor` außer bei `divisor` 0 (null). In diesem Fall wird 0 zurückgegeben werden soll, und nicht versucht sollte die Division ausgeführt, da ein Fehler zur Laufzeit führen würde. Da die `If` ausdrucksverwendungen kurzschlussauswertung ist, wird er der zweite oder das dritte Argument, abhängig vom Wert des ersten Arguments ausgewertet. Wenn das erste Argument auf "true" festgelegt ist, der Divisor ist nicht 0 (null) und ist das zweite Argument ausgewertet, und führen die Division sicher. Wenn das erste Argument auf "false" festgelegt ist, wird nur das dritte Argument wird ausgewertet, und eine 0 zurückgegeben. Wenn der Divisor 0 ist, ist daher kein Versuch unternommen, Durchführung der Division und tritt kein Fehler. Aber da `IIf` verwendet keine kurzschlussauswertung, das zweite Argument ausgewertet wird, selbst wenn das erste Argument auf "false" festgelegt ist. Dies bewirkt, dass ein Laufzeitfehler aufgrund einer Division durch Null.  
   
  [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
   
-## Aufruf des Operators 'If' mit zwei Argumenten  
- Das erste Argument von `If` kann auch weggelassen werden.  Damit kann der Operator auch mit zwei Argumenten aufgerufen werden.  Die folgende Liste gilt nur, wenn der Operator `If` mit zwei Argumenten aufgerufen wird.  
+## <a name="if-operator-called-with-two-arguments"></a>Wenn der Operator mit zwei Argumenten aufgerufen.  
+ Das erste Argument für `If` kann ausgelassen werden. Dadurch wird den Operator mit zwei Argumenten aufgerufen werden sollen. Die folgende Liste gilt nur, wenn die `If` Operator mit zwei Argumenten aufgerufen wird.  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`argument2`|Erforderlich.  `Object`.  Muss ein Referenztyp oder ein Typ, der NULL\-Werte zulässt, sein.  Wird ausgewertet und zurückgegeben, wenn die Auswertung etwas anderes als `Nothing` ergibt.|  
-|`argument3`|Erforderlich.  `Object`.  Wird ausgewertet und zurückgegeben, wenn die Auswertung von `argument2` `Nothing` ergibt.|  
+|---|---|  
+|`argument2`|Erforderlich. `Object`. Ein Verweis oder die nullable-Typ muss sein. Ausgewertet und zurückgegeben, wenn alles andere als ergibt die Auswertung `Nothing`.|  
+|`argument3`|Erforderlich. `Object`. Ausgewertet und zurückgegeben, wenn `argument2` ergibt `Nothing`.|  
   
- Wenn das `Boolean`\-Argument weggelassen wird, muss das erste Argument ein Referenztyp oder ein Typ, der NULL\-Werte zulässt, sein.  Wenn die Auswertung des ersten Arguments `Nothing` ergibt, wird der Wert des zweiten Arguments zurückgegeben.  In allen anderen Fällen wird der Wert des ersten Arguments zurückgegeben.  Das folgende Beispiel zeigt die Funktionsweise dieser Auswertung.  
+ Wenn die `Boolean` Argument ausgelassen wird, wird das erste Argument muss ein Verweis oder die nullable-Typ sein. Wenn das erste Argument ergibt `Nothing`, der Wert des zweiten Arguments zurückgegeben wird. In allen anderen Fällen wird der Wert des ersten Arguments zurückgegeben. Das folgende Beispiel veranschaulicht die Funktionsweise dieser Auswertung.  
   
  [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Interaction.IIf%2A>   
- [Nullable Value Types](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
+ [Auf NULL festlegbare Werttypen](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Nothing](../../../visual-basic/language-reference/nothing.md)

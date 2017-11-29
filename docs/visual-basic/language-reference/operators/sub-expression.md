@@ -1,73 +1,72 @@
 ---
-title: "Sub Expression (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lambda expressions [Visual Basic], sub expression"
-  - "Sub Expression [Visual Basic]"
-  - "subroutines [Visual Basic], sub expressions"
+title: "Teilausdruck (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- lambda expressions [Visual Basic], sub expression
+- Sub Expression [Visual Basic]
+- subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sub Expression (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Deklariert die Parameter und den Code, die einen Lambda\-Unterroutinenausdruck definieren.  
+# <a name="sub-expression-visual-basic"></a>Teilausdruck (Visual Basic)
+Deklariert die Parameter und den Code, der einen Unterroutine Lambda-Ausdruck definieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-Sub ( [ parameterlist ] ) statement  
+Sub ( [ parameterlist ] ) statement  
 - or -  
-Sub ( [ parameterlist ] )  
-  [ statements ]  
+Sub ( [ parameterlist ] )  
+  [ statements ]  
 End Sub  
-  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`parameterlist`|Optional.  Eine Liste der Namen von lokalen Variablen, die die Parameter der Prozedur darstellen.  Die Klammern müssen auch dann vorhanden sein, wenn die Liste leer ist.  Weitere Informationen finden Sie unter [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Erforderlich.  Eine einzelne Anweisung.|  
-|`statements`|Erforderlich.  Eine Liste mit Anweisungen.|  
+|---|---|  
+|`parameterlist`|Dies ist optional. Eine Liste der Namen lokaler Variablen, die die Parameter der Prozedur darstellen. Die Klammern müssen vorhanden sein, auch wenn die Liste leer ist. Weitere Informationen finden Sie unter [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`statement`|Erforderlich. Eine einzelne Anweisung.|  
+|`statements`|Erforderlich. Eine Liste von Anweisungen.|  
   
-## Hinweise  
- Ein *Lambda\-Ausdruck* ist eine Unterroutine, die nicht über einen Namen verfügt und die eine oder mehrere Anweisungen ausführt.  Sie können einen Lambda\-Ausdruck überall dort verwenden, wo Sie auch einen Delegattyp verwenden können, außer als Argument für `RemoveHandler`.  Weitere Informationen zu Delegaten und der Verwendung von Lambda\-Ausdrücken mit Delegaten, finden Sie unter [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) und [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+## <a name="remarks"></a>Hinweise  
+ Ein *Lambda-Ausdruck* Unterroutine vorstellen, die nicht über einen Namen verfügt ist und ausgeführt wird, eine oder mehrere Anweisungen. Sie können einen Lambda-Ausdruck an einer beliebigen Stelle verwenden, dass Sie einen Delegattyp, außer als Argument verwenden können `RemoveHandler`. Weitere Informationen über Delegaten und die Verwendung von Lambdaausdrücken mit Delegaten finden Sie unter [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) und [gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## Lambda\-Ausdruckssyntax  
- Die Syntax eines Lambda\-Ausdrucks ähnelt der einer Standardunterroutine.  Die Unterschiede sind:  
+## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
+ Die Syntax eines Lambda-Ausdrucks ähnelt dem von einer standard-Unterroutine. Die Unterschiede sind wie folgt aus:  
   
--   Ein Lambda\-Ausdruck verfügt über keinen Namen.  
+-   Ein Lambda-Ausdruck weist keine Namen auf.  
   
--   Ein Lambda\-Ausdruck darf keinen Modifizierer enthalten, wie z. B. `Overloads` oder `Overrides`.  
+-   Ein Lambda-Ausdruck kann nicht verfügen über einen Modifizierer, wie z. B. `Overloads` oder `Overrides`.  
   
--   Der Text des einzeiligen Lambda\-Ausdruck muss eine Anweisung sein, kein Ausdruck.  Der Text kann aus einem Aufruf einer Sub\-Prozedur bestehen, jedoch nicht aus einem Aufruf einer Funktionsprozedur.  
+-   Der Text eines einzeiligen Lambda-Ausdrucks muss es sich um eine Anweisung, kein Ausdruck sein. Der Text kann einen Aufruf an eine Subprozedur, aber nicht auf einen Aufruf an eine Funktionsprozedur bestehen.  
   
--   In einem Lambdaausdruck müssen entweder für alle Parameter Datentypen angegeben sein oder alle Parameter müssen abgeleitet werden.  
+-   In einen Lambda-Ausdruck müssen entweder für alle Parameter angegeben haben, Datentypen oder alle Parameter abgeleitet werden müssen.  
   
--   Optionale und `ParamArray`\-Parameter sind in Lambda\-Ausdrücken nicht zulässig.  
+-   Dies ist optional und `ParamArray` Parameter sind in Lambda-Ausdrücken nicht zulässig.  
   
--   Generische Parameter sind in Lambda\-Ausdrücken nicht zulässig.  
+-   Generische Parameter sind in Lambda-Ausdrücken nicht zulässig.  
   
-## Beispiel  
- Das folgende Beispiel zeigt einen Lambda\-Ausdruck, der einen Wert in die Konsole schreibt.  Dabei wird die Syntax für einzeilige und mehrzeilige Lambda\-Ausdrücke für eine Unterroutine veranschaulicht.  Weitere Beispiele finden Sie unter [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+## <a name="example"></a>Beispiel  
+ Es folgt ein Beispiel für einen Lambda-Ausdruck, der einen Wert in die Konsole schreibt. Das Beispiel zeigt sowohl den einzeiligen und mehrzeiligen Lambda-Ausdruckssyntax für eine Unterroutine. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
-## Siehe auch  
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   
- [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Siehe auch  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

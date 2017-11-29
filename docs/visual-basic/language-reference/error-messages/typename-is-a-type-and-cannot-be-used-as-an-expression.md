@@ -1,35 +1,33 @@
 ---
-title: "&#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30108"
-  - "vbc30108"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30108"
+title: '&#39; &lt;Typename&gt;&#39; ist ein Typ und kann nicht als Ausdruck verwendet werden'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30108
+- vbc30108
+helpviewer_keywords: BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2cffc528055b78fccb9953ee781dbec0af416002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ein Typname tritt an einer Stelle auf, an der ein Ausdruck erforderlich ist.  Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function`\-Prozeduraufrufen bestehen.  
+# <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39; &lt;Typename&gt;&#39; ist ein Typ und kann nicht als Ausdruck verwendet werden
+Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function` -Prozeduraufrufen bestehen.  
   
- **Fehler\-ID:** BC30108  
+ **Fehler-ID:** BC30108  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Entfernen Sie den Typnamen, und erstellen Sie den Ausdruck mit gültigen Elementen.  
   
-## Siehe auch  
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

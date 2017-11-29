@@ -1,33 +1,32 @@
 ---
-title: "Implements Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Implements"
-  - "Implements"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Implements statement, syntax"
-  - "Implements statement"
-  - "interface implementation, Implements statement"
+title: Implements-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Implements
+- Implements
+helpviewer_keywords:
+- Implements statement [Visual Basic], syntax
+- Implements statement [Visual Basic]
+- interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1103305ffbf5425d9a6a6a09695437968642710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implements Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt eine oder mehrere Schnittstellen oder Schnittstellenmember an, die in der umgebenden Klassen\- oder Strukturdefinition implementiert werden müssen.  
+# <a name="implements-statement"></a>Implements-Anweisung
+Gibt eine oder mehrere Schnittstellen oder Schnittstellenmember wird, die in der Klasse implementiert werden müssen oder Strukturdefinition, die in dem er angezeigt wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Implements interfacename [, ...]  
@@ -35,35 +34,35 @@ Implements interfacename [, ...]
 Implements interfacename.interfacemember [, ...]  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `interfacename`  
- Erforderlich.  Eine Schnittstelle, deren Eigenschaften, Prozeduren und Ereignisse von entsprechenden Membern in der Klasse oder Struktur implementiert werden.  
+ Erforderlich. Eine Schnittstelle, deren Eigenschaften, Prozeduren und Ereignisse werden von den entsprechenden Elementen in der Klasse oder Struktur implementiert werden.  
   
  `interfacemember`  
- Erforderlich.  Der Member einer Schnittstelle, der implementiert wird.  
+ Erforderlich. Die Member einer Schnittstelle, die implementiert wird.  
   
-## Hinweise  
- Eine Schnittstelle ist eine Auflistung von Prototypen, die die von der Schnittstelle gekapselten Member \(Eigenschaften, Prozeduren und Ereignisse\) darstellt.  Schnittstellen enthalten nur die Deklarationen für Member. Klassen und Strukturen implementieren diese Member.  Weitere Informationen finden Sie unter [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+## <a name="remarks"></a>Hinweise  
+ Eine Schnittstelle ist eine Auflistung von Prototypen, der Member (Eigenschaften, Prozeduren und Ereignisse) darstellen die Schnittstelle kapselt. Schnittstellen enthalten nur die Deklarationen für Elemente. implementieren diese Member, Klassen und Strukturen. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Die `Implements`\-Anweisung muss unmittelbar auf die `Class`\-Anweisung oder die `Structure`\-Anweisung folgen.  
+ Die `Implements` Anweisung muss unmittelbar folgen der `Class` oder `Structure` Anweisung.  
   
- Wenn Sie eine Schnittstelle implementieren, müssen Sie alle in der Schnittstelle deklarierten Member implementieren.  Sie erhalten einen Syntaxfehler, wenn Sie einen der Member auslassen.  Um einen einzelnen Member zu implementieren, geben Sie das [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)\-Schlüsselwort \(das nicht mit der `Implements`\-Anweisung identisch ist\) an, wenn Sie den Member in der Klasse oder Struktur deklarieren.  Weitere Informationen finden Sie unter [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Wenn Sie eine Schnittstelle implementieren, müssen Sie alle in der Schnittstelle deklarierten Member implementieren. Auslassen von einem beliebigen Mitglied gilt einen Syntaxfehler. Um einen einzelnen Member implementieren zu können, geben Sie die [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md) Schlüsselwort (unterscheidet sich von der `Implements` Anweisung) Wenn Sie das Element in der Klasse oder Struktur deklarieren. Weitere Informationen finden Sie unter [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Klassen können [Private](../../../visual-basic/language-reference/modifiers/private.md)\-Implementierungen von Eigenschaften und Prozeduren verwenden, der Zugriff auf diese Member ist jedoch nur möglich, wenn eine Instanz der implementierenden Klasse in eine Variable umgewandelt wird, die als Typ der Schnittstelle deklariert wird.  
+ Klassen können [Private](../../../visual-basic/language-reference/modifiers/private.md) Implementierungen von Eigenschaften und Prozeduren, sondern diese Member nur eine Instanz der implementierenden Klasse in eine Variable deklariert den Typ der Schnittstelle umwandeln zugänglich sind.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die `Implements`\-Anweisung verwendet wird, um Member einer Schnittstelle zu implementieren.  Im Beispiel wird die Schnittstelle `ICustomerInfo` mit einem Ereignis, einer Eigenschaft und einer Prozedur definiert.  Die `customerInfo`\-Klasse implementiert alle Member, die in der Schnittstelle definiert sind.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die `Implements` Anweisung, um die Member einer Schnittstelle zu implementieren. Definiert eine Schnittstelle mit dem Namen `ICustomerInfo` mit einem Ereignis, eine Eigenschaft und einer Prozedur. Die Klasse `customerInfo` implementiert alle in der Schnittstelle definierten Member.  
   
  [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
- Beachten Sie, dass die `customerInfo`\-Klasse die `Implements`\-Anweisung in einer eigenen Quellcodezeile verwendet, um anzugeben, dass die Klasse alle Member der `ICustomerInfo`\-Schnittstelle implementiert.  Anschließend verwendet jeder Member der Klasse das `Implements`\-Schlüsselwort als Teil seiner Memberdeklaration, um anzugeben, dass er diesen Schnittstellenmember implementiert.  
+ Beachten Sie, dass die Klasse `customerInfo` verwendet die `Implements` Anweisung auf einer separaten Quellcodezeile um anzugeben, dass die Klasse alle Member implementiert die `ICustomerInfo` Schnittstelle. Klicken Sie dann auf jedes Element in der Klasse verwendet die `Implements` -Schlüsselwort als Teil der Element-Deklaration, um anzugeben, dass er diesen Schnittstellenmember implementiert.  
   
-## Beispiel  
- In den folgenden beiden Prozeduren wird veranschaulicht, wie Sie die im vorherigen Beispiel implementierte Schnittstelle verwenden können.  Zum Testen der Implementierung fügen Sie dem Projekt diese Prozeduren hinzu und rufen die `testImplements`\-Prozedur auf.  
+## <a name="example"></a>Beispiel  
+ Zwei Nachfolgend wird erläutert, wie Sie die im vorherigen Beispiel implementierte Schnittstelle verwenden können. Um die Implementierung zu testen, fügen Sie diese Verfahren auf Ihr Projekt, und rufen die `testImplements` Prozedur.  
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## Siehe auch  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

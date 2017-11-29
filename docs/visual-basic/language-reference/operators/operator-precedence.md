@@ -1,66 +1,49 @@
 ---
-title: Operatorrangfolge in Visual Basic | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: "Operatorrangfolge in Visual Basic"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- arithmetic operators, precedence
+- arithmetic operators [Visual Basic], precedence
 - operator precedence
-- logical operators, precedence
+- logical operators [Visual Basic], precedence
 - operators [Visual Basic], associativity
 - operators [Visual Basic], resolution
-- associativity of operators
+- associativity of operators [Visual Basic]
 - operators [Visual Basic], precedence
-- precedence, of operators
-- comparison operators, precedence
-- math operators
+- precedence [Visual Basic], of operators
+- comparison operators [Visual Basic], precedence
+- math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
-Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und aufgelöst, die in einer vorbestimmten Reihenfolge *Operatorrangfolge*.  
+Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und in einem vorbestimmten Reihenfolge aufgelöst *Operatorrangfolge*.  
   
-## <a name="precedence-rules"></a>Regeln  
- Wenn Ausdrücke Operatoren aus mehreren Kategorien enthalten, werden sie gemäß den folgenden Regeln ausgewertet:  
+## <a name="precedence-rules"></a>Rangfolgeregeln  
+ Wenn Ausdrücke Operatoren aus mehr als einer Kategorie enthalten, werden sie anhand der folgenden Regeln ausgewertet:  
   
 -   Die arithmetischen Operatoren und Verkettungsoperatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle haben Vorrang vor den Vergleichsoperatoren, logische und bitweise Operatoren.  
   
--   Alle Vergleichsoperatoren haben denselben Rang, und alle haben Vorrang vor den logischen und bitweisen Operatoren, sind jedoch die arithmetischen Operatoren und Verkettungsoperatoren.  
+-   Alle Vergleichsoperatoren haben denselben Rang und alle höheren Priorität als die logischen und bitweisen Operatoren, aber geringere Rangfolge als der arithmetischen Operatoren und Verkettungsoperatoren verfügen.  
   
--   Die logischen und bitweisen Operatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle haben Vorrang vor den Arithmetik, Verkettung und Vergleichsoperatoren.  
+-   Die logischen und bitweisen Operatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle geringere Rangfolge als der Arithmetik, Verkettung und Vergleichsoperatoren haben.  
   
--   Operatoren mit gleichem Rang links nach rechts ausgewertet werden in der Reihenfolge, in der sie im Ausdruck vorkommen.  
+-   Operatoren mit gleichem Rang werden links nach rechts ausgewertet in der Reihenfolge, in dem sie im Ausdruck angezeigt werden.  
   
 ## <a name="precedence-order"></a>Rangfolge  
- Operatoren werden in der folgenden Reihenfolge bewertet:  
+ Operatoren werden in der folgenden Rangfolge ausgewertet:  
   
 ### <a name="await-operator"></a>Await-Operator  
  Await-  
@@ -72,18 +55,18 @@ Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und au
   
  Multiplikation und Gleitkommadivision (`*`, `/`)  
   
- Division ganzer Zahlen (`\`)  
+ Ganzzahldivision (`\`)  
   
- Modulo-Arithmetik (`Mod`)  
+ Modulo (`Mod`)  
   
  Addition und Subtraktion (`+`, `–`)  
   
  Verketten von Zeichenfolgen (`&`)  
   
- Bit-arithmetische Verschiebung (`<<`, `>>`)  
+ Arithmetische bitverschiebung (`<<`, `>>`)  
   
 ### <a name="comparison-operators"></a>Vergleichsoperatoren  
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
+ Alle Vergleichsoperatoren (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
   
 ### <a name="logical-and-bitwise-operators"></a>Logische und bitweise Operatoren  
  Negation (`Not`)  
@@ -92,17 +75,17 @@ Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und au
   
  Inklusive Disjunktion (`Or`, `OrElse`)  
   
- Exklusive Disjunktion (`Xor`)  
+ Ausschließende Disjunktion (`Xor`)  
   
 ### <a name="comments"></a>Kommentare  
- Die `=` -Operator ist nur der Gleichheitsvergleichsoperator, nicht der Zuweisungsoperator.  
+ Die `=` Operator wird nur der Gleichheitsvergleichsoperator, nicht der Zuweisungsoperator.  
   
- Der Operator für zeichenfolgenverkettung (`&`) kein arithmetischer Operator, sondern in der Rangfolge mit arithmetischen Operatoren gruppieren.  
+ Der Operator für zeichenfolgenverkettung (`&`) ist ein arithmetischer Operator, aber in der Rangfolge mit den arithmetischen Operatoren gruppieren.  
   
- Die `Is` und `IsNot` Operatoren sind Objektverweisvergleichsoperatoren. Nicht vergleichen sie die Werte von zwei Objekten; Sie überprüft nur, ob zwei Object-Variablen auf die gleiche Objektinstanz verweisen.  
+ Die `Is` und `IsNot` Operatoren sind, Referenz-Objektverweisvergleichsoperatoren. Nicht vergleichen sie die Werte von zwei Objekten; Sie überprüft nur, um festzustellen, ob zwei Objektvariablen auf die gleiche Objektinstanz verweisen.  
   
 ## <a name="associativity"></a>Assoziativität  
- Wenn Operatoren mit gleichem Rang zusammen in einem Ausdruck, z. B. Multiplikation und Division, angezeigt werden wertet der Compiler jede Operation, wie sie von links nach rechts gefundenen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Wenn Operatoren mit gleichem Rang zusammen in einem Ausdruck, z. B. Multiplikations- und Divisionsaufgaben, angezeigt werden wertet der Compiler jeden Vorgang, wie sie von links nach rechts gefundenen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -110,12 +93,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- Der erste Ausdruck wertet die Division 96 / 8 (wodurch 12) und dann die Division 12 / 4, der drei führt. Da der Compiler die Operationen für ergibt `n1` von links nach rechts, die Bewertung ist identisch, wenn diese Reihenfolge explizit angegeben wird, für die `n2`. Beide `n1` und `n2` ergeben drei. Im Gegensatz dazu `n3` hat ein Ergebnis 48, da die Klammern erzwingen die vom Compiler ausgewertet 8 / 4 erste.  
+ Der erste Ausdruck wertet die Division 96 / 8 (Vortäuschen 12), und klicken Sie dann die Division 12 / 4, was in drei führt. Da der Compiler die Operationen für ergibt `n1` von links nach rechts, die Auswertung ist identisch, wenn diese Reihenfolge explizit angegeben wird, für die `n2`. Beide `n1` und `n2` Ergebnis von drei haben. Im Gegensatz dazu `n3` verfügt über ein Ergebnis von 48, da die Klammern den Compiler auszuwertende 8 zwingen / 4 erste.  
   
- Aufgrund dieses Verhaltens können Operatoren gelten als *linksassoziativ* in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Aufgrund dieses Verhaltens Operatoren gelten als *linksassoziativ* in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="overriding-precedence-and-associativity"></a>Überschreiben von Rangfolge und Assoziativität  
- Sie können Klammern verwenden, um einige Teile eines Ausdrucks vor anderen ausgewertet werden zu erzwingen. Dadurch kann die Rangfolge und Assoziativität von links überschrieben. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Vorgänge, die in Klammern vor den außerhalb stehen durchgeführt immer. Es verwaltet jedoch innerhalb der Klammern normale Rangfolge und Assoziativität, es sei denn, Sie Klammern innerhalb der Klammern verwenden. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können Klammern verwenden, erzwingen Sie einige Teile eines Ausdrucks vor anderen ausgewertet werden soll. Dadurch kann die Reihenfolge der Rangfolge und Assoziativität von links auf die überschreiben. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]immer führt Vorgänge, die in Klammern vor den außerhalb eingeschlossen sind. Verwaltet jedoch innerhalb der Klammern gewöhnliche Rangfolge und Assoziativität, es sei denn, Sie mithilfe von Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -136,11 +119,11 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [LIKE-Operator](../../../visual-basic/language-reference/operators/like-operator.md)   
- [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Operatoren sortiert nach Funktionalität](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+ [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Like-Operator](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -1,46 +1,44 @@
 ---
-title: "Auto (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Auto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Auto keyword, external references"
-  - "Declare statement, marshaling strings"
-  - "Auto keyword"
-  - "Auto keyword, marshaling strings"
+title: Auto (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Auto
+helpviewer_keywords:
+- Auto keyword [Visual Basic], external references
+- Declare statement [Visual Basic], marshaling strings
+- Auto keyword [Visual Basic]
+- Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1e32c4c910567829a4f5c59b48020db4dfbbeb7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Auto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt an, dass Visual Basic Zeichenfolgen entsprechend den .NET\-Framework\-Regeln auf der Grundlage des externen Namens der deklarierten externen Prozedur marshallen soll.  
+# <a name="auto-visual-basic"></a>Auto (Visual Basic)
+Gibt an, dass Visual Basic Zeichenfolgen gemäß der .NET Framework-Regeln, die basierend auf den externen Namen der externen Prozedur, die deklariert wird.  
   
- Wenn Sie eine außerhalb Ihres Projekts definierte Prozedur aufrufen, hat der Visual Basic\-Compiler keinen Zugriff auf die erforderlichen Informationen zum ordnungsgemäßen Aufrufen der Prozedur.  Dies umfasst Informationen über den Speicherort der Prozedur, ihre Identifikationsmerkmale, ihre Aufrufsequenz und ihren Rückgabetyp sowie den von ihr für Zeichenfolgen verwendeten Zeichensatz.  Die [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese notwendigen Informationen zur Verfügung.  
+ Wenn Sie eine Prozedur, die außerhalb des Projekts definiert aufrufen, Visual Basic-Compiler keinen Zugriff auf die Informationen, die sie zum ordnungsgemäßen Aufrufen der Prozedur benötigen. Diese Informationen umfassen, auf dem sich die Prozedur befindet, wie festgestellt wird, werden der Aufrufsequenz und Rückgabetyp und die Zeichenfolge verwendeten Zeichensatz. Die [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) erstellt einen Verweis auf eine externe Prozedur und stellt diese erforderlichen Informationen bereit.  
   
- Der `charsetmodifier`\-Abschnitt in der `Declare`\-Anweisung stellt Informationen über den Zeichensatz bereit, die benötigt werden, um Zeichenfolgen bei einem Aufruf der externen Prozedur zu marshallen.  Der Abschnitt hat auch Einfluss darauf, wie Visual Basic die externe Datei nach dem externen Prozedurnamen durchsucht.  Der `Auto`\-Modifizierer gibt an, dass Visual Basic Zeichenfolgen entsprechend den .NET\-Framework\-Regeln marshallen soll, dass der Basiszeichensatz der Laufzeitplattform ermittelt und eventuell der externe Prozedurname geändert werden soll, wenn die anfängliche Suche fehlschlägt.  Weitere Informationen finden Sie im Abschnitt "Zeichensatz" unter [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ Die `charsetmodifier` teilweise in die `Declare` Anweisung liefert die Informationen für das Marshalling von Zeichenfolgen bei einem Aufruf an die externe Prozedur Zeichen. Er wirkt sich auch, wie Visual Basic die externe Datei für den externen Prozedurnamen durchsucht. Die `Auto` Modifizierer gibt an, dass Visual Basic Marshallen von Zeichenfolgen .NET Framework-Regeln entsprechend, und, dass die Basis Zeichensatz der Plattform zur Laufzeit und möglicherweise bestimmt werden soll, den Namen der externen Prozedur, ändern Wenn der anfänglichen Suche ein Fehler auftritt. Weitere Informationen finden Sie unter "Zeichensätze" in [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Wenn kein Zeichensatzmodifizierer angegeben ist, wird standardmäßig `Ansi` verwendet.  
+ Wenn kein Modifizierer angegeben ist, `Ansi` ist die Standardeinstellung.  
   
-## Hinweise  
- Der `Auto`\-Modifizierer kann im folgenden Kontext verwendet werden:  
+## <a name="remarks"></a>Hinweise  
+ Die `Auto` Modifizierer kann in diesem Kontext verwendet werden:  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## Hinweise für Entwickler intelligenter Geräte  
+## <a name="smart-device-developer-notes"></a>Entwicklerhinweise für intelligente Geräte  
  Dieses Schlüsselwort wird nicht unterstützt.  
   
-## Siehe auch  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

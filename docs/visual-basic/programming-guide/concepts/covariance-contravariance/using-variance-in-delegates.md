@@ -1,38 +1,30 @@
 ---
-title: Verwenden von Varianz in Delegaten (Visual Basic) | Microsoft-Dokumentation
+title: Verwenden von Varianz in Delegaten (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bd3e60031eac713cee3dee1399af8c6b83e6656
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 435591d69e67c4fc4be8e781c5f63e025c71a8cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Verwenden von Varianz in Delegaten (Visual Basic)
-Wenn Sie einen Delegaten eine Methode zuweisen *Kovarianz* und *Kontravarianz* bieten Flexibilität für den Abgleich eines Delegattyps mit einer Methodensignatur. Kovarianz unterstützt eine Methode Rückgabetyp aufweisen, stärker abgeleiteten, als im Delegaten definiert ist. Kontravarianz unterstützt eine Methode mit Parametertypen, die weniger stark abgeleitet sind als die in der Delegattyp.  
+Wenn Sie einem Delegat eine Methode zuweisen, bieten *Kovarianz* und *Kontravarianz* Flexibilität für das Abgleichen eines Delegattyps mit einer Methodensignatur. Kovarianz lässt die Verfügung einer Methode über einen Rückgabetyp zu, der stärker abgeleitet ist als der im Delegat definierte Typ. Kontravarianz lässt eine Methode zu, die über Typen verfügt, die weniger abgeleitet sind als die im Delegattyp.  
   
 ## <a name="example-1-covariance"></a>Beispiel 1: Kovarianz  
   
 ### <a name="description"></a>Beschreibung  
- In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Rückgabetypen von dem Rückgabetyp in der Signatur des Delegaten abgeleitet werden. Der zurückgegebene Datentyp `DogsHandler` ist vom Typ `Dogs`, die abgeleitet wird von der `Mammals` Typ, der in der Delegat definiert ist.  
+ In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Rückgabetypen verfügen, die von den Rückgabetypen in der Delegatsignatur abgeleitet sind. Der von `DogsHandler` zurückgegebene Datentyp ist vom Typ `Dogs`, der vom im Delegat definierten Typ `Mammals` abhängt.  
   
 ### <a name="code"></a>Code  
   
@@ -62,7 +54,7 @@ End Class
 ## <a name="example-2-contravariance"></a>Beispiel 2: Kontravarianz  
   
 ### <a name="description"></a>Beschreibung  
- In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, deren Parameter Basistypen des Delegattyps Signatur-Parameter. Mithilfe von Kontravarianz können Sie einen Ereignishandler statt separate Handler. Sie können z. B. einen Ereignishandler, der akzeptiert erstellen ein `EventArgs` Eingabeparameter, und verwenden Sie es mit eine `Button.MouseClick` -Ereignis, das gesendet ein `MouseEventArgs` Typ als Parameter und mit ein `TextBox.KeyDown` -Ereignis, das gesendet ein `KeyEventArgs` Parameter.  
+ In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter eines Typs verfügen, die Basistypen von den Parametertypen in der Delegatsignatur sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Sie können zum Beispiel einen Ereignishandler erstellen, der einen `EventArgs`-Eingabeparameter annimmt und mit einem `Button.MouseClick`-Ereignis verwendet, das einen Typ `MouseEventArgs` als Parameter sendet. Außerdem können Sie ihn mit einem `TextBox.KeyDown`-Ereignis verwenden, das einen `KeyEventArgs`-Parameter sendet.  
   
 ### <a name="code"></a>Code  
   
@@ -87,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
- [Verwenden von Varianz für die Aktion generischen Delegaten Func und (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [Variance in Delegates (Visual Basic) (Varianz in Delegaten (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+ [Using Variance for Func and Action Generic Delegates (Visual Basic) (Verwenden von Varianz für die generischen Delegaten Func und Action (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

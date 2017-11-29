@@ -1,32 +1,36 @@
 ---
-title: "Systeminformationen und Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Domänennamen, Abrufen"
-  - "Systeminformationen [Windows Forms]"
-  - "SystemInformation-Klasse [Windows Forms]"
-  - "Benutzernamen, Abrufen"
+title: "Systeminformationen und Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- domain names [Windows Forms], retrieving
+- SystemInformation class [Windows Forms]
+- user names [Windows Forms], retrieving
+- system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6657556ffb49c19e6ffc3ef5462de341a93112b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Systeminformationen und Windows&#160;Forms
-Für eine sinnvolle Programmierung ist es u. U. erforderlich, Informationen über den Computer zu erfassen, auf dem die jeweilige Anwendung ausgeführt wird.  Beispielsweise könnte eine Funktion nur dann anwendbar sein, wenn eine Verbindung zu einer bestimmten Netzwerkdomäne besteht. In diesem Fall müsste es eine Möglichkeit geben, die Domäne zu ermitteln und die Funktion zu deaktivieren, falls die erforderliche Domäne nicht vorhanden ist.  
+# <a name="system-information-and-windows-forms"></a>Systeminformationen und Windows Forms
+Manchmal ist es erforderlich, um Informationen über den Computer zu erfassen, die Ihre Anwendung ausgeführt wird, um die Entscheidungen in Ihrem Code. Beispielsweise müssen Sie eine Funktion möglicherweise, die nur anwendbar, wenn mit einer bestimmten Netzwerkdomäne verbunden sind; In diesem Fall müssten Sie eine Möglichkeit, bestimmen Sie die Domäne und die Funktion zu deaktivieren, wenn die Domäne nicht vorhanden ist.  
   
- Mithilfe der <xref:System.Windows.Forms.SystemInformation>\-Klasse können Windows Forms\-Anwendungen zur Laufzeit eine Reihe von Informationen über einen Computer abfragen.  Im folgenden Beispiel wird erläutert, wie Sie mithilfe der <xref:System.Windows.Forms.SystemInformation>\-Klasse den <xref:System.Windows.Forms.SystemInformation.UserName%2A> und den <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A> abrufen:  
+ Windows Forms-Anwendungen können die <xref:System.Windows.Forms.SystemInformation> Klasse, um eine Reihe von Punkten zu einem Computer, die zur Laufzeit zu bestimmen. Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.SystemInformation> Klasse zum Abrufen der <xref:System.Windows.Forms.SystemInformation.UserName%2A> und <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
   
 ```vb  
 Dim User As String = Windows.Forms.SystemInformation.UserName  
@@ -34,7 +38,6 @@ Dim Domain As String = Windows.Forms.SystemInformation.UserDomainName
   
 MessageBox.Show("Good morning " & User & ". You are connected to " _  
 & Domain)  
-  
 ```  
   
 ```csharp  
@@ -45,10 +48,10 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
 + Domain)  
 ```  
   
- Alle Member der <xref:System.Windows.Forms.SystemInformation>\-Klasse sind schreibgeschützt, sodass die Einstellungen eines Benutzers nicht geändert werden können.  Die Klasse verfügt über mehr als 100 Member, die unterschiedlichste Informationen – von der Anzahl der an den Computer angeschlossenen Monitore \(<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>\) bis hin zum Abstand der Symbole in Windows Explorer \(<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> und <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>\) – zurückgeben.  
+ Alle Mitglieder der <xref:System.Windows.Forms.SystemInformation> Klasse sind schreibgeschützt; Sie Einstellungen eines Benutzers können nicht geändert werden. Es gibt mehr als 100 Member der Klasse, die zum Zurückgeben von Informationen alles, was von der Anzahl der Monitore an den Computer angeschlossen (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) den Abstand der Symbole in Windows Explorer (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> und <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  
   
- Zu den wichtigsten Membern der <xref:System.Windows.Forms.SystemInformation>\-Klasse gehören <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> und <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
+ Einige der nützlicher Mitglieder der <xref:System.Windows.Forms.SystemInformation> Klasse einbeziehen <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, und <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SystemInformation>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.SystemInformation>  
  [Energieverwaltung in Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)

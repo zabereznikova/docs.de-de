@@ -1,88 +1,87 @@
 ---
-title: "Partial Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom logic into code [Visual Basic]"
-  - "partial methods [Visual Basic]"
-  - "partial, methods [Visual Basic]"
-  - "methods [Visual Basic], partial methods"
-  - "inserting custom logic into code"
+title: Partielle Methoden (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Mit partiellen Methoden können Entwickler benutzerdefinierte Logik in Code einfügen.  In der Regel ist der Code Teil einer vom Designer generierten Klasse.  Partielle Methoden werden in einer partiellen Klasse definiert, die von einem Code\-Generator erstellt wird. Sie werden im Allgemeinen verwendet, um Benachrichtigungen über Änderungen bereitzustellen.  Sie ermöglichen es dem Entwickler, eine benutzerdefinierte Reaktion auf eine Änderung anzugeben.  
+# <a name="partial-methods-visual-basic"></a>Partielle Methoden (Visual Basic)
+Partielle Methoden können Entwickler benutzerdefinierten Logik in Code einzufügen. In der Regel ist der Code Teil einer vom Designer generierte Klasse. Partielle Methoden werden in einer partiellen Klasse, die von einem Codegenerator erstellt wird definiert, und sie werden häufig verwendet, um die Benachrichtigung angeben, dass etwas geändert wurde. Sie ermöglichen es den Entwickler, die benutzerdefiniertes Verhalten als Reaktion auf die Änderung angeben.  
   
- Vom Designer des Code\-Generators werden nur die Methodensignatur und ein oder mehrere Aufrufe für die Methode definiert.  Anschließend können Entwickler Implementierungen für die Methode bereitstellen, wenn sie das Verhalten des generierten Codes anpassen möchten.  Wenn keine Implementierung bereitgestellt wird, werden Aufrufe der Methode vom Compiler entfernt, sodass kein überflüssiger Leistungsverlust auftritt.  
+ Der Designer des Code-Generators definiert nur die Signatur der Methode und eine oder mehrere Aufrufe der Methode. Entwickler können dann Implementierungen für die Methode bereitstellen, wenn sie das Verhalten des generierten Codes anpassen möchten. Wenn keine Implementierung bereitgestellt wird, werden Aufrufe der Methode durch den Compiler, wodurch keine zusätzliche Leistung beansprucht entfernt.  
   
-## Deklaration  
- Im generierten Code wird die Definition einer partiellen Methode am Anfang der Signatur mit dem Schlüsselwort `Partial` gekennzeichnet.  
+## <a name="declaration"></a>Deklaration  
+ Der generierte Code kennzeichnet die Definition einer partiellen Methode, indem dem Schlüsselwort `Partial` am Anfang der Signaturzeile.  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
  Die Definition muss die folgenden Bedingungen erfüllen:  
   
--   Die Methode muss als `Sub` und nicht als `Function` deklariert sein.  
+-   Die Methode muss ein `Sub`, sondern eine `Function`.  
   
--   Der Methodentext muss leer sein.  
+-   Der Text der Methode muss leer sein.  
   
--   Der Zugriffsmodifizierer muss `Private` sein.  
+-   Der Zugriffsmodifizierer muss `Private`.  
   
-## Implementierung  
- In der Implementierung wird hauptsächlich der partielle Methodentext ausgefüllt.  Die Implementierung erfolgt in der Regel in einer von der Definition getrennten partiellen Klasse und wird von einem Entwickler geschrieben, der den generierten Code erweitern möchte.  
+## <a name="implementation"></a>Implementierung  
+ Die Implementierung besteht im Wesentlichen aus im Text der partiellen Methode zu füllen. Die Implementierung ist in der Regel in einer eigenen partiellen Klasse aus der Definition und durch ein Entwickler möchte, erweitern den generierten Code geschrieben wird.  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- Im vorherigen Beispiel wird die Signatur aus der Deklaration genau übernommen, es sind jedoch auch Variationen möglich.  Insbesondere können weitere Modifizierer hinzugefügt werden, z. B. `Overloads` oder `Overrides`.  Es ist nur ein `Overrides`\-Modifizierer erlaubt.  Weitere Informationen über Methodenmodifizierer finden Sie unter [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ Im vorherigen Beispiel wird die Signatur in der Deklaration genau dupliziert allerdings Varianten sind möglich. Insbesondere weiteren Modifizierer können hinzugefügt werden, z. B. `Overloads` oder `Overrides`. Nur ein `Overrides` -Modifizierer ist zulässig. Weitere Informationen zur Methodenmodifizierer finden Sie unter [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## Verwendung  
- Sie rufen eine partielle Methode genauso wie jede andere `Sub`\-Prozedur auf.  Wenn die Methode implementiert wurde, werden die Argumente ausgewertet und der Methodentext wird ausgeführt.  Beachten Sie jedoch, dass eine partielle Methode nicht implementiert werden muss.  Wenn die Methode nicht implementiert wurde, hat ein Aufruf der Methode keine Auswirkungen, und die der Methode als Argumente übergebenen Ausdrücke werden nicht ausgewertet.  
+## <a name="use"></a>Verwendung  
+ Sie eine partielle Methode aufrufen, wie jeder andere würde `Sub` Prozedur. Wenn die Methode implementiert wurde, die Argumente ausgewertet werden, und der Text der Methode wird ausgeführt. Beachten Sie jedoch, dass eine partielle Methode implementieren optional ist. Wenn die Methode nicht implementiert wird, ein Aufruf hat keine Auswirkungen, und Ausdrücke, die als Argumente an die Methode übergeben werden nicht ausgewertet.  
   
-## Beispiel  
- Definieren Sie in einer Datei mit dem Namen Product.Designer.vb die Klasse `Product` mit der Eigenschaft `Quantity`.  
+## <a name="example"></a>Beispiel  
+ In einer Datei namens Product.Designer.vb, definieren eine `Product` -Klasse, verfügt ein `Quantity` Eigenschaft.  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- Stellen Sie in einer Datei mit dem Namen Product.vb eine Implementierung für `QuantityChanged` bereit.  
+ Stellen Sie in einer Datei mit dem Namen Product.vb eine Implementierung für `QuantityChanged`.  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- Deklarieren Sie abschließend in der Main\-Methode eines Projekts eine `Product`\-Instanz, und stellen Sie einen Anfangswert für die `Quantity`\-Eigenschaft bereit.  
+ Deklarieren Sie schließlich in die Main-Methode eines Projekts eine `Product` Instanz, und geben Sie einen Anfangswert für seine `Quantity` Eigenschaft.  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- Es sollte ein Meldungsfeld mit der folgenden Meldung angezeigt werden:  
+ Ein Meldungsfeld sollte angezeigt, in dem diese Meldung angezeigt:  
   
  `Quantity was changed to 100`  
   
-## Siehe auch  
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Codegenerierung in LINQ to SQL](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [Hinzufügen von Geschäftslogik durch das Verwenden partieller Methoden](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>Siehe auch  
+ [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Optionale Parameter](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Codegenerierung in LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
+ [Hinzufügen von Geschäftslogik durch verwenden partieller Methoden](https://msdn.microsoft.com/library/bb546176)

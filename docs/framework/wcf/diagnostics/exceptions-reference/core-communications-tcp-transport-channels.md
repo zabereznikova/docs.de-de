@@ -1,26 +1,29 @@
 ---
-title: "Kernkommunikationen: TCP-Transportkan&#228;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Kernkommunikationen: TCP-Transportkanäle"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5cd057f-faec-4e21-ae0e-18bbc22bcfb1
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 92147e3887f9f82e37a4870ec6de767868c97c1b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Kernkommunikationen: TCP-Transportkan&#228;le
-In diesem Thema sind alle von den TCP\-Transportkanälen generierten Ausnahmen aufgeführt.  
+# <a name="core-communications-tcp-transport-channels"></a>Kernkommunikationen: TCP-Transportkanäle
+In diesem Thema sind alle von den TCP-Transportkanälen generierten Ausnahmen aufgeführt.  
   
-## Ausnahmeliste  
+## <a name="exception-list"></a>Ausnahmeliste  
   
 |Ressourcencode|Ressourcenzeichenfolge|  
-|--------------------|----------------------------|  
-|SocketCloseReadTimeout|Der Remoteendpunkt des angegebenen Sockets hat auf eine Anforderung zum Schließen nicht innerhalb des zugewiesenen Zeitlimits geantwortet.  Möglicherweise ruft der Remoteendpunkt nach dem Empfang des EOF\-Signals \(NULL\) vom Receive\-Vorgang nicht Close auf.  Die für diesen Vorgang zugewiesene Zeit war möglicherweise ein Teil eines längeren Timeouts.|
+|-------------------|---------------------|  
+|SocketCloseReadTimeout|Der Remoteendpunkt des angegebenen Sockets hat auf eine Anforderung zum Schließen nicht innerhalb des zugewiesenen Zeitlimits geantwortet. Möglicherweise ruft der Remoteendpunkt nach dem Empfang des EOF-Signals (NULL) vom Receive-Vorgang nicht Close auf. Die für diesen Vorgang zugewiesene Zeit war möglicherweise ein Teil eines längeren Timeouts.|

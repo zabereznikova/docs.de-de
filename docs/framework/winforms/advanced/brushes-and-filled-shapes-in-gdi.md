@@ -1,92 +1,96 @@
 ---
-title: "Pinsel und gef&#252;llte Formen in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Pinsel, GDI+"
-  - "Pinsel, Farbverlauf"
-  - "Gefüllte Formen, GDI+"
-  - "GDI+, Pinsel"
-  - "GDI+, Gefüllte Formen"
-  - "Farbverlaufspinsel"
-  - "Formen, GDI+"
+title: "Pinsel und gefüllte Formen in GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [Windows Forms], GDI+
+- filled shapes [Windows Forms], GDI+
+- shapes [Windows Forms], GDI+
+- GDI+, brushes
+- GDI+, filled shapes
+- gradient brushes
+- brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Pinsel und gef&#252;llte Formen in GDI+
-Eine geschlossene Form, z. B.ein Rechteck oder eine Ellipse, besteht aus einem Umriss und einer Innenfläche.  Der Umriss wird mit einem Stift gezeichnet und die Innenfläche mit einem Pinsel gefüllt.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet mehrere Pinselklassen, um die Innenflächen geschlossener Formen zu füllen: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush> und <xref:System.Drawing.Drawing2D.PathGradientBrush>.  Alle diese Klassen erben von der <xref:System.Drawing.Brush>\-Klasse.  Die folgende Abbildung zeigt ein Rechteck, das mit einem Pinsel für eine Volltonfarbe gefüllt wurde, und eine Ellipse, die mit einem Pinsel für eine Schraffur gefüllt wurde.  
+# <a name="brushes-and-filled-shapes-in-gdi"></a>Pinsel und gefüllte Formen in GDI+
+Eine geschlossene Form, z. B. ein Rechteck oder eine Ellipse besteht aus einer Gliederung und dem inneren. Die Kontur mit einem Stift gezeichnet, und das innere mit einem Pinsel gefüllt ist. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet mehrere für die Innenflächen geschlossene Formen füllen: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, und <xref:System.Drawing.Drawing2D.PathGradientBrush>. Alle diese Klassen erben von der <xref:System.Drawing.Brush> Klasse. Die folgende Abbildung zeigt ein Rechteck mit eines Pinsels in Volltonfarbe gefüllt und eine Ellipse, die mit einem Schraffurpinsel gefüllt.  
   
- ![Ausgefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.png "Aboutgdip02\_art17")  
+ ![Gefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
-## Pinsel für Volltonfarben  
- Um eine geschlossene Form zu füllen, benötigen Sie eine Instanz der <xref:System.Drawing.Graphics>\-Klasse sowie <xref:System.Drawing.Brush>.  Die Instanz der <xref:System.Drawing.Graphics>\-Klasse stellt Methoden, wie <xref:System.Drawing.Graphics.FillRectangle%2A> und <xref:System.Drawing.Graphics.FillEllipse%2A>, bereit, und in <xref:System.Drawing.Brush> werden Attribute für die Füllung, beispielsweise Farbe und Muster, gespeichert.  <xref:System.Drawing.Brush> wird als eines der Argumente an die Füllmethode übergeben.  Im folgenden Codebeispiel wird gezeigt, wie Sie eine Ellipse mit der Volltonfarbe Rot füllen.  
+## <a name="solid-brushes"></a>Einfarbig Pinsel  
+ Um eine geschlossene Form zu füllen, benötigen Sie eine Instanz von der <xref:System.Drawing.Graphics> Klasse und ein <xref:System.Drawing.Brush>. Die Instanz von der <xref:System.Drawing.Graphics> Klasse enthält Methoden, wie z. B. <xref:System.Drawing.Graphics.FillRectangle%2A> und <xref:System.Drawing.Graphics.FillEllipse%2A>, und die <xref:System.Drawing.Brush> speichert Attribute für die Füllung, z. B. Farbe und Muster. Die <xref:System.Drawing.Brush> als eines der Argumente an die Füllmethode übergeben wird. Im folgenden Codebeispiel wird veranschaulicht, wie eine Ellipse, die mit einer Volltonfarbe Rot füllen.  
   
  [!code-csharp[LinesCurvesAndShapes#121](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  Im vorangehenden Beispiel hat der Pinsel den Typ <xref:System.Drawing.SolidBrush>, der von <xref:System.Drawing.Brush> erbt.  
+>  Im vorherigen Beispiel ist der Pinsel, der vom Typ <xref:System.Drawing.SolidBrush>, erbt die <xref:System.Drawing.Brush>.  
   
-## Pinsel für Schraffuren  
- Wenn Sie eine Form mit einem Pinsel für eine Schraffur füllen, geben Sie eine Vordergrund\- und eine Hintergrundfarbe sowie einen Schraffurstil an.  Die Vordergrundfarbe ist die Farbe der Schraffur.  
+## <a name="hatch-brushes"></a>Schraffurpinsel  
+ Wenn Sie eine Form mit einem Schraffurpinsel ausfüllen, geben Sie eine Vordergrundfarbe, eine Hintergrundfarbe und ein Schraffurart. Die Vordergrundfarbe ist die Farbe der Schraffur.  
   
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt mehr als 50 Schraffurstile bereit. In der folgenden Abbildung sind die drei Stile <xref:System.Drawing.Drawing2D.HatchStyle>, <xref:System.Drawing.Drawing2D.HatchStyle> und <xref:System.Drawing.Drawing2D.HatchStyle> dargestellt.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]enthält mehr als 50 Schraffur Stile; sind die drei Stile in der folgenden Abbildung dargestellten <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, und <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
- ![Ausgefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.png "Aboutgdip02\_art18")  
+ ![Gefüllte Formen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
-## Pinsel für Texturen  
- Mit einem Pinsel für eine Textur können Sie eine Form mit einem Muster füllen, das in einer Bitmap gespeichert ist.  Angenommen, das folgende Bild ist in der Datenträgerdatei `MyTexture.bmp` gespeichert.  
+## <a name="texture-brushes"></a>Strukturpinsel  
+ Mit einem Texturpinsel können Sie eine Form mit einem Muster, die in einer Bitmap gespeichert ausfüllen. Nehmen wir beispielsweise an, das folgende Bild befindet sich in einer Datenträgerdatei mit dem Namen `MyTexture.bmp`.  
   
- ![Ausgefüllte Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.png "Aboutgdip02\_Art19")  
+ ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")  
   
- Im folgenden Codebeispiel wird gezeigt, wie eine Ellipse durch Wiederholen des in `MyTexture.bmp` gespeicherten Bildes gefüllt wird.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Ellipse, die durch die Wiederholung des Bilds in gespeicherten gefüllt `MyTexture.bmp`.  
   
  [!code-csharp[LinesCurvesAndShapes#123](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#123)]
  [!code-vb[LinesCurvesAndShapes#123](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#123)]  
   
- In der folgenden Abbildung ist die ausgefüllte Ellipse dargestellt.  
+ Die folgende Abbildung zeigt das ausgefüllte Ellipse.  
   
- ![Ausgefüllte Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.png "AboutGdip02\_Art20")  
+ ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
-## Pinsel für Farbverläufe  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet zwei Arten von Farbverlaufpinseln: linear und pfadbezogen.  Sie können mit einem Pinsel für einen linearen Farbverlauf eine Form mit Farbe füllen, die in horizontaler, vertikaler oder diagonaler Richtung schrittweise in eine andere Farbe übergeht.  Im folgenden Codebeispiel wird eine Ellipse mit einem Pinsel für einen horizontalen Farbverlauf gefüllt, bei dem die Farbe vom linken Rand der Ellipse zum rechten von Blau in Grün übergeht.  
+## <a name="gradient-brushes"></a>Farbverlaufspinsel  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet zwei Arten von Farbverlaufspinsel: linear und Pfad. Sie können einen linearen Farbverlaufspinsel verwenden, eine Form Farbe gefüllt, die Änderungen schrittweise, während Sie über die Form verschieben, horizontal, vertikal oder diagonal angezeigt. Im folgenden Codebeispiel wird veranschaulicht, wie eine Ellipse, die mit einem horizontalen Farbverlaufspinsel zu füllen, die von Blau in Grün ändern, wie Sie vom linken Rand der Ellipse, die an den rechten Rand verschieben.  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
- In der folgenden Abbildung ist die ausgefüllte Ellipse dargestellt.  
+ Die folgende Abbildung zeigt das ausgefüllte Ellipse.  
   
- ![Ausgefüllte Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.png "AboutGdip02\_Art21")  
+ ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")  
   
- Sie können einen Pinsel für einen pfadbezogenen Farbverlauf konfigurieren, um einen Farbübergang vom Mittelpunkt einer Form aus nach außen zu erstellen.  
+ Pfadfarbverlaufs kann konfiguriert werden, um Farbe zu ändern, wie Sie von der Mitte einer Form auf den Rand verschieben.  
   
- ![Ausgefüllte Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.png "AboutGdip02\_Art22")  
+ ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")  
   
- Pinsel für pfadbezogene Farbverläufe lassen sich sehr flexibel verwenden.  Der Farbverlaufpinsel, der zum Füllen des Dreiecks in der folgenden Abbildung verwendet wurde, erzeugt einen Farbübergang von Rot in der Mitte des Dreiecks zu den drei unterschiedlichen Farben in den verschiedenen Ecken des Dreiecks.  
+ Pfad Farbverlaufspinsel sind sehr flexibel. Die Farbverlaufspinsel verwendet, um das Dreieck in der folgenden Abbildung Änderungen allmählich von Rot in der Mitte auf jedem der drei verschiedenen Farben an den Scheitelpunkten zu füllen.  
   
- ![Ausgefüllte Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.png "AboutGdip02\_Art23")  
+ ![Gefüllt Form](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
-## Siehe auch  
- <xref:System.Drawing.SolidBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=fullName>   
- <xref:System.Drawing.TextureBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>   
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Gewusst wie: Zeichnen eines ausgefüllten Rechtecks in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Gewusst wie: Zeichnen eines ausgefüllten Rechtecks in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
  [Gewusst wie: Zeichnen einer ausgefüllten Ellipse in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)

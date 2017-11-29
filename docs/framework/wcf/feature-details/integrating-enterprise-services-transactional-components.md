@@ -1,32 +1,35 @@
 ---
-title: "Integrieren von Enterprise Services-Transaktionskomponenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Integrieren von Enterprise Services-Transaktionskomponenten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c2420c700d893e6c2c19b72beed0e605ffd4853
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Integrieren von Enterprise Services-Transaktionskomponenten
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt einen automatischen Mechanismus zur Integration mit Enterprise Services bereit \(siehe [Integrieren von COM\+\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)\).Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden.Da die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Transaktionsfunktion auf die <xref:System.Transactions>\-Infrastruktur aufsetzt, ist der Prozess zur Integration mit Enterprise Services mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] identisch mit dem Prozess zur Angabe der Interoperabilität zwischen <xref:System.Transactions> und Enterprise Services, wie unter [Interoperabilität mit Enterprise Services und COM\+\-Transaktionen](http://go.microsoft.com/fwlink/?LinkId=94949) \(möglicherweise in englischer Sprache\) beschrieben.  
+# <a name="integrating-enterprise-services-transactional-components"></a>Integrieren von Enterprise Services-Transaktionskomponenten
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Stellt einen automatischen Mechanismus zum Integrieren von Enterprise Services (siehe [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden. Da die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Transaktionsfunktion basiert auf der <xref:System.Transactions> -Infrastruktur, um den Prozess zum Integrieren von Enterprise Services mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist identisch mit dem für die Interoperabilität zwischen Angabe <xref:System.Transactions> und Enterprise Dienste, wie im [Interoperabilität mit Enterprise Services und COM+-Transaktionen](http://go.microsoft.com/fwlink/?LinkId=94949).  
   
- Um das gewünschte Maß an Interoperabilität zwischen der eingehenden übergebenden Transaktion und der COM\+\-Kontexttransaktion zu erzielen, muss die Dienstimplementierung eine <xref:System.Transactions.TransactionScope>\-Instanz erstellen und den entsprechenden Wert der <xref:System.Transactions.EnterpriseServicesInteropOption>\-Enumeration verwenden.  
+ Um das gewünschte Maß an Interoperabilität zwischen der eingehenden übergebenden Transaktion und der COM+-Kontexttransaktion zu erzielen, muss die Dienstimplementierung eine <xref:System.Transactions.TransactionScope>-Instanz erstellen und den entsprechenden Wert der <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration verwenden.  
   
-## Integrieren von Enterprise Services mit einem Dienstvorgang  
- Der folgende Code veranschaulicht einen Vorgang mit zugelassenem Transaktionsfluss, der einen <xref:System.Transactions.TransactionScope> mit der <xref:System.Transactions.EnterpriseServicesInteropOption>\-Option erstellt.Die folgenden Bedingungen sind in diesem Szenario gültig:  
+## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integrieren von Enterprise Services mit einem Dienstvorgang  
+ Der folgende Code veranschaulicht einen Vorgang mit zugelassenem Transaktionsfluss, der einen <xref:System.Transactions.TransactionScope> mit der <xref:System.Transactions.EnterpriseServicesInteropOption.Full>-Option erstellt. Die folgenden Bedingungen sind in diesem Szenario gültig:  
   
--   Wenn der Client eine Transaktion übergibt, wird der Vorgang, einschließlich des Aufrufs der Enterprise Services\-Komponente, innerhalb des Umfangs dieser Transaktion ausgeführt.Mit <xref:System.Transactions.EnterpriseServicesInteropOption> wird sichergestellt, dass die Transaktion mit dem <xref:System.EnterpriseServices>\-Kontext synchronisiert wird. Dies bedeutet, dass die Ambient\-Transaktion für <xref:System.Transactions> und <xref:System.EnterpriseServices> identisch ist.  
+-   Wenn der Client eine Transaktion übergibt, wird der Vorgang, einschließlich des Aufrufs der Enterprise Services-Komponente, innerhalb des Umfangs dieser Transaktion ausgeführt. Mit <xref:System.Transactions.EnterpriseServicesInteropOption.Full> wird sichergestellt, dass die Transaktion mit dem <xref:System.EnterpriseServices>-Kontext synchronisiert wird. Dies bedeutet, dass die Ambient-Transaktion für <xref:System.Transactions> und <xref:System.EnterpriseServices> identisch ist.  
   
--   Wenn der Client keine Transaktion übergibt, wird durch Festlegen von <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> auf `true` ein neuer Transaktionsumfang für den Vorgang erstellt.Auf ähnliche Weise wird mit <xref:System.Transactions.EnterpriseServicesInteropOption> sichergestellt, dass die Transaktion des Vorgangs mit der Transaktion übereinstimmt, die innerhalb des Kontexts der <xref:System.EnterpriseServices>\-Komponente verwendet wird.  
+-   Wenn der Client keine Transaktion übergibt, wird durch Festlegen von <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> auf `true` ein neuer Transaktionsumfang für den Vorgang erstellt. Auf ähnliche Weise wird mit <xref:System.Transactions.EnterpriseServicesInteropOption.Full> sichergestellt, dass die Transaktion des Vorgangs mit der Transaktion übereinstimmt, die innerhalb des Kontexts der <xref:System.EnterpriseServices>-Komponente verwendet wird.  
   
  Alle zusätzlichen Methodenaufrufe treten auch innerhalb des Transaktionsumfangs des gleichen Vorgangs auf.  
   
@@ -66,10 +69,10 @@ public class CustomerService : ICustomerServiceContract
 }  
 ```  
   
- Wenn keine Synchronisierung zwischen der aktuellen Transaktion eines Vorgangs und den Aufrufen für die Transaktionskomponenten von Enterprise Services erforderlich ist, verwenden Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>\-Option zum Instanziieren der <xref:System.Transactions.TransactionScope>\-Instanz.  
+ Wenn keine Synchronisierung zwischen der aktuellen Transaktion eines Vorgangs und den Aufrufen für die Transaktionskomponenten von Enterprise Services erforderlich ist, verwenden Sie die <xref:System.Transactions.EnterpriseServicesInteropOption.None>-Option zum Instanziieren der <xref:System.Transactions.TransactionScope>-Instanz.  
   
-## Integrieren von Enterprise Services mit einem Client  
- Der folgende Code veranschaulicht Clientcode, der eine <xref:System.Transactions.TransactionScope>\-Instanz mit der <xref:System.Transactions.EnterpriseServicesInteropOption>\-Einstellung verwendet.In diesem Szenario treten Aufrufe für Dienstvorgänge, die den Transaktionsfluss unterstützen, innerhalb des Umfangs derselben Transaktion auf wie die Aufrufe für Enterprise Services\-Komponenten.  
+## <a name="integrating-enterprise-services-with-a-client"></a>Integrieren von Enterprise Services mit einem Client  
+ Der folgende Code veranschaulicht Clientcode, der eine <xref:System.Transactions.TransactionScope>-Instanz mit der <xref:System.Transactions.EnterpriseServicesInteropOption.Full>-Einstellung verwendet. In diesem Szenario treten Aufrufe für Dienstvorgänge, die den Transaktionsfluss unterstützen, innerhalb des Umfangs derselben Transaktion auf wie die Aufrufe für Enterprise Services-Komponenten.  
   
 ```  
 static void Main()  
@@ -99,6 +102,6 @@ static void Main()
 }  
 ```  
   
-## Siehe auch  
- [Integrieren von COM\+\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Integrieren von COM\-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a>Siehe auch  
+ [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

@@ -1,62 +1,66 @@
 ---
-title: "Ellipsen und B&#246;gen in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bögen"
-  - "Zeichnen, Bögen"
-  - "Zeichnen, Ellipsen"
-  - "Ellipsen"
-  - "GDI+, Bögen"
-  - "GDI+, Ellipsen"
+title: "Ellipsen und Bögen in GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- arcs
+- GDI+, arcs
+- drawing [Windows Forms], ellipses
+- GDI+, ellipses
+- ellipses
+- drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ebeae1d076a0ebcf36d52dee1af0c0ad5f04fdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Ellipsen und B&#246;gen in GDI+
-Ellipsen und Bögen können Sie problemlos mit der <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode und der <xref:System.Drawing.Graphics.DrawArc%2A>\-Methode der <xref:System.Drawing.Graphics>\-Klasse zeichnen.  
+# <a name="ellipses-and-arcs-in-gdi"></a>Ellipsen und Bögen in GDI+
+Sie können problemlos zeichnen Ellipsen und Bögen mit der <xref:System.Drawing.Graphics.DrawEllipse%2A> und <xref:System.Drawing.Graphics.DrawArc%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.  
   
-## Zeichnen einer Ellipse  
- Um eine Ellipse zu zeichnen, benötigen Sie ein <xref:System.Drawing.Graphics>\-Objekt und ein <xref:System.Drawing.Pen>\-Objekt.  Das <xref:System.Drawing.Graphics>\-Objekt stellt die <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode bereit. Das <xref:System.Drawing.Pen>\-Objekt speichert Attribute, z. B. Farbe und Stärke der Linie, mit der die Ellipse gerendert wird.  Das <xref:System.Drawing.Pen>\-Objekt wird als eines der Argumente an die <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode übergeben.  Die übrigen an die <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode übergebenen Argumente geben das umschließende Rechteck für die Ellipse an.  Die folgende Abbildung zeigt eine Ellipse und das zugehörige umschließende Rechteck.  
+## <a name="drawing-an-ellipse"></a>Zeichnen einer Ellipse  
+ Um eine Ellipse zu zeichnen, müssen Sie eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt enthält die <xref:System.Drawing.Graphics.DrawEllipse%2A> -Methode, und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Breite und Farbe der Linie, die zum Rendern der Ellipse verwendet. Die <xref:System.Drawing.Pen> Objekt als eines der Argumente zu übergeben der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode. Die übrigen Argumente zu übergeben, um die <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode geben Sie das umschließende Rechteck für die Ellipse. Die folgende Abbildung zeigt eine Ellipse, die zusammen mit das umschließende Rechteck.  
   
- ![Ellipsen und Bögen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.png "Aboutgdip02\_art05")  
+ ![Ellipsen und Bögen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.gif "Aboutgdip02_art05")  
   
- Im folgenden Beispiel wird eine Ellipse gezeichnet, deren umschließendes Rechteck eine Breite von 80, eine Höhe von 40 und seine linke obere Ecke im Punkt \(100, 50\) hat:  
+ Im folgende Beispiel zeichnet eine Ellipse; das umschließende Rechteck hat eine Breite von 80, eine Höhe von 40 und einen oberen linken Ecke des (100, 50):  
   
  [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
  [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- Da es sich bei <xref:System.Drawing.Graphics.DrawEllipse%2A> um eine überladene Methode der <xref:System.Drawing.Graphics>\-Klasse handelt, können Sie auf verschiedene Weisen Argumente für die Methode bereitstellen.  Beispielsweise können Sie ein <xref:System.Drawing.Rectangle> erstellen und <xref:System.Drawing.Rectangle> als Argument an die <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode übergeben:  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A>eine überladene Methode wird die <xref:System.Drawing.Graphics> Klasse, damit es gibt mehrere Möglichkeiten, die Sie Argumente angeben können. Sie können z. B. Erstellen einer <xref:System.Drawing.Rectangle> und übergeben Sie der <xref:System.Drawing.Rectangle> zu der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode als Argument:  
   
  [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
  [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
   
-## Zeichnen eines Bogens  
- Ein Bogen ist ein Segment einer Ellipse.  Zum Zeichnen eines Bogens müssen Sie die <xref:System.Drawing.Graphics.DrawArc%2A>\-Methode der <xref:System.Drawing.Graphics>\-Klasse aufrufen.  Die Parameter der <xref:System.Drawing.Graphics.DrawArc%2A>\-Methode entsprechen denen der <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode, mit der Ausnahme, dass <xref:System.Drawing.Graphics.DrawArc%2A> einen Anfangswinkel und einen Bogenwinkel erfordert.  Im folgenden Beispiel wird ein Bogen mit einem Anfangswinkel von 30 Grad und einem Bogenwinkel von 180 Grad gezeichnet:  
+## <a name="drawing-an-arc"></a>Zeichnen eines Bogens  
+ Ein Bogen ist ein Teil einer Ellipse. Um einen Bogen zu zeichnen, rufen Sie die <xref:System.Drawing.Graphics.DrawArc%2A> Methode der <xref:System.Drawing.Graphics> Klasse. Die Parameter von der <xref:System.Drawing.Graphics.DrawArc%2A> Methode sind identisch mit den Parametern des der <xref:System.Drawing.Graphics.DrawEllipse%2A> -Methode, außer dass <xref:System.Drawing.Graphics.DrawArc%2A> erfordert eine Startwinkel und mittelpunktswinkel. Im folgende Beispiel zeichnet einen Bogen mit einem Startwinkel von 30 Grad und bei einem mittelpunktswinkel von 180 Grad:  
   
  [!code-csharp[LinesCurvesAndShapes#53](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#53)]
  [!code-vb[LinesCurvesAndShapes#53](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#53)]  
   
- Die folgende Abbildung zeigt den Bogen, die Ellipse und das umschließende Rechteck.  
+ Die folgende Abbildung zeigt den Bogen, das die Ellipse und das umschließende Rechteck.  
   
- ![Ellipsen und Bögen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.png "Aboutgdip02\_art06")  
+ ![Ellipsen und Bögen](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
-## Siehe auch  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Gewusst wie: Erstellen von Graphics\-Objekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Gewusst wie: Erstellen eines Stiftes](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Gewusst wie: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Gewusst wie: Erstellen eines Stifts](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
  [Gewusst wie: Zeichnen der Kontur einer Form](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

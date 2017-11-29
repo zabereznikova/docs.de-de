@@ -1,56 +1,58 @@
 ---
-title: "Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HTTP-Aktivierung [WCF]"
+title: 'Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77dec85ee12250080fc487d120749892a148ef17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
-In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessaktivierungsdienst \(auch WAS für Windows Process Activation Service genannt\) in [!INCLUDE[wv](../../../../includes/wv-md.md)] als Host für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienste, die nicht über HTTP\-Netzwerkprotokolle kommunizieren, konfiguriert wird.In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
+In diesem Thema werden die Schritte vorgestellt, mit denen der Windows-Prozessaktivierungsdienst (auch WAS für Windows Process Activation Service genannt) in [!INCLUDE[wv](../../../../includes/wv-md.md)] als Host für [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienste, die nicht über HTTP-Netzwerkprotokolle kommunizieren, konfiguriert wird. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
--   Installieren Sie die \(oder bestätigen Sie die Installation der\) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Aktivierungskomponenten.  
+-   Installieren Sie die (oder bestätigen Sie die Installation der) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aktivierungskomponenten.  
   
--   Konfigurieren Sie WAS, sodass Nicht\-HTTP\-Protokolle unterstützt werden.Mit den folgenden Schritten wird [!INCLUDE[wv](../../../../includes/wv-md.md)] für die TCP\-Aktivierung konfiguriert.  
+-   Konfigurieren Sie WAS, sodass Nicht-HTTP-Protokolle unterstützt werden. Mit den folgenden Schritten wird [!INCLUDE[wv](../../../../includes/wv-md.md)] für die TCP-Aktivierung konfiguriert.  
   
- Nachdem Sie WAS installiert und konfiguriert haben, finden Sie unter [Gewusst wie: Hosten eines WCF\-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) Verfahren zum Erstellen eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensts, der einen mit WAS arbeitenden Nicht\-HTTP\-Endpunkt verfügbar macht.  
+ Nach dem Installieren und Konfigurieren von WAS, finden Sie unter [wie: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) für die Vorgehensweise zum Erstellen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, der einen nicht-HTTP-Endpunkt verfügbar macht, von dem WAS verwendet.  
   
-### So installieren Sie die WCF\-Aktivierungskomponenten für andere Protokolle als HTTP  
+### <a name="to-install-the-wcf-non-http-activation-components"></a>So installieren Sie die WCF-Aktivierungskomponenten für andere Protokolle als HTTP  
   
-1.  Klicken Sie auf die Schaltfläche **Start** und anschließend auf **Systemsteuerung**.  
+1.  Klicken Sie auf die **starten** Schaltfläche aus, und klicken Sie dann auf **Systemsteuerung**.  
   
 2.  Klicken Sie auf **Programme**, und klicken Sie dann auf **Programme und Funktionen**.  
   
-3.  Klicken Sie im Menü **Aufgaben** auf **Windows\-Funktionen ein\- oder ausschalten**.  
+3.  Auf der **Aufgaben** Menü klicken Sie auf **Windows-Funktionen ein- oder ausschalten**.  
   
-4.  Suchen Sie den [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]\-Knoten, markieren Sie ihn, und erweitern Sie ihn dann.  
+4.  Suchen Sie den [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]-Knoten, markieren Sie ihn, und erweitern Sie ihn dann.  
   
-5.  Aktivieren Sie das Feld **Nicht\-HttpAktivierungskomponenten von WCF**, und speichern Sie die Einstellung.  
+5.  Wählen Sie die **WCF-Aktivierungskomponenten für nicht-HTTP-** und speichern Sie die Einstellung.  
   
-### So konfigurieren Sie den WAS, sodass die TCP\-Aktivierung unterstützt wird  
+### <a name="to-configure-the-was-to-support-tcp-activation"></a>So konfigurieren Sie den WAS, sodass die TCP-Aktivierung unterstützt wird  
   
-1.  Zur Unterstützung der net.tcp\-Aktivierung muss die Standardwebsite zuerst an einen net.tcp\-Anschluss gebunden werden.Sie können hierzu das Tool Appcmd.exe verwenden, das mit dem [!INCLUDE[iisver](../../../../includes/iisver-md.md)]\-Verwaltungstoolset installiert wird.Führen Sie in einem Eingabeaufforderungsfenster auf Administratorebene den folgenden Befehl aus.  
+1.  Zur Unterstützung der net.tcp-Aktivierung muss die Standardwebsite zuerst an einen net.tcp-Port gebunden werden. Sie können hierzu das Tool Appcmd.exe verwenden, das mit dem [!INCLUDE[iisver](../../../../includes/iisver-md.md)]-Verwaltungstoolset installiert wird. Führen Sie in einem Eingabeaufforderungsfenster auf Administratorebene den folgenden Befehl aus.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
     ```  
   
     > [!NOTE]
-    >  Dieser Befehl ist eine einzelne Textzeile.Mit dem Befehl wird eine neue net.tcp\-Sitebindung der Standardwebsite hinzugefügt, die TCP\-Anschluss 808 mit jedem beliebigen Hostnamen belauscht.  
+    >  Dieser Befehl ist eine einzelne Textzeile. Mit dem Befehl wird eine neue net.tcp-Sitebindung der Standardwebsite hinzugefügt, die TCP-Anschluss 808 mit jedem beliebigen Hostnamen überwacht.  
   
-2.  Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.tcp\-Bindung, aber jede Anwendung kann die net.tcp\-Unterstützung unabhängig von den anderen Anwendungen aktivieren.Um net.tcp für die Anwendung zu aktivieren, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.  
+2.  Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.tcp-Bindung, aber jede Anwendung kann die net.tcp-Unterstützung unabhängig von den anderen Anwendungen aktivieren. Um net.tcp für die Anwendung zu aktivieren, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -58,9 +60,9 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessa
     ```  
   
     > [!NOTE]
-    >  Dieser Befehl ist eine einzelne Textzeile.Mit diesem Befehl wird die Anwendung \/\<*WCF Application*\> so konfiguriert, dass sowohl über http:\/\/localhost*\/\<WCF Application\>* als auch über net.tcp:\/\/localhost\/*\<WCF Application\>* darauf zugegriffen werden kann.  
+    >  Dieser Befehl ist eine einzelne Textzeile. Dieser Befehl aktiviert die /\<*WCF-Anwendung*> Anwendung darauf zugegriffen werden beide http://localhost*/\<WCF-Anwendung >* und net.tcp:// "localhost" /*\<WCF-Anwendung >*.  
   
-     Entfernen Sie die net.tcp\-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
+     Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
   
      Zur Vereinfachung sind die folgenden beiden Schritte in einer Batchdatei namens RemoveNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.  
   
@@ -74,7 +76,7 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessa
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-    2.  Entfernen Sie die net.tcp\-Sitebindung, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen:  
+    2.  Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -84,7 +86,7 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessa
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-### So entfernen Sie net.tcp aus der Liste aktivierter Protokolle  
+### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a>So entfernen Sie net.tcp aus der Liste aktivierter Protokolle  
   
 1.  Um net.tcp aus der Liste aktivierter Protokolle zu entfernen, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.  
   
@@ -95,9 +97,9 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessa
     > [!NOTE]
     >  Dieser Befehl ist eine einzelne Textzeile.  
   
-### So entfernen Sie die net.tcp\-Bindung  
+### <a name="to-remove-the-nettcp-site-binding"></a>So entfernen Sie die net.tcp-Bindung  
   
-1.  Um die net.tcp\-Sitebindung zu entfernen, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.  
+1.  Um die net.tcp-Sitebindung zu entfernen, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -107,8 +109,8 @@ In diesem Thema werden die Schritte vorgestellt, mit denen der Windows\-Prozessa
     > [!NOTE]
     >  Dieser Befehl ist eine einzelne Textzeile.  
   
-## Siehe auch  
- [TCP\-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)   
- [MSMQ\-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)   
- [NamedPipe\-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)   
- [Windows Server AppFabric\-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Siehe auch  
+ [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
+ [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)

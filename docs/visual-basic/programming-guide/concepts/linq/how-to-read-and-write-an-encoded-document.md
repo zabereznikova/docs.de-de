@@ -1,39 +1,31 @@
 ---
-title: 'Gewusst wie: Lesen und schreiben ein codiertes Dokuments (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Lesen und schreiben ein codiertes Dokuments (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dd871b4ab58103897bd5884581bf2e1353a3c60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Gewusst wie: Lesen und schreiben ein codiertes Dokuments (Visual Basic)
-Zum Erstellen eines codierten XML-Dokuments fügen Sie eine <xref:System.Xml.Linq.XDeclaration>der XML-Struktur, die Codierung auf den gewünschten Codeseitennamen festlegt.</xref:System.Xml.Linq.XDeclaration>  
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Vorgehensweise: Lesen und schreiben ein codiertes Dokuments (Visual Basic)
+Fügen Sie zum Erstellen eines codierten XML-Dokuments der XML-Struktur eine <xref:System.Xml.Linq.XDeclaration> hinzu, die die Codierung auf den gewünschten Codeseitennamen festlegt.  
   
- Zurückgegebenen Wert <xref:System.Text.Encoding.WebName%2A>ist ein gültiger Wert.</xref:System.Text.Encoding.WebName%2A>  
+ Jeder von <xref:System.Text.Encoding.WebName%2A> zurückgegebene Wert ist ein gültiger Wert.  
   
- Wenn Sie eines codiertes Dokuments Lesen der <xref:System.Xml.Linq.XDeclaration.Encoding%2A>-Eigenschaft wird auf den Codeseitennamen festgelegt werden.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Beim Lesen eines codierten Dokuments wird die <xref:System.Xml.Linq.XDeclaration.Encoding%2A>-Eigenschaft auf den Codeseitennamen festgelegt.  
   
- Wenn Sie festlegen, <xref:System.Xml.Linq.XDeclaration.Encoding%2A>auf einen gültigen Codeseitennamen [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] mit der angegebenen Codierung serialisiert.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Wenn Sie die <xref:System.Xml.Linq.XDeclaration.Encoding%2A> auf einen gültigen Codeseitennamen festgelegt haben, verwendet [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zum Serialisieren die angegebene Codierung.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt zwei Dokumente: eines mit UTF-8-Codierung und eines mit UTF-16-Codierung. Anschließend werden die Dokumente geladen, und die Codierung wird auf der Konsole ausgegeben.  
@@ -94,5 +86,5 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
  [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

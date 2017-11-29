@@ -1,43 +1,44 @@
 ---
-title: "Eigenschaften f&#252;r Windows Forms-Steuerelemente, die Richtlinien f&#252;r Eingabehilfen unterst&#252;tzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Barrierefreiheit, Windows Forms-Steuerelementeigenschaften"
-  - "Windows Forms, Eingabehilfeeigenschaften von Steuerelementen"
+title: "Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, accessibility properties of controls
+- accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Eigenschaften f&#252;r Windows Forms-Steuerelemente, die Richtlinien f&#252;r Eingabehilfen unterst&#252;tzen
-Die Steuerelemente in der Standardtoolbox für Windows Forms unterstützen zahlreiche Richtlinien für Barrierefreiheit, einschließlich der Anzeige des Tastaturfokus sowie der Bildschirmelemente.  
+# <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen
+In der standard-Toolbox für Windows Forms-Steuerelemente unterstützen viele der Richtlinien für Eingabehilfen, einschließlich Verfügbarmachung des Tastaturfokus und das Verfügbarmachen von der Bildschirmelemente.  
   
-## Planen von Barrierefreiheit  
- Die Eigenschaften der Steuerelemente können, wie aus der folgenden Tabelle ersichtlich, zur Unterstützung weiterer Richtlinien für Barrierefreiheit verwendet werden.  Sie sollten zusätzlich Menüs verwenden, um den Zugriff auf Programmfeatures zu ermöglichen.  
+## <a name="planning-ahead-for-accessibility"></a>Vorausplanen für Eingabehilfen  
+ Die Eigenschaften des Steuerelements können verwendet werden, um andere Richtlinien für Eingabehilfen unterstützen, wie in der folgenden Tabelle gezeigt. Darüber hinaus sollten Sie die Menüs verwenden, um Zugriff auf das Programmieren von Funktionen bereitzustellen.  
   
-|Steuerelementeigenschaft|Überlegungen zu Barrierefreiheit|  
-|------------------------------|--------------------------------------|  
-|AccessibleDescription|Die Beschreibung wird an Barrierefreiheit\-Hilfsmittel gemeldet, z. B. als Sprachausgabe.  Hilfstechnologien für die Barrierefreiheit sind spezielle Programme und Geräte, die Menschen mit Behinderungen die Verwendung des Computers erleichtern.|  
-|AccessibleName|Der an die Barrierefreiheit\-Hilfsmittel gemeldete Name.|  
+|Eigenschaft ""|Überlegungen für Eingabehilfen|  
+|----------------------|--------------------------------------|  
+|AccessibleDescription|Die Beschreibung ist z. B. die Bildschirmsprachausgabe Eingabehilfen gemeldet. Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen.|  
+|AccessibleName|Der Name, die an die Eingabehilfen gemeldet werden.|  
 |AccessibleRole|Beschreibt die Verwendung des Elements in der Benutzeroberfläche.|  
-|TabIndex|Erstellt einen logischen Navigationspfad über das Formular.  Bei Steuerelementen ohne systeminterne Bezeichnung, z. B. Textfeldern, muss die zugeordnete Bezeichnung dem Steuerelement in der Aktivierreihenfolge direkt vorangestellt wird.|  
-|Text|Verwenden Sie ein kaufmännisches Und\-Zeichen \("&"\), um Zugriffstasten zu erstellen.  Die Verwendung von Zugriffstasten ist Teil der Bereitstellung des dokumentierten Tastaturzugriffs auf alle Features.|  
-|Font Size|Wenn der Schriftgrad nicht angepasst werden kann, sollte er auf 10 Punkt oder größer gesetzt werden.  Nachdem der Schriftgrad des Formulars festgelegt ist, erhalten alle anschließend zum Formular hinzugefügten Steuerelemente dieselbe Größe.|  
-|ForeColor|Wenn für diese Eigenschaft der Standardwert festgelegt ist, werden die Farbeinstellungen des Benutzers für das Formular verwendet.|  
-|BackColor|Wenn für diese Eigenschaft der Standardwert festgelegt ist, werden die Farbeinstellungen des Benutzers für das Formular verwendet.|  
-|BackgroundImage|Lassen Sie diese Eigenschaft zur besseren Lesbarkeit des Textes leer.|  
+|TabIndex|Erstellt einen logischen Navigationspfad über das Formular. Es ist wichtig für Steuerelemente ohne systeminterne Bezeichnung, z. B. Textfelder, deren zugeordnete Bezeichnung, die in der Aktivierreihenfolge direkt vorangestellt haben.|  
+|Text|Verwenden Sie das Zeichen "&", um Zugriffstasten zu erstellen. Mithilfe von Zugriffsschlüsseln ist Teil der Bereitstellung von dokumentierten tastaturzugriffen auf Funktionen.|  
+|Schriftgrad|Wenn der Schriftgrad nicht anpassbar ist, sollte klicken sie auf 10 Punkt oder größer festgelegt werden. Sobald Schriftgrad des Formulars festgelegt ist, werden alle in das Formular anschließend hinzugefügten Steuerelemente dieselbe Größe aufweisen.|  
+|Forecolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbe der benutzereinstellungen auf dem Formular verwendet werden.|  
+|Backcolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbe der benutzereinstellungen auf dem Formular verwendet werden.|  
+|BackgroundImage|Lassen Sie diese Eigenschaft leer, um Text besser lesbar zu machen.|  
   
-## Siehe auch  
- [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows\-basierten Anwendungen](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+## <a name="see-also"></a>Siehe auch  
+ [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

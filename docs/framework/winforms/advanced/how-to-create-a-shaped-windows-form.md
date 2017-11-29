@@ -1,54 +1,59 @@
 ---
-title: "Gewusst wie: Erstellen von geformten Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Formulare, Ändern der Form von"
-  - "Formulare, Kreisförmig"
-  - "Formulare, Benutzerdefinierte Formen"
-  - "Formulare, Nicht rechteckig"
-  - "Formulare, Rund"
-  - "Geformte Formulare"
-  - "Windows Forms, Kreisförmig"
-  - "Windows Forms, Benutzerdefinierte Formen"
-  - "Windows Forms, Nicht rechteckige Form"
-  - "Windows Forms, Rund"
-  - "Windows Forms, Geformt"
+title: "Gewusst wie: Erstellen von geformten Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- forms [Windows Forms], rounded
+- Windows Forms, custom shapes
+- Windows Forms, shaped
+- shaped forms
+- forms [Windows Forms], changing the shape of
+- forms [Windows Forms], circular
+- forms [Windows Forms], nonrectangular
+- Windows Forms, nonrectangular shape
+- Windows Forms, rounded
+- Windows Forms, circular
+- forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 981256c2447a53aef8e1ea676db38ce693d1337e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von geformten Windows&#160;Forms
-Dieses Beispiel verleiht einem Formular eine elliptische Form, die automatisch an die Größe des Formulars angepasst wird.  
+# <a name="how-to-create-a-shaped-windows-form"></a>Gewusst wie: Erstellen von geformten Windows Forms
+In diesem Beispiel wird ein Formular bietet eine elliptische Form, die mit dem Formular ändert die Größe.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cpp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
  [!code-csharp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
  [!code-vb[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf den <xref:System.Windows.Forms>\-Namespace und den <xref:System.Drawing>\-Namespace.  
+-   Verweise auf die Namespaces <xref:System.Windows.Forms> und <xref:System.Drawing>.  
   
- Dieses Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode, um die Form des Formulars zu ändern.  Um diesen Code zu verwenden, kopieren Sie die Methodendeklaration sowie den Zeichencode innerhalb der Methode.  
+ In diesem Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Form des Formulars zu ändern. Um diesen Code verwenden möchten, kopieren Sie die Methodendeklaration sowie den Zeichencode innerhalb der Methode.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- <xref:System.Drawing.Region>   
- <xref:System.Drawing>   
- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>   
- <xref:System.Windows.Forms.Control.Region%2A>   
- [Erste Schritte mit der Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ <xref:System.Drawing.Region>  
+ <xref:System.Drawing>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>  
+ <xref:System.Windows.Forms.Control.Region%2A>  
+ [Erste Schritte mit Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)

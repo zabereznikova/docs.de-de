@@ -1,32 +1,35 @@
 ---
-title: "Angeben eines benutzerdefinierten Kryptografiealgorithmus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Angeben eines benutzerdefinierten Kryptografiealgorithmus
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 630457e4d1b30fe2a9439c3a41af5da92606c55a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Angeben eines benutzerdefinierten Kryptografiealgorithmus
-WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben.  Dazu führen Sie die folgenden Schritte aus:  
+# <a name="specifying-a-custom-crypto-algorithm"></a>Angeben eines benutzerdefinierten Kryptografiealgorithmus
+WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben. Dazu führen Sie die folgenden Schritte aus:  
   
 1.  Leiten Sie eine Klasse von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ab.  
   
 2.  Registrieren Sie den Algorithmus.  
   
-3.  Konfigurieren Sie die Bindung mit der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>\-Klasse.  
+3.  Konfigurieren Sie die Bindung mit der <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse.  
   
-## Ableiten einer Klasse von SecurityAlgorithmSuite  
- <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eine abstrakte Basisklasse, mit der Sie den Algorithmus für verschiedene sicherheitsbezogene Vorgänge angeben können,  z. B. für das Berechnen eines Hash für eine digitale Signatur oder das Verschlüsseln einer Nachricht.  Der folgende Code zeigt, wie eine Klasse von <xref:System.ServiceModel.Security.SecurityAlgorithm> abgeleitet wird:  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a>Ableiten einer Klasse von SecurityAlgorithmSuite  
+ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ist eine abstrakte Basisklasse, mit der Sie den Algorithmus für verschiedene sicherheitsbezogene Vorgänge angeben können, z. B. für das Berechnen eines Hash für eine digitale Signatur oder das Verschlüsseln einer Nachricht. Der folgende Code zeigt, wie eine Klasse von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> abgeleitet wird:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -91,11 +94,10 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
             return length >= 128 && length <= 256;  
         }  
     }  
-  
 ```  
   
-## Registrieren des benutzerdefinierten Algorithmus  
- Die Registrierung kann in einer Konfigurationsdatei oder in imperativem Code vorgenommen werden.  Zum Registrieren eines benutzerdefinierten Algorithmus wird eine Zuordnung zwischen einer Klasse, die einen Kryptografiedienstanbieter implementiert, und einem Alias erstellt.  Der Alias wird dann einem URI zugeordnet, der beim Angeben des Algorithmus in der Bindung des WCF\-Diensts verwendet wird.  Der folgende Konfigurationsausschnitt zeigt, wie ein benutzerdefinierter Algorithmus in der Konfigurationsdatei registriert wird:  
+## <a name="register-the-custom-algorithm"></a>Registrieren des benutzerdefinierten Algorithmus  
+ Die Registrierung kann in einer Konfigurationsdatei oder in imperativem Code vorgenommen werden. Zum Registrieren eines benutzerdefinierten Algorithmus wird eine Zuordnung zwischen einer Klasse, die einen Kryptografiedienstanbieter implementiert, und einem Alias erstellt. Der Alias wird dann einem URI zugeordnet, der beim Angeben des Algorithmus in der Bindung des WCF-Diensts verwendet wird. Der folgende Konfigurationsausschnitt zeigt, wie ein benutzerdefinierter Algorithmus in der Konfigurationsdatei registriert wird:  
   
 ```xml  
 <configuration>  
@@ -111,33 +113,30 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
         </cryptographySettings>  
     </mscorlib>  
 </configuration>  
-  
 ```  
   
- Durch den Abschnitt unter dem \<`cryptoClasses`\>\-Element wird die Zuordnung zwischen SHA256CryptoServiceProvider und dem Alias "SHA256CSP" erstellt.  Das \<[nameEntry](assetId:///nameEntry?qualifyHint=False&amp;autoUpgrade=True)\>\-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL \("http:\/\/constoso.com\/CustomAlgorithms\/CustomHashAlgorithm"\).  
+ Im Abschnitt unter dem <`cryptoClasses`>-Element wird die Zuordnung zwischen der SHA256CryptoServiceProvider und den Alias "SHA256CSP" erstellt. Die <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
   
- Verwenden Sie zum Registrieren des benutzerdefinierten Algorithmus im Code die [M:System.Security.Cryptography.CryptoConfig.AddAlgorithm\(System.Type, System.String\<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True\-Methode.  Diese Methode erstellt beide Zuordnungen.  Das folgende Beispiel zeigt, wie diese Methode aufgerufen wird:  
+ Zum Registrieren des benutzerdefinierten Algorithmus im Code verwendet die <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False & AutoUpgrade = "true"-Methode. Diese Methode erstellt beide Zuordnungen. Das folgende Beispiel zeigt, wie diese Methode aufgerufen wird:  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
-  
 ```  
   
-## Konfigurieren der Bindung  
- Zum Konfigurieren der Bindung geben Sie die benutzerdefinierte abgeleitete <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>\-Klasse wie im folgenden Codeausschnitt dargestellt in den Bindungseinstellungen an:  
+## <a name="configure-the-binding"></a>Konfigurieren der Bindung  
+ Zum Konfigurieren der Bindung geben Sie die benutzerdefinierte abgeleitete <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse wie im folgenden Codeausschnitt dargestellt in den Bindungseinstellungen an:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
-  
 ```  
   
- Ein vollständiges Codebeispiel finden Sie im Beispiel unter [Kryptografische Flexibilität in WCF\-Sicherheit](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md).  
+ Ein vollständiges Codebeispiel finden Sie unter der [kryptografische Flexibilität in WCF-Sicherheit](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) Beispiel.  
   
-## Siehe auch  
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)   
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Siehe auch  
+ [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)  
+ [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Schlüsselbegriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)

@@ -1,43 +1,24 @@
 ---
-title: Handles-Klausel (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Handles-Klausel (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Handles
 - vb.Handles
-dev_langs:
-- VB
-helpviewer_keywords:
-- Handles keyword
+helpviewer_keywords: Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c79935e7f15f31abca7efddbc443239d5db2f58
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a23b3d96052ad179ea25150bb570461a9e764977
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handles-clause-visual-basic"></a>Handles-Klausel (Visual Basic)
 Deklariert, dass eine Prozedur ein angegebenes Ereignis behandelt.  
@@ -63,27 +44,26 @@ proceduredeclaration Handles eventlist
  Für benutzerdefinierte Ereignisse ruft die Anwendung den `AddHandler`-Accessor des Ereignisses auf, wenn die Prozedur als ein Ereignishandler hinzugefügt wird. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Beispiel  
- [!code-vb[VbVbalrEvents&#2;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+ [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
   
  Im folgenden Beispiel wird gezeigt, wie eine abgeleitete Klasse die `Handles`-Anweisung zum Verarbeiten eines Ereignisses aus einer Basisklasse verwenden kann.  
   
- [!code-vb[VbVbalrEvents&3;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält zwei Ereignishandler der Schaltfläche für ein **WPF-Anwendung** Projekt.  
+ Das folgende Beispiel enthält zwei Tastenereignishandler für ein **WPF-Anwendung** Projekt.  
   
- [!code-vb[VbVbalrEvents&#41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel entspricht dem vorherigen Beispiel. Die `eventlist` in der `Handles`-Klausel enthält die Ereignisse für beide Tasten.  
   
- [!code-vb[VbVbalrEvents&#42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)   
- [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler-Anweisung](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)   
- [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
+ [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [RemoveHandler-Anweisung](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
  [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
-

@@ -1,60 +1,59 @@
 ---
-title: "REM Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.'"
-  - "vb.Rem"
-  - "Rem"
-  - "'"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "REM statement"
-  - "comments, Visual Basic code"
-  - "code comments, Visual Basic"
-  - "Visual Basic code, comments"
-  - "' comment marker character [Visual Basic]"
+title: REM-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.'
+- vb.Rem
+- Rem
+- "'"
+helpviewer_keywords:
+- REM statement [Visual Basic]
+- comments, Visual Basic code
+- code comments, Visual Basic
+- Visual Basic code, comments
+- "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d64ce970e3e74437f5e8c63c8a4d578900902192
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# REM Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Wird verwendet, um erläuternde Anmerkungen zum Quellcode eines Programms hinzuzufügen.  
+# <a name="rem-statement-visual-basic"></a>REM-Anweisung (Visual Basic)
+Verwendet für erläuternde Hinweise im Quellcode eines Programms.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 REM comment  
 ' comment  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `comment`  
- Optional.  Der Text eines beliebigen Kommentars, der eingefügt werden soll.  Ein Leerzeichen ist erforderlich, zwischen den `REM` Schlüsselwort und `comment`.  
+ Dies ist optional. Der Text eines Kommentars, die Sie einschließen möchten. Ein Leerzeichen ist erforderlich, zwischen den `REM` Schlüsselwort und `comment`.  
   
-## Hinweise  
- Eine `REM`\-Anweisung kann allein in einer Zeile stehen, sie kann jedoch auch zusammen mit einer anderen Anweisung in einer Zeile angegeben werden.  Die `REM`\-Anweisung muss die letzte Anweisung der Zeile sein.  Wenn `REM` auf eine andere Anweisung folgt, muss sie durch ein Leerzeichen von dieser Anweisung getrennt werden.  
+## <a name="remarks"></a>Hinweise  
+ Sie setzen eine `REM` Anweisung allein auf einer Zeile, oder Sie können es in einer Zeile, die nach einer anderen Anweisung ablegen. Die `REM` Anweisung muss die letzte Anweisung in der Zeile sein. Wenn es sich um eine andere Anweisung folgt die `REM` müssen von dieser Anweisung durch ein Leerzeichen getrennt werden.  
   
- Anstelle von `REM` können Sie ein einfaches Anführungszeichen \(`'`\) verwenden.  Dies gilt, egal, ob der Kommentar in einer Zeile auf eine andere Anweisung folgt oder alleine in einer Zeile steht.  
+ Sie können ein einfaches Anführungszeichen (`'`) anstelle von `REM`. Dies ist "true", gibt an, ob der Kommentar folgt von einer anderen Anweisung in der gleichen Zeile oder alleine in einer Zeile.  
   
 > [!NOTE]
->  Sie können eine `REM`\-Anweisung nicht durch Verwendung einer Zeilenfortsetzungszeichenfolge \(`_`\) fortsetzen.  Der Compiler untersucht die Zeichen nach dem Beginn eines Kommentars nicht auf besondere Bedeutungen.  Bei einem mehrzeiligen Kommentar müssen Sie in jeder Zeile eine weitere `REM`\-Anweisung oder das Kommentarsymbol \(`'`\) eingeben.  
+>  Sie können nicht fortfahren eine `REM` Anweisung, indem Sie eine Zeilenfortsetzungszeichenfolge (`_`). Nachdem ein Kommentar eingeleitet wurde, wird der Compiler nicht die Zeichen für eine besondere Bedeutung untersuchen. Verwenden Sie für einen mehrzeiligen Kommentar eine andere `REM` -Anweisung oder das Kommentarsymbol (`'`) in jeder Zeile.  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung der `REM`\-Anweisung veranschaulicht, die für erläuternde Hinweise im Programm verwendet wird.  Es zeigt darüber hinaus, wie das einfache Anführungszeichen \(`'`\) anstelle von `REM` verwendet werden kann.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die `REM` -Anweisung, die für erläuternde Hinweise in einem Programm verwendet wird. Darüber hinaus wird gezeigt, die Alternative Verwendung der einfachen Anführungszeichen (`'`) anstelle von `REM`.  
   
  [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
-## Siehe auch  
- [Comments in Code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Kommentare in Code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
  [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

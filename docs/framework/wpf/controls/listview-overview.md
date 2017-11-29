@@ -1,98 +1,103 @@
 ---
-title: "&#220;bersicht &#252;ber ListView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, ListView"
-  - "ListView-Steuerelemente [WPF], Informationen über das ListView-Steuerelement"
+title: "Übersicht über ListView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], ListView
+- ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber ListView
-Das <xref:System.Windows.Controls.ListView>\-Steuerelement stellt die Infrastruktur zum Anzeigen eines Satzes von Datenelementen in verschiedenen Layouts oder Ansichten bereit.  Dies ist beispielsweise hilfreich, um Datenelemente in einer Tabelle anzuzeigen und Spalten zu sortieren.  
+# <a name="listview-overview"></a>Übersicht über ListView
+Die <xref:System.Windows.Controls.ListView> Steuerelement stellt die Infrastruktur, um eine Reihe von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  
   
-   
   
 <a name="WhatisaListView"></a>   
-## Was ist eine ListView?  
- Das <xref:System.Windows.Controls.ListView>\-Steuerelement ist ein <xref:System.Windows.Controls.ItemsControl>, das von <xref:System.Windows.Controls.ListBox> abgeleitet wird.  Normalerweise sind seine Elemente Teile einer Datensammlung und werden als <xref:System.Windows.Controls.ListViewItem>\-Objekte dargestellt.  Ein <xref:System.Windows.Controls.ListViewItem> ist ein <xref:System.Windows.Controls.ContentControl> und kann nur ein einzelnes untergeordnetes Element enthalten.  Das untergeordnete Element kann jedoch ein beliebiges visuelles Element sein.  
+## <a name="what-is-a-listview"></a>Was ist ein ListView-Steuerelement?  
+ Die <xref:System.Windows.Controls.ListView> -Steuerelement ist ein <xref:System.Windows.Controls.ItemsControl> , stammt aus <xref:System.Windows.Controls.ListBox>. In der Regel enthaltenen Elemente sind Elemente einer Datensammlung und werden als dargestellt <xref:System.Windows.Controls.ListViewItem> Objekte. Ein <xref:System.Windows.Controls.ListViewItem> ist eine <xref:System.Windows.Controls.ContentControl> und kann nur ein einzelnes untergeordnetes Element enthalten. Dieses untergeordnete Element kann jedoch ein beliebiges visuelles Element sein.  
   
 <a name="DefiningaListViewView"></a>   
-## Definieren eines Anzeigemodus für eine ListView  
- Um einen Anzeigemodus für den Inhalt eines <xref:System.Windows.Controls.ListView>\-Steuerelements anzugeben, legen Sie die <xref:System.Windows.Controls.ListView.View%2A>\-Eigenschaft fest.  Ein von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bereitgestellter Ansichtsmodus ist <xref:System.Windows.Controls.GridView>, in dem eine Sammlung von Datenelementen in einer Tabelle mit anpassbaren Spalten angezeigt wird.  
+## <a name="defining-a-view-mode-for-a-listview"></a>Definieren eines Anzeigemodus für ein ListView-Steuerelement  
+ An einen Anzeigemodus für den Inhalt einer <xref:System.Windows.Controls.ListView> -Steuerelements legen Sie die <xref:System.Windows.Controls.ListView.View%2A> Eigenschaft. Eine Ansichtsmodus, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet ist <xref:System.Windows.Controls.GridView>, woraufhin eine Auflistung von Datenelementen in einer Tabelle, die anpassbare Spalten aufweist.  
   
- Das folgende Beispiel zeigt, wie eine <xref:System.Windows.Controls.GridView> für ein <xref:System.Windows.Controls.ListView>\-Steuerelement definiert wird, das Mitarbeiterinformationen anzeigt.  
+ Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.GridView> für eine <xref:System.Windows.Controls.ListView> Steuerelement, das Informationen zu Mitarbeitern anzeigt.  
   
- [!code-xml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- In der folgenden Abbildung ist dargestellt, wie die Daten des vorherigen Beispiels angezeigt werden.  
+ Die folgende Abbildung zeigt, wie die Daten aus dem vorherigen Beispiel angezeigt werden.  
   
- ![ListView mit GridView&#45;Ausgabe](../../../../docs/framework/wpf/controls/media/listviewgridview.png "ListViewGridView")  
+ ![ListView with GridView output](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
   
- Sie können einen benutzerdefinierten Ansichtsmodus erstellen, indem Sie eine Klasse definieren, die von der <xref:System.Windows.Controls.ViewBase>\-Klasse erbt.  Die <xref:System.Windows.Controls.ViewBase>\-Klasse stellt die Infrastruktur bereit, die Sie benötigen, um eine benutzerdefinierte Ansicht zu erstellen.  Weitere Informationen zum Erstellen einer benutzerdefinierten Ansicht finden Sie unter [Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ Sie können einen benutzerdefinierten Ansichtsmodus erstellen, durch die Definition einer Klasse, die von erben die <xref:System.Windows.Controls.ViewBase> Klasse. Die <xref:System.Windows.Controls.ViewBase> Klasse bietet die Infrastruktur, die Sie benötigen, um eine benutzerdefinierte Ansicht zu erstellen. Weitere Informationen dazu, wie Sie eine benutzerdefinierte Ansicht erstellen, finden Sie unter [Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="BindingDatatoaListView"></a>   
-## Binden von Daten an eine ListView  
- Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.Items%2A>\-Eigenschaft und die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>\-Eigenschaft, um Elemente für ein <xref:System.Windows.Controls.ListView>\-Steuerelement anzugeben.  Im folgenden Beispiel wird die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>\-Eigenschaft auf die Datensammlung `EmployeeInfoDataSource` festgelegt.  
+## <a name="binding-data-to-a-listview"></a>Binden von Daten an ein ListView-Steuerelement  
+ Verwenden der <xref:System.Windows.Controls.ItemsControl.Items%2A> und <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaften zur Angabe der Elemente für eine <xref:System.Windows.Controls.ListView> Steuerelement. Im folgenden Beispiel wird die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft für eine Datensammlung, die aufgerufen wird `EmployeeInfoDataSource`.  
   
- [!code-xml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
- In einer <xref:System.Windows.Controls.GridView> werden <xref:System.Windows.Controls.GridViewColumn>\-Objekte an angegebene Datenfelder gebunden.  Im folgenden Beispiel wird ein <xref:System.Windows.Controls.GridViewColumn>\-Objekt an ein Datenfeld gebunden, indem eine <xref:System.Windows.Data.Binding> für die <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>\-Eigenschaft angegeben wird.  
+ In einem <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> Binden von Objekten angegebenen Datenfeldern. Im folgenden Beispiel bindet ein <xref:System.Windows.Controls.GridViewColumn> Objekt für ein Datenfeld durch Angabe einer <xref:System.Windows.Data.Binding> für die <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> Eigenschaft.  
   
  [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
  [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
- Sie können auch eine <xref:System.Windows.Data.Binding> als Teil einer <xref:System.Windows.DataTemplate>\-Definition angeben, die Sie verwenden, um die Zellen in einer Spalte zu formatieren.  Im folgenden Beispiel setzt die <xref:System.Windows.DataTemplate>, die mit einem <xref:System.Windows.ResourceKey> identifiziert wird, die <xref:System.Windows.Data.Binding> für eine <xref:System.Windows.Controls.GridViewColumn>.  Beachten Sie, dass dieses Beispiel keine <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> definiert, da ein solches Vorgehen die mit <xref:System.Windows.DataTemplate> angegebene Bindung überschreibt.  
+ Sie können auch angeben einer <xref:System.Windows.Data.Binding> als Teil einer <xref:System.Windows.DataTemplate> Definition, mit denen Sie die Zellen in einer Spalte zu formatieren. Im folgenden Beispiel die <xref:System.Windows.DataTemplate> identifiziert, die mit einer <xref:System.Windows.ResourceKey> legt die <xref:System.Windows.Data.Binding> für eine <xref:System.Windows.Controls.GridViewColumn>. Beachten Sie, die in diesem Beispiel nicht definiert die <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> , da dadurch so die Bindung überschreibt, die von angegeben wird <xref:System.Windows.DataTemplate>.  
   
- [!code-xml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
-## Formatieren einer ListView, die eine GridView implementiert  
- Das <xref:System.Windows.Controls.ListView>\-Steuerelement enthält <xref:System.Windows.Controls.ListViewItem>\-Objekte, die die angezeigten Datenelemente darstellen.  Mit den folgenden Eigenschaften können Sie den Inhalt und das Format von Datenelementen definieren:  
+## <a name="styling-a-listview-that-implements-a-gridview"></a>Formatieren eines ListView-Steuerelements, das eine GridView implementiert  
+ Die <xref:System.Windows.Controls.ListView> Steuerelement enthält <xref:System.Windows.Controls.ListViewItem> Objekte, die die Datenelemente darstellen, die angezeigt werden. Mit den folgenden Eigenschaften können Sie den Inhalt und das Format von Datenelementen definieren:  
   
--   Verwenden Sie für das <xref:System.Windows.Controls.ListView>\-Steuerelement die Eigenschaften <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> und <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.  
+-   Auf der <xref:System.Windows.Controls.ListView> steuern, verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, und <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Eigenschaften.  
   
--   Verwenden Sie für das <xref:System.Windows.Controls.ListViewItem>\-Steuerelement die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>\-Eigenschaft und die <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>\-Eigenschaft.  
+-   Auf der <xref:System.Windows.Controls.ListViewItem> steuern, verwenden Sie die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> und <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> Eigenschaften.  
   
- Um in einer <xref:System.Windows.Controls.GridView> Ausrichtungsprobleme zwischen Zellen zu verhindern, sollten Sie keinen <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> verwenden, um Eigenschaften festzulegen oder Inhalte hinzuzufügen, die die Breite eines Elements in einer <xref:System.Windows.Controls.ListView> beeinflussen.  Beispielsweise kann ein Ausrichtungsproblem auftreten, wenn Sie die <xref:System.Windows.FrameworkElement.Margin%2A>\-Eigenschaft im <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> festlegen.  Um Eigenschaften anzugeben oder Inhalte zu definieren, die die Breite von Elementen in einer <xref:System.Windows.Controls.GridView> beeinflussen, verwenden Sie die Eigenschaften der <xref:System.Windows.Controls.GridView>\-Klasse und verwandter Klassen wie <xref:System.Windows.Controls.GridViewColumn>.  
+ Zur Vermeidung von Ausrichtungsprobleme zwischen den Zellen in einer <xref:System.Windows.Controls.GridView>, verwenden Sie nicht die <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Festlegen von Eigenschaften oder Hinzufügen von Inhalt, der die Breite eines Elements in wirkt sich auf eine <xref:System.Windows.Controls.ListView>. Ein Ausrichtungsproblem kann beispielsweise auftreten, wenn Sie festlegen, die <xref:System.Windows.FrameworkElement.Margin%2A> Eigenschaft in der <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Geben Sie Eigenschaften oder definieren Inhalt, der die Breite der Elemente in wirkt sich auf eine <xref:System.Windows.Controls.GridView>, mit den Eigenschaften des der <xref:System.Windows.Controls.GridView> Klasse und seinen verwandten Klassen können z. B. <xref:System.Windows.Controls.GridViewColumn>.  
   
- Weitere Informationen zur Verwendung von <xref:System.Windows.Controls.GridView> und den unterstützenden Klassen finden Sie unter [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md).  
+ Weitere Informationen zur Verwendung von <xref:System.Windows.Controls.GridView> und unterstützenden Klassen, finden Sie unter [GridView Overview](../../../../docs/framework/wpf/controls/gridview-overview.md).  
   
- Wenn Sie einen <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> für ein <xref:System.Windows.Controls.ListView>\-Steuerelement definieren und außerdem eine <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> definieren, müssen Sie im Stil einen <xref:System.Windows.Controls.ContentPresenter> angeben, damit die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> ordnungsgemäß funktioniert.  
+ Wenn Sie definieren eine <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> für eine <xref:System.Windows.Controls.ListView> steuern und definieren Sie auch eine <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, müssen Sie auch eine <xref:System.Windows.Controls.ContentPresenter> im Stil Reihenfolge für die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> ordnungsgemäß funktioniert.  
   
- Verwenden Sie nicht die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>\-Eigenschaft und die <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>\-Eigenschaft für <xref:System.Windows.Controls.ListView>\-Inhalte, die mit einer <xref:System.Windows.Controls.GridView> angezeigt werden.  Um die Ausrichtung der Spalteninhalte einer <xref:System.Windows.Controls.GridView> anzugeben, definieren Sie eine <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.  
+ Verwenden Sie nicht die <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> und <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> Eigenschaften für <xref:System.Windows.Controls.ListView> mit angezeigten Inhalt eine <xref:System.Windows.Controls.GridView>. An die Ausrichtung von Inhalt in einer Spalte mit einem <xref:System.Windows.Controls.GridView>, definieren eine <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.  
   
 <a name="UsingtheSameViewMoreThanOnce"></a>   
-## Gemeinsames Verwenden des gleichen Anzeigemodus  
- Der gleiche Anzeigemodus kann von zwei <xref:System.Windows.Controls.ListView>\-Steuerelementen nicht gleichzeitig gemeinsam verwendet werden.  Wenn Sie den gleichen Anzeigemodus mit mehreren <xref:System.Windows.Controls.ListView>\-Steuerelementen verwenden, wird eine Ausnahme ausgelöst.  
+## <a name="sharing-the-same-view-mode"></a>Gemeinsame Nutzung des gleichen Anzeigemodus  
+ Zwei <xref:System.Windows.Controls.ListView> Steuerelemente können nicht den gleichen Ansichtsmodus gleichzeitig gemeinsam verwenden. Wenn Sie versuchen, verwenden Sie die gleichen Ansichtsmodus mit mehr als einem <xref:System.Windows.Controls.ListView> zu steuern, eine Ausnahme auftritt.  
   
- Verwenden Sie Vorlagen oder Stile, um einen Anzeigemodus anzugeben, der gleichzeitig von mehr als einer <xref:System.Windows.Controls.ListView> verwendet werden kann.  Ein Beispiel zum Definieren von Ansichten als <xref:System.Windows.FrameworkElement.Resources%2A> finden Sie unter [Beispiel für eine ListView mit mehreren Ansichten](http://go.microsoft.com/fwlink/?LinkID=160013).  
+ Um einen Ansichtsmodus anzugeben, die gleichzeitig von mehreren verwendet werden können <xref:System.Windows.Controls.ListView>, verwenden Sie Vorlagen oder Stile. Ein Beispiel zum Definieren von Ansichten als <xref:System.Windows.FrameworkElement.Resources%2A>, finden Sie unter [ListView mit mehreren Ansichten Beispiel](http://go.microsoft.com/fwlink/?LinkID=160013).  
   
 <a name="CreatingaCustomView"></a>   
-## Erstellen eines benutzerdefinierten Ansichtsmodus  
- Benutzerdefinierte Ansichten wie <xref:System.Windows.Controls.GridView> werden von der abstrakten <xref:System.Windows.Controls.ViewBase>\-Klasse abgeleitet, die die Werkzeuge zum Anzeigen von Datenelementen bereitstellt, die als <xref:System.Windows.Controls.ListViewItem>\-Objekte dargestellt werden.  
+## <a name="creating-a-custom-view-mode"></a>Erstellen eines benutzerdefinierten Ansichtsmodus  
+ Benutzerdefinierte Ansichten wie <xref:System.Windows.Controls.GridView> abgeleitet sind die <xref:System.Windows.Controls.ViewBase> abstrakte Klasse, die gehören Tools, um die Datenelemente anzuzeigen, die als Werte dargestellt werden <xref:System.Windows.Controls.ListViewItem> Objekte.  
   
  Ein Beispiel für einen benutzerdefinierten Ansichtsmodus finden Sie unter [Beispiel für eine ListView mit mehreren Ansichten](http://go.microsoft.com/fwlink/?LinkID=160013).  
   
-## Siehe auch  
- <xref:System.Windows.Controls.GridView>   
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.ListViewItem>   
- <xref:System.Windows.Data.Binding>   
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.GridView>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.ListViewItem>  
+ <xref:System.Windows.Data.Binding>  
+ [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Steuerelemente](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

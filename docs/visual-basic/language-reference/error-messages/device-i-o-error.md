@@ -1,30 +1,28 @@
 ---
-title: "Device I/O error | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID57"
-dev_langs: 
-  - "VB"
+title: "Geräte-E/A-Fehler"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID57
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 01926b69b2fa3a72158f6fd3c96efe7d71c4aa19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Device I/O error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ein Ein\- oder Ausgabefehler trat auf, während das Programm auf ein Gerät, wie einen Drucker oder ein Diskettenlaufwerk, zugegriffen hat.  
+# <a name="device-io-error"></a>Geräte-E/A-Fehler
+Das Programm auf einem Gerät wie einen Drucker oder das Laufwerk verwendet wurde, ist ein Eingabe- oder Fehler aufgetreten.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Vergewissern Sie sich, dass das Gerät ordnungsgemäß funktioniert, und versuchen Sie es noch einmal.  
+-   Stellen Sie sicher, dass das Gerät ordnungsgemäß funktioniert, und wiederholen Sie dann den Vorgang.  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,33 +1,25 @@
 ---
-title: Erstellen von benutzerdefinierten Attributen (Visual Basic) | Microsoft-Dokumentation
+title: Erstellen von benutzerdefinierten Attributen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa97a591fdbdfab931a8b5e4f70ec3c00762332
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7a24553ae4cc2186e805d76ddb37f38c0322aeac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Erstellen von benutzerdefinierten Attributen (Visual Basic)
-Sie können eigene benutzerdefinierte Attribute erstellen, durch die Definition einer Attributklasse, die eine Klasse, die direkt oder indirekt abgeleitet <xref:System.Attribute>, welche identifizieren Attributdefinitionen, die in den Metadaten, die schnell und einfach macht.</xref:System.Attribute> Angenommen Sie, Sie Tagtypen mit dem Namen des Programmierers, die den Typ erstellt hat. Sie definieren eine benutzerdefinierte `Author` Attributklasse:  
+Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.Class Or   
@@ -43,7 +35,7 @@ Public Class Author
 End Class  
 ```  
   
- Der Klassenname ist der Attributname `Author`. Sie ist abgeleitet von `System.Attribute`, sodass eine benutzerdefinierte Attributklasse. Die Parameter des Konstruktors sind Positionsparameter des benutzerdefinierten Attributs. In diesem Beispiel `name` ist ein Positionsparameter. Alle öffentlichen Schreib-Lese-Felder oder Eigenschaften sind benannte Parameter. In diesem Fall `version` ist der einzige benannte Parameter. Beachten Sie, dass die `AttributeUsage` -Attribut der `Author` Attribut gilt nur für die Klasse und `Structure` Deklarationen.  
+ Der Klassenname ist der Attributname, `Author`. Er ist von `System.Attribute` abgeleitet, ist also eine benutzerdefinierte Attributklasse. Die Parameter des Konstruktors sind die Positionsparameter des benutzerdefinierten Attributs. In diesem Beispiel ist `name` ein Positionsparameter. Alle öffentlichen Lese-/Schreibfelder oder -Eigenschaften werden Parameter genannt. In diesem Fall ist `version` der einzige Parameter mit Namen. Beachten Sie die Verwendung des `AttributeUsage`-Attributs, um das `Author`-Attribut ausschließlich für Klassen- und `Structure`-Deklarationen gültig zu machen.  
   
  Sie könnten dieses neue Attribut wie folgt verwenden:  
   
@@ -54,7 +46,7 @@ Class SampleClass
 End Class  
 ```  
   
- `AttributeUsage`hat einen benannten Parameter, `AllowMultiple`, mit denen Sie ein benutzerdefiniertes Attribut einfache oder mehrfache Verwendung konfiguriert werden können. Im folgenden Codebeispiel wird ein mehrfach verwendbares Attribut erstellt.  
+ `AttributeUsage` verfügt über einen Parameter, `AllowMultiple`, mit dem Sie ein benutzerdefiniertes Attribut zur einmaligen oder mehrfachen Nutzung erstellen können. Im folgenden Codebeispiel wird ein mehrfach verwendbares Attribut erstellt.  
   
 ```vb  
 ' multiuse attribute  
@@ -77,13 +69,13 @@ End Class
 ```  
   
 > [!NOTE]
->  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese-/ Schreibzugriff sein.  
+>  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection></xref:System.Reflection>   
- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)   
- [Verfassen von benutzerdefinierten Attributen](http://msdn.microsoft.com/library/97216f69-bde8-49fd-ac40-f18c500ef5dc)   
- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Attribute (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Zugriff auf Attribute mit Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
+ [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)  
+ [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [Attribute (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))  
  [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

@@ -1,27 +1,30 @@
 ---
-title: "Bew&#228;hrte Methoden: Vermittler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Best Practices: Vermittler'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3185761ef784051c7508c3684d46997521483f04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bew&#228;hrte Methoden: Vermittler
-Es muss darauf geachtet werden, Fehler beim Aufrufen von Vermittlern ordnungsgemäß zu behandeln, um sicherzustellen, dass dienstseitige Kanäle auf dem Vermittler ordnungsgemäß geschlossen werden.  
+# <a name="best-practices-intermediaries"></a>Best Practices: Vermittler
+Beim Aufrufen von Vermittlern müssen Fehler ordnungsgemäß behandelt werden, um sicherzustellen, dass dienstseitige Kanäle im Vermittler ordnungsgemäß geschlossen werden.  
   
- Nehmen Sie folgendes Szenario als Beispiel:Ein Client ruft einen Vermittler auf, der dann einen Back\-End\-Dienst aufruft.Der Back\-End\-Dienst definiert keinen Fehlervertrag, deshalb wird jeder von diesem Dienst ausgelöster Fehler als nicht typisierter Fehler behandelt.Der Back\-End\-Dienst löst einen <xref:System.ApplicationException> aus, und WCF bricht den dienstseitigen Kanal ordnungsgemäß ab.Der <xref:System.ApplicationException> taucht dann als <xref:System.ServiceModel.FaultException> auf, der zum Vermittler ausgelöst wird.Der Vermittler löst den <xref:System.ApplicationException> erneut aus.WCF interpretiert dieses als nicht typisierten Fehler vom Vermittler und leitet ihn an den Client weiter.Sowohl der Vermittler als auch der Client bemängeln ihre clientseitigen Kanäle bei Empfang des Fehlers.Der dienstseitige Kanal des Vermittlers bleibt jedoch geöffnet, da WCF nicht weiß, ob der Fehler schwerwiegend ist.  
+ Betrachten Sie folgendes Szenario. Ein Client ruft einen Vermittler auf, der dann einen Back-End-Dienst aufruft.  Der Back-End-Dienst definiert keinen Fehlervertrag. Deshalb wird jeder von diesem Dienst ausgelöste Fehler als nicht typisierter Fehler behandelt.  Löst die Back-End-Dienst eine <xref:System.ApplicationException> und WCF bricht den dienstseitigen Kanal ordnungsgemäß ab. Die <xref:System.ApplicationException> wird dann als <xref:System.ServiceModel.FaultException> für den Vermittler ausgelöste Ausnahme ausgegeben. Der Vermittler löst die <xref:System.ApplicationException> erneut aus. WCF interpretiert diese als nicht typisierten Fehler vom Vermittler und leitet den Fehler an den Client weiter. Bei Empfang des Fehlers lösen der Vermittler und der Client Fehler für ihre clientseitigen Kanäle aus. Der dienstseitige Kanal des Vermittlers bleibt jedoch geöffnet, da WCF nicht weiß, ob es sich um einen schwerwiegenden Fehler handelt.  
   
- Die Best Practice in diesem Szenario ist es, zu erkennen, ob der Fehler, der vom Dienst kommt, schwerwiegend ist. Ist dies der Fall, sollte der Vermittler seinen dienstseitigen Kanal bemängeln, wie im folgenden Codeausschnitt angezeigt.  
+ Für dieses Szenario wird empfohlen, zu bestimmen, ob der vom Dienst stammende Fehler schwerwiegend ist, und wenn er schwerwiegend ist, sollte der Vermittler einen Fehler für seinen dienstseitigen Kanal auslösen, wie im folgenden Codeausschnitt gezeigt.  
   
 ```csharp  
 catch (Exception e)  
@@ -37,9 +40,8 @@ catch (Exception e)
         throw;  
     }  
 }  
-  
 ```  
   
-## Siehe auch  
- [WCF\-Fehlerbehandlung](../../../docs/framework/wcf/wcf-error-handling.md)   
+## <a name="see-also"></a>Siehe auch  
+ [WCF-Fehlerbehandlung](../../../docs/framework/wcf/wcf-error-handling.md)  
  [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

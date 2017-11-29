@@ -1,31 +1,30 @@
 ---
-title: Anwendungsentwicklung | Microsoft-Dokumentation
+title: Anwendungsentwicklung
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-wpf
+ms.technology: dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- WPF, about application development
+- WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
-ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
-<a name="introduction"></a> [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ist ein Präsentationsframework, mit dem die folgenden Anwendungstypen entwickelt werden können:  
+<a name="introduction"></a>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]ist ein zu testendes Präsentationsframework, die verwendet werden kann, um die folgenden Typen von Anwendungen zu entwickeln:  
   
 -   Eigenständige Anwendungen: Herkömmliche [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Anwendungen, die als ausführbare Assemblys erstellt, auf dem Clientcomputer installiert und von dort ausgeführt werden.  
   

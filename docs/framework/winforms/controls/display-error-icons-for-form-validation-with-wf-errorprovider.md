@@ -1,40 +1,45 @@
 ---
-title: "Gewusst wie: Anzeigen von Fehlersymbolen f&#252;r die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Fehlersymbole"
-  - "Fehlermeldungen, Anzeigen von Symbolen"
-  - "ErrorProvider-Komponente [Windows Forms], Anzeigen von Fehlersymbolen"
-  - "Fehler [Windows Forms], Anzeigen für Benutzer"
+title: "Gewusst wie: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- errors [Windows Forms], displaying to users
+- error icons
+- ErrorProvider component [Windows Forms], displaying error icons
+- error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02638ab59c0ba1c0eb0f8090be118b3d5a9111f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anzeigen von Fehlersymbolen f&#252;r die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
-Mit einer <xref:System.Windows.Forms.ErrorProvider>\-Komponente in Windows Forms können Sie ein Fehlersymbol anzeigen, wenn ein Benutzer ungültige Daten eingibt.  Das Formular muss mindestens zwei Steuerelemente enthalten, damit zwischen den Steuerelementen gewechselt und der Validierungscode dabei aufgerufen werden kann:  
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Gewusst wie: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
+Sie können eine Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente ein Fehlersymbol angezeigt wird, wenn der Benutzer ungültige Daten eingibt. Sie müssen mindestens zwei Steuerelemente im Formular aus, um zwischen ihnen Registerkarte und somit Aufrufen des Validierungscodes verfügen.  
   
-### So zeigen Sie ein Fehlersymbol an, wenn der Wert eines Steuerelements ungültig ist  
+### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Um ein Fehlersymbol angezeigt wird, wenn der Wert eines Steuerelements ungültig ist  
   
-1.  Fügen Sie zwei Steuerelemente, z. B. zwei Textfelder, zu Windows Forms hinzu.  
+1.  Hinzufügen von zwei Steuerelementen – z. B. Textfelder – zu einem Windows Form.  
   
-2.  Fügen Sie dem Formular eine <xref:System.Windows.Forms.ErrorProvider>\-Komponente hinzu.  
+2.  Hinzufügen einer <xref:System.Windows.Forms.ErrorProvider> -Komponente zum Formular.  
   
-3.  Wählen Sie das erste Steuerelement aus, und fügen Sie zu seinem <xref:System.Windows.Forms.Control.Validating>\-Ereignishandler Code hinzu.  Damit dieser Code ordnungsgemäß ausgeführt wird, muss die Prozedur mit dem Ereignis verbunden werden.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3.  Wählen Sie das erste Steuerelement, und fügen Sie Code, dessen <xref:System.Windows.Forms.Control.Validating> -Ereignishandler. Damit kann für diesen Code ordnungsgemäß ausgeführt muss die Prozedur an das Ereignis bestehen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern an Zeit für Windows Forms führen](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Der folgende Code überprüft die vom Benutzer eingegebenen Daten auf deren Gültigkeit. Falls die Daten ungültig sind, wird die <xref:System.Windows.Forms.ErrorProvider.SetError%2A>\-Methode aufgerufen.  Das erste Argument der <xref:System.Windows.Forms.ErrorProvider.SetError%2A>\-Methode gibt an, neben welchem Steuerelement das Symbol angezeigt wird.  Das zweite Argument gibt den angezeigten Fehlertext an.  
+     Der folgende Code überprüft die Gültigkeit der Daten, die der Benutzer eingegeben hat. Wenn die Daten ungültig sind, werden die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> -Methode aufgerufen wird. Das erste Argument der <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode gibt an, welches Steuerelement neben das Symbol angezeigt. Das zweite Argument ist der anzuzeigende Fehlertext.  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -47,7 +52,6 @@ Mit einer <xref:System.Windows.Forms.ErrorProvider>\-Komponente in Windows Form
              ErrorProvider1.SetError(TextBox1, "")  
           End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -64,7 +68,6 @@ Mit einer <xref:System.Windows.Forms.ErrorProvider>\-Komponente in Windows Form
           errorProvider1.SetError(textBox1, "Not an integer value.");  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -84,12 +87,11 @@ Mit einer <xref:System.Windows.Forms.ErrorProvider>\-Komponente in Windows Form
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Fügen Sie den folgenden Code im Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Fügen Sie den folgenden Code in den Konstruktor der Form ein, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.textBox1.Validating += new  
     System.ComponentModel.CancelEventHandler(this.textBox1_Validating);  
-  
     ```  
   
     ```cpp  
@@ -98,9 +100,9 @@ Mit einer <xref:System.Windows.Forms.ErrorProvider>\-Komponente in Windows Form
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  Führen Sie das Projekt aus.  Geben Sie ungültige \(in diesem Fall nicht\-numerische\) Daten in das erste Steuerelement ein, und wechseln Sie anschließend zum zweiten Steuerelement.  Wenn das Fehlersymbol angezeigt wird, stellen Sie den Mauszeiger auf das Symbol, um den Fehlertext anzuzeigen.  
+4.  Führen Sie das Projekt aus. Geben Sie in das erste Steuerelement, und klicken Sie dann Tab, um die zweite (in diesem Beispiel nicht numerisch) ungültige Daten. Wenn das Symbol "Fehler" angezeigt wird, stellen Sie den Mauszeiger an den Fehlertext finden Sie unter.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ErrorProvider.SetError%2A>   
- [Übersicht über die ErrorProvider\-Komponente](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)   
- [Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ErrorProvider.SetError%2A>  
+ [Übersicht über die ErrorProvider-Komponente](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
+ [Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
