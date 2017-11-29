@@ -1,64 +1,65 @@
 ---
-title: "Eigenschaften von Windows&#160;Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Eigenschaften"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Eigenschaftenübersicht (mit Code)"
-  - "Eigenschaften [Windows Forms]"
+title: "Eigenschaften von Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], properties overview (using code)
+- controls [Windows Forms], properties
+- properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Eigenschaften von Windows&#160;Forms-Steuerelementen
-Ein Windows Forms\-Steuerelement erbt zahlreiche Eigenschaften von der Basisklasse <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Zu diesen Eigenschaften zählen <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A> und viele andere.  Ausführliche Informationen zu geerbten Ereignissen finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+# <a name="properties-in-windows-forms-controls"></a><span data-ttu-id="af389-102">Eigenschaften von Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="af389-102">Properties in Windows Forms Controls</span></span>
+<span data-ttu-id="af389-103">Ein Windows Forms-Steuerelement erbt zahlreiche Eigenschaften die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="af389-103">A Windows Forms control inherits many properties form the base class <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="af389-104">Hierzu zählen Eigenschaften wie z. B. <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, und viele andere.</span><span class="sxs-lookup"><span data-stu-id="af389-104">These include properties such as <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, and many others.</span></span> <span data-ttu-id="af389-105">Ausführliche Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="af389-105">For details about inherited properties, see <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
- Sie können sowohl geerbte Eigenschaften in dem Steuerelement überschreiben als auch neue Eigenschaften definieren.  
+ <span data-ttu-id="af389-106">Sie können geerbte Eigenschaften in Ihrem Steuerelement außer Kraft setzen oder neue Eigenschaften definieren.</span><span class="sxs-lookup"><span data-stu-id="af389-106">You can override inherited properties in your control as well as define new properties.</span></span>  
   
-## In diesem Abschnitt  
- [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- Beschreibt, wie eine Eigenschaft für ein benutzerdefiniertes Steuerelement oder eine benutzerdefinierte Komponente implementiert wird und wie die Eigenschaft in die Entwurfsumgebung integriert wird.  
+## <a name="in-this-section"></a><span data-ttu-id="af389-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="af389-107">In This Section</span></span>  
+ [<span data-ttu-id="af389-108">Definieren einer Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="af389-108">Defining a Property</span></span>](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ <span data-ttu-id="af389-109">Demonstriert das Implementieren einer Eigenschaft für ein benutzerdefiniertes Steuerelement oder eine Komponente und das Integrieren der Eigenschaft in die Entwurfsumgebung.</span><span class="sxs-lookup"><span data-stu-id="af389-109">Shows how to implement a property for a custom control or component and shows how to integrate the property into the design environment.</span></span>  
   
- [Definieren von Standardwerten mit der ShouldSerialize\-Methode und der Reset\-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- Beschreibt, wie Standardeigenschaftswerte für ein benutzerdefiniertes Steuerelement oder eine benutzerdefinierte Komponente definiert werden.  
+ [<span data-ttu-id="af389-110">Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode</span><span class="sxs-lookup"><span data-stu-id="af389-110">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ <span data-ttu-id="af389-111">Demonstriert das Definieren von Standardeigenschaftswerten für ein benutzerdefiniertes Steuerelement oder eine Komponente.</span><span class="sxs-lookup"><span data-stu-id="af389-111">Shows how to define default property values for a custom control or component.</span></span>  
   
- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- Beschreibt, wie Benachrichtigungen zu Eigenschaftenänderungen aktiviert werden, wenn sich ein Eigenschaftswert ändert.  
+ [<span data-ttu-id="af389-112">Durch geänderte Eigenschaften ausgelöste Ereignisse</span><span class="sxs-lookup"><span data-stu-id="af389-112">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ <span data-ttu-id="af389-113">Beschreibt das Aktivieren von Benachrichtigungen über Eigenschaftsänderungen, wenn ein Eigenschaftswert geändert wird.</span><span class="sxs-lookup"><span data-stu-id="af389-113">Describes how to enable property-change notifications when a property value changes.</span></span>  
   
- [Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
- Beschreibt, wie Eigenschaften konstituierender Steuerelemente in einem benutzerdefinierten zusammengesetzten Steuerelement verfügbar gemacht werden.  
+ [<span data-ttu-id="af389-114">Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="af389-114">How to: Expose Properties of Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ <span data-ttu-id="af389-115">Veranschaulicht, wie man Eigenschaften von konstituierenden Steuerelementen in einem benutzerdefinierten zusammengesetzten Steuerelement verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="af389-115">Shows how to expose properties of constituent controls in a custom composite control.</span></span>  
   
- [Implementierung von Methoden in benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
- Beschreibt, wie Methoden in benutzerdefinierten Steuerelementen und Komponenten implementiert werden.  
+ [<span data-ttu-id="af389-116">Implementierung von Methoden in benutzerdefinierten Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="af389-116">Method Implementation in Custom Controls</span></span>](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ <span data-ttu-id="af389-117">Beschreibt die Implementierung von Methoden in benutzerdefinierten Steuerelementen und Komponenten.</span><span class="sxs-lookup"><span data-stu-id="af389-117">Describes how to implement methods in custom controls and components.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="af389-118">Verweis</span><span class="sxs-lookup"><span data-stu-id="af389-118">Reference</span></span>  
  <xref:System.Windows.Forms.UserControl>  
- Enthält die Dokumentation der Basisklasse zum Implementieren von zusammengesetzten Steuerelementen.  
+ <span data-ttu-id="af389-119">Dokumentiert die Basisklasse für das Implementieren von zusammengesetzten Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="af389-119">Documents the base class for implementing composite controls.</span></span>  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Enthält die Dokumentation des Attributs, das <xref:System.ComponentModel.TypeConverter> für einen benutzerdefinierten Eigenschaftentyp angibt.  
+ <span data-ttu-id="af389-120">Die Dokumentation des Attributs, der angibt, die <xref:System.ComponentModel.TypeConverter> für eine benutzerdefinierte Eigenschaft verwenden.</span><span class="sxs-lookup"><span data-stu-id="af389-120">Documents the attribute that specifies the <xref:System.ComponentModel.TypeConverter> to use for a custom property type.</span></span>  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Enthält die Dokumentation des Attributs, das <xref:System.Drawing.Design.UITypeEditor> für eine benutzerdefinierte Eigenschaft angibt.  
+ <span data-ttu-id="af389-121">Die Dokumentation des Attributs, der angibt, die <xref:System.Drawing.Design.UITypeEditor> für eine benutzerdefinierte Eigenschaft verwenden.</span><span class="sxs-lookup"><span data-stu-id="af389-121">Documents the attribute that specifies the <xref:System.Drawing.Design.UITypeEditor> to use for a custom property.</span></span>  
   
-## Verwandte Abschnitte  
- [Attribute in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- Beschreibt die Attribute, die Sie auf Eigenschaften oder andere Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können.  
+## <a name="related-sections"></a><span data-ttu-id="af389-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="af389-122">Related Sections</span></span>  
+ [<span data-ttu-id="af389-123">Attribute in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="af389-123">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ <span data-ttu-id="af389-124">Beschreibt die Attribute, die Sie auf Eigenschaften oder andere Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können.</span><span class="sxs-lookup"><span data-stu-id="af389-124">Describes the attributes you can apply to properties or other members of your custom controls and components.</span></span>  
   
- [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md)  
- Enthält eine Liste von Metadatenattributen, die auf Komponenten und Steuerelemente angewendet werden, sodass diese in visuellen Designern zur Entwurfszeit korrekt angezeigt werden.  
+ [<span data-ttu-id="af389-125">Entwurfszeitattribute für Komponenten</span><span class="sxs-lookup"><span data-stu-id="af389-125">Design-Time Attributes for Components</span></span>](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ <span data-ttu-id="af389-126">Listet die Metadatenattribute für Komponenten und Steuerelemente auf, damit sie in visuellen Designern zur Entwurfszeit korrekt angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="af389-126">Lists metadata attributes to apply to components and controls so that they are displayed correctly at design time in visual designers.</span></span>  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
- Beschreibt die Implementierung von Klassen, z. B. Editoren und Designern, die Entwurfszeitunterstützung bereitstellen.
+ [<span data-ttu-id="af389-127">Erweitern der Entwurfszeitunterstützung</span><span class="sxs-lookup"><span data-stu-id="af389-127">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ <span data-ttu-id="af389-128">Beschreibt die Implementierung von Klassen wie Editoren und Designern, die Entwurfszeitunterstützung bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="af389-128">Describes how to implement classes such as editors and designers that provide design-time support.</span></span>

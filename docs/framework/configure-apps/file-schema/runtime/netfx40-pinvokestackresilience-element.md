@@ -1,80 +1,82 @@
 ---
-title: "&lt;NetFx40_PInvokeStackResilience&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<NetFx40_PInvokeStackResilience>-Element"
-  - "NetFx40_PInvokeStackResilience-Element"
+title: '&lt;NetFx40_PInvokeStackResilience&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <NetFx40_PInvokeStackResilience> element
+- NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3e77e43ed9d7520cbbcf453d067a49de3a86de3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;NetFx40_PInvokeStackResilience&gt;-Element
-Gibt an, ob die Laufzeit falsche Plattformaufrufdeklarationen automatisch zur Laufzeit korrigiert, was zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code führt.  
+# <a name="ltnetfx40pinvokestackresiliencegt-element"></a><span data-ttu-id="53fca-102">&lt;NetFx40_PInvokeStackResilience&gt; Element</span><span class="sxs-lookup"><span data-stu-id="53fca-102">&lt;NetFx40_PInvokeStackResilience&gt; Element</span></span>
+<span data-ttu-id="53fca-103">Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="53fca-103">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="53fca-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="53fca-104">\<configuration></span></span>  
+<span data-ttu-id="53fca-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="53fca-105">\<runtime></span></span>  
+<span data-ttu-id="53fca-106">< NetFx40_PInvokeStackResilience ></span><span class="sxs-lookup"><span data-stu-id="53fca-106"><NetFx40_PInvokeStackResilience></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="53fca-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="53fca-107">Syntax</span></span>  
+  
+```xml  
 <NetFx40_PInvokeStackResilience  enabled="1|0"/>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="53fca-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="53fca-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="53fca-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="53fca-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="53fca-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="53fca-110">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit falsche Plattformaufrufdeklarationen erkennt und den Stapel zur Laufzeit auf 32\-Bit\-Plattformen automatisch korrigiert.|  
+|<span data-ttu-id="53fca-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="53fca-111">Attribute</span></span>|<span data-ttu-id="53fca-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="53fca-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="53fca-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="53fca-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="53fca-114">Gibt an, ob die Laufzeit falsche Plattform erkennt Plattformaufrufdeklarationen und behebt den Stapel automatisch zur Laufzeit auf 32-Bit-Plattformen.</span><span class="sxs-lookup"><span data-stu-id="53fca-114">Specifies whether the runtime detects incorrect platform invoke declarations and automatically fixes the stack at run time on 32-bit platforms.</span></span>|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a><span data-ttu-id="53fca-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="53fca-115">enabled Attribute</span></span>  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`0`|Die Laufzeit verwendet die schnellere Interop\-Marshalling\-Architektur, die in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] eingeführt wurde und keine falschen Plattformaufrufdeklarationen erkennt und korrigiert.  Dies ist der Standardwert.|  
-|`1`|Die Laufzeit verwendet langsamere Übergänge, die falsche Plattformaufrufdeklarationen erkennen und korrigieren.|  
+|<span data-ttu-id="53fca-116">Wert</span><span class="sxs-lookup"><span data-stu-id="53fca-116">Value</span></span>|<span data-ttu-id="53fca-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="53fca-117">Description</span></span>|  
+|-----------|-----------------|  
+|`0`|<span data-ttu-id="53fca-118">Die Common Language Runtime verwendet schnellere Interop-Marshalling-Architektur eingeführt, die der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], die nicht erkannt und Updates falscher Plattformaufrufdeklarationen.</span><span class="sxs-lookup"><span data-stu-id="53fca-118">The runtime uses the faster interop marshaling architecture introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], which does not detect and fix incorrect platform invoke declarations.</span></span> <span data-ttu-id="53fca-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="53fca-119">This is the default.</span></span>|  
+|`1`|<span data-ttu-id="53fca-120">Die Common Language Runtime verwendet langsamer Übergänge, die erkennt und korrigiert falsche Plattform Plattformaufrufdeklarationen.</span><span class="sxs-lookup"><span data-stu-id="53fca-120">The runtime uses slower transitions that detect and fix incorrect platform invoke declarations.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="53fca-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="53fca-121">Child Elements</span></span>  
+ <span data-ttu-id="53fca-122">Keine</span><span class="sxs-lookup"><span data-stu-id="53fca-122">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="53fca-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="53fca-123">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
+|<span data-ttu-id="53fca-124">Element</span><span class="sxs-lookup"><span data-stu-id="53fca-124">Element</span></span>|<span data-ttu-id="53fca-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="53fca-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="53fca-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="53fca-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="53fca-127">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="53fca-127">Contains information about runtime initialization options.</span></span>|  
   
-## Hinweise  
- Dieses Element ermöglicht es Ihnen, schnelleres Interop\-Marshalling gegen falsche Plattformaufrufdeklarationen für Laufzeitnachgiebigkeit zu tauschen.  
+## <a name="remarks"></a><span data-ttu-id="53fca-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="53fca-128">Remarks</span></span>  
+ <span data-ttu-id="53fca-129">Dieses Element können Sie schneller Interop-Marshalling für Laufzeit-robusten Schutz vor falsche Plattform Plattformaufrufdeklarationen abwägen.</span><span class="sxs-lookup"><span data-stu-id="53fca-129">This element enables you to trade faster interop marshaling for run-time resilience against incorrect platform invoke declarations.</span></span>  
   
- Beginnend mit dem [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] stellt eine stromlinienförmige Interop\-Marshalling\-Architektur eine bedeutende Leistungsverbesserung für Übergänge von verwaltetem Code zu nicht verwaltetem Code bereit.  In früheren Versionen von .NET Framework hat die Marshallingebene falsche Plattformaufrufdeklarationen auf 32\-Bit\-Plattformen erkannt und den Stapel automatisch korrigiert.  Die neue Marshallingarchitektur schließt diesen Schritt aus.  Als Ergebnis sind Übergänge sehr schnell, aber eine falsche Plattformaufrufdeklaration kann einen Programmfehler verursachen.  
+ <span data-ttu-id="53fca-130">Beginnend mit der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], eine optimierte Interop-Marshalling-Architektur bietet eine deutliche leistungsverbesserung für Übergänge von verwaltetem Code an nicht verwalteten Code.</span><span class="sxs-lookup"><span data-stu-id="53fca-130">Starting with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], a streamlined interop marshaling architecture provides a significant performance improvement for transitions from managed code to unmanaged code.</span></span> <span data-ttu-id="53fca-131">In früheren Versionen von .NET Framework die Marshalling Ebene erkannt falsche Plattformaufrufmethode Deklarationen auf 32-Bit-Plattformen und den Stapel automatisch korrigiert.</span><span class="sxs-lookup"><span data-stu-id="53fca-131">In earlier versions of the .NET Framework, the marshaling layer detected incorrect platform invoke declarations on 32-bit platforms and automatically fixed the stack.</span></span> <span data-ttu-id="53fca-132">Die neue Architektur Marshalling entfällt dieser Schritt.</span><span class="sxs-lookup"><span data-stu-id="53fca-132">The new marshaling architecture eliminates this step.</span></span> <span data-ttu-id="53fca-133">Daher sind Übergänge sehr schnell, aber eine falsche Plattformaufruf Deklaration können einen Anwendung Fehler verursachen.</span><span class="sxs-lookup"><span data-stu-id="53fca-133">As a result, transitions are very fast, but an incorrect platform invoke declaration can cause a program failure.</span></span>  
   
- Damit Sie während der Entwicklung falsche Deklarationen leichter erkennen, wurde die Visual Studio\-Debugerfahrung verbessert.  Der von [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) verwaltete Debugging\-Assistent \(MDA\) benachrichtigt Sie über falschen Plattformaufrufdeklarationen, wenn die Anwendung mit angefügtem Debugger ausgeführt wird.  
+ <span data-ttu-id="53fca-134">Um während der Entwicklung falsche Deklarationen erkennen zu erleichtern, wurde die Visual Studio debuggen verbessert.</span><span class="sxs-lookup"><span data-stu-id="53fca-134">To make it easy to detect incorrect declarations during development, the Visual Studio debugging experience has been improved.</span></span> <span data-ttu-id="53fca-135">Die [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistent für verwaltetes Debuggen (MDA) benachrichtigt Sie falsche Plattform Deklarationen aufgerufen wird, wenn Ihre Anwendung mit dem angefügten Debugger ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="53fca-135">The [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed debugging assistant (MDA) notifies you of incorrect platform invoke declarations when your application is running with the debugger attached.</span></span>  
   
- Um Szenarien zu behandeln, in denen die Anwendung Komponenten verwendet, die Sie nicht neu kompilieren können, und die falsche Plattformaufrufdeklarationen haben, können Sie das `NetFx40_PInvokeStackResilience`\-Element verwenden.  Dieses Element mit `enabled="1"` zur Anwendungskonfigurationsdatei hinzuzufügen wechselt in einen Kompatibilitätsmodus mit dem Verhalten der früheren Versionen von .NET Framework, bei dem langsamere Übergänge in Kauf genommen werden müssen.  Assemblys, die gegen frühere Versionen von .NET Framework kompiliert wurden, haben automatisch in diesen Kompatibilitätsmodus gewechselt und benötigen dieses Element nicht.  
+ <span data-ttu-id="53fca-136">Adresse Szenarien, in denen Ihre Anwendung Komponenten verwendet, die nicht neu kompilieren und, dass wurden falsche Plattformaufrufdeklarationen, Sie können, die `NetFx40_PInvokeStackResilience` Element.</span><span class="sxs-lookup"><span data-stu-id="53fca-136">To address scenarios where your application uses components that you cannot recompile, and that have incorrect platform invoke declarations, you can use the `NetFx40_PInvokeStackResilience` element.</span></span> <span data-ttu-id="53fca-137">Die Konfigurationsdatei der Anwendung mit diesem Element hinzugefügt `enabled="1"` "OPTS" in einem Kompatibilitätsmodus mit dem Verhalten früherer Versionen von .NET Framework, allerdings zum Preis einer langsameren Übergängen.</span><span class="sxs-lookup"><span data-stu-id="53fca-137">Adding this element to your application configuration file with `enabled="1"` opts into a compatibility mode with the behavior of earlier versions of the .NET Framework, at the cost of slower transitions.</span></span> <span data-ttu-id="53fca-138">Assemblys, die auf früheren Versionen von .NET Framework kompiliert wurden diesem Kompatibilitätsmodus werden automatisch festgelegt, und dieses Element ist nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="53fca-138">Assemblies that have been compiled against earlier versions of the .NET Framework are automatically opted into this compatibility mode, and do not need this element.</span></span>  
   
-## Konfigurationsdatei  
- Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
+## <a name="configuration-file"></a><span data-ttu-id="53fca-139">Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="53fca-139">Configuration File</span></span>  
+ <span data-ttu-id="53fca-140">Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="53fca-140">This element can be used only in the application configuration file.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie für erhöhte Nachgiebigkeit gegen falsche Plattformaufrufdeklarationen für eine Anwendung entschieden wird, was zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code führt.  
+## <a name="example"></a><span data-ttu-id="53fca-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="53fca-141">Example</span></span>  
+ <span data-ttu-id="53fca-142">Im folgenden Beispiel gezeigt ist wie erhöhte Stabilität gegen falsche aktiviert Plattformaufrufdeklarationen für eine Anwendung, allerdings zum Preis einer langsameren Übergänge zwischen verwalteten und nicht verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="53fca-142">The following example shows how to opt into increased resilience against incorrect platform invoke declarations for an application, at the cost of slower transitions between managed and unmanaged code.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_PInvokeStackResilience enabled="1"/>  
@@ -82,7 +84,7 @@ Gibt an, ob die Laufzeit falsche Plattformaufrufdeklarationen automatisch zur La
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+## <a name="see-also"></a><span data-ttu-id="53fca-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53fca-143">See Also</span></span>  
+ [<span data-ttu-id="53fca-144">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="53fca-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="53fca-145">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="53fca-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="53fca-146">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="53fca-146">pInvokeStackImbalance</span></span>](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

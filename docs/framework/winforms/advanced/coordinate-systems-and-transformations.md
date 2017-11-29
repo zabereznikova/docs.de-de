@@ -1,47 +1,48 @@
 ---
-title: "Koordinatensysteme und Transformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Grafiken, Transformationen"
-  - "Matrixtransformationen"
-  - "Transformationen"
+title: Koordinatensysteme und Transformationen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations
+- graphics [Windows Forms], transformations
+- matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Koordinatensysteme und Transformationen
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet eine globale Transformation und eine Seitentransformation, sodass Sie die gezeichneten Elemente transformieren \(drehen, skalieren, verschieben usw.\) können.  Dank der zwei Transformationen können Sie außerdem in den verschiedensten Koordinatensystemen arbeiten.  
+# <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="d05d5-102">Koordinatensysteme und Transformationen</span><span class="sxs-lookup"><span data-stu-id="d05d5-102">Coordinate Systems and Transformations</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="d05d5-103">bietet eine globale Transformation und eine Seitentransformation, damit Sie transformieren können (Drehen, zu skalieren, übersetzen usw.) die Elemente, die Sie zeichnen.</span><span class="sxs-lookup"><span data-stu-id="d05d5-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="d05d5-104">Die beiden Transformationen können in einer Vielzahl von Koordinatensysteme arbeiten.</span><span class="sxs-lookup"><span data-stu-id="d05d5-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  
   
-## In diesem Abschnitt  
- [Typen von Koordinatensystemen](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
- Enthält eine Einführung in Koordinatensysteme und Transformationen.  
+## <a name="in-this-section"></a><span data-ttu-id="d05d5-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d05d5-105">In This Section</span></span>  
+ [<span data-ttu-id="d05d5-106">Typen von Koordinatensystemen</span><span class="sxs-lookup"><span data-stu-id="d05d5-106">Types of Coordinate Systems</span></span>](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
+ <span data-ttu-id="d05d5-107">Führt ein Koordinatensysteme und Transformationen.</span><span class="sxs-lookup"><span data-stu-id="d05d5-107">Introduces coordinates systems and transformations.</span></span>  
   
- [Matrixdarstellung von Transformationen](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
- Erörtert die Verwendung von Matrizen für Koordinatentransformationen.  
+ [<span data-ttu-id="d05d5-108">Matrixdarstellung von Transformationen</span><span class="sxs-lookup"><span data-stu-id="d05d5-108">Matrix Representation of Transformations</span></span>](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
+ <span data-ttu-id="d05d5-109">Erläutert die Verwendung von Matrizen für-Koordinate Transformationen.</span><span class="sxs-lookup"><span data-stu-id="d05d5-109">Discusses using matrices for coordinate transformations.</span></span>  
   
- [Globale und lokale Transformationen](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
- Erörtert globale und lokale Transformationen.  
+ [<span data-ttu-id="d05d5-110">Globale und lokale Transformationen</span><span class="sxs-lookup"><span data-stu-id="d05d5-110">Global and Local Transformations</span></span>](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
+ <span data-ttu-id="d05d5-111">Erläutert, globale und lokale Transformationen.</span><span class="sxs-lookup"><span data-stu-id="d05d5-111">Discusses global and local transformations.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="d05d5-112">Verweis</span><span class="sxs-lookup"><span data-stu-id="d05d5-112">Reference</span></span>  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Kapselt eine affine 3 x 3\-Matrix ein, die eine geometrische Transformation darstellt.  
+ <span data-ttu-id="d05d5-113">Kapselt eine affine 3 x 3-Matrix ein, die eine geometrische Transformation darstellt.</span><span class="sxs-lookup"><span data-stu-id="d05d5-113">Encapsulates a 3-by-3 affine matrix that represents a geometric transform.</span></span>  
   
-## Verwandte Abschnitte  
- [Verwenden von Transformationen in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Stellt eine Liste von Themen bereit, die weitere Informationen zur Verwendung von Matrixtransformationen erhalten.  
+## <a name="related-sections"></a><span data-ttu-id="d05d5-114">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d05d5-114">Related Sections</span></span>  
+ [<span data-ttu-id="d05d5-115">Verwenden von Transformationen in Managed GDI+</span><span class="sxs-lookup"><span data-stu-id="d05d5-115">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ <span data-ttu-id="d05d5-116">Enthält eine Liste der Themen, die Weitere Informationen zur Verwendung von Matrixtransformationen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="d05d5-116">Provides a list of topics that provide more information about how to use matrix transformations.</span></span>  
   
- [Verwalteter Code in GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- Enthält eine Liste von Themen, in denen die von .NET Framework unterstützten Grafikkonstrukte beschrieben werden.
+ [<span data-ttu-id="d05d5-117">Verwalteter Code in GDI+</span><span class="sxs-lookup"><span data-stu-id="d05d5-117">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ <span data-ttu-id="d05d5-118">Enthält eine Liste der Themen, in denen die Grafiken-Konstrukte, die Sie in .NET Framework verwenden können.</span><span class="sxs-lookup"><span data-stu-id="d05d5-118">Contains a list of topics describing the graphics constructs you can use in the .NET Framework.</span></span>

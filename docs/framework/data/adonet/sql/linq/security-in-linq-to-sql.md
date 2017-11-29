@@ -1,45 +1,48 @@
 ---
-title: "Sicherheit in LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sicherheit in LINQ to SQL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 27e40221c22a91bb2a8c40ec4bcfd663eb05aaef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Sicherheit in LINQ to SQL
-Beim Herstellen einer Datenbankverbindung müssen Sie stets mit Risiken rechnen.  Obwohl LINQ to SQL möglicherweise über einige neue Möglichkeiten zur Arbeit mit Daten in SQL Server verfügt, stellt es keine zusätzlichen Sicherheitsmechanismen bereit.  
+# <a name="security-in-linq-to-sql"></a><span data-ttu-id="93926-102">Sicherheit in LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="93926-102">Security in LINQ to SQL</span></span>
+<span data-ttu-id="93926-103">Beim Herstellen einer Datenbankverbindung müssen Sie stets mit Risiken rechnen.</span><span class="sxs-lookup"><span data-stu-id="93926-103">Security risks are always present when you connect to a database.</span></span> <span data-ttu-id="93926-104">Obwohl LINQ to SQL möglicherweise über einige neue Möglichkeiten zur Arbeit mit Daten in SQL Server verfügt, stellt es keine zusätzlichen Sicherheitsmechanismen bereit.</span><span class="sxs-lookup"><span data-stu-id="93926-104">Although LINQ to SQL may include some new ways to work with data in SQL Server, it does not provide any additional security mechanisms.</span></span>  
   
-## Zugriffssteuerung und Authentifizierung  
- LINQ to SQL verfügt weder über ein eigenes Benutzermodell noch über Authentifizierungsmechanismen.  Verwenden Sie SQL Server\-Sicherheit zum Steuern des Zugriffs auf die Datenbank, Datenbanktabellen, Ansichten und gespeicherte Prozeduren, die Ihrem Objektmodell zugeordnet sind.  Gewähren Sie die minimal erforderlichen Zugriffsrechte für Benutzer und fordern Sie sichere Kennwörter zur Benutzerauthentifizierung.  
+## <a name="access-control-and-authentication"></a><span data-ttu-id="93926-105">Zugriffssteuerung und Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="93926-105">Access Control and Authentication</span></span>  
+ <span data-ttu-id="93926-106">LINQ to SQL verfügt weder über ein eigenes Benutzermodell noch über Authentifizierungsmechanismen.</span><span class="sxs-lookup"><span data-stu-id="93926-106">LINQ to SQL does not have its own user model or authentication mechanisms.</span></span> <span data-ttu-id="93926-107">Verwenden Sie SQL Server-Sicherheit zum Steuern des Zugriffs auf die Datenbank, Datenbanktabellen, Ansichten und gespeicherte Prozeduren, die Ihrem Objektmodell zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="93926-107">Use SQL Server Security to control access to the database, database tables, views, and stored procedures that are mapped to your object model.</span></span> <span data-ttu-id="93926-108">Gewähren Sie die minimal erforderlichen Zugriffsrechte für Benutzer und fordern Sie sichere Kennwörter zur Benutzerauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="93926-108">Grant the minimally required access to users and require strong passwords for user authentication.</span></span>  
   
-## Zuordnung und Schemainformationen  
- SQL\-CLR\-Typzuordnung und Datenbankschemainformationen im Objektmodell oder in der externen Zuordnungsdatei stehen allen Benutzern zur Verfügung, die auf die Dateien im Dateisystem zugreifen können.  Angenommen, die Schemainformationen stehen allen Benutzern zur Verfügung, die auf das Objektmodell oder die externe Zuordnungsdatei zugreifen können. Um den Zugriff von einer breiteren Benutzerbasis zu verhindern, können Sie die Quelldateien und Zuordnungsdateien mithilfe von Dateisicherheitsmechanismen sichern.  
+## <a name="mapping-and-schema-information"></a><span data-ttu-id="93926-109">Zuordnung und Schemainformationen</span><span class="sxs-lookup"><span data-stu-id="93926-109">Mapping and Schema Information</span></span>  
+ <span data-ttu-id="93926-110">SQL-CLR-Typzuordnung und Datenbankschemainformationen im Objektmodell oder in der externen Zuordnungsdatei stehen allen Benutzern zur Verfügung, die auf die Dateien im Dateisystem zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="93926-110">SQL-CLR type mapping and database schema information in your object model or external mapping file is available for all with access to those files in the file system.</span></span> <span data-ttu-id="93926-111">Angenommen, die Schemainformationen stehen allen Benutzern zur Verfügung, die auf das Objektmodell oder die externe Zuordnungsdatei zugreifen können. Um den Zugriff von einer breiteren Benutzerbasis zu verhindern, können Sie die Quelldateien und Zuordnungsdateien mithilfe von Dateisicherheitsmechanismen sichern.</span><span class="sxs-lookup"><span data-stu-id="93926-111">Assume that schema information will be available to all who can access the object model or external mapping file.To prevent more widespread access to schema information, use file security mechanisms to secure source files and mapping files.</span></span>  
   
-## Verbindungszeichenfolgen  
- Vermeiden Sie nach Möglichkeit die Verwendung von Kennwörtern in Verbindungszeichenfolgen.  Eine Verbindungszeichenfolge ein nicht nur ein Sicherheitsrisiko an sich; die Verbindungszeichenfolge kann dem Objektmodell oder der externen Zuordnungsdatei auch als Klartext hinzugefügt werden, wenn der O\/R\-Designer oder das SQLMetal\-Befehlszeilentool verwendet wird.  Jeder Benutzer mit Zugriff auf das Objektmodell oder die externe Zuordnungsdatei über das Dateisystem kann das Verbindungskennwort erkennen, wenn es in der Verbindungszeichenfolge enthalten ist.  
+## <a name="connection-strings"></a><span data-ttu-id="93926-112">Verbindungszeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="93926-112">Connection Strings</span></span>  
+ <span data-ttu-id="93926-113">Vermeiden Sie nach Möglichkeit die Verwendung von Kennwörtern in Verbindungszeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="93926-113">Using passwords in connection strings should be avoided whenever possible.</span></span> <span data-ttu-id="93926-114">Eine Verbindungszeichenfolge ein nicht nur ein Sicherheitsrisiko an sich; die Verbindungszeichenfolge kann dem Objektmodell oder der externen Zuordnungsdatei auch als Klartext hinzugefügt werden, wenn der O/R-Designer oder das SQLMetal-Befehlszeilentool verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="93926-114">Not only is a connection string a security risk in its own right, but the connection string may also be added in clear text to the object model or external mapping file when using the Object Relational Designer or SQLMetal command-line tool.</span></span> <span data-ttu-id="93926-115">Jeder Benutzer mit Zugriff auf das Objektmodell oder die externe Zuordnungsdatei über das Dateisystem kann das Verbindungskennwort erkennen, wenn es in der Verbindungszeichenfolge enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="93926-115">Anyone with access to the object model or external mapping file via the file system could see the connection password (if it is included in the connection string).</span></span>  
   
- Um solche Risiken zu minimieren, verwenden Sie integrierte Sicherheit, um eine sichere Verbindung mit [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] herzustellen.  Bei diesem Ansatz müssen Sie kein Kennwort in der Verbindungszeichenfolge speichern.  Weitere Informationen finden Sie unter [SQL Server\-Sicherheit](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ <span data-ttu-id="93926-116">Um solche Risiken zu minimieren, verwenden Sie integrierte Sicherheit, um eine sichere Verbindung mit [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] herzustellen.</span><span class="sxs-lookup"><span data-stu-id="93926-116">To minimize such risks, use integrated security to make a trusted connection with [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="93926-117">Bei diesem Ansatz müssen Sie kein Kennwort in der Verbindungszeichenfolge speichern.</span><span class="sxs-lookup"><span data-stu-id="93926-117">By using this approach, you do not have to store a password in the connection string.</span></span> <span data-ttu-id="93926-118">Weitere Informationen finden Sie unter [SQL Server-Sicherheit](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).</span><span class="sxs-lookup"><span data-stu-id="93926-118">For more information, see [SQL Server Security](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).</span></span>  
   
- Wenn keine integrierte Sicherheit vorhanden ist, ist in der in der Verbindungszeichenfolge ein Kennwort im Klartext erforderlich.  Folgendes sind die besten Möglichkeiten, die Verbindungszeichenfolge zu sichern \(sicherste Möglichkeiten zuerst\):  
+ <span data-ttu-id="93926-119">Wenn keine integrierte Sicherheit vorhanden ist, ist in der in der Verbindungszeichenfolge ein Kennwort im Klartext erforderlich.</span><span class="sxs-lookup"><span data-stu-id="93926-119">In the absence of integrated security, a clear-text password will be needed in the connection string.</span></span> <span data-ttu-id="93926-120">Folgendes sind die besten Möglichkeiten, die Verbindungszeichenfolge zu sichern (sicherste Möglichkeiten zuerst):</span><span class="sxs-lookup"><span data-stu-id="93926-120">The best way to help secure your connection string, in increasing order of risk, is as follows:</span></span>  
   
--   Verwenden der integrierten Sicherheit  
+-   <span data-ttu-id="93926-121">Verwenden der integrierten Sicherheit</span><span class="sxs-lookup"><span data-stu-id="93926-121">Use integrated security.</span></span>  
   
--   Sichern von Verbindungszeichenfolgen mit Kennwörtern und Minimieren der Weitergabe von Verbindungszeichenfolgen  
+-   <span data-ttu-id="93926-122">Sichern von Verbindungszeichenfolgen mit Kennwörtern und Minimieren der Weitergabe von Verbindungszeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="93926-122">Secure connection strings with passwords and minimize passing around connection strings.</span></span>  
   
--   Verwenden einer <xref:System.Data.SqlClient.SqlConnection?displayProperty=fullName>\-Klasse anstelle einer Verbindungszeichenfolge, da die Bereitstellung nur begrenzt ist  Instanziieren der <xref:System.Data.Linq.DataContext?displayProperty=fullName>\-Klasse in LINQ to SQL mit einem <xref:System.Data.SqlClient.SqlConnection>\-Objekt  
+-   <span data-ttu-id="93926-123">Verwenden einer <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType>-Klasse anstelle einer Verbindungszeichenfolge, da die Bereitstellung nur begrenzt ist</span><span class="sxs-lookup"><span data-stu-id="93926-123">Use a <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> class instead of a connection string since it limits the duration of exposure.</span></span> <span data-ttu-id="93926-124">Instanziieren der <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>-Klasse in LINQ to SQL mit einem <xref:System.Data.SqlClient.SqlConnection>-Objekt</span><span class="sxs-lookup"><span data-stu-id="93926-124">The LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> class can be instantiated using a <xref:System.Data.SqlClient.SqlConnection>.</span></span>  
   
--   Minimieren der Lebensdauer und Berührungsereignisse aller Verbindungszeichenfolgen  
+-   <span data-ttu-id="93926-125">Minimieren der Lebensdauer und Berührungsereignisse aller Verbindungszeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="93926-125">Minimize lifetimes and touch points for all connection strings.</span></span>  
   
-## Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [Häufig gestellte Fragen](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a><span data-ttu-id="93926-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93926-126">See Also</span></span>  
+ [<span data-ttu-id="93926-127">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="93926-127">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="93926-128">Häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="93926-128">Frequently Asked Questions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

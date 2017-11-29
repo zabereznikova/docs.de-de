@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - tracing [.NET Framework], trace and debug settings schema
 - configuration schema [.NET Framework], trace and debug settings
@@ -24,49 +18,47 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c74874519d992985c49b49542c0c7fb63e8557b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="trace-and-debug-settings-schema"></a>Schema für Ablaufverfolgungs- und Debugeinstellungen
-Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, die Nachrichten sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.  
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="56863-102">Schema für Ablaufverfolgungs- und Debugeinstellungen</span><span class="sxs-lookup"><span data-stu-id="56863-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="56863-103">Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, die Nachrichten sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="56863-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
   
- Die folgende Tabelle beschreibt die Funktion jedes Elements der Ablaufverfolgungs- und Debugeinstellungen.  
+ <span data-ttu-id="56863-104">Die folgende Tabelle beschreibt die Funktion jedes Elements der Ablaufverfolgungs- und Debugeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="56863-104">The following table describes the function of each trace and debug settings element.</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="56863-105">Element</span><span class="sxs-lookup"><span data-stu-id="56863-105">Element</span></span>|<span data-ttu-id="56863-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="56863-106">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für die Ablaufverfolgung hinzu.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Gibt Listener für die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle an.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Gibt die Listener für die `Listeners`-Sammlung für die Ablaufverfolgung an.|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren freigegeben wird.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners`-Sammlung für die Ablaufverfolgung.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.|  
-|[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
+|[<span data-ttu-id="56863-107">\<add></span><span class="sxs-lookup"><span data-stu-id="56863-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="56863-108">Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="56863-109">\<add></span><span class="sxs-lookup"><span data-stu-id="56863-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="56863-110">Fügt einen Listener zu der `Listeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="56863-111">\<add></span><span class="sxs-lookup"><span data-stu-id="56863-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="56863-112">Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="56863-113">\<add></span><span class="sxs-lookup"><span data-stu-id="56863-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="56863-114">Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="56863-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="56863-115">\<assert></span><span class="sxs-lookup"><span data-stu-id="56863-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="56863-116">Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="56863-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="56863-117">\<clear></span><span class="sxs-lookup"><span data-stu-id="56863-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="56863-118">Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="56863-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="56863-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="56863-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="56863-120">Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="56863-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="56863-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="56863-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="56863-122">Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="56863-123">\<filter></span><span class="sxs-lookup"><span data-stu-id="56863-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="56863-124">Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für die Ablaufverfolgung hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="56863-125">\<filter></span><span class="sxs-lookup"><span data-stu-id="56863-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="56863-126">Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="56863-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="56863-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="56863-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="56863-128">Gibt Listener für die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle an.</span><span class="sxs-lookup"><span data-stu-id="56863-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="56863-129">\<listeners></span><span class="sxs-lookup"><span data-stu-id="56863-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="56863-130">Gibt die Listener für die `Listeners`-Sammlung für die Ablaufverfolgung an.</span><span class="sxs-lookup"><span data-stu-id="56863-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="56863-131">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="56863-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="56863-132">Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="56863-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="56863-133">\<remove></span><span class="sxs-lookup"><span data-stu-id="56863-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="56863-134">Entfernt einen Listener aus der `Listeners`-Sammlung für die Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="56863-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="56863-135">\<remove></span><span class="sxs-lookup"><span data-stu-id="56863-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="56863-136">Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="56863-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="56863-137">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="56863-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="56863-138">Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.</span><span class="sxs-lookup"><span data-stu-id="56863-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="56863-139">\<sources></span><span class="sxs-lookup"><span data-stu-id="56863-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="56863-140">Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.</span><span class="sxs-lookup"><span data-stu-id="56863-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="56863-141">\<source></span><span class="sxs-lookup"><span data-stu-id="56863-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="56863-142">Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.</span><span class="sxs-lookup"><span data-stu-id="56863-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="56863-143">\<switches></span><span class="sxs-lookup"><span data-stu-id="56863-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="56863-144">Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="56863-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="56863-145">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="56863-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="56863-146">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="56863-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="56863-147">\<trace></span><span class="sxs-lookup"><span data-stu-id="56863-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="56863-148">Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.</span><span class="sxs-lookup"><span data-stu-id="56863-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.Debug>   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="56863-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56863-149">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="56863-150">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="56863-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

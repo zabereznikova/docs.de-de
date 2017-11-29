@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,29 +23,28 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
-Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
+# <a name="using-streams-on-the-network"></a><span data-ttu-id="0d620-102">Verwenden von Streams im Netzwerk</span><span class="sxs-lookup"><span data-stu-id="0d620-102">Using Streams on the Network</span></span>
+<span data-ttu-id="0d620-103">Netzwerkressourcen werden in .NET Framework als Streams dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0d620-103">Network resources are represented in the .NET Framework as streams.</span></span> <span data-ttu-id="0d620-104">Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:</span><span class="sxs-lookup"><span data-stu-id="0d620-104">By treating streams generically, the .NET Framework offers the following capabilities:</span></span>  
   
--   Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten. Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=fullName> und <xref:System.IO.Stream.Read%2A?displayProperty=fullName> zum Senden und Empfangen von Daten verwenden.  
+-   <span data-ttu-id="0d620-105">Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten.</span><span class="sxs-lookup"><span data-stu-id="0d620-105">A common way to send and receive Web data.</span></span> <span data-ttu-id="0d620-106">Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> zum Senden und Empfangen von Daten verwenden.</span><span class="sxs-lookup"><span data-stu-id="0d620-106">Whatever the actual contents of the file — HTML, XML, or anything else — your application will use <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> and <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> to send and receive data.</span></span>  
   
--   Kompatibilität mit Streams in .NET Framework. Streams werden überall in .NET Framework verwendet. .NET Framework besitzt eine umfangreiche Infrastruktur für deren Behandlung. Beispielsweise können Sie eine Anwendung ändern, die XML-Daten aus einer <xref:System.IO.FileStream> liest, sodass sie die Daten stattdessen aus einer <xref:System.Net.Sockets.NetworkStream> liest, anstelle einer einfachen Änderung der Codezeilen, die den Stream initialisieren. Die wichtigsten Unterschiede zwischen der **NetworkStream**-Klasse und anderen Streams sind die folgenden: **NetworkStream** ist nicht durchsuchbar, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>-Eigenschaft gibt immer **FALSE** zurück, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A>- und <xref:System.Net.Sockets.NetworkStream.Position%2A>-Methoden lösen eine <xref:System.NotSupportedException> aus.  
+-   <span data-ttu-id="0d620-107">Kompatibilität mit Streams in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0d620-107">Compatibility with streams across the .NET Framework.</span></span> <span data-ttu-id="0d620-108">Streams werden überall in .NET Framework verwendet. .NET Framework besitzt eine umfangreiche Infrastruktur für deren Behandlung.</span><span class="sxs-lookup"><span data-stu-id="0d620-108">Streams are used throughout the .NET Framework, which has a rich infrastructure for handling them.</span></span> <span data-ttu-id="0d620-109">Beispielsweise können Sie eine Anwendung ändern, die XML-Daten aus einer <xref:System.IO.FileStream> liest, sodass sie die Daten stattdessen aus einer <xref:System.Net.Sockets.NetworkStream> liest, anstelle einer einfachen Änderung der Codezeilen, die den Stream initialisieren.</span><span class="sxs-lookup"><span data-stu-id="0d620-109">For example, you can modify an application that reads XML data from a <xref:System.IO.FileStream> to read data from a <xref:System.Net.Sockets.NetworkStream> instead by changing only the few lines of code that initialize the stream.</span></span> <span data-ttu-id="0d620-110">Die wichtigsten Unterschiede zwischen der **NetworkStream**-Klasse und anderen Streams sind die folgenden: **NetworkStream** ist nicht durchsuchbar, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>-Eigenschaft gibt immer **FALSE** zurück, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A>- und <xref:System.Net.Sockets.NetworkStream.Position%2A>-Methoden lösen eine <xref:System.NotSupportedException> aus.</span><span class="sxs-lookup"><span data-stu-id="0d620-110">The major differences between the **NetworkStream** class and other streams are that **NetworkStream** is not seekable, the <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> property always returns **false**, and the <xref:System.Net.Sockets.NetworkStream.Seek%2A> and <xref:System.Net.Sockets.NetworkStream.Position%2A> methods throw a <xref:System.NotSupportedException>.</span></span>  
   
--   Die Verarbeitung der eingehenden Daten. Streams bieten Zugriff auf eingehende Daten über das Netzwerk, anstatt die Anwendung zu zwingen, zu warten, bis der gesamte Datensatz heruntergeladen wurde.  
+-   <span data-ttu-id="0d620-111">Die Verarbeitung der eingehenden Daten.</span><span class="sxs-lookup"><span data-stu-id="0d620-111">Processing of data as it arrives.</span></span> <span data-ttu-id="0d620-112">Streams bieten Zugriff auf eingehende Daten über das Netzwerk, anstatt die Anwendung zu zwingen, zu warten, bis der gesamte Datensatz heruntergeladen wurde.</span><span class="sxs-lookup"><span data-stu-id="0d620-112">Streams provide access to data as it arrives from the network, rather than forcing your application to wait for an entire data set to be downloaded.</span></span>  
   
- Der <xref:System.Net.Sockets>-Namespace enthält eine **NetworkStream**-Klasse, die die <xref:System.IO.Stream>-Klasse speziell zur Verwendung mit Netzwerkressourcen implementiert. Klassen im <xref:System.Net.Sockets>-Namespace verwenden die **NetworkStream**-Klasse, um Streams darzustellen.  
+ <span data-ttu-id="0d620-113">Der <xref:System.Net.Sockets>-Namespace enthält eine **NetworkStream**-Klasse, die die <xref:System.IO.Stream>-Klasse speziell zur Verwendung mit Netzwerkressourcen implementiert.</span><span class="sxs-lookup"><span data-stu-id="0d620-113">The <xref:System.Net.Sockets> namespace contains a **NetworkStream** class that implements the <xref:System.IO.Stream> class specifically for use with network resources.</span></span> <span data-ttu-id="0d620-114">Klassen im <xref:System.Net.Sockets>-Namespace verwenden die **NetworkStream**-Klasse, um Streams darzustellen.</span><span class="sxs-lookup"><span data-stu-id="0d620-114">Classes in the <xref:System.Net.Sockets> namespace use the **NetworkStream** class to represent streams.</span></span>  
   
- Rufen Sie zum Senden von Daten an das Netzwerk mit dem zurückgegebenen Streams <xref:System.Net.WebRequest.GetRequestStream%2A> auf Ihrer <xref:System.Net.WebRequest> auf. **WebRequest** wird Anforderungsheader an den Server senden, und dann können Sie Daten an die Netzwerkressource senden, indem Sie die <xref:System.IO.Stream.BeginWrite%2A>-, <xref:System.IO.Stream.EndWrite%2A>- oder <xref:System.IO.Stream.Write%2A>-Methode auf dem zurückgegebenen Stream aufrufen. Für einige Protokolle, z.B. HTTP, müssen Sie möglicherweise protokollspezifische Eigenschaften festlegen, bevor Sie Daten versenden. Das folgende Codebeispiel veranschaulicht, wie die HTTP-spezifischen Eigenschaften zum Versenden von Daten festgelegt werden. Es nimmt an, dass die Variable `sendData` die zu sendenden Daten enthält, und dass die Variable `sendLength` der Anzahl der zu versendenden Datenbytes entspricht.  
+ <span data-ttu-id="0d620-115">Rufen Sie zum Senden von Daten an das Netzwerk mit dem zurückgegebenen Streams <xref:System.Net.WebRequest.GetRequestStream%2A> auf Ihrer <xref:System.Net.WebRequest> auf.</span><span class="sxs-lookup"><span data-stu-id="0d620-115">To send data to the network using the returned stream, call <xref:System.Net.WebRequest.GetRequestStream%2A> on your <xref:System.Net.WebRequest>.</span></span> <span data-ttu-id="0d620-116">**WebRequest** wird Anforderungsheader an den Server senden, und dann können Sie Daten an die Netzwerkressource senden, indem Sie die <xref:System.IO.Stream.BeginWrite%2A>-, <xref:System.IO.Stream.EndWrite%2A>- oder <xref:System.IO.Stream.Write%2A>-Methode auf dem zurückgegebenen Stream aufrufen.</span><span class="sxs-lookup"><span data-stu-id="0d620-116">The **WebRequest** will send request headers to the server; then you can send data to the network resource by calling the <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A>, or <xref:System.IO.Stream.Write%2A> method on the returned stream.</span></span> <span data-ttu-id="0d620-117">Für einige Protokolle, z.B. HTTP, müssen Sie möglicherweise protokollspezifische Eigenschaften festlegen, bevor Sie Daten versenden.</span><span class="sxs-lookup"><span data-stu-id="0d620-117">Some protocols, such as HTTP, may require you to set protocol-specific properties before sending data.</span></span> <span data-ttu-id="0d620-118">Das folgende Codebeispiel veranschaulicht, wie die HTTP-spezifischen Eigenschaften zum Versenden von Daten festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="0d620-118">The following code example shows how to set HTTP-specific properties for sending data.</span></span> <span data-ttu-id="0d620-119">Es nimmt an, dass die Variable `sendData` die zu sendenden Daten enthält, und dass die Variable `sendLength` der Anzahl der zu versendenden Datenbytes entspricht.</span><span class="sxs-lookup"><span data-stu-id="0d620-119">It assumes that the variable `sendData` contains the data to send and that the variable `sendLength` is the number of bytes of data to send.</span></span>  
   
 ```csharp  
 HttpWebRequest request =   
@@ -80,19 +77,19 @@ Catch
 End Try  
 ```  
   
- Um Daten aus dem Netzwerk zu empfangen, rufen Sie <xref:System.Net.WebResponse.GetResponseStream%2A> auf Ihrer <xref:System.Net.WebResponse> auf. Anschließend können Sie Daten aus der Netzwerkressource lesen, indem Sie die <xref:System.IO.Stream.BeginRead%2A>-, <xref:System.IO.Stream.EndRead%2A>- oder <xref:System.IO.Stream.Read%2A>-Methode auf dem zurückgegebenen Stream aufrufen.  
+ <span data-ttu-id="0d620-120">Um Daten aus dem Netzwerk zu empfangen, rufen Sie <xref:System.Net.WebResponse.GetResponseStream%2A> auf Ihrer <xref:System.Net.WebResponse> auf.</span><span class="sxs-lookup"><span data-stu-id="0d620-120">To receive data from the network, call <xref:System.Net.WebResponse.GetResponseStream%2A> on your <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="0d620-121">Anschließend können Sie Daten aus der Netzwerkressource lesen, indem Sie die <xref:System.IO.Stream.BeginRead%2A>-, <xref:System.IO.Stream.EndRead%2A>- oder <xref:System.IO.Stream.Read%2A>-Methode auf dem zurückgegebenen Stream aufrufen.</span><span class="sxs-lookup"><span data-stu-id="0d620-121">You can then read data from the network resource by calling the <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>, or <xref:System.IO.Stream.Read%2A> method on the returned stream.</span></span>  
   
- Wenn Sie Streams aus Netzwerkressourcen verwenden, dann beachten Sie die folgenden Punkte:  
+ <span data-ttu-id="0d620-122">Wenn Sie Streams aus Netzwerkressourcen verwenden, dann beachten Sie die folgenden Punkte:</span><span class="sxs-lookup"><span data-stu-id="0d620-122">When using streams from network resources, keep in mind the following points:</span></span>  
   
--   Die **CanSeek**-Eigenschaft gibt immer **FALSE** zurück, da die **NetworkStream**-Klasse die Position im Stream nicht ändern kann. Die **Seek**- und **Position**-Methoden lösen eine **NotSupportedException** aus.  
+-   <span data-ttu-id="0d620-123">Die **CanSeek**-Eigenschaft gibt immer **FALSE** zurück, da die **NetworkStream**-Klasse die Position im Stream nicht ändern kann.</span><span class="sxs-lookup"><span data-stu-id="0d620-123">The **CanSeek** property always returns **false** since the **NetworkStream** class cannot change position in the stream.</span></span> <span data-ttu-id="0d620-124">Die **Seek**- und **Position**-Methoden lösen eine **NotSupportedException** aus.</span><span class="sxs-lookup"><span data-stu-id="0d620-124">The **Seek** and **Position** methods throw a **NotSupportedException**.</span></span>  
   
--   Wenn Sie **WebRequest** und **WebResponse** verwenden, sind Streaminstanzen, die durch den Aufruf von **GetResponseStream** erstellt wurden, schreibgeschützt und Streaminstanzen, die durch den Aufruf von **GetRequestStream** erstellt wurden, lesegeschützt.  
+-   <span data-ttu-id="0d620-125">Wenn Sie **WebRequest** und **WebResponse** verwenden, sind Streaminstanzen, die durch den Aufruf von **GetResponseStream** erstellt wurden, schreibgeschützt und Streaminstanzen, die durch den Aufruf von **GetRequestStream** erstellt wurden, lesegeschützt.</span><span class="sxs-lookup"><span data-stu-id="0d620-125">When you use **WebRequest** and **WebResponse**, stream instances created by calling **GetResponseStream** are read-only and stream instances created by calling **GetRequestStream** are write-only.</span></span>  
   
--   Verwenden Sie die <xref:System.IO.StreamReader>-Klasse, um die Codierung einfacher zu machen. Im folgenden Codebeispiel wird ein ASCII-codierter Stream mit einem **StreamReader** aus einer **WebResponse** gelesen (das Beispiel zeigt die Anforderungserstellung nicht).  
+-   <span data-ttu-id="0d620-126">Verwenden Sie die <xref:System.IO.StreamReader>-Klasse, um die Codierung einfacher zu machen.</span><span class="sxs-lookup"><span data-stu-id="0d620-126">Use the <xref:System.IO.StreamReader> class to make encoding easier.</span></span> <span data-ttu-id="0d620-127">Im folgenden Codebeispiel wird ein ASCII-codierter Stream mit einem **StreamReader** aus einer **WebResponse** gelesen (das Beispiel zeigt die Anforderungserstellung nicht).</span><span class="sxs-lookup"><span data-stu-id="0d620-127">The following code example uses a **StreamReader** to read an ASCII-encoded stream from a **WebResponse** (the example does not show creating the request).</span></span>  
   
--   Der Aufruf von **GetResponse** könnte blockiert werden, wenn Netzwerkressourcen nicht verfügbar sind. Verwenden Sie eine asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A>- und <xref:System.Net.WebRequest.EndGetResponse%2A>-Methoden.  
+-   <span data-ttu-id="0d620-128">Der Aufruf von **GetResponse** könnte blockiert werden, wenn Netzwerkressourcen nicht verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="0d620-128">The call to **GetResponse** can block if network resources are not available.</span></span> <span data-ttu-id="0d620-129">Verwenden Sie eine asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A>- und <xref:System.Net.WebRequest.EndGetResponse%2A>-Methoden.</span><span class="sxs-lookup"><span data-stu-id="0d620-129">You should consider using an asynchronous request with the <xref:System.Net.WebRequest.BeginGetResponse%2A> and <xref:System.Net.WebRequest.EndGetResponse%2A> methods.</span></span>  
   
--   Der Aufruf von **GetRequestStream** könnte blockiert werden während die Verbindung mit dem Server erstellt wird. Verwenden Sie eine asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A>- und <xref:System.Net.WebRequest.EndGetRequestStream%2A>-Methoden.  
+-   <span data-ttu-id="0d620-130">Der Aufruf von **GetRequestStream** könnte blockiert werden während die Verbindung mit dem Server erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="0d620-130">The call to **GetRequestStream** can block while the connection to the server is created.</span></span> <span data-ttu-id="0d620-131">Verwenden Sie eine asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A>- und <xref:System.Net.WebRequest.EndGetRequestStream%2A>-Methoden.</span><span class="sxs-lookup"><span data-stu-id="0d620-131">You should consider using an asynchronous request for the stream with the <xref:System.Net.WebRequest.BeginGetRequestStream%2A> and <xref:System.Net.WebRequest.EndGetRequestStream%2A> methods.</span></span>  
   
 ```csharp  
 // Create a response object.  
@@ -114,7 +111,6 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [How to: Request Data Using the WebRequest Class (Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse)](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="0d620-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d620-132">See Also</span></span>  
+ [<span data-ttu-id="0d620-133">Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse</span><span class="sxs-lookup"><span data-stu-id="0d620-133">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
+ [<span data-ttu-id="0d620-134">Anfordern von Daten</span><span class="sxs-lookup"><span data-stu-id="0d620-134">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

@@ -1,49 +1,52 @@
 ---
-title: "Systemanforderungen f&#252;r den.NET Framework-Datenanbieter f&#252;r Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Systemanforderungen für den.NET Framework-Datenanbieter für Oracle"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 84bf37dfadf038bc418fc8c2c6746baa58d717b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Systemanforderungen f&#252;r den.NET Framework-Datenanbieter f&#252;r Oracle
-Der .NET Framework\-Datenanbieter für Oracle erfordert Microsoft Data Access Components \(MDAC\), Version 2.6 oder höher.  MDAC 2.8 mit SP1 wird empfohlen.  
+# <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a><span data-ttu-id="a35ec-102">Systemanforderungen für den.NET Framework-Datenanbieter für Oracle</span><span class="sxs-lookup"><span data-stu-id="a35ec-102">System Requirements for the .NET Framework Data Provider for Oracle</span></span>
+<span data-ttu-id="a35ec-103">Der .NET Framework-Datenanbieter für Oracle erfordert Microsoft Data Access Components (MDAC), Version 2.6 oder höher.</span><span class="sxs-lookup"><span data-stu-id="a35ec-103">The .NET Framework Data Provider for Oracle requires Microsoft Data Access Components (MDAC) version 2.6 or later.</span></span> <span data-ttu-id="a35ec-104">MDAC 2.8 mit SP1 wird empfohlen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-104">MDAC 2.8 SP1 is recommended.</span></span>  
   
- Ebenso muss der Oracle 8i\-Client, Version 3 \(8.1.7\) oder höher, installiert sein.  
+ <span data-ttu-id="a35ec-105">Ebenso muss der Oracle 8i-Client, Version 3 (8.1.7) oder höher, installiert sein.</span><span class="sxs-lookup"><span data-stu-id="a35ec-105">You must also have Oracle 8i Release 3 (8.1.7) Client or later installed.</span></span>  
   
- Oracle Clientsoftware, die älter als Version Oracle 9i ist, kann nicht auf UTF16\-Datenbanken zugreifen, weil UTF16 eine neue Funktion in Oracle 9i ist.  Wenn Sie diese Funktion verwenden möchten, müssen Sie die Clientsoftware auf Oracle 9i oder höher aktualisieren.  
+ <span data-ttu-id="a35ec-106">Oracle Clientsoftware, die älter als Version Oracle 9i ist, kann nicht auf UTF16-Datenbanken zugreifen, weil UTF16 eine neue Funktion in Oracle 9i ist.</span><span class="sxs-lookup"><span data-stu-id="a35ec-106">Oracle Client software prior to version Oracle 9i cannot access UTF16 databases because UTF16 is a new feature in Oracle 9i.</span></span> <span data-ttu-id="a35ec-107">Wenn Sie diese Funktion verwenden möchten, müssen Sie die Clientsoftware auf Oracle 9i oder höher aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="a35ec-107">To use this feature, you must upgrade your client software to Oracle 9i or later.</span></span>  
   
-## Arbeiten mit dem Datenanbieter für Oracle\- und Unicode\-Daten  
- Es folgt eine Liste von Unicode\-relevanten Themen, die Sie bei der Arbeit mit dem .NET Framework\-Datenanbieter für Oracle und Oracle\-Clientbibliotheken berücksichtigen sollten.  Weitere Informationen finden Sie in der Oracle\-Dokumentation.  
+## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a><span data-ttu-id="a35ec-108">Arbeiten mit dem Datenanbieter für Oracle- und Unicode-Daten</span><span class="sxs-lookup"><span data-stu-id="a35ec-108">Working with the Data Provider for Oracle and Unicode Data</span></span>  
+ <span data-ttu-id="a35ec-109">Es folgt eine Liste von Unicode-relevanten Themen, die Sie bei der Arbeit mit dem .NET Framework-Datenanbieter für Oracle und Oracle-Clientbibliotheken berücksichtigen sollten.</span><span class="sxs-lookup"><span data-stu-id="a35ec-109">Following is a list of Unicode-related issues that you should consider when working with the .NET Framework Data Provider for Oracle and Oracle client libraries.</span></span> <span data-ttu-id="a35ec-110">Weitere Informationen finden Sie in der Oracle-Dokumentation.</span><span class="sxs-lookup"><span data-stu-id="a35ec-110">For more information, see your Oracle documentation.</span></span>  
   
-### Festlegen des Unicode\-Werts in einem Verbindungszeichenfolgen\-Attribut  
- Beim Arbeiten mit Oracle können Sie das Verbindungszeichenfolgen\-Attribut  
+### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a><span data-ttu-id="a35ec-111">Festlegen des Unicode-Werts in einem Verbindungszeichenfolgen-Attribut</span><span class="sxs-lookup"><span data-stu-id="a35ec-111">Setting the Unicode Value in a Connection String Attribute</span></span>  
+ <span data-ttu-id="a35ec-112">Beim Arbeiten mit Oracle können Sie das Verbindungszeichenfolgen-Attribut </span><span class="sxs-lookup"><span data-stu-id="a35ec-112">When working with Oracle, you can use the connection string attribute</span></span>  
   
 ```  
 Unicode=True   
 ```  
   
- verwenden, um die Oracle\-Clientbibliotheken im UTF\-16\-Modus zu initialisieren.  Dadurch müssen die Oracle\-Clientbibliotheken UTF\-16\-Zeichenfolgen \(die UCS\-2 sehr ähnlich sind\) anstelle von Multi\-Byte\-Zeichenfolgen akzeptieren.  Der Datenanbieter für Oracle kann somit immer eine beliebigen Oracle\-Codepage ohne zusätzliche Umwandlungen verwenden.  Diese Konfiguration funktioniert nur, wenn Oracle 9i\-Clients für die Kommunikation mit einer Oracle 9i\-Datenbank mit dem alternativen Zeichensatz AL16UTF16 verwendet werden.  Bei der Kommunikation eines Oracle 9i\-Client mit einem Oracle 9i\-Server sind zusätzliche Ressourcen erforderlich, um die **CommandText**\-Unicodewerte in den entsprechenden Multi\-Byte\-Zeichensatz umzuwandeln, der vom Oracle9i Server verwendet wird.  Durch Hinzufügen von `Unicode=True` zur Verbindungszeichenfolge kann dies vermieden werden, wenn Sie über eine sichere Konfiguration verfügen.  
+ <span data-ttu-id="a35ec-113">verwenden, um die Oracle-Clientbibliotheken im UTF-16-Modus zu initialisieren.</span><span class="sxs-lookup"><span data-stu-id="a35ec-113">to initialize the Oracle client libraries in UTF-16 mode.</span></span> <span data-ttu-id="a35ec-114">Dadurch müssen die Oracle-Clientbibliotheken UTF-16-Zeichenfolgen (die UCS-2 sehr ähnlich sind) anstelle von Multi-Byte-Zeichenfolgen akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="a35ec-114">This causes the Oracle client libraries to accept UTF-16 (which is very similar to UCS-2) instead of multi-byte strings.</span></span> <span data-ttu-id="a35ec-115">Der Datenanbieter für Oracle kann somit immer eine beliebigen Oracle-Codepage ohne zusätzliche Umwandlungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="a35ec-115">This allows the Data Provider for Oracle to always work with any Oracle code page without additional translation work.</span></span> <span data-ttu-id="a35ec-116">Diese Konfiguration funktioniert nur, wenn Oracle 9i-Clients für die Kommunikation mit einer Oracle 9i-Datenbank mit dem alternativen Zeichensatz AL16UTF16 verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a35ec-116">This configuration only works if you are using Oracle 9i clients to communicate with an Oracle 9i database with the alternate character set of AL16UTF16.</span></span> <span data-ttu-id="a35ec-117">Wenn ein Oracle 9i-Client mit einem Oracle 9i-Server kommuniziert, sind zusätzliche Ressourcen zum Konvertieren von Unicode erforderlich **CommandText** Werte auf das entsprechende Multi-Byte-Zeichen festlegen, die die Oracle9i Server verwendet.</span><span class="sxs-lookup"><span data-stu-id="a35ec-117">When an Oracle 9i client communicates with an Oracle 9i server, additional resources are required to convert the Unicode **CommandText** values to the appropriate multi-byte character set that the Oracle9i server uses.</span></span> <span data-ttu-id="a35ec-118">Durch Hinzufügen von `Unicode=True` zur Verbindungszeichenfolge kann dies vermieden werden, wenn Sie über eine sichere Konfiguration verfügen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-118">This can be avoided when you know that you have the safe configuration by adding `Unicode=True` to your connection string.</span></span>  
   
-### Verwenden verschiedener Versionen von Oracle Client und Oracle Server  
- Oracle 8i\-Clients können nicht auf **NCHAR**\-, **NVARCHAR2**\- oder **NCLOB**\-Daten in Oracle 9i\-Datenbanken zugreifen, wenn der nationale Zeichensatz des Servers als AL16UTF16 \(die Standardeinstellung für Oracle 9i\) angegeben ist.  Da die Unterstützung für den UTF\-16\-Zeichensatz erst ab Oracle 9i eingeführt wurde, können Oracle 8i\-Clients ihn nicht lesen.  
+### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a><span data-ttu-id="a35ec-119">Verwenden verschiedener Versionen von Oracle Client und Oracle Server</span><span class="sxs-lookup"><span data-stu-id="a35ec-119">Mixing Versions of Oracle Client and Oracle Server</span></span>  
+ <span data-ttu-id="a35ec-120">Oracle 8i-Clients können nicht zugegriffen **NCHAR**, **NVARCHAR2**, oder **NCLOB** Daten in Oracle 9i-Datenbanken bei der nationale Zeichensatz des Servers als AL16UTF16 angegeben wird (die Standardeinstellung für Oracle 9i).</span><span class="sxs-lookup"><span data-stu-id="a35ec-120">Oracle 8i clients cannot access **NCHAR**, **NVARCHAR2**, or **NCLOB** data in Oracle 9i databases when the server's national character set is specified as AL16UTF16 (the default setting for Oracle 9i).</span></span> <span data-ttu-id="a35ec-121">Da die Unterstützung für den UTF-16-Zeichensatz erst ab Oracle 9i eingeführt wurde, können Oracle 8i-Clients ihn nicht lesen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-121">Because support for the UTF-16 character set was not introduced until Oracle 9i, Oracle 8i clients cannot read it.</span></span>  
   
-### Arbeiten mit UTF\-8\-Daten  
- Wenn Sie den alternativen Zeichensatz festlegen möchten, legen Sie den Registrierungsschlüssel HKEY\_LOCAL\_MACHINE\\SOFTWARE\\ORACLE\\HOMEID\\NLS\_LANG auf UTF8 fest.  Weitere Informationen finden Sie in den Oracle\-Installationshinweisen für Ihre Plattform.  Die Standardeinstellung ist der primäre Zeichensatz der Sprache, in der Sie die Oracle Clientsoftware installieren.  Wenn Sie die Sprache nicht entsprechend dem Zeichensatz der Landessprache für die Datenbank festlegen, mit der Sie die Verbindung herstellen, führt dies dazu, dass die Parameter\- und Spaltenbindungen Daten im primären Zeichensatz der Datenbank und nicht im nationalen Zeichensatz senden oder empfangen.  
+### <a name="working-with-utf-8-data"></a><span data-ttu-id="a35ec-122">Arbeiten mit UTF-8-Daten</span><span class="sxs-lookup"><span data-stu-id="a35ec-122">Working with UTF-8 Data</span></span>  
+ <span data-ttu-id="a35ec-123">Wenn Sie den alternativen Zeichensatz festlegen möchten, legen Sie den Registrierungsschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG auf UTF8 fest.</span><span class="sxs-lookup"><span data-stu-id="a35ec-123">To set the alternate character set, set the Registry Key HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG to UTF8.</span></span> <span data-ttu-id="a35ec-124">Weitere Informationen finden Sie in den Oracle-Installationshinweisen für Ihre Plattform.</span><span class="sxs-lookup"><span data-stu-id="a35ec-124">See the Oracle Installation notes on your platform for more information.</span></span> <span data-ttu-id="a35ec-125">Die Standardeinstellung ist der primäre Zeichensatz der Sprache, in der Sie die Oracle Clientsoftware installieren.</span><span class="sxs-lookup"><span data-stu-id="a35ec-125">The default setting is the primary character set of the language from which you are installing the Oracle Client software.</span></span> <span data-ttu-id="a35ec-126">Wenn Sie die Sprache nicht entsprechend dem Zeichensatz der Landessprache für die Datenbank festlegen, mit der Sie die Verbindung herstellen, führt dies dazu, dass die Parameter- und Spaltenbindungen Daten im primären Zeichensatz der Datenbank und nicht im nationalen Zeichensatz senden oder empfangen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-126">Not setting the language to match the national language character set of the database to which you are connecting will cause parameter and column bindings to send or receive data in your primary database character set, not the national character set.</span></span>  
   
-### OracleLob kann nur vollständige Zeichen aktualisieren.  
- Aus Gründen der Verwendbarkeit erbt das <xref:System.Data.OracleClient.OracleLob>\-Objekt von der .NET Framework\-Streamklasse und stellt die **ReadByte**\-Methode und die **WriteByte**\-Methode bereit.  Es implementiert auch Methoden, z. B. **CopyTo** und **Erase**, die Abschnitte von Oracle\-**LOB**\-Objekten verarbeiten.  Im Unterschied dazu stellt die Oracle Clientsoftware mehrere APIs für die Arbeit mit Zeichen\-**LOBs** \(**CLOB** und **NCLOB**\) bereit.  Allerdings unterstützen diese APIs nur vollständige Zeichen.  Aufgrund dieses Unterschieds implementiert der Datenanbieter für Oracle die Unterstützung für **Read** und **ReadByte**, damit UTF\-16\-Daten byteweise verarbeitet werden können.  Die anderen Methoden des **OracleLob**\-Objekts ermöglichen jedoch nur Operationen für vollständige Zeichen.  
+### <a name="oraclelob-can-only-update-full-characters"></a><span data-ttu-id="a35ec-127">OracleLob kann nur vollständige Zeichen aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="a35ec-127">OracleLob Can Only Update Full Characters.</span></span>  
+ <span data-ttu-id="a35ec-128">Aus Gründen der Verwendbarkeit der <xref:System.Data.OracleClient.OracleLob> Objekt erbt von der .NET Framework-Streamklasse und stellt **ReadByte** und **WriteByte** Methoden.</span><span class="sxs-lookup"><span data-stu-id="a35ec-128">For usability reasons, the <xref:System.Data.OracleClient.OracleLob> object inherits from the .NET Framework Stream class, and provides **ReadByte** and **WriteByte** methods.</span></span> <span data-ttu-id="a35ec-129">Es implementiert auch Methoden, wie z. B. **CopyTo** und **Erase**, die Abschnitte von Oracle **LOB** Objekte.</span><span class="sxs-lookup"><span data-stu-id="a35ec-129">It also implements methods, such as **CopyTo** and **Erase**, that work on sections of Oracle **LOB** objects.</span></span> <span data-ttu-id="a35ec-130">Im Gegensatz dazu Oracle-Clientsoftware enthält eine Reihe von APIs zum Arbeiten mit den Zeichen **LOB**s (**CLOB** und **NCLOB**).</span><span class="sxs-lookup"><span data-stu-id="a35ec-130">In contrast, Oracle client software provides a number of APIs to work with character **LOB**s (**CLOB** and **NCLOB**).</span></span> <span data-ttu-id="a35ec-131">Allerdings unterstützen diese APIs nur vollständige Zeichen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-131">However, these APIs work on full characters only.</span></span> <span data-ttu-id="a35ec-132">Wegen dieses Unterschieds implementiert der Datenanbieter für Oracle die Unterstützung für **lesen** und **ReadByte** arbeiten Sie mit UTF-16-Daten byteweise verarbeitet werden können.</span><span class="sxs-lookup"><span data-stu-id="a35ec-132">Because of this difference, the Data Provider for Oracle implements support for **Read** and **ReadByte** to work with UTF-16 data in a byte-wise manner.</span></span> <span data-ttu-id="a35ec-133">Allerdings die anderen Methoden der der **OracleLob** Objekt kann nur Operationen für vollständige Zeichen.</span><span class="sxs-lookup"><span data-stu-id="a35ec-133">However, the other methods of the **OracleLob** object only allow full-character operations.</span></span>  
   
-## Siehe auch  
- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a35ec-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a35ec-134">See Also</span></span>  
+ [<span data-ttu-id="a35ec-135">Oracle und ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a35ec-135">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [<span data-ttu-id="a35ec-136">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="a35ec-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

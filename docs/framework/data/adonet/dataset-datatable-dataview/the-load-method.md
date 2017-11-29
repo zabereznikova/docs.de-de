@@ -1,39 +1,41 @@
 ---
-title: "Die &#39;Load&#39;-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Load-Methode
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Die &#39;Load&#39;-Methode
-Mithilfe der <xref:System.Data.DataTable.Load%2A>\-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden.  Dies ist eine überladene Methode, die in ihrer einfachsten Form einen einzelnen Parameter, einen **DataReader**, akzeptiert.  In dieser Form lädt sie einfach die **DataTable** mit Zeilen.  Optional können Sie den **LoadOption**\-Parameter angeben, um zu steuern, wie der **DataTable** die Daten hinzugefügt werden.  
+# <a name="the-load-method"></a><span data-ttu-id="3a7a1-102">Load-Methode</span><span class="sxs-lookup"><span data-stu-id="3a7a1-102">The Load Method</span></span>
+<span data-ttu-id="3a7a1-103">Mithilfe der <xref:System.Data.DataTable.Load%2A>-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="3a7a1-104">Dies ist eine überladene Methode, die in der einfachsten Form einen einzelnen Parameter akzeptiert eine **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="3a7a1-105">In dieser Form lädt sie einfach die **DataTable** mit Zeilen.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="3a7a1-106">Optional können Sie angeben der **LoadOption** Parameter steuern, wie Daten hinzugefügt werden die **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  
   
- Der **LoadOption**\-Parameter ist besonders in den Fällen nützlich, in denen die **DataTable** bereits Zeilen mit Daten enthält, weil durch den Parameter beschrieben wird, wie die eingehenden Daten aus der Datenquelle mit den bereits in der Tabelle vorhandenen Daten kombiniert werden.  Beispielsweise wird durch den Standardwert **PreserveCurrentValues** angegeben, dass dann, wenn eine Zeile als **Added** in der **DataTable** markiert ist, der **Original**\-Wert jeder Spalte auf den Inhalt der entsprechenden Zeile aus der Datenquelle festgelegt wird.  Der **Current**\-Wert behält die Werte bei, die ihm beim Hinzufügen der Zeile zugewiesen wurden, und der **RowState** der Zeile wird auf **Changed** festgelegt.  
+ <span data-ttu-id="3a7a1-107">Die **LoadOption** Parameter eignet sich besonders in Fällen, in denen die **DataTable** bereits Datenzeilen enthält, da es wird beschrieben, wie die eingehenden Daten aus der Datenquelle mit den Daten kombiniert werden bereits in der Tabelle.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-107">The **LoadOption** parameter is particularly useful in cases where the **DataTable** already contains rows of data, because it describes how incoming data from the data source will be combined with the data already in the table.</span></span> <span data-ttu-id="3a7a1-108">Beispielsweise **PreserveCurrentValues** (Standard) gibt an, dass in Fällen, in denen eine Zeile wird, als markiert **Added** in der **DataTable**, die **Original** Wert oder jede Spalte wird auf den Inhalt der entsprechenden Zeile aus der Datenquelle festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-108">For example, **PreserveCurrentValues** (the default) specifies that in cases where a row is marked as **Added** in the **DataTable**, the **Original** value or each column is set to the contents of the matching row from the data source.</span></span> <span data-ttu-id="3a7a1-109">Die **aktuelle** -Wert behält die Werte zugewiesen, wenn die Zeile hinzugefügt wurde, und die **RowState** der Zeile festgelegt, um **Changed**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-109">The **Current** value will retain the values assigned when the row was added, and the **RowState** of the row will be set to **Changed**.</span></span>  
   
- Die folgende Tabelle enthält eine kurze Beschreibung der <xref:System.Data.LoadOption>\-Enumerationswerte.  
+ <span data-ttu-id="3a7a1-110">Die folgende Tabelle enthält eine kurze Beschreibung der <xref:System.Data.LoadOption>-Enumerationswerte.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-110">The following table gives a short description of the <xref:System.Data.LoadOption> enumeration values.</span></span>  
   
-|Der LoadOption\-Wert|Beschreibung|  
-|--------------------------|------------------|  
-|**OverwriteRow**|Wenn hinzukommende Zeilen denselben **PrimaryKey**\-Wert wie eine bereits in der **DataTable** vorhandene Zeile aufweisen, werden der **Original**\-Wert und der **Current**\-Wert jeder Spalte durch die Werte in der hinzukommenden Zeile ersetzt, und die **RowState**\-Eigenschaft wird auf **Unchanged** festgelegt.<br /><br /> Zeilen aus einer Datenquelle, die in der **DataTable** noch nicht vorhanden sind, werden mit dem **RowState**\-Wert **Unchanged** hinzugefügt.<br /><br /> Mit dieser Option wird der Inhalt der **DataTable** aktualisiert, sodass er mit dem Inhalt der Datenquelle übereinstimmt.|  
-|**PreserveCurrentValues \(Standard\)**|Wenn hinzukommende Zeilen denselben **PrimaryKey**\-Wert wie eine bereits in der **DataTable** vorhandene Zeile aufweisen, wird der **Original**\-Wert auf den Inhalt der hinzukommenden Zeile festgelegt, und der **Current**\-Wert wird nicht geändert.<br /><br /> Wenn der **RowState** den Wert **Added** oder den Wert **Modified** aufweist, wird er auf **Modified** festgelegt.<br /><br /> Wenn der **RowState** den Wert **Deleted** besitzt, bleibt er **Deleted**.<br /><br /> Zeilen aus einer Datenquelle, die in der **DataTable** noch nicht vorhanden sind, werden hinzugefügt, und der **RowState**\-Wert wird auf **Unchanged** festgelegt.|  
-|**UpdateCurrentValues**|Wenn hinzukommende Zeilen denselben **PrimaryKey**\-Wert wie die bereits in der **DataTable** vorhandene Zeile aufweisen, wird der **Current**\-Wert in den **Original**\-Wert kopiert, und der **Current**\-Wert wird anschließend auf den Inhalt der hinzukommenden Zeile festgelegt.<br /><br /> Wenn der **RowState** in der **DataTable** den Wert **Added** aufwies, wird für den **RowState** der Wert **Added** beibehalten.  Für Zeilen mit der Markierung **Modified** oder **Deleted** lautet der **RowState** **Modified**.<br /><br /> Zeilen aus einer Datenquelle, die in der **DataTable** noch nicht vorhanden sind, werden hinzugefügt, und der **RowState**\-Wert wird auf **Added** festgelegt.|  
+|<span data-ttu-id="3a7a1-111">Der LoadOption-Wert</span><span class="sxs-lookup"><span data-stu-id="3a7a1-111">LoadOption value</span></span>|<span data-ttu-id="3a7a1-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3a7a1-112">Description</span></span>|  
+|----------------------|-----------------|  
+|<span data-ttu-id="3a7a1-113">**OverwriteRow**</span><span class="sxs-lookup"><span data-stu-id="3a7a1-113">**OverwriteRow**</span></span>|<span data-ttu-id="3a7a1-114">Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert als eine Zeile, die bereits in der **DataTable**, **ursprünglichen** und **aktuelle** Werte der einzelnen Spalte mit den Werten in der hinzukommenden Zeile ersetzt werden und die **RowState** -Eigenschaftensatz auf **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-114">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** and **Current** values of each column are replaced with the values in the incoming row, and the **RowState** property is set to **Unchanged**.</span></span><br /><br /> <span data-ttu-id="3a7a1-115">Zeilen aus der Datenquelle, die noch nicht in vorhanden sind die **DataTable** werden hinzugefügt, mit einer **RowState** Wert **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-115">Rows from the data source that do not already exist in the **DataTable** are added with a **RowState** value of **Unchanged**.</span></span><br /><br /> <span data-ttu-id="3a7a1-116">Diese Option aktualisiert den Inhalt der **DataTable** , damit diese den Inhalt der Datenquelle übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-116">This option in effect refreshes the contents of the **DataTable** so that it matches the contents of the data source.</span></span>|  
+|<span data-ttu-id="3a7a1-117">**PreserveCurrentValues (Standard)**</span><span class="sxs-lookup"><span data-stu-id="3a7a1-117">**PreserveCurrentValues (default)**</span></span>|<span data-ttu-id="3a7a1-118">Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert als eine Zeile, die bereits in der **DataTable**, **ursprünglichen** Wert wird festgelegt, um den Inhalt der hinzukommenden Zeile und die **Aktuelle** Wert wird nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-118">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** value is set to the contents of the incoming row, and the **Current** value is not changed.</span></span><br /><br /> <span data-ttu-id="3a7a1-119">Wenn die **RowState** ist **Added** oder **"geändert"**, festgelegt ist **"geändert"**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-119">If the **RowState** is **Added** or **Modified**, it is set to **Modified**.</span></span><br /><br /> <span data-ttu-id="3a7a1-120">Wenn die **RowState** wurde **gelöschte**, bleibt er **gelöschte**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-120">If the **RowState** was **Deleted**, it remains **Deleted**.</span></span><br /><br /> <span data-ttu-id="3a7a1-121">Zeilen aus der Datenquelle, die nicht bereits vorhanden sind in der **DataTable** hinzugefügt werden, und die **RowState** auf festgelegt ist **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-121">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Unchanged**.</span></span>|  
+|<span data-ttu-id="3a7a1-122">**UpdateCurrentValues**</span><span class="sxs-lookup"><span data-stu-id="3a7a1-122">**UpdateCurrentValues**</span></span>|<span data-ttu-id="3a7a1-123">Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert wie die Zeile bereits in der **DataTable**, die **aktuelle** Wert wird kopiert, um die **Original**Wert, und die **aktuelle** Wert wird auf den Inhalt der hinzukommenden Zeile festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-123">If incoming rows have the same **PrimaryKey** value as the row already in the **DataTable**, the **Current** value is copied to the **Original** value, and the **Current** value is then set to the contents of the incoming row.</span></span><br /><br /> <span data-ttu-id="3a7a1-124">Wenn die **RowState** in der **DataTable** wurde **Added**, **RowState** bleibt **Added**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-124">If the **RowState** in the **DataTable** was **Added**, the **RowState** remains **Added**.</span></span> <span data-ttu-id="3a7a1-125">Für Zeilen mit der Markierung **"geändert"** oder **gelöschte**, **RowState** ist **"geändert"**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-125">For rows marked as **Modified** or **Deleted**, the **RowState** is **Modified**.</span></span><br /><br /> <span data-ttu-id="3a7a1-126">Zeilen aus der Datenquelle, die noch nicht in vorhanden sind die **DataTable** hinzugefügt werden, und die **RowState** festgelegt ist, um **Added**.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-126">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Added**.</span></span>|  
   
- Im folgenden Beispiel wird mit der **Load**\-Methode eine Geburtstagsliste der Mitarbeiter in der **Northwind**\-Datenbank angezeigt.  
+ <span data-ttu-id="3a7a1-127">Das folgende Beispiel verwendet die **laden** Methode, um eine Liste der Geburtstage für Mitarbeiter im Anzeigen der **Northwind** Datenbank.</span><span class="sxs-lookup"><span data-stu-id="3a7a1-127">The following sample uses the **Load** method to display a list of birthdays for the employees in the **Northwind** database.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
     ' Assumes that connectionString is a valid connection string  
     ' to the Northwind database on SQL Server.  
@@ -75,6 +77,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## Siehe auch  
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3a7a1-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3a7a1-128">See Also</span></span>  
+ [<span data-ttu-id="3a7a1-129">Bearbeiten von Daten in einer "DataTable"</span><span class="sxs-lookup"><span data-stu-id="3a7a1-129">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="3a7a1-130">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="3a7a1-130">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

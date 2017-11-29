@@ -1,40 +1,42 @@
 ---
-title: "JSONP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: JSONP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 56e287543f2510823beff4cb84f6d9cab245cdac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# JSONP
-In diesem Beispiel wird erläutert, wie JSON mit Padding \(JSONP\) in WCF REST\-Diensten unterstützt wird.  JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird.  Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben.  JSONP basiert auf der Idee, dass Tags wie \<script src\=”http:\/\/...” \> Skripts aus jeder Domäne auswerten können und dass das durch solche Tags abgerufene Skript im Bereich ausgewertet wird, in dem andere Funktionen möglicherweise bereits definiert wurden.  
+# <a name="jsonp"></a><span data-ttu-id="15c06-102">JSONP</span><span class="sxs-lookup"><span data-stu-id="15c06-102">JSONP</span></span>
+<span data-ttu-id="15c06-103">In diesem Beispiel wird erläutert, wie JSON mit Padding (JSONP) in WCF REST-Diensten unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="15c06-103">This sample demonstrates how to support JSON with Padding (JSONP) in WCF REST services.</span></span> <span data-ttu-id="15c06-104">JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="15c06-104">JSONP is a convention used to invoke cross-domain scripts by generating script tags in the current document.</span></span> <span data-ttu-id="15c06-105">Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="15c06-105">The result is returned in a specified callback function.</span></span> <span data-ttu-id="15c06-106">JSONP basiert auf dem Konzept, dass z. B. tags \<script Src = "http:/ /..." > Skripts aus einer beliebigen Domäne auswerten können und das durch diese Tags abgerufene Skript innerhalb eines Bereichs, in dem andere Funktionen möglicherweise bereits definiert, ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="15c06-106">JSONP is based on the idea that tags such as \<script src="http://..." > can evaluate scripts from any domain and the script retrieved by those tags is evaluated within a scope in which other functions may already be defined.</span></span>  
   
-## Veranschaulicht  
- Domänenübergreifende Skripterstellung mit JSONP  
+## <a name="demonstrates"></a><span data-ttu-id="15c06-107">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="15c06-107">Demonstrates</span></span>  
+ <span data-ttu-id="15c06-108">Domänenübergreifende Skripterstellung mit JSONP</span><span class="sxs-lookup"><span data-stu-id="15c06-108">Cross-domain scripting with JSONP.</span></span>  
   
-## Diskussion  
- Das Beispiel enthält eine Webseite, für die dynamisch ein Skriptblock hinzugefügt wird, nachdem die Seite im Browser gerendert wurde.  Dieser Skriptblock ruft einen WCF REST\-Dienst auf, der nur über den einen Vorgang `GetCustomer` verfügt.  Der WCF REST\-Dienst gibt den Namen und die Adresse eines Kunden durch Wrapping in einen Rückruffunktionsnamen zurück.  Wenn der WCF REST\-Dienst antwortet, wird die Rückruffunktion auf der Webseite mithilfe der Kundendaten aufgerufen, und die Rückruffunktion zeigt die Daten auf der Webseite an.  Die Einfügung des Skripttags und die Ausführung der Rückruffunktion werden automatisch vom ASP.NET AJAX ScriptManager\-Steuerelement behandelt.  Das Verwendungsmuster stimmt mit dem aller ASP.NET AJAX\-Proxys überein, allerdings mit einer zusätzlichen Zeile zur Aktivierung von JSONP. Dies wird im folgenden Code dargestellt:  
+## <a name="discussion"></a><span data-ttu-id="15c06-109">Diskussion</span><span class="sxs-lookup"><span data-stu-id="15c06-109">Discussion</span></span>  
+ <span data-ttu-id="15c06-110">Das Beispiel enthält eine Webseite, für die dynamisch ein Skriptblock hinzugefügt wird, nachdem die Seite im Browser gerendert wurde.</span><span class="sxs-lookup"><span data-stu-id="15c06-110">The sample includes a Web page that dynamically adds a script block after the page has been rendered in the browser.</span></span> <span data-ttu-id="15c06-111">Dieser Skriptblock ruft einen WCF REST-Dienst auf, der nur über den einen Vorgang `GetCustomer` verfügt.</span><span class="sxs-lookup"><span data-stu-id="15c06-111">This script block calls a WCF REST service that has a single operation, `GetCustomer`.</span></span> <span data-ttu-id="15c06-112">Der WCF REST-Dienst gibt den Namen und die Adresse eines Kunden durch Wrapping in einen Rückruffunktionsnamen zurück.</span><span class="sxs-lookup"><span data-stu-id="15c06-112">The WCF REST service returns a customer’s name and address wrapped in a callback function name.</span></span> <span data-ttu-id="15c06-113">Wenn der WCF REST-Dienst antwortet, wird die Rückruffunktion auf der Webseite mithilfe der Kundendaten aufgerufen, und die Rückruffunktion zeigt die Daten auf der Webseite an.</span><span class="sxs-lookup"><span data-stu-id="15c06-113">When the WCF REST service responds, the callback function on the Web page is invoked with the customer data and the callback function displays the data on the Web page.</span></span> <span data-ttu-id="15c06-114">Die Einfügung des Skripttags und die Ausführung der Rückruffunktion werden automatisch vom ASP.NET AJAX ScriptManager-Steuerelement behandelt.</span><span class="sxs-lookup"><span data-stu-id="15c06-114">The injection of the script tag and the execution of the callback function is automatically handled by the ASP.NET AJAX ScriptManager control.</span></span> <span data-ttu-id="15c06-115">Das Verwendungsmuster stimmt mit dem aller ASP.NET AJAX-Proxys überein, allerdings mit einer zusätzlichen Zeile zur Aktivierung von JSONP. Dies wird im folgenden Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="15c06-115">The usage pattern is the same as with all ASP.NET AJAX proxies, with the addition of one line to enable JSONP, as shown in the following code:</span></span>  
   
 ```csharp  
 var proxy = new JsonpAjaxService.CustomerService();  
 proxy.set_enableJsonp(true);  
 proxy.GetCustomer(onSuccess, onFail, null);  
-  
 ```  
   
- Die Webseite kann den WCF REST\-Dienst aufrufen, da der Dienst den <xref:System.ServiceModel.Description.WebScriptEndpoint> verwendet, wobei `crossDomainScriptAccessEnabled` auf `true` festgelegt wurde.  Beide Konfigurationen werden in der "Web.config"\-Datei unter dem \<system.serviceModel\>\-Element festgelegt.  
+ <span data-ttu-id="15c06-116">Die Webseite kann den WCF REST-Dienst aufrufen, da der Dienst den <xref:System.ServiceModel.Description.WebScriptEndpoint> verwendet, wobei `crossDomainScriptAccessEnabled` auf `true` festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="15c06-116">The Web page can call the WCF REST service because the service is using the <xref:System.ServiceModel.Description.WebScriptEndpoint> with `crossDomainScriptAccessEnabled` set to `true`.</span></span> <span data-ttu-id="15c06-117">Bei beiden Konfigurationen fertig sind, in der Datei "Web.config" unter dem \<system.serviceModel >-Element.</span><span class="sxs-lookup"><span data-stu-id="15c06-117">Both of these configurations are done in the Web.config file under the \<system.serviceModel> element.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
   <standardEndpoints>  
@@ -45,37 +47,35 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>  
 ```  
   
- ScriptManager verwaltet die Interaktion mit dem Dienst und macht damit die Komplexität, die mit einer manuellen Implementierung des JSONP\-Zugriffs verbunden ist, überflüssig.  Wenn `crossDomainScriptAccessEnabled` auf `true` festgelegt ist und das Antwortformat eines Vorgangs JSON lautet, uberprüft die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Infrastruktur einen Zeichenfolgenparameter für eine Rückrufabfrage und führt ein Wrapping der JSON\-Antwort mit dem Wert des Zeichenfolgenparameters für die Rückrufabfrage aus.  Im Beispiel ruft die Webseite den WCF REST\-Dienst mit dem folgenden URI auf.  
+ <span data-ttu-id="15c06-118">ScriptManager verwaltet die Interaktion mit dem Dienst und macht damit die Komplexität, die mit einer manuellen Implementierung des JSONP-Zugriffs verbunden ist, überflüssig.</span><span class="sxs-lookup"><span data-stu-id="15c06-118">ScriptManager manages the interaction with the service and hides away the complexity of manually implementing JSONP access.</span></span> <span data-ttu-id="15c06-119">Wenn `crossDomainScriptAccessEnabled` auf `true` festgelegt ist und das Antwortformat eines Vorgangs JSON lautet, uberprüft die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur einen Zeichenfolgenparameter für eine Rückrufabfrage und führt ein Wrapping der JSON-Antwort mit dem Wert des Zeichenfolgenparameters für die Rückrufabfrage aus.</span><span class="sxs-lookup"><span data-stu-id="15c06-119">When `crossDomainScriptAccessEnabled` is set to `true` and the response format for an operation is JSON, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure inspects the URI of the request for a callback query string parameter and wraps the JSON response with the value of the callback query string parameter.</span></span> <span data-ttu-id="15c06-120">Im Beispiel ruft die Webseite den WCF REST-Dienst mit dem folgenden URI auf.</span><span class="sxs-lookup"><span data-stu-id="15c06-120">In the sample, the Web page calls the WCF REST service with the following URI.</span></span>  
   
 ```  
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0  
-  
 ```  
   
- Da der Zeichenfolgenparameter der Rückrufabfrage über den Wert `JsonPCallback` verfügt, gibt der WCF\-Dienst die im folgenden Beispiel dargestellte JSONP\-Antwort zurück.  
+ <span data-ttu-id="15c06-121">Da der Zeichenfolgenparameter der Rückrufabfrage über den Wert `JsonPCallback` verfügt, gibt der WCF-Dienst die im folgenden Beispiel dargestellte JSONP-Antwort zurück.</span><span class="sxs-lookup"><span data-stu-id="15c06-121">Because the callback query string parameter has a value of `JsonPCallback`, the WCF service returns a JSONP response shown in the following example.</span></span>  
   
 ```  
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});  
-  
 ```  
   
- Diese JSONP\-Antwort enthält die als JSON formatierten Kundendaten, für die mit dem von der Webseite angeforderten Rückruffunktionsnamen ein Wrapping ausgeführt wurde.  ScriptManager führt diesen Rückruf mithilfe eines Skripttags aus, um die domänenübergreifende Anforderung zu ermöglichen und danach das Ergebnis an den onSuccess\-Handler zu übergeben, der an die GetCustomer\-Operation des ASP.NET AJAX\-Proxys übergeben wurde.  
+ <span data-ttu-id="15c06-122">Diese JSONP-Antwort enthält die als JSON formatierten Kundendaten, für die mit dem von der Webseite angeforderten Rückruffunktionsnamen ein Wrapping ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="15c06-122">This JSONP response includes the customer data formatted as JSON, wrapped with the callback function name that the Web page requested.</span></span> <span data-ttu-id="15c06-123">ScriptManager führt diesen Rückruf mithilfe eines Skripttags aus, um die domänenübergreifende Anforderung zu ermöglichen und danach das Ergebnis an den onSuccess-Handler zu übergeben, der an die GetCustomer-Operation des ASP.NET AJAX-Proxys übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="15c06-123">ScriptManager will execute this callback using a script tag to accomplish the cross-domain request, and then pass the result to the onSuccess handler that was passed to the GetCustomer operation of the ASP.NET AJAX proxy.</span></span>  
   
- Das Beispiel besteht aus zwei ASP.NET\-Webanwendungen. Eine Anwendung enthält nur einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst, die andere enthält die ASPX\-Webseite, mit der der Dienst aufgerufen wird.  Während der Ausführung der Projektmappe hostet [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die zwei Websites auf unterschiedlichen Ports. Auf diese Weise wird eine Umgebung erstellt, in der der Dienst und der Client sich in zwei verschiedenen Domänen befinden.  
+ <span data-ttu-id="15c06-124">Das Beispiel besteht aus zwei ASP.NET-Webanwendungen. Eine Anwendung enthält nur einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, die andere enthält die ASPX-Webseite, mit der der Dienst aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="15c06-124">The sample consists of two ASP.NET web applications: one contains just a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, and another one contains the .aspx webpage, which calls the service.</span></span> <span data-ttu-id="15c06-125">Während der Ausführung der Projektmappe hostet [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die zwei Websites auf unterschiedlichen Ports. Auf diese Weise wird eine Umgebung erstellt, in der der Dienst und der Client sich in zwei verschiedenen Domänen befinden.</span><span class="sxs-lookup"><span data-stu-id="15c06-125">When running the solution, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] will host the two websites on different ports, which creates an environment where the service and client live on different domains.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="15c06-126">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="15c06-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="15c06-127">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="15c06-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="15c06-128">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="15c06-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="15c06-129">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="15c06-129">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
-#### So führen Sie das Beispiel aus  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="15c06-130">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="15c06-130">To run the sample</span></span>  
   
-1.  Öffnen Sie die Projektmappe für das JSONP\-Beispiel.  
+1.  <span data-ttu-id="15c06-131">Öffnen Sie die Projektmappe für das JSONP-Beispiel.</span><span class="sxs-lookup"><span data-stu-id="15c06-131">Open the solution for the JSONP Sample.</span></span>  
   
-2.  Drücken Sie F5, um http:\/\/localhost:26648\/JSONPClientPage .aspx im Browser zu starten.  
+2.  <span data-ttu-id="15c06-132">Drücken Sie F5, um die HYPERLINK "Http://localhost:26648/JSONPClientPage.aspx" Http://localhost:26648/JSONPClientPage.aspx im Browser zu starten.</span><span class="sxs-lookup"><span data-stu-id="15c06-132">Press F5 to launch  HYPERLINK "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx in the browser.</span></span>  
   
-3.  Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Adresse" mit Werten aufgefüllt werden.  Diese Werte wurden von einem Aufruf des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensts angegeben, nachdem der Browser das Rendern der Seite beendet hat.
+3.  <span data-ttu-id="15c06-133">Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Address" mit Werten aufgefüllt werden.</span><span class="sxs-lookup"><span data-stu-id="15c06-133">Notice that after the page loads, the text inputs for "Name" and "Address" are populated by values.</span></span>  <span data-ttu-id="15c06-134">Diese Werte wurden von einem Aufruf des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts angegeben, nachdem der Browser das Rendern der Seite beendet hat.</span><span class="sxs-lookup"><span data-stu-id="15c06-134">These values were supplied from a call to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service after the browser finished rendering the page.</span></span>

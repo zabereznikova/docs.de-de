@@ -1,25 +1,28 @@
 ---
-title: "WSAT_TraceEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSAT_TraceEvent
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 142aa03f-781c-4ca4-bc21-0e64b1ff9b6a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 40ead5e936dbee08630b9f188edc00c9177aa354
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WSAT_TraceEvent
-WSAT\_TraceEvent  
+# <a name="wsattraceevent"></a><span data-ttu-id="c2e0b-102">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="c2e0b-102">WSAT_TraceEvent</span></span>
+<span data-ttu-id="c2e0b-103">WSAT_TraceEvent</span><span class="sxs-lookup"><span data-stu-id="c2e0b-103">WSAT_TraceEvent</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="c2e0b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c2e0b-104">Syntax</span></span>  
   
 ```  
 class WSAT_TraceEvent : WSAT_TraceProvider  
@@ -27,11 +30,11 @@ class WSAT_TraceEvent : WSAT_TraceProvider
 };  
 ```  
   
-## Methoden  
- Die WSAT\_TraceEvent\-Klasse erbt von WSAT\_TraceProvider, definiert aber keine zusätzlichen Methoden oder Eigenschaften.  
+## <a name="methods"></a><span data-ttu-id="c2e0b-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="c2e0b-105">Methods</span></span>  
+ <span data-ttu-id="c2e0b-106">Die WSAT_TraceEvent-Klasse erbt von WSAT_TraceProvider, definiert aber keine zusätzlichen Methoden oder Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="c2e0b-106">The WSAT_TraceEvent class inherits from WSAT_TraceProvider but does not define additional methods or properties.</span></span>  
   
-## Voraussetzungen  
+## <a name="requirements"></a><span data-ttu-id="c2e0b-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c2e0b-107">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof|  
-|---------|------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|
+|<span data-ttu-id="c2e0b-108">MOF</span><span class="sxs-lookup"><span data-stu-id="c2e0b-108">MOF</span></span>|<span data-ttu-id="c2e0b-109">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="c2e0b-109">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="c2e0b-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="c2e0b-110">Namespace</span></span>|<span data-ttu-id="c2e0b-111">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c2e0b-111">Defined in root\ServiceModel</span></span>|

@@ -5,32 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- netPeerBinding element
+helpviewer_keywords: netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db7fcfcd4d86bd3ed2bfc7aff033684a0ea14d74
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: bf978034e25d0d644803eed98fc73a60952d817b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
-Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.  
+# <a name="ltnetpeertcpbindinggt"></a><span data-ttu-id="0dc29-102">&lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0dc29-102">&lt;netPeerTcpBinding&gt;</span></span>
+<span data-ttu-id="0dc29-103">Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.</span><span class="sxs-lookup"><span data-stu-id="0dc29-103">Defines a binding for peer channel specific TCP messaging.</span></span>  
   
- \<System. ServiceModel >  
-\<Bindungen >  
-\<NetPeerTcpBinding >  
+ <span data-ttu-id="0dc29-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0dc29-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0dc29-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="0dc29-105">\<bindings></span></span>  
+<span data-ttu-id="0dc29-106">\<NetPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="0dc29-106">\<netPeerTcpBinding></span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="0dc29-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="0dc29-107">Syntax</span></span>  
   
 ```xml  
 <netPeerBinding>  
@@ -50,42 +47,42 @@ Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.
 </netPeerBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0dc29-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="0dc29-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0dc29-109">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="0dc29-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a><span data-ttu-id="0dc29-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="0dc29-110">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
+|<span data-ttu-id="0dc29-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="0dc29-111">Attribute</span></span>|<span data-ttu-id="0dc29-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0dc29-112">Description</span></span>|  
 |---------------|-----------------|  
-|closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|listenIPAddress|Eine Zeichenfolge mit einer IP-Adresse, die der Peerknoten auf TCP-Nachrichten überwacht. Die Standardeinstellung ist `null`.|  
-|maxBufferPoolSize|Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt. Der Standardwert ist 524.288 Byte (512 * 1024). Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
-|maxReceivedMessageSize|Eine positive ganze Zahl, die die maximale Nachrichtengröße in Bytes einschließlich Header angibt, die in einem für diese Bindung konfigurierten Kanal beim Nachrichtenempfang zulässig ist. Der Absender einer Nachricht, die diese Grenze überschreitet, erhält einen SOAP-Fehler. Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll. Der Standard ist 65536.|  
-|Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|Port|Eine ganze Zahl, die den Netzwerk-Schnittstellenanschluss angibt, an dem diese Bindung TCP-Peerkanalnachrichten verarbeitet. Dabei muss es sich um einen Wert zwischen <xref:System.Net.IPEndPoint.MinPort> und <xref:System.Net.IPEndPoint.MaxPort> handeln. Der Standard ist 0.|  
-|receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:10:00.|  
-|sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
+|<span data-ttu-id="0dc29-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="0dc29-113">closeTimeout</span></span>|<span data-ttu-id="0dc29-114">Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt.</span><span class="sxs-lookup"><span data-stu-id="0dc29-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="0dc29-115">Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.</span><span class="sxs-lookup"><span data-stu-id="0dc29-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0dc29-116">Der Standardwert ist 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="0dc29-116">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="0dc29-117">listenIPAddress</span><span class="sxs-lookup"><span data-stu-id="0dc29-117">listenIPAddress</span></span>|<span data-ttu-id="0dc29-118">Eine Zeichenfolge mit einer IP-Adresse, die der Peerknoten auf TCP-Nachrichten überwacht.</span><span class="sxs-lookup"><span data-stu-id="0dc29-118">A string that specifies an IP address on which the peer node will listen for TCP messages.</span></span> <span data-ttu-id="0dc29-119">Die Standardeinstellung ist `null`.</span><span class="sxs-lookup"><span data-stu-id="0dc29-119">The default is `null`.</span></span>|  
+|<span data-ttu-id="0dc29-120">maxBufferPoolSize</span><span class="sxs-lookup"><span data-stu-id="0dc29-120">maxBufferPoolSize</span></span>|<span data-ttu-id="0dc29-121">Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt.</span><span class="sxs-lookup"><span data-stu-id="0dc29-121">An integer that specifies the maximum buffer pool size for this binding.</span></span> <span data-ttu-id="0dc29-122">Der Standardwert ist 524.288 Byte (512 * 1024).</span><span class="sxs-lookup"><span data-stu-id="0dc29-122">The default is 524,288 bytes (512 * 1024).</span></span> <span data-ttu-id="0dc29-123">Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer.</span><span class="sxs-lookup"><span data-stu-id="0dc29-123">Many parts of Windows Communication Foundation (WCF) use buffers.</span></span> <span data-ttu-id="0dc29-124">Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer.</span><span class="sxs-lookup"><span data-stu-id="0dc29-124">Creating and destroying buffers each time they are used is expensive, and garbage collection for buffers is also expensive.</span></span> <span data-ttu-id="0dc29-125">Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen.</span><span class="sxs-lookup"><span data-stu-id="0dc29-125">With buffer pools, you can take a buffer from the pool, use it, and return it to the pool once you are done.</span></span> <span data-ttu-id="0dc29-126">So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.</span><span class="sxs-lookup"><span data-stu-id="0dc29-126">Thus the overhead in creating and destroying buffers is avoided.</span></span>|  
+|<span data-ttu-id="0dc29-127">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="0dc29-127">maxReceivedMessageSize</span></span>|<span data-ttu-id="0dc29-128">Eine positive ganze Zahl, die die maximale Nachrichtengröße in Bytes einschließlich Header angibt, die in einem für diese Bindung konfigurierten Kanal beim Nachrichtenempfang zulässig ist.</span><span class="sxs-lookup"><span data-stu-id="0dc29-128">A positive integer that specifies the maximum message size, in bytes, including headers, that can be received on a channel configured with this binding.</span></span> <span data-ttu-id="0dc29-129">Der Absender einer Nachricht, die diese Grenze überschreitet, erhält einen SOAP-Fehler.</span><span class="sxs-lookup"><span data-stu-id="0dc29-129">The sender of a message exceeding this limit will receive a SOAP fault.</span></span> <span data-ttu-id="0dc29-130">Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll.</span><span class="sxs-lookup"><span data-stu-id="0dc29-130">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="0dc29-131">Der Standard ist 65536.</span><span class="sxs-lookup"><span data-stu-id="0dc29-131">The default is 65536.</span></span>|  
+|<span data-ttu-id="0dc29-132">Name</span><span class="sxs-lookup"><span data-stu-id="0dc29-132">name</span></span>|<span data-ttu-id="0dc29-133">Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält.</span><span class="sxs-lookup"><span data-stu-id="0dc29-133">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="0dc29-134">Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0dc29-134">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="0dc29-135">Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="0dc29-135">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="0dc29-136">Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="0dc29-136">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="0dc29-137">openTimeout</span><span class="sxs-lookup"><span data-stu-id="0dc29-137">openTimeout</span></span>|<span data-ttu-id="0dc29-138">Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt.</span><span class="sxs-lookup"><span data-stu-id="0dc29-138">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="0dc29-139">Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.</span><span class="sxs-lookup"><span data-stu-id="0dc29-139">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0dc29-140">Der Standardwert ist 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="0dc29-140">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="0dc29-141">Port</span><span class="sxs-lookup"><span data-stu-id="0dc29-141">port</span></span>|<span data-ttu-id="0dc29-142">Eine ganze Zahl, die den Netzwerk-Schnittstellenanschluss angibt, an dem diese Bindung TCP-Peerkanalnachrichten verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="0dc29-142">An integer that specifies the network interface port on which this binding will process peer channel TCP messages.</span></span> <span data-ttu-id="0dc29-143">Dabei muss es sich um einen Wert zwischen <xref:System.Net.IPEndPoint.MinPort> und <xref:System.Net.IPEndPoint.MaxPort> handeln.</span><span class="sxs-lookup"><span data-stu-id="0dc29-143">This value must be between <xref:System.Net.IPEndPoint.MinPort> and <xref:System.Net.IPEndPoint.MaxPort>.</span></span> <span data-ttu-id="0dc29-144">Der Standard ist 0.</span><span class="sxs-lookup"><span data-stu-id="0dc29-144">The default is 0.</span></span>|  
+|<span data-ttu-id="0dc29-145">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="0dc29-145">receiveTimeout</span></span>|<span data-ttu-id="0dc29-146">Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt.</span><span class="sxs-lookup"><span data-stu-id="0dc29-146">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="0dc29-147">Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.</span><span class="sxs-lookup"><span data-stu-id="0dc29-147">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0dc29-148">Der Standardwert ist 00:10:00.</span><span class="sxs-lookup"><span data-stu-id="0dc29-148">The default is 00:10:00.</span></span>|  
+|<span data-ttu-id="0dc29-149">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="0dc29-149">sendTimeout</span></span>|<span data-ttu-id="0dc29-150">Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt.</span><span class="sxs-lookup"><span data-stu-id="0dc29-150">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="0dc29-151">Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein.</span><span class="sxs-lookup"><span data-stu-id="0dc29-151">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0dc29-152">Der Standardwert ist 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="0dc29-152">The default is 00:01:00.</span></span>|  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="0dc29-153">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0dc29-153">Child Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="0dc29-154">Element</span><span class="sxs-lookup"><span data-stu-id="0dc29-154">Element</span></span>|<span data-ttu-id="0dc29-155">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0dc29-155">Description</span></span>|  
 |-------------|-----------------|  
-|[\<ReaderQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<Konfliktlöser >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Gibt einen Peerresolver an, der von dieser Bindung zum Auflösen einer Peermesh-ID in die Endpunkt-IP-Adressen von Knoten innerhalb des Peermesh verwendet wird.|  
-|[\<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Definiert die Sicherheitseinstellungen für die Nachricht. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[<span data-ttu-id="0dc29-156">\<ReaderQuotas ></span><span class="sxs-lookup"><span data-stu-id="0dc29-156">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="0dc29-157">Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden.</span><span class="sxs-lookup"><span data-stu-id="0dc29-157">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="0dc29-158">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="0dc29-158">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="0dc29-159">\<Konfliktlöser ></span><span class="sxs-lookup"><span data-stu-id="0dc29-159">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="0dc29-160">Gibt einen Peerresolver an, der von dieser Bindung zum Auflösen einer Peermesh-ID in die Endpunkt-IP-Adressen von Knoten innerhalb des Peermesh verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0dc29-160">Specifies a peer resolver used by this binding to resolve a peer mesh ID to the endpoint IP addresses of nodes within the peer mesh.</span></span>|  
+|[<span data-ttu-id="0dc29-161">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="0dc29-161">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="0dc29-162">Definiert die Sicherheitseinstellungen für die Nachricht.</span><span class="sxs-lookup"><span data-stu-id="0dc29-162">Defines the security settings for the message.</span></span> <span data-ttu-id="0dc29-163">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="0dc29-163">This element is of type <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a>Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="0dc29-164">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0dc29-164">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="0dc29-165">Element</span><span class="sxs-lookup"><span data-stu-id="0dc29-165">Element</span></span>|<span data-ttu-id="0dc29-166">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0dc29-166">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Bindungen >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
+|[<span data-ttu-id="0dc29-167">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="0dc29-167">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="0dc29-168">Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.</span><span class="sxs-lookup"><span data-stu-id="0dc29-168">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Diese Bindung bietet Unterstützung für das Erstellen von Peer-to-Peer- oder Mehrparteienanwendungen mithilfe von Peertransport über TCP. Jeder Peerknoten kann als Host für mehrere mit diesem Bindungstyp definierte Peerkanäle fungieren.  
+## <a name="remarks"></a><span data-ttu-id="0dc29-169">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0dc29-169">Remarks</span></span>  
+ <span data-ttu-id="0dc29-170">Diese Bindung bietet Unterstützung für das Erstellen von Peer-to-Peer- oder Mehrparteienanwendungen mithilfe von Peertransport über TCP.</span><span class="sxs-lookup"><span data-stu-id="0dc29-170">This binding provides support for the creation of peer-to-peer or multiparty applications using peer transport over TCP.</span></span> <span data-ttu-id="0dc29-171">Jeder Peerknoten kann als Host für mehrere mit diesem Bindungstyp definierte Peerkanäle fungieren.</span><span class="sxs-lookup"><span data-stu-id="0dc29-171">Each peer node can host multiple peer channels defined with this binding type.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die NetPeerTcpBinding-Bindung veranschaulicht, die Mehrparteienkommunikation über einen Peerkanal ermöglicht. Eine ausführliche Szenario der mit dieser Bindung finden Sie in [Net Peer-TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).  
+## <a name="example"></a><span data-ttu-id="0dc29-172">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0dc29-172">Example</span></span>  
+ <span data-ttu-id="0dc29-173">Im folgenden Beispiel wird die NetPeerTcpBinding-Bindung veranschaulicht, die Mehrparteienkommunikation über einen Peerkanal ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="0dc29-173">The following example demonstrates using the NetPeerTcpBinding binding, which provides multiparty communication using a peer channel.</span></span> <span data-ttu-id="0dc29-174">Eine ausführliche Szenario der mit dieser Bindung finden Sie in [Net Peer-TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).</span><span class="sxs-lookup"><span data-stu-id="0dc29-174">For a detailed scenario of using this binding, see [Net Peer TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).</span></span>  
   
 ```xml  
 <configuration>  
@@ -113,13 +110,12 @@ Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.NetPeerTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Binden von >](../../../../../docs/framework/misc/binding.md)   
- [NET-Peer-TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)   
- [Peer-zu-Peer-Netzwerken](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-
+## <a name="see-also"></a><span data-ttu-id="0dc29-175">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0dc29-175">See Also</span></span>  
+ <xref:System.ServiceModel.NetPeerTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
+ [<span data-ttu-id="0dc29-176">Bindungen</span><span class="sxs-lookup"><span data-stu-id="0dc29-176">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0dc29-177">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="0dc29-177">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="0dc29-178">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="0dc29-178">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="0dc29-179">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="0dc29-179">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="0dc29-180">NET-Peer-TCP</span><span class="sxs-lookup"><span data-stu-id="0dc29-180">Net Peer TCP</span></span>](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
+ [<span data-ttu-id="0dc29-181">Peer-zu-Peer-Netzwerken</span><span class="sxs-lookup"><span data-stu-id="0dc29-181">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

@@ -1,488 +1,119 @@
 ---
-title: "Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfl&#228;che ist | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen eines Add-Ins als Benutzeroberfläche [WPF]"
-  - "-Add-ins [WPF] Benutzeroberfläche"
-  - "Erstellen eines Benutzeroberflächen-Add-Ins [WPF]"
-  - "Benutzeroberflächen-add-ins [WPF], erstellen"
-  - "Implementieren von Benutzeroberflächen-Add-Ins [WPF]"
-  - "Erstellen von Add-Ins Pipelinesegmente [WPF]"
+title: "Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating an add-in that is a UI [WPF]
+- add-ins [WPF], UI
+- creating UI add-ins [WPF]
+- UI add-ins [WPF], creating
+- implementing UI add-ins [WPF]
+- pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9151dd5fa36e3691361bcf6d7c7b281646982f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfl&#228;che ist
-\<?xml version="1.0" encoding="utf-8"?>
-\<developerHowToDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://dduestorage.blob.core.windows.net/ddueschema/developer.xsd">
-  <introduction>
-    <para>Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, ist ein <token>TLA #Tla_wpf</token> <token>TLA #Tla_ui</token> die gehostet wird ein <token>TLA&#2;Tla_wpf</token> eigenständige Anwendung.</para> 
-    <para>Das Add-in ist eine <token>TLA&#2;Tla_ui</token> , ein <token>TLA&#2;Tla_wpf</token> Benutzersteuerelement. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche geklickt haben, wird ein Meldungsfeld angezeigt. Die <token>TLA&#2;Tla_wpf</token> eigenständige Anwendung hostet das Add-in <token>TLA&#2;Tla_ui</token> als Inhalt des Hauptfensters der Anwendung.</para> 
-    <para> 
-      <embeddedLabel>Erforderlichen Komponenten</embeddedLabel>
-    </para>
-    <para>in diesem Beispiel hebt die <token>TLA&#2;Tla_wpf</token> Erweiterungen für die <token>Dnprdnshort</token> Add-In-Modell, mit denen dieses Szenario und die folgenden:</para>
-    <list class="bullet">
-      <listItem>
-        <para>Kenntnisse der <token>Dnprdnshort</token> Add-In-Modell, einschließlich der Pipeline-add-in und Hostentwicklung. Wenn Sie mit diesen Konzepten nicht vertraut sind, finden Sie unter \<legacyLink xlink:href="8dd45b02-7218-40f9-857d-40d7b98b850b">Add-Ins und Erweiterbarkeit</legacyLink>. Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und Host-Anwendung veranschaulicht, finden Sie unter \<legacyLink xlink:href="694a33c5-a040-450d-aed5-ac49fc88ce61">Exemplarische Vorgehensweise: Erstellen einer erweiterbaren Anwendung</legacyLink>.</para> 
-      </listItem> 
-      <listItem> 
-        <para>Kenntnisse der <token>TLA&#2;Tla_wpf</token> -Erweiterungen für die <token>Dnprdnshort</token> Add-In-Modell, das hier befindet: \<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">Übersicht über WPF-Add-Ins</link>.</para> 
-      </listItem> 
-    </list> 
-  </introduction> 
-  <codeExample> 
-    <legacy> 
-      <content> 
-        <para>, Ein Add-in zu erstellen, ist ein <token>TLA&#2;Tla_wpf</token> <token>TLA&#2;Tla_ui</token> spezifischen Code für jedes Pipelinesegment, das Add-in und Host-Anwendung erfordert.</para> 
-        <para> 
-          <token>AutoOutline</token>
-        </para>
-      </content>
-      <sections>
-        <section address="Contract">
-          <title>Implementieren der Pipeline Vertragssegment</title>
-          <content>
-            <para>Wenn ein Add-in ist eine <token>TLA&#2;Tla_ui</token>, muss der Vertrag für das Add-In implementieren <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>. Im Beispiel <codeInline>IWPFAddInContract</codeInline> implementiert <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>, wie im folgenden Code gezeigt.</para>
-            <code language="c#">using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // AddInContractAttribute
-
-namespace Contracts
-{
-    /// &lt;summary&gt;
-    /// Defines the services that an add-in will provide to a host application.
-    /// In this case, the add-in is a UI.
-    /// &lt;/summary&gt;
-    [AddInContract]
-    public interface IWPFAddInContract : INativeHandleContract {}
-}</code>
-          <code language="vb">Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' AddInContractAttribute
-
-Namespace Contracts
-    ''' &lt;summary&gt;
-    ''' Defines the services that an add-in will provide to a host application.
-    ''' In this case, the add-in is a UI.
-    ''' &lt;/summary&gt;
-    &lt;AddInContract&gt;
-    Public Interface IWPFAddInContract
-        Inherits INativeHandleContract
-        Inherits IContract
-    End Interface
-End Namespace</code></content>
-        </section>
-        <section address="AddInViewPipeline">
-          <title>Implementieren die Add-In-Ansicht Pipeline Segment</title>
-          <content>
-            <para>da das Add-in, als eine Unterklasse von implementiert wird der <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> Typ der Add-In-Ansicht muss auch als Unterklasse <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference>. Der folgende Code zeigt die Add-In-Ansicht des Vertrags, als implementiert die <codeInline>WPFAddInView</codeInline> Klasse</para> 
-            <code language="c#">using System.AddIn.Pipeline; // AddInBaseAttribute
-using System.Windows.Controls; // UserControl
-
-namespace AddInViews
-{
-    /// &lt;summary&gt;
-    /// Defines the add-in's view of the contract.
-    /// &lt;/summary&gt;
-    [AddInBase]
-    public class WPFAddInView : UserControl { }
-}</code> 
-          <code language="vb">Imports System.AddIn.Pipeline ' AddInBaseAttribute
-Imports System.Windows.Controls ' UserControl
-
-Namespace AddInViews
-    ''' &lt;summary&gt;
-    ''' Defines the add-in's view of the contract.
-    ''' &lt;/summary&gt;
-    &lt;AddInBase&gt;
-    Public Class WPFAddInView
-        Inherits UserControl
-    End Class
-End Namespace</code> 
-            <para>Hier die Add-In Ansicht abgeleitet ist <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference>. Aus diesem Grund die Add-in- <token>TLA&#2;Tla_ui</token> sollten auch abgeleitet <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference>.</para>
-          </content>
-        </section>
-        <section address="AddInSideAdapter">
-          <title>Implementieren der Add-In-Side Adapterpipelinesegments</title>
-          <content>
-            <para>während der Vertrag ist eine <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>, Add-in ist eine <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> (wie durch die Add-In-Ansicht Pipelinesegment angegeben). Aus diesem Grund die <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> konvertiert werden muss, um eine <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> vor dem Überschreiten der Isolationsgrenze. Dieser Vorgang wird durch Aufrufen der Add-In-seitige Adapter ausgeführt <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter(System.Windows.FrameworkElement)</codeEntityReference>, wie im folgenden Code gezeigt.</para> 
-            <code language="c#">using System; // IntPtr
-using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // AddInAdapterAttribute, FrameworkElementAdapters, ContractBase
-using System.Security.Permissions;
-
-using AddInViews; // WPFAddInView
-using Contracts; // IWPFAddInContract
-
-namespace AddInSideAdapters
-{
-    /// &lt;summary&gt;
-    /// Adapts the add-in's view of the contract to the add-in contract
-    /// &lt;/summary&gt;
-    [AddInAdapter]
-    public class WPFAddIn_ViewToContractAddInSideAdapter : ContractBase, IWPFAddInContract
-    {
-        WPFAddInView wpfAddInView;
-
-        public WPFAddIn_ViewToContractAddInSideAdapter(WPFAddInView wpfAddInView)
-        {
-            // Adapt the add-in view of the contract (WPFAddInView) 
-            // to the contract (IWPFAddInContract)
-            this.wpfAddInView = wpfAddInView;
-        }
-
-        /// &lt;summary&gt;
-        /// ContractBase.QueryContract must be overridden to:
-        /// * Safely return a window handle for an add-in UI to the host 
-        ///   application's application.
-        /// * Enable tabbing between host application UI and add-in UI, in the
-        ///   "add-in is a UI" scenario.
-        /// &lt;/summary&gt;
-        public override IContract QueryContract(string contractIdentifier)
-        {
-            if (contractIdentifier.Equals(typeof(INativeHandleContract).AssemblyQualifiedName))
-            {
-                return FrameworkElementAdapters.ViewToContractAdapter(this.wpfAddInView);
-            }
-
-            return base.QueryContract(contractIdentifier);
-        }
-
-        /// &lt;summary&gt;
-        /// GetHandle is called by the WPF add-in model from the host application's 
-        /// application domain to to get the window handle for an add-in UI from the 
-        /// add-in's application domain. GetHandle is called if a window handle isn't 
-        /// returned by other means ie overriding ContractBase.QueryContract, 
-        /// as shown above.
-        /// NOTE: This method requires UnmanagedCodePermission to be called 
-        ///       (full-trust by default), to prevent illegal window handle
-        ///       access in partially trusted scenarios. If the add-in could
-        ///       run in a partially trusted application domain 
-        ///       (eg AddInSecurityLevel.Internet), you can safely return a window
-        ///       handle by overriding ContractBase.QueryContract, as shown above.
-        /// &lt;/summary&gt;
-        [SecurityPermissionAttribute(SecurityAction.Demand, Flags = SecurityPermissionFlag.UnmanagedCode)]
-        public IntPtr GetHandle()
-        {
-            return FrameworkElementAdapters.ViewToContractAdapter(this.wpfAddInView).GetHandle();
-        }
-    }
-}</code> 
-          <code language="vb">Imports System ' IntPtr
-Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' AddInAdapterAttribute, FrameworkElementAdapters, ContractBase
-Imports System.Security.Permissions
-
-Imports AddInViews ' WPFAddInView
-Imports Contracts ' IWPFAddInContract
-
-Namespace AddInSideAdapters
-    ''' &lt;summary&gt;
-    ''' Adapts the add-in's view of the contract to the add-in contract
-    ''' &lt;/summary&gt;
-    &lt;AddInAdapter&gt;
-    Public Class WPFAddIn_ViewToContractAddInSideAdapter
-        Inherits ContractBase
-        Implements IWPFAddInContract
-
-        Private wpfAddInView As WPFAddInView
-
-        Public Sub New(ByVal wpfAddInView As WPFAddInView)
-            ' Adapt the add-in view of the contract (WPFAddInView) 
-            ' to the contract (IWPFAddInContract)
-            Me.wpfAddInView = wpfAddInView
-        End Sub
-
-        ''' &lt;summary&gt;
-        ''' ContractBase.QueryContract must be overridden to:
-        ''' * Safely return a window handle for an add-in UI to the host 
-        '''   application's application.
-        ''' * Enable tabbing between host application UI and add-in UI, in the
-        '''   "add-in is a UI" scenario.
-        ''' &lt;/summary&gt;
-        Public Overrides Function QueryContract(ByVal contractIdentifier As String) As IContract
-            If contractIdentifier.Equals(GetType(INativeHandleContract).AssemblyQualifiedName) Then
-                Return FrameworkElementAdapters.ViewToContractAdapter(Me.wpfAddInView)
-            End If
-
-            Return MyBase.QueryContract(contractIdentifier)
-        End Function
-
-        ''' &lt;summary&gt;
-        ''' GetHandle is called by the WPF add-in model from the host application's 
-        ''' application domain to to get the window handle for an add-in UI from the 
-        ''' add-in's application domain. GetHandle is called if a window handle isn't 
-        ''' returned by other means ie overriding ContractBase.QueryContract, 
-        ''' as shown above.
-        ''' NOTE: This method requires UnmanagedCodePermission to be called 
-        '''       (full-trust by default), to prevent illegal window handle
-        '''       access in partially trusted scenarios. If the add-in could
-        '''       run in a partially trusted application domain 
-        '''       (eg AddInSecurityLevel.Internet), you can safely return a window
-        '''       handle by overriding ContractBase.QueryContract, as shown above.
-        ''' &lt;/summary&gt;
-        &lt;SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)&gt;
-        Public Function GetHandle() As IntPtr Implements INativeHandleContract.GetHandle
-            Return FrameworkElementAdapters.ViewToContractAdapter(Me.wpfAddInView).GetHandle()
-        End Function
-
-    End Class
-End Namespace</code> 
-            <para>In die Add-In-Modell, in dem ein Add-in gibt, eine <token>TLA&#2;Tla_ui</token> (finden Sie unter \<link xlink:href="57f274b7-4c66-4b72-92eb-81939a393776">wie: Erstellen Sie ein Add-in, gibt eine Benutzeroberfläche</link>), konvertiert die Add-in-Adapter die <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> auf ein <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> durch Aufrufen von <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter(System.Windows.FrameworkElement)</codeEntityReference>. <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter(System.Windows.FrameworkElement)</codeEntityReference> muss ebenfalls in diesem Modell aufgerufen werden, obwohl Sie schreiben den Code zum Aufrufen der Methode implementieren müssen. Überschreiben Sie dazu <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)</codeEntityReference> und den aufrufende Code implementieren <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter(System.Windows.FrameworkElement)</codeEntityReference> Wenn der Code, der den Aufruf <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)</codeEntityReference> erwartet ein <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>. In diesem Fall wird der Aufrufer der hostseitige Adapter sein, die in einem nachfolgenden Unterabschnitt behandelt wird.</para>
-            <alert class="note">
-              <para> Sie müssen auch überschreiben <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)</codeEntityReference> in diesem Modell aktivieren Wechsel zwischen Host-Anwendung <token>TLA&#2;Tla_ui</token> und Add-in- <token>TLA&#2;Tla_ui</token>. Weitere Informationen finden Sie in "WPF-Add-In" in \<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">Übersicht über WPF-Add-Ins</link>.</para> 
-            </alert> 
-            <para>Da der Add-In-seitige Adapter eine Schnittstelle, die implementiert von abgeleitet <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>, müssen Sie auch implementieren <codeEntityReference autoUpgrade="true">m: System.AddIn.Contract.INativeHandleContract.getHandle</codeEntityReference>, obwohl dies ignoriert beim <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)</codeEntityReference> überschrieben wird.</para>
-          </content>
-        </section>
-        <section address="HostViewPipeline">
-          <title>Implementieren des Host-Ansichtspipelinesegments</title>
-          <content>
-            <para>In diesem Modell die Host-Anwendung in der Regel werden die Hostansicht erwartet ein <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> Unterklasse. Der hostseitige Adapter muss umwandeln, die <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> zu einer <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> nach der <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> überschreitet die Isolationsgrenze. Da eine Methode vom hostanwendung aufgerufen wird, ist nicht der <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference>, die Hostansicht muss "return" die <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> von enthalten ist. Daher muss die Hostansicht ableiten, einer Unterklasse von <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> enthalten können andere <token>TLA&#2;Tla_ui #plural</token>, wie z. B. <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference>. Der folgende Code zeigt die Hostansicht des Vertrags, als implementiert die <codeInline>WPFAddInHostView</codeInline> Klasse.</para>
-            <code language="c#">using System.Windows.Controls; // UserControl
-
-namespace HostViews
-{
-    /// &lt;summary&gt;
-    /// Defines the host's view of the add-in
-    /// &lt;/summary&gt;
-    public class WPFAddInHostView : UserControl { }
-}</code>
-          <code language="vb">Imports System.Windows.Controls ' UserControl
-
-Namespace HostViews
-    ''' &lt;summary&gt;
-    ''' Defines the host's view of the add-in
-    ''' &lt;/summary&gt;
-    Public Class WPFAddInHostView
-        Inherits UserControl
-    End Class
-End Namespace</code>
-          </content>
-        </section>
-        <section address="HostSideAdapter">
-          <title>Implementieren der hostseitige Adapter Pipeline Segment</title>
-          <content>
-            <para>während der Vertrag ist eine <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference>, die hostanwendung erwartet einen <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference> (wie durch die Hostansicht angegeben). Folglich die <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> muss konvertiert werden, um eine <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> nach dem Überschreiten der Isolationsgrenze, bevor er als Inhalt der Hostansicht festgelegt (abgeleitet, das von <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference>).</para> 
-            <para>Dieser Vorgang wird der hostseitige Adapter ausgeführt, wie im folgenden Code gezeigt. </para> 
-            <code language="c#">using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // HostAdapterAttribute, FrameworkElementAdapters, ContractHandle
-using System.Windows; // FrameworkElement
-
-using Contracts; // IWPFAddInContract
-using HostViews; // WPFAddInHostView
-
-namespace HostSideAdapters
-{
-    /// &lt;summary&gt;
-    /// Adapts the add-in contract to the host's view of the add-in
-    /// &lt;/summary&gt;
-    [HostAdapter]
-    public class WPFAddIn_ContractToViewHostSideAdapter : WPFAddInHostView
-    {
-        IWPFAddInContract wpfAddInContract;
-        ContractHandle wpfAddInContractHandle;
-
-        public WPFAddIn_ContractToViewHostSideAdapter(IWPFAddInContract wpfAddInContract)
-        {
-            // Adapt the contract (IWPFAddInContract) to the host application's
-            // view of the contract (WPFAddInHostView)
-            this.wpfAddInContract = wpfAddInContract;
-
-            // Prevent the reference to the contract from being released while the
-            // host application uses the add-in
-            this.wpfAddInContractHandle = new ContractHandle(wpfAddInContract);
-
-            // Convert the INativeHandleContract for the add-in UI that was passed 
-            // from the add-in side of the isolation boundary to a FrameworkElement
-            string aqn = typeof(INativeHandleContract).AssemblyQualifiedName;
-            INativeHandleContract inhc = (INativeHandleContract)wpfAddInContract.QueryContract(aqn);
-            FrameworkElement fe = (FrameworkElement)FrameworkElementAdapters.ContractToViewAdapter(inhc);
-
-            // Add FrameworkElement (which displays the UI provided by the add-in) as
-            // content of the view (a UserControl)
-            this.Content = fe;
-        }
-    }
-}</code> 
-          <code language="vb">Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' HostAdapterAttribute, FrameworkElementAdapters, ContractHandle
-Imports System.Windows ' FrameworkElement
-
-Imports Contracts ' IWPFAddInContract
-Imports HostViews ' WPFAddInHostView
-
-Namespace HostSideAdapters
-    ''' &lt;summary&gt;
-    ''' Adapts the add-in contract to the host's view of the add-in
-    ''' &lt;/summary&gt;
-    &lt;HostAdapter&gt;
-    Public Class WPFAddIn_ContractToViewHostSideAdapter
-        Inherits WPFAddInHostView
-        Private wpfAddInContract As IWPFAddInContract
-        Private wpfAddInContractHandle As ContractHandle
-
-        Public Sub New(ByVal wpfAddInContract As IWPFAddInContract)
-            ' Adapt the contract (IWPFAddInContract) to the host application's
-            ' view of the contract (WPFAddInHostView)
-            Me.wpfAddInContract = wpfAddInContract
-
-            ' Prevent the reference to the contract from being released while the
-            ' host application uses the add-in
-            Me.wpfAddInContractHandle = New ContractHandle(wpfAddInContract)
-
-            ' Convert the INativeHandleContract for the add-in UI that was passed 
-            ' from the add-in side of the isolation boundary to a FrameworkElement
-            Dim aqn As String = GetType(INativeHandleContract).AssemblyQualifiedName
-            Dim inhc As INativeHandleContract = CType(wpfAddInContract.QueryContract(aqn), INativeHandleContract)
-            Dim fe As FrameworkElement = CType(FrameworkElementAdapters.ContractToViewAdapter(inhc), FrameworkElement)
-
-            ' Add FrameworkElement (which displays the UI provided by the add-in) as
-            ' content of the view (a UserControl)
-            Me.Content = fe
-        End Sub
-    End Class
-End Namespace</code> 
-            <para>Wie Sie sehen, der hostseitige Adapter Ruft die <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> durch Aufrufen des Add-In-seitige Adapters <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.ContractBase.QueryContract(System.String)</codeEntityReference> Methode (an diesem Punkt wird, in dem die <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> überschreitet die Isolationsgrenze).</para> 
-            <para>Der hostseitige Adapter konvertiert dann die <codeEntityReference autoUpgrade="true">: System.AddIn.Contract.INativeHandleContract</codeEntityReference> zu einer <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> durch Aufrufen von <codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter(System.AddIn.Contract.INativeHandleContract)</codeEntityReference>. Abschließend die <codeEntityReference autoUpgrade="true">: System.Windows.FrameworkElement</codeEntityReference> als Inhalt der Hostansicht festgelegt ist.</para>
-          </content>
-        </section>
-        <section address="AddIn">
-          <title>Implementieren von Add-in-</title>
-          <content>
-            <para>mit dem Add-In-seitige Adapter und die Add-In-Ansicht, das Add-In implementiert werden kann durch Ableiten von der Add-In-Ansicht wie im folgenden Code gezeigt.</para> 
-            <code language="xaml">&lt;addInViews:WPFAddInView
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:addInViews="clr-namespace:AddInViews;assembly=AddInViews"
-    x:Class="WPFAddIn1.AddInUI"&gt;
-
-    &lt;Grid&gt;
-        &lt;Button Click="clickMeButton_Click" Content="Click Me!" /&gt;        
-    &lt;/Grid&gt;
-
-&lt;/addInViews:WPFAddInView&gt;</code> 
-            <code language="c#">using System.AddIn; // AddInAttribute
-using System.Windows; // MessageBox, RoutedEventArgs
-
-using AddInViews; // WPFAddInView
-
-namespace WPFAddIn1
-{
-    /// &lt;summary&gt;
-    /// Implements the add-in by deriving from WPFAddInView
-    /// &lt;/summary&gt;
-    [AddIn("WPF Add-In 1")]
-    public partial class AddInUI : WPFAddInView
-    {
-        public AddInUI()
-        {
-            InitializeComponent();
-        }
-
-        void clickMeButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hello from WPFAddIn1");
-        }
-    }
-}</code> 
-          <code language="vb">Imports System.AddIn ' AddInAttribute
-Imports System.Windows ' MessageBox, RoutedEventArgs
-
-Imports AddInViews ' WPFAddInView
-
-Namespace WPFAddIn1
-    ''' &lt;summary&gt;
-    ''' Implements the add-in by deriving from WPFAddInView
-    ''' &lt;/summary&gt;
-    &lt;AddIn("WPF Add-In 1")&gt;
-    Partial Public Class AddInUI
-        Inherits WPFAddInView
-        Public Sub New()
-            InitializeComponent()
-        End Sub
-
-        Private Sub clickMeButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
-            MessageBox.Show("Hello from WPFAddIn1")
-        End Sub
-    End Class
-End Namespace</code> 
-            <para>Aus diesem Beispiel sehen Sie einen interessanten Vorteil dieses Modells: Add-In-Entwickler müssen nur das Add-In implementieren (da dies ist die <token>TLA&#2;Tla_ui</token> sowie), anstatt eine Add-in Klasse und ein Add-in <token>TLA&#2;Tla_ui</token>.</para>
-          </content>
-        </section>
-        <section address="HostApp">
-          <title>Implementieren der Hostanwendung</title>
-          <content>
-            <para>der hostseitige Adapter und der Hostansicht erstellt, die Host-Anwendung können die <token>Dnprdnshort</token> Add-In-Modell, um die Pipeline öffnen und eine Hostansicht des Add-Ins zu erwerben. Diese Schritte werden im folgenden Code dargestellt. </para> 
-            <code language="c#">// Get add-in pipeline folder (the folder in which this application was launched from)
-string appPath = Environment.CurrentDirectory;
-
-// Rebuild visual add-in pipeline
-string[] warnings = AddInStore.Rebuild(appPath);
-if (warnings.Length &gt; 0)
-{
-    string msg = "Could not rebuild pipeline:";
-    foreach (string warning in warnings) msg += "\n" + warning;
-    MessageBox.Show(msg);
-    return;
-}
-
-// Activate add-in with Internet zone security isolation
-Collection&lt;AddInToken&gt; addInTokens = AddInStore.FindAddIns(typeof(WPFAddInHostView), appPath);
-AddInToken wpfAddInToken = addInTokens[0];
-this.wpfAddInHostView = wpfAddInToken.Activate&lt;WPFAddInHostView&gt;(AddInSecurityLevel.Internet);
-
-// Display add-in UI
-this.addInUIHostGrid.Children.Add(this.wpfAddInHostView);</code> 
-          <code language="vb">' Get add-in pipeline folder (the folder in which this application was launched from)
-Dim appPath As String = Environment.CurrentDirectory
-
-' Rebuild visual add-in pipeline
-Dim warnings() As String = AddInStore.Rebuild(appPath)
-If warnings.Length &gt; 0 Then
-    Dim msg As String = "Could not rebuild pipeline:"
-    For Each warning As String In warnings
-        msg &amp;= vbLf &amp; warning
-    Next warning
-    MessageBox.Show(msg)
-    Return
-End If
-
-' Activate add-in with Internet zone security isolation
-Dim addInTokens As Collection(Of AddInToken) = AddInStore.FindAddIns(GetType(WPFAddInHostView), appPath)
-Dim wpfAddInToken As AddInToken = addInTokens(0)
-Me.wpfAddInHostView = wpfAddInToken.Activate(Of WPFAddInHostView)(AddInSecurityLevel.Internet)
-
-' Display add-in UI
-Me.addInUIHostGrid.Children.Add(Me.wpfAddInHostView)</code> 
-            <para>Die hostanwendung verwendet normalerweise <token>Dnprdnshort</token> Add-In-Modell-Code, um das Add-in zu aktivieren, die implizit die Hostansicht an die hostanwendung zurückgesendet. Die hostanwendung zeigt anschließend die Hostansicht (Dies ist ein <codeEntityReference autoUpgrade="true">System.Windows.Controls.UserControl</codeEntityReference>) aus einer <codeEntityReference autoUpgrade="true">: System.Windows.Controls.Grid</codeEntityReference>.</para> 
-            <para>Der Code zum Verarbeiten von Interaktionen mit der Add-in- <token>TLA&#2;Tla_ui</token> in der Anwendungsdomäne ausgeführt wird. Diese Interaktionen umfassen Folgendes:</para>
-            <list class="bullet">
-              <listItem>
-                <para>Behandlung der <codeEntityReference autoUpgrade="true">: System.Windows.Controls.Button</codeEntityReference> <codeEntityReference autoUpgrade="true">e: System.Windows.Controls.Primitives.ButtonBase.Click</codeEntityReference> Ereignis.</para> 
-              </listItem> 
-              <listItem> 
-                <para>Mit der <codeEntityReference autoUpgrade="true">System.Windows.MessageBox</codeEntityReference>.</para> 
-              </listItem> 
-            </list> 
-            <para>Dieser Aktivität ist vollständig von der Host-Anwendung isoliert.</para>
-          </content>
-        </section>
-      </sections>
-    </legacy>
-  </codeExample>
-  <relatedTopics>
-\<legacyLink xlink:href="8dd45b02-7218-40f9-857d-40d7b98b850b">Add-Ins und Erweiterbarkeit</legacyLink>
-\<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">Übersicht über WPF-Add-Ins</link>
-</relatedTopics>
-</developerHowToDocument>
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a><span data-ttu-id="3506f-102">Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist</span><span class="sxs-lookup"><span data-stu-id="3506f-102">How to: Create an Add-In That Is a UI</span></span>
+<span data-ttu-id="3506f-103">Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, ist ein [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gehostet wird eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3506f-103">This example shows how to create an add-in that is a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] which is hosted by a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  
+  
+ <span data-ttu-id="3506f-104">Das Add-in ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] also ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Benutzersteuerelement.</span><span class="sxs-lookup"><span data-stu-id="3506f-104">The add-in is a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] that is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] user control.</span></span> <span data-ttu-id="3506f-105">Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken.</span><span class="sxs-lookup"><span data-stu-id="3506f-105">The content of the user control is a single button that, when clicked, displays a message box.</span></span> <span data-ttu-id="3506f-106">Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendung hostet, das Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] als Inhalt des Hauptfensters der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="3506f-106">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application hosts the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] as the content of the main application window.</span></span>  
+  
+ <span data-ttu-id="3506f-107">**Erforderliche Komponenten**</span><span class="sxs-lookup"><span data-stu-id="3506f-107">**Prerequisites**</span></span>  
+  
+ <span data-ttu-id="3506f-108">In diesem Beispiel hebt die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Erweiterungen für die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell, mit denen dieses Szenario, und setzt Folgendes voraus:</span><span class="sxs-lookup"><span data-stu-id="3506f-108">This example highlights the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model that enable this scenario, and assumes the following:</span></span>  
+  
+-   <span data-ttu-id="3506f-109">Kenntnisse der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell, einschließlich der Pipeline, add-Ins und Hostentwicklung.</span><span class="sxs-lookup"><span data-stu-id="3506f-109">Knowledge of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, including pipeline, add-in, and host development.</span></span> <span data-ttu-id="3506f-110">Wenn Sie mit diesen Konzepten nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md).</span><span class="sxs-lookup"><span data-stu-id="3506f-110">If you are unfamiliar with these concepts, see [Add-ins and Extensibility](../../../../docs/framework/add-ins/index.md).</span></span> <span data-ttu-id="3506f-111">Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und eine hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer erweiterbaren Anwendung](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md).</span><span class="sxs-lookup"><span data-stu-id="3506f-111">For a tutorial that demonstrates the implementation of a pipeline, an add-in, and a host application, see [Walkthrough: Creating an Extensible Application](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md).</span></span>  
+  
+-   <span data-ttu-id="3506f-112">Kenntnisse der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Erweiterungen für die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell, die sich hier befinden: [Übersicht über WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3506f-112">Knowledge of the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, which can be found here:     [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="3506f-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3506f-113">Example</span></span>  
+ <span data-ttu-id="3506f-114">Um ein Add-in erstellen, ist ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] speziellen Code für jedes Pipelinesegment, das Add-in und die hostanwendung erfordert.</span><span class="sxs-lookup"><span data-stu-id="3506f-114">To create an add-in that is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] requires specific code for each pipeline segment, the add-in, and the host application.</span></span>  
+    
+  
+<a name="Contract"></a>   
+## <a name="implementing-the-contract-pipeline-segment"></a><span data-ttu-id="3506f-115">Implementieren des Vertragspipelinesegments</span><span class="sxs-lookup"><span data-stu-id="3506f-115">Implementing the Contract Pipeline Segment</span></span>  
+ <span data-ttu-id="3506f-116">Wenn ein Add-in ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], muss der Vertrag für das Add-in implementieren <xref:System.AddIn.Contract.INativeHandleContract>.</span><span class="sxs-lookup"><span data-stu-id="3506f-116">When an add-in is a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], the contract for the add-in must implement <xref:System.AddIn.Contract.INativeHandleContract>.</span></span> <span data-ttu-id="3506f-117">Im Beispiel `IWPFAddInContract` implementiert <xref:System.AddIn.Contract.INativeHandleContract>, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3506f-117">In the example, `IWPFAddInContract` implements <xref:System.AddIn.Contract.INativeHandleContract>, as shown in the following code.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+  
+<a name="AddInViewPipeline"></a>   
+## <a name="implementing-the-add-in-view-pipeline-segment"></a><span data-ttu-id="3506f-118">Implementieren des Add-In-Ansichtspipelinesegments</span><span class="sxs-lookup"><span data-stu-id="3506f-118">Implementing the Add-In View Pipeline Segment</span></span>  
+ <span data-ttu-id="3506f-119">Da das Add-in, als eine Unterklasse von implementiert wird der <xref:System.Windows.FrameworkElement> Typ, der Add-in-Sicht muss auch als Unterklasse <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="3506f-119">Because the add-in is implemented as a subclass of the <xref:System.Windows.FrameworkElement> type, the add-in view must also subclass <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="3506f-120">Der folgende Code zeigt die Add-In-Ansicht des Vertrags, der als implementiert die `WPFAddInView` Klasse.</span><span class="sxs-lookup"><span data-stu-id="3506f-120">The following code shows the add-in view of the contract, implemented as the `WPFAddInView` class.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+  
+ <span data-ttu-id="3506f-121">Hier wird die Add-In-Ansicht von abgeleitet <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="3506f-121">Here, the add-in view is derived from <xref:System.Windows.Controls.UserControl>.</span></span> <span data-ttu-id="3506f-122">Daher das Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sollte auch abgeleitet <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="3506f-122">Consequently, the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] should also derive from <xref:System.Windows.Controls.UserControl>.</span></span>  
+  
+<a name="AddInSideAdapter"></a>   
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a><span data-ttu-id="3506f-123">Implementieren des Add-In-seitigen Adapterpipelinesegments</span><span class="sxs-lookup"><span data-stu-id="3506f-123">Implementing the Add-In-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="3506f-124">Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, das Add-in ist eine <xref:System.Windows.FrameworkElement> (wie durch das Anzeigen von Add-in-Pipeline-Segment angegeben).</span><span class="sxs-lookup"><span data-stu-id="3506f-124">While the contract is an <xref:System.AddIn.Contract.INativeHandleContract>, the add-in is a <xref:System.Windows.FrameworkElement> (as specified by the add-in view pipeline segment).</span></span> <span data-ttu-id="3506f-125">Aus diesem Grund die <xref:System.Windows.FrameworkElement> muss eine Konvertierung in eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.</span><span class="sxs-lookup"><span data-stu-id="3506f-125">Therefore, the <xref:System.Windows.FrameworkElement> must be converted to an <xref:System.AddIn.Contract.INativeHandleContract> before crossing the isolation boundary.</span></span> <span data-ttu-id="3506f-126">Dieser Vorgang wird durch Aufrufen der Add-In-seitiger Adapter ausgeführt <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3506f-126">This work is performed by the add-in-side adapter by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, as shown in the following code.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+  
+ <span data-ttu-id="3506f-127">In der Add-In-Modell, in dem ein Add-in gibt, eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (finden Sie unter [erstellen Sie ein Add-in, dass gibt eine Benutzeroberfläche](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in-Adapter die <xref:System.Windows.FrameworkElement> zu ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.</span><span class="sxs-lookup"><span data-stu-id="3506f-127">In the add-in model where an add-in returns a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (see [Create an Add-In That Returns a UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), the add-in adapter converted the <xref:System.Windows.FrameworkElement> to an <xref:System.AddIn.Contract.INativeHandleContract> by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.</span></span> <span data-ttu-id="3506f-128"><xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>muss auch in diesem Modell aufgerufen werden, obwohl Sie eine Methode aus der der Code zum Aufrufen schreiben implementieren müssen.</span><span class="sxs-lookup"><span data-stu-id="3506f-128"><xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> must also be called in this model, although you need to implement a method from which to write the code to call it.</span></span> <span data-ttu-id="3506f-129">Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und den aufrufende Code implementieren <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der den Aufruf <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet ein <xref:System.AddIn.Contract.INativeHandleContract>.</span><span class="sxs-lookup"><span data-stu-id="3506f-129">You do this by overriding <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> and implementing the code that calls <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> if the code that is calling <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> is expecting an <xref:System.AddIn.Contract.INativeHandleContract>.</span></span> <span data-ttu-id="3506f-130">In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.</span><span class="sxs-lookup"><span data-stu-id="3506f-130">In this case, the caller will be the host-side adapter, which is covered in a subsequent subsection.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="3506f-131">Sie müssen auch überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in diesem Modell so aktivieren Sie die TAB-Taste zwischen hostanwendung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3506f-131">You also need to override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in this model to enable tabbing between host application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] and add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> <span data-ttu-id="3506f-132">Weitere Informationen finden Sie unter "WPF-Add-In-Einschränkungen" in [Übersicht über WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3506f-132">For more information, see "WPF Add-In Limitations" in [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
+  
+ <span data-ttu-id="3506f-133">Da der Add-In-seitiger Adapter eine Schnittstelle implementiert, die abgeleitet <xref:System.AddIn.Contract.INativeHandleContract>, müssen Sie auch implementieren <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, obwohl dies ignoriert beim <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="3506f-133">Because the add-in-side adapter implements an interface that derives from <xref:System.AddIn.Contract.INativeHandleContract>, you also need to implement <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, although this is ignored when <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> is overridden.</span></span>  
+  
+<a name="HostViewPipeline"></a>   
+## <a name="implementing-the-host-view-pipeline-segment"></a><span data-ttu-id="3506f-134">Implementieren des Host-Ansichtspipelinesegments</span><span class="sxs-lookup"><span data-stu-id="3506f-134">Implementing the Host View Pipeline Segment</span></span>  
+ <span data-ttu-id="3506f-135">In diesem Modell die hostanwendung in der Regel die Hostansicht werden erwartet eine <xref:System.Windows.FrameworkElement> Unterklasse.</span><span class="sxs-lookup"><span data-stu-id="3506f-135">In this model, the host application typically expects the host view to be a <xref:System.Windows.FrameworkElement> subclass.</span></span> <span data-ttu-id="3506f-136">Der hostseitige Adapter muss Umwandeln der <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach der <xref:System.AddIn.Contract.INativeHandleContract> schneidet die Isolationsgrenze überwinden.</span><span class="sxs-lookup"><span data-stu-id="3506f-136">The host-side adapter must convert the <xref:System.AddIn.Contract.INativeHandleContract> to a <xref:System.Windows.FrameworkElement> after the <xref:System.AddIn.Contract.INativeHandleContract> crosses the isolation boundary.</span></span> <span data-ttu-id="3506f-137">Wenn eine Methode von der hostanwendung abzurufenden aufgerufen wird, ist nicht der <xref:System.Windows.FrameworkElement>, die Hostansicht muss vom Typ "return" die <xref:System.Windows.FrameworkElement> durch, die sie enthält.</span><span class="sxs-lookup"><span data-stu-id="3506f-137">Because a method isn't being called by the host application to get the <xref:System.Windows.FrameworkElement>, the host view must "return" the <xref:System.Windows.FrameworkElement> by containing it.</span></span> <span data-ttu-id="3506f-138">Daher leiten die Hostansicht einer Unterklasse von <xref:System.Windows.FrameworkElement> enthalten können andere [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], wie z. B. <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="3506f-138">Consequently, the host view must derive from a subclass of <xref:System.Windows.FrameworkElement> that can contain other [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], such as <xref:System.Windows.Controls.UserControl>.</span></span> <span data-ttu-id="3506f-139">Der folgende Code zeigt die Hostansicht des Vertrags, der als implementiert die `WPFAddInHostView` Klasse.</span><span class="sxs-lookup"><span data-stu-id="3506f-139">The following code shows the host view of the contract, implemented as the `WPFAddInHostView` class.</span></span>  
+  
+  
+  
+<a name="HostSideAdapter"></a>   
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a><span data-ttu-id="3506f-140">Implementieren des hostseitigen Adapterpipelinesegments</span><span class="sxs-lookup"><span data-stu-id="3506f-140">Implementing the Host-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="3506f-141">Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, erwartet die hostanwendung eine <xref:System.Windows.Controls.UserControl> (wie in der Hostansicht angegeben).</span><span class="sxs-lookup"><span data-stu-id="3506f-141">While the contract is an <xref:System.AddIn.Contract.INativeHandleContract>, the host application expects a <xref:System.Windows.Controls.UserControl> (as specified by the host view).</span></span> <span data-ttu-id="3506f-142">Folglich die <xref:System.AddIn.Contract.INativeHandleContract> muss eine Konvertierung in einen <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze, bevor er als Inhalt der Hostansicht festgelegt (die sich daraus ableitet <xref:System.Windows.Controls.UserControl>).</span><span class="sxs-lookup"><span data-stu-id="3506f-142">Consequently, the <xref:System.AddIn.Contract.INativeHandleContract> must be converted to a <xref:System.Windows.FrameworkElement> after crossing the isolation boundary, before being set as content of the host view (which derives from <xref:System.Windows.Controls.UserControl>).</span></span>  
+  
+ <span data-ttu-id="3506f-143">Dieser Vorgang wird vom hostseitigen Adapter ausgeführt, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3506f-143">This work is performed by the host-side adapter, as shown in the following code.</span></span>  
+  
+  
+  
+ <span data-ttu-id="3506f-144">Wie Sie sehen können, erhält der hostseitige Adapter die <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen des Add-In-seitiger Adapters <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> Methode (Dies ist der Punkt, in denen die <xref:System.AddIn.Contract.INativeHandleContract> schneidet die Isolationsgrenze überwinden).</span><span class="sxs-lookup"><span data-stu-id="3506f-144">As you can see, the host-side adapter acquires the <xref:System.AddIn.Contract.INativeHandleContract> by calling the add-in-side adapter's <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> method (this is the point where the <xref:System.AddIn.Contract.INativeHandleContract> crosses the isolation boundary).</span></span>  
+  
+ <span data-ttu-id="3506f-145">Der hostseitige Adapter dann konvertiert die <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.</span><span class="sxs-lookup"><span data-stu-id="3506f-145">The host-side adapter then converts the <xref:System.AddIn.Contract.INativeHandleContract> to a <xref:System.Windows.FrameworkElement> by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.</span></span> <span data-ttu-id="3506f-146">Schließlich die <xref:System.Windows.FrameworkElement> als Inhalt der Hostansicht festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="3506f-146">Finally, the <xref:System.Windows.FrameworkElement> is set as the content of the host view.</span></span>  
+  
+<a name="AddIn"></a>   
+## <a name="implementing-the-add-in"></a><span data-ttu-id="3506f-147">Implementieren des Add-Ins</span><span class="sxs-lookup"><span data-stu-id="3506f-147">Implementing the Add-In</span></span>  
+ <span data-ttu-id="3506f-148">Sind der Add-In-seitige Adapter und die Add-In-Ansicht eingerichtet, kann das Add-In durch Ableiten von der Add-In-Ansicht implementiert werden, wie in folgendem Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3506f-148">With the add-in-side adapter and add-in view in place, the add-in can be implemented by deriving from the add-in view, as shown in the following code.</span></span>  
+  
+  
+  
+  
+  
+ <span data-ttu-id="3506f-149">Aus diesem Beispiel sehen Sie einen interessanten Vorteil dieses Modells: Add-In-Entwickler müssen nur das Add-In implementieren (da es sich handelt der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sowie), anstatt eine Add-in-Klasse und ein Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3506f-149">From this example, you can see one interesting benefit of this model: add-in developers only need to implement the add-in (since it is the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] as well), rather than both an add-in class and an add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span>  
+  
+<a name="HostApp"></a>   
+## <a name="implementing-the-host-application"></a><span data-ttu-id="3506f-150">Implementieren der Hostanwendung</span><span class="sxs-lookup"><span data-stu-id="3506f-150">Implementing the Host Application</span></span>  
+ <span data-ttu-id="3506f-151">Mit dem hostseitige Adapter und die Hostansicht erstellt haben, können die hostanwendung die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell zum Öffnen der Pipelines und eine Hostansicht des Add-Ins zu erwerben.</span><span class="sxs-lookup"><span data-stu-id="3506f-151">With the host-side adapter and host view created, the host application can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model to open the pipeline and acquire a host view of the add-in.</span></span> <span data-ttu-id="3506f-152">Diese Schritte werden im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3506f-152">These steps are shown in the following code.</span></span>  
+  
+  
+  
+ <span data-ttu-id="3506f-153">Verwendet die hostanwendung typische [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Code Add-In-Modell, aktivieren Sie das Add-in, die implizit die Hostansicht zur hostanwendung zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="3506f-153">The host application uses typical [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model code to activate the add-in, which implicitly returns the host view to the host application.</span></span> <span data-ttu-id="3506f-154">Die hostanwendung wird anschließend die Hostansicht angezeigt (also eine <xref:System.Windows.Controls.UserControl>) aus einer <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="3506f-154">The host application subsequently displays the host view (which is a <xref:System.Windows.Controls.UserControl>) from a <xref:System.Windows.Controls.Grid>.</span></span>  
+  
+ <span data-ttu-id="3506f-155">Der Code für die Verarbeitung von Interaktionen mit dem Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] in das Add-in Anwendungsdomäne ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3506f-155">The code for processing interactions with the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] runs in the add-in's application domain.</span></span> <span data-ttu-id="3506f-156">Diese Interaktionen umfassen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="3506f-156">These interactions include the following:</span></span>  
+  
+-   <span data-ttu-id="3506f-157">Behandlung von der <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="3506f-157">Handling the <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
+  
+-   <span data-ttu-id="3506f-158">Zeigt die <xref:System.Windows.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="3506f-158">Showing the <xref:System.Windows.MessageBox>.</span></span>  
+  
+ <span data-ttu-id="3506f-159">Diese Aktivität ist von der Hostanwendung vollständig isoliert.</span><span class="sxs-lookup"><span data-stu-id="3506f-159">This activity is completely isolated from the host application.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="3506f-160">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3506f-160">See Also</span></span>  
+ [<span data-ttu-id="3506f-161">Add-Ins und Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="3506f-161">Add-ins and Extensibility</span></span>](../../../../docs/framework/add-ins/index.md)  
+ [<span data-ttu-id="3506f-162">Übersicht über WPF-Add-Ins</span><span class="sxs-lookup"><span data-stu-id="3506f-162">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

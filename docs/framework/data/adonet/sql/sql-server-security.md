@@ -1,52 +1,55 @@
 ---
-title: "SQL&#160;Server-Sicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server-Sicherheit
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# SQL&#160;Server-Sicherheit
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwendungen unterstützen.  
+# <a name="sql-server-security"></a><span data-ttu-id="f6ac5-102">SQL Server-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="f6ac5-102">SQL Server Security</span></span>
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="f6ac5-103"> besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwendungen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-103"> has many features that support creating secure database applications.</span></span>  
   
- Allgemeine Sicherheitsfragen, wie der Schutz vor Datendiebstahl oder Vandalismus, bleiben jedoch ungeachtet der jeweils verwendeten [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Version immer aktuell.  Die Datenintegrität sollte ebenfalls Bestandteil Ihrer Sicherheitsüberlegungen sein.  Daten, die nicht geschützt werden, können wertlos werden, wenn Ad\-hoc\-Datenänderungen zugelassen sind und die Daten entweder unbeabsichtigt oder beabsichtigt durch falsche Werte ersetzt oder ganz gelöscht werden.  Außerdem sind häufig gesetzliche Auflagen zu erfüllen, z. B. wenn es um die korrekte Aufbewahrung sicherheitsrelevanter Informationen geht.  Je nach geltendem Recht ist das Speichern bestimmter Arten persönlicher Daten sogar ganz verboten.  
+ <span data-ttu-id="f6ac5-104">Allgemeine Sicherheitsfragen, wie der Schutz vor Datendiebstahl oder Vandalismus, bleiben jedoch ungeachtet der jeweils verwendeten [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Version immer aktuell.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-104">Common security considerations, such as data theft or vandalism, apply regardless of the version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] you are using.</span></span> <span data-ttu-id="f6ac5-105">Die Datenintegrität sollte ebenfalls Bestandteil Ihrer Sicherheitsüberlegungen sein.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-105">Data integrity should also be considered as a security issue.</span></span> <span data-ttu-id="f6ac5-106">Daten, die nicht geschützt werden, können wertlos werden, wenn Ad-hoc-Datenänderungen zugelassen sind und die Daten entweder unbeabsichtigt oder beabsichtigt durch falsche Werte ersetzt oder ganz gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-106">If data is not protected, it is possible that it could become worthless if ad hoc data manipulation is permitted and the data is inadvertently or maliciously modified with incorrect values or deleted entirely.</span></span> <span data-ttu-id="f6ac5-107">Außerdem sind häufig gesetzliche Auflagen zu erfüllen, z. B. wenn es um die korrekte Aufbewahrung sicherheitsrelevanter Informationen geht.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-107">In addition, there are often legal requirements that must be adhered to, such as the correct storage of confidential information.</span></span> <span data-ttu-id="f6ac5-108">Je nach geltendem Recht ist das Speichern bestimmter Arten persönlicher Daten sogar ganz verboten.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-108">Storing some kinds of personal data is proscribed entirely, depending on the laws that apply in a particular jurisdiction.</span></span>  
   
- Genau wie jede Windows\-Version besitzt auch jede [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Version andere Sicherheitsfunktionen, wobei der Funktionsumfang in höheren Versionen dem früherer Versionen überlegen ist.  Sie müssen sich aber bewusst sein, dass Sicherheitsfunktionen allein keine Garantie für eine sichere Datenbankanwendung sind.  Jede Datenbankanwendung ist hinsichtlich ihrer Anforderungen, ihrer Ausführungsumgebung, ihres Bereitstellungsmodells, ihres physischen Speicherorts und ihres Benutzerkreises einzigartig.  Einige Anwendungen, die nur lokal verwendet werden, benötigen vielleicht nur minimale Sicherheitsvorkehrungen, während andere lokale Anwendungen oder Anwendungen, die über das Internet bereitgestellt werden, strenge Sicherheitsmaßnahmen und eine kontinuierliche Überwachung und Auswertung erfordern.  
+ <span data-ttu-id="f6ac5-109">Genau wie jede Windows-Version besitzt auch jede [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Version andere Sicherheitsfunktionen, wobei der Funktionsumfang in höheren Versionen dem früherer Versionen überlegen ist.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-109">Each version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] has different security features, as does each version of Windows, with later versions having enhanced functionality over earlier ones.</span></span> <span data-ttu-id="f6ac5-110">Sie müssen sich aber bewusst sein, dass Sicherheitsfunktionen allein keine Garantie für eine sichere Datenbankanwendung sind.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-110">It is important to understand that security features alone cannot guarantee a secure database application.</span></span> <span data-ttu-id="f6ac5-111">Jede Datenbankanwendung ist hinsichtlich ihrer Anforderungen, ihrer Ausführungsumgebung, ihres Bereitstellungsmodells, ihres physischen Speicherorts und ihres Benutzerkreises einzigartig.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-111">Each database application is unique in its requirements, execution environment, deployment model, physical location, and user population.</span></span> <span data-ttu-id="f6ac5-112">Einige Anwendungen, die nur lokal verwendet werden, benötigen vielleicht nur minimale Sicherheitsvorkehrungen, während andere lokale Anwendungen oder Anwendungen, die über das Internet bereitgestellt werden, strenge Sicherheitsmaßnahmen und eine kontinuierliche Überwachung und Auswertung erfordern.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-112">Some applications that are local in scope may need only minimal security whereas other local applications or applications deployed over the Internet may require stringent security measures and ongoing monitoring and evaluation.</span></span>  
   
- Welche Sicherheitsanforderungen eine [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Datenbankanwendung erfüllen muss, sollte bereits in der Entwurfsphase geklärt werden.  Wenn bereits zu einem frühen Zeitpunkt des Entwicklungszyklus eine Risikobewertung durchgeführt wird, können die potenziellen Auswirkungen der entdeckten Sicherheitsrisiken wirksam gemindert werden.  
+ <span data-ttu-id="f6ac5-113">Welche Sicherheitsanforderungen eine [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Datenbankanwendung erfüllen muss, sollte bereits in der Entwurfsphase geklärt werden.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-113">The security requirements of a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database application should be considered at design time, not as an afterthought.</span></span> <span data-ttu-id="f6ac5-114">Wenn bereits zu einem frühen Zeitpunkt des Entwicklungszyklus eine Risikobewertung durchgeführt wird, können die potenziellen Auswirkungen der entdeckten Sicherheitsrisiken wirksam gemindert werden.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-114">Evaluating threats early in the development cycle gives you the opportunity to mitigate potential damage wherever a vulnerability is detected.</span></span>  
   
- Selbst dann, wenn eine Anwendung zum Zeitpunkt ihrer Bereitstellung weitgehend sicher ist, können im Zuge der Weiterentwicklung des Systems neue Bedrohungen auftauchen.  Bauen Sie um Ihre Datenbank mehrere Verteidigungslinien auf, um so die potenziellen Schäden infolge von Sicherheitsverletzungen so gering wie möglich zu halten.  Die erste Verteidigungslinie sollte darin bestehen, die Angriffsfläche zu verringern. Gewähren Sie daher immer nur die Berechtigungen, die absolut notwendig sind.  
+ <span data-ttu-id="f6ac5-115">Selbst dann, wenn eine Anwendung zum Zeitpunkt ihrer Bereitstellung weitgehend sicher ist, können im Zuge der Weiterentwicklung des Systems neue Bedrohungen auftauchen.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-115">Even if the initial design of an application is sound, new threats may emerge as the system evolves.</span></span> <span data-ttu-id="f6ac5-116">Bauen Sie um Ihre Datenbank mehrere Verteidigungslinien auf, um so die potenziellen Schäden infolge von Sicherheitsverletzungen so gering wie möglich zu halten.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-116">By creating multiple lines of defense around your database, you can minimize the damage inflicted by a security breach.</span></span> <span data-ttu-id="f6ac5-117">Die erste Verteidigungslinie sollte darin bestehen, die Angriffsfläche zu verringern. Gewähren Sie daher immer nur die Berechtigungen, die absolut notwendig sind.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-117">Your first line of defense is to reduce the attack surface area by never to granting more permissions than are absolutely necessary.</span></span>  
   
- In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kurz umrissen. Außerdem finden Sie hier Links zu entsprechenden Themen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Onlinedokumentation und anderen Ressourcen mit ausführlicheren Informationen.  
+ <span data-ttu-id="f6ac5-118">In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kurz umrissen. Außerdem finden Sie hier Links zu entsprechenden Themen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation und anderen Ressourcen mit ausführlicheren Informationen.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-118">The topics in this section briefly describe the security features in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] that are relevant for developers, with links to relevant topics in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online and other resources that provide more detailed coverage.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über die SQL Server\-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- Beschreibt die Architektur und Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="f6ac5-119">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="f6ac5-119">In This Section</span></span>  
+ [<span data-ttu-id="f6ac5-120">Übersicht über SQL Server-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="f6ac5-120">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ <span data-ttu-id="f6ac5-121">Beschreibt die Architektur und Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f6ac5-121">Describes the architecture and security features of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarien für ADO.NET\- und [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Anwendungen erläutert werden.  
+ [<span data-ttu-id="f6ac5-122">Anwendungssicherheitsszenarios in SQLServer</span><span class="sxs-lookup"><span data-stu-id="f6ac5-122">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ <span data-ttu-id="f6ac5-123">Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarien für ADO.NET- und [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Anwendungen erläutert werden.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-123">Contains topics discussing various application security scenarios for ADO.NET and [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] applications.</span></span>  
   
- [SQL Server Express\-Sicherheit](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- Enthält Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
+ [<span data-ttu-id="f6ac5-124">SQL Server Express-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="f6ac5-124">SQL Server Express Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ <span data-ttu-id="f6ac5-125">Enthält Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-125">Describes security considerations for [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.</span></span>  
   
-## Verwandte Abschnitte  
- [Sicherheit und Schutz \(Datenbankmodul\)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- Sicherheitsthemen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Onlinedokumentation.  
+## <a name="related-sections"></a><span data-ttu-id="f6ac5-126">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="f6ac5-126">Related Sections</span></span>  
+ <span data-ttu-id="f6ac5-127">[Sicherheit und Schutz (Datenbankmodul)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)</span><span class="sxs-lookup"><span data-stu-id="f6ac5-127">[Security and Protection (Database Engine)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)</span></span>  
+ <span data-ttu-id="f6ac5-128">Sicherheitsthemen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-128">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online security topics.</span></span>  
   
- [Sicherheitsüberlegungen für SQL Server](http://go.microsoft.com/fwlink/?LinkId=98587)  
- Sicherheitsthemen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Onlinedokumentation.  
+ [<span data-ttu-id="f6ac5-129">Überlegungen zur Sicherheit bei SQLServer</span><span class="sxs-lookup"><span data-stu-id="f6ac5-129">Security Considerations for SQL Server</span></span>](http://go.microsoft.com/fwlink/?LinkId=98587)  
+ <span data-ttu-id="f6ac5-130">Sicherheitsthemen in der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]-Onlinedokumentation.</span><span class="sxs-lookup"><span data-stu-id="f6ac5-130">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online security topics.</span></span>  
   
-## Siehe auch  
- [Sichern von ADO.NET\-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f6ac5-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6ac5-131">See Also</span></span>  
+ [<span data-ttu-id="f6ac5-132">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="f6ac5-132">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="f6ac5-133">SQL Server und ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f6ac5-133">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="f6ac5-134">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="f6ac5-134">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

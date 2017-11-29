@@ -1,30 +1,33 @@
 ---
-title: "Die Kontextverbindung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Kontextverbindungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e443ca86-9243-4234-a822-ed10a53a9de0
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a41c9a526895057a6c7e785abbaaa4e4cd2c490f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Die Kontextverbindung
-Das Problem des internen Datenzugriffs ist ein gängiges Szenario.  Dabei möchten Sie auf denselben Server zugreifen, auf dem die gespeicherte CLR\-Prozedur oder CLR\-Funktion \(Common Language Runtime\) ausgeführt wird.  Eine Option liegt darin, mithilfe von <xref:System.Data.SqlClient.SqlConnection> eine Verbindung zu erstellen, eine Verbindungszeichenfolge anzugeben, die auf den lokalen Server zeigt, und die Verbindung zu öffnen.  Dabei müssen Anmeldeinformationen für die Anmeldung angegeben werden.  Die Verbindung befindet sich in einer anderen Datenbanksitzung als die gespeicherte Prozedur oder Funktion, sie kann über andere `SET`\-Optionen verfügen, sie gehört zu einer separaten Transaktion, verfügt nicht über die temporären Tabellen usw.  Wenn der verwaltete gespeicherte Prozedur\- oder Funktionscode im SQL Server\-Prozess ausgeführt wird, liegt dies daran, dass eine Verbindung mit diesem Server hergestellt und eine SQL\-Anweisung ausgeführt wurde, die den Code aufruft.  Möglicherweise möchten Sie die gespeicherte Prozedur oder Funktion im Kontext dieser Verbindung ausführen, zusammen mit ihrer Transaktion, den `SET`\-Optionen usw.  Dies wird als Kontextverbindung bezeichnet.  
+# <a name="the-context-connection"></a><span data-ttu-id="2a305-102">Kontextverbindungen</span><span class="sxs-lookup"><span data-stu-id="2a305-102">The Context Connection</span></span>
+<span data-ttu-id="2a305-103">Das Problem des internen Datenzugriffs ist ein gängiges Szenario.</span><span class="sxs-lookup"><span data-stu-id="2a305-103">The problem of internal data access is a fairly common scenario.</span></span> <span data-ttu-id="2a305-104">Dabei möchten Sie auf denselben Server zugreifen, auf dem die gespeicherte CLR-Prozedur oder CLR-Funktion (Common Language Runtime) ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2a305-104">That is, you wish to access the same server on which your common language runtime (CLR) stored procedure or function is executing.</span></span> <span data-ttu-id="2a305-105">Eine Option liegt darin, mithilfe von <xref:System.Data.SqlClient.SqlConnection> eine Verbindung zu erstellen, eine Verbindungszeichenfolge anzugeben, die auf den lokalen Server zeigt, und die Verbindung zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="2a305-105">One option is to create a connection using <xref:System.Data.SqlClient.SqlConnection>, specify a connection string that points to the local server, and open the connection.</span></span> <span data-ttu-id="2a305-106">Dabei müssen Anmeldeinformationen für die Anmeldung angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="2a305-106">This requires specifying credentials for logging in.</span></span> <span data-ttu-id="2a305-107">Die Verbindung befindet sich in einer anderen Datenbanksitzung als die gespeicherte Prozedur oder Funktion, sie kann über andere `SET`-Optionen verfügen, sie gehört zu einer separaten Transaktion, verfügt nicht über die temporären Tabellen usw.</span><span class="sxs-lookup"><span data-stu-id="2a305-107">The connection is in a different database session than the stored procedure or function, it may have different `SET` options, it is in a separate transaction, it does not see your temporary tables, and so on.</span></span> <span data-ttu-id="2a305-108">Wenn der verwaltete gespeicherte Prozedur- oder Funktionscode im SQL Server-Prozess ausgeführt wird, liegt dies daran, dass eine Verbindung mit diesem Server hergestellt und eine SQL-Anweisung ausgeführt wurde, die den Code aufruft.</span><span class="sxs-lookup"><span data-stu-id="2a305-108">If your managed stored procedure or function code is executing in the SQL Server process, it is because someone connected to that server and executed a SQL statement to invoke it.</span></span> <span data-ttu-id="2a305-109">Möglicherweise möchten Sie die gespeicherte Prozedur oder Funktion im Kontext dieser Verbindung ausführen, zusammen mit ihrer Transaktion, den `SET`-Optionen usw.</span><span class="sxs-lookup"><span data-stu-id="2a305-109">You probably want the stored procedure or function to execute in the context of that connection, along with its transaction, `SET` options, and so on.</span></span> <span data-ttu-id="2a305-110">Dies wird als Kontextverbindung bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="2a305-110">This is called the context connection.</span></span>  
   
- Mit der Kontextverbindung können Sie Transact\-SQL\-Anweisungen in demselben Kontext ausführen, der für den Code beim ersten Aufruf galt.  Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
+ <span data-ttu-id="2a305-111">Mit der Kontextverbindung können Sie Transact-SQL-Anweisungen in demselben Kontext ausführen, der für den Code beim ersten Aufruf galt.</span><span class="sxs-lookup"><span data-stu-id="2a305-111">The context connection lets you execute Transact-SQL statements in the same context that your code was invoked in the first place.</span></span> <span data-ttu-id="2a305-112">Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.</span><span class="sxs-lookup"><span data-stu-id="2a305-112">For more detailed information, see the version of SQL Server Books Online for the version of SQL Server you are using.</span></span>  
   
- **SQL Server\-Onlinedokumentation**  
+ <span data-ttu-id="2a305-113">**SQL Server Books Online (SQL Server-Onlinedokumentation)**</span><span class="sxs-lookup"><span data-stu-id="2a305-113">**SQL Server Books Online**</span></span>  
   
-1.  [Kontextverbindungen](http://go.microsoft.com/fwlink/?LinkId=115395)  
+1.  [<span data-ttu-id="2a305-114">Die Kontextverbindung</span><span class="sxs-lookup"><span data-stu-id="2a305-114">The Context Connection</span></span>](http://go.microsoft.com/fwlink/?LinkId=115395)  
   
-## Siehe auch  
- [Creating SQL Server 2005 Objects In Managed Code](http://msdn.microsoft.com/de-de/5358a825-e19b-49aa-8214-674ce5fed1da)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="2a305-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a305-115">See Also</span></span>  
+ [<span data-ttu-id="2a305-116">Erstellen von SQL Server 2005-Objekte In verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="2a305-116">Creating SQL Server 2005 Objects In Managed Code</span></span>](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [<span data-ttu-id="2a305-117">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="2a305-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

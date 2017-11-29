@@ -1,42 +1,46 @@
 ---
-title: "1040 - InArgumentBound | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1040 - InArgumentBound
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7dfaad1b-36c0-4575-84c1-31d63b0eaf5d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b3ce0997dcdad4779f87744edf661316b2efa47c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 1040 - InArgumentBound
-## Eigenschaften  
+# <a name="1040---inargumentbound"></a><span data-ttu-id="2c96f-102">1040 - InArgumentBound</span><span class="sxs-lookup"><span data-stu-id="2c96f-102">1040 - InArgumentBound</span></span>
+## <a name="properties"></a><span data-ttu-id="2c96f-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="2c96f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1040|  
-|Schlüsselwörter|WFActivities|  
-|Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="2c96f-104">ID</span><span class="sxs-lookup"><span data-stu-id="2c96f-104">ID</span></span>|<span data-ttu-id="2c96f-105">1040</span><span class="sxs-lookup"><span data-stu-id="2c96f-105">1040</span></span>|  
+|<span data-ttu-id="2c96f-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="2c96f-106">Keywords</span></span>|<span data-ttu-id="2c96f-107">WFActivities</span><span class="sxs-lookup"><span data-stu-id="2c96f-107">WFActivities</span></span>|  
+|<span data-ttu-id="2c96f-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="2c96f-108">Level</span></span>|<span data-ttu-id="2c96f-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="2c96f-109">Verbose</span></span>|  
+|<span data-ttu-id="2c96f-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="2c96f-110">Channel</span></span>|<span data-ttu-id="2c96f-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2c96f-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Gibt an, das ein In\-Argument gebunden wurde.  
+## <a name="description"></a><span data-ttu-id="2c96f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2c96f-112">Description</span></span>  
+ <span data-ttu-id="2c96f-113">Gibt an, das ein In-Argument gebunden wurde.</span><span class="sxs-lookup"><span data-stu-id="2c96f-113">Indicates an In argument has been bound.</span></span>  
   
-## Meldung  
- Das Argument '%1' der Aktivität '%2', DisplayName: '%3', InstanceId: '%4' wurde mit Wert %5 gebunden.  
+## <a name="message"></a><span data-ttu-id="2c96f-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="2c96f-114">Message</span></span>  
+ <span data-ttu-id="2c96f-115">Das Argument '%1' der Aktivität '%2', DisplayName: '%3', InstanceId: '%4' wurde mit Wert %5 gebunden.</span><span class="sxs-lookup"><span data-stu-id="2c96f-115">In argument '%1' on Activity '%2', DisplayName: '%3', InstanceId: '%4' has been bound with value: %5.</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="2c96f-116">Details</span><span class="sxs-lookup"><span data-stu-id="2c96f-116">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|InArgument|xs:string|Der Name des InArgument.|  
-|Aktivität|xs:string|Der Typname der Aktivität.|  
-|DisplayName|xs:string|Der Anzeigename der Aktivität.|  
-|InstanceId|xs:string|Die Instanz\-ID der Aktivität.|  
-|Wert|xs:string|Der an das InArgument gebundene Wert.|  
-|AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="2c96f-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="2c96f-117">Data Item Name</span></span>|<span data-ttu-id="2c96f-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="2c96f-118">Data Item Type</span></span>|<span data-ttu-id="2c96f-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2c96f-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="2c96f-120">InArgument</span><span class="sxs-lookup"><span data-stu-id="2c96f-120">InArgument</span></span>|<span data-ttu-id="2c96f-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-121">xs:string</span></span>|<span data-ttu-id="2c96f-122">Der Name des InArgument.</span><span class="sxs-lookup"><span data-stu-id="2c96f-122">The name of the InArgument.</span></span>|  
+|<span data-ttu-id="2c96f-123">Aktivität</span><span class="sxs-lookup"><span data-stu-id="2c96f-123">Activity</span></span>|<span data-ttu-id="2c96f-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-124">xs:string</span></span>|<span data-ttu-id="2c96f-125">Der Typname der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="2c96f-125">The type name of the activity.</span></span>|  
+|<span data-ttu-id="2c96f-126">DisplayName</span><span class="sxs-lookup"><span data-stu-id="2c96f-126">DisplayName</span></span>|<span data-ttu-id="2c96f-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-127">xs:string</span></span>|<span data-ttu-id="2c96f-128">Der Anzeigename der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="2c96f-128">The display name of the activity.</span></span>|  
+|<span data-ttu-id="2c96f-129">InstanceId</span><span class="sxs-lookup"><span data-stu-id="2c96f-129">InstanceId</span></span>|<span data-ttu-id="2c96f-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-130">xs:string</span></span>|<span data-ttu-id="2c96f-131">Die Instanz-ID der Aktivität.</span><span class="sxs-lookup"><span data-stu-id="2c96f-131">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="2c96f-132">Wert</span><span class="sxs-lookup"><span data-stu-id="2c96f-132">Value</span></span>|<span data-ttu-id="2c96f-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-133">xs:string</span></span>|<span data-ttu-id="2c96f-134">Der an das InArgument gebundene Wert.</span><span class="sxs-lookup"><span data-stu-id="2c96f-134">The value bound to the InArgument.</span></span>|  
+|<span data-ttu-id="2c96f-135">AppDomain</span><span class="sxs-lookup"><span data-stu-id="2c96f-135">AppDomain</span></span>|<span data-ttu-id="2c96f-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="2c96f-136">xs:string</span></span>|<span data-ttu-id="2c96f-137">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="2c96f-137">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

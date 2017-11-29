@@ -1,64 +1,73 @@
 ---
-title: "&lt;add&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: cc1907d5f6117307ebadd04641c9eddc48e77cec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt;
-Fügt der angegebenen Sicherheits\-Tokenhandler der Tokenhandler Auflistung hinzu.  
+# <a name="ltaddgt"></a><span data-ttu-id="4a8be-102">&lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="4a8be-102">&lt;add&gt;</span></span>
+<span data-ttu-id="4a8be-103">Fügt den angegebenen Sicherheits-Tokenhandler der Tokenhandler Auflistung hinzu.</span><span class="sxs-lookup"><span data-stu-id="4a8be-103">Adds the specified security token handler to the token handler collection.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="4a8be-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="4a8be-104">\<system.identityModel></span></span>  
+<span data-ttu-id="4a8be-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="4a8be-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="4a8be-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="4a8be-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="4a8be-107">\<add></span><span class="sxs-lookup"><span data-stu-id="4a8be-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4a8be-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="4a8be-108">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type=xs:string>  
-        <optionalConfigurationElement>  
-        </optionalConfigurationElement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type=xs:string>  
+        <optionalConfigurationElement>  
+        </optionalConfigurationElement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4a8be-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="4a8be-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="4a8be-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4a8be-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="4a8be-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="4a8be-111">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|type|Der CLR\-Typname der Tokenhandler hinzugefügt werden.  Weitere Informationen zum Angeben der `type` \-Attribut, finden Sie unter [Custom Type References](http://msdn.microsoft.com/de-de/7286d2e3-c63d-49fd-abdc-ce2705f22c24).|  
+|<span data-ttu-id="4a8be-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="4a8be-112">Attribute</span></span>|<span data-ttu-id="4a8be-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a8be-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="4a8be-114">Typ</span><span class="sxs-lookup"><span data-stu-id="4a8be-114">type</span></span>|<span data-ttu-id="4a8be-115">Der CLR-Typname der der Tokenhandler hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="4a8be-115">The CLR type name of the token handler to be added.</span></span> <span data-ttu-id="4a8be-116">Weitere Informationen zum Angeben der `type` -Attribut angegeben wird, finden Sie unter [benutzerdefinierte Typverweise](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span><span class="sxs-lookup"><span data-stu-id="4a8be-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="4a8be-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4a8be-117">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> \-Klasse, die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse von einer dieser Klassen.|  
-|[\<sessionTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleiteter Klassen.|  
-|[\<userNameSecurityTokenHandlerRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Klasse oder abgeleiteter Klassen.|  
-|[\<x509SecurityTokenHandlerRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|Bietet optionale Konfiguration für die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Klasse oder abgeleiteter Klassen.|  
+|<span data-ttu-id="4a8be-118">Element</span><span class="sxs-lookup"><span data-stu-id="4a8be-118">Element</span></span>|<span data-ttu-id="4a8be-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a8be-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4a8be-120">\<SamlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="4a8be-120">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="4a8be-121">Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> -Klasse, die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse von einer dieser Klassen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-121">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="4a8be-122">\<auf "sessiontokenrequirement" ></span><span class="sxs-lookup"><span data-stu-id="4a8be-122">\<sessionTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|<span data-ttu-id="4a8be-123">Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-123">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>|  
+|[<span data-ttu-id="4a8be-124">\<UserNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="4a8be-124">\<userNameSecurityTokenHandlerRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|<span data-ttu-id="4a8be-125">Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-125">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>|  
+|[<span data-ttu-id="4a8be-126">\<x509SecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="4a8be-126">\<x509SecurityTokenHandlerRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|<span data-ttu-id="4a8be-127">Bietet optionale Konfiguration für die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-127">Provides optional configuration for the <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> class or derived classes.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="4a8be-128">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="4a8be-128">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandler, die mit dem Endpunkt registriert sind.|  
+|<span data-ttu-id="4a8be-129">Element</span><span class="sxs-lookup"><span data-stu-id="4a8be-129">Element</span></span>|<span data-ttu-id="4a8be-130">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4a8be-130">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4a8be-131">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="4a8be-131">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="4a8be-132">Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.</span><span class="sxs-lookup"><span data-stu-id="4a8be-132">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
   
-## Hinweise  
- Die `<add>` Element kann ein einzelnes untergeordnetes Element, der angibt, die Konfiguration der Tokenhandler in Anspruch nehmen.  Dies ist abhängig davon, ob die Handlerklasse, durch verwiesen die `type` \-Attribut des der `<add>` Element bietet Unterstützung für dieses Feature.  Tokenhandler\-Klassen, die diese Funktion bereitstellen müssen einen Konstruktor, der nimmt setzen ein <xref:System.Xml.XmlElement> Objekt.  
+## <a name="remarks"></a><span data-ttu-id="4a8be-133">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4a8be-133">Remarks</span></span>  
+ <span data-ttu-id="4a8be-134">Die `<add>` Element kann ein einzelnes untergeordnetes Element, der angibt, die Konfiguration der Tokenhandler in Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-134">The `<add>` element can take a single child element that specifies the configuration for the token handler.</span></span> <span data-ttu-id="4a8be-135">Dies ist abhängig davon, ob die Handlerklasse über verwiesen die `type` Attribut von der `<add>` -Element stellt Unterstützung für diese Funktion.</span><span class="sxs-lookup"><span data-stu-id="4a8be-135">This is dependent on whether the handler class referenced through the `type` attribute of the `<add>` element provides support for this feature.</span></span> <span data-ttu-id="4a8be-136">Tokenhandler-Klassen, die diese Funktion bereitstellen, verfügbar machen einen Konstruktor, akzeptiert eine <xref:System.Xml.XmlElement> Objekt.</span><span class="sxs-lookup"><span data-stu-id="4a8be-136">Token handler classes that provide this feature must expose a constructor that takes an <xref:System.Xml.XmlElement> object.</span></span>  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,17 +78,17 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- Einige der integrierten Sicherheit Tokenhandler Klassen stellen diese Funktionalität bereit.  These classes are <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, and <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ <span data-ttu-id="4a8be-137">Einige der integrierten Sicherheit Tokenhandler Klassen stellen diese Funktionalität bereit.</span><span class="sxs-lookup"><span data-stu-id="4a8be-137">Several of the built-in security token handler classes do provide this functionality.</span></span> <span data-ttu-id="4a8be-138">Diese Klassen sind <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, und <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.</span><span class="sxs-lookup"><span data-stu-id="4a8be-138">These classes are <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, and <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.</span></span>  
   
 > [!IMPORTANT]
->  Die Tokenhandler\-Auflistung kann nur einen einzelnen Handler eines beliebigen angegebenen Typs enthalten.  Also, z. B. Wenn Sie einen Handler hinzufügen, die von abgeleitet ist die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse Sie müssen zuerst entfernen, um die Auflistung der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, die standardmäßig aus der Auflistung vorhanden ist.  Können Sie die [\<remove\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) Element aus der Auflistung oder der Verwendung einen einzelnen Handler Entfernen der [\<clear\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) alle Handler aus der Auflistung zu entfernende Element.  
+>  <span data-ttu-id="4a8be-139">Die Tokenhandler Auflistung darf nur einen einzigen Handler eines angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="4a8be-139">The token handler collection can only contain a single handler of any given type.</span></span> <span data-ttu-id="4a8be-140">Dies bedeutet, z. B., dass wenn Sie möchten einen Handler hinzuzufügen, die abgeleitet ist die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse auf die Auflistung, müssen Sie zuerst Entfernen der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, die standardmäßig aus der Auflistung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="4a8be-140">This means, for example, that if you want to add a handler that is derived from the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class to the collection, you must first remove the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, which is present by default, from the collection.</span></span> <span data-ttu-id="4a8be-141">Können Sie die [ \<entfernen >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) Element So entfernen Sie einen einzigen Handler aus der Auflistung oder die Verwendung der [ \<deaktivieren >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) zu alle Handler aus der Auflistung zu entfernenden Elements.</span><span class="sxs-lookup"><span data-stu-id="4a8be-141">You can use the [\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) element to remove a single handler from the collection or use the [\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) element to remove all handlers from the collection.</span></span>  
   
- Auf einen Handler angegebene Einstellungen Vorrang vor entsprechende Einstellungen auf der Tokenhandler Sammlung unter der [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) \-Element, und die auf der Service\-Ebene unter der [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element.  
+ <span data-ttu-id="4a8be-142">Für einen Ereignishandler angegebene Einstellungen außer Kraft setzen entsprechende Einstellungen auf der Tokenhandler Sammlung im angegebenen der [ \<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) Element und den angegebenen auf Dienstebene unter die [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element.</span><span class="sxs-lookup"><span data-stu-id="4a8be-142">Settings specified on a handler override equivalent settings specified on the token handler collection under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element and those specified at the service-level under the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element.</span></span>  
   
-## Beispiel  
- Die folgende XML veranschaulicht die Verwendung der `<add>` und `<remove>` Elemente den Standardhandler für Session token durch eine benutzerdefinierte Sitzungs\-Tokenhandler ersetzen.  Der XML\-Code stammt aus der `ClaimsAwareWebFarm` Beispiel.  
+## <a name="example"></a><span data-ttu-id="4a8be-143">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4a8be-143">Example</span></span>  
+ <span data-ttu-id="4a8be-144">Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elemente der Standardhandler für Sitzung token mit einer benutzerdefinierten-Sitzung Tokenhandler ersetzen.</span><span class="sxs-lookup"><span data-stu-id="4a8be-144">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="4a8be-145">Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.</span><span class="sxs-lookup"><span data-stu-id="4a8be-145">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
   
-```  
+```xml  
 <securityTokenHandlers>  
   <remove type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
   <add type="System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  

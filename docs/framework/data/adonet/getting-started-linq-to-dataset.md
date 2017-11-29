@@ -1,45 +1,48 @@
 ---
-title: "Erste Schritte (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erste Schritte (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8197fefdfe54eae46aa4e593fd5014a4485f9a48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erste Schritte (LINQ to DataSet)
-Dieser Abschnitt enthält einführende Informationen über das Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
+# <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="daea3-102">Erste Schritte (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="daea3-102">Getting Started (LINQ to DataSet)</span></span>
+<span data-ttu-id="daea3-103">Dieser Abschnitt enthält einführende Informationen über das Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="daea3-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- Enthält allgemeine Informationen zu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="daea3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="daea3-104">In This Section</span></span>  
+ [<span data-ttu-id="daea3-105">LINQ to DataSet-Übersicht</span><span class="sxs-lookup"><span data-stu-id="daea3-105">LINQ to DataSet Overview</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ <span data-ttu-id="daea3-106">Enthält allgemeine Informationen zu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="daea3-106">Provides a conceptual overview of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
- [Laden von Daten in ein 'DataSet'](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- Enthält ein Beispiel für das Auffüllen eines <xref:System.Data.DataSet>.  In diesem Beispiel wird <xref:System.Data.Common.DataAdapter> verwendet, um Daten aus einer Datenbank abzurufen.  
+ [<span data-ttu-id="daea3-107">Laden von Daten in einem DataSet</span><span class="sxs-lookup"><span data-stu-id="daea3-107">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ <span data-ttu-id="daea3-108">Enthält ein Beispiel für das Auffüllen eines <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="daea3-108">Provides an example of populating a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="daea3-109">In diesem Beispiel wird <xref:System.Data.Common.DataAdapter> verwendet, um Daten aus einer Datenbank abzurufen.</span><span class="sxs-lookup"><span data-stu-id="daea3-109">This example uses <xref:System.Data.Common.DataAdapter> to retrieve data from a database.</span></span>  
   
- [Herunterladen von Beispieldatenbanken](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
- Enthält Informationen zum Herunterladen der \<legacyBold\>AdventureWorks\<\/legacyBold\>\-Beispieldatenbank, die in den Beispielen im Abschnitt [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwendet wird.  
+ [<span data-ttu-id="daea3-110">Downloading Sample Databases (Herunterladen von Beispieldatenbanken)</span><span class="sxs-lookup"><span data-stu-id="daea3-110">Downloading Sample Databases</span></span>](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
+ <span data-ttu-id="daea3-111">Enthält Informationen zum Herunterladen der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank, die in den Beispielen im Abschnitt [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="daea3-111">Provides information about downloading the AdventureWorks sample database, which is used in the samples throughout the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section.</span></span>  
   
- [Vorgehensweise: Erstellen eines LINQ to DataSet\-Projekts in Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
- Enthält Informationen über das Erstellen eines [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]\-Projekts in Visual Studio.  
+ [<span data-ttu-id="daea3-112">Vorgehensweise: erstellen eine LINQ to DataSet-Projekt In Visual Studio</span><span class="sxs-lookup"><span data-stu-id="daea3-112">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ <span data-ttu-id="daea3-113">Enthält Informationen über das Erstellen eines [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Projekts in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="daea3-113">Provides information about creating a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] project in Visual Studio.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="daea3-114">Verweis</span><span class="sxs-lookup"><span data-stu-id="daea3-114">Reference</span></span>  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
   
  <xref:System.Data.DataTableExtensions>  
   
-## Siehe auch  
- [LINQ to ADO.NET](http://msdn.microsoft.com/de-de/be3297b9-1b54-4d4c-82a8-add0d79c2006)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [Getting Started with LINQ](http://msdn.microsoft.com/de-de/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+## <a name="see-also"></a><span data-ttu-id="daea3-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="daea3-115">See Also</span></span>  
+ [<span data-ttu-id="daea3-116">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="daea3-116">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [<span data-ttu-id="daea3-117">LINQ (Language Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="daea3-117">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="daea3-118">Erste Schritte mit LINQ</span><span class="sxs-lookup"><span data-stu-id="daea3-118">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

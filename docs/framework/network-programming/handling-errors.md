@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, WebRequest and WebResponse classes exceptions
 - Status property
@@ -39,48 +37,47 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: aad78fb509f98a01b5ca072ad476d901fdd1d4d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="handling-errors"></a>Behandeln von Fehlern
-Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> lösen beide Systemausnahmen (z.B. <xref:System.ArgumentException>) und webspezifische Ausnahmen (bei denen es sich um <xref:System.Net.WebException> handelt, ausgelöst von der <xref:System.Net.WebRequest.GetResponse%2A>-Methode) aus.  
+# <a name="handling-errors"></a><span data-ttu-id="d9c2a-102">Behandeln von Fehlern</span><span class="sxs-lookup"><span data-stu-id="d9c2a-102">Handling Errors</span></span>
+<span data-ttu-id="d9c2a-103">Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> lösen beide Systemausnahmen (z.B. <xref:System.ArgumentException>) und webspezifische Ausnahmen (bei denen es sich um <xref:System.Net.WebException> handelt, ausgelöst von der <xref:System.Net.WebRequest.GetResponse%2A>-Methode) aus.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-103">The <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes throw both system exceptions (such as <xref:System.ArgumentException>) and Web-specific exceptions (which are <xref:System.Net.WebException> thrown by the <xref:System.Net.WebRequest.GetResponse%2A> method).</span></span>  
   
- Jede **WebException** enthält eine <xref:System.Net.WebException.Status%2A>-Eigenschaft, die einen Wert aus der <xref:System.Net.WebExceptionStatus>-Enumeration enthält. Sie können die **Status**-Eigenschaft untersuchen, um den aufgetretenen Fehler zu bestimmen und dann die richtigen Schritte vornehmen, um den Fehler zu beheben.  
+ <span data-ttu-id="d9c2a-104">Jede **WebException** enthält eine <xref:System.Net.WebException.Status%2A>-Eigenschaft, die einen Wert aus der <xref:System.Net.WebExceptionStatus>-Enumeration enthält.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-104">Each **WebException** includes a <xref:System.Net.WebException.Status%2A> property that contains a value from the <xref:System.Net.WebExceptionStatus> enumeration.</span></span> <span data-ttu-id="d9c2a-105">Sie können die **Status**-Eigenschaft untersuchen, um den aufgetretenen Fehler zu bestimmen und dann die richtigen Schritte vornehmen, um den Fehler zu beheben.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-105">You can examine the **Status** property to determine the error that occurred and take the proper steps to resolve the error.</span></span>  
   
- In der folgenden Tabelle werden die möglichen Rückgabewerte für die **Status**-Eigenschaft beschrieben.  
+ <span data-ttu-id="d9c2a-106">In der folgenden Tabelle werden die möglichen Rückgabewerte für die **Status**-Eigenschaft beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-106">The following table describes the possible values for the **Status** property.</span></span>  
   
-|Status|Beschreibung|  
+|<span data-ttu-id="d9c2a-107">Status</span><span class="sxs-lookup"><span data-stu-id="d9c2a-107">Status</span></span>|<span data-ttu-id="d9c2a-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d9c2a-108">Description</span></span>|  
 |------------|-----------------|  
-|ConnectFailure|Der Remotedienst konnte auf Transportebene nicht erreicht werden.|  
-|ConnectionClosed|Die Verbindung wurde vorzeitig getrennt.|  
-|KeepAliveFailure|Der Server hat die Verbindung mit dem festgelegten Keep-Alive-Header.|  
-|NameResolutionFailure|Die Namensdienst konnte den Hostnamen nicht auflösen.|  
-|ProtocolError|Die Antwort, die vom Server empfangen wurde, war vollständig, aber hat einen Fehler auf Protokollebene angezeigt.|  
-|ReceiveFailure|Es wurde keine vollständige Nachricht vom Remoteserver empfangen.|  
-|RequestCanceled|Die Anforderung wurde abgebrochen.|  
-|SecureChannelFailure|In einem sicheren Channel-Link ist ein Fehler aufgetreten.|  
-|SendFailure|Es konnte keine vollständige Anforderung an den Remoteserver gesendet werden.|  
-|ServerProtocolViolation|Die Serverantwort ist eine ungültige HTTP-Antwort.|  
-|Erfolgreich|Es ist kein Fehler aufgetreten.|  
-|Timeout|Innerhalb des festgelegten Timeouts wurde keine Antwort für die Anforderung erhalten.|  
-|TrustFailure|Ein Serverzertifikat konnte nicht überprüft werden.|  
-|MessageLengthLimitExceeded|Es wurde eine Nachricht erhalten, die den angegebenen Grenzwert für das Senden einer Anforderung oder das Erhalten einer Antwort vom Server überschritten hat.|  
-|Ausstehend|Eine interne asynchrone Anforderung steht aus.|  
-|PipelineFailure|Dieser Wert unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Ihrem Code vorgesehen.|  
-|ProxyNameResolutionFailure|Der Namensresolverdienst konnte den Hostnamen des Proxys nicht auflösen.|  
-|UnknownError|Eine Ausnahme unbekannten Typs wurde ausgelöst.|  
+|<span data-ttu-id="d9c2a-109">ConnectFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-109">ConnectFailure</span></span>|<span data-ttu-id="d9c2a-110">Der Remotedienst konnte auf Transportebene nicht erreicht werden.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-110">The remote service could not be contacted at the transport level.</span></span>|  
+|<span data-ttu-id="d9c2a-111">ConnectionClosed</span><span class="sxs-lookup"><span data-stu-id="d9c2a-111">ConnectionClosed</span></span>|<span data-ttu-id="d9c2a-112">Die Verbindung wurde vorzeitig getrennt.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-112">The connection was closed prematurely.</span></span>|  
+|<span data-ttu-id="d9c2a-113">KeepAliveFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-113">KeepAliveFailure</span></span>|<span data-ttu-id="d9c2a-114">Der Server hat die Verbindung mit dem festgelegten Keep-Alive-Header.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-114">The server closed a connection made with the Keep-alive header set.</span></span>|  
+|<span data-ttu-id="d9c2a-115">NameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-115">NameResolutionFailure</span></span>|<span data-ttu-id="d9c2a-116">Die Namensdienst konnte den Hostnamen nicht auflösen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-116">The name service could not resolve the host name.</span></span>|  
+|<span data-ttu-id="d9c2a-117">ProtocolError</span><span class="sxs-lookup"><span data-stu-id="d9c2a-117">ProtocolError</span></span>|<span data-ttu-id="d9c2a-118">Die Antwort, die vom Server empfangen wurde, war vollständig, aber hat einen Fehler auf Protokollebene angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-118">The response received from the server was complete but indicated an error at the protocol level.</span></span>|  
+|<span data-ttu-id="d9c2a-119">ReceiveFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-119">ReceiveFailure</span></span>|<span data-ttu-id="d9c2a-120">Es wurde keine vollständige Nachricht vom Remoteserver empfangen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-120">A complete response was not received from the remote server.</span></span>|  
+|<span data-ttu-id="d9c2a-121">RequestCanceled</span><span class="sxs-lookup"><span data-stu-id="d9c2a-121">RequestCanceled</span></span>|<span data-ttu-id="d9c2a-122">Die Anforderung wurde abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-122">The request was canceled.</span></span>|  
+|<span data-ttu-id="d9c2a-123">SecureChannelFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-123">SecureChannelFailure</span></span>|<span data-ttu-id="d9c2a-124">In einem sicheren Channel-Link ist ein Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-124">An error occurred in a secure channel link.</span></span>|  
+|<span data-ttu-id="d9c2a-125">SendFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-125">SendFailure</span></span>|<span data-ttu-id="d9c2a-126">Es konnte keine vollständige Anforderung an den Remoteserver gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-126">A complete request could not be sent to the remote server.</span></span>|  
+|<span data-ttu-id="d9c2a-127">ServerProtocolViolation</span><span class="sxs-lookup"><span data-stu-id="d9c2a-127">ServerProtocolViolation</span></span>|<span data-ttu-id="d9c2a-128">Die Serverantwort ist eine ungültige HTTP-Antwort.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-128">The server response was not a valid HTTP response.</span></span>|  
+|<span data-ttu-id="d9c2a-129">Erfolgreich</span><span class="sxs-lookup"><span data-stu-id="d9c2a-129">Success</span></span>|<span data-ttu-id="d9c2a-130">Es ist kein Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-130">No error was encountered.</span></span>|  
+|<span data-ttu-id="d9c2a-131">Timeout</span><span class="sxs-lookup"><span data-stu-id="d9c2a-131">Timeout</span></span>|<span data-ttu-id="d9c2a-132">Innerhalb des festgelegten Timeouts wurde keine Antwort für die Anforderung erhalten.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-132">No response was received within the time-out set for the request.</span></span>|  
+|<span data-ttu-id="d9c2a-133">TrustFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-133">TrustFailure</span></span>|<span data-ttu-id="d9c2a-134">Ein Serverzertifikat konnte nicht überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-134">A server certificate could not be validated.</span></span>|  
+|<span data-ttu-id="d9c2a-135">MessageLengthLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="d9c2a-135">MessageLengthLimitExceeded</span></span>|<span data-ttu-id="d9c2a-136">Es wurde eine Nachricht erhalten, die den angegebenen Grenzwert für das Senden einer Anforderung oder das Erhalten einer Antwort vom Server überschritten hat.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-136">A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</span></span>|  
+|<span data-ttu-id="d9c2a-137">Ausstehend</span><span class="sxs-lookup"><span data-stu-id="d9c2a-137">Pending</span></span>|<span data-ttu-id="d9c2a-138">Eine interne asynchrone Anforderung steht aus.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-138">An internal asynchronous request is pending.</span></span>|  
+|<span data-ttu-id="d9c2a-139">PipelineFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-139">PipelineFailure</span></span>|<span data-ttu-id="d9c2a-140">Dieser Wert unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Ihrem Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-140">This value supports the .NET Framework infrastructure and is not intended to be used directly in your code.</span></span>|  
+|<span data-ttu-id="d9c2a-141">ProxyNameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="d9c2a-141">ProxyNameResolutionFailure</span></span>|<span data-ttu-id="d9c2a-142">Der Namensresolverdienst konnte den Hostnamen des Proxys nicht auflösen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-142">The name resolver service could not resolve the proxy host name.</span></span>|  
+|<span data-ttu-id="d9c2a-143">UnknownError</span><span class="sxs-lookup"><span data-stu-id="d9c2a-143">UnknownError</span></span>|<span data-ttu-id="d9c2a-144">Eine Ausnahme unbekannten Typs wurde ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-144">An exception of unknown type has occurred.</span></span>|  
   
- Wenn es sich bei der **Status**-Eigenschaft um **WebExceptionStatus.ProtocolError** handelt, ist eine **WebResponse** verfügbar, die die Antwort des Servers enthält. Sie können diese Antwort untersuchen, um die tatsächliche Quelle des Protokollfehlers zu bestimmen.  
+ <span data-ttu-id="d9c2a-145">Wenn es sich bei der **Status**-Eigenschaft um **WebExceptionStatus.ProtocolError** handelt, ist eine **WebResponse** verfügbar, die die Antwort des Servers enthält.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-145">When the **Status** property is **WebExceptionStatus.ProtocolError**, a **WebResponse** that contains the response from the server is available.</span></span> <span data-ttu-id="d9c2a-146">Sie können diese Antwort untersuchen, um die tatsächliche Quelle des Protokollfehlers zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-146">You can examine this response to determine the actual source of the protocol error.</span></span>  
   
- Das folgende Beispiel demonstriert das Abfangen einer **WebException**.  
+ <span data-ttu-id="d9c2a-147">Das folgende Beispiel demonstriert das Abfangen einer **WebException**.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-147">The following example shows how to catch a **WebException**.</span></span>  
   
 ```csharp  
 try   
@@ -175,11 +172,10 @@ Catch e As Exception
 End Try  
 ```  
   
- Anwendungen, die die Klasse <xref:System.Net.Sockets.Socket> verwenden, lösen <xref:System.Net.Sockets.SocketException> aus, wenn ein Fehler auf dem Windows Socket auftritt. Die Klassen <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> und <xref:System.Net.Sockets.UdpClient> werden basierend auf der **Socket**-Klasse erstellt und lösen ebenfalls **SocketExceptions** aus.  
+ <span data-ttu-id="d9c2a-148">Anwendungen, die die Klasse <xref:System.Net.Sockets.Socket> verwenden, lösen <xref:System.Net.Sockets.SocketException> aus, wenn ein Fehler auf dem Windows Socket auftritt.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-148">Applications that use the <xref:System.Net.Sockets.Socket> class throw <xref:System.Net.Sockets.SocketException> when errors occur on the Windows socket.</span></span> <span data-ttu-id="d9c2a-149">Die Klassen <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> und <xref:System.Net.Sockets.UdpClient> werden basierend auf der **Socket**-Klasse erstellt und lösen ebenfalls **SocketExceptions** aus.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-149">The <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes are built on top of the **Socket** class and throw **SocketExceptions** as well.</span></span>  
   
- Wenn eine **SocketException** ausgelöst wird, legt die **SocketException**-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>-Eigenschaft auf den zuletzt aufgetretenen Betriebssystemsocketfehler fest. Weitere Informationen zu Socketfehlercodes finden Sie in der Fehlercodedokumentation von Winsock 2.0 API in MSDN.  
+ <span data-ttu-id="d9c2a-150">Wenn eine **SocketException** ausgelöst wird, legt die **SocketException**-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>-Eigenschaft auf den zuletzt aufgetretenen Betriebssystemsocketfehler fest.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-150">When a **SocketException** is thrown, the **SocketException** class sets the <xref:System.Net.Sockets.SocketException.ErrorCode%2A> property to the last operating system socket error that occurred.</span></span> <span data-ttu-id="d9c2a-151">Weitere Informationen zu Socketfehlercodes finden Sie in der Fehlercodedokumentation von Winsock 2.0 API in MSDN.</span><span class="sxs-lookup"><span data-stu-id="d9c2a-151">For more information about socket error codes, see the Winsock 2.0 API error code documentation in MSDN.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="d9c2a-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9c2a-152">See Also</span></span>  
+ [<span data-ttu-id="d9c2a-153">Grundlagen der Ausnahmebehandlung</span><span class="sxs-lookup"><span data-stu-id="d9c2a-153">Exception Handling Fundamentals</span></span>](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
+ [<span data-ttu-id="d9c2a-154">Anfordern von Daten</span><span class="sxs-lookup"><span data-stu-id="d9c2a-154">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

@@ -1,43 +1,35 @@
 ---
-title: "Gewusst wie: Ausführen von Ausdrucksbaumstrukturen (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e12c45b417310f097d597561b2652ee793a4b2c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45a13f13659472b7620b6df070815ace1d6fb0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Gewusst wie: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)
-In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird. Ausführen einer Ausdrucksbaumstruktur kann einen Wert zurückgeben, oder es kann nur eine Aktion, z. B. das Aufrufen einer Methode ausführen.  
+# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="4b873-102">Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4b873-102">How to: Execute Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="4b873-103">In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="4b873-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="4b873-104">Die Ausführung einer Ausdrucksbaumstruktur gibt möglicherweise einen Wert zurück. Es kann jedoch auch nur eine Aktion ausgeführt werden, z.B. das Aufrufen einer Methode.</span><span class="sxs-lookup"><span data-stu-id="4b873-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- Nur Ausdrucksbaumstrukturen, die Lambdaausdrücke darstellen, können ausgeführt werden. Ausdrucksbaumstrukturen, die Lambdaausdrücke darstellen, sind vom Typ <xref:System.Linq.Expressions.LambdaExpression>oder <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression> Um diese Ausdrucksbaumstrukturen auszuführen, rufen Sie die <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>Methode, um einen ausführbaren Delegaten erstellen und das Delegat dann aufzurufen.</xref:System.Linq.Expressions.LambdaExpression.Compile%2A>  
+ <span data-ttu-id="4b873-105">Nur Ausdrucksbaumstrukturen, die Lambdaausdrücke darstellen, können ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="4b873-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="4b873-106">Ausdrucksbaumstrukturen, die Lambdaausdrücke darstellen, sind vom Typ <xref:System.Linq.Expressions.LambdaExpression> oder <xref:System.Linq.Expressions.Expression%601>.</span><span class="sxs-lookup"><span data-stu-id="4b873-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="4b873-107">Um diese Ausdrucksbaumstruktur auszuführen, rufen Sie die <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>-Methode auf, um einen ausführbaren Delegaten zu erstellen und diesen anschließend aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="4b873-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
->  Wenn der Typ des Delegaten nicht bekannt ist, d. h., der Lambda-Ausdruck ist vom Typ <xref:System.Linq.Expressions.LambdaExpression>und nicht <xref:System.Linq.Expressions.Expression%601>, müssen Sie aufrufen, die <xref:System.Delegate.DynamicInvoke%2A>Methode für den Delegaten statt direkt aufzurufen.</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression>  
+>  <span data-ttu-id="4b873-108">Wenn der Typ des Delegaten nicht bekannt ist, d.h. wenn der Lambdaausdruck vom Typ <xref:System.Linq.Expressions.LambdaExpression> und nicht <xref:System.Linq.Expressions.Expression%601> ist, müssen Sie die <xref:System.Delegate.DynamicInvoke%2A>-Methode auf dem Delegaten aufrufen, anstatt sie direkt aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="4b873-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- Wenn eine Ausdrucksbaumstruktur keinen Lambda-Ausdruck darstellt, können, erstellen Sie einen neue Lambda-Ausdruck mit die ursprüngliche Ausdrucksbaumstruktur als Text enthält, durch Aufrufen der <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>-Methode.</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> Anschließend können Sie den Lambda-Ausdruck ausführen, wie weiter oben in diesem Abschnitt beschrieben.  
+ <span data-ttu-id="4b873-109">Wenn eine Ausdrucksbaumstruktur keinen Lambdaausdruck darstellt,können Sie einen neuen Lambdaausdruck erstellen, der die ursprüngliche Ausdrucksbaumstruktur als Textkörper hat, indem Sie die <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="4b873-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="4b873-110">Anschließend können Sie den Lambdaausdruck ausführen, wie weiter oben in diesem Abschnitt beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4b873-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie eine Ausdrucksbaumstruktur ausgeführt wird, das Potenzieren einer Zahl mit einem Exponenten, indem ein Lambdaausdruck erstellt und ausgeführt wird. Das Ergebnis, das die Zahl darstellt, wird angezeigt.  
+## <a name="example"></a><span data-ttu-id="4b873-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b873-111">Example</span></span>  
+ <span data-ttu-id="4b873-112">Im folgenden Codebeispiel wird veranschaulicht, wie eine Ausdrucksbaumstruktur ausgeführt wird, die das Potenzieren darstellt, indem ein Lambdaausdruck erstellt und ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="4b873-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="4b873-113">Das Ergebnis, das die potenzierte Zahl darstellt, wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4b873-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```vb  
 ' The expression tree to execute.  
@@ -59,12 +51,12 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="4b873-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="4b873-114">Compiling the Code</span></span>  
   
--   Fügen Sie einen Projektverweis auf System.Core.dll hinzu, wenn es nicht bereits verwiesen wird.  
+-   <span data-ttu-id="4b873-115">Fügen Sie einen Projektverweis auf „System.Core.dll“ hinzu, wenn nicht bereits darauf verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="4b873-115">Add a project reference to System.Core.dll if it is not already referenced.</span></span>  
   
--   Schließen Sie den System.Linq.Expressions-Namespace.  
+-   <span data-ttu-id="4b873-116">Binden Sie den System.Linq.Expressions-Namespace ein.</span><span class="sxs-lookup"><span data-stu-id="4b873-116">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Gewusst wie: Ändern von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a><span data-ttu-id="4b873-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4b873-117">See Also</span></span>  
+ [<span data-ttu-id="4b873-118">Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4b873-118">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [<span data-ttu-id="4b873-119">Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4b873-119">How to: Modify Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

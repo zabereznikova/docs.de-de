@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.PrematureDatagramEof | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PrematureDatagramEof
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ec07be8b-b537-4090-be7e-086679dba78d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b69fe60da3810b83e40aace458a6875fd1277c55
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PrematureDatagramEof
-System.ServiceModel.Channels.PrematureDatagramEof  
+# <a name="systemservicemodelchannelsprematuredatagrameof"></a><span data-ttu-id="c4ed6-102">System.ServiceModel.Channels.PrematureDatagramEof</span><span class="sxs-lookup"><span data-stu-id="c4ed6-102">System.ServiceModel.Channels.PrematureDatagramEof</span></span>
+<span data-ttu-id="c4ed6-103">System.ServiceModel.Channels.PrematureDatagramEof</span><span class="sxs-lookup"><span data-stu-id="c4ed6-103">System.ServiceModel.Channels.PrematureDatagramEof</span></span>  
   
-## Beschreibung  
- Eine leere Nachricht \(die das Ende des Kanals darstellt\) wurde von einem Datagrammkanal empfangen, doch der Kanal befindet sich nach wie vor im Zustand Geöffnet.  Dies zeigt einen Fehler im Datagrammkanal an, und die de\-Multiplexer\-Empfangsschleife wurde vorzeitig beendet.  
+## <a name="description"></a><span data-ttu-id="c4ed6-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c4ed6-104">Description</span></span>  
+ <span data-ttu-id="c4ed6-105">Eine leere Nachricht (die das Ende des Kanals darstellt) wurde von einem Datagrammkanal empfangen, doch der Kanal befindet sich nach wie vor im Zustand Geöffnet.</span><span class="sxs-lookup"><span data-stu-id="c4ed6-105">A null Message (signaling end of channel) was received from a datagram channel, but the channel is still in the Opened state.</span></span> <span data-ttu-id="c4ed6-106">Dies zeigt einen Fehler im Datagrammkanal an, und die de-Multiplexer-Empfangsschleife wurde vorzeitig beendet.</span><span class="sxs-lookup"><span data-stu-id="c4ed6-106">This indicates an error in the datagram channel, and the de-multiplexer receive loop has been prematurely terminated.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c4ed6-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c4ed6-107">See Also</span></span>  
+ [<span data-ttu-id="c4ed6-108">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="c4ed6-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c4ed6-109">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="c4ed6-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c4ed6-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="c4ed6-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,45 +1,43 @@
 ---
-title: "Gewusst wie: Erstellen einer Herausgeberrichtlinie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GAC (Globaler Assembly-Cache), Herausgeberrichtlinienassembly"
-  - "Globaler Assemblycache, Herausgeberrichtlinienassembly"
-  - "Herausgeberrichtlinienassembly"
-  - "Herausgeberrichtliniendateien"
+title: 'Gewusst wie: Erstellen einer Herausgeberrichtlinie'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publisher policy assembly
+- publisher policy files
+- GAC (global assembly cache), publisher policy assembly
+- global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Herausgeberrichtlinie
-Anbieter von Assemblys können bestimmen, dass Anwendungen eine neuere Assemblyversion verwenden sollen, indem sie der aktualisierten Assembly eine Herausgeberrichtliniendatei hinzufügen.  In der Herausgeberrichtliniendatei werden Assemblyumleitungen und CodeBase\-Einstellungen festgelegt. Sie hat dasselbe Format wie eine Anwendungskonfigurationsdatei.  Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache abgelegt.  
+# <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="169c6-102">Gewusst wie: Erstellen einer Herausgeberrichtlinie</span><span class="sxs-lookup"><span data-stu-id="169c6-102">How to: Create a Publisher Policy</span></span>
+<span data-ttu-id="169c6-103">Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version einer Assembly verwenden soll, indem Sie z. B. eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly.</span><span class="sxs-lookup"><span data-stu-id="169c6-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="169c6-104">Die Herausgeberrichtliniendatei gibt Assemblyumleitung und CodeBase-Einstellungen Code und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="169c6-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="169c6-105">Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache platziert.</span><span class="sxs-lookup"><span data-stu-id="169c6-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  
   
- Die Erstellung einer Herausgeberrichtlinie umfasst drei Schritte:  
+ <span data-ttu-id="169c6-106">Erstellen einer Herausgeberrichtlinie umfasst drei Schritte:</span><span class="sxs-lookup"><span data-stu-id="169c6-106">There are three steps involved in creating a publisher policy:</span></span>  
   
-1.  Erstellen einer Herausgeberrichtliniendatei.  
+1.  <span data-ttu-id="169c6-107">Erstellen Sie eine Herausgeberrichtliniendatei.</span><span class="sxs-lookup"><span data-stu-id="169c6-107">Create a publisher policy file.</span></span>  
   
-2.  Erstellen einer Herausgeberrichtlinienassembly.  
+2.  <span data-ttu-id="169c6-108">Erstellen Sie eine Herausgeberrichtlinienassembly.</span><span class="sxs-lookup"><span data-stu-id="169c6-108">Create a publisher policy assembly.</span></span>  
   
-3.  Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache.  
+3.  <span data-ttu-id="169c6-109">Fügen Sie die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzu.</span><span class="sxs-lookup"><span data-stu-id="169c6-109">Add the publisher policy assembly to the global assembly cache.</span></span>  
   
- Das Schema für Herausgeberrichtlinien wird unter [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md) näher erläutert.  Das folgende Beispiel enthält eine Herausgeberrichtliniendatei, durch die eine Version von `myAssembly` zu einer anderen umgeleitet wird.  
+ <span data-ttu-id="169c6-110">Das Schema für Herausgeberrichtlinien wird beschrieben, [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span><span class="sxs-lookup"><span data-stu-id="169c6-110">The schema for publisher policy is described in [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span></span> <span data-ttu-id="169c6-111">Das folgende Beispiel zeigt einen Verleger Richtliniendatei, die eine Version der leitet `myAssembly` in eine andere.</span><span class="sxs-lookup"><span data-stu-id="169c6-111">The following example shows a publisher policy file that redirects one version of `myAssembly` to another.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -56,67 +54,67 @@ Anbieter von Assemblys können bestimmen, dass Anwendungen eine neuere Assemblyv
 </configuration>  
 ```  
   
- Unter [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md) erfahren Sie, wie eine CodeBase festgelegt wird.  
+ <span data-ttu-id="169c6-112">Gewusst wie: angeben eine Codebasis finden Sie unter [angeben des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).</span><span class="sxs-lookup"><span data-stu-id="169c6-112">To learn how to specify a code base, see [Specifying an Assembly's Location](../../../docs/framework/configure-apps/specify-assembly-location.md).</span></span>  
   
-## Erstellen der Herausgeberrichtlinienassembly  
- Verwenden Sie das [Assembly Linker\-Tool \(Al.exe\)](../../../docs/framework/tools/al-exe-assembly-linker.md), um die Herausgeberrichtlinienassembly zu erstellen.  
+## <a name="creating-the-publisher-policy-assembly"></a><span data-ttu-id="169c6-113">Erstellen der Herausgeberrichtlinienassembly</span><span class="sxs-lookup"><span data-stu-id="169c6-113">Creating the Publisher Policy Assembly</span></span>  
+ <span data-ttu-id="169c6-114">Verwenden der [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) die Herausgeberrichtlinienassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="169c6-114">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the publisher policy assembly.</span></span>  
   
-#### So erstellen Sie eine Herausgeberrichtlinienassembly  
+#### <a name="to-create-a-publisher-policy-assembly"></a><span data-ttu-id="169c6-115">So erstellen eine Herausgeberrichtlinienassembly</span><span class="sxs-lookup"><span data-stu-id="169c6-115">To create a publisher policy assembly</span></span>  
   
-1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
+1.  <span data-ttu-id="169c6-116">Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="169c6-116">Type the following command at the command prompt:</span></span>  
   
-     **al \/link:** *publisherPolicyFile* **\/out:** *publisherPolicyAssemblyFile* **\/keyfile:** *keyPairFile* **\/platform:** *processorArchitecture*  
+     <span data-ttu-id="169c6-117">**Al/Link:** *PublisherPolicyFile* **/out:** *PublisherPolicyAssemblyFile* **/keyfile:**  *KeyPairFile* **/Platform:** *ProcessorArchitecture*</span><span class="sxs-lookup"><span data-stu-id="169c6-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span></span>  
   
-     Erläuterungen zu diesem Befehl:  
+     <span data-ttu-id="169c6-118">In diesem Befehl:</span><span class="sxs-lookup"><span data-stu-id="169c6-118">In this command:</span></span>  
   
-    -   Das *publisherPolicyFile*\-Argument entspricht dem Namen der Herausgeberrichtliniendatei.  
+    -   <span data-ttu-id="169c6-119">Die *PublisherPolicyFile* Argument ist der Name des der Herausgeberrichtliniendatei.</span><span class="sxs-lookup"><span data-stu-id="169c6-119">The *publisherPolicyFile* argument is the name of the publisher policy file.</span></span>  
   
-    -   Das *publisherPolicyAssemblyFile*\-Argument entspricht dem Namen der Herausgeberrichtlinienassembly, die durch diesen Befehl erstellt wird.  Der Name der Assemblydatei muss folgendes Format aufweisen:  
+    -   <span data-ttu-id="169c6-120">Die *PublisherPolicyAssemblyFile* -Argument ist der Name der Herausgeberrichtlinienassembly an, die durch diesen Befehl entsteht.</span><span class="sxs-lookup"><span data-stu-id="169c6-120">The *publisherPolicyAssemblyFile* argument is the name of the publisher policy assembly that results from this command.</span></span> <span data-ttu-id="169c6-121">Der Dateiname der Assembly muss Folgendes Format aufweisen:</span><span class="sxs-lookup"><span data-stu-id="169c6-121">The assembly file name must follow the format:</span></span>  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         <span data-ttu-id="169c6-122">**Richtlinie.**</span><span class="sxs-lookup"><span data-stu-id="169c6-122">**policy.**</span></span> <span data-ttu-id="169c6-123">*MajorNumber* **.**</span><span class="sxs-lookup"><span data-stu-id="169c6-123">*majorNumber* **.**</span></span> <span data-ttu-id="169c6-124">*MinorNumber* **.**</span><span class="sxs-lookup"><span data-stu-id="169c6-124">*minorNumber* **.**</span></span> <span data-ttu-id="169c6-125">*MainAssemblyName* **DLL**</span><span class="sxs-lookup"><span data-stu-id="169c6-125">*mainAssemblyName* **.dll**</span></span>  
   
-    -   Das *keyPairFile*\-Argument entspricht dem Namen der Datei, in der das Schlüsselpaar enthalten ist.  Die Assembly und die Herausgeberrichtlinienassembly müssen mit demselben Schlüsselpaar signiert werden.  
+    -   <span data-ttu-id="169c6-126">Die *KeyPairFile* -Argument ist der Name der Datei, die das Schlüsselpaar enthält.</span><span class="sxs-lookup"><span data-stu-id="169c6-126">The *keyPairFile* argument is the name of the file containing the key pair.</span></span> <span data-ttu-id="169c6-127">Sie müssen die Assembly und die Herausgeberrichtlinienassembly mit dem gleichen Schlüsselpaar anmelden.</span><span class="sxs-lookup"><span data-stu-id="169c6-127">You must sign the assembly and publisher policy assembly with the same key pair.</span></span>  
   
-    -   Das *processorArchitecture*\-Argument identifiziert die von einer prozessorspezifischen Assembly verwendete Plattform.  
+    -   <span data-ttu-id="169c6-128">Die *ProcessorArchitecture* Argument identifiziert die Plattform, die auf eine Assembly prozessorspezifische.</span><span class="sxs-lookup"><span data-stu-id="169c6-128">The *processorArchitecture* argument identifies the platform targeted by a processor-specific assembly.</span></span>  
   
         > [!NOTE]
-        >  Die Möglichkeit, eine bestimmte Prozessorarchitektur zu verwenden, ist neu in .NET Framework, Version 2.0.  
+        >  <span data-ttu-id="169c6-129">Die Möglichkeit, eine bestimmte Prozessorarchitektur ist neu in .NET Framework, Version 2.0.</span><span class="sxs-lookup"><span data-stu-id="169c6-129">The ability to target a specific processor architecture is new in the .NET Framework version 2.0.</span></span>  
   
-     Durch den folgenden Befehl wird eine Herausgeberrichtlinienassembly mit dem Namen `policy.1.0.myAssembly` aus einer Herausgeberrichtliniendatei namens `pub.config` erstellt und der Assembly mithilfe des Schlüsselpaars in der Datei `sgKey.snk` ein starker Name zugewiesen. Darüber hinaus gibt der Befehl an, dass die Assembly die x86\-Prozessorarchitektur verwendet.  
+     <span data-ttu-id="169c6-130">Der folgende Befehl erstellt eine Herausgeberrichtlinienassembly aufgerufen `policy.1.0.myAssembly` eine Herausgeberrichtliniendatei aufgerufen `pub.config`, weist einen starken Namen auf die Assembly mit dem Schlüsselpaar in der `sgKey.snk` Datei, und gibt an, dass die Assembly der X86 ausgerichtet ist. Architektur des Prozessors.</span><span class="sxs-lookup"><span data-stu-id="169c6-130">The following command creates a publisher policy assembly called `policy.1.0.myAssembly` from a publisher policy file called `pub.config`, assigns a strong name to the assembly using the key pair in the `sgKey.snk` file, and specifies that the assembly targets the x86 processor architecture.</span></span>  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     Die Herausgeberrichtlinienassembly muss mit der Prozessorarchitektur der Assembly übereinstimmen, für die sie gilt.  Wenn die Assembly einen <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>\-Wert von <xref:System.Reflection.ProcessorArchitecture> hat, muss die Herausgeberrichtlinienassembly mit `/platform:anycpu` erstellt werden.  Sie müssen eine separate Herausgeberrichtlinienassembly für jede prozessorspezifische Assembly bereitstellen.  
+     <span data-ttu-id="169c6-131">Die Herausgeberrichtlinienassembly muss die Prozessorarchitektur der Assembly übereinstimmen, die er gilt.</span><span class="sxs-lookup"><span data-stu-id="169c6-131">The publisher policy assembly must match the processor architecture of the assembly that it applies to.</span></span> <span data-ttu-id="169c6-132">Daher verfügt die Assembly ein <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> Wert <xref:System.Reflection.ProcessorArchitecture.MSIL>, die Herausgeberrichtlinienassembly für diese Assembly muss erstellt werden, mit `/platform:anycpu`.</span><span class="sxs-lookup"><span data-stu-id="169c6-132">Thus, if your assembly has a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> value of <xref:System.Reflection.ProcessorArchitecture.MSIL>, the publisher policy assembly for that assembly must be created with `/platform:anycpu`.</span></span> <span data-ttu-id="169c6-133">Geben Sie eine Separate Herausgeberrichtlinienassembly für jede prozessorspezifische Assembly.</span><span class="sxs-lookup"><span data-stu-id="169c6-133">You must provide a separate publisher policy assembly for each processor-specific assembly.</span></span>  
   
-     Aufgrund dieser Regel müssen Sie zum Ändern der Prozessorarchitektur einer Assembly die Haupt\- oder Nebenkomponente der Versionsnummer ändern, damit Sie eine neue Herausgeberrichtlinienassembly mit der richtigen Prozessorarchitektur zur Verfügung stellen können.  Die alte Herausgeberrichtlinienassembly kann die Assembly nicht bedienen, sobald die Assembly über eine andere Prozessorarchitektur verfügt.  
+     <span data-ttu-id="169c6-134">Eine Folge von dieser Regel ist, um die Prozessorarchitektur für eine Assembly zu ändern, die Komponente Haupt- oder Nebenversion der Versionsnummer geändert werden muss, damit Sie eine neue Herausgeberrichtlinienassembly mit der richtigen Prozessorarchitektur bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="169c6-134">A consequence of this rule is that in order to change the processor architecture for an assembly, you must change the major or minor component of the version number, so that you can supply a new publisher policy assembly with the correct processor architecture.</span></span> <span data-ttu-id="169c6-135">Die alte Herausgeberrichtlinienassembly Ihre Assembly nicht verarbeitet werden, sobald die Assembly über eine andere Prozessorarchitektur aufweist.</span><span class="sxs-lookup"><span data-stu-id="169c6-135">The old publisher policy assembly cannot service your assembly once your assembly has a different processor architecture.</span></span>  
   
-     Des Weiteren kann der Version 2.0\-Linker nicht zum Erstellen einer Herausgeberrichtlinienassembly für eine Assembly verwendet werden, die mit früheren Versionen von .NET Framework kompiliert wurde, da immer eine Prozessorarchitektur angegeben wird.  
+     <span data-ttu-id="169c6-136">Ein weitere Konsequenz ist, dass der Linker Version 2.0 verwendet werden kann, erstellen Sie eine Herausgeberrichtlinienassembly für eine Assembly, die mit früheren Versionen von .NET Framework kompiliert, da sie immer die Prozessorarchitektur angibt.</span><span class="sxs-lookup"><span data-stu-id="169c6-136">Another consequence is that the version 2.0 linker cannot be used to create a publisher policy assembly for an assembly compiled using earlier versions of the .NET Framework, because it always specifies processor architecture.</span></span>  
   
-## Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache  
- Verwenden Sie das [Global Assembly Cache\-Tool \(Gacutil.exe\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzuzufügen.  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="169c6-137">Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache</span><span class="sxs-lookup"><span data-stu-id="169c6-137">Adding the Publisher Policy Assembly to the Global Assembly Cache</span></span>  
+ <span data-ttu-id="169c6-138">Verwenden der [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="169c6-138">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to add the publisher policy assembly to the global assembly cache.</span></span>  
   
-#### So fügen Sie die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzu  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="169c6-139">So fügen Sie die Herausgeberrichtlinienassembly im globalen Assemblycache hinzu</span><span class="sxs-lookup"><span data-stu-id="169c6-139">To add the publisher policy assembly to the global assembly cache</span></span>  
   
-1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
+1.  <span data-ttu-id="169c6-140">Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="169c6-140">Type the following command at the command prompt:</span></span>  
   
-     **gacutil \/i**  *publisherPolicyAssemblyFile*  
+     <span data-ttu-id="169c6-141">**Gacutil/i***PublisherPolicyAssemblyFile* </span><span class="sxs-lookup"><span data-stu-id="169c6-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span></span>  
   
-     Durch den folgenden Befehl wird `policy.1.0.myAssembly.dll` zum globalen Assemblycache hinzugefügt.  
+     <span data-ttu-id="169c6-142">Der folgende Befehl fügt `policy.1.0.myAssembly.dll` im globalen Assemblycache.</span><span class="sxs-lookup"><span data-stu-id="169c6-142">The following command adds `policy.1.0.myAssembly.dll` to the global assembly cache.</span></span>  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  Die Herausgeberrichtlinienassembly kann nur zum globalen Assemblycache hinzugefügt werden, wenn sich die ursprüngliche Herausgeberrichtliniendatei in demselben Verzeichnis wie die Assembly befindet.  
+    >  <span data-ttu-id="169c6-143">Die Herausgeberrichtlinienassembly kann nicht im globalen Assemblycache hinzugefügt werden, es sei denn, die ursprünglichen Herausgeberrichtlinien-Datei im gleichen Verzeichnis wie die Assembly befindet.</span><span class="sxs-lookup"><span data-stu-id="169c6-143">The publisher policy assembly cannot be added to the global assembly cache unless the original publisher policy file is located in the same directory as the assembly.</span></span>  
   
-## Siehe auch  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/de-de/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)   
- [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)   
- [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="169c6-144">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="169c6-144">See Also</span></span>  
+ [<span data-ttu-id="169c6-145">Programmieren mit Assemblys</span><span class="sxs-lookup"><span data-stu-id="169c6-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="169c6-146">So sucht Common Language Runtime nach Assemblys</span><span class="sxs-lookup"><span data-stu-id="169c6-146">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="169c6-147">Konfigurieren von Apps</span><span class="sxs-lookup"><span data-stu-id="169c6-147">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="169c6-148">Konfigurieren von .NET Framework-Apps</span><span class="sxs-lookup"><span data-stu-id="169c6-148">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [<span data-ttu-id="169c6-149">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="169c6-149">Runtime Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="169c6-150">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="169c6-150">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="169c6-151">Umleiten von Assemblyversionen</span><span class="sxs-lookup"><span data-stu-id="169c6-151">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

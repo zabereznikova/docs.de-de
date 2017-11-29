@@ -1,44 +1,47 @@
 ---
-title: "Datentypen und Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datentypen und Funktionen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datentypen und Funktionen
-In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL\-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime \(CLR\) beschrieben.  Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL\-Abfragen zur Verfügung.  
+# <a name="data-types-and-functions"></a><span data-ttu-id="faf95-102">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="faf95-102">Data Types and Functions</span></span>
+<span data-ttu-id="faf95-103">In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime (CLR) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="faf95-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="faf95-104">Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL-Abfragen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="faf95-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  
   
- Wenn ein Element in der Tabelle als nicht unterstützt gekennzeichnet ist, kann LINQ to SQL den Member, das Konstrukt oder die Umwandlung der CLR nicht für die Ausführung auf dem SQL Server übersetzen.  Diese Elemente können möglicherweise trotzdem im Code verwendet werden. Sie müssen jedoch vor der Übersetzung der Abfrage in Transact\-SQL oder nachdem die Ergebnisse von der Datenbank abgerufen werden ausgewertet werden.  
+ <span data-ttu-id="faf95-105">Wenn ein Element in der Tabelle als nicht unterstützt gekennzeichnet ist, kann LINQ to SQL den Member, das Konstrukt oder die Umwandlung der CLR nicht für die Ausführung auf dem SQL Server übersetzen.</span><span class="sxs-lookup"><span data-stu-id="faf95-105">An unsupported item in the table means that LINQ to SQL cannot translate the CLR member, construct, or cast for execution on the SQL Server.</span></span> <span data-ttu-id="faf95-106">Diese Elemente können möglicherweise trotzdem im Code verwendet werden. Sie müssen jedoch vor der Übersetzung der Abfrage in Transact-SQL oder nachdem die Ergebnisse von der Datenbank abgerufen werden ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="faf95-106">You may still be able to use them in your code, but they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-|Thema|Beschreibung|  
-|-----------|------------------|  
-|[SQL CLR\-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Stellt eine detaillierte Übersicht über die Zuordnungen zwischen CLR\-Typen und SQL Server\-Typen bereit.|  
-|[Grundlegende Datentypen](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[Boolesche Datentypen](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[NULL\-Semantik](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Stellt Links zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Themen bereit, in denen Fragen zu NULL\-Werten und deren Zulässigkeit erläutert werden.|  
-|[Numerische Operatoren und Vergleichoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[Sequenzoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[System.Convert\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[System.DateTime\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Beschreibt die LINQ to SQL\-Unterstützung für Member der <xref:System.DateTime?displayProperty=fullName>\-Struktur.|  
-|[System.DateTimeOffset\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|Beschreibt die LINQ to SQL\-Unterstützung für Member der <xref:System.DateTimeOffset?displayProperty=fullName>\-Struktur.|  
-|[System.Math\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[System.Object\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[System.String\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.|  
-|[System.TimeSpan\-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Beschreibt die LINQ to SQL\-Unterstützung für Member der <xref:System.TimeSpan?displayProperty=fullName>\-Struktur.|  
-|[Nicht unterstützte Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Beschreibt Funktionen, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt werden.|  
+|<span data-ttu-id="faf95-107">Thema</span><span class="sxs-lookup"><span data-stu-id="faf95-107">Topic</span></span>|<span data-ttu-id="faf95-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="faf95-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="faf95-109">SQL-CLR-Typzuordnung</span><span class="sxs-lookup"><span data-stu-id="faf95-109">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|<span data-ttu-id="faf95-110">Stellt eine detaillierte Übersicht über die Zuordnungen zwischen CLR-Typen und SQL Server-Typen bereit.</span><span class="sxs-lookup"><span data-stu-id="faf95-110">Provides a detailed matrix of mappings between CLR types and SQL Server types.</span></span>|  
+|[<span data-ttu-id="faf95-111">Standarddatentypen</span><span class="sxs-lookup"><span data-stu-id="faf95-111">Basic Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|<span data-ttu-id="faf95-112">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-112">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-113">Boolean-Datentypen</span><span class="sxs-lookup"><span data-stu-id="faf95-113">Boolean Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|<span data-ttu-id="faf95-114">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-114">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-115">NULL-Semantik</span><span class="sxs-lookup"><span data-stu-id="faf95-115">Null Semantics</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|<span data-ttu-id="faf95-116">Stellt Links zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Themen bereit, in denen Fragen zu NULL-Werten und deren Zulässigkeit erläutert werden.</span><span class="sxs-lookup"><span data-stu-id="faf95-116">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics that discuss null and nullable issues.</span></span>|  
+|[<span data-ttu-id="faf95-117">Numerische Operatoren und Vergleichsoperatoren</span><span class="sxs-lookup"><span data-stu-id="faf95-117">Numeric and Comparison Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|<span data-ttu-id="faf95-118">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-118">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-119">Sequenzoperatoren</span><span class="sxs-lookup"><span data-stu-id="faf95-119">Sequence Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|<span data-ttu-id="faf95-120">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-120">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-121">System.Convert-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-121">System.Convert Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|<span data-ttu-id="faf95-122">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-122">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-123">System.DateTime-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-123">System.DateTime Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<span data-ttu-id="faf95-124">Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.DateTime?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="faf95-124">Describes LINQ to SQL support for members of the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="faf95-125">System.DateTimeOffset-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-125">System.DateTimeOffset Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<span data-ttu-id="faf95-126">Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.DateTimeOffset?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="faf95-126">Describes LINQ to SQL support for members of the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="faf95-127">"System.Math"-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-127">System.Math Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|<span data-ttu-id="faf95-128">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-128">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-129">System.Object-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-129">System.Object Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|<span data-ttu-id="faf95-130">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-130">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-131">System.String-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-131">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="faf95-132">Fasst Unterschiede zum Verhalten von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zusammen.</span><span class="sxs-lookup"><span data-stu-id="faf95-132">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="faf95-133">System.TimeSpan-Methoden</span><span class="sxs-lookup"><span data-stu-id="faf95-133">System.TimeSpan Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<span data-ttu-id="faf95-134">Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.TimeSpan?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="faf95-134">Describes LINQ to SQL support for members of the <xref:System.TimeSpan?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="faf95-135">Nicht unterstützte Funktionalität</span><span class="sxs-lookup"><span data-stu-id="faf95-135">Unsupported Functionality</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|<span data-ttu-id="faf95-136">Beschreibt Funktionen, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="faf95-136">Describes functionality that is not supported in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
   
-## Siehe auch  
- [SQL\-CLR\-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)   
- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [.NET Framework Class Library in Visual Studio](http://msdn.microsoft.com/de-de/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a><span data-ttu-id="faf95-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="faf95-137">See Also</span></span>  
+ [<span data-ttu-id="faf95-138">SQL-CLR-Typenkonflikte</span><span class="sxs-lookup"><span data-stu-id="faf95-138">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [<span data-ttu-id="faf95-139">Referenz</span><span class="sxs-lookup"><span data-stu-id="faf95-139">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="faf95-140">.NET Framework-Klassenbibliothek in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="faf95-140">.NET Framework Class Library in Visual Studio</span></span>](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)

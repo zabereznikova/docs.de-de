@@ -1,35 +1,38 @@
 ---
-title: "3412 - HttpPipelineProcessResponseStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3412 - HttpPipelineProcessResponseStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4704eef-609f-45a1-8e15-ec94e9549789
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd422ecf00f6e20753426931be283aead1d003e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3412 - HttpPipelineProcessResponseStart
-## Eigenschaften  
+# <a name="3412---httppipelineprocessresponsestart"></a><span data-ttu-id="1368b-102">3412 - HttpPipelineProcessResponseStart</span><span class="sxs-lookup"><span data-stu-id="1368b-102">3412 - HttpPipelineProcessResponseStart</span></span>
+## <a name="properties"></a><span data-ttu-id="1368b-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="1368b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3412|  
-|Schlüsselwörter|HTTP|  
-|Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="1368b-104">ID</span><span class="sxs-lookup"><span data-stu-id="1368b-104">ID</span></span>|<span data-ttu-id="1368b-105">3412</span><span class="sxs-lookup"><span data-stu-id="1368b-105">3412</span></span>|  
+|<span data-ttu-id="1368b-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="1368b-106">Keywords</span></span>|<span data-ttu-id="1368b-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="1368b-107">HTTP</span></span>|  
+|<span data-ttu-id="1368b-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="1368b-108">Level</span></span>|<span data-ttu-id="1368b-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="1368b-109">Verbose</span></span>|  
+|<span data-ttu-id="1368b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="1368b-110">Channel</span></span>|<span data-ttu-id="1368b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="1368b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird ausgegeben, wenn der HTTP\-Meldungshandler die Verarbeitung der Antwort gestartet hat.  
+## <a name="description"></a><span data-ttu-id="1368b-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1368b-112">Description</span></span>  
+ <span data-ttu-id="1368b-113">Dieses Ereignis wird ausgegeben, wenn der HTTP-Meldungshandler die Verarbeitung der Antwort gestartet hat.</span><span class="sxs-lookup"><span data-stu-id="1368b-113">This event is emitted when the Http message handler has started processing the response.</span></span>  
   
-## Meldung  
- Der HTTP\-Nachrichtenhandler hat das Verarbeiten der Antwort gestartet.  
+## <a name="message"></a><span data-ttu-id="1368b-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="1368b-114">Message</span></span>  
+ <span data-ttu-id="1368b-115">Der HTTP-Nachrichtenhandler hat das Verarbeiten der Antwort gestartet.</span><span class="sxs-lookup"><span data-stu-id="1368b-115">Http message handler started processing the response.</span></span>  
   
-## Details
+## <a name="details"></a><span data-ttu-id="1368b-116">Details</span><span class="sxs-lookup"><span data-stu-id="1368b-116">Details</span></span>

@@ -1,90 +1,98 @@
 ---
-title: "&lt;cookieHandler&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;"cookiehandler"&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
-caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 88e968d025c959ec33674a9d8edb5e63341433ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cookieHandler&gt;
-Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\) zum Lesen und Schreiben von Cookies verwendet.  
+# <a name="ltcookiehandlergt"></a><span data-ttu-id="99c05-102">&lt;"cookiehandler"&gt;</span><span class="sxs-lookup"><span data-stu-id="99c05-102">&lt;cookieHandler&gt;</span></span>
+<span data-ttu-id="99c05-103">Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) zum Lesen und Schreiben von Cookies verwendet.</span><span class="sxs-lookup"><span data-stu-id="99c05-103">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="99c05-104">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="99c05-104">\<system.identityModel.services></span></span>  
+<span data-ttu-id="99c05-105">\<FederationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="99c05-105">\<federationConfiguration></span></span>  
+<span data-ttu-id="99c05-106">\<"cookiehandler" ></span><span class="sxs-lookup"><span data-stu-id="99c05-106">\<cookieHandler></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="99c05-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="99c05-107">Syntax</span></span>  
+  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <cookieHandler name=xs:string  
-        path=Path  
-        mode="Chunked||Custom||Default"  
-        persistentSessionLifetime=xs:string  
-        hideFromScript=xs:boolean  
-        requireSSL=xs:boolean  
-        domain=xs:string  
-      <chunkedCookieHandler size=xs:int />  
-      <customCookieHandler type="MyNamespace.MyCustomCookieHandler, MyAssembly" />  
-    </cookieHandler>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <cookieHandler name=xs:string  
+        path=Path  
+        mode="Chunked||Custom||Default"  
+        persistentSessionLifetime=xs:string  
+        hideFromScript=xs:boolean  
+        requireSSL=xs:boolean  
+        domain=xs:string  
+      <chunkedCookieHandler size=xs:int />  
+      <customCookieHandler type="MyNamespace.MyCustomCookieHandler, MyAssembly" />  
+    </cookieHandler>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="99c05-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="99c05-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="99c05-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="99c05-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="99c05-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="99c05-110">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|name|Gibt den Basisnamen für die keine Cookies geschrieben.  Der Standardwert ist "FedAuth".|  
-|path|Gibt den Pfadwert für Cookies geschrieben.  Der Standardwert ist "HttpRuntime.AppDomainAppVirtualPath".|  
-|mode|Eines der <xref:System.IdentityModel.Services.CookieHandlerMode> \-Werte, die Art von Cookie\-Handler, mit dem von der SAM angibt.  Die folgenden Werte können verwendet werden:<br /><br /> -   "Default" — "Chunked" identisch.<br />-   "Chunked" – verwendet eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse.  Dieser Cookie\-Handler wird sichergestellt, dass es sich bei einzelnen Cookies keine maximale Größe überschreiten.  Dies wird erreicht, indem Sie "chunking" möglicherweise eine logische Cookie in eine Anzahl von Cookies on\-the\-Wire.<br />-   "Custom" – verwendet eine Instanz einer benutzerdefinierten Klasse, abgeleitet von <xref:System.IdentityModel.Services.CookieHandler>.  Die abgeleitete Klasse verweist die `<customCookieHandler>` untergeordnetes Element.<br /><br /> Der Standardwert ist "Default".|  
-|persistentSessionLifetime|Gibt die Lebensdauer der permanenten Sitzungen.  Falls der Wert NULL ist, werden Sitzungen mit transiente immer verwendet.  Der Standardwert ist "Commitdatensatz", die eine vorübergehende Sitzung angibt.  Der Maximalwert ist "365:0:0", die eine Sitzung von 365 Tagen angibt.  Der Wert sollte angegeben werden, entsprechend der folgenden Einschränkung: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, wobei der am weitesten links stehende Wert gibt die Tage, der mittlere Wert \(falls vorhanden\) gibt die Stunden und Minuten gibt an, der am weitesten rechts stehenden Wert \(falls vorhanden\).|  
-|requireSsl|Gibt an, ob das "Secure"\-Flag für alle Cookies geschrieben ausgegeben wird.  Wenn dieser Wert festgelegt ist, werden die\-in\-Sitzungs\-Cookies nur über HTTPS verfügbar.  Der Standardwert ist "true".|  
-|hideFromScript|Steuert, ob das Flag "HttpOnly", für die keine Cookies geschrieben ausgegeben wird.  Bestimmten Webbrowsern Ehren dieses Flag provozieren clientseitiges Skript den Zugriff auf den Cookiewert.  Der Standardwert ist "true".|  
-|domain|Der Domain\-Wert für Cookies geschrieben werden soll.  Der Standardwert ist "".|  
+|<span data-ttu-id="99c05-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="99c05-111">Attribute</span></span>|<span data-ttu-id="99c05-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99c05-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="99c05-113">Name</span><span class="sxs-lookup"><span data-stu-id="99c05-113">name</span></span>|<span data-ttu-id="99c05-114">Gibt den Basisnamen für Cookies geschrieben.</span><span class="sxs-lookup"><span data-stu-id="99c05-114">Specifies the base name for any cookies written.</span></span> <span data-ttu-id="99c05-115">Der Standardwert ist "FedAuth".</span><span class="sxs-lookup"><span data-stu-id="99c05-115">The default is "FedAuth".</span></span>|  
+|<span data-ttu-id="99c05-116">path</span><span class="sxs-lookup"><span data-stu-id="99c05-116">path</span></span>|<span data-ttu-id="99c05-117">Gibt an, der Pfadwert für Cookies geschrieben.</span><span class="sxs-lookup"><span data-stu-id="99c05-117">Specifies the path value for any cookies written.</span></span> <span data-ttu-id="99c05-118">Der Standardwert ist "HttpRuntime.AppDomainAppVirtualPath".</span><span class="sxs-lookup"><span data-stu-id="99c05-118">The default is "HttpRuntime.AppDomainAppVirtualPath".</span></span>|  
+|<span data-ttu-id="99c05-119">mode</span><span class="sxs-lookup"><span data-stu-id="99c05-119">mode</span></span>|<span data-ttu-id="99c05-120">Eines der <xref:System.IdentityModel.Services.CookieHandlerMode> Werte, der angibt, die Art der Cookie-Handler, die von der Sicherheitskontenverwaltung verwendet.</span><span class="sxs-lookup"><span data-stu-id="99c05-120">One of the <xref:System.IdentityModel.Services.CookieHandlerMode> values that specifies the kind of cookie handler used by the SAM.</span></span> <span data-ttu-id="99c05-121">Die folgenden Werte können verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="99c05-121">The following values may be used:</span></span><br /><br /> <span data-ttu-id="99c05-122">-"Default" – "Chunked" identisch.</span><span class="sxs-lookup"><span data-stu-id="99c05-122">-   "Default" — The same as "Chunked".</span></span><br /><span data-ttu-id="99c05-123">-"Aufgeteilte" – verwendet eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse.</span><span class="sxs-lookup"><span data-stu-id="99c05-123">-   "Chunked" — Uses an instance of the <xref:System.IdentityModel.Services.ChunkedCookieHandler> class.</span></span> <span data-ttu-id="99c05-124">Diesen Cookie-Handler wird sichergestellt, dass einzelne Cookies eine festgelegte maximale Größe nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="99c05-124">This cookie handler ensures that individual cookies do not exceed a set maximum size.</span></span> <span data-ttu-id="99c05-125">Dies wird erreicht, indem "Segmentierung" potenziell eine logische Cookie in eine Anzahl von Cookies auf das Netzwerk wird.</span><span class="sxs-lookup"><span data-stu-id="99c05-125">It accomplishes this by potentially "chunking" one logical cookie into a number of cookies on-the-wire.</span></span><br /><span data-ttu-id="99c05-126">-"Custom" – wird eine Instanz einer benutzerdefinierten Klasse abgeleitet <xref:System.IdentityModel.Services.CookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="99c05-126">-   "Custom" — Uses an instance of a custom class derived from <xref:System.IdentityModel.Services.CookieHandler>.</span></span> <span data-ttu-id="99c05-127">Die abgeleitete Klasse verweist auf die `<customCookieHandler>` untergeordnetes Element.</span><span class="sxs-lookup"><span data-stu-id="99c05-127">The derived class is referenced by the `<customCookieHandler>` child element.</span></span><br /><br /> <span data-ttu-id="99c05-128">Der Standardwert ist "Default".</span><span class="sxs-lookup"><span data-stu-id="99c05-128">The default is "Default".</span></span>|  
+|<span data-ttu-id="99c05-129">persistentSessionLifetime</span><span class="sxs-lookup"><span data-stu-id="99c05-129">persistentSessionLifetime</span></span>|<span data-ttu-id="99c05-130">Die Lebensdauer von persistenten Sitzungen angibt.</span><span class="sxs-lookup"><span data-stu-id="99c05-130">Specifies the lifetime of persistent sessions.</span></span> <span data-ttu-id="99c05-131">Wenn der Wert 0 ist, werden immer vorübergehende Sitzungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="99c05-131">If zero, transient sessions are always used.</span></span> <span data-ttu-id="99c05-132">Der Standardwert ist "0:0:0", die eine vorübergehende Sitzung angibt.</span><span class="sxs-lookup"><span data-stu-id="99c05-132">The default value is "0:0:0", which specifies a transient session.</span></span> <span data-ttu-id="99c05-133">Der maximale Wert ist "365:0:0", die eine Sitzung von 365 Tagen angibt.</span><span class="sxs-lookup"><span data-stu-id="99c05-133">The maximum value is "365:0:0", which specifies a session of 365 days.</span></span> <span data-ttu-id="99c05-134">Der Wert sollte entsprechend der folgenden Einschränkung angegeben werden: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, wobei der äußeren linken Wert gibt die Tage an, der mittlere Wert (falls vorhanden) gibt die Stunden und der äußeren rechten Wert (falls vorhanden) gibt die Minuten an.</span><span class="sxs-lookup"><span data-stu-id="99c05-134">The value should be specified according to the following restriction: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, where the leftmost value specifies days, the middle value (if present) specifies hours, and the rightmost value (if present) specifies minutes.</span></span>|  
+|<span data-ttu-id="99c05-135">RequireSsl</span><span class="sxs-lookup"><span data-stu-id="99c05-135">requireSsl</span></span>|<span data-ttu-id="99c05-136">Gibt an, ob das Kennzeichen "Secure" für Cookies geschrieben ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="99c05-136">Specifies whether the "Secure" flag is emitted for any cookies written.</span></span> <span data-ttu-id="99c05-137">Wenn dieser Wert festgelegt ist, werden die Anmeldeseite Sitzungscookies über HTTPS nur verfügbar sein.</span><span class="sxs-lookup"><span data-stu-id="99c05-137">If this value is set, the sign-in session cookies will only be available over HTTPS.</span></span> <span data-ttu-id="99c05-138">Der Standardwert ist "true".</span><span class="sxs-lookup"><span data-stu-id="99c05-138">The default is "true".</span></span>|  
+|<span data-ttu-id="99c05-139">hideFromScript</span><span class="sxs-lookup"><span data-stu-id="99c05-139">hideFromScript</span></span>|<span data-ttu-id="99c05-140">Steuert, ob das Flag "HttpOnly" für Cookies geschrieben ausgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="99c05-140">Controls whether the "HttpOnly" flag is emitted for any cookies written.</span></span> <span data-ttu-id="99c05-141">Bestimmte Webbrowsern Auswirkungen dieses Flag durch Speicherung der Zugriff auf den Cookiewert Skriptdatei auf Clientseite.</span><span class="sxs-lookup"><span data-stu-id="99c05-141">Certain web browsers honor this flag by keeping client-side script from accessing the cookie value.</span></span> <span data-ttu-id="99c05-142">Der Standardwert ist "true".</span><span class="sxs-lookup"><span data-stu-id="99c05-142">The default is "true".</span></span>|  
+|<span data-ttu-id="99c05-143">Domäne</span><span class="sxs-lookup"><span data-stu-id="99c05-143">domain</span></span>|<span data-ttu-id="99c05-144">Der Domänenwert für Cookies geschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="99c05-144">The domain value for any cookies written.</span></span> <span data-ttu-id="99c05-145">Der Standardwert ist "".</span><span class="sxs-lookup"><span data-stu-id="99c05-145">The default is "".</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="99c05-146">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="99c05-146">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<chunkedCookieHandler\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>.  Dieses Element kann nur vorhanden sein, wenn die `mode` \-Attribut des der `<cookieHandler>` Element ist "Default" oder "Chunked".|  
-|[\<customCookieHandler\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Legt den Typ des benutzerdefinierten Cookies\-Handler.  Dieses Element muss vorhanden sein, wenn die `mode` \-Attribut des der `<cookieHandler>` Element ist "Custom".  Es kann nicht vorhanden sein, damit alle anderen Werte von den `mode` Attribut.  Der benutzerdefinierte Typ muss abgeleitet werden die <xref:System.IdentityModel.Services.CookieHandler> Klasse.|  
+|<span data-ttu-id="99c05-147">Element</span><span class="sxs-lookup"><span data-stu-id="99c05-147">Element</span></span>|<span data-ttu-id="99c05-148">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99c05-148">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="99c05-149">\<ChunkedCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="99c05-149">\<chunkedCookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|<span data-ttu-id="99c05-150">Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="99c05-150">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="99c05-151">Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut des der `<cookieHandler>` Element ist "Default" oder "Aufgeteilte".</span><span class="sxs-lookup"><span data-stu-id="99c05-151">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>|  
+|[<span data-ttu-id="99c05-152">\<CustomCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="99c05-152">\<customCookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|<span data-ttu-id="99c05-153">Legt die benutzerdefinierten cookiehandlertyp fest.</span><span class="sxs-lookup"><span data-stu-id="99c05-153">Sets the custom cookie handler type.</span></span> <span data-ttu-id="99c05-154">Dieses Element muss vorhanden sein wenn die `mode` Attribut von der `<cookieHandler>` Element ist "Custom".</span><span class="sxs-lookup"><span data-stu-id="99c05-154">This element must be present if the `mode` attribute of the `<cookieHandler>` element is "Custom".</span></span> <span data-ttu-id="99c05-155">Es kann nicht vorhanden sein, um alle anderen Werte von der `mode` Attribut.</span><span class="sxs-lookup"><span data-stu-id="99c05-155">It cannot be present for any other values of the `mode` attribute.</span></span> <span data-ttu-id="99c05-156">Der benutzerdefinierte Typ muss von abgeleitet werden die <xref:System.IdentityModel.Services.CookieHandler> Klasse.</span><span class="sxs-lookup"><span data-stu-id="99c05-156">The custom type must be derived from the <xref:System.IdentityModel.Services.CookieHandler> class.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="99c05-157">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="99c05-157">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Enthält die Einstellungen, konfigurieren die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\).|  
+|<span data-ttu-id="99c05-158">Element</span><span class="sxs-lookup"><span data-stu-id="99c05-158">Element</span></span>|<span data-ttu-id="99c05-159">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99c05-159">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="99c05-160">\<federationConfiguration></span><span class="sxs-lookup"><span data-stu-id="99c05-160">\<federationConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|<span data-ttu-id="99c05-161">Enthält die Einstellungen zur Konfiguration der <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span><span class="sxs-lookup"><span data-stu-id="99c05-161">Contains the settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span></span>|  
   
-## Hinweise  
- Die <xref:System.IdentityModel.Services.CookieHandler> ist verantwortlich für das Lesen und Schreiben von raw Cookies mit dem HTTP\-Protokoll auf.  Können Sie entweder eine <xref:System.IdentityModel.Services.ChunkedCookieHandler> oder ein benutzerdefinierten Cookie\-Handler aus der <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
+## <a name="remarks"></a><span data-ttu-id="99c05-162">Hinweise</span><span class="sxs-lookup"><span data-stu-id="99c05-162">Remarks</span></span>  
+ <span data-ttu-id="99c05-163">Die <xref:System.IdentityModel.Services.CookieHandler> ist verantwortlich für das Lesen und Schreiben von Rohdaten Cookies der HTTP-Protokoll auf.</span><span class="sxs-lookup"><span data-stu-id="99c05-163">The <xref:System.IdentityModel.Services.CookieHandler> is responsible for reading and writing raw cookies at the HTTP protocol level.</span></span> <span data-ttu-id="99c05-164">Sie können konfigurieren, entweder eine <xref:System.IdentityModel.Services.ChunkedCookieHandler> oder ein benutzerdefinierten Cookie Handler abgeleitet der <xref:System.IdentityModel.Services.CookieHandler> Klasse.</span><span class="sxs-lookup"><span data-stu-id="99c05-164">You can configure either a <xref:System.IdentityModel.Services.ChunkedCookieHandler> or a custom cookie handler derived from the <xref:System.IdentityModel.Services.CookieHandler> class.</span></span>  
   
- Legen Sie das Mode\-Attribut auf "Chunked" oder "Default" um chunked Cookie\-Handler zu konfigurieren.  Die standardmäßige Chunk\-Größe beträgt 2000 Bytes, aber Sie können optional eine anderen Chunk\-Größe angeben, indem einschließlich einer `<chunkedCookieHandler>` untergeordnetes Element.  
+ <span data-ttu-id="99c05-165">Um einen Handler aufgeteilte Cookie zu konfigurieren, legen Sie die Mode-Attribut auf "Chunked" oder "Default".</span><span class="sxs-lookup"><span data-stu-id="99c05-165">To configure a chunked cookie handler, set the mode attribute to "Chunked" or "Default".</span></span> <span data-ttu-id="99c05-166">Die Standardblockgröße beträgt 2000 Bytes, aber Sie können optional eine andere Segmentgröße angeben, indem einschließlich einer `<chunkedCookieHandler>` untergeordnetes Element.</span><span class="sxs-lookup"><span data-stu-id="99c05-166">The default chunk size is 2000 bytes, but you may optionally specify a different chunk size by including a `<chunkedCookieHandler>` child element.</span></span>  
   
- Um einen benutzerdefiniertes Cookie\-Handler zu konfigurieren, legen Sie das Mode\-Attribut auf "Custom".  Müssen Sie eine `<customCookieHandler>` untergeordnetes Element, das den Typ des benutzerdefinierten Handler verweist.  
+ <span data-ttu-id="99c05-167">Um einen benutzerdefinierten Cookie-Handler zu konfigurieren, legen Sie die Mode-Attribut auf "Custom".</span><span class="sxs-lookup"><span data-stu-id="99c05-167">To configure a custom cookie handler, set the mode attribute to "Custom".</span></span> <span data-ttu-id="99c05-168">Sie müssen auch angeben, ein `<customCookieHandler>` untergeordnetes Element, das den Typ des benutzerdefinierten Handler verweist.</span><span class="sxs-lookup"><span data-stu-id="99c05-168">You must also specify a `<customCookieHandler>` child element that references the type of your custom handler.</span></span>  
   
- Die `<cookieHandler>` Element dargestellt durch die <xref:System.IdentityModel.Services.CookieHandlerElement> Klasse.  Der Cookie\-Handler, der in der Konfiguration angegeben wurde steht die <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> \-Eigenschaft des der <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> \-Objekt auf die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> Eigenschaft.  
+ <span data-ttu-id="99c05-169">Die `<cookieHandler>` Element dargestellt ist, durch die <xref:System.IdentityModel.Services.CookieHandlerElement> Klasse.</span><span class="sxs-lookup"><span data-stu-id="99c05-169">The `<cookieHandler>` element is represented by the <xref:System.IdentityModel.Services.CookieHandlerElement> class.</span></span> <span data-ttu-id="99c05-170">Der Cookie-Handler, der in der Konfiguration angegeben wurde steht über die <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> Eigenschaft von der <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objektsatz auf die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="99c05-170">The cookie handler that was specified in configuration is available from the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> property of the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> object set on the <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> property.</span></span>  
   
-## Beispiel  
- Das folgende XML zeigt eine `<cookieHandler>` Element.  In diesem Beispiel weil die `mode` \-Attribut nicht angegeben ist, von der SAM der Standardhandler für das Cookie verwendet werden.  Dies ist eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse.  Da die `<chunkedCookieHandler>` untergeordnete Element nicht angegeben ist, wird die standardmäßige Chunk\-Größe verwendet werden.  HTTPS wird nicht benötigt werden, da die `requireSsl` \-Attribut festgelegt ist `false`.  
+## <a name="example"></a><span data-ttu-id="99c05-171">Beispiel</span><span class="sxs-lookup"><span data-stu-id="99c05-171">Example</span></span>  
+ <span data-ttu-id="99c05-172">Das folgende XML zeigt ein `<cookieHandler>` Element.</span><span class="sxs-lookup"><span data-stu-id="99c05-172">The following XML shows a `<cookieHandler>` element.</span></span> <span data-ttu-id="99c05-173">In diesem Beispiel da die `mode` Attribut nicht angegeben wird, der Standardhandler für das Cookie wird von der SAM verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="99c05-173">In this example, because the `mode` attribute is not specified, the default cookie handler will be used by the SAM.</span></span> <span data-ttu-id="99c05-174">Dies ist eine Instanz von der <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse.</span><span class="sxs-lookup"><span data-stu-id="99c05-174">This is an instance of the <xref:System.IdentityModel.Services.ChunkedCookieHandler> class.</span></span> <span data-ttu-id="99c05-175">Da die `<chunkedCookieHandler>` untergeordnetes Element nicht angegeben ist, wird die Standardblockgröße verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="99c05-175">Because the `<chunkedCookieHandler>` child element is not specified, the default chunk size will be used.</span></span> <span data-ttu-id="99c05-176">HTTPS wird nicht benötigt werden, da die `requireSsl` -Attribut festgelegt ist `false`.</span><span class="sxs-lookup"><span data-stu-id="99c05-176">HTTPS will not be required because the `requireSsl` attribute is set `false`.</span></span>  
   
 > [!WARNING]
->  In diesem Beispiel wird HTTPS nicht benötigt, um die Session\-Cookies zu schreiben.  Dies liegt daran, die `requireSsl` \-Attribut auf die `<cookieHandler>` auf Element festgelegt ist `false`.  Diese Einstellung ist für die meisten Produktionsumgebungen nicht empfohlen, da es ein Sicherheitsrisiko darstellen kann.  
+>  <span data-ttu-id="99c05-177">In diesem Beispiel muss HTTPS nicht Sitzungscookies schreiben.</span><span class="sxs-lookup"><span data-stu-id="99c05-177">In this example, HTTPS is not required to write session cookies.</span></span> <span data-ttu-id="99c05-178">Grund hierfür ist die `requireSsl` -Attribut auf die `<cookieHandler>` -Elementgruppe ist `false`.</span><span class="sxs-lookup"><span data-stu-id="99c05-178">This is because the `requireSsl` attribute on the `<cookieHandler>` element is set to `false`.</span></span> <span data-ttu-id="99c05-179">Diese Einstellung wird für die meisten produktionsumgebungen nicht empfohlen, da es ein Sicherheitsrisiko vorhanden sein können.</span><span class="sxs-lookup"><span data-stu-id="99c05-179">This setting is not recommended for most production environments as it may present a security risk.</span></span>  
   
-```  
+```xml  
 <cookieHandler requireSsl="false" />  
 ```  
   
-## Siehe auch  
- <xref:System.IdentityModel.Services.CookieHandler>   
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>   
+## <a name="see-also"></a><span data-ttu-id="99c05-180">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99c05-180">See Also</span></span>  
+ <xref:System.IdentityModel.Services.CookieHandler>  
+ <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
  <xref:System.IdentityModel.Services.SessionAuthenticationModule>

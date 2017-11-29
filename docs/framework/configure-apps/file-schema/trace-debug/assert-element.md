@@ -1,76 +1,77 @@
 ---
-title: "&lt;assert&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assert"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assert>-Element"
-  - "assert-Element"
+title: '&lt;Assert-&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assert
+helpviewer_keywords:
+- <assert> element
+- assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 520dfec180157c9a05c5fc3beb51b5fc17f9088b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;assert&gt;-Element
-Legt fest, ob ein Meldungsfeld angezeigt wird, wenn die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>\-Methode aufgerufen wird; gibt darüber hinaus den Namen der Datei an, in die Meldungen geschrieben werden.  
+# <a name="ltassertgt-element"></a><span data-ttu-id="43263-102">&lt;Assert-&gt; Element</span><span class="sxs-lookup"><span data-stu-id="43263-102">&lt;assert&gt; Element</span></span>
+<span data-ttu-id="43263-103">Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="43263-103">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="43263-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="43263-104">\<configuration></span></span>  
+<span data-ttu-id="43263-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="43263-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="43263-106">\<Assert-></span><span class="sxs-lookup"><span data-stu-id="43263-106">\<assert></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="43263-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="43263-107">Syntax</span></span>  
   
+```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="43263-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="43263-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="43263-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="43263-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="43263-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="43263-110">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`assertuienabled`|Optionales Attribut.<br /><br /> Gibt an, ob ein Meldungsfeld angezeigt werden soll, wenn der Wert der **Debug.Assert**\-Methode **false** lautet.|  
-|`logfilename`|Optionales Attribut.<br /><br /> Gibt den Namen der Datei an, in die die Meldung geschrieben wird, wenn für **Debug.Assert** der Wert **false** angegeben ist.|  
+|<span data-ttu-id="43263-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="43263-111">Attribute</span></span>|<span data-ttu-id="43263-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43263-112">Description</span></span>|  
+|---------------|-----------------|  
+|`assertuienabled`|<span data-ttu-id="43263-113">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="43263-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="43263-114">Gibt an, ob die anzuzeigenden ein Meldungsfeld, wenn die **Debug.Assert** Methode ergibt **"false"**.</span><span class="sxs-lookup"><span data-stu-id="43263-114">Specifies whether to display a message box when the **Debug.Assert** method evaluates to **false**.</span></span>|  
+|`logfilename`|<span data-ttu-id="43263-115">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="43263-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="43263-116">Gibt den Namen der Datei zum Schreiben der Nachricht auf, wenn **Debug.Assert** ergibt **"false"**.</span><span class="sxs-lookup"><span data-stu-id="43263-116">Specifies the name of the file to write the message to if **Debug.Assert** evaluates to **false**.</span></span>|  
   
-## assertuienabled\-Attribut  
+## <a name="assertuienabled-attribute"></a><span data-ttu-id="43263-117">assertuienabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="43263-117">assertuienabled Attribute</span></span>  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`true`|Zeigt das Meldungsfeld an.  Dies ist der Standardwert.|  
-|`false`|Zeigt das Meldungsfeld nicht an.|  
+|<span data-ttu-id="43263-118">Wert</span><span class="sxs-lookup"><span data-stu-id="43263-118">Value</span></span>|<span data-ttu-id="43263-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43263-119">Description</span></span>|  
+|-----------|-----------------|  
+|`true`|<span data-ttu-id="43263-120">Zeigt das Meldungsfeld an.</span><span class="sxs-lookup"><span data-stu-id="43263-120">Displays the message box.</span></span> <span data-ttu-id="43263-121">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="43263-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="43263-122">Das Meldungsfeld wird nicht angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="43263-122">Does not display the message box.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="43263-123">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="43263-123">Child Elements</span></span>  
+ <span data-ttu-id="43263-124">Keine</span><span class="sxs-lookup"><span data-stu-id="43263-124">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="43263-125">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="43263-125">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.diagnostics`|Gibt die Ablaufverfolgungslistener, die Meldungen sammeln, speichern und weiterleiten, sowie die Ebene an, auf der ein Ablaufverfolgungsschalter festgelegt wird.|  
+|<span data-ttu-id="43263-126">Element</span><span class="sxs-lookup"><span data-stu-id="43263-126">Element</span></span>|<span data-ttu-id="43263-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43263-127">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="43263-128">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="43263-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="43263-129">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="43263-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## Hinweise  
- Beide Attribute im **\<assert\>**\-Element sind optional.  Meldungsfelder können deaktiviert werden, ohne eine Datei anzugeben, in der die Meldungen gespeichert werden. Sie können aber auch eine Datei angeben, in die Meldungen geschrieben werden, während die Meldungsfelder aktiviert bleiben.  
+## <a name="remarks"></a><span data-ttu-id="43263-130">Hinweise</span><span class="sxs-lookup"><span data-stu-id="43263-130">Remarks</span></span>  
+ <span data-ttu-id="43263-131">Beide Attribute in der  **\<assert >** Element sind optional.</span><span class="sxs-lookup"><span data-stu-id="43263-131">Both attributes in the **\<assert>** element are optional.</span></span> <span data-ttu-id="43263-132">Sie können Meldungsfelder deaktivieren, ohne Angabe einer Datei, um die Nachrichten schreiben oder können Sie eine Datei zum Schreiben, dass Nachrichten an die while-verlassen Felder aktiviert Nachricht angeben.</span><span class="sxs-lookup"><span data-stu-id="43263-132">You can disable message boxes without specifying a file to write the messages to, or you can specify a file to write messages to while leaving message boxes enabled.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angezeigte Meldungsfelder deaktiviert werden, wenn Sie **Debug.Assert** aufrufen und die Meldungen in `c:\log.txt` schreiben.  
+## <a name="example"></a><span data-ttu-id="43263-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="43263-133">Example</span></span>  
+ <span data-ttu-id="43263-134">Das folgende Beispiel zeigt die Vorgehensweise beim Anzeigen von Meldungsfeldern deaktivieren, beim Aufrufen von **Debug.Assert** und Schreiben von Nachrichten auf `c:\log.txt`.</span><span class="sxs-lookup"><span data-stu-id="43263-134">The following example shows how to disable displaying message boxes when you call **Debug.Assert** and write the messages to `c:\log.txt`.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <assert assertuienabled="false" logfilename="c:\log.txt"/>  
@@ -78,6 +79,6 @@ Legt fest, ob ein Meldungsfeld angezeigt wird, wenn die <xref:System.Diagnostics
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Diagnostics.Debug>   
- [Schema für Ablaufverfolgungs\- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="43263-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43263-135">See Also</span></span>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="43263-136">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="43263-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,65 +1,68 @@
 ---
-title: "x:FieldModifier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FieldModifier attribute in XAML [XAML Services]"
-  - "x:FieldModifier attribute [XAML Services]"
-  - "XAML [XAML Services], x:FieldModifier attribute"
+title: x:FieldModifier-Anweisung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FieldModifier attribute in XAML [XAML Services]
+- x:FieldModifier attribute [XAML Services]
+- XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-caps.latest.revision: 15
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:FieldModifier Directive
-Ändert das XAML\-Kompilierverhalten so, dass Felder für benannte Objektverweise mit <xref:System.Reflection.TypeAttributes?displayProperty=fullName>\-Zugriff statt mit dem <xref:System.Reflection.TypeAttributes?displayProperty=fullName>\-Standardverhalten definiert werden.  
+# <a name="xfieldmodifier-directive"></a><span data-ttu-id="7f16c-102">x:FieldModifier-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7f16c-102">x:FieldModifier Directive</span></span>
+<span data-ttu-id="7f16c-103">Verwendung von XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise mit definiert sind <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anstelle von Zugriff auf die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Standardverhalten.</span><span class="sxs-lookup"><span data-stu-id="7f16c-103">Modifies XAML compilation behavior so that fields for named object references are defined with <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> access instead of the <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> default behavior.</span></span>  
   
-## Verwendung von XAML\-Attributen  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="7f16c-104">Verwendung von XAML-Attributen</span><span class="sxs-lookup"><span data-stu-id="7f16c-104">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object x:FieldModifier="Public".../>  
 ```  
-<object x:FieldModifier="Public".../>  
-```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a><span data-ttu-id="7f16c-105">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="7f16c-105">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|*Public*|Welche Zeichenfolge genau zum Festlegen von <xref:System.Reflection.TypeAttributes?displayProperty=fullName> im Vergleich zu <xref:System.Reflection.TypeAttributes?displayProperty=fullName> übergeben wird, ist unterschiedlich und hängt von der verwendeten Code\-Behind\-Programmiersprache ab.  Siehe Hinweise.|  
+|<span data-ttu-id="7f16c-106">*Public*</span><span class="sxs-lookup"><span data-stu-id="7f16c-106">*Public*</span></span>|<span data-ttu-id="7f16c-107">Die genaue Zeichenfolge übergeben, um anzugeben, <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> im Vergleich zu <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> variiert in Abhängigkeit von der Code-Behind-Programmiersprache ab, der verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7f16c-107">The exact string you pass to specify <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> versus <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varies, depending on the code-behind programming language that is used.</span></span> <span data-ttu-id="7f16c-108">Siehe Hinweise.</span><span class="sxs-lookup"><span data-stu-id="7f16c-108">See Remarks.</span></span>|  
   
-## Abhängigkeiten  
- Wenn eine XAML\-Produktion irgendwo `x:FieldModifier` verwendet, muss das Stammelement dieser XAML\-Produktion einen [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) deklarieren.  
+## <a name="dependencies"></a><span data-ttu-id="7f16c-109">Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="7f16c-109">Dependencies</span></span>  
+ <span data-ttu-id="7f16c-110">Wenn eine XAML-Produktion verwendet `x:FieldModifier` an einer beliebigen Stelle, muss das Stammelement der XAML-Produktion Deklarieren einer [X: Class-Direktive](../../../docs/framework/xaml-services/x-class-directive.md).</span><span class="sxs-lookup"><span data-stu-id="7f16c-110">If a XAML production uses `x:FieldModifier` anywhere, the root element of that XAML production must declare an [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md).</span></span>  
   
-## Hinweise  
- `x:FieldModifier` ist nicht relevant zum Deklarieren der allgemeinen Zugriffsebene einer Klasse oder ihrer Member.  Es ist nur für das XAML\-Verarbeitungsverhalten relevant, wenn ein bestimmtes XAML\-Objekt, das Teil einer XAML\-Produktion ist, verarbeitet wird und ein Objekt wird, auf das potenziell im Objektdiagramm einer Anwendung zugegriffen werden kann.  Standardmäßig wird der Feldverweis für ein solches Objekt als privat beibehalten. So wird verhindert, dass Steuerelementconsumer das Objektdiagramm direkt ändern.  Stattdessen wird erwartet, dass Steuerelementconsumer das Objektdiagramm mit Standardmustern ändern, die durch Programmierungsmodelle aktiviert werden, z. B. Abrufen des Layoutstamms, der untergeordneten Elementauflistungen, der dedizierten öffentlichen Eigenschaften usw.  
+## <a name="remarks"></a><span data-ttu-id="7f16c-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7f16c-111">Remarks</span></span>  
+ <span data-ttu-id="7f16c-112">`x:FieldModifier`ist nicht relevant für die allgemeine Zugriffsebene einer Klasse oder der entsprechenden Member deklarieren.</span><span class="sxs-lookup"><span data-stu-id="7f16c-112">`x:FieldModifier` is not relevant for declaring the general access level of a class or its members.</span></span> <span data-ttu-id="7f16c-113">Es ist nur für XAML-Verarbeitungsverhalten relevant, wenn ein bestimmtes XAML-Objekt, das Bestandteil einer XAML-Produktion ist verarbeitet wird, wird ein Objekt, das potenziell im Objektdiagramm einer Anwendung zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="7f16c-113">It is relevant only for XAML-processing behavior when a particular XAML object that is part of a XAML production is processed, and becomes an object that is potentially accessible in the object graph of an application.</span></span> <span data-ttu-id="7f16c-114">Standardmäßig wird der Feldverweis für ein solches Objekt, vertraulich behandelt die verhindert wird, dass Steuerelementconsumer Objektdiagramm direkt ändern.</span><span class="sxs-lookup"><span data-stu-id="7f16c-114">By default, the field reference for such an object is kept private, which prevents control consumers from modifying the object graph directly.</span></span> <span data-ttu-id="7f16c-115">Stattdessen Steuerelementconsumer werden erwartet, dass das Ändern des Objektdiagramms mithilfe von Standardmustern, die von Programmiermodellen, erhalten das Layout-Stammelement, das untergeordnete Element Sammlungen, die dedizierten öffentliche Eigenschaften wie z. B. aktiviert sind und so weiter.</span><span class="sxs-lookup"><span data-stu-id="7f16c-115">Instead, control consumers are expected to modify the object graph by using standard patterns that are enabled by programming models, such as by obtaining the layout root, the child element collections, the dedicated public properties, and so on.</span></span>  
   
- Der Wert des `x:FieldModifier`\-Attributs variiert je nach Programmiersprache, und sein Zweck kann in bestimmten Frameworks abweichen.  Die zu verwendende Zeichenfolge hängt davon ab, wie die jeweilige Sprache ihren <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert, sowie von den Typkonvertern, die zum Definieren der Bedeutungen für <xref:System.Reflection.TypeAttributes?displayProperty=fullName> und <xref:System.Reflection.TypeAttributes?displayProperty=fullName> zurückgegeben werden, und ob bei der Sprache die Groß\- und Kleinschreibung beachtet werden muss.  
+ <span data-ttu-id="7f16c-116">Der Wert für die `x:FieldModifier` Attribut variiert je nach Programmiersprache und ihren Zweck kann in bestimmten Frameworks variieren.</span><span class="sxs-lookup"><span data-stu-id="7f16c-116">The value for the `x:FieldModifier` attribute varies by programming language, and its purpose can vary in specific frameworks.</span></span> <span data-ttu-id="7f16c-117">Die zu verwendende Zeichenfolge hängt von verschiedenen Sprachen wie implementiert die <xref:System.CodeDom.Compiler.CodeDomProvider> und -Typkonverter, die zurückgegeben wird, um die Bedeutung für definieren <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> und <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, und gibt an, ob diese Sprache Groß-/Kleinschreibung beachtet wird.</span><span class="sxs-lookup"><span data-stu-id="7f16c-117">The string to use depends on how each language implements its <xref:System.CodeDom.Compiler.CodeDomProvider> and the type converters it returns to define the meanings for <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> and <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, and whether that language is case sensitive.</span></span>  
   
--   In [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)] lautet die zum Festlegen von <xref:System.Reflection.TypeAttributes?displayProperty=fullName> zu übergebende Zeichenfolge `public`.  
+-   <span data-ttu-id="7f16c-118">Für [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `public`.</span><span class="sxs-lookup"><span data-stu-id="7f16c-118">For [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], the string to pass to designate <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is `public`.</span></span>  
   
--   In [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)] lautet die zum Festlegen von <xref:System.Reflection.TypeAttributes?displayProperty=fullName> zu übergebende Zeichenfolge `Public`.  
+-   <span data-ttu-id="7f16c-119">Für [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `Public`.</span><span class="sxs-lookup"><span data-stu-id="7f16c-119">For [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], the string to pass to designate <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> is `Public`.</span></span>  
   
--   Für [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)] sind gegenwärtig keine Ziele für XAML vorhanden. Daher ist die zu übergebenden Zeichenfolge nicht definiert.  
+-   <span data-ttu-id="7f16c-120">Für [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], derzeit keine Ziele für XAML vorhanden; daher ist die Zeichenfolge übergeben nicht definiert.</span><span class="sxs-lookup"><span data-stu-id="7f16c-120">For [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], no targets for XAML currently exist; therefore, the string to pass is undefined.</span></span>  
   
- Sie können auch <xref:System.Reflection.TypeAttributes?displayProperty=fullName> \(`internal` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Friend` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]\) festlegen, das Angeben von <xref:System.Reflection.TypeAttributes?displayProperty=fullName> ist unüblich, da `NotPublic`als Verhalten bereits die Standardeinstellung darstellt.  
+ <span data-ttu-id="7f16c-121">Sie können auch angeben, <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Friend` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) aber angeben <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist ungewöhnlich, da `NotPublic` wie das Verhalten bereits die Standardeinstellung ist.</span><span class="sxs-lookup"><span data-stu-id="7f16c-121">You can also specify <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` in [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Friend` in [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) but specifying <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is unusual because `NotPublic` as the behavior is already the default.</span></span>  
   
- <xref:System.Reflection.TypeAttributes?displayProperty=fullName> ist das Standardverhalten, da nur selten Code außerhalb der Assembly, die das XAML kompilierte, auf ein XAML\-erstelltes Element zugreifen muss.  WPF\-Sicherheitsarchitektur zusammen mit XAML\-Kompilierungsverhalten deklariert keine Felder, die Elementinstanzen als öffentlich speichern, es sei denn, Sie legen den `x:FieldModifier` ausdrücklich zum Zulassen öffentlichen Zugriffs fest.  
+ <span data-ttu-id="7f16c-122"><xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>ist das Standardverhalten, da sie selten ist, dass Code außerhalb der Assembly, die den XAML-Code kompiliert Zugriff auf ein Element mit XAML erstellt benötigt.</span><span class="sxs-lookup"><span data-stu-id="7f16c-122"><xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> is the default behavior because it is infrequent that code outside the assembly that compiled the XAML needs access to a XAML-created element.</span></span> <span data-ttu-id="7f16c-123">WPF-Sicherheitsarchitektur zusammen mit XAML-Kompilierungsverhalten nicht Felder, die Elementinstanzen als öffentlich speichern deklarieren, es sei denn, Sie ausdrücklich Festlegen der `x:FieldModifier` den öffentlichen Zugriff zulässt.</span><span class="sxs-lookup"><span data-stu-id="7f16c-123">WPF security architecture together with XAML compilation behavior will not declare fields that store element instances as public, unless you specifically set the `x:FieldModifier` to allow public access.</span></span>  
   
- `x:FieldModifier` ist nur für Elemente mit einem [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md) relevant, da der Name zum Verweis auf das Feld verwendet wird, nachdem es öffentlich ist.  
+ <span data-ttu-id="7f16c-124">`x:FieldModifier`ist nur relevant, für Elemente mit einem [X: Name-Direktive](../../../docs/framework/xaml-services/x-name-directive.md) , da dieser Name verwendet wird, um das Feld verweisen, nachdem es öffentlich ist.</span><span class="sxs-lookup"><span data-stu-id="7f16c-124">`x:FieldModifier` is only relevant for elements with an [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md) because that name is used to reference the field after it is public.</span></span>  
   
- Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie sie nicht öffentlich machen, indem Sie [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) verwenden.  Das [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Instanz der Stammelementklasse aus.  Sie können sowohl `x:Name` als auch `x:FieldModifier` im Stammelement platzieren, wobei hierdurch jedoch nur eine Kopie des öffentlichen Felds des Stammelements erstellt wird und die Zugriffsebene der eigentlichen Stammelementklasse weiterhin vom [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) gesteuert wird.  
+ <span data-ttu-id="7f16c-125">Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Sie können jedoch machen es nicht öffentliche mithilfe der [X: ClassModifier-Direktive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span><span class="sxs-lookup"><span data-stu-id="7f16c-125">By default, the partial class for the root element is public; however, you can make it nonpublic by using the [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span> <span data-ttu-id="7f16c-126">Die [X: ClassModifier-Direktive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Instanz der Stammelementklasse.</span><span class="sxs-lookup"><span data-stu-id="7f16c-126">The [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) also affects the access level of the instance of the root element class.</span></span> <span data-ttu-id="7f16c-127">Sie können beide einfügen `x:Name` und `x:FieldModifier` im Stamm-Element, aber dies nur eine Kopie öffentliches Feld der "Root"-Element mit der Zugriffsebene der "true"-Klasse weiterhin von gesteuert [X: ClassModifier-Direktive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span><span class="sxs-lookup"><span data-stu-id="7f16c-127">You can put both `x:Name` and `x:FieldModifier` on the root element, but this only makes a public field copy of the root element, with the true root element class access level still controlled by [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span>  
   
-## Siehe auch  
- [XAML\- und benutzerdefinierte Klassen für WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Code\-Behind und XAML in WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
- [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [Erstellen einer WPF\-Anwendung \(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
- [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+## <a name="see-also"></a><span data-ttu-id="7f16c-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7f16c-128">See Also</span></span>  
+ [<span data-ttu-id="7f16c-129">XAML- und benutzerdefinierte Klassen für WPF</span><span class="sxs-lookup"><span data-stu-id="7f16c-129">XAML and Custom Classes for WPF</span></span>](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="7f16c-130">Code-Behind und XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="7f16c-130">Code-Behind and XAML in WPF</span></span>](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="7f16c-131">x:Name-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7f16c-131">x:Name Directive</span></span>](../../../docs/framework/xaml-services/x-name-directive.md)  
+ [<span data-ttu-id="7f16c-132">Erstellen einer WPF-Anwendung (WPF)</span><span class="sxs-lookup"><span data-stu-id="7f16c-132">Building a WPF Application (WPF)</span></span>](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="7f16c-133">x:ClassModifier-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7f16c-133">x:ClassModifier Directive</span></span>](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

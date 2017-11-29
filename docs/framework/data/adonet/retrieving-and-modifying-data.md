@@ -1,73 +1,76 @@
 ---
-title: "Abrufen und &#196;ndern von Daten in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Abrufen und Ändern von Daten in ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Abrufen und &#196;ndern von Daten in ADO.NET
-Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten.  Die .NET Framework\-Datenanbieter von ADO.NET bilden eine Brücke zwischen der Anwendung und der Datenquelle. Sie ermöglichen das Ausführen von Befehlen sowie das Abrufen von Daten mithilfe eines **DataReader** oder eines **DataAdapter**.  Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren.  In ADO.NET werden zum Aktualisieren von Daten der **DataAdapter**, das <xref:System.Data.DataSet>\-Objekt und **Command**\-Objekte und u. U. auch Transaktionen verwendet.  
+# <a name="retrieving-and-modifying-data-in-adonet"></a><span data-ttu-id="c5fea-102">Abrufen und Ändern von Daten in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c5fea-102">Retrieving and Modifying Data in ADO.NET</span></span>
+<span data-ttu-id="c5fea-103">Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten.</span><span class="sxs-lookup"><span data-stu-id="c5fea-103">A primary function of any database application is connecting to a data source and retrieving the data that it contains.</span></span> <span data-ttu-id="c5fea-104">Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle können Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder ein **"DataAdapter"** .</span><span class="sxs-lookup"><span data-stu-id="c5fea-104">The .NET Framework data providers of ADO.NET serve as a bridge between an application and a data source, allowing you to execute commands as well as to retrieve data by using a **DataReader** or a **DataAdapter**.</span></span> <span data-ttu-id="c5fea-105">Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c5fea-105">A key function of any database application is the ability to update the data that is stored in the database.</span></span> <span data-ttu-id="c5fea-106">In ADO.NET aktualisieren von Daten werden mithilfe der **"DataAdapter"** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.</span><span class="sxs-lookup"><span data-stu-id="c5fea-106">In ADO.NET, updating data involves using the **DataAdapter** and <xref:System.Data.DataSet>, and **Command** objects; and it may also involve using transactions.</span></span>  
   
-## In diesem Abschnitt  
- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- Beschreibt, wie eine Verbindung zu einer Datenquelle hergestellt wird und wie mit Verbindungsereignissen gearbeitet wird.  
+## <a name="in-this-section"></a><span data-ttu-id="c5fea-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c5fea-107">In This Section</span></span>  
+ [<span data-ttu-id="c5fea-108">Aufbauen der Verbindung zu einer Datenquelle</span><span class="sxs-lookup"><span data-stu-id="c5fea-108">Connecting to a Data Source</span></span>](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ <span data-ttu-id="c5fea-109">Beschreibt, wie eine Verbindung zu einer Datenquelle hergestellt wird und wie mit Verbindungsereignissen gearbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="c5fea-109">Describes how to establish a connection to a data source and how to work with connection events.</span></span>  
   
- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)  
- Enthält Themen, die verschiedene Aspekte der Verwendung von Verbindungszeichenfolgen beschreiben, einschließlich der Schlüsselwörter für Verbindungszeichenfolgen und Sicherheitsinformationen sowie das Speichern und Abrufen von Verbindungszeichenfolgen.  
+ [<span data-ttu-id="c5fea-110">Verbindungszeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="c5fea-110">Connection Strings</span></span>](../../../../docs/framework/data/adonet/connection-strings.md)  
+ <span data-ttu-id="c5fea-111">Enthält Themen, die verschiedene Aspekte der Verwendung von Verbindungszeichenfolgen beschreiben, einschließlich der Schlüsselwörter für Verbindungszeichenfolgen und Sicherheitsinformationen sowie das Speichern und Abrufen von Verbindungszeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="c5fea-111">Contains topics describing various aspects of using connection strings, including connection string keywords, security info, and storing and retrieving them.</span></span>  
   
- [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)  
- Beschreibt das Verbindungspooling für die .NET Framework\-Datenanbieter.  
+ [<span data-ttu-id="c5fea-112">Verbindungspooling</span><span class="sxs-lookup"><span data-stu-id="c5fea-112">Connection Pooling</span></span>](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ <span data-ttu-id="c5fea-113">Beschreibt das Verbindungspooling für die .NET Framework-Datenanbieter.</span><span class="sxs-lookup"><span data-stu-id="c5fea-113">Describes connection pooling for the .NET Framework data providers.</span></span>  
   
- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.  
+ [<span data-ttu-id="c5fea-114">Befehle und Parameter</span><span class="sxs-lookup"><span data-stu-id="c5fea-114">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ <span data-ttu-id="c5fea-115">Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.</span><span class="sxs-lookup"><span data-stu-id="c5fea-115">Contains topics describing how to create commands and command builders, configure parameters, and how to execute commands to retrieve and modify data.</span></span>  
   
- [DataAdapter und DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter\-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.  
+ [<span data-ttu-id="c5fea-116">"DataAdapters" und "DataReaders"</span><span class="sxs-lookup"><span data-stu-id="c5fea-116">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ <span data-ttu-id="c5fea-117">Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="c5fea-117">Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.</span></span>  
   
- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- Enthält Themen, in denen beschrieben wird, wie lokale Transaktionen und verteilte Transaktionen ausgeführt werden und wie Sie mit vollständiger Parallelität arbeiten.  
+ [<span data-ttu-id="c5fea-118">Transaktionen und Parallelität</span><span class="sxs-lookup"><span data-stu-id="c5fea-118">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ <span data-ttu-id="c5fea-119">Enthält Themen, in denen beschrieben wird, wie lokale Transaktionen und verteilte Transaktionen ausgeführt werden und wie Sie mit vollständiger Parallelität arbeiten.</span><span class="sxs-lookup"><span data-stu-id="c5fea-119">Contains topics describing how to perform local transactions, distributed transactions, and work with optimistic concurrency.</span></span>  
   
- [Abrufen von Identitäts\- oder AutoWert\-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Enthält ein Beispiel für das Zuordnen der für eine **identity**\-Spalte in einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]\-Tabelle oder für ein **Autonumber**\-Feld in einer Microsoft Access\-Tabelle generierten Werte zu einer Spalte einer eingefügten Zeile in einer Tabelle.  Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
+ [<span data-ttu-id="c5fea-120">Abrufen von Identity- oder Autonumber-Werten</span><span class="sxs-lookup"><span data-stu-id="c5fea-120">Retrieving Identity or Autonumber Values</span></span>](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ <span data-ttu-id="c5fea-121">Enthält ein Beispiel für die Zuordnung der Werte für generiert eine **Identität** Spalte in einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Tabelle oder für eine **Autonumber** Feld in einer Microsoft Access-Tabelle auf eine Spalte einer eingefügten Zeile in einer Tabelle.</span><span class="sxs-lookup"><span data-stu-id="c5fea-121">Provides an example of mapping the values generated for an **identity** column in a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] table or for an **Autonumber** field in a Microsoft Access table, to a column of an inserted row in a table.</span></span> <span data-ttu-id="c5fea-122">Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.</span><span class="sxs-lookup"><span data-stu-id="c5fea-122">Discusses merging identity values in a `DataTable`.</span></span>  
   
- [Abrufen von Binärdaten](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- Beschreibt, wie Binärdaten oder große Datenstrukturen mit `CommandBehavior`.`SequentialAccess` abgerufen werden, um das Standardverhalten eines `DataReader` zu ändern.  
+ [<span data-ttu-id="c5fea-123">Abrufen von Binärdaten</span><span class="sxs-lookup"><span data-stu-id="c5fea-123">Retrieving Binary Data</span></span>](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ <span data-ttu-id="c5fea-124">Beschreibt, wie zum Abrufen von Binärdaten oder große Datenstrukturen mit `CommandBehavior`.`SequentialAccess`</span><span class="sxs-lookup"><span data-stu-id="c5fea-124">Describes how to retrieve binary data or large data structures using `CommandBehavior`.`SequentialAccess`</span></span> <span data-ttu-id="c5fea-125">So ändern Sie das Standardverhalten einer `DataReader`.</span><span class="sxs-lookup"><span data-stu-id="c5fea-125">to modify the default behavior of a `DataReader`.</span></span>  
   
- [Ändern von Daten mit gespeicherten Prozeduren](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- Beschreibt, wie mit Eingabe\- und Ausgabeparametern von gespeicherten Prozeduren eine Zeile in eine Datenbank eingefügt wird, wodurch ein neuer Identitätswert zurückgegeben wird.  
+ [<span data-ttu-id="c5fea-126">Ändern von Daten mit gespeicherten Prozeduren</span><span class="sxs-lookup"><span data-stu-id="c5fea-126">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ <span data-ttu-id="c5fea-127">Beschreibt, wie mit Eingabe- und Ausgabeparametern von gespeicherten Prozeduren eine Zeile in eine Datenbank eingefügt wird, wodurch ein neuer Identitätswert zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="c5fea-127">Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.</span></span>  
   
- [Abrufen von Schemainformationen aus einer Datenbank](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- Beschreibt, wie verfügbare Datenbanken oder Kataloge, Tabellen und Ansichten in einer Datenbank, für Tabellen vorhandene Einschränkungen und andere Schemainformationen aus einer Datenquelle abgerufen werden.  
+ [<span data-ttu-id="c5fea-128">Abrufen von Datenbankschemainformationen</span><span class="sxs-lookup"><span data-stu-id="c5fea-128">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ <span data-ttu-id="c5fea-129">Beschreibt, wie verfügbare Datenbanken oder Kataloge, Tabellen und Ansichten in einer Datenbank, für Tabellen vorhandene Einschränkungen und andere Schemainformationen aus einer Datenquelle abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="c5fea-129">Describes how to obtain available databases or catalogs, tables and views in a database, constraints that exist for tables, and other schema information from a data source.</span></span>  
   
- ['DbProviderFactory'](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- Beschreibt das Anbietermodell für Zuordnungsinstanzen und veranschaulicht, wie die Basisklassen im `System.Data.Common`\-Namespace verwendet werden.  
+ [<span data-ttu-id="c5fea-130">DbProviderFactories</span><span class="sxs-lookup"><span data-stu-id="c5fea-130">DbProviderFactories</span></span>](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ <span data-ttu-id="c5fea-131">Beschreibt das Anbietermodell für Zuordnungsinstanzen und veranschaulicht, wie die Basisklassen im `System.Data.Common`-Namespace verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c5fea-131">Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.</span></span>  
   
- [Datenablaufverfolgung in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
- Beschreibt, wie ADO.NET eine integrierte Funktionalität für die Datenablaufverfolgung bereitstellt.  
+ [<span data-ttu-id="c5fea-132">Datenablaufverfolgung in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c5fea-132">Data Tracing in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-tracing.md)  
+ <span data-ttu-id="c5fea-133">Beschreibt, wie ADO.NET eine integrierte Funktionalität für die Datenablaufverfolgung bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="c5fea-133">Describes how ADO.NET provides built-in data tracing functionality.</span></span>  
   
- [Leistungsindikatoren](../../../../docs/framework/data/adonet/performance-counters.md)  
- Beschreibt für `SqlClient` und `OracleClient` verfügbare Leistungsindikatoren.  
+ [<span data-ttu-id="c5fea-134">Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="c5fea-134">Performance Counters</span></span>](../../../../docs/framework/data/adonet/performance-counters.md)  
+ <span data-ttu-id="c5fea-135">Beschreibt für `SqlClient` und `OracleClient` verfügbare Leistungsindikatoren.</span><span class="sxs-lookup"><span data-stu-id="c5fea-135">Describes performance counters available for `SqlClient` and `OracleClient`.</span></span>  
   
- [Asynchrone Programmierung](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Beschreibt die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]\-Unterstützung für die asynchrone Programmierung.  
+ [<span data-ttu-id="c5fea-136">Asynchrone Programmierung</span><span class="sxs-lookup"><span data-stu-id="c5fea-136">Asynchronous Programming</span></span>](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
+ <span data-ttu-id="c5fea-137">Beschreibt die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Unterstützung für die asynchrone Programmierung.</span><span class="sxs-lookup"><span data-stu-id="c5fea-137">Describes [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] support for asynchronous programming.</span></span>  
   
- [SqlClient\-Streamingunterstützung](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Erläutert, wie Sie Anwendungen schreiben, die Daten aus [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] streamen, ohne sie vollständig in den Arbeitsspeicher zu laden.  
+ [<span data-ttu-id="c5fea-138">SqlClient-Streamingunterstützung</span><span class="sxs-lookup"><span data-stu-id="c5fea-138">SqlClient Streaming Support</span></span>](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
+ <span data-ttu-id="c5fea-139">Erläutert, wie Sie Anwendungen schreiben, die Daten aus [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] streamen, ohne sie vollständig in den Arbeitsspeicher zu laden.</span><span class="sxs-lookup"><span data-stu-id="c5fea-139">Discusses how to write applications that stream data from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] without having it fully loaded in memory.</span></span>  
   
-## Siehe auch  
- [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Sichern von ADO.NET\-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="c5fea-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5fea-140">See Also</span></span>  
+ [<span data-ttu-id="c5fea-141">Datentypzuordnungen in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c5fea-141">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [<span data-ttu-id="c5fea-142">DataSets, DataTables und DataViews</span><span class="sxs-lookup"><span data-stu-id="c5fea-142">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="c5fea-143">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="c5fea-143">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="c5fea-144">SQL Server und ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c5fea-144">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="c5fea-145">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="c5fea-145">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

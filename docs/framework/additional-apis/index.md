@@ -1,12 +1,11 @@
 ---
-title: "Zusätzliche Klassenbibliotheken und APIs | Microsoft-Dokumentation"
+title: "Zusätzliche Klassenbibliotheken und APIs"
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,50 +14,55 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b53b8acc2a6c56db6a9d8a9b7c685a2d400a53e1
-ms.openlocfilehash: 34815268b707aa70d174a1bbc04c32276db8412d
-ms.contentlocale: de-de
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="additional-class-libraries-and-apis"></a><span data-ttu-id="89cd3-102">Zusätzliche Klassenbibliotheken und APIs</span><span class="sxs-lookup"><span data-stu-id="89cd3-102">Additional class libraries and APIs</span></span>
 
-# <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
-
-Um die plattformübergreifende Entwicklung für das sich ständig weiterentwickelnde .NET Framework für unsere Kunden rechtzeitig zu verbessern oder neue Funktionalität einzuführen, werden neue Funktionen out-of-band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
+<span data-ttu-id="89cd3-103">Um die plattformübergreifende Entwicklung für das sich ständig weiterentwickelnde .NET Framework für unsere Kunden rechtzeitig zu verbessern oder neue Funktionalität einzuführen, werden neue Funktionen out-of-band (OOB) veröffentlicht.</span><span class="sxs-lookup"><span data-stu-id="89cd3-103">The .NET Framework is constantly evolving and in order to improve cross-platform development or to introduce new functionality early to our customers, we release new features out of band (OOB).</span></span> <span data-ttu-id="89cd3-104">In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="89cd3-104">This topic lists the OOB projects that we provide documentation for.</span></span>  
   
-Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Die <xref:System.Text.CodePagesEncodingProvider>-Klasse beispielsweise macht Codepagecodierungen für UWP-Apps verfügbar, die mit .NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
+<span data-ttu-id="89cd3-105">Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen.</span><span class="sxs-lookup"><span data-stu-id="89cd3-105">In addition, some libraries target specific platforms or implementations of the .NET Framework.</span></span> <span data-ttu-id="89cd3-106">Z. B. die <xref:System.Text.CodePagesEncodingProvider> Klasse stellt codepagecodierungen uwp-apps mit .NET Framework entwickelt wurden zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="89cd3-106">For example, the <xref:System.Text.CodePagesEncodingProvider> class makes code page encodings available to UWP apps developed using the .NET Framework.</span></span> <span data-ttu-id="89cd3-107">Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="89cd3-107">This topic lists these libraries as well.</span></span>  
   
-## <a name="oob-projects"></a>OOB-Projekte
+## <a name="oob-projects"></a><span data-ttu-id="89cd3-108">OOB-Projekte</span><span class="sxs-lookup"><span data-stu-id="89cd3-108">OOB projects</span></span>
   
-| Projekt | Beschreibung |  
+| <span data-ttu-id="89cd3-109">Projekt</span><span class="sxs-lookup"><span data-stu-id="89cd3-109">Project</span></span> | <span data-ttu-id="89cd3-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="89cd3-110">Description</span></span> |  
 | ------- | ----------- |  
-| <xref:System.Collections.Immutable> | Bietet Auflistungen, die threadsicher sind und garantiert nie ihren Inhalt ändern. |
-| <xref:System.Net.Http.WinHttpHandler> | Stellt einen Meldungshandler für <xref:System.Net.Http.HttpClient> basierend auf der WinHTTP-Schnittstelle von Windows bereit. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Stellt eine Bibliothek von Vektortypen bereit, die die SIMD-Hardwarebeschleunigung nutzen können.| 
-| <xref:System.Threading.Tasks.Dataflow> | Die TPL-Datenflussbibliothek (Task Parallel Library) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. |  
+| <xref:System.Collections.Immutable> | <span data-ttu-id="89cd3-111">Bietet Auflistungen, die threadsicher sind und garantiert nie ihren Inhalt ändern.</span><span class="sxs-lookup"><span data-stu-id="89cd3-111">Provides collections that are thread safe and guaranteed to never change their contents.</span></span> |
+| <xref:System.Net.Http.WinHttpHandler> | <span data-ttu-id="89cd3-112">Stellt einen Meldungshandler für <xref:System.Net.Http.HttpClient> auf Grundlage der WinHTTP-Schnittstelle von Windows bereit.</span><span class="sxs-lookup"><span data-stu-id="89cd3-112">Provides a message handler for <xref:System.Net.Http.HttpClient> based on the WinHTTP interface of Windows.</span></span> |
+| [<span data-ttu-id="89cd3-113">System.Numerics.Vectors</span><span class="sxs-lookup"><span data-stu-id="89cd3-113">System.Numerics.Vectors</span></span>](https://msdn.microsoft.com/library/mt452176.aspx) | <span data-ttu-id="89cd3-114">Stellt eine Bibliothek von Vektortypen bereit, die die SIMD-Hardwarebeschleunigung nutzen können.</span><span class="sxs-lookup"><span data-stu-id="89cd3-114">Provides a library of vector types that can take advantage of SIMD hardware-based acceleration.</span></span>| 
+| <xref:System.Threading.Tasks.Dataflow> | <span data-ttu-id="89cd3-115">Die TPL-Datenflussbibliothek (Task Parallel Library) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="89cd3-115">The TPL Dataflow Library provides dataflow components to help increase the robustness of concurrency-enabled applications.</span></span> |  
 
-## <a name="platform-specific-libraries"></a>Plattformspezifische Bibliotheken
+## <a name="platform-specific-libraries"></a><span data-ttu-id="89cd3-116">Plattformspezifische Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="89cd3-116">Platform-specific libraries</span></span>
   
-| Projekt | Beschreibung |  
+| <span data-ttu-id="89cd3-117">Projekt</span><span class="sxs-lookup"><span data-stu-id="89cd3-117">Project</span></span> | <span data-ttu-id="89cd3-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="89cd3-118">Description</span></span> |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider>-Klasse, um Codepagecodierungen für Apps verfügbar zu machen, die für die universelle Windows-Plattform entwickelt werden. |  
+| <xref:System.Text.CodePagesEncodingProvider> | <span data-ttu-id="89cd3-119">Erweitert die <xref:System.Text.EncodingProvider> Klasse, um die codepagecodierungen für apps verfügbar zu machen, die auf Uwp abzielen.</span><span class="sxs-lookup"><span data-stu-id="89cd3-119">Extends the <xref:System.Text.EncodingProvider> class to make code page encodings available to apps that target the Universal Windows Platform.</span></span> |  
   
-## <a name="private-apis"></a>Private APIs  
+## <a name="private-apis"></a><span data-ttu-id="89cd3-120">Private APIs</span><span class="sxs-lookup"><span data-stu-id="89cd3-120">Private APIs</span></span>  
 
-Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine direkte Verwendung im Code vorgesehen und werden dafür auch nicht unterstützt.  
+<span data-ttu-id="89cd3-121">Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine direkte Verwendung im Code vorgesehen und werden dafür auch nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="89cd3-121">These APIs support the product infrastructure and are not intended/supported to be used directly from your code.</span></span>  
   
-| Name der API |  
-| -------- |  
-| [s_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |  
-| [DataMemberFieldEditor Class](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |  
-| [DataMemberListEditor Class](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |  
+| <span data-ttu-id="89cd3-122">Name der API</span><span class="sxs-lookup"><span data-stu-id="89cd3-122">API Name</span></span> |
+| -------- |
+| [<span data-ttu-id="89cd3-123">System.Net.Connection-Klasse</span><span class="sxs-lookup"><span data-stu-id="89cd3-123">System.Net.Connection Class</span></span>](../../../docs/framework/additional-apis/connection.md) |
+| [<span data-ttu-id="89cd3-124">System.Net.Connection.m\_WriteList-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-124">System.Net.Connection.m\_WriteList Field</span></span>](../../../docs/framework/additional-apis/m_writelist.md) |
+| [<span data-ttu-id="89cd3-125">System.Net.ConnectionGroup-Klasse</span><span class="sxs-lookup"><span data-stu-id="89cd3-125">System.Net.ConnectionGroup Class</span></span>](../../../docs/framework/additional-apis/connectiongroup.md) |
+| [<span data-ttu-id="89cd3-126">System.Net.ConnectionGroup.m\_ConnectionList-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-126">System.Net.ConnectionGroup.m\_ConnectionList Field</span></span>](../../../docs/framework/additional-apis/m_connectionlist.md) |
+| [<span data-ttu-id="89cd3-127">System.NET.HttpWebRequest". \_HttpResponse-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-127">System.Net.HttpWebRequest.\_HttpResponse Field</span></span>](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [<span data-ttu-id="89cd3-128">System.NET.HttpWebRequest". \_AutoRedirects-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-128">System.Net.HttpWebRequest.\_AutoRedirects Field</span></span>](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [<span data-ttu-id="89cd3-129">System.Net.ServicePoint.m\_ConnectionGroupList-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-129">System.Net.ServicePoint.m\_ConnectionGroupList Field</span></span>](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
+| [<span data-ttu-id="89cd3-130">System.Net.ServicePointManager.s\_ServicePointTable-Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-130">System.Net.ServicePointManager.s\_ServicePointTable Field</span></span>](../../../docs/framework/additional-apis/s_servicepointtable.md) |
+| [<span data-ttu-id="89cd3-131">System.Windows.Diagnostics.VisualDiagnostics.s\_IsDebuggerCheckDisabledForTestPurposes Feld</span><span class="sxs-lookup"><span data-stu-id="89cd3-131">System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field</span></span>](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [<span data-ttu-id="89cd3-132">System.Windows.Forms.Design.DataMemberFieldEditor-Klasse</span><span class="sxs-lookup"><span data-stu-id="89cd3-132">System.Windows.Forms.Design.DataMemberFieldEditor Class</span></span>](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
+| [<span data-ttu-id="89cd3-133">System.Windows.Forms.Design.DataMemberListEditor-Klasse</span><span class="sxs-lookup"><span data-stu-id="89cd3-133">System.Windows.Forms.Design.DataMemberListEditor Class</span></span>](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a><span data-ttu-id="89cd3-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89cd3-134">See also</span></span>
 
-[.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
-
+[<span data-ttu-id="89cd3-135">.NET Framework und Out-of-Band-Releases</span><span class="sxs-lookup"><span data-stu-id="89cd3-135">The .NET Framework and Out-of-Band Releases</span></span>](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)

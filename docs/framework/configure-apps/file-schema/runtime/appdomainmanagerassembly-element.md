@@ -1,75 +1,77 @@
 ---
-title: "&lt;appDomainManagerAssembly&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<appDomainManagerAssembly>-Element"
-  - "appDomainManagerAssembly-Element"
+title: '&lt;AppDomainManagerAssembly&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <appDomainManagerAssembly> element
+- appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e07b7bd18f19439f64ed8eaef5bda3bad5cef77
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;appDomainManagerAssembly&gt;-Element
-Gibt die Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.  
+# <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="39954-102">&lt;AppDomainManagerAssembly&gt; Element</span><span class="sxs-lookup"><span data-stu-id="39954-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
+<span data-ttu-id="39954-103">Gibt die Assembly an, die den Anwendungsdomänen-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="39954-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="39954-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="39954-104">\<configuration></span></span>  
+<span data-ttu-id="39954-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="39954-105">\<runtime></span></span>  
+<span data-ttu-id="39954-106">\<AppDomainManagerAssembly ></span><span class="sxs-lookup"><span data-stu-id="39954-106">\<appDomainManagerAssembly></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="39954-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="39954-107">Syntax</span></span>  
+  
+```xml  
 <appDomainManagerAssembly   
    value="assembly display name" />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39954-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="39954-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="39954-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="39954-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="39954-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="39954-110">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`value`|Erforderliches Attribut.  Gibt den Anzeigenamen der Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.|  
+|<span data-ttu-id="39954-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="39954-111">Attribute</span></span>|<span data-ttu-id="39954-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39954-112">Description</span></span>|  
+|---------------|-----------------|  
+|`value`|<span data-ttu-id="39954-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="39954-113">Required attribute.</span></span> <span data-ttu-id="39954-114">Gibt den Anzeigenamen der Assembly, die den Anwendungsdomänen-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="39954-114">Specifies the display name of the assembly that provides the application domain manager for the default application domain in the process.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="39954-115">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="39954-115">Child Elements</span></span>  
+ <span data-ttu-id="39954-116">Keine</span><span class="sxs-lookup"><span data-stu-id="39954-116">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="39954-117">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="39954-117">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
+|<span data-ttu-id="39954-118">Element</span><span class="sxs-lookup"><span data-stu-id="39954-118">Element</span></span>|<span data-ttu-id="39954-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="39954-119">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="39954-120">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="39954-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="39954-121">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="39954-121">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Hinweise  
- Um den Typ des Anwendungsdomänen\-Managers anzugeben, müssen Sie dieses Element und das [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)\-Element angeben.  Wenn eines dieser Elemente nicht angegeben wird, wird das andere ignoriert.  
+## <a name="remarks"></a><span data-ttu-id="39954-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="39954-122">Remarks</span></span>  
+ <span data-ttu-id="39954-123">Um den Typ des Anwendungsdomänen-Managers anzugeben, müssen Sie dieses Element angeben und die [ \<AppDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) Element.</span><span class="sxs-lookup"><span data-stu-id="39954-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerType>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) element.</span></span> <span data-ttu-id="39954-124">Wenn eines dieser Elemente nicht angegeben ist, wird die andere ignoriert.</span><span class="sxs-lookup"><span data-stu-id="39954-124">If either of these elements is not specified, the other is ignored.</span></span>  
   
- Wenn die Standardanwendungsdomäne geladen wird, wird <xref:System.TypeLoadException> ausgelöst, falls die angegebene Assembly nicht vorhanden ist, oder nicht den Typ enthält, der vom [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)\-Element angegeben wird; und der Prozess nicht gestartet.  Wenn die Assembly gefunden wird, die Versionsinformationen jedoch nicht übereinstimmen, wird eine <xref:System.IO.FileLoadException> ausgelöst.  
+ <span data-ttu-id="39954-125">Wenn die Standardanwendungsdomäne geladen wird, <xref:System.TypeLoadException> wird ausgelöst, wenn die angegebene Assembly nicht vorhanden ist oder wenn die Assembly nicht mit den vom angegebenen Typ enthält die [ \<AppDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) -Element ist; und der Prozess nicht gestartet.</span><span class="sxs-lookup"><span data-stu-id="39954-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified assembly does not exist or if the assembly does not contain the type specified by the [\<appDomainManagerType>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) element; and the process fails to start.</span></span> <span data-ttu-id="39954-126">Wenn die Assembly gefunden wird, aber die Versionsinformationen nicht überein stimmt, eine <xref:System.IO.FileLoadException> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="39954-126">If the assembly is found but the version information does not match, a <xref:System.IO.FileLoadException> is thrown.</span></span>  
   
- Wenn Sie den Typ des Anwendungsdomänen\-Managers für die Standardanwendungsdomäne angeben, erben andere Anwendungsdomänen, die aus der Standardanwendungsdomäne erstellt wurden, den Typ des Anwendungsdomänen\-Managers.  Verwenden Sie die <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName>\-Eigenschaft und die <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>\-Eigenschaft, um für eine neue Anwendungsdomäne einen anderen Anwendungsdomänen\-Managertyp anzugeben.  
+ <span data-ttu-id="39954-127">Wenn Sie die Anwendung Manager Domänentyp für die Standardanwendungsdomäne angeben, erben andere Anwendungsdomänen, die von der Standardanwendungsdomäne erstellt Managertyp die Anwendung an.</span><span class="sxs-lookup"><span data-stu-id="39954-127">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="39954-128">Verwenden der <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> und <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> Eigenschaften zur Angabe einer anderen Anwendung Manager Domänentyp für eine neue Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="39954-128">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
   
- Um den Anwendungsdomänen\-Managertyp anzugeben, ist vollständige Vertrauenswürdigkeit für die Anwendung erforderlich. \(Eine Anwendung, die auf dem Desktop ausgeführt wird, hat beispielsweise vollständige Vertrauenswürdigkeit.\) Wenn die Anwendung keine vollständige Vertrauenswürdigkeit hat, wird eine <xref:System.TypeLoadException> ausgelöst.  
+ <span data-ttu-id="39954-129">Die Anwendungsdomänen-Managertyp angeben, muss die Anwendung volle Vertrauenswürdigkeit.</span><span class="sxs-lookup"><span data-stu-id="39954-129">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="39954-130">(Z. B. weist eine Anwendung, die auf dem Desktop ausgeführte volle Vertrauenswürdigkeit.) Wenn die Anwendung nicht über die volle Vertrauenswürdigkeit verfügt eine <xref:System.TypeLoadException> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="39954-130">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
   
- Informationen zum Format des Anzeigenamens der Assembly finden Sie unter der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>\-Eigenschaft.  
+ <span data-ttu-id="39954-131">Das Format des Assemblyanzeigenamens, finden Sie unter der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="39954-131">For the format of the assembly display name, see the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property.</span></span>  
   
- Dieses Konfigurationselement ist erst ab [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] verfügbar.  
+ <span data-ttu-id="39954-132">Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.</span><span class="sxs-lookup"><span data-stu-id="39954-132">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angegeben werden kann, dass der `MyMgr`\-Typ in der `AdMgrExample`\-Assembly als Anwendungsdomänen\-Manager für die Standardanwendungsdomäne eines Prozesses verwendet wird.  
+## <a name="example"></a><span data-ttu-id="39954-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="39954-133">Example</span></span>  
+ <span data-ttu-id="39954-134">Das folgende Beispiel zeigt, wie Sie angeben, dass die Anwendungsdomänen-Manager für die Standardanwendungsdomäne eines Prozesses ist die `MyMgr` Geben Sie in der `AdMgrExample` Assembly.</span><span class="sxs-lookup"><span data-stu-id="39954-134">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <appDomainManagerType value="MyMgr" />  
@@ -79,10 +81,10 @@ Gibt die Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwen
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>   
- [\<appDomainManagerType\>\-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)   
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [SetAppDomainManagerType\-Methode](../Topic/ICLRControl::SetAppDomainManagerType%20Method.md)
+## <a name="see-also"></a><span data-ttu-id="39954-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="39954-135">See Also</span></span>  
+ <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="39954-136">\<AppDomainManagerType >-Element</span><span class="sxs-lookup"><span data-stu-id="39954-136">\<appDomainManagerType> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  
+ [<span data-ttu-id="39954-137">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="39954-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="39954-138">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="39954-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="39954-139">SetAppDomainManagerType-Methode</span><span class="sxs-lookup"><span data-stu-id="39954-139">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

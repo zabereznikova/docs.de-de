@@ -1,35 +1,38 @@
 ---
-title: "3553 - XamlServicesLoadStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3553 - XamlServicesLoadStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 23b6e14a-019f-48fc-b2d5-aaa3dc88d79a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7491b8a8a0245d624c56cf01d7d724f58da9f655
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3553 - XamlServicesLoadStart
-## Eigenschaften  
+# <a name="3553---xamlservicesloadstart"></a><span data-ttu-id="16fd2-102">3553 - XamlServicesLoadStart</span><span class="sxs-lookup"><span data-stu-id="16fd2-102">3553 - XamlServicesLoadStart</span></span>
+## <a name="properties"></a><span data-ttu-id="16fd2-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="16fd2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3553|  
-|Stichwörter|WebHost|  
-|Ebene|Information|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="16fd2-104">ID</span><span class="sxs-lookup"><span data-stu-id="16fd2-104">ID</span></span>|<span data-ttu-id="16fd2-105">3553</span><span class="sxs-lookup"><span data-stu-id="16fd2-105">3553</span></span>|  
+|<span data-ttu-id="16fd2-106">Stichwörter</span><span class="sxs-lookup"><span data-stu-id="16fd2-106">Keywords</span></span>|<span data-ttu-id="16fd2-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="16fd2-107">WebHost</span></span>|  
+|<span data-ttu-id="16fd2-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="16fd2-108">Level</span></span>|<span data-ttu-id="16fd2-109">Information</span><span class="sxs-lookup"><span data-stu-id="16fd2-109">Information</span></span>|  
+|<span data-ttu-id="16fd2-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="16fd2-110">Channel</span></span>|<span data-ttu-id="16fd2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="16fd2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Das Ereignis wird beim XamlServicesLoad\-Start ausgegeben.  
+## <a name="description"></a><span data-ttu-id="16fd2-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="16fd2-112">Description</span></span>  
+ <span data-ttu-id="16fd2-113">Das Ereignis wird beim XamlServicesLoad-Start ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="16fd2-113">This event is emitted on XamlServicesLoad start.</span></span>  
   
-## Meldung  
- XamlServicesLoad starten  
+## <a name="message"></a><span data-ttu-id="16fd2-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="16fd2-114">Message</span></span>  
+ <span data-ttu-id="16fd2-115">XamlServicesLoad starten</span><span class="sxs-lookup"><span data-stu-id="16fd2-115">XamlServicesLoad start</span></span>  
   
-## Details
+## <a name="details"></a><span data-ttu-id="16fd2-116">Details</span><span class="sxs-lookup"><span data-stu-id="16fd2-116">Details</span></span>

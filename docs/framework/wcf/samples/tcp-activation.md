@@ -1,39 +1,42 @@
 ---
-title: "TCP-Aktivierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TCP-Aktivierung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f02528828c3751b2f8e34bd7ebb8a1a789feeb2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# TCP-Aktivierung
-In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services \(WAS\) zum Aktivieren eines Diensts verwendet, der über das net.tcp\-Protokoll kommuniziert.  Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="tcp-activation"></a><span data-ttu-id="cd85f-102">TCP-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="cd85f-102">TCP Activation</span></span>
+<span data-ttu-id="cd85f-103">In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über das net.tcp-Protokoll kommuniziert.</span><span class="sxs-lookup"><span data-stu-id="cd85f-103">This sample demonstrates hosting a service that uses Windows Process Activation Services (WAS) to activate a service that communicates over the net.tcp protocol.</span></span> <span data-ttu-id="cd85f-104">Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="cd85f-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="cd85f-105">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="cd85f-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="cd85f-106">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="cd85f-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="cd85f-107">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="cd85f-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="cd85f-108">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="cd85f-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cd85f-109">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="cd85f-109">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
- Das Beispiel besteht aus einem Clientkonsolenprogramm \(.exe\) und einer in einem von WAS aktivierten Arbeitsprozess gehosteten Dienstbibliothek \(.dll\).  Die Clientaktivität ist im Konsolenfenster sichtbar.  
+ <span data-ttu-id="cd85f-110">Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe) und einer in einem von WAS aktivierten Arbeitsprozess gehosteten Dienstbibliothek (.dll).</span><span class="sxs-lookup"><span data-stu-id="cd85f-110">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by WAS.</span></span> <span data-ttu-id="cd85f-111">Die Clientaktivität ist im Konsolenfenster sichtbar.</span><span class="sxs-lookup"><span data-stu-id="cd85f-111">Client activity is visible in the console window.</span></span>  
   
- Der Dienst implementiert einen Vertrag, der ein Anforderungs\-Antwort\-Kommunikationsmuster definiert.  Der Vertrag wird von der `ICalculator`\-Schnittstelle definiert, die mathematische Operationen \(Addieren, Subtrahieren, Multiplizieren und Dividieren\) verfügbar macht, wie im folgenden Beispielcode dargestellt:  
+ <span data-ttu-id="cd85f-112">Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.</span><span class="sxs-lookup"><span data-stu-id="cd85f-112">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="cd85f-113">Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht, wie im folgenden Beispielcode dargestellt:</span><span class="sxs-lookup"><span data-stu-id="cd85f-113">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code:</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -50,7 +53,7 @@ public interface ICalculator
 }  
 ```  
   
- Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück:  
+ <span data-ttu-id="cd85f-114">Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück:</span><span class="sxs-lookup"><span data-stu-id="cd85f-114">The service implementation calculates and returns the appropriate result:</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -75,11 +78,11 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Im Beispiel wird eine Variation der net.tcp\-Bindung mit aktivierter TCP\-Portfreigabe und deaktivierter Sicherheit verwendet.  Wenn Sie eine gesicherte TCP\-Bindung verwenden möchten, ändern Sie den Sicherheitsmodus des Servers in die gewünschte Einstellung, und führen Sie Svcutil.exe erneut auf dem Client aus, um eine aktualisierte Clientkonfigurationsdatei zu generieren.  
+ <span data-ttu-id="cd85f-115">Im Beispiel wird eine Variation der net.tcp-Bindung mit aktivierter TCP-Portfreigabe und deaktivierter Sicherheit verwendet.</span><span class="sxs-lookup"><span data-stu-id="cd85f-115">The sample uses a variant of the net.tcp binding with TCP port sharing enabled and security turned off.</span></span> <span data-ttu-id="cd85f-116">Wenn Sie eine gesicherte TCP-Bindung verwenden möchten, ändern Sie den Sicherheitsmodus des Servers in die gewünschte Einstellung, und führen Sie Svcutil.exe erneut auf dem Client aus, um eine aktualisierte Clientkonfigurationsdatei zu generieren.</span><span class="sxs-lookup"><span data-stu-id="cd85f-116">If you want to use a secured TCP binding, change the server's security mode to the desired setting and re-run Svcutil.exe on the client to generate an update client configuration file.</span></span>  
   
- Das folgende Beispiel zeigt den Konfigurationscode für den Dienst:  
+ <span data-ttu-id="cd85f-117">Das folgende Beispiel zeigt den Konfigurationscode für den Dienst:</span><span class="sxs-lookup"><span data-stu-id="cd85f-117">The following sample shows the configuration for the service:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <services>  
@@ -115,9 +118,9 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- Der Endpunkt des Clients wird wie im folgenden Beispielcode dargestellt konfiguriert:  
+ <span data-ttu-id="cd85f-118">Der Endpunkt des Clients wird wie im folgenden Beispielcode dargestellt konfiguriert:</span><span class="sxs-lookup"><span data-stu-id="cd85f-118">The client's endpoint is configured as shown in the following sample code:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <bindings>  
         <netTcpBinding>  
@@ -134,7 +137,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.  Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="cd85f-119">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="cd85f-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="cd85f-120">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="cd85f-120">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -145,36 +148,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="cd85f-121">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="cd85f-121">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass [!INCLUDE[iisver](../../../../includes/iisver-md.md)] installiert ist.  [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ist für die WAS\-Aktivierung erforderlich.  
+1.  <span data-ttu-id="cd85f-122">Stellen Sie sicher, dass [!INCLUDE[iisver](../../../../includes/iisver-md.md)] installiert ist.</span><span class="sxs-lookup"><span data-stu-id="cd85f-122">Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed.</span></span> [!INCLUDE[iisver](../../../../includes/iisver-md.md)]<span data-ttu-id="cd85f-123"> ist für die WAS-Aktivierung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="cd85f-123"> is required for WAS activation.</span></span>  
   
-2.  Vergewissern Sie sich, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+2.  <span data-ttu-id="cd85f-124">Achten Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="cd85f-124">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-     Außerdem müssen Sie die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Aktivierungskomponenten für andere Protokolle als HTTP installieren:  
+     <span data-ttu-id="cd85f-125">Außerdem müssen Sie die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Aktivierungskomponenten für andere Protokolle als HTTP installieren:</span><span class="sxs-lookup"><span data-stu-id="cd85f-125">In addition, you must install the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non-HTTP activation components:</span></span>  
   
-    1.  Aktivieren Sie über das Menü **Start** die **Systemsteuerung**.  
+    1.  <span data-ttu-id="cd85f-126">Aus der **starten** Menü wählen **Systemsteuerung**.</span><span class="sxs-lookup"><span data-stu-id="cd85f-126">From the **Start** menu, choose **Control Panel**.</span></span>  
   
-    2.  Wählen Sie **Programme und Funktionen** aus.  
+    2.  <span data-ttu-id="cd85f-127">Wählen Sie **Programme und Funktionen**.</span><span class="sxs-lookup"><span data-stu-id="cd85f-127">Select **Programs and Features**.</span></span>  
   
-    3.  Klicken Sie auf **Windows\-Komponenten aktivieren oder deaktivieren**.  
+    3.  <span data-ttu-id="cd85f-128">Klicken Sie auf **aktivieren oder Deaktivieren von Windows-Komponenten**.</span><span class="sxs-lookup"><span data-stu-id="cd85f-128">Click **Turn Windows Components on or Off**.</span></span>  
   
-    4.  Erweitern Sie den Knoten **Microsoft .NET Framework 3.0**, und aktivieren Sie die Funktion **Windows Communication Foundation\-Nicht\-HTTP\-Aktivierung**.  
+    4.  <span data-ttu-id="cd85f-129">Erweitern Sie die **Microsoft .NET Framework 3.0** Knoten, und überprüfen Sie die **Windows Communication Foundation-nicht-HTTP-Aktivierung** Funktion.</span><span class="sxs-lookup"><span data-stu-id="cd85f-129">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>  
   
-3.  Konfigurieren Sie WAS für die Unterstützung der TCP\-Aktivierung.  
+3.  <span data-ttu-id="cd85f-130">Konfigurieren Sie WAS für die Unterstützung der TCP-Aktivierung.</span><span class="sxs-lookup"><span data-stu-id="cd85f-130">Configure WAS to support TCP activation.</span></span>  
   
-     Zur Vereinfachung sind die folgenden beiden Schritte in der Batchdatei AddNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.  
+     <span data-ttu-id="cd85f-131">Zur Vereinfachung sind die folgenden beiden Schritte in der Batchdatei AddNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.</span><span class="sxs-lookup"><span data-stu-id="cd85f-131">As a convenience, the following two steps are implemented in a batch file called AddNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  Zur Unterstützung der net.tcp\-Aktivierung muss die Standardwebsite zuerst an einen net.tcp\-Port gebunden werden.  Dies kann mit "Appcmd.exe" erfolgen. Diese Datei wird mit Internetinformationsdienste \(IIS\) 7.0 installiert.  Führen Sie an einer Eingabeaufforderung auf Administratorebene den folgenden Befehl aus:  
+    1.  <span data-ttu-id="cd85f-132">Zur Unterstützung der net.tcp-Aktivierung muss die Standardwebsite zuerst an einen net.tcp-Port gebunden werden.</span><span class="sxs-lookup"><span data-stu-id="cd85f-132">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="cd85f-133">Dies kann mit "Appcmd.exe" erfolgen. Diese Datei wird mit Internetinformationsdienste (IIS) 7.0 installiert.</span><span class="sxs-lookup"><span data-stu-id="cd85f-133">This can be done using Appcmd.exe, which is installed with the Internet Information Services 7.0 (IIS) management toolset.</span></span> <span data-ttu-id="cd85f-134">Führen Sie an einer Eingabeaufforderung auf Administratorebene den folgenden Befehl aus:</span><span class="sxs-lookup"><span data-stu-id="cd85f-134">From an administrator-level command prompt, run the following command:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
         > [!TIP]
-        >  Dieser Befehl ist eine einzelne Textzeile.  Mit dem Befehl wird eine neue net.tcp\-Sitebindung der Standardwebsite hinzugefügt, die TCP\-Port 808 mit jedem beliebigen Hostnamen überwacht.  
+        >  <span data-ttu-id="cd85f-135">Dieser Befehl ist eine einzelne Textzeile.</span><span class="sxs-lookup"><span data-stu-id="cd85f-135">This command is a single line of text.</span></span> <span data-ttu-id="cd85f-136">Mit dem Befehl wird eine neue net.tcp-Sitebindung der Standardwebsite hinzugefügt, die TCP-Port 808 mit jedem beliebigen Hostnamen überwacht.</span><span class="sxs-lookup"><span data-stu-id="cd85f-136">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any hostname.</span></span>  
   
-    2.  Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.tcp\-Bindung, aber jede Anwendung kann die net.tcp\-Unterstützung unabhängig von den anderen Anwendungen aktivieren.  Um net.tcp für die Anwendung \/servicemodelsamples zu aktivieren, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus:  
+    2.  <span data-ttu-id="cd85f-137">Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.tcp-Bindung, aber jede Anwendung kann die net.tcp-Unterstützung unabhängig von den anderen Anwendungen aktivieren.</span><span class="sxs-lookup"><span data-stu-id="cd85f-137">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="cd85f-138">Um net.tcp für die Anwendung /servicemodelsamples zu aktivieren, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus:</span><span class="sxs-lookup"><span data-stu-id="cd85f-138">To enable net.tcp for the /servicemodelsamples application, run the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -182,17 +185,17 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Dieser Befehl ist eine einzelne Textzeile.  Mit diesem Befehl wird die Anwendung "\/servicemodelsamples" so konfiguriert, dass sowohl über http:\/\/localhost\/\/servicemodelsamples als auch über net.tcp:\/\/localhost\/\/servicemodelsamples darauf zugegriffen werden kann.  
+        >  <span data-ttu-id="cd85f-139">Dieser Befehl ist eine einzelne Textzeile.</span><span class="sxs-lookup"><span data-stu-id="cd85f-139">This command is a single line of text.</span></span> <span data-ttu-id="cd85f-140">Mit diesem Befehl wird die Anwendung "/servicemodelsamples" so konfiguriert, dass sowohl über http://localhost//servicemodelsamples als auch über net.tcp://localhost//servicemodelsamples darauf zugegriffen werden kann.</span><span class="sxs-lookup"><span data-stu-id="cd85f-140">This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.</span></span>  
   
-4.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+4.  <span data-ttu-id="cd85f-141">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="cd85f-141">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  <span data-ttu-id="cd85f-142">Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="cd85f-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-     Entfernen Sie die net.tcp\-Sitebindung, die für dieses Beispiel hinzugefügt wurde.  
+     <span data-ttu-id="cd85f-143">Entfernen Sie die net.tcp-Sitebindung, die für dieses Beispiel hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="cd85f-143">Remove the net.tcp site binding you added for this sample.</span></span>  
   
-     Zur Vereinfachung sind die folgenden beiden Schritte in einer Batchdatei namens RemoveNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.  
+     <span data-ttu-id="cd85f-144">Zur Vereinfachung sind die folgenden beiden Schritte in einer Batchdatei namens RemoveNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.</span><span class="sxs-lookup"><span data-stu-id="cd85f-144">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  Entfernen Sie net.tcp aus der Liste der aktivierten Protokolle, indem Sie den folgenden Befehl an einer Eingabeaufforderung auf Administratorebene ausführen:  
+    1.  <span data-ttu-id="cd85f-145">Entfernen Sie net.tcp aus der Liste der aktivierten Protokolle, indem Sie den folgenden Befehl an einer Eingabeaufforderung auf Administratorebene ausführen:</span><span class="sxs-lookup"><span data-stu-id="cd85f-145">Remove net.tcp from the list of enabled protocols by running the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -200,9 +203,9 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Dieser Befehl muss als eine Textzeile eingegeben werden.  
+        >  <span data-ttu-id="cd85f-146">Dieser Befehl muss als eine Textzeile eingegeben werden.</span><span class="sxs-lookup"><span data-stu-id="cd85f-146">This command must be entered as a single line of text.</span></span>  
   
-    2.  Entfernen Sie die net.tcp\-Sitebindung, indem Sie den folgenden Befehl an einer Eingabeaufforderung auf Administratorebene ausführen.  
+    2.  <span data-ttu-id="cd85f-147">Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl an einer Eingabeaufforderung auf Administratorebene ausführen.</span><span class="sxs-lookup"><span data-stu-id="cd85f-147">Remove the net.tcp site binding by running the following command from an administrator-level command prompt:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -210,7 +213,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Dieser Befehl muss als eine Textzeile eingegeben werden.  
+        >  <span data-ttu-id="cd85f-148">Dieser Befehl muss als eine Textzeile eingegeben werden.</span><span class="sxs-lookup"><span data-stu-id="cd85f-148">This command must be typed in as a single line of text.</span></span>  
   
-## Siehe auch  
- [AppFabric\-Hosting\- und \-Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="cd85f-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cd85f-149">See Also</span></span>  
+ [<span data-ttu-id="cd85f-150">AppFabric-Hosting und Persistenzbeispiele</span><span class="sxs-lookup"><span data-stu-id="cd85f-150">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

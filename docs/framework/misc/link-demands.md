@@ -1,48 +1,51 @@
 ---
-title: "Link Demands | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], demands"
-  - "demanded permissions"
-  - "permissions [.NET Framework], demands"
-  - "granting permissions, demands"
-  - "code access security, demands"
-  - "user demands for permission"
-  - "caller security checks"
-  - "link demands"
+title: "Verknüpfungsaufrufe"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [.NET Framework], demands
+- demanded permissions
+- permissions [.NET Framework], demands
+- granting permissions, demands
+- code access security, demands
+- user demands for permission
+- caller security checks
+- link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-caps.latest.revision: 18
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: faeeabeda89ea233e67b66b8848f5bbb665d3804
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Link Demands
-Ein Linkaufruf \(Verknüpfungsaufruf\) bewirkt eine Sicherheitsüberprüfung während der Just\-In\-Time\-Kompilierung, wobei nur die direkt aufrufende Assembly Ihres Codes überprüft wird.  Das Verlinken erfolgt, wenn der Code an einen Typverweis, einschließlich Funktionszeigerverweise und Methodenaufrufe, gebunden wird.  Hat die aufrufende Assembly keine ausreichende Berechtigung, Ihren Code zu verlinken, ist der Link unzulässig, und beim Laden und Ausführen des Codes wird eine Laufzeitausnahme ausgelöst.   Linkaufrufe können in Klassen, die von Ihrem Code erben, überschrieben werden.  
+# <a name="link-demands"></a><span data-ttu-id="e948a-102">Verknüpfungsaufrufe</span><span class="sxs-lookup"><span data-stu-id="e948a-102">Link Demands</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Beachten Sie, dass bei diesem Typ von Forderung kein vollständiger Stackwalk durchgeführt wird und der Code weiterhin anfällig für Täuschungsmanöver ist.  Wenn beispielsweise eine Methode in Assembly A durch einen Linkaufruf geschützt ist, wird ein direkter Aufrufer in Assembly B ausgehend von den Berechtigungen der Assembly B ausgewertet.  Der Linkaufruf wertet jedoch keine Methode in Assembly C aus, wenn er über die Methode in Assembly B indirekt die Methode in Assembly A aufruft.  Der Linkaufruf gibt nur die Berechtigungen an, die direkte Aufrufer in der unmittelbar aufrufenden Assembly haben müssen, um zu Ihrem Code zu verlinken.  Er gibt nicht die Berechtigungen an, die alle Aufrufer haben müssen, um Ihren Code auszuführen.  
+ <span data-ttu-id="e948a-103">Ein Linkaufruf (Verknüpfungsaufruf) bewirkt eine Sicherheitsüberprüfung während der Just-In-Time-Kompilierung, wobei nur die direkt aufrufende Assembly Ihres Codes überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="e948a-103">A link demand causes a security check during just-in-time compilation and checks only the immediate calling assembly of your code.</span></span> <span data-ttu-id="e948a-104">Das Verlinken erfolgt, wenn der Code an einen Typverweis, einschließlich Funktionszeigerverweise und Methodenaufrufe, gebunden wird.</span><span class="sxs-lookup"><span data-stu-id="e948a-104">Linking occurs when your code is bound to a type reference, including function pointer references and method calls.</span></span> <span data-ttu-id="e948a-105">Hat die aufrufende Assembly keine ausreichende Berechtigung, Ihren Code zu verlinken, ist der Link unzulässig, und beim Laden und Ausführen des Codes wird eine Laufzeitausnahme ausgelöst. </span><span class="sxs-lookup"><span data-stu-id="e948a-105">If the calling assembly does not have sufficient permission to link to your code, the link is not allowed and a runtime exception is thrown when the code is loaded and run.</span></span> <span data-ttu-id="e948a-106">Linkaufrufe können in Klassen, die von Ihrem Code erben, überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="e948a-106">Link demands can be overridden in classes that inherit from your code.</span></span>  
   
- Die Stackwalkmodifizierer <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.PermitOnly%2A> haben keinen Einfluss auf die Auswertung von Linkaufrufen.  Da Linkaufrufe keinen Stackwalk ausführen, haben die Stackwalkmodifizierer keinen Einfluss auf Linkaufrufe.  
+ <span data-ttu-id="e948a-107">Beachten Sie, dass bei diesem Typ von Forderung kein vollständiger Stackwalk durchgeführt wird und der Code weiterhin anfällig für Täuschungsmanöver ist.</span><span class="sxs-lookup"><span data-stu-id="e948a-107">Note that a full stack walk is not performed with this type of demand and that your code is still susceptible to luring attacks.</span></span> <span data-ttu-id="e948a-108">Z. B. wenn eine Methode in Assembly A durch einen Linkaufruf geschützt ist, wird ein direkter Aufrufer in Assembly B ausgewertet anhand der Berechtigungen von Assembly B.  Der Linkaufruf wertet jedoch keine Methode in Assembly C aus, wenn in der Assembly, die mit der Methode in Assembly b indirekt die Methode aufgerufen Der Linkaufruf gibt nur die Berechtigungen direkte Aufrufer in der unmittelbar aufrufenden Assembly benötigen, um für Ihren Code zu verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="e948a-108">For example, if a method in assembly A is protected by a link demand, a direct caller in assembly B is evaluated based on the permissions of Assembly B.  However, the link demand will not evaluate a method in assembly C if it indirectly calls the method in assembly A using the method in assembly B. The link demand specifies only the permissions direct callers in the immediate calling assembly must have to link to your code.</span></span> <span data-ttu-id="e948a-109">Er gibt nicht die Berechtigungen an, die alle Aufrufer haben müssen, um Ihren Code auszuführen.</span><span class="sxs-lookup"><span data-stu-id="e948a-109">It does not specify the permissions all callers must have to run your code.</span></span>  
   
- Wenn auf eine durch einen Linkaufruf geschützte Methode über [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md) in .NET Framework zugegriffen wird, überprüft ein Linkaufruf den direkten Aufrufer des Codes, auf den über Reflektion zugegriffen wird.  Dies gilt sowohl für Methodenerkennungen als auch Methodenaufrufe, die über Reflektion ausgeführt werden.  Angenommen, Code verwendet Reflektion dazu, ein <xref:System.Reflection.MethodInfo>\-Objekt zurückzugeben, das eine durch einen Linkaufruf geschützte Methode darstellt, und übergibt dieses **MethodInfo**\-Objekt anschließend an anderen Code, der das Objekt dazu verwendet, die ursprüngliche Methode aufzurufen.  In diesem Fall wird die Linkaufrufüberprüfung zweimal durchgeführt: einmal für den Code, der das **MethodInfo\-Objekt** zurückgibt, und einmal für den Code, der dieses Objekt aufruft.  
+ <span data-ttu-id="e948a-110">Die Stackwalkmodifizierer <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.PermitOnly%2A> haben keinen Einfluss auf die Auswertung von Linkaufrufen.</span><span class="sxs-lookup"><span data-stu-id="e948a-110">The <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>, and <xref:System.Security.CodeAccessPermission.PermitOnly%2A> stack walk modifiers do not affect the evaluation of link demands.</span></span>  <span data-ttu-id="e948a-111">Da Linkaufrufe keinen Stackwalk ausführen, haben die Stackwalkmodifizierer keinen Einfluss auf Linkaufrufe.</span><span class="sxs-lookup"><span data-stu-id="e948a-111">Because link demands do not perform a stack walk, the stack walk modifiers have no effect on link demands.</span></span>  
+  
+ <span data-ttu-id="e948a-112">Wenn eine durch einen Linkaufruf geschützte Methode, über zugegriffen wird [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md), prüft ein Linkaufruf den direkten Aufrufer des Codes, auf den über Reflektion ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="e948a-112">If a method protected by a link demand is accessed through [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), then a link demand checks the immediate caller of the code accessed through reflection.</span></span> <span data-ttu-id="e948a-113">Dies gilt sowohl für Methodenerkennungen als auch Methodenaufrufe, die über Reflektion ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e948a-113">This is true both for method discovery and for method invocation performed using reflection.</span></span> <span data-ttu-id="e948a-114">Nehmen wir beispielsweise an, Code verwendet Reflektion zum Zurückgeben einer <xref:System.Reflection.MethodInfo> durch einen Linkaufruf geschützte Methode darstellt, und übergibt dieses Objekt **MethodInfo** Objekt an anderen Code, der das Objekt verwendet wird, um die ursprüngliche Methode aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="e948a-114">For example, suppose code uses reflection to return a <xref:System.Reflection.MethodInfo> object representing a method protected by a link demand and then passes that **MethodInfo** object to some other code that uses the object to invoke the original method.</span></span> <span data-ttu-id="e948a-115">In diesem Fall die linkaufrufüberprüfung zweimal durchgeführt: einmal für den Code, der gibt die **MethodInfo** Objekt und einmal für den Code, der es aufruft.</span><span class="sxs-lookup"><span data-stu-id="e948a-115">In this case the link demand check occurs twice: once for the code that returns the **MethodInfo** object and once for the code that invokes it.</span></span>  
   
 > [!NOTE]
->  Ein Linkaufruf, der für einen statischen Klassenkonstruktor durchgeführt wird, schützt diesen Konstruktor nicht, da statische Konstruktoren vom System außerhalb des Codeausführungspfades der Anwendung aufgerufen werden.  Dies hat zur Folge, dass ein Linkaufruf, wenn er auf eine ganze Klasse angewendet wird, einen statischen Konstruktor nicht schützen kann, obwohl er der Rest der Klasse schützt.  
+>  <span data-ttu-id="e948a-116">Ein Linkaufruf, der für einen statischen Klassenkonstruktor durchgeführt wird, schützt diesen Konstruktor nicht, da statische Konstruktoren vom System außerhalb des Codeausführungspfades der Anwendung aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="e948a-116">A link demand performed on a static class constructor does not protect the constructor because static constructors are called by the system, outside the application's code execution path.</span></span> <span data-ttu-id="e948a-117">Dies hat zur Folge, dass ein Linkaufruf, wenn er auf eine ganze Klasse angewendet wird, einen statischen Konstruktor nicht schützen kann, obwohl er der Rest der Klasse schützt.</span><span class="sxs-lookup"><span data-stu-id="e948a-117">As a result, when a link demand is applied to an entire class, it cannot protect access to a static constructor, although it does protect the rest of the class.</span></span>  
   
- Im folgenden Codefragment wird deklarativ angegeben, dass sämtlicher Code mit einer Verlinkung zur `ReadData`\-Methode die `CustomPermission`\-Berechtigung haben muss.  Diese Berechtigung ist eine hypothetische benutzerdefinierte Berechtigung und nicht in .NET Framework vorhanden.  Die Forderung wird vorgenommen, indem ein **SecurityAction.LinkDemand**\-Flag an das `CustomPermissionAttribute` übergeben wird.  
+ <span data-ttu-id="e948a-118">Im folgenden Codefragment wird deklarativ angegeben, dass sämtlicher Code mit einer Verlinkung zur `ReadData`-Methode die `CustomPermission`-Berechtigung haben muss.</span><span class="sxs-lookup"><span data-stu-id="e948a-118">The following code fragment declaratively specifies that any code linking to the `ReadData` method must have the `CustomPermission` permission.</span></span> <span data-ttu-id="e948a-119">Diese Berechtigung ist eine hypothetische benutzerdefinierte Berechtigung und nicht in .NET Framework vorhanden.</span><span class="sxs-lookup"><span data-stu-id="e948a-119">This permission is a hypothetical custom permission and does not exist in the .NET Framework.</span></span> <span data-ttu-id="e948a-120">Die Forderung wird vorgenommen, durch das Übergeben einer **SecurityAction.LinkDemand** flag auf die `CustomPermissionAttribute`.</span><span class="sxs-lookup"><span data-stu-id="e948a-120">The demand is made by passing a **SecurityAction.LinkDemand** flag to the `CustomPermissionAttribute`.</span></span>  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -59,6 +62,6 @@ public static string ReadData()
 }  
 ```  
   
-## Siehe auch  
- [Attribute](../../../docs/standard/attributes/index.md)   
- [Code Access Security](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a><span data-ttu-id="e948a-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e948a-121">See Also</span></span>  
+ [<span data-ttu-id="e948a-122">Attribute</span><span class="sxs-lookup"><span data-stu-id="e948a-122">Attributes</span></span>](../../../docs/standard/attributes/index.md)  
+ [<span data-ttu-id="e948a-123">Codezugriffssicherheit</span><span class="sxs-lookup"><span data-stu-id="e948a-123">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)

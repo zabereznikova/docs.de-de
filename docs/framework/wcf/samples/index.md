@@ -1,38 +1,41 @@
 ---
-title: "Windows Communication Foundation-Beispiele [WCF] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Windows Communication Foundation-Beispiele [WCF]
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d90b133819df2997ed4d3a880d891d97b06a22c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation-Beispiele [WCF]
-In diesen Beispielen erhalten Sie Anweisungen zu verschiedenen Aspekten von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="baaaa-102">Windows Communication Foundation-Beispiele [WCF]</span><span class="sxs-lookup"><span data-stu-id="baaaa-102">Windows Communication Foundation (WCF) Samples</span></span>
+<span data-ttu-id="baaaa-103">In diesen Beispielen erhalten Sie Anweisungen zu verschiedenen Aspekten von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="baaaa-103">These samples provide instruction on various aspects of [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
--   C#-Versionen der Beispiele finden Sie unter [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780).  
+-   <span data-ttu-id="baaaa-104">C#-Versionen der Beispiele finden Sie unter [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780).</span><span class="sxs-lookup"><span data-stu-id="baaaa-104">For C# versions of the samples, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780).</span></span>  
   
--   Visual Basic-Versionen der Beispiele finden Sie unter [Visual Basic 2010 Samples](http://go.microsoft.com/fwlink/?LinkID=193373) , und klicken Sie auf **WF HYPERLINK "Javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$FileNameLink','')" _WCF_Samples.zip**.  
+-   <span data-ttu-id="baaaa-105">Visual Basic-Versionen der Beispiele finden Sie unter [Beispiele für Visual Basic 2010](http://go.microsoft.com/fwlink/?LinkID=193373) , und klicken Sie auf **WF HYPERLINK "Javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', '') "_WCF_Samples.zip**.</span><span class="sxs-lookup"><span data-stu-id="baaaa-105">For Visual Basic versions of the samples, go to [Visual Basic 2010 Samples](http://go.microsoft.com/fwlink/?LinkID=193373) and click **WF HYPERLINK "javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$FileNameLink','')" _WCF_Samples.zip**.</span></span>  
   
- Die [!INCLUDE[wf](../../../../includes/wf-md.md)] [Anwendung](../../../../docs/framework/windows-workflow-foundation/samples/application.md) Beispiele zeigen auch mehrere [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Funktionen.  
+ <span data-ttu-id="baaaa-106">Die [!INCLUDE[wf](../../../../includes/wf-md.md)] [Anwendung](../../../../docs/framework/windows-workflow-foundation/samples/application.md) Beispiele zeigen auch einige [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Funktionen.</span><span class="sxs-lookup"><span data-stu-id="baaaa-106">The [!INCLUDE[wf](../../../../includes/wf-md.md)] [Application](../../../../docs/framework/windows-workflow-foundation/samples/application.md) samples also demonstrate several [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]features.</span></span>  
   
- Um eine eigenständige Version der Dokumentation sowie einen Hilfe-Viewer zu installieren, laden Sie die [Microsoft Windows SDK, Version 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).  
+ <span data-ttu-id="baaaa-107">Um eine eigenständige Version der Dokumentation und Hilfe-Viewer zu installieren, laden Sie die [Microsoft Windows SDK V 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).</span><span class="sxs-lookup"><span data-stu-id="baaaa-107">To install a stand-alone version of the documentation and a Help viewer, download the [Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlegende](../../../../docs/framework/wcf/samples/basic.md)  
- Enthält Beispiele, in denen die grundlegende [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Funktionalität veranschaulicht wird.  
+## <a name="in-this-section"></a><span data-ttu-id="baaaa-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="baaaa-108">In This Section</span></span>  
+ [<span data-ttu-id="baaaa-109">Standard</span><span class="sxs-lookup"><span data-stu-id="baaaa-109">Basic</span></span>](../../../../docs/framework/wcf/samples/basic.md)  
+ <span data-ttu-id="baaaa-110">Enthält Beispiele, in denen die grundlegende [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Funktionalität veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="baaaa-110">Shows samples that illustrate basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] functionality.</span></span>  
   
- Erweiterungen  
- Enthält Beispiele, die sich auf die Suchfunktion beziehen.  
+ <span data-ttu-id="baaaa-111">Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="baaaa-111">Extensibility</span></span>  
+ <span data-ttu-id="baaaa-112">Enthält Beispiele, die sich auf die Suchfunktion beziehen.</span><span class="sxs-lookup"><span data-stu-id="baaaa-112">Shows samples that are related to the discovery feature.</span></span>  
   
- [Szenario](../../../../docs/framework/wcf/samples/scenario.md)  
- Veranschaulicht ein WCF-Szenario.
+ [<span data-ttu-id="baaaa-113">Szenario</span><span class="sxs-lookup"><span data-stu-id="baaaa-113">Scenario</span></span>](../../../../docs/framework/wcf/samples/scenario.md)  
+ <span data-ttu-id="baaaa-114">Veranschaulicht ein WCF-Szenario.</span><span class="sxs-lookup"><span data-stu-id="baaaa-114">Demonstrates a WCF scenario.</span></span>
