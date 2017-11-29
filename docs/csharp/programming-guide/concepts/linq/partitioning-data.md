@@ -1,50 +1,40 @@
 ---
 title: Partitionieren von Daten (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 32b95887e05767513dd818743dd1726149503b0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2f1690dac93d5e74f1305bd457f8bc749bec5449
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="partitioning-data-c"></a>Partitionieren von Daten (C#)
-Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
+# <a name="partitioning-data-c"></a><span data-ttu-id="d673f-102">Partitionieren von Daten (C#)</span><span class="sxs-lookup"><span data-stu-id="d673f-102">Partitioning Data (C#)</span></span>
+<span data-ttu-id="d673f-103">Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.</span><span class="sxs-lookup"><span data-stu-id="d673f-103">Partitioning in LINQ refers to the operation of dividing an input sequence into two sections, without rearranging the elements, and then returning one of the sections.</span></span>  
   
- Die folgende Abbildung zeigt das Ergebnis von drei verschiedenen Partitionierungsvorgängen einer Zeichensequenz. Der erste Vorgang gibt die ersten drei Elemente in der Sequenz zurück. Der zweite Vorgang überspringt die ersten drei Elemente und gibt die übrigen Elemente zurück. Der dritte Vorgang überspringt die ersten beiden Elemente in der Sequenz und gibt die nächsten drei Elemente zurück.  
+ <span data-ttu-id="d673f-104">Die folgende Abbildung zeigt das Ergebnis von drei verschiedenen Partitionierungsvorgängen einer Zeichensequenz.</span><span class="sxs-lookup"><span data-stu-id="d673f-104">The following illustration shows the results of three different partitioning operations on a sequence of characters.</span></span> <span data-ttu-id="d673f-105">Der erste Vorgang gibt die ersten drei Elemente in der Sequenz zurück.</span><span class="sxs-lookup"><span data-stu-id="d673f-105">The first operation returns the first three elements in the sequence.</span></span> <span data-ttu-id="d673f-106">Der zweite Vorgang überspringt die ersten drei Elemente und gibt die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="d673f-106">The second operation skips the first three elements and returns the remaining elements.</span></span> <span data-ttu-id="d673f-107">Der dritte Vorgang überspringt die ersten beiden Elemente in der Sequenz und gibt die nächsten drei Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="d673f-107">The third operation skips the first two elements in the sequence and returns the next three elements.</span></span>  
   
- ![LINQ-Partitionierungsvorgänge](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")  
+ <span data-ttu-id="d673f-108">![LINQ-Partitionierungsvorgänge](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")</span><span class="sxs-lookup"><span data-stu-id="d673f-108">![LINQ Partitioning Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")</span></span>  
   
- Die Methoden des Standardabfrageoperators, die Sequenzen partitionieren, sind im folgenden Abschnitt aufgeführt.  
+ <span data-ttu-id="d673f-109">Die Methoden des Standardabfrageoperators, die Sequenzen partitionieren, sind im folgenden Abschnitt aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="d673f-109">The standard query operator methods that partition sequences are listed in the following section.</span></span>  
   
-## <a name="operators"></a>Operatoren  
+## <a name="operators"></a><span data-ttu-id="d673f-110">Operatoren</span><span class="sxs-lookup"><span data-stu-id="d673f-110">Operators</span></span>  
   
-|Name des Operators|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|<span data-ttu-id="d673f-111">Name des Operators</span><span class="sxs-lookup"><span data-stu-id="d673f-111">Operator Name</span></span>|<span data-ttu-id="d673f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d673f-112">Description</span></span>|<span data-ttu-id="d673f-113">C#-Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="d673f-113">C# Query Expression Syntax</span></span>|<span data-ttu-id="d673f-114">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="d673f-114">More Information</span></span>|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|Überspringt Elemente bis zu einer angegebenen Position in einer Sequenz|Nicht zutreffend.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
-|SkipWhile|Überspringt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element die Bedingung nicht erfüllt|Nicht zutreffend.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
-|Take|Übernimmt Elemente bis zu einer angegebenen Position in einer Sequenz|Nicht zutreffend.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
-|TakeWhile|Übernimmt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element der Bedingung nicht erfüllt|Nicht zutreffend.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d673f-115">Skip</span><span class="sxs-lookup"><span data-stu-id="d673f-115">Skip</span></span>|<span data-ttu-id="d673f-116">Überspringt Elemente bis zu einer angegebenen Position in einer Sequenz</span><span class="sxs-lookup"><span data-stu-id="d673f-116">Skips elements up to a specified position in a sequence.</span></span>|<span data-ttu-id="d673f-117">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="d673f-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d673f-118">SkipWhile</span><span class="sxs-lookup"><span data-stu-id="d673f-118">SkipWhile</span></span>|<span data-ttu-id="d673f-119">Überspringt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element die Bedingung nicht erfüllt</span><span class="sxs-lookup"><span data-stu-id="d673f-119">Skips elements based on a predicate function until an element does not satisfy the condition.</span></span>|<span data-ttu-id="d673f-120">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="d673f-120">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d673f-121">Take</span><span class="sxs-lookup"><span data-stu-id="d673f-121">Take</span></span>|<span data-ttu-id="d673f-122">Übernimmt Elemente bis zu einer angegebenen Position in einer Sequenz</span><span class="sxs-lookup"><span data-stu-id="d673f-122">Takes elements up to a specified position in a sequence.</span></span>|<span data-ttu-id="d673f-123">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="d673f-123">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d673f-124">TakeWhile</span><span class="sxs-lookup"><span data-stu-id="d673f-124">TakeWhile</span></span>|<span data-ttu-id="d673f-125">Übernimmt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element der Bedingung nicht erfüllt</span><span class="sxs-lookup"><span data-stu-id="d673f-125">Takes elements based on a predicate function until an element does not satisfy the condition.</span></span>|<span data-ttu-id="d673f-126">Nicht zutreffend.</span><span class="sxs-lookup"><span data-stu-id="d673f-126">Not applicable.</span></span>|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>   
- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-
+## <a name="see-also"></a><span data-ttu-id="d673f-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d673f-127">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="d673f-128">Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))</span><span class="sxs-lookup"><span data-stu-id="d673f-128">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

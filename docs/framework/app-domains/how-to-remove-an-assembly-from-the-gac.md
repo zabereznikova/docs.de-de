@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,50 +18,48 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a17478c350d789d320e97d6b50d6f5f9daaf6db3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2bcc04fe3d428606e23e70d6f565b90f62e6a09
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache
-Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) zu entfernen:  
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="30df8-102">Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache</span><span class="sxs-lookup"><span data-stu-id="30df8-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
+<span data-ttu-id="30df8-103">Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) zu entfernen:</span><span class="sxs-lookup"><span data-stu-id="30df8-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>  
   
--   Durch Verwenden des [Global Assembly Cache-Tools (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Diese Option können Sie zum Deinstallieren von Assemblys verwenden, die Sie beim Entwickeln und Testen im GAC platziert haben.  
+-   <span data-ttu-id="30df8-104">Durch Verwenden des [Global Assembly Cache-Tools (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span><span class="sxs-lookup"><span data-stu-id="30df8-104">By using the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).</span></span> <span data-ttu-id="30df8-105">Diese Option können Sie zum Deinstallieren von Assemblys verwenden, die Sie beim Entwickeln und Testen im GAC platziert haben.</span><span class="sxs-lookup"><span data-stu-id="30df8-105">You can use this option to uninstall assemblies that you've placed in the GAC during development and testing.</span></span>  
   
--   Mithilfe von [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx). Diese Option für das Deinstallieren von Assemblys sollten Sie für Produktionssysteme und dann verwenden, wenn Sie Installationspakete testen.  
+-   <span data-ttu-id="30df8-106">Mithilfe von [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).</span><span class="sxs-lookup"><span data-stu-id="30df8-106">By using [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).</span></span> <span data-ttu-id="30df8-107">Diese Option für das Deinstallieren von Assemblys sollten Sie für Produktionssysteme und dann verwenden, wenn Sie Installationspakete testen.</span><span class="sxs-lookup"><span data-stu-id="30df8-107">You should use this option to uninstall assemblies when testing installation packages and for production systems.</span></span>  
   
-### <a name="removing-an-assembly-with-gacutilexe"></a>Entfernen einer Assembly mit "Gacutil.exe"  
+### <a name="removing-an-assembly-with-gacutilexe"></a><span data-ttu-id="30df8-108">Entfernen einer Assembly mit "Gacutil.exe"</span><span class="sxs-lookup"><span data-stu-id="30df8-108">Removing an assembly with Gacutil.exe</span></span>  
   
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
+1.  <span data-ttu-id="30df8-109">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="30df8-109">At the command prompt, type the following command:</span></span>  
   
-     **gacutil –u** \<*assemblyname*>  
+     <span data-ttu-id="30df8-110">**gacutil –u** \<*assemblyname*></span><span class="sxs-lookup"><span data-stu-id="30df8-110">**gacutil –u** \<*assembly name*></span></span>  
   
-     In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.  
+     <span data-ttu-id="30df8-111">In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.</span><span class="sxs-lookup"><span data-stu-id="30df8-111">In this command, *assembly name* is the name of the assembly to remove from the global assembly cache.</span></span>  
   
     > [!WARNING]
-    >  Sie sollten "Gacutil.exe" nicht verwenden, um Assemblys auf Produktionssystemen zu entfernen, denn es besteht die Möglichkeit, dass die Assembly für einige Anwendungen weiterhin erforderlich ist. Stattdessen sollten Sie den Windows Installer verwenden, der einen Verweiszähler für jede Assembly verwaltet, die er im GAC installiert.  
+    >  <span data-ttu-id="30df8-112">Sie sollten "Gacutil.exe" nicht verwenden, um Assemblys auf Produktionssystemen zu entfernen, denn es besteht die Möglichkeit, dass die Assembly für einige Anwendungen weiterhin erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="30df8-112">You should not use Gacutil.exe to remove assemblies on production systems because of the possibility that the assembly may still be required by some application.</span></span> <span data-ttu-id="30df8-113">Stattdessen sollten Sie den Windows Installer verwenden, der einen Verweiszähler für jede Assembly verwaltet, die er im GAC installiert.</span><span class="sxs-lookup"><span data-stu-id="30df8-113">Instead, you should use the Windows Installer, which maintains a reference count for each assembly it installs in the GAC.</span></span>  
   
- Im folgenden Beispiel wird die Assembly `hello.dll` aus dem globalen Assemblycache entfernt.  
+ <span data-ttu-id="30df8-114">Im folgenden Beispiel wird die Assembly `hello.dll` aus dem globalen Assemblycache entfernt.</span><span class="sxs-lookup"><span data-stu-id="30df8-114">The following example removes an assembly named `hello.dll` from the global assembly cache.</span></span>  
   
 ```  
 gacutil -u hello  
 ```  
   
-### <a name="removing-an-assembly-with-windows-installer"></a>Entfernen einer Assembly mit Windows Installer  
+### <a name="removing-an-assembly-with-windows-installer"></a><span data-ttu-id="30df8-115">Entfernen einer Assembly mit Windows Installer</span><span class="sxs-lookup"><span data-stu-id="30df8-115">Removing an assembly with Windows Installer</span></span>  
   
-1.  Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten. Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.  
+1.  <span data-ttu-id="30df8-116">Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten.</span><span class="sxs-lookup"><span data-stu-id="30df8-116">From the **Programs and Features** app in **Control Panel**, select the app that you want to uninstall.</span></span> <span data-ttu-id="30df8-117">Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="30df8-117">If the installation package placed assemblies in the GAC, Windows Installer will remove them if they are not used by another application.</span></span>  
   
     > [!NOTE]
-    >  Windows Installer verwaltet einen Verweiszähler für Assemblys, die im GAC installiert sind. Eine Assembly wird nur dann aus dem GAC entfernt, wenn ihr Verweiszähler gleich null wird, wodurch angegeben ist, dass sie von keiner der Anwendungen verwendet wird, die über ein Windows Installer-Paket installiert wurden.  
+    >  <span data-ttu-id="30df8-118">Windows Installer verwaltet einen Verweiszähler für Assemblys, die im GAC installiert sind.</span><span class="sxs-lookup"><span data-stu-id="30df8-118">Windows Installer maintains a reference count for assemblies installed in the GAC.</span></span> <span data-ttu-id="30df8-119">Eine Assembly wird nur dann aus dem GAC entfernt, wenn ihr Verweiszähler gleich null wird, wodurch angegeben ist, dass sie von keiner der Anwendungen verwendet wird, die über ein Windows Installer-Paket installiert wurden.</span><span class="sxs-lookup"><span data-stu-id="30df8-119">An assembly is removed from the GAC only when its reference count reaches zero, which indicates that it is not used by any application installed by a Windows Installer package.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [Vorgehensweise: Installieren einer Assembly in den globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
- [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-
+## <a name="see-also"></a><span data-ttu-id="30df8-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="30df8-120">See Also</span></span>  
+ [<span data-ttu-id="30df8-121">Arbeiten mit Assemblys und dem globalen Assemblychache</span><span class="sxs-lookup"><span data-stu-id="30df8-121">Working with Assemblies and the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [<span data-ttu-id="30df8-122">Gewusst wie: Installieren einer Assembly in den globalen Assemblycache</span><span class="sxs-lookup"><span data-stu-id="30df8-122">How to: Install an Assembly into the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [<span data-ttu-id="30df8-123">Gacutil.exe (Global Assembly Cache-Tool)</span><span class="sxs-lookup"><span data-stu-id="30df8-123">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

@@ -7,80 +7,77 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="perform-inner-joins"></a>Ausführen von inneren Verknüpfungen
+# <a name="perform-inner-joins"></a><span data-ttu-id="8b6bc-104">Ausführen von inneren Verknüpfungen</span><span class="sxs-lookup"><span data-stu-id="8b6bc-104">Perform inner joins</span></span>
 
-Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissatz, in dem jedes Element der ersten Aufzählung einmal für jedes übereinstimmende Element in der zweiten Auflistung erscheint. Wenn ein Element in der ersten Auflistung keine übereinstimmenden Elemente besitzt, erscheint es nicht im Ergebnissatz. Die Methode <xref:System.Linq.Enumerable.Join%2A>, die durch die `join`-Klausel in C# aufgerufen wird, implementiert eine innere Verknüpfung.  
+<span data-ttu-id="8b6bc-105">Bei relationalen Datenbanken erzeugt eine *innere Verknüpfung* einen Ergebnissatz, in dem jedes Element der ersten Aufzählung einmal für jedes übereinstimmende Element in der zweiten Auflistung erscheint.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-105">In relational database terms, an *inner join* produces a result set in which each element of the first collection appears one time for every matching element in the second collection.</span></span> <span data-ttu-id="8b6bc-106">Wenn ein Element in der ersten Auflistung keine übereinstimmenden Elemente besitzt, erscheint es nicht im Ergebnissatz.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-106">If an element in the first collection has no matching elements, it does not appear in the result set.</span></span> <span data-ttu-id="8b6bc-107">Die Methode <xref:System.Linq.Enumerable.Join%2A>, die durch die `join`-Klausel in C# aufgerufen wird, implementiert eine innere Verknüpfung.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-107">The <xref:System.Linq.Enumerable.Join%2A> method, which is called by the `join` clause in C#, implements an inner join.</span></span>  
   
- In diesem Thema erfahren Sie, wie Sie vier Varianten einer inneren Verknüpfung ausführen:  
+ <span data-ttu-id="8b6bc-108">In diesem Thema erfahren Sie, wie Sie vier Varianten einer inneren Verknüpfung ausführen:</span><span class="sxs-lookup"><span data-stu-id="8b6bc-108">This topic shows you how to perform four variations of an inner join:</span></span>  
   
--   Eine einfache innere Verknüpfung, die Elemente aus zwei Datenquellen anhand eines einfachen Schlüssels verknüpft.  
+-   <span data-ttu-id="8b6bc-109">Eine einfache innere Verknüpfung, die Elemente aus zwei Datenquellen anhand eines einfachen Schlüssels verknüpft.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-109">A simple inner join that correlates elements from two data sources based on a simple key.</span></span>  
   
--   Eine innere Verknüpfung, die Elemente aus zwei Datenquellen anhand eines *zusammengesetzten* Schlüssels verknüpft. Mit einem zusammengesetzten Schlüssel, der aus mehr als einem Wert besteht, können Sie Elemente anhand mehr als einer Eigenschaft verknüpfen.  
+-   <span data-ttu-id="8b6bc-110">Eine innere Verknüpfung, die Elemente aus zwei Datenquellen anhand eines *zusammengesetzten* Schlüssels verknüpft.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-110">An inner join that correlates elements from two data sources based on a *composite* key.</span></span> <span data-ttu-id="8b6bc-111">Mit einem zusammengesetzten Schlüssel, der aus mehr als einem Wert besteht, können Sie Elemente anhand mehr als einer Eigenschaft verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-111">A composite key, which is a key that consists of more than one value, enables you to correlate elements based on more than one property.</span></span>  
   
--   Eine *Mehrfachverknüpfung*, in der aufeinanderfolgende Verknüpfungsvorgänge aneinander gehängt werden.  
+-   <span data-ttu-id="8b6bc-112">Eine *Mehrfachverknüpfung*, in der aufeinanderfolgende Verknüpfungsvorgänge aneinander gehängt werden.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-112">A *multiple join* in which successive join operations are appended to each other.</span></span>  
   
--   Eine innere Verknüpfung, die mithilfe einer Gruppenverknüpfung implementiert wird.  
+-   <span data-ttu-id="8b6bc-113">Eine innere Verknüpfung, die mithilfe einer Gruppenverknüpfung implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-113">An inner join that is implemented by using a group join.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="8b6bc-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-114">Example</span></span>  
   
-## <a name="simple-key-join-example"></a>Beispiel für eine Verknüpfung mit einfachem Schlüssel  
- Im folgenden Beispiel werden zwei Auflistungen erstellt, die Objekte von zwei benutzerdefinierten Typen (`Person` und `Pet`) enthalten. Die Abfrage verwendet die `join`-Klausel in C#, um `Person`-Objekte mit `Pet`-Objekten übereinzustimmen, dessen `Owner` diese `Person` ist. Die `select`-Klausel in C# definiert, wie die resultierenden Objekte aussehen werden. In diesem Beispiel sind die resultierenden Objekte anonyme Typen, die aus dem Vornamen des Besitzers und dem Haustiernamen bestehen.  
+## <a name="simple-key-join-example"></a><span data-ttu-id="8b6bc-115">Beispiel für eine Verknüpfung mit einfachem Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-115">Simple key join example</span></span>  
+ <span data-ttu-id="8b6bc-116">Im folgenden Beispiel werden zwei Auflistungen erstellt, die Objekte von zwei benutzerdefinierten Typen (`Person` und `Pet`) enthalten.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-116">The following example creates two collections that contain objects of two user-defined types, `Person` and `Pet`.</span></span> <span data-ttu-id="8b6bc-117">Die Abfrage verwendet die `join`-Klausel in C#, um `Person`-Objekte mit `Pet`-Objekten übereinzustimmen, dessen `Owner` diese `Person` ist.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-117">The query uses the `join` clause in C# to match `Person` objects with `Pet` objects whose `Owner` is that `Person`.</span></span> <span data-ttu-id="8b6bc-118">Die `select`-Klausel in C# definiert, wie die resultierenden Objekte aussehen werden.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-118">The `select` clause in C# defines how the resulting objects will look.</span></span> <span data-ttu-id="8b6bc-119">In diesem Beispiel sind die resultierenden Objekte anonyme Typen, die aus dem Vornamen des Besitzers und dem Haustiernamen bestehen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-119">In this example the resulting objects are anonymous types that consist of the owner's first name and the pet's name.</span></span>  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
- Beachten Sie, dass das `Person`-Objekt, dessen `LastName` „Huff“ ist, nicht im Ergebnissatz erscheint, weil es kein `Pet`-Objekt gibt, bei dem `Pet.Owner` gleich `Person` ist.  
+ <span data-ttu-id="8b6bc-120">Beachten Sie, dass das `Person`-Objekt, dessen `LastName` „Huff“ ist, nicht im Ergebnissatz erscheint, weil es kein `Pet`-Objekt gibt, bei dem `Pet.Owner` gleich `Person` ist.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-120">Note that the `Person` object whose `LastName` is "Huff" does not appear in the result set because there is no `Pet` object that has `Pet.Owner` equal to that `Person`.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="8b6bc-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-121">Example</span></span>  
   
-## <a name="composite-key-join-example"></a>Beispiel für eine Verknüpfung mit zusammengesetztem Schlüssel  
- Anstatt Elemente anhand nur einer Eigenschaft zu verknüpfen, können Sie einen zusammengesetzten Schlüssel verwenden, um Elemente anhand mehreren Eigenschaften zu vergleichen. Geben Sie dazu die Schlüsselauswahlfunktion für jede Auflistung an, um einen anonymen Typ zurückgegeben, der aus den zu vergleichenden Eigenschaften besteht. Wenn Sie die Eigenschaften beschriften, müssen sie über die gleiche Bezeichnung in jedem anonymen Typ des Schlüssels verfügen. Die Eigenschaften müssen auch in der gleichen Reihenfolge angezeigt werden.  
+## <a name="composite-key-join-example"></a><span data-ttu-id="8b6bc-122">Beispiel für eine Verknüpfung mit zusammengesetztem Schlüssel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-122">Composite key join example</span></span>  
+ <span data-ttu-id="8b6bc-123">Anstatt Elemente anhand nur einer Eigenschaft zu verknüpfen, können Sie einen zusammengesetzten Schlüssel verwenden, um Elemente anhand mehreren Eigenschaften zu vergleichen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-123">Instead of correlating elements based on just one property, you can use a composite key to compare elements based on multiple properties.</span></span> <span data-ttu-id="8b6bc-124">Geben Sie dazu die Schlüsselauswahlfunktion für jede Auflistung an, um einen anonymen Typ zurückgegeben, der aus den zu vergleichenden Eigenschaften besteht.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-124">To do this, specify the key selector function for each collection to return an anonymous type that consists of the properties you want to compare.</span></span> <span data-ttu-id="8b6bc-125">Wenn Sie die Eigenschaften beschriften, müssen sie über die gleiche Bezeichnung in jedem anonymen Typ des Schlüssels verfügen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-125">If you label the properties, they must have the same label in each key's anonymous type.</span></span> <span data-ttu-id="8b6bc-126">Die Eigenschaften müssen auch in der gleichen Reihenfolge angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-126">The properties must also appear in the same order.</span></span>  
   
- Im folgenden Beispiel wird eine Liste von `Employee`-Objekten und eine Liste von `Student`-Objekten verwendet, um zu bestimmen, welche Angestellten auch Studenten sind. Diese beiden Typen haben eine `FirstName`- und `LastName`-Eigenschaft vom Typ <xref:System.String>. Die Funktion, die die Verknüpfungsschlüssel aus jedem Element der Liste erstellt, gibt einen anonymen Typ zurück, der aus den Eigenschaften `FirstName` und `LastName` von jedem Element besteht. Der Verknüpfungsvorgang vergleicht diese zusammengesetzten Schlüssel auf Gleichheit und gibt Objektpaare aus jeder Liste zurück, in der der Vor- und Nachname übereinstimmen.  
+ <span data-ttu-id="8b6bc-127">Im folgenden Beispiel wird eine Liste von `Employee`-Objekten und eine Liste von `Student`-Objekten verwendet, um zu bestimmen, welche Angestellten auch Studenten sind.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-127">The following example uses a list of `Employee` objects and a list of `Student` objects to determine which employees are also students.</span></span> <span data-ttu-id="8b6bc-128">Diese beiden Typen haben eine `FirstName`- und `LastName`-Eigenschaft vom Typ <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-128">Both of these types have a `FirstName` and a `LastName` property of type <xref:System.String>.</span></span> <span data-ttu-id="8b6bc-129">Die Funktion, die die Verknüpfungsschlüssel aus jedem Element der Liste erstellt, gibt einen anonymen Typ zurück, der aus den Eigenschaften `FirstName` und `LastName` von jedem Element besteht.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-129">The functions that create the join keys from each list's elements return an anonymous type that consists of the `FirstName` and `LastName` properties of each element.</span></span> <span data-ttu-id="8b6bc-130">Der Verknüpfungsvorgang vergleicht diese zusammengesetzten Schlüssel auf Gleichheit und gibt Objektpaare aus jeder Liste zurück, in der der Vor- und Nachname übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-130">The join operation compares these composite keys for equality and returns pairs of objects from each list where both the first name and the last name match.</span></span>  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="8b6bc-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-131">Example</span></span>  
   
-## <a name="multiple-join-example"></a>Beispiel für eine Mehrfachverknüpfung  
- Eine beliebige Anzahl von Verknüpfungsvorgängen kann aneinander gehängt werden, um eine Mehrfachverknüpfung auszuführen. Jede `join`-Klausel in C# verknüpft eine angegebene Datenquelle mit den Ergebnissen der vorherigen Verknüpfung.  
+## <a name="multiple-join-example"></a><span data-ttu-id="8b6bc-132">Beispiel für eine Mehrfachverknüpfung</span><span class="sxs-lookup"><span data-stu-id="8b6bc-132">Multiple join example</span></span>  
+ <span data-ttu-id="8b6bc-133">Eine beliebige Anzahl von Verknüpfungsvorgängen kann aneinander gehängt werden, um eine Mehrfachverknüpfung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-133">Any number of join operations can be appended to each other to perform a multiple join.</span></span> <span data-ttu-id="8b6bc-134">Jede `join`-Klausel in C# verknüpft eine angegebene Datenquelle mit den Ergebnissen der vorherigen Verknüpfung.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-134">Each `join` clause in C# correlates a specified data source with the results of the previous join.</span></span>  
   
- Im folgenden Beispiel werden drei Auflistungen erstellt: eine Liste von `Person`-Objekten, eine Liste von `Cat`-Objekten und eine Liste von `Dog`-Objekten.  
+ <span data-ttu-id="8b6bc-135">Im folgenden Beispiel werden drei Auflistungen erstellt: eine Liste von `Person`-Objekten, eine Liste von `Cat`-Objekten und eine Liste von `Dog`-Objekten.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-135">The following example creates three collections: a list of `Person` objects, a list of `Cat` objects, and a list of `Dog` objects.</span></span>  
   
- Die erste `join`-Klausel in C# stimmt Personen und Katzen überein, anhand eines `Person`-Objekts, das mit `Cat.Owner` übereinstimmt. Es gibt eine Sequenz von anonymen Typen zurück, die das `Person`-Objekt und `Cat.Name` enthält.  
+ <span data-ttu-id="8b6bc-136">Die erste `join`-Klausel in C# stimmt Personen und Katzen überein, anhand eines `Person`-Objekts, das mit `Cat.Owner` übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-136">The first `join` clause in C# matches people and cats based on a `Person` object matching `Cat.Owner`.</span></span> <span data-ttu-id="8b6bc-137">Es gibt eine Sequenz von anonymen Typen zurück, die das `Person`-Objekt und `Cat.Name` enthält.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-137">It returns a sequence of anonymous types that contain the `Person` object and `Cat.Name`.</span></span>  
   
- Die zweite `join`-Klausel in C# verknüpft die von der ersten Verknüpfung zurückgegebenen anonymen Typen mit `Dog`-Objekten in der bereitgestellten Liste von Hunden anhand eines zusammengesetzten Schlüssels, der aus der `Owner`-Eigenschaft des `Person`-Typs und dem ersten Buchstaben des Tiernamens besteht. Sie gibt eine Sequenz von anonymen Typen zurück, die die Eigenschaft `Cat.Name` und `Dog.Name` von jedem übereinstimmen Paar enthält. Da es sich um eine innere Verknüpfung handelt, werden nur die Elemente aus der ersten Datenquelle zurückgegeben, die eine Übereinstimmung in der zweiten Datenquelle haben.  
+ <span data-ttu-id="8b6bc-138">Die zweite `join`-Klausel in C# verknüpft die von der ersten Verknüpfung zurückgegebenen anonymen Typen mit `Dog`-Objekten in der bereitgestellten Liste von Hunden anhand eines zusammengesetzten Schlüssels, der aus der `Owner`-Eigenschaft des `Person`-Typs und dem ersten Buchstaben des Tiernamens besteht.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-138">The second `join` clause in C# correlates the anonymous types returned by the first join with `Dog` objects in the supplied list of dogs, based on a composite key that consists of the `Owner` property of type `Person`, and the first letter of the animal's name.</span></span> <span data-ttu-id="8b6bc-139">Sie gibt eine Sequenz von anonymen Typen zurück, die die Eigenschaft `Cat.Name` und `Dog.Name` von jedem übereinstimmen Paar enthält.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-139">It returns a sequence of anonymous types that contain the `Cat.Name` and `Dog.Name` properties from each matching pair.</span></span> <span data-ttu-id="8b6bc-140">Da es sich um eine innere Verknüpfung handelt, werden nur die Elemente aus der ersten Datenquelle zurückgegeben, die eine Übereinstimmung in der zweiten Datenquelle haben.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-140">Because this is an inner join, only those objects from the first data source that have a match in the second data source are returned.</span></span>  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="8b6bc-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8b6bc-141">Example</span></span>  
   
-## <a name="inner-join-by-using-grouped-join-example"></a>Beispiel einer inneren Verknüpfung mithilfe einer Gruppenverknüpfung  
- In den folgenden Beispielen wird Ihnen gezeigt, wie eine innere Verknüpfung mithilfe einer Gruppenverknüpfung implementiert wird.  
+## <a name="inner-join-by-using-grouped-join-example"></a><span data-ttu-id="8b6bc-142">Beispiel einer inneren Verknüpfung mithilfe einer Gruppenverknüpfung</span><span class="sxs-lookup"><span data-stu-id="8b6bc-142">Inner join by using grouped join example</span></span>  
+ <span data-ttu-id="8b6bc-143">In den folgenden Beispielen wird Ihnen gezeigt, wie eine innere Verknüpfung mithilfe einer Gruppenverknüpfung implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-143">The following example shows you how to implement an inner join by using a group join.</span></span>  
   
- Die Liste von `Person`-Objekten in `query1` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt. Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.  
+ <span data-ttu-id="8b6bc-144">Die Liste von `Person`-Objekten in `query1` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-144">In `query1`, the list of `Person` objects is group-joined to the list of `Pet` objects based on the `Person` matching the `Pet.Owner` property.</span></span> <span data-ttu-id="8b6bc-145">Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-145">The group join creates a collection of intermediate groups, where each group consists of a `Person` object and a sequence of matching `Pet` objects.</span></span>  
   
- Durch das Hinzufügen einer zweiten `from`-Klausel zur Abfrage, wird diese Sequenz von Sequenzen in eine längere Sequenz vereint (oder vereinfacht). Der Typ der Elemente der endgültigen Sequenz wird von der `select`-Klausel festgelegt. In diesem Beispiel ist dieser Typ ein anonymer Typ, der aus der Eigenschaft `Person.FirstName` und `Pet.Name` für jedes übereinstimmende Paar besteht.  
+ <span data-ttu-id="8b6bc-146">Durch das Hinzufügen einer zweiten `from`-Klausel zur Abfrage, wird diese Sequenz von Sequenzen in eine längere Sequenz vereint (oder vereinfacht).</span><span class="sxs-lookup"><span data-stu-id="8b6bc-146">By adding a second `from` clause to the query, this sequence of sequences is combined (or flattened) into one longer sequence.</span></span> <span data-ttu-id="8b6bc-147">Der Typ der Elemente der endgültigen Sequenz wird von der `select`-Klausel festgelegt.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-147">The type of the elements of the final sequence is specified by the `select` clause.</span></span> <span data-ttu-id="8b6bc-148">In diesem Beispiel ist dieser Typ ein anonymer Typ, der aus der Eigenschaft `Person.FirstName` und `Pet.Name` für jedes übereinstimmende Paar besteht.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-148">In this example, that type is an anonymous type that consists of the `Person.FirstName` and `Pet.Name` properties for each matching pair.</span></span>  
   
- Das Ergebnis von `query1` entspricht dem Ergebnissatz, der mithilfe der `join`-Klausel abgerufen werden würde, ohne dass die `into`-Klausel eine innere Verknüpfung ausführt. Die `query2`-Variable veranschaulicht diese entsprechende Abfrage.  
+ <span data-ttu-id="8b6bc-149">Das Ergebnis von `query1` entspricht dem Ergebnissatz, der mithilfe der `join`-Klausel abgerufen werden würde, ohne dass die `into`-Klausel eine innere Verknüpfung ausführt.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-149">The result of `query1` is equivalent to the result set that would have been obtained by using the `join` clause without the `into` clause to perform an inner join.</span></span> <span data-ttu-id="8b6bc-150">Die `query2`-Variable veranschaulicht diese entsprechende Abfrage.</span><span class="sxs-lookup"><span data-stu-id="8b6bc-150">The `query2` variable demonstrates this equivalent query.</span></span>  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Perform grouped joins (Ausführen von Gruppenverknüpfungen)](perform-grouped-joins.md)   
- [Perform left outer joins (Ausführen von Left Outer Joins)](perform-left-outer-joins.md)   
- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)   
+## <a name="see-also"></a><span data-ttu-id="8b6bc-151">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b6bc-151">See also</span></span>  
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [<span data-ttu-id="8b6bc-152">Ausführen von Gruppenverknüpfungen</span><span class="sxs-lookup"><span data-stu-id="8b6bc-152">Perform grouped joins</span></span>](perform-grouped-joins.md)  
+ [<span data-ttu-id="8b6bc-153">Ausführen linker äußerer Verknüpfungen</span><span class="sxs-lookup"><span data-stu-id="8b6bc-153">Perform left outer joins</span></span>](perform-left-outer-joins.md)  
+ [<span data-ttu-id="8b6bc-154">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="8b6bc-154">Anonymous types</span></span>](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

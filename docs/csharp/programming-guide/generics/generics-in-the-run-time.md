@@ -1,77 +1,57 @@
 ---
 title: Generika zur Laufzeit (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], at run time
+helpviewer_keywords: generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="generics-in-the-run-time-c-programming-guide"></a>Generika zur Laufzeit (C#-Programmierhandbuch)
-Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen. Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.  
+# <a name="generics-in-the-run-time-c-programming-guide"></a><span data-ttu-id="92785-102">Generika zur Laufzeit (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="92785-102">Generics in the Run Time (C# Programming Guide)</span></span>
+<span data-ttu-id="92785-103">Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen.</span><span class="sxs-lookup"><span data-stu-id="92785-103">When a generic type or method is compiled into Microsoft intermediate language (MSIL), it contains metadata that identifies it as having type parameters.</span></span> <span data-ttu-id="92785-104">Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.</span><span class="sxs-lookup"><span data-stu-id="92785-104">How the MSIL for a generic type is used differs based on whether the supplied type parameter is a value type or reference type.</span></span>  
   
- Wenn das erste Mal ein generischer Typ mit einem Werttyp als Parameter erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem übergebene Parameter an den entsprechenden Stellen in MSIL ersetzt werden. Spezialisierte generische Typen werden für jeden eindeutigen Werttyp, der als Parameter verwendet wird, einmal erstellt.  
+ <span data-ttu-id="92785-105">Wenn das erste Mal ein generischer Typ mit einem Werttyp als Parameter erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem übergebene Parameter an den entsprechenden Stellen in MSIL ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="92785-105">When a generic type is first constructed with a value type as a parameter, the runtime creates a specialized generic type with the supplied parameter or parameters substituted in the appropriate locations in the MSIL.</span></span> <span data-ttu-id="92785-106">Spezialisierte generische Typen werden für jeden eindeutigen Werttyp, der als Parameter verwendet wird, einmal erstellt.</span><span class="sxs-lookup"><span data-stu-id="92785-106">Specialized generic types are created one time for each unique value type that is used as a parameter.</span></span>  
   
- Angenommen, im Programmcode wurde ein Stapel deklariert, der aus ganzen Zahlen erstellt wurde:  
+ <span data-ttu-id="92785-107">Angenommen, im Programmcode wurde ein Stapel deklariert, der aus ganzen Zahlen erstellt wurde:</span><span class="sxs-lookup"><span data-stu-id="92785-107">For example, suppose your program code declared a stack that is constructed of integers:</span></span>  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
- An diesem Punkt generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, in der der Parameter durch die entsprechende ganze Zahl ersetzt wird. Bei Verwendung eines Stapels aus ganzen Zahlen wird jetzt immer die generierte spezialisierte Klasse <xref:System.Collections.Generic.Stack%601> verwendet. Im folgenden Beispiel werden zwei Instanzen eines Stapels aus ganzen Zahlen erstellt, die eine Instanz des `Stack<int>`-Codes gemeinsam nutzen:  
+ <span data-ttu-id="92785-108">An diesem Punkt generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, in der der Parameter durch die entsprechende ganze Zahl ersetzt wird.</span><span class="sxs-lookup"><span data-stu-id="92785-108">At this point, the runtime generates a specialized version of the <xref:System.Collections.Generic.Stack%601> class that has the integer substituted appropriately for its parameter.</span></span> <span data-ttu-id="92785-109">Bei Verwendung eines Stapels aus ganzen Zahlen wird jetzt immer die generierte spezialisierte Klasse <xref:System.Collections.Generic.Stack%601> verwendet.</span><span class="sxs-lookup"><span data-stu-id="92785-109">Now, whenever your program code uses a stack of integers, the runtime reuses the generated specialized <xref:System.Collections.Generic.Stack%601> class.</span></span> <span data-ttu-id="92785-110">Im folgenden Beispiel werden zwei Instanzen eines Stapels aus ganzen Zahlen erstellt, die eine Instanz des `Stack<int>`-Codes gemeinsam nutzen:</span><span class="sxs-lookup"><span data-stu-id="92785-110">In the following example, two instances of a stack of integers are created, and they share a single instance of the `Stack<int>` code:</span></span>  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
- Angenommen, dass an anderer Stelle im Code jedoch eine weitere <xref:System.Collections.Generic.Stack%601>-Klasse erstellt wird, mit einem anderen Werttyp, z.B. `long`, oder einer benutzerdefinierten Struktur als Parameter. Daraufhin generiert die Laufzeit eine andere Version des generischen Typs und ersetzt `long` an den entsprechenden Stellen in MSIL. Konvertierungen sind nicht mehr notwendig, da jede spezialisierte generische Klasse den Werttyp nativ enthält.  
+ <span data-ttu-id="92785-111">Angenommen, dass an anderer Stelle im Code jedoch eine weitere <xref:System.Collections.Generic.Stack%601>-Klasse erstellt wird, mit einem anderen Werttyp, z.B. `long`, oder einer benutzerdefinierten Struktur als Parameter.</span><span class="sxs-lookup"><span data-stu-id="92785-111">However, suppose that another <xref:System.Collections.Generic.Stack%601> class with a different value type such as a `long` or a user-defined structure as its parameter is created at another point in your code.</span></span> <span data-ttu-id="92785-112">Daraufhin generiert die Laufzeit eine andere Version des generischen Typs und ersetzt `long` an den entsprechenden Stellen in MSIL.</span><span class="sxs-lookup"><span data-stu-id="92785-112">As a result, the runtime generates another version of the generic type and substitutes a `long` in the appropriate locations in MSIL.</span></span> <span data-ttu-id="92785-113">Konvertierungen sind nicht mehr notwendig, da jede spezialisierte generische Klasse den Werttyp nativ enthält.</span><span class="sxs-lookup"><span data-stu-id="92785-113">Conversions are no longer necessary because each specialized generic class natively contains the value type.</span></span>  
   
- Bei Referenztypen unterscheidet sich die Funktionsweise von Generika geringfügig. Wenn das erste Mal ein generischer Typ mit einem beliebigem Referenztyp erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem die Parameter durch Objektverweise in MSIL ersetzt werden. Wenn jetzt ein konstruierter Typ mit einem Referenztyp als Parameter instanziiert wird (unabhängig davon, um welchen Typ es sich dabei handelt), wird die zuvor erstellte spezialisierte Version des generischen Typs verwendet. Dies ist möglich, da alle Verweise die gleiche Größe haben.  
+ <span data-ttu-id="92785-114">Bei Referenztypen unterscheidet sich die Funktionsweise von Generika geringfügig.</span><span class="sxs-lookup"><span data-stu-id="92785-114">Generics work somewhat differently for reference types.</span></span> <span data-ttu-id="92785-115">Wenn das erste Mal ein generischer Typ mit einem beliebigem Referenztyp erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem die Parameter durch Objektverweise in MSIL ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="92785-115">The first time a generic type is constructed with any reference type, the runtime creates a specialized generic type with object references substituted for the parameters in the MSIL.</span></span> <span data-ttu-id="92785-116">Wenn jetzt ein konstruierter Typ mit einem Referenztyp als Parameter instanziiert wird (unabhängig davon, um welchen Typ es sich dabei handelt), wird die zuvor erstellte spezialisierte Version des generischen Typs verwendet.</span><span class="sxs-lookup"><span data-stu-id="92785-116">Then, every time that a constructed type is instantiated with a reference type as its parameter, regardless of what type it is, the runtime reuses the previously created specialized version of the generic type.</span></span> <span data-ttu-id="92785-117">Dies ist möglich, da alle Verweise die gleiche Größe haben.</span><span class="sxs-lookup"><span data-stu-id="92785-117">This is possible because all references are the same size.</span></span>  
   
- Angenommen, Sie verfügen über zwei Referenztypen, eine `Customer`-Klasse und eine `Order`-Klasse, und Sie haben einen Stapel von `Customer`-Typen erstellt:  
+ <span data-ttu-id="92785-118">Angenommen, Sie verfügen über zwei Referenztypen, eine `Customer`-Klasse und eine `Order`-Klasse, und Sie haben einen Stapel von `Customer`-Typen erstellt:</span><span class="sxs-lookup"><span data-stu-id="92785-118">For example, suppose you had two reference types, a `Customer` class and an `Order` class, and also suppose that you created a stack of `Customer` types:</span></span>  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
- An dieser Stelle generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, die anstelle von Daten Objektverweise speichert, die zu einem späteren Zeitpunkt mit Daten gefüllt werden. Angenommen, die nächste Codezeile erstellt einen Stapel eines anderen Referenztyps mit dem Namen `Order`:  
+ <span data-ttu-id="92785-119">An dieser Stelle generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, die anstelle von Daten Objektverweise speichert, die zu einem späteren Zeitpunkt mit Daten gefüllt werden.</span><span class="sxs-lookup"><span data-stu-id="92785-119">At this point, the runtime generates a specialized version of the <xref:System.Collections.Generic.Stack%601> class that stores object references that will be filled in later instead of storing data.</span></span> <span data-ttu-id="92785-120">Angenommen, die nächste Codezeile erstellt einen Stapel eines anderen Referenztyps mit dem Namen `Order`:</span><span class="sxs-lookup"><span data-stu-id="92785-120">Suppose the next line of code creates a stack of another reference type, which is named `Order`:</span></span>  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
- Anders als bei Werttypen wird für den Typ <xref:System.Collections.Generic.Stack%601> keine weitere spezialisierte Version der Klasse `Order` erstellt. Stattdessen wird eine Instanz der spezialisierten Version der Klasse <xref:System.Collections.Generic.Stack%601> erstellt und die Variable `orders` so festgelegt, dass sie darauf verweist. Angenommen, Sie würden dann auf eine Codezeile stoßen, die einen Stapel des Typs `Customer` erstellt:  
+ <span data-ttu-id="92785-121">Anders als bei Werttypen wird für den Typ <xref:System.Collections.Generic.Stack%601> keine weitere spezialisierte Version der Klasse `Order` erstellt.</span><span class="sxs-lookup"><span data-stu-id="92785-121">Unlike with value types, another specialized version of the <xref:System.Collections.Generic.Stack%601> class is not created for the `Order` type.</span></span> <span data-ttu-id="92785-122">Stattdessen wird eine Instanz der spezialisierten Version der Klasse <xref:System.Collections.Generic.Stack%601> erstellt und die Variable `orders` so festgelegt, dass sie darauf verweist.</span><span class="sxs-lookup"><span data-stu-id="92785-122">Instead, an instance of the specialized version of the <xref:System.Collections.Generic.Stack%601> class is created and the `orders` variable is set to reference it.</span></span> <span data-ttu-id="92785-123">Angenommen, Sie würden dann auf eine Codezeile stoßen, die einen Stapel des Typs `Customer` erstellt:</span><span class="sxs-lookup"><span data-stu-id="92785-123">Suppose that you then encountered a line of code to create a stack of a `Customer` type:</span></span>  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
- Wie auch bei der vorherigen Verwendung der mit dem Typ `Order` erstellten Klasse <xref:System.Collections.Generic.Stack%601> wird eine weitere Instanz der spezialisierten Klasse <xref:System.Collections.Generic.Stack%601> erstellt. Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`-Typs verweisen. Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C#-Implementierung von Generika eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.  
+ <span data-ttu-id="92785-124">Wie auch bei der vorherigen Verwendung der mit dem Typ `Order` erstellten Klasse <xref:System.Collections.Generic.Stack%601> wird eine weitere Instanz der spezialisierten Klasse <xref:System.Collections.Generic.Stack%601> erstellt.</span><span class="sxs-lookup"><span data-stu-id="92785-124">As with the previous use of the <xref:System.Collections.Generic.Stack%601> class created by using the `Order` type, another instance of the specialized <xref:System.Collections.Generic.Stack%601> class is created.</span></span> <span data-ttu-id="92785-125">Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`-Typs verweisen.</span><span class="sxs-lookup"><span data-stu-id="92785-125">The pointers that are contained therein are set to reference an area of memory the size of a `Customer` type.</span></span> <span data-ttu-id="92785-126">Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C#-Implementierung von Generika eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.</span><span class="sxs-lookup"><span data-stu-id="92785-126">Because the number of reference types can vary wildly from program to program, the C# implementation of generics greatly reduces the amount of code by reducing to one the number of specialized classes created by the compiler for generic classes of reference types.</span></span>  
   
- Weiterhin gilt, dass eine mit einem Werttyp- oder Referenztypparameter instanziierte generische C#-Klasse zur Laufzeit mittels Reflektion abgefragt werden kann. Dabei können sowohl der tatsächliche Typ als auch der Typparameter ermittelt werden.  
+ <span data-ttu-id="92785-127">Weiterhin gilt, dass eine mit einem Werttyp- oder Referenztypparameter instanziierte generische C#-Klasse zur Laufzeit mittels Reflektion abgefragt werden kann. Dabei können sowohl der tatsächliche Typ als auch der Typparameter ermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="92785-127">Moreover, when a generic C# class is instantiated by using a value type or reference type parameter, reflection can query it at runtime and both its actual type and its type parameter can be ascertained.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Generika](~/docs/standard/generics/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="92785-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92785-128">See Also</span></span>  
+ <xref:System.Collections.Generic>  
+ [<span data-ttu-id="92785-129">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="92785-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="92785-130">Einführung in Generika</span><span class="sxs-lookup"><span data-stu-id="92785-130">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [<span data-ttu-id="92785-131">Generika</span><span class="sxs-lookup"><span data-stu-id="92785-131">Generics</span></span>](~/docs/standard/generics/index.md)
