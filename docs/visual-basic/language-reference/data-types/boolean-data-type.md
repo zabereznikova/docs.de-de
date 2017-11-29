@@ -1,56 +1,55 @@
 ---
-title: "Boolean Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.FALSE"
-  - "vb.TRUE"
-  - "vb.Boolean"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Boolean data type"
-  - "Boolean values, False keyword"
-  - "False keyword [Visual Basic]"
-  - "True keyword [Visual Basic]"
-  - "Boolean values, True keyword"
+title: Boolean-Datentyp (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.FALSE
+- vb.TRUE
+- vb.Boolean
+helpviewer_keywords:
+- Boolean data type
+- Boolean values [Visual Basic], False keyword
+- False keyword [Visual Basic]
+- True keyword [Visual Basic]
+- Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Boolean Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Speichert Werte, die nur `True` oder `False` sein können.  Die Schlüsselwörter `True` und `False` entsprechen den zwei Zuständen von `Boolean`\-Variablen.  
+# <a name="boolean-data-type-visual-basic"></a>Boolean-Datentyp (Visual Basic)
+Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True` und `False` entsprechen die beiden Status `Boolean` Variablen.  
   
-## Hinweise  
- Verwenden Sie den [Boolean Data Type \(Visual Basic\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md), um Werte mit zwei möglichen Zuständen zu speichern, z. B. Wahr\/Falsch, Ja\/Nein oder Ein\/Aus.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden der [Boolean-Datentyp (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) zwei-Status-Werte wie wahr/falsch, enthalten, Ja/Nein, oder ein/aus.  
   
- Der Standardwert von `Boolean` lautet `False`.  
+ Der Standardwert von `Boolean` ist `False`.  
   
- `Boolean`\-Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht mit Zahlen gleichwertig sein.  Sie sollten nie Code schreiben, der von entsprechenden numerischen Werten für `True` und `False` abhängt.  Beschränken Sie den Einsatz von `Boolean`\-Variablen auf die logischen Werte, für die sie entworfen wurden.  
+ `Boolean`Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte dürfen nicht mit Zahlen gleichwertig sein. Schreiben Sie Code, der auf den entsprechenden numerischen Werten für nutzt `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, die für sie vorgesehenen logischen Werte.  
   
-## Typkonvertierung  
- Wenn Visual Basic numerische Datentypwerte in `Boolean` konvertiert, wird 0 \(null\) in `False` und alle anderen Werte werden in `True` konvertiert.  Wenn Visual Basic `Boolean`\-Werte in numerische Typen konvertiert, wird `False` zu 0, und `True` wird –1.  
+## <a name="type-conversions"></a>Typkonvertierungen  
+ Wenn Visual Basic numerische Datentypwerte konvertiert `Boolean`, wird 0 `False` und alle anderen Werte werden `True`. Wenn Visual Basic konvertiert `Boolean` Werte in numerische Typen `False` wird 0 und `True` wird – 1.  
   
- Bei der Konvertierung von `Boolean`\-Werten in numerische Datentypen und umgekehrt ist zu beachten, dass die Konvertierungsmethoden von .NET Framework nicht immer dieselben Ergebnisse erzeugen wie die Konvertierungsmethoden von Visual Basic.  Das liegt daran, dass die Visual Basic\-Konvertierung ein Verhalten beibehält, das mit vorherigen Versionen kompatibel ist.  Weitere Informationen finden Sie im Abschnitt "Boolescher Typ wird nicht präzise in den numerischen Typ konvertiert" unter [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Bei der Konvertierung zwischen `Boolean` Werte und numerische Datentypen ausgelöst werden, sollten Sie bedenken, dass die .NET Framework-Konvertierungsmethoden nicht immer die gleichen Ergebnisse wie die Visual Basic-Konvertierungsschlüsselwörter erzeugen. Dies ist, da die Visual Basic-Konvertierung Verhalten kompatibel mit früheren Versionen werden beibehalten. Weitere Informationen finden Sie unter "Boolescher Typ wird nicht präzise zu den numerischen Typ konvertieren" in [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-## Programmiertipps  
+## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Boolean` ist kein numerischer Typ und kann keinen negativen Wert darstellen.  In keinem Fall sollten Sie `Boolean` zum Speichern numerischer Werte verwenden.  
+-   **Negative Zahlen.** `Boolean`ist kein numerischen Typ und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Boolean` für numerische Werte.  
   
--   **Typzeichen.** Für `Boolean` ist kein Literaltypzeichen oder Typkennzeichen definiert.  
+-   **Typzeichen.** `Boolean`hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Boolean?displayProperty=fullName>\-Struktur.  
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Boolean?displayProperty=nameWithType>-Struktur.  
   
-## Beispiel  
- Im folgenden Beispiel ist `runningVB` eine `Boolean`\-Variable, die eine einfache Ja\-\/Nein\-Einstellung speichert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel `runningVB` ist eine `Boolean` Variable, die eine einfache Ja/Nein-Einstellung speichert.  
   
 ```  
 Dim runningVB As Boolean  
@@ -60,11 +59,11 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## Siehe auch  
- <xref:System.Boolean?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [CType\-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Boolean?displayProperty=nameWithType>  
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)

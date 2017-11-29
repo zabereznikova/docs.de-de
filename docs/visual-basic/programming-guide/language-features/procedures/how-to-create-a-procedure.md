@@ -1,75 +1,74 @@
 ---
-title: "How to: Create a Procedure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, reusing"
-  - "procedure declarations"
-  - "procedures, about procedures"
+title: 'Gewusst wie: Erstellen einer Prozedur (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, reusing
+- procedure declarations
+- procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56a44918b7a1426d215cee0ff2981f5763432a48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Eine Prozedur wird von einer einleitenden Deklarationsanweisung \(`Sub` oder `Function`\) und einer abschließenden Deklarationsanweisung \(`End Sub` oder `End Function`\) eingeschlossen.  Der gesamte Code der Prozedur befindet sich zwischen diesen Anweisungen.  
+# <a name="how-to-create-a-procedure-visual-basic"></a>Gewusst wie: Erstellen einer Prozedur (Visual Basic)
+Sie setzen eine Prozedur zwischen einer Start-deklarationsanweisung (`Sub` oder `Function`) und ein Enddatum deklarationsanweisung (`End Sub` oder `End Function`). Alle Prozedur Code liegt zwischen diesen Anweisungen.  
   
- Eine Prozedur kann keine andere Prozedur enthalten, deshalb müssen sich ihre einleitenden und abschließenden Anweisungen außerhalb jeder anderen Prozedur befinden.  
+ Eine Prozedur kann nicht einer anderen Prozedur enthalten, damit die Start- und Enddatum Anweisungen außerhalb eine beliebige andere Prozedur sein müssen.  
   
- Wenn Ihr Code die gleiche Aufgaben an verschiedenen Stellen ausführt, können Sie die Aufgabe einmal als Prozedur schreiben und sie anschließend von verschiedenen Codeabschnitten aus aufrufen.  
+ Wenn Sie über Code, die an verschiedenen Positionen in die gleiche Aufgabe ausführt verfügen, können Sie die Aufgabe einmal als Prozedur schreiben, und von unterschiedlichen Stellen im Code aufrufen.  
   
-### So erstellen Sie eine Prozedur, die keinen Wert zurückgibt  
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>So erstellen Sie eine Prozedur, die keinen Wert zurückgibt  
   
-1.  Verwenden Sie außerhalb anderer Prozeduren eine `Sub`\-Anweisung, auf die eine `End Sub`\-Anweisung folgt.  
+1.  Außerhalb eine beliebige andere Prozedur verwendet eine `Sub` Anweisung, gefolgt von einem `End Sub` Anweisung.  
   
-2.  Geben Sie in der `Sub`\-Anweisung nach dem `Sub`\-Schlüsselwort den Namen der Prozedur und danach die Parameterliste in runden Klammern ein.  
+2.  In der `Sub` -Anweisung, befolgen Sie die `Sub` Schlüsselwort mit dem Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern.  
   
-3.  Setzen Sie die Codeanweisungen der Prozedur zwischen die `Sub`\-Anweisung und die `End Sub`\-Anweisung.  
+3.  Platzieren Sie die Prozedur codeanweisungen zwischen der `Sub` und `End Sub` Anweisungen.  
   
-### So erstellen Sie eine Prozedur, die einen Wert zurückgibt  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>So erstellen Sie eine Prozedur, die einen Wert zurückgibt  
   
-1.  Verwenden Sie außerhalb anderer Prozeduren eine `Function`\-Anweisung, auf die eine `End Function`\-Anweisung folgt.  
+1.  Außerhalb eine beliebige andere Prozedur verwendet eine `Function` Anweisung, gefolgt von einem `End Function` Anweisung.  
   
-2.  Geben Sie in der `Function`\-Anweisung nach dem `Function`\-Schlüsselwort den Namen der Prozedur, die Parameterliste in Klammern und anschließend eine `As`\-Klausel ein, mit der der Datentyp des Rückgabewerts festgelegt wird.  
+2.  In der `Function` -Anweisung, befolgen Sie die `Function` Schlüsselwort mit dem Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern ein, und klicken Sie dann eine `As` -Klausel, in den Datentyp des Rückgabewerts.  
   
-3.  Setzen Sie die Codeanweisungen der Prozedur zwischen die Anweisungen `Function` und `End Function`.  
+3.  Platzieren Sie die Prozedur codeanweisungen zwischen der `Function` und `End Function` Anweisungen.  
   
-4.  Verwenden Sie eine `Return`\-Anweisung, um den Wert an den Aufrufcode zurückzugeben.  
+4.  Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
   
-### So verbinden Sie die neue Prozedur mit den alten wiederkehrenden Codeblöcken  
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Eine neue Prozedur mit alten, wiederkehrende Codeblöcke verbinden  
   
-1.  Definieren Sie die neue Prozedur an einer Stelle, an der der alte Code darauf zugreifen kann.  
+1.  Stellen Sie sicher, dass Sie die neue Prozedur an einer Stelle definieren, in denen der alte Code kann zugreifen.  
   
-2.  Ersetzen Sie im alten wiederkehrenden Codeblock die Anweisungen zur Durchführung der wiederkehrenden Aufgabe durch eine Anweisung, die die `Sub`\-Prozedur oder die `Function`\-Prozedur aufruft.  
+2.  Ersetzen Sie in Ihrer alten, wiederkehrende Codeblock, der Anweisungen, die sich wiederholende Aufgabe mit einer einzigen Anweisung durchführen, die aufruft der `Sub` oder `Function` Prozedur.  
   
-3.  Wenn es sich bei der Prozedur um eine `Function`\-Prozedur handelt, die einen Wert zurückgibt, müssen Sie sicherstellen, dass die aufrufende Anweisung eine Aktion mit dem zurückgegebenen Wert ausführt, dass der Wert z. B. in einer Variablen gespeichert wird. Andernfalls geht der Wert verloren.  
+3.  Wenn die Prozedur ist eine `Function` , die einen Wert zurückgibt, stellen Sie sicher, dass die aufrufende Anweisung führt eine Aktion mit dem zurückgegebenen Wert, z. B. in einer Variablen speichern, sonst wird der Wert verloren.  
   
-## Beispiel  
- Mit der folgenden `Function`\-Prozedur wird die längste Seite \(die Hypotenuse\) eines rechtwinkligen Dreiecks anhand der Werte der beiden anderen Seiten berechnet.  
+## <a name="example"></a>Beispiel  
+ Die folgenden `Function` Prozedur berechnet die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  
   
  [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Objektorientiertes Programmieren](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Function-Prozeduren](./function-procedures.md)  
+ [Eigenschaftenprozeduren](./property-procedures.md)  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Rekursive Prozeduren](./recursive-procedures.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Objektorientierte Programmierung](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

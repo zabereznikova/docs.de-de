@@ -1,51 +1,50 @@
 ---
-title: "How to: Overload a Procedure that Takes Optional Parameters (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, parameters"
-  - "procedure overloading, optional parameters"
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "procedure parameters"
-  - "procedures, overloading"
-  - "procedures, multiple versions"
+title: "Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], parameters
+- procedure overloading [Visual Basic], optional parameters
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- procedure parameters
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b4a863944d4f9ab265aab52578fbb704ca376de5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Overload a Procedure that Takes Optional Parameters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn eine Prozedur einen oder mehrere [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)\-Parameter enthält, können Sie eine überladene Version definieren, die jeder der impliziten Überladungen entspricht.  Weitere Informationen finden Sie im Abschnitt "Implizite Überladungen für optionale Parameter" unter [Considerations in Overloading Procedures](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
+# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Gewusst wie: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)
+Falls eine Prozedur eine oder mehrere [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter keine überladene Version, die mit keiner der entsprechenden implizite Überladungen definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für optionale Parameter" in [Überlegungen in Überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
   
-## Ein optionaler Parameter  
+## <a name="one-optional-parameter"></a>Ein optionaler Parameter  
   
-#### So überladen Sie eine Prozedur, die einen optionalen Parameter akzeptiert  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Um eine Prozedur zu überladen, die einen optionalen Parameter akzeptiert.  
   
-1.  Schreiben Sie eine `Sub`\-Deklarationsanweisung oder eine `Function`\-Deklarationsanweisung, die den optionalen Parameter in der Parameterliste enthält.  Verwenden Sie das `Optional`\-Schlüsselwort nicht in dieser überladenen Version.  
+1.  Schreiben einer `Sub` oder `Function` deklarationsanweisung, mit dem optionalen Parameter in der Parameterliste enthält. Verwenden Sie nicht die `Optional` Schlüsselwort in dieser überladenen Version.  
   
-2.  Stellen Sie dem `Sub`\-Schlüsselwort oder dem `Function`\-Schlüsselwort das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)\-Schlüsselwort voran.  
+2.  Vorausgehen der `Sub` oder `Function` Schlüsselwort mit dem [überlädt](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort.  
   
-3.  Schreiben Sie den Prozedurcode, der ausgeführt werden soll, wenn das optionale Argument im Aufrufcode nicht angegeben wird.  
+3.  Schreiben Sie den Code der Prozedur, der ausgeführt werden soll, wenn der aufrufende Code das optionale Argument bereitstellt.  
   
-4.  Beenden Sie die Prozedur nach Bedarf mit der `End Sub`\-Anweisung oder der `End Function`\-Anweisung.  
+4.  Beenden Sie die Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   
-5.  Schreiben Sie eine zweite Deklarationsanweisung, die sich von der ersten Deklaration nur dadurch unterscheidet, dass der optionale Parameter nicht in der Parameterliste angegeben wird.  
+5.  Schreiben Sie eine zweite deklarationsanweisung, die mit der ersten Deklaration identisch ist, mit dem Unterschied, dass den optionalen Parameter in der Parameterliste nicht enthalten ist.  
   
-6.  Schreiben Sie den Prozedurcode, der ausgeführt werden soll, wenn das optionale Argument im Aufrufcode nicht angegeben wird.  Beenden Sie die Prozedur nach Bedarf mit der `End Sub`\-Anweisung oder der `End Function`\-Anweisung.  
+6.  Schreiben Sie den Code der Prozedur, der ausgeführt werden soll, wenn der aufrufende Code die optionale Argument nicht angegeben wird. Beenden Sie die Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   
-     Das folgende Beispiel veranschaulicht eine Prozedur, die mit einem optionalen Parameter definiert ist, eine äquivalente Gruppe mit zwei überladenen Prozeduren sowie Beispiele für ungültige und gültige überladene Versionen.  
+     Das folgende Beispiel zeigt eine Prozedur mit einem optionalen Parameter, der kein äquivalenter Satz von zwei überladenen Prozeduren und schließlich Beispiele von ungültigen und gültigen überladenen Versionen definiert.  
   
      [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
@@ -53,31 +52,31 @@ Wenn eine Prozedur einen oder mehrere [Optional](../../../../visual-basic/langua
   
      [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
-## Mehrere optionale Parameter  
- Für eine Prozedur mit mehreren optionalen Parametern benötigen Sie normalerweise mehr als zwei überladene Versionen.  Wenn eine Prozedur beispielsweise zwei optionale Parameter enthält und im Aufrufcode jeder dieser Parameter unabhängig voneinander angegeben oder nicht angegeben werden kann, dann sind vier überladene Versionen erforderlich, nämlich eine Version für jede mögliche Kombination angegebener Argumente.  
+## <a name="multiple-optional-parameters"></a>Mehrere optionale Parameter  
+ Für eine Prozedur mit mehr als ein optionaler Parameter benötigen Sie normalerweise mehr als zwei überladene Versionen. Z. B. erforderlich, wenn zwei optionale Parameter vorhanden sind, und der aufrufende Code angeben kann, oder lassen Sie jeweils unabhängig voneinander, Sie vier überladene Versionen, eine für jede mögliche Kombination der bereitgestellten Argumente.  
   
- Mit zunehmender Anzahl von optionalen Parametern wird auch das Überladen komplexer.  Sofern es keine nicht akzeptablen Kombinationen angegebener Argumente gibt, sind für N optionale Parameter 2 ^ N überladene Versionen erforderlich.  Je nach Art der Prozedur, kann der zusätzliche Aufwand, den die Definition sämtlicher überladener Versionen bedeutet, durch die Verständlichkeit der Logik gerechtfertigt werden.  
+ Mit zunehmender Anzahl von optionalen Parametern wird das überladen. Wenn einige Kombinationen der bereitgestellten Argumente nicht zulässig sind, für die optionalen Parameter N Sie benötigen 2 ^ N überladene Versionen. Je nach Art der Prozedur stellen Sie möglicherweise fest, dass die Übersichtlichkeit der Logik den zusätzlichen Aufwand alle überladenen Versionen definiert richtet.  
   
-#### So überladen Sie eine Prozedur, die mehrere optionale Parameter akzeptiert  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Um eine Prozedur zu überladen, die mehr als einen optionalen Parameter akzeptiert.  
   
-1.  Legen Sie fest, welche Kombinationen angegebener optionaler Argumente in Anbetracht der Logik der Prozedur akzeptabel sind.  Eine unannehmbare Kombination könnte entstehen, wenn ein optionaler Parameter von einem anderen abhängt.  Wenn ein Parameter beispielsweise den Namen des Ehegatten und ein anderer das Alter des Ehegatten enthalten soll, dann ist eine Kombination von Argumenten ungültig, die das Alter, aber nicht den Namen angibt.  
+1.  Bestimmen Sie, welche Kombinationen der bereitgestellten optionale Argumente für die Logik der Prozedur akzeptabel sind. Eine Kombination von unzulässige kann auftreten, wenn ein optionaler Parameter auf einer anderen abhängig ist. Beispielsweise ist, wenn Sie einen Parameter akzeptiert, Name des Partners, und eine andere des Partners Alter akzeptiert, eine Kombination von Argumenten, das Alter angeben, jedoch ausgelassen wurde der Name nicht akzeptabel.  
   
-2.  Schreiben Sie für jede akzeptable Kombination angegebener Werte eine `Sub`\-Deklarationsanweisung bzw. eine `Function`\-Deklarationsanweisung, die die entsprechende Parameterliste definiert.  Verwenden Sie das `Optional`\-Schlüsselwort nicht.  
+2.  Schreiben Sie für jede zulässige Kombination angegebenen optionale Argumente, ein `Sub` oder `Function` deklarationsanweisung, mit dem die Parameterliste der entsprechenden definiert. Verwenden Sie nicht die `Optional` Schlüsselwort.  
   
-3.  Stellen Sie in jeder Deklaration das [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)\-Schlüsselwort dem `Sub`\-Schlüsselwort bzw. dem `Function`\-Schlüsselwort voran.  
+3.  In jede Deklaration davor der `Sub` oder `Function` Schlüsselwort mit der [überlädt](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort.  
   
-4.  Geben Sie nach jeder Deklaration den Prozedurcode ein, der ausgeführt werden soll, wenn im Aufrufcode eine Argumentliste angegeben wird, die der Parameterliste der betreffenden Deklaration entspricht.  
+4.  Schreiben Sie nach jeder Deklaration der Prozedurcode, der ausgeführt werden soll, wenn der aufrufende Code eine Argumentliste für diese Deklaration Parameterliste bereitstellt.  
   
-5.  Beenden Sie jede Prozedur nach Bedarf mit der `End Sub`\-Anweisung oder der `End Function`\-Anweisung.  
+5.  Beenden Sie jede Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Parameter Arrays](../../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Troubleshooting Procedures](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [How to: Call an Overloaded Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
- [How to: Overload a Procedure that Takes an Indefinite Number of Parameters](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Optionale Parameter](./optional-parameters.md)  
+ [Parameterarrays](./parameter-arrays.md)  
+ [Prozedurüberladung](./procedure-overloading.md)  
+ [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)  
+ [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Gewusst wie: Aufrufen einer überladenen Prozedur](./how-to-call-an-overloaded-procedure.md)  
+ [Gewusst wie: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Überladungsauflösung](./overload-resolution.md)

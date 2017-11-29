@@ -1,36 +1,34 @@
 ---
-title: "&#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30269"
-  - "bc30269"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30269"
+title: '&#39; &lt;Methodname&gt;&#39; hat mehrere Definitionen mit identischen Signaturen'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30269
+- bc30269
+helpviewer_keywords: BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1a71d51690d6318a559a94ac81de625289d7587d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Eine `Function`\- oder `Sub`\-Prozedurdeklaration verwendet den gleichen Prozedurnamen und die gleiche Argumentliste wie eine vorherige Deklaration.  Eine mögliche Ursache ist der Versuch, die Originalprozedur zu überladen.  Überladene Prozeduren müssen unterschiedliche Argumentlisten haben.  
+# <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39; &lt;Methodname&gt;&#39; hat mehrere Definitionen mit identischen Signaturen
+Ein `Function` oder `Sub` Prozedurdeklaration verwendet die gleichen Prozedurnamen Namen und die Argumentliste wie eine vorherige Deklaration. Eine mögliche Ursache ist der Versuch, die ursprüngliche Prozedur zu überladen. Überladene Prozeduren müssen unterschiedliche Argumentlisten haben.  
   
- **Fehler\-ID:** BC30269  
+ **Fehler-ID:** BC30269  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie den Prozedurnamen oder die Argumentliste, oder entfernen Sie die doppelte Deklaration.  
+-   Ändern Sie den Namen der Prozedur oder die Argumentliste enthalten, oder entfernen Sie die doppelte Deklaration.  
   
-## Siehe auch  
- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Considerations in Overloading Procedures](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Überlegungen zur Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

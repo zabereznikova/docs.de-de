@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - type equivalence
 - embedded interop types
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9a7b39047edcd8e2c770e17a33dd73e75ee5083
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Typäquivalenz und eingebettete Interop-Typen
 Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], unterstützt die Common Language Runtime die Einbettung von Typinformationen für COM-Typen direkt in verwaltete Assemblys. Die verwalteten Assemblys müssen die Typinformationen für COM-Typen nicht aus Interop-Assemblys abrufen. Da die eingebettete Typinformation nur die Typen und Member enthält, die tatsächlich von einer verwalteten Assembly verwendet werden, können zwei verwaltete Assemblys möglicherweise sehr unterschiedliche Ansichten desselben COM-Typs haben. Jede verwaltete Assembly besitzt ein anderes <xref:System.Type>-Objekt, das eine Ansicht des COM-Typs darstellt. Die Common Language Runtime unterstützt Typäquivalenz zwischen diesen unterschiedlichen Ansichten für Schnittstellen, Strukturen, Enumerationen und Delegaten.  
@@ -53,9 +46,9 @@ Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]
   
  Wenn ein Typ nicht über das <xref:System.Runtime.InteropServices.TypeIdentifierAttribute>-Attribut, oder über ein <xref:System.Runtime.InteropServices.TypeIdentifierAttribute>-Attribut verfügt, das Bereich und Bezeichner nicht angibt, kann der Typ folgendermaßen weiterhin für die Äquivalenz in Betracht gezogen werden:  
   
--   Für Schnittstellen wird der Wert von <xref:System.Runtime.InteropServices.GuidAttribute> anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName>-Eigenschaft verwendet, und die <xref:System.Type.FullName%2A?displayProperty=fullName>-Eigenschaft (d.h. Typnamen einschließlich Namespace) wird anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName>-Eigenschaft verwendet.  
+-   Für Schnittstellen wird der Wert von <xref:System.Runtime.InteropServices.GuidAttribute> anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType>-Eigenschaft verwendet, und die <xref:System.Type.FullName%2A?displayProperty=nameWithType>-Eigenschaft (d.h. Typnamen einschließlich Namespace) wird anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType>-Eigenschaft verwendet.  
   
--   Bei Strukturen, Enumerationen und Delegaten wird die <xref:System.Runtime.InteropServices.GuidAttribute> der enthaltenden Assembly anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A>-Eigenschaft, und die <xref:System.Type.FullName%2A?displayProperty=fullName>-Eigenschaft anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>-Eigenschaft verwendet.  
+-   Bei Strukturen, Enumerationen und Delegaten wird die <xref:System.Runtime.InteropServices.GuidAttribute> der enthaltenden Assembly anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A>-Eigenschaft, und die <xref:System.Type.FullName%2A?displayProperty=nameWithType>-Eigenschaft anstelle der <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>-Eigenschaft verwendet.  
   
 <a name="type_equiv"></a>   
 ### <a name="marking-com-types-for-type-equivalence"></a>Markieren von COM-Typen für Typäquivalenz  
@@ -66,7 +59,6 @@ Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]
 -   Machen Sie den Typ zu einem COM-Importtyp. Eine Schnittstelle ist eine COM-Importtyp, wenn es über das <xref:System.Runtime.InteropServices.ComImportAttribute>-Attribut verfügt. Eine Schnittstelle, Struktur, Enumeration oder ein Delegat ist ein COM-Importtyp, wenn die Assembly, in der sie definiert ist, über das <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>-Attribut verfügt.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Type.IsEquivalentTo%2A>   
- [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Importieren einer Typbibliothek als Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-
+ <xref:System.Type.IsEquivalentTo%2A>  
+ [Verwenden von COM-Typen in verwaltetem Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

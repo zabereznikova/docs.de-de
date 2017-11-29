@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>Ableiten von WebRequest
 Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die grundlegende Methoden und Eigenschaften bereitstellt, mit denen ein protokollspezifischer Anforderungshandler erstellt wird, der in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die **WebRequest**-Klasse verwenden, können Daten mit einem beliebigen unterstützten Protokoll anfordern, ohne das verwendete Protokoll anzugeben.  
   
- Zwei Kriterien müssen erfüllt sein, damit eine protokollspezifische Klasse als ein austauschbares Protokoll verwendet werden kann: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sie mit der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
+ Zwei Kriterien müssen erfüllt sein, damit eine protokollspezifische Klasse als ein austauschbares Protokoll verwendet werden kann: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sie mit der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
   
  **WebRequest**-Instanzen sind für die einmalige Verwendung vorgesehen. Wenn Sie eine andere Anforderung vornehmen möchten, erstellen Sie eine neue **WebRequest**. **WebRequest** unterstützt die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle, um Entwicklern zu ermöglichen, eine **WebRequest**-Vorlage zu serialisieren und die Vorlage für zusätzliche Anforderungen zu rekonstruieren.  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest Create-Methode  
- Die <xref:System.Net.IWebRequestCreate.Create%2A>-Methode ist verantwortlich für das Initialisieren einer neuen Instanz der protokollspezifischen Klasse. Wenn eine neue **WebRequest** erstellt wird, entspricht die <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>-Methode dem angeforderten URI und die URI-Präfixe werden mit der **RegisterPrefix**-Methode registriert. Die **Create**-Methode des entsprechenden protokollspezifischen Nachfolgers muss eine initialisierte Instanz des Nachfolgers zurückgeben, die eine Standardtransaktion für Anforderungen/Antworten für das Protokoll ausführen kann, ohne ein protokollspezifisches Feld zu ändern.  
+ Die <xref:System.Net.IWebRequestCreate.Create%2A>-Methode ist verantwortlich für das Initialisieren einer neuen Instanz der protokollspezifischen Klasse. Wenn eine neue **WebRequest** erstellt wird, entspricht die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode dem angeforderten URI und die URI-Präfixe werden mit der **RegisterPrefix**-Methode registriert. Die **Create**-Methode des entsprechenden protokollspezifischen Nachfolgers muss eine initialisierte Instanz des Nachfolgers zurückgeben, die eine Standardtransaktion für Anforderungen/Antworten für das Protokoll ausführen kann, ohne ein protokollspezifisches Feld zu ändern.  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName-Eigenschaft  
  Die <xref:System.Net.WebRequest.ConnectionGroupName%2A>-Eigenschaft wird verwendet, um eine Gruppe von Verbindungen mit einer Ressource zu benennen, damit mehrere Anforderungen über eine einzelne Verbindung ausgeführt werden können. Um die Freigabe von Verbindungen zu implementieren, müssen Sie eine protokollspezifische Methode zum Pooling und Zuweisen von Verbindungen verwenden. Zum Beispiel implementiert die bereitgestellte <xref:System.Net.ServicePointManager>-Klasse die gemeinsame Nutzung von Verbindungen für die <xref:System.Net.HttpWebRequest>-Klasse. Die **ServicePointManager**-Klasse erstellt eine <xref:System.Net.ServicePoint>, die eine Verbindung mit einem bestimmten Server für jede Verbindungsgruppierung bereitstellt.  
@@ -59,7 +53,7 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
 ## <a name="headers-property"></a>Header-Eigenschaft  
  Die <xref:System.Net.WebRequest.Headers%2A>-Eigenschaft enthält eine beliebige Auflistung von Name/Wert-Paaren der Metadaten, die der Anforderung zugeordnet sind. Alle für das Protokoll erforderlichen Metadaten, die als Name/Wert-Paar ausgedrückt werden, können in die **Header**-Eigenschaft aufgenommen werden. In der Regel müssen diese Informationen festgelegt werden, bevor die <xref:System.Net.WebRequest.GetRequestStream%2A>- oder <xref:System.Net.WebRequest.GetResponse%2A>-Methoden aufgerufen werden. Sobald die Anforderung gestellt wurde, gelten die Metadaten als schreibgeschützt.  
   
- Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName>-Eigenschaft z.B. den HTTP-Header **User-Agent** verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie vermeiden, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
+ Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType>-Eigenschaft z.B. den HTTP-Header **User-Agent** verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie vermeiden, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
   
 ## <a name="method-property"></a>Methode-Eigenschaft  
  Die <xref:System.Net.WebRequest.Method%2A>-Eigenschaft enthält das Verb oder die Aktion, die der Server auf Anfrage ausführen soll. Die Standardeinstellung für die **Method**-Eigenschaft muss eine Standardanforderung/-antwort aktivieren, ohne protokollspezifische Eigenschaften festzulegen. Die <xref:System.Net.HttpWebResponse.Method%2A>-Methode wird z.B. standardmäßig auf „GET“ festgelegt, womit eine Ressource von einem Webserver angefordert und die Antwort zurückgegeben wird.  
@@ -104,9 +98,8 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
  Die **GetResponse**-Methode ist verantwortlich für das Erstellen eines entsprechenden **WebResponse**-Nachfolgers, der die eingehende Antwort enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

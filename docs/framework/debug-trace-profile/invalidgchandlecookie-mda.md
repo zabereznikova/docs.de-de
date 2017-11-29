@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid cookies
 - cookies, invalid
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fca1d010fd206de931cc057bc735179808686b51
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4757298a382085c1ffebc9a04e41eea81c31941b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie-MDA
 Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine Konvertierung von einem ungültigen <xref:System.IntPtr>-Cookie in ein <xref:System.Runtime.InteropServices.GCHandle> versucht wird.  
@@ -61,7 +54,6 @@ Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiv
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>   
- <xref:System.Runtime.InteropServices.GCHandle>   
+ <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>  
+ <xref:System.Runtime.InteropServices.GCHandle>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Netzwerkisolation für Windows Store-Apps
 Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> können verwendet werden, um Windows Store-Apps oder Desktop-Apps zu entwickeln. Bei Verwendung in einer Windows Store-App sind Klassen in diesen Namespaces von Netzwerkisolation betroffen, als Teil des Anwendungssicherheitsmodells, das von [!INCLUDE[win8](../../../includes/win8-md.md)] verwendet wird. Die entsprechenden Netzwerkfunktionen müssen im App-Manifest für eine Windows Store-App aktiviert sein, damit das System den Netzwerkzugriff erlaubt.  
@@ -41,10 +35,9 @@ Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:Sy
  Weitere ausführliche Informationen zum Konfigurieren der Netzwerkfunktionen und der Isolationstools zur Problembehandlung im Rahmen der Netzwerkisolation finden Sie unter [How to configure network isolation capabilities (Vorgehensweise beim Konfigurieren von Netzwerkisolierungseigenschaften)](http://go.microsoft.com/fwlink/?LinkID=228265) in der [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Entwicklerdokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Connecting to a web service (Herstellen einer Verbindung zu einem Webdienst)](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [Richtlinien und Prüfliste für die Netzwerkisolation](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [Quickstart: Connecting using HttpClient (Schnellstart: Verbindungsherstellung mithilfe von „HttpClient“)](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [How to use HttpClient handlers (Verwenden des Handlers für „HttpClient“)](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [How to secure HttpClient connections (Sichern von „HttpClient“-Verbindungen)](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [Herstellen einer Verbindung mit einem Webdienst](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Richtlinien und die Prüfliste für die Netzwerkisolation](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Schnellstart: Verbindungsherstellung mithilfe einer "HttpClient"](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Gewusst wie: Verwenden Sie den Handler für "HttpClient"](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Sichere Verbindungen für "HttpClient"](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [HttpClient Sample (HttpClient-Beispiel)](http://go.microsoft.com/fwlink/?LinkId=242550)
-

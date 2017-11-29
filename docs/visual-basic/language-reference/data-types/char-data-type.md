@@ -1,46 +1,44 @@
 ---
-title: "Char Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Char"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "literal type characters, C"
-  - "Char data type"
-  - "C literal type character"
-  - "data types [Visual Basic], assigning"
-  - "Char data type, character literals"
+title: Char-Datentyp (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Char
+helpviewer_keywords:
+- literal type characters [Visual Basic], C
+- Char data type
+- C literal type character [Visual Basic]
+- data types [Visual Basic], assigning
+- Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Char Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Speichert 16\-Bit\-\(2\-Byte\)\-Codepunkte ohne Vorzeichen, deren Werte im Bereich von 0 bis 65535 liegen.  Jeder *Codepunkt* oder jedes Zeichencode, stellt ein einzelnes Unicode\-Zeichen dar.  
+# <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
+Enthält, die vorzeichenlose 16-Bit (2-Byte) Codepunkten im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode stellt ein einzelnes Unicode-Zeichen dar.  
   
-## Hinweise  
- Verwenden Sie den `Char`\-Datentyp, wenn Sie lediglich ein einzelnes Zeichen speichern möchten und der zusätzliche Speicherbedarf für `String` nicht benötigt wird.  In bestimmten Fällen können Sie mit `Char()`, einem Array von `Char`\-Elementen, mehrere Zeichen speichern.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden der `Char` -Datentyp, wenn Sie nur einen einzigen halten müssen Zeichen und nicht den Mehraufwand für `String`. In einigen Fällen können Sie `Char()`, ein Array von `Char` Elemente, um mehrere Zeichen enthalten.  
   
- Der Standardwert von `Char` ist das Zeichen mit dem Codepunkt 0 \(null\).  
+ Der Standardwert von `Char` ist das Zeichen mit einem Codepunkt 0.  
   
-## Unicode\-Zeichen  
- Die ersten 128 Codepunkte \(0 bis 127\) in Unicode entsprechen den Buchstaben und Symbolen auf einer Standardtastatur \(USA\).  Tastatur.  Diese ersten 128 Codepunkte entsprechen denen, die vom ASCII\-Zeichensatz definiert werden.  Die zweiten 128 Codepunkte \(128 bis 255\) sind Sonderzeichen, z. B. Buchstaben aus lateinischen Alphabeten, Akzentzeichen, Währungssymbole und Symbole für mathematische Brüche.  Die übrigen Codepunkte \(256 bis 65535\) werden für eine Vielzahl von Symbolen verwendet, z. B. internationale Textzeichen, diakritische Zeichen sowie mathematische und technische Symbole.  
+## <a name="unicode-characters"></a>Unicode-Zeichen  
+ Die ersten 128 Codepunkte (0 bis 127) von Unicode entsprechen den Buchstaben und Symbolen auf eine US-Standardtastatur. Diese ersten 128 Codepunkte sind identisch mit denen ASCII-Zeichensatz definiert. Die zweite 128 Codepunkte (128 bis 255) darstellen Sonderzeichen enthält, z. B. lateinische Buchstaben, Akzente, Währungssymbole und Sekundenbruchteilen. Unicode verwendet die übrigen Codepunkte (256-65535) für eine Vielzahl von Symbolen, z. B. weltweite Textzeichen, diakritische Zeichen und mathematische und technische Symbole.  
   
- Sie können z. B. die <xref:System.Char.IsDigit%2A>\-Methode und die <xref:System.Char.IsPunctuation%2A>\-Methode auf eine `Char`\-Variable anwenden und so deren Unicode\-Klassifizierung ermitteln.  
+ Können Sie Methoden wie z. B. <xref:System.Char.IsDigit%2A> und <xref:System.Char.IsPunctuation%2A> auf eine `Char` Variable, deren Unicode-Klassifizierung ermitteln.  
   
-## Typkonvertierung  
- Visual Basic führt keine direkten Konvertierungen zwischen `Char` und den numerischen Typen durch.  Mit der <xref:Microsoft.VisualBasic.Strings.Asc%2A>\-Funktion oder der <xref:Microsoft.VisualBasic.Strings.AscW%2A>\-Funktion können Sie einen `Char`\-Wert in einen `Integer` konvertieren, der seinen Codepunkt darstellt.  Mit der <xref:Microsoft.VisualBasic.Strings.Chr%2A>\-Funktion oder der <xref:Microsoft.VisualBasic.Strings.ChrW%2A>\-Funktion können Sie einen `Integer`\-Wert in einen `Char` mit dem betreffenden Codepunkt konvertieren.  
+## <a name="type-conversions"></a>Typkonvertierungen  
+ Visual Basic nicht direkt zwischen konvertiert `Char` und numerischen Typen. Können Sie die <xref:Microsoft.VisualBasic.Strings.Asc%2A> oder <xref:Microsoft.VisualBasic.Strings.AscW%2A> Funktion konvertiert eine `Char` -Wert an ein `Integer` , dessen Codepunkt darstellt. Können Sie die <xref:Microsoft.VisualBasic.Strings.Chr%2A> oder <xref:Microsoft.VisualBasic.Strings.ChrW%2A> Funktion konvertiert eine `Integer` -Wert in einen `Char` , diesen Codepunkt besitzt.  
   
- Wenn die Typüberprüfung \([Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)\) aktiviert ist, müssen Sie das Literaltypzeichen an ein Zeichenfolgenliteral aus einem Zeichen hängen, um es als `Char`\-Datentyp zu kennzeichnen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Wenn die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist, müssen Sie ein Einzelzeichen ein Zeichenfolgenliteral als Identifikation des Literaltypzeichens angefügt der `Char` -Datentyp. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
 Option Strict On  
@@ -52,27 +50,27 @@ charVar = "Z"
 charVar = "Z"C  
 ```  
   
-## Programmiertipps  
+## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Char` ist ein Typ ohne Vorzeichen und kann keinen negativen Wert darstellen.  Verwenden Sie `Char` auf keinen Fall für numerische Werte.  
+-   **Negative Zahlen.** `Char`ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
   
--   **Interop\-Überlegungen.** Wenn Sie mit Komponenten arbeiten, die nicht für .NET Framework geschrieben wurden \(z. B. Automatisierungs\- oder COM\-Objekte\), sollten Sie beachten, dass Zeichentypen in anderen Umgebungen eine andere Datenbreite \(8 Bits\) haben.  Wenn Sie ein 8\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic\-Code als `Byte` und nicht als `Char`.  
+-   **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran Zeichentypen eine andere Datenbreite (8 Bit) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
   
--   **Erweiterung.** Der `Char`\-Datentyp wird zu `String` erweitert.  So können Sie `Char` in `String` konvertieren, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
+-   **Widening.** Die `Char` -Datentyp zu `String`. Dies bedeutet, Sie können konvertieren `Char` auf `String` und tritt eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` an ein aus einem Zeichen bestehendes Zeichenfolgenliteral wird der `Char`\-Datentyp erzwungen.  `Char` hat kein Typkennzeichen.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine einzelne Zeichenfolge Literal wird der `Char` -Datentyp. `Char`verfügt über keine Typkennzeichen aus.  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=fullName>\-Struktur.  
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
   
-## Siehe auch  
- <xref:System.Char?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Char?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

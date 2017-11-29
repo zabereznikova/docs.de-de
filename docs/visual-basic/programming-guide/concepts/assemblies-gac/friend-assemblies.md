@@ -1,43 +1,35 @@
 ---
-title: Friend-Assemblys (Visual Basic) | Microsoft-Dokumentation
+title: Friend-Assemblys (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6e01ae91b9d5d875bb618993cd9eda82db59399
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="friend-assemblies-visual-basic"></a>Friend-Assemblys (Visual Basic)
-Ein *Friend-Assembly* ist eine Assembly, die auf einer anderen Assembly zugreifen kann [Freund](../../../../visual-basic/language-reference/modifiers/friend.md) Typen und Member. Wenn Sie eine Assembly als Friend-Assembly identifizieren, müssen Sie nicht mehr Typen und Member als öffentlich für sie von anderen Assemblys erfolgen markieren. Dies ist besonders hilfreich, in den folgenden Szenarien:  
+Ein *Friend-Assembly* ist eine Assembly, die auf einer anderen Assembly zugreifen kann ["Friend"](../../../../visual-basic/language-reference/modifiers/friend.md) Typen und Member. Wenn Sie eine Assembly als Friend-Assembly identifizieren, müssen Sie Typen und Member nicht mehr als öffentlich markieren, damit andere Assemblys auf sie zugreifen können. Dies ist insbesondere in folgenden Szenarios nützlich:  
   
--   Bei Komponententests, wenn Testcode ausgeführt, in wird eine separate Assembly muss jedoch Zugriff auf Member der zu testenden Assembly, die als markiert sind `Friend`.  
+-   Bei Komponententests, wenn Testcode ausgeführt, in wird eine separate Assembly jedoch erfordert Zugriff auf Member der zu testenden Assembly, die als markiert sind `Friend`.  
   
--   Wenn Sie entwickeln eine Klassenbibliothek und Ergänzungen der Bibliothek in separate Assemblys enthalten sind, aber erfordern Zugriff auf Elemente in vorhandenen Assemblys, die als markiert sind `Friend`.  
+-   Wenn Sie eine Klassenbibliothek entwickeln und Ergänzungen der Bibliothek in separaten Assemblys enthalten sind, jedoch benötigen Sie Zugriff auf Elemente in vorhandene Assemblys, die als gekennzeichnet sind `Friend`.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>Attribut, um eine oder mehrere Friend-Assemblys für eine bestimmte Assembly identifizieren.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Im folgenden Beispiel wird das <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>-Attribut in Assembly A und Assembly gibt `AssemblyB` als Friend-Assembly.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Dadurch erhält die Assembly `AssemblyB` Zugriff auf alle Typen und Member in der Assembly, die als gekennzeichnete `Friend`.  
+ Sie können das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> verwenden, um eine oder mehrere Friend-Assemblys für eine angegebene Assembly zu identifizieren. Im folgenden Beispiel wird das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> in Assembly A verwendet, und Assembly `AssemblyB` wird als Friend-Assembly angegeben. Dadurch erhält Assembly `AssemblyB` Zugriff auf alle Typen und Member in Assembly A, die als `Friend` markiert sind.  
   
 > [!NOTE]
->  Beim Kompilieren einer Assemblys (Assembly `AssemblyB`), die wird der Zugriff auf interne Typen oder internen Member einer anderen Assembly (Assembly *ein*), müssen Sie den Namen der Ausgabedatei (.exe oder .dll) explizit angeben, mit der **/out** (Compileroption). Dies ist erforderlich, da der Compiler noch nicht den Namen für die Assembly generiert wurde, zu dem Zeitpunkt erstellt wird, die es externen Verweise gebunden werden. Weitere Informationen finden Sie unter [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
+>  Beim Kompilieren einer Assembly (Assembly `AssemblyB`), die auf interne Typen oder interne Member einer anderen Assembly (Assembly *A*) zugreift, müssen Sie den Namen der Ausgabedatei (.exe oder .dll) mit der Compileroption **/out** explizit angeben. Dies ist erforderlich, da der Compiler den Namen für die Assembly, die er erstellt, noch nicht generiert hat, wenn er Bindungen an externe Referenzen vornimmt. Weitere Informationen finden Sie unter [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -57,35 +49,34 @@ Public Class ClassWithFriendMethod
         Console.WriteLine("Sample Method")  
     End Sub  
 End Class  
-  
 ```  
   
- Nur Assemblys, die Sie explizit angeben, wie Freunde zugreifen können `Friend` Typen und Member. Beispielsweise wird Assembly B ein Freund von Assembly A und Assembly C auf Assembly B, C hat keinen Zugriff auf `Friend` Typen in A.  
+ Nur Assemblys, die Sie explizit als Friends angeben, können auf `Friend`-Typen und -Member zugreifen. Wenn zum Beispiel Assembly B ein Friend von Assembly A ist und Assembly C auf Assembly B verweist, hat C keinen Zugriff auf `Friend`-Typen in A.  
   
- Der Compiler führt eine grundlegende Überprüfung der Namen der Friend-Assembly übergeben, um die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>Attribut.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Wenn Assembly *ein* deklariert *B* als Friend-Assembly, die Validierungsregeln werden wie folgt:  
+ Der Compiler führt eine grundlegende Prüfung des Namens der Friend-Assembly durch, der an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Wenn Assembly *A* Assembly *B* als Friend-Assembly deklariert, lauten die Validierungsregeln wie folgt:  
   
--   Wenn Assembly *ein* ist stark benannte Assembly *B* muss auch starken Namen. Der Name der Friend-Assembly, die an das Attribut übergeben wird enthalten den Namen der Assembly und der öffentliche Schlüssel des Schlüssel mit starkem Namen, die zum Signieren der Assembly verwendet wird *B*.  
+-   Wenn Assembly *A* einen starken Namen hat, muss Assembly *B* auch einen starken Namen haben. Der Name der Friend-Assembly, der an das Attribut übergeben wird, muss aus dem Namen der Assembly und dem öffentlichen Schlüssel der Schlüsseldatei mit starkem Namen bestehen, der zum Signieren von Assembly *B* verwendet wird.  
   
-     Der Name der Friend-Assembly, die an die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>Attribut darf nicht den starken Namen der Assembly sein *B*: enthalten nicht die Assemblyversion, Kultur, Architektur oder Token des öffentlichen Schlüssels.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+     Der Name der Friend-Assembly, der an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird, darf nicht der starke Name von Assembly *B* sein: Er darf nicht die Assemblyversion, Kultur, Architektur oder das Token des öffentlichen Schlüssels enthalten.  
   
--   Wenn Assembly *ein* ist nicht sicher mit dem Namen, den Namen der Friend-Assembly sollte nur den Assemblynamen bestehen. Weitere Informationen finden Sie unter [How to: Create Unsigned Friend Assemblies (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Wenn Assembly *A* keinen starken Namen hat, sollte der Name der Friend-Assembly nur aus dem Assemblynamen bestehen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie nicht signierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Wenn Assembly *B* ist stark benannt, geben Sie den Schlüssel mit starkem Namen für die Assembly *B* mithilfe der projekteinstellung oder der Befehlszeile `/keyfile` (Compileroption). Weitere Informationen finden Sie unter [How to: Create Signed Friend Assemblies (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Wenn Assembly *B* einen starken Namen hat, müssen Sie die Schlüsseldatei mit starkem Namen für Assembly *B* über die Projekteinstellung oder bei Verwendung der Befehlszeile die Compileroption `/keyfile` angeben. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie signierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
- Die <xref:System.Security.Permissions.StrongNameIdentityPermission>Klasse bietet auch die Möglichkeit zur Freigabe von Typen, mit den folgenden unterschieden:</xref:System.Security.Permissions.StrongNameIdentityPermission>  
+ Die Klasse <xref:System.Security.Permissions.StrongNameIdentityPermission> bietet auch die Möglichkeit zur Freigabe von Typen mit folgenden Unterschieden:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission>gilt für einen einzelnen Typ, während eine Friend-Assembly für die gesamte Assembly gilt.</xref:System.Security.Permissions.StrongNameIdentityPermission>  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission> gilt für einen einzelnen Typ, während eine Friend-Assembly für die gesamte Assembly gilt.  
   
--   Wenn es Hunderte von Typen in der Assembly gibt *ein* , die Sie für die Assembly freigeben möchten *B*, müssen Sie hinzufügen <xref:System.Security.Permissions.StrongNameIdentityPermission>Alle.</xref:System.Security.Permissions.StrongNameIdentityPermission> Wenn Sie eine Friend-Assembly verwenden, müssen Sie nur einmal Deklarieren von Friend-Beziehung.  
+-   Wenn es Hunderte von Typen in Assembly *A* gibt, die Sie für Assembly *B* freigeben möchten, müssen Sie allen <xref:System.Security.Permissions.StrongNameIdentityPermission> hinzufügen. Wenn Sie eine Friend-Assembly verwenden, müssen Sie die Friend-Beziehung nur einmal deklarieren.  
   
--   Bei Verwendung von <xref:System.Security.Permissions.StrongNameIdentityPermission>, die Typen, die Sie freigeben möchten, müssen als öffentlich deklariert werden.</xref:System.Security.Permissions.StrongNameIdentityPermission> Wenn Sie eine Friend-Assembly verwenden, werden die freigegebenen Typen als deklariert `Friend`.  
+-   Bei Verwendung von <xref:System.Security.Permissions.StrongNameIdentityPermission> müssen die Typen, die Sie freigeben möchten, als öffentlich deklariert werden. Wenn Sie eine Friend-Assembly verwenden, werden die freigegebenen Typen als `Friend` deklariert.  
   
- Informationen zum Zugreifen auf einer Assemblys `Friend` Typen und Methoden aus einer Moduldatei (eine Datei mit der Erweiterung .netmodule) finden Sie unter [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
+ Informationen zum Zugreifen auf einer Assembly `Friend` Typen und Methoden aus einer Moduldatei (eine Datei mit der Erweiterung .netmodule) finden Sie unter [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute></xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- <xref:System.Security.Permissions.StrongNameIdentityPermission></xref:System.Security.Permissions.StrongNameIdentityPermission>   
- [Gewusst wie: Erstellen von unsignierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [Gewusst wie: Erstellen von signierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
- [Assemblys und dem globalen Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ <xref:System.Security.Permissions.StrongNameIdentityPermission>  
+ [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [Vorgehensweise: Erstellen von signierten Friend-Assemblys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [Assemblys und der globale Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)

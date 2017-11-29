@@ -1,118 +1,123 @@
 ---
-title: "&#220;bersicht &#252;ber Formen und die grundlegenden Funktionen zum Zeichnen in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grundlegendes Zeichnen"
-  - "Shape-Objekte"
-  - "Formen, Informationen über Formen"
-  - "Vektorzeichnung, Übersicht"
-  - "Vektoren, Zeichnen"
+title: "Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- shapes [WPF], about shapes
+- basic drawing [WPF]
+- vector drawing [WPF], overview
+- vectors [WPF], drawing
+- Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 134f42da7e4366d4d5bb971aaf26b2a3b57a4c1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber Formen und die grundlegenden Funktionen zum Zeichnen in WPF
-Dieses Thema gibt eine Übersicht über das Zeichnen mit <xref:System.Windows.Shapes.Shape>\-Objekten.  Ein <xref:System.Windows.Shapes.Shape>\-Objekt ist ein <xref:System.Windows.UIElement>\-Typ und ermöglicht Ihnen das Zeichnen von Formen auf dem Bildschirm.  Da es sich hierbei um Benutzeroberflächenelemente handelt, können <xref:System.Windows.Shapes.Shape>\-Objekte innerhalb von <xref:System.Windows.Controls.Panel>\-Elementen und den meisten Steuerelementen verwendet werden.  
+# <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF
+Dieses Thema enthält eine Übersicht über Zeichnen mit <xref:System.Windows.Shapes.Shape> Objekte. Ein <xref:System.Windows.Shapes.Shape> ist eine Art von <xref:System.Windows.UIElement> mit der Sie eine Form auf dem Bildschirm gezeichnet werden soll. Da es sich um Benutzeroberflächenelemente sind <xref:System.Windows.Shapes.Shape> Objekte können verwendet werden, in <xref:System.Windows.Controls.Panel> Elemente und die meisten Steuerelemente.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste.  Auf der obersten Ebene stehen die benutzerfreundlichen <xref:System.Windows.Shapes.Shape>\-Objekte mit einer Vielzahl von nützlichen Features zur Verfügung, z. B. Layout und Teilnahme am [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Ereignissystem.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und bieten viele nützliche Features, z. B. Layout und die Teilnahme an der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ereignissystem.  
   
-   
   
 <a name="shapes"></a>   
-## Shape\-Objekte  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vorgefertigten <xref:System.Windows.Shapes.Shape>\-Objekten zur Verfügung.  Alle Shape\-Objekte erben von der <xref:System.Windows.Shapes.Shape>\-Klasse.  Zu den verfügbaren Shape\-Objekten gehören <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline> und <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape>\-Objekte besitzen alle die folgenden allgemeinen Eigenschaften.  
+## <a name="shape-objects"></a>Shape-Objekte  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet eine Reihe von Ready to Use <xref:System.Windows.Shapes.Shape> Objekte.  Alle Formobjekte, die von erben die <xref:System.Windows.Shapes.Shape> Klasse. Form "verfügbar" Objekten zählen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape>Objekte werden die folgenden allgemeinen Eigenschaften gemeinsam.  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Beschreibt, wie der Rand der Form gezeichnet wird.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Randstärke der Form.  
+-   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Stärke der Kontur der Form.  
   
 -   <xref:System.Windows.Shapes.Shape.Fill%2A>: Beschreibt, wie das Innere der Form gezeichnet wird.  
   
--   Dateneigenschaften zum Angeben von Koordinaten und Eckpunkten, die in [geräteunabhängigen Pixeln](GTMT) gemessen werden.  
+-   Dateneigenschaften zum Angeben von Koordinaten und Eckpunkten, gemessen in geräteunabhängigen Pixeln.  
   
- Da sie sich vom <xref:System.Windows.UIElement> herleiten, können Shape\-Objekte in Bereichen und den meisten Steuerelementen verwendet werden.  Der <xref:System.Windows.Controls.Canvas>\-Bereich eignet sich besonders gut zur Erstellung komplexer Zeichnungen, da er die absolute Positionierung von untergeordneten Objekten unterstützt.  
+ Da sie ableiten <xref:System.Windows.UIElement>, Shape-Objekte können in Bereichen und den meisten Steuerelementen verwendet werden. Die <xref:System.Windows.Controls.Canvas> Bereich ist besonders gut für komplexe Zeichnungen erstellen, da es unterstützt die absolute Positionierung seine untergeordneten Objekte.  
   
- Die <xref:System.Windows.Shapes.Line>\-Klasse ermöglicht es Ihnen, eine Linie zwischen zwei Punkten zu zeichnen.  Im folgenden Beispiel werden mehrere Möglichkeiten veranschaulicht, Linienkoordinaten und Stricheigenschaften anzugeben.  
+ Die <xref:System.Windows.Shapes.Line> -Klasse ermöglicht es Ihnen, eine Linie zwischen zwei Punkten zu zeichnen. Das folgende Beispiel zeigt verschiedene Arten, wie Zeilenkoordinaten und Stricheigenschaften angegeben werden können.  
   
- [!code-xml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+ [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
  [!code-cpp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
  [!code-csharp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
  [!code-vb[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
   
- Die folgende Abbildung zeigt die gerenderte <xref:System.Windows.Shapes.Line>.  
+ Die folgende Abbildung zeigt den gerenderten <xref:System.Windows.Shapes.Line>.  
   
- ![Liniendarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-line2.png "shape\_ovw\_line2")  
+ ![Liniendarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-line2.gif "shape_ovw_line2")  
   
- Obwohl die <xref:System.Windows.Shapes.Line>\-Klasse die <xref:System.Windows.Shapes.Shape.Fill%2A>\-Eigenschaft bereitstellt, wirkt sich die Einstellung dieser Eigenschaft nicht aus, da eine <xref:System.Windows.Shapes.Line> über keinen Bereich verfügt.  
+ Obwohl die <xref:System.Windows.Shapes.Line> Klasse bietet einen <xref:System.Windows.Shapes.Shape.Fill%2A> Festlegen dieser Eigenschaft hat keine Auswirkung, da eine <xref:System.Windows.Shapes.Line> ist kein Bereich.  
   
- Eine weitere allgemeine Form ist die <xref:System.Windows.Shapes.Ellipse>.  Sie erstellen eine <xref:System.Windows.Shapes.Ellipse>, indem Sie die Formeigenschaften <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> definieren.  Um einen Kreis zu zeichnen, geben Sie eine <xref:System.Windows.Shapes.Ellipse> an, deren Werte für <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> gleich sind.  
+ Weitere allgemeine Form "ist die <xref:System.Windows.Shapes.Ellipse>.  Erstellen einer <xref:System.Windows.Shapes.Ellipse> durch die Definition der Form <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften. Zeichnen eines Kreises angeben einer <xref:System.Windows.Shapes.Ellipse> , deren <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Werte gleich sind.  
   
- [!code-xml[ShapeOverviews#ShapesOVW1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
+ [!code-xaml[ShapeOverviews#ShapesOVW1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
   
  [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
  [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
   
- Die folgende Abbildung zeigt ein Beispiel einer gerenderten <xref:System.Windows.Shapes.Ellipse>.  
+ Die folgende Abbildung zeigt ein Beispiel eines gerenderten <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Ellipsendarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape\_ovw\_ellipse2")  
+ ![Ellipsendarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
 <a name="paths"></a>   
-## Verwenden von Pfaden und Geometrien  
- Die <xref:System.Windows.Shapes.Path>\-Klasse ermöglicht es Ihnen, Kurven und komplexe Formen zu zeichnen.  Diese Kurven und Formen werden mithilfe der <xref:System.Windows.Media.Geometry>\-Objekte beschrieben.  Zur Verwendung von <xref:System.Windows.Shapes.Path> erstellen Sie ein <xref:System.Windows.Media.Geometry>\-Objekt und nutzen es, um die <xref:System.Windows.Shapes.Path.Data%2A>\-Eigenschaft des <xref:System.Windows.Shapes.Path>\-Objekts festzulegen.  
+## <a name="using-paths-and-geometries"></a>Verwenden von Pfaden und Geometrien  
+ Die <xref:System.Windows.Shapes.Path> -Klasse ermöglicht es Ihnen, Kurven und komplexe Formen zu zeichnen. Diese Kurven und Formen werden mithilfe von beschrieben <xref:System.Windows.Media.Geometry> Objekte. Verwenden eine <xref:System.Windows.Shapes.Path>, Sie erstellen eine <xref:System.Windows.Media.Geometry> und Verwendung zur Festlegung der <xref:System.Windows.Shapes.Path> des Objekts <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft.  
   
- Sie können aus einer Vielzahl von <xref:System.Windows.Media.Geometry>\-Objekten auswählen.  Die Klassen <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry> und <xref:System.Windows.Media.EllipseGeometry> beschreiben relativ einfache Formen.  Um komplexere Formen oder Kurven zu erstellen, verwenden Sie ein <xref:System.Windows.Media.PathGeometry>\-Objekt.  
+ Es gibt eine Vielzahl von <xref:System.Windows.Media.Geometry> Objekte zur Auswahl. Die <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>, und <xref:System.Windows.Media.EllipseGeometry> Klassen beschreiben relativ einfache Formen. Verwenden Sie zum Erstellen komplexer Formen oder Kurven zu erstellen, eine <xref:System.Windows.Media.PathGeometry>.  
   
 <a name="pathgeometry"></a>   
-### PathGeometry und PathSegments  
- <xref:System.Windows.Media.PathGeometry>\-Objekte setzen sich aus einem oder mehreren <xref:System.Windows.Media.PathFigure>\-Objekten zusammen, wobei jedes <xref:System.Windows.Media.PathFigure>\-Objekt eine andere "Abbildung" oder Form darstellt.  Jedes <xref:System.Windows.Media.PathFigure>\-Objekt setzt sich wiederum aus einem oder mehreren <xref:System.Windows.Media.PathSegment>\-Objekten zusammen, die jeweils einen verknüpften Bereich der Abbildung oder Form darstellen.  Zu den Segmenttypen gehören <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment> und <xref:System.Windows.Media.ArcSegment>.  
+### <a name="pathgeometry-and-pathsegments"></a>PathGeometry und PathSegments  
+ <xref:System.Windows.Media.PathGeometry>Objekte bestehen aus einem oder mehreren <xref:System.Windows.Media.PathFigure> Objekten; jedes <xref:System.Windows.Media.PathFigure> einen anderen "Abbildung" oder eine Form darstellt. Jede <xref:System.Windows.Media.PathFigure> selbst besteht aus einer oder mehreren <xref:System.Windows.Media.PathSegment> Objekte, die jeweils einen verknüpften Bereich der Abbildung oder Form darstellen. Segmenttypen umfassen Folgendes: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, und <xref:System.Windows.Media.ArcSegment>.  
   
- Im folgenden Beispiel wird ein <xref:System.Windows.Shapes.Path> zum Zeichnen einer quadratischen Bézierkurve verwendet.  
+ Im folgenden Beispiel ein <xref:System.Windows.Shapes.Path> wird verwendet, um eine quadratische Bézier-Kurve zu zeichnen.  
   
- [!code-xml[geometrysample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
+ [!code-xaml[geometrysample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
  Die folgende Abbildung zeigt die gerenderte Form.  
   
- ![Pfaddarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path2.png "shape\_ovw\_path2")  
+ ![Pfaddarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path2.gif "shape_ovw_path2")  
   
- Weitere Informationen über <xref:System.Windows.Media.PathGeometry> und die anderen <xref:System.Windows.Media.Geometry>\-Klassen finden Sie unter [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Weitere Informationen zu <xref:System.Windows.Media.PathGeometry> und die andere <xref:System.Windows.Media.Geometry> Klassen, finden Sie unter der [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
 <a name="pathdatastring"></a>   
-### Abgekürzte Syntax in XAML  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] können Sie einen <xref:System.Windows.Shapes.Path> auch mit einer besonderen abgekürzten Syntax beschreiben.  Im folgenden Beispiel wird eine abgekürzte Syntax verwendet, um eine komplexe Form zu zeichnen.  
+### <a name="xaml-abbreviated-syntax"></a>Abgekürzte Syntax in XAML  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Sie können auch eine besondere abgekürzte Syntax zum Beschreiben einer <xref:System.Windows.Shapes.Path>. Im folgenden Beispiel wird abgekürzte Syntax verwendet, um eine komplexe Form zu zeichnen.  
   
 ```xaml  
-<Path Stroke="DarkGoldenRod" StrokeThickness="3"   
+      <Path Stroke="DarkGoldenRod" StrokeThickness="3"   
 Data="M 100,200 C 100,25 400,350 400,175 H 280" />  
 ```  
   
  Die folgende Abbildung zeigt einen gerenderten <xref:System.Windows.Shapes.Path>.  
   
- ![Pfaddarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.png "shape\_ovw\_path")  
+ ![Pfaddarstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "Shape_ovw_path")  
   
- Die <xref:System.Windows.Shapes.Path.Data%2A>\-Attributzeichenfolge beginnt mit dem Verschiebebefehl, angegeben durch ein "M", der im Koordinatensystem von <xref:System.Windows.Controls.Canvas> einen Startpunkt für den Pfad festlegt.  Bei <xref:System.Windows.Shapes.Path>\-Datenparametern wird die Groß\-\/Kleinschreibung beachtet.  Der großgeschriebene Buchstabe M gibt eine absolute Position für den neuen aktuellen Punkt an.  Ein kleingeschriebenes m gibt relative Koordinaten an.  Das erste Segment ist eine kubische [Bézierkurve](GTMT), die an der Position \(100,200\) beginnt, an der Position \(400,175\) endet und mit den beiden Kontrollpunkten \(100,25\) und \(400,350\) gezeichnet wird.  Dieses Segment wird durch den C\-Befehl in der <xref:System.Windows.Shapes.Path.Data%2A>\-Attributzeichenfolge angegeben.  Auch hier gibt der großgeschriebene Buchstabe C einen absoluten Pfad an. Ein kleingeschriebenes c würde einen relativen Pfad angeben.  
+ Die <xref:System.Windows.Shapes.Path.Data%2A> Attributzeichenfolge beginnt mit dem Befehl "Moveto" angegeben durch M, die einen Startpunkt für den Pfad in das Koordinatensystem des festlegt der <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path>Datenparametern Groß-/Kleinschreibung beachtet. Großbuchstaben M gibt eine absolute Position für den neuen aktuellen Punkt an. Ein kleingeschriebenes m würde relative Koordinaten angeben. Das erste Segment ist eine kubische Bézier-Kurve ab (100,200) bis (400,175), die mit den beiden Kontrollpunkten (100,25) und (400,350) gezeichnet wurde. Dieses Segment wird angegeben, mit dem Befehl "C" in der <xref:System.Windows.Shapes.Path.Data%2A> -Attribut Zeichenfolge. Ein großes C gibt erneut einen absoluten Pfad an. Ein kleingeschriebenes c würde einen relativen Pfad angeben.  
   
- Das zweite Segment beginnt mit dem absoluten horizontalen LineTo\-Befehl "H", der eine Linie angibt, die vom Endpunkt \(400,175\) des vorherigen untergeordneten Pfads bis zu einem neuen Endpunkt \(280,175\) gezeichnet wird.  Da es sich um einen horizontalen Linienbefehl handelt, ist der angegebene Wert eine *x*\-Koordinate.  
+ Das zweite Segment beginnt mit einem absoluten horizontalen „Lineto“-Befehl H, der eine Linie vom vorherigen untergeordneten Endpunkt (400,175) zu einem neuen Endpunkt (280,175) zeichnet. Da es sich um eine horizontale "Linie" Befehl handelt, wird der angegebene Wert ist ein *x*-koordinieren.  
   
- Die vollständige Pfadsyntax finden Sie in der Referenz für <xref:System.Windows.Shapes.Path.Data%2A> und unter [Erstellen einer Form mithilfe von PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  
+ Der vollständige Pfad-Syntax finden Sie unter der <xref:System.Windows.Shapes.Path.Data%2A> Verweis und [erstellen Sie eine Form mithilfe von PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  
   
 <a name="fillpaint"></a>   
-## Zeichnen von Formen  
- <xref:System.Windows.Media.Brush>\-Objekte werden zum Zeichnen von <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.Fill%2A> für eine Form verwendet.  Im folgenden Beispiel werden der Strich und der Füllbereich einer <xref:System.Windows.Shapes.Ellipse> angegeben.  Beachten Sie, dass Pinseleigenschaften entweder über ein Schlüsselwort oder anhand eines hexadezimalen Farbwerts eingegeben werden können.  Weitere Informationen über verfügbare Farbschlüsselwörter finden Sie in den Eigenschaften der <xref:System.Windows.Media.Colors>\-Klasse im <xref:System.Windows.Media>\-Namespace.  
+## <a name="painting-shapes"></a>Zeichnen von Formen  
+ <xref:System.Windows.Media.Brush>Objekte werden verwendet, um einer Form zeichnen <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.Fill%2A>. Im folgenden Beispiel wird die Kontur und Füllung der ein <xref:System.Windows.Shapes.Ellipse> angegeben werden. Beachten Sie, dass Pinseleigenschaften entweder ein Schlüsselwort oder einen hexadezimalen Farbwert werden können. Weitere Informationen zu verfügbaren Farbe Schlüsselwörtern finden Sie unter Eigenschaften von der <xref:System.Windows.Media.Colors> -Klasse in der <xref:System.Windows.Media> Namespace.  
   
 ```  
-  
 <Canvas Background="LightGray">   
    <Ellipse  
       Canvas.Top="50"  
@@ -123,17 +128,15 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
       StrokeThickness="5"  
       Stroke="#FF0000FF"/>  
 </Canvas>  
-  
 ```  
   
- Die folgende Abbildung zeigt die gerenderte <xref:System.Windows.Shapes.Ellipse>.  
+ Die folgende Abbildung zeigt den gerenderten <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Eine Ellipse](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipsefill.png "shape\_ovw\_ellipsefill")  
+ ![Eine Ellipse](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipsefill.PNG "Shape_ovw_ellipsefill")  
   
- Alternativ dazu können Sie die Syntax eines Eigenschaftenelements verwenden, um explizit ein <xref:System.Windows.Media.SolidColorBrush>\-Objekt zum Zeichnen der Form in einer Volltonfarbe zu erstellen.  
+ Alternativ können Sie explizit erstellen Eigenschaftenelementsyntax verwenden ein <xref:System.Windows.Media.SolidColorBrush> Objekt, das Zeichnen der Form mit einer Volltonfarbe aus.  
   
 ```  
-  
 <!-- This polygon shape uses pre-defined color values for its Stroke and  
      Fill properties.   
      The SolidColorBrush's Opacity property affects the fill color in   
@@ -152,27 +155,27 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Die folgende Abbildung zeigt die gerenderte Form.  
   
- ![SolidColorBrush&#45;Darstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-solidcolorbrush.png "shape\_ovw\_solidcolorbrush")  
+ ![SolidColorBrush-Darstellung](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-solidcolorbrush.PNG "Shape_ovw_solidcolorbrush")  
   
- Sie können den Strich oder Füllbereich einer Form auch mit Farbverläufen, Bildern, Mustern usw. zeichnen.  Weitere Informationen finden Sie unter [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Sie können die Kontur oder Fläche einer Form auch mit Farbverläufen, Bildern, Mustern und mehr zeichnen. Weitere Informationen finden Sie unter der [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="stretchableshapessection"></a>   
-## Gestreckte Formen  
- Die Klassen <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline> und <xref:System.Windows.Shapes.Rectangle> verfügen alle über die <xref:System.Windows.Shapes.Shape.Stretch%2A>\-Eigenschaft.  Diese Eigenschaft legt fest, wie der Inhalt \(die zu zeichnende Form\) eines <xref:System.Windows.Shapes.Shape>\-Objekts gestreckt wird, um den Layoutbereich im <xref:System.Windows.Shapes.Shape>\-Objekt auszufüllen.  Der Layoutbereich eines <xref:System.Windows.Shapes.Shape>\-Objekts ist die Bereichsgröße, die dem <xref:System.Windows.Shapes.Shape>\-Objekt vom Layoutsystem zugeordnet wird, und zwar entweder durch die explizite Einstellung von <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> oder aufgrund seiner Einstellungen für <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  Weitere Informationen über das Layout in Windows Presentation Foundation finden Sie in der Übersicht [Layout](../../../../docs/framework/wpf/advanced/layout.md).  
+## <a name="stretchable-shapes"></a>Gestreckte Formen  
+ Die <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle> Klassen, die alle haben eine <xref:System.Windows.Shapes.Shape.Stretch%2A> Eigenschaft. Diese Eigenschaft bestimmt, wie eine <xref:System.Windows.Shapes.Shape> Inhalt des Objekts (das zu zeichnende Form) wird gestreckt, um das Ausfüllen der <xref:System.Windows.Shapes.Shape> Layoutbereich des Objekts. Ein <xref:System.Windows.Shapes.Shape> Layoutbereich des Objekts ist die Menge des Speicherplatzes der <xref:System.Windows.Shapes.Shape> erhält vom Layoutsystem, entweder aufgrund von einer expliziten <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Einstellung oder aufgrund von seiner <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Einstellungen. Weitere Informationen zum Layout in Windows Presentation Foundation, finden Sie unter [Layout](../../../../docs/framework/wpf/advanced/layout.md) (Übersicht).  
   
- Die Stretch\-Eigenschaft nimmt einen der folgenden Werte an:  
+ Die Stretch-Eigenschaft nimmt einen der folgenden Werte an:  
   
--   <xref:System.Windows.Media.Stretch>: Der Inhalt des <xref:System.Windows.Shapes.Shape>\-Objekts wird nicht gestreckt.  
+-   <xref:System.Windows.Media.Stretch.None>: Der <xref:System.Windows.Shapes.Shape> Inhalt des Objekts nicht gestreckt werden.  
   
--   <xref:System.Windows.Media.Stretch>: Der Inhalt des <xref:System.Windows.Shapes.Shape>\-Objekts wird gestreckt, um dessen Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Der <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden gestreckt, um den Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
   
--   <xref:System.Windows.Media.Stretch>: Der Inhalt des <xref:System.Windows.Shapes.Shape>\-Objekts wird so weit wie möglich gestreckt, um unter Beibehaltung des ursprünglichen Seitenverhältnisses den Layoutbereich auszufüllen.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Der <xref:System.Windows.Shapes.Shape> werden gestreckt, dass Inhalt des Objekts, dessen Layoutbereich auszufüllen, Beibehaltung des ursprünglichen Seitenverhältnisses so weit wie möglich.  
   
--   <xref:System.Windows.Media.Stretch>: Der Inhalt des <xref:System.Windows.Shapes.Shape>\-Objekts wird gestreckt, um unter Beibehaltung des ursprünglichen Seitenverhältnisses den Layoutbereich komplett auszufüllen.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Der <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden gestreckt, um den Layoutbereich vollständig auszufüllen, während das ursprüngliche Seitenverhältnis beibehalten.  
   
- Beachten Sie, dass beim Strecken des Inhalts eines <xref:System.Windows.Shapes.Shape>\-Objekts der Rand des <xref:System.Windows.Shapes.Shape>\-Objekts nach dem Strecken gezeichnet wird.  
+ Beachten Sie, dass, wenn eine <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden gestreckt, die <xref:System.Windows.Shapes.Shape> -Objekts nach dem Strecken gezeichnet wird.  
   
- Im folgenden Beispiel wird mit einem <xref:System.Windows.Shapes.Polygon> ein sehr kleines Dreieck von \(0,0\) bis \(0,1\) bis \(1,1\) gezeichnet.  Die Eigenschaften <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> sind für das <xref:System.Windows.Shapes.Polygon>\-Objekt auf 100 festgelegt; die Stretch\-Eigenschaft ist auf Fill festgelegt.  Das Ergebnis ist, dass der Inhalt \(das Dreieck\) des <xref:System.Windows.Shapes.Polygon>\-Objekts gestreckt wird, um den größeren Bereich auszufüllen.  
+ Im folgenden Beispiel eine <xref:System.Windows.Shapes.Polygon> dient zum Zeichnen Sie eines sehr kleinen Dreiecks von (0,0) bis (0,1) bis (1,1). Die <xref:System.Windows.Shapes.Polygon> des Objekts <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> auf 100 festgelegt sind und die Stretch-Eigenschaft festgelegt. Daher die <xref:System.Windows.Shapes.Polygon> Inhalt des Objekts (das Dreieck) werden gestreckt, um den größeren Platz auszufüllen.  
   
 ```  
 ...  
@@ -206,28 +209,28 @@ myPolygon.StrokeThickness = 2;
 ```  
   
 <a name="transforms"></a>   
-## Transformieren von Formen  
- Die <xref:System.Windows.Media.Transform>\-Klasse stellt die Mittel bereit, Formen in einer zweidimensionalen Ebene zu transformieren.  Zu den unterschiedlichen Transformationstypen gehören die Drehung \(<xref:System.Windows.Media.RotateTransform>\), die Skalierung \(<xref:System.Windows.Media.ScaleTransform>\), die Neigung \(<xref:System.Windows.Media.SkewTransform>\) und die Verschiebung \(<xref:System.Windows.Media.TranslateTransform>\).  
+## <a name="transforming-shapes"></a>Transformieren von Formen  
+ Die <xref:System.Windows.Media.Transform> -Klasse stellt die Mittel zur Transformation von Formen in einer zweidimensionalen Ebene bereit.  Die verschiedenen Typen von Transformation beinhalten Drehung (<xref:System.Windows.Media.RotateTransform>), Skalierung (<xref:System.Windows.Media.ScaleTransform>), Neigung (<xref:System.Windows.Media.SkewTransform>), und die Übersetzung (<xref:System.Windows.Media.TranslateTransform>).  
   
- Eine allgemeine, für Formen angewandte Transformation ist die Drehung.  Um eine Form zu drehen, erstellen Sie einen <xref:System.Windows.Media.RotateTransform>\-Typ und geben seinen <xref:System.Windows.Media.RotateTransform.Angle%2A>\-Wert an.  Wenn Sie für <xref:System.Windows.Media.RotateTransform.Angle%2A> den Wert 45 angeben, wird das Element im Uhrzeigersinn um 45 Grad gedreht; ein Winkel von 90 dreht das Element um 90 Grad im Uhrzeigersinn usw.  Legen Sie die <xref:System.Windows.Media.RotateTransform.CenterX%2A>\-Eigenschaft und die <xref:System.Windows.Media.RotateTransform.CenterY%2A>\-Eigenschaft fest, wenn Sie steuern möchten, um welchen Punkt das Element gedreht werden soll.  Diese Eigenschaftswerte werden im Koordinatenraum des Elements ausgedrückt, das transformiert wird.  <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> sind standardmäßig auf den Wert 0 \(null\) gesetzt.  Wenden Sie abschließend <xref:System.Windows.Media.RotateTransform> auf das Element an.  Wenn sich die Transformation nicht auf das Layout auswirken soll, legen Sie die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft der Form fest.  
+ Eine allgemeine Transformation einer Form ist die Drehung.  Um eine Form "drehen, erstellen eine <xref:System.Windows.Media.RotateTransform> , und geben Sie ihre <xref:System.Windows.Media.RotateTransform.Angle%2A>. Ein <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 dreht das Element um 45 Grad im Uhrzeigersinn; ein Winkel 90 wird das Element um 90 Grad im Uhrzeigersinn gedreht; und so weiter. Legen Sie die <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> Eigenschaften, wenn Sie steuern möchten, den Punkt über die das Element gedreht wird. Diese Eigenschaftswerte werden im Koordinatenraum des transformierten Elements ausgedrückt. <xref:System.Windows.Media.RotateTransform.CenterX%2A>und <xref:System.Windows.Media.RotateTransform.CenterY%2A> haben standardmäßig den Wert 0 (null). Wenden Sie schließlich die <xref:System.Windows.Media.RotateTransform> auf das Element. Wenn Sie nicht, dass die Transformation auf das Layout auswirken möchten, legen Sie der Form <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft.  
   
- Im folgenden Beispiel wird <xref:System.Windows.Media.RotateTransform> verwendet, um eine Form um 45 Grad um ihre obere linke Ecke \(0,0\) zu drehen.  
+ Im folgenden Beispiel ein <xref:System.Windows.Media.RotateTransform> wird verwendet, um eine Form um 45 Grad zur oberen linken Ecke (0,0) drehen.  
   
- [!code-xml[transformssample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
+ [!code-xaml[transformssample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
   
- Im nächsten Beispiel wird eine weitere Form um 45 Grad gedreht; diesmal jedoch um den Punkt \(25,50\).  
+ Im nächsten Beispiel eine andere Form um 45 Grad gedreht wird, aber dieses Mal wird sie über den Punkt (25,50) gedreht.  
   
- [!code-xml[transformssample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
+ [!code-xaml[transformssample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
   
- In der folgenden Abbildung werden die Ergebnisse nach der Anwendung der beiden Transformationen angezeigt.  
+ In der folgenden Abbildung werden die Ergebnisse der Anwendung der zwei Transformationen dargestellt.  
   
- ![45&#45;Grad&#45;Drehungen mit unterschiedlichen Mittelpunkten](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.png "wcpsdk\_graphicsmm\_rotatetransform45degrees")  
+ ![45-Grad-Drehungen mit unterschiedlichen Mittelpunkten](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
   
- In den vorherigen Beispielen wurde eine einzelne Transformation auf jedes Shape\-Objekt angewendet.  Um mehrere Transformationen auf eine Form \(oder auf ein beliebig anderes Benutzeroberflächenelement\) anzuwenden, verwenden Sie eine <xref:System.Windows.Media.TransformGroup>.  
+ In den vorherigen Beispielen wurde eine einzelne Transformation auf jedes Shape-Objekt angewendet. Verwenden Sie zum Anwenden mehrerer Transformationen auf eine Form vom Typ (oder andere UI-Element) einer <xref:System.Windows.Media.TransformGroup>.  
   
-## Siehe auch  
- [2D\-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Exemplarische Vorgehensweise: Erste Schritte mit WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)   
+## <a name="see-also"></a>Siehe auch  
+ [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
