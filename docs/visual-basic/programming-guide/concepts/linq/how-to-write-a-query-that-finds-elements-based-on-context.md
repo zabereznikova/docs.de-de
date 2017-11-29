@@ -1,34 +1,30 @@
 ---
-title: 'Gewusst wie: Schreiben eine Abfrage, die Elemente anhand des Kontexts (Visual Basic) sucht | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Schreiben eine Abfrage, die Elemente, die anhand des Kontexts (Visual Basic) findet.'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c26a6f0debd165a925bf45e2ac5063e1afff693f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 635a8c06d5ad928e192b8cd15862aa02192f94d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Gewusst wie: Schreiben eine Abfrage, die Elemente anhand des Kontexts (Visual Basic)
-Es kann vorkommen, dass Sie eine Abfrage schreiben möchten, die Elemente auf der Grundlage ihres Kontexts sucht. Dabei soll die Filterung auf den vorausgehenden oder folgenden nebengeordneten Elementen erfolgen. Außerdem möchten Sie vielleicht auch nach untergeordneten oder indirekt übergeordneten Elementen filtern.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a><span data-ttu-id="b339b-102">Vorgehensweise: Schreiben eine Abfrage, die Elemente, die anhand des Kontexts (Visual Basic) findet.</span><span class="sxs-lookup"><span data-stu-id="b339b-102">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>
+<span data-ttu-id="b339b-103">Es kann vorkommen, dass Sie eine Abfrage schreiben möchten, die Elemente auf der Grundlage ihres Kontexts sucht.</span><span class="sxs-lookup"><span data-stu-id="b339b-103">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="b339b-104">Dabei soll die Filterung auf den vorausgehenden oder folgenden nebengeordneten Elementen erfolgen.</span><span class="sxs-lookup"><span data-stu-id="b339b-104">You might want to filter based on preceding or following sibling elements.</span></span> <span data-ttu-id="b339b-105">Außerdem möchten Sie vielleicht auch nach untergeordneten oder indirekt übergeordneten Elementen filtern.</span><span class="sxs-lookup"><span data-stu-id="b339b-105">You might want to filter based on child or ancestor elements.</span></span>  
   
- Um dies zu bewerkstelligen, können Sie eine Abfrage schreiben und die Ergebnisse dieser Abfrage in der `where`-Klausel verwenden. Wenn Sie zunächst eine Prüfung auf NULL-Werte vornehmen müssen und dann den Wert testen, empfiehlt es sich, die Abfrage in einer `let`-Klausel durchzuführen und die Ergebnisse dann in der `where`-Klausel zu verwenden.  
+ <span data-ttu-id="b339b-106">Um dies zu bewerkstelligen, können Sie eine Abfrage schreiben und die Ergebnisse dieser Abfrage in der `where`-Klausel verwenden.</span><span class="sxs-lookup"><span data-stu-id="b339b-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="b339b-107">Wenn Sie zunächst eine Prüfung auf NULL-Werte vornehmen müssen und dann den Wert testen, empfiehlt es sich, die Abfrage in einer `let`-Klausel durchzuführen und die Ergebnisse dann in der `where`-Klausel zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="b339b-107">If you have to first test against null, and then test the value, it is more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden alle `p`-Elemente ausgewählt, die sofort von einem `ul`-Element gefolgt werden.  
+## <a name="example"></a><span data-ttu-id="b339b-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b339b-108">Example</span></span>  
+ <span data-ttu-id="b339b-109">Im folgenden Beispiel werden alle `p`-Elemente ausgewählt, die sofort von einem `ul`-Element gefolgt werden.</span><span class="sxs-lookup"><span data-stu-id="b339b-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>  
   
 ```vb  
 Dim doc As XElement = _  
@@ -60,10 +56,9 @@ Dim items As IEnumerable(Of XElement) = _
 For Each e As XElement In items  
     Console.WriteLine("id = {0}", e.@<id>)  
 Next  
-  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="b339b-110">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="b339b-110">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -71,8 +66,8 @@ id = 3
 id = 6  
 ```  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="example"></a><span data-ttu-id="b339b-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b339b-111">Example</span></span>  
+ <span data-ttu-id="b339b-112">Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt.</span><span class="sxs-lookup"><span data-stu-id="b339b-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b339b-113">Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="b339b-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -112,7 +107,7 @@ Module Module1
 End Module  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="b339b-114">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="b339b-114">This code produces the following output:</span></span>  
   
 ```  
 id = 1  
@@ -120,9 +115,9 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XElement.Parse%2A></xref:System.Xml.Linq.XElement.Parse%2A>   
- <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>   
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>   
- <xref:System.Linq.Enumerable.FirstOrDefault%2A></xref:System.Linq.Enumerable.FirstOrDefault%2A>   
- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b339b-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b339b-115">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.Parse%2A>  
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+ <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+ [<span data-ttu-id="b339b-116">Standardabfragen (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b339b-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

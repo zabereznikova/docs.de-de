@@ -1,59 +1,42 @@
 ---
-title: Implizite und explizite Konvertierungen (Visual Basic) | Microsoft-Dokumentation
+title: Implizite und explizite Konvertierungen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- conversions, type
+- conversions [Visual Basic], type
 - variables [Visual Basic], changing data type
 - casting
-- conversions, data type
-- type conversion, implicit conversions
-- CType function, conversions
+- conversions [Visual Basic], data type
+- type conversion [Visual Basic], implicit conversions
+- CType function [Visual Basic], conversions
 - casting, data types
-- data type conversion, explicit
-- type conversion, explicit conversions
+- data type conversion [Visual Basic], explicit
+- type conversion [Visual Basic], explicit conversions
 - data types [Visual Basic], casting
-- conversions, implicit
-- explicit data type conversions
-- conversions
-- changing data types
-- conversions, explicit
-- data type conversion, implicit
-- implicit data type conversions
+- conversions [Visual Basic], implicit
+- explicit data type conversions [Visual Basic]
+- conversions [Visual Basic]
+- changing data types [Visual Basic]
+- conversions [Visual Basic], explicit
+- data type conversion [Visual Basic], implicit
+- implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 24c434df4be480c290b3e4e36bd9f294d12b99ef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="implicit-and-explicit-conversions-visual-basic"></a>Implizite und explizite Konvertierungen (Visual Basic)
-Ein *implizite Konvertierung* ist eine besondere Syntax in den Quellcode nicht erforderlich. Im folgenden Beispiel [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] implizit konvertiert den Wert der `k` in einen Gleitkommawert mit einfacher Genauigkeit-Wert vor der Zuweisung zu `q`.  
+# <a name="implicit-and-explicit-conversions-visual-basic"></a><span data-ttu-id="fa91d-102">Implizite und explizite Konvertierungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fa91d-102">Implicit and Explicit Conversions (Visual Basic)</span></span>
+<span data-ttu-id="fa91d-103">Ein *implizite Konvertierung* erfordert keine spezielle Syntax im Quellcode.</span><span class="sxs-lookup"><span data-stu-id="fa91d-103">An *implicit conversion* does not require any special syntax in the source code.</span></span> <span data-ttu-id="fa91d-104">Im folgenden Beispiel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implizit konvertiert den Wert der `k` in einen Gleitkommawert mit einfacher Genauigkeit-Wert vor der Zuweisung zu `q`.</span><span class="sxs-lookup"><span data-stu-id="fa91d-104">In the following example, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implicitly converts the value of `k` to a single-precision floating-point value before assigning it to `q`.</span></span>  
   
 ```  
 Dim k As Integer  
@@ -63,9 +46,9 @@ k = 432
 q = k  
 ```  
   
- Ein *explizite Konvertierung* verwendet das Schlüsselwort Typ konvertieren. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]bietet mehrere solcher Schlüsselwörter, die einen Ausdruck in Klammern, um den gewünschten Datentyp umgewandelt werden. Diese Schlüsselwörter Verhalten sich wie Funktionen, aber der Compiler generiert den Code Inline, damit die Ausführung etwas schneller als bei einem Aufruf der Funktion ist.  
+ <span data-ttu-id="fa91d-105">Ein *explizite Konvertierung* einen Typkonvertierungsschlüsselwort verwendet.</span><span class="sxs-lookup"><span data-stu-id="fa91d-105">An *explicit conversion* uses a type conversion keyword.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="fa91d-106">bietet mehrere solcher Schlüsselwörter, die einen Ausdruck in Klammern einschließen, um den gewünschten Datentyp umgewandelt werden.</span><span class="sxs-lookup"><span data-stu-id="fa91d-106"> provides several such keywords, which coerce an expression in parentheses to the desired data type.</span></span> <span data-ttu-id="fa91d-107">Diese Schlüsselwörter Verhalten sich wie Funktionen, aber damit Ausführung etwas schneller als bei einem Funktionsaufruf ist, generiert der Compiler den Code Inline.</span><span class="sxs-lookup"><span data-stu-id="fa91d-107">These keywords act like functions, but the compiler generates the code inline, so execution is slightly faster than with a function call.</span></span>  
   
- In der folgenden Erweiterung des vorherigen Beispiels die `CInt` Schlüsselwort konvertiert den Wert der `q` wieder in eine ganze Zahl vor der Zuweisung zu `k`.  
+ <span data-ttu-id="fa91d-108">In der folgenden Erweiterung des vorhergehenden Beispiels die `CInt` Schlüsselwort konvertiert den Wert der `q` wieder in eine ganze Zahl vor der Zuweisung zu `k`.</span><span class="sxs-lookup"><span data-stu-id="fa91d-108">In the following extension of the preceding example, the `CInt` keyword converts the value of `q` back to an integer before assigning it to `k`.</span></span>  
   
 ```  
 ' q had been assigned the value 432 from k.  
@@ -74,38 +57,38 @@ k = CInt(q)
 ' k now has the value 21 (rounded square root of 432).  
 ```  
   
-## <a name="conversion-keywords"></a>Konvertierungsschlüsselwörter  
- Die folgende Tabelle zeigt die verfügbaren Konvertierungsschlüsselwörter zusammengefasst.  
+## <a name="conversion-keywords"></a><span data-ttu-id="fa91d-109">Konvertierungsschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="fa91d-109">Conversion Keywords</span></span>  
+ <span data-ttu-id="fa91d-110">Die folgende Tabelle zeigt die verfügbaren Konvertierungsschlüsselwörter.</span><span class="sxs-lookup"><span data-stu-id="fa91d-110">The following table shows the available conversion keywords.</span></span>  
   
-|Die Konvertierungsschlüsselwort eingeben|Konvertiert einen Ausdruck in den Datentyp|Zulässige Datentypen für die zu konvertierende Ausdruck|  
+|<span data-ttu-id="fa91d-111">Typkonvertierungsschlüsselwort</span><span class="sxs-lookup"><span data-stu-id="fa91d-111">Type conversion keyword</span></span>|<span data-ttu-id="fa91d-112">Konvertiert einen Ausdruck in den Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-112">Converts an expression to data type</span></span>|<span data-ttu-id="fa91d-113">Zulässige Datentypen des Ausdrucks, der konvertiert werden</span><span class="sxs-lookup"><span data-stu-id="fa91d-113">Allowable data types of expression to be converted</span></span>|  
 |---|---|---|  
-|`CBool`|[Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `String`,`Object`|  
-|`CByte`|[Byte-Datentyp](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Alle numerischen Typen (einschließlich `SByte` und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CChar`|[Char-Datentyp](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
-|`CDate`|[Date-Datentyp](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Double-Datentyp](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CDec`|[Decimal-Datentyp](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CInt`|[Integer-Datentyp](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CLng`|[Long-Datentyp](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CObj`|[Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Beliebiger Typ|  
-|`CSByte`|[SByte-Datentyp](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Alle numerischen Typen (einschließlich `Byte` und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CShort`|[Short-Datentyp](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CSng`|[Single-Datentyp](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CStr`|[String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `Char`, `Char` Array `Date`,`Object`|  
-|`CType`|Nach dem Komma angegeben Typ (`,`)|Beim Konvertieren in ein *elementaren Datentyp* (einschließlich eines Arrays eines elementaren Typs), die gleichen Typen für das entsprechende Konvertierungsschlüsselwort zulässig sind<br /><br /> Beim Konvertieren in ein *zusammengesetzten Datentyp*, die implementierten Schnittstellen und die Klassen, von denen geerbt wird,<br /><br /> Bei der Konvertierung in eine Klasse oder Struktur, auf denen überlastete `CType`, Klasse oder Struktur|  
-|`CUInt`|[UInteger-Datentyp](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CULng`|[ULong-Datentyp](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
-|`CUShort`|[UShort-Datentyp](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`|  
+|`CBool`|[<span data-ttu-id="fa91d-114">Boolean-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-114">Boolean Data Type</span></span>](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<span data-ttu-id="fa91d-115">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-115">Any numeric type (including `Byte`, `SByte`, and enumerated types), `String`, `Object`</span></span>|  
+|`CByte`|[<span data-ttu-id="fa91d-116">Byte-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-116">Byte Data Type</span></span>](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|<span data-ttu-id="fa91d-117">Alle numerischen Typen (einschließlich `SByte` und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-117">Any numeric type (including `SByte` and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CChar`|[<span data-ttu-id="fa91d-118">Char-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-118">Char Data Type</span></span>](../../../../visual-basic/language-reference/data-types/char-data-type.md)|<span data-ttu-id="fa91d-119">`String`, `Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-119">`String`, `Object`</span></span>|  
+|`CDate`|[<span data-ttu-id="fa91d-120">Date-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-120">Date Data Type</span></span>](../../../../visual-basic/language-reference/data-types/date-data-type.md)|<span data-ttu-id="fa91d-121">`String`, `Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-121">`String`, `Object`</span></span>|  
+|`CDbl`|[<span data-ttu-id="fa91d-122">Double-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-122">Double Data Type</span></span>](../../../../visual-basic/language-reference/data-types/double-data-type.md)|<span data-ttu-id="fa91d-123">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-123">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CDec`|[<span data-ttu-id="fa91d-124">Decimal-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-124">Decimal Data Type</span></span>](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<span data-ttu-id="fa91d-125">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-125">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CInt`|[<span data-ttu-id="fa91d-126">Integer-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-126">Integer Data Type</span></span>](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|<span data-ttu-id="fa91d-127">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-127">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CLng`|[<span data-ttu-id="fa91d-128">Long-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-128">Long Data Type</span></span>](../../../../visual-basic/language-reference/data-types/long-data-type.md)|<span data-ttu-id="fa91d-129">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-129">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CObj`|[<span data-ttu-id="fa91d-130">Object-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-130">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)|<span data-ttu-id="fa91d-131">Beliebiger Typ</span><span class="sxs-lookup"><span data-stu-id="fa91d-131">Any type</span></span>|  
+|`CSByte`|[<span data-ttu-id="fa91d-132">SByte-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-132">SByte Data Type</span></span>](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<span data-ttu-id="fa91d-133">Alle numerischen Typen (einschließlich `Byte` und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-133">Any numeric type (including `Byte` and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CShort`|[<span data-ttu-id="fa91d-134">Short-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-134">Short Data Type</span></span>](../../../../visual-basic/language-reference/data-types/short-data-type.md)|<span data-ttu-id="fa91d-135">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-135">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CSng`|[<span data-ttu-id="fa91d-136">Single-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-136">Single Data Type</span></span>](../../../../visual-basic/language-reference/data-types/single-data-type.md)|<span data-ttu-id="fa91d-137">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-137">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CStr`|[<span data-ttu-id="fa91d-138">String-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-138">String Data Type</span></span>](../../../../visual-basic/language-reference/data-types/string-data-type.md)|<span data-ttu-id="fa91d-139">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `Char`, `Char` Array `Date`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-139">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `Char`, `Char` array, `Date`, `Object`</span></span>|  
+|`CType`|<span data-ttu-id="fa91d-140">Nach dem Komma angegeben Typ (`,`)</span><span class="sxs-lookup"><span data-stu-id="fa91d-140">Type specified following the comma (`,`)</span></span>|<span data-ttu-id="fa91d-141">Beim Konvertieren in ein *elementaren Datentyp* (einschließlich ein Array von ein elementarer Typ), die gleiche Typen für das entsprechende Konvertierungsschlüsselwort zulässig sind</span><span class="sxs-lookup"><span data-stu-id="fa91d-141">When converting to an *elementary data type* (including an array of an elementary type), the same types as allowed for the corresponding conversion keyword</span></span><br /><br /> <span data-ttu-id="fa91d-142">Beim Konvertieren in eine *zusammengesetzten Datentyp*, er implementiert, Schnittstellen und Klassen, die von der geerbt</span><span class="sxs-lookup"><span data-stu-id="fa91d-142">When converting to a *composite data type*, the interfaces it implements and the classes from which it inherits</span></span><br /><br /> <span data-ttu-id="fa91d-143">Wenn eine Konvertierung in eine Klasse oder Struktur, auf denen Sie überladene haben `CType`, diese Klasse oder Struktur</span><span class="sxs-lookup"><span data-stu-id="fa91d-143">When converting to a class or structure on which you have overloaded `CType`, that class or structure</span></span>|  
+|`CUInt`|[<span data-ttu-id="fa91d-144">UInteger-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-144">UInteger Data Type</span></span>](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<span data-ttu-id="fa91d-145">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-145">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CULng`|[<span data-ttu-id="fa91d-146">ULong-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-146">ULong Data Type</span></span>](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<span data-ttu-id="fa91d-147">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-147">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
+|`CUShort`|[<span data-ttu-id="fa91d-148">UShort-Datentyp</span><span class="sxs-lookup"><span data-stu-id="fa91d-148">UShort Data Type</span></span>](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<span data-ttu-id="fa91d-149">Alle numerischen Typen (einschließlich `Byte`, `SByte`, und Enumerationstypen), `Boolean`, `String`,`Object`</span><span class="sxs-lookup"><span data-stu-id="fa91d-149">Any numeric type (including `Byte`, `SByte`, and enumerated types), `Boolean`, `String`, `Object`</span></span>|  
   
-## <a name="the-ctype-function"></a>CType-Funktion  
- Die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) wirkt auf zwei Argumente. Die erste ist der Ausdruck konvertiert werden, und das zweite ist das Ziel Daten oder die Objektklasse. Beachten Sie, dass das erste Argument einen Ausdruck kein Typ sein muss.  
+## <a name="the-ctype-function"></a><span data-ttu-id="fa91d-150">CType-Funktion</span><span class="sxs-lookup"><span data-stu-id="fa91d-150">The CType Function</span></span>  
+ <span data-ttu-id="fa91d-151">Die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) arbeitet mit zwei Argumente.</span><span class="sxs-lookup"><span data-stu-id="fa91d-151">The [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) operates on two arguments.</span></span> <span data-ttu-id="fa91d-152">Der erste ist der Ausdruck konvertiert werden, und das zweite ist das Ziel Daten oder die Objektklasse.</span><span class="sxs-lookup"><span data-stu-id="fa91d-152">The first is the expression to be converted, and the second is the destination data type or object class.</span></span> <span data-ttu-id="fa91d-153">Beachten Sie, dass das erste Argument einen Ausdruck, der nicht für einen Typ sein muss.</span><span class="sxs-lookup"><span data-stu-id="fa91d-153">Note that the first argument must be an expression, not a type.</span></span>  
   
- `CType`ist ein *Inlinefunktion*, d. h. den kompilierten Code wird die Konvertierung, häufig ohne generiert eine Funktion aufrufen. Dies verbessert die Leistung.  
+ <span data-ttu-id="fa91d-154">`CType`ist ein *Inlinefunktion*, d. h. den kompilierten Code ist die Konvertierung, die häufigsten aufrufen, ohne eine Funktion generieren.</span><span class="sxs-lookup"><span data-stu-id="fa91d-154">`CType` is an *inline function*, meaning the compiled code makes the conversion, often without generating a function call.</span></span> <span data-ttu-id="fa91d-155">Dies verbessert die Leistung.</span><span class="sxs-lookup"><span data-stu-id="fa91d-155">This improves performance.</span></span>  
   
- Einen Vergleich der `CType` mit anderen Typkonvertierungsschlüsselwörter, finden Sie unter [DirectCast-Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) und [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ <span data-ttu-id="fa91d-156">Einen Vergleich der `CType` mit anderen Schlüsselwörter für die typkonvertierung, finden Sie unter [DirectCast-Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) und [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).</span><span class="sxs-lookup"><span data-stu-id="fa91d-156">For a comparison of `CType` with the other type conversion keywords, see [DirectCast Operator](../../../../visual-basic/language-reference/operators/directcast-operator.md) and [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).</span></span>  
   
-### <a name="elementary-types"></a>Elementare Datentypen  
- Das folgende Beispiel veranschaulicht die Verwendung von `CType`.  
+### <a name="elementary-types"></a><span data-ttu-id="fa91d-157">Elementare Datentypen</span><span class="sxs-lookup"><span data-stu-id="fa91d-157">Elementary Types</span></span>  
+ <span data-ttu-id="fa91d-158">Das folgende Beispiel veranschaulicht die Verwendung von `CType`.</span><span class="sxs-lookup"><span data-stu-id="fa91d-158">The following example demonstrates the use of `CType`.</span></span>  
   
 ```  
 k = CType(q, Integer)  
@@ -113,8 +96,8 @@ k = CType(q, Integer)
 f = CType(w, Label)  
 ```  
   
-### <a name="composite-types"></a>Zusammengesetzte Typen  
- Sie können `CType` , Werte in zusammengesetzte Datentypen als auch in elementare Typen konvertieren. Sie können es auch verwenden, umzuwandelnde eine Objektklasse in den Typ einer der Schnittstellen, wie im folgenden Beispiel.  
+### <a name="composite-types"></a><span data-ttu-id="fa91d-159">Zusammengesetzte Typen</span><span class="sxs-lookup"><span data-stu-id="fa91d-159">Composite Types</span></span>  
+ <span data-ttu-id="fa91d-160">Sie können `CType` Werte in zusammengesetzten Datentypen als auch in elementare Typen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="fa91d-160">You can use `CType` to convert values to composite data types as well as to elementary types.</span></span> <span data-ttu-id="fa91d-161">Sie können es verwenden, um zu erzwingende eine Objektklasse in den Typ einer der Schnittstellen, wie im folgenden Beispiel.</span><span class="sxs-lookup"><span data-stu-id="fa91d-161">You can also use it to coerce an object class to the type of one of its interfaces, as in the following example.</span></span>  
   
 ```  
 ' Assume class cZone implements interface iZone.  
@@ -125,8 +108,8 @@ Dim cZ As cZone
 h = CType(cZ, iZone)  
 ```  
   
-### <a name="array-types"></a>Arraytypen  
- `CType`Array-Datentypen, wie im folgenden Beispiel können auch konvertieren.  
+### <a name="array-types"></a><span data-ttu-id="fa91d-162">Arraytypen</span><span class="sxs-lookup"><span data-stu-id="fa91d-162">Array Types</span></span>  
+ <span data-ttu-id="fa91d-163">`CType`Array-Datentypen, wie im folgenden Beispiel können auch konvertieren.</span><span class="sxs-lookup"><span data-stu-id="fa91d-163">`CType` can also convert array data types, as in the following example.</span></span>  
   
 ```  
 Dim v() As classV  
@@ -139,26 +122,26 @@ If TypeOf obArray Is classV()
 End If  
 ```  
   
- Weitere Informationen und ein Beispiel finden Sie unter [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
+ <span data-ttu-id="fa91d-164">Weitere Informationen und ein Beispiel finden Sie unter [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="fa91d-164">For more information and an example, see [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).</span></span>  
   
-### <a name="types-defining-ctype"></a>Typen, die CType definieren  
- Sie können definieren, `CType` für eine Klasse oder Struktur, die Sie definiert haben. Dadurch können Sie zum Konvertieren von Werten in und aus dem Typ der Klasse oder Struktur. Weitere Informationen und ein Beispiel finden Sie unter [Gewusst wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+### <a name="types-defining-ctype"></a><span data-ttu-id="fa91d-165">Typen, die CType definieren</span><span class="sxs-lookup"><span data-stu-id="fa91d-165">Types Defining CType</span></span>  
+ <span data-ttu-id="fa91d-166">Sie können definieren, `CType` auf eine Klasse oder Struktur, die Sie definiert haben.</span><span class="sxs-lookup"><span data-stu-id="fa91d-166">You can define `CType` on a class or structure you have defined.</span></span> <span data-ttu-id="fa91d-167">Dadurch können Sie zum Konvertieren von Werten in und aus dem Typ der Klasse oder Struktur.</span><span class="sxs-lookup"><span data-stu-id="fa91d-167">This allows you to convert values to and from the type of your class or structure.</span></span> <span data-ttu-id="fa91d-168">Weitere Informationen und ein Beispiel finden Sie unter [wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span><span class="sxs-lookup"><span data-stu-id="fa91d-168">For more information and an example, see [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
   
 > [!NOTE]
->  Mit einem Konvertierungsschlüsselwort verwendeten Werte müssen für den Zieldatentyp gültig sein, oder ein Fehler auftritt. Beispielsweise, wenn Sie versuchen, konvertieren eine `Long` , ein `Integer`, den Wert des der `Long` muss innerhalb des gültigen Bereichs für die `Integer` -Datentyp.  
+>  <span data-ttu-id="fa91d-169">Werte, die mit einem Konvertierungsschlüsselwort verwendet, müssen für den Zieldatentyp gültig sein, oder ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="fa91d-169">Values used with a conversion keyword must be valid for the destination data type, or an error occurs.</span></span> <span data-ttu-id="fa91d-170">Z. B., wenn Sie versuchen, konvertieren Sie eine `Long` auf eine `Integer`, den Wert des der `Long` muss innerhalb des gültigen Bereichs für die `Integer` -Datentyp.</span><span class="sxs-lookup"><span data-stu-id="fa91d-170">For example, if you attempt to convert a `Long` to an `Integer`, the value of the `Long` must be within the valid range for the `Integer` data type.</span></span>  
   
 > [!CAUTION]
->  Angeben von `CType` von einem Klassentyp anderen schlägt zur Laufzeit fehl konvertieren, wenn der Typ nicht aus dem Zieltyp abgeleitet ist. Dieser Fehler wird ein <xref:System.InvalidCastException>Ausnahme.</xref:System.InvalidCastException>  
+>  <span data-ttu-id="fa91d-171">Angeben von `CType` von einem Klassentyp nach einem anderen fehlschlägt, zur Laufzeit konvertiert werden, wenn der Quelltyp nicht aus dem Zieltyp abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="fa91d-171">Specifying `CType` to convert from one class type to another fails at run time if the source type does not derive from the destination type.</span></span> <span data-ttu-id="fa91d-172">Solche Fehler löst eine <xref:System.InvalidCastException> Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="fa91d-172">Such a failure throws an <xref:System.InvalidCastException> exception.</span></span>  
   
- Allerdings einen der Typen ist eine Struktur oder Klasse, die Sie definiert haben, und Sie definiert haben `CType` auf, die Struktur oder Klasse, eine Konvertierung möglich, wenn er die Anforderungen erfüllt Ihre `CType`. Finden Sie unter [Gewusst wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ <span data-ttu-id="fa91d-173">Jedoch, wenn einer der Typen wird eine Struktur oder Klasse, die Sie definiert haben, und Sie definiert haben `CType` für diese Struktur oder Klasse, eine Konvertierung kann erfolgreich ausgeführt werden, wenn es sich um die Anforderungen erfüllt die `CType`.</span><span class="sxs-lookup"><span data-stu-id="fa91d-173">However, if one of the types is a structure or class you have defined, and if you have defined `CType` on that structure or class, a conversion can succeed if it satisfies the requirements of your `CType`.</span></span> <span data-ttu-id="fa91d-174">Finden Sie unter [wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span><span class="sxs-lookup"><span data-stu-id="fa91d-174">See [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
   
- Eine explizite Konvertierung ist auch bekannt als *Umwandlung* eines Ausdrucks in einen angegebenen Daten oder die Objektklasse.  
+ <span data-ttu-id="fa91d-175">Eine explizite Konvertierung ist auch bekannt als *Umwandlung* ein Ausdruck auf eine angegebene Typ oder ein Objekt der Klasse.</span><span class="sxs-lookup"><span data-stu-id="fa91d-175">Performing an explicit conversion is also known as *casting* an expression to a given data type or object class.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="fa91d-176">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa91d-176">See Also</span></span>  
+ [<span data-ttu-id="fa91d-177">Konvertierungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fa91d-177">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="fa91d-178">Konvertierungen zwischen Zeichenfolgen und anderen Typen</span><span class="sxs-lookup"><span data-stu-id="fa91d-178">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [<span data-ttu-id="fa91d-179">Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fa91d-179">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [<span data-ttu-id="fa91d-180">Strukturen</span><span class="sxs-lookup"><span data-stu-id="fa91d-180">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="fa91d-181">Datentypen</span><span class="sxs-lookup"><span data-stu-id="fa91d-181">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="fa91d-182">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="fa91d-182">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="fa91d-183">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="fa91d-183">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

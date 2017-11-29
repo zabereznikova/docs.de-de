@@ -1,35 +1,27 @@
 ---
-title: 'Gewusst wie: Lesen von Objektdaten aus einer XML-Datei (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c448d79a88517925712f79ed061aa90933e3f6d1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 47e5c614f2083ec2c595bba9c9454ecc5f61c786
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Gewusst wie: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)
-In diesem Beispiel liest die Objektdaten, die zuvor in eine XML-Datei mit der <xref:System.Xml.Serialization.XmlSerializer>Klasse</xref:System.Xml.Serialization.XmlSerializer> geschrieben wurden  
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a><span data-ttu-id="4ee82-102">Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ee82-102">How to: Read Object Data from an XML File (Visual Basic)</span></span>
+<span data-ttu-id="4ee82-103">In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.</span><span class="sxs-lookup"><span data-stu-id="4ee82-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="4ee82-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4ee82-104">Example</span></span>  
   
 ```vb  
 Public Class Book  
@@ -46,27 +38,27 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Ersetzen Sie die Datei "c:\temp\SerializationOverview.xml" durch den Namen der Datei, die die serialisierten Daten enthält. Weitere Informationen zum Serialisieren von Daten finden Sie unter [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+## <a name="compiling-the-code"></a><span data-ttu-id="4ee82-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="4ee82-105">Compiling the Code</span></span>  
+ <span data-ttu-id="4ee82-106">Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Namen der Datei, die die serialisierten Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="4ee82-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="4ee82-107">Weitere Informationen zum Serialisieren von Daten finden Sie unter [wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="4ee82-107">For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span></span>  
   
- Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
+ <span data-ttu-id="4ee82-108">Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.</span><span class="sxs-lookup"><span data-stu-id="4ee82-108">The class must have a public constructor without parameters.</span></span>  
   
- Nur öffentliche Eigenschaften und Felder werden deserialisiert.  
+ <span data-ttu-id="4ee82-109">Nur die öffentlichen Eigenschaften und Felder werden deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="4ee82-109">Only public properties and fields are deserialized.</span></span>  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
+## <a name="robust-programming"></a><span data-ttu-id="4ee82-110">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="4ee82-110">Robust Programming</span></span>  
+ <span data-ttu-id="4ee82-111">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="4ee82-111">The following conditions may cause an exception:</span></span>  
   
--   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
+-   <span data-ttu-id="4ee82-112">Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="4ee82-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   Die Daten in der Datei stellt keine Daten aus der zu deserialisierenden Klasse dar.  
+-   <span data-ttu-id="4ee82-113">Die Daten in der Datei stellen keine Daten aus der zu deserialisierenden Klasse dar.</span><span class="sxs-lookup"><span data-stu-id="4ee82-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
   
--   Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   <span data-ttu-id="4ee82-114">Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="4ee82-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Überprüfen Sie immer die Eingaben, und Deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle. Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes, der es deserialisiert ausgeführt. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
+## <a name="net-framework-security"></a><span data-ttu-id="4ee82-115">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="4ee82-115">.NET Framework Security</span></span>  
+ <span data-ttu-id="4ee82-116">Überprüfen Sie immer die Eingaben, und deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle.</span><span class="sxs-lookup"><span data-stu-id="4ee82-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="4ee82-117">Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes ausgeführt, der es deserialisiert hat.</span><span class="sxs-lookup"><span data-stu-id="4ee82-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="4ee82-118">Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.</span><span class="sxs-lookup"><span data-stu-id="4ee82-118">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.StreamWriter></xref:System.IO.StreamWriter>   
- [Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)   
- [Serialisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="4ee82-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4ee82-119">See Also</span></span>  
+ <xref:System.IO.StreamWriter>  
+ [<span data-ttu-id="4ee82-120">Gewusst wie: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ee82-120">How to: Write Object Data to an XML File (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [<span data-ttu-id="4ee82-121">Serialisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ee82-121">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
+ [<span data-ttu-id="4ee82-122">Visual Basic-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="4ee82-122">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)

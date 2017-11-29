@@ -1,106 +1,89 @@
 ---
-title: Werttypen und Verweistypen | Microsoft-Dokumentation
+title: Wert- und Verweistypen
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- reference data types
-- reference types
-- value types
-- value data types
+- reference data types [Visual Basic]
+- reference types [Visual Basic]
+- value types [Visual Basic]
+- value data types [Visual Basic]
 - types [Visual Basic]
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: de8016b4b2a5550b32373a41c89a484fa996c596
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="value-types-and-reference-types"></a>Value Types and Reference Types
-In Visual Basic werden die Datentypen entsprechend ihrer Klassifizierung implementiert. Die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Datentypen können, ob eine Variable eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten speichert klassifiziert werden. Wenn seine eigenen Daten speichert, es ist ein *Werttyp*, wenn er einen Zeiger auf Daten an anderer Stelle im Speicher enthält, ist ein *Referenztyp*.  
+# <a name="value-types-and-reference-types"></a><span data-ttu-id="e18c9-102">Wert- und Verweistypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-102">Value Types and Reference Types</span></span>
+<span data-ttu-id="e18c9-103">In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert.</span><span class="sxs-lookup"><span data-stu-id="e18c9-103">In Visual Basic, data types are implemented based on their classification.</span></span> <span data-ttu-id="e18c9-104">Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Datentypen können, ob eine Variable eines bestimmten Typs eigene Daten oder ein Zeiger auf die Daten speichert klassifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="e18c9-104">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] data types can be classified according to whether a variable of a particular type stores its own data or a pointer to the data.</span></span> <span data-ttu-id="e18c9-105">Wenn sie einen eigenen Datenspeicher wird ein *Werttyp*; Wenn es einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es ein *Verweistyp*.</span><span class="sxs-lookup"><span data-stu-id="e18c9-105">If it stores its own data it is a *value type*; if it holds a pointer to data elsewhere in memory it is a *reference type*.</span></span>  
   
-## <a name="value-types"></a>Werttypen  
- Ein Datentyp ist ein *Werttyp* , wenn sie die Daten in eine eigene speicherbelegung enthält. Die folgenden: Werttypen  
+## <a name="value-types"></a><span data-ttu-id="e18c9-106">Werttypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-106">Value Types</span></span>  
+ <span data-ttu-id="e18c9-107">Ein Datentyp ist ein *Werttyp* , wenn sie die Daten in einem eigenen speicherbelegung enthält.</span><span class="sxs-lookup"><span data-stu-id="e18c9-107">A data type is a *value type* if it holds the data within its own memory allocation.</span></span> <span data-ttu-id="e18c9-108">Die folgenden: Werttypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-108">Value types include the following:</span></span>  
   
--   Alle numerischen Datentypen  
+-   <span data-ttu-id="e18c9-109">Alle numerischen Datentypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-109">All numeric data types</span></span>  
   
--   `Boolean`, `Char` und `Date`  
+-   <span data-ttu-id="e18c9-110">`Boolean`, `Char` und `Date`</span><span class="sxs-lookup"><span data-stu-id="e18c9-110">`Boolean`, `Char`, and `Date`</span></span>  
   
--   Alle Strukturen, auch wenn ihre Member Verweistypen sind.  
+-   <span data-ttu-id="e18c9-111">Alle Strukturen, auch wenn ihre Member Verweistypen sind.</span><span class="sxs-lookup"><span data-stu-id="e18c9-111">All structures, even if their members are reference types</span></span>  
   
--   Enumerationen, da der zugrunde liegende Typ immer ist `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, oder`ULong`  
+-   <span data-ttu-id="e18c9-112">Enumerationen, da der zugrunde liegende Typ, immer ist `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, oder`ULong`</span><span class="sxs-lookup"><span data-stu-id="e18c9-112">Enumerations, since their underlying type is always `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, or `ULong`</span></span>  
   
- Jede Struktur ist ein Werttyp, auch wenn sie Verweistypmember enthält. Aus diesem Grund Werttypen wie `Char` und `Integer` vom .NET Framework-Strukturen implementiert werden.  
+ <span data-ttu-id="e18c9-113">Jede Struktur ist ein Werttyp ist, auch wenn sie Verweistypmember enthält.</span><span class="sxs-lookup"><span data-stu-id="e18c9-113">Every structure is a value type, even if it contains reference type members.</span></span> <span data-ttu-id="e18c9-114">Aus diesem Grund Werttypen wie z. B. `Char` und `Integer` von .NET Framework-Strukturen implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="e18c9-114">For this reason, value types such as `Char` and `Integer` are implemented by .NET Framework structures.</span></span>  
   
- Sie können einen Werttyp deklarieren, indem Sie mit dem reservierten Schlüsselwort, z. B. `Decimal`. Sie können auch die `New` -Schlüsselwort verwenden, um einen Werttyp zu initialisieren. Dies ist besonders nützlich, wenn der Typ einen Konstruktor verfügt, der Parameter akzeptiert. Ein Beispiel hierfür ist die <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>-Konstruktor, der ein neues erstellt `Decimal` Wert aus den bereitgestellten Teilen.</xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>  
+ <span data-ttu-id="e18c9-115">Sie können einen Werttyp deklarieren, indem Sie dem reservierten Schlüsselwort, z. B. `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="e18c9-115">You can declare a value type by using the reserved keyword, for example, `Decimal`.</span></span> <span data-ttu-id="e18c9-116">Sie können auch die `New` Schlüsselwort, um einen Werttyp zu initialisieren.</span><span class="sxs-lookup"><span data-stu-id="e18c9-116">You can also use the `New` keyword to initialize a value type.</span></span> <span data-ttu-id="e18c9-117">Dies ist besonders nützlich, wenn der Typ einen Konstruktor verfügt, der Parameter akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="e18c9-117">This is especially useful if the type has a constructor that takes parameters.</span></span> <span data-ttu-id="e18c9-118">Ein Beispiel hierfür ist die <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> Konstruktor, der eine neue erstellt `Decimal` Wert aus den angegebenen teilen.</span><span class="sxs-lookup"><span data-stu-id="e18c9-118">An example of this is the <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> constructor, which builds a new `Decimal` value from the supplied parts.</span></span>  
   
-## <a name="reference-types"></a>Verweistypen  
- Ein *Referenztyp* enthält einen Zeiger auf einen anderen Speicherort, der die Daten enthält. Verweistypen umfassen Folgendes:  
+## <a name="reference-types"></a><span data-ttu-id="e18c9-119">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-119">Reference Types</span></span>  
+ <span data-ttu-id="e18c9-120">Ein *Verweistyp* enthält einen Zeiger auf einen anderen Speicherort, der die Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="e18c9-120">A *reference type* contains a pointer to another memory location that holds the data.</span></span> <span data-ttu-id="e18c9-121">Verweistypen umfassen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="e18c9-121">Reference types include the following:</span></span>  
   
 -   `String`  
   
--   Alle Arrays, auch wenn ihre Elemente Werttypen sind.  
+-   <span data-ttu-id="e18c9-122">Alle Arrays, auch wenn ihre Elemente Werttypen sind.</span><span class="sxs-lookup"><span data-stu-id="e18c9-122">All arrays, even if their elements are value types</span></span>  
   
--   Klassentypen Sie, z. B.<xref:System.Windows.Forms.Form></xref:System.Windows.Forms.Form>  
+-   <span data-ttu-id="e18c9-123">Klassentypen Sie, z. B.<xref:System.Windows.Forms.Form></span><span class="sxs-lookup"><span data-stu-id="e18c9-123">Class types, such as <xref:System.Windows.Forms.Form></span></span>  
   
--   Delegaten  
+-   <span data-ttu-id="e18c9-124">Delegaten</span><span class="sxs-lookup"><span data-stu-id="e18c9-124">Delegates</span></span>  
   
- Eine Klasse ist ein *Referenztyp*. Aus diesem Grund Verweistypen wie `Object` und `String` wird von [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] Klassen. Beachten Sie, dass jedes Array einen Verweistyp handelt, auch wenn seine Member Werttypen sind.  
+ <span data-ttu-id="e18c9-125">Eine Klasse ist eine *Verweistyp*.</span><span class="sxs-lookup"><span data-stu-id="e18c9-125">A class is a *reference type*.</span></span> <span data-ttu-id="e18c9-126">Aus diesem Grund verweisen auf Typen wie z. B. `Object` und `String` werden von unterstützt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klassen.</span><span class="sxs-lookup"><span data-stu-id="e18c9-126">For this reason, reference types such as `Object` and `String` are supported by [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes.</span></span> <span data-ttu-id="e18c9-127">Beachten Sie, dass jedes Array ein Verweistyp ist, selbst wenn ihre Elemente Werttypen sind.</span><span class="sxs-lookup"><span data-stu-id="e18c9-127">Note that every array is a reference type, even if its members are value types.</span></span>  
   
- Da jeder Referenztyp eine zugrunde liegende .NET Framework-Klasse darstellt, müssen Sie verwenden die [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort, die Sie bei der Initialisierung. Die folgende Anweisung initialisiert ein Array.  
+ <span data-ttu-id="e18c9-128">Da jede Verweistyp eine zugrunde liegenden .NET Framework-Klasse darstellt, verwenden Sie die [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort, die Sie bei der Initialisierung.</span><span class="sxs-lookup"><span data-stu-id="e18c9-128">Since every reference type represents an underlying .NET Framework class, you must use the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword when you initialize it.</span></span> <span data-ttu-id="e18c9-129">Die folgende Anweisung wird ein Array initialisiert.</span><span class="sxs-lookup"><span data-stu-id="e18c9-129">The following statement initializes an array.</span></span>  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
-## <a name="elements-that-are-not-types"></a>Elemente, die keine Typen sind  
- Die folgenden Programmierelemente qualifizieren wie Typen, Sie nicht, da Sie diese nicht als Datentyp für ein deklariertes Element angeben können:  
+## <a name="elements-that-are-not-types"></a><span data-ttu-id="e18c9-130">Elemente, die keine Typen sind</span><span class="sxs-lookup"><span data-stu-id="e18c9-130">Elements That Are Not Types</span></span>  
+ <span data-ttu-id="e18c9-131">Die folgenden Programmierelemente qualifizieren wie Typen, Sie nicht, da Sie diese nicht als Datentyp für eine deklarierte Element festlegen können:</span><span class="sxs-lookup"><span data-stu-id="e18c9-131">The following programming elements do not qualify as types, because you cannot specify any of them as a data type for a declared element:</span></span>  
   
--   Namespaces  
+-   <span data-ttu-id="e18c9-132">Namespaces</span><span class="sxs-lookup"><span data-stu-id="e18c9-132">Namespaces</span></span>  
   
--   Module  
+-   <span data-ttu-id="e18c9-133">Module</span><span class="sxs-lookup"><span data-stu-id="e18c9-133">Modules</span></span>  
   
--   Ereignisse  
+-   <span data-ttu-id="e18c9-134">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="e18c9-134">Events</span></span>  
   
--   Eigenschaften und Prozeduren  
+-   <span data-ttu-id="e18c9-135">Eigenschaften und Prozeduren</span><span class="sxs-lookup"><span data-stu-id="e18c9-135">Properties and procedures</span></span>  
   
--   Variablen, Konstanten und Felder  
+-   <span data-ttu-id="e18c9-136">Variablen, Konstanten und Felder</span><span class="sxs-lookup"><span data-stu-id="e18c9-136">Variables, constants, and fields</span></span>  
   
-## <a name="working-with-the-object-data-type"></a>Arbeiten mit den Object-Datentyp  
- Sie können ein Referenztyp oder ein Werttyp zu einer Variablen zuweisen der `Object` -Datentyp. Ein `Object` -Variable enthält immer einen Zeiger auf die Daten, nie die Daten selbst. Jedoch wenn Sie einen Werttyp zum Zuweisen einer `Object` -Variable verhält sich als enthielte sie eigene Daten. Weitere Informationen finden Sie unter [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+## <a name="working-with-the-object-data-type"></a><span data-ttu-id="e18c9-137">Arbeiten mit dem Object-Datentyp</span><span class="sxs-lookup"><span data-stu-id="e18c9-137">Working with the Object Data Type</span></span>  
+ <span data-ttu-id="e18c9-138">Sie können ein Verweistyp oder ein Werttyp zu einer Variablen zuweisen der `Object` -Datentyp.</span><span class="sxs-lookup"><span data-stu-id="e18c9-138">You can assign either a reference type or a value type to a variable of the `Object` data type.</span></span> <span data-ttu-id="e18c9-139">Ein `Object` Variable enthält immer einen Zeiger auf die Daten, die nie die Daten selbst.</span><span class="sxs-lookup"><span data-stu-id="e18c9-139">An `Object` variable always holds a pointer to the data, never the data itself.</span></span> <span data-ttu-id="e18c9-140">Jedoch, wenn Sie einen Werttyp an Zuweisen einer `Object` -Variable ist, verhält sich, als ob es eine eigene Daten enthält.</span><span class="sxs-lookup"><span data-stu-id="e18c9-140">However, if you assign a value type to an `Object` variable, it behaves as if it holds its own data.</span></span> <span data-ttu-id="e18c9-141">Weitere Informationen finden Sie unter [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="e18c9-141">For more information, see [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span>  
   
- Können Sie ermitteln, ob ein `Object` Variablen fungiert als ein Referenztyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A>-Methode in der <xref:Microsoft.VisualBasic.Information>Klasse von der <xref:Microsoft.VisualBasic?displayProperty=fullName>Namespace.</xref:Microsoft.VisualBasic?displayProperty=fullName> </xref:Microsoft.VisualBasic.Information> </xref:Microsoft.VisualBasic.Information.IsReference%2A> <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>Gibt `True` Wenn der Inhalt der `Object` Variable einen Referenztyp darstellt.</xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>  
+ <span data-ttu-id="e18c9-142">Können Sie herausfinden, ob ein `Object` Variable dient als ein Verweistyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A> Methode in der <xref:Microsoft.VisualBasic.Information> Klasse von der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace.</span><span class="sxs-lookup"><span data-stu-id="e18c9-142">You can find out whether an `Object` variable is acting as a reference type or a value type by passing it to the <xref:Microsoft.VisualBasic.Information.IsReference%2A> method in the <xref:Microsoft.VisualBasic.Information> class of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="e18c9-143"><xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>Gibt `True` Wenn der Inhalt der `Object` Variable steht für einen Referenztyp darstellt.</span><span class="sxs-lookup"><span data-stu-id="e18c9-143"><xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> returns `True` if the content of the `Object` variable represents a reference type.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Auf NULL festlegbare Werttypen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)   
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a><span data-ttu-id="e18c9-144">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e18c9-144">See Also</span></span>  
+ [<span data-ttu-id="e18c9-145">Auf NULL festlegbare Werttypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-145">Nullable Value Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [<span data-ttu-id="e18c9-146">Konvertierungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e18c9-146">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="e18c9-147">Structure-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e18c9-147">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="e18c9-148">Effiziente Verwendung von Datentypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-148">Efficient Use of Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [<span data-ttu-id="e18c9-149">Object-Datentyp</span><span class="sxs-lookup"><span data-stu-id="e18c9-149">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [<span data-ttu-id="e18c9-150">Datentypen</span><span class="sxs-lookup"><span data-stu-id="e18c9-150">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -1,47 +1,46 @@
 ---
-title: "How to: Write an Extension Method (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "extending data types"
-  - "writing extension methods"
-  - "extension methods [Visual Basic]"
+title: 'Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- extending data types [Visual Basic]
+- writing extension methods [Visual Basic]
+- extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write an Extension Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Mit Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen.  Die Erweiterungsmethode kann aufgerufen werden, als wäre sie eine Instanz dieser Klasse.  
+# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="d68e9-102">Gewusst wie: Schreiben einer Erweiterungsmethode (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d68e9-102">How to: Write an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="d68e9-103">Erweiterungsmethoden können Sie Methoden zur einer vorhandenen Klasse hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="d68e9-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="d68e9-104">Die Erweiterungsmethode kann aufgerufen werden, als handele es sich um eine Instanz dieser Klasse.</span><span class="sxs-lookup"><span data-stu-id="d68e9-104">The extension method can be called as if it were an instance of that class.</span></span>  
   
-### So definieren Sie eine Erweiterungsmethode  
+### <a name="to-define-an-extension-method"></a><span data-ttu-id="d68e9-105">Um eine Erweiterungsmethode zu definieren.</span><span class="sxs-lookup"><span data-stu-id="d68e9-105">To define an extension method</span></span>  
   
-1.  Öffnen Sie eine neue oder vorhandene Visual Basic\-Anwendung in Visual Studio.  
+1.  <span data-ttu-id="d68e9-106">Öffnen einer neuen oder vorhandenen Visual Basic-Anwendung in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d68e9-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
   
-2.  Fügen Sie am Anfang der Datei, in der Sie eine Erweiterungsmethode definieren möchten, die folgende Importanweisung ein:  
+2.  <span data-ttu-id="d68e9-107">Am Anfang der Datei, in der Sie eine Erweiterungsmethode definieren möchten, müssen schließen Sie die folgende importanweisung ein:</span><span class="sxs-lookup"><span data-stu-id="d68e9-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  Beginnen Sie innerhalb eines Moduls in einer neuen oder vorhandenen Anwendung die Methodendefinition mit dem Erweiterungsattribut:  
+3.  <span data-ttu-id="d68e9-108">Beginnen Sie innerhalb eines Moduls in der neuen oder vorhandenen Anwendung die Methodendefinition mit dem Erweiterungsattribut:</span><span class="sxs-lookup"><span data-stu-id="d68e9-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Deklarieren Sie die Methode auf die übliche Weise, mit der Ausnahme, dass der Typ des ersten Parameters dem zu erweiternden Datentyp entsprechen muss.  
+4.  <span data-ttu-id="d68e9-109">Deklarieren Sie die Methode auf die übliche Weise, mit dem Unterschied, dass der Typ des ersten Parameters den Datentyp sein muss, die, den Sie erweitern möchten.</span><span class="sxs-lookup"><span data-stu-id="d68e9-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
   
     ```  
     <Extension()>   
@@ -50,10 +49,10 @@ Mit Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufüg
     End Sub  
     ```  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Erweiterungsmethode in Modul `StringExtensions` deklariert.  Das zweite Modul `Module1` importiert `StringExtensions` und ruft die Methode auf.  Die Erweiterungsmethode muss sich während des Aufrufs innerhalb des Bereichs befinden.  Durch die Erweiterungsmethode `PrintAndPunctuate` wird die <xref:System.String>\-Klasse mit einer Methode erweitert, die die Zeichenfolgeninstanz, gefolgt von einer Zeichenfolge aus Satzzeichensymbolen, die als Parameter gesendet wurden, anzeigt.  
+## <a name="example"></a><span data-ttu-id="d68e9-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d68e9-110">Example</span></span>  
+ <span data-ttu-id="d68e9-111">Das folgende Beispiel deklariert eine Erweiterungsmethode in Modul `StringExtensions`.</span><span class="sxs-lookup"><span data-stu-id="d68e9-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="d68e9-112">Das zweite Modul `Module1`, importiert `StringExtensions` und ruft die Methode.</span><span class="sxs-lookup"><span data-stu-id="d68e9-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="d68e9-113">Die Erweiterungsmethode muss im Gültigkeitsbereich sein, wenn sie aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d68e9-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="d68e9-114">Erweiterungsmethode `PrintAndPunctuate` erweitert die <xref:System.String> Klasse mit einer Methode, die die Zeichenfolgeninstanz zeigt gefolgt von einem Interpunktionszeichen als Parameter gesendet.</span><span class="sxs-lookup"><span data-stu-id="d68e9-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
   
-```vb#  
+```vb  
 ' Declarations will typically be in a separate module.  
 Imports System.Runtime.CompilerServices  
   
@@ -67,7 +66,7 @@ Module StringExtensions
 End Module  
 ```  
   
-```vb#  
+```vb  
 ' Import the module that holds the extension method you want to use,   
 ' and call it.  
   
@@ -82,18 +81,17 @@ Module Module1
     End Sub  
   
 End Module  
-  
 ```  
   
- Beachten Sie, dass die Methode mit zwei Parametern definiert und mit nur einem aufgerufen wird.  Der erste Parameter \(`aString`\) in der Methodendefinition ist an `example`, die Instanz von `String`, gebunden, durch die die Methode aufgerufen wird.  Die Ausgabe des Beispiels sieht wie folgt aus:  
+ <span data-ttu-id="d68e9-115">Beachten Sie, dass die Methode mit zwei Parametern definiert und mit nur einem aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d68e9-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="d68e9-116">Der erste Parameter `aString`, in der Methode Definition gebunden ist, um `example`, die Instanz von `String` die Methode aufruft.</span><span class="sxs-lookup"><span data-stu-id="d68e9-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="d68e9-117">Die Ausgabe des Beispiels lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="d68e9-117">The output of the example is as follows:</span></span>  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## Siehe auch  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>   
- [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Module Statement](../../../../visual-basic/language-reference/statements/module-statement.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a><span data-ttu-id="d68e9-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d68e9-118">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
+ [<span data-ttu-id="d68e9-119">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="d68e9-119">Extension Methods</span></span>](./extension-methods.md)  
+ [<span data-ttu-id="d68e9-120">Module-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d68e9-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="d68e9-121">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="d68e9-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="d68e9-122">Gültigkeitsbereich in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d68e9-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

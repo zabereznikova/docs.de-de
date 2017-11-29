@@ -1,76 +1,59 @@
 ---
-title: Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic) | Microsoft-Dokumentation
+title: Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- data type conversion, string
-- conversions, type
-- string conversion
-- conversions, data type
-- type conversion, string
+- data type conversion [Visual Basic], string
+- conversions [Visual Basic], type
+- string conversion [Visual Basic]
+- conversions [Visual Basic], data type
+- type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d0a5fc7327ecd6339b5021e1b4cb87cc54bd2bc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 71ece18d4ce33b7b637410110e825b389affcd67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)
-Sie können eine numerische konvertieren `Boolean`, oder Datum/Uhrzeit-Wert, der eine `String`. Sie können auch in umgekehrter Richtung konvertieren – aus einem Zeichenfolgenwert numerischen, `Boolean`, oder `Date` – sofern der Inhalt der Zeichenfolge als gültiger Wert des Zieldatentyps interpretiert werden können. Ist dies nicht möglich, tritt ein Laufzeitfehler auf.  
+# <a name="conversions-between-strings-and-other-types-visual-basic"></a><span data-ttu-id="4dab7-102">Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4dab7-102">Conversions Between Strings and Other Types (Visual Basic)</span></span>
+<span data-ttu-id="4dab7-103">Sie können einen numerischen konvertieren `Boolean`, oder Datum/Uhrzeit-Wert, der eine `String`.</span><span class="sxs-lookup"><span data-stu-id="4dab7-103">You can convert a numeric, `Boolean`, or date/time value to a `String`.</span></span> <span data-ttu-id="4dab7-104">Sie können auch in umgekehrter Richtung konvertieren – aus einem Zeichenfolgenwert numerischen, `Boolean`, oder `Date` – sofern der Inhalt der Zeichenfolge als gültiger Wert des Zieldatentyps interpretiert werden können.</span><span class="sxs-lookup"><span data-stu-id="4dab7-104">You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type.</span></span> <span data-ttu-id="4dab7-105">Wenn dies nicht möglich, tritt ein Laufzeitfehler auf.</span><span class="sxs-lookup"><span data-stu-id="4dab7-105">If they cannot, a run-time error occurs.</span></span>  
   
- Die Konvertierungen für alle diese Aufgaben in beide Richtungen annähernde. You should use the type conversion keywords (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, and `CType`). Die <xref:Microsoft.VisualBasic.Strings.Format%2A>und <xref:Microsoft.VisualBasic.Conversion.Val%2A>Funktionen erhalten Sie zusätzliche Kontrolle über Konvertierungen zwischen Zeichenfolgen und Zahlen.</xref:Microsoft.VisualBasic.Conversion.Val%2A> </xref:Microsoft.VisualBasic.Strings.Format%2A>  
+ <span data-ttu-id="4dab7-106">Die Konvertierungen für alle diese Zuweisungen in beide Richtungen annähernde.</span><span class="sxs-lookup"><span data-stu-id="4dab7-106">The conversions for all these assignments, in either direction, are narrowing conversions.</span></span> <span data-ttu-id="4dab7-107">Verwenden Sie Schlüsselwörter für die typkonvertierung (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, und `CType`).</span><span class="sxs-lookup"><span data-stu-id="4dab7-107">You should use the type conversion keywords (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, and `CType`).</span></span> <span data-ttu-id="4dab7-108">Die <xref:Microsoft.VisualBasic.Strings.Format%2A> und <xref:Microsoft.VisualBasic.Conversion.Val%2A> -Funktionen geben Ihnen zusätzliche Kontrolle darüber, Konvertierungen zwischen Zeichenfolgen und Zahlen.</span><span class="sxs-lookup"><span data-stu-id="4dab7-108">The <xref:Microsoft.VisualBasic.Strings.Format%2A> and <xref:Microsoft.VisualBasic.Conversion.Val%2A> functions give you additional control over conversions between strings and numbers.</span></span>  
   
- Wenn Sie eine Klasse oder Struktur definiert haben, können Sie definieren, dass Typkonvertierungsoperatoren zwischen `String` und den Typ der Klasse bzw. Struktur. Weitere Informationen finden Sie unter [Gewusst wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ <span data-ttu-id="4dab7-109">Wenn Sie eine Klasse oder Struktur definiert haben, können Sie definieren, dass Typkonvertierungsoperatoren zwischen `String` und den Typ der Klasse oder Struktur.</span><span class="sxs-lookup"><span data-stu-id="4dab7-109">If you have defined a class or structure, you can define type conversion operators between `String` and the type of your class or structure.</span></span> <span data-ttu-id="4dab7-110">Weitere Informationen finden Sie unter [wie: Definieren eines Konvertierungsoperators](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span><span class="sxs-lookup"><span data-stu-id="4dab7-110">For more information, see [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).</span></span>  
   
-## <a name="conversion-of-numbers-to-strings"></a>Konvertieren von Zahlen in Zeichenfolgen  
- Können Sie die `Format` -Funktion zum Umwandeln einer Zahl in eine formatierte Zeichenfolge, die nicht nur die entsprechenden Ziffern enthalten, können jedoch auch die Formatierungssymbole, wie Währungszeichen (z. B. `$`), Tausende Trennzeichen oder *Ziffer gruppieren Symbole* (z. B. `,`), und ein Dezimaltrennzeichen (z. B. `.`). `Format`verwendet automatisch die entsprechenden Symbole gemäß der **regionale** Einstellungen in Windows **Systemsteuerung**.  
+## <a name="conversion-of-numbers-to-strings"></a><span data-ttu-id="4dab7-111">Konvertierung von Zahlen in Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="4dab7-111">Conversion of Numbers to Strings</span></span>  
+ <span data-ttu-id="4dab7-112">Können Sie die `Format` Funktion, um eine Zahl in eine formatierte Zeichenfolge zu konvertieren, der nicht nur die entsprechenden Ziffern umfassen kann jedoch auch die Formatierungssymbole, z. B. ein Währungssymbol (z. B. `$`), Tausende Trennzeichen oder *Tausender Symbole* (z. B. `,`), und ein Dezimaltrennzeichen (z. B. `.`).</span><span class="sxs-lookup"><span data-stu-id="4dab7-112">You can use the `Format` function to convert a number to a formatted string, which can include not only the appropriate digits but also formatting symbols such as a currency sign (such as `$`), thousands separators or *digit grouping symbols* (such as `,`), and a decimal separator (such as `.`).</span></span> <span data-ttu-id="4dab7-113">`Format`verwendet automatisch die entsprechenden Symbole gemäß der **regionale** in Windows angegebenen Einstellungen **Systemsteuerung**.</span><span class="sxs-lookup"><span data-stu-id="4dab7-113">`Format` automatically uses the appropriate symbols according to the **Regional Options** settings specified in the Windows **Control Panel**.</span></span>  
   
- Beachten Sie, dass die Verkettung (`&`) konvertieren kann eine Zahl in eine Zeichenfolge implizit, wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="4dab7-114">Beachten Sie, dass die Verkettung (`&`)-Operator kann konvertiert eine Zahl in eine Zeichenfolge implizit, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="4dab7-114">Note that the concatenation (`&`) operator can convert a number to a string implicitly, as the following example shows.</span></span>  
   
 ```  
 ' The following statement converts count to a String value.  
 Str = "The total count is " & count  
 ```  
   
-## <a name="conversion-of-strings-to-numbers"></a>Konvertierung von Zeichenfolgen in Zahlen  
- Sie können die `Val` Funktion, die Ziffern in einer Zeichenfolge explizit in eine Zahl zu konvertieren. `Val`liest die Zeichenfolge, bis ein anderes Zeichen als eine Ziffer, Leerzeichen, Tabstoppzeichen, Line feed, oder Zeitraum auftritt. Die Sequenzen "& O" und "& H" ändern die Basis des Systems Anzahl und beenden die Überprüfung. Bis sie gelesen wird, stoppt `Val` alle entsprechende Zeichen in einen numerischen Wert konvertiert. Die folgende Anweisung gibt z. B. den Wert `141.825`.  
+## <a name="conversion-of-strings-to-numbers"></a><span data-ttu-id="4dab7-115">Konvertierung von Zeichenfolgen in Zahlen</span><span class="sxs-lookup"><span data-stu-id="4dab7-115">Conversion of Strings to Numbers</span></span>  
+ <span data-ttu-id="4dab7-116">Sie können die `Val` Funktion explizit die Ziffern in einer Zeichenfolge in eine Zahl zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="4dab7-116">You can use the `Val` function to explicitly convert the digits in a string to a number.</span></span> <span data-ttu-id="4dab7-117">`Val`liest die Zeichenfolge an, bis er erkennt, dass ein anderes Zeichen als ein Ziffern, Leerzeichen, Tabstopp, Line feed, Wagenrücklauf oder Zeitraum.</span><span class="sxs-lookup"><span data-stu-id="4dab7-117">`Val` reads the string until it encounters a character other than a digit, space, tab, line feed, or period.</span></span> <span data-ttu-id="4dab7-118">Die Sequenzen "& O" und "& H" ändern Sie die Basis des Systems Anzahl und die Überprüfung zu beenden.</span><span class="sxs-lookup"><span data-stu-id="4dab7-118">The sequences "&O" and "&H" alter the base of the number system and terminate the scanning.</span></span> <span data-ttu-id="4dab7-119">Bis er beendet das Lesen, wird `Val` alle entsprechende Zeichen in einen numerischen Wert konvertiert.</span><span class="sxs-lookup"><span data-stu-id="4dab7-119">Until it stops reading, `Val` converts all appropriate characters to a numeric value.</span></span> <span data-ttu-id="4dab7-120">Die folgende Anweisung gibt z. B. den Wert `141.825`.</span><span class="sxs-lookup"><span data-stu-id="4dab7-120">For example, the following statement returns the value `141.825`.</span></span>  
   
  `Val("   14   1.825 miles")`  
   
- Wenn [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] konvertiert eine Zeichenfolge in einen numerischen Wert, verwendet der **regionale** Einstellungen in Windows **Systemsteuerung** Tausendertrennzeichen interpretiert Trennzeichen, Dezimaltrennzeichen und Währungssymbol. Dies bedeutet, dass eine Konvertierung möglicherweise unter einem, jedoch nicht in einer anderen Einstellung erfolgreich ausgeführt. Z. B. `"$14.20"` akzeptabel ist in Englisch (USA) jedoch nicht in Gebietsschemas Französisch.  
+ <span data-ttu-id="4dab7-121">Wenn [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konvertiert eine Zeichenfolge in einen numerischen Wert verwendet die **regionale** angegebenen im Windows-Einstellungen **Systemsteuerung** Tausenden zu interpretieren Separator, Dezimaltrennzeichen, und Währungssymbol.</span><span class="sxs-lookup"><span data-stu-id="4dab7-121">When [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] converts a string to a numeric value, it uses the **Regional Options** settings specified in the Windows **Control Panel** to interpret the thousands separator, decimal separator, and currency symbol.</span></span> <span data-ttu-id="4dab7-122">Dies bedeutet, dass eine Konvertierung unter einer Einstellung, aber nicht in einer anderen erfolgreich ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4dab7-122">This means that a conversion might succeed under one setting but not another.</span></span> <span data-ttu-id="4dab7-123">Beispielsweise `"$14.20"` akzeptabel ist in das Gebietsschema Englisch (Vereinigte Staaten), aber nicht im Gebietsschemas Französisch.</span><span class="sxs-lookup"><span data-stu-id="4dab7-123">For example, `"$14.20"` is acceptable in the English (United States) locale but not in any French locale.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Typumwandlungen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Gewusst wie: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)   
- [Datentypen](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Einführung in internationale Anwendungen basierend auf .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a><span data-ttu-id="4dab7-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4dab7-124">See Also</span></span>  
+ [<span data-ttu-id="4dab7-125">Konvertierungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4dab7-125">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="4dab7-126">Erweiternde und eingrenzende Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="4dab7-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [<span data-ttu-id="4dab7-127">Implizite und explizite Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="4dab7-127">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="4dab7-128">Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4dab7-128">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [<span data-ttu-id="4dab7-129">Arraykonvertierungen</span><span class="sxs-lookup"><span data-stu-id="4dab7-129">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ [<span data-ttu-id="4dab7-130">Datentypen</span><span class="sxs-lookup"><span data-stu-id="4dab7-130">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="4dab7-131">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="4dab7-131">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="4dab7-132">Einführung in internationale Anwendungen basierend auf .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4dab7-132">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

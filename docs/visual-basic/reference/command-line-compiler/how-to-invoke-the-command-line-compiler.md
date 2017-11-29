@@ -1,86 +1,69 @@
 ---
-title: 'Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic) | Microsoft-Dokumentation'
-ms.date: 2015-07-20
+title: 'Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)'
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - command-line arguments
 - vbc.exe
 - Visual Basic compiler, starting
-- command line, arguments
+- command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 69c95289f91f712bd3fda03a7f582d879141591a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)
-Sie können den Befehlszeilencompiler aufrufen, durch den Namen seiner ausführbaren Datei in der Befehlszeile angeben, auch bekannt als MS-DOS. Wenn Sie über die Standard-Windows-Befehlszeile kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie entweder die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] -Eingabeaufforderungsfenster aus, oder ändern Sie die PATH-Umgebungsvariable. Beide ermöglichen es Ihnen, einfach den Compilernamen aus dem Verzeichnis zu kompilieren.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a><span data-ttu-id="d3452-102">Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3452-102">How to: Invoke the Command-Line Compiler (Visual Basic)</span></span>
+<span data-ttu-id="d3452-103">Durch den Namen seiner ausführbaren Datei in der Befehlszeile, auch bekannt als MS-DOS, können Sie den Befehlszeilencompiler aufrufen.</span><span class="sxs-lookup"><span data-stu-id="d3452-103">You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt.</span></span> <span data-ttu-id="d3452-104">Wenn Sie über die standardmäßige Windows-Befehlszeile kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben.</span><span class="sxs-lookup"><span data-stu-id="d3452-104">If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file.</span></span> <span data-ttu-id="d3452-105">Um dieses Standardverhalten zu überschreiben, können Sie entweder die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] -Eingabeaufforderung ein, oder ändern Sie die PATH-Umgebungsvariable.</span><span class="sxs-lookup"><span data-stu-id="d3452-105">To override this default behavior, you can either use the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt, or modify the PATH environment variable.</span></span> <span data-ttu-id="d3452-106">Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.</span><span class="sxs-lookup"><span data-stu-id="d3452-106">Both allow you to compile from any directory by simply typing the compiler name.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Zum Aufrufen des Compilers mithilfe der Visual Studio-Befehlszeile  
+### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a><span data-ttu-id="d3452-107">Zum Aufrufen des Compilers über die Visual Studio-Eingabeaufforderung</span><span class="sxs-lookup"><span data-stu-id="d3452-107">To invoke the compiler using the Visual Studio Command Prompt</span></span>  
   
-1.  Öffnen Sie den Programmordner von Visual Studio-Tools in der Programmgruppe Microsoft Visual Studio.  
+1.  <span data-ttu-id="d3452-108">Öffnen Sie den Programmordner Visual Studio-Tools in der Programmgruppe Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d3452-108">Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.</span></span>  
   
-2.  Sie können die [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Befehlszeile aus, um den Compiler aus dem Verzeichnis auf Ihrem Computer zugreifen, wenn Visual Studio installiert ist.  
+2.  <span data-ttu-id="d3452-109">Sie können die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Befehlszeile aus, um den Compiler aus einem beliebigen Verzeichnis auf Ihrem Computer zugreifen, wenn Visual Studio installiert ist.</span><span class="sxs-lookup"><span data-stu-id="d3452-109">You can use the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt to access the compiler from any directory on your machine, if Visual Studio is installed.</span></span>  
   
-3.  Aufrufen der [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Eingabeaufforderungsfenster.  
+3.  <span data-ttu-id="d3452-110">Aufrufen der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="d3452-110">Invoke the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Command Prompt.</span></span>  
   
-4.  Geben Sie an der Befehlszeile `vbc.exe` *SourceFileName* und drücken Sie dann die EINGABETASTE.  
+4.  <span data-ttu-id="d3452-111">Geben Sie an der Befehlszeile `vbc.exe` *Quelldateiname* und drücken Sie dann die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="d3452-111">At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.</span></span>  
   
-     Beispielsweise, wenn Sie den Quellcode in einem Verzeichnis namens gespeichert `SourceFiles`, öffnen Sie die Befehlszeile und den Typ `cd SourceFiles` in dieses Verzeichnis zu ändern. Wenn das Verzeichnis eine Quelldatei mit dem Namen enthalten `Source.vb`, könnten durch eingeben Kompilieren `vbc.exe Source.vb`.  
+     <span data-ttu-id="d3452-112">Angenommen, wenn Sie den Quellcode in einem Verzeichnis namens gespeichert `SourceFiles`, öffnen Sie die Eingabeaufforderung, und geben `cd SourceFiles` so ändern Sie in diesem Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d3452-112">For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory.</span></span> <span data-ttu-id="d3452-113">Wenn das Verzeichnis eine Quelldatei mit dem Namen enthalten `Source.vb`, könnten durch eingeben Kompilieren `vbc.exe Source.vb`.</span><span class="sxs-lookup"><span data-stu-id="d3452-113">If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.</span></span>  
   
-### <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Die PATH-Umgebungsvariable festlegen, an den Compiler für die Windows-Befehlszeile  
+### <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a><span data-ttu-id="d3452-114">PATH-Umgebungsvariable festlegen, an den Compiler für die Windows-Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="d3452-114">To set the PATH environment variable to the compiler for the Windows Command Prompt</span></span>  
   
-1.  Verwenden Sie die Windows-Suchfunktion Vbc.exe auf dem lokalen Datenträger gefunden.  
+1.  <span data-ttu-id="d3452-115">Verwenden Sie die Windows-Suchfunktion Vbc.exe auf dem lokalen Datenträger gefunden.</span><span class="sxs-lookup"><span data-stu-id="d3452-115">Use the Windows Search feature to find Vbc.exe on your local disk.</span></span>  
   
-     Der genaue Name des Verzeichnisses, in dem der Compiler befindet, hängt von den Speicherort des Windows-Verzeichnisses und die Version der [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] installiert. Wenn Sie mehr als eine Version von ist die [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] installiert haben, müssen Sie bestimmen, welche Version verwendet (in der Regel die neueste Version).  
+     <span data-ttu-id="d3452-116">Der genaue Name des Verzeichnisses auf dem sich der Compiler befindet hängt davon ab, den Speicherort des Windows-Verzeichnisses und die Version von ".NET Framework" installiert.</span><span class="sxs-lookup"><span data-stu-id="d3452-116">The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed.</span></span> <span data-ttu-id="d3452-117">Wenn Sie mehr als eine Version von ".NET Framework" installiert haben, müssen Sie die Version, verwenden Sie (in der Regel die neueste Version) ermitteln.</span><span class="sxs-lookup"><span data-stu-id="d3452-117">If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).</span></span>  
   
-2.  Aus der **Start** im Menü mit der rechten Maustaste **Arbeitsplatz**, und klicken Sie dann auf **Eigenschaften** aus dem Kontextmenü.  
+2.  <span data-ttu-id="d3452-118">Aus Ihrer **starten** im Menü mit der rechten Maustaste **Arbeitsplatz**, und klicken Sie dann auf **Eigenschaften** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="d3452-118">From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.</span></span>  
   
-3.  Klicken Sie auf die **erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
+3.  <span data-ttu-id="d3452-119">Klicken Sie auf die **erweitert** Registerkarte, und klicken Sie dann auf **Umgebungsvariablen**.</span><span class="sxs-lookup"><span data-stu-id="d3452-119">Click the **Advanced** tab, and then click **Environment Variables**.</span></span>  
   
-4.  In der **System** Variablen Bereich **Pfad** aus der Liste aus und klicken Sie auf **bearbeiten**.  
+4.  <span data-ttu-id="d3452-120">In der **System** Variablen (Bereich), wählen **Pfad** aus der Liste und klicken Sie auf **bearbeiten**.</span><span class="sxs-lookup"><span data-stu-id="d3452-120">In the **System** variables pane, select **Path** from the list and click **Edit**.</span></span>  
   
-5.  In der **bearbeiten** Variable Dialogfeld verschieben Sie die Einfügemarke an das Ende der Zeichenfolge in der **Variablenwert** aus, und geben Sie ein Semikolon (;) gefolgt vom vollständigen Verzeichnisnamen aus Schritt 1.  
+5.  <span data-ttu-id="d3452-121">In der **bearbeiten System** Variable Dialogfeld verschieben Sie die Einfügemarke an das Ende der Zeichenfolge in der **Variablenwert** ein und geben Sie ein Semikolon (;) gefolgt von der vollständiger Verzeichnisname, der in Schritt 1 gefunden.</span><span class="sxs-lookup"><span data-stu-id="d3452-121">In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.</span></span>  
   
-6.  Klicken Sie auf **OK** Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen.  
+6.  <span data-ttu-id="d3452-122">Klicken Sie auf **OK** die Bearbeitungen bestätigt und die Dialogfelder zu schließen.</span><span class="sxs-lookup"><span data-stu-id="d3452-122">Click **OK** to confirm your edits and close the dialog boxes.</span></span>  
   
-     Nachdem Sie die PATH-Umgebungsvariable geändert haben, können Sie Ausführen den [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler an der Windows-Befehlszeile aus dem Verzeichnis auf dem Computer.  
+     <span data-ttu-id="d3452-123">Nachdem Sie der PATH-Umgebungsvariablen ändern, können Sie Ausführen den [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler an der Windows-Eingabeaufforderung aus dem Verzeichnis auf dem Computer.</span><span class="sxs-lookup"><span data-stu-id="d3452-123">After you change the PATH environment variable, you can run the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler at the Windows Command Prompt from any directory on the computer.</span></span>  
   
-### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Zum Aufrufen des Compilers mithilfe der Windows-Befehlszeile  
+### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a><span data-ttu-id="d3452-124">Zum Aufrufen des Compilers über die Windows-Eingabeaufforderung</span><span class="sxs-lookup"><span data-stu-id="d3452-124">To invoke the compiler using the Windows Command Prompt</span></span>  
   
-1.  Aus der **Start** Menü klicken Sie auf die **Zubehör** Ordner, und öffnen Sie die **Windows-Befehlszeile**.  
+1.  <span data-ttu-id="d3452-125">Aus der **starten** Menü klicken Sie auf die **Zubehör** Ordner, und öffnen Sie dann die **Windows-Befehlszeile**.</span><span class="sxs-lookup"><span data-stu-id="d3452-125">From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.</span></span>  
   
-2.  Geben Sie an der Befehlszeile `vbc.exe` *SourceFileName* und drücken Sie dann die EINGABETASTE.  
+2.  <span data-ttu-id="d3452-126">Geben Sie an der Befehlszeile `vbc.exe` *Quelldateiname* und drücken Sie dann die EINGABETASTE.</span><span class="sxs-lookup"><span data-stu-id="d3452-126">At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.</span></span>  
   
-     Beispielsweise, wenn Sie den Quellcode in einem Verzeichnis namens gespeichert `SourceFiles`, öffnen Sie die Befehlszeile und den Typ `cd SourceFiles` in dieses Verzeichnis zu ändern. Wenn das Verzeichnis eine Quelldatei mit dem Namen enthalten `Source.vb`, könnten durch eingeben Kompilieren `vbc.exe Source.vb`.  
+     <span data-ttu-id="d3452-127">Angenommen, wenn Sie den Quellcode in einem Verzeichnis namens gespeichert `SourceFiles`, öffnen Sie die Eingabeaufforderung, und geben `cd SourceFiles` so ändern Sie in diesem Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d3452-127">For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory.</span></span> <span data-ttu-id="d3452-128">Wenn das Verzeichnis eine Quelldatei mit dem Namen enthalten `Source.vb`, könnten durch eingeben Kompilieren `vbc.exe Source.vb`.</span><span class="sxs-lookup"><span data-stu-id="d3452-128">If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="d3452-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3452-129">See Also</span></span>  
+ [<span data-ttu-id="d3452-130">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="d3452-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="d3452-131">Bedingte Kompilierung</span><span class="sxs-lookup"><span data-stu-id="d3452-131">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
