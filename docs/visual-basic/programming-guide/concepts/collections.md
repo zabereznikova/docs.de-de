@@ -1,31 +1,23 @@
 ---
-title: Sammlungen (Visual Basic) | Microsoft-Dokumentation
+title: Auflistungen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: 6
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b3c8de3e22075d576f86bcd4eb599946740ebe16
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="collections-visual-basic"></a>Sammlungen (Visual Basic)
+# <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
   
  Arrays am besten zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ geeignet. Weitere Informationen zu Arrays finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -34,16 +26,16 @@ Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandte
   
  Eine Auflistung ist eine Klasse. Daher müssen Sie eine Instanzen der Klasse deklarieren, bevor Sie dieser Auflistung Elemente hinzufügen können.  
   
- Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen in der <xref:System.Collections.Generic?displayProperty=fullName>Namespace.</xref:System.Collections.Generic?displayProperty=fullName> Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
+ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.  
   
 > [!NOTE]
->  Bei den Beispielen in diesem Thema enthalten [Importe](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) -Anweisungen für die `System.Collections.Generic` und `System.Linq` Namespaces.  
+>  Bei den Beispielen in diesem Thema umfassen [Importe](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) -Anweisungen für die `System.Collections.Generic` und `System.Linq` Namespaces.  
   
  **Inhalt**  
   
 -   [Verwenden einer einfachen Auflistung](#BKMK_SimpleCollection)  
   
--   [Arten von Sammlungen](#BKMK_KindsOfCollections)  
+-   [Arten von Auflistungen](#BKMK_KindsOfCollections)  
   
     -   [System.Collections.Generic-Klassen](#BKMK_Generic)  
   
@@ -65,7 +57,7 @@ Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandte
   
 <a name="BKMK_SimpleCollection"></a>
 ## <a name="using-a-simple-collection"></a>Verwenden einer einfachen Auflistung  
- In den Beispielen in diesem Abschnitt verwenden Sie die generischen <xref:System.Collections.Generic.List%601>-Klasse, die Sie mit eine stark typisierte Liste von Objekten arbeiten kann.</xref:System.Collections.Generic.List%601>  
+ In den Beispielen in diesem Abschnitt wird die generische Klasse <xref:System.Collections.Generic.List%601> verwendet, die es Ihnen ermöglicht, mit einer stark typisierten Liste von Objekten zu arbeiten.  
   
  Das folgende Beispiel erstellt eine Liste von Zeichenfolgen und durchläuft dann die Zeichenfolgen unter Verwendung einer [für jede... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung.  
   
@@ -84,7 +76,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Wenn der Inhalt einer Auflistung im Voraus bekannt sind, können Sie eine *Auflistungsinitialisierer* zum Initialisieren der Auflistung. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ Wenn der Inhalt einer Auflistung im Voraus bekannt ist, können Sie einen *Auflistungsinitialisierer* verwenden, um die Auflistung zu initialisieren. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
  Das folgende Beispiel entspricht dem vorherigen Beispiel, außer dass ein Auflistungsinitialisierer verwendet wird, um der Auflistung Elemente hinzuzufügen.  
   
@@ -100,7 +92,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Sie können eine [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) -Anweisung statt einer `For Each` Anweisung zum Durchlaufen einer Auflistung. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.  
+ Sie können eine [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) -Anweisung anstelle einer `For Each` Anweisung zum Durchlaufen einer Auflistung. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.  
   
  Im folgenden Beispiel werden die Elemente einer Auflistung unter Verwendung von `For…Next` anstelle von `For Each` durchlaufen.  
   
@@ -132,7 +124,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Statt eine `For Each` -Anweisung, eine [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) -Anweisung verwendet, die Elemente in absteigender Reihenfolge durchläuft. Grund hierfür ist die <xref:System.Collections.Generic.List%601.RemoveAt%2A>Methode bewirkt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.</xref:System.Collections.Generic.List%601.RemoveAt%2A>  
+ Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Statt eine `For Each` -Anweisung eine [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) -Anweisung verwendet, die Elemente in absteigender Reihenfolge durchläuft. Dies liegt daran, dass die <xref:System.Collections.Generic.List%601.RemoveAt%2A>-Methode dazu führt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -155,7 +147,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Für den Typ der Elemente in den <xref:System.Collections.Generic.List%601>Sie können auch eine eigene Klasse definieren</xref:System.Collections.Generic.List%601> Im folgenden Beispiel die `Galaxy` Klasse, die von der <xref:System.Collections.Generic.List%601>im Code definiert ist.</xref:System.Collections.Generic.List%601>  
+ Für den Typ der Elemente in <xref:System.Collections.Generic.List%601> können Sie auch eine eigene Klasse definieren. Im folgenden Beispiel wird die `Galaxy`-Klasse, die von <xref:System.Collections.Generic.List%601> verwendet wird, im Code definiert.  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -192,71 +184,71 @@ End Class
   
  Einige der häufig verwendeten Auflistungsklassen werden in diesem Abschnitt beschrieben:  
   
--   @System.Collections.Generic-Klassen  
+-   <xref:System.Collections.Generic>-Klassen  
   
--   @System.Collections.Concurrent-Klassen  
+-   <xref:System.Collections.Concurrent>-Klassen  
   
--   @System.Collections-Klassen  
+-   <xref:System.Collections>-Klassen  
   
 -   Visual Basic-`Collection`sklasse  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic-Klassen  
 
- Erstellen einer generischen Auflistung können Sie mithilfe einer der Klassen in der <xref:System.Collections.Generic>Namespace.</xref:System.Collections.Generic> Eine generische Auflistung ist sinnvoll, wenn jedes Element der Auflistung zum gleichen Datentyp gehört. Eine generische Auflistung erzwingt eine starke Typisierung, da ihr nur Elemente des gewünschten Datentyps hinzugefügt werden können.  
+ Zum Erstellen einer generischen Auflistung verwenden Sie eine der Klassen im <xref:System.Collections.Generic>-Namespace. Eine generische Auflistung ist sinnvoll, wenn jedes Element der Auflistung zum gleichen Datentyp gehört. Eine generische Auflistung erzwingt eine starke Typisierung, da ihr nur Elemente des gewünschten Datentyps hinzugefügt werden können.  
   
- Die folgende Tabelle enthält einige der häufig verwendeten Klassen von der <xref:System.Collections.Generic?displayProperty=fullName>Namespace:</xref:System.Collections.Generic?displayProperty=fullName>  
+ In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace aufgelistet:  
   
 |Klasse|Beschreibung|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602></xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|  
-|<xref:System.Collections.Generic.List%601></xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|  
-|<xref:System.Collections.Generic.Queue%601></xref:System.Collections.Generic.Queue%601>|Stellt eine FIFO-Auflistung (First In, First Out) von Objekten dar.|  
-|<xref:System.Collections.Generic.SortedList%602></xref:System.Collections.Generic.SortedList%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren, die auf Grundlage der zugeordneten Schlüssel sortiert <xref:System.Collections.Generic.IComparer%601>Implementierung.</xref:System.Collections.Generic.IComparer%601>|  
-|<xref:System.Collections.Generic.Stack%601></xref:System.Collections.Generic.Stack%601>|Stellt eine LIFO-Auflistung (Last In, First Out) von Objekten dar.|  
+|<xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|  
+|<xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|  
+|<xref:System.Collections.Generic.Queue%601>|Stellt eine FIFO-Auflistung (First In, First Out) von Objekten dar.|  
+|<xref:System.Collections.Generic.SortedList%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage der zugeordneten <xref:System.Collections.Generic.IComparer%601>-Implementierung nach den Schlüsseln sortiert sind.|  
+|<xref:System.Collections.Generic.Stack%601>|Stellt eine LIFO-Auflistung (Last In, First Out) von Objekten dar.|  
   
- Weitere Informationen finden Sie unter [häufig verwendete Auflistungstypen](http://msdn.microsoft.com/library/f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55), [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md), und <xref:System.Collections.Generic?displayProperty=fullName>.</xref:System.Collections.Generic?displayProperty=fullName>  
+ Weitere Informationen finden Sie unter [Häufig verwendete Auflistungstypen](../../../standard/collections/commonly-used-collection-types.md), [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md) und <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent-Klassen   
- In .NET Framework 4 oder höher, die Auflistungen in der <xref:System.Collections.Concurrent>Namespace effiziente threadsichere Operationen für den Zugriff auf Auflistungselemente aus mehreren Threads bereit.</xref:System.Collections.Concurrent>  
+ In .NET Framework 4 oder höher stellen die Auflistungen im Namespace <xref:System.Collections.Concurrent> effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit.  
   
- Die Klassen in der <xref:System.Collections.Concurrent>Namespace sollte verwendet werden, anstatt die entsprechenden Typen in der <xref:System.Collections.Generic?displayProperty=fullName>und <xref:System.Collections?displayProperty=fullName>Namespaces, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen.</xref:System.Collections?displayProperty=fullName> </xref:System.Collections.Generic?displayProperty=fullName> </xref:System.Collections.Concurrent> Weitere Informationen finden Sie unter [threadsichere Auflistungen](../../../standard/collections/threadsafe/index.md) und <xref:System.Collections.Concurrent>.</xref:System.Collections.Concurrent>  
+ Die Klassen im <xref:System.Collections.Concurrent>-Namespace sollten anstelle von entsprechenden Typen in <xref:System.Collections.Generic?displayProperty=nameWithType>- und <xref:System.Collections?displayProperty=nameWithType>-Namespaces verwendet werden, wenn mehrere Threads gleichzeitig auf die Auflistung zugreifen. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../standard/collections/thread-safe/index.md) und <xref:System.Collections.Concurrent>.  
   
- Einige Klassen, die der <xref:System.Collections.Concurrent>Namespace sind <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, und <xref:System.Collections.Concurrent.ConcurrentStack%601>.</xref:System.Collections.Concurrent.ConcurrentStack%601> </xref:System.Collections.Concurrent.ConcurrentQueue%601> </xref:System.Collections.Concurrent.ConcurrentDictionary%602> </xref:System.Collections.Concurrent.BlockingCollection%601> </xref:System.Collections.Concurrent>  
+ Einige der in die <xref:System.Collections.Concurrent>-Namespaces aufgenommenen Klassen sind <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> und <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections-Klassen    
- Die Klassen in der <xref:System.Collections?displayProperty=fullName>Namespace nicht speichern Elemente als speziell typisierte Objekte, sondern als Objekte vom Typ `Object`.</xref:System.Collections?displayProperty=fullName>  
+ Bei den Klassen im <xref:System.Collections?displayProperty=nameWithType>-Namespace werden Elemente nicht als speziell typisierte Objekte, sondern als Objekte vom Typ `Object` gespeichert.  
   
- Wann immer möglich, sollten Sie die generischen Auflistungen im Verwenden der <xref:System.Collections.Generic?displayProperty=fullName>Namespace oder die <xref:System.Collections.Concurrent>anstelle der älteren Typen im Namespace der `System.Collections` Namespace.</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ Sofern möglich sollten die generischen Auflistungen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace oder <xref:System.Collections.Concurrent>-Namespace anstelle der älteren Typen im `System.Collections`-Namespace verwendet werden.  
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen im `System.Collections`-Namespace aufgelistet:  
   
 |Klasse|Beschreibung|  
 |---|---|  
-|<xref:System.Collections.ArrayList></xref:System.Collections.ArrayList>|Stellt ein Array von Objekten dar, das je nach Bedarf dynamisch vergrößert wird.|  
-|<xref:System.Collections.Hashtable></xref:System.Collections.Hashtable>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.|  
-|<xref:System.Collections.Queue></xref:System.Collections.Queue>|Stellt eine FIFO-Auflistung (First In, First Out) von Objekten dar.|  
-|<xref:System.Collections.Stack></xref:System.Collections.Stack>|Stellt eine LIFO-Auflistung (Last In, First Out) von Objekten dar.|  
+|<xref:System.Collections.ArrayList>|Stellt ein Array von Objekten dar, das je nach Bedarf dynamisch vergrößert wird.|  
+|<xref:System.Collections.Hashtable>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.|  
+|<xref:System.Collections.Queue>|Stellt eine FIFO-Auflistung (First In, First Out) von Objekten dar.|  
+|<xref:System.Collections.Stack>|Stellt eine LIFO-Auflistung (Last In, First Out) von Objekten dar.|  
   
- Die <xref:System.Collections.Specialized>Namespace bietet spezialisierte und stark typisierte Auflistungsklassen, z. B. zeichenfolgenauflistungen und verknüpfte Listen und Wörterbücher.</xref:System.Collections.Specialized>  
+ Der <xref:System.Collections.Specialized>-Namespace bietet spezialisierte und stark typisierte Auflistungsklassen, beispielsweise für Zeichenfolgenauflistungen sowie für Wörterbücher mit verketteten Listen und Hybridwörterbücher.  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Visual Basic-Auflistungsklasse  
- Sie können die Visual Basic <xref:Microsoft.VisualBasic.Collection>für den Zugriff auf eine Auflistung, indem Sie entweder einen numerischen Index oder eine Klasse `String` Schlüssel.</xref:Microsoft.VisualBasic.Collection> Sie können einem Auflistungsobjekt Elemente entweder mit oder ohne Angabe eines Schlüssels hinzufügen. Wenn Sie ein Element ohne einen Schlüssel hinzufügen, müssen Sie seinen numerischen Index verwenden, um darauf zuzugreifen.  
+ Sie können die Visual Basic-Klasse <xref:Microsoft.VisualBasic.Collection> verwenden, um auf ein Auflistungselement zuzugreifen, indem Sie entweder einen numerischen Index oder einen `String`schlüssel verwenden. Sie können einem Auflistungsobjekt Elemente entweder mit oder ohne Angabe eines Schlüssels hinzufügen. Wenn Sie ein Element ohne einen Schlüssel hinzufügen, müssen Sie seinen numerischen Index verwenden, um darauf zuzugreifen.  
   
  Die Visual Basic-Klasse `Collection` speichert alle Elemente als `Object`-Typ, damit Elemente eines beliebigen Datentyps hinzugefügt werden können. Es gibt keine Vorkehrung, die das Hinzufügen ungeeigneter Datentypen verhindert.  
   
  Wenn Sie die Visual Basic-Klasse `Collection` verwenden, hat das erste Element in einer Auflistung einen Index von 1. Dies unterscheidet sich von den .NET Framework-Auflistungsklassen, deren Startindex 0 ist.  
   
- Wann immer möglich, sollten Sie die generischen Auflistungen im Verwenden der <xref:System.Collections.Generic?displayProperty=fullName>Namespace oder die <xref:System.Collections.Concurrent>Namespace anstelle der Visual Basic `Collection` Klasse</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ Sofern möglich sollten die generischen Auflistungen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace oder im <xref:System.Collections.Concurrent>-Namespace anstelle der Visual Basic-Klasse `Collection` verwendet werden.  
   
- Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Collection>.</xref:Microsoft.VisualBasic.Collection>  
+ Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Collection>.  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementieren einer Auflistung von Schlüssel/Wert-Paaren   
- Die <xref:System.Collections.Generic.Dictionary%602>generische Auflistung können Sie den Zugriff auf Elemente in einer Auflistung mithilfe des Schlüssels der einzelnen Elemente.</xref:System.Collections.Generic.Dictionary%602> Jede Hinzufügung zum Wörterbuch besteht aus einem Wert und dem zugeordneten Schlüssel. Ein Wert kann anhand des zugehörigen Schlüssels schnell abgerufen werden, da die `Dictionary`-Klasse in Form einer Hashtabelle implementiert ist.  
+ Die generische Auflistung <xref:System.Collections.Generic.Dictionary%602> ermöglicht es Ihnen, unter Verwendung des Schlüssels der einzelnen Elemente auf die Elemente einer Auflistung zuzugreifen. Jede Hinzufügung zum Wörterbuch besteht aus einem Wert und dem zugeordneten Schlüssel. Ein Wert kann anhand des zugehörigen Schlüssels schnell abgerufen werden, da die `Dictionary`-Klasse in Form einer Hashtabelle implementiert ist.  
   
  Das folgende Beispiel erstellt eine `Dictionary`-Auflistung und durchläuft das Wörterbuch unter Verwendung einer `For Each`-Anweisung.  
   
@@ -322,7 +314,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- Im folgenden Beispiel wird die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und der <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft des `Dictionary` zum Auffinden ein Element mit Schlüssel.</xref:System.Collections.Generic.Dictionary%602.Item%2A> </xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> Die `Item` Eigenschaft ermöglicht den Zugriff auf ein Element in der `elements` -Auflistung mithilfe der `elements(symbol)` Code in Visual Basic.  
+ Im folgenden Beispiel werden die <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>-Methode und die <xref:System.Collections.Generic.Dictionary%602.Item%2A>-Eigenschaft von `Dictionary` verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen. Die `Item` Eigenschaft ermöglicht den Zugriff auf ein Element in der `elements` -Auflistung unter Verwendung der `elements(symbol)` -Codes in Visual Basic.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -337,7 +329,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- Das folgende Beispiel verwendet die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>Methode Auffinden ein Element mit Schlüssel.</xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>  
+ Im folgenden Beispiel wird stattdessen die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode verwendet, um anhand des Schlüssels schnell nach einem Element zu suchen.  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -400,11 +392,11 @@ End Class
   
  <a name="BKMK_Sorting"></a> 
 ## <a name="sorting-a-collection"></a>Sortieren einer Auflistung  
- Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. Im Beispiel werden Instanzen von sortiert die `Car` -Klasse, die in eine <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> gespeichert sind Die `Car` -Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die erfordert, dass die <xref:System.IComparable%601.CompareTo%2A>-Methode implementiert werden.</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
+ Das folgende Beispiel zeigt ein Verfahren zum Sortieren einer Auflistung. In dem Beispiel werden Instanzen der `Car`-Klasse sortiert, die in <xref:System.Collections.Generic.List%601> gespeichert sind. Die `Car`-Klasse implementiert die <xref:System.IComparable%601>-Schnittstelle, die die Implementierung der <xref:System.IComparable%601.CompareTo%2A>-Methode erfordert.  
   
- Jeder Aufruf von der <xref:System.IComparable%601.CompareTo%2A>-Methode führt einen einzelnen Vergleich, der für die Sortierung verwendet wird.</xref:System.IComparable%601.CompareTo%2A> Vom Benutzer erstellter Code in der `CompareTo`-Methode gibt einen Wert für jeden Vergleich des aktuellen Objekts mit einem anderen Objekt zurück. Der zurückgegebene Wert ist kleiner als Null, wenn das aktuelle Objekt kleiner ist als das andere Objekt, größer als Null, wenn das aktuelle Objekt größer als das andere Objekt ist und Null, wenn beide Objekt gleich groß sind. Dies ermöglicht es Ihnen, in dem Code die Kriterien für größer als, kleiner als und gleich zu definieren.  
+ Jeder Aufruf der <xref:System.IComparable%601.CompareTo%2A>-Methode führt einen einzelnen Vergleich aus, der für die Sortierung verwendet wird. Vom Benutzer erstellter Code in der `CompareTo`-Methode gibt einen Wert für jeden Vergleich des aktuellen Objekts mit einem anderen Objekt zurück. Der zurückgegebene Wert ist kleiner als Null, wenn das aktuelle Objekt kleiner ist als das andere Objekt, größer als Null, wenn das aktuelle Objekt größer als das andere Objekt ist und Null, wenn beide Objekt gleich groß sind. Dies ermöglicht es Ihnen, in dem Code die Kriterien für größer als, kleiner als und gleich zu definieren.  
   
- In der `ListCars`-Methode sortiert die `cars.Sort()`-Anweisung die Liste. Dieser Aufruf der <xref:System.Collections.Generic.List%601.Sort%2A>Methode der <xref:System.Collections.Generic.List%601>bewirkt, dass die `CompareTo` automatisch für die aufzurufende Methode der `Car` Objekte in der `List`.</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
+ In der `ListCars`-Methode sortiert die `cars.Sort()`-Anweisung die Liste. Dieser Aufruf der <xref:System.Collections.Generic.List%601.Sort%2A>-Methode von <xref:System.Collections.Generic.List%601> führt dazu, dass die `CompareTo`-Methode für die `Car`-Objekte in der `List` automatisch aufgerufen wird.  
   
 ```vb  
 Public Sub ListCars()  
@@ -478,13 +470,13 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung  
- Sie können eine Auflistung definieren, durch die Implementierung der <xref:System.Collections.Generic.IEnumerable%601>oder <xref:System.Collections.IEnumerable>Schnittstelle.</xref:System.Collections.IEnumerable> </xref:System.Collections.Generic.IEnumerable%601> Weitere Informationen finden Sie unter [enumerieren einer Auflistung](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [enumerieren einer Auflistung](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Obwohl Sie eine benutzerdefinierte Auflistung definieren können, ist es besser, um Auflistungen zu verwenden, die in .NET Framework, die in beschriebenen enthalten sind [Arten von Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) weiter oben in diesem Thema.  
+ Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) weiter oben in diesem Thema beschrieben.  
   
- Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, die erfordert, dass die <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode implementiert werden.</xref:System.Collections.IEnumerable.GetEnumerator%2A> </xref:System.Collections.IEnumerable>  
+ Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert.  
   
- Die `GetEnumerator`-Methode gibt eine Instanz der `ColorEnumerator`-Klasse zurück. `ColorEnumerator`implementiert die <xref:System.Collections.IEnumerator>-Schnittstelle, die erfordert, dass die <xref:System.Collections.IEnumerator.Current%2A>Eigenschaft <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode und <xref:System.Collections.IEnumerator.Reset%2A>-Methode implementiert werden.</xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator>  
+ Die `GetEnumerator`-Methode gibt eine Instanz der `ColorEnumerator`-Klasse zurück. `ColorEnumerator` implementiert die <xref:System.Collections.IEnumerator>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerator.Current%2A>-Eigenschaft, der <xref:System.Collections.IEnumerator.MoveNext%2A>-Methode und der <xref:System.Collections.IEnumerator.Reset%2A>-Methode erfordert.  
   
 ```vb  
 Public Sub ListColors()  
@@ -556,13 +548,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Iteratoren  
- Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [ergeben](../../../visual-basic/language-reference/statements/yield-statement.md) -Anweisung jedes Element der Auflistung zu einem Zeitpunkt zurückgegeben.  
+ Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
   
- Sie rufen den Iterator mithilfe einer [für jede... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield` -Anweisung im Iterator erreicht ist, ein Ausdruck zurückgegeben wird und die aktuelle Position im Code beibehalten wird. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
+ Sie rufen den Iterator mithilfe einer [für jede... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
   
  Weitere Informationen finden Sie unter [Iteratoren (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
   
- Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iteratormethode verfügt über eine `Yield` -Anweisung, die innerhalb einer [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. In der `ListEvenNumbers` -Methode, jede Iteration der der `For Each` Text-Anweisung erzeugt einen Aufruf der Iteratormethode, der auf die nächste übergeht `Yield` Anweisung.  
+ Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iteratormethode verfügt über eine `Yield` -Anweisung, die innerhalb einer [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. In der `ListEvenNumbers`-Methode erstellt jede Iteration des `For Each`-Anweisungstexts einen Aufruf der Iteratormethode, der zur nächsten `Yield`-Anweisung übergeht.  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -587,13 +579,13 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Programmierkonzepte (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)   
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Paralleles LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
- [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)   
- [Erstellen und Bearbeiten von Sammlungen](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)   
- [Vergleiche und Sortiervorgänge in Sammlungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
+ [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../visual-basic/programming-guide/concepts/index.md)  
+ [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)  
+ [Erstellen und Bearbeiten von Sammlungen](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
+ [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)

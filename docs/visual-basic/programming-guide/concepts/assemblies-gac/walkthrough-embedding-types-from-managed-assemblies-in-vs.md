@@ -1,176 +1,221 @@
 ---
-title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic) | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adc58e081cd9b874a841d84b11d92cbffb6ba6b8
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)
-Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung versionsunabhängig lose gekoppelt. Also kann Ihr Programm geschrieben werden, um Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek zu verwenden, ohne dass für jede Version neu kompiliert werden.  
+Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
   
- Einbetten von Typ dienen häufig mit COM-Interop, z. B. eine Anwendung, die Automatisierungsobjekte von Microsoft Office verwendet. Einbetten von Typinformationen kann ein Build eines Programms verschiedene Versionen von Microsoft Office auf unterschiedlichen Computern arbeiten. Sie können jedoch auch Typ eine vollständig verwaltete Lösung einbetten.  
+ Das Einbetten von Typen wird häufig mit COM-Interop verwendet, z.B. mit einer Anwendung, die Automatisierungsobjekte von Microsoft Office verwendet. Das Einbetten von Typinformationen lässt zu, dass derselbe Build eines Programms mit unterschiedlichen Versionen von Microsoft Office auf verschiedenen Computern verwendet werden kann. Sie können das Einbetten von Typen jedoch auch mit einer vollständig verwalteten Anwendung verwenden.  
   
- Typinformationen kann aus einer Assembly eingebettet werden, die folgende Merkmale aufweist:  
+ Typinformationen können von einer Assembly aus eingebettet werden, die die folgenden Merkmale aufweist:  
   
 -   Die Assembly macht mindestens eine öffentliche Schnittstelle verfügbar.  
   
--   Die eingebetteten Schnittstellen werden mit versehen einer `ComImport` Attribut und ein `Guid` -Attribut (und eine eindeutige GUID).  
+-   Die eingebetteten Schnittstellen werden mit einem `ComImport`-Attribut und einem `Guid`-Attribut (und einer eindeutigen GUID) kommentiert.  
   
--   Die Assembly mit dem versehen ist die `ImportedFromTypeLib` Attribut oder `PrimaryInteropAssembly` -Attribut, und eine Assembly-Ebene `Guid` Attribut. (Visual Basic-Projektvorlagen enthalten standardmäßig eine Assembly-Ebene `Guid` Attribut.)  
+-   Die Assembly wird mit dem `ImportedFromTypeLib`-Attribut oder dem `PrimaryInteropAssembly`-Attribut und einem `Guid`-Attribut auf Assemblyebene kommentiert. (Visual Basic-Projektvorlagen enthalten standardmäßig einen auf Assemblyebene `Guid` Attribut.)  
   
- Nachdem Sie die öffentlichen Schnittstellen angegeben haben, die eingebettet werden können, können Sie Laufzeitklassen erstellen, die diese Schnittstellen implementieren. Ein Clientprogramm können Sie die Typinformationen für diese Schnittstellen zur Entwurfszeit durch Verweisen auf die Assembly mit den öffentlichen Schnittstellen und Einstellung Einbetten der `Embed Interop Types` -Eigenschaft des Verweises auf `True`. Dies entspricht dem Verwenden des Befehlszeilencompilers und verweisen auf die Assembly mit der `/link` -Compileroption. Die Client-Anwendung kann dann Instanzen der Common Language Runtime-Objekte als Schnittstellen geladen werden. Wenn Sie eine neue Version einer Assembly mit starkem Namen Runtime erstellen, muss die Client-Anwendung nicht mit der aktualisierten Laufzeitassembly neu kompiliert werden. Stattdessen wird das Clientprogramm verwenden, unabhängig davon, welche Version der Common Language Runtime-Assembly verfügbar, verwenden die eingebetteten Typinformationen für die öffentlichen Schnittstellen.  
+ Nachdem Sie die öffentlichen Schnittstellen angegeben haben, die eingebettet werden können, können Sie Laufzeitklassen erstellen, die diese Schnittstellen implementieren. Ein Clientprogramm kann dann die Typinformationen für diese Schnittstellen zur Entwurfszeit einbetten, indem auf die Assembly verwiesen wird, die die öffentlichen Schnittstellen enthält und die Eigenschaft `Embed Interop Types` des Verweises auf `True` festgelegt wird. Dies entspricht dem Verwenden des Befehlszeilencompilers und Verweisen auf die Assembly mit der Compileroption `/link`. Das Clientprogramm kann dann Instanzen Ihrer Laufzeitobjekte laden, die als diese Schnittstellen typisiert sind. Wenn Sie eine neue Version Ihrer Runtime-Assembly mit starkem Namen erstellen, muss das Clientprogramm nicht erneut mit der aktualisierten Runtime-Assembly kompiliert werden. Stattdessen verwendet das Clientprogramm weiterhin die verfügbare Version der Runtime-Assembly und verwendet die eingebetteten Typinformationen für die öffentlichen Schnittstellen.  
   
- Da die primäre Funktion von Typ einbetten unterstützen das Einbetten von Typinformationen aus COM-Interop-Assemblys ist, gelten die folgenden Einschränkungen beim Einbetten von Typinformationen in eine vollständig verwaltete Lösung:  
+ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbettens von Typinformationen von COM-Interop-Assemblys ist, gelten die folgenden Einschränkungen, wenn Sie Typinformationen in eine vollständig verwaltete Lösung einbetten:  
   
--   Nur die COM-Interop spezifische Attribute werden eingebettet; andere Attribute werden ignoriert.  
+-   Nur die für COM-Interop spezifischen Attribute werden eingebettet; andere Attribute werden ignoriert.  
   
--   Wenn ein Typ generische Parameter verwendet, und der Typ des generischen Parameters ein eingebetteter Typ ist, kann dieses Typs über eine Assembly hinweg verwendet werden. Beispiele für das Überschreiten einer Assemblygrenze einschließen Aufrufen einer Methode in einer anderen Assembly oder Ableiten eines Typs von einem Typ in einer anderen Assembly definiert.  
+-   Wenn ein Typ generische Parameter verwendet, und der Typ des generischen Parameters ein eingebetteter Typ ist, kann dieser Typ nicht über die Grenze einer Assembly hinaus verwendet werden. Beispiele für das Überschreiten der Grenze einer Assembly umfassen das Aufrufen einer Methode von einer anderen Assembly aus oder das Ableiten eines Typs von einem Typ, der in einer anderen Assembly definiert wurde.  
   
 -   Konstanten werden nicht eingebettet.  
   
--   Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>Klasse unterstützt keine eingebetteten Typ als Schlüssel.</xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> Sie können einen eigenen Wörterbuchtyp zur Unterstützung von eingebetteten Typs als Schlüssel implementieren.  
+-   Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>-Klasse unterstützt keinen eingebetteten Typ als Schlüssel. Sie können Ihren eigenen Wörterbuchtyp implementieren, um einen eingebetteten Typ als Schlüssel zu unterstützen.  
   
- In dieser exemplarischen Vorgehensweise werden Sie Folgendes ein:  
+ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
--   Erstellen Sie eine Assembly mit starkem Namen, die eine öffentliche Schnittstelle Typinformationen eingebettet werden kann.  
+-   Erstellen Sie eine Assembly mit starkem Namen mit einer öffentlichen Schnittstelle, die Typinformationen enthält, die eingebettet werden können.  
   
--   Erstellen Sie eine Laufzeitassembly mit starkem Namen, die diese öffentliche Schnittstelle implementiert.  
+-   Erstellen Sie eine Runtime-Assembly mit starkem Namen, die diese öffentliche Schnittstelle implementiert.  
   
--   Erstellen Sie ein Clientprogramm, bettet die Typinformationen aus der öffentlichen Schnittstelle und erstellt eine Instanz der Klasse aus der Laufzeitassembly.  
+-   Erstellen Sie ein Clientprogramm, das die Typinformationen aus der öffentlichen Schnittstelle einbettet und eine Instanz der Klasse aus der Runtime-Assembly erstellt.  
   
--   Ändern und die Common Language Runtime-Assembly neu.  
+-   Ändern Sie die Runtime-Assembly, und erstellen Sie sie erneut.  
   
--   Führen Sie die Client-Anwendung zu erkennen, dass die neue Version der Common Language Runtime-Assembly verwendet wird, ohne dass das Clientprogramm neu kompiliert.  
+-   Führen Sie das Clientprogramm aus, um zu prüfen, dass die neue Version der Runtime-Assembly verwendet wird, ohne dass das Clientprogramm erneut kompiliert werden muss.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>Erstellen einer Schnittstelle  
   
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Zum Erstellen des Typs Äquivalenz Schnittstelle-Projekts  
+#### <a name="to-create-the-type-equivalence-interface-project"></a>So erstellen Sie das Schnittstellenprojekt mit Typäquivalenz  
   
-1.  In Visual Studio auf die **Datei** auf **neu** , und klicken Sie dann auf **Projekt**.  
+1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.  
   
-2.  In der **neues Projekt** im Feld der **Projekttypen** Bereich, stellen Sie sicher, dass **Windows** ausgewählt ist. Wählen Sie **-Klassenbibliothek** in der **Vorlagen** Bereich. In der **Namen** geben `TypeEquivalenceInterface`, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
+2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceInterface` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb" um, und klicken Sie auf **umbenennen**. Benennen Sie die Datei `ISampleInterface.vb` , und drücken Sie die EINGABETASTE. Umbenennen der Datei wird auch die Klasse umbenennen `ISampleInterface`. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
+3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei Class1.vb, und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `ISampleInterface.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `ISampleInterface` umbenannt. Diese Klasse stellt die öffentliche Schnittstelle für die Klasse dar.  
   
-4.  Mit der rechten Maustaste TypeEquivalenceInterface-Projekt, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die **Kompilieren** Registerkarte. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer wie `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet werden.  
+4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer fest, z.B. auf `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet.  
   
-5.  Ohne die Bearbeitung der Projekteigenschaften, klicken Sie auf die **Signierung** Registerkarte. Wählen Sie die **zum Signieren der Assembly** Option. In der **Schlüsseldatei mit starkem Namen auswählen** auf ** <New...> **.</New...> In der **Schlüsseldateiname** geben `key.snk`. Deaktivieren der **Schlüsseldatei mit Kennwort schützen** das Kontrollkästchen. Klicken Sie auf **OK**.  
+5.  Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.  
   
-6.  Öffnen Sie die Datei ISampleInterface.vb. Fügen Sie den folgenden Code in der Klassendatei ISampleInterface ISampleInterface-Schnittstelle zu erstellen.  
+6.  Öffnen Sie die ISampleInterface.vb-Datei. Fügen Sie den folgenden Code zur Klasse „ISampleInterface“ hinzu, um die ISampleInterface-Schnittstelle zu erstellen.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-7.  Auf der **Tools** Menü klicken Sie auf **Guid erstellen**. In der **GUID erstellen** im Dialogfeld klicken Sie auf **Registrierungsformat** , und klicken Sie dann auf **Kopie**. Klicken Sie auf **beenden**.  
+    ```vb  
+    Imports System.Runtime.InteropServices  
   
-8.  In der `Guid` -Attribut, löschen Sie die Beispiel-GUID aus, und fügen Sie die GUID, die Sie kopiert haben die **GUID erstellen** Dialogfeld. Entfernen Sie die geschweiften Klammern ({}) aus der kopierten GUID.  
+    <ComImport()>  
+    <Guid("8DA56996-A151-4136-B474-32784559F6DF")>  
+    Public Interface ISampleInterface  
+        Sub GetUserInput()  
+        ReadOnly Property UserInput As String  
+    End Interface  
+    ```  
   
-9. Auf der **Projekt** Menü klicken Sie auf **alle Dateien anzeigen**.  
+7.  Klicken Sie im Menü **Extras** auf den Befehl **GUID erstellen**. Klicken Sie im Dialogfeld **GUID erstellen** auf **Registrierungsformat** und anschließend auf **Kopieren**. Klicken Sie auf **Schließen**.  
   
-10. In **Projektmappen-Explorer**, erweitern Sie die **Mein Projekt** Ordner. Doppelklicken Sie auf die Datei AssemblyInfo.vb. Fügen Sie der Datei das folgende Attribut hinzu.  
+8.  Löschen Sie die Beispiel-GUID im Attribut `Guid`, und fügen Sie die GUID ein, die Sie aus dem Dialogfeld **GUID erstellen** kopiert haben. Entfernen Sie die geschweiften Klammern ({}) aus der kopierten GUID.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+9. Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.  
+  
+10. In **Projektmappen-Explorer**, erweitern Sie die **Mein Projekt** Ordner. Doppelklicken Sie auf die Datei AssemblyInfo.vb. Fügen Sie folgendes Attribut zur Datei hinzu.  
+  
+    ```vb  
+    <Assembly: ImportedFromTypeLib("")>  
+    ```  
+  
      Speichern Sie die Datei.  
   
 11. Speichern Sie das Projekt.  
   
-12. Mit der rechten Maustaste TypeEquivalenceInterface-Projekt, und klicken Sie auf **erstellen**. Die Klasse Library-DLL-Datei wird kompiliert und die angegebenen Buildausgabepfad (z. B. C:\TypeEquivalenceSample) gespeichert.  
+12. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Erstellen**. Die DLL-Datei der Klassenbibliothek wird kompiliert und im angegebenen Buildausgabepfad gespeichert (z.B. C:\TypeEquivalenceSample).  
   
-## <a name="creating-a-runtime-class"></a>Erstellen einer Common Language Runtime-Klasse  
+## <a name="creating-a-runtime-class"></a>Erstellen einer Runtime-Klasse  
   
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Zum Erstellen des Typs Äquivalenz Common Language Runtime-Projekts  
+#### <a name="to-create-the-type-equivalence-runtime-project"></a>So erstellen Sie das Runtime-Projekt mit Typäquivalenz  
   
-1.  In Visual Studio auf die **Datei** auf **neu** , und klicken Sie dann auf **Projekt**.  
+1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.  
   
-2.  In der **neues Projekt** im Feld der **Projekttypen** Bereich, stellen Sie sicher, dass **Windows** ausgewählt ist. Wählen Sie **-Klassenbibliothek** in der **Vorlagen** Bereich. In der **Namen** geben `TypeEquivalenceRuntime`, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
+2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceRuntime` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb" um, und klicken Sie auf **umbenennen**. Benennen Sie die Datei `SampleClass.vb` , und drücken Sie die EINGABETASTE. Die Datei auch umbenennen, wird die Klasse `SampleClass`. Diese Klasse implementiert die `ISampleInterface` Schnittstelle.  
+3.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei Class1.vb, und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `SampleClass.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `SampleClass` umbenannt. Diese Klasse implementiert die `ISampleInterface`-Schnittstelle.  
   
-4.  Mit der rechten Maustaste des TypeEquivalenceRuntime-Projekts, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die **Kompilieren** Registerkarte. Legen Sie den Ausgabepfad an demselben Speicherort in das TypeEquivalenceInterface-Projekt, z. B. verwendet `C:\TypeEquivalenceSample`.  
+4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf denselben Speicherort fest, den Sie im Projekt „TypeEquivalenceInterface“ verwendet haben, z.B. auf `C:\TypeEquivalenceSample`.  
   
-5.  Ohne die Bearbeitung der Projekteigenschaften, klicken Sie auf die **Signierung** Registerkarte. Wählen Sie die **zum Signieren der Assembly** Option. In der **Schlüsseldatei mit starkem Namen auswählen** auf ** <New...> **.</New...> In der **Schlüsseldateiname** geben `key.snk`. Deaktivieren der **Schlüsseldatei mit Kennwort schützen** das Kontrollkästchen. Klicken Sie auf **OK**.  
+5.  Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.  
   
-6.  Mit der rechten Maustaste des TypeEquivalenceRuntime-Projekts, und klicken Sie auf **Verweis hinzufügen**. Klicken Sie auf die **Durchsuchen** Registerkarte, und navigieren Sie in den Ausgabeordner für den Pfad. Wählen Sie die Datei "TypeEquivalenceInterface.dll" aus, und klicken Sie auf **OK**.  
+6.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Verweis hinzufügen**. Klicken Sie auf die Registerkarte **Durchsuchen**, und navigieren Sie zum Ausgabeordner für den Pfad. Wählen Sie die Datei „TypeEquivalenceInterface.dll“ aus, und klicken Sie auf **OK**.  
   
-7.  Auf der **Projekt** Menü klicken Sie auf **alle Dateien anzeigen**.  
+7.  Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.  
   
-8.  In **Projektmappen-Explorer**, erweitern Sie die **Verweise** Ordner. Wählen Sie den TypeEquivalenceInterface-Verweis. Legen Sie im Eigenschaftenfenster für den TypeEquivalenceInterface-Verweis, der **bestimmte Version** -Eigenschaft **False**.  
+8.  Erweitern Sie im **Projektmappen-Explorer** den Ordner **Verweise**. Wählen Sie den Verweis „TypeEquivalenceInterface“ aus. Legen Sie im Eigenschaftenfenster für den Verweis „TypeEquivalenceInterface“ die Eigenschaft **Spezifische Version** auf **False** fest.  
   
-9. Fügen Sie den folgenden Code in der Klassendatei SampleClass SampleClass-Klasse zu erstellen.  
+9. Fügen Sie den folgenden Code zur Klassendatei „SampleClass“ hinzu, um die Klasse SampleClass zu erstellen.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```vb  
+    Imports TypeEquivalenceInterface  
+  
+    Public Class SampleClass  
+        Implements ISampleInterface  
+  
+        Private p_UserInput As String  
+        Public ReadOnly Property UserInput() As String Implements ISampleInterface.UserInput  
+            Get  
+                Return p_UserInput  
+            End Get  
+        End Property  
+  
+        Public Sub GetUserInput() Implements ISampleInterface.GetUserInput  
+            Console.WriteLine("Please enter a value:")  
+            p_UserInput = Console.ReadLine()  
+        End Sub  
+    End Class  
+    ```  
+  
 10. Speichern Sie das Projekt.  
   
-11. Mit der rechten Maustaste des TypeEquivalenceRuntime-Projekts, und klicken Sie auf **erstellen**. Die Klasse Library-DLL-Datei wird kompiliert und die angegebenen Buildausgabepfad (z. B. C:\TypeEquivalenceSample) gespeichert.  
+11. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Erstellen**. Die DLL-Datei der Klassenbibliothek wird kompiliert und im angegebenen Buildausgabepfad gespeichert (z.B. C:\TypeEquivalenceSample).  
   
-## <a name="creating-a-client-project"></a>Erstellen ein Clientprojekt  
+## <a name="creating-a-client-project"></a>Erstellen eines Clientprojekts  
   
-#### <a name="to-create-the-type-equivalence-client-project"></a>Typ Äquivalenz Client-Projekt erstellen  
+#### <a name="to-create-the-type-equivalence-client-project"></a>So erstellen Sie das Clientprojekt mit Typäquivalenz  
   
-1.  In Visual Studio auf die **Datei** auf **neu** , und klicken Sie dann auf **Projekt**.  
+1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.  
   
-2.  In der **neues Projekt** im Feld der **Projekttypen** Bereich, stellen Sie sicher, dass **Windows** ausgewählt ist. Wählen Sie **Konsolenanwendung** in der **Vorlagen** Bereich. In der **Namen** geben `TypeEquivalenceClient`, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
+2.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Konsolenanwendung** aus. Geben Sie im Feld **Name** die Bezeichnung `TypeEquivalenceClient` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird erstellt.  
   
-3.  Mit der rechten Maustaste des TypeEquivalenceClient-Projekts, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die **Kompilieren** Registerkarte. Legen Sie den Ausgabepfad an demselben Speicherort in das TypeEquivalenceInterface-Projekt, z. B. verwendet `C:\TypeEquivalenceSample`.  
+3.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceClient“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf denselben Speicherort fest, den Sie im Projekt „TypeEquivalenceInterface“ verwendet haben, z.B. auf `C:\TypeEquivalenceSample`.  
   
-4.  Mit der rechten Maustaste des TypeEquivalenceClient-Projekts, und klicken Sie auf **Verweis hinzufügen**. Klicken Sie auf die **Durchsuchen** Registerkarte, und navigieren Sie in den Ausgabeordner für den Pfad. Wählen Sie die Datei "TypeEquivalenceInterface.dll" aus (und nicht die Datei "TypeEquivalenceRuntime.dll"), und klicken Sie auf **OK**.  
+4.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceClient“, und klicken Sie auf **Verweis Hinzufügen**. Klicken Sie auf die Registerkarte **Durchsuchen**, und navigieren Sie zum Ausgabeordner für den Pfad. Wählen Sie die Datei „TypeEquivalenceInterface.dll“ aus (nicht „TypeEquivalenceRuntime.dll“), und klicken Sie auf **OK**.  
   
-5.  Auf der **Projekt** Menü klicken Sie auf **alle Dateien anzeigen**.  
+5.  Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.  
   
-6.  In **Projektmappen-Explorer**, erweitern Sie die **Verweise** Ordner. Wählen Sie den TypeEquivalenceInterface-Verweis. Legen Sie im Eigenschaftenfenster für den TypeEquivalenceInterface-Verweis, der **Embed Interop Types** -Eigenschaft **True**.  
+6.  Erweitern Sie im **Projektmappen-Explorer** den Ordner **Verweise**. Wählen Sie den Verweis „TypeEquivalenceInterface“ aus. Legen Sie im Eigenschaftenfenster für den Verweis „TypeEquivalenceInterface“ die Eigenschaft **Einbetten von Interop-Typen** auf **True** fest.  
   
-7.  Fügen Sie den folgenden Code in die Datei "Module1.vb" die Client-Anwendung zu erstellen.  
+7.  Fügen Sie den folgenden Code, um die Datei "Module1.vb" So erstellen Sie die Clientprogramm.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-8.  Drücken Sie STRG + F5 zum Erstellen und Ausführen des Programms.  
+    ```vb  
+    Imports TypeEquivalenceInterface  
+    Imports System.Reflection  
+  
+    Module Module1  
+  
+        Sub Main()  
+            Dim sampleAssembly = Assembly.Load("TypeEquivalenceRuntime")  
+            Dim sampleClass As ISampleInterface = CType( _  
+                sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass"), ISampleInterface)  
+            sampleClass.GetUserInput()  
+            Console.WriteLine(sampleClass.UserInput)  
+            Console.WriteLine(sampleAssembly.GetName().Version)  
+            Console.ReadLine()  
+        End Sub  
+  
+    End Module  
+    ```  
+  
+8.  Drücken Sie STRG+F5, um das Programm zu erstellen und auszuführen.  
   
 ## <a name="modifying-the-interface"></a>Ändern der Schnittstelle  
   
 #### <a name="to-modify-the-interface"></a>So ändern Sie die Schnittstelle  
   
-1.  In Visual Studio auf die **Datei** auf **öffnen**, und klicken Sie dann auf **Projekt/Projektmappe**.  
+1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Öffnen**, und klicken Sie auf **Projekt/Projektmappe**.  
   
-2.  In der **Projekt öffnen** klicken Sie im Dialogfeld mit der rechten Maustaste TypeEquivalenceInterface-Projekt, und klicken Sie dann auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Anwendung** . Klicken Sie auf die **Assemblyinformationen** Schaltfläche. Ändern der **Assemblyversion** und **Dateiversion** Werte `2.0.0.0`.  
+2.  Klicken Sie im Dialogfeld **Projekt öffnen** mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Anwendung** . Klicken Sie auf die Schaltfläche **Assemblyinformationen**. Ändern Sie die Werte der **Assemblyversion** und der **Dateiversion** in `2.0.0.0`.  
   
-3.  Öffnen Sie die Datei ISampleInterface.vb. Fügen Sie der ISampleInterface-Schnittstelle die folgende Codezeile hinzu.  
+3.  Öffnen Sie die ISampleInterface.vb-Datei. Fügen Sie der ISampleInterface-Schnittstelle die folgende Codezeile hinzu.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+    ```vb  
+    Function GetDate() As Date  
+    ```  
+  
      Speichern Sie die Datei.  
   
 4.  Speichern Sie das Projekt.  
   
-5.  Mit der rechten Maustaste TypeEquivalenceInterface-Projekt, und klicken Sie auf **erstellen**. Eine neue Version der Klasse Library-DLL-Datei ist kompiliert und im angegebenen Buildausgabepfad (z. B. C:\TypeEquivalenceSample) gespeichert.  
+5.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Erstellen**. Eine neue Version der DLL-Datei der Klassenbibliothek wird kompiliert und im angegebenen Buildausgabepfad gespeichert (z.B. C:\TypeEquivalenceSample).  
   
-## <a name="modifying-the-runtime-class"></a>Ändern der Laufzeitklasse  
+## <a name="modifying-the-runtime-class"></a>Ändern der Runtime-Klasse  
   
-#### <a name="to-modify-the-runtime-class"></a>So ändern Sie die Common Language Runtime-Klasse  
+#### <a name="to-modify-the-runtime-class"></a>So ändern Sie die Runtime-Klasse  
   
-1.  In Visual Studio auf die **Datei** auf **öffnen**, und klicken Sie dann auf **Projekt/Projektmappe**.  
+1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Öffnen**, und klicken Sie auf **Projekt/Projektmappe**.  
   
-2.  In der **Projekt öffnen** Dialogfeld Feld rechten Maustaste auf das TypeEquivalenceRuntime-Projekt aus, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Anwendung** . Klicken Sie auf die **Assemblyinformationen** Schaltfläche. Ändern der **Assemblyversion** und **Dateiversion** Werte `2.0.0.0`.  
+2.  Klicken Sie im Dialogfeld **Projekt öffnen** mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Anwendung** . Klicken Sie auf die Schaltfläche **Assemblyinformationen**. Ändern Sie die Werte der **Assemblyversion** und der **Dateiversion** in `2.0.0.0`.  
   
-3.  Öffnen Sie die SampleClass.vbfile. Fügen Sie der SampleClass-Klasse die folgenden Codezeilen hinzu.  
+3.  Öffnen Sie die SampleClass.vbfile. Fügen Sie folgenden Codezeilen zur Klasse „SampleClass“ hinzu.  
   
 ```vb  
 Public Function GetDate() As DateTime Implements ISampleInterface.GetDate  
@@ -182,13 +227,12 @@ End Function
   
 4.  Speichern Sie das Projekt.  
   
-5.  Mit der rechten Maustaste des TypeEquivalenceRuntime-Projekts, und klicken Sie auf **erstellen**. Eine aktualisierte Version der Klasse Library-DLL-Datei wird kompiliert und im zuvor angegebenen Buildausgabepfad (z. B. C:\TypeEquivalenceSample) gespeichert.  
+5.  Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Erstellen**. Eine aktualisierte Version der DLL-Datei der Klassenbibliothek wird kompiliert und im vorher angegebenen Buildausgabepfad gespeichert (z.B. C:\TypeEquivalenceSample).  
   
-6.  Öffnen Sie im Datei-Explorer den Ausgabeordner Pfad (z. B. C:\TypeEquivalenceSample). Doppelklicken Sie auf die TypeEquivalenceClient.exe um das Programm auszuführen. Die Anwendung wird die neue Version der TypeEquivalenceRuntime-Assembly aktualisiert, ohne dass neu kompiliert worden.  
+6.  Öffnen Sie im Datei-Explorer den Ordner mit dem Ausgabepfad (z.B. C:\TypeEquivalenceSample). Doppelklicken Sie auf die Datei „TypeEquivalenceClient.exe“, um das Programm auszuführen. Das Programm reflektiert die neue Version der TypeEquivalenceRuntime-Assembly, ohne dass sie erneut kompiliert werden muss.  
   
 ## <a name="see-also"></a>Siehe auch  
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)   
- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Programmieren mit Assemblys](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
- [Assemblys und dem globalen Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
-
+ [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
+ [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [Assemblys und der globale Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)

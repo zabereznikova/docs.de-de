@@ -1,72 +1,55 @@
 ---
-title: Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My namespace, customizing
+- My namespace [Visual Basic], customizing
 - My namespace
-- My namespace, extending
+- My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 950592c0fb197959ce1c3cf6128093846a022709
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
-Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinierter `My` Namespaceerweiterungen mithilfe von Visual Studio-Vorlagen. Wenn Sie eine Projektvorlage für das Erstellen Ihrer `My` Erweiterungen sind ein wesentlicher Bestandteil des neuen Projekttyps, fügen Sie können Ihre benutzerdefinierten `My` Erweiterungscode mit dem Projekt, wenn Sie die Vorlage exportieren. Weitere Informationen zum Exportieren von Projektvorlagen finden Sie unter [Gewusst wie: Erstellen von Projektvorlagen](http://msdn.microsoft.com/library/a1a6999d-a34c-48a8-b1cf-027eb5c76398).  
+Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinierter `My` Namespaceerweiterungen mithilfe von Visual Studio-Vorlagen. Wenn Sie eine Projektvorlage für das Erstellen Ihrer `My` Erweiterungen sind ein wesentlicher Bestandteil der neuen Projekttyp, Sie können nur einschließen, die benutzerdefinierte `My` Erweiterungscode mit dem Projekt aus, wenn Sie die Vorlage exportieren. Weitere Informationen zum Exportieren von Projektvorlagen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).  
   
- Wenn die benutzerdefinierte `My` -Erweiterung in einer einzelnen Codedatei befindet, können Sie die Datei exportieren, als eine Elementvorlage, die Benutzer auf jede Art von Visual Basic-Projekt hinzufügen können. Anschließend können Sie die Elementvorlage, um zusätzliche Funktionen und Verhalten für die benutzerdefinierte Anpassen `My` -Erweiterung in einem Visual Basic-Projekt. Diese Funktionen sind unter anderem:  
+ Wenn Ihre benutzerdefinierte `My` Erweiterung in einer einzelnen Codedatei ist, können Sie die Datei exportieren, wie eine Elementvorlage, die Benutzer auf einen beliebigen Typ von Visual Basic-Projekt hinzufügen können. Anschließend können Sie die Elementvorlage, um zusätzliche Funktionen und Verhalten für die benutzerdefinierte Anpassen `My` Erweiterung in einem Visual Basic-Projekt. Diese Funktionen umfassen Folgendes:  
   
--   Ermöglicht Benutzern das Verwalten von benutzerdefinierten `My` -Erweiterung aus der **My-Erweiterungen** im Visual Basic-Projekt-Designer auf der Seite.  
+-   Ermöglicht Benutzern das Verwalten Ihrer benutzerdefinierten `My` Erweiterung aus der **My-Erweiterungen** auf der Seite der Visual Basic-Projekt-Designer.  
   
--   Automatisches Hinzufügen der benutzerdefinierten `My` Erweiterung, wenn ein Verweis auf eine angegebene Assembly zu einem Projekt hinzugefügt wird.  
+-   Automatisches Hinzufügen von benutzerdefinierten `My` Erweiterung auf, wenn ein Verweis auf eine angegebene Assembly zu einem Projekt hinzugefügt wird.  
   
--   Ausblenden der `My` Erweiterung Item-Vorlage in die **hinzufügen** Dialogfeld, sodass es nicht in der Liste der Projektelemente enthalten ist.  
+-   Ausblenden der `My` Erweiterung Elementvorlage in der **Element hinzufügen** Dialogfeld, damit er nicht in der Liste der Projektelemente eingeschlossen ist.  
   
- In diesem Thema erläutert, wie ein benutzerdefiniertes Paket `My` -Erweiterung als ausgeblendete Elementvorlage, die von verwaltet werden, kann die **My-Erweiterungen** im Visual Basic-Projekt-Designer auf der Seite. Die benutzerdefinierte `My` Erweiterung kann auch automatisch hinzugefügt werden, wenn ein Projekt ein Verweis auf eine angegebene Assembly hinzugefügt wird.  
+ In diesem Thema wird erläutert, wie eine benutzerdefinierte verpackt `My` Erweiterung als ausgeblendete Elementvorlage, die von verwaltet werden kann die **My-Erweiterungen** auf der Seite der Visual Basic-Projekt-Designer. Die benutzerdefinierte `My` Erweiterung kann auch automatisch hinzugefügt werden, wenn ein Projekt ein Verweis auf eine angegebene Assembly hinzugefügt wird.  
   
-## <a name="create-a-my-namespace-extension"></a>Erstellen einer My Namespaceerweiterung  
- Der erste Schritt beim Erstellen eines Bereitstellungspakets für eine benutzerdefinierte `My` -Erweiterung ist, die Erweiterung als einzelne Codedatei zu erstellen. Weitere Informationen und Anleitungen zum Erstellen eines benutzerdefinierten `My` -Erweiterung finden Sie unter [Erweitern der My-Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).  
+## <a name="create-a-my-namespace-extension"></a>Erstellen Sie einen Namespace-Erweiterung  
+ Der erste Schritt beim Erstellen eines Bereitstellungspakets für eine benutzerdefinierte `My` -Erweiterung besteht darin, die Erweiterung als einzelne Codedatei zu erstellen. Weitere Informationen und Anleitungen zum Erstellen eines benutzerdefinierten `My` Erweiterung finden Sie unter [erweitern den My-Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).  
   
-## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportieren einer My Namespaceerweiterung als Elementvorlage  
- Nachdem Sie eine Codedatei verfügen, enthält Ihre `My` Namespaceerweiterung können Sie die Codedatei als Visual Studio-Elementvorlage exportieren. Informationen zum Exportieren einer Datei als Visual Studio-Elementvorlage finden Sie unter [Gewusst wie: Erstellen von Elementvorlagen](http://msdn.microsoft.com/library/77bc53d4-d607-4820-a032-7e3b365891b5).  
+## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportieren einer meiner Namespaceerweiterung als eine Elementvorlage  
+ Nach dem Sie eine Codedatei, enthalten Ihre `My` Namespaceerweiterung, Sie können die Codedatei als Visual Studio-Elementvorlage exportieren. Anweisungen zum Exportieren einer Datei als Visual Studio-Elementvorlage, finden Sie unter [Vorgehensweise: Erstellen von Elementvorlagen](/visualstudio/ide/how-to-create-item-templates).  
   
 > [!NOTE]
->  Wenn Ihre `My` Namespaceerweiterung hat eine Abhängigkeit zu einer bestimmten Assembly, können Sie die Elementvorlage automatisch installiert, Anpassen Ihrer `My` Namespaceerweiterung, wenn ein Verweis auf diese Assembly hinzugefügt wird. Daher sollten Sie der Assemblyverweis, wenn Sie die Codedatei als Visual Studio-Elementvorlage exportieren.  
+>  Wenn Ihre `My` Namespaceerweiterung hat eine Abhängigkeit zu einer bestimmten Assembly, können Sie die Elementvorlage zur automatischen Installation anpassen Ihrer `My` Namespaceerweiterung auf, wenn ein Verweis auf diese Assembly hinzugefügt wird. Daher sollten Sie der Assemblyverweis, wenn Sie die Codedatei als Visual Studio-Elementvorlage exportieren.  
   
 ## <a name="customize-the-item-template"></a>Anpassen der Elementvorlage  
- Sie können die Elementvorlage aus verwaltet werden die **My-Erweiterungen** im Visual Basic-Projekt-Designer auf der Seite. Sie können auch festlegen, dass die Elementvorlage automatisch hinzugefügt werden soll, wenn ein Projekt ein Verweis auf eine angegebene Assembly hinzugefügt wird. Um diese Anpassungen zu aktivieren, Sie fügen eine neue Datei mit dem Namen der CustomData-Datei und in der Vorlage aus, und dann ein neues Element in der XML in der VSTEMPLATE-Datei hinzufügen.  
+ Sie können die Elementvorlage aus verwaltet werden die **My-Erweiterungen** auf der Seite der Visual Basic-Projekt-Designer. Sie können auch die Elementvorlage automatisch hinzugefügt werden soll, wenn ein Projekt ein Verweis auf eine angegebene Assembly hinzugefügt wird. Um diese Anpassungen ausführen können, Sie fügen eine neue Datei namens der CustomData-Datei, in der Vorlage aus, und klicken Sie dann ein neues Element in der XML in der VSTEMPLATE-Datei hinzufügen.  
   
 ### <a name="add-the-customdata-file"></a>Die CustomData-Datei hinzufügen  
- Die CustomData-Datei ist eine Textdatei mit einer Erweiterung des Dateinamens. CustomData (der Dateiname kann festgelegt werden auf einen anderen Wert für die Vorlage), die XML enthält. Der XML-Code in der CustomData-Datei weist Visual Basic enthalten die `My` Erweiterung, wenn der Benutzer die **My-Erweiterungen** im Visual Basic-Projekt-Designer auf der Seite. Sie können optional Hinzufügen der `AssemblyFullName>` der CustomData-Datei XML-Attribut. Dies weist Visual Basic automatisch installiert, die benutzerdefinierte `My` Erweiterung, wenn ein Verweis auf eine bestimmte Assembly wird dem Projekt hinzugefügt. Sie können Text-Editor oder XML-Editor zum Erstellen der CustomData-Datei zu verwenden, und fügen Sie es in der Elementvorlage komprimierten Ordner (ZIP-Datei).  
+ Die CustomData-Datei ist eine Textdatei mit der Dateinamenerweiterung. Die CustomData-Funktion (der Dateiname kann festgelegt werden auf einen beliebigen Wert sinnvoll, eine Vorlage) und XML enthält. Der XML-Code in der CustomData-Datei weist Visual Basic umfassen die `My` Erweiterung auf, wenn der Benutzer verwenden die **My-Erweiterungen** Visual Basic-Projekt-Designer auf der Seite. Sie können optional hinzufügen, die <`AssemblyFullName>` der CustomData-Datei XML-Attribut. Dies weist Visual Basic zur automatischen Installation von benutzerdefinierten `My` Erweiterung auf, wenn ein Verweis auf eine bestimmte Assembly wird dem Projekt hinzugefügt. Sie können jeden beliebigen Text- oder XML-Editor zum Erstellen der CustomData-Datei verwenden und fügen Sie ihn anschließend in der Elementvorlage komprimierten Ordner (ZIP-Datei).  
   
- Die folgende XML-Code zeigt z. B. den Inhalt einer CustomData-Datei, die das Vorlagenelement in den Ordner My-Erweiterungen eine Visual Basic-Projekt, wenn Sie einen Verweis auf die Assembly Microsoft.VisualBasic.PowerPacks.Vs.dll hinzufügen zum Projekt hinzugefügt wird.  
+ Das folgende XML zeigt z. B. den Inhalt einer CustomData-Datei, die das Vorlagenelement in den Ordner "My-Erweiterungen" von einer Visual Basic-Projekt, wenn ein Verweis auf die Assembly Microsoft.VisualBasic.PowerPacks.Vs.dll hinzugefügt wird dem Projekt hinzugefügt wird.  
   
-```  
+```xml  
 <VBMyExtensionTemplate   
     ID="Microsoft.VisualBasic.Samples.MyExtensions.MyPrinterInfo"   
     Version="1.0.0.0"  
@@ -74,26 +57,26 @@ Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinie
 />  
 ```  
   
- Die CustomData-Datei enthält ein `VBMyExtensionTemplate>` -Element, das über die in der folgenden Tabelle aufgeführten Attribute verfügt.  
+ Die CustomData-Datei enthält ein <`VBMyExtensionTemplate>` Element mit Attributen wie in der folgenden Tabelle aufgeführt.  
   
 |Attribut|Beschreibung|  
 |---|---|  
-|`ID`|Erforderlich. Ein eindeutiger Bezeichner für die Erweiterung. Wenn die Erweiterung mit dieser ID dem Projekt bereits hinzugefügt wurde, wird der Benutzer nicht aufgefordert werden, wieder hinzufügen.|  
+|`ID`|Erforderlich. Ein eindeutiger Bezeichner für die Erweiterung. Wenn die Erweiterung, die diese ID weist das Projekt bereits hinzugefügt wurde, wird der Benutzer nicht aufgefordert werden, Sie es dann erneut hinzuzufügen.|  
 |`Version`|Erforderlich. Eine Versionsnummer für die Elementvorlage.|  
-|`AssemblyFullName`|Optional. Ein Assemblyname. Wenn das Projekt ein Verweis auf diese Assembly hinzugefügt wird, wird der Benutzer aufgefordert, fügen die `My` Erweiterung aus dieser Elementvorlage.|  
+|`AssemblyFullName`|Dies ist optional. Ein Assemblyname. Wenn Sie dem Projekt ein Verweis auf diese Assembly hinzugefügt wird, wird der Benutzer aufgefordert, Hinzufügen der `My` Erweiterung von diesem Elementvorlage.|  
   
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Hinzufügen der \<CustomDataSignature > Element zur VSTEMPLATE-Datei  
- Identifizieren Sie die Visual Studio-Elementvorlage als eine `My` Namespaceerweiterung, müssen Sie auch die VSTEMPLATE-Datei für Ihre Elementvorlage ändern. Müssen Sie hinzufügen, eine `<CustomDataSignature>` Element, das `<TemplateData>` Element. Die `<CustomDataSignature>` Element muss den Text enthalten `Microsoft.VisualBasic.MyExtension`, wie im folgenden Beispiel gezeigt.  
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Hinzufügen der \<CustomDataSignature >-Element in der VSTEMPLATE-Datei  
+ Identifizieren Sie die Visual Studio-Elementvorlage als eine `My` Namespaceerweiterung, müssen Sie auch die VSTEMPLATE-Datei für die Elementvorlage ändern. Müssen Sie hinzufügen, eine `<CustomDataSignature>` Element an der `<TemplateData>` Element. Die `<CustomDataSignature>` -Element muss den Text enthalten `Microsoft.VisualBasic.MyExtension`, wie im folgenden Beispiel gezeigt.  
   
-```  
+```xml  
 <CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>  
 ```  
   
- Sie können keine Dateien in einem komprimierten Ordner (ZIP-Datei) nicht direkt ändern. Sie müssen die VSTEMPLATE-Datei aus dem komprimierten Ordner kopieren, ändern, und ersetzen die VSTEMPLATE-Datei in einem komprimierten Ordner durch die aktualisierte Version.  
+ Dateien in einem komprimierten Ordner (ZIP-Datei) kann nicht direkt geändert werden. Sie müssen kopieren Sie die VSTEMPLATE-Datei aus dem komprimierten Ordner ändern, und Ersetzen Sie die VSTEMPLATE-Datei in den komprimierten Ordner durch die aktualisierte Kopie.  
   
- Das folgende Beispiel zeigt den Inhalt einer VSTEMPLATE-Datei, die die `<CustomDataSignature>` Element hinzugefügt.  
+ Das folgende Beispiel zeigt den Inhalt einer VSTEMPLATE-Datei mit den `<CustomDataSignature>` Element hinzugefügt.  
   
-```  
+```xml  
 <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
   <TemplateData>  
     <DefaultName>MyCustomExtensionModule.vb</DefaultName>  
@@ -115,10 +98,10 @@ Visual Basic bietet eine einfache Möglichkeit zum Bereitstellen benutzerdefinie
 ```  
   
 ## <a name="install-the-template"></a>Installieren Sie die Vorlage  
- Um die Vorlage zu installieren, können Sie den komprimierten Ordner (ZIP-Datei) in den Visual Basic-Element-Vorlagen-Ordner (z. B. Eigene Dateien\Visual Studio 2008\Templates\Item Basic\Allgemein Basic) kopieren. Alternativ können Sie die Vorlage als Visual Studio-Installer (VSI)-Datei veröffentlichen.  
+ Um die Vorlage zu installieren, können Sie den komprimierten Ordner (ZIP-Datei) in den Visual Basic-Element-Vorlagen-Ordner (z. B. Eigene Dateien\Visual Studio 2008\Templates\Item Templates\Visual Basic) kopieren. Alternativ können Sie die Vorlage als Visual Studio-Installer (VSI)-Datei veröffentlichen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweitern der meine Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)   
- [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)   
- [Anpassen der-Objekte sind verfügbar für meine](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)   
- [Meine Erweiterungen-Seite, Projekt-Designer](https://docs.microsoft.com/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)
+ [Erweitern der My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
+ [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [My-Erweiterungen-Seite, Projekt-Designer](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

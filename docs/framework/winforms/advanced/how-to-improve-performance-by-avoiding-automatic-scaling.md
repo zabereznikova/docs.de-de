@@ -1,51 +1,55 @@
 ---
-title: "Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Automatisches Skalieren"
-  - "Bilder [Windows Forms], Verbessern der Leistung"
-  - "Bilder [Windows Forms], Verwenden ohne automatischer Skalierung"
-  - "Leistung, Verbessern für Bilder"
+title: 'Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] skaliert ein Bild möglicherweise automatisch, während Sie es zeichnen. Dadurch wird die Leistung verringert.  Sie können das Skalieren des Bildes jedoch auch steuern, indem Sie die Abmessungen des Zielrechtecks an die <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode übergeben.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]ein Bild kann automatisch skaliert werden, wie Sie es zeichnen. Alternativ können Sie steuern, die Skalierung des Bilds durch Übergeben der Dimensionen des Zielrechtecks an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
   
- Beispiel: Durch den folgenden Aufruf der <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode wird für die obere linke Ecke die Position \(50, 30\), jedoch kein Zielrechteck festgelegt.  
+ Beispielsweise beim folgenden Aufruf der <xref:System.Drawing.Graphics.DrawImage%2A> Methode gibt einen oberen linken Ecke des (50, 30) aber keine Zielrechtecks an.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- Obwohl dies im Hinblick auf die Anzahl der erforderlichen Argumente die einfachste Version der <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode ist, muss sie nicht gleichzeitig auch die effizienteste sein.  Wenn die von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verwendete Auflösung \(in der Regel 96 Punkte pro Zoll\) von der im <xref:System.Drawing.Image>\-Objekt gespeicherten Auflösung abweicht, wird das Bild von der <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode skaliert.  Angenommen, ein <xref:System.Drawing.Image>\-Objekt hat eine Breite von 216 Pixel und einen gespeicherten Wert für die horizontale Auflösung von 72 Punkten pro Zoll.  Da 216\/72 gleich 3 ist, skaliert <xref:System.Drawing.Graphics.DrawImage%2A> das Bild, sodass es eine Breite von 3 Zoll bei einer Auflösung von 96 Punkten pro Zoll besitzt.  Das heißt, <xref:System.Drawing.Graphics.DrawImage%2A> zeigt ein Bild mit einer Breite von 96 × 3 \= 288 Pixel an.  
+ Obwohl dies die einfachste Version ist die <xref:System.Drawing.Graphics.DrawImage%2A> Methode im Hinblick auf die Anzahl der erforderlichen Argumente, es ist nicht unbedingt die effizienteste. Wenn die Auflösung von verwendet [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (in der Regel 96 dpi) unterscheidet sich von der Auflösung, die in gespeicherten der <xref:System.Drawing.Image> -Objekt, und klicken Sie dann die <xref:System.Drawing.Graphics.DrawImage%2A> Methode wird das Bild skaliert. Nehmen wir beispielsweise an ein <xref:System.Drawing.Image> Objekt verfügt über eine Breite von 216 Pixel und einen Wert gespeicherte horizontalen Auflösung von 72 Punkte pro Zoll. Da 216/72 3, ist <xref:System.Drawing.Graphics.DrawImage%2A> wird skaliert das Bild, sodass er eine Breite von 3 Zoll bei einer Auflösung von 96 DPI-Wert aufweist. D. h. <xref:System.Drawing.Graphics.DrawImage%2A> zeigt ein Image mit einer Breite von 96 × 3 = 288 Pixel.  
   
- Auch wenn Sie eine andere Bildschirmauflösung als 96 Punkte pro Zoll \(DPI\) verwenden, skaliert [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] das Bild in der Regel so, als ob die Bildschirmauflösung 96 Punkte pro Zoll betragen würde.  Dies liegt daran, dass ein <xref:System.Drawing.Graphics>\-Objekt in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] einem Gerätekontext zugeordnet ist. Wenn [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] den Gerätekontext nach der Bildschirmauflösung abfragt, ist das Ergebnis unabhängig von der tatsächlichen Bildschirmauflösung in der Regel 96.  Sie können die automatische Skalierung vermeiden, indem Sie das Zielrechteck in der <xref:System.Drawing.Graphics.DrawImage%2A>\-Methode angeben.  
+ Selbst wenn die Bildschirmauflösung von 96 dpi unterscheidet [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] wahrscheinlich Skalierung das Bild als wären die Bildschirmauflösung 96 dpi. Grund hierfür ist, eine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> Objekt bezieht sich auf einen Gerätekontext und wann [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Abfragen, die der Gerätekontext für die Auflösung des Bildschirms, das Ergebnis wird in der Regel 96, unabhängig von der tatsächlichen Bildschirmauflösung. Sie können die automatische Skalierung durch Angabe des Zielrechtecks im Vermeiden der <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
   
-## Beispiel  
- Im folgenden Beispiel wird zweimal dasselbe Bild gezeichnet.  Im ersten Fall wurden Breite und Höhe des Zielrechtecks nicht festgelegt, und das Bild wird automatisch skaliert.  Im zweiten Fall wurden Breite und Höhe des Zielrechtecks \(in Pixel\) so festgelegt, dass sie der Breite und Höhe des Originalbilds entsprechen.  In der folgenden Abbildung wurde das Bild zweimal gerendert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel werden zweimal dasselbe Bild gezeichnet. Im ersten Fall die Breite und Höhe des Zielrechtecks nicht angegeben wurden, und das Bild wird automatisch skaliert. Im zweiten Fall sind die Breite und Höhe (gemessen in Pixel) des Zielrechtecks identisch sein, als die Breite und Höhe des ursprünglichen Bilds angegeben. Die folgende Abbildung zeigt das Bild zweimal gerendert.  
   
  ![Skalierte Struktur](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  Ersetzen Sie Texture.jpg mit einem Bildnamen und einem Pfad, die auf Ihrem System gültig sind.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie Texture.jpg durch ein Image-Name und Pfad, die auf Ihrem System gültig sind.  
   
-## Siehe auch  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
