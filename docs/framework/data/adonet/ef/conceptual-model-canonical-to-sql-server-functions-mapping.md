@@ -1,123 +1,122 @@
 ---
-title: "Zuordnen von kanonischen Funktionen (konzeptionelles Modell) zu SQL Server-Funktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Zuordnen von kanonischen Funktionen (konzeptionelles Modell) zu SQL Server-Funktionen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a186c37506441dde814ca52970c60f0f816ba53e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zuordnen von kanonischen Funktionen (konzeptionelles Modell) zu SQL Server-Funktionen
-In diesem Thema wird beschrieben, wie kanonische Funktionen im konzeptionellen Modell den entsprechenden SQL Server\-Funktionen zugeordnet werden.  
+# <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a><span data-ttu-id="dace0-102">Zuordnen von kanonischen Funktionen (konzeptionelles Modell) zu SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-102">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>
+<span data-ttu-id="dace0-103">In diesem Thema wird beschrieben, wie kanonische Funktionen im konzeptionellen Modell den entsprechenden SQL Server-Funktionen zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="dace0-103">This topic describes how conceptual model canonical functions map to the corresponding SQL Server functions.</span></span>  
   
-## Funktionen für Datum und Zeit  
- In der folgenden Tabelle wird das Mapping von Datums\- und Uhrzeitfunktionen beschrieben:  
+## <a name="date-and-time-functions"></a><span data-ttu-id="dace0-104">Funktionen für Datum und Zeit</span><span class="sxs-lookup"><span data-stu-id="dace0-104">Date and Time Functions</span></span>  
+ <span data-ttu-id="dace0-105">In der folgenden Tabelle wird das Mapping von Datums- und Uhrzeitfunktionen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="dace0-105">The following table describes the date and time functions mapping:</span></span>  
   
-|Kanonische Funktionen|SQL Server\-Funktionen|  
-|---------------------------|----------------------------|  
-|[AddDays \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
-|[AddHours \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
-|[AddMicroseconds \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
-|[AddMilliseconds \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
-|[AddMinutes \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
-|[AddMonths \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
-|[AddNanoseconds \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
-|[AddSeconds \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
-|[AddYears \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
-|[CreateDateTime \(Jahr, Monat, Tag, Stunde, Minute, Sekunde\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Für SQL Server 2000 und SQL Server 2005 wird auf dem Server ein für `datetime` formatierter Wert erstellt.  Für SQL Server 2008 und höhere Versionen wird ein `datetime2`\-Wert auf dem Server erstellt.|  
-|[CreateDateTimeOffset \(Jahr, Monat, Tag, Stunde, Minute, Sekunde, tzoffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Ein für `datetimeoffset` formatierter Wert wird auf dem Server erstellt.<br /><br /> Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.|  
-|[CreateTime \(Stunde, Minute, Sekunde\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Ein für `time` formatierter Wert wird auf dem Server erstellt.<br /><br /> Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.|  
-|[CurrentDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTime()` in SQLServer 2008.<br /><br /> `GetDate()` in SQLServer 2000 und SQLServer 2005.|  
-|[CurrentDateTimeOffset\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()` in SQL Server 2008.<br /><br /> Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.|  
-|[CurrentUtcDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()` in SQLServer 2008.  `GetUtcDate()` in SQL Server 2000 und SQL Server 2005.|  
-|[DayOfYear \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
-|[Day \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
-|[DiffDays \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
-|[DiffHours \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
-|[DiffMicroseconds \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
-|[DiffMilliseconds \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
-|[DiffMinutes \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
-|[DiffNanoseconds \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
-|[DiffSeconds \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
-|[DiffYears \(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
-|[GetTotalOffsetMinutes \(DateTimeOffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
-|[Hour \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
-|[Millisecond \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
-|[Minute \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
-|[Month \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
-|[Second \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
-|[Truncate \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Für SQL Server 2000 und SQL Server 2005 wird ein abgeschnittener für `datetime` `` formatierter Wert auf dem Server erstellt.  Für SQL Server 2008 und spätere Versionen wird ein abgeschnittener  `` `datetime2`\- oder `` `datetimeoffset`\-Wert auf dem Server erstellt.|  
-|[Year \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
+|<span data-ttu-id="dace0-106">Kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-106">Canonical functions</span></span>|<span data-ttu-id="dace0-107">SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-107">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="dace0-108">AddDays (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-108">AddDays(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
+|[<span data-ttu-id="dace0-109">AddHours (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-109">AddHours(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
+|[<span data-ttu-id="dace0-110">Addmicroseconds (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-110">AddMicroseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
+|[<span data-ttu-id="dace0-111">AddMilliseconds (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-111">AddMilliseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
+|[<span data-ttu-id="dace0-112">AddMinutes (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-112">AddMinutes(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
+|[<span data-ttu-id="dace0-113">AddMonths (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-113">AddMonths(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
+|[<span data-ttu-id="dace0-114">Addnanoseconds (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-114">AddNanoseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
+|[<span data-ttu-id="dace0-115">AddSeconds (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-115">AddSeconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
+|[<span data-ttu-id="dace0-116">AddYears (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-116">AddYears(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
+|[<span data-ttu-id="dace0-117">CreateDateTime (Jahr, Monat, Tag, Stunde, Minute, Sekunde)</span><span class="sxs-lookup"><span data-stu-id="dace0-117">CreateDateTime(year, month, day, hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-118">Für SQL Server 2000 und SQL Server 2005 wird auf dem Server ein für `datetime` formatierter Wert erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-118">For SQL Server 2000 and SQL Server 2005, a `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="dace0-119">Für SQL Server 2008 und höhere Versionen wird ein `datetime2`-Wert auf dem Server erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-119">For SQL Server 2008 and later versions, a `datetime2` value is created on the server.</span></span>|  
+|[<span data-ttu-id="dace0-120">CreateDateTimeOffset (Jahr, Monat, Tag, Stunde, Minute, Sekunde, Tzoffset)</span><span class="sxs-lookup"><span data-stu-id="dace0-120">CreateDateTimeOffset(year, month, day, hour, minute, second, tzoffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-121">Ein für `datetimeoffset` formatierter Wert wird auf dem Server erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-121">A `datetimeoffset` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="dace0-122">Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="dace0-122">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="dace0-123">CreateTime (Stunde, Minute, Sekunde)</span><span class="sxs-lookup"><span data-stu-id="dace0-123">CreateTime(hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-124">Ein für `time` formatierter Wert wird auf dem Server erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-124">A `time` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="dace0-125">Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="dace0-125">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="dace0-126">CurrentDateTime()</span><span class="sxs-lookup"><span data-stu-id="dace0-126">CurrentDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-127">`SysDateTime()` in SQLServer 2008.</span><span class="sxs-lookup"><span data-stu-id="dace0-127">`SysDateTime()` in SQLServer 2008.</span></span><br /><br /> <span data-ttu-id="dace0-128">`GetDate()` in SQLServer 2000 und SQLServer 2005.</span><span class="sxs-lookup"><span data-stu-id="dace0-128">`GetDate()` in SQLServer 2000 and SQLServer 2005.</span></span>|  
+|[<span data-ttu-id="dace0-129">CurrentDateTimeOffset()</span><span class="sxs-lookup"><span data-stu-id="dace0-129">CurrentDateTimeOffset()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-130">`SysDateTimeOffset()` in SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="dace0-130">`SysDateTimeOffset()` in SQL Server 2008.</span></span><br /><br /> <span data-ttu-id="dace0-131">Wird unter SQL Server 2000 und SQL Server 2005 nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="dace0-131">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="dace0-132">CurrentUtcDateTime()</span><span class="sxs-lookup"><span data-stu-id="dace0-132">CurrentUtcDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-133">`SysUtcDateTime()` in SQLServer 2008.</span><span class="sxs-lookup"><span data-stu-id="dace0-133">`SysUtcDateTime()` in SQLServer 2008.</span></span> <span data-ttu-id="dace0-134">`GetUtcDate()` in SQL Server 2000 und SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="dace0-134">`GetUtcDate()` in SQL Server 2000 and SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="dace0-135">DayOfYear (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-135">DayOfYear(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
+|[<span data-ttu-id="dace0-136">Day (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-136">Day(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
+|[<span data-ttu-id="dace0-137">DiffDays (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-137">DiffDays(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-138">DiffHours (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-138">DiffHours(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-139">DiffMicroseconds (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-139">DiffMicroseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-140">DiffMilliseconds (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-140">DiffMilliseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-141">DiffMinutes (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-141">DiffMinutes(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-142">DiffNanoseconds (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-142">DiffNanoseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-143">DiffSeconds (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-143">DiffSeconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-144">DiffYears (StartExpression, EndExpression)</span><span class="sxs-lookup"><span data-stu-id="dace0-144">DiffYears(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
+|[<span data-ttu-id="dace0-145">GetTotalOffsetMinutes (DateTimeOffset)</span><span class="sxs-lookup"><span data-stu-id="dace0-145">GetTotalOffsetMinutes(DateTimeOffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
+|[<span data-ttu-id="dace0-146">HOUR (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-146">Hour(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
+|[<span data-ttu-id="dace0-147">Millisecond (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-147">Millisecond(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
+|[<span data-ttu-id="dace0-148">Minute (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-148">Minute(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
+|[<span data-ttu-id="dace0-149">Month (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-149">Month(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
+|[<span data-ttu-id="dace0-150">Second (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-150">Second(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
+|[<span data-ttu-id="dace0-151">TRUNCATE (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-151">Truncate(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="dace0-152">Für SQL Server 2000 und SQL Server 2005, eine abgeschnittene `datetime` formatierter Wert wird auf dem Server erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-152">For SQL Server 2000 and SQL Server 2005, a truncated `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="dace0-153">Für SQL Server 2008 und höhere Versionen, eine abgeschnittene `datetime2` oder `datetimeoffset` Wert wird auf dem Server erstellt.</span><span class="sxs-lookup"><span data-stu-id="dace0-153">For SQL Server 2008 and later versions, a truncated `datetime2` or `datetimeoffset` value is created on the server.</span></span>|  
+|[<span data-ttu-id="dace0-154">Year (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-154">Year(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
   
-## Aggregatfunktionen  
- In der folgenden Tabelle wird das Mapping von Aggregatfunktionen beschrieben:  
+## <a name="aggregate-functions"></a><span data-ttu-id="dace0-155">Aggregatfunktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-155">Aggregate Functions</span></span>  
+ <span data-ttu-id="dace0-156">In der folgenden Tabelle wird das Mapping von Aggregatfunktionen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="dace0-156">The following table describes the aggregate functions mapping:</span></span>  
   
-|Kanonische Funktionen|SQL Server\-Funktionen|  
-|---------------------------|----------------------------|  
-|[Avg \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
-|[BigCount \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
-|[Count \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
-|[Min \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
-|[Max \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
-|[StDev \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
-|[StDevP \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
-|[Sum \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
-|[Var \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
-|[VarP \(Ausdruck\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
+|<span data-ttu-id="dace0-157">Kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-157">Canonical functions</span></span>|<span data-ttu-id="dace0-158">SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-158">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="dace0-159">AVG (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-159">Avg(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
+|[<span data-ttu-id="dace0-160">BigCount (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-160">BigCount(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
+|[<span data-ttu-id="dace0-161">Count (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-161">Count(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
+|[<span data-ttu-id="dace0-162">Min (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-162">Min(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
+|[<span data-ttu-id="dace0-163">Max (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-163">Max(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
+|[<span data-ttu-id="dace0-164">StDev (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-164">StDev(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
+|[<span data-ttu-id="dace0-165">StDevP (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-165">StDevP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
+|[<span data-ttu-id="dace0-166">SUM (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-166">Sum(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
+|[<span data-ttu-id="dace0-167">Var (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-167">Var(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
+|[<span data-ttu-id="dace0-168">VarP (Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="dace0-168">VarP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
   
-## Mathematische Funktionen  
- In der folgenden Tabelle wird das Mapping von mathematischen Funktionen beschrieben:  
+## <a name="math-functions"></a><span data-ttu-id="dace0-169">Mathematische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-169">Math functions</span></span>  
+ <span data-ttu-id="dace0-170">In der folgenden Tabelle wird das Mapping von mathematischen Funktionen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="dace0-170">The following table describes the math functions mapping:</span></span>  
   
-|Kanonische Funktionen|SQL Server\-Funktionen|  
-|---------------------------|----------------------------|  
-|[Abs\(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
-|[Ceiling \(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
-|[Floor \(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
-|[Power \(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
-|[Round \(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[Truncate](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|<span data-ttu-id="dace0-171">Kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-171">Canonical functions</span></span>|<span data-ttu-id="dace0-172">SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-172">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="dace0-173">Abs(Value)</span><span class="sxs-lookup"><span data-stu-id="dace0-173">Abs(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
+|[<span data-ttu-id="dace0-174">CEILING (Wert)</span><span class="sxs-lookup"><span data-stu-id="dace0-174">Ceiling(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
+|[<span data-ttu-id="dace0-175">Floor (Wert)</span><span class="sxs-lookup"><span data-stu-id="dace0-175">Floor(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
+|[<span data-ttu-id="dace0-176">Power (Wert)</span><span class="sxs-lookup"><span data-stu-id="dace0-176">Power(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
+|[<span data-ttu-id="dace0-177">Round (Wert)</span><span class="sxs-lookup"><span data-stu-id="dace0-177">Round(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
+|[<span data-ttu-id="dace0-178">Abschneiden</span><span class="sxs-lookup"><span data-stu-id="dace0-178">Truncate</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
-## String\-Funktionen  
- In der folgenden Tabelle wird die Zuordnung von String\-Funktionen beschrieben:  
+## <a name="string-functions"></a><span data-ttu-id="dace0-179">String-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-179">String Functions</span></span>  
+ <span data-ttu-id="dace0-180">In der folgenden Tabelle wird die Zuordnung von String-Funktionen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="dace0-180">The following table describes the string functions mapping:</span></span>  
   
-|Kanonische Funktionen|SQL Server\-Funktionen|  
-|---------------------------|----------------------------|  
-|[Contains \(Zeichenfolge, Ziel\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Concat \(string1, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|string1 \+ string2|  
-|[EndsWith \(Zeichenfolge, Ziel\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Hinweis** Die `CHARINDEX`\-Funktion gibt `false` zurück, wenn der `string` in einer Zeichenfolgenspalte mit fester Länge gespeichert wird und `target` eine Konstante ist.  In diesem Fall wird die ganze Zeichenfolge gesucht, einschließlich aller Auffüllleerzeichen.  Eine mögliche Problemumgehung ist, die Daten in der Zeichenfolge mit fester Länge vor dem Übergeben der Zeichenfolge an die `EndsWith`\-Funktion abzuschneiden, wie in folgendem Beispiel gezeigt wird: `EndsWith(TRIM(string), target)`|  
-|[IndexOf \(Ziel, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
-|[Left \(string1, Länge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
-|[Length \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
-|[LTrim \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
-|[Right \(string1, Länge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
-|[Trim \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
-|[Ersetzen \(string1, string2, string3\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
-|[Reverse \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
-|[RTrim \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
-|[StartsWith \(Zeichenfolge, Ziel\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Substring \(Zeichenfolge, Beginn, Länge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
-|[ToLower \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
-|[ToUpper \(Zeichenfolge\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
+|<span data-ttu-id="dace0-181">Kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-181">Canonical functions</span></span>|<span data-ttu-id="dace0-182">SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-182">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="dace0-183">Contains(String, Target)</span><span class="sxs-lookup"><span data-stu-id="dace0-183">Contains(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="dace0-184">Concat (string1, string2)</span><span class="sxs-lookup"><span data-stu-id="dace0-184">Concat(string1, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|<span data-ttu-id="dace0-185">string1 + string2</span><span class="sxs-lookup"><span data-stu-id="dace0-185">string1 + string2</span></span>|  
+|[<span data-ttu-id="dace0-186">EndsWith (Zeichenfolge, Ziel)</span><span class="sxs-lookup"><span data-stu-id="dace0-186">EndsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> <span data-ttu-id="dace0-187">**Hinweis** der `CHARINDEX` -Funktion zurückgegeben `false` Wenn die `string` befindet sich in einer Zeichenfolgenspalte mit fester Länge und `target` ist eine Konstante.</span><span class="sxs-lookup"><span data-stu-id="dace0-187">**Note** The `CHARINDEX` function returns `false` if the `string` is stored in a fixed length string column and `target` is a constant.</span></span> <span data-ttu-id="dace0-188">In diesem Fall wird die ganze Zeichenfolge gesucht, einschließlich aller Auffüllleerzeichen.</span><span class="sxs-lookup"><span data-stu-id="dace0-188">In this case, the entire string is searched, including any padding trailing spaces.</span></span> <span data-ttu-id="dace0-189">Eine mögliche Problemumgehung ist, die Daten in der Zeichenfolge mit fester Länge vor dem Übergeben der Zeichenfolge an die `EndsWith`-Funktion abzuschneiden, wie in folgendem Beispiel gezeigt wird: `EndsWith(TRIM(string), target)`</span><span class="sxs-lookup"><span data-stu-id="dace0-189">A possible workaround is to trim the data in the fixed length string before passing the string to the `EndsWith` function, as in the following example: `EndsWith(TRIM(string), target)`</span></span>|  
+|[<span data-ttu-id="dace0-190">IndexOf (Ziel, string2)</span><span class="sxs-lookup"><span data-stu-id="dace0-190">IndexOf(target, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
+|[<span data-ttu-id="dace0-191">Left (string1, Länge)</span><span class="sxs-lookup"><span data-stu-id="dace0-191">Left (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
+|[<span data-ttu-id="dace0-192">Länge (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-192">Length (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
+|[<span data-ttu-id="dace0-193">LTrim (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-193">LTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
+|[<span data-ttu-id="dace0-194">Right (string1, Länge)</span><span class="sxs-lookup"><span data-stu-id="dace0-194">Right (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
+|[<span data-ttu-id="dace0-195">Trim (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-195">Trim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
+|[<span data-ttu-id="dace0-196">Ersetzen Sie (string1, string2, string3)</span><span class="sxs-lookup"><span data-stu-id="dace0-196">Replace (string1, string2, string3)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
+|[<span data-ttu-id="dace0-197">Reverse (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-197">Reverse (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
+|[<span data-ttu-id="dace0-198">RTrim (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-198">RTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
+|[<span data-ttu-id="dace0-199">"StartsWith" (Zeichenfolge, Ziel)</span><span class="sxs-lookup"><span data-stu-id="dace0-199">StartsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="dace0-200">Substring (Zeichenfolge, Beginn, Länge)</span><span class="sxs-lookup"><span data-stu-id="dace0-200">Substring(string, start, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
+|[<span data-ttu-id="dace0-201">ToLower (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-201">ToLower(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
+|[<span data-ttu-id="dace0-202">ToUpper (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="dace0-202">ToUpper(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
-## Bitweise Funktionen  
- In der folgenden Tabelle wird die Zuordnung von bitweisen Funktionen beschrieben:  
+## <a name="bitwise-functions"></a><span data-ttu-id="dace0-203">Bitweise Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-203">Bitwise Functions</span></span>  
+ <span data-ttu-id="dace0-204">In der folgenden Tabelle wird die Zuordnung von bitweisen Funktionen beschrieben:</span><span class="sxs-lookup"><span data-stu-id="dace0-204">The following table describes the bitwise functions mapping:</span></span>  
   
-|Kanonische Funktionen|SQL Server\-Funktionen|  
-|---------------------------|----------------------------|  
-|[BitWiseAnd \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 & value2|  
-|[BitWiseNot \(Wert\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~value|  
-|[BitWiseOr \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 &#124; value2|  
-|[BitWiseXor \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 ^ value2|
+|<span data-ttu-id="dace0-205">Kanonische Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-205">Canonical functions</span></span>|<span data-ttu-id="dace0-206">SQL Server-Funktionen</span><span class="sxs-lookup"><span data-stu-id="dace0-206">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="dace0-207">BitWiseAnd (Wert1, Wert2)</span><span class="sxs-lookup"><span data-stu-id="dace0-207">BitWiseAnd (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="dace0-208">value1 & value2</span><span class="sxs-lookup"><span data-stu-id="dace0-208">value1 & value2</span></span>|  
+|[<span data-ttu-id="dace0-209">BitWiseNot (Wert)</span><span class="sxs-lookup"><span data-stu-id="dace0-209">BitWiseNot (value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="dace0-210">~value</span><span class="sxs-lookup"><span data-stu-id="dace0-210">~value</span></span>|  
+|[<span data-ttu-id="dace0-211">BitWiseOr (Wert1, Wert2)</span><span class="sxs-lookup"><span data-stu-id="dace0-211">BitWiseOr (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="dace0-212">Wert1 &#124; Wert2</span><span class="sxs-lookup"><span data-stu-id="dace0-212">value1 &#124; value2</span></span>|  
+|[<span data-ttu-id="dace0-213">Binäre BitWiseXor (Wert1, Wert2)</span><span class="sxs-lookup"><span data-stu-id="dace0-213">BitWiseXor (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="dace0-214">value1 ^ value2</span><span class="sxs-lookup"><span data-stu-id="dace0-214">value1 ^ value2</span></span>|

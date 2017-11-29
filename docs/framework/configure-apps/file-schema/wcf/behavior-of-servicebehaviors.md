@@ -1,31 +1,38 @@
 ---
-title: "&lt;behavior&gt; von &lt;serviceBehaviors&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;behavior&gt; von &lt;serviceBehaviors&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a472f2dd3947088eaf676c4ae38946560652c9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;behavior&gt; von &lt;serviceBehaviors&gt;
-Das `behavior`\-Element enthält eine Auflistung der Einstellungen für das Verhalten eines Diensts.  Jedes Verhalten wird durch seinen `name` indiziert.  Dienste können mit dem `behaviorConfiguration`\-Attribut des [\<Endpunkt \(endpoint\)\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)\-Elements einen Link zwischen diesem Namen und jedem Verhalten herstellen.  Dies ermöglicht es Endpunkten, allgemeine Verhaltenskonfigurationen gemeinsam zu verwenden, ohne dass die Einstellungen neu definiert werden müssen.  Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.  Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhalten finden Sie unter [Vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a><span data-ttu-id="cbd93-102">&lt;behavior&gt; von &lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="cbd93-102">&lt;behavior&gt; of &lt;serviceBehaviors&gt;</span></span>
+<span data-ttu-id="cbd93-103">Das `behavior`-Element enthält eine Auflistung der Einstellungen für das Verhalten eines Diensts.</span><span class="sxs-lookup"><span data-stu-id="cbd93-103">The `behavior` element contains a collection of settings for the behavior of a service.</span></span> <span data-ttu-id="cbd93-104">Jedes Verhalten wird durch seinen `name` indiziert.</span><span class="sxs-lookup"><span data-stu-id="cbd93-104">Each behavior is indexed by its `name`.</span></span> <span data-ttu-id="cbd93-105">Dienste können eine Verknüpfung zu jedem Verhalten über diesen Namen mit der `behaviorConfiguration` Attribut von der [ \<Endpunkt >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Element.</span><span class="sxs-lookup"><span data-stu-id="cbd93-105">Services can link to each behavior through this name using the `behaviorConfiguration` attribute of the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="cbd93-106">Dies ermöglicht es Endpunkten, allgemeine Verhaltenskonfigurationen gemeinsam zu verwenden, ohne dass die Einstellungen neu definiert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-106">This allows endpoints to share common behavior configurations without redefining the settings.</span></span> <span data-ttu-id="cbd93-107">Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-107">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="cbd93-108">Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="cbd93-108">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 > [!NOTE]
->  Für Windows Workflow\-Aktivitäten spezifische Verhaltenselemente wie das [\<sendMessageChannelCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)\-Element werden auf der Seite [\<behavior\> von \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) dokumentiert.  
+>  <span data-ttu-id="cbd93-109">Verhaltenselemente, die speziell für Windows Workflow-Aktivitäten, wie z. B. die [ \<sendmessagechannelcache an >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) Element, in dokumentiert sind die [ \<Verhalten > der \< ServiceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) Seite.</span><span class="sxs-lookup"><span data-stu-id="cbd93-109">Behavior elements specific to Windows Workflow activities, such as the [\<sendMessageChannelCache>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) element, are documented in the [\<behavior> of \<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) page.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="cbd93-110">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="cbd93-110">\<system.ServiceModel></span></span>  
+<span data-ttu-id="cbd93-111">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="cbd93-111">\<behaviors></span></span>  
+<span data-ttu-id="cbd93-112">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="cbd93-112">\<serviceBehaviors></span></span>  
+<span data-ttu-id="cbd93-113">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="cbd93-113">\<behavior></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="cbd93-114">Syntax</span><span class="sxs-lookup"><span data-stu-id="cbd93-114">Syntax</span></span>  
   
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
@@ -35,36 +42,36 @@ Das `behavior`\-Element enthält eine Auflistung der Einstellungen für das Verh
 </system.ServiceModel>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cbd93-115">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="cbd93-115">Attributes and Elements</span></span>  
+ <span data-ttu-id="cbd93-116">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="cbd93-116">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="cbd93-117">Attribute</span><span class="sxs-lookup"><span data-stu-id="cbd93-117">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Name|Eine eindeutige Zeichenfolge, die den Konfigurationsnamen des Verhaltens enthält.  Dieser Wert muss eine benutzerdefinierte und eindeutige Zeichenfolge sein, da sie als identifizierende Zeichenfolge für das Element fungiert.  Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.  Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhalten finden Sie unter [Vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|<span data-ttu-id="cbd93-118">Attribut</span><span class="sxs-lookup"><span data-stu-id="cbd93-118">Attribute</span></span>|<span data-ttu-id="cbd93-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cbd93-119">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="cbd93-120">Name</span><span class="sxs-lookup"><span data-stu-id="cbd93-120">name</span></span>|<span data-ttu-id="cbd93-121">Eine eindeutige Zeichenfolge, die den Konfigurationsnamen des Verhaltens enthält.</span><span class="sxs-lookup"><span data-stu-id="cbd93-121">A unique string that contains the configuration name of the behavior.</span></span> <span data-ttu-id="cbd93-122">Dieser Wert muss eine benutzerdefinierte und eindeutige Zeichenfolge sein, da sie als identifizierende Zeichenfolge für das Element fungiert.</span><span class="sxs-lookup"><span data-stu-id="cbd93-122">This value is a user-defined string that must be unique, since it acts as the identification string for the element.</span></span> <span data-ttu-id="cbd93-123">Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-123">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="cbd93-124">Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="cbd93-124">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="cbd93-125">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="cbd93-125">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)|Speichert die Konfigurationsinformationen für DataContractSerializer.|  
-|[\<persistenceProvider\>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistenceprovider.md)|Gibt den Typ der zu verwendenden Persistenzanbieterimplementierung sowie das Timeout für Persistenzvorgänge an.|  
-|[\<Routing\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md)|Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der Routingkonfiguration zu ermöglichen.|  
-|[\<serviceAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|Stellt ein Workflowkonfigurationselement bereit, das die Gültigkeit einer Übertragung, Meldung oder eines Absenders auf Dienstebene festlegt.|  
-|[\<serviceAuthorization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|Gibt Einstellungen an, die den Zugriff auf Dienstvorgänge autorisieren.|  
-|[\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Gibt die Anmeldeinformationen an, die beim Authentifizieren des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.|  
-|[\<serviceDebug\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|Gibt Debugging\- und Hilfeinformationsfeatures für einen [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienst an.|  
-|[\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|Gibt die Ermittelbarkeit von Dienstendpunkten an.|  
-|[\<serviceMetadata\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informationen an.|  
-|[\<serviceSecurityAudit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen während der Dienstvorgänge ermöglichen.|  
-|[\<serviceThrottling\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|Gibt den Einschränkungsmechanismus von einem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Dienst an.|  
-|[\<serviceTimeouts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|Gibt den Timeout für einen Dienst an.|  
-|[\<workflowRuntime\>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Legt die Einstellungen für eine Instanz von WorkflowRuntime zum Hosten von workflowbasierten [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Diensten fest.|  
-|[\<useRequestHeadersForMetadataAddress\>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Ermöglicht das Abrufen von Metadatenadressinformationen aus Anforderungsnachrichtenheadern.|  
+|<span data-ttu-id="cbd93-126">Element</span><span class="sxs-lookup"><span data-stu-id="cbd93-126">Element</span></span>|<span data-ttu-id="cbd93-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cbd93-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="cbd93-128">\<"DataContractSerializer" ></span><span class="sxs-lookup"><span data-stu-id="cbd93-128">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)|<span data-ttu-id="cbd93-129">Speichert die Konfigurationsinformationen für DataContractSerializer.</span><span class="sxs-lookup"><span data-stu-id="cbd93-129">Contains configuration data for the DataContractSerializer.</span></span>|  
+|[<span data-ttu-id="cbd93-130">\<PersistenceProvider ></span><span class="sxs-lookup"><span data-stu-id="cbd93-130">\<persistenceProvider></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistenceprovider.md)|<span data-ttu-id="cbd93-131">Gibt den Typ der zu verwendenden Persistenzanbieterimplementierung sowie das Timeout für Persistenzvorgänge an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-131">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>|  
+|[<span data-ttu-id="cbd93-132">\<Routing ></span><span class="sxs-lookup"><span data-stu-id="cbd93-132">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md)|<span data-ttu-id="cbd93-133">Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der Routingkonfiguration zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-133">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>|  
+|[<span data-ttu-id="cbd93-134">\<ServiceAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="cbd93-134">\<serviceAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|<span data-ttu-id="cbd93-135">Stellt ein Workflowkonfigurationselement bereit, das die Gültigkeit einer Übertragung, Meldung oder eines Absenders auf Dienstebene festlegt.</span><span class="sxs-lookup"><span data-stu-id="cbd93-135">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>|  
+|[<span data-ttu-id="cbd93-136">\<ServiceAuthorization ></span><span class="sxs-lookup"><span data-stu-id="cbd93-136">\<serviceAuthorization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|<span data-ttu-id="cbd93-137">Gibt Einstellungen an, die den Zugriff auf Dienstvorgänge autorisieren.</span><span class="sxs-lookup"><span data-stu-id="cbd93-137">Specifies settings that authorize access to service operations.</span></span>|  
+|[<span data-ttu-id="cbd93-138">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="cbd93-138">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="cbd93-139">Gibt die Anmeldeinformationen an, die beim Authentifizieren des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-139">Specifies the credential to be used in authenticating the service and the client credential validation-related settings.</span></span>|  
+|[<span data-ttu-id="cbd93-140">\<ServiceDebug ></span><span class="sxs-lookup"><span data-stu-id="cbd93-140">\<serviceDebug></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|<span data-ttu-id="cbd93-141">Gibt Debugging- und Hilfeinformationsfeatures für einen [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienst an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-141">Specifies debugging and help information features for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service.</span></span>|  
+|[<span data-ttu-id="cbd93-142">\<ServiceDiscovery ></span><span class="sxs-lookup"><span data-stu-id="cbd93-142">\<serviceDiscovery></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|<span data-ttu-id="cbd93-143">Gibt die Ermittelbarkeit von Dienstendpunkten an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-143">Specifies the discoverability of service endpoints.</span></span>|  
+|[<span data-ttu-id="cbd93-144">\<ServiceMetadata ></span><span class="sxs-lookup"><span data-stu-id="cbd93-144">\<serviceMetadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|<span data-ttu-id="cbd93-145">Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informationen an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-145">Specifies the publication of service metadata and associated information.</span></span>|  
+|[<span data-ttu-id="cbd93-146">\<ServiceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="cbd93-146">\<serviceSecurityAudit></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|<span data-ttu-id="cbd93-147">Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen während der Dienstvorgänge ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-147">Specifies settings that enable auditing of security events during service operations.</span></span>|  
+|[<span data-ttu-id="cbd93-148">\<ServiceThrottling ></span><span class="sxs-lookup"><span data-stu-id="cbd93-148">\<serviceThrottling></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|<span data-ttu-id="cbd93-149">Gibt den Einschränkungsmechanismus von einem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-149">Specifies the throttling mechanism of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span>|  
+|[<span data-ttu-id="cbd93-150">\<ServiceTimeouts ></span><span class="sxs-lookup"><span data-stu-id="cbd93-150">\<serviceTimeouts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|<span data-ttu-id="cbd93-151">Gibt den Timeout für einen Dienst an.</span><span class="sxs-lookup"><span data-stu-id="cbd93-151">Specifies the timeout for a service.</span></span>|  
+|[<span data-ttu-id="cbd93-152">\<WorkflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="cbd93-152">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="cbd93-153">Legt die Einstellungen für eine Instanz von WorkflowRuntime zum Hosten von workflowbasierten [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Diensten fest.</span><span class="sxs-lookup"><span data-stu-id="cbd93-153">Specifies settings for an instance of WorkflowRuntime for hosting workflow-based [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services.</span></span>|  
+|[<span data-ttu-id="cbd93-154">\<UseRequestHeadersForMetadataAddress ></span><span class="sxs-lookup"><span data-stu-id="cbd93-154">\<useRequestHeadersForMetadataAddress></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|<span data-ttu-id="cbd93-155">Ermöglicht das Abrufen von Metadatenadressinformationen aus Anforderungsnachrichtenheadern.</span><span class="sxs-lookup"><span data-stu-id="cbd93-155">Enables the retrieval of metadata address information from the request message headers.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="cbd93-156">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="cbd93-156">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Eine Auflistung von Dienstverhaltenselementen.|
+|<span data-ttu-id="cbd93-157">Element</span><span class="sxs-lookup"><span data-stu-id="cbd93-157">Element</span></span>|<span data-ttu-id="cbd93-158">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cbd93-158">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="cbd93-159">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="cbd93-159">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|<span data-ttu-id="cbd93-160">Eine Auflistung von Dienstverhaltenselementen.</span><span class="sxs-lookup"><span data-stu-id="cbd93-160">A collection of service behavior elements.</span></span>|

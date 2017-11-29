@@ -5,52 +5,46 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a651746abe22b8f5eecd571b10de07b08af26bb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 05aeeea7d10c012804fe083890bcc8516aa8c8bc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wcf-configuration-schema"></a>WCF-Konfigurationsschema
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Konfigurationselemente ermöglichen Ihnen, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst- und -Clientanwendungen zu konfigurieren. Sie können das [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) verwenden, um Konfigurationsdateien für Clients und Dienste zu erstellen und zu bearbeiten. Da die Konfigurationsdateien als XML formatiert sind, müssen Sie mit XML vertraut sein, wenn Sie diese manuell in einem Texteditor bearbeiten möchten. Andernfalls treten möglicherweise Probleme auf, wie ein nicht gefundenes XML-Elementtag oder -attribut. Das liegt daran, dass bei XML-Elementtags und -attributen zwischen Groß- und Kleinschreibung unterschieden wird.  
+# <a name="wcf-configuration-schema"></a><span data-ttu-id="38af4-102">WCF-Konfigurationsschema</span><span class="sxs-lookup"><span data-stu-id="38af4-102">WCF Configuration Schema</span></span>
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="38af4-103">-Konfigurationselemente ermöglichen Ihnen, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienst- und -Clientanwendungen zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="38af4-103"> configuration elements enable you to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service and client applications.</span></span> <span data-ttu-id="38af4-104">Sie können das [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) verwenden, um Konfigurationsdateien für Clients und Dienste zu erstellen und zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="38af4-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="38af4-105">Da die Konfigurationsdateien als XML formatiert sind, müssen Sie mit XML vertraut sein, wenn Sie diese manuell in einem Texteditor bearbeiten möchten.</span><span class="sxs-lookup"><span data-stu-id="38af4-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="38af4-106">Andernfalls treten möglicherweise Probleme auf, wie ein nicht gefundenes XML-Elementtag oder -attribut.</span><span class="sxs-lookup"><span data-stu-id="38af4-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="38af4-107">Das liegt daran, dass bei XML-Elementtags und -attributen zwischen Groß- und Kleinschreibung unterschieden wird.</span><span class="sxs-lookup"><span data-stu-id="38af4-107">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
- Das [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Konfigurationssystem basiert auf dem <xref:System.Configuration>-Namespace. Deshalb können Sie alle Standardfeatures verwenden, die vom <xref:System.Configuration>-Namespace bereitgestellt werden, wie die Konfigurationssperre, die Verschlüsselung und das Zusammenführen, um die Sicherheit Ihrer Anwendung und ihrer Konfiguration zu erhöhen. Weitere Informationen über diese Konzepte finden Sie in den folgenden Themen.  
+ <span data-ttu-id="38af4-108">Das [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Konfigurationssystem basiert auf dem <xref:System.Configuration>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="38af4-108">The [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration system is based on the <xref:System.Configuration> namespace.</span></span> <span data-ttu-id="38af4-109">Deshalb können Sie alle Standardfeatures verwenden, die vom <xref:System.Configuration>-Namespace bereitgestellt werden, wie die Konfigurationssperre, die Verschlüsselung und das Zusammenführen, um die Sicherheit Ihrer Anwendung und ihrer Konfiguration zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="38af4-109">Therefore, you can use all the standard features provided by the <xref:System.Configuration> namespace, such as configuration locking, encryption and merging to increase the security of your application and its configuration.</span></span> <span data-ttu-id="38af4-110">Weitere Informationen über diese Konzepte finden Sie in den folgenden Themen.</span><span class="sxs-lookup"><span data-stu-id="38af4-110">For more information on these concepts, see the following topics.</span></span>  
   
- [Encrypting Configuration Information (Verschlüsseln von Konfigurationsinformationen)](http://go.microsoft.com/fwlink/?LinkId=95337)  
+ [<span data-ttu-id="38af4-111">Encrypting Configuration Information (Verschlüsseln von Konfigurationsinformationen)</span><span class="sxs-lookup"><span data-stu-id="38af4-111">Encrypting Configuration Information</span></span>](http://go.microsoft.com/fwlink/?LinkId=95337)  
   
- [Locking Configuration Settings (Sperren von Konfigurationseinstellungen)](http://go.microsoft.com/fwlink/?LinkId=95338)  
+ [<span data-ttu-id="38af4-112">Locking Configuration Settings (Sperren von Konfigurationseinstellungen)</span><span class="sxs-lookup"><span data-stu-id="38af4-112">Locking Configuration Settings</span></span>](http://go.microsoft.com/fwlink/?LinkId=95338)  
   
- In diesem Abschnitt werden alle möglichen Werte eines Konfigurationselements sowie seine Interaktion mit anderen WCF-Konfigurationselementen beschrieben. Die folgende Zuordnung illustriert das WCF-Konfigurationsschema.  
+ <span data-ttu-id="38af4-113">In diesem Abschnitt werden alle möglichen Werte eines Konfigurationselements sowie seine Interaktion mit anderen WCF-Konfigurationselementen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="38af4-113">This section describes all possible values of each configuration item, and how it interacts with other WCF configuration elements.</span></span> <span data-ttu-id="38af4-114">Die folgende Zuordnung illustriert das WCF-Konfigurationsschema.</span><span class="sxs-lookup"><span data-stu-id="38af4-114">The following map illustrates the WCF configuration schema.</span></span>  
   
- ![WCF-Konfigurationsschema](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ <span data-ttu-id="38af4-115">![WCF-Konfigurationsschema](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span><span class="sxs-lookup"><span data-stu-id="38af4-115">![WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span></span>  
   
 > [!CAUTION]
->  Sie sollten die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Konfigurationsabschnitte in den Konfigurationsdateien Ihrer Anwendung (app.config) mit den entsprechenden Zugriffssteuerungslisten (ACL) sichern, um mögliche Sicherheitsrisiken zu verhindern.  So sollten Sie z.&#160;B. sicherstellen, dass nur die entsprechenden Personen auf die Sicherheitseinstellungen von Anwendungsbindungen oder auf den Dienstmodellabschnitt der Konfigurationsdatei eines Diensts zugreifen oder diese ändern können.  
+>  <span data-ttu-id="38af4-116">Sie sollten die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Konfigurationsabschnitte in den Konfigurationsdateien Ihrer Anwendung (app.config) mit den entsprechenden Zugriffssteuerungslisten (ACL) sichern, um mögliche Sicherheitsrisiken zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="38af4-116">You should protect [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration sections in your application configuration files (app.config) with appropriate Access Control Lists (ACL) to prevent any potential security threats.</span></span>  <span data-ttu-id="38af4-117">So sollten Sie z.&#160;B. sicherstellen, dass nur die entsprechenden Personen auf die Sicherheitseinstellungen von Anwendungsbindungen oder auf den Dienstmodellabschnitt der Konfigurationsdatei eines Diensts zugreifen oder diese ändern können.</span><span class="sxs-lookup"><span data-stu-id="38af4-117">For example, you should make sure that only the appropriate people can access or modify the security settings on application bindings, or the service model section of the configuration file for a service.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
- Beschreibt das `ServiceModel`-Element.  
+## <a name="in-this-section"></a><span data-ttu-id="38af4-118">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="38af4-118">In This Section</span></span>  
+ [<span data-ttu-id="38af4-119">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="38af4-119">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ <span data-ttu-id="38af4-120">Beschreibt das `ServiceModel`-Element.</span><span class="sxs-lookup"><span data-stu-id="38af4-120">Describes the `ServiceModel` element.</span></span>  
   
- [\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
- Konfiguriert das SMSvcHost.exe-Tool.  
+ [<span data-ttu-id="38af4-121">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="38af4-121">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
+ <span data-ttu-id="38af4-122">Konfiguriert das SMSvcHost.exe-Tool.</span><span class="sxs-lookup"><span data-stu-id="38af4-122">Configures the SMSvcHost.exe tool.</span></span>  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
- Das Element der obersten Ebene zum Festlegen von Optionen für die Verwendung von Serialisierern, wie z. B. <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ [<span data-ttu-id="38af4-123">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="38af4-123">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ <span data-ttu-id="38af4-124">Das Element der obersten Ebene zum Festlegen von Optionen für die Verwendung von Serialisierern, wie z. B. <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="38af4-124">The top-level element for setting options when using serializers such as the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Konfigurieren von Windows Communication Foundation-Anwendungen](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienste und -Clients konfiguriert werden.
-
+## <a name="related-sections"></a><span data-ttu-id="38af4-125">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="38af4-125">Related Sections</span></span>  
+ [<span data-ttu-id="38af4-126">Konfigurieren von Windows Communication Foundation-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="38af4-126">Configuring Windows Communication Foundation Applications</span></span>](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ <span data-ttu-id="38af4-127">Beschreibt, wie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienste und -Clients konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="38af4-127">Describes how to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services and clients.</span></span>

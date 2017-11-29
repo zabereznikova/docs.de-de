@@ -1,33 +1,32 @@
 ---
-title: "Abfrageausdr&#252;cke (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Abfrageausdrücke (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8b30deea78efe275ccaf6beabafb16a84357ba26
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Abfrageausdr&#252;cke (Entity SQL)
-Ein Abfrageausdruck fasst viele verschiedene Abfrageoperatoren in einer einzigen Syntax zusammen.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt verschiedene Arten von Ausdrücken bereit, einschließlich Folgenden: [Literale](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [Parameter](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [Variablen](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), Operatoren, [Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), Mengenoperatoren usw.  Weitere Informationen finden Sie unter [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  
+# <a name="query-expressions-entity-sql"></a><span data-ttu-id="07f01-102">Abfrageausdrücke (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="07f01-102">Query Expressions (Entity SQL)</span></span>
+<span data-ttu-id="07f01-103">Ein Abfrageausdruck fasst viele verschiedene Abfrageoperatoren in einer einzigen Syntax zusammen.</span><span class="sxs-lookup"><span data-stu-id="07f01-103">A query expression combines many different query operators into a single syntax.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="07f01-104">stellt verschiedene Arten von Ausdrücken, u. a. folgende: [Literale](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [Parameter](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [Variablen](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), Operatoren, [Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)Mengenoperatoren und so weiter.</span><span class="sxs-lookup"><span data-stu-id="07f01-104"> provides various kinds of expressions, including the following: [literals](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parameters](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variables](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operators, [functions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), set operators, and so on.</span></span> <span data-ttu-id="07f01-105">Weitere Informationen finden Sie unter [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).</span><span class="sxs-lookup"><span data-stu-id="07f01-105">For more information, see [Entity SQL Reference](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).</span></span>  
   
-## Klauseln  
- Ein Abfrageausdruck setzt sich aus einer Serie von Klauseln zusammen, die für eine Auflistung von Objekten aufeinander folgende Operationen durchführen.  Sie basieren auf denselben Klauseln, die Sie auch in einer Standard\-SQL\-SELECT\-Anweisung finden: [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) und [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).  
+## <a name="clauses"></a><span data-ttu-id="07f01-106">Klauseln</span><span class="sxs-lookup"><span data-stu-id="07f01-106">Clauses</span></span>  
+ <span data-ttu-id="07f01-107">Ein Abfrageausdruck setzt sich aus einer Serie von Klauseln zusammen, die für eine Auflistung von Objekten aufeinander folgende Operationen durchführen.</span><span class="sxs-lookup"><span data-stu-id="07f01-107">A query expression is composed of a series of clauses that apply successive operations to a collection of objects.</span></span> <span data-ttu-id="07f01-108">Sie basieren auf denselben Klauseln, die im Standard SQL select-Anweisung gefunden: [wählen](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [, in denen](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [Mit](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), und [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="07f01-108">They are based on the same clauses found in standard a SQL select statement: [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), and [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).</span></span>  
   
-## Umfang  
- In der **FROM**\-Klausel definierte Namen werden in der Reihenfolge ihres Auftretens \(von links nach rechts\) in den **FROM**\-Gültigkeitsbereich eingeführt.  In der **JOIN**\-Liste können Ausdrücke auf Namen verweisen, die zuvor in der Liste definiert wurden.  Öffentliche Eigenschaften von in der **FROM**\-Klausel festgelegten Elementen werden dem **FROM**\-Gültigkeitsbereich nicht hinzugefügt: Auf sie muss immer mit dem aliasqualifizierten Namen verwiesen werden.  Üblicherweise werden im **FROM**\-Gültigkeitsbereich alle Teile des **SELECT**\-Ausdrucks berücksichtigt.  
+## <a name="scope"></a><span data-ttu-id="07f01-109">Bereich</span><span class="sxs-lookup"><span data-stu-id="07f01-109">Scope</span></span>  
+ <span data-ttu-id="07f01-110">In der FROM-Klausel definierte Namen werden in der Reihenfolge ihres Auftretens (von links nach rechts) in den FROM-Gültigkeitsbereich eingeführt.</span><span class="sxs-lookup"><span data-stu-id="07f01-110">Names defined in the FROM clause are introduced into the FROM scope in order of appearance, left to right.</span></span> <span data-ttu-id="07f01-111">In der JOIN-Liste können Ausdrücke auf Namen verweisen, die zuvor in der Liste definiert wurden.</span><span class="sxs-lookup"><span data-stu-id="07f01-111">In the JOIN list, expressions can refer to names defined earlier in the list.</span></span> <span data-ttu-id="07f01-112">Öffentliche Eigenschaften von in der FROM-Klausel festgelegten Elementen werden dem FROM-Gültigkeitsbereich nicht hinzugefügt: Auf sie muss immer mit dem aliasqualifizierten Namen verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="07f01-112">Public properties of elements identified in the FROM clause are not added to the FROM scope: They must be always referenced through the alias-qualified name.</span></span> <span data-ttu-id="07f01-113">Üblicherweise werden im FROM-Gültigkeitsbereich alle Teile des SELECT-Ausdrucks berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="07f01-113">Normally, all parts of the select expression are considered within the FROM scope.</span></span>  
   
-## Siehe auch  
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="07f01-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07f01-114">See Also</span></span>  
+ [<span data-ttu-id="07f01-115">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="07f01-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

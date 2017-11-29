@@ -1,50 +1,56 @@
 ---
-title: "Objektidentit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Objektidentität"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 97c07ce351de5b7939bdcaf441bc46dac50a8c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Objektidentit&#228;t
-Objekte verfügen zur Laufzeit über eindeutige Identitäten.  Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz.  Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  
+# <a name="object-identity"></a><span data-ttu-id="4e6d2-102">Objektidentität</span><span class="sxs-lookup"><span data-stu-id="4e6d2-102">Object Identity</span></span>
+<span data-ttu-id="4e6d2-103">Objekte verfügen zur Laufzeit über eindeutige Identitäten.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-103">Objects in the runtime have unique identities.</span></span> <span data-ttu-id="4e6d2-104">Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-104">Two variables that refer to the same object actually refer to the same instance of the object.</span></span> <span data-ttu-id="4e6d2-105">Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-105">Because of this fact, changes that you make by way of a path through one variable are immediately visible through the other.</span></span>  
   
- Zeilen in einer relationalen Datenbanktabelle weisen keine eindeutigen Identitäten auf.  Da jede Zeile über einen eindeutigen Primärschlüssel verfügt, weisen keine zwei Zeilen den gleichen Schlüsselwert auf.  Diese Tatsache schränkt jedoch nur den Inhalt der Datenbanktabelle ein.  
+ <span data-ttu-id="4e6d2-106">Zeilen in einer relationalen Datenbanktabelle weisen keine eindeutigen Identitäten auf.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-106">Rows in a relational database table do not have unique identities.</span></span> <span data-ttu-id="4e6d2-107">Da jede Zeile über einen eindeutigen Primärschlüssel verfügt, weisen keine zwei Zeilen den gleichen Schlüsselwert auf.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-107">Because each row has a unique primary key, no two rows share the same key value.</span></span> <span data-ttu-id="4e6d2-108">Diese Tatsache schränkt jedoch nur den Inhalt der Datenbanktabelle ein.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-108">However, this fact constrains only the contents of the database table.</span></span>  
   
- Tatsächlich werden die Daten in der Regel aus der Datenbank in eine andere Kategorie abgerufen, von der aus sie durch eine Anwendung genutzt werden.  Dies ist das von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützte Modell.  Wenn Daten in Form von Zeilen aus der Datenbank abgerufen werden, können Sie nicht davon ausgehen, dass zwei Zeilen, die die gleichen Daten darstellen, tatsächlich der gleichen Zeileninstanz entsprechen.  Wenn Sie einen bestimmten Kunden zweimal abrufen, erhalten Sie zwei Datenzeilen. Jede Zeile enthält die gleichen Informationen.  
+ <span data-ttu-id="4e6d2-109">Tatsächlich werden die Daten in der Regel aus der Datenbank in eine andere Kategorie abgerufen, von der aus sie durch eine Anwendung genutzt werden.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-109">In reality, data is most often brought out of the database and into a different tier, where an application works with it.</span></span> <span data-ttu-id="4e6d2-110">Dies ist das von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützte Modell.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-110">This is the model that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports.</span></span> <span data-ttu-id="4e6d2-111">Wenn Daten in Form von Zeilen aus der Datenbank abgerufen werden, können Sie nicht davon ausgehen, dass zwei Zeilen, die die gleichen Daten darstellen, tatsächlich der gleichen Zeileninstanz entsprechen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-111">When data is brought out of the database as rows, you have no expectation that two rows that represent the same data actually correspond to the same row instances.</span></span> <span data-ttu-id="4e6d2-112">Wenn Sie einen bestimmten Kunden zweimal abrufen, erhalten Sie zwei Datenzeilen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-112">If you query for a specific customer two times, you get two rows of data.</span></span> <span data-ttu-id="4e6d2-113">Jede Zeile enthält die gleichen Informationen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-113">Each row contains the same information.</span></span>  
   
- Von Objekten erwarten Sie etwas ganz anderes.  Sie gehen davon aus, dass Sie bei wiederholtem Abrufen der gleichen Informationen aus dem <xref:System.Data.Linq.DataContext> tatsächlich die gleiche Objektinstanz erhalten.  Sie erwarten dieses Verhalten, da Objekte für Ihre Anwendung von besonderer Bedeutung sind und weil Sie von einem objektgemäßen Verhalten ausgehen.  Sie haben sie als Hierarchien oder Graphen entworfen.  Sie möchten diese Objekte als solche abrufen und keine mehrfach replizierten Instanzen erhalten, nur weil Sie die gleichen Informationen mehrfach abrufen.  
+ <span data-ttu-id="4e6d2-114">Von Objekten erwarten Sie etwas ganz anderes.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-114">With objects you expect something very different.</span></span> <span data-ttu-id="4e6d2-115">Sie gehen davon aus, dass Sie bei wiederholtem Abrufen der gleichen Informationen aus dem <xref:System.Data.Linq.DataContext> tatsächlich die gleiche Objektinstanz erhalten.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-115">You expect that if you ask the <xref:System.Data.Linq.DataContext> for the same information repeatedly, it will in fact give you the same object instance.</span></span> <span data-ttu-id="4e6d2-116">Sie erwarten dieses Verhalten, da Objekte für Ihre Anwendung von besonderer Bedeutung sind und weil Sie von einem objektgemäßen Verhalten ausgehen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-116">You expect this behavior because objects have special meaning for your application and you expect them to behave like objects.</span></span> <span data-ttu-id="4e6d2-117">Sie haben sie als Hierarchien oder Graphen entworfen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-117">You designed them as hierarchies or graphs.</span></span> <span data-ttu-id="4e6d2-118">Sie möchten diese Objekte als solche abrufen und keine mehrfach replizierten Instanzen erhalten, nur weil Sie die gleichen Informationen mehrfach abrufen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-118">You expect to retrieve them as such and not to receive multitudes of replicated instances just because you asked for the same thing more than one time.</span></span>  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwaltet der <xref:System.Data.Linq.DataContext> die Objektidentität.  Wenn Sie eine neue Zeile aus der Datenbank abrufen, wird diese mit ihrem Primärschlüssel in einer Identitätstabelle protokolliert, und es wird ein neues Objekt erstellt.  Jedes Mal, wenn Sie die gleiche Zeile abrufen, wird die ursprüngliche Objektinstanz an die Anwendung zurückgegeben.  Auf diese Weise übersetzt der <xref:System.Data.Linq.DataContext> das Identitätskonzept aus Sicht der Datenbank \(Primärschlüssel\) in das Identitätskonzept aus Sicht der Sprache \(Instanzen\).  Die Anwendung sieht nur das Objekt in dem Zustand, in dem es zuerst abgerufen wurde.  Die neuen Daten werden \(sofern sie abweichen\) verworfen.  Weitere Informationen finden Sie unter [Abrufen von Objekten aus dem Identitäts\-Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ <span data-ttu-id="4e6d2-119">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwaltet der <xref:System.Data.Linq.DataContext> die Objektidentität.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-119">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Data.Linq.DataContext> manages object identity.</span></span> <span data-ttu-id="4e6d2-120">Wenn Sie eine neue Zeile aus der Datenbank abrufen, wird diese mit ihrem Primärschlüssel in einer Identitätstabelle protokolliert, und es wird ein neues Objekt erstellt.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-120">Whenever you retrieve a new row from the database, the row is logged in an identity table by its primary key, and a new object is created.</span></span> <span data-ttu-id="4e6d2-121">Jedes Mal, wenn Sie die gleiche Zeile abrufen, wird die ursprüngliche Objektinstanz an die Anwendung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-121">Whenever you retrieve that same row, the original object instance is handed back to the application.</span></span> <span data-ttu-id="4e6d2-122">Auf diese Weise übersetzt der <xref:System.Data.Linq.DataContext> das Identitätskonzept aus Sicht der Datenbank (Primärschlüssel) in das Identitätskonzept aus Sicht der Sprache (Instanzen).</span><span class="sxs-lookup"><span data-stu-id="4e6d2-122">In this manner the <xref:System.Data.Linq.DataContext> translates the concept of identity as seen by the database (that is, primary keys) into the concept of identity seen by the language (that is, instances).</span></span> <span data-ttu-id="4e6d2-123">Die Anwendung sieht nur das Objekt in dem Zustand, in dem es zuerst abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-123">The application only sees the object in the state that it was first retrieved.</span></span> <span data-ttu-id="4e6d2-124">Die neuen Daten werden (sofern sie abweichen) verworfen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-124">The new data, if different, is discarded.</span></span> <span data-ttu-id="4e6d2-125">Weitere Informationen finden Sie unter [Abrufen von Objekten aus dem Identitäts-Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).</span><span class="sxs-lookup"><span data-stu-id="4e6d2-125">For more information, see [Retrieving Objects from the Identity Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet diesen Ansatz zur Verwaltung der Integrität lokaler Objekte, um vollständige Updates zu unterstützen.  Da die einzigen Änderungen, die nach dem ersten Erstellen des Objekts auftreten, von der Anwendung vorgenommen werden, ist die Absicht der Anwendung klar.  Sind zwischenzeitlich Änderungen durch eine externe Partei erfolgt, werden diese zum Zeitpunkt des Aufrufs von `SubmitChanges()` identifiziert.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="4e6d2-126">verwendet diesen Ansatz der Integrität lokaler Objekte zu verwalten, um vollständige Updates zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-126"> uses this approach to manage the integrity of local objects in order to support optimistic updates.</span></span> <span data-ttu-id="4e6d2-127">Da die einzigen Änderungen, die nach dem ersten Erstellen des Objekts auftreten, von der Anwendung vorgenommen werden, ist die Absicht der Anwendung klar.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-127">Because the only changes that occur after the object is at first created are those made by the application, the intent of the application is clear.</span></span> <span data-ttu-id="4e6d2-128">Sind zwischenzeitlich Änderungen durch eine externe Partei erfolgt, werden diese zum Zeitpunkt des Aufrufs von `SubmitChanges()` identifiziert.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-128">If changes by an outside party have occurred in the interim, they are identified at the time `SubmitChanges()` is called.</span></span>  
   
 > [!NOTE]
->  Lässt sich das von der Abfrage angeforderte Objekt leicht als bereits abgerufen identifizieren, wird keine Abfrage ausgeführt.  Die Identitätstabelle dient als Cache für alle zuvor abgerufenen Objekte.  
+>  <span data-ttu-id="4e6d2-129">Lässt sich das von der Abfrage angeforderte Objekt leicht als bereits abgerufen identifizieren, wird keine Abfrage ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-129">If the object requested by the query is easily identifiable as one already retrieved, no query is executed.</span></span> <span data-ttu-id="4e6d2-130">Die Identitätstabelle dient als Cache für alle zuvor abgerufenen Objekte.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-130">The identity table acts as a cache of all previously retrieved objects.</span></span>  
   
-## Beispiele  
+## <a name="examples"></a><span data-ttu-id="4e6d2-131">Beispiele</span><span class="sxs-lookup"><span data-stu-id="4e6d2-131">Examples</span></span>  
   
-### Objektzwischenspeicherung, Beispiel 1  
- Wenn Sie in diesem Beispiel eine Abfrage zweimal ausführen, erhalten Sie stets einen Verweis auf das gleiche Objekt im Arbeitsspeicher.  
+### <a name="object-caching-example-1"></a><span data-ttu-id="4e6d2-132">Objektzwischenspeicherung, Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="4e6d2-132">Object Caching Example 1</span></span>  
+ <span data-ttu-id="4e6d2-133">Wenn Sie in diesem Beispiel eine Abfrage zweimal ausführen, erhalten Sie stets einen Verweis auf das gleiche Objekt im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-133">In this example, if you execute the same query two times, you receive a reference to the same object in memory every time.</span></span>  
   
  [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
  [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
   
-### Objektzwischenspeicherung, Beispiel 2  
- Wenn Sie in diesem Beispiel unterschiedliche Abfragen ausführen, die die gleiche Zeile aus der Datenbank zurückgeben, erhalten Sie stets einen Verweis auf das gleiche Objekt im Arbeitsspeicher.  
+### <a name="object-caching-example-2"></a><span data-ttu-id="4e6d2-134">Objektzwischenspeicherung, Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="4e6d2-134">Object Caching Example 2</span></span>  
+ <span data-ttu-id="4e6d2-135">Wenn Sie in diesem Beispiel unterschiedliche Abfragen ausführen, die die gleiche Zeile aus der Datenbank zurückgeben, erhalten Sie stets einen Verweis auf das gleiche Objekt im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="4e6d2-135">In this example, if you execute different queries that return the same row from the database, you receive a reference to the same object in memory every time.</span></span>  
   
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="4e6d2-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4e6d2-136">See Also</span></span>  
+ [<span data-ttu-id="4e6d2-137">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="4e6d2-137">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

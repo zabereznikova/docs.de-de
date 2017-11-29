@@ -1,49 +1,48 @@
 ---
-title: "Literale (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Literale (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 50edfb344177dbec8cff9609aeab56d1db762eb7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Literale (Entity SQL)
-In diesem Thema wird die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Unterstützung für Literale beschrieben.  
+# <a name="literals-entity-sql"></a><span data-ttu-id="4d712-102">Literale (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4d712-102">Literals (Entity SQL)</span></span>
+<span data-ttu-id="4d712-103">In diesem Thema wird die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Unterstützung für Literale beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4d712-103">This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.</span></span>  
   
-## Null  
- Das NULL\-Literal wird verwendet, um für einen beliebigen Typ den Wert Null darzustellen.  Das NULL\-Literal ist mit jedem Typ kompatibel.  
+## <a name="null"></a><span data-ttu-id="4d712-104">Null</span><span class="sxs-lookup"><span data-stu-id="4d712-104">Null</span></span>  
+ <span data-ttu-id="4d712-105">Das NULL-Literal wird verwendet, um für einen beliebigen Typ den Wert Null darzustellen.</span><span class="sxs-lookup"><span data-stu-id="4d712-105">The null literal is used to represent the value null for any type.</span></span> <span data-ttu-id="4d712-106">Das NULL-Literal ist mit jedem Typ kompatibel.</span><span class="sxs-lookup"><span data-stu-id="4d712-106">A null literal is compatible with any type.</span></span>  
   
- Typisierte Nullen können durch Umwandlung eines NULL\-Literals erstellt werden.  Weitere Informationen finden Sie unter [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ <span data-ttu-id="4d712-107">Typisierte Nullen können durch Umwandlung eines NULL-Literals erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="4d712-107">Typed nulls can be created by a cast over a null literal.</span></span> <span data-ttu-id="4d712-108">Weitere Informationen finden Sie unter [Umwandlung](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="4d712-108">For more information, see [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).</span></span>  
   
- Regeln zur Verwendung von nicht typisierten NULL\-Literalen finden Sie unter [NULL\-Literale und Typrückschluss](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ <span data-ttu-id="4d712-109">Für Regeln dazu, wo Gleitkommawert frei null-Literale verwendet werden kann, finden Sie unter [Null-Literale und Typrückschluss](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="4d712-109">For rules about where free floating null literals can be used, see [Null Literals and Type Inference](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).</span></span>  
   
-## Boolean  
- Boolesche Literale werden durch die Schlüsselwörter `true` und `false` dargestellt.  
+## <a name="boolean"></a><span data-ttu-id="4d712-110">Boolesch</span><span class="sxs-lookup"><span data-stu-id="4d712-110">Boolean</span></span>  
+ <span data-ttu-id="4d712-111">Boolesche Literale werden durch die Schlüsselwörter `true` und `false` dargestellt.</span><span class="sxs-lookup"><span data-stu-id="4d712-111">Boolean literals are represented by the keywords `true` and `false`.</span></span>  
   
-## Ganze Zahl  
- Ganzzahlliterale können vom Typ <xref:System.Int32> oder <xref:System.Int64> sein.  Ein <xref:System.Int32>\-Literal ist eine Folge numerischer Zeichen.  Ein <xref:System.Int64>\-Literal ist eine Folge numerischer Zeichen, auf die der Großbuchstabe "L" folgt.  
+## <a name="integer"></a><span data-ttu-id="4d712-112">Ganze Zahl</span><span class="sxs-lookup"><span data-stu-id="4d712-112">Integer</span></span>  
+ <span data-ttu-id="4d712-113">Ganzzahlliterale können vom Typ <xref:System.Int32> oder <xref:System.Int64> sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-113">Integer literals can be of type <xref:System.Int32> or <xref:System.Int64>.</span></span> <span data-ttu-id="4d712-114">Ein <xref:System.Int32>-Literal ist eine Folge numerischer Zeichen.</span><span class="sxs-lookup"><span data-stu-id="4d712-114">An <xref:System.Int32> literal is a series of numeric characters.</span></span> <span data-ttu-id="4d712-115">Ein <xref:System.Int64>-Literal ist eine Folge numerischer Zeichen, auf die der Großbuchstabe "L" folgt.</span><span class="sxs-lookup"><span data-stu-id="4d712-115">An <xref:System.Int64> literal is series of numeric characters followed by an uppercase L.</span></span>  
   
-## Decimal  
- Eine Festkommazahl \(dezimal\) besteht aus einer Reihe von numerischen Zeichen, einem Punkt \(.\) und einer weiteren Folge numerischer Zeichen, auf die der Großbuchstabe "M" folgt.  
+## <a name="decimal"></a><span data-ttu-id="4d712-116">Decimal</span><span class="sxs-lookup"><span data-stu-id="4d712-116">Decimal</span></span>  
+ <span data-ttu-id="4d712-117">Eine Festkommazahl (dezimal) besteht aus einer Reihe von numerischen Zeichen, einem Punkt (.) und einer weiteren Folge numerischer Zeichen, auf die der Großbuchstabe "M" folgt.</span><span class="sxs-lookup"><span data-stu-id="4d712-117">A fixed-point number (decimal) is a series of numeric characters, a dot (.) and another series of numeric characters followed by an uppercase "M".</span></span>  
   
-## Float, Double  
- Eine Gleitkommazahl mit doppelter Genauigkeit ist eine Reihe von numerischen Zeichen, einem Punkt \(.\) und einer weiteren Folge numerischer Zeichen, auf die ein Exponent folgen kann.  Eine Gleitkommazahl mit einfacher Genauigkeit \(oder "Float"\) besteht aus einer Gleitkommazahlensyntax mit doppelter Genauigkeit, auf die der Kleinbuchstabe "f" folgt.  
+## <a name="float-double"></a><span data-ttu-id="4d712-118">Float, Double</span><span class="sxs-lookup"><span data-stu-id="4d712-118">Float, Double</span></span>  
+ <span data-ttu-id="4d712-119">Eine Gleitkommazahl mit doppelter Genauigkeit ist eine Reihe von numerischen Zeichen, einem Punkt (.) und einer weiteren Folge numerischer Zeichen, auf die ein Exponent folgen kann.</span><span class="sxs-lookup"><span data-stu-id="4d712-119">A double-precision floating point number is a series of numeric characters, a dot (.) and another series of numeric characters possibly followed by an exponent.</span></span> <span data-ttu-id="4d712-120">Eine Gleitkommazahl mit einfacher Genauigkeit (oder "Float") besteht aus einer Gleitkommazahlensyntax mit doppelter Genauigkeit, auf die der Kleinbuchstabe "f" folgt.</span><span class="sxs-lookup"><span data-stu-id="4d712-120">A single-precisions floating point number (or float) is a double-precision floating point number syntax followed by the lowercase f.</span></span>  
   
-## Zeichenfolge  
- Ein String ist eine in Anführungszeichen eingeschlossene Zeichenfolge.  Die Zeichenfolge kann entweder in einfache \(`'`\) oder doppelte \("\) Anführungszeichen eingeschlossen sein.  Zeichenfolgenliterale sind entweder Unicode oder Nicht\-Unicode.  Stellen Sie dem Literal ein groß geschriebenes "N" voran, um ein Zeichenfolgeliteral als Unicode zu deklarieren.  Standardmäßig werden Nicht\-Unicode\-Zeichenfolgenliterale verwendet.  Zwischen "N" und dem Inhalt des Zeichenfolgenliterals dürfen keine Leerzeichen stehen, und "N" muss ein Großbuchstabe sein.  
+## <a name="string"></a><span data-ttu-id="4d712-121">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="4d712-121">String</span></span>  
+ <span data-ttu-id="4d712-122">Ein String ist eine in Anführungszeichen eingeschlossene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="4d712-122">A string is a series of characters enclosed in quote marks.</span></span> <span data-ttu-id="4d712-123">Die Zeichenfolge kann entweder in einfache (`'`) oder doppelte (") Anführungszeichen eingeschlossen sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-123">Quotes can be either both single-quotes (`'`) or both double-quotes (").</span></span> <span data-ttu-id="4d712-124">Zeichenfolgenliterale sind entweder Unicode oder Nicht-Unicode.</span><span class="sxs-lookup"><span data-stu-id="4d712-124">Character string literals can be either Unicode or non-Unicode.</span></span> <span data-ttu-id="4d712-125">Stellen Sie dem Literal ein groß geschriebenes "N" voran, um ein Zeichenfolgeliteral als Unicode zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="4d712-125">To declare a character string literal as Unicode, prefix the literal with an uppercase "N".</span></span> <span data-ttu-id="4d712-126">Standardmäßig werden Nicht-Unicode-Zeichenfolgenliterale verwendet.</span><span class="sxs-lookup"><span data-stu-id="4d712-126">The default is non-Unicode character string literals.</span></span> <span data-ttu-id="4d712-127">Zwischen "N" und dem Inhalt des Zeichenfolgenliterals dürfen keine Leerzeichen stehen, und "N" muss ein Großbuchstabe sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-127">There can be no spaces between the N and the string literal payload, and the N must be uppercase.</span></span>  
   
 ```  
 'hello' -- non-Unicode character string literal  
@@ -53,34 +52,34 @@ N"This is a string!"
 'so is THIS'  
 ```  
   
-## DateTime  
- Ein datetime\-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums\- und einem Uhrzeitteil.  Datums\- und einem Uhrzeitteile sind obligatorisch, und es gibt keine Standardwerte.  
+## <a name="datetime"></a><span data-ttu-id="4d712-128">DateTime</span><span class="sxs-lookup"><span data-stu-id="4d712-128">DateTime</span></span>  
+ <span data-ttu-id="4d712-129">Ein datetime-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums- und einem Uhrzeitteil.</span><span class="sxs-lookup"><span data-stu-id="4d712-129">A datetime literal is independent of locale and is composed of a date part and a time part.</span></span> <span data-ttu-id="4d712-130">Datums- und einem Uhrzeitteile sind obligatorisch, und es gibt keine Standardwerte.</span><span class="sxs-lookup"><span data-stu-id="4d712-130">Both date and time parts are mandatory and there are no default values.</span></span>  
   
- Der Datumsteil muss folgendes Format aufweisen: `YYYY`\-`MM`\-`DD`, wobei `YYYY` eine Jahresangabe mit vier Ziffern zwischen 0001 und 9999, `MM` der Monat zwischen 1 und 12 und `DD` der Wert für den Tag ist, der für den gegebenen Monat `MM` gültig ist.  
+ <span data-ttu-id="4d712-131">Der Datumsteil muss das Format aufweisen: `YYYY` - `MM` - `DD`, wobei `YYYY` ist ein Wert vier Ziffern zwischen 0001 und 9999, `MM` ist der Monat zwischen 1 und 12 und `DD` ist der Tageswert, der für den gegebenen Monat gültig ist `MM`.</span><span class="sxs-lookup"><span data-stu-id="4d712-131">The date part must have the format: `YYYY`-`MM`-`DD`, where `YYYY` is a four digit year value between 0001 and 9999, `MM` is the month between 1 and 12 and `DD` is the day value that is valid for the given month `MM`.</span></span>  
   
- Der Zeitteil muss folgendes Format aufweisen: `HH`:`MM`\[:`SS`\[.fffffff\]\], wobei `HH` ein Stundenwert zwischen 0 und 23, `MM` ein Minutenwert zwischen 0 und einschließlich 59, `SS` ein Sekundenwert zwischen 0 und einschließlich 59 und fffffff der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.  Alle Wertbereiche sind inklusive.  Der Wert für die Sekundenbruchteile ist optional.  Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.  Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.  
+ <span data-ttu-id="4d712-132">Der Zeitteil muss folgendes Format aufweisen: `HH`:`MM`[:`SS`[.fffffff]], wobei `HH` ein Stundenwert zwischen 0 und 23, `MM` ein Minutenwert zwischen 0 und einschließlich 59, `SS` ein Sekundenwert zwischen 0 und einschließlich 59 und fffffff der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.</span><span class="sxs-lookup"><span data-stu-id="4d712-132">The time part must have the format: `HH`:`MM`[:`SS`[.fffffff]], where `HH` is the hour value between 0 and 23, `MM` is the minute value between 0 and 59, `SS` is the second value between 0 and 59 and fffffff is the fractional second value between 0 and 9999999.</span></span> <span data-ttu-id="4d712-133">Alle Wertbereiche sind inklusive.</span><span class="sxs-lookup"><span data-stu-id="4d712-133">All value ranges are inclusive.</span></span> <span data-ttu-id="4d712-134">Der Wert für die Sekundenbruchteile ist optional.</span><span class="sxs-lookup"><span data-stu-id="4d712-134">Fractional seconds are optional.</span></span> <span data-ttu-id="4d712-135">Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4d712-135">Seconds are optional unless fractional seconds are specified; in this case, seconds are required.</span></span> <span data-ttu-id="4d712-136">Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.</span><span class="sxs-lookup"><span data-stu-id="4d712-136">When seconds or fractional seconds are not specified, the default value of zero will be used instead.</span></span>  
   
- Zwischen dem DATETIME\-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
+ <span data-ttu-id="4d712-137">Zwischen dem DATETIME-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-137">There can be any number of spaces between the DATETIME symbol and the literal payload, but no new lines.</span></span>  
   
 ```  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## zeit  
- Das time\-Literal ist unabhängig vom Gebietsschema und besteht ausschließlich aus einem Uhrzeitteil.  Der Uhrzeitteil ist zwingend erforderlich, und hierfür ist kein Standardwert vorhanden.  Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM\[:SS\[.fffffff\]\], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und einschließlich 59 und "fffffff" der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.  Alle Wertbereiche sind inklusive.  Der Wert für die Sekundenbruchteile ist optional.  Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.  Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.  
+## <a name="time"></a><span data-ttu-id="4d712-138">zeit</span><span class="sxs-lookup"><span data-stu-id="4d712-138">Time</span></span>  
+ <span data-ttu-id="4d712-139">Das time-Literal ist unabhängig vom Gebietsschema und besteht ausschließlich aus einem Uhrzeitteil.</span><span class="sxs-lookup"><span data-stu-id="4d712-139">A time literal is independent of locale and composed of a time part only.</span></span> <span data-ttu-id="4d712-140">Der Uhrzeitteil ist zwingend erforderlich, und hierfür ist kein Standardwert vorhanden.</span><span class="sxs-lookup"><span data-stu-id="4d712-140">The time part is mandatory and there is no default value.</span></span> <span data-ttu-id="4d712-141">Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM[:SS[.fffffff]], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und einschließlich 59 und "fffffff" der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.</span><span class="sxs-lookup"><span data-stu-id="4d712-141">It must have the format HH:MM[:SS[.fffffff]], where HH is the hour value between 0 and 23, MM is the minute value between 0 and 59, SS is the second value between 0 and 59, and fffffff is the second fraction value between 0 and 9999999.</span></span> <span data-ttu-id="4d712-142">Alle Wertbereiche sind inklusive.</span><span class="sxs-lookup"><span data-stu-id="4d712-142">All value ranges are inclusive.</span></span> <span data-ttu-id="4d712-143">Der Wert für die Sekundenbruchteile ist optional.</span><span class="sxs-lookup"><span data-stu-id="4d712-143">Fractional seconds are optional.</span></span> <span data-ttu-id="4d712-144">Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4d712-144">Seconds are optional unless fractional seconds are specified; in this case, seconds are required.</span></span> <span data-ttu-id="4d712-145">Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.</span><span class="sxs-lookup"><span data-stu-id="4d712-145">When seconds or fractions are not specified, the default value of zero will be used instead.</span></span>  
   
- Zwischen dem TIME\-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
+ <span data-ttu-id="4d712-146">Zwischen dem TIME-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-146">There can be any number of spaces between the TIME symbol and the literal payload, but no new lines.</span></span>  
   
 ```  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
   
-## DateTimeOffset  
- Ein datetimeoffset\-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums\-, einem Uhrzeit\- und einem Offsetteil.  Alle Datums\-, Uhrzeit\- und Offsetteile sind obligatorisch, und es gibt keine Standardwerte.  Der Datumsteil muss folgendes Format aufweisen: JJJJ\-MM\-TT, wobei "JJJJ" eine Jahresangabe mit vier Ziffern zwischen 0001 und 9999, "MM" der Wert für den Monat zwischen 1 und 12 und "DD" der Wert für den Tag ist, der für den gegebenen Monat gültig ist.  Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM\[:SS\[.fffffff\]\], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und 59 und "fffffff" ein Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.  Alle Wertbereiche sind inklusive.  Der Wert für die Sekundenbruchteile ist optional.  Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.  Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.  Der Offsetteil muss das Format {\+ &#124; \-} HH:MM aufweisen, wobei "HH" und "MM" die gleiche Bedeutung wie im Zeitteil besitzen.  Der Wert für den Offsetbereich muss jedoch zwischen \-14:00 und \+14:00 liegen.  
+## <a name="datetimeoffset"></a><span data-ttu-id="4d712-147">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="4d712-147">DateTimeOffset</span></span>  
+ <span data-ttu-id="4d712-148">Ein datetimeoffset-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums-, einem Uhrzeit- und einem Offsetteil.</span><span class="sxs-lookup"><span data-stu-id="4d712-148">A datetimeoffset literal is independent of locale and composed of a date part, a time part, and an offset part.</span></span> <span data-ttu-id="4d712-149">Alle Datums-, Uhrzeit- und Offsetteile sind obligatorisch, und es gibt keine Standardwerte.</span><span class="sxs-lookup"><span data-stu-id="4d712-149">All date, time, and offset parts are mandatory and there are no default values.</span></span> <span data-ttu-id="4d712-150">Der Datumsteil muss folgendes Format aufweisen: JJJJ-MM-TT, wobei "JJJJ" eine Jahresangabe mit vier Ziffern zwischen 0001 und 9999, "MM" der Wert für den Monat zwischen 1 und 12 und "DD" der Wert für den Tag ist, der für den gegebenen Monat gültig ist.</span><span class="sxs-lookup"><span data-stu-id="4d712-150">The date part must have the format YYYY-MM-DD, where YYYY is a four digit year value between 0001 and 9999, MM is the month between 1 and 12, and DD is the day value that is valid for the given month.</span></span> <span data-ttu-id="4d712-151">Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM[:SS[.fffffff]], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und 59 und "fffffff" ein Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist.</span><span class="sxs-lookup"><span data-stu-id="4d712-151">The time part must have the format HH:MM[:SS[.fffffff]], where HH is the hour value between 0 and 23, MM is the minute value between 0 and 59, SS is the second value between 0 and 59, and fffffff is the fractional second value between 0 and 9999999.</span></span> <span data-ttu-id="4d712-152">Alle Wertbereiche sind inklusive.</span><span class="sxs-lookup"><span data-stu-id="4d712-152">All value ranges are inclusive.</span></span> <span data-ttu-id="4d712-153">Der Wert für die Sekundenbruchteile ist optional.</span><span class="sxs-lookup"><span data-stu-id="4d712-153">Fractional seconds are optional.</span></span> <span data-ttu-id="4d712-154">Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4d712-154">Seconds are optional unless fractional seconds are specified; in this case, seconds are required.</span></span> <span data-ttu-id="4d712-155">Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.</span><span class="sxs-lookup"><span data-stu-id="4d712-155">When seconds or fractions are not specified, the default value of zero will be used instead.</span></span> <span data-ttu-id="4d712-156">Der offsetteil muss haben das Format {+ &#124;-} hh: mm, wobei "hh" und MM dieselbe Bedeutung wie im Zeitteil haben.</span><span class="sxs-lookup"><span data-stu-id="4d712-156">The offset part must have the format {+&#124;-}HH:MM, where HH and MM have the same meaning as in the time part.</span></span> <span data-ttu-id="4d712-157">Der Wert für den Offsetbereich muss jedoch zwischen -14:00 und +14:00 liegen.</span><span class="sxs-lookup"><span data-stu-id="4d712-157">The range of the offset, however, must be between -14:00 and + 14:00</span></span>  
   
- Zwischen dem DATETIMEOFFSET\-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
+ <span data-ttu-id="4d712-158">Zwischen dem DATETIMEOFFSET-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-158">There can be any number of spaces between the DATETIMEOFFSET symbol and the literal payload, but no new lines.</span></span>  
   
 ```  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
@@ -88,12 +87,12 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
 ```  
   
 > [!NOTE]
->  Ein gültiger Entity SQL\-Literalwert kann aus den unterstützten Bereichen für CLR oder die Datenquelle herausfallen.  Dies könnte zu einer Ausnahme führen.  
+>  <span data-ttu-id="4d712-159">Ein gültiger Entity SQL-Literalwert kann aus den unterstützten Bereichen für CLR oder die Datenquelle herausfallen.</span><span class="sxs-lookup"><span data-stu-id="4d712-159">A valid Entity SQL literal value can fall outside the supported ranges for CLR or the data source.</span></span> <span data-ttu-id="4d712-160">Dies könnte zu einer Ausnahme führen.</span><span class="sxs-lookup"><span data-stu-id="4d712-160">This might result in an exception</span></span>  
   
-## Binär  
- Ein binäres Zeichenfolgenliteral ist eine in einfache Anführungszeichen eingeschlossene Folge von Hexadezimalziffern, die auf das Binary\-Schlüsselwort oder das Symbol `X` oder `x` folgt.  Beim Symbol `X`wird die Groß\- und Kleinschreibung nicht berücksichtigt.  Zwischen dem `binary`\-Schlüsselwort und dem binären Zeichenfolgenwert können null oder mehr Leerzeichen stehen.  
+## <a name="binary"></a><span data-ttu-id="4d712-161">Binär</span><span class="sxs-lookup"><span data-stu-id="4d712-161">Binary</span></span>  
+ <span data-ttu-id="4d712-162">Ein binäres Zeichenfolgenliteral ist eine in einfache Anführungszeichen eingeschlossene Folge von Hexadezimalziffern, die auf das Binary-Schlüsselwort oder das Symbol `X` oder `x` folgt.</span><span class="sxs-lookup"><span data-stu-id="4d712-162">A binary string literal is a sequence of hexadecimal digits delimited by single quotes following the keyword binary or the shortcut symbol `X` or `x`.</span></span> <span data-ttu-id="4d712-163">Beim Symbol `X`wird die Groß- und Kleinschreibung nicht berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="4d712-163">The shortcut symbol `X` is case insensitive.</span></span> <span data-ttu-id="4d712-164">Zwischen dem `binary`-Schlüsselwort und dem binären Zeichenfolgenwert können null oder mehr Leerzeichen stehen.</span><span class="sxs-lookup"><span data-stu-id="4d712-164">A zero or more spaces are allowed between the keyword `binary` and the binary string value.</span></span>  
   
- Bei den Hexadezimalzeichen wird außerdem die Groß\-\/Kleinschreibung nicht berücksichtigt.  Wenn das Literal aus einer ungeraden Anzahl von Hexadezimalziffern zusammengesetzt ist, wird das Literal zu einer geraden Anzahl von Hexadezimalziffern aufgefüllt, indem dem Literal die Hexadezimalziffer 0 vorangestellt wird.  Für die Größe von binären Zeichenfolgen gibt es keine formale Beschränkung.  
+ <span data-ttu-id="4d712-165">Bei den Hexadezimalzeichen wird außerdem die Groß-/Kleinschreibung nicht berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="4d712-165">Hexadecimal characters are also case insensitive.</span></span> <span data-ttu-id="4d712-166">Wenn das Literal aus einer ungeraden Anzahl von Hexadezimalziffern zusammengesetzt ist, wird das Literal zu einer geraden Anzahl von Hexadezimalziffern aufgefüllt, indem dem Literal die Hexadezimalziffer 0 vorangestellt wird.</span><span class="sxs-lookup"><span data-stu-id="4d712-166">If the literal is composed of an odd number of hexadecimal digits, the literal will be aligned to the next even hexadecimal digit by prefixing the literal with a hexadecimal zero digit.</span></span> <span data-ttu-id="4d712-167">Für die Größe von binären Zeichenfolgen gibt es keine formale Beschränkung.</span><span class="sxs-lookup"><span data-stu-id="4d712-167">There is no formal limit on the size of the binary string.</span></span>  
   
 ```  
 Binary'00ffaabb'  
@@ -102,15 +101,15 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## Guid  
- Ein `GUID`\-Literal stellt einen global eindeutigen Bezeichner dar.  Das Literal ist eine aus dem Schlüsselwort `GUID` bestehende Sequenz, auf das in einfachen Anführungszeichen eingeschlossene Hexadezimalzeichen in dem als *Registrierungsformat* bezeichneten Format '8\-4\-4\-4\-12' folgen.  Bei den Hexadezimalzeichen wird die Groß\/\- Kleinschreibung nicht berücksichtigt.  
+## <a name="guid"></a><span data-ttu-id="4d712-168">Guid</span><span class="sxs-lookup"><span data-stu-id="4d712-168">Guid</span></span>  
+ <span data-ttu-id="4d712-169">Ein `GUID`-Literal stellt einen global eindeutigen Bezeichner dar.</span><span class="sxs-lookup"><span data-stu-id="4d712-169">A `GUID` literal represents a globally unique identifier.</span></span> <span data-ttu-id="4d712-170">Es ist eine Sequenz gebildet, indem das Schlüsselwort `GUID` gefolgt von hexadezimalen Ziffern im Format genannt *Registrierung* Format: 8-4-4-4-12 in einfache Anführungszeichen eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="4d712-170">It is a sequence formed by the keyword `GUID` followed by hexadecimal digits in the form known as *registry* format: 8-4-4-4-12 enclosed in single quotes.</span></span> <span data-ttu-id="4d712-171">Bei den Hexadezimalzeichen wird die Groß/- Kleinschreibung nicht berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="4d712-171">Hexadecimal digits are case insensitive.</span></span>  
   
- Zwischen dem GUID\-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
+ <span data-ttu-id="4d712-172">Zwischen dem GUID-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="4d712-172">There can be any number of spaces between the GUID symbol and the literal payload, but no new lines.</span></span>  
   
 ```  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## Siehe auch  
- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4d712-173">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4d712-173">See Also</span></span>  
+ [<span data-ttu-id="4d712-174">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="4d712-174">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

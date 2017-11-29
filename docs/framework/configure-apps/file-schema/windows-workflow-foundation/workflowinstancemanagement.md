@@ -1,54 +1,62 @@
 ---
-title: "&lt;workflowInstanceManagement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;workflowInstanceManagement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 63ac89ba-c844-4ae2-96ae-cd752a90a109
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9883cedbbe3657eb82c25abbad66487e39ce2579
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;workflowInstanceManagement&gt;
-Ein Dienstverhalten, das es ermöglicht, Einstellungen anzugeben, die steuern, wie Workflowinstanzen ausgeführt werden. Diese Einstellungen bestimmen auch die Dauerhaftigkeit sowie das Verhalten bei nicht behandelten Ausnahmen und im Leerlauf.  
+# <a name="ltworkflowinstancemanagementgt"></a><span data-ttu-id="515ba-102">&lt;workflowInstanceManagement&gt;</span><span class="sxs-lookup"><span data-stu-id="515ba-102">&lt;workflowInstanceManagement&gt;</span></span>
+<span data-ttu-id="515ba-103">Ein Dienstverhalten, das es ermöglicht, Einstellungen anzugeben, die steuern, wie Workflowinstanzen ausgeführt werden. Diese Einstellungen bestimmen auch die Dauerhaftigkeit sowie das Verhalten bei nicht behandelten Ausnahmen und im Leerlauf.</span><span class="sxs-lookup"><span data-stu-id="515ba-103">A service behavior that enables you to specify settings that control how workflow instances are run, including persistence, unhandled Exception behavior and idle behavior.</span></span>  
   
-## Syntax  
+<span data-ttu-id="515ba-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="515ba-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="515ba-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="515ba-105">\<behaviors></span></span>  
+<span data-ttu-id="515ba-106">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="515ba-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="515ba-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="515ba-107">\<behavior></span></span>  
+<span data-ttu-id="515ba-108">\<WorkflowInstanceManagement ></span><span class="sxs-lookup"><span data-stu-id="515ba-108">\<workflowInstanceManagement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="515ba-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="515ba-109">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <workflowInstanceManagement authorizedWindowsGroup=”” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <workflowInstanceManagement authorizedWindowsGroup="" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="515ba-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="515ba-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="515ba-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="515ba-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="515ba-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="515ba-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|authorizedWindowsGroup||  
+|<span data-ttu-id="515ba-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="515ba-113">Attribute</span></span>|<span data-ttu-id="515ba-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="515ba-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="515ba-115">authorizedWindowsGroup</span><span class="sxs-lookup"><span data-stu-id="515ba-115">authorizedWindowsGroup</span></span>||  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="515ba-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="515ba-116">Child Elements</span></span>  
+ <span data-ttu-id="515ba-117">Keine</span><span class="sxs-lookup"><span data-stu-id="515ba-117">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="515ba-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="515ba-118">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<behavior\> von \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Gibt ein Verhaltenselement an.|  
+|<span data-ttu-id="515ba-119">Element</span><span class="sxs-lookup"><span data-stu-id="515ba-119">Element</span></span>|<span data-ttu-id="515ba-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="515ba-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="515ba-121">\<Verhalten > der \<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="515ba-121">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="515ba-122">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="515ba-122">Specifies a behavior element.</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior>   
+## <a name="see-also"></a><span data-ttu-id="515ba-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="515ba-123">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior>  
  <xref:System.ServiceModel.Activities.Configuration.WorkflowInstanceManagementElement>

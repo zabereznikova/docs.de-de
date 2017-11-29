@@ -1,116 +1,119 @@
 ---
-title: "Form der Befehlsstrukturen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Form der Befehlsstrukturen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Form der Befehlsstrukturen
-Das SQL\-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefehlsstruktur\-Ausdrucks eine Back\-End\-spezifische SQL\-Abfrage.  In diesem Abschnitt werden die Merkmale, die Eigenschaften und die Struktur der Abfragebefehlsstrukturen erläutert.  
+# <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="0b698-102">Form der Befehlsstrukturen</span><span class="sxs-lookup"><span data-stu-id="0b698-102">The Shape of the Command Trees</span></span>
+<span data-ttu-id="0b698-103">Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefehlsstruktur-Ausdrucks eine Back-End-spezifische SQL-Abfrage.</span><span class="sxs-lookup"><span data-stu-id="0b698-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="0b698-104">In diesem Abschnitt werden die Merkmale, die Eigenschaften und die Struktur der Abfragebefehlsstrukturen erläutert.</span><span class="sxs-lookup"><span data-stu-id="0b698-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  
   
-## Übersicht über die Abfragebefehlsstrukturen  
- Bei einer Abfragebefehlsstruktur handelt es sich um die Objektmodelldarstellung einer Abfrage.  Abfragebefehlsstrukturen dienen zwei Zwecken:  
+## <a name="query-command-trees-overview"></a><span data-ttu-id="0b698-105">Übersicht über die Abfragebefehlsstrukturen</span><span class="sxs-lookup"><span data-stu-id="0b698-105">Query Command Trees Overview</span></span>  
+ <span data-ttu-id="0b698-106">Bei einer Abfragebefehlsstruktur handelt es sich um die Objektmodelldarstellung einer Abfrage.</span><span class="sxs-lookup"><span data-stu-id="0b698-106">A query command tree is an object model representation of a query.</span></span> <span data-ttu-id="0b698-107">Abfragebefehlsstrukturen dienen zwei Zwecken:</span><span class="sxs-lookup"><span data-stu-id="0b698-107">Query command trees serve two purposes:</span></span>  
   
--   Dem Ausdrücken einer Eingabeabfrage für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+-   <span data-ttu-id="0b698-108">Dem Ausdrücken einer Eingabeabfrage für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b698-108">To express an input query that is specified against the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
--   Dem Ausdrücken eine Ausgabeabfrage, die einem Anbieter übergeben wird und eine Back\-End\-Abfrage beschreibt.  
+-   <span data-ttu-id="0b698-109">Dem Ausdrücken eine Ausgabeabfrage, die einem Anbieter übergeben wird und eine Back-End-Abfrage beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0b698-109">To express an output query that is given to a provider and describes a query against the backend.</span></span>  
   
- Abfragebefehlsstrukturen unterstützen eine umfangreichere Semantik als SQL:1999\-kompatible Abfragen. Dies umfasst die Unterstützung von geschachtelten Auflistungen und Typvorgängen, z. B. bei der Prüfung, ob es sich bei einer Entität um einen bestimmten Typ handelt, oder beim Filtern von Sätzen anhand eines Typs.  
+ <span data-ttu-id="0b698-110">Abfragebefehlsstrukturen unterstützen eine umfangreichere Semantik als SQL:1999-kompatible Abfragen. Dies umfasst die Unterstützung von geschachtelten Auflistungen und Typvorgängen, z. B. bei der Prüfung, ob es sich bei einer Entität um einen bestimmten Typ handelt, oder beim Filtern von Sätzen anhand eines Typs.</span><span class="sxs-lookup"><span data-stu-id="0b698-110">Query command trees support richer semantics than SQL:1999 compliant queries, including support for working with nested collections and type operations, like checking whether an entity is of a particular type, or filtering sets based on a type.</span></span>  
   
- Die "DBQueryCommandTree.Query"\-Eigenschaft ist der Stamm der Ausdrucksstruktur, die die Abfragelogik beschreibt.  Die "DBQueryCommandTree.Parameters"\-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter.  Die Ausdrucksstruktur besteht aus "DbExpression"\-Objekten.  
+ <span data-ttu-id="0b698-111">Die "DBQueryCommandTree.Query"-Eigenschaft ist der Stamm der Ausdrucksstruktur, die die Abfragelogik beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0b698-111">The DBQueryCommandTree.Query property is the root of the expression tree that describes the query logic.</span></span> <span data-ttu-id="0b698-112">Die "DBQueryCommandTree.Parameters"-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter.</span><span class="sxs-lookup"><span data-stu-id="0b698-112">The DBQueryCommandTree.Parameters property contains a list of parameters that are used in the query.</span></span> <span data-ttu-id="0b698-113">Die Ausdrucksstruktur besteht aus "DbExpression"-Objekten.</span><span class="sxs-lookup"><span data-stu-id="0b698-113">The expression tree is composed of DbExpression objects.</span></span>  
   
- Ein "DbExpression"\-Objekt stellt eine Berechnung dar.  Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join.  Alle "DbExpression"\-Objekte verfügen über eine ResultType\-Eigenschaft, die dem Typ des von diesem Ausdruck erzeugten Ergebnisses entspricht.  Dieser Typ wird als "TypeUsage" ausgedrückt.  
+ <span data-ttu-id="0b698-114">Ein "DbExpression"-Objekt stellt eine Berechnung dar.</span><span class="sxs-lookup"><span data-stu-id="0b698-114">A DbExpression object represents some computation.</span></span> <span data-ttu-id="0b698-115">Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join.</span><span class="sxs-lookup"><span data-stu-id="0b698-115">Several kinds of expressions are provided by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] for composing query expressions, including constants, variables, functions, constructors, and standard relational operators like filter and join.</span></span> <span data-ttu-id="0b698-116">Alle "DbExpression"-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt.</span><span class="sxs-lookup"><span data-stu-id="0b698-116">Every DbExpression object has a ResultType property that represents the type of the result produced by that expression.</span></span> <span data-ttu-id="0b698-117">Dieser Typ wird als "TypeUsage" ausgedrückt.</span><span class="sxs-lookup"><span data-stu-id="0b698-117">This type is expressed as a TypeUsage.</span></span>  
   
-## Formen der Ausgabeabfrage\-Befehlsstruktur  
- Ausgabeabfrage\-Befehlsstrukturen entsprechen relationalen \(SQL\-\)Abfragen und unterliegen weitaus strengeren Regeln als Abfragebefehlsstrukturen.  In der Regel enthalten sie Konstrukte, die einfach in SQL übersetzt werden können.  
+## <a name="shapes-of-the-output-query-command-tree"></a><span data-ttu-id="0b698-118">Formen der Ausgabeabfrage-Befehlsstruktur</span><span class="sxs-lookup"><span data-stu-id="0b698-118">Shapes of the Output Query Command Tree</span></span>  
+ <span data-ttu-id="0b698-119">Ausgabeabfrage-Befehlsstrukturen entsprechen relationalen (SQL-)Abfragen und unterliegen weitaus strengeren Regeln als Abfragebefehlsstrukturen.</span><span class="sxs-lookup"><span data-stu-id="0b698-119">Output query command trees closely represent relational (SQL) queries and adhere to much stricter rules than those that apply to query command trees.</span></span> <span data-ttu-id="0b698-120">In der Regel enthalten sie Konstrukte, die einfach in SQL übersetzt werden können.</span><span class="sxs-lookup"><span data-stu-id="0b698-120">They typically contain constructs that are easily translated to SQL.</span></span>  
   
- Eingabebefehlsstrukturen werden für das konzeptionelle Modell ausgedrückt, das Navigationseigenschaften, Zuordnungen zwischen Entitäten und Vererbung unterstützt.  Ausgabebefehlsstrukturen werden für das Speichermodell ausgedrückt.  Mit Eingabebefehlsstrukturen können geschachtelte Auflistungen projiziert werden, nicht jedoch mit Ausgabebefehlsstrukturen.  
+ <span data-ttu-id="0b698-121">Eingabebefehlsstrukturen werden für das konzeptionelle Modell ausgedrückt, das Navigationseigenschaften, Zuordnungen zwischen Entitäten und Vererbung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0b698-121">Input command trees are expressed against the conceptual model, which supports navigation properties, associations among entities, and inheritance.</span></span> <span data-ttu-id="0b698-122">Ausgabebefehlsstrukturen werden für das Speichermodell ausgedrückt.</span><span class="sxs-lookup"><span data-stu-id="0b698-122">Output command trees are expressed against the storage model.</span></span> <span data-ttu-id="0b698-123">Mit Eingabebefehlsstrukturen können geschachtelte Auflistungen projiziert werden, nicht jedoch mit Ausgabebefehlsstrukturen.</span><span class="sxs-lookup"><span data-stu-id="0b698-123">Input command trees allow you to project nested collections, but output command trees do not.</span></span>  
   
- Ausgabeabfrage\-Befehlsstrukturen beruhen auf einer Teilmenge der verfügbaren "DbExpression"\-Objekte. Selbst einige der Ausdrücke dieser Teilmenge unterliegen einer eingeschränkten Verwendung.  
+ <span data-ttu-id="0b698-124">Ausgabeabfrage-Befehlsstrukturen beruhen auf einer Teilmenge der verfügbaren "DbExpression"-Objekte. Selbst einige der Ausdrücke dieser Teilmenge unterliegen einer eingeschränkten Verwendung.</span><span class="sxs-lookup"><span data-stu-id="0b698-124">Output query command trees are built using a subset of the available DbExpression objects and even some expressions in that subset have restricted usage.</span></span>  
   
- Typvorgänge, wie z. B. das Überprüfen, ob es sich bei einem angegebenen Ausdruck um einen bestimmten Typ handelt, oder das Filtern von Sätzen anhand eines Typs, sind in Ausgabebefehlsstrukturen nicht vorhanden.  
+ <span data-ttu-id="0b698-125">Typvorgänge, wie z. B. das Überprüfen, ob es sich bei einem angegebenen Ausdruck um einen bestimmten Typ handelt, oder das Filtern von Sätzen anhand eines Typs, sind in Ausgabebefehlsstrukturen nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="0b698-125">Type operations, like checking whether a given expression is of a particular type or filtering sets based on a type, are not present in output command trees.</span></span>  
   
- In Ausgabebefehlsstrukturen werden für Projektionen nur Ausdrücke verwendet, die boolesche Werte zurückgeben. Dies gilt nur für Prädikate in Ausdrücken, die ein Prädikat, wie z. B. eine Filter\- oder eine Case\-Anweisung erfordern.  
+ <span data-ttu-id="0b698-126">In Ausgabebefehlsstrukturen werden für Projektionen nur Ausdrücke verwendet, die boolesche Werte zurückgeben. Dies gilt nur für Prädikate in Ausdrücken, die ein Prädikat, wie z. B. eine Filter- oder eine Case-Anweisung erfordern.</span><span class="sxs-lookup"><span data-stu-id="0b698-126">In output command trees, only expressions that return Boolean values are used for projections and only for predicates in expressions requiring a predicate, like a filter or a case statement.</span></span>  
   
- Der Stamm einer Ausgabeabfrage\-Befehlsstruktur ist ein "DbProjectExpression"\-Objekt.  
+ <span data-ttu-id="0b698-127">Der Stamm einer Ausgabeabfrage-Befehlsstruktur ist ein "DbProjectExpression"-Objekt.</span><span class="sxs-lookup"><span data-stu-id="0b698-127">The root of an output query command trees is a DbProjectExpression object.</span></span>  
   
-### Nicht in Ausgabeabfrage\-Befehlsstrukturen vorhandene Ausdrücke  
- Die folgenden Ausdruckstypen sind in einer Ausgabeabfrage\-Befehlsstruktur nicht gültig und müssen nicht von Anbietern behandelt werden:  
+### <a name="expression-types-not-present-in-output-query-command-trees"></a><span data-ttu-id="0b698-128">Nicht in Ausgabeabfrage-Befehlsstrukturen vorhandene Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="0b698-128">Expression Types Not Present in Output Query Command Trees</span></span>  
+ <span data-ttu-id="0b698-129">Die folgenden Ausdruckstypen sind in einer Ausgabeabfrage-Befehlsstruktur nicht gültig und müssen nicht von Anbietern behandelt werden:</span><span class="sxs-lookup"><span data-stu-id="0b698-129">The following expression types are not valid in an output query command tree and do not need to be handled by providers:</span></span>  
   
- DbDerefExpression  
+ <span data-ttu-id="0b698-130">DbDerefExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-130">DbDerefExpression</span></span>  
   
- DbEntityRefExpression  
+ <span data-ttu-id="0b698-131">DbEntityRefExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-131">DbEntityRefExpression</span></span>  
   
- DbRefKeyExpression  
+ <span data-ttu-id="0b698-132">DbRefKeyExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-132">DbRefKeyExpression</span></span>  
   
- DbIsOfExpression  
+ <span data-ttu-id="0b698-133">DbIsOfExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-133">DbIsOfExpression</span></span>  
   
- DbOfTypeExpression  
+ <span data-ttu-id="0b698-134">DbOfTypeExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-134">DbOfTypeExpression</span></span>  
   
- DbRefExpression  
+ <span data-ttu-id="0b698-135">DbRefExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-135">DbRefExpression</span></span>  
   
- DbRelationshipNavigationExpression  
+ <span data-ttu-id="0b698-136">DbRelationshipNavigationExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-136">DbRelationshipNavigationExpression</span></span>  
   
- DbTreatExpression  
+ <span data-ttu-id="0b698-137">DbTreatExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-137">DbTreatExpression</span></span>  
   
-### Ausdruckseinschränkungen und Hinweise  
- Viele Ausdrücke können nur eingeschränkt in Ausgabeabfrage\-Befehlsstrukturen verwendet werden:  
+### <a name="expression-restrictions-and-notes"></a><span data-ttu-id="0b698-138">Ausdruckseinschränkungen und Hinweise</span><span class="sxs-lookup"><span data-stu-id="0b698-138">Expression Restrictions and Notes</span></span>  
+ <span data-ttu-id="0b698-139">Viele Ausdrücke können nur eingeschränkt in Ausgabeabfrage-Befehlsstrukturen verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="0b698-139">Many expressions can only be used in a restricted manner in output query command trees:</span></span>  
   
-#### DbFunctionExpression  
- Die folgenden Funktionstypen können übergeben werden:  
+#### <a name="dbfunctionexpression"></a><span data-ttu-id="0b698-140">DbFunctionExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-140">DbFunctionExpression</span></span>  
+ <span data-ttu-id="0b698-141">Die folgenden Funktionstypen können übergeben werden:</span><span class="sxs-lookup"><span data-stu-id="0b698-141">The following function types can be passed:</span></span>  
   
--   Kanonische Funktionen, die vom EDM\-Namespace erkannt werden.  
+-   <span data-ttu-id="0b698-142">Kanonische Funktionen, die vom EDM-Namespace erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="0b698-142">Canonical functions that are recognized by the Edm namespace.</span></span>  
   
--   Integrierte \(Speicher\-\)Funktionen, die von "BuiltInAttribute" erkannt werden.  
+-   <span data-ttu-id="0b698-143">Integrierte (Speicher-)Funktionen, die von "BuiltInAttribute" erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="0b698-143">Built-in (store) functions that are recognized by the BuiltInAttribute.</span></span>  
   
--   Benutzerdefinierte Funktionen.  
+-   <span data-ttu-id="0b698-144">Benutzerdefinierte Funktionen.</span><span class="sxs-lookup"><span data-stu-id="0b698-144">User-defined functions.</span></span>  
   
- Kanonische Funktionen \(siehe [Kanonische Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)\) werden als Teil von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] angegeben. Die Anbieter sollten anhand dieser Angaben Implementierungen für kanonische Funktionen bereitstellen.  Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests.  Benutzerdefinierte Funktionen beruhen auf den SSDL\-Spezifikationen.  
+ <span data-ttu-id="0b698-145">Kanonische Funktionen (finden Sie unter [kanonische Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) für Weitere Informationen) angegeben sind, als Teil der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], und Anbieter sollten die Implementierungen für kanonische Funktionen, die basierend auf diesen Spezifikationen angeben.</span><span class="sxs-lookup"><span data-stu-id="0b698-145">Canonical functions (see [Canonical Functions](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) for more information) are specified as part of the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], and providers should supply implementations for canonical functions based on those specifications.</span></span> <span data-ttu-id="0b698-146">Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests.</span><span class="sxs-lookup"><span data-stu-id="0b698-146">Store functions are based on the specifications in the corresponding provider manifest.</span></span> <span data-ttu-id="0b698-147">Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.</span><span class="sxs-lookup"><span data-stu-id="0b698-147">User defined functions are based on specifications in the SSDL.</span></span>  
   
- Zudem verfügen Funktionen mit dem "NiladicFunction"\-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  D. h. zu *\<functionName\>* anstelle von *\<functionName\>\(\)*.  
+ <span data-ttu-id="0b698-148">Zudem verfügen Funktionen mit dem NiladicFunction-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="0b698-148">Also, functions having the NiladicFunction attribute have no arguments and should be translated without the parenthesis at the end.</span></span>  <span data-ttu-id="0b698-149">Das heißt,  *\<Funktionsname >* anstelle von  *\<FunctionName > ()*.</span><span class="sxs-lookup"><span data-stu-id="0b698-149">That is, to *\<functionName>* instead of *\<functionName>()*.</span></span>  
   
-#### DbNewInstanceExpression  
- "DbNewInstanceExpression" kann nur in den folgenden beiden Fällen auftreten:  
+#### <a name="dbnewinstanceexpression"></a><span data-ttu-id="0b698-150">DbNewInstanceExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-150">DbNewInstanceExpression</span></span>  
+ <span data-ttu-id="0b698-151">"DbNewInstanceExpression" kann nur in den folgenden beiden Fällen auftreten:</span><span class="sxs-lookup"><span data-stu-id="0b698-151">DbNewInstanceExpression can only occur in the following two cases:</span></span>  
   
--   Als Projektionseigenschaft von "DbProjectExpression".  Bei dieser Verwendungsart gelten die folgenden Einschränkungen:  
+-   <span data-ttu-id="0b698-152">Als Projektionseigenschaft von "DbProjectExpression".</span><span class="sxs-lookup"><span data-stu-id="0b698-152">As the Projection property of DbProjectExpression.</span></span>  <span data-ttu-id="0b698-153">Bei dieser Verwendungsart gelten die folgenden Einschränkungen:</span><span class="sxs-lookup"><span data-stu-id="0b698-153">When used as such the following restrictions apply:</span></span>  
   
-    -   Der Ergebnistyp muss ein Zeilentyp sein.  
+    -   <span data-ttu-id="0b698-154">Der Ergebnistyp muss ein Zeilentyp sein.</span><span class="sxs-lookup"><span data-stu-id="0b698-154">The result type must be a row type.</span></span>  
   
-    -   Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt.  In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf.  In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt.  Bei einem Ausdruck, der einer skalaren Unterabfrage entspricht, handelt es sich um eine Ausdrucksstruktur, die einer Unterabfrage entspricht, die genau eine Zeile und eine Spalte eines primitiven Typs mit einem "DbElementExperession"\-Objektstamm zurückgibt  
+    -   <span data-ttu-id="0b698-155">Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt.</span><span class="sxs-lookup"><span data-stu-id="0b698-155">Each of its arguments is an expression that produces a result with a primitive type.</span></span> <span data-ttu-id="0b698-156">In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf.</span><span class="sxs-lookup"><span data-stu-id="0b698-156">Typically, each argument is a scalar expression, like a PropertyExpression over a DbVariableReferenceExpression, a function invocation, or an arithmetic computation of the DbPropertyExpression over a DbVariableReferenceExpression or a function invocation.</span></span> <span data-ttu-id="0b698-157">In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt.</span><span class="sxs-lookup"><span data-stu-id="0b698-157">However, an expression representing a scalar subquery can also occur in the list of arguments for a DbNewInstanceExpression.</span></span> <span data-ttu-id="0b698-158">Bei einem Ausdruck, der einer skalaren Unterabfrage entspricht, handelt es sich um eine Ausdrucksstruktur, die einer Unterabfrage entspricht, die genau eine Zeile und eine Spalte eines primitiven Typs mit einem "DbElementExperession"-Objektstamm zurückgibt</span><span class="sxs-lookup"><span data-stu-id="0b698-158">An expression that represents a scalar subquery is an expression tree that represents a subquery that returns exactly one row and one column of a primitive type with a DbElementExperession object root</span></span>  
   
--   Mit einem Auflistungsrückgabetyp. In diesem Fall wird eine neue Auflistung der als Argumente bereitgestellten Ausdrücke definiert.  
+-   <span data-ttu-id="0b698-159">Mit einem Auflistungsrückgabetyp. In diesem Fall wird eine neue Auflistung der als Argumente bereitgestellten Ausdrücke definiert.</span><span class="sxs-lookup"><span data-stu-id="0b698-159">With a collection return type, in which case it defines a new collection of the expressions provided as arguments.</span></span>  
   
-#### DbVariableReferenceExpression  
- Bei einem "DbVariableReferenceExpression" muss es sich um ein untergeordnetes Element des Knotens "DbPropertyExpression" handeln.  
+#### <a name="dbvariablereferenceexpression"></a><span data-ttu-id="0b698-160">DbVariableReferenceExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-160">DbVariableReferenceExpression</span></span>  
+ <span data-ttu-id="0b698-161">Bei einem "DbVariableReferenceExpression" muss es sich um ein untergeordnetes Element des Knotens "DbPropertyExpression" handeln.</span><span class="sxs-lookup"><span data-stu-id="0b698-161">A DbVariableReferenceExpression has to be a child of DbPropertyExpression node.</span></span>  
   
-#### DbGroupByExpression  
- Die Aggregateigenschaft eines "DbGroupByExpression" kann nur über Elemente des Typs "DbFunctionAggregate" verfügen.  Es gibt keine anderen Aggregattypen.  
+#### <a name="dbgroupbyexpression"></a><span data-ttu-id="0b698-162">DbGroupByExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-162">DbGroupByExpression</span></span>  
+ <span data-ttu-id="0b698-163">Die Aggregateigenschaft eines "DbGroupByExpression" kann nur über Elemente des Typs "DbFunctionAggregate" verfügen.</span><span class="sxs-lookup"><span data-stu-id="0b698-163">The Aggregates property of a DbGroupByExpression can only have elements of type DbFunctionAggregate.</span></span> <span data-ttu-id="0b698-164">Es gibt keine anderen Aggregattypen.</span><span class="sxs-lookup"><span data-stu-id="0b698-164">There are no other aggregate types.</span></span>  
   
-#### DbLimitExpression  
- Bei der "Limit"\-Eigenschaft kann es sich nur um einen "DbConstantExpression" oder einen "DbParameterReferenceExpression" handeln.  Ab Version 3.5 von .NET Framework gilt für die "WithTies"\-Eigenschaft immer der Wert "false".  
+#### <a name="dblimitexpression"></a><span data-ttu-id="0b698-165">DbLimitExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-165">DbLimitExpression</span></span>  
+ <span data-ttu-id="0b698-166">Bei der "Limit"-Eigenschaft kann es sich nur um einen "DbConstantExpression" oder einen "DbParameterReferenceExpression" handeln.</span><span class="sxs-lookup"><span data-stu-id="0b698-166">The property Limit can only be a DbConstantExpression or a DbParameterReferenceExpression.</span></span> <span data-ttu-id="0b698-167">Ab Version 3.5 von .NET Framework gilt für die "WithTies"-Eigenschaft immer der Wert "false".</span><span class="sxs-lookup"><span data-stu-id="0b698-167">Also property WithTies is always false as of version 3.5 of the .NET Framework.</span></span>  
   
-#### DbScanExpression  
- Bei der Verwendung in Ausgabebefehlsstrukturen entspricht "DbScanExpression" effektiv einer Tabellensuche, einer Sicht oder einer Speicherabfrage, die mit "EnitySetBase::Target" dargestellt wird.  
+#### <a name="dbscanexpression"></a><span data-ttu-id="0b698-168">DbScanExpression</span><span class="sxs-lookup"><span data-stu-id="0b698-168">DbScanExpression</span></span>  
+ <span data-ttu-id="0b698-169">Bei der Verwendung in Ausgabebefehlsstrukturen entspricht „DbScanExpression“ effektiv einer Tabellensuche, einer Sicht oder einer Speicherabfrage, die mit „EnitySetBase::Target“ dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="0b698-169">When used in output command trees, the DbScanExpression effectively represents a scan over a table, a view, or a store query, represented by EnitySetBase::Target.</span></span>  
   
- Wenn die Metadateneigenschaft "Defining Query" des Ziels nicht NULL ist, dann entspricht sie einer Abfrage, deren Abfragetext in dieser Metadateneigenschaft in der jeweiligen Anbietersprache \(oder dem Dialekt\) bereitgestellt wird, wie in der Speicherschemadefinition angegeben.  
+ <span data-ttu-id="0b698-170">Wenn die Metadateneigenschaft "Defining Query" des Ziels nicht Null ist, es sich um eine Abfrage darstellt wird, wird der Text der Abfrage für die in dieser Metadateneigenschaft in der jeweiligen anbietersprache (oder Dialekten verarbeitet), wie in der Speicherschemadefinition angegeben bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="0b698-170">If the metadata property "Defining Query" of the target is non-null, then it represents a query, the query text for which is provided in that metadata property in the provider’s specific language (or dialect) as specified in the store schema definition.</span></span>  
   
- Andernfalls entspricht das Ziel einer Tabelle oder Sicht.  Das Schemapräfix befindet sich entweder in der Metadateneigenschaft "Schema" \(sofern diese nicht NULL ist\), oder es handelt sich um den Entitätscontainernamen.  Beim Tabellen\- oder Sichtnamen handelt es sich entweder um die Metadateneigenschaft "Table" \(sofern diese nicht NULL ist\) oder um die "Name"\-Eigenschaft der Entitätenmengenbasis.  
+ <span data-ttu-id="0b698-171">Andernfalls entspricht das Ziel einer Tabelle oder Sicht.</span><span class="sxs-lookup"><span data-stu-id="0b698-171">Otherwise, the target represents a table or a view.</span></span> <span data-ttu-id="0b698-172">Das Schemapräfix befindet sich entweder in der Metadateneigenschaft "Schema", wenn nicht null, ist sonst Name des Entitätencontainers.</span><span class="sxs-lookup"><span data-stu-id="0b698-172">Its schema prefix is either in the "Schema" metadata property, if not null, otherwise is the entity container name.</span></span>  <span data-ttu-id="0b698-173">Namen der Tabelle oder Sicht ist entweder der Metadateneigenschaft "Table", sofern diese nicht Null, andernfalls die Name-Eigenschaft der Entität Basis festgelegt.</span><span class="sxs-lookup"><span data-stu-id="0b698-173">The table or view name is either the "Table" metadata property, if not null, otherwise the Name property of the entity set base.</span></span>  
   
- All diese Eigenschaften beruhen auf der Definition des entsprechenden "EntitySet" in der Speicherschema\-Definitionsdatei \(SSDL\).  
+ <span data-ttu-id="0b698-174">All diese Eigenschaften beruhen auf der Definition des entsprechenden "EntitySet" in der Speicherschema-Definitionsdatei (SSDL).</span><span class="sxs-lookup"><span data-stu-id="0b698-174">All these properties originate from the definition of the corresponding EntitySet in the store schema definition file (the SSDL).</span></span>  
   
-### Verwenden primitiver Typen  
- Wenn in Ausgabebefehlsstrukturen auf primitive Typen verwiesen wird, erfolgt der Verweis in der Regel anhand der primitiven Typen des konzeptionellen Modells.  Für bestimmte Ausdrücke benötigen die Anbieter jedoch den entsprechenden primitiven Speichertyp.  Beispiele für solche Ausdrücke sind "DbCastExpression" und möglicherweise "DbNullExpression", sofern der Anbieter für den entsprechenden Typ NULL umwandeln muss.  In solchen Fällen sollten Anbieter die Zuordnung zum Anbietertyp anhand der Art des primitiven Typs und dessen Facets vornehmen.  
+### <a name="using-primitive-types"></a><span data-ttu-id="0b698-175">Verwenden primitiver Typen</span><span class="sxs-lookup"><span data-stu-id="0b698-175">Using Primitive Types</span></span>  
+ <span data-ttu-id="0b698-176">Wenn in Ausgabebefehlsstrukturen auf primitive Typen verwiesen wird, erfolgt der Verweis in der Regel anhand der primitiven Typen des konzeptionellen Modells.</span><span class="sxs-lookup"><span data-stu-id="0b698-176">When primitive types are referenced in output command trees, they are typically referenced in the conceptual model's primitive types.</span></span> <span data-ttu-id="0b698-177">Für bestimmte Ausdrücke benötigen die Anbieter jedoch den entsprechenden primitiven Speichertyp.</span><span class="sxs-lookup"><span data-stu-id="0b698-177">However, for certain expressions, providers need the corresponding store primitive type.</span></span> <span data-ttu-id="0b698-178">Beispiele für solche Ausdrücke sind "DbCastExpression" und möglicherweise "DbNullExpression", sofern der Anbieter für den entsprechenden Typ NULL umwandeln muss.</span><span class="sxs-lookup"><span data-stu-id="0b698-178">Examples of such expressions include DbCastExpression and possibly DbNullExpression, if the provider needs to cast the null to the corresponding type.</span></span> <span data-ttu-id="0b698-179">In solchen Fällen sollten Anbieter die Zuordnung zum Anbietertyp anhand der Art des primitiven Typs und dessen Facets vornehmen.</span><span class="sxs-lookup"><span data-stu-id="0b698-179">In these cases, providers should do the mapping to the provider type based on the primitive type kind and its facets.</span></span>  
   
-## Siehe auch  
- [SQL\-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a><span data-ttu-id="0b698-180">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b698-180">See Also</span></span>  
+ [<span data-ttu-id="0b698-181">SQL-Generierung</span><span class="sxs-lookup"><span data-stu-id="0b698-181">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

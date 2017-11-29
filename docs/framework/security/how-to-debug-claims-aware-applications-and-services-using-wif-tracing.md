@@ -5,74 +5,72 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 36cb961345cb724597d8e48ec3be6cbb84df4632
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Vorgehensweise: Debuggen von Ansprüche-unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung
-## <a name="applies-to"></a>Gilt für  
+# <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a><span data-ttu-id="2cb50-102">Vorgehensweise: Debuggen von Ansprüche-unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="2cb50-102">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>
+## <a name="applies-to"></a><span data-ttu-id="2cb50-103">Gilt für</span><span class="sxs-lookup"><span data-stu-id="2cb50-103">Applies To</span></span>  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+-   <span data-ttu-id="2cb50-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="2cb50-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   Service Trace Viewer-Tool (SvcTraceViewer.exe)  
+-   <span data-ttu-id="2cb50-105">Service Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="2cb50-105">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>  
   
--   Problembehandlung und Debuggen von WIF-Anwendungen  
+-   <span data-ttu-id="2cb50-106">Problembehandlung und Debuggen von WIF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="2cb50-106">Troubleshooting and Debugging WIF Applications</span></span>  
   
-## <a name="summary"></a>Zusammenfassung  
- Diese Anleitungen beschreiben die erforderlichen Schritte zum Konfigurieren der WIF-Ablaufverfolgung, zum Sammeln von Protokollen und zum Analysieren der Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool. Dieses Tool stellt eine allgemeine Zuordnung zwischen Protokolleinträgen und Aktionen bereit, die für die Behebung von WIF-bezogenen Problemen erforderlich sind.  
+## <a name="summary"></a><span data-ttu-id="2cb50-107">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="2cb50-107">Summary</span></span>  
+ <span data-ttu-id="2cb50-108">Diese Anleitungen beschreiben die erforderlichen Schritte zum Konfigurieren der WIF-Ablaufverfolgung, zum Sammeln von Protokollen und zum Analysieren der Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool.</span><span class="sxs-lookup"><span data-stu-id="2cb50-108">This How-To describes required steps for how to configure WIF tracing, collect trace logs, and how to analyze the trace logs using Trace Viewer tool.</span></span> <span data-ttu-id="2cb50-109">Dieses Tool stellt eine allgemeine Zuordnung zwischen Protokolleinträgen und Aktionen bereit, die für die Behebung von WIF-bezogenen Problemen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="2cb50-109">It provides general mapping for trace entries to actions needed to troubleshoot issues related to WIF.</span></span>  
   
-## <a name="contents"></a>Inhalt  
+## <a name="contents"></a><span data-ttu-id="2cb50-110">Inhalt</span><span class="sxs-lookup"><span data-stu-id="2cb50-110">Contents</span></span>  
   
--   Ziele  
+-   <span data-ttu-id="2cb50-111">Ziele</span><span class="sxs-lookup"><span data-stu-id="2cb50-111">Objectives</span></span>  
   
--   Zusammenfassung von Schritten  
+-   <span data-ttu-id="2cb50-112">Zusammenfassung von Schritten</span><span class="sxs-lookup"><span data-stu-id="2cb50-112">Summary of Steps</span></span>  
   
--   Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
+-   <span data-ttu-id="2cb50-113">Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"</span><span class="sxs-lookup"><span data-stu-id="2cb50-113">Step 1 – Configure WIF Tracing Using Web.config Configuration File</span></span>  
   
--   Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
+-   <span data-ttu-id="2cb50-114">Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools</span><span class="sxs-lookup"><span data-stu-id="2cb50-114">Step 2 – Analyze WIF Trace Files Using Trace Viewer Tool</span></span>  
   
--   Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
+-   <span data-ttu-id="2cb50-115">Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen</span><span class="sxs-lookup"><span data-stu-id="2cb50-115">Step 3 – Identify Solutions to Fix WIF Related Issues</span></span>  
   
--   Verwandte Elemente  
+-   <span data-ttu-id="2cb50-116">Verwandte Elemente</span><span class="sxs-lookup"><span data-stu-id="2cb50-116">Related Items</span></span>  
   
-## <a name="objectives"></a>Ziele  
+## <a name="objectives"></a><span data-ttu-id="2cb50-117">Ziele</span><span class="sxs-lookup"><span data-stu-id="2cb50-117">Objectives</span></span>  
   
--   Konfigurieren der WIF-Ablaufverfolgung.  
+-   <span data-ttu-id="2cb50-118">Konfigurieren der WIF-Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="2cb50-118">Configure WIF tracing.</span></span>  
   
--   Anzeigen von Ablaufverfolgungsprotokollen im Trace Viewer-Tool.  
+-   <span data-ttu-id="2cb50-119">Anzeigen von Ablaufverfolgungsprotokollen im Trace Viewer-Tool.</span><span class="sxs-lookup"><span data-stu-id="2cb50-119">View trace logs in the Trace Viewer tool.</span></span>  
   
--   Identifizieren von WIF-bezogenen Problemen in den Ablaufverfolgungsprotokollen.  
+-   <span data-ttu-id="2cb50-120">Identifizieren von WIF-bezogenen Problemen in den Ablaufverfolgungsprotokollen.</span><span class="sxs-lookup"><span data-stu-id="2cb50-120">Identify WIF related issues in the trace logs.</span></span>  
   
--   Anwenden von Korrekturmaßnahmen auf WIF-bezogene Probleme, die in den Ablaufverfolgungsprotokollen gefunden wurden.  
+-   <span data-ttu-id="2cb50-121">Anwenden von Korrekturmaßnahmen auf WIF-bezogene Probleme, die in den Ablaufverfolgungsprotokollen gefunden wurden.</span><span class="sxs-lookup"><span data-stu-id="2cb50-121">Apply corrective actions to WIF related issues found in the trace logs.</span></span>  
   
-## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
+## <a name="summary-of-steps"></a><span data-ttu-id="2cb50-122">Zusammenfassung von Schritten</span><span class="sxs-lookup"><span data-stu-id="2cb50-122">Summary of Steps</span></span>  
   
--   Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
+-   <span data-ttu-id="2cb50-123">Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"</span><span class="sxs-lookup"><span data-stu-id="2cb50-123">Step 1 – Configure WIF Tracing Using Web.config Configuration File</span></span>  
   
--   Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
+-   <span data-ttu-id="2cb50-124">Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools</span><span class="sxs-lookup"><span data-stu-id="2cb50-124">Step 2 – Analyze WIF Trace Files Using Trace Viewer Tool</span></span>  
   
--   Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
+-   <span data-ttu-id="2cb50-125">Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen</span><span class="sxs-lookup"><span data-stu-id="2cb50-125">Step 3 – Identify Solutions to Fix WIF Related Issues</span></span>  
   
-## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
- In diesem Schritt fügen Sie Konfigurationsabschnitten in der Datei *Web.config* Änderungen hinzu, damit WIF die zugehörigen Ereignisse verfolgen und in einem Ablaufverfolgungsprotokoll speichern kann.  
+## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a><span data-ttu-id="2cb50-126">Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"</span><span class="sxs-lookup"><span data-stu-id="2cb50-126">Step 1 – Configure WIF Tracing Using Web.config Configuration File</span></span>  
+ <span data-ttu-id="2cb50-127">In diesem Schritt fügen Sie Konfigurationsabschnitten in der Datei *Web.config* Änderungen hinzu, damit WIF die zugehörigen Ereignisse verfolgen und in einem Ablaufverfolgungsprotokoll speichern kann.</span><span class="sxs-lookup"><span data-stu-id="2cb50-127">In this step, you will add changes to configuration sections in the *Web.config* file that enable WIF to trace its events and store them in a trace log.</span></span>  
   
-#### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>So konfigurieren Sie die WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
+#### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a><span data-ttu-id="2cb50-128">So konfigurieren Sie die WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"</span><span class="sxs-lookup"><span data-stu-id="2cb50-128">To configure WIF tracing using Web.config configuration file</span></span>  
   
-1.  Öffnen Sie die Stammkonfigurationsdatei **Web.config** oder **App.config** im Visual Studio-Editor, indem Sie im **Projektmappen-Explorer** darauf klicken. Wenn Ihre Projektmappe die Konfigurationsdatei **Web.config** bzw. **App.config** nicht enthält, müssen Sie diese hinzufügen. Klicken Sie dazu mit der rechten Maustaste im **Projektmappen-Explorer** auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element…**. Wählen Sie im Dialogfeld **Neues Element** die **Anwendungskonfigurationsdatei** (für **App.config**) oder die **Webkonfigurationsdatei** (für **Web.config**) aus der Liste aus, und klicken Sie auf **OK**.  
+1.  <span data-ttu-id="2cb50-129">Öffnen Sie die Stammkonfigurationsdatei **Web.config** oder **App.config** im Visual Studio-Editor, indem Sie im **Projektmappen-Explorer** darauf klicken.</span><span class="sxs-lookup"><span data-stu-id="2cb50-129">Open the root **Web.config** or **App.config** configuration file in the Visual Studio editor by double clicking on it in **Solution Explorer**.</span></span> <span data-ttu-id="2cb50-130">Wenn Ihre Projektmappe die Konfigurationsdatei **Web.config** bzw. **App.config** nicht enthält, müssen Sie diese hinzufügen. Klicken Sie dazu mit der rechten Maustaste im **Projektmappen-Explorer** auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element…**.</span><span class="sxs-lookup"><span data-stu-id="2cb50-130">If your solution does not have **Web.config** or **App.config** configuration file, add it by right clicking on the solution in the **Solution Explorer** and clicking **Add**, then clicking **New Item…**.</span></span> <span data-ttu-id="2cb50-131">Wählen Sie im Dialogfeld **Neues Element** die **Anwendungskonfigurationsdatei** (für **App.config**) oder die **Webkonfigurationsdatei** (für **Web.config**) aus der Liste aus, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="2cb50-131">On the **New Item** dialog, Select **Application Configuration File** for **App.config** or **Web Configuration File** for **Web.config** from the list and click **OK**.</span></span>  
   
-2.  Fügen Sie in der Konfigurationsdatei dem **\<configuration>**-Knoten am Ende der Datei Konfigurationseinträge hinzu, die in etwa wie folgt lauten:  
+2.  <span data-ttu-id="2cb50-132">Fügen Sie in der Konfigurationsdatei dem **\<configuration>**-Knoten am Ende der Datei Konfigurationseinträge hinzu, die in etwa wie folgt lauten:</span><span class="sxs-lookup"><span data-stu-id="2cb50-132">Add the configuration entries similar to the following to the configuration file inside **\<configuration>** node at the end of the configuration file:</span></span>  
   
     ```xml  
     <system.diagnostics>  
@@ -87,37 +85,36 @@ ms.lasthandoff: 08/21/2017
     </system.diagnostics>  
     ```  
   
-3.  Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren. Eine vollständige Liste der Werte für das **switchValue**-Attribut finden Sie in der Tabelle mit den Ablaufverfolgungsebenen im folgenden Thema: [Configuring Tracing (Konfigurieren der Ablaufverfolgung)](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  <span data-ttu-id="2cb50-133">Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren.</span><span class="sxs-lookup"><span data-stu-id="2cb50-133">The above configuration instructs WIF to generate verbose trace events and log them into *WIFTrace.e2e* file.</span></span> <span data-ttu-id="2cb50-134">Eine vollständige Liste der Werte für das **switchValue**-Attribut finden Sie in der Tabelle mit den Ablaufverfolgungsebenen im folgenden Thema: [Configuring Tracing (Konfigurieren der Ablaufverfolgung)](http://msdn.microsoft.com/library/ms733025.aspx).</span><span class="sxs-lookup"><span data-stu-id="2cb50-134">For a complete list of values for the **switchValue** switch, refer to the Trace Level table found in the following topic: [Configuring Tracing](http://msdn.microsoft.com/library/ms733025.aspx).</span></span>  
   
-## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
- In diesem Schritt verwenden Sie das Trace Viewer-Tool (SvcTraceViewer.exe), um WIF-Ablaufverfolgungsprotokolle zu analysieren.  
+## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a><span data-ttu-id="2cb50-135">Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools</span><span class="sxs-lookup"><span data-stu-id="2cb50-135">Step 2 – Analyze WIF Trace Files Using Trace Viewer Tool</span></span>  
+ <span data-ttu-id="2cb50-136">In diesem Schritt verwenden Sie das Trace Viewer-Tool (SvcTraceViewer.exe), um WIF-Ablaufverfolgungsprotokolle zu analysieren.</span><span class="sxs-lookup"><span data-stu-id="2cb50-136">In this step, you will use the Trace Viewer Tool (SvcTraceViewer.exe) to analyze WIF trace logs.</span></span>  
   
-#### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>So analysieren Sie WIF-Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool (SvcTraceViewer.exe)  
+#### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a><span data-ttu-id="2cb50-137">So analysieren Sie WIF-Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="2cb50-137">To analyze WIF trace logs using Trace Viewer tool (SvcTraceViewer.exe)</span></span>  
   
-1.  Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten. Wenn Sie das Windows SDK noch nicht installiert haben, können Sie es hier herunterladen: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  <span data-ttu-id="2cb50-138">Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten.</span><span class="sxs-lookup"><span data-stu-id="2cb50-138">Trace Viewer tool (SvcTraceViewer.exe) ships as part of the Windows SDK.</span></span> <span data-ttu-id="2cb50-139">Wenn Sie das Windows SDK noch nicht installiert haben, können Sie es hier herunterladen: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).</span><span class="sxs-lookup"><span data-stu-id="2cb50-139">If you haven’t already installed the Windows SDK, you can download it here: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).</span></span>  
   
-2.  Führen Sie das Trace Viewer-Tool (SvcTraceViewer.exe) aus. Es befindet sich in der Regel im Installationspfad im Ordner **Bin**.  
+2.  <span data-ttu-id="2cb50-140">Führen Sie das Trace Viewer-Tool (SvcTraceViewer.exe) aus.</span><span class="sxs-lookup"><span data-stu-id="2cb50-140">Run the Trace Viewer tool (SvcTraceViewer.exe).</span></span> <span data-ttu-id="2cb50-141">Es befindet sich in der Regel im Installationspfad im Ordner **Bin**.</span><span class="sxs-lookup"><span data-stu-id="2cb50-141">It is typically available in the **Bin** folder of the installation path.</span></span>  
   
-3.  Öffnen Sie die WIF-Ablaufverfolgungsprotokolldatei, zum Beispiel „WIFTrace.e2e“, indem Sie im Menü auf **Datei**, **Öffnen...** klicken. oder die Tastenkombination **Strg+O** verwenden. Die Ablaufverfolgungsprotokolldatei wird im Trace Viewer-Tool geöffnet.  
+3.  <span data-ttu-id="2cb50-142">Öffnen Sie die WIF-Ablaufverfolgungsprotokolldatei, zum Beispiel „WIFTrace.e2e“, indem Sie im Menü auf **Datei**, **Öffnen...** klicken.</span><span class="sxs-lookup"><span data-stu-id="2cb50-142">Open the WIF trace log file, for example, WIFTrace.e2e by selecting **File**, **Open…**</span></span> <span data-ttu-id="2cb50-143">oder die Tastenkombination **Strg+O** verwenden.</span><span class="sxs-lookup"><span data-stu-id="2cb50-143">option in the menu or using the **Ctrl+O** shortcut.</span></span> <span data-ttu-id="2cb50-144">Die Ablaufverfolgungsprotokolldatei wird im Trace Viewer-Tool geöffnet.</span><span class="sxs-lookup"><span data-stu-id="2cb50-144">The trace log file opens in the Trace Viewer tool.</span></span>  
   
-4.  Überprüfen Sie die Einträge auf der Registerkarte **Aktivität**. Jeder Eintrag muss eine Aktivitätsnummer, die Anzahl der protokollierten Ablaufverfolgungen, die Dauer der Aktivität sowie Zeitstempel für Anfang und Ende der Aktivität enthalten.  
+4.  <span data-ttu-id="2cb50-145">Überprüfen Sie die Einträge auf der Registerkarte **Aktivität**. Jeder Eintrag muss eine Aktivitätsnummer, die Anzahl der protokollierten Ablaufverfolgungen, die Dauer der Aktivität sowie Zeitstempel für Anfang und Ende der Aktivität enthalten.</span><span class="sxs-lookup"><span data-stu-id="2cb50-145">Review entries in the **Activity** tab. Each entry should contain an activity number, the number of traces that were logged, duration of the activity and its start and end timestamps.</span></span>  
   
-5.  Klicken Sie auf die Registerkarte **Aktivität**. Im Hauptbereich des Tools sollten ausführliche Ablaufverfolgungseinträge angezeigt werden. Filtern Sie die Einträge mithilfe der Dropdownliste **Ebene**, die im Menü zur Verfügung steht, nach den einzelnen Ablaufverfolgungsebenen, z.B. **Alle**, **Warnung**, **Fehler**, **Informationen** usw.  
+5.  <span data-ttu-id="2cb50-146">Klicken Sie auf die Registerkarte **Aktivität**. Im Hauptbereich des Tools sollten ausführliche Ablaufverfolgungseinträge angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="2cb50-146">Click on the **Activity** tab. You should see detailed trace entries in the main area of the tool.</span></span> <span data-ttu-id="2cb50-147">Filtern Sie die Einträge mithilfe der Dropdownliste **Ebene**, die im Menü zur Verfügung steht, nach den einzelnen Ablaufverfolgungsebenen, z.B. **Alle**, **Warnung**, **Fehler**, **Informationen** usw.</span><span class="sxs-lookup"><span data-stu-id="2cb50-147">Use the **Level** dropdown list on the menu to filter specific level of traces, for example: **All**, **Warning**, **Errors**, **Information**, etc.</span></span>  
   
-6.  Klicken Sie auf bestimmte Ablaufverfolgungseinträge, um die Einzelheiten im unteren Bereich des Tools zu überprüfen. Die Einzelheiten können in den Ansichten **Formatiert** und **XML** angezeigt werden. Wählen Sie die jeweils entsprechende Registerkarte aus.  
+6.  <span data-ttu-id="2cb50-148">Klicken Sie auf bestimmte Ablaufverfolgungseinträge, um die Einzelheiten im unteren Bereich des Tools zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="2cb50-148">Click on specific trace entries to review the details in the lower area of the tool.</span></span> <span data-ttu-id="2cb50-149">Die Einzelheiten können in den Ansichten **Formatiert** und **XML** angezeigt werden. Wählen Sie die jeweils entsprechende Registerkarte aus.</span><span class="sxs-lookup"><span data-stu-id="2cb50-149">The details can be viewed using **Formatted** and **XML** view by choosing corresponding tabs.</span></span>  
   
-## <a name="step-3--identify-solutions-to-fix-wif-related-issues"></a>Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
- In diesem Schritt ermitteln Sie mithilfe des WIF-Ablaufverfolgungsprotokolls und des Trace Viewer-Tools Lösungen für identifizierte WIF-bezogene Probleme. Dieses Tool zeigt allgemeine Zuordnungen zwischen WIF-bezogenen Ausnahmen und möglichen Lösungen oder Aktionen auf, die zum Beheben des Problems erforderlich sind.  
+## <a name="step-3--identify-solutions-to-fix-wif-related-issues"></a><span data-ttu-id="2cb50-150">Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen</span><span class="sxs-lookup"><span data-stu-id="2cb50-150">Step 3 – Identify Solutions to Fix WIF Related Issues</span></span>  
+ <span data-ttu-id="2cb50-151">In diesem Schritt ermitteln Sie mithilfe des WIF-Ablaufverfolgungsprotokolls und des Trace Viewer-Tools Lösungen für identifizierte WIF-bezogene Probleme.</span><span class="sxs-lookup"><span data-stu-id="2cb50-151">In this step, you can identify solutions for WIF-related issues identified by using the WIF trace log and Trace Viewer tool.</span></span> <span data-ttu-id="2cb50-152">Dieses Tool zeigt allgemeine Zuordnungen zwischen WIF-bezogenen Ausnahmen und möglichen Lösungen oder Aktionen auf, die zum Beheben des Problems erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="2cb50-152">It outlines general mapping of WIF related exceptions to potential solutions or required actions to troubleshoot the issue.</span></span>  
   
-#### <a name="to-identify-solutions-to-fix-wif-related-issues"></a>So identifizieren Sie Lösungen zum Beheben WIF-bezogener Probleme  
+#### <a name="to-identify-solutions-to-fix-wif-related-issues"></a><span data-ttu-id="2cb50-153">So identifizieren Sie Lösungen zum Beheben WIF-bezogener Probleme</span><span class="sxs-lookup"><span data-stu-id="2cb50-153">To identify solutions to fix WIF related issues</span></span>  
   
-1.  Überprüfen Sie in der folgenden Tabelle die WIF-Ausnahmen und die Aktionen, die zum Beheben der Probleme erforderlich sind.  
+1.  <span data-ttu-id="2cb50-154">Überprüfen Sie in der folgenden Tabelle die WIF-Ausnahmen und die Aktionen, die zum Beheben der Probleme erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="2cb50-154">Review the following table of WIF exceptions and the required actions to correct the issues.</span></span>  
   
-|**Fehler-ID**|**Fehlermeldung**|**Aktion zum Beheben des Fehlers**|  
+|<span data-ttu-id="2cb50-155">**Fehler-ID**</span><span class="sxs-lookup"><span data-stu-id="2cb50-155">**Error ID**</span></span>|<span data-ttu-id="2cb50-156">**Fehlermeldung**</span><span class="sxs-lookup"><span data-stu-id="2cb50-156">**Error Message**</span></span>|<span data-ttu-id="2cb50-157">**Aktion zum Beheben des Fehlers**</span><span class="sxs-lookup"><span data-stu-id="2cb50-157">**Action needed to fix the error**</span></span>|  
 |-|-|-|  
-|ID4175|Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.  Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.|Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen. Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird. Durch dieses zusätzliche Zeichen stimmt der Fingerabdruck nicht mehr überein. Wie Sie den Fingerabdruck richtig kopieren, ist hier beschrieben: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|<span data-ttu-id="2cb50-158">ID4175</span><span class="sxs-lookup"><span data-stu-id="2cb50-158">ID4175</span></span>|<span data-ttu-id="2cb50-159">Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.</span><span class="sxs-lookup"><span data-stu-id="2cb50-159">The issuer of the security token was not recognized by the IssuerNameRegistry.</span></span>  <span data-ttu-id="2cb50-160">Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="2cb50-160">To accept security tokens from this issuer, configure the IssuerNameRegistry to return a valid name for this issuer.</span></span>|<span data-ttu-id="2cb50-161">Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen.</span><span class="sxs-lookup"><span data-stu-id="2cb50-161">This error can be caused by copying a thumbprint from the MMC snap-in and pasting it into the *Web.config* file.</span></span> <span data-ttu-id="2cb50-162">Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="2cb50-162">Specifically, you can get an extra non-printable character in the text string when copying from the certificate properties window.</span></span> <span data-ttu-id="2cb50-163">Durch dieses zusätzliche Zeichen stimmt der Fingerabdruck nicht mehr überein. Wie Sie den Fingerabdruck richtig kopieren, ist hier beschrieben: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)</span><span class="sxs-lookup"><span data-stu-id="2cb50-163">This extra character causes the thumbprint match to fail.The procedure for correctly copying the thumbprint can be found here: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)</span></span>|  
   
-## <a name="related-items"></a>Verwandte Elemente  
+## <a name="related-items"></a><span data-ttu-id="2cb50-164">Verwandte Elemente</span><span class="sxs-lookup"><span data-stu-id="2cb50-164">Related Items</span></span>  
   
--   [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](http://msdn.microsoft.com/library/aa751795.aspx)
-
+-   [<span data-ttu-id="2cb50-165">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)</span><span class="sxs-lookup"><span data-stu-id="2cb50-165">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](http://msdn.microsoft.com/library/aa751795.aspx)

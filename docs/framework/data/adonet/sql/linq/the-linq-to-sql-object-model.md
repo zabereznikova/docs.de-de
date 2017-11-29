@@ -1,89 +1,95 @@
 ---
-title: "Das LINQ to SQL-Objektmodell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Das LINQ to SQL-Objektmodell
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 30231ea756e80ddeac087fa8b3e46664860c26a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Das LINQ to SQL-Objektmodell
-In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird ein in der Programmiersprache des Entwicklers ausgedrücktes Objektmodell dem Datenmodell einer relationalen Datenbank zugeordnet.  Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.  
+# <a name="the-linq-to-sql-object-model"></a><span data-ttu-id="67733-102">Das LINQ to SQL-Objektmodell</span><span class="sxs-lookup"><span data-stu-id="67733-102">The LINQ to SQL Object Model</span></span>
+<span data-ttu-id="67733-103">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in der Programmiersprache des Entwicklers ausgedrücktes Objektmodell dem Datenmodell einer relationalen Datenbank zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="67733-103">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], an object model expressed in the programming language of the developer is mapped to the data model of a relational database.</span></span> <span data-ttu-id="67733-104">Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="67733-104">Operations on the data are then conducted according to the object model.</span></span>  
   
- In diesem Szenario übergeben Sie keine Datenbankbefehle \(z. B. `INSERT`\) an die Datenbank.  Stattdessen ändern Sie Werte und führen Methoden innerhalb des Objektmodells aus.  Wenn Sie die Datenbank abfragen oder Änderungen übergeben möchten, übersetzt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ihre Anforderungen in die richtigen SQL\-Befehle und sendet diese an die Datenbank.  
+ <span data-ttu-id="67733-105">In diesem Szenario übergeben Sie keine Datenbankbefehle (z. B. `INSERT`) an die Datenbank.</span><span class="sxs-lookup"><span data-stu-id="67733-105">In this scenario, you do not issue database commands (for example, `INSERT`) to the database.</span></span> <span data-ttu-id="67733-106">Stattdessen ändern Sie Werte und führen Methoden innerhalb des Objektmodells aus.</span><span class="sxs-lookup"><span data-stu-id="67733-106">Instead, you change values and execute methods within your object model.</span></span> <span data-ttu-id="67733-107">Wenn Sie die Datenbank abfragen oder Änderungen übergeben möchten, übersetzt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ihre Anforderungen in die richtigen SQL-Befehle und sendet diese an die Datenbank.</span><span class="sxs-lookup"><span data-stu-id="67733-107">When you want to query the database or send it changes, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates your requests into the correct SQL commands and sends those commands to the database.</span></span>  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ <span data-ttu-id="67733-108">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span><span class="sxs-lookup"><span data-stu-id="67733-108">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span></span>  
   
- In der nachfolgenden Tabelle werden die grundlegenden Elemente im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Objektmodell und deren Beziehungen zu Elementen im relationalen Datenmodell aufgeführt:  
+ <span data-ttu-id="67733-109">Die grundlegenden Elemente in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell und deren Beziehungen zu Elementen im relationalen Datenmodell werden in der folgenden Tabelle zusammengefasst:</span><span class="sxs-lookup"><span data-stu-id="67733-109">The most fundamental elements in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model and their relationship to elements in the relational data model are summarized in the following table:</span></span>  
   
-|LINQ to SQL\-Objektmodell|Relationales Datenmodell|  
-|-------------------------------|------------------------------|  
-|Entitätsklasse|Tabelle|  
-|Klassenmember|Spalte|  
-|Zuordnung|Fremdschlüsselbeziehung|  
-|Methode|Gespeicherte Prozedur oder Funktion|  
+|<span data-ttu-id="67733-110">LINQ to SQL-Objektmodell</span><span class="sxs-lookup"><span data-stu-id="67733-110">LINQ to SQL Object Model</span></span>|<span data-ttu-id="67733-111">Relationales Datenmodell</span><span class="sxs-lookup"><span data-stu-id="67733-111">Relational Data Model</span></span>|  
+|------------------------------|---------------------------|  
+|<span data-ttu-id="67733-112">Entitätsklasse</span><span class="sxs-lookup"><span data-stu-id="67733-112">Entity class</span></span>|<span data-ttu-id="67733-113">Tabelle</span><span class="sxs-lookup"><span data-stu-id="67733-113">Table</span></span>|  
+|<span data-ttu-id="67733-114">Klassenmember</span><span class="sxs-lookup"><span data-stu-id="67733-114">Class member</span></span>|<span data-ttu-id="67733-115">Spalte</span><span class="sxs-lookup"><span data-stu-id="67733-115">Column</span></span>|  
+|<span data-ttu-id="67733-116">Zuordnung</span><span class="sxs-lookup"><span data-stu-id="67733-116">Association</span></span>|<span data-ttu-id="67733-117">Fremdschlüsselbeziehung</span><span class="sxs-lookup"><span data-stu-id="67733-117">Foreign-key relationship</span></span>|  
+|<span data-ttu-id="67733-118">Methode</span><span class="sxs-lookup"><span data-stu-id="67733-118">Method</span></span>|<span data-ttu-id="67733-119">Gespeicherte Prozedur oder Funktion</span><span class="sxs-lookup"><span data-stu-id="67733-119">Stored Procedure or Function</span></span>|  
   
 > [!NOTE]
->  Die folgenden Beschreibungen gehen davon aus, dass Sie über Grundkenntnisse des relationalen Datenmodells und der Regeln verfügen.  
+>  <span data-ttu-id="67733-120">Die folgenden Beschreibungen gehen davon aus, dass Sie über Grundkenntnisse des relationalen Datenmodells und der Regeln verfügen.</span><span class="sxs-lookup"><span data-stu-id="67733-120">The following descriptions assume that you have a basic knowledge of the relational data model and rules.</span></span>  
   
-## LINQ to SQL\-Entitätsklassen und Datenbanktabellen  
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird eine Datenbanktabelle durch eine *Entitätsklasse* dargestellt.  Eine Entitätsklasse entspricht jeder anderen Klasse, die Sie erstellen können. Allerdings fügen Sie der Klasse Anmerkungen mit speziellen Informationen hinzu, die diese Klasse einer Datenbanktabelle zuweisen.  Sie fügen diese Anmerkungen hinzu, indem Sie Ihrer Klassendeklaration ein benutzerdefiniertes Attribut \(<xref:System.Data.Linq.Mapping.TableAttribute>\) hinzufügen. Siehe hierzu das folgende Beispiel:  
+## <a name="linq-to-sql-entity-classes-and-database-tables"></a><span data-ttu-id="67733-121">LINQ to SQL-Entitätsklassen und Datenbanktabellen</span><span class="sxs-lookup"><span data-stu-id="67733-121">LINQ to SQL Entity Classes and Database Tables</span></span>  
+ <span data-ttu-id="67733-122">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], eine Datenbanktabelle wird dargestellt, durch eine *Entitätsklasse*.</span><span class="sxs-lookup"><span data-stu-id="67733-122">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a database table is represented by an *entity class*.</span></span> <span data-ttu-id="67733-123">Eine Entitätsklasse entspricht jeder anderen Klasse, die Sie erstellen können. Allerdings fügen Sie der Klasse Anmerkungen mit speziellen Informationen hinzu, die diese Klasse einer Datenbanktabelle zuweisen.</span><span class="sxs-lookup"><span data-stu-id="67733-123">An entity class is like any other class you might create except that you annotate the class by using special information that associates the class with a database table.</span></span> <span data-ttu-id="67733-124">Sie fügen diese Anmerkungen hinzu, indem Sie Ihrer Klassendeklaration ein benutzerdefiniertes Attribut (<xref:System.Data.Linq.Mapping.TableAttribute>) hinzufügen. Siehe hierzu das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="67733-124">You make this annotation by adding a custom attribute (<xref:System.Data.Linq.Mapping.TableAttribute>) to your class declaration, as in the following example:</span></span>  
   
-### Beispiel  
+### <a name="example"></a><span data-ttu-id="67733-125">Beispiel</span><span class="sxs-lookup"><span data-stu-id="67733-125">Example</span></span>  
  [!code-csharp[DLinqObjectModel#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#1)]
  [!code-vb[DLinqObjectModel#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#1)]  
   
- Nur als Tabelle deklarierte Klasseninstanzen \(Entitätsklassen\) können in der Datenbank gespeichert werden.  
+ <span data-ttu-id="67733-126">Nur als Tabelle deklarierte Klasseninstanzen (Entitätsklassen) können in der Datenbank gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="67733-126">Only instances of classes declared as tables (that is, entity classes) can be saved to the database.</span></span>  
   
- Weitere Informationen finden Sie im Abschnitt zu Tabellenattributen unter [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="67733-127">Weitere Informationen finden Sie unter dem Abschnitt zu Tabellenattributen [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="67733-127">For more information, see the Table Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## LINQ to SQL\-Klassenmember und Datenbankspalten  
- Neben der Zuordnung von Klassen zu Tabellen legen Sie Felder oder Eigenschaften fest, um Datenbankspalten darzustellen.  Zu diesem Zweck definiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das <xref:System.Data.Linq.Mapping.ColumnAttribute>\-Attribut wie im folgenden Beispiel:  
+## <a name="linq-to-sql-class-members-and-database-columns"></a><span data-ttu-id="67733-128">LINQ to SQL-Klassenmember und Datenbankspalten</span><span class="sxs-lookup"><span data-stu-id="67733-128">LINQ to SQL Class Members and Database Columns</span></span>  
+ <span data-ttu-id="67733-129">Neben der Zuordnung von Klassen zu Tabellen legen Sie Felder oder Eigenschaften fest, um Datenbankspalten darzustellen.</span><span class="sxs-lookup"><span data-stu-id="67733-129">In addition to associating classes with tables, you designate fields or properties to represent database columns.</span></span> <span data-ttu-id="67733-130">Zu diesem Zweck definiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut wie im folgenden Beispiel:</span><span class="sxs-lookup"><span data-stu-id="67733-130">For this purpose, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] defines the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute, as in the following example:</span></span>  
   
-### Beispiel  
+### <a name="example"></a><span data-ttu-id="67733-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="67733-131">Example</span></span>  
  [!code-csharp[DLinqObjectModel#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#2)]
  [!code-vb[DLinqObjectModel#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#2)]  
   
- Nur Felder und Eigenschaften, die Spalten zugeordnet werden, bleiben in der Datenbank erhalten oder werden aus dieser abgerufen.  Alle übrigen Elemente gelten als Übergangsteile Ihrer Anwendungslogik.  
+ <span data-ttu-id="67733-132">Nur Felder und Eigenschaften, die Spalten zugeordnet werden, bleiben in der Datenbank erhalten oder werden aus dieser abgerufen.</span><span class="sxs-lookup"><span data-stu-id="67733-132">Only fields and properties mapped to columns are persisted to or retrieved from the database.</span></span> <span data-ttu-id="67733-133">Alle übrigen Elemente gelten als Übergangsteile Ihrer Anwendungslogik.</span><span class="sxs-lookup"><span data-stu-id="67733-133">Those not declared as columns are considered as transient parts of your application logic.</span></span>  
   
- Das <xref:System.Data.Linq.Mapping.ColumnAttribute>\-Attribut weist eine Reihe von Eigenschaften auf, mit denen Sie die Member, die Spalten darstellen, anpassen können \(sie können z. B. ein Member für die Darstellung einer Primärschlüsselspalte festlegen\).  Weitere Informationen finden Sie im Abschnitt zu Spaltenattributen unter [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="67733-134">Das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut weist eine Reihe von Eigenschaften auf, mit denen Sie die Member, die Spalten darstellen, anpassen können (sie können z. B. ein Member für die Darstellung einer Primärschlüsselspalte festlegen).</span><span class="sxs-lookup"><span data-stu-id="67733-134">The <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute has a variety of properties that you can use to customize these members that represent columns (for example, designating a member as representing a primary key column).</span></span> <span data-ttu-id="67733-135">Weitere Informationen finden Sie im Abschnitt Spaltenattribut [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="67733-135">For more information, see the Column Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## LINQ to SQL\-Zuordnungen und Datenbank\-Fremdschlüsselbeziehungen  
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] werden Datenbankzuordnungen \(z. B. Fremdschlüssel zu Primärschlüsselbeziehungen\) durch Anwenden des <xref:System.Data.Linq.Mapping.AssociationAttribute>\-Attributs dargestellt.  Im folgenden Codesegment enthält die `Order`\-Klasse eine `Customer`\-Eigenschaft mit einem <xref:System.Data.Linq.Mapping.AssociationAttribute>\-Attribut.  Diese Eigenschaft und ihr Attribut stellen die `Order`\-Klasse mit einer Beziehung zur `Customer`\-Klasse bereit.  
+## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a><span data-ttu-id="67733-136">LINQ to SQL-Zuordnungen und Datenbank-Fremdschlüsselbeziehungen</span><span class="sxs-lookup"><span data-stu-id="67733-136">LINQ to SQL Associations and Database Foreign-key Relationships</span></span>  
+ <span data-ttu-id="67733-137">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], Sie darstellen datenbankzuordnungen (z. B. Fremdschlüssel zu primärschlüsselbeziehungen) durch Anwenden der <xref:System.Data.Linq.Mapping.AssociationAttribute> Attribut.</span><span class="sxs-lookup"><span data-stu-id="67733-137">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you represent database associations (such as foreign-key to primary-key relationships) by applying the <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute.</span></span> <span data-ttu-id="67733-138">Im folgenden Codesegment der Code der `Order` Klasse enthält eine `Customer` Eigenschaft mit einer <xref:System.Data.Linq.Mapping.AssociationAttribute> Attribut.</span><span class="sxs-lookup"><span data-stu-id="67733-138">In the following segment of code, the `Order` class contains a `Customer` property that has an <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute.</span></span> <span data-ttu-id="67733-139">Diese Eigenschaft und ihr Attribut stellen die `Order`-Klasse mit einer Beziehung zur `Customer`-Klasse bereit.</span><span class="sxs-lookup"><span data-stu-id="67733-139">This property and its attribute provide the `Order` class with a relationship to the `Customer` class.</span></span>  
   
- Im folgenden Codebeispiel wird die `Customer`\-Eigenschaft der `Order`\-Klasse gezeigt.  
+ <span data-ttu-id="67733-140">Im folgenden Codebeispiel wird die `Customer`-Eigenschaft der `Order`-Klasse gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67733-140">The following code example shows the `Customer` property from the `Order` class.</span></span>  
   
-### Beispiel  
+### <a name="example"></a><span data-ttu-id="67733-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="67733-141">Example</span></span>  
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Weitere Informationen finden Sie im Abschnitt zu Zuordnungsattributen unter [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="67733-142">Weitere Informationen finden Sie im Abschnitt Zuordnungsattributen [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="67733-142">For more information, see the Association Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## LINQ to SQL\-Methoden und in der Datenbank gespeicherte Prozeduren  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt gespeicherte Prozeduren und benutzerdefinierte Funktionen.  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] weisen Sie diese in der Datenbank definierten Abstraktionen den Client\-Objekten zu, sodass Sie diese vom Client\-Code aus mit strikter Typzuordnung nutzen können.  Die Methodensignaturen entsprechen so weit wie möglich den Signaturen der Prozeduren und Funktionen in der Datenbank.  Sie können IntelliSense verwenden, um diese Methoden zu ermitteln.  
+## <a name="linq-to-sql-methods-and-database-stored-procedures"></a><span data-ttu-id="67733-143">LINQ to SQL-Methoden und in der Datenbank gespeicherte Prozeduren</span><span class="sxs-lookup"><span data-stu-id="67733-143">LINQ to SQL Methods and Database Stored Procedures</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="67733-144"> unterstützt gespeicherte Prozeduren und benutzerdefinierte Funktionen.</span><span class="sxs-lookup"><span data-stu-id="67733-144"> supports stored procedures and user-defined functions.</span></span> <span data-ttu-id="67733-145">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], Sie diese Datenbank definierten Abstraktionen den Client-Objekten zuordnen, damit Sie auf eine stark typisierte Weise aus dem Clientcode darauf zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="67733-145">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you map these database-defined abstractions to client objects so that you can access them in a strongly typed manner from client code.</span></span> <span data-ttu-id="67733-146">Die Methodensignaturen entsprechen so weit wie möglich den Signaturen der Prozeduren und Funktionen in der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="67733-146">The method signatures resemble as closely as possible the signatures of the procedures and functions defined in the database.</span></span> <span data-ttu-id="67733-147">Sie können IntelliSense verwenden, um diese Methoden zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="67733-147">You can use IntelliSense to discover these methods.</span></span>  
   
- Ein von einem Aufruf einer zugeordneten Prozedur zurückgegebener Ergebnissatz ist eine Auflistung mit strikter Typzuordnung.  
+ <span data-ttu-id="67733-148">Ein von einem Aufruf einer zugeordneten Prozedur zurückgegebener Ergebnissatz ist eine Auflistung mit strikter Typzuordnung.</span><span class="sxs-lookup"><span data-stu-id="67733-148">A result set that is returned by a call to a mapped procedure is a strongly typed collection.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen den Methoden durch Verwendung des <xref:System.Data.Linq.Mapping.FunctionAttribute>\-Attribut und des <xref:System.Data.Linq.Mapping.ParameterAttribute>\-Attribut zu.  Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>\-Eigenschaft darstellen.  Wenn diese Eigenschaft auf `false` \(Standard\) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar.  Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="67733-149"> ordnet gespeicherte Prozeduren und Funktionen den Methoden durch Verwendung des <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut und des <xref:System.Data.Linq.Mapping.ParameterAttribute>-Attribut zu.</span><span class="sxs-lookup"><span data-stu-id="67733-149"> maps stored procedures and functions to methods by using the <xref:System.Data.Linq.Mapping.FunctionAttribute> and <xref:System.Data.Linq.Mapping.ParameterAttribute> attributes.</span></span> <span data-ttu-id="67733-150">Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen.</span><span class="sxs-lookup"><span data-stu-id="67733-150">Methods representing stored procedures are distinguished from those representing user-defined functions by the <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> property.</span></span> <span data-ttu-id="67733-151">Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar.</span><span class="sxs-lookup"><span data-stu-id="67733-151">If this property is set to `false` (the default), the method represents a stored procedure.</span></span> <span data-ttu-id="67733-152">Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.</span><span class="sxs-lookup"><span data-stu-id="67733-152">If it is set to `true`, the method represents a database function.</span></span>  
   
 > [!NOTE]
->  Wenn Sie [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Sie mit [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Methoden erstellen, die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet werden.  
+>  <span data-ttu-id="67733-153">Wenn Sie [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Sie mit [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Methoden erstellen, die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="67733-153">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create methods mapped to stored procedures and user-defined functions.</span></span>  
   
-### Beispiel  
+### <a name="example"></a><span data-ttu-id="67733-154">Beispiel</span><span class="sxs-lookup"><span data-stu-id="67733-154">Example</span></span>  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Weitere Informationen finden Sie in den Abschnitten zu Funktionsattributen, Attributen von gespeicherten Prozeduren und Parameterattributen unter [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ <span data-ttu-id="67733-155">Weitere Informationen finden Sie in den Abschnitten zu Funktionsattributen, Attributen, gespeicherte Prozedur Attribut- und Parameterattribut [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="67733-155">For more information, see the Function Attribute, Stored Procedure Attribute, and Parameter Attribute sections of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) and [Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span></span>  
   
-## Siehe auch  
- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)   
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="67733-156">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67733-156">See Also</span></span>  
+ [<span data-ttu-id="67733-157">Attributbasiertes zuordnen</span><span class="sxs-lookup"><span data-stu-id="67733-157">Attribute-Based Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [<span data-ttu-id="67733-158">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="67733-158">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

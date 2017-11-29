@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; von &lt;netTcpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; von &lt;netTcpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3873c3fd04e2f52e6d2a3bdc64e82f87c84aaf5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; von &lt;netTcpBinding&gt;
-Definiert die Sicherheitseinstellungen für eine Bindung.  
+# <a name="ltsecuritygt-of-ltnettcpbindinggt"></a><span data-ttu-id="9cfad-102">&lt;security&gt; von &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="9cfad-102">&lt;security&gt; of &lt;netTcpBinding&gt;</span></span>
+<span data-ttu-id="9cfad-103">Definiert die Sicherheitseinstellungen für eine Bindung.</span><span class="sxs-lookup"><span data-stu-id="9cfad-103">Defines the security settings for a binding.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="9cfad-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="9cfad-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="9cfad-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="9cfad-105">\<bindings></span></span>  
+<span data-ttu-id="9cfad-106">\<NetTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="9cfad-106">\<netTcpBinding></span></span>  
+<span data-ttu-id="9cfad-107">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="9cfad-107">\<binding></span></span>  
+<span data-ttu-id="9cfad-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="9cfad-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9cfad-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="9cfad-109">Syntax</span></span>  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithCredential">  
    <transport  
       clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -33,51 +41,51 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
 </security>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9cfad-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="9cfad-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="9cfad-111">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="9cfad-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="9cfad-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="9cfad-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Modus|Dies ist optional.  Gibt den angewendeten Sicherheitstyp an.  Gültige Werte werden unten gezeigt.  Der Standardwert ist `Transport`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|<span data-ttu-id="9cfad-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="9cfad-113">Attribute</span></span>|<span data-ttu-id="9cfad-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9cfad-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="9cfad-115">Modus</span><span class="sxs-lookup"><span data-stu-id="9cfad-115">mode</span></span>|<span data-ttu-id="9cfad-116">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="9cfad-116">Optional.</span></span> <span data-ttu-id="9cfad-117">Gibt den angewendeten Sicherheitstyp an.</span><span class="sxs-lookup"><span data-stu-id="9cfad-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="9cfad-118">Gültige Werte werden unten gezeigt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-118">Valid values are shown below.</span></span> <span data-ttu-id="9cfad-119">Der Standardwert ist `Transport`.</span><span class="sxs-lookup"><span data-stu-id="9cfad-119">The default value is `Transport`.</span></span><br /><br /> <span data-ttu-id="9cfad-120">Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="9cfad-120">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## mode\-Attribut  
+## <a name="mode-attribute"></a><span data-ttu-id="9cfad-121">mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="9cfad-121">mode Attribute</span></span>  
   
-|Wert|Beschreibung|  
-|----------|------------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
-|Transport|Die Transportsicherheit wird durch TLS über TCP oder SPNego gewährleistet.  Der Dienst muss unter Umständen mit SSL\-Zertifikaten konfiguriert werden.  Es ist möglich, den Schutzgrad mit diesem Modus zu steuern.|  
-|Meldung|Sicherheit wird über die SOAP\-Nachrichtensicherheit bereitgestellt.  Standardmäßig wird der SOAP\-Nachrichtentext verschlüsselt und signiert.  Bei diesem Modus können eine Reihe von Features eingestellt werden, z.&\#160;B., ob die Dienstanmeldeinformationen out\-of\-band auf dem Client verfügbar sind, welche Algorithmenfolge verwendet werden soll und welcher Schutzgrad auf den Nachrichtentext angewendet werden soll.  Die Clientauthentifizierung wird einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.|  
-|TransportWithMessageCredential|Die Transportsicherheit wird mit der Nachrichtensicherheit gekoppelt.  Die Transportsicherheit wird durch TLS über TCP oder SPNego bereitgestellt und stellt Integrität, Vertraulichkeit und Serverauthentifizierung sicher.  Die Clientauthentifizierung wird durch die SOAP\-Nachrichtensicherheit gewährleistet.  Die Clientauthentifizierung wird standardmäßig einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.|  
+|<span data-ttu-id="9cfad-122">Wert</span><span class="sxs-lookup"><span data-stu-id="9cfad-122">Value</span></span>|<span data-ttu-id="9cfad-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9cfad-123">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="9cfad-124">Keine</span><span class="sxs-lookup"><span data-stu-id="9cfad-124">None</span></span>|<span data-ttu-id="9cfad-125">Die Sicherheitsfunktionen sind deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="9cfad-125">Security is disabled.</span></span>|  
+|<span data-ttu-id="9cfad-126">Transport</span><span class="sxs-lookup"><span data-stu-id="9cfad-126">Transport</span></span>|<span data-ttu-id="9cfad-127">Die Transportsicherheit wird durch TLS über TCP oder SPNego gewährleistet.</span><span class="sxs-lookup"><span data-stu-id="9cfad-127">Transport security is provided using TLS over TCP or SPNego.</span></span> <span data-ttu-id="9cfad-128">Der Dienst muss unter Umständen mit SSL-Zertifikaten konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="9cfad-128">The service may need to be configured with SSL certificates.</span></span> <span data-ttu-id="9cfad-129">Es ist möglich, den Schutzgrad mit diesem Modus zu steuern.</span><span class="sxs-lookup"><span data-stu-id="9cfad-129">It is possible to control the protection level with this mode.</span></span>|  
+|<span data-ttu-id="9cfad-130">Meldung</span><span class="sxs-lookup"><span data-stu-id="9cfad-130">Message</span></span>|<span data-ttu-id="9cfad-131">Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-131">Security is provided using SOAP message security.</span></span> <span data-ttu-id="9cfad-132">Standardmäßig wird der SOAP-Nachrichtentext verschlüsselt und signiert.</span><span class="sxs-lookup"><span data-stu-id="9cfad-132">By default, the SOAP body is encrypted and signed.</span></span> <span data-ttu-id="9cfad-133">Bei diesem Modus können eine Reihe von Features eingestellt werden, z.&#160;B., ob die Dienstanmeldeinformationen out-of-band auf dem Client verfügbar sind, welche Algorithmenfolge verwendet werden soll und welcher Schutzgrad auf den Nachrichtentext angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="9cfad-133">This mode offers a variety of features, such as whether the service credentials are available at the client out of band, the algorithm suite to use, and what level of protection to apply to the message body.</span></span> <span data-ttu-id="9cfad-134">Die Clientauthentifizierung wird einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.</span><span class="sxs-lookup"><span data-stu-id="9cfad-134">Client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
+|<span data-ttu-id="9cfad-135">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="9cfad-135">TransportWithMessageCredential</span></span>|<span data-ttu-id="9cfad-136">Die Transportsicherheit wird mit der Nachrichtensicherheit gekoppelt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-136">Transport security is coupled with message security.</span></span> <span data-ttu-id="9cfad-137">Die Transportsicherheit wird durch TLS über TCP oder SPNego bereitgestellt und stellt Integrität, Vertraulichkeit und Serverauthentifizierung sicher.</span><span class="sxs-lookup"><span data-stu-id="9cfad-137">Transport security is provided by TLS over TCP, or SPNego, and ensures integrity, confidentiality, and server authentication.</span></span> <span data-ttu-id="9cfad-138">Die Clientauthentifizierung wird durch die SOAP-Nachrichtensicherheit gewährleistet.</span><span class="sxs-lookup"><span data-stu-id="9cfad-138">SOAP message security provides client authentication.</span></span> <span data-ttu-id="9cfad-139">Die Clientauthentifizierung wird standardmäßig einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.</span><span class="sxs-lookup"><span data-stu-id="9cfad-139">By default, client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="9cfad-140">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="9cfad-140">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für die Nachricht.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|<span data-ttu-id="9cfad-141">Element</span><span class="sxs-lookup"><span data-stu-id="9cfad-141">Element</span></span>|<span data-ttu-id="9cfad-142">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9cfad-142">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="9cfad-143">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="9cfad-143">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|<span data-ttu-id="9cfad-144">Definiert die Sicherheitseinstellungen für den Transport.</span><span class="sxs-lookup"><span data-stu-id="9cfad-144">Defines the security settings for the transport.</span></span> <span data-ttu-id="9cfad-145">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="9cfad-145">This element is of type <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="9cfad-146">\<Meldung ></span><span class="sxs-lookup"><span data-stu-id="9cfad-146">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|<span data-ttu-id="9cfad-147">Definiert die Sicherheitseinstellungen für die Nachricht.</span><span class="sxs-lookup"><span data-stu-id="9cfad-147">Defines the security settings for the message.</span></span> <span data-ttu-id="9cfad-148">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.</span><span class="sxs-lookup"><span data-stu-id="9cfad-148">This element is of type <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="9cfad-149">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="9cfad-149">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|Bindung|Das Bindungselement von [\<netTcpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|<span data-ttu-id="9cfad-150">Element</span><span class="sxs-lookup"><span data-stu-id="9cfad-150">Element</span></span>|<span data-ttu-id="9cfad-151">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9cfad-151">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="9cfad-152">Bindung</span><span class="sxs-lookup"><span data-stu-id="9cfad-152">binding</span></span>|<span data-ttu-id="9cfad-153">Das Bindungselement, das von der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="9cfad-153">The binding element of the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>|  
   
-## Hinweise  
- Alle Standardbindungen stellen Parameter zur Steuerung der Sicherheitsanforderungen für Übertragungen bereit.  Diese Parameter beinhalten normalerweise den Sicherheitsmodus, mit dem angegeben wurde, ob Sicherheit auf Nachrichtenebene oder auf Übertragungsebene verwendet wird und welcher Clientanmeldeinformationstyp ausgewählt wurde.  Basierend auf der mit diesen Parametern bereitgestellten Optionsauswahl wird ein Kanalstapel mit der entsprechenden Sicherheit erstellt.  
+## <a name="remarks"></a><span data-ttu-id="9cfad-154">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9cfad-154">Remarks</span></span>  
+ <span data-ttu-id="9cfad-155">Alle Standardbindungen stellen Parameter zur Steuerung der Sicherheitsanforderungen für Übertragungen bereit.</span><span class="sxs-lookup"><span data-stu-id="9cfad-155">Each of the standard bindings provides parameters for controlling the transfer security requirements.</span></span> <span data-ttu-id="9cfad-156">Diese Parameter beinhalten normalerweise den Sicherheitsmodus, mit dem angegeben wurde, ob Sicherheit auf Nachrichtenebene oder auf Übertragungsebene verwendet wird und welcher Clientanmeldeinformationstyp ausgewählt wurde.</span><span class="sxs-lookup"><span data-stu-id="9cfad-156">These parameters typically include the security mode that specified whether message-level or transport-level security is used and the choice of client credential type.</span></span> <span data-ttu-id="9cfad-157">Basierend auf der mit diesen Parametern bereitgestellten Optionsauswahl wird ein Kanalstapel mit der entsprechenden Sicherheit erstellt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-157">Based on the choice of options these parameters present, a channel stack is constructed with appropriate security.</span></span>  
   
- Die von Windows Communication Foundation \(WCF\) gelieferten und vom System bereitgestellten Bindungen wurden für einige der gängigsten Szenarioanforderungen entwickelt.  Diese Bindungen ermöglichen alle die Angabe von Sicherheitsanforderungen für einige bestimmte Zielszenarien.  
+ <span data-ttu-id="9cfad-158">Die von Windows Communication Foundation (WCF) gelieferten und vom System bereitgestellten Bindungen wurden für einige der gängigsten Szenarioanforderungen entwickelt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-158">The system-provided bindings supplied by Windows Communication Foundation (WCF) are a set designed to meet some of the most common scenario requirements.</span></span> <span data-ttu-id="9cfad-159">Diese Bindungen ermöglichen alle die Angabe von Sicherheitsanforderungen für einige bestimmte Zielszenarien.</span><span class="sxs-lookup"><span data-stu-id="9cfad-159">Each of these bindings allows the specification of security requirements for some specific targeted scenarios.</span></span>  
   
- Dieses Konfigurationselement stellt die Sicherheitsspezifikationen für `netTcpBinding` bereit.  Daraus ergibt sich eine sichere, zuverlässige und optimierte Bindung, die computerübergreifende Kommunikation unterstützt.  Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit TCP für die Nachrichtenübertragung, Windows\-Sicherheit für Nachrichtensicherheit und Authentifizierung, WS\-Reliable\-Messaging für Zuverlässigkeit sowie binäre Nachrichtencodierung.  
+ <span data-ttu-id="9cfad-160">Dieses Konfigurationselement stellt die Sicherheitsspezifikationen für `netTcpBinding` bereit.</span><span class="sxs-lookup"><span data-stu-id="9cfad-160">This configuration element provides the security specifications for `netTcpBinding`.</span></span> <span data-ttu-id="9cfad-161">Daraus ergibt sich eine sichere, zuverlässige und optimierte Bindung, die computerübergreifende Kommunikation unterstützt.</span><span class="sxs-lookup"><span data-stu-id="9cfad-161">This is a secure, reliable, optimized binding suitable for cross-machine communication.</span></span> <span data-ttu-id="9cfad-162">Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit TCP für die Nachrichtenübertragung, Windows-Sicherheit für Nachrichtensicherheit und Authentifizierung, WS-Reliable-Messaging für Zuverlässigkeit sowie binäre Nachrichtencodierung.</span><span class="sxs-lookup"><span data-stu-id="9cfad-162">By default it generates a runtime communication stack supporting TCP for message delivery and Windows Security for message security and authentication, WS-ReliableMessaging for reliability, and binary message encoding.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.NetTcpSecurity>   
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="9cfad-163">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9cfad-163">See Also</span></span>  
+ <xref:System.ServiceModel.NetTcpSecurity>  
+ <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
+ [<span data-ttu-id="9cfad-164">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="9cfad-164">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="9cfad-165">Bindungen</span><span class="sxs-lookup"><span data-stu-id="9cfad-165">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="9cfad-166">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="9cfad-166">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="9cfad-167">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="9cfad-167">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="9cfad-168">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="9cfad-168">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
 - COM interop, registration-free COM interop
@@ -23,52 +17,50 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dd08f4d4466582b1e6ff1f80f586482cd3e2ec0c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28ecb3419bddcc8e9a192b240a7bf90474314c1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
-COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
+# <a name="registration-free-com-interop"></a><span data-ttu-id="f2f46-102">COM-Interop ohne Registrierung</span><span class="sxs-lookup"><span data-stu-id="f2f46-102">Registration-Free COM Interop</span></span>
+<span data-ttu-id="f2f46-103">COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="f2f46-103">Registration-free COM interop activates a component without using the Windows registry to store assembly information.</span></span> <span data-ttu-id="f2f46-104">Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten.</span><span class="sxs-lookup"><span data-stu-id="f2f46-104">Instead of registering a component on a computer during deployment, you create Win32-style manifest files at design time that contain information about binding and activation.</span></span> <span data-ttu-id="f2f46-105">Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="f2f46-105">These manifest files, rather than registry keys, direct the activation of an object.</span></span>  
   
- Die Aktivierung der Assemblys ohne Registrierung bietet im Vergleich zur Registrierung bei der Bereitstellung zwei Vorteile:  
+ <span data-ttu-id="f2f46-106">Die Aktivierung der Assemblys ohne Registrierung bietet im Vergleich zur Registrierung bei der Bereitstellung zwei Vorteile:</span><span class="sxs-lookup"><span data-stu-id="f2f46-106">Using registration-free activation for your assemblies instead of registering them during deployment offers two advantages:</span></span>  
   
--   Sie können steuern, welche DLL-Version aktiviert wird, wenn mehrere Versionen auf einem Computer installiert sind.  
+-   <span data-ttu-id="f2f46-107">Sie können steuern, welche DLL-Version aktiviert wird, wenn mehrere Versionen auf einem Computer installiert sind.</span><span class="sxs-lookup"><span data-stu-id="f2f46-107">You can control which DLL version is activated when more than one version is installed on a computer.</span></span>  
   
--   Endbenutzer können mit XCOPY oder FTP die Anwendung in ein geeignetes Verzeichnis auf dem Computer kopieren. Die Anwendung kann dann von diesem Verzeichnis aus ausgeführt werden.  
+-   <span data-ttu-id="f2f46-108">Endbenutzer können mit XCOPY oder FTP die Anwendung in ein geeignetes Verzeichnis auf dem Computer kopieren.</span><span class="sxs-lookup"><span data-stu-id="f2f46-108">End users can use XCOPY or FTP to copy your application to an appropriate directory on their computer.</span></span> <span data-ttu-id="f2f46-109">Die Anwendung kann dann von diesem Verzeichnis aus ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="f2f46-109">The application can then be run from that directory.</span></span>  
   
- In diesem Abschnitt werden die beiden Arten von Manifesten beschrieben, die für COM-Interop ohne Registrierung erforderlich sind: Anwendungs- und Komponentenmanifeste. Diese Manifeste sind XML-Dateien. Ein Anwendungsmanifest, das von einem Anwendungsentwickler erstellt wird, enthält Metadaten zur Beschreibung von Assemblys und Assemblyabhängigkeiten. Ein Komponentenmanifest, das von einem Komponentenentwickler erstellt wird, enthält Informationen, die ansonsten in der Windows-Registrierung gespeichert sind.  
+ <span data-ttu-id="f2f46-110">In diesem Abschnitt werden die beiden Arten von Manifesten beschrieben, die für COM-Interop ohne Registrierung erforderlich sind: Anwendungs- und Komponentenmanifeste.</span><span class="sxs-lookup"><span data-stu-id="f2f46-110">This section describes the two types of manifests needed for registration-free COM interop: application and component manifests.</span></span> <span data-ttu-id="f2f46-111">Diese Manifeste sind XML-Dateien.</span><span class="sxs-lookup"><span data-stu-id="f2f46-111">These manifests are XML files.</span></span> <span data-ttu-id="f2f46-112">Ein Anwendungsmanifest, das von einem Anwendungsentwickler erstellt wird, enthält Metadaten zur Beschreibung von Assemblys und Assemblyabhängigkeiten.</span><span class="sxs-lookup"><span data-stu-id="f2f46-112">An application manifest, which is created by an application developer, contains metadata that describes assemblies and assembly dependencies.</span></span> <span data-ttu-id="f2f46-113">Ein Komponentenmanifest, das von einem Komponentenentwickler erstellt wird, enthält Informationen, die ansonsten in der Windows-Registrierung gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="f2f46-113">A component manifest, created by a component developer, contains information otherwise located in the Windows registry.</span></span>  
   
-### <a name="requirements-for-registration-free-com-interop"></a>Anforderungen an COM-Interop ohne Registrierung  
+### <a name="requirements-for-registration-free-com-interop"></a><span data-ttu-id="f2f46-114">Anforderungen an COM-Interop ohne Registrierung</span><span class="sxs-lookup"><span data-stu-id="f2f46-114">Requirements for registration-free COM interop</span></span>  
   
-1.  Die Unterstützung für COM-Interop ohne Registrierung variiert je nach Typ der Bibliothekassembly und richtet sich insbesondere danach, ob die Assembly nicht verwaltet (parallele Ausführung für COM) oder verwaltet (.NET-basiert) ist. In der folgenden Tabelle werden die Anforderungen an das Betriebssystem und die .NET Framework-Version für jeden Assemblytyp aufgeführt.  
+1.  <span data-ttu-id="f2f46-115">Die Unterstützung für COM-Interop ohne Registrierung variiert je nach Typ der Bibliothekassembly und richtet sich insbesondere danach, ob die Assembly nicht verwaltet (parallele Ausführung für COM) oder verwaltet (.NET-basiert) ist.</span><span class="sxs-lookup"><span data-stu-id="f2f46-115">Support for registration-free COM interop varies slightly depending on the type of library assembly; specifically, whether the assembly is unmanaged (COM side-by-side) or managed (.NET-based).</span></span> <span data-ttu-id="f2f46-116">In der folgenden Tabelle werden die Anforderungen an das Betriebssystem und die .NET Framework-Version für jeden Assemblytyp aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="f2f46-116">The following table shows the operating system and .NET Framework version requirements for each assembly type.</span></span>  
   
-    |Assemblytyp|Betriebssystem|.NET Framework-Version|  
+    |<span data-ttu-id="f2f46-117">Assemblytyp</span><span class="sxs-lookup"><span data-stu-id="f2f46-117">Assembly type</span></span>|<span data-ttu-id="f2f46-118">Betriebssystem</span><span class="sxs-lookup"><span data-stu-id="f2f46-118">Operating system</span></span>|<span data-ttu-id="f2f46-119">.NET Framework-Version</span><span class="sxs-lookup"><span data-stu-id="f2f46-119">.NET Framework version</span></span>|  
     |-------------------|----------------------|----------------------------|  
-    |Parallele Ausführung für COM|Microsoft Windows XP|Nicht erforderlich|  
-    |.NET-basiert|Windows XP mit SP2|.NET Framework 1.1 oder höher|  
+    |<span data-ttu-id="f2f46-120">Parallele Ausführung für COM</span><span class="sxs-lookup"><span data-stu-id="f2f46-120">COM side-by-side</span></span>|<span data-ttu-id="f2f46-121">Microsoft Windows XP</span><span class="sxs-lookup"><span data-stu-id="f2f46-121">Microsoft Windows XP</span></span>|<span data-ttu-id="f2f46-122">Nicht erforderlich</span><span class="sxs-lookup"><span data-stu-id="f2f46-122">Not required.</span></span>|  
+    |<span data-ttu-id="f2f46-123">.NET-basiert</span><span class="sxs-lookup"><span data-stu-id="f2f46-123">.NET-based</span></span>|<span data-ttu-id="f2f46-124">Windows XP mit SP2</span><span class="sxs-lookup"><span data-stu-id="f2f46-124">Windows XP with SP2</span></span>|<span data-ttu-id="f2f46-125">.NET Framework 1.1 oder höher</span><span class="sxs-lookup"><span data-stu-id="f2f46-125">NET Framework version 1.1 or later.</span></span>|  
   
-     Die Windows Server 2003-Produktfamilie unterstützt auch COM-Interop ohne Registrierung für .NET-basierte Assemblys.  
+     <span data-ttu-id="f2f46-126">Die Windows Server 2003-Produktfamilie unterstützt auch COM-Interop ohne Registrierung für .NET-basierte Assemblys.</span><span class="sxs-lookup"><span data-stu-id="f2f46-126">The Windows Server 2003 family also supports registration-free COM interop for .NET-based assemblies.</span></span>  
   
-     Damit eine .NET-basierte Klasse mit der Aktivierung ohne COM-Registrierung kompatibel ist, muss die Klasse über einen Standardkonstruktor verfügen und öffentlich sein.  
+     <span data-ttu-id="f2f46-127">Damit eine .NET-basierte Klasse mit der Aktivierung ohne COM-Registrierung kompatibel ist, muss die Klasse über einen Standardkonstruktor verfügen und öffentlich sein.</span><span class="sxs-lookup"><span data-stu-id="f2f46-127">For a .NET-based class to be compatible with registry-free activation from COM, the class must have a default constructor and must be public.</span></span>  
   
-### <a name="configuring-com-components-for-registration-free-activation"></a>Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung  
+### <a name="configuring-com-components-for-registration-free-activation"></a><span data-ttu-id="f2f46-128">Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung</span><span class="sxs-lookup"><span data-stu-id="f2f46-128">Configuring COM components for registration-free activation</span></span>  
   
-1.  Damit eine COM-Komponente ohne Registrierung aktiviert werden kann, muss sie als parallele Assembly bereitgestellt werden. Parallele Assemblys sind nicht verwaltete Assemblys.  Weitere Informationen finden Sie in der MSDN Library unter "Verwenden paralleler Assemblys".  
+1.  <span data-ttu-id="f2f46-129">Damit eine COM-Komponente ohne Registrierung aktiviert werden kann, muss sie als parallele Assembly bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="f2f46-129">For a COM component to participate in registration-free activation, it must be deployed as a side-by-side assembly.</span></span> <span data-ttu-id="f2f46-130">Parallele Assemblys sind nicht verwaltete Assemblys.</span><span class="sxs-lookup"><span data-stu-id="f2f46-130">Side-by-side assemblies are unmanaged assemblies.</span></span>  <span data-ttu-id="f2f46-131">Weitere Informationen finden Sie unter [verwenden Side-by-Side Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).</span><span class="sxs-lookup"><span data-stu-id="f2f46-131">For more information, see [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).</span></span>  
   
-     Zur Verwendung paralleler COM-Assemblys muss ein Entwickler von .NET-basierten Anwendungen ein Anwendungsmanifest bereitstellen, das die Bindungs- und Aktivierungsinformationen enthält. Die Unterstützung nicht verwalteter paralleler Assemblys ist in Windows XP integriert. Die vom Betriebssystem unterstützte COM Runtime durchsucht ein Anwendungsmanifest nach Aktivierungsinformationen, wenn die aktivierte Komponente nicht in der Registrierung vorhanden ist.  
+     <span data-ttu-id="f2f46-132">Zur Verwendung paralleler COM-Assemblys muss ein Entwickler von .NET-basierten Anwendungen ein Anwendungsmanifest bereitstellen, das die Bindungs- und Aktivierungsinformationen enthält.</span><span class="sxs-lookup"><span data-stu-id="f2f46-132">To use COM side-by-side assemblies, a .NET-based application developer must provide an application manifest, which contains the binding and activation information.</span></span> <span data-ttu-id="f2f46-133">Die Unterstützung nicht verwalteter paralleler Assemblys ist in Windows XP integriert.</span><span class="sxs-lookup"><span data-stu-id="f2f46-133">Support for unmanaged side-by-side assemblies is built into the Windows XP operating system.</span></span> <span data-ttu-id="f2f46-134">Die vom Betriebssystem unterstützte COM Runtime durchsucht ein Anwendungsmanifest nach Aktivierungsinformationen, wenn die aktivierte Komponente nicht in der Registrierung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="f2f46-134">The COM runtime, supported by the operating system, scans an application manifest for activation information when the component being activated is not in the registry.</span></span>  
   
-     Die Aktivierung ohne Registrierung ist für COM-Komponenten unter Windows XP optional. Detaillierte Anweisungen zum Hinzufügen einer parallelen Assembly zu einer Anwendung finden Sie in der MSDN Library unter "Verwenden paralleler Assemblys".  
+     <span data-ttu-id="f2f46-135">Die Aktivierung ohne Registrierung ist für COM-Komponenten unter Windows XP optional.</span><span class="sxs-lookup"><span data-stu-id="f2f46-135">Registration-free activation is optional for COM components installed on Windows XP.</span></span> <span data-ttu-id="f2f46-136">Detaillierte Anweisungen zum Hinzufügen von einer Seite-an-Seite-Assembly zu einer Anwendung finden Sie unter [verwenden Side-by-Side Assemblys](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).</span><span class="sxs-lookup"><span data-stu-id="f2f46-136">For detailed instructions on adding a side-by-side assembly to an application, see [Using Side-by-side Assemblies](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).</span></span>  
   
     > [!NOTE]
-    >  Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können. Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.  
+    >  <span data-ttu-id="f2f46-137">Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="f2f46-137">Side-by-side execution is a .NET Framework feature that enables multiple versions of the runtime, and multiple versions of applications and components that use a version of the runtime, to run on the same computer at the same time.</span></span> <span data-ttu-id="f2f46-138">Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.</span><span class="sxs-lookup"><span data-stu-id="f2f46-138">Side-by-side execution and side-by-side assemblies are different mechanisms for providing side-by-side functionality.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
-
+## <a name="see-also"></a><span data-ttu-id="f2f46-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2f46-139">See Also</span></span>  
+ [<span data-ttu-id="f2f46-140">Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung</span><span class="sxs-lookup"><span data-stu-id="f2f46-140">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

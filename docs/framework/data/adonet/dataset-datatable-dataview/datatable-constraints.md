@@ -1,43 +1,49 @@
 ---
-title: "&#39;DataTable&#39;-Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataTable-Einschränkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fb1fd2c7aa057fcc83c82ab9d72129db2cac680e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;DataTable&#39;-Einschr&#228;nkungen
-Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTable> enthaltenen Daten einschränken, um die Datenintegrität zu erhalten.  Eine Einschränkung ist eine automatische Regel, die auf eine Spalte oder zugehörige Spalten angewendet wird und die die Vorgehensweise beim Ändern des Werts einer Spalte festlegt.  Einschränkungen werden erzwungen, wenn die  `System.Data.DataSet.EnforceConstraints`\-Eigenschaft des <xref:System.Data.DataSet>\-Objekts auf **true** festgelegt wird.  Ein Codebeispiel, in dem das Festlegen der `EnforceConstraints`\-Eigenschaft veranschaulicht wird, finden Sie im <xref:System.Data.DataSet.EnforceConstraints%2A>\-Referenzthema.  
+# <a name="datatable-constraints"></a><span data-ttu-id="726e0-102">DataTable-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="726e0-102">DataTable Constraints</span></span>
+<span data-ttu-id="726e0-103">Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTable> enthaltenen Daten einschränken, um die Datenintegrität zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="726e0-103">You can use constraints to enforce restrictions on the data in a <xref:System.Data.DataTable>, in order to maintain the integrity of the data.</span></span> <span data-ttu-id="726e0-104">Eine Einschränkung ist eine automatische Regel, die auf eine Spalte oder zugehörige Spalten angewendet wird und die die Vorgehensweise beim Ändern des Werts einer Spalte festlegt.</span><span class="sxs-lookup"><span data-stu-id="726e0-104">A constraint is an automatic rule, applied to a column or related columns, that determines the course of action when the value of a row is somehow altered.</span></span> <span data-ttu-id="726e0-105">Einschränkungen werden erzwungen, wenn die `System.Data.DataSet.EnforceConstraints` Eigenschaft der <xref:System.Data.DataSet> ist **"true"**.</span><span class="sxs-lookup"><span data-stu-id="726e0-105">Constraints are enforced when the `System.Data.DataSet.EnforceConstraints` property of the <xref:System.Data.DataSet> is **true**.</span></span> <span data-ttu-id="726e0-106">Ein Codebeispiel, in dem das Festlegen der `EnforceConstraints`-Eigenschaft veranschaulicht wird, finden Sie im <xref:System.Data.DataSet.EnforceConstraints%2A>-Referenzthema.</span><span class="sxs-lookup"><span data-stu-id="726e0-106">For a code example that shows how to set the `EnforceConstraints` property, see the <xref:System.Data.DataSet.EnforceConstraints%2A> reference topic.</span></span>  
   
- Es gibt zwei Arten von Einschränkungen in ADO.NET: die <xref:System.Data.ForeignKeyConstraint> und die <xref:System.Data.UniqueConstraint>.  In der Standardeinstellung werden beide Einschränkungen automatisch erstellt, wenn Sie eine Beziehung zwischen zwei oder mehreren Tabellen herstellen, indem Sie dem **DataSet** eine <xref:System.Data.DataRelation> hinzufügen.  Dieses Verhalten kann jedoch auch deaktiviert werden, indem beim Erstellen der Beziehung **createConstraints** \= **false** festgelegt wird.  
+ <span data-ttu-id="726e0-107">Es gibt zwei Arten von Einschränkungen in ADO.NET: die <xref:System.Data.ForeignKeyConstraint> und die <xref:System.Data.UniqueConstraint>.</span><span class="sxs-lookup"><span data-stu-id="726e0-107">There are two kinds of constraints in ADO.NET: the <xref:System.Data.ForeignKeyConstraint> and the <xref:System.Data.UniqueConstraint>.</span></span> <span data-ttu-id="726e0-108">Standardmäßig beide Einschränkungen automatisch erstellt, wenn Sie eine Beziehung zwischen zwei oder mehr Tabellen durch Hinzufügen von erstellen eine <xref:System.Data.DataRelation> auf die **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="726e0-108">By default, both constraints are created automatically when you create a relationship between two or more tables by adding a <xref:System.Data.DataRelation> to the **DataSet**.</span></span> <span data-ttu-id="726e0-109">Sie können dieses Verhalten jedoch deaktivieren, durch Angabe **CreateConstraints** = **"false"** beim Erstellen der Beziehung.</span><span class="sxs-lookup"><span data-stu-id="726e0-109">However, you can disable this behavior by specifying **createConstraints** = **false** when creating the relation.</span></span>  
   
-## ForeignKeyConstraint  
- Mit den durch **ForeignKeyConstraint** festgelegten Regeln wird bestimmt, wie Updates und Löschvorgänge an zugehörige Tabellen weitergegeben werden.  Wenn beispielsweise ein Wert in einer Zeile einer Tabelle aktualisiert oder gelöscht und dieser Wert auch in einer oder mehreren zugehörigen Tabellen verwendet wird, wird mit einer **ForeignKeyConstraint** festgelegt, was in den zugehörigen Tabellen geschieht.  
+## <a name="foreignkeyconstraint"></a><span data-ttu-id="726e0-110">ForeignKeyConstraint</span><span class="sxs-lookup"><span data-stu-id="726e0-110">ForeignKeyConstraint</span></span>  
+ <span data-ttu-id="726e0-111">Ein **ForeignKeyConstraint** festgelegten Regeln wie Updates und Löschvorgänge an zugehörige Tabellen weitergegeben werden.</span><span class="sxs-lookup"><span data-stu-id="726e0-111">A **ForeignKeyConstraint** enforces rules about how updates and deletes to related tables are propagated.</span></span> <span data-ttu-id="726e0-112">Wenn ein Wert in einer Zeile einer Tabelle aktualisiert oder gelöscht, ist dieser Wert wird auch verwendet, in einem oder mehreren zugehörigen Tabellen, z. B. eine **ForeignKeyConstraint** bestimmt, was in den zugehörigen Tabellen geschieht.</span><span class="sxs-lookup"><span data-stu-id="726e0-112">For example, if a value in a row of one table is updated or deleted, and that same value is also used in one or more related tables, a **ForeignKeyConstraint** determines what happens in the related tables.</span></span>  
   
- Mithilfe der <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>\-Eigenschaft und der <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>\-Eigenschaft der **ForeignKeyConstraint** werden die Aktionen definiert, die beim Versuch des Benutzers, eine Zeile in einer zugehörigen Tabelle zu löschen oder zu aktualisieren, ausgeführt werden.  In der folgenden Tabelle werden die verschiedenen Einstellungen beschrieben, die für die **DeleteRule**\-Eigenschaft und die **UpdateRule**\-Eigenschaft der **ForeignKeyConstraint** verfügbar sind.  
+ <span data-ttu-id="726e0-113">Die <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> und <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> Eigenschaften der **ForeignKeyConstraint** definieren die Aktion, die ausgeführt werden, wenn der Benutzer versucht, löschen oder Aktualisieren einer Zeile in einer verknüpften Tabelle.</span><span class="sxs-lookup"><span data-stu-id="726e0-113">The <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> and <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> properties of the **ForeignKeyConstraint** define the action to be taken when the user attempts to delete or update a row in a related table.</span></span> <span data-ttu-id="726e0-114">Die folgende Tabelle beschreibt die verschiedenen Einstellungen für die **DeleteRule** und **UpdateRule** Eigenschaften der **ForeignKeyConstraint**.</span><span class="sxs-lookup"><span data-stu-id="726e0-114">The following table describes the different settings available for the **DeleteRule** and **UpdateRule** properties of the **ForeignKeyConstraint**.</span></span>  
   
-|Festgelegte Regel|Beschreibung|  
-|-----------------------|------------------|  
-|**Cascade**|Verknüpfte Zeilen werden gelöscht oder aktualisiert.|  
-|**SetNull**|Für die Werte in verknüpften Zeilen wird **DBNull** festgelegt.|  
-|**SetDefault**|Für die Werte in verknüpften Zeilen wird der Standardwert festgelegt.|  
-|**Keine**|In verknüpften Zeilen wird keine Aktion ausgeführt.  Dies ist die Standardeinstellung.|  
+|<span data-ttu-id="726e0-115">Festgelegte Regel</span><span class="sxs-lookup"><span data-stu-id="726e0-115">Rule setting</span></span>|<span data-ttu-id="726e0-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="726e0-116">Description</span></span>|  
+|------------------|-----------------|  
+|<span data-ttu-id="726e0-117">**CASCADE**</span><span class="sxs-lookup"><span data-stu-id="726e0-117">**Cascade**</span></span>|<span data-ttu-id="726e0-118">Verknüpfte Zeilen werden gelöscht oder aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="726e0-118">Delete or update related rows.</span></span>|  
+|<span data-ttu-id="726e0-119">**SetNull**</span><span class="sxs-lookup"><span data-stu-id="726e0-119">**SetNull**</span></span>|<span data-ttu-id="726e0-120">Legen Sie Werte in verknüpften Zeilen **DBNull**.</span><span class="sxs-lookup"><span data-stu-id="726e0-120">Set values in related rows to **DBNull**.</span></span>|  
+|<span data-ttu-id="726e0-121">**SetDefault**</span><span class="sxs-lookup"><span data-stu-id="726e0-121">**SetDefault**</span></span>|<span data-ttu-id="726e0-122">Für die Werte in verknüpften Zeilen wird der Standardwert festgelegt.</span><span class="sxs-lookup"><span data-stu-id="726e0-122">Set values in related rows to the default value.</span></span>|  
+|<span data-ttu-id="726e0-123">**Keine**</span><span class="sxs-lookup"><span data-stu-id="726e0-123">**None**</span></span>|<span data-ttu-id="726e0-124">In verknüpften Zeilen wird keine Aktion ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="726e0-124">Take no action on related rows.</span></span> <span data-ttu-id="726e0-125">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="726e0-125">This is the default.</span></span>|  
   
- Eine **ForeignKeyConstraint** kann Änderungen an verknüpften Spalten sowohl einschränken als auch weitergeben.  Je nachdem, welche Eigenschaften für die **ForeignKeyConstraint** einer Spalte festgelegt werden und ob die **EnforceConstraints**\-Eigenschaft des **DataSet** auf **true** festgelegt wird, löst das Ausführen von bestimmten Operationen in der übergeordneten Zeile eine Ausnahme aus.  Wenn beispielsweise die **DeleteRule**\-Eigenschaft der **ForeignKeyConstraint** auf **None** festgelegt ist, kann eine übergeordnete Zeile nicht gelöscht werden, wenn sie über untergeordnete Zeilen verfügt.  
+ <span data-ttu-id="726e0-126">Ein **ForeignKeyConstraint** einschränken können, als auch weitergeben, Änderungen an verknüpften Spalten.</span><span class="sxs-lookup"><span data-stu-id="726e0-126">A **ForeignKeyConstraint** can restrict, as well as propagate, changes to related columns.</span></span> <span data-ttu-id="726e0-127">Je nach den Eigenschaften für die **ForeignKeyConstraint** einer Spalte, wenn der **EnforceConstraints** Eigenschaft von der **DataSet** ist **"true"**, bestimmte Vorgänge in der übergeordneten Zeile eine Ausnahme ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="726e0-127">Depending on the properties set for the **ForeignKeyConstraint** of a column, if the **EnforceConstraints** property of the **DataSet** is **true**, performing certain operations on the parent row will result in an exception.</span></span> <span data-ttu-id="726e0-128">Z. B. wenn die **DeleteRule** Eigenschaft von der **ForeignKeyConstraint** ist **keine**, eine übergeordnete Zeile kann nicht gelöscht werden, wenn es über untergeordnete Zeilen verfügt.</span><span class="sxs-lookup"><span data-stu-id="726e0-128">For example, if the **DeleteRule** property of the **ForeignKeyConstraint** is **None**, a parent row cannot be deleted if it has any child rows.</span></span>  
   
- Sie können eine Fremdschlüsseleinschränkung zwischen einzelnen Spalten oder in einem Spaltenarray erstellen, indem Sie den **ForeignKeyConstraint**\-Konstruktor verwenden.  Übergeben Sie das resultierende **ForeignKeyConstraint**\-Objekt an die **Add**\-Methode der **Constraints**\-Eigenschaft der Tabelle. Bei dieser handelt es sich um eine **ConstraintCollection**.  Sie können auch Konstruktorargumente an mehrere Überladungen der **Add**\-Methode einer **ConstraintCollection** übergeben, um eine **ForeignKeyConstraint** zu erstellen.  
+ <span data-ttu-id="726e0-129">Sie können eine fremdschlüsseleinschränkung zwischen einzelnen Spalten oder ein Array von Spalten mit Erstellen der **ForeignKeyConstraint** Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="726e0-129">You can create a foreign key constraint between single columns or between an array of columns by using the **ForeignKeyConstraint** constructor.</span></span> <span data-ttu-id="726e0-130">Übergeben Sie das resultierende **ForeignKeyConstraint** -Objekt an die **hinzufügen** -Methode der tabellenspezifischen **Einschränkungen** Eigenschaft, die eine **ConstraintCollection**.</span><span class="sxs-lookup"><span data-stu-id="726e0-130">Pass the resulting **ForeignKeyConstraint** object to the **Add** method of the table's **Constraints** property, which is a **ConstraintCollection**.</span></span> <span data-ttu-id="726e0-131">Sie können auch Konstruktorargumente an mehrere Überladungen der übergeben der **hinzufügen** Methode eine **ConstraintCollection** zum Erstellen einer **ForeignKeyConstraint**.</span><span class="sxs-lookup"><span data-stu-id="726e0-131">You can also pass constructor arguments to several overloads of the **Add** method of a **ConstraintCollection** to create a **ForeignKeyConstraint**.</span></span>  
   
- Beim Erstellen einer **ForeignKeyConstraint** können Sie den **DeleteRule**\-Wert und den **UpdateRule**\-Wert als Argumente an den Konstruktor übergeben oder als Eigenschaften festlegen. Dies wird im folgenden Beispiel gezeigt, bei dem der **DeleteRule**\-Wert auf **None** festgelegt wird.  
+ <span data-ttu-id="726e0-132">Beim Erstellen einer **ForeignKeyConstraint**, können Sie übergeben die **DeleteRule** und **UpdateRule** Werte an den Konstruktor als Argumente an, oder Sie können als Eigenschaften wie in Festlegen der Beispiel (wobei der **DeleteRule** Wert wird festgelegt, um **keine**).</span><span class="sxs-lookup"><span data-stu-id="726e0-132">When creating a **ForeignKeyConstraint**, you can pass the **DeleteRule** and **UpdateRule** values to the constructor as arguments, or you can set them as properties as in the following example (where the **DeleteRule** value is set to **None**).</span></span>  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
@@ -46,7 +52,6 @@ Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK"
 custOrderFK.DeleteRule = Rule.None    
 ' Cannot delete a customer value that has associated existing orders.  
 custDS.Tables("OrdersTable").Constraints.Add(custOrderFK)  
-  
 ```  
   
 ```csharp  
@@ -58,28 +63,28 @@ custOrderFK.DeleteRule = Rule.None;
 custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);  
 ```  
   
-### AcceptRejectRule  
- Änderungen an Zeilen können mithilfe der **AcceptChanges**\-Methode übernommen oder mit der **RejectChanges**\-Methode des **DataSet**, der **DataTable** oder der **DataRow** abgebrochen werden.  Wenn die **ForeignKeyConstraints** in einem **DataSet** enthalten sind, wird durch Aufrufen der **AcceptChanges**\-Methode oder der **RejectChanges**\-Methode die **AcceptRejectRule** erzwungen.  Die **AcceptRejectRule**\-Eigenschaft der **ForeignKeyConstraint** bestimmt, welche Aktion in den untergeordneten Zeilen ausgeführt wird, wenn in der übergeordneten Zeile **AcceptChanges** oder **RejectChanges** aufgerufen wird.  
+### <a name="acceptrejectrule"></a><span data-ttu-id="726e0-133">AcceptRejectRule</span><span class="sxs-lookup"><span data-stu-id="726e0-133">AcceptRejectRule</span></span>  
+ <span data-ttu-id="726e0-134">Änderungen an Zeilen können angenommen werden, mithilfe der **AcceptChanges** Methode oder abgebrochenen mithilfe der **RejectChanges** Methode der **DataSet**, **DataTable**, oder **DataRow**.</span><span class="sxs-lookup"><span data-stu-id="726e0-134">Changes to rows can be accepted using the **AcceptChanges** method or canceled using the **RejectChanges** method of the **DataSet**, **DataTable**, or **DataRow**.</span></span> <span data-ttu-id="726e0-135">Wenn eine **DataSet** enthält **ForeignKeyConstraints**, wird durch Aufrufen der **AcceptChanges** oder **RejectChanges** Methoden erzwingt die  **AcceptRejectRule**.</span><span class="sxs-lookup"><span data-stu-id="726e0-135">When a **DataSet** contains **ForeignKeyConstraints**, invoking the **AcceptChanges** or **RejectChanges** methods enforces the **AcceptRejectRule**.</span></span> <span data-ttu-id="726e0-136">Die **AcceptRejectRule** Eigenschaft von der **ForeignKeyConstraint** bestimmt, welche Aktion ergriffen wird, auf dem untergeordneten Element Datenzeilen **AcceptChanges** oder  **RejectChanges** wird in der übergeordneten Zeile aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="726e0-136">The **AcceptRejectRule** property of the **ForeignKeyConstraint** determines which action will be taken on the child rows when **AcceptChanges** or **RejectChanges** is called on the parent row.</span></span>  
   
- In der folgenden Tabelle werden die für die **AcceptRejectRule** verfügbaren Einstellungen aufgeführt.  
+ <span data-ttu-id="726e0-137">Die folgende Tabelle enthält die verfügbaren Einstellungen für die **AcceptRejectRule**.</span><span class="sxs-lookup"><span data-stu-id="726e0-137">The following table lists the available settings for the **AcceptRejectRule**.</span></span>  
   
-|Festgelegte Regel|Beschreibung|  
-|-----------------------|------------------|  
-|**Cascade**|Änderungen in untergeordneten Zeilen werden akzeptiert oder zurückgewiesen.|  
-|**Keine**|In den untergeordneten Zeilen wird keine Aktion ausgeführt.  Dies ist die Standardeinstellung.|  
+|<span data-ttu-id="726e0-138">Festgelegte Regel</span><span class="sxs-lookup"><span data-stu-id="726e0-138">Rule setting</span></span>|<span data-ttu-id="726e0-139">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="726e0-139">Description</span></span>|  
+|------------------|-----------------|  
+|<span data-ttu-id="726e0-140">**CASCADE**</span><span class="sxs-lookup"><span data-stu-id="726e0-140">**Cascade**</span></span>|<span data-ttu-id="726e0-141">Änderungen in untergeordneten Zeilen werden akzeptiert oder zurückgewiesen.</span><span class="sxs-lookup"><span data-stu-id="726e0-141">Accept or reject changes to child rows.</span></span>|  
+|<span data-ttu-id="726e0-142">**Keine**</span><span class="sxs-lookup"><span data-stu-id="726e0-142">**None**</span></span>|<span data-ttu-id="726e0-143">In den untergeordneten Zeilen wird keine Aktion ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="726e0-143">Take no action on child rows.</span></span> <span data-ttu-id="726e0-144">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="726e0-144">This is the default.</span></span>|  
   
-### Beispiel  
- Im folgenden Beispiel wird ein <xref:System.Data.ForeignKeyConstraint>\-Objekt erstellt, und es werden einige seiner Eigenschaften festgelegt \(einschließlich der <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>\-Regel\) und dem <xref:System.Data.ConstraintCollection>\-Objekt eines <xref:System.Data.DataTable>\-Objekts hinzugefügt.  
+### <a name="example"></a><span data-ttu-id="726e0-145">Beispiel</span><span class="sxs-lookup"><span data-stu-id="726e0-145">Example</span></span>  
+ <span data-ttu-id="726e0-146">Im folgenden Beispiel wird ein <xref:System.Data.ForeignKeyConstraint>-Objekt erstellt, und es werden einige seiner Eigenschaften festgelegt (einschließlich der <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>-Regel) und dem <xref:System.Data.ConstraintCollection>-Objekt eines <xref:System.Data.DataTable>-Objekts hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="726e0-146">The following example creates a <xref:System.Data.ForeignKeyConstraint>, sets several of its properties, including the <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, and adds it to the <xref:System.Data.ConstraintCollection> of a <xref:System.Data.DataTable> object.</span></span>  
   
  [!code-csharp[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/CS/source.cs#1)]
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
-## UniqueConstraint  
- Das **UniqueConstraint**\-Objekt, das entweder einer einzelnen Spalte oder einem Array aus Spalten in einer **DataTable** zugewiesen werden kann, stellt sicher, dass alle Daten in den angegebenen Spalten pro Zeile eindeutig sind.  Sie können eine eindeutige Einschränkung für eine Spalte oder ein Array aus Spalten erstellen, indem Sie den **UniqueConstraint**\-Konstruktor verwenden.  Übergeben Sie das resultierende **UniqueConstraint**\-Objekt an die **Add**\-Methode der **Constraints**\-Eigenschaft der Tabelle. Bei dieser handelt es sich um eine **ConstraintCollection**.  Sie können auch Konstruktorargumente an mehrere Überladungen der **Add**\-Methode einer **ConstraintCollection** übergeben, um eine **UniqueConstraint** zu erstellen.  Beim Erstellen einer **UniqueConstraint** für eine oder mehrere Spalten können Sie optional festlegen, ob die Spalte\(n\) einen Primärschlüssel darstellen.  
+## <a name="uniqueconstraint"></a><span data-ttu-id="726e0-147">UniqueConstraint</span><span class="sxs-lookup"><span data-stu-id="726e0-147">UniqueConstraint</span></span>  
+ <span data-ttu-id="726e0-148">Die **UniqueConstraint** -Objekt, das auf eine einzelne Spalte oder in ein Array von Spalten in zugewiesen werden, kann eine **DataTable**, wird sichergestellt, dass alle Daten in der angegebenen Spalte oder Spalten pro Zeile eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="726e0-148">The **UniqueConstraint** object, which can be assigned either to a single column or to an array of columns in a **DataTable**, ensures that all data in the specified column or columns is unique per row.</span></span> <span data-ttu-id="726e0-149">Sie können eine unique-Einschränkung für eine Spalte oder ein Array aus Spalten erstellen, mit der **UniqueConstraint** Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="726e0-149">You can create a unique constraint for a column or array of columns by using the **UniqueConstraint** constructor.</span></span> <span data-ttu-id="726e0-150">Übergeben Sie das resultierende **UniqueConstraint** -Objekt an die **hinzufügen** -Methode der tabellenspezifischen **Einschränkungen** Eigenschaft, die eine **ConstraintCollection**.</span><span class="sxs-lookup"><span data-stu-id="726e0-150">Pass the resulting **UniqueConstraint** object to the **Add** method of the table's **Constraints** property, which is a **ConstraintCollection**.</span></span> <span data-ttu-id="726e0-151">Sie können auch Konstruktorargumente an mehrere Überladungen der übergeben der **hinzufügen** Methode eine **ConstraintCollection** zum Erstellen einer **UniqueConstraint**.</span><span class="sxs-lookup"><span data-stu-id="726e0-151">You can also pass constructor arguments to several overloads of the **Add** method of a **ConstraintCollection** to create a **UniqueConstraint**.</span></span> <span data-ttu-id="726e0-152">Beim Erstellen einer **UniqueConstraint** für eine Spalte oder Spalten, Sie können optional angeben, ob die Spalte(n) einen Primärschlüssel darstellen.</span><span class="sxs-lookup"><span data-stu-id="726e0-152">When creating a **UniqueConstraint** for a column or columns, you can optionally specify whether the column or columns are a primary key.</span></span>  
   
- Sie können auch eine eindeutige Einschränkung für eine Spalte erstellen, indem Sie die **Unique**\-Eigenschaft der Spalte auf **true** festlegen.  Alternativ werden alle möglicherweise vorhandenen eindeutigen Einschränkungen entfernt, wenn die **Unique**\-Eigenschaft einer einzelnen Spalte auf **false** festgelegt wird.  Durch das Definieren einer oder mehrerer Spalten als Primärschlüssel für eine Tabelle wird automatisch eine eindeutige Einschränkung für die angegebene\(n\) Spalte\(n\) erstellt.  Wenn Sie eine Spalte aus der **PrimaryKey**\-Eigenschaft einer **DataTable** entfernen, wird die **UniqueConstraint** entfernt.  
+ <span data-ttu-id="726e0-153">Sie können auch eine unique-Einschränkung für eine Spalte erstellen, durch Festlegen der **Unique** Eigenschaft der Spalte, die **"true"**.</span><span class="sxs-lookup"><span data-stu-id="726e0-153">You can also create a unique constraint for a column by setting the **Unique** property of the column to **true**.</span></span> <span data-ttu-id="726e0-154">Alternativ können Sie festlegen der **Unique** Eigenschaft von einer einzelnen Spalte auf **"false"** entfernt unique-Einschränkung, die möglicherweise vorhanden.</span><span class="sxs-lookup"><span data-stu-id="726e0-154">Alternatively, setting the **Unique** property of a single column to **false** removes any unique constraint that may exist.</span></span> <span data-ttu-id="726e0-155">Durch das Definieren einer oder mehrerer Spalten als Primärschlüssel für eine Tabelle wird automatisch eine eindeutige Einschränkung für die angegebene(n) Spalte(n) erstellt.</span><span class="sxs-lookup"><span data-stu-id="726e0-155">Defining a column or columns as the primary key for a table will automatically create a unique constraint for the specified column or columns.</span></span> <span data-ttu-id="726e0-156">Wenn Sie eine Spalte aus Entfernen der **PrimaryKey** Eigenschaft eine **DataTable**, die **UniqueConstraint** wird entfernt.</span><span class="sxs-lookup"><span data-stu-id="726e0-156">If you remove a column from the **PrimaryKey** property of a **DataTable**, the **UniqueConstraint** is removed.</span></span>  
   
- Im folgenden Beispiel wird eine **UniqueConstraint** für zwei Spalten einer **DataTable** erstellt.  
+ <span data-ttu-id="726e0-157">Das folgende Beispiel erstellt eine **UniqueConstraint** für zwei Spalten mit einem **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="726e0-157">The following example creates a **UniqueConstraint** for two columns of a **DataTable**.</span></span>  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -87,7 +92,6 @@ Dim custUnique As UniqueConstraint = _
     New UniqueConstraint(New DataColumn()   {custTable.Columns("CustomerID"), _  
     custTable.Columns("CompanyName")})  
 custDS.Tables("Customers").Constraints.Add(custUnique)  
-  
 ```  
   
 ```csharp  
@@ -98,11 +102,11 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataRelation>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.ForeignKeyConstraint>   
- <xref:System.Data.UniqueConstraint>   
- ['DataTable'\-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="726e0-158">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="726e0-158">See Also</span></span>  
+ <xref:System.Data.DataRelation>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.ForeignKeyConstraint>  
+ <xref:System.Data.UniqueConstraint>  
+ [<span data-ttu-id="726e0-159">DataTable-Schemadefinition</span><span class="sxs-lookup"><span data-stu-id="726e0-159">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [<span data-ttu-id="726e0-160">DataSets, DataTables und DataViews</span><span class="sxs-lookup"><span data-stu-id="726e0-160">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="726e0-161">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="726e0-161">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,70 +1,63 @@
 ---
-title: "Using Libraries from Partially Trusted Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], partially trusted code"
-  - "partially trusted code"
-  - "partial trust"
-  - "AllowPartiallyTrustedCallersAttribute attribute"
-  - "code access security, partially trusted code"
-  - "APTCA"
+title: "Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], partially trusted code
+- partially trusted code
+- partial trust
+- AllowPartiallyTrustedCallersAttribute attribute
+- code access security, partially trusted code
+- APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "25"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7a452370df7c18f3e3f0190a14979099152485f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Using Libraries from Partially Trusted Code
-> [!NOTE]
->  In diesem Thema wird das Verhalten von Assemblys mit starkem Namen behandelt. Es gilt nur für Assemblys der [Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md).[Security\-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md)\-Assemblys in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher sind von starken Namen nicht betroffen. Weitere Informationen zu Änderungen am Sicherheitssystem finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
-  
-> [!CAUTION]
->  Codezugriffssicherheit und teilweise vertrauenswürdiger Code  
->   
->  .NET Framework bietet einen Mechanismus namens Codezugriffssicherheit \(Code Access Security, CAS\) zur Erzwingung verschiedener Vertrauensebenen für anderen Code, der in der gleichen Anwendung ausgeführt wird.  Sie sollten die Codezugriffssicherheit in .NET Framework nicht als Sicherheitsbegrenzung bei teilweise vertrauenswürdigem Code verwenden. Dies gilt insbesondere für Code unbekannter Herkunft. Wir raten davon ab, Code unbekannter Herkunft zu laden und auszuführen, ohne alternative Sicherheitsmaßnahmen zu treffen.  
->   
->  Diese Richtlinie gilt für alle Versionen von .NET Framework, außer für die in Silverlight enthaltene .NET Framework\-Version.  
-  
- Anwendungen, die vom Host oder Sandkasten keine vollständige Vertrauenswürdigkeit erhalten, dürfen keine gemeinsam verwendeten verwalteten Bibliotheken aufrufen, es sei denn, der Entwickler der Bibliothek hat dies ausdrücklich durch Verwenden des <xref:System.Security.AllowPartiallyTrustedCallersAttribute>\-Attributs zugelassen. Anwendungsentwickler müssen daher beachten, dass ihnen aus einem teilweise vertrauenswürdigen Kontext einige Bibliotheken nicht zur Verfügung stehen. Standardmäßig ist der gesamte Code, der in einem teilweise vertrauenswürdigen [Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) ausgeführt wird und nicht in der Liste der voll vertrauenswürdigen Assemblys aufgeführt ist, teilweise vertrauenswürdig. Wenn Sie nicht erwarten, dass Ihr Code aus einem teilweise vertrauenswürdigen Kontext heraus ausgeführt oder aus teilweise vertrauenswürdigem Code aufgerufen wird, müssen Sie die Informationen in diesem Abschnitt nicht beachten. Wenn Sie jedoch Code schreiben, der mit teilweise vertrauenswürdigem Code zusammenwirken oder aus einem teilweise vertrauenswürdigen Kontext ausgeführt werden muss, sollten Sie folgende Faktoren berücksichtigen:  
-  
--   Bibliotheken müssen mit einem starken Namen signiert sein, damit sie von mehreren Anwendungen gemeinsam genutzt werden können. Starke Namen ermöglichen, dass Ihr Code im globalen Assemblycache platziert oder zur Liste für vollständige Vertrauenswürdigkeit einer Sandkasten\-<xref:System.AppDomain> hinzugefügt werden kann, und ermöglichen Kunden festzustellen, dass ein bestimmter Teil mobilen Codes tatsächlich von Ihnen stammt.  
-  
--   Standardmäßig führen mit starkem Namen versehene gemeinsam genutzte [Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)\-Bibliotheken automatisch einen impliziten [LinkDemand](../../../docs/framework/misc/link-demands.md) für vollständige Vertrauenswürdigkeit aus, ohne dass der Entwickler der Bibliothek aktiv werden muss.  
-  
--   Wenn ein Aufrufer nicht vollständig vertrauenswürdig ist, aber trotzdem versucht, eine solche Bibliothek aufzurufen, löst die Runtime eine <xref:System.Security.SecurityException> aus, und der Aufrufer kann keine Verbindung mit der Bibliothek herstellen  
-  
--   Um das automatische **LinkDemand** zu deaktivieren und zu verhindern, dass die Ausnahme ausgelöst wird, können Sie das **AllowPartiallyTrustedCallersAttribute**\-Attribut im Assemblygültigkeitsbereich einer gemeinsam genutzten Bibliothek platzieren. Dieses Attribut ermöglicht, dass Ihre Bibliotheken aus teilweise vertrauenswürdigem verwaltetem Code heraus aufgerufen werden können.  
-  
--   Teilweise vertrauenswürdiger Code, dem durch dieses Attribut Zugriff auf eine Bibliothek gewährt wird, unterliegt nach wie vor weiteren Beschränkungen, die durch die <xref:System.AppDomain> definiert sind.  
-  
--   Für teilweise vertrauenswürdigen Code gibt es keine programmgesteuerte Möglichkeit zum Aufrufen einer Bibliothek, die nicht das **AllowPartiallyTrustedCallersAttribute**\-Attribut hat.  
-  
- Bibliotheken, die für eine bestimmte Anwendung privat sind, erfordern keinen starken Namen oder das **AllowPartiallyTrustedCallersAttribute**\-Attribut, und es ist nicht möglich, durch potenziell bösartigen Code außerhalb der Anwendung auf sie zu verweisen. Solcher Code ist gegen beabsichtigten oder unbeabsichtigten Missbrauch durch teilweise vertrauenswürdigen mobilen Code geschützt, ohne dass Entwickler zusätzlich aktiv werden müssen.  
-  
- Bei folgenden Codetypen sollten Sie in Betracht ziehen, die Verwendung durch teilweise vertrauenswürdigen Code explizit zuzulassen:  
-  
--   Code, der sorgfältig auf Sicherheitsrisiken getestet wurde und mit den Regeln übereinstimmt, die unter [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md) beschrieben werden.  
-  
--   Codebibliotheken mit starkem Namen, die speziell für Szenarios geschrieben wurden, in denen teilweise Vertrauenswürdigkeit zu beachten ist.  
-  
--   Alle \(teilweise oder vollständig vertrauenswürdigen\) Komponenten, die mit einem starken Namen signiert sind und von Code aufgerufen werden, der aus dem Internet heruntergeladen wurde.  
+# <a name="using-libraries-from-partially-trusted-code"></a><span data-ttu-id="29795-102">Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code</span><span class="sxs-lookup"><span data-stu-id="29795-102">Using Libraries from Partially Trusted Code</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  Einige in der .NET Framework\-Klassenbibliothek enthaltene Klassen haben nicht das **AllowPartiallyTrustedCallersAttribute**\-Attribut und können nicht von teilweise vertrauenswürdigem Code aufgerufen werden.  
+>  <span data-ttu-id="29795-103">In diesem Thema das Verhalten von Assemblys mit starkem Namen behandelt und gelten nur für [Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md) Assemblys.</span><span class="sxs-lookup"><span data-stu-id="29795-103">This topic addresses the behavior of strong-named assemblies and applies only to [Level 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assemblies.</span></span> <span data-ttu-id="29795-104">[Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md) Assemblys in der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher sind von starken Namen nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="29795-104">[Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md) assemblies in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] or later are not affected by strong names.</span></span> <span data-ttu-id="29795-105">Weitere Informationen zu Änderungen am Sicherheitssystem finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="29795-105">For more information about changes to the security system, see [Security Changes](../../../docs/framework/security/security-changes.md).</span></span>  
   
-## Siehe auch  
- [Code Access Security](../../../docs/framework/misc/code-access-security.md)
+ <span data-ttu-id="29795-106">Anwendungen, die kleiner als die volle Vertrauenswürdigkeit vom Host oder Sandkasten dürfen keine gemeinsam genutzten Aufrufen empfangen verwalteten Bibliotheken aus, es sei denn, der Bibliothek hat insbesondere durch Verwendung des ermöglicht die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> Attribut.</span><span class="sxs-lookup"><span data-stu-id="29795-106">Applications that receive less than full trust from their host or sandbox are not allowed to call shared managed libraries unless the library writer specifically allows them to through the use of the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribute.</span></span> <span data-ttu-id="29795-107">Anwendungsentwickler müssen daher beachten, dass ihnen aus einem teilweise vertrauenswürdigen Kontext einige Bibliotheken nicht zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="29795-107">Therefore, application writers must be aware that some libraries will not be available to them from a partially trusted context.</span></span> <span data-ttu-id="29795-108">Wird standardmäßig der gesamte Code, der ausgeführt wird in einem teilweise vertrauenswürdigen [Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) und nicht in die Liste der vollständig vertrauenswürdigen Assemblys ist, teilweise vertrauenswürdig.</span><span class="sxs-lookup"><span data-stu-id="29795-108">By default, all code that executes in a partial-trust [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) and is not in the list of full-trust assemblies is partially trusted.</span></span> <span data-ttu-id="29795-109">Wenn Sie nicht erwarten, dass Ihr Code aus einem teilweise vertrauenswürdigen Kontext heraus ausgeführt oder aus teilweise vertrauenswürdigem Code aufgerufen wird, müssen Sie die Informationen in diesem Abschnitt nicht beachten.</span><span class="sxs-lookup"><span data-stu-id="29795-109">If you do not expect your code to be executed from a partially trusted context or to be called by partially trusted code, you do not have to be concerned about the information in this section.</span></span> <span data-ttu-id="29795-110">Wenn Sie jedoch Code schreiben, der mit teilweise vertrauenswürdigem Code zusammenwirken oder aus einem teilweise vertrauenswürdigen Kontext ausgeführt werden muss, sollten Sie folgende Faktoren berücksichtigen:</span><span class="sxs-lookup"><span data-stu-id="29795-110">However, if you write code that must interact with partially trusted code or operate from a partially trusted context, you should consider the following factors:</span></span>  
+  
+-   <span data-ttu-id="29795-111">Bibliotheken müssen mit einem starken Namen signiert sein, damit sie von mehreren Anwendungen gemeinsam genutzt werden können.</span><span class="sxs-lookup"><span data-stu-id="29795-111">Libraries must be signed with a strong name in order to be shared by multiple applications.</span></span> <span data-ttu-id="29795-112">Starke Namen ermöglichen, dass Ihr Code im globalen Assemblycache platziert oder zur Liste für vollständige Vertrauenswürdigkeit einer Sandkasten-<xref:System.AppDomain> hinzugefügt werden kann, und ermöglichen Kunden festzustellen, dass ein bestimmter Teil mobilen Codes tatsächlich von Ihnen stammt.</span><span class="sxs-lookup"><span data-stu-id="29795-112">Strong names allow your code to be placed in the global assembly cache or added to the full-trust list of a sandboxing <xref:System.AppDomain>, and allow consumers to verify that a particular piece of mobile code actually originates from you.</span></span>  
+  
+-   <span data-ttu-id="29795-113">Standardmäßig mit starken Namen [Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md) führen freigegebene Bibliotheken einen impliziten [LinkDemand](../../../docs/framework/misc/link-demands.md) für vollständige Vertrauenswürdigkeit automatisch, ohne dass die Bibliothek nichts zu tun.</span><span class="sxs-lookup"><span data-stu-id="29795-113">By default, strong-named [Level 1](../../../docs/framework/misc/security-transparent-code-level-1.md) shared libraries perform an implicit [LinkDemand](../../../docs/framework/misc/link-demands.md) for full trust automatically, without the library writer having to do anything.</span></span>  
+  
+-   <span data-ttu-id="29795-114">Wenn ein Aufrufer nicht vollständig vertrauenswürdig ist, aber trotzdem versucht, eine solche Bibliothek aufzurufen, löst die Runtime eine <xref:System.Security.SecurityException> aus, und der Aufrufer kann keine Verbindung mit der Bibliothek herstellen</span><span class="sxs-lookup"><span data-stu-id="29795-114">If a caller does not have full trust but still tries to call such a library, the runtime throws a <xref:System.Security.SecurityException> and the caller is not allowed to link to the library.</span></span>  
+  
+-   <span data-ttu-id="29795-115">Um die automatische deaktivieren **LinkDemand** und zu verhindern, dass die Ausnahme ausgelöst wird, können Sie platzieren der **AllowPartiallyTrustedCallersAttribute** -Attribut im assemblygültigkeitsbereich einer freigegebenen Bibliothek.</span><span class="sxs-lookup"><span data-stu-id="29795-115">In order to disable the automatic **LinkDemand** and prevent the exception from being thrown, you can place the **AllowPartiallyTrustedCallersAttribute** attribute on the assembly scope of a shared library.</span></span> <span data-ttu-id="29795-116">Dieses Attribut ermöglicht, dass Ihre Bibliotheken aus teilweise vertrauenswürdigem verwaltetem Code heraus aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="29795-116">This attribute allows your libraries to be called from partially trusted managed code.</span></span>  
+  
+-   <span data-ttu-id="29795-117">Teilweise vertrauenswürdiger Code, dem durch dieses Attribut Zugriff auf eine Bibliothek gewährt wird, unterliegt nach wie vor weiteren Beschränkungen, die durch die <xref:System.AppDomain> definiert sind.</span><span class="sxs-lookup"><span data-stu-id="29795-117">Partially trusted code that is granted access to a library with this attribute is still subject to further restrictions defined by the <xref:System.AppDomain>.</span></span>  
+  
+-   <span data-ttu-id="29795-118">Es gibt keine programmgesteuerte Möglichkeit für teilweise vertrauenswürdigen Code zum Aufrufen einer Bibliothek, die nicht die **AllowPartiallyTrustedCallersAttribute** Attribut.</span><span class="sxs-lookup"><span data-stu-id="29795-118">There is no programmatic way for partially trusted code to call a library that does not have the **AllowPartiallyTrustedCallersAttribute** attribute.</span></span>  
+  
+ <span data-ttu-id="29795-119">Bibliotheken, die für eine bestimmte Anwendung privat sind, erfordern einen starken Namen oder die **AllowPartiallyTrustedCallersAttribute** Attribut, und kann nicht durch potenziell bösartigen Code außerhalb der Anwendung referenziert werden.</span><span class="sxs-lookup"><span data-stu-id="29795-119">Libraries that are private to a specific application do not require a strong name or the **AllowPartiallyTrustedCallersAttribute** attribute and cannot be referenced by potentially malicious code outside the application.</span></span> <span data-ttu-id="29795-120">Solcher Code ist gegen beabsichtigten oder unbeabsichtigten Missbrauch durch teilweise vertrauenswürdigen mobilen Code geschützt, ohne dass Entwickler zusätzlich aktiv werden müssen.</span><span class="sxs-lookup"><span data-stu-id="29795-120">Such code is protected against intentional or unintentional misuse by partially trusted mobile code without the developer having to do anything extra.</span></span>  
+  
+ <span data-ttu-id="29795-121">Bei folgenden Codetypen sollten Sie in Betracht ziehen, die Verwendung durch teilweise vertrauenswürdigen Code explizit zuzulassen: </span><span class="sxs-lookup"><span data-stu-id="29795-121">You should consider explicitly enabling use by partially trusted code for the following types of code:</span></span>  
+  
+-   <span data-ttu-id="29795-122">Code, der sorgfältig auf Sicherheitsrisiken getestet wurde und mit den Richtlinien, die in beschriebenen [Richtlinien für das Schreiben von sicheren Code](../../../docs/standard/security/secure-coding-guidelines.md).</span><span class="sxs-lookup"><span data-stu-id="29795-122">Code that has been diligently tested for security vulnerabilities and is in compliance with the guidelines described in [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md).</span></span>  
+  
+-   <span data-ttu-id="29795-123">Codebibliotheken mit starkem Namen, die speziell für Szenarios geschrieben wurden, in denen teilweise Vertrauenswürdigkeit zu beachten ist.</span><span class="sxs-lookup"><span data-stu-id="29795-123">Strong-named code libraries that are specifically written for partially trusted scenarios.</span></span>  
+  
+-   <span data-ttu-id="29795-124">Alle (teilweise oder vollständig vertrauenswürdigen) Komponenten, die mit einem starken Namen signiert sind und von Code aufgerufen werden, der aus dem Internet heruntergeladen wurde.</span><span class="sxs-lookup"><span data-stu-id="29795-124">Any components (whether partially or fully trusted) signed with a strong name that will be called by code that is downloaded from the Internet.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="29795-125">Einige Klassen in der .NET Framework-Klassenbibliothek verfügen nicht über die **AllowPartiallyTrustedCallersAttribute** -Attribut und kann nicht von teilweise vertrauenswürdigem Code aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="29795-125">Some classes in the .NET Framework class library do not have the **AllowPartiallyTrustedCallersAttribute** attribute and cannot be called by partially trusted code.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="29795-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="29795-126">See Also</span></span>  
+ [<span data-ttu-id="29795-127">Codezugriffssicherheit</span><span class="sxs-lookup"><span data-stu-id="29795-127">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)

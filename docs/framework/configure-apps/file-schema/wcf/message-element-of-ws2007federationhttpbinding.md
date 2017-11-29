@@ -1,28 +1,37 @@
 ---
-title: "&lt;message&gt;-Element von &lt;ws2007FederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;message&gt;-Element von &lt;ws2007FederationHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 32361347665ee506b13d3be8a4257ca71e2629f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;message&gt;-Element von &lt;ws2007FederationHttpBinding&gt;
-Definiert die Einstellungen für die Sicherheit des [\<ws2007FederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)\-Elements auf Nachrichtenebene.  
+# <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a><span data-ttu-id="dae7c-102">&lt;message&gt;-Element von &lt;ws2007FederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="dae7c-102">&lt;message&gt; element of &lt;ws2007FederationHttpBinding&gt;</span></span>
+<span data-ttu-id="dae7c-103">Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) Element.</span><span class="sxs-lookup"><span data-stu-id="dae7c-103">Defines settings for the message-level security for the [\<ws2007FederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) element.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="dae7c-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="dae7c-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="dae7c-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="dae7c-105">\<bindings></span></span>  
+<span data-ttu-id="dae7c-106">\<ws2007FederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="dae7c-106">\<ws2007FederationHttpBinding></span></span>  
+<span data-ttu-id="dae7c-107">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="dae7c-107">\<binding></span></span>  
+<span data-ttu-id="dae7c-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="dae7c-108">\<security></span></span>  
+<span data-ttu-id="dae7c-109">\<Meldung ></span><span class="sxs-lookup"><span data-stu-id="dae7c-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="dae7c-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="dae7c-110">Syntax</span></span>  
   
+```xml  
 <ws2007FederationBinding>  
    <binding >  
       <security>  
@@ -81,61 +90,60 @@ Definiert die Einstellungen für die Sicherheit des [\<ws2007FederationHttpBindi
 </ws2007FederationBinding>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dae7c-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="dae7c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="dae7c-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="dae7c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="dae7c-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="dae7c-113">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|`algorithmSuite`|Dies ist optional.  Legt die Nachrichtenverschlüsselung, Signatur und Key Wrap\-Algorithmen fest.  Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>\-Klasse ermittelt.  Diese Algorithmen entsprechen den in der Security Policy Language \(WS\-SecurityPolicy\)\-Spezifikation angegebenen Algorithmen.<br /><br /> In der folgenden Tabelle sind die möglichen Werte aufgeführt.  Der Standardwert ist Basic256.|  
-|`issuedKeyType`|Gibt den Typ des auszustellenden Schlüssels an.  Folgende Werte sind gültig:<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> Der Standardwert ist SymmetricKey.  Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|`issuedTokenType`|Ein URI, der den Typ des auszustellenden Tokens angibt.  Die Standardeinstellung ist `null`.|  
-|`negotiateServiceCredential`|Ein Wert, der angibt, ob die Dienstanmeldeinformationen als Teil der Aushandlung ausgetauscht werden sollen oder ob sie out\-of\-band zur Verfügung stehen.  Der Standardwert ist `true`, was bedeutet, dass die Dienstanmeldeinformationen ausgehandelt werden.|  
+|<span data-ttu-id="dae7c-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="dae7c-114">Attribute</span></span>|<span data-ttu-id="dae7c-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dae7c-115">Description</span></span>|  
+|---------------|-----------------|  
+|`algorithmSuite`|<span data-ttu-id="dae7c-116">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="dae7c-116">Optional.</span></span> <span data-ttu-id="dae7c-117">Legt die Nachrichtenverschlüsselung, Signatur und Key Wrap-Algorithmen fest.</span><span class="sxs-lookup"><span data-stu-id="dae7c-117">Sets the message encryption, signature, and key-wrap algorithms.</span></span> <span data-ttu-id="dae7c-118">Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt.</span><span class="sxs-lookup"><span data-stu-id="dae7c-118">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="dae7c-119">Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.</span><span class="sxs-lookup"><span data-stu-id="dae7c-119">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="dae7c-120">In der folgenden Tabelle sind die möglichen Werte aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="dae7c-120">See the following table for possible values.</span></span> <span data-ttu-id="dae7c-121">Der Standardwert ist Basic256.</span><span class="sxs-lookup"><span data-stu-id="dae7c-121">The default value is Basic256.</span></span>|  
+|`issuedKeyType`|<span data-ttu-id="dae7c-122">Gibt den Typ des auszustellenden Schlüssels an.</span><span class="sxs-lookup"><span data-stu-id="dae7c-122">Specifies the type of key to be issued.</span></span> <span data-ttu-id="dae7c-123">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="dae7c-123">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="dae7c-124">-SymmetricKey</span><span class="sxs-lookup"><span data-stu-id="dae7c-124">-   SymmetricKey</span></span><br /><span data-ttu-id="dae7c-125">-PublicKey</span><span class="sxs-lookup"><span data-stu-id="dae7c-125">-   PublicKey</span></span><br /><span data-ttu-id="dae7c-126">-BearerKey</span><span class="sxs-lookup"><span data-stu-id="dae7c-126">-   BearerKey</span></span><br /><br /> <span data-ttu-id="dae7c-127">Der Standardwert ist SymmetricKey.</span><span class="sxs-lookup"><span data-stu-id="dae7c-127">The default is SymmetricKey.</span></span> <span data-ttu-id="dae7c-128">Dieses Attribut ist vom Typ <xref:System.IdentityModel.Tokens.SecurityKeyType>.</span><span class="sxs-lookup"><span data-stu-id="dae7c-128">This attribute is of type <xref:System.IdentityModel.Tokens.SecurityKeyType>.</span></span>|  
+|`issuedTokenType`|<span data-ttu-id="dae7c-129">Ein URI, der den Typ des auszustellenden Tokens angibt.</span><span class="sxs-lookup"><span data-stu-id="dae7c-129">A URI that specifies the type of token to be issued.</span></span> <span data-ttu-id="dae7c-130">Die Standardeinstellung ist `null`.</span><span class="sxs-lookup"><span data-stu-id="dae7c-130">The default is `null`.</span></span>|  
+|`negotiateServiceCredential`|<span data-ttu-id="dae7c-131">Ein Wert, der angibt, ob die Dienstanmeldeinformationen als Teil der Aushandlung ausgetauscht werden sollen oder ob sie out-of-band zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="dae7c-131">A value that specifies whether the service credential should be exchanged as part of negotiation or is available out of band.</span></span> <span data-ttu-id="dae7c-132">Der Standardwert ist `true`, was bedeutet, dass die Dienstanmeldeinformationen ausgehandelt werden.</span><span class="sxs-lookup"><span data-stu-id="dae7c-132">The default is `true`, which means that the service credential is negotiated.</span></span>|  
   
-## algorithmSuite\-Attribut  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="dae7c-133">algorithmSuite-Attribut</span><span class="sxs-lookup"><span data-stu-id="dae7c-133">algorithmSuite Attribute</span></span>  
   
-|Wert|Beschreibung|  
-|----------|------------------|  
-|Basic128|Verwendet Aes128\-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic192|Verwendet Aes192\-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic256|Verwendet Aes256\-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic256Rsa15|Verwendet Aes256\-Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|Basic192Rsa15|Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|TripleDes|Verwendet TripleDes\-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic128Rsa15|Verwendet Aes128 für die Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|TripleDesRsa15|Verwendet TripleDes\-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|Basic128Sha256|Verwendet Aes256\-Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic192Sha256|Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic256Sha256|Verwendet Aes256\-Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|TripleDesSha256|Verwendet TripleDes für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa\-oaep\-mgf1p für Key Wrap.|  
-|Basic128Sha256Rsa15|Verwendet Aes128 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|Basic192Sha256Rsa15|Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|Basic256Sha256Rsa15|Verwendet Aes256 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
-|TripleDesSha256Rsa15|Verwendet TripleDes für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.|  
+|<span data-ttu-id="dae7c-134">Wert</span><span class="sxs-lookup"><span data-stu-id="dae7c-134">Value</span></span>|<span data-ttu-id="dae7c-135">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dae7c-135">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="dae7c-136">Basic128</span><span class="sxs-lookup"><span data-stu-id="dae7c-136">Basic128</span></span>|<span data-ttu-id="dae7c-137">Verwendet Aes128-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-137">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-138">Basic192</span><span class="sxs-lookup"><span data-stu-id="dae7c-138">Basic192</span></span>|<span data-ttu-id="dae7c-139">Verwendet Aes192-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-139">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-140">Basic256</span><span class="sxs-lookup"><span data-stu-id="dae7c-140">Basic256</span></span>|<span data-ttu-id="dae7c-141">Verwendet Aes256-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-141">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-142">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-142">Basic256Rsa15</span></span>|<span data-ttu-id="dae7c-143">Verwendet Aes256-Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-143">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-144">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-144">Basic192Rsa15</span></span>|<span data-ttu-id="dae7c-145">Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-145">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-146">TripleDes</span><span class="sxs-lookup"><span data-stu-id="dae7c-146">TripleDes</span></span>|<span data-ttu-id="dae7c-147">Verwendet TripleDes-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-147">Use TripleDes encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-148">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-148">Basic128Rsa15</span></span>|<span data-ttu-id="dae7c-149">Verwendet Aes128 für die Nachrichtenverschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-149">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-150">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-150">TripleDesRsa15</span></span>|<span data-ttu-id="dae7c-151">Verwendet TripleDes-Verschlüsselung, Sha1 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-151">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-152">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="dae7c-152">Basic128Sha256</span></span>|<span data-ttu-id="dae7c-153">Verwendet Aes256-Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-153">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-154">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="dae7c-154">Basic192Sha256</span></span>|<span data-ttu-id="dae7c-155">Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-155">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-156">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="dae7c-156">Basic256Sha256</span></span>|<span data-ttu-id="dae7c-157">Verwendet Aes256-Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-157">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-158">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="dae7c-158">TripleDesSha256</span></span>|<span data-ttu-id="dae7c-159">Verwendet TripleDes für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa-oaep-mgf1p für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-159">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-160">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-160">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="dae7c-161">Verwendet Aes128 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-161">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-162">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-162">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="dae7c-163">Verwendet Aes192 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-164">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-164">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="dae7c-165">Verwendet Aes256 für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="dae7c-166">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="dae7c-166">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="dae7c-167">Verwendet TripleDes für die Nachrichtenverschlüsselung, Sha256 für den Nachrichtenhash und Rsa15 für Key Wrap.</span><span class="sxs-lookup"><span data-stu-id="dae7c-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="dae7c-168">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="dae7c-168">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Gibt eine Auflistung von Anspruchstypen für diese Bindung an.  Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<issuer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Gibt einen Endpunkt an, der ein Sicherheitstoken ausstellt.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<issuerMetadata\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Gibt die Endpunktadresse des Ausstellers an.|  
-|[\<tokenRequestParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Eine Auflistung von Tokenanforderungsparametern.  Jeder Parameter ist ein XML\-Element.|  
+|<span data-ttu-id="dae7c-169">Element</span><span class="sxs-lookup"><span data-stu-id="dae7c-169">Element</span></span>|<span data-ttu-id="dae7c-170">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dae7c-170">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="dae7c-171">\<ClaimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="dae7c-171">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|<span data-ttu-id="dae7c-172">Gibt eine Auflistung von Anspruchstypen für diese Bindung an.</span><span class="sxs-lookup"><span data-stu-id="dae7c-172">Specifies a collection of claim types for this binding.</span></span> <span data-ttu-id="dae7c-173">Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="dae7c-173">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span>|  
+|[<span data-ttu-id="dae7c-174">\<Aussteller ></span><span class="sxs-lookup"><span data-stu-id="dae7c-174">\<issuer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|<span data-ttu-id="dae7c-175">Gibt einen Endpunkt an, der ein Sicherheitstoken ausstellt.</span><span class="sxs-lookup"><span data-stu-id="dae7c-175">Specifies an endpoint that issues a security token.</span></span> <span data-ttu-id="dae7c-176">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.</span><span class="sxs-lookup"><span data-stu-id="dae7c-176">This element is of type <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.</span></span>|  
+|[<span data-ttu-id="dae7c-177">\<IssuerMetadata ></span><span class="sxs-lookup"><span data-stu-id="dae7c-177">\<issuerMetadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|<span data-ttu-id="dae7c-178">Gibt die Endpunktadresse des Ausstellers an.</span><span class="sxs-lookup"><span data-stu-id="dae7c-178">Specifies the endpoint address of the issuer.</span></span>|  
+|[<span data-ttu-id="dae7c-179">\<TokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="dae7c-179">\<tokenRequestParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|<span data-ttu-id="dae7c-180">Eine Auflistung von Tokenanforderungsparametern.</span><span class="sxs-lookup"><span data-stu-id="dae7c-180">A collection of token request parameters.</span></span> <span data-ttu-id="dae7c-181">Jeder Parameter ist ein XML-Element.</span><span class="sxs-lookup"><span data-stu-id="dae7c-181">Each parameter is an XML element.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="dae7c-182">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="dae7c-182">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Sicherheit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
+|<span data-ttu-id="dae7c-183">Element</span><span class="sxs-lookup"><span data-stu-id="dae7c-183">Element</span></span>|<span data-ttu-id="dae7c-184">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dae7c-184">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="dae7c-185">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="dae7c-185">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|<span data-ttu-id="dae7c-186">Definiert die Sicherheitseinstellungen für eine Bindung.</span><span class="sxs-lookup"><span data-stu-id="dae7c-186">Defines the security settings for a binding.</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityElement>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="dae7c-187">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dae7c-187">See Also</span></span>  
+ <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
+ <span data-ttu-id="dae7c-188">`System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)</span><span class="sxs-lookup"><span data-stu-id="dae7c-188">`System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Securing Services and Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)</span></span>  
+ [<span data-ttu-id="dae7c-189">Bindungen</span><span class="sxs-lookup"><span data-stu-id="dae7c-189">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="dae7c-190">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="dae7c-190">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="dae7c-191">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="dae7c-191">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="dae7c-192">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="dae7c-192">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

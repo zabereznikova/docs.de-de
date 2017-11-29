@@ -1,52 +1,55 @@
 ---
-title: "Schreiben eines Entity Framework-Datenanbieters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Schreiben eines Entity Framework-Datenanbieters
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Schreiben eines Entity Framework-Datenanbieters
-In diesem Abschnitt wird erläutert, wie ein [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]\-Anbieter geschrieben wird, um eine Datenquelle zu unterstützen, die keine [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]\-Datenquelle ist. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] umfasst einen Anbieter, der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] unterstützt.  
+# <a name="writing-an-entity-framework-data-provider"></a><span data-ttu-id="d9727-102">Schreiben eines Entity Framework-Datenanbieters</span><span class="sxs-lookup"><span data-stu-id="d9727-102">Writing an Entity Framework Data Provider</span></span>
+<span data-ttu-id="d9727-103">In diesem Abschnitt wird erläutert, wie ein [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anbieter zur Unterstützung einer anderen Datenquelle als [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] geschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="d9727-103">This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="d9727-104">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält einen Anbieter, der [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d9727-104">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
-## Einführung in das Entity Framework\-Anbietermodell  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist Datenbank\-unabhängig. Sie können mit dem ADO.NET\-Anbietermodell einen Anbieter schreiben, um eine Verbindung mit verschiedenen Datenquellen herzustellen.  
+## <a name="introducing-the-entity-framework-provider-model"></a><span data-ttu-id="d9727-105">Einführung in das Entity Framework-Anbietermodell</span><span class="sxs-lookup"><span data-stu-id="d9727-105">Introducing the Entity Framework Provider Model</span></span>  
+ <span data-ttu-id="d9727-106">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist Datenbank-unabhängig. Sie können mit dem ADO.NET-Anbietermodell einen Anbieter schreiben, um eine Verbindung mit verschiedenen Datenquellen herzustellen.</span><span class="sxs-lookup"><span data-stu-id="d9727-106">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] is database independent, and you can write a provider by using the ADO.NET Provider Model to connect to a diverse set of data sources.</span></span>  
   
- Der mit dem ADO.NET\-Datenanbietermodell erstellte Entity Framework\-Datenanbieter führt die folgenden Funktionen aus:  
+ <span data-ttu-id="d9727-107">Der mit dem ADO.NET-Datenanbietermodell erstellte Entity Framework-Datenanbieter führt die folgenden Funktionen aus:</span><span class="sxs-lookup"><span data-stu-id="d9727-107">The Entity Framework data provider (built using the ADO.NET Data Provider model) performs the following functions:</span></span>  
   
--   Zuordnen von primitiven Typen des Entity Data Model \(EDM\) zu Anbietertypen.  
+-   <span data-ttu-id="d9727-108">Zuordnen von primitiven Typen des Entity Data Model (EDM) zu Anbietertypen.</span><span class="sxs-lookup"><span data-stu-id="d9727-108">Maps Entity Data Model (EDM) primitive types to provider types.</span></span>  
   
--   Bereitstellen von anbieterspezifischen Funktionen.  
+-   <span data-ttu-id="d9727-109">Bereitstellen von anbieterspezifischen Funktionen.</span><span class="sxs-lookup"><span data-stu-id="d9727-109">Exposes provider-specific functions.</span></span>  
   
--   Generieren von anbieterspezifischen Befehlen für einen angegebenen DbQueryCommandTree zur Unterstützung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]\-Abfragen.  
+-   <span data-ttu-id="d9727-110">Generieren von anbieterspezifischen Befehlen für einen angegebenen DbQueryCommandTree zur Unterstützung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Abfragen.</span><span class="sxs-lookup"><span data-stu-id="d9727-110">Generates provider-specific commands for a given DbQueryCommandTree to support [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] queries.</span></span>  
   
--   Generieren von anbieterspezifischen Updatebefehlen für einen angegebenen DbModificationCommandTree zur Unterstützung von Updates durch den [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+-   <span data-ttu-id="d9727-111">Generieren von anbieterspezifischen Updatebefehlen für einen angegebenen DbModificationCommandTree zur Unterstützung von Updates durch den [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9727-111">Generates provider-specific update commands for a given DbModificationCommandTree to support updates through the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
--   Bereitstellen von Zuordnungsdateien für die Speicherschemadefinition zur Unterstützung der Generierung eines Modells auf Grundlage einer Datenbank.  
+-   <span data-ttu-id="d9727-112">Bereitstellen von Zuordnungsdateien für die Speicherschemadefinition zur Unterstützung der Generierung eines Modells auf Grundlage einer Datenbank.</span><span class="sxs-lookup"><span data-stu-id="d9727-112">Exposes mapping files for the store schema definition, to support generation of a model based on a database.</span></span>  
   
--   Bereitstellen von Metadaten \(z. B. Tabellen und Sichten\) über ein konzeptionelles Modell.  
+-   <span data-ttu-id="d9727-113">Bereitstellen von Metadaten (z. B. Tabellen und Sichten) über ein konzeptionelles Modell.</span><span class="sxs-lookup"><span data-stu-id="d9727-113">Exposes metadata (tables and views, for example) via a conceptual model.</span></span>  
   
- ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c\-0ac0\-4911\-86be\-0460a78760ba")  
+ <span data-ttu-id="d9727-114">![b42a7a5c &#45; 0ac0 &#45;4911 &#45; 86be &#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span><span class="sxs-lookup"><span data-stu-id="d9727-114">![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span></span>  
   
-## Beispiel  
- Ein Beispiel eines [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]\-Anbieters, der eine andere Datenquelle als [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] unterstützt, finden Sie unter [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).  
+## <a name="sample"></a><span data-ttu-id="d9727-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d9727-115">Sample</span></span>  
+ <span data-ttu-id="d9727-116">Finden Sie unter der [Entity Framework-Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616) ein Beispiel für eine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anbieter, der eine Datenquelle außer unterstützt [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9727-116">See the [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) for a sample of an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider that supports a data source other than [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
-## In diesem Abschnitt  
- [SQL\-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d9727-117">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d9727-117">In This Section</span></span>  
+ [<span data-ttu-id="d9727-118">SQL-Generierung</span><span class="sxs-lookup"><span data-stu-id="d9727-118">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Generierung von Änderungen in SQL](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [<span data-ttu-id="d9727-119">SQL-Generierung von Änderungen</span><span class="sxs-lookup"><span data-stu-id="d9727-119">Modification SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
- [Anbietermanifestspezifikation](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
+ [<span data-ttu-id="d9727-120">Anbietermanifestspezifikation</span><span class="sxs-lookup"><span data-stu-id="d9727-120">Provider Manifest Specification</span></span>](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
-## Siehe auch  
- [Arbeiten mit Datenanbietern](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a><span data-ttu-id="d9727-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9727-121">See Also</span></span>  
+ [<span data-ttu-id="d9727-122">Arbeiten mit Datenanbietern</span><span class="sxs-lookup"><span data-stu-id="d9727-122">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

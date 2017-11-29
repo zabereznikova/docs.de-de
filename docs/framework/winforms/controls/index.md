@@ -1,57 +1,53 @@
 ---
-title: Windows Forms-Steuerelemente | Microsoft-Dokumentation
+title: Windows Forms-Steuerelemente
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- jsharp
 helpviewer_keywords:
 - Windows Forms controls
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: e92fd440f0afd265a65395a715b08df44cf37f9e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 1078488ca1443b4e2336386eff1ac3a117a71501
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="windows-forms-controls"></a>Windows Forms-Steuerelemente
-Beim Entwerfen und Ändern der Benutzeroberfläche Ihrer Windows Forms-Anwendungen müssen Sie Steuerelemente hinzufügen, ausrichten und positionieren. Steuerelemente sind Objekte, die in Formularobjekten enthalten sind. Jeder Steuerelementtyp verfügt über einen eigenen Satz von Eigenschaften, Methoden und Ereignissen, die für einen bestimmten Zweck geeignet sind. Sie können Steuerelemente im Designer anpassen und Code schreiben, um Steuerelemente zur Laufzeit dynamisch hinzufügen.  
+# <a name="windows-forms-controls"></a><span data-ttu-id="60bb2-102">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="60bb2-102">Windows Forms Controls</span></span>
+<span data-ttu-id="60bb2-103">Beim Entwerfen und Ändern der Benutzeroberfläche Ihrer Windows Forms-Anwendungen müssen Sie Steuerelemente hinzufügen, ausrichten und positionieren.</span><span class="sxs-lookup"><span data-stu-id="60bb2-103">As you design and modify the user interface of your Windows Forms applications, you will need to add, align, and position controls.</span></span> <span data-ttu-id="60bb2-104">Steuerelemente sind Objekte, die in Formularobjekten enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="60bb2-104">Controls are objects that are contained within form objects.</span></span> <span data-ttu-id="60bb2-105">Jeder Steuerelementtyp verfügt über einen eigenen Satz von Eigenschaften, Methoden und Ereignissen, die für einen bestimmten Zweck geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="60bb2-105">Each type of control has its own set of properties, methods, and events that make it suitable for a particular purpose.</span></span> <span data-ttu-id="60bb2-106">Sie können Steuerelemente im Designer anpassen und Code schreiben, um Steuerelemente zur Laufzeit dynamisch hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="60bb2-106">You can manipulate controls in the designer and write code to add controls dynamically at run time.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- Stellt Links zum Einfügen von Steuerelementen auf Formularen bereit.  
+## <a name="in-this-section"></a><span data-ttu-id="60bb2-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="60bb2-107">In This Section</span></span>  
+ [<span data-ttu-id="60bb2-108">Einfügen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="60bb2-108">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ <span data-ttu-id="60bb2-109">Stellt Links zum Einfügen von Steuerelementen auf Formularen bereit.</span><span class="sxs-lookup"><span data-stu-id="60bb2-109">Provides links related to putting controls on forms.</span></span>  
   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- Stellt Links zum Anordnen von Steuerelementen auf Formularen bereit.  
+ [<span data-ttu-id="60bb2-110">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="60bb2-110">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ <span data-ttu-id="60bb2-111">Stellt Links zum Anordnen von Steuerelementen auf Formularen bereit.</span><span class="sxs-lookup"><span data-stu-id="60bb2-111">Provides links related to arranging controls on forms.</span></span>  
   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- Beschreibt die Verwendung von Tastenkombinationen, Beschriftungen auf Steuerelementen und Zusatztasten.  
+ [<span data-ttu-id="60bb2-112">Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente</span><span class="sxs-lookup"><span data-stu-id="60bb2-112">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ <span data-ttu-id="60bb2-113">Beschreibt die Verwendung von Tastenkombinationen, Beschriftungen auf Steuerelementen und Zusatztasten.</span><span class="sxs-lookup"><span data-stu-id="60bb2-113">Describes the uses of keyboard shortcuts, text labels on controls, and modifier keys.</span></span>  
   
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Listet die Steuerelemente auf, die mit Windows Forms einsetzbar sind, und grundlegende Dinge, die Sie mit jedem Steuerelement erreichen können.  
+ [<span data-ttu-id="60bb2-114">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="60bb2-114">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="60bb2-115">Listet die Steuerelemente auf, die mit Windows Forms einsetzbar sind, und grundlegende Dinge, die Sie mit jedem Steuerelement erreichen können.</span><span class="sxs-lookup"><span data-stu-id="60bb2-115">Lists the controls that work with Windows Forms, and basic things you can accomplish with each control.</span></span>  
   
- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- Dieser Abschnitt enthält Hintergrundinformationen und Beispiele, die Benutzer beim Entwickeln benutzerdefinierter Windows Forms-Steuerelemente unterstützen.  
+ [<span data-ttu-id="60bb2-116">Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="60bb2-116">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ <span data-ttu-id="60bb2-117">Dieser Abschnitt enthält Hintergrundinformationen und Beispiele, die Benutzer beim Entwickeln benutzerdefinierter Windows Forms-Steuerelemente unterstützen.</span><span class="sxs-lookup"><span data-stu-id="60bb2-117">Provides background information and samples to help users develop custom Windows Forms controls.</span></span>  
   
- [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- Beschreibt Techniken zum Erstellen benutzerdefinierter Steuerelemente mittels Entwurf und Vererbung.  
+ [<span data-ttu-id="60bb2-118">Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="60bb2-118">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="60bb2-119">Beschreibt Techniken zum Erstellen benutzerdefinierter Steuerelemente mittels Entwurf und Vererbung.</span><span class="sxs-lookup"><span data-stu-id="60bb2-119">Describes techniques for creating custom controls through design and inheritance.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Clientanwendungen](../../../../docs/framework/develop-client-apps.md)  
- Bietet einen Überblick über die Entwicklung Windows-basierter Anwendungen.  
+## <a name="related-sections"></a><span data-ttu-id="60bb2-120">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="60bb2-120">Related Sections</span></span>  
+ [<span data-ttu-id="60bb2-121">Clientanwendungen</span><span class="sxs-lookup"><span data-stu-id="60bb2-121">Client Applications</span></span>](../../../../docs/framework/develop-client-apps.md)  
+ <span data-ttu-id="60bb2-122">Bietet einen Überblick über die Entwicklung Windows-basierter Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="60bb2-122">Provides an overview of developing Windows-based applications.</span></span>  
   
- [Exemplarische Vorgehensweisen für Windows Forms](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- Listet exemplarische Vorgehensweisen zu Windows Forms und Steuerelementen auf.
+ [<span data-ttu-id="60bb2-123">Exemplarische Vorgehensweisen für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="60bb2-123">Windows Forms Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ <span data-ttu-id="60bb2-124">Listet exemplarische Vorgehensweisen zu Windows Forms und Steuerelementen auf.</span><span class="sxs-lookup"><span data-stu-id="60bb2-124">Lists walkthrough topics about Windows Forms and controls.</span></span>

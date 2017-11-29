@@ -1,80 +1,83 @@
 ---
-title: "Windows Communication Foundation-Sicherheit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sicherheit [WCF]"
-  - "Windows Communication Foundation, Programmieren"
-  - "Windows Communication Foundation, Sicherheit"
+title: Windows Communication Foundation-Sicherheit
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, programming
+- security [WCF]
+- Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation-Sicherheit
-In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.  
+# <a name="windows-communication-foundation-security"></a><span data-ttu-id="9eafb-102">Windows Communication Foundation-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-102">Windows Communication Foundation Security</span></span>
+<span data-ttu-id="9eafb-103">In den Themen dieses Abschnitts werden [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Sicherheitsfunktionen und ihre Verwendung zur Sicherung von Nachrichten beschrieben.</span><span class="sxs-lookup"><span data-stu-id="9eafb-103">The topics in this section describe [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security features and how to use them to help secure messages.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9eafb-104">Windows Server AppFabric und Sicherheit, finden Sie unter [Sicherheit Modell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="9eafb-104"> Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="9eafb-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9eafb-105">In This Section</span></span>  
+ [<span data-ttu-id="9eafb-106">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="9eafb-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ <span data-ttu-id="9eafb-107">Beschreibt die Sicherheitsfunktionen in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9eafb-107">Describes the security features in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sicherheit verwendet werden.  
+ [<span data-ttu-id="9eafb-108">Schlüsselbegriffe der Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ <span data-ttu-id="9eafb-109">Beschreibt die grundlegende Terminologie und die grundlegenden Konzepte, die für die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheit verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-109">Describes the basic terminology and concepts used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security.</span></span>  
   
- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Beschreibt Szenarien und Topologien, die Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfigurieren können.  
+ [<span data-ttu-id="9eafb-110">Häufige Sicherheitsszenarien</span><span class="sxs-lookup"><span data-stu-id="9eafb-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ <span data-ttu-id="9eafb-111">Beschreibt Szenarien und Topologien, die Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfigurieren können.</span><span class="sxs-lookup"><span data-stu-id="9eafb-111">Describes scenarios and topologies you can configure with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- Bietet eine Übersicht über WCF\-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.  
+ [<span data-ttu-id="9eafb-112">Sicherheitsverhalten</span><span class="sxs-lookup"><span data-stu-id="9eafb-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ <span data-ttu-id="9eafb-113">Bietet eine Übersicht über WCF-Verhaltensweisen, die sich auf Sicherheit auswirken, z. B. das Festlegen von Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
   
- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
+ [<span data-ttu-id="9eafb-114">Bindungen und Sicherheit</span><span class="sxs-lookup"><span data-stu-id="9eafb-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ <span data-ttu-id="9eafb-115">Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
   
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Beschreibt, wie Nachrichten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sicherheitsfunktionen gesichert werden.  
+ [<span data-ttu-id="9eafb-116">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="9eafb-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ <span data-ttu-id="9eafb-117">Beschreibt, wie Nachrichten mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsfunktionen gesichert werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-117">Describes how to secure messages using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security features.</span></span>  
   
- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- Veranschaulicht allgemeine Authentifizierungsaufgaben.  
+ [<span data-ttu-id="9eafb-118">Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ <span data-ttu-id="9eafb-119">Veranschaulicht allgemeine Authentifizierungsaufgaben.</span><span class="sxs-lookup"><span data-stu-id="9eafb-119">Demonstrates common authentication tasks.</span></span>  
   
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- Beschreibt allgemeine Autorisierungsszenarien mit Sicherheitsimplementierungen.  
+ [<span data-ttu-id="9eafb-120">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ <span data-ttu-id="9eafb-121">Beschreibt allgemeine Autorisierungsszenarien mit Sicherheitsimplementierungen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-121">Describes common authorization scenarios with security implementations.</span></span>  
   
- [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.  
+ [<span data-ttu-id="9eafb-122">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="9eafb-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ <span data-ttu-id="9eafb-123">Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
   
- [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Beschreibt, wie teilweise vertrauenswürdige Szenarien und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Einschränkungen ausgeführt werden, wenn sie als teilweise vertrauenswürdig ausgeführt werden.  
+ [<span data-ttu-id="9eafb-124">Teilweise Vertrauenswürdigkeit</span><span class="sxs-lookup"><span data-stu-id="9eafb-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ <span data-ttu-id="9eafb-125">Beschreibt, wie teilweise vertrauenswürdige Szenarien und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Einschränkungen ausgeführt werden, wenn sie als teilweise vertrauenswürdig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-125">Describes how to run partially-trusted scenarios and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limitations when running partially trusted.</span></span>  
   
- [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- Beschreibt, wie Sicherheitsereignisse überwacht werden.  
+ [<span data-ttu-id="9eafb-126">Überwachung</span><span class="sxs-lookup"><span data-stu-id="9eafb-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ <span data-ttu-id="9eafb-127">Beschreibt, wie Sicherheitsereignisse überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="9eafb-127">Describes how to audit security events.</span></span>  
   
- [Sicherheitsleitfaden und empfohlene Vorgehensweisen](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- Richtlinien zum Erstellen von sicheren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendungen.  
+ [<span data-ttu-id="9eafb-128">Sicherheitsleitfaden und bewährte Methoden</span><span class="sxs-lookup"><span data-stu-id="9eafb-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ <span data-ttu-id="9eafb-129">Richtlinien zum Erstellen von sicheren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="9eafb-129">Guidelines for creating secure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="9eafb-130">Verweis</span><span class="sxs-lookup"><span data-stu-id="9eafb-130">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## Verwandte Abschnitte  
- [Details zur WCF\-Funktion](../../../../docs/framework/wcf/feature-details/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="9eafb-131">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9eafb-131">Related Sections</span></span>  
+ [<span data-ttu-id="9eafb-132">Details zur WCF-Funktion</span><span class="sxs-lookup"><span data-stu-id="9eafb-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Basis\-WCF\-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="9eafb-133">Einfache WCF-Programmierung</span><span class="sxs-lookup"><span data-stu-id="9eafb-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Lernprogramm 'Erste Schritte'](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="9eafb-134">Tutorial mit ersten Schritten</span><span class="sxs-lookup"><span data-stu-id="9eafb-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Konzeptionelle Übersicht](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="9eafb-135">Konzeptionelle Übersicht</span><span class="sxs-lookup"><span data-stu-id="9eafb-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## Siehe auch  
- [Konfigurieren der Anwendung](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+## <a name="see-also"></a><span data-ttu-id="9eafb-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9eafb-136">See Also</span></span>  
+ [<span data-ttu-id="9eafb-137">Konfigurieren der Anwendung</span><span class="sxs-lookup"><span data-stu-id="9eafb-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

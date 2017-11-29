@@ -1,88 +1,90 @@
 ---
-title: "&lt;applicationPool&gt;-Element (Webeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<applicationPool>-Element"
-  - "applicationPool-Element"
+title: '&lt;ApplicationPool&gt; Element (Webeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applicationPool element
+- <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;applicationPool&gt;-Element (Webeinstellungen)
-Gibt Konfigurationseinstellungen an, die von ASP.NET zur Verwaltung von prozessweitem Verhalten verwendet werden, wenn eine ASP.NET\-Anwendung in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder in einer höheren Version im integrierten Modus ausgeführt wird.  
+# <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="84a40-102">&lt;ApplicationPool&gt; Element (Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="84a40-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="84a40-103">Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.</span><span class="sxs-lookup"><span data-stu-id="84a40-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  
   
 > [!IMPORTANT]
->  Dieses Element und die unterstützte Funktion können nur verwendet werden, wenn die ASP.NET\-Anwendung in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder in einer höheren Versionen gehostet wird.  
+>  <span data-ttu-id="84a40-104">Dieses Element und das Feature unterstützt es nur möglich, wenn von Ihrer ASP.NET-Anwendung gehostet wird [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder höhere Versionen.</span><span class="sxs-lookup"><span data-stu-id="84a40-104">This element and the feature it supports only work if your ASP.NET application is hosted on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="84a40-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="84a40-105">\<configuration></span></span>  
+<span data-ttu-id="84a40-106">\<System.Web >-Element (Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="84a40-106">\<system.web> Element (Web Settings)</span></span>  
+<span data-ttu-id="84a40-107">\<ApplicationPool >-Element (Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="84a40-107">\<applicationPool> Element (Web Settings)</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="84a40-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="84a40-108">Syntax</span></span>  
+  
+```xml  
 <applicationPool   
-    maxConcurrentRequestsPerCPU="5000"   
-    maxConcurrentThreadsPerCPU="0"   
-    requestQueueLimit="5000" />  
+    maxConcurrentRequestsPerCPU="5000"   
+    maxConcurrentThreadsPerCPU="0"   
+    requestQueueLimit="5000" />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="84a40-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="84a40-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="84a40-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="84a40-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="84a40-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="84a40-111">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitigen Anforderungen von ASP.NET pro CPU zugelassen werden.|  
-|`maxConcurrentThreadsPerCPU`|Gibt an, wie viel Threads pro CPU gleichzeitig für einen Anwendungspool ausgeführt werden können.  Dies stellt eine alternative Möglichkeit zur Steuerung der ASP.NET\-Parallelität dar, da Sie die Anzahl der verwalteten Threads einschränken können, die pro CPU zur Behandlung von Anforderungen verwendet werden.  Die Standardeinstellung ist 0. Dies bedeutet, dass ASP.NET die Anzahl der Threads nicht einschränkt, die pro CPU erstellt werden können, obwohl die Anzahl der Threads, die erstellt werden können, auch vom CLR\-Threadpool eingeschränkt wird.|  
-|`requestQueueLimit`|Gibt die maximale Anzahl der Anforderungen an, die in einen einzelnen Prozess für ASP.NET in die Warteschlange gestellt werden können.  Bei zwei oder mehr ASP.NET\-Anwendungen, die in einem Einzelanwendungspool ausgeführt werden, ist der kumulative Satz von Anforderungen, die an eine Anwendung im Anwendungspool gestellt werden, abhängig von dieser Einstellung.|  
+|<span data-ttu-id="84a40-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="84a40-112">Attribute</span></span>|<span data-ttu-id="84a40-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="84a40-113">Description</span></span>|  
+|---------------|-----------------|  
+|`maxConcurrentRequestsPerCPU`|<span data-ttu-id="84a40-114">Gibt an, wie viele gleichzeitige Anforderungen pro CPU ASP.NET ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="84a40-114">Specifies how many simultaneous requests ASP.NET allows per CPU.</span></span>|  
+|`maxConcurrentThreadsPerCPU`|<span data-ttu-id="84a40-115">Gibt an, wie viele gleichzeitige Threads für jede CPU für einen Anwendungspool ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="84a40-115">Specifies how many simultaneous threads can be running for an application pool for each CPU.</span></span> <span data-ttu-id="84a40-116">Dies bietet eine alternative Möglichkeit zum ASP.NET-Parallelität zu steuern, da Sie die Anzahl der verwalteten Threads einschränken können, die zum Verarbeiten von Anforderungen pro CPU verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="84a40-116">This provides an alternative way to control ASP.NET concurrency, because you can limit the number of managed threads that can be used per CPU to serve requests.</span></span> <span data-ttu-id="84a40-117">Standardmäßig ist diese Einstellung 0, was bedeutet, dass ASP.NET die Anzahl der Threads, die pro-CPU, erstellt werden, können nicht beschränkt, obwohl der CLR-Threadpool auch die Anzahl der Threads beschränkt, die erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="84a40-117">By default this setting is 0, which means that ASP.NET does not limit the number of threads that can be created per CPU, although the CLR thread pool also limits the number of threads that can be created.</span></span>|  
+|`requestQueueLimit`|<span data-ttu-id="84a40-118">Gibt die maximale Anzahl von Anforderungen, die für ASP.NET in einem einzelnen Prozess in die Warteschlange eingereiht werden können.</span><span class="sxs-lookup"><span data-stu-id="84a40-118">Specifies the maximum number of requests that can be queued for ASP.NET in a single process.</span></span> <span data-ttu-id="84a40-119">Wenn zwei oder mehr ASP.NET-Anwendungen in einen einzelnen Anwendungspool ausführen, wird diese Einstellung die kumulative Satz von Anforderungen an Anwendungen im Anwendungspool unterliegt.</span><span class="sxs-lookup"><span data-stu-id="84a40-119">When two or more ASP.NET applications run in a single application pool, the cumulative set of requests being made to any application in the application pool is subject to this setting.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a><span data-ttu-id="84a40-120">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="84a40-120">Child Elements</span></span>  
+ <span data-ttu-id="84a40-121">Keine</span><span class="sxs-lookup"><span data-stu-id="84a40-121">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="84a40-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="84a40-122">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Enthält Informationen darüber, wie ASP.NET mit einer Hostanwendung interagiert.|  
+|<span data-ttu-id="84a40-123">Element</span><span class="sxs-lookup"><span data-stu-id="84a40-123">Element</span></span>|<span data-ttu-id="84a40-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="84a40-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="84a40-125">\<system.web></span><span class="sxs-lookup"><span data-stu-id="84a40-125">\<system.web></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|<span data-ttu-id="84a40-126">Enthält Informationen zur Interaktion von ASP.NET mit einer hostanwendung.</span><span class="sxs-lookup"><span data-stu-id="84a40-126">Contains information about how ASP.NET interacts with a host application.</span></span>|  
   
-## Hinweise  
- Wenn Sie [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version im integrierten Modus ausführen, können Sie mit dieser Elementkombination angeben, wie ASP.NET Threads verwaltet und Anforderungen in die Warteschlange stellt, wenn die Anwendung in einem IIS\-Anwendungspool gehostet wird.  Wenn Sie IIS 6 oder [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im klassischen Modus oder im ISAPI\-Modus ausführen, werden diese Einstellungen ignoriert.  
+## <a name="remarks"></a><span data-ttu-id="84a40-127">Hinweise</span><span class="sxs-lookup"><span data-stu-id="84a40-127">Remarks</span></span>  
+ <span data-ttu-id="84a40-128">Bei der Ausführung [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version im integrierten Modus, der Kombination aus diesem Element können Sie konfigurieren, wie ASP.NET Threads und Warteschlangen Anforderungen verwaltet, wenn die Anwendung in einem IIS-Anwendungspool gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="84a40-128">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version in Integrated mode, this element combination lets you configure how ASP.NET manages threads and queues requests when the application is hosted in an IIS application pool.</span></span> <span data-ttu-id="84a40-129">Wenn Sie IIS 6 oder ausführen [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im klassischen Modus oder im ISAPI-Modus, werden diese Einstellungen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="84a40-129">If you run IIS 6 or you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] in Classic mode or in ISAPI mode, these settings are ignored.</span></span>  
   
- Die `applicationPool`\-Einstellungen gelten für alle Anwendungspools, die in einer bestimmten Version von .NET Framework ausgeführt werden.  Die Einstellungen sind in einer aspnet.config\-Datei enthalten.  Diese Datei ist für .NET Framework, Version 2.0 und 4, verfügbar. \(In .NET Framework, Version 3.0 und 3.5, wird die aspnet.config\-Datei für Version 2.0 verwendet.\)  
+ <span data-ttu-id="84a40-130">Die `applicationPool` Einstellungen gelten für alle Anwendungspools, die auf eine bestimmte Version von .NET Framework ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="84a40-130">The `applicationPool` settings apply to all application pools that run on a particular version of the .NET Framework.</span></span> <span data-ttu-id="84a40-131">Die Einstellungen sind in einer aspnet.config-Datei enthalten.</span><span class="sxs-lookup"><span data-stu-id="84a40-131">The settings are contained in an aspnet.config file.</span></span> <span data-ttu-id="84a40-132">Es ist eine Version dieser Datei für die Versionen 2.0 und 4.0 von .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="84a40-132">There is a version of this file for versions 2.0 and 4.0 of the .NET Framework.</span></span> <span data-ttu-id="84a40-133">(Die Versionen 3.0 und 3.5 von .NET Framework Serverfreigabe aspnet.config-Datei mit Version 2.0.)</span><span class="sxs-lookup"><span data-stu-id="84a40-133">(Versions 3.0 and 3.5 of the .NET Framework share the aspnet.config file with version 2.0.)</span></span>  
   
 > [!IMPORTANT]
->  Wenn Sie [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] unter [!INCLUDE[win7](../../../../../includes/win7-md.md)] ausführen, können Sie eine separate aspnet.config\-Datei für jeden Anwendungspool konfigurieren.  Dies ermöglicht eine Anpassung der Leistung für die einzelnen Anwendungspools.  
+>  <span data-ttu-id="84a40-134">Wenn das Ausführen [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] auf [!INCLUDE[win7](../../../../../includes/win7-md.md)], können Sie eine separate aspnet.config-Datei für jeden Anwendungspool konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="84a40-134">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] on [!INCLUDE[win7](../../../../../includes/win7-md.md)], you can configure a separate aspnet.config file for every application pool.</span></span> <span data-ttu-id="84a40-135">Dadurch können Sie die Leistung des Threads für jeden Anwendungspool individuell anzupassen.</span><span class="sxs-lookup"><span data-stu-id="84a40-135">This lets you tailor the performance of the threads for each application pool.</span></span>  
   
- Die Standardeinstellung für `maxConcurrentRequestsPerCPU` in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ist "5000". Dadurch wird die von ASP.NET gesteuerte Drosselung von Anforderungen deaktiviert, wenn Sie nicht mehr als 5000 Anforderungen pro CPU verwenden.  Die Standardeinstellung verwendet stattdessen den CLR\-Threadpool zur automatischen Verwaltung der Parallelität für die einzelnen CPUs.  Anwendungen, die umfangreichen Gebrauch von asynchroner Anforderungsverarbeitung machen oder zahlreiche Langzeitanforderungen aufweisen, die in Netzwerk\-E\/A blockiert werden, profitieren von der erweiterten Standardgrenze in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  Wenn Sie `maxConcurrentRequestsPerCPU` auf 0 \(null\) festlegen, wird die Verwendung von verwalteten Threads zur Verarbeitung von ASP.NET\-Anforderungen deaktiviert.  Wenn eine Anwendung in einem IIS\-Anwendungspool ausgeführt wird, verbleiben Anforderungen im E\/A\-Thread von IIS, sodass die Parallelität durch die IIS\-Threadeinstellungen gedrosselt wird.  
+ <span data-ttu-id="84a40-136">Für die `maxConcurrentRequestsPerCPU` festlegen, die Standardeinstellung von "5000" in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] effektiv deaktiviert eine Einschränkung der Anforderungsanzahl also von ASP.NET gesteuert, es sei denn, Sie tatsächlich 5000 oder mehrere Anforderungen pro CPU haben.</span><span class="sxs-lookup"><span data-stu-id="84a40-136">For the `maxConcurrentRequestsPerCPU` setting, the default setting of "5000" in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] effectively turns off request throttling that is controlled by ASP.NET, unless you actually have 5000 or more requests per CPU.</span></span> <span data-ttu-id="84a40-137">Die Standardeinstellung hängt stattdessen die CLR-Threadpool pro CPU Parallelität automatisch verwaltet.</span><span class="sxs-lookup"><span data-stu-id="84a40-137">The default setting depends instead on the CLR thread-pool to automatically manage concurrency per CPU.</span></span> <span data-ttu-id="84a40-138">Anwendungen, die umfassenden Gebrauch von der Verarbeitung von asynchronen Anforderungen stellen oder bei denen viele langer-Anforderungen, die Netzwerk-e/a blockiert, ist, profitieren die erhöhte Standardgrenze in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="84a40-138">Applications that make extensive use of asynchronous request processing, or that have many long-running requests blocked on network I/O, will benefit from the increased default limit in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="84a40-139">Festlegen von `maxConcurrentRequestsPerCPU` auf 0 (null) deaktiviert die Verwendung von verwalteten Threads für die Verarbeitung von ASP.NET-Anforderungen.</span><span class="sxs-lookup"><span data-stu-id="84a40-139">Setting `maxConcurrentRequestsPerCPU` to zero turns off the use of managed threads for processing ASP.NET requests.</span></span> <span data-ttu-id="84a40-140">Wenn eine Anwendung in einem IIS-Anwendungspool ausgeführt wird, bleiben Sie Anforderungen im IIS-e/a-Thread, und daher Parallelität von IIS-Thread-Einstellungen eingeschränkt wird.</span><span class="sxs-lookup"><span data-stu-id="84a40-140">When an application runs in an IIS application pool, requests stay on the IIS I/O thread and therefore concurrency is throttled by IIS thread settings.</span></span>  
   
- Die `requestQueueLimit`\-Einstellung funktioniert analog zum `requestQueueLimit`\-Attribut des [processModel](http://msdn.microsoft.com/de-de/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)\-Elements, das für ASP.NET\-Anwendungen in Web.config\-Dateien festgelegt wird.  Die `requestQueueLimit`\-Einstellung in einer aspnet.config\-Datei überschreibt jedoch die `requestQueueLimit`\-Einstellung in einer Web.config\-Datei.  Wenn beide Attribute festgelegt werden \(Standardeinstellung\), hat also die `requestQueueLimit`\-Einstellung in der aspnet.config\-Datei Vorrang.  
+ <span data-ttu-id="84a40-141">Die `requestQueueLimit` Einstellung funktioniert genauso wie die `requestQueueLimit` Attribut von der [ProcessModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) Element, das in den Dateien "Web.config" für ASP.NET-Anwendungen festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="84a40-141">The `requestQueueLimit` setting works the same way as the `requestQueueLimit` attribute of the [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) element, which is set in the Web.config files for ASP.NET applications.</span></span> <span data-ttu-id="84a40-142">Allerdings die `requestQueueLimit` Einstellung in einer aspnet.config-Datei überschreibt die `requestQueueLimit` in einer Datei "Web.config" festlegen.</span><span class="sxs-lookup"><span data-stu-id="84a40-142">However, the `requestQueueLimit` setting in an aspnet.config file overrides the `requestQueueLimit` setting in a Web.config file.</span></span> <span data-ttu-id="84a40-143">Das heißt, wenn beide Attribute festgelegt werden (Dies wird standardmäßig "true"), die `requestQueueLimit` Einstellung in aspnet.config-Datei hat Vorrang vor.</span><span class="sxs-lookup"><span data-stu-id="84a40-143">In other words, if both attributes are set (by default, this is true), the `requestQueueLimit` setting in the aspnet.config file takes precedence.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie prozessweites Verhalten von ASP.NET in der aspnet.config\-Datei für folgendes Szenario konfiguriert wird:  
+## <a name="example"></a><span data-ttu-id="84a40-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84a40-144">Example</span></span>  
+ <span data-ttu-id="84a40-145">Das folgende Beispiel zeigt die zum Konfigurieren von ASP.NET prozessübergreifende Verhalten in aspnet.config-Datei in den folgenden Situationen:</span><span class="sxs-lookup"><span data-stu-id="84a40-145">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file in the following circumstances:</span></span>  
   
--   Die Anwendung wird in einem [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]\-Anwendungspool gehostet.  
+-   <span data-ttu-id="84a40-146">Die Anwendung gehostet wird, eine [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Anwendungspool.</span><span class="sxs-lookup"><span data-stu-id="84a40-146">The application is hosted in an [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] application pool.</span></span>  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] wird im integrierten Modus ausgeführt.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]<span data-ttu-id="84a40-147">im integrierten Modus ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="84a40-147"> is running in Integrated mode.</span></span>  
   
--   Die Anwendung verwendet [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
+-   <span data-ttu-id="84a40-148">Die Anwendung verwendet die [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.</span><span class="sxs-lookup"><span data-stu-id="84a40-148">The application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span>  
   
- Die Werte, die im Beispiel verwendet werden, sind Standardwerte.  
+ <span data-ttu-id="84a40-149">Die Werte im Beispiel sind die Standardwerte.</span><span class="sxs-lookup"><span data-stu-id="84a40-149">The values in the example are the default values.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -93,14 +95,14 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET zur Verwaltung von prozessw
 </configuration>  
 ```  
   
-## Elementinformationen  
+## <a name="element-information"></a><span data-ttu-id="84a40-150">Elementinformationen</span><span class="sxs-lookup"><span data-stu-id="84a40-150">Element Information</span></span>  
   
 |||  
 |-|-|  
-|Namespace||  
-|Schemaname||  
-|Validierungsdatei||  
-|Kann leer sein||  
+|<span data-ttu-id="84a40-151">Namespace</span><span class="sxs-lookup"><span data-stu-id="84a40-151">Namespace</span></span>||  
+|<span data-ttu-id="84a40-152">Schemaname</span><span class="sxs-lookup"><span data-stu-id="84a40-152">Schema Name</span></span>||  
+|<span data-ttu-id="84a40-153">Validierungsdatei</span><span class="sxs-lookup"><span data-stu-id="84a40-153">Validation File</span></span>||  
+|<span data-ttu-id="84a40-154">Leer kann sein</span><span class="sxs-lookup"><span data-stu-id="84a40-154">Can be Empty</span></span>||  
   
-## Siehe auch  
- [\<system.web\>\-Element \(Webeinstellungen\)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="84a40-155">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="84a40-155">See Also</span></span>  
+ [<span data-ttu-id="84a40-156">\<system.web>-Element (Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="84a40-156">\<system.web> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
