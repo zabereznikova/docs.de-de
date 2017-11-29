@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17872cf1052acd963933b2d444a638e790e2c946
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 93e631d8f8cc32943f7563495d9846a80822245f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="adonet"></a>ADO.NET
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
@@ -75,6 +73,5 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Stellt komplette Auflistungen aller mit .NET Framework verbundenen Beispiele (einschließlich denen für den Schnellstart) bereit.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)   
- [ADO.NET Managed Providers und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
-
+ [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

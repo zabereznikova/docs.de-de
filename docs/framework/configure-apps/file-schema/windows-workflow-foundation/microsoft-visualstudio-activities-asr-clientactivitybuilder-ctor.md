@@ -1,48 +1,49 @@
 ---
-title: "Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor"
-apilocation: 
-  - "Microsoft.VisualStudio.Activities.dll"
-apitype: "Assembly"
+title: Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
+api_location: Microsoft.VisualStudio.Activities.dll
+api_type: Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b73274a09ae748cdf1ee33c885de86b1f52c105
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
-Erstellt eine Instanz der [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)\-Klasse.  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
+Erstellt eine Instanz der [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) Klasse.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
 public ClientActivityBuilder(OperationDescription operationDescription, string configurationName, string proxyNamespace);  
-  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
-## Parameterwerte  
+## <a name="parameter-values"></a>Parameterwerte  
  *operationDescription*  
   
- beschreibt den Vorgang, der in der zu generierenden Workflowaktivität ausgeführt werden soll, einschließlich des Vorgangsnamens, Rückgabetyps und Parameterinformationen.  Der Wert dieses Parameters darf nicht **null** sein.  Er sollte einen synchronen Vorgang beschreiben, der einen Nachrichtenvertrag und ein Argument mit einer Nachricht verwendet.  Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
+ beschreibt den Vorgang, der in der zu generierenden Workflowaktivität ausgeführt werden soll, einschließlich des Vorgangsnamens, Rückgabetyps und Parameterinformationen. Der Wert dieses Parameters muss **null**. Er sollte einen synchronen Vorgang beschreiben, der einen Nachrichtenvertrag und ein Argument mit einer Nachricht verwendet. Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
   
  *configurationName*  
   
- gibt den zu verwendenden Endpunkt\-Konfigurationsnamen an.  Der Wert dieses Parameters darf weder **null** noch leer sein.  Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
+ gibt den zu verwendenden Endpunkt-Konfigurationsnamen an. Der Wert dieses Parameters muss entweder **null** oder leer sein. Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
   
  *proxyNamespace*  
   
- gibt den Servicenamespace für den Vorgang an.  Der Wert dieses Parameters darf weder **null** noch leer sein.  Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
+ gibt den Servicenamespace für den Vorgang an. Der Wert dieses Parameters muss entweder **null** oder leer sein. Wenn diese Bedingungen nicht erfüllt sind, ist das Laufzeitergebnis der Verwendung des Konstruktors und der anderen Methoden dieser Klasse nicht definiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

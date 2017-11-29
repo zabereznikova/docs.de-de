@@ -1,31 +1,22 @@
 ---
 title: Ausdrucksbaumstrukturen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e67f6696ab6e41e9185c7d1356b98113e1473a87
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 879ee49d13b0f11122a5be12769e2497a722b738
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="expression-trees-visual-basic"></a>Ausdrucksbaumstrukturen (Visual Basic)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
@@ -160,10 +151,9 @@ Console.WriteLine(expr.Compile()(4))
  Weitere Informationen finden Sie unter [How to: Execute Expression Trees (Visual Basic) (Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Expressions>   
- [How to: Execute Expression Trees (Visual Basic) (Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [How to: Modify Expression Trees (Visual Basic) (Vorgehensweise: Bearbeiten von Audrucksbaumstrukturen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)   
- [Lambda-Ausdrücke](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Übersicht über die Dynamic Language Runtime](https://msdn.microsoft.com/library/dd233052)   
+ <xref:System.Linq.Expressions>  
+ [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+ [Lambda-Ausdrücke](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Übersicht über die Dynamic Language Runtime](https://msdn.microsoft.com/library/dd233052)  
  [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../../visual-basic/programming-guide/concepts/index.md)
-

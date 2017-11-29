@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
 Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:  
@@ -84,4 +82,3 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
 |XmlDSig|`urn:ietf:rfc:3075`|  
 |Nicht angegeben.|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
-

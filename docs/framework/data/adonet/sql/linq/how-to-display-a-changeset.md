@@ -1,31 +1,37 @@
 ---
-title: "Vorgehensweise: Anzeigen eines ChangeSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Anzeigen eines "ChangeSets"'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 19f0198103999da687e07f472cd5a480406830cd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Anzeigen eines ChangeSet
+# <a name="how-to-display-a-changeset"></a>Gewusst wie: Anzeigen eines "ChangeSets"
 Sie können die von einem <xref:System.Data.Linq.DataContext> verfolgten Änderungen mithilfe von <xref:System.Data.Linq.DataContext.GetChangeSet%2A> anzeigen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden Kunden aus London abgerufen, der Ort wird in Paris geändert, und die Änderungen werden wieder an die Datenbank übergeben.  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- Die Ausgabe dieses Codes ähnelt der folgenden.  Beachten Sie, dass die Zusammenfassung am Ende zeigt, dass acht Änderungen vorgenommen wurden.  
+ Die Ausgabe dieses Codes ähnelt der folgenden. Beachten Sie, dass die Zusammenfassung am Ende zeigt, dass acht Änderungen vorgenommen wurden.  
   
  `CustomerID: AROUT`  
   
@@ -79,5 +85,5 @@ Sie können die von einem <xref:System.Data.Linq.DataContext> verfolgten Änderu
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## Siehe auch  
- [Debuggingunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Siehe auch  
+ [Debugging-Unterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

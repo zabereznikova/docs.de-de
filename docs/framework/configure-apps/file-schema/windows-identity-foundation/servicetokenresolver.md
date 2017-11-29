@@ -1,66 +1,76 @@
 ---
-title: "&lt;serviceTokenResolver&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceTokenResolver&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 06e871ee31880a219d9105ff4ce667618bfb78f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;serviceTokenResolver&gt;
-Registriert den token Service\-Konfliktlöser, der vom Handler in der Tokenhandler\-Auflistung verwendet wird.  Der Service\-token\-Resolver wird verwendet, zum Auflösen des Tokens Verschlüsselung auf eingehende Tokens und Nachrichten.  
+# <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
+Registriert die Dienst-Resolver, die vom Handler in der Auflistung Tokenhandler verwendet wird. Die Dienst-tokenresolver dient zum Auflösen des Tokens Verschlüsselung auf eingehende Token und Nachrichten.  
   
-## Syntax  
+ \<system.identityModel >  
+\<IdentityConfiguration >  
+\<SecurityTokenHandlers >  
+\<SecurityTokenHandlerConfiguration >  
+\<ServiceTokenResolver >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <serviceTokenResolver type=xs:string>  
-        </serviceTokenResolver>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <serviceTokenResolver type=xs:string>  
+        </serviceTokenResolver>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|type|Gibt den Typ des Resolvers token Service.  Entweder die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Typ oder ein Typ, der von abgeleitet wird die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Klasse.  Weitere Informationen zum Angeben der `type` \-Attribut, finden Sie unter [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).  Erforderlich.|  
+|---------------|-----------------|  
+|Typ|Gibt den Typ des Diensts token Konfliktlösers. Entweder die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Typ oder ein Typ, der von abgeleitet ist die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Klasse. Weitere Informationen zum Angeben der `type` -Attribut angegeben wird, finden Sie unter [benutzerdefinierte Typverweise]. Erforderlich.|  
   
-### Untergeordnete Elemente  
- None  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheit Tokenhandler.|  
+|-------------|-----------------|  
+|[\<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Ermöglicht die Konfiguration für eine Auflistung der Tokenhandler.|  
   
-## Hinweise  
- Der Service\-token\-Resolver kann zum Auflösen des Tokens Verschlüsselung auf eingehende Tokens und Nachrichten verwendet werden.  Es wird verwendet, um den Schlüssel abzurufen, der zum Entschlüsseln von eingehender Tokens verwendet werden soll.  Sie müssen angeben, die `type` Attribut.  Der angegebene Typ kann eine <xref:System.IdentityModel.Selectors.SecurityTokenResolver> oder einen benutzerdefinierten Typ, der von abgeleitet wird die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Klasse.  
+## <a name="remarks"></a>Hinweise  
+ Die Dienst-tokenresolver kann zum Auflösen des Tokens Verschlüsselung auf eingehende Token und Nachrichten verwendet werden. Es dient zum Abrufen des Schlüssels, der zum Entschlüsseln der eingehender Tokens verwendet werden soll. Sie müssen angeben, die `type` Attribut. Der angegebene Typ kann entweder <xref:System.IdentityModel.Selectors.SecurityTokenResolver> oder einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Klasse.  
   
- Einige Tokenhandler können Sie token Resolver Diensteinstellungen in der Konfiguration angeben.  Einstellungen für einzelne Tokenhandler überschreiben auf der Security\-token Handler\-Auflistung angegeben.  
+ Einige Tokenhandler können Sie tokenresolver diensteinstellungen in der Konfiguration angeben. Einstellungen für einzelne Tokenhandler überschreiben für die Sicherheit Tokenhandler Auflistung angegebenen.  
   
 > [!NOTE]
->  Angabe der `<serviceTokenResolver>` Element als untergeordnetes Element von der [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber wird aus Kompatibilitätsgründen weiterhin unterstützt.  Einstellungen auf die `<securityTokenHandlerConfiguration>` Element überschreiben die auf die `<identityConfiguration>` Element.  
+>  Angeben der `<serviceTokenResolver>` Element als untergeordnetes Element von der [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber noch für die Abwärtskompatibilität unterstützt. Einstellungen auf der `<securityTokenHandlerConfiguration>` Element, überschreiben Sie die auf die `<identityConfiguration>` Element.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```

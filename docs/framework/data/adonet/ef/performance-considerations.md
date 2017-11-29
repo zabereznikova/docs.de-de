@@ -1,73 +1,76 @@
 ---
-title: "Leistungsaspekte (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überlegungen zur Leistung (Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: dd42175234418ebd260a85c87bfeae6cf59ceb4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Leistungsaspekte (Entity Framework)
-In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschrieben. Außerdem sind einige Vorschläge enthalten, die Sie zur Verbesserung der Leistung von Entity Framework\-Anwendungen verwenden können.  
+# <a name="performance-considerations-entity-framework"></a>Überlegungen zur Leistung (Entity Framework)
+In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschrieben. Außerdem sind einige Vorschläge enthalten, die Sie zur Verbesserung der Leistung von Entity Framework-Anwendungen verwenden können.  
   
-## Phasen der Abfrageausführung  
- Zum besseren Verständnis der Abfrageleistung im Entity Framework ist es hilfreich zu verstehen, welche Vorgänge ablaufen, wenn eine Abfrage für ein konzeptionelles Modell ausgeführt wird und dabei Daten als Objekte zurückgegeben werden.  Die folgende Tabelle beschreibt diese Reihe von Vorgängen.  
+## <a name="stages-of-query-execution"></a>Phasen der Abfrageausführung  
+ Zum besseren Verständnis der Abfrageleistung im Entity Framework ist es hilfreich zu verstehen, welche Vorgänge ablaufen, wenn eine Abfrage für ein konzeptionelles Modell ausgeführt wird und dabei Daten als Objekte zurückgegeben werden. Die folgende Tabelle beschreibt diese Reihe von Vorgängen.  
   
 |Vorgang|Relative Kosten|Frequenz|Kommentare|  
-|-------------|---------------------|--------------|----------------|  
-|Laden von Metadaten|Mäßig|Einmal pro Anwendungsdomäne.|Von Entity Framework verwendete Modell\- und Zuordnungsmetadaten werden in eine <xref:System.Data.Metadata.Edm.MetadataWorkspace> geladen.  Diese Metadaten werden global zwischengespeichert und stehen für weitere Instanzen von <xref:System.Data.Objects.ObjectContext> in der gleichen Anwendungsdomäne zur Verfügung.|  
-|Öffnen der Datenbankverbindung|Mäßig<sup>1</sup>|Nach Bedarf.|Da durch eine geöffnete Verbindung zur Datenbank wertvolle Ressourcen aufgebraucht werden, wird die Datenbankverbindung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nur bei Bedarf geöffnet bzw. geschlossen.  Sie können die Verbindung auch explizit öffnen.  Weitere Informationen finden Sie unter [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).|  
-|Generieren von Sichten|Hoch|Einmal pro Anwendungsdomäne.  \(Kann zuvor generiert werden.\)|Bevor von Entity Framework für ein konzeptionelles Modell eine Abfrage ausgeführt oder Änderungen an der Datenquelle gespeichert werden können, muss ein Satz lokaler Abfrageansichten für den Zugriff auf die Datenbank generiert werden.  Aufgrund der hohen Kosten für die Generierung dieser Ansichten können Sie die Sichten zuvor generieren und dem Projekt zur Entwurfszeit hinzufügen.  Weitere Informationen finden Sie unter [How to: Pre\-Generate Views to Improve Query Performance](http://msdn.microsoft.com/de-de/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
-|Vorbereiten der Abfrage|Mäßig<sup>2</sup>|Einmal für jede eindeutige Abfrage.|Schließt die Kosten für das Verfassen des Abfragebefehls, die Erstellung einer Befehlsstruktur auf Grundlage von Modell\- und Zuordnungsmetadaten und die Definition der Form der zurückgegebenen Daten ein.  Da jetzt sowohl Entity SQL\-Abfragebefehle als auch LINQ\-Abfragen zwischengespeichert werden, ist für spätere Ausführungen derselben Abfrage weniger Zeit erforderlich.  Sie können weiterhin kompilierte LINQ\-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ\-Abfragen sein, die automatisch zwischengespeichert werden.  Weitere Informationen finden Sie unter [Kompilierte Abfragen \(LINQ to Entities\)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  Allgemeine Informationen zu LINQ\-Abfragen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Note:**  LINQ to Entities\-Abfragen, die den `Enumerable.Contains`\-Operator auf Auflistungen im Arbeitsspeicher anwenden, werden nicht automatisch zwischengespeichert.  Darüber hinaus ist das Parametrisieren von Auflistungen im Arbeitsspeicher in kompilierten LINQ\-Abfragen nicht zulässig.|  
-|Ausführen der Abfrage|Niedrig<sup>2</sup>|Einmal für jede Abfrage.|Die Kosten für das Ausführen des Befehls für die Datenquelle mithilfe des ADO.NET\-Datenanbieters.  Da von den meisten Datenquellen Abfragepläne zwischengespeichert werden, kann die gleiche Abfrage ggf. noch schneller ausgeführt werden.|  
-|Laden und Überprüfen von Typen|Niedrig<sup>3</sup>|Einmal für jede <xref:System.Data.Objects.ObjectContext>\-Instanz.|Typen werden geladen und gegen die Typen geprüft, die das konzeptionelle Modell definiert.|  
-|Nachverfolgung|Niedrig<sup>3</sup>|Einmal für jedes Objekt, dass von einer Abfrage zurückgegeben wird.  <sup>4</sup>|Verwendet eine Abfrage die <xref:System.Data.Objects.MergeOption>\-Zusammenführungsoption, wird die Leistung in dieser Phase nicht beeinträchtigt.<br /><br /> Verwendet die Abfrage die <xref:System.Data.Objects.MergeOption>\-, <xref:System.Data.Objects.MergeOption>\- oder <xref:System.Data.Objects.MergeOption>\-Zusammenführungsoption, werden Abfrageergebnisse in der <xref:System.Data.Objects.ObjectStateManager> nachverfolgt.  Für jedes von der Abfrage zurückgegebene verfolgte Objekt wird ein <xref:System.Data.EntityKey> generiert, das für die Erstellung eines <xref:System.Data.Objects.ObjectStateManager> im <xref:System.Data.Objects.ObjectStateEntry> verwendet wird.  Wenn ein <xref:System.Data.Objects.ObjectStateEntry> für den <xref:System.Data.EntityKey> vorhanden ist, wird das vorhandene Objekt zurückgegeben.  Wir die <xref:System.Data.Objects.MergeOption>\- oder <xref:System.Data.Objects.MergeOption>\-Option verwendet, wird das Objekt vor der Rückgabe aktualisiert.<br /><br /> Weitere Informationen finden Sie unter [Identity Resolution, State Management, and Change Tracking](http://msdn.microsoft.com/de-de/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
-|Materialisieren der Objekte|Mäßig<sup>3</sup>|Einmal für jedes Objekt, dass von einer Abfrage zurückgegeben wird.  <sup>4</sup>|Der Prozess des Lesens des zurückgegebenen <xref:System.Data.Common.DbDataReader>\-Objekts, des Erstellens von Objekten und des Festlegens von Eigenschaftswerten, die auf den Werten in jeder Instanz der <xref:System.Data.Common.DbDataRecord>\-Klasse basieren.  Ist das Objekt bereits im <xref:System.Data.Objects.ObjectContext> vorhanden und wird von der Abfrage die <xref:System.Data.Objects.MergeOption>\- oder <xref:System.Data.Objects.MergeOption>\-Zusammenführungsoptionen verwendet, wird von dieser Phase die Leistung nicht beeinträchtigt.  Weitere Informationen finden Sie unter [Identity Resolution, State Management, and Change Tracking](http://msdn.microsoft.com/de-de/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
+|---------------|-------------------|---------------|--------------|  
+|Laden von Metadaten|Mäßig|Einmal pro Anwendungsdomäne.|Von Entity Framework verwendete Modell- und Zuordnungsmetadaten werden in eine <xref:System.Data.Metadata.Edm.MetadataWorkspace> geladen. Diese Metadaten werden global zwischengespeichert und stehen für weitere Instanzen von <xref:System.Data.Objects.ObjectContext> in der gleichen Anwendungsdomäne zur Verfügung.|  
+|Öffnen der Datenbankverbindung|Moderate<sup>1</sup>|Nach Bedarf.|Da eine offene Verbindung zur Datenbank wertvolle Ressourcen beansprucht die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] öffnet und schließt eine Verbindung mit der Datenbank nur bei Bedarf. Sie können die Verbindung auch explizit öffnen. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).|  
+|Generieren von Sichten|Hoch|Einmal pro Anwendungsdomäne. (Kann zuvor generiert werden.)|Bevor von Entity Framework für ein konzeptionelles Modell eine Abfrage ausgeführt oder Änderungen an der Datenquelle gespeichert werden können, muss ein Satz lokaler Abfrageansichten für den Zugriff auf die Datenbank generiert werden. Aufgrund der hohen Kosten für die Generierung dieser Ansichten können Sie die Sichten zuvor generieren und dem Projekt zur Entwurfszeit hinzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Pre-Generate Ansichten zum Verbessern der Abfrageleistung](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
+|Vorbereiten der Abfrage|Moderate<sup>2</sup>|Einmal für jede eindeutige Abfrage.|Schließt die Kosten für das Verfassen des Abfragebefehls, die Erstellung einer Befehlsstruktur auf Grundlage von Modell- und Zuordnungsmetadaten und die Definition der Form der zurückgegebenen Daten ein. Da jetzt sowohl Entity SQL-Abfragebefehle als auch LINQ-Abfragen zwischengespeichert werden, ist für spätere Ausführungen derselben Abfrage weniger Zeit erforderlich. Sie können weiterhin kompilierte LINQ-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ-Abfragen sein, die automatisch zwischengespeichert werden. Weitere Informationen finden Sie unter [kompilierte Abfragen (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). Allgemeine Informationen zur Ausführung von LINQ-Abfrage finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Hinweis:** LINQ to Entities-Abfragen, die gelten die `Enumerable.Contains` -Operator auf Auflistungen im Arbeitsspeicher nicht automatisch zwischengespeichert. Darüber hinaus ist das Parametrisieren von Auflistungen im Arbeitsspeicher in kompilierten LINQ-Abfragen nicht zulässig.|  
+|Ausführen der Abfrage|Niedrige<sup>2</sup>|Einmal für jede Abfrage.|Die Kosten für das Ausführen des Befehls für die Datenquelle mithilfe des ADO.NET-Datenanbieters. Da von den meisten Datenquellen Abfragepläne zwischengespeichert werden, kann die gleiche Abfrage ggf. noch schneller ausgeführt werden.|  
+|Laden und Überprüfen von Typen|Niedrige<sup>3</sup>|Einmal für jede <xref:System.Data.Objects.ObjectContext>-Instanz.|Typen werden geladen und gegen die Typen geprüft, die das konzeptionelle Modell definiert.|  
+|Nachverfolgung|Niedrige<sup>3</sup>|Einmal für jedes Objekt, dass von einer Abfrage zurückgegeben wird. <sup>4</sup>|Verwendet eine Abfrage die <xref:System.Data.Objects.MergeOption.NoTracking>-Zusammenführungsoption, wird die Leistung in dieser Phase nicht beeinträchtigt.<br /><br /> Verwendet die Abfrage die <xref:System.Data.Objects.MergeOption.AppendOnly>-, <xref:System.Data.Objects.MergeOption.PreserveChanges>- oder <xref:System.Data.Objects.MergeOption.OverwriteChanges>-Zusammenführungsoption, werden Abfrageergebnisse in der <xref:System.Data.Objects.ObjectStateManager> nachverfolgt. Für jedes von der Abfrage zurückgegebene verfolgte Objekt wird ein <xref:System.Data.EntityKey> generiert, das für die Erstellung eines <xref:System.Data.Objects.ObjectStateEntry> im <xref:System.Data.Objects.ObjectStateManager> verwendet wird. Wenn ein <xref:System.Data.Objects.ObjectStateEntry> für den <xref:System.Data.EntityKey> vorhanden ist, wird das vorhandene Objekt zurückgegeben. Wir die <xref:System.Data.Objects.MergeOption.PreserveChanges>- oder <xref:System.Data.Objects.MergeOption.OverwriteChanges>-Option verwendet, wird das Objekt vor der Rückgabe aktualisiert.<br /><br /> Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
+|Materialisieren der Objekte|Moderate<sup>3</sup>|Einmal für jedes Objekt, dass von einer Abfrage zurückgegeben wird. <sup>4</sup>|Der Prozess des Lesens des zurückgegebenen <xref:System.Data.Common.DbDataReader>-Objekts, des Erstellens von Objekten und des Festlegens von Eigenschaftswerten, die auf den Werten in jeder Instanz der <xref:System.Data.Common.DbDataRecord>-Klasse basieren. Ist das Objekt bereits im <xref:System.Data.Objects.ObjectContext> vorhanden und wird von der Abfrage die <xref:System.Data.Objects.MergeOption.AppendOnly>- oder <xref:System.Data.Objects.MergeOption.PreserveChanges>-Zusammenführungsoptionen verwendet, wird von dieser Phase die Leistung nicht beeinträchtigt. Weitere Informationen finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
   
- <sup>1</sup> Implementiert ein Datenquellenanbieter Verbindungspooling, werden die Kosten für das Öffnen einer Verbindung im Pool verteilt.  Der .NET\-Anbieter für SQL Server unterstützt Verbindungspooling.  
+ <sup>1</sup> ein Datenquellenanbieter implementiert Verbindungspooling, die Kosten für das Öffnen einer Verbindung über den Pool verteilt ist. Der .NET-Anbieter für SQL Server unterstützt Verbindungspooling.  
   
- <sup>2</sup>Die Kosten nehmen mit höherer Abfragekomplexität zu.  
+ <sup>2</sup> Kosten mit höherer abfragekomplexität erhöht.  
   
- <sup>3</sup> Die Gesamtkosten steigen proportional zur Anzahl der von der Abfrage zurückgegebenen Objekte.  
+ <sup>3</sup> Gesamtkosten steigen proportional zur Anzahl der von der Abfrage zurückgegebenen Objekte.  
   
- <sup>4</sup> Dies ist für EntityClient\-Abfragen nicht erforderlich, da von EntityClient statt der Objekte ein <xref:System.Data.EntityClient.EntityDataReader> zurückgegeben wird.  Weitere Informationen finden Sie unter [EntityClient\-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+ <sup>4</sup> diesen zusätzlichen Aufwand ist nicht erforderlich, für EntityClient-Abfragen, da EntityClient-zurückgeben Abfragen einer <xref:System.Data.EntityClient.EntityDataReader> anstelle von Objekten. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
-## Weitere Überlegungen  
- Die im Folgenden beschriebenen Vorgehensweisen wirken sich möglicherweise auf die Leistung von Entity Framework\-Anwendungen aus.  
+## <a name="additional-considerations"></a>Weitere Überlegungen  
+ Die im Folgenden beschriebenen Vorgehensweisen wirken sich möglicherweise auf die Leistung von Entity Framework-Anwendungen aus.  
   
-### Abfrageausführung  
+### <a name="query-execution"></a>Abfrageausführung  
  Da Abfragen ressourcenintensiv sein können, muss berücksichtigt werden, an welcher Stelle im Code und auf welchem Computer eine Abfrage ausgeführt wird.  
   
-#### Verzögerte und unmittelbare Ausführung  
- Bei der Erstellung einer <xref:System.Data.Objects.ObjectQuery%601>\- oder einer LINQ\-Abfrage wird die Abfrage möglicherweise nicht sofort ausgeführt.  Die Abfrageausführung wird so lange verzögert, bis die Ergebnisse benötigt werden, z. B. während einer `foreach` \(C\#\)\-Enumeration, einer `For Each` \(Visual Basic\)\-Enumeration oder wenn eine <xref:System.Collections.Generic.List%601>\-Auflistung ausgefüllt werden soll.  Die Abfrage wird ausgeführt, wenn Sie die <xref:System.Data.Objects.ObjectQuery%601.Execute%2A>\-Methode für ein <xref:System.Data.Objects.ObjectQuery%601> aufrufen oder wenn Sie eine LINQ\-Methode aufrufen, die eine Singleton\-Abfrage zurückgibt, z. B. <xref:System.Linq.Enumerable.First%2A> oder <xref:System.Linq.Enumerable.Any%2A>.  Weitere Informationen finden Sie unter [Object Queries](http://msdn.microsoft.com/de-de/0768033c-876f-471d-85d5-264884349276) und [Query Execution \(LINQ to Entities\)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).  
+#### <a name="deferred-versus-immediate-execution"></a>Verzögerte und unmittelbare Ausführung  
+ Bei der Erstellung einer <xref:System.Data.Objects.ObjectQuery%601>- oder einer LINQ-Abfrage wird die Abfrage möglicherweise nicht sofort ausgeführt. Die Abfrageausführung wird so lange verzögert, bis die Ergebnisse benötigt werden, z. B. während einer `foreach` (C#)-Enumeration, einer `For Each` (Visual Basic)-Enumeration oder wenn eine <xref:System.Collections.Generic.List%601>-Auflistung ausgefüllt werden soll. Die Abfrage wird ausgeführt, wenn Sie die <xref:System.Data.Objects.ObjectQuery%601.Execute%2A>-Methode für ein <xref:System.Data.Objects.ObjectQuery%601> aufrufen oder wenn Sie eine LINQ-Methode aufrufen, die eine Singleton-Abfrage zurückgibt, z. B. <xref:System.Linq.Enumerable.First%2A> oder <xref:System.Linq.Enumerable.Any%2A>. Weitere Informationen finden Sie unter [Objektabfragen](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276) und [Query Execution (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).  
   
-#### Clientseitige Ausführung von LINQ\-Abfragen  
- Obwohl eine LINQ\-Abfrage auf dem Computer ausgeführt wird, der die Datenquelle hostet, werden einige Teile der LINQ\-Abfrage möglicherweise auf dem Clientcomputer ausgewertet.  Weitere Informationen finden Sie im Abschnitt zur Speicherausführung unter [Query Execution \(LINQ to Entities\)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).  
+#### <a name="client-side-execution-of-linq-queries"></a>Clientseitige Ausführung von LINQ-Abfragen  
+ Obwohl eine LINQ-Abfrage auf dem Computer ausgeführt wird, der die Datenquelle hostet, werden einige Teile der LINQ-Abfrage möglicherweise auf dem Clientcomputer ausgewertet. Weitere Informationen finden Sie im Abschnitt Speicherausführung [Query Execution (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).  
   
-### Abfrage\- und Zuordnungskomplexität  
+### <a name="query-and-mapping-complexity"></a>Abfrage- und Zuordnungskomplexität  
  Die Komplexität einzelner Abfragen und der Zuordnung im Entitätsmodell wirkt sich entscheidend auf die Abfrageleistung aus.  
   
-#### Zuordnungskomplexität  
- Modelle, die komplexer als eine einfache 1:1\-Zuordnung für Entitäten im konzeptionellen Modell und Tabellen im Speichermodell sind, generieren komplexere Befehle als Modelle mit 1:1\-Zuordnung.  
+#### <a name="mapping-complexity"></a>Zuordnungskomplexität  
+ Modelle, die komplexer als eine einfache 1:1-Zuordnung für Entitäten im konzeptionellen Modell und Tabellen im Speichermodell sind, generieren komplexere Befehle als Modelle mit 1:1-Zuordnung.  
   
-#### Abfragekomplexität  
+#### <a name="query-complexity"></a>Abfragekomplexität  
  Abfragen, die eine große Anzahl von Joins für Befehle erfordern, die für die Datenquelle ausgeführt werden oder eine große Datenmenge zurückgeben, beeinträchtigen möglicherweise die Leistung auf die folgende Weise:  
   
--   Scheinbar einfache Abfragen für ein konzeptionelles Modell führen möglicherweise zur Ausführung komplexerer Abfragen für die Datenquelle.  Dies kann auftreten, da Entity Framework eine Abfrage für ein konzeptionelles Modell in eine entsprechende Abfrage für die Datenquelle übersetzt.  Wenn ein einzelner Entitätssatz im konzeptionellen Modell mehr als einer Tabelle in der Datenquelle zugeordnet wird oder einer Jointabelle eine Beziehung zwischen Entitäten zugeordnet wird, sind für den Abfragebefehl für die Datenquellenabfrage möglicherweise Joins erforderlich.  
+-   Scheinbar einfache Abfragen für ein konzeptionelles Modell führen möglicherweise zur Ausführung komplexerer Abfragen für die Datenquelle. Dies kann auftreten, da Entity Framework eine Abfrage für ein konzeptionelles Modell in eine entsprechende Abfrage für die Datenquelle übersetzt. Wenn ein einzelner Entitätssatz im konzeptionellen Modell mehr als einer Tabelle in der Datenquelle zugeordnet wird oder einer Jointabelle eine Beziehung zwischen Entitäten zugeordnet wird, sind für den Abfragebefehl für die Datenquellenabfrage möglicherweise Joins erforderlich.  
   
     > [!NOTE]
-    >  Verwenden Sie die <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A>\-Methode der <xref:System.Data.Objects.ObjectQuery%601>\- oder <xref:System.Data.EntityClient.EntityCommand>\-Klasse, um die Befehle anzuzeigen, die für die Datenquelle für eine angegebene Abfrage ausgeführt werden.  Weitere Informationen finden Sie unter [How to: View the Store Commands](http://msdn.microsoft.com/de-de/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
+    >  Verwenden Sie die <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A>-Methode der <xref:System.Data.Objects.ObjectQuery%601>- oder <xref:System.Data.EntityClient.EntityCommand>-Klasse, um die Befehle anzuzeigen, die für die Datenquelle für eine angegebene Abfrage ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen der Store-Befehle](http://msdn.microsoft.com/en-us/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
   
--   Geschachtelte Entity SQL\-Abfragen erstellen möglicherweise Joins auf dem Server und geben eine große Anzahl von Zeilen zurück.  
+-   Geschachtelte Entity SQL-Abfragen erstellen möglicherweise Joins auf dem Server und geben eine große Anzahl von Zeilen zurück.  
   
      Im Folgenden sehen Sie ein Beispiel für eine geschachtelte Abfrage in einer Projektionsklausel:  
   
@@ -77,88 +80,88 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
         FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
     ```  
   
-     Außerdem bewirken solche Abfragen, dass die Abfragepipeline eine einzelne Abfrage durch die Verdoppelung von Objekten in geschachtelten Abfragen generiert.  Deswegen wird eine einzelne Spalte möglicherweise mehrmals dupliziert.  In einigen Datenbanken, einschließlich SQL Server, kann hierdurch die TempDB\-Tabelle stark vergrößert werden, wodurch die Serverleistung abnehmen kann.  Bei der Ausführung geschachtelter Abfragen sollte also vorsichtig vorgegangen werden.  
+     Außerdem bewirken solche Abfragen, dass die Abfragepipeline eine einzelne Abfrage durch die Verdoppelung von Objekten in geschachtelten Abfragen generiert. Deswegen wird eine einzelne Spalte möglicherweise mehrmals dupliziert. In einigen Datenbanken, einschließlich SQL Server, kann hierdurch die TempDB-Tabelle stark vergrößert werden, wodurch die Serverleistung abnehmen kann. Bei der Ausführung geschachtelter Abfragen sollte also vorsichtig vorgegangen werden.  
   
--   Alle Abfragen, die eine große Datenmenge zurückgeben, können einen Leistungsabfall verursachen, wenn vom Client Operationen ausgeführt werden, von denen Ressourcen in der Größenordnung des Resultsets verbraucht werden.  In solchen Fällen sollten Sie erwägen, die von der Abfrage zurückgegebene Datenmenge zu beschränken.  Weitere Informationen finden Sie unter [How to: Page Through Query Results](http://msdn.microsoft.com/de-de/ffc0f920-e7de-42e0-9b12-ef356421d030).  
+-   Alle Abfragen, die eine große Datenmenge zurückgeben, können einen Leistungsabfall verursachen, wenn vom Client Operationen ausgeführt werden, von denen Ressourcen in der Größenordnung des Resultsets verbraucht werden. In solchen Fällen sollten Sie erwägen, die von der Abfrage zurückgegebene Datenmenge zu beschränken. Weitere Informationen finden Sie unter [Vorgehensweise: Seite über Abfrageergebnisse](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030).  
   
- Alle automatisch vom Entity Framework generierten Befehle sind möglicherweise komplexer als ähnliche explizit von einem Datenbankentwickler geschriebenen Befehle.  Wenn Sie explizite Kontrolle über die für die Datenquelle ausgeführten Befehle benötigen, erwägen Sie die Definition einer Zuordnung für eine Tabellenwertfunktion oder eine gespeicherte Prozedur.  
+ Alle automatisch vom Entity Framework generierten Befehle sind möglicherweise komplexer als ähnliche explizit von einem Datenbankentwickler geschriebenen Befehle. Wenn Sie explizite Kontrolle über die für die Datenquelle ausgeführten Befehle benötigen, erwägen Sie die Definition einer Zuordnung für eine Tabellenwertfunktion oder eine gespeicherte Prozedur.  
   
-#### Beziehungen  
+#### <a name="relationships"></a>Beziehungen  
  Für optimale Abfrageleistung müssen Beziehungen zwischen Entitäten als Zuordnungen im Entitätsmodell und als logische Beziehungen in der Datenquelle definiert werden.  
   
-### Abfragepfade  
- Standardmäßig werden verknüpfte Objekte nicht zurückgegeben \(obwohl dies für Objekte, die die Beziehungen selbst darstellen, zutrifft\), wenn Sie einen <xref:System.Data.Objects.ObjectQuery%601> ausführen.  Sie können auf eine von drei Arten verknüpfte Objekte laden:  
+### <a name="query-paths"></a>Abfragepfade  
+ Standardmäßig werden verknüpfte Objekte nicht zurückgegeben (obwohl dies für Objekte, die die Beziehungen selbst darstellen, zutrifft), wenn Sie einen <xref:System.Data.Objects.ObjectQuery%601> ausführen. Sie können auf eine von drei Arten verknüpfte Objekte laden:  
   
-1.  Legen Sie den Abfragepfad fest, bevor die <xref:System.Data.Objects.ObjectQuery%601>\-Abfrage ausgeführt wird.  
+1.  Legen Sie den Abfragepfad fest, bevor die <xref:System.Data.Objects.ObjectQuery%601>-Abfrage ausgeführt wird.  
   
-2.  Rufen Sie die `Load`\-Methode für die Navigationseigenschaft auf, die das Objekt verfügbar macht.  
+2.  Rufen Sie die `Load`-Methode für die Navigationseigenschaft auf, die das Objekt verfügbar macht.  
   
-3.  Legen Sie die <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>\-Option für das <xref:System.Data.Objects.ObjectContext>\-Objekt auf `true` fest.  Beachten Sie, dass dies automatisch geschieht, wenn Sie mit dem [Entity Data Model Designer](http://msdn.microsoft.com/de-de/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf) Code auf Objektebene generieren.  Weitere Informationen finden Sie unter [Generated Code Overview](http://msdn.microsoft.com/de-de/6a88ea38-6a90-4107-bc33-531b79ce5b6a).  
+3.  Legen Sie die <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>-Option für das <xref:System.Data.Objects.ObjectContext>-Objekt auf `true` fest. Beachten Sie, dass dies automatisch erfolgt beim Generieren von Objektebenencode mit der [Entity Data Model Designer](http://msdn.microsoft.com/en-us/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf). Weitere Informationen finden Sie unter [generiert Code Overview](http://msdn.microsoft.com/en-us/6a88ea38-6a90-4107-bc33-531b79ce5b6a).  
   
- Denken Sie beim Auswählen der Option daran, dass zwischen der Anzahl der Abfragen der Datenbank und der in einer einzelnen Abfrage zurückgegebenen Datenmenge abgewogen werden sollte.  Weitere Informationen finden Sie unter [Loading Related Objects](http://msdn.microsoft.com/de-de/452347d2-7b3b-44cd-9001-231299a28cb1).  
+ Denken Sie beim Auswählen der Option daran, dass zwischen der Anzahl der Abfragen der Datenbank und der in einer einzelnen Abfrage zurückgegebenen Datenmenge abgewogen werden sollte. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
   
-#### Verwenden von Abfragepfaden  
- Abfragepfade definieren das Diagramm von Objekten, die von einer Abfrage zurückgegeben werden.  Beim Definieren eines Abfragepfads ist nur eine einzige Abfrage der Datenbank erforderlich, um alle durch den Pfad definierten Objekte zurückzugeben.  Durch die Verwendung von Abfragepfaden können aus scheinbar einfachen Objektabfragen komplexe Befehle werden, die in der Datenquelle ausgeführt werden.  Der Grund hierfür ist, dass eine oder mehrere Joins erforderlich sind, um verbundene Objekte in einer einzelnen Abfrage zurückzugeben.  Diese Komplexität nimmt bei Abfragen für ein komplexes Entitätsmodell \(z. B. eine Entität mit Vererbung oder ein Pfad, der n:n\-Beziehungen enthält\) zu.  
-  
-> [!NOTE]
->  Mit der <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A>\-Methode kann der von einer <xref:System.Data.Objects.ObjectQuery%601> generierte Befehl angezeigt werden.  Weitere Informationen finden Sie unter [How to: View the Store Commands](http://msdn.microsoft.com/de-de/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
-  
- Wenn ein Abfragepfad zu viele verbundene Objekte enthält oder die Objekte zu viele Zeilendaten enthalten, kann die Abfrage möglicherweise nicht von der Datenquelle abgeschlossen werden.  Dies tritt auf, wenn die Abfrage temporäre Zwischenspeicherung erfordert, die die Kapazität der Datenquelle überschreitet.  In diesem Fall kann die Komplexität der Datenquellenabfrage verringert werden, indem verbundene Objekte explizit geladen werden.  
-  
-#### Explizites Laden verbundener Objekte  
- Zum expliziten Laden verbundener Objekte muss die `Load`\-Methode für eine Navigationseigenschaft aufgerufen werden, die eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> zurückgibt.  Explizites Laden erfordert bei jedem Aufruf von `Load` einen Roundtrip zur Datenbank.  
+#### <a name="using-query-paths"></a>Verwenden von Abfragepfaden  
+ Abfragepfade definieren das Diagramm von Objekten, die von einer Abfrage zurückgegeben werden. Beim Definieren eines Abfragepfads ist nur eine einzige Abfrage der Datenbank erforderlich, um alle durch den Pfad definierten Objekte zurückzugeben. Durch die Verwendung von Abfragepfaden können aus scheinbar einfachen Objektabfragen komplexe Befehle werden, die in der Datenquelle ausgeführt werden. Der Grund hierfür ist, dass eine oder mehrere Joins erforderlich sind, um verbundene Objekte in einer einzelnen Abfrage zurückzugeben. Diese Komplexität nimmt bei Abfragen für ein komplexes Entitätsmodell (z. B. eine Entität mit Vererbung oder ein Pfad, der n:n-Beziehungen enthält) zu.  
   
 > [!NOTE]
->  Wenn Sie beim Durchlaufen einer Auflistung zurückgegebener Objekte `Load` aufrufen, z. B. wenn Sie die `foreach`\-Anweisung \(`For Each` in Visual Basic\) verwenden, muss der datenquellenspezifische Anbieter mehrere aktive Resultsets für eine einzelne Verbindung unterstützen.  Bei einer SQL Server\-Datenbank muss in der Verbindungszeichenfolge des Anbieters der Wert `MultipleActiveResultSets = true` angegeben werden.  
+>  Mit der <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A>-Methode kann der von einer <xref:System.Data.Objects.ObjectQuery%601> generierte Befehl angezeigt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen der Store-Befehle](http://msdn.microsoft.com/en-us/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
   
- Sie können auch die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>\-Methode verwenden, wenn die Entitäten nicht über die <xref:System.Data.Objects.DataClasses.EntityCollection%601>\-Eigenschaft oder die <xref:System.Data.Objects.DataClasses.EntityReference%601>\-Eigenschaft verfügen.  Dies ist bei Verwendung von POCO\-Entitäten nützlich.  
+ Wenn ein Abfragepfad zu viele verbundene Objekte enthält oder die Objekte zu viele Zeilendaten enthalten, kann die Abfrage möglicherweise nicht von der Datenquelle abgeschlossen werden. Dies tritt auf, wenn die Abfrage temporäre Zwischenspeicherung erfordert, die die Kapazität der Datenquelle überschreitet. In diesem Fall kann die Komplexität der Datenquellenabfrage verringert werden, indem verbundene Objekte explizit geladen werden.  
+  
+#### <a name="explicitly-loading-related-objects"></a>Explizites Laden verbundener Objekte  
+ Zum expliziten Laden verbundener Objekte muss die `Load`-Methode für eine Navigationseigenschaft aufgerufen werden, die eine <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> zurückgibt. Explizites Laden erfordert bei jedem Aufruf von `Load` einen Roundtrip zur Datenbank.  
+  
+> [!NOTE]
+>  Wenn Sie beim Durchlaufen einer Auflistung zurückgegebener Objekte `Load` aufrufen, z. B. wenn Sie die `foreach`-Anweisung (`For Each` in Visual Basic) verwenden, muss der datenquellenspezifische Anbieter mehrere aktive Resultsets für eine einzelne Verbindung unterstützen. Bei einer SQL Server-Datenbank muss in der Verbindungszeichenfolge des Anbieters der Wert `MultipleActiveResultSets = true` angegeben werden.  
+  
+ Sie können auch die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>-Methode verwenden, wenn die Entitäten nicht über die <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Eigenschaft oder die <xref:System.Data.Objects.DataClasses.EntityReference%601>-Eigenschaft verfügen. Dies ist bei Verwendung von POCO-Entitäten nützlich.  
   
  Obwohl durch das explizite Laden von verwandten Objekten die Anzahl der Joins und die Menge von redundanten Daten reduziert wird, erfordert `Load` wiederholte Verbindungen zur Datenbank, was beim expliziten Laden einer großen Anzahl von Objekten kostenintensiv sein kann.  
   
-### Speichern von Änderungen  
- Wenn Sie die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>\-Methode für einen <xref:System.Data.Objects.ObjectContext> aufrufen, wird für jedes hinzugefügte, aktualisierte oder gelöschte Objekt im Kontext jeweils ein eigener Befehl zum Erstellen, Aktualisieren oder Löschen generiert.  Diese Befehle werden für die Datenquelle in einer einzelnen Transaktion ausgeführt.  Wie bei Abfragen ist die Leistung von Vorgängen für die Erstellung, Aktualisierung und Löschung von der Komplexität der Zuordnung im konzeptionellen Modell abhängig.  
+### <a name="saving-changes"></a>Speichern von Änderungen  
+ Wenn Sie die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Methode für einen <xref:System.Data.Objects.ObjectContext> aufrufen, wird für jedes hinzugefügte, aktualisierte oder gelöschte Objekt im Kontext jeweils ein eigener Befehl zum Erstellen, Aktualisieren oder Löschen generiert. Diese Befehle werden für die Datenquelle in einer einzelnen Transaktion ausgeführt. Wie bei Abfragen ist die Leistung von Vorgängen für die Erstellung, Aktualisierung und Löschung von der Komplexität der Zuordnung im konzeptionellen Modell abhängig.  
   
-### Verteilte Transaktionen  
- Operationen in einer expliziten Transaktion, die Ressourcen erfordern, die vom verteilten Transaktionskoordinator \(DTC\) verwaltet werden, sind viel teurer als eine ähnliche Operation, die DTC nicht erfordert.  In den folgenden Situationen findet eine Höherstufung zum DTC statt:  
+### <a name="distributed-transactions"></a>Verteilte Transaktionen  
+ Operationen in einer expliziten Transaktion, die Ressourcen erfordern, die vom verteilten Transaktionskoordinator (DTC) verwaltet werden, sind viel teurer als eine ähnliche Operation, die DTC nicht erfordert. In den folgenden Situationen findet eine Höherstufung zum DTC statt:  
   
--   Eine explizite Transaktion mit einem Vorgang für eine SQL Server 2000\-Datenbank oder andere Datenquellen, die ständig explizite Transaktionen auf den DTC hochstufen.  
+-   Eine explizite Transaktion mit einem Vorgang für eine SQL Server 2000-Datenbank oder andere Datenquellen, die ständig explizite Transaktionen auf den DTC hochstufen.  
   
--   Eine explizite Transaktion mit einer Operation für SQL Server 2005, wenn die Verbindung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet wird.  Dies tritt auf, da SQL Server 2005 immer dann auf einen DTC hochstuft, wenn eine Verbindung geschlossen und innerhalb einer einzelnen Transaktion erneut geöffnet wird. Dies ist das Standardverhalten von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Diese DTC\-Höherstufung tritt nicht auf, wenn SQL Server 2008 verwendet wird. Um diese Höherstufung zu vermeiden, wenn Sie SQL Server 2005 verwenden, müssen Sie die Verbindung innerhalb der Transaktion explizit öffnen und schließen.  Weitere Informationen finden Sie unter [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+-   Eine explizite Transaktion mit einer Operation für SQL Server 2005, wenn die Verbindung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet wird. Dies tritt auf, da SQL Server 2005 immer dann auf einen DTC hochstuft, wenn eine Verbindung geschlossen und innerhalb einer einzelnen Transaktion erneut geöffnet wird. Dies ist das Standardverhalten von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Beim SQL Server 2008 wird diese DTC-Höherstufung nicht durchgeführt. Öffnen und schließen Sie explizit die Verbindung innerhalb der Transaktion, um diese Höherstufung zu vermeiden, wenn Sie SQL Server 2005 verwenden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
- Eine explizite Transaktion wird verwendet, wenn eine oder mehrere Operationen in einer <xref:System.Transactions>\-Transaktion ausgeführt werden.  Weitere Informationen finden Sie unter [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ Eine explizite Transaktion wird verwendet, wenn eine oder mehrere Operationen in einer <xref:System.Transactions>-Transaktion ausgeführt werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
-## Strategien zum Verbessern der Leistung  
+## <a name="strategies-for-improving-performance"></a>Strategien zum Verbessern der Leistung  
  Sie können die Gesamtleistung von Abfragen in Entity Framework mit den folgenden Strategien verbessern.  
   
-#### Vorabgenerieren von Sichten  
- Führt eine Anwendung eine Abfrage zum ersten Mal aus, ist das Generieren von Sichten auf Grundlage eines Entitätsmodells kostenintensiv.  Verwenden Sie das Hilfsprogramm EdmGen.exe, um Sichten als Visual Basic\- oder C\#\-Codedatei vorzugenerieren, die dem Projekt während des Entwurfs hinzugefügt werden kann.  Sie können auch mit dem Text Template Transformation Toolkit \(Textvorlagentransformations\-Toolkit\) vorkompilierte Sichten generieren.  Zur Wahrung der Konsistenz mit der aktuellen Version des angegebenen Entitätsmodells werden vorgenerierte Sichten zur Laufzeit überprüft.  Weitere Informationen finden Sie unter [How to: Pre\-Generate Views to Improve Query Performance](http://msdn.microsoft.com/de-de/b18a9d16-e10b-4043-ba91-b632f85a2579) und [Isolieren der Leistung mit vorkompilierten\/vorgenerierten Sichten im Entity Framework 4](http://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409).  
+#### <a name="pre-generate-views"></a>Vorabgenerieren von Sichten  
+ Führt eine Anwendung eine Abfrage zum ersten Mal aus, ist das Generieren von Sichten auf Grundlage eines Entitätsmodells kostenintensiv. Verwenden Sie das Hilfsprogramm EdmGen.exe, um Sichten als Visual Basic- oder C#-Codedatei vorzugenerieren, die dem Projekt während des Entwurfs hinzugefügt werden kann. Sie können auch mit dem Text Template Transformation Toolkit (Textvorlagentransformations-Toolkit) vorkompilierte Sichten generieren. Zur Wahrung der Konsistenz mit der aktuellen Version des angegebenen Entitätsmodells werden vorgenerierte Sichten zur Laufzeit überprüft. Weitere Informationen finden Sie unter [Vorgehensweise: Pre-Generate Ansichten zum Verbessern der Abfrageleistung](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579) und [isolieren Leistung mit vorkompilierter/Pre-generated Ansichten in Entity Framework 4](http://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409).  
   
  Beim Arbeiten mit sehr umfangreichen Modellen ist Folgendes zu berücksichtigen:  
   
- Das .NET\-Metadatenformat beschränkt die Anzahl der Zeichen in Benutzerzeichenfolgen in einer Binärdatei auf 16.777.215 \(0xFFFFFF\) Zeichen.  Wenn Sie Sichten für ein sehr umfangreiches Modell generieren und die Sichtdatei diese Größenbeschränkung erreicht, wird der Compilerfehler "Kein freier logischer Speicherplatz zum Erstellen weiterer Benutzerzeichenfolgen" ausgegeben.  Diese Größenbeschränkung gilt für alle verwalteten Binärdateien.  Weitere Informationen finden Sie im [Blog](http://go.microsoft.com/fwlink/?LinkId=201476), in dem veranschaulicht wird, wie sich der Fehler beim Arbeiten mit umfangreichen und komplexen Modellen vermeiden lässt.  
+ Das .NET-Metadatenformat beschränkt die Anzahl der Zeichen in Benutzerzeichenfolgen in einer Binärdatei auf 16.777.215 (0xFFFFFF) Zeichen. Wenn Sie Ansichten für ein sehr umfangreiches Modell generieren, und die Sichtdatei diese größenbeschränkung erreicht, erhalten Sie "Linker kein freier logischer Speicherplatz zum Erstellen weiterer Benutzerzeichenfolgen." Kompilieren Sie Fehler beim. Diese Größenbeschränkung gilt für alle verwalteten Binärdateien. Weitere Informationen finden Sie unter der [Blog](http://go.microsoft.com/fwlink/?LinkId=201476) , die veranschaulicht, wie den Fehler zu vermeiden, wenn Sie mit großen und komplexen Modellen arbeiten.  
   
-#### Verwenden der NoTracking\-Zusammenführungsoption für Abfragen  
- Das Nachverfolgen von zurückgegebenen Objekten im Objektkontext bringt Kosten mit sich.  Zur Ermittlung von Änderungen an Objekten und zur Gewährleistung, dass mehrere Anforderungen für die gleiche logische Entität die gleiche Objektinstanz zurückgeben, ist das Anfügen der Objekte an die <xref:System.Data.Objects.ObjectContext>\-Instanz erforderlich.  Wenn Sie nicht vorhaben, Objekte zu aktualisieren oder zu löschen, und keine Identitätsverwaltung benötigen, sollten Sie beim Ausführen von Abfragen die Verwendung von <xref:System.Data.Objects.MergeOption>\-Zusammenführungsoptionen in Betracht ziehen.  
+#### <a name="consider-using-the-notracking-merge-option-for-queries"></a>Verwenden der NoTracking-Mergeoption für Abfragen  
+ Das Nachverfolgen von zurückgegebenen Objekten im Objektkontext bringt Kosten mit sich. Zur Ermittlung von Änderungen an Objekten und zur Gewährleistung, dass mehrere Anforderungen für die gleiche logische Entität die gleiche Objektinstanz zurückgeben, ist das Anfügen der Objekte an die <xref:System.Data.Objects.ObjectContext>-Instanz erforderlich. Wenn Sie nicht vorhaben, Objekte zu aktualisieren oder zu löschen, und keine Identitätsverwaltung benötigen, sollten Sie beim Ausführen von Abfragen die Verwendung von <xref:System.Data.Objects.MergeOption.NoTracking>-Zusammenführungsoptionen in Betracht ziehen.  
   
-#### Zurückgeben der richtigen Datenmenge  
- In einigen Szenarien ist das Angeben eines Abfragepfads mithilfe der <xref:System.Data.Objects.ObjectQuery%601.Include%2A>\-Methode viel schneller, da weniger Roundtrips zur Datenbank erforderlich sind.  Allerdings sind in anderen Szenarien zusätzliche Roundtrips zur Datenbank zum Laden von verknüpften Objekten ggf. schneller, da die einfacheren Abfragen mit weniger Joins weniger redundante Daten liefern.  Deswegen empfiehlt es sich, verschiedene Möglichkeiten zum Abrufen verknüpfter Objekte zu testen und so die leistungsfähigste Methode zu ermitteln.  Weitere Informationen finden Sie unter [Loading Related Objects](http://msdn.microsoft.com/de-de/452347d2-7b3b-44cd-9001-231299a28cb1).  
+#### <a name="return-the-correct-amount-of-data"></a>Zurückgeben der richtigen Datenmenge  
+ In einigen Szenarien ist das Angeben eines Abfragepfads mithilfe der <xref:System.Data.Objects.ObjectQuery%601.Include%2A>-Methode viel schneller, da weniger Roundtrips zur Datenbank erforderlich sind. Allerdings sind in anderen Szenarien zusätzliche Roundtrips zur Datenbank zum Laden von verknüpften Objekten ggf. schneller, da die einfacheren Abfragen mit weniger Joins weniger redundante Daten liefern. Deswegen empfiehlt es sich, verschiedene Möglichkeiten zum Abrufen verknüpfter Objekte zu testen und so die leistungsfähigste Methode zu ermitteln. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
   
- Gliedern Sie die Abfrageergebnisse in überschaubare Gruppen, um zu vermeiden, dass zu viel Daten in einer einzelnen Abfrage zurückgegeben werden.  Weitere Informationen finden Sie unter [How to: Page Through Query Results](http://msdn.microsoft.com/de-de/ffc0f920-e7de-42e0-9b12-ef356421d030).  
+ Gliedern Sie die Abfrageergebnisse in überschaubare Gruppen, um zu vermeiden, dass zu viel Daten in einer einzelnen Abfrage zurückgegeben werden. Weitere Informationen finden Sie unter [Vorgehensweise: Seite über Abfrageergebnisse](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030).  
   
-#### Einschränken des Bereichs des ObjectContext  
- In den meisten Fällen sollten Sie eine <xref:System.Data.Objects.ObjectContext>\-Instanz innerhalb einer `using`\-Anweisung \(`Using…End Using` in Visual Basic\) erstellen.  Dies kann die Leistung verbessern, da die dem Objektkontext zugeordneten Ressourcen automatisch freigegeben werden, wenn der Anweisungsblock vom Code beendet wird.  Wenn Steuerelemente jedoch an vom Objektkontext verwaltete Objekte gebunden werden, sollte die <xref:System.Data.Objects.ObjectContext>\-Instanz so lange beibehalten werden, bis die Bindung benötigt und manuell freigegeben wird.  Weitere Informationen finden Sie unter [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+#### <a name="limit-the-scope-of-the-objectcontext"></a>Einschränken des Bereichs des ObjectContext  
+ In den meisten Fällen sollten Sie eine <xref:System.Data.Objects.ObjectContext>-Instanz innerhalb einer `using`-Anweisung (`Using…End Using` in Visual Basic) erstellen. Dies kann die Leistung verbessern, da die dem Objektkontext zugeordneten Ressourcen automatisch freigegeben werden, wenn der Anweisungsblock vom Code beendet wird. Wenn Steuerelemente jedoch an vom Objektkontext verwaltete Objekte gebunden werden, sollte die <xref:System.Data.Objects.ObjectContext>-Instanz so lange beibehalten werden, bis die Bindung benötigt und manuell freigegeben wird. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
-#### Manuelles Öffnen der Datenbankverbindung  
- Wenn die Anwendung eine Reihe von Objektabfragen ausführt oder häufig <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> aufruft, um Vorgänge für das Erstellen, Aktualisieren und Löschen in der Datenquelle zu speichern, muss von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] die Verbindung zur Datenquelle ständig öffnen und schließen.  Erwägen Sie in diesem Fall, die Verbindung am Start dieser Operationen manuell zu öffnen und die Verbindung zu schließen bzw. freizugeben, wenn die Vorgänge abgeschlossen sind.  Weitere Informationen finden Sie unter [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+#### <a name="consider-opening-the-database-connection-manually"></a>Manuelles Öffnen der Datenbankverbindung  
+ Wenn Ihre Anwendung führt eine Reihe von Objektabfragen oder häufig Aufrufe <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> persistent erstellen, update und delete-Vorgänge mit der Datenquelle der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] müssen ständig öffnen und schließen Sie die Verbindung mit der Datenquelle. Erwägen Sie in diesem Fall, die Verbindung am Start dieser Operationen manuell zu öffnen und die Verbindung zu schließen bzw. freizugeben, wenn die Vorgänge abgeschlossen sind. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
-## Leistungsdaten  
- Einige Leistungsdaten für Entity Framework wurden auf dem [ADO.NET\-Teamblog](http://go.microsoft.com/fwlink/?LinkId=91905) in den folgenden Beiträgen veröffentlicht:  
+## <a name="performance-data"></a>Leistungsdaten  
+ Einige Leistungsdaten für Entity Framework werden in den folgenden Beiträgen veröffentlicht, auf die [ADO.NET-Teamblog](http://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Exploring the Performance of the ADO.NET Entity Framework \- Part 1](http://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Untersuchen die Leistung von ADO.NET Entity Framework - Teil 1](http://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Exploring the Performance of the ADO.NET Entity Framework – Part 2](http://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Untersuchen die Leistung von ADO.NET Entity Framework – Teil 2](http://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework\-Leistungsvergleich](http://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [ADO.NET Entity Framework-Leistungsvergleich](http://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## Siehe auch  
- [Überlegungen zur Entwicklung und Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>Siehe auch  
+ [Entwicklungs- und Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

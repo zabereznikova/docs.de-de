@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers sein, ein anderer eine E-Mail-Adresse. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
@@ -91,4 +89,3 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
 3.  Der IP gibt ein Token aus, das an den Browser zurückgegeben wird.  
   
 4.  Der Browser wird jetzt wieder an die ursprünglich angeforderte Seite umgeleitet, wo WIF bestimmt, ob das Token die Anforderungen erfüllt und auf die Seite zugreifen darf. Falls ja, wird ein Cookie ausgegeben, um eine Sitzung zu starten. Die Authentifizierung muss daher nur einmal erfolgen und die Kontrolle wird an die Anwendung übergeben.
-

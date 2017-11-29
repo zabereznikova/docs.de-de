@@ -1,26 +1,29 @@
 ---
-title: "OLE DB-Schemaauflistungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OLE DB-Schemaauflistungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9b88308c5dad69ed1ba6f48f525931e94f13ef1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# OLE DB-Schemaauflistungen
-In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC\-Anbieter für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
+# <a name="ole-db-schema-collections"></a>OLE DB-Schemaauflistungen
+In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC-Anbieter für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
   
-## Microsoft SQL Server\-OLE DB\-Anbieter  
- Der Microsoft SQL Server\-OLE DB\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server-OLE DB-Anbieter  
+ Der Microsoft SQL Server OLE DB-Treiber unterstützt die folgenden spezifischen schemaauflistungen zusätzlich zu den allgemeinen schemaauflistungen:  
   
 -   Tabellen  
   
@@ -34,132 +37,132 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Indexes  
   
-### Tabellen  
+### <a name="tables"></a>Tabellen  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Zeichenfolge|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Zeichenfolge|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Zeichenfolge|  
-|CHARACTER\_SET\_SCHEMA|Zeichenfolge|  
-|CHARACTER\_SET\_NAME|Zeichenfolge|  
-|COLLATION\_CATALOG|Zeichenfolge|  
-|COLLATION\_SCHEMA|Zeichenfolge|  
-|COLLATION\_NAME|Zeichenfolge|  
-|DOMAIN\_CATALOG|Zeichenfolge|  
-|DOMAIN\_SCHEMA|Zeichenfolge|  
-|DOMAIN\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Zeichenfolge|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Zeichenfolge|  
+|CHARACTER_SET_SCHEMA|Zeichenfolge|  
+|CHARACTER_SET_NAME|Zeichenfolge|  
+|COLLATION_CATALOG|Zeichenfolge|  
+|COLLATION_SCHEMA|Zeichenfolge|  
+|COLLATION_NAME|Zeichenfolge|  
+|DOMAIN_CATALOG|Zeichenfolge|  
+|DOMAIN_SCHEMA|Zeichenfolge|  
+|DOMAIN_NAME|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
-|COLUMN\_LCID|Int32|  
-|COLUMN\_COMPFLAGS|Int32|  
-|COLUMN\_SORTID|Int32|  
-|COLUMN\_TDSCOLLATION|Byte\[\]|  
-|IS\_COMPUTED|Boolean|  
+|COLUMN_LCID|Int32|  
+|COLUMN_COMPFLAGS|Int32|  
+|COLUMN_SORTID|Int32|  
+|COLUMN_TDSCOLLATION|Byte[]|  
+|IS_COMPUTED|Boolean|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CATALOG|Zeichenfolge|  
-|PROCEDURE\_SCHEMA|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Zeichenfolge|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|Zeichenfolge|  
+|PROCEDURE_SCHEMA|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CATALOG|Zeichenfolge|  
-|PROCEDURE\_SCHEMA|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|PARAMETER\_NAME|Zeichenfolge|  
-|ORDINAL\_POSITION|Int32|  
-|PARAMETER\_TYPE|Int32|  
-|PARAMETER\_HASDEFAULT|Boolean|  
-|PARAMETER\_DEFAULT|Zeichenfolge|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|Zeichenfolge|  
+|PROCEDURE_SCHEMA|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|PARAMETER_NAME|Zeichenfolge|  
+|ORDINAL_POSITION|Int32|  
+|PARAMETER_TYPE|Int32|  
+|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_DEFAULT|Zeichenfolge|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|Zeichenfolge|  
-|TYPE\_NAME|Zeichenfolge|  
-|LOCAL\_TYPE\_NAME|Zeichenfolge|  
+|TYPE_NAME|Zeichenfolge|  
+|LOCAL_TYPE_NAME|Zeichenfolge|  
   
-### Catalog  
+### <a name="catalog"></a>Catalog  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|CATALOG\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|CATALOG_NAME|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|INDEX\_CATALOG|Zeichenfolge|  
-|INDEX\_SCHEMA|Zeichenfolge|  
-|INDEX\_NAME|Zeichenfolge|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|INDEX_CATALOG|Zeichenfolge|  
+|INDEX_SCHEMA|Zeichenfolge|  
+|INDEX_NAME|Zeichenfolge|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Zeichenfolge|  
+|FILTER_CONDITION|Zeichenfolge|  
 |INTEGRATED|Boolean|  
   
-## Microsoft Oracle\-OLE DB\-Anbieter  
- Der Microsoft Oracle OLE DB\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle-OLE DB-Anbieter  
+ Der Microsoft Oracle OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
 -   Tabellen  
   
@@ -175,134 +178,134 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Indexes  
   
-### Tabellen  
+### <a name="tables"></a>Tabellen  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Zeichenfolge|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Zeichenfolge|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Zeichenfolge|  
-|CHARACTER\_SET\_SCHEMA|Zeichenfolge|  
-|CHARACTER\_SET\_NAME|Zeichenfolge|  
-|COLLATION\_CATALOG|Zeichenfolge|  
-|COLLATION\_SCHEMA|Zeichenfolge|  
-|COLLATION\_NAME|Zeichenfolge|  
-|DOMAIN\_CATALOG|Zeichenfolge|  
-|DOMAIN\_SCHEMA|Zeichenfolge|  
-|DOMAIN\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Zeichenfolge|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Zeichenfolge|  
+|CHARACTER_SET_SCHEMA|Zeichenfolge|  
+|CHARACTER_SET_NAME|Zeichenfolge|  
+|COLLATION_CATALOG|Zeichenfolge|  
+|COLLATION_SCHEMA|Zeichenfolge|  
+|COLLATION_NAME|Zeichenfolge|  
+|DOMAIN_CATALOG|Zeichenfolge|  
+|DOMAIN_SCHEMA|Zeichenfolge|  
+|DOMAIN_NAME|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CATALOG|Zeichenfolge|  
-|PROCEDURE\_SCHEMA|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Zeichenfolge|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|Zeichenfolge|  
+|PROCEDURE_SCHEMA|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CATALOG|Zeichenfolge|  
-|PROCEDURE\_SCHEMA|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ROWSET\_NUMBER|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|Zeichenfolge|  
+|PROCEDURE_SCHEMA|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ROWSET_NUMBER|Int64|  
+|ORDINAL_POSITION|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|Zeichenfolge|  
 |OVERLOAD|Int16|  
   
-### Ansichten  
+### <a name="views"></a>Ansichten  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|VIEW\_DEFINITION|Zeichenfolge|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|VIEW_DEFINITION|Zeichenfolge|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|Zeichenfolge|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|INDEX\_CATALOG|Zeichenfolge|  
-|INDEX\_SCHEMA|Zeichenfolge|  
-|INDEX\_NAME|Zeichenfolge|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|INDEX_CATALOG|Zeichenfolge|  
+|INDEX_SCHEMA|Zeichenfolge|  
+|INDEX_NAME|Zeichenfolge|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Zeichenfolge|  
+|FILTER_CONDITION|Zeichenfolge|  
 |INTEGRATED|Boolean|  
   
-## Microsoft Jet OLE DB\-Anbieter  
- Der Microsoft Jet OLE DB\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB-Anbieter  
+ Der Microsoft Jet OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
 -   Tabellen  
   
@@ -314,109 +317,109 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Indexes  
   
-### Tabellen  
+### <a name="tables"></a>Tabellen  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Zeichenfolge|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Zeichenfolge|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Zeichenfolge|  
-|CHARACTER\_SET\_SCHEMA|Zeichenfolge|  
-|CHARACTER\_SET\_NAME|Zeichenfolge|  
-|COLLATION\_CATALOG|Zeichenfolge|  
-|COLLATION\_SCHEMA|Zeichenfolge|  
-|COLLATION\_NAME|Zeichenfolge|  
-|DOMAIN\_CATALOG|Zeichenfolge|  
-|DOMAIN\_SCHEMA|Zeichenfolge|  
-|DOMAIN\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Zeichenfolge|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Zeichenfolge|  
+|CHARACTER_SET_SCHEMA|Zeichenfolge|  
+|CHARACTER_SET_NAME|Zeichenfolge|  
+|COLLATION_CATALOG|Zeichenfolge|  
+|COLLATION_SCHEMA|Zeichenfolge|  
+|COLLATION_NAME|Zeichenfolge|  
+|DOMAIN_CATALOG|Zeichenfolge|  
+|DOMAIN_SCHEMA|Zeichenfolge|  
+|DOMAIN_NAME|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CATALOG|Zeichenfolge|  
-|PROCEDURE\_SCHEMA|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Zeichenfolge|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|Zeichenfolge|  
+|PROCEDURE_SCHEMA|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Zeichenfolge|  
 |DESCRIPTION|Zeichenfolge|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Ansichten  
+### <a name="views"></a>Ansichten  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|VIEW\_DEFINITION|Zeichenfolge|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|VIEW_DEFINITION|Zeichenfolge|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|Zeichenfolge|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CATALOG|Zeichenfolge|  
-|TABLE\_SCHEMA|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|INDEX\_CATALOG|Zeichenfolge|  
-|INDEX\_SCHEMA|Zeichenfolge|  
-|INDEX\_NAME|Zeichenfolge|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|Zeichenfolge|  
+|TABLE_SCHEMA|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|INDEX_CATALOG|Zeichenfolge|  
+|INDEX_SCHEMA|Zeichenfolge|  
+|INDEX_NAME|Zeichenfolge|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Zeichenfolge|  
-|INTEGRATED|Boolean|  
+|FILTER_CONDITION|Zeichenfolge|  
+|INTEGRATED|Boolesch|  
   
-## Siehe auch  
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

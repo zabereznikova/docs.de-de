@@ -1,71 +1,80 @@
 ---
-title: "&lt;securityTokenHandlerConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;securityTokenHandlerConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: be98c93452c9c7a37ecad5b03f5160ea08f2c82e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;securityTokenHandlerConfiguration&gt;
-Stellt die Konfiguration für die Auflistung der Tokenhandler.  
+# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+Die Konfiguration für die Auflistung der Tokenhandler bereitstellt.  
   
-## Syntax  
+ \<system.identityModel >  
+\<IdentityConfiguration >  
+\<SecurityTokenHandlers >  
+\<SecurityTokenHandlerConfiguration >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
-          maximumClockSkew=TimeSpan>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
+          maximumClockSkew=TimeSpan>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|saveBootstrapContext|Gibt an, ob bootstrap\-Token in den Sitzungstoken aufzunehmen.  Der Wert kann auch auf ein token Handler\-Auflistung festgelegt werden, durch Festlegen der `saveBootstrapContext` \-Attribut auf die [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element.  Ein Wert festgelegt, auf die Auflistung der Tokenhandler setzt den Wert für den Dienst festgelegt.|  
-|maximumClockSkew|A <xref:System.TimeSpan> , gibt die maximale erlaubte taktverschiebung.  Steuert die maximale zulässige Zeitabweichung, Ausführung zeitkritische Operationen, z. B. die Ablaufzeit einer Sitzung überprüfen.  Der Standardwert ist 5 Minuten "00: 05".  Weitere Informationen zum Angeben <xref:System.TimeSpan> Werte finden Sie unter [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  Die maximale Zeitabweichung kann auch auf Dienstebene festgelegt werden, durch Festlegen der `maximumClockSkew` \-Attribut auf die [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element.  Ein Wert festgelegt, auf die Auflistung der Tokenhandler setzt den Wert für den Dienst festgelegt.|  
+|---------------|-----------------|  
+|saveBootstrapContext|Gibt an, ob bootstrap-Token in das Sitzungstoken aufgenommen werden sollen. Der Wert kann auch auf eine Auflistung Tokenhandler festgelegt werden, durch Festlegen der `saveBootstrapContext` -Attribut auf die [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element. Ein Wert festgelegt, auf die Auflistung der Tokenhandler überschreibt den Wert für den Dienst festgelegt.|  
+|maximumClockSkew|Ein <xref:System.TimeSpan> , die die maximal erlaubte taktverschiebung angibt. Die maximal erlaubte taktverschiebung steuert die Ausführung zeitkritischen Vorgängen, z. B. die Ablaufzeit für eine anmeldesitzung überprüfen. Der Standardwert beträgt 5 Minuten "00: 05:00". Weitere Informationen zum Angeben der <xref:System.TimeSpan> -Werte finden Sie in [Timespan Werte](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Die maximale taktverschiebung kann auch auf Dienstebene festgelegt werden, durch Festlegen der `maximumClockSkew` -Attribut auf die [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element. Ein Wert festgelegt, auf die Auflistung der Tokenhandler überschreibt den Wert für den Dienst festgelegt.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Gibt den Satz der URIs, die zulässigen Bezeichner der relying Party sind.  Optional.|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registriert die Caches für Sitzung Tokens und Tokens Replay\-Erkennung verwendet.  Kann auf der Dienstebene oder auf eine Sicherheit Tokenhandler Auflistung angegeben werden.  Optional.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Steuert die Einstellungen, die Tokenhandler verwenden, um Zertifikate zu überprüfen.  Kann auf der Dienstebene oder auf eine Sicherheit Tokenhandler Auflistung angegeben werden.  Diese Einstellungen werden überschrieben, wenn Sie ein bestimmten Handler mit eigenen Validator konfiguriert ist.  Optional.|  
-|[\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Wird die Aussteller Namen Registrierung, mit der Handler in der Auflistung Tokenhandler konfiguriert.  Optional.|  
-|[\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registriert den token Aussteller\-Konfliktlöser, der vom Handler in der Tokenhandler\-Auflistung verwendet wird.  Der token Aussteller\-Resolver wird verwendet, um Signaturtoken auf eingehende Tokens und Nachrichten zu beheben.  Optional.|  
-|[\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registriert den token Service\-Konfliktlöser, der vom Handler in der Tokenhandler\-Auflistung verwendet wird.  Der Service\-token\-Resolver wird verwendet, zum Auflösen des Tokens Verschlüsselung auf eingehende Tokens und Nachrichten.  Optional.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Token Replay\-Erkennung aktiviert, und gibt die Ablaufzeit für Token.  Kann auf der Dienstebene oder auf eine Sicherheit Tokenhandler Auflistung angegeben werden.  Optional.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandler, die mit dem Endpunkt registriert sind.|  
+|-------------|-----------------|  
+|[\<AudienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden sind. Dies ist optional.|  
+|[\<Speichert >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registriert die Caches für die Sitzungstoken und token-Replay-Erkennung verwendet. Kann auf der Dienstebene oder auf eine Auflistung der Sicherheit Tokenhandler angegeben werden. Dies ist optional.|  
+|[\<CertificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Steuert die Einstellungen, die Tokenhandler verwenden, um Zertifikate zu überprüfen. Kann auf der Dienstebene oder auf eine Auflistung der Sicherheit Tokenhandler angegeben werden. Diese Einstellungen werden überschrieben, wenn ein bestimmten Handler mit der eine eigene Überprüfungsfunktion konfiguriert ist. Dies ist optional.|  
+|[\<IssuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Konfiguriert die ausstellernamenregistration, die vom Handler in der Auflistung Tokenhandler verwendet wird. Dies ist optional.|  
+|[\<IssuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registriert die Aussteller-Resolver, die vom Handler in der Auflistung Tokenhandler verwendet wird. Die Aussteller-tokenresolver wird zum Auflösen von der signiertokens für eingehende Token und Nachrichten verwendet. Dies ist optional.|  
+|[\<ServiceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registriert die Dienst-Resolver, die vom Handler in der Auflistung Tokenhandler verwendet wird. Die Dienst-tokenresolver dient zum Auflösen des Tokens Verschlüsselung auf eingehende Token und Nachrichten. Dies ist optional.|  
+|[\<TokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Tokenwiedergabeerkennung aktiviert, und gibt die Ablaufzeit für Token. Kann auf der Dienstebene oder auf eine Auflistung der Sicherheit Tokenhandler angegeben werden. Dies ist optional.|  
   
-## Hinweise  
- Dieser Abschnitt enthält die Eigenschaftenwerte für ein <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> Objekt.  In diesem Abschnitt konfigurierte Einstellungen überschreiben, die auf den Dienst konfiguriert.  Einige dieser Einstellungen können wiederum durch Einstellungen überschrieben, die angegeben werden, wenn der Security token Handler\-Auflistung ein Handler hinzugefügt wird.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Beispiel  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<SecurityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.|  
   
-```  
+## <a name="remarks"></a>Hinweise  
+ Dieser Abschnitt enthält die Eigenschaftenwerte für eine <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> Objekt. In diesem Abschnitt konfigurierten Einstellungen außer Kraft für den Dienst konfiguriert. Einige dieser Einstellungen können wiederum von Einstellungen überschrieben werden, die angegeben werden, wenn die Sicherheit Tokenhandler-Auflistung ein Ereignishandler hinzugefügt wird.  
+  
+## <a name="example"></a>Beispiel  
+  
+```xml  
 <system.identityModel>  
   <identityConfiguration>  
     <securityTokenHandlers>   

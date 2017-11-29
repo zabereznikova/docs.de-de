@@ -1,40 +1,40 @@
 ---
-title: "Nicht typisierte Anforderung/Antwort | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Nicht typisierte Anforderung / Antwort-
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c154fe7c072fc90d616e9788055a45ed66deb0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Nicht typisierte Anforderung/Antwort
-In diesem Beispiel wird das Definieren von Vorgangsverträgen veranschaulicht, die die Message\-Klasse verwenden.  
+# <a name="untyped-requestreply"></a>Nicht typisierte Anforderung/Antwort
+In diesem Beispiel wird das Definieren von Vorgangsverträgen veranschaulicht, die die Message-Klasse verwenden.  
   
 > [!NOTE]
->  Die Setupprozedur und Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md).Der Dienstvertrag definiert einen Vorgang, der einen Nachrichtentyp als Argument annimmt und eine Nachricht zurückgibt.Der Vorgang erfasst alle erforderlichen Daten zum Berechnen der Summe aus dem Nachrichtentext und sendet die Summe dann als Nachrichtentext in der Rückgabeantwort.  
+ Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Der Dienstvertrag definiert einen Vorgang, der einen Nachrichtentyp als Argument annimmt und eine Nachricht zurückgibt. Der Vorgang erfasst alle erforderlichen Daten zum Berechnen der Summe aus dem Nachrichtentext und sendet die Summe dann als Nachrichtentext in der Rückgabeantwort.  
   
 ```  
-  
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
-  
 ```  
   
- Im Dienst ruft der Vorgang das Array von ganzen Zahlen ab, das in der Eingabenachricht übergeben wurde, und berechnet dann die Summe.Zum Senden einer Antwortnachricht wird im Beispiel eine neue Nachricht mit der entsprechenden Nachrichtenversion und Aktion erstellt, und die berechnete Summe wird als Nachrichtentext hinzugefügt.Dies wird im folgenden Beispielcode veranschaulicht.  
+ Im Dienst ruft der Vorgang das Array von ganzen Zahlen ab, das in der Eingabenachricht übergeben wurde, und berechnet dann die Summe. Zum Senden einer Antwortnachricht wird im Beispiel eine neue Nachricht mit der entsprechenden Nachrichtenversion und Aktion erstellt, und die berechnete Summe wird als Nachrichtentext hinzugefügt. Dies wird im folgenden Beispielcode veranschaulicht.  
   
 ```  
-  
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -51,13 +51,11 @@ public Message ComputeSum(Message request)
                                       ReplyAction, result);  
     return response;  
 }  
-  
 ```  
   
- Der Client verwendet von [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generierten Code zum Erstellen eines Proxys für den Remotedienst.Zum Senden einer Anforderungsnachricht muss der Client über die Nachrichtenversion verfügen, die vom zugrunde liegenden Kanal abhängig ist.Daher wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt, der auf den erstellten Proxykanal festgelegt ist. Dieser erstellt einen <xref:System.ServiceModel.OperationContext>, bei dem die richtige Nachrichtenversion in der `OutgoingMessageHeaders.MessageVersion`\-Eigenschaft angegeben ist.Der Client übergibt ein Eingabearray als Nachrichtentext an die Anforderungsnachricht und ruft dann `ComputeSum` beim Proxy auf.Der Client ruft dann die Summe der übergebenen Eingaben ab, indem auf die `GetBody<T>`\-Methode der Antwortnachricht zugegriffen wird.Dies wird im folgenden Beispielcode veranschaulicht.  
+ Der Client verwendet, die vom generierten Code [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) So erstellen Sie einen Proxy an den Remotedienst. Zum Senden einer Anforderungsnachricht muss der Client über die Nachrichtenversion verfügen, die vom zugrunde liegenden Kanal abhängig ist. Daher wird ein neuer <xref:System.ServiceModel.OperationContextScope> erstellt, der auf den erstellten Proxykanal festgelegt ist. Dieser erstellt einen <xref:System.ServiceModel.OperationContext>, bei dem die richtige Nachrichtenversion in der `OutgoingMessageHeaders.MessageVersion`-Eigenschaft angegeben ist. Der Client übergibt ein Eingabearray als Nachrichtentext an die Anforderungsnachricht und ruft dann `ComputeSum` beim Proxy auf. Der Client ruft dann die Summe der übergebenen Eingaben ab, indem auf die `GetBody<T>`-Methode der Antwortnachricht zugegriffen wird. Dies wird im folgenden Beispielcode veranschaulicht.  
   
 ```  
-  
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -71,37 +69,34 @@ using (new OperationContextScope(client.InnerChannel))
     Console.WriteLine("Sum of numbers passed (1,2,3,4,5) = {0}",   
                                                        response);  
 }  
-  
 ```  
   
- Dieses Beispiel ist ein im Web gehostetes Beispiel. Es muss daher nur die ausführbare Datei für den Client ausgeführt werden.Im Folgenden finden Sie die Beispielausgabe auf dem Client.  
+ Dieses Beispiel ist ein im Web gehostetes Beispiel. Es muss daher nur die ausführbare Datei für den Client ausgeführt werden. Im Folgenden finden Sie die Beispielausgabe auf dem Client.  
   
 ```  
-  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
  Dieses Beispiel ist ein im Web gehostetes Beispiel. Überprüfen Sie daher den Link in Schritt 3, um Informationen zum Erstellen und Ausführen des Beispiels zu erhalten.  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

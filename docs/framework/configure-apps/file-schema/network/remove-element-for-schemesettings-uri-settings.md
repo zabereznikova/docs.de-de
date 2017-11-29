@@ -1,78 +1,80 @@
 ---
-title: "&lt;remove&gt;-Element f&#252;r schemeSettings (URI-Einstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Entfernen Sie&gt; -Element für SchemeSettings (Uri-Einstellungen)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6d587dced4660774b67a8e884bf6c25df3b6e400
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;remove&gt;-Element f&#252;r schemeSettings (URI-Einstellungen)
-Entfernt eine Schemaeinstellung für einen Schemanamen.  
+# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;Entfernen Sie&gt; -Element für SchemeSettings (Uri-Einstellungen)
+Entfernt eine Schema-Einstellung für den Schemanamen eines an.  
   
-## Syntax  
+ \<configuration>  
+\<URI >  
+\<SchemeSettings >  
+\<Entfernen >  
   
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+<remove
+  name="http|https"
+/>
 ```  
   
-      <remove   
-   <name = "http|https"/>  
-/>  
-```  
-  
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|name|Der Schemaname, für den diese Einstellung gültig ist.  Die einzigen unterstützten Werte sind Name \= "http" und Name \= "https".|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|Name|Der Schemaname für die diese Einstellung gilt. Der nur die unterstützten Werte sind Name = "http" und Name = "Https".|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<schemeSettings\>\-Element \(Uri\-Einstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, wie ein <xref:System.Uri>\-Objekt für bestimmte Schemen analysiert wird.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
-## Hinweise  
- Standardmäßig entfernt die <xref:System.Uri?displayProperty=fullName>\-Klasse Escapezeichen aus als Prozentwert codierte Pfadtrennzeichen vor dem Ausführen der Pfadkomprimierung.  Dies wurde als Sicherheitsmechanismus gegen Angriffe implementiert. Beispiel:  
+## <a name="remarks"></a>Hinweise  
+ Wird standardmäßig die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen Prozent codiert Pfadtrennzeichen vor dem Pfad Komprimierung ausführen. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Wenn dieser URI an Module übergeben wird und als Prozentwert codierte Zeichen nicht ordnungsgemäß behandelt werden, kann dies dazu führen, dass vom Server der folgende Befehl ausgeführt wird:  
+ Wenn dieser URI übergeben wird auf Module nicht behandeln Prozent codierten Zeichen richtig, kann dies dazu führen den folgenden Befehl, der vom Server ausgeführt wird:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund entfernt die <xref:System.Uri?displayProperty=fullName>\-Klasse zuerst Escapezeichen aus Pfadtrennzeichen und wendet dann die Pfadkomprimierung an.  Das Übergeben der böswilligen URL oben an den <xref:System.Uri?displayProperty=fullName>\-Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund <xref:System.Uri?displayProperty=nameWithType> -Klasse erste un-Escapezeichen Pfadtrennzeichen und wendet dann Pfad Komprimierung. Das Ergebnis der Übergabe der böswilligen URL oben auf <xref:System.Uri?displayProperty=nameWithType> Klassenkonstruktor führt der folgende URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Dieses Standardverhalten kann so abgeändert werden, dass aus prozentcodierten Pfadtrennzeichen, die die schemeSettings\-Konfigurationsoption für ein bestimmtes Schema verwenden, die Escapezeichen nicht gelöscht werden.  
+ Dieses Standardverhalten kann auf keine Escapezeichen Prozentzeichen codierten Pfadtrennzeichen mithilfe der Konfigurationsoption SchemeSettings für ein bestimmtes Schema geändert werden.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Das folgende Codebeispiel zeigt eine Konfiguration, die von der <xref:System.Uri>\-Klasse verwendet wird und alle Schemaeinstellungen für das http\-Schema entfernt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine Konfiguration von verwendet die <xref:System.Uri> -Klasse, die alle Schema-Einstellungen für die http-Protokollschema entfernt.  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -82,11 +84,11 @@ Entfernt eine Schemaeinstellung für einen Schemanamen.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

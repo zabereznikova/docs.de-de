@@ -1,57 +1,61 @@
 ---
-title: "&lt;system.identityModel&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.identityModel&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
-caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 356dd1531f093282a1a8463b7d697400f8b45862
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.identityModel&gt;
-Stellt die Konfiguration für das Aktivieren von Optionen für die Windows\-Identität\-Foundation \(WIF\) in Anwendungen.  
+# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
+Ermöglicht die Konfiguration für Windows Identity Foundation (WIF)-Optionen in Anwendungen zu aktivieren.  
   
- \<system.identityModel\>  
+ \<system.identityModel >  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
- None  
+### <a name="attributes"></a>Attribute  
+ Keine  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die von Service\-Level\-Identitätseinstellungen.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|`<configuration>`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|-------------|-----------------|  
+|[\<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt an, Service Level identitätseinstellungen.|  
   
-## Hinweise  
- Hinzufügen einer `<system.identityModel>` Abschnitt der Konfigurationsdatei zum Konfigurieren eines Diensts oder einer Anwendung für die Verwendung der Windows\-Identität\-Foundation \(WIF\).  Die `<system.identityModel>` Element dargestellt durch die <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Klasse.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht das Hinzufügen einer `<system.identityModel>` Abschnitt einer Konfigurationsdatei.  Sie müssen zunächst die Konfiguration Konfigurationsabschnitts\- und den Vermerk nach Hinzufügen der `<configSections>` Element.  Anschließend fügen Sie können die `<system.IdentityModel>` Element der Konfigurationsdatei zu Konfigurationen für mindestens eine Identität angeben.  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`<configuration>`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
-```  
+## <a name="remarks"></a>Hinweise  
+ Hinzufügen einer `<system.identityModel>` Abschnitt der Konfigurationsdatei so konfigurieren Sie einen Dienst oder Anwendung für die Verwendung von Windows Identity Foundation (WIF). Die `<system.identityModel>` Element dargestellt ist, durch die <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Klasse.  
+  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht das Hinzufügen einer `<system.identityModel>` Abschnitt aus, um eine Konfigurationsdatei. Sie müssen zunächst Abschnitt und der Namespace der Deklaration der Konfiguration unter Hinzufügen der `<configSections>` Element. Hinzufügen der `<system.IdentityModel>` Element zu Ihrer Konfigurationsdatei, ein oder mehrere Identity-Konfigurationen an.  
+  
+```xml  
 <configuration>  
   <configSections>  
     <!--WIF 4.5 sections -->  
@@ -80,5 +84,5 @@ Stellt die Konfiguration für das Aktivieren von Optionen für die Windows\-Iden
 </configuration>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

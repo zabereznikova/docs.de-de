@@ -1,88 +1,90 @@
 ---
-title: "&lt;applicationPool&gt;-Element (Webeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<applicationPool>-Element"
-  - "applicationPool-Element"
+title: '&lt;ApplicationPool&gt; Element (Webeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applicationPool element
+- <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;applicationPool&gt;-Element (Webeinstellungen)
-Gibt Konfigurationseinstellungen an, die von ASP.NET zur Verwaltung von prozessweitem Verhalten verwendet werden, wenn eine ASP.NET\-Anwendung in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder in einer höheren Version im integrierten Modus ausgeführt wird.  
+# <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;ApplicationPool&gt; Element (Webeinstellungen)
+Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  
   
 > [!IMPORTANT]
->  Dieses Element und die unterstützte Funktion können nur verwendet werden, wenn die ASP.NET\-Anwendung in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder in einer höheren Versionen gehostet wird.  
+>  Dieses Element und das Feature unterstützt es nur möglich, wenn von Ihrer ASP.NET-Anwendung gehostet wird [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder höhere Versionen.  
   
-## Syntax  
+ \<configuration>  
+\<System.Web >-Element (Webeinstellungen)  
+\<ApplicationPool >-Element (Webeinstellungen)  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <applicationPool   
-    maxConcurrentRequestsPerCPU="5000"   
-    maxConcurrentThreadsPerCPU="0"   
-    requestQueueLimit="5000" />  
+    maxConcurrentRequestsPerCPU="5000"   
+    maxConcurrentThreadsPerCPU="0"   
+    requestQueueLimit="5000" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitigen Anforderungen von ASP.NET pro CPU zugelassen werden.|  
-|`maxConcurrentThreadsPerCPU`|Gibt an, wie viel Threads pro CPU gleichzeitig für einen Anwendungspool ausgeführt werden können.  Dies stellt eine alternative Möglichkeit zur Steuerung der ASP.NET\-Parallelität dar, da Sie die Anzahl der verwalteten Threads einschränken können, die pro CPU zur Behandlung von Anforderungen verwendet werden.  Die Standardeinstellung ist 0. Dies bedeutet, dass ASP.NET die Anzahl der Threads nicht einschränkt, die pro CPU erstellt werden können, obwohl die Anzahl der Threads, die erstellt werden können, auch vom CLR\-Threadpool eingeschränkt wird.|  
-|`requestQueueLimit`|Gibt die maximale Anzahl der Anforderungen an, die in einen einzelnen Prozess für ASP.NET in die Warteschlange gestellt werden können.  Bei zwei oder mehr ASP.NET\-Anwendungen, die in einem Einzelanwendungspool ausgeführt werden, ist der kumulative Satz von Anforderungen, die an eine Anwendung im Anwendungspool gestellt werden, abhängig von dieser Einstellung.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitige Anforderungen pro CPU ASP.NET ermöglicht.|  
+|`maxConcurrentThreadsPerCPU`|Gibt an, wie viele gleichzeitige Threads für jede CPU für einen Anwendungspool ausgeführt werden können. Dies bietet eine alternative Möglichkeit zum ASP.NET-Parallelität zu steuern, da Sie die Anzahl der verwalteten Threads einschränken können, die zum Verarbeiten von Anforderungen pro CPU verwendet werden kann. Standardmäßig ist diese Einstellung 0, was bedeutet, dass ASP.NET die Anzahl der Threads, die pro-CPU, erstellt werden, können nicht beschränkt, obwohl der CLR-Threadpool auch die Anzahl der Threads beschränkt, die erstellt werden können.|  
+|`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen, die für ASP.NET in einem einzelnen Prozess in die Warteschlange eingereiht werden können. Wenn zwei oder mehr ASP.NET-Anwendungen in einen einzelnen Anwendungspool ausführen, wird diese Einstellung die kumulative Satz von Anforderungen an Anwendungen im Anwendungspool unterliegt.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Enthält Informationen darüber, wie ASP.NET mit einer Hostanwendung interagiert.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Enthält Informationen zur Interaktion von ASP.NET mit einer hostanwendung.|  
   
-## Hinweise  
- Wenn Sie [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version im integrierten Modus ausführen, können Sie mit dieser Elementkombination angeben, wie ASP.NET Threads verwaltet und Anforderungen in die Warteschlange stellt, wenn die Anwendung in einem IIS\-Anwendungspool gehostet wird.  Wenn Sie IIS 6 oder [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im klassischen Modus oder im ISAPI\-Modus ausführen, werden diese Einstellungen ignoriert.  
+## <a name="remarks"></a>Hinweise  
+ Bei der Ausführung [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version im integrierten Modus, der Kombination aus diesem Element können Sie konfigurieren, wie ASP.NET Threads und Warteschlangen Anforderungen verwaltet, wenn die Anwendung in einem IIS-Anwendungspool gehostet wird. Wenn Sie IIS 6 oder ausführen [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im klassischen Modus oder im ISAPI-Modus, werden diese Einstellungen ignoriert.  
   
- Die `applicationPool`\-Einstellungen gelten für alle Anwendungspools, die in einer bestimmten Version von .NET Framework ausgeführt werden.  Die Einstellungen sind in einer aspnet.config\-Datei enthalten.  Diese Datei ist für .NET Framework, Version 2.0 und 4, verfügbar. \(In .NET Framework, Version 3.0 und 3.5, wird die aspnet.config\-Datei für Version 2.0 verwendet.\)  
+ Die `applicationPool` Einstellungen gelten für alle Anwendungspools, die auf eine bestimmte Version von .NET Framework ausgeführt. Die Einstellungen sind in einer aspnet.config-Datei enthalten. Es ist eine Version dieser Datei für die Versionen 2.0 und 4.0 von .NET Framework. (Die Versionen 3.0 und 3.5 von .NET Framework Serverfreigabe aspnet.config-Datei mit Version 2.0.)  
   
 > [!IMPORTANT]
->  Wenn Sie [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] unter [!INCLUDE[win7](../../../../../includes/win7-md.md)] ausführen, können Sie eine separate aspnet.config\-Datei für jeden Anwendungspool konfigurieren.  Dies ermöglicht eine Anpassung der Leistung für die einzelnen Anwendungspools.  
+>  Wenn das Ausführen [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] auf [!INCLUDE[win7](../../../../../includes/win7-md.md)], können Sie eine separate aspnet.config-Datei für jeden Anwendungspool konfigurieren. Dadurch können Sie die Leistung des Threads für jeden Anwendungspool individuell anzupassen.  
   
- Die Standardeinstellung für `maxConcurrentRequestsPerCPU` in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ist "5000". Dadurch wird die von ASP.NET gesteuerte Drosselung von Anforderungen deaktiviert, wenn Sie nicht mehr als 5000 Anforderungen pro CPU verwenden.  Die Standardeinstellung verwendet stattdessen den CLR\-Threadpool zur automatischen Verwaltung der Parallelität für die einzelnen CPUs.  Anwendungen, die umfangreichen Gebrauch von asynchroner Anforderungsverarbeitung machen oder zahlreiche Langzeitanforderungen aufweisen, die in Netzwerk\-E\/A blockiert werden, profitieren von der erweiterten Standardgrenze in [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  Wenn Sie `maxConcurrentRequestsPerCPU` auf 0 \(null\) festlegen, wird die Verwendung von verwalteten Threads zur Verarbeitung von ASP.NET\-Anforderungen deaktiviert.  Wenn eine Anwendung in einem IIS\-Anwendungspool ausgeführt wird, verbleiben Anforderungen im E\/A\-Thread von IIS, sodass die Parallelität durch die IIS\-Threadeinstellungen gedrosselt wird.  
+ Für die `maxConcurrentRequestsPerCPU` festlegen, die Standardeinstellung von "5000" in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] effektiv deaktiviert eine Einschränkung der Anforderungsanzahl also von ASP.NET gesteuert, es sei denn, Sie tatsächlich 5000 oder mehrere Anforderungen pro CPU haben. Die Standardeinstellung hängt stattdessen die CLR-Threadpool pro CPU Parallelität automatisch verwaltet. Anwendungen, die umfassenden Gebrauch von der Verarbeitung von asynchronen Anforderungen stellen oder bei denen viele langer-Anforderungen, die Netzwerk-e/a blockiert, ist, profitieren die erhöhte Standardgrenze in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Festlegen von `maxConcurrentRequestsPerCPU` auf 0 (null) deaktiviert die Verwendung von verwalteten Threads für die Verarbeitung von ASP.NET-Anforderungen. Wenn eine Anwendung in einem IIS-Anwendungspool ausgeführt wird, bleiben Sie Anforderungen im IIS-e/a-Thread, und daher Parallelität von IIS-Thread-Einstellungen eingeschränkt wird.  
   
- Die `requestQueueLimit`\-Einstellung funktioniert analog zum `requestQueueLimit`\-Attribut des [processModel](http://msdn.microsoft.com/de-de/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)\-Elements, das für ASP.NET\-Anwendungen in Web.config\-Dateien festgelegt wird.  Die `requestQueueLimit`\-Einstellung in einer aspnet.config\-Datei überschreibt jedoch die `requestQueueLimit`\-Einstellung in einer Web.config\-Datei.  Wenn beide Attribute festgelegt werden \(Standardeinstellung\), hat also die `requestQueueLimit`\-Einstellung in der aspnet.config\-Datei Vorrang.  
+ Die `requestQueueLimit` Einstellung funktioniert genauso wie die `requestQueueLimit` Attribut von der [ProcessModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) Element, das in den Dateien "Web.config" für ASP.NET-Anwendungen festgelegt ist. Allerdings die `requestQueueLimit` Einstellung in einer aspnet.config-Datei überschreibt die `requestQueueLimit` in einer Datei "Web.config" festlegen. Das heißt, wenn beide Attribute festgelegt werden (Dies wird standardmäßig "true"), die `requestQueueLimit` Einstellung in aspnet.config-Datei hat Vorrang vor.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie prozessweites Verhalten von ASP.NET in der aspnet.config\-Datei für folgendes Szenario konfiguriert wird:  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt die zum Konfigurieren von ASP.NET prozessübergreifende Verhalten in aspnet.config-Datei in den folgenden Situationen:  
   
--   Die Anwendung wird in einem [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]\-Anwendungspool gehostet.  
+-   Die Anwendung gehostet wird, eine [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Anwendungspool.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] wird im integrierten Modus ausgeführt.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]im integrierten Modus ausgeführt wird.  
   
--   Die Anwendung verwendet [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
+-   Die Anwendung verwendet die [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
   
- Die Werte, die im Beispiel verwendet werden, sind Standardwerte.  
+ Die Werte im Beispiel sind die Standardwerte.  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -93,14 +95,14 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET zur Verwaltung von prozessw
 </configuration>  
 ```  
   
-## Elementinformationen  
+## <a name="element-information"></a>Elementinformationen  
   
 |||  
 |-|-|  
 |Namespace||  
 |Schemaname||  
 |Validierungsdatei||  
-|Kann leer sein||  
+|Leer kann sein||  
   
-## Siehe auch  
- [\<system.web\>\-Element \(Webeinstellungen\)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<system.web>-Element (Webeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

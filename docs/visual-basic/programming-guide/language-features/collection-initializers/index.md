@@ -1,43 +1,23 @@
 ---
 title: Auflistungsinitialisierer (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.CollectionInitializer
-dev_langs:
-- VB
-helpviewer_keywords:
-- collection initializers [Visual Basic]
+f1_keywords: vb.CollectionInitializer
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collection-initializers-visual-basic"></a>Auflistungsinitialisierer (Visual Basic)
 *Auflistungsinitialisierer* stellen eine gekürzte Syntax bereit, mit der Sie eine Auflistung erstellen und mit einem anfänglichen Satz von Werten auffüllen können. Auflistungsinitialisierer sind nützlich beim Erstellen einer Auflistung aus einem Satz unbekannter Werte, z.B. eine Liste von Menüoptionen oder Kategorien, ein ursprünglicher Satz numerischer Werte, eine statische Liste von Zeichenfolgen wie Tag- oder Monatsnamen oder geografische Orte, z.B. eine Liste von Staaten, die für eine Überprüfung verwendet werden.  
@@ -103,14 +83,13 @@ ms.lasthandoff: 07/28/2017
 |[Gewusst wie: Erstellen einer Auflistung für einen Auflistungsinitialisierer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Zeigt, wie die Verwendung eines Auflistungsinitialisierers ermöglicht wird, indem eine `Add`-Methode in eine Auflistungsklasse eingefügt wird, die `IEnumerable` implementiert.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  (Sammlungen)  
- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [new-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [Automatisch implementierte Eigenschaften](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [How to: Initialize an Array Variable in Visual Basic (Vorgehensweise: Initialisieren einer Arrayvariable in Visual Basic)](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)   
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Automatisch implementierte Eigenschaften](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)  
+ [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Gewusst wie: Erstellen einer Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-

@@ -1,58 +1,63 @@
 ---
-title: "&lt;servicePrincipalName&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Dienstprinzipalnamen (ServicePrincipalName)&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e472c7fcfd57341074489a75f7954be38291523b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;servicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;Dienstprinzipalnamen (ServicePrincipalName)&gt;
 Gibt die Identität eines Diensts anhand des SPN an.  
   
- Weitere Informationen zum Festlegen des SPN finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Weitere Informationen zum Festlegen des SPN finden Sie unter [-Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## Syntax  
+ \<Identität >  
+\<Dienstprinzipalnamen (ServicePrincipalName) >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <servicePrincipalName value = "String" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|Wert|Der Name, mit dem ein Client eine Instanz eines Diensts eindeutig identifiziert.  Wenn Sie mehrere Instanzen eines Diensts auf Computern innerhalb einer Gesamtstruktur installieren, muss jede Instanz über einen eigenen SPN verfügen.  Eine Dienstinstanz kann mehrere SPNs aufweisen, falls mehrere Namen vorhanden sind, die von den Clients zur Authentifizierung verwendet werden können.|  
+|---------------|-----------------|  
+|Wert|Der Name, mit dem ein Client eine Instanz eines Diensts eindeutig identifiziert. Wenn Sie mehrere Instanzen eines Diensts auf Computern innerhalb einer Gesamtstruktur installieren, muss jede Instanz über einen eigenen SPN verfügen. Eine Dienstinstanz kann mehrere SPNs aufweisen, falls mehrere Namen vorhanden sind, die von den Clients zur Authentifizierung verwendet werden können.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Identität\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
+|-------------|-----------------|  
+|[\<Identität >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
   
-## Hinweise  
- Ein sicherer [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Client, der mit dieser Identität eine Verbindung zu einem Endpunkt herstellt, verwendet den SPN für die SSPI\-Authentifizierung mit dem Endpunkt.  
+## <a name="remarks"></a>Hinweise  
+ Ein sicherer [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Client, der mit dieser Identität eine Verbindung zu einem Endpunkt herstellt, verwendet den SPN für die SSPI-Authentifizierung mit dem Endpunkt.  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>   
- <xref:System.ServiceModel.SpnEndpointIdentity>   
- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<Identität\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
+ <xref:System.ServiceModel.SpnEndpointIdentity>  
+ [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [\<Identität >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

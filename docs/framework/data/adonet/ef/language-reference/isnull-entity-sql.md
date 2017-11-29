@@ -1,46 +1,44 @@
 ---
-title: "ISNULL (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: ISNULL (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31e0b77e397bd4f190119a01719da185211f7715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ISNULL (Entity SQL)
+# <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 expression IS [ NOT ] NULL  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `expression`  
  Ein gültiger Abfrageausdruck. Dieser darf keine Auflistung sein oder über Auflistungsmember oder einen Datensatztyp mit Auflistungstypeigenschaften verfügen.  
   
  NOT  
- Negiert das EDM.Boolean\-Ergebnis von IS NULL.  
+ Negiert das EDM.Boolean-Ergebnis von IS NULL.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  `true` wenn `expression` NULL zurückgibt, andernfalls `false`.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie `IS NULL`, um zu ermitteln, ob das Element einer äußeren Verknüpfung den Wert NULL hat:  
   
 ```  
@@ -59,23 +57,23 @@ select c from LOB.Customer as c where c.DOB is not null
  In der folgenden Tabelle wird das Verhalten von `IS NULL` für einige Muster dargestellt. Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:  
   
 |Muster|Verhalten|  
-|------------|---------------|  
+|-------------|--------------|  
 |null IS NULL|Gibt `true` zurück.|  
-|TREAT \(null AS EntityType\) IS NULL|Gibt `true` zurück.|  
-|TREAT \(null AS ComplexType\) IS NULL|Löst einen Fehler aus.|  
-|TREAT \(null AS RowType\) IS NULL|Löst einen Fehler aus.|  
+|TREAT (null AS EntityType) IS NULL|Gibt `true` zurück.|  
+|TREAT (null AS ComplexType) IS NULL|Löst einen Fehler aus.|  
+|TREAT (null AS RowType) IS NULL|Löst einen Fehler aus.|  
 |EntityType IS NULL|Gibt einen `true` oder `false` zurück.|  
 |ComplexType IS NULL|Löst einen Fehler aus.|  
 |RowType IS NULL|Löst einen Fehler aus.|  
   
-## Beispiel  
- In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Abfrage wird der IS NOT NULL\-Operator verwendet, um zu ermitteln, ob ein Abfrageausdruck nicht den Wert NULL hat. Diese Abfrage beruht auf dem "AdventureWorks Sales"\-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+## <a name="example"></a>Beispiel  
+ Die folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage verwendet den IS NOT NULL-Operator, um festzustellen, ob ein Abfrageausdruck den Wert nicht null ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren unter [Vorgehensweise: Ausführen einer Abfrage, die StructuralType\-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery`\-Methode:  
+2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
-## Siehe auch  
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

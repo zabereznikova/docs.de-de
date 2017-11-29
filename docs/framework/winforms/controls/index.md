@@ -1,31 +1,27 @@
 ---
-title: Windows Forms-Steuerelemente | Microsoft-Dokumentation
+title: Windows Forms-Steuerelemente
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- jsharp
 helpviewer_keywords:
 - Windows Forms controls
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: e92fd440f0afd265a65395a715b08df44cf37f9e
-ms.contentlocale: de-de
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 1078488ca1443b4e2336386eff1ac3a117a71501
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-forms-controls"></a>Windows Forms-Steuerelemente
 Beim Entwerfen und Ändern der Benutzeroberfläche Ihrer Windows Forms-Anwendungen müssen Sie Steuerelemente hinzufügen, ausrichten und positionieren. Steuerelemente sind Objekte, die in Formularobjekten enthalten sind. Jeder Steuerelementtyp verfügt über einen eigenen Satz von Eigenschaften, Methoden und Ereignissen, die für einen bestimmten Zweck geeignet sind. Sie können Steuerelemente im Designer anpassen und Code schreiben, um Steuerelemente zur Laufzeit dynamisch hinzufügen.  

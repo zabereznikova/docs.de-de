@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung
 ## <a name="applies-to"></a>Gilt für  
@@ -150,4 +148,3 @@ ms.lasthandoff: 08/21/2017
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
 1.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ihnen sollte *Default.aspx* angezeigt werden, und Ihr Windows-Kontoname (einschließlich des Domänennamens) sollte bereits als der authentifizierte Benutzer oben rechts auf der Seite angezeigt werden. Die Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt ist, die von Ihrem Windows-Konto abgerufen wurden.
-

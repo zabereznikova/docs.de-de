@@ -1,35 +1,38 @@
 ---
-title: "3363 - HttpAuthFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3363 - HttpAuthFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ddfc1f0-ab6f-4fd4-a138-05ded7f6680a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6890f48fdfafdd5bf7fe25fb454fab2a110f100c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3363 - HttpAuthFailed
-## Eigenschaften  
+# <a name="3363---httpauthfailed"></a>3363 - HttpAuthFailed
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|3363|  
 |Stichwörter|HTTP|  
 |Ebene|Warnung|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Beschreibung  
- Dieses Ereignis wird ausgegeben, wenn die HTTP\-Authentifizierung fehlgeschlagen ist.  
+## <a name="description"></a>Beschreibung  
+ Dieses Ereignis wird ausgegeben, wenn die HTTP-Authentifizierung fehlgeschlagen ist.  
   
-## Meldung  
- Fehler bei der HTTP\-Authentifizierung.  
+## <a name="message"></a>Meldung  
+ Fehler bei der HTTP-Authentifizierung.  
   
-## Details
+## <a name="details"></a>Details

@@ -5,24 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5854b3f2630c1e27ec77976eccfe6765acefcab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7a582f009719245483bdfe9192d775347c1f1a29
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Definiert eine Bindung, die sicher und zuverlässig ist und für eine prozessübergreifende Kommunikation auf einem Computer optimiert ist. Sie generiert standardmäßig einen Laufzeitkommunikationsstapel mit WS-ReliableMessaging für Verlässlichkeit, Transport- und Übertragungssicherheit, benannte Pipes für den Nachrichtentransport sowie binäre Nachrichtencodierung.  
@@ -158,10 +153,9 @@ Definiert eine Bindung, die sicher und zuverlässig ist und für eine prozessüb
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>   
- <xref:System.ServiceModel.NetNamedPipeBinding>   
- [\<Binden von >](../../../../../docs/framework/misc/binding.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
+ <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
+ <xref:System.ServiceModel.NetNamedPipeBinding>  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)
-

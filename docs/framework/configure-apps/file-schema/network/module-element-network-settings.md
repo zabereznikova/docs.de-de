@@ -1,85 +1,87 @@
 ---
-title: "&lt;module&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module>-Element"
-  - "module-Element"
+title: '&lt;Modul&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;module&gt;-Element (Netzwerkeinstellungen)
+# <a name="ltmodulegt-element-network-settings"></a>&lt;Modul&gt; -Element (Netzwerkeinstellungen)
 Fügt der Anwendung ein neues Proxymodul hinzu.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<DefaultProxy >  
+\<Modul >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|`type`|Der Name und die spezifischen Merkmale des Moduls, das den Proxy implementiert.|  
+|**Attribut**|**Beschreibung**|  
+|-------------------|---------------------|  
+|`type`|Den vollqualifizierten Typnamen (erkennbar die <xref:System.Type.FullName%2A> Eigenschaft) und der Name der Assembly (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma, die den Proxy implementiert.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Konfiguriert den HTTP\-Proxyserver \(Hypertext Transfer Protocol\).|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
   
-## Hinweise  
- Das `module`\-Element registriert Proxyklassen, die die <xref:System.Net.IWebProxy>\-Schnittstelle implementieren.  Nach der Proxyklasse registriert wurde, kann `module` verwendet werden, um Informationen durch den unterstützten Proxy anzufordern.  
+## <a name="remarks"></a>Hinweise  
+ Die `module` -Element registriert Proxyklassen, implementieren die <xref:System.Net.IWebProxy> Schnittstelle. Nach dem Registrieren der Proxyklasse `module` kann zum Anfordern von Informationen über den unterstützten Proxy verwendet werden.  
   
- Der Wert des `type`\-Attributs sollte der Name einer gültigen Dynamic Link Library \(DLL\) und der Klassenname des Moduls sein.  
+ Der Wert für die `type` Attribut muss der Klassenname des Moduls und den Namen der entsprechenden Dynamic Link Library (DLL).  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Das folgende Codebeispiel registriert eine benutzerdefinierte Proxyklasse.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird eine benutzerdefinierte Proxyklasse registriert.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

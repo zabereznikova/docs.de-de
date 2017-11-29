@@ -1,55 +1,43 @@
 ---
-title: "Schema f&#252;r Konfigurationsabschnitte | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Konfigurationsschema [.NET Framework], Benutzerdefinierte Einstellungen in Konfigurationsdateien"
-  - "Konfigurationsabschnitte [.NET Framework]"
-  - "Konfigurationseinstellungen [.NET Framework], Benutzerdefiniert"
-  - "Benutzerdefinierte Elemente"
-  - "Elemente [.NET Framework], Benutzerdefinierte Einstellungen in Konfigurationsdateien"
-  - "Schemakonfigurationseinstellungen"
+title: "Schema für Konfigurationsabschnitte"
+ms.date: 05/02/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration settings [.NET Framework], custom
+- schema configuration settings
+- configuration sections [.NET Framework]
+- custom elements
+- configuration schema [.NET Framework], custom settings in configuration files
+- elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c668cf3d2f2c0bcffda185cea01edfb9e55c6d6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Schema f&#252;r Konfigurationsabschnitte
-Das Schema für Konfigurationsabschnitte enthält Elemente, die benutzerdefinierte Einstellungen in Konfigurationsdateien einfügen.  
-  
- [\<konfiguration\>](../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-  
- [\<configSections\>](http://msdn.microsoft.com/de-de/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)  
-  
- [\<clear\>](http://msdn.microsoft.com/de-de/b0ce3c91-89fa-4bb5-a995-30e21a61036b)  
-  
- [\<remove\>](http://msdn.microsoft.com/de-de/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)  
-  
- [\<Abschnitt\>](http://msdn.microsoft.com/de-de/51c9d658-c275-4ab2-aa66-c5d5b5289570)  
-  
- [\<sectionGroup\>](http://msdn.microsoft.com/de-de/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)  
-  
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[clear\-Element für configSections \(allgemeines Einstellungsschema\)](http://msdn.microsoft.com/de-de/b0ce3c91-89fa-4bb5-a995-30e21a61036b)|Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen.|  
-|[configSections\-Element \(allgemeines Einstellungsschema\)](http://msdn.microsoft.com/de-de/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)|Enthält Konfigurationsabschnitts\- und Namespacedeklarationen.|  
-|[remove\-Element für configSections \(allgemeines Einstellungsschema\)](http://msdn.microsoft.com/de-de/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)|Entfernt einen vordefinierten Abschnitt oder eine vordefinierte Abschnittsgruppe.|  
-|[section\-Element für configSections \(allgemeines Einstellungsschema\)](http://msdn.microsoft.com/de-de/51c9d658-c275-4ab2-aa66-c5d5b5289570)|Enthält eine Konfigurationsabschnittsdeklaration.|  
-|[sectionGroup\-Element für configSections \(allgemeines Einstellungsschema\)](http://msdn.microsoft.com/de-de/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)|Definiert einen Namespace für Konfigurationsabschnitte.|  
-  
-## Siehe auch  
- [Konfigurationsdateischema](../../../../docs/framework/configure-apps/file-schema/index.md)
+# <a name="configuration-sections-schema"></a>Schema für Konfigurationsabschnitte
+
+Das Schema für Konfigurationsabschnitte enthält Elemente, die benutzerdefinierte Einstellungen in Konfigurationsdateien zu definieren. Allgemeine Informationen zu Konfigurationsdateien und Schemas finden Sie unter [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).
+
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[**\<Deaktivieren Sie >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
+[**\<Entfernen >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
+[**\<Abschnitt >**](~/docs/framework/configure-apps/file-schema/section-element.md)   
+[**\<SectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+
+|     | Beschreibung |
+| --- | ----------- |
+| [**\<Deaktivieren Sie >** für  **\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Löscht alle zuvor definierten Abschnitte und Abschnittsgruppen. |
+| [**\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
+| [**\<Entfernen Sie >** für  **\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Entfernt einen vordefinierten Abschnitt oder Abschnittsgruppe. |
+| [**\<Abschnitt >** für  **\<ConfigSections >** und  **\<SectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Enthält eine Deklaration der Konfiguration im Abschnitt. |
+| [**\<SectionGroup >** für  **\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurationsabschnitte. |

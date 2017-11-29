@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.contentlocale: de-de
-ms.lasthandoff: 09/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-performance"></a>.NET Framework-Leistung
 Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leistungsorientiert entwerfen und planen, wie Sie jede andere Funktion der App entwerfen würden. Sie können die von Microsoft bereitgestellten Tools verwenden, um die Leistung der App zu messen und gegebenenfalls Verbesserungen der Arbeitsspeichernutzung, des Codedurchsatzes und der Reaktionsfähigkeit vorzunehmen. In diesem Thema werden die von Microsoft bereitgestellten Leistungsanalysetools aufgelistet sowie Links zu anderen Themen bereitgestellt, die die Leistung für bestimmte Bereiche der App-Entwicklung behandeln.  
@@ -71,4 +69,3 @@ Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leist
 |[Lazy Initialization (Verzögerte Initialisierung)](../../../docs/framework/performance/lazy-initialization.md)|Beschreibt, wie Objekte bei Bedarf initialisiert werden, um die Leistung, insbesondere beim App-Start, zu verbessern.|  
 |[Reliability (Zuverlässigkeit)](../../../docs/framework/performance/reliability.md)|Stellt Informationen zum Verhindern von asynchronen Ausnahmen in einer Serverumgebung bereit.|  
 |[Writing Large, Responsive .NET Framework Apps (Schreiben großer, reaktionsfähiger .NET Framework-Apps)](../../../docs/framework/performance/writing-large-responsive-apps.md)|Gibt Tipps zur Verbesserung der Leistung aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code und enthält echte Beispiele aus dem C#-Compiler.|
-

@@ -1,37 +1,40 @@
 ---
-title: "Verbinden mit einer Datenquelle in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verbinden mit einer Datenquelle in ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0d21c571b659e9d7aef65893db18b034d614e2af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verbinden mit einer Datenquelle in ADO.NET
-In ADO.NET stellen Sie mithilfe eines **Connection**\-Objekts die Verbindung mit einer bestimmten Datenquelle her, indem Sie die erforderlichen Authentifizierungsinformationen in einer Verbindungszeichenfolge angeben.  Das von Ihnen verwendete **Connection**\-Objekt hängt vom Typ der Datenquelle ab.  
+# <a name="connecting-to-a-data-source-in-adonet"></a>Verbinden mit einer Datenquelle in ADO.NET
+In ADO.NET verwenden Sie eine **Verbindung** Objekt einer Verbindung mit einer bestimmten Datenquelle erforderlichen Authentifizierungsinformationen in einer Verbindungszeichenfolge angeben. Die **Verbindung** Objekt, die Sie verwenden, hängt vom Typ der Datenquelle.  
   
- Jeder in .NET Framework enthaltene .NET Framework\-Datenanbieter enthält ein <xref:System.Data.Common.DbConnection>\-Objekt: Der .NET Framework\-Datenanbieter für OLE DB enthält ein <xref:System.Data.OleDb.OleDbConnection>\-Objekt, der .NET Framework\-Datenanbieter für SQL Server enthält ein <xref:System.Data.SqlClient.SqlConnection>\-Objekt, der .NET Framework\-Datenanbieter für ODBC enthält ein <xref:System.Data.Odbc.OdbcConnection>\-Objekt, und der .NET Framework\-Datenanbieter für Oracle enthält ein <xref:System.Data.OracleClient.OracleConnection>\-Objekt.  
+ Jeder in .NET Framework enthaltene .NET Framework-Datenanbieter enthält ein <xref:System.Data.Common.DbConnection>-Objekt: Der .NET Framework-Datenanbieter für OLE DB enthält ein <xref:System.Data.OleDb.OleDbConnection>-Objekt, der .NET Framework-Datenanbieter für SQL Server enthält ein <xref:System.Data.SqlClient.SqlConnection>-Objekt, der .NET Framework-Datenanbieter für ODBC enthält ein <xref:System.Data.Odbc.OdbcConnection>-Objekt, und der .NET Framework-Datenanbieter für Oracle enthält ein <xref:System.Data.OracleClient.OracleConnection>-Objekt.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Herstellen der Verbindung](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- Beschreibt die Verwendung eines **Connection**\-Objekts zum Herstellen einer Verbindung mit einer Datenquelle.  
+ Beschreibt, wie eine **Verbindung** Objekt zum Herstellen einer Verbindung mit einer Datenquelle.  
   
- ['Connection'\-Ereignisse](../../../../docs/framework/data/adonet/connection-events.md)  
- Beschreibt die Verwendung eines **InfoMessage**\-Ereignisses zum Abrufen von Informationsmeldungen von einer Datenquelle.  
+ [Verbindungsereignisse](../../../../docs/framework/data/adonet/connection-events.md)  
+ Beschreibt, wie ein **InfoMessage** Ereignis informationsmeldungen aus einer Datenquelle abgerufen.  
   
-## Siehe auch  
- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)   
- [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)   
- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [DataAdapter und DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

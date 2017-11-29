@@ -1,69 +1,71 @@
 ---
-title: "&lt;performanceCounters&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<perfomanceCounters>-Element"
-  - "performanceCounters-Element"
+title: '&lt;PerformanceCounters&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
+helpviewer_keywords:
+- performanceCounters element
+- <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f7fdbb244663e5114880437a5a508270c80a9c79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;performanceCounters&gt;-Element
-Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren gemeinsam genutzt wird.  
+# <a name="ltperformancecountersgt-element"></a>&lt;PerformanceCounters&gt; Element
+Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren freigegeben wird.  
   
-## Syntax  
+ \<configuration>  
+\<System.Diagnostics >  
+\<PerformanceCounters >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <performanceCounters filemappingsize="524288" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|filemappingsize|Erforderliches Attribut.<br /><br /> Gibt die Größe des globalen Speichers \(in Bytes\) an, der von den Leistungsindikatoren gemeinsam genutzt wird.  Standardwert: 524288.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|FileMappingSize|Erforderliches Attribut.<br /><br /> Gibt die Größe in Bytes, der dem globalen Arbeitsspeicher-Leistungsindikatoren gemeinsam genutzt wird. Der Standard ist 524288.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`Configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.diagnostics`|Gibt das Stammelement für den ASP.NET\-Konfigurationsabschnitt an.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`Configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|`system.diagnostics`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
-## Hinweise  
- Leistungsindikatoren veröffentlichen Leistungsdaten anhand einer Speicherabbilddatei oder eines gemeinsam genutzten Speicherbereichs.  Die Größe des freigegebenen Speicherbereichs bestimmt die Anzahl von Instanzen, die gleichzeitig verwendet werden können.  Bei freigegebenem Speicher kann es sich um globalen oder separaten Speicher handeln.  Globaler freigegebener Speicher wird von allen Leistungsindikatorkategorien verwendet, die mit .NET Framework, Version 1.0 oder 1.1, installiert sind.  Die mit .NET Framework, Version 2.0, installierten Leistungsindikatorkategorien verwenden separaten freigegebenen Speicher, wobei jede Leistungsindikatorkategorie über einen eigenen Speicherbereich verfügt.  
+## <a name="remarks"></a>Hinweise  
+ Leistungsindikatoren werden eine im Speicher abgebildete Datei oder shared Memory verwenden, um Leistungsdaten zu veröffentlichen.  Die Größe des freigegebenen Speicherbereichs bestimmt, wie viele Instanzen gleichzeitig verwendet werden können.  Es gibt zwei Arten von freigegebenem Arbeitsspeicher: globale freigegebene Speicher und separater freigegebener Arbeitsspeicher.  Der globale freigegebene Speicher wird von allen Leistungsindikatorkategorien, die mit .NET Framework, Version 1.0 oder 1.1 installiert.  Leistungsindikatorkategorien, die mit .NET Framework, Version 2.0 installiert verwenden separaten freigegebenen Arbeitsspeicher mit jeder Leistungsindikatorkategorie mit ihren eigenen Arbeitsspeicher.  
   
- Die Größe des globalen freigegebenen Speichers kann nur über eine Konfigurationsdatei festgelegt werden.  Die Standardgröße beträgt 524.288 Bytes, die maximale Größe beträgt 33.554.432 Bytes, und die minimale Größe beträgt 32.768 Bytes.  Da der globale freigegebene Speicher von allen Prozessen und Kategorien verwendet wird, wird die Größe durch den ersten Ersteller festgelegt.  Wenn Sie die Größe in der Anwendungskonfigurationsdatei festlegen, wird diese Angabe nur verwendet, wenn diese Anwendung die erste Anwendung ist, die die Ausführung der Leistungsindikatoren auslöst.  Der `filemappingsize`\-Wert sollte daher in der Datei Machine.config angegeben werden.  Einzelne Leistungsindikatoren können keinen Speicher aus dem globalen freigegebenen Speicher freigeben. Wenn eine große Anzahl von Leistungsindikatorinstanzen mit unterschiedlichen Namen erstellt wird, können diese den globalen freigegebenen Speicher daher vollständig belegen.  
+ Die Größe der globale freigegebene Speicher kann nur mit einer Konfigurationsdatei festgelegt werden.  Die Standardgröße ist 524.288, die maximale Größe beträgt 33.554.432 Bytes und die minimale Größe beträgt 32.768 Byte.  Da der globale freigegebene Speicher von allen Prozessen und Kategorien gemeinsam verwendet wird, gibt der erste Ersteller die Größe an.  Wenn Sie die Größe in der Anwendungskonfigurationsdatei definieren, wird nur diese Größe verwendet, wenn die Anwendung die erste Anwendung, die bewirkt, die Leistungsindikatoren dass ausgeführt.  Aus diesem Grund den richtigen Speicherort zum Angeben der `filemappingsize` Wert ist die Datei "Machine.config".  Speicher in der globale freigegebene Speicher kann nicht von einzelnen Leistungsindikatoren, sodass freigegeben werden, der globaler freigegebener Speicher ausgeschöpft ist, wenn eine große Anzahl von Leistungsindikatorinstanzen mit unterschiedlichen Namen erstellt werden.  
   
- Für die Größe von separaten freigegebenen Speicherbereichen, wird der FileMappingSize\-Wert DWORD im Registrierungsschlüssel HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\*\<category name\>*\\Performance zuerst verwiesen, gefolgt durch den Wert, der für den weltweiten freigegebenen Arbeitsspeicher in der Konfigurationsdatei festgelegt ist.  Wenn der Wert von FileMappingSize nicht vorhanden ist, wird die Größe des separaten freigegebenen Speichers auf ein Viertel \(1\/4\) des Werts für den globalen Speicher in der Konfigurationsdatei festgelegt.  
+ Der FileMappingSize DWORD-Wert in der Registrierung Schlüssel für die Größe der separater freigegebener Arbeitsspeicher, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\Performance verwiesen wird zuerst dann, durch den Wert für die globale freigegebene Speicher in der Konfigurationsdatei angegeben. Wenn der FileMappingSize-Wert ist nicht vorhanden, und klicken Sie dann auf ein Viertel die Größe separater freigegebener Arbeitsspeicher festgelegt ist (1/4) die globale Einstellung in der Konfigurationsdatei.  
   
-## Siehe auch  
- <xref:System.Diagnostics.PerformanceCounter>   
- <xref:System.Diagnostics.PerformanceCounterCategory>   
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Diagnostics.PerformanceCounter>  
+ <xref:System.Diagnostics.PerformanceCounterCategory>  
+ <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
  <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: fb9c76193203255b943b1f1e5f8109b4bdd4bd40
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="boolean-data-types"></a>Boolean-Datentypen
 Boolesche Operatoren funktionieren in der Common Language Runtime (CLR) wie erwartet. Ausgenommen hiervon ist das Kurzschlussverhalten, das nicht übersetzt wird. Zum Beispiel verhält sich der `AndAlso`-Operator in Visual Basic wie der `And`-Operator. Der C#-`&&`-Operator verhält sich wie der `&`-Operator.  
@@ -37,4 +35,3 @@ Boolesche Operatoren funktionieren in der Common Language Runtime (CLR) wie erwa
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-

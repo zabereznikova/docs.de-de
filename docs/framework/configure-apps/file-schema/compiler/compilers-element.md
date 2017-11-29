@@ -1,75 +1,77 @@
 ---
-title: "&lt;compilers&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<compilers>-Element"
-  - "Compilerkonfigurationselemente, <compilers>-Element"
-  - "compilers-Element"
+title: '&lt;Compiler&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers
+helpviewer_keywords:
+- compiler configuration elements, <compilers> element
+- <compilers> element
+- compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bea78fe5086a73e4cc588973764ac9bbef2fadc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;compilers&gt;-Element
-Container für Compilerkonfigurationselemente; enthält keine oder mehr Elemente [\<Compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).  
+# <a name="ltcompilersgt-element"></a>&lt;Compiler&gt; Element
+Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)-Elemente.  
   
-## Syntax  
+ \<configuration>  
+\<System.CodeDom >  
+\<Compiler >-Element  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <compilers>  
   <compiler ... />  
 </compilers>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
  Keine.  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<compiler\>\-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Gibt die Konfigurationsattribute für Compiler für einen Sprachanbieter an.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<configuration\>\-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|[\<system.codedom\>\-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Konfigurationseinstellungen für Compiler für verfügbare Sprachanbieter an.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<configuration>-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|[\<System.CodeDom > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
   
-## Hinweise  
- Das [\<Compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)\-Element enthält die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer.  Jedes [\<Compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)\-Element gibt den Compilerkonfigurationsattributen für einen bestimmten Sprachanbieter an.  
+## <a name="remarks"></a>Hinweise  
+ Die [ \<Compiler >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) Element enthält die compilereinstellungen für die Konfiguration für Sprachenanbieter auf einem Computer. Jede [ \<Compiler >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) Element gibt die compilerkonfigurationsattribute für eine bestimmte Sprache-Anbieter.  
   
- In .NET Framework werden die ursprünglichen Einstellungen für Compiler und Sprachanbieter in der Computerkonfigurationsdatei \(machine.config\) definiert.  Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>\-Implementierung hinzufügen.  Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName>\-Methode für die programmgesteuerte Auflistung der Konfigurationseinstellungen für Sprachanbieter und Compiler auf einem Computer.  
+ .NET Framework definiert die anfänglichen Compiler und die Language-anbietereinstellungen in der Computerkonfigurationsdatei ("Machine.config") an. Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
   
-## Konfigurationsdatei  
+## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann in der Computerkonfigurationsdatei und der Anwendungskonfigurationsdatei verwendet werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein typisches Konfigurationselement für Compiler dargestellt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement.  
   
-```  
+```xml  
 <configuration>  
    <system.codedom>  
      <compilers>  
@@ -85,9 +87,9 @@ Container für Compilerkonfigurationselemente; enthält keine oder mehr Elemente
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema für Compiler\- und Sprachanbietereinstellungen](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)   
- [\<compiler\>\-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Compiler and Language Provider Settings Schema (Schema für Compiler- und Sprachanbietereinstellungen)](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+ [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
