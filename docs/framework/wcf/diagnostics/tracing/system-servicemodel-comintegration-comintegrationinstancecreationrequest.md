@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e9f3f224-cb6b-4c72-a808-d4905ca0c2b8
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f1a74f9bd585f06482255e78d76ff8b3a0e25726
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest
-System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest  
+# <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a><span data-ttu-id="090fc-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="090fc-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>
+<span data-ttu-id="090fc-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="090fc-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>  
   
-## Beschreibung  
- ComPlus: Anforderung zur Instanzenerstellung wurde empfangen.  
+## <a name="description"></a><span data-ttu-id="090fc-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="090fc-104">Description</span></span>  
+ <span data-ttu-id="090fc-105">ComPlus: Anforderung zur Instanzenerstellung wurde empfangen.</span><span class="sxs-lookup"><span data-stu-id="090fc-105">ComPlus: Received instance creation request.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="090fc-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="090fc-106">See Also</span></span>  
+ [<span data-ttu-id="090fc-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="090fc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="090fc-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="090fc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="090fc-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="090fc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

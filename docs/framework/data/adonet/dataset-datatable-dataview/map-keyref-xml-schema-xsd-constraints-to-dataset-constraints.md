@@ -1,39 +1,42 @@
 ---
-title: "Zuordnen von XSD-&#39;keyref&#39;-Schl&#252;sseleinschr&#228;nkungen (XML-Schema) zu DataSet-Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4ca72292bd2c43fec6f3833d521ddb83c01c32c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zuordnen von XSD-&#39;keyref&#39;-Schl&#252;sseleinschr&#228;nkungen (XML-Schema) zu DataSet-Einschr&#228;nkungen
-Mit dem **keyref**\-Element können Sie Links zwischen Elementen innerhalb eines Dokuments erstellen.  Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar.  Wenn ein Schema das **keyref**\-Element angibt, wird das Element während des Schemazuordnungsprozesses in eine entsprechende Fremdschlüsseleinschränkung für die Spalten in der Tabelle des <xref:System.Data.DataSet> konvertiert.  In der Standardeinstellung generiert das **keyref**\-Element außerdem eine Beziehung, wobei die Eigenschaften **ParentTable**, **ChildTable**, **ParentColumn** und **ChildColumn** der Beziehung angegeben werden.  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="586ef-102">Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="586ef-102">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="586ef-103">Die **Keyref** Element können Sie Links zwischen Elementen in einem Dokument herstellen.</span><span class="sxs-lookup"><span data-stu-id="586ef-103">The **keyref** element allows you to establish links between elements within a document.</span></span> <span data-ttu-id="586ef-104">Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar.</span><span class="sxs-lookup"><span data-stu-id="586ef-104">This is similar to a foreign key relationship in a relational database.</span></span> <span data-ttu-id="586ef-105">Wenn ein Schema gibt die **Keyref** Element, das Element wird konvertiert, während die Schemazuordnungsprozesses in eine entsprechende foreign Key-Einschränkung für die Spalten in den Tabellen der der <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="586ef-105">If a schema specifies the **keyref** element, the element is converted during the schema mapping process to a corresponding foreign key constraint on the columns in the tables of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="586ef-106">Wird standardmäßig die **Keyref** Element generiert auch eine Beziehung mit der **ParentTable**, **untergeordneteTabelle**, **ParentColumn**, und ** ChildColumn** Eigenschaften der Beziehung angegeben.</span><span class="sxs-lookup"><span data-stu-id="586ef-106">By default, the **keyref** element also generates a relation, with the **ParentTable**, **ChildTable**, **ParentColumn**, and **ChildColumn** properties specified on the relation.</span></span>  
   
- In der folgenden Tabelle werden die **msdata**\-Attribute aufgelistet, die im **keyref**\-Element angegeben werden können.  
+ <span data-ttu-id="586ef-107">Die folgende Tabelle enthält die **Msdata** Attribute Sie, in angeben können der **Keyref** Element.</span><span class="sxs-lookup"><span data-stu-id="586ef-107">The following table outlines the **msdata** attributes you can specify in the **keyref** element.</span></span>  
   
-|Attributname|Beschreibung|  
-|------------------|------------------|  
-|**msdata:ConstraintOnly**|Wenn für das **keyref**\-Element im Schema **ConstraintOnly\="true"** angegeben wurde, wird eine Einschränkung, jedoch keine Beziehung erstellt.  Wenn dieses Attribut nicht angegeben wird \(oder auf **False** festgelegt ist\), werden im **DataSet** sowohl die Einschränkung als auch die Beziehung erstellt.|  
-|**msdata:ConstraintName**|Wenn das **ConstraintName**\-Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet.  Andernfalls stellt das **name**\-Attribut des **keyref**\-Elements im Schema den Einschränkungsnamen im **DataSet** bereit.|  
-|**msdata:UpdateRule**|Wenn das **UpdateRule**\-Attribut im **keyref**\-Element im Schema angegeben wurde, wird dessen Wert der **UpdateRule**\-Einschränkungseigenschaft im **DataSet** zugeordnet.  Andernfalls wird die **UpdateRule**\-Eigenschaft auf **Cascade** festgelegt.|  
-|**msdata:DeleteRule**|Wenn das **DeleteRule**\-Attribut im **keyref**\-Element im Schema angegeben wurde, wird dessen Wert der **DeleteRule**\-Einschränkungseigenschaft im **DataSet** zugeordnet.  Andernfalls wird die **DeleteRule**\-Eigenschaft auf **Cascade** festgelegt.|  
-|**msdata:AcceptRejectRule**|Wenn das **AcceptRejectRule**\-Attribut im **keyref**\-Element im Schema angegeben wurde, wird dessen Wert der **AcceptRejectRule**\-Einschränkungseigenschaft im **DataSet** zugeordnet.  Andernfalls wird die **AcceptRejectRule**\-Eigenschaft auf **None** festgelegt.|  
+|<span data-ttu-id="586ef-108">Attributname</span><span class="sxs-lookup"><span data-stu-id="586ef-108">Attribute name</span></span>|<span data-ttu-id="586ef-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="586ef-109">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="586ef-110">**msdata: ConstraintOnly**</span><span class="sxs-lookup"><span data-stu-id="586ef-110">**msdata:ConstraintOnly**</span></span>|<span data-ttu-id="586ef-111">Wenn **ConstraintOnly = "true"** angegeben ist, auf die **Keyref** -Element im Schema, eine Einschränkung erstellt wird, aber keine Beziehung erstellt.</span><span class="sxs-lookup"><span data-stu-id="586ef-111">If **ConstraintOnly="true"** is specified on the **keyref** element in the schema, a constraint is created, but no relation is created.</span></span> <span data-ttu-id="586ef-112">Wenn dieses Attribut nicht angegeben ist (oder **"false"**), werden sowohl die Einschränkung als auch die Beziehung erstellt, der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="586ef-112">If this attribute is not specified (or is set to **False**), both the constraint and the relation are created in the **DataSet**.</span></span>|  
+|<span data-ttu-id="586ef-113">**ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="586ef-113">**msdata:ConstraintName**</span></span>|<span data-ttu-id="586ef-114">Wenn die **ConstraintName** -Attribut angegeben ist, deren Wert als den Namen der Einschränkung verwendet.</span><span class="sxs-lookup"><span data-stu-id="586ef-114">If the **ConstraintName** attribute is specified, its value is used as the name of the constraint.</span></span> <span data-ttu-id="586ef-115">Andernfalls der **Namen** Attribut des der **Keyref** -Element im Schema enthält den Namen der Einschränkung in der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="586ef-115">Otherwise, the **name** attribute of the **keyref** element in the schema provides the constraint name in the **DataSet**.</span></span>|  
+|<span data-ttu-id="586ef-116">**msdata:UpdateRule**</span><span class="sxs-lookup"><span data-stu-id="586ef-116">**msdata:UpdateRule**</span></span>|<span data-ttu-id="586ef-117">Wenn die **UpdateRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **UpdateRule** -Einschränkungseigenschaft im die ** DataSet**.</span><span class="sxs-lookup"><span data-stu-id="586ef-117">If the **UpdateRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **UpdateRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="586ef-118">Andernfalls die **UpdateRule** -Eigenschaftensatz auf **Cascade**.</span><span class="sxs-lookup"><span data-stu-id="586ef-118">Otherwise the **UpdateRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="586ef-119">**msdata:DeleteRule**</span><span class="sxs-lookup"><span data-stu-id="586ef-119">**msdata:DeleteRule**</span></span>|<span data-ttu-id="586ef-120">Wenn die **DeleteRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **DeleteRule** -Einschränkungseigenschaft im die ** DataSet**.</span><span class="sxs-lookup"><span data-stu-id="586ef-120">If the **DeleteRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **DeleteRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="586ef-121">Andernfalls die **DeleteRule** -Eigenschaftensatz auf **Cascade**.</span><span class="sxs-lookup"><span data-stu-id="586ef-121">Otherwise the **DeleteRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="586ef-122">**msdata:AcceptRejectRule**</span><span class="sxs-lookup"><span data-stu-id="586ef-122">**msdata:AcceptRejectRule**</span></span>|<span data-ttu-id="586ef-123">Wenn die **AcceptRejectRule** Attribut wird angegeben, der **Keyref** Element im Schema, dessen Wert zugeordnet ist die **AcceptRejectRule** -Einschränkungseigenschaft im die ** DataSet**.</span><span class="sxs-lookup"><span data-stu-id="586ef-123">If the **AcceptRejectRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **AcceptRejectRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="586ef-124">Andernfalls die **AcceptRejectRule** -Eigenschaftensatz auf **keine**.</span><span class="sxs-lookup"><span data-stu-id="586ef-124">Otherwise the **AcceptRejectRule** property is set to **None**.</span></span>|  
   
- Das folgende Beispiel enthält ein Schema, das die **key**\-Beziehung und die **keyref**\-Beziehung zwischen dem untergeordneten **OrderNumber**\-Element des **Order**\-Elements dem untergeordneten **OrderNo**\-Element des **OrderDetail**\-Elements angibt.  
+ <span data-ttu-id="586ef-125">Das folgende Beispiel enthält ein Schema, der angibt, die **Schlüssel** und **Keyref** Beziehungen zwischen den **OrderNumber** untergeordnetes Element von der **Reihenfolge ** Element und die **OrderNo** untergeordnetes Element von der **OrderDetail** Element.</span><span class="sxs-lookup"><span data-stu-id="586ef-125">The following example contains a schema that specifies the **key** and **keyref** relationships between the **OrderNumber** child element of the **Order** element and the **OrderNo** child element of the **OrderDetail** element.</span></span>  
   
- Im Beispiel bezieht sich das untergeordnete **OrderNumber**\-Element des **OrderDetail**\-Elements auf das untergeordnete **OrderNo**\-Schlüsselelement des **Order**\-Elements.  
+ <span data-ttu-id="586ef-126">Im Beispiel die **OrderNumber** untergeordnetes Element von der **OrderDetail** Element bezieht sich auf die **OrderNo** Key untergeordnetes Element von der **Reihenfolge**Element.</span><span class="sxs-lookup"><span data-stu-id="586ef-126">In the example, the **OrderNumber** child element of the **OrderDetail** element refers to the **OrderNo** key child element of the **Order** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -73,19 +76,18 @@ Mit dem **keyref**\-Element können Sie Links zwischen Elementen innerhalb eines
 </xs:schema>  
 ```  
   
- Der Zuordnungsprozess des XSD\-Schemas \(XML Schema Definition Language\) erstellt das folgende **DataSet** mit zwei Tabellen:  
+ <span data-ttu-id="586ef-127">Die XML Schema Definition Language (XSD)-Schemazuordnungsprozess generiert die folgende **DataSet** mit zwei Tabellen:</span><span class="sxs-lookup"><span data-stu-id="586ef-127">The XML Schema definition language (XSD) schema mapping process produces the following **DataSet** with two tables:</span></span>  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Zusätzlich werden im **DataSet** die folgenden Einschränkungen definiert:  
+ <span data-ttu-id="586ef-128">Darüber hinaus die **DataSet** definiert die folgenden Einschränkungen:</span><span class="sxs-lookup"><span data-stu-id="586ef-128">In addition, the **DataSet** defines the following constraints:</span></span>  
   
--   Eine eindeutige Einschränkung für die **Order**\-Tabelle.  
+-   <span data-ttu-id="586ef-129">Eine unique-Einschränkung für die **Reihenfolge** Tabelle.</span><span class="sxs-lookup"><span data-stu-id="586ef-129">A unique constraint on the **Order** table.</span></span>  
   
     ```  
-  
               Table: Order  
     Columns: OrderNumber   
     ConstraintName: OrderNumberKey  
@@ -93,10 +95,9 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Eine Beziehung zwischen der **Order**\-Tabelle und der **OrderDetail**\-Tabelle.  Die **Nested**\-Eigenschaft ist auf **False** festgelegt, da die zwei Elemente im Schema nicht geschachtelt sind.  
+-   <span data-ttu-id="586ef-130">Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen.</span><span class="sxs-lookup"><span data-stu-id="586ef-130">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="586ef-131">Die **geschachtelte** -Eigenschaftensatz auf **"false"** , da die zwei Elemente im Schema nicht geschachtelt sind.</span><span class="sxs-lookup"><span data-stu-id="586ef-131">The **Nested** property is set to **False** because the two elements are not nested in the schema.</span></span>  
   
     ```  
-  
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -107,10 +108,9 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Eine Fremdschlüsseleinschränkung für die **OrderDetail**\-Tabelle.  
+-   <span data-ttu-id="586ef-132">Eine foreign Key-Einschränkung für die **OrderDetail** Tabelle.</span><span class="sxs-lookup"><span data-stu-id="586ef-132">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
-  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -119,7 +119,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## Siehe auch  
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="586ef-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="586ef-133">See Also</span></span>  
+ [<span data-ttu-id="586ef-134">Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="586ef-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="586ef-135">Generieren von DataSet-Beziehungen aus XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="586ef-135">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="586ef-136">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="586ef-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

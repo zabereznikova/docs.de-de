@@ -1,53 +1,57 @@
 ---
-title: "105 - FaultPropagationRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 105 - FaultPropagationRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 168473b1-b1e5-4e9f-8a2a-35bbdb2ef531
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8c427b9538e0215784bea3a69d41bd1b97623741
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 105 - FaultPropagationRecord
-## Eigenschaften  
+# <a name="105---faultpropagationrecord"></a><span data-ttu-id="da174-102">105 - FaultPropagationRecord</span><span class="sxs-lookup"><span data-stu-id="da174-102">105 - FaultPropagationRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="da174-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="da174-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|105|  
-|Schlüsselwörter|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Grad|Warnung|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="da174-104">Id</span><span class="sxs-lookup"><span data-stu-id="da174-104">Id</span></span>|<span data-ttu-id="da174-105">105</span><span class="sxs-lookup"><span data-stu-id="da174-105">105</span></span>|  
+|<span data-ttu-id="da174-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="da174-106">Keywords</span></span>|<span data-ttu-id="da174-107">EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="da174-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="da174-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="da174-108">Level</span></span>|<span data-ttu-id="da174-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="da174-109">Warning</span></span>|  
+|<span data-ttu-id="da174-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="da174-110">Channel</span></span>|<span data-ttu-id="da174-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="da174-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird vom ETW\-Überwachungsteilnehmer ausgegeben, wenn eine Aktivität der Workflowinstanz FaultPropagationRecord ausgibt.  
+## <a name="description"></a><span data-ttu-id="da174-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="da174-112">Description</span></span>  
+ <span data-ttu-id="da174-113">Dieses Ereignis wird vom ETW-Überwachungsteilnehmer ausgegeben, wenn eine Aktivität der Workflowinstanz FaultPropagationRecord ausgibt.</span><span class="sxs-lookup"><span data-stu-id="da174-113">This event is emitted by the ETW tracking participant when a activity with the workflow instance emits FaultPropagationRecord.</span></span>  
   
-## Meldung  
- TrackRecord \= FaultPropagationRecord, InstanceID\=%1, RecordNumber\=%2, EventTime\=%3, FaultSourceActivityName\=%4, FaultSourceActivityId\=%5, FaultSourceActivityInstanceId\=%6, FaultSourceActivityTypeName\=%7, FaultHandlerActivityName\=%8,  FaultHandlerActivityId \= %9, FaultHandlerActivityInstanceId \=%10, FaultHandlerActivityTypeName\=%11, Fault\=%12, IsFaultSource\=%13, Annotations\=%14, ProfileName \= %15  
+## <a name="message"></a><span data-ttu-id="da174-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="da174-114">Message</span></span>  
+ <span data-ttu-id="da174-115">TrackRecord = FaultPropagationRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, FaultSourceActivityName=%4, FaultSourceActivityId=%5, FaultSourceActivityInstanceId=%6, FaultSourceActivityTypeName=%7, FaultHandlerActivityName=%8, FaultHandlerActivityId = %9, FaultHandlerActivityInstanceId =%10, FaultHandlerActivityTypeName=%11, Fault=%12, IsFaultSource=%13, Annotations=%14, ProfileName = %15</span><span class="sxs-lookup"><span data-stu-id="da174-115">TrackRecord = FaultPropagationRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, FaultSourceActivityName=%4, FaultSourceActivityId=%5, FaultSourceActivityInstanceId=%6, FaultSourceActivityTypeName=%7, FaultHandlerActivityName=%8,  FaultHandlerActivityId = %9, FaultHandlerActivityInstanceId =%10, FaultHandlerActivityTypeName=%11, Fault=%12, IsFaultSource=%13, Annotations=%14, ProfileName = %15</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="da174-116">Details</span><span class="sxs-lookup"><span data-stu-id="da174-116">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|InstanceId|xs:GUID|Die Instanz\-ID für den Workflow.|  
-|RecordNumber|xs:long|Die Sequenznummer des ausgegebenen Datensatzes.|  
-|EventTime|xs:dateTime|Die Zeit in UTC, als das Ereignis ausgegeben wurde|  
-|FaultSourceActivityName|xs:string|Der Name der Aktivität, die den Fehler ausgegeben hat|  
-|FaultSourceActivityId|xs:string|Die ID der Aktivität, die den Fehler ausgegeben hat|  
-|FaultSourceActivityInstanceId|xs:string|Die Instanz\-ID der Aktivität, die den Fehler ausgegeben hat|  
-|FaultSourceActivityTypeName|xs:string|Der Typ der Aktivität, die den Fehler ausgegeben hat|  
-|FaultHandlerActivityName|xs:string|Der Anzeigename der Fehlerhandleraktivität|  
-|FaultHandlerActivityId|xs:string|Die ID der Fehlerhandleraktivität|  
-|FaultHandlerActivityInstanceId|xs:string|Die Instanz\-ID der Fehlerhandleraktivität|  
-|FaultHandlerActivityTypeName|xs:string|Der Typ der Fehlerhandleraktivität|  
-|Fault|xs:string|Die Fehlerdetails|  
-|IsFaultSource|xs:unsignedByte|Gibt an, ob das Ereignis von der Fehlerquelle ausgegeben wurde|  
-|Annotations|xs:string|Die Anmerkungen, die diesem Ereignis hinzugefügt wurden.Die Werte werden in einem XML\-Element im Format \<items\>\< item  name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\> gespeichert.Wenn keine Anmerkungen angegeben werden, enthält die Zeichenfolge \<items\/\>.Die ETW\-Ereignisgröße wird von der ETW\-Puffergröße oder der maximalen Nutzlast für ein ETW\-Ereignis beschränkt.Wenn die Größe des Ereignisses die ETW\-Beschränkung überschreitet, wird das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert durch \<items\>...\<\/items\> ersetzt wird.|  
-|ProfileName|xs:string|Der Name oder das Überwachungsprofil, das zur Ausgabe dieses Ereignisses geführt hat.|  
-|HostReference|xs:string|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.Das Format ist als "Virtueller Anwendungspfad des Websitenamens &#124; Virtueller Dienstpfad &#124; Servicename" definiert. Beispiel: "Standardwebsite\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService".|  
-|AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="da174-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="da174-117">Data Item Name</span></span>|<span data-ttu-id="da174-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="da174-118">Data Item Type</span></span>|<span data-ttu-id="da174-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="da174-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="da174-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="da174-120">InstanceId</span></span>|<span data-ttu-id="da174-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="da174-121">xs:GUID</span></span>|<span data-ttu-id="da174-122">Die Instanz-ID für den Workflow.</span><span class="sxs-lookup"><span data-stu-id="da174-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="da174-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="da174-123">RecordNumber</span></span>|<span data-ttu-id="da174-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="da174-124">xs:long</span></span>|<span data-ttu-id="da174-125">Die Sequenznummer des ausgegebenen Datensatzes.</span><span class="sxs-lookup"><span data-stu-id="da174-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="da174-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="da174-126">EventTime</span></span>|<span data-ttu-id="da174-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="da174-127">xs:dateTime</span></span>|<span data-ttu-id="da174-128">Die Zeit in UTC, als das Ereignis ausgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="da174-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="da174-129">FaultSourceActivityName</span><span class="sxs-lookup"><span data-stu-id="da174-129">FaultSourceActivityName</span></span>|<span data-ttu-id="da174-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-130">xs:string</span></span>|<span data-ttu-id="da174-131">Der Name der Aktivität, die den Fehler ausgegeben hat</span><span class="sxs-lookup"><span data-stu-id="da174-131">The name of activity that emitted the fault</span></span>|  
+|<span data-ttu-id="da174-132">FaultSourceActivityId</span><span class="sxs-lookup"><span data-stu-id="da174-132">FaultSourceActivityId</span></span>|<span data-ttu-id="da174-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-133">xs:string</span></span>|<span data-ttu-id="da174-134">Die ID der Aktivität, die den Fehler ausgegeben hat</span><span class="sxs-lookup"><span data-stu-id="da174-134">The id of the activity that emitted the fault</span></span>|  
+|<span data-ttu-id="da174-135">FaultSourceActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="da174-135">FaultSourceActivityInstanceId</span></span>|<span data-ttu-id="da174-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-136">xs:string</span></span>|<span data-ttu-id="da174-137">Die Instanz-ID der Aktivität, die den Fehler ausgegeben hat</span><span class="sxs-lookup"><span data-stu-id="da174-137">The instance id of the activity that emitted the fault</span></span>|  
+|<span data-ttu-id="da174-138">FaultSourceActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="da174-138">FaultSourceActivityTypeName</span></span>|<span data-ttu-id="da174-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-139">xs:string</span></span>|<span data-ttu-id="da174-140">Der Typ der Aktivität, die den Fehler ausgegeben hat</span><span class="sxs-lookup"><span data-stu-id="da174-140">The type of the activity that emitted the fault</span></span>|  
+|<span data-ttu-id="da174-141">FaultHandlerActivityName</span><span class="sxs-lookup"><span data-stu-id="da174-141">FaultHandlerActivityName</span></span>|<span data-ttu-id="da174-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-142">xs:string</span></span>|<span data-ttu-id="da174-143">Der Anzeigename der Fehlerhandleraktivität</span><span class="sxs-lookup"><span data-stu-id="da174-143">The display name of the fault handler activity</span></span>|  
+|<span data-ttu-id="da174-144">FaultHandlerActivityId</span><span class="sxs-lookup"><span data-stu-id="da174-144">FaultHandlerActivityId</span></span>|<span data-ttu-id="da174-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-145">xs:string</span></span>|<span data-ttu-id="da174-146">Die ID der Fehlerhandleraktivität</span><span class="sxs-lookup"><span data-stu-id="da174-146">The id of the fault handler activity</span></span>|  
+|<span data-ttu-id="da174-147">FaultHandlerActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="da174-147">FaultHandlerActivityInstanceId</span></span>|<span data-ttu-id="da174-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-148">xs:string</span></span>|<span data-ttu-id="da174-149">Die Instanz-ID der Fehlerhandleraktivität</span><span class="sxs-lookup"><span data-stu-id="da174-149">The instance id of the fault handler activity</span></span>|  
+|<span data-ttu-id="da174-150">FaultHandlerActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="da174-150">FaultHandlerActivityTypeName</span></span>|<span data-ttu-id="da174-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-151">xs:string</span></span>|<span data-ttu-id="da174-152">Der Typ der Fehlerhandleraktivität</span><span class="sxs-lookup"><span data-stu-id="da174-152">The type of the fault handler activity</span></span>|  
+|<span data-ttu-id="da174-153">Fault</span><span class="sxs-lookup"><span data-stu-id="da174-153">Fault</span></span>|<span data-ttu-id="da174-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-154">xs:string</span></span>|<span data-ttu-id="da174-155">Die Fehlerdetails</span><span class="sxs-lookup"><span data-stu-id="da174-155">The fault details</span></span>|  
+|<span data-ttu-id="da174-156">IsFaultSource</span><span class="sxs-lookup"><span data-stu-id="da174-156">IsFaultSource</span></span>|<span data-ttu-id="da174-157">xs:unsignedByte</span><span class="sxs-lookup"><span data-stu-id="da174-157">xs:unsignedByte</span></span>|<span data-ttu-id="da174-158">Gibt an, ob das Ereignis von der Fehlerquelle ausgegeben wurde</span><span class="sxs-lookup"><span data-stu-id="da174-158">Indicates if the event was emitted from the fault source</span></span>|  
+|<span data-ttu-id="da174-159">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="da174-159">Annotations</span></span>|<span data-ttu-id="da174-160">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-160">xs:string</span></span>|<span data-ttu-id="da174-161">Die Anmerkungen, die diesem Ereignis hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="da174-161">The annotations that were added to this event.</span></span>  <span data-ttu-id="da174-162">Die Werte werden in einem XML-Element im Format gespeichert \<Elemente >\< Elementname = "AnnotationName" Type = "> AnnotationValue\</item > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="da174-162">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="da174-163">Wenn keine Anmerkungen angegeben werden, die Zeichenfolge enthält \<Elemente / >.</span><span class="sxs-lookup"><span data-stu-id="da174-163">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="da174-164">Die ETW-Ereignisgröße wird von der ETW-Puffergröße oder der maximalen Nutzlast für ein ETW-Ereignis beschränkt.</span><span class="sxs-lookup"><span data-stu-id="da174-164">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="da174-165">Wenn die Größe des Ereignisses die ETW-Beschränkung überschreitet, und klicken Sie dann das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert mit ersetzen \<Elemente >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="da174-165">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="da174-166">ProfileName</span><span class="sxs-lookup"><span data-stu-id="da174-166">ProfileName</span></span>|<span data-ttu-id="da174-167">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-167">xs:string</span></span>|<span data-ttu-id="da174-168">Der Name oder das Überwachungsprofil, das zur Ausgabe dieses Ereignisses geführt hat.</span><span class="sxs-lookup"><span data-stu-id="da174-168">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="da174-169">HostReference</span><span class="sxs-lookup"><span data-stu-id="da174-169">HostReference</span></span>|<span data-ttu-id="da174-170">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-170">xs:string</span></span>|<span data-ttu-id="da174-171">Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.</span><span class="sxs-lookup"><span data-stu-id="da174-171">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="da174-172">Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName "Beispiel:" Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService "</span><span class="sxs-lookup"><span data-stu-id="da174-172">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="da174-173">AppDomain</span><span class="sxs-lookup"><span data-stu-id="da174-173">AppDomain</span></span>|<span data-ttu-id="da174-174">xs:string</span><span class="sxs-lookup"><span data-stu-id="da174-174">xs:string</span></span>|<span data-ttu-id="da174-175">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="da174-175">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

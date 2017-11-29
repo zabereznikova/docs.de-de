@@ -1,45 +1,46 @@
 ---
-title: "Netzwerkfunktionen in Windows Forms-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Netzwerk, Windows Forms"
-  - "Windows Forms, Netzwerk"
+title: Netzwerkfunktionen in Windows Forms-Anwendungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- networking [Windows Forms], Windows Forms
+- Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Netzwerkfunktionen in Windows Forms-Anwendungen
-.NET Framework enthält Klassen für die Anzeige von Webseiten, das Herunterladen von Webinhalt, die Interaktion mit FTP \(File Transfer Protocol\-\)Sites und das Konsumieren von Webdiensten. Mit diesen Funktionen können Sie leicht Netzwerkfunktionen in Ihre Anwendung integrieren.  Die folgenden Ressourcen helfen Ihnen, die Netzwerktechnologien von .NET Framework und ihre Integration in Windows Forms zu verstehen.  
+# <a name="networking-in-windows-forms-applications"></a><span data-ttu-id="7b12f-102">Netzwerkfunktionen in Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="7b12f-102">Networking in Windows Forms Applications</span></span>
+<span data-ttu-id="7b12f-103">.NET Framework stellt Klassen für die Web Pages anzeigen, Herunterladen von Webinhalten, Interaktion mit File Transfer Protocol (FTP) Sites und Verwenden von Webdiensten, die Dies erleichtert die Netzwerk-Funktionalität in Ihrer Anwendung integrieren.</span><span class="sxs-lookup"><span data-stu-id="7b12f-103">The .NET Framework provides classes for displaying Web pages, downloading Web content, interacting with file transfer protocol (FTP) sites, and consuming Web Services, making it easy to build network functionality into your application.</span></span> <span data-ttu-id="7b12f-104">Die folgenden Ressourcen zeigt Ihnen die networking-Technologien von .NET Framework und wie Sie sie in Windows Forms integrieren können.</span><span class="sxs-lookup"><span data-stu-id="7b12f-104">The following resources will help you understand the networking technologies of the .NET Framework and how you can integrate them into Windows Forms.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="7b12f-105">Verweis</span><span class="sxs-lookup"><span data-stu-id="7b12f-105">Reference</span></span>  
  <xref:System.Net>  
- Der Stammnamespace für Klassen in .NET Framework, über die Netzwerkverbindungen behandelt werden.  
+ <span data-ttu-id="7b12f-106">Der Stammnamespace für Klassen in .NET Framework die Netzwerkkonnektivität Handle.</span><span class="sxs-lookup"><span data-stu-id="7b12f-106">The root namespace for classes in the .NET Framework that handle network connectivity.</span></span>  
   
  <xref:System.Net.WebClient>  
- Eine benutzerfreundliche Klasse, um Web\- oder HTTP\-basierte Inhalte programmgesteuert abzurufen.  
+ <span data-ttu-id="7b12f-107">Eine einfache Klasse für Web- oder HTTP-basierten Inhalt programmgesteuert abrufen.</span><span class="sxs-lookup"><span data-stu-id="7b12f-107">A convenient class for retrieving Web or HTTP-based content programmatically.</span></span>  
   
  <xref:System.Net.FtpWebRequest>  
- Eine Klasse zum Abrufen und Senden von Dateien über FTP.  
+ <span data-ttu-id="7b12f-108">Eine Klasse zum Abrufen und Senden von Dateien über FTP.</span><span class="sxs-lookup"><span data-stu-id="7b12f-108">A class for retrieving and sending files with FTP.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Eine verwaltete Wrapperklasse für das `WebBrowser`\-Steuerelement, das in Windows enthalten ist.  
+ <span data-ttu-id="7b12f-109">Eine verwaltete Wrapperklasse für die `WebBrowser` Steuerelement, das in Windows enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="7b12f-109">A managed wrapper class for the `WebBrowser` control that is included with Windows.</span></span>  
   
-## Verwandte Abschnitte  
- [Netzwerkprogrammierung in .NET Framework](../../../../docs/framework/network-programming/index.md)  
- Eine Einführung in die Netzwerkprogrammierung in .NET Framework.  
+## <a name="related-sections"></a><span data-ttu-id="7b12f-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7b12f-110">Related Sections</span></span>  
+ [<span data-ttu-id="7b12f-111">Netzwerkprogrammierung in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7b12f-111">Network Programming in the .NET Framework</span></span>](../../../../docs/framework/network-programming/index.md)  
+ <span data-ttu-id="7b12f-112">Einführung in Netzwerken, die in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7b12f-112">An introduction to networking in the .NET Framework.</span></span>  
   
- [Datenbindung in Web Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Beschreibt die Anzeige von Datenbankinhalt in einer Anwendung, der entweder aus einem lokalen Datenspeicher oder aus einer Datenbank im Netzwerk stammt.
+ [<span data-ttu-id="7b12f-113">Windows Forms-Datenbindung</span><span class="sxs-lookup"><span data-stu-id="7b12f-113">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="7b12f-114">Beschreibt, wie anzuzeigende Datenbankinhalt in Ihrer Anwendung entweder von einem lokalen Datenspeicher oder einer Datenbank in einem Netzwerk befinden.</span><span class="sxs-lookup"><span data-stu-id="7b12f-114">Describes how to display database content in your application, either from a local data store or a database located on a network.</span></span>

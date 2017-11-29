@@ -1,39 +1,45 @@
 ---
-title: "Gewusst wie: Konfigurieren eines Objekts zum Folgen des Mauszeigers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cursor (Mauszeiger), Folgen von Objekten"
-  - "Folgen des Mauszeigers (Cursor)"
-  - "Mauszeiger (Cursor), Folgen von Objekten"
+title: 'Gewusst wie: Konfigurieren eines Objekts zum Folgen des Mauszeigers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- following the mouse pointer (cursor)
+- mouse pointer (cursor), making objects follow
+- cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1991d2a4b43c679fe7e30f633742e01e281e19b3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Konfigurieren eines Objekts zum Folgen des Mauszeigers
-Dieses Beispiel zeigt, wie Sie ein Objekt so konfigurieren, dass sich seine Dimensionen ändern, wenn sich der Mauszeiger über den Bildschirm bewegt.  
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a><span data-ttu-id="f2bd0-102">Gewusst wie: Konfigurieren eines Objekts zum Folgen des Mauszeigers</span><span class="sxs-lookup"><span data-stu-id="f2bd0-102">How to: Make an Object Follow the Mouse Pointer</span></span>
+<span data-ttu-id="f2bd0-103">Dieses Beispiel zeigt, wie die Dimensionen eines Objekts ändern, wenn der Mauszeiger auf dem Bildschirm bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="f2bd0-103">This example shows how to change the dimensions of an object when the mouse pointer moves on the screen.</span></span>  
   
- Das Beispiel umfasst eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Datei, die die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] erstellt, und eine CodeBehind\-Datei, die den Ereignishandler erstellt.  
+ <span data-ttu-id="f2bd0-104">Das Beispiel umfasst ein [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] -Datei, erstellt die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und ein Code-Behind-Datei, die der Ereignishandler erstellt.</span><span class="sxs-lookup"><span data-stu-id="f2bd0-104">The example includes an [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file that creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] and a code-behind file that creates the event handler.</span></span>  
   
-## Beispiel  
- Der folgende [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]\-Code erstellt die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], die aus einer <xref:System.Windows.Shapes.Ellipse> in einem <xref:System.Windows.Controls.StackPanel> besteht, und fügt den Ereignishandler für das <xref:System.Windows.UIElement.MouseMove>\-Ereignis an.  
+## <a name="example"></a><span data-ttu-id="f2bd0-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f2bd0-105">Example</span></span>  
+ <span data-ttu-id="f2bd0-106">Die folgenden [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] erstellt die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], besteht aus dem ein <xref:System.Windows.Shapes.Ellipse> innerhalb eines eine <xref:System.Windows.Controls.StackPanel>, und fügt den Ereignishandler für die <xref:System.Windows.UIElement.MouseMove> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="f2bd0-106">The following [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] creates the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], which consists of an <xref:System.Windows.Shapes.Ellipse> inside of a <xref:System.Windows.Controls.StackPanel>, and attaches the event handler for the <xref:System.Windows.UIElement.MouseMove> event.</span></span>  
   
- [!code-xml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
+ [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- Der folgende Code\-Behind erstellt den <xref:System.Windows.UIElement.MouseMove>\-Ereignishandler.  Wenn sich der Mauszeiger bewegt, nehmen Höhe und Breite der <xref:System.Windows.Shapes.Ellipse> zu oder ab.  
+ <span data-ttu-id="f2bd0-107">Der folgende Code-behind erstellt die <xref:System.Windows.UIElement.MouseMove> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="f2bd0-107">The following code behind creates the <xref:System.Windows.UIElement.MouseMove> event handler.</span></span>  <span data-ttu-id="f2bd0-108">Wenn der Mauszeiger bewegt wird, der die Höhe und die Breite des der <xref:System.Windows.Shapes.Ellipse> erhöht und gesenkt werden.</span><span class="sxs-lookup"><span data-stu-id="f2bd0-108">When the mouse pointer moves, the height and the width of the <xref:System.Windows.Shapes.Ellipse> are increased and decreased.</span></span>  
   
  [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
-## Siehe auch  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f2bd0-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2bd0-109">See Also</span></span>  
+ [<span data-ttu-id="f2bd0-110">Übersicht über die Eingabe</span><span class="sxs-lookup"><span data-stu-id="f2bd0-110">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)

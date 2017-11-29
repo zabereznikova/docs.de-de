@@ -1,27 +1,33 @@
 ---
-title: "Schachteln von &#39;DataRelations&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verschachteln von "DataRelations"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Schachteln von &#39;DataRelations&#39;
-Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen.  Im ADO.NET\-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert.  Beim Erstellen einer **DataRelation** werden die Beziehungen zwischen übergeordneten und untergeordneten Spalten nur über die Beziehung verwaltet.  	Die Tabellen und Spalten sind separate Entitäten.  Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
+# <a name="nesting-datarelations"></a><span data-ttu-id="02adf-102">Verschachteln von "DataRelations"</span><span class="sxs-lookup"><span data-stu-id="02adf-102">Nesting DataRelations</span></span>
+<span data-ttu-id="02adf-103">Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen.</span><span class="sxs-lookup"><span data-stu-id="02adf-103">In a relational representation of data, individual tables contain rows that are related to one another using a column or set of columns.</span></span> <span data-ttu-id="02adf-104">Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert.</span><span class="sxs-lookup"><span data-stu-id="02adf-104">In the ADO.NET <xref:System.Data.DataSet>, the relationship between tables is implemented using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="02adf-105">Beim Erstellen einer **DataRelation**, werden die Beziehungen zwischen über-und untergeordneten Spalten nur über die Beziehung verwaltet.</span><span class="sxs-lookup"><span data-stu-id="02adf-105">When you create a **DataRelation**, the parent-child relationships of the columns are managed only through the relation.</span></span> <span data-ttu-id="02adf-106">	Die Tabellen und Spalten sind separate Entitäten.</span><span class="sxs-lookup"><span data-stu-id="02adf-106">The tables and columns are separate entities.</span></span> <span data-ttu-id="02adf-107">Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.</span><span class="sxs-lookup"><span data-stu-id="02adf-107">In the hierarchical representation of data that XML provides, the parent-child relationships are represented by parent elements that contain nested child elements.</span></span>  
   
- Die **DataRelation** macht eine **Nested**\-Eigenschaft verfügbar, um die Schachtelung von untergeordneten Elementen zu vereinfachen, wenn ein **DataSet** mit einem <xref:System.Xml.XmlDataDocument> synchronisiert oder mit **WriteXml** in Form von XML\-Daten geschrieben wird.  Wenn die **Nested**\-Eigenschaft einer **DataRelation** auf **true** festgelegt wird, werden beim Schreiben der Daten in Form von XML\-Daten oder beim Synchronisieren mit einem **XmlDataDocument** die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte geschachtelt.  Der Standardwert der **Nested**\-Eigenschaft der **DataRelation** lautet **false**.  
+ <span data-ttu-id="02adf-108">Um die Schachtelung von untergeordneten Objekten zu vereinfachen bei einer **DataSet** mit synchronisiert wird ein <xref:System.Xml.XmlDataDocument> handschriftlichen als XML-Daten mit **WriteXml**, die **DataRelation** macht eine **geschachtelte** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="02adf-108">To facilitate the nesting of child objects when a **DataSet** is synchronized with an <xref:System.Xml.XmlDataDocument> or written as XML data using **WriteXml**, the **DataRelation** exposes a **Nested** property.</span></span> <span data-ttu-id="02adf-109">Festlegen der **geschachtelte** Eigenschaft eine **DataRelation** auf **"true"** bewirkt, dass die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte, wenn als XML-Daten geschrieben werden, geschachtelt oder mit synchronisiert eine **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="02adf-109">Setting the **Nested** property of a **DataRelation** to **true** causes the child rows of the relation to be nested within the parent column when written as XML data or synchronized with an **XmlDataDocument**.</span></span> <span data-ttu-id="02adf-110">Die **geschachtelte** Eigenschaft von der **DataRelation** ist **"false"**, standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="02adf-110">The **Nested** property of the **DataRelation** is **false**, by default.</span></span>  
   
- Betrachten Sie z. B. das folgende **DataSet**.  
+ <span data-ttu-id="02adf-111">Angenommen, Sie haben die folgenden **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="02adf-111">For example, consider the following **DataSet**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Da die **Nested**\-Eigenschaft des **DataRelation**\-Objekts für dieses **DataSet** nicht auf **true** festgelegt ist, werden die untergeordneten Elemente beim Schreiben dieses **DataSet** in Form von XML\-Daten nicht innerhalb des übergeordneten Elements geschachtelt.  Das Transformieren der XML\-Darstellung eines **DataSet**, das verknüpfte **DataSets** mit nicht geschachtelten Datenbeziehungen enthält, kann zu Leistungseinbußen führen.  Wir empfehlen daher, die Datenbeziehungen zu schachteln.  Legen Sie zu diesem Zweck die **Nested**\-Eigenschaft auf **true** fest.  Schreiben Sie dann Code in die XSLT\-Formatvorlage, der hierarchische XPath\-Abfrageausdrücke in Top\-Down\-Form verwendet, um die Daten zu finden und zu transformieren.  
+ <span data-ttu-id="02adf-112">Da die **geschachtelte** Eigenschaft von der **DataRelation** Objekt ist nicht festgelegt, um **"true"** für diesen **DataSet**, untergeordneten Objekte, die nicht geschachtelt sind in den übergeordneten Elementen beim dies **DataSet** wird als XML-Daten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="02adf-112">Because the **Nested** property of the **DataRelation** object is not set to **true** for this **DataSet**, the child objects are not nested within the parent elements when this **DataSet** is represented as XML data.</span></span> <span data-ttu-id="02adf-113">Transformieren der XML-Darstellung einer **DataSet** enthält, die verwandte **DataSet**mit nicht geschachtelten datenbeziehungen kann zu Leistungseinbußen führen.</span><span class="sxs-lookup"><span data-stu-id="02adf-113">Transforming the XML representation of a **DataSet** that contains related **DataSet**s with non-nested data relations can cause slow performance.</span></span> <span data-ttu-id="02adf-114">Wir empfehlen daher, die Datenbeziehungen zu schachteln.</span><span class="sxs-lookup"><span data-stu-id="02adf-114">We recommend that you nest the data relations.</span></span> <span data-ttu-id="02adf-115">Legen Sie hierzu die **geschachtelte** Eigenschaft **"true"**.</span><span class="sxs-lookup"><span data-stu-id="02adf-115">To do this, set the **Nested** property to **true**.</span></span> <span data-ttu-id="02adf-116">Schreiben Sie dann Code in die XSLT-Formatvorlage, der hierarchische XPath-Abfrageausdrücke in Top-Down-Form verwendet, um die Daten zu finden und zu transformieren.</span><span class="sxs-lookup"><span data-stu-id="02adf-116">Then write code in the XSLT style sheet that uses top-down hierarchical XPath query expressions to locate and transform the data.</span></span>  
   
- Im folgenden Codebeispiel wird das Ergebnis des Aufrufs von **WriteXml** für das **DataSet** gezeigt.  
+ <span data-ttu-id="02adf-117">Das folgende Codebeispiel zeigt das Ergebnis des Aufrufs **WriteXml** auf die **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="02adf-117">The following code example shows the result from calling **WriteXml** on the **DataSet**.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Beachten Sie, dass das **Customers**\-Element und das **Orders**\-Element als nebengeordnete Elemente angezeigt werden.  Wenn die **Orders**\-Elemente jeweils als untergeordnete Elemente dargestellt werden sollen, müsste die **Nested**\-Eigenschaft der **DataRelation** auf **true** festgelegt werden, und Sie müssten folgenden Code hinzufügen:  
+ <span data-ttu-id="02adf-118">Beachten Sie, dass die **Kunden** Element und die **Aufträge** Elemente als nebengeordnete Elemente angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="02adf-118">Note that the **Customers** element and the **Orders** elements are shown as sibling elements.</span></span> <span data-ttu-id="02adf-119">Mussten Sie die **Aufträge** Elemente als untergeordnete Elemente von den entsprechenden übergeordneten Elementen angezeigt der **geschachtelte** Eigenschaft von der **DataRelation** auf festgelegtwerdenmüssen**"true"** und fügen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="02adf-119">If you wanted the **Orders** elements to show up as children of their respective parent elements, the **Nested** property of the **DataRelation** would need to be set to **true** and you would add the following:</span></span>  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- Im folgenden Codebeispiel wird gezeigt, wie die resultierende Ausgabe aussehen könnte, wenn die **Orders**\-Elemente innerhalb ihrer zugehörigen übergeordneten Elemente geschachtelt sind.  
+ <span data-ttu-id="02adf-120">Der folgende Code zeigt, was die resultierende Ausgabe aussehen könnte mit der **Aufträge** Elemente innerhalb ihrer zugehörigen übergeordneten Elemente geschachtelt.</span><span class="sxs-lookup"><span data-stu-id="02adf-120">The following code shows what the resulting output would look like, with the **Orders** elements nested within their respective parent elements.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## Siehe auch  
- [Verwenden von XML in einem DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Hinzufügen von 'DataRelations'](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="02adf-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02adf-121">See Also</span></span>  
+ [<span data-ttu-id="02adf-122">Using XML in a DataSet (Verwenden von XML in einem DataSet)</span><span class="sxs-lookup"><span data-stu-id="02adf-122">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="02adf-123">Adding DataRelations (Hinzufügen von DataRelations)</span><span class="sxs-lookup"><span data-stu-id="02adf-123">Adding DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [<span data-ttu-id="02adf-124">DataSets, DataTables und DataViews</span><span class="sxs-lookup"><span data-stu-id="02adf-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="02adf-125">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="02adf-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

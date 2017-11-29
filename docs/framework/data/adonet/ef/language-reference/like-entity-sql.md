@@ -1,90 +1,88 @@
 ---
-title: "LIKE (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: LIKE (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 773547b097bad80e82350b473b6e59d0d84aa6dd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# LIKE (Entity SQL)
-Ermittelt, ob ein bestimmter Zeichen\-`String` mit einem angegebenen Muster übereinstimmt.  
+# <a name="like-entity-sql"></a><span data-ttu-id="3c178-102">LIKE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3c178-102">LIKE (Entity SQL)</span></span>
+<span data-ttu-id="3c178-103">Ermittelt, ob ein bestimmter Zeichen-`String` mit einem angegebenen Muster übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="3c178-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="3c178-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3c178-104">Syntax</span></span>  
   
 ```  
-  
 match [NOT] LIKE pattern [ESCAPE escape]  
 ```  
   
-## Argumente  
+## <a name="arguments"></a><span data-ttu-id="3c178-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="3c178-105">Arguments</span></span>  
  `match`  
- Ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Ausdruck, der zu einem `String` ausgewertet wird.  
+ <span data-ttu-id="3c178-106">Ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdruck, ergibt eine `String`.</span><span class="sxs-lookup"><span data-stu-id="3c178-106">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression that evaluates to a `String`.</span></span>  
   
  `pattern`  
- Ein Muster, das mit dem angegebenen `String` verglichen werden soll.  
+ <span data-ttu-id="3c178-107">Ein Muster, das mit dem angegebenen `String` verglichen werden soll.</span><span class="sxs-lookup"><span data-stu-id="3c178-107">A pattern to match to the specified `String`.</span></span>  
   
  `escape`  
- Ein Escapezeichen.  
+ <span data-ttu-id="3c178-108">Ein Escapezeichen.</span><span class="sxs-lookup"><span data-stu-id="3c178-108">An escape character.</span></span>  
   
- NOT  
- Legt fest, dass das Ergebnis von LIKE negiert werden soll.  
+ <span data-ttu-id="3c178-109">NOT</span><span class="sxs-lookup"><span data-stu-id="3c178-109">NOT</span></span>  
+ <span data-ttu-id="3c178-110">Legt fest, dass das Ergebnis von LIKE negiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="3c178-110">Specifies that the result of LIKE be negated.</span></span>  
   
-## Rückgabewert  
- `true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.  
+## <a name="return-value"></a><span data-ttu-id="3c178-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="3c178-111">Return Value</span></span>  
+ <span data-ttu-id="3c178-112">`true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="3c178-112">`true` if the `string` matches the pattern; otherwise, `false`.</span></span>  
   
-## Hinweise  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Ausdrücke, in denen der LIKE\-Operator verwendet wird, werden ähnlich ausgewertet wie Ausdrücke, in denen Gleichheit als Filterkriterium verwendet wird.[!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Ausdrücke, in denen der LIKE\-Operator verwendet wird, können jedoch sowohl Literale als auch Platzhalterzeichen enthalten.  
+## <a name="remarks"></a><span data-ttu-id="3c178-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3c178-113">Remarks</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3c178-114">Ausdrücke, die den LIKE-Operator zu verwenden sind im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die Gleichheit als Filterkriterium verwenden.</span><span class="sxs-lookup"><span data-stu-id="3c178-114"> expressions that use the LIKE operator are evaluated in much the same way as expressions that use equality as the filter criteria.</span></span> <span data-ttu-id="3c178-115">Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator können sowohl Literale als auch Platzhalterzeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="3c178-115">However, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressions that use the LIKE operator can include both literals and wildcard characters.</span></span>  
   
- In der folgenden Tabelle wird die Syntax des als Muster verwendeten `string` beschrieben.  
+ <span data-ttu-id="3c178-116">In der folgenden Tabelle wird die Syntax des als Muster verwendeten `string` beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3c178-116">The following table describes the syntax of the pattern `string`.</span></span>  
   
-|Platzhalterzeichen|Beschreibung|Beispiel|  
-|------------------------|------------------|--------------|  
-|%|Jeder `string` mit null oder mehr Zeichen.|`title like '%computer%'` gibt alle Titel zurück, die das Wort `"computer"` enthalten.|  
-|\_ \(Unterstrich\)|Ein beliebiges einzelnes Zeichen.|`firstname like '_ean'`  gibt alle aus vier Buchstaben bestehenden Vornamen zurück, die mit `"ean`" enden wie "Dean" oder "Sean".|  
-|\[ \]|Beliebiges einzelnes Zeichen im angegebenen Bereich \(\[a\-f\]\) oder in der angegebenen Menge \(\[abcdef\]\).|`lastname like '[C-P]arsen'` gibt Nachnamen zurück, die mit "arsen" enden und mit einem einzelnen Zeichen zwischen C und P beginnen wie "Carsen" oder "Larsen".|  
-|\[^\]|Beliebiges einzelnes Zeichen, das nicht im angegebenen Bereich \(\[^a\-f\]\) oder der angegebenen Menge \(\[^abcdef\]\) liegt.|`lastname like 'de[^l]%'`  gibt alle Nachnamen zurück, die mit "de" beginnen und in denen auf "de" nicht der Buchstabe "l" folgt.|  
-  
-> [!NOTE]
->  Der LIKE\-Operator und die ESCAPE\-Klausel von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] können nicht auf `System.DateTime`\-Werte oder `System.Guid`\-Werte angewendet werden.  
-  
- LIKE unterstützt Mustervergleiche im ASCII\- und Unicode\-Format. Wenn alle Parameter ASCII\-Zeichen sind, wird ein ASCII\-Mustervergleich ausgeführt. Wenn eines oder mehrere der Argumente von einem Unicode\-Datentyp sind, werden alle Argumente in Unicode konvertiert, und ein Unicode\-Mustervergleich wird durchgeführt. Bei der Verwendung von Unicode mit dem LIKE\-Operator werden nachfolgende Leerzeichen berücksichtigt. Wird nicht der Typ Unicode verwendet, werden nachfolgende Leerzeichen ignoriert. Die Syntax für die Musterzeichenfolge ist in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dieselbe wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
-  
- Zu einem Muster können normale Zeichen und Platzhalter gehören. Bei einem Mustervergleich müssen normale Zeichen exakt mit den im `string` angegebenen Zeichen übereinstimmen. Platzhalterzeichen können mit beliebigen Teilen der Zeichenfolge übereinstimmen. Wenn der LIKE\-Operator mit Platzhalterzeichen verwendet wird, ist er flexibler als die Zeichenfolgen\-Vergleichsoperatoren „\=“ und „\!\=“.  
+|<span data-ttu-id="3c178-117">Platzhalterzeichen</span><span class="sxs-lookup"><span data-stu-id="3c178-117">Wildcard Character</span></span>|<span data-ttu-id="3c178-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3c178-118">Description</span></span>|<span data-ttu-id="3c178-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3c178-119">Example</span></span>|  
+|------------------------|-----------------|-------------|  
+|%|<span data-ttu-id="3c178-120">Jeder `string` mit null oder mehr Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3c178-120">Any `string` of zero or more characters.</span></span>|<span data-ttu-id="3c178-121">`title like '%computer%'`Gibt alle Titel zurück, mit dem Wort `"computer"` an einer beliebigen Stelle im Titel.</span><span class="sxs-lookup"><span data-stu-id="3c178-121">`title like '%computer%'` finds all titles with the word `"computer"` anywhere in the title.</span></span>|  
+|<span data-ttu-id="3c178-122">_ (Unterstrich)</span><span class="sxs-lookup"><span data-stu-id="3c178-122">_ (underscore)</span></span>|<span data-ttu-id="3c178-123">Ein beliebiges einzelnes Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3c178-123">Any single character.</span></span>|<span data-ttu-id="3c178-124">`firstname like '_ean'`Sucht nach allen vier Buchstaben bestehenden Vornamen, die mit enden `"ean`, "wie" Dean "oder" Sean ".</span><span class="sxs-lookup"><span data-stu-id="3c178-124">`firstname like '_ean'` finds all four-letter first names that end with `"ean`," such as Dean or Sean.</span></span>|  
+|<span data-ttu-id="3c178-125">[ ]</span><span class="sxs-lookup"><span data-stu-id="3c178-125">[ ]</span></span>|<span data-ttu-id="3c178-126">Beliebiges einzelnes Zeichen im angegebenen Bereich ([a-f]) oder in der angegebenen Menge ([abcdef]).</span><span class="sxs-lookup"><span data-stu-id="3c178-126">Any single character in the specified range ([a-f]) or set ([abcdef]).</span></span>|<span data-ttu-id="3c178-127">`lastname like '[C-P]arsen'`Gibt Nachnamen mit "Arsen"enden und mit jedem beliebigen einzelnen Zeichen zwischen C und P beginnen wie "Carsen" oder "Larsen".</span><span class="sxs-lookup"><span data-stu-id="3c178-127">`lastname like '[C-P]arsen'` finds last names ending with "arsen" and beginning with any single character between C and P, such as Carsen or Larsen.</span></span>|  
+|<span data-ttu-id="3c178-128">[^]</span><span class="sxs-lookup"><span data-stu-id="3c178-128">[^]</span></span>|<span data-ttu-id="3c178-129">Beliebiges einzelnes Zeichen, das nicht im angegebenen Bereich ([^a-f]) oder der angegebenen Menge ([^abcdef]) liegt.</span><span class="sxs-lookup"><span data-stu-id="3c178-129">Any single character not in the specified range ([^a-f]) or set ([^abcdef]).</span></span>|<span data-ttu-id="3c178-130">`lastname like 'de[^l]%'`Gibt alle Nachnamen zurück, die mit "de" beginnen, und schließen Sie nicht der Buchstabe "l".</span><span class="sxs-lookup"><span data-stu-id="3c178-130">`lastname like 'de[^l]%'` finds all last names that begin with "de" and do not include "l" as the following letter.</span></span>|  
   
 > [!NOTE]
->  Bei Abfragen für einen bestimmten Anbieter können anbieterspezifische Erweiterungen verwendet werden. Solche Konstrukte können jedoch von anderen Anbietern anders behandelt werden. SqlServer unterstützt beispielsweise Muster der Form \[erstes Zeichen\-letztes Zeichen\] und \[^erstes Zeichen\-letztes Zeichen\], wobei die erste Form mit genau einem Zeichen zwischen "erstes Zeichen" und "letztes Zeichen" und die zweite Form mit genau einem Zeichen, das nicht zwischen "erstes Zeichen" und "letztes Zeichen" liegt, übereinstimmt.  
+>  <span data-ttu-id="3c178-131">Der LIKE[!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operator und die ESCAPE`System.DateTime`-Klausel von `System.Guid` können nicht auf -Werte und -Werte angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="3c178-131">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE operator and ESCAPE clause cannot be applied to `System.DateTime` or `System.Guid` values.</span></span>  
   
-### Escape  
- Mithilfe der ESCAPE\-Klausel kann nach Zeichenfolgen gesucht werden, die einen oder mehrere der im vorherigen Abschnitt beschriebenen speziellen Platzhalterzeichen enthalten. Nehmen Sie z. B. an, dass im Titel mehrerer Dokumente das Literal "100%" enthalten ist und Sie diese Dokumente finden möchten. Da das Prozentzeichen \(%\) ein Platzhalterzeichen ist, muss es mithilfe der ESCAPE\-Klausel von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] geschützt werden, damit die Suche durchgeführt werden kann. Im Folgenden sehen Sie ein Beispiel für diesen Filter.  
+ <span data-ttu-id="3c178-132">LIKE unterstützt Mustervergleiche im ASCII- und Unicode-Format.</span><span class="sxs-lookup"><span data-stu-id="3c178-132">LIKE supports ASCII pattern matching and Unicode pattern matching.</span></span> <span data-ttu-id="3c178-133">Wenn alle Parameter ASCII-Zeichen sind, wird ein ASCII-Mustervergleich ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3c178-133">When all parameters are ASCII characters, ASCII pattern matching is performed.</span></span> <span data-ttu-id="3c178-134">Wenn eines oder mehrere der Argumente von einem Unicode-Datentyp sind, werden alle Argumente in Unicode konvertiert, und ein Unicode-Mustervergleich wird durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="3c178-134">If one or more of the arguments are Unicode, all arguments are converted to Unicode and Unicode pattern matching is performed.</span></span> <span data-ttu-id="3c178-135">Bei der Verwendung von Unicode mit dem LIKE-Operator werden nachfolgende Leerzeichen berücksichtigt. Wird nicht der Typ Unicode verwendet, werden nachfolgende Leerzeichen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="3c178-135">When you use Unicode with LIKE, trailing blanks are significant; however, for non-Unicode, trailing blanks are not significant.</span></span> <span data-ttu-id="3c178-136">Syntax für die Musterzeichenfolge des [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist identisch mit der [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c178-136">The pattern string syntax of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is the same as that of [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span>  
+  
+ <span data-ttu-id="3c178-137">Zu einem Muster können normale Zeichen und Platzhalter gehören.</span><span class="sxs-lookup"><span data-stu-id="3c178-137">A pattern can include regular characters and wildcard characters.</span></span> <span data-ttu-id="3c178-138">Bei einem Mustervergleich müssen normale Zeichen exakt mit den im `string` angegebenen Zeichen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="3c178-138">During pattern matching, regular characters must exactly match the characters specified in the character `string`.</span></span> <span data-ttu-id="3c178-139">Platzhalterzeichen können mit beliebigen Teilen der Zeichenfolge übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="3c178-139">However, wildcard characters can be matched with arbitrary fragments of the character string.</span></span> <span data-ttu-id="3c178-140">Wenn der LIKE-Operator mit Platzhalterzeichen verwendet wird, ist er flexibler als die Zeichenfolgen-Vergleichsoperatoren „=“ und „!=“.</span><span class="sxs-lookup"><span data-stu-id="3c178-140">When it is used with wildcard characters, the LIKE operator is more flexible than the = and != string comparison operators.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="3c178-141">Bei Abfragen für einen bestimmten Anbieter können anbieterspezifische Erweiterungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3c178-141">You may use provider-specific extensions if you target a specific provider.</span></span> <span data-ttu-id="3c178-142">Solche Konstrukte können jedoch von anderen Anbietern anders behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="3c178-142">However, such constructs may be treated differently by other providers, for example.</span></span> <span data-ttu-id="3c178-143">SqlServer unterstützt beispielsweise Muster der Form [erstes Zeichen-letztes Zeichen] und [^erstes Zeichen-letztes Zeichen], wobei die erste Form mit genau einem Zeichen zwischen "erstes Zeichen" und "letztes Zeichen" und die zweite Form mit genau einem Zeichen, das nicht zwischen "erstes Zeichen" und "letztes Zeichen" liegt, übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="3c178-143">SqlServer supports [first-last] and [^first-last] patterns where the former matches exactly one character between first and last, and the latter matches exactly one character that is not between first and last.</span></span>  
+  
+### <a name="escape"></a><span data-ttu-id="3c178-144">Escape</span><span class="sxs-lookup"><span data-stu-id="3c178-144">Escape</span></span>  
+ <span data-ttu-id="3c178-145">Mithilfe der ESCAPE-Klausel kann nach Zeichenfolgen gesucht werden, die einen oder mehrere der im vorherigen Abschnitt beschriebenen speziellen Platzhalterzeichen enthalten.</span><span class="sxs-lookup"><span data-stu-id="3c178-145">By using the ESCAPE clause, you can search for character strings that include one or more of the special wildcard characters described in the table in the previous section.</span></span> <span data-ttu-id="3c178-146">Nehmen Sie z. B. an, dass im Titel mehrerer Dokumente das Literal "100%" enthalten ist und Sie diese Dokumente finden möchten.</span><span class="sxs-lookup"><span data-stu-id="3c178-146">For example, assume several documents include the literal "100%" in the title and you want to search for all of those documents.</span></span> <span data-ttu-id="3c178-147">Da das Prozentzeichen (%) Zeichen ein Platzhalterzeichen ist, Sie müssen mit Escapezeichen versehen sie mit der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ESCAPE-Klausel, um die Suche erfolgreich ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3c178-147">Because the percent (%) character is a wildcard character, you must escape it using the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ESCAPE clause to successfully execute the search.</span></span> <span data-ttu-id="3c178-148">Im Folgenden sehen Sie ein Beispiel für diesen Filter.</span><span class="sxs-lookup"><span data-stu-id="3c178-148">The following is an example of this filter.</span></span>  
   
 ```  
 "title like '%100!%%' escape '!'"  
 ```  
   
- In diesem Suchausdruck wird das Platzhalterzeichen "%", das unmittelbar auf das Ausrufezeichen \(\!\) folgt, als Literal und nicht als Platzhalterzeichen behandelt. Es können alle Zeichen als Escapezeichen verwendet werden außer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Platzhalterzeichen und den eckigen Klammern \(`[ ]`\). Im vorherigen Beispiel wird das Ausrufezeichen \(\!\) als Escapezeichen verwendet.  
+ <span data-ttu-id="3c178-149">In diesem Suchausdruck wird das Platzhalterzeichen "%", das unmittelbar auf das Ausrufezeichen (!) folgt, als Literal und nicht als Platzhalterzeichen behandelt.</span><span class="sxs-lookup"><span data-stu-id="3c178-149">In this search expression, the percent wildcard character (%) immediately following the exclamation point character (!) is treated as a literal, instead of as a wildcard character.</span></span> <span data-ttu-id="3c178-150">Sie können jedes Zeichen verwenden, als ein Escape-Zeichen mit Ausnahme von der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Platzhalterzeichen und den eckigen Klammern (`[ ]`) Zeichen.</span><span class="sxs-lookup"><span data-stu-id="3c178-150">You can use any character as an escape character except for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wildcard characters and the square bracket (`[ ]`) characters.</span></span> <span data-ttu-id="3c178-151">Im vorherigen Beispiel wird das Ausrufezeichen (!) als Escapezeichen verwendet.</span><span class="sxs-lookup"><span data-stu-id="3c178-151">In the previous example, the exclamation point (!) character is the escape character.</span></span>  
   
-## Beispiel  
- In den folgenden beiden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Abfragen werden die Operatoren LIKE und ESCAPE verwendet, um zu überprüfen, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Mit der ersten Abfrage wird nach einem `Name` gesucht, der mit den Zeichen `Down_` beginnt. In dieser Abfrage wird die ESCAPE\-Option verwendet, da der Unterstrich \(`_`\) ein Platzhalterzeichen ist. Ohne Angeben der ESCAPE\-Option würde die Abfrage alle `Name`\-Werte zurückgeben, die mit dem Wort `Down` beginnen, gefolgt von einem einzelnen Zeichen, das kein Unterstrich ist. Die Abfragen basieren auf dem AdventureWorks Sales\-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+## <a name="example"></a><span data-ttu-id="3c178-152">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3c178-152">Example</span></span>  
+ <span data-ttu-id="3c178-153">Die folgenden beiden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfragen die LIKE und ESCAPE-Operatoren, um festzustellen, ob eine bestimmte Zeichenfolge mit einem angegebenes Muster übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="3c178-153">The following two [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries use the LIKE and ESCAPE operators to determine whether a specific character string matches a specified pattern.</span></span> <span data-ttu-id="3c178-154">Die erste Abfrage sucht nach der `Name` , beginnt mit den Zeichen `Down_`.</span><span class="sxs-lookup"><span data-stu-id="3c178-154">The first query searches for the `Name` that starts with the characters `Down_`.</span></span> <span data-ttu-id="3c178-155">In dieser Abfrage wird die ESCAPE`_`-Option verwendet, da der Unterstrich () ein Platzhalterzeichen ist.</span><span class="sxs-lookup"><span data-stu-id="3c178-155">This query uses the ESCAPE option because the underscore (`_`) is a wildcard character.</span></span> <span data-ttu-id="3c178-156">Ohne Angeben der ESCAPE`Name`-Option würde die Abfrage alle `Down`-Werte zurückgeben, die mit dem Wort  beginnen, gefolgt von einem einzelnen Zeichen, das kein Unterstrich ist.</span><span class="sxs-lookup"><span data-stu-id="3c178-156">Without specifying the ESCAPE option, the query would search for any `Name` values that start with the word `Down` followed by any single character other than the underscore character.</span></span> <span data-ttu-id="3c178-157">Die Abfragen basieren auf dem AdventureWorks Sales-Modell.</span><span class="sxs-lookup"><span data-stu-id="3c178-157">The queries are based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="3c178-158">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="3c178-158">To compile and run this query, follow these steps:</span></span>  
   
-1.  Verwenden Sie das Verfahren unter [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType\-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  <span data-ttu-id="3c178-159">Verwenden Sie das Verfahren in [Vorgehensweise: Ausführen einer Abfrage, gibt PrimitiveType-Ergebnisse](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="3c178-159">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery`\-Methode:  
+2.  <span data-ttu-id="3c178-160">Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="3c178-160">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
-## Siehe auch  
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="3c178-161">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3c178-161">See Also</span></span>  
+ [<span data-ttu-id="3c178-162">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="3c178-162">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

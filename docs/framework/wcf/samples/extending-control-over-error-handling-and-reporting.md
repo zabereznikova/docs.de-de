@@ -1,32 +1,35 @@
 ---
-title: "Erweitern der Kontrolle &#252;ber Fehlerbehandlung und -meldung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erweitern der Kontrolle über Fehlerbehandlung und -meldung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: acd45c82983cb122844866b9db4a356b746a10eb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erweitern der Kontrolle &#252;ber Fehlerbehandlung und -meldung
-Dieses Beispiel veranschaulicht, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle erweitert werden kann.Das Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md) und fügt dem Dienst zusätzlichen Code zum Behandeln von Fehlern hinzu.Der Client erzwingt verschiedene Fehlerbedingungen.Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
+# <a name="extending-control-over-error-handling-and-reporting"></a><span data-ttu-id="1d9c0-102">Erweitern der Kontrolle über Fehlerbehandlung und -meldung</span><span class="sxs-lookup"><span data-stu-id="1d9c0-102">Extending Control Over Error Handling and Reporting</span></span>
+<span data-ttu-id="1d9c0-103">Dieses Beispiel veranschaulicht, wie die Kontrolle über die Verarbeitung und Meldung von Fehlern in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle erweitert werden kann.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-103">This sample demonstrates how to extend control over error handling and error reporting in a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service using the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.</span></span> <span data-ttu-id="1d9c0-104">Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) mit zusätzlicher Code hinzugefügt, mit dem Dienst, um Fehler zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) with some additional code added to the service to handle errors.</span></span> <span data-ttu-id="1d9c0-105">Der Client erzwingt verschiedene Fehlerbedingungen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-105">The client forces several error conditions.</span></span> <span data-ttu-id="1d9c0-106">Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-106">The service intercepts the errors and logs them in a file.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Erstellungsanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="1d9c0-107">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Dienste können Fehler abfangen, Verarbeitungen ausführen und beeinflussen, wie Fehler mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle gemeldet werden.Die Schnittstelle besitzt zwei Methoden, die implementiert werden können: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> und <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>.Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29>\-Methode können Sie eine Fehlermeldung, die bei einer Ausnahme generiert wird, hinzufügen, ändern oder unterdrücken.Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>\-Methode können Sie die Verarbeitung von Fehlern bei einem Fehlerereignis zulassen und steuern, ob eine weitere Fehlerbehandlung ausgeführt werden kann.  
+ <span data-ttu-id="1d9c0-108">Dienste können Fehler abfangen, Verarbeitungen ausführen und beeinflussen, wie Fehler mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle gemeldet werden.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-108">Services can intercept errors, perform processing, and affect how errors are reported using the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.</span></span> <span data-ttu-id="1d9c0-109">Die Schnittstelle besitzt zwei Methoden, die implementiert werden können: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> und <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-109">The interface has two methods that can be implemented: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> and <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>.</span></span> <span data-ttu-id="1d9c0-110">Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29>-Methode können Sie eine Fehlermeldung, die bei einer Ausnahme generiert wird, hinzufügen, ändern oder unterdrücken.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-110">The <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> method allows you to add, modify, or suppress a fault message that is generated in response to an exception.</span></span> <span data-ttu-id="1d9c0-111">Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode können Sie die Verarbeitung von Fehlern bei einem Fehlerereignis zulassen und steuern, ob eine weitere Fehlerbehandlung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-111">The <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> method allows error processing to take place in the event of an error and controls whether additional error handling can run.</span></span>  
   
- In diesem Beispiel implementiert der `CalculatorErrorHandler`\-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle.In der  
+ <span data-ttu-id="1d9c0-112">In diesem Beispiel implementiert der `CalculatorErrorHandler`-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-112">In this sample, the `CalculatorErrorHandler` type implements the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.</span></span> <span data-ttu-id="1d9c0-113">In der</span><span class="sxs-lookup"><span data-stu-id="1d9c0-113">In the</span></span>  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>\-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\\logs.Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
+ <span data-ttu-id="1d9c0-114"><xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\logs.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-114"><xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> method, the `CalculatorErrorHandler` writes a log of the error to an Error.txt text file in c:\logs.</span></span> <span data-ttu-id="1d9c0-115">Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-115">Note that the sample logs the fault and does not suppress it, allowing it to be reported back to the client.</span></span>  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -56,7 +59,7 @@ public class CalculatorErrorHandler : IErrorHandler
     }  
 ```  
   
- Das `ErrorBehaviorAttribute` dient als Mechanismus zum Registrieren eines Fehlerhandlers mit einem Dienst.Dieses Attribut nimmt einen einzelnen Typparameter entgegen.Dieser Typ sollte die <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle implementieren und einen öffentlichen, leeren Konstruktor besitzen.Das Attribut instanziiert dann eine Instanz dieses Fehlerhandlertyps und installiert sie im Dienst.Dazu wird die <xref:System.ServiceModel.Description.IServiceBehavior>\-Schnittstelle implementiert, und dann werden dem Dienst mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>\-Methode Instanzen des Fehlerhandlers hinzugefügt.  
+ <span data-ttu-id="1d9c0-116">Das `ErrorBehaviorAttribute` dient als Mechanismus zum Registrieren eines Fehlerhandlers mit einem Dienst.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-116">The `ErrorBehaviorAttribute` exists as a mechanism to register an error handler with a service.</span></span> <span data-ttu-id="1d9c0-117">Dieses Attribut nimmt einen einzelnen Typparameter entgegen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-117">This attribute takes a single type parameter.</span></span> <span data-ttu-id="1d9c0-118">Dieser Typ sollte die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle implementieren und einen öffentlichen, leeren Konstruktor besitzen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-118">That type should implement the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface and should have a public, empty constructor.</span></span> <span data-ttu-id="1d9c0-119">Das Attribut instanziiert dann eine Instanz dieses Fehlerhandlertyps und installiert sie im Dienst.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-119">The attribute then instantiates an instance of that error handler type and installs it into the service.</span></span> <span data-ttu-id="1d9c0-120">Dazu wird die <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle implementiert, und dann werden dem Dienst mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>-Methode Instanzen des Fehlerhandlers hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-120">It does this by implementing the <xref:System.ServiceModel.Description.IServiceBehavior> interface and then using the <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> method to add instances of the error handler to the service.</span></span>  
   
 ```  
 // This attribute can be used to install a custom error handler for a service.  
@@ -103,7 +106,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
 }  
 ```  
   
- Das Beispiel implementiert einen Rechnerdienst.Der Client verursacht im Dienst absichtlich zwei Fehler, indem er Parameter mit ungültigen Werten angibt.Der `CalculatorErrorHandler` protokolliert mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle die Fehler in einer lokalen Datei und lässt dann zu, dass sie wieder zurück an den Client gemeldet werden.Der Client erzwingt eine Division durch Null und einen Argument\-außerhalb\-des\-Bereichs\-Zustand.  
+ <span data-ttu-id="1d9c0-121">Das Beispiel implementiert einen Rechnerdienst.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-121">The sample implements a calculator service.</span></span> <span data-ttu-id="1d9c0-122">Der Client verursacht im Dienst absichtlich zwei Fehler, indem er Parameter mit ungültigen Werten angibt.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-122">The client deliberately causes two errors to occur on the service by providing parameters with illegal values.</span></span> <span data-ttu-id="1d9c0-123">Der `CalculatorErrorHandler` protokolliert mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle die Fehler in einer lokalen Datei und lässt dann zu, dass sie wieder zurück an den Client gemeldet werden.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-123">The `CalculatorErrorHandler` uses the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface to log the errors to a local file and then allows them to be reported back to the client.</span></span> <span data-ttu-id="1d9c0-124">Der Client erzwingt eine Division durch Null und einen Argument-außerhalb-des-Bereichs-Zustand.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-124">The client forces a divide by zero and an argument-out-of-range condition.</span></span>  
   
 ```  
 try  
@@ -125,7 +128,7 @@ catch (Exception e)
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Sie sehen, dass die Division durch Null und die Argument\-außerhalb\-des\-Bereichs\-Zustände als Fehler gemeldet werden.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="1d9c0-125">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-125">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="1d9c0-126">Sie sehen, dass die Division durch Null und die Argument-außerhalb-des-Bereichs-Zustände als Fehler gemeldet werden.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-126">You see the division by zero and the argument-out-of-range conditions being reported as faults.</span></span> <span data-ttu-id="1d9c0-127">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-127">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(15,3) = 18  
@@ -139,30 +142,30 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Die Datei "C:\\logs\\errors.txt" enthält die vom Dienst zu den Fehlern protokollierten Informationen.Beachten Sie, dass Sie sicherstellen müssen, dass der Prozess, unter dem der Dienst ausgeführt wird \(meist ASP.NET oder Network Service\), über Schreibberechtigungen für das Verzeichnis verfügt, damit der Dienst in das Verzeichnis schreiben kann.  
+ <span data-ttu-id="1d9c0-128">Die Datei "C:\logs\errors.txt" enthält die vom Dienst zu den Fehlern protokollierten Informationen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-128">The file c:\logs\errors.txt contains the information logged about the errors by the service.</span></span> <span data-ttu-id="1d9c0-129">Beachten Sie, dass Sie sicherstellen müssen, dass der Prozess, unter dem der Dienst ausgeführt wird (meist ASP.NET oder Network Service), über Schreibberechtigungen für das Verzeichnis verfügt, damit der Dienst in das Verzeichnis schreiben kann.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-129">Note that for the service to write to the directory you must make sure that the process under which the service is running, (typically ASP.NET or Network Service), has the permission to write to the directory.</span></span>  
   
 ```  
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="1d9c0-130">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="1d9c0-130">To set up, build, and run the sample</span></span>  
   
-1.  Vergewissern Sie sich, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="1d9c0-131">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1d9c0-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Folgen Sie zum Erstellen der Lösung den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  <span data-ttu-id="1d9c0-132">Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1d9c0-132">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Vergewissern Sie sich, dass Sie das Verzeichnis "c:\\logs" für die Datei "error.txt" erstellt haben.Sie können auch den in `CalculatorErrorHandler.HandleError` verwendeten Dateinamen ändern.  
+3.  <span data-ttu-id="1d9c0-133">Vergewissern Sie sich, dass Sie das Verzeichnis "c:\logs" für die Datei "error.txt" erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-133">Ensure you have created the c:\logs directory for the error.txt file.</span></span> <span data-ttu-id="1d9c0-134">Sie können auch den in `CalculatorErrorHandler.HandleError` verwendeten Dateinamen ändern.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-134">Or modify the file name used in `CalculatorErrorHandler.HandleError`.</span></span>  
   
-4.  Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder über Computer hinweg ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+4.  <span data-ttu-id="1d9c0-135">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1d9c0-135">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="1d9c0-136">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-136">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1d9c0-137">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-137">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="1d9c0-138">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-138">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1d9c0-139">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="1d9c0-139">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="1d9c0-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1d9c0-140">See Also</span></span>

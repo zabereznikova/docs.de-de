@@ -1,78 +1,84 @@
 ---
-title: "Gewusst wie: Bearbeiten der Spalten einer Tabelle mit der Columns-Eigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Columns-Eigenschaft"
-  - "Dokumente, Bearbeiten von Tabellenspalten"
-  - "Eigenschaften, Spalten, Bearbeiten von Tabellenspalten"
-  - "Tabellen, Bearbeiten von Spalten"
+title: 'Vorgehensweise: Bearbeiten einer Tabelle &#39; s Spalten durch die Spalten-Eigenschaft'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], manipulating table columns
+- properties [WPF], Columns [WPF], manipulating table columns
+- tables [WPF], manipulating columns
+- Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d0f15339b829335798d7ee21dcc90b81cb536cf2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Bearbeiten der Spalten einer Tabelle mit der Columns-Eigenschaft
-In diesem Beispiel werden einige Routinevorgänge veranschaulicht, die für die Spalten einer Tabelle mit der <xref:System.Windows.Documents.Table.Columns%2A>\-Eigenschaft ausgeführt werden können.  
+# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a><span data-ttu-id="c48bd-102">Vorgehensweise: Bearbeiten einer Tabelle &#39; s Spalten durch die Spalten-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c48bd-102">How to: Manipulate a Table&#39;s Columns through the Columns Property</span></span>
+<span data-ttu-id="c48bd-103">Dieses Beispiel zeigt einige der häufigeren Vorgänge, die auf Spalten einer Tabelle mit ausgeführt werden, können die <xref:System.Windows.Documents.Table.Columns%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="c48bd-103">This example demonstrates some of the more common operations that can be performed on a table's columns through the <xref:System.Windows.Documents.Table.Columns%2A> property.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird eine neue Tabelle erstellt. Anschließend wird die <xref:System.Windows.Documents.TableColumnCollection.Add%2A>\-Methode verwendet, um Spalten zur <xref:System.Windows.Documents.Table.Columns%2A>\-Auflistung der Tabelle hinzuzufügen.  
+## <a name="example"></a><span data-ttu-id="c48bd-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-104">Example</span></span>  
+ <span data-ttu-id="c48bd-105">Im folgenden Beispiel wird eine neue Tabelle erstellt und verwendet dann die <xref:System.Windows.Documents.TableColumnCollection.Add%2A> Methode, um die Tabelle Spalten hinzugefügt <xref:System.Windows.Documents.Table.Columns%2A> Auflistung.</span><span class="sxs-lookup"><span data-stu-id="c48bd-105">The following example creates a new table and then uses the <xref:System.Windows.Documents.TableColumnCollection.Add%2A> method to add columns to the table's <xref:System.Windows.Documents.Table.Columns%2A> collection.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_add)]
  [!code-vb[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_add)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine neue <xref:System.Windows.Documents.TableColumn> eingefügt.  Die neue Spalte wird an Indexposition 0 eingefügt, wodurch sie zur neuen ersten Spalte in der Tabelle wird.  
+## <a name="example"></a><span data-ttu-id="c48bd-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-106">Example</span></span>  
+ <span data-ttu-id="c48bd-107">Das folgende Beispiel fügt eine neue <xref:System.Windows.Documents.TableColumn>.</span><span class="sxs-lookup"><span data-stu-id="c48bd-107">The following example inserts a new <xref:System.Windows.Documents.TableColumn>.</span></span>  <span data-ttu-id="c48bd-108">Die neue Spalte wird an Indexposition 0, wodurch die erste neue Spalte in der Tabelle eingefügt.</span><span class="sxs-lookup"><span data-stu-id="c48bd-108">The new column is inserted at index position 0, making it the new first column in the table.</span></span>  
   
 > [!NOTE]
->  Die <xref:System.Windows.Documents.TableColumnCollection>\-Auflistung verwendet die nullbasierte Standardindizierung.  
+>  <span data-ttu-id="c48bd-109">Die <xref:System.Windows.Documents.TableColumnCollection> Auflistung verwendet standardmäßige nullbasierter Indizierung.</span><span class="sxs-lookup"><span data-stu-id="c48bd-109">The <xref:System.Windows.Documents.TableColumnCollection> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Insert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_insert)]
  [!code-vb[TableSnippets2#_Table_Columns_Insert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_insert)]  
   
-## Beispiel  
- Im folgenden Beispiel wird auf einige beliebige Eigenschaften in Spalten in der <xref:System.Windows.Documents.TableColumnCollection>\-Auflistung zugriffen, wobei auf bestimmte Spalten über den Index verwiesen wird.  
+## <a name="example"></a><span data-ttu-id="c48bd-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-110">Example</span></span>  
+ <span data-ttu-id="c48bd-111">Das folgende Beispiel greift auf einige beliebigen Eigenschaften für Spalten in der <xref:System.Windows.Documents.TableColumnCollection> Auflistung, die auf bestimmte Spalten über einen Index verwiesen.</span><span class="sxs-lookup"><span data-stu-id="c48bd-111">The following example accesses some arbitrary properties on columns in the <xref:System.Windows.Documents.TableColumnCollection> collection, referring to particular columns by index.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_manip)]
  [!code-vb[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_manip)]  
   
-## Beispiel  
- Im folgenden Beispiel wird die Anzahl der momentan von der Tabelle gehosteten Spalten abgerufen.  
+## <a name="example"></a><span data-ttu-id="c48bd-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-112">Example</span></span>  
+ <span data-ttu-id="c48bd-113">Im folgende Beispiel ruft die Anzahl der derzeit von der Tabelle gehosteten Spalten ab.</span><span class="sxs-lookup"><span data-stu-id="c48bd-113">The following example gets the number of columns currently hosted by the table.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Count](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_count)]
  [!code-vb[TableSnippets2#_Table_Columns_Count](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_count)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine bestimmte Spalte nach Verweis entfernt.  
+## <a name="example"></a><span data-ttu-id="c48bd-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-114">Example</span></span>  
+ <span data-ttu-id="c48bd-115">Im folgenden Beispiel wird eine bestimmte Spalte als Verweis an.</span><span class="sxs-lookup"><span data-stu-id="c48bd-115">The following example removes a particular column by reference.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_DelRef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_delref)]
  [!code-vb[TableSnippets2#_Table_Columns_DelRef](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_delref)]  
   
-## Beispiel  
- Im folgenden Beispiel wird eine bestimmte Spalte nach Index entfernt.  
+## <a name="example"></a><span data-ttu-id="c48bd-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-116">Example</span></span>  
+ <span data-ttu-id="c48bd-117">Im folgende Beispiel wird eine bestimmte Spalte nach Index entfernt.</span><span class="sxs-lookup"><span data-stu-id="c48bd-117">The following example removes a particular column by index.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_DelIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_delindex)]
  [!code-vb[TableSnippets2#_Table_Columns_DelIndex](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_delindex)]  
   
-## Beispiel  
- Im folgenden Beispiel werden alle Spalten aus der Spaltenauflistung der Tabelle entfernt.  
+## <a name="example"></a><span data-ttu-id="c48bd-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c48bd-118">Example</span></span>  
+ <span data-ttu-id="c48bd-119">Im folgende Beispiel entfernt alle Spalten aus der Tabelle Columns-Auflistung.</span><span class="sxs-lookup"><span data-stu-id="c48bd-119">The following example removes all columns from the table's columns collection.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_clear)]
  [!code-vb[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_clear)]  
   
-## Siehe auch  
- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)   
- [Definieren einer Tabelle mit XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)   
- [Programmgesteuertes Erstellen einer Tabelle](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)   
- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups\-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)   
- [Bearbeiten von einem FlowDocument mit der Blocks\-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)   
- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups\-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a><span data-ttu-id="c48bd-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c48bd-120">See Also</span></span>  
+ [<span data-ttu-id="c48bd-121">Übersicht über Tabellen</span><span class="sxs-lookup"><span data-stu-id="c48bd-121">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="c48bd-122">Definieren einer Tabelle mit XAML</span><span class="sxs-lookup"><span data-stu-id="c48bd-122">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="c48bd-123">Programmgesteuertes Erstellen einer Tabelle</span><span class="sxs-lookup"><span data-stu-id="c48bd-123">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
+ [<span data-ttu-id="c48bd-124">Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c48bd-124">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="c48bd-125">Bearbeiten von einem FlowDocument mit der Blocks-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c48bd-125">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="c48bd-126">Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="c48bd-126">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

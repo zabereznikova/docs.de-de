@@ -1,36 +1,39 @@
 ---
-title: "Windows Workflow Foundation-Datenmodell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Programmieren [WF], Datenmodell"
+title: Windows Workflow Foundation-Datenmodell
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 019e4fd5dc506970829fd9505038b71b23574c02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Workflow Foundation-Datenmodell
-Das Windows Workflow Foundation\-Datenmodell besteht aus drei Einzelkonzepten: Variablen, Argumenten und Ausdrücken.Variablen stellen den Speicher von Daten dar, während Argumente den Datenstrom in und aus einer Aktivität darstellen.Argumente werden gebunden \(Zuweisen eines Werts\), indem Ausdrücke verwendet werden, die auf Variablen verweisen können.  
+# <a name="windows-workflow-foundation-data-model"></a><span data-ttu-id="93346-102">Windows Workflow Foundation-Datenmodell</span><span class="sxs-lookup"><span data-stu-id="93346-102">Windows Workflow Foundation Data Model</span></span>
+<span data-ttu-id="93346-103">Das Windows Workflow Foundation-Datenmodell besteht aus drei Einzelkonzepten: Variablen, Argumenten und Ausdrücken.</span><span class="sxs-lookup"><span data-stu-id="93346-103">The Windows Workflow Foundation data model is composed of three concepts: variables, arguments, and expressions.</span></span> <span data-ttu-id="93346-104">Variablen stellen den Speicher von Daten dar, während Argumente den Datenstrom in und aus einer Aktivität darstellen.</span><span class="sxs-lookup"><span data-stu-id="93346-104">Variables represent the storage of data and arguments represent the flow of data into and out of an activity.</span></span> <span data-ttu-id="93346-105">Argumente werden gebunden (Zuweisen eines Werts), indem Ausdrücke verwendet werden, die auf Variablen verweisen können.</span><span class="sxs-lookup"><span data-stu-id="93346-105">Arguments are bound (assigned a value) using expressions that may reference variables.</span></span>  
   
-## In diesem Abschnitt  
- [Variablen und Argumente](../../../docs/framework/windows-workflow-foundation//variables-and-arguments.md).  
- Beschreibt die Grundlagen von Variablen und Argumenten und ihre Verwendung.  
+## <a name="in-this-section"></a><span data-ttu-id="93346-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="93346-106">In This Section</span></span>  
+ <span data-ttu-id="93346-107">[Variablen und Argumente](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="93346-107">[Variables and Arguments](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span></span>  
+ <span data-ttu-id="93346-108">Beschreibt die Grundlagen von Variablen und Argumenten und ihre Verwendung.</span><span class="sxs-lookup"><span data-stu-id="93346-108">Describes the concepts of variables and arguments and how they are used.</span></span>  
   
- [Ausdrücke](../../../docs/framework/windows-workflow-foundation//expressions.md)  
- Beschreibt Ausdrücke und ihre Verwendung bei der Workflowentwicklung.  
+ [<span data-ttu-id="93346-109">Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="93346-109">Expressions</span></span>](../../../docs/framework/windows-workflow-foundation/expressions.md)  
+ <span data-ttu-id="93346-110">Beschreibt Ausdrücke und ihre Verwendung bei der Workflowentwicklung.</span><span class="sxs-lookup"><span data-stu-id="93346-110">Describes expressions and how they are used in workflow development.</span></span>  
   
- [C\#\-Ausdrücke](../../../docs/framework/windows-workflow-foundation//csharp-expressions.md)  
- Beschreibt die mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten C\#\-Ausdrücke in Workflows.  
+ [<span data-ttu-id="93346-111">C#-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="93346-111">C# Expressions</span></span>](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)  
+ <span data-ttu-id="93346-112">Beschreibt die mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten C#-Ausdrücke in Workflows.</span><span class="sxs-lookup"><span data-stu-id="93346-112">Describes C# expressions in workflows, introduced with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>  
   
- [Eigenschaften und Argumente](../../../docs/framework/windows-workflow-foundation//properties-vs-arguments.md)  
- Beschreibt, wie der richtige Typ für die Aktivitätseingabe ausgewählt wird.  
+ [<span data-ttu-id="93346-113">Eigenschaften vs. Argumente</span><span class="sxs-lookup"><span data-stu-id="93346-113">Properties vs. Arguments</span></span>](../../../docs/framework/windows-workflow-foundation/properties-vs-arguments.md)  
+ <span data-ttu-id="93346-114">Beschreibt, wie der richtige Typ für die Aktivitätseingabe ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="93346-114">Describes how to select which type to use for activity input.</span></span>  
   
- [Verfügbarmachen von Daten mit CacheMetadata](../../../docs/framework/windows-workflow-foundation//exposing-data-with-cachemetadata.md)  
- Beschreibt, wie ein benutzerdefinierter Metadatensatz verfügbar gemacht wird, der sich auf die Member einer ausgeführten Aktivität bezieht.
+ [<span data-ttu-id="93346-115">Verfügbarmachen von Daten mit CacheMetadata</span><span class="sxs-lookup"><span data-stu-id="93346-115">Exposing data with CacheMetadata</span></span>](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md)  
+ <span data-ttu-id="93346-116">Beschreibt, wie ein benutzerdefinierter Metadatensatz verfügbar gemacht wird, der sich auf die Member einer ausgeführten Aktivität bezieht.</span><span class="sxs-lookup"><span data-stu-id="93346-116">Describes how to expose a custom set of metadata about an executing activity's members.</span></span>

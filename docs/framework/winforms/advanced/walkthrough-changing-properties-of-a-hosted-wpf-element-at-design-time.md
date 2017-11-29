@@ -1,99 +1,100 @@
 ---
-title: "Exemplarische Vorgehensweise: &#196;ndern von Eigenschaften eines gehosteten WPF-Elements zur Entwurfszeit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interoperabilität [WPF]"
-  - "Windows Forms, Ändern der Eigenschaften von WPF-Inhalt zur Entwurfszeit"
-  - "WPF-Inhalt [Windows Forms], Ändern der Eigenschaften zur Entwurfszeit"
-  - "WPF-Inhalt, Hosten in Windows Forms"
+title: "Exemplarische Vorgehensweise: Ändern von Eigenschaften eines gehosteten WPF-Elements zur Entwurfszeit"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF content [Windows Forms], changing properties at design time
+- Windows Forms, changing properties of WPF content at design time
+- WPF content [Windows Forms], hosting in Windows Forms
+- interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 522c47865294b7313b0b5e745d40726996230c49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: &#196;ndern von Eigenschaften eines gehosteten WPF-Elements zur Entwurfszeit
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswerte eines WPF\-Steuerelements \(Windows Presentation Foundation\) geändert werden, das in einem Windows Form\-Objekt gehostet wird.  
+# <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a><span data-ttu-id="f42a3-102">Exemplarische Vorgehensweise: Ändern von Eigenschaften eines gehosteten WPF-Elements zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="f42a3-102">Walkthrough: Changing Properties of a Hosted WPF Element at Design Time</span></span>
+<span data-ttu-id="f42a3-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswerte eines WPF-Steuerelements (Windows Presentation Foundation) geändert werden, das in einem Windows Form-Objekt gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="f42a3-103">This walkthrough shows you how to change property values of a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>  
   
- Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:  
+ <span data-ttu-id="f42a3-104">Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="f42a3-104">In this walkthrough, you perform the following tasks:</span></span>  
   
--   Erstellen eines Projekts  
+-   <span data-ttu-id="f42a3-105">Erstellen eines Projekts</span><span class="sxs-lookup"><span data-stu-id="f42a3-105">Create the project.</span></span>  
   
--   Erstellen des WPF\-Steuerelements  
+-   <span data-ttu-id="f42a3-106">Erstellen des WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="f42a3-106">Create the WPF control.</span></span>  
   
--   Hosten der WPF\-Steuerelemente in einem Windows Form\-Objekt  
+-   <span data-ttu-id="f42a3-107">Hosten der WPF-Steuerelemente in einem Windows Form-Objekt</span><span class="sxs-lookup"><span data-stu-id="f42a3-107">Host the WPF controls on a Windows Form.</span></span>  
   
--   Verwenden des WPF\-Designers für Visual Studio, um Eigenschaftswerte zu ändern  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren**, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## Vorbereitungsmaßnahmen  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
-  
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
-  
-## Erstellen des Projekts  
- Zunächst muss das Windows Forms\-Projekt erstellt werden.  
+-   <span data-ttu-id="f42a3-108">Verwenden des WPF-Designers für Visual Studio, um Eigenschaftswerte zu ändern</span><span class="sxs-lookup"><span data-stu-id="f42a3-108">Use the WPF Designer for Visual Studio to change property values.</span></span>  
   
 > [!NOTE]
->  Beim Hosten von WPF\-Inhalt werden nur C\#\- und Visual Basic\-Projekte unterstützt.  
+>  <span data-ttu-id="f42a3-109">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="f42a3-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f42a3-110">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="f42a3-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f42a3-111">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="f42a3-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-#### So erstellen Sie das Projekt  
+## <a name="prerequisites"></a><span data-ttu-id="f42a3-112">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="f42a3-112">Prerequisites</span></span>  
+ <span data-ttu-id="f42a3-113">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="f42a3-113">You need the following components to complete this walkthrough:</span></span>  
   
--   Erstellen Sie in Visual Basic oder Visual C\# ein neues Windows Forms\-Anwendungsprojekt mit dem Namen `WpfHost`.  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]<span data-ttu-id="f42a3-114">.</span><span class="sxs-lookup"><span data-stu-id="f42a3-114">.</span></span>  
   
-## Erstellen des WPF\-Steuerelements  
- Nachdem Sie dem Projekt ein WPF\-Steuerelement hinzugefügt haben, können Sie dieses auf dem Formular anordnen.  
+## <a name="creating-the-project"></a><span data-ttu-id="f42a3-115">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="f42a3-115">Creating the Project</span></span>  
+ <span data-ttu-id="f42a3-116">Zunächst muss das Windows Forms-Projekt erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="f42a3-116">The first step is to create the Windows Forms project.</span></span>  
   
-#### So erstellen Sie ein WPF\-Steuerelement  
+> [!NOTE]
+>  <span data-ttu-id="f42a3-117">Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f42a3-117">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-1.  Fügen Sie dem Projekt ein neues WPF\-<xref:System.Windows.Controls.UserControl>\-Objekt hinzu.  Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF\-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+#### <a name="to-create-the-project"></a><span data-ttu-id="f42a3-118">So erstellen Sie das Projekt</span><span class="sxs-lookup"><span data-stu-id="f42a3-118">To create the project</span></span>  
   
-2.  Legen Sie im **Eigenschaftenfenster** den Wert der <xref:System.Windows.Controls.Control.Background%2A>\-Eigenschaft auf `Blue` fest.  
+-   <span data-ttu-id="f42a3-119">Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `WpfHost`.</span><span class="sxs-lookup"><span data-stu-id="f42a3-119">Create a new Windows Forms Application project in Visual Basic or Visual C# named `WpfHost`.</span></span>  
   
-3.  Erstellen Sie das Projekt.  
+## <a name="creating-the-wpf-control"></a><span data-ttu-id="f42a3-120">Erstellen des WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="f42a3-120">Creating the WPF Control</span></span>  
+ <span data-ttu-id="f42a3-121">Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses auf dem Formular anordnen.</span><span class="sxs-lookup"><span data-stu-id="f42a3-121">After you add a WPF control to the project, you can arrange it on the form.</span></span>  
   
-## Ändern von Eigenschaftswerten für das WPF\-Steuerelement  
- Mit dem <xref:System.Windows.Forms.Integration.ElementHost>\-Smarttag lassen sich Eigenschaften von gehostetem WPF\-Inhalt einfach ändern, indem der WPF\-Designer verwendet wird.  
+#### <a name="to-create-wpf-controls"></a><span data-ttu-id="f42a3-122">So erstellen Sie ein WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f42a3-122">To create WPF controls</span></span>  
   
-#### So hosten Sie ein WPF\-Steuerelement  
+1.  <span data-ttu-id="f42a3-123">Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="f42a3-123">Add a new WPF <xref:System.Windows.Controls.UserControl> to the project.</span></span> <span data-ttu-id="f42a3-124">Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp.</span><span class="sxs-lookup"><span data-stu-id="f42a3-124">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="f42a3-125">Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="f42a3-125">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-1.  Öffnen Sie `Form1` im Windows Forms\-Designer.  
+2.  <span data-ttu-id="f42a3-126">In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Blue`.</span><span class="sxs-lookup"><span data-stu-id="f42a3-126">In the **Properties** window, set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Blue`.</span></span>  
   
-2.  Doppelklicken Sie in der **Toolbox** auf der Registerkarte **WPF\-Benutzersteuerelemente** auf `UserControl1`, damit auf dem Formular eine Instanz von `UserControl1` erstellt wird.  
+3.  <span data-ttu-id="f42a3-127">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="f42a3-127">Build the project.</span></span>  
   
-     Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>\-Steuerelement namens `elementHost1` gehostet.  
+## <a name="changing-property-values-on-the-wpf-control"></a><span data-ttu-id="f42a3-128">Ändern von Eigenschaftswerten für das WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f42a3-128">Changing Property Values on the WPF Control</span></span>  
+ <span data-ttu-id="f42a3-129">Mit dem <xref:System.Windows.Forms.Integration.ElementHost>-Smarttag lassen sich Eigenschaften von gehostetem WPF-Inhalt einfach ändern, indem der WPF-Designer verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f42a3-129">The <xref:System.Windows.Forms.Integration.ElementHost> smart tag makes it easy to change properties of hosted WPF content by using the WPF Designer.</span></span>  
   
-3.  Wählen Sie im Smarttagbereich **ElementHost\-Aufgaben** die Option **Gehosteten Inhalt bearbeiten** aus.  
+#### <a name="to-host-a-wpf-control"></a><span data-ttu-id="f42a3-130">So hosten Sie ein WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f42a3-130">To host a WPF control</span></span>  
   
-     Die Datei "UserControl1.xaml" wird im WPF\-Designer geöffnet.  
+1.  <span data-ttu-id="f42a3-131">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="f42a3-131">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-4.  Legen Sie im **Eigenschaftenfenster** den Wert der <xref:System.Windows.Controls.Control.Background%2A>\-Eigenschaft auf `Red` fest.  
+2.  <span data-ttu-id="f42a3-132">In der **Toolbox**in der **WPF-Benutzersteuerelemente** Registerkarte, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` auf dem Formular.</span><span class="sxs-lookup"><span data-stu-id="f42a3-132">In the **Toolbox**, in the **WPF User Controls** tab, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-5.  Erstellen Sie das Projekt neu.  
+     <span data-ttu-id="f42a3-133">Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.</span><span class="sxs-lookup"><span data-stu-id="f42a3-133">The instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-6.  Öffnen Sie `Form1` im Windows Forms\-Designer.  
+3.  <span data-ttu-id="f42a3-134">In der **ElementHost-Aufgaben** wählen Sie im Smarttagbereich **gehosteten Inhalt bearbeiten**.</span><span class="sxs-lookup"><span data-stu-id="f42a3-134">In the **ElementHost Tasks** smart tag panel, select **Edit Hosted Content**.</span></span>  
   
-     Die Instanz von `UserControl1` hat einen roten Hintergrund.  
+     <span data-ttu-id="f42a3-135">Die Datei "UserControl1.xaml" wird im WPF-Designer geöffnet.</span><span class="sxs-lookup"><span data-stu-id="f42a3-135">UserControl1.xaml opens in the WPF Designer.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
- [Verwenden von WPF\-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
- [WPF\-Designer](http://msdn.microsoft.com/de-de/c6c65214-8411-4e16-b254-163ed4099c26)
+4.  <span data-ttu-id="f42a3-136">In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Red`.</span><span class="sxs-lookup"><span data-stu-id="f42a3-136">In the **Properties** window, set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Red`.</span></span>  
+  
+5.  <span data-ttu-id="f42a3-137">Erstellen Sie das Projekt neu.</span><span class="sxs-lookup"><span data-stu-id="f42a3-137">Rebuild the project.</span></span>  
+  
+6.  <span data-ttu-id="f42a3-138">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="f42a3-138">Open `Form1` in the Windows Forms Designer.</span></span>  
+  
+     <span data-ttu-id="f42a3-139">Die Instanz von `UserControl1` hat einen roten Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="f42a3-139">The instance of `UserControl1` has a red background.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f42a3-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f42a3-140">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="f42a3-141">Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f42a3-141">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="f42a3-142">Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="f42a3-142">How to: Align a Control to the Edges of Forms at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ [<span data-ttu-id="f42a3-143">Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien</span><span class="sxs-lookup"><span data-stu-id="f42a3-143">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="f42a3-144">Migration und Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="f42a3-144">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="f42a3-145">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f42a3-145">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="f42a3-146">WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="f42a3-146">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

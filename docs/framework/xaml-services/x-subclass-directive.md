@@ -1,68 +1,71 @@
 ---
-title: "x:Subclass Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Subclass"
-  - "xSubclass"
-  - "x:Subclass"
-helpviewer_keywords: 
-  - "x:Subclass attribute [XAML Services]"
-  - "XAML [XAML Services], x:Subclass attribute"
-  - "Subclass attribute in XAML [XAML Services]"
+title: x:Subclass-Anweisung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Subclass
+- xSubclass
+- x:Subclass
+helpviewer_keywords:
+- x:Subclass attribute [XAML Services]
+- XAML [XAML Services], x:Subclass attribute
+- Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:Subclass Directive
-Ändert das XAML\-Markupkompilierungsverhalten, wenn `x:Class` ebenfalls bereitgestellt wird.  Anstatt eine partielle Klasse basierend auf der `x:Class`\-Klasse zu erstellen, wird die angegebene `x:Class` als Zwischenklasse erstellt, und es wird dann erwartet, dass die von Ihnen bereitgestellte abgeleitete Klasse auf `x:Class` basiert.  
+# <a name="xsubclass-directive"></a><span data-ttu-id="2b617-102">x:Subclass-Anweisung</span><span class="sxs-lookup"><span data-stu-id="2b617-102">x:Subclass Directive</span></span>
+<span data-ttu-id="2b617-103">Ändert die Verwendung von XAML-Markup kompilieren Verhalten beim `x:Class` ebenfalls bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="2b617-103">Modifies XAML markup compile behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="2b617-104">Statt eine partielle Klasse, die basierend auf `x:Class`, bereitgestellten `x:Class` wird als eine Zwischenklasse erstellt und die angegebene abgeleitete Klasse wird dann auf der Grundlage erwartet `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="2b617-104">Instead of creating a partial class that is based on `x:Class`, the provided `x:Class` is created as an intermediate class, and then your provided derived class is expected to be based on `x:Class`.</span></span>  
   
-## Verwendung von XAML\-Attributen  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="2b617-105">Verwendung von XAML-Attributen</span><span class="sxs-lookup"><span data-stu-id="2b617-105">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
+<object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
    ...  
 </object>  
 ```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a><span data-ttu-id="2b617-106">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="2b617-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`namespace`|Optional.  Gibt einen CLR\-Namespace an, der`classname` enthält.  Wenn `namespace` angegeben ist, werden `namespace` und `classname` durch einen Punkt \(.\) getrennt.|  
-|`classname`|Erforderlich.  Gibt den CLR\-Namen der partiellen Klasse an, die den geladenen XAML\-Code und Ihren CodeBehind für das XAML verbindet.  Siehe Hinweise.|  
-|`subclassNamespace`|Optional.  Kann sich von `namespace` unterscheiden, wenn ein Namespace den anderen auflösen kann.  Gibt einen CLR\-Namespace an, der`subclassName` enthält.  Wenn `subclassName` angegeben ist, werden `subclassNamespace` und `subclassName` durch einen Punkt \(.\) getrennt.|  
-|`subclassName`|Erforderlich.  Gibt den CLR\-Namen der Unterklasse an.|  
+|`namespace`|<span data-ttu-id="2b617-107">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="2b617-107">Optional.</span></span> <span data-ttu-id="2b617-108">Gibt einen CLR-Namespace, die enthält `classname`.</span><span class="sxs-lookup"><span data-stu-id="2b617-108">Specifies a CLR namespace that contains `classname`.</span></span> <span data-ttu-id="2b617-109">Wenn `namespace` angegeben ist, wird ein Punkt (.) trennt `namespace` und `classname`.</span><span class="sxs-lookup"><span data-stu-id="2b617-109">If `namespace` is specified, a dot (.) separates `namespace` and `classname`.</span></span>|  
+|`classname`|<span data-ttu-id="2b617-110">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="2b617-110">Required.</span></span> <span data-ttu-id="2b617-111">Gibt den CLR-Namen der partiellen Klasse, die die geladene XAML und der Code-Behind für XAML verbindet.</span><span class="sxs-lookup"><span data-stu-id="2b617-111">Specifies the CLR name of the partial class that connects the loaded XAML and your code-behind for that XAML.</span></span> <span data-ttu-id="2b617-112">Siehe Hinweise.</span><span class="sxs-lookup"><span data-stu-id="2b617-112">See Remarks.</span></span>|  
+|`subclassNamespace`|<span data-ttu-id="2b617-113">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="2b617-113">Optional.</span></span> <span data-ttu-id="2b617-114">Kann von anderen `namespace` Wenn jeden Namespace, die andere auflösen kann.</span><span class="sxs-lookup"><span data-stu-id="2b617-114">Can be different from `namespace` if each namespace can resolve the other.</span></span> <span data-ttu-id="2b617-115">Gibt einen CLR-Namespace, die enthält `subclassName`.</span><span class="sxs-lookup"><span data-stu-id="2b617-115">Specifies a CLR namespace that contains `subclassName`.</span></span> <span data-ttu-id="2b617-116">Wenn `subclassName` angegeben ist, wird ein Punkt (.) trennt `subclassNamespace` und `subclassName`.</span><span class="sxs-lookup"><span data-stu-id="2b617-116">If `subclassName` is specified, a dot (.) separates `subclassNamespace` and `subclassName`.</span></span>|  
+|`subclassName`|<span data-ttu-id="2b617-117">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="2b617-117">Required.</span></span> <span data-ttu-id="2b617-118">Gibt den CLR-Namen der Unterklasse.</span><span class="sxs-lookup"><span data-stu-id="2b617-118">Specifies the CLR name of the subclass.</span></span>|  
   
-## Abhängigkeiten  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) muss auch auf demselben Objekt bereitgestellt werden, und dieses Objekt muss das Stammelement der XAML\-Produktion sein.  
+## <a name="dependencies"></a><span data-ttu-id="2b617-119">Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="2b617-119">Dependencies</span></span>  
+ <span data-ttu-id="2b617-120">[X: Class-Direktive](../../../docs/framework/xaml-services/x-class-directive.md) muss auch auf das gleiche Objekt angegeben werden, und dieses Objekt muss das Stammelement der XAML-Produktion.</span><span class="sxs-lookup"><span data-stu-id="2b617-120">[x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same object, and that object must be the root element of the XAML production.</span></span>  
   
-## Hinweise  
- Die Verwendung von `x:Subclass` ist hauptsächlich für Sprachen bestimmt, die keine Deklarationen für partielle Klassen unterstützen.  
+## <a name="remarks"></a><span data-ttu-id="2b617-121">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2b617-121">Remarks</span></span>  
+ <span data-ttu-id="2b617-122">`x:Subclass`Verwendung dient in erster Linie für Sprachen, die partiellen Klassendeklarationen nicht unterstützen.</span><span class="sxs-lookup"><span data-stu-id="2b617-122">`x:Subclass` usage is primarily intended for languages that do not support partial class declarations.</span></span>  
   
- Die als `x:Subclass` verwendete Klasse kann keine geschachtelte Klasse sein, und `x:Subclass` muss auf das Stammobjekt verweisen, wie im Abschnitt "Abhängigkeiten" erklärt.  
+ <span data-ttu-id="2b617-123">Die Klasse als verwendet die `x:Subclass` nicht mit eine geschachtelte Klasse und `x:Subclass` muss auf das Stammobjekt verweisen, wie im Abschnitt "Abhängigkeiten" erläutert.</span><span class="sxs-lookup"><span data-stu-id="2b617-123">The class used as the `x:Subclass` cannot be a nested class, and `x:Subclass` must refer to the root object as explained in the "Dependencies" section.</span></span>  
   
- Andernfalls wird die konzeptionelle Bedeutung von `x:Subclass` von der Implementierung der .NET Framework\-XAML\-Dienste nicht definiert.  Das liegt daran, dass das Verhalten der .NET Framework XAML\-Dienste das Gesamtprogrammiermodell nicht angibt, durch das XAML\-Markup und der unterstützende Code verbunden sind.  Implementierungen weiterer Konzepte zu `x:Class` und `x:Subclass` wird von bestimmten Frameworks ausgeführt, die Programmiermodelle oder Anwendungsmodelle verwenden, um zu definieren, wie XAML\-Markup, kompiliertes Markup und CLR\-basiertes Code\-Behind verbunden werden.  Jedes Framework könnte eigene Buildvorgänge haben, die einen Teil des Verhaltens aktivieren, oder bestimmte Komponenten, die in der Buildumgebung enthalten sein müssen.  Innerhalb eines Frameworks können Buildvorgänge auch auf der bestimmten Programmiersprache CLR beruhen, die für das Code\-Behind verwendet wird.  
+ <span data-ttu-id="2b617-124">Andernfalls die grundlegende Bedeutung der `x:Subclass` ist nicht definiert, durch eine .NET Framework-XAML-Dienste-Implementierung.</span><span class="sxs-lookup"><span data-stu-id="2b617-124">Otherwise, the conceptual meaning of `x:Subclass` is undefined by a .NET Framework XAML Services implementation.</span></span> <span data-ttu-id="2b617-125">Dies ist, da .NET Framework XAML Services-Verhalten nicht das gesamte Programmiermodell angibt, durch das XAML-Markup und Code sichern verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="2b617-125">This is because .NET Framework XAML Services behavior does not specify the overall programming model by which XAML markup and backing code are connected.</span></span> <span data-ttu-id="2b617-126">Implementierungen von weiteren Konzepte im Zusammenhang mit `x:Class` und `x:Subclass` erfolgen durch spezifische Frameworks, die Programmiermodelle oder Anwendungsmodelle verwenden, um XAML-Markup, das kompilierte Markup und CodeBehind CLR-basierten Herstellen einer Verbindung zu definieren.</span><span class="sxs-lookup"><span data-stu-id="2b617-126">Implementations of further concepts related to `x:Class` and `x:Subclass` are performed by specific frameworks that use programming models or application models to define how to connect XAML markup, compiled markup, and CLR-based code-behind.</span></span> <span data-ttu-id="2b617-127">Jedes Framework möglicherweise eigene Buildvorgänge, die es ermöglichen, einige der das Verhalten oder die bestimmte Komponenten, die in der Buildumgebung enthalten sein müssen.</span><span class="sxs-lookup"><span data-stu-id="2b617-127">Each framework might have its own build actions that enable some of the behavior, or specific components that must be included in the build environment.</span></span> <span data-ttu-id="2b617-128">In einem Framework abhängig Buildvorgänge auch bestimmte CLR-Sprache, die für das Code-Behind-Modell verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2b617-128">Within a framework, build actions can also vary based on the specific CLR language that is used for the code-behind.</span></span>  
   
-## Hinweise zur WPF\-Verwendung  
- `x:Subclass` kann ein Seite\-Stammelement oder ein <xref:System.Windows.Application>\-Stammelement in der Anwendungsdefinition sein, für die bereits `x:Class` definiert wurde.  Das Deklarieren von `x:Subclass` für alle Elemente, bei denen es sich nicht um das Stammelement einer Seite oder Anwendung handelt, oder das Angeben an Positionen, an denen `x:Class` nicht vorhanden ist, führt zu einem Kompilierzeitfehler.  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="2b617-129">Hinweise zur WPF-Verwendung</span><span class="sxs-lookup"><span data-stu-id="2b617-129">WPF Usage Notes</span></span>  
+ <span data-ttu-id="2b617-130">`x:Subclass`kann auf einer Seitenstamm oder die <xref:System.Windows.Application> Stamm in der Anwendungsdefinition, die bereits hat `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="2b617-130">`x:Subclass` can be on a page root or on the <xref:System.Windows.Application> root in the application definition, which already has `x:Class`.</span></span> <span data-ttu-id="2b617-131">Deklarieren von `x:Subclass` auf jedes Element außer einer Stamm-Seite oder einer Anwendung oder angegeben wird, denen keine `x:Class` vorhanden ist, verursacht einen Fehler zu Kompilierzeit.</span><span class="sxs-lookup"><span data-stu-id="2b617-131">Declaring `x:Subclass` on any element other than a page or application root, or specifying it where no `x:Class` exists, causes a compile-time error.</span></span>  
   
- Die Erstellung von abgeleiteten Klassen, die für das `x:Subclass`\-Szenario richtig funktionieren, ist recht komplex.  Es kann sein, dass Sie die Zwischendateien untersuchen müssen \(die G\-Dateien, die im Ordner "obj" Ihres Projekts mit Markupkompilierung erstellt werden, die die Namen der XAML\-Dateien enthalten\).  Diese Zwischendateien unterstützen Sie beim Bestimmen des Ursprungs bestimmter Konstrukte in den verknüpften partiellen Klassen innerhalb der kompilierten Anwendung.  
+ <span data-ttu-id="2b617-132">Erstellen von abgeleiteten Klassen arbeitende ordnungsgemäß für die `x:Subclass` Szenario ist relativ komplex.</span><span class="sxs-lookup"><span data-stu-id="2b617-132">Creating derived classes that work correctly for the `x:Subclass` scenario is fairly complex.</span></span> <span data-ttu-id="2b617-133">Sie müssen möglicherweise die Zwischendateien (Zwischendateien erstellten Dateien im Ordner "Obj" des Projekts als Markup kompilieren, mit dem Namen, die die Namen der XAML-Dateien enthalten) untersuchen.</span><span class="sxs-lookup"><span data-stu-id="2b617-133">You might need to examine the intermediate files (the .g files produced in the obj folder of your project by markup compile, with names that incorporate the .xaml file names).</span></span> <span data-ttu-id="2b617-134">Diese temporären Dateien können Sie das Ermitteln des Ursprungs von bestimmten Programmierkonstrukten in den verknüpften partiellen Klassen in der kompilierten Anwendung.</span><span class="sxs-lookup"><span data-stu-id="2b617-134">These intermediate files can help you determine the origin of certain programming constructs in the joined partial classes in the compiled application.</span></span>  
   
- Ereignishandler in der abgeleiteten Klasse müssen den Typ `internal override` aufweisen \(`Friend Overrides` in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]\), um die Stubs für die Handler zu überschreiben, die während der Kompilierung in der Zwischenklasse erstellt wurden.  Andernfalls werden die Implementierungen der abgeleiteten Klasse die Implementierung der Zwischenklasse ausblenden \(Shadowing\), und die Zwischenklassenhandler könnten nicht aufgerufen werden.  
+ <span data-ttu-id="2b617-135">Ereignishandler in der abgeleiteten Klasse muss `internal override` (`Friend Overrides` in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]) um die Stubs für die Handler zu überschreiben, wie in der Zwischenklasse während der Kompilierung erstellt.</span><span class="sxs-lookup"><span data-stu-id="2b617-135">Event handlers in the derived class must be `internal override` (`Friend Overrides` in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]) in order to override the stubs for the handlers as created in the intermediate class during compilation.</span></span> <span data-ttu-id="2b617-136">Andernfalls Implementierungen der abgeleiteten Klasse ausblenden (Schattenkopien) der Zwischenklasse-Implementierung und die Zwischenklasse Handler nicht aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="2b617-136">Otherwise, the derived class implementations hide (shadow) the intermediate class implementation and the intermediate class handlers are not invoked.</span></span>  
   
- Wenn Sie sowohl `x:Class` als auch `x:Subclass` definieren, müssen Sie keine Implementierung für die Klasse angeben, auf die über `x:Class` verwiesen wird.  Sie müssen nur einen Namen über das `x:Class`\-Attribut angeben, damit der Compiler über Anweisungen zur Klasse verfügt, die in den Zwischendateien erstellt wird \(der Compiler wählt in diesem Fall keinen Standardnamen aus\).  Sie können der `x:Class`\-Klasse eine Implementierung ermöglichen. Dies ist jedoch nicht als typisches Szenario für die Verwendung von `x:Class` und `x:Subclass` empfohlen.  
+ <span data-ttu-id="2b617-137">Wenn Sie beide definieren `x:Class` und `x:Subclass`, Sie müssen keine Implementierung für die Klasse zur Verfügung gestellt, die vom verwiesen wird `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="2b617-137">When you define both `x:Class` and `x:Subclass`, you do not need to provide any implementation for the class that is referenced by `x:Class`.</span></span> <span data-ttu-id="2b617-138">Sie müssen nur über Benennen der `x:Class` Attribut, damit der Compiler hilfreiche Informationen für die Klasse hat, das in dem temporären Dateien erstellt wird (der Compiler ist nicht wählen Sie einen Standardnamen in diesem Fall).</span><span class="sxs-lookup"><span data-stu-id="2b617-138">You only need to give it a name via the `x:Class` attribute so that the compiler has some guidance for the class that it creates in the intermediate files (the compiler does not select a default name in this case).</span></span> <span data-ttu-id="2b617-139">Sie erhalten die `x:Class` ein-klassenimplementierung; Dies ist jedoch nicht der typische Einsatzzweck für beide `x:Class` und `x:Subclass`.</span><span class="sxs-lookup"><span data-stu-id="2b617-139">You can give the `x:Class` class an implementation; however, this is not the typical scenario for using both `x:Class` and `x:Subclass`.</span></span>  
   
-## Siehe auch  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [XAML\- und benutzerdefinierte Klassen für WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="2b617-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2b617-140">See Also</span></span>  
+ [<span data-ttu-id="2b617-141">x:Class-Anweisung</span><span class="sxs-lookup"><span data-stu-id="2b617-141">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="2b617-142">XAML- und benutzerdefinierte Klassen für WPF</span><span class="sxs-lookup"><span data-stu-id="2b617-142">XAML and Custom Classes for WPF</span></span>](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

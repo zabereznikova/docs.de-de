@@ -1,42 +1,45 @@
 ---
-title: "Hosting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Hosting1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d5c32b65c4cdcb896b320005a7f8bd9db77da547
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Hosting
-Dieser Abschnitt enthält Beispiele, in denen das Hosting von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Diensten veranschaulicht wird.  
+# <a name="hosting"></a><span data-ttu-id="5128f-102">Hosting</span><span class="sxs-lookup"><span data-stu-id="5128f-102">Hosting</span></span>
+<span data-ttu-id="5128f-103">Dieser Abschnitt enthält Beispiele, in denen das Hosting von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="5128f-103">This section contains samples that demonstrate hosting [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services.</span></span>  
   
-## In diesem Abschnitt  
- [Windows\-Prozessaktivierung](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
- Veranschaulicht die Dienstaktivierung über Netzwerkprotokolle.  
+## <a name="in-this-section"></a><span data-ttu-id="5128f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5128f-104">In This Section</span></span>  
+ [<span data-ttu-id="5128f-105">Windows-Prozessaktivierungsdienst</span><span class="sxs-lookup"><span data-stu-id="5128f-105">Windows Process Activation</span></span>](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
+ <span data-ttu-id="5128f-106">Veranschaulicht die Dienstaktivierung über Netzwerkprotokolle.</span><span class="sxs-lookup"><span data-stu-id="5128f-106">Demonstrates service activation through network protocols.</span></span>  
   
- [Konfigurationsbasierte Aktivierung](../../../../docs/framework/wcf/samples/configuration-based-activation.md)  
- Veranschaulicht die Aktivierung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensten ohne SVC\-Datei.  
+ [<span data-ttu-id="5128f-107">Konfigurationsbasierte Aktivierung</span><span class="sxs-lookup"><span data-stu-id="5128f-107">Configuration-Based Activation</span></span>](../../../../docs/framework/wcf/samples/configuration-based-activation.md)  
+ <span data-ttu-id="5128f-108">Veranschaulicht die Aktivierung von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensten ohne SVC-Datei.</span><span class="sxs-lookup"><span data-stu-id="5128f-108">Demonstrates activation of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services without requiring a .svc file.</span></span>  
   
- [SystemWebRouting\-Integrationsbeispiel](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
- Veranschaulicht die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>\-Namespace.  
+ [<span data-ttu-id="5128f-109">SystemWebRouting-Integrationsbeispiel</span><span class="sxs-lookup"><span data-stu-id="5128f-109">SystemWebRouting Integration Sample</span></span>](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
+ <span data-ttu-id="5128f-110">Veranschaulicht die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="5128f-110">Demonstrates the hosting layer’s integration with the classes in the <xref:System.Web.Routing> namespace.</span></span>  
   
- [ASP.NET\-Kompatibilität](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
- Veranschaulicht, wie der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Kompatibilitätsmodus in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktiviert wird.  
+ [<span data-ttu-id="5128f-111">ASP.NET-Kompatibilität</span><span class="sxs-lookup"><span data-stu-id="5128f-111">ASP.NET Compatibility</span></span>](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
+ <span data-ttu-id="5128f-112">Veranschaulicht, wie der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="5128f-112">Demonstrates how to enable [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Compatibility mode in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [IIS\-Hosting mithilfe von Inlinecode](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
- Zeigt, wie ein von IIS \(Internet Information Services, Internetinformationsdienste\) gehosteter Dienst implementiert wird, bei dem der Code sich inline in einer SVC\-Datei befindet und bei Bedarf kompiliert wird.  
+ [<span data-ttu-id="5128f-113">IIS-Hosting mithilfe von Inlinecode</span><span class="sxs-lookup"><span data-stu-id="5128f-113">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ <span data-ttu-id="5128f-114">Zeigt, wie ein von IIS (Internet Information Services, Internetinformationsdienste) gehosteter Dienst implementiert wird, bei dem der Code sich inline in einer SVC-Datei befindet und bei Bedarf kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="5128f-114">Demonstrates how to implement a service hosted by Internet Information Services (IIS), where the service code is contained in-line in a .svc file and is compiled on demand.</span></span>  
   
- [Windows\-Diensthost](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- Dieses Beispiel zeigt einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst, der in einem verwalteten Windows\-Dienst gehostet wird.  
+ [<span data-ttu-id="5128f-115">Windows-Diensthost</span><span class="sxs-lookup"><span data-stu-id="5128f-115">Windows Service Host</span></span>](../../../../docs/framework/wcf/samples/windows-service-host.md)  
+ <span data-ttu-id="5128f-116">Dieses Beispiel zeigt einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, der in einem verwalteten Windows-Dienst gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="5128f-116">Demonstrates a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service hosted in a managed Windows Service.</span></span>  
   
- [Selbst gehostete Dienste](../../../../docs/framework/wcf/samples/self-host.md)  
- Veranschaulicht das Implementieren eines selbst gehosteten Diensts in einer Konsolenanwendung.
+ [<span data-ttu-id="5128f-117">Selbsthosting</span><span class="sxs-lookup"><span data-stu-id="5128f-117">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)  
+ <span data-ttu-id="5128f-118">Veranschaulicht das Implementieren eines selbst gehosteten Diensts in einer Konsolenanwendung.</span><span class="sxs-lookup"><span data-stu-id="5128f-118">Demonstrates how to implement a self-hosted service in a console application.</span></span>

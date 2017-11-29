@@ -1,42 +1,46 @@
 ---
-title: "Gewusst wie: Erstellen einer Multipane-Benutzeroberfl&#228;che mit Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView-Steuerelement [Windows Forms], Beispiele"
-  - "Panel-Steuerelement [Windows Forms], Beispiele"
-  - "RichTextBox-Steuerelement [Windows Forms], Beispiele"
-  - "SplitContainer-Steuerelement [Windows Forms], Beispiele"
-  - "Splitter-Steuerelement [Windows Forms], Beispiele"
-  - "TreeView-Steuerelement [Windows Forms], Beispiele"
+title: "Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], examples
+- ListView control [Windows Forms], examples
+- RichTextBox control [Windows Forms], examples
+- Panel control [Windows Forms], examples
+- TreeView control [Windows Forms], examples
+- Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Multipane-Benutzeroberfl&#228;che mit Windows&#160;Forms
-Mit folgenden Schritten erstellen Sie eine Benutzeroberfläche mit mehreren Bereichen, die der in Microsoft Outlook ähnelt und eine Liste **Ordner**, einen Bereich **Nachrichten** und einen Bereich **Vorschau** bietet.  Diese Anordnung wird hauptsächlich durch Andocken von Steuerelementen an das Formular erreicht.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="c05a1-102">Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c05a1-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
+<span data-ttu-id="c05a1-103">Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die mit dem Umwandlungsoperator in Microsoft Outlook mit verwendet wird eine **Ordner** Liste eine **Nachrichten** Bereich und einer **Vorschau** Bereich.</span><span class="sxs-lookup"><span data-stu-id="c05a1-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="c05a1-104">In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.</span><span class="sxs-lookup"><span data-stu-id="c05a1-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
   
- Wenn Sie ein Steuerelement andocken, bestimmen Sie, auf welcher Seite des übergeordneten Containers ein Steuerelement angedockt wird.  Wenn Sie also die <xref:System.Windows.Forms.SplitContainer.Dock%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DockStyle> festlegen, wird der rechte Rand des Steuerelements an den rechten Rand des übergeordneten Steuerelements angedockt.  Zusätzlich wird die Größe des angedockten Randes des Steuerelements an die Größe des übergeordneten Steuerelements angepasst.  Weitere Informationen über die Funktionsweise der <xref:System.Windows.Forms.SplitContainer.Dock%2A>\-Eigenschaft finden Sie unter [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ <span data-ttu-id="c05a1-105">Wenn Sie ein Steuerelement andocken, bestimmen Sie, welche Seite des übergeordneten Containers ein Steuerelement angedockt wird.</span><span class="sxs-lookup"><span data-stu-id="c05a1-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="c05a1-106">Daher, wenn Sie festlegen, die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Right>, dem rechten Rand des Steuerelements an den rechten Rand am übergeordneten Steuerelement angedockt wird.</span><span class="sxs-lookup"><span data-stu-id="c05a1-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="c05a1-107">Darüber hinaus wird der angedockte Rand des Steuerelements Größe des Containersteuerelements entsprechen.</span><span class="sxs-lookup"><span data-stu-id="c05a1-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="c05a1-108">Weitere Informationen darüber, wie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft funktioniert, finden Sie unter [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="c05a1-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
   
- Dieses Vorgehen dient in erster Linie zum Anordnen des <xref:System.Windows.Forms.SplitContainer> und anderer Steuerelemente im Formular und nicht zum Hinzufügen von Funktionalität, mit der die Anwendung Microsoft Outlook nachahmen soll.  
+ <span data-ttu-id="c05a1-109">Hierin liegt der Schwerpunkt auf Anordnen der <xref:System.Windows.Forms.SplitContainer> und anderer Steuerelemente auf dem Formular und nicht zum Hinzufügen von Funktionen, damit die Anwendung Microsoft Outlook zu imitieren.</span><span class="sxs-lookup"><span data-stu-id="c05a1-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
   
- Zum Erstellen dieser Benutzeroberfläche müssen Sie alle Steuerelemente innerhalb eines <xref:System.Windows.Forms.SplitContainer>\-Steuerelements anordnen, das im linken Bereich ein <xref:System.Windows.Forms.TreeView>\-Steuerelement enthält.  Der rechte Bereich des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements enthält ein zweites <xref:System.Windows.Forms.SplitContainer>\-Steuerelement mit einem <xref:System.Windows.Forms.ListView>\-Steuerelement über einem <xref:System.Windows.Forms.RichTextBox>\-Steuerelement.  Diese <xref:System.Windows.Forms.SplitContainer>\-Steuerelemente aktivieren unabhängige Größenanpassungen der anderen Steuerelemente im Formular.  Sie können die Techniken dieser Prozedur anpassen, um eigene Benutzeroberflächen zu entwerfen.  
+ <span data-ttu-id="c05a1-110">Um diese Benutzeroberfläche zu erstellen, platzieren Sie alle Steuerelemente innerhalb einer <xref:System.Windows.Forms.SplitContainer> -Steuerelement, das enthält eine <xref:System.Windows.Forms.TreeView> Steuerelement im linken Bereich.</span><span class="sxs-lookup"><span data-stu-id="c05a1-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="c05a1-111">Der rechte Bereich des der <xref:System.Windows.Forms.SplitContainer> Steuerelement enthält eine zweite <xref:System.Windows.Forms.SplitContainer> -Steuerelement mit einer <xref:System.Windows.Forms.ListView> Steuerelement oben ein <xref:System.Windows.Forms.RichTextBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="c05a1-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="c05a1-112">Diese <xref:System.Windows.Forms.SplitContainer> Steuerelemente ermöglichen unabhängigen Ändern der Größe der Steuerelemente im Formular.</span><span class="sxs-lookup"><span data-stu-id="c05a1-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="c05a1-113">Sie können die Verfahren in diesem Verfahren zum Erstellen benutzerdefinierter Benutzeroberflächen Ihrer Wahl anpassen.</span><span class="sxs-lookup"><span data-stu-id="c05a1-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
   
-### So erstellen Sie programmgesteuert eine Benutzeroberfläche im Outlook\-Design  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a><span data-ttu-id="c05a1-114">So erstellen Sie programmgesteuert eine Benutzeroberfläche von Outlook-Stil</span><span class="sxs-lookup"><span data-stu-id="c05a1-114">To create an Outlook-style user interface programmatically</span></span>  
   
-1.  Deklarieren Sie innerhalb eines Formulars alle Steuerelemente, aus denen die Benutzeroberfläche besteht.  Verwenden Sie beispielsweise die Steuerelemente <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer> und <xref:System.Windows.Forms.RichTextBox>, um die Microsoft Outlook\-Benutzeroberfläche nachzuahmen.  
+1.  <span data-ttu-id="c05a1-115">Deklarieren Sie in ein Formular jedes Steuerelement, das die Benutzeroberfläche besteht aus.</span><span class="sxs-lookup"><span data-stu-id="c05a1-115">Within a form, declare each control that comprises your user interface.</span></span> <span data-ttu-id="c05a1-116">In diesem Beispiel verwendet die <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, und <xref:System.Windows.Forms.RichTextBox> Steuerelemente, die Microsoft Outlook-Benutzeroberfläche zu imitieren.</span><span class="sxs-lookup"><span data-stu-id="c05a1-116">For this example, use the <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, and <xref:System.Windows.Forms.RichTextBox> controls to mimic the Microsoft Outlook user interface.</span></span>  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -46,7 +50,6 @@ Mit folgenden Schritten erstellen Sie eine Benutzeroberfläche mit mehreren Bere
         System.Windows.Forms.SplitContainer  
     Private WithEvents splitContainer2 As _  
         System.Windows.Forms.SplitContainer  
-  
     ```  
   
     ```csharp  
@@ -55,10 +58,9 @@ Mit folgenden Schritten erstellen Sie eine Benutzeroberfläche mit mehreren Bere
     private System.Windows.Forms.RichTextBox richTextBox1;  
     private System.Windows.Forms. SplitContainer splitContainer2;  
     private System.Windows.Forms. SplitContainer splitContainer1;  
-  
     ```  
   
-2.  Erstellen Sie eine Prozedur, die die Benutzeroberfläche definiert.  Der folgende Code legt die Eigenschaften so fest, dass das Formular der Benutzeroberfläche in Microsoft Outlook ähnelt.  Wenn Sie jedoch andere Steuerelemente verwenden oder sie anders andocken, können Sie ebenso leicht andere Benutzeroberflächen entwickeln, die genauso flexibel sind.  
+2.  <span data-ttu-id="c05a1-117">Erstellen Sie eine Prozedur, die die Benutzeroberfläche definiert.</span><span class="sxs-lookup"><span data-stu-id="c05a1-117">Create a procedure that defines your user interface.</span></span> <span data-ttu-id="c05a1-118">Der folgende Code legt die Eigenschaften fest, sodass das Formular die Benutzeroberfläche in Microsoft Outlook ähnelt.</span><span class="sxs-lookup"><span data-stu-id="c05a1-118">The following code sets the properties so that the form will resemble the user interface in Microsoft Outlook.</span></span> <span data-ttu-id="c05a1-119">Andere Steuerelemente verwenden oder sie anders andocken, ist es jedoch ebenso leicht andere Benutzeroberflächen zu erstellen, die genauso flexibel sind.</span><span class="sxs-lookup"><span data-stu-id="c05a1-119">However, by using other controls or docking them differently, it is just as easy to create other user interfaces that are equally flexible.</span></span>  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -120,7 +122,6 @@ Mit folgenden Schritten erstellen Sie eine Benutzeroberfläche mit mehreren Bere
         Me.Controls.Add(Me.splitContainer2)  
         Me.Text = "Intricate UI Example"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -171,24 +172,21 @@ Mit folgenden Schritten erstellen Sie eine Benutzeroberfläche mit mehreren Bere
         this.Controls.Add(this.splitContainer2);  
         this.Text = "Intricate UI Example";  
     }  
-  
     ```  
   
-3.  Fügen Sie in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] der Prozedur, die Sie soeben in der `New()`\-Prozedur erstellt haben, einen Aufruf hinzu.  Fügen Sie in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] diese Codezeile dem Konstruktor für die Formularklasse hinzu.  
+3.  <span data-ttu-id="c05a1-120">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], fügen Sie einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Prozedur.</span><span class="sxs-lookup"><span data-stu-id="c05a1-120">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], add a call to the procedure you just created in the `New()` procedure.</span></span> <span data-ttu-id="c05a1-121">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], fügen Sie diese Codezeile an den Konstruktor für die Formularklasse hinzu.</span><span class="sxs-lookup"><span data-stu-id="c05a1-121">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], add this line of code to the constructor for the form class.</span></span>  
   
     ```vb  
     ' Add this to the New procedure.  
     CreateOutlookUI()  
-  
     ```  
   
     ```csharp  
     // Add this to the form class's constructor.  
     createOutlookUI();  
-  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer\-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [Gewusst wie: Erstellen einer Multipane\-Benutzeroberfläche mit Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a><span data-ttu-id="c05a1-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c05a1-122">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="c05a1-123">SplitContainer-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c05a1-123">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [<span data-ttu-id="c05a1-124">Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="c05a1-124">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

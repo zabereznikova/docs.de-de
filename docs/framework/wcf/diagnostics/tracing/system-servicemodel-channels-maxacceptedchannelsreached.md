@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MaxAcceptedChannelsReached | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MaxAcceptedChannelsReached
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13d15194-a04f-4a5a-9d85-23ad350fdc7e
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b08764f0200d09fcf26793b98ca0173b599682e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MaxAcceptedChannelsReached
-System.ServiceModel.Channels.MaxAcceptedChannelsReached  
+# <a name="systemservicemodelchannelsmaxacceptedchannelsreached"></a><span data-ttu-id="fa354-102">System.ServiceModel.Channels.MaxAcceptedChannelsReached</span><span class="sxs-lookup"><span data-stu-id="fa354-102">System.ServiceModel.Channels.MaxAcceptedChannelsReached</span></span>
+<span data-ttu-id="fa354-103">System.ServiceModel.Channels.MaxAcceptedChannelsReached</span><span class="sxs-lookup"><span data-stu-id="fa354-103">System.ServiceModel.Channels.MaxAcceptedChannelsReached</span></span>  
   
-## Beschreibung  
- Maximale Anzahl von eingehenden Sitzungskanälen wurde erreicht.  
+## <a name="description"></a><span data-ttu-id="fa354-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fa354-104">Description</span></span>  
+ <span data-ttu-id="fa354-105">Maximale Anzahl von eingehenden Sitzungskanälen wurde erreicht.</span><span class="sxs-lookup"><span data-stu-id="fa354-105">Maximum number of inbound session channel has been reached.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fa354-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa354-106">See Also</span></span>  
+ [<span data-ttu-id="fa354-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="fa354-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fa354-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="fa354-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fa354-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="fa354-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

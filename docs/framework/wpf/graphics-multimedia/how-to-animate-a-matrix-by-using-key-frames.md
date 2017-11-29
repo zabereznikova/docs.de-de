@@ -1,48 +1,51 @@
 ---
-title: "Gewusst wie: Animieren einer Matrix mithilfe von Keyframes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, Matrixeigenschaften mit Keyframes"
-  - "Keyframes, Animieren von Matrixeigenschaften mit"
-  - "Matrixeigenschaften, Animieren mit Keyframes"
+title: 'Gewusst wie: Animieren einer Matrix mithilfe von Keyframes'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], Matrix properties with key frames
+- Matrix properties [WPF], animating with key frames
+- key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8c67b5c8e179485083a40aa8a196fbee3e0fc24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Animieren einer Matrix mithilfe von Keyframes
-In diesem Beispiel wird die Animation der <xref:System.Windows.Media.MatrixTransform.Matrix%2A>\-Eigenschaft einer <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes veranschaulicht.  
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a><span data-ttu-id="e1879-102">Gewusst wie: Animieren einer Matrix mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="e1879-102">How to: Animate a Matrix by Using Key Frames</span></span>
+<span data-ttu-id="e1879-103">In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes.</span><span class="sxs-lookup"><span data-stu-id="e1879-103">This example shows how to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform> by using key frames.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>\-Klasse verwendet, um die <xref:System.Windows.Media.MatrixTransform.Matrix%2A>\-Eigenschaft eines <xref:System.Windows.Media.MatrixTransform>\-Elements zu animieren.  Es wird das <xref:System.Windows.Media.MatrixTransform>\-Objekt verwendet, um das Aussehen und die Position eines <xref:System.Windows.Controls.Button>\-Steuerelements zu transformieren.  
+## <a name="example"></a><span data-ttu-id="e1879-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e1879-104">Example</span></span>  
+ <span data-ttu-id="e1879-105">Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform>.</span><span class="sxs-lookup"><span data-stu-id="e1879-105">The following example uses the <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform>.</span></span> <span data-ttu-id="e1879-106">Im Beispiel wird die <xref:System.Windows.Media.MatrixTransform> Objekt, das die Darstellung und die Position des transformiert eine <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="e1879-106">The example uses the <xref:System.Windows.Media.MatrixTransform> object to transform the appearance and position of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>\-Klasse, um zwei Keyframes zu erstellen, und behandelt die Keyframes dann wie folgt:  
+ <span data-ttu-id="e1879-107">Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> -Klasse zum Erstellen von zwei Keyframes und wird mit ihnen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="e1879-107">This animation uses the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> class to create two key frames and does the following with them:</span></span>  
   
-1.  Animiert während der ersten 0,2 Sekunden die erste <xref:System.Windows.Media.Matrix>.  Im Beispiel werden die Eigenschaften <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> der <xref:System.Windows.Media.Matrix> geändert.  Diese Änderung bewirkt, dass sich die Schaltfläche streckt und dass sie verzerrt wird.  Im Beispiel werden außerdem die Eigenschaften <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> geändert, um die Position der Schaltfläche zu ändern.  
+1.  <span data-ttu-id="e1879-108">Erstellt eine Animation der ersten <xref:System.Windows.Media.Matrix> während der ersten 0,2 Sekunden.</span><span class="sxs-lookup"><span data-stu-id="e1879-108">Animates the first <xref:System.Windows.Media.Matrix> during the first 0.2 seconds.</span></span> <span data-ttu-id="e1879-109">Die Beispiel-Änderungen der <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> Eigenschaften der <xref:System.Windows.Media.Matrix>.</span><span class="sxs-lookup"><span data-stu-id="e1879-109">The example changes the <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M12%2A> properties of the <xref:System.Windows.Media.Matrix>.</span></span> <span data-ttu-id="e1879-110">Diese Änderung bewirkt, dass die Schaltfläche, um stretch-verzerrt werden.</span><span class="sxs-lookup"><span data-stu-id="e1879-110">This change causes the button to stretch and become skewed.</span></span> <span data-ttu-id="e1879-111">Im Beispiel ändert sich auch die <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> Eigenschaften so, dass die Position der Schaltfläche zu ändern.</span><span class="sxs-lookup"><span data-stu-id="e1879-111">The example also changes the <xref:System.Windows.Media.Matrix.OffsetX%2A> and <xref:System.Windows.Media.Matrix.OffsetY%2A> properties so that the button changes position.</span></span>  
   
-2.  Animiert bei 1,0 Sekunden die zweite <xref:System.Windows.Media.Matrix>.  Die Schaltfläche wird an eine andere Position verschoben, und die Schaltfläche ist nicht mehr verzerrt oder gestreckt.  
+2.  <span data-ttu-id="e1879-112">Erstellt eine Animation der zweiten <xref:System.Windows.Media.Matrix> bei 1,0 Sekunden.</span><span class="sxs-lookup"><span data-stu-id="e1879-112">Animates the second <xref:System.Windows.Media.Matrix> at 1.0 seconds.</span></span> <span data-ttu-id="e1879-113">Die Schaltfläche bewegt sich in eine andere Position, während die Schaltfläche nicht mehr verzerrt oder gestreckt wird.</span><span class="sxs-lookup"><span data-stu-id="e1879-113">The button moves to another position while the button is no longer skewed or stretched.</span></span>  
   
-3.  Wiederholt die Animation ohne zeitliche Begrenzung.  
+3.  <span data-ttu-id="e1879-114">Die Animation wiederholt auf unbestimmte Zeit.</span><span class="sxs-lookup"><span data-stu-id="e1879-114">Repeats the animation indefinitely.</span></span>  
   
 > [!NOTE]
->  Keyframes, die vom <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>\-Objekt abgeleitet sind, führen zu plötzlichen Sprüngen zwischen verschiedenen Werten. Die Ausführung der Animation erfolgt also ruckartig.  
+>  <span data-ttu-id="e1879-115">Keyframes, die Ableitung der <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> Objekt einen plötzlichen Sprünge zwischen Werten, d. h. die Verschiebung der Animation holprig ist.</span><span class="sxs-lookup"><span data-stu-id="e1879-115">Key frames that derive from the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> object create sudden jumps between values, that is, the movement of the animation is jerky.</span></span>  
   
- [!code-xml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine Keyframe\-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="e1879-116">Das vollständige Beispiel finden Sie unter [Beispiel für KeyFrame-Animationen](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="e1879-116">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>   
- <xref:System.Windows.Media.MatrixTransform>   
- [Übersicht über Keyframe\-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Gewusst\-wie\-Themen zu Keyframes](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="e1879-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e1879-117">See Also</span></span>  
+ <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
+ <xref:System.Windows.Media.MatrixTransform>  
+ [<span data-ttu-id="e1879-118">Übersicht über Keyframe-Animationen</span><span class="sxs-lookup"><span data-stu-id="e1879-118">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="e1879-119">Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)</span><span class="sxs-lookup"><span data-stu-id="e1879-119">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

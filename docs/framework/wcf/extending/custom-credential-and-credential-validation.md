@@ -1,44 +1,47 @@
 ---
-title: "Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Validierung der Anmeldeinformationen [WCF]"
-  - "Anmeldeinformationen [WCF]"
-  - "Anmeldeinformationen [WCF], Benutzerdefiniert"
-  - "Anmeldeinformationen [WCF], Überprüfung"
-  - "Benutzerdefinierte Anmeldeinformationen [WCF]"
+title: Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [WCF], custom
+- credentials [WCF]
+- custom credentials [WCF]
+- credential validation [WCF]
+- credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3ca7726f3a6a0c5faaab1cbbd0b31125ce0c1d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen
-Die Sicherheit in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] basiert auf dem Austausch von Anmeldeinformationen zwischen Diensten und Clients.  Die meisten Sicherheitsszenarien können durch die Verwendung allgemeiner Anmeldeinformationstypen wie Windows \(Kerberos\), Benutzerrname und Kennwörter sowie Zertifikate erfüllt werden.  Falls jedoch ein neuer Typ von Anmeldeinformationen erforderlich ist, wird in den Themen in diesem Abschnitt die Behandlung und Überprüfung neuer Typen erläutert.  
+# <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="80faf-102">Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="80faf-102">Custom Credential and Credential Validation</span></span>
+<span data-ttu-id="80faf-103">Die Sicherheit in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] basiert auf dem Austausch von Anmeldeinformationen zwischen Diensten und Clients.</span><span class="sxs-lookup"><span data-stu-id="80faf-103">Security in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="80faf-104">Die meisten Sicherheitsszenarien können durch die Verwendung allgemeiner Anmeldeinformationstypen wie Windows (Kerberos), Benutzerrname und Kennwörter sowie Zertifikate erfüllt werden.</span><span class="sxs-lookup"><span data-stu-id="80faf-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="80faf-105">Falls jedoch ein neuer Typ von Anmeldeinformationen erforderlich ist, wird in den Themen in diesem Abschnitt die Behandlung und Überprüfung neuer Typen erläutert.</span><span class="sxs-lookup"><span data-stu-id="80faf-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  
   
-## In diesem Abschnitt  
- [Vorgehensweise: Erstellen eines Dienstes, der ein benutzerdefiniertes Zertifikats\-Validierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- Erläutert das Anpassen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Validierung durch Erben von der <xref:System.IdentityModel.Selectors.X509CertificateValidator>\-Klasse.  
+## <a name="in-this-section"></a><span data-ttu-id="80faf-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="80faf-106">In This Section</span></span>  
+ [<span data-ttu-id="80faf-107">Vorgehensweise: erstellen ein Diensts, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet</span><span class="sxs-lookup"><span data-stu-id="80faf-107">How to: Create a Service that Employs a Custom Certificate Validator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ <span data-ttu-id="80faf-108">Erläutert das Anpassen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Validierung durch Erben von der <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="80faf-108">Explains how to customize [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] validation by inheriting from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span>  
   
- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client\- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- Veranschaulicht, wie die <xref:System.ServiceModel.Description.ClientCredentials>\-Klasse und die <xref:System.ServiceModel.Description.ServiceCredentials>\-Klasse für die Aufnahme neuer Anmeldeinformationstypen erweitert werden.  Dies ist das erste Thema in einer Reihe von Themen, die das Erstellen benutzerdefinierter Anmeldeinformationstypen ermöglichen.  
+ [<span data-ttu-id="80faf-109">Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="80faf-109">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ <span data-ttu-id="80faf-110">Veranschaulicht das Erweitern der <xref:System.ServiceModel.Description.ClientCredentials> und <xref:System.ServiceModel.Description.ServiceCredentials> Klassen für die Aufnahme neuer Anmeldeinformationstypen.</span><span class="sxs-lookup"><span data-stu-id="80faf-110">Demonstrates how to extend the <xref:System.ServiceModel.Description.ClientCredentials> and <xref:System.ServiceModel.Description.ServiceCredentials> classes to accommodate new credential types.</span></span> <span data-ttu-id="80faf-111">Dies ist das erste Thema in einer Reihe von Themen, die das Erstellen benutzerdefinierter Anmeldeinformationstypen ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="80faf-111">This is first in a series of topics that enable creation of custom credential types.</span></span>  
   
- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- Erläutert das Erstellen eines Sicherheitstokenanbieters zur Behandlung neuer Anmeldeinformationstypen und zum Zurückgeben neuer Token für die Anmeldeinformationen.  Dies ist das zweite Thema in der Reihe.  
+ [<span data-ttu-id="80faf-112">Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter</span><span class="sxs-lookup"><span data-stu-id="80faf-112">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ <span data-ttu-id="80faf-113">Erläutert das Erstellen eines Sicherheitstokenanbieters zur Behandlung neuer Anmeldeinformationstypen und zum Zurückgeben neuer Token für die Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="80faf-113">Explains how to create a security token provider to handle new credential types and return new tokens for the credential.</span></span> <span data-ttu-id="80faf-114">Dies ist das zweite Thema in der Reihe.</span><span class="sxs-lookup"><span data-stu-id="80faf-114">This is the second topic in the series.</span></span>  
   
- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- Erläutert das Erstellen eines benutzerdefinierten Authentifizierers zum Authentifizieren eines neuen Anmeldeinformationstyps.  Dies ist das dritte Thema in der Reihe.  
+ [<span data-ttu-id="80faf-115">Vorgehensweise: erstellen ein benutzerdefinierten Sicherheitstokenauthentifizierers</span><span class="sxs-lookup"><span data-stu-id="80faf-115">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ <span data-ttu-id="80faf-116">Erläutert das Erstellen eines benutzerdefinierten Authentifizierers zum Authentifizieren eines neuen Anmeldeinformationstyps.</span><span class="sxs-lookup"><span data-stu-id="80faf-116">Explains how to create a custom authenticator to authenticate a new credential type.</span></span> <span data-ttu-id="80faf-117">Dies ist das dritte Thema in der Reihe.</span><span class="sxs-lookup"><span data-stu-id="80faf-117">This is the third topic in the series.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="80faf-118">Verweis</span><span class="sxs-lookup"><span data-stu-id="80faf-118">Reference</span></span>  
  <xref:System.ServiceModel.Security>  
   
  <xref:System.IdentityModel.Claims>  
@@ -55,12 +58,12 @@ Die Sicherheit in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] basier
   
  <xref:System.ServiceModel.Description.ServiceCredentials>  
   
-## Verwandte Abschnitte  
- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="80faf-119">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="80faf-119">Related Sections</span></span>  
+ [<span data-ttu-id="80faf-120">Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="80faf-120">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="80faf-121">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="80faf-121">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="80faf-122">Autorisierung</span><span class="sxs-lookup"><span data-stu-id="80faf-122">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## Siehe auch  
- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="80faf-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="80faf-123">See Also</span></span>  
+ [<span data-ttu-id="80faf-124">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="80faf-124">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

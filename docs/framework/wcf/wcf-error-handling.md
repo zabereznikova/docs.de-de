@@ -1,57 +1,60 @@
 ---
-title: "WCF-Fehlerbehandlung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WCF-Fehlerbehandlung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c5fa1aea718f3904eab38927d24a851043bbd896
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WCF-Fehlerbehandlung
-Die bei einer WCF\-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:  
+# <a name="wcf-error-handling"></a><span data-ttu-id="fbc27-102">WCF-Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="fbc27-102">WCF Error Handling</span></span>
+<span data-ttu-id="fbc27-103">Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:</span><span class="sxs-lookup"><span data-stu-id="fbc27-103">The errors encountered by a WCF application belong to one of three groups:</span></span>  
   
-1.  Kommunikationsfehler  
+1.  <span data-ttu-id="fbc27-104">Kommunikationsfehler</span><span class="sxs-lookup"><span data-stu-id="fbc27-104">Communication Errors</span></span>  
   
-2.  Proxy\-\/Channelfehler  
+2.  <span data-ttu-id="fbc27-105">Proxy-/Channelfehler</span><span class="sxs-lookup"><span data-stu-id="fbc27-105">Proxy/Channel Errors</span></span>  
   
-3.  Anwendungsfehler  
+3.  <span data-ttu-id="fbc27-106">Anwendungsfehler</span><span class="sxs-lookup"><span data-stu-id="fbc27-106">Application Errors</span></span>  
   
- Kommunikationsfehler treten auf, wenn ein Netzwerk nicht verfügbar ist, ein Client eine falsche Adresse verwendet oder der Diensthost keine eingehende Nachrichten überwacht.An den Client werden Fehler dieses Typs als <xref:System.ServiceModel.CommunicationException>\-Klasse oder abgeleitete <xref:System.ServiceModel.CommunicationException>\-Klasse zurückgegeben.  
+ <span data-ttu-id="fbc27-107">Kommunikationsfehler treten auf, wenn ein Netzwerk nicht verfügbar ist, ein Client eine falsche Adresse verwendet oder der Diensthost keine eingehende Nachrichten überwacht.</span><span class="sxs-lookup"><span data-stu-id="fbc27-107">Communication errors occur when a network is unavailable, a client uses an incorrect address, or the service host is not listening for incoming messages.</span></span> <span data-ttu-id="fbc27-108">An den Client werden Fehler dieses Typs als <xref:System.ServiceModel.CommunicationException>-Klasse oder abgeleitete <xref:System.ServiceModel.CommunicationException>-Klasse zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="fbc27-108">Errors of this type are returned to the client as <xref:System.ServiceModel.CommunicationException> or <xref:System.ServiceModel.CommunicationException>-derived classes.</span></span>  
   
- Proxy\-\/Channelfehler sind Fehler, die innerhalb des Channels oder des Proxys selbst auftreten.Fehler dieses Typs sind unter anderem: Versuche, einen Proxy oder Channel zu verwenden, der geschlossen wurde, ein Vertragskonflikt zwischen Client und Dienst oder die Ablehnung der Anmeldeinformationen des Clients durch den Dienst.Es gibt viele andere Fehlertypen in dieser Kategorie, die hier nicht alle aufgeführt werden können.An den Client werden Fehler dieses Typs unverändert zurückgegeben \(es wird keine Transformation für die Ausnahmeobjekte ausgeführt\).  
+ <span data-ttu-id="fbc27-109">Proxy-/Channelfehler sind Fehler, die innerhalb des Channels oder des Proxys selbst auftreten.</span><span class="sxs-lookup"><span data-stu-id="fbc27-109">Proxy/Channel errors are errors that occur within the channel or proxy itself.</span></span> <span data-ttu-id="fbc27-110">Fehler dieses Typs sind unter anderem: Versuche, einen Proxy oder Channel zu verwenden, der geschlossen wurde, ein Vertragskonflikt zwischen Client und Dienst oder die Ablehnung der Anmeldeinformationen des Clients durch den Dienst.</span><span class="sxs-lookup"><span data-stu-id="fbc27-110">Errors of this type include: attempting to use a proxy or channel that has been closed, a contract mismatch exists between the client and service, or the client’s credentials are rejected by the service.</span></span> <span data-ttu-id="fbc27-111">Es gibt viele andere Fehlertypen in dieser Kategorie, die hier nicht alle aufgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="fbc27-111">There are many different types of errors in this category, too many to list here.</span></span> <span data-ttu-id="fbc27-112">An den Client werden Fehler dieses Typs unverändert zurückgegeben (es wird keine Transformation für die Ausnahmeobjekte ausgeführt).</span><span class="sxs-lookup"><span data-stu-id="fbc27-112">Errors of this type are returned to the client as-is (no transformation is performed on the exception objects).</span></span>  
   
- Anwendungsfehler treten während der Ausführung eines Dienstvorgangs auf.Fehler dieser Art werden an den Client als <xref:System.ServiceModel.FaultException> oder <xref:System.ServiceModel.FaultException%601> gesendet.  
+ <span data-ttu-id="fbc27-113">Anwendungsfehler treten während der Ausführung eines Dienstvorgangs auf.</span><span class="sxs-lookup"><span data-stu-id="fbc27-113">Application errors occur during the execution of a service operation.</span></span> <span data-ttu-id="fbc27-114">Fehler dieser Art werden an den Client als <xref:System.ServiceModel.FaultException> oder <xref:System.ServiceModel.FaultException%601> gesendet.</span><span class="sxs-lookup"><span data-stu-id="fbc27-114">Errors of this kind are sent to the client as <xref:System.ServiceModel.FaultException> or <xref:System.ServiceModel.FaultException%601>.</span></span>  
   
- Die Fehlerbehandlung in WCF wird durch einen oder mehrere der folgenden Schritte ausgeführt:  
+ <span data-ttu-id="fbc27-115">Die Fehlerbehandlung in WCF wird durch einen oder mehrere der folgenden Schritte ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="fbc27-115">Error handling in WCF is performed by one or more of the following:</span></span>  
   
--   Direkte Behandlung der ausgelösten Ausnahme.Dies erfolgt nur für Kommunikations\- und Proxy\-\/Channelfehler.  
+-   <span data-ttu-id="fbc27-116">Direkte Behandlung der ausgelösten Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="fbc27-116">Directly handling the exception thrown.</span></span> <span data-ttu-id="fbc27-117">Dies erfolgt nur für Kommunikations- und Proxy-/Channelfehler.</span><span class="sxs-lookup"><span data-stu-id="fbc27-117">This is only done for communication and proxy/channel errors.</span></span>  
   
--   Verwenden von Fehlerverträgen  
+-   <span data-ttu-id="fbc27-118">Verwenden von Fehlerverträgen</span><span class="sxs-lookup"><span data-stu-id="fbc27-118">Using fault contracts</span></span>  
   
--   Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle  
+-   <span data-ttu-id="fbc27-119">Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fbc27-119">Implementing the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface</span></span>  
   
--   Behandlung von <xref:System.ServiceModel.ServiceHost>\-Ereignissen  
+-   <span data-ttu-id="fbc27-120">Behandlung von <xref:System.ServiceModel.ServiceHost>-Ereignissen</span><span class="sxs-lookup"><span data-stu-id="fbc27-120">Handling <xref:System.ServiceModel.ServiceHost> events</span></span>  
   
-## Fehlerverträge  
- Mithilfe von Fehlerverträgen können Sie die Fehler, die während eines Dienstvorgangs auftreten können, auf plattformunabhängige Weise definieren.Standardmäßig werden alle innerhalb eines Dienstvorgangs ausgelösten Ausnahmen an den Client als <xref:System.ServiceModel.FaultException>\-Objekt zurückgegeben.Das <xref:System.ServiceModel.FaultException>\-Objekt enthält sehr wenig Informationen.Sie können die an den Client gesendeten Informationen durch Definieren eines Fehlervertrags und Zurückgeben des Fehlers als <xref:System.ServiceModel.FaultException%601> steuern.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+## <a name="fault-contracts"></a><span data-ttu-id="fbc27-121">Fehlerverträge</span><span class="sxs-lookup"><span data-stu-id="fbc27-121">Fault Contracts</span></span>  
+ <span data-ttu-id="fbc27-122">Mithilfe von Fehlerverträgen können Sie die Fehler, die während eines Dienstvorgangs auftreten können, auf plattformunabhängige Weise definieren.</span><span class="sxs-lookup"><span data-stu-id="fbc27-122">Fault contracts allow you to define the errors that can occur during service operation in a platform independent way.</span></span> <span data-ttu-id="fbc27-123">Standardmäßig werden alle innerhalb eines Dienstvorgangs ausgelösten Ausnahmen an den Client als <xref:System.ServiceModel.FaultException>-Objekt zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="fbc27-123">By default all exceptions thrown from within a service operation will be returned to the client as a <xref:System.ServiceModel.FaultException> object.</span></span> <span data-ttu-id="fbc27-124">Das <xref:System.ServiceModel.FaultException>-Objekt enthält sehr wenig Informationen.</span><span class="sxs-lookup"><span data-stu-id="fbc27-124">The <xref:System.ServiceModel.FaultException> object will contain very little information.</span></span> <span data-ttu-id="fbc27-125">Sie können die an den Client gesendeten Informationen durch Definieren eines Fehlervertrags und Zurückgeben des Fehlers als <xref:System.ServiceModel.FaultException%601> steuern.</span><span class="sxs-lookup"><span data-stu-id="fbc27-125">You can control the information sent to the client by defining a fault contract and returning the error as a <xref:System.ServiceModel.FaultException%601>.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="fbc27-126">[Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span><span class="sxs-lookup"><span data-stu-id="fbc27-126"> [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span></span>  
   
-## IErrorHandler  
- Die <xref:System.ServiceModel.Dispatcher.IErrorHandler>\-Schnittstelle ermöglicht Ihnen mehr Kontrolle darüber, wie die WCF\-Anwendung auf Fehler reagiert.Sie gibt Ihnen volle Kontrolle über die Fehlermeldung, die an den Client zurückgegeben wird, und ermöglicht Ihnen, die benutzerdefinierte Fehlerverarbeitung auszuführen, z. B. die Protokollierung.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler> und [Erweitern der Kontrolle über Fehlerbehandlung und \-meldung](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+## <a name="ierrorhandler"></a><span data-ttu-id="fbc27-127">IErrorHandler</span><span class="sxs-lookup"><span data-stu-id="fbc27-127">IErrorHandler</span></span>  
+ <span data-ttu-id="fbc27-128">Die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle ermöglicht Ihnen mehr Kontrolle darüber, wie die WCF-Anwendung auf Fehler reagiert.</span><span class="sxs-lookup"><span data-stu-id="fbc27-128">The <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface allows you more control over how your WCF application responds to errors.</span></span>  <span data-ttu-id="fbc27-129">Sie gibt Ihnen volle Kontrolle über die Fehlermeldung, die an den Client zurückgegeben wird, und ermöglicht Ihnen, die benutzerdefinierte Fehlerverarbeitung auszuführen, z. B. die Protokollierung.</span><span class="sxs-lookup"><span data-stu-id="fbc27-129">It gives you full control over the fault message that is returned to the client and allows you to perform custom error processing such as logging.</span></span>  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<span data-ttu-id="fbc27-130"><xref:System.ServiceModel.Dispatcher.IErrorHandler> und [Erweitern der Kontrolle über Fehlerbehandlung und-Meldung](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)</span><span class="sxs-lookup"><span data-stu-id="fbc27-130"> <xref:System.ServiceModel.Dispatcher.IErrorHandler> and [Extending Control Over Error Handling and Reporting](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)</span></span>  
   
-## ServiceHost\-Ereignisse  
- Die <xref:System.ServiceModel.ServiceHost>\-Klasse hostet Dienste und definiert mehrere Ereignisse, die möglicherweise zur Fehlerbehandlung benötigt werden.Beispiel:  
+## <a name="servicehost-events"></a><span data-ttu-id="fbc27-131">ServiceHost-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="fbc27-131">ServiceHost Events</span></span>  
+ <span data-ttu-id="fbc27-132">Die <xref:System.ServiceModel.ServiceHost>-Klasse hostet Dienste und definiert mehrere Ereignisse, die möglicherweise zur Fehlerbehandlung benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="fbc27-132">The <xref:System.ServiceModel.ServiceHost> class hosts services and defines several events that may be needed for handling errors.</span></span> <span data-ttu-id="fbc27-133">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="fbc27-133">For example:</span></span>  
   
-1.  <xref:System.ServiceModel.ServiceHost.Faulted>  
+1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
   
-2.  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  
+2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceHost>
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="fbc27-134"> <xref:System.ServiceModel.ServiceHost></span><span class="sxs-lookup"><span data-stu-id="fbc27-134"> <xref:System.ServiceModel.ServiceHost></span></span>

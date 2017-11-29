@@ -1,110 +1,108 @@
 ---
-title: "WPF-Sicherheitsstrategie – Sicherheitsentwicklung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verwaltung von sicherheitsrelevantem Code"
-  - "Security Development Lifecycle (SDL), Verwaltung von sicherheitsrelevantem Code"
-  - "Security Development Lifecycle (SDL), Sicherheitsanalyse"
-  - "Security Development Lifecycle (SDL), Quellenanalysetools"
-  - "Security Development Lifecycle (SDL), Quellenbearbeitungstools"
-  - "Security Development Lifecycle (SDL), Testverfahren"
-  - "Security Development Lifecycle (SDL), Gefahrenmodelle"
-  - "Sicherheit, Testverfahren"
-  - "Quellenanalysetools"
-  - "Quellenbearbeitungstools"
-  - "Testen, Sicherheit"
-  - "Gefahrenmodelle"
+title: "WPF-Sicherheitsstrategie – Sicherheitsentwicklung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [WPF], testing techniques
+- Security Development Lifecycle (SDL), security analysis [WPF]
+- Security Development Lifecycle (SDL), threat modeling
+- Security Development Lifecycle (SDL), testing techniques
+- Security Development Lifecycle (SDL), source analysis tools
+- Security Development Lifecycle (SDL), critical code management
+- threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9237ed7467e87cd3e6ba72418c6964ce918751c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# WPF-Sicherheitsstrategie – Sicherheitsentwicklung
-Trustworthy Computing ist eine Microsoft\-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird.  Ein Schlüsselelement der Trustworthy Computing\-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)].  Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern.  Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:  
+# <a name="wpf-security-strategy---security-engineering"></a><span data-ttu-id="498e9-102">WPF-Sicherheitsstrategie – Sicherheitsentwicklung</span><span class="sxs-lookup"><span data-stu-id="498e9-102">WPF Security Strategy - Security Engineering</span></span>
+<span data-ttu-id="498e9-103">Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird.</span><span class="sxs-lookup"><span data-stu-id="498e9-103">Trustworthy Computing is a Microsoft initiative for ensuring the production of secure code.</span></span> <span data-ttu-id="498e9-104">Ein Schlüsselelement der Trustworthy Computing-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)].</span><span class="sxs-lookup"><span data-stu-id="498e9-104">A key element of the Trustworthy Computing initiative is the [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)].</span></span> <span data-ttu-id="498e9-105">Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern.</span><span class="sxs-lookup"><span data-stu-id="498e9-105">The [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] is an engineering practice that is used in conjunction with standard engineering processes to facilitate the delivery of secure code.</span></span> <span data-ttu-id="498e9-106">Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:</span><span class="sxs-lookup"><span data-stu-id="498e9-106">The [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consists of ten phases that combine best practices with formalization, measurability, and additional structure, including:</span></span>  
   
--   Analyse des Sicherheitsentwurfs  
+-   <span data-ttu-id="498e9-107">Analyse des Sicherheitsentwurfs</span><span class="sxs-lookup"><span data-stu-id="498e9-107">Security design analysis</span></span>  
   
--   Qualitätsprüfungen mithilfe von Tools  
+-   <span data-ttu-id="498e9-108">Qualitätsprüfungen mithilfe von Tools</span><span class="sxs-lookup"><span data-stu-id="498e9-108">Tool-based quality checks</span></span>  
   
--   Penetrationstests  
+-   <span data-ttu-id="498e9-109">Penetrationstests</span><span class="sxs-lookup"><span data-stu-id="498e9-109">Penetration testing</span></span>  
   
--   Abschließende Sicherheitsüberprüfung  
+-   <span data-ttu-id="498e9-110">Abschließende Sicherheitsüberprüfung</span><span class="sxs-lookup"><span data-stu-id="498e9-110">Final security review</span></span>  
   
--   Verwaltung der Produktsicherheit nach der Veröffentlichung  
+-   <span data-ttu-id="498e9-111">Verwaltung der Produktsicherheit nach der Veröffentlichung</span><span class="sxs-lookup"><span data-stu-id="498e9-111">Post release product security management</span></span>  
   
-## WPF im Einzelnen  
- Das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]\-Entwicklungsteam wendet den [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] an und ist auch für dessen Erweiterung zuständig; diese Kombination beinhaltet die folgenden Schlüsselaspekte:  
+## <a name="wpf-specifics"></a><span data-ttu-id="498e9-112">WPF im Einzelnen</span><span class="sxs-lookup"><span data-stu-id="498e9-112">WPF Specifics</span></span>  
+ <span data-ttu-id="498e9-113">Das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Entwicklungsteam wendet den [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] an und ist auch für dessen Erweiterung zuständig; diese Kombination beinhaltet die folgenden Schlüsselaspekte:</span><span class="sxs-lookup"><span data-stu-id="498e9-113">The [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] engineering team both applies and extends the [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], the combination of which includes the following key aspects:</span></span>  
   
- [Erstellen von Gefahrenmodellen](#thread_modeling)  
+ [<span data-ttu-id="498e9-114">Erstellen von Gefahrenmodellen</span><span class="sxs-lookup"><span data-stu-id="498e9-114">Threat Modeling</span></span>](#threat_modeling)  
   
- [Sicherheitsanalyse und Bearbeitungstools](#tools)  
+ [<span data-ttu-id="498e9-115">Sicherheitsanalyse und Bearbeitungstools</span><span class="sxs-lookup"><span data-stu-id="498e9-115">Security Analysis and Editing Tools</span></span>](#tools)  
   
- [Testverfahren](#techniques)  
+ [<span data-ttu-id="498e9-116">Testverfahren</span><span class="sxs-lookup"><span data-stu-id="498e9-116">Testing Techniques</span></span>](#techniques)  
   
- [Verwaltung von sicherheitsrelevantem Code](#critical_code)  
+ [<span data-ttu-id="498e9-117">Verwaltung von sicherheitsrelevantem Code</span><span class="sxs-lookup"><span data-stu-id="498e9-117">Critical Code Management</span></span>](#critical_code)  
   
 <a name="threat_modeling"></a>   
-### Erstellen von Gefahrenmodellen  
- Das Erstellen von Gefahrenmodellen ist eine Kernkomponente des [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] und wird zum Erstellen von Systemprofilen verwendet, um potenzielle Sicherheitsanfälligkeiten zu bestimmen.  Sobald die Schwachstellen identifiziert sind, kann mithilfe der Gefahrenmodelle zudem sichergestellt werden, dass entsprechende Maßnahmen zur Risikominderung zum Einsatz kommen.  
+### <a name="threat-modeling"></a><span data-ttu-id="498e9-118">Erstellen von Gefahrenmodellen</span><span class="sxs-lookup"><span data-stu-id="498e9-118">Threat Modeling</span></span>  
+ <span data-ttu-id="498e9-119">Das Erstellen von Gefahrenmodellen ist eine Kernkomponente des [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] und wird zum Erstellen von Systemprofilen verwendet, um potenzielle Sicherheitsanfälligkeiten zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="498e9-119">Threat modeling is a core component of the [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], and is used to profile a system to determine potential security vulnerabilities.</span></span> <span data-ttu-id="498e9-120">Sobald die Schwachstellen identifiziert sind, kann mithilfe der Gefahrenmodelle zudem sichergestellt werden, dass entsprechende Maßnahmen zur Risikominderung zum Einsatz kommen.</span><span class="sxs-lookup"><span data-stu-id="498e9-120">Once the vulnerabilities are identified, threat modeling also ensures that appropriate mitigations are in place.</span></span>  
   
- Im Überblick umfasst die Erstellung von Gefahrenmodellen die folgenden Hauptschritte, hier am Beispiel eines Lebensmittelmarkts verdeutlicht:  
+ <span data-ttu-id="498e9-121">Im Überblick umfasst die Erstellung von Gefahrenmodellen die folgenden Hauptschritte, hier am Beispiel eines Lebensmittelmarkts verdeutlicht:</span><span class="sxs-lookup"><span data-stu-id="498e9-121">At a high level, threat modeling involves the following key steps by using a grocery store as an example:</span></span>  
   
-1.  **Ressourcenermittlung**.  Zu den Ressourcen eines Lebensmittelmarkts können etwa die Mitarbeiter, ein Tresor, Registrierkassen und der Warenbestand gehören.  
+1.  <span data-ttu-id="498e9-122">**Ressourcenermittlung**.</span><span class="sxs-lookup"><span data-stu-id="498e9-122">**Identifying Assets**.</span></span> <span data-ttu-id="498e9-123">Zu den Ressourcen eines Lebensmittelmarkts können etwa die Mitarbeiter, ein Tresor, Registrierkassen und der Warenbestand gehören.</span><span class="sxs-lookup"><span data-stu-id="498e9-123">A grocery store's assets might include employees, a safe, cash registers, and inventory.</span></span>  
   
-2.  **Aufzählen der Einstiegspunkte**.  Die Einstiegspunkte eines Lebensmittelmarkts können etwa die Vorder\- und Hintertüren, Fenster, das Ladedeck und die Öffnungen der Klimaanlage zählen.  
+2.  <span data-ttu-id="498e9-124">**Aufzählen der Einstiegspunkte**.</span><span class="sxs-lookup"><span data-stu-id="498e9-124">**Enumerating Entry Points**.</span></span> <span data-ttu-id="498e9-125">Die Einstiegspunkte eines Lebensmittelmarkts können etwa die Vorder- und Hintertüren, Fenster, das Ladedeck und die Öffnungen der Klimaanlage zählen.</span><span class="sxs-lookup"><span data-stu-id="498e9-125">A grocery store's entry points might include the front and back doors, windows, the loading dock, and air conditioning units.</span></span>  
   
-3.  **Untersuchung von Angriffen auf Ressourcen mithilfe der Einstiegspunkte**.  Ein mögliches Angriffsszenario könnte auf die Ressource *Tresor* des Lebensmittelmarkts über den Einstiegspunkt *Öffnungen der Klimaanlage* abzielen; die Klimaanlage könnte demontiert werden, um das Herausziehen des Tresors aus dem Lebensmittelmarkt durch die Lüftungsschächte zu ermöglichen.  
+3.  <span data-ttu-id="498e9-126">**Untersuchen von Angriffen auf Ressourcen mithilfe der Einstiegspunkte**.</span><span class="sxs-lookup"><span data-stu-id="498e9-126">**Investigating Attacks against Assets using Entry Points**.</span></span> <span data-ttu-id="498e9-127">Ein mögliches Angriffsszenario könnte auf die Ressource *Tresor* des Lebensmittelmarkts über den Einstiegspunkt *Öffnungen der Klimaanlage* abzielen; die Klimaanlage könnte demontiert werden, um das Herausziehen des Tresors aus dem Lebensmittelmarkt durch die Lüftungsschächte zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="498e9-127">One possible attack could target a grocery store's *safe* asset through the *air conditioning* entry point; the air conditioning unit could be unscrewed to allow the safe to be pulled up through it and out of the store.</span></span>  
   
- Die Erstellung von Gefahrenmodellen wird in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] durchgängig angewendet und schließt folgende Punkte ein:  
+ <span data-ttu-id="498e9-128">Die Erstellung von Gefahrenmodellen wird in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] durchgängig angewendet und schließt folgende Punkte ein:</span><span class="sxs-lookup"><span data-stu-id="498e9-128">Threat modeling is applied throughout [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] and includes the following:</span></span>  
   
--   Die Weise, in der der [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]\-Parser Dateien liest, Text zu entsprechenden Objektmodellklassen zuordnet und den tatsächlichen Code erstellt.  
+-   <span data-ttu-id="498e9-129">Die Weise, in der der [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]-Parser Dateien liest, Text zu entsprechenden Objektmodellklassen zuordnet und den tatsächlichen Code erstellt.</span><span class="sxs-lookup"><span data-stu-id="498e9-129">How the [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] parser reads files, maps text to corresponding object model classes, and creates the actual code.</span></span>  
   
--   Wie ein Fensterhandle \(hWnd\) erstellt wird, Nachrichten sendet und zum Rendern der Inhalte eines Fensters verwendet wird.  
+-   <span data-ttu-id="498e9-130">Wie ein Fensterhandle (hWnd) erstellt wird, Nachrichten sendet und zum Rendern der Inhalte eines Fensters verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="498e9-130">How a window handle (hWnd) is created, sends messages, and is used for rendering the contents of a window.</span></span>  
   
--   Wie die Datenbindung Ressourcen erhält und mit dem System interagiert.  
+-   <span data-ttu-id="498e9-131">Wie die Datenbindung Ressourcen erhält und mit dem System interagiert.</span><span class="sxs-lookup"><span data-stu-id="498e9-131">How data binding obtains resources and interacts with the system.</span></span>  
   
- Diese Gefahrenmodelle sind wichtig, um die Anforderungen an den Sicherheitsentwurf und die Maßnahmen der Gefahrenabwehr während des Entwicklungsprozesses zu bestimmen.  
+ <span data-ttu-id="498e9-132">Diese Gefahrenmodelle sind wichtig, um die Anforderungen an den Sicherheitsentwurf und die Maßnahmen der Gefahrenabwehr während des Entwicklungsprozesses zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="498e9-132">These threat models are important for identifying security design requirements and threat mitigations during the development process.</span></span>  
   
 <a name="tools"></a>   
-### Quellcodeanalyse und Bearbeitungstools  
- Über die manuellen Elemente der Codesicherheitsprüfung im [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] hinaus verwendet das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]\-Team eine Reihe von Tools für die Quellcodeanalyse und die zugeordneten Bearbeitungsschritte, um Sicherheitsschwachstellen zu vermindern.  Es wird eine breite Palette von Tools für den Quellcode verwendet, darunter die folgenden:  
+### <a name="source-analysis-and-editing-tools"></a><span data-ttu-id="498e9-133">Quellcodeanalyse und Bearbeitungstools</span><span class="sxs-lookup"><span data-stu-id="498e9-133">Source Analysis and Editing Tools</span></span>  
+ <span data-ttu-id="498e9-134">Über die manuellen Elemente der Codesicherheitsprüfung im [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] hinaus verwendet das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Team eine Reihe von Tools für die Quellcodeanalyse und die zugeordneten Bearbeitungsschritte, um Sicherheitsschwachstellen zu vermindern.</span><span class="sxs-lookup"><span data-stu-id="498e9-134">In addition to the manual security code review elements of the [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], the [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] team uses several tools for source analysis and associated edits to decrease security vulnerabilities.</span></span> <span data-ttu-id="498e9-135">Es wird eine breite Palette von Tools für den Quellcode verwendet, darunter die folgenden:</span><span class="sxs-lookup"><span data-stu-id="498e9-135">A wide range of source tools are used, and include the following:</span></span>  
   
--   **FXCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code, beginnend mit Vererbungsregeln über die Verwendung der Zugriffssicherheit im Code bis hin zum sicheren Zusammenwirken mit nicht verwaltetem Code.  Weitere Informationen dazu finden Sie unter [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   <span data-ttu-id="498e9-136">**FXCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code, beginnend mit Vererbungsregeln über die Verwendung der Zugriffssicherheit im Code bis hin zum sicheren Zusammenwirken mit nicht verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="498e9-136">**FXCop**: Finds common security issues in managed code ranging from inheritance rules to code access security usage to how to safely interoperate with unmanaged code.</span></span> <span data-ttu-id="498e9-137">Weitere Informationen finden Sie unter [FXCop](http://www.gotdotnet.com/team/fxcop/).</span><span class="sxs-lookup"><span data-stu-id="498e9-137">See [FXCop](http://www.gotdotnet.com/team/fxcop/).</span></span>  
   
--   **Prefix\/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, wie etwa Pufferüberläufe, Probleme bei Formatzeichenfolgen und Fehlerprüfung.  
+-   <span data-ttu-id="498e9-138">**Prefix/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, wie etwa Pufferüberläufe, Probleme bei Formatzeichenfolgen und Fehlerprüfung.</span><span class="sxs-lookup"><span data-stu-id="498e9-138">**Prefix/Prefast**: Finds security vulnerabilities and common security issues in unmanaged code such as buffer overruns, format string issues, and error checking.</span></span>  
   
--   **Gesperrte APIs**: Durchsucht den Quellcode, um die versehentliche Verwendung von Funktionen zu erkennen, die für Sicherheitsprobleme bekannt sind, wie etwa `strcpy`.  Nach der Erkennung werden diese Funktionen durch Alternativen ersetzt, die mehr Sicherheit bieten.  
+-   <span data-ttu-id="498e9-139">**Gesperrte APIs**: Durchsucht den Quellcode, um die versehentliche Verwendung von Funktionen zu erkennen, die für Sicherheitsprobleme bekannt sind, wie etwa `strcpy`.</span><span class="sxs-lookup"><span data-stu-id="498e9-139">**Banned APIs**: Searches source code to identify accidental usage of functions that are well-known for causing security issues, such as `strcpy`.</span></span> <span data-ttu-id="498e9-140">Nach der Erkennung werden diese Funktionen durch Alternativen ersetzt, die mehr Sicherheit bieten.</span><span class="sxs-lookup"><span data-stu-id="498e9-140">Once identified, these functions are replaced with alternatives that are more security.</span></span>  
   
 <a name="techniques"></a>   
-### Testverfahren  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:  
+### <a name="testing-techniques"></a><span data-ttu-id="498e9-141">Testverfahren</span><span class="sxs-lookup"><span data-stu-id="498e9-141">Testing Techniques</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="498e9-142"> verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:</span><span class="sxs-lookup"><span data-stu-id="498e9-142"> uses a variety of security testing techniques that include:</span></span>  
   
--   **Whiteboxtests**: Tester untersuchen den Quellcode und entwickeln dann Exploittests  
+-   <span data-ttu-id="498e9-143">**Whiteboxtests**: Tester untersuchen den Quellcode und entwickeln dann Exploittests.</span><span class="sxs-lookup"><span data-stu-id="498e9-143">**Whitebox Testing**: Testers view source code, and then build exploit tests</span></span>  
   
--   **Blackboxtests**: Tester suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.  
+-   <span data-ttu-id="498e9-144">**Blackboxtests**: Tester suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.</span><span class="sxs-lookup"><span data-stu-id="498e9-144">**Blackbox Testing**: Testers try to find security exploits by examining the API and features, and then try to attack the product.</span></span>  
   
--   **Regression von Sicherheitsproblemen anderer Produkte**: Sofern sie relevant sind, werden Sicherheitsprobleme von verwandten Produkten getestet.  Beispielsweise wurden entsprechende Varianten von nahezu 60 Sicherheitsproblemen bei [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] erkannt und auf ihre Gültigkeit für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hin überprüft.  
+-   <span data-ttu-id="498e9-145">**Zurückverfolgen von Sicherheitsproblemen anderer Produkte**: Sofern sie relevant sind, werden Sicherheitsprobleme von verwandten Produkten getestet.</span><span class="sxs-lookup"><span data-stu-id="498e9-145">**Regressing Security Issues from other Products**: Where relevant, security issues from related products are tested.</span></span> <span data-ttu-id="498e9-146">Beispielsweise wurden entsprechende Varianten von nahezu 60 Sicherheitsproblemen bei [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] erkannt und auf ihre Gültigkeit für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hin überprüft.</span><span class="sxs-lookup"><span data-stu-id="498e9-146">For example, appropriate variants of approximately sixty security issues for [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] have been identified and tried for their applicability to [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
--   **Toolbasierte Penetrationstests durch Dateitests mit zufälligen Daten**: Dateitests mit zufälligen Daten stellen die Ausnutzung des Eingabebereichs von Dateilesemodulen durch eine Vielzahl von Eingaben dar.  Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.  
+-   <span data-ttu-id="498e9-147">**Toolbasierte Penetrationstests durch Dateitests mit zufälligen Daten**: Dateitests mit zufälligen Daten stellen die Ausnutzung des Eingabebereichs von Dateilesemodulen durch eine Vielzahl von Eingaben dar.</span><span class="sxs-lookup"><span data-stu-id="498e9-147">**Tools-Based Penetration Testing through File Fuzzing**: File fuzzing is the exploitation of a file reader's input range through a variety of inputs.</span></span> <span data-ttu-id="498e9-148">Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.</span><span class="sxs-lookup"><span data-stu-id="498e9-148">One example in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] where this technique is used is to check for failure in image decoding code.</span></span>  
   
 <a name="critical_code"></a>   
-### Verwaltung von sicherheitsrelevantem Code  
- Für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] erstellt [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] eine Sicherheitssandbox mithilfe der [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]\-Unterstützung für das Kennzeichnen und Nachverfolgen von sicherheitskritischem Code, der Berechtigungen heraufstuft \(siehe dazu **Sicherheitsrelevante Methode** in [WPF\-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)\).  Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt.  Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird.  Der Quellcode und der Eincheckvorgang werden durch das Nachverfolgen von sicherheitskritischem Code und Zuordnen jeder kritischen Entität \(d.h.  einer Methode, die kritischen Code enthält\) bis zum Zustand ihrer Abzeichnung verwaltet.  Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein.  Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren.  Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt.  Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]\-Sandboxcode.  
+### <a name="critical-code-management"></a><span data-ttu-id="498e9-149">Verwaltung von sicherheitsrelevantem Code</span><span class="sxs-lookup"><span data-stu-id="498e9-149">Critical Code Management</span></span>  
+ <span data-ttu-id="498e9-150">Für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] erstellt [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] eine Sicherheitssandbox mithilfe der [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]-Unterstützung für das Kennzeichnen und Nachverfolgen von sicherheitskritischem Code, der Berechtigungen heraufstuft (weitere Informationen finden Sie unter **Sicherheitsrelevante Methode** in [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).</span><span class="sxs-lookup"><span data-stu-id="498e9-150">For [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] builds a security sandbox by using [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] support for marking and tracking security-critical code that elevates privileges (see **Security-Critical Methodology** in [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).</span></span> <span data-ttu-id="498e9-151">Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt.</span><span class="sxs-lookup"><span data-stu-id="498e9-151">Given the high security quality requirements on security critical code, such code receives an additional level of source management control and security audit.</span></span> <span data-ttu-id="498e9-152">Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="498e9-152">Approximately 5% to 10% of [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consists of security-critical code, which is reviewed by a dedicated reviewing team.</span></span> <span data-ttu-id="498e9-153">Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="498e9-153">The source code and check-in process is managed by tracking security critical code and mapping each critical entity (i.e. a method that contains critical code) to its sign off state.</span></span> <span data-ttu-id="498e9-154">Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein.</span><span class="sxs-lookup"><span data-stu-id="498e9-154">The sign off state includes the names of one or more reviewers.</span></span> <span data-ttu-id="498e9-155">Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren.</span><span class="sxs-lookup"><span data-stu-id="498e9-155">Each daily build of [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compares the critical code to that in previous builds to check for unapproved changes.</span></span> <span data-ttu-id="498e9-156">Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt.</span><span class="sxs-lookup"><span data-stu-id="498e9-156">If an engineer modifies critical code without approval from the reviewing team, it is identified and fixed immediately.</span></span> <span data-ttu-id="498e9-157">Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.</span><span class="sxs-lookup"><span data-stu-id="498e9-157">This process enables the application and maintenance of an especially high level of scrutiny over [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] sandbox code.</span></span>  
   
-## Siehe auch  
- [Sicherheit](../../../docs/framework/wpf/security-wpf.md)   
- [WPF\-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)   
- [WPF\-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)   
- [Trustworthy Computing](http://www.microsoft.com/mscorp/twc/default.mspx)   
- [Gefahrenmodelle für Anwendungen](http://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)   
- [Sicherheitsrichtlinien: .NET Framework 2.0](http://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+## <a name="see-also"></a><span data-ttu-id="498e9-158">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="498e9-158">See Also</span></span>  
+ [<span data-ttu-id="498e9-159">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="498e9-159">Security</span></span>](../../../docs/framework/wpf/security-wpf.md)  
+ [<span data-ttu-id="498e9-160">WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit</span><span class="sxs-lookup"><span data-stu-id="498e9-160">WPF Partial Trust Security</span></span>](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [<span data-ttu-id="498e9-161">WPF-Sicherheitsstrategie – Plattformsicherheit</span><span class="sxs-lookup"><span data-stu-id="498e9-161">WPF Security Strategy - Platform Security</span></span>](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [<span data-ttu-id="498e9-162">Trustworthy Computing</span><span class="sxs-lookup"><span data-stu-id="498e9-162">Trustworthy Computing</span></span>](http://www.microsoft.com/mscorp/twc/default.mspx)  
+ [<span data-ttu-id="498e9-163">-Anwendung Erstellung von Bedrohungsmodellen</span><span class="sxs-lookup"><span data-stu-id="498e9-163">Application Threat Modeling</span></span>](http://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)  
+ [<span data-ttu-id="498e9-164">Sicherheitsrichtlinien: .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="498e9-164">Security Guidelines: .NET Framework 2.0</span></span>](http://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)

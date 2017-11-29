@@ -1,56 +1,59 @@
 ---
-title: "Transporte in Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transporte [WCF]"
-  - "WCF, Transporte"
-  - "Windows Communication Foundation, Transporte"
+title: Transporte in Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transports [WCF]
+- WCF, transports
+- Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 115e2a69c7d990c7d4c59634644fb557e83ad405
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Transporte in Windows Communication Foundation
-Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels.Die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendeten Haupttransporte sind HTTP, HTTPS, TCP und Named Pipes.Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.  
+# <a name="transports-in-windows-communication-foundation"></a><span data-ttu-id="a25d0-102">Transporte in Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a25d0-102">Transports in Windows Communication Foundation</span></span>
+<span data-ttu-id="a25d0-103">Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels.</span><span class="sxs-lookup"><span data-stu-id="a25d0-103">The transport layer is at the lowest level of the channel stack.</span></span> <span data-ttu-id="a25d0-104">Die in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verwendeten Haupttransporte sind HTTP, HTTPS, TCP und Named Pipes.</span><span class="sxs-lookup"><span data-stu-id="a25d0-104">The main transports used in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] are HTTP, HTTPS, TCP, and named pipes.</span></span> <span data-ttu-id="a25d0-105">Die Themen in diesem Abschnitt behandeln die Auswahl dieser Transporte, das Konfigurieren des Transports und das Festlegen von Optimierungseigenschaften.</span><span class="sxs-lookup"><span data-stu-id="a25d0-105">The topics in this section discuss choosing among these transports, configuring the transport, and setting tuning properties.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] schließt zusätzliche Transporte ein.Informationen über Message Queuing \(auch bekannt als MSMQ\-Transport\) finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).Informationen zum Peer\-to\-Peer\-Transport finden Sie unter [Peer\-to\-Peer\-Netzwerke](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="a25d0-106"> schließt zusätzliche Transporte ein.</span><span class="sxs-lookup"><span data-stu-id="a25d0-106"> includes additional transports.</span></span> <span data-ttu-id="a25d0-107">Weitere Informationen zu Message Queuing (auch bekannt als MSMQ)-Transport, finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).</span><span class="sxs-lookup"><span data-stu-id="a25d0-107">For information about Message Queuing (also known as MSMQ) transport, see [Queues and Reliable Sessions](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).</span></span> <span data-ttu-id="a25d0-108">Informationen zu Peer-zu-Peer-Transport, finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span><span class="sxs-lookup"><span data-stu-id="a25d0-108">For information about peer-to-peer transport, see [Peer-to-Peer Networking](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## In diesem Abschnitt  
- [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- Beschreibt die drei Haupttransporte und die Überlegungen für die Auswahl.  
+## <a name="in-this-section"></a><span data-ttu-id="a25d0-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a25d0-109">In This Section</span></span>  
+ [<span data-ttu-id="a25d0-110">Wählen eines Transports</span><span class="sxs-lookup"><span data-stu-id="a25d0-110">Choosing a Transport</span></span>](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ <span data-ttu-id="a25d0-111">Beschreibt die drei Haupttransporte und die Überlegungen für die Auswahl.</span><span class="sxs-lookup"><span data-stu-id="a25d0-111">Describes the three main transports and considerations in selecting one.</span></span>  
   
- [Auswählen eines Nachrichtenencoders](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- Beschreibt Faktoren, die bei der Auswahl eines Nachrichtencodierung\-Bindungselements zu berücksichtigen sind.  
+ [<span data-ttu-id="a25d0-112">Auswählen eines Nachrichtenencoders</span><span class="sxs-lookup"><span data-stu-id="a25d0-112">Choosing a Message Encoder</span></span>](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ <span data-ttu-id="a25d0-113">Beschreibt Faktoren, die bei der Auswahl eines Nachrichtencodierung-Bindungselements zu berücksichtigen sind.</span><span class="sxs-lookup"><span data-stu-id="a25d0-113">Describes factors to consider when choosing a message-encoding binding element.</span></span>  
   
- [Nachrichtenübertragung per Stream](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
- Beschreibt, wie die Transportschicht konfiguriert wird, um Streaming zu ermöglichen.  
+ [<span data-ttu-id="a25d0-114">Nachrichtenübertragung per Stream</span><span class="sxs-lookup"><span data-stu-id="a25d0-114">Streaming Message Transfer</span></span>](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
+ <span data-ttu-id="a25d0-115">Beschreibt, wie die Transportschicht konfiguriert wird, um Streaming zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="a25d0-115">Describes how to configure the transport layer to do streaming.</span></span>  
   
- [Konfigurieren von HTTP und HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
- Beschreibt, wie HTTP\- und HTTPS\-Transportbindungselemente konfiguriert werden.  
+ [<span data-ttu-id="a25d0-116">Konfigurieren von HTTP und HTTPS</span><span class="sxs-lookup"><span data-stu-id="a25d0-116">Configuring HTTP and HTTPS</span></span>](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
+ <span data-ttu-id="a25d0-117">Beschreibt, wie HTTP- und HTTPS-Transportbindungselemente konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="a25d0-117">Describes how to configure the HTTP and HTTPS transport binding elements.</span></span>  
   
- [Vorgehensweise: Ersetzen der WCF URL\-Reservierung durch eine eingeschränkte Reservierung](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Beschreibt, wie Reservierungen mit eingeschränkter URL in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]verwendet werden.  
+ [<span data-ttu-id="a25d0-118">Vorgehensweise: Ersetzen Sie die WCF URL-Reservierung durch eine eingeschränkte Reservierung</span><span class="sxs-lookup"><span data-stu-id="a25d0-118">How to: Replace the WCF URL Reservation with a Restricted Reservation</span></span>](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ <span data-ttu-id="a25d0-119">Beschreibt, wie Reservierungen mit eingeschränkter URL in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a25d0-119">Describes how to use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]URL restricted reservations.</span></span>  
   
- [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
- Beschreibt Überlegungen für das Festlegen von Kontingenten, die in der Transportschicht verfügbar sind.  
+ [<span data-ttu-id="a25d0-120">Transportkontingente</span><span class="sxs-lookup"><span data-stu-id="a25d0-120">Transport Quotas</span></span>](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
+ <span data-ttu-id="a25d0-121">Beschreibt Überlegungen für das Festlegen von Kontingenten, die in der Transportschicht verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="a25d0-121">Describes considerations in setting the quotas available in the transport layer.</span></span>  
   
- [Arbeiten mit NATs und Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
- Beschreibt, wie die Transportschicht konfiguriert wird, wenn Nachrichten hinter einer Firewall gesendet oder empfangen werden oder wenn NAT \(Network Address Translation\) vorhanden ist.  
+ [<span data-ttu-id="a25d0-122">Arbeiten mit NATs und Firewalls</span><span class="sxs-lookup"><span data-stu-id="a25d0-122">Working with NATs and Firewalls</span></span>](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
+ <span data-ttu-id="a25d0-123">Beschreibt, wie die Transportschicht konfiguriert wird, wenn Nachrichten hinter einer Firewall gesendet oder empfangen werden oder wenn NAT (Network Address Translation) vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="a25d0-123">Describes how to configure the transport layer when messages are sent or received behind a firewall or when network address translation (NAT) is present.</span></span>  
   
- [Net.TCP\-Anschlussfreigabe](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Beschreibt, wie die Net.TCP Port Sharing\-Komponente von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird.  
+ [<span data-ttu-id="a25d0-124">Net.TCP-Portfreigabe</span><span class="sxs-lookup"><span data-stu-id="a25d0-124">Net.TCP Port Sharing</span></span>](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ <span data-ttu-id="a25d0-125">Beschreibt, wie die Net.TCP Port Sharing-Komponente von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="a25d0-125">Describes how to use the Net.TCP Port Sharing component of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="a25d0-126">Verweis</span><span class="sxs-lookup"><span data-stu-id="a25d0-126">Reference</span></span>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
@@ -59,7 +62,7 @@ Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels.Di
   
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
-## Verwandte Abschnitte  
- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)  
+## <a name="related-sections"></a><span data-ttu-id="a25d0-127">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a25d0-127">Related Sections</span></span>  
+ [<span data-ttu-id="a25d0-128">Bindungen</span><span class="sxs-lookup"><span data-stu-id="a25d0-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
   
- [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)
+ [<span data-ttu-id="a25d0-129">Erweitern von Bindungen</span><span class="sxs-lookup"><span data-stu-id="a25d0-129">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)

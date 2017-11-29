@@ -1,111 +1,114 @@
 ---
-title: "Benutzerdefinierte Stream-Upgrades | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierte Stream-Upgrades
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7cf7a45051c6cd550225ebc29e587bc937b0953
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Benutzerdefinierte Stream-Upgrades
-Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt.  Dieser Stream wird durch ein <xref:System.IO.Stream>\-Objekt realisiert.  Bei einem Stream\-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf.  Das Stream\-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>\-Objekts durch ein aktualisiertes Objekt.  
+# <a name="custom-stream-upgrades"></a><span data-ttu-id="ccf19-102">Benutzerdefinierte Stream-Upgrades</span><span class="sxs-lookup"><span data-stu-id="ccf19-102">Custom Stream Upgrades</span></span>
+<span data-ttu-id="ccf19-103">Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-103">Stream-oriented transports such as TCP and Named Pipes operate on a continuous stream of bytes between the client and server.</span></span> <span data-ttu-id="ccf19-104">Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-104">This stream is realized by a  <xref:System.IO.Stream> object.</span></span> <span data-ttu-id="ccf19-105">Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf.</span><span class="sxs-lookup"><span data-stu-id="ccf19-105">In a stream upgrade, the client wants to add an optional protocol layer to the channel stack, and asks the other end of the communication channel to do so.</span></span> <span data-ttu-id="ccf19-106">Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-106">The stream upgrade consists in replacing the original <xref:System.IO.Stream> object with an upgraded one.</span></span>  
   
- Sie können z. B. einen Komprimierungsstream direkt über dem Transportstream erstellen.  In diesem Fall wird der ursprüngliche Transport\-<xref:System.IO.Stream> durch einen Stream ersetzt, der den ursprünglichen Stream mit dem Komprimierungs\-<xref:System.IO.Stream> umschließt.  
+ <span data-ttu-id="ccf19-107">Sie können z. B. einen Komprimierungsstream direkt über dem Transportstream erstellen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-107">For example, you can build a compression stream directly on top of the transport stream.</span></span> <span data-ttu-id="ccf19-108">In diesem Fall wird der ursprüngliche Transport-<xref:System.IO.Stream> durch einen Stream ersetzt, der den ursprünglichen Stream mit dem Komprimierungs-<xref:System.IO.Stream> umschließt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-108">In this case the original transport <xref:System.IO.Stream> is replaced with one that wraps the compression <xref:System.IO.Stream> around the original one.</span></span>  
   
- Sie können mehrere Stream\-Upgrades implementieren, die das jeweils vorangehende Upgrade umschließen.  
+ <span data-ttu-id="ccf19-109">Sie können mehrere Stream-Upgrades implementieren, die das jeweils vorangehende Upgrade umschließen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-109">You can apply multiple stream upgrades, each wrapping the preceding one.</span></span>  
   
-## Funktionsweise von Stream\-Upgrades  
- Der Stream\-Upgrade\-Prozess besteht aus vier Komponenten.  
+## <a name="how-stream-upgrades-work"></a><span data-ttu-id="ccf19-110">Funktionsweise von Stream-Upgrades</span><span class="sxs-lookup"><span data-stu-id="ccf19-110">How Stream Upgrades Work</span></span>  
+ <span data-ttu-id="ccf19-111">Der Stream-Upgrade-Prozess besteht aus vier Komponenten.</span><span class="sxs-lookup"><span data-stu-id="ccf19-111">There are four components to the stream upgrade process.</span></span>  
   
-1.  Der Vorgang wird mit einem *Initiator* für den Upgrade\-Stream gestartet: Er kann zur Laufzeit eine Anforderung an das andere Ende der Verbindung zum Upgrade der Kanaltransportebene initialisieren.  
+1.  <span data-ttu-id="ccf19-112">Upgrade-Stream *Initiator* startet den Prozess: zur Laufzeit können sie eine Anforderung an das andere Ende der Verbindung zur der kanaltransportebene initiieren.</span><span class="sxs-lookup"><span data-stu-id="ccf19-112">An upgrade stream *Initiator* begins the process: at run-time it can initiate a request to the other end of its connection to upgrade the channel transport layer.</span></span>  
   
-2.  Ein *Annehmender* für den Upgrade\-Stream führt das Upgrade aus: Er empfängt zur Laufzeit die Upgradeanforderung von dem anderen Computer und akzeptiert ggf. das Upgrade.  
+2.  <span data-ttu-id="ccf19-113">Upgrade-Stream *annehmenden* führt das Upgrade: zur Laufzeit er empfängt die upgradeanforderung von dem anderen Computer und akzeptiert ggf. das Upgrade.</span><span class="sxs-lookup"><span data-stu-id="ccf19-113">An upgrade stream *Acceptor* carries out the upgrade: at run-time it receives the upgrade request from the other machine, and if possible, accepts the upgrade.</span></span>  
   
-3.  Ein *Upgradeanbieter* erstellt den *Initiator* auf dem Client und den *Annehmenden* auf dem Server.  
+3.  <span data-ttu-id="ccf19-114">Ein Upgrade *Anbieter* erstellt die *Initiator* auf dem Client und dem *annehmenden* auf dem Server.</span><span class="sxs-lookup"><span data-stu-id="ccf19-114">An upgrade *Provider* creates the *Initiator* on the client and the *Acceptor* on the server.</span></span>  
   
-4.  Ein *Bindungselement* für das Stream\-Upgrade wird den Bindungen auf dem Dienst und dem Client hinzugefügt und erstellt zur Laufzeit den Anbieter.  
+4.  <span data-ttu-id="ccf19-115">Ein streamupgrade *Bindungselements* wird an die Bindungen auf den Dienst und dem Client hinzugefügt und erstellt zur Laufzeit den Anbieter.</span><span class="sxs-lookup"><span data-stu-id="ccf19-115">A stream upgrade *Binding Element* is added to the bindings on the service and the client, and creates the provider at runtime.</span></span>  
   
- Bei mehreren Upgrades kapseln der Initiator und der Annehmende Zustandsautomaten, um zu erzwingen, welche Upgradeübergänge für jede Initiierung gültig sind.  
+ <span data-ttu-id="ccf19-116">Bei mehreren Upgrades kapseln der Initiator und der Annehmende Zustandsautomaten, um zu erzwingen, welche Upgradeübergänge für jede Initiierung gültig sind.</span><span class="sxs-lookup"><span data-stu-id="ccf19-116">Note that in the case of multiple upgrades, the Initiator and Acceptor encapsulate state machines to enforce which upgrade transitions are valid for each Initiation.</span></span>  
   
-## So implementieren Sie ein Streamupgrade  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stellt vier `abstract`\-Klassen bereit, die Sie implementieren können:  
+## <a name="how-to-implement-a-stream-upgrade"></a><span data-ttu-id="ccf19-117">So implementieren Sie ein Streamupgrade</span><span class="sxs-lookup"><span data-stu-id="ccf19-117">How to Implement a Stream Upgrade</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="ccf19-118"> stellt vier `abstract`-Klassen bereit, die Sie implementieren können:</span><span class="sxs-lookup"><span data-stu-id="ccf19-118"> provides four `abstract` classes that you can implement:</span></span>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
- Gehen Sie wie folgt vor, um ein benutzerdefiniertes Streamupgrade zu implementieren.  Bei dieser Prozedur wird ein minimaler Streamupgradevorgang auf den Client\- und Servercomputern implementiert.  
+ <span data-ttu-id="ccf19-119">Gehen Sie wie folgt vor, um ein benutzerdefiniertes Streamupgrade zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="ccf19-119">To implement a custom stream upgrade, do the following.</span></span> <span data-ttu-id="ccf19-120">Bei dieser Prozedur wird ein minimaler Streamupgradevorgang auf den Client- und Servercomputern implementiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-120">This procedure implements a minimal stream upgrade process on both the client and server machines.</span></span>  
   
-1.  Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> implementiert.  
+1.  <span data-ttu-id="ccf19-121">Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> implementiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-121">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.</span></span>  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>\-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück.  Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron zu initiieren.  
+    1.  <span data-ttu-id="ccf19-122">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück.</span><span class="sxs-lookup"><span data-stu-id="ccf19-122">Override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> method to take in the stream to be upgraded, and return the upgraded stream.</span></span> <span data-ttu-id="ccf19-123">Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron zu initiieren.</span><span class="sxs-lookup"><span data-stu-id="ccf19-123">This method works synchronously; there are analogous methods to initiate the upgrade asynchronously.</span></span>  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>\-Methode, um zusätzliche Upgrades zu suchen.  
+    2.  <span data-ttu-id="ccf19-124">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>-Methode, um zusätzliche Upgrades zu suchen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-124">Override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> method to check for additional upgrades.</span></span>  
   
-2.  Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> implementiert.  
+2.  <span data-ttu-id="ccf19-125">Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> implementiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-125">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.</span></span>  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>\-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück.  Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron anzunehmen.  
+    1.  <span data-ttu-id="ccf19-126">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück.</span><span class="sxs-lookup"><span data-stu-id="ccf19-126">Override the <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> method to take in the stream to be upgraded, and return the upgraded stream.</span></span> <span data-ttu-id="ccf19-127">Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron anzunehmen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-127">This method works synchronously; there are analogous methods to accept the upgrade asynchronously.</span></span>  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>\-Methode, um festzulegen, ob das angeforderte Upgrade von dem Annehmenden des Upgrades an dieser Stelle im Upgradeprozess unterstützt wird.  
+    2.  <span data-ttu-id="ccf19-128">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>-Methode, um festzulegen, ob das angeforderte Upgrade von dem Annehmenden des Upgrades an dieser Stelle im Upgradeprozess unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="ccf19-128">Override the <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> method to determine if the upgrade requested is supported by this upgrade acceptor at this point in the upgrade process.</span></span>  
   
-3.  Erstellen Sie eine Klasse, die den <xref:System.ServiceModel.Channels.StreamUpgradeProvider> implementiert.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A>\-Methode und die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>\-Methode, um Instanzen des in Schritt 1 und 2 definierten Annehmenden und Initiators zurückzugeben.  
+3.  <span data-ttu-id="ccf19-129">Erstellen Sie eine Klasse, die den <xref:System.ServiceModel.Channels.StreamUpgradeProvider> implementiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-129">Create a class the implements <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.</span></span> <span data-ttu-id="ccf19-130">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A>-Methode und die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>-Methode, um Instanzen des in Schritt 1 und 2 definierten Annehmenden und Initiators zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="ccf19-130">Override the <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> and the <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> methods to return instances of the acceptor and initiator defined in steps 2 and 1.</span></span>  
   
-4.  Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> implementiert.  
+4.  <span data-ttu-id="ccf19-131">Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> implementiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-131">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.</span></span>  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A>\-Methode auf dem Client und die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A>\-Methode auf dem Dienst.  
+    1.  <span data-ttu-id="ccf19-132">Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A>-Methode auf dem Dienst.</span><span class="sxs-lookup"><span data-stu-id="ccf19-132">Override the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> method on the client and the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> method on the service.</span></span>  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>\-Methode auf dem Client und die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>\-Methode auf dem Dienst, um das Upgrade\-Bindungselement zu <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> hinzuzufügen.  
+    2.  <span data-ttu-id="ccf19-133">Überschreiben Sie die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>-Methode auf dem Dienst, um das Upgrade-Bindungselement zu <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-133">Override the <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> method on the client and the <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> method on the service to add the upgrade Binding Element to <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.</span></span>  
   
-5.  Fügen Sie das neue Stream\-Upgrade\-Bindungselement Bindungen auf den Server\- und Clientcomputern hinzu.  
+5.  <span data-ttu-id="ccf19-134">Fügen Sie das neue Stream-Upgrade-Bindungselement Bindungen auf den Server- und Clientcomputern hinzu.</span><span class="sxs-lookup"><span data-stu-id="ccf19-134">Add the new stream upgrade binding element to bindings on the server and client machines.</span></span>  
   
-## Sicherheitsupgrades  
- Das Hinzufügen eines Sicherheitsupgrades ist eine spezielle Version des allgemeinen Stream\-Upgrade\-Prozesses.  
+## <a name="security-upgrades"></a><span data-ttu-id="ccf19-135">Sicherheitsupgrades</span><span class="sxs-lookup"><span data-stu-id="ccf19-135">Security Upgrades</span></span>  
+ <span data-ttu-id="ccf19-136">Das Hinzufügen eines Sicherheitsupgrades ist eine spezielle Version des allgemeinen Stream-Upgrade-Prozesses.</span><span class="sxs-lookup"><span data-stu-id="ccf19-136">Adding a security upgrade is a specialized version of the general stream upgrade process.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stellt bereits zwei Bindungselemente für das Upgrade von Stream Security.  Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können.  Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>\-Klasse, die den Client\- und Server\-Stream\-Upgrade\-Anbieter erstellt.  Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="ccf19-137"> stellt bereits zwei Bindungselemente für das Upgrade von Stream Security.</span><span class="sxs-lookup"><span data-stu-id="ccf19-137"> already provides two binding elements for upgrading stream security.</span></span> <span data-ttu-id="ccf19-138">Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können.</span><span class="sxs-lookup"><span data-stu-id="ccf19-138">The configuration of transport-level security is encapsulated by the <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> and the <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> which can be configured and added to a custom binding.</span></span> <span data-ttu-id="ccf19-139">Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die den Client- und Server-Stream-Upgrade-Anbieter erstellt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-139">These binding elements extend the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> class that builds the client and server stream upgrade providers.</span></span> <span data-ttu-id="ccf19-140">Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-140">These binding elements have methods that create the specialized security stream upgrade provider classes, which are not `public`, so for these two cases all you need to do is to add the binding element to the binding.</span></span>  
   
- Bei Sicherheitsszenarien, die die beiden oben angeführten Bindungselemente nicht erfüllen, werden drei sicherheitsrelevante `abstract`\-Klassen von den oben genannten Basisklassen für Initiator, Annehmender und Anbieter abgeleitet:  
+ <span data-ttu-id="ccf19-141">Bei Sicherheitsszenarien, die die beiden oben angeführten Bindungselemente nicht erfüllen, werden drei sicherheitsrelevante `abstract`-Klassen von den oben genannten Basisklassen für Initiator, Annehmender und Anbieter abgeleitet:</span><span class="sxs-lookup"><span data-stu-id="ccf19-141">For security scenarios not met by the above two binding elements, three security-related `abstract` classes are derived from the above initiator, acceptor and provider base classes:</span></span>  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=fullName>  
+1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=fullName>  
+2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=fullName>  
+3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
- Der Vorgang zum Implementieren eines Security Stream\-Upgrades ist der gleiche wie zuvor, mit dem Unterschied, dass Sie von diesen drei Klassen ableiten.  Überschreiben Sie die zusätzlichen Eigenschaften in diesen Klassen, um Sicherheitsinformationen zur Laufzeit anzugeben.  
+ <span data-ttu-id="ccf19-142">Der Vorgang zum Implementieren eines Security Stream-Upgrades ist der gleiche wie zuvor, mit dem Unterschied, dass Sie von diesen drei Klassen ableiten.</span><span class="sxs-lookup"><span data-stu-id="ccf19-142">The process of implementing a security stream upgrade is the same as before, with the difference that you would derive from these three classes.</span></span> <span data-ttu-id="ccf19-143">Überschreiben Sie die zusätzlichen Eigenschaften in diesen Klassen, um Sicherheitsinformationen zur Laufzeit anzugeben.</span><span class="sxs-lookup"><span data-stu-id="ccf19-143">Override the additional properties in these classes to supply security information to the runtime.</span></span>  
   
-## Mehrere Upgrades  
- Wiederholen Sie zum Erstellen zusätzlicher Upgradeanforderungen den oben aufgeführten Vorgang: Erstellen Sie zusätzliche Erweiterungen von <xref:System.ServiceModel.Channels.StreamUpgradeProvider> und Bindungselemente.  Fügen Sie die Bindungselemente der Bindung hinzu.  Die zusätzlichen Bindungselemente werden nacheinander verarbeitet, beginnend mit dem ersten der Bindung hinzugefügten Bindungselement.  In <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> und <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> kann jeder Upgradeanbieter die eigene Anordnung auf bereits vorhandene Upgradebindungsparameter festlegen.  Anschließend muss der vorhandene Upgradebindungsparameter durch einen neuen zusammengesetzten Upgradebindungsparameter ersetzt werden.  
+## <a name="multiple-upgrades"></a><span data-ttu-id="ccf19-144">Mehrere Upgrades</span><span class="sxs-lookup"><span data-stu-id="ccf19-144">Multiple Upgrades</span></span>  
+ <span data-ttu-id="ccf19-145">Wiederholen Sie zum Erstellen zusätzlicher Upgradeanforderungen den oben aufgeführten Vorgang: Erstellen Sie zusätzliche Erweiterungen von <xref:System.ServiceModel.Channels.StreamUpgradeProvider> und Bindungselemente.</span><span class="sxs-lookup"><span data-stu-id="ccf19-145">To create additional upgrade requests repeat the above process: create additional extensions of <xref:System.ServiceModel.Channels.StreamUpgradeProvider> and binding elements.</span></span> <span data-ttu-id="ccf19-146">Fügen Sie die Bindungselemente der Bindung hinzu.</span><span class="sxs-lookup"><span data-stu-id="ccf19-146">Add the binding elements to the binding.</span></span> <span data-ttu-id="ccf19-147">Die zusätzlichen Bindungselemente werden nacheinander verarbeitet, beginnend mit dem ersten der Bindung hinzugefügten Bindungselement.</span><span class="sxs-lookup"><span data-stu-id="ccf19-147">The additional binding elements are processed sequentially, starting with the first binding element added to the binding.</span></span> <span data-ttu-id="ccf19-148">In <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> und <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> kann jeder Upgradeanbieter die eigene Anordnung auf bereits vorhandene Upgradebindungsparameter festlegen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-148">In <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> and <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> each upgrade provider can determine how to layer itself on any pre-existing upgrade binding parameters.</span></span> <span data-ttu-id="ccf19-149">Anschließend muss der vorhandene Upgradebindungsparameter durch einen neuen zusammengesetzten Upgradebindungsparameter ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="ccf19-149">It should then replace the existing upgrade binding parameter with a new composite upgrade binding parameter.</span></span>  
   
- Alternativ kann ein Upgradeanbieter mehrere Upgrades unterstützen.  Sie können z. B. einen benutzerdefinierten Stream\-Upgrade\-Anbieter implementieren, der Sicherheit und Komprimierung unterstützt.  Führen Sie die folgenden Schritte aus:  
+ <span data-ttu-id="ccf19-150">Alternativ kann ein Upgradeanbieter mehrere Upgrades unterstützen.</span><span class="sxs-lookup"><span data-stu-id="ccf19-150">Alternatively, one upgrade provider can support multiple upgrades.</span></span> <span data-ttu-id="ccf19-151">Sie können z. B. einen benutzerdefinierten Stream-Upgrade-Anbieter implementieren, der Sicherheit und Komprimierung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-151">For example, you might want to implement a custom stream upgrade provider that supports both security and compression.</span></span> <span data-ttu-id="ccf19-152">Führen Sie die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="ccf19-152">Do the following steps:</span></span>  
   
-1.  Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>, um die Anbieterklasse zu schreiben, die den Initiator und Annehmenden erstellt.  
+1.  <span data-ttu-id="ccf19-153">Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>, um die Anbieterklasse zu schreiben, die den Initiator und Annehmenden erstellt.</span><span class="sxs-lookup"><span data-stu-id="ccf19-153">Subclass <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> to write the provider class that creates the Initiator and Acceptor.</span></span>  
   
-2.  Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>, und überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>\-Methode, um die Inhaltstypen für den Komprimierungsstream und den sicheren Stream nacheinander zurückzugeben.  
+2.  <span data-ttu-id="ccf19-154">Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>, und überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>-Methode, um die Inhaltstypen für den Komprimierungsstream und den sicheren Stream nacheinander zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="ccf19-154">Subclass the <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> making sure to override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> method to return the content types for the compression stream and the secure stream in order.</span></span>  
   
-3.  Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>, der die benutzerdefinierten Inhaltstypen in seiner <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>\-Methode lesen kann.  
+3.  <span data-ttu-id="ccf19-155">Bilden Sie eine Unterklasse für den <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>, der die benutzerdefinierten Inhaltstypen in seiner <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>-Methode lesen kann.</span><span class="sxs-lookup"><span data-stu-id="ccf19-155">Subclass the <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> that understands the custom content types in its <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> method.</span></span>  
   
-4.  Der Stream wird nach jedem Aufruf an <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> und <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> aktualisiert.  
+4.  <span data-ttu-id="ccf19-156">Der Stream wird nach jedem Aufruf an <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> und <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="ccf19-156">The stream will be upgraded after each call to <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> and <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>   
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>   
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>   
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>   
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>   
+## <a name="see-also"></a><span data-ttu-id="ccf19-157">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ccf19-157">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
+ <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

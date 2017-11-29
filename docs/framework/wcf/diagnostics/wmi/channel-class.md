@@ -1,25 +1,28 @@
 ---
-title: "Kanalklasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Kanalklasse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1df634a61cce695fca74fdfe53beea6c0f83d082
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Kanalklasse
-Kanal  
+# <a name="channel-class"></a><span data-ttu-id="37322-102">Kanalklasse</span><span class="sxs-lookup"><span data-stu-id="37322-102">Channel class</span></span>
+<span data-ttu-id="37322-103">Kanal</span><span class="sxs-lookup"><span data-stu-id="37322-103">Channel</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="37322-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="37322-104">Syntax</span></span>  
   
 ```  
 class Channel  
@@ -32,52 +35,52 @@ class Channel
 };  
 ```  
   
-## Methoden  
- Die Kanalklasse definiert keine Methoden.  
+## <a name="methods"></a><span data-ttu-id="37322-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="37322-105">Methods</span></span>  
+ <span data-ttu-id="37322-106">Die Kanalklasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="37322-106">The Channel class does not define any methods.</span></span>  
   
-## Eigenschaften  
- Die Kanalklasse verfügt über die folgenden Eigenschaften.  
+## <a name="properties"></a><span data-ttu-id="37322-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="37322-107">Properties</span></span>  
+ <span data-ttu-id="37322-108">Die Kanalklasse verfügt über die folgenden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="37322-108">The Channel class has the following properties.</span></span>  
   
-### LocalAddress  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="localaddress"></a><span data-ttu-id="37322-109">LocalAddress</span><span class="sxs-lookup"><span data-stu-id="37322-109">LocalAddress</span></span>  
+ <span data-ttu-id="37322-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="37322-110">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="37322-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="37322-111">Access type: Read-only</span></span>  
   
- Der lokale Endpunkt für den Kanal.  
+ <span data-ttu-id="37322-112">Der lokale Endpunkt für den Kanal.</span><span class="sxs-lookup"><span data-stu-id="37322-112">The local endpoint for the channel.</span></span>  
   
-### ref  
- Datentyp: Endpunkt  
+### <a name="ref"></a><span data-ttu-id="37322-113">ref</span><span class="sxs-lookup"><span data-stu-id="37322-113">ref</span></span>  
+ <span data-ttu-id="37322-114">Datentyp: Endpunkt</span><span class="sxs-lookup"><span data-stu-id="37322-114">Data type: Endpoint</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="37322-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="37322-115">Access type: Read-only</span></span>  
   
- Ein Verweis auf den Endpunkt, mit dem der Kanal verbunden ist.  
+ <span data-ttu-id="37322-116">Ein Verweis auf den Endpunkt, mit dem der Kanal verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="37322-116">A reference to the endpoint the channel connects to.</span></span>  
   
-### RemoteAddress  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="remoteaddress"></a><span data-ttu-id="37322-117">RemoteAddress</span><span class="sxs-lookup"><span data-stu-id="37322-117">RemoteAddress</span></span>  
+ <span data-ttu-id="37322-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="37322-118">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="37322-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="37322-119">Access type: Read-only</span></span>  
   
- Die dem Kanal zugeordnete Remoteadresse.  
+ <span data-ttu-id="37322-120">Die dem Kanal zugeordnete Remoteadresse.</span><span class="sxs-lookup"><span data-stu-id="37322-120">The remote address associated with the channel.</span></span>  
   
-### SessionId  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="sessionid"></a><span data-ttu-id="37322-121">SessionId</span><span class="sxs-lookup"><span data-stu-id="37322-121">SessionId</span></span>  
+ <span data-ttu-id="37322-122">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="37322-122">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="37322-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="37322-123">Access type: Read-only</span></span>  
   
- Die aktuelle Sitzungs\-ID \(sofern vorhanden\).  
+ <span data-ttu-id="37322-124">Die aktuelle Sitzungs-ID (sofern vorhanden).</span><span class="sxs-lookup"><span data-stu-id="37322-124">The current session Id, if any.</span></span>  
   
-### Typ  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="type"></a><span data-ttu-id="37322-125">Typ</span><span class="sxs-lookup"><span data-stu-id="37322-125">Type</span></span>  
+ <span data-ttu-id="37322-126">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="37322-126">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="37322-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="37322-127">Access type: Read-only</span></span>  
   
- Der Kanaltyp.  
+ <span data-ttu-id="37322-128">Der Kanaltyp.</span><span class="sxs-lookup"><span data-stu-id="37322-128">The type of the channel.</span></span>  
   
-## Anforderungen  
+## <a name="requirements"></a><span data-ttu-id="37322-129">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="37322-129">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|<span data-ttu-id="37322-130">MOF</span><span class="sxs-lookup"><span data-stu-id="37322-130">MOF</span></span>|<span data-ttu-id="37322-131">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="37322-131">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="37322-132">Namespace</span><span class="sxs-lookup"><span data-stu-id="37322-132">Namespace</span></span>|<span data-ttu-id="37322-133">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="37322-133">Defined in root\ServiceModel</span></span>|  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="37322-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37322-134">See Also</span></span>  
  <xref:System.ServiceModel.Channels.ChannelBase>

@@ -1,31 +1,34 @@
 ---
-title: "Bedeutende Ablaufverfolgungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bedeutende Ablaufverfolgungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58322a472a59ee9d3ac9451ff1f20ed95405ac54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Bedeutende Ablaufverfolgungen
-Dieses Thema führt einige der Hauptablaufverfolgungen auf, die von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ausgegeben werden.  
+# <a name="significant-traces"></a><span data-ttu-id="885ff-102">Bedeutende Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="885ff-102">Significant Traces</span></span>
+<span data-ttu-id="885ff-103">Dieses Thema führt einige der Hauptablaufverfolgungen auf, die von [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="885ff-103">This topic lists some of the major traces emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>  
   
-## Bedeutende Ablaufverfolgungen  
+## <a name="significant-traces"></a><span data-ttu-id="885ff-104">Bedeutende Ablaufverfolgungen</span><span class="sxs-lookup"><span data-stu-id="885ff-104">Significant Traces</span></span>  
   
-|Ablaufverfolgung|Beschreibung|  
-|----------------------|------------------|  
-|Nachrichtenablaufverfolgung|Die Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Nachricht von der Nachrichtenprotokollierungsfunktion bei Aktivierung der `System.ServiceModel.MessageLogging`\-Ablaufverfolgungsquelle protokolliert wird.Durch  Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt.Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, die auch vom Attribut "Message Source" in der Nachrichtenprotokoll\-Ablaufverfolgung angegeben werden.|  
-|"Nachricht empfangen"\-Ablaufverfolgung|Diese Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Nachricht bei Aktivierung der `System.ServiceModel`\-Ablaufverfolgungsquelle auf Informations\- oder Verbose\-Ebene empfangen wird.Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsdiagrammansicht zu sehen.|  
-|"Nachricht gesendet"\-Ablaufverfolgung|Diese Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Nachricht gesendet wird, wenn die `System.ServiceModel`\-Ablaufverfolgungsquelle auf Informations\- oder Verbose\-Ebene aktiviert ist.Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsgraphenansicht zu sehen.|  
-|Abrufen von ChannelEndpointElement|Diese Ablaufverfolgung wird in einer Construct\-Channel\-Factory auf Informationsebene ausgegeben.Die Verfolgung beinhaltet eine Beschreibung des Endpunkts, mit dem der Client kommuniziert \(Remoteadresse, Bindung, Vertragsname\).|  
-|Abrufen des ServiceElement|Diese Ablaufverfolgung wird im Construct\-Diensthost auf Informationsebene ausgegeben.Sie liefert eine Beschreibung des Dienstvertrags und der Bindung.|  
-|SocketConnection erstellen|Diese Ablaufverfolgung wird in der ersten "Verarbeiten"\-Aktion, die vom Client durchgeführt wird, und in der "Bytes erhalten"\-Aktivität im Dienst ausgegeben.Sie liefert die lokalen und Remote\-IP\-Adressen.Sie wird auf Informationsebene ausgegeben.|
+|<span data-ttu-id="885ff-105">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="885ff-105">Trace</span></span>|<span data-ttu-id="885ff-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="885ff-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="885ff-107">Nachrichtenablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="885ff-107">Message log trace</span></span>|<span data-ttu-id="885ff-108">Die Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Nachricht von der Nachrichtenprotokollierungsfunktion bei Aktivierung der `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle protokolliert wird.</span><span class="sxs-lookup"><span data-stu-id="885ff-108">The trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is logged by the message logging feature when the `System.ServiceModel.MessageLogging` trace source is enabled.</span></span> <span data-ttu-id="885ff-109">Durch  Klicken auf diese Ablaufverfolgung wird die Nachricht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="885ff-109">Clicking this trace displays the message.</span></span> <span data-ttu-id="885ff-110">Es gibt vier konfigurierbare Protokollierungspunkte für eine Nachricht: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, die auch vom Attribut "Message Source" in der Nachrichtenprotokoll-Ablaufverfolgung angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="885ff-110">There are four configurable logging points for a message: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, also indicated by the Message Source attribute in the message log trace.</span></span>|  
+|<span data-ttu-id="885ff-111">"Nachricht empfangen"-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="885ff-111">Message received trace</span></span>|<span data-ttu-id="885ff-112">Diese Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Nachricht empfangen wird, wenn die `System.ServiceModel`-Ablaufverfolgungsquelle auf der Stufe "Information" oder "Ausführlich" aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="885ff-112">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is received if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="885ff-113">Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsdiagrammansicht zu sehen.</span><span class="sxs-lookup"><span data-stu-id="885ff-113">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="885ff-114">"Nachricht gesendet"-Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="885ff-114">Message sent trace</span></span>|<span data-ttu-id="885ff-115">Diese Ablaufverfolgung wird ausgegeben, wenn eine [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Nachricht gesendet wird, sofern die `System.ServiceModel`-Ablaufverfolgungsquelle auf der Stufe Information oder Ausführlich aktiviert wurde.</span><span class="sxs-lookup"><span data-stu-id="885ff-115">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is sent if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="885ff-116">Diese Ablaufverfolgung ist notwendig, um den Nachrichtenkorrelationspfeil in der Aktivitätsdiagrammansicht zu sehen.</span><span class="sxs-lookup"><span data-stu-id="885ff-116">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="885ff-117">Abrufen von ChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="885ff-117">Get ChannelEndpointElement</span></span>|<span data-ttu-id="885ff-118">Diese Ablaufverfolgung wird in einer Construct-Channel-Factory auf Informationsebene ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="885ff-118">This trace is emitted in Construct channel factory, at information level.</span></span> <span data-ttu-id="885ff-119">Die Verfolgung beinhaltet eine Beschreibung des Endpunkts, mit dem der Client kommuniziert (Remoteadresse, Bindung, Vertragsname).</span><span class="sxs-lookup"><span data-stu-id="885ff-119">It provides a description of the endpoint the client is talking to (remote address, binding, contract name).</span></span>|  
+|<span data-ttu-id="885ff-120">Abrufen des ServiceElement</span><span class="sxs-lookup"><span data-stu-id="885ff-120">Get ServiceElement</span></span>|<span data-ttu-id="885ff-121">Diese Ablaufverfolgung wird im Construct-Diensthost auf Informationsebene ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="885ff-121">This trace is emitted in Construct service host, at Information level.</span></span> <span data-ttu-id="885ff-122">Sie liefert eine Beschreibung des Dienstvertrags und der Bindung.</span><span class="sxs-lookup"><span data-stu-id="885ff-122">It provides a description of the service contract and binding.</span></span>|  
+|<span data-ttu-id="885ff-123">SocketConnection erstellen</span><span class="sxs-lookup"><span data-stu-id="885ff-123">SocketConnection create</span></span>|<span data-ttu-id="885ff-124">Diese Ablaufverfolgung wird in der ersten "Verarbeiten"-Aktion, die vom Client durchgeführt wird, und in der "Bytes erhalten"-Aktivität im Dienst ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="885ff-124">This trace is emitted in the first Process action performed by the client and in the Receive bytes activity on the service.</span></span> <span data-ttu-id="885ff-125">Sie liefert die lokalen und remoten IP-Adressen.</span><span class="sxs-lookup"><span data-stu-id="885ff-125">It provides the local and remote IP addresses.</span></span> <span data-ttu-id="885ff-126">Sie wird auf Informationsebene ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="885ff-126">It is emitted at Information level.</span></span>|

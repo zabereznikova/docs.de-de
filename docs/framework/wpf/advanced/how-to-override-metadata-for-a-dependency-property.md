@@ -1,42 +1,48 @@
 ---
-title: "Gewusst wie: &#220;berschreiben von Metadaten f&#252;r eine Abh&#228;ngigkeitseigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abhängigkeitseigenschaften, Überschreiben von Metadaten für"
-  - "Metadaten, Überschreiben für Abhängigkeitseigenschaften"
-  - "Überschreiben von Metadaten für Abhängigkeitseigenschaften"
+title: "Gewusst wie: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- metadata [WPF], overriding for dependency properties
+- dependency properties [WPF], overriding metadata for
+- overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#220;berschreiben von Metadaten f&#252;r eine Abh&#228;ngigkeitseigenschaft
-In diesem Beispiel wird veranschaulicht, wie die standardmäßigen Metadaten für die Abhängigkeitseigenschaft einer geerbten Klasse überschrieben werden, indem die <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>\-Methode aufgerufen wird und typspezifische Metadaten bereitgestellt werden.  
+# <a name="how-to-override-metadata-for-a-dependency-property"></a><span data-ttu-id="0f421-102">Gewusst wie: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="0f421-102">How to: Override Metadata for a Dependency Property</span></span>
+<span data-ttu-id="0f421-103">In diesem Beispiel wird gezeigt, wie Metadaten für Abhängigkeitseigenschaften Standard zu überschreiben, die stammen von einer geerbten Klasse durch Aufrufen der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode und typspezifische Metadaten bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="0f421-103">This example shows how to override default dependency property metadata that comes from an inherited class, by calling the <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> method and providing type-specific metadata.</span></span>  
   
-## Beispiel  
- Durch die Definition der <xref:System.Windows.PropertyMetadata> kann eine Klasse die Verhalten einer [Abhängigkeitseigenschaft](GTMT) definieren, wie z. B. deren Standardwert und Rückrufe des Eigenschaftensystems.  Viele Abhängigkeitseigenschaftenklassen verfügen bereits über Standardmetadaten als Teil ihres Registrierungsprozesses.  Hierzu gehören die Abhängigkeitseigenschaften, die Teil von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] sind.  Eine Klasse, die die Abhängigkeitseigenschaft über ihre Klassenvererbung erbt, kann die ursprünglichen Metadaten überschreiben, sodass die Eigenschaftenmerkmale, die über Metadaten geändert werden können, eventuellen unterklassenspezifischen Anforderungen entsprechen.  
+## <a name="example"></a><span data-ttu-id="0f421-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0f421-104">Example</span></span>  
+ <span data-ttu-id="0f421-105">Durch definieren seiner <xref:System.Windows.PropertyMetadata>, eine Klasse kann die Abhängigkeitseigenschaft Verhalten wie die Standardwert-Eigenschaft und System Rückrufe zu definieren.</span><span class="sxs-lookup"><span data-stu-id="0f421-105">By defining its <xref:System.Windows.PropertyMetadata>, a class can define the dependency property's behaviors, such as its default value and property system callbacks.</span></span> <span data-ttu-id="0f421-106">Viele Abhängigkeitseigenschaftenklassen verfügen bereits über Standardmetadaten als Teil ihres Registrierungsprozesses.</span><span class="sxs-lookup"><span data-stu-id="0f421-106">Many dependency property classes already have default metadata established as part of their registration process.</span></span> <span data-ttu-id="0f421-107">Hierzu gehören die Abhängigkeitseigenschaften der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f421-107">This includes the dependency properties that are part of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].</span></span> <span data-ttu-id="0f421-108">Eine Klasse, die die Abhängigkeitseigenschaft über ihre Klassenvererbung erbt, kann die ursprünglichen Metadaten überschreiben, sodass die Merkmale der Eigenschaft, die über Metadaten geändert werden können, allen unterklassenspezifischen Anforderungen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="0f421-108">A class that inherits the dependency property through its class inheritance can override the original metadata so that the characteristics of the property that can be altered through metadata will match any subclass-specific requirements.</span></span>  
   
- Das Überschreiben von Metadaten für eine Abhängigkeitseigenschaft muss durchgeführt werden, bevor die betreffende Eigenschaft für die Verwendung im Eigenschaftensystem verfügbar gemacht wird \(dies entspricht dem Zeitpunkt, zu dem bestimmte Instanzen von Objekten instanziiert werden, die die Eigenschaft registrieren\).  Aufrufe von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> müssen in den statischen Konstruktoren des Typs ausgeführt werden, der sich selbst als `forType`\-Parameter von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> bereitstellt.  Durch den Versuch, Metadaten zu ändern, nachdem Instanzen des Besitzertyps vorhanden sind, werden keine Ausnahmen ausgelöst. Dies führt jedoch zu inkonsistentem Verhalten im Eigenschaftensystem.  Außerdem können Metadaten nur einmal pro Typ überschrieben werden.  Nachfolgende Versuche, Metadaten für den gleichen Typ zu überschreiben, lösen eine Ausnahme aus.  
+ <span data-ttu-id="0f421-109">Das Überschreiben von Metadaten für eine Abhängigkeitseigenschaft muss vor der Verwendung dieser Eigenschaft durchgeführt werden (dies entspricht der Zeit, in der bestimmte Instanzen von Objekten, die die Eigenschaft registrieren, instanziiert werden).</span><span class="sxs-lookup"><span data-stu-id="0f421-109">Overriding metadata on a dependency property must be done prior to that property being placed in use by the property system (this equates to the time that specific instances of objects that register the property are instantiated).</span></span> <span data-ttu-id="0f421-110">Aufrufe von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> muss ausgeführt werden, in den statischen Konstruktoren des Typs, der sich selbst als der `forType` Parameter <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>.</span><span class="sxs-lookup"><span data-stu-id="0f421-110">Calls to <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> must be performed within the static constructors of the type that provides itself as the `forType` parameter of <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>.</span></span> <span data-ttu-id="0f421-111">Wenn Sie versuchen, die Metadaten zu ändern, nachdem Instanzen des Besitzertyps vorhanden sind, werden zwar keine Ausnahmen ausgelöst, jedoch inkonsistentes Verhalten im Eigenschaftensystem hervorgerufen.</span><span class="sxs-lookup"><span data-stu-id="0f421-111">If you attempt to change metadata once instances of the owner type exist, this will not raise exceptions, but will result in inconsistent behaviors in the property system.</span></span> <span data-ttu-id="0f421-112">Außerdem können Metadaten nur einmal pro Typ überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="0f421-112">Also, metadata can only be overridden once per type.</span></span> <span data-ttu-id="0f421-113">Bei nachfolgenden Versuchen, Metadaten für den gleichen Typ zu überschreiben, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="0f421-113">Subsequent attempts to override metadata on the same type will raise an exception.</span></span>  
   
- Im folgenden Beispiel überschreibt die benutzerdefinierte `MyAdvancedStateControl`\-Klasse die für die `StateProperty` von `MyAdvancedStateControl` bereitgestellten Metadaten mit neuen Eigenschaftenmetadaten.  Der Standardwert der `StateProperty` ist z. B. jetzt `true`, wenn die Eigenschaft für eine neu erstellte `MyAdvancedStateControl`\-Instanz abgefragt wird.  
+ <span data-ttu-id="0f421-114">Im folgenden Beispiel überschreibt die benutzerdefinierte Klasse `MyAdvancedStateControl` die von `MyAdvancedStateControl` für `StateProperty` bereitgestellten Metadaten mit neuen Eigenschaftenmetadaten.</span><span class="sxs-lookup"><span data-stu-id="0f421-114">In the following example, the custom class `MyAdvancedStateControl` overrides the metadata provided for `StateProperty` by `MyAdvancedStateControl` with new property metadata.</span></span> <span data-ttu-id="0f421-115">Bei der Abfrage der Eigenschaft für eine neu erstellte `MyAdvancedStateControl`-Instanz, lautet der Standardwert von `StateProperty` nun `true`.</span><span class="sxs-lookup"><span data-stu-id="0f421-115">For instance, the default value of the `StateProperty` is now `true` when the property is queried on a newly constructed `MyAdvancedStateControl` instance.</span></span>  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
 [!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
-## Siehe auch  
- <xref:System.Windows.DependencyProperty>   
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="0f421-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0f421-116">See Also</span></span>  
+ <xref:System.Windows.DependencyProperty>  
+ [<span data-ttu-id="0f421-117">Übersicht über Abhängigkeitseigenschaften</span><span class="sxs-lookup"><span data-stu-id="0f421-117">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="0f421-118">Benutzerdefinierte Abhängigkeitseigenschaften</span><span class="sxs-lookup"><span data-stu-id="0f421-118">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="0f421-119">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="0f421-119">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

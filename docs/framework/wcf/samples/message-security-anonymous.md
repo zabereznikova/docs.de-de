@@ -1,33 +1,32 @@
 ---
-title: "Nachrichtensicherheit – anonym | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WS-Sicherheit"
+title: "Nachrichtensicherheit – anonym"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 52
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 52
+caps.latest.revision: "52"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 561e451656cd725a732ea727badeb47087252b9b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Nachrichtensicherheit – anonym
-Das Beispiel "Nachrichtensicherheit – anonym" zeigt, wie eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Anwendung implementiert wird, die Sicherheit auf Nachrichtenebene ohne Clientauthentifizierung verwendet, aber Serverauthentifizierung mithilfe des Serverzertifikats X.509 erfordert.  Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt.  Dieses Beispiel basiert auf dem Beispiel [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md).  Dieses Beispiel besteht aus einem Clientkonsolenprogramm \(.exe\) und einer von IIS \(Internet Information Services, Internetinformationsdienste\) gehosteten Dienstbibliothek \(.dll\).  Der Dienst implementiert einen Vertrag, der ein Anforderungs\-Antwort\-Kommunikationsmuster definiert.  
+# <a name="message-security-anonymous"></a><span data-ttu-id="e9166-102">Nachrichtensicherheit – anonym</span><span class="sxs-lookup"><span data-stu-id="e9166-102">Message Security Anonymous</span></span>
+<span data-ttu-id="e9166-103">Das Beispiel "Nachrichtensicherheit – anonym" zeigt, wie eine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendung implementiert wird, die Sicherheit auf Nachrichtenebene ohne Clientauthentifizierung verwendet, aber Serverauthentifizierung mithilfe des Serverzertifikats X.509 erfordert.</span><span class="sxs-lookup"><span data-stu-id="e9166-103">The Message Security Anonymous sample demonstrates how to implement a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application that uses message-level security with no client authentication but that requires server authentication using the server's X.509 certificate.</span></span> <span data-ttu-id="e9166-104">Alle Anwendungsnachrichten zwischen dem Client und dem Server werden signiert und verschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="e9166-104">All application messages between the client and server are signed and encrypted.</span></span> <span data-ttu-id="e9166-105">Dieses Beispiel basiert auf der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="e9166-105">This sample is based on the [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) sample.</span></span> <span data-ttu-id="e9166-106">Dieses Beispiel besteht aus einem Clientkonsolenprogramm (.exe) und einer von IIS (Internet Information Services, Internetinformationsdienste) gehosteten Dienstbibliothek (.dll).</span><span class="sxs-lookup"><span data-stu-id="e9166-106">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="e9166-107">Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.</span><span class="sxs-lookup"><span data-stu-id="e9166-107">The service implements a contract that defines a request-reply communication pattern.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="e9166-108">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="e9166-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Dieses Beispiel fügt einen neuen Vorgang zur Rechnerschnittstelle hinzu, der `True` zurückgibt, wenn der Client nicht authentifiziert wurde.  
+ <span data-ttu-id="e9166-109">Dieses Beispiel fügt einen neuen Vorgang zur Rechnerschnittstelle hinzu, der `True` zurückgibt, wenn der Client nicht authentifiziert wurde.</span><span class="sxs-lookup"><span data-stu-id="e9166-109">This sample adds a new operation to the calculator interface that returns `True` if the client was not authenticated.</span></span>  
   
 ```  
 public class CalculatorService : ICalculator  
@@ -39,12 +38,11 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-  
 ```  
   
- Der Dienst macht einen einzigen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit einer Konfigurationsdatei \(Web.conf\) definiert wird.  Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.  Die Bindung wird mit einer `wsHttpBinding`\-Bindung konfiguriert.  Der Standardsicherheitsmodus für die `wsHttpBinding`\-Bindung ist `Message`.  Das `clientCredentialType`\-Attribut ist auf `None` festgelegt.  
+ <span data-ttu-id="e9166-110">Der Dienst macht einen einzigen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit einer Konfigurationsdatei (Web.conf) definiert wird.</span><span class="sxs-lookup"><span data-stu-id="e9166-110">The service exposes a single endpoint for communicating with the service, defined using a configuration file (Web.config).</span></span> <span data-ttu-id="e9166-111">Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.</span><span class="sxs-lookup"><span data-stu-id="e9166-111">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="e9166-112">Die Bindung wird mit einer `wsHttpBinding`-Bindung konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="e9166-112">The binding is configured with a `wsHttpBinding` binding.</span></span> <span data-ttu-id="e9166-113">Der Standardsicherheitsmodus für die `wsHttpBinding`-Bindung ist `Message`.</span><span class="sxs-lookup"><span data-stu-id="e9166-113">The default security mode for the `wsHttpBinding` binding is `Message`.</span></span> <span data-ttu-id="e9166-114">Das `clientCredentialType`-Attribut ist auf `None` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e9166-114">The `clientCredentialType` attribute is set to `None`.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
   <protocolMapping>  
@@ -69,9 +67,9 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Die für die Dienstauthentifizierung zu verwendenden Anmeldeinformationen werden im [\<Verhalten\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) festgelegt.  Der Wert für `SubjectName` des Serverzertifikats muss dem Wert des `findValue`\-Attributs entsprechen \(wie in folgendem Beispielcode gezeigt\).  
+ <span data-ttu-id="e9166-115">Die Anmeldeinformationen für die Dienstauthentifizierung zu verwendende werden angegeben, der [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md).</span><span class="sxs-lookup"><span data-stu-id="e9166-115">The credentials to be used for service authentication are specified in the [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md).</span></span> <span data-ttu-id="e9166-116">Der Wert für `SubjectName` des Serverzertifikats muss dem Wert des `findValue`-Attributs entsprechen (wie in folgendem Beispielcode gezeigt).</span><span class="sxs-lookup"><span data-stu-id="e9166-116">The server certificate must contain the same value for the `SubjectName` as the value specified for the `findValue` attribute as shown in the following sample code.</span></span>  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior>  
@@ -88,12 +86,11 @@ public class CalculatorService : ICalculator
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
- Die Clientendpunktkonfiguration besteht aus einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag.  Der Clientsicherheitsmodus für die `wsHttpBinding`\-Bindung ist `Message`.  Das `clientCredentialType`\-Attribut ist auf `None` festgelegt.  
+ <span data-ttu-id="e9166-117">Die Clientendpunktkonfiguration besteht aus einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag.</span><span class="sxs-lookup"><span data-stu-id="e9166-117">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="e9166-118">Der Clientsicherheitsmodus für die `wsHttpBinding`-Bindung ist `Message`.</span><span class="sxs-lookup"><span data-stu-id="e9166-118">The client security mode for the `wsHttpBinding` binding is `Message`.</span></span> <span data-ttu-id="e9166-119">Das `clientCredentialType`-Attribut ist auf `None` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e9166-119">The `clientCredentialType` attribute is set to `None`.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <client>  
     <endpoint name=""  
@@ -119,9 +116,9 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Das Beispiel setzt den <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> für die Authentifizierung des Dienstzertifikats auf <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  Dies erfolgt in der Datei "App.config" des Clients im Abschnitt `behaviors`.  Wenn sich das Zertifikat also im Speicher für vertrauenswürdige Personen des Benutzers befindet, wird es als vertrauenswürdig eingestuft wird, ohne dass eine Validierung der Ausstellerkette des Zertifikats erfolgt.  Diese Einstellung wird hier der Einfachheit halber verwendet. So kann das Beispiel ausgeführt werden, ohne dass Zertifikate erforderlich sind, die von einer Zertifizierungsstelle ausgestellt wurden.  Diese Einstellung ist weniger sicher als die Standardeinstellung ChainTrust.  Die aus dieser Einstellung resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor `PeerOrChainTrust` im Produktionscode verwendet wird.  
+ <span data-ttu-id="e9166-120">Das Beispiel setzt den <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> für die Authentifizierung des Dienstzertifikats auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust>.</span><span class="sxs-lookup"><span data-stu-id="e9166-120">The sample sets the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> to <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> for authenticating the service's certificate.</span></span> <span data-ttu-id="e9166-121">Dies erfolgt in der Datei "App.config" des Clients im Abschnitt `behaviors`.</span><span class="sxs-lookup"><span data-stu-id="e9166-121">This is done in the client's App.config file in the `behaviors` section.</span></span> <span data-ttu-id="e9166-122">Wenn sich das Zertifikat also im Speicher für vertrauenswürdige Personen des Benutzers befindet, wird es als vertrauenswürdig eingestuft wird, ohne dass eine Validierung der Ausstellerkette des Zertifikats erfolgt.</span><span class="sxs-lookup"><span data-stu-id="e9166-122">This means that if the certificate is in the user's Trusted People store, then it is trusted without performing a validation of the certificate's issuer chain.</span></span> <span data-ttu-id="e9166-123">Diese Einstellung wird hier der Einfachheit halber verwendet. So kann das Beispiel ausgeführt werden, ohne dass Zertifikate erforderlich sind, die von einer Zertifizierungsstelle ausgestellt wurden.</span><span class="sxs-lookup"><span data-stu-id="e9166-123">This setting is used here for convenience so that the sample can be run without requiring certificates issued by a certification authority (CA).</span></span> <span data-ttu-id="e9166-124">Diese Einstellung ist weniger sicher als die Standardeinstellung ChainTrust.</span><span class="sxs-lookup"><span data-stu-id="e9166-124">This setting is less secure than the default, ChainTrust.</span></span> <span data-ttu-id="e9166-125">Die aus dieser Einstellung resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor `PeerOrChainTrust` im Produktionscode verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e9166-125">The security implications of this setting should be carefully considered before using `PeerOrChainTrust` in production code.</span></span>  
   
- Die Clientimplementierung fügt einen Aufruf der `IsCallerAnonymous`\-Methode hinzu und unterscheidet sich sonst nicht vom [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)\-Beispiel.  
+ <span data-ttu-id="e9166-126">Die Clientimplementierung Fügt einen Aufruf der `IsCallerAnonymous` Methode, und andernfalls unterscheidet sich nicht von der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="e9166-126">The client implementation adds a call to the `IsCallerAnonymous` method and otherwise does not differ from the [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) sample.</span></span>  
   
 ```  
 // Create a client with a client endpoint configuration.  
@@ -144,10 +141,9 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.  Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ <span data-ttu-id="e9166-127">Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e9166-127">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e9166-128">Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.</span><span class="sxs-lookup"><span data-stu-id="e9166-128">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 IsCallerAnonymous returned: True  
@@ -156,16 +152,15 @@ Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25  
 Divide(22,7) = 3.14285714285714  
 Press <ENTER> to terminate client.  
-  
 ```  
   
- Mit der im Beispiel "Nachrichtensicherheit – anonym" enthaltenen Batchdatei Setup.bat können Sie den Server mit einem relevanten Zertifikat zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.  Die Batchdatei kann in zwei Modi ausgeführt werden.  Um die Batchdatei im Einzelcomputermodus auszuführen, geben Sie in der Befehlszeile `setup.bat` ein.  Um sie im Dienstmodus auszuführen, geben Sie `setup.bat service` ein.  Verwenden Sie diesen Modus, wenn Sie das Beispiel computerübergreifend ausführen.  Weitere Informationen finden Sie in der Setupprozedur am Ende dieses Themas.  
+ <span data-ttu-id="e9166-129">Mit der im Beispiel "Nachrichtensicherheit – anonym" enthaltenen Batchdatei Setup.bat können Sie den Server mit einem relevanten Zertifikat zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.</span><span class="sxs-lookup"><span data-stu-id="e9166-129">The Setup.bat batch file included with the Message Security Anonymous sample enables you to configure the server with a relevant certificate to run a hosted application that requires certificate-based security.</span></span> <span data-ttu-id="e9166-130">Die Batchdatei kann in zwei Modi ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e9166-130">The batch file can be run in two modes.</span></span> <span data-ttu-id="e9166-131">Um die Batchdatei im Einzelcomputermodus auszuführen, geben Sie in der Befehlszeile `setup.bat` ein.</span><span class="sxs-lookup"><span data-stu-id="e9166-131">To run the batch file in the single-computer mode, type `setup.bat` at the command line.</span></span> <span data-ttu-id="e9166-132">Um sie im Dienstmodus auszuführen, geben Sie `setup.bat service` ein.</span><span class="sxs-lookup"><span data-stu-id="e9166-132">To run it in service mode, type `setup.bat service`.</span></span> <span data-ttu-id="e9166-133">Verwenden Sie diesen Modus, wenn Sie das Beispiel computerübergreifend ausführen.</span><span class="sxs-lookup"><span data-stu-id="e9166-133">Use this mode when running the sample across computers.</span></span> <span data-ttu-id="e9166-134">Weitere Informationen finden Sie in der Setupprozedur am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="e9166-134">See the setup procedure at the end of this topic for details.</span></span>  
   
- Im Folgenden wird eine kurze Übersicht über die verschiedenen Abschnitte der Batchdateien bereitgestellt:  
+ <span data-ttu-id="e9166-135">Im Folgenden wird eine kurze Übersicht über die verschiedenen Abschnitte der Batchdateien bereitgestellt:</span><span class="sxs-lookup"><span data-stu-id="e9166-135">The following provides a brief overview of the different sections of the batch files:</span></span>  
   
--   Erstellen des Serverzertifikats.  
+-   <span data-ttu-id="e9166-136">Erstellen des Serverzertifikats.</span><span class="sxs-lookup"><span data-stu-id="e9166-136">Creating the server certificate.</span></span>  
   
-     Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.  
+     <span data-ttu-id="e9166-137">Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.</span><span class="sxs-lookup"><span data-stu-id="e9166-137">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span>  
   
     ```  
     echo ************  
@@ -177,20 +172,19 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     Die Variable %SERVER\_NAME% gibt den Servernamen an.  Das Zertifikat wird im LocalMachine\-Speicher gespeichert.  Wenn die Setupbatchdatei mit dem service\-Argument ausgeführt wird \(z. B. `setup.bat service`\), enthält %SERVER\_NAME% den vollqualifizierten Domänennamen des Computers.  Andernfalls wird standardmäßig localhost verwendet.  
+     <span data-ttu-id="e9166-138">Die Variable %SERVER_NAME% gibt den Servernamen an.</span><span class="sxs-lookup"><span data-stu-id="e9166-138">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="e9166-139">Das Zertifikat wird im LocalMachine-Speicher gespeichert.</span><span class="sxs-lookup"><span data-stu-id="e9166-139">The certificate is stored in the LocalMachine store.</span></span> <span data-ttu-id="e9166-140">Wenn die Setupbatchdatei mit dem service-Argument ausgeführt wird (z. B. `setup.bat service`), enthält %SERVER_NAME% den vollqualifizierten Domänennamen des Computers.</span><span class="sxs-lookup"><span data-stu-id="e9166-140">If the setup batch file is run with an argument of service (such as `setup.bat service`) the %SERVER_NAME% contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="e9166-141">Andernfalls wird standardmäßig localhost verwendet.</span><span class="sxs-lookup"><span data-stu-id="e9166-141">Otherwise it defaults to localhost.</span></span>  
   
--   Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
+-   <span data-ttu-id="e9166-142">Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.</span><span class="sxs-lookup"><span data-stu-id="e9166-142">Installing the server certificate into the client's trusted certificate store.</span></span>  
   
-     Die folgenden Zeilen kopieren das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen.  Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.  Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     <span data-ttu-id="e9166-143">Die folgenden Zeilen kopieren das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen.</span><span class="sxs-lookup"><span data-stu-id="e9166-143">The following line copies the server certificate into the client trusted people store.</span></span> <span data-ttu-id="e9166-144">Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.</span><span class="sxs-lookup"><span data-stu-id="e9166-144">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="e9166-145">Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e9166-145">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
--   Gewähren von Berechtigungen auf dem privaten Schlüssel des Zertifikats.  
+-   <span data-ttu-id="e9166-146">Gewähren von Berechtigungen auf dem privaten Schlüssel des Zertifikats.</span><span class="sxs-lookup"><span data-stu-id="e9166-146">Granting permissions on the certificate's private key.</span></span>  
   
-     Die folgenden Zeilen in der Batchdatei Setup.bat sorgen dafür, dass das Serverzertifikat, das im Speicher LocalMachine gespeichert ist, für das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Arbeitsprozesskonto verfügbar ist.  
+     <span data-ttu-id="e9166-147">Die folgenden Zeilen in der Batchdatei Setup.bat sorgen dafür, dass das Serverzertifikat, das im Speicher LocalMachine gespeichert ist, für das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Arbeitsprozesskonto verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="e9166-147">The following lines in the Setup.bat batch file make the server certificate stored in the LocalMachine store accessible to the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] worker process account.</span></span>  
   
     ```  
     echo ************  
@@ -200,60 +194,59 @@ Press <ENTER> to terminate client.
     (ver | findstr "5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET  
     echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R  
     iisreset  
-  
     ```  
   
 > [!NOTE]
->  Bei Verwendung einer anderen als der  englischsprachigen US\-Version von Windows müssen Sie in der Datei "Setup.bat" den Kontonamen `NT AUTHORITY\NETWORK SERVICE` durch den äquivalenten Kontonamen in der entsprechenden Sprache ersetzen.  
+>  <span data-ttu-id="e9166-148">Bei Verwendung einer anderen als der englischsprachigen US-Version von Windows müssen Sie in der Datei "Setup.bat" den Kontonamen `NT AUTHORITY\NETWORK SERVICE` durch den äquivalenten Kontonamen in der entsprechenden Sprache ersetzen.</span><span class="sxs-lookup"><span data-stu-id="e9166-148">If you are using a non-U.S. English edition of Windows you must edit the Setup.bat file and replace the `NT AUTHORITY\NETWORK SERVICE` account name with your regional equivalent.</span></span>  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e9166-149">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="e9166-149">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="e9166-150">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e9166-150">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+2.  <span data-ttu-id="e9166-151">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="e9166-151">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### So führen Sie das Beispiel auf demselben Computer aus  
+### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="e9166-152">So führen Sie das Beispiel auf demselben Computer aus</span><span class="sxs-lookup"><span data-stu-id="e9166-152">To run the sample on the same computer</span></span>  
   
-1.  Vergewissern Sie sich, dass der Pfad den Ordner enthält, in dem sich die Dateien Makecert.exe und FindPrivateKey.exe befinden.  
+1.  <span data-ttu-id="e9166-153">Vergewissern Sie sich, dass der Pfad den Ordner enthält, in dem sich die Dateien Makecert.exe und FindPrivateKey.exe befinden.</span><span class="sxs-lookup"><span data-stu-id="e9166-153">Ensure that the path includes the folder where Makecert.exe and FindPrivateKey.exe are located.</span></span>  
   
-2.  Führen Sie Setup.bat aus dem Beispielinstallationsordner an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.  Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+2.  <span data-ttu-id="e9166-154">Führen Sie Setup.bat aus dem Beispielinstallationsordner an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="e9166-154">Run Setup.bat from the sample install folder in a Visual Studio command prompt run with administrator privileges.</span></span> <span data-ttu-id="e9166-155">Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="e9166-155">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Die Setupbatchdatei ist dafür gedacht, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung ausgeführt zu werden.  Die PATH\-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist.  Diese Umgebungsvariable wird automatisch innerhalb einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung festgelegt.  
+    >  <span data-ttu-id="e9166-156">Die Setupbatchdatei ist dafür gedacht, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung ausgeführt zu werden.</span><span class="sxs-lookup"><span data-stu-id="e9166-156">The setup batch file is designed to be run from a  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]Command Prompt.</span></span> <span data-ttu-id="e9166-157">Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist.</span><span class="sxs-lookup"><span data-stu-id="e9166-157">It requires that the path environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="e9166-158">Diese Umgebungsvariable wird automatisch innerhalb einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e9166-158">This environment variable is automatically set within a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]Command Prompt.</span></span>  
   
-3.  Überprüfen Sie den Zugriff auf den Dienst, indem Sie in einem Browser die Adresse http:\/\/localhost\/servicemodelsamples\/service.svc eingeben.  
+3.  <span data-ttu-id="e9166-159">Überprüfen Sie den Zugriff auf den Dienst, indem Sie in einem Browser die Adresse http://localhost/servicemodelsamples/service.svc eingeben.</span><span class="sxs-lookup"><span data-stu-id="e9166-159">Verify access to the service using a browser by entering the address http://localhost/servicemodelsamples/service.svc.</span></span>  
   
-4.  Starten Sie Client.exe aus dem Ordner \\client\\bin.  In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+4.  <span data-ttu-id="e9166-160">Starten Sie Client.exe aus dem Ordner \client\bin.</span><span class="sxs-lookup"><span data-stu-id="e9166-160">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="e9166-161">In der Clientkonsolenanwendung wird Clientaktivität angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e9166-161">Client activity is displayed on the client console application.</span></span>  
   
-5.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  <span data-ttu-id="e9166-162">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e9166-162">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### So führen Sie das Beispiel computerübergreifend aus  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="e9166-163">So führen Sie das Beispiel computerübergreifend aus</span><span class="sxs-lookup"><span data-stu-id="e9166-163">To run the sample across computers</span></span>  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.  Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste \(IIS\) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.  
+1.  <span data-ttu-id="e9166-164">Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="e9166-164">Create a directory on the service computer.</span></span> <span data-ttu-id="e9166-165">Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste (IIS) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="e9166-165">Create a virtual application named servicemodelsamples for this directory by using the Internet Information Services (IIS) management tool.</span></span>  
   
-2.  Kopieren Sie die Dienstprogrammdateien aus \\inetpub\\wwwroot\\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer.  Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \\bin kopieren.  Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2.  <span data-ttu-id="e9166-166">Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="e9166-166">Copy the service program files from \inetpub\wwwroot\servicemodelsamples to the virtual directory on the service computer.</span></span> <span data-ttu-id="e9166-167">Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.</span><span class="sxs-lookup"><span data-stu-id="e9166-167">Ensure that you copy the files in the \bin subdirectory.</span></span> <span data-ttu-id="e9166-168">Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.</span><span class="sxs-lookup"><span data-stu-id="e9166-168">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.  
+3.  <span data-ttu-id="e9166-169">Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.</span><span class="sxs-lookup"><span data-stu-id="e9166-169">Create a directory on the client computer for the client binaries.</span></span>  
   
-4.  Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer.  Kopieren Sie die Dateien **Setup.bat**, **Cleanup.bat** und **ImportServiceCert.bat** ebenfalls auf den Client.  
+4.  <span data-ttu-id="e9166-170">Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="e9166-170">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="e9166-171">Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.</span><span class="sxs-lookup"><span data-stu-id="e9166-171">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  Führen Sie auf dem Server `setup.bat service` an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.  Durch Ausführen von `setup.bat` mit dem Argument `service` wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und in die Datei Service.cer exportiert.  
+5.  <span data-ttu-id="e9166-172">Führen Sie auf dem Server `setup.bat service` an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="e9166-172">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e9166-173">Ausführen `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei "Service.cer" exportiert exportiert.</span><span class="sxs-lookup"><span data-stu-id="e9166-173">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computer and exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  Bearbeiten Sie die Datei Web.config so, dass sie den neuen Zertifikatnamen \(im `findValue`\-Attribut im [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) enthält, der dem vollqualifizierten Domänennamen des Computers entspricht.  
+6.  <span data-ttu-id="e9166-174">Bearbeiten der Datei "Web.config", um den neuen Zertifikatnamen entspricht (in der `findValue` Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), also den voll qualifizierten Domänennamen des Computers identisch.</span><span class="sxs-lookup"><span data-stu-id="e9166-174">Edit Web.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), which is the same as the fully-qualified domain name of the computer.</span></span>  
   
-7.  Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
+7.  <span data-ttu-id="e9166-175">Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.</span><span class="sxs-lookup"><span data-stu-id="e9166-175">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
+8.  <span data-ttu-id="e9166-176">Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="e9166-176">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-9. Führen Sie auf dem Client ImportServiceCert.bat an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.  Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+9. <span data-ttu-id="e9166-177">Führen Sie auf dem Client ImportServiceCert.bat an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus.</span><span class="sxs-lookup"><span data-stu-id="e9166-177">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="e9166-178">Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.</span><span class="sxs-lookup"><span data-stu-id="e9166-178">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. <span data-ttu-id="e9166-179">Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="e9166-179">On the client computer, launch Client.exe from a command prompt.</span></span> <span data-ttu-id="e9166-180">Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="e9166-180">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="e9166-181">So stellen Sie den Zustand vor Ausführung des Beispiels wieder her</span><span class="sxs-lookup"><span data-stu-id="e9166-181">To clean up after the sample</span></span>  
   
--   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
+-   <span data-ttu-id="e9166-182">Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.</span><span class="sxs-lookup"><span data-stu-id="e9166-182">Run Cleanup.bat in the samples folder after you have finished running the sample.</span></span>  
   
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client.  Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden.  Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`.  
+>  <span data-ttu-id="e9166-183">Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client.</span><span class="sxs-lookup"><span data-stu-id="e9166-183">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="e9166-184">Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden.</span><span class="sxs-lookup"><span data-stu-id="e9166-184">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="e9166-185">Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`.</span><span class="sxs-lookup"><span data-stu-id="e9166-185">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`</span></span>  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="e9166-186">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e9166-186">See Also</span></span>

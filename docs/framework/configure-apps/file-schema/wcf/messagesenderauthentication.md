@@ -1,28 +1,38 @@
 ---
-title: "&lt;messageSenderAuthentication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageSenderAuthentication&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 428dbdc65a4f66e5632e4ded7d7ded0d10b7c9d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageSenderAuthentication&gt;
-Gibt Authentifizierungseinstellungen für ein Peerzertifikat an, das von einem Nachrichtenabsender verwendet wird.  
+# <a name="ltmessagesenderauthenticationgt"></a><span data-ttu-id="b364f-102">&lt;messageSenderAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="b364f-102">&lt;messageSenderAuthentication&gt;</span></span>
+<span data-ttu-id="b364f-103">Gibt Authentifizierungseinstellungen für ein Peerzertifikat an, das von einem Nachrichtenabsender verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b364f-103">Specifies authentication settings for peer certificate used by a message sender.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="b364f-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="b364f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="b364f-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="b364f-105">\<behaviors></span></span>  
+<span data-ttu-id="b364f-106">\<ServiceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="b364f-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="b364f-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="b364f-107">\<behavior></span></span>  
+<span data-ttu-id="b364f-108">\<ServiceCredentials ></span><span class="sxs-lookup"><span data-stu-id="b364f-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="b364f-109">\<Peer ></span><span class="sxs-lookup"><span data-stu-id="b364f-109">\<peer></span></span>  
+<span data-ttu-id="b364f-110">\<MessageSenderAuthentication ></span><span class="sxs-lookup"><span data-stu-id="b364f-110">\<messageSenderAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b364f-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="b364f-111">Syntax</span></span>  
   
+```xml  
 <messageSenderAuthentication  
    customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
    certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -31,37 +41,37 @@ Gibt Authentifizierungseinstellungen für ein Peerzertifikat an, das von einem N
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b364f-112">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="b364f-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="b364f-113">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="b364f-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="b364f-114">Attribute</span><span class="sxs-lookup"><span data-stu-id="b364f-114">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|`certificateValidationMode`|Optionale Enumeration.  Gibt einen von fünf die Überprüfung von Anmeldeinformationen verwendeten Modi an.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  Wenn dies auf `Custom` festgelegt wurde, muss auch ein `customCertificateValidator` bereitgestellt werden.|  
-|`customCertificateValidatorType`|Optionale Zeichenfolge.  Bestimmt einen Typ und eine Assembly, die zum Prüfen eines benutzerdefinierten Typs verwendet werden.  Das Attribut muss festgelegt werden, wenn für `certificateValidationMode` der Wert `Custom` festgelegt wurde.  Dieses Attribut ist vom Typ <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] stellt ein standardmäßiges Peerzertifikats\-Validierungssteuerelement bereit, das das Peerzertifikat gegen den Speicher vertrauenswürdiger Personen überprüft.  Außerdem wird überprüft, ob sich das Zertifikat zu einem gültigen Stamm verkettet.  Sie können ein benutzerdefiniertes Validierungssteuerelement implementieren, um ein anderes Verhalten anzugeben und dieses Attribut zum Verweisen auf das benutzerdefinierte Validierungssteuerelement verwenden.|  
-|`revocationMode`|Optionale Enumeration.  Legt den Zertifikatssperrmodus fest.  Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.  Das System stellt anhand der Liste mit den gesperrten Zertifikaten sicher, dass das Clientzertifikat nicht gesperrt wurde.  Diese Überprüfung kann entweder online oder offline mit einer zwischengespeicherten Liste gesperrter Zertifikate erfolgen.  Die Sperrüberprüfung kann deaktiviert werden, indem für dieses Attribut der Wert NoCheck festgelegt wird.|  
-|`trustedStoreLocation`|Optionale Enumeration.  Gibt den Ort des vertrauenswürdigen Speichers an, an dem das Peerzertifikat vom [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Sicherheitssystem überprüft wird.  Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|<span data-ttu-id="b364f-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="b364f-115">Attribute</span></span>|<span data-ttu-id="b364f-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b364f-116">Description</span></span>|  
+|---------------|-----------------|  
+|`certificateValidationMode`|<span data-ttu-id="b364f-117">Optionale Enumeration.</span><span class="sxs-lookup"><span data-stu-id="b364f-117">Optional enumeration.</span></span> <span data-ttu-id="b364f-118">Gibt einen von fünf die Überprüfung von Anmeldeinformationen verwendeten Modi an.</span><span class="sxs-lookup"><span data-stu-id="b364f-118">Specifies one of five modes used to validate credentials.</span></span> <span data-ttu-id="b364f-119">Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="b364f-119">This attribute is of type <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span></span> <span data-ttu-id="b364f-120">Wenn dies auf `Custom` festgelegt wurde, muss auch ein `customCertificateValidator` bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="b364f-120">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span>|  
+|`customCertificateValidatorType`|<span data-ttu-id="b364f-121">Optionale Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="b364f-121">Optional string.</span></span> <span data-ttu-id="b364f-122">Bestimmt einen Typ und eine Assembly, die zum Prüfen eines benutzerdefinierten Typs verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b364f-122">Specifies a type and assembly used to validate a custom type.</span></span> <span data-ttu-id="b364f-123">Das Attribut muss festgelegt werden, wenn für `certificateValidationMode` der Wert `Custom` festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="b364f-123">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span> <span data-ttu-id="b364f-124">Dieses Attribut ist vom Typ <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="b364f-124">This attribute is of type <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="b364f-125"> stellt ein standardmäßiges Peerzertifikats-Validierungssteuerelement bereit, das das Peerzertifikat gegen den Speicher vertrauenswürdiger Personen überprüft.</span><span class="sxs-lookup"><span data-stu-id="b364f-125"> provides a default peer certificate validator that verifies the peer certificate against the trusted people store.</span></span> <span data-ttu-id="b364f-126">Außerdem wird überprüft, ob sich das Zertifikat zu einem gültigen Stamm verkettet.</span><span class="sxs-lookup"><span data-stu-id="b364f-126">It also verifies that the certificate chains up to a valid root.</span></span> <span data-ttu-id="b364f-127">Sie können ein benutzerdefiniertes Validierungssteuerelement implementieren, um ein anderes Verhalten anzugeben und dieses Attribut zum Verweisen auf das benutzerdefinierte Validierungssteuerelement verwenden.</span><span class="sxs-lookup"><span data-stu-id="b364f-127">You can implement a custom validator to specify a different behavior and use this attribute to point to the custom validator.</span></span>|  
+|`revocationMode`|<span data-ttu-id="b364f-128">Optionale Enumeration.</span><span class="sxs-lookup"><span data-stu-id="b364f-128">Optional enumeration.</span></span> <span data-ttu-id="b364f-129">Legt den Zertifikatssperrmodus fest.</span><span class="sxs-lookup"><span data-stu-id="b364f-129">Specifies the certificate revocation mode.</span></span> <span data-ttu-id="b364f-130">Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span><span class="sxs-lookup"><span data-stu-id="b364f-130">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span></span> <span data-ttu-id="b364f-131">Das System stellt anhand der Liste mit den gesperrten Zertifikaten sicher, dass das Clientzertifikat nicht gesperrt wurde.</span><span class="sxs-lookup"><span data-stu-id="b364f-131">The system verifies that the peer certificate has not been revoked by looking it up in the revoked certificate list.</span></span> <span data-ttu-id="b364f-132">Diese Überprüfung kann entweder online oder offline mit einer zwischengespeicherten Liste gesperrter Zertifikate erfolgen.</span><span class="sxs-lookup"><span data-stu-id="b364f-132">This check can be performed either by checking online or against a cached revocation list.</span></span> <span data-ttu-id="b364f-133">Die Sperrüberprüfung kann deaktiviert werden, indem für dieses Attribut der Wert NoCheck festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="b364f-133">Revocation checking can be turned off by setting this attribute to NoCheck.</span></span>|  
+|`trustedStoreLocation`|<span data-ttu-id="b364f-134">Optionale Enumeration.</span><span class="sxs-lookup"><span data-stu-id="b364f-134">Optional enumeration.</span></span> <span data-ttu-id="b364f-135">Gibt den Ort des vertrauenswürdigen Speichers an, an dem das Peerzertifikat vom [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Sicherheitssystem überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="b364f-135">Specifies the trusted store location where the peer certificate is validated by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] security system.</span></span> <span data-ttu-id="b364f-136">Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span><span class="sxs-lookup"><span data-stu-id="b364f-136">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="b364f-137">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b364f-137">Child Elements</span></span>  
+ <span data-ttu-id="b364f-138">Keine</span><span class="sxs-lookup"><span data-stu-id="b364f-138">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="b364f-139">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b364f-139">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.|  
+|<span data-ttu-id="b364f-140">Element</span><span class="sxs-lookup"><span data-stu-id="b364f-140">Element</span></span>|<span data-ttu-id="b364f-141">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b364f-141">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b364f-142">\<Peer ></span><span class="sxs-lookup"><span data-stu-id="b364f-142">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|<span data-ttu-id="b364f-143">Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.</span><span class="sxs-lookup"><span data-stu-id="b364f-143">Specifies the current credentials for a peer node.</span></span>|  
   
-## Hinweise  
- Dieses Element muss konfiguriert werden, wenn die Nachrichtenauthentifizierung ausgewählt wird.  Für Ausgabekanäle wird jede Nachricht mit dem von [\<certificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md) bereitgestellten Zertifikat signiert.  Alle Nachrichten werden vor dem Zustellen zur Anwendung mithilfe des durch das `customCertificateValidatorType`\-Attribut dieses Elements angegebenen Validierungssteuerelements mit den Nachrichtenanmeldeinformationen verglichen.  Das Validierungssteuerelement kann die Anmeldeinformationen akzeptieren oder ablehnen.  
+## <a name="remarks"></a><span data-ttu-id="b364f-144">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b364f-144">Remarks</span></span>  
+ <span data-ttu-id="b364f-145">Dieses Element muss konfiguriert werden, wenn die Nachrichtenauthentifizierung ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="b364f-145">This element must be configured if message authentication is chosen.</span></span> <span data-ttu-id="b364f-146">Für Ausgabekanäle, wird jede Nachricht signiert, mithilfe des bereitgestellten Zertifikats [ \<Zertifikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md).</span><span class="sxs-lookup"><span data-stu-id="b364f-146">For output channels, each message is signed using the certificate provided by [\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md).</span></span> <span data-ttu-id="b364f-147">Alle Nachrichten werden vor dem Zustellen zur Anwendung mithilfe des durch das `customCertificateValidatorType`-Attribut dieses Elements angegebenen Validierungssteuerelements mit den Nachrichtenanmeldeinformationen verglichen.</span><span class="sxs-lookup"><span data-stu-id="b364f-147">All messages, before delivered to the application, are checked against the message credential using the validator specified by the `customCertificateValidatorType` attribute of this element.</span></span> <span data-ttu-id="b364f-148">Das Validierungssteuerelement kann die Anmeldeinformationen akzeptieren oder ablehnen.</span><span class="sxs-lookup"><span data-stu-id="b364f-148">The validator can either accept or reject the credential.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>   
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>   
- <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>   
- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Peer\-to\-Peer\-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/de-de/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/de-de/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a><span data-ttu-id="b364f-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b364f-149">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
+ <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>  
+ [<span data-ttu-id="b364f-150">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="b364f-150">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="b364f-151">Peer-zu-Peer-Netzwerken</span><span class="sxs-lookup"><span data-stu-id="b364f-151">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="b364f-152">Peerkanal Nachrichtenauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="b364f-152">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="b364f-153">Benutzerdefinierter Peerkanal-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="b364f-153">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="b364f-154">Sichern von Peerkanalanwendungen</span><span class="sxs-lookup"><span data-stu-id="b364f-154">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

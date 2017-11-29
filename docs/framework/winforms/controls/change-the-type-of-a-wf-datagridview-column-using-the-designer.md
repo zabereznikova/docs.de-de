@@ -1,49 +1,50 @@
 ---
-title: "Gewusst wie: &#196;ndern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Spalten [Windows Forms], Typen"
-  - "Daten [Windows Forms], Anzeigen"
-  - "DataGridView-Steuerelement [Windows Forms], Ändern des Spaltentyps"
-  - "Windows Forms, Spalten"
+title: "Gewusst wie: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, columns
+- columns [Windows Forms], types
+- DataGridView control [Windows Forms], changing column type
+- data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d4f27c9dcdc1bc7e00b0c809c62889b6c61cd16
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#196;ndern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers
-Gelegentlich müssen Sie den Typ einer Spalte ändern, die bereits einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement in Windows Forms hinzugefügt wurde.  Beispielsweise möchten Sie die Typen einiger Spalten ändern, die automatisch generiert werden, wenn Sie das Steuerelement an eine Datenquelle binden.  Dies ist besonders hilfreich, wenn die Tabelle über Spalten verfügt, die Fremdschlüssel für Zeilen in einer zugehörigen Tabelle enthält.  In diesem Fall sollten Sie die Spalten mit den Textfeldern, in denen diese Fremdschlüssel angezeigt werden, durch Spalten mit Kombinationsfeldern ersetzen, die aussagekräftigere Werte aus der zugehörigen Tabelle anzeigen.  
+# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a><span data-ttu-id="c0d21-102">Gewusst wie: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="c0d21-102">How to: Change the Type of a Windows Forms DataGridView Column Using the Designer</span></span>
+<span data-ttu-id="c0d21-103">In einigen Fällen wird der Datentyp einer Spalte ändern möchten, die bereits zu einem Windows Forms hinzugefügt wurde <xref:System.Windows.Forms.DataGridView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="c0d21-103">Sometimes you will want to change the type of a column that has already been added to a Windows Forms <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c0d21-104">Beispielsweise empfiehlt es sich um die Typen von einige der Spalten zu ändern, die automatisch generiert werden, wenn Sie das Steuerelement an eine Datenquelle binden.</span><span class="sxs-lookup"><span data-stu-id="c0d21-104">For example, you may want to modify the types of some of the columns that are generated automatically when you bind the control to a data source.</span></span> <span data-ttu-id="c0d21-105">Dies ist hilfreich, wenn die Tabelle, die Sie anzeigen, Spalten mit Fremdschlüsseln in Zeilen in einer verknüpften Tabelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="c0d21-105">This is useful when the table you display has columns containing foreign keys to rows in a related table.</span></span> <span data-ttu-id="c0d21-106">In diesem Fall empfiehlt es sich um Textspalten Feld zu ersetzen, die diese Fremdschlüssel Spalten mit Kombinationsfeldern angezeigt, in denen sinnvolle Werten aus der verknüpften Tabelle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c0d21-106">In this case, you may want to replace the text box columns that display these foreign keys with combo box columns that display more meaningful values from the related table.</span></span>  
   
- Für die folgende Prozedur ist ein **Windows\-Anwendung**\-Projekt mit einem Formular erforderlich, das ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement enthält.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="c0d21-107">Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.DataGridView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="c0d21-107">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c0d21-108">Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="c0d21-108">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="c0d21-109">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="c0d21-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c0d21-110">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="c0d21-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c0d21-111">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="c0d21-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So ändern Sie den Typ einer Spalte mithilfe des Designers  
+### <a name="to-change-the-type-of-a-column-using-the-designer"></a><span data-ttu-id="c0d21-112">So ändern Sie den Datentyp einer Spalte mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="c0d21-112">To change the type of a column using the designer</span></span>  
   
-1.  Klicken Sie auf das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView>\-Steuerelements, und wählen Sie dann **Spalten bearbeiten** aus.  
+1.  <span data-ttu-id="c0d21-113">Klicken Sie auf das Smarttag-Symbol (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) in der oberen rechten Ecke des der <xref:System.Windows.Forms.DataGridView> steuern, und wählen Sie dann **Spalten bearbeiten**.</span><span class="sxs-lookup"><span data-stu-id="c0d21-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control, and then select **Edit Columns**.</span></span>  
   
-2.  Wählen Sie eine Spalte aus der Liste **Ausgewählte Spalten** aus.  
+2.  <span data-ttu-id="c0d21-114">Wählen Sie eine Spalte aus der **ausgewählte Spalten** Liste.</span><span class="sxs-lookup"><span data-stu-id="c0d21-114">Select a column from the **Selected Columns** list.</span></span>  
   
-3.  Legen Sie im Raster **Spalteneigenschaften** die `ColumnType`\-Eigenschaft auf den neuen Spaltentyp fest.  
+3.  <span data-ttu-id="c0d21-115">In der **Spalteneigenschaften** Raster Festlegen der `ColumnType` Eigenschaft in den neuen Spaltentyp.</span><span class="sxs-lookup"><span data-stu-id="c0d21-115">In the **Column Properties** grid, set the `ColumnType` property to the new column type.</span></span>  
   
     > [!NOTE]
-    >  Die `ColumnType`\-Eigenschaft ist eine nur zur Entwurfszeit gültige Eigenschaft, die die Klasse angibt, die den Spaltentyp darstellt.  Sie ist keine eigentliche in einer Spaltenklasse definierte Eigenschaft.  
+    >  <span data-ttu-id="c0d21-116">Die `ColumnType` -Eigenschaft ist nur zur Entwurf, der die Klasse, die den Spaltentyp darstellt angibt.</span><span class="sxs-lookup"><span data-stu-id="c0d21-116">The `ColumnType` property is a design-time-only property that indicates the class representing the column type.</span></span> <span data-ttu-id="c0d21-117">Es ist keine tatsächliche Eigenschaft in einer Spaltenklasse definiert.</span><span class="sxs-lookup"><span data-stu-id="c0d21-117">It is not an actual property defined in a column class.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c0d21-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0d21-118">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ [<span data-ttu-id="c0d21-119">Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts</span><span class="sxs-lookup"><span data-stu-id="c0d21-119">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="c0d21-120">Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c0d21-120">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

@@ -1,61 +1,64 @@
 ---
-title: "Signieren gespeicherter Prozeduren in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Signieren von gespeicherten Prozeduren in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 86c2a6c3f2c84c931df15e4809980a76cb6d826c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Signieren gespeicherter Prozeduren in SQL Server
-Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren.  Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL.  In einem solchen Fall erstellen Sie einen Benutzer, der dem Zertifikat zugeordnet wird, wodurch ihm Berechtigungen für die Objekte gewährt werden, auf die die gespeicherte Prozedur zugreifen können muss.  
+# <a name="signing-stored-procedures-in-sql-server"></a><span data-ttu-id="78caa-102">Signieren von gespeicherten Prozeduren in SQL Server</span><span class="sxs-lookup"><span data-stu-id="78caa-102">Signing Stored Procedures in SQL Server</span></span>
+<span data-ttu-id="78caa-103">Sie können gespeicherte Prozeduren mit einem Zertifikat oder einem asymmetrischen Schlüssel signieren.</span><span class="sxs-lookup"><span data-stu-id="78caa-103">You can sign a stored procedure with a certificate or an asymmetric key.</span></span> <span data-ttu-id="78caa-104">Gedacht ist dies für Szenarien, in denen Berechtigungen nicht über die Besitzverkettung geerbt werden können oder in denen die Besitzkette unterbrochen ist, wie bei dynamischem SQL.</span><span class="sxs-lookup"><span data-stu-id="78caa-104">This is designed for scenarios when permissions cannot be inherited through ownership chaining or when the ownership chain is broken, such as dynamic SQL.</span></span> <span data-ttu-id="78caa-105">In einem solchen Fall erstellen Sie einen Benutzer, der dem Zertifikat zugeordnet wird, wodurch ihm Berechtigungen für die Objekte gewährt werden, auf die die gespeicherte Prozedur zugreifen können muss.</span><span class="sxs-lookup"><span data-stu-id="78caa-105">You then create a user mapped to the certificate, granting the certificate user permissions on the objects the stored procedure needs to access.</span></span>  
   
- Bei der Ausführung der gespeicherten Prozedur kombiniert SQL Server die Berechtigungen des Zertifikatsbenutzers mit den Berechtigungen des Aufrufers.  Im Gegensatz zur EXECUTE AS\-Klausel ändert sich der Ausführungskontext der Prozedur nicht.  Integrierte Funktionen, die Anmelde\- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.  
+ <span data-ttu-id="78caa-106">Bei der Ausführung der gespeicherten Prozedur kombiniert SQL Server die Berechtigungen des Zertifikatsbenutzers mit den Berechtigungen des Aufrufers.</span><span class="sxs-lookup"><span data-stu-id="78caa-106">When the stored procedure is executed, SQL Server combines the permissions of the certificate user with those of the caller.</span></span> <span data-ttu-id="78caa-107">Im Gegensatz zur EXECUTE AS-Klausel ändert sich der Ausführungskontext der Prozedur nicht.</span><span class="sxs-lookup"><span data-stu-id="78caa-107">Unlike the EXECUTE AS clause, it does not change the execution context of the procedure.</span></span> <span data-ttu-id="78caa-108">Integrierte Funktionen, die Anmelde- und Benutzernamen zurückgeben, geben den Namen des Aufrufers, und nicht den Namen des Zertifikatsbenutzers zurück.</span><span class="sxs-lookup"><span data-stu-id="78caa-108">Built-in functions that return login and user names return the name of the caller, not the certificate user name.</span></span>  
   
- Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datendigest.  Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist.  Signiert werden können gespeicherte Prozeduren, Funktionen oder Trigger.  
-  
-> [!NOTE]
->  Sie können in der Masterdatenbank ein Zertifikat zum Gewähren von Berechtigungen auf Serverebene erstellen.  
-  
-## Erstellen von Zertifikaten  
- Beim Signieren einer gespeicherten Prozedur mit einem Zertifikat wird mithilfe des privaten Schlüssels ein Datendigest erstellt, der aus dem verschlüsselten Hash der gespeicherten Prozedur besteht.  Zur Laufzeit wird der Datendigest mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen.  Wenn die gespeicherte Prozedur geändert wird, wird der Hashwert ungültig, sodass die digitale Signatur nicht mehr übereinstimmt.  Auf diese Weise wird verhindert, dass der Code der gespeicherten Prozedur durch einen Benutzer geändert wird, der keine Zugriffsberechtigung für den privaten Schlüssel besitzt.  Daher muss die Prozedur nach jeder Änderung neu signiert werden.  
-  
- Zum Signieren eines Moduls sind die folgenden vier Schritte auszuführen:  
-  
-1.  Erstellen Sie mit der Transact\-SQL\-`CREATE CERTIFICATE [certificateName]`\-Anweisung ein Zertifikat.  Diese Anweisung verfügt über mehrere Optionen, mit denen das Start\- und Enddatum und ein Kennwort festgelegt werden können.  Die Standardgültigkeitsdauer beträgt ein Jahr.  
-  
-2.  Erstellen Sie mit der Transact\-SQL\-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`\-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer.  Dieser Benutzer ist nur in der Datenbank vorhanden, und er wird keiner Anmeldung zugeordnet.  
-  
-3.  Gewähren Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen für die Datenbankobjekte.  
+ <span data-ttu-id="78caa-109">Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datendigest.</span><span class="sxs-lookup"><span data-stu-id="78caa-109">A digital signature is a data digest encrypted with the private key of the signer.</span></span> <span data-ttu-id="78caa-110">Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="78caa-110">The private key ensures that the digital signature is unique to its bearer or owner.</span></span> <span data-ttu-id="78caa-111">Signiert werden können gespeicherte Prozeduren, Funktionen oder Trigger.</span><span class="sxs-lookup"><span data-stu-id="78caa-111">You can sign stored procedures, functions, or triggers.</span></span>  
   
 > [!NOTE]
->  Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY\-Anweisung widerrufen wurden.  DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.  
+>  <span data-ttu-id="78caa-112">Sie können in der Masterdatenbank ein Zertifikat zum Gewähren von Berechtigungen auf Serverebene erstellen.</span><span class="sxs-lookup"><span data-stu-id="78caa-112">You can create a certificate in the master database to grant server-level permissions.</span></span>  
   
-1.  Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact\-SQL\-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`\-Anweisung.  
+## <a name="creating-certificates"></a><span data-ttu-id="78caa-113">Erstellen von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="78caa-113">Creating Certificates</span></span>  
+ <span data-ttu-id="78caa-114">Beim Signieren einer gespeicherten Prozedur mit einem Zertifikat wird mithilfe des privaten Schlüssels ein Datendigest erstellt, der aus dem verschlüsselten Hash der gespeicherten Prozedur besteht.</span><span class="sxs-lookup"><span data-stu-id="78caa-114">When you sign a stored procedure with a certificate, a data digest consisting of the encrypted hash of the stored procedure code is created using the private key.</span></span> <span data-ttu-id="78caa-115">Zur Laufzeit wird der Datendigest mit dem öffentlichen Schlüssel entschlüsselt und mit dem Hashwert der gespeicherten Prozedur verglichen.</span><span class="sxs-lookup"><span data-stu-id="78caa-115">At run time, the data digest is decrypted with the public key and compared with the hash value of the stored procedure.</span></span> <span data-ttu-id="78caa-116">Wenn die gespeicherte Prozedur geändert wird, wird der Hashwert ungültig, sodass die digitale Signatur nicht mehr übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="78caa-116">Modifying the stored procedure invalidates the hash value so that the digital signature no longer matches.</span></span> <span data-ttu-id="78caa-117">Auf diese Weise wird verhindert, dass der Code der gespeicherten Prozedur durch einen Benutzer geändert wird, der keine Zugriffsberechtigung für den privaten Schlüssel besitzt.</span><span class="sxs-lookup"><span data-stu-id="78caa-117">This prevents someone who does not have access to the private key from changing the stored procedure code.</span></span> <span data-ttu-id="78caa-118">Daher muss die Prozedur nach jeder Änderung neu signiert werden.</span><span class="sxs-lookup"><span data-stu-id="78caa-118">Therefore you must re-sign the procedure each time you modify it.</span></span>  
   
-## Externe Ressourcen  
- Weitere Informationen finden Sie in den folgenden Ressourcen.  
+ <span data-ttu-id="78caa-119">Zum Signieren eines Moduls sind die folgenden vier Schritte auszuführen:</span><span class="sxs-lookup"><span data-stu-id="78caa-119">There are four steps involved in signing a module:</span></span>  
   
-|Ressource|Beschreibung|  
-|---------------|------------------|  
-|[Modulsignierung](http://go.microsoft.com/fwlink/?LinkId=98590) in der SQL Server\-Onlinedokumentation|Beschreibt die Modulsignierung und enthält ein Beispielszenario sowie Links zu den relevanten Transact\-SQL\-Themen.|  
-|[Signieren von gespeicherten Prozeduren mit einem Zertifikat](http://msdn.microsoft.com/library/bb283630.aspx) in der SQL Server\-Onlinedokumentation|Enthält ein Lernprogramm zum Signieren einer gespeicherten Prozedur mit einem Zertifikat.|  
+1.  <span data-ttu-id="78caa-120">Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="78caa-120">Create a certificate using the Transact-SQL `CREATE CERTIFICATE [certificateName]` statement.</span></span> <span data-ttu-id="78caa-121">Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können.</span><span class="sxs-lookup"><span data-stu-id="78caa-121">This statement has several options for setting a start and end date and a password.</span></span> <span data-ttu-id="78caa-122">Die Standardgültigkeitsdauer beträgt ein Jahr.</span><span class="sxs-lookup"><span data-stu-id="78caa-122">The default expiration date is one year</span></span>  
   
-## Siehe auch  
- [Sichern von ADO.NET\-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Übersicht über die SQL Server\-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)   
- [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Anpassen von Berechtigungen mit Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)   
- [Ändern von Daten mit gespeicherten Prozeduren](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+2.  <span data-ttu-id="78caa-123">Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer.</span><span class="sxs-lookup"><span data-stu-id="78caa-123">Create a database user associated with that certificate using the Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` statement.</span></span> <span data-ttu-id="78caa-124">Dieser Benutzer ist nur in der Datenbank vorhanden, und er wird keiner Anmeldung zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="78caa-124">This user exists in the database only and is not associated with a login.</span></span>  
+  
+3.  <span data-ttu-id="78caa-125">Gewähren Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen für die Datenbankobjekte.</span><span class="sxs-lookup"><span data-stu-id="78caa-125">Grant the certificate user the required permissions on the database objects.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="78caa-126">Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY-Anweisung widerrufen wurden.</span><span class="sxs-lookup"><span data-stu-id="78caa-126">A certificate cannot grant permissions to a user that has had permissions revoked using the DENY statement.</span></span> <span data-ttu-id="78caa-127">DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.</span><span class="sxs-lookup"><span data-stu-id="78caa-127">DENY always takes precedence over GRANT, preventing the caller from inheriting permissions granted to the certificate user.</span></span>  
+  
+1.  <span data-ttu-id="78caa-128">Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact-SQL-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="78caa-128">Sign the procedure with the certificate using the Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` statement.</span></span>  
+  
+## <a name="external-resources"></a><span data-ttu-id="78caa-129">Externe Ressourcen</span><span class="sxs-lookup"><span data-stu-id="78caa-129">External Resources</span></span>  
+ <span data-ttu-id="78caa-130">Weitere Informationen finden Sie in den folgenden Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="78caa-130">For more information, see the following resources.</span></span>  
+  
+|<span data-ttu-id="78caa-131">Ressource</span><span class="sxs-lookup"><span data-stu-id="78caa-131">Resource</span></span>|<span data-ttu-id="78caa-132">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="78caa-132">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="78caa-133">[Modulsignierung](http://go.microsoft.com/fwlink/?LinkId=98590) in SQL Server-Onlinedokumentation</span><span class="sxs-lookup"><span data-stu-id="78caa-133">[Module Signing](http://go.microsoft.com/fwlink/?LinkId=98590) in SQL Server Books Online</span></span>|<span data-ttu-id="78caa-134">Beschreibt die Modulsignierung und enthält ein Beispielszenario sowie Links zu den relevanten Transact-SQL-Themen.</span><span class="sxs-lookup"><span data-stu-id="78caa-134">Describes module signing, providing a sample scenario and links to the relevant Transact-SQL topics.</span></span>|  
+|<span data-ttu-id="78caa-135">[Signieren von gespeicherten Prozeduren mit einem Zertifikat](http://msdn.microsoft.com/library/bb283630.aspx) in SQL Server-Onlinedokumentation</span><span class="sxs-lookup"><span data-stu-id="78caa-135">[Signing Stored Procedures with a Certificate](http://msdn.microsoft.com/library/bb283630.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="78caa-136">Enthält ein Lernprogramm zum Signieren einer gespeicherten Prozedur mit einem Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="78caa-136">Provides a tutorial for signing a stored procedure with a certificate.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="78caa-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="78caa-137">See Also</span></span>  
+ [<span data-ttu-id="78caa-138">Sichern von ADO.NET-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="78caa-138">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="78caa-139">Übersicht über SQL Server-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="78caa-139">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="78caa-140">Anwendungssicherheitsszenarios in SQLServer</span><span class="sxs-lookup"><span data-stu-id="78caa-140">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="78caa-141">Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQLServer</span><span class="sxs-lookup"><span data-stu-id="78caa-141">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="78caa-142">Schreiben von sicherem dynamisches SQL in SQLServer</span><span class="sxs-lookup"><span data-stu-id="78caa-142">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="78caa-143">Anpassen von Berechtigungen durch Identitätswechsel in SQLServer</span><span class="sxs-lookup"><span data-stu-id="78caa-143">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [<span data-ttu-id="78caa-144">Ändern von Daten mit gespeicherten Prozeduren</span><span class="sxs-lookup"><span data-stu-id="78caa-144">Modifying Data with Stored Procedures</span></span>](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="78caa-145">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="78caa-145">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

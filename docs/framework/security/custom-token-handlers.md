@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="custom-token-handlers"></a>Benutzerdefinierte Tokenhandler
-In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung von Token erläutert. Das Thema behandelt auch die Vorgehensweise zum Erstellen von benutzerdefinierten Tokenhandlern für Tokentypen, die nicht standardmäßig in WIF unterstützt werden.  
+# <a name="custom-token-handlers"></a><span data-ttu-id="5b8fa-102">Benutzerdefinierte Tokenhandler</span><span class="sxs-lookup"><span data-stu-id="5b8fa-102">Custom Token Handlers</span></span>
+<span data-ttu-id="5b8fa-103">In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung von Token erläutert.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="5b8fa-104">Das Thema behandelt auch die Vorgehensweise zum Erstellen von benutzerdefinierten Tokenhandlern für Tokentypen, die nicht standardmäßig in WIF unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  
   
-## <a name="introduction-to-token-handlers-in-wif"></a>Einführung in Tokenhandler in WIF  
- WIF verwendet Sicherheitstokenhandler zum Erstellen, Lesen, Schreiben und Überprüfen von Token für eine Anwendung der vertrauenden Seite (Relying Party, RP) oder einen Sicherheitstokendienst (Security Token Service, STS). Tokenhandler sind Erweiterungspunkte, um der WIF-Pipeline einen benutzerdefinierten Tokenhandler hinzuzufügen oder die Tokenverwaltung eines vorhandenen Tokenhandlers anzupassen. WIF stellt neun integrierte Sicherheitstokenhandler bereit, deren Funktionen nach Bedarf geändert oder vollständig überschrieben werden können.  
+## <a name="introduction-to-token-handlers-in-wif"></a><span data-ttu-id="5b8fa-105">Einführung in Tokenhandler in WIF</span><span class="sxs-lookup"><span data-stu-id="5b8fa-105">Introduction to Token Handlers in WIF</span></span>  
+ <span data-ttu-id="5b8fa-106">WIF verwendet Sicherheitstokenhandler zum Erstellen, Lesen, Schreiben und Überprüfen von Token für eine Anwendung der vertrauenden Seite (Relying Party, RP) oder einen Sicherheitstokendienst (Security Token Service, STS).</span><span class="sxs-lookup"><span data-stu-id="5b8fa-106">WIF relies on security token handlers to create, read, write, and validate tokens for a relying party (RP) application or a security token service (STS).</span></span> <span data-ttu-id="5b8fa-107">Tokenhandler sind Erweiterungspunkte, um der WIF-Pipeline einen benutzerdefinierten Tokenhandler hinzuzufügen oder die Tokenverwaltung eines vorhandenen Tokenhandlers anzupassen.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-107">Token handlers are extensibility points for you to add a custom token handler in the WIF pipeline, or to customize the way that an existing token handler manages tokens.</span></span> <span data-ttu-id="5b8fa-108">WIF stellt neun integrierte Sicherheitstokenhandler bereit, deren Funktionen nach Bedarf geändert oder vollständig überschrieben werden können.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-108">WIF provides nine built-in security token handlers that can be modified or entirely overridden to change the functionality as necessary.</span></span>  
   
-## <a name="built-in-security-token-handlers-in-wif"></a>Integrierte Sicherheitstokenhandler in WIF  
- WIF 4.5 beinhaltet neun Klassen für Sicherheitstokenhandler, die von der abstrakten Basisklasse <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet werden:  
+## <a name="built-in-security-token-handlers-in-wif"></a><span data-ttu-id="5b8fa-109">Integrierte Sicherheitstokenhandler in WIF</span><span class="sxs-lookup"><span data-stu-id="5b8fa-109">Built-In Security Token Handlers in WIF</span></span>  
+ <span data-ttu-id="5b8fa-110">WIF 4.5 beinhaltet neun Klassen für Sicherheitstokenhandler, die von der abstrakten Basisklasse <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet werden:</span><span class="sxs-lookup"><span data-stu-id="5b8fa-110">WIF 4.5 includes nine security token handler classes that derive from the abstract base class <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span></span>  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -48,14 +46,14 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a>Hinzufügen eines benutzerdefinierten Tokenhandlers  
- Einige Tokentypen, wie z.B. einfache Webtoken (Simple Web Tokens, SWT) und JSON-Webtoken (JWT), verfügen über keine integrierten WIF-Sicherheitstokenhandler. Bei diesen Tokentypen und bei Typen, die nicht über einen integrierten Handler verfügen, müssen Sie folgendermaßen vorgehen, um einen benutzerdefinierten Tokenhandler zu erstellen.  
+## <a name="adding-a-custom-token-handler"></a><span data-ttu-id="5b8fa-111">Hinzufügen eines benutzerdefinierten Tokenhandlers</span><span class="sxs-lookup"><span data-stu-id="5b8fa-111">Adding a Custom Token Handler</span></span>  
+ <span data-ttu-id="5b8fa-112">Einige Tokentypen, wie z.B. einfache Webtoken (Simple Web Tokens, SWT) und JSON-Webtoken (JWT), verfügen über keine integrierten WIF-Sicherheitstokenhandler.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-112">Some token types, such as Simple Web Tokens (SWT) and JSON Web Tokens (JWT) do not have built-in token handlers provided by WIF.</span></span> <span data-ttu-id="5b8fa-113">Bei diesen Tokentypen und bei Typen, die nicht über einen integrierten Handler verfügen, müssen Sie folgendermaßen vorgehen, um einen benutzerdefinierten Tokenhandler zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-113">For these token types and for others that do not have a built-in handler, you need to perform the following steps to create a custom token handler.</span></span>  
   
-#### <a name="adding-a-custom-token-handler"></a>Hinzufügen eines benutzerdefinierten Tokenhandlers  
+#### <a name="adding-a-custom-token-handler"></a><span data-ttu-id="5b8fa-114">Hinzufügen eines benutzerdefinierten Tokenhandlers</span><span class="sxs-lookup"><span data-stu-id="5b8fa-114">Adding a custom token handler</span></span>  
   
-1.  Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet wird.  
+1.  <span data-ttu-id="5b8fa-115">Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-115">Create a new class that derives from <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span></span>  
   
-2.  Überschreiben Sie die folgenden Methoden, und stellen Sie Ihre eigene Implementierung bereit:  
+2.  <span data-ttu-id="5b8fa-116">Überschreiben Sie die folgenden Methoden, und stellen Sie Ihre eigene Implementierung bereit:</span><span class="sxs-lookup"><span data-stu-id="5b8fa-116">Override the following methods and provide your own implementation:</span></span>  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -69,7 +67,7 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Fügen Sie im **\<system.identityModel>**-Abschnitt für WIF in der Datei *Web.config* oder der Datei *App.config* dem neuen benutzerdefinierten Tokenhandler einen Verweis hinzu. Das folgende Konfigurationsmarkup gibt z.B. einen neuen Tokenhandler mit dem Namen **MyCustomTokenHandler** an, der sich im Namespace **CustomToken** befindet.  
+3.  <span data-ttu-id="5b8fa-117">Fügen Sie im **\<system.identityModel>**-Abschnitt für WIF in der Datei *Web.config* oder der Datei *App.config* dem neuen benutzerdefinierten Tokenhandler einen Verweis hinzu.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-117">Add a reference to the new custom token handler in the *Web.config* or *App.config* file, within the **\<system.identityModel>** section that applies to WIF.</span></span> <span data-ttu-id="5b8fa-118">Das folgende Konfigurationsmarkup gibt z.B. einen neuen Tokenhandler mit dem Namen **MyCustomTokenHandler** an, der sich im Namespace **CustomToken** befindet.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-118">For example, the following configuration markup specifies a new token handler named **MyCustomTokenHandler** that resides in the **CustomToken** namespace.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -81,7 +79,7 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
     </system.identityModel>  
     ```  
   
-     Beachten Sie, dass Sie beim Bereitstellen Ihres eigenen Tokenhandlers zur Behandlung eines Tokentyps mit integriertem Tokenhandler ein **\<remove>**-Element hinzufügen müssen, um den Standardhandler zu löschen und dafür den benutzerdefinierten Handler zu verwenden. Die folgende Konfiguration ersetzt beispielsweise den standardmäßigen <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> durch den benutzerdefinierten Tokenhandler:  
+     <span data-ttu-id="5b8fa-119">Beachten Sie, dass Sie beim Bereitstellen Ihres eigenen Tokenhandlers zur Behandlung eines Tokentyps mit integriertem Tokenhandler ein **\<remove>**-Element hinzufügen müssen, um den Standardhandler zu löschen und dafür den benutzerdefinierten Handler zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5b8fa-119">Note that if you are providing your own token handler to handle a token type that already has a built-in token handler, you need to add a **\<remove>** element to drop the default handler and use your custom handler instead.</span></span> <span data-ttu-id="5b8fa-120">Die folgende Konfiguration ersetzt beispielsweise den standardmäßigen <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> durch den benutzerdefinierten Tokenhandler:</span><span class="sxs-lookup"><span data-stu-id="5b8fa-120">For example, the following configuration replaces the default <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> with the custom token handler:</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -93,4 +91,3 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
         </identityConfiguration>  
     </system.identityModel>  
     ```
-

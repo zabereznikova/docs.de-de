@@ -1,41 +1,39 @@
 ---
-title: "Range variable name can be inferred only from a simple or qualified name with no arguments | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc36599"
-  - "bc36599"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36599"
+title: Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc36599
+- bc36599
+helpviewer_keywords: BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c986fcf188482c526c53ddf3019cec5163d0b62
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Range variable name can be inferred only from a simple or qualified name with no arguments
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-In einer LINQ\-Abfrage ist ein Programmierelement enthalten, das ein oder mehrere Argumente verwendet.  Der Compiler kann von diesem Programmierelement keine Bereichsvariable ableiten.  
+# <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="1e1a3-102">Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden</span><span class="sxs-lookup"><span data-stu-id="1e1a3-102">Range variable name can be inferred only from a simple or qualified name with no arguments</span></span>
+<span data-ttu-id="1e1a3-103">Ein Programmierelement, die eine oder mehrere Argumente akzeptiert, ist in einer LINQ-Abfrage enthalten.</span><span class="sxs-lookup"><span data-stu-id="1e1a3-103">A programming element that takes one or more arguments is included in a LINQ query.</span></span> <span data-ttu-id="1e1a3-104">Der Compiler kann eine Bereichsvariable aus dieser Programmierelement abzuleiten.</span><span class="sxs-lookup"><span data-stu-id="1e1a3-104">The compiler is unable to infer a range variable from that programming element.</span></span>  
   
- **Fehler\-ID:** BC36599  
+ <span data-ttu-id="1e1a3-105">**Fehler-ID:** BC36599</span><span class="sxs-lookup"><span data-stu-id="1e1a3-105">**Error ID:** BC36599</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1e1a3-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="1e1a3-106">To correct this error</span></span>  
   
-1.  Geben Sie einen expliziten Variablennamen für das Programmierelement an, wie im folgenden Code dargestellt:  
+1.  <span data-ttu-id="1e1a3-107">Geben Sie einen expliziten Variablennamen für das Programmierelement an, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="1e1a3-107">Supply an explicit variable name for the programming element, as shown in the following code:</span></span>  
   
 ```  
 Dim query = From var1 In collection1   
-            Select VariableAlias = SampleFunction(var1), var1  
+            Select VariableAlias= SampleFunction(var1), var1  
 ```  
   
-## Siehe auch  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)
+## <a name="see-also"></a><span data-ttu-id="1e1a3-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1e1a3-108">See Also</span></span>  
+ [<span data-ttu-id="1e1a3-109">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1e1a3-109">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="1e1a3-110">Select-Klausel</span><span class="sxs-lookup"><span data-stu-id="1e1a3-110">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)

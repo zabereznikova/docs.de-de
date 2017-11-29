@@ -1,79 +1,82 @@
 ---
-title: "Permanente Verz&#246;gerung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Permanente Verzögerung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a7023d7548db99d511ae18ad4d52b9a8168c4243
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Permanente Verz&#246;gerung
-In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.Der Beispielworkflow enthält zwei Meldungen an die Konsole, die durch eine Verzögerung getrennt sind.Wenn die Verzögerung ausgelöst wird, wird der Workflow entladen und verbleibt 5 Sekunden im Workflowinstanzspeicher, bevor er erneut in den Speicher geladen wird.  
+# <a name="durable-delay"></a><span data-ttu-id="189bb-102">Permanente Verzögerung</span><span class="sxs-lookup"><span data-stu-id="189bb-102">Durable Delay</span></span>
+<span data-ttu-id="189bb-103">In diesem Beispiel wird veranschaulicht, wie eine permanente Verzögerung verwendet wird, eine Verzögerung, die den Workflow während der Verzögerung auf einem permanenten Gerät beibehält.</span><span class="sxs-lookup"><span data-stu-id="189bb-103">This sample demonstrates how to use a durable delay, which is a delay that persists the workflow to a durable device during the delay.</span></span> <span data-ttu-id="189bb-104">Der Beispielworkflow enthält zwei Meldungen an die Konsole, die durch eine Verzögerung getrennt sind.</span><span class="sxs-lookup"><span data-stu-id="189bb-104">The sample workflow contains two messages to the console that are separated by a delay.</span></span> <span data-ttu-id="189bb-105">Wenn die Verzögerung ausgelöst wird, wird der Workflow entladen und verbleibt 5 Sekunden im Workflowinstanzspeicher, bevor er erneut in den Speicher geladen wird.</span><span class="sxs-lookup"><span data-stu-id="189bb-105">When the delay is triggered, the workflow is unloaded and waits 5 seconds in the workflow instance store before being reloaded in memory.</span></span>  
   
-## Workflowdetails  
- Der Workflowdiensthost hostet den Workflow und verwaltet die Workflowinstanzen durch Laden und Entladen.Zum Starten einer Instanz der Workflowdefinition wird im Beispiel ein Proxy festgelegt, der eine Meldung an die <xref:System.ServiceModel.Activities.Receive>\-Aktivität im Workflow sendet.Die <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A>\-Eigenschaft wird auf `true` festgelegt, sodass eine neue Instanz des Workflows erstellt werden kann, sobald eine Meldung empfangen wird.  
+## <a name="workflow-details"></a><span data-ttu-id="189bb-106">Workflowdetails</span><span class="sxs-lookup"><span data-stu-id="189bb-106">Workflow Details</span></span>  
+ <span data-ttu-id="189bb-107">Der Workflowdiensthost hostet den Workflow und verwaltet die Workflowinstanzen durch Laden und Entladen.</span><span class="sxs-lookup"><span data-stu-id="189bb-107">The workflow service host hosts the workflow and manages the workflow instances by loading and unloading them.</span></span> <span data-ttu-id="189bb-108">Zum Starten einer Instanz der Workflowdefinition wird im Beispiel ein Proxy festgelegt, der eine Meldung an die <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow sendet.</span><span class="sxs-lookup"><span data-stu-id="189bb-108">To start an instance of the workflow definition, the sample sets a proxy that sends a message to the <xref:System.ServiceModel.Activities.Receive> activity in the workflow.</span></span> <span data-ttu-id="189bb-109">Die <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A>-Eigenschaft wird auf `true` festgelegt, sodass eine neue Instanz des Workflows erstellt werden kann, sobald eine Meldung empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="189bb-109">The <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> property is set to `true`, enabling it to create a new instance of the workflow once it receives a message.</span></span>  
   
- Die folgende Liste enthält das Setup des Workflowdiensthosts während der Initialisierung.  
+ <span data-ttu-id="189bb-110">Die folgende Liste enthält das Setup des Workflowdiensthosts während der Initialisierung.</span><span class="sxs-lookup"><span data-stu-id="189bb-110">The following list details the set-up by the workflow service host during initialization.</span></span>  
   
-1.  Erstellt einen Diensthost mit einer Adresse \(http:\/\/localhost:8080\/Client\).  
+1.  <span data-ttu-id="189bb-111">Erstellt einen Diensthost mit einer Adresse (http://localhost:8080/Client).</span><span class="sxs-lookup"><span data-stu-id="189bb-111">Creates a service host with an address (http://localhost:8080/Client).</span></span>  
   
-2.  Erstellt einen Endpunkt im Diensthost, um Kommunikation mit der <xref:System.ServiceModel.Activities.Receive>\-Aktivität im Workflow zu aktivieren.  
+2.  <span data-ttu-id="189bb-112">Erstellt einen Endpunkt im Diensthost, um Kommunikation mit der <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="189bb-112">Creates an endpoint in the service host to enable communication with the <xref:System.ServiceModel.Activities.Receive> activity inside the workflow.</span></span>  
   
-3.  Richtet einen SQL\-Instanzspeicher ein.  
+3.  <span data-ttu-id="189bb-113">Richtet einen SQL-Instanzspeicher ein.</span><span class="sxs-lookup"><span data-stu-id="189bb-113">Sets up a SQL instance store.</span></span>  
   
-4.  Fügt ein Verhalten zum Entladen von Instanzen hinzu, das die Bedingungen angibt, unter denen der Workflowdiensthost eine Workflowinstanz in den SQL\-Persistenzspeicher entladen soll.Für dieses Beispiel wird die Instanz entladen, unmittelbar nachdem der Workflow in den Leerlauf eintritt \(wenn die Verzögerung ausgelöst wird\).  
+4.  <span data-ttu-id="189bb-114">Fügt ein Verhalten zum Entladen von Instanzen hinzu, das die Bedingungen angibt, unter denen der Workflowdiensthost eine Workflowinstanz in den SQL-Persistenzspeicher entladen soll.</span><span class="sxs-lookup"><span data-stu-id="189bb-114">Adds an unload instance behavior that specifies the conditions under which the workflow service host should unload a workflow instance to the SQL persistence store.</span></span> <span data-ttu-id="189bb-115">Für dieses Beispiel wird die Instanz entladen, unmittelbar nachdem der Workflow in den Leerlauf eintritt (wenn die Verzögerung ausgelöst wird).</span><span class="sxs-lookup"><span data-stu-id="189bb-115">For this sample, it unloads the instance immediately after the workflow goes idle (when the delay is triggered).</span></span>  
   
-5.  Erstellt den Proxy, der eine Meldung an die <xref:System.ServiceModel.Activities.Receive>\-Aktivität im Workflow sendet.  
+5.  <span data-ttu-id="189bb-116">Erstellt den Proxy, der eine Meldung an die <xref:System.ServiceModel.Activities.Receive>-Aktivität im Workflow sendet.</span><span class="sxs-lookup"><span data-stu-id="189bb-116">Creates the proxy that sends a message to the <xref:System.ServiceModel.Activities.Receive> activity in the workflow.</span></span>  
   
-#### So verwenden Sie dieses Beispiel  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="189bb-117">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="189bb-117">To use this sample</span></span>  
   
-1.  Richten Sie die Persistenzdatenbank ein.  
+1.  <span data-ttu-id="189bb-118">Richten Sie die Persistenzdatenbank ein.</span><span class="sxs-lookup"><span data-stu-id="189bb-118">Set up the persistence database.</span></span>  
   
-    1.  Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung.  
+    1.  <span data-ttu-id="189bb-119">Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="189bb-119">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
-    2.  Navigieren Sie zum [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Verzeichnis \(C:\\Windows\\Microsoft.NET\\Framework\\v4.X\\\).  
+    2.  <span data-ttu-id="189bb-120">Navigieren Sie zu der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Verzeichnis (C:\Windows\Microsoft.NET\Framework\v4. X\\).</span><span class="sxs-lookup"><span data-stu-id="189bb-120">Navigate to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] directory (C:\Windows\Microsoft.NET\Framework\v4.X\\).</span></span>  
   
-    3.  Bearbeiten Sie die Datei "WorkflowManagementService.exe.config", und fügen Sie die folgende Verbindungszeichenfolge im \<`database`\>\-Element hinzu.  
+    3.  <span data-ttu-id="189bb-121">Bearbeiten Sie die Datei "WorkflowManagementService.exe.config", und fügen Sie die folgende Verbindungszeichenfolge im <`database`>-Element hinzu.</span><span class="sxs-lookup"><span data-stu-id="189bb-121">Edit the WorkflowManagementService.exe.config file and add the following connection string inside the <`database`> element.</span></span>  
   
-        ```  
+        ```xml  
         <database connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=DefaultSampleStore;Integrated Security=True;Asynchronous Processing=True" />  
-  
         ```  
   
-    4.  Navigieren Sie zum Verzeichnis DurableDelay\\CS.  
+    4.  <span data-ttu-id="189bb-122">Navigieren Sie zum Verzeichnis DurableDelay\CS.</span><span class="sxs-lookup"><span data-stu-id="189bb-122">Navigate to the DurableDelay\CS directory.</span></span>  
   
-    5.  Führen Sie "Setup.cmd" aus.  
+    5.  <span data-ttu-id="189bb-123">Führen Sie Setup.cmd aus.</span><span class="sxs-lookup"><span data-stu-id="189bb-123">Run Setup.cmd.</span></span>  
   
-2.  Öffnen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mit erweiterten Berechtigungen, indem Sie mit der rechten Maustaste auf das Symbol [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] klicken und **Als Administrator ausführen** auswählen.  
+2.  <span data-ttu-id="189bb-124">Führen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mit erhöhten Berechtigungen, indem Sie mit der rechten Maustaste die [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] und wählen Sie dann **als Administrator ausführen**.</span><span class="sxs-lookup"><span data-stu-id="189bb-124">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] using elevated permissions by right-clicking the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icon and selecting **Run as administrator**.</span></span>  
   
-3.  Öffnen Sie die Projektmappendatei "Delay.sln".  
+3.  <span data-ttu-id="189bb-125">Öffnen Sie die Projektmappendatei "Delay.sln".</span><span class="sxs-lookup"><span data-stu-id="189bb-125">Open the Delay.sln solution file.</span></span>  
   
-4.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+4.  <span data-ttu-id="189bb-126">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="189bb-126">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-5.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+5.  <span data-ttu-id="189bb-127">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="189bb-127">Press CTRL+F5 to run the solution.</span></span>  
   
-#### So deinstallieren Sie das Beispiel  
+#### <a name="to-uninstall-this-sample"></a><span data-ttu-id="189bb-128">So deinstallieren Sie das Beispiel</span><span class="sxs-lookup"><span data-stu-id="189bb-128">To uninstall this sample</span></span>  
   
-1.  Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]\-Eingabeaufforderung.  
+1.  <span data-ttu-id="189bb-129">Öffnen Sie eine [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung.</span><span class="sxs-lookup"><span data-stu-id="189bb-129">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
-2.  Navigieren Sie zum Verzeichnis DurableDelay\\CS.  
+2.  <span data-ttu-id="189bb-130">Navigieren Sie zum Verzeichnis DurableDelay\CS.</span><span class="sxs-lookup"><span data-stu-id="189bb-130">Navigate to the DurableDelay\CS directory.</span></span>  
   
-3.  Führen Sie die Datei "Cleanup.cmd" aus.  
+3.  <span data-ttu-id="189bb-131">Führen Sie die Datei "Cleanup.cmd" aus.</span><span class="sxs-lookup"><span data-stu-id="189bb-131">Run Cleanup.cmd.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="189bb-132">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="189bb-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="189bb-133">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="189bb-133">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="189bb-134">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="189bb-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="189bb-135">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="189bb-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="189bb-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="189bb-136">See Also</span></span>

@@ -1,39 +1,43 @@
 ---
-title: "Definieren einer Eigenschaft in Windows&#160;Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Definieren von Eigenschaften im Code"
-  - "Eigenschaften [Windows Forms], Definieren im Code"
+title: "Definieren einer Eigenschaft in Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [Windows Forms], defining in code
+- custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c3c25b9c408e5b8f0b76cdf87375875cdb06a13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Definieren einer Eigenschaft in Windows&#160;Forms-Steuerelementen
-Eine Übersicht über Eigenschaften finden Sie unter [Properties Overview](../Topic/Properties%20Overview.md).  Beim Definieren von Eigenschaften sind einige wichtige Aspekte zu beachten:  
+# <a name="defining-a-property-in-windows-forms-controls"></a><span data-ttu-id="59974-102">Definieren einer Eigenschaft in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="59974-102">Defining a Property in Windows Forms Controls</span></span>
+<span data-ttu-id="59974-103">Eine Übersicht über Eigenschaften finden Sie unter [Übersicht über Eigenschaften](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span><span class="sxs-lookup"><span data-stu-id="59974-103">For an overview of properties, see [Properties Overview](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span> <span data-ttu-id="59974-104">Es gibt einige wichtige Überlegungen beim Definieren einer Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="59974-104">There are a few important considerations when defining a property:</span></span>  
   
--   Sie müssen den Eigenschaften, die Sie definieren, Attribute zuweisen.  Attribute legen fest, wie der Designer eine Eigenschaft anzeigen soll.  Ausführliche Informationen finden Sie unter [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md).  
+-   <span data-ttu-id="59974-105">Sie müssen auf die Eigenschaften, die Sie definieren, Attribute anwenden.</span><span class="sxs-lookup"><span data-stu-id="59974-105">You must apply attributes to the properties you define.</span></span> <span data-ttu-id="59974-106">Attribute geben an, wie der Designer eine Eigenschaft anzeigen sollte.</span><span class="sxs-lookup"><span data-stu-id="59974-106">Attributes specify how the designer should display a property.</span></span> <span data-ttu-id="59974-107">Einzelheiten hierzu finden Sie unter [Attribute für Komponenten in der Entwurfszeit](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).</span><span class="sxs-lookup"><span data-stu-id="59974-107">For details, see [Design-Time Attributes for Components](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).</span></span>  
   
--   Wenn sich die Änderung der Eigenschaft auf die visuelle Darstellung des Steuerelements auswirkt, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A>\-Methode \(die das Steuerelement von <xref:System.Windows.Forms.Control> geerbt hat\) vom `set`\-Accessor auf.  Dagegen ruft <xref:System.Windows.Forms.Control.Invalidate%2A> die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode auf, durch die das Steuerelement neu gezeichnet wird.  Aus Effizienzgründen wird das mehrmalige Aufrufen von <xref:System.Windows.Forms.Control.Invalidate%2A> zu einem einzigen Aufruf von <xref:System.Windows.Forms.Control.OnPaint%2A> zusammengefasst.  
+-   <span data-ttu-id="59974-108">Wenn die visuelle Darstellung des Steuerelements ändern der Eigenschaft betroffen sind, rufen die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode (, die das Steuerelement erbt von <xref:System.Windows.Forms.Control>) aus der `set` Accessor.</span><span class="sxs-lookup"><span data-stu-id="59974-108">If changing the property affects the visual display of the control, call the <xref:System.Windows.Forms.Control.Invalidate%2A> method (that your control inherits from <xref:System.Windows.Forms.Control>) from the `set` accessor.</span></span> <span data-ttu-id="59974-109"><xref:System.Windows.Forms.Control.Invalidate%2A>Ruft die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, die das Steuerelement neu gezeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="59974-109"><xref:System.Windows.Forms.Control.Invalidate%2A> in turn calls the <xref:System.Windows.Forms.Control.OnPaint%2A> method, which redraws the control.</span></span> <span data-ttu-id="59974-110">Mehrere Aufrufe <xref:System.Windows.Forms.Control.Invalidate%2A> führen zu einem einzigen Aufruf <xref:System.Windows.Forms.Control.OnPaint%2A> Gründen der Effizienz.</span><span class="sxs-lookup"><span data-stu-id="59974-110">Multiple calls to <xref:System.Windows.Forms.Control.Invalidate%2A> result in a single call to <xref:System.Windows.Forms.Control.OnPaint%2A> for efficiency.</span></span>  
   
--   Die.NET Framework\-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie ganze Zahlen, Dezimalwerte, boolesche Werte und andere bereit.  Typkonverter werden in erster Linie für Umwandlungen von Zeichenfolgen in Werte verwendet \(von Zeichenfolgendaten in andere Datentypen\).  Geläufige Datentypen werden Standardtypkonvertern zugeordnet, die Werte in Zeichenfolgen bzw. Zeichenfolgendaten in die entsprechenden Datentypen konvertieren.  Wenn Sie eine Eigenschaft definieren, die ein benutzerdefinierter Datentyp ist \(d. h. kein Standardtyp\), müssen Sie ein Attribut zur Festlegung des Typkonverters anwenden, der dieser Eigenschaft zugewiesen wird.  Sie können auch ein Attribut verwenden, um einem benutzerdefinierten Typ\-Editor für Benutzeroberflächen eine Eigenschaft zuzuweisen.  Ein Typ\-Editor für Benutzeroberflächen stellt eine Benutzeroberfläche zur Bearbeitung von Eigenschaften oder Datentypen bereit.  Ein Beispiel für einen Typ\-Editor für Benutzeroberflächen ist die Farbauswahl.  Beispiele für Attribute werden am Ende dieses Themas gegeben.  
+-   <span data-ttu-id="59974-111">Die .NET Framework-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie z.B. ganze Zahlen, Dezimalzahlen, boolesche Werte und andere bereit.</span><span class="sxs-lookup"><span data-stu-id="59974-111">The .NET Framework class library provides type converters for common data types such as integers, decimal numbers, Boolean values, and others.</span></span> <span data-ttu-id="59974-112">Der Zweck eines Typkonverters ist im Allgemeinen, die Konvertierung von einer Zeichenfolge in einen Wert (von Zeichenfolgedaten in andere Datentypen) bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="59974-112">The purpose of a type converter is generally to provide string-to-value conversion (from string data to other data types).</span></span> <span data-ttu-id="59974-113">Allgemeine Datentypen sind Standardtypkonverter, die Werte in Zeichenfolgen und Zeichenfolgen in die entsprechenden Datentypen konvertieren.</span><span class="sxs-lookup"><span data-stu-id="59974-113">Common data types are associated with default type converters that convert values into strings and strings into the appropriate data types.</span></span> <span data-ttu-id="59974-114">Wenn Sie eine Eigenschaft definieren (d.h. nicht dem Standard entsprechend), die einen benutzerdefinierten Datentyp aufweist, müssen Sie ein Attribut anwenden, das den dieser Eigenschaft zuzuordnenden Typkonverter angibt.</span><span class="sxs-lookup"><span data-stu-id="59974-114">If you define a property that is a custom (that is, nonstandard) data type, you will have to apply an attribute that specifies the type converter to associate with that property.</span></span> <span data-ttu-id="59974-115">Sie können ein Attribut auch verwenden, um einer Eigenschaft einen benutzerdefinierten Typeditor für die Benutzeroberfläche zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="59974-115">You can also use an attribute to associate a custom UI type editor with a property.</span></span> <span data-ttu-id="59974-116">Ein Typeditor für die Benutzeroberfläche stellt eine Benutzeroberfläche für die Bearbeitung einer Eigenschaft oder eines Datentyps bereit.</span><span class="sxs-lookup"><span data-stu-id="59974-116">A UI type editor provides a user interface for editing a property or data type.</span></span> <span data-ttu-id="59974-117">So ist beispielsweise ein Farbwähler ein Typeditor für die Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="59974-117">A color picker is an example of a UI type editor.</span></span> <span data-ttu-id="59974-118">Beispiele für Attribute werden am Ende dieses Themas angegeben.</span><span class="sxs-lookup"><span data-stu-id="59974-118">Examples of attributes are given at the end of this topic.</span></span>  
   
     > [!NOTE]
-    >  Wenn kein Typkonverter oder Typ\-Editor für Benutzeroberflächen für die benutzerdefinierte Eigenschaft verfügbar ist, können Sie diesen gemäß der Beschreibung in [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md) implementieren.  
+    >  <span data-ttu-id="59974-119">Wenn für Ihre benutzerdefinierte Eigenschaft kein Typkonverter oder Typeditor für die Benutzeroberfläche verfügbar ist, können Sie einen implementieren, wie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).</span><span class="sxs-lookup"><span data-stu-id="59974-119">If a type converter or a UI type editor is not available for your custom property, you can implement one as described in [Extending Design-Time Support](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).</span></span>  
   
- Im folgenden Codefragment wird eine benutzerdefinierte Eigenschaft mit dem Namen `EndColor` für das benutzerdefinierte Steuerelement `FlashTrackBar` definiert.  
+ <span data-ttu-id="59974-120">Das folgende Codefragment definiert eine benutzerdefinierte Eigenschaft mit dem Namen `EndColor` für das benutzerdefinierte Steuerelement `FlashTrackBar`.</span><span class="sxs-lookup"><span data-stu-id="59974-120">The following code fragment defines a custom property named `EndColor` for the custom control `FlashTrackBar`.</span></span>  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -66,7 +70,6 @@ Public Class FlashTrackBar
    End Property  
    ...  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -102,7 +105,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Im folgenden Codefragment wird einem Typkonverter und einem Typ\-Editor für Benutzeroberflächen die Eigenschaft `Value` zugewiesen.  In diesem Fall handelt es sich bei `Value` um eine ganze Zahl mit einem Standardtypkonverter. Allerdings wendet das <xref:System.ComponentModel.TypeConverterAttribute>\-Attribut einen benutzerdefinierten Typkonverter \(`FlashTrackBarValueConverter`\) an, wodurch der Designer die Eigenschaft als Prozentsatz anzeigt.  Der Typ\-Editor für Benutzeroberflächen, `FlashTrackBarValueEditor`, ermöglicht die visuelle Darstellung der Prozentangabe.  In diesem Beispiel wird auch deutlich, dass der Standardkonverter durch den Typkonverter bzw. Typ\-Editor überschrieben wird, der durch das Attribut <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> festgelegt wurde.  
+ <span data-ttu-id="59974-121">Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu.</span><span class="sxs-lookup"><span data-stu-id="59974-121">The following code fragment associates a type converter and a UI type editor with the property `Value`.</span></span> <span data-ttu-id="59974-122">In diesem Fall `Value` ist eine ganze Zahl und verfügt über einen Standard-Typkonverter, aber die <xref:System.ComponentModel.TypeConverterAttribute> Attribut angewendet wird, einen benutzerdefinierten Typkonverter (`FlashTrackBarValueConverter`) mit der der Designer für die anzuzeigenden als Prozentsatz.</span><span class="sxs-lookup"><span data-stu-id="59974-122">In this case `Value` is an integer and has a default type converter, but the <xref:System.ComponentModel.TypeConverterAttribute> attribute applies a custom type converter (`FlashTrackBarValueConverter`) that enables the designer to display it as a percentage.</span></span> <span data-ttu-id="59974-123">Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="59974-123">The UI type editor, `FlashTrackBarValueEditor`, allows the percentage to be displayed visually.</span></span> <span data-ttu-id="59974-124">In diesem Beispiel wird außerdem gezeigt, dass der Typkonverter oder Editor gemäß der <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> Attribut überschreibt der Standardkonverter.</span><span class="sxs-lookup"><span data-stu-id="59974-124">This example also shows that the type converter or editor specified by the <xref:System.ComponentModel.TypeConverterAttribute> or <xref:System.ComponentModel.EditorAttribute> attribute overrides the default converter.</span></span>  
   
 ```vb  
 <Category("Flash"), _  
@@ -113,7 +116,6 @@ Description("The current value of the track bar.  You can enter an actual value 
 Public ReadOnly Property Value() As Integer  
 ...  
 End Property  
-  
 ```  
   
 ```csharp  
@@ -128,8 +130,8 @@ public int Value {
 }  
 ```  
   
-## Siehe auch  
- [Eigenschaften von Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Definieren von Standardwerten mit der ShouldSerialize\-Methode und der Reset\-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)   
- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)   
- [Attribute in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="59974-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="59974-125">See Also</span></span>  
+ [<span data-ttu-id="59974-126">Eigenschaften in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="59974-126">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [<span data-ttu-id="59974-127">Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode</span><span class="sxs-lookup"><span data-stu-id="59974-127">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [<span data-ttu-id="59974-128">Durch geänderte Eigenschaften ausgelöste Ereignisse</span><span class="sxs-lookup"><span data-stu-id="59974-128">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [<span data-ttu-id="59974-129">Attribute in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="59974-129">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)

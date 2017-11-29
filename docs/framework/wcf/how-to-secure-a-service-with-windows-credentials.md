@@ -1,120 +1,125 @@
 ---
-title: "Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, Sicherheit"
+title: 'Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
-In diesem Thema wird gezeigt, wie die Übertragungssicherheit für einen [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst in einer Windows-Domäne aktiviert und von Clients in der gleichen Domäne aufgerufen wird. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Dieses Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
+# <a name="how-to-secure-a-service-with-windows-credentials"></a><span data-ttu-id="beacd-102">Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="beacd-102">How to: Secure a Service with Windows Credentials</span></span>
+<span data-ttu-id="beacd-103">In diesem Thema wird gezeigt, wie transportsicherheit auf aktiviert eine [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst, befindet sich in einer Windows-Domäne und wird von Clients in der gleichen Domäne aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="beacd-103">This topic shows how to enable transport security on a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service that resides in a Windows domain and is called by clients in the same domain.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="beacd-104">Dieses Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-104"> this scenario, see [Transport Security with Windows Authentication](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md).</span></span> <span data-ttu-id="beacd-105">Eine beispielanwendung finden Sie unter der [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="beacd-105">For a sample application, see the [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) sample.</span></span>  
   
- In diesem Thema wird vorausgesetzt, dass Sie über eine vorhandene Vertragsschnittstelle verfügen und die Implementierung bereits definiert wurde, da hier auf diese beiden Punkte aufgebaut wird. Sie können auch einen vorhandenen Dienst und Client ändern.  
+ <span data-ttu-id="beacd-106">In diesem Thema wird vorausgesetzt, dass Sie über eine vorhandene Vertragsschnittstelle verfügen und die Implementierung bereits definiert wurde, da hier auf diese beiden Punkte aufgebaut wird.</span><span class="sxs-lookup"><span data-stu-id="beacd-106">This topic assumes you have an existing contract interface and implementation already defined, and adds on to that.</span></span> <span data-ttu-id="beacd-107">Sie können auch einen vorhandenen Dienst und Client ändern.</span><span class="sxs-lookup"><span data-stu-id="beacd-107">You can also modify an existing service and client.</span></span>  
   
- Sie können einen Dienst mit Windows-Anmeldeinformationen vollständig im Code sichern. Alternativ können Sie bei Verwendung einer Konfigurationsdatei einige Teile des Codes weglassen. In diesem Thema werden beide Methoden gezeigt. Verwenden Sie jedoch stets nur eine der Methoden.  
+ <span data-ttu-id="beacd-108">Sie können einen Dienst mit Windows-Anmeldeinformationen vollständig im Code sichern.</span><span class="sxs-lookup"><span data-stu-id="beacd-108">You can secure a service with Windows credentials completely in code.</span></span> <span data-ttu-id="beacd-109">Alternativ können Sie bei Verwendung einer Konfigurationsdatei einige Teile des Codes weglassen.</span><span class="sxs-lookup"><span data-stu-id="beacd-109">Alternatively, you can omit some of the code by using a configuration file.</span></span> <span data-ttu-id="beacd-110">In diesem Thema werden beide Methoden gezeigt.</span><span class="sxs-lookup"><span data-stu-id="beacd-110">This topic shows both ways.</span></span> <span data-ttu-id="beacd-111">Verwenden Sie jedoch stets nur eine der Methoden.</span><span class="sxs-lookup"><span data-stu-id="beacd-111">Be sure you only use one of the ways, not both.</span></span>  
   
- In den ersten drei Prozeduren wird gezeigt, wie der Dienst unter Verwendung von Code gesichert wird. Die vierte und fünfte Prozedur zeigen, wie dies mit einer Konfigurationsdatei erreicht wird.  
+ <span data-ttu-id="beacd-112">In den ersten drei Prozeduren wird gezeigt, wie der Dienst unter Verwendung von Code gesichert wird.</span><span class="sxs-lookup"><span data-stu-id="beacd-112">The first three procedures show how to secure the service using code.</span></span> <span data-ttu-id="beacd-113">Die vierte und fünfte Prozedur zeigen, wie dies mit einer Konfigurationsdatei erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="beacd-113">The fourth and fifth procedure shows how to do it with a configuration file.</span></span>  
   
-## <a name="using-code"></a>Mithilfe von Code  
- Den vollständigen Code für Dienst und Client finden Sie im Beispielabschnitt am Ende dieses Themas.  
+## <a name="using-code"></a><span data-ttu-id="beacd-114">Mithilfe von Code</span><span class="sxs-lookup"><span data-stu-id="beacd-114">Using Code</span></span>  
+ <span data-ttu-id="beacd-115">Den vollständigen Code für Dienst und Client finden Sie im Beispielabschnitt am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="beacd-115">The complete code for the service and the client is in the Example section at the end of this topic.</span></span>  
   
- Die erste Prozedur führt durch Erstellen und Konfigurieren einer <xref:System.ServiceModel.WSHttpBinding> -Klasse im Code. Für die Bindung wird der HTTP-Transport verwendet. Die gleiche Bindung wird auf dem Client verwendet.  
+ <span data-ttu-id="beacd-116">Die erste Prozedur führt Sie durch die Schritte zum Erstellen und Konfigurieren einer <xref:System.ServiceModel.WSHttpBinding>-Klasse im Code.</span><span class="sxs-lookup"><span data-stu-id="beacd-116">The first procedure walks through creating and configuring a <xref:System.ServiceModel.WSHttpBinding> class in code.</span></span> <span data-ttu-id="beacd-117">Für die Bindung wird der HTTP-Transport verwendet.</span><span class="sxs-lookup"><span data-stu-id="beacd-117">The binding uses the HTTP transport.</span></span> <span data-ttu-id="beacd-118">Die gleiche Bindung wird auf dem Client verwendet.</span><span class="sxs-lookup"><span data-stu-id="beacd-118">The same binding is used on the client.</span></span>  
   
-#### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>So erstellen Sie eine WSHttpBinding, die Windows-Anmeldeinformationen und Nachrichtensicherheit verwendet  
+#### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a><span data-ttu-id="beacd-119">So erstellen Sie eine WSHttpBinding, die Windows-Anmeldeinformationen und Nachrichtensicherheit verwendet</span><span class="sxs-lookup"><span data-stu-id="beacd-119">To create a WSHttpBinding that uses Windows credentials and message security</span></span>  
   
-1.  Der Code dieser Prozedur wird im Dienstcode des Beispielabschnitts am Anfang der `Run`-Methode der `Test`-Klasse eingefügt.  
+1.  <span data-ttu-id="beacd-120">Der Code dieser Prozedur wird im Dienstcode des Beispielabschnitts am Anfang der `Run`-Methode der `Test`-Klasse eingefügt.</span><span class="sxs-lookup"><span data-stu-id="beacd-120">This procedure's code is inserted at the beginning of the `Run` method of the `Test` class in the service code in the Example section.</span></span>  
   
-2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding> Klasse.  
+2.  <span data-ttu-id="beacd-121">Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="beacd-121">Create an instance of the <xref:System.ServiceModel.WSHttpBinding> class.</span></span>  
   
-3.  Festlegen der <xref:System.ServiceModel.WsHttpSecurity.Mode%2A> Eigenschaft der <xref:System.ServiceModel.WsHttpSecurity> Klasse <xref:System.ServiceModel.SecurityMode>.  
+3.  <span data-ttu-id="beacd-122">Legen Sie die <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>-Eigenschaft der <xref:System.ServiceModel.WSHttpSecurity>-Klasse auf <xref:System.ServiceModel.SecurityMode.Message> fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-122">Set the <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> property of the <xref:System.ServiceModel.WSHttpSecurity> class to <xref:System.ServiceModel.SecurityMode.Message>.</span></span>  
   
-4.  Festlegen der <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> Eigenschaft der <xref:System.ServiceModel.MessageSecurityOverHttp> Klasse <xref:System.ServiceModel.MessageCredentialType>.  
+4.  <span data-ttu-id="beacd-123">Legen Sie die <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>-Eigenschaft der <xref:System.ServiceModel.MessageSecurityOverHttp>-Klasse auf <xref:System.ServiceModel.MessageCredentialType.Windows> fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-123">Set the <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> property of the <xref:System.ServiceModel.MessageSecurityOverHttp> class to <xref:System.ServiceModel.MessageCredentialType.Windows>.</span></span>  
   
-5.  Für diese Prozedur wird der folgende Code verwendet:  
+5.  <span data-ttu-id="beacd-124">Für diese Prozedur wird der folgende Code verwendet:</span><span class="sxs-lookup"><span data-stu-id="beacd-124">The code for this procedure is as follows:</span></span>  
   
      [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
-### <a name="using-the-binding-in-a-service"></a>Verwenden der Bindung in einem Dienst  
- Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Hosten von Diensten finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
+### <a name="using-the-binding-in-a-service"></a><span data-ttu-id="beacd-125">Verwenden der Bindung in einem Dienst</span><span class="sxs-lookup"><span data-stu-id="beacd-125">Using the Binding in a Service</span></span>  
+ <span data-ttu-id="beacd-126">Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="beacd-126">This is the second procedure, which shows how to use the binding in a self-hosted service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="beacd-127">Hosting-Dienste finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-127"> hosting services see [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-##### <a name="to-use-a-binding-in-a-service"></a>So verwenden Sie eine Bindung in einem Dienst  
+##### <a name="to-use-a-binding-in-a-service"></a><span data-ttu-id="beacd-128">So verwenden Sie eine Bindung in einem Dienst</span><span class="sxs-lookup"><span data-stu-id="beacd-128">To use a binding in a service</span></span>  
   
-1.  Fügen Sie den Code dieser Prozedur nach dem Code der vorherigen Prozedur ein.  
+1.  <span data-ttu-id="beacd-129">Fügen Sie den Code dieser Prozedur nach dem Code der vorherigen Prozedur ein.</span><span class="sxs-lookup"><span data-stu-id="beacd-129">Insert this procedure's code after the code from the preceding procedure.</span></span>  
   
-2.  Erstellen einer <xref:System.Type> Variable mit dem Namen `contractType` und den Typ der Schnittstelle zuweisen (`ICalculator`). Verwenden Sie für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] den Operator `GetType` und für C# das Schlüsselwort `typeof`.  
+2.  <span data-ttu-id="beacd-130">Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu.</span><span class="sxs-lookup"><span data-stu-id="beacd-130">Create a <xref:System.Type> variable named `contractType` and assign it the type of the interface (`ICalculator`).</span></span> <span data-ttu-id="beacd-131">Verwenden Sie für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] den Operator `GetType` und für C# das Schlüsselwort `typeof`.</span><span class="sxs-lookup"><span data-stu-id="beacd-131">When using [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], use the `GetType` operator; when using C#, use the `typeof` keyword.</span></span>  
   
-3.  Erstellen Sie eine zweite `Type`-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.  
+3.  <span data-ttu-id="beacd-132">Erstellen Sie eine zweite `Type`-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.</span><span class="sxs-lookup"><span data-stu-id="beacd-132">Create a second `Type` variable named `serviceType` and assign it the type of the implemented contract (`Calculator`).</span></span>  
   
-4.  Erstellen Sie eine Instanz der <xref:System.Uri> Klasse mit dem Namen `baseAddress` mit der Basisadresse des Diensts. Die Basisadresse muss ein Schema haben, das mit dem Transport übereinstimmt. In diesem Fall ist das Transportschema HTTP, und die Adresse enthält den speziellen Uniform Resource Identifier (URI) "localhost" und eine Anschlussnummer (8036) sowie eine Basisendpunktadresse ("serviceModelSamples/): http://localhost:8036/serviceModelSamples/.  
+4.  <span data-ttu-id="beacd-133">Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse mit der Bezeichnung `baseAddress` mit der Basisadresse des Dienstes.</span><span class="sxs-lookup"><span data-stu-id="beacd-133">Create an instance of the <xref:System.Uri> class named `baseAddress` with the base address of the service.</span></span> <span data-ttu-id="beacd-134">Die Basisadresse muss ein Schema haben, das mit dem Transport übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="beacd-134">The base address must have a scheme that matches the transport.</span></span> <span data-ttu-id="beacd-135">In diesem Fall ist das Transportschema HTTP, und die Adresse enthält den speziellen Uniform Resource Identifier (URI) "localhost" und eine Anschlussnummer (8036) sowie eine Basisendpunktadresse ("serviceModelSamples/): http://localhost:8036/serviceModelSamples/.</span><span class="sxs-lookup"><span data-stu-id="beacd-135">In this case, the transport scheme is HTTP, and the address includes the special Uniform Resource Identifier (URI) "localhost" and a port number (8036) as well as a base endpoint address ("serviceModelSamples/): http://localhost:8036/serviceModelSamples/.</span></span>  
   
-5.  Erstellen Sie eine Instanz von der <xref:System.ServiceModel.ServiceHost> Klasse, wobei die `serviceType` und `baseAddress` Variablen.  
+5.  <span data-ttu-id="beacd-136">Erstellen Sie eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse mit der `serviceType`-Variablen und der `baseAddress`-Variablen.</span><span class="sxs-lookup"><span data-stu-id="beacd-136">Create an instance of the <xref:System.ServiceModel.ServiceHost> class with the `serviceType` and `baseAddress` variables.</span></span>  
   
-6.  Fügen Sie dem Dienst einen Endpunkt mit `contractType`, Bindung und einem Endpunktnamen (secureCalculator) hinzu. Ein Client muss beim Initiieren eines Aufrufs zum Dienst die Basisadresse und den Endpunktnamen verketten.  
+6.  <span data-ttu-id="beacd-137">Fügen Sie dem Dienst einen Endpunkt mit `contractType`, Bindung und einem Endpunktnamen (secureCalculator) hinzu.</span><span class="sxs-lookup"><span data-stu-id="beacd-137">Add an endpoint to the service using the `contractType`, binding, and an endpoint name (secureCalculator).</span></span> <span data-ttu-id="beacd-138">Ein Client muss beim Initiieren eines Aufrufs zum Dienst die Basisadresse und den Endpunktnamen verketten.</span><span class="sxs-lookup"><span data-stu-id="beacd-138">A client must concatenate the base address and the endpoint name when initiating a call to the service.</span></span>  
   
-7.  Rufen Sie die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> Methode, um den Dienst zu starten. Der Code für diese Prozedur wird hier gezeigt:  
+7.  <span data-ttu-id="beacd-139">Starten Sie den Dienst, indem Sie die <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="beacd-139">Call the <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> method to start the service.</span></span> <span data-ttu-id="beacd-140">Der Code für diese Prozedur wird hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="beacd-140">The code for this procedure is shown here:</span></span>  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
   
-### <a name="using-the-binding-in-a-client"></a>Verwenden der Bindung in einem Client  
- Diese Prozedur zeigt die Generierung eines Proxys, der mit dem Dienst kommuniziert. Der Proxy wird generiert, mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) die Metadaten des Diensts verwendet, um den Proxy zu erstellen.  
+### <a name="using-the-binding-in-a-client"></a><span data-ttu-id="beacd-141">Verwenden der Bindung in einem Client</span><span class="sxs-lookup"><span data-stu-id="beacd-141">Using the Binding in a Client</span></span>  
+ <span data-ttu-id="beacd-142">Diese Prozedur zeigt die Generierung eines Proxys, der mit dem Dienst kommuniziert.</span><span class="sxs-lookup"><span data-stu-id="beacd-142">This procedure shows how to generate a proxy that communicates with the service.</span></span> <span data-ttu-id="beacd-143">Der Proxy wird generiert, mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) die Metadaten des Diensts verwendet, um den Proxy zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="beacd-143">The proxy is generated with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) which uses the service metadata to create the proxy.</span></span>  
   
- Diese Prozedur erstellt außerdem eine Instanz der <xref:System.ServiceModel.WSHttpBinding> Klasse, um die Kommunikation mit dem Dienst, und ruft dann den Dienst.  
+ <span data-ttu-id="beacd-144">Durch diese Prozedur wird auch eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse erstellt, um mit dem Dienst zu kommunizieren. Anschließend wird der Dienst aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="beacd-144">This procedure also creates an instance of the <xref:System.ServiceModel.WSHttpBinding> class to communicate with the service, and then calls the service.</span></span>  
   
- In diesem Beispiel wird zum Erstellen des Clients nur Code verwendet. Alternativ können Sie eine Konfigurationsdatei verwenden. Dies wird im Abschnitt nach dieser Prozedur veranschaulicht.  
+ <span data-ttu-id="beacd-145">In diesem Beispiel wird zum Erstellen des Clients nur Code verwendet.</span><span class="sxs-lookup"><span data-stu-id="beacd-145">This example uses only code to create the client.</span></span> <span data-ttu-id="beacd-146">Alternativ können Sie eine Konfigurationsdatei verwenden. Dies wird im Abschnitt nach dieser Prozedur veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="beacd-146">As an alternative, you can use a configuration file, which is shown in the section following this procedure.</span></span>  
   
-##### <a name="to-use-a-binding-in-a-client-with-code"></a>So verwenden Sie eine Bindung in einem Client mit Code  
+##### <a name="to-use-a-binding-in-a-client-with-code"></a><span data-ttu-id="beacd-147">So verwenden Sie eine Bindung in einem Client mit Code</span><span class="sxs-lookup"><span data-stu-id="beacd-147">To use a binding in a client with code</span></span>  
   
-1.  Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Gewusst wie: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Der generierte Proxycode erbt von der <xref:System.ServiceModel.ClientBase%601> -Klasse, die stellt sicher, dass alle Clients die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service. In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.  
+1.  <span data-ttu-id="beacd-148">Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren.</span><span class="sxs-lookup"><span data-stu-id="beacd-148">Use the SvcUtil.exe tool to generate the proxy code from the service's metadata.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="beacd-149">[Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-149"> [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span> <span data-ttu-id="beacd-150">Der generierte Proxycode erbt von der <xref:System.ServiceModel.ClientBase%601>-Klasse, wodurch sichergestellt wird, dass jeder Client über die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Dienst verfügt.</span><span class="sxs-lookup"><span data-stu-id="beacd-150">The generated proxy code inherits from the <xref:System.ServiceModel.ClientBase%601> class, which ensures that every client has the necessary constructors, methods, and properties to communicate with a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="beacd-151">In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.</span><span class="sxs-lookup"><span data-stu-id="beacd-151">In this example, the generated code includes the `CalculatorClient` class, which implements the `ICalculator` interface, enabling compatibility with the service code.</span></span>  
   
-2.  Der Code dieser Prozedur wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.  
+2.  <span data-ttu-id="beacd-152">Der Code dieser Prozedur wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.</span><span class="sxs-lookup"><span data-stu-id="beacd-152">This procedure's code is inserted at the beginning of the `Main` method of the client program.</span></span>  
   
-3.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding> -Klasse und legen Sie deren Sicherheitsmodus auf `Message` und den Typ der Clientanmeldeinformationen `Windows`. Im Beispiel wird die Variable `clientBinding` genannt.  
+3.  <span data-ttu-id="beacd-153">Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse und legen Sie ihren Sicherheitsmodus auf `Message` und ihren Clientanmeldeinformationstyp auf `Windows` fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-153">Create an instance of the <xref:System.ServiceModel.WSHttpBinding> class and set its security mode to `Message` and its client credential type to `Windows`.</span></span> <span data-ttu-id="beacd-154">Im Beispiel wird die Variable `clientBinding` genannt.</span><span class="sxs-lookup"><span data-stu-id="beacd-154">The example names the variable `clientBinding`.</span></span>  
   
-4.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.EndpointAddress> Klasse mit dem Namen `serviceAddress`. Initialisieren Sie die Instanz mit der mit dem Endpunktnamen verketteten Basisadresse.  
+4.  <span data-ttu-id="beacd-155">Erstellen Sie eine Instanz der <xref:System.ServiceModel.EndpointAddress>-Klasse mit der Bezeichnung `serviceAddress`.</span><span class="sxs-lookup"><span data-stu-id="beacd-155">Create an instance of the <xref:System.ServiceModel.EndpointAddress> class named `serviceAddress`.</span></span> <span data-ttu-id="beacd-156">Initialisieren Sie die Instanz mit der mit dem Endpunktnamen verketteten Basisadresse.</span><span class="sxs-lookup"><span data-stu-id="beacd-156">Initialize the instance with the base address concatenated with the endpoint name.</span></span>  
   
-5.  Erstellen Sie eine Instanz der generierten Clientklasse mit der `serviceAddress`-Variablen und der `clientBinding`-Variablen.  
+5.  <span data-ttu-id="beacd-157">Erstellen Sie eine Instanz der generierten Clientklasse mit der `serviceAddress`-Variablen und der `clientBinding`-Variablen.</span><span class="sxs-lookup"><span data-stu-id="beacd-157">Create an instance of the generated client class with the `serviceAddress` and the `clientBinding` variables.</span></span>  
   
-6.  Rufen Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A> Methode, wie im folgenden Code gezeigt.  
+6.  <span data-ttu-id="beacd-158">Rufen Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A>-Methode auf, wie im folgenden Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="beacd-158">Call the <xref:System.ServiceModel.ClientBase%601.Open%2A> method, as shown in the following code.</span></span>  
   
-7.  Rufen Sie den Dienst auf, und zeigen Sie die Ergebnisse an.  
+7.  <span data-ttu-id="beacd-159">Rufen Sie den Dienst auf, und zeigen Sie die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="beacd-159">Call the service and display the results.</span></span>  
   
      [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
      [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
   
-## <a name="using-the-configuration-file"></a>Verwenden der Konfigurationsdatei  
- Anstelle der Erstellung der Bindung mithilfe von prozeduralem Code können Sie auch den folgenden Code für den Bindungsabschnitt der Konfigurationsdatei verwenden.  
+## <a name="using-the-configuration-file"></a><span data-ttu-id="beacd-160">Verwenden der Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="beacd-160">Using the Configuration File</span></span>  
+ <span data-ttu-id="beacd-161">Anstelle der Erstellung der Bindung mithilfe von prozeduralem Code können Sie auch den folgenden Code für den Bindungsabschnitt der Konfigurationsdatei verwenden.</span><span class="sxs-lookup"><span data-stu-id="beacd-161">Instead of creating the binding with procedural code, you can use the following code shown for the bindings section of the configuration file.</span></span>  
   
- Wenn Sie bereits einen Dienst definiert keinen, finden Sie unter [entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md), und [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md).  
+ <span data-ttu-id="beacd-162">Wenn Sie nicht bereits einen Dienst definiert haben, finden Sie unter [entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md), und [Konfigurieren von Services](../../../docs/framework/wcf/configuring-services.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-162">If you do not already have a service defined, see [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md), and [Configuring Services](../../../docs/framework/wcf/configuring-services.md).</span></span>  
   
- **Hinweis** dieser Konfigurationscode wird in den Dienst und die Client-Konfigurationsdateien verwendet.  
+ <span data-ttu-id="beacd-163">**Hinweis** dieser Konfigurationscode wird in sowohl im Dienst-als auch Konfigurationsdateien verwendet.</span><span class="sxs-lookup"><span data-stu-id="beacd-163">**Note** This configuration code is used in both the service and client configuration files.</span></span>  
   
-#### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>So aktivieren Sie mit der Konfiguration Übertragungssicherheit für einen Dienst in einer Windows-Domäne  
+#### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a><span data-ttu-id="beacd-164">So aktivieren Sie mit der Konfiguration Übertragungssicherheit für einen Dienst in einer Windows-Domäne</span><span class="sxs-lookup"><span data-stu-id="beacd-164">To enable transfer security on a service in a Windows domain using configuration</span></span>  
   
-1.  Hinzufügen einer [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element der [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element-Abschnitt der Konfigurationsdatei.  
+1.  <span data-ttu-id="beacd-165">Hinzufügen einer [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element an der [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Elementabschnitt der Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="beacd-165">Add a [\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element to the [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element section of the configuration file.</span></span>  
   
-2.  Fügen Sie dem <`binding`>-Element ein <`WSHttpBinding`>-Element hinzu, und legen Sie das `configurationName`-Attribut auf einen für Ihre Anwendung geeigneten Wert fest.  
+2.  <span data-ttu-id="beacd-166">Fügen Sie dem <`binding`>-Element ein <`WSHttpBinding`>-Element hinzu, und legen Sie das `configurationName`-Attribut auf einen für Ihre Anwendung geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-166">Add a <`binding`> element to the <`WSHttpBinding`> element and set the `configurationName` attribute to a value appropriate to your application.</span></span>  
   
-3.  Fügen Sie ein <`security`>-Element hinzu, und legen Sie das `mode`-Attribut auf "Message" fest.  
+3.  <span data-ttu-id="beacd-167">Fügen Sie ein <`security`>-Element hinzu, und legen Sie das `mode`-Attribut auf "Message" fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-167">Add a <`security`> element and set the `mode` attribute to Message.</span></span>  
   
-4.  Fügen Sie ein <`message`>-Element hinzu, und legen Sie das `clientCredentialType`-Attribut auf "Windows" fest.  
+4.  <span data-ttu-id="beacd-168">Fügen Sie ein <`message`>-Element hinzu, und legen Sie das `clientCredentialType`-Attribut auf "Windows" fest.</span><span class="sxs-lookup"><span data-stu-id="beacd-168">Add a <`message`> element and set the `clientCredentialType` attribute to Windows.</span></span>  
   
-5.  Ersetzen Sie in der Konfigurationsdatei des Diensts den `<bindings>`-Abschnitt durch den folgenden Code. Wenn Sie nicht bereits über eine Dienstkonfigurationsdatei verfügen, finden Sie unter [Verwendung von Bindungen für Dienste konfigurieren und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+5.  <span data-ttu-id="beacd-169">Ersetzen Sie in der Konfigurationsdatei des Diensts den `<bindings>`-Abschnitt durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="beacd-169">In the service's configuration file, replace the `<bindings>` section with the following code.</span></span> <span data-ttu-id="beacd-170">Wenn Sie nicht bereits über eine Dienstkonfigurationsdatei verfügen, finden Sie unter [Bindungen verwenden, und Konfigurieren von Diensten und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-170">If you do not already have a service configuration file, see [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <wsHttpBinding>  
        <binding name = "wsHttpBinding_Calculator">  
@@ -126,34 +131,34 @@ In diesem Thema wird gezeigt, wie die Übertragungssicherheit für einen [!INCLU
     </bindings>  
     ```  
   
-### <a name="using-the-binding-in-a-client"></a>Verwenden der Bindung in einem Client  
- In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei. Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &#8211; der dritten Datei, die auf dem Client verwendet wird.  
+### <a name="using-the-binding-in-a-client"></a><span data-ttu-id="beacd-171">Verwenden der Bindung in einem Client</span><span class="sxs-lookup"><span data-stu-id="beacd-171">Using the Binding in a Client</span></span>  
+ <span data-ttu-id="beacd-172">In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="beacd-172">This procedure shows how to generate two files: a proxy that communicates with the service and a configuration file.</span></span> <span data-ttu-id="beacd-173">Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &#8211; der dritten Datei, die auf dem Client verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="beacd-173">It also describes changes to the client program, which is the third file used on the client.</span></span>  
   
-##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>So verwenden Sie eine Bindung für einen Client mit Konfiguration  
+##### <a name="to-use-a-binding-in-a-client-with-configuration"></a><span data-ttu-id="beacd-174">So verwenden Sie eine Bindung für einen Client mit Konfiguration</span><span class="sxs-lookup"><span data-stu-id="beacd-174">To use a binding in a client with configuration</span></span>  
   
-1.  Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode und die Konfigurationsdatei aus den Metadaten des Diensts zu generieren. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Gewusst wie: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  <span data-ttu-id="beacd-175">Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode und die Konfigurationsdatei aus den Metadaten des Diensts zu generieren.</span><span class="sxs-lookup"><span data-stu-id="beacd-175">Use the SvcUtil.exe tool to generate the proxy code and configuration file from the service's metadata.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="beacd-176">[Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="beacd-176"> [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
   
-2.  Ersetzen Sie die [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Abschnitt der generierten Konfigurationsdatei durch den Konfigurationscode aus dem vorherigen Abschnitt.  
+2.  <span data-ttu-id="beacd-177">Ersetzen Sie die [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Teil die generierte Konfigurationsdatei mit den Konfigurationscode aus dem vorherigen Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="beacd-177">Replace the [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) section of the generated configuration file with the configuration code from the preceding section.</span></span>  
   
-3.  Prozeduraler Code wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.  
+3.  <span data-ttu-id="beacd-178">Prozeduraler Code wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.</span><span class="sxs-lookup"><span data-stu-id="beacd-178">Procedural code is inserted at the beginning of the `Main` method of the client program.</span></span>  
   
-4.  Erstellen Sie eine Instanz der generierten Clientklasse, und geben Sie den Namen der Bindung in der Konfigurationsdatei als Eingabeparameter weiter.  
+4.  <span data-ttu-id="beacd-179">Erstellen Sie eine Instanz der generierten Clientklasse, und geben Sie den Namen der Bindung in der Konfigurationsdatei als Eingabeparameter weiter.</span><span class="sxs-lookup"><span data-stu-id="beacd-179">Create an instance of the generated client class passing the name of the binding in the configuration file as an input parameter.</span></span>  
   
-5.  Rufen Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A> Methode, wie im folgenden Code gezeigt.  
+5.  <span data-ttu-id="beacd-180">Rufen Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A>-Methode auf, wie im folgenden Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="beacd-180">Call the <xref:System.ServiceModel.ClientBase%601.Open%2A> method, as shown in the following code.</span></span>  
   
-6.  Rufen Sie den Dienst auf, und zeigen Sie die Ergebnisse an.  
+6.  <span data-ttu-id="beacd-181">Rufen Sie den Dienst auf, und zeigen Sie die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="beacd-181">Call the service and display the results.</span></span>  
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a><span data-ttu-id="beacd-182">Beispiel</span><span class="sxs-lookup"><span data-stu-id="beacd-182">Example</span></span>  
  [!code-csharp[c_SecureWindowsService#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#0)]  
   
- [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
- <!-- TODO: review snippet reference [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]  -->  
+ [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
+ [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WSHttpBinding>   
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Gewusst wie: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)   
- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a><span data-ttu-id="beacd-183">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="beacd-183">See Also</span></span>  
+ <xref:System.ServiceModel.WSHttpBinding>  
+ [<span data-ttu-id="beacd-184">ServiceModel Metadata Utility-Tool (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="beacd-184">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="beacd-185">Vorgehensweise: Erstellen eines Clients</span><span class="sxs-lookup"><span data-stu-id="beacd-185">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="beacd-186">Sichern von Diensten</span><span class="sxs-lookup"><span data-stu-id="beacd-186">Securing Services</span></span>](../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="beacd-187">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="beacd-187">Security Overview</span></span>](../../../docs/framework/wcf/feature-details/security-overview.md)

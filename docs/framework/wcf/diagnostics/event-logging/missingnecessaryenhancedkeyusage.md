@@ -1,31 +1,34 @@
 ---
-title: "MissingNecessaryEnhancedKeyUsage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MissingNecessaryEnhancedKeyUsage
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dffd071-0b79-4e10-9027-06760b4cc3ca
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b53c08a2f3500974a477b2a8dad8ef8e37c4f531
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# MissingNecessaryEnhancedKeyUsage
-Id: 157  
+# <a name="missingnecessaryenhancedkeyusage"></a><span data-ttu-id="c5e49-102">MissingNecessaryEnhancedKeyUsage</span><span class="sxs-lookup"><span data-stu-id="c5e49-102">MissingNecessaryEnhancedKeyUsage</span></span>
+<span data-ttu-id="c5e49-103">ID: 157</span><span class="sxs-lookup"><span data-stu-id="c5e49-103">Id: 157</span></span>  
   
- Schweregrad: Fehler  
+ <span data-ttu-id="c5e49-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="c5e49-104">Severity: Error</span></span>  
   
- Kategorie: TransactionBridge  
+ <span data-ttu-id="c5e49-105">Kategorie: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="c5e49-105">Category: TransactionBridge</span></span>  
   
-## Beschreibung  
- Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck nicht die spezifischen Daten unter seinen erweiterten Schlüsselverwendungen bereitstellt.Das Ereignis listet den Prozessnamen und die Prozess\-ID auf.  
+## <a name="description"></a><span data-ttu-id="c5e49-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c5e49-106">Description</span></span>  
+ <span data-ttu-id="c5e49-107">Dieses Ereignis zeigt an, dass ein Identitätszertifikat mit dem bestimmten Betreffnamen und Fingerabdruck nicht die spezifischen Daten unter seinen erweiterten Schlüsselverwendungen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="c5e49-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not provide the specific data among its EnhancedKeyUsages.</span></span> <span data-ttu-id="c5e49-108">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="c5e49-108">The event lists the process name and process ID.</span></span>  
   
-## Siehe auch  
- [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [Allgemeine Referenz zu Ereignissen](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="c5e49-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5e49-109">See Also</span></span>  
+ [<span data-ttu-id="c5e49-110">Protokollierung von Komponentenereignissen</span><span class="sxs-lookup"><span data-stu-id="c5e49-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="c5e49-111">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="c5e49-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

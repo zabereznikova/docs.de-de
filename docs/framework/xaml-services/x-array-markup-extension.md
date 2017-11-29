@@ -1,68 +1,71 @@
 ---
-title: "x:Array Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Array"
-  - "xArray"
-helpviewer_keywords: 
-  - "x:Array [XAML Services]"
-  - "XAML [XAML Services], x:Array markup extension"
+title: x:Array-Markuperweiterung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Array
+- xArray
+helpviewer_keywords:
+- x:Array [XAML Services]
+- XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:Array Markup Extension
-Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Markuperweiterung.  Diese Eigenschaft entspricht dem `x:ArrayExtension`\-XAML\-Type in \[MS\-XAML\].  
+# <a name="xarray-markup-extension"></a><span data-ttu-id="cda3e-102">x:Array-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="cda3e-102">x:Array Markup Extension</span></span>
+<span data-ttu-id="cda3e-103">Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Markuperweiterung.</span><span class="sxs-lookup"><span data-stu-id="cda3e-103">Provides general support for arrays of objects in XAML through a markup extension.</span></span> <span data-ttu-id="cda3e-104">Dies entspricht der `x:ArrayExtension` XAML-Typ in [MS-XAML].</span><span class="sxs-lookup"><span data-stu-id="cda3e-104">This corresponds to the `x:ArrayExtension` XAML type in [MS-XAML].</span></span>  
   
-## Verwendung von XAML\-Objektelementen  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="cda3e-105">Verwendung von XAML-Objektelementen</span><span class="sxs-lookup"><span data-stu-id="cda3e-105">XAML Object Element Usage</span></span>  
   
 ```  
-<x:Array Type="typeName">  
+<x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
 ```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a><span data-ttu-id="cda3e-106">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="cda3e-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`typeName`|Der Name des Typs, den das `x:Array` enthält.  `typeName` wird möglicherweise \(und ist oft\) für einen XAML\-Namespace vorangestellt, der die XAML\-Typdefinitionen enthält.|  
-|`arrayContents`|Der Elementeinhalt, der der systeminternen `ArrayExtension.Items`\-Eigenschaft zugewiesen wird.  In der Regel werden diese Elemente angegeben wie ein oder mehrere Objektelemente, die innerhalb der `x:Array`\-Starttags und \-Endtags enthalten sind.  Es wird erwartet, dass hier angegebene Objekte dem in `typeName` angegebenen XAML\-Typ zugeordnet werden können.|  
+|`typeName`|<span data-ttu-id="cda3e-107">Der Name des Typs, die Ihre `x:Array` enthält.</span><span class="sxs-lookup"><span data-stu-id="cda3e-107">The name of the type that your `x:Array` will contain.</span></span> <span data-ttu-id="cda3e-108">`typeName`Möglicherweise hat (und häufig) als Präfix für einen XAML-Namespace, den XAML-Code enthält, Typdefinitionen.</span><span class="sxs-lookup"><span data-stu-id="cda3e-108">`typeName` may be (and often is) prefixed for a XAML namespace that contains the XAML type definitions.</span></span>|  
+|`arrayContents`|<span data-ttu-id="cda3e-109">Die Elemente Inhalte, die systeminterne Funktion zugewiesen wird `ArrayExtension.Items` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="cda3e-109">The items content that is assigned to the intrinsic `ArrayExtension.Items` property.</span></span> <span data-ttu-id="cda3e-110">Normalerweise werden diese Elemente als eine oder mehrere Objektelemente enthaltenen angegeben die `x:Array` Start- und Endtags.</span><span class="sxs-lookup"><span data-stu-id="cda3e-110">Typically, these items are specified as one or more object elements contained within the `x:Array` opening and closing tags.</span></span> <span data-ttu-id="cda3e-111">Objekten angegeben hier voraussichtlich im angegebenen XAML-Typ zugeordnet werden `typeName`.</span><span class="sxs-lookup"><span data-stu-id="cda3e-111">Objects specified here are expected to be assignable to the XAML type specified in `typeName`.</span></span>|  
   
-## Hinweise  
- `Type` ist ein erforderliches Attribut für alle `x:Array`\-Objektelemente.  Ein `Type`\-Parameterwert muss keine `x:Type`\-Markuperweiterung verwenden. Der Kurzname des Typs ist ein XAML\-Typ, der als Zeichenfolge angegeben werden kann.  
+## <a name="remarks"></a><span data-ttu-id="cda3e-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cda3e-112">Remarks</span></span>  
+ <span data-ttu-id="cda3e-113">`Type`ist ein erforderliches Attribut für alle `x:Array` Objektelemente.</span><span class="sxs-lookup"><span data-stu-id="cda3e-113">`Type` is a required attribute for all `x:Array` object elements.</span></span> <span data-ttu-id="cda3e-114">Ein `Type` Parameterwert muss nicht mit einer `x:Type` Markuperweiterung; der kurze Name des Typs ist ein XAML-Typ, der als Zeichenfolge angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="cda3e-114">A `Type` parameter value does not need to use an `x:Type` markup extension; the short name of the type is   a XAML type, which can be specified as a string.</span></span>  
   
- In der Implementierung für .NET Framework\-XAML\-Dienste wird die Beziehung zwischen dem Eingabe\-XAML\-Typ und dem Ausgabe\-CLR <xref:System.Type> des erstellten Arrays durch den Dienstkontext für Markuperweiterungen beeinflusst.  Der Ausgabe\-<xref:System.Type> ist der <xref:System.Xaml.XamlType.UnderlyingType%2A> des Eingabe\-XAML\-Typs, nachdem die erforderlichen <xref:System.Xaml.XamlType> auf Grundlage des XAML\-Schemakontexts und des vom Kontext bereitgestellten <xref:System.Windows.Markup.IXamlTypeResolver>\-Diensts nachgeschlagen wurden.  
+ <span data-ttu-id="cda3e-115">In der .NET Framework-XAML-Dienste-Implementierung, die die Beziehung zwischen der Verwendung von XAML-Typ der Eingabe und die Ausgabe CLR <xref:System.Type> der das erstellte Array von Dienstkontext für Markuperweiterungen beeinflusst wird.</span><span class="sxs-lookup"><span data-stu-id="cda3e-115">In the .NET Framework XAML Services implementation, the relationship between the input XAML type and the output CLR <xref:System.Type> of the created array is influenced by service context for markup extensions.</span></span> <span data-ttu-id="cda3e-116">Die Ausgabe <xref:System.Type> ist die <xref:System.Xaml.XamlType.UnderlyingType%2A> von der Verwendung von XAML-Typ der Eingabe, nach der Suche nach den erforderlichen <xref:System.Xaml.XamlType> basierend auf XAML-Schemakontext und der <xref:System.Windows.Markup.IXamlTypeResolver> Dienst, der den Kontext bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="cda3e-116">The output <xref:System.Type> is the <xref:System.Xaml.XamlType.UnderlyingType%2A> of the input XAML type, after looking up the necessary <xref:System.Xaml.XamlType> based on XAML schema context and the <xref:System.Windows.Markup.IXamlTypeResolver> service the context provides.</span></span>  
   
- Wenn er verarbeitet wird, wird dem Arrayinhalt `ArrayExtension.Items` systeminterne Eigenschaft zugewiesen.  In der <xref:System.Windows.Markup.ArrayExtension>\- Implementierung wird dies durch <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=fullName> dargestellt.  
+ <span data-ttu-id="cda3e-117">Bei der Verarbeitung der Arrayinhalt zugewiesen sind die `ArrayExtension.Items` systeminterne-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="cda3e-117">When processed, the array contents are assigned to the `ArrayExtension.Items` intrinsic property.</span></span> <span data-ttu-id="cda3e-118">In der <xref:System.Windows.Markup.ArrayExtension> -Implementierung wird dies durch <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cda3e-118">In the <xref:System.Windows.Markup.ArrayExtension> implementation, this is represented by <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType>.</span></span>  
   
- Bei der Implementierung von .NET Framework XAML Services wird die Handhabung dieser Markuperweiterung durch die <xref:System.Windows.Markup.ArrayExtension>\-Klasse definiert.  <xref:System.Windows.Markup.ArrayExtension> ist nicht versiegelt und kann als Basis für eine Markuperweiterung\-Implementierung für einen benutzerdefinierten Arraytyp verwendet werden.  
+ <span data-ttu-id="cda3e-119">In der .NET Framework-XAML-Dienste-Implementierung wird durch die Verarbeitung für diese Markuperweiterung definiert die <xref:System.Windows.Markup.ArrayExtension> Klasse.</span><span class="sxs-lookup"><span data-stu-id="cda3e-119">In the .NET Framework XAML Services implementation, the handling for this markup extension is defined by the <xref:System.Windows.Markup.ArrayExtension> class.</span></span> <span data-ttu-id="cda3e-120"><xref:System.Windows.Markup.ArrayExtension>ist nicht versiegelt und kann als Grundlage für eine Markuperweiterungsimplementierung für einen benutzerdefinierten Arraytyp verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cda3e-120"><xref:System.Windows.Markup.ArrayExtension> is not sealed, and could be used as the basis for a markup extension implementation for a custom array type.</span></span>  
   
- `x:Array` ist mehr für die allgemeine Spracherweiterbarkeit in XAML bestimmt.  `x:Array` kann jedoch auch nützlich sein, um SAML\-Werte mit bestimmten Eigenschaften anzugeben, die als strukturierten Eigenschafteninhalt XAML\-unterstützte Auflistungen verwenden.  Sie könnten z. B. den Inhalt einer <xref:System.Collections.IEnumerable>\-Eigenschaft mit einer `x:Array`\-Verwendung angeben.  
+ <span data-ttu-id="cda3e-121">`x:Array`Weitere Sprache Erweiterbarkeit in XAML für allgemeine vorgesehen ist.</span><span class="sxs-lookup"><span data-stu-id="cda3e-121">`x:Array` is more intended for general language extensibility in XAML.</span></span> <span data-ttu-id="cda3e-122">Aber `x:Array` kann auch zum Angeben der Verwendung von XAML-Werte mancher Eigenschaften, die XAML unterstützt Auflistungen als ihren Inhalt strukturierte Eigenschaft akzeptieren nützlich sein.</span><span class="sxs-lookup"><span data-stu-id="cda3e-122">But `x:Array` can also be useful for specifying XAML values of certain properties that take XAML-supported collections as their structured property content.</span></span> <span data-ttu-id="cda3e-123">Beispielsweise können Sie angeben, den Inhalt des ein <xref:System.Collections.IEnumerable> Eigenschaft mit einer `x:Array` Verwendung.</span><span class="sxs-lookup"><span data-stu-id="cda3e-123">For example, you could specify the contents of an <xref:System.Collections.IEnumerable> property with an `x:Array` usage.</span></span>  
   
- `x:Array` ist eine Markuperweiterung.  Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll.  `x:Array` ist teilweise eine Ausnahme von dieser Regel, da `x:Array` keine alternative Attributwertbehandlung bereitstellt, sondern eine alternative Behandlung des inneren Textinhalts.  Dieses Verhalten ermöglicht es, dass Typen, die möglicherweise nicht durch ein vorhandenes Inhaltsmodell unterstützt werden, in ein Array gruppiert werden und später darauf in Code\-Behind verwiesen wird, indem auf das benannte Array zugegriffen wird. Sie können <xref:System.Array>\-Methoden aufrufen, um einzelne Arrayelemente abzurufen.  
+ <span data-ttu-id="cda3e-124">`x:Array` ist eine Markuperweiterung.</span><span class="sxs-lookup"><span data-stu-id="cda3e-124">`x:Array` is a markup extension.</span></span> <span data-ttu-id="cda3e-125">Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll.</span><span class="sxs-lookup"><span data-stu-id="cda3e-125">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="cda3e-126">`x:Array`ist teilweise eine Ausnahme von dieser Regel, da statt alternatives Attribut-Wert-Behandlung `x:Array` alternative Behandlung des inneren Textinhalts enthält.</span><span class="sxs-lookup"><span data-stu-id="cda3e-126">`x:Array` is partially an exception to that rule because instead of providing alternative attribute value handling, `x:Array` provides alternative handling of its inner text content.</span></span> <span data-ttu-id="cda3e-127">Dieses Verhalten ermöglicht die Typen, die von einer vorhandenen Inhaltsmodell in einem Array gruppiert werden und später im Code-Behind verwiesen wird, durch den Zugriff auf das benannte Array nicht unterstützt werden können. Sie können Aufrufen <xref:System.Array> Methoden, um einzelne Arrayelemente abzurufen.</span><span class="sxs-lookup"><span data-stu-id="cda3e-127">This behavior enables types that might not be supported by an existing content model to be grouped into an array and referenced later in code-behind by accessing the named array; you can call <xref:System.Array> methods to get individual array items.</span></span>  
   
- Alle Markuperweiterungen in XAML verwenden geschweifte Klammern \({,}`)` in der Attributsyntax. Dies ist die Konvention, durch die ein XAML\-Prozessor erkennt, dass der Attributwert von einer Markuperweiterung verarbeitet werden muss.  Weitere Informationen zu Markuperweiterungen finden Sie unter [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ <span data-ttu-id="cda3e-128">Alle Markuperweiterungen in XAML verwenden Sie die geschweiften Klammern ({,}`)` in der Attributsyntax, also die Konvention, die mit dem ein XAML-Prozessor erkennt, dass eine Markuperweiterung den Attributwert verarbeiten muss.</span><span class="sxs-lookup"><span data-stu-id="cda3e-128">All markup extensions in XAML use the braces ({,}`)` in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must process the attribute value.</span></span> <span data-ttu-id="cda3e-129">Weitere Informationen über Markuperweiterungen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="cda3e-129">For more information about markup extensions in general, see [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).</span></span>  
   
- In XAML 2009 wird `x:Array` als Sprachprimitive definiert, und nicht als Markuperweiterung.  Weitere Informationen finden Sie unter [Built\-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ <span data-ttu-id="cda3e-130">In XAML 2009 `x:Array` als Sprachprimitive anstelle einer Markuperweiterung definiert ist.</span><span class="sxs-lookup"><span data-stu-id="cda3e-130">In XAML 2009, `x:Array` is defined as a language primitive instead of a markup extension.</span></span> <span data-ttu-id="cda3e-131">Weitere Informationen finden Sie unter [integrierte Typen für häufige XAML-Sprachprimitive](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).</span><span class="sxs-lookup"><span data-stu-id="cda3e-131">For more information, see [Built-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).</span></span>  
   
-## Hinweise zur WPF\-Verwendung  
- Normalerweise handelt es sich bei den Objektelementen, die ein `x:Array` auffüllen, nicht um Elemente, die im [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]\-XML\-Namespace vorhanden sind. Außerdem erfordern diese Elemente eine Präfixzuordnung zu einem nicht standardmäßigen XAML\-Namespace.  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="cda3e-132">Hinweise zur WPF-Verwendung</span><span class="sxs-lookup"><span data-stu-id="cda3e-132">WPF Usage Notes</span></span>  
+ <span data-ttu-id="cda3e-133">In der Regel die Objektelemente, die Auffüllen einer `x:Array` sind keine Elemente, die in der [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML-Namespace und erfordern eine/Präfix-Zuordnung zu einem nicht standardmäßigen XAML-Namespace.</span><span class="sxs-lookup"><span data-stu-id="cda3e-133">Typically, the object elements that populate an `x:Array` are not elements that exist in the [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML namespace, and require a prefix mapping to a non-default XAML namespace.</span></span>  
   
- Unten folgt z. B. ein einfaches Array mit zwei Zeichenfolgen, wobei das `sys`\-Präfix \(sowie `x`\) auf der Arrayebene definiert wird.  
+ <span data-ttu-id="cda3e-134">Im folgenden ist beispielsweise ein einfaches Array von zwei Zeichenfolgen mit der `sys` Präfix (und auch `x`) auf der Ebene des Arrays definiert.</span><span class="sxs-lookup"><span data-stu-id="cda3e-134">For example, the following is a simple array of two strings, with the `sys` prefix (and also `x`) defined at the level of the array.</span></span>  
   
- \[xaml\]  
+ <span data-ttu-id="cda3e-135">[xaml]</span><span class="sxs-lookup"><span data-stu-id="cda3e-135">[xaml]</span></span>  
   
  `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
   
@@ -74,8 +77,8 @@ Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Mar
   
  `</x:Array>`  
   
- Bei benutzerdefinierten Typen, die als Arrayelemente verwendet werden, muss die Klasse auch die entsprechenden Anforderungen unterstützen, damit sie in XAML als Objektelemente instanziiert werden können.  Weitere Informationen finden Sie unter [XAML\- und benutzerdefinierte Klassen für WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ <span data-ttu-id="cda3e-136">Für benutzerdefinierte Typen, die als Elemente des Arrays verwendet werden, muss die Klasse auch die Anforderungen für die in XAML instanziiert wird, die als Objektelemente unterstützen.</span><span class="sxs-lookup"><span data-stu-id="cda3e-136">For custom types that are used as array elements, the class must also support the requirements for being instantiated in XAML as object elements.</span></span> <span data-ttu-id="cda3e-137">Weitere Informationen finden Sie unter [XAML und benutzerdefinierte Klassen für WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="cda3e-137">For more information, see [XAML and Custom Classes for WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).</span></span>  
   
-## Siehe auch  
- [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="cda3e-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cda3e-138">See Also</span></span>  
+ [<span data-ttu-id="cda3e-139">Markuperweiterungen und WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="cda3e-139">Markup Extensions and WPF XAML</span></span>](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="cda3e-140">Aus WPF zu System.Xaml migrierte Typen</span><span class="sxs-lookup"><span data-stu-id="cda3e-140">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

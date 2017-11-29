@@ -1,46 +1,50 @@
 ---
-title: "Zwischenspeichern von Channels mit Send | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Zwischenspeichern von Channels mit Send
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f78b22d1481e260535e4aeb9764d8ee349a7a2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zwischenspeichern von Channels mit Send
-Der <xref:System.ServiceModel.Activities.SendMessageChannelCache> ermöglicht unterschiedliche Ebenen des Zwischenspeicherns von Channels mit der <xref:System.ServiceModel.Activities.Send>\-Aktivität und der <xref:System.ServiceModel.Activities.SendParametersContent>\-Aktivität für Benutzer.Das Zwischenspeichern auf Instanzebene ist standardmäßig aktiviert, und in diesem Beispiel werden die folgenden Funktionen veranschaulicht:  
+# <a name="channel-caching-with-send"></a><span data-ttu-id="73eae-102">Zwischenspeichern von Channels mit Send</span><span class="sxs-lookup"><span data-stu-id="73eae-102">Channel Caching with Send</span></span>
+<span data-ttu-id="73eae-103">Der <xref:System.ServiceModel.Activities.SendMessageChannelCache> ermöglicht unterschiedliche Ebenen des Zwischenspeicherns von Channels mit der <xref:System.ServiceModel.Activities.Send>-Aktivität und der <xref:System.ServiceModel.Activities.SendParametersContent>-Aktivität für Benutzer.</span><span class="sxs-lookup"><span data-stu-id="73eae-103">The <xref:System.ServiceModel.Activities.SendMessageChannelCache> enables users to have different levels of channel caching with <xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.SendParametersContent> activities.</span></span> <span data-ttu-id="73eae-104">Das Zwischenspeichern auf Instanzebene ist standardmäßig aktiviert, und in diesem Beispiel werden die folgenden Funktionen veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="73eae-104">Instance-level caching is enabled by default and this sample demonstrates the following features:</span></span>  
   
-1.  Freigeben eines <xref:System.ServiceModel.Activities.SendMessageChannelCache> über eine Anwendungsdomäne hinweg.  
+1.  <span data-ttu-id="73eae-105">Freigeben eines <xref:System.ServiceModel.Activities.SendMessageChannelCache> über eine Anwendungsdomäne hinweg.</span><span class="sxs-lookup"><span data-stu-id="73eae-105">Share a <xref:System.ServiceModel.Activities.SendMessageChannelCache> across an application domain.</span></span>  
   
-2.  Deaktivieren Sie des Zwischenspeicherns von Channels.  
+2.  <span data-ttu-id="73eae-106">Deaktivieren Sie des Zwischenspeicherns von Channels.</span><span class="sxs-lookup"><span data-stu-id="73eae-106">Disable channel caching.</span></span>  
   
-3.  Freigeben eines <xref:System.ServiceModel.Activities.SendMessageChannelCache> in Workflowinstanzen in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+3.  <span data-ttu-id="73eae-107">Freigeben eines <xref:System.ServiceModel.Activities.SendMessageChannelCache> in Workflowinstanzen in einem <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="73eae-107">Share a <xref:System.ServiceModel.Activities.SendMessageChannelCache> among workflow instances in a <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span>  
   
-## Veranschaulicht  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>\-Erweiterung, <xref:System.ServiceModel.Activities.Send>\-Aktivität, <xref:System.ServiceModel.Activities.Receive>\-Aktivität, <xref:System.ServiceModel.Activities.ReceiveContent>\-Aktivität und <xref:System.ServiceModel.Activities.SendReply>\-Aktivität.  
+## <a name="demonstrates"></a><span data-ttu-id="73eae-108">Veranschaulicht</span><span class="sxs-lookup"><span data-stu-id="73eae-108">Demonstrates</span></span>  
+ <span data-ttu-id="73eae-109"><xref:System.ServiceModel.Activities.SendMessageChannelCache>-Erweiterung, <xref:System.ServiceModel.Activities.Send>-Aktivität, <xref:System.ServiceModel.Activities.Receive>-Aktivität, <xref:System.ServiceModel.Activities.ReceiveContent>-Aktivität und <xref:System.ServiceModel.Activities.SendReply>-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="73eae-109"><xref:System.ServiceModel.Activities.SendMessageChannelCache> extension, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.ReceiveContent> and <xref:System.ServiceModel.Activities.SendReply> activities.</span></span>  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="73eae-110">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="73eae-110">To set up, build, and run the sample</span></span>  
   
-1.  Laden Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], und erstellen Sie das Projekt.  
+1.  <span data-ttu-id="73eae-111">Laden Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], und erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="73eae-111">Load the project solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and build the project.</span></span>  
   
-2.  Führen Sie die unter "\\EchoWorkflowService\\bin\\debug generierte Anwendung "EchoWorkflowService" aus.  
+2.  <span data-ttu-id="73eae-112">Führen Sie die unter "\EchoWorkflowService\bin\debug generierte Anwendung "EchoWorkflowService" aus.</span><span class="sxs-lookup"><span data-stu-id="73eae-112">Run the EchoWorkflowService application generated in \EchoWorkflowService\bin\debug.</span></span>  
   
-3.  Führen Sie die EchoWorkflowClient\-Anwendung aus, die in \\EchoWorkflowClient\\bin\\debug generiert wird.  
+3.  <span data-ttu-id="73eae-113">Führen Sie die unter "\EchoWorkflowClient\bin\debug" generierte Anwendung "EchoWorkflowClient" aus.</span><span class="sxs-lookup"><span data-stu-id="73eae-113">Run the EchoWorkflowClient application generated in .\EchoWorkflowClient\bin\debug.</span></span>  
   
-4.  Der Client ruft den Echo\-Vorgang für den Dienst auf, und gibt die Ergebnisse aus.Wenn die Ergebnisse ausgegeben wurden, drücken Sie die EINGABETASTE, um den Client und den Dienst zu beenden.  
+4.  <span data-ttu-id="73eae-114">Der Client ruft den Echo-Vorgang für den Dienst auf, und gibt die Ergebnisse aus.</span><span class="sxs-lookup"><span data-stu-id="73eae-114">The client calls the Echo operation on the service and prints the results.</span></span> <span data-ttu-id="73eae-115">Wenn die Ergebnisse ausgegeben wurden, drücken Sie die EINGABETASTE, um den Client und den Dienst zu beenden.</span><span class="sxs-lookup"><span data-stu-id="73eae-115">When the results have been printed, press ENTER to exit the client and the service.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="73eae-116">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="73eae-116">The samples may already be installed on your machine.</span></span> <span data-ttu-id="73eae-117">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="73eae-117">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="73eae-118">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="73eae-118">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="73eae-119">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="73eae-119">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ChannelCache`

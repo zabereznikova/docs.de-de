@@ -1,24 +1,26 @@
 ---
-title: "Die Zeichenfolgenl&#228;nge &#252;berschreitet die maximale L&#228;nge von 32767 Zeichen f&#252;r FileSystem-APIs | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFileIO_StringLengthExceeded"
+title: "Die Zeichenfolgenlänge überschreitet die maximale Länge von 32767 Zeichen für &#39; FileSystem &#39; APIs"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFileIO_StringLengthExceeded
 ms.assetid: 4044ae87-9984-400c-b247-20f9c1b1a0c0
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2cee17283907fca67b1606b0c27eefae66c87ff4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Die Zeichenfolgenl&#228;nge &#252;berschreitet die maximale L&#228;nge von 32767 Zeichen f&#252;r FileSystem-APIs
-Eine Zeichenfolge überschreitet die maximale Länge von 32767 Zeichen.  
+# <a name="string-length-exceeds-maximum-length-of-32767-characters-for-39filesystem39-apis"></a><span data-ttu-id="f4f60-102">Die Zeichenfolgenlänge überschreitet die maximale Länge von 32767 Zeichen für &#39; FileSystem &#39; APIs</span><span class="sxs-lookup"><span data-stu-id="f4f60-102">String length exceeds maximum length of 32767 characters for &#39;FileSystem&#39; APIs</span></span>
+<span data-ttu-id="f4f60-103">Eine Zeichenfolge überschreitet die maximale Länge von 32767 Zeichen.</span><span class="sxs-lookup"><span data-stu-id="f4f60-103">A string's length exceeds the maximum length of 32767 characters.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f4f60-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="f4f60-104">To correct this error</span></span>  
   
-1.  Kürzen Sie die Zeichenfolge.  
+1.  <span data-ttu-id="f4f60-105">Kürzen Sie die Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="f4f60-105">Shorten the string.</span></span>  
   
-## Siehe auch  
- [Strings](../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="f4f60-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f4f60-106">See Also</span></span>  
+ [<span data-ttu-id="f4f60-107">Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="f4f60-107">Strings</span></span>](../../visual-basic/programming-guide/language-features/strings/index.md)

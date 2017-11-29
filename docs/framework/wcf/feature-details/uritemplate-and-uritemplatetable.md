@@ -1,177 +1,180 @@
 ---
-title: "UriTemplate und UriTemplateTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: UriTemplate und UriTemplateTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# UriTemplate und UriTemplateTable
-Webentwickler benötigen die Fähigkeit, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren.In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, mit denen die Entwickler ihre URIs gut kontrollieren können.<xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Basis des URI\-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI\-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst implementieren zu müssen.  
+# <a name="uritemplate-and-uritemplatetable"></a><span data-ttu-id="a91a7-102">UriTemplate und UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="a91a7-102">UriTemplate and UriTemplateTable</span></span>
+<span data-ttu-id="a91a7-103">Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren.</span><span class="sxs-lookup"><span data-stu-id="a91a7-103">Web developers require the ability to describe the shape and layout of the URIs that their services respond to.</span></span> <span data-ttu-id="a91a7-104">In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern.</span><span class="sxs-lookup"><span data-stu-id="a91a7-104">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] added two new classes to give developers control over their URIs.</span></span> <span data-ttu-id="a91a7-105"><xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a91a7-105"><xref:System.UriTemplate> and <xref:System.UriTemplateTable> form the basis of the URI-based dispatch engine in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="a91a7-106">Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-106">These classes can also be used on their own, allowing developers to take advantage of templates and the URI mapping mechanism without implementing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-## Vorlagen  
- Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben.Der Satz von URI\-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.  
+## <a name="templates"></a><span data-ttu-id="a91a7-107">Vorlagen</span><span class="sxs-lookup"><span data-stu-id="a91a7-107">Templates</span></span>  
+ <span data-ttu-id="a91a7-108">Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="a91a7-108">A template is a way to describe a set of relative URIs.</span></span> <span data-ttu-id="a91a7-109">Der Satz von URI-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.</span><span class="sxs-lookup"><span data-stu-id="a91a7-109">The set of URI templates in the following table shows how a system that retrieves various types of weather information might be defined.</span></span>  
   
-|Daten|Vorlage|  
-|-----------|-------------|  
-|Nationale Vorhersage|Wetter\/national|  
-|Bundeslandvorhersage|Wetter\/{Staat}|  
-|Ortsvorhersage|Wetter\/{Bundesland}\/{Stadt}|  
-|Aktivitätsvorhersage|Wetter\/{Bundesland}\/{Stadt}\/{Aktivität}|  
+|<span data-ttu-id="a91a7-110">Daten</span><span class="sxs-lookup"><span data-stu-id="a91a7-110">Data</span></span>|<span data-ttu-id="a91a7-111">Vorlage</span><span class="sxs-lookup"><span data-stu-id="a91a7-111">Template</span></span>|  
+|----------|--------------|  
+|<span data-ttu-id="a91a7-112">Nationale Vorhersage</span><span class="sxs-lookup"><span data-stu-id="a91a7-112">National Forecast</span></span>|<span data-ttu-id="a91a7-113">Wetter/national</span><span class="sxs-lookup"><span data-stu-id="a91a7-113">weather/national</span></span>|  
+|<span data-ttu-id="a91a7-114">Bundeslandvorhersage</span><span class="sxs-lookup"><span data-stu-id="a91a7-114">State Forecast</span></span>|<span data-ttu-id="a91a7-115">Wetter/{Staat}</span><span class="sxs-lookup"><span data-stu-id="a91a7-115">weather/{state}</span></span>|  
+|<span data-ttu-id="a91a7-116">Ortsvorhersage</span><span class="sxs-lookup"><span data-stu-id="a91a7-116">City Forecast</span></span>|<span data-ttu-id="a91a7-117">Wetter/{Bundesland}/{Stadt}</span><span class="sxs-lookup"><span data-stu-id="a91a7-117">weather/{state}/{city}</span></span>|  
+|<span data-ttu-id="a91a7-118">Aktivitätsvorhersage</span><span class="sxs-lookup"><span data-stu-id="a91a7-118">Activity Forecast</span></span>|<span data-ttu-id="a91a7-119">Wetter/{Bundesland}/{Stadt}/{Aktivität}</span><span class="sxs-lookup"><span data-stu-id="a91a7-119">weather/{state}/{city}/{activity}</span></span>|  
   
- In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben.Jeder Eintrag ist eine URI\-Vorlage.Die Segmente in geschweiften Klammern beschreiben Variablen.Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen.Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Vorlagenklassen ermöglichen dem Entwickler, einen eingehenden URI \(z. B. "\/Wetter\/BW\/Mannheim\/wechselhaft"\) anzunehmen und ihn mit einer Vorlage abzugleichen, die ihn beschreibt, "\/Wetter\/{Bundesland}\/{Stadt}\/{Aktivität}".  
+ <span data-ttu-id="a91a7-120">In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben.</span><span class="sxs-lookup"><span data-stu-id="a91a7-120">This table describes a set of structurally similar URIs.</span></span> <span data-ttu-id="a91a7-121">Jeder Eintrag ist eine URI-Vorlage.</span><span class="sxs-lookup"><span data-stu-id="a91a7-121">Each entry is a URI template.</span></span> <span data-ttu-id="a91a7-122">Die Segmente in geschweiften Klammern beschreiben Variablen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-122">The segments in curly braces describe variables.</span></span> <span data-ttu-id="a91a7-123">Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-123">The segments not in curly braces describe literal strings.</span></span> <span data-ttu-id="a91a7-124">Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Vorlagenklassen ermöglichen dem Entwickler, einen eingehenden URI (z. B. "/Wetter/BW/Mannheim/wechselhaft") anzunehmen und ihn mit einer Vorlage abzugleichen, die ihn beschreibt, "/Wetter/{Bundesland}/{Stadt}/{Aktivität}".</span><span class="sxs-lookup"><span data-stu-id="a91a7-124">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] template classes allow a developer to take an incoming URI, for example, "/weather/wa/seattle/cycling", and match it to a template that describes it, "/weather/{state}/{city}/{activity}".</span></span>  
   
-## UriTemplate  
- <xref:System.UriTemplate> ist eine Klasse, die eine URI\-Vorlage kapselt.Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert.Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format.Die <xref:System.UriTemplate>\-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.  
+## <a name="uritemplate"></a><span data-ttu-id="a91a7-125">UriTemplate</span><span class="sxs-lookup"><span data-stu-id="a91a7-125">UriTemplate</span></span>  
+ <span data-ttu-id="a91a7-126"><xref:System.UriTemplate> ist eine Klasse, die eine URI-Vorlage kapselt.</span><span class="sxs-lookup"><span data-stu-id="a91a7-126"><xref:System.UriTemplate> is a class that encapsulates a URI template.</span></span> <span data-ttu-id="a91a7-127">Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-127">The constructor takes a string parameter that defines the template.</span></span> <span data-ttu-id="a91a7-128">Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format.</span><span class="sxs-lookup"><span data-stu-id="a91a7-128">This string contains the template in the format described in the next section.</span></span> <span data-ttu-id="a91a7-129">Die <xref:System.UriTemplate>-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-129">The <xref:System.UriTemplate> class provides methods that allow you match an incoming URI to a template, generate a URI from a template, retrieve a collection of variable names used in the template, determine whether two templates are equivalent, and return the template's string.</span></span>  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> nimmt eine Basisadresse und einen möglichen URI und versucht, den URI der Vorlage zuzuweisen.Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>\-Instanz zurückgegeben.Das <xref:System.UriTemplateMatch>\-Objekt enthält einen Basis\-URI, den möglichen URI, eine Name\-Wert\-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name\-Wert\-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>\-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten\-URI enthält \(wird verwendet, wenn die Vorlage über einen Platzhalter verfügt\), und ein Objekt, das der Vorlage zugewiesen ist.  
+ <span data-ttu-id="a91a7-130"><xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> nimmt eine Basisadresse und einen möglichen URI und versucht, den URI der Vorlage zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-130"><xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> takes a base address and a candidate URI and attempts to match the URI to the template.</span></span> <span data-ttu-id="a91a7-131">Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>-Instanz zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a91a7-131">If the match is successful, a <xref:System.UriTemplateMatch> instance is returned.</span></span> <span data-ttu-id="a91a7-132">Das <xref:System.UriTemplateMatch>-Objekt enthält einen Basis-URI, den möglichen URI, eine Name-Wert-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name-Wert-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten-URI enthält (wird verwendet, wenn die Vorlage über einen Platzhalter verfügt), und ein Objekt, das der Vorlage zugewiesen ist.</span><span class="sxs-lookup"><span data-stu-id="a91a7-132">The <xref:System.UriTemplateMatch> object contains a base URI, the candidate URI, a name/value collection of the query parameters, an array of the relative path segments, a name/value collection of variables that were matched, the <xref:System.UriTemplate> instance used to perform the match, a string that contains any unmatched portion of the candidate URI (used when the template has a wildcard), and an object that is associated with the template.</span></span>  
   
 > [!NOTE]
->  Beim Vergleichen eines möglichen URIs mit einer Vorlage ignoriert die <xref:System.UriTemplate>\-Klasse das Schema und die Portnummer.  
+>  <span data-ttu-id="a91a7-133">Beim Vergleichen eines möglichen URIs mit einer Vorlage ignoriert die <xref:System.UriTemplate>-Klasse das Schema und die Portnummer.</span><span class="sxs-lookup"><span data-stu-id="a91a7-133">The <xref:System.UriTemplate> class ignores the scheme and port number when matching a candidate URI to a template.</span></span>  
   
- Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und [BindByPosition\(Uri, String\<xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> .<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name\-Wert\-Sammlung der Parameter.Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt.[BindByPosition\(Uri, String\<xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> nimmt die Name\-Wert\-Paare und ersetzt sie von links nach rechts.  
+ <span data-ttu-id="a91a7-134">Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>.</span><span class="sxs-lookup"><span data-stu-id="a91a7-134">There are two methods that allow you to generate a URI from a template, <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> and <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>.</span></span> <span data-ttu-id="a91a7-135"><xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name-Wert-Auflistung der Parameter.</span><span class="sxs-lookup"><span data-stu-id="a91a7-135"><xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> takes a base address and a name/value collection of parameters.</span></span> <span data-ttu-id="a91a7-136">Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt.</span><span class="sxs-lookup"><span data-stu-id="a91a7-136">These parameters are substituted for variables when the template is bound.</span></span> <span data-ttu-id="a91a7-137"><xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> akzeptiert die Name-Wert-Paare und ersetzt sie von links nach rechts.</span><span class="sxs-lookup"><span data-stu-id="a91a7-137"><xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> takes the name/value pairs and substitutes them left to right.</span></span>  
   
- <xref:System.UriTemplate.ToString> gibt die Vorlagenzeichenfolge zurück,  
+ <span data-ttu-id="a91a7-138"><xref:System.UriTemplate.ToString> gibt die Vorlagenzeichenfolge zurück,</span><span class="sxs-lookup"><span data-stu-id="a91a7-138"><xref:System.UriTemplate.ToString> returns the template string.</span></span>  
   
- Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>\-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.  
+ <span data-ttu-id="a91a7-139">Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-139">The <xref:System.UriTemplate.PathSegmentVariableNames%2A> property contains a collection of the names of the variables used within path segments in the template string.</span></span>  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen Booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] im Abschnitt "Vorlagenäquivalenz" finden Sie weiter unten in diesem Thema.  
+ <span data-ttu-id="a91a7-140"><xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind.</span><span class="sxs-lookup"><span data-stu-id="a91a7-140"><xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> takes a <xref:System.UriTemplate> as a parameter and returns a Boolean value that specifies whether the two templates are equivalent.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="a91a7-141"> dem Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="a91a7-141"> the Template Equivalence section later in this topic.</span></span>  
   
- <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI\-Schema entwickelt, das der HTTP URI\-Grammatik entspricht.Im Folgenden finden Sie Beispiele für unterstützte URI\-Schemas:  
+ <span data-ttu-id="a91a7-142"><xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI-Schema entwickelt, das der HTTP URI-Grammatik entspricht.</span><span class="sxs-lookup"><span data-stu-id="a91a7-142"><xref:System.UriTemplate> is designed to work with any URI scheme that conforms to the HTTP URI grammar.</span></span> <span data-ttu-id="a91a7-143">Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:</span><span class="sxs-lookup"><span data-stu-id="a91a7-143">The following are examples of supported URI schemes.</span></span>  
   
--   http:\/\/  
+-   <span data-ttu-id="a91a7-144">http://</span><span class="sxs-lookup"><span data-stu-id="a91a7-144">http://</span></span>  
   
--   https:\/\/  
+-   <span data-ttu-id="a91a7-145">https://</span><span class="sxs-lookup"><span data-stu-id="a91a7-145">https://</span></span>  
   
--   net.tcp:\/\/  
+-   <span data-ttu-id="a91a7-146">net.tcp://</span><span class="sxs-lookup"><span data-stu-id="a91a7-146">net.tcp://</span></span>  
   
--   net.pipe:\/\/  
+-   <span data-ttu-id="a91a7-147">net.pipe://</span><span class="sxs-lookup"><span data-stu-id="a91a7-147">net.pipe://</span></span>  
   
--   sb:\/\/  
+-   <span data-ttu-id="a91a7-148">sb://</span><span class="sxs-lookup"><span data-stu-id="a91a7-148">sb://</span></span>  
   
- Schemas wie "file:\/\/" und "urn:\/\/" entsprechen nicht der HTTP\-URI\-Grammatik und führen bei der Verwendung mit URI\-Vorlagen zu unvorhersehbaren Ergebnissen.  
+ <span data-ttu-id="a91a7-149">Schemas wie "file://" und "urn://" entsprechen nicht der HTTP-URI-Grammatik und führen bei der Verwendung mit URI-Vorlagen zu unvorhersehbaren Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-149">Schemes like file:// and urn:// do not conform to the HTTP URI grammar and cause unpredictable results when used with URI templates.</span></span>  
   
-### Vorlagenzeichenfolgen\-Syntax  
- Eine Vorlage besteht aus drei Teilen: einem Pfad, einer optionalen Abfrage und einem optionalen Fragment.Ein Beispiel finden Sie in der folgenden Vorlage:  
+### <a name="template-string-syntax"></a><span data-ttu-id="a91a7-150">Vorlagenzeichenfolgen-Syntax</span><span class="sxs-lookup"><span data-stu-id="a91a7-150">Template String Syntax</span></span>  
+ <span data-ttu-id="a91a7-151">Eine Vorlage besteht aus drei Teilen: einem Pfad, einer optionalen Abfrage und einem optionalen Fragment.</span><span class="sxs-lookup"><span data-stu-id="a91a7-151">A template has three parts: a path, an optional query, and an optional fragment.</span></span> <span data-ttu-id="a91a7-152">Ein Beispiel finden Sie in der folgenden Vorlage:</span><span class="sxs-lookup"><span data-stu-id="a91a7-152">For an example, see the following template:</span></span>  
   
 ```  
 "/weather/{state}/{city}?forecast={length)#frag1  
 ```  
   
- Der Pfad besteht aus "\/Wetter\/{Bundesland}\/{Ort}", die Abfrage besteht  aus "?forecast\={Länge}, und das Fragment besteht aus "\#frag1."  
+ <span data-ttu-id="a91a7-153">Der Pfad besteht aus "/Wetter/{Bundesland}/{Ort}", die Abfrage besteht aus "?forecast={Länge}, und das Fragment besteht aus "#frag1."</span><span class="sxs-lookup"><span data-stu-id="a91a7-153">The path consists of "/weather/{state}/{city}", the query consists of "?forecast={length}, and the fragment consists of "#frag1".</span></span>  
   
- Führende und nachstehende Schrägstriche sind im Pfadausdruck optional.Sowohl der Abfrage\- als auch der Fragmentausdruck kann vollständig weggelassen werden.Ein Pfad besteht aus einer Reihe von Segmenten, die durch "\/" voneinander getrennt sind; jedes Segment kann einen Literalwert, einen Variablennamen \(der in {geschweiften Klammern} steht\) oder einen Platzhalter \(der als "\*" geschrieben wird\) besitzen.In der vorherigen Vorlage ist das "\\Wetter\\"\-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind.Variablen erhalten ihren Namen von den Inhalten der geschweiften Klammern und können später durch einen bestimmten Wert ersetzt werden, um einen *geschlossenen URI* zu erschaffen.Der Platzhalter ist optional, kann aber nur am Ende des URI eingesetzt werden, wo er logisch "dem Rest des Pfads" entspricht.  
+ <span data-ttu-id="a91a7-154">Führende und nachstehende Schrägstriche sind im Pfadausdruck optional.</span><span class="sxs-lookup"><span data-stu-id="a91a7-154">Leading and trailing slashes are optional in the path expression.</span></span> <span data-ttu-id="a91a7-155">Sowohl der Abfrage- als auch der Fragmentausdruck kann vollständig weggelassen werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-155">Both the query and fragment expressions can be omitted entirely.</span></span> <span data-ttu-id="a91a7-156">Ein Pfad besteht aus einer Reihe von Segmenten, getrennt durch "/"; jedes Segment kann über einen Literalwert, einen Variablennamen (Schreiben in {geschweiften Klammern}) oder einen Platzhalter verfügen (geschrieben als\*").</span><span class="sxs-lookup"><span data-stu-id="a91a7-156">A path consists of a series of segments delimited by '/', each segment can have a literal value, a variable name (written in {curly braces}), or a wildcard (written as '\*').</span></span> <span data-ttu-id="a91a7-157">In der vorherigen Vorlage ist das "\Wetter\"-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind.</span><span class="sxs-lookup"><span data-stu-id="a91a7-157">In the previous template the "\weather\ segment is a literal value while "{state}" and "{city}" are variables.</span></span> <span data-ttu-id="a91a7-158">Variablen erhalten ihren Namen aus den Inhalten der geschweiften Klammern und sie können später ersetzt durch einen bestimmten Wert zum Erstellen einer *geschlossenen URI*.</span><span class="sxs-lookup"><span data-stu-id="a91a7-158">Variables take their name from the contents of their curly braces and they can later be replaced with a concrete value to create a *closed URI*.</span></span> <span data-ttu-id="a91a7-159">Der Platzhalter kann ist optional, aber nur am Ende des URIS, wo er logisch "den Rest des Pfads" entspricht.</span><span class="sxs-lookup"><span data-stu-id="a91a7-159">The wildcard is optional, but can only appear at the end of the URI, where it logically matches "the rest of the path".</span></span>  
   
- Der Abfrageausdruck gibt ggf. eine Reihe ungeordneter Name\-Wert\-Paare an, die durch "&" getrennt werden.Bei den Elementen des Abfrageausdrucks kann es sich entweder um Literalpaare \(x\=2\) oder ein Variablenpaar \(x\={var}\) handeln.Nur die rechte Seite der Abfrage kann einen variablen Ausdruck enthalten.\({someName} \= {someValue} ist nicht zulässig.Ungepaarte Werte \(?x\) sind nicht zulässig.Es besteht kein Unterschied zwischen einem leeren Abfrageausdruck und einem Abfrageausdruck, der aus einem einzelnen "?" besteht. \(beide bedeuten "beliebige Anfrage"\).  
+ <span data-ttu-id="a91a7-160">Der Abfrageausdruck gibt ggf. eine Reihe ungeordneter Name-Wert-Paare an, die durch "&" getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-160">The query expression, if present, specifies a series of unordered name/value pairs delimited by '&'.</span></span> <span data-ttu-id="a91a7-161">Bei den Elementen des Abfrageausdrucks kann es sich entweder um Literalpaare (x=2) oder ein Variablenpaar (x={var}) handeln.</span><span class="sxs-lookup"><span data-stu-id="a91a7-161">Elements of the query expression can either be literal pairs (x=2) or a variable pair (x={var}).</span></span> <span data-ttu-id="a91a7-162">Nur die rechte Seite der Abfrage kann einen variablen Ausdruck enthalten.</span><span class="sxs-lookup"><span data-stu-id="a91a7-162">Only the right side of the query can have a variable expression.</span></span> <span data-ttu-id="a91a7-163">({someName} = {someValue} ist nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="a91a7-163">({someName} = {someValue} is not allowed.</span></span> <span data-ttu-id="a91a7-164">Ungepaarte Werte (?x) sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="a91a7-164">Unpaired values (?x) are not permitted.</span></span> <span data-ttu-id="a91a7-165">Es besteht kein Unterschied zwischen einem leeren Abfrageausdruck und einem Abfrageausdruck, der aus einem einzelnen "?" besteht (beide stehen für "jede Abfrage").</span><span class="sxs-lookup"><span data-stu-id="a91a7-165">There is no difference between an empty query expression and a query expression consisting of just a single '?' (both mean "any query").</span></span>  
   
- Der Fragmentausdruck kann aus einem Literalwert bestehen, Variablen sind nicht zulässig.  
+ <span data-ttu-id="a91a7-166">Der Fragmentausdruck kann aus einem Literalwert bestehen, Variablen sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="a91a7-166">The fragment expression can consist of a literal value, no variables are allowed.</span></span>  
   
- Alle Vorlagenvariablennamen innerhalb einer Vorlagenzeichenfolge müssen eindeutig sein.Bei Namen von Vorlagenvariablen wird die Groß\- und Kleinschreibung nicht berücksichtigt.  
+ <span data-ttu-id="a91a7-167">Alle Vorlagenvariablennamen innerhalb einer Vorlagenzeichenfolge müssen eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-167">All template variable names within a template string must be unique.</span></span> <span data-ttu-id="a91a7-168">Bei Namen von Vorlagenvariablen wird die Groß- und Kleinschreibung nicht berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="a91a7-168">Template variable names are case-insensitive.</span></span>  
   
- Beispiele für gültige Vorlagenzeichenfolgen:  
+ <span data-ttu-id="a91a7-169">Beispiele für gültige Vorlagenzeichenfolgen:</span><span class="sxs-lookup"><span data-stu-id="a91a7-169">Examples of valid template strings:</span></span>  
   
--   ""  
+-   <span data-ttu-id="a91a7-170">""</span><span class="sxs-lookup"><span data-stu-id="a91a7-170">""</span></span>  
   
--   "\/Schuh"  
+-   <span data-ttu-id="a91a7-171">"/Schuh"</span><span class="sxs-lookup"><span data-stu-id="a91a7-171">"/shoe"</span></span>  
   
--   "\/Schuh\/\*"  
+-   <span data-ttu-id="a91a7-172">"/Schuh/*"</span><span class="sxs-lookup"><span data-stu-id="a91a7-172">"/shoe/*"</span></span>  
   
--   "{Schuh}\/Boot"  
+-   <span data-ttu-id="a91a7-173">"{Schuh}/Boot"</span><span class="sxs-lookup"><span data-stu-id="a91a7-173">"{shoe}/boat"</span></span>  
   
--   "{Schuh}\/{Boot}\/Bett\/{Steppdecke}"  
+-   <span data-ttu-id="a91a7-174">"{Schuh} / {Bereitschaftsboots /bed/ {Quilt}}"</span><span class="sxs-lookup"><span data-stu-id="a91a7-174">"{shoe}/{boat}/bed/{quilt}"</span></span>  
   
--   "Schuh\/{Boot}"  
+-   <span data-ttu-id="a91a7-175">"Schuh / {Bereitschaftsboots}"</span><span class="sxs-lookup"><span data-stu-id="a91a7-175">"shoe/{boat}"</span></span>  
   
--   "Schuh\/{Boot}\/\*"  
+-   <span data-ttu-id="a91a7-176">"Schuh / {Bereitschaftsboots} / *"</span><span class="sxs-lookup"><span data-stu-id="a91a7-176">"shoe/{boat}/*"</span></span>  
   
--   "Schuh\/Boot?x\=2"  
+-   <span data-ttu-id="a91a7-177">"Schuh Boot /? X = 2"</span><span class="sxs-lookup"><span data-stu-id="a91a7-177">"shoe/boat?x=2"</span></span>  
   
--   "Schuh\/{Boot}?x\={Bett}"  
+-   <span data-ttu-id="a91a7-178">"Schuh / {Bereitschaftsboots}? x = {Bett}"</span><span class="sxs-lookup"><span data-stu-id="a91a7-178">"shoe/{boat}?x={bed}"</span></span>  
   
--   "Schuh\/{Boot}?x\={Bett}&y\=band"  
+-   <span data-ttu-id="a91a7-179">"Schuh/{Boot}?x={Bett}&y=band"</span><span class="sxs-lookup"><span data-stu-id="a91a7-179">"shoe/{boat}?x={bed}&y=band"</span></span>  
   
--   "?x\={Schuh}"  
+-   <span data-ttu-id="a91a7-180">"? x = {Schuh}"</span><span class="sxs-lookup"><span data-stu-id="a91a7-180">"?x={shoe}"</span></span>  
   
--   "Schuh?x\=3&y\={var}  
+-   <span data-ttu-id="a91a7-181">"Schuh?x=3&y={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-181">"shoe?x=3&y={var}</span></span>  
   
- Beispiele für ungültige Vorlagenzeichenfolgen sind:  
+ <span data-ttu-id="a91a7-182">Beispiele für ungültige Vorlagenzeichenfolgen sind:</span><span class="sxs-lookup"><span data-stu-id="a91a7-182">Examples of invalid template strings:</span></span>  
   
--   "{Schuh}\/{SCHUH}\/x\=2" – doppelte Variablennamen.  
+-   <span data-ttu-id="a91a7-183">"{Schuh} / {SCHUH} / x = 2" – doppelte Variablennamen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-183">"{shoe}/{SHOE}/x=2" – Duplicate variable names.</span></span>  
   
--   "{Schuh}\/Boot\/?Bett\={SCHUH}" – doppelte Variablennamen.  
+-   <span data-ttu-id="a91a7-184">"{Schuh} Bett? Bett = {Schuh}" – doppelte Variablennamen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-184">"{shoe}/boat/?bed={shoe}" – Duplicate variable names.</span></span>  
   
--   "?x\=2&x\=3" – Name\-Wert\-Paare innerhalb einer Abfragezeichenfolge müssen eindeutig sein, auch wenn sie Literale sind.  
+-   <span data-ttu-id="a91a7-185">"? X = 2 & X = 3" – Name/Wert-Paare innerhalb einer Abfragezeichenfolge müssen eindeutig sein, auch wenn sie Literale sind.</span><span class="sxs-lookup"><span data-stu-id="a91a7-185">"?x=2&x=3" – Name/value pairs within a query string must be unique, even if they are literals.</span></span>  
   
--   "?x\=2&" – Abfragezeichenfolge ist fehlerhaft.  
+-   <span data-ttu-id="a91a7-186">"? X = 2 &" – Abfragezeichenfolge ist fehlerhaft.</span><span class="sxs-lookup"><span data-stu-id="a91a7-186">"?x=2&" – Query string is malformed.</span></span>  
   
--   "?2&x\={Schuh}" – Abfragezeichenfolge muss Name\-Wert\-Paar sein.  
+-   <span data-ttu-id="a91a7-187">"? 2 & x = {Schuh}" – Abfragezeichenfolge muss Name/Wert-Paaren sein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-187">"?2&x={shoe}" – Query string must be name/value pairs.</span></span>  
   
--   "?y\=2&&X\=3" – Abfragezeichenfolge muss Name\-Wert\-Paar sein; Namen dürfen nicht mit "& " beginnen.  
+-   <span data-ttu-id="a91a7-188">"? y = 2 & & X = 3" – Abfragezeichenfolge muss Name-Wert-Paare, dürfen nicht mit beginnen "&".</span><span class="sxs-lookup"><span data-stu-id="a91a7-188">"?y=2&&X=3" – Query string must be name value pairs, names cannot start with '&'.</span></span>  
   
-### Zusammengesetzte Pfadsegmente  
- Bei zusammengesetzten Pfadsegmenten kann ein einzelnes URI\-Pfadsegment mehrere Variablen sowie mit Literalwerten kombinierte Variablen enhalten.Im Folgenden finden Sie Beispiele für gültige zusammengesetzte Pfadsegmente:  
+### <a name="compound-path-segments"></a><span data-ttu-id="a91a7-189">Zusammengesetzte Pfadsegmente</span><span class="sxs-lookup"><span data-stu-id="a91a7-189">Compound Path Segments</span></span>  
+ <span data-ttu-id="a91a7-190">Bei zusammengesetzten Pfadsegmenten kann ein einzelnes URI-Pfadsegment mehrere Variablen sowie mit Literalwerten kombinierte Variablen enhalten.</span><span class="sxs-lookup"><span data-stu-id="a91a7-190">Compound path segments allow a single URI path segment to contain multiple variables as well as variables combined with literals.</span></span> <span data-ttu-id="a91a7-191">Im Folgenden finden Sie Beispiele für gültige zusammengesetzte Pfadsegmente:</span><span class="sxs-lookup"><span data-stu-id="a91a7-191">The following are examples of valid compound path segments.</span></span>  
   
--   \/Dateiname.{Erw.}\/  
+-   <span data-ttu-id="a91a7-192">/Dateiname.{Erw.}/</span><span class="sxs-lookup"><span data-stu-id="a91a7-192">/filename.{ext}/</span></span>  
   
--   \/{Dateiname}.jpg\/  
+-   <span data-ttu-id="a91a7-193">/{Dateiname}.jpg/</span><span class="sxs-lookup"><span data-stu-id="a91a7-193">/{filename}.jpg/</span></span>  
   
--   \/{Dateiname}.{Erw.}\/  
+-   <span data-ttu-id="a91a7-194">/{Dateiname}.{Erw.}/</span><span class="sxs-lookup"><span data-stu-id="a91a7-194">/{filename}.{ext}/</span></span>  
   
--   \/{a}.{b}Literalwert{c}\({d}\)\/  
+-   <span data-ttu-id="a91a7-195">/{a}.{b}Literalwert{c}({d})/</span><span class="sxs-lookup"><span data-stu-id="a91a7-195">/{a}.{b}someLiteral{c}({d})/</span></span>  
   
- Im Folgenden finden Sie Beispiele für ungültige Pfadsegmente:  
+ <span data-ttu-id="a91a7-196">Im Folgenden finden Sie Beispiele für ungültige Pfadsegmente:</span><span class="sxs-lookup"><span data-stu-id="a91a7-196">The following are examples of invalid path segments.</span></span>  
   
--   \/{} – Variablen müssen benannt werden.  
+-   <span data-ttu-id="a91a7-197">/{} – Variablen müssen benannt werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-197">/{} - Variables must be named.</span></span>  
   
--   \/{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
+-   <span data-ttu-id="a91a7-198">/{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-198">/{shoe}{boat} - Variables must be separated by a literal.</span></span>  
   
-### Zuordnung und zusammengesetzte Pfadsegmente  
- Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment.In der Vorlagenzeichenfolge "Addresses\/{state}.{city}" sind zwei Variablen \(state und city\) in demselben Segment definiert.Durch diese Vorlage würde eine URL wie "http:\/\/example.com\/Washington.Redmond" zugeordnet werden, aber auch eine URL wie "http:\/\/example.com\/Washington.Redmond.Microsoft".In letzterem Fall enthält die state\-Variable "Washington" und die city\-Variable "Redmond.Microsoft".In diesem Fall entspricht jeder Text \(mit Ausnahme von "\/"\) der {city}\-Variable.Wenn Sie eine Vorlage erstellen möchten, durch die der "zusätzliche" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B. "Addresses\/{state}\/{city}".  
+### <a name="matching-and-compound-path-segments"></a><span data-ttu-id="a91a7-199">Zuordnung und zusammengesetzte Pfadsegmente</span><span class="sxs-lookup"><span data-stu-id="a91a7-199">Matching and Compound Path Segments</span></span>  
+ <span data-ttu-id="a91a7-200">Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment.</span><span class="sxs-lookup"><span data-stu-id="a91a7-200">Compound path segments allow you to define a UriTemplate that has multiple variables within a single path segment.</span></span> <span data-ttu-id="a91a7-201">Beispielsweise ist in der Vorlagenzeichenfolge: "Adressen / {State}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-201">For example, in the following template string: "Addresses/{state}.{city}" two variables (state and city) are defined within the same segment.</span></span> <span data-ttu-id="a91a7-202">Diese Vorlage würde eine URL wie "http://example.com/Washington.Redmond" überein, aber es wird auch eine URL wie "http://example.com/Washington.Redmond.Microsoft" überein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-202">This template would match a URL such as "http://example.com/Washington.Redmond" but it will also match an URL like "http://example.com/Washington.Redmond.Microsoft".</span></span> <span data-ttu-id="a91a7-203">In letzterem Fall enthält die State-Variable "Washington" und die City-Variable "Redmond.Microsoft".</span><span class="sxs-lookup"><span data-stu-id="a91a7-203">In the latter case, the state variable will contain "Washington" and the city variable will contain "Redmond.Microsoft".</span></span> <span data-ttu-id="a91a7-204">In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable.</span><span class="sxs-lookup"><span data-stu-id="a91a7-204">In this case any text (except ‘/’) will match the {city} variable.</span></span> <span data-ttu-id="a91a7-205">Wenn Sie eine Vorlage erstellen möchten, die die "zusätzlichen" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B.: "Adressen / {Bundesland} / {Stadt}.</span><span class="sxs-lookup"><span data-stu-id="a91a7-205">If you want a template that will not match the "extra" text, place the variable in a separate template segment, for example: "Addresses/{state}/{city}.</span></span>  
   
-### Benannte Platzhaltersegmente  
- Bei einem benannten Platzhaltersegment handelt es sich um ein beliebiges Pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen "\*" beginnt.Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
+### <a name="named-wildcard-segments"></a><span data-ttu-id="a91a7-206">Benannte Platzhaltersegmente</span><span class="sxs-lookup"><span data-stu-id="a91a7-206">Named Wildcard Segments</span></span>  
+ <span data-ttu-id="a91a7-207">Bei einem benannten Platzhaltersegment handelt es sich um ein beliebiges Pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen "*" beginnt.</span><span class="sxs-lookup"><span data-stu-id="a91a7-207">A named wildcard segment is any path variable segment whose variable name begins with the wildcard character ‘*’.</span></span> <span data-ttu-id="a91a7-208">Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".</span><span class="sxs-lookup"><span data-stu-id="a91a7-208">The following template string contains a named wildcard segment named "shoe".</span></span>  
   
 ```  
 "literal/{*shoe}"  
 ```  
   
- Für Platzhaltersegmente gelten die folgenden Regeln:  
+ <span data-ttu-id="a91a7-209">Für Platzhaltersegmente gelten die folgenden Regeln:</span><span class="sxs-lookup"><span data-stu-id="a91a7-209">Wildcard segments must follow the following rules:</span></span>  
   
--   Für jede Vorlagenzeichenfolge kann höchstens ein benanntes Platzhaltersegment vorhanden sein.  
+-   <span data-ttu-id="a91a7-210">Für jede Vorlagenzeichenfolge kann höchstens ein benanntes Platzhaltersegment vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-210">There can be at most one named wildcard segment for each template string.</span></span>  
   
--   Ein benanntes Platzhaltersegment muss sich im am weitesten rechts stehenden Segment des Pfads befinden.  
+-   <span data-ttu-id="a91a7-211">Ein benanntes Platzhaltersegment muss sich im am weitesten rechts stehenden Segment des Pfads befinden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-211">A named wildcard segment must appear at the right-most segment in the path.</span></span>  
   
--   Ein benanntes Platzhaltersegment kann nicht zusammen mit einem anonymen Platzhaltersegment innerhalb der gleichen Vorlagenzeichenfolge verwendet werden.  
+-   <span data-ttu-id="a91a7-212">Ein benanntes Platzhaltersegment kann nicht zusammen mit einem anonymen Platzhaltersegment innerhalb der gleichen Vorlagenzeichenfolge verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-212">A named wildcard segment cannot coexist with an anonymous wildcard segment within the same template string.</span></span>  
   
--   Der Name eines benannten Platzhaltersegments muss eindeutig sein.  
+-   <span data-ttu-id="a91a7-213">Der Name eines benannten Platzhaltersegments muss eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-213">The name of a named wildcard segment must be unique.</span></span>  
   
--   Benannte Platzhaltersegmente können keine Standardwerte besitzen.  
+-   <span data-ttu-id="a91a7-214">Benannte Platzhaltersegmente können keine Standardwerte besitzen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-214">Named wildcard segments cannot have default values.</span></span>  
   
--   Benannte Platzhaltersegmente können nicht mit "\/" enden.  
+-   <span data-ttu-id="a91a7-215">Benannte platzhaltersegmente darf nicht mit enden "/".</span><span class="sxs-lookup"><span data-stu-id="a91a7-215">Named wildcard segments cannot end with "/".</span></span>  
   
-### Standardvariablenwerte  
- Standardvariablenwerte ermöglichen das Angeben von Standardwerten für Variablen innerhalb einer Vorlage.Standardvariablen können mit den geschweiften Klammern, durch die die Variable deklariert wird, oder durch eine an den UriTemplate\-Konstruktor weitergegebene Sammlung angegeben werden.Die folgende Vorlage zeigt zwei Möglichkeiten, eine <xref:System.UriTemplate> mit Variablen mit Standardwerten anzugeben:  
+### <a name="default-variable-values"></a><span data-ttu-id="a91a7-216">Standardvariablenwerte</span><span class="sxs-lookup"><span data-stu-id="a91a7-216">Default Variable Values</span></span>  
+ <span data-ttu-id="a91a7-217">Standardvariablenwerte ermöglichen das Angeben von Standardwerten für Variablen innerhalb einer Vorlage.</span><span class="sxs-lookup"><span data-stu-id="a91a7-217">Default variable values allow you to specify default values for variables within a template.</span></span> <span data-ttu-id="a91a7-218">Standardvariablen können mit den geschweiften Klammern, durch die die Variable deklariert wird, oder durch eine an den UriTemplate-Konstruktor weitergegebene Sammlung angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-218">Default variables can be specified with the curly braces that declare the variable or as a collection passed to the UriTemplate constructor.</span></span> <span data-ttu-id="a91a7-219">Die folgende Vorlage zeigt zwei Möglichkeiten, eine <xref:System.UriTemplate> mit Variablen mit Standardwerten anzugeben:</span><span class="sxs-lookup"><span data-stu-id="a91a7-219">The following template shows two ways to specify a <xref:System.UriTemplate> with variables with default values.</span></span>  
   
 ```  
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
 ```  
   
- In dieser Vorlage werden die Variable `a` mit dem Standardwert `1` und die Variable `b` mit dem Standardwert `5` deklariert.  
+ <span data-ttu-id="a91a7-220">In dieser Vorlage werden die Variable `a` mit dem Standardwert `1` und die Variable `b` mit dem Standardwert `5` deklariert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-220">This template declares a variable named `a` with a default value of `1` and a variable named `b` with a default value of `5`.</span></span>  
   
 > [!NOTE]
->  Nur Pfadsegmentvariablen können Standardwerte besitzen.Bei Abfragezeichenfolgenvariablen, zusammengesetzten Segmentvariablen sowie bei benannten Platzhaltervariablen sind Standardwerte nicht zulässig.  
+>  <span data-ttu-id="a91a7-221">Nur Pfadsegmentvariablen können Standardwerte besitzen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-221">Only path segment variables are allowed to have default values.</span></span> <span data-ttu-id="a91a7-222">Bei Abfragezeichenfolgenvariablen, zusammengesetzten Segmentvariablen sowie bei benannten Platzhaltervariablen sind Standardwerte nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="a91a7-222">Query string variables, compound segment variables, and named wildcard variables are not permitted to have default values.</span></span>  
   
- Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Abgleichen eines möglichen URI gezeigt:  
+ <span data-ttu-id="a91a7-223">Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Abgleichen eines möglichen URI gezeigt:</span><span class="sxs-lookup"><span data-stu-id="a91a7-223">The following code shows how default variable values are handled when matching a candidate URI.</span></span>  
   
 ```  
 Uri baseAddress = new Uri("http://localhost:800   
@@ -193,13 +196,12 @@ foreach (string key in m1.BoundVariables.AllKeys)
 // BoundVariables:  
 //      STATE=OR  
 //       CITY=Redmond  
-  
 ```  
   
 > [!NOTE]
->  Der URI "http:\/\/localhost:8000\/\/\/" entspricht nicht der im vorhergehenden Code enthaltenen Vorlage, der URI "http:\/\/localhost:8000\/" dagegen schon.  
+>  <span data-ttu-id="a91a7-224">Der URI "http://localhost:8000///" entspricht nicht der im vorhergehenden Code enthaltenen Vorlage, der URI "http://localhost:8000/" dagegen schon.</span><span class="sxs-lookup"><span data-stu-id="a91a7-224">A URI such as http://localhost:8000/// does not match the template listed in the preceding code, however a URI such as http://localhost:8000/ does.</span></span>  
   
- Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht.  
+ <span data-ttu-id="a91a7-225">Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="a91a7-225">The following code shows how default variable values are handled when creating a URI with a template.</span></span>  
   
 ```  
 Uri baseAddress = new Uri("http://localhost:8000/");  
@@ -225,15 +227,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Values:  
 //     Key = a, Value = 10  
 // Bound URI: http://localhost:8000/test/10/5  
-  
 ```  
   
- Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einschränkungen.Eine Variable kann den Standardwert `null` besitzen, wenn sich die Variable im am weitesten rechts befindlichen Segment der Vorlagenzeichenfolge befindet oder wenn alle Segmente rechts des Segments jeweils den Standardwert `null` besitzen.Im Folgenden finden Sie gültige Vorlagenzeichenfolgen mit dem Standardwert `null`:  
+ <span data-ttu-id="a91a7-226">Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-226">When a variable is given a default value of `null` there are some additional constraints.</span></span> <span data-ttu-id="a91a7-227">Eine Variable kann den Standardwert `null` besitzen, wenn sich die Variable im am weitesten rechts befindlichen Segment der Vorlagenzeichenfolge befindet oder wenn alle Segmente rechts des Segments jeweils den Standardwert `null` besitzen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-227">A variable can have a default value of `null` if the variable is contained within the right most segment of the template string or if all segments to the right of the segment have default values of `null`.</span></span> <span data-ttu-id="a91a7-228">Im Folgenden finden Sie gültige Vorlagenzeichenfolgen mit dem Standardwert `null`:</span><span class="sxs-lookup"><span data-stu-id="a91a7-228">The following are valid template strings with default values of `null`:</span></span>  
   
 -   ```  
     UriTemplate t = new UriTemplate("shoe/{boat=null}");  
     ```  
-  
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
     ```  
@@ -241,8 +241,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
     ```  
-  
- Im Folgenden finden Sie ungültige Vorlagenzeichenfolgen mit dem Standardwert `null`:  
+ <span data-ttu-id="a91a7-229">Im Folgenden finden Sie ungültige Vorlagenzeichenfolgen mit dem Standardwert `null`:</span><span class="sxs-lookup"><span data-stu-id="a91a7-229">The following are invalid template strings with  default values of `null`:</span></span>  
   
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
@@ -251,102 +250,101 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
     ```  
+### <a name="default-values-and-matching"></a><span data-ttu-id="a91a7-230">Standardwerte und Vergleich</span><span class="sxs-lookup"><span data-stu-id="a91a7-230">Default Values and Matching</span></span>  
+ <span data-ttu-id="a91a7-231">Beim Vergleichen eines möglichen URI mit einer Vorlage mit Standardwerten werden die Standardwerte in der <xref:System.UriTemplateMatch.BoundVariables%2A>-Sammlung platziert, wenn im möglichen URI keine Werte angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="a91a7-231">When matching a candidate URI with a template that has default values, the default values are placed in the <xref:System.UriTemplateMatch.BoundVariables%2A> collection if values are not specified in the candidate URI.</span></span>  
   
-### Standardwerte und Vergleich  
- Beim Vergleichen eines möglichen URI mit einer Vorlage mit Standardwerten werden die Standardwerte in der <xref:System.UriTemplateMatch.BoundVariables%2A>\-Sammlung platziert, wenn im möglichen URI keine Werte angegeben sind.  
+### <a name="template-equivalence"></a><span data-ttu-id="a91a7-232">Vorlagenäquivalenz</span><span class="sxs-lookup"><span data-stu-id="a91a7-232">Template Equivalence</span></span>  
+ <span data-ttu-id="a91a7-233">Zwei Vorlagen gelten als *strukturell Äquivalent* Wenn alle Literalwerte der Vorlagen übereinstimmen und sie die Variablen in den gleichen Segmenten verfügen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-233">Two templates are said to be *structurally equivalent* when all of the templates' literals match and they have variables in the same segments.</span></span> <span data-ttu-id="a91a7-234">Beispielsweise sind die folgenden Vorlagen strukturell äquivalent:</span><span class="sxs-lookup"><span data-stu-id="a91a7-234">For example the following templates are structurally equivalent:</span></span>  
   
-### Vorlagenäquivalenz  
- Zwei Vorlagen gelten als *strukturell äquivalent*, wenn alle Literalwerte der Vorlagen übereinstimmen und sie über Variablen in den gleichen Segmenten verfügen.Beispielsweise sind die folgenden Vorlagen strukturell äquivalent:  
+-   <span data-ttu-id="a91a7-235">/a/{var1}/b b/{var2}?x=1&y=2</span><span class="sxs-lookup"><span data-stu-id="a91a7-235">/a/{var1}/b b/{var2}?x=1&y=2</span></span>  
   
--   \/a\/{var1}\/b b\/{var2}?x\=1&y\=2  
+-   <span data-ttu-id="a91a7-236">a/{x}/b%20b/{var1}?y=2&x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-236">a/{x}/b%20b/{var1}?y=2&x=1</span></span>  
   
--   a\/{x}\/b%20b\/{var1}?y\=2&x\=1  
+-   <span data-ttu-id="a91a7-237">a/{y}/B%20B/{z}/?y=2&x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-237">a/{y}/B%20B/{z}/?y=2&x=1</span></span>  
   
--   a\/{y}\/B%20B\/{z}\/?y\=2&x\=1  
+ <span data-ttu-id="a91a7-238">Hierbei müssen noch einige Punkte beachtet werden:</span><span class="sxs-lookup"><span data-stu-id="a91a7-238">A few things to notice:</span></span>  
   
- Hierbei müssen noch einige Punkte beachtet werden:  
+-   <span data-ttu-id="a91a7-239">Wenn eine Vorlage führende Schrägstriche enthält, wird nur der erste ignoriert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-239">If a template contains leading slashes, only the first one is ignored.</span></span>  
   
--   Wenn eine Vorlage führende Schrägstriche enthält, wird nur der erste ignoriert.  
+-   <span data-ttu-id="a91a7-240">Wenn Vorlagenzeichenfolgen auf strukturelle Äquivalenz verglichen werden, wird die Groß-/Kleinschreibungen bei den Variablennamen und Pfadsegmenten ignoriert; bei den Abfragezeichenfolgen muss sie beachtet werden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-240">When comparing template strings for structural equivalence, case is ignored for variable names and path segments, query strings are case sensitive.</span></span>  
   
--   Wenn Vorlagenzeichenfolgen auf strukturelle Äquivalenz verglichen werden, wird die Groß\-\/Kleinschreibungen bei den Variablennamen und Pfadsegmenten ignoriert; bei den Abfragezeichenfolgen muss sie beachtet werden.  
+-   <span data-ttu-id="a91a7-241">Abfragezeichenfolgen sind unsortiert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-241">Query strings are unordered.</span></span>  
   
--   Abfragezeichenfolgen sind unsortiert.  
+## <a name="uritemplatetable"></a><span data-ttu-id="a91a7-242">UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="a91a7-242">UriTemplateTable</span></span>  
+ <span data-ttu-id="a91a7-243">Die Klasse <xref:System.UriTemplateTable> stellt eine assoziative Tabelle aus <xref:System.UriTemplate>-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind.</span><span class="sxs-lookup"><span data-stu-id="a91a7-243">The <xref:System.UriTemplateTable> class represents an associative table of <xref:System.UriTemplate> objects bound to an object of the developer's choosing.</span></span> <span data-ttu-id="a91a7-244"><xref:System.UriTemplateTable> muss vor Aufruf von <xref:System.UriTemplate> mindestens eine <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> enthalten.</span><span class="sxs-lookup"><span data-stu-id="a91a7-244">A <xref:System.UriTemplateTable> must contain at least one <xref:System.UriTemplate> prior to calling <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>.</span></span> <span data-ttu-id="a91a7-245">Der Inhalt einer <xref:System.UriTemplateTable> kann geändert werden, bis <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="a91a7-245">The contents of a <xref:System.UriTemplateTable> can be changed until <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> is called.</span></span> <span data-ttu-id="a91a7-246">Die Überprüfung wird ausgeführt, wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="a91a7-246">Validation is performed when <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> is called.</span></span> <span data-ttu-id="a91a7-247">Der Typ der ausgeführten Prüfung hängt vom Wert des Parameters `allowMultiple` zur <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> ab.</span><span class="sxs-lookup"><span data-stu-id="a91a7-247">The type of validation performed depends upon the value of the `allowMultiple` parameter to <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>.</span></span>  
   
-## UriTemplateTable  
- Die Klasse <xref:System.UriTemplateTable> stellt eine assoziative Tabelle aus <xref:System.UriTemplate>\-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind.<xref:System.UriTemplateTable> muss vor Aufruf von <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> mindestens eine <xref:System.UriTemplate> enthalten.Der Inhalt einer <xref:System.UriTemplateTable> kann geändert werden, bis <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.Die Überprüfung wird ausgeführt, wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.Der Typ der ausgeführten Prüfung hängt vom Wert des Parameters `allowMultiple` zur <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> ab.  
+ <span data-ttu-id="a91a7-248">Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei Übergabe in `false` aufgerufen wird, überprüft die <xref:System.UriTemplateTable>, dass sich keine Vorlagen in der Tabelle befinden.</span><span class="sxs-lookup"><span data-stu-id="a91a7-248">When <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> is called passing in `false`, the <xref:System.UriTemplateTable> checks to make sure there are no templates in the table.</span></span> <span data-ttu-id="a91a7-249">Wenn strukturell äquivalente Vorlagen gefunden werden, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="a91a7-249">If it finds any structurally equivalent templates, it throws an exception.</span></span> <span data-ttu-id="a91a7-250">Dies wird zusammen mit <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> verwendet, wenn sichergestellt werden soll, dass nur eine Vorlage einem eingehenden URI entspricht.</span><span class="sxs-lookup"><span data-stu-id="a91a7-250">This is used in conjunction with <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> when you want to ensure only one template matches an incoming URI.</span></span>  
   
- Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei Übergabe in `false` aufgerufen wird, überprüft die <xref:System.UriTemplateTable>, dass sich keine Vorlagen in der Tabelle befinden.Wenn strukturell äquivalente Vorlagen gefunden werden, wird eine Ausnahme ausgelöst.Dies wird zusammen mit <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> verwendet, wenn sichergestellt werden soll, dass nur eine Vorlage einem eingehenden URI entspricht.  
+ <span data-ttu-id="a91a7-251">Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei der Übergabe von `true` aufgerufen wird, lässt <xref:System.UriTemplateTable> mehrere strukturell äquivalente Vorlagen in einer <xref:System.UriTemplateTable> zu.</span><span class="sxs-lookup"><span data-stu-id="a91a7-251">When <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> is called passing in `true`, <xref:System.UriTemplateTable> allows multiple, structurally-equivalent templates to be contained within a <xref:System.UriTemplateTable>.</span></span>  
   
- Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei der Übergabe von `true` aufgerufen wird, lässt <xref:System.UriTemplateTable> mehrere strukturell äquivalente Vorlagen in einer <xref:System.UriTemplateTable> zu.  
-  
- Wenn ein Satz <xref:System.UriTemplate>\-Objekte, die einer <xref:System.UriTemplateTable> hinzugefügt sind, Abfragezeichenfolgen enthält, dürfen sie nicht mehrdeutig sein.Identische Abfragezeichenfolgen sind zulässig.  
-  
-> [!NOTE]
->  Zwar lässt die <xref:System.UriTemplateTable> Basisadressen mit HTTP\-fremden Schemas zu, Schema und Portnummer werden beim Vergleichen möglicher URIs mit Vorlagen jedoch ignoriert.  
-  
-### Abfragezeichenfolgenmehrdeutigkeit  
- Vorlagen, die einen äquivalenten Pfad teilen, enthalten mehrdeutige Abfragezeichenfolgen, wenn es einen URI gibt, der mehr als einer Vorlage entspricht.  
-  
- Die folgenden Sätze von Abfragezeichenfolgen sind in sich selbst eindeutig:  
-  
--   ?x\=1  
-  
--   ?x\=2  
-  
--   ?x\=3  
-  
--   ?x\=1&y\={var}  
-  
--   ?x\=2&z\={var}  
-  
--   ?x\=3  
-  
--   ?x\=1  
-  
--   ?  
-  
--   ?x\={var}  
-  
--   ?  
-  
--   ?m\=get&c\=rss  
-  
--   ?m\=put&c\=rss  
-  
--   ?m\=get&c\=atom  
-  
--   ?m\=put&c\=atom  
-  
- Die folgenden Abfragezeichenfolgenvorlagen sind in sich selbst mehrdeutig:  
-  
--   ?x\=1  
-  
--   ?x\={var}  
-  
- "x\=1" – passt zu beiden Vorlagen.  
-  
--   ?x\=1  
-  
--   ?y\=2  
-  
- "x\=1&y\=2" passt zu beiden Vorlagen.Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen\-Variablen enthalten kann als die Vorlage, zu der sie passt.  
-  
--   ?x\=1  
-  
--   ?x\=1&y\={var}  
-  
- "x\=1&y\=3" passt zu beiden Vorlagen.  
-  
--   ?x\=3&y\=4  
-  
--   ?x\=3&z\=5  
+ <span data-ttu-id="a91a7-252">Wenn ein Satz <xref:System.UriTemplate>-Objekte, die einer <xref:System.UriTemplateTable> hinzugefügt sind, Abfragezeichenfolgen enthält, dürfen sie nicht mehrdeutig sein.</span><span class="sxs-lookup"><span data-stu-id="a91a7-252">If a set of <xref:System.UriTemplate> objects added to a <xref:System.UriTemplateTable> contain query strings they must not be ambiguous.</span></span> <span data-ttu-id="a91a7-253">Identische Abfragezeichenfolgen sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="a91a7-253">Identical query strings are allowed.</span></span>  
   
 > [!NOTE]
->  Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI\-Pfads oder eines <xref:System.UriTemplate>\-Pfadsegmentliterals verwendet werden. \(Die Zeichen "a" und "A" gelten hingegen als gleich.\)Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen \(a und A gelten ebenfalls als gleiche Zeichen\).  
+>  <span data-ttu-id="a91a7-254">Zwar lässt die <xref:System.UriTemplateTable> Basisadressen mit HTTP-fremden Schemas zu, Schema und Portnummer werden beim Vergleichen möglicher URIs mit Vorlagen jedoch ignoriert.</span><span class="sxs-lookup"><span data-stu-id="a91a7-254">While the <xref:System.UriTemplateTable> allows base addresses that use schemes other than HTTP, the scheme and port number are ignored when matching candidate URIs to templates.</span></span>  
   
-## Siehe auch  
- [Überblick über WCF\-Web\-HTTP\-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
- [Objektmodell für WCF\-Web\-HTTP\-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)   
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)   
- [UriTemplate\-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)   
- [UriTemplate\-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+### <a name="query-string-ambiguity"></a><span data-ttu-id="a91a7-255">Abfragezeichenfolgenmehrdeutigkeit</span><span class="sxs-lookup"><span data-stu-id="a91a7-255">Query String Ambiguity</span></span>  
+ <span data-ttu-id="a91a7-256">Vorlagen, die einen äquivalenten Pfad teilen, enthalten mehrdeutige Abfragezeichenfolgen, wenn es einen URI gibt, der mehr als einer Vorlage entspricht.</span><span class="sxs-lookup"><span data-stu-id="a91a7-256">Templates that share an equivalent path contain ambiguous query strings if there is a URI that matches more than one template.</span></span>  
+  
+ <span data-ttu-id="a91a7-257">Die folgenden Sätze von Abfragezeichenfolgen sind in sich selbst eindeutig:</span><span class="sxs-lookup"><span data-stu-id="a91a7-257">The following sets of query strings are unambiguous within themselves:</span></span>  
+  
+-   <span data-ttu-id="a91a7-258">?x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-258">?x=1</span></span>  
+  
+-   <span data-ttu-id="a91a7-259">?x=2</span><span class="sxs-lookup"><span data-stu-id="a91a7-259">?x=2</span></span>  
+  
+-   <span data-ttu-id="a91a7-260">?x=3</span><span class="sxs-lookup"><span data-stu-id="a91a7-260">?x=3</span></span>  
+  
+-   <span data-ttu-id="a91a7-261">?x=1&y={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-261">?x=1&y={var}</span></span>  
+  
+-   <span data-ttu-id="a91a7-262">?x=2&z={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-262">?x=2&z={var}</span></span>  
+  
+-   <span data-ttu-id="a91a7-263">?x=3</span><span class="sxs-lookup"><span data-stu-id="a91a7-263">?x=3</span></span>  
+  
+-   <span data-ttu-id="a91a7-264">?x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-264">?x=1</span></span>  
+  
+-   <span data-ttu-id="a91a7-265">?</span><span class="sxs-lookup"><span data-stu-id="a91a7-265">?</span></span>  
+  
+-   <span data-ttu-id="a91a7-266">?</span><span class="sxs-lookup"><span data-stu-id="a91a7-266">?</span></span> <span data-ttu-id="a91a7-267">x={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-267">x={var}</span></span>  
+  
+-   <span data-ttu-id="a91a7-268">?</span><span class="sxs-lookup"><span data-stu-id="a91a7-268">?</span></span>  
+  
+-   <span data-ttu-id="a91a7-269">?m=get&c=rss</span><span class="sxs-lookup"><span data-stu-id="a91a7-269">?m=get&c=rss</span></span>  
+  
+-   <span data-ttu-id="a91a7-270">?m=put&c=rss</span><span class="sxs-lookup"><span data-stu-id="a91a7-270">?m=put&c=rss</span></span>  
+  
+-   <span data-ttu-id="a91a7-271">?m=get&c=atom</span><span class="sxs-lookup"><span data-stu-id="a91a7-271">?m=get&c=atom</span></span>  
+  
+-   <span data-ttu-id="a91a7-272">?m=put&c=atom</span><span class="sxs-lookup"><span data-stu-id="a91a7-272">?m=put&c=atom</span></span>  
+  
+ <span data-ttu-id="a91a7-273">Die folgenden Abfragezeichenfolgenvorlagen sind in sich selbst mehrdeutig:</span><span class="sxs-lookup"><span data-stu-id="a91a7-273">The following sets of query string templates are ambiguous within themselves:</span></span>  
+  
+-   <span data-ttu-id="a91a7-274">?x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-274">?x=1</span></span>  
+  
+-   <span data-ttu-id="a91a7-275">?x={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-275">?x={var}</span></span>  
+  
+ <span data-ttu-id="a91a7-276">"x=1" – passt zu beiden Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-276">"x=1" - Matches both templates.</span></span>  
+  
+-   <span data-ttu-id="a91a7-277">?x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-277">?x=1</span></span>  
+  
+-   <span data-ttu-id="a91a7-278">?y=2</span><span class="sxs-lookup"><span data-stu-id="a91a7-278">?y=2</span></span>  
+  
+ <span data-ttu-id="a91a7-279">"x=1&y=2" passt zu beiden Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-279">"x=1&y=2" matches both templates.</span></span> <span data-ttu-id="a91a7-280">Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen-Variablen enthalten kann als die Vorlage, zu der sie passt.</span><span class="sxs-lookup"><span data-stu-id="a91a7-280">This is because a query string may contain more query string variables then the template it matches.</span></span>  
+  
+-   <span data-ttu-id="a91a7-281">?x=1</span><span class="sxs-lookup"><span data-stu-id="a91a7-281">?x=1</span></span>  
+  
+-   <span data-ttu-id="a91a7-282">?x=1&y={var}</span><span class="sxs-lookup"><span data-stu-id="a91a7-282">?x=1&y={var}</span></span>  
+  
+ <span data-ttu-id="a91a7-283">"x=1&y=3" passt zu beiden Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="a91a7-283">"x=1&y=3" matches both templates.</span></span>  
+  
+-   <span data-ttu-id="a91a7-284">?x=3&y=4</span><span class="sxs-lookup"><span data-stu-id="a91a7-284">?x=3&y=4</span></span>  
+  
+-   <span data-ttu-id="a91a7-285">?x=3&z=5</span><span class="sxs-lookup"><span data-stu-id="a91a7-285">?x=3&z=5</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="a91a7-286">Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI-Pfads oder eines <xref:System.UriTemplate>-Pfadsegmentliterals verwendet werden. (Die Zeichen "a" und "A" gelten hingegen als gleich.)</span><span class="sxs-lookup"><span data-stu-id="a91a7-286">The characters á and Á are considered to be different characters when they appear as part of a URI path or <xref:System.UriTemplate> path segment literal (but the characters a and A are considered to be the same).</span></span> <span data-ttu-id="a91a7-287">Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen (a und A gelten ebenfalls als gleiche Zeichen).</span><span class="sxs-lookup"><span data-stu-id="a91a7-287">The characters á and Á are considered to be the same characters when they appear as part of a <xref:System.UriTemplate> {variableName} or a query string (and a and A are also considered to be the same characters).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a91a7-288">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a91a7-288">See Also</span></span>  
+ [<span data-ttu-id="a91a7-289">WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell</span><span class="sxs-lookup"><span data-stu-id="a91a7-289">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [<span data-ttu-id="a91a7-290">WCF Web-HTTP-Programmiermodell Objekt</span><span class="sxs-lookup"><span data-stu-id="a91a7-290">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [<span data-ttu-id="a91a7-291">URI-Vorlage</span><span class="sxs-lookup"><span data-stu-id="a91a7-291">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ [<span data-ttu-id="a91a7-292">UriTemplate-Tabelle</span><span class="sxs-lookup"><span data-stu-id="a91a7-292">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [<span data-ttu-id="a91a7-293">UriTemplate-Tabellenverteiler</span><span class="sxs-lookup"><span data-stu-id="a91a7-293">UriTemplate Table Dispatcher</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

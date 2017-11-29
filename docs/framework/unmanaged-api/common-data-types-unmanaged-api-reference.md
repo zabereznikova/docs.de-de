@@ -1,47 +1,48 @@
 ---
-title: "Allgemeine Datentypen (Referenz zur nicht verwalteten API) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: Allgemeine Datentypen (Referenz zur nicht verwalteten API)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Allgemeine Datentypen (Referenz zur nicht verwalteten API)
-In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`\-Argumente aus C\/C\+\+ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C\/C\+\+. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
+# <a name="common-data-types-unmanaged-api-reference"></a><span data-ttu-id="142e3-102">Allgemeine Datentypen (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="142e3-102">Common Data Types (Unmanaged API Reference)</span></span>
+<span data-ttu-id="142e3-103">In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind.</span><span class="sxs-lookup"><span data-stu-id="142e3-103">This topic lists simple data types used by the unmanaged APIs for the .NET Framework that are defined by C/C++ `typedef` statements.</span></span> <span data-ttu-id="142e3-104">Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++.</span><span class="sxs-lookup"><span data-stu-id="142e3-104">These data types are typically aliases for C/C++ primitive data types.</span></span> <span data-ttu-id="142e3-105">Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.</span><span class="sxs-lookup"><span data-stu-id="142e3-105">Typically, the values of these data types are opaque; that is, they are returned by a particular function or method so that they can be passed to other functions or methods without modification.</span></span>  
   
-|Datentyp|Definition|Definiert in|Beschreibung|  
-|--------------|----------------|------------------|------------------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Der Bezeichner einer Anwendungsdomäne.|  
-|AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Der Bezeichner einer Assembly.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Der Bezeichner einer verwalteten Klasse.|  
-|CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Die Verbindungs\-ID eines Threads ist mit einer Instanz von Microsoft SQL Server verbunden.|  
-|ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Der Bezeichner des Kontexts, der mit einem bestimmten verwalteten Thread verknüpft ist.|  
-|COR\_PRF\_ELT\_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|Ein nicht transparenter Handle, der Informationen über einen bestimmten Stapelrahmen repräsentiert.|  
-|COR\_PRF\_FRAME\_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|Ein nicht transparenter Handle, der auf einen Stapelrahmen zeigt. Er ist nur gültig während des Rückrufs, an den er übergeben wird.|  
-|CORDB\_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|Eine Adresse im Speicher.|  
-|CORDB\_CONTINUE\_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|Der Status der Fortsetzung.|  
-|CORDB\_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Der Wert eines CPU\-Registers.|  
-|FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Der Bezeichner einer Funktion oder Methode.|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Ein Garbage Collection\-Handle.|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|Ein Metadatentoken \(eine Zeile in einer Metadatentabelle\).|  
-|ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Der Bezeichner eines Assemblymoduls.|  
-|ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Der Bezeichner eines Objekts.|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Der Bezeichner eines verwalteten Prozesses.|  
-|ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Der Bezeichner einer mit JIT kompilierten Funktion.|  
-|AUFGABEN\-ID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner einer [ICLRTask](../../../ocs/framework/unmanaged-api/hosting/iclrtask-interface.md)\-Instanz.|  
-|ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Der Bezeichner eines verwalteten Threads.|  
+|<span data-ttu-id="142e3-106">Datentyp</span><span class="sxs-lookup"><span data-stu-id="142e3-106">Data type</span></span>|<span data-ttu-id="142e3-107">Definition</span><span class="sxs-lookup"><span data-stu-id="142e3-107">Definition</span></span>|<span data-ttu-id="142e3-108">Definiert in</span><span class="sxs-lookup"><span data-stu-id="142e3-108">Defined in</span></span>|<span data-ttu-id="142e3-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="142e3-109">Description</span></span>|  
+|---------------|----------------|----------------|-----------------|  
+|<span data-ttu-id="142e3-110">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="142e3-110">AppDomainID</span></span>|`typedef UINT_PTR AppDomainID;`|<span data-ttu-id="142e3-111">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-111">corprof.h</span></span>|<span data-ttu-id="142e3-112">Der Bezeichner einer Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="142e3-112">The identifier of an application domain.</span></span>|  
+|<span data-ttu-id="142e3-113">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="142e3-113">AssemblyID</span></span>|`typedef UINT_PTR AssemblyID;`|<span data-ttu-id="142e3-114">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-114">corprof.h</span></span>|<span data-ttu-id="142e3-115">Der Bezeichner einer Assembly.</span><span class="sxs-lookup"><span data-stu-id="142e3-115">The identifier of an assembly.</span></span>|  
+|<span data-ttu-id="142e3-116">ClassID</span><span class="sxs-lookup"><span data-stu-id="142e3-116">ClassID</span></span>|`typedef UINT_PTR ClassID;`|<span data-ttu-id="142e3-117">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-117">corprof.h</span></span>|<span data-ttu-id="142e3-118">Der Bezeichner einer verwalteten Klasse.</span><span class="sxs-lookup"><span data-stu-id="142e3-118">The identifier of a managed class.</span></span>|  
+|<span data-ttu-id="142e3-119">CONNID</span><span class="sxs-lookup"><span data-stu-id="142e3-119">CONNID</span></span>|`typedef DWORD CONNID;`|<span data-ttu-id="142e3-120">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="142e3-120">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="142e3-121">Die Verbindungs-ID eines Threads ist mit einer Instanz von Microsoft SQL Server verbunden.</span><span class="sxs-lookup"><span data-stu-id="142e3-121">The connection identifier for a thread that is connected to an instance of Microsoft SQL Server.</span></span>|  
+|<span data-ttu-id="142e3-122">ContextID</span><span class="sxs-lookup"><span data-stu-id="142e3-122">ContextID</span></span>|`typedef UINT_PTR ContextID;`|<span data-ttu-id="142e3-123">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-123">corprof.h</span></span>|<span data-ttu-id="142e3-124">Der Bezeichner des Kontexts, der mit einem bestimmten verwalteten Thread verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="142e3-124">The identifier of the context associated with a particular managed thread.</span></span>|  
+|<span data-ttu-id="142e3-125">COR_PRF_ELT_INFO</span><span class="sxs-lookup"><span data-stu-id="142e3-125">COR_PRF_ELT_INFO</span></span>|`typedef UINT_PTR COR_PRF_ELT_INFO;`|<span data-ttu-id="142e3-126">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-126">corprof.h</span></span>|<span data-ttu-id="142e3-127">Ein nicht transparenter Handle, der Informationen über einen bestimmten Stapelrahmen repräsentiert.</span><span class="sxs-lookup"><span data-stu-id="142e3-127">An opaque handle that represents information about a particular stack frame.</span></span>|  
+|<span data-ttu-id="142e3-128">COR_PRF_FRAME_INFO</span><span class="sxs-lookup"><span data-stu-id="142e3-128">COR_PRF_FRAME_INFO</span></span>|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|<span data-ttu-id="142e3-129">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-129">corprof.h</span></span>|<span data-ttu-id="142e3-130">Ein nicht transparenter Handle, der auf einen Stapelrahmen zeigt.</span><span class="sxs-lookup"><span data-stu-id="142e3-130">An opaque handle that points to a stack frame.</span></span> <span data-ttu-id="142e3-131">Er ist nur gültig während des Rückrufs, an den er übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="142e3-131">It is valid only during the callback to which it is passed.</span></span>|  
+|<span data-ttu-id="142e3-132">CORDB_ADDRESS</span><span class="sxs-lookup"><span data-stu-id="142e3-132">CORDB_ADDRESS</span></span>|`typedef ULONG64 CORDB_ADDRESS;`|<span data-ttu-id="142e3-133">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="142e3-133">cordebug.h</span></span>|<span data-ttu-id="142e3-134">Eine Adresse im Speicher.</span><span class="sxs-lookup"><span data-stu-id="142e3-134">An address in memory.</span></span>|  
+|<span data-ttu-id="142e3-135">CORDB_CONTINUE_STATUS</span><span class="sxs-lookup"><span data-stu-id="142e3-135">CORDB_CONTINUE_STATUS</span></span>|`typedef DWORD CORDB_CONTINUE_STATUS;`|<span data-ttu-id="142e3-136">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="142e3-136">cordebug.h</span></span>|<span data-ttu-id="142e3-137">Der Status der Fortsetzung.</span><span class="sxs-lookup"><span data-stu-id="142e3-137">The continuation status.</span></span>|  
+|<span data-ttu-id="142e3-138">CORDB_REGISTER</span><span class="sxs-lookup"><span data-stu-id="142e3-138">CORDB_REGISTER</span></span>|`typedef ULONG64 CORDB_REGISTER;`|<span data-ttu-id="142e3-139">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="142e3-139">cordebug.h</span></span>|<span data-ttu-id="142e3-140">Der Wert eines CPU-Registers.</span><span class="sxs-lookup"><span data-stu-id="142e3-140">The value of a CPU register.</span></span>|  
+|<span data-ttu-id="142e3-141">FunctionID</span><span class="sxs-lookup"><span data-stu-id="142e3-141">FunctionID</span></span>|`typedef UINT_PTR FunctionID;`|<span data-ttu-id="142e3-142">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-142">corprof.h</span></span>|<span data-ttu-id="142e3-143">Der Bezeichner einer Funktion oder Methode.</span><span class="sxs-lookup"><span data-stu-id="142e3-143">The identifier of a function or method.</span></span>|  
+|<span data-ttu-id="142e3-144">GCHandleID</span><span class="sxs-lookup"><span data-stu-id="142e3-144">GCHandleID</span></span>|`typedef UINT_PTR GCHandleID;`|<span data-ttu-id="142e3-145">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-145">corprof.h</span></span>|<span data-ttu-id="142e3-146">Ein Garbage Collection-Handle.</span><span class="sxs-lookup"><span data-stu-id="142e3-146">A garbage collection handle.</span></span>|  
+|<span data-ttu-id="142e3-147">mdToken</span><span class="sxs-lookup"><span data-stu-id="142e3-147">mdToken</span></span>|`typedef UINT32 mdToken;`|<span data-ttu-id="142e3-148">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-148">corprof.h</span></span>|<span data-ttu-id="142e3-149">Ein Metadatentoken (eine Zeile in einer Metadatentabelle).</span><span class="sxs-lookup"><span data-stu-id="142e3-149">A   metadata token (a row in a metadata table).</span></span>|  
+|<span data-ttu-id="142e3-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="142e3-150">ModuleID</span></span>|`typedef UINT_PTR ModuleID;`|<span data-ttu-id="142e3-151">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-151">corprof.h</span></span>|<span data-ttu-id="142e3-152">Der Bezeichner eines Assemblymoduls.</span><span class="sxs-lookup"><span data-stu-id="142e3-152">The identifier of an assembly module.</span></span>|  
+|<span data-ttu-id="142e3-153">ObjectID</span><span class="sxs-lookup"><span data-stu-id="142e3-153">ObjectID</span></span>|`typedef UINT_PTR ObjectID;`|<span data-ttu-id="142e3-154">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-154">corprof.h</span></span>|<span data-ttu-id="142e3-155">Der Bezeichner eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="142e3-155">The identifier of an object.</span></span>|  
+|<span data-ttu-id="142e3-156">ProcessID</span><span class="sxs-lookup"><span data-stu-id="142e3-156">ProcessID</span></span>|`typedef UINT_PTR ProcessID;`|<span data-ttu-id="142e3-157">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-157">corprof.h</span></span>|<span data-ttu-id="142e3-158">Der Bezeichner eines verwalteten Prozesses.</span><span class="sxs-lookup"><span data-stu-id="142e3-158">The identifier of a managed process.</span></span>|  
+|<span data-ttu-id="142e3-159">ReJITID</span><span class="sxs-lookup"><span data-stu-id="142e3-159">ReJITID</span></span>|`typedef UINT_PTR ReJITID;`|<span data-ttu-id="142e3-160">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-160">corprof.h</span></span>|<span data-ttu-id="142e3-161">Der Bezeichner einer mit JIT kompilierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="142e3-161">The identifier of a jitted function.</span></span>|  
+|<span data-ttu-id="142e3-162">AUFGABEN-ID</span><span class="sxs-lookup"><span data-stu-id="142e3-162">TASKID</span></span>|`typedef UINT64 TASKID;`|<span data-ttu-id="142e3-163">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="142e3-163">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="142e3-164">Der Bezeichner des ein [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz.</span><span class="sxs-lookup"><span data-stu-id="142e3-164">The identifier of an [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>|  
+|<span data-ttu-id="142e3-165">ThreadID</span><span class="sxs-lookup"><span data-stu-id="142e3-165">ThreadID</span></span>|`typedef UINT_PTR ThreadID;`|<span data-ttu-id="142e3-166">corprof.h</span><span class="sxs-lookup"><span data-stu-id="142e3-166">corprof.h</span></span>|<span data-ttu-id="142e3-167">Der Bezeichner eines verwalteten Threads.</span><span class="sxs-lookup"><span data-stu-id="142e3-167">The identifier of a managed thread.</span></span>|  
   
-## Siehe auch  
- [Referenz zur nicht verwalteten API](../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="142e3-168">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="142e3-168">See Also</span></span>  
+ [<span data-ttu-id="142e3-169">Referenz zur nicht verwalteten API</span><span class="sxs-lookup"><span data-stu-id="142e3-169">Unmanaged API Reference</span></span>](../../../docs/framework/unmanaged-api/index.md)

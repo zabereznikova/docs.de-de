@@ -1,52 +1,53 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von ActiveX-Steuerelementen zu Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [Windows Forms], Hinzufügen"
-  - "Formulare, Hinzufügen von ActiveX-Steuerelementen"
-  - "Windows Forms-Steuerelemente, ActiveX-Steuerelemente"
+title: "Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- forms [Windows Forms], adding ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von ActiveX-Steuerelementen zu Windows&#160;Forms
-Obwohl Steuerelemente für Windows Forms vom Windows Forms\-Designer optimal unterstützt werden, besteht zusätzlich die Möglichkeit, ActiveX\-Steuerelemente in Windows Forms zu integrieren.  
+# <a name="how-to-add-activex-controls-to-windows-forms"></a><span data-ttu-id="a4b6f-102">Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4b6f-102">How to: Add ActiveX Controls to Windows Forms</span></span>
+<span data-ttu-id="a4b6f-103">Während der Windows Forms-Designer zum Hosten von Windows Forms-Steuerelementen optimiert ist, können Sie auch ActiveX-Steuerelementen in Windows Forms platziert.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-103">While the Windows Forms Designer is optimized to host Windows Forms controls, you can also put ActiveX controls on Windows Forms.</span></span>  
   
 > [!CAUTION]
->  Windows Forms, denen ActiveX\-Steuerelemente hinzugefügt wurden, unterliegen Leistungseinschränkungen.  
+>  <span data-ttu-id="a4b6f-104">Es gibt leistungseinschränkungen für Windows Forms auf, wenn ActiveX-Steuerelemente hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-104">There are performance limitations for Windows Forms when ActiveX controls are added to them.</span></span>  
   
- Bevor Sie einem Formular ein ActiveX\-Steuerelement hinzufügen können, müssen Sie es der Toolbox hinzufügen.  Weitere Informationen erhalten Sie unter [COM\-Komponenten, Dialogfeld "Toolbox anpassen"](http://msdn.microsoft.com/de-de/171333f3-f207-4e02-bbdc-17862556212c).  
+ <span data-ttu-id="a4b6f-105">Bevor Sie ActiveX-Steuerelementen zum Formular hinzufügen, müssen Sie diese zur Toolbox hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-105">Before you add ActiveX controls to your form, you must add them to the Toolbox.</span></span> <span data-ttu-id="a4b6f-106">Weitere Informationen finden Sie unter [COM-Komponenten, Dialogfeld "Toolbox" anpassen](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span><span class="sxs-lookup"><span data-stu-id="a4b6f-106">For more information, see [COM Components, Customize Toolbox Dialog Box](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren**, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="a4b6f-107">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a4b6f-108">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-108">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a4b6f-109">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="a4b6f-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So fügen Sie Windows Forms ein ActiveX\-Steuerelement hinzu  
+### <a name="to-add-an-activex-control-to-your-windows-form"></a><span data-ttu-id="a4b6f-110">So fügen Sie ein ActiveX-Steuerelement zu einem Windows Form hinzu</span><span class="sxs-lookup"><span data-stu-id="a4b6f-110">To add an ActiveX control to your Windows Form</span></span>  
   
--   Doppelklicken Sie in der Toolbox auf das Steuerelement.  
+-   <span data-ttu-id="a4b6f-111">Doppelklicken Sie auf das Steuerelement in der Toolbox.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-111">Double-click the control on the Toolbox.</span></span>  
   
-     Sämtliche projektinternen Verweise auf das Steuerelement werden von [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hinzugefügt.  Weitere Informationen darüber, was bei der Verwendung von ActiveX\-Steuerelementen in Windows Forms zu berücksichtigen ist, finden Sie unter [Überlegungen zum Integrieren eines ActiveX\-Steuerelements in ein Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
+     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="a4b6f-112">Fügt alle Verweise auf das Steuerelement in Ihrem Projekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-112"> adds all references to the control in your project.</span></span> <span data-ttu-id="a4b6f-113">Weitere Informationen über die Dinge zu bedenken, wenn mithilfe von ActiveX-Steuerelementen in Windows Forms finden Sie unter [Überlegungen bei der ein ActiveX-Steuerelement in Windows Forms Hosting](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span><span class="sxs-lookup"><span data-stu-id="a4b6f-113">For more information about things to keep in mind when using ActiveX controls on Windows Forms, see [Considerations When Hosting an ActiveX Control on a Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span></span>  
   
     > [!NOTE]
-    >  Der Windows Forms ActiveX Control Importer \(AxImp.exe\) erstellt Ereignisargumente eines anderen Typs als dem, der beim Import von ActiveX\-DLLs \(Dynamic Link Libraries\) erwartet wird.  Die von AxImp.exe erstellen Argumente sind ähnlich dem Folgenden: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, wenn `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` erwartet wird.  Der Code funktioniert trotz dieser Unregelmäßigkeit ordnungsgemäß.  Weitere Informationen finden Sie unter [Windows Forms ActiveX Control Importer\-Tool \(Aximp.exe\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    >  <span data-ttu-id="a4b6f-114">Windows Forms ActiveX Control Importer (AxImp.exe) erstellt Ereignisargumente eines anderen Typs als beim Import von ActiveX-dynamic Link Librarys erwartet.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-114">The Windows Forms ActiveX Control Importer (AxImp.exe) creates event arguments of a different type than expected upon importation of ActiveX dynamic link libraries.</span></span> <span data-ttu-id="a4b6f-115">Die Argumente von AxImp.exe erstellt werden wie die folgende: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`Wenn `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` wird erwartet.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-115">The arguments created by AxImp.exe are similar to the following: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, when `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` is expected.</span></span> <span data-ttu-id="a4b6f-116">Denken Sie daran, dass diese Unregelmäßigkeit Code nicht verhindert wird, Normal zu funktionieren.</span><span class="sxs-lookup"><span data-stu-id="a4b6f-116">Be aware that this irregularity does not prevent code from functioning normally.</span></span> <span data-ttu-id="a4b6f-117">Weitere Informationen finden Sie unter [Windows Forms ActiveX Control Importer-Tool (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="a4b6f-117">For details, see [Windows Forms ActiveX Control Importer (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/de-de/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="a4b6f-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a4b6f-118">See Also</span></span>  
+ [<span data-ttu-id="a4b6f-119">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="a4b6f-119">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="a4b6f-120">In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte</span><span class="sxs-lookup"><span data-stu-id="a4b6f-120">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="a4b6f-121">Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4b6f-121">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="a4b6f-122">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4b6f-122">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="a4b6f-123">Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente</span><span class="sxs-lookup"><span data-stu-id="a4b6f-123">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="a4b6f-124">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="a4b6f-124">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="a4b6f-125">Windows Forms-Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="a4b6f-125">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -1,28 +1,33 @@
 ---
-title: "&lt;CertificateReference&gt; f&#252;r &lt;Identit&#228;t&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;CertificateReference&gt; für &lt;Identität&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 883ae318e32493013f009f3580ef102e4d39b3e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;CertificateReference&gt; f&#252;r &lt;Identit&#228;t&gt;
-Legt die Einstellungen für die X.509\-Zertifikatüberprüfung fest.  Ein sicherer [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Client, der mit dieser Identität eine Verbindung zu einem Endpunkt herstellt, stellt sicher, dass die vom Server bereitgestellten Ansprüche den Identitätsanspruch beinhalten, der zum Erstellen dieser Identität verwendet wurde.  
+# <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="1c02a-102">&lt;CertificateReference&gt; für &lt;Identität&gt;</span><span class="sxs-lookup"><span data-stu-id="1c02a-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="1c02a-103">Legt die Einstellungen für die X.509-Zertifikatvalidierung fest.</span><span class="sxs-lookup"><span data-stu-id="1c02a-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="1c02a-104">Ein sicherer [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Client, der mit dieser Identität eine Verbindung zu einem Endpunkt herstellt, stellt sicher, dass die vom Server bereitgestellten Ansprüche den Identitätsanspruch beinhalten, der zum Erstellen dieser Identität verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="1c02a-104">A secure [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="1c02a-105">\<Identität ></span><span class="sxs-lookup"><span data-stu-id="1c02a-105">\<identity></span></span>  
+<span data-ttu-id="1c02a-106">\<CertificateReference ></span><span class="sxs-lookup"><span data-stu-id="1c02a-106">\<certificateReference></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1c02a-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="1c02a-107">Syntax</span></span>  
   
+```xml  
 <certificateReference   
         findValue="String"   
     isChainIncluded="Boolean"  
@@ -34,30 +39,30 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </certificateReference>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1c02a-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="1c02a-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1c02a-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="1c02a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="1c02a-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="1c02a-110">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|findValue|Legt den Wert fest, nach dem im X.509\-Zertifikatspeicher gesucht werden soll.  Der in diesem Attribut enthaltene Typ muss den Anforderungen des angegebenen `X509FindType`\-Werts entsprechen.  Der Standardwert ist eine leere Zeichenfolge.|  
-|isChainIncluded|Ein boolescher Wert, der angibt, ob die Überprüfung mithilfe einer Zertifikatkette durchgeführt wird.|  
-|storeLocation|Legt den Speicherort des Zertifikatspeichers fest, den der Client zum Überprüfen des Serverzertifikats verwenden kann.<br /><br /> Folgende Werte sind gültig:<br /><br /> -   LocalMachine: Der dem lokalen Computer zugewiesene Zertifikatspeicher.<br />-   CurrentUser: Der dem aktuellen Benutzer zugewiesene Zertifikatspeicher.<br /><br /> Der Standardwert ist LocalMachine.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|storeName|Gibt den Namen des X.509\-Zertifikatsspeichers an, der geöffnet werden soll.<br /><br /> Folgende Werte sind gültig:<br /><br /> -   AddressBook: Zertifikatspeicher für andere Benutzer.<br />-   AuthRoot: Der Zertifikatspeicher für Zertifizierungsstellen von Drittanbietern.<br />-   CertificateAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen.<br />-   Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.<br />-   My: Der Zertifikatspeicher für persönliche Zertifikate.<br />-   Root: Der Zertifikatspeicher für vertrauenswürdige Stammzertifizierungsstellen.<br />-   TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-   TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Gibt den Typ der auszuführenden X.509\-Suche an.  Der im `findValue`\-Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen.<br /><br /> Folgende Werte sind gültig:<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|<span data-ttu-id="1c02a-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="1c02a-111">Attribute</span></span>|<span data-ttu-id="1c02a-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1c02a-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="1c02a-113">findValue</span><span class="sxs-lookup"><span data-stu-id="1c02a-113">findValue</span></span>|<span data-ttu-id="1c02a-114">Legt den Wert fest, nach dem im X.509-Zertifikatspeicher gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="1c02a-114">Specifies the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="1c02a-115">Der in diesem Attribut enthaltene Typ muss den Anforderungen des angegebenen `X509FindType`-Werts entsprechen.</span><span class="sxs-lookup"><span data-stu-id="1c02a-115">The type contained in this attribute must satisfy the requirements of the specified `X509FindType` value.</span></span> <span data-ttu-id="1c02a-116">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="1c02a-116">The default is an empty string.</span></span>|  
+|<span data-ttu-id="1c02a-117">isChainIncluded</span><span class="sxs-lookup"><span data-stu-id="1c02a-117">isChainIncluded</span></span>|<span data-ttu-id="1c02a-118">Ein boolescher Wert, der angibt, ob die Überprüfung mithilfe einer Zertifikatkette durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="1c02a-118">A Boolean value that specifies if the validation is done using a certificate chain.</span></span>|  
+|<span data-ttu-id="1c02a-119">storeLocation</span><span class="sxs-lookup"><span data-stu-id="1c02a-119">storeLocation</span></span>|<span data-ttu-id="1c02a-120">Legt den Speicherort des Zertifikatspeichers fest, den der Client zum Überprüfen des Serverzertifikats verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="1c02a-120">Specifies the location of the certificate store that the client can use to validate the server’s certificate.</span></span><br /><br /> <span data-ttu-id="1c02a-121">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="1c02a-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="1c02a-122">-LocalMachine: Der auf dem lokalen Computer zugewiesene Zertifikatspeicher.</span><span class="sxs-lookup"><span data-stu-id="1c02a-122">-   LocalMachine: The cert store assigned to the local machine.</span></span><br /><span data-ttu-id="1c02a-123">-CurrentUser: Der für den aktuellen Benutzer zugewiesene Zertifikatspeicher.</span><span class="sxs-lookup"><span data-stu-id="1c02a-123">-   CurrentUser: The cert store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="1c02a-124">Der Standardwert ist LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="1c02a-124">The default value is LocalMachine.</span></span><br /><br /> <span data-ttu-id="1c02a-125">Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span><span class="sxs-lookup"><span data-stu-id="1c02a-125">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|<span data-ttu-id="1c02a-126">storeName</span><span class="sxs-lookup"><span data-stu-id="1c02a-126">storeName</span></span>|<span data-ttu-id="1c02a-127">Gibt den Namen des X.509-Zertifikatsspeichers an, der geöffnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1c02a-127">Specifies the name of the X.509 certificate store to open.</span></span><br /><br /> <span data-ttu-id="1c02a-128">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="1c02a-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="1c02a-129">-AddressBook: Zertifikatspeicher für andere Benutzer.</span><span class="sxs-lookup"><span data-stu-id="1c02a-129">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="1c02a-130">-AuthRoot: Der Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).</span><span class="sxs-lookup"><span data-stu-id="1c02a-130">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="1c02a-131">-CertificateAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen.</span><span class="sxs-lookup"><span data-stu-id="1c02a-131">-   CertificateAuthority: Certificate store for intermediate CAs.</span></span><br /><span data-ttu-id="1c02a-132">-Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="1c02a-132">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="1c02a-133">-My: Der Zertifikatspeicher für persönliche Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="1c02a-133">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="1c02a-134">-Root: Der Zertifikatspeicher für vertrauenswürdige Stammzertifizierungsstellen.</span><span class="sxs-lookup"><span data-stu-id="1c02a-134">-   Root: Certificate store for trusted root CAs.</span></span><br /><span data-ttu-id="1c02a-135">-TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="1c02a-135">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="1c02a-136">-TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.</span><span class="sxs-lookup"><span data-stu-id="1c02a-136">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="1c02a-137">Der Standardwert ist My.</span><span class="sxs-lookup"><span data-stu-id="1c02a-137">The default value is My.</span></span><br /><br /> <span data-ttu-id="1c02a-138">Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span><span class="sxs-lookup"><span data-stu-id="1c02a-138">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="1c02a-139">X509FindType</span><span class="sxs-lookup"><span data-stu-id="1c02a-139">X509FindType</span></span>|<span data-ttu-id="1c02a-140">Gibt den Typ der auszuführenden X.509-Suche an.</span><span class="sxs-lookup"><span data-stu-id="1c02a-140">Specifies the type of X.509 search to be executed.</span></span> <span data-ttu-id="1c02a-141">Der im `findValue`-Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen.</span><span class="sxs-lookup"><span data-stu-id="1c02a-141">The type contained in the `findValue` attribute must satisfy the requirements of the specified X509FindType.</span></span><br /><br /> <span data-ttu-id="1c02a-142">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="1c02a-142">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="1c02a-143">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="1c02a-143">-   FindByThumbPrint</span></span><br /><span data-ttu-id="1c02a-144">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="1c02a-144">-   FindBySubjectName</span></span><br /><span data-ttu-id="1c02a-145">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="1c02a-145">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="1c02a-146">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="1c02a-146">-   FindByIssuerName</span></span><br /><span data-ttu-id="1c02a-147">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="1c02a-147">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="1c02a-148">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="1c02a-148">-   FindBySerialNumber</span></span><br /><span data-ttu-id="1c02a-149">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="1c02a-149">-   FindByTimeValid</span></span><br /><span data-ttu-id="1c02a-150">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="1c02a-150">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="1c02a-151">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="1c02a-151">-   FindByTemplateName</span></span><br /><span data-ttu-id="1c02a-152">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="1c02a-152">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="1c02a-153">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="1c02a-153">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="1c02a-154">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="1c02a-154">-   FindByExtension</span></span><br /><span data-ttu-id="1c02a-155">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="1c02a-155">-   FindByKeyUsage</span></span><br /><span data-ttu-id="1c02a-156">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="1c02a-156">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="1c02a-157">Der Standardwert ist FindBySubjectDistinguishedName.</span><span class="sxs-lookup"><span data-stu-id="1c02a-157">The default value is FindBySubjectDistinguishedName.</span></span><br /><br /> <span data-ttu-id="1c02a-158">Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span><span class="sxs-lookup"><span data-stu-id="1c02a-158">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="1c02a-159">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1c02a-159">Child Elements</span></span>  
+ <span data-ttu-id="1c02a-160">Keine</span><span class="sxs-lookup"><span data-stu-id="1c02a-160">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="1c02a-161">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1c02a-161">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Identität\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt Einstellungen an, mit denen die Authentifizierung eines Endpunkts durch andere Endpunkte aktiviert wird, mit denen Nachrichten ausgetauscht werden.|  
+|<span data-ttu-id="1c02a-162">Element</span><span class="sxs-lookup"><span data-stu-id="1c02a-162">Element</span></span>|<span data-ttu-id="1c02a-163">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1c02a-163">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="1c02a-164">\<Identität ></span><span class="sxs-lookup"><span data-stu-id="1c02a-164">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="1c02a-165">Gibt Einstellungen an, mit denen die Authentifizierung eines Endpunkts durch andere Endpunkte aktiviert wird, mit denen Nachrichten ausgetauscht werden.</span><span class="sxs-lookup"><span data-stu-id="1c02a-165">Specifies settings that enable the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>   
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
+## <a name="see-also"></a><span data-ttu-id="1c02a-166">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c02a-166">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>

@@ -1,76 +1,73 @@
 ---
-title: "&lt;source&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source>-Element"
-  - "source-Element"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: '&lt;Quelle&gt; Element'
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt;-Element
-Gibt eine Ablaufverfolgungsquelle an, die Ablaufverfolgungsmeldungen initiiert.  
+# <a name="ltsourcegt-element"></a><span data-ttu-id="e4198-102">&lt;Quelle&gt; Element</span><span class="sxs-lookup"><span data-stu-id="e4198-102">&lt;source&gt; Element</span></span>
+<span data-ttu-id="e4198-103">Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.</span><span class="sxs-lookup"><span data-stu-id="e4198-103">Specifies a trace source that initiates tracing messages.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="e4198-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e4198-104">\<configuration></span></span>  
+<span data-ttu-id="e4198-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="e4198-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="e4198-106">\<Quellen ></span><span class="sxs-lookup"><span data-stu-id="e4198-106">\<sources></span></span>  
+<span data-ttu-id="e4198-107">\<Quelle ></span><span class="sxs-lookup"><span data-stu-id="e4198-107">\<source></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e4198-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="e4198-108">Syntax</span></span>  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e4198-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="e4198-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e4198-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e4198-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="e4198-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="e4198-111">Attributes</span></span>  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`name`|Optionales Attribut.<br /><br /> Gibt den Namen der Ablaufverfolgungsquelle an.|  
-|`switchName`|Optionales Attribut.<br /><br /> Gibt den Namen einer Ablaufverfolgungsschalter\-Instanz in der Anwendung an.  Wenn der Schalter in einem `<switches>`\-Element nicht bezeichnet ist, wird die Schalterebene durch den Wert angegeben.|  
-|`switchType`|Optionales Attribut.<br /><br /> Gibt den Typ des Ablaufverfolgungsschalters an.  Wenn das Attribut angegeben ist, muss der Typ ein gültiger Klassenname sein und darf keine leere Zeichenfolge sein.|  
-|`extraAttribute`|Optionales Attribut.<br /><br /> Gibt den Wert eines für die Ablaufverfolgungsquelle spezifischen Attributs an, das von der <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>\-Methode für diese Ablaufverfolgungsquelle ermittelt wird.|  
+|<span data-ttu-id="e4198-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="e4198-112">Attribute</span></span>|<span data-ttu-id="e4198-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e4198-113">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="e4198-114">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="e4198-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="e4198-115">Gibt den Namen der Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="e4198-115">Specifies the name of the trace source.</span></span>|  
+|`switchName`|<span data-ttu-id="e4198-116">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="e4198-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="e4198-117">Gibt den Namen der Instanz ein Trace-Schalter in der Anwendung an.</span><span class="sxs-lookup"><span data-stu-id="e4198-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="e4198-118">Wenn der Schalter nicht, in identifiziert wurde einem `<switches>` Element, der Wert gibt die Ebene für den Switch.</span><span class="sxs-lookup"><span data-stu-id="e4198-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
+|`switchType`|<span data-ttu-id="e4198-119">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="e4198-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="e4198-120">Gibt den Typ der Trace-Schalter.</span><span class="sxs-lookup"><span data-stu-id="e4198-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="e4198-121">Falls vorhanden, wird der Typ muss ein gültiger Klassenname sein und darf keine leere Zeichenfolge sein.</span><span class="sxs-lookup"><span data-stu-id="e4198-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
+|`extraAttribute`|<span data-ttu-id="e4198-122">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="e4198-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="e4198-123">Gibt den Wert für ein Trace-datenquellenspezifische-Attribut identifiziert, indem die <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> Methode für die Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="e4198-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="e4198-124">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e4198-124">Child Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Enthält Listener, die Meldungen sammeln, speichern und weiterleiten.|  
+|<span data-ttu-id="e4198-125">Element</span><span class="sxs-lookup"><span data-stu-id="e4198-125">Element</span></span>|<span data-ttu-id="e4198-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e4198-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e4198-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="e4198-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="e4198-128">Enthält die Listener, mit die sammeln, speichern und Weiterleiten von Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="e4198-128">Contains listeners that collect, store, and route messages.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="e4198-129">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e4198-129">Parent Elements</span></span>  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`system.diagnostics`|Gibt die Ablaufverfolgungslistener, die Meldungen sammeln, speichern und weiterleiten, sowie die Ebene an, auf der ein Ablaufverfolgungsschalter festgelegt wird.|  
-|`sources`|Enthält Ablaufverfolgungsquellen, die Ablaufverfolgungsmeldungen initiieren.|  
+|<span data-ttu-id="e4198-130">Element</span><span class="sxs-lookup"><span data-stu-id="e4198-130">Element</span></span>|<span data-ttu-id="e4198-131">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e4198-131">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e4198-132">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="e4198-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="e4198-133">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="e4198-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="e4198-134">Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.</span><span class="sxs-lookup"><span data-stu-id="e4198-134">Contains trace sources that initiate tracing messages.</span></span>|  
   
-## Hinweise  
- Dieses Element kann in der Computerkonfigurationsdatei \(**Machine.config**\) und in der Anwendungskonfigurationsdatei verwendet werden.  
+## <a name="remarks"></a><span data-ttu-id="e4198-135">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e4198-135">Remarks</span></span>  
+ <span data-ttu-id="e4198-136">Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e4198-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie die Ablaufverfolgungsquelle `mySource` mithilfe des `<source>` \-Elements hinzugefügt wird und wie die Ebene für den Quellenschalter mit der Bezeichnung `sourceSwitch` festgelegt wird.  Außerdem wird ein Ablaufverfolgungslistener für eine Konsole hinzugefügt, der Ablaufverfolgungsinformationen an die Konsole ausgibt.  
+## <a name="example"></a><span data-ttu-id="e4198-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e4198-137">Example</span></span>  
+ <span data-ttu-id="e4198-138">Das folgende Beispiel zeigt, wie Sie die `<source>` Elemente für die Ablaufverfolgungsquelle `mySource` und zum Festlegen der Ebene für den Quellschalter mit dem Namen `sourceSwitch`.</span><span class="sxs-lookup"><span data-stu-id="e4198-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="e4198-139">Ein Konsolen-Ablaufverfolgungslistener hinzugefügt wird, die Ablaufverfolgungsinformationen in die Konsole schreibt.</span><span class="sxs-lookup"><span data-stu-id="e4198-139">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ Gibt eine Ablaufverfolgungsquelle an, die Ablaufverfolgungsmeldungen initiiert.
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Ablaufverfolgungs\- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a><span data-ttu-id="e4198-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e4198-140">See Also</span></span>  
+ [<span data-ttu-id="e4198-141">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="e4198-141">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="e4198-142">Ablaufverfolgungsschalter</span><span class="sxs-lookup"><span data-stu-id="e4198-142">Trace Switches</span></span>](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

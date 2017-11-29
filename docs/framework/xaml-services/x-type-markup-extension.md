@@ -1,93 +1,96 @@
 ---
-title: "x:Type Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:TypeExtension"
-  - "Type"
-  - "x:Type"
-  - "xType"
-  - "TypeExtension"
-helpviewer_keywords: 
-  - "x:Type markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Type markup extension"
-  - "XAML [XAML Services], TargetType attribute"
-  - "TargetType attribute [XAML Services]"
-  - "Type markup extension in XAML [XAML Services]"
+title: x:Type-Markuperweiterung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:TypeExtension
+- Type
+- x:Type
+- xType
+- TypeExtension
+helpviewer_keywords:
+- x:Type markup extension [XAML Services]
+- XAML [XAML Services], x:Type markup extension
+- XAML [XAML Services], TargetType attribute
+- TargetType attribute [XAML Services]
+- Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:Type Markup Extension
-Gibt das <xref:System.Type>\-Objekt in CLR an, das der zugrunde liegende Typ für einen angegebenen XAML\-Typ ist.  
+# <a name="xtype-markup-extension"></a><span data-ttu-id="fdaeb-102">x:Type-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="fdaeb-102">x:Type Markup Extension</span></span>
+<span data-ttu-id="fdaeb-103">Die CLR stellt <xref:System.Type> Objekt, das den zugrunde liegenden Typ für einen angegebenen XAML-Typ ist.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-103">Supplies the CLR <xref:System.Type> object that is the underlying type for a specified XAML type.</span></span>  
   
-## Verwendung von XAML\-Attributen  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="fdaeb-104">Verwendung von XAML-Attributen</span><span class="sxs-lookup"><span data-stu-id="fdaeb-104">XAML Attribute Usage</span></span>  
   
-```  
-<object property="{x:Type prefix:typeNameValue}" .../>  
-```  
-  
-## Verwendung von XAML\-Objektelementen  
-  
-```  
-<x:Type TypeName="prefix:typeNameValue"/>  
+```xaml  
+<object property="{x:Type prefix:typeNameValue}" .../>  
 ```  
   
-## XAML\-Werte  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="fdaeb-105">Verwendung von XAML-Objektelementen</span><span class="sxs-lookup"><span data-stu-id="fdaeb-105">XAML Object Element Usage</span></span>  
+  
+```xaml  
+<x:Type TypeName="prefix:typeNameValue"/>  
+```  
+  
+## <a name="xaml-values"></a><span data-ttu-id="fdaeb-106">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="fdaeb-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`prefix`|Optional.  Ein Präfix, das einen nicht standardmäßigen XAML\-Namespace zuordnet.  Die Angabe eines Präfix ist häufig nicht notwendig.  Siehe Hinweise.|  
-|`typeNameValue`|Erforderlich.  Ein Typname, der in den aktuellen standardmäßigen XAML\-Namespace aufgelöst werden kann, oder das angegebene zugeordnete Präfix, wenn `prefix` angegeben ist.|  
+|`prefix`|<span data-ttu-id="fdaeb-107">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-107">Optional.</span></span> <span data-ttu-id="fdaeb-108">Ein Präfix, das einen nicht standardmäßigen XAML-Namespace zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-108">A prefix that maps a non-default XAML namespace.</span></span> <span data-ttu-id="fdaeb-109">Angeben eines Präfix ist häufig nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-109">Specifying a prefix is frequently not necessary.</span></span> <span data-ttu-id="fdaeb-110">Siehe Hinweise.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-110">See Remarks.</span></span>|  
+|`typeNameValue`|<span data-ttu-id="fdaeb-111">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-111">Required.</span></span> <span data-ttu-id="fdaeb-112">Ein Typname der aktuellen XAML-Standardnamespace; oder das angegebene Präfix Wenn `prefix` angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-112">A type name resolvable to the current default XAML namespace; or the specified mapped prefix if `prefix` is supplied.</span></span>|  
   
-## Hinweise  
- Die `x:Type`\-Markuperweiterung verfügt über eine ähnliche Funktion wie der `typeof()`\-Operator in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] oder der `GetType`\-Operator in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+## <a name="remarks"></a><span data-ttu-id="fdaeb-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fdaeb-113">Remarks</span></span>  
+ <span data-ttu-id="fdaeb-114">Die `x:Type` Markuperweiterung hat eine ähnliche Funktion, die `typeof()` Operator in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] oder `GetType` Operator in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fdaeb-114">The `x:Type` markup extension has a similar function to the `typeof()` operator in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] or the `GetType` operator in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].</span></span>  
   
- Die `x:Type`\-Markuperweiterung gibt das Konvertierungsverhalten aus Zeichenfolgen für Eigenschaften an, die den Typ <xref:System.Type> verwenden.  Die Eingabe ist ein XAML\-Typ.  Die Beziehung zwischen dem Eingabe\-XAML\-Typ und der Ausgabe CLR <xref:System.Type> ist, dass die Ausgabe <xref:System.Type> der <xref:System.Xaml.XamlType.UnderlyingType%2A> der Eingabe <xref:System.Xaml.XamlType>, nach dem Nachschlagen des notwendigen <xref:System.Xaml.XamlType> auf der Grundlage des XAML\-Schemakontexts, ist und der <xref:System.Windows.Markup.IXamlTypeResolver>\-Dienst den Kontext liefert.  
+ <span data-ttu-id="fdaeb-115">Die `x:Type` Markuperweiterung gibt das Konvertierungsverhalten from-Zeichenfolgen für Eigenschaften, die der Typ akzeptieren <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-115">The `x:Type` markup extension supplies a from-string conversion behavior for properties that take the type <xref:System.Type>.</span></span> <span data-ttu-id="fdaeb-116">Die Eingabe ist ein XAML-Typ.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-116">The input is a XAML type.</span></span> <span data-ttu-id="fdaeb-117">Die Beziehung zwischen der Verwendung von XAML-Typ der Eingabe und die Ausgabe CLR <xref:System.Type> ist, die die Ausgabe <xref:System.Type> ist die <xref:System.Xaml.XamlType.UnderlyingType%2A> der Eingabe <xref:System.Xaml.XamlType>, nach der Suche nach den erforderlichen <xref:System.Xaml.XamlType> basierend auf XAML-Schemakontext und die <xref:System.Windows.Markup.IXamlTypeResolver>Dienst, der den Kontext bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-117">The relationship between the input XAML type and the output CLR <xref:System.Type> is that the output <xref:System.Type> is the <xref:System.Xaml.XamlType.UnderlyingType%2A> of the input <xref:System.Xaml.XamlType>, after looking up the necessary <xref:System.Xaml.XamlType> based on XAML schema context and the <xref:System.Windows.Markup.IXamlTypeResolver> service the context provides.</span></span>  
   
- In .NET Framework XAML Services wird die Handhabung dieser Markuperweiterung durch die <xref:System.Windows.Markup.TypeExtension>\-Klasse definiert.  
+ <span data-ttu-id="fdaeb-118">In .NET Framework XAML Services wird die Handhabung dieser Markuperweiterung von definiert die <xref:System.Windows.Markup.TypeExtension> Klasse.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-118">In .NET Framework XAML Services, the handling for this markup extension is defined by the <xref:System.Windows.Markup.TypeExtension> class.</span></span>  
   
- Bei bestimmten Frameworkimplementierungen sind einige Eigenschaften, die <xref:System.Type> als Wert annehmen, in der Lage, den Namen des Typs direkt \(den Zeichenfolgenwert des `Name` des Typs\) zu akzeptieren.  Solches Verhalten zu implementieren ist jedoch ein komplexes Szenario.  Beispiele finden Sie im folgenden Abschnitt "Hinweise zur WPF\-Verwendung".  
+ <span data-ttu-id="fdaeb-119">In bestimmten Frameworks Implementierungen, einige Eigenschaften, die akzeptieren <xref:System.Type> als ein Wert direkt den Namen des Typs akzeptieren kann (den Zeichenfolgenwert des Typs `Name`).</span><span class="sxs-lookup"><span data-stu-id="fdaeb-119">In specific framework implementations, some properties that take <xref:System.Type> as a value can accept the name of the type directly (the string value of the type `Name`).</span></span> <span data-ttu-id="fdaeb-120">Dieses Verhalten zu implementieren, ist jedoch ein komplexes Szenario.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-120">However, implementing this behavior is a complex scenario.</span></span> <span data-ttu-id="fdaeb-121">Beispiele finden Sie im Abschnitt "Hinweise zur WPF-Verwendung" folgt.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-121">For examples, see the "WPF Usage Notes" section that follows.</span></span>  
   
- Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax.  Das Zeichenfolgentoken, das auf die `x:Type`\-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.Markup.TypeExtension.TypeName%2A>\-Wert der zugrunde liegenden <xref:System.Windows.Markup.TypeExtension>\-Erweiterungsklasse zugeordnet.  Unter dem Standard\-XAML\-Schemakontext für .NET Framework\-XAML\-Dienste, die auf CLR\-Typen basieren, ist der Wert dieses Attributs entweder der <xref:System.Reflection.MemberInfo.Name%2A> des gewünschten Typs oder enthält diesen <xref:System.Reflection.MemberInfo.Name%2A>, dem ein Präfix für eine nicht standardmäßige XAML\-Namensbereichszuordnung vorangestellt ist.  
+ <span data-ttu-id="fdaeb-122">Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-122">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="fdaeb-123">Das Zeichenfolgentoken, das auf die `x:Type`-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.Markup.TypeExtension.TypeName%2A>-Wert der zugrunde liegenden <xref:System.Windows.Markup.TypeExtension>-Erweiterungsklasse zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-123">The string token provided after the `x:Type` identifier string is assigned as the <xref:System.Windows.Markup.TypeExtension.TypeName%2A> value of the underlying <xref:System.Windows.Markup.TypeExtension> extension class.</span></span> <span data-ttu-id="fdaeb-124">Unter Verwendung von XAML-Standardschemakontext für .NET Framework-XAML-Dienste, die auf CLR-Typen basiert, ist der Wert dieses Attributs die <xref:System.Reflection.MemberInfo.Name%2A> des gewünschten Typs oder die enthält <xref:System.Reflection.MemberInfo.Name%2A> für einen nicht standardmäßigen XAML-Namespace ein Präfix vorangestellt Zuordnung.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-124">Under the default XAML schema context for .NET Framework XAML Services, which is based on CLR types, the value of this attribute is either the <xref:System.Reflection.MemberInfo.Name%2A> of the desired type, or contains that <xref:System.Reflection.MemberInfo.Name%2A> preceded by a prefix for a non-default XAML namespace mapping.</span></span>  
   
- Die `x:Type`\-Markuperweiterung kann in der Objektelementsyntax verwendet werden.  In diesem Fall muss der Wert der <xref:System.Windows.Markup.TypeExtension.TypeName%2A>\-Eigenschaft angegeben werden, damit die Erweiterung ordnungsgemäß initialisiert wird.  
+ <span data-ttu-id="fdaeb-125">Die `x:Type` Markuperweiterung in die Syntax der Object-Element verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-125">The `x:Type` markup extension can be used in object element syntax.</span></span> <span data-ttu-id="fdaeb-126">In diesem Fall geben Sie den Wert der <xref:System.Windows.Markup.TypeExtension.TypeName%2A> Eigenschaft ist erforderlich, um die Erweiterung zu initialisieren.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-126">In this case, specifying the value of the <xref:System.Windows.Markup.TypeExtension.TypeName%2A> property is required to properly initialize the extension.</span></span>  
   
- Die `x:Type`\-Markuperweiterung kann auch als ausführliches Attribut verwendet werden. Allerdings ist diese Verwendung unüblich: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ <span data-ttu-id="fdaeb-127">Die `x:Type` Markuperweiterung kann auch als verbose-Attribut verwendet werden; diese Verwendung ist jedoch nicht typisch: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`</span><span class="sxs-lookup"><span data-stu-id="fdaeb-127">The `x:Type` markup extension can also be used as a verbose attribute; however this use is not typical: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`</span></span>  
   
-## Hinweise zur WPF\-Verwendung  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="fdaeb-128">Hinweise zur WPF-Verwendung</span><span class="sxs-lookup"><span data-stu-id="fdaeb-128">WPF Usage Notes</span></span>  
   
-### Standardmäßige XAML\-Namespaces und Namespacezuordnung  
- Der Standard\-XAML\-Namespace für WPF\-Programmierung enthält die meisten der XAML\-Typen, die Sie für typische XAML\-Szenarien benötigen, daher können Sie beim Verweisen auf XAML\-Typwerte oft Präfixe vermeiden.  Sie müssen möglicherweise ein Präfix zuordnen, wenn Sie auf einen Typ einer benutzerdefinierten Assembly verweisen, oder bei Typen, die in einer WPF\-Assembly vorliegen, aber aus einem CLR\-Namespace stammen, der nicht dem XAML\-Standardnamespace zugeordnet war.  Weitere Informationen über Präfixe, XAML\-Namespaces und das Zuordnen von CLR\-Namespaces finden Sie unter [XAML\-Namespaces und Namespacezuordnung für WPF\-XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+### <a name="default-xaml-namespace-and-type-mapping"></a><span data-ttu-id="fdaeb-129">Standard-XAML-Namespace und Zuordnung</span><span class="sxs-lookup"><span data-stu-id="fdaeb-129">Default XAML Namespace and Type Mapping</span></span>  
+ <span data-ttu-id="fdaeb-130">Die Verwendung von XAML-Standardnamespace für WPF-Programmierung enthält die meisten XAML-Typen für typische Verwendung von XAML-Szenarien benötigten; aus diesem Grund können Sie häufig Präfixe vermeiden, wenn XAML-Werte zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-130">The default XAML namespace for WPF programming contains most of the XAML types you need for typical XAML scenarios; therefore, you can often avoid prefixes when referencing XAML type values.</span></span> <span data-ttu-id="fdaeb-131">Sie müssen möglicherweise ein Präfix zuordnen, wenn Sie einen Typ verweist, aus einer benutzerdefinierten Assembly oder für Typen, die in einer WPF-Assembly vorhanden sein, aber von einem CLR-Namespace, der nicht dem XAML-Standardnamespace zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-131">You might need to map a prefix if you are referencing a type from a custom assembly or for types that exist in a WPF assembly but are from a CLR namespace that was not mapped to the default XAML namespace.</span></span> <span data-ttu-id="fdaeb-132">Weitere Informationen über Präfixe, XAML-Namespaces und Zuordnen von CLR-Namespaces finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF-XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="fdaeb-132">For more information about prefixes, XAML namespaces, and mapping CLR namespaces, see [XAML Namespaces and Namespace Mapping for WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).</span></span>  
   
-### Geben Sie Eigenschaften an, die Typnamen\-Als\-Zeichenfolge unterstützen  
- WPF unterstützt Techniken, die das Angeben des Werts einiger Eigenschaften des Typs <xref:System.Type>, ohne die Verwendung einer `x:Type`\-Markuperweiterung zu erfordern.  Stattdessen können Sie den Wert als Zeichenfolge angeben, die den Typ benennt.  Beispiele dafür sind <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> und <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>.  Unterstützung für dieses Verhalten wird nicht durch Typkonverter oder Markuperweiterungen bereitgestellt.  Stattdessen ist dies ein durch <xref:System.Windows.FrameworkElementFactory> implementiertes Aufschiebungsverhalten.  
+### <a name="type-properties-that-support-typename-as-string"></a><span data-ttu-id="fdaeb-133">Geben Sie die Eigenschaften dieser Unterstützung Typename-als-Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="fdaeb-133">Type Properties That Support Typename-as-String</span></span>  
+ <span data-ttu-id="fdaeb-134">WPF unterstützt Techniken, mit denen die Angabe des Werts einiger Eigenschaften des Typs <xref:System.Type> ohne eine `x:Type` Markuperweiterungsverwendung.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-134">WPF supports techniques that enable specifying the value of some properties of type <xref:System.Type> without requiring an `x:Type` markup extension usage.</span></span> <span data-ttu-id="fdaeb-135">Stattdessen können Sie den Wert als Zeichenfolge angeben, die den Typ benennt.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-135">Instead, you can specify the value as a string that names the type.</span></span> <span data-ttu-id="fdaeb-136">Beispiele hierfür sind <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> und <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-136">Examples of this are <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> and <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="fdaeb-137">Unterstützung für dieses Verhalten wird nicht durch den Einsatz von Typkonvertern oder Markuperweiterungen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-137">Support for this behavior is not provided through either type converters or markup extensions.</span></span> <span data-ttu-id="fdaeb-138">Stattdessen ist dies ein Deferral-Verhalten über implementiert <xref:System.Windows.FrameworkElementFactory>.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-138">Instead, this is a deferral behavior implemented through <xref:System.Windows.FrameworkElementFactory>.</span></span>  
   
- Silverlight unterstützt eine ähnliche Konvention.  Tatsächlich unterstützt Silverlight derzeit `{x:Type}` nicht in der XAML\-Sprachunterstützung und akzeptiert keine `{x:Type}`\- Verwendungen außerhalb bestimmter Umstände, die WPF\-Silverlight XAML\-Migration unterstützen sollen.  Daher ist das Verhalten "Typname\-Als\-Zeichenfolge" in alle systemeigenen Eigenschaftenauswertung von Silverlight integriert, in denen <xref:System.Type> der Wert ist.  
+ <span data-ttu-id="fdaeb-139">Silverlight unterstützt eine ähnliche Konvention.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-139">Silverlight supports a similar convention.</span></span> <span data-ttu-id="fdaeb-140">In der Tat Silverlight unterstützt derzeit keine `{x:Type}` in der XAML-sprachunterstützung und akzeptiert keine `{x:Type}` Verwendungen außerhalb von wenigen Fällen, die zur Unterstützung von XAML-WPF-Silverlight Migration vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-140">In fact, Silverlight does not currently support `{x:Type}` in its XAML language support, and does not accept `{x:Type}` usages outside of a few circumstances that are intended to support WPF-Silverlight XAML migration.</span></span> <span data-ttu-id="fdaeb-141">Aus diesem Grund ist das Verhalten der Typname als Zeichenfolge in alle Silverlight-Eigenschaft "native"-Evaluierung integriert, in dem eine <xref:System.Type> ist der Wert.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-141">Therefore, the typename-as-string behavior is built-in to all Silverlight native property evaluation where a <xref:System.Type> is the value.</span></span>  
   
-## XAML 2009  
- XAML 2009 bietet zusätzliche Unterstützung für generische Typen und ändert das Funktionsverhalten von `x:TypeArguments` und `x:Type`, um diese Unterstützung zu bieten.  
+## <a name="xaml-2009"></a><span data-ttu-id="fdaeb-142">XAML 2009</span><span class="sxs-lookup"><span data-stu-id="fdaeb-142">XAML 2009</span></span>  
+ <span data-ttu-id="fdaeb-143">XAML 2009 bietet zusätzliche Unterstützung für generische Typen und das Funktionsverhalten von ändert `x:TypeArguments` und `x:Type` zur Bereitstellung dieser Unterstützung.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-143">XAML 2009 provides additional support for generic types and modifies the feature behavior of `x:TypeArguments` and `x:Type` to provide this support.</span></span>  
   
--   `x:TypeArguments` und das zugeordnete Objektelement für eine generische Objektinstanziierung können sich in anderen Elementen als den Stammelementen befinden.  Weitere Informationen finden Sie im Abschnitt "XAML 2009" von [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   <span data-ttu-id="fdaeb-144">`x:TypeArguments`und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-144">`x:TypeArguments` and the associated object element for a generic object instantiation can be on elements other than the root.</span></span> <span data-ttu-id="fdaeb-145">Weitere Informationen finden Sie im Abschnitt "XAML 2009" von [X: TypeArguments-Direktive](../../../docs/framework/xaml-services/x-typearguments-directive.md).</span><span class="sxs-lookup"><span data-stu-id="fdaeb-145">For more information, see the "XAML 2009" section of [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).</span></span>  
   
--   XAML 2009 unterstützt eine Syntax zum Angeben einer Einschränkung für den generischen Typ in Markup.  Dies kann von `x:TypeArguments`, von `x:Type` oder von den zwei Funktionen zusammen verwendet werden.  
+-   <span data-ttu-id="fdaeb-146">XAML 2009 unterstützt eine Syntax zum Angeben von Einschränkung eines generischen Typs in Markup.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-146">XAML 2009 supports a syntax for specifying a generic type's constraint in markup.</span></span> <span data-ttu-id="fdaeb-147">Dies kann verwendet werden, durch `x:TypeArguments`, von `x:Type`, oder indem Sie die beiden Funktionen sollten in Kombination.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-147">This can be used by `x:TypeArguments`, by `x:Type`, or by the two features in combination.</span></span>  
   
--   Die WPF\-XAML\-Implementierung fügt beim Verarbeiten von XAML 2009 für Ladevorgänge diese Funktion auch dem impliziten Typkonvertierungsverhalten für bestimmte Frameworkeigenschaften hinzu, die den Typ <xref:System.Type> verwenden.  
+-   <span data-ttu-id="fdaeb-148">WPF-XAML-Implementierung, die bei der Verarbeitung von XAML 2009 für Load auch diese Funktion auf die implizite Typkonvertierungsverhalten für bestimmte Frameworkeigenschaften sorgt, mit dem Typ <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-148">WPF XAML implementation when processing XAML 2009 for load also adds this capability to the implicit type conversion behavior for certain framework properties that use type <xref:System.Type>.</span></span>  
   
- In WPF können Sie XAML 2009\-Funktionen verwenden, jedoch nur für Loose XAML, und nicht für markupkompiliertes XAML.  Markupkompilierte XAML für WPF und die BAML\-Form von XAML unterstützen die XAML 2009\-Schlüsselwörter und \-Funktionen derzeit nicht.  
+ <span data-ttu-id="fdaeb-149">In WPF können Sie XAML 2009-Funktionen verwenden, jedoch nur für loose XAML (, das nicht markupkompiliert ist).</span><span class="sxs-lookup"><span data-stu-id="fdaeb-149">In WPF, you can use XAML 2009 features but only for loose XAML (XAML that is not markup-compiled).</span></span> <span data-ttu-id="fdaeb-150">Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.</span><span class="sxs-lookup"><span data-stu-id="fdaeb-150">Markup-compiled XAML for WPF and the BAML form of XAML do not currently support the XAML 2009 keywords and features.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Style>   
- [Erstellen von Formaten und Vorlagen](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
- [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Markuperweiterungen und WPF\-XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="fdaeb-151">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fdaeb-151">See Also</span></span>  
+ <xref:System.Windows.Style>  
+ [<span data-ttu-id="fdaeb-152">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="fdaeb-152">Styling and Templating</span></span>](../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="fdaeb-153">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="fdaeb-153">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="fdaeb-154">Markuperweiterungen und WPF-XAML</span><span class="sxs-lookup"><span data-stu-id="fdaeb-154">Markup Extensions and WPF XAML</span></span>](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

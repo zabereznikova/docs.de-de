@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5587606-f2f3-46f8-9e76-cb8ad83088bd
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b8b03fc3235c2e0f733b213e5e1651df704dd8a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison
-System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison  
+# <a name="systemservicemodelchannelsmsmqpoisonmessagemovedpoison"></a><span data-ttu-id="1c510-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="1c510-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>
+<span data-ttu-id="1c510-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="1c510-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>  
   
-## Beschreibung  
- Die beschädigte Nachricht wurde in die Unterwarteschlange für beschädigte Nachrichten verschoben.  
+## <a name="description"></a><span data-ttu-id="1c510-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1c510-104">Description</span></span>  
+ <span data-ttu-id="1c510-105">Die beschädigte Nachricht wurde in die Unterwarteschlange für beschädigte Nachrichten verschoben.</span><span class="sxs-lookup"><span data-stu-id="1c510-105">Poison message moved to the poison sub-queue.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1c510-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c510-106">See Also</span></span>  
+ [<span data-ttu-id="1c510-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="1c510-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1c510-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="1c510-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="1c510-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="1c510-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

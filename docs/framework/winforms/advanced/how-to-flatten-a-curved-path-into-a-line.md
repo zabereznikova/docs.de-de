@@ -1,40 +1,40 @@
 ---
-title: "Gewusst wie: Abflachen eines Kurvenpfads zu einer Linie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kurven, Abflachen"
-  - "Zeichnen, Abflachen von Kurven"
-  - "Flatten-Methode"
-  - "Grafiken, Abflachen von Kurven zu Linien"
-  - "GraphicsPath-Objekt"
-  - "Pfade, Abflachen"
+title: 'Gewusst wie: Abflachen eines Kurvenpfads zu einer Linie'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], flattening curves into lines
+- curves [Windows Forms], flattening
+- GraphicsPath object
+- paths [Windows Forms], flattening
+- drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 62dedc987c2b622dc3f3aa81dac3cdea6dd75740
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abflachen eines Kurvenpfads zu einer Linie
-Ein <xref:System.Drawing.Drawing2D.GraphicsPath>\-Objekt speichert eine Sequenz von Linien und Bézier\-Splines.  Sie können einem Pfad verschiedene Arten von Kurven \(Ellipsen, Bögen, kardinale Splines\) hinzufügen, aber jede Kurve wird in einen Bézier\-Spline konvertiert, bevor sie in dem Pfad gespeichert wird.  Beim Abflachen eines Pfades wird jeder Bézier\-Spline in dem Pfad in eine Sequenz von geraden Linien konvertiert.  Die folgende Abbildung zeigt einen Pfad vor und nach dem Abflachen.  
+# <a name="how-to-flatten-a-curved-path-into-a-line"></a><span data-ttu-id="909b2-102">Gewusst wie: Abflachen eines Kurvenpfads zu einer Linie</span><span class="sxs-lookup"><span data-stu-id="909b2-102">How to: Flatten a Curved Path into a Line</span></span>
+<span data-ttu-id="909b2-103">Ein <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt eine Sequenz von Linien und Bézier-Splines speichert.</span><span class="sxs-lookup"><span data-stu-id="909b2-103">A <xref:System.Drawing.Drawing2D.GraphicsPath> object stores a sequence of lines and Bézier splines.</span></span> <span data-ttu-id="909b2-104">Sie können mehrere Typen von Kurven (Ellipsen, Bögen, kardinale Splines) hinzufügen, um einen Pfad, aber jede Kurve wird in eine Bézier-Spline konvertiert, vor dem Speichern im Pfad.</span><span class="sxs-lookup"><span data-stu-id="909b2-104">You can add several types of curves (ellipses, arcs, cardinal splines) to a path, but each curve is converted to a Bézier spline before it is stored in the path.</span></span> <span data-ttu-id="909b2-105">Reduzieren einen Pfad besteht aus einzelnen Bézier-Splines in den Pfad in eine Sequenz von gerade Linien konvertieren.</span><span class="sxs-lookup"><span data-stu-id="909b2-105">Flattening a path consists of converting each Bézier spline in the path to a sequence of straight lines.</span></span> <span data-ttu-id="909b2-106">Die folgende Abbildung zeigt einen Pfad vor und nach vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="909b2-106">The following illustration shows a path before and after flattening.</span></span>  
   
- ![Gerade Linien und Kurven](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.png "AboutGdip02\_Art32A")  
+ <span data-ttu-id="909b2-107">![Gerade Linien und Kurven](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span><span class="sxs-lookup"><span data-stu-id="909b2-107">![Straight Lines and Curves](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")</span></span>  
   
-### So flachen Sie einen Pfad ab  
+### <a name="to-flatten-a-path"></a><span data-ttu-id="909b2-108">So vereinfachen Sie einen Pfad</span><span class="sxs-lookup"><span data-stu-id="909b2-108">To Flatten a Path</span></span>  
   
--   Rufen Sie die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A>\-Methode eines <xref:System.Drawing.Drawing2D.GraphicsPath>\-Objekts auf.  Die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A>\-Methode erhält ein Flachheitsargument, das den maximalen Abstand zwischen dem abgeflachten Pfad und dem ursprünglichen Pfad angibt.  
+-   <span data-ttu-id="909b2-109">Rufen Sie die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Methode von einer <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt.</span><span class="sxs-lookup"><span data-stu-id="909b2-109">call the <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method of a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="909b2-110">Die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> -Methode erhält ein Flachheitsargument, der den maximalen Abstand zwischen dem vereinfachten und der ursprüngliche Pfad angibt.</span><span class="sxs-lookup"><span data-stu-id="909b2-110">The <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> method receives a flatness argument that specifies the maximum distance between the flattened path and the original path.</span></span>  
   
-## Siehe auch  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Erstellen und Zeichnen von Pfaden](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a><span data-ttu-id="909b2-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="909b2-111">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ [<span data-ttu-id="909b2-112">Linien, Kurven und Formen</span><span class="sxs-lookup"><span data-stu-id="909b2-112">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="909b2-113">Erstellen und Zeichnen von Pfaden</span><span class="sxs-lookup"><span data-stu-id="909b2-113">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

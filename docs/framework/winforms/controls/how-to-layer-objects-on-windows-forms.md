@@ -1,55 +1,58 @@
 ---
-title: "Gewusst wie: &#220;berlagern von Objekten in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Schichten"
-  - "Steuerelemente [Windows Forms], Positionieren"
-  - "Windows Forms-Steuerelemente, Schichten"
-  - "Z-Reihenfolge"
-  - "Z-Reihenfolge"
+title: "Gewusst wie: Überlagern von Objekten in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms controls, layering
+- controls [Windows Forms], layering
+- z order
+- controls [Windows Forms], positioning
+- z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bda4cb3641ff890646614af35d38ff13621cc16b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#220;berlagern von Objekten in Windows&#160;Forms
-Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem MDI\-Formular \(Multiple Document Interface \= Mehrfachdokumentschnittstelle\) arbeiten, empfiehlt es sich häufig, Steuerelemente und untergeordnete Formulare zu überlagern, sodass mehrschichtige Benutzeroberflächen \(UI\) entstehen.  Um die Steuerelemente und Fenster innerhalb einer Gruppe zu verschieben und zu kontrollieren, passen Sie deren Z\-Anordnung an.  Bei der *Z\-Anordnung* handelt es sich um die visuelle Überlagerung von Steuerelementen auf einem Formular entlang der Z\-Achse des Formulars \(Tiefenebene\).  Das Fenster, das zuoberst in der Z\-Anordnung angelegt ist, überlappt alle anderen Fenster.  Alle anderen Fenster überlappen wiederum das Fenster, das sich zuunterst in der Z\-Anordnung befindet.  
+# <a name="how-to-layer-objects-on-windows-forms"></a><span data-ttu-id="ea10f-102">Gewusst wie: Überlagern von Objekten in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ea10f-102">How to: Layer Objects on Windows Forms</span></span>
+<span data-ttu-id="ea10f-103">Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem Formular der multiple Document Interface (MDI arbeiten), sollten Sie häufig überlagern Sie die Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="ea10f-103">When you create a complex user interface, or work with a multiple document interface (MDI) form, you will often want to layer both controls and child forms to create more complex user interfaces (UI).</span></span> <span data-ttu-id="ea10f-104">Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie ihre Z-Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="ea10f-104">To move and keep track of controls and windows within the context of a group, you manipulate their z-order.</span></span> <span data-ttu-id="ea10f-105">*Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular auf das Formular z-Achse (Tiefe).</span><span class="sxs-lookup"><span data-stu-id="ea10f-105">*Z-order* is the visual layering of controls on a form along the form's z-axis (depth).</span></span> <span data-ttu-id="ea10f-106">Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern.</span><span class="sxs-lookup"><span data-stu-id="ea10f-106">The window at the top of the z-order overlaps all other windows.</span></span> <span data-ttu-id="ea10f-107">Alle überlappen anderen Fenster am unteren Rand der Z-Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="ea10f-107">All other windows overlap the window at the bottom of the z-order.</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="ea10f-108">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="ea10f-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="ea10f-109">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="ea10f-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="ea10f-110">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="ea10f-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So überlagern Sie Steuerelemente zur Entwurfszeit  
+### <a name="to-layer-controls-at-design-time"></a><span data-ttu-id="ea10f-111">Auf Ebene-Steuerelementen zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="ea10f-111">To layer controls at design time</span></span>  
   
-1.  Markieren Sie ein zu überlagerndes Steuerelement.  
+1.  <span data-ttu-id="ea10f-112">Wählen Sie ein Steuerelement an die gewünschte Ebene.</span><span class="sxs-lookup"><span data-stu-id="ea10f-112">Select a control that you want to layer.</span></span>  
   
-2.  Zeigen Sie im Menü **Format**  auf **Reihenfolge**, und klicken Sie dann auf **In den Vordergrund** oder **In den Hintergrund**.  
+2.  <span data-ttu-id="ea10f-113">Auf der **Format** Sie im Menü **Reihenfolge**, und klicken Sie dann auf **in den Vordergrund** oder **in den Hintergrund**.</span><span class="sxs-lookup"><span data-stu-id="ea10f-113">On the **Format** menu, point to **Order**, and then click **Bring To Front** or **Send To Back**.</span></span>  
   
-### So überlagern Sie Steuerelemente programmgesteuert  
+### <a name="to-layer-controls-programmatically"></a><span data-ttu-id="ea10f-114">Layer-Steuerelemente programmgesteuert</span><span class="sxs-lookup"><span data-stu-id="ea10f-114">To layer controls programmatically</span></span>  
   
--   Verwenden Sie die <xref:System.Windows.Forms.Control.BringToFront%2A>\-Methode und die <xref:System.Windows.Forms.Control.SendToBack%2A>\-Methode, um die Z\-Anordnung der Steuerelemente zu ändern.  
+-   <span data-ttu-id="ea10f-115">Verwenden der <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden, um die Z-Reihenfolge der Steuerelemente zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="ea10f-115">Use the <xref:System.Windows.Forms.Control.BringToFront%2A> and <xref:System.Windows.Forms.Control.SendToBack%2A> methods to manipulate the z-order of the controls.</span></span>  
   
-     Falls sich beispielsweise das <xref:System.Windows.Forms.TextBox>\-Steuerelement `txtFirstName` unter einem anderen Steuerelement befindet, Sie es jedoch in den Vordergrund verlagern möchten, verwenden Sie folgenden Code:  
+     <span data-ttu-id="ea10f-116">Z. B. wenn ein <xref:System.Windows.Forms.TextBox> Steuerelement `txtFirstName`, wird unter einem anderen Steuerelement und möchten es im Vordergrund, verwenden Sie den folgenden Code:</span><span class="sxs-lookup"><span data-stu-id="ea10f-116">For example, if a <xref:System.Windows.Forms.TextBox> control, `txtFirstName`, is underneath another control and you want to have it on top, use the following code:</span></span>  
   
     ```vb  
     txtFirstName.BringToFront()  
-  
     ```  
   
     ```csharp  
     txtFirstName.BringToFront();  
-  
     ```  
   
     ```cpp  
@@ -57,11 +60,11 @@ Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem MDI\-Formula
     ```  
   
 > [!NOTE]
->  Windows Forms unterstützt die *Steuerelementkapselung*.  Bei der Steuerelementkapselung werden mehrere Steuerelemente innerhalb eines Steuerelements platziert, z. B. eine Reihe von <xref:System.Windows.Forms.RadioButton>\-Steuerelementen in einem <xref:System.Windows.Forms.GroupBox>\-Steuerelement.  Sie können die Steuerelemente dann innerhalb des aufnehmenden Steuerelements überlagern.  Beim Verschieben des Gruppenfelds werden automatisch auch die Steuerelemente verschoben, da sie in diesem Feld enthalten sind.  
+>  <span data-ttu-id="ea10f-117">Windows Forms unterstützt *steuern Containment*.</span><span class="sxs-lookup"><span data-stu-id="ea10f-117">Windows Forms supports *control containment*.</span></span> <span data-ttu-id="ea10f-118">Steuerelementcontainern umfasst eine Reihe von Steuerelementen in einem enthaltenden Steuerelement, z. B. eine Anzahl von platzieren <xref:System.Windows.Forms.RadioButton> steuert innerhalb einer <xref:System.Windows.Forms.GroupBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ea10f-118">Control containment involves placing a number of controls within a containing control, such as a number of <xref:System.Windows.Forms.RadioButton> controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="ea10f-119">Sie können dann die Steuerelemente innerhalb des enthaltenden Steuerelements Ebene.</span><span class="sxs-lookup"><span data-stu-id="ea10f-119">You can then layer the controls within the containing control.</span></span> <span data-ttu-id="ea10f-120">Das Gruppenfeld verschieben, die Steuerelemente auch, da sie darin enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="ea10f-120">Moving the group box moves the controls as well, because they are contained inside it.</span></span>  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="ea10f-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea10f-121">See Also</span></span>  
+ [<span data-ttu-id="ea10f-122">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="ea10f-122">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="ea10f-123">Anordnen von Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ea10f-123">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="ea10f-124">Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente</span><span class="sxs-lookup"><span data-stu-id="ea10f-124">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="ea10f-125">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="ea10f-125">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="ea10f-126">Windows Forms-Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="ea10f-126">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

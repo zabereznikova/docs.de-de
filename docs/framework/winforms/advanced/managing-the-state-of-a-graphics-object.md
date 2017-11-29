@@ -1,36 +1,39 @@
 ---
-title: "Verwalten des Zustands eines Graphics-Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Grafiken, Clipping"
-  - "Grafiken, Verwalten des Zustands"
+title: Verwalten des Zustands eines Graphics-Objekts
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], managing state
+- graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 438243d16d8031d99e27993cadb44fd58bbec0b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwalten des Zustands eines Graphics-Objekts
-Die <xref:System.Drawing.Graphics>\-Klasse ist eine zentrale Komponente von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  Zum Zeichnen rufen Sie ein <xref:System.Drawing.Graphics>\-Objekt ab, legen seine Eigenschaften fest und rufen die zugehörigen Methoden auf \(<xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A> u. ä.\).  
+# <a name="managing-the-state-of-a-graphics-object"></a><span data-ttu-id="c2809-102">Verwalten des Zustands eines Graphics-Objekts</span><span class="sxs-lookup"><span data-stu-id="c2809-102">Managing the State of a Graphics Object</span></span>
+<span data-ttu-id="c2809-103">Die <xref:System.Drawing.Graphics> Klasse ist der Kern von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c2809-103">The <xref:System.Drawing.Graphics> class is at the heart of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span> <span data-ttu-id="c2809-104">Zum Zeichnen, erhalten Sie eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und ihre Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).</span><span class="sxs-lookup"><span data-stu-id="c2809-104">To draw anything, you obtain a <xref:System.Drawing.Graphics> object, set its properties, and call its methods <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, and the like).</span></span>  
   
- Im folgenden Beispiel wird die <xref:System.Drawing.Graphics.DrawRectangle%2A>\-Methode eines <xref:System.Drawing.Graphics>\-Objekts aufgerufen.  Als erstes Argument wird ein <xref:System.Drawing.Pen>\-Objekt an die <xref:System.Drawing.Graphics.DrawRectangle%2A>\-Methode übergeben.  
+ <span data-ttu-id="c2809-105">Im folgenden Beispiel wird die <xref:System.Drawing.Graphics.DrawRectangle%2A> Methode von einem <xref:System.Drawing.Graphics> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-105">The following example calls the <xref:System.Drawing.Graphics.DrawRectangle%2A> method of a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c2809-106">Das erste Argument zu übergeben, um die <xref:System.Drawing.Graphics.DrawRectangle%2A> Methode ist ein <xref:System.Drawing.Pen> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-106">The first argument passed to the <xref:System.Drawing.Graphics.DrawRectangle%2A> method is a <xref:System.Drawing.Pen> object.</span></span>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
 Dim pen As New Pen(Color.Blue) ' Opaque blue  
 graphics.DrawRectangle(pen, 10, 10, 200, 100)  
-  
 ```  
   
 ```csharp  
@@ -39,19 +42,19 @@ Pen pen = new Pen(Color.Blue);  // Opaque blue
 graphics.DrawRectangle(pen, 10, 10, 200, 100);  
 ```  
   
-## Grafikstatus  
- Ein <xref:System.Drawing.Graphics>\-Objekt stellt nicht nur Zeichenmethoden wie <xref:System.Drawing.Graphics.DrawLine%2A> und <xref:System.Drawing.Graphics.DrawRectangle%2A> bereit.  Das <xref:System.Drawing.Graphics>\-Objekt dient darüber hinaus zur Verwaltung des Grafikzustands, der in die folgenden Kategorien untergliedert werden kann:  
+## <a name="graphics-state"></a><span data-ttu-id="c2809-107">Grafikzustand</span><span class="sxs-lookup"><span data-stu-id="c2809-107">Graphics State</span></span>  
+ <span data-ttu-id="c2809-108">Ein <xref:System.Drawing.Graphics> Objekt bietet mehr als zeichnen Methoden wie z. B. <xref:System.Drawing.Graphics.DrawLine%2A> und <xref:System.Drawing.Graphics.DrawRectangle%2A>.</span><span class="sxs-lookup"><span data-stu-id="c2809-108">A <xref:System.Drawing.Graphics> object does more than provide drawing methods, such as <xref:System.Drawing.Graphics.DrawLine%2A> and <xref:System.Drawing.Graphics.DrawRectangle%2A>.</span></span> <span data-ttu-id="c2809-109">Ein <xref:System.Drawing.Graphics> Objekt verwaltet auch Grafikzustand, die in die folgenden Kategorien unterteilt werden können:</span><span class="sxs-lookup"><span data-stu-id="c2809-109">A <xref:System.Drawing.Graphics> object also maintains graphics state, which can be divided into the following categories:</span></span>  
   
--   Qualitätseinstellungen  
+-   <span data-ttu-id="c2809-110">Quality-Einstellungen</span><span class="sxs-lookup"><span data-stu-id="c2809-110">Quality settings</span></span>  
   
--   Transformationen  
+-   <span data-ttu-id="c2809-111">Transformationen</span><span class="sxs-lookup"><span data-stu-id="c2809-111">Transformations</span></span>  
   
--   Clippingbereich  
+-   <span data-ttu-id="c2809-112">Clippingbereichs</span><span class="sxs-lookup"><span data-stu-id="c2809-112">Clipping region</span></span>  
   
-### Qualitätseinstellungen  
- Ein <xref:System.Drawing.Graphics>\-Objekt verfügt über mehrere Eigenschaften, die die Qualität der gezeichneten Elemente beeinflussen.  Sie können beispielsweise die <xref:System.Drawing.Graphics.TextRenderingHint%2A>\-Eigenschaft festlegen, um den auf Text angewendeten Antialiasingtyp \(falls vorhanden\) anzugeben.  Andere Eigenschaften, die die Qualität beeinflussen, sind <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A> und <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+### <a name="quality-settings"></a><span data-ttu-id="c2809-113">Quality-Einstellungen</span><span class="sxs-lookup"><span data-stu-id="c2809-113">Quality Settings</span></span>  
+ <span data-ttu-id="c2809-114">Ein <xref:System.Drawing.Graphics> Objekt verfügt über verschiedene Eigenschaften, die die Qualität der Elemente beeinflussen, die gezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="c2809-114">A <xref:System.Drawing.Graphics> object has several properties that influence the quality of the items that are drawn.</span></span> <span data-ttu-id="c2809-115">Sie können z. B. Festlegen der <xref:System.Drawing.Graphics.TextRenderingHint%2A> Eigenschaft, um den Typ des Antialiasing (sofern vorhanden) auf einen Text angewendete anzugeben.</span><span class="sxs-lookup"><span data-stu-id="c2809-115">For example, you can set the <xref:System.Drawing.Graphics.TextRenderingHint%2A> property to specify the type of antialiasing (if any) applied to text.</span></span> <span data-ttu-id="c2809-116">Andere Eigenschaften, die Qualität beeinflussen, sind <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, und <xref:System.Drawing.Graphics.InterpolationMode%2A>.</span><span class="sxs-lookup"><span data-stu-id="c2809-116">Other properties that influence quality are <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, and <xref:System.Drawing.Graphics.InterpolationMode%2A>.</span></span>  
   
- Im folgenden Beispiel werden zwei Ellipsen gezeichnet: eine mit dem Glättungsmodus <xref:System.Drawing.Drawing2D.SmoothingMode> und eine andere mit dem Glättungsmodus <xref:System.Drawing.Drawing2D.SmoothingMode>:  
+ <span data-ttu-id="c2809-117">Im folgende Beispiel werden zwei Ellipsen, eine mit das Glättungsmodus gezeichnet <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> und eine mit das Glättungsmodus <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:</span><span class="sxs-lookup"><span data-stu-id="c2809-117">The following example draws two ellipses, one with the smoothing mode set to <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> and one with the smoothing mode set to <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:</span></span>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -61,7 +64,6 @@ graphics.SmoothingMode = SmoothingMode.AntiAlias
 graphics.DrawEllipse(pen, 0, 0, 200, 100)  
 graphics.SmoothingMode = SmoothingMode.HighSpeed  
 graphics.DrawEllipse(pen, 0, 150, 200, 100)  
-  
 ```  
   
 ```csharp  
@@ -74,10 +76,10 @@ graphics.SmoothingMode = SmoothingMode.HighSpeed;
 graphics.DrawEllipse(pen, 0, 150, 200, 100);  
 ```  
   
-### Transformationen  
- Durch ein <xref:System.Drawing.Graphics>\-Objekt werden zwei Transformationen verwaltet \(die globale Transformation und die Seitentransformation\), die auf alle von diesem <xref:System.Drawing.Graphics>\-Objekt gezeichneten Elemente angewendet werden.  In der globalen Transformation können alle affinen Transformationen gespeichert werden.  Zu den affinen Transformationen gehören Skalierung, Drehung, Spiegelung, Zerrung und Verschiebung.  Die Seitentransformation kann zum Skalieren sowie zum Ändern von Maßeinheiten \(z. B. von Pixel in Zoll\) verwendet werden.  Weitere Informationen finden Sie unter [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+### <a name="transformations"></a><span data-ttu-id="c2809-118">Transformationen</span><span class="sxs-lookup"><span data-stu-id="c2809-118">Transformations</span></span>  
+ <span data-ttu-id="c2809-119">Ein <xref:System.Drawing.Graphics> -Objekt verwaltet zwei Transformationen (Seite und www), die für alle Elemente, die gezeichnet wird, angewendet werden <xref:System.Drawing.Graphics> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-119">A <xref:System.Drawing.Graphics> object maintains two transformations (world and page) that are applied to all items drawn by that <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c2809-120">Alle affinen Transformationen kann in der globalen Transformation gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="c2809-120">Any affine transformation can be stored in the world transformation.</span></span> <span data-ttu-id="c2809-121">Affine Transformationen gehören Skalierung, drehen, spiegeln, neigen und übersetzen.</span><span class="sxs-lookup"><span data-stu-id="c2809-121">Affine transformations include scaling, rotating, reflecting, skewing, and translating.</span></span> <span data-ttu-id="c2809-122">Die Seitentransformation kann für die Skalierung sowie zum Ändern der Einheiten (z. B. in Pixel in Zoll) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c2809-122">The page transformation can be used for scaling and for changing units (for example, pixels to inches).</span></span> <span data-ttu-id="c2809-123">Weitere Informationen finden Sie unter [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).</span><span class="sxs-lookup"><span data-stu-id="c2809-123">For more information, see [Coordinate Systems and Transformations](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).</span></span>  
   
- Im folgenden Beispiel werden die globale Transformation und die Seitentransformation eines <xref:System.Drawing.Graphics>\-Objekts festgelegt.  Die globale Transformation wird auf einen Drehwinkel von 30 Grad eingestellt.  Die Seitentransformation wird so definiert, dass die an die zweite <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode übergebenen Koordinaten als Millimeter behandelt werden und nicht als Pixel.  Der Code enthält zwei identische Aufrufe der <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Methode.  Die globale Transformation wird lediglich auf den ersten <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Aufruf angewendet, während auf den zweiten <xref:System.Drawing.Graphics.DrawEllipse%2A>\-Aufruf beide Transformationen \(globale Transformation und Seitentransformation\) angewendet werden.  
+ <span data-ttu-id="c2809-124">Im folgenden Beispiel wird die World Transformation und der Seitentransformation ein <xref:System.Drawing.Graphics> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-124">The following example sets the world and page transformations of a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c2809-125">Die globale Transformation wird auf einen Drehwinkel von 30 Grad festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c2809-125">The world transformation is set to a 30-degree rotation.</span></span> <span data-ttu-id="c2809-126">Die Seitentransformation wird festgelegt, sodass die Koordinaten der zweiten übergeben <xref:System.Drawing.Graphics.DrawEllipse%2A> als Millimeter statt Pixel behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="c2809-126">The page transformation is set so that the coordinates passed to the second <xref:System.Drawing.Graphics.DrawEllipse%2A> will be treated as millimeters instead of pixels.</span></span> <span data-ttu-id="c2809-127">Der Code enthält zwei identische Aufrufe der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="c2809-127">The code makes two identical calls to the <xref:System.Drawing.Graphics.DrawEllipse%2A> method.</span></span> <span data-ttu-id="c2809-128">Die globale Transformation wird angewendet, mit dem ersten <xref:System.Drawing.Graphics.DrawEllipse%2A> Aufruf, und beide Transformationen (Seite und www) gelten für die zweite <xref:System.Drawing.Graphics.DrawEllipse%2A> aufrufen.</span><span class="sxs-lookup"><span data-stu-id="c2809-128">The world transformation is applied to the first <xref:System.Drawing.Graphics.DrawEllipse%2A> call, and both transformations (world and page) are applied to the second <xref:System.Drawing.Graphics.DrawEllipse%2A> call.</span></span>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -88,7 +90,6 @@ graphics.RotateTransform(30) ' world transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50)  
 graphics.PageUnit = GraphicsUnit.Millimeter ' page transformation  
 graphics.DrawEllipse(pen, 0, 0, 100, 50)  
-  
 ```  
   
 ```csharp  
@@ -102,14 +103,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- In der folgenden Abbildung sind die beiden Ellipsen dargestellt.  Beachten Sie, dass die 30\-Grad\-Drehung um den Ursprung des Koordinatensystems \(obere linke Ecke des Clientbereichs\) und nicht um die Mittelpunkte der Ellipsen erfolgt.  Außerdem bedeutet die Stiftbreite 1, dass für die erste Ellipse 1 Pixel und für die zweite Ellipse 1 Millimeter verwendet wird.  
+ <span data-ttu-id="c2809-129">Die folgende Abbildung zeigt zwei Ellipsen.</span><span class="sxs-lookup"><span data-stu-id="c2809-129">The following illustration shows the two ellipses.</span></span> <span data-ttu-id="c2809-130">Beachten Sie, dass die Drehung von 30 Grad, über den Ursprung des Koordinatensystems (linke obere Ecke des Clientbereichs), nicht über die Ressourcen der Schaltfläche mit den Auslassungszeichen ist.</span><span class="sxs-lookup"><span data-stu-id="c2809-130">Note that the 30-degree rotation is about the origin of the coordinate system (upper-left corner of the client area), not about the centers of the ellipses.</span></span> <span data-ttu-id="c2809-131">Beachten Sie außerdem, dass die Stiftbreite 1 für die zweite Ellipse 1 Pixel für die erste Ellipse und 1 Millimeter bedeutet.</span><span class="sxs-lookup"><span data-stu-id="c2809-131">Also note that the pen width of 1 means 1 pixel for the first ellipse and 1 millimeter for the second ellipse.</span></span>  
   
- ![Ovale](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ <span data-ttu-id="c2809-132">![Ovale](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")</span><span class="sxs-lookup"><span data-stu-id="c2809-132">![Ovals](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")</span></span>  
   
-### Clippingbereich  
- Durch das <xref:System.Drawing.Graphics>\-Objekt wird ein Clippingbereich verwaltet, der für alle von diesem <xref:System.Drawing.Graphics>\-Objekt gezeichneten Elemente gültig ist.  Der Clippingbereich kann durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A>\-Methode festgelegt werden.  
+### <a name="clipping-region"></a><span data-ttu-id="c2809-133">Clippingbereichs</span><span class="sxs-lookup"><span data-stu-id="c2809-133">Clipping Region</span></span>  
+ <span data-ttu-id="c2809-134">Ein <xref:System.Drawing.Graphics> -Objekt verwaltet einen Ausschneidebereich, die für alle Elemente, die gezeichnet wird, gilt <xref:System.Drawing.Graphics> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-134">A <xref:System.Drawing.Graphics> object maintains a clipping region that applies to all items drawn by that <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c2809-135">Sie können den Ausschneidebereich festlegen, durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="c2809-135">You can set the clipping region by calling the <xref:System.Drawing.Graphics.SetClip%2A> method.</span></span>  
   
- Im folgenden Beispiel wird ein Bereich in Form eines Pluszeichens gebildet, indem zwei Rechtecke zusammengeführt werden.  Dieser Bereich wird als Clippingbereich eines <xref:System.Drawing.Graphics>\-Objekts bezeichnet.  Anschließend werden durch den Code zwei Linien gezeichnet, die auf den Innenbereich des Clippingbereichs beschränkt sind.  
+ <span data-ttu-id="c2809-136">Das folgende Beispiel erstellt eine Region Plus geformten durch, die die Vereinigung zweier Rechtecke bilden.</span><span class="sxs-lookup"><span data-stu-id="c2809-136">The following example creates a plus-shaped region by forming the union of two rectangles.</span></span> <span data-ttu-id="c2809-137">Diese Region wird als den Ausschneidebereich festgelegt, dass ein <xref:System.Drawing.Graphics> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c2809-137">That region is designated as the clipping region of a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c2809-138">Der Code zeichnet dann zwei Zeilen, die auf das Innere des Clippingbereichs beschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="c2809-138">Then the code draws two lines that are restricted to the interior of the clipping region.</span></span>  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -121,7 +122,7 @@ Dim pen As New Pen(Color.Red, 5)
 Dim brush As New SolidBrush(Color.FromArgb(255, 180, 255, 255))  
   
 ' Create a plus-shaped region by forming the union of two rectangles.  
-Dim [region] As New [Region](../../../../amples/snippets/visualbasic/VS_Snippets_Wpf/ToolBarOrient_snip/visualbasic/toolbargraphics/new.bmp Rectangle(50, 0, 50, 150))  
+Dim [region] As New [Region](New Rectangle(50, 0, 50, 150))  
 [region].Union(New Rectangle(0, 50, 150, 50))  
 graphics.FillRegion(brush, [region])  
   
@@ -131,7 +132,6 @@ graphics.SetClip([region], CombineMode.Replace)
 ' Draw two clipped lines.  
 graphics.DrawLine(pen, 0, 30, 150, 160)  
 graphics.DrawLine(pen, 40, 20, 190, 150)  
-  
 ```  
   
 ```csharp  
@@ -156,10 +156,10 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- In der folgenden Abbildung sind die abgeschnittenen Linien dargestellt.  
+ <span data-ttu-id="c2809-139">Die folgende Abbildung zeigt die Zeilen abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="c2809-139">The following illustration shows the clipped lines.</span></span>  
   
- ![Beschränkter Clip&#45;Bereich](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ <span data-ttu-id="c2809-140">![Clip-Bereich beschränkt](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")</span><span class="sxs-lookup"><span data-stu-id="c2809-140">![Limited Clip Region](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")</span></span>  
   
-## Siehe auch  
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Verwenden geschachtelter Grafikcontainer](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+## <a name="see-also"></a><span data-ttu-id="c2809-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c2809-141">See Also</span></span>  
+ [<span data-ttu-id="c2809-142">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2809-142">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="c2809-143">Verwenden geschachtelter Grafikcontainer</span><span class="sxs-lookup"><span data-stu-id="c2809-143">Using Nested Graphics Containers</span></span>](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)

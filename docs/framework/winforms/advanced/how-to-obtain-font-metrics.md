@@ -1,66 +1,70 @@
 ---
-title: "Gewusst wie: Abrufen von Schriftarteigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schriftarteigenschaften, Abrufen"
-  - "Schriftarten, Abrufen der Eigenschaften"
+title: 'Gewusst wie: Abrufen von Schriftarteigenschaften'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], obtaining metrics
+- font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b45f3f903c02d056fc457b652b01fb7b59413a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen von Schriftarteigenschaften
-Die <xref:System.Drawing.FontFamily>\-Klasse bietet die folgenden Methoden zum Abrufen verschiedener Schriftarteigenschaften für eine bestimmte Kategorie\-\/Schriftschnittkombination:  
+# <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="773d4-102">Gewusst wie: Abrufen von Schriftarteigenschaften</span><span class="sxs-lookup"><span data-stu-id="773d4-102">How to: Obtain Font Metrics</span></span>
+<span data-ttu-id="773d4-103">Die <xref:System.Drawing.FontFamily> Klasse bietet die folgenden Methoden, die verschiedene Metriken für eine bestimmte Produktfamilie/Formatvorlage Kombination abrufen:</span><span class="sxs-lookup"><span data-stu-id="773d4-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>\(FontStyle\)  
+-   <span data-ttu-id="773d4-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="773d4-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>\(FontStyle\)  
+-   <span data-ttu-id="773d4-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="773d4-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>\(FontStyle\)  
+-   <span data-ttu-id="773d4-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="773d4-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>\(FontStyle\)  
+-   <span data-ttu-id="773d4-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="773d4-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)</span></span>  
   
- Alle von diesen Methoden zurückgegebenen Zahlen entsprechen Schriftentwurfseinheiten; sie sind daher unabhängig von Schriftgrad und Einheiten eines bestimmten <xref:System.Drawing.Font>\-Objekts.  
+ <span data-ttu-id="773d4-108">Von diesen Methoden zurückgegebenen Zahlen sind in Schriftentwurfseinheiten, sodass sie unabhängig von der Größe und die Einheiten eines bestimmten werden <xref:System.Drawing.Font> Objekt.</span><span class="sxs-lookup"><span data-stu-id="773d4-108">The numbers returned by these methods are in font design units, so they are independent of the size and units of a particular <xref:System.Drawing.Font> object.</span></span>  
   
- In der folgenden Abbildung sind die verschiedenen Schriftarteneigenschaften dargestellt.  
+ <span data-ttu-id="773d4-109">Die folgende Abbildung zeigt die verschiedenen Metriken.</span><span class="sxs-lookup"><span data-stu-id="773d4-109">The following illustration shows the various metrics.</span></span>  
   
- ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
+ <span data-ttu-id="773d4-110">![Schriftartentext](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span><span class="sxs-lookup"><span data-stu-id="773d4-110">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden die Eigenschaften für den Schriftschnitt "Normal" der Schriftfamilie Arial angezeigt.  Durch den Code wird außerdem ein \(auf der Arial\-Kategorie basierendes\) <xref:System.Drawing.Font>\-Objekt mit einem Schriftgrad von 16 Pixel erstellt. Darüber hinaus werden die Eigenschaften für das jeweilige <xref:System.Drawing.Font>\-Objekt \(in Pixel\) angezeigt.  
+## <a name="example"></a><span data-ttu-id="773d4-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="773d4-111">Example</span></span>  
+ <span data-ttu-id="773d4-112">Das folgende Beispiel zeigt die Metriken für den Schriftschnitt der Schriftart Arial-Produktfamilie.</span><span class="sxs-lookup"><span data-stu-id="773d4-112">The following example displays the metrics for the regular style of the Arial font family.</span></span> <span data-ttu-id="773d4-113">Der Code erstellt zudem eine <xref:System.Drawing.Font> Objekt (basierend auf der Arial-Kategorie), mit der Größe von 16 Pixel und zeigt die Metriken (in Pixel) für diesen bestimmten <xref:System.Drawing.Font> Objekt.</span><span class="sxs-lookup"><span data-stu-id="773d4-113">The code also creates a <xref:System.Drawing.Font> object (based on the Arial family) with size 16 pixels and displays the metrics (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span>  
   
- Die folgende Abbildung zeigt die Ausgabe des Beispielcodes.  
+ <span data-ttu-id="773d4-114">Die folgende Abbildung zeigt die Ausgabe des Beispielcodes.</span><span class="sxs-lookup"><span data-stu-id="773d4-114">The following illustration shows the output of the example code.</span></span>  
   
- ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")  
+ <span data-ttu-id="773d4-115">![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span><span class="sxs-lookup"><span data-stu-id="773d4-115">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span></span>  
   
- Beachten Sie in der vorangehenden Abbildung die ersten beiden ausgegebenen Zeilen.  Das <xref:System.Drawing.Font>\-Objekt gibt den Schriftgrad 16 und das <xref:System.Drawing.FontFamily>\-Objekt eine Geviertgröße von 2.048 zurück.  Diese beiden Zahlen \(16 und 2.048\) sind der Schlüssel für die Konvertierung von Schriftentwurfseinheiten in Einheiten \(in diesem Fall Pixel\) des <xref:System.Drawing.Font>\-Objekts.  
+ <span data-ttu-id="773d4-116">Beachten Sie die ersten beiden Zeilen der Ausgabe in der vorherigen Abbildung aus.</span><span class="sxs-lookup"><span data-stu-id="773d4-116">Note the first two lines of output in the preceding illustration.</span></span> <span data-ttu-id="773d4-117">Die <xref:System.Drawing.Font> Objekt zurückgibt, eine Größe von 16, und die <xref:System.Drawing.FontFamily> Objekt eine Geviertgröße von 2.048 zurück.</span><span class="sxs-lookup"><span data-stu-id="773d4-117">The <xref:System.Drawing.Font> object returns a size of 16, and the <xref:System.Drawing.FontFamily> object returns an em height of 2,048.</span></span> <span data-ttu-id="773d4-118">Diese beiden Zahlen (16 und 2.048) sind der Schlüssel für die Konvertierung zwischen Schriftentwurfseinheiten und die Einheiten (in diesem Fall Pixel) von der <xref:System.Drawing.Font> Objekt.</span><span class="sxs-lookup"><span data-stu-id="773d4-118">These two numbers (16 and 2,048) are the key to converting between font design units and the units (in this case pixels) of the <xref:System.Drawing.Font> object.</span></span>  
   
- Beispielsweise können Sie die Oberlänge von Entwurfseinheiten in Pixel wie folgt konvertieren:  
+ <span data-ttu-id="773d4-119">Beispielsweise können Sie den Anstieg von Entwurfseinheiten in Pixel wie folgt konvertieren:</span><span class="sxs-lookup"><span data-stu-id="773d4-119">For example, you can convert the ascent from design units to pixels as follows:</span></span>  
   
- ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")  
+ <span data-ttu-id="773d4-120">![Schriftartentext](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span><span class="sxs-lookup"><span data-stu-id="773d4-120">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span></span>  
   
- Im folgenden Code wird Text vertikal positioniert, indem der <xref:System.Drawing.PointF.Y%2A>\-Datenmember eines <xref:System.Drawing.PointF>\-Objekts festgelegt wird.  Die y\-Koordinate wird für jede neue Textzeile um `font.Height` erhöht.  Die <xref:System.Drawing.Font.Height%2A>\-Eigenschaft eines <xref:System.Drawing.Font>\-Objekts gibt den Zeilenabstand \(in Pixel\) für das jeweilige <xref:System.Drawing.Font>\-Objekt zurück.  In diesem Beispiel gibt <xref:System.Drawing.Font.Height%2A> die Zahl 19 zurück.  Beachten Sie, dass diese Zahl der Zahl \(zur ganzen Zahl gerundet\) entspricht, die durch Konvertieren der Zeilenabstandseigenschaften in Pixel ermittelt wird.  
+ <span data-ttu-id="773d4-121">Der folgende Code positioniert Text vertikal durch Festlegen der <xref:System.Drawing.PointF.Y%2A> Datenmember einer <xref:System.Drawing.PointF> Objekt.</span><span class="sxs-lookup"><span data-stu-id="773d4-121">The following code positions text vertically by setting the <xref:System.Drawing.PointF.Y%2A> data member of a <xref:System.Drawing.PointF> object.</span></span> <span data-ttu-id="773d4-122">Die y-Koordinate gestiegen `font.Height` für jede neue Zeile des Texts.</span><span class="sxs-lookup"><span data-stu-id="773d4-122">The y-coordinate is increased by `font.Height` for each new line of text.</span></span> <span data-ttu-id="773d4-123">Die <xref:System.Drawing.Font.Height%2A> Eigenschaft von einem <xref:System.Drawing.Font> Objekt gibt den Zeilenabstand (in Pixel) für diesen bestimmten <xref:System.Drawing.Font> Objekt.</span><span class="sxs-lookup"><span data-stu-id="773d4-123">The <xref:System.Drawing.Font.Height%2A> property of a <xref:System.Drawing.Font> object returns the line spacing (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="773d4-124">In diesem Beispiel wird die Anzahl von zurückgegebenen <xref:System.Drawing.Font.Height%2A> ist 19.</span><span class="sxs-lookup"><span data-stu-id="773d4-124">In this example, the number returned by <xref:System.Drawing.Font.Height%2A> is 19.</span></span> <span data-ttu-id="773d4-125">Beachten Sie, dass dies die Anzahl (in eine ganze Zahl aufgerundet) erhalten, indem die Zeilenabstand Metrik in Pixel konvertiert identisch ist.</span><span class="sxs-lookup"><span data-stu-id="773d4-125">Note that this is the same as the number (rounded up to an integer) obtained by converting the line-spacing metric to pixels.</span></span>  
   
- Beachten Sie, dass die Geviertgröße nicht die Summe aus Versalhöhe und Unterlänge ist.  Die Summe aus Versalhöhe und Unterlänge wird als Zellenhöhe bezeichnet.  Die Zellenhöhe abzüglich des inneren Zeilenabstands ist gleich der Geviertgröße.  Die Zellenhöhe zuzüglich des äußeren Zeilenabstands ist gleich dem Zeilenvorschub.  
+ <span data-ttu-id="773d4-126">Beachten Sie, dass die Gevierthöhe (so genannte Größe oder Em Größe) nicht die Summe der Versalhöhe und Unterlänge ist.</span><span class="sxs-lookup"><span data-stu-id="773d4-126">Note that the em height (also called size or em size) is not the sum of the ascent and the descent.</span></span> <span data-ttu-id="773d4-127">Die Summe der Versalhöhe und Unterlänge wird die Zellenhöhe aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="773d4-127">The sum of the ascent and the descent is called the cell height.</span></span> <span data-ttu-id="773d4-128">Die Zellenhöhe minus der internen vorangestellten ist die Gevierthöhe gleich.</span><span class="sxs-lookup"><span data-stu-id="773d4-128">The cell height minus the internal leading is equal to the em height.</span></span> <span data-ttu-id="773d4-129">Die Zellenhöhe plus der externen vorangestellten entspricht den Zeilenabstand.</span><span class="sxs-lookup"><span data-stu-id="773d4-129">The cell height plus the external leading is equal to the line spacing.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.FontsAndText#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="773d4-130">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="773d4-130">Compiling the Code</span></span>  
+ <span data-ttu-id="773d4-131">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.</span><span class="sxs-lookup"><span data-stu-id="773d4-131">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## Siehe auch  
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="773d4-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="773d4-132">See Also</span></span>  
+ [<span data-ttu-id="773d4-133">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="773d4-133">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="773d4-134">Verwenden von Schriftarten und Text</span><span class="sxs-lookup"><span data-stu-id="773d4-134">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

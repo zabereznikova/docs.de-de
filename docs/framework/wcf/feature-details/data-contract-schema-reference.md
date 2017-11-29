@@ -1,301 +1,303 @@
 ---
-title: "Datenvertrags-Schemareferenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenverträge [WCF], Schemareferenz"
+title: Datenvertrags-Schemareferenz
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b0838eeae79dff6e7f0371abe3a3ad23df0384a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datenvertrags-Schemareferenz
-In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime \(CLR\)\-Typen für die XML\-Serialisierung verwendete Teilmenge des XML\-Schemas \(XSD\) beschrieben.  
+# <a name="data-contract-schema-reference"></a><span data-ttu-id="d0dc0-102">Datenvertrags-Schemareferenz</span><span class="sxs-lookup"><span data-stu-id="d0dc0-102">Data Contract Schema Reference</span></span>
+<span data-ttu-id="d0dc0-103">In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-103">This topic describes the subset of the XML Schema (XSD) used by <xref:System.Runtime.Serialization.DataContractSerializer> to describe common language runtime (CLR) types for XML serialization.</span></span>  
   
-## DataContractSerializer\-Zuordnungen  
- Der `DataContractSerializer` ordnet CLR\-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) exportiert werden.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+## <a name="datacontractserializer-mappings"></a><span data-ttu-id="d0dc0-104">DataContractSerializer-Zuordnungen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-104">DataContractSerializer Mappings</span></span>  
+ <span data-ttu-id="d0dc0-105">Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-105">The `DataContractSerializer` maps CLR types to XSD when metadata is exported from a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service using a metadata endpoint or the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d0dc0-106">[Datenvertrags-Serialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-106"> [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).</span></span>  
   
- Der `DataContractSerializer` ordnet XSD auch dann CLR\-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL\- \(Web Services Description Language\) oder XSD\-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
+ <span data-ttu-id="d0dc0-107">Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-107">The `DataContractSerializer` also maps XSD to CLR types when Svcutil.exe is used to access Web Services Description Language (WSDL) or XSD documents and generate data contracts for services or clients.</span></span>  
   
- Nur XML\-Schemainstanzen, die den in diesem Dokument beschriebenen Anforderungen entsprechen, können mit `DataContractSerializer` CLR\-Typen zugeordnet werden.  
+ <span data-ttu-id="d0dc0-108">Nur XML-Schemainstanzen, die den in diesem Dokument beschriebenen Anforderungen entsprechen, können mit `DataContractSerializer`CLR-Typen zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-108">Only XML Schema instances that conform to requirements stated in this document can be mapped to CLR types using `DataContractSerializer`.</span></span>  
   
-### Unterstützungsebenen  
- Der `DataContractSerializer` stellt die folgenden Unterstützungsebenen für eine gegebene XML\-Schemafunktion bereit:  
+### <a name="support-levels"></a><span data-ttu-id="d0dc0-109">Unterstützungsebenen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-109">Support Levels</span></span>  
+ <span data-ttu-id="d0dc0-110">Der `DataContractSerializer` stellt die folgenden Unterstützungsebenen für eine gegebene XML-Schemafunktion bereit:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-110">The `DataContractSerializer` provides the following levels of support for a given XML Schema feature:</span></span>  
   
--   **Unterstützt**. Es gibt eine explizite Zuordnung dieser Funktion zu CLR\-Typen oder \-Attributen \(oder beiden\) mit `DataContractSerializer`.  
+-   <span data-ttu-id="d0dc0-111">**Unterstützt**.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-111">**Supported**.</span></span> <span data-ttu-id="d0dc0-112">Es gibt eine explizite Zuordnung dieser Funktion zu CLR-Typen oder -Attributen (oder beiden) mit `DataContractSerializer`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-112">There is explicit mapping from this feature to CLR types or attributes (or both) using `DataContractSerializer`.</span></span>  
   
--   **Ignoriert**. Die Funktion ist in vom `DataContractSerializer` importierten Schemas zugelassen, hat aber keine Auswirkungen auf die Codegenerierung.  
+-   <span data-ttu-id="d0dc0-113">**Ignoriert**.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-113">**Ignored**.</span></span> <span data-ttu-id="d0dc0-114">Die Funktion ist in vom `DataContractSerializer`importierten Schemas zugelassen, hat aber keine Auswirkungen auf die Codegenerierung.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-114">The feature is allowed in schemas imported by the `DataContractSerializer`, but has no effect on code generation.</span></span>  
   
--   **Unzulässig**. Der `DataContractSerializer` unterstützt nicht den Import eines Schemas, das diese Funktion verwendet. Svcutil.exe verwendet beispielsweise wieder den <xref:System.Xml.Serialization.XmlSerializer>, wenn auf ein WSDL mit einem Schema zugegriffen wird, das eine solche Funktion verwendet. Dies ist das Standardverhalten.  
+-   <span data-ttu-id="d0dc0-115">**Unzulässig**.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-115">**Forbidden**.</span></span> <span data-ttu-id="d0dc0-116">Der `DataContractSerializer` unterstützt nicht den Import eines Schemas, das diese Funktion verwendet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-116">The `DataContractSerializer` does not support importing a schema using the feature.</span></span> <span data-ttu-id="d0dc0-117">Svcutil.exe verwendet beispielsweise wieder den <xref:System.Xml.Serialization.XmlSerializer> , wenn auf ein WSDL mit einem Schema zugegriffen wird, das eine solche Funktion verwendet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-117">For example, Svcutil.exe, when accessing a WSDL with a schema that uses such a feature, falls back to using the <xref:System.Xml.Serialization.XmlSerializer> instead.</span></span> <span data-ttu-id="d0dc0-118">Dies ist das Standardverhalten.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-118">This is by default.</span></span>  
   
-## Allgemeine Informationen  
+## <a name="general-information"></a><span data-ttu-id="d0dc0-119">Allgemeine Informationen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-119">General Information</span></span>  
   
--   Der Schemanamespace wird unter [XML\-Schema](http://go.microsoft.com/fwlink/?LinkId=95475) beschrieben. In diesem Dokument wird das Präfix "xs" verwendet.  
+-   <span data-ttu-id="d0dc0-120">Der Schemanamespace wird unter [XML-Schema](http://go.microsoft.com/fwlink/?LinkId=95475)beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-120">The schema namespace is described at [XML Schema](http://go.microsoft.com/fwlink/?LinkId=95475).</span></span> <span data-ttu-id="d0dc0-121">In diesem Dokument wird das Präfix "xs" verwendet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-121">The prefix "xs" is used in this document.</span></span>  
   
--   Alle Attribute mit einem Nicht\-Schema\-Namespace werden ignoriert.  
+-   <span data-ttu-id="d0dc0-122">Alle Attribute mit einem Nicht-Schema-Namespace werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-122">Any attributes with a non-schema namespace are ignored.</span></span>  
   
--   Alle Anmerkungen \(außer den in diesem Dokument beschriebenen\) werden ignoriert.  
+-   <span data-ttu-id="d0dc0-123">Alle Anmerkungen (außer den in diesem Dokument beschriebenen) werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-123">Any annotations (except for those described in this document) are ignored.</span></span>  
   
-### \<xs:schema\>: Attribute  
+### <a name="xsschema-attributes"></a><span data-ttu-id="d0dc0-124">\<xs: Schema >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-124">\<xs:schema>: attributes</span></span>  
   
-|Attribut|DataContract|  
-|--------------|------------------|  
-|`attributeFormDefault`|Ignoriert.|  
-|`blockDefault`|Ignoriert.|  
-|`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer` unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem bei jeder einzelnen Elementdeklaration entweder xs:schema\/@elementFormDefault auf "qualified" oder xs:element\/@form auf "qualified" festgelegt wird.|  
-|`finalDefault`|Ignoriert.|  
-|`Id`|Ignoriert.|  
-|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Dies darf nicht der reservierte Namespace http:\/\/schemas.microsoft.com\/2003\/10\/Serialization sein.|  
-|`version`|Ignoriert.|  
+|<span data-ttu-id="d0dc0-125">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-125">Attribute</span></span>|<span data-ttu-id="d0dc0-126">DataContract</span><span class="sxs-lookup"><span data-stu-id="d0dc0-126">DataContract</span></span>|  
+|---------------|------------------|  
+|`attributeFormDefault`|<span data-ttu-id="d0dc0-127">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-127">Ignored.</span></span>|  
+|`blockDefault`|<span data-ttu-id="d0dc0-128">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-128">Ignored.</span></span>|  
+|`elementFormDefault`|<span data-ttu-id="d0dc0-129">Muss qualifiziert sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-129">Must be qualified.</span></span> <span data-ttu-id="d0dc0-130">Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-130">All elements must be qualified for a schema to be supported by `DataContractSerializer`.</span></span> <span data-ttu-id="d0dc0-131">Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault auf "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-131">This can be accomplished by either setting xs:schema/@elementFormDefault to "qualified" or by setting xs:element/@form to "qualified" on each individual element declaration.</span></span>|  
+|`finalDefault`|<span data-ttu-id="d0dc0-132">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-132">Ignored.</span></span>|  
+|`Id`|<span data-ttu-id="d0dc0-133">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-133">Ignored.</span></span>|  
+|`targetNamespace`|<span data-ttu-id="d0dc0-134">Unterstützt und wird dem Datenvertragsnamespace zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-134">Supported and mapped to the data contract namespace.</span></span> <span data-ttu-id="d0dc0-135">Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-135">If this attribute is not specified, the blank namespace is used.</span></span> <span data-ttu-id="d0dc0-136">Dies darf nicht der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-136">Cannot be the reserved namespace http://schemas.microsoft.com/2003/10/Serialization/.</span></span>|  
+|`version`|<span data-ttu-id="d0dc0-137">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-137">Ignored.</span></span>|  
   
-### \<xs:schema\>: Inhalt  
+### <a name="xsschema-contents"></a><span data-ttu-id="d0dc0-138">\<xs: Schema >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-138">\<xs:schema>: contents</span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`include`|Unterstützt.`DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation`\- und `xs:import/@location`\-Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out\-of\-Band\-Mechanismus und nicht mittels `include` übergeben werden. Mit `include` angegebene Schemadokumente werden ignoriert.|  
-|`redefine`|Unzulässig. Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird. Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation` ein.|  
-|`import`|Unterstützt.`DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation`\- und `xs:import/@location`\-Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out\-of\-Band\-Mechanismus und nicht mittels `include` übergeben werden. Mit `include` angegebene Schemadokumente werden ignoriert.|  
-|`simpleType`|Unterstützt. Siehe den Abschnitt `xs:simpleType`.|  
-|`complexType`|Unterstützt, wird Datenverträgen zugeordnet. Siehe den Abschnitt `xs:complexType`.|  
-|`group`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`attributeGroup`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`element`|Unterstützt. Siehe Globale Elementdeklaration \(GED\).|  
-|`attribute`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`notation`|Ignoriert.|  
-  
-## Komplexe Typen &\#8211; \<xs:complexType\>  
-  
-### Allgemeine Informationen  
- Jeder komplexe Typ \<xs:complexType\> wird einem Datenvertrag zugeordnet.  
-  
-### \<xs:complexType\>: Attribute  
-  
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-139">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-139">Contents</span></span>|<span data-ttu-id="d0dc0-140">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-140">Schema</span></span>|  
 |--------------|------------|  
-|`abstract`|Muss den Wert false aufweisen \(Standardwert\)|  
-|`block`|Unzulässig.|  
-|`final`|Ignoriert.|  
-|`id`|Ignoriert.|  
-|`mixed`|Muss den Wert false aufweisen \(Standardwert\)|  
-|`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A` ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&\#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
+|`include`|<span data-ttu-id="d0dc0-141">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-141">Supported.</span></span> <span data-ttu-id="d0dc0-142">`DataContractSerializer` unterstützt xs:include und xs:import.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-142">`DataContractSerializer` supports xs:include and xs:import.</span></span> <span data-ttu-id="d0dc0-143">Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-143">However, Svcutil.exe restricts following `xs:include/@schemaLocation` and `xs:import/@location` references when metadata is loaded from a local file.</span></span> <span data-ttu-id="d0dc0-144">Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-144">The list of schema files must be passed through an out-of-band mechanism and not through `include` in this case; `include`d schema documents are ignored.</span></span>|  
+|`redefine`|<span data-ttu-id="d0dc0-145">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-145">Forbidden.</span></span> <span data-ttu-id="d0dc0-146">Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-146">The use of `xs:redefine` is forbidden by `DataContractSerializer` for security reasons: `x:redefine` requires `schemaLocation` to be followed.</span></span> <span data-ttu-id="d0dc0-147">Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation`ein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-147">In certain circumstances, Svcutil.exe using DataContract restricts use of `schemaLocation`.</span></span>|  
+|`import`|<span data-ttu-id="d0dc0-148">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-148">Supported.</span></span> <span data-ttu-id="d0dc0-149">`DataContractSerializer` unterstützt `xs:include` und `xs:import`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-149">`DataContractSerializer` supports `xs:include` and `xs:import`.</span></span> <span data-ttu-id="d0dc0-150">Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-150">However, Svcutil.exe restricts following `xs:include/@schemaLocation` and `xs:import/@location` references when metadata is loaded from a local file.</span></span> <span data-ttu-id="d0dc0-151">Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-151">The list of schema files must be passed through an out-of-band mechanism and not through `include` in this case; `include`d schema documents are ignored.</span></span>|  
+|`simpleType`|<span data-ttu-id="d0dc0-152">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-152">Supported.</span></span> <span data-ttu-id="d0dc0-153">Siehe den Abschnitt `xs:simpleType` .</span><span class="sxs-lookup"><span data-stu-id="d0dc0-153">See the `xs:simpleType` section.</span></span>|  
+|`complexType`|<span data-ttu-id="d0dc0-154">Unterstützt, wird Datenverträgen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-154">Supported, maps to data contracts.</span></span> <span data-ttu-id="d0dc0-155">Siehe den Abschnitt `xs:complexType` .</span><span class="sxs-lookup"><span data-stu-id="d0dc0-155">See the `xs:complexType` section.</span></span>|  
+|`group`|<span data-ttu-id="d0dc0-156">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-156">Ignored.</span></span> <span data-ttu-id="d0dc0-157">`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-157">`DataContractSerializer` does not support use of `xs:group`, `xs:attributeGroup`, and `xs:attribute`.</span></span> <span data-ttu-id="d0dc0-158">Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-158">These declarations are ignored as children of `xs:schema`, but cannot be referenced from within `complexType` or other supported constructs.</span></span>|  
+|`attributeGroup`|<span data-ttu-id="d0dc0-159">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-159">Ignored.</span></span> <span data-ttu-id="d0dc0-160">`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-160">`DataContractSerializer` does not support use of `xs:group`, `xs:attributeGroup`, and `xs:attribute`.</span></span> <span data-ttu-id="d0dc0-161">Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-161">These declarations are ignored as children of `xs:schema`, but cannot be referenced from within `complexType` or other supported constructs.</span></span>|  
+|`element`|<span data-ttu-id="d0dc0-162">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-162">Supported.</span></span> <span data-ttu-id="d0dc0-163">Siehe Globale Elementdeklaration (GED).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-163">See Global Element Declaration (GED).</span></span>|  
+|`attribute`|<span data-ttu-id="d0dc0-164">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-164">Ignored.</span></span> <span data-ttu-id="d0dc0-165">`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-165">`DataContractSerializer` does not support use of `xs:group`, `xs:attributeGroup`, and `xs:attribute`.</span></span> <span data-ttu-id="d0dc0-166">Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-166">These declarations are ignored as children of `xs:schema`, but cannot be referenced from within `complexType` or other supported constructs.</span></span>|  
+|`notation`|<span data-ttu-id="d0dc0-167">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-167">Ignored.</span></span>|  
   
-### \<xs:complexType\>: Inhalt  
+## <a name="complex-types--xscomplextype"></a><span data-ttu-id="d0dc0-168">Komplexe Typen – \<xs: complexType ></span><span class="sxs-lookup"><span data-stu-id="d0dc0-168">Complex Types – \<xs:complexType></span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`simpleContent`|Erweiterungen sind unzulässig.<br /><br /> Einschränkung wird nur von `anySimpleType` zugelassen.|  
-|`complexContent`|Unterstützt. Siehe "Vererbung".|  
-|`group`|Unzulässig.|  
-|`all`|Unzulässig.|  
-|`choice`|Verboten|  
-|`sequence`|Unterstützt, wird Datenmembern eines Datenvertrags zugeordnet.|  
-|`attribute`|Unzulässig, auch wenn use\="prohibited" \(mit einer Ausnahme\). Nur optionale Attribute aus dem Standardserialisierungsschema\-Namespace werden unterstützt. Sie werden Datenmembern im Datenvertragsprogrammiermodell nicht zugeordnet. Aktuell hat nur ein solches Attribut Bedeutung, es wird im Abschnitt ISerializable erläutert. Alle anderen werden ignoriert.|  
-|`attributeGroup`|Unzulässig. In Version&\#160;1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert `DataContractSerializer` das Vorhandensein von `attributeGroup` in `xs:complexType`.|  
-|`anyAttribute`|Unzulässig.|  
-|\(leer\)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
+### <a name="general-information"></a><span data-ttu-id="d0dc0-169">Allgemeine Informationen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-169">General Information</span></span>  
+ <span data-ttu-id="d0dc0-170">Jeder komplexe Typ \<xs: complexType > wird einem Datenvertrag zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-170">Each complex type \<xs:complexType> maps to a data contract.</span></span>  
   
-### \<xs:sequence\> in einem komplexen Typ: Attribute  
+### <a name="xscomplextype-attributes"></a><span data-ttu-id="d0dc0-171">\<xs: complexType >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-171">\<xs:complexType>: attributes</span></span>  
   
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-172">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-172">Attribute</span></span>|<span data-ttu-id="d0dc0-173">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-173">Schema</span></span>|  
+|---------------|------------|  
+|`abstract`|<span data-ttu-id="d0dc0-174">Muss den Wert false aufweisen (Standardwert)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-174">Must be false (default).</span></span>|  
+|`block`|<span data-ttu-id="d0dc0-175">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-175">Forbidden.</span></span>|  
+|`final`|<span data-ttu-id="d0dc0-176">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-176">Ignored.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-177">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-177">Ignored.</span></span>|  
+|`mixed`|<span data-ttu-id="d0dc0-178">Muss den Wert false aufweisen (Standardwert)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-178">Must be false (default).</span></span>|  
+|`name`|<span data-ttu-id="d0dc0-179">Unterstützt. Wird dem Namen des Datenvertrags zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-179">Supported and mapped to the data contract name.</span></span> <span data-ttu-id="d0dc0-180">Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-180">If there are periods in the name, an attempt is made to map the type to an inner type.</span></span> <span data-ttu-id="d0dc0-181">Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A`ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-181">For example, a complex type named `A.B` maps to a data contract type that is an inner type of a type with the data contract name `A`, but only if such a data contract type exists.</span></span> <span data-ttu-id="d0dc0-182">Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&amp;#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-182">More than one level of nesting is possible: for example, `A.B.C` can be an inner type, but only if `A` and `A.B` both exist.</span></span>|  
+  
+### <a name="xscomplextype-contents"></a><span data-ttu-id="d0dc0-183">\<xs: complexType >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-183">\<xs:complexType>: contents</span></span>  
+  
+|<span data-ttu-id="d0dc0-184">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-184">Contents</span></span>|<span data-ttu-id="d0dc0-185">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-185">Schema</span></span>|  
 |--------------|------------|  
-|`id`|Ignoriert.|  
-|`maxOccurs`|Muss 1 \(Standard\) sein.|  
-|`minOccurs`|Muss 1 \(Standard\) sein.|  
+|`simpleContent`|<span data-ttu-id="d0dc0-186">Erweiterungen sind unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-186">Extensions are forbidden.</span></span><br /><br /> <span data-ttu-id="d0dc0-187">Einschränkung wird nur von `anySimpleType`zugelassen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-187">Restriction is allowed only from `anySimpleType`.</span></span>|  
+|`complexContent`|<span data-ttu-id="d0dc0-188">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-188">Supported.</span></span> <span data-ttu-id="d0dc0-189">Siehe "Vererbung".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-189">See "Inheritance".</span></span>|  
+|`group`|<span data-ttu-id="d0dc0-190">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-190">Forbidden.</span></span>|  
+|`all`|<span data-ttu-id="d0dc0-191">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-191">Forbidden.</span></span>|  
+|`choice`|<span data-ttu-id="d0dc0-192">Unzulässig</span><span class="sxs-lookup"><span data-stu-id="d0dc0-192">Forbidden</span></span>|  
+|`sequence`|<span data-ttu-id="d0dc0-193">Unterstützt, wird Datenmembern eines Datenvertrags zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-193">Supported, maps to data members of a data contract.</span></span>|  
+|`attribute`|<span data-ttu-id="d0dc0-194">Unzulässig, auch wenn use="prohibited" (mit einer Ausnahme).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-194">Forbidden, even if use="prohibited" (with one exception).</span></span> <span data-ttu-id="d0dc0-195">Nur optionale Attribute aus dem Standardserialisierungsschema-Namespace werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-195">Only optional attributes from the Standard Serialization Schema namespace are supported.</span></span> <span data-ttu-id="d0dc0-196">Sie werden Datenmembern im Datenvertragsprogrammiermodell nicht zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-196">They do not map to data members in the data contract programming model.</span></span> <span data-ttu-id="d0dc0-197">Aktuell hat nur ein solches Attribut Bedeutung, es wird im Abschnitt ISerializable erläutert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-197">Currently, only one such attribute has meaning and is discussed in the ISerializable section.</span></span> <span data-ttu-id="d0dc0-198">Alle anderen werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-198">All others are ignored.</span></span>|  
+|`attributeGroup`|<span data-ttu-id="d0dc0-199">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-199">Forbidden.</span></span> <span data-ttu-id="d0dc0-200">In Version&amp;#160;1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert `DataContractSerializer` das Vorhandensein von `attributeGroup` in `xs:complexType`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-200">In the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 release, `DataContractSerializer` ignores the presence of `attributeGroup` inside `xs:complexType`.</span></span>|  
+|`anyAttribute`|<span data-ttu-id="d0dc0-201">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-201">Forbidden.</span></span>|  
+|<span data-ttu-id="d0dc0-202">(leer)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-202">(empty)</span></span>|<span data-ttu-id="d0dc0-203">Wird einem Datenvertrag ohne Datenmember zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-203">Maps to a data contract with no data members.</span></span>|  
   
-### \<xs:sequence\> in einem komplexen Typ: Inhalt  
+### <a name="xssequence-in-a-complex-type-attributes"></a><span data-ttu-id="d0dc0-204">\<xs: Sequence > in einem komplexen Typ: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-204">\<xs:sequence> in a complex type: attributes</span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`element`|Jede Instanz wird einem Datenmember zugeordnet.|  
-|`group`|Unzulässig.|  
-|`choice`|Unzulässig.|  
-|`sequence`|Unzulässig.|  
-|`any`|Unzulässig.|  
-|\(leer\)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
+|<span data-ttu-id="d0dc0-205">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-205">Attribute</span></span>|<span data-ttu-id="d0dc0-206">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-206">Schema</span></span>|  
+|---------------|------------|  
+|`id`|<span data-ttu-id="d0dc0-207">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-207">Ignored.</span></span>|  
+|`maxOccurs`|<span data-ttu-id="d0dc0-208">Muss 1 (Standard) sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-208">Must be 1 (default).</span></span>|  
+|`minOccurs`|<span data-ttu-id="d0dc0-209">Muss 1 (Standard) sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-209">Must be 1 (default).</span></span>|  
   
-## Elemente &\#8211; \<xs:element\>  
+### <a name="xssequence-in-a-complex-type-contents"></a><span data-ttu-id="d0dc0-210">\<xs: Sequence > in einem komplexen Typ: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-210">\<xs:sequence> in a complex type: contents</span></span>  
   
-### Allgemeine Informationen  
- `<xs:element>` kann in den folgenden Kontexten auftreten:  
-  
--   Es kann innerhalb eines `<xs:sequence>`\-Elements auftreten, das einen Datenmember eines regulären Datenvertrags \(keines Auflistungsdatenvertrags\) beschreibt. In diesem Fall muss das `maxOccurs`\-Attribut 1 sein. \(Der Wert 0 ist nicht zulässig.\)  
-  
--   Es kann innerhalb eines `<xs:sequence>`\-Elements auftreten, das einen Datenmember eines Auflistungsdatenvertrags beschreibt. In diesem Fall muss der Wert des `maxOccurs`\-Attributs größer&\#160;1 oder "unbounded" sein.  
-  
--   Es kann innerhalb eines `<xs:schema>`\-Elements als eine globale Elementdeklaration \(GED\) auftreten.  
-  
-### \<xs:element\> mit maxOccurs\=1 innerhalb eines \<xs:sequence\>\-Elements \(Datenmember\)  
-  
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-211">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-211">Contents</span></span>|<span data-ttu-id="d0dc0-212">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-212">Schema</span></span>|  
 |--------------|------------|  
-|`ref`|Unzulässig.|  
-|`name`|Unterstützt, wird dem Datenmembernamen zugeordnet.|  
-|`type`|Unterstützt, wird dem Datenmembertyp zugeordnet. Weitere Informationen finden Sie unter Zuordnung von Typen zu primitivem Typen. Wenn nicht angegeben \(und wenn das Element keinen anonymen Typ enthält\), wird `xs:anyType` angenommen.|  
-|`block`|Ignoriert.|  
-|`default`|Unzulässig.|  
-|`fixed`|Unzulässig.|  
-|`form`|Muss qualifiziert sein. Dieses Attribut kann über `elementFormDefault` auf `xs:schema` festgelegt werden.|  
-|`id`|Ignoriert.|  
-|`maxOccurs`|1|  
-|`minOccurs`|Wird der <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>\-Eigenschaft eines Datenmembers zugeordnet \(`IsRequired` hat den Wert true, wenn `minOccurs`&\#160;1 ist\).|  
-|`nillable`|Beeinflusst die Typzuordnung. Siehe Zuordnung von Typen zu primitivem Typen.|  
+|`element`|<span data-ttu-id="d0dc0-213">Jede Instanz wird einem Datenmember zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-213">Each instance maps to a data member.</span></span>|  
+|`group`|<span data-ttu-id="d0dc0-214">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-214">Forbidden.</span></span>|  
+|`choice`|<span data-ttu-id="d0dc0-215">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-215">Forbidden.</span></span>|  
+|`sequence`|<span data-ttu-id="d0dc0-216">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-216">Forbidden.</span></span>|  
+|`any`|<span data-ttu-id="d0dc0-217">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-217">Forbidden.</span></span>|  
+|<span data-ttu-id="d0dc0-218">(leer)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-218">(empty)</span></span>|<span data-ttu-id="d0dc0-219">Wird einem Datenvertrag ohne Datenmember zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-219">Maps to a data contract with no data members.</span></span>|  
   
-### \<xs:element\> mit maxOccurs\>1 innerhalb eines \<xs:sequence\>\-Elements \(Auflistungen\)  
+## <a name="elements--xselement"></a><span data-ttu-id="d0dc0-220">Elemente – \<xs: Element ></span><span class="sxs-lookup"><span data-stu-id="d0dc0-220">Elements – \<xs:element></span></span>  
   
--   Wird einem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> zugeordnet.  
+### <a name="general-information"></a><span data-ttu-id="d0dc0-221">Allgemeine Informationen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-221">General Information</span></span>  
+ <span data-ttu-id="d0dc0-222">`<xs:element>` kann in den folgenden Kontexten auftreten:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-222">`<xs:element>` can occur in the following contexts:</span></span>  
   
--   In Auflistungstypen ist nur ein xs:element innerhalb eines xs:sequence\-Elements zugelassen.  
+-   <span data-ttu-id="d0dc0-223">Es kann innerhalb eines `<xs:sequence>`-Elements auftreten, das einen Datenmember eines regulären Datenvertrags (keines Auflistungsdatenvertrags) beschreibt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-223">It can occur within an `<xs:sequence>`, which describes a data member of a regular (non-collection) data contract.</span></span> <span data-ttu-id="d0dc0-224">In diesem Fall muss das `maxOccurs` -Attribut 1 sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-224">In this case, the `maxOccurs` attribute must be 1.</span></span> <span data-ttu-id="d0dc0-225">(Der Wert 0 ist nicht zulässig.)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-225">(A value of 0 is not allowed).</span></span>  
   
- Auflistungen können einen der folgenden Typen aufweisen:  
+-   <span data-ttu-id="d0dc0-226">Es kann innerhalb eines `<xs:sequence>`-Elements auftreten, das einen Datenmember eines Auflistungsdatenvertrags beschreibt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-226">It can occur within an `<xs:sequence>`, which describes a data member of a collection data contract.</span></span> <span data-ttu-id="d0dc0-227">In diesem Fall muss der Wert des `maxOccurs` -Attributs größer&amp;#160;1 oder "unbounded" sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-227">In this case, the `maxOccurs` attribute must be greater than 1 or "unbounded".</span></span>  
   
--   Reguläre Auflistungen \(z.&\#160;B. Arrays\).  
+-   <span data-ttu-id="d0dc0-228">Es kann innerhalb eines `<xs:schema>` -Elements als eine globale Elementdeklaration (GED) auftreten.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-228">It can occur within an `<xs:schema>` as a Global Element Declaration (GED).</span></span>  
   
--   Wörterbuchauflistungen \(die einen Wert einem anderen zuordnen, z.&\#160;B. eine <xref:System.Collections.Hashtable>\).  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a><span data-ttu-id="d0dc0-229">\<xs: Element > mit MaxOccurs = 1 innerhalb einer \<xs: Sequence > (Datenmember)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-229">\<xs:element> with maxOccurs=1 within an \<xs:sequence> (Data Members)</span></span>  
   
--   Der einzige Unterschied zwischen einem Wörterbuchtyp und einem Array mit Schlüssel\-Wert\-Paaren liegt im generierten Programmiermodell. Es gibt einen Schemaanmerkungsmechanismus, der verwendet werden kann, um anzugeben, dass ein bestimmter Typ eine Wörterbuchauflistung ist.  
+|<span data-ttu-id="d0dc0-230">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-230">Attribute</span></span>|<span data-ttu-id="d0dc0-231">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-231">Schema</span></span>|  
+|---------------|------------|  
+|`ref`|<span data-ttu-id="d0dc0-232">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-232">Forbidden.</span></span>|  
+|`name`|<span data-ttu-id="d0dc0-233">Unterstützt, wird dem Datenmembernamen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-233">Supported, maps to the data member name.</span></span>|  
+|`type`|<span data-ttu-id="d0dc0-234">Unterstützt, wird dem Datenmembertyp zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-234">Supported, maps to the data member type.</span></span> <span data-ttu-id="d0dc0-235">Weitere Informationen finden Sie unter Zuordnung von Typen zu primitivem Typen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-235">For more information, see Type/primitive mapping.</span></span> <span data-ttu-id="d0dc0-236">Wenn nicht angegeben (und wenn das Element keinen anonymen Typ enthält), wird `xs:anyType` angenommen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-236">If not specified (and the element does not contain an anonymous type), `xs:anyType` is assumed.</span></span>|  
+|`block`|<span data-ttu-id="d0dc0-237">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-237">Ignored.</span></span>|  
+|`default`|<span data-ttu-id="d0dc0-238">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-238">Forbidden.</span></span>|  
+|`fixed`|<span data-ttu-id="d0dc0-239">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-239">Forbidden.</span></span>|  
+|`form`|<span data-ttu-id="d0dc0-240">Muss qualifiziert sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-240">Must be qualified.</span></span> <span data-ttu-id="d0dc0-241">Dieses Attribut kann über `elementFormDefault` auf `xs:schema`festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-241">This attribute can be set through `elementFormDefault` on `xs:schema`.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-242">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-242">Ignored.</span></span>|  
+|`maxOccurs`|<span data-ttu-id="d0dc0-243">1</span><span class="sxs-lookup"><span data-stu-id="d0dc0-243">1</span></span>|  
+|`minOccurs`|<span data-ttu-id="d0dc0-244">Wird der <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft eines Datenmembers zugeordnet (`IsRequired` hat den Wert true, wenn `minOccurs` &amp;#160;1 ist).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-244">Maps to the <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property of a data member (`IsRequired` is true when `minOccurs` is 1).</span></span>|  
+|`nillable`|<span data-ttu-id="d0dc0-245">Beeinflusst die Typzuordnung.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-245">Affects type mapping.</span></span> <span data-ttu-id="d0dc0-246">Siehe Zuordnung von Typen zu primitivem Typen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-246">See Type/primitive mapping.</span></span>|  
   
- Die Regeln für die Attribute `ref`, `block`, `default`, `fixed`, `form` und `id` sind die gleichen wie für diejenigen, die keine Auflistungstypen sind. Die anderen Attribute sind in der folgenden Tabelle aufgeführt:  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a><span data-ttu-id="d0dc0-247">\<xs: Element > mit MaxOccurs > 1 innerhalb einer \<xs: Sequence > (Auflistungen)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-247">\<xs:element> with maxOccurs>1 within an \<xs:sequence> (Collections)</span></span>  
   
-|Attribut|Schema|  
+-   <span data-ttu-id="d0dc0-248">Wird einem <xref:System.Runtime.Serialization.CollectionDataContractAttribute>zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-248">Maps to a <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.</span></span>  
+  
+-   <span data-ttu-id="d0dc0-249">In Auflistungstypen ist nur ein xs:element innerhalb eines xs:sequence-Elements zugelassen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-249">In collection types, only one xs:element is allowed within an xs:sequence.</span></span>  
+  
+ <span data-ttu-id="d0dc0-250">Auflistungen können einen der folgenden Typen aufweisen:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-250">Collections can be of the following types:</span></span>  
+  
+-   <span data-ttu-id="d0dc0-251">Reguläre Auflistungen (z.&#160;B. Arrays).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-251">Regular collections (for example, arrays).</span></span>  
+  
+-   <span data-ttu-id="d0dc0-252">Wörterbuchauflistungen (die einen Wert einem anderen zuordnen, z.&amp;#160;B. eine <xref:System.Collections.Hashtable>).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-252">Dictionary collections (mapping one value to another; for example, a <xref:System.Collections.Hashtable>).</span></span>  
+  
+-   <span data-ttu-id="d0dc0-253">Der einzige Unterschied zwischen einem Wörterbuchtyp und einem Array mit Schlüssel-Wert-Paaren liegt im generierten Programmiermodell.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-253">The only difference between a dictionary and an array of a key/value pair type is in the generated programming model.</span></span> <span data-ttu-id="d0dc0-254">Es gibt einen Schemaanmerkungsmechanismus, der verwendet werden kann, um anzugeben, dass ein bestimmter Typ eine Wörterbuchauflistung ist.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-254">There is a schema annotation mechanism that can be used to indicate that a given type is a dictionary collection.</span></span>  
+  
+ <span data-ttu-id="d0dc0-255">Die Regeln für die Attribute `ref`, `block`, `default`, `fixed`, `form`und `id` sind die gleichen wie für diejenigen, die keine Auflistungstypen sind.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-255">The rules for the `ref`, `block`, `default`, `fixed`, `form`, and `id` attributes are the same as for the non-collection case.</span></span> <span data-ttu-id="d0dc0-256">Die anderen Attribute sind in der folgenden Tabelle aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-256">Other attributes include those in the following table.</span></span>  
+  
+|<span data-ttu-id="d0dc0-257">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-257">Attribute</span></span>|<span data-ttu-id="d0dc0-258">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-258">Schema</span></span>|  
+|---------------|------------|  
+|`name`|<span data-ttu-id="d0dc0-259">Unterstützt, wird der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> -Eigenschaft des `CollectionDataContractAttribute` -Attributs zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-259">Supported, maps to the <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> property in the `CollectionDataContractAttribute` attribute.</span></span>|  
+|`type`|<span data-ttu-id="d0dc0-260">Unterstützt, wird dem in der Auflistung gespeicherten Typ zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-260">Supported, maps to the type stored in the collection.</span></span>|  
+|`maxOccurs`|<span data-ttu-id="d0dc0-261">Größer&#160;1 oder "unbounded".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-261">Greater than 1 or "unbounded".</span></span> <span data-ttu-id="d0dc0-262">Das DC-Schema sollte "unbounded" verwenden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-262">The DC schema should use "unbounded".</span></span>|  
+|`minOccurs`|<span data-ttu-id="d0dc0-263">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-263">Ignored.</span></span>|  
+|`nillable`|<span data-ttu-id="d0dc0-264">Beeinflusst die Typzuordnung.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-264">Affects type mapping.</span></span> <span data-ttu-id="d0dc0-265">Dieses Attribut wird für Wörterbuchauflistungen ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-265">This attribute is ignored for dictionary collections.</span></span>|  
+  
+### <a name="xselement-within-an-xsschema-global-element-declaration"></a><span data-ttu-id="d0dc0-266">\<xs: Element > innerhalb einer \<xs: Schema > globale Elementdeklaration</span><span class="sxs-lookup"><span data-stu-id="d0dc0-266">\<xs:element> within an \<xs:schema> Global Element Declaration</span></span>  
+  
+-   <span data-ttu-id="d0dc0-267">Eine globale Elementdeklaration (GED), die den gleichen Namen und Namespace wie ein Typ im Schema besitzt, oder die innerhalb ihrer selbst einen anonymen Typ definiert, wird als diesem Typ zugeordnet angesehen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-267">A Global Element Declaration (GED) that has the same name and namespace as a type in schema, or that defines an anonymous type inside itself, is said to be associated with the type.</span></span>  
+  
+-   <span data-ttu-id="d0dc0-268">Schemaexport: Für alle generierten Typen, sowohl einfache als auch komplexe, werden zugeordnete GEDs generiert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-268">Schema export: associated GEDs are generated for every generated type, both simple and complex.</span></span>  
+  
+-   <span data-ttu-id="d0dc0-269">Deserialisierung/Serialisierung: Zugeordnete GEDs werden als Stammelemente für den Typ verwendet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-269">Deserialization/serialization: associated GEDs are used as root elements for the type.</span></span>  
+  
+-   <span data-ttu-id="d0dc0-270">Schemaimport: Zugeordnete GEDs sind nicht erforderlich und werden ignoriert, wenn sie den folgenden Regeln entsprechen (es sei denn, sie definieren Typen).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-270">Schema import: associated GEDs are not required and are ignored if they follow the following rules (unless they define types).</span></span>  
+  
+|<span data-ttu-id="d0dc0-271">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-271">Attribute</span></span>|<span data-ttu-id="d0dc0-272">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-272">Schema</span></span>|  
+|---------------|------------|  
+|`abstract`|<span data-ttu-id="d0dc0-273">Muss für zugeordnete GEDs den Wert false aufweisen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-273">Must be false for associated GEDs.</span></span>|  
+|`block`|<span data-ttu-id="d0dc0-274">Unzulässig in zugeordneten GEDs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-274">Forbidden in associated GEDs.</span></span>|  
+|`default`|<span data-ttu-id="d0dc0-275">Unzulässig in zugeordneten GEDs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-275">Forbidden in associated GEDs.</span></span>|  
+|`final`|<span data-ttu-id="d0dc0-276">Muss für zugeordnete GEDs den Wert false aufweisen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-276">Must be false for associated GEDs.</span></span>|  
+|`fixed`|<span data-ttu-id="d0dc0-277">Unzulässig in zugeordneten GEDs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-277">Forbidden in associated GEDs.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-278">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-278">Ignored.</span></span>|  
+|`name`|<span data-ttu-id="d0dc0-279">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-279">Supported.</span></span> <span data-ttu-id="d0dc0-280">Siehe die Definition von zugeordneten GEDs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-280">See the definition of associated GEDs.</span></span>|  
+|`nillable`|<span data-ttu-id="d0dc0-281">Muss für zugeordnete GEDs den Wert true aufweisen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-281">Must be true for associated GEDs.</span></span>|  
+|`substitutionGroup`|<span data-ttu-id="d0dc0-282">Unzulässig in zugeordneten GEDs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-282">Forbidden in associated GEDs.</span></span>|  
+|`type`|<span data-ttu-id="d0dc0-283">Unterstützt. Muss dem zugeordneten Typ für zugeordnete GEDs entsprechen (außer wenn das Element einen anonymen Typ enthält).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-283">Supported, and must match the associated type for associated GEDs (unless the element contains an anonymous type).</span></span>|  
+  
+### <a name="xselement-contents"></a><span data-ttu-id="d0dc0-284">\<xs: Element >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-284">\<xs:element>: contents</span></span>  
+  
+|<span data-ttu-id="d0dc0-285">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-285">Contents</span></span>|<span data-ttu-id="d0dc0-286">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-286">Schema</span></span>|  
 |--------------|------------|  
-|`name`|Unterstützt, wird der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A>\-Eigenschaft des `CollectionDataContractAttribute`\-Attributs zugeordnet.|  
-|`type`|Unterstützt, wird dem in der Auflistung gespeicherten Typ zugeordnet.|  
-|`maxOccurs`|Größer&\#160;1 oder "unbounded". Das DC\-Schema sollte "unbounded" verwenden.|  
-|`minOccurs`|Ignoriert.|  
-|`nillable`|Beeinflusst die Typzuordnung. Dieses Attribut wird für Wörterbuchauflistungen ignoriert.|  
+|`simpleType`|<span data-ttu-id="d0dc0-287">Unterstützt.*</span><span class="sxs-lookup"><span data-stu-id="d0dc0-287">Supported.*</span></span>|  
+|`complexType`|<span data-ttu-id="d0dc0-288">Unterstützt.*</span><span class="sxs-lookup"><span data-stu-id="d0dc0-288">Supported.*</span></span>|  
+|`unique`|<span data-ttu-id="d0dc0-289">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-289">Ignored.</span></span>|  
+|`key`|<span data-ttu-id="d0dc0-290">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-290">Ignored.</span></span>|  
+|`keyref`|<span data-ttu-id="d0dc0-291">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-291">Ignored.</span></span>|  
+|<span data-ttu-id="d0dc0-292">(leer)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-292">(blank)</span></span>|<span data-ttu-id="d0dc0-293">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-293">Supported.</span></span>|  
   
-### \<xs:element\> innerhalb einer globalen Elementdeklaration \<xs:schema\>  
+ <span data-ttu-id="d0dc0-294">\*Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-294">\* When using the `simpleType` and `complexType,` mapping for anonymous types is the same as for non-anonymous types, except that there is no anonymous data contracts, and so a named data contract is created, with a generated name derived from the element name.</span></span> <span data-ttu-id="d0dc0-295">Die folgende Liste enthält die Regeln für anonyme Typen:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-295">The rules for anonymous types are in the following list:</span></span>  
   
--   Eine globale Elementdeklaration \(GED\), die den gleichen Namen und Namespace wie ein Typ im Schema besitzt, oder die innerhalb ihrer selbst einen anonymen Typ definiert, wird als diesem Typ zugeordnet angesehen.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d0dc0-296"> -Implementierungsdetail: Wenn der `xs:element` -Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-296"> implementation detail: If the `xs:element` name does not contain periods, the anonymous type maps to an inner type of the outer data contract type.</span></span> <span data-ttu-id="d0dc0-297">Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-297">If the name contains periods, the resulting data contract type is independent (not an inner type).</span></span>  
   
--   Schemaexport: Für alle generierten Typen, sowohl einfache als auch komplexe, werden zugeordnete GEDs generiert.  
+-   <span data-ttu-id="d0dc0-298">Der generierte Datenvertragsname des inneren Typs setzt sich zusammen aus dem Namen des äußeren Typs, gefolgt von einem Punkt, dem Namen des Elements und der Zeichenfolge "Type".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-298">The generated data contract name of the inner type is the data contract name of the outer type followed by a period, the name of the element, and the string "Type".</span></span>  
   
--   Deserialisierung\/Serialisierung: Zugeordnete GEDs werden als Stammelemente für den Typ verwendet.  
+-   <span data-ttu-id="d0dc0-299">Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-299">If a data contract with such a name already exists, the name is made unique by appending "1", "2", "3", and so on until a unique name is created.</span></span>  
   
--   Schemaimport: Zugeordnete GEDs sind nicht erforderlich und werden ignoriert, wenn sie den folgenden Regeln entsprechen \(es sei denn, sie definieren Typen\).  
+## <a name="simple-types---xssimpletype"></a><span data-ttu-id="d0dc0-300">Einfache Typen – \<simpleType ></span><span class="sxs-lookup"><span data-stu-id="d0dc0-300">Simple Types - \<xs:simpleType></span></span>  
   
-|Attribut|Schema|  
+### <a name="xssimpletype-attributes"></a><span data-ttu-id="d0dc0-301">\<simpleType >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-301">\<xs:simpleType>: attributes</span></span>  
+  
+|<span data-ttu-id="d0dc0-302">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-302">Attribute</span></span>|<span data-ttu-id="d0dc0-303">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-303">Schema</span></span>|  
+|---------------|------------|  
+|`final`|<span data-ttu-id="d0dc0-304">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-304">Ignored.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-305">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-305">Ignored.</span></span>|  
+|`name`|<span data-ttu-id="d0dc0-306">Unterstützt, wird dem Namen des Datenvertrags zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-306">Supported, maps to the data contract name.</span></span>|  
+  
+### <a name="xssimpletype-contents"></a><span data-ttu-id="d0dc0-307">\<simpleType >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-307">\<xs:simpleType>: contents</span></span>  
+  
+|<span data-ttu-id="d0dc0-308">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-308">Contents</span></span>|<span data-ttu-id="d0dc0-309">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-309">Schema</span></span>|  
 |--------------|------------|  
-|`abstract`|Muss für zugeordnete GEDs den Wert false aufweisen.|  
-|`block`|Unzulässig in zugeordneten GEDs.|  
-|`default`|Unzulässig in zugeordneten GEDs.|  
-|`final`|Muss für zugeordnete GEDs den Wert false aufweisen.|  
-|`fixed`|Unzulässig in zugeordneten GEDs.|  
-|`id`|Ignoriert.|  
-|`name`|Unterstützt. Siehe die Definition von zugeordneten GEDs.|  
-|`nillable`|Muss für zugeordnete GEDs den Wert true aufweisen.|  
-|`substitutionGroup`|Unzulässig in zugeordneten GEDs.|  
-|`type`|Unterstützt. Muss dem zugeordneten Typ für zugeordnete GEDs entsprechen \(außer wenn das Element einen anonymen Typ enthält\).|  
+|`restriction`|<span data-ttu-id="d0dc0-310">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-310">Supported.</span></span> <span data-ttu-id="d0dc0-311">Wird Enumerationsdatenverträgen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-311">Maps to enumeration data contracts.</span></span> <span data-ttu-id="d0dc0-312">Dieses Attribut wird ignoriert, wenn es nicht zum Enumerationsmuster passt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-312">This attribute is ignored if it does not match the enumeration pattern.</span></span> <span data-ttu-id="d0dc0-313">Siehe den Abschnitt `xs:simpleType` -Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-313">See the `xs:simpleType` restrictions section.</span></span>|  
+|`list`|<span data-ttu-id="d0dc0-314">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-314">Supported.</span></span> <span data-ttu-id="d0dc0-315">Wird Flagenumerationsdatenverträgen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-315">Maps to flag enumeration data contracts.</span></span> <span data-ttu-id="d0dc0-316">Siehe den Abschnitt `xs:simpleType` -Listen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-316">See the `xs:simpleType` lists section.</span></span>|  
+|`union`|<span data-ttu-id="d0dc0-317">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-317">Forbidden.</span></span>|  
   
-### \<xs:element\>: Inhalt  
+### <a name="xsrestriction"></a><span data-ttu-id="d0dc0-318">\<xs: restriction ></span><span class="sxs-lookup"><span data-stu-id="d0dc0-318">\<xs:restriction></span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Unterstützt.\*|  
-|`complexType`|Unterstützt.\*|  
-|`unique`|Ignoriert.|  
-|`key`|Ignoriert.|  
-|`keyref`|Ignoriert.|  
-|\(leer\)|Unterstützt.|  
+-   <span data-ttu-id="d0dc0-319">Einschränkungen komplexer Typen werden nur für base="`xs:anyType`" unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-319">Complex type restrictions are supported only for base="`xs:anyType`".</span></span>  
   
- \* Werden `simpleType` und `complexType,` verwendet, ist die Zuordnung von anonymen Typen dieselbe wie für nicht anonyme Typen, mit der Ausnahme, dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet wird. Die folgende Liste enthält die Regeln für anonyme Typen:  
+-   <span data-ttu-id="d0dc0-320">Einfache Typeinschränkungen von `xs:string` , die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-320">Simple type restrictions of `xs:string` that do not have any restriction facets other than `xs:enumeration` are mapped to enumeration data contracts.</span></span>  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Implementierungsdetail: Wenn der `xs:element`\-Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig \(kein innerer Typ\).  
+-   <span data-ttu-id="d0dc0-321">Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-321">All other simple type restrictions are mapped to the types they restrict.</span></span> <span data-ttu-id="d0dc0-322">Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-322">For example, a restriction of `xs:int` maps to an integer, just as `xs:int` itself does.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d0dc0-323"> zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-323"> primitive type mapping, see Type/primitive mapping.</span></span>  
   
--   Der generierte Datenvertragsname des inneren Typs setzt sich zusammen aus dem Namen des äußeren Typs, gefolgt von einem Punkt, dem Namen des Elements und der Zeichenfolge "Type".  
+### <a name="xsrestriction-attributes"></a><span data-ttu-id="d0dc0-324">\<xs: restriction >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-324">\<xs:restriction>: attributes</span></span>  
   
--   Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&\#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.  
+|<span data-ttu-id="d0dc0-325">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-325">Attribute</span></span>|<span data-ttu-id="d0dc0-326">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-326">Schema</span></span>|  
+|---------------|------------|  
+|`base`|<span data-ttu-id="d0dc0-327">Muss ein unterstützter einfacher Typ oder `xs:anyType`sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-327">Must be a supported simple type or `xs:anyType`.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-328">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-328">Ignored.</span></span>|  
   
-## Einfache Typen &\#8211; \<xs:simpleType\>  
+### <a name="xsrestriction-for-all-other-cases-contents"></a><span data-ttu-id="d0dc0-329">\<xs: restriction > für alle anderen Fälle: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-329">\<xs:restriction> for all other cases: contents</span></span>  
   
-### \<xs:simpleType\>: Attribute  
-  
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-330">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-330">Contents</span></span>|<span data-ttu-id="d0dc0-331">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-331">Schema</span></span>|  
 |--------------|------------|  
-|`final`|Ignoriert.|  
-|`id`|Ignoriert.|  
-|`name`|Unterstützt, wird dem Namen des Datenvertrags zugeordnet.|  
+|`simpleType`|<span data-ttu-id="d0dc0-332">Muss, falls vorhanden, von einem unterstützten primitiven Typ abgeleitet sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-332">If present, must be derived from a supported primitive type.</span></span>|  
+|`minExclusive`|<span data-ttu-id="d0dc0-333">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-333">Ignored.</span></span>|  
+|`minInclusive`|<span data-ttu-id="d0dc0-334">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-334">Ignored.</span></span>|  
+|`maxExclusive`|<span data-ttu-id="d0dc0-335">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-335">Ignored.</span></span>|  
+|`maxInclusive`|<span data-ttu-id="d0dc0-336">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-336">Ignored.</span></span>|  
+|`totalDigits`|<span data-ttu-id="d0dc0-337">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-337">Ignored.</span></span>|  
+|`fractionDigits`|<span data-ttu-id="d0dc0-338">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-338">Ignored.</span></span>|  
+|`length`|<span data-ttu-id="d0dc0-339">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-339">Ignored.</span></span>|  
+|`minLength`|<span data-ttu-id="d0dc0-340">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-340">Ignored.</span></span>|  
+|`maxLength`|<span data-ttu-id="d0dc0-341">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-341">Ignored.</span></span>|  
+|`enumeration`|<span data-ttu-id="d0dc0-342">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-342">Ignored.</span></span>|  
+|`whiteSpace`|<span data-ttu-id="d0dc0-343">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-343">Ignored.</span></span>|  
+|`pattern`|<span data-ttu-id="d0dc0-344">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-344">Ignored.</span></span>|  
+|<span data-ttu-id="d0dc0-345">(leer)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-345">(blank)</span></span>|<span data-ttu-id="d0dc0-346">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-346">Supported.</span></span>|  
   
-### \<xs:simpleType\>: Inhalt  
+## <a name="enumeration"></a><span data-ttu-id="d0dc0-347">Enumeration</span><span class="sxs-lookup"><span data-stu-id="d0dc0-347">Enumeration</span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`restriction`|Unterstützt. Wird Enumerationsdatenverträgen zugeordnet. Dieses Attribut wird ignoriert, wenn es nicht zum Enumerationsmuster passt. Siehe den Abschnitt `xs:simpleType`\-Einschränkungen.|  
-|`list`|Unterstützt. Wird Flagenumerationsdatenverträgen zugeordnet. Siehe den Abschnitt `xs:simpleType`\-Listen.|  
-|`union`|Unzulässig.|  
+### <a name="xsrestriction-for-enumerations-attributes"></a><span data-ttu-id="d0dc0-348">\<xs: restriction > für Enumerationen: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-348">\<xs:restriction> for enumerations: attributes</span></span>  
   
-### \<xs:restriction\>  
+|<span data-ttu-id="d0dc0-349">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-349">Attribute</span></span>|<span data-ttu-id="d0dc0-350">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-350">Schema</span></span>|  
+|---------------|------------|  
+|`base`|<span data-ttu-id="d0dc0-351">Muss, falls vorhanden, `xs:string`sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-351">If present, must be `xs:string`.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-352">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-352">Ignored.</span></span>|  
   
--   Einschränkungen komplexer Typen werden nur für base\="`xs:anyType`" unterstützt.  
+### <a name="xsrestriction-for-enumerations-contents"></a><span data-ttu-id="d0dc0-353">\<xs: restriction > für Enumerationen: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-353">\<xs:restriction> for enumerations: contents</span></span>  
   
--   Einfache Typeinschränkungen von `xs:string`, die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.  
-  
--   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
-  
-### \<xs:restriction\>: Attribute  
-  
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-354">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-354">Contents</span></span>|<span data-ttu-id="d0dc0-355">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-355">Schema</span></span>|  
 |--------------|------------|  
-|`base`|Muss ein unterstützter einfacher Typ oder `xs:anyType` sein.|  
-|`id`|Ignoriert.|  
+|`simpleType`|<span data-ttu-id="d0dc0-356">Muss, falls vorhanden, eine vom Datenvertrag (dieser Abschnitt) unterstützte Enumerationsbeschränkung sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-356">If present, must be an enumeration restriction supported by the data contract (this section).</span></span>|  
+|`minExclusive`|<span data-ttu-id="d0dc0-357">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-357">Ignored.</span></span>|  
+|`minInclusive`|<span data-ttu-id="d0dc0-358">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-358">Ignored.</span></span>|  
+|`maxExclusive`|<span data-ttu-id="d0dc0-359">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-359">Ignored.</span></span>|  
+|`maxInclusive`|<span data-ttu-id="d0dc0-360">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-360">Ignored.</span></span>|  
+|`totalDigits`|<span data-ttu-id="d0dc0-361">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-361">Ignored.</span></span>|  
+|`fractionDigits`|<span data-ttu-id="d0dc0-362">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-362">Ignored.</span></span>|  
+|`length`|<span data-ttu-id="d0dc0-363">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-363">Forbidden.</span></span>|  
+|`minLength`|<span data-ttu-id="d0dc0-364">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-364">Forbidden.</span></span>|  
+|`maxLength`|<span data-ttu-id="d0dc0-365">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-365">Forbidden.</span></span>|  
+|`enumeration`|<span data-ttu-id="d0dc0-366">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-366">Supported.</span></span> <span data-ttu-id="d0dc0-367">Enumerations-"ID" wird ignoriert, und "value" wird dem Wertnamen im Enumerationsdatenvertrag zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-367">Enumeration "id" is ignored, and "value" maps to the value name in the enumeration data contract.</span></span>|  
+|`whiteSpace`|<span data-ttu-id="d0dc0-368">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-368">Forbidden.</span></span>|  
+|`pattern`|<span data-ttu-id="d0dc0-369">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-369">Forbidden.</span></span>|  
+|<span data-ttu-id="d0dc0-370">(leer)</span><span class="sxs-lookup"><span data-stu-id="d0dc0-370">(empty)</span></span>|<span data-ttu-id="d0dc0-371">Unterstützt, wird leerem Enumerationstyp zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-371">Supported, maps to empty enumeration type.</span></span>|  
   
-### \<xs:restriction\> für alle anderen Fälle: Inhalt  
-  
-|Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Muss, falls vorhanden, von einem unterstützten primitiven Typ abgeleitet sein.|  
-|`minExclusive`|Ignoriert.|  
-|`minInclusive`|Ignoriert.|  
-|`maxExclusive`|Ignoriert.|  
-|`maxInclusive`|Ignoriert.|  
-|`totalDigits`|Ignoriert.|  
-|`fractionDigits`|Ignoriert.|  
-|`length`|Ignoriert.|  
-|`minLength`|Ignoriert.|  
-|`maxLength`|Ignoriert.|  
-|`enumeration`|Ignoriert.|  
-|`whiteSpace`|Ignoriert.|  
-|`pattern`|Ignoriert.|  
-|\(leer\)|Unterstützt.|  
-  
-## Enumeration  
-  
-### \<xs:restriction\> für Enumerationen: Attribute  
-  
-|Attribut|Schema|  
-|--------------|------------|  
-|`base`|Muss, falls vorhanden, `xs:string` sein.|  
-|`id`|Ignoriert.|  
-  
-### \<xs:restriction\> für Enumerationen: Inhalt  
-  
-|Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Muss, falls vorhanden, eine vom Datenvertrag \(dieser Abschnitt\) unterstützte Enumerationsbeschränkung sein.|  
-|`minExclusive`|Ignoriert.|  
-|`minInclusive`|Ignoriert.|  
-|`maxExclusive`|Ignoriert.|  
-|`maxInclusive`|Ignoriert.|  
-|`totalDigits`|Ignoriert.|  
-|`fractionDigits`|Ignoriert.|  
-|`length`|Unzulässig.|  
-|`minLength`|Unzulässig.|  
-|`maxLength`|Unzulässig.|  
-|`enumeration`|Unterstützt. Enumerations\-"ID" wird ignoriert, und "value" wird dem Wertnamen im Enumerationsdatenvertrag zugeordnet.|  
-|`whiteSpace`|Unzulässig.|  
-|`pattern`|Unzulässig.|  
-|\(leer\)|Unterstützt, wird leerem Enumerationstyp zugeordnet.|  
-  
- Der folgende Code zeigt eine C\#\-Enumerationsklasse.  
+ <span data-ttu-id="d0dc0-372">Der folgende Code zeigt eine C#-Enumerationsklasse.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-372">The following code shows a C# enumeration class.</span></span>  
   
 ```  
 public enum MyEnum  
@@ -305,11 +307,11 @@ public enum MyEnum
    third =5  
 ```  
   
- }  
+ <span data-ttu-id="d0dc0-373">}</span><span class="sxs-lookup"><span data-stu-id="d0dc0-373">}</span></span>  
   
- Diese Klasse wird vom `DataContractSerializer` dem folgenden Schema zugeordnet. Wenn die Enumerationswerte mit&\#160;1 beginnen, werden keine `xs:annotation`\-Blöcke generiert.  
+ <span data-ttu-id="d0dc0-374">Diese Klasse wird vom `DataContractSerializer`dem folgenden Schema zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-374">This class maps to the following schema by the `DataContractSerializer`.</span></span> <span data-ttu-id="d0dc0-375">Wenn die Enumerationswerte mit&amp;#160;1 beginnen, werden keine `xs:annotation` -Blöcke generiert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-375">If enumeration values start from 1, `xs:annotation` blocks are not generated.</span></span>  
   
-```  
+```xml  
 <xs:simpleType name="MyEnum">  
 <xs:restriction base="xs:string">  
  <xs:enumeration value="first">  
@@ -331,30 +333,30 @@ public enum MyEnum
     </EnumerationValue>  
    </xs:appinfo>  
   </xs:annotation>  
- </xs:enumeration>   
+ </xs:enumeration>  
 </xs:restriction>  
 </xs:simpleType>  
 ```  
   
-### \<xs:list\>  
- `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string` zu. Andere `xs:list`\-Variationen werden nicht unterstützt.  
+### <a name="xslist"></a><span data-ttu-id="d0dc0-376">\<xs: List ></span><span class="sxs-lookup"><span data-stu-id="d0dc0-376">\<xs:list></span></span>  
+ <span data-ttu-id="d0dc0-377">`DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-377">`DataContractSerializer` maps enumeration types marked with `System.FlagsAttribute` to `xs:list` derived from `xs:string`.</span></span> <span data-ttu-id="d0dc0-378">Andere `xs:list` -Variationen werden nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-378">No other `xs:list` variations are supported.</span></span>  
   
-### \<xs:list\>: Attribute  
+### <a name="xslist-attributes"></a><span data-ttu-id="d0dc0-379">\<xs: List >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-379">\<xs:list>: attributes</span></span>  
   
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-380">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-380">Attribute</span></span>|<span data-ttu-id="d0dc0-381">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-381">Schema</span></span>|  
+|---------------|------------|  
+|`itemType`|<span data-ttu-id="d0dc0-382">Unzulässig.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-382">Forbidden.</span></span>|  
+|`id`|<span data-ttu-id="d0dc0-383">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-383">Ignored.</span></span>|  
+  
+### <a name="xslist-contents"></a><span data-ttu-id="d0dc0-384">\<xs: List >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-384">\<xs:list>: contents</span></span>  
+  
+|<span data-ttu-id="d0dc0-385">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-385">Contents</span></span>|<span data-ttu-id="d0dc0-386">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-386">Schema</span></span>|  
 |--------------|------------|  
-|`itemType`|Unzulässig.|  
-|`id`|Ignoriert.|  
+|`simpleType`|<span data-ttu-id="d0dc0-387">Muss eine Einschränkung von `xs:string` mit `xs:enumeration` -Facet sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-387">Must be restriction from `xs:string` using `xs:enumeration` facet.</span></span>|  
   
-### \<xs:list\>: Inhalt  
+ <span data-ttu-id="d0dc0-388">Sind die Enumerationswerte keine Folge mit Potenzen des Werts&amp;#160;2 (für Flags der Standard), wird der Wert im `xs:annotation/xs:appInfo/ser:EnumerationValue` -Element gespeichert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-388">If enumeration value does not follow a power of 2 progression (default for Flags), the value is stored in the `xs:annotation/xs:appInfo/ser:EnumerationValue` element.</span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Muss eine Einschränkung von `xs:string` mit `xs:enumeration`\-Facet sein.|  
-  
- Sind die Enumerationswerte keine Folge mit Potenzen des Werts&\#160;2 \(für Flags der Standard\), wird der Wert im `xs:annotation/xs:appInfo/ser:EnumerationValue`\-Element gespeichert.  
-  
- Der folgende Code definiert z.&\#160;B. einen Enumerationstyp für Flags.  
+ <span data-ttu-id="d0dc0-389">Der folgende Code definiert z.&#160;B. einen Enumerationstyp für Flags.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-389">For example, the following code flags an enumeration type.</span></span>  
   
 ```  
 [Flags]  
@@ -368,9 +370,9 @@ public enum AuthFlags
 }  
 ```  
   
- Dieser Typ wird dem folgenden Schema zugeordnet.  
+ <span data-ttu-id="d0dc0-390">Dieser Typ wird dem folgenden Schema zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-390">This type maps to the following schema.</span></span>  
   
-```  
+```xml  
 <xs:simpleType name="AuthFlags">  
     <xs:list>  
       <xs:simpleType>  
@@ -400,14 +402,14 @@ rialization/">64</EnumerationValue>
   </xs:simpleType>  
 ```  
   
-## Vererbung  
+## <a name="inheritance"></a><span data-ttu-id="d0dc0-391">Vererbung</span><span class="sxs-lookup"><span data-stu-id="d0dc0-391">Inheritance</span></span>  
   
-### Allgemeine Regeln  
- Ein Datenvertrag kann von einem anderen Datenvertrag erben. Solche Datenverträge werden einem Basistyp zugeordnet und durch Erweiterungstypen mithilfe des `<xs:extension>`\-XML\-Schemakonstrukts abgeleitet.  
+### <a name="general-rules"></a><span data-ttu-id="d0dc0-392">Allgemeine Regeln</span><span class="sxs-lookup"><span data-stu-id="d0dc0-392">General rules</span></span>  
+ <span data-ttu-id="d0dc0-393">Ein Datenvertrag kann von einem anderen Datenvertrag erben.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-393">A data contract can inherit from another data contract.</span></span> <span data-ttu-id="d0dc0-394">Solche Datenverträge werden einem Basistyp zugeordnet und durch Erweiterungstypen mithilfe des `<xs:extension>` -XML-Schemakonstrukts abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-394">Such data contracts map to a base and are derived by extension types using the `<xs:extension>` XML Schema construct.</span></span>  
   
- Ein Datenvertrag kann nicht von einem Auflistungsdatenvertrag erben.  
+ <span data-ttu-id="d0dc0-395">Ein Datenvertrag kann nicht von einem Auflistungsdatenvertrag erben.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-395">A data contract cannot inherit from a collection data contract.</span></span>  
   
- Der folgende Code stellt z.&\#160;B. einen Datenvertrag dar.  
+ <span data-ttu-id="d0dc0-396">Der folgende Code stellt z.&#160;B. einen Datenvertrag dar.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-396">For example, the following code is a data contract.</span></span>  
   
 ```  
 [DataContract]  
@@ -424,9 +426,9 @@ public class Employee : Person
 }  
 ```  
   
- Dieser Datenvertrag wird der folgenden XML\-Schema\-Typdeklaration zugeordnet.  
+ <span data-ttu-id="d0dc0-397">Dieser Datenvertrag wird der folgenden XML-Schema-Typdeklaration zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-397">This data contract maps to the following XML Schema type declaration.</span></span>  
   
-```  
+```xml  
 <xs:complexType name="Employee">  
  <xs:complexContent mixed="false">  
   <xs:extension base="tns:Person">  
@@ -444,96 +446,96 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### \<xs:complexContent\>: Attribute  
+### <a name="xscomplexcontent-attributes"></a><span data-ttu-id="d0dc0-398">\<complexContent >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-398">\<xs:complexContent>: attributes</span></span>  
   
-|Attribut|Schema|  
+|<span data-ttu-id="d0dc0-399">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-399">Attribute</span></span>|<span data-ttu-id="d0dc0-400">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-400">Schema</span></span>|  
+|---------------|------------|  
+|`id`|<span data-ttu-id="d0dc0-401">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-401">Ignored.</span></span>|  
+|`mixed`|<span data-ttu-id="d0dc0-402">Muss den Wert false aufweisen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-402">Must be false.</span></span>|  
+  
+### <a name="xscomplexcontent-contents"></a><span data-ttu-id="d0dc0-403">\<complexContent >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-403">\<xs:complexContent>: contents</span></span>  
+  
+|<span data-ttu-id="d0dc0-404">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-404">Contents</span></span>|<span data-ttu-id="d0dc0-405">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-405">Schema</span></span>|  
 |--------------|------------|  
-|`id`|Ignoriert.|  
-|`mixed`|Muss den Wert false aufweisen.|  
+|`restriction`|<span data-ttu-id="d0dc0-406">Unzulässig, außer wenn base="`xs:anyType`".</span><span class="sxs-lookup"><span data-stu-id="d0dc0-406">Forbidden, except when base="`xs:anyType`".</span></span> <span data-ttu-id="d0dc0-407">Letzteres entspricht der Platzierung des Inhalts von `xs:restriction` direkt unter den Container von `xs:complexContent`.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-407">The latter is equivalent to placing the content of the `xs:restriction` directly under the container of the `xs:complexContent`.</span></span>|  
+|`extension`|<span data-ttu-id="d0dc0-408">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-408">Supported.</span></span> <span data-ttu-id="d0dc0-409">Wird der Datenvertragsvererbung zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-409">Maps to data contract inheritance.</span></span>|  
   
-### \<xs:complexContent\>: Inhalt  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a><span data-ttu-id="d0dc0-410">\<xs: Extension > in \<complexContent >: Attribute</span><span class="sxs-lookup"><span data-stu-id="d0dc0-410">\<xs:extension> in \<xs:complexContent>: attributes</span></span>  
   
-|Inhalt|Schema|  
-|------------|------------|  
-|`restriction`|Unzulässig, außer wenn base\="`xs:anyType`". Letzteres entspricht der Platzierung des Inhalts von `xs:restriction` direkt unter den Container von `xs:complexContent`.|  
-|`extension`|Unterstützt. Wird der Datenvertragsvererbung zugeordnet.|  
+|<span data-ttu-id="d0dc0-411">Attribut</span><span class="sxs-lookup"><span data-stu-id="d0dc0-411">Attribute</span></span>|<span data-ttu-id="d0dc0-412">Schema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-412">Schema</span></span>|  
+|---------------|------------|  
+|`id`|<span data-ttu-id="d0dc0-413">Ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-413">Ignored.</span></span>|  
+|`base`|<span data-ttu-id="d0dc0-414">Unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-414">Supported.</span></span> <span data-ttu-id="d0dc0-415">Wird dem Basisdatenvertragstyp zugeordnet, von dem dieser Typ erbt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-415">Maps to the base data contract type that this type inherits from.</span></span>|  
   
-### \<xs:extension\> in \<xs:complexContent\>: Attribute  
+### <a name="xsextension-in-xscomplexcontent-contents"></a><span data-ttu-id="d0dc0-416">\<xs: Extension > in \<complexContent >: Inhalt</span><span class="sxs-lookup"><span data-stu-id="d0dc0-416">\<xs:extension> in \<xs:complexContent>: contents</span></span>  
+ <span data-ttu-id="d0dc0-417">Die Regeln sind die gleichen wie für den `<xs:complexType>` -Inhalt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-417">The rules are the same as for `<xs:complexType>` contents.</span></span>  
   
-|Attribut|Schema|  
-|--------------|------------|  
-|`id`|Ignoriert.|  
-|`base`|Unterstützt. Wird dem Basisdatenvertragstyp zugeordnet, von dem dieser Typ erbt.|  
+ <span data-ttu-id="d0dc0-418">Wird `<xs:sequence>` angegeben, werden dessen Memberelemente den zusätzlichen Datenmembern zugeordnet, die im abgeleiteten Datenvertrag vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-418">If an `<xs:sequence>` is provided, its member elements map to additional data members that are present in the derived data contract.</span></span>  
   
-### \<xs:extension\> in \<xs:complexContent\>: Inhalt  
- Die Regeln sind die gleichen wie für den `<xs:complexType>`\-Inhalt.  
+ <span data-ttu-id="d0dc0-419">Wenn ein abgeleiteter Typ ein Element mit dem gleichen Namen wie ein Element in einem Basistyp enthält, wird die doppelte Elementdeklaration einem Datenmember zugeordnet, für den ein eindeutiger Name generiert wurde.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-419">If a derived type contains an element with the same name as an element in a base type, the duplicate element declaration maps to a data member with a name that is generated to be unique.</span></span> <span data-ttu-id="d0dc0-420">Dazu werden dem Datenmember so lange positive Ganzzahlen hinzugefügt ("member1", "member2" usw.), bis ein eindeutiger Name gefunden ist.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-420">Positive integer numbers are added to the data member name ("member1", "member2", and so on) until a unique name is found.</span></span> <span data-ttu-id="d0dc0-421">Umgekehrt:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-421">Conversely:</span></span>  
   
- Wird `<xs:sequence>` angegeben, werden dessen Memberelemente den zusätzlichen Datenmembern zugeordnet, die im abgeleiteten Datenvertrag vorhanden sind.  
+-   <span data-ttu-id="d0dc0-422">Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen und Typ wie ein Datenmember in einem Basisdatenvertrag enthält, generiert der `DataContractSerializer` dieses entsprechende Element im abgeleiteten Typ.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-422">If a derived data contract has a data member with the same name and type as a data member in a base data contract, `DataContractSerializer` generates this corresponding element in the derived type.</span></span>  
   
- Wenn ein abgeleiteter Typ ein Element mit dem gleichen Namen wie ein Element in einem Basistyp enthält, wird die doppelte Elementdeklaration einem Datenmember zugeordnet, für den ein eindeutiger Name generiert wurde. Dazu werden dem Datenmember so lange positive Ganzzahlen hinzugefügt \("member1", "member2" usw.\), bis ein eindeutiger Name gefunden ist. Umgekehrt:  
+-   <span data-ttu-id="d0dc0-423">Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen, jedoch einem anderen Typ als ein Datenmember in einem Basisdatenvertrag enthält, importiert der `DataContractSerializer` ein Schema mit einem Element des Typs `xs:anyType` in die Deklarationen sowohl des Basistyps als auch des abgeleiteten Typs.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-423">If a derived data contract has a data member with the same name as a data member in a base data contract but a different type, the `DataContractSerializer` imports a schema with an element of the type `xs:anyType` in both base type and derived type declarations.</span></span> <span data-ttu-id="d0dc0-424">Der ursprüngliche Typname wird in `xs:annotations/xs:appInfo/ser:ActualType/@Name`beibehalten.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-424">The original type name is preserved in `xs:annotations/xs:appInfo/ser:ActualType/@Name`.</span></span>  
   
--   Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen und Typ wie ein Datenmember in einem Basisdatenvertrag enthält, generiert der `DataContractSerializer` dieses entsprechende Element im abgeleiteten Typ.  
+ <span data-ttu-id="d0dc0-425">Beide Variationen können zu einem Schema mit einem mehrdeutigen Inhaltsmodell führen, das von der Reihenfolge der jeweiligen Datenmember abhängt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-425">Both variations may lead to a schema with an ambiguous content model, which depends on the order of the respective data members.</span></span>  
   
--   Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen, jedoch einem anderen Typ als ein Datenmember in einem Basisdatenvertrag enthält, importiert der `DataContractSerializer` ein Schema mit einem Element des Typs `xs:anyType` in die Deklarationen sowohl des Basistyps als auch des abgeleiteten Typs. Der ursprüngliche Typname wird in `xs:annotations/xs:appInfo/ser:ActualType/@Name` beibehalten.  
+## <a name="typeprimitive-mapping"></a><span data-ttu-id="d0dc0-426">Zuordnung von Typen zu primitivem Typen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-426">Type/primitive mapping</span></span>  
+ <span data-ttu-id="d0dc0-427">Der `DataContractSerializer` verwendet die folgende Zuordnung für primitive Typen von XML-Schemas.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-427">The `DataContractSerializer` uses the following mapping for XML Schema primitive types.</span></span>  
   
- Beide Variationen können zu einem Schema mit einem mehrdeutigen Inhaltsmodell führen, das von der Reihenfolge der jeweiligen Datenmember abhängt.  
-  
-## Zuordnung von Typen zu primitivem Typen  
- Der `DataContractSerializer` verwendet die folgende Zuordnung für primitive Typen von XML\-Schemas.  
-  
-|XSD\-Typ|.NET\-Typ|  
+|<span data-ttu-id="d0dc0-428">XSD-Typ</span><span class="sxs-lookup"><span data-stu-id="d0dc0-428">XSD type</span></span>|<span data-ttu-id="d0dc0-429">.NET-Typ</span><span class="sxs-lookup"><span data-stu-id="d0dc0-429">.NET type</span></span>|  
 |--------------|---------------|  
-|`anyType`|<xref:System.Object>.|  
-|`anySimpleType`|<xref:System.String>.|  
-|`duration`|<xref:System.TimeSpan>.|  
-|`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset\-Serialisierung \(unten\).|  
-|`time`|<xref:System.String>.|  
-|`date`|<xref:System.String>.|  
-|`gYearMonth`|<xref:System.String>.|  
-|`gYear`|<xref:System.String>.|  
-|`gMonthDay`|<xref:System.String>.|  
-|`gDay`|<xref:System.String>.|  
-|`gMonth`|<xref:System.String>.|  
+|`anyType`|<span data-ttu-id="d0dc0-430"><xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-430"><xref:System.Object>.</span></span>|  
+|`anySimpleType`|<span data-ttu-id="d0dc0-431"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-431"><xref:System.String>.</span></span>|  
+|`duration`|<span data-ttu-id="d0dc0-432"><xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-432"><xref:System.TimeSpan>.</span></span>|  
+|`dateTime`|<span data-ttu-id="d0dc0-433"><xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-433"><xref:System.DateTime>.</span></span>|  
+|`dateTimeOffset`|<span data-ttu-id="d0dc0-434"><xref:System.DateTime> und <xref:System.TimeSpan> für den Offset.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-434"><xref:System.DateTime> and <xref:System.TimeSpan> for the offset.</span></span> <span data-ttu-id="d0dc0-435">Siehe DateTimeOffset-Serialisierung (unten).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-435">See DateTimeOffset Serialization below.</span></span>|  
+|`time`|<span data-ttu-id="d0dc0-436"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-436"><xref:System.String>.</span></span>|  
+|`date`|<span data-ttu-id="d0dc0-437"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-437"><xref:System.String>.</span></span>|  
+|`gYearMonth`|<span data-ttu-id="d0dc0-438"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-438"><xref:System.String>.</span></span>|  
+|`gYear`|<span data-ttu-id="d0dc0-439"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-439"><xref:System.String>.</span></span>|  
+|`gMonthDay`|<span data-ttu-id="d0dc0-440"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-440"><xref:System.String>.</span></span>|  
+|`gDay`|<span data-ttu-id="d0dc0-441"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-441"><xref:System.String>.</span></span>|  
+|`gMonth`|<span data-ttu-id="d0dc0-442"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-442"><xref:System.String>.</span></span>|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte>\-Array.|  
-|`hexBinary`|<xref:System.String>.|  
-|`float`|<xref:System.Single>.|  
-|`double`|<xref:System.Double>.|  
-|`anyURI`|<xref:System.Uri>.|  
-|`QName`|<xref:System.Xml.XmlQualifiedName>.|  
-|`string`|<xref:System.String>.|  
-|`normalizedString`|<xref:System.String>.|  
-|`token`|<xref:System.String>.|  
-|`language`|<xref:System.String>.|  
-|`Name`|<xref:System.String>.|  
-|`NCName`|<xref:System.String>.|  
-|`ID`|<xref:System.String>.|  
-|`IDREF`|<xref:System.String>.|  
-|`IDREFS`|<xref:System.String>.|  
-|`ENTITY`|<xref:System.String>.|  
-|`ENTITIES`|<xref:System.String>.|  
-|`NMTOKEN`|<xref:System.String>.|  
-|`NMTOKENS`|<xref:System.String>.|  
-|`decimal`|<xref:System.Decimal>.|  
-|`integer`|<xref:System.Int64>.|  
-|`nonPositiveInteger`|<xref:System.Int64>.|  
-|`negativeInteger`|<xref:System.Int64>.|  
-|`long`|<xref:System.Int64>.|  
-|`int`|<xref:System.Int32>.|  
-|`short`|<xref:System.Int16>.|  
-|`Byte`|<xref:System.SByte>.|  
-|`nonNegativeInteger`|<xref:System.Int64>.|  
-|`unsignedLong`|<xref:System.UInt64>.|  
-|`unsignedInt`|<xref:System.UInt32>.|  
-|`unsignedShort`|<xref:System.UInt16>.|  
-|`unsignedByte`|<xref:System.Byte>.|  
-|`positiveInteger`|<xref:System.Int64>.|  
+|`base64Binary`|<span data-ttu-id="d0dc0-443"><xref:System.Byte> -Array.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-443"><xref:System.Byte> array.</span></span>|  
+|`hexBinary`|<span data-ttu-id="d0dc0-444"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-444"><xref:System.String>.</span></span>|  
+|`float`|<span data-ttu-id="d0dc0-445"><xref:System.Single>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-445"><xref:System.Single>.</span></span>|  
+|`double`|<span data-ttu-id="d0dc0-446"><xref:System.Double>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-446"><xref:System.Double>.</span></span>|  
+|`anyURI`|<span data-ttu-id="d0dc0-447"><xref:System.Uri>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-447"><xref:System.Uri>.</span></span>|  
+|`QName`|<span data-ttu-id="d0dc0-448"><xref:System.Xml.XmlQualifiedName>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-448"><xref:System.Xml.XmlQualifiedName>.</span></span>|  
+|`string`|<span data-ttu-id="d0dc0-449"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-449"><xref:System.String>.</span></span>|  
+|`normalizedString`|<span data-ttu-id="d0dc0-450"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-450"><xref:System.String>.</span></span>|  
+|`token`|<span data-ttu-id="d0dc0-451"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-451"><xref:System.String>.</span></span>|  
+|`language`|<span data-ttu-id="d0dc0-452"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-452"><xref:System.String>.</span></span>|  
+|`Name`|<span data-ttu-id="d0dc0-453"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-453"><xref:System.String>.</span></span>|  
+|`NCName`|<span data-ttu-id="d0dc0-454"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-454"><xref:System.String>.</span></span>|  
+|`ID`|<span data-ttu-id="d0dc0-455"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-455"><xref:System.String>.</span></span>|  
+|`IDREF`|<span data-ttu-id="d0dc0-456"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-456"><xref:System.String>.</span></span>|  
+|`IDREFS`|<span data-ttu-id="d0dc0-457"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-457"><xref:System.String>.</span></span>|  
+|`ENTITY`|<span data-ttu-id="d0dc0-458"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-458"><xref:System.String>.</span></span>|  
+|`ENTITIES`|<span data-ttu-id="d0dc0-459"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-459"><xref:System.String>.</span></span>|  
+|`NMTOKEN`|<span data-ttu-id="d0dc0-460"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-460"><xref:System.String>.</span></span>|  
+|`NMTOKENS`|<span data-ttu-id="d0dc0-461"><xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-461"><xref:System.String>.</span></span>|  
+|`decimal`|<span data-ttu-id="d0dc0-462"><xref:System.Decimal>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-462"><xref:System.Decimal>.</span></span>|  
+|`integer`|<span data-ttu-id="d0dc0-463"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-463"><xref:System.Int64>.</span></span>|  
+|`nonPositiveInteger`|<span data-ttu-id="d0dc0-464"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-464"><xref:System.Int64>.</span></span>|  
+|`negativeInteger`|<span data-ttu-id="d0dc0-465"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-465"><xref:System.Int64>.</span></span>|  
+|`long`|<span data-ttu-id="d0dc0-466"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-466"><xref:System.Int64>.</span></span>|  
+|`int`|<span data-ttu-id="d0dc0-467"><xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-467"><xref:System.Int32>.</span></span>|  
+|`short`|<span data-ttu-id="d0dc0-468"><xref:System.Int16>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-468"><xref:System.Int16>.</span></span>|  
+|`Byte`|<span data-ttu-id="d0dc0-469"><xref:System.SByte>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-469"><xref:System.SByte>.</span></span>|  
+|`nonNegativeInteger`|<span data-ttu-id="d0dc0-470"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-470"><xref:System.Int64>.</span></span>|  
+|`unsignedLong`|<span data-ttu-id="d0dc0-471"><xref:System.UInt64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-471"><xref:System.UInt64>.</span></span>|  
+|`unsignedInt`|<span data-ttu-id="d0dc0-472"><xref:System.UInt32>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-472"><xref:System.UInt32>.</span></span>|  
+|`unsignedShort`|<span data-ttu-id="d0dc0-473"><xref:System.UInt16>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-473"><xref:System.UInt16>.</span></span>|  
+|`unsignedByte`|<span data-ttu-id="d0dc0-474"><xref:System.Byte>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-474"><xref:System.Byte>.</span></span>|  
+|`positiveInteger`|<span data-ttu-id="d0dc0-475"><xref:System.Int64>.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-475"><xref:System.Int64>.</span></span>|  
   
-## Zuordnung von ISerializable\-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&\#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können.`DataContractSerializer` unterstützt von sich aus `ISerializable`\-Klassen. Der `DataContractSerializer` ordnet `ISerializable`\-Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen \(QName\) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Zum Beispiel ordnet der `DataContractSerializer`<xref:System.Exception> dem folgenden XSD\-Typ im Namespace http:\/\/schemas.datacontract.org\/2004\/07\/System zu.  
+## <a name="iserializable-types-mapping"></a><span data-ttu-id="d0dc0-476">Zuordnung von ISerializable-Typen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-476">ISerializable types mapping</span></span>  
+ <span data-ttu-id="d0dc0-477">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-477">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, `ISerializable` was introduced as a general mechanism to serialize objects for persistence or data transfer.</span></span> <span data-ttu-id="d0dc0-478">Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-478">There are many [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types that implement `ISerializable` and that can be passed between applications.</span></span> <span data-ttu-id="d0dc0-479">`DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-479">`DataContractSerializer` naturally provides support for `ISerializable` classes.</span></span> <span data-ttu-id="d0dc0-480">Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-480">The `DataContractSerializer` maps `ISerializable` implementation schema types that differ only by the QName (qualified name) of the type and are effectively property collections.</span></span> <span data-ttu-id="d0dc0-481">Zum Beispiel ordnet der `DataContractSerializer` <xref:System.Exception> dem folgenden XSD-Typ im Namespace http://schemas.datacontract.org/2004/07/System zu.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-481">For example, the `DataContractSerializer` maps <xref:System.Exception> to the following XSD type in the http://schemas.datacontract.org/2004/07/System namespace.</span></span>  
   
-```  
+```xml  
 <xs:complexType name="Exception">  
  <xs:sequence>  
   <xs:any minOccurs="0" maxOccurs="unbounded"   
@@ -543,16 +545,16 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer`\-Instanz sein.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ <span data-ttu-id="d0dc0-482">Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-482">The optional attribute `ser:FactoryType` declared in the Data Contract Serialization schema references a factory class that can deserialize the type.</span></span> <span data-ttu-id="d0dc0-483">Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-483">The factory class must be part of the known types collection of the `DataContractSerializer` instance being used.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d0dc0-484"> zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)exportiert werden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-484"> known types, see [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## DataContract\-Serialisierungsschema  
- Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags\-Serialisierungsnamespace:  
+## <a name="datacontract-serialization-schema"></a><span data-ttu-id="d0dc0-485">DataContract-Serialisierungsschema</span><span class="sxs-lookup"><span data-stu-id="d0dc0-485">DataContract Serialization Schema</span></span>  
+ <span data-ttu-id="d0dc0-486">Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags-Serialisierungsnamespace:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-486">A number of schemas exported by the `DataContractSerializer` use types, elements, and attributes from a special Data Contract Serialization namespace:</span></span>  
   
- http:\/\/schemas.microsoft.com\/2003\/10\/Serialization  
+ <span data-ttu-id="d0dc0-487">http://schemas.microsoft.com/2003/10/Serialization</span><span class="sxs-lookup"><span data-stu-id="d0dc0-487">http://schemas.microsoft.com/2003/10/Serialization</span></span>  
   
- Das Folgende ist eine vollständige Schemadeklaration für die Datenvertragsserialisierung.  
+ <span data-ttu-id="d0dc0-488">Das Folgende ist eine vollständige Schemadeklaration für die Datenvertragsserialisierung.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-488">The following is a complete Data Contract Serialization schema declaration.</span></span>  
   
-```  
+```xml  
 <xs:schema attributeFormDefault="qualified"          
    elementFormDefault="qualified"        
    targetNamespace =   
@@ -563,7 +565,7 @@ public class Employee : Person
  <!-- Top-level elements for primitive types. -->  
  <xs:element name="anyType" nillable="true" type="xs:anyType"/>  
  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>  
- <xs:element name="base64Binary"   
+ <xs:element name="base64Binary"  
        nillable="true" type="xs:base64Binary"/>  
  <xs:element name="boolean" nillable="true" type="xs:boolean"/>  
  <xs:element name="byte" nillable="true" type="xs:byte"/>  
@@ -576,13 +578,13 @@ public class Employee : Person
  <xs:element name="QName" nillable="true" type="xs:QName"/>  
  <xs:element name="short" nillable="true" type="xs:short"/>  
  <xs:element name="string" nillable="true" type="xs:string"/>  
- <xs:element name="unsignedByte"   
+ <xs:element name="unsignedByte"  
        nillable="true" type="xs:unsignedByte"/>  
- <xs:element name="unsignedInt"   
+ <xs:element name="unsignedInt"  
        nillable="true" type="xs:unsignedInt"/>  
- <xs:element name="unsignedLong"   
+ <xs:element name="unsignedLong"  
        nillable="true" type="xs:unsignedLong"/>  
- <xs:element name="unsignedShort"   
+ <xs:element name="unsignedShort"  
        nillable="true" type="xs:unsignedShort"/>  
   
  <!-- Primitive types introduced for certain .NET simple types. -->  
@@ -591,7 +593,7 @@ public class Employee : Person
   <xs:restriction base="xs:int"/>  
  </xs:simpleType>  
   
- <!-- xs:duration is restricted to an ordered value space,   
+ <!-- xs:duration is restricted to an ordered value space,  
     to map to System.TimeSpan -->  
  <xs:element name="duration" nillable="true" type="tns:duration"/>  
  <xs:simpleType name="duration">  
@@ -615,16 +617,16 @@ public class Employee : Person
 </xs:schema>  
 ```  
   
- Auf Folgendes sollte geachtet werden:  
+ <span data-ttu-id="d0dc0-489">Auf Folgendes sollte geachtet werden:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-489">The following should be noted:</span></span>  
   
--   `ser:char` wurde eingeführt, um Unicode\-Zeichen des Typs <xref:System.Char> darzustellen.  
+-   <span data-ttu-id="d0dc0-490">`ser:char` wurde eingeführt, um Unicode-Zeichen des Typs <xref:System.Char>darzustellen.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-490">`ser:char` is introduced to represent Unicode characters of type <xref:System.Char>.</span></span>  
   
--   Der `valuespace` von `xs:duration` wurde zu einer geordneten Menge reduziert, damit diese einem <xref:System.TimeSpan> zugeordnet werden kann.  
+-   <span data-ttu-id="d0dc0-491">Der `valuespace` von `xs:duration` wurde zu einer geordneten Menge reduziert, damit diese einem <xref:System.TimeSpan>zugeordnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-491">The `valuespace` of `xs:duration` is reduced to an ordered set so that it can be mapped to a <xref:System.TimeSpan>.</span></span>  
   
--   `FactoryType` wird in Schemas verwendet, die von Typen exportiert werden, die von <xref:System.Runtime.Serialization.ISerializable> abgeleitet wurden.  
+-   <span data-ttu-id="d0dc0-492">`FactoryType` wird in Schemas verwendet, die von Typen exportiert werden, die von <xref:System.Runtime.Serialization.ISerializable>abgeleitet wurden.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-492">`FactoryType` is used in schemas exported from types that are derived from <xref:System.Runtime.Serialization.ISerializable>.</span></span>  
   
-## Importieren von Nicht\-DataContract\-Schemas  
- `DataContractSerializer` verfügt über die `ImportXmlTypes`\-Option, die den Import von Schemas erlaubt, die dem `DataContractSerializer`\-XSD\-Profil nicht entsprechen \(siehe die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>\-Eigenschaft\). Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht\-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt \(nur der Klassenname unterscheidet sich\).  
+## <a name="importing-non-datacontract-schemas"></a><span data-ttu-id="d0dc0-493">Importieren von Nicht-DataContract-Schemas</span><span class="sxs-lookup"><span data-stu-id="d0dc0-493">Importing non-DataContract schemas</span></span>  
+ <span data-ttu-id="d0dc0-494">`DataContractSerializer` verfügt über die `ImportXmlTypes` -Option, die den Import von Schemas erlaubt, die dem `DataContractSerializer` -XSD-Profil nicht entsprechen (siehe die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> -Eigenschaft).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-494">`DataContractSerializer` has the `ImportXmlTypes` option to allow import of schemas that do not conform to the `DataContractSerializer` XSD profile (see the <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> property).</span></span> <span data-ttu-id="d0dc0-495">Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt (nur der Klassenname unterscheidet sich).</span><span class="sxs-lookup"><span data-stu-id="d0dc0-495">Setting this option to `true` enables acceptance of non-conforming schema types and mapping them to the following implementation, <xref:System.Xml.Serialization.IXmlSerializable> wrapping an array of <xref:System.Xml.XmlNode> (only the class name differs).</span></span>  
   
 ```  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
@@ -660,23 +662,23 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 }  
 ```  
   
-## DateTimeOffset\-Serialisierung  
- <xref:System.DateTimeOffset> wird nicht als primitiver Typ behandelt. Stattdessen wird dieser Typ als komplexes Element mit zwei Teilen serialisiert. Der erste Teil stellt die Datums\- und Uhrzeitangabe dar und der zweite Teil den Offset dieser Datums\- und Uhrzeitangabe. Ein Beispiel für einen serialisierten DateTimeOffset\-Wert wird im folgenden Code gezeigt.  
+## <a name="datetimeoffset-serialization"></a><span data-ttu-id="d0dc0-496">DateTimeOffset-Serialisierung</span><span class="sxs-lookup"><span data-stu-id="d0dc0-496">DateTimeOffset Serialization</span></span>  
+ <span data-ttu-id="d0dc0-497"><xref:System.DateTimeOffset> wird nicht als primitiver Typ behandelt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-497">The <xref:System.DateTimeOffset> is not treated as a primitive type.</span></span> <span data-ttu-id="d0dc0-498">Stattdessen wird dieser Typ als komplexes Element mit zwei Teilen serialisiert.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-498">Instead, it is serialized as a complex element with two parts.</span></span> <span data-ttu-id="d0dc0-499">Der erste Teil stellt die Datums- und Uhrzeitangabe dar und der zweite Teil den Offset dieser Datums- und Uhrzeitangabe.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-499">The first part represents the date time, and the second part represents the offset from the date time.</span></span> <span data-ttu-id="d0dc0-500">Ein Beispiel für einen serialisierten DateTimeOffset-Wert wird im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d0dc0-500">An example of a serialized DateTimeOffset value is shown in the following code.</span></span>  
   
-```  
+```xml  
 <OffSet xmlns:a="http://schemas.datacontract.org/2004/07/System">  
-  <DateTime i:type="b:dateTime"   
+  <DateTime i:type="b:dateTime" xmlns=""   
     xmlns:b="http://www.w3.org/2001/XMLSchema">2008-08-28T08:00:00    
   </DateTime>   
-  <OffsetMinutes i:type="b:short"   
+  <OffsetMinutes i:type="b:short" xmlns=""   
    xmlns:b="http://www.w3.org/2001/XMLSchema">-480  
    </OffsetMinutes>   
 </OffSet>  
 ```  
   
- Das Schema lautet folgendermaßen:  
+ <span data-ttu-id="d0dc0-501">Das Schema lautet folgendermaßen:</span><span class="sxs-lookup"><span data-stu-id="d0dc0-501">The schema is as follows.</span></span>  
   
-```  
+```xml  
 <xs:schema targetNamespace="http://schemas.datacontract.org/2004/07/System">  
    <xs:complexType name="DateTimeOffset">  
       <xs:sequence minOccurs="1" maxOccurs="1">  
@@ -689,9 +691,9 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.XsdDataContractImporter>   
- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="d0dc0-502">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0dc0-502">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.XsdDataContractImporter>  
+ [<span data-ttu-id="d0dc0-503">Verwenden von Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="d0dc0-503">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

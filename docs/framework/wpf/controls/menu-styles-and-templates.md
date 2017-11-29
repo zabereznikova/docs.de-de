@@ -1,89 +1,89 @@
 ---
-title: "Menu-Stile und -Vorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], Menü"
-  - "Menü [WPF], Stile und Vorlagen"
-  - "Bestandteile [WPF], Menü"
-  - "Zustände [WPF], Menü"
-  - "Formate [WPF], Menü"
-  - "Vorlagen [WPF], Menü"
+title: Menu-Stile und -Vorlagen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], Menu
+- ControlTemplate [WPF], Menu
+- Menu [WPF], styles and templates
+- states [WPF], Menu
+- templates [WPF], Menu
+- parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e007ae09e57353446feb13b3693e62c985f522d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Menu-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Menu>\-Steuerelement beschrieben.  Sie können die standardmäßige <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement ein individuelles Aussehen zu verleihen.  Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="menu-styles-and-templates"></a><span data-ttu-id="f36fd-102">Menu-Stile und -Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f36fd-102">Menu Styles and Templates</span></span>
+<span data-ttu-id="f36fd-103">In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Menu> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Menu> control.</span></span> <span data-ttu-id="f36fd-104">Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen.</span><span class="sxs-lookup"><span data-stu-id="f36fd-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="f36fd-105">Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="f36fd-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Menu\-Teile  
- Das <xref:System.Windows.Controls.Menu>\-Steuerelement verfügt nicht über benannte Teile.  
+## <a name="menu-parts"></a><span data-ttu-id="f36fd-106">Menu-Teile</span><span class="sxs-lookup"><span data-stu-id="f36fd-106">Menu Parts</span></span>  
+ <span data-ttu-id="f36fd-107">Die <xref:System.Windows.Controls.Menu> Steuerelement enthält keine benannten Teile.</span><span class="sxs-lookup"><span data-stu-id="f36fd-107">The <xref:System.Windows.Controls.Menu> control does not have any named parts.</span></span>  
   
- Wenn Sie eine <xref:System.Windows.Controls.ControlTemplate> für ein <xref:System.Windows.Controls.Menu> erstellen, kann die Vorlage einen <xref:System.Windows.Controls.ItemsPresenter> in einem <xref:System.Windows.Controls.ScrollViewer> enthalten.  \(Der <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element im <xref:System.Windows.Controls.Menu> an. Der <xref:System.Windows.Controls.ScrollViewer> ermöglicht einen Bildlauf im Steuerelement\).  Wenn der <xref:System.Windows.Controls.ItemsPresenter> kein direkt untergeordnetes Element des <xref:System.Windows.Controls.ScrollViewer> ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter` zuweisen.  
+ <span data-ttu-id="f36fd-108">Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Menu>, Ihrer Vorlage enthalten möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="f36fd-108">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.Menu>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="f36fd-109">(Die <xref:System.Windows.Controls.ItemsPresenter> wird jedes Element in der <xref:System.Windows.Controls.Menu>; das <xref:System.Windows.Controls.ScrollViewer> Bildlauf im Steuerelement aktiviert).</span><span class="sxs-lookup"><span data-stu-id="f36fd-109">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.Menu>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="f36fd-110">Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="f36fd-110">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Menu\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.Menu>\-Steuerelement aufgelistet.  
+## <a name="menu-states"></a><span data-ttu-id="f36fd-111">Menüzustände</span><span class="sxs-lookup"><span data-stu-id="f36fd-111">Menu States</span></span>  
+ <span data-ttu-id="f36fd-112">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.Menu> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-112">The following table lists the visual states for the <xref:System.Windows.Controls.Menu> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f36fd-113">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="f36fd-113">VisualState Name</span></span>|<span data-ttu-id="f36fd-114">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="f36fd-114">VisualStateGroup Name</span></span>|<span data-ttu-id="f36fd-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f36fd-115">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="f36fd-116">Gültig</span><span class="sxs-lookup"><span data-stu-id="f36fd-116">Valid</span></span>|<span data-ttu-id="f36fd-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-117">ValidationStates</span></span>|<span data-ttu-id="f36fd-118">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="f36fd-118">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f36fd-119">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f36fd-119">InvalidFocused</span></span>|<span data-ttu-id="f36fd-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-120">ValidationStates</span></span>|<span data-ttu-id="f36fd-121">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="f36fd-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f36fd-122">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f36fd-122">InvalidUnfocused</span></span>|<span data-ttu-id="f36fd-123">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-123">ValidationStates</span></span>|<span data-ttu-id="f36fd-124">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="f36fd-124">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## MenuItem\-Teile  
- In der folgenden Tabelle sind die benannten Teile für das <xref:System.Windows.Controls.Menu>\-Steuerelement aufgelistet.  
+## <a name="menuitem-parts"></a><span data-ttu-id="f36fd-125">"MenuItem"-Teile</span><span class="sxs-lookup"><span data-stu-id="f36fd-125">MenuItem Parts</span></span>  
+ <span data-ttu-id="f36fd-126">Die folgende Tabelle enthält die benannten Teile für die <xref:System.Windows.Controls.Menu> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-126">The following table lists the named parts for the <xref:System.Windows.Controls.Menu> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f36fd-127">Segment</span><span class="sxs-lookup"><span data-stu-id="f36fd-127">Part</span></span>|<span data-ttu-id="f36fd-128">Typ</span><span class="sxs-lookup"><span data-stu-id="f36fd-128">Type</span></span>|<span data-ttu-id="f36fd-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f36fd-129">Description</span></span>|  
 |-|-|-|  
-|Bestandteil|Typ|Beschreibung|  
-|PART\_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Der Bereich für das Untermenü.|  
+|<span data-ttu-id="f36fd-130">PART_Popup</span><span class="sxs-lookup"><span data-stu-id="f36fd-130">PART_Popup</span></span>|<xref:System.Windows.Controls.Primitives.Popup>|<span data-ttu-id="f36fd-131">Der Bereich für das Untermenü.</span><span class="sxs-lookup"><span data-stu-id="f36fd-131">The area for the submenu.</span></span>|  
   
- Wenn Sie eine <xref:System.Windows.Controls.ControlTemplate> für ein <xref:System.Windows.Controls.MenuItem> erstellen, kann die Vorlage einen <xref:System.Windows.Controls.ItemsPresenter> in einem <xref:System.Windows.Controls.ScrollViewer> enthalten.  \(Der <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element im <xref:System.Windows.Controls.MenuItem> an. Der <xref:System.Windows.Controls.ScrollViewer> ermöglicht einen Bildlauf im Steuerelement\).  Wenn der <xref:System.Windows.Controls.ItemsPresenter> kein direkt untergeordnetes Element des <xref:System.Windows.Controls.ScrollViewer> ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter` zuweisen.  
+ <span data-ttu-id="f36fd-132">Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.MenuItem>, Ihrer Vorlage enthalten möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="f36fd-132">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.MenuItem>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="f36fd-133">(Die <xref:System.Windows.Controls.ItemsPresenter> wird jedes Element in der <xref:System.Windows.Controls.MenuItem>; das <xref:System.Windows.Controls.ScrollViewer> Bildlauf im Steuerelement aktiviert).</span><span class="sxs-lookup"><span data-stu-id="f36fd-133">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.MenuItem>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="f36fd-134">Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="f36fd-134">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## MenuItem\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.MenuItem>\-Steuerelement aufgelistet.  
+## <a name="menuitem-states"></a><span data-ttu-id="f36fd-135">Status "MenuItem"</span><span class="sxs-lookup"><span data-stu-id="f36fd-135">MenuItem States</span></span>  
+ <span data-ttu-id="f36fd-136">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.MenuItem> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-136">The following table lists the visual states for the <xref:System.Windows.Controls.MenuItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f36fd-137">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="f36fd-137">VisualState Name</span></span>|<span data-ttu-id="f36fd-138">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="f36fd-138">VisualStateGroup Name</span></span>|<span data-ttu-id="f36fd-139">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f36fd-139">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="f36fd-140">Gültig</span><span class="sxs-lookup"><span data-stu-id="f36fd-140">Valid</span></span>|<span data-ttu-id="f36fd-141">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-141">ValidationStates</span></span>|<span data-ttu-id="f36fd-142">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="f36fd-142">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f36fd-143">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f36fd-143">InvalidFocused</span></span>|<span data-ttu-id="f36fd-144">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-144">ValidationStates</span></span>|<span data-ttu-id="f36fd-145">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="f36fd-145">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f36fd-146">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f36fd-146">InvalidUnfocused</span></span>|<span data-ttu-id="f36fd-147">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f36fd-147">ValidationStates</span></span>|<span data-ttu-id="f36fd-148">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="f36fd-148">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Beispiel für eine Menu\- und MenuItem\-ControlTemplate  
- Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.Menu>\-Steuerelement definiert wird.  
+## <a name="menu-and-menuitem-controltemplate-example"></a><span data-ttu-id="f36fd-149">Menü- und "MenuItem" ControlTemplate-Beispiel</span><span class="sxs-lookup"><span data-stu-id="f36fd-149">Menu and MenuItem ControlTemplate Example</span></span>  
+ <span data-ttu-id="f36fd-150">Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.Menu> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-150">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Menu> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Menu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menu)]  
+ [!code-xaml[ControlTemplateExamples#Menu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menu)]  
   
- Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.MenuItem>\-Steuerelement definiert wird.  
+ <span data-ttu-id="f36fd-151">Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.MenuItem> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f36fd-151">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.MenuItem> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#MenuItem](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuitem)]  
+ [!code-xaml[ControlTemplateExamples#MenuItem](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuitem)]  
   
- Im folgenden Beispiel wird der `MenuScrollViewer` aus dem vorherigen Beispiel definiert.  
+ <span data-ttu-id="f36fd-152">Das folgende Beispiel definiert die `MenuScrollViewer`, der im vorherigen Beispiel verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f36fd-152">The following example defines the `MenuScrollViewer`, which is used in the previous example.</span></span>  
   
- [!code-xml[ControlTemplateExamples#MenuScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuscrollviewer)]  
+ [!code-xaml[ControlTemplateExamples#MenuScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuscrollviewer)]  
   
- Im <xref:System.Windows.Controls.ControlTemplate>\-Beispiel werden eine oder mehrere der folgenden Ressourcen verwendet.  
+ <span data-ttu-id="f36fd-153">Die <xref:System.Windows.Controls.ControlTemplate> Beispiele verwenden eine oder mehrere der folgenden Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="f36fd-153">The <xref:System.Windows.Controls.ControlTemplate> examples use one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Das vollständige Beispiel finden Sie unter [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ <span data-ttu-id="f36fd-154">Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="f36fd-154">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Steuerelementformate und \-vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="f36fd-155">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f36fd-155">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="f36fd-156">Steuerelementformate und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="f36fd-156">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="f36fd-157">Anpassung von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f36fd-157">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="f36fd-158">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f36fd-158">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="f36fd-159">Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="f36fd-159">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

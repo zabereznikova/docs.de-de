@@ -1,43 +1,47 @@
 ---
-title: "1009 - ActivityScheduled | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1009 - ActivityScheduled
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 307e38b6-d47e-47a4-9708-e74d8314b1a1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9463fbf2e7f2ac3424488dc3fca322a91d11126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 1009 - ActivityScheduled
-## Eigenschaften  
+# <a name="1009---activityscheduled"></a><span data-ttu-id="5b231-102">1009 - ActivityScheduled</span><span class="sxs-lookup"><span data-stu-id="5b231-102">1009 - ActivityScheduled</span></span>
+## <a name="properties"></a><span data-ttu-id="5b231-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5b231-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1009|  
-|Schlüsselwörter|WFRuntime|  
-|Ebene|Information|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="5b231-104">ID</span><span class="sxs-lookup"><span data-stu-id="5b231-104">ID</span></span>|<span data-ttu-id="5b231-105">1009</span><span class="sxs-lookup"><span data-stu-id="5b231-105">1009</span></span>|  
+|<span data-ttu-id="5b231-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="5b231-106">Keywords</span></span>|<span data-ttu-id="5b231-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="5b231-107">WFRuntime</span></span>|  
+|<span data-ttu-id="5b231-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5b231-108">Level</span></span>|<span data-ttu-id="5b231-109">Information</span><span class="sxs-lookup"><span data-stu-id="5b231-109">Information</span></span>|  
+|<span data-ttu-id="5b231-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5b231-110">Channel</span></span>|<span data-ttu-id="5b231-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5b231-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Beschreibung  
- Gibt an, dass die Ausführung einer Aktivität geplant wird.  
+## <a name="description"></a><span data-ttu-id="5b231-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5b231-112">Description</span></span>  
+ <span data-ttu-id="5b231-113">Gibt an, dass die Ausführung einer Aktivität geplant wird.</span><span class="sxs-lookup"><span data-stu-id="5b231-113">Indicates an activity is being scheduled for execution.</span></span>  
   
-## Meldung  
- Die übergeordnete Aktivität '%1', DisplayName: '%2', InstanceId: '%3' hat die untergeordnete Aktivität '%4', DisplayName: '%5', InstanceId: '%6' geplant.  
+## <a name="message"></a><span data-ttu-id="5b231-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5b231-114">Message</span></span>  
+ <span data-ttu-id="5b231-115">Die übergeordnete Aktivität '%1', DisplayName: '%2', InstanceId: '%3' hat die untergeordnete Aktivität '%4', DisplayName: '%5', InstanceId: '%6' geplant.</span><span class="sxs-lookup"><span data-stu-id="5b231-115">Parent Activity '%1', DisplayName: '%2', InstanceId: '%3' scheduled child Activity '%4', DisplayName: '%5', InstanceId: '%6'.</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="5b231-116">Details</span><span class="sxs-lookup"><span data-stu-id="5b231-116">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|ParentActivity|xs:string|Der Typname der übergeordneten Aktivität.|  
-|ParentDisplayName|xs:string|Der Anzeigename der übergeordneten Aktivität.|  
-|ParentInstanceId|xs:string|Die Instanz\-ID der übergeordneten Aktivität.|  
-|ChildActivity|xs:string|Der Typname der untergeordneten Aktivität.|  
-|ChildDisplayName|xs:string|Der Anzeigename der untergeordneten Aktivität.|  
-|ChildInstanceId|xs:string|Die Instanz\-ID der geplanten untergeordneten Aktivität.|  
-|AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="5b231-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="5b231-117">Data Item Name</span></span>|<span data-ttu-id="5b231-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="5b231-118">Data Item Type</span></span>|<span data-ttu-id="5b231-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5b231-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="5b231-120">ParentActivity</span><span class="sxs-lookup"><span data-stu-id="5b231-120">ParentActivity</span></span>|<span data-ttu-id="5b231-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-121">xs:string</span></span>|<span data-ttu-id="5b231-122">Der Typname der übergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-122">The type name of the parent activity.</span></span>|  
+|<span data-ttu-id="5b231-123">ParentDisplayName</span><span class="sxs-lookup"><span data-stu-id="5b231-123">ParentDisplayName</span></span>|<span data-ttu-id="5b231-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-124">xs:string</span></span>|<span data-ttu-id="5b231-125">Der Anzeigename der übergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-125">The display name of the parent activity.</span></span>|  
+|<span data-ttu-id="5b231-126">ParentInstanceId</span><span class="sxs-lookup"><span data-stu-id="5b231-126">ParentInstanceId</span></span>|<span data-ttu-id="5b231-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-127">xs:string</span></span>|<span data-ttu-id="5b231-128">Die Instanz-ID der übergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-128">The instance id of the parent activity.</span></span>|  
+|<span data-ttu-id="5b231-129">ChildActivity</span><span class="sxs-lookup"><span data-stu-id="5b231-129">ChildActivity</span></span>|<span data-ttu-id="5b231-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-130">xs:string</span></span>|<span data-ttu-id="5b231-131">Der Typname der untergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-131">The type name of the scheduled child activity.</span></span>|  
+|<span data-ttu-id="5b231-132">ChildDisplayName</span><span class="sxs-lookup"><span data-stu-id="5b231-132">ChildDisplayName</span></span>|<span data-ttu-id="5b231-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-133">xs:string</span></span>|<span data-ttu-id="5b231-134">Der Anzeigename der untergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-134">The display name of the scheduled child activity.</span></span>|  
+|<span data-ttu-id="5b231-135">ChildInstanceId</span><span class="sxs-lookup"><span data-stu-id="5b231-135">ChildInstanceId</span></span>|<span data-ttu-id="5b231-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-136">xs:string</span></span>|<span data-ttu-id="5b231-137">Die Instanz-ID der geplanten untergeordneten Aktivität.</span><span class="sxs-lookup"><span data-stu-id="5b231-137">The instance id of the scheduled child activity.</span></span>|  
+|<span data-ttu-id="5b231-138">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5b231-138">AppDomain</span></span>|<span data-ttu-id="5b231-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="5b231-139">xs:string</span></span>|<span data-ttu-id="5b231-140">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="5b231-140">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

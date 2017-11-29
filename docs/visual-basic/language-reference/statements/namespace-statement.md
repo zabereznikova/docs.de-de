@@ -1,36 +1,34 @@
 ---
-title: "Namespace Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Namespace"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "namespaces, root"
-  - "Namespace statement"
-  - "namespaces, nested"
-  - "declaring namespaces, syntax"
-  - "namespaces, declaring"
-  - "root namespaces"
-  - "declarations, namespaces"
+title: Namespace-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Namespace
+helpviewer_keywords:
+- namespaces [Visual Basic], root
+- Namespace statement [Visual Basic]
+- namespaces [Visual Basic], nested
+- declaring namespaces [Visual Basic], syntax
+- namespaces [Visual Basic], declaring
+- root namespaces
+- declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-caps.latest.revision: 39
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Namespace Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Deklariert den Namen eines Namespaces und bewirkt, dass der auf die Deklaration folgende Quellcode in diesem Namespace kompiliert wird.  
+# <a name="namespace-statement"></a><span data-ttu-id="327d2-102">Namespace-Anweisung</span><span class="sxs-lookup"><span data-stu-id="327d2-102">Namespace Statement</span></span>
+<span data-ttu-id="327d2-103">Der Name eines Namespace deklariert und bewirkt, dass den Quellcode, der die Deklaration in diesem Namespace kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-103">Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="327d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="327d2-104">Syntax</span></span>  
   
 ```  
 Namespace [Global.] { name | name.name }  
@@ -38,68 +36,68 @@ Namespace [Global.] { name | name.name }
 End Namespace  
 ```  
   
-## Teile  
- Global  
- Optional.  Hiermit können Sie einen Namespace aus dem Stammnamespace des Projekts zu definieren.  Weitere Informationen finden Sie unter [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+## <a name="parts"></a><span data-ttu-id="327d2-105">Teile</span><span class="sxs-lookup"><span data-stu-id="327d2-105">Parts</span></span>  
+ <span data-ttu-id="327d2-106">Global</span><span class="sxs-lookup"><span data-stu-id="327d2-106">Global</span></span>  
+ <span data-ttu-id="327d2-107">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="327d2-107">Optional.</span></span> <span data-ttu-id="327d2-108">Können Sie einen Namespace aus der Stammnamespace des Projekts definieren.</span><span class="sxs-lookup"><span data-stu-id="327d2-108">Allows you to define a namespace out of the root namespace of your project.</span></span> <span data-ttu-id="327d2-109">Finden Sie unter [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-109">See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
  `name`  
- Erforderlich.  Ein eindeutiger Name, der den Namespace bezeichnet.  Muss ein gültiger Visual Basic\-Bezeichner sein.  Weitere Informationen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ <span data-ttu-id="327d2-110">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="327d2-110">Required.</span></span> <span data-ttu-id="327d2-111">Ein eindeutiger Name, der den Namespace identifiziert.</span><span class="sxs-lookup"><span data-stu-id="327d2-111">A unique name that identifies the namespace.</span></span> <span data-ttu-id="327d2-112">Ein gültiger Visual Basic-Bezeichner muss sein.</span><span class="sxs-lookup"><span data-stu-id="327d2-112">Must be a valid Visual Basic identifier.</span></span> <span data-ttu-id="327d2-113">Weitere Informationen finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-113">For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
  `componenttypes`  
- Optional.  Elemente, aus denen sich der Namespace zusammensetzt.  Dazu zählen, aber nicht für Strukturen, Enumerationen, Schnittstellen, Klassen, Module, Delegaten und andere Namespaces beschränkt.  
+ <span data-ttu-id="327d2-114">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="327d2-114">Optional.</span></span> <span data-ttu-id="327d2-115">Elemente, die den Namespace bilden.</span><span class="sxs-lookup"><span data-stu-id="327d2-115">Elements that make up the namespace.</span></span> <span data-ttu-id="327d2-116">Diese umfassen, aber Sie sind nicht darauf beschränkt, Strukturen, Schnittstellen, Klassen, Module, Delegaten, Enumerationen und andere Namespaces.</span><span class="sxs-lookup"><span data-stu-id="327d2-116">These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.</span></span>  
   
  `End Namespace`  
- Beendet einen `Namespace`\-Block.  
+ <span data-ttu-id="327d2-117">Beendet eine `Namespace` Block.</span><span class="sxs-lookup"><span data-stu-id="327d2-117">Terminates a `Namespace` block.</span></span>  
   
-## Hinweise  
- Namespaces fungieren als Organisationssystem.  Sie bieten eine Möglichkeit zum Klassifizieren und Darstellen von Programmierelementen, die für andere Programme und Anwendungen verfügbar gemacht werden.  Beachten Sie, dass ein Namespace kein *Typ* ist insofern, dass eine Klasse oder Struktur sein\-Sie kein Programmierelement deklarieren können, um den Datentyp eines Namespace verfügen.  
+## <a name="remarks"></a><span data-ttu-id="327d2-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="327d2-118">Remarks</span></span>  
+ <span data-ttu-id="327d2-119">Namespaces werden als ein Organisations-System verwendet.</span><span class="sxs-lookup"><span data-stu-id="327d2-119">Namespaces are used as an organizational system.</span></span> <span data-ttu-id="327d2-120">Sie bieten eine Möglichkeit zum Klassifizieren und Präsentieren von Programmierelementen, die für andere Programme und Anwendungen verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-120">They provide a way to classify and present programming elements that are exposed to other programs and applications.</span></span> <span data-ttu-id="327d2-121">Beachten Sie, dass ein Namespace keine *Typ* in dem Sinne, dass eine Klasse oder Struktur ist – ein Programmierelement haben Sie den Datentyp eines Namespace kann nicht deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-121">Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.</span></span>  
   
- Alle Programmierelemente, die nach einer `Namespace`\-Anweisung deklariert werden, gehören zu diesem Namespace.  Visual Basic kompiliert Elemente in den zuletzt deklarierten Namespace, bis entweder eine `End Namespace`\-Anweisung oder eine andere `Namespace`\-Anweisung auftritt.  
+ <span data-ttu-id="327d2-122">Alle Programmierelemente deklariert wird, nach einem `Namespace` Anweisung zu diesem Namespace gehören.</span><span class="sxs-lookup"><span data-stu-id="327d2-122">All programming elements declared after a `Namespace` statement belong to that namespace.</span></span> <span data-ttu-id="327d2-123">Visual Basic kompilieren Sie Elemente in den zuletzt deklarierten Namespace, bis er entweder trifft weiterhin ein `End Namespace` -Anweisung oder eine andere `Namespace` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="327d2-123">Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.</span></span>  
   
- Wenn ein Namespace bereits definiert ist, auch außerhalb des Projekts, können Sie diesem Programmierelemente hinzufügen.  Hierzu verwenden Sie eine `Namespace`\-Anweisung Visual Basic auf sie verweisen um Elemente in diesen Namespace zu kompilieren.  
+ <span data-ttu-id="327d2-124">Wenn ein Namespace bereits, auch außerhalb des Projekts definiert ist können Sie Programmierelemente hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="327d2-124">If a namespace is already defined, even outside your project, you can add programming elements to it.</span></span> <span data-ttu-id="327d2-125">Zu diesem Zweck verwenden Sie eine `Namespace` Anweisung, damit Visual Basic können Sie Elemente in diesem Namespace zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="327d2-125">To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.</span></span>  
   
- Sie können eine `Namespace`\-Anweisung nur auf Datei\- oder Namespaceebene verwenden.  Dies bedeutet, dass der *Deklarationskontext* für einen Namespace eine Quelldatei oder ein anderer Namespace sein muss und keine Klasse, keine Struktur, kein Modul, keine Schnittstelle und keine Prozedur sein kann.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="327d2-126">Sie können eine `Namespace` Anweisung nur auf der Namespace- oder Dateiebene.</span><span class="sxs-lookup"><span data-stu-id="327d2-126">You can use a `Namespace` statement only at the file or namespace level.</span></span> <span data-ttu-id="327d2-127">Dies bedeutet, dass die *Deklarationskontext* für ein Namespace muss eine Quelldatei oder einen anderen Namespace, und eine Klasse, Struktur, Modul, Schnittstelle oder Prozedur nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="327d2-127">This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure.</span></span> <span data-ttu-id="327d2-128">Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-128">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Sie können einen Namespace in einem anderen Namespace deklarieren.  Die Anzahl der Schachtelungsebenen, die Sie deklarieren können, ist nicht streng begrenzt, allerdings sollten Sie Folgendes beachten: Wenn anderer Code auf die im innersten Namespace deklarierten Elemente zugreift, muss ein Qualifizierungspfad verwendet werden, der alle Namespacenamen der Schachtelungshierarchie enthält.  
+ <span data-ttu-id="327d2-129">Sie können mehrere Namespaces innerhalb einer anderen deklarieren.</span><span class="sxs-lookup"><span data-stu-id="327d2-129">You can declare one namespace within another.</span></span> <span data-ttu-id="327d2-130">Es ist keine flexiblen Grenzwert, der Schachtelungsebenen deklarieren, aber beachten Sie, dass wenn anderer Code, die im innersten Namespace deklarierten Elemente zugreift, muss ein Qualifizierungspfad verwendet werden, die die Namespacenamen in der Schachtelungshierarchie enthält.</span><span class="sxs-lookup"><span data-stu-id="327d2-130">There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.</span></span>  
   
-## Zugriffsebene  
- Namespaces werden behandelt, als wäre sie eine `Public` Zugriffsebene aufweisen.  Auf einen Namespace kann von Code an einer beliebigen Stelle in demselben Projekt, von anderen Projekten, die auf dieses Projekt verweisen, und von einer aus dem Projekt erstellten Assembly aus zugegriffen werden.  
+## <a name="access-level"></a><span data-ttu-id="327d2-131">Zugriffsebene</span><span class="sxs-lookup"><span data-stu-id="327d2-131">Access Level</span></span>  
+ <span data-ttu-id="327d2-132">Namespaces werden behandelt, als hätten sie eine `Public` Zugriffsebene.</span><span class="sxs-lookup"><span data-stu-id="327d2-132">Namespaces are treated as if they have a `Public` access level.</span></span> <span data-ttu-id="327d2-133">Ein Namespace kann zugegriffen werden, aus Code an einer beliebigen Stelle im selben Projekt als andere Projekte, die auf das Projekt zu verweisen und von einer Assembly aus dem Projekt erstellt.</span><span class="sxs-lookup"><span data-stu-id="327d2-133">A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.</span></span>  
   
- Programmierelemente, die auf Namespaceebene deklariert sind, d. h. in einem Namespace, jedoch in keinem anderen Element, können `Public`\-Zugriff oder `Friend`\-Zugriff aufweisen.  Wenn keine Zugriffsebene angegeben wurde, ist die Standardzugriffsebene eines solchen Elements `Friend`.  Zu den Elementen, die Sie auf Namespaceebene deklarieren können, zählen Klassen, Strukturen, Module, Schnittstellen, Enumerationen und Delegaten.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="327d2-134">Programmierelemente, die auf Namespace-Ebene, d. h. in einem Namespace, jedoch in keinem anderen Element deklariert haben `Public` oder `Friend` Zugriff.</span><span class="sxs-lookup"><span data-stu-id="327d2-134">Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access.</span></span> <span data-ttu-id="327d2-135">Falls nicht angegeben, verwendet die Zugriffsebene wie ein Element `Friend` standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="327d2-135">If unspecified, the access level of such an element uses `Friend` by default.</span></span> <span data-ttu-id="327d2-136">Elemente, die Sie auf Namespaceebene deklarieren können beinhalten Klassen, Strukturen, Modulen, Schnittstellen, Enumerationen und Delegaten.</span><span class="sxs-lookup"><span data-stu-id="327d2-136">Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates.</span></span> <span data-ttu-id="327d2-137">Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-137">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
-## Stamm\-Namespace  
- Alle Namespacenamen im Projekt beruhen auf einem *Stammnamespace*.  Visual Studio weist den Projektnamen als Standardstammnamespace für den gesamten Code in diesem Projekt zu.  Wenn der Name des Projekts z. B. `Payroll` lautet, gehören die Programmierelemente des Projekts zu dem Namespace `Payroll`.  Wenn Sie `Namespace funding` deklarieren, ist der vollständige Name dieses Namespaces `Payroll.funding`.  
+## <a name="root-namespace"></a><span data-ttu-id="327d2-138">Stamm-Namespace</span><span class="sxs-lookup"><span data-stu-id="327d2-138">Root Namespace</span></span>  
+ <span data-ttu-id="327d2-139">Alle Namespacenamen im Projekt basieren auf einer *Stammnamespace*.</span><span class="sxs-lookup"><span data-stu-id="327d2-139">All namespace names in your project are based on a *root namespace*.</span></span> <span data-ttu-id="327d2-140">Visual Studio weist den Projektnamen als den Standard-Stammnamespace für den gesamten Code des Projekts zu.</span><span class="sxs-lookup"><span data-stu-id="327d2-140">Visual Studio assigns your project name as the default root namespace for all code in your project.</span></span> <span data-ttu-id="327d2-141">Wenn Ihr Projekt beispielsweise den Namen `Payroll` hat, gehören die Programmierelemente zum Namespace `Payroll`.</span><span class="sxs-lookup"><span data-stu-id="327d2-141">For example, if your project is named `Payroll`, its programming elements belong to namespace `Payroll`.</span></span> <span data-ttu-id="327d2-142">Wenn Sie deklarieren `Namespace funding`, ist der vollständige Name des Namespaces `Payroll.funding`.</span><span class="sxs-lookup"><span data-stu-id="327d2-142">If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.</span></span>  
   
- Wenn Sie einen vorhandenen Namespace in einer `Namespace`\-Anweisung angeben möchten, wie z. B. im Beispiel für die generische Listenklasse, können Sie den Stammnamespace auf einen NULL\-Wert festlegen.  Klicken Sie hierfür im Menü **Projekt** auf **Projekteigenschaften**, und löschen Sie den Eintrag **Stammnamespace**.  Wenn Sie diesen Schritt im Beispiel für die generische Listenklasse nicht ausführen, verwendet der Visual Basic\-Compiler `System.Collections.Generic` als neuen Namespace im Projekt `Payroll`, mit dem vollständigen Namen `Payroll.System.Collections.Generic`.  
+ <span data-ttu-id="327d2-143">Wenn Sie einen vorhandenen Namespace im angeben möchten, eine `Namespace` -Anweisung, wie im Beispiel für die generische Liste, den Stammnamespace auf einen null-Wert festgelegt werden können.</span><span class="sxs-lookup"><span data-stu-id="327d2-143">If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value.</span></span> <span data-ttu-id="327d2-144">Klicken Sie hierzu auf **Projekteigenschaften** aus der **Projekt** Menü- und deaktivieren Sie dann die **Stammnamespace** Eintrag so, dass das Feld leer ist.</span><span class="sxs-lookup"><span data-stu-id="327d2-144">To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty.</span></span> <span data-ttu-id="327d2-145">Wenn Sie dies im Beispiel für die generische Liste nicht, würde der Visual Basic-Compiler `System.Collections.Generic` als einen neuen Namespace im Projekt `Payroll`, mit dem vollständigen Namen des `Payroll.System.Collections.Generic`.</span><span class="sxs-lookup"><span data-stu-id="327d2-145">If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.</span></span>  
   
- Stattdessen können Sie auch mit dem `Global`\-Schlüsselwort auf Elemente von Namespaces verweisen, die außerhalb des Projekts definiert sind.  So kann der Projektname als Stammnamespace beibehalten werden.  Hierdurch wird die Wahrscheinlichkeit verringert, dass Ihre Programmierelemente versehentlich mit den Programmierelementen vorhandener Namespaces zusammengeführt werden.  Weitere Informationen finden Sie im Abschnitt „globales Schlüsselwort in den voll gekennzeichneten Namen“ \- Abschnitt in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ <span data-ttu-id="327d2-146">Alternativ können Sie die `Global` Schlüsselwort verweisen auf Elemente des Namespaces, die außerhalb des Projekts definiert.</span><span class="sxs-lookup"><span data-stu-id="327d2-146">Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project.</span></span> <span data-ttu-id="327d2-147">Auf diese Weise können Sie den Projektnamen als Stammnamespace beibehalten werden sollen.</span><span class="sxs-lookup"><span data-stu-id="327d2-147">Doing so lets you retain your project name as the root namespace.</span></span> <span data-ttu-id="327d2-148">Dies reduziert die Wahrscheinlichkeit, dass versehentlich von Programmierelementen zusammen mit den vorhandenen Namespaces zusammengeführt.</span><span class="sxs-lookup"><span data-stu-id="327d2-148">This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces.</span></span> <span data-ttu-id="327d2-149">Weitere Informationen finden Sie im Abschnitt "Global-Schlüsselwort in vollständig qualifizierte Namen" [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-149">For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
- Das `Global`\-Schlüsselwort kann in einem Namespace Statement ebenfalls verwendet werden.  Dadurch können Sie einen Namespace aus dem Stammnamespace des Projekts Bereichs definieren.  Weitere Informationen finden Sie im Abschnitt „globales Schlüsselwort in den Namespace\-Anweisungen im Abschnitt“ [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ <span data-ttu-id="327d2-150">Die `Global` -Schlüsselwort kann auch in einem Namespace-Anweisung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-150">The `Global` keyword can also be used in a Namespace statement.</span></span> <span data-ttu-id="327d2-151">Dadurch können Sie einen Namespace aus dem Stammnamespace des Projekts definieren.</span><span class="sxs-lookup"><span data-stu-id="327d2-151">This lets you define a namespace out of the root namespace of your project.</span></span> <span data-ttu-id="327d2-152">Weitere Informationen finden Sie im Abschnitt "Global-Schlüsselwort im Namespace-Anweisungen" [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="327d2-152">For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
- **Problembehandlung** Der Stammnamespace kann zu unerwarteten Verkettungen von Namespacenamen führen.  Wenn Sie auf außerhalb des Projekts definierte Namespaces verweisen, können diese vom Visual Basic\-Compiler als geschachtelte Namespaces im Stammnamespace interpretiert werden.  In diesem Fall erkennt der Compiler keine Typen, die bereits in den externen Namespaces definiert wurden.  Um dies zu vermeiden, legen Sie den Stammnamespace auf einen NULL\-Wert fest, wie in „Stamm\-Namespace“ beschrieben und verwendet das Schlüsselwort `Global` von Elementen aus externen Namespaces zuzugreifen.  
+ <span data-ttu-id="327d2-153">**Problembehandlung bei.**</span><span class="sxs-lookup"><span data-stu-id="327d2-153">**Troubleshooting.**</span></span> <span data-ttu-id="327d2-154">Der Stammnamespace kann zu unerwarteten Verkettungen Namespacenamen führen.</span><span class="sxs-lookup"><span data-stu-id="327d2-154">The root namespace can lead to unexpected concatenations of namespace names.</span></span> <span data-ttu-id="327d2-155">Wenn Sie den Verweis auf die Namespaces, die außerhalb des Projekts definiert vornehmen, können sie Visual Basic-Compiler als geschachtelte Namespaces im Stammnamespace construe.</span><span class="sxs-lookup"><span data-stu-id="327d2-155">If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace.</span></span> <span data-ttu-id="327d2-156">In diesem Fall erkennt der Compiler keine Typen, die bereits in den externen Namespaces definiert wurden.</span><span class="sxs-lookup"><span data-stu-id="327d2-156">In such a case, the compiler does not recognize any types that have been already defined in the external namespaces.</span></span> <span data-ttu-id="327d2-157">Um dies zu vermeiden, legen Sie den Stammnamespace auf einen null-Wert in "Stamm-Namespace" erläuterten oder verwenden Sie die `Global` Schlüsselwort, um Zugriff auf Elemente des externen Namespaces.</span><span class="sxs-lookup"><span data-stu-id="327d2-157">To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.</span></span>  
   
-## Attribute und Modifizierer  
- Sie können auf einen Namespace keine Attribute anwenden.  Ein Attribut fügt den Metadaten einer Assembly Informationen hinzu. Dies ist für Herkunftsklassifizierer wie Namespaces nicht sinnvoll.  
+## <a name="attributes-and-modifiers"></a><span data-ttu-id="327d2-158">Attribute und -Modifizierern</span><span class="sxs-lookup"><span data-stu-id="327d2-158">Attributes and Modifiers</span></span>  
+ <span data-ttu-id="327d2-159">Attribute können nicht mit einem Namespace angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-159">You cannot apply attributes to a namespace.</span></span> <span data-ttu-id="327d2-160">Ein Attribut trägt dazu bei Informationen zu den Metadaten der Assembly, die hat keine Bedeutung für Quelle Klassifizierern wie Namespaces.</span><span class="sxs-lookup"><span data-stu-id="327d2-160">An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.</span></span>  
   
- Sie können auf einen Namespace weder Zugriffs\- noch Prozedurmodifizierer oder andere Modifizierer anwenden.  Da ein Namespace kein Typ ist, sind diese Modifizierer nicht sinnvoll.  
+ <span data-ttu-id="327d2-161">Zugriff oder Prozedurmodifizierer oder andere Modifizierer, kann nicht mit einem Namespace angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="327d2-161">You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace.</span></span> <span data-ttu-id="327d2-162">Da es sich nicht um einen Typ handelt, sind diese Modifizierer nicht aussagekräftig.</span><span class="sxs-lookup"><span data-stu-id="327d2-162">Because it is not a type, these modifiers are not meaningful.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei ineinander geschachtelte Namespaces deklariert.  
+## <a name="example"></a><span data-ttu-id="327d2-163">Beispiel</span><span class="sxs-lookup"><span data-stu-id="327d2-163">Example</span></span>  
+ <span data-ttu-id="327d2-164">Das folgende Beispiel deklariert zwei Namespaces, die in einer anderen geschachtelten.</span><span class="sxs-lookup"><span data-stu-id="327d2-164">The following example declares two namespaces, one nested in the other.</span></span>  
   
  [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel werden mehrere geschachtelte Namespaces in einer einzigen Zeile deklariert. Dieses Beispiel entspricht dem vorherigen Beispiel.  
+## <a name="example"></a><span data-ttu-id="327d2-165">Beispiel</span><span class="sxs-lookup"><span data-stu-id="327d2-165">Example</span></span>  
+ <span data-ttu-id="327d2-166">Das folgende Beispiel deklariert mehrere geschachtelte Namespaces in einer einzelnen Zeile ein, und dies ist äquivalent zum vorherigen Beispiel.</span><span class="sxs-lookup"><span data-stu-id="327d2-166">The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.</span></span>  
   
  [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird auf die in den vorherigen Beispielen definierte Klasse zugegriffen.  
+## <a name="example"></a><span data-ttu-id="327d2-167">Beispiel</span><span class="sxs-lookup"><span data-stu-id="327d2-167">Example</span></span>  
+ <span data-ttu-id="327d2-168">Das folgende Beispiel greift auf die Klasse, die in den vorherigen Beispielen definiert.</span><span class="sxs-lookup"><span data-stu-id="327d2-168">The following example accesses the class defined in the previous examples.</span></span>  
   
  [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird das Skelett einer neuen generischen Listenklasse definiert und dem <xref:System.Collections.Generic?displayProperty=fullName>\-Namespace hinzugefügt.  
+## <a name="example"></a><span data-ttu-id="327d2-169">Beispiel</span><span class="sxs-lookup"><span data-stu-id="327d2-169">Example</span></span>  
+ <span data-ttu-id="327d2-170">Im folgenden Beispiel definiert das Skeleton des einen neuen generischen List-Klasse und fügt es der <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace.</span><span class="sxs-lookup"><span data-stu-id="327d2-170">The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -110,7 +108,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## Siehe auch  
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="327d2-171">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="327d2-171">See Also</span></span>  
+ [<span data-ttu-id="327d2-172">Imports-Anweisung (.NET-Namespace und -Typ)</span><span class="sxs-lookup"><span data-stu-id="327d2-172">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="327d2-173">Namen deklarierter Elemente</span><span class="sxs-lookup"><span data-stu-id="327d2-173">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="327d2-174">Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="327d2-174">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)

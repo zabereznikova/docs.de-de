@@ -1,60 +1,63 @@
 ---
-title: "Gewusst wie: Hosten eines WCF-Diensts in WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Hosten eines WCF-Diensts in WAS'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3069dfbde9fedc0a0c89d8f55ba1adcc852d5c24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hosten eines WCF-Diensts in WAS
-In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines in WAS (Windows Process Activation Services) gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verwendet die Schnittstelle des Listeneradapters, um Aktivierungsanforderungen weiterzugeben, die über die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützten Nicht-HTTP-Protokolle, wie etwa TCP, Named Pipes und Message Queuing, empfangen wurden.  
+# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="933de-102">Gewusst wie: Hosten eines WCF-Diensts in WAS</span><span class="sxs-lookup"><span data-stu-id="933de-102">How to: Host a WCF Service in WAS</span></span>
+<span data-ttu-id="933de-103">In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erstellung eines in WAS (Windows Process Activation Services) gehosteten [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="933de-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="933de-104">WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten.</span><span class="sxs-lookup"><span data-stu-id="933de-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="933de-105"> verwendet die Schnittstelle des Listeneradapters, um Aktivierungsanforderungen weiterzugeben, die über die von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützten Nicht-HTTP-Protokolle, wie etwa TCP, Named Pipes und Message Queuing, empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="933de-105"> uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], such as TCP, named pipes, and Message Queuing.</span></span>  
   
- Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Installieren und Konfigurieren von WAS finden Sie unter [Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ <span data-ttu-id="933de-106">Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="933de-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="933de-107">Installieren und Konfigurieren von WAS, finden Sie unter [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span><span class="sxs-lookup"><span data-stu-id="933de-107"> installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
   
 > [!WARNING]
->  Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist. Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.  
+>  <span data-ttu-id="933de-108">Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="933de-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="933de-109">Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="933de-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
   
- Wenn ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst in WAS gehostet wird, werden die Standardbindungen auf die übliche Weise verwendet. Allerdings bei Verwendung der <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> um einen WAS-gehosteten Dienst zu konfigurieren, die eine Bedingung erfüllt sein muss. Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:  
+ <span data-ttu-id="933de-110">Wenn ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst in WAS gehostet wird, werden die Standardbindungen auf die übliche Weise verwendet.</span><span class="sxs-lookup"><span data-stu-id="933de-110">When a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="933de-111">Werden jedoch <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> verwendet, um einen WAS-gehosteten Dienst zu konfigurieren, muss eine Bedingung erfüllt sein.</span><span class="sxs-lookup"><span data-stu-id="933de-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="933de-112">Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:</span><span class="sxs-lookup"><span data-stu-id="933de-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
   
--   ConnectionBufferSize  
+-   <span data-ttu-id="933de-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="933de-113">ConnectionBufferSize</span></span>  
   
--   ChannelInitializationTimeout  
+-   <span data-ttu-id="933de-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="933de-114">ChannelInitializationTimeout</span></span>  
   
--   MaxPendingConnections  
+-   <span data-ttu-id="933de-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="933de-115">MaxPendingConnections</span></span>  
   
--   MaxOutputDelay  
+-   <span data-ttu-id="933de-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="933de-116">MaxOutputDelay</span></span>  
   
--   MaxPendingAccepts  
+-   <span data-ttu-id="933de-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="933de-117">MaxPendingAccepts</span></span>  
   
--   ConnectionPoolSettings.IdleTimeout  
+-   <span data-ttu-id="933de-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="933de-118">ConnectionPoolSettings.IdleTimeout</span></span>  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+-   <span data-ttu-id="933de-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="933de-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
   
- Andernfalls bestimmt der Endpunkt initialisiert wird zunächst immer die Werte dieser Eigenschaften und später hinzugefügte Endpunkte lösen eine <xref:System.ServiceModel.ServiceActivationException> Wenn sie diese Einstellungen nicht übereinstimmen.  
+ <span data-ttu-id="933de-120">Andernfalls bestimmt der zuerst initialisierte Endpunkt die Werte dieser Eigenschaften, und später hinzugefügte Endpunkte lösen eine <xref:System.ServiceModel.ServiceActivationException> aus, wenn ihre Einstellungen diesen Einstellungen nicht entsprechen.</span><span class="sxs-lookup"><span data-stu-id="933de-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
   
- Die Quellkopie dieses Beispiels, finden Sie unter [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ <span data-ttu-id="933de-121">Eine Kopie der Quelle dieses Beispiels, finden Sie unter [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md).</span><span class="sxs-lookup"><span data-stu-id="933de-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
   
-### <a name="to-create-a-basic-service-hosted-by-was"></a>So erstellen Sie einen grundlegenden durch WAS gehosteten Dienst  
+### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="933de-122">So erstellen Sie einen grundlegenden durch WAS gehosteten Dienst</span><span class="sxs-lookup"><span data-stu-id="933de-122">To create a basic service hosted by WAS</span></span>  
   
-1.  Definieren Sie einen Dienstvertrag für den Diensttyp.  
+1.  <span data-ttu-id="933de-123">Definieren Sie einen Dienstvertrag für den Diensttyp.</span><span class="sxs-lookup"><span data-stu-id="933de-123">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Implementieren Sie den Dienstvertrag in einer Dienstklasse. Beachten Sie, dass die Adresse oder die Bindungsinformationen in der Implementierung des Diensts nicht angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
+2.  <span data-ttu-id="933de-124">Implementieren Sie den Dienstvertrag in einer Dienstklasse.</span><span class="sxs-lookup"><span data-stu-id="933de-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="933de-125">Beachten Sie, dass die Adresse oder die Bindungsinformationen in der Implementierung des Diensts nicht angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="933de-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="933de-126">Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.</span><span class="sxs-lookup"><span data-stu-id="933de-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Erstellen Sie eine Web.config-Datei definieren die <xref:System.ServiceModel.NetTcpBinding> Bindung durch die `CalculatorService` Endpunkte.  
+3.  <span data-ttu-id="933de-127">Erstellen Sie eine Web.config-Datei, um die <xref:System.ServiceModel.NetTcpBinding>-Bindung zu definieren, die von den `CalculatorService`-Endpunkten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="933de-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -71,40 +74,40 @@ In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Erst
     </configuration>  
     ```  
   
-4.  Erstellen Sie eine Service.svc-Datei, die den folgenden Code enthält.  
+4.  <span data-ttu-id="933de-128">Erstellen Sie eine Service.svc-Datei, die den folgenden Code enthält.</span><span class="sxs-lookup"><span data-stu-id="933de-128">Create a Service.svc file that contains the following code.</span></span>  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Stellen Sie die Service.svc-Datei in das virtuelle IIS-Verzeichnis.  
+5.  <span data-ttu-id="933de-129">Stellen Sie die Service.svc-Datei in das virtuelle IIS-Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="933de-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
   
-### <a name="to-create-a-client-to-use-the-service"></a>So erstellen Sie einen Client, der den Dienst verwendet  
+### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="933de-130">So erstellen Sie einen Client, der den Dienst verwendet</span><span class="sxs-lookup"><span data-stu-id="933de-130">To create a client to use the service</span></span>  
   
-1.  Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile zum Generieren von Code aus Dienstmetadaten.  
+1.  <span data-ttu-id="933de-131">Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile, um Code von Dienstmetadaten zu generieren.</span><span class="sxs-lookup"><span data-stu-id="933de-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  Der generierte Client enthält die `ICalculator`-Schnittstelle, die den Dienstvertrag definiert, dem die Clientimplementierung entsprechen muss.  
+2.  <span data-ttu-id="933de-132">Der generierte Client enthält die `ICalculator`-Schnittstelle, die den Dienstvertrag definiert, dem die Clientimplementierung entsprechen muss.</span><span class="sxs-lookup"><span data-stu-id="933de-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`. Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
+3.  <span data-ttu-id="933de-133">Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`.</span><span class="sxs-lookup"><span data-stu-id="933de-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="933de-134">Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="933de-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="933de-135">Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.</span><span class="sxs-lookup"><span data-stu-id="933de-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Die Konfiguration für den Client, verwendet die <xref:System.ServiceModel.NetTcpBinding> wird auch von Svcutil.exe generiert. Wenn Sie Visual&#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
+4.  <span data-ttu-id="933de-136">Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet.</span><span class="sxs-lookup"><span data-stu-id="933de-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="933de-137">Wenn Sie Visual&#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.</span><span class="sxs-lookup"><span data-stu-id="933de-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
   
-     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
+     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
+5.  <span data-ttu-id="933de-138">Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.</span><span class="sxs-lookup"><span data-stu-id="933de-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  Kompilieren Sie den Code, und führen Sie den Client aus.  
+6.  <span data-ttu-id="933de-139">Kompilieren Sie den Code, und führen Sie den Client aus.</span><span class="sxs-lookup"><span data-stu-id="933de-139">Compile and run the client.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)   
- [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="933de-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="933de-140">See Also</span></span>  
+ [<span data-ttu-id="933de-141">TCP-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="933de-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [<span data-ttu-id="933de-142">Windows Server AppFabric-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="933de-142">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

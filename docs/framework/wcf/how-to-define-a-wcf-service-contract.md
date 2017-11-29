@@ -1,42 +1,41 @@
 ---
-title: "Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Dienstverträge [WCF], Definieren"
+title: 'Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-caps.latest.revision: 58
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 58
+caps.latest.revision: "58"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2ffe53d3e44f86feadc292eccb1692bd58a0c056
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags
-Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Anwendung erforderlich sind.Eine Übersicht über alle sechs Aufgaben finden Sie im Thema [Lernprogramm 'Erste Schritte'](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-define-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="402a7-102">Gewusst wie: Definieren eines Windows Communication Foundation-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="402a7-102">How to: Define a Windows Communication Foundation Service Contract</span></span>
+<span data-ttu-id="402a7-103">Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="402a7-103">This is the first of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="402a7-104">Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="402a7-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- Beim Erstellen eines grundlegenden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Diensts besteht die erste Aufgabe im Definieren eines Dienstvertrags.Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt.Ein Vorgang ähnelt einer Webdienstmethode.Verträge werden durch Definieren einer C\+\+\-, einer C\#\- oder einer Visual Basic \(VB\)\-Schnittstelle erstellt.Jede Methode in der Schnittstelle entspricht einem bestimmten Dienstvorgang.Auf jede Schnittstelle muss das <xref:System.ServiceModel.ServiceContractAttribute> angewendet werden, und auf jeden Vorgang muss das <xref:System.ServiceModel.OperationContractAttribute>\-Attribut angewendet werden.Besitzt eine Methode innerhalb einer Schnittstelle, die über das <xref:System.ServiceModel.ServiceContractAttribute>\-Attribut verfügt, nicht das <xref:System.ServiceModel.OperationContractAttribute>\-Attribut, wird diese Methode vom Dienst nicht verfügbar gemacht.  
+ <span data-ttu-id="402a7-105">Beim Erstellen eines grundlegenden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-Diensts besteht die erste Aufgabe im Definieren eines Dienstvertrags.</span><span class="sxs-lookup"><span data-stu-id="402a7-105">When creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, the first task is to define a service contract.</span></span> <span data-ttu-id="402a7-106">Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt.</span><span class="sxs-lookup"><span data-stu-id="402a7-106">The service contract specifies what operations the service supports.</span></span> <span data-ttu-id="402a7-107">Ein Vorgang ähnelt einer Webdienstmethode.</span><span class="sxs-lookup"><span data-stu-id="402a7-107">An operation can be thought of as a Web service method.</span></span> <span data-ttu-id="402a7-108">Verträge werden durch Definieren einer C++-, einer C#- oder einer Visual Basic (VB)-Schnittstelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="402a7-108">Contracts are created by defining a C++, C#, or Visual Basic (VB) interface.</span></span> <span data-ttu-id="402a7-109">Jede Methode in der Schnittstelle entspricht einem bestimmten Dienstvorgang.</span><span class="sxs-lookup"><span data-stu-id="402a7-109">Each method in the interface corresponds to a specific service operation.</span></span> <span data-ttu-id="402a7-110">Auf jede Schnittstelle muss das <xref:System.ServiceModel.ServiceContractAttribute> angewendet werden, und auf jeden Vorgang muss das <xref:System.ServiceModel.OperationContractAttribute> angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="402a7-110">Each interface must have the <xref:System.ServiceModel.ServiceContractAttribute> applied to it and each operation must have the <xref:System.ServiceModel.OperationContractAttribute> attribute applied to it.</span></span> <span data-ttu-id="402a7-111">Wenn eine Methode in einer Schnittstelle, die über das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut verfügt, nicht das <xref:System.ServiceModel.OperationContractAttribute>-Attribut aufweist, wird diese Methode vom Dienst nicht verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="402a7-111">If a method within an interface that has the <xref:System.ServiceModel.ServiceContractAttribute> attribute does not have the <xref:System.ServiceModel.OperationContractAttribute> attribute, that method is not exposed by the service.</span></span>  
   
- Der für diese Aufgabe verwendete Code wird in dem Beispiel im Anschluss an das Verfahren bereitgestellt.  
+ <span data-ttu-id="402a7-112">Der für diese Aufgabe verwendete Code wird in dem Beispiel im Anschluss an das Verfahren bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="402a7-112">The code used for this task is provided in the example following the procedure.</span></span>  
   
-### So definieren Sie einen Dienstvertrag  
+### <a name="to-define-a-service-contract"></a><span data-ttu-id="402a7-113">So definieren Sie einen Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="402a7-113">To define a service contract</span></span>  
   
-1.  Öffnen Sie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] als Administrator, indem Sie im Menü **Start** mit der rechten Maustaste auf das Programm klicken und **Als Administrator ausführen** auswählen.  
+1.  <span data-ttu-id="402a7-114">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] als Administrator, indem Sie mit der rechten Maustaste des Programms in der **starten** Menü- und Auswählen von **als Administrator ausführen**.</span><span class="sxs-lookup"><span data-stu-id="402a7-114">Open  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] as an administrator by right-clicking the program in the **Start** menu and selecting **Run as administrator**.</span></span>  
   
-2.  Erstellen Sie ein WCF\-Dienstbibliotheksprojekt, indem Sie im Menü **Datei** auf **Neu** klicken und anschließend **Projekt** auswählen.Erweitern Sie im Dialogfeld **Neues Projekt** auf der linken Seite des Dialogfelds **Visual C\#** für ein C\#\-Projekt, oder klicken Sie auf **Andere Sprachen** und dann auf **Visual Basic** für ein Visual Basic\-Projekt.Wählen Sie unter der ausgewählten Sprache **WCF** aus. Eine Liste der Projektvorlagen wird im mittleren Abschnitt des Dialogfelds angezeigt.Wählen Sie **WCF\-Dienstbibliothek**, und geben Sie `GettingStartedLib` in das Textfeld **Name** und `GettingStarted` in das Textfeld **Projektmappenname** unten im Dialogfeld ein.  
+2.  <span data-ttu-id="402a7-115">Erstellen Sie einen WCF-Dienstbibliotheksprojekt, indem Sie auf die **Datei** Menü- und Auswählen von **neu**, **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="402a7-115">Create a WCF Service Library project by clicking the **File** menu and selecting **New**, **Project**.</span></span> <span data-ttu-id="402a7-116">In der **neues Projekt** erweitern Sie im Dialogfeld auf der linken Seite des Dialogfelds **Visual C#-** für ein C#-Projekt oder **andere Sprachen** und dann **Visual Basic** für ein Visual Basic-Projekt.</span><span class="sxs-lookup"><span data-stu-id="402a7-116">In the **New Project** dialog, on the left-hand side of the dialog expand **Visual C#** for a C# project or **Other Languages** and then **Visual Basic** for a Visual Basic project.</span></span> <span data-ttu-id="402a7-117">Wählen Sie unter der ausgewählten Sprache **WCF** und eine Liste der Projektvorlagen im mittleren Abschnitt des Dialogfelds angezeigt.</span><span class="sxs-lookup"><span data-stu-id="402a7-117">Under the language selected select **WCF** and a list of project templates will be displayed on the center section of the dialog.</span></span> <span data-ttu-id="402a7-118">Wählen Sie **WCF-Dienstbibliothek**, und geben `GettingStartedLib` in der **Namen** Textfeld und `GettingStarted` in der **Projektmappenname** Textfeld unten auf der das Dialogfeld ".</span><span class="sxs-lookup"><span data-stu-id="402a7-118">Select **WCF Service Library**, and type `GettingStartedLib` in the **Name** textbox and `GettingStarted` in the **Solution name** textbox at the bottom of the dialog.</span></span>  
   
-3.  Visual Studio erstellt das Projekt, das 3 Dateien enthält: IService1.vb oder IService1.cs \(\) \(Service1.cs oder Service1.vb\) und App.config.Die Datei IService1 enthält einen standardmäßigen Dienstvertrag.Die Datei Service1 enthält eine Standardimplementierung des Dienstvertrags.Die Datei App.config enthält die Konfiguration, die erforderlich ist, um den Standarddienst mit dem Visual Studio\-WCF\-Diensthost zu laden.Weitere Informationen zum WCF\-Diensthost\-Tool finden Sie unter [WCF\-Diensthost \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+3.  <span data-ttu-id="402a7-119">Visual Studio erstellt das Projekt, das 3 Dateien enthält: IService1.cs (oder IService1.vb),Service1.cs (oder Service1.vb) und App.config.  Die Datei IService1 enthält einen Standarddienstvertrag.</span><span class="sxs-lookup"><span data-stu-id="402a7-119">Visual Studio will create the project which contains 3 files: IService1.cs (or IService1.vb), Service1.cs (or Service1.vb), and App.config.  The IService1 file contains a default service contract.</span></span>  <span data-ttu-id="402a7-120">Die Datei Service1 enthält eine Standardimplementierung des Dienstvertrags.</span><span class="sxs-lookup"><span data-stu-id="402a7-120">The Service1 file contains a default implementation of the service contract.</span></span> <span data-ttu-id="402a7-121">Die Datei App.config enthält die Konfiguration, die erforderlich ist, um den Standarddienst mit dem Visual Studio-WCF-Diensthost zu laden.</span><span class="sxs-lookup"><span data-stu-id="402a7-121">The App.config file contains configuration needed to load the default service with the Visual Studio WCF Service Host.</span></span> <span data-ttu-id="402a7-122">Weitere Informationen zum WCF-Diensthost-Tool finden Sie unter [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)</span><span class="sxs-lookup"><span data-stu-id="402a7-122">For more information about the WCF Service Host tool, see [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)</span></span>  
   
-4.  Öffnen Sie die Datei IService1.cs oder IService1.vb, und löschen Sie den Code in der Namespacedeklaration, wobei Sie die Namespacedeklaration beibehalten.Innerhalb der Namespacedeklaration definieren Sie eine neue Schnittstelle mit dem Namen `ICalculator` wie im Code unten dargestellt.  
+4.  <span data-ttu-id="402a7-123">Öffnen Sie die Datei IService1.cs oder IService1.vb, und löschen Sie den Code in der Namespacedeklaration, wobei Sie die Namespacedeklaration beibehalten.</span><span class="sxs-lookup"><span data-stu-id="402a7-123">Open the IService1.cs or IService1.vb file and delete the code within the namespace declaration leaving the namespace declaration.</span></span> <span data-ttu-id="402a7-124">Definieren Sie in der Namespacedeklaration eine neue Schnittstelle mit dem Namen `ICalculator`, wie im Code unten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="402a7-124">Inside the namespace declaration define a new interface called `ICalculator` as shown in the code below.</span></span>  
   
     ```  
     // IService.cs  
@@ -62,7 +61,6 @@ Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!I
                 double Divide(double n1, double n2);  
             }  
     }  
-  
     ```  
   
     ```  
@@ -85,17 +83,16 @@ Dies ist die erste von sechs Aufgaben, die zum Erstellen einer grundlegenden [!I
             Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
         End Interface  
     End Namespace  
-  
     ```  
   
-     Dieser Vertrag definiert eine Onlinerechner.Beachten Sie, dass die `ICalculator`\-Schnittstelle mit dem <xref:System.ServiceModel.ServiceContractAttribute>\-Attribut markiert ist.Dieses Attribut definiert einen Namespace, der verwendet wird, um den Vertragsnamen zu unterscheiden.Jeder Rechnervorgang wird mit dem <xref:System.ServiceModel.OperationContractAttribute>\-Attribut markiert.  
+     <span data-ttu-id="402a7-125">Dieser Vertrag definiert einen Onlinerechner.</span><span class="sxs-lookup"><span data-stu-id="402a7-125">This contract defines an online calculator.</span></span> <span data-ttu-id="402a7-126">Beachten Sie, dass die `ICalculator`-Schnittstelle mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut markiert ist.</span><span class="sxs-lookup"><span data-stu-id="402a7-126">Notice the `ICalculator` interface is marked with the <xref:System.ServiceModel.ServiceContractAttribute> attribute.</span></span> <span data-ttu-id="402a7-127">Dieses Attribut definiert einen Namespace, anhand dessen der Vertragsname eindeutig angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="402a7-127">This attribute defines a namespace that is used to disambiguate the contract name.</span></span> <span data-ttu-id="402a7-128">Jeder Rechnervorgang wird mit dem <xref:System.ServiceModel.OperationContractAttribute>-Attribut markiert.</span><span class="sxs-lookup"><span data-stu-id="402a7-128">Each calculator operation is marked with the <xref:System.ServiceModel.OperationContractAttribute> attribute.</span></span>  
   
     > [!NOTE]
-    >  Wird eine Schnittstelle, ein Member oder eine Klasse mithilfe von Attributen mit Anmerkungen versehen, können Sie im Namen des Attributs auf das "Attribute" verzichten.Deshalb wird <xref:System.ServiceModel.ServiceContractAttribute> in C\# zu `[ServiceContract]` oder in Visual Basic zu `<ServiceContract>`.  
+    >  <span data-ttu-id="402a7-129">Wenn eine Schnittstelle, ein Member oder eine Klasse mithilfe von Attributen mit Anmerkungen versehen wird, können Sie auf die Angabe "Attribute" im Namen des Attributs verzichten.</span><span class="sxs-lookup"><span data-stu-id="402a7-129">When using attributes to annotate an interface, member, or class, you can drop the "Attribute" part from the attribute name.</span></span> <span data-ttu-id="402a7-130">Deshalb wird <xref:System.ServiceModel.ServiceContractAttribute> in C# zu `[ServiceContract]` oder in Visual Basic zu `<ServiceContract>`.</span><span class="sxs-lookup"><span data-stu-id="402a7-130">So <xref:System.ServiceModel.ServiceContractAttribute> becomes `[ServiceContract]` in C#, or `<ServiceContract>` in Visual Basic.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.ServiceContractAttribute>   
- <xref:System.ServiceModel.OperationContractAttribute>   
- [Gewusst wie: Implementieren eines WCF\-Dienstvertrags](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)   
- [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="402a7-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="402a7-131">See Also</span></span>  
+ <xref:System.ServiceModel.ServiceContractAttribute>  
+ <xref:System.ServiceModel.OperationContractAttribute>  
+ [<span data-ttu-id="402a7-132">Vorgehensweise: Implementieren eines WCF-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="402a7-132">How to: Implement a Service Contract</span></span>](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [<span data-ttu-id="402a7-133">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="402a7-133">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="402a7-134">Selbsthosting</span><span class="sxs-lookup"><span data-stu-id="402a7-134">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

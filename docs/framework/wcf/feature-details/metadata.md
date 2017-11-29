@@ -1,47 +1,49 @@
 ---
-title: "Metadaten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Metadaten [WCF]"
+title: Metadaten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Metadaten
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet eine Infrastruktur für den Export, die Veröffentlichung, den Abruf und den Import von Dienstmetadaten.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste beschreiben mithilfe von Metadaten, wie mit den Endpunkten des Diensts zusammengearbeitet werden kann, sodass Tools, wie Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
+# <a name="metadata"></a><span data-ttu-id="5a22a-102">Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-102">Metadata</span></span>
+<span data-ttu-id="5a22a-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bietet eine Infrastruktur für den Export, die Veröffentlichung, den Abruf und den Import von Dienstmetadaten.</span><span class="sxs-lookup"><span data-stu-id="5a22a-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides an infrastructure for exporting, publishing, retrieving, and importing service metadata.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="5a22a-104">-Dienste beschreiben mithilfe von Metadaten die Interaktion mit den Endpunkten des Diensts, sodass Tools, z. B. Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.</span><span class="sxs-lookup"><span data-stu-id="5a22a-104"> services use metadata to describe how to interact with the service's endpoints so that tools, such as Svcutil.exe, can automatically generate client code for accessing the service.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- Ein Überblick über die Metadatenarchitektur.  
+## <a name="in-this-section"></a><span data-ttu-id="5a22a-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5a22a-105">In This Section</span></span>  
+ [<span data-ttu-id="5a22a-106">Übersicht über die Metadatenarchitektur</span><span class="sxs-lookup"><span data-stu-id="5a22a-106">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ <span data-ttu-id="5a22a-107">Ein Überblick über die Metadatenarchitektur.</span><span class="sxs-lookup"><span data-stu-id="5a22a-107">A high-level overview of metadata architecture.</span></span>  
   
- [Metadatenformate](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- Beschreibt die verschiedenen Metadatenformate.  
+ [<span data-ttu-id="5a22a-108">Metadatenformate</span><span class="sxs-lookup"><span data-stu-id="5a22a-108">Metadata Formats</span></span>](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
+ <span data-ttu-id="5a22a-109">Beschreibt die verschiedenen Metadatenformate.</span><span class="sxs-lookup"><span data-stu-id="5a22a-109">Describes the different metadata formats.</span></span>  
   
- [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- Beschreibt, wie Metadaten exportiert und importiert werden.  
+ [<span data-ttu-id="5a22a-110">Exportieren und Importieren von Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-110">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ <span data-ttu-id="5a22a-111">Beschreibt, wie Metadaten exportiert und importiert werden.</span><span class="sxs-lookup"><span data-stu-id="5a22a-111">Describes how to export and import metadata.</span></span>  
   
- [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Metadaten veröffentlicht.  
+ [<span data-ttu-id="5a22a-112">Veröffentlichen von Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-112">Publishing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ <span data-ttu-id="5a22a-113">Beschreibt, wie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Metadaten veröffentlicht.</span><span class="sxs-lookup"><span data-stu-id="5a22a-113">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publishes metadata.</span></span>  
   
- [Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- Beschreibt die verschiedenen Möglichkeiten, Metadaten abzurufen.  
+ [<span data-ttu-id="5a22a-114">Abrufen von Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-114">Retrieving Metadata</span></span>](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ <span data-ttu-id="5a22a-115">Beschreibt die verschiedenen Möglichkeiten, Metadaten abzurufen.</span><span class="sxs-lookup"><span data-stu-id="5a22a-115">Describes the different ways to retrieve metadata.</span></span>  
   
- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- Beschreibt die verschiedenen Möglichkeiten, Dienstmetadaten zu verwenden.  
+ [<span data-ttu-id="5a22a-116">Mithilfe von Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-116">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ <span data-ttu-id="5a22a-117">Beschreibt die verschiedenen Möglichkeiten, Dienstmetadaten zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5a22a-117">Describes different ways to use service metadata.</span></span>  
   
- [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- Beschreibt wichtige Sicherheitsüberlegungen zum Umgang mit Dienstmetadaten.  
+ [<span data-ttu-id="5a22a-118">Sicherheitsüberlegungen für Metadaten</span><span class="sxs-lookup"><span data-stu-id="5a22a-118">Security Considerations with Metadata</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ <span data-ttu-id="5a22a-119">Beschreibt wichtige Sicherheitsüberlegungen zum Umgang mit Dienstmetadaten.</span><span class="sxs-lookup"><span data-stu-id="5a22a-119">Describes important security considerations when dealing with service metadata.</span></span>  
   
-## Siehe auch  
- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a><span data-ttu-id="5a22a-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a22a-120">See Also</span></span>  
+ [<span data-ttu-id="5a22a-121">Erweitern des Metadatensystems</span><span class="sxs-lookup"><span data-stu-id="5a22a-121">Extending the Metadata System</span></span>](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

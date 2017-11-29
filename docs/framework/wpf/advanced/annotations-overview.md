@@ -1,83 +1,88 @@
 ---
-title: "&#220;bersicht &#252;ber Anmerkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dokumente, Anmerkungen"
-  - "Markierungen"
-  - "Kurznotizen"
+title: "Übersicht über Anmerkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- highlights [WPF]
+- documents [WPF], annotations
+- sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc4ef4473a200a424134a16d64655a5acf1488b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber Anmerkungen
-Das Niederschreiben von Notizen und Kommentaren auf Papierdokumenten ist eine so häufige Tätigkeit, dass sie als selbstverständlich vorausgesetzt wird.  Bei diesen Notizen und Kommentaren handelt es sich um "Anmerkungen", die Dokumenten zur Markierung von Informationen oder zur Kennzeichnung wichtiger Elemente hinzugefügt werden.  Im Gegensatz zum Schreiben von Notizen auf gedruckte Dokumente ist das Hinzufügen von Notizen in elektronischen Dokumenten oft nur sehr eingeschränkt oder nicht möglich.  
+# <a name="annotations-overview"></a><span data-ttu-id="889c5-102">Übersicht über Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="889c5-102">Annotations Overview</span></span>
+<span data-ttu-id="889c5-103">Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten.</span><span class="sxs-lookup"><span data-stu-id="889c5-103">Writing notes or comments on paper documents is such a commonplace activity that we almost take it for granted.</span></span> <span data-ttu-id="889c5-104">Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren.</span><span class="sxs-lookup"><span data-stu-id="889c5-104">These notes or comments are "annotations" that we add to a document to flag information or to highlight items of interest for later reference.</span></span> <span data-ttu-id="889c5-105">Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="889c5-105">Although writing notes on printed documents is easy and commonplace, the ability to add personal comments to electronic documents is typically very limited, if available at all.</span></span>  
   
- Dieses Thema bietet eine Übersicht über verschiedene häufig verwendete Anmerkungstypen, insbesondere Kurznotizen und Hervorhebungen, und zeigt, wie [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] diese Anmerkungstypen in Anwendungen über die [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Dokumentanzeigesteuerelemente ermöglicht.  Zu den [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Dokumentanzeigesteuerelementen, die Anmerkungen unterstützen, gehören die Elemente <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> sowie von <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitete Steuerelemente wie <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ <span data-ttu-id="889c5-106">In diesem Thema werden mehrere allgemeine Typen von Anmerkungen behandelt, insbesondere Kurznotizen und Markierungen, und es wird dargestellt, wie das [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] diese Typen von Anmerkungen und Anwendungen über die Steuerelemente für das Anzeigen des [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Dokuments vereinfacht.</span><span class="sxs-lookup"><span data-stu-id="889c5-106">This topic reviews several common types of annotations, specifically sticky notes and highlights, and illustrates how the [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilitates these types of annotations in applications through the [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] document viewing controls.</span></span>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="889c5-107">Dokument anzeigen-Steuerelementen, die Anmerkungen zu unterstützen, gehören <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie Steuerelemente abgeleitet <xref:System.Windows.Controls.Primitives.DocumentViewerBase> wie z. B. <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.</span><span class="sxs-lookup"><span data-stu-id="889c5-107"> document viewing controls that support annotations include <xref:System.Windows.Controls.FlowDocumentReader> and <xref:System.Windows.Controls.FlowDocumentScrollViewer>, as well as controls derived from <xref:System.Windows.Controls.Primitives.DocumentViewerBase> such as <xref:System.Windows.Controls.DocumentViewer> and <xref:System.Windows.Controls.FlowDocumentPageViewer>.</span></span>  
   
-   
   
 <a name="caf1_type_stickynotes"></a>   
-## Kurznotizen  
- Eine typische Haftnotiz ist ein kleines Stück farbiges Papier mit Informationen, das auf ein Dokument geklebt werden kann.  Digitale Kurznotizen bieten eine ähnliche Funktion für elektronische Dokumente, mit der zusätzlichen Flexibilität, viele andere Inhaltstypen zu verwenden, wie über die Tastatur eingegebenen Text, handschriftliche Notizen \(z. B. [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]\-Freihandeingaben\) und Weblinks.  
+## <a name="sticky-notes"></a><span data-ttu-id="889c5-108">Kurznotizen</span><span class="sxs-lookup"><span data-stu-id="889c5-108">Sticky Notes</span></span>  
+ <span data-ttu-id="889c5-109">Eine normale Kurznotiz enthält Informationen, die auf ein kleines Stück farbiges Papier geschrieben werden, das dann auf ein Dokument „geklebt“ wird.</span><span class="sxs-lookup"><span data-stu-id="889c5-109">A typical sticky note contains information written on a small piece of colored paper that is then "stuck" to a document.</span></span> <span data-ttu-id="889c5-110">Digitale Kurznotizen bieten ähnliche Funktionen für elektronische Dokumente, jedoch mit der zusätzlichen Flexibilität, viele andere Inhaltstypen wie eingegebenen Text, handschriftliche Notizen (z.B. [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]-Freihandeingabestriche), oder Weblinks einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="889c5-110">Digital sticky notes provide similar functionality for electronic documents, but with the added flexibility to include many other types of content such as typed text, handwritten notes (for example, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "ink" strokes), or Web links.</span></span>  
   
- Die folgende Abbildung zeigt einige Beispiele für Hervorhebungen, Kurznotizen mit Text und Kurznotizen mit Freihandeingabe.  
+ <span data-ttu-id="889c5-111">Die folgende Abbildung zeigt einige Beispiele von Hervorhebungen, Kurznotizen und Freihandnotizanmerkungen.</span><span class="sxs-lookup"><span data-stu-id="889c5-111">The following illustration shows some examples of highlight, text sticky note, and ink sticky note annotations.</span></span>  
   
- ![Textmarker&#45;, Text&#45; und Freihandnotizanmerkungen](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF\_StickyNote")  
+ <span data-ttu-id="889c5-112">![Textmarker-, Text- und Freihandnotizanmerkungen](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")</span><span class="sxs-lookup"><span data-stu-id="889c5-112">![Highlight, text and ink sticky note annotations.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")</span></span>  
   
- Das folgende Beispiel zeigt die Methode, mit der Sie die Unterstützung von Anmerkungen in Ihrer Anwendung aktivieren können.  
+ <span data-ttu-id="889c5-113">Das folgende Beispiel zeigt die Methode, die Sie zum Aktivieren der Unterstützung von Kommentaren in der Anwendung verwenden können.</span><span class="sxs-lookup"><span data-stu-id="889c5-113">The following example shows the method that you can use to enable annotation support in your application.</span></span>  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## Hervorhebungen  
- Auf Papierdokumenten sind Ihrer Kreativität bei der Markierung von Elementen keine Grenzen gesetzt: Sie können Informationen unterstreichen, mit einem Textmarker hervorheben, Wörter in einem Satz einkreisen, Zeichen und Notizen am Rand hinzufügen usw.  Die Hervorhebungen in [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] bieten eine ähnliche Funktion zur Markierung von Informationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Dokumentanzeigesteuerelementen.  
+## <a name="highlights"></a><span data-ttu-id="889c5-114">Markierungen</span><span class="sxs-lookup"><span data-stu-id="889c5-114">Highlights</span></span>  
+ <span data-ttu-id="889c5-115">Personen, die kreative Methoden verwenden, können Aufmerksamkeit auf Elemente ziehen, wenn Sie ein Papierdokument beschreiben, z.B. Wörter in einem Satz unterstreichen, markieren, einkreisen oder Markierungen oder Notationen am Rand hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="889c5-115">People use creative methods to draw attention to items of interest when they mark up a paper document, such as underlining, highlighting, circling words in a sentence, or drawing marks or notations in the margin.</span></span>  <span data-ttu-id="889c5-116">Das markieren von Anmerkungen in [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] bietet eine ähnliche Funktion zum Markieren von Informationen, die in Steuerelementen für das Anzeigen des [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dokuments angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="889c5-116">Highlight annotations in [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] provide a similar feature for marking up information displayed in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] document viewing controls.</span></span>  
   
- Die folgende Abbildung zeigt ein Beispiel für eine Hervorhebung.  
+ <span data-ttu-id="889c5-117">In der folgenden Abbildung ist ein Beispiel einer markierten Anmerkung dargestellt:</span><span class="sxs-lookup"><span data-stu-id="889c5-117">The following illustration shows an example of a highlight annotation.</span></span>  
   
- ![Anmerkung hervorheben](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF\_Callouts")  
+ <span data-ttu-id="889c5-118">![Anmerkung hervorheben](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")</span><span class="sxs-lookup"><span data-stu-id="889c5-118">![Highlight Annotation](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")</span></span>  
   
- In der Regel erstellen Benutzer Anmerkungen, indem sie zunächst einen Textbereich oder ein Element auswählen und dann mit der rechten Maustaste klicken, um ein <xref:System.Windows.Controls.ContextMenu> mit Anmerkungsoptionen anzuzeigen.  Das folgende Beispiel zeigt, wie Sie mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ein <xref:System.Windows.Controls.ContextMenu>\-Element mit Routingbefehlen deklarieren, auf die Benutzer zugreifen können, um Anmerkungen zu erstellen und zu verwalten.  
+ <span data-ttu-id="889c5-119">Benutzer in der Regel erstellen Sie Anmerkungen, indem zunächst einige Text oder ein zu berücksichtigendes Element auszuwählen, und klicken Sie dann mit der rechten Maustaste, um anzuzeigen eine <xref:System.Windows.Controls.ContextMenu> Anmerkung-Optionen.</span><span class="sxs-lookup"><span data-stu-id="889c5-119">Users typically create annotations by first selecting some text or an item of interest, and then right-clicking to display a <xref:System.Windows.Controls.ContextMenu> of annotation options.</span></span>  <span data-ttu-id="889c5-120">Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] können Sie deklarieren eine <xref:System.Windows.Controls.ContextMenu> mit weitergeleiteten Befehlen, die die Benutzer zugreifen können, zum Erstellen und Verwalten von Anmerkungen.</span><span class="sxs-lookup"><span data-stu-id="889c5-120">The following example shows the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] you can use to declare a <xref:System.Windows.Controls.ContextMenu> with routed commands that users can access to create and manage annotations.</span></span>  
   
- [!code-xml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
-## Verankerung mit Daten  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] bindet Anmerkungen an die vom Benutzer ausgewählten Daten, nicht nur an die Position in der Anzeige.  Wenn der Benutzer die Dokumentansicht durch Scrollen oder Zoomen ändert, verbleibt die Anmerkung mit den Daten, an die sie gebunden ist.  Die folgende Abbildung zeigt eine Anmerkung, die ein Benutzer für einen Textausschnitt erstellt hat.  Bei Änderung der Dokumentansicht bewegt sich die Hervorhebung mit den ausgewählten Daten.  
+## <a name="data-anchoring"></a><span data-ttu-id="889c5-121">Verankerung von Daten</span><span class="sxs-lookup"><span data-stu-id="889c5-121">Data Anchoring</span></span>  
+ <span data-ttu-id="889c5-122">Durch [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] werden Anmerkungen an Daten gebunden, die der Benutzer auswählt, und nicht nur an eine Position auf der dargestellten Anzeige.</span><span class="sxs-lookup"><span data-stu-id="889c5-122">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] binds annotations to the data that the user selects, not just to a position on the display view.</span></span> <span data-ttu-id="889c5-123">Deshalb bleibt die Anmerkung bei der Datenauswahl, an die sie gebunden ist, wenn der Benutzer das Anzeigefenster nach oben oder unten verschiebt oder die Größe ändert, wenn sich die Dokumentansicht ändert.</span><span class="sxs-lookup"><span data-stu-id="889c5-123">Therefore, if the document view changes, such as when the user scrolls or resizes the display window, the annotation stays with the data selection to which it is bound.</span></span> <span data-ttu-id="889c5-124">Die folgende Abbildung zeigt z.B. eine Anmerkung, die der Benutzer für einen Textausschnitt erstellt hat.</span><span class="sxs-lookup"><span data-stu-id="889c5-124">For example, the following graphic illustrates an annotation that the user has made on a text selection.</span></span> <span data-ttu-id="889c5-125">Wenn sich die Dokumentansicht ändert (durch Bildlauf, Größenänderung, Skalierung usw.), wird die hervorgehobene Anmerkung mit den ausgewählten Daten verschoben.</span><span class="sxs-lookup"><span data-stu-id="889c5-125">When the document view changes (scrolls, resizes, scales, or otherwise moves), the highlight annotation moves with the original data selection.</span></span>  
   
- ![Anmerkungsdaten&#45;Verankerung](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF\_DataAnchoring")  
+ <span data-ttu-id="889c5-126">![Anmerkungsdaten-Verankerung](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")</span><span class="sxs-lookup"><span data-stu-id="889c5-126">![Annotation Data Anchoring](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")</span></span>  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
-## Zuordnen von Anmerkungen zu Objekten  
- Sie können Anmerkungen den entsprechenden Objekten zuordnen.  Nehmen Sie an, Sie haben eine einfache Anwendung zum Lesen von Dokumenten, die über einen Kommentarbereich verfügt.  Der Kommentarbereich kann ein Listenfeld sein, in dem der Text in Form einer Liste von Anmerkungen dargestellt wird, die in einem Dokument verankert sind.  Wenn ein Element im Listenfeld vom Benutzer ausgewählt wird, zeigt die Anwendung den Abschnitt im Dokument an, an dem das entsprechende Anmerkungsobjekt verankert ist.  
+## <a name="matching-annotations-with-annotated-objects"></a><span data-ttu-id="889c5-127">Abgleichen von Anmerkung mit Objekten mit Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="889c5-127">Matching Annotations with Annotated Objects</span></span>  
+ <span data-ttu-id="889c5-128">Sie können Anmerkungen den entsprechenden kommentierten Objekten zuordnen.</span><span class="sxs-lookup"><span data-stu-id="889c5-128">You can match annotations with the corresponding annotated objects.</span></span> <span data-ttu-id="889c5-129">Betrachten Sie beispielsweise eine einfache Dokumentleseranwendung, die über einen Kommentarbereich verfügt.</span><span class="sxs-lookup"><span data-stu-id="889c5-129">For example, consider a simple document reader application that has a comments pane.</span></span> <span data-ttu-id="889c5-130">Der Kommentarbereich ist möglicherweise ein Listenfeld, das den Text aus einer Liste von Anmerkungen anzeigt, die mit einem Dokument verankert sind.</span><span class="sxs-lookup"><span data-stu-id="889c5-130">The comments pane might be a list box that displays the text from a list of annotations that are anchored to a document.</span></span> <span data-ttu-id="889c5-131">Wenn der Benutzer ein Element im Listenfeld auswählt, zeigt die Anwendung den Abschnitt im Dokument, mit dem das entsprechende Anmerkungsobjekt verankert ist.</span><span class="sxs-lookup"><span data-stu-id="889c5-131">If the user selects an item in the list box, then the application brings into view the paragraph in the document that the corresponding annotation object is anchored to.</span></span>  
   
- Im folgenden Beispiel wird veranschaulicht, wie der Ereignishandler eines solchen Listenfelds implementiert wird, das als Kommentarbereich dient.  
+ <span data-ttu-id="889c5-132">Im folgenden Beispiel wird veranschaulicht, wie der Ereignishandler eines solchen Listenfelds, das als Kommentarbereich dient, implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="889c5-132">The following example demonstrates how to implement the event handler of such a list box that serves as the comments pane.</span></span>  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Ein weiteres Beispiel sind Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Dokument\-Readern per E\-Mail ermöglichen.  Diese Funktion ermöglicht den Anwendungen, im Reader zu der Seite zu navigieren, die die ausgetauschte Anmerkung enthält.  
+ <span data-ttu-id="889c5-133">Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Lesern von Dokument per E-Mail ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="889c5-133">Another example scenario involves applications that enable the exchange of annotations and sticky notes between document readers through e-mail.</span></span> <span data-ttu-id="889c5-134">Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.</span><span class="sxs-lookup"><span data-stu-id="889c5-134">This feature enables these applications to navigate the reader to the page that contains the annotation that is being exchanged.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>   
- <xref:System.Windows.Controls.DocumentViewer>   
- <xref:System.Windows.Controls.FlowDocumentPageViewer>   
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>   
- <xref:System.Windows.Controls.FlowDocumentReader>   
- <xref:System.Windows.Annotations.IAnchorInfo>   
- [Annotations\-Schema](../../../../docs/framework/wpf/advanced/annotations-schema.md)   
- [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)   
- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [How to: Add a Command to a MenuItem](http://msdn.microsoft.com/de-de/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a><span data-ttu-id="889c5-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="889c5-135">See Also</span></span>  
+ <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
+ <xref:System.Windows.Controls.DocumentViewer>  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+ <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+ <xref:System.Windows.Controls.FlowDocumentReader>  
+ <xref:System.Windows.Annotations.IAnchorInfo>  
+ [<span data-ttu-id="889c5-136">Annotations-Schema</span><span class="sxs-lookup"><span data-stu-id="889c5-136">Annotations Schema</span></span>](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+ [<span data-ttu-id="889c5-137">Übersicht über ContextMenu</span><span class="sxs-lookup"><span data-stu-id="889c5-137">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [<span data-ttu-id="889c5-138">Befehlsübersicht</span><span class="sxs-lookup"><span data-stu-id="889c5-138">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="889c5-139">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="889c5-139">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="889c5-140">How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)</span><span class="sxs-lookup"><span data-stu-id="889c5-140">How to: Add a Command to a MenuItem</span></span>](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)

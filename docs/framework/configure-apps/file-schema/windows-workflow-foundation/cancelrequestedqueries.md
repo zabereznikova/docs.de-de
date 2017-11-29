@@ -1,61 +1,67 @@
 ---
-title: "&lt;cancelRequestedQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;cancelRequestedQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b3699985095fca59d5817a31c52b29fe7609a2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cancelRequestedQueries&gt;
-Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen nachzuverfolgen, mit denen die übergeordnete Aktivität den Abbruch einer untergeordneten Aktivität verlangt.  Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.  
+# <a name="ltcancelrequestedqueriesgt"></a><span data-ttu-id="b4f8e-102">&lt;cancelRequestedQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="b4f8e-102">&lt;cancelRequestedQueries&gt;</span></span>
+<span data-ttu-id="b4f8e-103">Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen nachzuverfolgen, mit denen die übergeordnete Aktivität den Abbruch einer untergeordneten Aktivität verlangt.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="b4f8e-104">Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
   
- Weitere Informationen zu Nachverfolgungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ <span data-ttu-id="b4f8e-105">Weitere Informationen zu nachverfolgungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="b4f8e-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-## Syntax  
+<span data-ttu-id="b4f8e-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="b4f8e-107">\<Nachverfolgen von ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-107">\<tracking></span></span>  
+<span data-ttu-id="b4f8e-108">\<TrackingProfile ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-108">\<trackingProfile></span></span>  
+<span data-ttu-id="b4f8e-109">\<Workflow ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-109">\<workflow></span></span>  
+<span data-ttu-id="b4f8e-110">\<CancelRequestedQueries ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-110">\<cancelRequestedQueries></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="b4f8e-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="b4f8e-111">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <cancelRequestQueries>  
-             <cancelRequestQuery activityName="String"  
-                 childActivityName="String"/>  
-          </cancelRequestQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <cancelRequestQueries>
+        <cancelRequestQuery activityName="String" 
+                            childActivityName="String"/>
+      </cancelRequestQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b4f8e-112">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="b4f8e-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="b4f8e-113">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
- Keine.  
+### <a name="attributes"></a><span data-ttu-id="b4f8e-114">Attribute</span><span class="sxs-lookup"><span data-stu-id="b4f8e-114">Attributes</span></span>  
+ <span data-ttu-id="b4f8e-115">Keine.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-115">None.</span></span>  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="b4f8e-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b4f8e-116">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<cancelRequestedQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Eine Abfrage, die verwendet wird, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen.|  
+|<span data-ttu-id="b4f8e-117">Element</span><span class="sxs-lookup"><span data-stu-id="b4f8e-117">Element</span></span>|<span data-ttu-id="b4f8e-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b4f8e-118">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b4f8e-119">\<CancelRequestedQuery ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-119">\<cancelRequestedQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|<span data-ttu-id="b4f8e-120">Eine Abfrage, die verwendet wird, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-120">A query that is used to track requests to cancel a child activity by the parent activity</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="b4f8e-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b4f8e-121">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die **activityDefinitionId**\-Eigenschaft identifiziert wird.|  
+|<span data-ttu-id="b4f8e-122">Element</span><span class="sxs-lookup"><span data-stu-id="b4f8e-122">Element</span></span>|<span data-ttu-id="b4f8e-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b4f8e-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b4f8e-124">\<Workflow ></span><span class="sxs-lookup"><span data-stu-id="b4f8e-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="b4f8e-125">Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow identifizierte enthält die **ActivityDefinitionId** Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="b4f8e-125">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## Siehe auch  
- [System.ServiceModel.Activities.Tracking.Configuration.CancelRequestQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.CancelRequestQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.CancelRequestQuery](assetId:///System.Activities.Tracking.CancelRequestQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="b4f8e-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4f8e-126">See Also</span></span>  
+ [<span data-ttu-id="b4f8e-127">Nachverfolgung und Ablaufverfolgung für Workflows</span><span class="sxs-lookup"><span data-stu-id="b4f8e-127">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="b4f8e-128">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="b4f8e-128">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

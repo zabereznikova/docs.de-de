@@ -1,27 +1,30 @@
 ---
-title: "Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zur&#252;ckgibt | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 64179a559986f11fa263fac7fe680ddd9bea809c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zur&#252;ckgibt
-Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang.Dies ist der Fall, wenn ein Dienstvorgang Daten in einem von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nicht unterstützten Format zurückgeben muss.In diesem Thema wird erläutert, wie ein solcher Dienst mithilfe des WEB\-HTTP\-Webprogrammiermodells von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erstellt werden kann.Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a><span data-ttu-id="b475d-102">Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt</span><span class="sxs-lookup"><span data-stu-id="b475d-102">How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="b475d-103">Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang.</span><span class="sxs-lookup"><span data-stu-id="b475d-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="b475d-104">Dies ist der Fall, wenn ein Dienstvorgang Daten in einem Format, die von nicht unterstützten zurückgeben muss [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b475d-104">This is the case when a service operation must return data in a format not supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="b475d-105">In diesem Thema wird erläutert, wie ein solcher Dienst mithilfe des WEB-HTTP-Webprogrammiermodells von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="b475d-105">This topic discusses using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Programming Model to create such a service.</span></span> <span data-ttu-id="b475d-106">Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b475d-106">This service has one operation that returns a stream.</span></span>  
   
-### So implementieren Sie den Dienstvertrag  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="b475d-107">So implementieren Sie den Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="b475d-107">To implement the service contract</span></span>  
   
-1.  Definieren Sie den Dienstvertrag.Der Vertrag wird `IImageServer` genannt und besitzt eine Methode mit der Bezeichnung `GetImage`, von der ein <xref:System.IO.Stream> zurückgegeben wird.  
+1.  <span data-ttu-id="b475d-108">Definieren Sie den Dienstvertrag.</span><span class="sxs-lookup"><span data-stu-id="b475d-108">Define the service contract.</span></span> <span data-ttu-id="b475d-109">Der Vertrag wird `IImageServer` genannt und besitzt eine Methode mit der Bezeichnung `GetImage`, von der ein <xref:System.IO.Stream> zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b475d-109">The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.</span></span>  
   
     ```  
     [ServiceContract]  
@@ -32,9 +35,9 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
         }  
     ```  
   
-     Da die Methode einen <xref:System.IO.Stream> zurückgibt, wird von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] davon ausgegangen, dass der Vorgang die vollständige Kontrolle über die Bytes besitzt, die vom Dienstvorgang zurückgegeben werden. Für die zurückgegebenen Daten erfolgt keine Formatierung.  
+     <span data-ttu-id="b475d-110">Da die Methode einen <xref:System.IO.Stream> zurückgibt, wird von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] davon ausgegangen, dass der Vorgang die vollständige Kontrolle über die Bytes besitzt, die vom Dienstvorgang zurückgegeben werden. Für die zurückgegebenen Daten erfolgt keine Formatierung.</span><span class="sxs-lookup"><span data-stu-id="b475d-110">Because the method returns a <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.</span></span>  
   
-2.  Implementieren Sie den Dienstvertrag.Der Vertrag besitzt lediglich einen Vorgang \(`GetImage`\).Diese Methode generiert eine Bitmap und speichert diese anschließend im JPG\-Format in einem <xref:System.IO.MemoryStream>.Der Vorgang gibt diesen Stream anschließend an den Aufrufer zurück.  
+2.  <span data-ttu-id="b475d-111">Implementieren Sie den Dienstvertrag.</span><span class="sxs-lookup"><span data-stu-id="b475d-111">Implement the service contract.</span></span> <span data-ttu-id="b475d-112">Der Vertrag besitzt lediglich einen Vorgang (`GetImage`).</span><span class="sxs-lookup"><span data-stu-id="b475d-112">The contract has only one operation (`GetImage`).</span></span> <span data-ttu-id="b475d-113">Diese Methode generiert eine Bitmap und speichert diese anschließend im JPG-Format in einem <xref:System.IO.MemoryStream>.</span><span class="sxs-lookup"><span data-stu-id="b475d-113">This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format.</span></span> <span data-ttu-id="b475d-114">Der Vorgang gibt diesen Stream anschließend an den Aufrufer zurück.</span><span class="sxs-lookup"><span data-stu-id="b475d-114">The operation then returns that stream to the caller.</span></span>  
   
     ```  
     public class Service : IImageServer  
@@ -58,13 +61,13 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
        }  
     ```  
   
-     Beachten Sie die vorvorletzte Codezeile: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     <span data-ttu-id="b475d-115">Beachten Sie die vorvorletzte Codezeile: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span><span class="sxs-lookup"><span data-stu-id="b475d-115">Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span></span>  
   
-     Hierdurch wird der ContentType\-Header auf `“image/jpeg”` festgelegt.Zwar wird in diesem Beispiel das Zurückgeben einer JPG\-Datei veranschaulicht, das Beispiel kann jedoch zum Zurückgeben eines beliebigen Datentyps in einem beliebigen Format angepasst werden.Die Daten müssen durch den Vorgang abgerufen oder erstellt und anschließend in den Stream geschrieben werden.  
+     <span data-ttu-id="b475d-116">Hierdurch wird der ContentType-Header auf `"image/jpeg"` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b475d-116">This sets the content type header to `"image/jpeg"`.</span></span> <span data-ttu-id="b475d-117">Zwar wird in diesem Beispiel das Zurückgeben einer JPG-Datei veranschaulicht, das Beispiel kann jedoch zum Zurückgeben eines beliebigen Datentyps in einem beliebigen Format angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="b475d-117">Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format.</span></span> <span data-ttu-id="b475d-118">Die Daten müssen durch den Vorgang abgerufen oder erstellt und anschließend in den Stream geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="b475d-118">The operation must retrieve or generate the data and then write it to a stream.</span></span>  
   
-### So hosten Sie den Dienst  
+### <a name="to-host-the-service"></a><span data-ttu-id="b475d-119">So hosten Sie den Dienst</span><span class="sxs-lookup"><span data-stu-id="b475d-119">To host the service</span></span>  
   
-1.  Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.  
+1.  <span data-ttu-id="b475d-120">Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.</span><span class="sxs-lookup"><span data-stu-id="b475d-120">Create a console application to host the service.</span></span>  
   
     ```  
     class Program  
@@ -75,50 +78,47 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     }  
     ```  
   
-2.  Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`\-Methode zu speichern.  
+2.  <span data-ttu-id="b475d-121">Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`-Methode zu speichern.</span><span class="sxs-lookup"><span data-stu-id="b475d-121">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>\-Instanz für den Dienst, in der die Dienstklasse und die Basisadresse angegeben sind.  
+3.  <span data-ttu-id="b475d-122">Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz für den Dienst, in der die Dienstklasse und die Basisadresse angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="b475d-122">Create a <xref:System.ServiceModel.ServiceHost> instance for the service specifying the service class and the base address.</span></span>  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
-  
     ```  
   
-4.  Fügen Sie mithilfe der <xref:System.ServiceModel.WebHttpBinding> und der <xref:System.ServiceModel.Description.WebHttpBehavior> einen Endpunkt hinzu.  
+4.  <span data-ttu-id="b475d-123">Fügen Sie mithilfe der <xref:System.ServiceModel.WebHttpBinding> und der <xref:System.ServiceModel.Description.WebHttpBehavior> einen Endpunkt hinzu.</span><span class="sxs-lookup"><span data-stu-id="b475d-123">Add an endpoint using the <xref:System.ServiceModel.WebHttpBinding> and the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
-  
     ```  
   
-5.  Öffnen des Diensthosts  
+5.  <span data-ttu-id="b475d-124">Öffnen des Diensthosts</span><span class="sxs-lookup"><span data-stu-id="b475d-124">Open the service host.</span></span>  
   
     ```  
     host.Open()  
     ```  
   
-6.  Warten Sie, bis der Benutzer den Dienst durch Drücken der EINGABETASTE beendet.  
+6.  <span data-ttu-id="b475d-125">Warten Sie, bis der Benutzer den Dienst durch Drücken der EINGABETASTE beendet.</span><span class="sxs-lookup"><span data-stu-id="b475d-125">Wait until the user presses ENTER to terminate the service.</span></span>  
   
     ```  
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
     host.Close();  
-  
     ```  
   
-### So rufen Sie den unformatierten Dienst mithilfe von Internet Explorer auf  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a><span data-ttu-id="b475d-126">So rufen Sie den unformatierten Dienst mithilfe von Internet Explorer auf</span><span class="sxs-lookup"><span data-stu-id="b475d-126">To call the raw service using Internet Explorer</span></span>  
   
-1.  Führen Sie den Dienst aus. Die folgende Ausgabe sollte angezeigt werden:`Service is running Press ENTER to close the host`  
+1.  <span data-ttu-id="b475d-127">Führen Sie den Dienst aus. Die folgende Ausgabe sollte angezeigt werden:</span><span class="sxs-lookup"><span data-stu-id="b475d-127">Run the service, you should see the following output from the service.</span></span> `Service is running Press ENTER to close the host`  
   
-2.  Öffnen Sie Internet Explorer, und geben Sie `http://localhost:8000/Service/GetImage?width=50&height=40` ein. Ein gelbes Rechteck sollte angezeigt werden, durch dessen Mitte eine blauen diagonale Linie verläuft.  
+2.  <span data-ttu-id="b475d-128">Öffnen Sie Internet Explorer, und geben Sie `http://localhost:8000/Service/GetImage?width=50&height=40` ein. Ein gelbes Rechteck sollte angezeigt werden, durch dessen Mitte eine blauen diagonale Linie verläuft.</span><span class="sxs-lookup"><span data-stu-id="b475d-128">Open Internet Explorer and type in `http://localhost:8000/Service/GetImage?width=50&height=40` you should see a yellow rectangle with a blue diagonal line through the center.</span></span>  
   
-## Beispiel  
- Die folgende vollständige Auflistung enthält den Code für dieses Thema:  
+## <a name="example"></a><span data-ttu-id="b475d-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b475d-129">Example</span></span>  
+ <span data-ttu-id="b475d-130">Die folgende vollständige Auflistung enthält den Code für dieses Thema:</span><span class="sxs-lookup"><span data-stu-id="b475d-130">The following is a complete listing of the code for this topic.</span></span>  
   
 ```  
 using System;  
@@ -179,12 +179,11 @@ namespace RawImageService
         }  
     }  
 }  
-  
 ```  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="b475d-131">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="b475d-131">Compiling the Code</span></span>  
   
--   Verweisen Sie beim Kompilieren des Beispielcodes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".  
+-   <span data-ttu-id="b475d-132">Verweisen Sie beim Kompilieren des Beispielcodes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".</span><span class="sxs-lookup"><span data-stu-id="b475d-132">When compiling the sample code reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## Siehe auch  
- [WCF\-Web\-HTTP\-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="b475d-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b475d-133">See Also</span></span>  
+ [<span data-ttu-id="b475d-134">WCF-Web-HTTP-Programmiermodell</span><span class="sxs-lookup"><span data-stu-id="b475d-134">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

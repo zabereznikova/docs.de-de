@@ -1,35 +1,38 @@
 ---
-title: "Adressheader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Adressheader
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19a7291ce13221e85b49c6ef97c6b375b8b71014
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Adressheader
-Im Beispiel zu Adressheadern wird veranschaulicht, wie Clients Verweisparameter mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] an einen Dienst übergeben können.  
+# <a name="address-headers"></a><span data-ttu-id="d63ec-102">Adressheader</span><span class="sxs-lookup"><span data-stu-id="d63ec-102">Address Headers</span></span>
+<span data-ttu-id="d63ec-103">Im Beispiel zu Adressheadern wird veranschaulicht, wie Clients Verweisparameter mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] an einen Dienst übergeben können.</span><span class="sxs-lookup"><span data-stu-id="d63ec-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="d63ec-104">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="d63ec-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In der WS\-Adressierungsspezifikation wird ein Endpunktverweis als Möglichkeit definiert, einen bestimmten Webdienstendpunkt zu adressieren.In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden Endpunktverweise mit der `EndpointAddress`\-Klasse modelliert. `EndpointAddress` ist der Typ des Address\-Felds in der `ServiceEndpoint`\-Klasse.  
+ <span data-ttu-id="d63ec-105">In der WS-Adressierungsspezifikation wird ein Endpunktverweis als Möglichkeit definiert, einen bestimmten Webdienstendpunkt zu adressieren.</span><span class="sxs-lookup"><span data-stu-id="d63ec-105">The WS-Addressing specification defines the notion of an endpoint reference as a way to address a particular Web service endpoint.</span></span> <span data-ttu-id="d63ec-106">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden Endpunktverweise mit der `EndpointAddress`-Klasse modelliert. `EndpointAddress` ist der Typ des Address-Felds in der `ServiceEndpoint`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="d63ec-106">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], endpoint references are modeled using the `EndpointAddress` class - `EndpointAddress` is the type of the Address field of the `ServiceEndpoint` class.</span></span>  
   
- Bestandteil des Endpunktverweismodells ist, dass jeder Verweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern.In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden diese Endpunktverweise als Instanzen der `AddressHeader`\-Klasse modelliert.  
+ <span data-ttu-id="d63ec-107">Bestandteil des Endpunktverweismodells ist, dass jeder Verweis einige Verweisparameter enthalten kann, die weitere identifizierende Informationen liefern.</span><span class="sxs-lookup"><span data-stu-id="d63ec-107">Part of the endpoint reference model is that each reference can carry some reference parameters that add extra identifying information.</span></span> <span data-ttu-id="d63ec-108">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] werden diese Endpunktverweise als Instanzen der `AddressHeader`-Klasse modelliert.</span><span class="sxs-lookup"><span data-stu-id="d63ec-108">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], these reference parameters are modeled as instances of `AddressHeader` class.</span></span>  
   
- In diesem Beispiel fügt der Client der `EndpointAddress` des Clientendpunkts einen Verweisparameter hinzu.Der Dienst sucht diesen Verweisparameter und verwendet seinen Wert in der Logik des "Hello"\-Dienstvorgangs.  
+ <span data-ttu-id="d63ec-109">In diesem Beispiel fügt der Client der `EndpointAddress` des Clientendpunkts einen Verweisparameter hinzu.</span><span class="sxs-lookup"><span data-stu-id="d63ec-109">In this sample, the client adds a reference parameter to the `EndpointAddress` of the client endpoint.</span></span> <span data-ttu-id="d63ec-110">Der Dienst sucht diesen Verweisparameter und verwendet seinen Wert in der Logik des "Hello"-Dienstvorgangs.</span><span class="sxs-lookup"><span data-stu-id="d63ec-110">The service looks for this reference parameter and uses its value in the logic of its "Hello" service operation.</span></span>  
   
-## Client  
- Damit der Client einen Verweisparameter senden kann, muss er der `EndpointAddress` von `ServiceEndpoint` einen `AddressHeader` hinzufügen.Da die `EndpointAddress`\-Klasse unveränderlich ist, muss das Ändern einer Endpunktadresse mithilfe der `EndpointAddressBuilder`\-Klasse erfolgen.Im folgenden Code wird der Client zum Senden eines Verweisparameters als Teil der Nachricht initialisiert.  
+## <a name="client"></a><span data-ttu-id="d63ec-111">Client</span><span class="sxs-lookup"><span data-stu-id="d63ec-111">Client</span></span>  
+ <span data-ttu-id="d63ec-112">Damit der Client einen Verweisparameter senden kann, muss er der `AddressHeader` von `EndpointAddress` einen `ServiceEndpoint` hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-112">For the client to send a reference parameter, it must add an `AddressHeader` to the `EndpointAddress` of the `ServiceEndpoint`.</span></span> <span data-ttu-id="d63ec-113">Da die `EndpointAddress`-Klasse unveränderlich ist, muss das Ändern einer Endpunktadresse mithilfe der `EndpointAddressBuilder`-Klasse erfolgen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-113">Because the `EndpointAddress` class is immutable, modification of an endpoint address must be done using the `EndpointAddressBuilder` class.</span></span> <span data-ttu-id="d63ec-114">Im folgenden Code wird der Client zum Senden eines Verweisparameters als Teil der Nachricht initialisiert.</span><span class="sxs-lookup"><span data-stu-id="d63ec-114">The following code initializes the client to send a reference parameter as part of its message.</span></span>  
   
 ```  
 HelloClient client = new HelloClient();  
@@ -41,14 +44,14 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();  
 ```  
   
- Im Code wird ein `EndpointAddressBuilder` mit der ursprünglichen `EndpointAddress` als Anfangswert erstellt.Dann wird ein neu erstellter Adressheader hinzugefügt. Durch den Aufruf von `CreateAddressHeadercreates` wird ein Header mit einem bestimmten Namen, Namespace und Wert erstellt.Hier lautet der Wert "John".Nach dem Hinzufügen des Headers zum Builder konvertiert die `ToEndpointAddress()`\-Methode den \(änderbaren\) Builder zurück in eine \(unveränderliche\) Endpunktadresse. Diese wird dann wieder dem Address\-Feld des Clientendpunkts zugewiesen.  
+ <span data-ttu-id="d63ec-115">Im Code wird ein `EndpointAddressBuilder` mit der ursprünglichen `EndpointAddress` als Anfangswert erstellt.</span><span class="sxs-lookup"><span data-stu-id="d63ec-115">The code creates an `EndpointAddressBuilder` using the original `EndpointAddress` as an initial value.</span></span> <span data-ttu-id="d63ec-116">Dann wird ein neu erstellter Adressheader hinzugefügt. Durch den Aufruf von `CreateAddressHeadercreates` wird ein Header mit einem bestimmten Namen, Namespace und Wert erstellt.</span><span class="sxs-lookup"><span data-stu-id="d63ec-116">It then adds a newly created address header; the call to `CreateAddressHeadercreates` a header with a particular name, namespace, and value.</span></span> <span data-ttu-id="d63ec-117">Hier lautet der Wert "John".</span><span class="sxs-lookup"><span data-stu-id="d63ec-117">Here the value is "John".</span></span> <span data-ttu-id="d63ec-118">Nach dem Hinzufügen des Headers zum Builder konvertiert die `ToEndpointAddress()`-Methode den (änderbaren) Builder zurück in eine (unveränderliche) Endpunktadresse. Diese wird dann wieder dem Address-Feld des Clientendpunkts zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-118">Once the header is added to the builder, the `ToEndpointAddress()` method converts the (mutable) builder back into an (immutable) endpoint address, which is assigned back to the client endpoint's Address field.</span></span>  
   
- Wenn der Client nun `Console.WriteLine(client.Hello());` aufruft, kann der Dienst den Wert dieses Adressparameters abrufen, wie in der Ausgabe des Clients angezeigt.  
+ <span data-ttu-id="d63ec-119">Wenn der Client nun `Console.WriteLine(client.Hello());` aufruft, kann der Dienst den Wert dieses Adressparameters abrufen, wie in der Ausgabe des Clients angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d63ec-119">Now when the client calls `Console.WriteLine(client.Hello());`, the service is able to get the value of this address parameter, as seen in the resulting output of the client.</span></span>  
   
  `Hello, John`  
   
-## Server  
- Bei der Implementierung des Servervorgangs `Hello()` wird der aktuelle `OperationContext` verwendet, um die Werte der Header in der eingehenden Nachricht zu überprüfen.  
+## <a name="server"></a><span data-ttu-id="d63ec-120">Server</span><span class="sxs-lookup"><span data-stu-id="d63ec-120">Server</span></span>  
+ <span data-ttu-id="d63ec-121">Bei der Implementierung des Servervorgangs `Hello()` wird der aktuelle `OperationContext` verwendet, um die Werte der Header in der eingehenden Nachricht zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-121">The implementation of the service operation `Hello()` uses the current `OperationContext` to inspect the values of the headers on the incoming message.</span></span>  
   
 ```  
 string id = null;  
@@ -73,23 +76,23 @@ OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);
 return "Hello, " + id;  
 ```  
   
- Der Code durchläuft alle Header in der eingehenden Nachricht und sucht Header, bei denen es sich um Verweisparameter mit einem bestimmten Namen handelt.Wenn der Parameter gefunden wird, wird der Wert des Parameters gelesen und in der "id"\-Variablen gespeichert.  
+ <span data-ttu-id="d63ec-122">Der Code durchläuft alle Header in der eingehenden Nachricht und sucht Header, bei denen es sich um Verweisparameter mit einem bestimmten Namen handelt.</span><span class="sxs-lookup"><span data-stu-id="d63ec-122">The code iterates over all the headers on the incoming message, looking for headers that are reference parameters with the particular name and.</span></span> <span data-ttu-id="d63ec-123">Wenn der Parameter gefunden wird, wird der Wert des Parameters gelesen und in der "id"-Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="d63ec-123">When the parameter is found, it reads the value of the parameter and stores it in the "id" variable.</span></span>  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d63ec-124">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="d63ec-124">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="d63ec-125">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d63ec-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="d63ec-126">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="d63ec-127">Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d63ec-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="d63ec-128">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="d63ec-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d63ec-129">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="d63ec-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="d63ec-130">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="d63ec-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d63ec-131">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="d63ec-131">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="d63ec-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d63ec-132">See Also</span></span>

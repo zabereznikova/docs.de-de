@@ -1,75 +1,81 @@
 ---
-title: "Gewusst wie: Abrufen des Offsets eines visuellen Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abrufen von Offsetwerten aus visuellen Objekten"
-  - "Offset-Werte, Abrufen aus visuellen Objekten"
-  - "Abrufen von Offsetwerten aus visuellen Objekten"
-  - "Visuelle Objekte, Abrufen von Offsetwerten aus"
+title: 'Gewusst wie: Abrufen des Offsets eines visuellen Objekts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- getting offset values from visual objects [WPF]
+- offset values [WPF], retrieving from visual objects [WPF]
+- visual objects [WPF], retrieving offset values from
+- retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22c35a683f479660a17f11e44f9a0721f9d35968
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen des Offsets eines visuellen Objekts
-Diese Beispiele zeigen, wie Sie den Offsetwert eines visuellen Objekts abrufen, das relativ zu seinem übergeordneten Element oder einem beliebigen Vorgänger oder Nachfolger angeordnet ist.  
+# <a name="how-to-get-the-offset-of-a-visual"></a><span data-ttu-id="b09ca-102">Gewusst wie: Abrufen des Offsets eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="b09ca-102">How to: Get the Offset of a Visual</span></span>
+<span data-ttu-id="b09ca-103">Diese Beispiele zeigen, wie den Offset-Wert ein visuelles Objekt abgerufen, die relativ zu seinem übergeordneten Element oder Vorgänger oder Nachfolger.</span><span class="sxs-lookup"><span data-stu-id="b09ca-103">These examples show how to retrieve the offset value of a visual object that is relative to its parent, or any ancestor or descendant.</span></span>  
   
-## Beispiel  
- Das folgende Markupbeispiel zeigt einen <xref:System.Windows.Controls.TextBlock>, für den unter <xref:System.Windows.FrameworkElement.Margin%2A> der Wert 4 definiert ist.  
+## <a name="example"></a><span data-ttu-id="b09ca-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b09ca-104">Example</span></span>  
+ <span data-ttu-id="b09ca-105">Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Controls.TextBlock> mit definiert <xref:System.Windows.FrameworkElement.Margin%2A> Wert 4.</span><span class="sxs-lookup"><span data-stu-id="b09ca-105">The following markup example shows a <xref:System.Windows.Controls.TextBlock> that is defined with <xref:System.Windows.FrameworkElement.Margin%2A> value of 4.</span></span>  
   
- [!code-xml[VisualSnippets#VisualSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet1)]  
+ [!code-xaml[VisualSnippets#VisualSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet1)]  
   
- Im folgenden Codebeispiel wird die Verwendung der <xref:System.Windows.Media.VisualTreeHelper.GetOffset%2A>\-Methode zum Abrufen des Offsets für den <xref:System.Windows.Controls.TextBlock> veranschaulicht.  Die Offsetwerte sind im zurückgegebenen <xref:System.Windows.Vector>\-Wert enthalten.  
+ <span data-ttu-id="b09ca-106">Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Media.VisualTreeHelper.GetOffset%2A> Methode zum Abrufen des Offsets für die <xref:System.Windows.Controls.TextBlock>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-106">The following code example shows how to use the <xref:System.Windows.Media.VisualTreeHelper.GetOffset%2A> method to retrieve the offset of the <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="b09ca-107">Der Offset-Werte enthalten sind in der zurückgegebenen <xref:System.Windows.Vector> Wert.</span><span class="sxs-lookup"><span data-stu-id="b09ca-107">The offset values are contained within the returned <xref:System.Windows.Vector> value.</span></span>  
   
  [!code-csharp[VisualSnippets#VisualSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet2)]
  [!code-vb[VisualSnippets#VisualSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet2)]  
   
- Für den Offset wird der <xref:System.Windows.FrameworkElement.Margin%2A>\-Wert berücksichtigt.  In diesem Fall hat <xref:System.Windows.Vector.X%2A> den Wert 4 und <xref:System.Windows.Vector.Y%2A> ebenfalls den Wert 4.  
+ <span data-ttu-id="b09ca-108">Der Offset berücksichtigt die <xref:System.Windows.FrameworkElement.Margin%2A> Wert.</span><span class="sxs-lookup"><span data-stu-id="b09ca-108">The offset takes into account the <xref:System.Windows.FrameworkElement.Margin%2A> value.</span></span> <span data-ttu-id="b09ca-109">In diesem Fall <xref:System.Windows.Vector.X%2A> ist 4, und <xref:System.Windows.Vector.Y%2A> ist 4.</span><span class="sxs-lookup"><span data-stu-id="b09ca-109">In this case, <xref:System.Windows.Vector.X%2A> is 4, and <xref:System.Windows.Vector.Y%2A> is 4.</span></span>  
   
- Der zurückgegebene Offsetwert verhält sich relativ zum übergeordneten Element von <xref:System.Windows.Media.Visual>.  Wenn Sie einen Offsetwert zurückgeben möchten, der sich nicht relativ zum übergeordneten Element eines <xref:System.Windows.Media.Visual>\-Elements verhält, verwenden Sie die <xref:System.Windows.Media.Visual.TransformToAncestor%2A>\-Methode.  
+ <span data-ttu-id="b09ca-110">Der Rückgabewert der Offset ist relativ zu das übergeordnete Element des der <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-110">The returned offset value is relative to the parent of the <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="b09ca-111">Wenn Sie möchten einen Offset-Wert zurück, der nicht relativ zur übergeordnet ist ein <xref:System.Windows.Media.Visual>, verwenden die <xref:System.Windows.Media.Visual.TransformToAncestor%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="b09ca-111">If you want to return an offset value that is not relative to the parent of a <xref:System.Windows.Media.Visual>, use the <xref:System.Windows.Media.Visual.TransformToAncestor%2A> method.</span></span>  
   
-## Abrufen des Offsetwerts relativ zu einem Vorgänger  
- Das folgende Markupbeispiel zeigt einen <xref:System.Windows.Controls.TextBlock>, der in zwei <xref:System.Windows.Controls.StackPanel>\-Objekten geschachtelt ist.  
+## <a name="getting-the-offset-relative-to-an-ancestor"></a><span data-ttu-id="b09ca-112">Abrufen des Offsets relativ zu einem Vorgänger</span><span class="sxs-lookup"><span data-stu-id="b09ca-112">Getting the Offset Relative to an Ancestor</span></span>  
+ <span data-ttu-id="b09ca-113">Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Controls.TextBlock> , die in zwei geschachtelt ist <xref:System.Windows.Controls.StackPanel> Objekte.</span><span class="sxs-lookup"><span data-stu-id="b09ca-113">The following markup example shows a <xref:System.Windows.Controls.TextBlock> that is nested within two <xref:System.Windows.Controls.StackPanel> objects.</span></span>  
   
- [!code-xml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
+ [!code-xaml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
   
- In der folgenden Abbildung sind die Ergebnisse des Markups dargestellt.  
+ <span data-ttu-id="b09ca-114">Die folgende Abbildung zeigt die Ergebnisse des Markups.</span><span class="sxs-lookup"><span data-stu-id="b09ca-114">The following illustration shows the results of the markup.</span></span>  
   
- ![Versatzwerte für Objekte](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset\_01")  
-TextBlock in zwei StackPanels geschachtelt  
+ <span data-ttu-id="b09ca-115">![Versatzwerte für Objekte](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset_01")</span><span class="sxs-lookup"><span data-stu-id="b09ca-115">![Offset values of objects](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset_01")</span></span>  
+<span data-ttu-id="b09ca-116">TextBlock in zwei StackPanels geschachtelt</span><span class="sxs-lookup"><span data-stu-id="b09ca-116">TextBlock nested within two StackPanels</span></span>  
   
- Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Media.Visual.TransformToAncestor%2A>\-Methode zum Abrufen des Offsetwerts von <xref:System.Windows.Controls.TextBlock> relativ zum enthaltenden <xref:System.Windows.Window>\-Element verwenden.  Die Offsetwerte sind im zurückgegebenen <xref:System.Windows.Media.GeneralTransform>\-Wert enthalten.  
+ <span data-ttu-id="b09ca-117">Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Visual.TransformToAncestor%2A> Methode zum Abrufen des Offsets für die <xref:System.Windows.Controls.TextBlock> relativ zum enthaltenden <xref:System.Windows.Window>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-117">The following code example shows how to use the <xref:System.Windows.Media.Visual.TransformToAncestor%2A> method to retrieve the offset of the <xref:System.Windows.Controls.TextBlock> relative to the containing <xref:System.Windows.Window>.</span></span> <span data-ttu-id="b09ca-118">Der Offset-Werte enthalten sind in der zurückgegebenen <xref:System.Windows.Media.GeneralTransform> Wert.</span><span class="sxs-lookup"><span data-stu-id="b09ca-118">The offset values are contained within the returned <xref:System.Windows.Media.GeneralTransform> value.</span></span>  
   
  [!code-csharp[VisualSnippets#VisualSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet5)]
  [!code-vb[VisualSnippets#VisualSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet5)]  
   
- Beim Offset werden die <xref:System.Windows.FrameworkElement.Margin%2A>\-Werte für alle Objekte innerhalb des enthaltenden <xref:System.Windows.Window>\-Elements berücksichtigt.  In diesem Fall ist <xref:System.Windows.Vector.X%2A> 28 \(16 \+ 8 \+ 4\) und <xref:System.Windows.Vector.Y%2A> ebenfalls 28.  
+ <span data-ttu-id="b09ca-119">Der Offset berücksichtigt die <xref:System.Windows.FrameworkElement.Margin%2A> Werte für alle Objekte innerhalb des enthaltenden <xref:System.Windows.Window>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-119">The offset takes into account the <xref:System.Windows.FrameworkElement.Margin%2A> values for all objects within the containing <xref:System.Windows.Window>.</span></span> <span data-ttu-id="b09ca-120">In diesem Fall <xref:System.Windows.Vector.X%2A> ist 28 (16 + 8 + 4) und <xref:System.Windows.Vector.Y%2A> ist 28.</span><span class="sxs-lookup"><span data-stu-id="b09ca-120">In this case, <xref:System.Windows.Vector.X%2A> is 28 (16 + 8 + 4), and <xref:System.Windows.Vector.Y%2A> is 28.</span></span>  
   
- Der zurückgegebene Offsetwert verhält sich relativ zum Vorgänger von <xref:System.Windows.Media.Visual>.  Wenn Sie einen Offsetwert zurückgeben möchten, der sich relativ zum Nachfolger eines <xref:System.Windows.Media.Visual>\-Elements verhält, verwenden Sie die <xref:System.Windows.Media.Visual.TransformToDescendant%2A>\-Methode.  
+ <span data-ttu-id="b09ca-121">Der Rückgabewert der Offset ist relativ zu den Vorgänger der <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-121">The returned offset value is relative to the ancestor of the <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="b09ca-122">Wenn Sie möchten einen Offsetwert zurück, die relativ zum nachfolgenden Wertes des eine <xref:System.Windows.Media.Visual>, verwenden die <xref:System.Windows.Media.Visual.TransformToDescendant%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="b09ca-122">If you want to return an offset value that is relative to the descendant of a <xref:System.Windows.Media.Visual>, use the <xref:System.Windows.Media.Visual.TransformToDescendant%2A> method.</span></span>  
   
-## Abrufen des Offsetwerts relativ zu einem Nachfolger  
- Das folgende Markupbeispiel zeigt einen <xref:System.Windows.Controls.TextBlock>, der in einem <xref:System.Windows.Controls.StackPanel>\-Objekt enthalten ist.  
+## <a name="getting-the-offset-relative-to-a-descendant"></a><span data-ttu-id="b09ca-123">Den Offset abrufen relativ zum ein abhängiges Element</span><span class="sxs-lookup"><span data-stu-id="b09ca-123">Getting the Offset Relative to a Descendant</span></span>  
+ <span data-ttu-id="b09ca-124">Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Controls.TextBlock> enthaltenen innerhalb einer <xref:System.Windows.Controls.StackPanel> Objekt.</span><span class="sxs-lookup"><span data-stu-id="b09ca-124">The following markup example shows a <xref:System.Windows.Controls.TextBlock> that is contained within a <xref:System.Windows.Controls.StackPanel> object.</span></span>  
   
- [!code-xml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
+ [!code-xaml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
   
- Im folgenden Codebeispiel wird die Verwendung der <xref:System.Windows.Media.Visual.TransformToDescendant%2A>\-Methode zum Abrufen des Offsets für den <xref:System.Windows.Controls.StackPanel> relativ zu dessen untergeordnetem <xref:System.Windows.Controls.TextBlock> veranschaulicht.  Die Offsetwerte sind im zurückgegebenen <xref:System.Windows.Media.GeneralTransform>\-Wert enthalten.  
+ <span data-ttu-id="b09ca-125">Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Visual.TransformToDescendant%2A> Methode zum Abrufen des Offsets für die <xref:System.Windows.Controls.StackPanel> relativ zu dessen untergeordnetem <xref:System.Windows.Controls.TextBlock>.</span><span class="sxs-lookup"><span data-stu-id="b09ca-125">The following code example shows how to use the <xref:System.Windows.Media.Visual.TransformToDescendant%2A> method to retrieve the offset of the <xref:System.Windows.Controls.StackPanel> relative to its child <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="b09ca-126">Der Offset-Werte enthalten sind in der zurückgegebenen <xref:System.Windows.Media.GeneralTransform> Wert.</span><span class="sxs-lookup"><span data-stu-id="b09ca-126">The offset values are contained within the returned <xref:System.Windows.Media.GeneralTransform> value.</span></span>  
   
  [!code-csharp[VisualSnippets#VisualSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet9)]
  [!code-vb[VisualSnippets#VisualSnippet9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet9)]  
   
- Beim Offset werden die <xref:System.Windows.FrameworkElement.Margin%2A>\-Werte für alle Objekte berücksichtigt.  In diesem Fall hat <xref:System.Windows.Vector.X%2A> den Wert \-4 und <xref:System.Windows.Vector.Y%2A> ebenfalls den Wert \-4.  Die Offsetwerte sind negative Werte, da das übergeordnete Objekt relativ zu dessen untergeordnetem Objekt negativ versetzt ist.  
+ <span data-ttu-id="b09ca-127">Der Offset berücksichtigt die <xref:System.Windows.FrameworkElement.Margin%2A> Werte für alle Objekte.</span><span class="sxs-lookup"><span data-stu-id="b09ca-127">The offset takes into account the <xref:System.Windows.FrameworkElement.Margin%2A> values for all objects.</span></span> <span data-ttu-id="b09ca-128">In diesem Fall <xref:System.Windows.Vector.X%2A> ist-4. und <xref:System.Windows.Vector.Y%2A> lautet 4.</span><span class="sxs-lookup"><span data-stu-id="b09ca-128">In this case, <xref:System.Windows.Vector.X%2A> is -4, and <xref:System.Windows.Vector.Y%2A> is -4.</span></span> <span data-ttu-id="b09ca-129">Der Offset-Werte sind negative Werte, da das übergeordnete Objekt sich negativ auf relativ zu dessen untergeordnetes Objekt versetzt wird.</span><span class="sxs-lookup"><span data-stu-id="b09ca-129">The offset values are negative values, since the parent object is negatively offset relative to its child object.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Media.Visual>   
- <xref:System.Windows.Media.VisualTreeHelper>   
- [Übersicht über das WPF\-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b09ca-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b09ca-130">See Also</span></span>  
+ <xref:System.Windows.Media.Visual>  
+ <xref:System.Windows.Media.VisualTreeHelper>  
+ [<span data-ttu-id="b09ca-131">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="b09ca-131">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

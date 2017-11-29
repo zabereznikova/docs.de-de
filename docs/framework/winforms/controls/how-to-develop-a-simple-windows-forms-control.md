@@ -1,33 +1,37 @@
 ---
-title: "Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Control-Klasse, Windows Forms"
-  - "Steuerelemente [Windows Forms]"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Erstellen einfacher Steuerelemente mithilfe von Code"
+title: 'Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms]
+- custom controls [Windows Forms], creating simple controls using code
+- Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements
-In diesem Abschnitt werden die wesentlichen Schritte beim Erstellen benutzerdefinierter Windows Forms\-Steuerelemente behandelt.  In dieser exemplarischen Vorgehensweise wird ein einfaches Steuerelement entwickelt, das die Änderung der Ausrichtung seiner <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft zulässt.  Es dient nicht zum Behandeln oder Auslösen von Ereignissen.  
+# <a name="how-to-develop-a-simple-windows-forms-control"></a><span data-ttu-id="d9522-102">Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="d9522-102">How to: Develop a Simple Windows Forms Control</span></span>
+<span data-ttu-id="d9522-103">Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von benutzerdefinierten Windows Forms-Steuerelementen.</span><span class="sxs-lookup"><span data-stu-id="d9522-103">This section walks you through the key steps for authoring a custom Windows Forms control.</span></span> <span data-ttu-id="d9522-104">Ein einfache Steuerelement entwickelt, die in dieser exemplarischen Vorgehensweise können Sie die Ausrichtung des seine <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geändert werden.</span><span class="sxs-lookup"><span data-stu-id="d9522-104">The simple control developed in this walkthrough allows the alignment of its <xref:System.Windows.Forms.Control.Text%2A> property to be changed.</span></span> <span data-ttu-id="d9522-105">Es löst keine Ereignisse aus oder behandelt sie.</span><span class="sxs-lookup"><span data-stu-id="d9522-105">It does not raise or handle events.</span></span>  
   
-### So erstellen Sie ein einfaches benutzerdefiniertes Steuerelement  
+### <a name="to-create-a-simple-custom-control"></a><span data-ttu-id="d9522-106">So erstellen Sie ein einfaches benutzerdefiniertes Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d9522-106">To create a simple custom control</span></span>  
   
-1.  Definieren Sie eine Klasse, die von <xref:System.Windows.Forms.Control?displayProperty=fullName> abgeleitet wird.  
+1.  <span data-ttu-id="d9522-107">Definieren Sie eine Klasse, die sich von <xref:System.Windows.Forms.Control?displayProperty=nameWithType> ableitet.</span><span class="sxs-lookup"><span data-stu-id="d9522-107">Define a class that derives from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
     ```vb  
     Public Class FirstControl  
@@ -40,30 +44,30 @@ In diesem Abschnitt werden die wesentlichen Schritte beim Erstellen benutzerdefi
     public class FirstControl:Control{}  
     ```  
   
-2.  Definieren Sie Eigenschaften.  \(Die Definition von Eigenschaften ist nicht zwingend erforderlich, da ein Steuerelement viele Eigenschaften von der <xref:System.Windows.Forms.Control>\-Klasse erbt. Jedoch definieren im Allgemeinen die meisten benutzerdefinierten Steuerelemente zusätzliche Eigenschaften.\) Im folgenden Codefragment wird eine Eigenschaft mit dem Namen `TextAlignment` definiert. Sie wird von `FirstControl`  dazu verwendet, die Anzeige der <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft zu formatieren, die von <xref:System.Windows.Forms.Control> geerbt wurde.  Weitere Informationen über das Definieren von Eigenschaften finden Sie unter [Properties Overview](../Topic/Properties%20Overview.md).  
+2.  <span data-ttu-id="d9522-108">Definieren Sie Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="d9522-108">Define properties.</span></span> <span data-ttu-id="d9522-109">(Sie sind nicht zum Definieren von Eigenschaften erforderlich, da ein Steuerelement viele Eigenschaften von erbt die <xref:System.Windows.Forms.Control> Klasse, aber die meisten benutzerdefinierten Steuerelemente in der Regel definiere zusätzliche Eigenschaften.) Das folgende Codefragment definiert eine Eigenschaft namens `TextAlignment` , `FirstControl` verwendet, um die Anzeige von Formatieren der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geerbt von <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="d9522-109">(You are not required to define properties, because a control inherits many properties from the <xref:System.Windows.Forms.Control> class, but most custom controls generally do define additional properties.) The following code fragment defines a property named `TextAlignment` that `FirstControl` uses to format the display of the <xref:System.Windows.Forms.Control.Text%2A> property inherited from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="d9522-110">Weitere Informationen zum Definieren von Eigenschaften finden Sie in der [Übersicht über Eigenschaften](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span><span class="sxs-lookup"><span data-stu-id="d9522-110">For more information about defining properties, see [Properties Overview](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Wenn Sie eine Eigenschaft festlegen, durch die die visuelle Darstellung eines Steuerelements geändert wird, müssen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A>\-Methode aufrufen, um das Steuerelement neu zu zeichnen.  <xref:System.Windows.Forms.Control.Invalidate%2A> ist in der Basisklasse <xref:System.Windows.Forms.Control> definiert.  
+     <span data-ttu-id="d9522-111">Wenn Sie eine Eigenschaft, die die visuelle Darstellung des Steuerelements ändert festlegen, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode, um das Steuerelement neu gezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="d9522-111">When you set a property that changes the visual display of the control, you must invoke the <xref:System.Windows.Forms.Control.Invalidate%2A> method to redraw the control.</span></span> <span data-ttu-id="d9522-112"><xref:System.Windows.Forms.Control.Invalidate%2A>wird in der Basisklasse definiert <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="d9522-112"><xref:System.Windows.Forms.Control.Invalidate%2A> is defined in the base class <xref:System.Windows.Forms.Control>.</span></span>  
   
-3.  Überschreiben Sie die geschützte, von <xref:System.Windows.Forms.Control> geerbte <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode, um dem Steuerelement Renderinglogik zur Verfügung zu stellen.  Wenn Sie <xref:System.Windows.Forms.Control.OnPaint%2A> nicht überschreiben, wird das Steuerelement nicht in die Lage versetzt, sich selbst zu zeichnen.  Im folgenden Codefragment zeigt die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode die von <xref:System.Windows.Forms.Control> geerbte <xref:System.Windows.Forms.Control.Text%2A>\-Eigenschaft mit der durch das `alignmentValue`\-Feld festgelegten Ausrichtung an.  
+3.  <span data-ttu-id="d9522-113">Überschreiben Sie die geschützte <xref:System.Windows.Forms.Control.OnPaint%2A> Methode geerbt von <xref:System.Windows.Forms.Control> Renderinglogik auf das Steuerelement bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="d9522-113">Override the protected <xref:System.Windows.Forms.Control.OnPaint%2A> method inherited from <xref:System.Windows.Forms.Control> to provide rendering logic to your control.</span></span> <span data-ttu-id="d9522-114">Wenn Sie nicht außer Kraft setzen <xref:System.Windows.Forms.Control.OnPaint%2A>, das Steuerelement wird nicht in der Lage, sich selbst zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="d9522-114">If you do not override <xref:System.Windows.Forms.Control.OnPaint%2A>, your control will not be able to draw itself.</span></span> <span data-ttu-id="d9522-115">Im folgenden Codefragment der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode zeigt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft geerbt von <xref:System.Windows.Forms.Control> mit der Ausrichtung, die gemäß der `alignmentValue` Feld.</span><span class="sxs-lookup"><span data-stu-id="d9522-115">In the following code fragment, the <xref:System.Windows.Forms.Control.OnPaint%2A> method displays the <xref:System.Windows.Forms.Control.Text%2A> property inherited from <xref:System.Windows.Forms.Control> with the alignment specified by the `alignmentValue` field.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Stellen Sie Attribute für das Steuerelement bereit.  Durch Attribute kann das Steuerelement samt seiner Eigenschaften und Ereignisse zur Entwurfszeit in einem visuellen Designer entsprechend angezeigt werden.  Im folgenden Codefragment werden Attribute auf die `TextAlignment`\-Eigenschaft angewendet.  Das <xref:System.ComponentModel.CategoryAttribute.Category%2A>\-Attribut \(das im Codefragment gezeigt wird\) führt in einem Designer wie Visual Studio dazu, dass die Eigenschaft in einer logischen Kategorie angezeigt wird.  Das <xref:System.ComponentModel.DescriptionAttribute.Description%2A>\-Attribut bewirkt bei Auswahl der `TextAlignment`\-Eigenschaft, dass eine beschreibende Zeichenfolge am unteren Rand des **Eigenschaftenfensters** angezeigt wird.  Weitere Informationen über Attribute finden Sie unter [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md).  
+4.  <span data-ttu-id="d9522-116">Stellen Sie Attribute für das Steuerelement bereit.</span><span class="sxs-lookup"><span data-stu-id="d9522-116">Provide attributes for your control.</span></span> <span data-ttu-id="d9522-117">Attribute ermöglichen es einem visuellen Designer, Ihr Steuerelement und dessen Eigenschaften und Ereignisse entsprechend zur Entwurfszeit anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="d9522-117">Attributes enable a visual designer to display your control and its properties and events appropriately at design time.</span></span> <span data-ttu-id="d9522-118">Das folgende Codefragment wendet die Attribute auf die Eigenschaft `TextAlignment` an.</span><span class="sxs-lookup"><span data-stu-id="d9522-118">The following code fragment applies attributes to the `TextAlignment` property.</span></span> <span data-ttu-id="d9522-119">In einem Designer wie Visual Studio die <xref:System.ComponentModel.CategoryAttribute.Category%2A> (im Codefragment gezeigt) Attribut bewirkt, dass die Eigenschaft in einer logischen Kategorie angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d9522-119">In a designer such as Visual Studio, the <xref:System.ComponentModel.CategoryAttribute.Category%2A> attribute (shown in the code fragment) causes the property to be displayed under a logical category.</span></span> <span data-ttu-id="d9522-120">Die <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Attribut bewirkt, dass eine beschreibende Zeichenfolge, die am unteren Rand angezeigt werden die **Eigenschaften** Fenster bei der `TextAlignment` Eigenschaft ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="d9522-120">The <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attribute causes a descriptive string to be displayed at the bottom of the **Properties** window when the `TextAlignment` property is selected.</span></span> <span data-ttu-id="d9522-121">Weitere Informationen zu Attributen finden Sie unter [Entwurfszeitattribute für Komponenten](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).</span><span class="sxs-lookup"><span data-stu-id="d9522-121">For more information about attributes, see [Design-Time Attributes for Components](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).</span></span>  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  \(Optional\) Stellen Sie Ressourcen für das Steuerelement bereit.  Sie können dem Steuerelement eine Ressource \(z. B. eine Bitmap\) zur Verfügung stellen, indem Sie eine Compileroption \(`/res` für C\#\) zum Verpacken von Ressourcen mit dem Steuerelement verwenden.  Zur Laufzeit kann die Ressource mit den Methoden der <xref:System.Resources.ResourceManager>\-Klasse abgerufen werden.  Weitere Informationen über das Erstellen und Verwenden von Ressourcen finden Sie unter [Ressourcen in Desktop\-Apps](../../../../docs/framework/resources/index.md).  
+5.  <span data-ttu-id="d9522-122">(optional) Stellen Sie Ressourcen für Ihr Steuerelement zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="d9522-122">(optional) Provide resources for your control.</span></span> <span data-ttu-id="d9522-123">Sie können eine Ressource, z.B. eine Bitmap für das Steuerelement mit einer Compileroption bereitstellen (`/res` für C#), um Ressourcen mit dem Steuerelement zu verpacken.</span><span class="sxs-lookup"><span data-stu-id="d9522-123">You can provide a resource, such as a bitmap, for your control by using a compiler option (`/res` for C#) to package resources with your control.</span></span> <span data-ttu-id="d9522-124">Zur Laufzeit kann die Ressource mit den Methoden der abgerufen werden die <xref:System.Resources.ResourceManager> Klasse.</span><span class="sxs-lookup"><span data-stu-id="d9522-124">At run time, the resource can be retrieved using the methods of the <xref:System.Resources.ResourceManager> class.</span></span> <span data-ttu-id="d9522-125">Weitere Informationen zum Erstellen und Verwenden von Ressourcen finden Sie unter [Ressourcen in Desktop-Apps](../../../../docs/framework/resources/index.md).</span><span class="sxs-lookup"><span data-stu-id="d9522-125">For more information about creating and using resources, see the [Resources in Desktop Apps](../../../../docs/framework/resources/index.md).</span></span>  
   
-6.  Kompilieren Sie das Steuerelement, und geben Sie es weiter.  Zum Kompilieren und zur Bereitstellung von `FirstControl,` führen Sie folgende Schritte aus:  
+6.  <span data-ttu-id="d9522-126">Kompilieren Sie das Steuerelement, und stellen Sie es bereit.</span><span class="sxs-lookup"><span data-stu-id="d9522-126">Compile and deploy your control.</span></span> <span data-ttu-id="d9522-127">Führen Sie die folgenden Schritte aus, um `FirstControl,` zu kompilieren und bereitzustellen:</span><span class="sxs-lookup"><span data-stu-id="d9522-127">To compile and deploy `FirstControl,` execute the following steps:</span></span>  
   
-    1.  Speichern Sie den Code im folgenden Beispiel als Quelldatei \(z. B. als **FirstControl.cs** oder **FirstControl.vb**\).  
+    1.  <span data-ttu-id="d9522-128">Speichern Sie den Code im folgenden Beispiel als Quelldatei (z.B. als „FirstControl.cs“ oder „FirstControl.vb“).</span><span class="sxs-lookup"><span data-stu-id="d9522-128">Save the code in the following sample to a source file (such as FirstControl.cs or FirstControl.vb).</span></span>  
   
-    2.  Kompilieren Sie den Quellcode in eine Assembly, und speichern Sie diese im Anwendungsverzeichnis.  Führen Sie dazu den folgenden Befehl im Verzeichnis aus, das die Quelldatei enthält.  
+    2.  <span data-ttu-id="d9522-129">Kompilieren Sie den Quellcode in eine Assembly, und speichern Sie sie im Verzeichnis der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="d9522-129">Compile the source code into an assembly and save it in your application's directory.</span></span> <span data-ttu-id="d9522-130">Führen Sie hierfür den folgenden Befehl in dem Verzeichnis aus, das die Quelldatei enthält.</span><span class="sxs-lookup"><span data-stu-id="d9522-130">To accomplish this, execute the following command from the directory that contains the source file.</span></span>  
   
         ```vb  
         vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
@@ -73,21 +77,21 @@ In diesem Abschnitt werden die wesentlichen Schritte beim Erstellen benutzerdefi
         csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
         ```  
   
-         Durch die Compileroption `/t:library` wird dem Compiler mitgeteilt, dass es sich bei der von Ihnen erstellten Assembly um eine Bibliothek und nicht um eine ausführbare Datei handelt.  Durch die Option `/out` werden Pfad und Name der Assembly festgelegt.  Die Option `/r` stellt den Namen der Assemblys bereit, auf die der Code verweist.  In diesem Beispiel erstellen Sie eine private Assembly, die ausschließlich Ihre Anwendung verwenden kann.  Daher müssen Sie sie in Ihrem Anwendungsverzeichnis speichern.  Weitere Informationen über das Packen und Bereitstellen eines Steuerelements zur Verteilung finden Sie unter [Bereitstellung](../../../../docs/framework/deployment/net-framework-and-applications.md).  
+         <span data-ttu-id="d9522-131">Die Compileroption `/t:library` benachrichtigt den Compiler, dass es sich bei der erstellten Assembly um eine Bibliothek handelt (nicht um eine ausführbare Assembly).</span><span class="sxs-lookup"><span data-stu-id="d9522-131">The `/t:library` compiler option tells the compiler that the assembly you are creating is a library (and not an executable).</span></span> <span data-ttu-id="d9522-132">Die Option `/out` gibt den Pfad und den Namen der Assembly an.</span><span class="sxs-lookup"><span data-stu-id="d9522-132">The `/out` option specifies the path and name of the assembly.</span></span> <span data-ttu-id="d9522-133">Die Option `/r` gibt den Namen der Assembly an, auf die durch Ihren Code verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="d9522-133">The`/r` option provides the name of the assemblies that are referenced by your code.</span></span> <span data-ttu-id="d9522-134">In diesem Beispiel erstellen Sie eine private Assembly, die ausschließlich von Ihren Anwendungen verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="d9522-134">In this example, you create a private assembly that only your applications can use.</span></span> <span data-ttu-id="d9522-135">Daher müssen Sie sie im Verzeichnis der Anwendung speichern.</span><span class="sxs-lookup"><span data-stu-id="d9522-135">Hence, you have to save it in your application's directory.</span></span> <span data-ttu-id="d9522-136">Weitere Informationen über das Packen und Bereitstellen eines Steuerelements für die Verteilung finden Sie unter [Bereitstellung](../../../../docs/framework/deployment/index.md).</span><span class="sxs-lookup"><span data-stu-id="d9522-136">For more information about packaging and deploying a control for distribution, see [Deployment](../../../../docs/framework/deployment/index.md).</span></span>  
   
- Im Folgenden wird der Code für `FirstControl` gezeigt.  Das Steuerelement ist im Namespace `CustomWinControls` eingeschlossen.  Ein Namespace stellt eine logische Gruppe verwandter Typen bereit.  Sie können ein Steuerelement in einem neuen oder vorhandenen Namespace erstellen.  `using`\-Deklarationen \(`Imports` in Visual Basic\) ermöglichen in C\# den Zugriff auf Typen über einen Namespace ohne Verwendung des vollständigen Typnamens.  Im folgenden Beispiel ermöglicht es die `using`\-Deklaration, dass Code die <xref:System.Windows.Forms.Control>\-Klasse aus <xref:System.Windows.Forms?displayProperty=fullName> einfach als <xref:System.Windows.Forms.Control> aufrufen kann, anstatt den vollständig qualifizierten Namen <xref:System.Windows.Forms.Control?displayProperty=fullName> verwenden zu müssen.  
+ <span data-ttu-id="d9522-137">Das folgende Beispiel zeigt den Code für `FirstControl`.</span><span class="sxs-lookup"><span data-stu-id="d9522-137">The following sample shows the code for `FirstControl`.</span></span> <span data-ttu-id="d9522-138">Das Steuerelement ist im Namespace `CustomWinControls` enthalten.</span><span class="sxs-lookup"><span data-stu-id="d9522-138">The control is enclosed in the namespace `CustomWinControls`.</span></span> <span data-ttu-id="d9522-139">Ein Namespace bietet eine logische Gruppierung von verwandten Typen.</span><span class="sxs-lookup"><span data-stu-id="d9522-139">A namespace provides a logical grouping of related types.</span></span> <span data-ttu-id="d9522-140">Sie können das Steuerelement in einem neuen oder vorhandenen Namespace erstellen.</span><span class="sxs-lookup"><span data-stu-id="d9522-140">You can create your control in a new or existing namespace.</span></span> <span data-ttu-id="d9522-141">In C# ermöglicht die Deklaration `using` (`Imports` in Visual Basic), dass auf Typen von einem Namespace zugegriffen wird, ohne dass der vollqualifizierte Name des Typs verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d9522-141">In C#, the `using` declaration (in Visual Basic, `Imports`) allows types to be accessed from a namespace without using the fully qualified name of the type.</span></span> <span data-ttu-id="d9522-142">Im folgenden Beispiel die `using` Deklaration kann Code den Zugriff auf die Klasse <xref:System.Windows.Forms.Control> aus <xref:System.Windows.Forms?displayProperty=nameWithType> so weit <xref:System.Windows.Forms.Control> nicht auf den vollqualifizierten Namen zurückzugreifen <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d9522-142">In the following example, the `using` declaration allows code to access the class <xref:System.Windows.Forms.Control> from <xref:System.Windows.Forms?displayProperty=nameWithType> as simply <xref:System.Windows.Forms.Control> instead of having to use the fully qualified name <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  
   
-## Verwenden des benutzerdefinierten Steuerelements in einem Formular  
- Im folgenden Beispiel wird ein einfaches Formular gezeigt, das `FirstControl` verwendet.  Es werden drei Instanzen von `FirstControl` mit unterschiedlichen Werten für die `TextAlignment`\-Eigenschaft erstellt.  
+## <a name="using-the-custom-control-on-a-form"></a><span data-ttu-id="d9522-143">Verwenden des benutzerdefinierten Steuerelements in einem Formular</span><span class="sxs-lookup"><span data-stu-id="d9522-143">Using the Custom Control on a Form</span></span>  
+ <span data-ttu-id="d9522-144">Im folgenden Beispiel wird ein einfaches Formular dargestellt, dass `FirstControl` verwendet.</span><span class="sxs-lookup"><span data-stu-id="d9522-144">The following example shows a simple form that uses `FirstControl`.</span></span> <span data-ttu-id="d9522-145">Es erstellt drei Instanzen von `FirstControl`, jede mit einem anderen Wert für die Eigenschaft `TextAlignment`.</span><span class="sxs-lookup"><span data-stu-id="d9522-145">It creates three instances of `FirstControl`, each with a different value for the `TextAlignment` property.</span></span>  
   
-#### So kompilieren Sie dieses Beispiel und führen es aus  
+#### <a name="to-compile-and-run-this-sample"></a><span data-ttu-id="d9522-146">So kompilieren Sie dieses Beispiel und führen es aus</span><span class="sxs-lookup"><span data-stu-id="d9522-146">To compile and run this sample</span></span>  
   
-1.  Speichern Sie den Code im folgenden Beispiel als Quelldatei \(**SimpleForm.cs** oder **SimpleForms.vb**\).  
+1.  <span data-ttu-id="d9522-147">Speichern Sie den Code im folgenden Beispiel als Quelldatei („SimpleForm.cs“ oder „SimpleForms.vb“).</span><span class="sxs-lookup"><span data-stu-id="d9522-147">Save the code in the following example to a source file (SimpleForm.cs or SimpleForms.vb).</span></span>  
   
-2.  Kompilieren Sie den Quellcode in eine ausführbare Assembly. Führen Sie dazu den folgenden Befehl in dem Verzeichnis aus, das die Quelldatei enthält.  
+2.  <span data-ttu-id="d9522-148">Kompilieren Sie den Quellcode in eine ausführbare Assembly, indem Sie den folgenden Befehl im Verzeichnis ausführen, das die Quelldatei enthält.</span><span class="sxs-lookup"><span data-stu-id="d9522-148">Compile the source code into an executable assembly by executing the following command from the directory that contains the source file.</span></span>  
   
     ```vb  
     vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
@@ -97,9 +101,9 @@ In diesem Abschnitt werden die wesentlichen Schritte beim Erstellen benutzerdefi
     csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
     ```  
   
-     CustomWinControls.dll ist die Assembly, die die Klasse`FirstControl`enthält.  Diese Assembly muss sich im selben Verzeichnis befinden wie die Quelldatei des Formulars, das auf sie zugreift \(**SimpleForm.cs** oder **SimpleForms.vb**\).  
+     <span data-ttu-id="d9522-149">CustomWinControls.dll ist die Assembly, die die Klasse enthält `FirstControl`.</span><span class="sxs-lookup"><span data-stu-id="d9522-149">CustomWinControls.dll is the assembly that contains the class `FirstControl`.</span></span> <span data-ttu-id="d9522-150">Diese Assembly muss sich im gleichen Verzeichnis befinden wie die Quelldatei für das Formular, das auf sie zugreift („SimpleForm.cs“ oder „SimpleForms.vb“).</span><span class="sxs-lookup"><span data-stu-id="d9522-150">This assembly must be in the same directory as the source file for the form that accesses it (SimpleForm.cs or SimpleForms.vb).</span></span>  
   
-3.  Führen Sie **SimpleForm.exe** mit folgendem Befehl aus.  
+3.  <span data-ttu-id="d9522-151">Führen Sie „SimpleForm.exe“ mit dem folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="d9522-151">Execute SimpleForm.exe using the following command.</span></span>  
   
     ```  
     SimpleForm  
@@ -108,6 +112,6 @@ In diesem Abschnitt werden die wesentlichen Schritte beim Erstellen benutzerdefi
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## Siehe auch  
- [Eigenschaften von Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Ereignisse in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="d9522-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9522-152">See Also</span></span>  
+ [<span data-ttu-id="d9522-153">Eigenschaften in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="d9522-153">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [<span data-ttu-id="d9522-154">Ereignisse in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="d9522-154">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

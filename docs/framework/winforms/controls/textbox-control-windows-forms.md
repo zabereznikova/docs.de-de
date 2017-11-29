@@ -1,55 +1,56 @@
 ---
-title: "TextBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Textfelder"
-  - "TextBox-Steuerelement [Windows Forms]"
+title: "TextBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text boxes
+- TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4800b06b5d0bbc5ce51d7cf00798ca98ef8bf656
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# TextBox-Steuerelement (Windows&#160;Forms)
-Textfelder in Windows Forms werden für Benutzereingaben oder zur Anzeige von Text verwendet.  `TextBox`\-Steuerelemente werden in der Regel für bearbeitbaren Text verwendet, unterstützen jedoch auch schreibgeschützten Text.  In Textfeldern können mehrere Zeilen angezeigt, Text auf die Größe des Steuerelements umbrochen und grundlegende Formatierungen hinzugefügt werden.  Das `TextBox`\-Steuerelement ermöglicht ein einheitliches Format für Text, der vom Steuerelement angezeigt oder in dieses eingegeben wird.  
+# <a name="textbox-control-windows-forms"></a><span data-ttu-id="a1e91-102">TextBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a1e91-102">TextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="a1e91-103">Windows Forms-Textfelder dienen, die vom Benutzer Eingabe abzurufen oder um Text anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="a1e91-103">Windows Forms text boxes are used to get input from the user or to display text.</span></span> <span data-ttu-id="a1e91-104">Die `TextBox` Steuerelement wird im Allgemeinen für bearbeitbares Textfeld verwendet, obwohl sie auch schreibgeschützt festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="a1e91-104">The `TextBox` control is generally used for editable text, although it can also be made read-only.</span></span> <span data-ttu-id="a1e91-105">Textfelder können mehrere Zeilen angezeigt, Zeilenumbruch, um die Größe des Steuerelements und einfache Formatierung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="a1e91-105">Text boxes can display multiple lines, wrap text to the size of the control, and add basic formatting.</span></span> <span data-ttu-id="a1e91-106">Die `TextBox` Steuerelement ein Format für Text angezeigt oder in das Steuerelement eingegeben werden können.</span><span class="sxs-lookup"><span data-stu-id="a1e91-106">The `TextBox` control allows a single format for text displayed or entered in the control.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das TextBox\-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- Erläutert die Verwendung dieses Steuerelements sowie seine wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a><span data-ttu-id="a1e91-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a1e91-107">In This Section</span></span>  
+ [<span data-ttu-id="a1e91-108">Übersicht über das TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="a1e91-108">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="a1e91-109">Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.</span><span class="sxs-lookup"><span data-stu-id="a1e91-109">Explains what this control is and its key features and properties.</span></span>  
   
- [Gewusst wie: Steuern der Einfügemarke in einem TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- Hier erfahren Sie, wie Sie die Position der Einfügemarke bei einem Bearbeitungssteuerelement festlegen, das zum ersten Mal den Fokus erhält.  
+ [<span data-ttu-id="a1e91-110">Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1e91-110">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ <span data-ttu-id="a1e91-111">Enthält Anweisungen zum angeben, wo die Einfügemarke angezeigt wird, wenn ein Bearbeitungssteuerelement zunächst den Fokus erhält.</span><span class="sxs-lookup"><span data-stu-id="a1e91-111">Gives directions for specifying where the insertion point appears when an edit control first gets the focus.</span></span>  
   
- [Gewusst wie: Erstellen eines Kennwort\-Textfelds mit dem TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- Erläutert, wie die Eingabedaten in einem Textfeld ausgeblendet werden.  
+ [<span data-ttu-id="a1e91-112">Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1e91-112">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="a1e91-113">Erläutert das verbergen, was in ein Textfeld eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="a1e91-113">Explains how to conceal what is typed into a text box.</span></span>  
   
- [Gewusst wie: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- Beschreibt, wie Änderungen am Inhalt eines Textfelds verhindert werden.  
+ [<span data-ttu-id="a1e91-114">Vorgehensweise: Erstellen eines schreibgeschützten Textfelds</span><span class="sxs-lookup"><span data-stu-id="a1e91-114">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ <span data-ttu-id="a1e91-115">Beschreibt, wie Sie verhindern, dass der Inhalt eines Textfelds geändert wird.</span><span class="sxs-lookup"><span data-stu-id="a1e91-115">Describes how to prevent the contents of a text box from being changed.</span></span>  
   
- [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- Erläutert, wie einer Zeichenfolge in einem Textfeld Anführungszeichen hinzugefügt werden.  
+ [<span data-ttu-id="a1e91-116">Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="a1e91-116">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ <span data-ttu-id="a1e91-117">Erläutert, Hinzufügen von Anführungszeichen in eine Zeichenfolge in einem Textfeld.</span><span class="sxs-lookup"><span data-stu-id="a1e91-117">Explains adding quotation marks to a string in a text box.</span></span>  
   
- [Gewusst wie: Programmgesteuertes Auswählen von Text im TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- Erläutert das Hervorheben von Text in einem Textfeld.  
+ [<span data-ttu-id="a1e91-118">Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1e91-118">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="a1e91-119">Erläutert das Hervorheben von Text in einem Textfeld.</span><span class="sxs-lookup"><span data-stu-id="a1e91-119">Explains how to highlight text in a text box.</span></span>  
   
- [Gewusst wie: Anzeigen mehrerer Zeilen im TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- Beschreibt, wie ein Textfeld mit Schiebeleisten versehen wird.  
+ [<span data-ttu-id="a1e91-120">Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1e91-120">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="a1e91-121">Beschreibt, wie ein Textfeld, das bildlauffähig machen.</span><span class="sxs-lookup"><span data-stu-id="a1e91-121">Describes how to make a text box scrollable.</span></span>  
   
-## Referenz  
- <xref:System.Windows.Forms.TextBox>\-Klasse  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+## <a name="reference"></a><span data-ttu-id="a1e91-122">Verweis</span><span class="sxs-lookup"><span data-stu-id="a1e91-122">Reference</span></span>  
+ <span data-ttu-id="a1e91-123"><xref:System.Windows.Forms.TextBox>-Klasse</span><span class="sxs-lookup"><span data-stu-id="a1e91-123"><xref:System.Windows.Forms.TextBox> class</span></span>  
+ <span data-ttu-id="a1e91-124">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="a1e91-124">Describes this class and has links to all its members.</span></span>  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.
+## <a name="related-sections"></a><span data-ttu-id="a1e91-125">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a1e91-125">Related Sections</span></span>  
+ [<span data-ttu-id="a1e91-126">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="a1e91-126">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="a1e91-127">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="a1e91-127">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

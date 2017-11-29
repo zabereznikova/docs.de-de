@@ -1,64 +1,45 @@
 ---
 title: Fehlermeldungen (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbeca9d1b6971f8b3de112eb6a199b8bacbc1670
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="error-messages-visual-basic"></a>Fehlermeldungen (Visual Basic)
-Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, können die folgenden Arten von Fehlern auftreten:  
+# <a name="error-messages-visual-basic"></a><span data-ttu-id="f60a4-102">Fehlermeldungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f60a4-102">Error Messages (Visual Basic)</span></span>
+<span data-ttu-id="f60a4-103">Wenn Sie eine Visual Basic-Anwendung schreiben, kompilieren oder ausführen, können die folgenden Arten von Fehlern auftreten:</span><span class="sxs-lookup"><span data-stu-id="f60a4-103">When you write, compile, or run a Visual Basic application, the following types of errors can occur:</span></span>  
   
-1.  Entwurfszeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio schreiben.  
+1.  <span data-ttu-id="f60a4-104">Entwurfszeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio schreiben.</span><span class="sxs-lookup"><span data-stu-id="f60a4-104">Design-time errors, which occur when you write an application in Visual Studio.</span></span>  
   
-2.  Kompilierzeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio oder an einer Eingabeaufforderung kompilieren.  
+2.  <span data-ttu-id="f60a4-105">Kompilierzeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio oder an einer Eingabeaufforderung kompilieren.</span><span class="sxs-lookup"><span data-stu-id="f60a4-105">Compile-time errors, which occur when you compile an application in Visual Studio or at a command prompt.</span></span>  
   
-3.  Laufzeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio oder als eigenständige ausführbare Daten ausführen.  
+3.  <span data-ttu-id="f60a4-106">Laufzeitfehler, die auftreten, wenn Sie eine Anwendung in Visual Studio oder als eigenständige ausführbare Daten ausführen.</span><span class="sxs-lookup"><span data-stu-id="f60a4-106">Run-time errors, which occur when you run an application in Visual Studio or as a stand-alone executable file.</span></span>  
   
- Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../../visual-basic/getting-started/additional-resources.md).  
+ <span data-ttu-id="f60a4-107">Informationen zur Behebung bestimmter Fehler finden Sie unter [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../../visual-basic/getting-started/additional-resources.md).</span><span class="sxs-lookup"><span data-stu-id="f60a4-107">For information about how to troubleshoot a specific error, see [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md).</span></span>  
   
-## <a name="run-time-errors"></a>Laufzeitfehler  
- Wenn eine Visual Basic-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausführen kann, tritt ein Laufzeitfehler auf, und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst ein `Exception`-Objekt aus. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kann über die `Throw`-Anweisung benutzerdefinierte Fehler jeden Datentyps generieren, einschließlich `Exception`-Objekte. Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren. Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.  
+## <a name="run-time-errors"></a><span data-ttu-id="f60a4-108">Laufzeitfehler</span><span class="sxs-lookup"><span data-stu-id="f60a4-108">Run Time Errors</span></span>  
+ <span data-ttu-id="f60a4-109">Wenn eine Visual Basic-Anwendung versucht, eine Aktion auszuführen, die das System nicht ausführen kann, tritt ein Laufzeitfehler auf, und [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] löst ein `Exception`-Objekt aus.</span><span class="sxs-lookup"><span data-stu-id="f60a4-109">If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] throws an `Exception` object.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="f60a4-110"> kann über die `Throw`-Anweisung benutzerdefinierte Fehler jeden Datentyps generieren, einschließlich `Exception`-Objekte.</span><span class="sxs-lookup"><span data-stu-id="f60a4-110"> can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement.</span></span> <span data-ttu-id="f60a4-111">Eine Anwendung kann den Fehler durch Anzeige der Fehlernummer und -meldung einer abgefangenen Ausnahme identifizieren.</span><span class="sxs-lookup"><span data-stu-id="f60a4-111">An application can identify the error by displaying the error number and message of a caught exception.</span></span> <span data-ttu-id="f60a4-112">Wenn ein Fehler nicht abgefangen wird, wird die Anwendung beendet.</span><span class="sxs-lookup"><span data-stu-id="f60a4-112">If an error isn't caught, the application ends.</span></span>  
   
- Der Code kann Laufzeitfehler auffangen und untersuchen. Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen. Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ <span data-ttu-id="f60a4-113">Der Code kann Laufzeitfehler auffangen und untersuchen.</span><span class="sxs-lookup"><span data-stu-id="f60a4-113">The code can trap and examine run-time errors.</span></span> <span data-ttu-id="f60a4-114">Wenn Sie den Code, der den Fehler erzeugt, in einem `Try`-Block einschließen, können Sie jeden ausgelösten Fehler in einem entsprechenden `Catch`-Block abfangen.</span><span class="sxs-lookup"><span data-stu-id="f60a4-114">If you enclose the code that produces the error in a `Try` block, you can catch any thrown error within a matching `Catch` block.</span></span> <span data-ttu-id="f60a4-115">Informationen zum Abfangen von Fehlern zur Laufzeit und zum Reagieren auf Fehler im Code finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="f60a4-115">For information about how to trap errors at run time and respond to them in your code, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## <a name="compile-time-errors"></a>Kompilierzeitfehler  
- Wenn der Visual Basic-Compiler ein Problem im Code feststellt, tritt ein Kompilierzeitfehler auf. Im Code-Editor können Sie problemlos ermitteln, welche Codezeile den Fehler verursacht hat, da unter dieser Codezeile eine Wellenlinie angezeigt wird. Die Fehlermeldung wird angezeigt, wenn Sie auf die Wellenlinie zeigen oder die **Fehlerliste** öffnen, die auch weitere Meldungen anzeigt.  
+## <a name="compile-time-errors"></a><span data-ttu-id="f60a4-116">Kompilierzeitfehler</span><span class="sxs-lookup"><span data-stu-id="f60a4-116">Compile Time Errors</span></span>  
+ <span data-ttu-id="f60a4-117">Wenn der Visual Basic-Compiler ein Problem im Code feststellt, tritt ein Kompilierzeitfehler auf.</span><span class="sxs-lookup"><span data-stu-id="f60a4-117">If the Visual Basic compiler encounters a problem in the code, a compile-time error occurs.</span></span> <span data-ttu-id="f60a4-118">Im Code-Editor können Sie problemlos ermitteln, welche Codezeile den Fehler verursacht hat, da unter dieser Codezeile eine Wellenlinie angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="f60a4-118">In the Code Editor, you can easily identify which line of code caused the error because a wavy line appears under that line of code.</span></span> <span data-ttu-id="f60a4-119">Die Fehlermeldung wird angezeigt, wenn Sie auf die Wellenlinie zeigen oder die **Fehlerliste** öffnen, die auch weitere Meldungen anzeigt.</span><span class="sxs-lookup"><span data-stu-id="f60a4-119">The error message appears if you either point to the wavy underline or open the **Error List**, which also shows other messages.</span></span>  
   
- Wenn unter einem Bezeichner eine Wellenlinie und unter dem äußersten rechten Zeichen ein kurzer Unterstrich angezeigt werden, können Sie für die Klasse, den Konstruktor, die Methode, die Eigenschaft, das Feld oder die Enumeration einen Stub generieren. Weitere Informationen finden Sie unter [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
+ <span data-ttu-id="f60a4-120">Wenn unter einem Bezeichner eine Wellenlinie und unter dem äußersten rechten Zeichen ein kurzer Unterstrich angezeigt werden, können Sie für die Klasse, den Konstruktor, die Methode, die Eigenschaft, das Feld oder die Enumeration einen Stub generieren.</span><span class="sxs-lookup"><span data-stu-id="f60a4-120">If an identifier has a wavy underline and a short underline appears under the rightmost character, you can generate a stub for the class, constructor, method, property, field or enum.</span></span> <span data-ttu-id="f60a4-121">Weitere Informationen finden Sie unter [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).</span><span class="sxs-lookup"><span data-stu-id="f60a4-121">For more information, see [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).</span></span>
   
- Indem Sie Warnungen des Visual Basic-Compilers auflösen, können Sie dafür sorgen, dass Ihr Code schneller und fehlerfreier ausgeführt wird. Diese Warnungen identifizieren Code, der Fehler verursachen kann, wenn die Anwendung ausgeführt wird. So gibt der Compiler z.B. eine Warnung aus, wenn Sie versuchen, einen Member einer nicht zugewiesenen Objektvariablen aufzurufen, eine Funktion ohne Angabe eines Rückgabewerts zu beenden oder einen `Try`-Block auszuführen, der Fehler in der Logik zum Abfangen von Ausnahmen enthält. Weitere Informationen zu Warnungen, z.B. zum Aktivieren und Deaktivieren von Warnungen, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
-
+ <span data-ttu-id="f60a4-122">Indem Sie Warnungen des Visual Basic-Compilers auflösen, können Sie dafür sorgen, dass Ihr Code schneller und fehlerfreier ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f60a4-122">By resolving warnings from the Visual Basic compiler, you might be able to write code that runs faster and has fewer bugs.</span></span> <span data-ttu-id="f60a4-123">Diese Warnungen identifizieren Code, der Fehler verursachen kann, wenn die Anwendung ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f60a4-123">These warnings identify code that may cause errors when the application is run.</span></span> <span data-ttu-id="f60a4-124">So gibt der Compiler z.B. eine Warnung aus, wenn Sie versuchen, einen Member einer nicht zugewiesenen Objektvariablen aufzurufen, eine Funktion ohne Angabe eines Rückgabewerts zu beenden oder einen `Try`-Block auszuführen, der Fehler in der Logik zum Abfangen von Ausnahmen enthält.</span><span class="sxs-lookup"><span data-stu-id="f60a4-124">For example, the compiler warns you if you try to invoke a member of an unassigned object variable, return from a function without setting the return value, or execute a `Try` block with errors in the logic to catch exceptions.</span></span> <span data-ttu-id="f60a4-125">Weitere Informationen zu Warnungen, z.B. zum Aktivieren und Deaktivieren von Warnungen, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="f60a4-125">For more information about warnings, including how to turn them on and off, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>

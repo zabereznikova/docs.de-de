@@ -1,50 +1,53 @@
 ---
-title: "Vorgehensweise: Erstellen unterst&#252;tzender Anmeldeinformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen unterstützender Anmeldeinformationen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2c140b96fab0227a1563c8c1a511053d8d1ab944
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Erstellen unterst&#252;tzender Anmeldeinformationen
-Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind.  Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist.  Diese Anmeldeinformationen sind *unterstützende Anmeldeinformationen*.  In diesem Thema wird beschrieben, wie Sie solche Anmeldeinformationen in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Client implementieren.  
+# <a name="how-to-create-a-supporting-credential"></a><span data-ttu-id="f6913-102">Vorgehensweise: Erstellen unterstützender Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="f6913-102">How to: Create a Supporting Credential</span></span>
+<span data-ttu-id="f6913-103">Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="f6913-103">It is possible to have a custom security scheme that requires more than one credential.</span></span> <span data-ttu-id="f6913-104">Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist.</span><span class="sxs-lookup"><span data-stu-id="f6913-104">For example, a service may demand from the client not just a user name and password, but also a credential that proves the client is over the age of 18.</span></span> <span data-ttu-id="f6913-105">Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*.</span><span class="sxs-lookup"><span data-stu-id="f6913-105">The second credential is a *supporting credential*.</span></span> <span data-ttu-id="f6913-106">In diesem Thema wird beschrieben, wie Sie solche Anmeldeinformationen in einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Client implementieren.</span><span class="sxs-lookup"><span data-stu-id="f6913-106">This topic explains how to implement such credentials in an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client.</span></span>  
   
 > [!NOTE]
->  Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS\-SecurityPolicy\-Spezifikation.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Web Services Security Specifications](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  <span data-ttu-id="f6913-107">Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation.</span><span class="sxs-lookup"><span data-stu-id="f6913-107">The specification for supporting credentials is part of the WS-SecurityPolicy specification.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="f6913-108">[Sicherheitsspezifikationen für Webdienste](http://go.microsoft.com/fwlink/?LinkId=88537).</span><span class="sxs-lookup"><span data-stu-id="f6913-108"> [Web Services Security Specifications](http://go.microsoft.com/fwlink/?LinkId=88537).</span></span>  
   
-## Unterstützende Token  
- Beim Verwenden der Nachrichtensicherheit wird die Nachricht immer mit *primären Anmeldeinformationen* gesichert \(z. B. mit einem X.509\-Zertifikat oder einem Kerberos\-Ticket\).  
+## <a name="supporting-tokens"></a><span data-ttu-id="f6913-109">Unterstützende Token</span><span class="sxs-lookup"><span data-stu-id="f6913-109">Supporting Tokens</span></span>  
+ <span data-ttu-id="f6913-110">In Kürze: bei Verwendung von nachrichtensicherheit eine *primären Anmeldeinformationen* wird immer verwendet, um die Nachricht (z. B. ein x. 509-Zertifikat oder ein Kerberos-Ticket) sichern.</span><span class="sxs-lookup"><span data-stu-id="f6913-110">In brief, when you use message security, a *primary credential* is always used to secure the message (for example, an X.509 certificate or a Kerberos ticket).</span></span>  
   
- Wie durch die Spezifikation festgelegt, verwendet eine Bindung zur Sicherung des Nachrichtenaustauschs *Token*.  Ein *Token* ist eine Darstellung von Sicherheitsanmeldeinformationen.  
+ <span data-ttu-id="f6913-111">Gemäß der Spezifikation verwendet eine Bindung *Token* auf die Sicherung des Nachrichtenaustauschs.</span><span class="sxs-lookup"><span data-stu-id="f6913-111">As defined by the specification, a security binding uses *tokens* to secure the message exchange.</span></span> <span data-ttu-id="f6913-112">Ein *token* ist eine Darstellung von Sicherheitsanmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="f6913-112">A *token* is a representation of a security credential.</span></span>  
   
- Die Sicherheitsbindung verwendet zum Erstellen einer Signatur ein in ihrer Richtlinie identifiziertes primäres Token.  Diese Signatur wird als *Nachrichtensignatur* bezeichnet.  
+ <span data-ttu-id="f6913-113">Die Sicherheitsbindung verwendet zum Erstellen einer Signatur ein in ihrer Richtlinie identifiziertes primäres Token.</span><span class="sxs-lookup"><span data-stu-id="f6913-113">The security binding uses a primary token identified in the security binding policy to create a signature.</span></span> <span data-ttu-id="f6913-114">Diese Signatur wird als bezeichnet den *Nachrichtensignatur*.</span><span class="sxs-lookup"><span data-stu-id="f6913-114">This signature is referred to as the *message signature*.</span></span>  
   
- Es können zusätzliche Token angegeben werden, um die von dem der Nachrichtensignatur zugeordneten Token bereitgestellten Ansprüche zu erweitern.  
+ <span data-ttu-id="f6913-115">Es können zusätzliche Token angegeben werden, um die von dem der Nachrichtensignatur zugeordneten Token bereitgestellten Ansprüche zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="f6913-115">Additional tokens can be specified to augment the claims provided by the token associated with the message signature.</span></span>  
   
-## Unterzeichnen, Signieren und Verschlüsseln  
- Als Ergebnis unterstützender Anmeldeinformationen wird ein *unterstützendes Token* innerhalb der Nachricht übertragen.  Die WS\-SecurityPolicy\-Spezifikation definiert vier Methoden zum Anhängen eines unterstützenden Tokens an die Nachricht, wie in der folgenden Tabelle beschrieben.  
+## <a name="endorsing-signing-and-encrypting"></a><span data-ttu-id="f6913-116">Unterzeichnen, Signieren und Verschlüsseln</span><span class="sxs-lookup"><span data-stu-id="f6913-116">Endorsing, Signing, and Encrypting</span></span>  
+ <span data-ttu-id="f6913-117">Im Ergebnis unterstützender Anmeldeinformationen eine *unterstützendes Token* innerhalb der Nachricht übertragen.</span><span class="sxs-lookup"><span data-stu-id="f6913-117">A supporting credential results in a *supporting token* transmitted inside the message.</span></span> <span data-ttu-id="f6913-118">Die WS-SecurityPolicy-Spezifikation definiert vier Methoden zum Anhängen eines unterstützenden Tokens an die Nachricht, wie in der folgenden Tabelle beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f6913-118">The WS-SecurityPolicy specification defines four ways to attach a supporting token to the message, as described in the following table.</span></span>  
   
-|Zweck|Beschreibung|  
-|-----------|------------------|  
-|Signiert|Das unterstützende Token ist im Sicherheitsheader enthalten und wird durch die Nachrichtensignatur signiert.|  
-|Unterzeichnend|Ein *unterzeichnendes Token* signiert die Nachrichtensignatur.|  
-|Signiert und unterzeichnend|Signierte, unterzeichnende Token signieren das gesamte aus der Nachrichtensignatur erstellte `ds:Signature`\-Element und werden selbst durch die Nachrichtensignatur signiert; d. h., beide Token \(das für die Nachrichtensignatur verwendete Token und das signierte unterzeichnende Token\) signieren einander.|  
-|Signiert und verschlüsselnd|Signierte, verschlüsselte unterstützende Token sind signierte unterstützende Token, die beim Anzeigen im `wsse:SecurityHeader` auch verschlüsselt werden.|  
+|<span data-ttu-id="f6913-119">Zweck</span><span class="sxs-lookup"><span data-stu-id="f6913-119">Purpose</span></span>|<span data-ttu-id="f6913-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f6913-120">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="f6913-121">Signiert</span><span class="sxs-lookup"><span data-stu-id="f6913-121">Signed</span></span>|<span data-ttu-id="f6913-122">Das unterstützende Token ist im Sicherheitsheader enthalten und wird durch die Nachrichtensignatur signiert.</span><span class="sxs-lookup"><span data-stu-id="f6913-122">The supporting token is included in the security header and is signed by the message signature.</span></span>|  
+|<span data-ttu-id="f6913-123">Unterzeichnend</span><span class="sxs-lookup"><span data-stu-id="f6913-123">Endorsing</span></span>|<span data-ttu-id="f6913-124">Ein *unterzeichnendes Token* die Nachrichtensignatur signiert.</span><span class="sxs-lookup"><span data-stu-id="f6913-124">An *endorsing token* signs the message signature.</span></span>|  
+|<span data-ttu-id="f6913-125">Signiert und unterzeichnend</span><span class="sxs-lookup"><span data-stu-id="f6913-125">Signed and Endorsing</span></span>|<span data-ttu-id="f6913-126">Signierte, unterzeichnende Token signieren das gesamte aus der Nachrichtensignatur erstellte `ds:Signature`-Element und werden selbst durch die Nachrichtensignatur signiert; d. h., beide Token (das für die Nachrichtensignatur verwendete Token und das signierte unterzeichnende Token) signieren einander.</span><span class="sxs-lookup"><span data-stu-id="f6913-126">Signed, endorsing tokens sign the entire `ds:Signature` element produced from the message signature and are themselves signed by that message signature; that is, both tokens (the token used for the message signature and the signed endorsing token) sign each other.</span></span>|  
+|<span data-ttu-id="f6913-127">Signiert und verschlüsselnd</span><span class="sxs-lookup"><span data-stu-id="f6913-127">Signed and Encrypting</span></span>|<span data-ttu-id="f6913-128">Signierte, verschlüsselte unterstützende Token sind signierte unterstützende Token, die beim Anzeigen im `wsse:SecurityHeader` auch verschlüsselt werden.</span><span class="sxs-lookup"><span data-stu-id="f6913-128">Signed, encrypted supporting tokens are signed supporting tokens that are also encrypted when they appear in the `wsse:SecurityHeader`.</span></span>|  
   
-## Programmieren von unterstützenden Anmeldeinformationen  
- Zum Erstellen eines Dienstes, der unterstützende Token verwendet, müssen Sie ein [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) erstellen.  \([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).\)  
+## <a name="programming-supporting-credentials"></a><span data-ttu-id="f6913-129">Programmieren von unterstützenden Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="f6913-129">Programming Supporting Credentials</span></span>  
+ <span data-ttu-id="f6913-130">Zum Erstellen eines Diensts, die unterstützende Token wird verwendet, müssen Sie erstellen, eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span><span class="sxs-lookup"><span data-stu-id="f6913-130">To create a service that uses supporting tokens you must create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span> <span data-ttu-id="f6913-131">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)</span><span class="sxs-lookup"><span data-stu-id="f6913-131">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)</span></span>  
   
- Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:  
+ <span data-ttu-id="f6913-132">Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:</span><span class="sxs-lookup"><span data-stu-id="f6913-132">The first step when creating a custom binding is to create a security binding element, which can be one of three types:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
@@ -52,7 +55,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
 -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Alle Klassen erben vom <xref:System.ServiceModel.Channels.SecurityBindingElement>, das vier relevante Eigenschaften umfasst:  
+ <span data-ttu-id="f6913-133">Alle Klassen erben vom <xref:System.ServiceModel.Channels.SecurityBindingElement>, das vier relevante Eigenschaften umfasst:</span><span class="sxs-lookup"><span data-stu-id="f6913-133">All classes inherit from the <xref:System.ServiceModel.Channels.SecurityBindingElement>, which includes four relevant properties:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
@@ -62,30 +65,30 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
-#### Bereiche  
- Für unterstützende Anmeldeinformationen existieren vier Bereiche:  
+#### <a name="scopes"></a><span data-ttu-id="f6913-134">Bereiche</span><span class="sxs-lookup"><span data-stu-id="f6913-134">Scopes</span></span>  
+ <span data-ttu-id="f6913-135">Für unterstützende Anmeldeinformationen existieren vier Bereiche:</span><span class="sxs-lookup"><span data-stu-id="f6913-135">Two scopes exist for supporting credentials:</span></span>  
   
--   *Den Endpunkt unterstützende Token* unterstützen alle Vorgänge eines Endpunkts.  Die Anmeldeinformationen, die das unterstützende Token darstellt, können beim Aufrufen eines beliebigen Endpunktvorgangs verwendet werden.  
+-   <span data-ttu-id="f6913-136">*Endpunkt unterstützende Token* unterstützen alle Vorgänge eines Endpunkts.</span><span class="sxs-lookup"><span data-stu-id="f6913-136">*Endpoint supporting tokens* support all operations of an endpoint.</span></span> <span data-ttu-id="f6913-137">Die Anmeldeinformationen, die das unterstützende Token darstellt, können beim Aufrufen eines beliebigen Endpunktvorgangs verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f6913-137">That is, the credential that the supporting token represents can be used whenever any endpoint operations are invoked.</span></span>  
   
--   *Den Vorgang unterstützende Token* unterstützen nur einen bestimmten Endpunktvorgang.  
+-   <span data-ttu-id="f6913-138">*Vorgang unterstützende Token* unterstützen nur einen bestimmten endpunktvorgang.</span><span class="sxs-lookup"><span data-stu-id="f6913-138">*Operation supporting tokens* support only a specific endpoint operation.</span></span>  
   
- Wie durch die Eigenschaftennamen angegeben, können unterstützende Anmeldeinformationen erforderlich oder optional sein.  Die unterstützenden Anmeldeinformationen werden verwendet, wenn sie vorhanden, aber nicht erforderlich sind; die Authentifizierung schlägt jedoch nicht fehl, wenn sie nicht vorhanden sind.  
+ <span data-ttu-id="f6913-139">Wie durch die Eigenschaftennamen angegeben, können unterstützende Anmeldeinformationen erforderlich oder optional sein.</span><span class="sxs-lookup"><span data-stu-id="f6913-139">As indicated by the property names, supporting credentials can be either required or optional.</span></span> <span data-ttu-id="f6913-140">Die unterstützenden Anmeldeinformationen werden verwendet, wenn sie vorhanden, aber nicht erforderlich sind; die Authentifizierung schlägt jedoch nicht fehl, wenn sie nicht vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="f6913-140">That is, if the supporting credential is used if it is present, although it is not necessary, but the authentication will not fail if it is not present.</span></span>  
   
-## Verfahren  
+## <a name="procedures"></a><span data-ttu-id="f6913-141">Verfahren</span><span class="sxs-lookup"><span data-stu-id="f6913-141">Procedures</span></span>  
   
-#### So erstellen Sie eine benutzerdefinierte Bindung, die unterstützende Anmeldeinformationen enthält  
+#### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a><span data-ttu-id="f6913-142">So erstellen Sie eine benutzerdefinierte Bindung, die unterstützende Anmeldeinformationen enthält</span><span class="sxs-lookup"><span data-stu-id="f6913-142">To create a custom binding that includes supporting credentials</span></span>  
   
-1.  Erstellen Sie ein Sicherheitsbindungselement.  Im nachfolgenden Beispiel wird ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mit dem `UserNameForCertificate`\-Authentifizierungsmodus erstellt.  Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>\-Methode.  
+1.  <span data-ttu-id="f6913-143">Erstellen Sie ein Sicherheitsbindungselement.</span><span class="sxs-lookup"><span data-stu-id="f6913-143">Create a security binding element.</span></span> <span data-ttu-id="f6913-144">Im nachfolgenden Beispiel wird ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mit dem `UserNameForCertificate`-Authentifizierungsmodus erstellt.</span><span class="sxs-lookup"><span data-stu-id="f6913-144">The example below creates a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> with the `UserNameForCertificate` authentication mode.</span></span> <span data-ttu-id="f6913-145">Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="f6913-145">Use the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> method.</span></span>  
   
-2.  Fügen Sie den unterstützenden Parameter der von der entsprechenden Eigenschaft \(`Endorsing`, `Signed`, `SignedEncrypted` oder `SignedEndorsed`\) zurückgegebenen Auflistung von Typen hinzu.  Die Typen im <xref:System.ServiceModel.Security.Tokens>\-Namespace umfassen häufig verwendete Typen wie die <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2.  <span data-ttu-id="f6913-146">Fügen Sie den unterstützenden Parameter der von der entsprechenden Eigenschaft (`Endorsing`, `Signed`, `SignedEncrypted` oder `SignedEndorsed`) zurückgegebenen Auflistung von Typen hinzu.</span><span class="sxs-lookup"><span data-stu-id="f6913-146">Add the supporting parameter to the collection of types returned by the appropriate property (`Endorsing`, `Signed`, `SignedEncrypted`, or `SignedEndorsed`).</span></span> <span data-ttu-id="f6913-147">Die Typen im <xref:System.ServiceModel.Security.Tokens>-Namespace umfassen häufig verwendete Typen wie die <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.</span><span class="sxs-lookup"><span data-stu-id="f6913-147">The types in the <xref:System.ServiceModel.Security.Tokens> namespace include commonly used types, such as the <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="f6913-148">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f6913-148">Example</span></span>  
   
-### Beschreibung  
- Im folgenden Beispiel wird eine Instanz des <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellt und eine Instanz der <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters>\-Klasse der von der unterzeichenden Eigenschaft zurückgegebenen Auflistung hinzugefügt.  
+### <a name="description"></a><span data-ttu-id="f6913-149">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f6913-149">Description</span></span>  
+ <span data-ttu-id="f6913-150">Im folgenden Beispiel wird eine Instanz des <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> erstellt und eine Instanz der <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters>-Klasse der von der unterzeichenden Eigenschaft zurückgegebenen Auflistung hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="f6913-150">The following example creates an instance of the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> and adds an instance of the <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> class to the collection the Endorsing property returned.</span></span>  
   
-### Code  
+### <a name="code"></a><span data-ttu-id="f6913-151">Code</span><span class="sxs-lookup"><span data-stu-id="f6913-151">Code</span></span>  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## Siehe auch  
- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="f6913-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6913-152">See Also</span></span>  
+ [<span data-ttu-id="f6913-153">Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="f6913-153">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

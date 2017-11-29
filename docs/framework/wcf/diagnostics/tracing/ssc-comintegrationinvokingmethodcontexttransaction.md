@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d2690ae-0afb-4cb1-ab62-a1a0ceba8521
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b78d429a0ba683ecbf14b44a5f82cb631f45cacf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
-System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a><span data-ttu-id="bad5c-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="bad5c-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>
+<span data-ttu-id="bad5c-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="bad5c-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>  
   
-## Beschreibung  
- Complus: Aufrufen der Methode mit der Transaktion im COM\+\-Kontext.  
+## <a name="description"></a><span data-ttu-id="bad5c-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bad5c-104">Description</span></span>  
+ <span data-ttu-id="bad5c-105">Complus: Aufrufen der Methode mit der Transaktion im COM+-Kontext.</span><span class="sxs-lookup"><span data-stu-id="bad5c-105">Complus: Invoking method with the transaction in COM+ context.</span></span>  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="bad5c-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bad5c-106">See Also</span></span>  
+ [<span data-ttu-id="bad5c-107">Ereignisablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="bad5c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="bad5c-108">Verwenden der Ablaufverfolgung beheben</span><span class="sxs-lookup"><span data-stu-id="bad5c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="bad5c-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="bad5c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

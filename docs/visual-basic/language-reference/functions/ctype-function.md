@@ -1,78 +1,76 @@
 ---
-title: "CType-Funktion (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CType"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Ausdruckskonvertierungsergebnisse"
-  - "Explizite Konvertierung von Datentypen"
-  - "CType-Funktion"
-  - "Konvertierungen, Ausdrücke"
+title: CType-Funktion (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.CType
+helpviewer_keywords:
+- expression conversion results
+- explicit data type conversions [Visual Basic]
+- CType function
+- conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6118ca5f73a0d446842c33859e0623032082bcd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# CType-Funktion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt das Ergebnis einer expliziten Konvertierung eines Ausdrucks in einen angegebenen Datentyp, ein Objekt, eine Struktur, Klasse oder Schnittstelle zurück.  
+# <a name="ctype-function-visual-basic"></a><span data-ttu-id="21de5-102">CType-Funktion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21de5-102">CType Function (Visual Basic)</span></span>
+<span data-ttu-id="21de5-103">Gibt das Ergebnis einer expliziten Konvertierung eines Ausdrucks in einen angegebenen Datentyp, ein Objekt, eine Struktur, Klasse oder Schnittstelle zurück.</span><span class="sxs-lookup"><span data-stu-id="21de5-103">Returns the result of explicitly converting an expression to a specified data type, object, structure, class, or interface.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="21de5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="21de5-104">Syntax</span></span>  
   
 ```  
 CType(expression, typename)  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="21de5-105">Teile</span><span class="sxs-lookup"><span data-stu-id="21de5-105">Parts</span></span>  
  `expression`  
- Jeder gültige Ausdruck.  Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.  
+ <span data-ttu-id="21de5-106">Jeder gültige Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="21de5-106">Any valid expression.</span></span> <span data-ttu-id="21de5-107">Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="21de5-107">If the value of `expression` is outside the range allowed by `typename`, Visual Basic throws an exception.</span></span>  
   
  `typename`  
- Ein beliebiger Ausdruck, der innerhalb einer `As`\-Klausel in einer `Dim`\-Anweisung zulässig ist, d. h., der Name eines beliebigen Datentyps, eines Objekts, einer Struktur, einer Klasse oder einer Schnittstelle.  
+ <span data-ttu-id="21de5-108">Ein beliebiger Ausdruck, der innerhalb einer `As`-Klausel in einer `Dim`-Anweisung zulässig ist, d. h., der Name eines beliebigen Datentyps, eines Objekts, einer Struktur, einer Klasse oder einer Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="21de5-108">Any expression that is legal within an `As` clause in a `Dim` statement, that is, the name of any data type, object, structure, class, or interface.</span></span>  
   
-## Hinweise  
+## <a name="remarks"></a><span data-ttu-id="21de5-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="21de5-109">Remarks</span></span>  
   
 > [!TIP]
->  Sie können die folgenden Funktionen auch zum Ausführen einer Typkonvertierung verwenden:  
+>  <span data-ttu-id="21de5-110">Sie können die folgenden Funktionen auch zum Ausführen einer Typkonvertierung verwenden:</span><span class="sxs-lookup"><span data-stu-id="21de5-110">You can also use the following functions to perform a type conversion:</span></span>  
 >   
->  -   Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann.  Weitere Informationen finden Sie unter [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
-> -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) oder [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).  Diese Operatoren erfordern, dass ein Typ von dem Anderen erbt oder diesen implementiert.  Sie können etwas bessere Leistung beim Konvertieren in und aus dem `Object`\-Datentyp bieten, als `CType`.  
+>  -   <span data-ttu-id="21de5-111">Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="21de5-111">Type conversion functions such as `CByte`, `CDbl`, and `CInt` that perform a conversion to a specific data type.</span></span> <span data-ttu-id="21de5-112">Weitere Informationen finden Sie unter [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).</span><span class="sxs-lookup"><span data-stu-id="21de5-112">For more information, see [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).</span></span>  
+> -   <span data-ttu-id="21de5-113">[DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) oder [TryCast-Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).</span><span class="sxs-lookup"><span data-stu-id="21de5-113">[DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) or [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md).</span></span> <span data-ttu-id="21de5-114">Diese Operatoren erfordern, dass ein Typ von dem Anderen erbt oder diesen implementiert.</span><span class="sxs-lookup"><span data-stu-id="21de5-114">These operators require that one type inherit from or implement the other type.</span></span> <span data-ttu-id="21de5-115">Sie können etwas bessere Leistung beim Konvertieren in und aus dem `CType`-Datentyp bieten, als `Object`.</span><span class="sxs-lookup"><span data-stu-id="21de5-115">They can provide somewhat better performance than `CType` when converting to and from the `Object` data type.</span></span>  
   
- `CType` wird inline kompiliert. Das bedeutet, dass der Konvertierungscode Bestandteil des Codes für die Auswertung des Ausdrucks ist.  In einigen Fällen wird der Code schneller ausgeführt, da keine Prozeduren zum Ausführen der Konvertierung aufgerufen werden.  
+ <span data-ttu-id="21de5-116">`CType` wird inline kompiliert. Das bedeutet, dass der Konvertierungscode Bestandteil des Codes für die Auswertung des Ausdrucks ist.</span><span class="sxs-lookup"><span data-stu-id="21de5-116">`CType` is compiled inline, which means that the conversion code is part of the code that evaluates the expression.</span></span> <span data-ttu-id="21de5-117">In einigen Fällen wird der Code schneller ausgeführt, da keine Prozeduren zum Ausführen der Konvertierung aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="21de5-117">In some cases, the code runs faster because no procedures are called to perform the conversion.</span></span>  
   
- Wenn keine Konvertierung von `expression` in `typename` \(zum Beispiel von `Integer` in `Date`\) definiert ist, wird von Visual Basic zur Kompilierungszeit eine Fehlermeldung angezeigt.  
+ <span data-ttu-id="21de5-118">Wenn keine Konvertierung von `expression` in `typename` (zum Beispiel von `Integer` in `Date`) definiert ist, wird von Visual Basic zur Kompilierungszeit eine Fehlermeldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="21de5-118">If no conversion is defined from `expression` to `typename` (for example, from `Integer` to `Date`), Visual Basic displays a compile-time error message.</span></span>  
   
- Falls eine Konvertierung zur Laufzeit fehlschlägt, wird die entsprechende Ausnahme ausgelöst.  Ist eine einschränkende Konvertierung fehlerhaft, wird meist ein <xref:System.OverflowException>\-Fehler verursacht.  Wenn die Konvertierung nicht definiert ist, wird eine <xref:System.InvalidCastException> ausgelöst.  Dies kann z. B. der Fall sein, wenn `expression` vom Typ `Object` ist und für seinen Laufzeittyp keine Konvertierung in `typename` definiert ist.  
+ <span data-ttu-id="21de5-119">Falls eine Konvertierung zur Laufzeit fehlschlägt, wird die entsprechende Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="21de5-119">If a conversion fails at run time, the appropriate exception is thrown.</span></span> <span data-ttu-id="21de5-120">Ist eine einschränkende Konvertierung fehlerhaft, wird meist ein <xref:System.OverflowException>-Fehler verursacht.</span><span class="sxs-lookup"><span data-stu-id="21de5-120">If a narrowing conversion fails, an <xref:System.OverflowException> is the most common result.</span></span> <span data-ttu-id="21de5-121">Wenn die Konvertierung nicht definiert ist, wird eine <xref:System.InvalidCastException> ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="21de5-121">If the conversion is undefined, an <xref:System.InvalidCastException> in thrown.</span></span> <span data-ttu-id="21de5-122">Dies kann z. B. der Fall sein, wenn `expression` vom Typ `Object` ist und für seinen Laufzeittyp keine Konvertierung in `typename` definiert ist.</span><span class="sxs-lookup"><span data-stu-id="21de5-122">For example, this can happen  if `expression` is of type `Object` and its run-time type has no conversion to `typename`.</span></span>  
   
- Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren.  Dadurch verhält sich `CType` wie ein *überladener Operator*.  Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.  
+ <span data-ttu-id="21de5-123">Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren.</span><span class="sxs-lookup"><span data-stu-id="21de5-123">If the data type of `expression` or `typename` is a class or structure you've defined, you can define `CType` on that class or structure as a conversion operator.</span></span> <span data-ttu-id="21de5-124">Auf diese Weise `CType` fungieren als ein *überladener Operator*.</span><span class="sxs-lookup"><span data-stu-id="21de5-124">This makes `CType` act as an *overloaded operator*.</span></span> <span data-ttu-id="21de5-125">Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.</span><span class="sxs-lookup"><span data-stu-id="21de5-125">If you do this, you can control the behavior of conversions to and from your class or structure, including the exceptions that can be thrown.</span></span>  
   
-## Überladen  
- Der Operator `CType` kann auch für eine Klasse oder Struktur überladen werden, die außerhalb des Codes definiert ist.  Wenn in dem Code Konvertierungen in eine solche Klasse oder Struktur oder in umgekehrter Richtung durchführt werden, müssen Sie sicherstellen, dass Sie das Verhalten des betreffenden `CType`\-Operators verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="21de5-126">Überladen</span><span class="sxs-lookup"><span data-stu-id="21de5-126">Overloading</span></span>  
+ <span data-ttu-id="21de5-127">Der Operator `CType` kann auch für eine Klasse oder Struktur überladen werden, die außerhalb des Codes definiert ist.</span><span class="sxs-lookup"><span data-stu-id="21de5-127">The `CType` operator can also be overloaded on a class or structure defined outside your code.</span></span> <span data-ttu-id="21de5-128">Wenn in dem Code Konvertierungen in eine solche Klasse oder Struktur oder in umgekehrter Richtung durchführt werden, müssen Sie sicherstellen, dass Sie das Verhalten des betreffenden `CType`-Operators verstehen.</span><span class="sxs-lookup"><span data-stu-id="21de5-128">If your code converts to or from such a class or structure, be sure you understand the behavior of its `CType` operator.</span></span> <span data-ttu-id="21de5-129">Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="21de5-129">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Konvertieren von dynamischen Objekten  
- Typkonvertierungen für dynamische Objekte werden durch benutzerdefinierte dynamische Konvertierungen ausgeführt, bei denen die <xref:System.Dynamic.DynamicObject.TryConvert%2A>\-Methode oder die <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A>\-Methode verwendet werden.  Wenn Sie mit dynamischen Objekten arbeiten, verwenden Sie zum Konvertieren des dynamischen Objekts die <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A>\-Methode.  
+## <a name="converting-dynamic-objects"></a><span data-ttu-id="21de5-130">Konvertieren von dynamischen Objekten</span><span class="sxs-lookup"><span data-stu-id="21de5-130">Converting Dynamic Objects</span></span>  
+ <span data-ttu-id="21de5-131">Typkonvertierungen für dynamische Objekte werden durch benutzerdefinierte dynamische Konvertierungen ausgeführt, bei denen die <xref:System.Dynamic.DynamicObject.TryConvert%2A>-Methode oder die <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A>-Methode verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="21de5-131">Type conversions of dynamic objects are performed by user-defined dynamic conversions that use the <xref:System.Dynamic.DynamicObject.TryConvert%2A> or <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> methods.</span></span> <span data-ttu-id="21de5-132">Wenn Sie mit dynamischen Objekten arbeiten, verwenden Sie zum Konvertieren des dynamischen Objekts die <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="21de5-132">If you're working with dynamic objects, use the <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> method to convert the dynamic object.</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird die `CType`\-Funktion zum Konvertieren eines Ausdrucks in den `Single`\-Datentyp verwendet.  
+## <a name="example"></a><span data-ttu-id="21de5-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="21de5-133">Example</span></span>  
+ <span data-ttu-id="21de5-134">In diesem Beispiel wird die `CType`-Funktion zum Konvertieren eines Ausdrucks in den `Single`-Datentyp verwendet.</span><span class="sxs-lookup"><span data-stu-id="21de5-134">The following example uses the `CType` function to convert an expression to the `Single` data type.</span></span>  
   
  [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
- Weitere Beispiele finden Sie unter [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
+ <span data-ttu-id="21de5-135">Weitere Beispiele finden Sie unter [implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="21de5-135">For additional examples, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).</span></span>  
   
-## Siehe auch  
- <xref:System.OverflowException>   
- <xref:System.InvalidCastException>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Typkonvertierung in .NET Framework](../Topic/Type%20Conversion%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a><span data-ttu-id="21de5-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="21de5-136">See Also</span></span>  
+ <xref:System.OverflowException>  
+ <xref:System.InvalidCastException>  
+ [<span data-ttu-id="21de5-137">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="21de5-137">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="21de5-138">Konvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="21de5-138">Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [<span data-ttu-id="21de5-139">Operator-Anweisung</span><span class="sxs-lookup"><span data-stu-id="21de5-139">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="21de5-140">Gewusst wie: Definieren eines Konvertierungsoperators</span><span class="sxs-lookup"><span data-stu-id="21de5-140">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="21de5-141">Typkonvertierung in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="21de5-141">Type Conversion in the .NET Framework</span></span>](http://msdn.microsoft.com/library/ba36154f-064c-47d3-9f05-72f93a7ca96d)

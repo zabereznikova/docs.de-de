@@ -1,26 +1,29 @@
 ---
-title: "Erstellen eines signierten und/oder verschl&#252;sselten benutzerdefinierten Headers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen einen benutzerdefinierten Header, signiert und- oder verschlüsselte"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ac43be1978a2a6e80b08e0c4bcd5e0e92043719e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erstellen eines signierten und/oder verschl&#252;sselten benutzerdefinierten Headers
-Beim Aufrufen eines Nicht\-WCF\-Dienstes mit einem WCF\-Client müssen in einigen Fällen benutzerdefinierte SOAP\-Header verwendet werden.  In WCF ist ein Kanonisierungsfehler vorhanden, der verhindert, dass signierte und verschlüsselte benutzerdefinierte Header mit einem Nicht\-WCF\-Dienst verwendet werden können.  Dieses Problem wird durch die inkorrekte Kanonisierung von XML\-Standardnamespaces verursacht.  Es ist jedoch nur problematisch, wenn Nicht\-WCF\-Dienste mit benutzerdefinierten Headern aufgerufen werden, die signiert und\/oder verschlüsselt sind.  Wenn der Dienst die Nachricht mit dem signierten und\/oder verschlüsselten benutzerdefinierten Header empfängt, kann er die Signatur nicht verifizieren.  Mit der folgenden Problemumgehung wird der Kanonisierungsfehler vermieden, und die Interoperabilität mit Nicht\-WCF\-Diensten wird ermöglicht. Die Interoperabilität mit WCF\-Diensten wird dabei jedoch nicht beeinträchtigt.  
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a><span data-ttu-id="69dda-102">Erstellen einen benutzerdefinierten Header, signiert und- oder verschlüsselte</span><span class="sxs-lookup"><span data-stu-id="69dda-102">Creating a custom header that is signed and-or encrypted</span></span>
+<span data-ttu-id="69dda-103">Beim Aufrufen eines Nicht-WCF-Dienstes mit einem WCF-Client müssen in einigen Fällen benutzerdefinierte SOAP-Header verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="69dda-103">When calling a non-WCF service using a WCF client it is sometimes necessary to use custom SOAP headers.</span></span> <span data-ttu-id="69dda-104">In WCF ist ein Kanonisierungsfehler vorhanden, der verhindert, dass signierte und verschlüsselte benutzerdefinierte Header mit einem Nicht-WCF-Dienst verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="69dda-104">There is a canonicalization bug in WCF that prevents custom headers that are signed and encrypted from working with a non-WCF service.</span></span> <span data-ttu-id="69dda-105">Dieses Problem wird durch die inkorrekte Kanonisierung von XML-Standardnamespaces verursacht.</span><span class="sxs-lookup"><span data-stu-id="69dda-105">The problem is caused by the incorrect canonicalization of default XML namespaces.</span></span> <span data-ttu-id="69dda-106">Es ist jedoch nur problematisch, wenn Nicht-WCF-Dienste mit benutzerdefinierten Headern aufgerufen werden, die signiert und/oder verschlüsselt sind.</span><span class="sxs-lookup"><span data-stu-id="69dda-106">This is only problematic when calling non-WCF services with custom headers that are signed and/or encrypted.</span></span>  <span data-ttu-id="69dda-107">Wenn der Dienst die Nachricht mit dem signierten und/oder verschlüsselten benutzerdefinierten Header empfängt, kann er die Signatur nicht verifizieren.</span><span class="sxs-lookup"><span data-stu-id="69dda-107">When the service receives the message containing the signed and/or encrypted custom header it is unable to verify the signature.</span></span> <span data-ttu-id="69dda-108">Mit der folgenden Problemumgehung wird der Kanonisierungsfehler vermieden, und die Interoperabilität mit Nicht-WCF-Diensten wird ermöglicht. Die Interoperabilität mit WCF-Diensten wird dabei jedoch nicht beeinträchtigt.</span><span class="sxs-lookup"><span data-stu-id="69dda-108">This workaround avoids the canonicalization bug, allows interoperability with non-WCF services, but does not prevent interoperability with WCF services.</span></span>  
   
-## Definieren des benutzerdefinierten Headers  
- Benutzerdefinierte Header werden definiert, indem ein Nachrichtenvertrag festgelegt wird und die als Header zu sendenden Member mit einem <xref:System.ServiceModel.MessageHeaderAttribute>\-Attribut markiert werden.  Zur Umgehung des Kanonisierungsfehlers müssen Sie sicherstellen, dass das XML\-Serialisierungsprogramm den Namespace für den benutzerdefinierten Header mit einem Präfix deklariert und nicht die Standardnamespacedeklaration verwendet.  Im folgenden Code wird veranschaulicht, wie der Datentyp für den Nachrichtenheader mit einer korrekten Namespacedeklaration definiert wird.  
+## <a name="defining-the-custom-header"></a><span data-ttu-id="69dda-109">Definieren des benutzerdefinierten Headers</span><span class="sxs-lookup"><span data-stu-id="69dda-109">Defining the custom header</span></span>  
+ <span data-ttu-id="69dda-110">Benutzerdefinierte Header werden definiert, indem ein Nachrichtenvertrag festgelegt wird und die als Header zu sendenden Member mit einem <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut markiert werden.</span><span class="sxs-lookup"><span data-stu-id="69dda-110">Custom headers are defined by defining a message contract and marking the members you want to be sent as headers with a <xref:System.ServiceModel.MessageHeaderAttribute> attribute.</span></span> <span data-ttu-id="69dda-111">Zur Umgehung des Kanonisierungsfehlers müssen Sie sicherstellen, dass das XML-Serialisierungsprogramm den Namespace für den benutzerdefinierten Header mit einem Präfix deklariert und nicht die Standardnamespacedeklaration verwendet.</span><span class="sxs-lookup"><span data-stu-id="69dda-111">To work around the canonicalization bug you must ensure that the XML serializer declares the namespace for the custom header with a prefix instead of a default namespace declaration.</span></span> <span data-ttu-id="69dda-112">Im folgenden Code wird veranschaulicht, wie der Datentyp für den Nachrichtenheader mit einer korrekten Namespacedeklaration definiert wird.</span><span class="sxs-lookup"><span data-stu-id="69dda-112">The following code shows how to define the data type that will be used as a message header with the correct namespace declaration.</span></span>  
   
 ```  
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
@@ -50,7 +53,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- In diesem Code wird der neue Typ `msgHeaderElement` deklariert, der mit dem XML\-Serialisierungsprogramm serialisiert wird.  Beim Serialisieren einer Instanz dieses Typs wird ein Namespace mit dem Präfix 'h' definiert, wodurch der Kanonisierungsfehler umgangen wird.  Im Nachrichtenvertrag wird dann eine Instanz von `msgHeaderElement` definiert, die mit dem <xref:System.ServiceModel.MessageHeaderAttribute>\-Attribut markiert wird, wie im folgenden Beispiel veranschaulicht.  
+ <span data-ttu-id="69dda-113">In diesem Code wird der neue Typ `msgHeaderElement` deklariert, der mit dem XML-Serialisierungsprogramm serialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="69dda-113">This code declares a new type called `msgHeaderElement` that will be serialized with the XML Serializer.</span></span> <span data-ttu-id="69dda-114">Beim Serialisieren einer Instanz dieses Typs wird ein Namespace mit dem Präfix 'h' definiert, wodurch der Kanonisierungsfehler umgangen wird.</span><span class="sxs-lookup"><span data-stu-id="69dda-114">When an instance of this type is serialized, it will define a namespace with an ‘h’ prefix, thus working around the canonicalization bug.</span></span>  <span data-ttu-id="69dda-115">Im Nachrichtenvertrag wird dann eine Instanz von `msgHeaderElement` definiert, die mit dem <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut markiert wird, wie im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="69dda-115">The message contract would then define an instance of `msgHeaderElement` and mark it with the <xref:System.ServiceModel.MessageHeaderAttribute> attribute as shown in the following example.</span></span>  
   
 ```  
 [MessageContract]  
@@ -61,10 +64,9 @@ public  class MyMessageContract
    public msgHeaderElement;  
    // other message contents...  
 }  
-  
 ```  
   
-## Siehe auch  
- [Standardnachrichtenvertrag](../../../../docs/framework/wcf/samples/default-message-contract.md)   
- [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)   
- [Verwendung von Nachrichtenverträgen](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="69dda-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69dda-116">See Also</span></span>  
+ [<span data-ttu-id="69dda-117">Standardnachrichtenvertrag</span><span class="sxs-lookup"><span data-stu-id="69dda-117">Default Message Contract</span></span>](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [<span data-ttu-id="69dda-118">Nachrichtenverträge</span><span class="sxs-lookup"><span data-stu-id="69dda-118">Message Contracts</span></span>](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [<span data-ttu-id="69dda-119">Verwendung von Nachrichtenverträgen</span><span class="sxs-lookup"><span data-stu-id="69dda-119">Using Message Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

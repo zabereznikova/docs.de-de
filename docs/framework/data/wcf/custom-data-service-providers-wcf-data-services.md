@@ -1,37 +1,39 @@
 ---
-title: "Benutzerdefinierte Datendienstanbieter (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, Anbieter"
+title: Benutzerdefinierte Datendienstanbieter (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90e837739edc74ee469f42720f52789ee1c8f6fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Benutzerdefinierte Datendienstanbieter (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umfasst eine Reihe von Anbietern, die es Ihnen ermöglicht, ein Datenmodell auf der Grundlage spät gebundener Datentypen zu definieren.  
+# <a name="custom-data-service-providers-wcf-data-services"></a><span data-ttu-id="dad61-102">Benutzerdefinierte Datendienstanbieter (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="dad61-102">Custom Data Service Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="dad61-103"> umfasst eine Reihe von Anbietern, die es Ihnen ermöglicht, ein Datenmodell auf der Grundlage spät gebundener Datentypen zu definieren.</span><span class="sxs-lookup"><span data-stu-id="dad61-103"> includes a set of providers that enables you to define a data model based on late-bound data types.</span></span>  
   
-|Anbieter|Beschreibung|  
-|--------------|------------------|  
-|Metadatenanbieter|Dies ist der benutzerdefinierte Kerndatendienstanbieter, der es Ihnen ermöglicht, durch das Implementieren der <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>\-Schnittstelle ein benutzerdefiniertes Datenmodell zur Laufzeit zu definieren.|  
-|Abfrageanbieter|Dieser Anbieter ermöglicht es Ihnen, Abfragen an ein benutzerdefiniertes Datenmodell auszuführen, das mit der <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>\-Schnittstelle definiert ist.  Der Abfrageanbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceQueryProvider>\-Schnittstelle erstellt.|  
-|Updateanbieter|Dieser Anbieter ermöglicht es Ihnen, Updates an in einem benutzerdefinierten Datendienstanbieter verfügbar gemachte Typen vorzunehmen und Parallelität zu verwalten.  Ein Updateanbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>\-Schnittstelle erstellt.|  
-|Paginganbieter|Dieser Anbieter wird mit dem benutzerdefinierten Datendienstanbieter verwendet, um servergesteuerte Pagingunterstützung zu aktivieren.  Ein Paginganbieter für einen benutzerdefinierten Datendienst wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServicePagingProvider>\-Schnittstelle erstellt.|  
-|Streaminganbieter|Dieser Anbieter ermöglicht es Ihnen, Binary Large Object\-Datentypen als Stream verfügbar zu machen.  Ein Streaminganbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceStreamProvider>\-Schnittstelle erstellt.  Der Streaminganbieter kann auch mit Entity Framework und Reflektionsdatenquellenanbietern verwendet werden.  Weitere Informationen finden Sie unter [Streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|<span data-ttu-id="dad61-104">Anbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-104">Provider</span></span>|<span data-ttu-id="dad61-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dad61-105">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="dad61-106">Metadatenanbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-106">Metadata provider</span></span>|<span data-ttu-id="dad61-107">Dies ist der benutzerdefinierte Kerndatendienstanbieter, der es Ihnen ermöglicht, durch das Implementieren der <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>-Schnittstelle ein benutzerdefiniertes Datenmodell zur Laufzeit zu definieren.</span><span class="sxs-lookup"><span data-stu-id="dad61-107">This is the core custom data service provider that enables you to define a custom data model at runtime by implementing the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span>|  
+|<span data-ttu-id="dad61-108">Abfrageanbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-108">Query provider</span></span>|<span data-ttu-id="dad61-109">Dieser Anbieter ermöglicht es Ihnen, Abfragen an ein benutzerdefiniertes Datenmodell auszuführen, das mit der <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>-Schnittstelle definiert ist.</span><span class="sxs-lookup"><span data-stu-id="dad61-109">This provider enables you to execute queries against a custom data model that is defined by using the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span> <span data-ttu-id="dad61-110">Der Abfrageanbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceQueryProvider>-Schnittstelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="dad61-110">The query provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interface.</span></span>|  
+|<span data-ttu-id="dad61-111">Updateanbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-111">Update provider</span></span>|<span data-ttu-id="dad61-112">Dieser Anbieter ermöglicht es Ihnen, Updates an in einem benutzerdefinierten Datendienstanbieter verfügbar gemachte Typen vorzunehmen und Parallelität zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="dad61-112">This provider enables you to make updates to types that are exposed in a custom data service provider and to manage concurrency.</span></span> <span data-ttu-id="dad61-113">Ein Updateanbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>-Schnittstelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="dad61-113">An update provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interface</span></span>|  
+|<span data-ttu-id="dad61-114">Paginganbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-114">Paging provider</span></span>|<span data-ttu-id="dad61-115">Dieser Anbieter wird mit dem benutzerdefinierten Datendienstanbieter verwendet, um servergesteuerte Pagingunterstützung zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="dad61-115">This provider is used with the custom data service provider to enable server-driven paging support.</span></span> <span data-ttu-id="dad61-116">Ein Paginganbieter für einen benutzerdefinierten Datendienst wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServicePagingProvider>-Schnittstelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="dad61-116">A paging provider for a custom data service is created by implementing the <xref:System.Data.Services.Providers.IDataServicePagingProvider> interface.</span></span>|  
+|<span data-ttu-id="dad61-117">Streaminganbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-117">Streaming provider</span></span>|<span data-ttu-id="dad61-118">Dieser Anbieter ermöglicht es Ihnen, Binary Large Object-Datentypen als Stream verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="dad61-118">This provider enables you to expose binary large object data types as a stream.</span></span> <span data-ttu-id="dad61-119">Ein Streaminganbieter wird durch Implementieren der <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Schnittstelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="dad61-119">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="dad61-120">Der Streaminganbieter kann auch mit Entity Framework und Reflektionsdatenquellenanbietern verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dad61-120">The streaming provider can also be used with Entity Framework and reflection data source providers.</span></span> <span data-ttu-id="dad61-121">Weitere Informationen finden Sie unter [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="dad61-121">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
   
- Weitere Informationen finden Sie im Artikel [Benutzerdefinierte Datendienstanbieter](http://go.microsoft.com/fwlink/?LinkID=186850) und im [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]\-Anbietertoolkit im [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).  
+ <span data-ttu-id="dad61-122">Weitere Informationen finden Sie im Artikel [Benutzerdefinierte Datendienstanbieter](http://go.microsoft.com/fwlink/?LinkID=186850) und [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Anbietertoolkit im die [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span><span class="sxs-lookup"><span data-stu-id="dad61-122">For more information, see the article [Custom Data Service Providers](http://go.microsoft.com/fwlink/?LinkID=186850) and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Provider Toolkit in the [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span></span>  
   
-## Siehe auch  
- [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [Entity Framework\-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)   
- [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="dad61-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dad61-123">See Also</span></span>  
+ [<span data-ttu-id="dad61-124">Datendienstanbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-124">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="dad61-125">Entity Framework-Anbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-125">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+ [<span data-ttu-id="dad61-126">Reflektionsanbieter</span><span class="sxs-lookup"><span data-stu-id="dad61-126">Reflection Provider</span></span>](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

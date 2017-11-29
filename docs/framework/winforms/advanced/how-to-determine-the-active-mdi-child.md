@@ -1,42 +1,46 @@
 ---
-title: "Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Untergeordnete Formulare"
-  - "Zwischenablage, Kopieren von Daten nach"
-  - "MDI, Aktivieren von Formularen"
-  - "MDI, Untergeordnete Fenster"
-  - "MDI, Suchen nach Fokus"
+title: 'Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- MDI [Windows Forms], child windows
+- child forms
+- MDI [Windows Forms], activating forms
+- MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements
-Es kann durchaus vorkommen, dass Sie einen Befehl bereitstellen möchten, der auf das Steuerelement angewendet wird, das im aktuell aktiven untergeordneten Formular fokussiert ist.  Nehmen wir an, dass markierter Text aus dem Textfeld des untergeordneten Formulars in die Zwischenablage kopiert werden soll.  Hierfür wird in der Regel eine Prozedur erstellt, durch die markierter Text über das <xref:System.Windows.Forms.Control.Click>\-Ereignis des Menüelements Kopieren im Standardmenü Bearbeiten in die Zwischenablage kopiert wird.  
+# <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="e1eca-102">Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements</span><span class="sxs-lookup"><span data-stu-id="e1eca-102">How to: Determine the Active MDI Child</span></span>
+<span data-ttu-id="e1eca-103">In manchen Fällen sollten Sie einen Befehl, der ausgeführt wird auf das Steuerelement bereitstellen, auf dem derzeit aktiven untergeordneten Formular den Fokus besitzt.</span><span class="sxs-lookup"><span data-stu-id="e1eca-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="e1eca-104">Nehmen Sie z. B. an, dass Sie den ausgewählten Text aus dem Textfeld des untergeordneten Formulars in die Zwischenablage kopieren möchten.</span><span class="sxs-lookup"><span data-stu-id="e1eca-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="e1eca-105">Erstellen Sie eine Prozedur, die ausgewählten Text in die Zwischenablage verwenden kopiert die <xref:System.Windows.Forms.Control.Click> -Ereignis des Menüelements kopieren im Standardmenü bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="e1eca-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  
   
- Da eine MDI\-Anwendung viele Instanzen desselben untergeordneten Formulars verwenden kann, muss der Prozedur mitgeteilt werden, welches Formular verwendet werden soll.  Verwenden Sie zum Angeben des richtigen Formulars die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A>\-Eigenschaft, die das untergeordnete Formular zurückgibt, das fokussiert ist oder zuletzt aktiv war.  
+ <span data-ttu-id="e1eca-106">Da eine MDI-Anwendung viele Instanzen des gleichen untergeordneten Formulars verfügen kann, muss die Prozedur wissen, welches Formular verwendet.</span><span class="sxs-lookup"><span data-stu-id="e1eca-106">Because an MDI application can have many instances of the same child form, the procedure needs to know which form to use.</span></span> <span data-ttu-id="e1eca-107">Um das richtige Format anzugeben, verwenden Sie die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, die das untergeordnete Formular zurückgibt, die den Fokus besitzt, oder, die zuletzt aktiv war.</span><span class="sxs-lookup"><span data-stu-id="e1eca-107">To specify the correct form, use the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, which returns the child form that has the focus or that was most recently active.</span></span>  
   
- Wenn in einem Formular mehrere Steuerelemente verwendet werden, muss auch angegeben werden, welches Steuerelement aktiv ist.  Wie bei der <xref:System.Windows.Forms.Form.ActiveMdiChild%2A>\-Eigenschaft wird von der <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>\-Eigenschaft das Steuerelement zurückgegeben, das im aktiven untergeordneten Formular fokussiert ist.  Mit der folgenden Prozedur wird eine Kopierprozedur veranschaulicht, die von einem Menü eines untergeordneten Formulars, einem Menü im MDI\-Formular oder einer Symbolleisten\-Schaltfläche aufgerufen werden kann.  
+ <span data-ttu-id="e1eca-108">Wenn Sie mehrere Steuerelemente in einem Formular verfügen, müssen Sie auch angeben, welches Steuerelement aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="e1eca-108">When you have several controls on a form, you also need to specify which control is active.</span></span> <span data-ttu-id="e1eca-109">Wie die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, die <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft gibt das Steuerelement mit Fokus auf das aktive untergeordnete Formular.</span><span class="sxs-lookup"><span data-stu-id="e1eca-109">Like the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property returns the control with the focus on the active child form.</span></span> <span data-ttu-id="e1eca-110">Das folgende Verfahren veranschaulicht eine Kopierprozedur, die von einem Menü untergeordnete Formular eines Menüs für MDI-Formulars oder einer Symbolleisten-Schaltfläche aufgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="e1eca-110">The procedure below illustrates a copy procedure that can be called from a child form menu, a menu on the MDI form, or a toolbar button.</span></span>  
   
-### So bestimmen Sie das aktive untergeordnete MDI\-Element, um seinen Text in die Zwischenablage zu kopieren  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a><span data-ttu-id="e1eca-111">Bestimmen von aktiven untergeordneten MDI-Fensters (um den Text in die Zwischenablage zu kopieren)</span><span class="sxs-lookup"><span data-stu-id="e1eca-111">To determine the active MDI child (to copy its text to the Clipboard)</span></span>  
   
-1.  Kopieren Sie bei einer Methode den Text des aktiven Steuerelements des aktiven untergeordneten Formulars in die Zwischenablage.  
+1.  <span data-ttu-id="e1eca-112">Kopieren Sie den Text, der das zum aktiven Steuerelement des aktiven untergeordneten Formulars innerhalb einer Methode in die Zwischenablage.</span><span class="sxs-lookup"><span data-stu-id="e1eca-112">Within a method, copy the text of the active control of the active child form to the Clipboard.</span></span>  
   
     > [!NOTE]
-    >  In diesem Beispiel wird vorausgesetzt, dass ein übergeordnetes MDI\-Formular \(`Form1`\) vorhanden ist. Dieses soll ein oder mehrere untergeordnete MDI\-Fenster aufweisen, in denen ein <xref:System.Windows.Forms.RichTextBox>\-Steuerelement enthalten ist.  Weitere Informationen finden Sie unter [Erstellen übergeordneter MDI\-Formulare](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  <span data-ttu-id="e1eca-113">In diesem Beispiel wird vorausgesetzt, es ist ein übergeordnetes MDI-Formular (`Form1`), besitzt eine oder mehrere untergeordnete MDI-Fenster mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="e1eca-113">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e1eca-114">Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="e1eca-114">For more information, see [Creating MDI Parent Forms](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -59,7 +63,6 @@ Es kann durchaus vorkommen, dass Sie einen Befehl bereitstellen möchten, der au
           End If  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -88,12 +91,11 @@ Es kann durchaus vorkommen, dass Sie einen Befehl bereitstellen möchten, der au
           }  
        }  
     }  
-  
     ```  
   
-## Siehe auch  
- [MDI\-Anwendungen \(Multiple Document Interface\)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [Gewusst wie: Erstellen von übergeordneten MDI\-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Gewusst wie: Erstellen von untergeordneten MDI\-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI\-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)   
- [Gewusst wie: Anordnen von untergeordneten MDI\-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e1eca-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e1eca-115">See Also</span></span>  
+ [<span data-ttu-id="e1eca-116">MDI-Anwendungen (Multiple Document Interface)</span><span class="sxs-lookup"><span data-stu-id="e1eca-116">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [<span data-ttu-id="e1eca-117">Gewusst wie: Erstellen von übergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="e1eca-117">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="e1eca-118">Gewusst wie: Erstellen von untergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="e1eca-118">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="e1eca-119">Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element</span><span class="sxs-lookup"><span data-stu-id="e1eca-119">How to: Send Data to the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
+ [<span data-ttu-id="e1eca-120">Gewusst wie: Anordnen von untergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="e1eca-120">How to: Arrange MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

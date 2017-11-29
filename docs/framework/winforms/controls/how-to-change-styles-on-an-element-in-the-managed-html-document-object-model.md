@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: &#196;ndern von Formaten eines Elements im verwalteten HTML-Dokumentobjektmodell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Verwaltetes HTML-DOM, Ändern von Elementformaten"
+title: "Gewusst wie: Ändern von Formaten eines Elements im verwalteten HTML-Dokumentobjektmodell"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 968dd4210e13e301ba2f0ca24617df23706cefc0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: &#196;ndern von Formaten eines Elements im verwalteten HTML-Dokumentobjektmodell
-Sie können mit Formaten in HTML die Darstellung eines Dokuments und seiner Elemente steuern.  <xref:System.Windows.Forms.HtmlDocument> und <xref:System.Windows.Forms.HtmlElement> unterstützen <xref:System.Windows.Forms.HtmlElement.Style%2A>\-Eigenschaften, die Formatzeichenfolgen im folgenden Format verwenden:  
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a><span data-ttu-id="a7625-102">Gewusst wie: Ändern von Formaten eines Elements im verwalteten HTML-Dokumentobjektmodell</span><span class="sxs-lookup"><span data-stu-id="a7625-102">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="a7625-103">Formate können im HTML-Format Sie um die Darstellung eines Dokuments und seiner Elemente zu steuern.</span><span class="sxs-lookup"><span data-stu-id="a7625-103">You can use styles in HTML to control the appearance of a document and its elements.</span></span> <span data-ttu-id="a7625-104"><xref:System.Windows.Forms.HtmlDocument>und <xref:System.Windows.Forms.HtmlElement> unterstützen <xref:System.Windows.Forms.HtmlElement.Style%2A> Eigenschaften, die Formatzeichenfolgen Folgendes Format verwenden:</span><span class="sxs-lookup"><span data-stu-id="a7625-104"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> support <xref:System.Windows.Forms.HtmlElement.Style%2A> properties that take style strings of the following format:</span></span>  
   
  `name1:value1;...;nameN:valueN;`  
   
- Dies ist ein `DIV` mit einer Formatzeichenfolge, die die Schriftart auf Arial und den Text auf Fett festlegt:  
+ <span data-ttu-id="a7625-105">Hier ist ein `DIV` mit einer Formatzeichenfolge, die die Schriftart Arial und den Text fett festgelegt:</span><span class="sxs-lookup"><span data-stu-id="a7625-105">Here is a `DIV` with a style string that sets the font to Arial and all text to bold:</span></span>  
   
  `<DIV style="font-face:arial;font-weight:bold;">`  
   
@@ -33,19 +36,19 @@ Sie können mit Formaten in HTML die Darstellung eines Dokuments und seiner Elem
   
  `</DIV>`  
   
- Das Problem beim Bearbeiten von Formaten mithilfe der <xref:System.Windows.Forms.HtmlElement.Style%2A>\-Eigenschaft liegt darin, dass es umständlich sein kann, einzelne Formateinstellungen zur Zeichenfolge hinzuzufügen bzw. daraus zu entfernen.  Wenn beispielsweise der voranstehende Text kursiv angezeigt werden sollte, solange der Benutzer den Cursor über dem `DIV` positioniert, und normal, wenn er den Cursor vom `DIV` entfernt, würde dies zu einer komplexen Prozedur führen.  Es kann sehr zeitaufwändig sein, eine große Anzahl von Formaten auf diese Weise zu bearbeiten.  
+ <span data-ttu-id="a7625-106">Das Problem mit dem Bearbeiten von Stilen mithilfe der <xref:System.Windows.Forms.HtmlElement.Style%2A> Eigenschaft ist, dass es bei Personen ausweisen kann mühsam hinzu, und entfernen einzelne formateinstellungen aus der Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="a7625-106">The problem with manipulating styles using the <xref:System.Windows.Forms.HtmlElement.Style%2A> property is that it can prove cumbersome to add to and remove individual style settings from the string.</span></span> <span data-ttu-id="a7625-107">Beispielsweise würde es einer komplexen Prozedur zum Rendern von vorangegangenen Texts kursiv, sobald der Benutzer über den Cursor positioniert werden die `DIV`, und ergreifen Sie kursiv deaktiviert, wenn der Cursor bleibt die `DIV`.</span><span class="sxs-lookup"><span data-stu-id="a7625-107">For example, it would become a complex procedure for you to render the previous text in italics whenever the user positions the cursor over the `DIV`, and take italics off when the cursor leaves the `DIV`.</span></span> <span data-ttu-id="a7625-108">Wenn Sie eine große Anzahl von Formaten auf diese Weise bearbeiten müssen würde ein Problem dar.</span><span class="sxs-lookup"><span data-stu-id="a7625-108">Time would become an issue if you need to manipulate a large number of styles in this manner.</span></span>  
   
- Die folgende Prozedur enthält Code, mit dem Sie Formate in HTML\-Dokumenten und \-Elementen leicht bearbeiten können.  Für diese Prozedur wird vorausgesetzt, dass Sie grundlegende Aufgaben in Windows Forms ausführen können, z. B. das Erstellen eines neuen Projekts oder das Hinzufügen eines Steuerelements zu einem Formular.  
+ <span data-ttu-id="a7625-109">Das folgende Verfahren enthält Code, mit denen Sie problemlos Formate für HTML-Dokumente und Elemente bearbeiten können.</span><span class="sxs-lookup"><span data-stu-id="a7625-109">The following procedure contains code that you can use to easily manipulate styles on HTML documents and elements.</span></span> <span data-ttu-id="a7625-110">Die Prozedur erfordert, dass Sie wissen, wie grundlegende Aufgaben in Windows Forms, z. B. Erstellen eines neuen Projekts und Hinzufügen eines Steuerelements zu einem Formular.</span><span class="sxs-lookup"><span data-stu-id="a7625-110">The procedure requires that you know how to perform basic tasks in Windows Forms, such as creating a new project and adding a control to a form.</span></span>  
   
-### So verarbeiten Sie Formatänderungen in einer Windows Forms\-Anwendung  
+### <a name="to-process-style-changes-in-a-windows-forms-application"></a><span data-ttu-id="a7625-111">Verarbeiten von Änderungen an Formatvorlagen in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="a7625-111">To process style changes in a Windows Forms application</span></span>  
   
-1.  Erstellen Sie ein neues Projekt vom Typ Windows Forms.  
+1.  <span data-ttu-id="a7625-112">Erstellen Sie ein neues Windows Forms-Projekt.</span><span class="sxs-lookup"><span data-stu-id="a7625-112">Create a new Windows Forms project.</span></span>  
   
-2.  Erstellen Sie eine neue Klassendatei, deren Erweiterung für Ihre Programmiersprache geeignet ist.  
+2.  <span data-ttu-id="a7625-113">Erstellen Sie eine neue Klassendatei mit der Erweiterung, die für Ihre Programmiersprache geeignet.</span><span class="sxs-lookup"><span data-stu-id="a7625-113">Create a new class file ending in the extension appropriate for your programming language.</span></span>  
   
-3.  Kopieren Sie den `StyleGenerator`\-Klassencode im Beispielabschnitt dieses Themas in die Klassendatei, und speichern Sie den Code.  
+3.  <span data-ttu-id="a7625-114">Kopieren der `StyleGenerator` Klasse von Code im Abschnitt "Beispiel" dieses Themas in die Klassendatei, und speichern Sie den Code.</span><span class="sxs-lookup"><span data-stu-id="a7625-114">Copy the `StyleGenerator` class code in the Example section of this topic into the class file, and save the code.</span></span>  
   
-4.  Speichern Sie den folgenden HTML\-Code in einer Datei mit dem Namen Test.htm.  
+4.  <span data-ttu-id="a7625-115">Speichern Sie den folgenden HTML-Code in eine Datei mit dem Namen Test.htm.</span><span class="sxs-lookup"><span data-stu-id="a7625-115">Save the following HTML to a file named Test.htm.</span></span>  
   
     ```  
     <HTML>  
@@ -63,23 +66,23 @@ Sie können mit Formaten in HTML die Darstellung eines Dokuments und seiner Elem
     </HTML>  
     ```  
   
-5.  Fügen Sie ein <xref:System.Windows.Forms.WebBrowser>\-Steuerelement mit dem Namen `webBrowser1` zum Hauptformular des Projekts hinzu.  
+5.  <span data-ttu-id="a7625-116">Hinzufügen einer <xref:System.Windows.Forms.WebBrowser> Steuerelement namens `webBrowser1` zum Hauptformular des Projekts.</span><span class="sxs-lookup"><span data-stu-id="a7625-116">Add a <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1` to the main form of your project.</span></span>  
   
-6.  Fügen Sie der Codedatei des Projekts folgenden Code hinzu.  
+6.  <span data-ttu-id="a7625-117">Fügen Sie den folgenden Code Codedatei des Projekts.</span><span class="sxs-lookup"><span data-stu-id="a7625-117">Add the following code to your project's code file.</span></span>  
   
     > [!IMPORTANT]
-    >  Stellen Sie sicher, dass der `webBrowser1_DocumentCompleted`\-Ereignishandler als Listener für das <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>\-Ereignis konfiguriert ist.  Doppelklicken Sie in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] auf das <xref:System.Windows.Forms.WebBrowser>\-Steuerelement. In einem Text\-Editor konfigurieren Sie den Listener programmgesteuert.  
+    >  <span data-ttu-id="a7625-118">Sicherstellen, dass die `webBrowser1_DocumentCompleted` Ereignishandler als konfiguriert ist, einen Listener für die <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="a7625-118">Ensure that the `webBrowser1_DocumentCompleted` event hander is configured as a listener for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="a7625-119">In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], doppelklicken Sie auf die <xref:System.Windows.Forms.WebBrowser> steuern; in einem Text-Editor, konfigurieren Sie den Listener programmgesteuert.</span><span class="sxs-lookup"><span data-stu-id="a7625-119">In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], double-click on the <xref:System.Windows.Forms.WebBrowser> control; in a text editor, configure the listener programmatically.</span></span>  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  Führen Sie das Projekt aus.  Bewegen Sie den Cursor über dem ersten `DIV`, um die Auswirkungen des Codes zu überprüfen.  
+7.  <span data-ttu-id="a7625-120">Führen Sie das Projekt aus.</span><span class="sxs-lookup"><span data-stu-id="a7625-120">Run the project.</span></span> <span data-ttu-id="a7625-121">Führen Sie den Cursor über die erste `DIV` ermöglicht, die Auswirkungen des Codes zu beobachten.</span><span class="sxs-lookup"><span data-stu-id="a7625-121">Run your cursor over the first `DIV` to observe the effects of the code.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird der vollständige Code für die `StyleGenerator`\-Klasse gezeigt, die einen vorhandenen Formatwert analysiert, das Hinzufügen, Ändern und Entfernen von Formaten unterstützt und einen neuen Formatwert mit den gewünschten Änderungen zurückgibt.  
+## <a name="example"></a><span data-ttu-id="a7625-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a7625-122">Example</span></span>  
+ <span data-ttu-id="a7625-123">Das folgende Codebeispiel zeigt den vollständigen Code für die `StyleGenerator` -Klasse, die eine vorhandene Formatwert analysiert, unterstützt das Hinzufügen, ändern und Entfernen von Formatvorlagen und einen neuen Style-Wert mit der angeforderten Änderungen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="a7625-123">The following code example shows the full code for the `StyleGenerator` class, which parses an existing style value, supports adding, changing, and removing styles, and returns a new style value with the requested changes.</span></span>  
   
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
  [!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="a7625-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a7625-124">See Also</span></span>  
  <xref:System.Windows.Forms.HtmlElement>

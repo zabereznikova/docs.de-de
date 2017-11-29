@@ -1,36 +1,42 @@
 ---
-title: "&#39;Connection&#39;-Ereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verbindungsereignisse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0e551a09ef6dc778f5dfab9ba8cf263f803556f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;Connection&#39;-Ereignisse
-Alle .NET Framework\-Datenanbieter verfügen über **Connection**\-Objekte mit zwei Ereignissen, mit denen Sie Informationsmeldungen aus einer Datenquelle abrufen oder eine Statusänderung eines **Connection**\-Objekts feststellen können.  In der folgenden Tabelle werden die Ereignisse des **Connection**\-Objekts beschrieben.  
+# <a name="connection-events"></a><span data-ttu-id="318a3-102">Verbindungsereignisse</span><span class="sxs-lookup"><span data-stu-id="318a3-102">Connection Events</span></span>
+<span data-ttu-id="318a3-103">Alle .NET Framework-Datenanbieter besitzen **Verbindung** Objekte mit zwei Ereignisse, die Sie verwenden können, um informationsmeldungen aus einer Datenquelle abzurufen oder um festzustellen, den Status des eine **Verbindung** hat geändert.</span><span class="sxs-lookup"><span data-stu-id="318a3-103">All of the .NET Framework data providers have **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed.</span></span> <span data-ttu-id="318a3-104">Die folgende Tabelle beschreibt die Ereignisse der **Verbindung** Objekt.</span><span class="sxs-lookup"><span data-stu-id="318a3-104">The following table describes the events of the **Connection** object.</span></span>  
   
-|Ereignis|Beschreibung|  
-|--------------|------------------|  
-|**InfoMessage**|Dieses Ereignis tritt auf, wenn eine Informationsmeldung aus einer Datenquelle zurückgegeben wird.  Bei Informationsmeldungen handelt es sich um Meldungen aus einer Datenquelle, die keine Ausnahme auslösen.|  
-|**StateChange**|Tritt auf, wenn sich der Status des **Connection**\-Objekts ändert.|  
+|<span data-ttu-id="318a3-105">Ereignis</span><span class="sxs-lookup"><span data-stu-id="318a3-105">Event</span></span>|<span data-ttu-id="318a3-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="318a3-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="318a3-107">**InfoMessage**</span><span class="sxs-lookup"><span data-stu-id="318a3-107">**InfoMessage**</span></span>|<span data-ttu-id="318a3-108">Dieses Ereignis tritt auf, wenn eine Informationsmeldung aus einer Datenquelle zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="318a3-108">Occurs when an informational message is returned from a data source.</span></span> <span data-ttu-id="318a3-109">Bei Informationsmeldungen handelt es sich um Meldungen aus einer Datenquelle, die keine Ausnahme auslösen.</span><span class="sxs-lookup"><span data-stu-id="318a3-109">Informational messages are messages from a data source that do not result in an exception being thrown.</span></span>|  
+|<span data-ttu-id="318a3-110">**StateChange**</span><span class="sxs-lookup"><span data-stu-id="318a3-110">**StateChange**</span></span>|<span data-ttu-id="318a3-111">Tritt auf, wenn der Status des der **Verbindung** Änderungen.</span><span class="sxs-lookup"><span data-stu-id="318a3-111">Occurs when the state of the **Connection** changes.</span></span>|  
   
-## Arbeiten mit dem "InfoMessage"\-Ereignis  
- Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis des <xref:System.Data.SqlClient.SqlConnection>\-Objekts können Warnungen und Informationsmeldungen aus einer SQL Server\-Datenquelle abgerufen werden.  Wenn von einer Datenquelle Fehler mit einem Schweregrad zwischen 11 und 16 zurückgegeben werden, wird eine Ausnahme ausgelöst.  Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis können jedoch Meldungen aus der Datenquelle abgerufen werden, die keinem Fehler zugewiesen sind.  Bei Microsoft SQL Server werden alle Meldungen mit einem Schweregrad von 10 oder weniger als Informationsmeldungen betrachtet und mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis aufgezeichnet.  Weitere Informationen finden Sie unter "Error Message Severity Levels" in der SQL Server\-Onlinedokumentation.  
+## <a name="working-with-the-infomessage-event"></a><span data-ttu-id="318a3-112">Arbeiten mit dem "InfoMessage"-Ereignis</span><span class="sxs-lookup"><span data-stu-id="318a3-112">Working with the InfoMessage Event</span></span>  
+ <span data-ttu-id="318a3-113">Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis des <xref:System.Data.SqlClient.SqlConnection>-Objekts können Warnungen und Informationsmeldungen aus einer SQL Server-Datenquelle abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="318a3-113">You can retrieve warnings and informational messages from a SQL Server data source using the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event of the <xref:System.Data.SqlClient.SqlConnection> object.</span></span> <span data-ttu-id="318a3-114">Wenn von einer Datenquelle Fehler mit einem Schweregrad zwischen 11 und 16 zurückgegeben werden, wird eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="318a3-114">Errors returned from the data source with a severity level of 11 through 16 cause an exception to be thrown.</span></span> <span data-ttu-id="318a3-115">Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis können jedoch Meldungen aus der Datenquelle abgerufen werden, die keinem Fehler zugewiesen sind.</span><span class="sxs-lookup"><span data-stu-id="318a3-115">However, the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event can be used to obtain messages from the data source that are not associated with an error.</span></span> <span data-ttu-id="318a3-116">Bei Microsoft SQL Server werden alle Meldungen mit einem Schweregrad von 10 oder weniger als Informationsmeldungen betrachtet und mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis aufgezeichnet.</span><span class="sxs-lookup"><span data-stu-id="318a3-116">In the case of Microsoft SQL Server, any error with a severity of 10 or less is considered to be an informational message, and can be captured by using the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event.</span></span> <span data-ttu-id="318a3-117">Weitere Informationen finden Sie unter "Error Message Severity Levels" in der SQL Server-Onlinedokumentation.</span><span class="sxs-lookup"><span data-stu-id="318a3-117">For more information, see the "Error Message Severity Levels" topic in SQL Server Books Online.</span></span>  
   
- Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis empfängt ein <xref:System.Data.SqlClient.SqlInfoMessageEventArgs>\-Objekt, das in der **Errors**\-Eigenschaft eine Auflistung der Meldungen von einer Datenquelle enthält.  Die **Error**\-Objekte in dieser Auflistung können nach der Fehlernummer und dem Meldungstext sowie der Quelle des Fehlers abgefragt werden.  Der .NET Framework\-Datenanbieter für SQL Server zeigt außerdem Details zu der Datenbank, der gespeicherten Prozedur und der Zeilennummer an, aus der die Meldung stammt.  
+ <span data-ttu-id="318a3-118">Die <xref:System.Data.SqlClient.SqlConnection.InfoMessage> -Ereignis empfängt ein <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> Objekt enthält, in dessen **Fehler** -Eigenschaft, die eine Auflistung von Nachrichten aus der Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="318a3-118">The <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event receives an <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> object containing, in its **Errors** property, a collection of the messages from the data source.</span></span> <span data-ttu-id="318a3-119">Sie können Abfragen, die **Fehler** Objekte in dieser Auflistung für den Fehlertext und dem Meldungstext sowie die Ursache des Fehlers.</span><span class="sxs-lookup"><span data-stu-id="318a3-119">You can query the **Error** objects in this collection for the error number and message text, as well as the source of the error.</span></span> <span data-ttu-id="318a3-120">Der .NET Framework-Datenanbieter für SQL Server zeigt außerdem Details zu der Datenbank, der gespeicherten Prozedur und der Zeilennummer an, aus der die Meldung stammt.</span><span class="sxs-lookup"><span data-stu-id="318a3-120">The .NET Framework Data Provider for SQL Server also includes detail about the database, stored procedure, and line number that the message came from.</span></span>  
   
-### Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie für das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis ein Ereignishandler hinzugefügt wird.  
+### <a name="example"></a><span data-ttu-id="318a3-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="318a3-121">Example</span></span>  
+ <span data-ttu-id="318a3-122">Im folgenden Codebeispiel wird veranschaulicht, wie für das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis ein Ereignishandler hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="318a3-122">The following code example shows how to add an event handler for the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event.</span></span>  
   
 ```vb  
 ' Assumes that connection represents a SqlConnection object.  
@@ -48,7 +54,6 @@ Private Shared Sub OnInfoMessage(sender As Object, _
     err.Procedure, err.Server, err.Message)  
   Next  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -68,21 +73,20 @@ protected static void OnInfoMessage(
    err.Procedure, err.Server, err.Message);  
   }  
 }  
-  
 ```  
   
-## Behandeln von Fehlern als "InfoMessages"  
- Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis wird i. d. R. nur für Informations\- und Warnmeldungen ausgelöst, die vom Server gesendet werden.  Bei einem tatsächlichen Fehler wird die Ausführung der **ExecuteNonQuery**\-Methode oder der **ExecuteReader**\-Methode, die den Servervorgang initialisiert hat, angehalten und eine Ausnahme ausgelöst.  
+## <a name="handling-errors-as-infomessages"></a><span data-ttu-id="318a3-123">Behandeln von Fehlern als "InfoMessages"</span><span class="sxs-lookup"><span data-stu-id="318a3-123">Handling Errors as InfoMessages</span></span>  
+ <span data-ttu-id="318a3-124">Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis wird i. d. R. nur für Informations- und Warnmeldungen ausgelöst, die vom Server gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="318a3-124">The <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event will normally fire only for informational and warning messages that are sent from the server.</span></span> <span data-ttu-id="318a3-125">Jedoch wenn ein tatsächlicher Fehler auftritt, die Ausführung der **ExecuteNonQuery** oder **ExecuteReader** Methode, die den Servervorgang initialisiert hat, angehalten, und eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="318a3-125">However, when an actual error occurs, the execution of the **ExecuteNonQuery** or **ExecuteReader** method that initiated the server operation is halted and an exception is thrown.</span></span>  
   
- Wenn Sie die Verarbeitung der restlichen Anweisungen in einem Befehl unabhängig von den vom Server erzeugten Fehlern fortsetzen möchten, legen sie die <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A>\-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection> auf `true` fest.  Bei dieser Vorgehensweise wird bei Fehlern von der Verbindung das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis ausgelöst, anstatt eine Ausnahme auszulösen und die Verarbeitung zu unterbrechen.  Die Clientanwendung kann dann dieses Ereignis behandeln und auf Fehlerbedingungen reagieren.  
+ <span data-ttu-id="318a3-126">Wenn Sie die Verarbeitung der restlichen Anweisungen in einem Befehl unabhängig von den vom Server erzeugten Fehlern fortsetzen möchten, legen sie die <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A>-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection> auf `true` fest.</span><span class="sxs-lookup"><span data-stu-id="318a3-126">If you want to continue processing the rest of the statements in a command regardless of any errors produced by the server, set the <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> property of the <xref:System.Data.SqlClient.SqlConnection> to `true`.</span></span> <span data-ttu-id="318a3-127">Bei dieser Vorgehensweise wird bei Fehlern von der Verbindung das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis ausgelöst, anstatt eine Ausnahme auszulösen und die Verarbeitung zu unterbrechen.</span><span class="sxs-lookup"><span data-stu-id="318a3-127">Doing this causes the connection to fire the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event for errors instead of throwing an exception and interrupting processing.</span></span> <span data-ttu-id="318a3-128">Die Clientanwendung kann dann dieses Ereignis behandeln und auf Fehlerbedingungen reagieren.</span><span class="sxs-lookup"><span data-stu-id="318a3-128">The client application can then handle this event and respond to error conditions.</span></span>  
   
 > [!NOTE]
->  Wenn aufgrund eines Fehlers mit einem Schweregrad von 17 oder höher der Server die Verarbeitung des Befehls abbricht, muss dieser Fehler als Ausnahme behandelt werden.  In diesem Fall wird unabhängig davon, wie der Fehler im <xref:System.Data.SqlClient.SqlConnection.InfoMessage>\-Ereignis behandelt wird, eine Ausnahme ausgelöst.  
+>  <span data-ttu-id="318a3-129">Wenn aufgrund eines Fehlers mit einem Schweregrad von 17 oder höher der Server die Verarbeitung des Befehls abbricht, muss dieser Fehler als Ausnahme behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="318a3-129">An error with a severity level of 17 or above that causes the server to stop processing the command must be handled as an exception.</span></span> <span data-ttu-id="318a3-130">In diesem Fall wird unabhängig davon, wie der Fehler im <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis behandelt wird, eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="318a3-130">In this case, an exception is thrown regardless of how the error is handled in the <xref:System.Data.SqlClient.SqlConnection.InfoMessage> event.</span></span>  
   
-## Arbeiten mit dem "StateChange"\-Ereignis  
- Das **StateChange**\-Ereignis tritt auf, wenn sich der Status eines **Connection**\-Objekts ändert.  Das **StateChange**\-Ereignis erhält <xref:System.Data.StateChangeEventArgs>, mit denen Sie anhand der **OriginalState**\-Eigenschaft und der **CurrentState**\-Eigenschaft Statusänderungen des **Connection**\-Objekts ermitteln können.  Die **OriginalState**\-Eigenschaft ist eine <xref:System.Data.ConnectionState>\-Enumeration, die den Status des **Connection**\-Objekts vor der Änderung angibt.  Die **CurrentState**\-Eigenschaft ist eine <xref:System.Data.ConnectionState>\-Enumeration, die den Status des **Connection**\-Objekts nach der Änderung angibt.  
+## <a name="working-with-the-statechange-event"></a><span data-ttu-id="318a3-131">Arbeiten mit dem "StateChange"-Ereignis</span><span class="sxs-lookup"><span data-stu-id="318a3-131">Working with the StateChange Event</span></span>  
+ <span data-ttu-id="318a3-132">Die **StateChange** Ereignis tritt auf, wenn der Status der eine **Verbindung** Änderungen.</span><span class="sxs-lookup"><span data-stu-id="318a3-132">The **StateChange** event occurs when the state of a **Connection** changes.</span></span> <span data-ttu-id="318a3-133">Die **StateChange** -Ereignis empfängt <xref:System.Data.StateChangeEventArgs> , mit denen Sie die Änderung am Zustand des bestimmen die **Verbindung** mithilfe der **OriginalState** und **CurrentState** Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="318a3-133">The **StateChange** event receives <xref:System.Data.StateChangeEventArgs> that enable you to determine the change in state of the **Connection** by using the **OriginalState** and **CurrentState** properties.</span></span> <span data-ttu-id="318a3-134">Die **OriginalState** Eigenschaft ist ein <xref:System.Data.ConnectionState> -Enumeration, der den Status der gibt an die **Verbindung** vor der Änderung.</span><span class="sxs-lookup"><span data-stu-id="318a3-134">The **OriginalState** property is a <xref:System.Data.ConnectionState> enumeration that indicates the state of the **Connection** before it changed.</span></span> <span data-ttu-id="318a3-135">**CurrentState** ist ein <xref:System.Data.ConnectionState> -Enumeration, der den Status der gibt an die **Verbindung** nach der Änderung.</span><span class="sxs-lookup"><span data-stu-id="318a3-135">**CurrentState** is a <xref:System.Data.ConnectionState> enumeration that indicates the state of the **Connection** after it changed.</span></span>  
   
- Im folgenden Codebeispiel wird mit dem **StateChange**\-Ereignis eine Meldung in die Konsole geschrieben, sobald sich der Status des **Connection**\-Objekts ändert.  
+ <span data-ttu-id="318a3-136">Im folgenden Codebeispiel wird mit der **StateChange** Ereignis, um eine Nachricht in die Konsole geschrieben bei den Status der **Verbindung** Änderungen.</span><span class="sxs-lookup"><span data-stu-id="318a3-136">The following code example uses the **StateChange** event to write a message to the console when the state of the **Connection** changes.</span></span>  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  
@@ -96,7 +100,6 @@ Protected Shared Sub OnStateChange( _
   "The current Connection state has changed from {0} to {1}.", _  
   args.OriginalState, args.CurrentState)  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -112,6 +115,6 @@ protected static void OnStateChange(object sender,
 }  
 ```  
   
-## Siehe auch  
- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="318a3-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="318a3-137">See Also</span></span>  
+ [<span data-ttu-id="318a3-138">Aufbauen der Verbindung zu einer Datenquelle</span><span class="sxs-lookup"><span data-stu-id="318a3-138">Connecting to a Data Source</span></span>](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [<span data-ttu-id="318a3-139">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="318a3-139">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

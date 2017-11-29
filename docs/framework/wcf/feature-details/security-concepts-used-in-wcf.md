@@ -1,58 +1,61 @@
 ---
-title: "In WCF verwendete Sicherheitsbegriffe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: In WCF verwendete Sicherheitsbegriffe
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0f490fc09ada9ee80cb6cee12e9e9061e820026e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# In WCF verwendete Sicherheitsbegriffe
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Sicherheit baut auf Begriffen auf, die bereits in Gebrauch sind und in diversen Sicherheitsinfrastrukturen eingesetzt werden.  
+# <a name="security-concepts-used-in-wcf"></a><span data-ttu-id="0c585-102">In WCF verwendete Sicherheitsbegriffe</span><span class="sxs-lookup"><span data-stu-id="0c585-102">Security Concepts Used in WCF</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="0c585-103">-Sicherheit baut auf Begriffen auf, die bereits in Gebrauch sind und in diversen Sicherheitsinfrastrukturen eingesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="0c585-103"> security is built upon concepts already in use and deployed in various security infrastructures.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt einige jener Infrastrukturen, z. B. Secure Sockets Layer \(SSL\) über HTTP \(HTTPS\).[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet jedoch nicht nur Unterstützung für bestehende Sicherheitsinfrastrukturen, sondern implementiert auch neuere interoperable Sicherheitsstandards \(wie WS\-Sicherheit\) über SOAP\-codierte Nachrichten.Die zugrunde liegenden Sicherheitskonzepte sind identisch, unabhängig davon, ob Sie bestehende Mechanismen verwenden oder neue interoperable Standards.Das Verständnis der Konzepte, auf denen die bestehenden Infrastrukturen und neueren Standards beruhen, ist entscheidend für die Implementierung des besten Sicherheitsmodells für eine Anwendung.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="0c585-104"> unterstützt einige jener Infrastrukturen, z. B. Secure Sockets Layer (SSL) über HTTP (HTTPS).</span><span class="sxs-lookup"><span data-stu-id="0c585-104"> supports some of those infrastructures, such as Secure Sockets Layer (SSL) over HTTP (HTTPS).</span></span> <span data-ttu-id="0c585-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bietet jedoch nicht nur Unterstützung für bestehende Sicherheitsinfrastrukturen, sondern implementiert auch neuere interoperable Sicherheitsstandards (wie WS-Sicherheit) über SOAP-codierte Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="0c585-105">However, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] goes beyond supporting existing security infrastructures by implementing newer interoperable security standards (such as WS-Security) over SOAP-encoded messages.</span></span> <span data-ttu-id="0c585-106">Die zugrunde liegenden Sicherheitskonzepte sind identisch, unabhängig davon, ob Sie bestehende Mechanismen verwenden oder neue interoperable Standards.</span><span class="sxs-lookup"><span data-stu-id="0c585-106">Whether you are using existing mechanisms or new interoperable standards, the security concepts behind both are the same.</span></span> <span data-ttu-id="0c585-107">Das Verständnis der Konzepte, auf denen die bestehenden Infrastrukturen und neueren Standards beruhen, ist entscheidend für die Implementierung des besten Sicherheitsmodells für eine Anwendung.</span><span class="sxs-lookup"><span data-stu-id="0c585-107">Understanding the concepts behind existing infrastructures and the newer standards is central to implementing the best security model for an application.</span></span>  
   
-## Einführung in die Sicherheit für WCF Web Services  
- Die Microsoft Patterns and Practices\-Gruppe hat ein detailliertes Whitepaper zu WCF\-Sicherheitsempfehlungen geschrieben, das Ihnen unter [WCF\-Sicherheitshandbuch](http://go.microsoft.com/fwlink/?LinkId=210210) zum Download zur Verfügung steht.In diesem Whitepaper werden die grundlegenden Sicherheitskonzepte in Zusammenhang mit Webdiensten, die wichtigsten WCF\-Sicherheitskonzepte, Szenarien für Intranetanwendungen und Szenarien für Internetanwendungen beschrieben.  
+## <a name="introduction-to-security-for-wcf-web-services"></a><span data-ttu-id="0c585-108">Einführung in die Sicherheit für WCF Web Services</span><span class="sxs-lookup"><span data-stu-id="0c585-108">Introduction to Security for WCF Web Services</span></span>  
+ <span data-ttu-id="0c585-109">Die Microsoft Patterns and Practices-Gruppe hat eine ausführliche Whitepaper über WCF-Sicherheitsleitfaden also zum Download zur Verfügung: [WCF-Sicherheitshandbuch](http://go.microsoft.com/fwlink/?LinkId=210210).</span><span class="sxs-lookup"><span data-stu-id="0c585-109">The Microsoft Patterns and Practices group wrote an in-depth whitepaper on WCF security guidance which is available for download here: [WCF Security Guide](http://go.microsoft.com/fwlink/?LinkId=210210).</span></span> <span data-ttu-id="0c585-110">In diesem Whitepaper werden die grundlegenden Sicherheitskonzepte in Zusammenhang mit Webdiensten, die wichtigsten WCF-Sicherheitskonzepte, Szenarien für Intranetanwendungen und Szenarien für Internetanwendungen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="0c585-110">This whitepaper describes the fundamental security concepts as they relate to web services, key WCF security concepts, intranet application scenarios, and internet application scenarios.</span></span>  
   
-## Branchenweite Sicherheitsspezifikationen  
+## <a name="industry-wide-security-specifications"></a><span data-ttu-id="0c585-111">Branchenweite Sicherheitsspezifikationen</span><span class="sxs-lookup"><span data-stu-id="0c585-111">Industry-Wide Security Specifications</span></span>  
   
-### Public Key\-Infrastruktur  
- Die Public Key\-Infrastruktur \(PKI\) ist ein System von digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, von dem jede an einer elektronischen Transaktion beteiligte Partei mittels Verschlüsselung mit öffentlichem Schlüssel überprüft und authentifiziert wird.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] unter [Windows Server 2008 R2\-Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=210211).  
+### <a name="public-key-infrastructure"></a><span data-ttu-id="0c585-112">Public Key-Infrastruktur</span><span class="sxs-lookup"><span data-stu-id="0c585-112">Public Key Infrastructure</span></span>  
+ <span data-ttu-id="0c585-113">Die Public Key-Infrastruktur (PKI) ist ein System von digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen, von dem jede an einer elektronischen Transaktion beteiligte Partei mittels Verschlüsselung mit öffentlichem Schlüssel überprüft und authentifiziert wird.</span><span class="sxs-lookup"><span data-stu-id="0c585-113">Public Key Infrastructure (PKI) is a system of digital certificates, certification authorities, and other registration authorities that verify and authenticate each party involved in an electronic transaction through the use of public key cryptography.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="0c585-114">[Windows Server 2008 R2-Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkId=210211).</span><span class="sxs-lookup"><span data-stu-id="0c585-114"> [Windows Server 2008 R2 Certificate Services](http://go.microsoft.com/fwlink/?LinkId=210211).</span></span>  
   
-### Kerberos\-Protokoll  
- Das *Kerberos\-Protokoll* ist eine Spezifikation für das Erstellen eines Sicherheitsmechanismus, durch den Benutzer in einer Windows\-Domäne authentifiziert werden.Es ermöglicht es einem Benutzer, in einer Domäne einen sicheren Kontext mit anderen Entitäten zu erstellen.Windows 2000\-Plattformen und höher verwenden das Kerberos\-Protokoll standardmäßig.Das Verständnis der Mechanismen dieses Systems ist bei der Erstellung eines Diensts hilfreich, der mit Intranetclients interagiert.Da die *Webdienstsicherheit\-Kerberos\-Bindung* weit verbreitet ist, können Sie das Kerberos\-Protokoll verwenden, um mit Internetclients zu kommunizieren \(d. h. das Kerberos\-Protokoll ist interoperabel\).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Implementierung des Kerberos\-Protokolls in Windows findenSie unter [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+### <a name="kerberos-protocol"></a><span data-ttu-id="0c585-115">Kerberos-Protokoll</span><span class="sxs-lookup"><span data-stu-id="0c585-115">Kerberos Protocol</span></span>  
+ <span data-ttu-id="0c585-116">Die *Kerberos-Protokoll* ist eine Spezifikation für das Erstellen eines Sicherheitsmechanismus, die Benutzer in einer Windows-Domäne authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="0c585-116">The *Kerberos protocol* is a specification for creating a security mechanism that authenticates users on a Windows domain.</span></span> <span data-ttu-id="0c585-117">Es ermöglicht es einem Benutzer, in einer Domäne einen sicheren Kontext mit anderen Entitäten zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0c585-117">It allows a user to establish a secure context with other entities within a domain.</span></span> <span data-ttu-id="0c585-118">Windows 2000-Plattformen und höher verwenden das Kerberos-Protokoll standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="0c585-118">Windows 2000 and later platforms use the Kerberos protocol by default.</span></span> <span data-ttu-id="0c585-119">Das Verständnis der Mechanismen dieses Systems ist bei der Erstellung eines Diensts hilfreich, der mit Intranetclients interagiert.</span><span class="sxs-lookup"><span data-stu-id="0c585-119">Understanding the mechanisms of the system is useful when creating a service that will interact with intranet clients.</span></span> <span data-ttu-id="0c585-120">Da die *Web Services Security-Kerberos-Bindung* weit wird veröffentlicht, können Sie das Kerberos-Protokoll um mit Internetclients zu kommunizieren (d. h. das Kerberos-Protokoll ist interoperabel).</span><span class="sxs-lookup"><span data-stu-id="0c585-120">In addition, since the *Web Services Security Kerberos Binding* is widely published, you can use the Kerberos protocol to communicate with Internet clients (that is, the Kerberos protocol is interoperable).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="0c585-121">das Kerberos-Protokoll in Windows implementiert ist, finden Sie unter [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).</span><span class="sxs-lookup"><span data-stu-id="0c585-121"> how the Kerberos protocol is implemented in Windows, see  [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).</span></span>  
   
-### X.509\-Zertifikate  
- Bei X.509\-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird.Weitere Informationen zu X.509\-Zertifikaten finden Sie unter [X.509\-Zertifikate mit öffentlichem Schlüssel](http://go.microsoft.com/fwlink/?LinkId=210213).X.509\-Zertifikate werden in einem Zertifikatspeicher gespeichert.Ein Computer mit Windows\-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu den verschiedenen Speichern finden Sie unter [Zertifikatspeicher](http://go.microsoft.com/fwlink/?LinkID=87787).  
+### <a name="x509-certificates"></a><span data-ttu-id="0c585-122">X.509-Zertifikate</span><span class="sxs-lookup"><span data-stu-id="0c585-122">X.509 Certificates</span></span>  
+ <span data-ttu-id="0c585-123">Bei X.509-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird.</span><span class="sxs-lookup"><span data-stu-id="0c585-123">X.509 certificates are a primary credential form used in security applications.</span></span> <span data-ttu-id="0c585-124">Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://go.microsoft.com/fwlink/?LinkId=210213).</span><span class="sxs-lookup"><span data-stu-id="0c585-124">For more information on X.509 certificates see [X.509 Public Key Certificates](http://go.microsoft.com/fwlink/?LinkId=210213).</span></span> <span data-ttu-id="0c585-125">X.509-Zertifikate werden in einem Zertifikatspeicher gespeichert.</span><span class="sxs-lookup"><span data-stu-id="0c585-125">X.509 certificates are stored within a certificate store.</span></span> <span data-ttu-id="0c585-126">Ein Computer mit Windows-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen.</span><span class="sxs-lookup"><span data-stu-id="0c585-126">A computer running Windows has several kinds of certificate stores, each with a different purpose.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="0c585-127">die unterschiedliche Speicher finden Sie unter [Zertifikatspeichern](http://go.microsoft.com/fwlink/?LinkID=87787).</span><span class="sxs-lookup"><span data-stu-id="0c585-127"> the different stores, see [Certificate Stores](http://go.microsoft.com/fwlink/?LinkID=87787).</span></span>  
   
-## Sicherheitsspezifikationen für Webdienste  
- Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste.Eine vollständige Liste der vom System definierten Bindungen und unterstützten Webdienstspezifikationen finden Sie unter [Durc vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+## <a name="web-services-security-specifications"></a><span data-ttu-id="0c585-128">Sicherheitsspezifikationen für Webdienste</span><span class="sxs-lookup"><span data-stu-id="0c585-128">Web Services Security Specifications</span></span>  
+ <span data-ttu-id="0c585-129">Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste.</span><span class="sxs-lookup"><span data-stu-id="0c585-129">The system-defined bindings support many commonly used web services security specifications.</span></span> <span data-ttu-id="0c585-130">Eine vollständige Liste der vom System bereitgestellte Bindungen und die Webdienstspezifikationen, die sie unterstützen finden Sie unter: [unterstützte Webdienstprotokolle vom sicherheitsbindungsarten Interoperabilitätsbindungen](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)</span><span class="sxs-lookup"><span data-stu-id="0c585-130">For a complete list of system-provided bindings and the web services specifications they support see: [Web Services Protocols Supported by System-Provided Interoperability Bindings](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)</span></span>  
   
-## Zugriffssteuerungsmechanismen  
- WCF bietet mehrere Möglichkeiten zum Steuern des Zugriffs auf einen Dienst oder Vorgang.Dazu zählen:  
+## <a name="access-control-mechanisms"></a><span data-ttu-id="0c585-131">Zugriffssteuerungsmechanismen</span><span class="sxs-lookup"><span data-stu-id="0c585-131">Access Control Mechanisms</span></span>  
+ <span data-ttu-id="0c585-132">WCF bietet mehrere Möglichkeiten zum Steuern des Zugriffs auf einen Dienst oder Vorgang.</span><span class="sxs-lookup"><span data-stu-id="0c585-132">WCF provides a number of ways to control access to a service or operation.</span></span> <span data-ttu-id="0c585-133">Dazu zählen:</span><span class="sxs-lookup"><span data-stu-id="0c585-133">Among them are</span></span>  
   
-1.  <xref:System.Security.Permissions.PrinciplePermissionAttribute>  
+1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET\-Mitgliedschaftsanbieter  
+2.  <span data-ttu-id="0c585-134">ASP.NET-Mitgliedschaftsanbieter</span><span class="sxs-lookup"><span data-stu-id="0c585-134">ASP.NET Membership Provider</span></span>  
   
-3.  ASP.NET\-Rollenanbieter  
+3.  <span data-ttu-id="0c585-135">ASP.NET-Rollenanbieter</span><span class="sxs-lookup"><span data-stu-id="0c585-135">ASP.NET Role Provider</span></span>  
   
-4.  Autorisierungs\-Manager  
+4.  <span data-ttu-id="0c585-136">Autorisierungs-Manager</span><span class="sxs-lookup"><span data-stu-id="0c585-136">Authorization Manager</span></span>  
   
-5.  Identitätsmodell  
+5.  <span data-ttu-id="0c585-137">Identitätsmodell</span><span class="sxs-lookup"><span data-stu-id="0c585-137">Identity Model</span></span>  
   
- Weitere Informationen zu diesen Themen finden Sie unter [Zugriffssteuerungsmechanismen](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md).  
+ <span data-ttu-id="0c585-138">Weitere Informationen zu diesen Themen finden Sie unter [Zugriffssteuerungsmechanismen](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)</span><span class="sxs-lookup"><span data-stu-id="0c585-138">For more information on these topics see, [Access Control Mechanisms](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)</span></span>  
   
-## Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="0c585-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c585-139">See Also</span></span>  
+ [<span data-ttu-id="0c585-140">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="0c585-140">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="0c585-141">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="0c585-141">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

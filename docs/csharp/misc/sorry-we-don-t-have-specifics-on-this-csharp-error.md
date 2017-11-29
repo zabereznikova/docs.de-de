@@ -1,9 +1,8 @@
 ---
-title: Leider wir haben keine Einzelheiten zu diesem Fehler c# | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: "Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -178,7 +177,6 @@ f1_keywords:
 - CS1912
 - CS0743
 - CS2016
-- CS4009
 - CS0315
 - CS1609
 - CS1102
@@ -875,54 +873,46 @@ f1_keywords:
 - CS0057
 - CS0589
 - CS0656
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- errors [C#], additional information
+- CS8038
+- CS8132
+- CS8136
+- CS8137
+- CS8139
+- CS8156
+- CS8168
+- CS8172
+- CS8179
+helpviewer_keywords: errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Leider haben wir keine Einzelheiten zu diesem C#-Fehler
-Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="a07b6-102">Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben</span><span class="sxs-lookup"><span data-stu-id="a07b6-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="a07b6-103">Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler.</span><span class="sxs-lookup"><span data-stu-id="a07b6-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="a07b6-104">Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="a07b6-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="a07b6-105">Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:</span><span class="sxs-lookup"><span data-stu-id="a07b6-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [Visual C#-Sprache](http://go.microsoft.com/fwlink/?LinkId=146921)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)]-Sprachsyntax und -Compiler.  
+ [<span data-ttu-id="a07b6-106">Visual C# Language</span><span class="sxs-lookup"><span data-stu-id="a07b6-106">Visual C# Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ <span data-ttu-id="a07b6-107">Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Sprachsyntax und -Compiler.</span><span class="sxs-lookup"><span data-stu-id="a07b6-107">Provides a forum for questions about and general discussions of the [!INCLUDE[csprcs](~/includes/csprcs-md.md)] language syntax and compiler.</span></span>  
   
- [Visual C#-IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]-Umgebung.  
+ [<span data-ttu-id="a07b6-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="a07b6-108">Visual C# IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ <span data-ttu-id="a07b6-109">Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Umgebung.</span><span class="sxs-lookup"><span data-stu-id="a07b6-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
   
- [Visual c# Allgemein](http://go.microsoft.com/fwlink/?LinkId=146920)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)], die in anderen Foren nicht diskutiert werden.  
+ [<span data-ttu-id="a07b6-110">Visual C# General</span><span class="sxs-lookup"><span data-stu-id="a07b6-110">Visual C# General</span></span>](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ <span data-ttu-id="a07b6-111">Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)], die in anderen Foren nicht diskutiert werden.</span><span class="sxs-lookup"><span data-stu-id="a07b6-111">Provides a forum for questions about and issues with [!INCLUDE[csprcs](~/includes/csprcs-md.md)] that are not discussed in other forums.</span></span>  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ [<span data-ttu-id="a07b6-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="a07b6-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="a07b6-113">Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a07b6-113">Provides a forum for questions about and issues with [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span></span>  
   
- Siehe auch:  
- [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="a07b6-114">Siehe auch:</span><span class="sxs-lookup"><span data-stu-id="a07b6-114">Also see:</span></span>  
+ [<span data-ttu-id="a07b6-115">Zusätzliche Ressourcen für Visual C#-Programmierer</span><span class="sxs-lookup"><span data-stu-id="a07b6-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)   
- [C#-Referenz](../../csharp/language-reference/index.md)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="a07b6-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a07b6-116">See Also</span></span>  
+ [<span data-ttu-id="a07b6-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="a07b6-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a07b6-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="a07b6-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="a07b6-119">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="a07b6-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+ [<span data-ttu-id="a07b6-120">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="a07b6-120">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

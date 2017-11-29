@@ -1,67 +1,71 @@
 ---
-title: "Gewusst wie: Abrufen von Daten aus der Zwischenablage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zwischenablage, Abrufen von Daten"
-  - "Einfügen von Zwischenablagedaten"
+title: 'Gewusst wie: Abrufen von Daten aus der Zwischenablage'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- pasting Clipboard data
+- Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c2f71c6738f19e70826b95626377097de0cd9b3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen von Daten aus der Zwischenablage
-Die <xref:System.Windows.Forms.Clipboard>\-Klasse stellt Methoden für den Zugriff auf die Zwischenablage des Windows\-Betriebssystems bereit.  Viele Anwendungen verwenden die Zwischenablage als temporären Speicher für Daten.  In Textverarbeitungsprogrammen wird sie beispielsweise während der Operationen Ausschneiden, Kopieren und Einfügen eingesetzt.  Die Zwischenablage ist auch hilfreich, um Informationen von einer Anwendung in eine andere zu übertragen.  
+# <a name="how-to-retrieve-data-from-the-clipboard"></a><span data-ttu-id="19c83-102">Gewusst wie: Abrufen von Daten aus der Zwischenablage</span><span class="sxs-lookup"><span data-stu-id="19c83-102">How to: Retrieve Data from the Clipboard</span></span>
+<span data-ttu-id="19c83-103">Die <xref:System.Windows.Forms.Clipboard> Klasse enthält Methoden, die Sie für die Interaktion mit der Zwischenablage-Feature des Windows-Betriebssystems verwenden können.</span><span class="sxs-lookup"><span data-stu-id="19c83-103">The <xref:System.Windows.Forms.Clipboard> class provides methods that you can use to interact with the Windows operating system Clipboard feature.</span></span> <span data-ttu-id="19c83-104">Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten.</span><span class="sxs-lookup"><span data-stu-id="19c83-104">Many applications use the Clipboard as a temporary repository for data.</span></span> <span data-ttu-id="19c83-105">Beispielsweise verwenden Textverarbeitungsprogramme Zwischenablage während Ausschneide- und Einfügevorgänge.</span><span class="sxs-lookup"><span data-stu-id="19c83-105">For example, word processors use the Clipboard during cut-and-paste operations.</span></span> <span data-ttu-id="19c83-106">Die Zwischenablage ist auch nützlich für Daten aus einer Anwendung in eine andere übertragen.</span><span class="sxs-lookup"><span data-stu-id="19c83-106">The Clipboard is also useful for transferring information from one application to another.</span></span>  
   
- Einige Anwendungen speichern Daten in mehreren Formaten in der Zwischenablage, um die Anzahl weiterer Anwendungen zu erhöhen, die diese Daten nutzen können.  Ein Zwischenablageformat ist eine Zeichenfolge zur Kennzeichnung des Formats.  Eine Anwendung, die dieses Format verwendet, kann die zugeordneten Daten in der Zwischenablage abrufen.  Die <xref:System.Windows.Forms.DataFormats>\-Klasse stellt vordefinierte Formatnamen bereit.  Sie können auch eigene Formatnamen verwenden oder den Typ eines Objekts als Format verwenden.  Weitere Informationen zum Hinzufügen von Daten zur Zwischenablage finden Sie unter [Gewusst wie: Hinzufügen von Daten zur Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).  
+ <span data-ttu-id="19c83-107">Einige Anwendungen speichern Daten in der Zwischenablage in verschiedenen Formaten, um die Anzahl der anderen Anwendungen zu erhöhen, die möglicherweise die Daten verwenden können.</span><span class="sxs-lookup"><span data-stu-id="19c83-107">Some applications store data on the Clipboard in multiple formats to increase the number of other applications that can potentially use the data.</span></span> <span data-ttu-id="19c83-108">Ein Zwischenablageformat ist eine Zeichenfolge, die das Format bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="19c83-108">A Clipboard format is a string that identifies the format.</span></span> <span data-ttu-id="19c83-109">Eine Anwendung, die das angegebene Format wird verwendet, kann die zugehörigen Daten in der Zwischenablage abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="19c83-109">An application that uses the identified format can retrieve the associated data on the Clipboard.</span></span> <span data-ttu-id="19c83-110">Die <xref:System.Windows.Forms.DataFormats> Klasse bietet vordefinierte Formatnamen für Ihre Verwendung.</span><span class="sxs-lookup"><span data-stu-id="19c83-110">The <xref:System.Windows.Forms.DataFormats> class provides predefined format names for your use.</span></span> <span data-ttu-id="19c83-111">Sie können auch eigene Formatnamen verwenden oder den Typ eines Objekts als Format.</span><span class="sxs-lookup"><span data-stu-id="19c83-111">You can also use your own format names or use an object's type as its format.</span></span> <span data-ttu-id="19c83-112">Informationen zum Hinzufügen von Daten in die Zwischenablage, finden Sie unter [wie: Hinzufügen von Daten in die Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="19c83-112">For information about adding data to the Clipboard, see [How to: Add Data to the Clipboard](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).</span></span>  
   
- Um festzustellen, ob die Zwischenablage Daten in einem bestimmten Format enthält, verwenden Sie eine der `Contains`*Format*\-Methoden oder die <xref:System.Windows.Forms.Clipboard.GetData%2A>\-Methode.  Um Daten aus der Zwischenablage abzurufen, verwenden Sie eine der `Get`*Format*\-Methoden oder die <xref:System.Windows.Forms.Clipboard.GetData%2A>\-Methode.  Diese Methoden sind neu in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+ <span data-ttu-id="19c83-113">Um zu bestimmen, ob die Zwischenablage Daten in einem bestimmten Format enthält, verwenden Sie eine von der `Contains` *Format* Methoden oder die <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-113">To determine whether the Clipboard contains data in a particular format, use one of the `Contains`*Format* methods or the <xref:System.Windows.Forms.Clipboard.GetData%2A> method.</span></span> <span data-ttu-id="19c83-114">Um Daten aus der Zwischenablage abzurufen, verwenden Sie eine von der `Get` *Format* Methoden oder <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-114">To retrieve data from the Clipboard, use one of the `Get`*Format* methods or the <xref:System.Windows.Forms.Clipboard.GetData%2A> method.</span></span> <span data-ttu-id="19c83-115">Diese Methoden sind neu in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="19c83-115">These methods are new in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
- Um mit Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] auf Daten in der Zwischenablage zuzugreifen, verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>\-Methode und rufen die Methoden des zurückgegebenen <xref:System.Windows.Forms.IDataObject> auf.  Um festzustellen, ob ein bestimmtes Format im zurückgegebenen Objekt verfügbar ist, rufen Sie beispielsweise die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>\-Methode auf.  
+ <span data-ttu-id="19c83-116">Um den Zugriff auf Daten aus der Zwischenablage mit Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> Methode und rufen Sie die Methoden des zurückgegebenen <xref:System.Windows.Forms.IDataObject>.</span><span class="sxs-lookup"><span data-stu-id="19c83-116">To access data from the Clipboard by using versions earlier than [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], use the <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> method and call the methods of the returned <xref:System.Windows.Forms.IDataObject>.</span></span> <span data-ttu-id="19c83-117">Um zu bestimmen, ob ein bestimmtes Format im zurückgegebenen Objekt verfügbar ist, rufen Sie z. B. die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-117">To determine whether a particular format is available in the returned object, for example, call the <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> method.</span></span>  
   
 > [!NOTE]
->  Die Systemzwischenablage ist für alle Windows\-basierten Anwendungen freigegeben.  Aus diesem Grund kann sich der Inhalt ändern, wenn Sie zu einer anderen Anwendung wechseln.  
+>  <span data-ttu-id="19c83-118">Alle Windows-basierten Anwendungen Freigabe der Zwischenablage des Systems.</span><span class="sxs-lookup"><span data-stu-id="19c83-118">All Windows-based applications share the system Clipboard.</span></span> <span data-ttu-id="19c83-119">Aus diesem Grund werden die Inhalte können geändert werden, beim Wechsel zu einer anderen Anwendung.</span><span class="sxs-lookup"><span data-stu-id="19c83-119">Therefore, the contents are subject to change when you switch to another application.</span></span>  
 >   
->  Die <xref:System.Windows.Forms.Clipboard>\-Klasse kann nur in Threads verwendet werden, für die der STA\-Modus \(Single Thread Apartment\) aktiviert wurde.  Um diese Klasse zu verwenden, stellen Sie sicher, dass die `Main`\-Methode mit dem <xref:System.STAThreadAttribute>\-Attribut gekennzeichnet ist.  
+>  <span data-ttu-id="19c83-120">Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt.</span><span class="sxs-lookup"><span data-stu-id="19c83-120">The <xref:System.Windows.Forms.Clipboard> class can only be used in threads set to single thread apartment (STA) mode.</span></span> <span data-ttu-id="19c83-121">Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.</span><span class="sxs-lookup"><span data-stu-id="19c83-121">To use this class, ensure that your `Main` method is marked with the <xref:System.STAThreadAttribute> attribute.</span></span>  
   
-### So rufen Sie Daten in einem einzelnen allgemeinen Format aus der Zwischenablage ab  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a><span data-ttu-id="19c83-122">Zum Abrufen von Daten aus der Zwischenablage in einem einzelnen, gemeinsamen-format</span><span class="sxs-lookup"><span data-stu-id="19c83-122">To retrieve data from the Clipboard in a single, common format</span></span>  
   
-1.  Verwenden Sie die Methoden <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A> oder <xref:System.Windows.Forms.Clipboard.GetText%2A>.  Optional können Sie zuerst auch die entsprechenden `Contains`*Format*\-Methoden verwenden, um festzustellen, ob Daten in einem bestimmten Format verfügbar sind.  Diese Methoden sind nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] verfügbar.  
+1.  <span data-ttu-id="19c83-123">Verwenden der <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, oder <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-123">Use the <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, or <xref:System.Windows.Forms.Clipboard.GetText%2A> method.</span></span> <span data-ttu-id="19c83-124">Verwenden Sie optional das entsprechende `Contains` *Format* Methoden zuerst an, um zu bestimmen, ob Daten in einem bestimmten Format verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="19c83-124">Optionally, use the corresponding `Contains`*Format* methods first to determine whether data is available in a particular format.</span></span> <span data-ttu-id="19c83-125">Diese Methoden stehen nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="19c83-125">These methods are available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### So rufen Sie Daten in einem benutzerdefinierten Format aus der Zwischenablage ab  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a><span data-ttu-id="19c83-126">Zum Abrufen von Daten aus der Zwischenablage in einem benutzerdefinierten format</span><span class="sxs-lookup"><span data-stu-id="19c83-126">To retrieve data from the Clipboard in a custom format</span></span>  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetData%2A>\-Methode mit einem benutzerdefinierten Formatnamen.  Diese Methode ist nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] verfügbar.  
+1.  <span data-ttu-id="19c83-127">Verwenden der <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode mit einem benutzerdefinierten Formatnamen.</span><span class="sxs-lookup"><span data-stu-id="19c83-127">Use the <xref:System.Windows.Forms.Clipboard.GetData%2A> method with a custom format name.</span></span> <span data-ttu-id="19c83-128">Diese Methode ist nur in verfügbar [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="19c83-128">This method is available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
-     Sie können auch vordefinierte Formatnamen mit der <xref:System.Windows.Forms.Clipboard.SetData%2A>\-Methode verwenden.  Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
+     <span data-ttu-id="19c83-129">Sie können auch die vordefinierten Formatnamen mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-129">You can also use predefined format names with the <xref:System.Windows.Forms.Clipboard.SetData%2A> method.</span></span> <span data-ttu-id="19c83-130">Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.</span><span class="sxs-lookup"><span data-stu-id="19c83-130">For more information, see <xref:System.Windows.Forms.DataFormats>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### So rufen Sie Daten in mehreren Formaten aus der Zwischenablage ab  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a><span data-ttu-id="19c83-131">Zum Abrufen von Daten aus der Zwischenablage in mehreren Formaten</span><span class="sxs-lookup"><span data-stu-id="19c83-131">To retrieve data from the Clipboard in multiple formats</span></span>  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>\-Methode.  Sie müssen diese Methode verwenden, um in Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] Daten aus der Zwischenablage abzurufen.  
+1.  <span data-ttu-id="19c83-132">Verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="19c83-132">Use the <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> method.</span></span> <span data-ttu-id="19c83-133">Verwenden Sie diese Methode zum Abrufen von Daten aus der Zwischenablage in Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="19c83-133">You must use this method to retrieve data from the Clipboard on versions earlier than [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## Siehe auch  
- [Drag & Drop\-Operationen und Unterstützung der Zwischenablage](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [Gewusst wie: Hinzufügen von Daten zur Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+## <a name="see-also"></a><span data-ttu-id="19c83-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="19c83-134">See Also</span></span>  
+ [<span data-ttu-id="19c83-135">Drag & Drop-Vorgänge und Unterstützung der Zwischenablage</span><span class="sxs-lookup"><span data-stu-id="19c83-135">Drag-and-Drop Operations and Clipboard Support</span></span>](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ [<span data-ttu-id="19c83-136">Gewusst wie: Hinzufügen von Daten zur Zwischenablage</span><span class="sxs-lookup"><span data-stu-id="19c83-136">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)

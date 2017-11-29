@@ -1,83 +1,89 @@
 ---
-title: "Formulieren von Projektionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formulieren von Projektionen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8afd48c6ce7c6313e82a7b74c2271f52833d1f5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Formulieren von Projektionen
-Das folgende Beispiel zeigt, wie die `select`\-Anweisung in C\# und die `Select`\-Anweisung in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] mit anderen Funktionen kombiniert werden können, um Abfrageprojektionen zu bilden.  
+# <a name="formulate-projections"></a><span data-ttu-id="fc717-102">Formulieren von Projektionen</span><span class="sxs-lookup"><span data-stu-id="fc717-102">Formulate Projections</span></span>
+<span data-ttu-id="fc717-103">Das folgende Beispiel zeigt, wie die `select`-Anweisung in C# und die `Select`-Anweisung in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] mit anderen Funktionen kombiniert werden können, um Abfrageprojektionen zu bilden.</span><span class="sxs-lookup"><span data-stu-id="fc717-103">The following examples show how the `select` statement in C# and `Select` statement in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] can be combined with other features to form query projections.</span></span>  
   
-## Beispiel  
- Die folgenden Beispiele verwenden die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\), um eine Sequenz mit Kontaktnamen für `Customers` zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-104">Example</span></span>  
+ <span data-ttu-id="fc717-105">Im folgenden Beispiel wird die `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) um eine Sequenz mit Kontaktnamen von zurückzugeben `Customers`.</span><span class="sxs-lookup"><span data-stu-id="fc717-105">The following example uses the `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) to return a sequence of contact names for `Customers`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#57](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#57)]
  [!code-vb[DLinqQueryExamples#57](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#57)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\) und *anonyme Typen*, um eine Sequenz von Kontaktnamen und Telefonnummern für `Customers` zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-106">Example</span></span>  
+ <span data-ttu-id="fc717-107">Im folgenden Beispiel wird die `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) und *anonyme Typen* gibt eine Sequenz von Kontaktnamen und Telefonnummern für `Customers`.</span><span class="sxs-lookup"><span data-stu-id="fc717-107">The following example uses the `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) and *anonymous types* to return a sequence of contact names and telephone numbers for `Customers`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#58](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#58)]
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\) und *anonyme Typen*, um eine Sequenz mit Namen und Telefonnummern für Mitarbeiter zurückzugeben.  Das `FirstName`\-Feld und das `LastName`\-Feld werden zu einem Feld \(`Name`\) kombiniert, und das `HomePhone`\-Feld wird in der resultierenden Sequenz in `Phone` umbenannt.  
+## <a name="example"></a><span data-ttu-id="fc717-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-108">Example</span></span>  
+ <span data-ttu-id="fc717-109">Im folgenden Beispiel wird die `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) und *anonyme Typen* gibt eine Sequenz von Namen und Telefonnummern für Mitarbeiter.</span><span class="sxs-lookup"><span data-stu-id="fc717-109">The following example uses the `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) and *anonymous types* to return a sequence of names and telephone numbers for employees.</span></span> <span data-ttu-id="fc717-110">Die `FirstName` und `LastName` Felder werden in einem einzelnen Feld kombiniert (`Name`), und die `HomePhone` Feld wird umbenannt, um `Phone` in der resultierenden Sequenz.</span><span class="sxs-lookup"><span data-stu-id="fc717-110">The `FirstName` and `LastName` fields are combined into a single field (`Name`), and the `HomePhone` field is renamed to `Phone` in the resulting sequence.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\) und *anonyme Typen*, um eine Sequenz aller `ProductID`s und einen berechneten Wert namens `HalfPrice` zurückzugeben.  Dieser Wert wird auf den `UnitPrice`, geteilt durch 2, festgelegt.  
+## <a name="example"></a><span data-ttu-id="fc717-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-111">Example</span></span>  
+ <span data-ttu-id="fc717-112">Im folgenden Beispiel wird die `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) und *anonyme Typen* zurückzugebenden eine Sequenz aller `ProductID`s und einen berechneten Wert namens `HalfPrice`.</span><span class="sxs-lookup"><span data-stu-id="fc717-112">The following example uses the `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) and *anonymous types* to return a sequence of all `ProductID`s and a calculated value named `HalfPrice`.</span></span> <span data-ttu-id="fc717-113">Dieser Wert wird auf den `UnitPrice`, geteilt durch 2, festgelegt.</span><span class="sxs-lookup"><span data-stu-id="fc717-113">This value is set to the `UnitPrice` divided by 2.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\) und eine *Bedingungsanweisung*, um eine Sequenz mit Produktnamen und Produktverfügbarkeit zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-114">Example</span></span>  
+ <span data-ttu-id="fc717-115">Im folgenden Beispiel wird die `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) und ein *bedingungsanweisung* um eine Sequenz von Produktnamen und produktverfügbarkeit zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="fc717-115">The following example uses the `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) and a *conditional statement* to return a sequence of product name and product availability.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `Select`\-Klausel \(`select`\-Klausel in C\#\) und einen *bekannten Typ* \(Name\), um eine Sequenz mit den Namen der Mitarbeiter zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-116">Example</span></span>  
+ <span data-ttu-id="fc717-117">Im folgenden Beispiel wird eine [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `Select` -Klausel (`select` -Klausel in c#) und ein *bekannten Typ* (Name), um eine Sequenz mit den Namen der Mitarbeiter zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="fc717-117">The following example uses a [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `Select` clause (`select` clause in C#) and a *known type* (Name) to return a sequence of the names of employees.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#62](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#62)]
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet `Select` und `Where` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select` und `where` in C\#\), um eine *gefilterte Sequenz* mit Kontaktnamen von Kunden in London zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-118">Example</span></span>  
+ <span data-ttu-id="fc717-119">Im folgenden Beispiel wird `Select` und `Where` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` und `where` in c#) zum Zurückgeben einer *gefilterte Sequenz* mit Kontaktnamen von Kunden in London.</span><span class="sxs-lookup"><span data-stu-id="fc717-119">The following example uses `Select` and `Where` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` and `where` in C#) to return a *filtered sequence* of contact names for customers in London.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
   
-## Beispiel  
- Das folgende Beispiel verwendet die `Select`\-Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] \(`select`\-Klausel in C\#\) und *anonyme Typen*, um eine *geformte Teilmenge* der Daten über Kunden zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="fc717-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-120">Example</span></span>  
+ <span data-ttu-id="fc717-121">Im folgenden Beispiel wird eine `Select` -Klausel in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` -Klausel in c#) und *anonyme Typen* zurückzugebenden eine *geformte Teilmenge* der Daten über Kunden.</span><span class="sxs-lookup"><span data-stu-id="fc717-121">The following example uses a `Select` clause in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` clause in C#) and *anonymous types* to return a *shaped subset* of the data about customers.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#64](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#64)]
  [!code-vb[DLinqQueryExamples#64](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#64)]  
   
-## Beispiel  
- Im folgenden Beispiel werden geschachtelte Abfragen verwendet, um die folgenden Ergebnisse zurückzugeben:  
+## <a name="example"></a><span data-ttu-id="fc717-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc717-122">Example</span></span>  
+ <span data-ttu-id="fc717-123">Im folgenden Beispiel werden geschachtelte Abfragen verwendet, um die folgenden Ergebnisse zurückzugeben:</span><span class="sxs-lookup"><span data-stu-id="fc717-123">The following example uses nested queries to return the following results:</span></span>  
   
--   Eine Sequenz aller Bestellungen und der entsprechenden `OrderID`s.  
+-   <span data-ttu-id="fc717-124">Eine Sequenz aller Bestellungen und der entsprechenden `OrderID`s.</span><span class="sxs-lookup"><span data-stu-id="fc717-124">A sequence of all orders and their corresponding `OrderID`s.</span></span>  
   
--   Eine Untersequenz der Elemente in der Bestellung, für die es einen Rabatt gibt.  
+-   <span data-ttu-id="fc717-125">Eine Untersequenz der Elemente in der Bestellung, für die es einen Rabatt gibt.</span><span class="sxs-lookup"><span data-stu-id="fc717-125">A subsequence of the items in the order for which there is a discount.</span></span>  
   
--   Der gesparte Betrag, wenn die Lieferkosten nicht eingeschlossen werden.  
+-   <span data-ttu-id="fc717-126">Der gesparte Betrag, wenn die Lieferkosten nicht eingeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="fc717-126">The amount of money saved if the cost of shipping is not included.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
-## Siehe auch  
- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="fc717-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc717-127">See Also</span></span>  
+ [<span data-ttu-id="fc717-128">Beispiele für Abfragen</span><span class="sxs-lookup"><span data-stu-id="fc717-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

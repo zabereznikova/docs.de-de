@@ -1,62 +1,64 @@
 ---
-title: "Gewusst wie: Verwenden von Modifizierern und GenerateMember-Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Designer_GenerateMember"
-  - "Designer_Modifiers"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Basisformulare"
-  - "Formularvererbung"
-  - "GenerateMember-Eigenschaft"
-  - "Vererbung, Formulare"
-  - "Geerbte Formulare"
-  - "Geerbte Formulare, Windows Forms"
-  - "Modifiers-Eigenschaft"
-  - "Windows Forms, Vererbung"
+title: 'Gewusst wie: Verwenden von Modifizierern und GenerateMember-Eigenschaften'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords:
+- Designer_GenerateMember
+- Designer_Modifiers
+helpviewer_keywords:
+- base forms
+- inheritance [Windows Forms], forms
+- inherited forms [Windows Forms], Windows Forms
+- inherited forms
+- form inheritance
+- Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden von Modifizierern und GenerateMember-Eigenschaften
-Wenn Sie eine Komponente auf einem Windows Form ablegen, werden von der Entwurfsumgebung die folgenden beiden Eigenschaften bereitgestellt: `GenerateMember` und `Modifiers`.  Die `GenerateMember`\-Eigenschaft legt fest, wann der Windows Forms\-Designer eine Membervariable für eine Komponente generiert.  Die `Modifiers`\-Eigenschaft entspricht dem dieser Membervariablen zugewiesenen Zugriffsmodifizierer.  Wenn der Wert der `GenerateMember`\-Eigenschaft `false` lautet, bleibt der Wert der `Modifiers`\-Eigenschaft ohne Wirkung.  
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="733b1-102">Gewusst wie: Verwenden von Modifizierern und GenerateMember-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="733b1-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
+<span data-ttu-id="733b1-103">Wenn Sie eine Komponente in einem Windows Form platzieren, werden zwei Eigenschaften von der entwurfsumgebung bereitgestellt: `GenerateMember` und `Modifiers`.</span><span class="sxs-lookup"><span data-stu-id="733b1-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="733b1-104">Die `GenerateMember` Eigenschaft gibt an, wann eine Membervariable für eine Komponente von Windows Forms-Designer generiert.</span><span class="sxs-lookup"><span data-stu-id="733b1-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="733b1-105">Die `Modifiers` Eigenschaft ist für den Zugriffsmodifizierer auf diese Membervariable zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="733b1-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="733b1-106">Wenn der Wert von der `GenerateMember` Eigenschaft ist `false`, den Wert des der `Modifiers` Eigenschaft hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="733b1-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="733b1-107">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="733b1-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="733b1-108">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="733b1-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="733b1-109">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="733b1-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So legen Sie fest, ob eine Komponente ein Member des Formulars ist  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="733b1-110">Um anzugeben, ob eine Komponente des Formulars angehört</span><span class="sxs-lookup"><span data-stu-id="733b1-110">To specify whether a component is a member of the form</span></span>  
   
-1.  Öffnen Sie das Formular im Windows Forms\-Designer.  
+1.  <span data-ttu-id="733b1-111">Öffnen Sie in Windows Forms-Designer das Formular aus.</span><span class="sxs-lookup"><span data-stu-id="733b1-111">In the Windows Forms Designer, open your form.</span></span>  
   
-2.  Öffnen Sie die **Toolbox**, und platzieren Sie drei <xref:System.Windows.Forms.Button>\-Steuerelemente im Formular.  
+2.  <span data-ttu-id="733b1-112">Öffnen der **Toolbox**, und platzieren Sie auf dem Formular drei <xref:System.Windows.Forms.Button> Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="733b1-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-3.  Legen Sie die `GenerateMember`\-Eigenschaft und die `Modifiers`\-Eigenschaft für jedes <xref:System.Windows.Forms.Button>\-Steuerelement entsprechend der folgenden Tabelle fest.  
+3.  <span data-ttu-id="733b1-113">Legen Sie die `GenerateMember` und `Modifiers` Eigenschaften für die einzelnen <xref:System.Windows.Forms.Button> Steuerelement entsprechend der folgenden Tabelle.</span><span class="sxs-lookup"><span data-stu-id="733b1-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
   
-    |Schaltflächenname|GenerateMember\-Wert|Modifiziererwert|  
-    |-----------------------|--------------------------|----------------------|  
+    |<span data-ttu-id="733b1-114">Schaltflächenname</span><span class="sxs-lookup"><span data-stu-id="733b1-114">Button name</span></span>|<span data-ttu-id="733b1-115">GenerateMember-Wert</span><span class="sxs-lookup"><span data-stu-id="733b1-115">GenerateMember value</span></span>|<span data-ttu-id="733b1-116">Modifizierer Wert</span><span class="sxs-lookup"><span data-stu-id="733b1-116">Modifiers value</span></span>|  
+    |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|Keine Änderung|  
+    |`button3`|`false`|<span data-ttu-id="733b1-117">Keine Änderung</span><span class="sxs-lookup"><span data-stu-id="733b1-117">No change</span></span>|  
   
-4.  Erstellen Sie die Projektmappe.  
+4.  <span data-ttu-id="733b1-118">Erstellen Sie die Projektmappe.</span><span class="sxs-lookup"><span data-stu-id="733b1-118">Build the solution.</span></span>  
   
-5.  Klicken Sie im **Projektmappen\-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.  
+5.  <span data-ttu-id="733b1-119">Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="733b1-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
   
-6.  Öffnen Sie den Knoten **Form1** und dann im **Code\-Editor** die Datei **Form1.Designer.vb** oder **Form1.Designer.cs**.  Diese Datei enthält den vom Windows Forms\-Designer ausgegebenen Code.  
+6.  <span data-ttu-id="733b1-120">Öffnen Sie die **Form1** Knoten, und klicken Sie in der **Code-Editor**öffnen die **Form1.Designer.vb** oder **Form1.Designer.cs** Datei.</span><span class="sxs-lookup"><span data-stu-id="733b1-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="733b1-121">Diese Datei enthält den Code ausgegeben, die für Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="733b1-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
   
-7.  Suchen Sie die Deklarationen für die drei Schaltflächen.  Im folgenden Codebeispiel werden die Unterschiede veranschaulicht, die aus der Verwendung der `GenerateMember`\-Eigenschaft und der `Modifiers`\-Eigenschaft resultieren.  
+7.  <span data-ttu-id="733b1-122">Suchen Sie die Deklarationen für die drei Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="733b1-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="733b1-123">Das folgende Codebeispiel zeigt die Unterschiede, die gemäß der `GenerateMember` und `Modifiers` Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="733b1-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -65,10 +67,10 @@ Wenn Sie eine Komponente auf einem Windows Form ablegen, werden von der Entwurfs
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  Standardmäßig weist der Windows Forms\-Designer den `private`\-Modifizierer \(`Friend` in Visual Basic\) Containersteuerelementen wie <xref:System.Windows.Forms.Panel> zu.  Wenn eine <xref:System.Windows.Forms.UserControl>\-Basis oder eine<xref:System.Windows.Forms.Form>\-Basis ein Containersteuerelement besitzt, akzeptiert sie in den ihr zugeordneten Steuerelementen und Formularen keine untergeordneten Elemente.  Die Lösung besteht darin, den Modifizierer des Basiscontainersteuerelements in `protected` oder `public` zu ändern.  
+>  <span data-ttu-id="733b1-124">Windows Forms-Designer weist standardmäßig den `private` (`Friend` in Visual Basic) Modifizierer Containersteuerelementen wie <xref:System.Windows.Forms.Panel>.</span><span class="sxs-lookup"><span data-stu-id="733b1-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="733b1-125">Wenn Ihre Basis <xref:System.Windows.Forms.UserControl> oder <xref:System.Windows.Forms.Form> ist ein Container-Steuerelement akzeptiert keine neuen untergeordneten Elemente in geerbte Steuerelemente und Formulare.</span><span class="sxs-lookup"><span data-stu-id="733b1-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="733b1-126">Die Lösung besteht darin, den Modifizierer des Steuerelements basiscontainerobjekts ändern `protected` oder `public`.</span><span class="sxs-lookup"><span data-stu-id="733b1-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Button>   
- [Visuelle Vererbung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)   
- [Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)   
- [Gewusst wie: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="733b1-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="733b1-127">See Also</span></span>  
+ <xref:System.Windows.Forms.Button>  
+ [<span data-ttu-id="733b1-128">Visuelle Vererbung in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="733b1-128">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [<span data-ttu-id="733b1-129">Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung</span><span class="sxs-lookup"><span data-stu-id="733b1-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [<span data-ttu-id="733b1-130">Vorgehensweise: Erben von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="733b1-130">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

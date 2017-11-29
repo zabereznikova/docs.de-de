@@ -1,48 +1,53 @@
 ---
-title: "Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grafiken, Transformationen als Ereignisantwort"
-  - "LayoutTransform-Eigenschaft"
-  - "Eigenschaften, LayoutTransform"
-  - "Eigenschaften, RenderTransform"
-  - "RenderTransform-Eigenschaft"
-  - "Transformationen als Ereignisantwort"
+title: 'Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], transformations as event responses
+- properties [WPF], LayoutTransform
+- transformations as event responses [WPF]
+- properties [WPF], RenderTransform
+- LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses
-In diesem Beispiel wird erläutert, wie Sie eine <xref:System.Windows.Media.ScaleTransform> anwenden, wenn ein Ereignis auftritt.  Mithilfe des hier dargestellten Konzepts können Sie auch andere Transformationstypen anwenden.  Weitere Informationen zu den verfügbaren Transformationstypen finden Sie in der <xref:System.Windows.Media.Transform>\-Klasse oder unter [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a><span data-ttu-id="3226d-102">Gewusst wie: Anwenden einer Transformation auf ein Element beim Auftreten eines Ereignisses</span><span class="sxs-lookup"><span data-stu-id="3226d-102">How to: Apply a Transform to an Element When an Event Occurs</span></span>
+<span data-ttu-id="3226d-103">In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.ScaleTransform> bei Auftreten eines Ereignisses.</span><span class="sxs-lookup"><span data-stu-id="3226d-103">This example shows how to apply a <xref:System.Windows.Media.ScaleTransform> when an event occurs.</span></span> <span data-ttu-id="3226d-104">Mithilfe des hier dargestellten Konzepts können Sie auch andere Transformationstypen anwenden.</span><span class="sxs-lookup"><span data-stu-id="3226d-104">The concept that is shown here is the same that you use for applying other types of transformations.</span></span> <span data-ttu-id="3226d-105">Weitere Informationen zu den verfügbaren Typen von Transformationen finden Sie unter der <xref:System.Windows.Media.Transform> Klasse oder [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3226d-105">For more information about the available types of transformations, see the <xref:System.Windows.Media.Transform> class or [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
- Sie können mit einem der folgenden beiden Verfahren eine Transformation auf ein Element anwenden:  
+ <span data-ttu-id="3226d-106">Sie können mit einem der folgenden beiden Verfahren eine Transformation auf ein Element anwenden:</span><span class="sxs-lookup"><span data-stu-id="3226d-106">You can apply a transform to an element in either of these two ways:</span></span>  
   
--   Wenn sich die Transformation *nicht* auf das Layout auswirken soll, verwenden Sie die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft des Elements.  
+-   <span data-ttu-id="3226d-107">Wenn Sie dies tun *nicht* möchten Sie die Transformation auf das Layout auswirken, verwenden Sie die <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft des Elements.</span><span class="sxs-lookup"><span data-stu-id="3226d-107">If you do *not* want the transform to affect layout, use the <xref:System.Windows.UIElement.RenderTransform%2A> property of the element.</span></span>  
   
--   Wenn sich die Transformation auf das Layout auswirken soll, verwenden Sie die <xref:System.Windows.FrameworkElement.LayoutTransform%2A>\-Eigenschaft des Elements.  
+-   <span data-ttu-id="3226d-108">Wenn Sie die Transformation auf das Layout auswirken soll, verwenden Sie die <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft des Elements.</span><span class="sxs-lookup"><span data-stu-id="3226d-108">If you do want the transform to affect layout, use the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property of the element.</span></span>  
   
- Im folgenden Beispiel wird eine <xref:System.Windows.Media.ScaleTransform> auf die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft einer Schaltfläche angewendet.  Wenn der Mauszeiger über die Schaltfläche bewegt wird, werden <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>\-Eigenschaft und die <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>\-Eigenschaft der <xref:System.Windows.Media.ScaleTransform> auf `2` festgelegt. Die Schaltfläche wird dadurch vergrößert.  Wenn der Mauszeiger von der Schaltfläche weg bewegt wird, werden <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> auf `1` festgelegt, sodass die Schaltfläche auf die ursprüngliche Größe zurückgesetzt wird.  
+ <span data-ttu-id="3226d-109">Das folgende Beispiel wendet eine <xref:System.Windows.Media.ScaleTransform> auf die <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft einer Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="3226d-109">The following example applies a <xref:System.Windows.Media.ScaleTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of a button.</span></span> <span data-ttu-id="3226d-110">Beim Bewegen der Maus auf die Schaltfläche der <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Eigenschaften der <xref:System.Windows.Media.ScaleTransform> festgelegt `2`, dies bedeutet, dass die Schaltfläche größer wird.</span><span class="sxs-lookup"><span data-stu-id="3226d-110">When the mouse moves over the button, the <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties of the <xref:System.Windows.Media.ScaleTransform> are set to `2`, which causes the button to become larger.</span></span> <span data-ttu-id="3226d-111">Wenn die Maus bewegt wird, deaktiviert die Schaltfläche <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> festgelegt `1`, dies bedeutet, dass die Schaltfläche, um die ursprüngliche Größe zurück.</span><span class="sxs-lookup"><span data-stu-id="3226d-111">When the mouse moves off the button, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> are set to `1`, which causes the button to return to its original size.</span></span>  
   
-## Beispiel  
- [!code-xml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="3226d-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3226d-112">Example</span></span>  
+ [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
   
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
  [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.ScaleTransform>   
- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)   
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3226d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3226d-113">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [<span data-ttu-id="3226d-114">Übersicht über Transformationen</span><span class="sxs-lookup"><span data-stu-id="3226d-114">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="3226d-115">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="3226d-115">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [<span data-ttu-id="3226d-116">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="3226d-116">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

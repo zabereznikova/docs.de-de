@@ -1,36 +1,41 @@
 ---
-title: "Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zertifikate [WCF], Verweisen auf X.509-Zertifikate"
+title: 'Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8d42af919b9792fc5a5303737187be7ffef6405d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate
-Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwerts des Zertifikats, anhand des Ausstellers und der Seriennummer oder anhand der Schlüsselkennung des Antragstellers \(Subject Key Identifier, SKI\).Die Schlüsselkennung des Antragstellers gibt den öffentlichen Schlüssel des Zertifikatantagstellers eindeutig an. Sie wird häufig für digitale XML\-Signaturen verwendet.Der SKI\-Wert ist in der Regel als *X.509\-Zertifikatserweiterung* Bestandteil des X.509\-Zertifikats.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verfügt über einen standardmäßigen *Verweisstil*, der den Aussteller und die Seriennummer verwendet, wenn die SKI\-Erweiterung im Zertifikat fehlt.Enthält das Zertifikat die SKI\-Erweiterung, verwendet der Standardverweis die Schlüsselkennung des Antragstellers, um auf das Zertifikat zu verweisen.Wenn Sie während der Entwicklung einer Anwendung von Zertifikaten, die die SKI\-Erweiterung nicht verwenden, auf Zertifikate umstellen, die die SKI\-Erweiterung verwenden, ändert sich auch der Verweisstil in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-generierten Nachrichten.  
+# <a name="how-to-consistently-reference-x509-certificates"></a><span data-ttu-id="7229b-102">Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate</span><span class="sxs-lookup"><span data-stu-id="7229b-102">How to: Consistently Reference X.509 Certificates</span></span>
+<span data-ttu-id="7229b-103">Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwerts des Zertifikats, anhand des Ausstellers und der Seriennummer oder anhand der Schlüsselkennung des Antragstellers (Subject Key Identifier, SKI).</span><span class="sxs-lookup"><span data-stu-id="7229b-103">You can identify a certificate in several ways: by the hash of the certificate, by the issuer and serial number, or by the subject key identifier (SKI).</span></span> <span data-ttu-id="7229b-104">Die Schlüsselkennung des Antragstellers gibt den öffentlichen Schlüssel des Zertifikatantagstellers eindeutig an. Sie wird häufig für digitale XML-Signaturen verwendet.</span><span class="sxs-lookup"><span data-stu-id="7229b-104">The SKI provides a unique identification for the certificate's subject public key and is often used when working with XML digital signing.</span></span> <span data-ttu-id="7229b-105">Der SKI-Wert wird in der Regel Bestandteil des x. 509-Zertifikats als ein *x. 509-zertifikatserweiterung*.</span><span class="sxs-lookup"><span data-stu-id="7229b-105">The SKI value is usually part of the X.509 certificate as an *X.509 certificate extension*.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="7229b-106">verfügt über einen standardmäßigen *verweisstil* , den Aussteller und die Seriennummer verwendet, wenn die SKI-Erweiterung das Zertifikat nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="7229b-106"> has a default *referencing style* that uses the issuer and serial number if the SKI extension is missing from the certificate.</span></span> <span data-ttu-id="7229b-107">Enthält das Zertifikat die SKI-Erweiterung, verwendet der Standardverweis die Schlüsselkennung des Antragstellers, um auf das Zertifikat zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="7229b-107">If the certificate contains the SKI extension, the default referencing style uses the SKI to point to the certificate.</span></span> <span data-ttu-id="7229b-108">Wenn Sie während der Entwicklung einer Anwendung von Zertifikaten, die die SKI-Erweiterung nicht verwenden, auf Zertifikate umstellen, die die SKI-Erweiterung verwenden, ändert sich auch der Verweisstil in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-generierten Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="7229b-108">If mid-way through development of an application, you switch from using certificates that do not use the SKI extension to certificates that use the SKI extension, the referencing style used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-generated messages also changes.</span></span>  
   
- Wenn unabhängig vom Vorhandensein einer SKI\-Erweiterung ein einheitlicher Verweisstil erforderlich ist, kann der gewünschte Verweisstil wie im folgenden Code dargestellt konfiguriert werden.  
+ <span data-ttu-id="7229b-109">Wenn unabhängig vom Vorhandensein einer SKI-Erweiterung ein einheitlicher Verweisstil erforderlich ist, kann der gewünschte Verweisstil wie im folgenden Code dargestellt konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="7229b-109">If a consistent referencing style is required regardless of SKI extension presence, it is possible to configure the desired referencing style as shown in the following code.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird ein benutzerdefiniertes Sicherheitsbindungselement erstellt, das einen einzigen einheitlichen Verweisstil, den Namen des Ausstellers und die Seriennummer verwendet.  
+## <a name="example"></a><span data-ttu-id="7229b-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7229b-110">Example</span></span>  
+ <span data-ttu-id="7229b-111">Im folgenden Beispiel wird ein benutzerdefiniertes Sicherheitsbindungselement erstellt, das einen einzigen einheitlichen Verweisstil, den Namen des Ausstellers und die Seriennummer verwendet.</span><span class="sxs-lookup"><span data-stu-id="7229b-111">The following example creates a custom security binding element that uses a single consistent referencing style, the issuer name and serial number.</span></span>  
   
  [!code-csharp[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_referencingcertificatesconsistently/cs/source.cs#1)]
  [!code-vb[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_referencingcertificatesconsistently/vb/source.vb#1)]  
   
-## Kompilieren des Codes  
- Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:  
+## <a name="compiling-the-code"></a><span data-ttu-id="7229b-112">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="7229b-112">Compiling the Code</span></span>  
+ <span data-ttu-id="7229b-113">Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:</span><span class="sxs-lookup"><span data-stu-id="7229b-113">The following namespaces are required to compile the code:</span></span>  
   
 -   <xref:System>  
   
@@ -40,5 +45,5 @@ Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwer
   
 -   <xref:System.ServiceModel.Security.Tokens>  
   
-## Siehe auch  
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="7229b-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7229b-114">See Also</span></span>  
+ [<span data-ttu-id="7229b-115">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="7229b-115">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

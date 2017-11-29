@@ -1,76 +1,73 @@
 ---
-title: "My.WebServices Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "My.WebServices"
-  - "My.MyProject.WebServices"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.WebServices object"
+title: My.WebServices-Objekt
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- My.WebServices
+- My.MyProject.WebServices
+helpviewer_keywords: My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9f2c4017a1df8059f2cc57e7c30a96c474cfda0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# My.WebServices Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Enthält Eigenschaften, mit denen eine Einzelinstanz jedes XML\-Webdiensts, mit dem das aktuelle Projekt verbunden ist, erstellt werden oder auf diese Einzelinstanz zugegriffen werden kann.  
+# <a name="mywebservices-object"></a><span data-ttu-id="4b656-102">My.WebServices-Objekt</span><span class="sxs-lookup"><span data-stu-id="4b656-102">My.WebServices Object</span></span>
+<span data-ttu-id="4b656-103">Stellt Eigenschaften zum Erstellen und den Zugriff auf eine einzelne Instanz jeder XML-Webdienst auf, die vom aktuellen Projekt verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="4b656-103">Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.</span></span>  
   
-## Hinweise  
- Das `My.WebServices`\-Objekt stellt eine Instanz von jedem Webdienst bereit, auf den im aktuellen Projekt verwiesen wird.  Jede Instanz wird bei Bedarf instanziiert.  Sie können auf diese Webdienste über die Eigenschaften des `My.WebServices`\-Objekts zugreifen.  Der Name der Eigenschaft ist identisch mit dem Namen des Webdienstes, auf den die Eigenschaft zugreift.  Jede Klasse, die von <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> erbt, ist ein Webdienst.  Informationen über das Hinzufügen von Webdiensten zu einem Projekt finden Sie unter [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+## <a name="remarks"></a><span data-ttu-id="4b656-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4b656-104">Remarks</span></span>  
+ <span data-ttu-id="4b656-105">Das `My.WebServices`-Objekt bietet eine Instanz jedes Webdienstes, auf den vom aktuellen Projekt verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="4b656-105">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="4b656-106">Jede Instanz wird bei Bedarf instanziiert.</span><span class="sxs-lookup"><span data-stu-id="4b656-106">Each instance is instantiated on demand.</span></span> <span data-ttu-id="4b656-107">Sie können über die Eigenschaften des `My.WebServices`-Objekts auf diese Webdienste zugreifen.</span><span class="sxs-lookup"><span data-stu-id="4b656-107">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="4b656-108">Der Name der Eigenschaft stimmt mit dem des Webdienstes überein, auf den die Eigenschaft zugreift.</span><span class="sxs-lookup"><span data-stu-id="4b656-108">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="4b656-109">Jede Klasse, die von <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> erbt, ist ein Webdienst.</span><span class="sxs-lookup"><span data-stu-id="4b656-109">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span> <span data-ttu-id="4b656-110">Informationen zum Hinzufügen von Webdiensten zu einem Projekt finden Sie unter [zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span><span class="sxs-lookup"><span data-stu-id="4b656-110">For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span></span>  
   
- Das `My.WebServices`\-Objekt macht nur die dem aktuellen Projekt zugeordneten Webdienste verfügbar.  Es ermöglicht nicht den Zugriff auf Webdienste, die in DLLs deklariert sind, auf die verwiesen wird.  Um auf einen Webdienst zuzugreifen, der von einer DLL bereitgestellt wird, müssen Sie den qualifizierten Namen des Webdiensts im Format *DLL\-Name*.*Webdienstname* verwenden.  Weitere Informationen finden Sie unter [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ <span data-ttu-id="4b656-111">Die `My.WebServices` Objekt macht nur der Web-Dienste, die mit dem aktuellen Projekt verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="4b656-111">The `My.WebServices` object exposes only the Web services associated with the current project.</span></span> <span data-ttu-id="4b656-112">Es bietet keine auf Webdienste, die in der referenzierten DLLs deklariert.</span><span class="sxs-lookup"><span data-stu-id="4b656-112">It does not provide access to Web services declared in referenced DLLs.</span></span> <span data-ttu-id="4b656-113">Zum Zugriff auf einen Webdienst, der eine DLL-Datei bereitstellt, müssen Sie den qualifizierten Namen des Webdiensts, verwenden, in der Form *DLL-Namen*. *WebServiceName*.</span><span class="sxs-lookup"><span data-stu-id="4b656-113">To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*.</span></span> <span data-ttu-id="4b656-114">Weitere Informationen finden Sie unter [zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span><span class="sxs-lookup"><span data-stu-id="4b656-114">For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span></span>  
   
- Das Objekt und seine Eigenschaften sind für Webanwendungen nicht verfügbar.  
+ <span data-ttu-id="4b656-115">Das Objekt und seine Eigenschaften sind nicht für Webanwendungen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="4b656-115">The object and its properties are not available for Web applications.</span></span>  
   
-## Eigenschaften  
- Jede Eigenschaft des `My.WebServices`\-Objekts ermöglicht den Zugriff auf eine Instanz eines Webdienstes, auf die das aktuelle Projekt verweist.  Der Name der Eigenschaft stimmt mit dem Namen des Webdienstes überein, auf den die Eigenschaft zugreift, und der Eigenschaftentyp stimmt mit dem Typ des Webdienstes überein.  
+## <a name="properties"></a><span data-ttu-id="4b656-116">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4b656-116">Properties</span></span>  
+ <span data-ttu-id="4b656-117">Jede Eigenschaft der `My.WebServices` -Objekt bietet Zugriff auf eine Instanz eines Webdiensts, die vom aktuellen Projekt verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="4b656-117">Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project.</span></span> <span data-ttu-id="4b656-118">Der Name der Eigenschaft ist identisch mit den Namen des Webdiensts, der die Eigenschaft zugreift, und der Eigenschaftstyp ist identisch mit dem Webdienst-Typ.</span><span class="sxs-lookup"><span data-stu-id="4b656-118">The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.</span></span>  
   
 > [!NOTE]
->  Wenn ein Namenskonflikt besteht, lautet der Eigenschaftenname für den Zugriff auf einen Webdienst *Stammnamespace*\_*Namespace*\_*Dienstname*.  Stellen Sie sich beispielsweise zwei Webdienste mit dem Namen `Service1` vor.  Wenn sich einer dieser Dienste im Stammnamespace `WindowsApplication1` und im Namespace `Namespace1` befindet, rufen Sie den Dienst über `My.WebServices.WindowsApplication1_Namespace1_Service1` auf.  
+>  <span data-ttu-id="4b656-119">Ist ein Konflikt von geschachteltem Klassennamen, der Eigenschaftsname für den Zugriff auf einen Webdienst ist *RootNamespace*_*Namespace*\_*ServiceName*.</span><span class="sxs-lookup"><span data-stu-id="4b656-119">If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*.</span></span> <span data-ttu-id="4b656-120">Betrachten Sie beispielsweise zwei Webdienste mit dem Namen `Service1`.</span><span class="sxs-lookup"><span data-stu-id="4b656-120">For example, consider two Web services named `Service1`.</span></span> <span data-ttu-id="4b656-121">Wenn einer dieser Dienste im Stammnamespace ist `WindowsApplication1` und im Namespace `Namespace1`, würden Sie diesen Dienst zugreifen, mithilfe von `My.WebServices.WindowsApplication1_Namespace1_Service1`.</span><span class="sxs-lookup"><span data-stu-id="4b656-121">If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.</span></span>  
   
- Beim ersten Zugriff auf eine der Eigenschaften des `My.WebServices`\-Objekts erstellt die Eigenschaft eine neue Instanz des Webdienstes und speichert diese.  Bei anschließenden Zugriffen auf diese Eigenschaft wird diese Instanz des Webdienstes zurückgegeben.  
+ <span data-ttu-id="4b656-122">Beim ersten Zugriff auf eines der `My.WebServices` Objekteigenschaften, er erstellt eine neue Instanz des Webdiensts und speichert sie.</span><span class="sxs-lookup"><span data-stu-id="4b656-122">When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it.</span></span> <span data-ttu-id="4b656-123">Nachfolgende Zugriffe dieser Eigenschaft zurückgeben dieser Instanz des Webdiensts.</span><span class="sxs-lookup"><span data-stu-id="4b656-123">Subsequent accesses of that property return that instance of the Web service.</span></span>  
   
- Sie können einen Webdienst freigeben, indem Sie der Eigenschaft für diesen Webdienst `Nothing` zuweisen.  Der Eigenschaftensetter weist dem gespeicherten Wert `Nothing` zu.  Wenn Sie der Eigenschaft einen anderen Wert als `Nothing` zuweisen, löst der Setter eine <xref:System.ArgumentException>\-Ausnahme aus.  
+ <span data-ttu-id="4b656-124">Sie können durch Zuweisen eines Webdiensts dispose `Nothing` für die Eigenschaft für diesen Webdienst.</span><span class="sxs-lookup"><span data-stu-id="4b656-124">You can dispose of a Web service by assigning `Nothing` to the property for that Web service.</span></span> <span data-ttu-id="4b656-125">Der Eigenschaftensetter weist `Nothing` mit dem gespeicherten Wert.</span><span class="sxs-lookup"><span data-stu-id="4b656-125">The property setter assigns `Nothing` to the stored value.</span></span> <span data-ttu-id="4b656-126">Wenn Sie einen beliebigen Wert außer zuweisen `Nothing` der Eigenschaft Setter-Methode löst eine <xref:System.ArgumentException> Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="4b656-126">If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.</span></span>  
   
- Mit dem Operator `Is` oder dem Operator `IsNot` können Sie überprüfen, ob eine Eigenschaft des `My.WebServices`\-Objekts eines Instanz des Webdienstes speichert.  Sie können mit diesen Operatoren überprüfen, ob der Wert der Eigenschaft `Nothing` ist.  
+ <span data-ttu-id="4b656-127">Sie können testen, ob eine Eigenschaft der `My.WebServices` Objekt speichert eine Instanz des Webdiensts mithilfe der `Is` oder `IsNot` Operator.</span><span class="sxs-lookup"><span data-stu-id="4b656-127">You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator.</span></span> <span data-ttu-id="4b656-128">Sie können diese Operatoren verwenden, zum Überprüfen, ob der Wert der Eigenschaft ist `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="4b656-128">You can use those operators to check if the value of the property is `Nothing`.</span></span>  
   
 > [!NOTE]
->  Normalerweise muss der Operator `Is` oder der Operator `IsNot` den Wert der Eigenschaft lesen, um den Vergleich durchzuführen..  Wenn die Eigenschaft gegenwärtig jedoch `Nothing` speichert, erstellt sie eine neue Instanz des Webdienstes und gibt dann diese Instanz zurück.  Der Visual Basic\-Compiler behandelt aber die Eigenschaften des `My.WebServices`\-Objekts auf besondere Weise und lässt das Überprüfen des Status der Eigenschaft durch den Operator `Is` oder den Operator `IsNot` ohne eine Änderung ihres Werts zu.  
+>  <span data-ttu-id="4b656-129">In der Regel die `Is` oder `IsNot` Operator muss den Wert der Eigenschaft zum Ausführen des Vergleichs zu lesen.</span><span class="sxs-lookup"><span data-stu-id="4b656-129">Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison.</span></span> <span data-ttu-id="4b656-130">Jedoch, wenn die Eigenschaft aktuell speichert `Nothing`, die Eigenschaft erstellt eine neue Instanz des Webdiensts und gibt dann diese Instanz zurück.</span><span class="sxs-lookup"><span data-stu-id="4b656-130">However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance.</span></span> <span data-ttu-id="4b656-131">Visual Basic-Compiler behandelt jedoch die Eigenschaften der `My.WebServices` speziell Objekt, und ermöglicht die `Is` oder `IsNot` Operator, um den Status der Eigenschaft zu überprüfen, ohne den Wert zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4b656-131">However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird die `FahrenheitToCelsius`\-Methode des `TemperatureConverter`\-XML\-Webdienstes aufgerufen und das Ergebnis zurückgegeben.  
+## <a name="example"></a><span data-ttu-id="4b656-132">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b656-132">Example</span></span>  
+ <span data-ttu-id="4b656-133">Dieses Beispiel ruft die `FahrenheitToCelsius` Methode der `TemperatureConverter` XML-Webdienst, und gibt das Ergebnis zurück.</span><span class="sxs-lookup"><span data-stu-id="4b656-133">This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.</span></span>  
   
  [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
- Damit dieses Beispiel ausgeführt werden kann, muss das Projekt auf den Webdienst `Converter` verweisen, und dieser Webdienst muss die `ConvertTemperature`\-Methode verfügbar machen.  Weitere Informationen finden Sie unter [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ <span data-ttu-id="4b656-134">Für dieses Beispiel funktioniert, muss das Projekt verweisen, einen Webdienst mit dem Namen `Converter`, und dem Webdienst verfügbar machen die `ConvertTemperature` Methode.</span><span class="sxs-lookup"><span data-stu-id="4b656-134">For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method.</span></span> <span data-ttu-id="4b656-135">Weitere Informationen finden Sie unter [zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span><span class="sxs-lookup"><span data-stu-id="4b656-135">For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).</span></span>  
   
- Dieser Code kann in einem Webanwendungsprojekt nicht ausgeführt werden.  
+ <span data-ttu-id="4b656-136">Dieser Code funktioniert nicht in einem Webprojekt für die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="4b656-136">This code does not work in a Web application project.</span></span>  
   
-## Anforderungen  
+## <a name="requirements"></a><span data-ttu-id="4b656-137">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4b656-137">Requirements</span></span>  
   
-### Verfügbarkeit nach Projekttyp  
+### <a name="availability-by-project-type"></a><span data-ttu-id="4b656-138">Verfügbarkeit nach Projekttyp</span><span class="sxs-lookup"><span data-stu-id="4b656-138">Availability by Project Type</span></span>  
   
-|||  
-|-|-|  
-|Projekttyp|Verfügbar|  
-|Windows\-Anwendung|**Ja**|  
-|Klassenbibliothek|**Ja**|  
-|Konsolenanwendung|**Ja**|  
-|Windows\-Steuerelementbibliothek|**Ja**|  
-|Web\-Steuerelementbibliothek|**Ja**|  
-|Windows\-Dienst|**Ja**|  
-|Website|Nein|  
+|<span data-ttu-id="4b656-139">Projekttyp:</span><span class="sxs-lookup"><span data-stu-id="4b656-139">Project type</span></span>|<span data-ttu-id="4b656-140">Verfügbar</span><span class="sxs-lookup"><span data-stu-id="4b656-140">Available</span></span>|  
+|---|---|  
+|<span data-ttu-id="4b656-141">Windows-Anwendung</span><span class="sxs-lookup"><span data-stu-id="4b656-141">Windows Application</span></span>|<span data-ttu-id="4b656-142">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-142">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-143">Klassenbibliothek</span><span class="sxs-lookup"><span data-stu-id="4b656-143">Class Library</span></span>|<span data-ttu-id="4b656-144">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-144">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-145">Konsolenanwendung</span><span class="sxs-lookup"><span data-stu-id="4b656-145">Console Application</span></span>|<span data-ttu-id="4b656-146">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-146">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-147">Windows-Steuerelementbibliothek</span><span class="sxs-lookup"><span data-stu-id="4b656-147">Windows Control Library</span></span>|<span data-ttu-id="4b656-148">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-148">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-149">Websteuerelementbibliothek</span><span class="sxs-lookup"><span data-stu-id="4b656-149">Web Control Library</span></span>|<span data-ttu-id="4b656-150">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-150">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-151">Windows-Dienst</span><span class="sxs-lookup"><span data-stu-id="4b656-151">Windows Service</span></span>|<span data-ttu-id="4b656-152">**Ja**</span><span class="sxs-lookup"><span data-stu-id="4b656-152">**Yes**</span></span>|  
+|<span data-ttu-id="4b656-153">Website</span><span class="sxs-lookup"><span data-stu-id="4b656-153">Web Site</span></span>|<span data-ttu-id="4b656-154">Nein</span><span class="sxs-lookup"><span data-stu-id="4b656-154">No</span></span>|  
   
-## Siehe auch  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>   
- <xref:System.ArgumentException>   
- [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a><span data-ttu-id="4b656-155">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4b656-155">See Also</span></span>  
+ <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
+ <xref:System.ArgumentException>  
+ [<span data-ttu-id="4b656-156">Zugreifen auf Anwendungswebdienste</span><span class="sxs-lookup"><span data-stu-id="4b656-156">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

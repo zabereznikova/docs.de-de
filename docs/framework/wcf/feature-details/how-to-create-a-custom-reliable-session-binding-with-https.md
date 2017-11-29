@@ -1,81 +1,84 @@
 ---
-title: "Vorgehensweise: Erstellen einer benutzerdefinierten zuverl&#228;ssigen Sitzungsbindung mit HTTPS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e891f266a8159a6367a0a936d6ba11197484267
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Erstellen einer benutzerdefinierten zuverl&#228;ssigen Sitzungsbindung mit HTTPS
-Dieses Thema veranschaulicht die Verwendung der Secure Sockets Layer \(SSL\)\-Transportsicherheit mit zuverlässigen Sitzungen.  Um eine zuverlässige Sitzung über HTTPS verwenden zu können, müssen Sie eine benutzerdefinierte Bindung erstellen, die eine zuverlässige Sitzung und HTTPS\-Transport verwendet.  Die zuverlässige Sitzung kann entweder verbindlich durch Verwenden von Code oder deklarativ in der Konfigurationsdatei aktiviert werden.  Diese Vorgehensweise verwendet die Konfigurationsdateien von Client und Dienst, um die zuverlässige Sitzung und das [\<httpsTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)\-Element zu aktivieren.  
-  
- Der wesentliche Teil dieser Prozedur ist der, dass das `endpoint`\-Konfigurationselement ein `bindingConfiguration`\-Attribut enthält, das auf eine benutzerdefinierte Bindungskonfiguration mit dem Namen "reliableSessionOverHttps" verweist.  Das [\<Bindung\>](../../../../docs/framework/misc/binding.md)`reliableSession-Konfigurationselement kann dann diesen Namen referenzieren, um festzulegen, dass eine zuverlässige Sitzung und der HTTPS-Transport verwendet werden, indem es die Elemente` `httpsTransport und`  einfügt.  
-  
- Die Quellkopie dieses Beispiels finden Sie unter [Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).  
-  
-### So konfigurieren Sie den Dienst mit 'CustomBinding' zur Verwendung einer zuverlässigen Sitzung mit HTTPS  
-  
-1.  Definieren Sie einen Dienstvertrag für den Diensttyp.  
-  
-     [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]  
-  
-2.  Implementieren Sie den Dienstvertrag in einer Dienstklasse.  Beachten Sie, dass die Adresse oder die Bindungsinformationen in der Implementierung des Diensts nicht angegeben werden.  Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
-  
-     [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]  
-  
-3.  Erstellen Sie eine Web.config\-Datei, um einen Endpunkt für `CalculatorService` mit einer benutzerdefinierten Bindung namens "reliableSessionOverHttps" zu konfigurieren, die eine zuverlässige Sitzung und HTTPS\-Transport verwendet.  
-  
-     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
-  
-4.  Erstellen Sie eine Service.svc\-Datei, die die folgende Zeile enthält:  
-  
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
-  
-5.  Stellen Sie die Datei Service.svc in das virtuelle IIS\-Verzeichnis.  
-  
-### So konfigurieren Sie den Client mit 'CustomBinding' zur Verwendung einer zuverlässigen Sitzung mit HTTPS  
-  
-1.  Verwenden Sie das [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in der Befehlszeile, um Code aus Dienstmetadaten zu generieren.  
-  
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
-    ```  
-  
-2.  Der generierte Client enthält die `ICalculator`\-Schnittstelle, die den Dienstvertrag definiert, dem die Clientimplementierung entsprechen muss.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]  
-  
-3.  Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`.  Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden.  Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]  
-  
-4.  Konfigurieren Sie eine benutzerdefinierte Bindung mit dem Namen "reliableSessionOverHttps", um den HTTPS\-Transport und zuverlässige Sitzungen zu verwenden.  
-  
-     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
-  
-5.  Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]  
-  
-6.  Kompilieren Sie den Code, und führen Sie den Client aus.  
-  
-## Beispiel  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## .NET Framework-Sicherheit  
- Da das in diesem Beispiel verwendete Zertifikat ein mit Makecert.exe erstelltes Testzertifikat ist, wird eine Sicherheitswarnung angezeigt, wenn Sie versuchen, in Ihrem Browser auf eine HTTPS\-Adresse wie https:\/\/localhost\/servicemodelsamples\/service.svc zuzugreifen.  
-  
-## Siehe auch  
- [Zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a><span data-ttu-id="abdc3-102">Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS</span><span class="sxs-lookup"><span data-stu-id="abdc3-102">How to: Create a Custom Reliable Session Binding with HTTPS</span></span>
+
+<span data-ttu-id="abdc3-103">Dieses Thema veranschaulicht die Verwendung der Secure Sockets Layer (SSL)-Transportsicherheit mit zuverlässigen Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="abdc3-103">This topic demonstrates the use of Secure Sockets Layer (SSL) transport security with reliable sessions.</span></span> <span data-ttu-id="abdc3-104">Um eine zuverlässige Sitzung über HTTPS verwenden zu können, müssen Sie eine benutzerdefinierte Bindung erstellen, die eine zuverlässige Sitzung und HTTPS-Transport verwendet.</span><span class="sxs-lookup"><span data-stu-id="abdc3-104">To use a reliable session over HTTPS, you must create a custom binding that uses a reliable session and the HTTPS transport.</span></span> <span data-ttu-id="abdc3-105">Sie aktivieren die zuverlässige Sitzung entweder verbindlich durch Verwenden von Code oder deklarativ in der Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="abdc3-105">You enable the reliable session either imperatively by using code or declaratively in the configuration file.</span></span> <span data-ttu-id="abdc3-106">Diese Prozedur verwendet die Konfigurationsdateien von Client und Dienst, um die zuverlässige Sitzung zu aktivieren und die [  **\<HttpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) Element.</span><span class="sxs-lookup"><span data-stu-id="abdc3-106">This procedure uses the client and service configuration files to enable the reliable session and the [**\<httpsTransport>**](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) element.</span></span>
+
+<span data-ttu-id="abdc3-107">Der wesentliche Teil dieser Prozedur ist, die die  **\<Endpunkt >** Konfigurationselement enthalten eine `bindingConfiguration` -Attribut, das auf die benutzerdefinierte Bindungskonfiguration mit dem Namen `reliableSessionOverHttps`.</span><span class="sxs-lookup"><span data-stu-id="abdc3-107">The key part of this procedure is that the **\<endpoint>** configuration element contain a `bindingConfiguration` attribute that references a custom binding configuration named `reliableSessionOverHttps`.</span></span> <span data-ttu-id="abdc3-108">Die [  **\<Bindung >** ](../../../../docs/framework/misc/binding.md) Konfigurationselement verweist auf diesen Namen, um anzugeben, dass eine zuverlässige Sitzung und HTTPS-Transport einschließlich verwendeten  **\< ReliableSession >** und  **\<HttpsTransport >** Elemente.</span><span class="sxs-lookup"><span data-stu-id="abdc3-108">The [**\<binding>**](../../../../docs/framework/misc/binding.md) configuration element references this name to specify that a reliable session and the HTTPS transport are used by including **\<reliableSession>** and **\<httpsTransport>** elements.</span></span>
+
+<span data-ttu-id="abdc3-109">Eine Kopie der Quelle dieses Beispiels, finden Sie unter [benutzerdefiniertes Binden von zuverlässigen Sitzung über HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span><span class="sxs-lookup"><span data-stu-id="abdc3-109">For the source copy of this example, see [Custom Binding Reliable Session over HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span></span>
+
+### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="abdc3-110">Konfigurieren Sie den Dienst mit ' CustomBinding ' zur Verwendung einer zuverlässigen Sitzungs mit HTTPS</span><span class="sxs-lookup"><span data-stu-id="abdc3-110">Configure the service with a CustomBinding to use a reliable session with HTTPS</span></span>
+
+1. <span data-ttu-id="abdc3-111">Definieren Sie einen Dienstvertrag für den Diensttyp.</span><span class="sxs-lookup"><span data-stu-id="abdc3-111">Define a service contract for the type of service.</span></span>
+
+   [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]
+
+1. <span data-ttu-id="abdc3-112">Implementieren Sie den Dienstvertrag in einer Dienstklasse.</span><span class="sxs-lookup"><span data-stu-id="abdc3-112">Implement the service contract in a service class.</span></span> <span data-ttu-id="abdc3-113">Beachten Sie, dass die Adresse oder die Bindungsinformationen Informationen in der Implementierung des Diensts nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="abdc3-113">Note that the address or binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="abdc3-114">Sie sind nicht erforderlich, um Code schreiben, um die Adresse oder die Bindungsinformationen Informationen aus der Konfigurationsdatei abzurufen.</span><span class="sxs-lookup"><span data-stu-id="abdc3-114">You aren't required to write code to retrieve the address or binding information from the configuration file.</span></span>
+
+   [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
+
+1. <span data-ttu-id="abdc3-115">Erstellen einer *"Web.config"* Datei so konfigurieren Sie einen Endpunkt für die `CalculatorService` mit einer benutzerdefinierten Bindung namens `reliableSessionOverHttps` , die eine zuverlässige Sitzung und HTTPS-Transport verwendet.</span><span class="sxs-lookup"><span data-stu-id="abdc3-115">Create a *Web.config* file to configure an endpoint for the `CalculatorService` with a custom binding named `reliableSessionOverHttps` that uses a reliable session and the HTTPS transport.</span></span>
+
+   [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
+
+1. <span data-ttu-id="abdc3-116">Erstellen einer *Service.svc* -Datei, die die Zeile enthält:</span><span class="sxs-lookup"><span data-stu-id="abdc3-116">Create a *Service.svc* file that contains the line:</span></span>
+
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
+
+1. <span data-ttu-id="abdc3-117">Ort der *Service.svc* Datei in das virtuelle Verzeichnis für Internetinformationsdienste (Internet Information Services, IIS).</span><span class="sxs-lookup"><span data-stu-id="abdc3-117">Place the *Service.svc* file in your Internet Information Services (IIS) virtual directory.</span></span>
+
+### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="abdc3-118">Konfigurieren Sie den Client mit ' CustomBinding ' zur Verwendung einer zuverlässigen Sitzungs mit HTTPS</span><span class="sxs-lookup"><span data-stu-id="abdc3-118">Configure the client with a CustomBinding to use a reliable session with HTTPS</span></span>
+
+1. <span data-ttu-id="abdc3-119">Verwenden der [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile, um Code von Dienstmetadaten zu generieren.</span><span class="sxs-lookup"><span data-stu-id="abdc3-119">Use the [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>
+
+   ```console
+   Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
+   ```
+
+1. <span data-ttu-id="abdc3-120">Der generierte Client enthält die `ICalculator` -Schnittstelle, die den Dienstvertrag definiert, die Clientimplementierung entsprechen muss.</span><span class="sxs-lookup"><span data-stu-id="abdc3-120">The client that's generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
+
+1. <span data-ttu-id="abdc3-121">Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`.</span><span class="sxs-lookup"><span data-stu-id="abdc3-121">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="abdc3-122">Beachten Sie, dass die Adresse und Bindung Informationen in der Implementierung des Diensts nicht angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="abdc3-122">Note that the address and binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="abdc3-123">Sie sind nicht erforderlich, um das Schreiben von Code zum Abrufen der Adresse und Bindung aus der Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="abdc3-123">You aren't required to write code to retrieve the address and binding information from the configuration file.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
+
+1. <span data-ttu-id="abdc3-124">Konfigurieren eine benutzerdefinierte Bindung namens `reliableSessionOverHttps` HTTPS-Transport und zuverlässige Sitzungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="abdc3-124">Configure a custom binding named `reliableSessionOverHttps` to use the HTTPS transport and reliable sessions.</span></span>
+
+   [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
+
+1. <span data-ttu-id="abdc3-125">Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.</span><span class="sxs-lookup"><span data-stu-id="abdc3-125">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]
+
+1. <span data-ttu-id="abdc3-126">Kompilieren Sie den Code, und führen Sie den Client aus.</span><span class="sxs-lookup"><span data-stu-id="abdc3-126">Compile and run the client.</span></span>  
+
+## <a name="net-framework-security"></a><span data-ttu-id="abdc3-127">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="abdc3-127">.NET Framework security</span></span>
+
+<span data-ttu-id="abdc3-128">Da das in diesem Beispiel verwendete Zertifikat ein mit erstelltes Testzertifikat ist *Makecert.exe*, eine sicherheitswarnung angezeigt, wenn Sie versuchen, eine HTTPS-Adresse, z. B. den Zugriff auf `https://localhost/servicemodelsamples/service.svc`, in Ihrem Browser.</span><span class="sxs-lookup"><span data-stu-id="abdc3-128">Because the certificate used in this sample is a test certificate created with *Makecert.exe*, a security alert appears when you try to access an HTTPS address, such as `https://localhost/servicemodelsamples/service.svc`, from your browser.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="abdc3-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="abdc3-129">See also</span></span>
+
+[<span data-ttu-id="abdc3-130">Zuverlässige Sitzungen</span><span class="sxs-lookup"><span data-stu-id="abdc3-130">Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

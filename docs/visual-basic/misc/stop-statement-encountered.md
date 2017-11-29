@@ -1,45 +1,28 @@
 ---
-title: Stop-Anweisung gefunden | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Eine Stop-Anweisung wurde gefunden.
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID999
+f1_keywords: vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9849428343d130bd363b8b53c8d143c4b8bf996a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 740382c4317287696c96c01e20c590a4910d8e0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="stop-statement-encountered"></a>Eine Stop-Anweisung wurde gefunden.
-Eine `Stop` -Anweisung, die die Ausführung unterbricht, wurde gefunden.  
+# <a name="stop-statement-encountered"></a><span data-ttu-id="26500-102">Eine Stop-Anweisung wurde gefunden.</span><span class="sxs-lookup"><span data-stu-id="26500-102">Stop statement encountered</span></span>
+<span data-ttu-id="26500-103">Eine `Stop` -Anweisung, die die Ausführung unterbricht, wurde gefunden.</span><span class="sxs-lookup"><span data-stu-id="26500-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="26500-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="26500-104">To correct this error</span></span>  
   
-1.  Entfernen Sie die `Stop` -Anweisung.  
+1.  <span data-ttu-id="26500-105">Entfernen Sie die `Stop` -Anweisung.</span><span class="sxs-lookup"><span data-stu-id="26500-105">Remove the `Stop` statement.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Stop-Anweisung](../../visual-basic/language-reference/statements/stop-statement.md)   
- [Ablaufsteuerung: Zusammenfassung](../../visual-basic/language-reference/keywords/control-flow-summary.md)   
- [Stop-Anweisungen in Visual Basic](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)
+## <a name="see-also"></a><span data-ttu-id="26500-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="26500-106">See Also</span></span>  
+ [<span data-ttu-id="26500-107">Stop-Anweisung</span><span class="sxs-lookup"><span data-stu-id="26500-107">Stop Statement</span></span>](../../visual-basic/language-reference/statements/stop-statement.md)  
+ [<span data-ttu-id="26500-108">Ablaufsteuerung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="26500-108">Control Flow Summary</span></span>](../../visual-basic/language-reference/keywords/control-flow-summary.md)  
+ [<span data-ttu-id="26500-109">Stop-Anweisungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="26500-109">Stop Statements in Visual Basic</span></span>](/visualstudio/debugger/stop-statements-in-visual-basic)

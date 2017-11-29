@@ -1,31 +1,34 @@
 ---
-title: "Gewusst wie: Animieren in einer &quot;ControlTemplate&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, ControlTemplates"
-  - "ControlTemplates, Animieren in"
+title: 'Gewusst wie: Animieren in einer "ControlTemplate"'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], ControlTemplates
+- ControlTemplates [WPF], animating within
 ms.assetid: 97abb5d9-4dc7-4085-a011-54bd8bcb497b
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ededc40b09438c0708a49eea90232894723deb8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Animieren in einer &quot;ControlTemplate&quot;
-Dieses Beispiel zeigt, wie Sie die Objekte <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger> und <xref:System.Windows.Trigger> verwenden, um die Animation innerhalb einer <xref:System.Windows.Controls.ControlTemplate> durchzuführen.  
+# <a name="how-to-animate-in-a-controltemplate"></a><span data-ttu-id="e106d-102">Gewusst wie: Animieren in einer "ControlTemplate"</span><span class="sxs-lookup"><span data-stu-id="e106d-102">How to: Animate in a ControlTemplate</span></span>
+<span data-ttu-id="e106d-103">Dieses Beispiel zeigt, wie <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, und <xref:System.Windows.Trigger> Objekte zu animierende innerhalb einer <xref:System.Windows.Controls.ControlTemplate>.</span><span class="sxs-lookup"><span data-stu-id="e106d-103">This example shows how to use <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, and <xref:System.Windows.Trigger> objects to animate within a <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
   
-## Beispiel  
- [!code-xml[AnimatePropertyStoryboards#GraphicsMMControlTemplateStoryboardExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/ControlTemplateStoryboardExample.xaml#graphicsmmcontroltemplatestoryboardexample)]  
+## <a name="example"></a><span data-ttu-id="e106d-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e106d-104">Example</span></span>  
+ [!code-xaml[AnimatePropertyStoryboards#GraphicsMMControlTemplateStoryboardExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/ControlTemplateStoryboardExample.xaml#graphicsmmcontroltemplatestoryboardexample)]  
   
- Weitere Informationen zum Animieren von Eigenschaften mit Storyboards finden Sie unter [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ <span data-ttu-id="e106d-105">Weitere Informationen zum Animieren von Eigenschaften mit Storyboards finden Sie unter [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span><span class="sxs-lookup"><span data-stu-id="e106d-105">For more information about animating properties with storyboards, see [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="e106d-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e106d-106">See Also</span></span>  
  <xref:System.Windows.Controls.ControlTemplate>

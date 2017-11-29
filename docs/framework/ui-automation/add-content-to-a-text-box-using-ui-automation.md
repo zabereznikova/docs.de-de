@@ -1,36 +1,42 @@
 ---
-title: "Add Content to a Text Box Using UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "adding content to text boxes"
-  - "text boxes, adding content"
-  - "UI Automation, adding content to text boxes"
+title: "Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- adding content to text boxes
+- text boxes, adding content
+- UI Automation, adding content to text boxes
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
-caps.latest.revision: 13
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 0acd6510e6349917b38e33e487123a118c2e653c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Add Content to a Text Box Using UI Automation
+# <a name="add-content-to-a-text-box-using-ui-automation"></a><span data-ttu-id="4c968-102">Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="4c968-102">Add Content to a Text Box Using UI Automation</span></span>
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework\-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]\-Klassen verwenden möchten, die im <xref:System.Windows.Automation>\-Namespace definiert sind.  Aktuelle Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie unter [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="4c968-103">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="4c968-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="4c968-104">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="4c968-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Dieses Thema enthält Beispielcode, der die Verwendung von [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zum Einfügen von Text in ein einzeiliges Textfeld veranschaulicht.  Für mehrzeilige und Rich\-Text\-Steuerelemente, bei denen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nicht anwendbar ist, steht eine alternative Methode zur Verfügung.  Zum Vergleich wird in diesem Beispiel ebenfalls gezeigt, wie die gleichen Ergebnisse mit Win32\-Methoden erzielt werden können.  
+ <span data-ttu-id="4c968-105">Dieses Thema enthält Beispielcode, der veranschaulicht [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] zum Einfügen von Text in einem einzeiligen Textfeld.</span><span class="sxs-lookup"><span data-stu-id="4c968-105">This topic contains example code that demonstrates how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to insert text into a single-line text box.</span></span> <span data-ttu-id="4c968-106">Eine alternative Methode für mehrzeilige und rich-Text-Steuerelemente bereitgestellt wird, in dem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ist nicht anwendbar.</span><span class="sxs-lookup"><span data-stu-id="4c968-106">An alternate method is provided for multi-line and rich text controls where [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] is not applicable.</span></span> <span data-ttu-id="4c968-107">Für Vergleichszwecke können veranschaulicht das Beispiel auch Win32-Methoden verwenden, um die gleichen Ergebnisse zu erreichen.</span><span class="sxs-lookup"><span data-stu-id="4c968-107">For comparison purposes, the example also demonstrates how to use Win32 methods to accomplish the same results.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird in einer Zielanwendung eine Reihe von Textsteuerelementen durchlaufen.  Jedes Textsteuerelement wird getestet, um zu ermitteln, ob aus dem Steuerelement ein <xref:System.Windows.Automation.ValuePattern>\-Objekt mit der <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>\-Methode abgerufen werden kann.  Wenn das Textsteuerelement <xref:System.Windows.Automation.ValuePattern> unterstützt, wird die <xref:System.Windows.Automation.ValuePattern.SetValue%2A>\-Methode verwendet, um eine benutzerdefinierte Zeichenfolge in das Textsteuerelement einzufügen.  Andernfalls wird die <xref:System.Windows.Forms.SendKeys.SendWait%2A?displayProperty=fullName>\-Methode verwendet.  
+## <a name="example"></a><span data-ttu-id="4c968-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4c968-108">Example</span></span>  
+ <span data-ttu-id="4c968-109">Im folgenden Beispiel Durchlaufen einer Sequenz von Textsteuerelementen eine Zielanwendung.</span><span class="sxs-lookup"><span data-stu-id="4c968-109">The following example steps through a sequence of text controls in a target application.</span></span> <span data-ttu-id="4c968-110">Jedes Textfeld-Steuerelement wird daraufhin überprüft, ob eine <xref:System.Windows.Automation.ValuePattern> -Objekt abgerufen werden kann, mithilfe der <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="4c968-110">Each text control is tested to see if a <xref:System.Windows.Automation.ValuePattern> object can be obtained from it using the <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> method.</span></span> <span data-ttu-id="4c968-111">Wenn im Textsteuerelement ein unterstützt <xref:System.Windows.Automation.ValuePattern>die <xref:System.Windows.Automation.ValuePattern.SetValue%2A> Methode wird verwendet, um eine benutzerdefinierte Zeichenfolge in das Textfeld-Steuerelement einfügen.</span><span class="sxs-lookup"><span data-stu-id="4c968-111">If the text control does support <xref:System.Windows.Automation.ValuePattern>, the <xref:System.Windows.Automation.ValuePattern.SetValue%2A> method is used to insert a user-defined string into the text control.</span></span> <span data-ttu-id="4c968-112">Andernfalls die <xref:System.Windows.Forms.SendKeys.SendWait%2A?displayProperty=nameWithType> Methode wird verwendet.</span><span class="sxs-lookup"><span data-stu-id="4c968-112">Otherwise, the <xref:System.Windows.Forms.SendKeys.SendWait%2A?displayProperty=nameWithType> method is used.</span></span>  
   
  [!code-csharp[InsertText#InsertText](../../../samples/snippets/csharp/VS_Snippets_Wpf/InsertText/CSharp/Window1.xaml.cs#inserttext)]
  [!code-vb[InsertText#InsertText](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InsertText/VisualBasic/Window1.xaml.vb#inserttext)]  
   
-## Siehe auch  
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/de-de/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
+## <a name="see-also"></a><span data-ttu-id="4c968-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4c968-113">See Also</span></span>  
+ [<span data-ttu-id="4c968-114">Einfügen von TextPattern-Text (Beispiel)</span><span class="sxs-lookup"><span data-stu-id="4c968-114">TextPattern Insert Text Sample</span></span>](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)

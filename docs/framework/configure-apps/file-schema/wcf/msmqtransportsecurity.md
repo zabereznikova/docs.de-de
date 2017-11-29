@@ -1,28 +1,37 @@
 ---
-title: "&lt;msmqTransportSecurity&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;msmqTransportSecurity&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: eee2cb916d79bf3b79e882cd757b10344121f6b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;msmqTransportSecurity&gt;
-Gibt die MSMQ\-Transportsicherheitseinstellungen für eine benutzerdefinierte Bindung an.  
+# <a name="ltmsmqtransportsecuritygt"></a><span data-ttu-id="43f3c-102">&lt;msmqTransportSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="43f3c-102">&lt;msmqTransportSecurity&gt;</span></span>
+<span data-ttu-id="43f3c-103">Gibt die MSMQ-Transportsicherheitseinstellungen für eine benutzerdefinierte Bindung an.</span><span class="sxs-lookup"><span data-stu-id="43f3c-103">Specifies MSMQ transport security settings for a custom binding.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="43f3c-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="43f3c-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="43f3c-105">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="43f3c-105">\<bindings></span></span>  
+<span data-ttu-id="43f3c-106">\<CustomBinding ></span><span class="sxs-lookup"><span data-stu-id="43f3c-106">\<customBinding></span></span>  
+<span data-ttu-id="43f3c-107">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="43f3c-107">\<binding></span></span>  
+<span data-ttu-id="43f3c-108">\<MsmqIntegration ></span><span class="sxs-lookup"><span data-stu-id="43f3c-108">\<msmqIntegration></span></span>  
+<span data-ttu-id="43f3c-109">\<MsmqTransportSecurity ></span><span class="sxs-lookup"><span data-stu-id="43f3c-109">\<msmqTransportSecurity></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="43f3c-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="43f3c-110">Syntax</span></span>  
   
+```xml  
 <msmqTransportSecurity>  
    msmqAuthenticationMode="None/Windows/Certificate"  
    msmqEncryptionAlgorithm="RC4Stream/AES"  
@@ -31,40 +40,40 @@ Gibt die MSMQ\-Transportsicherheitseinstellungen für eine benutzerdefinierte Bi
 </msmqTransportSecurity>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="43f3c-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="43f3c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="43f3c-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="43f3c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="43f3c-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="43f3c-113">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|`msmqAuthenticationMode`|Gibt an, wie die Nachricht vom MSMQ\-Transport authentifiziert werden muss.  Wenn dies auf `None` festgelegt ist, muss der Wert des `msmqProtectionLevel`\-Attributs auch auf `None` festgelegt sein.<br /><br /> Folgende Werte sind gültig:<br /><br /> -   None: Keine Authentifizierung.<br />-   Windows: Der Authentifizierungsmechanismus verwendet Active Directory, um das X.509\-Zertifikat für die mit der Nachricht verknüpfte SID abzurufen.  Dies wird anschließend zum Prüfen der ACL der Warteschlange verwendet, um sicherzustellen, dass der Benutzer über Berechtigungen zum Schreiben in die Warteschlange verfügt.<br />-   Certificate: Der Kanal ruft das Zertifikat aus dem Zertifikatspeicher ab.<br /><br /> Der Standardwert lautet Windows.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|`msmqEncryptionAlgorithm`|Gibt den Algorithmus an, der beim Übertragen von Nachrichten zwischen Warteschlangen\-Managern für die Nachrichtenverschlüsselung verwendet werden soll.  Folgende Werte sind gültig:<br /><br /> -   RC4Stream<br />-   AES<br /><br /> Der Standardwert ist RC4Stream.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Gibt an, wie die Nachricht auf der Ebene des MSMQ\-Transports gesichert wird.  Mit der Verschlüsselung wird die Nachrichtenintegrität sichergestellt, während EncryptAndSign sowohl Nachrichtenintegrität als auch Nachweisbarkeit sicherstellt. Dabei wird geprüft, ob die Nachricht wirklich vom Absender kommt und der Absender wirklich der ist, der er vorgibt zu sein.  Folgende Werte sind gültig:<br /><br /> -   None: Kein Schutz.<br />-   Sign: Nachrichten werden signiert.<br />-   EncryptAndSign: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist Sign.  Dieses Attribut ist vom Typ <xref:System.Net.Security.ProtectionLevel>.|  
-|`msmqSecureHashAlgorithm`|Gibt den Algorithmus an, der beim Berechnen des Digests als Teil von Signaturen verwendet werden soll.  Folgende Werte sind gültig:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Der Standardwert ist SHA1.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|<span data-ttu-id="43f3c-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="43f3c-114">Attribute</span></span>|<span data-ttu-id="43f3c-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43f3c-115">Description</span></span>|  
+|---------------|-----------------|  
+|`msmqAuthenticationMode`|<span data-ttu-id="43f3c-116">Gibt an, wie die Nachricht vom MSMQ-Transport authentifiziert werden muss.</span><span class="sxs-lookup"><span data-stu-id="43f3c-116">Specifies how the message must be authenticated by the MSMQ transport.</span></span> <span data-ttu-id="43f3c-117">Wenn dies auf `None` festgelegt ist, muss der Wert des `msmqProtectionLevel`-Attributs auch auf `None` festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="43f3c-117">If this is set to `None`, the value of the `msmqProtectionLevel` attribute must also be set to `None`.</span></span><br /><br /> <span data-ttu-id="43f3c-118">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="43f3c-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="43f3c-119">-Keine: Keine Authentifizierung.</span><span class="sxs-lookup"><span data-stu-id="43f3c-119">-   None: No authentication.</span></span><br /><span data-ttu-id="43f3c-120">-Windows: Der Authentifizierungsmechanismus verwendet Active Directory, um das x. 509-Zertifikat abzurufen, für die mit der Nachricht SID verknüpfte.</span><span class="sxs-lookup"><span data-stu-id="43f3c-120">-   Windows: The authentication mechanism uses Active Directory to get the X.509 certificate for the SID associated with the message.</span></span> <span data-ttu-id="43f3c-121">Dies wird anschließend zum Prüfen der ACL der Warteschlange verwendet, um sicherzustellen, dass der Benutzer über Berechtigungen zum Schreiben in die Warteschlange verfügt.</span><span class="sxs-lookup"><span data-stu-id="43f3c-121">This is then used to check the ACL of the queue to ensure the user has permission to write to the queue.</span></span><br /><span data-ttu-id="43f3c-122">-Certificate: Der Kanal Ruft das Zertifikat aus dem Zertifikatspeicher ab.</span><span class="sxs-lookup"><span data-stu-id="43f3c-122">-   Certificate: The channel gets the certificate from the certificate store.</span></span><br /><br /> <span data-ttu-id="43f3c-123">Der Standardwert lautet Windows.</span><span class="sxs-lookup"><span data-stu-id="43f3c-123">The default value is Windows.</span></span> <span data-ttu-id="43f3c-124">Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqAuthenticationMode>.</span><span class="sxs-lookup"><span data-stu-id="43f3c-124">This attribute is of type <xref:System.ServiceModel.MsmqAuthenticationMode>.</span></span>|  
+|`msmqEncryptionAlgorithm`|<span data-ttu-id="43f3c-125">Gibt den Algorithmus an, der beim Übertragen von Nachrichten zwischen Warteschlangen-Managern für die Nachrichtenverschlüsselung verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="43f3c-125">Specifies the algorithm to be used for message encryption on the wire when transferring messages between message queue managers.</span></span> <span data-ttu-id="43f3c-126">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="43f3c-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="43f3c-127">-RC4Stream</span><span class="sxs-lookup"><span data-stu-id="43f3c-127">-   RC4Stream</span></span><br /><span data-ttu-id="43f3c-128">-AES</span><span class="sxs-lookup"><span data-stu-id="43f3c-128">-   AES</span></span><br /><br /> <span data-ttu-id="43f3c-129">Der Standardwert ist RC4Stream.</span><span class="sxs-lookup"><span data-stu-id="43f3c-129">The default value is RC4Stream.</span></span> <span data-ttu-id="43f3c-130">Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="43f3c-130">This attribute is of type <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span></span>|  
+|`msmqProtectionLevel`|<span data-ttu-id="43f3c-131">Gibt an, wie die Nachricht auf der Ebene des MSMQ-Transports gesichert wird.</span><span class="sxs-lookup"><span data-stu-id="43f3c-131">Specifies how the message is secured at the level of the MSMQ transport.</span></span> <span data-ttu-id="43f3c-132">Mit der Verschlüsselung wird die Nachrichtenintegrität sichergestellt, während EncryptAndSign sowohl Nachrichtenintegrität als auch Nachweisbarkeit sicherstellt. Dabei wird geprüft, ob die Nachricht wirklich vom Absender kommt und der Absender wirklich der ist, der er vorgibt zu sein.</span><span class="sxs-lookup"><span data-stu-id="43f3c-132">Encryption ensures message integrity while EncryptAndSign ensures both message integrity and non-repudiation; that is, the message indeed comes from the sender and the sender is who he says he is.</span></span> <span data-ttu-id="43f3c-133">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="43f3c-133">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="43f3c-134">-None: Kein Schutz.</span><span class="sxs-lookup"><span data-stu-id="43f3c-134">-   None: No protection.</span></span><br /><span data-ttu-id="43f3c-135">-Sign: Nachrichten werden signiert.</span><span class="sxs-lookup"><span data-stu-id="43f3c-135">-   Sign: Messages are signed.</span></span><br /><span data-ttu-id="43f3c-136">-EncryptAndSign: Nachrichten werden verschlüsselt und signiert.</span><span class="sxs-lookup"><span data-stu-id="43f3c-136">-   EncryptAndSign: Messages are encrypted and signed.</span></span><br /><br /> <span data-ttu-id="43f3c-137">Der Standardwert ist Sign.</span><span class="sxs-lookup"><span data-stu-id="43f3c-137">The default value is Sign.</span></span> <span data-ttu-id="43f3c-138">Dieses Attribut ist vom Typ <xref:System.Net.Security.ProtectionLevel>.</span><span class="sxs-lookup"><span data-stu-id="43f3c-138">This attribute is of type <xref:System.Net.Security.ProtectionLevel>.</span></span>|  
+|`msmqSecureHashAlgorithm`|<span data-ttu-id="43f3c-139">Gibt den Algorithmus an, der beim Berechnen des Digests als Teil von Signaturen verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="43f3c-139">Specifies the algorithm to be used in computing the digest as part of signatures.</span></span> <span data-ttu-id="43f3c-140">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="43f3c-140">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="43f3c-141">-MD5</span><span class="sxs-lookup"><span data-stu-id="43f3c-141">-   MD5</span></span><br /><span data-ttu-id="43f3c-142">-SHA1</span><span class="sxs-lookup"><span data-stu-id="43f3c-142">-   SHA1</span></span><br /><span data-ttu-id="43f3c-143">-SHA256</span><span class="sxs-lookup"><span data-stu-id="43f3c-143">-   SHA256</span></span><br /><span data-ttu-id="43f3c-144">-"SHA512" VERWENDET</span><span class="sxs-lookup"><span data-stu-id="43f3c-144">-   SHA512</span></span><br /><br /> <span data-ttu-id="43f3c-145">Der Standardwert ist SHA1.</span><span class="sxs-lookup"><span data-stu-id="43f3c-145">The default value is SHA1.</span></span> <span data-ttu-id="43f3c-146">Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="43f3c-146">This attribute is of type <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="43f3c-147">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="43f3c-147">Child Elements</span></span>  
+ <span data-ttu-id="43f3c-148">Keine</span><span class="sxs-lookup"><span data-stu-id="43f3c-148">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="43f3c-149">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="43f3c-149">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<msmqIntegration\>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Gibt die Einstellungen an, die für die Interaktion mit einem Message Queuing \(MSMQ\)\-Absender oder \-Empfänger erforderlich sind.|  
-|[\<msmqTransport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Gibt die Eigenschaften der Warteschlangenkommunikation für einen Windows Communication Foundation \(WCF\)\-Dienst an, der das systemeigene Message Queuing \(MSMQ\)\-Protokoll verwendet.|  
+|<span data-ttu-id="43f3c-150">Element</span><span class="sxs-lookup"><span data-stu-id="43f3c-150">Element</span></span>|<span data-ttu-id="43f3c-151">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="43f3c-151">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="43f3c-152">\<MsmqIntegration ></span><span class="sxs-lookup"><span data-stu-id="43f3c-152">\<msmqIntegration></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|<span data-ttu-id="43f3c-153">Gibt die Einstellungen an, die für die Interaktion mit einem Message Queuing (MSMQ)-Absender oder -Empfänger erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="43f3c-153">Specifies settings required for interaction with a Message Queuing (MSMQ) sender or receiver.</span></span>|  
+|[<span data-ttu-id="43f3c-154">\<MsmqTransport ></span><span class="sxs-lookup"><span data-stu-id="43f3c-154">\<msmqTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|<span data-ttu-id="43f3c-155">Gibt die Eigenschaften der Warteschlangenkommunikation für einen Windows Communication Foundation (WCF)-Dienst an, der das systemeigene Message Queuing (MSMQ)-Protokoll verwendet.</span><span class="sxs-lookup"><span data-stu-id="43f3c-155">Specifies the queuing communication properties for a Windows Communication Foundation (WCF) service that uses the native MSMQ protocol.</span></span>|  
   
-## Hinweise  
- Weitere Informationen zur Transportsicherheit finden Sie unter [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
+## <a name="remarks"></a><span data-ttu-id="43f3c-156">Hinweise</span><span class="sxs-lookup"><span data-stu-id="43f3c-156">Remarks</span></span>  
+ <span data-ttu-id="43f3c-157">Weitere Informationen zur transportsicherheit finden Sie unter [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="43f3c-157">For more information on transport security, see [Transport Security](../../../../../docs/framework/wcf/feature-details/transport-security.md).</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>   
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)   
- [Transporte](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+## <a name="see-also"></a><span data-ttu-id="43f3c-158">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43f3c-158">See Also</span></span>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
+ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="43f3c-159">Warteschlangen in WCF</span><span class="sxs-lookup"><span data-stu-id="43f3c-159">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="43f3c-160">Transporte</span><span class="sxs-lookup"><span data-stu-id="43f3c-160">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="43f3c-161">Wählen eines Transports</span><span class="sxs-lookup"><span data-stu-id="43f3c-161">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="43f3c-162">Bindungen</span><span class="sxs-lookup"><span data-stu-id="43f3c-162">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="43f3c-163">Erweitern von Bindungen</span><span class="sxs-lookup"><span data-stu-id="43f3c-163">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="43f3c-164">Benutzerdefinierte Bindungen</span><span class="sxs-lookup"><span data-stu-id="43f3c-164">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="43f3c-165">\<CustomBinding ></span><span class="sxs-lookup"><span data-stu-id="43f3c-165">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="43f3c-166">Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="43f3c-166">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)

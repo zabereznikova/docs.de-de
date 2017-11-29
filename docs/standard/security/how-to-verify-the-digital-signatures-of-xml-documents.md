@@ -1,95 +1,96 @@
 ---
-title: "How to: Verify the Digital Signatures of XML Documents | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "System.Security.Cryptography.SignedXml class"
-  - "signatures, cryptographic"
-  - "System.Security.Cryptography.RSACryptoServiceProvider class"
-  - "verifying signatures"
-  - "checking signatures"
-  - "XML digital signatures"
-  - "digital signatures, verifying"
+title: "Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- System.Security.Cryptography.SignedXml class
+- signatures, cryptographic
+- System.Security.Cryptography.RSACryptoServiceProvider class
+- verifying signatures
+- checking signatures
+- XML digital signatures
+- digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a2c8cf23e1f00d6deac52f3c4bee8932b7c487a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Verify the Digital Signatures of XML Documents
-Um XML\-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>\-Namespace verwenden.  Über digitale XML\-Signaturen \(XMLDSIG\) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen über den XMLDSIG\-Standard finden Sie in der W3C\-Spezifikation \(World Wide Web Consortium\) unter "http:\/\/www.w3.org\/TR\/xmldsig\-core\/" \(nur auf Englisch verfügbar\).  
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a><span data-ttu-id="65f30-102">Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten</span><span class="sxs-lookup"><span data-stu-id="65f30-102">How to: Verify the Digital Signatures of XML Documents</span></span>
+<span data-ttu-id="65f30-103">Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.</span><span class="sxs-lookup"><span data-stu-id="65f30-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to verify XML data signed with a digital signature.</span></span>  <span data-ttu-id="65f30-104">Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.</span><span class="sxs-lookup"><span data-stu-id="65f30-104">XML digital signatures (XMLDSIG) allow you to verify that data was not altered after it was signed.</span></span>  <span data-ttu-id="65f30-105">Weitere Informationen über den XMLDSIG-Standard finden Sie in der W3C-Spezifikation (World Wide Web Consortium) unter "http://www.w3.org/TR/xmldsig-core/" (nur auf Englisch verfügbar).</span><span class="sxs-lookup"><span data-stu-id="65f30-105">For more information about the XMLDSIG standard, see the World Wide Web Consortium (W3C) specification at http://www.w3.org/TR/xmldsig-core/.</span></span>  
   
- Das Codebeispiel in dieser Vorgehensweise veranschaulicht, wie eine digitale XML\-Signatur überprüft wird, die in einem \<`Signature`\>\-Element enthalten ist.   Im Beispiel wird ein öffentlicher RSA\-Schlüssel aus einem Schlüsselcontainer abgerufen und anschließend zum Überprüfen der Signatur verwendet.  
+ <span data-ttu-id="65f30-106">Das Codebeispiel in dieser Vorgehensweise veranschaulicht, wie eine digitale XML-Signatur überprüft wird, die in einem <`Signature`>-Element enthalten ist. </span><span class="sxs-lookup"><span data-stu-id="65f30-106">The code example in this procedure demonstrates how to verify an XML digital signature contained in a <`Signature`> element.</span></span>  <span data-ttu-id="65f30-107">Im Beispiel wird ein öffentlicher RSA-Schlüssel aus einem Schlüsselcontainer abgerufen und anschließend zum Überprüfen der Signatur verwendet. </span><span class="sxs-lookup"><span data-stu-id="65f30-107">The example retrieves an RSA public key from a key container and then uses the key to verify the signature.</span></span>  
   
- Informationen dazu, wie eine digitale Signatur erstellt wird, die mithilfe dieser Technik überprüft werden kann, finden Sie unter [How to: Sign XML Documents with Digital Signatures](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ <span data-ttu-id="65f30-108">Informationen zum Erstellen einer digitalen Signatur, die mithilfe dieser Technik überprüft werden kann, finden Sie unter [wie: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).</span><span class="sxs-lookup"><span data-stu-id="65f30-108">For information about how create a digital signature that can be verified using this technique, see [How to: Sign XML Documents with Digital Signatures](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).</span></span>  
   
-### So überprüfen Sie die digitale Signatur eines XML\-Dokuments  
+### <a name="to-verify-the-digital-signature-of-an-xml-document"></a><span data-ttu-id="65f30-109">So überprüfen Sie die digitale Signatur eines XML-Dokuments</span><span class="sxs-lookup"><span data-stu-id="65f30-109">To verify the digital signature of an XML document</span></span>  
   
-1.  Um das Dokument zu überprüfen, müssen Sie denselben asymmetrischen Schlüssel wie für die Signierung verwenden.  Erstellen Sie ein <xref:System.Security.Cryptography.CspParameters>\-Objekt, und geben Sie den Namen des Schlüsselcontainers an, der zum Signieren verwendet wurde.  
+1.  <span data-ttu-id="65f30-110">Um das Dokument zu überprüfen, müssen Sie denselben asymmetrischen Schlüssel wie für die Signierung verwenden.</span><span class="sxs-lookup"><span data-stu-id="65f30-110">To verify the document, you must use the same asymmetric key that was used for signing.</span></span>  <span data-ttu-id="65f30-111">Erstellen Sie ein <xref:System.Security.Cryptography.CspParameters>-Objekt, und geben Sie den Namen des Schlüsselcontainers an, der zum Signieren verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="65f30-111">Create a <xref:System.Security.Cryptography.CspParameters> object and specify the name of the key container that was used for signing.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Rufen Sie den öffentlichen Schlüssel mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider>\-Klasse ab.  Der Schlüssel wird automatisch nach Name aus dem Schlüsselcontainer geladen, wenn Sie das <xref:System.Security.Cryptography.CspParameters>\-Objekt an den Konstruktor der <xref:System.Security.Cryptography.RSACryptoServiceProvider>\-Klasse übergeben.  
+2.  <span data-ttu-id="65f30-112">Rufen Sie den öffentlichen Schlüssel mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse ab.</span><span class="sxs-lookup"><span data-stu-id="65f30-112">Retrieve the public key using the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  <span data-ttu-id="65f30-113">Der Schlüssel wird automatisch nach Name aus dem Schlüsselcontainer geladen, wenn Sie das <xref:System.Security.Cryptography.CspParameters>-Objekt an den Konstruktor der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse übergeben.</span><span class="sxs-lookup"><span data-stu-id="65f30-113">The key is automatically loaded from the key container by name when you pass the <xref:System.Security.Cryptography.CspParameters> object to the constructor of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Erstellen Sie ein <xref:System.Xml.XmlDocument>\-Objekt, indem Sie eine XML\-Datei von einem Datenträger laden.  Das <xref:System.Xml.XmlDocument>\-Objekt enthält das signierte XML\-Dokument, das überprüft werden soll.  
+3.  <span data-ttu-id="65f30-114">Erstellen Sie ein <xref:System.Xml.XmlDocument>-Objekt, indem Sie eine XML-Datei von einem Datenträger laden.</span><span class="sxs-lookup"><span data-stu-id="65f30-114">Create an <xref:System.Xml.XmlDocument> object by loading an XML file from disk.</span></span>  <span data-ttu-id="65f30-115">Das <xref:System.Xml.XmlDocument>-Objekt enthält das signierte XML-Dokument, das überprüft werden soll.</span><span class="sxs-lookup"><span data-stu-id="65f30-115">The <xref:System.Xml.XmlDocument> object contains the signed XML document to verify.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Erstellen Sie ein neues <xref:System.Security.Cryptography.Xml.SignedXml>\-Objekt, und übergeben Sie diesem das <xref:System.Xml.XmlDocument>\-Objekt.  
+4.  <span data-ttu-id="65f30-116">Erstellen Sie ein neues <xref:System.Security.Cryptography.Xml.SignedXml>-Objekt, und übergeben Sie diesem das <xref:System.Xml.XmlDocument>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="65f30-116">Create a new <xref:System.Security.Cryptography.Xml.SignedXml> object and pass the <xref:System.Xml.XmlDocument> object to it.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Suchen Sie nach dem \<`signature`\>\-Element, und erstellen Sie ein neues <xref:System.Xml.XmlNodeList>\-Objekt.  
+5.  <span data-ttu-id="65f30-117">Suchen Sie nach dem <`signature`>-Element, und erstellen Sie ein neues <xref:System.Xml.XmlNodeList>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="65f30-117">Find the <`signature`> element and create a new <xref:System.Xml.XmlNodeList> object.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Laden Sie den XML\-Code des ersten \<`signature`\>\-Elements in das <xref:System.Security.Cryptography.Xml.SignedXml>\-Objekt.  
+6.  <span data-ttu-id="65f30-118">Laden Sie den XML-Code des ersten <`signature`>-Elements in das <xref:System.Security.Cryptography.Xml.SignedXml>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="65f30-118">Load the XML of the first <`signature`> element into the <xref:System.Security.Cryptography.Xml.SignedXml> object.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Überprüfen Sie die Signatur mit der <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A>\-Methode und dem öffentlichen RSA\-Schlüssel.  Diese Methode gibt einen booleschen Wert zurück, mit dem Erfolg oder Fehlschlagen des Vorgangs angegeben wird.  
+7.  <span data-ttu-id="65f30-119">Überprüfen Sie die Signatur mit der <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A>-Methode und dem öffentlichen RSA-Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="65f30-119">Check the signature using the <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> method and the RSA public key.</span></span>  <span data-ttu-id="65f30-120">Diese Methode gibt einen booleschen Wert zurück, mit dem Erfolg oder Fehlschlagen des Vorgangs angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="65f30-120">This method returns a Boolean value that indicates success or failure.</span></span>  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
-## Beispiel  
- Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Die Datei `"test.xml"` muss mit den Vorgehensweisen signiert worden sein, die unter [How to: Sign XML Documents with Digital Signatures](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md) beschrieben sind.  
+## <a name="example"></a><span data-ttu-id="65f30-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="65f30-121">Example</span></span>  
+ <span data-ttu-id="65f30-122">Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="65f30-122">This example assumes that a file named `"test.xml"` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="65f30-123">Die `"test.xml"` Datei muss signiert sein, mit den Verfahren, die in beschriebenen [wie: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).</span><span class="sxs-lookup"><span data-stu-id="65f30-123">The `"test.xml"` file must be signed using the techniques described in [How to: Sign XML Documents with Digital Signatures](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).</span></span>  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="65f30-124">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="65f30-124">Compiling the Code</span></span>  
   
--   Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
+-   <span data-ttu-id="65f30-125">Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.</span><span class="sxs-lookup"><span data-stu-id="65f30-125">To compile this example, you need to include a reference to `System.Security.dll`.</span></span>  
   
--   Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
+-   <span data-ttu-id="65f30-126">Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.</span><span class="sxs-lookup"><span data-stu-id="65f30-126">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## .NET Framework-Sicherheit  
- Sie sollten den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals in Klartext speichern oder übertragen.  Weitere Informationen über symmetrische und asymmetrische kryptografische Schlüssel finden Sie unter [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-framework-security"></a><span data-ttu-id="65f30-127">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="65f30-127">.NET Framework Security</span></span>  
+ <span data-ttu-id="65f30-128">Sie sollten den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals in Klartext speichern oder übertragen.</span><span class="sxs-lookup"><span data-stu-id="65f30-128">Never store or transfer the private key of an asymmetric key pair in plaintext.</span></span>  <span data-ttu-id="65f30-129">Weitere Informationen über symmetrische und asymmetrische kryptografische Schlüssel finden Sie unter [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span><span class="sxs-lookup"><span data-stu-id="65f30-129">For more information about symmetric and asymmetric cryptographic keys, see [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span></span>  
   
- Sie sollten einen privaten Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos aus einer Assembly gelesen werden, indem [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwendet oder die Assembly in einem Texteditor wie Editor geöffnet wird.  
+ <span data-ttu-id="65f30-130">Sie sollten einen privaten Schlüssel niemals direkt in Ihren Quellcode einbetten.</span><span class="sxs-lookup"><span data-stu-id="65f30-130">Never embed a private key directly into your source code.</span></span>  <span data-ttu-id="65f30-131">Eingebettete Schlüssel können problemlos aus einer Assembly gelesen werden die [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oder durch die Assembly in einem Texteditor wie Editor öffnen.</span><span class="sxs-lookup"><span data-stu-id="65f30-131">Embedded keys can be easily read from an assembly using the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) or by opening the assembly in a text editor such as Notepad.</span></span>  
   
-## Siehe auch  
- <xref:System.Security.Cryptography.Xml>   
- [How to: Sign XML Documents with Digital Signatures](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+## <a name="see-also"></a><span data-ttu-id="65f30-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65f30-132">See Also</span></span>  
+ <xref:System.Security.Cryptography.Xml>  
+ [<span data-ttu-id="65f30-133">Gewusst wie: Signieren von XML-Dokumenten mit digitalen Signaturen</span><span class="sxs-lookup"><span data-stu-id="65f30-133">How to: Sign XML Documents with Digital Signatures</span></span>](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

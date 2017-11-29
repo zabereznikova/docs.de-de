@@ -1,28 +1,38 @@
 ---
-title: "&lt;certificate&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;certificate&gt;-Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 87f016d8756daf72d93143e1432ae74a6852c953
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;certificate&gt;-Element
-Gibt ein X.509\-Zertifikat an, das zum Signieren und Verschlüsseln von Nachrichten für Peer\-to\-Peer\-Clients verwendet wird.  
+# <a name="ltcertificategt-element"></a><span data-ttu-id="14a60-102">&lt;certificate&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="14a60-102">&lt;certificate&gt; Element</span></span>
+<span data-ttu-id="14a60-103">Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachrichten für Peer-to-Peer-Clients verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="14a60-103">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="14a60-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="14a60-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="14a60-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="14a60-105">\<behaviors></span></span>  
+<span data-ttu-id="14a60-106">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="14a60-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="14a60-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="14a60-107">\<behavior></span></span>  
+<span data-ttu-id="14a60-108">\<ClientCredentials ></span><span class="sxs-lookup"><span data-stu-id="14a60-108">\<clientCredentials></span></span>  
+<span data-ttu-id="14a60-109">\<Peer ></span><span class="sxs-lookup"><span data-stu-id="14a60-109">\<peer></span></span>  
+<span data-ttu-id="14a60-110">\<Zertifikat ></span><span class="sxs-lookup"><span data-stu-id="14a60-110">\<certificate></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="14a60-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="14a60-111">Syntax</span></span>  
   
+```xml  
 <certificate findValue="String"   
   
 storeLocation="LocalMachine/CurrentUser"  
@@ -31,36 +41,36 @@ storeLocation="LocalMachine/CurrentUser"
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="14a60-112">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="14a60-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="14a60-113">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="14a60-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="14a60-114">Attribute</span><span class="sxs-lookup"><span data-stu-id="14a60-114">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|`findValue`|Eine Zeichenfolge, die den Wert angibt, nach dem im X.509\-Zertifikatspeicher gesucht werden soll.  Der in diesem Attribut enthaltene Typ muss den Anforderungen des angegebenen `x509FindType`\-Werts entsprechen.  Der Standardwert ist eine leere Zeichenfolge.|  
-|`storeLocation`|Gibt den Speicherort des X.509\-Zertifikatspeichers an, den der Client zum Prüfen des Peerzertifikats verwendet.  Folgende Werte sind gültig:<br /><br /> -   LocalMachine: Der dem lokalen Computer zugewiesene Zertifikatspeicher.<br />-   CurrentUser: Der dem aktuellen Benutzer zugewiesene Zertifikatspeicher.<br /><br /> Die Standardeinstellung ist LocalMachine.|  
-|`storeName`|Gibt den Namen des X.509\-Zertifikatsspeichers an, der geöffnet werden soll.  Folgende Werte sind gültig:<br /><br /> -   AddressBook: Zertifikatspeicher für andere Benutzer.<br />-   AuthRoot: Der Zertifikatspeicher für Zertifizierungsstellen von Drittanbietern.<br />-   CertificateAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen.<br />-   Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.<br />-   My: Der Zertifikatspeicher für persönliche Zertifikate.<br />-   Root: Der Zertifikatspeicher für vertrauenswürdige Stammzertifizierungsstellen.<br />-   TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-   TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My.|  
-|`X509FindType`|Definiert den Typ der X.509\-Suche, die ausgeführt werden soll.  Folgende Werte sind gültig:<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Der im `findValue`\-Attribut enthaltene Typ muss den Anforderungen des angegebenen `x509FindType`\-Werts entsprechen.<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName.|  
+|<span data-ttu-id="14a60-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="14a60-115">Attribute</span></span>|<span data-ttu-id="14a60-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14a60-116">Description</span></span>|  
+|---------------|-----------------|  
+|`findValue`|<span data-ttu-id="14a60-117">Eine Zeichenfolge, die den Wert angibt, nach dem im X.509-Zertifikatspeicher gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="14a60-117">A string that contains the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="14a60-118">Der in diesem Attribut enthaltene Typ muss den Anforderungen des angegebenen `x509FindType`-Werts entsprechen.</span><span class="sxs-lookup"><span data-stu-id="14a60-118">The type contained in the attribute must satisfy the requirements of the specified `x509FindType`.</span></span> <span data-ttu-id="14a60-119">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="14a60-119">The default is an empty string.</span></span>|  
+|`storeLocation`|<span data-ttu-id="14a60-120">Gibt den Speicherort des X.509-Zertifikatspeichers an, den der Client zum Prüfen des Peerzertifikats verwendet.</span><span class="sxs-lookup"><span data-stu-id="14a60-120">Specifies the location of the X.509 certificate store that the client uses to validate the peer's certificate against.</span></span> <span data-ttu-id="14a60-121">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="14a60-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="14a60-122">-LocalMachine: der auf dem lokalen Computer zugewiesene Zertifikatspeicher.</span><span class="sxs-lookup"><span data-stu-id="14a60-122">-   LocalMachine: the certificate store assigned to the local machine.</span></span><br /><span data-ttu-id="14a60-123">-CurrentUser: der für den aktuellen Benutzer zugewiesene Zertifikatspeicher.</span><span class="sxs-lookup"><span data-stu-id="14a60-123">-   CurrentUser: the certificate store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="14a60-124">Die Standardeinstellung ist LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="14a60-124">The default is LocalMachine.</span></span>|  
+|`storeName`|<span data-ttu-id="14a60-125">Gibt den Namen des X.509-Zertifikatsspeichers an, der geöffnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="14a60-125">Specifies the name of the X.509 certificate store to open.</span></span> <span data-ttu-id="14a60-126">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="14a60-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="14a60-127">-AddressBook: Zertifikatspeicher für andere Benutzer.</span><span class="sxs-lookup"><span data-stu-id="14a60-127">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="14a60-128">-AuthRoot: Der Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).</span><span class="sxs-lookup"><span data-stu-id="14a60-128">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="14a60-129">-CertificateAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen-Zertifikate (CAs).</span><span class="sxs-lookup"><span data-stu-id="14a60-129">-   CertificateAuthority: Certificate store for intermediate certification authorities (CAs).</span></span><br /><span data-ttu-id="14a60-130">-Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="14a60-130">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="14a60-131">-My: Der Zertifikatspeicher für persönliche Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="14a60-131">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="14a60-132">-Root: Der Zertifikatspeicher für vertrauenswürdige Stamm-Zertifizierungsstellen (CAs).</span><span class="sxs-lookup"><span data-stu-id="14a60-132">-   Root: Certificate store for trusted root certification authorities (CAs).</span></span><br /><span data-ttu-id="14a60-133">-TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="14a60-133">-   TrustedPeople: Certificate store for directly-trusted people and resources.</span></span><br /><span data-ttu-id="14a60-134">-TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.</span><span class="sxs-lookup"><span data-stu-id="14a60-134">-   TrustedPublisher: Certificate store for directly-trusted publishers.</span></span><br /><br /> <span data-ttu-id="14a60-135">Der Standardwert ist My.</span><span class="sxs-lookup"><span data-stu-id="14a60-135">The default is My.</span></span>|  
+|`X509FindType`|<span data-ttu-id="14a60-136">Definiert den Typ der X.509-Suche, die ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="14a60-136">Defines the type of X.509 search to be executed.</span></span> <span data-ttu-id="14a60-137">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="14a60-137">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="14a60-138">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="14a60-138">-   FindByThumbPrint</span></span><br /><span data-ttu-id="14a60-139">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="14a60-139">-   FindBySubjectName</span></span><br /><span data-ttu-id="14a60-140">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="14a60-140">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="14a60-141">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="14a60-141">-   FindByIssuerName</span></span><br /><span data-ttu-id="14a60-142">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="14a60-142">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="14a60-143">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="14a60-143">-   FindBySerialNumber</span></span><br /><span data-ttu-id="14a60-144">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="14a60-144">-   FindByTimeValid</span></span><br /><span data-ttu-id="14a60-145">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="14a60-145">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="14a60-146">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="14a60-146">-   FindByTemplateName</span></span><br /><span data-ttu-id="14a60-147">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="14a60-147">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="14a60-148">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="14a60-148">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="14a60-149">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="14a60-149">-   FindByExtension</span></span><br /><span data-ttu-id="14a60-150">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="14a60-150">-   FindByKeyUsage</span></span><br /><span data-ttu-id="14a60-151">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="14a60-151">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="14a60-152">Der im `findValue`-Attribut enthaltene Typ muss den Anforderungen des angegebenen `X509FindType`-Werts entsprechen.</span><span class="sxs-lookup"><span data-stu-id="14a60-152">The type contained in the `findValue` attribute must satisfy the requirements of the specified `X509FindType`.</span></span><br /><br /> <span data-ttu-id="14a60-153">Der Standardwert ist FindBySubjectDistinguishedName.</span><span class="sxs-lookup"><span data-stu-id="14a60-153">The default value is FindBySubjectDistinguishedName.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="14a60-154">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="14a60-154">Child Elements</span></span>  
+ <span data-ttu-id="14a60-155">Keine</span><span class="sxs-lookup"><span data-stu-id="14a60-155">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="14a60-156">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="14a60-156">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer\-to\-Peer\-Clients verwendet werden.|  
+|<span data-ttu-id="14a60-157">Element</span><span class="sxs-lookup"><span data-stu-id="14a60-157">Element</span></span>|<span data-ttu-id="14a60-158">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14a60-158">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="14a60-159">\<Peer ></span><span class="sxs-lookup"><span data-stu-id="14a60-159">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|<span data-ttu-id="14a60-160">Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer-to-Peer-Clients verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="14a60-160">Specifies credentials used when authenticating peer-to-peer clients.</span></span>|  
   
-## Hinweise  
- Dieses Konfigurationselement enthält eine beim Authentifizieren von Nachbarn im Peermesh verwendete X509Certificate2\-Instanz.  
+## <a name="remarks"></a><span data-ttu-id="14a60-161">Hinweise</span><span class="sxs-lookup"><span data-stu-id="14a60-161">Remarks</span></span>  
+ <span data-ttu-id="14a60-162">Dieses Konfigurationselement enthält eine beim Authentifizieren von Nachbarn im Peermesh verwendete X509Certificate2-Instanz.</span><span class="sxs-lookup"><span data-stu-id="14a60-162">This configuration element contains a X509Certificate2 instance used when authenticating neighbors in the peer mesh.</span></span>  
   
- Weitere Informationen über die Peer\-to\-Peer\-Programmierung finden Sie unter [Peer\-to\-Peer\-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ <span data-ttu-id="14a60-163">Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-zu-Peer-Netzwerken](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span><span class="sxs-lookup"><span data-stu-id="14a60-163">For more information about peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## Beispiel  
- Der folgende Code gibt an, wie das in einem Peer\-to\-Peer\-Szenario verwendete Zertifikat gesucht wird.  
+## <a name="example"></a><span data-ttu-id="14a60-164">Beispiel</span><span class="sxs-lookup"><span data-stu-id="14a60-164">Example</span></span>  
+ <span data-ttu-id="14a60-165">Der folgende Code gibt an, wie das in einem Peer-to-Peer-Szenario verwendete Zertifikat gesucht wird.</span><span class="sxs-lookup"><span data-stu-id="14a60-165">The following code specifies how to find the certificate used in a peer-to-peer scenario.</span></span>  
   
-```  
+```xml  
 <behaviors>  
  <endpointBehaviors>  
   <behavior name="MyEndpointBehavior">  
@@ -75,13 +85,13 @@ storeLocation="LocalMachine/CurrentUser"
 </endpointBehaviors>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>   
- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>   
- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>   
- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Peer\-to\-Peer\-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/de-de/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/de-de/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a><span data-ttu-id="14a60-166">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="14a60-166">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
+ <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
+ [<span data-ttu-id="14a60-167">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="14a60-167">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="14a60-168">Peer-zu-Peer-Netzwerken</span><span class="sxs-lookup"><span data-stu-id="14a60-168">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="14a60-169">Peerkanal Nachrichtenauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="14a60-169">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="14a60-170">Benutzerdefinierter Peerkanal-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="14a60-170">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="14a60-171">Sichern von Peerkanalanwendungen</span><span class="sxs-lookup"><span data-stu-id="14a60-171">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

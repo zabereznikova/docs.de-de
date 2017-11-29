@@ -1,40 +1,43 @@
 ---
-title: "Benutzerdefinierter Nachrichtenfilter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Benutzerdefinierter Nachrichtenfilter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e344e0908496eea7ac6b302aa73f00b3c518e0eb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierter Nachrichtenfilter
-In diesem Beispiel wird gezeigt, wie die Nachrichtenfilter ersetzt werden, mit denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Nachrichten auf Endpunkte verteilt.  
+# <a name="custom-message-filter"></a><span data-ttu-id="01ace-102">Benutzerdefinierter Nachrichtenfilter</span><span class="sxs-lookup"><span data-stu-id="01ace-102">Custom Message Filter</span></span>
+<span data-ttu-id="01ace-103">In diesem Beispiel wird gezeigt, wie die Nachrichtenfilter ersetzt werden, mit denen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Nachrichten auf Endpunkte verteilt.</span><span class="sxs-lookup"><span data-stu-id="01ace-103">This sample demonstrates how to replace the message filters that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uses to dispatch messages to endpoints.</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Erstellungsanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="01ace-104">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="01ace-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Wenn die erste Nachricht auf einem Kanal beim Server eintrifft, muss der Server bestimmen, welcher der mit diesem URI verknüpften Endpunkte \(sofern zutreffend\) die Nachricht erhalten soll.Dieser Prozess wird von den an den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> angefügten <xref:System.ServiceModel.Dispatcher.MessageFilter>\-Objekten kontrolliert.  
+ <span data-ttu-id="01ace-105">Wenn die erste Nachricht auf einem Kanal beim Server eintrifft, muss der Server bestimmen, welcher der mit diesem URI verknüpften Endpunkte (sofern zutreffend) die Nachricht erhalten soll.</span><span class="sxs-lookup"><span data-stu-id="01ace-105">When the first message on a channel arrives at the server, the server must determine which (if any) of the endpoints associated with that URI should receive the message.</span></span> <span data-ttu-id="01ace-106">Dieser Prozess wird von den an den <xref:System.ServiceModel.Dispatcher.MessageFilter> angefügten <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekten kontrolliert.</span><span class="sxs-lookup"><span data-stu-id="01ace-106">This process is controlled by the <xref:System.ServiceModel.Dispatcher.MessageFilter> objects attached to the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span>  
   
- Jeder Endpunkt eines Diensts hat einen einzelnen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> besitzt sowohl einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> als auch einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.Die Verbindung dieser beiden Filter ist der für diesen Endpunkt verwendete Nachrichtenfilter.  
+ <span data-ttu-id="01ace-107">Jeder Endpunkt eines Diensts hat einen einzelnen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span><span class="sxs-lookup"><span data-stu-id="01ace-107">Each endpoint of a service has a single <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span> <span data-ttu-id="01ace-108">Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> besitzt sowohl einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> als auch einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span><span class="sxs-lookup"><span data-stu-id="01ace-108">The <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> has both an <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and a <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span></span> <span data-ttu-id="01ace-109">Die Verbindung dieser beiden Filter ist der für diesen Endpunkt verwendete Nachrichtenfilter.</span><span class="sxs-lookup"><span data-stu-id="01ace-109">The union of these two filters is the message filter used for that endpoint.</span></span>  
   
- Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt.Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> für einen Endpunkt überprüft standardmäßig die Aktion der eingehenden Nachricht und gleicht jede Nachricht mit einer Aktion ab, die einer der Aktionen der Vorgänge des Dienstendpunktvertrags entspricht \(es werden nur `IsInitiating`\=`true`\-Aktionen berücksichtigt\).Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To\-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.  
+ <span data-ttu-id="01ace-110">Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="01ace-110">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> for an endpoint matches any message that is addressed to an address that matches the service endpoint's <xref:System.ServiceModel.EndpointAddress>.</span></span> <span data-ttu-id="01ace-111">Wird standardmäßig die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> für ein Endpunkt die Aktion der eingehenden Nachricht überprüft und gleicht jede Nachricht mit der Aktion, die eine der Aktionen von Vorgängen für die dienstendpunktvertrags entspricht (nur `IsInitiating` = `true`Aktionen gelten als).</span><span class="sxs-lookup"><span data-stu-id="01ace-111">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> for an endpoint inspects the action of the incoming message and matches any message with an action that corresponds to one of the actions of the service endpoint contract's operations (only `IsInitiating`=`true` actions are considered).</span></span> <span data-ttu-id="01ace-112">Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="01ace-112">As a result, by default, the filter for an endpoint only matches if both the message's To header is the <xref:System.ServiceModel.EndpointAddress> of the endpoint and the message's action matches one of the endpoint operation's actions.</span></span>  
   
- Diese Filter können mit einer Verhaltensweise geändert werden.Im folgenden Beispiel erstellt der Dienst ein <xref:System.ServiceModel.Description.IEndpointBehavior>, das den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> und den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> auf dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ersetzt:  
+ <span data-ttu-id="01ace-113">Diese Filter können mit einer Verhaltensweise geändert werden.</span><span class="sxs-lookup"><span data-stu-id="01ace-113">These filters can be changed using a behavior.</span></span> <span data-ttu-id="01ace-114">Im folgenden Beispiel erstellt der Dienst ein <xref:System.ServiceModel.Description.IEndpointBehavior>, das den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> und den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> auf dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ersetzt:</span><span class="sxs-lookup"><span data-stu-id="01ace-114">In the sample, the service creates an <xref:System.ServiceModel.Description.IEndpointBehavior> that replaces the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> on the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:</span></span>  
   
 ```  
 class FilteringEndpointBehavior : IEndpointBehavior …  
 ```  
   
- Es werden zwei Adressfilter definiert:  
+ <span data-ttu-id="01ace-115">Es werden zwei Adressfilter definiert:</span><span class="sxs-lookup"><span data-stu-id="01ace-115">Two address filters are defined:</span></span>  
   
 ```  
 // Matches any message whose To address contains the letter 'e'  
@@ -43,14 +46,13 @@ class MatchEAddressFilter : MessageFilter …
 class MatchNoEAddressFilter : MessageFilter  
 ```  
   
- Das `FilteringEndpointBehavior` wird konfigurierbar gemacht und ermöglicht zwei verschiedene Varianten.  
+ <span data-ttu-id="01ace-116">Das `FilteringEndpointBehavior` wird konfigurierbar gemacht und ermöglicht zwei verschiedene Varianten.</span><span class="sxs-lookup"><span data-stu-id="01ace-116">The `FilteringEndpointBehavior` is made configurable and allows for two different variations.</span></span>  
   
 ```  
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
-  
 ```  
   
- Variante 1 gleicht nur Adressen ab, die ein "e" \(aber eine beliebige Aktion\) enthalten, wohingegen Variante 2 nur die Adressen ohne "e" abgleicht:  
+ <span data-ttu-id="01ace-117">Variante&#160;1 gleicht nur Adressen ab, die ein "e" (aber eine beliebige Aktion) enthalten, wohingegen Variante&#160;2 nur die Adressen ohne "e" abgleicht:</span><span class="sxs-lookup"><span data-stu-id="01ace-117">Variation 1 matches only addresses that contain an 'e' (but that have any Action) whereas Variation 2 matches only addresses that lack an 'e':</span></span>  
   
 ```  
 if (Variation == 1)  
@@ -59,12 +61,11 @@ if (Variation == 1)
 else  
     return new FilteringEndpointBehavior(  
         new MatchNoEAddressFilter(), new MatchAllMessageFilter());  
-  
 ```  
   
- Der Dienst registriert das neue Verhalten in der Konfigurationsdatei:  
+ <span data-ttu-id="01ace-118">Der Dienst registriert das neue Verhalten in der Konfigurationsdatei:</span><span class="sxs-lookup"><span data-stu-id="01ace-118">In the configuration file, the service registers the new behavior:</span></span>  
   
-```  
+```xml  
 <extensions>  
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
@@ -72,9 +73,9 @@ else
 </extensions>      
 ```  
   
- Anschließend erstellt der Dienst `endpointBehavior`\-Konfigurationen für jede Variante:  
+ <span data-ttu-id="01ace-119">Anschließend erstellt der Dienst `endpointBehavior`-Konfigurationen für jede Variante:</span><span class="sxs-lookup"><span data-stu-id="01ace-119">Then the service creates `endpointBehavior` configurations for each variation:</span></span>  
   
-```  
+```xml  
 <endpointBehaviors>  
     <behavior name="endpoint1">  
         <filteringEndpointBehavior variation="1" />  
@@ -83,22 +84,20 @@ else
         <filteringEndpointBehavior variation="2" />  
     </behavior>  
 </endpointBehaviors>  
-  
 ```  
   
- Schließlich verweist der Endpunkt des Diensts auf eine der `behaviorConfigurations`:  
+ <span data-ttu-id="01ace-120">Schließlich verweist der Endpunkt des Diensts auf eine der `behaviorConfigurations`:</span><span class="sxs-lookup"><span data-stu-id="01ace-120">Finally, the service's endpoint references one of the `behaviorConfigurations`:</span></span>  
   
-```  
+```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
         listenUri=""   
         binding="wsHttpBinding"  
         contract="Microsoft.ServiceModel.Samples.IHello"   
         behaviorConfiguration="endpoint2" />  
-  
 ```  
   
- Die Implementierung der Clientanwendung ist einfach. Sie erstellt zwei Kanäle zum URI des Diensts \(indem der Wert als der zweite \(`via`\)\-Parameter an <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> übergeben wird\) und sendet eine einzelne Nachricht auf jedem Kanal, verwendet aber jeweils verschiedene Endpunktadressen.Infolgedessen besitzen die vom Client ausgehenden Nachrichten unterschiedliche To\-Ziele, und der Server antwortet entsprechend, wie von der Ausgabe des Clients veranschaulicht:  
+ <span data-ttu-id="01ace-121">Die Implementierung der Clientanwendung ist einfach. Sie erstellt zwei Kanäle zum URI des Diensts (indem der Wert als der zweite (`via`)-Parameter an <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> übergeben wird) und sendet eine einzelne Nachricht auf jedem Kanal, verwendet aber jeweils verschiedene Endpunktadressen.</span><span class="sxs-lookup"><span data-stu-id="01ace-121">The implementation of the client application is straightforward; it creates two channels to the service's URI (by passing in that value as the second (`via`) parameter to <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> and sends a single message on each channel, but it uses different endpoint addresses for each.</span></span> <span data-ttu-id="01ace-122">Infolgedessen besitzen die vom Client ausgehenden Nachrichten unterschiedliche To-Ziele, und der Server antwortet entsprechend, wie von der Ausgabe des Clients veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="01ace-122">As a result, the outbound messages from the client have different To designations, and the server responds accordingly, as demonstrated by the client's output:</span></span>  
   
 ```  
 Sending message to urn:e...  
@@ -108,43 +107,42 @@ Sending message to urn:a...
 Hello  
 ```  
   
- Durch einen Wechsel der Variante in der Konfigurationsdatei des Servers wird der Filter getauscht, und der Client sieht das andere Verhalten \(die Nachricht an `urn:e` ist erfolgreich, die Nachricht an `urn:a` jedoch nicht\).  
+ <span data-ttu-id="01ace-123">Durch einen Wechsel der Variante in der Konfigurationsdatei des Servers wird der Filter getauscht, und der Client sieht das andere Verhalten (die Nachricht an `urn:e` ist erfolgreich, die Nachricht an `urn:a` jedoch nicht).</span><span class="sxs-lookup"><span data-stu-id="01ace-123">Switching the variation in the server's configuration file causes the filter to be swapped and the client sees the opposite behavior (the message to `urn:e` succeeds, whereas the message to `urn:a` fails).</span></span>  
   
-```  
+```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
           listenUri=""   
           binding="wsHttpBinding"  
           contract="Microsoft.ServiceModel.Samples.IHello"   
           behaviorConfiguration="endpoint1" />  
-  
 ```  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Überprüfen Sie das folgende \(standardmäßige\) Verzeichnis, bevor Sie fortfahren.  
+>  <span data-ttu-id="01ace-124">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="01ace-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="01ace-125">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="01ace-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="01ace-126">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="01ace-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="01ace-127">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="01ace-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="01ace-128">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="01ace-128">To set up, build, and run the sample</span></span>  
   
-1.  Folgen Sie den unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen, um die Projektmappe zu erstellen.  
+1.  <span data-ttu-id="01ace-129">Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="01ace-129">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  Wenn Sie das Beispiel in einer Konfiguration mit einem einzigen Computer ausführen möchten, folgen Sie den unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) aufgeführten Anweisungen.  
+2.  <span data-ttu-id="01ace-130">Um das Beispiel in einer einzigen Computer-Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="01ace-130">To run the sample in a single-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-3.  Wenn Sie das Beispiel in einer computerübergreifenden Konfiguration ausführen möchten, befolgen Sie die Anweisungen in [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md), und ändern Sie die folgende Zeile in "Client.cs".  
+3.  <span data-ttu-id="01ace-131">Um das Beispiel in einer computerübergreifenden Konfiguration ausführen möchten, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in Client.cs.</span><span class="sxs-lookup"><span data-stu-id="01ace-131">To run the sample in a cross-machine configuration, follow the instructions at [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md) and change the following line in Client.cs.</span></span>  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
-     Ersetzen Sie "localhost" mit dem Namen des Servers.  
+     <span data-ttu-id="01ace-132">Ersetzen Sie "localhost" mit dem Namen des Servers.</span><span class="sxs-lookup"><span data-stu-id="01ace-132">Replace localhost with the name of server.</span></span>  
   
     ```  
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="01ace-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="01ace-133">See Also</span></span>

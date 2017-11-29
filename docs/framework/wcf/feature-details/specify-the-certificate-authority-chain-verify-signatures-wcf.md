@@ -1,44 +1,47 @@
 ---
-title: "Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu &#252;berpr&#252;fen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zertifikate [WCF], Angeben der Zertifizierungsstellenzertifikatskette."
-  - "Zertifikate [WCF], Verifizieren von Signaturen"
+title: "Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- certificates [WCF], specifying the certificate authority certificate chain
+- certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce846d5637c6d49b4a3b1c6f28ae533e4900f696
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu &#252;berpr&#252;fen
-Wenn [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine mit einem X.509\-Zertifikat signierte SOAP\-Nachricht empfängt, wird standardmäßig überprüft, ob das X.509\-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde.Dies erfolgt durch Prüfen eines Zertifikatsspeichers und Feststellen, ob das Zertifikat für diese Zertifizierungsstelle als vertrauenswürdig bestimmt worden ist.Damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] diese Feststellung machen kann, muss die Zertifizierungsstellenzertifikatskette im richtigen Zertifikatsspeicher installiert werden.  
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a><span data-ttu-id="8bb28-102">Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen</span><span class="sxs-lookup"><span data-stu-id="8bb28-102">How to: Specify the Certificate Authority Certificate Chain Used to Verify Signatures (WCF)</span></span>
+<span data-ttu-id="8bb28-103">Wenn [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] eine mit einem X.509-Zertifikat signierte SOAP-Nachricht empfängt, wird standardmäßig überprüft, ob das X.509-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="8bb28-103">When [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] receives a SOAP message signed using an X.509 certificate, by default it verifies that the X.509 certificate was issued by a trusted certification authority.</span></span> <span data-ttu-id="8bb28-104">Dies erfolgt, indem ein Zertifikatspeicher überprüft und bestimmt wird, ob das Zertifikat für diese Zertifizierungsstelle als vertrauenswürdig bestimmt wurde.</span><span class="sxs-lookup"><span data-stu-id="8bb28-104">This is done by looking in a certificate store and determining if the certificate for that certification authority has been designated as trusted.</span></span> <span data-ttu-id="8bb28-105">Damit diese Bestimmung durch [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erfolgen kann, muss die Zertifizierungsstellenzertifikatkette im richtigen Zertifikatspeicher installiert werden.</span><span class="sxs-lookup"><span data-stu-id="8bb28-105">In order for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to make this determination, the certification authority certificate chain must be installed in the correct certificate store.</span></span>  
   
-### So installieren Sie eine Zertifizierungsstellenzertifikatskette  
+### <a name="to-install-a-certification-authority-certificate-chain"></a><span data-ttu-id="8bb28-106">So installieren Sie eine Zertifizierungsstellenzertifikatkette</span><span class="sxs-lookup"><span data-stu-id="8bb28-106">To install a certification authority certificate chain</span></span>  
   
--   Installieren Sie für jede Zertifizierungsstelle, für die ein SOAP\-Nachrichtenempfänger die von ihr ausgegebenen X.509\-Zertifikate als vertrauenswürdig behandeln möchte, die Zertifizierungsstellenzertifikatskette in dem Zertifikatsspeicher, von dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aufgrund der Konfiguration X.509\-Zertifikate abrufen kann.  
+-   <span data-ttu-id="8bb28-107">Installieren Sie für jede Zertifizierungsstelle, deren ausgestellte X.509-Zertifikate ein SOAP-Nachrichtenempfänger als vertrauenswürdig behandeln möchte, die Zertifizierungsstellenzertifikatkette in dem Zertifikatspeicher, von dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aufgrund der Konfiguration X.509-Zertifikate abrufen kann.</span><span class="sxs-lookup"><span data-stu-id="8bb28-107">For each certification authority that a SOAP message recipient intends to trust X.509 certificates issued from, install the certification authority certificate chain into the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from.</span></span>  
   
-     Wenn z. B. ein SOAP\-Nachrichtenempfänger von Microsoft ausgegebene X.509\-Zertifikate als vertrauenswürdig behandeln möchte, muss die Zertifizierungsstellenzertifikatskette für Microsoft in dem Zertifikatsspeicher installiert werden, in dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aufgrund der Einrichtung nach X.509\-Zertifikaten sucht.Der Zertifikatspeicher, in dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach X.509\-Zertifikaten sucht, kann im Code oder in der Konfiguration festgelegt werden.Dies kann z. B. im Code mithilfe der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>\-Methode oder in der Konfiguration auf verschiedene Arten erfolgen, einschließlich mithilfe von [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).  
+     <span data-ttu-id="8bb28-108">Wenn z. B. ein SOAP-Nachrichtenempfänger von Microsoft ausgestellte X.509-Zertifikate als vertrauenswürdig behandeln möchte, muss die Zertifizierungsstellenzertifikatkette für Microsoft in dem Zertifikatspeicher installiert werden, in dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aufgrund der Einrichtung nach X.509-Zertifikaten sucht.</span><span class="sxs-lookup"><span data-stu-id="8bb28-108">For instance, if a SOAP message recipient intends to trust X.509 certificates issued by Microsoft, the certification authority certificate chain for Microsoft must be installed in the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is set up to look for X.509 certificates from.</span></span> <span data-ttu-id="8bb28-109">Der Zertifikatspeicher, in dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach X.509-Zertifikaten sucht, kann im Code oder in der Konfiguration festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="8bb28-109">The certificate store in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] looks for X.509 certificates can be specified in code or configuration.</span></span> <span data-ttu-id="8bb28-110">Dies kann beispielsweise angegeben werden, im Code mithilfe der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> Methode oder in der Konfiguration einige Möglichkeiten, einschließlich der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span><span class="sxs-lookup"><span data-stu-id="8bb28-110">For example, this can be specified in code using the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method or in configuration a few ways, including the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span></span>  
   
-     Da Windows mit einem Satz an Standardzertifikatsketten für vertrauenswürdige Zertifizierungsstellen geliefert wird, ist es u. U. nicht erforderlich, die Zertifikatskette für alle Zertifizierungsstellen zu installieren.  
+     <span data-ttu-id="8bb28-111">Da Windows mit einem Satz an Standardzertifikatsketten für vertrauenswürdige Zertifizierungsstellen geliefert wird, ist es u. U. nicht erforderlich, die Zertifikatskette für alle Zertifizierungsstellen zu installieren.</span><span class="sxs-lookup"><span data-stu-id="8bb28-111">Because Windows ships with a set of default certificate chains for trusted certificate authorities, it may not be necessary to install the certificate chain for all certificate authorities.</span></span>  
   
-    1.  Exportieren Sie die Zertifizierungsstellenzertifikatskette.  
+    1.  <span data-ttu-id="8bb28-112">Exportieren Sie die Zertifizierungsstellenzertifikatkette.</span><span class="sxs-lookup"><span data-stu-id="8bb28-112">Export the certification authority certificate chain.</span></span>  
   
-         Wie dies genau erfolgt, hängt von der Zertifizierungsstelle ab.Wenn bei der Zertifizierungsstelle Microsoft\-Zertifikatsdienste ausgeführt werden, wählen Sie **Download eines Zertifizierungsstellenzertifikats, einer Zertifikatskette oder einer Sperrliste** aus, und wählen Sie dann **Download des Zertifizierungsstellenzertifikats**.  
+         <span data-ttu-id="8bb28-113">Wie dies genau erfolgt, hängt von der Zertifizierungsstelle ab.</span><span class="sxs-lookup"><span data-stu-id="8bb28-113">Exactly how this is done depends on the certification authority.</span></span> <span data-ttu-id="8bb28-114">Wenn die Zertifizierungsstelle Microsoft-Zertifikatdienste ausgeführt wird, wählen Sie **Herunterladen einer Zertifizierungsstelle, einer Zertifikatkette oder CRL**, und wählen Sie dann **Download des Zertifizierungsstellenzertifikats**.</span><span class="sxs-lookup"><span data-stu-id="8bb28-114">If the certification authority is running Microsoft Certificate Services, select **Download a CA certificate, certificate chain, or CRL**, and then choose **Download CA certificate**.</span></span>  
   
-    2.  Importieren Sie die Zertifizierungsstellenzertifikatskette.  
+    2.  <span data-ttu-id="8bb28-115">Importieren Sie die Zertifizierungsstellenzertifikatkette.</span><span class="sxs-lookup"><span data-stu-id="8bb28-115">Import the certification authority certificate chain.</span></span>  
   
-         Öffnen Sie das Zertifikats\-Snap\-in in der Microsoft Management Console \(MMC\).Wählen Sie für den Zertifikatsspeicher, von dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aufgrund der Konfiguration X.509\-Zertifikate abruft, den Ordner **Vertrauenswürdige Stamm** **zertifizierungsstellen**.Klicken Sie mit der rechten Maustaste unter dem Ordner **Vertrauenswürdige Stammzertifzierungsstellen** auf den Ordner **Zertifikate**, zeigen Sie auf **Alle Aufgaben**, und klicken Sie anschließend auf **Importieren**.Geben Sie die in Schritt a exportierte Datei an.  
+         <span data-ttu-id="8bb28-116">Öffnen Sie das Zertifikats-Snap-in in der Microsoft Management Console (MMC).</span><span class="sxs-lookup"><span data-stu-id="8bb28-116">In the Microsoft Management Console (MMC), open the Certificates snap-in.</span></span> <span data-ttu-id="8bb28-117">Für das Zertifikat zu speichern, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfiguriert ist, zum Abrufen von x. 509-Zertifikate aus, wählen Sie die **vertrauenswürdigen Stamm** **Zertifizierungsstellen**Ordner.</span><span class="sxs-lookup"><span data-stu-id="8bb28-117">For the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from, select the **Trusted Root** **Certification Authorities**folder.</span></span> <span data-ttu-id="8bb28-118">Unter den **Trusted Root Certification Authorities** Ordner mit der rechten Maustaste die **Zertifikate**Ordner, zeigen Sie auf **alle Aufgaben**, und klicken Sie dann auf **importieren** .</span><span class="sxs-lookup"><span data-stu-id="8bb28-118">Under the **Trusted Root Certification Authorities** folder, right-click the **Certificates**folder, point to **All Tasks**, and then click **Import**.</span></span> <span data-ttu-id="8bb28-119">Geben Sie die in Schritt a exportierte Datei an.</span><span class="sxs-lookup"><span data-stu-id="8bb28-119">Provide the file exported in step a.</span></span>  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Verwenden des Zertifikats\-Snap\-in mit MMC finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC\-Snap\-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8bb28-120">finden Sie in MMC das Zertifikate-Snap-in mit [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span><span class="sxs-lookup"><span data-stu-id="8bb28-120"> using the Certificates snap-in with MMC, see [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span></span>  
   
-## Siehe auch  
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="8bb28-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bb28-121">See Also</span></span>  
+ [<span data-ttu-id="8bb28-122">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="8bb28-122">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

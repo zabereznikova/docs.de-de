@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; von &lt;netMsmqBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; von &lt;netMsmqBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 15ebbd1f0f139ef0d66ed802b990876735074485
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; von &lt;netMsmqBinding&gt;
-Definiert die Sicherheitseinstellungen für eine MSMQ\-Bindung.  Dadurch wird angegeben, ob die Transportsicherheit oder die SOAP\-Sicherheit aktiviert sind und ggf. welcher Authentifizierungsmodus und welche Schutzebenen verwendet werden.  
+# <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="00cc8-102">&lt;security&gt; von &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="00cc8-102">&lt;security&gt; of &lt;netMsmqBinding&gt;</span></span>
+<span data-ttu-id="00cc8-103">Definiert die Sicherheitseinstellungen für eine MSMQ-Bindung.</span><span class="sxs-lookup"><span data-stu-id="00cc8-103">Defines the security settings for a MSMQ binding.</span></span> <span data-ttu-id="00cc8-104">Dadurch wird angegeben, ob die Transportsicherheit oder die SOAP-Sicherheit aktiviert sind und ggf. welcher Authentifizierungsmodus und welche Schutzebenen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="00cc8-104">It specifies whether transport or SOAP security is enabled and, if so, what authentication mode and protection levels are in use.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="00cc8-105">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="00cc8-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="00cc8-106">\<Bindungen ></span><span class="sxs-lookup"><span data-stu-id="00cc8-106">\<bindings></span></span>  
+<span data-ttu-id="00cc8-107">\<NetMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="00cc8-107">\<netMsmqBinding></span></span>  
+<span data-ttu-id="00cc8-108">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="00cc8-108">\<binding></span></span>  
+<span data-ttu-id="00cc8-109">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="00cc8-109">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="00cc8-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="00cc8-110">Syntax</span></span>  
   
+```xml  
 <security mode="None/Transport/Message/Both">  
    <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
       msmqEncryptionAlgorithm="RC4Stream/AES"  
@@ -34,36 +42,36 @@ Definiert die Sicherheitseinstellungen für eine MSMQ\-Bindung.  Dadurch wird an
 </security>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00cc8-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="00cc8-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="00cc8-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="00cc8-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="00cc8-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="00cc8-113">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Modus|Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung steuert.  Folgende Werte sind gültig:<br /><br /> -   None: Die Sicherheit wird deaktiviert.<br />-   Transport: Schutz und Authentifizierung werden vom Transport bereitgestellt.  Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen\-Managern.  Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen\-Manager.  Vorhandene Msmq\-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.<br />-   Message: Gibt die Ende\-Ende\-Anwendungssicherheit an.  Es wird keine Sicherheit auf Transportebene bereitgestellt.  Dies ähnelt der Sicherheit, die von anderen Standardbindungen angeboten wird.<br />-   Both: Bietet Sicherheit für die Transport\- und die SOAP\-Nachrichtenebene.  Auf beiden Ebenen sind die gleichen Anmeldeinformationen erforderlich.<br /><br /> Der Standardwert ist **Transport**.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|<span data-ttu-id="00cc8-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="00cc8-114">Attribute</span></span>|<span data-ttu-id="00cc8-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="00cc8-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="00cc8-116">Modus</span><span class="sxs-lookup"><span data-stu-id="00cc8-116">mode</span></span>|<span data-ttu-id="00cc8-117">Gibt den Sicherheitstyp an, der Integrität, Vertraulichkeit und Authentifizierung steuert.</span><span class="sxs-lookup"><span data-stu-id="00cc8-117">Specifies the type of security that controls integrity, confidentiality and authentication.</span></span> <span data-ttu-id="00cc8-118">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="00cc8-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="00cc8-119">-"None": Die Sicherheit wird deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="00cc8-119">-   None: This disables security.</span></span><br /><span data-ttu-id="00cc8-120">-Transport: Schutz und Authentifizierung werden vom Transport bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="00cc8-120">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="00cc8-121">Dies bezieht sich auf die Nachrichtensicherheit zwischen beiden Warteschlangen-Managern.</span><span class="sxs-lookup"><span data-stu-id="00cc8-121">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="00cc8-122">Es besteht keine Sicherheit zwischen der Anwendung und dem Warteschlangen-Manager.</span><span class="sxs-lookup"><span data-stu-id="00cc8-122">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="00cc8-123">Vorhandene Msmq-Anwendungen sind mit diesem Typ des Sicherheitsmodus funktional äquivalent.</span><span class="sxs-lookup"><span data-stu-id="00cc8-123">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><span data-ttu-id="00cc8-124">-Nachricht: Gibt die Ende-anwendungssicherheit an.</span><span class="sxs-lookup"><span data-stu-id="00cc8-124">-   Message: Specifies end-end application security.</span></span> <span data-ttu-id="00cc8-125">Es wird keine Sicherheit auf Transportebene bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="00cc8-125">There is no security offered at the transport layer.</span></span> <span data-ttu-id="00cc8-126">Dies ähnelt der Sicherheit, die von anderen Standardbindungen angeboten wird.</span><span class="sxs-lookup"><span data-stu-id="00cc8-126">This is similar to the security offered by other standard bindings.</span></span><br /><span data-ttu-id="00cc8-127">-Both: Bietet Sicherheit auf Transportebene und SOAP-Nachrichtenebene.</span><span class="sxs-lookup"><span data-stu-id="00cc8-127">-   Both: Offers security at both the transport and SOAP messaging layer.</span></span> <span data-ttu-id="00cc8-128">Auf beiden Ebenen sind die gleichen Anmeldeinformationen erforderlich.</span><span class="sxs-lookup"><span data-stu-id="00cc8-128">The same credential is required at both the levels.</span></span><br /><br /> <span data-ttu-id="00cc8-129">Der Standardwert ist Transport.</span><span class="sxs-lookup"><span data-stu-id="00cc8-129">The default value is Transport.</span></span> <span data-ttu-id="00cc8-130">Dieses Attribut ist vom Typ <xref:System.ServiceModel.NetMsmqSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="00cc8-130">This attribute is of type <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="00cc8-131">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="00cc8-131">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|Definiert die SOAP\-Nachrichtensicherheitseinstellungen.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Definiert die Sicherheitseinstellungen für den MSMQ\-Transport.  Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|<span data-ttu-id="00cc8-132">Element</span><span class="sxs-lookup"><span data-stu-id="00cc8-132">Element</span></span>|<span data-ttu-id="00cc8-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="00cc8-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="00cc8-134">\<Meldung ></span><span class="sxs-lookup"><span data-stu-id="00cc8-134">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|<span data-ttu-id="00cc8-135">Definiert die SOAP-Nachrichtensicherheitseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="00cc8-135">Defines the SOAP message security settings.</span></span> <span data-ttu-id="00cc8-136">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.</span><span class="sxs-lookup"><span data-stu-id="00cc8-136">This element is of type <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.</span></span>|  
+|[<span data-ttu-id="00cc8-137">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="00cc8-137">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|<span data-ttu-id="00cc8-138">Definiert die Sicherheitseinstellungen für den MSMQ-Transport.</span><span class="sxs-lookup"><span data-stu-id="00cc8-138">Defines the security settings for the MSMQ transport.</span></span> <span data-ttu-id="00cc8-139">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="00cc8-139">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="00cc8-140">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="00cc8-140">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|Bindung|Das Bindungselement von [\<NetMsmqBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).|  
+|<span data-ttu-id="00cc8-141">Element</span><span class="sxs-lookup"><span data-stu-id="00cc8-141">Element</span></span>|<span data-ttu-id="00cc8-142">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="00cc8-142">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="00cc8-143">Bindung</span><span class="sxs-lookup"><span data-stu-id="00cc8-143">binding</span></span>|<span data-ttu-id="00cc8-144">Das Bindungselement, das von der [ \<NetMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)</span><span class="sxs-lookup"><span data-stu-id="00cc8-144">The binding element of the [\<netMsmqBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>   
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>   
- <xref:System.ServiceModel.NetMsmqSecurity>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)   
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="00cc8-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00cc8-145">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
+ <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
+ <xref:System.ServiceModel.NetMsmqSecurity>  
+ [<span data-ttu-id="00cc8-146">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="00cc8-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="00cc8-147">Bindungen</span><span class="sxs-lookup"><span data-stu-id="00cc8-147">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="00cc8-148">Konfigurieren der vom System bereitgestellte Bindungen</span><span class="sxs-lookup"><span data-stu-id="00cc8-148">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="00cc8-149">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="00cc8-149">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="00cc8-150">\<Binden von ></span><span class="sxs-lookup"><span data-stu-id="00cc8-150">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="00cc8-151">Warteschlangen in WCF</span><span class="sxs-lookup"><span data-stu-id="00cc8-151">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

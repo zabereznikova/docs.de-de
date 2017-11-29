@@ -1,43 +1,45 @@
 ---
-title: "Gewusst wie: Erstellen einer Linie mit einer LineGeometry | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, LineGeometry"
-  - "Grafiken [WPF], Linien"
-  - "LineGeometry-Klasse"
+title: 'Gewusst wie: Erstellen einer Linie mit einer LineGeometry'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: acb2c3db2027f8a4e9594212d1f5af9ea1c8a43b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Linie mit einer LineGeometry
-In diesem Beispiel wird die Verwendung der <xref:System.Windows.Media.LineGeometry>\-Klasse zum Beschreiben einer Linie dargestellt.  Eine <xref:System.Windows.Media.LineGeometry> wird durch ihren Start\- und ihren Endpunkt definiert.  
+# <a name="how-to-create-a-line-using-a-linegeometry"></a><span data-ttu-id="d3e5c-102">Gewusst wie: Erstellen einer Linie mit einer LineGeometry</span><span class="sxs-lookup"><span data-stu-id="d3e5c-102">How to: Create a Line Using a LineGeometry</span></span>
+<span data-ttu-id="d3e5c-103">Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.LineGeometry> Klasse, um eine Zeile zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-103">This example shows how to use the <xref:System.Windows.Media.LineGeometry> class to describe a line.</span></span> <span data-ttu-id="d3e5c-104">Ein <xref:System.Windows.Media.LineGeometry> wird durch die Anfangs- und Endpunkte definiert.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-104">A <xref:System.Windows.Media.LineGeometry> is defined by its start and end points.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird das Erstellen und Rendern einer <xref:System.Windows.Media.LineGeometry> veranschaulicht.  Ein <xref:System.Windows.Shapes.Path>\-Element wird verwendet, um die Linie zu rendern.  Da eine Linie keinen Bereich aufweist, wird <xref:System.Windows.Shapes.Shape.Fill%2A> für das <xref:System.Windows.Shapes.Path>\-Objekt nicht festgelegt. Stattdessen werden die <xref:System.Windows.Shapes.Shape.Stroke%2A>\-Eigenschaft und die <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>\-Eigenschaft verwendet.  
+## <a name="example"></a><span data-ttu-id="d3e5c-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d3e5c-105">Example</span></span>  
+ <span data-ttu-id="d3e5c-106">Das folgende Beispiel zeigt das Erstellen und Rendern einer <xref:System.Windows.Media.LineGeometry>.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-106">The following example shows how to create and render a <xref:System.Windows.Media.LineGeometry>.</span></span>  <span data-ttu-id="d3e5c-107">Ein <xref:System.Windows.Shapes.Path> Element wird verwendet, um die Zeile zu rendern.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-107">A <xref:System.Windows.Shapes.Path> element is used to render the line.</span></span>  <span data-ttu-id="d3e5c-108">Da eine Linie keinen Bereich aufweist der <xref:System.Windows.Shapes.Path> des Objekts <xref:System.Windows.Shapes.Shape.Fill%2A> nicht angegeben ist; stattdessen die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaften verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-108">Since a line has no area, the <xref:System.Windows.Shapes.Path> object's <xref:System.Windows.Shapes.Shape.Fill%2A> is not specified; instead the <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> properties are used.</span></span>  
   
- [!code-xml[GeometryOverviewSamples_snip#GraphicsMMLineGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmlinegeometryexample)]  
+ [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMLineGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmlinegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMLineGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmlinegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMLineGeometryExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmlinegeometryexample)]  
   
- ![Eine LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-line.png "graphicsmm\_line")  
+ <span data-ttu-id="d3e5c-109">![Eine LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-line.gif "Graphicsmm_line")</span><span class="sxs-lookup"><span data-stu-id="d3e5c-109">![A LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-line.gif "graphicsmm_line")</span></span>  
+<span data-ttu-id="d3e5c-110">Eine LineGeometry, gezeichnet von (10,20) bis (100,130)</span><span class="sxs-lookup"><span data-stu-id="d3e5c-110">A LineGeometry drawn from (10,20) to (100,130)</span></span>  
   
-        LineGeometry, gezeichnet von \(10,20\) bis \(100,130\)  
+ <span data-ttu-id="d3e5c-111">Andere Klassen einfache Geometrie sind <xref:System.Windows.Media.LineGeometry> und <xref:System.Windows.Media.EllipseGeometry>.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-111">Other simple geometry classes include <xref:System.Windows.Media.LineGeometry> and <xref:System.Windows.Media.EllipseGeometry>.</span></span> <span data-ttu-id="d3e5c-112">Diese Geometrien sowie komplexere können auch erstellt werden mithilfe einer <xref:System.Windows.Media.PathGeometry> oder <xref:System.Windows.Media.StreamGeometry>.</span><span class="sxs-lookup"><span data-stu-id="d3e5c-112">These geometries, as well as more complex ones, can also be created using a <xref:System.Windows.Media.PathGeometry> or <xref:System.Windows.Media.StreamGeometry>.</span></span> <span data-ttu-id="d3e5c-113">Weitere Informationen finden Sie unter der [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span><span class="sxs-lookup"><span data-stu-id="d3e5c-113">For more information, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
- Andere Klassen der einfachen Geometrie sind <xref:System.Windows.Media.LineGeometry> und <xref:System.Windows.Media.EllipseGeometry>.  Diese und auch komplexere Geometrien können auch mit <xref:System.Windows.Media.PathGeometry> oder <xref:System.Windows.Media.StreamGeometry> erstellt werden.  Weitere Informationen finden Sie unter [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
-  
-## Siehe auch  
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Erstellen einer zusammengesetzten Form](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
- [Erstellen einer Form mithilfe von PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)
+## <a name="see-also"></a><span data-ttu-id="d3e5c-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3e5c-114">See Also</span></span>  
+ [<span data-ttu-id="d3e5c-115">Übersicht über Geometrien</span><span class="sxs-lookup"><span data-stu-id="d3e5c-115">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="d3e5c-116">Erstellen einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="d3e5c-116">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="d3e5c-117">Erstellen einer Form mithilfe von PathGeometry</span><span class="sxs-lookup"><span data-stu-id="d3e5c-117">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)

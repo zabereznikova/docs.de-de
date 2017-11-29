@@ -1,27 +1,30 @@
 ---
-title: "Zuordnen von f&#252;r geschachtelte Elemente angegebenen Beziehungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9866b556f2ba09cef7616fea4a2a6d8135e6b8e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zuordnen von f&#252;r geschachtelte Elemente angegebenen Beziehungen
-Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben.  Die beiden in **msdata:Relationship** angegebenen Elemente können im Schema geschachtelt sein. Sie müssen aber nicht geschachtelt sein.  Der Zuordnungsprozess verwendet **msdata:Relationship** im Schema, um die Primärschlüssel\-Fremdschlüssel\-Beziehung zwischen den beiden Spalten zu generieren.  
+# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="2ead3-102">Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind</span><span class="sxs-lookup"><span data-stu-id="2ead3-102">Map Relations Specified for Nested Elements</span></span>
+<span data-ttu-id="2ead3-103">Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben.</span><span class="sxs-lookup"><span data-stu-id="2ead3-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="2ead3-104">Die zwei Elemente im angegebenen **msdata: Relationship** können im Schema geschachtelt sein, aber nicht unbedingt sein.</span><span class="sxs-lookup"><span data-stu-id="2ead3-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="2ead3-105">Der Zuordnungsprozess verwendet **msdata: Relationship** im Schema für den primären Schlüssel/Fremdschlüssel-Beziehung zwischen den beiden Spalten zu generieren.</span><span class="sxs-lookup"><span data-stu-id="2ead3-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
   
- Im folgenden Beispiel wird ein XML\-Schema dargestellt, in dem das **OrderDetail**\-Element ein untergeordnetes Element des **Order**\-Elements ist.  **msdata:Relationship** legt die Beziehung zwischen übergeordneten und untergeordneten Elementen für diese Elemente fest und gibt an, dass sich die **OrderNumber**\-Spalte der daraus resultierenden **Order**\-Tabelle auf die **OrderNo**\-Spalte der daraus resultierenden **OrderDetail**\-Tabelle bezieht.  
+ <span data-ttu-id="2ead3-106">Das folgende Beispiel zeigt ein XML-Schema, in dem die **OrderDetail** Element ist ein untergeordnetes Element des **Reihenfolge**.</span><span class="sxs-lookup"><span data-stu-id="2ead3-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="2ead3-107">Die **msdata: Relationship** identifiziert diese über-/ unterordnungsbeziehung und gibt an, dass die **OrderNumber** Spalte des resultierenden **Reihenfolge** Tabelle bezieht sich auf die **OrderNo** Spalte des resultierenden **OrderDetail** Tabelle.</span><span class="sxs-lookup"><span data-stu-id="2ead3-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -59,16 +62,16 @@ Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordn
 </xs:schema>  
 ```  
   
- Durch den XML\-Schemazuordnungsprozess werden im <xref:System.Data.DataSet> folgende Elemente erstellt:  
+ <span data-ttu-id="2ead3-108">Durch den XML-Schemazuordnungsprozess werden im <xref:System.Data.DataSet> folgende Elemente erstellt:</span><span class="sxs-lookup"><span data-stu-id="2ead3-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   Eine **Order**\-Tabelle und eine **OrderDetail**\-Tabelle.  
+-   <span data-ttu-id="2ead3-109">Ein **Reihenfolge** und ein **OrderDetail** Tabelle.</span><span class="sxs-lookup"><span data-stu-id="2ead3-109">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Eine Beziehung zwischen der **Order**\-Tabelle und der **OrderDetail**\-Tabelle.  Die **Nested**\-Eigenschaft für diese Beziehung ist auf **True** festgelegt, da das **Order**\-Element und das **OrderDetail**\-Element im Schema geschachtelt sind.  
+-   <span data-ttu-id="2ead3-110">Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen.</span><span class="sxs-lookup"><span data-stu-id="2ead3-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="2ead3-111">Die **geschachtelte** -Eigenschaft für diese Beziehung wird festgelegt, um **"true"** da die **Reihenfolge** und **OrderDetail** Elemente im Schema geschachtelt sind .</span><span class="sxs-lookup"><span data-stu-id="2ead3-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -79,9 +82,9 @@ Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordn
     Nested: True  
     ```  
   
- Der Zuordnungsprozess erstellt keine Einschränkungen.  
+ <span data-ttu-id="2ead3-112">Der Zuordnungsprozess erstellt keine Einschränkungen.</span><span class="sxs-lookup"><span data-stu-id="2ead3-112">The mapping process does not create any constraints.</span></span>  
   
-## Siehe auch  
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="2ead3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ead3-113">See Also</span></span>  
+ [<span data-ttu-id="2ead3-114">Generieren von DataSet-Beziehungen aus XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="2ead3-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="2ead3-115">Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="2ead3-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="2ead3-116">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="2ead3-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,43 +1,35 @@
 ---
-title: "Asynchrone Rückgabetypen (Visual Basic) | Microsoft-Dokumentation"
+title: "Asynchrone Rückgabetypen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 703d3fc3f503017edf38521d77f9b15a92d0ebf3
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="async-return-types-visual-basic"></a>Asynchrone Rückgabetypen (Visual Basic)
-Asynchrone Methoden haben drei mögliche Rückgabetypen: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, und void.</xref:System.Threading.Tasks.Task> </xref:System.Threading.Tasks.Task%601> In Visual Basic wird der void-Rückgabetyp als geschrieben ein [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) Verfahren. Weitere Informationen über asynchrone Methoden finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+# <a name="async-return-types-visual-basic"></a><span data-ttu-id="34d4f-102">Asynchrone Rückgabetypen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34d4f-102">Async Return Types (Visual Basic)</span></span>
+<span data-ttu-id="34d4f-103">Asynchrone Methoden haben drei mögliche Rückgabetypen: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> und den void-Typ.</span><span class="sxs-lookup"><span data-stu-id="34d4f-103">Async methods have three possible return types: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, and void.</span></span> <span data-ttu-id="34d4f-104">In Visual Basic wird der void-Rückgabetyp als [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)-Prozedur geschrieben.</span><span class="sxs-lookup"><span data-stu-id="34d4f-104">In Visual Basic, the void return type is written as a [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure.</span></span> <span data-ttu-id="34d4f-105">Weitere Informationen zu asynchronen Methoden finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="34d4f-105">For more information about async methods, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- Jeder Rückgabetyp wird in einem der folgenden Abschnitte untersucht und am Ende des Themas wird ein vollständiges Beispiel aller drei Typen verwenden.  
+ <span data-ttu-id="34d4f-106">Jeder Rückgabetyp wird in einem der folgenden Abschnitte untersucht und am Ende des Themas wird ein vollständiges Beispiel aller drei Typen verwenden.</span><span class="sxs-lookup"><span data-stu-id="34d4f-106">Each return type is examined in one of the following sections, and you can find a full example that uses all three types at the end of the topic.</span></span>  
   
 > [!NOTE]
->  Zum Ausführen des Beispiels müssen Sie Visual Studio 2012 oder höher und .NET Framework 4.5 oder höher auf Ihrem Computer installiert.  
+>  <span data-ttu-id="34d4f-107">Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.</span><span class="sxs-lookup"><span data-stu-id="34d4f-107">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <a name="BKMK_TaskTReturnType"></a>Task(t)-Rückgabetyp  
- Die <xref:System.Threading.Tasks.Task%601>Rückgabetyp wird für eine asynchrone Methode, die enthält verwendet eine [zurückgeben](../../../../visual-basic/language-reference/statements/return-statement.md) Anweisung, in der der Operand weist den Typ `TResult`.</xref:System.Threading.Tasks.Task%601>  
+##  <span data-ttu-id="34d4f-108"><a name="BKMK_TaskTReturnType"></a> Task(T)-Rückgabetyp</span><span class="sxs-lookup"><span data-stu-id="34d4f-108"><a name="BKMK_TaskTReturnType"></a> Task(T) Return Type</span></span>  
+ <span data-ttu-id="34d4f-109">Die <xref:System.Threading.Tasks.Task%601> -Rückgabetyp wird für eine asynchrone Methode, die enthält verwendet eine [zurückgeben](../../../../visual-basic/language-reference/statements/return-statement.md) Anweisung, die in der der Operand vom Typ ist `TResult`.</span><span class="sxs-lookup"><span data-stu-id="34d4f-109">The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement in which the operand has type `TResult`.</span></span>  
   
- Im folgenden Beispiel enthält die asynchrone `TaskOfT_MethodAsync`-Methode eine "return"-Anweisung, die eine ganze Zahl zurückgibt. Daher muss die Methodendeklaration einen Rückgabetyp angeben `Task(Of Integer)`.  
+ <span data-ttu-id="34d4f-110">Im folgenden Beispiel enthält die asynchrone `TaskOfT_MethodAsync`-Methode eine "return"-Anweisung, die eine ganze Zahl zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-110">In the following example, the `TaskOfT_MethodAsync` async method contains a return statement that returns an integer.</span></span> <span data-ttu-id="34d4f-111">Aus diesem Grund muss die Methodendeklaration den Rückgabetyp `Task(Of Integer)` haben.</span><span class="sxs-lookup"><span data-stu-id="34d4f-111">Therefore, the method declaration must specify a return type of `Task(Of Integer)`.</span></span>  
   
 ```vb  
 ' TASK(OF T) EXAMPLE  
@@ -62,19 +54,19 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Wenn `TaskOfT_MethodAsync` aus einem "await"-Ausdruck aufgerufen wird, ruft der "await"-Ausdruck den ganzzahligen Wert ab (der Wert von `leisureHours`), der in der Aufgabe gespeichert wird, die von `TaskOfT_MethodAsync` zurückgegeben wird. Weitere Informationen zu await-Ausdrücken, finden Sie unter [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md).  
+ <span data-ttu-id="34d4f-112">Wenn `TaskOfT_MethodAsync` aus einem "await"-Ausdruck aufgerufen wird, ruft der "await"-Ausdruck den ganzzahligen Wert ab (der Wert von `leisureHours`), der in der Aufgabe gespeichert wird, die von `TaskOfT_MethodAsync` zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="34d4f-112">When `TaskOfT_MethodAsync` is called from within an await expression, the await expression retrieves the integer value (the value of `leisureHours`) that's stored in the task that's returned by `TaskOfT_MethodAsync`.</span></span> <span data-ttu-id="34d4f-113">Weitere Informationen zu await-Ausdrücken, finden Sie unter ["await"-Operators](../../../../visual-basic/language-reference/operators/await-operator.md).</span><span class="sxs-lookup"><span data-stu-id="34d4f-113">For more information about await expressions, see [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md).</span></span>  
   
- Der folgende Code ruft auf und erwartet die `TaskOfT_MethodAsync`-Methode. Das Ergebnis wird der `result1`-Variablen zugewiesen.  
+ <span data-ttu-id="34d4f-114">Der folgende Code ruft auf und erwartet die `TaskOfT_MethodAsync`-Methode.</span><span class="sxs-lookup"><span data-stu-id="34d4f-114">The following code calls and awaits method `TaskOfT_MethodAsync`.</span></span> <span data-ttu-id="34d4f-115">Das Ergebnis wird der `result1`-Variablen zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-115">The result is assigned to the `result1` variable.</span></span>  
   
 ```vb  
 ' Call and await the Task(Of T)-returning async method in the same statement.  
 Dim result1 As Integer = Await TaskOfT_MethodAsync()  
 ```  
   
- Sie können besser verstehen, wie dies geschieht durch die Trennung des Aufrufs von `TaskOfT_MethodAsync` aus der Anwendung von `Await`, wie der folgende Code zeigt. Ein Aufruf der Methode `TaskOfT_MethodAsync` , die nicht sofort eine Antwort erwartet gibt eine `Task(Of Integer)`, wie Sie in der Deklaration der Methode erwarten. Die Aufgabe wird im Beispiel der `integerTask`-Variablen zugewiesen. Da `integerTask` ist eine <xref:System.Threading.Tasks.Task%601>, er enthält eine <xref:System.Threading.Tasks.Task%601.Result>Eigenschaft vom Typ `TResult`.</xref:System.Threading.Tasks.Task%601.Result> </xref:System.Threading.Tasks.Task%601> In diesem Fall stellt TResult einen ganzzahligen Typ dar. Wenn `Await` gilt für `integerTask`, der Await-Ausdruck wertet den Inhalt von der <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft des `integerTask`.</xref:System.Threading.Tasks.Task%601.Result%2A> Der Wert wird der `result2`-Variablen zugewiesen.  
+ <span data-ttu-id="34d4f-116">Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `TaskOfT_MethodAsync` von der Anwendung von `Await` trennen, wie der folgenden Code zeigt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-116">You can better understand how this happens by separating the call to `TaskOfT_MethodAsync` from the application of `Await`, as the following code shows.</span></span> <span data-ttu-id="34d4f-117">Ein Aufruf der `TaskOfT_MethodAsync`-Methode, die nicht sofort eine Antwort erwartet, gibt ein `Task(Of Integer)` zurück, wie Sie es von der Deklaration der Methode erwarten.</span><span class="sxs-lookup"><span data-stu-id="34d4f-117">A call to method `TaskOfT_MethodAsync` that isn't immediately awaited returns a `Task(Of Integer)`, as you would expect from the declaration of the method.</span></span> <span data-ttu-id="34d4f-118">Die Aufgabe wird im Beispiel der `integerTask`-Variablen zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-118">The task is assigned to the `integerTask` variable in the example.</span></span> <span data-ttu-id="34d4f-119">Da `integerTask` eine <xref:System.Threading.Tasks.Task%601> ist, enthält es eine <xref:System.Threading.Tasks.Task%601.Result>-Eigenschaft des Typs `TResult`.</span><span class="sxs-lookup"><span data-stu-id="34d4f-119">Because `integerTask` is a <xref:System.Threading.Tasks.Task%601>, it contains a <xref:System.Threading.Tasks.Task%601.Result> property of type `TResult`.</span></span> <span data-ttu-id="34d4f-120">In diesem Fall stellt TResult einen ganzzahligen Typ dar.</span><span class="sxs-lookup"><span data-stu-id="34d4f-120">In this case, TResult represents an integer type.</span></span> <span data-ttu-id="34d4f-121">Wenn `Await` auf `integerTask` angewendet wird, wertet der „await“-Ausdruck den Inhalt der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> von `integerTask` aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-121">When `Await` is applied to `integerTask`, the await expression evaluates to the contents of the <xref:System.Threading.Tasks.Task%601.Result%2A> property of `integerTask`.</span></span> <span data-ttu-id="34d4f-122">Der Wert wird der `result2`-Variablen zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-122">The value is assigned to the `result2` variable.</span></span>  
   
 > [!WARNING]
->  Die <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft ist eine blocking-Eigenschaft.</xref:System.Threading.Tasks.Task%601.Result%2A> Wenn Sie darauf zuzugreifen versuchen, bevor seine Aufgabe beendet ist, wird der momentan aktive Thread blockiert, bis die Aufgabe abgeschlossen und der Wert verfügbar ist. In den meisten Fällen sollten Sie den Wert zugreifen, indem Sie mithilfe von `Await` anstatt direkt auf die Eigenschaft.  
+>  <span data-ttu-id="34d4f-123">Die <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft ist eine Blocking-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="34d4f-123">The <xref:System.Threading.Tasks.Task%601.Result%2A> property is a blocking property.</span></span> <span data-ttu-id="34d4f-124">Wenn Sie darauf zuzugreifen versuchen, bevor seine Aufgabe beendet ist, wird der momentan aktive Thread blockiert, bis die Aufgabe abgeschlossen und der Wert verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="34d4f-124">If you try to access it before its task is finished, the thread that's currently active is blocked until the task completes and the value is available.</span></span> <span data-ttu-id="34d4f-125">In den meisten Fällen sollten Sie auf den Wert zugreifen, indem Sie `Await` verwenden, anstatt direkt auf die Eigenschaft zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-125">In most cases, you should access the value by using `Await` instead of accessing the property directly.</span></span>  
   
 ```vb  
 ' Call and await in separate statements.  
@@ -86,7 +78,7 @@ textBox1.Text &= String.Format("Application can continue working while the Task(
 Dim result2 As Integer = Await integerTask  
 ```  
   
- Die Anzeigeanweisungen im folgenden Code überprüfen, dass die Werte der `result1`-Variable, der `result2`-Variable und der `Result`-Eigenschaft gleich sind. Beachten Sie, dass die `Result`-Eigenschaft eine Blocking-Eigenschaft ist und nicht darauf zugegriffen werden sollte, bevor die Aufgabe abgeschlossen wurde.  
+ <span data-ttu-id="34d4f-126">Die Anzeigeanweisungen im folgenden Code überprüfen, dass die Werte der `result1`-Variable, der `result2`-Variable und der `Result`-Eigenschaft gleich sind.</span><span class="sxs-lookup"><span data-stu-id="34d4f-126">The display statements in the following code verify that the values of the `result1` variable, the `result2` variable, and the `Result` property are the same.</span></span> <span data-ttu-id="34d4f-127">Beachten Sie, dass die `Result`-Eigenschaft eine Blocking-Eigenschaft ist und nicht darauf zugegriffen werden sollte, bevor die Aufgabe abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="34d4f-127">Remember that the `Result` property is a blocking property and shouldn't be accessed before its task has been awaited.</span></span>  
   
 ```vb  
 ' Display the values of the result1 variable, the result2 variable, and  
@@ -96,10 +88,10 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a>Aufgabenrückgabetyp  
- Async-Methoden, die eine return-Anweisung keine enthalten oder eine return-Anweisung, die einen Operanden in der Regel zurückgibt enthalten, haben einen Rückgabetyp <xref:System.Threading.Tasks.Task>.</xref:System.Threading.Tasks.Task> Solche Methoden wäre [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) Verfahren aus, wenn sie eine synchrone Ausführung geschrieben wurden. Bei Verwendung einer `Task` Rückgabetyp für eine asynchrone Methode eine Aufrufmethode können eine `Await` Operator, um den Abschluss des Aufrufers anzuhalten, bis die aufgerufene asynchrone Methode abgeschlossen ist.  
+##  <span data-ttu-id="34d4f-128"><a name="BKMK_TaskReturnType"></a> Aufgabenrückgabetyp</span><span class="sxs-lookup"><span data-stu-id="34d4f-128"><a name="BKMK_TaskReturnType"></a> Task Return Type</span></span>  
+ <span data-ttu-id="34d4f-129">Asynchrone Methoden, die keine "return"-Anweisung enthalten oder eine "return"-Anweisung enthalten, die keinen Operanden zurückgibt, haben normalerweise einen Rückgabetyp von <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="34d4f-129">Async methods that don't contain a return statement or that contain a return statement that doesn't return an operand usually have a return type of <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="34d4f-130">Solche Methoden wäre [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) Verfahren, wenn sie für eine synchrone Ausführung geschrieben wurden.</span><span class="sxs-lookup"><span data-stu-id="34d4f-130">Such methods would be [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedures if they were written to run synchronously.</span></span> <span data-ttu-id="34d4f-131">Wenn Sie einen `Task`-Rückgabetyp für eine asynchrone Methode verwenden, kann ein aufrufende Methode einen `Await`-Operator verwenden, um den Abschluss des Aufrufers anzuhalten, bis die aufgerufene asynchrone Methode beendet ist.</span><span class="sxs-lookup"><span data-stu-id="34d4f-131">If you use a `Task` return type for an async method, a calling method can use an `Await` operator to suspend the caller's completion until the called async method has finished.</span></span>  
   
- Im folgenden Beispiel enthält die asynchrone `Task_MethodAsync`-Methode keine "return"-Anweisung. Daher geben Sie einen `Task`-Rückgabetyp für die Methode an, die `Task_MethodAsync` ein Warten ermöglicht. Die Definition des `Task`-Typs enthält keine `Result`-Eigenschaft, um einen Rückgabewert zu speichern.  
+ <span data-ttu-id="34d4f-132">Im folgenden Beispiel enthält die asynchrone `Task_MethodAsync`-Methode keine "return"-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="34d4f-132">In the following example, async method `Task_MethodAsync` doesn't contain a return statement.</span></span> <span data-ttu-id="34d4f-133">Daher geben Sie einen `Task`-Rückgabetyp für die Methode an, die `Task_MethodAsync` ein Warten ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="34d4f-133">Therefore, you specify a return type of `Task` for the method, which enables `Task_MethodAsync` to be awaited.</span></span> <span data-ttu-id="34d4f-134">Die Definition des `Task`-Typs enthält keine `Result`-Eigenschaft, um einen Rückgabewert zu speichern.</span><span class="sxs-lookup"><span data-stu-id="34d4f-134">The definition of the `Task` type doesn't include a `Result` property to store a return value.</span></span>  
   
 ```vb  
 ' TASK EXAMPLE  
@@ -115,52 +107,75 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt. Die Anwendung von einer `Await` Operator erzeugt in diesem Fall nicht Wert.  
+ <span data-ttu-id="34d4f-135">`Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-135">`Task_MethodAsync` is called and awaited by using an await statement instead of an await expression, similar to the calling statement for a synchronous `Sub` or void-returning method.</span></span> <span data-ttu-id="34d4f-136">Die Anwendung von einer `Await` Operator keine in diesem Fall einen Wert erzeugt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-136">The application of an `Await` operator in this case doesn't produce a value.</span></span>  
   
- Der folgende Code ruft auf und erwartet die `Task_MethodAsync`-Methode.  
+ <span data-ttu-id="34d4f-137">Der folgende Code ruft auf und erwartet die `Task_MethodAsync`-Methode.</span><span class="sxs-lookup"><span data-stu-id="34d4f-137">The following code calls and awaits method `Task_MethodAsync`.</span></span>  
   
 ```vb  
 ' Call and await the Task-returning async method in the same statement.  
 Await Task_MethodAsync()  
 ```  
   
- Wie im vorherigen <xref:System.Threading.Tasks.Task%601>beispielsweise können Sie den Aufruf von trennen `Task_MethodAsync` aus der Anwendung von einer `Await` -Operator, wie im folgenden Code gezeigt.</xref:System.Threading.Tasks.Task%601> Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.  
+ <span data-ttu-id="34d4f-138">Wie im vorherigen <xref:System.Threading.Tasks.Task%601> beispielsweise können Sie den Aufruf von trennen `Task_MethodAsync` aus der Anwendung ein `Await` -Operator, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-138">As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an `Await` operator, as the following code shows.</span></span> <span data-ttu-id="34d4f-139">Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="34d4f-139">However, remember that a `Task` doesn't have a `Result` property, and that no value is produced when an await operator is applied to a `Task`.</span></span>  
   
- Der folgende Code trennt Aufrufe von `Task_MethodAsync` vom Erwarten der Aufgabe, die `Task_MethodAsync` zurückgibt.  
+ <span data-ttu-id="34d4f-140">Der folgende Code trennt Aufrufe von `Task_MethodAsync` vom Erwarten der Aufgabe, die `Task_MethodAsync` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-140">The following code separates calling `Task_MethodAsync` from awaiting the task that `Task_MethodAsync` returns.</span></span>  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
-##  <a name="BKMK_VoidReturnType"></a>Rückgabetyp "void"  
- Der Hauptverwendungszweck des `Sub` Verfahren ist im Ereignishandler keinen Rückgabetyp (bezeichnet als einen void-Rückgabetyp in anderen Sprachen) vorhanden ist. Eine "void"-Rückgabe kann auch verwendet werden, um Methoden mit einer "void"-Rückgabe zu überschreiben, oder auch für Methoden, die "Fire-and-Forget"-Aktivitäten ausführen. Sie sollten nach Möglichkeit immer eine `Task` zurückgeben, da eine "void" zurückgebende asynchrone Methode nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
+```vb  
+' Call and await in separate statements.  
+Dim simpleTask As Task = Task_MethodAsync()  
   
- Der Aufrufer einer "void" zurückgebenden asynchronen Methode kann die von der Methode ausgelöste Ausnahmen nicht behandeln, und solche Ausnahmefehler können möglicherweise zu Fehlern in der Anwendung führen. Wenn eine Ausnahme in einer asynchronen Methode auftritt, der gibt ein <xref:System.Threading.Tasks.Task>oder <xref:System.Threading.Tasks.Task%601>, wird die Ausnahme in der zurückgegebenen Aufgabe gespeichert und erneut ausgelöst, wenn die Aufgabe erwartet wird.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Stellen Sie daher sicher, dass jede asynchrone Methode, die eine Ausnahme erstellen kann einen Rückgabetyp hat <xref:System.Threading.Tasks.Task>oder <xref:System.Threading.Tasks.Task%601>und die Aufrufe der Methode erwartet werden.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task>  
+' You can do other work that does not rely on simpleTask before awaiting.  
+textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)  
   
- Weitere Informationen zum Abfangen von Ausnahmen in Async-Methoden finden Sie unter [versuchen... Catch... Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+Await simpleTask  
+```  
   
- Der folgende Code definiert einen asynchrone Ereignishandler.  
+##  <span data-ttu-id="34d4f-141"><a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“</span><span class="sxs-lookup"><span data-stu-id="34d4f-141"><a name="BKMK_VoidReturnType"></a> Void Return Type</span></span>  
+ <span data-ttu-id="34d4f-142">Der primäre Verwendungszweck `Sub` Prozeduren wird in den Ereignishandlern, es ist kein Rückgabetyp (bezeichnet als einen void-Rückgabetyp in anderen Sprachen).</span><span class="sxs-lookup"><span data-stu-id="34d4f-142">The primary use of `Sub` procedures is in event handlers, where there is no return type (referred to as a void return type in other languages).</span></span> <span data-ttu-id="34d4f-143">Eine "void"-Rückgabe kann auch verwendet werden, um Methoden mit einer "void"-Rückgabe zu überschreiben, oder auch für Methoden, die "Fire-and-Forget"-Aktivitäten ausführen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-143">A void return also can be used to override void-returning methods or for methods that perform activities that can be categorized as "fire and forget."</span></span> <span data-ttu-id="34d4f-144">Sie sollten nach Möglichkeit immer eine `Task` zurückgeben, da eine "void" zurückgebende asynchrone Methode nicht erwartet werden kann.</span><span class="sxs-lookup"><span data-stu-id="34d4f-144">However, you should return a `Task` wherever possible, because a void-returning async method can't be awaited.</span></span> <span data-ttu-id="34d4f-145">Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.</span><span class="sxs-lookup"><span data-stu-id="34d4f-145">Any caller of such a method must be able to continue to completion without waiting for the called async method to finish, and the caller must be independent of any values or exceptions that the async method generates.</span></span>  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
-##  <a name="BKMK_Example"></a>Vollständiges Beispiel  
- Das nächste Windows Presentation Foundation (WPF)-Projekt enthält die Codebeispiele aus diesem Thema.  
+ <span data-ttu-id="34d4f-146">Der Aufrufer einer "void" zurückgebenden asynchronen Methode kann die von der Methode ausgelöste Ausnahmen nicht behandeln, und solche Ausnahmefehler können möglicherweise zu Fehlern in der Anwendung führen.</span><span class="sxs-lookup"><span data-stu-id="34d4f-146">The caller of a void-returning async method can't catch exceptions that are thrown from the method, and such unhandled exceptions are likely to cause your application to fail.</span></span> <span data-ttu-id="34d4f-147">Wenn eine Ausnahme in einer asynchronen Methode auftritt, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgibt, wird die Ausnahme in der zurückgegebenen Aufgabe gespeichert und erneut ausgelöst, wenn die Aufgabe erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="34d4f-147">If an exception occurs in an async method that returns a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, the exception is stored in the returned task, and rethrown when the task is awaited.</span></span> <span data-ttu-id="34d4f-148">Daher stellen Sie sicher, dass jede asynchrone Methode, die eine Ausnahme erstellen kann, über einen Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> verfügt und die Aufrufe der Methode erwartet werden.</span><span class="sxs-lookup"><span data-stu-id="34d4f-148">Therefore, make sure that any async method that can produce an exception has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> and that calls to the method are awaited.</span></span>  
   
- Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:  
+ <span data-ttu-id="34d4f-149">Weitere Informationen zum Auffangen von Ausnahmen in async-Methoden finden Sie unter [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally-Anweisung).</span><span class="sxs-lookup"><span data-stu-id="34d4f-149">For more information about how to catch exceptions in async methods, see [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-1.  Starten Sie Visual Studio.  
+ <span data-ttu-id="34d4f-150">Der folgende Code definiert einen asynchrone Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="34d4f-150">The following code defines an async event handler.</span></span>  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+```vb  
+' SUB EXAMPLE  
+Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.Click  
   
-     Das Dialogfeld **Neues Projekt** wird angezeigt.  
+    textBox1.Clear()  
   
-3.  In der **installierte**, **Vorlagen** (Kategorie), wählen Sie **Visual Basic**, und wählen Sie dann **Windows**. Wählen Sie **WPF-Anwendung** aus der Liste der Projekttypen.  
+    ' Start the process and await its completion. DriverAsync is a   
+    ' Task-returning async method.  
+    Await DriverAsync()  
   
-4.  Geben Sie `AsyncReturnTypes` als Namen für das Projekt, und wählen Sie dann die **OK** Schaltfläche.  
+    ' Say goodbye.  
+    textBox1.Text &= vbCrLf & "All done, exiting button-click event handler."  
+End Sub  
+```  
   
-     Das neue Projekt wird im **Projektmappen-Explorer**.  
+##  <span data-ttu-id="34d4f-151"><a name="BKMK_Example"></a> Vollständiges Beispiel</span><span class="sxs-lookup"><span data-stu-id="34d4f-151"><a name="BKMK_Example"></a> Complete Example</span></span>  
+ <span data-ttu-id="34d4f-152">Das nächste Windows Presentation Foundation (WPF)-Projekt enthält die Codebeispiele aus diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="34d4f-152">The following Windows Presentation Foundation (WPF) project contains the code examples from this topic.</span></span>  
   
-5.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
+ <span data-ttu-id="34d4f-153">Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="34d4f-153">To run the project, perform the following steps:</span></span>  
   
-     Wenn die Registerkarte nicht angezeigt wird, öffnen Sie das Kontextmenü für "MainWindow.xaml" im **Projektmappen-Explorer**, und wählen Sie dann **öffnen**.  
+1.  <span data-ttu-id="34d4f-154">Starten Sie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="34d4f-154">Start Visual Studio.</span></span>  
   
-6.  In der **XAML** Fenster von "MainWindow.xaml", ersetzen Sie den Code durch den folgenden Code.  
+2.  <span data-ttu-id="34d4f-155">Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-155">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
+  
+     <span data-ttu-id="34d4f-156">Das Dialogfeld **Neues Projekt** wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-156">The **New Project** dialog box opens.</span></span>  
+  
+3.  <span data-ttu-id="34d4f-157">In der **installiert**, **Vorlagen** Kategorie auswählen **Visual Basic**, und wählen Sie dann **Windows**.</span><span class="sxs-lookup"><span data-stu-id="34d4f-157">In the **Installed**, **Templates** category, choose **Visual Basic**, and then choose **Windows**.</span></span> <span data-ttu-id="34d4f-158">Wählen Sie in der Liste der Projekttypen die **WPF-Anwendung** aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-158">Choose **WPF Application** from the list of project types.</span></span>  
+  
+4.  <span data-ttu-id="34d4f-159">Geben Sie `AsyncReturnTypes` als Namen für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-159">Enter `AsyncReturnTypes` as the name of the project, and then choose the **OK** button.</span></span>  
+  
+     <span data-ttu-id="34d4f-160">Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-160">The new project appears in **Solution Explorer**.</span></span>  
+  
+5.  <span data-ttu-id="34d4f-161">Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-161">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
+  
+     <span data-ttu-id="34d4f-162">Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer** und wählen dann **Öffnen** aus.</span><span class="sxs-lookup"><span data-stu-id="34d4f-162">If the tab is not visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **Open**.</span></span>  
+  
+6.  <span data-ttu-id="34d4f-163">Ersetzen Sie den Code im Fenster **XAML** von „MainWindow.xaml“ durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="34d4f-163">In the **XAML** window of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -173,14 +188,13 @@ Await Task_MethodAsync()
   
         </Grid>  
     </Window>  
-  
     ```  
   
-     Ein einfaches Fenster mit einem Textfeld und einer Schaltfläche wird angezeigt, der **Design** im Fenster.  
+     <span data-ttu-id="34d4f-164">Ein einfaches Fenster mit einem Textfeld und einer Schaltfläche wird im Fenster **Entwurf** von „MainWindow.xaml“ angezeigt.</span><span class="sxs-lookup"><span data-stu-id="34d4f-164">A simple window that contains a text box and a button appears in the **Design** window of MainWindow.xaml.</span></span>  
   
-7.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Anzeigecode**.  
+7.  <span data-ttu-id="34d4f-165">In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Code anzeigen**.</span><span class="sxs-lookup"><span data-stu-id="34d4f-165">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-8.  Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
+8.  <span data-ttu-id="34d4f-166">Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="34d4f-166">Replace the code in MainWindow.xaml.vb with the following code.</span></span>  
   
     ```vb  
     Class MainWindow  
@@ -267,9 +281,9 @@ Await Task_MethodAsync()
     End Class  
     ```  
   
-9. Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
+9. <span data-ttu-id="34d4f-167">Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .</span><span class="sxs-lookup"><span data-stu-id="34d4f-167">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     Es sollte folgende Ausgabe angezeigt werden.  
+     <span data-ttu-id="34d4f-168">Es sollte folgende Ausgabe angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="34d4f-168">The following output should appear.</span></span>  
   
     ```  
     Application can continue working while the Task<T> runs. . . .   
@@ -287,9 +301,9 @@ Await Task_MethodAsync()
     All done, exiting button-click event handler.  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Tasks.Task.FromResult%2A></xref:System.Threading.Tasks.Task.FromResult%2A>   
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Ablaufsteuerung in asynchronen Programmen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)   
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)   
- [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
+## <a name="see-also"></a><span data-ttu-id="34d4f-169">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34d4f-169">See Also</span></span>  
+ <xref:System.Threading.Tasks.Task.FromResult%2A>  
+ <span data-ttu-id="34d4f-170">[Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="34d4f-170">[Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)</span></span>  
+ [<span data-ttu-id="34d4f-171">Ablaufsteuerung in asynchronen Programmen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34d4f-171">Control Flow in Async Programs (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)  
+ [<span data-ttu-id="34d4f-172">Async</span><span class="sxs-lookup"><span data-stu-id="34d4f-172">Async</span></span>](../../../../visual-basic/language-reference/modifiers/async.md)  
+ [<span data-ttu-id="34d4f-173">Await-Operator</span><span class="sxs-lookup"><span data-stu-id="34d4f-173">Await Operator</span></span>](../../../../visual-basic/language-reference/operators/await-operator.md)

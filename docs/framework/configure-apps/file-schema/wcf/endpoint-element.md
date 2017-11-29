@@ -1,31 +1,34 @@
 ---
-title: "&lt;endpoint&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;endpoint&gt;-Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 937819fabc50d4a0a43c6a3168e6d8a77bf4ceca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;endpoint&gt;-Element
-Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.  
+# <a name="ltendpointgt-element"></a><span data-ttu-id="aa2b0-102">&lt;endpoint&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="aa2b0-102">&lt;endpoint&gt; element</span></span>
+<span data-ttu-id="aa2b0-103">Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="aa2b0-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="aa2b0-105">\<Dienst ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-105">\<service></span></span>  
+<span data-ttu-id="aa2b0-106">\<Endpunkt ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-106">\<endpoint></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="aa2b0-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="aa2b0-107">Syntax</span></span>  
   
+```xml  
 <endpoint address="String"  
    behaviorConfiguration="String"  
    binding="String"  
@@ -33,52 +36,49 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
    bindingName="String"  
    bindingNamespace="String"  
    contract="String"  
-   endpointConfiguration=”String”  
-   isSystemEndpoint=”Boolean”  
-   kind=”String”  
-   listenUriMode="Explicit/Unique"  
+   endpointConfiguration="String"   isSystemEndpoint="Boolean"   kind="String"   listenUriMode="Explicit/Unique"  
    listenUri="Uri"  
 </endpoint>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="aa2b0-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="aa2b0-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="aa2b0-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="aa2b0-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="aa2b0-110">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|Adresse|Eine Zeichenfolge mit der Adresse des Endpunkts.  Die Adresse kann als absolute oder relative Adresse angegeben werden.  Bei Bereitstellung einer relativen Adresse wird vom Host erwartet, dass er eine Basisadresse bereitstellt, die für das in der Bindung verwendete Transportschema geeignet ist.  Wenn keine Adresse konfiguriert wird, wird angenommen, dass die Basisadresse der Adresse für diesen Endpunkt entspricht.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
-|behaviorConfiguration|Eine Zeichenfolge mit dem Namen des Verhaltens, das am Endpunkt verwendet werden soll.|  
-|Bindung|Erforderliches Zeichenfolgenattribut, das den Typ der zu verwendenden Bindung angibt.  Dieser muss einen registrierten Konfigurationsabschnitt aufweisen, da sonst nicht auf ihn verwiesen werden kann.  Der Typ wird anhand des Abschnittsnamens registriert, nicht anhand des Typnamens der Bindung.|  
-|bindingConfiguration|Eine Zeichenfolge, die den Namen der Bindung enthält, die beim Instanziieren des Endpunkts verwendet werden soll.  Der Name der Bindung muss sich bei der Endpunktdefinition im Gültigkeitsbereich befinden.  Der Standardwert ist eine leere Zeichenfolge.<br /><br /> Dieses Attribut wird zusammen mit `binding` zum Verweisen auf eine spezifische Bindungskonfiguration in der Konfigurationsdatei verwendet.  Legen Sie dieses Attribut fest, wenn Sie eine benutzerdefinierte Bindung verwenden möchten.  Andernfalls wird unter Umständen eine Ausnahme ausgelöst.|  
-|bindingName|Eine Zeichenfolge, die den eindeutigen qualifizierten Namen der Bindung für den Definitionsexport über WSDL definiert.  Der Standardwert ist eine leere Zeichenfolge.|  
-|bindingNamespace|Eine Zeichenfolge, die den qualifizierten Namen des Namespaces der Bindung für den Definitionsexport über WSDL definiert.  Der Standardwert ist eine leere Zeichenfolge.|  
-|Vertrag \(Contract\)|Eine Zeichenfolge, die angibt, welche Verträge von diesem Endpunkt verfügbar gemacht werden.  Die Assembly muss den Vertragstyp implementieren.  Wenn eine Dienstimplementierung einen einzelnen Vertragstyp implementiert, kann diese Eigenschaft ausgelassen werden.  Der Standardwert ist eine leere Zeichenfolge.|  
-|endpointConfiguration|Eine Zeichenfolge, die den Namen des Standardendpunkts angibt, der mit dem `kind`\-Attribut festgelegt wird, das auf die zusätzlichen Konfigurationsinformationen dieses Standardendpunkts verweist.  Der gleiche Name muss im Abschnitt `<standardEndpoints>` definiert werden.|  
-|isSystemEndpoint|Ein boolescher Wert, der angibt, ob ein Endpunkt ein Infrastrukturendpunkt ist.|  
-|kind|Eine Zeichenfolge, die den Typ des angewendeten Standardendpunkts angibt.  Der Typ muss im Abschnitt `<extensions>` oder in machine.config registriert werden.  Wenn kein Wert angegeben wird, wird ein allgemeiner Dienstendpunkt erstellt.|  
-|listenUriMode|Gibt an, wie der Transport die `ListenUri` verarbeitet, die für die Überwachung durch den Dienst bereitgestellt wurde.  Folgende Werte sind gültig:<br /><br /> -   Explicit<br />-   Unique<br /><br /> Der Standardwert ist Explicit.|  
-|listenUri|Eine Zeichenfolge mit dem URI, an dem der Dienstendpunkt lauscht.  Der Standardwert ist eine leere Zeichenfolge.|  
-|Name|Optionales Attribut.  Eine Zeichenfolge, die den Namen des Dienstendpunkts angibt.  Der Standardwert ist die Verkettung des Bindungsnamen und des Vertragsbeschreibungsnamens.  Dienste haben möglicherweise mehrere Endpunkte, sodass das `name`\-Attribut des Endpunkts sich vom Namen des Diensts unterscheidet.|  
+|<span data-ttu-id="aa2b0-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="aa2b0-111">Attribute</span></span>|<span data-ttu-id="aa2b0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aa2b0-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="aa2b0-113">Adresse</span><span class="sxs-lookup"><span data-stu-id="aa2b0-113">address</span></span>|<span data-ttu-id="aa2b0-114">Eine Zeichenfolge mit der Adresse des Endpunkts.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-114">A string that contains the address of the endpoint.</span></span> <span data-ttu-id="aa2b0-115">Die Adresse kann als absolute oder relative Adresse angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-115">The address can be specified as an absolute or relative address.</span></span> <span data-ttu-id="aa2b0-116">Bei Bereitstellung einer relativen Adresse wird vom Host erwartet, dass er eine Basisadresse bereitstellt, die für das in der Bindung verwendete Transportschema geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-116">If a relative address is provided, the host is expected to provide a base address appropriate for the transport scheme used in the binding.</span></span> <span data-ttu-id="aa2b0-117">Wenn keine Adresse konfiguriert wird, wird angenommen, dass die Basisadresse der Adresse für diesen Endpunkt entspricht.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-117">If an address is not configured, the base address is assumed to be the address for that endpoint.</span></span><br /><br /> <span data-ttu-id="aa2b0-118">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-118">The default is an empty string.</span></span>|  
+|<span data-ttu-id="aa2b0-119">behaviorConfiguration</span><span class="sxs-lookup"><span data-stu-id="aa2b0-119">behaviorConfiguration</span></span>|<span data-ttu-id="aa2b0-120">Eine Zeichenfolge mit dem Namen des Verhaltens, das am Endpunkt verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-120">A string that contains the name of the behavior to be used in the endpoint.</span></span>|  
+|<span data-ttu-id="aa2b0-121">Bindung</span><span class="sxs-lookup"><span data-stu-id="aa2b0-121">binding</span></span>|<span data-ttu-id="aa2b0-122">Erforderliches Zeichenfolgenattribut, das den Typ der zu verwendenden Bindung angibt.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-122">Required string attribute that specifies the type of binding to use.</span></span> <span data-ttu-id="aa2b0-123">Dieser muss einen registrierten Konfigurationsabschnitt aufweisen, da sonst nicht auf ihn verwiesen werden kann.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-123">The type must have a registered configuration section in order to be referenced.</span></span> <span data-ttu-id="aa2b0-124">Der Typ wird anhand des Abschnittsnamens registriert, nicht anhand des Typnamens der Bindung.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-124">The type is the registered by section name, rather than by the type name of the binding.</span></span>|  
+|<span data-ttu-id="aa2b0-125">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="aa2b0-125">bindingConfiguration</span></span>|<span data-ttu-id="aa2b0-126">Eine Zeichenfolge, die den Namen der Bindung enthält, die beim Instanziieren des Endpunkts verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-126">A string that specifies the binding name of the binding to use when the endpoint is instantiated.</span></span> <span data-ttu-id="aa2b0-127">Der Name der Bindung muss sich bei der Endpunktdefinition im Gültigkeitsbereich befinden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-127">The binding name must be in scope at the point the endpoint is defined.</span></span> <span data-ttu-id="aa2b0-128">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-128">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="aa2b0-129">Dieses Attribut wird zusammen mit `binding` zum Verweisen auf eine spezifische Bindungskonfiguration in der Konfigurationsdatei verwendet.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-129">This attribute is used in conjunction with `binding` to reference a specific binding configuration in the configuration file.</span></span> <span data-ttu-id="aa2b0-130">Legen Sie dieses Attribut fest, wenn Sie eine benutzerdefinierte Bindung verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-130">Set this attribute if you are attempting to use a custom binding.</span></span> <span data-ttu-id="aa2b0-131">Andernfalls wird unter Umständen eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-131">Otherwise, an exception may be thrown.</span></span>|  
+|<span data-ttu-id="aa2b0-132">bindingName</span><span class="sxs-lookup"><span data-stu-id="aa2b0-132">bindingName</span></span>|<span data-ttu-id="aa2b0-133">Eine Zeichenfolge, die den eindeutigen qualifizierten Namen der Bindung für den Definitionsexport über WSDL definiert.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-133">A string that specifies the unique qualified name of the binding for definition export through WSDL.</span></span> <span data-ttu-id="aa2b0-134">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-134">The default is an empty string.</span></span>|  
+|<span data-ttu-id="aa2b0-135">bindingNamespace</span><span class="sxs-lookup"><span data-stu-id="aa2b0-135">bindingNamespace</span></span>|<span data-ttu-id="aa2b0-136">Eine Zeichenfolge, die den qualifizierten Namen des Namespaces der Bindung für den Definitionsexport über WSDL definiert.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-136">A string that specifies the qualified name of the namespace of the binding for definition export through WSDL.</span></span> <span data-ttu-id="aa2b0-137">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-137">The default is an empty string.</span></span>|  
+|<span data-ttu-id="aa2b0-138">Vertrag (Contract)</span><span class="sxs-lookup"><span data-stu-id="aa2b0-138">contract</span></span>|<span data-ttu-id="aa2b0-139">Eine Zeichenfolge, die angibt, welche Verträge von diesem Endpunkt verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-139">A string that indicates which contract this endpoint is exposing.</span></span> <span data-ttu-id="aa2b0-140">Die Assembly muss den Vertragstyp implementieren.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-140">The assembly must implement the contract type.</span></span> <span data-ttu-id="aa2b0-141">Wenn eine Dienstimplementierung einen einzelnen Vertragstyp implementiert, kann diese Eigenschaft ausgelassen werden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-141">If a service implementation implements a single contract type, then this property can be omitted.</span></span> <span data-ttu-id="aa2b0-142">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-142">The default is an empty string.</span></span>|  
+|<span data-ttu-id="aa2b0-143">endpointConfiguration</span><span class="sxs-lookup"><span data-stu-id="aa2b0-143">endpointConfiguration</span></span>|<span data-ttu-id="aa2b0-144">Eine Zeichenfolge, die den Namen des Standardendpunkts angibt, der mit dem `kind`-Attribut festgelegt wird, das auf die zusätzlichen Konfigurationsinformationen dieses Standardendpunkts verweist.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-144">A string that specifies the name of the standard endpoint that is set by the `kind` attribute, which references to the additional configuration information of this standard endpoint.</span></span> <span data-ttu-id="aa2b0-145">Der gleiche Name muss im Abschnitt `<standardEndpoints>` definiert werden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-145">The same name must be defined in the `<standardEndpoints>` section.</span></span>|  
+|<span data-ttu-id="aa2b0-146">isSystemEndpoint</span><span class="sxs-lookup"><span data-stu-id="aa2b0-146">isSystemEndpoint</span></span>|<span data-ttu-id="aa2b0-147">Ein boolescher Wert, der angibt, ob ein Endpunkt ein Infrastrukturendpunkt ist.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-147">A Boolean value that specifies whether an endpoint is an infrastructure endpoint.</span></span>|  
+|<span data-ttu-id="aa2b0-148">kind</span><span class="sxs-lookup"><span data-stu-id="aa2b0-148">kind</span></span>|<span data-ttu-id="aa2b0-149">Eine Zeichenfolge, die den Typ des angewendeten Standardendpunkts angibt.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-149">A string that specifies the type of standard endpoint applied.</span></span> <span data-ttu-id="aa2b0-150">Der Typ muss im Abschnitt `<extensions>` oder in machine.config registriert werden. Wenn kein Wert angegeben wird, wird ein allgemeiner Dienstendpunkt erstellt.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-150">The type must be registered in the `<extensions>` section or in machine.config. If nothing is specified, a common service endpoint is created.</span></span>|  
+|<span data-ttu-id="aa2b0-151">listenUriMode</span><span class="sxs-lookup"><span data-stu-id="aa2b0-151">listenUriMode</span></span>|<span data-ttu-id="aa2b0-152">Gibt an, wie der Transport die `ListenUri` verarbeitet, die für die Überwachung durch den Dienst bereitgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-152">Specifies how the transport treats the `ListenUri` provided for the service to listen on.</span></span> <span data-ttu-id="aa2b0-153">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="aa2b0-153">Valid values are</span></span><br /><br /> <span data-ttu-id="aa2b0-154">-Explizite</span><span class="sxs-lookup"><span data-stu-id="aa2b0-154">-   Explicit</span></span><br /><span data-ttu-id="aa2b0-155">-Eindeutig</span><span class="sxs-lookup"><span data-stu-id="aa2b0-155">-   Unique</span></span><br /><br /> <span data-ttu-id="aa2b0-156">Der Standardwert ist Explicit.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-156">The default value is Explicit.</span></span>|  
+|<span data-ttu-id="aa2b0-157">listenUri</span><span class="sxs-lookup"><span data-stu-id="aa2b0-157">listenUri</span></span>|<span data-ttu-id="aa2b0-158">Eine Zeichenfolge mit dem URI, an dem der Dienstendpunkt lauscht.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-158">A string that specifies the URI at which the service endpoint listens.</span></span> <span data-ttu-id="aa2b0-159">Der Standardwert ist eine leere Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-159">The default is an empty string.</span></span>|  
+|<span data-ttu-id="aa2b0-160">Name</span><span class="sxs-lookup"><span data-stu-id="aa2b0-160">name</span></span>|<span data-ttu-id="aa2b0-161">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-161">Optional attribute.</span></span> <span data-ttu-id="aa2b0-162">Eine Zeichenfolge, die den Namen des Dienstendpunkts angibt.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-162">A string that specifies the name the service endpoint.</span></span> <span data-ttu-id="aa2b0-163">Der Standardwert ist die Verkettung des Bindungsnamen und des Vertragsbeschreibungsnamens.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-163">The default value is the concatenation of the binding name and the contract description name.</span></span> <span data-ttu-id="aa2b0-164">Dienste haben möglicherweise mehrere Endpunkte, sodass das `name`-Attribut des Endpunkts sich vom Namen des Diensts unterscheidet.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-164">Services may have multiple endpoints, so the endpoint’s `name` attribute is distinct from the name of the service.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="aa2b0-165">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="aa2b0-165">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<Kopfzeilen\>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Eine Auflistung von Adressheadern.|  
-|[\<Identität\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Eine Identität, welche die Authentifizierung eines Endpunkts durch andere Endpunkte ermöglicht, mit denen Nachrichten ausgetauscht werden.|  
+|<span data-ttu-id="aa2b0-166">Element</span><span class="sxs-lookup"><span data-stu-id="aa2b0-166">Element</span></span>|<span data-ttu-id="aa2b0-167">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aa2b0-167">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="aa2b0-168">\<Header ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-168">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|<span data-ttu-id="aa2b0-169">Eine Auflistung von Adressheadern.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-169">A collection of address headers.</span></span>|  
+|[<span data-ttu-id="aa2b0-170">\<Identität ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-170">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="aa2b0-171">Eine Identität, welche die Authentifizierung eines Endpunkts durch andere Endpunkte ermöglicht, mit denen Nachrichten ausgetauscht werden.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-171">An identity that enables the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="aa2b0-172">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="aa2b0-172">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<service\>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Ein Konfigurationsabschnitt, der eine Liste mit Endpunkten definiert, zu denen ein Client eine Verbindung herstellen kann.|  
+|<span data-ttu-id="aa2b0-173">Element</span><span class="sxs-lookup"><span data-stu-id="aa2b0-173">Element</span></span>|<span data-ttu-id="aa2b0-174">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aa2b0-174">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="aa2b0-175">\<Dienst ></span><span class="sxs-lookup"><span data-stu-id="aa2b0-175">\<service></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|<span data-ttu-id="aa2b0-176">Ein Konfigurationsabschnitt, der eine Liste mit Endpunkten definiert, zu denen ein Client eine Verbindung herstellen kann.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-176">A configuration section that defines a list of endpoints that a client can connect to.</span></span>|  
   
-## Beispiel  
- Dies ist ein Beispiel für eine Dienstendpunkt\-Konfiguration.  
+## <a name="example"></a><span data-ttu-id="aa2b0-177">Beispiel</span><span class="sxs-lookup"><span data-stu-id="aa2b0-177">Example</span></span>  
+ <span data-ttu-id="aa2b0-178">Dies ist ein Beispiel für eine Dienstendpunkt-Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="aa2b0-178">This is an example of a service endpoint configuration.</span></span>  
   
-```  
+```xml  
 <endpoint   
     address="/HelloWorld/"  
     bindingConfiguration="usingDefaults"  
@@ -92,9 +92,9 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 </endpoint>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.Description.ServiceEndpoint>   
- [Endpunkte: Adressen, Bindungen und Verträge](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)   
- [Gewusst wie: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a><span data-ttu-id="aa2b0-179">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aa2b0-179">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.Description.ServiceEndpoint>  
+ [<span data-ttu-id="aa2b0-180">Endpunkte: Adressen, Bindungen und Verträge</span><span class="sxs-lookup"><span data-stu-id="aa2b0-180">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [<span data-ttu-id="aa2b0-181">Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration</span><span class="sxs-lookup"><span data-stu-id="aa2b0-181">How to: Create a Service Endpoint in Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

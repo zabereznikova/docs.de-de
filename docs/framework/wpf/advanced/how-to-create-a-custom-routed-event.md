@@ -1,45 +1,50 @@
 ---
-title: "Gewusst wie: Erstellen eines benutzerdefinierten Routingereignisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen, Routingereignisse"
-  - "Ereignisse, Routing"
-  - "Routingereignisse, Erstellen"
+title: 'Gewusst wie: Erstellen eines benutzerdefinierten Routingereignisses'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], creating
+- events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e901242b265e0012f9ad65d9eaab89b1b63b40ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines benutzerdefinierten Routingereignisses
-Damit Ihr benutzerdefiniertes Ereignis das [Ereignisrouting](GTMT) unterstützt, müssen Sie mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>\-Methode ein <xref:System.Windows.RoutedEvent> registrieren.  Dieses Beispiel zeigt die Grundlagen der Erstellung eines benutzerdefinierten Routingereignisses.  
+# <a name="how-to-create-a-custom-routed-event"></a><span data-ttu-id="32a6d-102">Gewusst wie: Erstellen eines benutzerdefinierten Routingereignisses</span><span class="sxs-lookup"><span data-stu-id="32a6d-102">How to: Create a Custom Routed Event</span></span>
+<span data-ttu-id="32a6d-103">Für das benutzerdefinierte Ereignis Ereignisrouting unterstützen, müssen Sie zum Registrieren einer <xref:System.Windows.RoutedEvent> mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="32a6d-103">For your custom event to support event routing, you need to register a <xref:System.Windows.RoutedEvent> using the <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> method.</span></span> <span data-ttu-id="32a6d-104">Dieses Beispiel zeigt die Grundlagen der Erstellung eines benutzerdefinierten Routingereignisses.</span><span class="sxs-lookup"><span data-stu-id="32a6d-104">This example demonstrates the basics of creating a custom routed event.</span></span>  
   
-## Beispiel  
- Wie im folgenden Beispiel gezeigt, registrieren Sie zuerst ein <xref:System.Windows.RoutedEvent>, indem Sie die <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>\-Methode verwenden.  Der Konvention nach muss der statische Feldname <xref:System.Windows.RoutedEvent> auf das Suffix ***Event*** enden.  In diesem Beispiel hat das Ereignis den Namen `Tap`, und die Routingstrategie für das Ereignis lautet <xref:System.Windows.RoutingStrategy>.  Nach dem Registrierungsaufruf können Sie für das Ereignis [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Ereignisaccessoren zum Hinzufügen und Entfernen angeben.  
+## <a name="example"></a><span data-ttu-id="32a6d-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32a6d-105">Example</span></span>  
+ <span data-ttu-id="32a6d-106">Wie im folgenden Beispiel gezeigt, registrieren Sie zuerst eine <xref:System.Windows.RoutedEvent> mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="32a6d-106">As shown in the following example, you first register a <xref:System.Windows.RoutedEvent> using the <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> method.</span></span> <span data-ttu-id="32a6d-107">Gemäß der Konvention werden die <xref:System.Windows.RoutedEvent> statische Feldname muss mit der Endung ***Ereignis***.</span><span class="sxs-lookup"><span data-stu-id="32a6d-107">By convention, the <xref:System.Windows.RoutedEvent> static field name should end with the suffix ***Event***.</span></span> <span data-ttu-id="32a6d-108">In diesem Beispiel wird der Name des Ereignisses `Tap` und die Routingstrategie des Ereignisses ist <xref:System.Windows.RoutingStrategy.Bubble>.</span><span class="sxs-lookup"><span data-stu-id="32a6d-108">In this example, the name of the event is `Tap` and the routing strategy of the event is <xref:System.Windows.RoutingStrategy.Bubble>.</span></span> <span data-ttu-id="32a6d-109">Nach dem Registrierungsaufruf können Sie Ereignisaccessoren [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] für das Ereignis bereitstellen, hinzufügen und entfernen.</span><span class="sxs-lookup"><span data-stu-id="32a6d-109">After the registration call, you can provide add-and-remove [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] event accessors for the event.</span></span>  
   
- Beachten Sie, dass, obwohl das Ereignis in diesem Beispiel mithilfe der virtuellen `OnTap`\-Methode ausgelöst wird, es von Ihren jeweiligen Anforderungen abhängt, wie Sie das Ereignis auslösen und wie das Ereignis auf Änderungen reagiert.  
+ <span data-ttu-id="32a6d-110">Beachten Sie, dass die Art, obwohl das Ereignis in diesem speziellen Beispiel über die virtuelle Methode `OnTap` ausgelöst wird, wie Sie das Ereignis auslösen oder wie Ihr Event auf Änderungen reagiert, von Ihren Anforderungen abhängt.</span><span class="sxs-lookup"><span data-stu-id="32a6d-110">Note that even though the event is raised through the `OnTap` virtual method in this particular example, how you raise your event or how your event responds to changes depends on your needs.</span></span>  
   
- Beachten Sie auch, dass in diesem Beispiel praktisch eine gesamte Unterklasse von <xref:System.Windows.Controls.Button> implementiert wird. Diese Unterklasse wird als separate Assembly erstellt und dann auf einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Seite als benutzerdefinierte Klasse instanziiert.  Auf diese Weise soll veranschaulicht werden, dass als Unterklassen implementierte Steuerelemente in Strukturen eingefügt werden können, die sich aus anderen Steuerelementen zusammensetzen, und dass benutzerdefinierte Ereignisse dieser Steuerelemente in diesem Fall über dieselben Ereignisroutingfunktionen wie systemeigene [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Elemente verfügen.  
+ <span data-ttu-id="32a6d-111">Beachten Sie außerdem, dass in diesem Beispiel wird im Grunde eine gesamte Unterklasse von implementiert <xref:System.Windows.Controls.Button>; diese Unterklasse wird als separate Assembly erstellt und dann instanziiert, wie eine benutzerdefinierte Klasse auf einem separaten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite.</span><span class="sxs-lookup"><span data-stu-id="32a6d-111">Note also that this example basically implements an entire subclass of <xref:System.Windows.Controls.Button>; that subclass is built as a separate assembly and then instantiated as a custom class on a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="32a6d-112">Dadurch wird veranschaulicht, dass Steuerelemente als Unterklasse in Strukturen, die aus anderen Steuerelementen zusammengesetzt sind, eingefügt werden können, und in diesem Fall benutzerdefinierte Ereignisse dieser Steuerelemente über die gleichen Ereignisroutingfunktionen wie jedes native Element von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügen.</span><span class="sxs-lookup"><span data-stu-id="32a6d-112">This is to illustrate the concept that subclassed controls can be inserted into trees composed of other controls, and that in this situation, custom events on these controls have the very same event routing capabilities as any native [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] element does.</span></span>  
   
  [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
  [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
- Tunneling\-Ereignisse werden auf dieselbe Weise erstellt, wobei <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> im Registrierungsaufruf jedoch auf <xref:System.Windows.RoutingStrategy> gesetzt ist.  Der Konvention nach werden Tunneling\-Ereignisse in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mit dem Präfix "Preview" versehen.  
+ <span data-ttu-id="32a6d-113">Tunneling-Ereignisse sind erstellte dasselbe Weg, jedoch mit <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> festgelegt <xref:System.Windows.RoutingStrategy.Tunnel> im Registrierungsaufruf.</span><span class="sxs-lookup"><span data-stu-id="32a6d-113">Tunneling events are created the same way, but with <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> set to <xref:System.Windows.RoutingStrategy.Tunnel> in the registration call.</span></span> <span data-ttu-id="32a6d-114">In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erhalten Tunneling-Ereignissen per Konvention das Wort „Preview“ als Präfix.</span><span class="sxs-lookup"><span data-stu-id="32a6d-114">By convention, tunneling events in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] are prefixed with the word "Preview".</span></span>  
   
- Ein Beispiel zur Funktionsweise von Bubbling\-Ereignissen finden Sie unter [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ <span data-ttu-id="32a6d-115">Ein Beispiel der Funktionsweise des Bubbling von Ereignissen finden Sie unter [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).</span><span class="sxs-lookup"><span data-stu-id="32a6d-115">To see an example of how bubbling events work, see [Handle a Routed Event](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).</span></span>  
   
-## Siehe auch  
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)   
- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a><span data-ttu-id="32a6d-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32a6d-116">See Also</span></span>  
+ [<span data-ttu-id="32a6d-117">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="32a6d-117">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="32a6d-118">Übersicht über die Eingabe</span><span class="sxs-lookup"><span data-stu-id="32a6d-118">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="32a6d-119">Übersicht über das Erstellen von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="32a6d-119">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

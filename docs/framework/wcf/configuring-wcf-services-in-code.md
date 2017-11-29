@@ -1,34 +1,37 @@
 ---
-title: "Konfigurieren von WCF-Diensten in Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Konfigurieren von WCF-Diensten in Code
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 134de9fce41ccdcd9c26277c6a52d67823199da3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Konfigurieren von WCF-Diensten in Code
-Mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde.Bei der Verwendung von Konfigurationsdateien muss ein IT\-Fachmann nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich.Konfigurationsdateien können jedoch komplex und schwierig sein zu warten.Es gibt keine Unterstützung zum Debuggen von Konfigurationsdateien. Konfigurationselemente werden durch Namen referenziert, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht.[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ermöglicht auch das Konfigurieren von Diensten im Code.In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] \(4.0 und früher\) was das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, die <xref:System.ServiceModel.ServiceHost>\-Klasse ermöglichte es, Endpunkte und Verhalten vor dem Aufrufen von ServiceHost.Open zu konfigurieren.In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>\-Klasse.Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine <xref:System.ServiceModel.ServiceHostFactory> erstellen, die einen <xref:System.ServiceModel.ServiceHost> erstellte und jede erforderliche Konfiguration ausführte.Ab .NET 4.5 stellt [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit bereit, um selbstgehostete und webgehostete Dienste im Code zu konfigurieren.  
+# <a name="configuring-wcf-services-in-code"></a><span data-ttu-id="71e26-102">Konfigurieren von WCF-Diensten in Code</span><span class="sxs-lookup"><span data-stu-id="71e26-102">Configuring WCF Services in Code</span></span>
+<span data-ttu-id="71e26-103">Mit [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="71e26-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] allows developers to configure services using configuration files or code.</span></span>  <span data-ttu-id="71e26-104">Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde.</span><span class="sxs-lookup"><span data-stu-id="71e26-104">Configuration files are useful when a service needs to be configured after being deployed.</span></span> <span data-ttu-id="71e26-105">Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="71e26-105">When using configuration files, an IT professional only needs to update the configuration file, no recompilation is required.</span></span> <span data-ttu-id="71e26-106">Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein.</span><span class="sxs-lookup"><span data-stu-id="71e26-106">Configuration files, however, can be complex and difficult to maintain.</span></span> <span data-ttu-id="71e26-107">Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht.</span><span class="sxs-lookup"><span data-stu-id="71e26-107">There is no support for debugging configuration files and configuration elements are referenced by names which makes authoring configuration files error-prone and difficult.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="71e26-108"> ermöglicht auch das Konfigurieren von Diensten im Code.</span><span class="sxs-lookup"><span data-stu-id="71e26-108"> also allows you to configure services in code.</span></span> <span data-ttu-id="71e26-109">In früheren Versionen von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 und früher) war das Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach, weil die <xref:System.ServiceModel.ServiceHost>-Klasse die Möglichkeit bot, Endpunkte und Verhaltensweisen vor dem Aufrufen von ServiceHost.Open zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="71e26-109">In earlier versions of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 and earlier) configuring services in code was easy in self-hosted scenarios, the <xref:System.ServiceModel.ServiceHost> class allowed you to configure endpoints and behaviors prior to calling ServiceHost.Open.</span></span> <span data-ttu-id="71e26-110">In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="71e26-110">In web hosted scenarios, however, you don’t have direct access to the <xref:System.ServiceModel.ServiceHost> class.</span></span> <span data-ttu-id="71e26-111">Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="71e26-111">To configure a web hosted service you were required to create a `System.ServiceModel.ServiceHostFactory` that created the <xref:System.ServiceModel.Activation.ServiceHostFactory> and performed any needed configuration.</span></span> <span data-ttu-id="71e26-112">Ab .NET 4.5 bietet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] eine einfachere Möglichkeit, selbstgehostete und webgehostete Dienste im Code zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="71e26-112">Starting with .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provides an easier way to configure both self-hosted and web hosted services in code.</span></span>  
   
-## Die Configure\-Methode  
- Definieren Sie eine öffentliche statische Methode `Configure` mit der folgenden Signatur in der Dienstimplementierungsklasse:  
+## <a name="the-configure-method"></a><span data-ttu-id="71e26-113">Die Configure-Methode</span><span class="sxs-lookup"><span data-stu-id="71e26-113">The Configure method</span></span>  
+ <span data-ttu-id="71e26-114">Definieren Sie einfach in der Dienstimplementierungsklasse die öffentliche statische Methode `Configure` mit der folgenden Signatur:</span><span class="sxs-lookup"><span data-stu-id="71e26-114">Simply define a public static method called `Configure` with the following signature in your service implementation class:</span></span>  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Die Configure\-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>\-Instanz, die den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen.Diese Methode wird von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aufgerufen, bevor der Diensthost geöffnet wird.Wenn sie definiert sind, werden alle Dienstkonfigurationseinstellungen in einer app.config\- oder web.config\-Datei ignoriert.  
+ <span data-ttu-id="71e26-115">Die Configure-Methode akzeptiert eine <xref:System.ServiceModel.ServiceConfiguration>-Instanz, die es den Entwicklern ermöglicht, Endpunkte und Verhalten hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="71e26-115">The Configure method takes a <xref:System.ServiceModel.ServiceConfiguration> instance that enables the developer to add endpoints and behaviors.</span></span> <span data-ttu-id="71e26-116">Diese Methode wird von [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aufgerufen, bevor der Diensthost geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="71e26-116">This method is called by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] before the service host is opened.</span></span> <span data-ttu-id="71e26-117">Sofern definiert, werden alle Dienstkonfigurationseinstellungen in der Datei app.config oder web.config ignoriert.</span><span class="sxs-lookup"><span data-stu-id="71e26-117">When defined, any service configuration settings specified in an app.config or web.config file will be ignored.</span></span>  
   
- Der folgende Codeausschnitt zeigt, wie die `Configure`\-Methode definiert und ein Dienstendpunkt, ein Endpunktverhalten und Dienstverhalten hinzugefügt werden:  
+ <span data-ttu-id="71e26-118">Der folgende Codeausschnitt zeigt, wie die `Configure`-Methode definiert wird und ein Dienstendpunkt, ein Endpunktverhalten und Dienstverhalten hinzugefügt werden:</span><span class="sxs-lookup"><span data-stu-id="71e26-118">The following code snippet illustrates how to define the `Configure` method and add a service endpoint, an endpoint behavior and service behaviors:</span></span>  
   
 ```csharp  
 public class Service1 : IService1  
@@ -63,7 +66,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Um ein Protokoll wie HTTPS für einen Dienst zu aktivieren, können Sie entweder explizit einen Endpunkt hinzufügen, der das Protokoll verwendet, oder Sie können automatisch Endpunkte durch Aufrufen von ServiceConfiguration.EnableProtocol\(Binding\) hinzufügen. Dabei wird ein Endpunkt für jede Basisadresse, die mit dem Protokoll kompatibel ist, und für jeden definierten Dienstvertrag hinzugefügt.Der folgende Code veranschaulicht die Verwendung der ServiceConfiguration.EnableProtocol\-Methode:  
+ <span data-ttu-id="71e26-119">Um ein Protokoll, z. B. HTTPS, für einen Dienst zu aktivieren, können Sie entweder explizit einen Endpunkt hinzufügen, der das Protokoll verwendet, oder Sie können automatisch Endpunkte durch Aufrufen von ServiceConfiguration.EnableProtocol(Binding) hinzufügen. Dabei wird ein Endpunkt für jede Basisadresse, die mit dem Protokoll kompatibel ist, und für jeden definierten Dienstvertrag hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="71e26-119">To enable a protocol such as https for a service, you can either explicitly add an endpoint that uses the protocol or you can automatically add endpoints by calling ServiceConfiguration.EnableProtocol(Binding) which adds an endpoint for each base address compatible with the protocol and each service contract defined.</span></span> <span data-ttu-id="71e26-120">Der folgende Code veranschaulicht die Verwendung der ServiceConfiguration.EnableProtocol-Methode:</span><span class="sxs-lookup"><span data-stu-id="71e26-120">The following code illustrates how to use the ServiceConfiguration.EnableProtocol method:</span></span>  
   
 ```csharp  
 public class Service1 : IService1   
@@ -71,7 +74,7 @@ public class Service1 : IService1
     public string GetData(int value);   
     public static void Configure(ServiceConfiguration config)   
     {   
-        // Enable “Add Service Reference” support   
+        // Enable "Add Service Reference" support   
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
@@ -84,7 +87,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Die Einstellungen im \<`protocolMappings`\>\-Abschnitt werden nur verwendet, wenn keine Anwendungsendpunkte programmgesteuert zu <xref:System.ServiceModel.ServiceConfiguration> hinzugefügt werden. Sie können die Dienstkonfiguration aus der Standardanwendungskonfigurationsdatei optional laden, indem Sie <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> aufrufen und die Einstellungen dann ändern.Mit der <xref:System.ServiceModel.ServiceConfiguration>\-Klasse können Sie die Konfiguration auch aus einer zentralen Konfiguration laden.Im folgenden Code wird veranschaulicht, wie dies implementiert wird:  
+ <span data-ttu-id="71e26-121">Die Einstellungen in der <`protocolMappings`> Abschnitt werden nur verwendet, wenn keine Endpunkte hinzugefügt werden die <xref:System.ServiceModel.ServiceConfiguration> programmgesteuert. Sie können optional die Dienstkonfiguration aus der Standard-Anwendungskonfigurationsdatei laden, durch den Aufruf <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> und klicken Sie dann die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="71e26-121">The settings in the <`protocolMappings`> section are only used if no application endpoints are added to the <xref:System.ServiceModel.ServiceConfiguration> programmatically.You can optionally load the service configuration from the default application configuration file by calling <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> and then change the settings.</span></span> <span data-ttu-id="71e26-122">Sie können auch mit der <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration>-Klasse die Konfiguration aus einer zentralen Konfiguration laden.</span><span class="sxs-lookup"><span data-stu-id="71e26-122">The <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> class also allows you to load configuration from a centralized configuration.</span></span> <span data-ttu-id="71e26-123">Im folgenden Code wird veranschaulicht, wie dies implementiert wird:</span><span class="sxs-lookup"><span data-stu-id="71e26-123">The following code illustrates how to implement this:</span></span>  
   
 ```  
 public class Service1 : IService1   
@@ -95,22 +98,21 @@ public class Service1 : IService1
           config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));   
     }   
 }  
-  
 ```  
   
 > [!IMPORTANT]
->  Beachten Sie, dass <xref:System.ServiceModel.LoadFromConfiguration%2A> \<`host`\>\-Einstellungen im \<`service`\>\-Tag von \<`system.serviceModel`\> ignoriert.Im Prinzip bezieht sich \<`host`\> auf die Hostkonfiguration, nicht auf die Dienstkonfiguration, und wird geladen, bevor die Configure\-Methode ausgeführt wird.  
+>  <span data-ttu-id="71e26-124">Beachten Sie, dass <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignoriert <`host`> Einstellungen in der <`service`>-Tag <`system.serviceModel`>.</span><span class="sxs-lookup"><span data-stu-id="71e26-124">Note that <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignores <`host`> settings within the <`service`> tag of <`system.serviceModel`>.</span></span> <span data-ttu-id="71e26-125">Im Prinzip <`host`> geht es um Hostkonfiguration nicht Dienstkonfiguration, und er ruft geladen, bevor die Configure-Methode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="71e26-125">Conceptually, <`host`> is about host configuration, not service configuration, and it gets loaded before the Configure method executes.</span></span>  
   
-## Siehe auch  
- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)   
- [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md)   
- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)   
- [Konfigurationsbasierte Aktivierung](../../../docs/framework/wcf/samples/configuration-based-activation.md)   
- [Konfiguration](../../../docs/framework/wcf/samples/configuration-sample.md)   
- [Konfigurationsbasierte Aktivierung unter IIS und WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)   
- [Konfiguration und Metadatenunterstützung](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)   
- [Konfiguration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)   
- [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)   
- [Gewusst wie: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)   
- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+## <a name="see-also"></a><span data-ttu-id="71e26-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="71e26-126">See Also</span></span>  
+ [<span data-ttu-id="71e26-127">Konfigurieren von Diensten mit Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="71e26-127">Configuring Services Using Configuration Files</span></span>](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [<span data-ttu-id="71e26-128">Konfigurieren von Clientverhalten</span><span class="sxs-lookup"><span data-stu-id="71e26-128">Configuring Client Behaviors</span></span>](../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [<span data-ttu-id="71e26-129">Vereinfachte Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-129">Simplified Configuration</span></span>](../../../docs/framework/wcf/simplified-configuration.md)  
+ [<span data-ttu-id="71e26-130">Konfigurationsbasierte Aktivierung</span><span class="sxs-lookup"><span data-stu-id="71e26-130">Configuration-Based Activation</span></span>](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
+ [<span data-ttu-id="71e26-131">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-131">Configuration</span></span>](../../../docs/framework/wcf/samples/configuration-sample.md)  
+ [<span data-ttu-id="71e26-132">Konfigurationsbasierte Aktivierung unter IIS und WAS</span><span class="sxs-lookup"><span data-stu-id="71e26-132">Configuration-Based Activation in IIS and WAS</span></span>](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [<span data-ttu-id="71e26-133">Konfigurations- und Metadatenunterstützung</span><span class="sxs-lookup"><span data-stu-id="71e26-133">Configuration and Metadata Support</span></span>](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
+ [<span data-ttu-id="71e26-134">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-134">Configuration</span></span>](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
+ [<span data-ttu-id="71e26-135">Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-135">How to: Specify a Service Binding in Configuration</span></span>](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [<span data-ttu-id="71e26-136">Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-136">How to: Create a Service Endpoint in Configuration</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [<span data-ttu-id="71e26-137">Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="71e26-137">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="71e26-138">Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration</span><span class="sxs-lookup"><span data-stu-id="71e26-138">How to: Specify a Client Binding in Configuration</span></span>](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

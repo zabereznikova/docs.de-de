@@ -1,28 +1,31 @@
 ---
-title: "Konfigurieren der Suche in einer Konfigurationsdatei | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Konfigurieren der Suche in einer Konfigurationsdatei
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c1ecdf6c3c8df4c6e69f0877ed8797cb0ac1a25b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Konfigurieren der Suche in einer Konfigurationsdatei
-Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche verwendet wurden.  In diesem Thema werden die Gruppen beschrieben und jeweils Beispiele für deren Konfiguration angegeben.  Nach jedem Abschnitt folgt ein Link zu einer ausführlicheren Dokumentation der einzelnen Bereiche.  
+# <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="19ced-102">Konfigurieren der Suche in einer Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="19ced-102">Configuring Discovery in a Configuration File</span></span>
+<span data-ttu-id="19ced-103">Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche verwendet wurden.</span><span class="sxs-lookup"><span data-stu-id="19ced-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="19ced-104">In diesem Thema werden die Gruppen beschrieben und jeweils Beispiele für deren Konfiguration angegeben.</span><span class="sxs-lookup"><span data-stu-id="19ced-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="19ced-105">Nach jedem Abschnitt folgt ein Link zu einer ausführlicheren Dokumentation der einzelnen Bereiche.</span><span class="sxs-lookup"><span data-stu-id="19ced-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
   
-## Verhaltenskonfiguration  
- Bei der Suche werden Dienstverhalten und Endpunktverhalten verwendet.  Das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>\-Verhalten aktiviert die Suche für alle Endpunkte eines Diensts und ermöglicht Ihnen das Angeben von Ankündigungsendpunkten.  Das folgende Beispiel zeigt, wie Sie das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hinzufügen und einen Ankündigungsendpunkt angeben.  
+## <a name="behavior-configuration"></a><span data-ttu-id="19ced-106">Verhaltenskonfiguration</span><span class="sxs-lookup"><span data-stu-id="19ced-106">Behavior Configuration</span></span>  
+ <span data-ttu-id="19ced-107">Bei der Suche werden Dienstverhalten und Endpunktverhalten verwendet.</span><span class="sxs-lookup"><span data-stu-id="19ced-107">Discovery uses service behaviors and endpoint behaviors.</span></span> <span data-ttu-id="19ced-108">Das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>-Verhalten aktiviert die Suche für alle Endpunkte eines Diensts und ermöglicht Ihnen das Angeben von Ankündigungsendpunkten.</span><span class="sxs-lookup"><span data-stu-id="19ced-108">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> behavior enables discovery for all of a service’s endpoints and allows you to specify announcement endpoints.</span></span>  <span data-ttu-id="19ced-109">Das folgende Beispiel zeigt, wie Sie das <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hinzufügen und einen Ankündigungsendpunkt angeben.</span><span class="sxs-lookup"><span data-stu-id="19ced-109">The following example shows how to add the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and specify an announcement endpoint.</span></span>  
   
-```  
+```xml  
 <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
@@ -35,9 +38,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
       </serviceBehaviors>  
 ```  
   
- Nachdem Sie das Verhalten angegeben haben, verweisen Sie aus einem \<`service`\>\-Element darauf, wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="19ced-110">Nachdem Sie das Verhalten angegeben haben, verweisen Sie aus einem <`service`>-Element darauf, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="19ced-110">Once you specify the behavior, reference it from a <`service`> element as shown in the following sample.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
    <services>  
       <service name="HelloWorldService" behaviorConfiguration="helloWorldServiceBehavior">  
@@ -51,11 +54,11 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
     </service>  
 ```  
   
- Damit ein Dienst erkennbar ist, müssen Sie auch einen Suchendpunkt hinzufügen. Im Beispiel oben wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>\-Standardendpunkt hinzugefügt.  
+ <span data-ttu-id="19ced-111">Damit ein Dienst erkennbar ist, müssen Sie auch einen Suchendpunkt hinzufügen. Im Beispiel oben wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Standardendpunkt hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="19ced-111">In order for a service to be discoverable, you must also add a discovery endpoint, the example above adds a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard endpoint.</span></span>  
   
- Wenn Sie Ankündigungsendpunkte hinzufügen, müssen Sie dem \<`services`\>\-Element auch einen Ankündigungslistenerdienst hinzufügen. Dies wird im folgenden Beispiel veranschaulicht.  
+ <span data-ttu-id="19ced-112">Wenn Sie Ankündigungsendpunkte hinzufügen, müssen Sie dem <`services`>-Element auch einen Ankündigungslistenerdienst hinzufügen. Dies wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="19ced-112">When you add announcement endpoints you must also add an announcement listener service to the <`services`> element as shown in the following example.</span></span>  
   
-```  
+```xml  
 <services>  
    <service name="HelloWorldService" behaviorConfiguration="helloWorldServiceBehavior">  
       <!-- Application Endpoint -->  
@@ -71,9 +74,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
    </service>  
 ```  
   
- Das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>\-Verhalten wird verwendet, um die Suche nach einem bestimmten Endpunkt zu aktivieren oder zu deaktivieren.  Im folgenden Beispiel wird ein Dienst mit zwei Anwendungsendpunkten konfiguriert, wobei die Suche für einen Endpunkt aktiviert und für den anderen deaktiviert ist.  Für jeden Endpunkt wird ein <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>\-Verhalten hinzugefügt.  
+ <span data-ttu-id="19ced-113">Das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten wird verwendet, um die Suche nach einem bestimmten Endpunkt zu aktivieren oder zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="19ced-113">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is used to enable or disable discovery of a specific endpoint.</span></span>  <span data-ttu-id="19ced-114">Im folgenden Beispiel wird ein Dienst mit zwei Anwendungsendpunkten konfiguriert, wobei die Suche für einen Endpunkt aktiviert und für den anderen deaktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="19ced-114">The following example configures a service with two application endpoints, one with discovery enabled and one with discovery disabled.</span></span> <span data-ttu-id="19ced-115">Für jeden Endpunkt wird ein <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="19ced-115">For each endpoint an <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is added.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
    <services>  
       <service name="HelloWorldService"  
@@ -109,12 +112,11 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
-  
 ```  
   
- Sie können das <xref:System.ServiceModel.Discovery.EndpointBehavior>\-Verhalten auch verwenden, um den vom Dienst zurückgegebenen Endpunktmetadaten benutzerdefinierte Metadaten hinzuzufügen.  Das folgende Beispiel zeigt die dazu erforderliche Vorgehensweise.  
+ <span data-ttu-id="19ced-116">Sie können das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten auch verwenden, um den vom Dienst zurückgegebenen Endpunktmetadaten benutzerdefinierte Metadaten hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="19ced-116">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add custom metadata to the endpoint metadata returned by the service.</span></span> <span data-ttu-id="19ced-117">Das folgende Beispiel zeigt die dazu erforderliche Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="19ced-117">The following example shows how to do this.</span></span>  
   
-```  
+```xml  
 <behavior name="ep4Behavior">  
    <endpointDiscovery enabled="true">  
       <extensions>  
@@ -128,9 +130,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </behavior>  
 ```  
   
- Sie können das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>\-Verhalten auch verwenden, um Bereiche und Typen hinzuzufügen, mit denen Clients nach Diensten suchen.  Im folgenden Beispiel wird gezeigt, wie Sie dies in einer clientseitigen Konfigurationsdatei durchführen können.  
+ <span data-ttu-id="19ced-118">Sie können das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten auch verwenden, um Bereiche und Typen hinzuzufügen, mit denen Clients nach Diensten suchen.</span><span class="sxs-lookup"><span data-stu-id="19ced-118">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add scopes and types that clients use to search for services.</span></span> <span data-ttu-id="19ced-119">Im folgenden Beispiel wird gezeigt, wie Sie dies in einer clientseitigen Konfigurationsdatei durchführen können.</span><span class="sxs-lookup"><span data-stu-id="19ced-119">The following example shows how to do this in a client side configuration file.</span></span>  
   
-```  
+```xml  
 <behavior name="ep2Behavior">  
    <endpointDiscovery enabled="true">  
       <scopes>  
@@ -145,12 +147,12 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> und <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>, siehe [Übersicht über die WCF\-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="19ced-120"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> und <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> finden Sie unter [Überblick über WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="19ced-120"> <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span>  
   
-## Bindungselementkonfiguration  
- Die Bindungselementkonfiguration eignet sich am besten auf der Clientseite.  Sie können die Konfiguration verwenden, um die Suchkriterien anzugeben, mit deren Hilfe die Dienste einer WCF\-Clientanwendung ermittelt werden.  Im folgenden Beispiel wird eine benutzerdefinierte Bindung mit dem <xref:System.ServiceModel.Discovery.DiscoveryClient>\-Kanal erstellt, und es werden die Suchkriterien angegeben, die einen Typ und einen Bereich enthalten.  Außerdem werden Werte für die Eigenschaften <xref:System.ServiceModel.Discovery.FindCritera.Duration%2A> und <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> angegeben.  
+## <a name="binding-element-configuration"></a><span data-ttu-id="19ced-121">Bindungselementkonfiguration</span><span class="sxs-lookup"><span data-stu-id="19ced-121">Binding Element Configuration</span></span>  
+ <span data-ttu-id="19ced-122">Die Bindungselementkonfiguration eignet sich am besten auf der Clientseite.</span><span class="sxs-lookup"><span data-stu-id="19ced-122">Binding element configuration is most interesting on the client side.</span></span> <span data-ttu-id="19ced-123">Sie können die Konfiguration verwenden, um die Suchkriterien anzugeben, mit deren Hilfe die Dienste einer WCF-Clientanwendung ermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="19ced-123">You can use configuration to specify the find criteria used to discover services from a WCF client application.</span></span>  <span data-ttu-id="19ced-124">Im folgenden Beispiel wird eine benutzerdefinierte Bindung mit dem <xref:System.ServiceModel.Discovery.DiscoveryClient>-Kanal erstellt, und es werden die Suchkriterien angegeben, die einen Typ und einen Bereich enthalten.</span><span class="sxs-lookup"><span data-stu-id="19ced-124">The following example creates a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClient> channel and specifies find criteria that includes a type and scope.</span></span> <span data-ttu-id="19ced-125">Außerdem werden Werte für die Eigenschaften <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> und <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> angegeben.</span><span class="sxs-lookup"><span data-stu-id="19ced-125">In addition it specifies values for the <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> and <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> properties.</span></span>  
   
-```  
+```xml  
 <bindings>  
    <customBinding>  
       <!-- Binding Configuration for the Application Endpoint -->  
@@ -174,9 +176,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
         </binding>  
 ```  
   
- Auf diese benutzerdefinierte Bindungskonfiguration muss von einem Clientendpunkt aus verwiesen werden:  
+ <span data-ttu-id="19ced-126">Auf diese benutzerdefinierte Bindungskonfiguration muss von einem Clientendpunkt aus verwiesen werden:</span><span class="sxs-lookup"><span data-stu-id="19ced-126">This custom binding configuration must be referenced by a client endpoint:</span></span>  
   
-```  
+```xml  
 <client>  
       <endpoint address="http://schemas.microsoft.com/discovery/dynamic"  
                 binding="customBinding"  
@@ -185,12 +187,12 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zum Suchen von Kriterien finden Sie unter [Suche und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Such\- und Bindungselementen finden Sie unter [Übersicht über die WCF\-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="19ced-127">Suchen Sie die Kriterien angezeigt [Ermittlung und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span><span class="sxs-lookup"><span data-stu-id="19ced-127"> find criteria see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="19ced-128">Ermittlung und Bindung Elemente anzuzeigen, [WCF Ermittlungsmethoden (Übersicht)](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span><span class="sxs-lookup"><span data-stu-id="19ced-128"> discovery and binding elements see, [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span></span>  
   
-## Konfiguration eines Standardendpunkts  
- Standardendpunkte sind vordefinierte Endpunkte, die Standardwerte für eine oder mehrere Eigenschaften \(Adresse, Bindung oder Vertrag\) bzw. einen oder mehrere Eigenschaftenwerte aufweisen, die nicht geändert werden können.  Im Lieferumfang von .NET 4 sind drei Standardendpunkte für die Suche enthalten: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UpdAnnouncementEndpoint> und <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>\-Klasse ist ein Standardendpunkt, der für Suchvorgänge über eine UDP\-Multicastbindung vorkonfiguriert ist.  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ist ein Standardendpunkt, der für das Senden von Ankündigungsnachrichten über eine UDP\-Bindung vorkonfiguriert ist.  <xref:System.ServiceModel.Discovery.DynamicEnpoint> ist ein Standardendpunkt, der die Suche verwendet, um zur Laufzeit dynamisch nach der Endpunktadresse eines ermittelten Diensts zu suchen.  Standardbindungen werden mit einem \<`endpoint`\>\-Element angegeben, in dem ein "kind"\-Attribut enthalten ist, das den Typ des hinzuzufügenden Standardendpunkts angegeben hat.  Im folgenden Beispiel wird gezeigt, wie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und ein <xref:System.ServiceModel.Discovery.UpdAnnouncementEndpoint> addiert werden.  
+## <a name="standard-endpoint-configuration"></a><span data-ttu-id="19ced-129">Konfiguration eines Standardendpunkts</span><span class="sxs-lookup"><span data-stu-id="19ced-129">Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="19ced-130">Standardendpunkte sind vordefinierte Endpunkte, die Standardwerte für eine oder mehrere Eigenschaften (Adresse, Bindung oder Vertrag) bzw. einen oder mehrere Eigenschaftenwerte aufweisen, die nicht geändert werden können.</span><span class="sxs-lookup"><span data-stu-id="19ced-130">Standard endpoints are predefined endpoints that have default values for one or more properties (address, binding, or contract) or one or more property values that cannot change.</span></span> <span data-ttu-id="19ced-131">Im Lieferumfang von .NET 4 sind drei Standardendpunkte für die Suche enthalten: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> und <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="19ced-131">.NET 4 ships with 3 discovery related standard endpoints: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, and <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  <span data-ttu-id="19ced-132">Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Klasse ist ein Standardendpunkt, der für Suchvorgänge über eine UDP-Multicastbindung vorkonfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="19ced-132">The <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="19ced-133"><xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ist ein Standardendpunkt, der für das Senden von Ankündigungsnachrichten über eine UDP-Bindung vorkonfiguriert ist.</span><span class="sxs-lookup"><span data-stu-id="19ced-133">The <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> is a standard endpoint that is pre-configured to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="19ced-134"><xref:System.ServiceModel.Discovery.DynamicEndpoint> ist ein Standardendpunkt, der die Suche verwendet, um zur Laufzeit dynamisch nach der Endpunktadresse eines ermittelten Diensts zu suchen.</span><span class="sxs-lookup"><span data-stu-id="19ced-134">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> is a standard endpoint that uses discovery to find the endpoint address of a discovered service dynamically at runtime.</span></span>  <span data-ttu-id="19ced-135">Standardbindungen werden mit einem <`endpoint`>-Element angegeben, in dem ein "kind"-Attribut enthalten ist, das den Typ des hinzuzufügenden Standardendpunkts angegeben hat.</span><span class="sxs-lookup"><span data-stu-id="19ced-135">Standard bindings are specified with an <`endpoint`> element that contains kind attribute that specified the type of standard endpoint to add.</span></span> <span data-ttu-id="19ced-136">Im folgenden Beispiel wird gezeigt, wie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und ein <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> addiert werden.</span><span class="sxs-lookup"><span data-stu-id="19ced-136">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
-```  
+```xml  
 <services>  
    <service name="HelloWorldService">  
       <!-- ...  -->          
@@ -202,9 +204,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </services>  
 ```  
   
- Standardendpunkte werden in einem \<`standardEndpoints`\>\-Element konfiguriert.  Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> konfigurieren.  
+ <span data-ttu-id="19ced-137">Standardendpunkte werden in einem <`standardEndpoints`>-Element konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="19ced-137">Standard endpoints are configured in a <`standardEndpoints`> element.</span></span> <span data-ttu-id="19ced-138">Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="19ced-138">The following example shows how to configure the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and the <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
-```  
+```xml  
 <standardEndpoints>  
       <udpAnnouncementEndpoint>  
         <standardEndpoint   
@@ -234,9 +236,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
       </udpDiscoveryEndpoint>  
 ```  
   
- Nachdem Sie die Standardendpunktkonfiguration hinzugefügt haben, verweisen Sie im \<`endpoint`\>\-Element für jeden Endpunkt auf die Konfiguration, wie im folgenden Beispiel gezeigt.  
+ <span data-ttu-id="19ced-139">Nachdem Sie die Standardendpunktkonfiguration hinzugefügt haben, verweisen Sie im <`endpoint`>-Element für jeden Endpunkt auf die Konfiguration, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="19ced-139">Once you’ve added the standard endpoint configuration, reference the configuration in the <`endpoint`> element for each endpoint as shown in the following sample.</span></span>  
   
-```  
+```xml  
 <services>  
    <service name="HelloWorldService">  
       <!-- ...  -->          
@@ -248,9 +250,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </services>  
 ```  
   
- Im Gegensatz zu den anderen Standardendpunkten, die in der Suche verwendet werden, geben Sie für <xref:System.ServiceModel.Discovery.DynamicEndpoint> eine Bindung und einen Vertrag an.  Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.DynamicEndpoint> hinzufügen und konfigurieren.  
+ <span data-ttu-id="19ced-140">Im Gegensatz zu den anderen Standardendpunkten, die in der Suche verwendet werden, geben Sie für <xref:System.ServiceModel.Discovery.DynamicEndpoint> eine Bindung und einen Vertrag an.</span><span class="sxs-lookup"><span data-stu-id="19ced-140">Unlike the other standard endpoints used in discovery, you specify a binding and contract for <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span> <span data-ttu-id="19ced-141">Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.DynamicEndpoint> hinzufügen und konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="19ced-141">The following example shows how to add and configure a <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <endpoint kind="dynamicEndpoint" binding="basicHttpBinding" contract="IHelloWorldService" endpointConfiguration="dynamicEndpointConfiguration" />  
@@ -277,4 +279,4 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Informationen zu Standardendpunkten finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="19ced-142">Standardendpunkte finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)</span><span class="sxs-lookup"><span data-stu-id="19ced-142"> standard endpoints see [Standard Endpoints](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)</span></span>

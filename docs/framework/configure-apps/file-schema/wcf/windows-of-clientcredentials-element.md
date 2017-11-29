@@ -1,61 +1,70 @@
 ---
-title: "&lt;windows&gt; des &lt;clientCredentials&gt;-Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;windows&gt; des &lt;clientCredentials&gt;-Elements'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bc98f45d197675f8cc9618f08447cc42acdd1872
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;windows&gt; des &lt;clientCredentials&gt;-Elements
-Gibt die Einstellungen für Windows\-Anmeldeinformationen an, die zum Darstellen des Clients verwendet werden.  
+# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="03560-102">&lt;windows&gt; des &lt;clientCredentials&gt;-Elements</span><span class="sxs-lookup"><span data-stu-id="03560-102">&lt;windows&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="03560-103">Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen des Clients verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="03560-103">Specifies the settings for a Windows credential to be used to represent the client.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="03560-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="03560-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="03560-105">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="03560-105">\<behaviors></span></span>  
+<span data-ttu-id="03560-106">\<EndpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="03560-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="03560-107">\<Verhalten ></span><span class="sxs-lookup"><span data-stu-id="03560-107">\<behavior></span></span>  
+<span data-ttu-id="03560-108">\<ClientCredentials ></span><span class="sxs-lookup"><span data-stu-id="03560-108">\<clientCredentials></span></span>  
+<span data-ttu-id="03560-109">\<Windows ></span><span class="sxs-lookup"><span data-stu-id="03560-109">\<windows></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="03560-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="03560-110">Syntax</span></span>  
   
+```xml  
 <windows   
     allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
         allowNtlm="Boolean"  
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="03560-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="03560-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="03560-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="03560-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="03560-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="03560-113">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|`allowedImpersonationLevel`|Legt die Identitätswechseleinstellungen fest, die der Client an den Server weitergibt.  Der Identitätswechselmodus, den der Client auswählt, wird nicht auf dem Server durchgesetzt.  Folgende Werte sind gültig:<br /><br /> -   Identification: Der Server erhält die Identitäts\- und Berechtigungsinformationen des Clients, kann aber den Client nicht imitieren.<br />-   Impersonation: Der Server kann den Sicherheitskontext des Clients auf dem lokalen System imitieren.<br />-   Delegation: Der Serverprozess kann den Sicherheitskontext des Clients in Remotesystemen imitieren.<br />-   Anonymous: Der Server kann den Client nicht imitieren oder identifizieren.<br />-   None: Es ist keine Identitätswechselebene zugeordnet.<br /><br /> Die Standardeinstellung ist Identification.  Dieses Attribut ist vom Typ <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Durch das Festlegen dieser Eigenschaft auf `true` kann die Authentifizierung auf NTLM herabgestuft werden, wenn Kerberos nicht verfügbar ist.<br /><br /> Das Festlegen dieser Eigenschaft auf `false` führt dazu, dass [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] nach dem Best\-Effort\-Prinzip eine Ausnahme auslöst, wenn NTLM verwendet wird.  Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM\-Anmeldeinformationen über die Verbindung gesendet werden.|  
+|<span data-ttu-id="03560-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="03560-114">Attribute</span></span>|<span data-ttu-id="03560-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="03560-115">Description</span></span>|  
+|---------------|-----------------|  
+|`allowedImpersonationLevel`|<span data-ttu-id="03560-116">Legt die Identitätswechseleinstellungen fest, die der Client an den Server weitergibt.</span><span class="sxs-lookup"><span data-stu-id="03560-116">Sets the impersonation preference that the client communicates to the server.</span></span> <span data-ttu-id="03560-117">Der Identitätswechselmodus, den der Client auswählt, wird nicht auf dem Server durchgesetzt.</span><span class="sxs-lookup"><span data-stu-id="03560-117">The impersonation mode that the client selects is not enforced on the server.</span></span> <span data-ttu-id="03560-118">Folgende Werte sind gültig:</span><span class="sxs-lookup"><span data-stu-id="03560-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="03560-119">-ID: Der Server kann die Identitäts- und Berechtigungsinformationen des Clients abrufen, aber den Client nicht imitieren.</span><span class="sxs-lookup"><span data-stu-id="03560-119">-   Identification: The server can get the identity and privileges of the client, but cannot impersonate the client.</span></span><br /><span data-ttu-id="03560-120">-Impersonation: Der Server kann der Clientsicherheitskontext auf dem lokalen System imitieren.</span><span class="sxs-lookup"><span data-stu-id="03560-120">-   Impersonation: The server can impersonate the client's security context on the local system.</span></span><br /><span data-ttu-id="03560-121">-Delegation: Der Server kann Sie in der Sicherheitskontext des Clients auf Remotesystemen imitieren.</span><span class="sxs-lookup"><span data-stu-id="03560-121">-   Delegation: The server can impersonate the client's security context on remote systems.</span></span><br /><span data-ttu-id="03560-122">– Anonymous: Der Server kann nicht imitieren oder identifizieren den Client.</span><span class="sxs-lookup"><span data-stu-id="03560-122">-   Anonymous: The server cannot impersonate or identify the client.</span></span><br /><span data-ttu-id="03560-123">-"None": Eine Ebene des Identitätswechsels ist nicht zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="03560-123">-   None: An impersonation level is not assigned.</span></span><br /><br /> <span data-ttu-id="03560-124">Die Standardeinstellung ist Identification.</span><span class="sxs-lookup"><span data-stu-id="03560-124">The default is Identification.</span></span> <span data-ttu-id="03560-125">Dieses Attribut ist vom Typ <xref:System.Security.Principal.TokenImpersonationLevel>.</span><span class="sxs-lookup"><span data-stu-id="03560-125">This attribute is of type <xref:System.Security.Principal.TokenImpersonationLevel>.</span></span>|  
+|`allowNtlm`|<span data-ttu-id="03560-126">Durch das Festlegen dieser Eigenschaft auf `true` kann die Authentifizierung auf NTLM herabgestuft werden, wenn Kerberos nicht verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="03560-126">Setting this property to `true` allows authentication to downgrade to NTLM if Kerberos is not available.</span></span><br /><br /> <span data-ttu-id="03560-127">Das Festlegen dieser Eigenschaft auf `false` führt dazu, dass [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] nach dem Best-Effort-Prinzip eine Ausnahme auslöst, wenn NTLM verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="03560-127">Setting this property to `false` causes [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] to make a best-effort to throw an exception if NTLM is used.</span></span> <span data-ttu-id="03560-128">Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="03560-128">Note that setting this property to `false` may not prevent NTLM credentials from being sent over the wire.</span></span>|  
   
-### Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="03560-129">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="03560-129">Child Elements</span></span>  
+ <span data-ttu-id="03560-130">Keine</span><span class="sxs-lookup"><span data-stu-id="03560-130">None.</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="03560-131">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="03560-131">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
+|<span data-ttu-id="03560-132">Element</span><span class="sxs-lookup"><span data-stu-id="03560-132">Element</span></span>|<span data-ttu-id="03560-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="03560-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="03560-134">\<ClientCredentials ></span><span class="sxs-lookup"><span data-stu-id="03560-134">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="03560-135">Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.</span><span class="sxs-lookup"><span data-stu-id="03560-135">Specifies the credentials used to authenticate the client to the service.</span></span>|  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.WindowsClientElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>   
- <xref:System.ServiceModel.Security.WindowsClientCredential>   
- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)   
- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="03560-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03560-136">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WindowsClientElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>  
+ <xref:System.ServiceModel.Security.WindowsClientCredential>  
+ [<span data-ttu-id="03560-137">Sichern von Clients</span><span class="sxs-lookup"><span data-stu-id="03560-137">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="03560-138">Verwenden von Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="03560-138">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="03560-139">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="03560-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

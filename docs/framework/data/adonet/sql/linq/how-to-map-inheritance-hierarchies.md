@@ -1,59 +1,65 @@
 ---
-title: "Vorgehensweise: Zuordnen von Vererbungshierarchien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Gewusst wie: Zuordnen von Vererbungshierarchien'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+dev_langs:
+- csharp
+- vb
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6a0393d11c949c0bceb6587059cd450113c0ead2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Zuordnen von Vererbungshierarchien
-Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] müssen Sie die Attribute in der Stammklasse der Vererbungshierarchie angeben. Führen Sie dazu die folgenden Schritte aus.  Entwickler mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] können Vererbungshierarchien mithilfe des [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zuordnen.  Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Vererbung mit dem O\/R\-Designer](../Topic/How%20to:%20Configure%20inheritance%20by%20using%20the%20O-R%20Designer.md).  
+# <a name="how-to-map-inheritance-hierarchies"></a><span data-ttu-id="09f6f-102">Gewusst wie: Zuordnen von Vererbungshierarchien</span><span class="sxs-lookup"><span data-stu-id="09f6f-102">How to: Map Inheritance Hierarchies</span></span>
+<span data-ttu-id="09f6f-103">Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] müssen Sie die Attribute in der Stammklasse der Vererbungshierarchie angeben. Führen Sie dazu die folgenden Schritte aus.</span><span class="sxs-lookup"><span data-stu-id="09f6f-103">To implement inheritance mapping in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], you must specify the attributes and attribute properties on the root class of the inheritance hierarchy as described in the following steps.</span></span> <span data-ttu-id="09f6f-104">Entwickler mit [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] können Vererbungshierarchien mithilfe des [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zuordnen.</span><span class="sxs-lookup"><span data-stu-id="09f6f-104">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map inheritance hierarchies.</span></span> <span data-ttu-id="09f6f-105">Finden Sie unter [Vorgehensweise: Konfigurieren der Vererbung mithilfe des O/R-Designers](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).</span><span class="sxs-lookup"><span data-stu-id="09f6f-105">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).</span></span>  
   
 > [!NOTE]
->  Für Unterklassen sind keine besonderen Attribute oder Eigenschaften erforderlich.  Beachten Sie besonders, dass Unterklassen nicht über das <xref:System.Data.Linq.Mapping.TableAttribute>\-Attribut verfügen.  
+>  <span data-ttu-id="09f6f-106">Für Unterklassen sind keine besonderen Attribute oder Eigenschaften erforderlich.</span><span class="sxs-lookup"><span data-stu-id="09f6f-106">No special attributes or properties are required on the subclasses.</span></span> <span data-ttu-id="09f6f-107">Beachten Sie besonders, dass Unterklassen nicht über das <xref:System.Data.Linq.Mapping.TableAttribute>-Attribut verfügen.</span><span class="sxs-lookup"><span data-stu-id="09f6f-107">Note especially that subclasses do not have the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span>  
   
-### So ordnen Sie eine Vererbungshierarchie zu  
+### <a name="to-map-an-inheritance-hierarchy"></a><span data-ttu-id="09f6f-108">So ordnen Sie eine Vererbungshierarchie zu</span><span class="sxs-lookup"><span data-stu-id="09f6f-108">To map an inheritance hierarchy</span></span>  
   
-1.  Fügen Sie der Stammklasse das <xref:System.Data.Linq.Mapping.TableAttribute>\-Attribut hinzu.  
+1.  <span data-ttu-id="09f6f-109">Fügen Sie der Stammklasse das <xref:System.Data.Linq.Mapping.TableAttribute>-Attribut hinzu.</span><span class="sxs-lookup"><span data-stu-id="09f6f-109">Add the <xref:System.Data.Linq.Mapping.TableAttribute> attribute to the root class.</span></span>  
   
-2.  Fügen Sie der Stammklasse ein <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>\-Attribut für jede Klasse in der Hierarchiestruktur hinzu.  
+2.  <span data-ttu-id="09f6f-110">Fügen Sie der Stammklasse ein <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>-Attribut für jede Klasse in der Hierarchiestruktur hinzu.</span><span class="sxs-lookup"><span data-stu-id="09f6f-110">Also to the root class, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute for each class in the hierarchy structure.</span></span>  
   
-3.  Definieren Sie für jedes <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>\-Attribut eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>\-Eigenschaft.  
+3.  <span data-ttu-id="09f6f-111">Definieren Sie für jedes <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>-Attribut eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="09f6f-111">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, define a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> property.</span></span>  
   
-     Diese Eigenschaft enthält einen Wert, der in der Datenbanktabelle in der <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>\-Spalte erscheint, um anzugeben, zu welcher Klasse oder Unterklasse diese Datenzeile gehört.  
+     <span data-ttu-id="09f6f-112">Diese Eigenschaft enthält einen Wert, der in der Datenbanktabelle in der <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>-Spalte erscheint, um anzugeben, zu welcher Klasse oder Unterklasse diese Datenzeile gehört.</span><span class="sxs-lookup"><span data-stu-id="09f6f-112">This property holds a value that appears in the database table in the <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> column to indicate which class or subclass this row of data belongs to.</span></span>  
   
-4.  Fügen Sie auch für jedes <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>\-Attribut eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>\-Eigenschaft hinzu.  
+4.  <span data-ttu-id="09f6f-113">Fügen Sie auch für jedes <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>-Attribut eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>-Eigenschaft hinzu.</span><span class="sxs-lookup"><span data-stu-id="09f6f-113">For each <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attribute, also add a <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> property.</span></span>  
   
-     Diese Eigenschaft enthält einen Wert, der angibt, welche Klasse oder Unterklasse der Schlüsselwert darstellt.  
+     <span data-ttu-id="09f6f-114">Diese Eigenschaft enthält einen Wert, der angibt, welche Klasse oder Unterklasse der Schlüsselwert darstellt.</span><span class="sxs-lookup"><span data-stu-id="09f6f-114">This property holds a value that specifies which class or subclass the key value signifies.</span></span>  
   
-5.  Fügen Sie nur für eines der <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>\-Attribute eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>\-Eigenschaft hinzu.  
+5.  <span data-ttu-id="09f6f-115">Fügen Sie nur für eines der <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>-Attribute eine <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>-Eigenschaft hinzu.</span><span class="sxs-lookup"><span data-stu-id="09f6f-115">On only one of the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> attributes, add an <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> property.</span></span>  
   
-     Diese Eigenschaft dient der Kennzeichnung einer *Rückzugszuordnung*, wenn der Diskriminatorwert aus der Datenbanktabelle mit keinem der <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>\-Werte in den Vererbungshierarchien übereinstimmt.  
+     <span data-ttu-id="09f6f-116">Diese Eigenschaft dient zum Festlegen einer *fallback* zuordnen, wenn der Diskriminatorwert aus der Datenbanktabelle entspricht keiner <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> Wert in den Vererbungshierarchien.</span><span class="sxs-lookup"><span data-stu-id="09f6f-116">This property serves to designate a *fallback* mapping when the discriminator value from the database table does not match any <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value in the inheritance mappings.</span></span>  
   
-6.  Fügen Sie eine <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>\-Eigenschaft für ein <xref:System.Data.Linq.Mapping.ColumnAttribute>\-Attribut hinzu.  
+6.  <span data-ttu-id="09f6f-117">Fügen Sie eine <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>-Eigenschaft für ein <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut hinzu.</span><span class="sxs-lookup"><span data-stu-id="09f6f-117">Add an <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> property for a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-     Diese Eigenschaft gibt an, dass dies die Spalte ist, die den <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>\-Wert enthält.  
+     <span data-ttu-id="09f6f-118">Diese Eigenschaft gibt an, dass dies die Spalte ist, die den <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>-Wert enthält.</span><span class="sxs-lookup"><span data-stu-id="09f6f-118">This property signifies that this is the column that holds the <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> value.</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="09f6f-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="09f6f-119">Example</span></span>  
   
 > [!NOTE]
->  Wenn Sie [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Sie mit dem [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] die Vererbung konfigurieren.  Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Vererbung mit dem O\/R\-Designer](../Topic/How%20to:%20Configure%20inheritance%20by%20using%20the%20O-R%20Designer.md).  
+>  <span data-ttu-id="09f6f-120">Wenn Sie [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] verwenden, können Sie mit dem [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] die Vererbung konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="09f6f-120">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to configure inheritance.</span></span> <span data-ttu-id="09f6f-121">Finden Sie unter [Vorgehensweise: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span><span class="sxs-lookup"><span data-stu-id="09f6f-121">See [How to: Configure inheritance by using the O/R Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)</span></span>  
   
- Im folgenden Codebeispiel ist `Vehicle` als Stammklasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zu beschreiben.  
+ <span data-ttu-id="09f6f-122">Im folgenden Codebeispiel ist `Vehicle` als Stammklasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="09f6f-122">In the following code example, `Vehicle` is defined as the root class, and the previous steps have been implemented to describe the hierarchy for [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
-## Siehe auch  
- [Vererbungsunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)   
- [Vorgehensweise: Anpassen von Entitätsklassen mithilfe des Code\-Editors](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="09f6f-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="09f6f-123">See Also</span></span>  
+ [<span data-ttu-id="09f6f-124">Unterstützung von Vererbung</span><span class="sxs-lookup"><span data-stu-id="09f6f-124">Inheritance Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
+ [<span data-ttu-id="09f6f-125">Vorgehensweise: Anpassen von Entitätsklassen mithilfe des Code-Editors</span><span class="sxs-lookup"><span data-stu-id="09f6f-125">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

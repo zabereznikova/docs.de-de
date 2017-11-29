@@ -1,37 +1,40 @@
 ---
-title: "Druck- und Drucksystemverwaltung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Drucksystemverwaltung"
-  - "Drucken"
+title: Druck- und Drucksystemverwaltung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing [WPF]
+- print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Druck- und Drucksystemverwaltung
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] führen einen neuen Druckpfad ein – eine Alternative zum [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]\-Druck – und einen umfassend erweiterten Satz an [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zur Drucksystemverwaltung.  
+# <a name="printing-and-print-system-management"></a><span data-ttu-id="60d72-102">Druck- und Drucksystemverwaltung</span><span class="sxs-lookup"><span data-stu-id="60d72-102">Printing and Print System Management</span></span>
+[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]<span data-ttu-id="60d72-103">und [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] einführen einer neuen Druckpfad – eine Alternative zum [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] drucken – und eine völlig erweiterter Satz von Drucksystem Management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="60d72-103"> and [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- Eine Erläuterung des neuen Druckpfads und der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="60d72-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="60d72-104">In This Section</span></span>  
+ [<span data-ttu-id="60d72-105">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="60d72-105">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ <span data-ttu-id="60d72-106">Eine Erläuterung zu den neuen Druckpfad und [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="60d72-106">A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- Ein Reihe von Artikeln, in denen die Verwendung des neuen Druckpfads und der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] veranschaulicht wird.  
+ [<span data-ttu-id="60d72-107">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="60d72-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ <span data-ttu-id="60d72-108">Eine Gruppe von Artikeln, die zum Verwenden der neuen Druckpfad und [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="60d72-108">A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## Siehe auch  
- <xref:System.Printing>   
- <xref:System.Printing.IndexedProperties>   
- <xref:System.Printing.Interop>   
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [XPS](http://www.microsoft.com/whdc/xps/default.mspx)
+## <a name="see-also"></a><span data-ttu-id="60d72-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60d72-109">See Also</span></span>  
+ <xref:System.Printing>  
+ <xref:System.Printing.IndexedProperties>  
+ <xref:System.Printing.Interop>  
+ [<span data-ttu-id="60d72-110">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="60d72-110">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="60d72-111">XPS</span><span class="sxs-lookup"><span data-stu-id="60d72-111">XPS</span></span>](http://www.microsoft.com/xps)

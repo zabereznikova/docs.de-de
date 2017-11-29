@@ -1,33 +1,36 @@
 ---
-title: "Message Queueing-Integration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Message Queueing-Integration
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8d2b47a0-5d51-45b5-9633-b62e064e8ea4
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dca7b9326656ef930d977d9c9f1813230975385b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Message Queueing-Integration
-Dieser Abschnitt enthält Beispiele, in denen die Integration zwischen Message Queuing und [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] veranschaulicht wird.  
+# <a name="message-queueing-integration"></a><span data-ttu-id="c8e31-102">Message Queueing-Integration</span><span class="sxs-lookup"><span data-stu-id="c8e31-102">Message Queueing Integration</span></span>
+<span data-ttu-id="c8e31-103">Dieser Abschnitt enthält Beispiele, in denen die Integration zwischen Message Queuing und [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="c8e31-103">This section contains samples that demonstrate integration between Message Queuing and [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## In diesem Abschnitt  
- [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- Veranschaulicht, wie eine Message Queuing \(MSMQ\)\-Anwendung eine MSMQ\-Nachricht an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst senden kann.  
+## <a name="in-this-section"></a><span data-ttu-id="c8e31-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c8e31-104">In This Section</span></span>  
+ [<span data-ttu-id="c8e31-105">Message Queuing zu Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c8e31-105">Message Queuing to Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ <span data-ttu-id="c8e31-106">Veranschaulicht, wie eine Message Queuing (MSMQ)-Anwendung eine MSMQ-Nachricht an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst senden kann.</span><span class="sxs-lookup"><span data-stu-id="c8e31-106">Demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [Benutzerdefinierter Demux](../../../../docs/framework/wcf/samples/custom-demux.md)  
- Veranschaulicht, wie MSMQ\-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste, die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> verwenden, nicht auf die Verwendung eines einzigen Dienstvorgangs beschränkt sind.  
+ [<span data-ttu-id="c8e31-107">Benutzerdefinierter Demux</span><span class="sxs-lookup"><span data-stu-id="c8e31-107">Custom Demux</span></span>](../../../../docs/framework/wcf/samples/custom-demux.md)  
+ <span data-ttu-id="c8e31-108">Veranschaulicht, wie MSMQ-Nachrichtenheader unterschiedlichen Dienstvorgängen zugeordnet werden können, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste, die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> verwenden, nicht auf die Verwendung eines einzigen Dienstvorgangs beschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="c8e31-108">Demonstrates how MSMQ message headers can be mapped to different service operations so that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> are not limited to using one service operation.</span></span>  
   
- [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- Veranschaulicht, wie eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendung eine Nachricht an eine MSMQ\-Anwendung \(Message Queuing\) senden kann.  
+ [<span data-ttu-id="c8e31-109">Windows Communication Foundation zu Message Queuing</span><span class="sxs-lookup"><span data-stu-id="c8e31-109">Windows Communication Foundation to Message Queuing</span></span>](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ <span data-ttu-id="c8e31-110">Veranschaulicht, wie eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung eine Nachricht an eine MSMQ-Anwendung (Message Queuing) senden kann.</span><span class="sxs-lookup"><span data-stu-id="c8e31-110">Demonstrates how a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application can send a message to a Message Queuing (MSMQ) application.</span></span>  
   
- [Nachrichtenkorrelation](../../../../docs/framework/wcf/samples/message-correlation.md)  
- Veranschaulicht, wie eine MSMQ\-Anwendung \(Message Queuing\) eine MSMQ\-Nachricht an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst senden kann und wie Nachrichten zwischen Sender\- und Empfängeranwendungen in einem Anforderungs\-\/Antwort\-Szenario korreliert werden können.
+ [<span data-ttu-id="c8e31-111">Nachrichtenkorrelation</span><span class="sxs-lookup"><span data-stu-id="c8e31-111">Message Correlation</span></span>](../../../../docs/framework/wcf/samples/message-correlation.md)  
+ <span data-ttu-id="c8e31-112">Veranschaulicht, wie eine MSMQ-Anwendung (Message Queuing) eine MSMQ-Nachricht an einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst senden kann und wie Nachrichten zwischen Sender- und Empfängeranwendungen in einem Anforderungs-/Antwort-Szenario korreliert werden können.</span><span class="sxs-lookup"><span data-stu-id="c8e31-112">Demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and how messages can be correlated between sender and receiver applications in a request/response scenario.</span></span>

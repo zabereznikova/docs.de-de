@@ -1,51 +1,55 @@
 ---
-title: "Gewusst wie: Festlegen der Sortierungsmodi f&#252;r Spalten im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Sortieren von Daten"
-  - "DataGridView-Steuerelement [Windows Forms], Sortiermodus"
-  - "Sortieren, Datenblätter"
+title: "Gewusst wie: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- sorting [Windows Forms], data grids
+- DataGridView control [Windows Forms], sort mode
+- data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a1c5b0447895b0ca5c67fff054d88da0d0107c5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen der Sortierungsmodi f&#252;r Spalten im DataGridView-Steuerelement in Windows Forms
-Im <xref:System.Windows.Forms.DataGridView>\-Steuerelement verwenden Textfeldspalten standardmäßig die automatische Sortierung, während andere Spaltentypen nicht automatisch sortiert werden.  Gelegentlich möchten Sie diese Vorgaben überschreiben.  Beispielsweise können Sie Bilder anstelle von Text, Zahlen oder Enumerationszellenwerten anzeigen.  Die Bilder können zwar nicht sortiert werden, die zugrunde liegenden Werte, die sie darstellen, aber schon.  
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="721bf-102">Gewusst wie: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="721bf-102">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="721bf-103">In der <xref:System.Windows.Forms.DataGridView> Steuerung, verwenden die im Feld Textspalten automatische Sortierung in der Standardeinstellung, während andere Spaltentypen nicht automatisch sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="721bf-103">In the <xref:System.Windows.Forms.DataGridView> control, text box columns use automatic sorting by default, while other column types are not sorted automatically.</span></span> <span data-ttu-id="721bf-104">In einigen Fällen möchten diese Standardeinstellungen überschreiben.</span><span class="sxs-lookup"><span data-stu-id="721bf-104">Sometimes you will want to override these defaults.</span></span> <span data-ttu-id="721bf-105">Beispielsweise können Sie Bilder anstelle von Text, Zahlen oder Zelle Enumerationswerte anzeigen.</span><span class="sxs-lookup"><span data-stu-id="721bf-105">For example, you can display images in place of text, numbers, or enumeration cell values.</span></span> <span data-ttu-id="721bf-106">Während die Bilder nicht sortiert werden, können die zugrunde liegenden Werte, die sie darstellen sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="721bf-106">While the images cannot be sorted, the underlying values that they represent can be sorted.</span></span>  
   
- Im <xref:System.Windows.Forms.DataGridView>\-Steuerelement bestimmt der <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschaftswert einer Spalte ihr Sortierverhalten.  
+ <span data-ttu-id="721bf-107">In der <xref:System.Windows.Forms.DataGridView> -Steuerelement, das <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> ihr Sortierverhalten bestimmt der Wert einer Spalte.</span><span class="sxs-lookup"><span data-stu-id="721bf-107">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property value of a column determines its sorting behavior.</span></span>  
   
- In der folgenden Prozedur wird die `Priority`\-Spalte aus [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md) gezeigt.  Diese Spalte ist eine Bildspalte und wird standardmäßig nicht sortiert.  Sie enthält eigentliche Zellenwerte, die jedoch Zeichenfolgen sind und somit automatisch sortiert werden können.  
+ <span data-ttu-id="721bf-108">Die folgende Prozedur zeigt die `Priority` Spalte aus [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="721bf-108">The following procedure shows the `Priority` column from [How to: Customize Data Formatting in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span> <span data-ttu-id="721bf-109">Diese Spalte ist eine Image-Spalte und ist nicht standardmäßig sortierbar.</span><span class="sxs-lookup"><span data-stu-id="721bf-109">This column is an image column and is not sortable by default.</span></span> <span data-ttu-id="721bf-110">Es enthält tatsächlichen Zellwerte, die Zeichenfolgen, jedoch sind, damit automatisch sortiert werden können.</span><span class="sxs-lookup"><span data-stu-id="721bf-110">It contains actual cell values that are strings, however, so it can be sorted automatically.</span></span>  
   
-### So legen Sie den Sortiermodus für eine Spalte fest  
+### <a name="to-set-the-sort-mode-for-a-column"></a><span data-ttu-id="721bf-111">Um den Sortiermodus für eine Spalte festgelegt.</span><span class="sxs-lookup"><span data-stu-id="721bf-111">To set the sort mode for a column</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=fullName>\-Eigenschaft fest.  
+-   <span data-ttu-id="721bf-112">Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>-Eigenschaft fest.</span><span class="sxs-lookup"><span data-stu-id="721bf-112">Set the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#066](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a><span data-ttu-id="721bf-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="721bf-113">Compiling the Code</span></span>  
+ <span data-ttu-id="721bf-114">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="721bf-114">This example requires:</span></span>  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte mit dem Namen `Priority` enthält.  
+-   <span data-ttu-id="721bf-115">Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte namens `Priority` enthält.</span><span class="sxs-lookup"><span data-stu-id="721bf-115">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `Priority`.</span></span>  
   
--   Verweise auf die <xref:System?displayProperty=fullName>\-Assembly und die <xref:System.Windows.Forms?displayProperty=fullName>\-Assembly.  
+-   <span data-ttu-id="721bf-116">Verweise auf die <xref:System?displayProperty=nameWithType>-Assembly und die <xref:System.Windows.Forms?displayProperty=nameWithType>-Assembly.</span><span class="sxs-lookup"><span data-stu-id="721bf-116">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=fullName>   
- [Sortieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)   
- [Spaltenssortiermodi im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Anpassen der Sortierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="721bf-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="721bf-117">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="721bf-118">Sortieren von Daten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="721bf-118">Sorting Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="721bf-119">Spaltensortiermodi im DataGridView-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="721bf-119">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="721bf-120">Gewusst wie: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="721bf-120">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

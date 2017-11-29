@@ -1,74 +1,74 @@
 ---
-title: "&lt;assemblyBinding&gt;-Element f&#252;r &lt;runtime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assemblyBinding>-Element"
-  - "assemblyBinding-Element"
-  - "Containertags, <assemblyBinding>-Element"
+title: "&lt;AssemblyBinding&gt; -Element für &lt;Common Language Runtime&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
+helpviewer_keywords:
+- <assemblyBinding> element
+- assemblyBinding element
+- container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: fdf2bc90c496c9906b5d31bad0065e01bdb47942
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;assemblyBinding&gt;-Element f&#252;r &lt;runtime&gt;
-Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.  
+# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="d3db7-102">&lt;AssemblyBinding&gt; -Element für &lt;Common Language Runtime&gt;</span><span class="sxs-lookup"><span data-stu-id="d3db7-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
+<span data-ttu-id="d3db7-103">Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.</span><span class="sxs-lookup"><span data-stu-id="d3db7-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="d3db7-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d3db7-104">\<configuration></span></span>  
+<span data-ttu-id="d3db7-105">\<Common Language Runtime ></span><span class="sxs-lookup"><span data-stu-id="d3db7-105">\<runtime></span></span>  
+<span data-ttu-id="d3db7-106">\<AssemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="d3db7-106">\<assemblyBinding></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d3db7-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="d3db7-107">Syntax</span></span>  
   
-        <assemblyBinding    
+```xml  
+      <assemblyBinding    
    xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
 </assemblyBinding>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d3db7-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="d3db7-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d3db7-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="d3db7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="d3db7-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="d3db7-110">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
-|--------------|------------------|  
-|**xmlns**|Erforderliches Attribut.<br /><br /> Gibt den XML\-Namespace an, der für die Assemblybindung erforderlich ist.  Verwenden Sie die Zeichenfolge "urn:schemas\-microsoft\-com:asm.v1" als Wert.|  
-|**appliesTo**|Gibt die Laufzeitversion an, die für die .NET Framework\-Assemblyumleitungen gilt.  Dieses optionale Attribut verwendet eine .NET Framework\-Versionsnummer, um anzugeben, welche Version verwendet wird.  Ohne Angabe eines **appliesTo**\-Attributs gilt das **\<assemblyBinding\>**\-Element für alle Versionen von .NET Framework.  Das **appliesTo**\-Attribut wurde mit .NET Framework, Version 1.1 eingeführt; es wird von .NET Framework, Version 1.0, ignoriert.  Dies bedeutet, dass alle **\<assemblyBinding\>**\-Elemente bei Verwendung von .NET Framework, Version 1.0, angewendet werden, auch wenn das **appliesTo**\-Attribut angegeben wurde.|  
+|<span data-ttu-id="d3db7-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="d3db7-111">Attribute</span></span>|<span data-ttu-id="d3db7-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3db7-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d3db7-113">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="d3db7-113">**xmlns**</span></span>|<span data-ttu-id="d3db7-114">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="d3db7-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="d3db7-115">Gibt den XML-Namespace an, der für die Assemblybindung erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d3db7-115">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="d3db7-116">Verwenden Sie die Zeichenfolge "urn:schemas-microsoft-com:asm.v1" als Wert.</span><span class="sxs-lookup"><span data-stu-id="d3db7-116">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span>|  
+|<span data-ttu-id="d3db7-117">**appliesTo**</span><span class="sxs-lookup"><span data-stu-id="d3db7-117">**appliesTo**</span></span>|<span data-ttu-id="d3db7-118">Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt.</span><span class="sxs-lookup"><span data-stu-id="d3db7-118">Specifies the runtime version the .NET Framework assembly redirection applies to.</span></span> <span data-ttu-id="d3db7-119">Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d3db7-119">This optional attribute uses a .NET Framework version number to indicate what version it applies to.</span></span> <span data-ttu-id="d3db7-120">Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>**-Element für alle Versionen von .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d3db7-120">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="d3db7-121">Die **AppliesTo** Attribut wurde in .NET Framework, Version 1.1 eingeführt; es wird von .NET Framework, Version 1.0, ignoriert.</span><span class="sxs-lookup"><span data-stu-id="d3db7-121">The **appliesTo** attribute was introduced in .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="d3db7-122">Dies bedeutet, dass alle **\<assemblyBinding>**-Elemente bei Verwendung von .NET Framework Version 1.0 angewendet werden, auch wenn das **appliesTo**-Attribut angegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="d3db7-122">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a><span data-ttu-id="d3db7-123">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d3db7-123">Child Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<dependentAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly.  Verwenden Sie für jede Assembly ein **\<dependentAssembly\>**\-Tag.|  
-|[\<probing\>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.|  
-|[\<publisherPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.|  
-|[\<qualifyAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.|  
+|<span data-ttu-id="d3db7-124">Element</span><span class="sxs-lookup"><span data-stu-id="d3db7-124">Element</span></span>|<span data-ttu-id="d3db7-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3db7-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d3db7-126">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="d3db7-126">\<dependentAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|<span data-ttu-id="d3db7-127">Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly.</span><span class="sxs-lookup"><span data-stu-id="d3db7-127">Encapsulates binding policy and assembly location for an assembly.</span></span> <span data-ttu-id="d3db7-128">Verwenden Sie eine  **\<DependentAssembly >** Tag für jede Assembly.</span><span class="sxs-lookup"><span data-stu-id="d3db7-128">Use one **\<dependentAssembly>** tag for each assembly.</span></span>|  
+|[<span data-ttu-id="d3db7-129">\<probing></span><span class="sxs-lookup"><span data-stu-id="d3db7-129">\<probing></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|<span data-ttu-id="d3db7-130">Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.</span><span class="sxs-lookup"><span data-stu-id="d3db7-130">Specifies subdirectories the common language runtime searches when loading assemblies.</span></span>|  
+|[<span data-ttu-id="d3db7-131">\<publisherPolicy></span><span class="sxs-lookup"><span data-stu-id="d3db7-131">\<publisherPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|<span data-ttu-id="d3db7-132">Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.</span><span class="sxs-lookup"><span data-stu-id="d3db7-132">Specifies whether the runtime applies publisher policy.</span></span>|  
+|[<span data-ttu-id="d3db7-133">\<qualifyAssembly></span><span class="sxs-lookup"><span data-stu-id="d3db7-133">\<qualifyAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|<span data-ttu-id="d3db7-134">Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d3db7-134">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="d3db7-135">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="d3db7-135">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
-|-------------|------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
-|`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
+|<span data-ttu-id="d3db7-136">Element</span><span class="sxs-lookup"><span data-stu-id="d3db7-136">Element</span></span>|<span data-ttu-id="d3db7-137">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3db7-137">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="d3db7-138">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="d3db7-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="d3db7-139">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="d3db7-139">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht, wie Sie eine Assemblyversion zu einer anderen umleiten und eine Codebasis bereitstellen.  
+## <a name="example"></a><span data-ttu-id="d3db7-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d3db7-140">Example</span></span>  
+ <span data-ttu-id="d3db7-141">Das folgende Beispiel veranschaulicht, wie Sie eine Assemblyversion zu einer anderen umleiten und eine Codebasis bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="d3db7-141">The following example shows how to redirect one assembly version to another and provide a codebase.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -86,9 +86,9 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </configuration>  
 ```  
   
- Das folgende Beispiel zeigt, wie Sie das **appliesTo**\-Attribut zum Umleiten der Bindung einer .NET Framework\-Assembly verwenden.  
+ <span data-ttu-id="d3db7-142">Das folgende Beispiel zeigt, wie Sie die **AppliesTo** -Attribut zum Umleiten der Bindung einer .NET Framework-Assembly.</span><span class="sxs-lookup"><span data-stu-id="d3db7-142">The following example shows how to use the **appliesTo** attribute to redirect binding of a .NET Framework assembly.</span></span>  
   
-```  
+```xml  
 <runtime>  
    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
       <dependentAssembly>   
@@ -99,7 +99,7 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </runtime>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="d3db7-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3db7-143">See Also</span></span>  
+ [<span data-ttu-id="d3db7-144">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="d3db7-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="d3db7-145">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="d3db7-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="d3db7-146">Umleiten von Assemblyversionen</span><span class="sxs-lookup"><span data-stu-id="d3db7-146">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

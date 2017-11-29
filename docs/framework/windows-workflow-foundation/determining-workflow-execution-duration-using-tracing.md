@@ -1,43 +1,47 @@
 ---
-title: "Bestimmen der Workflowausf&#252;hrungsdauer mithilfe der Ablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Bestimmen der Workflowausführungsdauer mithilfe der Ablaufverfolgung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: acdc4f7d58eb0f5737adb59b113ea24d723d3b61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bestimmen der Workflowausf&#252;hrungsdauer mithilfe der Ablaufverfolgung
-In diesem Thema wird veranschaulicht, wie mit der Workflowüberwachung der Zeitraum bestimmt werden kann, den ein erfolgreich abgeschlossener und selbst gehosteter Workflow zur Ausführung benötigt.  
+# <a name="determining-workflow-execution-duration-using-tracing"></a><span data-ttu-id="f42ad-102">Bestimmen der Workflowausführungsdauer mithilfe der Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="f42ad-102">Determining Workflow Execution Duration Using Tracing</span></span>
+<span data-ttu-id="f42ad-103">In diesem Thema wird veranschaulicht, wie mit der Workflowüberwachung der Zeitraum bestimmt werden kann, den ein erfolgreich abgeschlossener und selbst gehosteter Workflow zur Ausführung benötigt.</span><span class="sxs-lookup"><span data-stu-id="f42ad-103">This topic demonstrates how to determine the time it takes for a successfully completed, self-hosted workflow to execute by using workflow tracing.</span></span>  
   
-### So bestimmen Sie die Ausführungsdauer der Workflowanwendung mit der Workflowüberwachung  
+### <a name="to-determine-workflow-application-execution-duration-by-using-workflow-tracing"></a><span data-ttu-id="f42ad-104">So bestimmen Sie die Ausführungsdauer der Workflowanwendung mit der Workflowüberwachung</span><span class="sxs-lookup"><span data-stu-id="f42ad-104">To determine workflow application execution duration by using workflow tracing</span></span>  
   
-1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].Wählen Sie **Datei**, **Neu** und **Projekt** aus.Wählen Sie unter **C\#** den Knoten **Workflow** aus.Wählen Sie in der Liste der Vorlagen **Workflowkonsolenanwendung** aus.Nennen Sie das neue Projekt `WorkflowDurationTracing`, und klicken Sie auf **OK**.  
+1.  <span data-ttu-id="f42ad-105">Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f42ad-105">Open [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  <span data-ttu-id="f42ad-106">Wählen Sie **Datei**, **neue**, **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="f42ad-106">Select **File**, **New**, **Project**.</span></span>  <span data-ttu-id="f42ad-107">Klicken Sie unter **c#**, wählen die **Workflow** Knoten.</span><span class="sxs-lookup"><span data-stu-id="f42ad-107">Under **C#**, select the **Workflow** node.</span></span>  <span data-ttu-id="f42ad-108">Wählen Sie **Workflowkonsolenanwendung** aus der Liste der Vorlagen.</span><span class="sxs-lookup"><span data-stu-id="f42ad-108">Select **Workflow Console Application** from the list of templates.</span></span>  <span data-ttu-id="f42ad-109">Nennen Sie das neue Projekt `WorkflowDurationTracing` , und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="f42ad-109">Name the new project `WorkflowDurationTracing` and click **OK**.</span></span>  
   
-2.  Öffnen Sie Workflow1.xaml.Ziehen Sie eine <xref:System.Activities.Statements.Delay>\-Aktivität auf die Designeroberfläche.Weisen Sie der Duration\-Eigenschaft der Aktivität den Wert 00:00:10 \(zehn Sekunden\) zu.  
+2.  <span data-ttu-id="f42ad-110">Öffnen Sie Workflow1.xaml.</span><span class="sxs-lookup"><span data-stu-id="f42ad-110">Open Workflow1.xaml.</span></span>  <span data-ttu-id="f42ad-111">Ziehen Sie eine <xref:System.Activities.Statements.Delay>-Aktivität auf die Designeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="f42ad-111">Drag a <xref:System.Activities.Statements.Delay> activity onto the designer surface.</span></span> <span data-ttu-id="f42ad-112">Weisen Sie der Duration-Eigenschaft der Aktivität den Wert 00:00:10 (zehn Sekunden) zu.</span><span class="sxs-lookup"><span data-stu-id="f42ad-112">Assign the value 00:00:10 (ten seconds) to the Duration property of the activity.</span></span>  
   
-3.  Öffnen Sie die Ereignisanzeige, indem Sie auf **Start** und **Ausführen** klicken und dann `eventvwr.exe` eingeben.  
+3.  <span data-ttu-id="f42ad-113">Ereignisanzeige öffnen, indem Sie auf **starten**, **ausführen**, und geben Sie `eventvwr.exe`.</span><span class="sxs-lookup"><span data-stu-id="f42ad-113">Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.</span></span>  
   
-4.  Wenn Sie die Workflowüberwachung nicht aktiviert haben, erweitern Sie **Anwendungs\- und Dienstprotokolle**, **Microsoft**, **Windows** und **Anwendungsserver \- Anwendungen**.Wählen Sie **Ansicht** und **Analytische und Debugprotokolle einblenden** aus.Klicken Sie mit der rechten Maustaste auf **Debuggen**, und wählen Sie **Protokoll aktivieren**.Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Workflow ausgeführt wurde.  
+4.  <span data-ttu-id="f42ad-114">Wenn Sie workflowüberwachung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** .</span><span class="sxs-lookup"><span data-stu-id="f42ad-114">If you haven’t enabled workflow tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**.</span></span> <span data-ttu-id="f42ad-115">Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**.</span><span class="sxs-lookup"><span data-stu-id="f42ad-115">Select **View**, **Show Analytic and Debug Logs**.</span></span> <span data-ttu-id="f42ad-116">Mit der rechten Maustaste **Debuggen** , und wählen Sie **Protokoll aktivieren**.</span><span class="sxs-lookup"><span data-stu-id="f42ad-116">Right-click **Debug** and select **Enable Log**.</span></span> <span data-ttu-id="f42ad-117">Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Workflow ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="f42ad-117">Leave Event Viewer open so that traces can be viewed after the workflow is run.</span></span>  
   
-5.  Führen Sie die Workflowanwendung aus, indem Sie STRG\+UMSCHALT\+B drücken.  
+5.  <span data-ttu-id="f42ad-118">Führen Sie die Workflowanwendung aus, indem Sie STRG+UMSCHALT+B drücken.</span><span class="sxs-lookup"><span data-stu-id="f42ad-118">Execute the workflow application by pressing CTRL+SHIFT+B.</span></span>  
   
-6.  Suchen Sie in der Ereignisanzeige ein aktuelles Ereignis mit der ID 1009 und einer Meldung ähnlich der folgenden.Notieren Sie sich den Zeitpunkt der Protokollierung der Meldung.  
+6.  <span data-ttu-id="f42ad-119">Suchen Sie in der Ereignisanzeige ein aktuelles Ereignis mit der ID 1009 und einer Meldung ähnlich der folgenden.</span><span class="sxs-lookup"><span data-stu-id="f42ad-119">In Event Viewer, find a recent event with ID 1009 and a message similar to the following.</span></span> <span data-ttu-id="f42ad-120">Notieren Sie sich den Zeitpunkt der Protokollierung der Meldung.</span><span class="sxs-lookup"><span data-stu-id="f42ad-120">Make a note of the time that the message was logged.</span></span>  
   
- **Übergeordnete Aktivität '', DisplayName: '', InstanceId: '' geplante untergeordnete Aktivität 'WorkflowDurationTracking.Workflow1', DisplayName: 'Workflow1', InstanceId: '1'.**  
+ <span data-ttu-id="f42ad-121">**Übergeordnete Aktivität '', DisplayName: '', InstanceId: '' geplante untergeordnete Aktivität 'WorkflowDurationTracking.Workflow1', DisplayName: 'Workflow1', InstanceId: '1'.**</span><span class="sxs-lookup"><span data-stu-id="f42ad-121">**Parent Activity '', DisplayName: '', InstanceId: '' scheduled child Activity 'WorkflowDurationTracking.Workflow1', DisplayName: 'Workflow1', InstanceId: '1'.**</span></span>  
   
-7.  Suchen Sie ein anderes aktuelles Ereignis mit der ID 1001 und einer Meldung ähnlich der folgenden.Subtrahieren Sie den Zeitpunkt der vorherigen Nachricht vom protokollierten Wert für diese Nachricht, um die Ausführungsdauer des Workflows zu bestimmen. Diese sollte sich im Bereich von 10 Sekunden bewegen.  
+7.  <span data-ttu-id="f42ad-122">Suchen Sie ein anderes aktuelles Ereignis mit der ID 1001 und einer Meldung ähnlich der folgenden.</span><span class="sxs-lookup"><span data-stu-id="f42ad-122">Find another recent event with ID 1001 and a message similar to the following.</span></span>  <span data-ttu-id="f42ad-123">Subtrahieren Sie den Zeitpunkt der vorherigen Nachricht vom protokollierten Wert für diese Nachricht, um die Ausführungsdauer des Workflows zu bestimmen. Diese sollte sich im Bereich von 10 Sekunden bewegen.</span><span class="sxs-lookup"><span data-stu-id="f42ad-123">Subtract the previous message time from this message’s Logged value to determine workflow execution duration, which should be around 10 seconds.</span></span>  
   
- **WorkflowInstanceId: '1bbac57b\-3322\-498e\-9e27\-8833fda3a5bf' wurde mit dem Status 'Closed' abgeschlossen.**  
+ <span data-ttu-id="f42ad-124">**WorkflowInstance-Id: '1bbac57b-3322-498e-9e27-8833fda3a5bf' wurde in den geschlossenen Zustand übergeht.**</span><span class="sxs-lookup"><span data-stu-id="f42ad-124">**WorkflowInstance Id: '1bbac57b-3322-498e-9e27-8833fda3a5bf' has completed in the Closed state.**</span></span>  
   
-## Siehe auch  
- [Workflowüberwachung](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md)   
- [Überwachung mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Überwachen von Anwendungen mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="f42ad-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f42ad-125">See Also</span></span>  
+ [<span data-ttu-id="f42ad-126">Workflowüberwachung</span><span class="sxs-lookup"><span data-stu-id="f42ad-126">Workflow Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ [<span data-ttu-id="f42ad-127">Windows Server App Fabric-Überwachung</span><span class="sxs-lookup"><span data-stu-id="f42ad-127">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="f42ad-128">Überwachen von Anwendungen mit AppFabric</span><span class="sxs-lookup"><span data-stu-id="f42ad-128">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

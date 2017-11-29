@@ -1,25 +1,28 @@
 ---
-title: "WSAT_TraceProvider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSAT_TraceProvider
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb89b45-78b8-407d-8858-f8a9d43d55cb
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8556b2911f36e3eb1ab6d12f8bdeb9448e1e0e75
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WSAT_TraceProvider
-WSAT\_TraceProvider  
+# <a name="wsattraceprovider"></a><span data-ttu-id="561fc-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="561fc-102">WSAT_TraceProvider</span></span>
+<span data-ttu-id="561fc-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="561fc-103">WSAT_TraceProvider</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="561fc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="561fc-104">Syntax</span></span>  
   
 ```  
 class WSAT_TraceProvider : EventTrace  
@@ -27,11 +30,11 @@ class WSAT_TraceProvider : EventTrace
 };  
 ```  
   
-## Methoden  
- Die WSAT\_TraceProvider\-Klasse erbt von EventTrace, aber definiert keine zusätzlichen Methoden oder Eigenschaften.  
+## <a name="methods"></a><span data-ttu-id="561fc-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="561fc-105">Methods</span></span>  
+ <span data-ttu-id="561fc-106">Die WSAT_TraceProvider-Klasse erbt von EventTrace, aber definiert keine zusätzlichen Methoden oder Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="561fc-106">The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.</span></span>  
   
-## Voraussetzungen  
+## <a name="requirements"></a><span data-ttu-id="561fc-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="561fc-107">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof|  
-|---------|------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|
+|<span data-ttu-id="561fc-108">MOF</span><span class="sxs-lookup"><span data-stu-id="561fc-108">MOF</span></span>|<span data-ttu-id="561fc-109">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="561fc-109">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="561fc-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="561fc-110">Namespace</span></span>|<span data-ttu-id="561fc-111">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="561fc-111">Defined in root\ServiceModel</span></span>|
