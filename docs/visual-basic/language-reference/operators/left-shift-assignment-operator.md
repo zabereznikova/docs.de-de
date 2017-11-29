@@ -1,67 +1,64 @@
 ---
-title: "&lt;&lt;= Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.<<="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operator <<="
-  - "assignment statements, compound"
-  - "<<= operator [Visual Basic]"
-  - "statements [Visual Basic], compound assignment"
-  - "operator<<="
-  - "compound assignment statements"
+title: '&lt;&lt;=-Operator (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.<<=
+helpviewer_keywords:
+- operator <<=
+- assignment statements [Visual Basic], compound
+- <<= operator [Visual Basic]
+- statements [Visual Basic], compound assignment
+- operator<<=
+- compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c5c36e4f91155c09d01b448777483941d018d9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;&lt;= Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt eine arithmetische Verschiebung nach links für den Wert einer Variablen oder Eigenschaft aus und weist das Ergebnis wieder der Variablen oder Eigenschaft zu.  
+# <a name="ltlt-operator-visual-basic"></a><span data-ttu-id="941ba-102">&lt;&lt;=-Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="941ba-102">&lt;&lt;= Operator (Visual Basic)</span></span>
+<span data-ttu-id="941ba-103">Führt eine arithmetische Verschiebung nach links auf den Wert einer Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="941ba-103">Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="941ba-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="941ba-104">Syntax</span></span>  
   
 ```  
-  
 variableorproperty <<= amount  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="941ba-105">Teile</span><span class="sxs-lookup"><span data-stu-id="941ba-105">Parts</span></span>  
  `variableorproperty`  
- Erforderlich.  Variable oder Eigenschaft eines ganzzahligen Typs \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` oder `ULong`\).  
+ <span data-ttu-id="941ba-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="941ba-106">Required.</span></span> <span data-ttu-id="941ba-107">Variable oder eine Eigenschaft eines ganzzahligen Typs (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).</span><span class="sxs-lookup"><span data-stu-id="941ba-107">Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
   
  `amount`  
- Erforderlich.  Numerischer Ausdruck mit einem Datentyp, der zu `Integer` erweitert wird.  
+ <span data-ttu-id="941ba-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="941ba-108">Required.</span></span> <span data-ttu-id="941ba-109">Numerische Ausdruck eines Datentyps, die erweitert `Integer`.</span><span class="sxs-lookup"><span data-stu-id="941ba-109">Numeric expression of a data type that widens to `Integer`.</span></span>  
   
-## Hinweise  
- Das Element auf der linken Seite des Operators `<<=` kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.  Die Variable oder die Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)sein.  
+## <a name="remarks"></a><span data-ttu-id="941ba-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="941ba-110">Remarks</span></span>  
+ <span data-ttu-id="941ba-111">Das Element auf der linken Seite von der `<<=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein.</span><span class="sxs-lookup"><span data-stu-id="941ba-111">The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="941ba-112">Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="941ba-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
- Der `<<=` Operator führt zuerst eine arithmetische Verschiebung nach links für den Wert der Variablen oder Eigenschaft aus.  Der Operator weist dann das Ergebnis dieses Vorgangs wieder an dieser Variablen oder Eigenschaft zu.  
+ <span data-ttu-id="941ba-113">Die `<<=` -Operator führt eine arithmetische linksverschiebung zuerst auf den Wert der Variablen oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="941ba-113">The `<<=` operator first performs an arithmetic left shift on the value of the variable or property.</span></span> <span data-ttu-id="941ba-114">Der Operator weist das Ergebnis dieses Vorgangs dann wieder auf diese Variablen oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="941ba-114">The operator then assigns the result of that operation back to that variable or property.</span></span>  
   
- Arithmetische Verschiebungen sind nicht zyklisch, d. h., die Bits, die an einem Ende des Ergebnisses durch die Verschiebung herausfallen, werden nicht am anderen Ende wieder eingefügt.  In einer arithmetischen Verschiebung nach links werden die Bits, die über den Bereich des Ergebnisdatentyps hinaus verschoben werden, verworfen, und die Bitpositionen, die auf der rechten Seite frei werden, werden auf 0 \(null\) gesetzt.  
+ <span data-ttu-id="941ba-115">Arithmetische Schichten sind nicht zirkulär, d. h. die Bits verschobene ein Ende des Resultsets nicht am anderen Ende wieder hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="941ba-115">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="941ba-116">In eine arithmetische linksverschiebung der Bits, die außerhalb des Gültigkeitsbereichs für den Ergebnisdatentyp verschoben werden verworfen, und die Bitpositionen auf der rechten Seite ist auf 0 festgelegt.</span><span class="sxs-lookup"><span data-stu-id="941ba-116">In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.</span></span>  
   
-## Überladen  
- Der [\<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `<<` hat Auswirkungen auf das Verhalten des Operators `<<=`.  Wenn im Code `<<=` auf eine Klasse oder Struktur angewendet wird, die `<<` überlädt, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="941ba-117">Überladen</span><span class="sxs-lookup"><span data-stu-id="941ba-117">Overloading</span></span>  
+ <span data-ttu-id="941ba-118">Die [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat.</span><span class="sxs-lookup"><span data-stu-id="941ba-118">The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="941ba-119">Überladen der `<<` Operator wirkt sich auf das Verhalten der `<<=` Operator.</span><span class="sxs-lookup"><span data-stu-id="941ba-119">Overloading the `<<` operator affects the behavior of the `<<=` operator.</span></span> <span data-ttu-id="941ba-120">Wenn im Code verwendet `<<=` auf eine Klasse oder Struktur, die Überladungen `<<`, achten Sie verstehen, dass ihr neu definierten Verhalten.</span><span class="sxs-lookup"><span data-stu-id="941ba-120">If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="941ba-121">Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="941ba-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird der Operator `<<=` verwendet, um das Bitmuster einer `Integer`\-Variablen um den angegebenen Betrag nach links zu verschieben und der Variablen das Ergebnis zuzuweisen.  
+## <a name="example"></a><span data-ttu-id="941ba-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="941ba-122">Example</span></span>  
+ <span data-ttu-id="941ba-123">Im folgenden Beispiel wird die `<<=` Operator, um das Bitmuster der UMSCHALTTASTE ein `Integer` Variable links von den angegebenen Betrag an und weisen Sie das Ergebnis der Variablen.</span><span class="sxs-lookup"><span data-stu-id="941ba-123">The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
-## Siehe auch  
- [\<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Bit Shift Operators](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a><span data-ttu-id="941ba-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="941ba-124">See Also</span></span>  
+ [<span data-ttu-id="941ba-125"><<-Operator</span><span class="sxs-lookup"><span data-stu-id="941ba-125"><< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<span data-ttu-id="941ba-126">Zuweisungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="941ba-126">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [<span data-ttu-id="941ba-127">Bitverschiebungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="941ba-127">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="941ba-128">Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="941ba-128">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="941ba-129">Nach Funktionalität sortierte Operatoren</span><span class="sxs-lookup"><span data-stu-id="941ba-129">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="941ba-130">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="941ba-130">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)

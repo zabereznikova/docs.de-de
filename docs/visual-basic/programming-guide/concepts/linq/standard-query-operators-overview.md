@@ -1,47 +1,39 @@
 ---
-title: Standard Query Operators Overview (Visual Basic) | Microsoft-Dokumentation
+title: "Übersicht über das Standardabfrageoperator-Operatoren (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eb28988ef49e0583fb7e9197c4e13c84665074ac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3f9ad39b4890455f7d03f0b9bbfc51264d98d56b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Standard Query Operators Overview (Visual Basic)
-Die *Standardabfrageoperatoren* sind Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden verwenden Sequenzen, in dem eine Sequenz ein Objekt ist, dessen Typ implementiert, die <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle oder die <xref:System.Linq.IQueryable%601>Schnittstelle.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und mehr.  
+# <a name="standard-query-operators-overview-visual-basic"></a><span data-ttu-id="3f4fc-102">Übersicht über das Standardabfrageoperator-Operatoren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-102">Standard Query Operators Overview (Visual Basic)</span></span>
+<span data-ttu-id="3f4fc-103">Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-103">The *standard query operators* are the methods that form the LINQ pattern.</span></span> <span data-ttu-id="3f4fc-104">Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-104">Most of these methods operate on sequences, where a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="3f4fc-105">Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-105">The standard query operators provide query capabilities including filtering, projection, aggregation, sorting and more.</span></span>  
   
- Es gibt zwei Sätze von LINQ-Standardabfrageoperatoren, eine für Objekte vom Typ <xref:System.Collections.Generic.IEnumerable%601>und die andere den Zugriff auf Objekte des Typs <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Die Methoden, die einzelnen Gruppen ausmachen, sind statische Member der <xref:System.Linq.Enumerable>und <xref:System.Linq.Queryable>-Klasse bzw..</xref:System.Linq.Queryable> </xref:System.Linq.Enumerable> Sie definiert sind, als *Erweiterungsmethoden* des Typs, der sie ausgeführt werden. Dies bedeutet, dass sie über statische Methodensyntax oder Instanzmethodensyntax aufgerufen werden können.  
+ <span data-ttu-id="3f4fc-106">Es gibt zwei Gruppen von LINQ-Standardabfrageoperatoren: Eine Gruppe funktioniert auf Grundlage von Objekten vom Typ <xref:System.Collections.Generic.IEnumerable%601>, die andere auf Grundlage von Objekten vom Typ <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-106">There are two sets of LINQ standard query operators, one that operates on objects of type <xref:System.Collections.Generic.IEnumerable%601> and the other that operates on objects of type <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="3f4fc-107">Die Methoden, die eine Gruppe bilden, sind statische Member der Klassen <xref:System.Linq.Enumerable> und <xref:System.Linq.Queryable>.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-107">The methods that make up each set are static members of the <xref:System.Linq.Enumerable> and <xref:System.Linq.Queryable> classes, respectively.</span></span> <span data-ttu-id="3f4fc-108">Sie werden als *Erweiterungsmethoden* des Typs, auf dessen Grundlage sie funktionieren, definiert.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-108">They are defined as *extension methods* of the type that they operate on.</span></span> <span data-ttu-id="3f4fc-109">Das bedeutet, dass Sie entweder mit der Syntax für statische Methoden oder für Instanzmethoden aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-109">This means that they can be called by using either static method syntax or instance method syntax.</span></span>  
   
- Darüber hinaus werden mehrere Standardabfrageoperator-Methoden für andere Typen als jene auf Grundlage <xref:System.Collections.Generic.IEnumerable%601>oder <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Die <xref:System.Linq.Enumerable>Typ definiert zwei Methoden, beide auf Objekte des Typs <xref:System.Collections.IEnumerable>.</xref:System.Collections.IEnumerable> arbeiten</xref:System.Linq.Enumerable> Diese Methoden <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29>und <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, können Sie aktivieren eine nicht parametrisierten oder nicht generischen Auflistung in LINQ-Musters abgefragt werden.</xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> </xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> Dazu wird eine stark typisierte Auflistung von Objekten erstellen. Die <xref:System.Linq.Queryable>Klasse definiert zwei ähnliche Methoden <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29>und <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, wirken sich auf Objekte des Typs <xref:System.Linq.Queryable>.</xref:System.Linq.Queryable> </xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable>  
+ <span data-ttu-id="3f4fc-110">Darüber hinaus funktionieren mehrere Standardabfrageoperator-Methoden auf Grundlage anderer Typen als die, die auf <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> basieren.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-110">In addition, several standard query operator methods operate on types other than those based on <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="3f4fc-111">Der Typ <xref:System.Linq.Enumerable> definiert zwei Methoden, die beide auf Grundlage von Objekten vom Typ <xref:System.Collections.IEnumerable> funktionieren.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-111">The <xref:System.Linq.Enumerable> type defines two such methods that both operate on objects of type <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="3f4fc-112">Die Methoden <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> und <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> ermöglichen es Ihnen, eine nicht parametrisierte oder nicht generische Auflistung im LINQ-Muster abfragen zu lassen.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-112">These methods, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> and <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, let you enable a non-parameterized, or non-generic, collection to be queried in the LINQ pattern.</span></span> <span data-ttu-id="3f4fc-113">Dies erfolgt durch Erstellen einer stark typisierten Auflistung von Objekten.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-113">They do this by creating a strongly-typed collection of objects.</span></span> <span data-ttu-id="3f4fc-114">Die Klasse <xref:System.Linq.Queryable> definiert zwei ähnliche Methoden, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> und <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, die auf Grundlage von Objekten vom Typ <xref:System.Linq.Queryable> funktionieren.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-114">The <xref:System.Linq.Queryable> class defines two similar methods, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> and <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, that operate on objects of type <xref:System.Linq.Queryable>.</span></span>  
   
- Die Standardabfrageoperatoren unterscheiden sich in der Zeitpunkt für deren Ausführung, abhängig davon, ob sie einen Singletonwert oder eine Sequenz von Werten zurückgeben. Methoden, die einen Singletonwert zurückgeben (z. B. <xref:System.Linq.Enumerable.Average%2A>und <xref:System.Linq.Enumerable.Sum%2A>) werden sofort ausgeführt.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Average%2A> Methoden, die eine Sequenz zurückzugeben, verzögert die Ausführung der Abfrage, und geben Sie ein aufzählbares Objekt zurück.  
+ <span data-ttu-id="3f4fc-115">Die Standardabfrageoperatoren unterscheiden sich im Zeitpunkt ihrer Ausführung. Dies hängt davon ab, ob sie einen Singleton-Wert oder eine Sequenz von Werten zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-115">The standard query operators differ in the timing of their execution, depending on whether they return a singleton value or a sequence of values.</span></span> <span data-ttu-id="3f4fc-116">Die Methoden, die einen Singleton-Wert zurückgeben (z.B. <xref:System.Linq.Enumerable.Average%2A> und <xref:System.Linq.Enumerable.Sum%2A>), werden sofort ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-116">Those methods that return a singleton value (for example, <xref:System.Linq.Enumerable.Average%2A> and <xref:System.Linq.Enumerable.Sum%2A>) execute immediately.</span></span> <span data-ttu-id="3f4fc-117">Methoden, die eine Sequenz zurückgeben, verzögern die Abfrageausführung und geben ein auflistbares Objekt zurück.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-117">Methods that return a sequence defer the query execution and return an enumerable object.</span></span>  
   
- Bei den Methoden auf Auflistungen im Arbeitsspeicher, d. h. diese Methoden, die erweitern <xref:System.Collections.Generic.IEnumerable%601>, das zurückgegebene aufzählbare Objekt erfasst die Argumente, die an die Methode übergeben wurden.</xref:System.Collections.Generic.IEnumerable%601> Wenn dieses Objekt aufgezählt wird, wird die Logik des Abfrageoperators eingesetzt, und die Ergebnisse der Abfrage zurückgegeben werden.  
+ <span data-ttu-id="3f4fc-118">Bei Methoden, die auf Grundlage von im Speicher enthaltenen Auflistungen funktionieren, d.h. die Methoden, die <xref:System.Collections.Generic.IEnumerable%601> erweitern, erfasst das zurückgegebene auflistbare Objekt die Argumente, die an die Methode übergeben wurden.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-118">In the case of the methods that operate on in-memory collections, that is, those methods that extend <xref:System.Collections.Generic.IEnumerable%601>, the returned enumerable object captures the arguments that were passed to the method.</span></span> <span data-ttu-id="3f4fc-119">Wenn dieses Objekt auflistbar ist, tritt die Logik des Abfrageoperators in Kraft, und die Abfrageergebnisse werden zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-119">When that object is enumerated, the logic of the query operator is employed and the query results are returned.</span></span>  
   
- Im Gegensatz dazu, die Methoden erweitern <xref:System.Linq.IQueryable%601>Abfrageverhalten nicht implementieren, jedoch eine Ausdrucksbaumstruktur, die die auszuführende Abfrage darstellt.</xref:System.Linq.IQueryable%601> Die Verarbeitung der Abfrage erfolgt durch die Quelle <xref:System.Linq.IQueryable%601>Objekt.</xref:System.Linq.IQueryable%601>  
+ <span data-ttu-id="3f4fc-120">Im Gegensatz dazu implementieren Methoden, die <xref:System.Linq.IQueryable%601> erweitern, kein Abfrageverhalten. Sie erstellen stattdessen eine Ausdrucksbaumstruktur, die die auszuführende Abfrage darstellt.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-120">In contrast, methods that extend <xref:System.Linq.IQueryable%601> do not implement any querying behavior, but build an expression tree that represents the query to be performed.</span></span> <span data-ttu-id="3f4fc-121">Die Verarbeitung von Abfragen wird vom Quellobjekt <xref:System.Linq.IQueryable%601> übernommen.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-121">The query processing is handled by the source <xref:System.Linq.IQueryable%601> object.</span></span>  
   
- Aufrufe der Abfragemethoden können zusammen in einer Abfrage verkettet werden, wodurch Abfragen beliebig komplex werden.  
+ <span data-ttu-id="3f4fc-122">Aufrufe der Abfragemethode können miteinander in eine Abfrage verkettet werden. Dadurch können Abfragen von beliebiger Komplexität sein.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-122">Calls to query methods can be chained together in one query, which enables queries to become arbitrarily complex.</span></span>  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie die Standardabfrageoperatoren verwendet werden können, zum Abrufen von Informationen zu einer Sequenz.  
+ <span data-ttu-id="3f4fc-123">Im folgenden Codebeispiel wird veranschaulicht, wie die Standardabfrageoperatoren verwendet werden können, um Informationen zu einer Sequenz zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-123">The following code example demonstrates how the standard query operators can be used to obtain information about a sequence.</span></span>  
   
 ```vb  
 Dim sentence = "the quick brown fox jumps over the lazy dog"  
@@ -80,47 +72,47 @@ MsgBox(output.ToString())
 ' JUMPS   
 ```  
   
-## <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
- Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über C#- und Visual Basic-Schlüsselwort Sprachsyntax, die sie als Teil des aufgerufen werden kann dedizierte ein *Abfrage* *Ausdruck*. Weitere Informationen über Standardabfrageoperatoren, die Schlüsselwörter und deren entsprechende Syntax verfügen über eine dedizierte finden Sie unter [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+## <a name="query-expression-syntax"></a><span data-ttu-id="3f4fc-124">Abfrageausdruckssyntax</span><span class="sxs-lookup"><span data-stu-id="3f4fc-124">Query Expression Syntax</span></span>  
+ <span data-ttu-id="3f4fc-125">Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-125">Some of the more frequently used standard query operators have dedicated C# and Visual Basic language keyword syntax that enables them to be called as part of a *query* *expression*.</span></span> <span data-ttu-id="3f4fc-126">Weitere Informationen zu den Standardabfrageoperatoren, die Schlüsselwörter und deren entsprechende Syntax reserviert haben, finden Sie unter [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).</span><span class="sxs-lookup"><span data-stu-id="3f4fc-126">For more information about standard query operators that have dedicated keywords and their corresponding syntaxes, see [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).</span></span>  
   
-## <a name="extending-the-standard-query-operators"></a>Erweitern der Standardabfrageoperatoren  
- Sie können den Satz von Standardabfrageoperatoren durch Erstellen einer domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder-Technologie geeignet sind. Sie können auch die Standardabfrageoperatoren ersetzen, die mit Ihren eigenen Implementierungen, die zusätzliche Dienste wie z. B. remote-Bewertung, die abfrageübersetzung und Optimierung bereitstellen. Finden Sie unter <xref:System.Linq.Enumerable.AsEnumerable%2A>ein Beispiel.</xref:System.Linq.Enumerable.AsEnumerable%2A>  
+## <a name="extending-the-standard-query-operators"></a><span data-ttu-id="3f4fc-127">Erweitern der Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="3f4fc-127">Extending the Standard Query Operators</span></span>  
+ <span data-ttu-id="3f4fc-128">Sie können die Gruppe von Standardabfrageoperatoren durch Erstellen von domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder -technologie geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-128">You can augment the set of standard query operators by creating domain-specific methods that are appropriate for your target domain or technology.</span></span> <span data-ttu-id="3f4fc-129">Sie können die Standardabfrageoperatoren auch mit ihren eigenen Implementierungen ersetzen, die zusätzliche Dienste bieten, z.B. Remote-Auswertung, Abfrageübersetzung und Optimierung.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-129">You can also replace the standard query operators with your own implementations that provide additional services such as remote evaluation, query translation, and optimization.</span></span> <span data-ttu-id="3f4fc-130">Ein Beispiel finden Sie unter <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-130">See <xref:System.Linq.Enumerable.AsEnumerable%2A> for an example.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- Die folgenden Links gelangen Sie zu Themen, die zusätzliche Informationen zu den verschiedenen Standardabfrageoperatoren basierend auf Funktionalität bereitzustellen.  
+## <a name="related-sections"></a><span data-ttu-id="3f4fc-131">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3f4fc-131">Related Sections</span></span>  
+ <span data-ttu-id="3f4fc-132">Über die folgenden Links gelangen Sie zu Themen, die Ihnen weitere Informationen über die verschiedenen Standardabfrageoperatoren basierend auf deren Funktionen bieten.</span><span class="sxs-lookup"><span data-stu-id="3f4fc-132">The following links take you to topics that provide additional information about the various standard query operators based on functionality.</span></span>  
   
- [Sortieren von Daten](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
+ [<span data-ttu-id="3f4fc-133">Sortieren von Daten</span><span class="sxs-lookup"><span data-stu-id="3f4fc-133">Sorting Data</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
   
- [Set-Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
+ [<span data-ttu-id="3f4fc-134">Set-Vorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-134">Set Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Filtern von Daten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [<span data-ttu-id="3f4fc-135">Filtern von Daten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-135">Filtering Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
- [Quantifizierer-Vorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
+ [<span data-ttu-id="3f4fc-136">Quantifizierer-Vorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-136">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
- [Projektionsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
+ [<span data-ttu-id="3f4fc-137">Projektionsvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-137">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [Partitionieren von Daten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [<span data-ttu-id="3f4fc-138">Partitionieren von Daten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-138">Partitioning Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [JOIN-Operationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [<span data-ttu-id="3f4fc-139">JOIN-Operationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-139">Join Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
- [Gruppieren von Daten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
+ [<span data-ttu-id="3f4fc-140">Gruppieren von Daten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-140">Grouping Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
- [Generierungsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
+ [<span data-ttu-id="3f4fc-141">Generierungsvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-141">Generation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
   
- [Gleichheitsoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
+ [<span data-ttu-id="3f4fc-142">Gleichheitsoperationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-142">Equality Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
   
- [Elementvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
+ [<span data-ttu-id="3f4fc-143">Elementvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-143">Element Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [Konvertieren von Datentypen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [<span data-ttu-id="3f4fc-144">Konvertieren von Datentypen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-144">Converting Data Types (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
- [Verkettungsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
+ [<span data-ttu-id="3f4fc-145">Verkettungsvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-145">Concatenation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
- [Aggregationsoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
+ [<span data-ttu-id="3f4fc-146">Aggregationsvorgänge (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-146">Aggregation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable></xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable></xref:System.Linq.Queryable>   
- [Einführung in LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)   
- [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
- [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a><span data-ttu-id="3f4fc-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f4fc-147">See Also</span></span>  
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [<span data-ttu-id="3f4fc-148">Introduction to LINQ (Visual Basic) (Einführung in LINQ (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="3f4fc-148">Introduction to LINQ (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="3f4fc-149">Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-149">Query Expression Syntax for Standard Query Operators (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [<span data-ttu-id="3f4fc-150">Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f4fc-150">Classification of Standard Query Operators by Manner of Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+ [<span data-ttu-id="3f4fc-151">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="3f4fc-151">Extension Methods</span></span>](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

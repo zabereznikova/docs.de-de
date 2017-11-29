@@ -1,45 +1,28 @@
 ---
-title: Start-Wert vom Typ kann nicht konvertiert werden &quot;&lt;type1&gt;&quot;und step-Wert des Typs&quot;&lt;type2&gt;&quot; in einen gemeinsamen Typ | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: Startwert vom Typ &#39;kann nicht konvertiert werden; &lt;Typ1&gt;&#39; "und" Step-Wert vom Typ &#39;&lt; Typ2&gt;&#39; in einen gemeinsamen Typ
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrForLoop_CommonType2
+f1_keywords: vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7bf5700c49f56ab9554808f068a3b3432a620e95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Start-Wert vom Typ kann nicht konvertiert werden "&lt;type1&gt;"und step-Wert des Typs"&lt;type2&gt;" in einen gemeinsamen Typ
-Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen allgemeinen Typ konvertiert werden können.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="5b9f7-102">Startwert vom Typ &#39;kann nicht konvertiert werden; &lt;Typ1&gt;&#39; "und" Step-Wert vom Typ &#39;&lt; Typ2&gt;&#39; in einen gemeinsamen Typ</span><span class="sxs-lookup"><span data-stu-id="5b9f7-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="5b9f7-103">Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.</span><span class="sxs-lookup"><span data-stu-id="5b9f7-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5b9f7-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="5b9f7-104">To correct this error</span></span>  
   
-1.  Ändern Sie den Typ von mindestens einem Wert, damit alle Werte in einen allgemeinen Typ konvertiert werden können.  
+1.  <span data-ttu-id="5b9f7-105">Ändern Sie den Typ von mindestens einem Wert, damit alle Werte in einen allgemeinen Typ konvertiert werden können.</span><span class="sxs-lookup"><span data-stu-id="5b9f7-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Navigieren im Code mit dem Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [Debuggen von Änderungen in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next-Anweisung](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="5b9f7-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5b9f7-106">See Also</span></span>  
+ [<span data-ttu-id="5b9f7-107">Navigieren im Code mit dem Debugger</span><span class="sxs-lookup"><span data-stu-id="5b9f7-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)  
+ [<span data-ttu-id="5b9f7-108">Debuggen von Änderungen in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="5b9f7-108">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [<span data-ttu-id="5b9f7-109">For...Next-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5b9f7-109">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)

@@ -1,25 +1,27 @@
 ---
-title: "F&#252;r den Typ &lt;Typname&gt; wurde kein Standardmember gefunden. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrMissingMember_NoDefaultMemberFound1"
+title: "Es wurde kein Standardmember gefunden für Typ &#39; &lt;Typename&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 51cff2d989a22031984347ac4d82d9146d620760
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# F&#252;r den Typ &lt;Typname&gt; wurde kein Standardmember gefunden.
-Es wurde ein `Get`\- oder `Set`\-Indexaufruf mit später Bindung versucht.  
+# <a name="no-default-member-found-for-type-39lttypenamegt39"></a><span data-ttu-id="ba8a3-102">Es wurde kein Standardmember gefunden für Typ &#39; &lt;Typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ba8a3-102">No default member found for type &#39;&lt;typename&gt;&#39;</span></span>
+<span data-ttu-id="ba8a3-103">Es wurde ein `Get` - oder `Set` -Indexaufruf mit später Bindung versucht.</span><span class="sxs-lookup"><span data-stu-id="ba8a3-103">A late-bound index `Get` or `Set` call has been attempted.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ba8a3-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="ba8a3-104">To correct this error</span></span>  
   
-1.  Stellen Sie sicher, dass das Objekt eine Standardeigenschaft mit einem `Get` oder `Set` hat, je nachdem, welche Aktion Sie ausführen möchten.  
+1.  <span data-ttu-id="ba8a3-105">Stellen Sie sicher, dass das Objekt eine Standardeigenschaft mit einem `Get` oder `Set`hat, je nachdem, welche Aktion Sie ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="ba8a3-105">Ensure that the object has a default property with a `Get` or `Set`, depending on which you are trying to make.</span></span>  
   
-## Siehe auch  
- [Get Statement](../../visual-basic/language-reference/statements/get-statement.md)   
- [Set Statement](../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ba8a3-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba8a3-106">See Also</span></span>  
+ [<span data-ttu-id="ba8a3-107">Get-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ba8a3-107">Get Statement</span></span>](../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="ba8a3-108">Set-Anweisung</span><span class="sxs-lookup"><span data-stu-id="ba8a3-108">Set Statement</span></span>](../../visual-basic/language-reference/statements/set-statement.md)

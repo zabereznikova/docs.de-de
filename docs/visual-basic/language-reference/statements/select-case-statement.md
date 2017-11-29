@@ -1,99 +1,97 @@
 ---
-title: "Select...Case Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Select"
-  - "vb.Case"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Select statement"
-  - "Case statement"
-  - "Select...Case statements"
-  - "conditional statements, Select Case"
-  - "control flow, branching"
-  - "Else keyword [Visual Basic], in Select...Case statements"
-  - "execution, conditional"
-  - "To keyword, in Select...Case statements"
-  - "Select Case statement, Select...Case"
-  - "Select statement, Select...Case"
-  - "Is operator [Visual Basic], in Select...Case statements"
-  - "branching, conditional"
-  - "Case Else statement, Select...Case"
-  - "End keyword, Select Case statements"
-  - "Case statement, Select...Case"
+title: Select...Case-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Select
+- vb.Case
+helpviewer_keywords:
+- Select statement [Visual Basic]
+- Case statement [Visual Basic]
+- Select...Case statements
+- conditional statements [Visual Basic], Select Case
+- control flow [Visual Basic], branching
+- Else keyword [Visual Basic], in Select...Case statements
+- execution [Visual Basic], conditional
+- To keyword [Visual Basic], in Select...Case statements
+- Select Case statement [Visual Basic], Select...Case
+- Select statement [Visual Basic], Select...Case
+- Is operator [Visual Basic], in Select...Case statements
+- branching [Visual Basic], conditional
+- Case Else statement [Visual Basic], Select...Case
+- End keyword [Visual Basic], Select Case statements
+- Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Select...Case Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt je nach dem Wert eines Ausdrucks eine von mehreren Anweisungsgruppen aus.  
+# <a name="selectcase-statement-visual-basic"></a><span data-ttu-id="d6b35-102">Select...Case-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6b35-102">Select...Case Statement (Visual Basic)</span></span>
+<span data-ttu-id="d6b35-103">Führt eine von mehreren Gruppen von Anweisungen, je nach dem Wert eines Ausdrucks.</span><span class="sxs-lookup"><span data-stu-id="d6b35-103">Runs one of several groups of statements, depending on the value of an expression.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="d6b35-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d6b35-104">Syntax</span></span>  
   
 ```  
-Select [ Case ] testexpression  
-    [ Case expressionlist  
-        [ statements ] ]  
-    [ Case Else  
-        [ elsestatements ] ]  
+Select [ Case ] testexpression  
+    [ Case expressionlist  
+        [ statements ] ]  
+    [ Case Else  
+        [ elsestatements ] ]  
 End Select  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="d6b35-105">Teile</span><span class="sxs-lookup"><span data-stu-id="d6b35-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Begriff|Definition|  
-|`testexpression`|Erforderlich.  Ausdruck.  Muss einem der elementaren Datentypen entsprechen \(`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong` und `UShort`\).|  
-|`expressionlist`|In einer `Case`\-Anweisung erforderlich.  Eine Liste von Ausdrucksklauseln, die Vergleichswerte für `testexpression` darstellen.  Mehrere Ausdrucksklauseln werden durch Komma voneinander getrennt.  Eine Klausel kann folgendermaßen strukturiert sein:<br /><br /> -   *Ausdruck1* `To` *Ausdruck2*<br />-   \[ `Is` \] *Vergleichsoperator* *Ausdruck*<br />-   *expression*<br /><br /> Mit dem `To`\-Schlüsselwort geben Sie die Begrenzungen eines Bereichs von Vergleichswerten für `testexpression` an.  Der Wert von `expression1` muss kleiner oder gleich dem Wert von `expression2` sein.<br /><br /> Verwenden Sie das `Is`\-Schlüsselwort mit einem Vergleichsoperator \(`=`, `<>`, `<`, `<=`, `>` oder `>=`\) um eine Einschränkung der Vergleichswerte für `testexpression` anzugeben.  Wenn das `Is`\-Schlüsselwort nicht angegeben wird, wird es automatisch vor dem *Vergleichsoperator*  eingefügt.<br /><br /> Die Variante, in der nur `expression` angegeben wird, wird als Sonderfall der `Is`\-Variante behandelt, bei dem der *Vergleichsoperator* das Gleichheitszeichen \(`=`\) ist.  Diese Variante wird als `testexpression` \= `expression` ausgewertet.<br /><br /> Die Ausdrücke in `expressionlist` können einen beliebigen Datentyp aufweisen, vorausgesetzt, sie können implizit in den Datentyp von `testexpression` konvertiert werden, und der entsprechende `comparisonoperator` ist für die beiden verwendeten Datentypen gültig.|  
-|`statements`|Optional.  Eine oder mehrere Anweisungen nach `Case`, die ausgeführt werden, wenn `testexpression` mit einer beliebigen Klausel in `expressionlist` übereinstimmt.|  
-|`elsestatements`|Optional.  Eine oder mehrere Anweisungen nach `Case Else`, die ausgeführt werden, wenn `testexpression` mit keiner Klausel in der `expressionlist` einer der `Case`\-Anweisungen übereinstimmt.|  
-|`End Select`|Beendet die Definition der `Select`...`Case`\-Konstruktion.|  
+|<span data-ttu-id="d6b35-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="d6b35-106">Term</span></span>|<span data-ttu-id="d6b35-107">Definition</span><span class="sxs-lookup"><span data-stu-id="d6b35-107">Definition</span></span>|  
+|---|---|  
+|`testexpression`|<span data-ttu-id="d6b35-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d6b35-108">Required.</span></span> <span data-ttu-id="d6b35-109">Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="d6b35-109">Expression.</span></span> <span data-ttu-id="d6b35-110">Muss auf einen der elementare Datentypen ausgewertet werden (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, und `UShort`).</span><span class="sxs-lookup"><span data-stu-id="d6b35-110">Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).</span></span>|  
+|`expressionlist`|<span data-ttu-id="d6b35-111">Erforderlich eine `Case` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d6b35-111">Required in a `Case` statement.</span></span> <span data-ttu-id="d6b35-112">Liste der Expression-Klauseln darstellt übereinstimmenden Werte für `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-112">List of expression clauses representing match values for `testexpression`.</span></span> <span data-ttu-id="d6b35-113">Mehrere Ausdrucksklauseln werden durch Kommas getrennt.</span><span class="sxs-lookup"><span data-stu-id="d6b35-113">Multiple expression clauses are separated by commas.</span></span> <span data-ttu-id="d6b35-114">Jede Klausel kann einen der folgenden Formen annehmen:</span><span class="sxs-lookup"><span data-stu-id="d6b35-114">Each clause can take one of the following forms:</span></span><br /><br /> <span data-ttu-id="d6b35-115">-   *expression1* `To` *expression2*</span><span class="sxs-lookup"><span data-stu-id="d6b35-115">-   *expression1* `To` *expression2*</span></span><br /><span data-ttu-id="d6b35-116">-[ `Is` ] *Vergleichsoperator* *Ausdruck*</span><span class="sxs-lookup"><span data-stu-id="d6b35-116">-   [ `Is` ] *comparisonoperator* *expression*</span></span><br /><span data-ttu-id="d6b35-117">-   *Ausdruck*</span><span class="sxs-lookup"><span data-stu-id="d6b35-117">-   *expression*</span></span><br /><br /> <span data-ttu-id="d6b35-118">Verwenden der `To` Schlüsselwort, um die Grenzen eines Bereichs von Übereinstimmung geben Werte für `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-118">Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`.</span></span> <span data-ttu-id="d6b35-119">Der Wert der `expression1` muss kleiner oder gleich dem Wert des `expression2`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-119">The value of `expression1` must be less than or equal to the value of `expression2`.</span></span><br /><br /> <span data-ttu-id="d6b35-120">Verwenden der `Is` Schlüsselwort mit einem Vergleichsoperator (`=`, `<>`, `<`, `<=`, `>`, oder `>=`) auf den übereinstimmenden Werte für eine Einschränkung angegeben `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-120">Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`.</span></span> <span data-ttu-id="d6b35-121">Wenn die `Is` -Schlüsselwort nicht angegeben wird, wird Sie automatisch vor eingefügt *Vergleichsoperator*.</span><span class="sxs-lookup"><span data-stu-id="d6b35-121">If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.</span></span><br /><br /> <span data-ttu-id="d6b35-122">Nur `expression` wird als ein Sonderfall des behandelt die `Is` bilden Where *Vergleichsoperator* ist das Gleichheitszeichen (`=`).</span><span class="sxs-lookup"><span data-stu-id="d6b35-122">The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`).</span></span> <span data-ttu-id="d6b35-123">Dieses Formular wird ausgewertet, als `testexpression`  =  `expression`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-123">This form is evaluated as `testexpression` = `expression`.</span></span><br /><br /> <span data-ttu-id="d6b35-124">Die Ausdrücke in `expressionlist` kann einen beliebigen Datentyp aufweisen, vorausgesetzt, dass sie implizit in den Typ des `testexpression` und dem entsprechenden `comparisonoperator` ist gültig für die beiden Typen, die es mit verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d6b35-124">The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.</span></span>|  
+|`statements`|<span data-ttu-id="d6b35-125">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="d6b35-125">Optional.</span></span> <span data-ttu-id="d6b35-126">Eine oder mehrere Anweisungen nach `Case` , ausgeführt werden, wenn `testexpression` entspricht jede beliebige Klausel in `expressionlist`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-126">One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.</span></span>|  
+|`elsestatements`|<span data-ttu-id="d6b35-127">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="d6b35-127">Optional.</span></span> <span data-ttu-id="d6b35-128">Eine oder mehrere Anweisungen nach `Case Else` , ausgeführt werden, wenn `testexpression` entspricht nicht jede beliebige Klausel in der `expressionlist` aller der `Case` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="d6b35-128">One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.</span></span>|  
+|`End Select`|<span data-ttu-id="d6b35-129">Beendet die Definition des der `Select`... `Case` Konstruktion.</span><span class="sxs-lookup"><span data-stu-id="d6b35-129">Terminates the definition of the `Select`...`Case` construction.</span></span>|  
   
-## Hinweise  
- Wenn `testexpression` mit einer `Case` `expressionlist`\-Klausel übereinstimmt, werden die Anweisungen nach dieser `Case`\-Anweisung bis zur nächsten Anweisung `Case`, `Case Else` oder `End Select` ausgeführt.  Anschließend setzt das Programm die Ausführung mit der Anweisung fort, die auf `End Select` folgt.  Wenn `testexpression` in mehreren `Case`\-Klauseln mit einer `expressionlist`\-Klausel übereinstimmt, werden nur die Anweisungen nach der ersten Übereinstimmung ausgeführt.  
+## <a name="remarks"></a><span data-ttu-id="d6b35-130">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d6b35-130">Remarks</span></span>  
+ <span data-ttu-id="d6b35-131">Wenn `testexpression` beliebige `Case` `expressionlist` -Klausel, die Anweisungen befolgen, die `Case` -Anweisung, die Sie zur nächsten Ausführen `Case`, `Case Else`, oder `End Select` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d6b35-131">If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement.</span></span> <span data-ttu-id="d6b35-132">Anschließend wird die folgende Anweisung die Steuerung `End Select`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-132">Control then passes to the statement following `End Select`.</span></span> <span data-ttu-id="d6b35-133">Wenn `testexpression` entspricht einer `expressionlist` -Klausel in mehr als eine `Case` -Klausel, um nur die Anweisungen nach der ersten Übereinstimmung führen.</span><span class="sxs-lookup"><span data-stu-id="d6b35-133">If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.</span></span>  
   
- Die `Case Else`\-Anweisung wird zum Einführen der `elsestatements` verwendet, die ausgeführt werden, wenn in keiner der anderen `Case`\-Anweisungen eine Übereinstimmung zwischen `testexpression` und einer `expressionlist`\-Klausel gefunden wird.  Es ist zwar nicht erforderlich, doch empfiehlt es sich, in der `Select Case`\-Konstruktion über eine `Case Else`\-Anweisung zu verfügen, um unvorhergesehene `testexpression`\-Werte zu behandeln.  Wenn keine `Case` `expressionlist`\-Klausel mit `testexpression` übereinstimmt und keine `Case Else`\-Anweisung vorhanden ist, wird die Steuerung an die Anweisung übergeben, die auf `End Select` folgt.  
+ <span data-ttu-id="d6b35-134">Die `Case Else` -Anweisung wird zum Einführen der `elsestatements` ausführen, wenn keine Übereinstimmung, zwischen gefunden wird den `testexpression` und ein `expressionlist` -Klausel in eine beliebige andere `Case` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="d6b35-134">The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements.</span></span> <span data-ttu-id="d6b35-135">Ist zwar nicht erforderlich Es empfiehlt sich, Sie haben, eine `Case Else` -Anweisung in Ihre `Select Case` -Konstruktion behandeln unvorhergesehene `testexpression` Werte.</span><span class="sxs-lookup"><span data-stu-id="d6b35-135">Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values.</span></span> <span data-ttu-id="d6b35-136">Wenn kein `Case` `expressionlist` Klausel entspricht `testexpression` und es gibt keine `Case Else` Anweisung Steuerelement übergibt die folgende Anweisung `End Select`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-136">If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.</span></span>  
   
- Sie können in jeder `Case`\-Klausel mehrere Ausdrücke oder Bereiche verwenden.  Die folgende Zeile ist beispielweise gültig.  
+ <span data-ttu-id="d6b35-137">Sie können mehrere Ausdrücke oder Bereiche in den einzelnen `Case` Klausel.</span><span class="sxs-lookup"><span data-stu-id="d6b35-137">You can use multiple expressions or ranges in each `Case` clause.</span></span> <span data-ttu-id="d6b35-138">Die folgende Zeile ist z. B. gültig.</span><span class="sxs-lookup"><span data-stu-id="d6b35-138">For example, the following line is valid.</span></span>  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
->  Das in der `Case`\-Anweisung und der `Case Else`\-Anweisung verwendete `Is`\-Schlüsselwort ist nicht mit dem [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md) identisch, der für den Vergleich von Objektverweisen verwendet wird.  
+>  <span data-ttu-id="d6b35-139">Die `Is` Schlüsselwort in der `Case` und `Case Else` Anweisungen ist nicht identisch mit der [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), die für den Vergleich von Objektverweisen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d6b35-139">The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.</span></span>  
   
- Sie können Bereiche und mehrere Ausdrücke für Zeichenfolgen angeben.  Im folgenden Beispiel stimmt `Case` mit jeder Zeichenfolge überein, die genau mit "apples" übereinstimmt, einen Wert zwischen "nuts" und "soup" in alphabetischer Reihenfolge aufweist oder über genau denselben Wert wie der aktuelle Wert von `testItem` verfügt.  
+ <span data-ttu-id="d6b35-140">Sie können Bereiche und mehrere Ausdrücke für Zeichenfolgen angeben.</span><span class="sxs-lookup"><span data-stu-id="d6b35-140">You can specify ranges and multiple expressions for character strings.</span></span> <span data-ttu-id="d6b35-141">Im folgenden Beispiel `Case` entspricht jeder Zeichenfolge, die "Äpfel" genau gleich ist, verfügt über einen Wert zwischen "Nüsse" und "Suppe" in alphabetischer Reihenfolge oder enthält genauen denselben Wert wie der aktuelle Wert der `testItem`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-141">In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.</span></span>  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- Die Einstellung von `Option Compare` kann sich auf den Zeichenfolgenvergleich auswirken.  Bei einem Vergleich unter Verwendung von `Option Compare Text` sind die Zeichenfolgen "Apples" und "apples" gleich, doch nicht unter Verwendung von `Option Compare Binary`.  
+ <span data-ttu-id="d6b35-142">Die Einstellung der `Option Compare` Zeichenfolgenvergleiche auswirken können.</span><span class="sxs-lookup"><span data-stu-id="d6b35-142">The setting of `Option Compare` can affect string comparisons.</span></span> <span data-ttu-id="d6b35-143">Klicken Sie unter `Option Compare Text`, die Zeichenfolgen "Apples" und "Apples" bei einem Vergleich gleich, jedoch unter `Option Compare Binary`, nicht der Fall ist.</span><span class="sxs-lookup"><span data-stu-id="d6b35-143">Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.</span></span>  
   
 > [!NOTE]
->  Eine `Case`\-Anweisung mit mehreren Klauseln kann ein Verhalten aufweisen, das als *Kurzschluss* bezeichnet wird.  Visual Basic wertet die Klauseln von links nach rechts aus, und wenn eine Klausel eine Übereinstimmung mit `testexpression` ergibt, werden die restlichen Klauseln nicht ausgewertet.  Durch Kurzschlussverhalten kann die Leistung erhöht werden, doch kann es zu unerwarteten Ergebnissen führen, wenn Sie davon ausgehen, dass jeder Ausdruck in `expressionlist` ausgewertet wird.  Weitere Informationen über Kurzschlussverhalten finden Sie unter [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+>  <span data-ttu-id="d6b35-144">Ein `Case` ausgesondert, und als eine Anweisung mit mehreren Klauseln *verkürzte*.</span><span class="sxs-lookup"><span data-stu-id="d6b35-144">A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*.</span></span> <span data-ttu-id="d6b35-145">Visual Basic wertet die Klauseln von links nach rechts, und wenn mindestens eine erzeugt eine Übereinstimmung mit `testexpression`, die verbleibenden Klauseln werden nicht ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="d6b35-145">Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated.</span></span> <span data-ttu-id="d6b35-146">Verkürzte kann die Leistung verbessern, aber es kann zu unerwarteten Ergebnissen führen, wenn erwartet jeder Ausdruck in wird `expressionlist` ausgewertet werden soll.</span><span class="sxs-lookup"><span data-stu-id="d6b35-146">Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated.</span></span> <span data-ttu-id="d6b35-147">Weitere Informationen über Kurzschlussverhalten finden Sie unter [boolesche Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="d6b35-147">For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).</span></span>  
   
- Wenn der Code in einem `Case`\-Anweisungsblock oder einem `Case Else`\-Anweisungsblock keine weiteren Anweisungen in dem Block ausführen muss, kann er den Block mithilfe der `Exit Select`\-Anweisung beenden.  Dadurch setzt das Programm die Ausführung sofort mit der Anweisung fort, die auf `End Select` folgt.  
+ <span data-ttu-id="d6b35-148">Wenn der Code innerhalb einer `Case` oder `Case Else` -Anweisungsblock muss nicht mehr der Anweisungen im Block ausgeführt, beendet den Block kann mithilfe der `Exit Select` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d6b35-148">If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement.</span></span> <span data-ttu-id="d6b35-149">Dies überträgt die Steuerung sofort an die Anweisung nach `End Select`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-149">This transfers control immediately to the statement following `End Select`.</span></span>  
   
- `Select Case`\-Konstruktionen können geschachtelt werden.  Für jede geschachtelte `Select Case`\-Konstruktion muss eine entsprechende `End Select`\-Anweisung vorhanden sein, und sie muss sich vollständig in einem einzelnen `Case`\-Anweisungsblock oder `Case Else`\-Anweisungsblock der äußeren `Select Case`\-Konstruktion befinden, in dem sie geschachtelt ist.  
+ <span data-ttu-id="d6b35-150">`Select Case`Konstruktionen können geschachtelt werden.</span><span class="sxs-lookup"><span data-stu-id="d6b35-150">`Select Case` constructions can be nested.</span></span> <span data-ttu-id="d6b35-151">Jede geschachtelte `Select Case` Konstruktion benötigen einen übereinstimmenden `End Select` Anweisung und muss vollständig in einer einzelnen enthalten `Case` oder `Case Else` Anweisungsblock des äußeren `Select Case` Konstruktion, in dem sie geschachtelt ist.</span><span class="sxs-lookup"><span data-stu-id="d6b35-151">Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird mit einer `Select Case`\-Konstruktion eine Zeile geschrieben, die dem Wert der `number`\-Variablen entspricht.  Die zweite `Case`\-Anweisung enthält den Wert, der dem aktuellen Wert von `number` entspricht, sodass die Anweisung ausgeführt wird, die "Between 6 and 8, inclusive" schreibt.  
+## <a name="example"></a><span data-ttu-id="d6b35-152">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d6b35-152">Example</span></span>  
+ <span data-ttu-id="d6b35-153">Im folgenden Beispiel wird eine `Select Case` Konstruktion, um eine Zeile entsprechend dem Wert der Variablen schreiben `number`.</span><span class="sxs-lookup"><span data-stu-id="d6b35-153">The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`.</span></span> <span data-ttu-id="d6b35-154">Die zweite `Case` -Anweisung enthält den Wert, der den aktuellen Wert der entspricht `number`, sodass die Anweisung, die "zwischen 6 und 8, inclusive" schreibt ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d6b35-154">The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.</span></span>  
   
  [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   
- [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)   
- [If...Then...Else Statement](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d6b35-155">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6b35-155">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
+ [<span data-ttu-id="d6b35-156">End-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d6b35-156">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [<span data-ttu-id="d6b35-157">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d6b35-157">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="d6b35-158">Option Compare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d6b35-158">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="d6b35-159">Exit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="d6b35-159">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)

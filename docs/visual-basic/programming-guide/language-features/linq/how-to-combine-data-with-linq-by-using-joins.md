@@ -1,99 +1,98 @@
 ---
-title: "How to: Combine Data with LINQ by Using Joins (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [LINQ in Visual Basic], joins"
-  - "joins [LINQ in Visual Basic]"
-  - "Join clause [LINQ in Visual Basic]"
-  - "Group Join clause [Visual Basic]"
-  - "joining [LINQ in Visual Basic]"
-  - "queries [LINQ in Visual Basic], how-to topics"
+title: 'Gewusst wie: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], joins
+- joins [LINQ in Visual Basic]
+- Join clause [LINQ in Visual Basic]
+- Group Join clause [Visual Basic]
+- joining [LINQ in Visual Basic]
+- queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 432be646ce4353fd4627a34f363e7562f6181e92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Combine Data with LINQ by Using Joins (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic stellt die Abfrageklauseln `Join` und `Group Join` bereit, mit denen Sie die Inhalte mehrerer Auflistungen auf Grundlage gemeinsamer Werte kombinieren können.  Diese Werte werden als *Schlüsselwerte* bezeichnet.  Mit relationalen Datenbanken vertraute Entwickler erkennen, dass die `Join`\-Klausel einem INNER JOIN und die `Group Join`\-Klausel praktisch einem LEFT OUTER JOIN entspricht.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a><span data-ttu-id="352ad-102">Gewusst wie: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="352ad-102">How to: Combine Data with LINQ by Using Joins (Visual Basic)</span></span>
+<span data-ttu-id="352ad-103">Visual Basic bietet die `Join` und `Group Join` Abfrageklauseln, um den Inhalt mehrerer Sammlungen basierend auf häufig verwendete Werte zwischen den Sammlungen kombinieren können.</span><span class="sxs-lookup"><span data-stu-id="352ad-103">Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections.</span></span> <span data-ttu-id="352ad-104">Diese Werte werden als bezeichnet *Schlüssel* Werte.</span><span class="sxs-lookup"><span data-stu-id="352ad-104">These values are known as *key* values.</span></span> <span data-ttu-id="352ad-105">Mit relationalen Datenbanken vertraute Entwickler erkennt die `Join` -Klausel wie eine INNER JOIN und die `Group Join` -Klausel so effektiv einen LEFT OUTER JOIN.</span><span class="sxs-lookup"><span data-stu-id="352ad-105">Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.</span></span>  
   
- In den Beispielen dieses Themas werden einige Möglichkeiten zum Kombinieren von Daten mit den Abfrageklauseln `Join` und `Group Join` veranschaulicht.  
+ <span data-ttu-id="352ad-106">In den Beispielen in diesem Thema veranschaulichen einige Möglichkeiten zum Kombinieren von Daten mithilfe der `Join` und `Group Join` Abfrageklauseln.</span><span class="sxs-lookup"><span data-stu-id="352ad-106">The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.</span></span>  
   
-## Erstellen eines Projekts und Hinzufügen von Beispieldaten  
+## <a name="create-a-project-and-add-sample-data"></a><span data-ttu-id="352ad-107">Erstellen eines Projekts und Hinzufügen von Beispieldaten</span><span class="sxs-lookup"><span data-stu-id="352ad-107">Create a Project and Add Sample Data</span></span>  
   
-#### So erstellen Sie ein Projekt mit Beispieldaten und \-typen  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a><span data-ttu-id="352ad-108">So erstellen Sie ein Projekt enthält, die Beispieldaten und Typen</span><span class="sxs-lookup"><span data-stu-id="352ad-108">To create a project that contains sample data and types</span></span>  
   
-1.  Um die Beispiele dieses Themas auszuführen, öffnen Sie Visual Studio und fügen ein neues Visual Basic\-Konsolenanwendungsprojekt hinzu.  Doppelklicken Sie auf die von Visual Basic erstellte Datei Module1.vb.  
+1.  <span data-ttu-id="352ad-109">Öffnen Sie Visual Studio, und fügen Sie ein neues Visual Basic-Konsolenanwendungsprojekt hinzu, zum Ausführen der Beispiele in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="352ad-109">To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project.</span></span> <span data-ttu-id="352ad-110">Doppelklicken Sie auf die Datei "Module1.vb" von Visual Basic erstellt.</span><span class="sxs-lookup"><span data-stu-id="352ad-110">Double-click the Module1.vb file created by Visual Basic.</span></span>  
   
-2.  In den Beispielen dieses Themas werden die Typen `Person` und `Pet` und Daten aus den folgenden Codebeispielen verwendet.  Kopieren Sie diesen Code in das von Visual Basic erstellte Standardmodul `Module1`.  
+2.  <span data-ttu-id="352ad-111">In den Beispielen in diesem Thema verwenden die `Person` und `Pet` Typen und Daten aus dem folgenden Codebeispiel.</span><span class="sxs-lookup"><span data-stu-id="352ad-111">The samples in this topic use the `Person` and `Pet` types and data from the following code example.</span></span> <span data-ttu-id="352ad-112">Kopieren Sie diesen Code in der Standardeinstellung `Module1` Modul von Visual Basic erstellt.</span><span class="sxs-lookup"><span data-stu-id="352ad-112">Copy this code into the default `Module1` module created by Visual Basic.</span></span>  
   
      [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
     [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
-## Ausführen eines inneren Joins mithilfe der Join\-Klausel  
- Ein INNER JOIN kombiniert Daten aus zwei Auflistungen.  Es werden die Elemente eingeschlossen, bei denen die angegebenen Schlüsselwerte übereinstimmen.  Alle Elemente der beiden Auflistungen, für die es in der jeweils anderen Auflistung kein passendes Element gibt, werden ausgeschlossen.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a><span data-ttu-id="352ad-113">Führen Sie eine innere Verknüpfung mithilfe der Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-113">Perform an Inner Join by Using the Join Clause</span></span>  
+ <span data-ttu-id="352ad-114">Ein INNER JOIN werden Daten aus zwei Sammlungen kombiniert.</span><span class="sxs-lookup"><span data-stu-id="352ad-114">An INNER JOIN combines data from two collections.</span></span> <span data-ttu-id="352ad-115">Elemente, die für die die angegebenen Schlüsselwerte übereinstimmen, sind enthalten.</span><span class="sxs-lookup"><span data-stu-id="352ad-115">Items for which the specified key values match are included.</span></span> <span data-ttu-id="352ad-116">Alle Elemente aus einer Auflistung, die nicht über ein übereinstimmendes Element in die andere Auflistung verfügen, werden ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="352ad-116">Any items from either collection that do not have a matching item in the other collection are excluded.</span></span>  
   
- LINQ stellt in Visual Basic zwei Optionen zum Ausführen eines INNER JOIN bereit: einen impliziten Join und einen expliziten Join.  
+ <span data-ttu-id="352ad-117">In Visual Basic LINQ bietet zwei Optionen zum Ausführen eines INNER Joins: eines impliziten Joins und expliziten Join.</span><span class="sxs-lookup"><span data-stu-id="352ad-117">In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.</span></span>  
   
- Bei einem impliziten Join werden die zu verknüpfenden Auflistungen in einer `From`\-Klausel angegeben und die entsprechenden Schlüsselfelder in einer `Where`\-Klausel identifiziert.  Visual Basic verknüpft die beiden Auflistungen implizit auf Grundlage der angegebenen Schlüsselfelder.  
+ <span data-ttu-id="352ad-118">Eine implizite Verknüpfung gibt an, die Auflistungen verknüpft werden, eine `From` Klausel und identifiziert die übereinstimmenden Felder in einer `Where` Klausel.</span><span class="sxs-lookup"><span data-stu-id="352ad-118">An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause.</span></span> <span data-ttu-id="352ad-119">Visual Basic wird implizit die beiden Auflistungen, die basierend auf den angegebenen Schlüsselfeldern verknüpft.</span><span class="sxs-lookup"><span data-stu-id="352ad-119">Visual Basic implicitly joins the two collections based on the specified key fields.</span></span>  
   
- Einen expliziten Join können Sie mit der `Join`\-Klausel angeben, wenn Sie genau festlegen möchten, welche Schlüsselfelder in dem Join verwendet werden sollen.  In diesem Fall kann weiterhin eine `Where`\-Klausel verwendet werden, um die Abfrageergebnisse zu filtern.  
+ <span data-ttu-id="352ad-120">Sie können die expliziten Join angeben, mit der `Join` -Klausel, wenn bestimmte über Schlüssel Felder, um die im Join verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="352ad-120">You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join.</span></span> <span data-ttu-id="352ad-121">In diesem Fall eine `Where` -Klausel kann weiterhin zum Filtern der Abfrageergebnisse verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="352ad-121">In this case, a `Where` clause can still be used to filter the query results.</span></span>  
   
-#### So führen Sie einen inneren Join mithilfe der Join\-Klausel aus  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a><span data-ttu-id="352ad-122">Ein Inner Join ausführen, mithilfe der Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-122">To perform an Inner Join by using the Join clause</span></span>  
   
-1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele sowohl für einen impliziten als auch für einen expliziten inneren Join zu erhalten.  
+1.  <span data-ttu-id="352ad-123">Fügen Sie folgenden Code, der `Module1` Modul in Ihrem Projekt, um Beispiele für beide eine implizite und explizite innere Verknüpfung finden Sie unter.</span><span class="sxs-lookup"><span data-stu-id="352ad-123">Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.</span></span>  
   
      [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
-## Ausführen eines linken äußeren Joins mithilfe der Group Join\-Klausel  
- Mit LEFT OUTER JOIN werden alle Elemente der Auflistung auf der linken Seite des Joins und nur die passenden Werte der Auflistung auf der rechten Seite des Joins eingeschlossen.  Die Elemente der Auflistung auf der rechten Seite des Joins, für die es in der Auflistung auf der linken Seite des Joins kein passendes Element gibt, werden aus dem Abfrageergebnis ausgeschlossen.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a><span data-ttu-id="352ad-124">Führen Sie eine linke äußere Verknüpfung mit dem Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-124">Perform a Left Outer Join by Using the Group Join Clause</span></span>  
+ <span data-ttu-id="352ad-125">LEFT OUTER JOIN schließt alle Elemente aus der linken Auflistung von Joins und nur übereinstimmende Werte aus der Auflistung der rechten Seite des Joins.</span><span class="sxs-lookup"><span data-stu-id="352ad-125">A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join.</span></span> <span data-ttu-id="352ad-126">Alle Elemente aus der Auflistung der rechten Seite des Joins, die nicht über ein entsprechendes Element in der linken Auflistung verfügen, werden aus dem Abfrageergebnis ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="352ad-126">Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.</span></span>  
   
- Die `Group Join`\-Klausel verhält sich praktisch wie ein LEFT OUTER JOIN.  Der Unterschied zwischen einem normalen LEFT OUTER JOIN und der Rückgabe der `Group Join`\-Klausel besteht darin, dass die Ergebnisse aus der Auflistung auf der rechten Seite des Joins bei der `Group Join`\-Klausel für jedes Element der Auflistung auf der linken Seite des Joins gruppiert werden.  In einer relationalen Datenbank wird bei einem LEFT OUTER JOIN ein nicht gruppiertes Ergebnis zurückgegeben, bei dem jedes Element des Abfrageergebnisses passende Elemente aus beiden Auflistungen des Joins enthält.  In diesem Fall werden die Elemente der Auflistung auf der linken Seite des Joins für jedes passende Element der Auflistung auf der rechten Seite des Joins wiederholt.  Sie werden diese Darstellung deutlicher erkennen, wenn Sie das nächste Verfahren durchführen.  
+ <span data-ttu-id="352ad-127">Die `Group Join` -Klausel übernimmt zwei, tatsächlich einen LEFT OUTER JOIN.</span><span class="sxs-lookup"><span data-stu-id="352ad-127">The `Group Join` clause performs, in effect, a LEFT OUTER JOIN.</span></span> <span data-ttu-id="352ad-128">Der Unterschied zwischen was als LEFT OUTER JOIN in der Regel bezeichnet wird und was die `Group Join` -Klausel zurückgegeben wird, die die `Group Join` Klausel Gruppen Ergebnisse aus der Auflistung der rechten Seite des Joins für jedes Element in der linken Auflistung.</span><span class="sxs-lookup"><span data-stu-id="352ad-128">The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection.</span></span> <span data-ttu-id="352ad-129">In einer relationalen Datenbank gibt LEFT OUTER JOIN, dass eine nicht gruppierte Ergebnis in dem jedes Element in der Abfrage ergeben übereinstimmenden Elemente aus beiden Auflistungen, in dem Join enthält.</span><span class="sxs-lookup"><span data-stu-id="352ad-129">In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join.</span></span> <span data-ttu-id="352ad-130">In diesem Fall werden die Elemente aus der Auflistung der linken Seite des Joins für jedes übereinstimmende Element aus der rechten Auflistung wiederholt.</span><span class="sxs-lookup"><span data-stu-id="352ad-130">In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection.</span></span> <span data-ttu-id="352ad-131">Sie sehen, wie dies aussieht, wenn Sie das nächste Verfahren abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="352ad-131">You will see what this looks like when you complete the next procedure.</span></span>  
   
- Sie können die Ergebnisse einer `Group Join`\-Abfrage ohne Gruppierung abrufen, indem Sie die Abfrage so erweitern, dass für jedes gruppierte Abfrageergebnis ein Element zurückgegeben wird.  Zu diesem Zweck müssen Sie sicherstellen, dass Sie die Abfrage mithilfe der `DefaultIfEmpty`\-Methode der gruppierten Auflistung ausführen.  Dadurch wird sichergestellt, dass im Abfrageergebnis auch Elemente der Auflistung auf der linken Seite des Joins eingeschlossen werden, wenn es keine passenden Ergebnisse in der Auflistung auf der rechten Seite gibt.  Sie können Ihrer Abfrage Code zum Bereitstellen eines Standardergebnisses hinzufügen, wenn es in der Auflistung auf der rechten Seite des Joins keinen passenden Wert gibt.  
+ <span data-ttu-id="352ad-132">Sie können die Ergebnisse Abrufen einer `Group Join` Abfrage als nicht gruppierte Ergebnis durch das Erweitern Ihrer Abfrage aus, um ein Element für jeden gruppierten Abfrageergebnis zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="352ad-132">You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result.</span></span> <span data-ttu-id="352ad-133">Um dies zu erreichen, müssen Sie sicherstellen, dass Sie eine in Abfrage der `DefaultIfEmpty` -Methode der gruppierte Auflistung.</span><span class="sxs-lookup"><span data-stu-id="352ad-133">To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection.</span></span> <span data-ttu-id="352ad-134">Dadurch wird sichergestellt, dass Elemente aus der Auflistung der linken Seite des Joins weiterhin im Abfrageergebnis enthalten sind, auch wenn sie keine passenden Ergebnisse aus der rechten Auflistung verfügen.</span><span class="sxs-lookup"><span data-stu-id="352ad-134">This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection.</span></span> <span data-ttu-id="352ad-135">Sie können Code hinzufügen, zu der Abfrage, die einen Standardwert für das Ergebnis versorgen, wenn kein übereinstimmender Wert aus der Auflistung der rechten Seite des Joins.</span><span class="sxs-lookup"><span data-stu-id="352ad-135">You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.</span></span>  
   
-#### So führen Sie einen linken äußeren Join mithilfe der Group Join\-Klausel aus  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a><span data-ttu-id="352ad-136">Um einen Left Outer Join ausführen, indem Sie mit der Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-136">To perform a Left Outer Join by using the Group Join clause</span></span>  
   
-1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele sowohl für einen gruppierten als auch für einen nicht gruppierten linken äußeren Join zu erhalten.  
+1.  <span data-ttu-id="352ad-137">Fügen Sie folgenden Code, der `Module1` Modul in Ihrem Projekt, um Beispiele für eine gruppierte linke äußere Verknüpfung und eines nicht gruppierten linken äußeren Joins finden Sie unter.</span><span class="sxs-lookup"><span data-stu-id="352ad-137">Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.</span></span>  
   
      [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
-## Ausführen eines Joins mithilfe eines zusammengesetzten Schlüssels  
- Mit dem `And`\-Schlüsselwort können Sie in einer `Join`\-Klausel oder einer `Group Join`\-Klausel mehrere zu verwendende Schlüsselfelder zum Vergleichen der Werte aus den zu verknüpfenden Auflistungen festlegen.  Mit dem `And`\-Schlüsselwort geben Sie an, dass für die zu verknüpfenden Elemente alle angegebenen Schlüsselfelder übereinstimmen müssen.  
+## <a name="perform-a-join-by-using-a-composite-key"></a><span data-ttu-id="352ad-138">Ausführen einer Verknüpfung mithilfe eines zusammengesetzten Schlüssels</span><span class="sxs-lookup"><span data-stu-id="352ad-138">Perform a Join by Using a Composite Key</span></span>  
+ <span data-ttu-id="352ad-139">Sie können die `And` -Schlüsselwort in eine `Join` oder `Group Join` -Klausel, um die mehrfachen Schlüsselfelder verwenden, beim Ermitteln von Übereinstimmungen zu identifizieren-Statuswerte zu verknüpfenden Auflistungen.</span><span class="sxs-lookup"><span data-stu-id="352ad-139">You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined.</span></span> <span data-ttu-id="352ad-140">Die `And` -Schlüsselwort Gibt an, dass alle angegebenen Schlüsselfelder übereinstimmen nach Elementen verknüpft werden sollen.</span><span class="sxs-lookup"><span data-stu-id="352ad-140">The `And` keyword specifies that all specified key fields must match for items to be joined.</span></span>  
   
-#### So führen Sie einen Join mithilfe eines zusammengesetzten Schlüssels aus  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a><span data-ttu-id="352ad-141">Für einen Join mit einem zusammengesetzten Schlüssel</span><span class="sxs-lookup"><span data-stu-id="352ad-141">To perform a Join by using a composite key</span></span>  
   
-1.  Fügen Sie Ihrem Projekt im Modul `Module1` den folgenden Code hinzu, um Beispiele für einen Join anzuzeigen, der einen zusammengesetzten Schlüssel verwendet.  
+1.  <span data-ttu-id="352ad-142">Fügen Sie folgenden Code, der `Module1` Modul in Ihrem Projekt aus, um Beispiele für einen Join anzuzeigen, die einen zusammengesetzten Schlüssel verwendet.</span><span class="sxs-lookup"><span data-stu-id="352ad-142">Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.</span></span>  
   
      [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
-## Ausführen des Codes  
+## <a name="run-the-code"></a><span data-ttu-id="352ad-143">Führen Sie den Code</span><span class="sxs-lookup"><span data-stu-id="352ad-143">Run the Code</span></span>  
   
-#### So fügen Sie Code hinzu, um die Beispiele auszuführen  
+#### <a name="to-add-code-to-run-the-examples"></a><span data-ttu-id="352ad-144">Hinzufügen von Code zum Ausführen der Beispiele</span><span class="sxs-lookup"><span data-stu-id="352ad-144">To add code to run the examples</span></span>  
   
-1.  Ersetzen Sie in Ihrem Projekt im Modul `Module1` `Sub Main` durch den folgenden Code, um die Beispiele dieses Themas auszuführen.  
+1.  <span data-ttu-id="352ad-145">Ersetzen Sie die `Sub Main` in die `Module1` Modul in Ihrem Projekt durch den folgenden Code zum Ausführen der Beispiele in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="352ad-145">Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.</span></span>  
   
      [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
-2.  Drücken Sie F5, um die Beispiele auszuführen.  
+2.  <span data-ttu-id="352ad-146">Drücken Sie F5, um die Beispiele auszuführen.</span><span class="sxs-lookup"><span data-stu-id="352ad-146">Press F5 to run the examples.</span></span>  
   
-## Siehe auch  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md)   
- [Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md)   
- [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md)   
- [Queries](../../../../visual-basic/language-reference/queries/queries.md)   
- [Datentransformationen mit LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a><span data-ttu-id="352ad-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="352ad-147">See Also</span></span>  
+ [<span data-ttu-id="352ad-148">LINQ</span><span class="sxs-lookup"><span data-stu-id="352ad-148">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="352ad-149">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="352ad-149">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="352ad-150">Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-150">Join Clause</span></span>](../../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="352ad-151">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-151">Group Join Clause</span></span>](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="352ad-152">From-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-152">From Clause</span></span>](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="352ad-153">Where-Klausel</span><span class="sxs-lookup"><span data-stu-id="352ad-153">Where Clause</span></span>](../../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="352ad-154">Abfragen</span><span class="sxs-lookup"><span data-stu-id="352ad-154">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="352ad-155">Datentransformationen mit LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="352ad-155">Data Transformations with LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
