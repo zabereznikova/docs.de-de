@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
 Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in systemeigenen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von systemeigenen Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  
@@ -51,7 +49,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
   
  Beim Konvertieren einer App aus der Zwischensprache in systemeigenen Code führt die .NET Native-Toolkette Vorgänge wie die Folgenden aus:  
   
--   Für bestimmte Codepfade wird Code ersetzt, der auf Reflektion und Metadaten mit statischem systemeigenem Code beruht. Wenn ein Werttyp z. B. die <xref:System.ValueType.Equals%2A?displayProperty=fullName>-Methode nicht außer Kraft setzt, verwendet der Standardtest zur Ermittlung der Gleichheit die Reflektion, um <xref:System.Reflection.FieldInfo>-Objekte abzurufen, die die Felder des Werttyps darstellen. Anschließend werden die Feldwerte von zwei Instanzen verglichen. Beim Kompilieren in systemeigenen Code ersetzt die .NET Native-Toolkette den Reflektionscode und die Metadaten durch einen statischen Vergleich der Feldwerte.  
+-   Für bestimmte Codepfade wird Code ersetzt, der auf Reflektion und Metadaten mit statischem systemeigenem Code beruht. Wenn ein Werttyp z. B. die <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>-Methode nicht außer Kraft setzt, verwendet der Standardtest zur Ermittlung der Gleichheit die Reflektion, um <xref:System.Reflection.FieldInfo>-Objekte abzurufen, die die Felder des Werttyps darstellen. Anschließend werden die Feldwerte von zwei Instanzen verglichen. Beim Kompilieren in systemeigenen Code ersetzt die .NET Native-Toolkette den Reflektionscode und die Metadaten durch einen statischen Vergleich der Feldwerte.  
   
 -   Dabei wird nach Möglichkeit versucht, alle Metadaten zu beseitigen.  
   
@@ -111,8 +109,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
 -   NGEN-Images sind eher anfällig. Ein Patch oder eine Änderung für eine Abhängigkeit erfordert z. B. in der Regel, dass NGEN für die Assemblys, die diese verwenden, ebenfalls erneut durchgeführt wird. Dies gilt insbesondere für Systemassemblys in der .NET Framework-Klassenbibliothek. Im Gegensatz dazu gestattet .NET Native, dass Anwendungen unabhängig voneinander bereitgestellt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadaten und selbstbeschreibende Komponenten](../../../docs/standard/metadata-and-self-describing-components.md)   
- [Inside .NET Native (Channel 9-Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [Reflektion und .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [Metadaten und selbstbeschreibende Komponenten](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [Inside .NET Native (Channel 9-Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native Allgemeine Problembehandlung](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

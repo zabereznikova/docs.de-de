@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
 Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Der moderne Personalcomputer (PC) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Arbeitsspeicher und eine große Festplatte, die beim Ausführen von allgemeinen Rechenaufgaben, wie z.B. E-Mail und Webbrowsen allesamt nicht voll ausgelastet werden. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  
@@ -56,6 +50,5 @@ Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (P
  In einer Active Directory-Domäne bieten Domänencontroller Kerberos-Authentifizierungsdienste an. In einer serverlosen Peer-Umgebung müssen die Peers ihre eigene Authentifizierung bereitstellen. Für das Peer-zu-Peer-Netzwerk kann jeder beliebige Knoten als Zertifizierungsstelle fungieren, wobei die Anforderung für ein Stammzertifikat in jedem vertrauenswürdigen Stammspeicher des Peers wegfällt. Die Authentifizierung wird unter Verwendung selbstsignierter Zertifikate, formatiert als x. 509-Zertifikate, bereitgestellt. Hierbei handelt es sich um Zertifikate, die von jedem Peer erstellt werden, der den öffentlichen Schlüssel/das private Schlüsselpaar und das Zertifikat, das mit dem privaten Schlüssel signiert ist, generiert. Das selbstsignierte Zertifikat wird zur Authentifizierung und zum Bereitstellen von Informationen über die Peer-Entität verwendet. Wie bei der X.509-Authentifizierung, verlässt sich die Peer-Netzwerkauthentifizierung auf eine Kette von Zertifikaten, die auf einen öffentlichen Schlüssel zurückführen, der als vertrauenswürdig eingestuft wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

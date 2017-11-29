@@ -1,37 +1,35 @@
 ---
-title: "My.Computer.Network Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Network object"
+title: My.Computer.Network-Objekt
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 19b9d2c81aee1428a66959e421ca7be536e541ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# My.Computer.Network Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Stellt eine Eigenschaft, ein Ereignis und Methoden für die Interaktion mit dem Netzwerk bereit, an das der Computer angeschlossen ist.  
+# <a name="mycomputernetwork-object"></a>My.Computer.Network-Objekt
+Stellt eine Eigenschaft, Ereignis- und Methoden für die Interaktion mit dem Netzwerk zu dem der Computer verbunden ist.  
   
-## Hinweise  
- Weitere Informationen zu den Methoden und Eigenschaften des `My.Computer.Network`\-Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Network>.  
+## <a name="remarks"></a>Hinweise  
+ Informationen zu den Methoden und Eigenschaften der `My.Computer.Network` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- Weitere Informationen finden Sie unter [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Weitere Informationen finden Sie unter [Durchführen von Netzwerkoperationen](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
-## Anforderungen  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName>  
+## <a name="requirements"></a>Anforderungen  
+ **Namespace:**<xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.Devices.Network>  
+ **Klasse:**<xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic\-Laufzeitbibliothek \(in Microsoft.VisualBasic.dll\)  
+ **Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")  
   
-## Siehe auch  
- [My.Computer Object](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Siehe auch  
+ [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,46 +1,44 @@
 ---
-title: "MULTISET (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: MULTISET (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e72605225d214ccd2283aaae3f0c2071ceb92d91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# MULTISET (Entity SQL)
-Erstellt eine Instanz einer Multimenge aus einer Liste von Werten. Alle Werte im MULTISET\-Konstruktor müssen von einem kompatiblen  `T`\-Typ sein. Leere Multimengenkonstruktoren sind nicht zulässig.  
+# <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
+Erstellt eine Instanz einer Multimenge aus einer Liste von Werten. Alle Werte im MULTISET-Konstruktor müssen von einem kompatiblen `T`-Typ sein. Leere Multimengenkonstruktoren sind nicht zulässig.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-MULTISET (expression [{, expression }] )  
+MULTISET ( expression [{, expression }] )  
 or  
 { expression [{, expression }] }  
 ```  
   
-## Argumente  
+## <a name="arguments"></a>Argumente  
  `expression`  
  Eine beliebige Liste gültiger Werte.  
   
-## Rückgabewert  
- Eine Auflistung des Typs MULTISET\<T\>.  
+## <a name="return-value"></a>Rückgabewert  
+ Eine Auflistung des Typs MULTISET\<T >.  
   
-## Hinweise  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Objektkonstruktoren und Multimengenkonstruktoren \(oder Auflistungen\). Weitere Informationen finden Sie unter [Konstruktionstypen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+## <a name="remarks"></a>Hinweise  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Objektkonstruktoren und Multimengenkonstruktoren (oder Auflistungen). Weitere Informationen finden Sie unter [Typen erstellen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
  Der Multimengenkonstruktor erstellt eine Instanz einer Multimenge aus einer Liste von Werten. Alle Werte im Konstruktor müssen von einem kompatiblen Typ sein.  
   
@@ -51,17 +49,17 @@ or
  `{1, 2, 3}`  
   
 > [!NOTE]
->  Geschachtelte Multimengenliterale werden nur unterstützt, wenn eine Wrapping\-Multimenge über ein einzelnes Multimengenelement verfügt, z. B. `{{1, 2, 3}}`. Wenn die Wrapping\-Multimenge über mehrere Multimengenelemente verfügt, werden geschachtelte \(z. B. `{{1, 2}, {3, 4}}`\) Multimengenliterale nicht unterstützt.  
+>  Geschachtelte Multimengenliterale werden nur unterstützt, wenn eine Wrapping-Multimenge über ein einzelnes Multimengenelement verfügt, z. B. `{{1, 2, 3}}`. Wenn die Wrapping-Multimenge über mehrere Multimengenelemente verfügt, werden geschachtelte (z. B. `{{1, 2}, {3, 4}}`) Multimengenliterale nicht unterstützt.  
   
-## Beispiel  
- Die Folgende Entity SQL\-Abfrage verwendet den MULTISET\-Operator, um eine Instanz einer Multimenge aus einer Liste mit Werten zu erstellen. Diese Abfrage beruht auf dem "AdventureWorks Sales"\-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+## <a name="example"></a>Beispiel  
+ Die Folgende Entity SQL-Abfrage verwendet den MULTISET-Operator, um eine Instanz einer Multimenge aus einer Liste mit Werten zu erstellen. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren unter [Vorgehensweise: Ausführen einer Abfrage, die StructuralType\-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery`\-Methode:  
+2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   
-## Siehe auch  
- [Konstruktionstypen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)   
- [Entity SQL\-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Konstruktionstypen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
+ [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

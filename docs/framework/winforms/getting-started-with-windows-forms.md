@@ -1,69 +1,70 @@
 ---
-title: "Erste Schritte mit Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Designer_System.Windows.Forms.Design.FormDocumentDesigner"
-  - "vb.wfc.formdesigner"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Erste Schritte, Windows Forms"
-  - "Windows Forms, Erste Schritte"
+title: Erste Schritte mit Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Designer_System.Windows.Forms.Design.FormDocumentDesigner
+- vb.wfc.formdesigner
+helpviewer_keywords:
+- Windows Forms, getting started
+- getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Erste Schritte mit Windows Forms
-Mit Windows Forms können Sie leistungsstarke Windows\-basierte Anwendungen erstellen.  In den folgenden Themen wird ausführlich beschrieben, wie Sie die Leistungsfähigkeit von Windows Forms nutzen, um Daten anzuzeigen, Benutzereingaben zu behandeln sowie Anwendungen einfach und mit erhöhter Sicherheit bereitzustellen.  
+# <a name="getting-started-with-windows-forms"></a>Erste Schritte mit Windows Forms
+Mit Windows Forms können Sie leistungsfähige Windows-basierten Anwendungen erstellen. In den folgenden Themen beschrieben ausführliche nutzen die Leistungsfähigkeit von Windows Forms, um Daten anzuzeigen, Benutzereingaben zu behandeln und Bereitstellen Ihrer Anwendungen einfach und mit erweiterter Sicherheit.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Windows Forms](../../../docs/framework/winforms/windows-forms-overview.md)  
- Enthält einen Überblick über Windows Forms und intelligente Clientanwendungen.  
+ Enthält eine Übersicht über Windows Forms und intelligente Clientanwendungen.  
   
  [Erstellen neuer Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
- Enthält Links zu Themen, in denen grundlegende Konzepte zum Erstellen von Windows Forms\-Anwendungen beschrieben werden.  
+ Enthält Links zu Themen, in denen grundlegende Konzepte zum Erstellen von Windows Forms-Anwendungen beschrieben.  
   
  [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- Enthält Links zu Themen, in denen beschrieben wird, wie Windows Forms\-Ereignishandler erstellt werden.  
+ Enthält Links zu Themen, in denen beschrieben, wie Windows Forms-Ereignishandler zu erstellen.  
   
  [Anpassen der Größe und Skalieren von Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
- Enthält Links zu Themen, in denen die Größenanpassung und Skalierung von Windows Forms veranschaulicht wird.  
+ Enthält Links zu Themen, die zum Anpassen der Größe und Skalieren von Windows Forms zu veranschaulichen.  
   
  [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- Enthält Links zu Themen, in denen dargestellt wird, wie die Darstellung von Windows Forms\-Anwendungen geändert wird.  
+ Enthält Links zu Themen, in denen gezeigt wird, wie die Darstellung von Windows Forms-Anwendungen geändert wird.  
   
- [Windows Forms\-Steuerelemente](../../../docs/framework/winforms/controls/index.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Windows Forms\-Steuerelemente und \-Komponenten verwendet werden.  
+ [Windows Forms-Steuerelemente](../../../docs/framework/winforms/controls/index.md)  
+ Enthält Links zu Themen, in denen beschrieben und gezeigt, wie Windows Forms-Steuerelemente und Komponenten verwendet wird.  
   
  [Benutzereingaben in Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
- Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Benutzereingaben in Windows Forms\-Anwendungen behandelt werden.  
+ Enthält Links zu Themen, in denen beschrieben und veranschaulicht das Behandeln von Benutzereingaben in Windows Forms-Anwendungen.  
   
- [Dialogfelder in Windows Forms](../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- Enthält Links zu Themen, in denen die verschiedenen Dialogfelder zur Verwendung in Windows Forms beschrieben werden.  
+ [Dialogfelder in Windows Forms](../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ Enthält Links zu Themen, in denen die verschiedenen Dialogfelder zur Verwendung in Windows Forms beschrieben.  
   
- [Datenbindung in Web Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Enthält Links zu Themen, in denen die Datenbindungsarchitektur von Windows Forms und ihre Verwendung in Windows Forms\-Anwendungen beschrieben wird.  
+ [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ Enthält Links zu Themen, in denen die Datenbindungsarchitektur von Windows Forms und wie es in Windows Forms-Anwendungen verwendet.  
   
- [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
- Enthält Links zu Themen, in denen beschrieben wird, wie Windows Forms\-Anwendungen mit erhöhter Sicherheit erstellt werden.  
+ [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
+ Enthält Links zu Themen, in denen beschrieben, wie Windows Forms-Anwendungen erstellen, die Sicherheit erweitert haben.  
   
- [ClickOnce\-Bereitstellung für Windows Forms](../../../docs/framework/winforms/clickonce-deployment-for-windows-forms.md)  
- Enthält Links zu Themen, in denen beschrieben wird, wie Windows Forms\-Anwendungen einfach bereitgestellt werden.  
+ [ClickOnce-Bereitstellung für Windows Forms](../../../docs/framework/winforms/clickonce-deployment-for-windows-forms.md)  
+ Enthält Links zu Themen, in denen zur einfachen Bereitstellung von Windows Forms-Anwendungen beschrieben.  
   
  [Gewusst wie: Zugreifen auf verschlüsselte Auflistungen in Windows Forms](../../../docs/framework/winforms/how-to-access-keyed-collections-in-windows-forms.md)  
- Veranschaulicht das Zugreifen auf Auflistungen mit Schlüsseln anstelle von Indizes.  
+ Veranschaulicht, wie Auflistungen mit Schlüssel anstelle von Indizes zuzugreifen.  
   
-## Verwandte Abschnitte  
- [Erweitern von Windows Forms\-Anwendungen](../../../docs/framework/winforms/advanced/index.md)  
- Enthält Links zu Themen, in denen erweiterte Konzepte zum Erstellen von Windows Forms\-Anwendungen beschrieben werden.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Erweitern von Windows Forms-Anwendungen](../../../docs/framework/winforms/advanced/index.md)  
+ Enthält Links zu Themen, in denen erweiterte Konzepte zum Erstellen von Windows Forms-Anwendungen beschrieben.

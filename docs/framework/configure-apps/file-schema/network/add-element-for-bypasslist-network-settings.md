@@ -1,80 +1,83 @@
 ---
-title: "&lt;add&gt;-Element f&#252;r bypasslist (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add>-Element, bypasslist"
-  - "<bypasslist>, add-Element"
-  - "add-Element, bypasslist"
-  - "bypasslist, add-Element"
+title: "&lt;Hinzufügen&gt; Bypasslist (Network Settings)-Element"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <bypasslist>, add element
+- bypasslist, add element
+- <add> element, bypasslist
+- add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt;-Element f&#252;r bypasslist (Netzwerkeinstellungen)
-Fügt der Proxyumgehungsliste eine IP\-Adresse oder einen DNS\-Namen hinzu.  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Hinzufügen&gt; Bypasslist (Network Settings)-Element
+Fügt eine IP-Adresse oder einen DNS-Namen, die Proxyumgehungsliste.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<DefaultProxy >  
+\<BypassList >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <add   
-   address = "regular expression"   
+```xml  
+<add   
+  address="regular expression"   
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|**address**|Ein regulärer Ausdruck, der eine IP\-Adresse oder einen DNS\-Namen beschreibt.|  
+|**Attribut**|**Beschreibung**|  
+|-------------------|---------------------|  
+|**address**|Ein regulärer Ausdruck, die eine IP-Adresse oder einen DNS-Namen beschreibt.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Stellt einen Satz von regulären Ausdrücken, die Beschreibung der Adressen, die keinen Proxy verwenden.|  
   
-## Hinweise  
- Das `add`\-Element fügt der Liste der Adressen, die einen Proxyserver umgehen, reguläre Ausdrücke hinzu, die IP\-Adressen oder DNS\-Servernamen beschreiben.  
+## <a name="remarks"></a>Hinweise  
+ Die `add` -Element fügt reguläre Ausdrücke, die IP-Adressen oder DNS-Servernamen, um die Liste der Adressen, die einen Proxyserver umgehen beschreibt.  
   
- Der Wert des `address`\-Attributs sollte ein regulärer Ausdruck sein, der eine Gruppe von IP\-Adressen oder Hostnamen beschreibt.  
+ Der Wert, der die `address` Attribut muss ein regulärer Ausdruck, der einen Satz von IP-Adressen oder Hostnamen beschreibt.  
   
- Lassen Sie beim Angeben eines regulären Ausdrucks für dieses Element Vorsicht walten.  Der reguläre Ausdruck "\[a\-z\]\+\\.contoso\\.com" entspricht jedem Host in der contoso.com\-Domäne und auch in der contoso.com.cpandl.com\-Domäne.  Verwenden Sie einen Anker \("$"\), damit der Ausdruck nur mit einem Host in der contoso.com\-Domäne übereinstimmt: "\[a\-z\]\+\\.contoso\\.com$".  
+ Sie sollten Vorsicht walten, wenn Sie für dieses Element einen regulären Ausdruck angeben. Der reguläre Ausdruck "[a-Z] +\\.contoso\\.com" entspricht, die jedem host in der Domäne "contoso.com", sondern auch mit jedem Host in der Domäne contoso.com.cpandl.com überein. Um nur einen Host in der Domäne "contoso.com" zu vergleichen, verwenden Sie einen Anker ("$"): "[a-Z] +\\.contoso\\".com "$".  
   
- Weitere Informationen zu regulären Ausdrücken finden Sie unter [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Weitere Informationen zu regulären Ausdrücken finden Sie unter. [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Im folgenden Beispiel werden der Umgehungsliste zwei Adressen hinzugefügt.  Im ersten Beispiel wird der Proxy für alle Server in der **contoso.com**\-Domäne umgangen. Im zweiten Beispiel wird der Proxy für alle Server umgangen, deren IP\-Adressen mit 192.168 beginnen.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird die Umgehungsliste zwei Adressen hinzugefügt. Die erste umgeht den Proxy für alle Server in der Domäne "contoso.com"; die zweite umgeht den Proxy für alle Server, dessen IP-Adresse beginnt, mit 192.168.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -87,6 +90,6 @@ Fügt der Proxyumgehungsliste eine IP\-Adresse oder einen DNS\-Namen hinzu.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

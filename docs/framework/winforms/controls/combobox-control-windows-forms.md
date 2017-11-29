@@ -1,48 +1,49 @@
 ---
-title: "ComboBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kombinationsfelder"
-  - "Kombinationsfelder, Windows Forms-Steuerelemente"
-  - "ComboBox-Steuerelement [Windows Forms]"
-  - "Dropdownlisten, ComboBox-Steuerelement"
-  - "Dropdownlisten, Windows Forms"
-  - "List-Steuerelemente, Windows Forms"
-  - "Listenelemente, Windows Forms-Steuerelemente zur Anzeige von"
+title: "ComboBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- list controls [Windows Forms], Windows Forms
+- combo boxes [Windows Forms], Windows Forms controls
+- combo boxes
+- list items [Windows Forms], Windows Forms controls that display
+- drop-down lists [Windows Forms], ComboBox control
+- ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# ComboBox-Steuerelement (Windows&#160;Forms)
-Das `ComboBox`\-Steuerelement wird in Windows Forms zum Anzeigen von Daten in einem Dropdown\-Kombinationsfeld verwendet.  In der Standardeinstellung wird das `ComboBox`\-Steuerelement in zwei Teilen angezeigt: Der obere Bereich ist ein Textfeld, in das der Benutzer ein Listenelement eingeben kann.  Der zweite Bereich ist ein Listenfeld mit einer Liste von Elementen, aus denen der Benutzer eines auswählen kann.  
+# <a name="combobox-control-windows-forms"></a>ComboBox-Steuerelement (Windows Forms)
+Windows Forms `ComboBox` Steuerelement wird verwendet, um Daten aus einem Dropdown-Kombinationsfeld angezeigt. Wird standardmäßig die `ComboBox` Steuerelement wird in zwei Teilen: der obere Bereich ist ein Textfeld, das dem Benutzer ermöglicht, geben Sie ein Listenelement. Der zweite Teil ist ein Listenfeld, in dem eine Liste von Elementen angezeigt, in dem der Benutzer eine auswählen kann.  
   
-## In diesem Abschnitt  
- [Übersicht über das ComboBox\-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Erläutert die Verwendung dieses Steuerelements sowie seine wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über das ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Veranschaulicht das benutzerdefinierte Zeichnen von Text in einem `ComboBox`\-Steuerelement.  
+ [Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ Veranschaulicht das benutzerdefinierte Zeichnen von Text in einem `ComboBox` Steuerelement.  
   
-## Referenz  
- <xref:System.Windows.Forms.ComboBox>\-Klasse  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+## <a name="reference"></a>Verweis  
+ <xref:System.Windows.Forms.ComboBox>-Klasse  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## Verwandte Abschnitte  
- [Steuerelemente in Windows Forms zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Enthält eine Liste zu den Verwendungsmöglichkeiten von Listenfeldern, Kombinationsfeldern und aktivierten Listenfeldern.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ Enthält eine Liste von Aufgaben mit Listenfeldern, Kombinationsfeldern und aktivierten ausführen können.  
   
-## Siehe auch  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

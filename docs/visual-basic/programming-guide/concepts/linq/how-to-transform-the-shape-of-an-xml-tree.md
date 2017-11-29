@@ -1,32 +1,27 @@
 ---
-title: 'Gewusst wie: Transformieren der Form einer XML-Struktur (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Transformieren der Form einer XML-Struktur (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c71f4af829a395204bc17161547aa5fdd06cbb1
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cad7e5fc53b59593cf0c367d65d5bd44564bb1c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Gewusst wie: Transformieren der Form einer XML-Struktur (Visual Basic)
-Die *Form* eines XML-Dokument, dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bezeichnet.  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Vorgehensweise: Transformieren der Form einer XML-Struktur (Visual Basic)
+Die *Form* eines XML-Dokuments wird von dessen Elementnamen, Attributnamen und den Merkmalen seiner Hierarchie bestimmt.  
   
- Es kann passieren, dass Sie die Form eines XML-Dokuments ändern müssen. Dies kann z. B. der Fall sein, wenn Sie ein vorhandenes XML-Dokument an ein anderes System senden müssen, das andere Element- und Attributnamen verlangt. Sie können das Dokument zwar selbst durchgehen und die Elemente nach Bedarf löschen und umbenennen, bei Verwendung der funktionalen Konstruktion erhalten Sie aber besser lesbaren und verwaltbaren Code. Weitere Informationen zur funktionalen Konstruktion finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Es kann passieren, dass Sie die Form eines XML-Dokuments ändern müssen. Dies kann z. B. der Fall sein, wenn Sie ein vorhandenes XML-Dokument an ein anderes System senden müssen, das andere Element- und Attributnamen verlangt. Sie können das Dokument zwar selbst durchgehen und die Elemente nach Bedarf löschen und umbenennen, bei Verwendung der funktionalen Konstruktion erhalten Sie aber besser lesbaren und verwaltbaren Code. Weitere Informationen zu funktionalen Konstruktion, finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
  Das erste Beispiel ändert die Organisation des XML-Dokuments. Dabei werden komplexe Elemente von einer Position in der Struktur an eine andere verschoben.  
   
@@ -37,7 +32,7 @@ Die *Form* eines XML-Dokument, dessen Elementnamen, Attributnamen und den Merkma
   
  Das XML-Quelldokument in diesem Beispiel enthält unter dem `Customers`-Element ein `Root`-Element, das alle Kunden enthält. Außerdem enthält es unter dem `Orders`-Element ein `Root`-Element, das alle Aufträge enthält. Dieses Beispiel erstellt eine neue XML-Struktur, in der die Aufträge der einzelnen Kunden in einem `Orders`-Element innerhalb des `Customer`-Elements enthalten sind. Das Originaldokument enthält auch ein `CustomerID`-Element im `Order`-Element; dieses Element wird aus dem neu geformten Dokument entfernt.  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -106,9 +101,9 @@ Console.WriteLine(newCustOrd)
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel benennt einige Elemente um und wandelt einige Attribute in Elemente um.  
   
- Der Code ruft `ConvertAddress`, womit eine Liste der <xref:System.Xml.Linq.XElement>Objekte.</xref:System.Xml.Linq.XElement> Das Argument für die Methode ist eine Abfrage, die das komplexe `Address`-Element bestimmt, wobei das `Type`-Attribut den Wert `"Shipping"` hat.  
+ Der Code ruft `ConvertAddress` auf, wodurch eine Liste von <xref:System.Xml.Linq.XElement>-Objekten zurückgegeben wird. Das Argument für die Methode ist eine Abfrage, die das komplexe `Address`-Element bestimmt, wobei das `Type`-Attribut den Wert `"Shipping"` hat.  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -158,4 +153,3 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-

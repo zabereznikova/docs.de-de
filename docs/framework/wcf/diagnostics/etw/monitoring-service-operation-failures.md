@@ -1,40 +1,42 @@
 ---
-title: "Fehler beim &#220;berwachen von Dienstvorg&#228;ngen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Fehler beim Überwachen von Dienstvorgängen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Fehler beim &#220;berwachen von Dienstvorg&#228;ngen
-Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können Dienstfehler in der Ereignisanzeige auf einfache Weise überwacht werden.In diesem Thema wird erläutert, wie festgestellt wird, wenn ein Dienstvorgang fehlschlägt, und wie die Fehlerursache bestimmt wird.  
+# <a name="monitoring-service-operation-failures"></a>Fehler beim Überwachen von Dienstvorgängen
+Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können Dienstfehler in der Ereignisanzeige auf einfache Weise überwacht werden.  In diesem Thema wird erläutert, wie festgestellt wird, wenn ein Dienstvorgang fehlschlägt, und wie die Fehlerursache bestimmt wird.  
   
-### Bestimmen der Fehlerinformationen des Dienstvorgangs  
+### <a name="determining-service-operation-failure-information"></a>Bestimmen der Fehlerinformationen des Dienstvorgangs  
   
-1.  Öffnen Sie die Ereignisanzeige, indem Sie auf **Start** und **Ausführen** klicken und dann `eventvwr.exe` eingeben.  
+1.  Ereignisanzeige öffnen, indem Sie auf **starten**, **ausführen**, und geben Sie `eventvwr.exe`.  
   
-2.  Wenn Sie die analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs\- und Dienstprotokolle**, **Microsoft**, **Windows** und **Anwendungsserver \- Anwendungen**.Wählen Sie **Ansicht** und **Analytische und Debugprotokolle einblenden** aus.Klicken Sie mit der rechten Maustaste auf **Analytisch**, und wählen Sie **Protokoll aktivieren** aus.Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Dienstvorgang fehlgeschlagen ist.  
+2.  Wenn Sie analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Dienstvorgang fehlgeschlagen ist.  
   
-3.  Öffnen Sie als Nächstes das Beispiel, das Sie im [Lernprogramm 'Erste Schritte'](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] erstellt haben. Beachten Sie, dass Sie [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] als Administrator ausführen müssen, damit der Dienst erstellt werden kann.Wenn Sie die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Beispiele installiert haben, können Sie das [Erste Schritte](../../../../../docs/framework/wcf/samples/getting-started-sample.md) öffnen, das das im Lernprogramm erstellte vollständige Projekt enthält.  
+3.  Als Nächstes öffnen Sie das Beispiel erstellt, der [Lernprogramm für erste Schritte](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Hinweis an, die Sie ausführen müssen [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] als Administrator, damit der Dienst erstellt werden kann. Haben die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Beispiele, die installiert werden, öffnen Sie die [Einstieg](../../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das im Lernprogramm erstellt.  
   
-4.  Fügen Sie im Serverprojekt in der Datei Program.cs die folgende Codezeile am Anfang der `Divide`\-Methode in der `CalculatorService`\-Klasse hinzu:  
+4.  Fügen Sie im Serverprojekt in der Datei Program.cs die folgende Codezeile am Anfang der `Divide`-Methode in der `CalculatorService`-Klasse hinzu:  
   
     ```  
     if (n2 == 0) throw new DivideByZeroException();  
-  
     ```  
   
-5.  Ändern Sie in der Datei Program.cs im Clientprojekt den Wert, der Wert2 zugewiesen ist, in 0 \(null\):  
+5.  Ändern Sie in der Datei Program.cs im Clientprojekt den Wert, der Wert2 zugewiesen ist, in 0 (null):  
   
     ```  
     //Call the Divide service operation  
@@ -42,17 +44,16 @@ Wenn die analytische Ablaufverfolgung für eine Anwendung aktiviert ist, können
     value2 = 0.00D;  
     result = client.Divide(value1, value2);  
     Console.WriteLine("Divide({0}, {1}) = {2}", value1, value2, result);  
-  
     ```  
   
-6.  Führen Sie die Serveranwendung ohne Debuggen aus, indem Sie **STRG\+F5** drücken.  
+6.  Führen Sie die Serveranwendung ohne Debuggen durch Drücken von **STRG + F5**.  
   
-7.  Öffnen Sie eine Visual Studio\-Eingabeaufforderung.Navigieren Sie zum Clientverzeichnis, und führen Sie den Client über die Befehlszeile aus.  
+7.  Öffnen Sie eine Visual Studio-Eingabeaufforderung.  Navigieren Sie zum Clientverzeichnis, und führen Sie den Client über die Befehlszeile aus.  
   
-8.  Deaktivieren und aktualisieren Sie das analytische Protokoll in der Ereignisanzeige, und sortieren Sie die Ereignisse nach Ereignis\-ID.Suchen Sie nach einem Ereignis mit der Ereignis\-ID [219 \- ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), die den Dienstfehler beschreibt.  
+8.  Deaktivieren und aktualisieren Sie das analytische Protokoll in der Ereignisanzeige, und sortieren Sie die Ereignisse nach Ereignis-ID.  Suchen Sie nach einem Ereignis mit der Ereignis-ID [219 - ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), das den Dienstfehler beschreibt.  
   
     ```Output  
-    Während der Nachrichtenverarbeitung ist ein Ausnahmefehler vom Typ 'System.DivideByZeroException' aufgetreten.Vollständige Ausnahme ToString: System.DivideByZeroException: Es wurde versucht, durch 0 (null) zu teilen.  
+    There was an unhandled exception of type 'System.DivideByZeroException' during message processing.  Full Exception ToString: System.DivideByZeroException: Attempted to divide by zero.  
     ```  
   
     > [!NOTE]

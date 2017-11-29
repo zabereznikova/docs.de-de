@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - downloading Internet resources, steps
 - requesting data from Internet, steps
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Gewusst wie: Anfordern von Daten mithilfe der WebRequest-Klasse
 Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, z.B. einer Webseite oder Webdatei. Die Ressource muss von einem URI identifiziert werden.  
@@ -46,7 +43,7 @@ Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von
     ```  
   
     > [!NOTE]
-    >  .NET Framework stellt von **WebRequest** und **WebResponse** abgeleitete protokollspezifische Klassen für URIs bereit, die mit „http:“, „https:“, „ftp:“ und „file:“ beginnen. Wenn Sie mit anderen Protokollen auf Ressourcen zugreifen möchten, müssen Sie protokollspezifische Klassen implementieren, die von **WebRequest** und **WebResponse** abgeleitet sind. Weitere Informationen finden Sie unter [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+    >  .NET Framework stellt von **WebRequest** und **WebResponse** abgeleitete protokollspezifische Klassen für URIs bereit, die mit „http:“, „https:“, „ftp:“ und „file:“ beginnen. Wenn Sie mit anderen Protokollen auf Ressourcen zugreifen möchten, müssen Sie protokollspezifische Klassen implementieren, die von **WebRequest** und **WebResponse** abgeleitet sind. Weitere Informationen finden Sie unter [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
 2.  Legen Sie alle Eigenschaftswerte, die Sie brauchen, in **WebRequest** fest. Legen Sie z.B. zum Aktivieren der Authentifizierung die Eigenschaft **Anmeldeinformationen** auf eine Instanz der Klasse <xref:System.Net.NetworkCredential> fest.  
   
@@ -79,7 +76,7 @@ Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von
     ```  
   
     > [!NOTE]
-    >  Wenn Sie ein <xref:System.Net.WebResponse>-Objekt nicht mehr benötigen, schließen Sie es durch Aufrufen der <xref:System.Net.WebResponse.Close%2A>-Methode. Wenn Sie den Antwortdatenstrom vom Antwortobjekt abgerufen haben, können Sie den Datenstrom alternativ dazu auch durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=fullName>-Methode schließen. Wird die Antwort oder der Datenstrom nicht geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Verbindungen mit dem Server und kann somit weitere Anforderungen nicht mehr verarbeiten.  
+    >  Wenn Sie ein <xref:System.Net.WebResponse>-Objekt nicht mehr benötigen, schließen Sie es durch Aufrufen der <xref:System.Net.WebResponse.Close%2A>-Methode. Wenn Sie den Antwortdatenstrom vom Antwortobjekt abgerufen haben, können Sie den Datenstrom alternativ dazu auch durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>-Methode schließen. Wird die Antwort oder der Datenstrom nicht geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Verbindungen mit dem Server und kann somit weitere Anforderungen nicht mehr verarbeiten.  
   
 4.  Sie können die protokollspezifischen Eigenschaften lesen, indem Sie auf die Eigenschaften von **WebResponse** zugreifen oder **WebResponse** in eine protokollspezifische Instanz umwandeln. Sie können z.B. auf die HTTP-spezifischen Eigenschaften von <xref:System.Net.HttpWebResponse> zugreifen, indem Sie **WebRequest** in einen **HttpWebRequest**-Verweis umwandeln. Das folgende Codebeispiel zeigt die Vorgehensweise beim Anzeigen von Statusinformationen, die mit einer Antwort gesendet werden.  
   
@@ -185,9 +182,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Internetanforderungen](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)   
+ [Erstellen von Internetanforderungen](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)  
  [Vorgehensweise: Senden von Daten mithilfe der WebRequest-Klasse](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
-

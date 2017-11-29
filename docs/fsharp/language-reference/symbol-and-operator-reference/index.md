@@ -1,6 +1,6 @@
 ---
 title: Symbol- und Operatorenreferenz (F#)
-description: Symbol- und Operatorenreferenz (F#)
+description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache f# verwendet werden.
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 514dc37dce3df3f40ae99ce55772b0c4e8deb95f
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
 > [!NOTE]
@@ -128,7 +127,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |--------|-------------|
 |`as`|Rechts|
 |`when`|Rechts|
-|<code>&#124;</code> (pipe)|Links|
+|<code>&#124;</code>(senkrechter Strich)|Links|
 |`;`|Rechts|
 |`let`|Nicht assoziativ|
 |`function`, `fun`, `match`, `try`|Nicht assoziativ|
@@ -139,7 +138,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`or`, <code>&#124;&#124;</code>|Links|
 |`&`, `&&`|Links|
 |`:>`, `:?>`|Rechts|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(einschließlich `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Links|
+|`!=`*Op*, `<` *Op*, `>` *Op*, `=`, <code>&#124;</code> *Op*, `&`  *Op*,`&`<br /><br />(einschließlich `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Links|
 |`^`*op*<br /><br />(einschließlich `^^^`)|Rechts|
 |`::`|Rechts|
 |`:?`|Nicht assoziativ|
@@ -147,7 +146,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`*`*op*, `/`*op*, `%`*op*|Links|
 |`**`*op*|Rechts|
 |`f x` (Funktionsanwendung)|Links|
-|<code>&#124;</code> (Musterübereinstimmung)|Rechts|
+|<code>&#124;</code>(Musterübereinstimmung)|Rechts|
 |Präfixoperatoren (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Links|
 |`.`|Links|
 |`f(x)`|Links|
@@ -158,4 +157,3 @@ F# unterstützt die benutzerdefinierte Operatorüberladung. Dies bedeutet, dass 
 [F#-Sprachreferenz](../index.md)
 
 [Operatorüberladung](../operator-overloading.md)
-

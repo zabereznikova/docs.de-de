@@ -1,39 +1,38 @@
 ---
-title: "EntityClient-Anbieter f&#252;r Entity Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "EntityClient-Anbieter für Entity Framework"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: eb6d8d4db676502b8c363a7d45407384333b3f22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# EntityClient-Anbieter f&#252;r Entity Framework
-Der EntityClient\-Anbieter ist ein von Entity Framework\-Anwendungen verwendeter Datenanbieter für den Zugriff auf Daten, die in einem konzeptionellen Modell beschrieben sind.  Weitere Informationen zu konzeptionellen Modellen finden Sie unter [Modellieren und Zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).  EntityClient greift mithilfe von anderen .NET Framework\-Datenanbietern auf die Datenquelle zu.  Beim Zugreifen \(SqlClient\) auf eine SQL Server\-Datenbank verwendet EntityClient z. B. den .NET Framework\-Datenanbieter für SQL Server.  Weitere Informationen über den SqlClient\-Anbieter finden Sie unter [SqlClient für das Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).  Der EntityClient\-Anbieter ist im <xref:System.Data.EntityClient>\-Namespace implementiert.  
+# <a name="entityclient-provider-for-the-entity-framework"></a>EntityClient-Anbieter für Entity Framework
+Der EntityClient-Anbieter ist ein von Entity Framework-Anwendungen verwendeter Datenanbieter für den Zugriff auf Daten, die in einem konzeptionellen Modell beschrieben sind. Weitere Informationen zu konzeptionellen Modellen finden Sie unter [modellieren und Zuordnen von](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient greift mithilfe von anderen .NET Framework-Datenanbietern auf die Datenquelle zu. Beim Zugreifen (SqlClient) auf eine SQL Server-Datenbank verwendet EntityClient z. B. den .NET Framework-Datenanbieter für SQL Server. Informationen zu SqlClient-Anbieter finden Sie unter [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Der EntityClient-Anbieter ist im <xref:System.Data.EntityClient>-Namespace implementiert.  
   
-## Verwalten von Verbindungen  
- Das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] baut auf speicherspezifischen [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]\-Datenanbietern auf, indem es einem zugrunde liegenden Datenanbieter und einer relationalen Datenbank eine <xref:System.Data.EntityClient.EntityConnection> bereitstellt.  Zur Erstellung eines <xref:System.Data.EntityClient.EntityConnection>\-Objekts muss auf einen Satz von Metadaten verwiesen werden, die die notwendigen Modelle und das notwendige Mapping sowie einen speicherspezifischen Datenanbieternamen und eine Verbindungszeichenfolge enthalten.  Nachdem die <xref:System.Data.EntityClient.EntityConnection> aufgesetzt ist, kann auf die Entitäten über die aus dem konzeptionellen Modell erstellten Klassen zugegriffen werden.  
+## <a name="managing-connections"></a>Verwalten von Verbindungen  
+ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] baut auf speicherspezifischen [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Datenanbieter durch Bereitstellen einer <xref:System.Data.EntityClient.EntityConnection> an eine zugrunde liegende Datenanbieter und einer relationalen Datenbank. So erstellen Sie ein <xref:System.Data.EntityClient.EntityConnection> Objekt, müssen Sie eine Reihe von Metadaten zu verweisen, die die notwendigen Modelle und Zuordnung sowie einen speicherspezifischen-Anbieterzeichenfolge an Namen und eine Verbindung enthält. Nach der <xref:System.Data.EntityClient.EntityConnection> ist an der jeweiligen Stelle Entitäten durch die aus dem konzeptionellen Modell erstellten Klassen zugegriffen werden können.  
   
- In der Datei **app.config** kann eine Verbindungszeichenfolge angegeben werden.  
+ In der Datei app.config kann eine Verbindungszeichenfolge angegeben werden.  
   
- Der <xref:System.Data.EntityClient> enthält auch die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>\-Klasse.  Mithilfe dieser Klasse können Entwickler syntaktisch korrekte Verbindungszeichenfolgen programmgesteuert erstellen sowie vorhandene Verbindungszeichenfolgen analysieren und neu erstellen, indem sie Eigenschaften und Methoden der Klasse verwenden.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen einer EntityConnection\-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ Der <xref:System.Data.EntityClient> enthält auch die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse. Mithilfe dieser Klasse können Entwickler syntaktisch korrekte Verbindungszeichenfolgen programmgesteuert erstellen sowie vorhandene Verbindungszeichenfolgen analysieren und neu erstellen, indem sie Eigenschaften und Methoden der Klasse verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
-## Erstellen von Abfragen  
- Die [!INCLUDE[esql](../../../../../includes/esql-md.md)]\-Sprache ist ein speicherunabhängiger Dialekt von SQL, der direkt mit konzeptionellen Entitätsschemas verwendet werden kann und Entity Data Model\-Konzepte wie Vererbung und Beziehungen unterstützt.  Die <xref:System.Data.EntityClient.EntityCommand>\-Klasse wird zur Ausführung eines [!INCLUDE[esql](../../../../../includes/esql-md.md)]\-Befehls für ein Entitätsmodell verwendet.  Bei der Erstellung von <xref:System.Data.EntityClient.EntityCommand>\-Objekten kann der Name einer gespeicherten Prozedur oder einen Abfragetext angegeben werden.  Das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arbeitet mit speicherspezifischen Datenanbietern, um generisches [!INCLUDE[esql](../../../../../includes/esql-md.md)] in speicherspezifische Abfragen zu übersetzen.  Weitere Informationen zum Schreiben von [!INCLUDE[esql](../../../../../includes/esql-md.md)]\-Abfragen finden Sie unter [Entity SQL\-Sprache](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
+## <a name="creating-queries"></a>Erstellen von Abfragen  
+ Die [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sprache ist ein speicherunabhängiger Dialekt von SQL Server, die verwendet direkt konzeptionelle Entitätsschemas und unterstützt Entity Data Model-Konzepte wie Vererbung und Beziehungen. Die <xref:System.Data.EntityClient.EntityCommand> Klasse dient zum Ausführen einer [!INCLUDE[esql](../../../../../includes/esql-md.md)] Befehl für ein Entitätenmodell. Bei der Erstellung von <xref:System.Data.EntityClient.EntityCommand>-Objekten kann der Name einer gespeicherten Prozedur oder einen Abfragetext angegeben werden. Das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arbeitet mit speicherspezifischen Datenanbietern, um generisches [!INCLUDE[esql](../../../../../includes/esql-md.md)] in speicherspezifische Abfragen zu übersetzen. Weitere Informationen zum Schreiben von [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfragen finden Sie im [Entity SQL-Sprache](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
- Im folgenden Beispiel wird ein <xref:System.Data.EntityClient.EntityCommand>\-Objekt erstellt und dessen <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=fullName>\-Eigenschaft ein [!INCLUDE[esql](../../../../../includes/esql-md.md)]\-Abfragetext zugewiesen.  Diese [!INCLUDE[esql](../../../../../includes/esql-md.md)]\-Abfrage ruft nach dem Listenpreis geordnete bestellte Produkte vom konzeptionellen Modell ab.  Im folgenden Code werden keinerlei Annahmen über das Speichermodell vorausgesetzt.  
+ Das folgende Beispiel erstellt eine <xref:System.Data.EntityClient.EntityCommand> Objekts und weist ihm eine [!INCLUDE[esql](../../../../../includes/esql-md.md)] -Abfragetext seine <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> Eigenschaft. Dies [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfrage anfordert, nach dem Listenpreis aus dem konzeptionellen Modell bestellten Produkte. Im folgenden Code werden keinerlei Annahmen über das Speichermodell vorausgesetzt.  
   
  `EntityCommand cmd = conn.CreateCommand();`  
   
@@ -43,38 +42,38 @@ Der EntityClient\-Anbieter ist ein von Entity Framework\-Anwendungen verwendeter
   
  `ORDER BY p.ListPrice ";`  
   
-## Ausführen von Abfragen  
- Wenn eine Abfrage ausgeführt wird, wird sie analysiert und in eine kanonische Befehlsstruktur konvertiert.  Die darauf folgende Verarbeitung wird mit der Befehlsstruktur ausgeführt.  Die Befehlsstruktur ermöglicht die Kommunikation zwischen dem <xref:System.Data.EntityClient> und dem zugrunde liegenden [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]\-Datenanbieter wie <xref:System.Data.SqlClient>.  
+## <a name="executing-queries"></a>Ausführen von Abfragen  
+ Wenn eine Abfrage ausgeführt wird, wird sie analysiert und in eine kanonische Befehlsstruktur konvertiert. Die darauf folgende Verarbeitung wird mit der Befehlsstruktur ausgeführt. Die Befehlsstruktur ermöglicht die Kommunikation zwischen dem <xref:System.Data.EntityClient> und dem zugrunde liegenden [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Datenanbieter wie <xref:System.Data.SqlClient>.  
   
- Der <xref:System.Data.EntityClient.EntityDataReader> stellt die Ergebnisse eines für ein konzeptionelles Modell ausgeführten <xref:System.Data.EntityClient.EntityCommand> zur Verfügung.  Zum Ausführen des Befehls, das den <xref:System.Data.EntityClient.EntityDataReader> zurückgibt, rufen Sie <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> auf.  Der <xref:System.Data.EntityClient.EntityDataReader> implementiert <xref:System.Data.IExtendedDataRecord>, um umfangreiche strukturierte Ergebnisse zu beschreiben.  
+ Der <xref:System.Data.EntityClient.EntityDataReader> stellt die Ergebnisse eines für ein konzeptionelles Modell ausgeführten <xref:System.Data.EntityClient.EntityCommand> zur Verfügung. Zum Ausführen des Befehls, das den <xref:System.Data.EntityClient.EntityDataReader> zurückgibt, rufen Sie <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> auf. Der <xref:System.Data.EntityClient.EntityDataReader> implementiert <xref:System.Data.IExtendedDataRecord>, um umfangreiche strukturierte Ergebnisse zu beschreiben.  
   
-## Verwalten von Transaktionen  
- Im Entity Framework gibt es zwei Möglichkeiten zur Verwendung von Transaktionen: automatisch und explizit.  Automatische Transaktionen verwenden den <xref:System.Transactions>\-Namespace, und explizite Transaktionen verwenden die <xref:System.Data.EntityClient.EntityTransaction>\-Klasse.  
+## <a name="managing-transactions"></a>Verwalten von Transaktionen  
+ Im Entity Framework gibt es zwei Möglichkeiten zur Verwendung von Transaktionen: automatisch und explizit. Automatische Transaktionen verwenden den <xref:System.Transactions>-Namespace, und explizite Transaktionen verwenden die <xref:System.Data.EntityClient.EntityTransaction>-Klasse.  
   
- Informationen zum Aktualisieren von Daten, die durch ein konzeptionelles Modell verfügbar gemacht werden, finden Sie unter [How to: Manage Transactions in the Entity Framework](http://msdn.microsoft.com/de-de/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
+ Zum Aktualisieren von Daten, die über ein konzeptionelles Modell verfügbar gemacht wird; finden Sie unter [Vorgehensweise: Verwalten von Transaktionen im Entity Framework](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
   
-## In diesem Abschnitt  
- [Gewusst wie: Erstellen einer EntityConnection\-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType\-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [Vorgehensweise: Ausführen einer Abfrage, die StructuralType\-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [Gewusst wie: Ausführen einer Abfrage, die RefType\-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [Vorgehensweise: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [Gewusst wie: Ausführen einer Abfrage, die komplexe Typen zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [Vorgehensweise: Ausführen einer Abfrage, die komplexe Typen zurückgibt.](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [Gewusst wie: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [Vorgehensweise: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Gewusst wie: Ausführen einer parametrisierten Entity SQL\-Abfrage mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen eine parametrisierten Entity SQL-Abfrage mithilfe von "EntityCommand"](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Gewusst wie: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen einer parametrisierte gespeicherten Prozedur mithilfe von "EntityCommand"](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Gewusst wie: Ausführen einer polymorphen Abfrage](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Vorgehensweise: Ausführen einer polymorphen Abfrage](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [Gewusst wie: Navigieren in Beziehungen mit dem Navigate\-Operator](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [Vorgehensweise: Navigieren in Beziehungen mit dem Navigate-Operator](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
-## Siehe auch  
- [Managing Connections and Transactions](http://msdn.microsoft.com/de-de/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)   
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Sprachreferenz](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

@@ -1,37 +1,40 @@
 ---
-title: "Dienst: Sicherheitsvalidierung und Authentifizierungsfehler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Dienst: Sicherheitsvalidierung und Authentifizierungsfehler'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 808c0d648043df6c5a3dda4646e45ba1492345a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Dienst: Sicherheitsvalidierung und Authentifizierungsfehler
+# <a name="service-security-validation-and-authentication-failures"></a>Dienst: Sicherheitsvalidierung und Authentifizierungsfehler
 Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler  
   
-## Beschreibung  
- Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Indikator "Nicht autorisierte Sicherheitsaufrufe" abgedeckt wird.Zu derartigen Problemen gehören:  
+## <a name="description"></a>Beschreibung  
+ Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Zähler "Nicht autorisierte Sicherheitsanrufe" abgedeckt wird. Zu derartigen Problemen gehören:  
   
 -   Clienttoken kann nicht aus der Nachricht gelesen werden.  
   
--   Clienttoken hat die Authentifizierung \(z. B. ungültiges Kennwort\) nicht bestanden.  
+-   Clienttoken hat die Authentifizierung (z. B. ungültiges Kennwort) nicht bestanden.  
   
--   Signaturüberprüfung ist fehlgeschlagen \(die Nachricht wurde z. B. manipuliert\).  
+-   Signaturüberprüfung ist fehlgeschlagen (die Nachricht wurde z. B. manipuliert).  
   
--   Die Nachricht ist ein Duplikat von einer vorherigen; dies kann während eines Replay\-Angriffes geschehen.  
+-   Die Nachricht ist ein Duplikat einer vorherigen; dies kann während eines Replay-Angriffs geschehen.  
   
 -   Ein Entschlüsselungsfehler ist aufgetreten.  
   
--   Einige erforderliche Elemente \(z. B. fehlender Timestamp oder verschlüsselter Datenblock\) fehlen in der Nachricht.  
+-   Einige erforderliche Elemente (z. B. fehlender Timestamp oder verschlüsselter Datenblock) fehlen in der Nachricht.  
   
--   Während des TLSNEGO\-\/SPNEGO\-Handshakes sind Fehler aufgetreten.
+-   Während des TLSNEGO-/SPNEGO-Handshakes sind Fehler aufgetreten.

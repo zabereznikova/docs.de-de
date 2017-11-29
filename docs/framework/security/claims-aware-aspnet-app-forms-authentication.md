@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit formularbasierter Authentifizierung
 ## <a name="applies-to"></a>Gilt für  
@@ -138,4 +136,3 @@ ms.lasthandoff: 08/21/2017
 2.  Erstellen Sie auf der Seite **Registrieren** ein Benutzerkonto, und klicken Sie dann auf **Registrieren**. Ihr Konto wird unter Verwendung der Formularauthentifizierung erstellt, und Sie werden automatisch angemeldet.  
   
 3.  Nachdem Sie zur Startseite umgeleitet werden, sollte unter der Überschrift **Ihre Ansprüche** eine Tabelle angezeigt werden, die die Anspruchsinformationen **Aussteller**, **Originalaussteller**, **Typ**, **Welt** und **Werttyp** Ihres Kontos enthält.
-

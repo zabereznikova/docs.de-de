@@ -1,61 +1,53 @@
 ---
-title: LINQ und Dateiverzeichnisse (Visual Basic) | Microsoft-Dokumentation
+title: LINQ und Dateiverzeichnisse (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5536ae95b42cdaddda2c4cae97a114681e94b0ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 470ad8e783eb05cc56949982b2d2d79d5aaefdc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ und Dateiverzeichnisse (Visual Basic)
-Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind daher für die LINQ-Ansatz gut geeignet.  
+Viele Dateisystemvorgänge sind im Wesentlichen Abfragen und sind deshalb für die LINQ-Vorgehensweise gut geeignet.  
   
- Beachten Sie, dass die Abfragen in diesem Abschnitt nicht destruktiv sind. Sie werden nicht verwendet, um den Inhalt der ursprünglichen Dateien oder Ordner ändern. Dies entspricht die Regel, dass Abfragen keine Nebeneffekte auftreten soll. Im Allgemeinen sollten Code (einschließlich Abfragen, erstellen, Update- und delete-Operatoren), der Quelldaten modifiziert getrennt vom Code beibehalten werden, die die Daten lediglich Abfragen.  
+ Bitte beachten Sie, das die Abfragen in diesem Abschnitt nichtdestruktiv sind. Sie werden nicht verwendet, um den Inhalt der ursprünglichen Dateien und Ordner zu ändern. Dies entspricht der Regel, nach der Abfragen keine Nebeneffekte haben sollen. Allgemein gilt, dass jeder Code (einschließlich Abfragen, die Operatoren zum Erstellen/Aktualisieren/Löschen ausführen), der Quelldaten modifiziert, von Code getrennt sein sollte, der Daten lediglich abfragt.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
- [Gewusst wie: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- Veranschaulicht, wie zur Suche nach Dateien anhand einer oder mehrerer Eigenschaften seiner <xref:System.IO.FileInfo>Objekt.</xref:System.IO.FileInfo>  
+ [Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ Hier erfahren Sie, wie Sie nach Dateien suchen, indem Sie eine oder mehrere Eigenschaften des Objekts <xref:System.IO.FileInfo> betrachten.  
   
- [Gewusst wie: Gruppieren von Dateien nach Erweiterung (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- Zeigt, wie Gruppen zurückzugeben <xref:System.IO.FileInfo>-Objekt auf Grundlage ihrer Erweiterung.</xref:System.IO.FileInfo>  
+ [Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ Hier erfahren Sie, wie Sie Gruppen des Objekts <xref:System.IO.FileInfo> nach deren Dateinamenerweiterung zurückgeben.  
   
- [Gewusst wie: Abfragen der Gesamtzahl von Bytes in einem Ordnersatz (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
- Zeigt, wie die Gesamtanzahl der Bytes in allen Dateien in einer angegebenen Verzeichnisstruktur zurückgegeben.  
+ [Vorgehensweise: Abfragen der Gesamtzahl der Bytes in einem Ordnersatz (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ Hier erfahren Sie, wie Sie die Gesamtzahl von Bytes in allen Dateien einer angegebenen Verzeichnisstruktur zurückgeben.  
   
- [Gewusst wie: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- Zeigt, wie alle Dateien, die in zwei angegebenen Ordnern vorhanden sind, und auch alle Dateien, die in einem Ordner, aber nicht in der anderen vorhanden sind.  
+ [Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ Hier erfahren Sie, wie Sie alle Dateien, die sich ein zwei angegebenen Ordnern befinden, zurückgeben können; ebenso erfahren Sie, wie Sie die Dateien, die sich nur in einem der zwei Ordner befinden, zurückgeben können.  
   
- [Gewusst wie: Abfragen der größten Datei oder Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- Zeigt, wie die größten oder kleinsten Datei oder eine angegebene Anzahl von Dateien in einer Verzeichnisstruktur zurückgegeben.  
+ [Vorgehensweise: Abfragen der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ Hier erfahren Sie, wie Sie die größte oder kleinste Datei oder eine angegebene Anzahl von Dateien in einer Verzeichnisstruktur zurückgeben können.  
   
- [Gewusst wie: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- Zeigt, wie alle Dateinamen gruppiert, die in mehr als einer Position in einer angegebenen Verzeichnisstruktur auftreten. Außerdem veranschaulicht, wie komplexere Vergleiche basierend auf einem benutzerdefinierten Vergleich ausgeführt.  
+ [Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ Hier erfahren Sie, wie Sie die Dateien nach Dateinamen gruppieren können, die an mehr als einer Stelle in einer angegebenen Verzeichnisstruktur vorkommen. Ebenfalls lernen Sie, wie sie komplexere Vergleiche mit einer benutzerdefinierten Vergleichsfunktion durchführen können.  
   
- [Gewusst wie: Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
- Zeigt, wie Ordner in einer Struktur durchlaufen, öffnen jede Datei und Inhalt der Datei abgefragt.  
+ [Vorgehensweise: Abfragen des Inhalts von Dateien in einem Ordner (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ Hier erfahren Sie, wie Sie Ordner in einer Struktur durchlaufen, jede Datei öffnen und die Inhalte der Datei abfragen können.  
   
 ## <a name="comments"></a>Kommentare  
- Es ist recht aufwändig in Erstellen einer Datenquelle, die genau stellt den Inhalt des Dateisystems und Ausnahmen ordnungsgemäß behandelt. In den Beispielen in diesem Abschnitt erstellen Sie eine Snapshot-Auflistung von <xref:System.IO.FileInfo>-Objekten, die alle Dateien in einem angegebenen Stammordner und allen Unterordnern darstellt.</xref:System.IO.FileInfo> Der aktuelle Status der einzelnen <xref:System.IO.FileInfo>ändert sich die Zeit zwischen den Sie starten und Beenden einer Abfrage möglicherweise.</xref:System.IO.FileInfo> Sie können z. B. eine Liste der erstellen <xref:System.IO.FileInfo>Objekte, die als Datenquelle verwendet.</xref:System.IO.FileInfo> Wenn Sie versuchen, Zugriff auf die `Length` Eigenschaft in einer Abfrage, die <xref:System.IO.FileInfo>Objekt versucht, Zugriff auf das Dateisystem, um den Wert der aktualisieren `Length`.</xref:System.IO.FileInfo> Wenn die Datei nicht mehr vorhanden ist, erhalten Sie eine <xref:System.IO.FileNotFoundException>in einer Abfrage, auch wenn nicht abgefragt werden das Dateisystem direkt.</xref:System.IO.FileNotFoundException> Einige Abfragen in diesem Abschnitt verwenden Sie eine separate Methode, die diese bestimmten Ausnahmen in bestimmten Fällen nutzt. Eine weitere Option ist die Datenquelle dynamisch aktualisiert werden, mithilfe der <xref:System.IO.FileSystemWatcher>.</xref:System.IO.FileSystemWatcher> beizubehalten  
+ Das Erstellen einer Datenquelle, die die Inhalte des Dateisystems angemessen repräsentieren, kommt mit einer gewissen Komplexität. Die Beispiele in diesem Abschnitt geben Ihnen einen ersten Überblick über <xref:System.IO.FileInfo>-Objekte, der alle Dateien in einem angegebenen Stammordner mit all seinen Unterordnern repräsentiert. Der tatsächliche Zustand jedes <xref:System.IO.FileInfo> verändert sich möglicherweise in der Zeit zwischen Beginn und Ende der Ausführung einer Abfrage. Sie können beispielsweise eine Liste von <xref:System.IO.FileInfo>-Objekten erstellen, um diese als Datenquelle zu verwenden. Wenn Sie versuchen, auf die Eigenschaft `Length` einer Abfrage zuzugreifen, versucht das <xref:System.IO.FileInfo>-Objekt, auf das Dateisystem zuzugreifen, um den Wert von `Length` zu aktualisieren. Wenn die Datei nicht mehr existiert, erhalten Sie eine <xref:System.IO.FileNotFoundException> in Ihrer Abfrage, obwohl Sie keine direkte Abfrage an das Dateisystem vornehmen. Einige Abfragen in diesem Bereich verwenden eine getrennte Methode, die diese bestimmten Ausnahmen in gewissen Fällen verarbeitet. Des Weiteren können Sie Ihre Datenquelle auf dem neuesten Stand halten, indem Sie den <xref:System.IO.FileSystemWatcher> verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

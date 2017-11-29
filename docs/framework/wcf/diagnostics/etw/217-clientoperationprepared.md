@@ -1,43 +1,46 @@
 ---
-title: "217 - ClientOperationPrepared | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 217 - ClientOperationPrepared
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5062d2c2146dae8b22165cfbea0c6a78241d17b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 217 - ClientOperationPrepared
-## Eigenschaften  
+# <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|217|  
-|Schlüsselwörter|Troubleshooting, ServiceModel|  
-|Grad|Informationen|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Stichwörter|Troubleshooting, ServiceModel|  
+|Ebene|Information|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird von Clients direkt vor dem Senden eines Vorgangs an einen Dienst ausgegeben.  
   
-## Meldung  
- Der Client führt die Aktion aus '%1' aus, die dem Vertrag '%2' zugeordnet ist.Die Nachricht wird an '%3' gesendet.  
+## <a name="message"></a>Meldung  
+ Der Client führt die Aktion aus '%1' aus, die dem Vertrag '%2' zugeordnet ist. Die Nachricht wird an '%3' gesendet.  
   
-## Details  
+## <a name="details"></a>Details  
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|Action|`xs:string`|Der SOAP\-Aktionsheader der ausgehenden Nachricht.|  
-|Contract Name|`xs:string`|Der Name des Vertrags.Beispiel: ICalculator.|  
-|Destination|`xs:string`|Die Adresse des Dienstendpunkts, an den die Nachricht gesendet wird.|  
-|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig.Das Format ist als 'Websitename Virtueller Pfad der Anwendung&#124;Virtueller Pfad des Diensts&#124;ServiceName' definiert.Beispiel: 'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|--------------------|--------------------|-----------------|  
+|Aktion|`xs:string`|Der SOAP-Aktionsheader der ausgehenden Nachricht.|  
+|Contract Name|`xs:string`|Der Name des Vertrags. Beispiel: ICalculator.|  
+|Ziel|`xs:string`|Die Adresse des Dienstendpunkts, an den die Nachricht gesendet wird.|  
+|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad &#124; Virtueller Dienstpfad &#124; ServiceName ". Beispiel: "Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
 |AppDomain|`xs:string`|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

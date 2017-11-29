@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, default
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -87,7 +83,7 @@ BSTR MethodOne (BSTR b) {
   
 -   Für Plattformaufrufe wird ein Delegat standardmäßig als unverwalteter Funktionszeiger gemarshallt.  
   
--   Für COM-Interop wird ein Delegat standardmäßig als COM-Schnittstelle vom Typ **_Delegate** gemarshallt. Die **_Delegate**-Schnittstelle ist in der Typbibliothek Mscorlib.tlb definiert und enthält die <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName>-Methode, mit der Sie in der Lage sind, die Methode aufzurufen, auf die der Delegat verweist.  
+-   Für COM-Interop wird ein Delegat standardmäßig als COM-Schnittstelle vom Typ **_Delegate** gemarshallt. Die **_Delegate**-Schnittstelle ist in der Typbibliothek Mscorlib.tlb definiert und enthält die <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>-Methode, mit der Sie in der Lage sind, die Methode aufzurufen, auf die der Delegat verweist.  
   
  Die folgende Tabelle zeigt die Marshalling-Optionen für den Datentyp „Verwalteter Delegat“. Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut stellt mehrere <xref:System.Runtime.InteropServices.UnmanagedType>-Enumerationswerte zum Marshallen von Delegaten bereit.  
   
@@ -365,34 +361,34 @@ interface _Graphics {
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Systemwerttypen  
- Der <xref:System>-Namespace enthält mehrere Werttypen, die für die geschaltete Form von primitiven Datentypen der Laufzeit stehen. Beispielsweise steht die Werttypstruktur <xref:System.Int32?displayProperty=fullName> für die geschachtelte Form von **ELEMENT_TYPE_I4**. Anstatt diese Typen als Strukturen zu marshallen, wie dies bei anderen formatierten Typen der Fall ist, marshallen Sie sie in der gleichen Weise wie die primitiven Datentypen, die sie schachteln. **System.Int32** wird daher als **ELEMENT_TYPE_I4** anstatt als eine Struktur gemarshallt, die ein einziges Mitglied vom Typ **long** enthält. Die folgende Tabelle enthält eine Liste der Werttypen im Namespace **System**, bei denen es sich um geschachtelte Darstellungen von primitiven Datentypen handelt.  
+ Der <xref:System>-Namespace enthält mehrere Werttypen, die für die geschaltete Form von primitiven Datentypen der Laufzeit stehen. Beispielsweise steht die Werttypstruktur <xref:System.Int32?displayProperty=nameWithType> für die geschachtelte Form von **ELEMENT_TYPE_I4**. Anstatt diese Typen als Strukturen zu marshallen, wie dies bei anderen formatierten Typen der Fall ist, marshallen Sie sie in der gleichen Weise wie die primitiven Datentypen, die sie schachteln. **System.Int32** wird daher als **ELEMENT_TYPE_I4** anstatt als eine Struktur gemarshallt, die ein einziges Mitglied vom Typ **long** enthält. Die folgende Tabelle enthält eine Liste der Werttypen im Namespace **System**, bei denen es sich um geschachtelte Darstellungen von primitiven Datentypen handelt.  
   
 |Systemwerttyp|Elementtyp|  
 |-----------------------|------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=nameWithType>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=nameWithType>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_U**|  
   
  Einige andere Werttypen im Namespace **System** werden anders verarbeitet. Da der nicht verwaltete Code bereits über gut eingeführte Formate für diese Typen verfügt, geht der Marshaller nach speziellen Regel beim Marshallen dieser Typen vor. Die folgende Tabelle führt die speziellen Werttypen im Namespace **System** sowie den nicht verwalteten Typ auf, an den sie gemarshallt werden.  
   
 |Systemwerttyp|IDL-Typ|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
-|<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Der folgende Code zeigt die Definition der nicht verwalteten Typen **DATE**, **GUID**, **DECIMAL** und **OLE_COLOR** in der Stdole2-Typbibliothek.  
   
@@ -451,9 +447,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Kopieren und Fixieren](../../../docs/framework/interop/copying-and-pinning.md)   
- [Standardmäßiges Marshalling für Arrays](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [Standardmäßiges Marshalling für Objekte](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [Blitfähige und nicht blitfähige Typen](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Kopieren und Fixieren](../../../docs/framework/interop/copying-and-pinning.md)  
+ [Standardmäßiges Marshalling für Arrays](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [Standardmäßiges Marshalling für Objekte](../../../docs/framework/interop/default-marshaling-for-objects.md)  
  [Standardmäßiges Marshalling für Zeichenfolgen](../../../docs/framework/interop/default-marshaling-for-strings.md)
-

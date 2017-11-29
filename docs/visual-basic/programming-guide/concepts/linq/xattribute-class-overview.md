@@ -1,45 +1,37 @@
 ---
-title: "Übersicht über die XAttribute-Klasse (Visual Basic) | Microsoft-Dokumentation"
+title: "Übersicht über die XAttribute-Klasse (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce5f4be6006908b35057854f89432471fd9f06b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 900f047ec0db8ed1e2399345d2d4c3fba34afd5b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Übersicht über die XAttribute-Klasse (Visual Basic)
-Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.</xref:System.Xml.Linq.XAttribute>  
+Attribute sind Name/Wert-Paare, die einem Element zugeordnet sind. Die <xref:System.Xml.Linq.XAttribute>-Klasse stellt XML-Attribute dar.  
   
 ## <a name="overview"></a>Übersicht  
- Das Arbeiten mit Attributen in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] ist vergleichbar mit dem Arbeiten mit Elementen. Ihre Konstruktoren ähneln sich, und auch die Methoden zum Aufrufen von Auflistungen sind ähnlich. Ein [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Abfrageausdruck für eine Auflistung von Attributen sieht ähnlich einer [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] -Abfrageausdruck für eine Auflistung von Elementen.  
+ Das Arbeiten mit Attributen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist vergleichbar mit dem Arbeiten mit Elementen. Ihre Konstruktoren ähneln sich, und auch die Methoden zum Aufrufen von Auflistungen sind ähnlich. Ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Attributen sieht einem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdruck für eine Auflistung von Elementen sehr ähnlich.  
   
  Die Reihenfolge, in der einem Element Attribute hinzugefügt wurden, wird beibehalten. Das heißt, wenn Sie die Attribute durchlaufen, sehen Sie die Attribute genau in der Reihenfolge, in der sie hinzugefügt wurden.  
   
 ## <a name="the-xattribute-constructor"></a>Der "XAttribute"-Konstruktor  
- Der folgende Konstruktor der die <xref:System.Xml.Linq.XAttribute>Klasse ist diejenige, die Sie am häufigsten verwenden werden:</xref:System.Xml.Linq.XAttribute>  
+ Der folgende Konstruktor der <xref:System.Xml.Linq.XAttribute>-Klasse ist der Konstruktor, den Sie am häufigsten verwenden werden:  
   
 |Konstruktor|Beschreibung|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Erstellt ein <xref:System.Xml.Linq.XAttribute>Objekt.</xref:System.Xml.Linq.XAttribute> Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.|  
+|`XAttribute(XName name, object content)`|Sie erstellt ein <xref:System.Xml.Linq.XAttribute>-Objekt. Das `name`-Argument gibt den Namen des Attributs an, während `content` den Inhalt des Attributs angibt.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Erstellen eines Elements mit einem Attribut  
  Der folgende Code zeigt ein Element, das ein Attribut mit XML-Literalen in Visual Basic enthält:  
@@ -56,7 +48,7 @@ Console.WriteLine(phone)
 ```  
   
 ### <a name="functional-construction-of-attributes"></a>Funktionale Konstruktion von Attributen  
- Konstruieren <xref:System.Xml.Linq.XAttribute>inline mit der Erstellung der Objekte <xref:System.Xml.Linq.XElement>Objekte, wie folgt:</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute>  
+ Mit der Konstruktion von <xref:System.Xml.Linq.XAttribute>-Objekten können Sie <xref:System.Xml.Linq.XElement>-Objekte "inline" erstellen, wie das folgende Beispiel zeigt:  
   
 ```vb  
 Dim c As XElement = _  
@@ -87,7 +79,7 @@ Console.WriteLine(c)
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Attribute sind keine Knoten  
- Es gibt einige Unterschiede zwischen Attributen und Elementen. <xref:System.Xml.Linq.XAttribute>Objekte sind keine Knoten in der XML-Struktur.</xref:System.Xml.Linq.XAttribute> Sie sind Name/Wert-Paare, die einem XML-Element zugeordnet sind. Im Unterschied zum Dokumentobjektmodell (DOM) reflektiert dies die Struktur des XML genauer. Obwohl <xref:System.Xml.Linq.XAttribute>Objekte sind nicht tatsächlich Knoten in der XML-Struktur, die Arbeit mit <xref:System.Xml.Linq.XAttribute>Objekte ähnelt dem Arbeiten mit <xref:System.Xml.Linq.XElement>Objekte.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XAttribute>  
+ Es gibt einige Unterschiede zwischen Attributen und Elementen. <xref:System.Xml.Linq.XAttribute>-Objekte sind keine Knoten in der XML-Struktur. Sie sind Name/Wert-Paare, die einem XML-Element zugeordnet sind. Im Unterschied zum Dokumentobjektmodell (DOM) reflektiert dies die Struktur des XML genauer. Auch wenn <xref:System.Xml.Linq.XAttribute>-Objekte keine Knoten in der XML-Struktur im eigentlichen Sinne sind, ist das Arbeiten mit <xref:System.Xml.Linq.XAttribute>-Objekten vergleichbar mit dem Arbeiten mit <xref:System.Xml.Linq.XElement>-Objekten.  
   
  Diese Unterscheidung ist im Wesentlichen nur für Entwickler von Bedeutung, die Code schreiben, der mit XML-Strukturen auf Knotenebene arbeitet. Für die meisten Entwickler dürfte dieser Unterschied ohne praktische Bedeutung sein.  
   

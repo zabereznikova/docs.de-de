@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
 Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie unter [Leistungsüberwachung](http://technet.microsoft.com/library/cc749249.aspx) finden können.  
@@ -137,7 +130,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie unter [Leistu
 |**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 0-Objekte (d. h. die jüngsten, zuletzt zugewiesenen Objekte) seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Garbage Collection für die Generation 0 tritt auf, wenn der verfügbare Speicher in der Generation 0 nicht ausreicht, um eine Speicherzuordnungsanforderung zu erfüllen. Dieser Indikator wird am Ende einer Garbage Collection für die Generation 0 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 1 oder 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl Gen 1-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl Gen 2-Collections**|Zeigt an, wie oft für die Generation 2-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde. Der Indikator wird am Ende einer Garbage Collection für die Generation 2 (auch als vollständige Garbage Collection bezeichnet) aktualisiert.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
-|**Anzahl induzierte GC**|Zeigt die Höchstzahl der aufgrund eines expliziten Aufrufs von <xref:System.GC.Collect%2A?displayProperty=fullName> durchgeführten Garbage Collections. Es wird empfohlen, die Häufigkeit der durchgeführten Garbage Collections dem Garbage Collector zu überlassen.|  
+|**Anzahl induzierte GC**|Zeigt die Höchstzahl der aufgrund eines expliziten Aufrufs von <xref:System.GC.Collect%2A?displayProperty=nameWithType> durchgeführten Garbage Collections. Es wird empfohlen, die Häufigkeit der durchgeführten Garbage Collections dem Garbage Collector zu überlassen.|  
 |**Anzahl fixierte Objekte**|Zeigt die Anzahl der fixierten Objekte an, die in der letzten Garbage Collection vorhanden waren. Ein fixiertes Objekt ist ein Objekt, dass der Garbage Collector nicht im Arbeitsspeicher verschieben kann. Dieser Indikator erfasst fixierte Objekte nur in Heaps, die der Garbage Collection unterliegen. Eine Garbage Collection der Generation 0 verursacht beispielsweise nur eine Zählung der fixierten Objekte im Generation 0-Heap.|  
 |**Anzahl verwendete Sinkblöcke**|Zeigt die aktuelle Anzahl der verwendeten Synchronisierungsblöcken an. Synchronisierungsblöcke sind Datenstrukturen für einzelne Objekte, die zum Speichern von Synchronisierungsdaten angelegt wurden. Sie enthalten schwache Referenzen auf verwaltete Objekte und müssen daher vom Garbage Collector überprüft werden. Synchronisierungsblöcke sind nicht auf die Speicherung von Synchronisierungsinformationen beschränkt. Sie können auch COM-Interop-Metadaten speichern. Dieser Indikator zeigt Leistungsprobleme durch die starke Nutzung von Synchronisierungsprimitiven an.|  
 |**Zugesicherte Bytes gesamt**|Zeigt den virtuellen Speicher in Bytes an, der dem Garbage Collector momentan zugesichert ist. Zugesicherter Speicher ist der in der Auslagerungsdatei des Datenträgers reservierte physische Speicherplatz.|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-

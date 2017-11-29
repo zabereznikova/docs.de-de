@@ -1,49 +1,55 @@
 ---
-title: "Gewusst wie: Suchen eines TreeViewItem-Elements in TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView-Steuerelement [WPF], Suchen nach einem TreeViewItem"
-  - "TreeViewItem [WPF], Suchen"
+title: 'Gewusst wie: Suchen eines TreeViewItem-Elements in TreeView'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TreeView control [WPF], finding a TreeViewItem
+- TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Suchen eines TreeViewItem-Elements in TreeView
-Das <xref:System.Windows.Controls.TreeView>\-Steuerelement bietet eine bequeme Möglichkeit zum Anzeigen hierarchischer Daten.  Wenn die <xref:System.Windows.Controls.TreeView> an eine Datenquelle gebunden ist, können Sie das ausgewählte Datenobjekt mit der <xref:System.Windows.Controls.TreeView.SelectedItem%2A>\-Eigenschaft schnell und einfach abrufen.  In der Regel empfiehlt es sich, mit dem zugrunde liegenden Datenobjekt zu arbeiten. Mitunter kann es jedoch erforderlich sein, dass enthaltende <xref:System.Windows.Controls.TreeViewItem> der Daten programmgesteuert zu bearbeiten.  Möglicherweise müssen Sie z. B. programmgesteuert das <xref:System.Windows.Controls.TreeViewItem> erweitern oder ein anderes Element in der <xref:System.Windows.Controls.TreeView> auswählen.  
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Gewusst wie: Suchen eines TreeViewItem-Elements in TreeView
+Die <xref:System.Windows.Controls.TreeView> Steuerelement stellt eine einfache Möglichkeit zum Anzeigen von hierarchischen Daten. Wenn Ihre <xref:System.Windows.Controls.TreeView> an eine Datenquelle gebunden ist die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft bietet eine einfache Möglichkeit für Sie die ausgewählten Daten-Objekt schnell abgerufen werden. Es wird in der Regel empfohlen, das zugrunde liegende Datenobjekt arbeiten, aber in einigen Fällen müssen Sie möglicherweise programmgesteuert zu bearbeiten, die der Daten enthält <xref:System.Windows.Controls.TreeViewItem>. Sie möchten z. B. programmgesteuert erweitern die <xref:System.Windows.Controls.TreeViewItem>, oder wählen Sie ein anderes Element in der <xref:System.Windows.Controls.TreeView>.  
   
- Um ein <xref:System.Windows.Controls.TreeViewItem> zu finden, das ein bestimmtes Datenobjekt enthält, müssen Sie jede Ebene der <xref:System.Windows.Controls.TreeView> durchlaufen.  Die Elemente in einer <xref:System.Windows.Controls.TreeView> können auch virtualisiert werden, um die Leistung zu verbessern.  Wenn Elemente virtualisiert werden können, muss ein <xref:System.Windows.Controls.TreeViewItem> auch überprüfen, ob es das Datenobjekt enthält.  
+ Zum Suchen einer <xref:System.Windows.Controls.TreeViewItem> , die ein bestimmtes Datenobjekt enthält, müssen Sie jede Ebene der durchlaufen die <xref:System.Windows.Controls.TreeView>. Die Elemente in einem <xref:System.Windows.Controls.TreeView> können auch virtualisiert werden, um die Leistung zu verbessern. In Fällen, in denen Elemente virtualisiert werden können, Sie auch müssen umsetzen einer <xref:System.Windows.Controls.TreeViewItem> zu überprüfen, ob sie das Datenobjekt enthält.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-## Beschreibung  
- Im folgenden Beispiel wird in einer <xref:System.Windows.Controls.TreeView> nach einem bestimmten Objekt gesucht, und das enthaltende <xref:System.Windows.Controls.TreeViewItem> des Objekts wird zurückgegeben.  Im Beispiel wird sichergestellt, dass jedes <xref:System.Windows.Controls.TreeViewItem> instanziiert wird, sodass seine untergeordneten Elemente durchsucht werden können.  Dieses Beispiel funktioniert auch, wenn die <xref:System.Windows.Controls.TreeView> keine virtualisierten Elemente verwendet.  
+## <a name="description"></a>Beschreibung  
+ Das folgende Beispiel sucht eine <xref:System.Windows.Controls.TreeView> für ein bestimmtes Objekt und gibt das Objekt der enthaltenden <xref:System.Windows.Controls.TreeViewItem>. Im Beispiel wird sichergestellt, dass jedes <xref:System.Windows.Controls.TreeViewItem> instanziiert wird, damit die untergeordneten Elemente gesucht werden können. Dieses Beispiel funktioniert auch, wenn die <xref:System.Windows.Controls.TreeView> nicht virtualisierten Elemente verwendet.  
   
 > [!NOTE]
->  Das folgende Beispiel, bei dem jedes <xref:System.Windows.Controls.TreeViewItem> durchsucht wird, bis das Objekt gefunden wird, funktioniert unabhängig vom zugrunde liegenden Datenmodell für jede <xref:System.Windows.Controls.TreeView>.  Eine andere Technik mit besserer Leistung besteht darin, das Datenmodell nach dem angegebenen Objekt zu durchsuchen, die Position innerhalb der Datenhierarchie nachzuverfolgen und dann nach dem entsprechenden <xref:System.Windows.Controls.TreeViewItem> in der <xref:System.Windows.Controls.TreeView> zu suchen.  Die Technik mit der besseren Leistung setzt jedoch Kenntnisse des Datenmodells voraus, und kann nicht für jede <xref:System.Windows.Controls.TreeView> generalisiert werden.  
+>  Das folgende Beispiel funktioniert für alle <xref:System.Windows.Controls.TreeView>unabhängig von der zugrunde liegenden Datenmodell und sucht alle <xref:System.Windows.Controls.TreeViewItem> bis das Objekt gefunden wird. Eine andere Technik, die eine bessere Leistung wird das Datenmodell für das angegebene Objekt zu suchen, Nachverfolgen von ihrem Speicherort in der Datenhierarchie und suchen Sie dann auf den entsprechenden <xref:System.Windows.Controls.TreeViewItem> in der <xref:System.Windows.Controls.TreeView>. Jedoch das Verfahren, die eine bessere Leistung erfordert Kenntnisse des Datenmodells und kann nicht für jedes verallgemeinert werden <xref:System.Windows.Controls.TreeView>.  
   
-## Code  
+## <a name="code"></a>Code  
  [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
- Der vorherige Code basiert auf einem benutzerdefinierten <xref:System.Windows.Controls.VirtualizingStackPanel>, der eine Methode mit dem Namen `BringIntoView` verfügbar macht.  Im folgenden Code wird der benutzerdefinierte <xref:System.Windows.Controls.VirtualizingStackPanel> definiert.  
+ Der vorherige Code basiert auf einem benutzerdefinierten <xref:System.Windows.Controls.VirtualizingStackPanel> , verfügbar macht eine Methode namens `BringIntoView`. Der folgende Code definiert die benutzerdefinierte <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
  [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
  [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
- Der folgende XAML\-Code zeigt, wie eine <xref:System.Windows.Controls.TreeView> mit dem benutzerdefinierten <xref:System.Windows.Controls.VirtualizingStackPanel> erstellt wird.  
+ Der folgende XAML-Code zeigt, wie eine <xref:System.Windows.Controls.TreeView> , verwendet die benutzerdefinierte <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
- [!code-xml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verbessern der Leistung von TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

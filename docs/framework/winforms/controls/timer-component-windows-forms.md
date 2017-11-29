@@ -1,50 +1,51 @@
 ---
-title: "Timer-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Timer-Komponente [Windows Forms]"
-  - "Zeitgeber"
-  - "Zeitgeber, Erstellen"
+title: "Timer-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Timer component [Windows Forms]
+- timers
+- timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 154c60112e74371f0d4d9afb2fbb38aaa32221c7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Timer-Komponente (Windows&#160;Forms)
-Die <xref:System.Windows.Forms.Timer>\-Komponente von Windows Forms ist eine Komponente, die in regelmäßigen Abständen ein Ereignis auslöst.  Diese Komponente wurde für eine Windows Forms\-Umgebung entwickelt.  
+# <a name="timer-component-windows-forms"></a>Timer-Komponente (Windows Forms)
+Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komponente, die in regelmäßigen Abständen ein Ereignis auslöst. Diese Komponente wurde für eine Windows Forms-Umgebung entwickelt.  
   
-## In diesem Abschnitt  
- [Übersicht über die Timer\-Komponente](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
- Erläutert die allgemeinen Konzepte der <xref:System.Windows.Forms.Timer>\-Komponente, die es Ihnen ermöglicht, eine Anwendung zur Reaktion auf periodische Ereignisse einzurichten.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die Timer-Komponente](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
+ Erläutert die allgemeinen Konzepte der <xref:System.Windows.Forms.Timer>-Komponente, die es Ihnen ermöglicht, eine Anwendung zur Reaktion auf periodische Ereignisse einzurichten.  
   
- [Einschränkungen für die Interval\-Eigenschaft der Timer\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
+ [Einschränkungen für die Interval-Eigenschaft der Timer-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  Beschreibt bekannte Einschränkungen des Intervalls des Timers, die beeinflussen können, wie er verwendet werden kann.  
   
- [Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer\-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
- Beschreibt, wie in Windows\-basierten Anwendungen auf zeitlich festgelegte Intervalle reagiert werden kann.  
+ [Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ Beschreibt, wie in Windows-basierten Anwendungen auf zeitlich festgelegte Intervalle reagiert werden kann.  
   
-## Referenz  
- <xref:System.Windows.Forms.Timer?displayProperty=fullName>\-Klasse  
- Stellt Referenzinformationen zu der Klasse, die für Windows Forms\-Timer verwendet wird, und deren Member bereit.  
+## <a name="reference"></a>Verweis  
+ <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>-Klasse  
+ Stellt Referenzinformationen zu der Klasse, die für Windows Forms-Timer verwendet wird, und deren Member bereit.  
   
- <xref:System.Timers.Timer?displayProperty=fullName>\-Klasse  
- Stellt Referenzinformationen zu der <xref:System.Timers.Timer?displayProperty=fullName>\-Klasse bereit, die von serverbasierten Timern verwendet wird.  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>-Klasse  
+ Stellt Referenzinformationen zu der <xref:System.Timers.Timer?displayProperty=nameWithType>-Klasse bereit, die von serverbasierten Timern verwendet wird.  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- [Timer\-Steuerelement für Visual Basic 6.0\-Benutzer](http://msdn.microsoft.com/de-de/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Timer-Steuerelement für Visual Basic 6.0-Benutzer](http://msdn.microsoft.com/en-us/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  Beschreibt, wie sich die Timerfunktionalität in Visual Basic im Vergleich zu vorherigen Versionen geändert hat.

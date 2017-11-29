@@ -1,48 +1,49 @@
 ---
-title: "Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bitmaps [Windows Forms], Arbeiten mit"
-  - "Beispiele [Windows Forms], Bitmaps"
-  - "Beispiele [Windows Forms], Bilder"
-  - "Beispiele [Windows Forms], Metadateien"
-  - "Bilder [Windows Forms], Arbeiten mit"
-  - "Metadateien, Arbeiten mit"
+title: Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metafiles [Windows Forms], working with
+- examples [Windows Forms], bitmaps
+- examples [Windows Forms], images
+- bitmaps [Windows Forms], working with
+- images [Windows Forms], working with
+- examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt die `Bitmap`\-Klasse zum Arbeiten mit Rasterbilder und die `Metafile`\-Klasse zum Arbeiten mit Vektorgrafiken bereit.  Sowohl die `Bitmap`\-Klasse als auch die `Metafile`\-Klasse erben von der `Image`\-Klasse.  
+# <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt die `Bitmap`-Klasse zum Arbeiten mit Rasterbilder und die `Metafile`-Klasse zum Arbeiten mit Vektorgrafiken bereit. Sowohl die `Bitmap`-Klasse als auch die `Metafile`-Klasse erben von der `Image`-Klasse.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Zeichnen einer vorhandenen Bitmap auf dem Bildschirm](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  Beschreibt das Laden und Zeichnen von Bitmaps.  
   
  [Gewusst wie: Laden und Anzeigen von Metadateien](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
  Veranschaulicht das Laden und Zeichnen von Metadateien.  
   
- [Zuschneiden und Skalieren von Bildern in GDI\+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
- Erläutert das Zuschneiden und Skalieren von Vektor\- und Rasterbildern.  
+ [Zuschneiden und Skalieren von Bildern in GDI+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
+ Erläutert das Zuschneiden und Skalieren von Vektor- und Rasterbildern.  
   
  [Gewusst wie: Drehen, Spiegeln und Zerren von Bildern](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
  Beschreibt das Zeichnen gedrehter, gespiegelter und gezerrter Bilder.  
   
  [Gewusst wie: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- Veranschaulicht, wie die <xref:System.Drawing.Drawing2D.InterpolationMode>\-Enumeration verwendet wird, um die Bildqualität zu ändern.  
+ Veranschaulicht, wie die <xref:System.Drawing.Drawing2D.InterpolationMode>-Enumeration verwendet wird, um die Bildqualität zu ändern.  
   
  [Gewusst wie: Erstellen von Miniaturbildern](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
  Beschreibt das Erstellen von Miniaturbildern.  
@@ -59,7 +60,7 @@ caps.handback.revision: 17
  [Gewusst wie: Extrahieren eines mit einer Datei verknüpften Symbols in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
  Beschreibt, wie ein Symbol extrahiert wird, das eine eingebettete Ressource einer Datei ist.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Image>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
@@ -69,6 +70,6 @@ caps.handback.revision: 17
  <xref:System.Drawing.Bitmap>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  Enthält Links zu Themen, in denen andere Typen von Bitmaps sowie deren Bearbeitung in Anwendungen erläutert werden.

@@ -1,89 +1,91 @@
 ---
-title: "&lt;generatePublisherEvidence&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<generatePublisherEvidence>-Element"
-  - "generatePublisherEvidence-Element"
+title: '&lt;"generatePublisherEvidence"&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generatePublisherEvidence element
+- <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 78293c396687f9c0c99ffdfbe94cf1f3c548289d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;generatePublisherEvidence&gt;-Element
-Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher>\-Beweise für die Codezugriffssicherheit \(CAS\) erstellt.  
+# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;"generatePublisherEvidence"&gt; Element
+Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis für die Codezugriffssicherheit (CAS).  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<"generatePublisherEvidence" >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <generatePublisherEvidence    
    enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher>\-Beweise erstellt.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`false`|Erstellt keinen <xref:System.Security.Policy.Publisher>\-Beweis.|  
-|`true`|Erstellt <xref:System.Security.Policy.Publisher>\-Beweis.  Dies ist der Standardwert.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`false`|Erstellt keine <xref:System.Security.Policy.Publisher> Beweis.|  
+|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweis. Dies ist die Standardeinstellung.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher hat dieses Element keine Auswirkung auf die Ladezeiten von Assemblys.  Weitere Informationen finden Sie im "Sicherheitsrichtlinienvereinfachung"\-Abschnitt in [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).  
+>  In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher, dieses Element hat keine Auswirkungen auf die Assembly Ladezeiten. Weitere Informationen finden Sie im Abschnitt "Security Policy Vereinfachung" [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).  
   
- Die Common Language Runtime \(CLR\) versucht, die Authenticode\-Signatur zur Ladezeit zu überprüfen, damit der <xref:System.Security.Policy.Publisher>\-Beweis für die Assembly erstellt wird.  Standardmäßig benötigen die meisten Anwendungen jedoch keinen <xref:System.Security.Policy.Publisher>\-Beweis.  Die Standard\-CAS\-Richtlinie ist nicht auf <xref:System.Security.Policy.PublisherMembershipCondition> angewiesen.  Vermeiden Sie die unnötigen Startkosten, die mit der Prüfung der Herausgebersignatur zusammenhängen, es sei denn, die Anwendung wird auf einem Computer mit benutzerdefinierter CAS\-Richtlinie ausgeführt oder muss den Anforderungen von <xref:System.Security.Permissions.PublisherIdentityPermission> in einer nur teilweise vertrauenswürdigen Umgebung genügen. \(Forderungen nach Identitätsberechtigungen haben in einer vollständig vertrauenswürdigen Umgebung immer Erfolg.\)  
+ Die common Language Runtime (CLR) versucht, beim Überprüfen der Authenticode-Signatur zur Ladezeit erstellen <xref:System.Security.Policy.Publisher> Beweis für die Assembly. Allerdings wird standardmäßig die meisten Anwendungen müssen nicht <xref:System.Security.Policy.Publisher> Beweis. Standard-CAS-Richtlinie nicht auf beruht die <xref:System.Security.Policy.PublisherMembershipCondition>. Vermeiden Sie die Kosten für unnötige Start bei der Überprüfung der Signatur des Herausgebers, wenn Ihre Anwendung auf einem Computer mit benutzerdefinierten CAS-Richtlinie ausgeführt wird oder Forderungen nach erfüllen beabsichtigt ist <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung. (Anforderungen für Identitätsberechtigungen immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung ausgeführt.)  
   
 > [!NOTE]
->  Dienste sollten das `<generatePublisherEvidence>`\-Element verwenden, um die Startleistung zu verbessern.  Durch die Verwendung dieses Elements können auch Verzögerungen vermieden werden, die sonst ein Timeout und den Abbruch des Dienststarts verursachen können.  
+>  Es wird empfohlen, dass Dienste verwenden die `<generatePublisherEvidence>` Element, um die startleistung zu verbessern.  Mit diesem Element können auch Verzögerungen zu vermeiden, die ein Timeout und den Abbruch des Dienststarts verursachen kann.  
   
-## Konfigurationsdatei  
+## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie Sie mit dem `<generatePublisherEvidence>`\-Element die Suche nach der CAS\-Herausgeberrichtlinie für eine Anwendung deaktivieren.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die `<generatePublisherEvidence>` -Element nach deaktivieren Verleger CAS-Richtlinie für eine Anwendung.  
   
-```  
+```xml  
 <configuration>  
-    <runtime>  
-        <generatePublisherEvidence enabled="false"/>  
-    </runtime>  
+    <runtime>  
+        <generatePublisherEvidence enabled="false"/>  
+    </runtime>  
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

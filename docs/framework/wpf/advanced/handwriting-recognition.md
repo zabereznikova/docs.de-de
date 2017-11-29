@@ -1,43 +1,47 @@
 ---
-title: "Schrifterkennung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Handschrifterkennung"
-  - "Erkennung der Handschrift"
+title: Schrifterkennung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- handwriting recognition [WPF]
+- recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f8a202d4698c968a91a3d930138290cedfe3a83b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Schrifterkennung
-In diesem Abschnitt werden die Grundlagen der Erkennung von Freihandeingaben auf der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Plattform erläutert.  
+# <a name="handwriting-recognition"></a>Schrifterkennung
+Dieser Abschnitt beschreibt die Grundlagen der Erkennung in Bezug auf Freihandeingaben in der WPF-Plattform.  
   
-## Lösungsmöglichkeiten für die Schrifterkennung  
- Im folgenden Beispiel wird die Erkennung von Freihandeingaben mithilfe von <xref:System.Windows.Ink.InkAnalyzer> veranschaulicht.  
+## <a name="recognition-solutions"></a>Lösungen zu Erkennung  
+ Das folgende Beispiel zeigt, wie Sie Freihandeingaben mithilfe der Klasse [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx) erkennen.  
   
 > [!NOTE]
->  Dieses Beispiel erfordert die Installation von Handschrifterkennungen auf dem System.  
+>  Dieses Beispiel erfordert, dass die Handschrifterkennung auf dem System installiert wird.  
   
- Erstellen Sie in Visual Studio 2005 ein neues [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungsprojekt mit dem Namen "InkRecognition".  Ersetzen Sie den Inhalt der Datei Window1.xaml durch den folgenden XAML\-Code:  In diesem Code wird die Benutzeroberfläche der Anwendung gerendert.  
+ Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Studio mit dem Namen **InkRecognition**. Ersetzen Sie den Inhalt der Datei „Window1.xaml“ durch den folgenden XAML-Code. Dieser Code rendert die Benutzeroberfläche der Anwendung.  
   
- [!code-xml[InkRecognition#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
+ [!code-xaml[InkRecognition#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
   
- Fügen Sie einen Verweis auf folgende WPF\-Assemblys zur Freihandeingabenanalyse hinzu: IAWinFX.dll, IACore.dll und IALoader.dll. Diese Assemblys sind gespeichert unter: \\Program Files\\Reference Assemblies\\Microsoft\\Tablet PC\\v1.7.  Ersetzen Sie den Inhalt der CodeBehind\-Datei durch folgenden Code:  
+ Fügen Sie einen Verweis auf die Microsoft Ink-Assembly „Microsoft.Ink.dll“ hinzu, die unter \Programme\Gemeinsame Dateien\Microsoft Shared\Ink gefunden werden kann. Ersetzen Sie den Inhalt der CodeBehind-Datei durch den folgenden Code.  
   
  [!code-csharp[InkRecognition#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml.cs#2)]
  [!code-vb[InkRecognition#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  
   
-## Siehe auch  
- <xref:System.Windows.Ink.InkAnalyzer>   
- <xref:System.Windows.Ink.AnalysisStatus>   
- <xref:System.Windows.Controls.InkCanvas>
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx)

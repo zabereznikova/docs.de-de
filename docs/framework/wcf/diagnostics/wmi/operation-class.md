@@ -1,25 +1,28 @@
 ---
-title: "Operation-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operation-Klasse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 739f8309e7a01eeecf921b50fcde24417fbbc515
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Operation-Klasse
-Operation  
+# <a name="operation-class"></a>Operation-Klasse
+Vorgang  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class Operation  
@@ -39,101 +42,101 @@ class Operation
 };  
 ```  
   
-## Methoden  
- Die Operation\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die Operation-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die Operation\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die Operation-Klasse verfügt über die folgenden Eigenschaften:  
   
-### Action  
- Datentyp: Zeichenfolge  
-  
- Zugriffstyp: Schreibgeschützt  
-  
- Die WS\-Adressierungsaktion der Anforderungsnachricht.  
-  
-### AsyncPattern  
- Datentyp: Boolescher Wert  
+### <a name="action"></a>Aktion  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, dass ein Vorgang asynchron implementiert wird, indem in einem Dienstvertrag das Methodenpaar `Begin` \[spitze Klammern öffnen\/schließen\] und `End` \[spitze Klammern öffnen\/schließen\] verwendet wird.  
+ Die WS-Adressierungsaktion der Anforderungsnachricht.  
   
-### Behaviors  
- Datentyp: Array für Verhalten  
+### <a name="asyncpattern"></a>AsyncPattern  
+ Datentyp: Boolesch  
+  
+ Zugriffstyp: Schreibgeschützt  
+  
+ Gibt an, dass ein Vorgang implementiert wird asynchron mit einem `Begin`[spitze Klammern öffnen/schließen] und `End`[Klammern öffnen/schließen]-Methodenpaar in einem Dienstvertrag.  
+  
+### <a name="behaviors"></a>Verhalten  
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die mit diesem Vorgang verknüpften Verhalten.  
   
-### IsCallback  
+### <a name="iscallback"></a>IsCallback  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  True, wenn der Vorgang ein Rückrufvorgang ist.  
   
-### IsInitiating  
+### <a name="isinitiating"></a>IsInitiating  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob die Methode einen Vorgang implementiert, der eine Sitzung auf dem Server initiieren kann.  
   
-### IsOneWay  
+### <a name="isoneway"></a>IsOneWay  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob ein Vorgang eine Antwortnachricht zurückgibt.  
   
-### IsTerminating  
+### <a name="isterminating"></a>IsTerminating  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob ein Vorgang eine Antwortnachricht zurückgibt.  
   
-### MethodSignature  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="methodsignature"></a>MethodSignature  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Methodensignatur des Vorgangs.  
   
-### Name  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="name"></a>Name  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name des Vorgangs.  
   
-### ParameterTypes  
+### <a name="parametertypes"></a>ParameterTypes  
  Datentyp: Zeichenfolgenarray  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Parametertypen des Vorgangs.  
   
-### ReplyAction  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="replyaction"></a>ReplyAction  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Der Wert der SOAP\-Aktion für die Antwortnachricht des Vorgangs.  
+ Der Wert der SOAP-Aktion für die Antwortnachricht des Vorgangs.  
   
-### ReturnType  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="returntype"></a>ReturnType  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Rückgabetyp des Vorgangs.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.OperationDescription>

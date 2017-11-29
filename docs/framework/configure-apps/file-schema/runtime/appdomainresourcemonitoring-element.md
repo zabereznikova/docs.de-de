@@ -1,76 +1,78 @@
 ---
-title: "&lt;appDomainResourceMonitoring&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<appDomainResourceMonitoring>-Element"
-  - "appDomainResourceMonitoring-Element"
+title: '&lt;AppDomainResourceMonitoring&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- appDomainResourceMonitoring element
+- <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 5c9591789c007466adce107732a7ab777b1de241
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;appDomainResourceMonitoring&gt;-Element
-Weist die Laufzeit an, in allen Anwendungsdomänen des Prozesses Statistikdaten für seine Lebensdauer zu sammeln.  
+# <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;AppDomainResourceMonitoring&gt; Element
+Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses an.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<AppDomainResourceMonitoring >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <appDomainResourceMonitoring    
    enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob Statistikdaten für die Ressourcenüberwachung der Anwendungsdomäne von der Laufzeit gesammelt werden.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime Statistiken für die ressourcenüberwachung der Anwendungsdomäne erfasst.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`true`|Statistikdaten für die Ressourcenüberwachung der Anwendungsdomäne werden gesammelt.|  
-|`false`|Statistikdaten für die Ressourcenüberwachung der Anwendungsdomäne werden nicht gesammelt.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`true`|Statistiken für die ressourcenüberwachung der Anwendungsdomäne werden gesammelt.|  
+|`false`|Statistiken für die ressourcenüberwachung der Anwendungsdomäne werden nicht erfasst.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Die Ressourcenüberwachung der Anwendungsdomäne ist über die verwaltete Klasse der Anwendungsdomäne, über die [ICLRAppDomainResourceMonitor](../../../../../ocs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)\-Hostschnittstelle und über die Ereignisablaufverfolgung für Windows \(ETW\) verfügbar.  Wenn die Überwachung aktiviert ist, werden Statistikdaten für alle Anwendungsdomänen im Prozess für seine Lebensdauer gesammelt.  
+## <a name="remarks"></a>Hinweise  
+ Ressourcenüberwachung der Anwendungsdomäne ist verfügbar, über die verwaltete Anwendung Domänenklasse, das hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) Schnittstelle und ereignisablaufverfolgung für Windows (ETW). Wenn die Überwachung aktiviert ist, werden Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses gesammelt.  
   
- Um das Überwachen von verwaltetem Code zu aktivieren, verwenden Sie die <xref:System.AppDomain.MonitoringIsEnabled%2A>\-Eigenschaft.  
+ Verwenden Sie zum Aktivieren der Überwachung von verwaltetem Code die <xref:System.AppDomain.MonitoringIsEnabled%2A> Eigenschaft.  
   
- Dieses Konfigurationselement ist erst ab [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] verfügbar.  
+ Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die Ressourcenüberwachung von Anwendungsdomänen aktiviert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie die ressourcenüberwachung der Anwendungsdomäne aktiviert.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <appDomainResourceMonitoring enabled="true"/>  
@@ -78,7 +80,7 @@ Weist die Laufzeit an, in allen Anwendungsdomänen des Prozesses Statistikdaten 
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=fullName>   
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

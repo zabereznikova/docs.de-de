@@ -1,83 +1,85 @@
 ---
-title: "&lt;relativeBindForResources&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<relativeBindForResources>-Element"
-  - "RelativeBindForResources-Element"
+title: '&lt;RelativeBindForResources&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RelativeBindForResources element
+- <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ffd5b62e0759b3a4f97e105e884912a41f0117de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;relativeBindForResources&gt;-Element
-Optimiert die Überprüfung für Satellitenassemblys.  
+# <a name="ltrelativebindforresourcesgt-element"></a>&lt;RelativeBindForResources&gt; Element
+Optimiert den Test für Satellitenassemblys.  
   
-## Syntax  
+ \<Konfiguration >-Element  
+\<Common Language Runtime >-Element  
+\<RelativeBindForResources >-Element  
   
-```vb  
+## <a name="syntax"></a>Syntax  
+  
+```xml
 <relativeBindForResources    
    enabled="true|false" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime die Überprüfung für Satellitenassemblys optimiert.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die common Language Runtime die Überprüfung von Satellitenassemblys optimiert.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`false`|Die Laufzeit nicht optimiert die Überprüfung für Satellitenassemblys.  Dies ist der Standardwert.|  
-|`true`|Die Laufzeit optimiert die Überprüfung für Satellitenassemblys.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`false`|Die Common Language Runtime wird die Überprüfung für Satellitenassemblys nicht optimiert werden. Dies ist der Standardwert.|  
+|`true`|Die Common Language Runtime optimiert die Überprüfung Satellitenassemblys.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
-## Hinweise  
- Normalerweise überprüft Ressourcen\-Manager für Ressourcen, wie im Thema [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) dokumentiert.  Dies bedeutet, dass, wenn Ressourcen\-Manager für eine bestimmte Version einer lokalisierten Ressource überprüft, es im globalen Assemblycache, im Listenfeld Suchen in einem kulturabhängigen Ordner in der Codebase der Anwendung, in Abfragefenster Installationsprogramm nach Satellitenassemblys sowie das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> auslöst Ereignis findet.  Das Element `<relativeBindForResources>` optimiert die Methode, in der für Satellitenassemblys Ressourcen\-Manager überprüft.  Es kann die Leistung verbessern, beim Überprüfen für Ressourcen unter folgenden Bedingungen:  
+## <a name="remarks"></a>Hinweise  
+ Im Allgemeinen Ressourcen-Manager-Prüfpunkte für Ressourcen, wie beschrieben in der [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Thema. Dies bedeutet, dass beim Ressourcen-Manager für eine bestimmte lokalisierte Version einer Ressource Prüfpunkte, kann es suchen Sie im globalen Assemblycache, Satellitenassemblys in eine kulturspezifische Ordner in der Anwendung Code, Basisabfrage erstellt Windows Installer gesucht und Auslösen der <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis. Die `<relativeBindForResources>` Element optimiert die Möglichkeit, in dem Ressourcen-Manager-für Satellitenassemblys Prüfpunkte. Sie können die Leistung verbessern, bei der Suche nach Ressourcen in den folgenden Situationen:  
   
--   Wenn die Satellitenassembly im gleichen Speicherort wie die Codeassembly bereitgestellt wird.  Das heißt, wenn Codeassembly, die im globalen Assemblycache installiert ist, müssen die Satellitenassemblys ebenfalls dort installiert werden.  Wenn die Codeassembly in der Codebase der Anwendung installiert wird, müssen die Satellitenassemblys in einem kulturabhängigen Ordner in der Codebase auch installiert werden.  
+-   Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird. Das heißt, wenn die Codeassembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch es installiert sein. Wenn die Codeassembly in die Codebasis der Anwendung installiert ist, müssen die Satellitenassemblys auch in einem kulturspezifischen Ordner, in die CodeBase installiert.  
   
--   Wenn Windows Installer verwenden oder nur selten nicht für bedarfsabhängige Installation von Satellitenassemblys verwendet wird.  
+-   Wenn Windows Installer wird nicht verwendet oder nur selten verwendet für die Installation von Satellitenassemblys bei Bedarf.  
   
--   Wenn der Anwendungscode <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> nicht das Ereignis behandelt.  
+-   Wenn Anwendungscode behandelt nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.  
   
- Das `enabled`\-Attribut des `<relativeBindForResources>`\-Elements auf `true` festlegen, optimiert die Überprüfung des Ressourcen\-Managers für Satellitenassemblys, wie folgt:  
+ Festlegen der `enabled` Attribut des der `<relativeBindForResources>` Element `true` optimiert Ressourcen-Manager-Test für Satellitenassemblys wie folgt:  
   
--   Sie verwendet den Speicherort der übergeordneten Code, um die Satellitenassembly zu überprüfen.  
+-   Den Speicherort der übergeordneten Codeassembly verwendet, um für die Suche nach der Satellitenassembly.  
   
--   Sie bewirkt nicht Abfragefenster Installationsprogramm für Satellitenassemblys.  
+-   Windows Installer ist nicht für Satellitenassemblys abgefragt werden.  
   
--   Sie löst das <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>\-Ereignis aus.  
+-   Es wird nicht ausgelöst. die <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.  
   
-## Siehe auch  
- [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,45 +1,48 @@
 ---
-title: "SAML-Tokenanbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SAML-Tokenanbieter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fc6eaa916507c7e1c530d4ee757097bf0bffcd34
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# SAML-Tokenanbieter
-Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client\-SAML\-Tokenanbieters.  Ein Tokenanbieter in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen.  Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann.  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird auch mit einem [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter ausgeliefert.  Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+# <a name="saml-token-provider"></a>SAML-Tokenanbieter
+Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen bereitzustellen. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wird auch mit einem [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter ausgeliefert. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
 -   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.  
   
--   Wenn Sie eigene benutzerdefinierte Mechanismen zur Transformation der Anmeldeinformationen von dem Punkt, an dem der Benutzer die Details angibt, bis zu dem Punkt, in dem das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clientframework die Anmeldeinformationen verwendet, angeben möchten.  
+-   Wenn Sie eigene benutzerdefinierte Mechanismen zur Transformation der Anmeldeinformationen von dem Punkt, an dem der Benutzer die Details angibt, bis zu dem Punkt, in dem das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework die Anmeldeinformationen verwendet, angeben möchten.  
   
 -   Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
- In diesem Beispiel wird gezeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen können, mit dem ein SAML\-Token verwendet werden kann, das außerhalb des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clientframework bezogen wurde.  
+ In diesem Beispiel wird gezeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen können, mit dem ein SAML-Token verwendet werden kann, das außerhalb des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework bezogen wurde.  
   
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:  
   
 -   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
   
--   Wie ein SAML\-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.  
+-   Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.  
   
--   Wie das SAML\-Token für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Clientframework bereitgestellt wird.  
+-   Wie das SAML-Token für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clientframework bereitgestellt wird.  
   
--   Wie der Server über das X.509\-Zertifikat des Servers vom Client authentifiziert wird.  
+-   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
- Der Dienst macht zwei Endpunkte zur Kommunikation mit dem Dienst verfügbar, die mit der Konfigurationsdatei "App.conf" definiert werden.  Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.  Die Bindung wird mit einer Standard\-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet.  Ein Endpunkt erwartet, dass der Client sich mit einem SAML\-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML\-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet.  Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`\-Verhalten.  Mit dem `serviceCredentials`\-Verhalten können Sie ein Dienstzertifikat erstellen.  Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen.  Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird \(in den Setupanweisungen am Ende dieses Themas beschrieben\).  Das `serviceCredentials`\-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML\-Token haben.  Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".  
+ Der Dienst macht zwei Endpunkte zur Kommunikation mit dem Dienst verfügbar, die mit der Konfigurationsdatei "App.conf" definiert werden. Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet. Ein Endpunkt erwartet, dass der Client sich mit einem SAML-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `serviceCredentials`-Verhalten können Sie ein Dienstzertifikat erstellen. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird (in den Setupanweisungen am Ende dieses Themas beschrieben). Das `serviceCredentials`-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML-Token haben. Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".  
   
-```  
+```xml  
 <system.serviceModel>  
  <services>  
   <service   
@@ -118,13 +121,13 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 </system.serviceModel>  
 ```  
   
- In den folgenden Schritten wird die Entwicklung eines benutzerdefinierten SAML\-Tokenanbieters und seine Integration in das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Sicherheitsframework gezeigt:  
+ In den folgenden Schritten wird die Entwicklung eines benutzerdefinierten SAML-Tokenanbieters und seine Integration in das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Sicherheitsframework gezeigt:  
   
-1.  Schreiben Sie einen benutzerdefinierten SAML\-Tokenanbieter.  
+1.  Schreiben Sie einen benutzerdefinierten SAML-Tokenanbieter.  
   
-     Im Beispiel wird ein benutzerdefinierter SAML\-Tokenanbieter implementiert, der auf der Basis einer SAML\-Assertion, die zum Zeitpunkt der Erstellung angegeben wurde, ein Sicherheitstoken zurückgibt.  
+     Im Beispiel wird ein benutzerdefinierter SAML-Tokenanbieter implementiert, der auf der Basis einer SAML-Assertion, die zum Zeitpunkt der Erstellung angegeben wurde, ein Sicherheitstoken zurückgibt.  
   
-     Zur Ausführung dieser Aufgabe wird der benutzerdefinierte Tokenanbieter aus der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>\-Klasse abgeleitet und setzt die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>\-Methode außer Kraft.  Diese Methode erstellt ein neues `SecurityToken`\-Objekt und gibt es zurück.  
+     Zur Ausführung dieser Aufgabe wird der benutzerdefinierte Tokenanbieter aus der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse abgeleitet und setzt die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>-Methode außer Kraft. Diese Methode erstellt ein neues `SecurityToken`-Objekt und gibt es zurück.  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -163,9 +166,9 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     }  
     ```  
   
-2.  Schreiben Sie den benutzerdefiniertem Sicherheitstoken\-Manager.  
+2.  Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.  
   
-     Die <xref:System.IdentityModel.Selectors.SecurityTokenManager>\-Klasse dient zur Erstellung von <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, die in der `CreateSecurityTokenProvider`\-Methode übergeben wird.  Ein Sicherheitstoken\-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und eines Token\-Serialisierungsprogramms. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt.  In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken\-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten SAML\-Tokenanbieter zurückzugeben, wenn die übergebenen Sicherheitstokenanforderungen angeben, dass das SAML\-Token angefordert wird.  Wenn die Clientanmeldeinformationsklasse \(siehe Schritt 3\) keine Assertion angegeben hat, erstellt der Sicherheitstoken\-Manager eine entsprechende Instanz.  
+     Die <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse dient zur Erstellung von <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Ein Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und eines Token-Serialisierungsprogramms. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten SAML-Tokenanbieter zurückzugeben, wenn die übergebenen Sicherheitstokenanforderungen angeben, dass das SAML-Token angefordert wird. Wenn die Clientanmeldeinformationsklasse (siehe Schritt 3) keine Assertion angegeben hat, erstellt der Sicherheitstoken-Manager eine entsprechende Instanz.  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -233,12 +236,11 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
        return base.CreateSecurityTokenProvider(tokenRequirement);  
       }  
     }  
-  
     ```  
   
 3.  Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.  
   
-     Die Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken\-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token\-Serialisierungsprogramme abgerufen werden können.  
+     Die Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.  
   
     ```  
     public class SamlClientCredentials : ClientCredentials  
@@ -304,16 +306,16 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- Beim Dienst werden die dem Aufrufer zugeordneten Ansprüche angezeigt.  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.  Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ Beim Dienst werden die dem Aufrufer zugeordneten Ansprüche angezeigt. Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-## Setupbatchdatei  
- Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit dem relevanten Zertifikat zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.  Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
+## <a name="setup-batch-file"></a>Setupbatchdatei  
+ Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit dem relevanten Zertifikat zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  
   
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.  
   
 -   Erstellen des Serverzertifikats  
   
-     Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.  Die Variable `%SERVER_NAME%` gibt den Servernamen an.  Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an.  Der Standardwert in dieser Batchdatei lautet localhost.  
+     Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert in dieser Batchdatei lautet localhost.  
   
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort LocalMachine gespeichert.  
   
@@ -329,7 +331,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
   
 -   Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.  Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.  Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
@@ -337,7 +339,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
   
 -   Erstellen des Herausgeberzertifikats.  
   
-     Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Herausgeberzertifikat erstellt.  Die Variable `%USER_NAME%` gibt den Herausgebernamen an.  Ändern Sie diese Variable, und geben Sie Ihren eigenen Herausgebernamen an.  Der Standardwert in dieser Batchdatei lautet "Alice".  
+     Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Herausgeberzertifikat erstellt. Die Variable `%USER_NAME%` gibt den Herausgebernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Herausgebernamen an. Der Standardwert in dieser Batchdatei lautet "Alice".  
   
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort CurrentUser gespeichert.  
   
@@ -353,59 +355,58 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
   
 -   Installieren des Herausgeberzertifikats im Speicher für vertrauenswürdige Zertifikate des Servers.  
   
-     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert.  Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden.  Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Füllen des Serverzertifikatspeichers mit dem Herausgeberzertifikat nicht erforderlich.  
+     Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Serverzertifikatspeichers mit dem Herausgeberzertifikat nicht erforderlich.  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
-#### So richten Sie das Beispiel ein und erstellen es  
+#### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Projektmappe zu erstellen.  
+2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 > [!NOTE]
 >  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
   
-#### So führen Sie das Beispiel auf demselben Computer aus  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus.  Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+1.  Öffnen Sie eine [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem Beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
   
     > [!NOTE]
-    >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung ausgeführt zu werden.  Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Eingabeaufforderung festgelegte PATH\-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.  
+    >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung ausgeführt zu werden. Die innerhalb der [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Eingabeaufforderung festgelegte PATH-Umgebungsvariable zeigt auf das Verzeichnis mit den ausführbaren Dateien, die für das Skript Setup.bat erforderlich sind.  
   
-2.  Starten Sie Service.exe aus dem Ordner \\service\\bin.  
+2.  Starten Sie Service.exe aus dem Ordner \service\bin.  
   
-3.  Starten Sie Client.exe aus dem Ordner \\client\\bin.  In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### So führen Sie das Beispiel computerübergreifend aus  
+#### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
 1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer.  Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält.  Die Datei Service.exe.config muss so aktualisiert werden, dass sie diesem neuen Zertifikatsnamen entspricht.  Sie können das Serverzertifikat erstellen, indem Sie die Batchdatei Setup.bat ändern.  Beachten Sie, dass die Datei setup.bat in einem Visual Studio\-Eingabeaufforderungsfenster mit Administratorrechten ausgeführt werden muss.  Sie müssen die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, der als Host für den Dienst dienen soll.  
+3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Datei Service.exe.config muss so aktualisiert werden, dass sie diesem neuen Zertifikatsnamen entspricht. Sie können das Serverzertifikat erstellen, indem Sie die Batchdatei Setup.bat ändern. Beachten Sie, dass die Datei setup.bat in einem Visual Studio-Eingabeaufforderungsfenster mit Administratorrechten ausgeführt werden muss. Sie müssen die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, der als Host für den Dienst dienen soll.  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients.  Dieser Schritt ist nicht notwendig, wenn das Serverzertifikat von einem Aussteller stammt, der vom Client als vertrauenswürdig eingestuft wurde.  
+4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Dieser Schritt ist nicht notwendig, wenn das Serverzertifikat von einem Aussteller stammt, der vom Client als vertrauenswürdig eingestuft wurde.  
   
 5.  Ändern Sie in der Datei Service.exe.config auf dem Dienstcomputer den Wert der Basisadresse, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
   
 6.  Führen Sie auf dem Dienstcomputer Service.exe an einer Eingabeaufforderung aus.  
   
-7.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \\client\\bin\\ \(unterhalb des sprachspezifischen Ordners\) auf den Clientcomputer.  
+7.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
 8.  Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
 9. Starten Sie auf dem Clientcomputer `Client.exe` in einem Eingabeaufforderungsfenster.  
   
-10. Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+#### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

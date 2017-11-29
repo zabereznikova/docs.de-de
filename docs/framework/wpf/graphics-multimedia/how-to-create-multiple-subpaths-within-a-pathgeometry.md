@@ -1,40 +1,41 @@
 ---
-title: "Gewusst wie: Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, PathGeometry"
-  - "Grafiken [WPF], Untergeordnete Pfade"
-  - "Mehrere untergeordnete Pfade"
-  - "PathGeometry-Klasse"
-  - "Untergeordnete Pfade"
+title: 'Gewusst wie: Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple subpaths [WPF]
+- graphics [WPF], subpaths
+- subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a9a233df95f69a68c5410c5836dacd5ab2c239a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry
-In diesem Beispiel wird das Erstellen von mehreren untergeordneten Pfaden in einer <xref:System.Windows.Media.PathGeometry> dargestellt.  Um mehrere untergeordnete Pfade zu erstellen, muss für jeden dieser Pfade eine <xref:System.Windows.Media.PathFigure> erstellt werden.  
+# <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Gewusst wie: Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry
+In diesem Beispiel wird gezeigt, wie mehrere Pfade im Erstellen einer <xref:System.Windows.Media.PathGeometry>. Um mehrere Pfade zu erstellen, erstellen Sie eine <xref:System.Windows.Media.PathFigure> für jeden untergeordneten Pfad.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei untergeordnete Pfade erstellt, wobei jeder ein Dreieck darstellt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt zwei Pfade, die jeweils einem Dreieck gekennzeichnet.  
   
- [!code-xml[GeometrySample#38](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#38)]  
+ [!code-xaml[GeometrySample#38](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#38)]  
   
- Im folgenden Beispiel wird das Erstellen von mehreren untergeordneten Pfaden mithilfe von <xref:System.Windows.Shapes.Path> und der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Attributsyntax dargestellt.  Jedes `M` erstellt einen neuen untergeordneten Pfad. Somit werden in dem Beispiel zwei untergeordnete Pfade erstellt, die jeweils ein Dreieck zeichnen.  
+ Im folgende Beispiel wird gezeigt, wie erstellen Sie mehrere Pfade mithilfe einer <xref:System.Windows.Shapes.Path> und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attributsyntax. Jede `M` erstellt einen neuen untergeordneten so, dass im Beispiel werden zwei Pfade erstellt, jeweils ein Dreieck gezeichnet wird.  
   
- [!code-xml[GeometrySample#58](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#58)]  
+ [!code-xaml[GeometrySample#58](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#58)]  
   
- \(Beachten Sie, dass mithilfe dieser Attributsyntax eigentlich eine <xref:System.Windows.Media.StreamGeometry> erstellt wird, bei der es sich um eine vereinfachte Version von <xref:System.Windows.Media.PathGeometry> handelt.  Weitere Informationen finden Sie auf der Seite [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).\)  
+ (Beachten Sie, die diese Attributsyntax tatsächlich erstellt eine <xref:System.Windows.Media.StreamGeometry>, einer helleren Gewichtung-Version von einer <xref:System.Windows.Media.PathGeometry>. Weitere Informationen finden Sie auf der Seite [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).)  
   
-## Siehe auch  
- [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

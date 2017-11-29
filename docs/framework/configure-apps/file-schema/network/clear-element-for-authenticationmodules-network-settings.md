@@ -1,70 +1,71 @@
 ---
-title: "&lt;clear&gt;-Element f&#252;r authenticationModules (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear-Element"
-  - "<clear>-Element, authenticationModules"
-  - "authenticationModules, clear-Element"
-  - "clear-Element, authenticationModules"
+title: '&lt;Deaktivieren Sie&gt; AuthenticationModules (Network Settings)-Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;clear&gt;-Element f&#252;r authenticationModules (Netzwerkeinstellungen)
-Beseitigt alle Authentifizierungsmodule aus der Anwendung.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Deaktivieren Sie&gt; AuthenticationModules (Network Settings)-Element
+Löscht alle Authentifizierungsmodule aus der Anwendung an.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<AuthenticationModules >  
+\<Deaktivieren Sie >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
  Keine.  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die zum Authentifizieren von Netzwerkanforderungen verwendeten Module an.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von Anforderungen über das Netzwerk verwendet.|  
   
-## Hinweise  
- Das `clear`\-Element entfernt alle Authentifizierungsmodule, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
+## <a name="remarks"></a>Hinweise  
+ Die `clear` -Element entfernt alle Authentifizierungsmodule, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Im folgenden Codebeispiel werden alle konfigurierten Authentifizierungsmodule entfernt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel entfernt alle konfigurierten Authentifizierungsmodule.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ Beseitigt alle Authentifizierungsmodule aus der Anwendung.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

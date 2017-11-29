@@ -1,40 +1,35 @@
 ---
-title: Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation
+title: Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b08f3116f5acb404cf2c33072ec31fbaada4e7cb
-ms.contentlocale: de-de
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3d3c0b1278411c41d002c546f4b1a3be9975a801
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic)
-<xref:System.Xml.Linq.XName>und <xref:System.Xml.Linq.XNamespace>Objekte sind *atomisiert*; Dies bedeutet, wenn sie denselben qualifizierten Namen enthalten, sie verweisen auf das gleiche Objekt.</xref:System.Xml.Linq.XNamespace></xref:System.Xml.Linq.XName> Dadurch wird die Leistung von Abfragen verbessert: Beim Vergleichen zweier atomisierter Namen auf Übereinstimmung muss die zugrunde liegende Intermediate Language nur ermitteln, ob die beiden Verweise auf dasselbe Objekt zeigen. Im zugrunde liegenden Code müssen keine zeitaufwändigen Zeichenfolgenvergleiche ausgeführt werden.  
+Die <xref:System.Xml.Linq.XName>- und <xref:System.Xml.Linq.XNamespace>-Objekte sind *atomisiert*. Dies bedeutet, dass sie auf dasselbe Objekt verweisen, wenn sie denselben qualifizierten Namen enthalten. Dadurch wird die Leistung von Abfragen verbessert: Beim Vergleichen zweier atomisierter Namen auf Übereinstimmung muss die zugrunde liegende Intermediate Language nur ermitteln, ob die beiden Verweise auf dasselbe Objekt zeigen. Im zugrunde liegenden Code müssen keine zeitaufwändigen Zeichenfolgenvergleiche ausgeführt werden.  
   
 ## <a name="atomization-semantics"></a>Atomisierungssemantik  
- Atomisierung bedeutet, dass die zwei <xref:System.Xml.Linq.XName>Objekte verfügen über denselben lokalen Namen, und sie befinden sich im gleichen Namespace, die dieselbe Instanz gemeinsam nutzen.</xref:System.Xml.Linq.XName> Auf die gleiche Weise, wenn zwei <xref:System.Xml.Linq.XNamespace>-Objekte weisen denselben Namespace-URI, die dieselbe Instanz gemeinsam nutzen.</xref:System.Xml.Linq.XNamespace>  
+ Atomisierung bedeutet, dass zwei <xref:System.Xml.Linq.XName>-Objekte dieselbe Instanz gemeinsam nutzen, wenn sie über denselben lokalen Namen verfügen und sich im selben Namespace befinden. Dementsprechend nutzen zwei <xref:System.Xml.Linq.XNamespace>-Objekte dieselbe Instanz gemeinsam, wenn sie über denselben Namespace-URI verfügen.  
   
- Damit eine Klasse atomisierte Objekte unterstützt, muss der Konstruktor für die Klasse privat sein, nicht öffentlich. Bei einem öffentlichen Konstruktor könnten Sie ein nicht atomisiertes Objekt erstellen. Die <xref:System.Xml.Linq.XName>und <xref:System.Xml.Linq.XNamespace>Klassen implementieren einen impliziten Konvertierungsoperator zum Konvertieren einer Zeichenfolge in einen <xref:System.Xml.Linq.XName>oder <xref:System.Xml.Linq.XNamespace>.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName> Auf diese Weise können Sie eine Instanz dieser Objekte abrufen. Sie können keine Instanz über einen Konstruktor abrufen, da Sie auf den Konstruktor nicht zugreifen können.  
+ Damit eine Klasse atomisierte Objekte unterstützt, muss der Konstruktor für die Klasse privat sein, nicht öffentlich. Bei einem öffentlichen Konstruktor könnten Sie ein nicht atomisiertes Objekt erstellen. Die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse implementieren einen impliziten Konvertierungsoperator, um eine Zeichenfolge in einen <xref:System.Xml.Linq.XName> oder einen <xref:System.Xml.Linq.XNamespace> zu konvertieren. Auf diese Weise können Sie eine Instanz dieser Objekte abrufen. Sie können keine Instanz über einen Konstruktor abrufen, da Sie auf den Konstruktor nicht zugreifen können.  
   
- <xref:System.Xml.Linq.XName>und <xref:System.Xml.Linq.XNamespace>implementieren auch die Gleichheits- und Ungleichheitsoperatoren Operatoren, um festzustellen, ob die beiden verglichenen Objekte Verweise auf die gleiche Instanz.</xref:System.Xml.Linq.XNamespace></xref:System.Xml.Linq.XName>  
+ Außerdem werden von <xref:System.Xml.Linq.XName> und <xref:System.Xml.Linq.XNamespace> Gleichheits- und Ungleichheitsoperatoren implementiert, mit denen Sie ermitteln können, ob die beiden verglichenen Objekte Verweise auf dieselbe Instanz darstellen.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code erstellt einige <xref:System.Xml.Linq.XElement>-Objekte und veranschaulicht, dass identische Namen dieselbe Instanz aufweisen.</xref:System.Xml.Linq.XElement>  
+ Im folgenden Code werden mehrere <xref:System.Xml.Linq.XElement>-Objekte erstellt, und es wird veranschaulicht, dass identische Namen dieselbe Instanz aufweisen.  
   
 ```vb  
 Dim r1 As New XElement("Root", "data1")  
@@ -62,9 +57,9 @@ r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- Wie bereits erwähnt, der Vorteil, dass atomisierte Objekte sich ergibt, wenn Sie eine der Achsenmethoden verwenden, die eine <xref:System.Xml.Linq.XName>als Parameter der Axis-Methode hat nur ermitteln, ob die beiden Namen der gleichen Instanz zum Auswählen der gewünschten Elemente verweisen.</xref:System.Xml.Linq.XName>  
+ Wie bereits erwähnt, besteht der Vorteil atomisierter Objekte darin, dass beim Verwenden einer der Achsenmethoden, die als Parameter einen <xref:System.Xml.Linq.XName> erfordert, zum Auswählen der gewünschten Elemente nur ermittelt werden muss, ob die beiden Namen auf dieselbe Instanz verweisen.  
   
- Das folgende Beispiel übergibt eine <xref:System.Xml.Linq.XName>an die <xref:System.Xml.Linq.XContainer.Descendants%2A>-Methodenaufruf, der aufgrund des atomarisierungsmusters eine bessere Leistung aufweist.</xref:System.Xml.Linq.XContainer.Descendants%2A> </xref:System.Xml.Linq.XName>  
+ Im folgenden Beispiel wird ein <xref:System.Xml.Linq.XName> an den <xref:System.Xml.Linq.XContainer.Descendants%2A>-Methodenaufruf übergeben. Dieser erreicht aufgrund des Atomarisierungsmusters eine bessere Leistung.  
   
 ```vb  
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))  
@@ -85,4 +80,3 @@ Next
   
 ## <a name="see-also"></a>Siehe auch  
  [Leistung (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-
