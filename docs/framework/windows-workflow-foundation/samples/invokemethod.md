@@ -1,77 +1,81 @@
 ---
-title: "InvokeMethod | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: InvokeMethod
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0fc081f4958420b7f3a1236441f33cf124dade54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# InvokeMethod
-In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Methoden einer Klasse mit der <xref:System.Activities.Statements.InvokeMethod>\-Aktivität veranschaulicht.  
+# <a name="invokemethod"></a><span data-ttu-id="b4d30-102">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="b4d30-102">InvokeMethod</span></span>
+<span data-ttu-id="b4d30-103">In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Methoden einer Klasse mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="b4d30-103">This sample shows the different ways of using the <xref:System.Activities.Statements.InvokeMethod> activity to invoke methods of a class.</span></span>  
   
- Eine Methode gehört zu einer Klasse und stellt eine in sich abgeschlossene Gruppe von Vorgängen dar.Mit der <xref:System.Activities.Statements.InvokeMethod>\-Aktivität können Sie Methoden für Objekte oder Typen aufrufen, Parameter übergeben und den Rückgabewert abrufen.Methoden können synchron oder asynchron aufgerufen werden.  
+ <span data-ttu-id="b4d30-104">Eine Methode gehört zu einer Klasse und stellt eine in sich abgeschlossene Gruppe von Vorgängen dar.</span><span class="sxs-lookup"><span data-stu-id="b4d30-104">A method belongs to a class and represents a contained set of operations.</span></span> <span data-ttu-id="b4d30-105">Mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität können Sie Methoden für Objekte oder Typen aufrufen, Parameter übergeben und den Rückgabewert abrufen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-105">The <xref:System.Activities.Statements.InvokeMethod> activity gives you the ability to call methods against objects or types, pass in parameters, and get the return value.</span></span> <span data-ttu-id="b4d30-106">Methoden können synchron oder asynchron aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="b4d30-106">Methods can be invoked synchronously or asynchronously.</span></span>  
   
-## Beispieldetails  
- In diesem Beispiel werden die folgenden Szenarios mit der <xref:System.Activities.Statements.InvokeMethod>\-Aktivität ausgeführt:  
+## <a name="sample-details"></a><span data-ttu-id="b4d30-107">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="b4d30-107">Sample Details</span></span>  
+ <span data-ttu-id="b4d30-108">In diesem Beispiel werden die folgenden Szenarios mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="b4d30-108">This sample uses the <xref:System.Activities.Statements.InvokeMethod> activity to perform the following scenarios:</span></span>  
   
-1.  Aufrufen einer Instanzmethode ohne Parameter.  
+1.  <span data-ttu-id="b4d30-109">Rufen Sie eine Instanzmethode ohne Parameter auf.</span><span class="sxs-lookup"><span data-stu-id="b4d30-109">Invoke an instance method without parameters.</span></span>  
   
-2.  Aufrufen einer Instanzmethode mit zwei Parametern \(<xref:System.String> und <xref:System.Int32>\).  
+2.  <span data-ttu-id="b4d30-110">Aufrufen einer Instanzmethode mit zwei Parametern (<xref:System.String> und <xref:System.Int32>).</span><span class="sxs-lookup"><span data-stu-id="b4d30-110">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>).</span></span>  
   
-3.  Aufrufen einer Instanzmethode mit zwei Parametern \(<xref:System.String> und <xref:System.Int32>\) und einem Parameterarray vom Typ <xref:System.String>\[\].  
+3.  <span data-ttu-id="b4d30-111">Aufrufen einer Instanzmethode mit zwei Parametern (<xref:System.String> und <xref:System.Int32>) und einem Parameterarray vom Typ <xref:System.String>[].</span><span class="sxs-lookup"><span data-stu-id="b4d30-111">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>) and a parameter array of type <xref:System.String>[].</span></span>  
   
-4.  Aufrufen einer Instanzmethode mit zwei Parametern vom Typ <xref:System.Int32> und einem Ergebnis vom Typ <xref:System.Int32>.In diesem Szenario wird der Ergebniswert an eine Variable gebunden und in einer anderen Aktivität verwendet.Der Wert wird mit der <xref:System.Activities.Statements.WriteLine>\-Aktivität in der Konsole angezeigt.  
+4.  <span data-ttu-id="b4d30-112">Aufrufen einer Instanzmethode mit zwei Parametern vom Typ <xref:System.Int32> und einem Ergebnis vom Typ <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="b4d30-112">Invoke an instance method with two parameters of type <xref:System.Int32> and a result of type <xref:System.Int32>.</span></span> <span data-ttu-id="b4d30-113">In diesem Szenario wird der Ergebniswert an eine Variable gebunden und in einer anderen Aktivität verwendet.</span><span class="sxs-lookup"><span data-stu-id="b4d30-113">In this scenario, the result value is bound to a variable and used in another activity.</span></span> <span data-ttu-id="b4d30-114">Der Wert wird mit der <xref:System.Activities.Statements.WriteLine>-Aktivität in der Konsole angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b4d30-114">It is displayed in the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-5.  Aufrufen einer statischen Methode mit zwei Parametern vom Typ <xref:System.String> und <xref:System.Int32>.  
+5.  <span data-ttu-id="b4d30-115">Aufrufen einer statischen Methode mit zwei Parametern vom Typ <xref:System.String> und <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="b4d30-115">Invoke a static method with two parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-6.  Aufrufen einer Instanzmethode mit einem generischen Parameter vom Typ <xref:System.String>.  
+6.  <span data-ttu-id="b4d30-116">Aufrufen einer Instanzmethode mit einem generischen Parameter vom Typ <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="b4d30-116">Invoke an instance method with one generic parameter of type <xref:System.String>.</span></span>  
   
-7.  Aufrufen einer statischen Methode mit zwei generischen Parametern vom Typ <xref:System.String> und <xref:System.Int32>.  
+7.  <span data-ttu-id="b4d30-117">Aufrufen einer statischen Methode mit zwei generischen Parametern vom Typ <xref:System.String> und <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="b4d30-117">Invoke a static method with two generic parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-8.  Aufrufen einer Instanzmethode mit einem als Verweis übergebenen Parameter vom Typ <xref:System.String>.In diesem Szenario wird der Verweisparameter an eine Variable \(`outParam`\) gebunden und in einer anderen Aktivität verwendet.Der Wert wird mit der <xref:System.Activities.Statements.WriteLine>\-Aktivität in der Konsole angezeigt.  
+8.  <span data-ttu-id="b4d30-118">Aufrufen einer Instanzmethode mit einem als Verweis übergebenen Parameter vom Typ <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="b4d30-118">Invoke an instance method that has one parameter passed by reference of type <xref:System.String>.</span></span> <span data-ttu-id="b4d30-119">In diesem Szenario wird der Verweisparameter an eine Variable (`outParam`) gebunden und in einer anderen Aktivität verwendet.</span><span class="sxs-lookup"><span data-stu-id="b4d30-119">In this scenario, the reference parameter is bound to a variable (`outParam`) and used in another activity.</span></span> <span data-ttu-id="b4d30-120">Der Wert wird mit der <xref:System.Activities.Statements.WriteLine>-Aktivität in der Konsole angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b4d30-120">It is displayed on the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-9. Aufrufen einer asynchronen Instanzmethode.  
+9. <span data-ttu-id="b4d30-121">Rufen Sie eine asynchrone Instanzmethode auf.</span><span class="sxs-lookup"><span data-stu-id="b4d30-121">Invoke an asynchronous instance method.</span></span>  
   
-10. Aufrufen von zwei unterschiedlichen Methoden für dieselbe Instanz eines Objekts mit zwei <xref:System.Activities.Statements.InvokeMethod>\-Aktivitäten.  
+10. <span data-ttu-id="b4d30-122">Aufrufen von zwei unterschiedlichen Methoden für dieselbe Instanz eines Objekts mit zwei <xref:System.Activities.Statements.InvokeMethod>-Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="b4d30-122">Invoke two different methods on the same instance of an object using two <xref:System.Activities.Statements.InvokeMethod> activities.</span></span>  
   
-11. Speichern eines Werts in einer Objektinstanz.  
+11. <span data-ttu-id="b4d30-123">Speichern eines Werts in einer Objektinstanz.</span><span class="sxs-lookup"><span data-stu-id="b4d30-123">Store a value in an instance of an object.</span></span>  
   
-12. Abrufen eines Werts aus einer Objektinstanz.  
+12. <span data-ttu-id="b4d30-124">Abrufen eines Werts aus einer Objektinstanz.</span><span class="sxs-lookup"><span data-stu-id="b4d30-124">Retrieve a value from an instance of an object.</span></span>  
   
-## So verwenden Sie dieses Beispiel  
- Dieses Beispiel wird in zwei Versionen bereitgestellt.Die erste Version dieses Beispiels veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit C\#\-Code und dem [!INCLUDE[wf](../../../../includes/wf-md.md)]\-Programmiermodell und befindet sich im Ordner "CodedWorkflow\\CS".Die zweite Version veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit XAML und befindet sich im Ordner "DesignerWorkflow\\CS".  
+## <a name="to-use-this-sample"></a><span data-ttu-id="b4d30-125">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="b4d30-125">To use this sample</span></span>  
+ <span data-ttu-id="b4d30-126">Dieses Beispiel wird in zwei Versionen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="b4d30-126">This sample is provided in two versions.</span></span> <span data-ttu-id="b4d30-127">Die erste Version dieses Beispiels veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit C#-Code und dem [!INCLUDE[wf](../../../../includes/wf-md.md)]-Programmiermodell und befindet sich im Ordner "CodedWorkflow\CS".</span><span class="sxs-lookup"><span data-stu-id="b4d30-127">The first version of this sample demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> through C# code using the [!INCLUDE[wf](../../../../includes/wf-md.md)] programming model and can be found under the CodedWorkflow\CS folder.</span></span> <span data-ttu-id="b4d30-128">Die zweite Version veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit XAML und befindet sich im Ordner "DesignerWorkflow\CS".</span><span class="sxs-lookup"><span data-stu-id="b4d30-128">The second version demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> using XAML and can be found under the DesignerWorkflow\CS folder.</span></span>  
   
-#### So führen Sie das Codebeispiel aus  
+#### <a name="to-run-the-coded-workflow-sample"></a><span data-ttu-id="b4d30-129">So führen Sie das Codebeispiel aus</span><span class="sxs-lookup"><span data-stu-id="b4d30-129">To run the coded workflow sample</span></span>  
   
-1.  Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "InvokeMethodUsage.sln" im Ordner "CodedWorkflow\\CS".  
+1.  <span data-ttu-id="b4d30-130">Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "InvokeMethodUsage.sln" im Ordner "CodedWorkflow\CS".</span><span class="sxs-lookup"><span data-stu-id="b4d30-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the CodedWorkflow\CS folder.</span></span>  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="b4d30-131">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  <span data-ttu-id="b4d30-132">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-132">To run the solution, press CTRL+F5.</span></span>  
   
-#### So führen Sie das XAML\-Beispiel aus  
+#### <a name="to-run-the-designer-workflow-sample"></a><span data-ttu-id="b4d30-133">So führen Sie das XAML-Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="b4d30-133">To run the designer workflow sample</span></span>  
   
-1.  Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "InvokeMethodUsage.sln" im Ordner "DesignerWorkflow\\CS".  
+1.  <span data-ttu-id="b4d30-134">Öffnen Sie in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Projektmappendatei "InvokeMethodUsage.sln" im Ordner "DesignerWorkflow\CS".</span><span class="sxs-lookup"><span data-stu-id="b4d30-134">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the DesignerWorkflow\CS folder.</span></span>  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen.  
+2.  <span data-ttu-id="b4d30-135">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-135">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Drücken Sie STRG\+F5, um die Projektmappe auszuführen.  
+3.  <span data-ttu-id="b4d30-136">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-136">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie den Vorgang fortsetzen.  
+>  <span data-ttu-id="b4d30-137">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="b4d30-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b4d30-138">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="b4d30-138">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="b4d30-139">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="b4d30-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b4d30-140">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="b4d30-140">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
   
-## Siehe auch
+## <a name="see-also"></a><span data-ttu-id="b4d30-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4d30-141">See Also</span></span>

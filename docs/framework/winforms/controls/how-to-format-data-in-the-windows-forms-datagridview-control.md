@@ -1,84 +1,88 @@
 ---
-title: "Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zellen, Textausrichtung"
-  - "Währungsangaben, Formatieren in Datenblättern"
-  - "Daten [Windows Forms], Formatieren im DataGridView-Steuerelement"
-  - "Datenblätter, Währungsangaben"
-  - "Datenblätter, Datumswerte"
-  - "Datenblätter, Aktivieren des Zeilenumbruchs"
-  - "Datenblätter, Formatieren von Daten"
-  - "Datenblätter, Textausrichtung"
-  - "DataGridView-Steuerelement [Windows Forms], Formatieren von Daten"
+title: 'Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting data
+- data [Windows Forms], formatting in DataGridView control
+- data grids [Windows Forms], enabling wordwrap
+- currency values [Windows Forms], formatting in data grids
+- data grids [Windows Forms], currency values
+- data grids [Windows Forms], formatting data
+- data grids [Windows Forms], text alignment
+- data grids [Windows Forms], date values
+- cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49d5172b2638a7ac3a6a7bf005932ba4b3f9aba3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms
-In den folgenden Prozeduren wird die grundlegende Formatierung von Zellenwerten mithilfe der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>\-Eigenschaft eines <xref:System.Windows.Forms.DataGridView>\-Steuerelements sowie von bestimmten Spalten in einem Steuerelement veranschaulicht.  Weitere Informationen über die erweiterte Datenformatierung finden Sie unter [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d1035-102">Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1035-102">How to: Format Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="d1035-103">Die folgenden Prozeduren veranschaulichen einfache Formatierung von Zellenwerten durch die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft ein <xref:System.Windows.Forms.DataGridView> Steuerelement und für bestimmte Spalten in einem Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d1035-103">The following procedures demonstrate basic formatting of cell values using the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> property of a <xref:System.Windows.Forms.DataGridView> control and of specific columns in a control.</span></span> <span data-ttu-id="d1035-104">Informationen zum erweiterten Daten zu formatieren, finden Sie unter [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="d1035-104">For information about advanced data formatting, see [How to: Customize Data Formatting in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### So formatieren Sie Währungs\- und Datumswerte  
+### <a name="to-format-currency-and-date-values"></a><span data-ttu-id="d1035-105">Formatieren von Währung und Datumswerte</span><span class="sxs-lookup"><span data-stu-id="d1035-105">To format currency and date values</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>\-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> fest.  Im folgenden Codebeispiel wird das Format für bestimmte Spalten mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>\-Eigenschaft der Spalten festgelegt.  Werte in der Spalte  `UnitPrice`  werden im aktuellen kulturspezifischen Währungsformat angezeigt, wobei negative Werte in Klammern eingeschlossen sind.  Werte in der Spalte  `ShipDate`  werden im aktuellen kulturspezifischen kurzen Datumsformat angezeigt.  Weitere Informationen zu <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>\-Werten finden Sie unter [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md).  
+-   <span data-ttu-id="d1035-106">Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest.</span><span class="sxs-lookup"><span data-stu-id="d1035-106">Set the <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> property of a <xref:System.Windows.Forms.DataGridViewCellStyle>.</span></span> <span data-ttu-id="d1035-107">Das folgende Codebeispiel legt das Format für bestimmte Spalten mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> -Eigenschaft der Spalten.</span><span class="sxs-lookup"><span data-stu-id="d1035-107">The following code example sets the format for specific columns using the <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> property of the columns.</span></span> <span data-ttu-id="d1035-108">Werte in der `UnitPrice` Spalte in der aktuellen kulturspezifischen Währungsformat angezeigt werden, mit negativen Werten, die in Klammern eingeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="d1035-108">Values in the `UnitPrice` column appear in the current culture-specific currency format, with negative values surrounded by parentheses.</span></span> <span data-ttu-id="d1035-109">Werte in der `ShipDate` Spalte in der aktuellen kulturspezifischen kurzen Datumsformat angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d1035-109">Values in the `ShipDate` column appear in the current culture-specific short date format.</span></span> <span data-ttu-id="d1035-110">Weitere Informationen zu <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> -Werte finden Sie in [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="d1035-110">For more information about <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> values, see [Formatting Types](../../../../docs/standard/base-types/formatting-types.md).</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
-### So passen Sie die Anzeige von NULL\-Datenbankwerten an  
+### <a name="to-customize-the-display-of-null-database-values"></a><span data-ttu-id="d1035-111">Die Anzeige der Datenbank-Nullwerte anpassen</span><span class="sxs-lookup"><span data-stu-id="d1035-111">To customize the display of null database values</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>\-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> fest.  Das folgende Codebeispiel verwendet die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>\-Eigenschaft, um in allen Zellen mit Werten gleich <xref:System.DBNull.Value?displayProperty=fullName> "no entry" anzuzeigen.  
+-   <span data-ttu-id="d1035-112">Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest.</span><span class="sxs-lookup"><span data-stu-id="d1035-112">Set the <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> property of a <xref:System.Windows.Forms.DataGridViewCellStyle>.</span></span> <span data-ttu-id="d1035-113">Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> "keinen Eintrag" in allen Zellen mit Werten gleich anzuzeigende Eigenschaft <xref:System.DBNull.Value?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1035-113">The following code example uses the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> property to display "no entry" in all cells containing values equal to <xref:System.DBNull.Value?displayProperty=nameWithType>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
   
-### So aktivieren Sie den Zeilenumbruch in textbasierten Zellen  
+### <a name="to-enable-wordwrap-in-text-based-cells"></a><span data-ttu-id="d1035-114">Aktivieren des Zeilenumbruchs in textbasierten Zellen</span><span class="sxs-lookup"><span data-stu-id="d1035-114">To enable wordwrap in text-based cells</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>\-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> auf einen der <xref:System.Windows.Forms.DataGridViewTriState>\-Enumerationswerte fest.  Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>\-Eigenschaft verwendet, um den Umbruchmodus für das gesamte Steuerelement festzulegen.  
+-   <span data-ttu-id="d1035-115">Festlegen der <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridViewCellStyle> in eines der <xref:System.Windows.Forms.DataGridViewTriState> Enumerationswerte.</span><span class="sxs-lookup"><span data-stu-id="d1035-115">Set the <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> property of a <xref:System.Windows.Forms.DataGridViewCellStyle> to one of the <xref:System.Windows.Forms.DataGridViewTriState> enumeration values.</span></span> <span data-ttu-id="d1035-116">Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft, um den Umbruchmodus für das gesamte Steuerelement festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d1035-116">The following code example uses the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> property to set the wrap mode for the entire control.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#074](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
   
-### So geben Sie die Textausrichtung von DataGridView\-Zellen an  
+### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a><span data-ttu-id="d1035-117">Die Ausrichtung des Texts von DataGridView-Zellen an</span><span class="sxs-lookup"><span data-stu-id="d1035-117">To specify the text alignment of DataGridView cells</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>\-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> auf einen der <xref:System.Windows.Forms.DataGridViewContentAlignment>\-Enumerationswerte fest.  Im folgenden Codebeispiel wird die Ausrichtung für eine bestimmte Spalte mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>\-Eigenschaft der Spalte festgelegt.  
+-   <span data-ttu-id="d1035-118">Festlegen der <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridViewCellStyle> in eines der <xref:System.Windows.Forms.DataGridViewContentAlignment> Enumerationswerte.</span><span class="sxs-lookup"><span data-stu-id="d1035-118">Set the <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> property of a <xref:System.Windows.Forms.DataGridViewCellStyle> to one of the <xref:System.Windows.Forms.DataGridViewContentAlignment> enumeration values.</span></span> <span data-ttu-id="d1035-119">Das folgende Codebeispiel legt die Ausrichtung für eine bestimmte Spalte mit der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> -Eigenschaft der Spalte.</span><span class="sxs-lookup"><span data-stu-id="d1035-119">The following code example sets the alignment for a specific column using the <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> property of the column.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="d1035-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d1035-120">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#070)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   
-## Kompilieren des Codes  
- Für diese Beispiele gelten folgende Voraussetzungen:  
+## <a name="compiling-the-code"></a><span data-ttu-id="d1035-121">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d1035-121">Compiling the Code</span></span>  
+ <span data-ttu-id="d1035-122">Diese Beispiele erfordern Folgendes:</span><span class="sxs-lookup"><span data-stu-id="d1035-122">These examples require:</span></span>  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte mit dem Namen `UnitPrice`, eine Spalte mit dem Namen `ShipDate` und eine Spalte mit dem Namen `CustomerName` enthält.  
+-   <span data-ttu-id="d1035-123">Ein <xref:System.Windows.Forms.DataGridView> Steuerelement namens `dataGridView1` , enthält eine Spalte mit dem Namen `UnitPrice`, eine Spalte mit dem Namen `ShipDate`, und eine Spalte mit dem Namen `CustomerName`.</span><span class="sxs-lookup"><span data-stu-id="d1035-123">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `UnitPrice`, a column named `ShipDate`, and a column named `CustomerName`.</span></span>  
   
--   Verweise auf die Assemblys <xref:System?displayProperty=fullName>, <xref:System.Drawing?displayProperty=fullName> und <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   <span data-ttu-id="d1035-124">Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1035-124">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Robuste Programmierung  
- Um maximale Skalierbarkeit zu erreichen, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekte für mehrere Zeilen, Spalten oder Zellen, die dieselben Stile verwenden, freigeben, anstatt die Stileigenschaften für einzelne Elemente separat festzulegen.  Weitere Informationen finden Sie unter [Empfohlene Vorgehensweisen für das Skalieren des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="robust-programming"></a><span data-ttu-id="d1035-125">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="d1035-125">Robust Programming</span></span>  
+ <span data-ttu-id="d1035-126">Für maximale Skalierbarkeit freigeben <xref:System.Windows.Forms.DataGridViewCellStyle> Objekten über mehrere Zeilen, Spalten oder Zellen, die dieselben Stile, anstatt die Stileigenschaften für jedes Element einzeln zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d1035-126">For maximum scalability, you should share <xref:System.Windows.Forms.DataGridViewCellStyle> objects across multiple rows, columns, or cells that use the same styles rather than setting the style properties for each element separately.</span></span> <span data-ttu-id="d1035-127">Weitere Informationen finden Sie unter [Best Practices zum Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="d1035-127">For more information, see [Best Practices for Scaling the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- [Grundlegende Formatierungen und Formate im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)   
- [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)   
- [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="d1035-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1035-128">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ [<span data-ttu-id="d1035-129">Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1035-129">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="d1035-130">Zellstile im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1035-130">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="d1035-131">Datenformatierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1035-131">Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="d1035-132">Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1035-132">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="d1035-133">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="d1035-133">Formatting Types</span></span>](../../../../docs/standard/base-types/formatting-types.md)

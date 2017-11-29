@@ -1,47 +1,51 @@
 ---
-title: "119 - WorkflowInstanceUpdatedRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 119 - WorkflowInstanceUpdatedRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b838f764b1f86b0477dc797620dca5f99bb13d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 119 - WorkflowInstanceUpdatedRecord
-## Eigenschaften  
+# <a name="119---workflowinstanceupdatedrecord"></a><span data-ttu-id="93819-102">119 - WorkflowInstanceUpdatedRecord</span><span class="sxs-lookup"><span data-stu-id="93819-102">119 - WorkflowInstanceUpdatedRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="93819-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="93819-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|119|  
-|Schlüsselwörter|HealthMonitoring, WFTracking|  
-|Ebene|Information|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="93819-104">ID</span><span class="sxs-lookup"><span data-stu-id="93819-104">ID</span></span>|<span data-ttu-id="93819-105">119</span><span class="sxs-lookup"><span data-stu-id="93819-105">119</span></span>|  
+|<span data-ttu-id="93819-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="93819-106">Keywords</span></span>|<span data-ttu-id="93819-107">HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="93819-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="93819-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="93819-108">Level</span></span>|<span data-ttu-id="93819-109">Information</span><span class="sxs-lookup"><span data-stu-id="93819-109">Information</span></span>|  
+|<span data-ttu-id="93819-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="93819-110">Channel</span></span>|<span data-ttu-id="93819-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="93819-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Beschreibung  
- Dieses Ereignis wird vom ETW\-Überwachungsteilnehmer ausgegeben, wenn eine Workflowinstanz aktualisiert wird.  
+## <a name="description"></a><span data-ttu-id="93819-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="93819-112">Description</span></span>  
+ <span data-ttu-id="93819-113">Dieses Ereignis wird vom ETW-Überwachungsteilnehmer ausgegeben, wenn eine Workflowinstanz aktualisiert wird.</span><span class="sxs-lookup"><span data-stu-id="93819-113">This event is emitted by the ETW tracking participant when a workflow instance is updated.</span></span>  
   
-## Meldung  
- TrackRecord\= WorkflowInstanceUpdatedRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, State \= %5, OriginalDefinitionIdentity \= %6, UpdatedDefinitionIdentity \= %7, Annotations \= %8, ProfileName \= %9  
+## <a name="message"></a><span data-ttu-id="93819-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="93819-114">Message</span></span>  
+ <span data-ttu-id="93819-115">TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9</span><span class="sxs-lookup"><span data-stu-id="93819-115">TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9</span></span>  
   
-## Details  
+## <a name="details"></a><span data-ttu-id="93819-116">Details</span><span class="sxs-lookup"><span data-stu-id="93819-116">Details</span></span>  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
-|InstanceId|xs:GUID|Die Instanz\-ID für den Workflow.|  
-|RecordNumber|xs:long|Die Sequenznummer des ausgegebenen Datensatzes.|  
-|EventTime|xs:dateTime|Die Zeit in UTC, als das Ereignis ausgegeben wurde.|  
-|ActivityDefinitionId|xs:string|Der Name der Stammaktivität im Workflow.|  
-|Zustand|xs:string|Der aktuelle Zustand des Workflows.|  
-|OriginalDefinitionIdentity|xs:string|Die ursprüngliche Workflowdefinitions\-ID.|  
-|UpdatedDefinitionIdentity|xs:string|Die aktualisierte Workflowdefinitions\-ID.|  
-|Anmerkungen|xs:string|Die Anmerkungen, die diesem Ereignis hinzugefügt wurden.  Die Werte werden in einem XML\-Element im Format \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\> gespeichert.  Wenn keine Anmerkungen angegeben werden, enthält die Zeichenfolge \<items\/\>.  Die ETW\-Ereignisgröße wird von der ETW\-Puffergröße oder der maximalen Nutzlast für ein ETW\-Ereignis beschränkt.  Wenn die Größe des Ereignisses die ETW\-Beschränkung überschreitet, wird das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert durch \<items\>...\<\/items\> ersetzt wird.|  
-|ProfileName|xs:string|Der Name oder das Überwachungsprofil, das zur Ausgabe dieses Ereignisses geführt hat.|  
-|WorkflowDefinitionIdentity|xs:string|Die ID der Workflowdefinition.|  
-|AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
+|<span data-ttu-id="93819-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="93819-117">Data Item Name</span></span>|<span data-ttu-id="93819-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="93819-118">Data Item Type</span></span>|<span data-ttu-id="93819-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="93819-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="93819-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="93819-120">InstanceId</span></span>|<span data-ttu-id="93819-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="93819-121">xs:GUID</span></span>|<span data-ttu-id="93819-122">Die Instanz-ID für den Workflow.</span><span class="sxs-lookup"><span data-stu-id="93819-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="93819-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="93819-123">RecordNumber</span></span>|<span data-ttu-id="93819-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="93819-124">xs:long</span></span>|<span data-ttu-id="93819-125">Die Sequenznummer des ausgegebenen Datensatzes.</span><span class="sxs-lookup"><span data-stu-id="93819-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="93819-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="93819-126">EventTime</span></span>|<span data-ttu-id="93819-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="93819-127">xs:dateTime</span></span>|<span data-ttu-id="93819-128">Die Zeit in UTC, als das Ereignis ausgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="93819-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="93819-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="93819-129">ActivityDefinitionId</span></span>|<span data-ttu-id="93819-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-130">xs:string</span></span>|<span data-ttu-id="93819-131">Der Name der Stammaktivität im Workflow.</span><span class="sxs-lookup"><span data-stu-id="93819-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="93819-132">Zustand</span><span class="sxs-lookup"><span data-stu-id="93819-132">State</span></span>|<span data-ttu-id="93819-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-133">xs:string</span></span>|<span data-ttu-id="93819-134">Der aktuelle Zustand des Workflows.</span><span class="sxs-lookup"><span data-stu-id="93819-134">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="93819-135">OriginalDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="93819-135">OriginalDefinitionIdentity</span></span>|<span data-ttu-id="93819-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-136">xs:string</span></span>|<span data-ttu-id="93819-137">Die ursprüngliche Workflowdefinitions-ID.</span><span class="sxs-lookup"><span data-stu-id="93819-137">The original workflow definition id</span></span>|  
+|<span data-ttu-id="93819-138">UpdatedDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="93819-138">UpdatedDefinitionIdentity</span></span>|<span data-ttu-id="93819-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-139">xs:string</span></span>|<span data-ttu-id="93819-140">Die aktualisierte Workflowdefinitions-ID.</span><span class="sxs-lookup"><span data-stu-id="93819-140">The updated workflow definition id</span></span>|  
+|<span data-ttu-id="93819-141">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="93819-141">Annotations</span></span>|<span data-ttu-id="93819-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-142">xs:string</span></span>|<span data-ttu-id="93819-143">Die Anmerkungen, die diesem Ereignis hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="93819-143">The annotations that were added to this event.</span></span> <span data-ttu-id="93819-144">Die Werte werden in einem XML-Element im Format gespeichert \<Elemente >\< Elementname = "AnnotationName" Type = "> AnnotationValue\</item > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="93819-144">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="93819-145">Wenn keine Anmerkungen angegeben werden, die Zeichenfolge enthält \<Elemente / >.</span><span class="sxs-lookup"><span data-stu-id="93819-145">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="93819-146">Die ETW-Ereignisgröße wird von der ETW-Puffergröße oder der maximalen Nutzlast für ein ETW-Ereignis beschränkt.</span><span class="sxs-lookup"><span data-stu-id="93819-146">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="93819-147">Wenn die Größe des Ereignisses die ETW-Beschränkung überschreitet, und klicken Sie dann das Ereignis abgeschnitten, indem die Anmerkungen ausgelassen und der Anmerkungswert mit ersetzen \<Elemente >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="93819-147">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="93819-148">ProfileName</span><span class="sxs-lookup"><span data-stu-id="93819-148">ProfileName</span></span>|<span data-ttu-id="93819-149">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-149">xs:string</span></span>|<span data-ttu-id="93819-150">Der Name oder das Überwachungsprofil, das zur Ausgabe dieses Ereignisses geführt hat.</span><span class="sxs-lookup"><span data-stu-id="93819-150">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="93819-151">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="93819-151">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="93819-152">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-152">xs:string</span></span>|<span data-ttu-id="93819-153">Die ID der Workflowdefinition.</span><span class="sxs-lookup"><span data-stu-id="93819-153">The workflow definition id</span></span>|  
+|<span data-ttu-id="93819-154">AppDomain</span><span class="sxs-lookup"><span data-stu-id="93819-154">AppDomain</span></span>|<span data-ttu-id="93819-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="93819-155">xs:string</span></span>|<span data-ttu-id="93819-156">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="93819-156">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

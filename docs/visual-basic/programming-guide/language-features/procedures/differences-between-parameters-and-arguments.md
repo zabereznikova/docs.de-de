@@ -1,59 +1,58 @@
 ---
-title: "Differences Between Parameters and Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedures, parameters"
-  - "parameters, and arguments"
-  - "procedure arguments"
-  - "Visual Basic code, procedures"
-  - "arguments [Visual Basic], and parameters"
-  - "procedure parameters"
-  - "parameters, definition"
+title: Unterschiede zwischen Parametern und Argumenten (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], parameters
+- parameters [Visual Basic], and arguments
+- procedure arguments
+- Visual Basic code, procedures
+- arguments [Visual Basic], and parameters
+- procedure parameters
+- parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Parameters and Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-In den meisten Fällen benötigen Prozeduren einige Informationen zu den Umständen, unter denen sie aufgerufen wurden.  Prozeduren, die sich wiederholende und freigegebene Aufgaben ausführen, verwenden für jeden Aufruf andere Informationen.  Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücken, die beim Aufruf an die Prozedur übergeben werden.  
+# <a name="differences-between-parameters-and-arguments-visual-basic"></a><span data-ttu-id="b65ca-102">Unterschiede zwischen Parametern und Argumenten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b65ca-102">Differences Between Parameters and Arguments (Visual Basic)</span></span>
+<span data-ttu-id="b65ca-103">In den meisten Fällen muss eine Prozedur einige Informationen zu den Umständen zusammen haben, in welcher er aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="b65ca-103">In most cases, a procedure must have some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="b65ca-104">Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, werden unterschiedliche Informationen für jeden Aufruf verwendet.</span><span class="sxs-lookup"><span data-stu-id="b65ca-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="b65ca-105">Diese Informationen besteht aus Variablen, Konstanten und Ausdrücke, die Sie an die Prozedur übergeben, wenn Sie sie aufrufen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  
   
- Damit diese Informationen der Prozedur mitgeteilt werden, definiert die Prozedur einen *Parameter*, und der Aufrufcode übergibt an diesen Parameter ein *Argument*.  Stellen Sie sich vor, der Parameter sei eine Parklücke und das Argument ein Auto.  Ebenso wie verschiedene Autos zu unterschiedlichen Zeiten in einer Parklücke parken können, kann der Aufrufcode bei jedem Aufruf der Prozedur ein anderes Argument an den gleichen Parameter übergeben.  
+ <span data-ttu-id="b65ca-106">Um diese Informationen an die Prozedur zu kommunizieren, die Prozedur definiert einen *Parameter*, und der aufrufende Code übergibt eine *Argument* an diesen Parameter.</span><span class="sxs-lookup"><span data-stu-id="b65ca-106">To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter.</span></span> <span data-ttu-id="b65ca-107">Sie können den Parameter als ein Leerzeichen Parken und das Argument ein Auto vorstellen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-107">You can think of the parameter as a parking space and the argument as an automobile.</span></span> <span data-ttu-id="b65ca-108">Ebenso wie andere Autos zu unterschiedlichen Zeiten in einem Parken Parken können, kann der aufrufende Code ein anderes Argument an den gleichen Parameter übergeben, jedes Mal, wenn die Prozedur aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-108">Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.</span></span>  
   
-## Parameter  
- Ein *Parameter* stellt einen Wert dar, der an die Prozedur übergeben werden muss, wenn Sie sie aufrufen.  Die Parameter der Prozedur werden in der Deklaration der Prozedur definiert.  
+## <a name="parameters"></a><span data-ttu-id="b65ca-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="b65ca-109">Parameters</span></span>  
+ <span data-ttu-id="b65ca-110">Ein *Parameter* stellt einen Wert, der die Prozedur übergeben werden, wenn Sie sie aufrufen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-110">A *parameter* represents a value that the procedure expects you to pass when you call it.</span></span> <span data-ttu-id="b65ca-111">Die Deklaration der Prozedur definiert seine Parameter.</span><span class="sxs-lookup"><span data-stu-id="b65ca-111">The procedure's declaration defines its parameters.</span></span>  
   
- Wenn Sie eine `Function`\-Prozedur oder eine `Sub`\-Prozedur definieren, geben Sie unmittelbar nach dem Prozedurnamen eine *Parameterliste* in Klammern an.  Für jeden Parameter geben Sie einen Namen, einen Datentyp und einen Übergabemechanismus \([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\) an.  Sie können auch angeben, dass ein Parameter optional ist.  Dies bedeutet, dass der aufrufende Code keinen Wert dafür übergeben muss.  
+ <span data-ttu-id="b65ca-112">Beim Definieren einer `Function` oder `Sub` Prozedur, geben Sie einen *Parameterliste* in Klammern, die unmittelbar nach dem Prozedurnamen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-112">When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name.</span></span> <span data-ttu-id="b65ca-113">Für jeden Parameter, geben Sie einen Namen, einen Datentyp und einen Übergabemechanismus ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)).</span><span class="sxs-lookup"><span data-stu-id="b65ca-113">For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)).</span></span> <span data-ttu-id="b65ca-114">Sie können auch angeben, dass ein Parameter optional ist.</span><span class="sxs-lookup"><span data-stu-id="b65ca-114">You can also indicate that a parameter is optional.</span></span> <span data-ttu-id="b65ca-115">Dies bedeutet, dass der aufrufende Code nicht unbedingt einen Wert dafür übergeben.</span><span class="sxs-lookup"><span data-stu-id="b65ca-115">This means that the calling code does not have to pass a value for it.</span></span>  
   
- Der Name jedes Parameters dient innerhalb der Prozedur als *lokale Variable*.  Sie verwenden den Parameternamen auf die gleiche Weise wie andere Variablen.  
+ <span data-ttu-id="b65ca-116">Der Name jedes Parameters dient als ein *lokale Variable* in der Prozedur.</span><span class="sxs-lookup"><span data-stu-id="b65ca-116">The name of each parameter serves as a *local variable* in the procedure.</span></span> <span data-ttu-id="b65ca-117">Sie verwenden den Namen des Parameters auf die gleiche Weise wie Sie jede andere Variable.</span><span class="sxs-lookup"><span data-stu-id="b65ca-117">You use the parameter name the same way you use any other variable.</span></span>  
   
-## Argumente  
- Ein *Argument* stellt den Wert dar, den Sie an einen Prozedurparameter übergeben, wenn Sie die Prozedur aufrufen.  Der Aufrufcode stellt beim Aufrufen der Prozedur die Argumente zur Verfügung.  
+## <a name="arguments"></a><span data-ttu-id="b65ca-118">Argumente</span><span class="sxs-lookup"><span data-stu-id="b65ca-118">Arguments</span></span>  
+ <span data-ttu-id="b65ca-119">Ein *Argument* stellt den Wert, der an einen Parameter einer Prozedur zu übergeben, wenn Sie die Prozedur aufrufen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-119">An *argument* represents the value that you pass to a procedure parameter when you call the procedure.</span></span> <span data-ttu-id="b65ca-120">Der aufrufende Code bereitstellt die Argumente, wenn er die Prozedur aufruft.</span><span class="sxs-lookup"><span data-stu-id="b65ca-120">The calling code supplies the arguments when it calls the procedure.</span></span>  
   
- Wenn Sie eine `Function`\-Prozedur oder eine `Sub`\-Prozedur aufrufen, fügen Sie unmittelbar nach dem Prozedurnamen eine *Argumentliste* in runde Klammern ein.  Jedes Argument entspricht dem Parameter an der gleichen Position in der Liste.  
+ <span data-ttu-id="b65ca-121">Beim Aufruf einer `Function` oder `Sub` Prozedur, die Sie einschließen einer *Argumentliste* in Klammern, die unmittelbar nach dem Prozedurnamen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-121">When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name.</span></span> <span data-ttu-id="b65ca-122">Jedes Argument entspricht dem Parameter in der gleichen Position in der Liste.</span><span class="sxs-lookup"><span data-stu-id="b65ca-122">Each argument corresponds to the parameter in the same position in the list.</span></span>  
   
- Im Gegensatz zu Parametern haben Argumente keine Namen.  Jedes Argument ist ein Ausdruck, der 0 \(null\) oder mehr Variablen, Konstanten und Literale enthalten kann.  Der Datentyp des ausgewerteten Ausdrucks muss normalerweise mit dem Datentyp übereinstimmen, der für den entsprechenden Parameter definiert ist. In jedem Fall muss er in den Datentyp des Parameters konvertiert werden können.  
+ <span data-ttu-id="b65ca-123">Im Gegensatz zu Parameterdefinition haben Argumente keine Namen.</span><span class="sxs-lookup"><span data-stu-id="b65ca-123">In contrast to parameter definition, arguments do not have names.</span></span> <span data-ttu-id="b65ca-124">Jedes Argument ist ein Ausdruck, der 0 (null) oder mehrere Variablen, Konstanten und Literale enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="b65ca-124">Each argument is an expression, which can contain zero or more variables, constants, and literals.</span></span> <span data-ttu-id="b65ca-125">Der Datentyp des ausgewerteten Ausdrucks übereinstimmen, in der Regel den Datentyp für den entsprechenden Parameter definiert, und in jedem Fall muss er auf den Parametertyp konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="b65ca-125">The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.</span></span>  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Function\-Prozeduren](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [How to: Define a Parameter for a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+## <a name="see-also"></a><span data-ttu-id="b65ca-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b65ca-126">See Also</span></span>  
+ [<span data-ttu-id="b65ca-127">Verfahren</span><span class="sxs-lookup"><span data-stu-id="b65ca-127">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="b65ca-128">Sub-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="b65ca-128">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="b65ca-129">Function-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="b65ca-129">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="b65ca-130">Eigenschaftenprozeduren</span><span class="sxs-lookup"><span data-stu-id="b65ca-130">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="b65ca-131">Operatorprozeduren</span><span class="sxs-lookup"><span data-stu-id="b65ca-131">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="b65ca-132">Gewusst wie: Definieren eines Parameters für eine Prozedur</span><span class="sxs-lookup"><span data-stu-id="b65ca-132">How to: Define a Parameter for a Procedure</span></span>](./how-to-define-a-parameter-for-a-procedure.md)  
+ [<span data-ttu-id="b65ca-133">Gewusst wie: Übergeben von Argumenten an eine Prozedur</span><span class="sxs-lookup"><span data-stu-id="b65ca-133">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="b65ca-134">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="b65ca-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="b65ca-135">Rekursive Prozeduren</span><span class="sxs-lookup"><span data-stu-id="b65ca-135">Recursive Procedures</span></span>](./recursive-procedures.md)  
+ [<span data-ttu-id="b65ca-136">Prozedurüberladung</span><span class="sxs-lookup"><span data-stu-id="b65ca-136">Procedure Overloading</span></span>](./procedure-overloading.md)

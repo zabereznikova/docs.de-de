@@ -1,53 +1,54 @@
 ---
-title: "DomainUpDown-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DomainUpDown-Steuerelement [Windows Forms]"
-  - "Drehfeld-Steuerelement"
-  - "Drehfeld-Steuerelement, Auf-Ab-Steuerelemente"
-  - "Auf-Ab-Steuerelemente"
-  - "Auf-Ab-Steuerelemente, Drehfeld-Steuerelemente"
+title: "DomainUpDown-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DomainUpDown control [Windows Forms]
+- spin button control [Windows Forms], up-down controls
+- up-down controls
+- spin button control
+- up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# DomainUpDown-Steuerelement (Windows&#160;Forms)
-Das <xref:System.Windows.Forms.DomainUpDown>\-Steuerelement in Windows Forms sieht wie eine Kombination aus einem Textfeld und einem Paar Schaltflächen aus, mit denen in einer Liste vor\- oder zurückgeblättert werden kann.  Das Steuerelement zeigt eine Textzeichenfolge aus einer Liste mit Auswahlmöglichkeiten an und legt diese Zeichenfolge fest.  Die Benutzer können die Zeichenfolge auswählen, indem sie zum Bildlauf durch die Liste auf die Schaltflächen **Nach oben** bzw. **Nach unten** klicken, die **NACH\-OBEN\-** bzw. die **NACH\-UNTEN\-TASTE** drücken oder eine Zeichenfolge eingeben, die mit einem Eintrag in der Liste übereinstimmt.  Dieses Steuerelement könnte z. B. dazu verwendet werden, Einträge aus einer alphabetisch sortierten Namensliste auszuwählen.  \(Zum Sortieren der Liste legen Sie für die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A>\-Eigenschaft `true` fest.\) Die Funktion dieses Steuerelements ist der eines Listenfeldes oder Kombinationsfeldes sehr ähnlich, es nimmt jedoch sehr wenig Platz in Anspruch.  
+# <a name="domainupdown-control-windows-forms"></a><span data-ttu-id="e9efa-102">DomainUpDown-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e9efa-102">DomainUpDown Control (Windows Forms)</span></span>
+<span data-ttu-id="e9efa-103">Windows Forms <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie eine Kombination aus einem Textfeld und ein Paar von Schaltflächen in einer Liste oben oder unten verschieben.</span><span class="sxs-lookup"><span data-stu-id="e9efa-103">The Windows Forms <xref:System.Windows.Forms.DomainUpDown> control looks like a combination of a text box and a pair of buttons for moving up or down through a list.</span></span> <span data-ttu-id="e9efa-104">Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen.</span><span class="sxs-lookup"><span data-stu-id="e9efa-104">The control displays and sets a text string from a list of choices.</span></span> <span data-ttu-id="e9efa-105">Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen, um eine Liste durchlaufen, durch Drücken der nach-oben und nach unten-Taste oder durch Eingabe eine Zeichenfolge, die ein Element in der Liste entspricht.</span><span class="sxs-lookup"><span data-stu-id="e9efa-105">The user can select the string by clicking up and down buttons to move through a list, by pressing the UP and DOWN ARROW keys, or by typing a string that matches an item in the list.</span></span> <span data-ttu-id="e9efa-106">Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus einer alphabetisch sortierte Liste der Namen.</span><span class="sxs-lookup"><span data-stu-id="e9efa-106">One possible use for this control is for selecting items from an alphabetically sorted list of names.</span></span> <span data-ttu-id="e9efa-107">(Um die Liste zu sortieren, legen die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> -Eigenschaft `true`.) Die Funktion dieses Steuerelements wird im Listenfeld oder Kombinationsfeld sehr ähnlich, aber es nur sehr wenig Speicherplatz beanspruchen.</span><span class="sxs-lookup"><span data-stu-id="e9efa-107">(To sort the list, set the <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> property to `true`.) The function of this control is very similar to the list box or combo box, but it takes up very little space.</span></span>  
   
- Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.  Die <xref:System.Windows.Forms.DomainUpDown.Items%2A>\-Eigenschaft enthält die Liste der Objekte, deren Textwerte im Steuerelement angezeigt werden.  Wenn <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> auf `false` festgelegt wurde, vervollständigt das Steuerelement automatisch den vom Benutzer eingegebenen Text und vergleicht ihn mit einem Wert in der Liste.  Wenn <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> auf `true` festgelegt wurde, wird wieder der erste Eintrag in der Liste angezeigt, wenn Sie den Bildlauf über den letzten Eintrag hinaus durchführen, und umgekehrt.  Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> und <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ <span data-ttu-id="e9efa-108">Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span><span class="sxs-lookup"><span data-stu-id="e9efa-108">The key properties of the control are <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span></span> <span data-ttu-id="e9efa-109">Die <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft enthält die Liste der Objekte, deren Text im Steuerelement angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e9efa-109">The <xref:System.Windows.Forms.DomainUpDown.Items%2A> property contains the list of objects whose text values are displayed in the control.</span></span> <span data-ttu-id="e9efa-110">Wenn <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> festgelegt ist, um `false`, das Steuerelement automatisch abgeschlossen wird, Text, dass der Benutzer eingibt, und es mit einem Wert in der Liste vergleicht.</span><span class="sxs-lookup"><span data-stu-id="e9efa-110">If <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> is set to `false`, the control automatically completes text that the user types and matches it to a value in the list.</span></span> <span data-ttu-id="e9efa-111">Wenn <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> festgelegt ist, um `true`, Durchführen eines Bildlaufs hinter dem letzten Element gelangen Sie auf das erste Element in der Liste und umgekehrt.</span><span class="sxs-lookup"><span data-stu-id="e9efa-111">If <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> is set to `true`, scrolling past the last item will take you to the first item in the list and vice versa.</span></span> <span data-ttu-id="e9efa-112">Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> und <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="e9efa-112">The key methods of the control are <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> and <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span></span>  
   
- Dieses Steuerelement zeigt nur Textzeichenfolgen an.  Wenn Sie möchten, dass ein Steuerelement numerische Werte anzeigt, müssen Sie das <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement verwenden.  Weitere Informationen finden Sie unter [NumericUpDown\-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md).  
+ <span data-ttu-id="e9efa-113">Dieses Steuerelement zeigt nur Textzeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="e9efa-113">This control displays only text strings.</span></span> <span data-ttu-id="e9efa-114">Wenn Sie ein Steuerelement möchten, in dem numerische Werte angezeigt, verwenden die <xref:System.Windows.Forms.NumericUpDown> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="e9efa-114">If you want a control that displays numeric values, use the <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="e9efa-115">Weitere Informationen finden Sie unter [NumericUpDown-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span><span class="sxs-lookup"><span data-stu-id="e9efa-115">For more information, see [NumericUpDown Control](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das DomainUpDown\-Steuerelement](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des <xref:System.Windows.Forms.DomainUpDown>\-Steuerelements vor, das Benutzern das Durchsuchen und Auswählen aus einer Liste von Textzeichenfolgen ermöglicht.  
+## <a name="in-this-section"></a><span data-ttu-id="e9efa-116">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e9efa-116">In This Section</span></span>  
+ [<span data-ttu-id="e9efa-117">Übersicht über das DomainUpDown-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e9efa-117">DomainUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
+ <span data-ttu-id="e9efa-118">Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.DomainUpDown> -Steuerelement, das ermöglicht Benutzern das Durchsuchen und auswählen aus einer Liste von Textzeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="e9efa-118">Introduces the general concepts of the <xref:System.Windows.Forms.DomainUpDown> control, which allows users to browse through and select from a list of text strings.</span></span>  
   
- [Gewusst wie: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown\-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- Beschreibt die Textzeichenfolgen, die das <xref:System.Windows.Forms.DomainUpDown>\-Steuerelement anzeigen soll.  
+ [<span data-ttu-id="e9efa-119">Gewusst wie: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e9efa-119">How to: Add Items to Windows Forms DomainUpDown Controls Programmatically</span></span>](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ <span data-ttu-id="e9efa-120">Beschreibt, wie die Textzeichenfolgen der <xref:System.Windows.Forms.DomainUpDown> Steuerelement sollte angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e9efa-120">Describes how to specify the text strings the <xref:System.Windows.Forms.DomainUpDown> control should display.</span></span>  
   
- [Gewusst wie: Entfernen von Elementen aus DomainUpDown\-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
- Beschreibt das Löschen von Elementen aus dem <xref:System.Windows.Forms.DomainUpDown>\-Steuerelement mittels Code.  
+ [<span data-ttu-id="e9efa-121">Gewusst wie: Entfernen von Elementen aus DomainUpDown-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e9efa-121">How to: Remove Items from Windows Forms DomainUpDown Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ <span data-ttu-id="e9efa-122">Beschreibt das Löschen von Elementen aus der <xref:System.Windows.Forms.DomainUpDown> Steuerelement im Code.</span><span class="sxs-lookup"><span data-stu-id="e9efa-122">Describes how to delete items from the <xref:System.Windows.Forms.DomainUpDown> control in code.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="e9efa-123">Verweis</span><span class="sxs-lookup"><span data-stu-id="e9efa-123">Reference</span></span>  
  <xref:System.Windows.Forms.DomainUpDown>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="e9efa-124">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="e9efa-124">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.NumericUpDown>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="e9efa-125">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern...</span><span class="sxs-lookup"><span data-stu-id="e9efa-125">Describes this class and has links to all its members..</span></span>  
   
-## Verwandte Abschnitte  
- [Steuerelemente, die in Windows Forms verwendet werden können](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.
+## <a name="related-sections"></a><span data-ttu-id="e9efa-126">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="e9efa-126">Related Sections</span></span>  
+ [<span data-ttu-id="e9efa-127">Steuerelemente, die in Windows Forms verwendet werden können</span><span class="sxs-lookup"><span data-stu-id="e9efa-127">Controls You Can Use On Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="e9efa-128">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="e9efa-128">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

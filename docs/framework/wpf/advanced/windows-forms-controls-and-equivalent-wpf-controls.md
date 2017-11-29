@@ -1,76 +1,79 @@
 ---
-title: "Windows Forms-Steuerelemente und &#228;quivalente WPF-Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Interoperabilität [WPF], Windows Forms"
-  - "Windows Forms [WPF], Interoperabilität mit"
-  - "Windows Forms, WPF-Interoperation"
+title: Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-caps.latest.revision: 27
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0fae33ee8744936f3152ef991715853028063066
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms-Steuerelemente und &#228;quivalente WPF-Steuerelemente
-Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente verfügen über äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelemente, aber einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente weisen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] keine Entsprechungen auf.  In diesem Thema werden die Steuerelementtypen verglichen, die von den beiden Technologien bereitgestellt werden.  
+# <a name="windows-forms-controls-and-equivalent-wpf-controls"></a><span data-ttu-id="5f0f7-102">Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="5f0f7-102">Windows Forms Controls and Equivalent WPF Controls</span></span>
+<span data-ttu-id="5f0f7-103">Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente verfügen über entsprechende [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, aber einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelementen bestehen keine Äquivalente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f0f7-103">Many [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls have equivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls, but some [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls have no equivalents in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="5f0f7-104">In diesem Thema werden Steuerelementtypen, die bereitgestellt werden, indem die beiden Technologien verglichen.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-104">This topic compares control types provided by the two technologies.</span></span>  
   
- Sie haben immer die Möglichkeit, die Interoperation zum Hosten von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelementen zu verwenden, die in Ihren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-basierten Anwendungen nicht über Entsprechungen verfügen.  
+ <span data-ttu-id="5f0f7-105">Können Sie immer die Interoperation mit Host [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente, die keine Entsprechungen in haben Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierenden Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-105">You can always use interoperation to host [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls that do not have equivalents in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based applications.</span></span>  
   
- Die folgende Tabelle zeigt, welche [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]\-Steuerelemente und \-Komponenten über eine äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelementfunktionalität verfügen.  
+ <span data-ttu-id="5f0f7-106">Die folgende Tabelle zeigt die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente und Komponenten verfügen über entsprechende [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionalität zu steuern.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-106">The following table shows which [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls and components have equivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control functionality.</span></span>  
   
-|Windows Forms\-Steuerelement|Entsprechendes WPF\-Steuerelement|Hinweise|  
-|----------------------------------|---------------------------------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator>|Kein äquivalentes Steuerelement.||  
+|<span data-ttu-id="5f0f7-107">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="5f0f7-107">Windows Forms control</span></span>|<span data-ttu-id="5f0f7-108">Entsprechende WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="5f0f7-108">WPF equivalent control</span></span>|<span data-ttu-id="5f0f7-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5f0f7-109">Remarks</span></span>|  
+|---------------------------|----------------------------|-------------|  
+|<xref:System.Windows.Forms.BindingNavigator>|<span data-ttu-id="5f0f7-110">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-110">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
 |<xref:System.Windows.Forms.Button>|<xref:System.Windows.Controls.Button>||  
 |<xref:System.Windows.Forms.CheckBox>|<xref:System.Windows.Controls.CheckBox>||  
-|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox> mit Komposition.||  
-|<xref:System.Windows.Forms.ColorDialog>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> unterstützt die automatische Vervollständigung nicht.|  
+|<xref:System.Windows.Forms.CheckedListBox>|<span data-ttu-id="5f0f7-111"><xref:System.Windows.Controls.ListBox>Mit Komposition.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-111"><xref:System.Windows.Controls.ListBox> with composition.</span></span>||  
+|<xref:System.Windows.Forms.ColorDialog>|<span data-ttu-id="5f0f7-112">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-112">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<span data-ttu-id="5f0f7-113"><xref:System.Windows.Controls.ComboBox>unterstützt keine automatisch zu vervollständigen.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-113"><xref:System.Windows.Controls.ComboBox> does not support auto-complete.</span></span>|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|<xref:System.Windows.Controls.ContextMenu>||  
 |<xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Controls.DataGrid>||  
 |<xref:System.Windows.Forms.DateTimePicker>|<xref:System.Windows.Controls.DatePicker>||  
-|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> und zwei <xref:System.Windows.Controls.Primitives.RepeatButton>\-Steuerelemente.||  
-|<xref:System.Windows.Forms.ErrorProvider>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.FlowLayoutPanel>|<xref:System.Windows.Controls.WrapPanel> oder <xref:System.Windows.Controls.StackPanel>||  
-|<xref:System.Windows.Forms.FolderBrowserDialog>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.FontDialog>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window> unterstützt keine untergeordneten Fenster.|  
+|<xref:System.Windows.Forms.DomainUpDown>|<span data-ttu-id="5f0f7-114"><xref:System.Windows.Controls.TextBox>und zwei <xref:System.Windows.Controls.Primitives.RepeatButton> Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-114"><xref:System.Windows.Controls.TextBox> and two <xref:System.Windows.Controls.Primitives.RepeatButton> controls.</span></span>||  
+|<xref:System.Windows.Forms.ErrorProvider>|<span data-ttu-id="5f0f7-115">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-115">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.FlowLayoutPanel>|<span data-ttu-id="5f0f7-116"><xref:System.Windows.Controls.WrapPanel> oder <xref:System.Windows.Controls.StackPanel></span><span class="sxs-lookup"><span data-stu-id="5f0f7-116"><xref:System.Windows.Controls.WrapPanel> or <xref:System.Windows.Controls.StackPanel></span></span>||  
+|<xref:System.Windows.Forms.FolderBrowserDialog>|<span data-ttu-id="5f0f7-117">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-117">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.FontDialog>|<span data-ttu-id="5f0f7-118">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-118">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<span data-ttu-id="5f0f7-119"><xref:System.Windows.Window>untergeordnete Fenster unterstützt nicht.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-119"><xref:System.Windows.Window> does not support child windows.</span></span>|  
 |<xref:System.Windows.Forms.GroupBox>|<xref:System.Windows.Controls.GroupBox>||  
-|<xref:System.Windows.Forms.HelpProvider>|Kein äquivalentes Steuerelement.|Keine F1\-Hilfe. "  Direkthilfe" wird durch QuickInfos ersetzt.|  
-|<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Die Bildlauffunktion ist in Containersteuerelemente integriert.|  
-|<xref:System.Windows.Forms.ImageList>|Kein äquivalentes Steuerelement.||  
+|<xref:System.Windows.Forms.HelpProvider>|<span data-ttu-id="5f0f7-120">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-120">No equivalent control.</span></span>|<span data-ttu-id="5f0f7-121">Keine F1-Hilfe.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-121">No F1 Help.</span></span> <span data-ttu-id="5f0f7-122">"Was This is" Hilfe von QuickInfos ersetzt wird.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-122">"What's This" Help is replaced by ToolTips.</span></span>|  
+|<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|<span data-ttu-id="5f0f7-123">Durchführen eines Bildlaufs wird in Containersteuerelementen integriert.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-123">Scrolling is built into container controls.</span></span>|  
+|<xref:System.Windows.Forms.ImageList>|<span data-ttu-id="5f0f7-124">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-124">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.Label>|<xref:System.Windows.Controls.Label>||  
-|<xref:System.Windows.Forms.LinkLabel>|Kein äquivalentes Steuerelement.|Sie können die <xref:System.Windows.Documents.Hyperlink>\-Klasse verwenden, um Links im fortlaufenden Inhalt zu hosten.|  
+|<xref:System.Windows.Forms.LinkLabel>|<span data-ttu-id="5f0f7-125">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-125">No equivalent control.</span></span>|<span data-ttu-id="5f0f7-126">Sie können die <xref:System.Windows.Documents.Hyperlink> -Klasse zum Hosten von Links innerhalb des fortlaufenden Inhalts.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-126">You can use the <xref:System.Windows.Documents.Hyperlink> class to host hyperlinks within flow content.</span></span>|  
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
-|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|Das <xref:System.Windows.Controls.ListView>\-Steuerelement stellt eine schreibgeschützte Detailansicht bereit.|  
-|<xref:System.Windows.Forms.MaskedTextBox>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|Die Formatierung des <xref:System.Windows.Controls.Menu>\-Steuerelements kann das Verhalten und Aussehen der <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=fullName>\-Klasse annähern.|  
+|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|<span data-ttu-id="5f0f7-127">Die <xref:System.Windows.Controls.ListView> Steuerelement stellt eine schreibgeschützte Detailansicht.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-127">The <xref:System.Windows.Controls.ListView> control provides a read-only details view.</span></span>|  
+|<xref:System.Windows.Forms.MaskedTextBox>|<span data-ttu-id="5f0f7-128">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-128">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|<span data-ttu-id="5f0f7-129"><xref:System.Windows.Controls.Menu>Formatieren von Steuerelementen kann das Verhalten und die Darstellung der ungefähre der <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> Klasse.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-129"><xref:System.Windows.Controls.Menu> control styling can approximate the behavior and appearance of the <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> class.</span></span>|  
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
-|<xref:System.Windows.Forms.NotifyIcon>|Kein äquivalentes Steuerelement.||  
-|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> und zwei <xref:System.Windows.Controls.Primitives.RepeatButton>\-Steuerelemente.||  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|Die <xref:Microsoft.Win32.OpenFileDialog>\-Klasse ist ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Wrapper um das [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Steuerelement.|  
-|<xref:System.Windows.Forms.PageSetupDialog>|Kein äquivalentes Steuerelement.||  
+|<xref:System.Windows.Forms.NotifyIcon>|<span data-ttu-id="5f0f7-130">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-130">No equivalent control.</span></span>||  
+|<xref:System.Windows.Forms.NumericUpDown>|<span data-ttu-id="5f0f7-131"><xref:System.Windows.Controls.TextBox>und zwei <xref:System.Windows.Controls.Primitives.RepeatButton> Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-131"><xref:System.Windows.Controls.TextBox> and two <xref:System.Windows.Controls.Primitives.RepeatButton> controls.</span></span>||  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|<span data-ttu-id="5f0f7-132">Die <xref:Microsoft.Win32.OpenFileDialog> Klasse ist eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Wrapper um die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-132">The <xref:Microsoft.Win32.OpenFileDialog> class is a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wrapper around the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] control.</span></span>|  
+|<xref:System.Windows.Forms.PageSetupDialog>|<span data-ttu-id="5f0f7-133">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-133">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
 |<xref:System.Windows.Forms.PictureBox>|<xref:System.Windows.Controls.Image>||  
 |<xref:System.Windows.Forms.PrintDialog>|<xref:System.Windows.Controls.PrintDialog>||  
-|<xref:System.Drawing.Printing.PrintDocument>|Kein äquivalentes Steuerelement.||  
+|<xref:System.Drawing.Printing.PrintDocument>|<span data-ttu-id="5f0f7-134">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-134">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.PrintPreviewControl>|<xref:System.Windows.Controls.DocumentViewer>||  
-|<xref:System.Windows.Forms.PrintPreviewDialog>|Kein äquivalentes Steuerelement.||  
+|<xref:System.Windows.Forms.PrintPreviewDialog>|<span data-ttu-id="5f0f7-135">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-135">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.ProgressBar>|<xref:System.Windows.Controls.ProgressBar>||  
-|<xref:System.Windows.Forms.PropertyGrid>|Kein äquivalentes Steuerelement.||  
+|<xref:System.Windows.Forms.PropertyGrid>|<span data-ttu-id="5f0f7-136">Kein entsprechendes Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-136">No equivalent control.</span></span>||  
 |<xref:System.Windows.Forms.RadioButton>|<xref:System.Windows.Controls.RadioButton>||  
 |<xref:System.Windows.Forms.RichTextBox>|<xref:System.Windows.Controls.RichTextBox>||  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|Die <xref:Microsoft.Win32.SaveFileDialog>\-Klasse ist ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Wrapper um das [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Steuerelement.|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|<span data-ttu-id="5f0f7-137">Die <xref:Microsoft.Win32.SaveFileDialog> Klasse ist eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Wrapper um die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-137">The <xref:Microsoft.Win32.SaveFileDialog> class is a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wrapper around the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] control.</span></span>|  
 |<xref:System.Windows.Forms.ScrollableControl>|<xref:System.Windows.Controls.ScrollViewer>||  
 |<xref:System.Media.SoundPlayer>|<xref:System.Windows.Media.MediaPlayer>||  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Controls.GridSplitter>||  
@@ -80,21 +83,21 @@ Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.m
 |<xref:System.Windows.Forms.TextBox>|<xref:System.Windows.Controls.TextBox>||  
 |<xref:System.Windows.Forms.Timer>|<xref:System.Windows.Threading.DispatcherTimer>||  
 |<xref:System.Windows.Forms.ToolStrip>|<xref:System.Windows.Controls.ToolBar>||  
-|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar> mit Komposition.||  
-|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar> mit Komposition.||  
-|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar> mit Komposition.||  
-|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar> mit Komposition.||  
+|<xref:System.Windows.Forms.ToolStripContainer>|<span data-ttu-id="5f0f7-138"><xref:System.Windows.Controls.ToolBar>Mit Komposition.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-138"><xref:System.Windows.Controls.ToolBar> with composition.</span></span>||  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="5f0f7-139"><xref:System.Windows.Controls.ToolBar>Mit Komposition.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-139"><xref:System.Windows.Controls.ToolBar> with composition.</span></span>||  
+|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<span data-ttu-id="5f0f7-140"><xref:System.Windows.Controls.ToolBar>Mit Komposition.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-140"><xref:System.Windows.Controls.ToolBar> with composition.</span></span>||  
+|<xref:System.Windows.Forms.ToolStripPanel>|<span data-ttu-id="5f0f7-141"><xref:System.Windows.Controls.ToolBar>Mit Komposition.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-141"><xref:System.Windows.Controls.ToolBar> with composition.</span></span>||  
 |<xref:System.Windows.Forms.ToolTip>|<xref:System.Windows.Controls.ToolTip>||  
 |<xref:System.Windows.Forms.TrackBar>|<xref:System.Windows.Controls.Slider>||  
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
-|<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Die Bildlauffunktion ist in Containersteuerelemente integriert.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=fullName>|Das <xref:System.Windows.Controls.Frame>\-Steuerelement kann HTML\-Seiten hosten.<br /><br /> Ab [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] kann das <xref:System.Windows.Controls.WebBrowser?displayProperty=fullName>\-Steuerelement HTML\-Seiten hosten und bietet darüber hinaus Unterstützung für das <xref:System.Windows.Controls.Frame>\-Steuerelement.|  
+|<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|<span data-ttu-id="5f0f7-142">Durchführen eines Bildlaufs wird in Containersteuerelementen integriert.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-142">Scrolling is built into container controls.</span></span>|  
+|<xref:System.Windows.Forms.WebBrowser>|<span data-ttu-id="5f0f7-143"><xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="5f0f7-143"><xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType></span></span>|<span data-ttu-id="5f0f7-144">Die <xref:System.Windows.Controls.Frame> -Hoststeuerelement HTML-Seiten.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-144">The <xref:System.Windows.Controls.Frame> control can host HTML pages.</span></span><br /><br /> <span data-ttu-id="5f0f7-145">Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> -Hoststeuerelement können HTML-Seiten und auch die Sicherung der <xref:System.Windows.Controls.Frame> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5f0f7-145">Starting in the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], the <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> control can host HTML pages and also backs the <xref:System.Windows.Controls.Frame> control.</span></span>|  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Der WPF\-Designer für Windows Forms\-Entwickler](http://msdn.microsoft.com/de-de/47ad0909-e89b-4996-b4ac-874d929f94ca)   
- [Exemplarische Vorgehensweise: Hosten eines Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)   
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF\-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a><span data-ttu-id="5f0f7-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f0f7-146">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="5f0f7-147">WPF-Designer für Windows Forms-Entwickler</span><span class="sxs-lookup"><span data-stu-id="5f0f7-147">WPF Designer for Windows Forms Developers</span></span>](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)  
+ [<span data-ttu-id="5f0f7-148">Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF</span><span class="sxs-lookup"><span data-stu-id="5f0f7-148">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
+ [<span data-ttu-id="5f0f7-149">Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5f0f7-149">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="5f0f7-150">Migration und Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="5f0f7-150">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

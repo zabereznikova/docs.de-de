@@ -1,25 +1,28 @@
 ---
-title: "BinaryMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: BinaryMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09d43ed76ef70f4478aa1029c254a7b1686a8d08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# BinaryMessageEncodingBindingElement
-BinaryMessageEncodingBindingElement  
+# <a name="binarymessageencodingbindingelement"></a><span data-ttu-id="a9190-102">BinaryMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="a9190-102">BinaryMessageEncodingBindingElement</span></span>
+<span data-ttu-id="a9190-103">BinaryMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="a9190-103">BinaryMessageEncodingBindingElement</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="a9190-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a9190-104">Syntax</span></span>  
   
 ```  
 class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## Methoden  
- Die BinaryMessageEncodingBindingElement\-Klasse definiert keine Methoden.  
+## <a name="methods"></a><span data-ttu-id="a9190-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="a9190-105">Methods</span></span>  
+ <span data-ttu-id="a9190-106">Die BinaryMessageEncodingBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="a9190-106">The BinaryMessageEncodingBindingElement class does not define any methods.</span></span>  
   
-## Eigenschaften  
- Die BinaryMessageEncodingBindingElement\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a><span data-ttu-id="a9190-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a9190-107">Properties</span></span>  
+ <span data-ttu-id="a9190-108">Die BinaryMessageEncodingBindingElement-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="a9190-108">The BinaryMessageEncodingBindingElement class has the following properties.</span></span>  
   
-## MaxReadPoolSize  
- Datentyp: sint32  
+## <a name="maxreadpoolsize"></a><span data-ttu-id="a9190-109">MaxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="a9190-109">MaxReadPoolSize</span></span>  
+ <span data-ttu-id="a9190-110">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="a9190-110">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="a9190-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="a9190-111">Access type: Read-only</span></span>  
   
- Eine ganze Zahl, die definiert, wie viele Nachrichten gleichzeitig gelesen werden können, ohne neue Leser zuzuordnen.  
+ <span data-ttu-id="a9190-112">Eine ganze Zahl, die definiert, wie viele Nachrichten gleichzeitig gelesen werden können, ohne neue Leser zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="a9190-112">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span>  
   
-## MaxSessionSize  
- Datentyp: sint32  
+## <a name="maxsessionsize"></a><span data-ttu-id="a9190-113">MaxSessionSize</span><span class="sxs-lookup"><span data-stu-id="a9190-113">MaxSessionSize</span></span>  
+ <span data-ttu-id="a9190-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="a9190-114">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="a9190-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="a9190-115">Access type: Read-only</span></span>  
   
- Dieser Wert gibt die Größe des für die Codierung verwendeten Puffers an \(in Byte\).  
+ <span data-ttu-id="a9190-116">Dieser Wert gibt die Größe des für die Codierung verwendeten Puffers an (in Byte).</span><span class="sxs-lookup"><span data-stu-id="a9190-116">A value that specifies the size, in bytes, of the buffer used for encoding.</span></span>  
   
-## MaxWritePoolSize  
- Datentyp: sint32  
+## <a name="maxwritepoolsize"></a><span data-ttu-id="a9190-117">MaxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="a9190-117">MaxWritePoolSize</span></span>  
+ <span data-ttu-id="a9190-118">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="a9190-118">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="a9190-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="a9190-119">Access type: Read-only</span></span>  
   
- Eine ganze Zahl, die definiert, wie viele Nachrichten gleichzeitig gesendet werden können, ohne neue Schreiber zuzuordnen.  
+ <span data-ttu-id="a9190-120">Eine ganze Zahl, die definiert, wie viele Nachrichten gleichzeitig gesendet werden können, ohne neue Schreiber zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="a9190-120">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span>  
   
-## ReaderQuotas  
- Datentyp: XmlDictionaryReaderQuotas  
+## <a name="readerquotas"></a><span data-ttu-id="a9190-121">ReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="a9190-121">ReaderQuotas</span></span>  
+ <span data-ttu-id="a9190-122">Datentyp: XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="a9190-122">Data type: XmlDictionaryReaderQuotas</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="a9190-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="a9190-123">Access type: Read-only</span></span>  
   
- Die Kontingente der Leser.  
+ <span data-ttu-id="a9190-124">Die Kontingente der Leser.</span><span class="sxs-lookup"><span data-stu-id="a9190-124">The quotas of the readers.</span></span>  
   
-## Anforderungen  
+## <a name="requirements"></a><span data-ttu-id="a9190-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a9190-125">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|<span data-ttu-id="a9190-126">MOF</span><span class="sxs-lookup"><span data-stu-id="a9190-126">MOF</span></span>|<span data-ttu-id="a9190-127">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="a9190-127">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="a9190-128">Namespace</span><span class="sxs-lookup"><span data-stu-id="a9190-128">Namespace</span></span>|<span data-ttu-id="a9190-129">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a9190-129">Defined in root\ServiceModel</span></span>|  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="a9190-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9190-130">See Also</span></span>  
  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

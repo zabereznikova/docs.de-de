@@ -1,107 +1,110 @@
 ---
-title: "Das Threadmodell f&#252;r Freihandeingaben | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsbenutzeroberflächenthread"
-  - "Thread für dynamisches Rendering"
-  - "Freihandeingabe-Plug-In"
-  - "Threadmodell für Freihandeingaben"
-  - "Freihandeingaben, Rendering"
-  - "Stiftthread"
-  - "Plug-Ins, für Freihandeingaben"
-  - "Rendern von Freihandeingaben"
-  - "Stift-Plug-In"
-  - "Threadingmodell"
+title: "Das Threadmodell für Freihandeingaben"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application user interface thread [WPF]
+- stylus plug-in
+- ink threading model [WPF]
+- ink [WPF], rendering
+- pen thread [WPF]
+- threading model [WPF]
+- rendering ink [WPF]
+- dynamic rendering thread [WPF]
+- ink collection plug-in
+- plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: efbd05f88b962363e3b866fbf914f6d3a37823cc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Das Threadmodell f&#252;r Freihandeingaben
-Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass der Eindruck entsteht, mit einem echten Stift auf Papier zu schreiben.  Um dies zu bewerkstelligen, werden vom Tablettstift die Eingabedaten mit einer im Vergleich zu einer Maus wesentlich höheren Rate erfasst und die Freihandeingabe während des Schreibvorgangs gerendert.  Der Benutzeroberflächenthread \(UI\-Thread\) der Anwendung ist zum Erfassen der Daten und zum Rendern der Freihandeingabe nicht ausreichend, da er blockiert werden kann.  Um dieses Problem zu lösen, werden von einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung zwei zusätzliche Threads für die Freihandeingabe verwendet.  
+# <a name="the-ink-threading-model"></a><span data-ttu-id="65389-102">Das Threadmodell für Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="65389-102">The Ink Threading Model</span></span>
+<span data-ttu-id="65389-103">Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es mit einem regulären Stift und Papier viel wie beim Schreiben idealer.</span><span class="sxs-lookup"><span data-stu-id="65389-103">One of the benefits of ink on a Tablet PC is that it feels a lot like writing with a regular pen and paper.</span></span>  <span data-ttu-id="65389-104">Um dies zu erreichen, erfasst der Tablettstift Eingabedaten eine viel höhere Ausfallrate als eine Maus und die Freihandeingabe während des Schreibvorgangs rendert.</span><span class="sxs-lookup"><span data-stu-id="65389-104">To accomplish this, the tablet pen collects input data at a much higher rate than a mouse does and renders the ink as the user writes.</span></span>  <span data-ttu-id="65389-105">Thread (Benutzeroberflächenthread) der Anwendung reicht nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, da er blockiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="65389-105">The application's user interface (UI) thread is not sufficient for collecting pen data and rendering ink, because it can become blocked.</span></span>  <span data-ttu-id="65389-106">Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung zwei zusätzliche Threads verwendet, wenn Freihandeingabe.</span><span class="sxs-lookup"><span data-stu-id="65389-106">To solve this, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application uses two additional threads when a user writes ink.</span></span>  
   
- In der folgenden Liste werden die Threads erläutert, die am Erfassen und Rendern digitaler Freihandeingaben beteiligt sind:  
+ <span data-ttu-id="65389-107">Die folgende Liste beschreibt die Threads, die Teil zum Sammeln und Rendern von Freihandeingaben annehmen:</span><span class="sxs-lookup"><span data-stu-id="65389-107">The following list describes the threads that take part in collecting and rendering digital ink:</span></span>  
   
--   Thread für den Tablettstift \(Stiftthread\) \- In diesem Thread werden die Daten vom Tablettstift erfasst.  \(Eigentlich handelt es sich um einen Threadpool, in diesem Thema wird er jedoch als einzelner Stiftthread dargestellt.\)  
+-   <span data-ttu-id="65389-108">Pen-Thread - des Threads, die Eingabe des Tablettstifts akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="65389-108">Pen thread - the thread that takes input from the stylus.</span></span>  <span data-ttu-id="65389-109">(In der Praxis können dies ist eine Threadpool, aber dieses Thema bezieht sich darauf als Stiftthread.)</span><span class="sxs-lookup"><span data-stu-id="65389-109">(In reality, this is a thread pool, but this topic refers to it as a pen thread.)</span></span>  
   
--   Thread für die Anwendungsbenutzeroberfläche \(UI\-Thread\) \- Von diesem Thread wird die Benutzeroberfläche der Anwendung gesteuert.  
+-   <span data-ttu-id="65389-110">Anwendung Benutzeroberflächenthread - Threads, der die Benutzeroberfläche der Anwendung steuert.</span><span class="sxs-lookup"><span data-stu-id="65389-110">Application user interface thread - the thread that controls the user interface of the application.</span></span>  
   
--   Thread für das dynamische Rendering \(Rendering\-Thread\) \- In diesem Thread wird die Freihandeingabe gerendert, während der Benutzer einen Strich zeichnet.  Der Thread für das dynamische Rendering unterscheidet sich von dem Thread, in dem andere Benutzeroberflächenelemente für die Anwendung gerendert werden, wie unter Window Presentation Foundation [Threading\-Modell](../../../../docs/framework/wpf/advanced/threading-model.md) erläutert.  
+-   <span data-ttu-id="65389-111">Dynamische Renderingthread - zeichnet der Thread, der der Freihandeingabe während der Benutzer ein Strichs.</span><span class="sxs-lookup"><span data-stu-id="65389-111">Dynamic rendering thread - the thread that renders the ink while the user draws a stroke.</span></span> <span data-ttu-id="65389-112">Die dynamische Renderingthread unterscheidet sich dem Thread, andere Elemente der Benutzeroberfläche für die Anwendung gerendert, werden, wie unter Window Presentation Foundation [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md).</span><span class="sxs-lookup"><span data-stu-id="65389-112">The dynamic rendering thread is different than the thread that renders other UI elements for the application, as mentioned in Window Presentation Foundation [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md).</span></span>  
   
- Das gleiche Freihandeingabemodell wird verwendet, unabhängig davon, ob von der Anwendung das <xref:System.Windows.Controls.InkCanvas>\-Steuerelement oder ein benutzerdefiniertes Steuerelement verwendet wird, vergleichbar mit dem unter [Erstellen eines Freihandeingabesteuerelements](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md) beschriebenen.  In diesem Thema wird Threading in Bezug auf <xref:System.Windows.Controls.InkCanvas> erläutert, die gleiche Konzepte gelten jedoch auch für benutzerdefinierte Steuerelemente.  
+ <span data-ttu-id="65389-113">Das Freihand-Modell entspricht dem, ob die Anwendung verwendet die <xref:System.Windows.Controls.InkCanvas> oder ein benutzerdefiniertes Steuerelement mit dem Umwandlungsoperator in [Erstellen eines Steuerelements der Freihand-Eingabe](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span><span class="sxs-lookup"><span data-stu-id="65389-113">The inking model is the same whether the application uses the <xref:System.Windows.Controls.InkCanvas> or a custom control similar to the one in [Creating an Ink Input Control](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span></span>  <span data-ttu-id="65389-114">Obwohl in diesem Thema wird erläutert, in Form eines threading der <xref:System.Windows.Controls.InkCanvas>, dieselben Konzepte gelten, wenn Sie ein benutzerdefiniertes Steuerelement erstellen.</span><span class="sxs-lookup"><span data-stu-id="65389-114">Although this topic discusses threading in terms of the <xref:System.Windows.Controls.InkCanvas>, the same concepts apply when you create a custom control.</span></span>  
   
-## Übersicht über Threading  
- Im folgenden Diagramm wird das Threadingmodell beim Zeichnen eines Strichs durch den Benutzer veranschaulicht:  
+## <a name="threading-overview"></a><span data-ttu-id="65389-115">Übersicht über Threading</span><span class="sxs-lookup"><span data-stu-id="65389-115">Threading Overview</span></span>  
+ <span data-ttu-id="65389-116">Das folgende Diagramm veranschaulicht das Threadingmodell an, wenn ein Benutzer einen Strich zeichnet:</span><span class="sxs-lookup"><span data-stu-id="65389-116">The following diagram illustrates the threading model when a user draws a stroke:</span></span>  
   
- ![Verkettungsmodell beim Zeichnen eines Strichs.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading\_DrawingInk")  
+ <span data-ttu-id="65389-117">![Threadingmodell beim Zeichnen eines Strichs. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span><span class="sxs-lookup"><span data-stu-id="65389-117">![Threading model while drawing a stroke.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span></span>  
   
-1.  Auftretende Aktionen während des Zeichnens eines Strichs durch den Benutzer  
+1.  <span data-ttu-id="65389-118">Aktionen, die auftreten, während der Benutzer den Strich zeichnet</span><span class="sxs-lookup"><span data-stu-id="65389-118">Actions occurring while the user draws the stroke</span></span>  
   
-    1.  Wenn der Benutzer einen Strich zeichnet, werden die Tablettstiftpunkte über den Stiftthread erfasst.  Von Tablettstift\-Plug\-Ins, einschließlich <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, werden die Tablettstiftpunkte im Stiftthread angenommen und ggf. bearbeitet, bevor sie von <xref:System.Windows.Controls.InkCanvas> empfangen werden.  
+    1.  <span data-ttu-id="65389-119">Wenn der Benutzer einen Strich zeichnet, sind die Tablettstiftpunkte in verschiedenen für den Stiftthread.</span><span class="sxs-lookup"><span data-stu-id="65389-119">When the user draws a stroke, the stylus points come in on the pen thread.</span></span>  <span data-ttu-id="65389-120">Stift-Plug-ins, einschließlich der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, akzeptieren Sie die Tablettstift Punkten im Thread Stift und haben die Möglichkeit, die sie vor dem Ändern der <xref:System.Windows.Controls.InkCanvas> Empfangs.</span><span class="sxs-lookup"><span data-stu-id="65389-120">Stylus plug-ins, including the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, accept the stylus points on the pen thread and have the chance to modify them before the <xref:System.Windows.Controls.InkCanvas> receives them.</span></span>  
   
-    2.  Vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> werden die Tablettstiftpunkte im dynamischen Rendering\-Thread gerendert.  Dies wird zur gleichen Zeit wie der vorherige Schritt ausgeführt.  
+    2.  <span data-ttu-id="65389-121">Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die Tablettstift Punkten im dynamischen Renderingthread rendert.</span><span class="sxs-lookup"><span data-stu-id="65389-121">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the stylus points on the dynamic rendering thread.</span></span> <span data-ttu-id="65389-122">Dies geschieht, zur gleichen Zeit wie im vorherigen Schritt.</span><span class="sxs-lookup"><span data-stu-id="65389-122">This happens at the same time as the previous step.</span></span>  
   
-    3.  Vom <xref:System.Windows.Controls.InkCanvas> werden die Tablettstiftpunkte im UI\-Thread empfangen.  
+    3.  <span data-ttu-id="65389-123">Die <xref:System.Windows.Controls.InkCanvas> empfängt die Tablettstift Punkten im UI-Thread.</span><span class="sxs-lookup"><span data-stu-id="65389-123">The <xref:System.Windows.Controls.InkCanvas> receives the stylus points on the UI thread.</span></span>  
   
-2.  Auftretende Aktionen nach dem Zeichnen eines Strichs durch den Benutzer  
+2.  <span data-ttu-id="65389-124">Aktionen, die auftritt, nachdem der Benutzer den Strich beendet</span><span class="sxs-lookup"><span data-stu-id="65389-124">Actions occurring after the user ends the stroke</span></span>  
   
-    1.  Nachdem der Benutzer einen Strich gezeichnet hat, wird vom <xref:System.Windows.Controls.InkCanvas> ein <xref:System.Windows.Ink.Stroke>\-Objekt erstellt und dem <xref:System.Windows.Controls.InkPresenter> hinzugefügt, von dem es statisch gerendert wird.  
+    1.  <span data-ttu-id="65389-125">Nach Abschluss der Benutzer die Kontur zeichnen die <xref:System.Windows.Controls.InkCanvas> erstellt eine <xref:System.Windows.Ink.Stroke> -Objekt und fügt es der <xref:System.Windows.Controls.InkPresenter>, die statisch gerendert wird.</span><span class="sxs-lookup"><span data-stu-id="65389-125">When the user finishes drawing the stroke, the <xref:System.Windows.Controls.InkCanvas> creates a <xref:System.Windows.Ink.Stroke> object and adds it to the <xref:System.Windows.Controls.InkPresenter>, which statically renders it.</span></span>  
   
-    2.  Der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wird vom UI\-Thread benachrichtigt, dass der Strich statisch gerendert wird. Die grafische Darstellung des Strichs vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wird daraufhin von diesem gelöscht.  
+    2.  <span data-ttu-id="65389-126">UI-Thread-Warnungen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , die die Kontur statisch gerendert wird, sodass der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> entfernt die visuelle Darstellung des Strichs.</span><span class="sxs-lookup"><span data-stu-id="65389-126">The UI thread alerts the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> that the stroke is statically rendered, so the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> removes its visual representation of the stroke.</span></span>  
   
-## Erfassen von Freihandeingaben und Tablettstift\-Plug\-Ins  
- Jedes <xref:System.Windows.UIElement> verfügt über eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  Von den <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>\-Objekten in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> werden die Tablettstiftpunkte im Stiftthread empfangen und ggf. bearbeitet.  Von den <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>\-Objekten werden die Tablettstiftpunkte entsprechend ihrer Reihenfolge in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> empfangen.  
+## <a name="ink-collection-and-stylus-plug-ins"></a><span data-ttu-id="65389-127">Freihandeingaben und Tablettstift-Plug-ins</span><span class="sxs-lookup"><span data-stu-id="65389-127">Ink collection and Stylus Plug-ins</span></span>  
+ <span data-ttu-id="65389-128">Jede <xref:System.Windows.UIElement> verfügt über eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="65389-128">Each <xref:System.Windows.UIElement> has a <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  <span data-ttu-id="65389-129">Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> empfangen und die Tablettstift Punkten im Thread Stift ändern können.</span><span class="sxs-lookup"><span data-stu-id="65389-129">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> receive and can modify the stylus points on the pen thread.</span></span> <span data-ttu-id="65389-130">Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte erhalten die Tablettstiftpunkte entsprechend ihrer Reihenfolge in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="65389-130">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects receive the stylus points according to their order in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  
   
- Im folgenden Diagramm wird Situation angenommen, in der die <xref:System.Windows.UIElement.StylusPlugIns%2A>\-Auflistung eines <xref:System.Windows.UIElement> ein `stylusPlugin1`, einen <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und ein `stylusPlugin2` enthält \(in dieser Reihenfolge\).  
+ <span data-ttu-id="65389-131">Das folgende Diagramm veranschaulicht die hypothetische Situation, in dem die <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung von einer <xref:System.Windows.UIElement> enthält `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, und `stylusPlugin2`in dieser Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="65389-131">The following diagram illustrates the hypothetical situation where the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection of a <xref:System.Windows.UIElement> contains `stylusPlugin1`, a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, and `stylusPlugin2`, in that order.</span></span>  
   
- ![Reihenfolge der Tablettstift&#45;Plugins beeinflusst Ausgabe.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading\_PluginOrder")  
+ <span data-ttu-id="65389-132">![Reihenfolge der Tablettstift-Plugins beeinflusst Ausgabe. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span><span class="sxs-lookup"><span data-stu-id="65389-132">![Order of Stylus Plugins affect output.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span></span>  
   
- Im oben dargestellten Diagramm findet das folgende Verhalten statt:  
+ <span data-ttu-id="65389-133">In der vorherigen Abbildung erfolgt Folgendes:</span><span class="sxs-lookup"><span data-stu-id="65389-133">In the previous diagram, the following behavior takes place:</span></span>  
   
-1.  Von `StylusPlugin1` werden die Werte für x und y bearbeitet.  
+1.  <span data-ttu-id="65389-134">`StylusPlugin1`Ändert die Werte für x und y.</span><span class="sxs-lookup"><span data-stu-id="65389-134">`StylusPlugin1` modifies the values for x and y.</span></span>  
   
-2.  Vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> werden die bearbeiteten Tablettstiftpunkte empfangen und im dynamischen Rendering\-Thread gerendert.  
+2.  <span data-ttu-id="65389-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>empfängt die geänderte Tablettstiftpunkte, und im dynamischen Renderingthread gerendert.</span><span class="sxs-lookup"><span data-stu-id="65389-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the modified stylus points and renders them on the dynamic rendering thread.</span></span>  
   
-3.  Von `StylusPlugin2` werden die bearbeiteten Tablettstiftpunkte empfangen und die Werte für x und y weiter bearbeitet.  
+3.  <span data-ttu-id="65389-136">`StylusPlugin2`empfängt die geänderte Tablettstiftpunkte und weiteren ändert die Werte für x und y.</span><span class="sxs-lookup"><span data-stu-id="65389-136">`StylusPlugin2` receives the modified stylus points and further modifies the values for x and y.</span></span>  
   
-4.  Von der Anwendung werden die Tablettstiftpunkte erfasst und der Strich statisch gerendert, nachdem er vom Benutzer gezeichnet wurde.  
+4.  <span data-ttu-id="65389-137">Die Anwendung die Tablettstiftpunkte erfasst und Abschluss der Benutzer die Strichbreite nach der Strich statisch gerendert.</span><span class="sxs-lookup"><span data-stu-id="65389-137">The application collects the stylus points, and, when the user finishes the stroke, statically renders the stroke.</span></span>  
   
- Angenommen, von `stylusPlugin1` werden die Tablettstiftpunkte auf ein Rechteck eingeschränkt und von `stylusPlugin2` nach rechts verschoben.  Im oben beschriebenen Szenario werden die eingeschränkten Tablettstiftpunkte vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> empfangen, jedoch nicht die verschobenen Tablettstiftpunkte.  Wenn der Benutzer einen Strich zeichnet, wird der Strich innerhalb des Rechtecks gerendert, jedoch solange nicht verschoben, bis der Tablettstift vom Benutzer angehoben wird.  
+ <span data-ttu-id="65389-138">Nehmen wir an, die `stylusPlugin1` schränkt die Tablettstift Punkten zu einem Rechteck und `stylusPlugin2` übersetzt die Tablettstift Punkten rechts.</span><span class="sxs-lookup"><span data-stu-id="65389-138">Suppose that `stylusPlugin1` restricts the stylus points to a rectangle and `stylusPlugin2` translates the stylus points to the right.</span></span>  <span data-ttu-id="65389-139">Im obigen Szenario der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> empfängt die eingeschränkten Tablettstiftpunkte, jedoch nicht die übersetzten Tablettstiftpunkte.</span><span class="sxs-lookup"><span data-stu-id="65389-139">In the previous scenario, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the restricted stylus points, but not the translated stylus points.</span></span>  <span data-ttu-id="65389-140">Wenn der Benutzer einen Strich zeichnet, Strichs innerhalb der Grenzen des Rechtecks gerendert, jedoch die Kontur ist scheinbar nicht übersetzt werden, bis der Benutzer den Stift anhebt.</span><span class="sxs-lookup"><span data-stu-id="65389-140">When the user draws the stroke, the stroke is rendered within the bounds of the rectangle, but the stroke doesn't appear to be translated until the user lifts the pen.</span></span>  
   
-### Ausführen von Vorgängen mit einem Tablettstift\-Plug\-In im UI\-Thread  
- Da eine genaue Trefferüberprüfung im Stiftthread nicht ausgeführt werden kann, werden von einigen Elementen möglicherweise gelegentlich Tablettstifteingaben empfangen, die für andere Elemente vorgesehen sind.  Wenn Sie sicherstellen müssen, dass die Eingabe vor dem Ausführen eines Vorgangs korrekt weitergeleitet wurde, abonnieren Sie die folgenden Methoden, und führen Sie den Vorgang in diesen aus: <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A> oder <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A>.  Diese Methoden werden vom Anwendungsthread nach der Ausführung einer genauen Trefferüberprüfung aufgerufen.  Rufen Sie zum Abonnieren dieser Methoden die <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A>\-Methode in der im Stiftthread ausgeführten Methode auf.  
+### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a><span data-ttu-id="65389-141">Ausführen von Vorgängen mit einem Tablettstift-Plug-in auf dem UI-thread</span><span class="sxs-lookup"><span data-stu-id="65389-141">Performing operations with a Stylus Plug-in on the UI thread</span></span>  
+ <span data-ttu-id="65389-142">Da der genaue Treffertests für den Stiftthread ausgeführt werden kann, möglicherweise einige Elemente gelegentlich Tablettstift Eingabetyp für andere Elemente empfangen.</span><span class="sxs-lookup"><span data-stu-id="65389-142">Because accurate hit-testing cannot be performed on the pen thread, some elements might occasionally receive stylus input intended for other elements.</span></span> <span data-ttu-id="65389-143">Wenn Sie müssen sicherstellen, dass die Eingabe vor dem Ausführen eines Vorgangs ordnungsgemäß weitergeleitet wurde, abonnieren, und führen Sie den Vorgang in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, oder <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="65389-143">If you need to make sure the input was routed correctly before performing an operation, subscribe to and perform the operation in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, or <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> method.</span></span> <span data-ttu-id="65389-144">Diese Methoden werden vom Thread Anwendung aufgerufen, nachdem die genauer Treffertest ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="65389-144">These methods are invoked by the application thread after accurate hit-testing has been performed.</span></span> <span data-ttu-id="65389-145">Rufen Sie zum Abonnieren dieser Methoden die <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> -Methode in der Methode, die an den Stiftthread auftritt.</span><span class="sxs-lookup"><span data-stu-id="65389-145">To subscribe to these methods, call the <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> method in the method that occurs on the pen thread.</span></span>  
   
- Im folgenden Diagramm sind die Beziehungen zwischen dem Stiftthread und dem UI\-Thread hinsichtlich der Tablettstiftereignisse eines <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> dargestellt.  
+ <span data-ttu-id="65389-146">Das folgende Diagramm veranschaulicht die Beziehung zwischen den Stiftthread und UI-Thread in Bezug auf die Stylus-Ereignisse von einem <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span><span class="sxs-lookup"><span data-stu-id="65389-146">The following diagram illustrates the relationship between the pen thread and UI thread with respect to the stylus events of a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span></span>  
   
- ![Freihandverkettungsmodelle &#40;UI und Stift&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading\_PluginCallbacks")  
+ <span data-ttu-id="65389-147">![Freihand-Threadingmodellen &#40; UI und Stift &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span><span class="sxs-lookup"><span data-stu-id="65389-147">![Ink Threading Models &#40;UI and Pen&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span></span>  
   
-## Rendern von Freihandeingaben  
- Wenn der Benutzer einen Strich zeichnet, wird die Freihandeingabe von <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> in einem separaten Thread gerendert, sodass der Tablettstift auch dann für eine Freihandeingabe verwendet werden kann, wenn der UI\-Thread ausgelastet ist.  Vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wird beim Erfassen der Tablettstiftpunkte eine visuelle Struktur im dynamischen Rendering\-Thread erstellt.  Nachdem der Benutzer den Strich gezeichnet hat, wird vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> eine Benachrichtigung gefordert, wenn von der Anwendung der nächste Renderingdurchlauf ausgeführt wird.  Nachdem die Anwendung den nächsten Renderingdurchlauf ausgeführt hat, wird die visuelle Struktur vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> gelöscht.  Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.  
+## <a name="rendering-ink"></a><span data-ttu-id="65389-148">Rendern von Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="65389-148">Rendering Ink</span></span>  
+ <span data-ttu-id="65389-149">Wenn der Benutzer einen Strich zeichnet <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> rendert in einem separaten Thread Kanton Freihandeingaben "von der Stift übertragen" selbst, wenn der UI-Thread ausgelastet ist.</span><span class="sxs-lookup"><span data-stu-id="65389-149">As the user draws a stroke, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the ink on a separate thread so the ink appears to "flow" from the pen even when the UI thread is busy.</span></span>  <span data-ttu-id="65389-150">Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> eine visuelle Struktur im dynamischen Rendering-Thread erstellt, wie sie Tablettstiftpunkte erfasst.</span><span class="sxs-lookup"><span data-stu-id="65389-150">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds a visual tree on the dynamic rendering thread as it collects stylus points.</span></span>  <span data-ttu-id="65389-151">Wenn der Benutzer den Strich beendet die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> fordert benachrichtigt werden, wenn die Anwendung den nächsten Renderingdurchlauf ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="65389-151">When the user finishes the stroke, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> asks to be notified when the application does the next rendering pass.</span></span>  <span data-ttu-id="65389-152">Nach Abschluss des nächsten Renderingdurchlauf, die Anwendung die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> seiner visuellen Struktur bereinigt.</span><span class="sxs-lookup"><span data-stu-id="65389-152">After the application completes the next rendering pass, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up its visual tree.</span></span>  <span data-ttu-id="65389-153">Das folgende Diagramm veranschaulicht diesen Prozess.</span><span class="sxs-lookup"><span data-stu-id="65389-153">The following diagram illustrates this process.</span></span>  
   
- ![Freihandverkettungsdiagramm](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading\_VisualTree")  
+ <span data-ttu-id="65389-154">![Freihandeingaben threading Diagramm](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span><span class="sxs-lookup"><span data-stu-id="65389-154">![Ink threading diagram](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span></span>  
   
-1.  Der Benutzer beginnt, den Strich zu zeichnen.  
+1.  <span data-ttu-id="65389-155">Der Benutzer beginnt, den Strich.</span><span class="sxs-lookup"><span data-stu-id="65389-155">The user begins the stroke.</span></span>  
   
-    1.  Vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wird eine visuelle Struktur erstellt.  
+    1.  <span data-ttu-id="65389-156">Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.</span><span class="sxs-lookup"><span data-stu-id="65389-156">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> creates the visual tree.</span></span>  
   
-2.  Der Benutzer zeichnet den Strich.  
+2.  <span data-ttu-id="65389-157">Der Benutzer ist die Kontur zeichnen.</span><span class="sxs-lookup"><span data-stu-id="65389-157">The user is drawing the stroke.</span></span>  
   
-    1.  Vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> wird die visuelle Struktur erstellt.  
+    1.  <span data-ttu-id="65389-158">Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.</span><span class="sxs-lookup"><span data-stu-id="65389-158">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds the visual tree.</span></span>  
   
-3.  Der Benutzer beendet den Strich.  
+3.  <span data-ttu-id="65389-159">Der Benutzer beendet den Strich.</span><span class="sxs-lookup"><span data-stu-id="65389-159">The user ends the stroke.</span></span>  
   
-    1.  Der Strich wird von <xref:System.Windows.Controls.InkPresenter> seiner visuellen Struktur hinzugefügt.  
+    1.  <span data-ttu-id="65389-160">Die <xref:System.Windows.Controls.InkPresenter> seiner visuellen Struktur des Strichs hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="65389-160">The <xref:System.Windows.Controls.InkPresenter> adds the stroke to its visual tree.</span></span>  
   
-    2.  Die Striche werden von Media Integration Layer \(MIL\) statisch gerendert.  
+    2.  <span data-ttu-id="65389-161">Media Integration Layer (MIL) wird statisch Striche gerendert.</span><span class="sxs-lookup"><span data-stu-id="65389-161">The Media Integration Layer (MIL) statically renders the strokes.</span></span>  
   
-    3.  Die visuelle Struktur wird vom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> gelöscht.
+    3.  <span data-ttu-id="65389-162">Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> bereinigt die visuellen Elemente.</span><span class="sxs-lookup"><span data-stu-id="65389-162">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up the visuals.</span></span>

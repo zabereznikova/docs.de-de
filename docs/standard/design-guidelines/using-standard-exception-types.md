@@ -1,78 +1,76 @@
 ---
-title: "Verwenden von Standardausnahmetypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Auslösen von Ausnahmen, Standardtypen"
-  - "Abfangen von Ausnahmen"
-  - "Abfangen von Ausnahmen"
-  - "Auslösen von Ausnahmen"
+title: Verwenden von Standardausnahmetypen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- throwing exceptions, standard types
+- catching exceptions
+- exceptions, catching
+- exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden von Standardausnahmetypen
-Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework und die Details ihrer Verwendung bereitgestellt. Die Liste ist nicht vollständig. Sie finden Sie in der .NET Framework\-Referenzdokumentation für die Verwendung der anderen Framework\-Ausnahmetypen.  
+# <a name="using-standard-exception-types"></a><span data-ttu-id="8cbd5-102">Verwenden von Standardausnahmetypen</span><span class="sxs-lookup"><span data-stu-id="8cbd5-102">Using Standard Exception Types</span></span>
+<span data-ttu-id="8cbd5-103">Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework und die Details zu ihrer Verwendung bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-103">This section describes the standard exceptions provided by the Framework and the details of their usage.</span></span> <span data-ttu-id="8cbd5-104">Die Liste ist nicht vollständig.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-104">The list is by no means exhaustive.</span></span> <span data-ttu-id="8cbd5-105">Finden Sie in der .NET Framework-Referenzdokumentation für die Verwendung von anderen Framework-Ausnahmetypen.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-105">Please refer to the .NET Framework reference documentation for usage of other Framework exception types.</span></span>  
   
-## Exception und SystemException  
- **X nicht** auslösen <xref:System.Exception?displayProperty=fullName> oder <xref:System.SystemException?displayProperty=fullName>.  
+## <a name="exception-and-systemexception"></a><span data-ttu-id="8cbd5-106">Diese Ausnahme und SystemException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-106">Exception and SystemException</span></span>  
+ <span data-ttu-id="8cbd5-107">**X nicht** auslösen <xref:System.Exception?displayProperty=nameWithType> oder <xref:System.SystemException?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-107">**X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> or <xref:System.SystemException?displayProperty=nameWithType>.</span></span>  
   
- **X nicht** catch `System.Exception` oder `System.SystemException` in Frameworkcode, es sei denn, Sie erneut auslösen möchten.  
+ <span data-ttu-id="8cbd5-108">**X nicht** catch `System.Exception` oder `System.SystemException` in Frameworkcode, es sei denn, Sie erneut auslösen möchten.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-108">**X DO NOT** catch `System.Exception` or `System.SystemException` in framework code, unless you intend to rethrow.</span></span>  
   
- **X vermeiden** Abfangen von `System.Exception` oder `System.SystemException`, außer im Ausnahmehandler der obersten Ebene.  
+ <span data-ttu-id="8cbd5-109">**X vermeiden** abfangen `System.Exception` oder `System.SystemException`, außer bei Ausnahmehandler der obersten Ebene.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-109">**X AVOID** catching `System.Exception` or `System.SystemException`, except in top-level exception handlers.</span></span>  
   
-## ApplicationException  
- **X nicht** auslösen oder eine Ableitung von <xref:System.ApplicationException>.  
+## <a name="applicationexception"></a><span data-ttu-id="8cbd5-110">ApplicationException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-110">ApplicationException</span></span>  
+ <span data-ttu-id="8cbd5-111">**X nicht** lösen oder eine Ableitung von <xref:System.ApplicationException>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-111">**X DO NOT** throw or derive from <xref:System.ApplicationException>.</span></span>  
   
-## InvalidOperationException  
- **✓ führen** Auslösen einer <xref:System.InvalidOperationException> wenn das Objekt in einem unzulässigen Zustand befindet.  
+## <a name="invalidoperationexception"></a><span data-ttu-id="8cbd5-112">InvalidOperationException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-112">InvalidOperationException</span></span>  
+ <span data-ttu-id="8cbd5-113">**✓ FÜHREN** Auslösen einer <xref:System.InvalidOperationException> , wenn das Objekt in einem unzulässigen Zustand ist.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-113">**✓ DO** throw an <xref:System.InvalidOperationException> if the object is in an inappropriate state.</span></span>  
   
-## ArgumentException, ArgumentNullException und ArgumentOutOfRangeException  
- **✓ führen** auslösen <xref:System.ArgumentException> oder einem seiner Untertypen, wenn ungültige Argumente an einen Member übergeben werden. Möchten Sie am weitesten abgeleiteten Ausnahmetyp, falls zutreffend.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a><span data-ttu-id="8cbd5-114">ArgumentException, ArgumentNullException und ArgumentOutOfRangeException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-114">ArgumentException, ArgumentNullException, and ArgumentOutOfRangeException</span></span>  
+ <span data-ttu-id="8cbd5-115">**Führen Sie ✓** auslösen <xref:System.ArgumentException> oder einem seiner Untertypen, wenn ungültige Argumente auf einen Member übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-115">**✓ DO** throw <xref:System.ArgumentException> or one of its subtypes if bad arguments are passed to a member.</span></span> <span data-ttu-id="8cbd5-116">Bevorzugen Sie am weitesten abgeleiteten Ausnahmetyp, falls zutreffend.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-116">Prefer the most derived exception type, if applicable.</span></span>  
   
- **✓ führen** legen Sie die `ParamName` Eigenschaft beim Auslösen einer der Unterklassen von `ArgumentException`.  
+ <span data-ttu-id="8cbd5-117">**✓ FÜHREN** legen Sie die `ParamName` Eigenschaft, die beim Auslösen einer die Unterklasse von `ArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-117">**✓ DO** set the `ParamName` property when throwing one of the subclasses of `ArgumentException`.</span></span>  
   
- Diese Eigenschaft stellt den Namen des Parameters, der die Ausnahme ausgelöst hat. Beachten Sie, dass die Eigenschaft mit einer der Konstruktorüberladungen festgelegt werden kann.  
+ <span data-ttu-id="8cbd5-118">Diese Eigenschaft stellt den Namen des Parameters, der die Ausnahme ausgelöst wird, verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-118">This property represents the name of the parameter that caused the exception to be thrown.</span></span> <span data-ttu-id="8cbd5-119">Beachten Sie, dass die Eigenschaft mit einer der Konstruktorüberladungen festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-119">Note that the property can be set using one of the constructor overloads.</span></span>  
   
- **✓ führen** verwenden `value` für den Namen des impliziten Wertparameters von Eigenschaftensettern.  
+ <span data-ttu-id="8cbd5-120">**Führen Sie ✓** verwenden `value` für den Namen des Parameters impliziter Wert der Eigenschaftensetter.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-120">**✓ DO** use `value` for the name of the implicit value parameter of property setters.</span></span>  
   
-## NullReferenceException IndexOutOfRangeException und AccessViolationException  
- **X nicht** dass öffentlich aufrufbare APIs explizit oder implizit auslösen <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, oder <xref:System.IndexOutOfRangeException>. Diese Ausnahmen sind reserviert und das Ausführungsmodul ausgelöst und in den meisten Fällen einen Fehler anzugeben.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a><span data-ttu-id="8cbd5-121">NullReferenceException IndexOutOfRangeException und AccessViolationException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-121">NullReferenceException, IndexOutOfRangeException, and AccessViolationException</span></span>  
+ <span data-ttu-id="8cbd5-122">**X nicht** ermöglichen öffentlich aufrufbare APIs explizit oder implizit auslöst <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, oder <xref:System.IndexOutOfRangeException>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-122">**X DO NOT** allow publicly callable APIs to explicitly or implicitly throw <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, or <xref:System.IndexOutOfRangeException>.</span></span> <span data-ttu-id="8cbd5-123">Diese Ausnahmen sind reserviert und das Ausführungsmodul ausgelöst und in den meisten Fällen einen Fehler anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-123">These exceptions are reserved and thrown by the execution engine and in most cases indicate a bug.</span></span>  
   
- Führen Sie die Überprüfung, um zu vermeiden, diese Ausnahmen auslösen. Diese Ausnahmen auslösen stellt Details zur Implementierung der Methode, die mit der Zeit ändern können.  
+ <span data-ttu-id="8cbd5-124">Führen Sie Argument wird überprüft, um zu vermeiden, diese Ausnahmen auslösen.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-124">Do argument checking to avoid throwing these exceptions.</span></span> <span data-ttu-id="8cbd5-125">Lösen Sie diese Ausnahmen stellt Details zur Implementierung der Methode, die mit der Zeit ändern können.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-125">Throwing these exceptions exposes implementation details of your method that might change over time.</span></span>  
   
-## StackOverflowException  
- **X nicht** Explizites Auslösen von <xref:System.StackOverflowException>. Diese Ausnahme sollte nur von der CLR explizit ausgelöst werden.  
+## <a name="stackoverflowexception"></a><span data-ttu-id="8cbd5-126">StackOverflowException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-126">StackOverflowException</span></span>  
+ <span data-ttu-id="8cbd5-127">**X nicht** explizit auslösen <xref:System.StackOverflowException>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-127">**X DO NOT** explicitly throw <xref:System.StackOverflowException>.</span></span> <span data-ttu-id="8cbd5-128">Die Ausnahme sollte nur von der CLR explizit ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-128">The exception should be explicitly thrown only by the CLR.</span></span>  
   
- **X nicht** catch `StackOverflowException`.  
+ <span data-ttu-id="8cbd5-129">**X nicht** catch `StackOverflowException`.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-129">**X DO NOT** catch `StackOverflowException`.</span></span>  
   
- Es ist fast unmöglich, verwalteten Code zu schreiben, die in beliebigen Stapelüberläufe konsistent bleiben. Prüfpunkte zum Verschieben von klar definierten stellen Stapelüberläufe über statt aus beliebigen Stapelüberläufe Rückgängigmachen bleiben der nicht verwalteten Teile der CLR konsistent.  
+ <span data-ttu-id="8cbd5-130">Es ist nahezu unmöglich, verwalteten Code schreiben, der bei beliebigen Stapelüberläufe konsistent bleibt.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-130">It is almost impossible to write managed code that remains consistent in the presence of arbitrary stack overflows.</span></span> <span data-ttu-id="8cbd5-131">Über Prüfpunkte verschoben werden, klar definierte stellen Stapelüberläufe statt aus beliebigen Stapelüberläufe Rückgängigmachen bleiben der nicht verwalteten Teile der CLR konsistent.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-131">The unmanaged parts of the CLR remain consistent by using probes to move stack overflows to well-defined places rather than by backing out from arbitrary stack overflows.</span></span>  
   
-## OutOfMemoryException  
- **X nicht** Explizites Auslösen von <xref:System.OutOfMemoryException>. Diese Ausnahme wird nur von der CLR\-Infrastruktur ausgelöst werden.  
+## <a name="outofmemoryexception"></a><span data-ttu-id="8cbd5-132">OutOfMemoryException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-132">OutOfMemoryException</span></span>  
+ <span data-ttu-id="8cbd5-133">**X nicht** explizit auslösen <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-133">**X DO NOT** explicitly throw <xref:System.OutOfMemoryException>.</span></span> <span data-ttu-id="8cbd5-134">Diese Ausnahme wird nur von der CLR-Infrastruktur ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-134">This exception is to be thrown only by the CLR infrastructure.</span></span>  
   
-## ComException und SEHException ExecutionEngineException  
- **X nicht** Explizites Auslösen von <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, und <xref:System.Runtime.InteropServices.SEHException>. Diese Ausnahmen werden nur von der CLR\-Infrastruktur ausgelöst werden.  
+## <a name="comexception-sehexception-and-executionengineexception"></a><span data-ttu-id="8cbd5-135">ComException und SEHException ExecutionEngineException</span><span class="sxs-lookup"><span data-stu-id="8cbd5-135">ComException, SEHException, and ExecutionEngineException</span></span>  
+ <span data-ttu-id="8cbd5-136">**X nicht** explizit auslösen <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, und <xref:System.Runtime.InteropServices.SEHException>.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-136">**X DO NOT** explicitly throw <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, and <xref:System.Runtime.InteropServices.SEHException>.</span></span> <span data-ttu-id="8cbd5-137">Diese Ausnahmen werden nur von der CLR-Infrastruktur ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="8cbd5-137">These exceptions are to be thrown only by the CLR infrastructure.</span></span>  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ <span data-ttu-id="8cbd5-138">*Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*</span><span class="sxs-lookup"><span data-stu-id="8cbd5-138">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ <span data-ttu-id="8cbd5-139">*Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*</span><span class="sxs-lookup"><span data-stu-id="8cbd5-139">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="8cbd5-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8cbd5-140">See Also</span></span>  
+ [<span data-ttu-id="8cbd5-141">Frameworkentwurfsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="8cbd5-141">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="8cbd5-142">Entwurfsrichtlinien für Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="8cbd5-142">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)

@@ -1,94 +1,92 @@
 ---
-title: "String-Funktionen (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Zeichenfolgenfunktionen"
+title: String-Funktionen (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# String-Funktionen (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
+# <a name="string-functions-visual-basic"></a><span data-ttu-id="5931f-102">String-Funktionen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5931f-102">String Functions (Visual Basic)</span></span>
+<span data-ttu-id="5931f-103">In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="5931f-103">The following table lists the functions that Visual Basic provides to search and manipulate strings.</span></span>  
   
-|.NET Framework\-Methode|Beschreibung|  
-|-----------------------------|------------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Gibt einen `Integer`\-Wert zurück, der den Zeichencode darstellt, der einem Zeichen entspricht.|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Gibt das dem angegebenen Zeichencode zugeordnete Zeichen zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Gibt ein nullbasiertes Array zurück, das einen Teilbereich eines `String`\-Arrays auf der Basis angegebener Filterkriterien enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Gibt eine Zeichenfolge zurück, die entsprechend den Anweisungen in einem `String`\-Formatausdruck formatiert ist.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Gibt einen Ausdruck als Währungsbetrag zurück, der mit dem in der Systemsteuerung festgelegten Währungssymbol formatiert ist.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Gibt einen Zeichenfolgenausdruck für einen Datums\- und Uhrzeitwert zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Gibt einen als Zahl formatierten Ausdruck zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Gibt einen Ausdruck als Prozentangabe \(d. h. multipliziert mit 100\) und einem abschließenden %\-Zeichen zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Gibt einen Integer\-Wert zurück, der die Anfangsposition des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge angibt.|  
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Gibt die Position des ersten Vorkommens einer Zeichenfolge innerhalb einer anderen Zeichenfolge von rechts nach links gesehen zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Gibt eine Zeichenfolge zurück, die durch Verknüpfen mehrerer Teilzeichenfolgen aus einem Array erstellt wurde.|  
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das in Kleinbuchstaben konvertiert wurde.|  
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Gibt eine Zeichenfolge zurück, die eine angegebene Zeichenanzahl von der linken Seite einer Zeichenfolge enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Gibt eine ganze Zahl zurück, in der die Anzahl der Zeichen in einer Zeichenfolge enthalten ist.|  
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Gibt eine links ausgerichtete Zeichenfolge zurück, die die angegebene Zeichenfolge angepasst an die angegebene Länge enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende Leerzeichen enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Gibt eine Zeichenfolge zurück, die eine festgelegte Zeichenanzahl aus einer Zeichenfolge enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Gibt eine Zeichenfolge zurück, in der eine bestimmte untergeordnete Zeichenfolge so oft wie angegeben durch eine andere Zeichenfolge ersetzt wurde.|  
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Gibt eine Zeichenfolge mit einer bestimmten Anzahl von Zeichen ab dem ersten Zeichen rechts von einer Zeichenfolge zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Gibt eine rechts ausgerichtete Zeichenfolge zurück, die die angegebene Zeichenfolge in der vorgegebenen Länge enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne nachgestellte Leerzeichen enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Gibt eine Zeichenfolge mit der angegebenen Anzahl von Leerzeichen zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Gibt ein nullbasiertes, eindimensionales Array zurück, das eine angegebene Anzahl von Teilzeichenfolgen enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Gibt abhängig vom Ergebnis eines Zeichenfolgenvergleichs den Wert \-1, 0 oder 1 zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Gibt eine wie angegeben konvertierte Zeichenfolge zurück.|  
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Gibt eine Zeichenfolge oder ein Objekt zurück, in der bzw. dem das angegebene Zeichen so häufig wie angegeben wiederholt wird.|  
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Gibt eine Zeichenfolge zurück, in der die Reihenfolge der Zeichen in einer bestimmten Zeichenfolge umgekehrt wurde.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.|  
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.|  
+|<span data-ttu-id="5931f-104">.NET Framework-Methode</span><span class="sxs-lookup"><span data-stu-id="5931f-104">.NET Framework method</span></span>|<span data-ttu-id="5931f-105">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5931f-105">Description</span></span>|  
+|---------------------------|-----------------|  
+|<span data-ttu-id="5931f-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="5931f-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|<span data-ttu-id="5931f-107">Gibt einen `Integer`-Wert zurück, der den Zeichencode darstellt, der einem Zeichen entspricht.</span><span class="sxs-lookup"><span data-stu-id="5931f-107">Returns an `Integer` value representing the character code corresponding to a character.</span></span>|  
+|<span data-ttu-id="5931f-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="5931f-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|<span data-ttu-id="5931f-109">Gibt das dem angegebenen Zeichencode zugeordnete Zeichen zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-109">Returns the character associated with the specified character code.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|<span data-ttu-id="5931f-110">Gibt ein nullbasiertes Array zurück, das einen Teilbereich eines `String`-Arrays auf der Basis angegebener Filterkriterien enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-110">Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|<span data-ttu-id="5931f-111">Gibt eine Zeichenfolge zurück, die entsprechend den Anweisungen in einem `String`-Formatausdruck formatiert ist.</span><span class="sxs-lookup"><span data-stu-id="5931f-111">Returns a string formatted according to instructions contained in a format `String` expression.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|<span data-ttu-id="5931f-112">Gibt einen Ausdruck als Währungsbetrag zurück, der mit dem in der Systemsteuerung festgelegten Währungssymbol formatiert ist.</span><span class="sxs-lookup"><span data-stu-id="5931f-112">Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|<span data-ttu-id="5931f-113">Gibt einen Zeichenfolgenausdruck für einen Datums- und Uhrzeitwert zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-113">Returns a string expression representing a date/time value.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|<span data-ttu-id="5931f-114">Gibt einen als Zahl formatierten Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-114">Returns an expression formatted as a number.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|<span data-ttu-id="5931f-115">Gibt einen Ausdruck als Prozentangabe (d. h. multipliziert mit 100) und einem abschließenden %-Zeichen zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-115">Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|<span data-ttu-id="5931f-116">Gibt einen Integer-Wert zurück, der die Anfangsposition des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge angibt.</span><span class="sxs-lookup"><span data-stu-id="5931f-116">Returns an integer specifying the start position of the first occurrence of one string within another.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|<span data-ttu-id="5931f-117">Gibt die Position des ersten Vorkommens einer Zeichenfolge innerhalb einer anderen Zeichenfolge von rechts nach links gesehen zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-117">Returns the position of the first occurrence of one string within another, starting from the right side of the string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|<span data-ttu-id="5931f-118">Gibt eine Zeichenfolge zurück, die durch Verknüpfen mehrerer Teilzeichenfolgen aus einem Array erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5931f-118">Returns a string created by joining a number of substrings contained in an array.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|<span data-ttu-id="5931f-119">Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das in Kleinbuchstaben konvertiert wurde.</span><span class="sxs-lookup"><span data-stu-id="5931f-119">Returns a string or character converted to lowercase.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|<span data-ttu-id="5931f-120">Gibt eine Zeichenfolge zurück, die eine angegebene Zeichenanzahl von der linken Seite einer Zeichenfolge enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-120">Returns a string containing a specified number of characters from the left side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|<span data-ttu-id="5931f-121">Gibt eine ganze Zahl zurück, in der die Anzahl der Zeichen in einer Zeichenfolge enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="5931f-121">Returns an integer that contains the number of characters in a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|<span data-ttu-id="5931f-122">Gibt eine links ausgerichtete Zeichenfolge zurück, die die angegebene Zeichenfolge angepasst an die angegebene Länge enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-122">Returns a left-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|<span data-ttu-id="5931f-123">Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-123">Returns a string containing a copy of a specified string with no leading spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|<span data-ttu-id="5931f-124">Gibt eine Zeichenfolge zurück, die eine festgelegte Zeichenanzahl aus einer Zeichenfolge enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-124">Returns a string containing a specified number of characters from a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|<span data-ttu-id="5931f-125">Gibt eine Zeichenfolge zurück, in der eine bestimmte untergeordnete Zeichenfolge so oft wie angegeben durch eine andere Zeichenfolge ersetzt wurde.</span><span class="sxs-lookup"><span data-stu-id="5931f-125">Returns a string in which a specified substring has been replaced with another substring a specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|<span data-ttu-id="5931f-126">Gibt eine Zeichenfolge mit einer bestimmten Anzahl von Zeichen ab dem ersten Zeichen rechts von einer Zeichenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-126">Returns a string containing a specified number of characters from the right side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|<span data-ttu-id="5931f-127">Gibt eine rechts ausgerichtete Zeichenfolge zurück, die die angegebene Zeichenfolge in der vorgegebenen Länge enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-127">Returns a right-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|<span data-ttu-id="5931f-128">Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne nachgestellte Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-128">Returns a string containing a copy of a specified string with no trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|<span data-ttu-id="5931f-129">Gibt eine Zeichenfolge mit der angegebenen Anzahl von Leerzeichen zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-129">Returns a string consisting of the specified number of spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<span data-ttu-id="5931f-130">Gibt ein nullbasiertes, eindimensionales Array zurück, das eine angegebene Anzahl von Teilzeichenfolgen enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-130">Returns a zero-based, one-dimensional array containing a specified number of substrings.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<span data-ttu-id="5931f-131">Gibt abhängig vom Ergebnis eines Zeichenfolgenvergleichs den Wert -1, 0 oder 1 zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-131">Returns -1, 0, or 1, based on the result of a string comparison.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|<span data-ttu-id="5931f-132">Gibt eine wie angegeben konvertierte Zeichenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="5931f-132">Returns a string converted as specified.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<span data-ttu-id="5931f-133">Gibt eine Zeichenfolge oder ein Objekt zurück, in der bzw. dem das angegebene Zeichen so häufig wie angegeben wiederholt wird.</span><span class="sxs-lookup"><span data-stu-id="5931f-133">Returns a string or object consisting of the specified character repeated the specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<span data-ttu-id="5931f-134">Gibt eine Zeichenfolge zurück, in der die Reihenfolge der Zeichen in einer bestimmten Zeichenfolge umgekehrt wurde.</span><span class="sxs-lookup"><span data-stu-id="5931f-134">Returns a string in which the character order of a specified string is reversed.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<span data-ttu-id="5931f-135">Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-135">Returns a string containing a copy of a specified string with no leading or trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|<span data-ttu-id="5931f-136">Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.</span><span class="sxs-lookup"><span data-stu-id="5931f-136">Returns a string or character containing the specified string converted to uppercase.</span></span>|  
   
- Sie können die [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)\-Anweisung verwenden, um festzulegen, ob Zeichenfolgen anhand einer vom Gebietsschema des Systems bestimmten Textsortierreihenfolge ohne Beachtung der Groß\-\/Kleinschreibung \(`Text`\) oder anhand der internen binären Darstellungen der Zeichen \(`Binary`\) verglichen werden.  Die Standardmethode zum Textvergleich ist `Binary`.  
+ <span data-ttu-id="5931f-137">Können Sie die [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) Anweisung, um festzulegen, ob Zeichenfolgen verglichen werden mit einem Groß-/Kleinschreibung den durch das Gebietsschema des Systems bestimmten Textsortierreihenfolge (`Text`) oder durch den internen binären Darstellungen der die Zeichen () `Binary`).</span><span class="sxs-lookup"><span data-stu-id="5931f-137">You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`).</span></span> <span data-ttu-id="5931f-138">Die Standardmethode zum Textvergleich ist `Binary`.</span><span class="sxs-lookup"><span data-stu-id="5931f-138">The default text comparison method is `Binary`.</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird die `UCase`\-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
+## <a name="example"></a><span data-ttu-id="5931f-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-139">Example</span></span>  
+ <span data-ttu-id="5931f-140">In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:</span><span class="sxs-lookup"><span data-stu-id="5931f-140">This example uses the `UCase` function to return an uppercase version of a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
-## Beispiel  
- In diesem Beispiel werden mit der `LTrim`\-Funktion führende Leerzeichen und mit der `RTrim`\-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt.  Mit der `Trim`\-Funktion werden beide Typen von Leerzeichen entfernt.  
+## <a name="example"></a><span data-ttu-id="5931f-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-141">Example</span></span>  
+ <span data-ttu-id="5931f-142">In diesem Beispiel werden mit der `LTrim`-Funktion führende Leerzeichen und mit der `RTrim`-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt.</span><span class="sxs-lookup"><span data-stu-id="5931f-142">This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable.</span></span> <span data-ttu-id="5931f-143">Mit der `Trim`-Funktion werden beide Typen von Leerzeichen entfernt.</span><span class="sxs-lookup"><span data-stu-id="5931f-143">It uses the `Trim` function to strip both types of spaces.</span></span>  
   
  [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
-## Beispiel  
- In diesem Beispiel wird die `Mid`\-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:  
+## <a name="example"></a><span data-ttu-id="5931f-144">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-144">Example</span></span>  
+ <span data-ttu-id="5931f-145">In diesem Beispiel wird die `Mid`-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:</span><span class="sxs-lookup"><span data-stu-id="5931f-145">This example uses the `Mid` function to return a specified number of characters from a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
-## Beispiel  
- In diesem Beispiel wird mit der `Len`\-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.  
+## <a name="example"></a><span data-ttu-id="5931f-146">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-146">Example</span></span>  
+ <span data-ttu-id="5931f-147">In diesem Beispiel wird mit der `Len`-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5931f-147">This example uses `Len` to return the number of characters in a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
-## Beispiel  
- In diesem Beispiel wird die `InStr`\-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.  
+## <a name="example"></a><span data-ttu-id="5931f-148">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-148">Example</span></span>  
+ <span data-ttu-id="5931f-149">In diesem Beispiel wird die `InStr`-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="5931f-149">This example uses the `InStr` function to return the position of the first occurrence of one string within another.</span></span>  
   
  [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
-## Beispiel  
- Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`\-Funktion zur Formatierung von Werten mit `String`\-Formaten und benutzerdefinierten Formaten.  Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen \(`/`\), Trennzeichen für Zeitangaben \(`:`\) und AM\/PM\-Indikatoren \(`t` und `tt`\) richtet sich nach den Gebietsschemaeinstellungen des Codes.  Wenn Datums\- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24\-Stunden\-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
+## <a name="example"></a><span data-ttu-id="5931f-150">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5931f-150">Example</span></span>  
+ <span data-ttu-id="5931f-151">Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten.</span><span class="sxs-lookup"><span data-stu-id="5931f-151">This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats.</span></span> <span data-ttu-id="5931f-152">Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes.</span><span class="sxs-lookup"><span data-stu-id="5931f-152">For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using.</span></span> <span data-ttu-id="5931f-153">Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.</span><span class="sxs-lookup"><span data-stu-id="5931f-153">When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.</span></span>  
   
 > [!NOTE]
->  Für Gebietsschemas, die das 24\-Stunden\-Format verwenden, zeigen die AM\/PM\-Indikatoren \(`t` und `tt`\) nichts an.  
+>  <span data-ttu-id="5931f-154">Für Gebietsschemas, die das 24-Stunden-Format verwenden, zeigen die AM/PM-Indikatoren (`t` und `tt`) nichts an.</span><span class="sxs-lookup"><span data-stu-id="5931f-154">For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.</span></span>  
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## Siehe auch  
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md)   
- [String Manipulation Summary](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a><span data-ttu-id="5931f-155">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5931f-155">See Also</span></span>  
+ [<span data-ttu-id="5931f-156">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="5931f-156">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="5931f-157">Member der Visual Basic-Laufzeitbibliothek</span><span class="sxs-lookup"><span data-stu-id="5931f-157">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="5931f-158">Zeichenfolgenbearbeitung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="5931f-158">String Manipulation Summary</span></span>](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

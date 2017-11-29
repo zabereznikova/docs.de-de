@@ -1,101 +1,82 @@
 ---
 title: Prozeduren in Visual Basic
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
-Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden. Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen sich in einer Prozedur befinden.  
+# <a name="procedures-in-visual-basic"></a><span data-ttu-id="dd1ae-102">Prozeduren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dd1ae-102">Procedures in Visual Basic</span></span>
+<span data-ttu-id="dd1ae-103">Eine *Prozedur* ist ein Block von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]-Anweisungen, die von einer Deklarationsanweisung (`Function`, `Sub`, `Operator`, `Get`, `Set`) und einer entsprechenden `End`-Deklaration umschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-103">A *procedure* is a block of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration.</span></span> <span data-ttu-id="dd1ae-104">Alle ausführbaren Anweisungen in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] müssen sich in einer Prozedur befinden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-104">All executable statements in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must be within some procedure.</span></span>  
   
-## <a name="calling-a-procedure"></a>Aufrufen einer Prozedur  
- Sie rufen eine Prozedur an einer anderen Stelle im Code auf. Dies wird als *Prozeduraufruf* bezeichnet. Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet. Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.  
+## <a name="calling-a-procedure"></a><span data-ttu-id="dd1ae-105">Aufrufen einer Prozedur</span><span class="sxs-lookup"><span data-stu-id="dd1ae-105">Calling a Procedure</span></span>  
+ <span data-ttu-id="dd1ae-106">Sie rufen eine Prozedur an einer anderen Stelle im Code auf.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-106">You invoke a procedure from some other place in the code.</span></span> <span data-ttu-id="dd1ae-107">Dies wird als *Prozeduraufruf* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-107">This is known as a *procedure call*.</span></span> <span data-ttu-id="dd1ae-108">Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-108">When the procedure is finished running, it returns control to the code that invoked it, which is known as the *calling code*.</span></span> <span data-ttu-id="dd1ae-109">Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-109">The calling code is a statement, or an expression within a statement, that specifies the procedure by name and transfers control to it.</span></span>  
   
-## <a name="returning-from-a-procedure"></a>Nach dem Abschluss der Prozedur  
- Wenn die Prozedur abgeschlossen wurde, übergibt sie die Kontrolle wieder an den aufrufenden Code. Dazu kann sie eine [Return-Anweisung](../../../../visual-basic/language-reference/statements/return-statement.md), die entsprechende [Exit-Anweisung](../../../../visual-basic/language-reference/statements/exit-statement.md) für die Prozedur oder die [End-\<Schlüsselwort>-Anweisung](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) der Prozedur verwenden. Dann wird die Kontrolle wieder an den aufrufenden Code im Anschluss an die Stelle des Prozeduraufrufs übergeben.  
+## <a name="returning-from-a-procedure"></a><span data-ttu-id="dd1ae-110">Nach dem Abschluss der Prozedur</span><span class="sxs-lookup"><span data-stu-id="dd1ae-110">Returning from a Procedure</span></span>  
+ <span data-ttu-id="dd1ae-111">Wenn die Prozedur abgeschlossen wurde, übergibt sie die Kontrolle wieder an den aufrufenden Code.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-111">A procedure returns control to the calling code when it has finished running.</span></span> <span data-ttu-id="dd1ae-112">Dazu kann sie eine [Return-Anweisung](../../../../visual-basic/language-reference/statements/return-statement.md), die entsprechende [Exit-Anweisung](../../../../visual-basic/language-reference/statements/exit-statement.md) für die Prozedur oder die [End-\<Schlüsselwort>-Anweisung](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) der Prozedur verwenden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-112">To do this, it can use a [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md), the appropriate [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) statement for the procedure, or the procedure's [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) statement.</span></span> <span data-ttu-id="dd1ae-113">Dann wird die Kontrolle wieder an den aufrufenden Code im Anschluss an die Stelle des Prozeduraufrufs übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-113">Control then passes to the calling code following the point of the procedure call.</span></span>  
   
--   Mit einer `Return`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Return`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Return`-Anweisungen in derselben Prozedur befinden.  
+-   <span data-ttu-id="dd1ae-114">Mit einer `Return`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-114">With a `Return` statement, control returns immediately to the calling code.</span></span> <span data-ttu-id="dd1ae-115">Anweisungen, die hinter der `Return`-Anweisung stehen, werden nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-115">Statements following the `Return` statement do not run.</span></span> <span data-ttu-id="dd1ae-116">Es können sich mehrere `Return`-Anweisungen in derselben Prozedur befinden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-116">You can have more than one `Return` statement in the same procedure.</span></span>  
   
--   Mit einer `Exit Sub`- oder `Exit Function`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Exit`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Exit`-Anweisungen in derselben Prozedur befinden. Außerdem können sich sowohl `Return`- als auch `Exit`-Anweisungen in derselben Prozedur befinden.  
+-   <span data-ttu-id="dd1ae-117">Mit einer `Exit Sub`- oder `Exit Function`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-117">With an `Exit Sub` or `Exit Function` statement, control returns immediately to the calling code.</span></span> <span data-ttu-id="dd1ae-118">Anweisungen, die hinter der `Exit`-Anweisung stehen, werden nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-118">Statements following the `Exit` statement do not run.</span></span> <span data-ttu-id="dd1ae-119">Es können sich mehrere `Exit`-Anweisungen in derselben Prozedur befinden. Außerdem können sich sowohl `Return`- als auch `Exit`-Anweisungen in derselben Prozedur befinden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-119">You can have more than one `Exit` statement in the same procedure, and you can mix `Return` and `Exit` statements in the same procedure.</span></span>  
   
--   Wenn eine Prozedur weder eine `Return`- noch eine `Exit`-Anweisung aufweist, schließt sie mit einer `End Sub`- oder `End Function`-, `End Get`- oder `End Set`-Anweisung hinter der letzten Anweisung des Texts der Prozedur ab. Die `End`-Anweisung übergibt die Kontrolle sofort wieder an den aufrufenden Code. Es darf sich nur eine `End`-Anweisung in einer Prozedur befinden.  
+-   <span data-ttu-id="dd1ae-120">Wenn eine Prozedur weder eine `Return`- noch eine `Exit`-Anweisung aufweist, schließt sie mit einer `End Sub`- oder `End Function`-, `End Get`- oder `End Set`-Anweisung hinter der letzten Anweisung des Texts der Prozedur ab.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-120">If a procedure has no `Return` or `Exit` statements, it concludes with an `End Sub` or `End Function`, `End Get`, or `End Set` statement following the last statement of the procedure body.</span></span> <span data-ttu-id="dd1ae-121">Die `End`-Anweisung übergibt die Kontrolle sofort wieder an den aufrufenden Code.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-121">The `End` statement returns control immediately to the calling code.</span></span> <span data-ttu-id="dd1ae-122">Es darf sich nur eine `End`-Anweisung in einer Prozedur befinden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-122">You can have only one `End` statement in a procedure.</span></span>  
   
-## <a name="parameters-and-arguments"></a>Parameter und Argumente  
- In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
+## <a name="parameters-and-arguments"></a><span data-ttu-id="dd1ae-123">Parameter und Argumente</span><span class="sxs-lookup"><span data-stu-id="dd1ae-123">Parameters and Arguments</span></span>  
+ <span data-ttu-id="dd1ae-124">In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-124">In most cases, a procedure needs to operate on different data each time you call it.</span></span> <span data-ttu-id="dd1ae-125">Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-125">You can pass this information to the procedure as part of the procedure call.</span></span> <span data-ttu-id="dd1ae-126">Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-126">The procedure defines zero or more *parameters*, each of which represents a value it expects you to pass to it.</span></span> <span data-ttu-id="dd1ae-127">Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-127">Corresponding to each parameter in the procedure definition is an *argument* in the procedure call.</span></span> <span data-ttu-id="dd1ae-128">Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-128">An argument represents the value you pass to the corresponding parameter in a given procedure call.</span></span>  
   
-## <a name="types-of-procedures"></a>Prozedurtypen  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] verwendet mehrere Prozedurtypen:  
+## <a name="types-of-procedures"></a><span data-ttu-id="dd1ae-129">Prozedurtypen</span><span class="sxs-lookup"><span data-stu-id="dd1ae-129">Types of Procedures</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="dd1ae-130"> verwendet mehrere Prozedurtypen:</span><span class="sxs-lookup"><span data-stu-id="dd1ae-130"> uses several types of procedures:</span></span>  
   
--   [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
+-   <span data-ttu-id="dd1ae-131">[Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-131">[Sub Procedures](./sub-procedures.md) perform actions but do not return a value to the calling code.</span></span>  
   
--   Ereignisbehandlungsprozeduren sind `Sub`-Prozeduren, die als Reaktion auf ein Ereignis ausgeführt werden, das durch eine Benutzeraktion oder durch Auftreten in einem Programm ausgelöst wurde.  
+-   <span data-ttu-id="dd1ae-132">Ereignisbehandlungsprozeduren sind `Sub`-Prozeduren, die als Reaktion auf ein Ereignis ausgeführt werden, das durch eine Benutzeraktion oder durch Auftreten in einem Programm ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-132">Event-handling procedures are `Sub` procedures that execute in response to an event raised by user action or by an occurrence in a program.</span></span>  
   
--   [Function-Prozeduren](./function-procedures.md) geben einen Wert an den aufrufenden Code zurück. Bevor sie einen Wert zurückgeben, können sie noch weitere Aktionen ausführen.
+-   <span data-ttu-id="dd1ae-133">[Function-Prozeduren](./function-procedures.md) geben einen Wert an den aufrufenden Code zurück.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-133">[Function Procedures](./function-procedures.md) return a value to the calling code.</span></span> <span data-ttu-id="dd1ae-134">Bevor sie einen Wert zurückgeben, können sie noch weitere Aktionen ausführen.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-134">They can perform other actions before returning.</span></span>
 
-    Einige in C# geschriebene Funktionen geben einen *Verweisrückgabewert* zurück. Funktionsaufrufer modifizieren den Rückgabewert. Diese Modifizierung wird durch den Zustand des aufgerufenen Objekts widergespiegelt. Ab Visual Basic 2017 kann Code von Visual Basic Verweisrückgabewerte verarbeiten, auch wenn er einen Wert nicht nach Verweis zurückgeben kann. Weitere Informationen finden Sie unter [Verweisrückgabewerte](ref-return-values.md).
+    <span data-ttu-id="dd1ae-135">Einige in C# geschriebene Funktionen geben einen *Verweisrückgabewert* zurück.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-135">Some functions written in C# return a *reference return value*.</span></span> <span data-ttu-id="dd1ae-136">Funktionsaufrufer modifizieren den Rückgabewert. Diese Modifizierung wird durch den Zustand des aufgerufenen Objekts widergespiegelt.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-136">Function callers can modify the return value, and this modification is reflected in the state of the called object.</span></span> <span data-ttu-id="dd1ae-137">Ab Visual Basic 2017 kann Code von Visual Basic Verweisrückgabewerte verarbeiten, auch wenn er einen Wert nicht nach Verweis zurückgeben kann.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-137">Starting with Visual Basic 2017, Visual Basic code can consume reference return values, although it cannot return a value by reference.</span></span> <span data-ttu-id="dd1ae-138">Weitere Informationen finden Sie unter [Verweisrückgabewerte](ref-return-values.md).</span><span class="sxs-lookup"><span data-stu-id="dd1ae-138">For more information, see [Reference return values](ref-return-values.md).</span></span>
   
--   [Eigenschaftenprozeduren](./property-procedures.md) geben Werte von Eigenschaften auf Objekten und Modulen zurück und weisen diese zu.  
+-   <span data-ttu-id="dd1ae-139">[Eigenschaftenprozeduren](./property-procedures.md) geben Werte von Eigenschaften auf Objekten und Modulen zurück und weisen diese zu.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-139">[Property Procedures](./property-procedures.md) return and assign values of properties on objects or modules.</span></span>  
   
--   [Operatorprozeduren](./operator-procedures.md) definieren das Verhalten von Standardoperatoren, wenn mindestens einer der beiden Operanden eine neu definierte Klasse oder Struktur ist.  
+-   <span data-ttu-id="dd1ae-140">[Operatorprozeduren](./operator-procedures.md) definieren das Verhalten von Standardoperatoren, wenn mindestens einer der beiden Operanden eine neu definierte Klasse oder Struktur ist.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-140">[Operator Procedures](./operator-procedures.md) define the behavior of a standard operator when one or both of the operands is a newly-defined class or structure.</span></span>  
   
--   [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definieren zusätzlich zu ihren normalen Parametern mindestens einen *Typparameter*, damit der aufrufende Code bei jedem Aufruf spezifische Datentypen übergeben kann.  
+-   <span data-ttu-id="dd1ae-141">[Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definieren zusätzlich zu ihren normalen Parametern mindestens einen *Typparameter*, damit der aufrufende Code bei jedem Aufruf spezifische Datentypen übergeben kann.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-141">[Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) define one or more *type parameters* in addition to their normal parameters, so the calling code can pass specific data types each time it makes a call.</span></span>  
   
-## <a name="procedures-and-structured-code"></a>Prozeduren und strukturierter Code  
- Jede Zeile ausführbaren Codes in Ihrer Anwendung muss sich in einer Prozedur befinden, wie z.B. `Main`, `calculate` oder `Button1_Click`. Wenn Sie große Prozeduren in kleinere austeilen, macht das Ihre Anwendung lesbarer.  
+## <a name="procedures-and-structured-code"></a><span data-ttu-id="dd1ae-142">Prozeduren und strukturierter Code</span><span class="sxs-lookup"><span data-stu-id="dd1ae-142">Procedures and Structured Code</span></span>  
+ <span data-ttu-id="dd1ae-143">Jede Zeile ausführbaren Codes in Ihrer Anwendung muss sich in einer Prozedur befinden, wie z.B. `Main`, `calculate` oder `Button1_Click`.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-143">Every line of executable code in your application must be inside some procedure, such as `Main`, `calculate`, or `Button1_Click`.</span></span> <span data-ttu-id="dd1ae-144">Wenn Sie große Prozeduren in kleinere austeilen, macht das Ihre Anwendung lesbarer.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-144">If you subdivide large procedures into smaller ones, your application is more readable.</span></span>  
   
- Prozeduren sind beim Ausführen von wiederholten oder freigegebenen Aufgaben nützlich. Solche Aufgaben können z.B. häufig verwendete Berechnungen, das Bearbeiten von Text und Steuerelementen und Datenbankvorgänge sein. Sie können eine Prozedur von vielen verschiedenen Stellen in Ihrem Code aufrufen, damit Sie Prozeduren als Bausteine für Ihre Anwendung verwenden können.  
+ <span data-ttu-id="dd1ae-145">Prozeduren sind beim Ausführen von wiederholten oder freigegebenen Aufgaben nützlich. Solche Aufgaben können z.B. häufig verwendete Berechnungen, das Bearbeiten von Text und Steuerelementen und Datenbankvorgänge sein.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-145">Procedures are useful for performing repeated or shared tasks, such as frequently used calculations, text and control manipulation, and database operations.</span></span> <span data-ttu-id="dd1ae-146">Sie können eine Prozedur von vielen verschiedenen Stellen in Ihrem Code aufrufen, damit Sie Prozeduren als Bausteine für Ihre Anwendung verwenden können.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-146">You can call a procedure from many different places in your code, so you can use procedures as building blocks for your application.</span></span>  
   
- Wenn Sie Ihren Code mit Prozeduren strukturieren, bringt das folgende Vorteile:  
+ <span data-ttu-id="dd1ae-147">Wenn Sie Ihren Code mit Prozeduren strukturieren, bringt das folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="dd1ae-147">Structuring your code with procedures gives you the following benefits:</span></span>  
   
--   Mit Prozeduren können Sie Ihre Programme in diskrete logische Einheiten aufteilen. Außerdem ist es leichter, einzelne Einheiten zu debuggen als ein Programm ohne Prozeduren zu debuggen.  
+-   <span data-ttu-id="dd1ae-148">Mit Prozeduren können Sie Ihre Programme in diskrete logische Einheiten aufteilen.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-148">Procedures allow you to break your programs into discrete logical units.</span></span> <span data-ttu-id="dd1ae-149">Außerdem ist es leichter, einzelne Einheiten zu debuggen als ein Programm ohne Prozeduren zu debuggen.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-149">You can debug separate units more easily than you can debug an entire program without procedures.</span></span>  
   
--   Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
+-   <span data-ttu-id="dd1ae-150">Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-150">After you develop procedures for use in one program, you can use them in other programs, often with little or no modification.</span></span> <span data-ttu-id="dd1ae-151">So können Sie Codeduplikate vermeiden.</span><span class="sxs-lookup"><span data-stu-id="dd1ae-151">This helps you avoid code duplication.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen einer Prozedur](./how-to-create-a-procedure.md)   
- [Sub-Prozeduren](./sub-procedures.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Eigenschaftenprozeduren](./property-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)   
- [Rekursive Prozeduren](./recursive-procedures.md)   
- [Prozedurüberladung](./procedure-overloading.md)   
- [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="dd1ae-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dd1ae-152">See Also</span></span>  
+ [<span data-ttu-id="dd1ae-153">Gewusst wie: Erstellen einer Prozedur</span><span class="sxs-lookup"><span data-stu-id="dd1ae-153">How to: Create a Procedure</span></span>](./how-to-create-a-procedure.md)  
+ [<span data-ttu-id="dd1ae-154">Sub-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-154">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="dd1ae-155">Function-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-155">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="dd1ae-156">Eigenschaftenprozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-156">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="dd1ae-157">Operatorprozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-157">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="dd1ae-158">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-158">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="dd1ae-159">Rekursive Prozeduren</span><span class="sxs-lookup"><span data-stu-id="dd1ae-159">Recursive Procedures</span></span>](./recursive-procedures.md)  
+ [<span data-ttu-id="dd1ae-160">Prozedurüberladung</span><span class="sxs-lookup"><span data-stu-id="dd1ae-160">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="dd1ae-161">Generische Prozeduren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dd1ae-161">Generic Procedures in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
+ [<span data-ttu-id="dd1ae-162">Objekte und Klassen</span><span class="sxs-lookup"><span data-stu-id="dd1ae-162">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

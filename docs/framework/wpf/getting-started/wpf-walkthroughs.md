@@ -1,60 +1,63 @@
 ---
-title: "Exemplarische Vorgehensweisen f&#252;r WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Exemplarische Vorgehensweisen [WPF]"
-  - "Exemplarische Vorgehensweisen für WPF"
+title: "Exemplarische Vorgehensweisen für WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [WPF]
+- WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Exemplarische Vorgehensweisen f&#252;r WPF
-Exemplarische Vorgehensweisen sind Schritt\-für\-Schritt\-Anweisungen für gängige Szenarios.  Sie eignen sich ideal zum Einstieg in ein bestimmtes Produkt oder einen Funktionsbereich.  
+# <a name="wpf-walkthroughs"></a><span data-ttu-id="9a469-102">Exemplarische Vorgehensweisen für WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-102">WPF Walkthroughs</span></span>
+<span data-ttu-id="9a469-103">Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien.</span><span class="sxs-lookup"><span data-stu-id="9a469-103">Walkthroughs give step-by-step instructions for common scenarios.</span></span> <span data-ttu-id="9a469-104">Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.</span><span class="sxs-lookup"><span data-stu-id="9a469-104">This makes them a good place to start learning about the product or a particular feature area.</span></span>  
   
- Dieser Abschnitt enthält Links zu exemplarischen Vorgehensweisen für [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+ <span data-ttu-id="9a469-105">Dieses Thema enthält Links zu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Exemplarische Vorgehensweisen.</span><span class="sxs-lookup"><span data-stu-id="9a469-105">This topic contains links to [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] walkthroughs.</span></span>  
   
-## Exemplarische Vorgehensweisen für den WPF\-Designer  
+## <a name="wpf-designer-walkthroughs"></a><span data-ttu-id="9a469-106">Exemplarische Vorgehensweisen für WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="9a469-106">WPF Designer Walkthroughs</span></span>  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Exemplarische Vorgehensweise: Erstellen einer einfachen WPF\-Anwendung mit dem WPF\-Designer](http://msdn.microsoft.com/de-de/2d412231-dbdf-4e69-b060-4f2b246c2027)|Veranschaulicht, wie eine einfache WPF\-Anwendung mit dem [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] erstellt wird.|  
-|[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](http://msdn.microsoft.com/de-de/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Veranschaulicht das Erstellen eines dynamischen Layouts mit einem <xref:System.Windows.Controls.Grid>\-Bereichssteuerelement.|  
-|[Exemplarische Vorgehensweise: Erstellen einer größenveränderbaren Anwendung mit dem WPF\-Designer](http://msdn.microsoft.com/de-de/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Veranschaulicht die Erstellung von Fensterlayouts, deren Größe zur Laufzeit durch den Benutzer in der Größe verändert werden kann.|  
-|[Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF\-Designer](http://msdn.microsoft.com/de-de/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Veranschaulicht die Verwendung des [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] zum Erstellen von Datenbindungen, die Daten mit einem Steuerelement verbinden.|  
-|[Exemplarische Vorgehensweise: Binden von Daten im Designer mit einer DesignInstance](http://msdn.microsoft.com/de-de/a4d3747a-bd43-42bc-b66d-477856a6769c)|Veranschaulicht die Verwendung des [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] zum Erstellen von Datenbindungen zur Entwurfszeit für einen Datenkontext, der zur Laufzeit zugewiesen wird.|  
+|<span data-ttu-id="9a469-107">Titel</span><span class="sxs-lookup"><span data-stu-id="9a469-107">Title</span></span>|<span data-ttu-id="9a469-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9a469-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="9a469-109">Exemplarische Vorgehensweise: Erstellen einer einfachen WPF-Anwendung mit dem WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="9a469-109">Walkthrough: Building a Simple WPF Application with the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|<span data-ttu-id="9a469-110">Veranschaulicht das Erstellen einer einfachen WPF-Anwendung mit der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a469-110">Demonstrates how to build a simple WPF application with the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>|  
+|[<span data-ttu-id="9a469-111">Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts</span><span class="sxs-lookup"><span data-stu-id="9a469-111">Walkthrough: Constructing a Dynamic Layout</span></span>](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|<span data-ttu-id="9a469-112">Veranschaulicht das Erstellen von eines dynamischen Layouts mit einem <xref:System.Windows.Controls.Grid> panel-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9a469-112">Demonstrates creating a dynamic layout by using a <xref:System.Windows.Controls.Grid> panel control.</span></span>|  
+|[<span data-ttu-id="9a469-113">Exemplarische Vorgehensweise: Erstellen einer veränderbaren Anwendung mit dem WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="9a469-113">Walkthrough: Creating a Resizable Application by Using the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|<span data-ttu-id="9a469-114">Veranschaulicht, wie Fensterlayouts zu erstellen, die zur Laufzeit vom Benutzer in der Größe veränderbar sind.</span><span class="sxs-lookup"><span data-stu-id="9a469-114">Demonstrates how to create window layouts that are resizable by the user at run time.</span></span>|  
+|[<span data-ttu-id="9a469-115">Exemplarische Vorgehensweise: Erstellen einer Datenbindung mit dem WPF-Designer</span><span class="sxs-lookup"><span data-stu-id="9a469-115">Walkthrough: Creating a Data Binding by Using the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|<span data-ttu-id="9a469-116">Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen erstellen, die Daten an ein Steuerelement zu verbinden.</span><span class="sxs-lookup"><span data-stu-id="9a469-116">Demonstrates how to use the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] to create data bindings that connect data to a control.</span></span>|  
+|[<span data-ttu-id="9a469-117">Exemplarische Vorgehensweise: Verwenden einer DesignInstance zum Binden an Daten im Designer</span><span class="sxs-lookup"><span data-stu-id="9a469-117">Walkthrough: Using a DesignInstance to Bind to Data in the Designer</span></span>](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|<span data-ttu-id="9a469-118">Veranschaulicht, wie die [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] datenbindungen zur Entwurfszeit für einen Datenkontext zu erstellen, die zur Laufzeit zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="9a469-118">Demonstrates how to use the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] to create data bindings at design time for a data context that is assigned at run time.</span></span>|  
   
-## Exemplarische Vorgehensweisen für WPF  
+## <a name="wpf-walkthroughs"></a><span data-ttu-id="9a469-119">Exemplarische Vorgehensweisen für WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-119">WPF Walkthroughs</span></span>  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Exemplarische Vorgehensweise: Erste Schritte mit WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Veranschaulicht das Erstellen einer WPF\-Anwendung mithilfe vieler der allgemeinen Funktionen von WPF, einschließlich Steuerelemente, Layout und Datenbindung.|  
-|[Erstellen einer Schaltfläche mit XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Veranschaulicht, wie eine animierte Schaltfläche erstellt wird.|  
-|[Erstellen einer Schaltfläche mit Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Veranschaulicht den Prozess zum Erstellen einer benutzerdefinierten Schaltfläche mit Microsoft Expression Blend.|  
-|[Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server\-Datenbank in einem DataGrid\-Steuerelement](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Veranschaulicht wie Daten aus einer SQL Server\-Datenbank abgerufen und in einem <xref:System.Windows.Controls.DataGrid>\-Steuerelement angezeigt werden.|  
+|<span data-ttu-id="9a469-120">Titel</span><span class="sxs-lookup"><span data-stu-id="9a469-120">Title</span></span>|<span data-ttu-id="9a469-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9a469-121">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="9a469-122">Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="9a469-122">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|<span data-ttu-id="9a469-123">Veranschaulicht das Erstellen einer WPF-Anwendung, die viele allgemeine Funktionen von WPF einschließlich Steuerelemente, Layout und die Datenbindung verwenden.</span><span class="sxs-lookup"><span data-stu-id="9a469-123">Demonstrates creating a WPF application using many of the common features of WPF including controls, layout and data binding.</span></span>|  
+|[<span data-ttu-id="9a469-124">Erstellen einer Schaltfläche mit XAML</span><span class="sxs-lookup"><span data-stu-id="9a469-124">Create a Button by Using XAML</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|<span data-ttu-id="9a469-125">Veranschaulicht, wie eine animierte Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="9a469-125">Demonstrates how to create an animated button.</span></span>|  
+|[<span data-ttu-id="9a469-126">Erstellen einer Schaltfläche mit Microsoft Expression Blend</span><span class="sxs-lookup"><span data-stu-id="9a469-126">Create a Button by Using Microsoft Expression Blend</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|<span data-ttu-id="9a469-127">Veranschaulicht, wie eine benutzerdefinierte Schaltfläche mit Microsoft Expression Blend erstellen.</span><span class="sxs-lookup"><span data-stu-id="9a469-127">Demonstrates the process of creating a customized button by using Microsoft Expression Blend.</span></span>|  
+|[<span data-ttu-id="9a469-128">Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server-Datenbank in einem DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9a469-128">Walkthrough: Display Data from a SQL Server Database in a DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|<span data-ttu-id="9a469-129">Veranschaulicht das Abrufen von Daten aus einer SQL Server-Datenbank und die Daten angezeigt werden, in einem <xref:System.Windows.Controls.DataGrid> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="9a469-129">Demonstrates how to retrieve data from a SQL Server database and display that data in a <xref:System.Windows.Controls.DataGrid> control.</span></span>|  
   
-## Migration und Interoperabilität in WPF  
+## <a name="migration-and-interoperability-in-wpf"></a><span data-ttu-id="9a469-130">Migration und Interoperabilität in WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-130">Migration and Interoperability in WPF</span></span>  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Exemplarische Vorgehensweise: Hosten eines Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht, wie ein Windows Forms\-<xref:System.Windows.Forms.MaskedTextBox?displayProperty=fullName>\-Steuerelement in einer WPF\-Anwendung gehostet wird.|  
-|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms\-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht, wie ein zusammengesetztes [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]\-Dateneingabesteuerelement in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung gehostet wird.|  
-|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF\-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Veranschaulicht, wie ein zusammengesetztes WPF\-Dateneingabesteuerelement in einer Windows Forms\-Anwendung gehostet wird.|  
-|[Exemplarische Vorgehensweise: Anordnen von Windows Forms\-Steuerelementen in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Veranschaulicht die Verwendung von WPF\-Layoutfunktionen, um Windows Forms\-Steuerelemente in einer Hybridanwendung anzuordnen.|  
-|[Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veranschaulicht die Verwendung der Datenbindung in Hybridanwendungen, die sowohl Windows Forms\-Steuerelemente als auch WPF\-Steuerelemente enthalten.|  
+|<span data-ttu-id="9a469-131">Titel</span><span class="sxs-lookup"><span data-stu-id="9a469-131">Title</span></span>|<span data-ttu-id="9a469-132">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9a469-132">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="9a469-133">Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-133">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|<span data-ttu-id="9a469-134">Veranschaulicht das Hosten eines Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> -Steuerelement in einer WPF-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="9a469-134">Demonstrates how to host a Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control in a WPF application.</span></span>|  
+|[<span data-ttu-id="9a469-135">Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-135">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|<span data-ttu-id="9a469-136">Veranschaulicht das Hosten einer [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] -Dateneingabe zusammengesetztes Steuerelement in ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.</span><span class="sxs-lookup"><span data-stu-id="9a469-136">Demonstrates how to host a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] data-entry composite control in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>|  
+|[<span data-ttu-id="9a469-137">Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9a469-137">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|<span data-ttu-id="9a469-138">Veranschaulicht, wie ein WPF-Dateneingabe zusammengesetztes Steuerelement in Windows Forms-Anwendung hosten.</span><span class="sxs-lookup"><span data-stu-id="9a469-138">Demonstrates how to host a WPF data-entry composite control in a Windows Forms application.</span></span>|  
+|[<span data-ttu-id="9a469-139">Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF</span><span class="sxs-lookup"><span data-stu-id="9a469-139">Walkthrough: Arranging Windows Forms Controls in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|<span data-ttu-id="9a469-140">Veranschaulicht, wie WPF-Layout-Funktionen zu verwenden, um Windows Forms-Steuerelemente in einer hybridanwendung anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="9a469-140">Demonstrates how to use WPF layout features to arrange Windows Forms controls in a hybrid application.</span></span>|  
+|[<span data-ttu-id="9a469-141">Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen</span><span class="sxs-lookup"><span data-stu-id="9a469-141">Walkthrough: Binding to Data in Hybrid Applications</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|<span data-ttu-id="9a469-142">Veranschaulicht, wie die Datenbindung in hybridanwendungen, die Windows Forms und WPF-Steuerelemente enthalten.</span><span class="sxs-lookup"><span data-stu-id="9a469-142">Demonstrates how to use data binding in hybrid applications that include both Windows Forms and WPF controls.</span></span>|  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a><span data-ttu-id="9a469-143">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9a469-143">Related Sections</span></span>  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Visual Studio Walkthroughs](http://msdn.microsoft.com/de-de/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Hier finden Sie eine verwandte Liste mit exemplarischen Vorgehensweisen für alle Programmierbereiche in Visual Studio.|
+|<span data-ttu-id="9a469-144">Titel</span><span class="sxs-lookup"><span data-stu-id="9a469-144">Title</span></span>|<span data-ttu-id="9a469-145">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9a469-145">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="9a469-146">Exemplarische Vorgehensweisen für Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9a469-146">Visual Studio Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|<span data-ttu-id="9a469-147">Erhalten eine verknüpfte Liste von exemplarischen Vorgehensweisen für alle Bereiche der Programmierung in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9a469-147">Gives a related list of walkthroughs for all areas of programming in Visual Studio.</span></span>|

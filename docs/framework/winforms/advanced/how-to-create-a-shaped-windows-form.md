@@ -1,54 +1,59 @@
 ---
-title: "Gewusst wie: Erstellen von geformten Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Formulare, Ändern der Form von"
-  - "Formulare, Kreisförmig"
-  - "Formulare, Benutzerdefinierte Formen"
-  - "Formulare, Nicht rechteckig"
-  - "Formulare, Rund"
-  - "Geformte Formulare"
-  - "Windows Forms, Kreisförmig"
-  - "Windows Forms, Benutzerdefinierte Formen"
-  - "Windows Forms, Nicht rechteckige Form"
-  - "Windows Forms, Rund"
-  - "Windows Forms, Geformt"
+title: "Gewusst wie: Erstellen von geformten Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- forms [Windows Forms], rounded
+- Windows Forms, custom shapes
+- Windows Forms, shaped
+- shaped forms
+- forms [Windows Forms], changing the shape of
+- forms [Windows Forms], circular
+- forms [Windows Forms], nonrectangular
+- Windows Forms, nonrectangular shape
+- Windows Forms, rounded
+- Windows Forms, circular
+- forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 981256c2447a53aef8e1ea676db38ce693d1337e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von geformten Windows&#160;Forms
-Dieses Beispiel verleiht einem Formular eine elliptische Form, die automatisch an die Größe des Formulars angepasst wird.  
+# <a name="how-to-create-a-shaped-windows-form"></a><span data-ttu-id="d6a2f-102">Gewusst wie: Erstellen von geformten Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d6a2f-102">How to: Create a Shaped Windows Form</span></span>
+<span data-ttu-id="d6a2f-103">In diesem Beispiel wird ein Formular bietet eine elliptische Form, die mit dem Formular ändert die Größe.</span><span class="sxs-lookup"><span data-stu-id="d6a2f-103">This example gives a form an elliptical shape that resizes with the form.</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="d6a2f-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d6a2f-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
  [!code-csharp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
  [!code-vb[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a><span data-ttu-id="d6a2f-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d6a2f-105">Compiling the Code</span></span>  
+ <span data-ttu-id="d6a2f-106">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="d6a2f-106">This example requires:</span></span>  
   
--   Verweise auf den <xref:System.Windows.Forms>\-Namespace und den <xref:System.Drawing>\-Namespace.  
+-   <span data-ttu-id="d6a2f-107">Verweise auf die Namespaces <xref:System.Windows.Forms> und <xref:System.Drawing>.</span><span class="sxs-lookup"><span data-stu-id="d6a2f-107">References to the <xref:System.Windows.Forms> and <xref:System.Drawing> namespaces.</span></span>  
   
- Dieses Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode, um die Form des Formulars zu ändern.  Um diesen Code zu verwenden, kopieren Sie die Methodendeklaration sowie den Zeichencode innerhalb der Methode.  
+ <span data-ttu-id="d6a2f-108">In diesem Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Form des Formulars zu ändern.</span><span class="sxs-lookup"><span data-stu-id="d6a2f-108">This example overrides the <xref:System.Windows.Forms.Control.OnPaint%2A> method to change the shape of the form.</span></span> <span data-ttu-id="d6a2f-109">Um diesen Code verwenden möchten, kopieren Sie die Methodendeklaration sowie den Zeichencode innerhalb der Methode.</span><span class="sxs-lookup"><span data-stu-id="d6a2f-109">To use this code, copy the method declaration as well as the drawing code inside the method.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- <xref:System.Drawing.Region>   
- <xref:System.Drawing>   
- <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>   
- <xref:System.Windows.Forms.Control.Region%2A>   
- [Erste Schritte mit der Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+## <a name="see-also"></a><span data-ttu-id="d6a2f-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6a2f-110">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ <xref:System.Drawing.Region>  
+ <xref:System.Drawing>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>  
+ <xref:System.Windows.Forms.Control.Region%2A>  
+ [<span data-ttu-id="d6a2f-111">Erste Schritte mit Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="d6a2f-111">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)

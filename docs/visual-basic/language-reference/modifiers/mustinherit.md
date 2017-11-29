@@ -1,61 +1,60 @@
 ---
-title: "MustInherit (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "MustInherit"
-  - "vb.MustInherit"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], abstract"
-  - "MustInherit classes, MustInherit keyword"
-  - "abstract classes, MustInherit class"
-  - "MustInherit keyword"
+title: MustInherit (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- MustInherit
+- vb.MustInherit
+helpviewer_keywords:
+- classes [Visual Basic], abstract
+- MustInherit classes [Visual Basic], MustInherit keyword
+- abstract classes [Visual Basic], MustInherit class
+- MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# MustInherit (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Legt fest, dass eine Klasse lediglich als Basisklasse verwendet werden kann und Objekte dieser Klasse nicht direkt erstellt werden können.  
+# <a name="mustinherit-visual-basic"></a><span data-ttu-id="b6efa-102">MustInherit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6efa-102">MustInherit (Visual Basic)</span></span>
+<span data-ttu-id="b6efa-103">Gibt an, dass eine Klasse nur als Basisklasse verwendet werden kann und Sie ein Objekt direkt daraus erstellen können.</span><span class="sxs-lookup"><span data-stu-id="b6efa-103">Specifies that a class can be used only as a base class and that you cannot create an object directly from it.</span></span>  
   
-## Hinweise  
- Eine *Basisklasse* \(auch *abstrakte Klasse* genannt\) dient dem Zweck, eine Funktionalität zu definieren, die allen Klassen gemeinsam ist, die von dieser Klasse abgeleitet werden.  In den abgeleiteten Klassen müssen dadurch die gemeinsamen Elemente nicht neu definiert werden.  Manchmal ist diese gemeinsame Funktionalität nicht umfassend genug, um ein brauchbares Objekt zu bilden. Jede abgeleitete Klasse definiert dann die fehlende Funktionalität.  In einem solchen Fall soll der verwendete Code Objekte nur aus den abgeleiteten Klassen erstellen.  Wenden Sie `MustInherit` auf die Basisklasse an, um dies zu durchzusetzen.  
+## <a name="remarks"></a><span data-ttu-id="b6efa-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b6efa-104">Remarks</span></span>  
+ <span data-ttu-id="b6efa-105">Der Zweck einer *Basisklasse* (auch bekannt als ein *abstrakte Klasse*) Funktionalität zu definieren, die für alle Klassen, die davon abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="b6efa-105">The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it.</span></span> <span data-ttu-id="b6efa-106">Dies erspart die abgeleiteten Klassen von die gemeinsamen Elemente neu definieren.</span><span class="sxs-lookup"><span data-stu-id="b6efa-106">This saves the derived classes from having to redefine the common elements.</span></span> <span data-ttu-id="b6efa-107">In einigen Fällen diesen häufig verwendeten Funktionen ist nicht umfassend genug, um ein Objekt nutzbar zu machen, und jede abgeleitete Klasse definiert die fehlende Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="b6efa-107">In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality.</span></span> <span data-ttu-id="b6efa-108">Sie möchten in einem solchen Fall ist den verwendeten Code zum Erstellen von Objekten nur von den abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="b6efa-108">In such a case, you want the consuming code to create objects only from the derived classes.</span></span> <span data-ttu-id="b6efa-109">Verwenden Sie `MustInherit` in der Basisklasse, um dies zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="b6efa-109">You use `MustInherit` on the base class to enforce this.</span></span>  
   
- Eine andere Verwendungsmöglichkeit für eine `MustInherit`\-Klasse besteht darin, eine Variable auf einen Satz verwandter Klassen zu beschränken.  Sie können eine Basisklasse definieren und diese verwandten Klassen davon ableiten.  Die Basisklasse muss keine Funktionalität bereitstellen, die allen abgeleiteten Klassen gemeinsam ist, aber sie kann als Filter für die Zuweisung von Werten zu Variablen dienen.  Wenn im verwendeten Code eine Variable vom Typ der Basisklasse deklariert wird, lässt Visual Basic nur zu, dass dieser Variablen ein Objekt vom Typ einer der abgeleiteten Klassen zugewiesen wird.  
+ <span data-ttu-id="b6efa-110">Eine weitere Verwendungsmöglichkeit von einer `MustInherit` Klasse ist, um eine Variable auf einen Satz von verwandten Klassen zu beschränken.</span><span class="sxs-lookup"><span data-stu-id="b6efa-110">Another use of a `MustInherit` class is to restrict a variable to a set of related classes.</span></span> <span data-ttu-id="b6efa-111">Sie können eine Basisklasse definieren und diese verwandten Klassen ableiten.</span><span class="sxs-lookup"><span data-stu-id="b6efa-111">You can define a base class and derive all these related classes from it.</span></span> <span data-ttu-id="b6efa-112">Die Basisklasse muss keine Funktionen, die den abgeleiteten Klassen gemeinsam bereitstellen, aber als Filter für das Zuweisen von Werten zu Variablen dienen.</span><span class="sxs-lookup"><span data-stu-id="b6efa-112">The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables.</span></span> <span data-ttu-id="b6efa-113">Wenn der verwendete Code eine Variable als Basisklasse deklariert wird, können mit Visual Basic nur ein Objekt aus einer der abgeleiteten Klassen auf diese Variable zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="b6efa-113">If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.</span></span>  
   
- .NET Framework definiert eine Reihe von `MustInherit`\-Klassen, u. a. <xref:System.Array>, <xref:System.Enum> und <xref:System.ValueType>.  <xref:System.ValueType> ist ein Beispiel für eine Basisklasse, die eine Variable einschränkt.  Alle Werttypen sind von <xref:System.ValueType> abgeleitet.  Wenn Sie eine Variable als <xref:System.ValueType> deklarieren, können Sie dieser Variablen nur Werttypen zuweisen.  
+ <span data-ttu-id="b6efa-114">.NET Framework definiert mehrere `MustInherit` Klassen untereinander <xref:System.Array>, <xref:System.Enum>, und <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="b6efa-114">The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>.</span></span> <span data-ttu-id="b6efa-115"><xref:System.ValueType>ist ein Beispiel für eine Basisklasse, die eine Variable einschränkt.</span><span class="sxs-lookup"><span data-stu-id="b6efa-115"><xref:System.ValueType> is an example of a base class that restricts a variable.</span></span> <span data-ttu-id="b6efa-116">Alle Werttypen abgeleitet <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="b6efa-116">All value types derive from <xref:System.ValueType>.</span></span> <span data-ttu-id="b6efa-117">Wenn Sie eine Variable deklarieren <xref:System.ValueType>, können Sie diese Variable nur Werttypen zuweisen.</span><span class="sxs-lookup"><span data-stu-id="b6efa-117">If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.</span></span>  
   
-## Regeln  
+## <a name="rules"></a><span data-ttu-id="b6efa-118">Regeln</span><span class="sxs-lookup"><span data-stu-id="b6efa-118">Rules</span></span>  
   
--   **Deklarationskontext.** `MustInherit` kann nur in einer `Class`\-Anweisung verwendet werden.  
+-   <span data-ttu-id="b6efa-119">**Deklarationskontext.**</span><span class="sxs-lookup"><span data-stu-id="b6efa-119">**Declaration Context.**</span></span> <span data-ttu-id="b6efa-120">Sie können `MustInherit` nur in einem `Class` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="b6efa-120">You can use `MustInherit` only in a `Class` statement.</span></span>  
   
--   **Kombinierte Modifizierer.** Sie können `MustInherit` nicht zusammen mit `NotInheritable` in derselben Deklaration angeben.  
+-   <span data-ttu-id="b6efa-121">**Kombinierte Modifizierer.**</span><span class="sxs-lookup"><span data-stu-id="b6efa-121">**Combined Modifiers.**</span></span> <span data-ttu-id="b6efa-122">Sie können keine angeben `MustInherit` zusammen mit `NotInheritable` in der gleichen Deklaration.</span><span class="sxs-lookup"><span data-stu-id="b6efa-122">You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel werden sowohl die erzwungene Vererbung als auch das erzwungene Überschreiben veranschaulicht.  In der `shape`\-Basisklasse ist die `acrossLine`\-Variable definiert.  Die `circle`\-Klasse und die `square`\-Klasse sind von `shape` abgeleitet.  Sie erben die Definition von `acrossLine`, müssen jedoch die Funktion `area` definieren, weil diese Berechnung von der Art der Form abhängig ist.  
+## <a name="example"></a><span data-ttu-id="b6efa-123">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b6efa-123">Example</span></span>  
+ <span data-ttu-id="b6efa-124">Das folgende Beispiel veranschaulicht die erzwungene Vererbung und erzwungene überschreiben.</span><span class="sxs-lookup"><span data-stu-id="b6efa-124">The following example illustrates both forced inheritance and forced overriding.</span></span> <span data-ttu-id="b6efa-125">Die Basisklasse `shape` definiert eine Variable `acrossLine`.</span><span class="sxs-lookup"><span data-stu-id="b6efa-125">The base class `shape` defines a variable `acrossLine`.</span></span> <span data-ttu-id="b6efa-126">Die Klassen `circle` und `square` abgeleitet `shape`.</span><span class="sxs-lookup"><span data-stu-id="b6efa-126">The classes `circle` and `square` derive from `shape`.</span></span> <span data-ttu-id="b6efa-127">Sie erben die Definition der `acrossLine`, aber sie müssen die Funktion definieren `area` , da die Berechnung für jede Art von Form unterscheidet.</span><span class="sxs-lookup"><span data-stu-id="b6efa-127">They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.</span></span>  
   
  [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
- Sie können `shape1` und `shape2` als Klassen vom Typ `shape` deklarieren.  Allerdings können Sie kein Objekt vom Typ `shape` erstellen, weil diese Klasse nicht über die Funktionalität der `area`\-Funktion verfügt und als `MustInherit` deklariert ist.  
+ <span data-ttu-id="b6efa-128">Sie können deklarieren, `shape1` und `shape2` Typ `shape`.</span><span class="sxs-lookup"><span data-stu-id="b6efa-128">You can declare `shape1` and `shape2` to be of type `shape`.</span></span> <span data-ttu-id="b6efa-129">Allerdings kann nicht Erstellung ein Objekts aus `shape` , da sie nicht die Funktionalität der Funktion enthält `area` und RuntimeCompatibility `MustInherit`.</span><span class="sxs-lookup"><span data-stu-id="b6efa-129">However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.</span></span>  
   
- Weil die `shape1`\-Variable und die `shape2`\-Variable als `shape` deklariert sind, sind sie auf Objekte der abgeleiteten `circle`\-Klasse und `square`\-Klasse beschränkt.  Visual Basic lässt nicht zu, dass diesen Variablen andere Objekte zugewiesen werden, wodurch ein hohes Maß an Typsicherheit geboten wird.  
+ <span data-ttu-id="b6efa-130">Da sie als deklariert werden `shape`, die Variablen `shape1` und `shape2` auf Objekte eingeschränkt werden, von den abgeleiteten Klassen `circle` und `square`.</span><span class="sxs-lookup"><span data-stu-id="b6efa-130">Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`.</span></span> <span data-ttu-id="b6efa-131">Visual Basic erlaubt nicht, ein anderes Objekt um diese Variablen zuzuweisen, was Ihnen ein hohes Maß an Sicherheit gibt.</span><span class="sxs-lookup"><span data-stu-id="b6efa-131">Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.</span></span>  
   
-## Verwendung  
- Der `MustInherit`\-Modifizierer kann im folgenden Kontext verwendet werden:  
+## <a name="usage"></a><span data-ttu-id="b6efa-132">Verwendung</span><span class="sxs-lookup"><span data-stu-id="b6efa-132">Usage</span></span>  
+ <span data-ttu-id="b6efa-133">Die `MustInherit` Modifizierer kann in diesem Kontext verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="b6efa-133">The `MustInherit` modifier can be used in this context:</span></span>  
   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="b6efa-134">Class-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b6efa-134">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## Siehe auch  
- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="b6efa-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6efa-135">See Also</span></span>  
+ [<span data-ttu-id="b6efa-136">Inherits-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b6efa-136">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [<span data-ttu-id="b6efa-137">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="b6efa-137">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="b6efa-138">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="b6efa-138">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="b6efa-139">Grundlagen der Vererbung</span><span class="sxs-lookup"><span data-stu-id="b6efa-139">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

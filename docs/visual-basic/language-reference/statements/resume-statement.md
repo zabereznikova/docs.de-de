@@ -1,76 +1,75 @@
 ---
-title: "Resume Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Resume"
-  - "vb.ResumeNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Next statement, Resume"
-  - "Resume Next statement"
-  - "execution, resuming"
-  - "run-time errors, resuming after"
-  - "Resume statement, syntax"
-  - "errors [Visual Basic], resuming after"
-  - "Error statement, and Resume statement"
-  - "execution"
-  - "Resume statement"
+title: Resume-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Resume
+- vb.ResumeNext
+helpviewer_keywords:
+- Next statement [Visual Basic], Resume
+- Resume Next statement [Visual Basic]
+- execution [Visual Basic], resuming
+- run-time errors [Visual Basic], resuming after
+- Resume statement [Visual Basic], syntax
+- errors [Visual Basic], resuming after
+- Error statement [Visual Basic], and Resume statement
+- execution
+- Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Resume Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Setzt nach Abschluss einer Fehlerbehandlungsroutine die Ausführung fort.  
+# <a name="resume-statement"></a><span data-ttu-id="4005e-102">Resume-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4005e-102">Resume Statement</span></span>
+<span data-ttu-id="4005e-103">Setzt die Ausführung fort, nachdem eine Fehlerbehandlungsroutine abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="4005e-103">Resumes execution after an error-handling routine is finished.</span></span>  
   
- Wir empfehlen, dass Sie die strukturierte Ausnahmebehandlung im Code verwenden, wann immer dies möglich ist, und nicht anhand der unstrukturierten Ausnahmebehandlung und der `On Error` und `Resume`\-Anweisungen.  Weitere Informationen finden Sie unter [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ <span data-ttu-id="4005e-104">Es wird empfohlen, strukturierte Ausnahmebehandlung im Code nach Möglichkeit statt mit der unstrukturierten Ausnahmebehandlung zu verwenden und die `On Error` und `Resume` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="4005e-104">We suggest that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` and `Resume` statements.</span></span> <span data-ttu-id="4005e-105">Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="4005e-105">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="4005e-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="4005e-106">Syntax</span></span>  
   
 ```  
 Resume [ Next | line ]  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="4005e-107">Teile</span><span class="sxs-lookup"><span data-stu-id="4005e-107">Parts</span></span>  
  `Resume`  
- Erforderlich.  Wenn der Fehler in der gleichen Prozedur auftrat wie der Fehlerhandler, wird die Ausführung bei der Anweisung fortgesetzt, die den Fehler verursachte.  Trat der Fehler in einer aufgerufenen Prozedur auf, wird die Ausführung bei der Anweisung fortgesetzt, die zuletzt aus derjenigen Prozedur einen Aufruf ausführte, in der die Fehlerbehandlungsroutine enthalten ist.  
+ <span data-ttu-id="4005e-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4005e-108">Required.</span></span> <span data-ttu-id="4005e-109">Wenn in der gleichen Prozedur wie der Fehlerhandler der Fehler aufgetreten ist, setzt die Ausführung mit der Anweisung, die den Fehler verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="4005e-109">If the error occurred in the same procedure as the error handler, execution resumes with the statement that caused the error.</span></span> <span data-ttu-id="4005e-110">Wenn der Fehler in einer aufgerufenen Prozedur setzt die Ausführung bei der Anweisung, die zuletzt aus der Prozedur mit der Fehlerbehandlungsroutine aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="4005e-110">If the error occurred in a called procedure, execution resumes at the statement that last called out of the procedure containing the error-handling routine.</span></span>  
   
  `Next`  
- Optional.  Wenn der Fehler in der gleichen Prozedur auftrat wie der Fehlerhandler, wird die Ausführung bei der Anweisung fortgesetzt, die unmittelbar auf die Anweisung folgt, die den Fehler verursachte.  Wenn der Fehler in einer aufgerufenen Prozedur auftrat, wird die Ausführung bei der Anweisung fortgesetzt, die unmittelbar auf die Anweisung folgt, welche zuletzt einen Aufruf aus derjenigen Prozedur ausführte, in der die Fehlerbehandlungsroutine enthalten ist \(oder der `On Error Resume Next`\-Anweisung\).  
+ <span data-ttu-id="4005e-111">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="4005e-111">Optional.</span></span> <span data-ttu-id="4005e-112">Wenn in der gleichen Prozedur wie der Fehlerhandler der Fehler aufgetreten ist, setzt die Ausführung mit der Anweisung sofort nach der Anweisung, die den Fehler verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="4005e-112">If the error occurred in the same procedure as the error handler, execution resumes with the statement immediately following the statement that caused the error.</span></span> <span data-ttu-id="4005e-113">Wenn der Fehler in einer aufgerufenen Prozedur die Ausführung wird fortgesetzt, mit der Anweisung sofort nach der Anweisung, die zuletzt aus der Prozedur mit der Fehlerbehandlungsroutine aufgerufen (oder `On Error Resume Next` Anweisung).</span><span class="sxs-lookup"><span data-stu-id="4005e-113">If the error occurred in a called procedure, execution resumes with the statement immediately following the statement that last called out of the procedure containing the error-handling routine (or `On Error Resume Next` statement).</span></span>  
   
  `line`  
- Optional.  Die Ausführung wird mit der Zeile fortgesetzt, die im erforderlichen `line`\-Argument angegeben wird.  Das `line`\-Argument ist eine Zeilenmarke oder Zeilennummer und muss sich in der gleichen Prozedur befinden wie der Fehlerhandler.  
+ <span data-ttu-id="4005e-114">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="4005e-114">Optional.</span></span> <span data-ttu-id="4005e-115">Die Ausführung wird fortgesetzt, in der Befehlszeile angegeben werden, in das erforderliche `line` Argument.</span><span class="sxs-lookup"><span data-stu-id="4005e-115">Execution resumes at the line specified in the required `line` argument.</span></span> <span data-ttu-id="4005e-116">Die `line` Argument ist eine zeilenbezeichnung oder Zeilennummer und muss in der gleichen Prozedur wie der Fehlerhandler.</span><span class="sxs-lookup"><span data-stu-id="4005e-116">The `line` argument is a line label or line number and must be in the same procedure as the error handler.</span></span>  
   
-## Hinweise  
+## <a name="remarks"></a><span data-ttu-id="4005e-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4005e-117">Remarks</span></span>  
   
 > [!NOTE]
->  Es wird empfohlen, die strukturierte Ausnahmebehandlung im Code verwenden, wann immer dies möglich ist, und nicht anhand der unstrukturierten Ausnahmebehandlung und der `On Error` und `Resume`\-Anweisungen.  Weitere Informationen finden Sie unter [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  <span data-ttu-id="4005e-118">Wir empfehlen die Verwendung von strukturierter Ausnahmebehandlung im Code nach Möglichkeit statt mit der unstrukturierten Ausnahmebehandlung und das `On Error` und `Resume` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="4005e-118">We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` and `Resume` statements.</span></span> <span data-ttu-id="4005e-119">Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="4005e-119">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
- Wenn Sie eine `Resume`\-Anweisung an einer anderen Stelle als in einer Fehlerbehandlungsroutine verwenden, tritt ein Fehler auf.  
+ <span data-ttu-id="4005e-120">Bei Verwendung einer `Resume` Anweisung überall außer in eine Fehlerbehandlungsroutine, ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="4005e-120">If you use a `Resume` statement anywhere other than in an error-handling routine, an error occurs.</span></span>  
   
- Die `Resume`\-Anweisung kann in keiner Prozedur verwendet werden, die eine `Try...Catch...Finally`\-Anweisung enthält.  
+ <span data-ttu-id="4005e-121">Die `Resume` Anweisung kann nicht verwendet werden, in einer Prozedur, deren enthält eine `Try...Catch...Finally` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="4005e-121">The `Resume` statement cannot be used in any procedure that contains a `Try...Catch...Finally` statement.</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird mithilfe der `Resume`\-Anweisung die Fehlerbehandlung in einer Prozedur beendet und dann die Ausführung mit der Anweisung fortgesetzt, die den Fehler verursacht hat.  Um die Verwendung der `Resume`\-Anweisung zu veranschaulichen, wird Fehler Nummer 55 generiert.  
+## <a name="example"></a><span data-ttu-id="4005e-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4005e-122">Example</span></span>  
+ <span data-ttu-id="4005e-123">Dieses Beispiel verwendet die `Resume` Anweisung für die Fehlerbehandlung in einer Prozedur zu beenden, und klicken Sie dann fortsetzen Ausführung mit der Anweisung, die den Fehler verursacht hat.</span><span class="sxs-lookup"><span data-stu-id="4005e-123">This example uses the `Resume` statement to end error handling in a procedure and then resume execution with the statement that caused the error.</span></span> <span data-ttu-id="4005e-124">Fehlernummer 55 generiert, um die Verwendung der veranschaulichen die `Resume` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="4005e-124">Error number 55 is generated to illustrate use of the `Resume` statement.</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
-## Anforderungen  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="4005e-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4005e-125">Requirements</span></span>  
+ <span data-ttu-id="4005e-126">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="4005e-126">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **Assembly:** Visual Basic\-Laufzeitbibliothek \(in Microsoft.VisualBasic.dll\)  
+ <span data-ttu-id="4005e-127">**Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")</span><span class="sxs-lookup"><span data-stu-id="4005e-127">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## Siehe auch  
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md)   
- [On Error Statement](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a><span data-ttu-id="4005e-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4005e-128">See Also</span></span>  
+ [<span data-ttu-id="4005e-129">Try...Catch...Finally-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4005e-129">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="4005e-130">Error-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4005e-130">Error Statement</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)  
+ [<span data-ttu-id="4005e-131">On Error-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4005e-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)

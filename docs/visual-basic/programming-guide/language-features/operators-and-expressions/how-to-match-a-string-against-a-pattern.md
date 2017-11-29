@@ -1,94 +1,93 @@
 ---
-title: "How to: Match a String against a Pattern (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "comparison operators, comparing strings"
-  - "pattern matching"
-  - "strings [Visual Basic], comparing"
-  - "string comparison [Visual Basic], operators"
-  - "Visual Basic code, operators"
-  - "pattern matching, string comparison"
-  - "string comparison [Visual Basic]"
-  - "Like operator [Visual Basic], pattern matching"
-  - "pattern matching, empty strings"
-  - "operators [Visual Basic], comparison"
+title: 'Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- comparison operators [Visual Basic], comparing strings
+- pattern matching
+- strings [Visual Basic], comparing
+- string comparison [Visual Basic], operators
+- Visual Basic code, operators
+- pattern matching [Visual Basic], string comparison
+- string comparison [Visual Basic]
+- Like operator [Visual Basic], pattern matching
+- pattern matching, empty strings
+- operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Match a String against a Pattern (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn Sie ermitteln möchten, ob ein Ausdruck vom [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, können Sie den [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) verwenden.  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="7d189-102">Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d189-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
+<span data-ttu-id="7d189-103">Wenn Sie, ob einen Ausdruck eines ermitteln möchten der [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span><span class="sxs-lookup"><span data-stu-id="7d189-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  
   
- `Like` akzeptiert zwei Operanden.  Der linke Operand ist ein Zeichenfolgenausdruck, und der rechte Operand ist eine Zeichenfolge, die das für den Vergleich zu verwendende Muster enthält.  `Like` gibt einen `Boolean`\-Wert zurück, der angibt, ob der Zeichenfolgenausdruck dem Muster entspricht.  
+ <span data-ttu-id="7d189-104">`Like`verfügt über zwei Operanden.</span><span class="sxs-lookup"><span data-stu-id="7d189-104">`Like` takes two operands.</span></span> <span data-ttu-id="7d189-105">Der linke Operand ist ein Zeichenfolgenausdruck, und der Rechte Operand ist eine Zeichenfolge, enthält das Muster für den Abgleich verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7d189-105">The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching.</span></span> <span data-ttu-id="7d189-106">`Like`Gibt eine `Boolean` Wert, der angibt, ob der Zeichenfolgenausdruck dem Muster entspricht.</span><span class="sxs-lookup"><span data-stu-id="7d189-106">`Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.</span></span>  
   
- Sie können jedes Zeichen in dem Zeichenfolgenausdruck mit einem bestimmten Zeichen, einem Platzhalterzeichen, einer Zeichenliste oder einem Bereich von Zeichen vergleichen.  Die Positionen der Angaben in der Musterzeichenfolge entsprechen den Positionen der Zeichen, die im Zeichenfolgenausdruck verglichen werden sollen.  
+ <span data-ttu-id="7d189-107">Sie können jedes Zeichen in der Zeichenfolgenausdruck für ein bestimmtes Zeichen, ein Platzhalterzeichen, eine Zeichenliste oder einem Bereich von Zeichen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="7d189-107">You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range.</span></span> <span data-ttu-id="7d189-108">Die Positionen der Angaben in der Musterzeichenfolge entsprechen die Positionen der Zeichen im Zeichenfolgenausdruck verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="7d189-108">The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.</span></span>  
   
-### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einem bestimmten Zeichen  
+### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a><span data-ttu-id="7d189-109">Um ein Zeichen im Zeichenfolgenausdruck für ein bestimmtes Zeichen</span><span class="sxs-lookup"><span data-stu-id="7d189-109">To match a character in the string expression against a specific character</span></span>  
   
--   Fügen Sie das spezielle Zeichen direkt in die Musterzeichenfolge ein.  Bestimmte Sonderzeichen müssen in eckige Klammern \(`[ ]`\) eingeschlossen werden.  Weitere Informationen finden Sie unter [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+-   <span data-ttu-id="7d189-110">Fügen Sie das Zeichen direkt in der Musterzeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7d189-110">Put the specific character directly in the pattern string.</span></span> <span data-ttu-id="7d189-111">Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`).</span><span class="sxs-lookup"><span data-stu-id="7d189-111">Certain special characters must be enclosed in brackets (`[ ]`).</span></span> <span data-ttu-id="7d189-112">Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span><span class="sxs-lookup"><span data-stu-id="7d189-112">For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  
   
-     Im folgenden Beispiel wird überprüft, ob `myString` genau aus dem einzelnen Zeichen `H` besteht.  
+     <span data-ttu-id="7d189-113">Im folgenden Beispiel wird getestet, ob `myString` besteht das einzelne Zeichen genau `H`.</span><span class="sxs-lookup"><span data-stu-id="7d189-113">The following example tests whether `myString` consists exactly of the single character `H`.</span></span>  
   
      [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
-### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einem Platzhalterzeichen  
+### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a><span data-ttu-id="7d189-114">Um ein Zeichen im Zeichenfolgenausdruck mit einem Platzhalterzeichen</span><span class="sxs-lookup"><span data-stu-id="7d189-114">To match a character in the string expression against a wildcard character</span></span>  
   
--   Fügen Sie in die Musterzeichenfolge ein Fragezeichen \(`?`\) ein.  Jedes gültiges Zeichen an dieser Position führt zu einer Übereinstimmung.  
+-   <span data-ttu-id="7d189-115">Versetzen ein Fragezeichen (`?`) in der Musterzeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="7d189-115">Put a question mark (`?`) in the pattern string.</span></span> <span data-ttu-id="7d189-116">An dieser Position irgendeinem gültigen Zeichen ergibt eine Übereinstimmung.</span><span class="sxs-lookup"><span data-stu-id="7d189-116">Any valid character in this position makes a successful match.</span></span>  
   
-     Im folgenden Beispiel wird überprüft, ob `myString` aus dem einzelnen Zeichen `W` gefolgt von zwei beliebigen Zeichen besteht.  
+     <span data-ttu-id="7d189-117">Im folgenden Beispiel wird getestet, ob `myString` besteht das einzelne Zeichen `W` gefolgt von genau zwei Zeichen aller Werte.</span><span class="sxs-lookup"><span data-stu-id="7d189-117">The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.</span></span>  
   
      [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
-### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen  
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a><span data-ttu-id="7d189-118">Um ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen</span><span class="sxs-lookup"><span data-stu-id="7d189-118">To match a character in the string expression against a list of characters</span></span>  
   
--   Fügen Sie in die Musterzeichenfolge eckige Klammern \(`[ ]`\) ein, und fügen Sie innerhalb der Klammern die Liste der Zeichen ein.  Trennen Sie die Zeichen weder mit Komma noch einem anderen Trennzeichen.  Jedes einzelne Zeichen in der Liste führt zu einer Übereinstimmung.  
+-   <span data-ttu-id="7d189-119">Platzieren von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern setzen die Liste der Zeichen.</span><span class="sxs-lookup"><span data-stu-id="7d189-119">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters.</span></span> <span data-ttu-id="7d189-120">Trennen Sie die Zeichen nicht durch Kommas oder einem anderen Trennzeichen.</span><span class="sxs-lookup"><span data-stu-id="7d189-120">Do not separate the characters with commas or any other separator.</span></span> <span data-ttu-id="7d189-121">Beliebiges einzelnes Zeichen in der Liste wird eine erfolgreiche Übereinstimmung.</span><span class="sxs-lookup"><span data-stu-id="7d189-121">Any single character in the list makes a successful match.</span></span>  
   
-     Im folgenden Beispiel wird überprüft, ob `myString` aus einem beliebigen gültigen Zeichen gefolgt von einem der Zeichen `A`, `C` oder `E` besteht.  
+     <span data-ttu-id="7d189-122">Im folgenden Beispiel wird getestet, ob `myString` besteht aus einem beliebigen gültigen Zeichen gefolgt von genau einem Zeichen `A`, `C`, oder `E`.</span><span class="sxs-lookup"><span data-stu-id="7d189-122">The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.</span></span>  
   
      [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
-     Beachten Sie, dass bei diesem Vergleich die Groß\-\/Kleinschreibung beachtet werden muss.  
+     <span data-ttu-id="7d189-123">Beachten Sie, dass diese Übereinstimmung Groß-/Kleinschreibung beachtet wird.</span><span class="sxs-lookup"><span data-stu-id="7d189-123">Note that this match is case-sensitive.</span></span>  
   
-### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einem Bereich von Zeichen  
+### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a><span data-ttu-id="7d189-124">Um ein Zeichen im Zeichenfolgenausdruck für einen Bereich von Zeichen</span><span class="sxs-lookup"><span data-stu-id="7d189-124">To match a character in the string expression against a range of characters</span></span>  
   
--   Fügen Sie in die Musterzeichenfolge eckige Klammern \(`[ ]`\) ein, und fügen Sie innerhalb der Klammern das erste und letzte Zeichen im Bereich ein, getrennt durch einen Bindestrich \(`–`\).  Jedes einzelne Zeichen im Bereich ergibt eine Übereinstimmung.  
+-   <span data-ttu-id="7d189-125">Platzieren von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern setzen die niedrigsten und höchsten Zeichen im Bereich durch einen Bindestrich getrennt (`–`).</span><span class="sxs-lookup"><span data-stu-id="7d189-125">Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`).</span></span> <span data-ttu-id="7d189-126">Beliebiges einzelnes Zeichen innerhalb des Bereichs wird eine erfolgreiche Übereinstimmung.</span><span class="sxs-lookup"><span data-stu-id="7d189-126">Any single character within the range makes a successful match.</span></span>  
   
-     Im folgenden Beispiel wird überprüft, ob `myString` aus den Zeichen vom Typ `num` gefolgt von genau einem der Zeichen `i`, `j`, `k`, `l`, `m` oder `n` besteht.  
+     <span data-ttu-id="7d189-127">Im folgenden Beispiel wird getestet, ob `myString` besteht aus den Zeichen `num` gefolgt von genau einem Zeichen `i`, `j`, `k`, `l`, `m`, oder `n`.</span><span class="sxs-lookup"><span data-stu-id="7d189-127">The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.</span></span>  
   
      [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
-     Beachten Sie, dass bei diesem Vergleich die Groß\-\/Kleinschreibung beachtet werden muss.  
+     <span data-ttu-id="7d189-128">Beachten Sie, dass diese Übereinstimmung Groß-/Kleinschreibung beachtet wird.</span><span class="sxs-lookup"><span data-stu-id="7d189-128">Note that this match is case-sensitive.</span></span>  
   
-## Vergleichen leerer Zeichenfolgen  
- `Like` behandelt die Sequenz `[]` als Zeichenfolge der Länge 0 \(null\) \(`""`\).  Mit `[]` können Sie überprüfen, ob der gesamte Zeichenfolgenausdruck leer ist, doch Sie können damit nicht überprüfen, ob eine bestimmte Position im Zeichenfolgenausdruck leer ist.  Wenn Sie u. a. überprüfen müssen, ob eine leere Position vorhanden ist, können Sie `Like` mehrmals verwenden.  
+## <a name="matching-empty-strings"></a><span data-ttu-id="7d189-129">Übereinstimmende leere Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="7d189-129">Matching Empty Strings</span></span>  
+ <span data-ttu-id="7d189-130">`Like`behandelt die Sequenz `[]` als eine Zeichenfolge der Länge 0 (null) (`""`).</span><span class="sxs-lookup"><span data-stu-id="7d189-130">`Like` treats the sequence `[]` as a zero-length string (`""`).</span></span> <span data-ttu-id="7d189-131">Sie können `[]` zu prüfen, ob der gesamte Zeichenfolgenausdruck leer ist, jedoch können sie überprüfen, ob eine bestimmte Position im Zeichenfolgenausdruck leer ist.</span><span class="sxs-lookup"><span data-stu-id="7d189-131">You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty.</span></span> <span data-ttu-id="7d189-132">Wenn eine leere Position eine der Optionen ist müssen Sie für die Sie verwenden können, testen `Like` mehr als einmal.</span><span class="sxs-lookup"><span data-stu-id="7d189-132">If an empty position is one of the options you need to test for, you can use `Like` more than once.</span></span>  
   
-#### So vergleichen Sie ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen oder keinem Zeichen  
+#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a><span data-ttu-id="7d189-133">Um ein Zeichen im Zeichenfolgenausdruck mit einer Liste von Zeichen oder kein Zeichen</span><span class="sxs-lookup"><span data-stu-id="7d189-133">To match a character in the string expression against a list of characters or no character</span></span>  
   
-1.  Rufen Sie den Operator `Like` für denselben Zeichenfolgenausdruck zweimal auf, und verknüpfen Sie die beiden Aufrufe entweder mit dem [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder dem [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1.  <span data-ttu-id="7d189-134">Rufen Sie die `Like` Operator zweimal in derselben Zeichenfolgeausdruck, und verbinden Sie die beiden Aufrufe entweder mit der [oder-Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder [OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).</span><span class="sxs-lookup"><span data-stu-id="7d189-134">Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).</span></span>  
   
-2.  Fügen Sie in der Musterzeichenfolge für die erste `Like`\-Klausel die Zeichenfolgenliste in eckigen Klammern \(`[ ]`\) ein.  
+2.  <span data-ttu-id="7d189-135">In der Musterzeichenfolge zum ersten `Like` -Klausel, enthalten die Zeichenliste in Klammern eingeschlossen (`[ ]`).</span><span class="sxs-lookup"><span data-stu-id="7d189-135">In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).</span></span>  
   
-3.  Fügen Sie in der Musterzeichenfolge für die zweite `Like`\-Klausel an der betreffenden Position kein Zeichen ein.  
+3.  <span data-ttu-id="7d189-136">In der Musterzeichenfolge für die zweite `Like` -Klausel, nehmen Sie keines Zeichen an der Position fraglichen.</span><span class="sxs-lookup"><span data-stu-id="7d189-136">In the pattern string for the second `Like` clause, do not put any character at the position in question.</span></span>  
   
-     Im folgenden Beispiel wird überprüft, ob die siebenstellige Telefonnummer `phoneNum` aus genau drei Ziffern, gefolgt von einem Leerzeichen, einem Bindestrich \(`–`\), einem Punkt \(`.`\) oder keinem Zeichen und genau vier numerischen Ziffern besteht.  
+     <span data-ttu-id="7d189-137">Das folgende Beispiel testet die siebenstellige Telefonnummer `phoneNum` für genau drei Ziffern, gefolgt von einem Leerzeichen, ein Bindestrich (`–`), einen Punkt (`.`), oder keine Zeichen überhaupt, gefolgt von genau vier Ziffern.</span><span class="sxs-lookup"><span data-stu-id="7d189-137">The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.</span></span>  
   
      [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
-## Siehe auch  
- [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Operators and Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)   
- [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="7d189-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d189-138">See Also</span></span>  
+ [<span data-ttu-id="7d189-139">Vergleichsoperatoren</span><span class="sxs-lookup"><span data-stu-id="7d189-139">Comparison Operators</span></span>](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="7d189-140">Operatoren und Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="7d189-140">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="7d189-141">Like-Operator</span><span class="sxs-lookup"><span data-stu-id="7d189-141">Like Operator</span></span>](../../../../visual-basic/language-reference/operators/like-operator.md)  
+ [<span data-ttu-id="7d189-142">String-Datentyp</span><span class="sxs-lookup"><span data-stu-id="7d189-142">String Data Type</span></span>](../../../../visual-basic/language-reference/data-types/string-data-type.md)

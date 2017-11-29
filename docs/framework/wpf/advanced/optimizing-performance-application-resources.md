@@ -1,61 +1,64 @@
 ---
-title: "Optimieren der Leistung: Anwendungsressourcen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungsressourcen, Leistung"
-  - "Pinsel, Leistung"
-  - "Ressourcen, Leistung"
-  - "Freigeben von Pinseln ohne Kopieren"
-  - "Gemeinsame Nutzung von Ressourcen"
-  - "Statische Ressourcen"
+title: 'Optimieren der Leistung: Anwendungsressourcen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application resources [WPF], performance
+- resources [WPF], performance
+- static resources [WPF]
+- sharing resources [WPF]
+- brushes [WPF], performance
+- sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ac462f3b49788fd909f9d9f4fc785db74704ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Optimieren der Leistung: Anwendungsressourcen
-Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie Anwendungsressourcen freigeben, sodass Sie ein konsistentes Erscheinungsbild und Verhalten für alle Elemente eines ähnlichen Typs unterstützen können.  Dieses Thema stellt einige Empfehlungen in diesem Bereich bereit, die Ihnen eine Hilfestellung bei der Verbesserung der Leistung für Ihre Anwendungen bieten.  
+# <a name="optimizing-performance-application-resources"></a><span data-ttu-id="9305c-102">Optimieren der Leistung: Anwendungsressourcen</span><span class="sxs-lookup"><span data-stu-id="9305c-102">Optimizing Performance: Application Resources</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="9305c-103">ermöglicht Ihnen Anwendungsressourcen zu teilen, sodass Sie ein konsistentes Erscheinungsbild und Verhalten über Elemente mit ähnlichen Typs unterstützen können.</span><span class="sxs-lookup"><span data-stu-id="9305c-103"> allows you to share application resources so that you can support a consistent look or behavior across similar-typed elements.</span></span> <span data-ttu-id="9305c-104">Dieses Thema enthält einige Empfehlungen in diesem Bereich an, die Ihnen helfen kann die Leistung Ihrer Anwendungen verbessern.</span><span class="sxs-lookup"><span data-stu-id="9305c-104">This topic provides a few recommendations in this area that can help you improve the performance of your applications.</span></span>  
   
- Weitere Informationen zu Ressourcen finden Sie unter [XAML\-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="9305c-105">Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="9305c-105">For more information on resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
-## Freigeben von Ressourcen  
- Wenn die Anwendung benutzerdefinierte Steuerelemente verwendet und Ressourcen in einem <xref:System.Windows.ResourceDictionary> \(oder XAML\-Ressourcenknoten\) definiert, wird empfohlen, die Ressourcen entweder auf der <xref:System.Windows.Application>\-Objektebene oder auf der <xref:System.Windows.Window>\-Objektebene zu definieren oder diese im Standarddesign für die benutzerdefinierten Steuerelemente zu definieren.  Eine Definition von Ressourcen im <xref:System.Windows.ResourceDictionary> eines benutzerdefinierten Steuerelements hat negative Auswirkungen auf die Leistung für jede Instanz dieses Steuerelements.  Wenn Sie beispielsweise leistungsintensive Pinselvorgänge als Teil der Ressourcendefinition eines benutzerdefinierten Steuerelements und vieler Instanzen des benutzerdefinierten Steuerelements definiert haben, wird das Workingset der Anwendung erheblich vergrößert.  
+## <a name="sharing-resources"></a><span data-ttu-id="9305c-106">Freigeben von Ressourcen</span><span class="sxs-lookup"><span data-stu-id="9305c-106">Sharing resources</span></span>  
+ <span data-ttu-id="9305c-107">Wenn die Anwendung benutzerdefinierte Steuerelemente verwendet, und definiert die Ressourcen in einer <xref:System.Windows.ResourceDictionary> (oder Ressourcen für XAML-Knoten), es wird empfohlen, dass Sie entweder die Ressourcen zu definieren die <xref:System.Windows.Application> oder <xref:System.Windows.Window> -Objekt Ebene zu definieren oder diese in das Standarddesign für die Benutzerdefinierte Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="9305c-107">If your application uses custom controls and defines resources in a <xref:System.Windows.ResourceDictionary> (or XAML Resources node), it is recommended that you either define the resources at the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or define them in the default theme for the custom controls.</span></span> <span data-ttu-id="9305c-108">Definieren von Ressourcen in eines benutzerdefinierten Steuerelements <xref:System.Windows.ResourceDictionary> erzwingt Auswirkungen auf die Leistung für jede Instanz des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="9305c-108">Defining resources in a custom control's <xref:System.Windows.ResourceDictionary> imposes a performance impact for every instance of that control.</span></span> <span data-ttu-id="9305c-109">Wenn Sie rechenintensive Pinselvorgänge, die als Teil der Ressourcendefinition eines benutzerdefinierten Steuerelements und viele Instanzen des benutzerdefinierten Steuerelements definiert haben, wird Arbeitssatz für die Anwendung z. B. erheblich verlängern.</span><span class="sxs-lookup"><span data-stu-id="9305c-109">For example, if you have performance-intensive brush operations defined as part of the resource definition of a custom control and many instances of the custom control, the application's working set will increase significantly.</span></span>  
   
- Betrachten Sie zur Veranschaulichung dieses Punkts Folgendes.  Angenommen, Sie möchten mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein Kartenspiel entwickeln.  Für die meisten Kartenspiele benötigen Sie 52 Karten mit 52 verschiedenen Bildern.  Sie entscheiden sich dafür, ein benutzerdefiniertes Kartensteuerelement zu implementieren, und Sie definieren 52 Pinsel \(von denen jeder ein Kartenbild darstellt\) in den Ressourcen des benutzerdefinierten Kartensteuerelements.  In der Hauptanwendung erstellen Sie 52 Instanzen dieses benutzerdefinierten Kartensteuerelements.  Jede Instanz des benutzerdefinierten Kartensteuerelements generiert 52 Instanzen von <xref:System.Windows.Media.Brush>\-Objekten, sodass Sie insgesamt 52 \* 52 <xref:System.Windows.Media.Brush>\-Objekte in der Anwendung erhalten.  Durch Verschieben der Pinsel aus den benutzerdefinierten Kartensteuerelementressourcen in die <xref:System.Windows.Application>\-Objektebene oder die <xref:System.Windows.Window>\-Objektebene, oder indem Sie diese im Standarddesign für das benutzerdefinierte Steuerelement definieren, verkleinern Sie das Workingset der Anwendung, da Sie jetzt 52 Pinsel innerhalb von 52 Instanzen des Kartensteuerelements freigeben.  
+ <span data-ttu-id="9305c-110">Um diesen Punkt zu veranschaulichen, ist Folgendes zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="9305c-110">To illustrate this point, consider the following.</span></span> <span data-ttu-id="9305c-111">Angenommen, Sie entwickeln eine Karte Spiel mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9305c-111">Let's say you are developing a card game using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="9305c-112">Für die meisten Kartenspiele benötigen Sie 52 Karten mit 52 verschiedenen Bildern.</span><span class="sxs-lookup"><span data-stu-id="9305c-112">For most card games, you need 52 cards with 52 different faces.</span></span> <span data-ttu-id="9305c-113">Ein Karte benutzerdefiniertes Steuerelement zu implementieren möchten, und Sie definieren 52 Pinsel (jeder ein Kartenbild darstellt), in den Ressourcen des benutzerdefinierten Kartensteuerelements.</span><span class="sxs-lookup"><span data-stu-id="9305c-113">You decide to implement a card custom control and you define 52 brushes (each representing a card face) in the resources of your card custom control.</span></span> <span data-ttu-id="9305c-114">In der main-Anwendung erstellen Sie zunächst 52 Instanzen dieses benutzerdefinierte Karte-Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="9305c-114">In your main application, you initially create 52 instances of this card custom control.</span></span> <span data-ttu-id="9305c-115">Jede Instanz des benutzerdefinierten Kartensteuerelements generiert 52 Instanzen von <xref:System.Windows.Media.Brush> Objekte, die Sie insgesamt 52 * 52 erhalten <xref:System.Windows.Media.Brush> Objekte in der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="9305c-115">Each instance of the card custom control generates 52 instances of <xref:System.Windows.Media.Brush> objects, which gives you a total of 52 * 52 <xref:System.Windows.Media.Brush> objects in your application.</span></span> <span data-ttu-id="9305c-116">Durch Verschieben der Pinsel, der Karte benutzerdefiniertes Steuerelement Ressourcen, um die <xref:System.Windows.Application> oder <xref:System.Windows.Window> Objektebene oder definieren sie in das Standarddesign für das benutzerdefinierte Steuerelement den Arbeitssatz von der Anwendung zu reduzieren, da Sie jetzt 52 Pinsel freigeben 52 Instanzen des Kartensteuerelements.</span><span class="sxs-lookup"><span data-stu-id="9305c-116">By moving the brushes out of the card custom control resources to the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or defining them in the default theme for the custom control, you reduce the working set of the application, since you are now sharing the 52 brushes among 52 instances of the card control.</span></span>  
   
-## Freigeben eines Pinsels ohne Kopieren  
- Wenn Sie über mehrere Elemente verfügen, die dasselbe <xref:System.Windows.Media.Brush>\-Objekt verwenden, definieren Sie den Pinsel als Ressource und verweisen darauf, statt den Pinsel inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] zu definieren.  Diese Methode erstellt eine Instanz und verwendet diese erneut, während durch das Definieren von Pinseln inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] für jedes Element eine neue Instanz erstellt wird.  
+## <a name="sharing-a-brush-without-copying"></a><span data-ttu-id="9305c-117">Freigeben eines Pinsels ohne kopieren</span><span class="sxs-lookup"><span data-stu-id="9305c-117">Sharing a Brush without Copying</span></span>  
+ <span data-ttu-id="9305c-118">Wenn stehen Ihnen mehrere Elemente, die unter Verwendung des gleichen <xref:System.Windows.Media.Brush> Objekt, das den Pinsel als Ressource definieren und verweisen darauf, statt den Pinsel Inline in definieren [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9305c-118">If you have multiple elements using the same <xref:System.Windows.Media.Brush> object, define the brush as a resource and reference it, rather than defining the brush inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span> <span data-ttu-id="9305c-119">Diese Methode erstellt eine Instanz und erneut verwendet, wohingegen Pinsel Inline im definieren [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] erstellt eine neue Instanz für jedes Element.</span><span class="sxs-lookup"><span data-stu-id="9305c-119">This method will create one instance and reuse it, whereas defining brushes inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] creates a new instance for each element.</span></span>  
   
- Im folgenden Markupbeispiel wird dieser Punkt veranschaulicht:  
+ <span data-ttu-id="9305c-120">Das folgende Markupbeispiel veranschaulicht diesen Punkt:</span><span class="sxs-lookup"><span data-stu-id="9305c-120">The following markup sample illustrates this point:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## Verwenden von statischen Ressourcen, sofern möglich  
- Eine statische Ressource stellt einen Wert für ein beliebiges XAML\-Eigenschaftenattribut bereit, indem nach einem Verweis auf eine bereits definierte Ressource gesucht wird.  Das Suchverhalten für diese Ressource ist analog zur Suche nach der Kompilierungszeit.  
+## <a name="use-static-resources-when-possible"></a><span data-ttu-id="9305c-121">Verwenden Sie statische Ressourcen nach Möglichkeit</span><span class="sxs-lookup"><span data-stu-id="9305c-121">Use Static Resources when Possible</span></span>  
+ <span data-ttu-id="9305c-122">Eine statische Ressource stellt einen Wert für alle XAML-Property-Attribut bereit, indem ein Verweis auf eine bereits definierte Ressource gesucht.</span><span class="sxs-lookup"><span data-stu-id="9305c-122">A static resource provides a value for any XAML property attribute by looking up a reference to an already defined resource.</span></span> <span data-ttu-id="9305c-123">Suchverhalten für diese Ressource ist analog zur Kompilierzeit Suche.</span><span class="sxs-lookup"><span data-stu-id="9305c-123">Lookup behavior for that resource is analogous to compile-time lookup.</span></span>  
   
- Andererseits erstellt eine dynamische Ressource während der erstmaligen Kompilierung einen temporären Ausdruck und schiebt daher die Suche nach Ressourcen auf, bis der angeforderte Ressourcenwert tatsächlich erforderlich ist, um ein Objekt zu konstruieren.  Das Suchverhalten für diese Ressource ist analog zu Laufzeitsuche, die Auswirkungen auf die Leistung erzwingt.  Verwenden Sie möglichst immer statische Ressourcen in der Anwendung. Dynamische Ressourcen sollten Sie nur dann verwenden, wenn dies notwendig ist.  
+ <span data-ttu-id="9305c-124">Eine dynamische Ressource andererseits, erstellt einen temporären Ausdruck bei der ersten Kompilierung und somit Suche nach Ressourcen verzögern, bis der Wert für die angeforderte Ressource tatsächlich erforderlich, um ein Objekt zu erstellen ist.</span><span class="sxs-lookup"><span data-stu-id="9305c-124">A dynamic resource, on the other hand, will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="9305c-125">Suchverhalten für diese Ressource ist analog zur Laufzeit-Suche, Auswirkungen auf die Leistung gelten.</span><span class="sxs-lookup"><span data-stu-id="9305c-125">Lookup behavior for that resource is analogous to run-time lookup, which imposes a performance impact.</span></span> <span data-ttu-id="9305c-126">Verwenden Sie statische Ressourcen möglichst in der Anwendung, mit der dynamischen Ressourcen nur bei Bedarf an.</span><span class="sxs-lookup"><span data-stu-id="9305c-126">Use static resources whenever possible in your application, using dynamic resources only when necessary.</span></span>  
   
- In dem folgenden Markupbeispiel wird die Verwendung beider Typen von Ressourcen veranschaulicht:  
+ <span data-ttu-id="9305c-127">Das folgende Markupbeispiel zeigt die Verwendung beider Typen von Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="9305c-127">The following markup sample shows the use of both types of resources:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## Siehe auch  
- [Optimieren der WPF\-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Nutzen der Vorteile der Hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2D\-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Projektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="9305c-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9305c-128">See Also</span></span>  
+ [<span data-ttu-id="9305c-129">Optimieren der WPF-Anwendungsleistung</span><span class="sxs-lookup"><span data-stu-id="9305c-129">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="9305c-130">Planen der Anwendungsleistung</span><span class="sxs-lookup"><span data-stu-id="9305c-130">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="9305c-131">Vorteile der Hardware nutzen</span><span class="sxs-lookup"><span data-stu-id="9305c-131">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="9305c-132">Layout und Entwurf</span><span class="sxs-lookup"><span data-stu-id="9305c-132">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="9305c-133">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="9305c-133">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="9305c-134">Objektverhalten</span><span class="sxs-lookup"><span data-stu-id="9305c-134">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="9305c-135">Text</span><span class="sxs-lookup"><span data-stu-id="9305c-135">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="9305c-136">Datenbindung</span><span class="sxs-lookup"><span data-stu-id="9305c-136">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="9305c-137">Weitere Leistungsempfehlungen</span><span class="sxs-lookup"><span data-stu-id="9305c-137">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

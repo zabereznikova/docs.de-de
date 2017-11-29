@@ -1,61 +1,65 @@
 ---
-title: "Gewusst wie: Erstellen von Miniaturbildern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bilder [Windows Forms], Erstellen von Miniaturansichten"
-  - "Miniaturansichtsbilder, Erstellen"
+title: 'Gewusst wie: Erstellen von Miniaturbildern'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- thumbnail images [Windows Forms], creating
+- images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a3866274340932819a419c622c10072dd67c439
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Miniaturbildern
-Eine Miniaturansicht ist eine verkleinerte Darstellung eines Bildes.  Sie können eine Miniaturansicht erstellen, indem Sie die <xref:System.Drawing.Image.GetThumbnailImage%2A>\-Methode eines <xref:System.Drawing.Image>\-Objekts aufrufen.  
+# <a name="how-to-create-thumbnail-images"></a><span data-ttu-id="6ab0f-102">Gewusst wie: Erstellen von Miniaturbildern</span><span class="sxs-lookup"><span data-stu-id="6ab0f-102">How to: Create Thumbnail Images</span></span>
+<span data-ttu-id="6ab0f-103">Ein Miniaturbild ist eine kleine Version eines Bilds.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-103">A thumbnail image is a small version of an image.</span></span> <span data-ttu-id="6ab0f-104">Sie können ein Miniaturbild erstellen, durch Aufrufen der <xref:System.Drawing.Image.GetThumbnailImage%2A> Methode ein <xref:System.Drawing.Image> Objekt.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-104">You can create a thumbnail image by calling the <xref:System.Drawing.Image.GetThumbnailImage%2A> method of an <xref:System.Drawing.Image> object.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird aus einer JPG\-Datei ein <xref:System.Drawing.Image>\-Objekt erstellt.  Das ursprüngliche Bild hat eine Breite von 640 Pixel und eine Höhe von 479 Pixel.  Durch den Code wird eine Miniaturansicht mit einer Breite und einer Höhe von 100 Pixel erstellt.  
+## <a name="example"></a><span data-ttu-id="6ab0f-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6ab0f-105">Example</span></span>  
+ <span data-ttu-id="6ab0f-106">Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus einer JPG-Datei.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-106">The following example constructs an <xref:System.Drawing.Image> object from a JPG file.</span></span> <span data-ttu-id="6ab0f-107">Das ursprüngliche Bild verfügt über eine Breite von 640 Pixel und eine Höhe von 479 Pixel.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-107">The original image has a width of 640 pixels and a height of 479 pixels.</span></span> <span data-ttu-id="6ab0f-108">Der Code erstellt eine Miniaturansicht Image mit einer Breite von 100 Pixeln und eine Höhe von 100 Pixel.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-108">The code creates a thumbnail image that has a width of 100 pixels and a height of 100 pixels.</span></span>  
   
- In der folgenden Abbildung ist die Miniaturansicht dargestellt.  
+ <span data-ttu-id="6ab0f-109">Die folgende Abbildung zeigt die Miniaturansicht.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-109">The following illustration shows the thumbnail image.</span></span>  
   
- ![Miniaturbild](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
+ <span data-ttu-id="6ab0f-110">![Miniaturansicht](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span><span class="sxs-lookup"><span data-stu-id="6ab0f-110">![Thumbnail Image](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span></span>  
   
 > [!NOTE]
->  In diesem Beispiel wird eine Rückrufmethode deklariert, jedoch niemals verwendet.  Dabei werden alle Versionen von GDI\+ unterstützt.  
+>  <span data-ttu-id="6ab0f-111">In diesem Beispiel ist eine Rückrufmethode deklariert, aber nie verwendet.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-111">In this example, a callback method is declared, but never used.</span></span> <span data-ttu-id="6ab0f-112">Alle Versionen von GDI + unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-112">This supports all versions of GDI+.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  Gehen Sie folgendermaßen vor, um das Beispiel auszuführen:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6ab0f-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="6ab0f-113">Compiling the Code</span></span>  
+ <span data-ttu-id="6ab0f-114">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="6ab0f-115">Um das Beispiel auszuführen, gehen Sie folgendermaßen vor:</span><span class="sxs-lookup"><span data-stu-id="6ab0f-115">To run the example, follow these steps:</span></span>  
   
-1.  Erstellen Sie eine neue Windows Forms\-Anwendung.  
+1.  <span data-ttu-id="6ab0f-116">Erstellen Sie eine neue Windows Forms-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-116">Create a new Windows Forms application.</span></span>  
   
-2.  Fügen Sie dem Formular den Beispielcode hinzu.  
+2.  <span data-ttu-id="6ab0f-117">Fügen Sie den Beispielcode, in das Formular.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-117">Add the example code to the form.</span></span>  
   
-3.  Erstellen Sie einen Handler für das <xref:System.Windows.Forms.Control.Paint>\-Ereignis des Formulars.  
+3.  <span data-ttu-id="6ab0f-118">Erstellen Sie einen Ereignishandler für des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis</span><span class="sxs-lookup"><span data-stu-id="6ab0f-118">Create a handler for the form's <xref:System.Windows.Forms.Control.Paint> event</span></span>  
   
-4.  Rufen Sie im <xref:System.Windows.Forms.Control.Paint>\-Handler die `GetThumbnail`\-Methode auf, und übergeben Sie `e` für <xref:System.Windows.Forms.PaintEventArgs>.  
+4.  <span data-ttu-id="6ab0f-119">In der <xref:System.Windows.Forms.Control.Paint> Handler, rufen die `GetThumbnail` Methode und übergeben Sie `e` für <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-119">In the <xref:System.Windows.Forms.Control.Paint> handler, call the `GetThumbnail` method and pass `e` for <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
   
-5.  Suchen Sie eine Bilddatei, von der Sie eine Miniaturansicht erstellen möchten.  
+5.  <span data-ttu-id="6ab0f-120">Suchen von Abbilddateien, die eine Miniaturansicht der machen möchten.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-120">Find an image file that you want to make a thumbnail of.</span></span>  
   
-6.  Geben Sie in der `GetThumbnail`\-Methode den Pfad und den Dateinamen zum Bild an.  
+6.  <span data-ttu-id="6ab0f-121">In der `GetThumbnail` -Methode, geben Sie den Pfad und Dateinamen an, in das Abbild.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-121">In the `GetThumbnail` method, specify the path and file name to your image.</span></span>  
   
-7.  Drücken Sie F5, um das Beispiel auszuführen.  
+7.  <span data-ttu-id="6ab0f-122">Drücken Sie F5, um das Beispiel auszuführen.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-122">Press F5 to run the example.</span></span>  
   
-     Ein Miniaturbild mit der Größe 100x100 wird im Formular angezeigt.  
+     <span data-ttu-id="6ab0f-123">Ein Miniaturbild Maßen 100 x 100 wird auf dem Formular angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ab0f-123">A 100 by 100 thumbnail image appears on the form.</span></span>  
   
-## Siehe auch  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="6ab0f-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ab0f-124">See Also</span></span>  
+ [<span data-ttu-id="6ab0f-125">Bilder, Bitmaps und Metadateien</span><span class="sxs-lookup"><span data-stu-id="6ab0f-125">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="6ab0f-126">Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien</span><span class="sxs-lookup"><span data-stu-id="6ab0f-126">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

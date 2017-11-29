@@ -1,66 +1,69 @@
 ---
-title: "Gewusst wie: Programmgesteuertes Erstellen einer Tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erstellen, Tabellen (Programmgesteuert)"
-  - "Dokumente, Programmgesteuertes Erstellen von Tabellen"
-  - "Tabellen, Programmgesteuertes Erstellen"
+title: 'Gewusst wie: Programmgesteuertes Erstellen einer Tabelle'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ef961bb219f201cf5fe32a5b2bbdf70ef45e73b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Programmgesteuertes Erstellen einer Tabelle
-Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Documents.Table> programmgesteuert erstellt und mit Inhalt gefüllt wird.  Die Inhalte der Tabelle sind auf fünf Zeilen \(dargestellt durch <xref:System.Windows.Documents.TableRow>\-Objekte, die in einem <xref:System.Windows.Documents.Table.RowGroups%2A>\-Objekt enthalten sind\) und sechs Spalten \(dargestellt durch <xref:System.Windows.Documents.TableColumn>\-Objekte\) aufgeteilt.  Die Zeilen werden für verschiedene Darstellungszwecke verwendet. Unter anderem gibt es eine Titelzeile, die als Überschrift für die gesamte Tabelle dient, eine Kopfzeile, die die Datenspalten der Tabelle beschreibt, und eine Fußzeile mit Zusammenfassungsinformationen.  Beachten Sie, dass die Begriffe "Titelzeile", "Kopfzeile" und "Fußzeile" keine spezifischen Bestandteile der Tabelle sind. Es handelt sich lediglich um Zeilen mit unterschiedlichen Eigenschaften.  Tabellenzellen enthalten den eigentlichen Inhalt, der aus Text, Bildern oder nahezu jedem beliebigen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]\-Element bestehen kann.  
+# <a name="how-to-build-a-table-programmatically"></a><span data-ttu-id="c0076-102">Gewusst wie: Programmgesteuertes Erstellen einer Tabelle</span><span class="sxs-lookup"><span data-stu-id="c0076-102">How to: Build a Table Programmatically</span></span>
+<span data-ttu-id="c0076-103">Den folgenden Beispielen wird veranschaulicht, wie Sie programmgesteuert erstellen eine <xref:System.Windows.Documents.Table> und füllen sie mit dem Inhalt.</span><span class="sxs-lookup"><span data-stu-id="c0076-103">The following examples show how to programmatically create a <xref:System.Windows.Documents.Table> and populate it with content.</span></span> <span data-ttu-id="c0076-104">Der Inhalt der Tabelle in fünf Zeilen aufgeteilt werden (dargestellte <xref:System.Windows.Documents.TableRow> enthaltenen Objekte eine <xref:System.Windows.Documents.Table.RowGroups%2A> Objekt) und sechs Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Objekte).</span><span class="sxs-lookup"><span data-stu-id="c0076-104">The contents of the table are apportioned into five rows (represented by <xref:System.Windows.Documents.TableRow> objects contained in a <xref:System.Windows.Documents.Table.RowGroups%2A> object) and six columns (represented by <xref:System.Windows.Documents.TableColumn> objects).</span></span> <span data-ttu-id="c0076-105">Die Zeilen werden für die unterschiedlichen Präsentationszwecke verwendet, einschließlich einer Titelzeile für die Betitelung der gesamten Tabelle, einer Kopfzeile zur Beschreibung der Spalten in der Tabelle und einer Fußzeile mit Zusammenfassungsinformationen.</span><span class="sxs-lookup"><span data-stu-id="c0076-105">The rows are used for different presentation purposes, including a title row intended to title the entire table, a header row to describe the columns of data in the table, and a footer row with summary information.</span></span>  <span data-ttu-id="c0076-106">Beachten Sie, dass die Angabe der Zeilen „Titel“, „Kopf“ und „Fuß“ in der Tabelle nicht vorhanden ist. Hierbei handelt es sich nur um Zeilen mit unterschiedlichen Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="c0076-106">Note that the notion of "title", "header", and "footer" rows are not inherent to the table; these are simply rows with different characteristics.</span></span> <span data-ttu-id="c0076-107">Tabellenzellen enthalten den tatsächlichen Inhalt, der der Text, Bilder oder fast jeder beliebigen anderen bestehen kann [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Element.</span><span class="sxs-lookup"><span data-stu-id="c0076-107">Table cells contain the actual content, which can be comprised of text, images, or nearly any other [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] element.</span></span>  
   
-## Beispiel  
- Zuerst wird ein <xref:System.Windows.Documents.FlowDocument>, das die <xref:System.Windows.Documents.Table> hostet, sowie eine neue <xref:System.Windows.Documents.Table> erstellt und zu den Inhalten von <xref:System.Windows.Documents.FlowDocument> hinzugefügt.  
+## <a name="example"></a><span data-ttu-id="c0076-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-108">Example</span></span>  
+ <span data-ttu-id="c0076-109">Zuerst eine <xref:System.Windows.Documents.FlowDocument> wird erstellt, auf Host der <xref:System.Windows.Documents.Table>, und eine neue <xref:System.Windows.Documents.Table> erstellt und hinzugefügt werden, um den Inhalt des der <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="c0076-109">First, a <xref:System.Windows.Documents.FlowDocument> is created to host the <xref:System.Windows.Documents.Table>, and a new <xref:System.Windows.Documents.Table> is created and added to the contents of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
-## Beispiel  
- Anschließend werden sechs <xref:System.Windows.Documents.TableColumn>\-Objekte erstellt und mit einigen Formatierungen zur <xref:System.Windows.Documents.Table.Columns%2A>\-Auflistung der Tabelle hinzugefügt.  
+## <a name="example"></a><span data-ttu-id="c0076-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-110">Example</span></span>  
+ <span data-ttu-id="c0076-111">Als Nächstes sechs <xref:System.Windows.Documents.TableColumn> -Objekte erstellt und der Tabelle hinzugefügt <xref:System.Windows.Documents.Table.Columns%2A> -Auflistung, mit einigen Formatierung angewendet.</span><span class="sxs-lookup"><span data-stu-id="c0076-111">Next, six <xref:System.Windows.Documents.TableColumn> objects are created and added to the table's <xref:System.Windows.Documents.Table.Columns%2A> collection, with some formatting applied.</span></span>  
   
 > [!NOTE]
->  Beachten Sie, dass die <xref:System.Windows.Documents.Table.Columns%2A>\-Auflistung der Tabelle nullbasierte Standardindizierung verwendet.  
+>  <span data-ttu-id="c0076-112">Beachten Sie, dass der Tabelle <xref:System.Windows.Documents.Table.Columns%2A> Auflistung verwendet standardmäßige nullbasierter Indizierung.</span><span class="sxs-lookup"><span data-stu-id="c0076-112">Note that the table's <xref:System.Windows.Documents.Table.Columns%2A> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
-## Beispiel  
- Anschließend wird eine Titelzeile erstellt und mit etwas Formatierung zur Tabelle hinzugefügt.  Die Titelzeile enthält eine einzelne Zelle, die alle sechs Spalten in der Tabelle überspannt.  
+## <a name="example"></a><span data-ttu-id="c0076-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-113">Example</span></span>  
+ <span data-ttu-id="c0076-114">Als Nächstes wird eine Titelzeile erstellt und mit angewandter Formatierung zur Tabelle hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="c0076-114">Next, a title row is created and added to the table with some formatting applied.</span></span>  <span data-ttu-id="c0076-115">Die Titelzeile enthält eine einzelne Zelle, die alle sechs Spalten in der Tabelle umfasst.</span><span class="sxs-lookup"><span data-stu-id="c0076-115">The title row happens to contain a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
-## Beispiel  
- Anschließend wird ein Header erstellt und zur Tabelle hinzugefügt. Die Zellen im Header werden erstellt und mit Inhalt gefüllt.  
+## <a name="example"></a><span data-ttu-id="c0076-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-116">Example</span></span>  
+ <span data-ttu-id="c0076-117">Als Nächstes eine Kopfzeile erstellt und zur Tabelle hinzugefügt, und die Zellen in der Kopfzeile werden erstellt und mit Inhalt gefüllt.</span><span class="sxs-lookup"><span data-stu-id="c0076-117">Next, a header row is created and added to the table, and the cells in the header row are created and populated with content.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
-## Beispiel  
- Anschließend wird eine Zeile für Daten erstellt und zur Tabelle hinzugefügt. Die Zellen in dieser Zeile werden erstellt und mit Inhalt gefüllt.  Das Erstellen dieser Zeile ähnelt der Erstellung des Headers, mit leichten Unterschieden bei der Formatierung.  
+## <a name="example"></a><span data-ttu-id="c0076-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-118">Example</span></span>  
+ <span data-ttu-id="c0076-119">Als Nächstes wird eine Zeile für Daten erstellt und zur Tabelle hinzugefügt, und die Zellen in dieser Zeile werden erstellt und mit Inhalt gefüllt.</span><span class="sxs-lookup"><span data-stu-id="c0076-119">Next, a row for data is created and added to the table, and the cells in this row are created and populated with content.</span></span>  <span data-ttu-id="c0076-120">Das Erstellen dieser Zeile ähnelt der Erstellung der Kopfzeile, mit einer leicht verschiedenen angewandten Formatierung.</span><span class="sxs-lookup"><span data-stu-id="c0076-120">Building this row is similar to building the header row, with slightly different formatting applied.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
-## Beispiel  
- Schließlich wird eine Fußzeile erstellt, hinzugefügt und formatiert.  Genau wie die Titelzeile enthält auch die Fußzeile eine einzelne Zelle, die alle sechs Spalten in der Tabelle überspannt.  
+## <a name="example"></a><span data-ttu-id="c0076-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0076-121">Example</span></span>  
+ <span data-ttu-id="c0076-122">Schließlich wird eine Fußzeile erstellt, hinzugefügt und formatiert.</span><span class="sxs-lookup"><span data-stu-id="c0076-122">Finally, a footer row is created, added, and formatted.</span></span>  <span data-ttu-id="c0076-123">Genau wie die Titelzeile enthält die Fußzeile eine einzelne Zelle, die alle sechs Spalten in der Tabelle umfasst.</span><span class="sxs-lookup"><span data-stu-id="c0076-123">Like the title row, the footer contains a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## Siehe auch  
- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c0076-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0076-124">See Also</span></span>  
+ [<span data-ttu-id="c0076-125">Übersicht über Tabellen</span><span class="sxs-lookup"><span data-stu-id="c0076-125">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)

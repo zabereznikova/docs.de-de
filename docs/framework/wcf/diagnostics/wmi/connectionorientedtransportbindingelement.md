@@ -1,25 +1,28 @@
 ---
-title: "ConnectionOrientedTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ConnectionOrientedTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d28bedb67850b9bb77c25c8d29c6e39b056770a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ConnectionOrientedTransportBindingElement
-ConnectionOrientedTransportBindingElement  
+# <a name="connectionorientedtransportbindingelement"></a><span data-ttu-id="79101-102">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="79101-102">ConnectionOrientedTransportBindingElement</span></span>
+<span data-ttu-id="79101-103">ConnectionOrientedTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="79101-103">ConnectionOrientedTransportBindingElement</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="79101-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="79101-104">Syntax</span></span>  
   
 ```  
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
@@ -35,73 +38,73 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Methoden  
- Die ConnectionOrientedTransportBindingElement\-Klasse definiert keine Methoden.  
+## <a name="methods"></a><span data-ttu-id="79101-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="79101-105">Methods</span></span>  
+ <span data-ttu-id="79101-106">Die ConnectionOrientedTransportBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="79101-106">The ConnectionOrientedTransportBindingElement class does not define any methods.</span></span>  
   
-## Eigenschaften  
- Die ConnectionOrientedTransportBindingElement\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a><span data-ttu-id="79101-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="79101-107">Properties</span></span>  
+ <span data-ttu-id="79101-108">Die ConnectionOrientedTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="79101-108">The ConnectionOrientedTransportBindingElement class has the following properties:</span></span>  
   
-### ChannelInitializationTimeout  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="channelinitializationtimeout"></a><span data-ttu-id="79101-109">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="79101-109">ChannelInitializationTimeout</span></span>  
+ <span data-ttu-id="79101-110">Datentyp: Zeitpunkt (Datum und Uhrzeit)</span><span class="sxs-lookup"><span data-stu-id="79101-110">Data type: datetime</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-111">Access type: Read-only</span></span>  
   
- Der Zeitraum, der angibt, wie viel Zeit für die Durchführung der Kanalinitialisierung aufgewendet werden kann, bevor eine Zeitüberschreitung vorliegt.  
+ <span data-ttu-id="79101-112">Der Zeitraum, der angibt, wie viel Zeit für die Durchführung der Kanalinitialisierung aufgewendet werden kann, bevor eine Zeitüberschreitung vorliegt.</span><span class="sxs-lookup"><span data-stu-id="79101-112">The timespan that specifies how long the channel initialization has to complete before timing out.</span></span>  
   
-### ConnectionBufferSize  
- Datentyp: sint32  
+### <a name="connectionbuffersize"></a><span data-ttu-id="79101-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="79101-113">ConnectionBufferSize</span></span>  
+ <span data-ttu-id="79101-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="79101-114">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-115">Access type: Read-only</span></span>  
   
- Die Puffergröße, die zum Übertragen eines Teils der serialisierten Meldung vom Client oder Dienst verwendet wird.  
+ <span data-ttu-id="79101-116">Die Puffergröße, die zum Übertragen eines Teils der serialisierten Meldung vom Client oder Dienst verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="79101-116">The size of the buffer used to transmit a chunk of the serialized message on the wire from the client or service.</span></span>  
   
-### HostNameComparisonMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="hostnamecomparisonmode"></a><span data-ttu-id="79101-117">HostNameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="79101-117">HostNameComparisonMode</span></span>  
+ <span data-ttu-id="79101-118">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="79101-118">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-119">Access type: Read-only</span></span>  
   
- Ein Wert, der angibt, ob der Hostname zum Erreichen des Dienstes bei übereinstimmendem URI verwendet wird.  
+ <span data-ttu-id="79101-120">Ein Wert, der angibt, ob der Hostname zum Erreichen des Dienstes bei übereinstimmendem URI verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="79101-120">A value that indicates whether the hostname is used to reach the service when matching on the URI.</span></span>  
   
-### MaxBufferSize  
- Datentyp: sint32  
+### <a name="maxbuffersize"></a><span data-ttu-id="79101-121">MaxBufferSize</span><span class="sxs-lookup"><span data-stu-id="79101-121">MaxBufferSize</span></span>  
+ <span data-ttu-id="79101-122">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="79101-122">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-123">Access type: Read-only</span></span>  
   
- Die maximale Größe des zu verwendenden Puffers.  
+ <span data-ttu-id="79101-124">Die maximale Größe des zu verwendenden Puffers.</span><span class="sxs-lookup"><span data-stu-id="79101-124">The maximum size of the buffer to use.</span></span>  
   
-### MaxOutputDelay  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="maxoutputdelay"></a><span data-ttu-id="79101-125">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="79101-125">MaxOutputDelay</span></span>  
+ <span data-ttu-id="79101-126">Datentyp: Zeitpunkt (Datum und Uhrzeit)</span><span class="sxs-lookup"><span data-stu-id="79101-126">Data type: datetime</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-127">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-127">Access type: Read-only</span></span>  
   
- Das maximale Zeitintervall, das als Teil einer Nachricht oder vollständigen Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.  
+ <span data-ttu-id="79101-128">Das maximale Zeitintervall, das als Teil einer Nachricht oder vollständigen Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.</span><span class="sxs-lookup"><span data-stu-id="79101-128">The maximum interval of time that a chunk of a message or a full message can remain buffered in memory before being sent out.</span></span>  
   
-### MaxPendingAccepts  
- Datentyp: sint32  
+### <a name="maxpendingaccepts"></a><span data-ttu-id="79101-129">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="79101-129">MaxPendingAccepts</span></span>  
+ <span data-ttu-id="79101-130">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="79101-130">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-131">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-131">Access type: Read-only</span></span>  
   
- Die maximale Anzahl ausstehender asynchroner Annahmethreads, die für die Verarbeitung eingehender Verbindungen beim Dienst zur Verfügung stehen.  
+ <span data-ttu-id="79101-132">Die maximale Anzahl ausstehender asynchroner Annahmethreads, die für die Verarbeitung eingehender Verbindungen beim Dienst zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="79101-132">The maximum number of pending asynchronous accept threads that are available for processing incoming connections on the service.</span></span>  
   
-### MaxPendingConnections  
- Datentyp: sint32  
+### <a name="maxpendingconnections"></a><span data-ttu-id="79101-133">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="79101-133">MaxPendingConnections</span></span>  
+ <span data-ttu-id="79101-134">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="79101-134">Data type: sint32</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-135">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-135">Access type: Read-only</span></span>  
   
- Die maximale Anzahl ausstehender Verbindungen.  
+ <span data-ttu-id="79101-136">Die maximale Anzahl ausstehender Verbindungen.</span><span class="sxs-lookup"><span data-stu-id="79101-136">The maximum number of pending connections.</span></span>  
   
-### TransferMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="transfermode"></a><span data-ttu-id="79101-137">TransferMode</span><span class="sxs-lookup"><span data-stu-id="79101-137">TransferMode</span></span>  
+ <span data-ttu-id="79101-138">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="79101-138">Data type: string</span></span>  
   
- Zugriffstyp: Schreibgeschützt  
+ <span data-ttu-id="79101-139">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="79101-139">Access type: Read-only</span></span>  
   
- Ein Wert, der angibt, ob die Nachrichten bei verbindungsorientiertem Transport gepuffert oder per Stream übertragen werden.  
+ <span data-ttu-id="79101-140">Ein Wert, der angibt, ob die Nachrichten bei verbindungsorientiertem Transport gepuffert oder per Stream übertragen werden.</span><span class="sxs-lookup"><span data-stu-id="79101-140">A value that specifies whether the messages are buffered or streamed with the connection-oriented transport.</span></span>  
   
-## Anforderungen  
+## <a name="requirements"></a><span data-ttu-id="79101-141">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="79101-141">Requirements</span></span>  
   
-|MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|<span data-ttu-id="79101-142">MOF</span><span class="sxs-lookup"><span data-stu-id="79101-142">MOF</span></span>|<span data-ttu-id="79101-143">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="79101-143">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="79101-144">Namespace</span><span class="sxs-lookup"><span data-stu-id="79101-144">Namespace</span></span>|<span data-ttu-id="79101-145">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="79101-145">Defined in root\ServiceModel</span></span>|  
   
-## Siehe auch  
+## <a name="see-also"></a><span data-ttu-id="79101-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79101-146">See Also</span></span>  
  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

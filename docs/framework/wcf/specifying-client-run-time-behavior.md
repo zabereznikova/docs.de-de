@@ -1,53 +1,56 @@
 ---
-title: "Angeben des Clientlaufzeitverhaltens | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Verhalten [WCF], vom System bereitgestellter client"
+title: Angeben des Clientlaufzeitverhaltens
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3aebab3799af562d958eb8e3e83380e734fe9268
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Angeben des Clientlaufzeitverhaltens
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Clients wie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste können so konfiguriert werden, dass sie das Laufzeitverhalten der Clientanwendung anpassen. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute> und <xref:System.ServiceModel.Description.CallbackDebugBehavior> Attribute, deren Verhalten zur Laufzeit zu ändern. Das andere Attribut <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Laufzeit-Dienstverhalten angegeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+# <a name="specifying-client-run-time-behavior"></a><span data-ttu-id="d832e-102">Angeben des Clientlaufzeitverhaltens</span><span class="sxs-lookup"><span data-stu-id="d832e-102">Specifying Client Run-Time Behavior</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="d832e-103">-Clients wie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienste können so konfiguriert werden, dass sie das Laufzeitverhalten der Clientanwendung anpassen.</span><span class="sxs-lookup"><span data-stu-id="d832e-103"> clients, like [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services, can be configured to modify the run-time behavior to suit the client application.</span></span> <span data-ttu-id="d832e-104">Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar.</span><span class="sxs-lookup"><span data-stu-id="d832e-104">Three attributes are available for specifying client run-time behavior.</span></span> <span data-ttu-id="d832e-105">Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern.</span><span class="sxs-lookup"><span data-stu-id="d832e-105">Duplex client callback objects can use the <xref:System.ServiceModel.CallbackBehaviorAttribute> and <xref:System.ServiceModel.Description.CallbackDebugBehavior> attributes to modify their run-time behavior.</span></span> <span data-ttu-id="d832e-106">Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen.</span><span class="sxs-lookup"><span data-stu-id="d832e-106">The other attribute, <xref:System.ServiceModel.Description.ClientViaBehavior>, can be used to separate the logical destination from the immediate network destination.</span></span> <span data-ttu-id="d832e-107">Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden.</span><span class="sxs-lookup"><span data-stu-id="d832e-107">In addition, duplex client callback types can use some of the service-side behaviors.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="d832e-108">[Run-Time-Dienstverhalten angegeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="d832e-108"> [Specifying Service Run-Time Behavior](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).</span></span>  
   
-## <a name="using-the-callbackbehaviorattribute"></a>Verwenden des CallbackBehaviorAttribute  
- Sie können konfigurieren oder Erweitern Sie das Ausführungsverhalten einer rückrufvertragsimplementierung in einer Clientanwendung mithilfe der <xref:System.ServiceModel.CallbackBehaviorAttribute> Klasse. Dieses Attribut führt eine ähnliche Funktion für die Rückrufklasse wie die <xref:System.ServiceModel.ServiceBehaviorAttribute> Klasse instanziieren von Verhaltens-und transaktionseinstellungen ausgenommen.  
+## <a name="using-the-callbackbehaviorattribute"></a><span data-ttu-id="d832e-109">Verwenden des CallbackBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="d832e-109">Using the CallbackBehaviorAttribute</span></span>  
+ <span data-ttu-id="d832e-110">Sie können das Ausführungsverhalten einer Rückrufvertragsimplementierung in einer Clientanwendung mit der <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse konfigurieren oder erweitern.</span><span class="sxs-lookup"><span data-stu-id="d832e-110">You can configure or extend the execution behavior of a callback contract implementation in a client application by using the <xref:System.ServiceModel.CallbackBehaviorAttribute> class.</span></span> <span data-ttu-id="d832e-111">Dieses Attribut führt eine ähnliche Funktion für die Rückrufklasse wie die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Klasse aus, das Instanziieren von Verhaltens- und Transaktionseinstellungen ausgenommen.</span><span class="sxs-lookup"><span data-stu-id="d832e-111">This attribute performs a similar function for the callback class as the <xref:System.ServiceModel.ServiceBehaviorAttribute> class, with the exception of instancing behavior and transaction settings.</span></span>  
   
- Die <xref:System.ServiceModel.CallbackBehaviorAttribute> Klasse muss auf die Klasse, die den Rückrufvertrag implementiert angewendet werden. Wenn eine vertragsimplementierung zugewiesen ein <xref:System.InvalidOperationException> Ausnahme zur Laufzeit. Das folgende Codebeispiel zeigt eine <xref:System.ServiceModel.CallbackBehaviorAttribute> Klasse für ein Rückrufobjekt, das verwendet die <xref:System.Threading.SynchronizationContext> Objekts bestimmen, den Thread für das Marshallen der <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> -Eigenschaft zum Erzwingen der nachrichtenvalidierung und die <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> -Eigenschaft zum Zurückgeben von Ausnahmen als <xref:System.ServiceModel.FaultException> -Objekte an den Dienst zum Debuggen.  
+ <span data-ttu-id="d832e-112">Die <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse muss auf die Klasse angewendet werden, die den Rückrufvertrag implementiert.</span><span class="sxs-lookup"><span data-stu-id="d832e-112">The <xref:System.ServiceModel.CallbackBehaviorAttribute> class must be applied to the class that implements the callback contract.</span></span> <span data-ttu-id="d832e-113">Beim Anwenden auf eine Nicht-Duplex-Vertragsimplementierung wird zur Laufzeit eine <xref:System.InvalidOperationException>-Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="d832e-113">If applied to a nonduplex contract implementation, an <xref:System.InvalidOperationException> exception is thrown at run time.</span></span> <span data-ttu-id="d832e-114">Das folgende Codebeispiel zeigt eine <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse für ein Rückrufobjekt, das das <xref:System.Threading.SynchronizationContext>-Objekt zur Bestimmung des Threads für das Marshallen verwendet, die <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A>-Eigenschaft zum Erzwingen der Nachrichtenvalidierung und die <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A>-Eigenschaft zum Zurückgeben von Ausnahmen als <xref:System.ServiceModel.FaultException>-Objekte an den Dienst zum Debuggen.</span><span class="sxs-lookup"><span data-stu-id="d832e-114">The following code example shows a <xref:System.ServiceModel.CallbackBehaviorAttribute> class on a callback object that uses the <xref:System.Threading.SynchronizationContext> object to determine the thread to marshal to, the <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> property to enforce message validation, and the <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> property to return exceptions as <xref:System.ServiceModel.FaultException> objects to the service for debugging purposes.</span></span>  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
   
-## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Verwenden von CallbackDebugBehavior zum Aktivieren des Flusses verwalteter Ausnahmeinformationen  
- Sie können den Fluss verwalteter Ausnahmeinformationen in einem Client-Rückrufobjekt zurück an den Dienst für Debuggingzwecke durch Festlegen der <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft `true` entweder programmgesteuert oder aus einer Anwendungskonfigurationsdatei.  
+## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a><span data-ttu-id="d832e-115">Verwenden von CallbackDebugBehavior zum Aktivieren des Flusses verwalteter Ausnahmeinformationen</span><span class="sxs-lookup"><span data-stu-id="d832e-115">Using CallbackDebugBehavior to Enable the Flow of Managed Exception Information</span></span>  
+ <span data-ttu-id="d832e-116">Sie können den Fluss verwalteter Ausnahmeinformationen in einem Client-Rückrufobjekt zurück zum Dienst zum Debuggen aktivieren, indem Sie die <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A>-Eigenschaft entweder programmgesteuert oder aus einer Anwendungskonfigurationsdatei auf `true` festlegen.</span><span class="sxs-lookup"><span data-stu-id="d832e-116">You can enable the flow of managed exception information in a client callback object back to the service for debugging purposes by setting the <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> property to `true` either programmatically or from an application configuration file.</span></span>  
   
- Verwaltete Ausnahmeinformationen an Dienste zurückzugeben, kann ein Sicherheitsrisiko darstellen, da Ausnahmedetails Informationen zur internen Clientimplementierung offen legen, die von nicht autorisierten Diensten verwendet werden können. Darüber hinaus auch die <xref:System.ServiceModel.Description.CallbackDebugBehavior> Eigenschaften können auch programmgesteuert festgelegt werden, es kann leicht vergessen, deaktivieren Sie <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> bei der Bereitstellung.  
+ <span data-ttu-id="d832e-117">Verwaltete Ausnahmeinformationen an Dienste zurückzugeben, kann ein Sicherheitsrisiko darstellen, da Ausnahmedetails Informationen zur internen Clientimplementierung offen legen, die von nicht autorisierten Diensten verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="d832e-117">Returning managed exception information to services can be a security risk because exception details expose information about the internal client implementation that  unauthorized services could use.</span></span> <span data-ttu-id="d832e-118">Außerdem wird, obwohl die <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Eigenschaften auch programmgesteuert festgelegt werden können, bei der Bereitstellung das Deaktivieren von <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> schnell vergessen.</span><span class="sxs-lookup"><span data-stu-id="d832e-118">In addition, although the <xref:System.ServiceModel.Description.CallbackDebugBehavior> properties can also be set programmatically, it can be easy to forget to disable <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> when deploying.</span></span>  
   
- Wegen der damit verbundenen Sicherheitsprobleme wird Folgendes dringend empfohlen:  
+ <span data-ttu-id="d832e-119">Wegen der damit verbundenen Sicherheitsprobleme wird Folgendes dringend empfohlen:</span><span class="sxs-lookup"><span data-stu-id="d832e-119">Because of the security issues involved, it is strongly recommended that:</span></span>  
   
--   Sie verwenden eine Anwendungskonfigurationsdatei zum Festlegen des Werts von der <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft `true`.  
+-   <span data-ttu-id="d832e-120">Verwenden Sie eine Anwendungskonfigurationsdatei, um den Wert der <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A>-Eigenschaft auf `true` festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d832e-120">You use an application configuration file to set the value of the <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> property to `true`.</span></span>  
   
--   Führen Sie diesen Vorgang nur in gesteuerten Debugszenarien aus.  
+-   <span data-ttu-id="d832e-121">Führen Sie diesen Vorgang nur in gesteuerten Debugszenarien aus.</span><span class="sxs-lookup"><span data-stu-id="d832e-121">You do so only in controlled debugging scenarios.</span></span>  
   
- Das folgende Codebeispiel zeigt eine Clientkonfigurationsdatei, die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] anweist, verwaltete Ausnahmeinformationen aus einem Client-Rückrufobjekt in SOAP-Nachrichten zurückzugeben.  
+ <span data-ttu-id="d832e-122">Das folgende Codebeispiel zeigt eine Clientkonfigurationsdatei, die [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] anweist, verwaltete Ausnahmeinformationen aus einem Client-Rückrufobjekt in SOAP-Nachrichten zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="d832e-122">The following code example shows a client configuration file that instructs [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to return managed exception information from a client callback object in SOAP messages.</span></span>  
   
- <!-- TODO: review snippet reference [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]  -->
- <!-- TODO: review snippet reference [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  -->
- <!-- TODO: review snippet reference [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  -->  
+ [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
+ 
+## <a name="using-the-clientviabehavior-behavior"></a><span data-ttu-id="d832e-123">Verwenden des ClientViaBehavior-Verhaltens</span><span class="sxs-lookup"><span data-stu-id="d832e-123">Using the ClientViaBehavior Behavior</span></span>  
+ <span data-ttu-id="d832e-124">Sie können mit dem <xref:System.ServiceModel.Description.ClientViaBehavior>-Verhalten den URI (Uniform Resource Identifier) angeben, für den der Transportkanal erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="d832e-124">You can use the <xref:System.ServiceModel.Description.ClientViaBehavior> behavior to specify the Uniform Resource Identifier for which the transport channel should be created.</span></span> <span data-ttu-id="d832e-125">Verwenden Sie dieses Verhalten, wenn das unmittelbare Netzwerkziel nicht der gewünschte Prozessor der Nachricht ist.</span><span class="sxs-lookup"><span data-stu-id="d832e-125">Use this behavior when the immediate network destination is not the intended processor of the message.</span></span> <span data-ttu-id="d832e-126">Dies ermöglicht Konversationen über mehrere Hops, wenn die aufrufende Anwendung das endgültige Ziel nicht unbedingt kennt oder wenn der `Via`-Header des Ziels keine Adresse ist.</span><span class="sxs-lookup"><span data-stu-id="d832e-126">This enables multiple-hop conversations when the calling application does not necessarily know the ultimate destination or when the destination `Via` header is not an address.</span></span>  
   
-## <a name="using-the-clientviabehavior-behavior"></a>Verwenden des ClientViaBehavior-Verhaltens  
- Sie können die <xref:System.ServiceModel.Description.ClientViaBehavior> Verhalten an den Uniform Resource Identifier, für den der Transportkanal erstellt werden soll. Verwenden Sie dieses Verhalten, wenn das unmittelbare Netzwerkziel nicht der gewünschte Prozessor der Nachricht ist. Dies ermöglicht Konversationen über mehrere Hops, wenn die aufrufende Anwendung das endgültige Ziel nicht unbedingt kennt oder wenn der `Via`-Header des Ziels keine Adresse ist.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Angeben der Dienstlaufzeit Verhalten](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="d832e-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d832e-127">See Also</span></span>  
+ [<span data-ttu-id="d832e-128">Angeben des Dienstlaufzeitverhaltens</span><span class="sxs-lookup"><span data-stu-id="d832e-128">Specifying Service Run-Time Behavior</span></span>](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

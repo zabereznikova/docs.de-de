@@ -1,96 +1,88 @@
 ---
-title: Multithreadanwendungen (Visual Basic) | Microsoft-Dokumentation
+title: "Multithreadanwendungen verwendet werden können (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bde7f49a2f2bc8a2e6c1eeab3722428b8a37a95
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="multithreaded-applications-visual-basic"></a>Multithreadanwendungen (Visual Basic)
-In Visual Basic können Sie Anwendungen schreiben, die mehrere Aufgaben gleichzeitig ausführen. Tasks, die möglicherweise andere Tasks aufhalten, können in separaten Threads ausgeführt *multithreading* oder *freies threading*.  
+# <a name="multithreaded-applications-visual-basic"></a><span data-ttu-id="ec7ae-102">Multithreadanwendungen verwendet werden können (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec7ae-102">Multithreaded Applications (Visual Basic)</span></span>
+<span data-ttu-id="ec7ae-103">In Visual Basic können Sie Anwendungen schreiben, die mehrere Aufgaben gleichzeitig ausführen.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-103">With Visual Basic, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="ec7ae-104">Aufgaben, die möglicherweise andere Aufgaben aufhalten, können in separaten Threads ausgeführt werden. Dieser Prozess ist als *Multithreading* oder *Freies Threading* bekannt.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  
   
- Clientanwendungen, die Verwendung von multithreading mehr auf Benutzereingaben reagieren, da die Benutzeroberfläche aktiv bleibt, wie prozessorintensive Tasks in separaten Threads ausgeführt werden. Multithreading ist auch nützlich, beim Erstellen von skalierbarer Anwendungen, da Sie Threads als Workloads hinzufügen können.  
+ <span data-ttu-id="ec7ae-105">Clientanwendungen, die Multithreading verwenden, reagieren besser auf Benutzereingaben, weil die Benutzeroberfläche aktiv bleibt, da prozessorintensive Aufgaben in separaten Threads ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-105">Applications that use multithreading are more responsive to user input because the user interface stays active as processor-intensive tasks execute on separate threads.</span></span> <span data-ttu-id="ec7ae-106">Multithreading ist auch nützlich, wenn Sie skalierbare Aufgaben erstellen, da Sie Threads bei steigender Arbeitsauslastung hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-106">Multithreading is also useful when you create scalable applications, because you can add threads as the workload increases.</span></span>  
   
-## <a name="creating-and-using-threads"></a>Erstellen und Verwenden von Threads  
- Wenn Sie mehr Kontrolle über das Verhalten des Threads der Anwendung benötigen, können Sie die Threads selbst verwalten. Beachten Sie jedoch, dass das Schreiben fehlerfreier Multithreadanwendungen schwierig sein kann: Ihre Anwendung nicht mehr reagiert oder vorübergehenden Fehler zurückzuführen, dass Racebedingungen auftreten. Weitere Informationen finden Sie unter [Threadsichere Komponenten](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).  
+## <a name="creating-and-using-threads"></a><span data-ttu-id="ec7ae-107">Erstellen und Verwenden von Threads</span><span class="sxs-lookup"><span data-stu-id="ec7ae-107">Creating and Using Threads</span></span>  
+ <span data-ttu-id="ec7ae-108">Wenn Sie mehr Kontrolle über das Verhalten von Threads der Anwendung benötigen, können Sie die Threads selbst verwalten.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-108">If you need more control over the behavior of your application's threads, you can manage the threads yourself.</span></span> <span data-ttu-id="ec7ae-109">Beachten Sie jedoch, dass das Schreiben fehlerfreier Multithreadanwendungen schwierig sein kann: Ihre Anwendung reagiert vielleicht nicht mehr oder stößt auf vorübergehende Fehler, die durch Racebedingungen verursacht werden.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-109">However, realize that writing correct multithreaded applications can be difficult: Your application may stop responding or experience transient errors caused by race conditions.</span></span> <span data-ttu-id="ec7ae-110">Weitere Informationen finden Sie unter [Threadsichere Komponenten](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).</span><span class="sxs-lookup"><span data-stu-id="ec7ae-110">For more information, see [Thread-Safe Components](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).</span></span>  
   
- Sie erstellen einen neuen Thread durch Deklarieren einer Variablen vom Typ <xref:System.Threading.Thread>und Aufrufen des Konstruktors, der mit dem Namen der Prozedur oder der Methode, die für den neuen Thread ausgeführt werden soll.</xref:System.Threading.Thread> Der folgende Code veranschaulicht dies.  
+ <span data-ttu-id="ec7ae-111">Sie erstellen einen neuen Thread, indem Sie eine Variable des Typs <xref:System.Threading.Thread> deklarieren und den Konstruktor aufrufen, der den Namen der Prozedur oder Methode bereitstellt, die Sie in einem neuen Thread ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-111">You create a new thread by declaring a variable of type <xref:System.Threading.Thread> and calling the constructor, providing the name of the procedure or method that you want to execute on the new thread.</span></span> <span data-ttu-id="ec7ae-112">Der folgende Code veranschaulicht dies.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-112">The following code provides an example.</span></span>  
   
 ```vb  
 Dim newThread As New System.Threading.Thread(AddressOf AMethod)  
 ```  
   
-### <a name="starting-and-stopping-threads"></a>Starten und Beenden von Threads  
- Um die Ausführung eines neuen Threads zu starten, verwenden Sie die <xref:System.Threading.Thread.Start%2A>Methode, wie im folgenden Code gezeigt.</xref:System.Threading.Thread.Start%2A>  
+### <a name="starting-and-stopping-threads"></a><span data-ttu-id="ec7ae-113">Starten und Beenden von Threads</span><span class="sxs-lookup"><span data-stu-id="ec7ae-113">Starting and Stopping Threads</span></span>  
+ <span data-ttu-id="ec7ae-114">Verwenden Sie zum Starten eines neuen Threads die Methode <xref:System.Threading.Thread.Start%2A>, wie im folgenden Code gezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-114">To start the execution of a new thread, use the <xref:System.Threading.Thread.Start%2A> method, as shown in the following code.</span></span>  
   
 ```vb  
 newThread.Start()  
 ```  
   
- Um die Ausführung eines Threads zu beenden, verwenden Sie die <xref:System.Threading.Thread.Abort%2A>Methode, wie im folgenden Code gezeigt.</xref:System.Threading.Thread.Abort%2A>  
+ <span data-ttu-id="ec7ae-115">Verwenden Sie zum Beenden eines Threads die Methode <xref:System.Threading.Thread.Abort%2A>, wie im folgenden Code gezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-115">To stop the execution of a thread, use the <xref:System.Threading.Thread.Abort%2A> method, as shown in the following code.</span></span>  
   
 ```vb  
 newThread.Abort()  
 ```  
   
- Neben dem Starten und beenden, können Sie auch den Threads anhalten, durch Aufrufen der <xref:System.Threading.Thread.Sleep%2A>oder <xref:System.Threading.Thread.Suspend%2A>-Methode fortsetzen einen angehaltenen Thread mithilfe der <xref:System.Threading.Thread.Resume%2A>-Methode, und löschen Sie einen Thread mithilfe der <xref:System.Threading.Thread.Abort%2A>Methode</xref:System.Threading.Thread.Abort%2A> </xref:System.Threading.Thread.Resume%2A> </xref:System.Threading.Thread.Suspend%2A> </xref:System.Threading.Thread.Sleep%2A>  
+ <span data-ttu-id="ec7ae-116">Neben dem Starten und Beenden von Threads können Sie Threads auch mit den Methoden <xref:System.Threading.Thread.Sleep%2A> oder <xref:System.Threading.Thread.Suspend%2A> anhalten, einen angehaltenen Thread mit der <xref:System.Threading.Thread.Resume%2A>-Methode fortsetzen und einen Thread mithilfe der <xref:System.Threading.Thread.Abort%2A>-Methode zerstören.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-116">Besides starting and stopping threads, you can also pause threads by calling the <xref:System.Threading.Thread.Sleep%2A> or <xref:System.Threading.Thread.Suspend%2A> method, resume a suspended thread by using the <xref:System.Threading.Thread.Resume%2A> method, and destroy a thread by using the <xref:System.Threading.Thread.Abort%2A> method</span></span>  
   
-### <a name="thread-methods"></a>Thread-Methoden  
- Die folgende Tabelle zeigt einige der Methoden, mit denen Sie einzelne Threads steuern.  
+### <a name="thread-methods"></a><span data-ttu-id="ec7ae-117">Thread-Methoden</span><span class="sxs-lookup"><span data-stu-id="ec7ae-117">Thread Methods</span></span>  
+ <span data-ttu-id="ec7ae-118">Die folgende Tabelle zeigt einige der Methoden, mit denen Sie einzelne Threads steuern.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-118">The following table shows some of the methods that you can use to control individual threads.</span></span>  
   
-|Methode|Aktion|  
+|<span data-ttu-id="ec7ae-119">Methode</span><span class="sxs-lookup"><span data-stu-id="ec7ae-119">Method</span></span>|<span data-ttu-id="ec7ae-120">Aktion</span><span class="sxs-lookup"><span data-stu-id="ec7ae-120">Action</span></span>|  
 |------------|------------|  
-|<xref:System.Threading.Thread.Start%2A></xref:System.Threading.Thread.Start%2A>|Bewirkt, dass einen Thread ausgeführt.|  
-|<xref:System.Threading.Thread.Sleep%2A></xref:System.Threading.Thread.Sleep%2A>|Hält einen Thread für eine bestimmte Zeit.|  
-|<xref:System.Threading.Thread.Suspend%2A></xref:System.Threading.Thread.Suspend%2A>|Hält einen Thread aus, wenn es sich um einen sicheren Punkt erreicht.|  
-|<xref:System.Threading.Thread.Abort%2A></xref:System.Threading.Thread.Abort%2A>|Einen Thread wird beendet, wenn es sich um einen sicheren Punkt erreicht.|  
-|<xref:System.Threading.Thread.Resume%2A></xref:System.Threading.Thread.Resume%2A>|Setzt einen angehaltenen thread|  
-|<xref:System.Threading.Thread.Join%2A></xref:System.Threading.Thread.Join%2A>|Bewirkt, dass den aktuellen Thread eine Ende eines anderen Threads warten. Wenn Sie mit einem Timeoutwert verwendet wird, gibt diese Methode `True` , wenn der Thread in der zugewiesenen Zeit beendet wird.|  
+|<xref:System.Threading.Thread.Start%2A>|<span data-ttu-id="ec7ae-121">Bewirkt, dass ein Thread gestartet wird</span><span class="sxs-lookup"><span data-stu-id="ec7ae-121">Causes a thread to start to run.</span></span>|  
+|<xref:System.Threading.Thread.Sleep%2A>|<span data-ttu-id="ec7ae-122">Hält einen Thread für eine angegebene Zeit an</span><span class="sxs-lookup"><span data-stu-id="ec7ae-122">Pauses a thread for a specified time.</span></span>|  
+|<xref:System.Threading.Thread.Suspend%2A>|<span data-ttu-id="ec7ae-123">Hält einen Thread an, wenn er einen sicheren Punkt erreicht</span><span class="sxs-lookup"><span data-stu-id="ec7ae-123">Pauses a thread when it reaches a safe point.</span></span>|  
+|<xref:System.Threading.Thread.Abort%2A>|<span data-ttu-id="ec7ae-124">Beendet einen Thread, wenn er einen sicheren Punkt erreicht</span><span class="sxs-lookup"><span data-stu-id="ec7ae-124">Stops a thread when it reaches a safe point.</span></span>|  
+|<xref:System.Threading.Thread.Resume%2A>|<span data-ttu-id="ec7ae-125">Startet einen angehaltenen Thread neu</span><span class="sxs-lookup"><span data-stu-id="ec7ae-125">Restarts a suspended thread</span></span>|  
+|<xref:System.Threading.Thread.Join%2A>|<span data-ttu-id="ec7ae-126">Bewirkt, dass der aktuelle Thread auf das Ende eines anderen Threads wartet.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-126">Causes the current thread to wait for another thread to finish.</span></span> <span data-ttu-id="ec7ae-127">Wird der Thread mit einem Timeoutwert verwendet, gibt diese Methode `True` zurück, wenn er in der zugewiesenen Zeit fertig wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-127">If used with a time-out value, this method returns `True` if the thread finishes in the allocated time.</span></span>|  
   
-### <a name="safe-points"></a>Sicherungspunkte  
- Die meisten dieser Methoden sind selbsterklärend, doch der Begriff *Sicherungspunkte* möglicherweise neu für Sie. Sichere Punkte werden im Code, in dem gefahrlos für die common Language Runtime zum automatischen Ausführen *speicherbereinigung*, den Prozess der Freigabe von nicht verwendeter Variablen und nicht verwendetem Speicherplatz. Beim Aufrufen der <xref:System.Threading.Thread.Abort%2A>oder <xref:System.Threading.Thread.Suspend%2A>eines Threads, die common Language Runtime wird der Code analysiert und ermittelt eine geeignete Stelle für den Thread nicht mehr ausgeführt.</xref:System.Threading.Thread.Suspend%2A> </xref:System.Threading.Thread.Abort%2A>  
+### <a name="safe-points"></a><span data-ttu-id="ec7ae-128">Sicherungspunkte</span><span class="sxs-lookup"><span data-stu-id="ec7ae-128">Safe Points</span></span>  
+ <span data-ttu-id="ec7ae-129">Die meisten dieser Methoden sind selbsterklärend, doch der Begriff *Sicherungspunkte* ist vielleicht neu für Sie.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-129">Most of these methods are self-explanatory, but the concept of *safe points* may be new to you.</span></span> <span data-ttu-id="ec7ae-130">Sicherungspunkte sind Stellen im Code, an denen die Common Language Runtime die automatische *Speicherbereinigung* – den Prozess zur Freigabe von Speicher und nicht verwendeten Variablen – sicher ausführen kann.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-130">Safe points are locations in code where it is safe for the common language runtime to perform automatic *garbage collection*, the process of releasing unused variables and reclaiming memory.</span></span> <span data-ttu-id="ec7ae-131">Wenn Sie die Methode <xref:System.Threading.Thread.Abort%2A> oder <xref:System.Threading.Thread.Suspend%2A> eines Threads aufrufen, analysiert die Common Language Runtime den Code und ermittelt den Ort einer geeigneten Stelle, an der der Thread nicht mehr ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-131">When you call the <xref:System.Threading.Thread.Abort%2A> or <xref:System.Threading.Thread.Suspend%2A> method of a thread, the common language runtime analyzes the code and determines the location of an appropriate location for the thread to stop running.</span></span>  
   
-### <a name="thread-properties"></a>Threadeigenschaften  
- Threads enthalten außerdem einige nützliche Eigenschaften, wie in der folgenden Tabelle dargestellt:  
+### <a name="thread-properties"></a><span data-ttu-id="ec7ae-132">Threadeigenschaften</span><span class="sxs-lookup"><span data-stu-id="ec7ae-132">Thread Properties</span></span>  
+ <span data-ttu-id="ec7ae-133">Threads enthalten außerdem einige nützliche Eigenschaften, wie in der folgenden Tabelle dargestellt wird:</span><span class="sxs-lookup"><span data-stu-id="ec7ae-133">Threads also contain several useful properties, as shown in the following table:</span></span>  
   
-|Eigenschaft|Wert|  
+|<span data-ttu-id="ec7ae-134">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="ec7ae-134">Property</span></span>|<span data-ttu-id="ec7ae-135">Wert</span><span class="sxs-lookup"><span data-stu-id="ec7ae-135">Value</span></span>|  
 |--------------|-----------|  
-|<xref:System.Threading.Thread.IsAlive%2A></xref:System.Threading.Thread.IsAlive%2A>|Enthält den Wert `True` , wenn ein Thread aktiv ist.|  
-|<xref:System.Threading.Thread.IsBackground%2A></xref:System.Threading.Thread.IsBackground%2A>|Ruft ab oder legt einen booleschen Wert ab, der angibt, ob ein Thread ist oder ein Hintergrundthread sein sollte. Hintergrundthreads sind wie Vordergrundthreads, aber ein Hintergrundthread verhindert nicht, dass einen Prozess wird beendet. Sobald alle zu einem Prozess gehörenden Vordergrundthreads beendet wurden, beendet die common Language Runtime den Prozess durch Aufrufen der <xref:System.Threading.Thread.Abort%2A>-Methode für Hintergrundthreads, die noch aktiv sind.</xref:System.Threading.Thread.Abort%2A>|  
-|<xref:System.Threading.Thread.Name%2A></xref:System.Threading.Thread.Name%2A>|Ruft ab oder legt den Namen eines Threads. Am häufigsten verwendet zum Erkennen von einzelnen Threads beim Debuggen.|  
-|<xref:System.Threading.Thread.Priority%2A></xref:System.Threading.Thread.Priority%2A>|Ruft ab oder legt einen Wert fest, der Threadplanung Prioritäten für Threads vom Betriebssystem verwendet wird.|  
-|<xref:System.Threading.Thread.ThreadState%2A></xref:System.Threading.Thread.ThreadState%2A>|Enthält einen Wert, der eines Threads Zustand oder Status beschreibt.|  
+|<xref:System.Threading.Thread.IsAlive%2A>|<span data-ttu-id="ec7ae-136">Enthält den Wert `True`, wenn ein Thread aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-136">Contains the value `True` if a thread is active.</span></span>|  
+|<xref:System.Threading.Thread.IsBackground%2A>|<span data-ttu-id="ec7ae-137">Es wird ein boolescher Wert abgerufen oder festgelegt, der angibt, ob ein Thread ein Hintergrundthread ist oder sein sollte.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-137">Gets or sets a Boolean that indicates if a thread is or should be a background thread.</span></span> <span data-ttu-id="ec7ae-138">Hintergrundthreads sind wie Vordergrundthreads, aber ein Hintergrundthread verhindert nicht, dass ein Prozess beendet wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-138">Background threads are like foreground threads, but a background thread does not prevent a process from stopping.</span></span> <span data-ttu-id="ec7ae-139">Sobald alle zu einem Prozess gehörenden Vordergrundthreads beendet wurden, beendet die Common Language Runtime den Prozess, indem die Methode <xref:System.Threading.Thread.Abort%2A> in Hintergrundthreads aufgerufen wird, die noch aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-139">Once all foreground threads that belong to a process have stopped, the common language runtime ends the process by calling the <xref:System.Threading.Thread.Abort%2A> method on background threads that are still alive.</span></span>|  
+|<xref:System.Threading.Thread.Name%2A>|<span data-ttu-id="ec7ae-140">Ruft den Namen eines Threads ab oder legt diesen fest.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-140">Gets or sets the name of a thread.</span></span> <span data-ttu-id="ec7ae-141">Wird am häufigsten beim Debuggen verwendet, um einzelne Threads zu erkennen.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-141">Most frequently used to discover individual threads when you debug.</span></span>|  
+|<xref:System.Threading.Thread.Priority%2A>|<span data-ttu-id="ec7ae-142">Es wird ein Wert abgerufen oder festgelegt, der vom Betriebssystem zum Priorisieren der Threadplanung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-142">Gets or sets a value that is used by the operating system to prioritize thread scheduling.</span></span>|  
+|<xref:System.Threading.Thread.ThreadState%2A>|<span data-ttu-id="ec7ae-143">Enthält einen Wert, der Zustand oder Zustände eines Threads beschreibt.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-143">Contains a value that describes a thread's state or states.</span></span>|  
   
-## <a name="thread-priorities"></a>Thread-Prioritäten  
- Jeder Thread hat eine Priority-Eigenschaft, die bestimmt, wie groß oder klein ein Segment der Prozessorzeit, die für die Ausführung. Das Betriebssystem ordnet Threads mit hoher Priorität größere Zeiträume und Threads mit niedriger Priorität kürzere Zeiträume. Neue Threads werden erstellt, mit dem Wert des `Normal`, kann jedoch geändert werden die <xref:System.Threading.Thread.Priority%2A>Eigenschaft auf einen beliebigen Wert in der <xref:System.Threading.ThreadPriority>-Enumeration.</xref:System.Threading.ThreadPriority> </xref:System.Threading.Thread.Priority%2A>  
+## <a name="thread-priorities"></a><span data-ttu-id="ec7ae-144">Threadprioritäten</span><span class="sxs-lookup"><span data-stu-id="ec7ae-144">Thread Priorities</span></span>  
+ <span data-ttu-id="ec7ae-145">Jeder Thread hat eine Prioritätseigenschaft, die bestimmt, wie groß oder klein ein Segment der Prozessorzeit ist, das er ausführen muss.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-145">Every thread has a priority property that determines how big or small a slice of processor time it has to execute.</span></span> <span data-ttu-id="ec7ae-146">Das Betriebssystem ordnet Threads mit hoher Priorität größere Zeiträume und Threads mit niedriger Priorität kürzere Zeiträume zu.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-146">The operating system allocates longer time slices to high-priority threads and shorter time slices to low-priority threads.</span></span> <span data-ttu-id="ec7ae-147">Neue Threads werden mit dem Wert `Normal` erstellt, aber Sie können die Eigenschaft <xref:System.Threading.Thread.Priority%2A> auf jeden beliebigen Wert in der <xref:System.Threading.ThreadPriority>-Enumeration ändern.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-147">New threads are created with the value of `Normal`, but you can change the <xref:System.Threading.Thread.Priority%2A> property to any value in the <xref:System.Threading.ThreadPriority> enumeration.</span></span>  
   
- Finden Sie unter <xref:System.Threading.ThreadPriority>für eine ausführliche Beschreibung der verschiedenen Threadprioritäten.</xref:System.Threading.ThreadPriority>  
+ <span data-ttu-id="ec7ae-148">Unter <xref:System.Threading.ThreadPriority> finden Sie eine ausführliche Beschreibung der verschiedenen Threadprioritäten.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-148">See <xref:System.Threading.ThreadPriority> for a detailed description of the various thread priorities.</span></span>  
   
-## <a name="foreground-and-background-threads"></a>Vordergrund- und Hintergrundthreads  
- Ein *Vordergrundthread* wird dauerhaft ausgeführt, während ein *Hintergrundthread* beendet, sobald der letzte Vordergrundthread beendet wurde. Sie können die <xref:System.Threading.Thread.IsBackground%2A>-Eigenschaft bestimmen oder ändern Sie den Hintergrundstatus eines Threads.</xref:System.Threading.Thread.IsBackground%2A>  
+## <a name="foreground-and-background-threads"></a><span data-ttu-id="ec7ae-149">Vordergrund- und Hintergrundthreads</span><span class="sxs-lookup"><span data-stu-id="ec7ae-149">Foreground and Background Threads</span></span>  
+ <span data-ttu-id="ec7ae-150">Ein *Vordergrundthread* wird dauerhaft ausgeführt, während ein *Hintergrundthread* beendet wird, sobald der letzte Vordergrundthread beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-150">A *foreground thread* runs indefinitely, whereas a *background thread* stops as soon as the last foreground thread has stopped.</span></span> <span data-ttu-id="ec7ae-151">Sie können die Eigenschaft <xref:System.Threading.Thread.IsBackground%2A> verwenden, um den Hintergrundzustand eines Threads zu bestimmen oder zu ändern.</span><span class="sxs-lookup"><span data-stu-id="ec7ae-151">You can use the <xref:System.Threading.Thread.IsBackground%2A> property to determine or change the background status of a thread.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Thread></xref:System.Threading.Thread>   
- [Threadsynchronisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)   
- [Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)
+## <a name="see-also"></a><span data-ttu-id="ec7ae-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec7ae-152">See Also</span></span>  
+ <xref:System.Threading.Thread>  
+ [<span data-ttu-id="ec7ae-153">Threadsynchronisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec7ae-153">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [<span data-ttu-id="ec7ae-154">Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec7ae-154">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  
+ [<span data-ttu-id="ec7ae-155">Threading (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec7ae-155">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)

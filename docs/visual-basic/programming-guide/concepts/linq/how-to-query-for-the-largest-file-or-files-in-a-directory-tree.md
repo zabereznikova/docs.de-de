@@ -1,46 +1,38 @@
 ---
-title: "Gewusst wie: Abfragen der größten Datei oder Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic) | Microsoft-Dokumentation"
+title: "How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic))"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic))
-Dieses Beispiel zeigt fünf Abfragen in Bezug auf die Dateigröße in Bytes.  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="713bd-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic) (Gewusst wie: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="713bd-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="713bd-103">Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:</span><span class="sxs-lookup"><span data-stu-id="713bd-103">This example shows five queries related to file size in bytes:</span></span>  
   
--   So rufen Sie die Größe in Bytes der größten Datei ab.  
+-   <span data-ttu-id="713bd-104">So rufen Sie die Größe in Bytes der größten Datei ab</span><span class="sxs-lookup"><span data-stu-id="713bd-104">How to retrieve the size in bytes of the largest file.</span></span>  
   
--   So rufen Sie die Größe in Bytes der kleinsten Datei ab.  
+-   <span data-ttu-id="713bd-105">So rufen Sie die Größe in Bytes der kleinsten Datei ab</span><span class="sxs-lookup"><span data-stu-id="713bd-105">How to retrieve the size in bytes of the smallest file.</span></span>  
   
--   Gewusst wie: Abrufen der <xref:System.IO.FileInfo>Objektdatei größten oder kleinsten aus einem oder mehreren Ordnern unter einem angegebenen Stammordner.</xref:System.IO.FileInfo>  
+-   <span data-ttu-id="713bd-106">So rufen Sie das <xref:System.IO.FileInfo>-Objekt der größten oder kleinsten Datei aus einem oder mehreren Ordnern unter einem bestimmten Stammordner ab</span><span class="sxs-lookup"><span data-stu-id="713bd-106">How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.</span></span>  
   
--   So rufen Sie eine Sequenz, wie z. B. die 10 größten Dateien ab.  
+-   <span data-ttu-id="713bd-107">So rufen Sie eine Sequenz ab, wie z.B. die 10 größten Dateien</span><span class="sxs-lookup"><span data-stu-id="713bd-107">How to retrieve a sequence such as the 10 largest files.</span></span>  
   
--   So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes, der Dateien, die kleiner als eine angegebene Größe werden ignoriert.  
+-   <span data-ttu-id="713bd-108">So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes und ignorieren dabei die Dateien, die kleiner als eine angegebene Größe sind</span><span class="sxs-lookup"><span data-stu-id="713bd-108">How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Abfragen und Gruppendateien, abhängig von ihrer Dateigröße in Bytes. Sie können diese Beispiele, um die Abfrage auf eine andere Eigenschaft des problemlos ändern die <xref:System.IO.FileInfo>Objekt.</xref:System.IO.FileInfo>  
+## <a name="example"></a><span data-ttu-id="713bd-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="713bd-109">Example</span></span>  
+ <span data-ttu-id="713bd-110">Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Dateien je nach ihrer Dateigröße in Bytes abfragen und gruppieren.</span><span class="sxs-lookup"><span data-stu-id="713bd-110">The following example contains five separate queries that show how to query and group files, depending on their file size in bytes.</span></span> <span data-ttu-id="713bd-111">Sie können diese Beispiele ganz einfach verändern, um die Abfrage auf eine andere Eigenschaft des <xref:System.IO.FileInfo>-Objekts anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="713bd-111">You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.</span></span>  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Zurückgeben, führen Sie eine oder mehrere <xref:System.IO.FileInfo>Objekte, die Abfrage zuerst prüft jedes einzelne Objekt in der Datenquelle, und sie dann den Wert der Length-Eigenschaft sortieren.</xref:System.IO.FileInfo> Anschließend kann das einzelne Objekt oder die Sequenz mit den größten Längen zurückgegeben werden. Mit <xref:System.Linq.Enumerable.First%2A>auf das erste Element in einer Liste zurück.</xref:System.Linq.Enumerable.First%2A> Verwendung <xref:System.Linq.Enumerable.Take%2A>auf die ersten n Elemente zurückzugeben.</xref:System.Linq.Enumerable.Take%2A> Geben Sie eine absteigende Sortierreihenfolge die kleinsten Elemente am Anfang der Liste platzieren.  
+ <span data-ttu-id="713bd-112">Um mindestens ein abgeschlossenes <xref:System.IO.FileInfo>-Objekt zurückzugeben, muss die Abfrage jedes in der Datenquelle untersuchen und die Objekte dann nach Wert ihrer Length-Eigenschaft sortieren.</span><span class="sxs-lookup"><span data-stu-id="713bd-112">To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property.</span></span> <span data-ttu-id="713bd-113">Anschließend kann das einzelne Objekt oder die Sequenz mit den größten Längen zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="713bd-113">Then it can return the single one or the sequence with the greatest lengths.</span></span> <span data-ttu-id="713bd-114">Verwenden Sie <xref:System.Linq.Enumerable.First%2A>, um das erste Element in einer Liste zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="713bd-114">Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list.</span></span> <span data-ttu-id="713bd-115">Verwenden Sie <xref:System.Linq.Enumerable.Take%2A>, um die ersten n Elemente zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="713bd-115">Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements.</span></span> <span data-ttu-id="713bd-116">Geben Sie eine absteigende Sortierreihenfolge an, um die kleinsten Elemente zu Beginn der Liste anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="713bd-116">Specify a descending sort order to put the smallest elements at the start of the list.</span></span>  
   
- Die Abfrage ruft eine separate Methode zum Abrufen der Dateigröße in Bytes, die mögliche Ausnahme eintritt, die in dem Fall ausgelöst werden, in dem eine Datei in einem anderen Thread in der Zeit gelöscht wurde, die <xref:System.IO.FileInfo>Objekt erstellt wurde, im Aufruf von `GetFiles`.</xref:System.IO.FileInfo> Auch die <xref:System.IO.FileInfo>Objekt bereits erstellt wurde, kann die Ausnahme auftreten, da ein <xref:System.IO.FileInfo>Objekt versucht, aktualisieren Sie die <xref:System.IO.FileInfo.Length%2A>Eigenschaft, indem die aktuellste Größe in Bytes beim ersten Zugriff auf die Eigenschaft.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Indem diese Operation in einen Try-Catch-Block außerhalb der Abfrage, folgen wir die Regel vermeiden Vorgänge in Abfragen, die Nebeneffekte verursachen können. Im Allgemeinen geboten große Sorgfalt beim Behandeln von Ausnahmen sicherstellen, dass eine Anwendung nicht in einem unbekannten Zustand gelassen wird.  
+ <span data-ttu-id="713bd-117">Die Abfrage ruft eine separate Methode zum Abrufen der Dateigröße in Bytes auf, um die mögliche Ausnahme zu verwenden, die in dem Fall ausgelöst wird, wenn eine Datei auf einem anderen Thread im Zeitraum, in dem das <xref:System.IO.FileInfo>-Objekt im Aufruf an `GetFiles` erstellt wurde, gelöscht wurde.</span><span class="sxs-lookup"><span data-stu-id="713bd-117">The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="713bd-118">Obwohl das <xref:System.IO.FileInfo>-Objekt bereits erstellt wurde, kann die Ausnahme auftreten, weil ein <xref:System.IO.FileInfo>-Objekt versucht, seine <xref:System.IO.FileInfo.Length%2A>-Eigenschaft mithilfe der aktuellsten Größe in Bytes beim ersten Zugriff auf die Eigenschaft zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="713bd-118">Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed.</span></span> <span data-ttu-id="713bd-119">Indem dieser Vorgang in einen Try-Catch-Block außerhalb der Abfrage erfolgt, folgt der Code der Regel zum Vermeiden von Vorgängen in Abfragen, die Nebeneffekte verursachen können.</span><span class="sxs-lookup"><span data-stu-id="713bd-119">By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="713bd-120">Im Allgemeinen ist beim Abfangen von Ausnahmen große Sorgfalt geboten, damit einen Anwendung nicht in einem unbekannten Zustand gelassen wird.</span><span class="sxs-lookup"><span data-stu-id="713bd-120">In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.</span></span>  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+## <a name="compiling-the-code"></a><span data-ttu-id="713bd-121">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="713bd-121">Compiling the Code</span></span>  
+ <span data-ttu-id="713bd-122">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="713bd-122">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="713bd-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="713bd-123">See Also</span></span>  
+ [<span data-ttu-id="713bd-124">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="713bd-124">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="713bd-125">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="713bd-125">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

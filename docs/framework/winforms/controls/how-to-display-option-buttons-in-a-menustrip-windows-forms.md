@@ -1,99 +1,103 @@
 ---
-title: "Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anzeigen von Optionsfeldern, MenuStrip [Windows Forms]"
-  - "MenuStrip [Windows Forms], Anzeigen von Optionsfeldern"
-  - "Optionsfelder [Windows Forms], Anzeigen in MenuStrip"
+title: 'Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MenuStrip [Windows Forms], displaying option buttons
+- displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
+- option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)
-Optionsfelder, auch Optionsschaltflächen genannt, ähneln Kontrollkästchen. Benutzer können jedoch nur ein Optionsfeld gleichzeitig auswählen.  In der Standardeinstellung stellt die <xref:System.Windows.Forms.ToolStripMenuItem>\-Klasse kein Optionsfeldverhalten bereit. Das von der Klasse bereitgestellte Kontrollkästchenverhalten kann jedoch so angepasst werden, dass ein Optionsfeldverhalten für Menüelemente in einem <xref:System.Windows.Forms.MenuStrip>\-Steuerelement implementiert wird.  
+# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a><span data-ttu-id="f0cf7-102">Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f0cf7-102">How to: Display Option Buttons in a MenuStrip (Windows Forms)</span></span>
+<span data-ttu-id="f0cf7-103">Optionsfelder, auch bekannt als Optionsfelder ähneln Kontrollkästchen, mit dem Unterschied, dass Benutzer nur jeweils einzeln auswählen können.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-103">Option buttons, also known as radio buttons, are similar to check boxes except that users can select only one at a time.</span></span> <span data-ttu-id="f0cf7-104">Zwar wird standardmäßig die <xref:System.Windows.Forms.ToolStripMenuItem> Klasse keine Optionsfeld Verhalten bereit, die Klasse bietet ein Kontrollkästchen-Verhalten, das Sie anpassen können, um das Implementieren von Optionsfeld Verhalten für Menüelemente in einer <xref:System.Windows.Forms.MenuStrip> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-104">Although by default the <xref:System.Windows.Forms.ToolStripMenuItem> class does not provide option-button behavior, the class does provide check-box behavior that you can customize to implement option-button behavior for menu items in a <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
- Wenn die <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>\-Eigenschaft eines Menüelements auf `true` festgelegt wird, können Benutzer durch Klicken auf das Element die Anzeige eines Häkchens ein\- und ausblenden.  Die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>\-Eigenschaft gibt den aktuellen Zustand des Menüelements an.  Zum Implementieren von einfachem Optionsfeldverhalten müssen Sie sicherstellen, dass beim Auswählen eines Elements die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>\-Eigenschaft für das zuvor ausgewählte Element auf `false` festgelegt wird.  
+ <span data-ttu-id="f0cf7-105">Wenn die <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft eines Menüelements ist `true`, Benutzer können auf das Element, um die ein-und ein Häkchen klicken.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-105">When the <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property of a menu item is `true`, users can click the item to toggle the display of a check mark.</span></span> <span data-ttu-id="f0cf7-106">Die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Eigenschaft gibt den aktuellen Status des Elements.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-106">The <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property indicates the current state of the item.</span></span> <span data-ttu-id="f0cf7-107">Um grundlegende Optionsfeld Verhalten zu implementieren, müssen Sie sicherstellen, dass wenn ein Element ausgewählt ist, Sie legen die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> -Eigenschaft für das zuvor ausgewählten Element um `false`.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-107">To implement basic option-button behavior, you must ensure that when an item is selected, you set the <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property for the previously selected item to `false`.</span></span>  
   
- In den folgenden Schritten wird erläutert, wie Sie dieses Verhalten und weitere Funktionen in einer Klasse implementieren, die die <xref:System.Windows.Forms.ToolStripMenuItem>\-Klasse erbt.  Die `ToolStripRadioButtonMenuItem`\-Klasse überschreibt Member wie <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> und <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>, um das Auswahlverhalten und die Darstellung von Optionsfeldern bereitzustellen.  Außerdem überschreibt diese Klasse die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>\-Eigenschaft, sodass Optionen in einem Untermenü so lange deaktiviert sind, bis das übergeordnete Element ausgewählt wird.  
+ <span data-ttu-id="f0cf7-108">Die folgenden Verfahren wird beschrieben, wie zur Implementierung dieser Funktion und weitere Funktionen in einer Klasse, erbt die <xref:System.Windows.Forms.ToolStripMenuItem> Klasse.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-108">The following procedures describe how to implement this and additional functionality in a class that inherits the <xref:System.Windows.Forms.ToolStripMenuItem> class.</span></span> <span data-ttu-id="f0cf7-109">Die `ToolStripRadioButtonMenuItem` Klasse überschreibt Elemente wie z. B. <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> und <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> , die Verhalten der Funktionsauswahl und Darstellung von Optionsfeldern.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-109">The `ToolStripRadioButtonMenuItem` class overrides members such as <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> and <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> to provide the selection behavior and appearance of option buttons.</span></span> <span data-ttu-id="f0cf7-110">Darüber hinaus diese Klasse überschreibt die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft, sodass ein Untermenü Optionen sind deaktiviert, es sei denn, das übergeordnete Element ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-110">Additionally, this class overrides the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property so that options on a submenu are disabled unless the parent item is selected.</span></span>  
   
-### So implementieren Sie das Auswahlverhalten für Optionsfelder  
+### <a name="to-implement-option-button-selection-behavior"></a><span data-ttu-id="f0cf7-111">Zum Implementieren von Optionsfeld Auswahlverhalten</span><span class="sxs-lookup"><span data-stu-id="f0cf7-111">To implement option-button selection behavior</span></span>  
   
-1.  Initialisieren Sie die <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>\-Eigenschaft mit dem Wert`true`, um die Auswahl von Elementen zu aktivieren.  
+1.  <span data-ttu-id="f0cf7-112">Initialisieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft `true` Elementauswahl zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-112">Initialize the <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property to `true` to enable item selection.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A>\-Methode, um bei Auswahl eines neuen Elements die des zuvor ausgewählten Elements aufzuheben.  
+2.  <span data-ttu-id="f0cf7-113">Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> Methode, um die Auswahl der zuvor ausgewählten Element löschen, wenn ein neues Element ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-113">Override the <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> method to clear the selection of the previously selected item when a new item is selected.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A>\-Methode, um sicherzustellen, dass beim Klicken auf ein bereits ausgewähltes Element die Auswahl dieses Elements nicht aufgehoben wird.  
+3.  <span data-ttu-id="f0cf7-114">Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> Methode, um sicherzustellen, dass beim Klicken auf ein Element, das bereits ausgewählt wurde, wird nicht die Auswahl gelöscht.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-114">Override the <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> method to ensure that clicking an item that has already been selected will not clear the selection.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
-### So ändern Sie die Darstellung von Optionsfeldelementen  
+### <a name="to-modify-the-appearance-of-the-option-button-items"></a><span data-ttu-id="f0cf7-115">So ändern Sie die Darstellung der Optionsfeld Elemente</span><span class="sxs-lookup"><span data-stu-id="f0cf7-115">To modify the appearance of the option-button items</span></span>  
   
-1.  Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>\-Methode, um die Standardmarkierung mithilfe der <xref:System.Windows.Forms.RadioButtonRenderer>\-Klasse durch eine Optionsschaltfläche zu ersetzen.  
+1.  <span data-ttu-id="f0cf7-116">Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> Methode, um das Standard-Häkchen durch ein Optionsfeld mit ersetzen die <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-116">Override the <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> method to replace the default check-mark with an option button by using the <xref:System.Windows.Forms.RadioButtonRenderer> class.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Überschreiben Sie die Methoden <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A> und <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A>, um den Mauszustand zu überwachen und sicherzustellen, dass die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>\-Methode den richtigen Zustand des Optionsfelds darstellt.  
+2.  <span data-ttu-id="f0cf7-117">Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, und <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> Methoden, um den Zustand der Maus nachverfolgen und sicherstellen, dass die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> zeichnet den Status richtig Optionsfeld-Methode.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-117">Override the <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, and <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> methods to track the state of the mouse and ensure that the <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> method paints the correct option-button state.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
-### So deaktivieren Sie Optionen in einem Untermenü, wenn das übergeordnete Element nicht ausgewählt ist  
+### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a><span data-ttu-id="f0cf7-118">Deaktivieren Sie auf ein Untermenü Optionen aus, wenn das übergeordnete Element nicht ausgewählt ist</span><span class="sxs-lookup"><span data-stu-id="f0cf7-118">To disable options on a submenu when the parent item is not selected</span></span>  
   
-1.  Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>\-Eigenschaft, damit das Element deaktiviert wird, wenn es ein übergeordnetes Element mit einen <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>\-Wert von `true` und einen <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>\-Wert von `false` aufweist.  
+1.  <span data-ttu-id="f0cf7-119">Außer Kraft setzen die <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft, damit das Element deaktiviert wird, wenn es ein übergeordnetes Element mit sowohl hat eine <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Wert `true` und ein <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Wert `false`.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-119">Override the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property so that the item is disabled when it has a parent item with both a <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> value of `true` and a <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> value of `false`.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A>\-Methode, um das <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged>\-Ereignis des übergeordneten Elements zu abonnieren.  
+2.  <span data-ttu-id="f0cf7-120">Überschreiben Sie die <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> Methode zum Abonnieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> -Ereignis des übergeordneten Elements.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-120">Override the <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> method to subscribe to the <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> event of the parent item.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  Erklären Sie das Element im Handler für das <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged>\-Ereignis des übergeordneten Elements für ungültig, um die Anzeige mit dem neuen, aktivierten Zustand zu aktualisieren.  
+3.  <span data-ttu-id="f0cf7-121">Im Handler für das übergeordnete Element <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> Ereignis, das Element, um die Anzeige zu aktualisieren, mit der neuen Aktivierungszustand für ungültig zu erklären.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-121">In the handler for the parent-item <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> event, invalidate the item to update the display with the new enabled state.</span></span>  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  
   
-## Beispiel  
- Im folgenden Codebeispiel werden die gesamte `ToolStripRadioButtonMenuItem`\-Klasse sowie eine <xref:System.Windows.Forms.Form>\-Klasse und eine `Program`\-Klasse bereitgestellt, um das Optionsfeldverhalten zu veranschaulichen.  
+## <a name="example"></a><span data-ttu-id="f0cf7-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f0cf7-122">Example</span></span>  
+ <span data-ttu-id="f0cf7-123">Das folgende Codebeispiel stellt die vollständige `ToolStripRadioButtonMenuItem` -Klasse, und ein <xref:System.Windows.Forms.Form> Klasse und `Program` Klasse das Optionsfeld Verhalten zeigen.</span><span class="sxs-lookup"><span data-stu-id="f0cf7-123">The following code example provides the complete `ToolStripRadioButtonMenuItem` class, and a <xref:System.Windows.Forms.Form> class and `Program` class to demonstrate the option-button behavior.</span></span>  
   
  [!code-csharp[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
  [!code-vb[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a><span data-ttu-id="f0cf7-124">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="f0cf7-124">Compiling the Code</span></span>  
+ <span data-ttu-id="f0cf7-125">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="f0cf7-125">This example requires:</span></span>  
   
--   Verweise auf die Assemblys System, System.Drawing und System.Windows.Forms.  
+-   <span data-ttu-id="f0cf7-126">Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".</span><span class="sxs-lookup"><span data-stu-id="f0cf7-126">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RadioButtonRenderer>   
- [MenuStrip\-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [Gewusst wie: Implementieren eines benutzerdefinierten ToolStripRenderer](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)
+## <a name="see-also"></a><span data-ttu-id="f0cf7-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0cf7-127">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RadioButtonRenderer>  
+ [<span data-ttu-id="f0cf7-128">MenuStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f0cf7-128">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [<span data-ttu-id="f0cf7-129">Gewusst wie: Implementieren eines benutzerdefinierten ToolStripRenderer</span><span class="sxs-lookup"><span data-stu-id="f0cf7-129">How to: Implement a Custom ToolStripRenderer</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)

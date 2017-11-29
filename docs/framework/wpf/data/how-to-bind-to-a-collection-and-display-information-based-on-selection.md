@@ -1,57 +1,63 @@
 ---
-title: "Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenbindung, Binden an Auflistungen"
-  - "Datenbindung, Erstellen von Ansichten von Datenauflistungen"
-  - "Datenbindung, Auswählen von Daten für Ansichten"
-  - "Datenauflistungen, Auswählen von Daten für Ansichten"
+title: 'Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data collections [WPF], selecting data for views
+- data binding [WPF], creating views of data collections
+- data binding [WPF], selecting data for views
+- data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e92621e7e62750ae5ad73158232ccdabfb22287a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl
-In einem einfachen Master\/Detail\-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl>\-Element, z. B. ein <xref:System.Windows.Controls.ListBox>.  Auf Grundlage der Benutzerauswahl zeigen Sie weitere Informationen über das ausgewählte Element an.  In diesem Beispiel wird gezeigt, wie dieses Szenario implementiert wird.  
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a><span data-ttu-id="e2271-102">Gewusst wie: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl</span><span class="sxs-lookup"><span data-stu-id="e2271-102">How to: Bind to a Collection and Display Information Based on Selection</span></span>
+<span data-ttu-id="e2271-103">In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="e2271-103">In a simple master-detail scenario, you have a data-bound <xref:System.Windows.Controls.ItemsControl> such as a <xref:System.Windows.Controls.ListBox>.</span></span> <span data-ttu-id="e2271-104">Basierend auf der Auswahl des Benutzers, zeigen Sie weitere Informationen zum ausgewählten Element.</span><span class="sxs-lookup"><span data-stu-id="e2271-104">Based on user selection, you display more information about the selected item.</span></span> <span data-ttu-id="e2271-105">In diesem Beispiel wird gezeigt, wie dieses Szenario implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="e2271-105">This example shows how to implement this scenario.</span></span>  
   
-## Beispiel  
- In diesem Beispiel ist `People` eine <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Person`\-Klassen.  Diese `Person`\-Klasse enthält drei Eigenschaften: `FirstName`, `LastName` und `HomeTown`, alle vom Typ `string`.  
+## <a name="example"></a><span data-ttu-id="e2271-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e2271-106">Example</span></span>  
+ <span data-ttu-id="e2271-107">In diesem Beispiel `People` ist ein <xref:System.Collections.ObjectModel.ObservableCollection%601> von `Person` Klassen.</span><span class="sxs-lookup"><span data-stu-id="e2271-107">In this example, `People` is an <xref:System.Collections.ObjectModel.ObservableCollection%601> of `Person` classes.</span></span> <span data-ttu-id="e2271-108">Dies `Person` Klasse enthält drei Eigenschaften: `FirstName`, `LastName`, und `HomeTown`, alle vom Typ `string`.</span><span class="sxs-lookup"><span data-stu-id="e2271-108">This `Person` class contains three properties: `FirstName`, `LastName`, and `HomeTown`, all of type `string`.</span></span>  
   
- [!code-xml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
-[!code-xml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
+ [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
+[!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
- Das <xref:System.Windows.Controls.ContentControl> verwendet die folgende <xref:System.Windows.DataTemplate>, die definiert, wie die Informationen einer `Person` präsentiert werden:  
+ <span data-ttu-id="e2271-109">Die <xref:System.Windows.Controls.ContentControl> verwendet die folgenden <xref:System.Windows.DataTemplate> , definiert, wie die Informationen des ein `Person` wird angezeigt:</span><span class="sxs-lookup"><span data-stu-id="e2271-109">The <xref:System.Windows.Controls.ContentControl> uses the following <xref:System.Windows.DataTemplate> that defines how the information of a `Person` is presented:</span></span>  
   
- [!code-xml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
+ [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- Im Folgenden finden Sie eine Bildschirmaufnahme der Ausgabe des Beispiels.  Das <xref:System.Windows.Controls.ContentControl>\-Element zeigt die anderen Eigenschaften der ausgewählten Person.  
+ <span data-ttu-id="e2271-110">Im folgenden finden einen Screenshot der Ausgabe des Beispiels.</span><span class="sxs-lookup"><span data-stu-id="e2271-110">The following is a screenshot of what the example produces.</span></span> <span data-ttu-id="e2271-111">Die <xref:System.Windows.Controls.ContentControl> zeigt die anderen Eigenschaften der ausgewählten Person.</span><span class="sxs-lookup"><span data-stu-id="e2271-111">The <xref:System.Windows.Controls.ContentControl> shows the other properties of the person selected.</span></span>  
   
- ![Binden an eine Auflistung](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding\_CollectionBindingSample")  
+ <span data-ttu-id="e2271-112">![Binden an eine Auflistung](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")</span><span class="sxs-lookup"><span data-stu-id="e2271-112">![Binding to a collection](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")</span></span>  
   
- Zwei Punkte sind in diesem Beispiel zu beachten:  
+ <span data-ttu-id="e2271-113">Die zwei Punkte zu beachten in diesem Beispiel sind:</span><span class="sxs-lookup"><span data-stu-id="e2271-113">The two things to notice in this example are:</span></span>  
   
-1.  Das <xref:System.Windows.Controls.ListBox> und das <xref:System.Windows.Controls.ContentControl> werden an dieselbe Quelle gebunden.  Die <xref:System.Windows.Data.Binding.Path%2A>\-Eigenschaften beider Bindungen sind nicht angegeben, da beide Steuerelemente an das gesamte Auflistungsobjekt gebunden werden.  
+1.  <span data-ttu-id="e2271-114">Die <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ContentControl> mit der gleichen Quelle zu binden.</span><span class="sxs-lookup"><span data-stu-id="e2271-114">The <xref:System.Windows.Controls.ListBox> and the <xref:System.Windows.Controls.ContentControl> bind to the same source.</span></span> <span data-ttu-id="e2271-115">Die <xref:System.Windows.Data.Binding.Path%2A> Eigenschaften der beiden Bindungen sind nicht angegeben werden, da beide Steuerelemente an das gesamte Collection-Objekt gebunden werden.</span><span class="sxs-lookup"><span data-stu-id="e2271-115">The <xref:System.Windows.Data.Binding.Path%2A> properties of both bindings are not specified because both controls are binding to the entire collection object.</span></span>  
   
-2.  Damit dies funktioniert, muss die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>\-Eigenschaft auf `true` festgelegt werden.  Durch Festlegen dieser Eigenschaft wird sichergestellt, dass das ausgewählte Element immer als <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A> festgelegt wird.  Wenn hingegen das <xref:System.Windows.Controls.ListBox> die Daten von <xref:System.Windows.Data.CollectionViewSource> abruft, werden Auswahl und Währung automatisch synchronisiert.  
+2.  <span data-ttu-id="e2271-116">Sie müssen festlegen, die <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> Eigenschaft `true` damit dies funktioniert.</span><span class="sxs-lookup"><span data-stu-id="e2271-116">You must set the <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> property to `true` for this to work.</span></span> <span data-ttu-id="e2271-117">Durch Festlegen dieser Eigenschaft wird sichergestellt, dass das ausgewählte Element immer, als festgelegt ist die <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="e2271-117">Setting this property ensures that the selected item is always set as the <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.</span></span> <span data-ttu-id="e2271-118">Auch wenn die <xref:System.Windows.Controls.ListBox> ruft es Daten aus einer <xref:System.Windows.Data.CollectionViewSource>, es Auswahl und Währung automatisch synchronisiert.</span><span class="sxs-lookup"><span data-stu-id="e2271-118">Alternatively, if the <xref:System.Windows.Controls.ListBox> gets it data from a <xref:System.Windows.Data.CollectionViewSource>, it synchronizes selection and currency automatically.</span></span>  
   
- Beachten Sie, dass die `Person`\-Klasse die `ToString`\-Methode auf folgende Weise überschreibt.  Standardmäßig ruft das <xref:System.Windows.Controls.ListBox> `ToString` auf und zeigt eine Zeichenfolgendarstellung jedes Objekts in der gebundenen Auflistung an.  Aus diesem Grund wird jede `Person` im <xref:System.Windows.Controls.ListBox> als Vorname angezeigt.  
+ <span data-ttu-id="e2271-119">Beachten Sie, dass die `Person` -Klasse überschreibt die `ToString` Methode wie folgt.</span><span class="sxs-lookup"><span data-stu-id="e2271-119">Note that the `Person` class overrides the `ToString` method the following way.</span></span> <span data-ttu-id="e2271-120">Wird standardmäßig die <xref:System.Windows.Controls.ListBox> Aufrufe `ToString` und eine Zeichenfolgendarstellung für jedes Objekt in der gebundenen Auflistung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e2271-120">By default, the <xref:System.Windows.Controls.ListBox> calls `ToString` and displays a string representation of each object in the bound collection.</span></span> <span data-ttu-id="e2271-121">Deshalb jedes `Person` erscheint als erste Name in der <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="e2271-121">That is why each `Person` appears as a first name in the <xref:System.Windows.Controls.ListBox>.</span></span>  
   
  [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
-## Siehe auch  
- [Verwenden des Master\-\/Detailmusters mit hierarchischen Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)   
- [Verwenden des Master\-\/Detailmusters mit hierarchischen XML\-Daten](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="e2271-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e2271-122">See Also</span></span>  
+ [<span data-ttu-id="e2271-123">Verwenden des Master-/Detailmusters mit hierarchischen Daten</span><span class="sxs-lookup"><span data-stu-id="e2271-123">Use the Master-Detail Pattern with Hierarchical Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [<span data-ttu-id="e2271-124">Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten</span><span class="sxs-lookup"><span data-stu-id="e2271-124">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [<span data-ttu-id="e2271-125">Übersicht zur Datenbindung</span><span class="sxs-lookup"><span data-stu-id="e2271-125">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="e2271-126">Übersicht über Datenvorlagen</span><span class="sxs-lookup"><span data-stu-id="e2271-126">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="e2271-127">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="e2271-127">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

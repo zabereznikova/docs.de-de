@@ -1,27 +1,30 @@
 ---
-title: "Bew&#228;hrte Methoden: Vermittler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Best Practices: Vermittler'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3185761ef784051c7508c3684d46997521483f04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bew&#228;hrte Methoden: Vermittler
-Es muss darauf geachtet werden, Fehler beim Aufrufen von Vermittlern ordnungsgemäß zu behandeln, um sicherzustellen, dass dienstseitige Kanäle auf dem Vermittler ordnungsgemäß geschlossen werden.  
+# <a name="best-practices-intermediaries"></a><span data-ttu-id="938c1-102">Best Practices: Vermittler</span><span class="sxs-lookup"><span data-stu-id="938c1-102">Best Practices: Intermediaries</span></span>
+<span data-ttu-id="938c1-103">Beim Aufrufen von Vermittlern müssen Fehler ordnungsgemäß behandelt werden, um sicherzustellen, dass dienstseitige Kanäle im Vermittler ordnungsgemäß geschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="938c1-103">Care must be taken to handle faults correctly when calling intermediaries to make sure service side channels on the intermediary are closed properly.</span></span>  
   
- Nehmen Sie folgendes Szenario als Beispiel:Ein Client ruft einen Vermittler auf, der dann einen Back\-End\-Dienst aufruft.Der Back\-End\-Dienst definiert keinen Fehlervertrag, deshalb wird jeder von diesem Dienst ausgelöster Fehler als nicht typisierter Fehler behandelt.Der Back\-End\-Dienst löst einen <xref:System.ApplicationException> aus, und WCF bricht den dienstseitigen Kanal ordnungsgemäß ab.Der <xref:System.ApplicationException> taucht dann als <xref:System.ServiceModel.FaultException> auf, der zum Vermittler ausgelöst wird.Der Vermittler löst den <xref:System.ApplicationException> erneut aus.WCF interpretiert dieses als nicht typisierten Fehler vom Vermittler und leitet ihn an den Client weiter.Sowohl der Vermittler als auch der Client bemängeln ihre clientseitigen Kanäle bei Empfang des Fehlers.Der dienstseitige Kanal des Vermittlers bleibt jedoch geöffnet, da WCF nicht weiß, ob der Fehler schwerwiegend ist.  
+ <span data-ttu-id="938c1-104">Betrachten Sie folgendes Szenario.</span><span class="sxs-lookup"><span data-stu-id="938c1-104">Consider the following scenario.</span></span> <span data-ttu-id="938c1-105">Ein Client ruft einen Vermittler auf, der dann einen Back-End-Dienst aufruft.</span><span class="sxs-lookup"><span data-stu-id="938c1-105">A client makes a call to an intermediary which then calls a back-end service.</span></span>  <span data-ttu-id="938c1-106">Der Back-End-Dienst definiert keinen Fehlervertrag. Deshalb wird jeder von diesem Dienst ausgelöste Fehler als nicht typisierter Fehler behandelt.</span><span class="sxs-lookup"><span data-stu-id="938c1-106">The back-end service defines no fault contract, so any fault thrown from that service will be treated as an un-typed fault.</span></span>  <span data-ttu-id="938c1-107">Löst die Back-End-Dienst eine <xref:System.ApplicationException> und WCF bricht den dienstseitigen Kanal ordnungsgemäß ab.</span><span class="sxs-lookup"><span data-stu-id="938c1-107">The back-end service throws an <xref:System.ApplicationException> and WCF correctly aborts the service-side channel.</span></span> <span data-ttu-id="938c1-108">Die <xref:System.ApplicationException> wird dann als <xref:System.ServiceModel.FaultException> für den Vermittler ausgelöste Ausnahme ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="938c1-108">The <xref:System.ApplicationException> then surfaces as a <xref:System.ServiceModel.FaultException> that is thrown to the intermediary.</span></span> <span data-ttu-id="938c1-109">Der Vermittler löst die <xref:System.ApplicationException> erneut aus.</span><span class="sxs-lookup"><span data-stu-id="938c1-109">The intermediary re-throws the <xref:System.ApplicationException>.</span></span> <span data-ttu-id="938c1-110">WCF interpretiert diese als nicht typisierten Fehler vom Vermittler und leitet den Fehler an den Client weiter.</span><span class="sxs-lookup"><span data-stu-id="938c1-110">WCF interprets this as an un-typed fault from the intermediary and forwards it on to the client.</span></span> <span data-ttu-id="938c1-111">Bei Empfang des Fehlers lösen der Vermittler und der Client Fehler für ihre clientseitigen Kanäle aus.</span><span class="sxs-lookup"><span data-stu-id="938c1-111">Upon receiving the fault, both the intermediary and the client fault their client-side channels.</span></span> <span data-ttu-id="938c1-112">Der dienstseitige Kanal des Vermittlers bleibt jedoch geöffnet, da WCF nicht weiß, ob es sich um einen schwerwiegenden Fehler handelt.</span><span class="sxs-lookup"><span data-stu-id="938c1-112">The intermediary’s service-side channel however remains open because WCF doesn’t know the fault is fatal.</span></span>  
   
- Die Best Practice in diesem Szenario ist es, zu erkennen, ob der Fehler, der vom Dienst kommt, schwerwiegend ist. Ist dies der Fall, sollte der Vermittler seinen dienstseitigen Kanal bemängeln, wie im folgenden Codeausschnitt angezeigt.  
+ <span data-ttu-id="938c1-113">Für dieses Szenario wird empfohlen, zu bestimmen, ob der vom Dienst stammende Fehler schwerwiegend ist, und wenn er schwerwiegend ist, sollte der Vermittler einen Fehler für seinen dienstseitigen Kanal auslösen, wie im folgenden Codeausschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="938c1-113">The best practice in this scenario is to detect if the fault coming from the service is fatal and if so the intermediary should fault its service-side channel as shown in the following code snippet.</span></span>  
   
 ```csharp  
 catch (Exception e)  
@@ -37,9 +40,8 @@ catch (Exception e)
         throw;  
     }  
 }  
-  
 ```  
   
-## Siehe auch  
- [WCF\-Fehlerbehandlung](../../../docs/framework/wcf/wcf-error-handling.md)   
- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="938c1-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="938c1-114">See Also</span></span>  
+ [<span data-ttu-id="938c1-115">WCF-Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="938c1-115">WCF Error Handling</span></span>](../../../docs/framework/wcf/wcf-error-handling.md)  
+ [<span data-ttu-id="938c1-116">Angeben und Behandeln von Fehlern in Verträgen und Diensten</span><span class="sxs-lookup"><span data-stu-id="938c1-116">Specifying and Handling Faults in Contracts and Services</span></span>](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

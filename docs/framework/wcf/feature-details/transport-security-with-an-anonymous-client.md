@@ -1,57 +1,63 @@
 ---
-title: "Transportsicherheit mit einem anonymen Client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transportsicherheit mit einem anonymen Client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Transportsicherheit mit einem anonymen Client
-Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Szenario verwendet Transportsicherheit \(HTTPS\), um Vertraulichkeit und Integrität sicherzustellen.Der Server muss mit einem SSL\-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.  
+# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="61486-102">Transportsicherheit mit einem anonymen Client</span><span class="sxs-lookup"><span data-stu-id="61486-102">Transport Security with an Anonymous Client</span></span>
+<span data-ttu-id="61486-103">Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Szenario verwendet Transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="61486-103">This [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="61486-104">Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.</span><span class="sxs-lookup"><span data-stu-id="61486-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="61486-105">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="61486-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  
   
- Eine Beispielanwendung finden Sie unter [WS\-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] über die Transportsicherheit finden Sie unter [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ <span data-ttu-id="61486-106">Eine beispielanwendung finden Sie unter [WS-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="61486-106">For a sample application, see [WS Transport Security](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="61486-107">transportsicherheit nutzen, finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="61486-107"> transport security, see [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Verwendung eines Zertifikats mit einem Dienst finden Sie unter [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL\-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="61486-108">Verwenden eines Zertifikats mit einem Dienst finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="61486-108"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
- ![Verwenden von Transportsicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931\-0cfb\-4aaa\-9272\-91d652b85d8d")  
+ <span data-ttu-id="61486-109">![Mithilfe der transportsicherheit mit einem anonymen Client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span><span class="sxs-lookup"><span data-stu-id="61486-109">![Using transport security with an anonymous client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span></span>  
   
-|Merkmal|Beschreibung|  
-|-------------|------------------|  
-|Sicherheitsmodus|Transport|  
-|Interoperabilität|Mit vorhandenen Webdiensten und Webclients|  
-|Authentifizierung \(Server\)<br /><br /> Authentifizierung \(Client\)|Ja<br /><br /> Anwendungsebene \(keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Unterstützung\)|  
-|Integrität|Ja|  
-|Vertraulichkeit|Ja|  
-|Transport|HTTPS|  
-|Bindung|<xref:System.ServiceModel.WsHttpBinding>|  
+|<span data-ttu-id="61486-110">Merkmal</span><span class="sxs-lookup"><span data-stu-id="61486-110">Characteristic</span></span>|<span data-ttu-id="61486-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="61486-111">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="61486-112">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="61486-112">Security Mode</span></span>|<span data-ttu-id="61486-113">Transport</span><span class="sxs-lookup"><span data-stu-id="61486-113">Transport</span></span>|  
+|<span data-ttu-id="61486-114">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="61486-114">Interoperability</span></span>|<span data-ttu-id="61486-115">Mit vorhandenen Webdiensten und Webclients</span><span class="sxs-lookup"><span data-stu-id="61486-115">With existing Web services and clients</span></span>|  
+|<span data-ttu-id="61486-116">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="61486-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="61486-117">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="61486-117">Authentication (Client)</span></span>|<span data-ttu-id="61486-118">Ja</span><span class="sxs-lookup"><span data-stu-id="61486-118">Yes</span></span><br /><br /> <span data-ttu-id="61486-119">Anwendungsebene (keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Unterstützung)</span><span class="sxs-lookup"><span data-stu-id="61486-119">Application level (no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] support)</span></span>|  
+|<span data-ttu-id="61486-120">Integrität</span><span class="sxs-lookup"><span data-stu-id="61486-120">Integrity</span></span>|<span data-ttu-id="61486-121">Ja</span><span class="sxs-lookup"><span data-stu-id="61486-121">Yes</span></span>|  
+|<span data-ttu-id="61486-122">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="61486-122">Confidentiality</span></span>|<span data-ttu-id="61486-123">Ja</span><span class="sxs-lookup"><span data-stu-id="61486-123">Yes</span></span>|  
+|<span data-ttu-id="61486-124">Transport</span><span class="sxs-lookup"><span data-stu-id="61486-124">Transport</span></span>|<span data-ttu-id="61486-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="61486-125">HTTPS</span></span>|  
+|<span data-ttu-id="61486-126">Bindung</span><span class="sxs-lookup"><span data-stu-id="61486-126">Binding</span></span>|<span data-ttu-id="61486-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span><span class="sxs-lookup"><span data-stu-id="61486-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span></span>|  
   
-## Dienst  
- Der folgende Code und die Konfiguration werden unabhängig voneinander ausgeführt.Führen Sie einen der folgenden Schritte aus:  
+## <a name="service"></a><span data-ttu-id="61486-128">Dienst</span><span class="sxs-lookup"><span data-stu-id="61486-128">Service</span></span>  
+ <span data-ttu-id="61486-129">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="61486-129">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="61486-130">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="61486-130">Do one of the following:</span></span>  
   
--   Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
+-   <span data-ttu-id="61486-131">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="61486-131">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
+-   <span data-ttu-id="61486-132">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="61486-132">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Code  
- Im folgenden Code wird gezeigt, wie ein Endpunkt mit Transportsicherheit erstellt wird:  
+### <a name="code"></a><span data-ttu-id="61486-133">Code</span><span class="sxs-lookup"><span data-stu-id="61486-133">Code</span></span>  
+ <span data-ttu-id="61486-134">Im folgenden Code wird gezeigt, wie ein Endpunkt mit Transportsicherheit erstellt wird:</span><span class="sxs-lookup"><span data-stu-id="61486-134">The following code shows how to create an endpoint using transport security:</span></span>  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
-### Konfiguration  
- Mit dem folgenden Code wird derselbe Endpunkt mit der Konfiguration eingerichtet.Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.  
+### <a name="configuration"></a><span data-ttu-id="61486-135">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="61486-135">Configuration</span></span>  
+ <span data-ttu-id="61486-136">Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="61486-136">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="61486-137">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="61486-137">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -78,24 +84,24 @@ Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Szenario verwend
 </configuration>  
 ```  
   
-## Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.Führen Sie einen der folgenden Schritte aus:  
+## <a name="client"></a><span data-ttu-id="61486-138">Client</span><span class="sxs-lookup"><span data-stu-id="61486-138">Client</span></span>  
+ <span data-ttu-id="61486-139">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="61486-139">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="61486-140">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="61486-140">Do one of the following:</span></span>  
   
--   Erstellen Sie mit dem Code \(und Clientcode\) einen eigenständigen Client.  
+-   <span data-ttu-id="61486-141">Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.</span><span class="sxs-lookup"><span data-stu-id="61486-141">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert.Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.Beispiel:  
+-   <span data-ttu-id="61486-142">Erstellen Sie einen Client, der keine Endpunktadressen definiert.</span><span class="sxs-lookup"><span data-stu-id="61486-142">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="61486-143">Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.</span><span class="sxs-lookup"><span data-stu-id="61486-143">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="61486-144">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="61486-144">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Code  
+### <a name="code"></a><span data-ttu-id="61486-145">Code</span><span class="sxs-lookup"><span data-stu-id="61486-145">Code</span></span>  
  [!code-csharp[c_SecurityScenarios#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
-### Konfiguration  
- Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst einzurichten.  
+### <a name="configuration"></a><span data-ttu-id="61486-146">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="61486-146">Configuration</span></span>  
+ <span data-ttu-id="61486-147">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst einzurichten.</span><span class="sxs-lookup"><span data-stu-id="61486-147">The following configuration can be used instead of the code to set up the service.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -118,8 +124,8 @@ Dieses [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Szenario verwend
 </configuration>  
 ```  
   
-## Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [WS\-Transportsicherheit](../../../../docs/framework/wcf/samples/ws-transport-security.md)   
- [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)   
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="61486-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="61486-148">See Also</span></span>  
+ [<span data-ttu-id="61486-149">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="61486-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="61486-150">WS-Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="61486-150">WS Transport Security</span></span>](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [<span data-ttu-id="61486-151">Übersicht über die transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="61486-151">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [<span data-ttu-id="61486-152">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="61486-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

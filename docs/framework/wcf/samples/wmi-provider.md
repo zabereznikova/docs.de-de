@@ -1,57 +1,58 @@
 ---
-title: "WMI-Anbieter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WMI-Anbieter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a0a64516bea4204eb782013e718c2fa26c6024b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WMI-Anbieter
-Dieses Beispiel veranschaulicht, wie Daten aus [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Diensten mithilfe des in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] integrierten WMI\-Anbieters \(Windows Management Instrumentation, Windows\-Verwaltungsinstrumentation\) zur Laufzeit erfasst werden.  Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI\-Objekt hinzugefügt wird.  Im Beispiel wird der WMI\-Anbieter für das [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md) aktiviert und gezeigt, wie Daten aus dem `ICalculator`\-Dienst zur Laufzeit erfasst werden.  
+# <a name="wmi-provider"></a><span data-ttu-id="a53e3-102">WMI-Anbieter</span><span class="sxs-lookup"><span data-stu-id="a53e3-102">WMI Provider</span></span>
+<span data-ttu-id="a53e3-103">Dieses Beispiel veranschaulicht, wie Daten aus [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Diensten mithilfe des in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] integrierten WMI-Anbieters (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) zur Laufzeit erfasst werden.</span><span class="sxs-lookup"><span data-stu-id="a53e3-103">This sample demonstrates how to gather data from [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services at runtime by using the Windows Management Instrumentation (WMI) provider that is built into [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="a53e3-104">Außerdem wird in diesem Beispiel gezeigt, wie einem Dienst ein benutzerdefiniertes WMI-Objekt hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="a53e3-104">Also, this sample demonstrates how to add a user-defined WMI object to a service.</span></span> <span data-ttu-id="a53e3-105">Das Beispiel aktiviert den WMI-Anbieter für die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und veranschaulicht, wie zum Sammeln von Daten aus der `ICalculator` -Dienst zur Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="a53e3-105">The sample activates the WMI provider for the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and demonstrates how to gather data from the `ICalculator` service at runtime.</span></span>  
   
- Bei WMI handelt es sich um die Implementierung des Web\-Based Enterprise Management \(WBEM\)\-Standards von Microsoft.  Weitere Informationen zum WMI\-SDK finden Sie in der MSDN Library.  \(http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/wmisdk\/wmi\/wmi\_start\_page.asp\).  Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentation für externe Verwaltungstools.  
+ <span data-ttu-id="a53e3-106">Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a53e3-106">WMI is Microsoft's implementation of the Web-Based Enterprise Management (WBEM) standard.</span></span> <span data-ttu-id="a53e3-107">Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](https://msdn.microsoft.com/library/aa394582.aspx).</span><span class="sxs-lookup"><span data-stu-id="a53e3-107">For more information about the WMI SDK, see [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx).</span></span> <span data-ttu-id="a53e3-108">Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.</span><span class="sxs-lookup"><span data-stu-id="a53e3-108">WBEM is an industry standard for how applications expose management instrumentation to external management tools.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementiert einen WMI\-Anbieter, eine Komponente, die die Instrumentation zur Laufzeit über eine WBEM\-kompatible Schnittstelle verfügbar macht.  Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] macht Attribute von Diensten \(wie Adressen, Bindungen, Verhaltensweisen und Listener\) verfügbar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="a53e3-109"> implementiert einen WMI-Anbieter, eine Komponente, die die Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="a53e3-109"> implements a WMI provider, a component that exposes instrumentation at runtime through a WBEM-compatible interface.</span></span> <span data-ttu-id="a53e3-110">Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-110">Management tools can connect to the services through the interface at runtime.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="a53e3-111"> macht Attribute von Diensten (wie Adressen, Bindungen, Verhaltensweisen und Listener) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="a53e3-111"> exposes attributes of services such as addresses, bindings, behaviors, and listeners.</span></span>  
   
- Der integrierte WMI\-Anbieter wird in der Konfigurationsdatei der Anwendung aktiviert.  Dies erfolgt über das `wmiProviderEnabled`\-Attribut des [\<Diagnose\>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)s im Abschnitt des [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)\-Elements Abschnitt, wie in der folgenden Beispielkonfiguration gezeigt:  
+ <span data-ttu-id="a53e3-112">Der integrierte WMI-Anbieter wird in der Konfigurationsdatei der Anwendung aktiviert.</span><span class="sxs-lookup"><span data-stu-id="a53e3-112">The built-in WMI provider is activated in the configuration file of the application.</span></span> <span data-ttu-id="a53e3-113">Dies erfolgt über die `wmiProviderEnabled` Attribut des der [ \<Diagnose >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in der [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, wie im folgenden Beispiel gezeigt. Konfiguration:</span><span class="sxs-lookup"><span data-stu-id="a53e3-113">This is done through the `wmiProviderEnabled` attribute of the [\<diagnostics>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) section, as shown in the following sample configuration:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     ...  
     <diagnostics wmiProviderEnabled="true" />  
     ...  
 </system.serviceModel>  
-  
 ```  
   
- Mit diesem Konfigurationseintrag wird eine WMI\-Schnittstelle verfügbar gemacht.  Über diese Schnittstelle kann nun von Verwaltungsanwendungen eine Verbindung hergestellt und auf die Verwaltungsinstrumentation der Anwendung zugegriffen werden.  
+ <span data-ttu-id="a53e3-114">Mit diesem Konfigurationseintrag wird eine WMI-Schnittstelle verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="a53e3-114">This configuration entry exposes a WMI interface.</span></span> <span data-ttu-id="a53e3-115">Über diese Schnittstelle kann nun von Verwaltungsanwendungen eine Verbindung hergestellt und auf die Verwaltungsinstrumentation der Anwendung zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="a53e3-115">Management applications can now connect through this interface and access the management instrumentation of the application.</span></span>  
   
-## Benutzerdefiniertes WMI\-Objekt  
- Wenn einem Dienst WMI\-Objekte hinzugefügt werden, können zusammen mit den Informationen des integrierten WMI\-Anbieters auch benutzerdefinierte Informationen preisgegeben werden.  Dies wird durchgeführt, indem das Schema des Diensts mithilfe der Anwendung "Installutil.exe" in WMI veröffentlicht wird.  Eine Anleitung dazu und ausführlichere Informationen finden Sie in den Anweisungen zum Einrichten am Ende dieses Themas.  
+## <a name="custom-wmi-object"></a><span data-ttu-id="a53e3-116">Benutzerdefiniertes WMI-Objekt</span><span class="sxs-lookup"><span data-stu-id="a53e3-116">Custom WMI Object</span></span>  
+ <span data-ttu-id="a53e3-117">Wenn einem Dienst WMI-Objekte hinzugefügt werden, können zusammen mit den Informationen des integrierten WMI-Anbieters auch benutzerdefinierte Informationen preisgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="a53e3-117">Adding WMI objects to a service makes it possible to reveal user-defined information along with the built-in WMI provider information.</span></span> <span data-ttu-id="a53e3-118">Dies wird durchgeführt, indem das Schema des Diensts mithilfe der Anwendung "Installutil.exe" in WMI veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="a53e3-118">This is accomplished by publishing the schema of the service to WMI by using the Installutil.exe application.</span></span> <span data-ttu-id="a53e3-119">Eine Anleitung dazu und ausführlichere Informationen finden Sie in den Anweisungen zum Einrichten am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="a53e3-119">Instructions to accomplish this, along with more details can be found in the setup instructions at the end of the topic.</span></span>  
   
-## Zugreifen auf WMI\-Informationen  
- Auf WMI\-Daten kann auf mehreren Wegen zugegriffen werden.  Microsoft stellt WMI\-APIs für Skripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\-Anwendungen, C\+\+\-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] \(http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/wmisdk\/wmi\/using\_wmi.asp\) bereit.  
+## <a name="accessing-wmi-information"></a><span data-ttu-id="a53e3-120">Zugreifen auf WMI-Informationen</span><span class="sxs-lookup"><span data-stu-id="a53e3-120">Accessing WMI Information</span></span>  
+ <span data-ttu-id="a53e3-121">Auf WMI-Daten kann auf mehreren Wegen zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="a53e3-121">WMI data can be accessed many different ways.</span></span> <span data-ttu-id="a53e3-122">Microsoft stellt WMI-APIs für Skripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]-Anwendungen, C++-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp) bereit.</span><span class="sxs-lookup"><span data-stu-id="a53e3-122">Microsoft provides WMI APIs for scripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] applications, C++ applications, and the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).</span></span>  
   
- In diesem Beispiel werden zwei Javaskripts verwendet: das eine zum Auflisten der auf dem Computer ausgeführten Dienste mit einigen ihrer Eigenschaften und das andere zum Anzeigen benutzerdefinierter WMI\-Daten.  Das Skript öffnet eine Verbindung zum WMI\-Anbieter, analysiert Daten und zeigt die erfassten Daten an.  
+ <span data-ttu-id="a53e3-123">In diesem Beispiel werden zwei Javaskripts verwendet: das eine zum Auflisten der auf dem Computer ausgeführten Dienste mit einigen ihrer Eigenschaften und das andere zum Anzeigen benutzerdefinierter WMI-Daten.</span><span class="sxs-lookup"><span data-stu-id="a53e3-123">This sample uses two Java scripts: one to enumerate services running on the computer along with some of their properties and the second to view user-defined WMI data.</span></span> <span data-ttu-id="a53e3-124">Das Skript öffnet eine Verbindung zum WMI-Anbieter, analysiert Daten und zeigt die erfassten Daten an.</span><span class="sxs-lookup"><span data-stu-id="a53e3-124">The script opens a connection to the WMI provider, parses data, and displays the data gathered.</span></span>  
   
- Starten Sie das Beispiel, um eine laufende Instanz eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Diensts zu erstellen.  Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:  
+ <span data-ttu-id="a53e3-125">Starten Sie das Beispiel, um eine laufende Instanz eines [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-125">Start the sample to create a running instance of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="a53e3-126">Führen Sie mit dem folgenden Befehl jedes Javaskript in der Eingabeaufforderung aus, während der Dienst ausgeführt wird:</span><span class="sxs-lookup"><span data-stu-id="a53e3-126">While the service is running, run each Java script by using the following command at the command prompt:</span></span>  
   
 ```  
 cscript EnumerateServices.js  
-  
 ```  
   
- Das Skript greift auf die im Dienst enthaltene Instrumentation zu und erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="a53e3-127">Das Skript greift auf die im Dienst enthaltene Instrumentation zu und erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a53e3-127">The script accesses the instrumentation contained in the service and produces the following output:</span></span>  
   
 ```  
 Microsoft (R) Windows Script Host Version 5.6  
@@ -109,50 +110,48 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
       |-Type:                       Behavior  
 ```  
   
- Führen Sie danach das zweite Javaskript zum Anzeigen der benutzerdefinierten WMI\-Daten aus:  
+ <span data-ttu-id="a53e3-128">Führen Sie danach das zweite Javaskript zum Anzeigen der benutzerdefinierten WMI-Daten aus:</span><span class="sxs-lookup"><span data-stu-id="a53e3-128">Next, run the second Java Script to display the user-defined WMI data:</span></span>  
   
 ```  
 cscript EnumerateCustomObjects.js  
 ```  
   
- Das Skript greift auf die in den Diensten enthaltene benutzerdefinierte Instrumentation zu und erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="a53e3-129">Das Skript greift auf die in den Diensten enthaltene benutzerdefinierte Instrumentation zu und erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a53e3-129">The script accesses the user-defined instrumentation contained in the services and produces the following output:</span></span>  
   
 ```  
-  
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
 |-WMIInfo:       User Defined WMI Information.  
-  
 ```  
   
- Die Ausgabe zeigt an, dass auf dem Computer ein einziger Dienst ausgeführt wird.  Der Dienst macht einen Endpunkt verfügbar, der den `ICalculator`\-Vertrag implementiert.  Die Einstellungen des vom Endpunkt implementierten Verhaltens und der implementierten Bindung werden als Summe einzelner Elemente des Messagingstapels aufgeführt.  
+ <span data-ttu-id="a53e3-130">Die Ausgabe zeigt an, dass auf dem Computer ein einziger Dienst ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a53e3-130">The output shows that there is a single service running on the computer.</span></span> <span data-ttu-id="a53e3-131">Der Dienst macht einen Endpunkt verfügbar, der den `ICalculator`-Vertrag implementiert.</span><span class="sxs-lookup"><span data-stu-id="a53e3-131">The service exposes one endpoint that implements the `ICalculator` contract.</span></span> <span data-ttu-id="a53e3-132">Die Einstellungen des vom Endpunkt implementierten Verhaltens und der implementierten Bindung werden als Summe einzelner Elemente des Messagingstapels aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="a53e3-132">The settings of the behavior and binding that are implemented by the endpoint are listed as the sum of individual elements of the messaging stack.</span></span>  
   
- WMI beschränkt sich nicht darauf, die Verwaltungsinstrumentation der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Infrastruktur verfügbar zu machen.  Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen.  WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.  
+ <span data-ttu-id="a53e3-133">WMI beschränkt sich nicht darauf, die Verwaltungsinstrumentation der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-133">WMI is not limited to exposing the management instrumentation of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure.</span></span> <span data-ttu-id="a53e3-134">Die Anwendung kann mithilfe desselben Mechanismus ihre eigenen domänenspezifischen Datenelemente verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-134">The application can expose its own domain-specific data items through the same mechanism.</span></span> <span data-ttu-id="a53e3-135">WMI ist ein einheitlicher Mechanismus zur Kontrolle und Steuerung eines Webdiensts.</span><span class="sxs-lookup"><span data-stu-id="a53e3-135">WMI is a unified mechanism for inspection and control of a Web service.</span></span>  
   
-#### So können Sie das Beispiel einrichten, erstellen und ausführen  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a53e3-136">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="a53e3-136">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="a53e3-137">Stellen Sie sicher, die von Ihnen ausgeführte der [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a53e3-137">Ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Befolgen Sie zum Erstellen der C\#\- oder Visual Basic .NET\-Variante der Lösung die Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="a53e3-138">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Veröffentlichen Sie das Dienstschema in WMI, indem Sie die Datei InstallUtil.exe \(die sich standardmäßig unter "%WINDIR%\\Microsoft.NET\\Framework\\v4.0.30319" befindet\) für die Datei service.dll im Hostingverzeichnis ausführen.  Dieser Schritt muss nur dann ausgeführt werden, wenn an der Datei service.dll Änderungen vorgenommen wurden.  Weitere Informationen finden Sie unter "Bereitstellen von Verwaltungsinformationen durch Instrumentieren von Anwendungen" unter "http:\/\/msdn2.microsoft.com\/library\/ms186147.aspx" im Abschnitt "Vorgehensweise: Veröffentlichen des Schemas für eine instrumentierte Anwendung in WMI".  
+3.  <span data-ttu-id="a53e3-139">Veröffentlichen Sie das Dienstschema in WMI, indem Sie die Datei InstallUtil.exe (die sich standardmäßig unter "%WINDIR%\Microsoft.NET\Framework\v4.0.30319" befindet) für die Datei service.dll im Hostingverzeichnis ausführen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-139">Publish the services schema to WMI by running the InstallUtil.exe (the default locations for InstallUtil.exe is "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") on the service.dll file in the hosting directory.</span></span> <span data-ttu-id="a53e3-140">Dieser Schritt muss nur dann ausgeführt werden, wenn an der Datei service.dll Änderungen vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="a53e3-140">This step only needs to be executed when changes have been made to the service.dll file.</span></span> <span data-ttu-id="a53e3-141">Weitere Informationen finden Sie unter "Bereitstellen von Verwaltungsinformationen durch Instrumentieren von Anwendungen" unter "http://msdn2.microsoft.com/library/ms186147.aspx" im Abschnitt "Vorgehensweise: Veröffentlichen des Schemas für eine instrumentierte Anwendung in WMI".</span><span class="sxs-lookup"><span data-stu-id="a53e3-141">For more information, see Providing Management Information by Instrumenting Applications at: http://msdn2.microsoft.com/library/ms186147.aspx in the "How To: Publish the Scheme to WMI for an Instrumented Application" section.</span></span>  
   
-4.  Wenn Sie das Beispiel in einer Einzelcomputer\- oder einer computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="a53e3-142">Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a53e3-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  Wenn Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach der Installation von ASP.NET installiert haben, müssen Sie u. U. "%WINDIR%\\Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\servicemodelreg.exe \-r –x" ausführen, um dem ASPNET\-Konto die Berechtigung zum Veröffentlichen von WMI\-Objekten zu erteilen.  
+    >  <span data-ttu-id="a53e3-143">Wenn Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nach der Installation von ASP.NET installiert haben, müssen Sie u. U. "%WINDIR%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe -r –x" ausführen, um dem ASPNET-Konto die Berechtigung zum Veröffentlichen von WMI-Objekten zu erteilen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-143">If you installed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] after installing ASP.NET, you may need to run "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x to give the ASPNET account permission to publish WMI objects.</span></span>  
   
-5.  Die über WMI verfügbar gemachten Daten aus dem Beispiel zeigen Sie mit den folgenden Befehlen an: `cscript EnumerateServices.js` oder `cscript EnumerateCustomObjects.js`.  
+5.  <span data-ttu-id="a53e3-144">Die über WMI verfügbar gemachten Daten aus dem Beispiel zeigen Sie mit den folgenden Befehlen an: `cscript EnumerateServices.js` oder `cscript EnumerateCustomObjects.js`.</span><span class="sxs-lookup"><span data-stu-id="a53e3-144">View data from the sample surfaced through WMI by using the commands: `cscript EnumerateServices.js` or `cscript EnumerateCustomObjects.js`.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="a53e3-145">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="a53e3-145">The samples may already be installed on your computer.</span></span> <span data-ttu-id="a53e3-146">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="a53e3-146">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="a53e3-147">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="a53e3-147">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a53e3-148">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="a53e3-148">This sample is located in the following directory.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## Siehe auch  
- [AppFabric\-Überwachungsbeispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="a53e3-149">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a53e3-149">See Also</span></span>  
+ [<span data-ttu-id="a53e3-150">Überwachen der AppFabric-Beispiele</span><span class="sxs-lookup"><span data-stu-id="a53e3-150">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

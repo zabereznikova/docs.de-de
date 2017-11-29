@@ -1,24 +1,26 @@
 ---
-title: "&quot;Set&quot; ist unzul&#228;ssig. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID387"
+title: "\"Set\" ist unzulässig."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 854384a84ccc6f31aef6c350049cc18c8a72a6fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &quot;Set&quot; ist unzul&#228;ssig.
-Sie haben versucht, eine Eigenschaft zu ändern, deren Einstellungen nicht zur Laufzeit oder nur unter bestimmten Bedingungen festgelegt werden können. Sie haben beispielsweise versucht, die Eigenschafteneinstellungen `Appearance`, `ControlBox`,`MinButton` oder `MaxButton` für das Formular zur Laufzeit zu ändern, oder Sie haben versucht, die Eigenschaft `Visible` für das letzte sichtbare Untermenü in einem übergeordneten Menü auf `False` festzulegen.  
+# <a name="set-not-permitted"></a><span data-ttu-id="56b0e-102">"Set" ist unzulässig.</span><span class="sxs-lookup"><span data-stu-id="56b0e-102">Set not permitted</span></span>
+<span data-ttu-id="56b0e-103">Sie haben versucht, eine Eigenschaft zu ändern, deren Einstellungen nicht zur Laufzeit oder nur unter bestimmten Bedingungen festgelegt werden können.</span><span class="sxs-lookup"><span data-stu-id="56b0e-103">You attempted to change a property whose settings either cannot be set at run time or else can only be set under certain conditions.</span></span> <span data-ttu-id="56b0e-104">Sie haben beispielsweise versucht, die Eigenschafteneinstellungen `Appearance`, `ControlBox`,`MinButton`oder `MaxButton` für das Formular zur Laufzeit zu ändern, oder Sie haben versucht, die Eigenschaft `Visible` für das letzte sichtbare Untermenü in einem übergeordneten Menü auf `False` festzulegen.</span><span class="sxs-lookup"><span data-stu-id="56b0e-104">For example, you may have tried to change the `Appearance`, `ControlBox`,`MinButton`, or `MaxButton` property settings for the form at run time, or you may have tried to set the `Visible` property to `False` for the last remaining visible submenu on a parent menu.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="56b0e-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="56b0e-105">To correct this error</span></span>  
   
-1.  Überprüfen Sie die Eigenschaft, und ermitteln Sie, unter welchen Bedingungen sie festgelegt werden kann.  
+1.  <span data-ttu-id="56b0e-106">Überprüfen Sie die Eigenschaft, und ermitteln Sie, unter welchen Bedingungen sie festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="56b0e-106">Check the property and determine under what conditions it can be set.</span></span>  
   
-## Siehe auch  
- [NICHT IM BUILD: Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/de-de/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="56b0e-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56b0e-107">See Also</span></span>  
+ [<span data-ttu-id="56b0e-108">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="56b0e-108">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

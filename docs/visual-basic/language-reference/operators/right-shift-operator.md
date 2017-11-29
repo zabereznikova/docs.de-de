@@ -1,104 +1,101 @@
 ---
-title: "&gt;&gt; Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.>>"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operator>>"
-  - ">> operator [Visual Basic]"
-  - "bit shift operators"
-  - "operator >>"
-  - "right shift operators"
+title: '&gt;&gt;Operator (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.>>
+helpviewer_keywords:
+- operator>>
+- '>> operator [Visual Basic]'
+- bit shift operators [Visual Basic]
+- operator >>
+- right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4eb0ed817c95905a679de5026bf6494eb72df078
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &gt;&gt; Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.  
+# <a name="gtgt-operator-visual-basic"></a><span data-ttu-id="881f5-102">&gt;&gt;Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="881f5-102">&gt;&gt; Operator (Visual Basic)</span></span>
+<span data-ttu-id="881f5-103">Führt eine arithmetische rechtsverschiebung in einem Bitmuster aus.</span><span class="sxs-lookup"><span data-stu-id="881f5-103">Performs an arithmetic right shift on a bit pattern.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="881f5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="881f5-104">Syntax</span></span>  
   
 ```  
-  
 result = pattern >> amount  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="881f5-105">Teile</span><span class="sxs-lookup"><span data-stu-id="881f5-105">Parts</span></span>  
  `result`  
- Erforderlich.  Ganzzahliger numerischer Wert.  Das Ergebnis der Verschiebung des Bitmusters.  Der Datentyp entspricht dem von `pattern`.  
+ <span data-ttu-id="881f5-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="881f5-106">Required.</span></span> <span data-ttu-id="881f5-107">Ganzzahlige numerische Wert ist.</span><span class="sxs-lookup"><span data-stu-id="881f5-107">Integral numeric value.</span></span> <span data-ttu-id="881f5-108">Das Ergebnis der Verschiebung des Bitmusters.</span><span class="sxs-lookup"><span data-stu-id="881f5-108">The result of shifting the bit pattern.</span></span> <span data-ttu-id="881f5-109">Der Datentyp ist dieselbe wie `pattern`.</span><span class="sxs-lookup"><span data-stu-id="881f5-109">The data type is the same as that of `pattern`.</span></span>  
   
  `pattern`  
- Erforderlich.  Ein ganzzahliger numerischer Ausdruck.  Das zu verschiebende Bitmuster.  Der Datentyp muss ein ganzzahliger Typ \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` oder `ULong`\) sein.  
+ <span data-ttu-id="881f5-110">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="881f5-110">Required.</span></span> <span data-ttu-id="881f5-111">Ganzzahlige numerische Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="881f5-111">Integral numeric expression.</span></span> <span data-ttu-id="881f5-112">Das Bitmuster verschoben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="881f5-112">The bit pattern to be shifted.</span></span> <span data-ttu-id="881f5-113">Der Datentyp muss ein ganzzahliger Typ sein (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).</span><span class="sxs-lookup"><span data-stu-id="881f5-113">The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
   
  `amount`  
- Erforderlich.  Ein numerischer Ausdruck.  Die Anzahl der Bits, um die das Bitmuster verschoben werden soll.  Der Datentyp muss `Integer` sein oder zu `Integer` erweitert werden.  
+ <span data-ttu-id="881f5-114">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="881f5-114">Required.</span></span> <span data-ttu-id="881f5-115">Numerischer Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="881f5-115">Numeric expression.</span></span> <span data-ttu-id="881f5-116">Die Anzahl der zu verschiebenden Bitmusters Bits.</span><span class="sxs-lookup"><span data-stu-id="881f5-116">The number of bits to shift the bit pattern.</span></span> <span data-ttu-id="881f5-117">Der Datentyp muss `Integer` oder erweitert werden, um `Integer`.</span><span class="sxs-lookup"><span data-stu-id="881f5-117">The data type must be `Integer` or widen to `Integer`.</span></span>  
   
-## Hinweise  
- Arithmetische Verschiebungen sind nicht zyklisch, d. h., die Bits, die an einem Ende des Ergebnisses durch die Verschiebung herausfallen, werden nicht am anderen Ende wieder eingefügt.  Bei einer arithmetischen Verschiebung nach rechts werden die Bits, die über die Bitposition ganz rechts hinaus verschoben werden, verworfen, und das Bit ganz links \(Vorzeichenbit\) wird in die Bitpositionen übertragen, die links frei werden.  Das bedeutet, dass die frei werdenden Positionen auf 1 gesetzt werden, wenn `pattern` einen negativen Wert hat. Andernfalls werden sie auf 0 \(null\) gesetzt.  
+## <a name="remarks"></a><span data-ttu-id="881f5-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="881f5-118">Remarks</span></span>  
+ <span data-ttu-id="881f5-119">Arithmetische Schichten sind nicht zirkulär, d. h. die Bits verschobene ein Ende des Resultsets nicht am anderen Ende wieder hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="881f5-119">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="881f5-120">Klicken Sie in eine arithmetische Verschiebung nach rechts die Bits hinter Bit ganz rechts verschoben werden verworfen, und das am weitesten links stehende (Vorzeichenbit) wird in die auf der linken Seite frei gewordene Bitpositionen übertragen.</span><span class="sxs-lookup"><span data-stu-id="881f5-120">In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost (sign) bit is propagated into the bit positions vacated at the left.</span></span> <span data-ttu-id="881f5-121">Dies bedeutet, dass bei `pattern` hat einen negativen Wert werden die frei werdenden Positionen auf einen festgelegt; andernfalls sind sie auf 0 (null) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="881f5-121">This means that if `pattern` has a negative value, the vacated positions are set to one; otherwise they are set to zero.</span></span>  
   
- Beachten Sie, dass die Datentypen `Byte`, `UShort`, `UInteger` und `ULong` kein Vorzeichen enthalten und daher kein Vorzeichenbit weitergegeben werden muss.  Wenn `pattern` ein vorzeichenloser Typ ist, werden die frei werdenden Positionen immer auf 0 \(null\) gesetzt.  
+ <span data-ttu-id="881f5-122">Beachten Sie, dass die Datentypen `Byte`, `UShort`, `UInteger`, und `ULong` sind, es gibt also keine Vorzeichenbit weitergegeben.</span><span class="sxs-lookup"><span data-stu-id="881f5-122">Note that the data types `Byte`, `UShort`, `UInteger`, and `ULong` are unsigned, so there is no sign bit to propagate.</span></span> <span data-ttu-id="881f5-123">Wenn `pattern` weist eine nicht signierte Typ, die frei werdenden Positionen immer auf 0 (null) festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="881f5-123">If `pattern` is of any unsigned type, the vacated positions are always set to zero.</span></span>  
   
- Um eine Verschiebung um mehr Bits, als das Ergebnis aufnehmen kann, zu verhindern, maskiert Visual Basic den Wert von `amount` mit einer dem Datentyp von `pattern` entsprechenden Größenmaske.  Das binäre AND dieser Werte wird für den Verschiebungsbetrag verwendet.  Die Größenmasken lauten wie folgt:  
+ <span data-ttu-id="881f5-124">Um zu verhindern, Verschieben von mehr Bits, als das Ergebnis aufnehmen kann, maskiert Visual Basic den Wert der `amount` mit einer Größenmaske, die in den Datentyp der entsprechenden `pattern`.</span><span class="sxs-lookup"><span data-stu-id="881f5-124">To prevent shifting by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask corresponding to the data type of `pattern`.</span></span> <span data-ttu-id="881f5-125">Das binäre AND dieser Werte wird für den Betrag der Verschiebung verwendet.</span><span class="sxs-lookup"><span data-stu-id="881f5-125">The binary AND of these values is used for the shift amount.</span></span> <span data-ttu-id="881f5-126">Die Größenmasken lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="881f5-126">The size masks are as follows:</span></span>  
   
-|Datentyp von `pattern`|Größenmaske \(dezimal\)|Größenmaske \(hexadezimal\)|  
-|----------------------------|-----------------------------|---------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|<span data-ttu-id="881f5-127">Datentyp`pattern`</span><span class="sxs-lookup"><span data-stu-id="881f5-127">Data type of `pattern`</span></span>|<span data-ttu-id="881f5-128">Größenmaske (dezimal)</span><span class="sxs-lookup"><span data-stu-id="881f5-128">Size mask (decimal)</span></span>|<span data-ttu-id="881f5-129">Größenmaske (hexadezimal)</span><span class="sxs-lookup"><span data-stu-id="881f5-129">Size mask (hexadecimal)</span></span>|  
+|----------------------------|---------------------------|-------------------------------|  
+|<span data-ttu-id="881f5-130">`SByte`, `Byte`</span><span class="sxs-lookup"><span data-stu-id="881f5-130">`SByte`, `Byte`</span></span>|<span data-ttu-id="881f5-131">7</span><span class="sxs-lookup"><span data-stu-id="881f5-131">7</span></span>|<span data-ttu-id="881f5-132">& H00000007</span><span class="sxs-lookup"><span data-stu-id="881f5-132">&H00000007</span></span>|  
+|<span data-ttu-id="881f5-133">`Short`, `UShort`</span><span class="sxs-lookup"><span data-stu-id="881f5-133">`Short`, `UShort`</span></span>|<span data-ttu-id="881f5-134">15</span><span class="sxs-lookup"><span data-stu-id="881f5-134">15</span></span>|<span data-ttu-id="881f5-135">& H0000000F</span><span class="sxs-lookup"><span data-stu-id="881f5-135">&H0000000F</span></span>|  
+|<span data-ttu-id="881f5-136">`Integer`, `UInteger`</span><span class="sxs-lookup"><span data-stu-id="881f5-136">`Integer`, `UInteger`</span></span>|<span data-ttu-id="881f5-137">31</span><span class="sxs-lookup"><span data-stu-id="881f5-137">31</span></span>|<span data-ttu-id="881f5-138">& H0000001F</span><span class="sxs-lookup"><span data-stu-id="881f5-138">&H0000001F</span></span>|  
+|<span data-ttu-id="881f5-139">`Long`, `ULong`</span><span class="sxs-lookup"><span data-stu-id="881f5-139">`Long`, `ULong`</span></span>|<span data-ttu-id="881f5-140">63</span><span class="sxs-lookup"><span data-stu-id="881f5-140">63</span></span>|<span data-ttu-id="881f5-141">& H0000003F</span><span class="sxs-lookup"><span data-stu-id="881f5-141">&H0000003F</span></span>|  
   
- Wenn `amount` 0 \(null\) ist, ist der Wert von `result` mit dem Wert von `pattern` identisch.  Wenn `amount` negativ ist, wird der Wert als Wert ohne Vorzeichen interpretiert und mit der entsprechenden Größenmaske maskiert.  
+ <span data-ttu-id="881f5-142">Wenn `amount` gleich NULL ist, werden den Wert der `result` ist identisch mit dem Wert des `pattern`.</span><span class="sxs-lookup"><span data-stu-id="881f5-142">If `amount` is zero, the value of `result` is identical to the value of `pattern`.</span></span> <span data-ttu-id="881f5-143">Wenn `amount` ist negativ ist, es als Wert ohne Vorzeichen und wird mit der entsprechenden Größe maskiert.</span><span class="sxs-lookup"><span data-stu-id="881f5-143">If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.</span></span>  
   
- Arithmetische Verschiebungen generieren niemals Überlaufausnahmen.  
+ <span data-ttu-id="881f5-144">Arithmetische Schichten generieren nie Stapelüberlauf-Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="881f5-144">Arithmetic shifts never generate overflow exceptions.</span></span>  
   
-## Überladen  
- Der Operator `>>` kann *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur sein Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Wenn Sie diesen Operator im Code auf eine solche Klasse oder Struktur anwenden, sollten Sie auf jeden Fall sein neu definiertes Verhalten verstehen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="881f5-145">Überladen</span><span class="sxs-lookup"><span data-stu-id="881f5-145">Overloading</span></span>  
+ <span data-ttu-id="881f5-146">Die `>>` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat.</span><span class="sxs-lookup"><span data-stu-id="881f5-146">The `>>` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="881f5-147">Wenn im Code dieser Operator auf eine solche Klasse oder Struktur verwendet, achten Sie darauf, dass Sie dessen neu definierten Verhalten verstehen.</span><span class="sxs-lookup"><span data-stu-id="881f5-147">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="881f5-148">Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="881f5-148">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Beispiel  
- In diesem Beispiel werden mit dem Operator `>>` arithmetische Verschiebungen nach rechts für ganzzahlige Werte ausgeführt.  Das Ergebnis hat immer den gleichen Datentyp wie der zu verschiebende Ausdruck.  
+## <a name="example"></a><span data-ttu-id="881f5-149">Beispiel</span><span class="sxs-lookup"><span data-stu-id="881f5-149">Example</span></span>  
+ <span data-ttu-id="881f5-150">Im folgenden Beispiel wird die `>>` Operator arithmetische rechtsverschiebungen für ganzzahlige Werte ausführen.</span><span class="sxs-lookup"><span data-stu-id="881f5-150">The following example uses the `>>` operator to perform arithmetic right shifts on integral values.</span></span> <span data-ttu-id="881f5-151">Das Ergebnis hat immer den gleichen Datentyp wie der zu verschiebende Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="881f5-151">The result always has the same data type as that of the expression being shifted.</span></span>  
   
  [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
- Das vorangehende Beispiel hat folgende Ergebnisse:  
+ <span data-ttu-id="881f5-152">Die Ergebnisse des obigen Beispiels sind wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="881f5-152">The results of the preceding example are as follows:</span></span>  
   
--   `result1` ist 2560 \(0000 1010 0000 0000\).  
+-   <span data-ttu-id="881f5-153">`result1`2560 (0000 1010 0000 0000) ist.</span><span class="sxs-lookup"><span data-stu-id="881f5-153">`result1` is 2560 (0000 1010 0000 0000).</span></span>  
   
--   `result2` ist 160 \(0000 0000 1010 0000\).  
+-   <span data-ttu-id="881f5-154">`result2`ist 160 (0000 0000 1010 0000).</span><span class="sxs-lookup"><span data-stu-id="881f5-154">`result2` is 160 (0000 0000 1010 0000).</span></span>  
   
--   `result3` ist 2 \(0000 0000 0000 0010\).  
+-   <span data-ttu-id="881f5-155">`result3`ist 2 (0000-0000-0000-0010).</span><span class="sxs-lookup"><span data-stu-id="881f5-155">`result3` is 2 (0000 0000 0000 0010).</span></span>  
   
--   `result4` ist 640 \(0000 0010 1000 0000\).  
+-   <span data-ttu-id="881f5-156">`result4`ist 640 (0000 0010 1000 0000).</span><span class="sxs-lookup"><span data-stu-id="881f5-156">`result4` is 640 (0000 0010 1000 0000).</span></span>  
   
--   `result5` ist 0 \(15 Stellen nach rechts verschoben\).  
+-   <span data-ttu-id="881f5-157">`result5`ist 0 (15 Stellen rechts verschoben).</span><span class="sxs-lookup"><span data-stu-id="881f5-157">`result5` is 0 (shifted 15 places to the right).</span></span>  
   
- Der Verschiebungsbetrag für `result4` wird als 18 AND 15 berechnet, dies ergibt 2.  
+ <span data-ttu-id="881f5-158">Der Betrag der Verschiebung für `result4` wird berechnet als 18 und 15, die gleich 2 ist.</span><span class="sxs-lookup"><span data-stu-id="881f5-158">The shift amount for `result4` is calculated as 18 AND 15, which equals 2.</span></span>  
   
- Im folgenden Beispiel werden arithmetische Verschiebungen in einem negativen Wert veranschaulicht.  
+ <span data-ttu-id="881f5-159">Das folgende Beispiel zeigt die arithmetische Schichten auf einen negativen Wert.</span><span class="sxs-lookup"><span data-stu-id="881f5-159">The following example shows arithmetic shifts on a negative value.</span></span>  
   
  [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
- Das vorangehende Beispiel hat folgende Ergebnisse:  
+ <span data-ttu-id="881f5-160">Die Ergebnisse des obigen Beispiels sind wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="881f5-160">The results of the preceding example are as follows:</span></span>  
   
--   `negresult1` ist \-512 \(1111 1110 0000 0000\).  
+-   <span data-ttu-id="881f5-161">`negresult1`ist-512 (1111 1110 0000 0000).</span><span class="sxs-lookup"><span data-stu-id="881f5-161">`negresult1` is -512 (1111 1110 0000 0000).</span></span>  
   
--   `negresult2` ist \-1 \(das Vorzeichenbit wird weitergegeben\).  
+-   <span data-ttu-id="881f5-162">`negresult2`ist-1 (das Vorzeichenbit wird weitergegeben).</span><span class="sxs-lookup"><span data-stu-id="881f5-162">`negresult2` is -1 (the sign bit is propagated).</span></span>  
   
-## Siehe auch  
- [Bit Shift Operators](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [\>\>\= Operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="881f5-163">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="881f5-163">See Also</span></span>  
+ [<span data-ttu-id="881f5-164">Bitverschiebungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="881f5-164">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="881f5-165">Zuweisungsoperatoren</span><span class="sxs-lookup"><span data-stu-id="881f5-165">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [<span data-ttu-id="881f5-166">>>=-Operator</span><span class="sxs-lookup"><span data-stu-id="881f5-166">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [<span data-ttu-id="881f5-167">Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="881f5-167">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="881f5-168">Nach Funktionalität sortierte Operatoren</span><span class="sxs-lookup"><span data-stu-id="881f5-168">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="881f5-169">Arithmetische Operatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="881f5-169">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -1,54 +1,57 @@
 ---
-title: "Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Web
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3e7ddb3d56c707d1e7a6a9804e730c317ec4bf08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Web
-Dieser Abschnitt enthält im Internet gehostete Beispiele.  
+# <a name="web"></a><span data-ttu-id="5220a-102">Web</span><span class="sxs-lookup"><span data-stu-id="5220a-102">Web</span></span>
+<span data-ttu-id="5220a-103">Dieser Abschnitt enthält im Internet gehostete Beispiele.</span><span class="sxs-lookup"><span data-stu-id="5220a-103">This section contains Web-hosted samples.</span></span>  
   
-## In diesem Abschnitt  
- [Erweiterte Formatauswahl](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
- Veranschaulicht, wie das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird.  
+## <a name="in-this-section"></a><span data-ttu-id="5220a-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5220a-104">In This Section</span></span>  
+ [<span data-ttu-id="5220a-105">Erweiterte Formatauswahl</span><span class="sxs-lookup"><span data-stu-id="5220a-105">Advanced Format Selection</span></span>](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+ <span data-ttu-id="5220a-106">Veranschaulicht, wie das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell zur Unterstützung neuer Formate für ausgehende Antworten erweitert wird.</span><span class="sxs-lookup"><span data-stu-id="5220a-106">Demonstrates how to extend the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model to support new outgoing response formats.</span></span>  
   
- [Automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- Veranschaulicht, wie die automatische Formatauswahl \(XML oder JSON\) mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodell aktiviert wird und wie das Format im Vorgangscode explizit festgelegt wird.  
+ [<span data-ttu-id="5220a-107">Automatische Formatauswahl</span><span class="sxs-lookup"><span data-stu-id="5220a-107">Automatic Format Selection</span></span>](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
+ <span data-ttu-id="5220a-108">Veranschaulicht, wie die automatische Formatauswahl (XML oder JSON) mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell aktiviert wird und wie das Format im Vorgangscode explizit festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="5220a-108">Demonstrates how to enable automatic format selection (XML or JSON) with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model, as well as how to explicitly set the format in the operation code.</span></span>  
   
- [Einfacher HTTP\-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- Veranschaulicht, wie ein HTTP\-basierter, RPC\-basierter Dienst, der im Allgemeinen als "POX"\-Dienst \(Plain Old XML\) bezeichnet wird, mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodells implementiert wird.  
+ [<span data-ttu-id="5220a-109">Grundlegende HTTP-Dienst</span><span class="sxs-lookup"><span data-stu-id="5220a-109">Basic HTTP Service</span></span>](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ <span data-ttu-id="5220a-110">Veranschaulicht, wie einen HTTP-basierter, RPC-basierter Dienst,-Allgemein als "POX" (Plain Old XML)-Dienst bezeichnet mithilfe der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web-HTTP-Programmiermodell.</span><span class="sxs-lookup"><span data-stu-id="5220a-110">Demonstrates how to implement an HTTP-based, RPC-based service - popularly referred to as "POX" (Plain Old XML) service – using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model.</span></span>  
   
- [Einfacher Ressourcendienst](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
- Zeigt, wie ein HTTP\-basierter Dienst mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodells implementiert wird, das eine Auflistung von Kunden verfügbar macht, die die Vorgänge zum Abrufen, Hinzufügen, Löschen und Ersetzen unterstützt.  
+ [<span data-ttu-id="5220a-111">Einfacher Ressourcendienst</span><span class="sxs-lookup"><span data-stu-id="5220a-111">Basic Resource Service</span></span>](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
+ <span data-ttu-id="5220a-112">Zeigt, wie ein HTTP-basierter Dienst mithilfe des [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodells implementiert wird, das eine Auflistung von Kunden verfügbar macht, die die Vorgänge zum Abrufen, Hinzufügen, Löschen und Ersetzen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5220a-112">Demonstrates how to implement a HTTP-based service using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model that exposes a collection of customers that supports the retrieve, add, delete and replace operations.</span></span>  
   
- [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
- Veranschaulicht, wie ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Dienst mit ASP.NET\-Routen gehostet wird.  
+ [<span data-ttu-id="5220a-113">AspNetRouteIntegration</span><span class="sxs-lookup"><span data-stu-id="5220a-113">AspNetRouteIntegration</span></span>](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
+ <span data-ttu-id="5220a-114">Veranschaulicht, wie ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Dienst mit ASP.NET-Routen gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="5220a-114">Demonstrates how to host a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP service using ASP.NET routes.</span></span>  
   
- [Bedingtes GET und PUT](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
- Zeigt, wie die neuen bedingten Abruf\- und Aktualisierungs\-APIs für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodell verwendet werden.  
+ [<span data-ttu-id="5220a-115">Bedingtes Get und Put</span><span class="sxs-lookup"><span data-stu-id="5220a-115">Conditional Get and Put</span></span>](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
+ <span data-ttu-id="5220a-116">Zeigt, wie die neuen bedingten Abruf- und Aktualisierungs-APIs für das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5220a-116">Demonstrates how to use the new conditional retrieve and update APIs for the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model.</span></span>  
   
- [SOAP\- und HTTP\-Endpunkte](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- Veranschaulicht, wie ein RPC\-basierter Dienst implementiert und im SOAP\-Format und POX\-Format \(Plain Old XML\) mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodell verfügbar gemacht wird.  
+ [<span data-ttu-id="5220a-117">SOAP- und HTTP-Endpunkte</span><span class="sxs-lookup"><span data-stu-id="5220a-117">SOAP and HTTP Endpoints</span></span>](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
+ <span data-ttu-id="5220a-118">Veranschaulicht, wie ein RPC-basierter Dienst implementiert und ihn in das SOAP-Format und die "Plain Old XML" (POX)-Format mit Aussetzen der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web-HTTP-Programmiermodell.</span><span class="sxs-lookup"><span data-stu-id="5220a-118">Demonstrates how to implement an RPC-based service and expose it in the SOAP format and the "Plain Old XML" (POX) format using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model.</span></span>  
   
- [ASP.NET\-Zwischenspeicherungsintegration](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
- Veranschaulicht, wie der ASP.NET\-Ausgabecache mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Programmiermodell verwendet wird.  
+ [<span data-ttu-id="5220a-119">ASP.NET-zwischenspeicherungsintegration</span><span class="sxs-lookup"><span data-stu-id="5220a-119">ASP.NET Caching Integration</span></span>](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
+ <span data-ttu-id="5220a-120">Veranschaulicht, wie der ASP.NET-Ausgabecache mit dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Programmiermodell verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5220a-120">Demonstrates how to utilize the ASP.NET output cache with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP programming model.</span></span>  
   
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- Veranschaulicht die Hauptkonzepte zu <xref:System.UriTemplate>.  
+ [<span data-ttu-id="5220a-121">URI-Vorlage</span><span class="sxs-lookup"><span data-stu-id="5220a-121">UriTemplate</span></span>](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ <span data-ttu-id="5220a-122">Veranschaulicht die Hauptkonzepte zu <xref:System.UriTemplate>.</span><span class="sxs-lookup"><span data-stu-id="5220a-122">Demonstrates the key concepts relating to <xref:System.UriTemplate>.</span></span>  
   
- [UriTemplate\-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- Zeigt, wie die <xref:System.UriTemplateTable>\-Klasse eine wörterbuchähnliche assoziative Tabellenstruktur zum Arbeiten mit einem Satz von <xref:System.UriTemplate>\-Instanzen bereitstellt.  
+ [<span data-ttu-id="5220a-123">UriTemplate-Tabelle</span><span class="sxs-lookup"><span data-stu-id="5220a-123">UriTemplate Table</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ <span data-ttu-id="5220a-124">Zeigt, wie die <xref:System.UriTemplateTable>-Klasse eine wörterbuchähnliche assoziative Tabellenstruktur zum Arbeiten mit einem Satz von <xref:System.UriTemplate>-Instanzen bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="5220a-124">Demonstrates how the <xref:System.UriTemplateTable> class provides a dictionary-like associative table structure for working with a set of <xref:System.UriTemplate> instances.</span></span>  
   
- [UriTemplate\-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
- Demonstriert ein grundlegendes, mit <xref:System.UriTemplateTable> erstelltes Verteilermodul, ein allgemeines Verwendungsszenario für die <xref:System.UriTemplateTable>\-Klasse.
+ [<span data-ttu-id="5220a-125">UriTemplate-Tabellenverteiler</span><span class="sxs-lookup"><span data-stu-id="5220a-125">UriTemplate Table Dispatcher</span></span>](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
+ <span data-ttu-id="5220a-126">Demonstriert ein grundlegendes, mit <xref:System.UriTemplateTable> erstelltes Verteilermodul, ein allgemeines Verwendungsszenario für die <xref:System.UriTemplateTable>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="5220a-126">Demonstrates a basic dispatching engine built using <xref:System.UriTemplateTable>, a common usage scenario for the <xref:System.UriTemplateTable> class.</span></span>

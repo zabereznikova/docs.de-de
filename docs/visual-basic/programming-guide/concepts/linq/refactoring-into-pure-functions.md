@@ -1,45 +1,41 @@
 ---
-title: Umgestalten in reine Funktionen (Visual Basic) | Microsoft-Dokumentation
+title: Umgestalten in reine Funktionen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Umgestalten in reine Funktionen (Visual Basic)
-Ein wichtiger Aspekt bei dem Studium reiner funktionaler Transformationen besteht darin zu lernen, wie Code mit reinen Funktionen umgestaltet werden kann.  
+# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="c331c-102">Umgestalten in reine Funktionen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c331c-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
+<span data-ttu-id="c331c-103">Ein wichtiger Aspekt bei dem Studium reiner funktionaler Transformationen besteht darin zu lernen, wie Code mit reinen Funktionen umgestaltet werden kann.</span><span class="sxs-lookup"><span data-stu-id="c331c-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>  
   
- Wie bereits weiter oben erwähnt, besitzt eine reine Funktion zwei nützliche Eigenschaften:  
+ <span data-ttu-id="c331c-104">Wie bereits weiter oben erwähnt, besitzt eine reine Funktion zwei nützliche Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="c331c-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>  
   
--   Sie hat keine Nebenwirkungen. Die Funktion ändert keine Variablen oder Daten irgendeines Typs außerhalb der Funktion.  
+-   <span data-ttu-id="c331c-105">Sie hat keine Nebenwirkungen.</span><span class="sxs-lookup"><span data-stu-id="c331c-105">It has no side effects.</span></span> <span data-ttu-id="c331c-106">Die Funktion ändert keine Variablen oder Daten irgendeines Typs außerhalb der Funktion.</span><span class="sxs-lookup"><span data-stu-id="c331c-106">The function does not change any variables or the data of any type outside of the function.</span></span>  
   
--   Sie ist konsistent. Bei identischen Eingabedaten gibt die Funktion immer denselben Ausgabewert zurück.  
+-   <span data-ttu-id="c331c-107">Sie ist konsistent.</span><span class="sxs-lookup"><span data-stu-id="c331c-107">It is consistent.</span></span> <span data-ttu-id="c331c-108">Bei identischen Eingabedaten gibt die Funktion immer denselben Ausgabewert zurück.</span><span class="sxs-lookup"><span data-stu-id="c331c-108">Given the same set of input data, it will always return the same output value.</span></span>  
   
- Eine Möglichkeit des Umstiegs auf die funktionale Programmierung besteht darin, vorhandenen Code umzugestalten und so unnötige Nebenwirkungen und externe Abhängigkeiten abzuschaffen. Auf diese Weise können Sie Versionen von reinen Funktionen von vorhandenem Code erstellen.  
+ <span data-ttu-id="c331c-109">Eine Möglichkeit des Umstiegs auf die funktionale Programmierung besteht darin, vorhandenen Code umzugestalten und so unnötige Nebenwirkungen und externe Abhängigkeiten abzuschaffen.</span><span class="sxs-lookup"><span data-stu-id="c331c-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="c331c-110">Auf diese Weise können Sie Versionen von reinen Funktionen von vorhandenem Code erstellen.</span><span class="sxs-lookup"><span data-stu-id="c331c-110">In this way, you can create pure function versions of existing code.</span></span>  
   
- In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht. Die [Lernprogramm: Bearbeiten des Inhalts eines WordprocessingML-Dokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Lernprogramm zeigt, wie Sie ein WordprocessingML-Dokument bearbeiten können, und enthält zwei Beispiele für das Umgestalten mit einer reinen Funktion.  
+ <span data-ttu-id="c331c-111">In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht.</span><span class="sxs-lookup"><span data-stu-id="c331c-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="c331c-112">Die [Lernprogramm: Bearbeiten des Inhalts eines WordprocessingML-Dokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Lernprogramm wird gezeigt, wie ein WordprocessingML-Dokument bearbeiten, und enthält zwei Beispiele für die Umgestaltung mit einer reinen Funktion.</span><span class="sxs-lookup"><span data-stu-id="c331c-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Beseitigen von Nebenwirkungen und externen Abhängigkeiten  
- In den folgenden Beispielen werden zwei nicht reine Funktionen einer reinen Funktion gegenübergestellt.  
+## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="c331c-113">Beseitigen von Nebenwirkungen und externen Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="c331c-113">Eliminating Side Effects and External Dependencies</span></span>  
+ <span data-ttu-id="c331c-114">In den folgenden Beispielen werden zwei nicht reine Funktionen einer reinen Funktion gegenübergestellt.</span><span class="sxs-lookup"><span data-stu-id="c331c-114">The following examples contrast two non-pure functions and a pure function.</span></span>  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>Nicht reine Funktion, die einen Klassenmember ändert  
- Im folgenden Code ist die `HypenatedConcat`-Funktion keine reine Funktion, da sie den `aMember`-Datenmember in der Klasse ändert:  
+### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="c331c-115">Nicht reine Funktion, die einen Klassenmember ändert</span><span class="sxs-lookup"><span data-stu-id="c331c-115">Non-Pure Function that Changes a Class Member</span></span>  
+ <span data-ttu-id="c331c-116">Im folgenden Code ist die `HypenatedConcat`-Funktion keine reine Funktion, da sie den `aMember`-Datenmember in der Klasse ändert:</span><span class="sxs-lookup"><span data-stu-id="c331c-116">In the following code, the `HypenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>  
   
 ```vb  
 Module Module1  
@@ -56,16 +52,16 @@ Module Module1
 End Module  
 ```  
   
- Dieser Code erzeugt die folgende Ausgabe:  
+ <span data-ttu-id="c331c-117">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c331c-117">This code produces the following output:</span></span>  
   
 ```  
 StringOne-StringTwo  
 ```  
   
- Beachten Sie, dass spielt, ob die zu ändernden Daten `public` oder `private` Zugriff, oder eine `shared` Member bzw. ein Instanzmember. Reine Funktionen führen zu keinerlei Änderungen an Daten außerhalb der Funktion.  
+ <span data-ttu-id="c331c-118">Beachten Sie, dass es spielt keine Rolle, ob die zu ändernden Daten hat `public` oder `private` Zugriff auf oder ist eine `shared` Member bzw. ein Instanzmember.</span><span class="sxs-lookup"><span data-stu-id="c331c-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="c331c-119">Reine Funktionen führen zu keinerlei Änderungen an Daten außerhalb der Funktion.</span><span class="sxs-lookup"><span data-stu-id="c331c-119">A pure function does not change any data outside of the function.</span></span>  
   
-### <a name="non-pure-function-that-changes-an-argument"></a>Nicht reine Funktion, die ein Argument ändert  
- Außerdem ist die folgende Version derselben Funktion keine reine Funktion, weil sie den Inhalt ihres Parameters, `sb`, ändert.  
+### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="c331c-120">Nicht reine Funktion, die ein Argument ändert</span><span class="sxs-lookup"><span data-stu-id="c331c-120">Non-Pure Function that Changes an Argument</span></span>  
+ <span data-ttu-id="c331c-121">Außerdem ist die folgende Version derselben Funktion keine reine Funktion, weil sie den Inhalt ihres Parameters, `sb`, ändert.</span><span class="sxs-lookup"><span data-stu-id="c331c-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -81,13 +77,13 @@ Module Module1
 End Module  
 ```  
   
- Diese Version des Programms produziert dieselbe Ausgabe wie die erste Version, weil die `HypenatedConcat` Funktion den Wert (Status) ihres ersten Parameters geändert hat, durch den Aufruf der <xref:System.Text.StringBuilder.Append%2A>-Memberfunktion.</xref:System.Text.StringBuilder.Append%2A> Beachten Sie, dass diese Änderung trotz der Tatsache auftritt, dass `HypenatedConcat` mit Wertparameterübergabe arbeitet.  
+ <span data-ttu-id="c331c-122">Diese Version des Programms produziert dieselbe Ausgabe wie die erste Version, weil die `HypenatedConcat`-Funktion durch Aufrufen der <xref:System.Text.StringBuilder.Append%2A>-Memberfunktion den Wert (Status) ihres ersten Parameters geändert hat.</span><span class="sxs-lookup"><span data-stu-id="c331c-122">This version of the program produces the same output as the first version, because the `HypenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="c331c-123">Beachten Sie, dass diese Änderung trotz der Tatsache auftritt, dass `HypenatedConcat` mit Wertparameterübergabe arbeitet.</span><span class="sxs-lookup"><span data-stu-id="c331c-123">Note that this alteration occurs despite that fact that `HypenatedConcat` uses call-by-value parameter passing.</span></span>  
   
 > [!IMPORTANT]
->  Wenn Sie bei Verweistypen einen Parameter nach Wert übergeben, führt dies zu einer Kopie des Verweises auf ein zu übergebendes Objekt. Diese Kopie ist weiterhin mit denselben Instanzdaten wie der ursprüngliche Verweis verknüpft (so lange, bis die Verweisvariable einem neuen Objekt zugewiesen wird). Für das Ändern eines Parameters durch einen Parameter ist die Referenzparameterübergabe nicht unbedingt erforderlich.  
+>  <span data-ttu-id="c331c-124">Wenn Sie bei Verweistypen einen Parameter nach Wert übergeben, führt dies zu einer Kopie des Verweises auf ein zu übergebendes Objekt.</span><span class="sxs-lookup"><span data-stu-id="c331c-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="c331c-125">Diese Kopie ist weiterhin mit denselben Instanzdaten wie der ursprüngliche Verweis verknüpft (so lange, bis die Verweisvariable einem neuen Objekt zugewiesen wird).</span><span class="sxs-lookup"><span data-stu-id="c331c-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="c331c-126">Für das Ändern eines Parameters durch einen Parameter ist die Referenzparameterübergabe nicht unbedingt erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c331c-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>  
   
-### <a name="pure-function"></a>Reine Funktion  
- Die nächste Version des Programms zeigt, wie die `HypenatedConcat`-Funktion als reine Funktion implementiert werden kann.  
+### <a name="pure-function"></a><span data-ttu-id="c331c-127">Reine Funktion</span><span class="sxs-lookup"><span data-stu-id="c331c-127">Pure Function</span></span>  
+ <span data-ttu-id="c331c-128">Die nächste Version des Programms zeigt, wie die `HypenatedConcat`-Funktion als reine Funktion implementiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="c331c-128">This next version of the program hows how to implement the `HypenatedConcat` function as a pure function.</span></span>  
   
 ```vb  
 Module Module1  
@@ -103,15 +99,15 @@ Module Module1
 End Module  
 ```  
   
- Auch diese Version erzeugt dieselbe Zeile in der Ausgabe: `StringOne-StringTwo`. Um den verketteten Wert beizubehalten, wird er in der Zwischenvariable `s2` gespeichert.  
+ <span data-ttu-id="c331c-129">Auch diese Version erzeugt dieselbe Zeile in der Ausgabe: `StringOne-StringTwo`.</span><span class="sxs-lookup"><span data-stu-id="c331c-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="c331c-130">Um den verketteten Wert beizubehalten, wird er in der Zwischenvariable `s2` gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c331c-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>  
   
- Ein Ansatz, der sich als sehr hilfreich erweisen kann, besteht darin, Funktionen zu schreiben, die zwar lokal unrein (also lokale Variablen deklarieren und ändern), global aber rein sind. Solche Funktionen besitzen viele der wünschenswerten Zusammensetzbarkeitseigenschaften, vermeiden dabei aber einige der komplizierteren Idiome der funktionalen Programmierung, z. B. die Notwendigkeit der Verwendung der Rekursion, wenn eine einfache Schleife dasselbe Ziel erreichen würde.  
+ <span data-ttu-id="c331c-131">Ein Ansatz, der sich als sehr hilfreich erweisen kann, besteht darin, Funktionen zu schreiben, die zwar lokal unrein (also lokale Variablen deklarieren und ändern), global aber rein sind.</span><span class="sxs-lookup"><span data-stu-id="c331c-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="c331c-132">Solche Funktionen besitzen viele der wünschenswerten Zusammensetzbarkeitseigenschaften, vermeiden dabei aber einige der komplizierteren Idiome der funktionalen Programmierung, z. B. die Notwendigkeit der Verwendung der Rekursion, wenn eine einfache Schleife dasselbe Ziel erreichen würde.</span><span class="sxs-lookup"><span data-stu-id="c331c-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>  
   
-## <a name="standard-query-operators"></a>Standardabfrageoperatoren  
- Ein wichtiges Merkmal der Standardabfrageoperatoren besteht darin, dass sie als reine Funktionen implementiert sind.  
+## <a name="standard-query-operators"></a><span data-ttu-id="c331c-133">Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="c331c-133">Standard Query Operators</span></span>  
+ <span data-ttu-id="c331c-134">Ein wichtiges Merkmal der Standardabfrageoperatoren besteht darin, dass sie als reine Funktionen implementiert sind.</span><span class="sxs-lookup"><span data-stu-id="c331c-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>  
   
- Weitere Informationen finden Sie unter [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ <span data-ttu-id="c331c-135">Weitere Informationen finden Sie unter [Standard Übersicht über Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span><span class="sxs-lookup"><span data-stu-id="c331c-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a><span data-ttu-id="c331c-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c331c-136">See Also</span></span>  
+ [<span data-ttu-id="c331c-137">Einführung in reine funktionale Transformationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c331c-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [<span data-ttu-id="c331c-138">Funktionale Programmierung und Imperative Programmierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c331c-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

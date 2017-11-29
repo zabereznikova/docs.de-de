@@ -1,46 +1,50 @@
 ---
-title: "Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Multithreading"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Beispiele"
-  - "Beispiel für Multithreadsteuerelemente von Windows Forms [Windows Forms]"
-  - "Threading [Windows Forms], Benutzerdefinierte Steuerelemente"
+title: 'Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Multithreaded Windows Forms Control sample [Windows Forms]
+- custom controls [Windows Forms], multithreading
+- threading [Windows Forms], custom controls
+- custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9f23a99418d585f43348cd155bc65a3c3e73742b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche
-Die <xref:System.ComponentModel.BackgroundWorker>\-Komponente ersetzt den <xref:System.Threading>\-Namespace und erweitert diesen um Funktionen, jedoch wird der <xref:System.Threading>\-Namespace aus Gründen der Abwärtskompatibilität und, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker\-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="94909-102">Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche</span><span class="sxs-lookup"><span data-stu-id="94909-102">How to: Use a Background Thread to Search for Files</span></span>
+<span data-ttu-id="94909-103">Die <xref:System.ComponentModel.BackgroundWorker> Komponente ersetzt und funktionell erweitert, um die <xref:System.Threading> Namespace, aber die <xref:System.Threading> Namespace wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</span><span class="sxs-lookup"><span data-stu-id="94909-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="94909-104">Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="94909-104">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
   
- Windows Forms verwendet ein STA\-Modell \(Singlethreadapartment\-Modell\), weil Windows Forms auf systemeigenen Win32\-Fenstern basiert, die naturgemäß Apartmentthread\-Fenster sind.  Das STA\-Modell impliziert, dass ein Fenster auf einem beliebigen Thread erstellt werden kann. Nach dem Erstellen können die Threads jedoch nicht gewechselt werden, und alle Funktionsaufrufe an das Fenster müssen auf dem Thread erfolgen, auf dem das Fenster erstellt wurde.  Außerhalb von Windows Forms verwenden die Klassen in .NET Framework das Freethreadmodell.  Weitere Informationen zu Threading in .NET Framework finden Sie unter [Threading](../../../../docs/standard/threading/index.md).  
+ <span data-ttu-id="94909-105">Windows Forms verwendet das Singlethread-Apartment (STA)-Modell, da Windows Forms auf systemeigenen Win32-Fenstern basiert, die grundsätzlich Apartmentthread sind.</span><span class="sxs-lookup"><span data-stu-id="94909-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="94909-106">STA-Modell bedeutet, dass ein Fenster auf einen beliebigen Thread erstellt werden kann, aber es nicht werden Threads, die nach dem Erstellen umgeschaltet kann und alle Funktionsaufrufe, auf dessen Erstellungsthreads auftreten müssen.</span><span class="sxs-lookup"><span data-stu-id="94909-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="94909-107">Außerhalb von Windows Forms verwenden Klassen in .NET Framework, das kostenlose Threadingmodell.</span><span class="sxs-lookup"><span data-stu-id="94909-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="94909-108">Informationen über das threading in .NET Framework finden Sie unter [Threading](../../../../docs/standard/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="94909-108">For information about threading in the .NET Framework, see [Threading](../../../../docs/standard/threading/index.md).</span></span>  
   
- Für das STA\-Modell müssen alle Methoden auf einem Steuerelement, die von außerhalb des Erstellungsthreads des Steuerelements aufgerufen werden müssen, an den Erstellungsthread des Steuerelements gemarshallt \(darauf ausgeführt\) werden.  Die <xref:System.Windows.Forms.Control>\-Basisklasse stellt zu diesem Zweck verschiedene Methoden \(<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A> und <xref:System.Windows.Forms.Control.EndInvoke%2A>\) zur Verfügung.  <xref:System.Windows.Forms.Control.Invoke%2A> ruft Methoden synchron auf, <xref:System.Windows.Forms.Control.BeginInvoke%2A> ruft Methoden asynchron auf.  
+ <span data-ttu-id="94909-109">Der STA-Modell ist es erforderlich, dass alle Methoden in einem Steuerelement, die von außerhalb des Steuerelements Erstellungsthreads aufgerufen werden müssen gemarshallt werden müssen (ausgeführt) Erstellungsthreads des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="94909-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="94909-110">Die Basisklasse <xref:System.Windows.Forms.Control> bietet mehrere Methoden (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, und <xref:System.Windows.Forms.Control.EndInvoke%2A>) für diesen Zweck.</span><span class="sxs-lookup"><span data-stu-id="94909-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="94909-111"><xref:System.Windows.Forms.Control.Invoke%2A>synchrone Methode aufruft; <xref:System.Windows.Forms.Control.BeginInvoke%2A> asynchrone Methode aufruft.</span><span class="sxs-lookup"><span data-stu-id="94909-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>  
   
- Wenn Sie im Steuerelement Multithreading für ressourcenintensive Aufgaben verwenden, kann die Benutzeroberfläche reaktionsfähig bleiben, während eine ressourcenintensive Berechnung auf einem Hintergrundthread ausgeführt wird.  
+ <span data-ttu-id="94909-112">Bei Verwendung von multithreading in das Steuerelement für ressourcenintensive Vorgänge, die Benutzeroberfläche kann weiterhin auf Benutzerinteraktionen reagieren, während eine ressourcenintensive Berechnung in einem Hintergrundthread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="94909-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>  
   
- Anhand des folgenden Beispiels \(`DirectorySearcher`\) wird ein Multithreadsteuerelement von Windows Forms demonstriert, das einen Hintergrundthread verwendet, um ein Verzeichnis rekursiv nach Dateien zu durchsuchen, die mit einer bestimmten Suchzeichenfolge übereinstimmen, und das anschließend ein Listenfeld mit den Suchergebnissen füllt.  Folgende Konzepte werden anhand des Beispiels dargestellt:  
+ <span data-ttu-id="94909-113">Im folgenden Beispiel (`DirectorySearcher`) zeigt ein multithreaded Windows Forms-Steuerelement, werden mit einem Hintergrundthread auf Rekursives Durchsuchen eines Verzeichnisses für Dateien, die eine angegebenen Suchzeichenfolge entsprechen, und füllt dann ein Listenfeld mit den Suchergebnissen.</span><span class="sxs-lookup"><span data-stu-id="94909-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="94909-114">Die grundlegenden Konzepte der im Beispiel dargestellt lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="94909-114">The key concepts illustrated by the sample are as follows:</span></span>  
   
--   `DirectorySearcher` startet einen neuen Thread, um die Suche durchzuführen.  Der Thread führt die `ThreadProcedure`\-Methode aus, die wiederum die Hilfsmethode `RecurseDirectory` aufruft, um die Suche auszuführen und die Ergebnisse in das Listenfeld zu schreiben.  Zum Füllen des Listenfelds ist jedoch ein threadübergreifender Aufruf erforderlich. Dies wird in den nächsten beiden Punkten beschrieben.  
+-   <span data-ttu-id="94909-115">`DirectorySearcher`Startet einen neuen Thread, um die Suche auszuführen.</span><span class="sxs-lookup"><span data-stu-id="94909-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="94909-116">Vom Thread ausgeführten der `ThreadProcedure` -Methode, die wiederum die Hilfsmethode aufruft, `RecurseDirectory` Methode, um die eigentliche Suche führen und zum Auffüllen des Listenfelds.</span><span class="sxs-lookup"><span data-stu-id="94909-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="94909-117">Auffüllen des Listenfelds erfordert jedoch einen threadübergreifenden-Aufruf, wie in den nächsten beiden Aufzählungszeichen erläutert.</span><span class="sxs-lookup"><span data-stu-id="94909-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>  
   
--   `DirectorySearcher` definiert die `AddFiles`\-Methode, um Dateien zu einem Listenfeld hinzuzufügen. `RecurseDirectory` kann jedoch nicht `AddFiles` direkt aufrufen, da `AddFiles` nur in dem STA\-Thread ausgeführt werden kann, der `DirectorySearcher` erstellt hat.  
+-   <span data-ttu-id="94909-118">`DirectorySearcher`definiert die `AddFiles` -Methode zum Hinzufügen von Dateien an ein Listenfeld; allerdings `RecurseDirectory` nicht direkt aufrufen, `AddFiles` da `AddFiles` können nur im STA-Threads, der erstellt ausführen `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="94909-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>  
   
--   `RecurseDirectory` kann `AddFiles` ausschließlich threadübergreifend aufrufen, d. h., <xref:System.Windows.Forms.Control.Invoke%2A> oder <xref:System.Windows.Forms.Control.BeginInvoke%2A> wird aufgerufen, um `AddFiles` an den Erstellungsthread von `DirectorySearcher` zu marshallen.  `RecurseDirectory` verwendet <xref:System.Windows.Forms.Control.BeginInvoke%2A>, sodass der Aufruf asynchron erfolgen kann.  
+-   <span data-ttu-id="94909-119">Die einzige Möglichkeit `RecurseDirectory` aufrufen können `AddFiles` wird durch einen Aufruf threadübergreifenden –, also durch den Aufruf <xref:System.Windows.Forms.Control.Invoke%2A> oder <xref:System.Windows.Forms.Control.BeginInvoke%2A> Marshallen `AddFiles` zu des Erstellungsthreads `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="94909-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="94909-120">`RecurseDirectory`verwendet <xref:System.Windows.Forms.Control.BeginInvoke%2A> , damit der Aufruf asynchron erfolgen kann.</span><span class="sxs-lookup"><span data-stu-id="94909-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>  
   
--   Zum Marshallen einer Methode ist das Äquivalent eines Funktionszeigers oder eines Rückrufs erforderlich.  Dies wird über Delegaten in .NET Framework erreicht.  <xref:System.Windows.Forms.Control.BeginInvoke%2A> benötigt einen Delegaten als Argument.  `DirectorySearcher` definiert daher einen Delegaten \(`FileListDelegate`\), bindet `AddFiles` an eine Instanz von `FileListDelegate` in dessen Konstruktor und übergibt diese Delegateninstanz an <xref:System.Windows.Forms.Control.BeginInvoke%2A>.  Darüber hinaus wird von `DirectorySearcher` ein Ereignisdelegat definiert, der nach Beendigung der Suche gemarshallt wird.  
+-   <span data-ttu-id="94909-121">Marshalling von einer Methode ist das Äquivalent eines Funktionszeigers oder Rückruf erforderlich.</span><span class="sxs-lookup"><span data-stu-id="94909-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="94909-122">Dies erfolgt mithilfe von Delegaten in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="94909-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="94909-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A>Ein Delegat wird als Argument akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="94909-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="94909-124">`DirectorySearcher`aus diesem Grund definiert einen Delegaten (`FileListDelegate`), bindet `AddFiles` mit einer Instanz von `FileListDelegate` in seinem Konstruktor und übergibt, die dieser Delegat Instanz <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span><span class="sxs-lookup"><span data-stu-id="94909-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="94909-125">`DirectorySearcher`Außerdem definiert einen Ereignisdelegaten, der gemarshallt wird, wenn die Suche abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="94909-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>  
   
 ```vb  
 Option Strict  
@@ -287,7 +291,6 @@ Namespace Microsoft.Samples.DirectorySearcher
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -576,8 +579,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## Verwenden des Multithreadsteuerelements in einem Formular  
- Anhand des folgenden Beispiels wird dargestellt, wie das Multithreadsteuerelement `DirectorySearcher` in einem Formular verwendet werden kann.  
+## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="94909-126">Verwenden des Multithread-Steuerelements in einem Formular</span><span class="sxs-lookup"><span data-stu-id="94909-126">Using the Multithreaded Control on a Form</span></span>  
+ <span data-ttu-id="94909-127">Das folgende Beispiel zeigt wie die Multithread `DirectorySearcher` Steuerelement in einem Formular verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="94909-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -666,7 +669,6 @@ Namespace SampleUsage
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -770,7 +772,7 @@ namespace SampleUsage
 }  
 ```  
   
-## Siehe auch  
- <xref:System.ComponentModel.BackgroundWorker>   
- [Entwickeln benutzerdefinierter Windows Forms\-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Event\-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="94909-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="94909-128">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="94909-129">Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="94909-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="94909-130">Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)</span><span class="sxs-lookup"><span data-stu-id="94909-130">Event-based Asynchronous Pattern Overview</span></span>](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

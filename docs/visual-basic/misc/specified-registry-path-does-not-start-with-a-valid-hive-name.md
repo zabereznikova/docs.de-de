@@ -1,18 +1,21 @@
 ---
-title: "Der angegebene Registrierungspfad beginnt nicht mit einem g&#252;ltigen Strukturnamen | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Der angegebene Registrierungspfad beginnt nicht mit einem gültigen Strukturnamen"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 19f583b8e097854f279ebe1993e4eb7de4950941
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Der angegebene Registrierungspfad beginnt nicht mit einem g&#252;ltigen Strukturnamen
-Der angegebene Registrierungspfad beginnt nicht mit einem gültigen Strukturnamen. Gültige Strukturnamen sind:  
+# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a><span data-ttu-id="3627c-102">Der angegebene Registrierungspfad beginnt nicht mit einem gültigen Strukturnamen</span><span class="sxs-lookup"><span data-stu-id="3627c-102">Specified registry path does not start with a valid hive name</span></span>
+<span data-ttu-id="3627c-103">Der angegebene Registrierungspfad beginnt nicht mit einem gültigen Strukturnamen.</span><span class="sxs-lookup"><span data-stu-id="3627c-103">The specified registry path does not begin with a valid hive name.</span></span> <span data-ttu-id="3627c-104">Gültige Strukturnamen sind:</span><span class="sxs-lookup"><span data-stu-id="3627c-104">Valid hive names are:</span></span>  
   
 -   `HKEY_CLASSES_ROOT`  
   
@@ -28,11 +31,11 @@ Der angegebene Registrierungspfad beginnt nicht mit einem gültigen Strukturname
   
 -   `HKEY_USERS`  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3627c-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="3627c-105">To correct this error</span></span>  
   
--   Überprüfen Sie, ob Sie einen gültigen Strukturnamen angegeben haben.  
+-   <span data-ttu-id="3627c-106">Überprüfen Sie, ob Sie einen gültigen Strukturnamen angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="3627c-106">Verify that you are supplying a valid hive name.</span></span>  
   
-## Siehe auch  
- [Bearbeiten von Zeichenfolgen](../Topic/Manipulating%20Strings%20in%20the%20.NET%20Framework.md)   
- [Allgemeine Registrierungsaufgaben \(Visual Basic\)](http://msdn.microsoft.com/de-de/0bde9f77-b38b-4c76-bac2-ff6cda3087c4)   
- [My.Computer.Registry Object](../../visual-basic/language-reference/objects/my-computer-registry-object.md)
+## <a name="see-also"></a><span data-ttu-id="3627c-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3627c-107">See Also</span></span>  
+ [<span data-ttu-id="3627c-108">Bearbeiten von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="3627c-108">Manipulating Strings</span></span>](../../standard/base-types/manipulating-strings.md)  
+ [<span data-ttu-id="3627c-109">Allgemeine Registrierungsaufgaben (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3627c-109">Common Registry Tasks (Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/0bde9f77-b38b-4c76-bac2-ff6cda3087c4)  
+ [<span data-ttu-id="3627c-110">My.Computer.Registry-Objekt</span><span class="sxs-lookup"><span data-stu-id="3627c-110">My.Computer.Registry Object</span></span>](../../visual-basic/language-reference/objects/my-computer-registry-object.md)

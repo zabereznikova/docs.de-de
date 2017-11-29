@@ -1,52 +1,55 @@
 ---
-title: "Konfigurationsbasierte Aktivierung unter IIS und WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Konfigurationsbasierte Aktivierung unter IIS und WAS
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 116d7ec11f141e813aa960b28289031e0cfa8999
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Konfigurationsbasierte Aktivierung unter IIS und WAS
-Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst unter Internetinformationsdienste \(IIS\) oder Windows\-Prozessaktivierungsdienst \(WAS\) hosten, müssen Sie normalerweise eine SVC\-Datei bereitstellen.Die SVC\-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory.Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand.Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC\-Datei, sodass auch der damit verbundene Mehraufwand entfällt.  
+# <a name="configuration-based-activation-in-iis-and-was"></a><span data-ttu-id="44a78-102">Konfigurationsbasierte Aktivierung unter IIS und WAS</span><span class="sxs-lookup"><span data-stu-id="44a78-102">Configuration-Based Activation in IIS and WAS</span></span>
+<span data-ttu-id="44a78-103">Wenn Sie einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst unter Internetinformationsdienste (IIS) oder Windows-Prozessaktivierungsdienst (WAS) hosten, müssen Sie normalerweise eine SVC-Datei bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="44a78-103">Normally when hosting a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service under Internet Information Services (IIS) or Windows Process Activation Service (WAS), you must provide a .svc file.</span></span> <span data-ttu-id="44a78-104">Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory.</span><span class="sxs-lookup"><span data-stu-id="44a78-104">The .svc file contains the name of the service and an optional custom service host factory.</span></span> <span data-ttu-id="44a78-105">Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand.</span><span class="sxs-lookup"><span data-stu-id="44a78-105">This additional file adds manageability overhead.</span></span> <span data-ttu-id="44a78-106">Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.</span><span class="sxs-lookup"><span data-stu-id="44a78-106">The configuration-based activation feature removes the requirement to have a .svc file and therefore the associated overhead.</span></span>  
   
-## Konfigurationsbasierte Aktivierung  
- Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC\-Datei eingefügt wurden, in die Datei "Web.config" ein.Innerhalb des \<`serviceHostingEnvironment`\>\-Elements befindet sich ein \<`serviceActivations`\>\-Element.Innerhalb des \<`serviceActivations`\>\-Elements sind ein oder mehrere \<`add`\>\-Elemente enthalten, und zwar einer für jeden gehosteten Dienst.Das \<`add`\>\-Element enthält Attribute, mit denen Sie die relative Adresse für den Dienst und den Diensttyp oder eine Diensthostfactory festlegen können.Der folgende Konfigurationsbeispielcode zeigt, wie dieser Abschnitt verwendet wird.  
+## <a name="configuration-based-activation"></a><span data-ttu-id="44a78-107">Konfigurationsbasierte Aktivierung</span><span class="sxs-lookup"><span data-stu-id="44a78-107">Configuration-Based Activation</span></span>  
+ <span data-ttu-id="44a78-108">Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC-Datei eingefügt wurden, in die Datei "Web.config" ein.</span><span class="sxs-lookup"><span data-stu-id="44a78-108">Configuration-based activation takes the metadata that used to be placed in the .svc file and places it in the Web.config file.</span></span> <span data-ttu-id="44a78-109">In der <`serviceHostingEnvironment`> Element besteht eine <`serviceActivations`> Element.</span><span class="sxs-lookup"><span data-stu-id="44a78-109">Within the<`serviceHostingEnvironment`> element there is a <`serviceActivations`> element.</span></span> <span data-ttu-id="44a78-110">In der <`serviceActivations`>-Element sind eine oder mehrere <`add`> Elemente, jeweils eines für jeden gehosteten Dienst.</span><span class="sxs-lookup"><span data-stu-id="44a78-110">Within the <`serviceActivations`> element are one or more <`add`> elements, one for each hosted service.</span></span> <span data-ttu-id="44a78-111">Die <`add`>-Element enthält Attribute, mit denen Sie die relative Adresse für den Dienst und den Typ oder einer Diensthostfactory festlegen können.</span><span class="sxs-lookup"><span data-stu-id="44a78-111">The <`add`> element contains attributes that let you set the relative address for the service and the service type or a service host factory.</span></span> <span data-ttu-id="44a78-112">Der folgende Konfigurationsbeispielcode zeigt, wie dieser Abschnitt verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="44a78-112">The following configuration example code shows how this section is used.</span></span>  
   
 > [!NOTE]
->  Jedes \<`add`\>\-Element muss einen Dienst oder ein Factoryattribut angeben.Es kann auch einen Dienst und Factoryattribute angeben.  
+>  <span data-ttu-id="44a78-113">Jedes <`add`>-Element muss einen Dienst oder ein factoryattribut angeben.</span><span class="sxs-lookup"><span data-stu-id="44a78-113">Each <`add`> element must specify a service or a factory attribute.</span></span> <span data-ttu-id="44a78-114">Es kann auch einen Dienst und Factoryattribute angeben.</span><span class="sxs-lookup"><span data-stu-id="44a78-114">Specifying both service and factory attributes is allowed.</span></span>  
   
-```  
+```xml  
 <serviceHostingEnvironment>  
   <serviceActivations>  
-    <add relativeAddress="MyServiceAddress" service="Service" factory=”MyServiceHostFactory”/>  
+    <add relativeAddress="MyServiceAddress" service="Service" factory="MyServiceHostFactory"/>  
   </serviceActivations>  
 </serviceHostingEnvironment>  
 ```  
   
- Wenn dieser Code in der Datei Web.config enthalten ist, können Sie den Dienstquellcode in das Verzeichnis App\_Code der Anwendung oder eine kompilierte Assembly im Verzeichnis Bin der Anwendung einfügen.  
+ <span data-ttu-id="44a78-115">Wenn dieser Code in der Datei Web.config enthalten ist, können Sie den Dienstquellcode in das Verzeichnis App_Code der Anwendung oder eine kompilierte Assembly im Verzeichnis Bin der Anwendung einfügen.</span><span class="sxs-lookup"><span data-stu-id="44a78-115">With this in the Web.config file, you can place the service source code in the App_Code directory of the application or a complied assembly in the Bin directory of the application.</span></span>  
   
 > [!NOTE]
->  -   Bei Verwendung der konfigurationsbasierten Aktivierung wird Inlinecode in SVC\-Dateien nicht unterstützt.  
-> -   Das `relativeAddress`\-Attribut muss auf eine relative Adresse wie “\<Unterverzeichnis\>\/service.svc” oder “~\/\<Unterverzeichnis\/service.svc” festgelegt sein.  
-> -   Es wird eine Konfigurationsausnahme ausgelöst, wenn Sie eine relative Adresse registrieren, für die keine bekannte Erweiterung mit WCF\-Zuordnung vorhanden ist.  
-> -   Die angegebene relative Adresse ist relativ zum Stamm der virtuellen Anwendung.  
-> -   Aufgrund des hierarchischen Konfigurationsmodells werden die registrierten relativen Adressen auf Computer\- und Siteebene von den virtuellen Anwendungen geerbt.  
-> -   Registrierungen in einer Konfigurationsdatei haben Vorrang vor Einstellungen in einer SVC\-, XAMLX\-, XOML\- oder anderen Datei.  
-> -   Alle umgekehrten Schrägstriche \('\\'\) in einem URI, der an IIS\/WAS gesendet wird, werden automatisch in einen normalen Schrägstrich \('\/'\) konvertiert.Wenn eine relative Adresse hinzugefügt wird, die '\\' enthält, und Sie einen URI an IIS senden, für den die relative Adresse verwendet wird, wird der umgekehrte Schrägstrich in einen Schrägstrich konvertiert, und IIS kann keine Übereinstimmung mit der relativen Adresse herstellen.IIS sendet Ablaufverfolgungsinformationen, die angeben, dass keine Übereinstimmungen gefunden wurden.  
+>  -   <span data-ttu-id="44a78-116">Bei Verwendung der konfigurationsbasierten Aktivierung wird Inlinecode in SVC-Dateien nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="44a78-116">When using configuration-based activation, inline code in .svc files is not supported.</span></span>  
+> -   <span data-ttu-id="44a78-117">Die `relativeAddress` Attribut muss festgelegt werden, um eine relative Adresse wie z. B. "\<Unterverzeichnis > / service.svc" oder "~ /\<Unterverzeichnis/service.svc".</span><span class="sxs-lookup"><span data-stu-id="44a78-117">The `relativeAddress` attribute must be set to a relative address such as "\<sub-directory>/service.svc" or "~/\<sub-directory/service.svc".</span></span>  
+> -   <span data-ttu-id="44a78-118">Es wird eine Konfigurationsausnahme ausgelöst, wenn Sie eine relative Adresse registrieren, für die keine bekannte Erweiterung mit WCF-Zuordnung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="44a78-118">A configuration exception is thrown if you register a relative address that does not have a known extension associated with WCF.</span></span>  
+> -   <span data-ttu-id="44a78-119">Die angegebene relative Adresse ist relativ zum Stamm der virtuellen Anwendung.</span><span class="sxs-lookup"><span data-stu-id="44a78-119">The relative address specified is relative to the root of the virtual application.</span></span>  
+> -   <span data-ttu-id="44a78-120">Aufgrund des hierarchischen Konfigurationsmodells werden die registrierten relativen Adressen auf Computer- und Siteebene von den virtuellen Anwendungen geerbt.</span><span class="sxs-lookup"><span data-stu-id="44a78-120">Due to the hierarchical model of configuration, the registered relative addresses at machine and site level are inherited by virtual applications.</span></span>  
+> -   <span data-ttu-id="44a78-121">Registrierungen in einer Konfigurationsdatei haben Vorrang vor Einstellungen in einer SVC-, XAMLX-, XOML- oder anderen Datei.</span><span class="sxs-lookup"><span data-stu-id="44a78-121">Registrations in a configuration file take precedence over settings in a .svc, .xamlx, .xoml, or other file.</span></span>  
+> -   <span data-ttu-id="44a78-122">Alle umgekehrten Schrägstriche ('\') in einem URI, der an IIS/WAS gesendet wird, werden automatisch in einen normalen Schrägstrich ('/') konvertiert.</span><span class="sxs-lookup"><span data-stu-id="44a78-122">Any ‘\’ (backslashes) in a URI sent to IIS/WAS are automatically converted to a ‘/’ (forward slash).</span></span> <span data-ttu-id="44a78-123">Wenn eine relative Adresse hinzugefügt wird, die '\' enthält, und Sie einen URI an IIS senden, für den die relative Adresse verwendet wird, wird der umgekehrte Schrägstrich in einen Schrägstrich konvertiert, und IIS kann keine Übereinstimmung mit der relativen Adresse herstellen.</span><span class="sxs-lookup"><span data-stu-id="44a78-123">If a relative address is added that contains a ‘\’ and you send IIS a URI that uses the relative address, the backslash is converted to a forward slash and IIS cannot match it to the relative address.</span></span> <span data-ttu-id="44a78-124">IIS sendet Ablaufverfolgungsinformationen, die angeben, dass keine Übereinstimmungen gefunden wurden.</span><span class="sxs-lookup"><span data-stu-id="44a78-124">IIS sends out trace information that indicates that there are no matches found.</span></span>  
   
-## Siehe auch  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>   
- [Hosting\-Dienste](../../../../docs/framework/wcf/hosting-services.md)   
- [Übersicht über das Hosten von Workflowdiensten](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)   
- [\<serviceHostingEnvironment\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)   
- [Windows Server AppFabric\-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="44a78-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="44a78-125">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>  
+ [<span data-ttu-id="44a78-126">Hosting-Dienste</span><span class="sxs-lookup"><span data-stu-id="44a78-126">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)  
+ [<span data-ttu-id="44a78-127">Übersicht über Hosting Workflowdienste</span><span class="sxs-lookup"><span data-stu-id="44a78-127">Hosting Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [<span data-ttu-id="44a78-128">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="44a78-128">\<serviceHostingEnvironment></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
+ [<span data-ttu-id="44a78-129">Windows Server AppFabric-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="44a78-129">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

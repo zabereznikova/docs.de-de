@@ -1,50 +1,54 @@
 ---
-title: "Gewusst wie: Zeichnen von Text mit GDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zeichnen, Text"
-  - "GDI, Zeichnen von Text [Windows Forms]"
-  - "Text, Zeichnen mit TextRenderer"
-  - "Windows Forms, Zeichnen von Text mit GDI"
+title: 'Gewusst wie: Zeichnen von Text mit GDI'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI [Windows Forms], drawing text [Windows Forms]
+- text [Windows Forms], drawing with TextRenderer
+- drawing [Windows Forms], text
+- Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48644ce8449c8d8eea7306eff1e43539659370c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen von Text mit GDI
-Über die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode in der <xref:System.Windows.Forms.TextRenderer>\-Klasse haben Sie Zugriff auf [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]\-Funktionen, mit denen Sie Text in einem Formular oder Steuerelement zeichnen können.  Das Rendern von Text in [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bietet normalerweise eine bessere Leistung und genauere Abmessungen für Text als [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+# <a name="how-to-draw-text-with-gdi"></a><span data-ttu-id="69a8a-102">Gewusst wie: Zeichnen von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="69a8a-102">How to: Draw Text with GDI</span></span>
+<span data-ttu-id="69a8a-103">Mit der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode in der <xref:System.Windows.Forms.TextRenderer> -Klasse, die Sie zugreifen können [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Funktionen zum Zeichnen von Text in einem Formular oder Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="69a8a-103">With the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method in the <xref:System.Windows.Forms.TextRenderer> class, you can access [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] functionality for drawing text on a form or control.</span></span> [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]<span data-ttu-id="69a8a-104">Textrendering bietet in der Regel eine bessere Leistung und genauere Text als messen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="69a8a-104"> text rendering typically offers better performance and more accurate text measuring than [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methoden der <xref:System.Windows.Forms.TextRenderer>\-Klasse werden für das Drucken nicht unterstützt.  Verwenden Sie beim Drucken immer die <xref:System.Drawing.Graphics.DrawString%2A>\-Methoden der <xref:System.Drawing.Graphics>\-Klasse.  
+>  <span data-ttu-id="69a8a-105">Die <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden die <xref:System.Windows.Forms.TextRenderer> -Klasse sind zum Drucken nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="69a8a-105">The <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods of the <xref:System.Windows.Forms.TextRenderer> class are not supported for printing.</span></span> <span data-ttu-id="69a8a-106">Beim Drucken, verwenden Sie immer die <xref:System.Drawing.Graphics.DrawString%2A> Methoden die <xref:System.Drawing.Graphics> Klasse.</span><span class="sxs-lookup"><span data-stu-id="69a8a-106">When printing, always use the <xref:System.Drawing.Graphics.DrawString%2A> methods of the <xref:System.Drawing.Graphics> class.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie Text mithilfe der <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode über mehrere Zeilen innerhalb eines Rechtecks gezeichnet wird.  
+## <a name="example"></a><span data-ttu-id="69a8a-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="69a8a-107">Example</span></span>  
+ <span data-ttu-id="69a8a-108">Im folgenden Codebeispiel wird veranschaulicht, wie zum Zeichnen von Text in mehreren Zeilen in einem Rechteck mit dem <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="69a8a-108">The following code example demonstrates how to draw text on multiple lines within a rectangle using the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
  [!code-vb[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- Um Text mit der <xref:System.Windows.Forms.TextRenderer>\-Klasse zu rendern, benötigen Sie <xref:System.Drawing.IDeviceContext>, z. B. <xref:System.Drawing.Graphics> und <xref:System.Drawing.Font>, eine Position, an der der Text gezeichnet wird, sowie die Farbe, in der der Text gezeichnet wird.  Optional können Sie die Textformatierung angeben, indem Sie die <xref:System.Windows.Forms.TextFormatFlags>\-Enumeration verwenden.  
+ <span data-ttu-id="69a8a-109">Zum Rendern von Text mit der <xref:System.Windows.Forms.TextRenderer> -Klasse, Sie müssen eine <xref:System.Drawing.IDeviceContext>, z. B. eine <xref:System.Drawing.Graphics> und ein <xref:System.Drawing.Font>, einen Speicherort zum Zeichnen von Text und die Farbe, in dem er gezeichnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="69a8a-109">To render text with the <xref:System.Windows.Forms.TextRenderer> class, you need an <xref:System.Drawing.IDeviceContext>, such as a <xref:System.Drawing.Graphics> and a <xref:System.Drawing.Font>, a location to draw the text, and the color in which it should be drawn.</span></span> <span data-ttu-id="69a8a-110">Optional können Sie angeben, die textformatierung mithilfe der <xref:System.Windows.Forms.TextFormatFlags> Enumeration.</span><span class="sxs-lookup"><span data-stu-id="69a8a-110">Optionally, you can specify the text formatting by using the <xref:System.Windows.Forms.TextFormatFlags> enumeration.</span></span>  
   
- Weitere Informationen zum Abrufen von <xref:System.Drawing.Graphics> finden Sie unter [Gewusst wie: Erstellen von Graphics\-Objekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  Weitere Informationen zum Erstellen von <xref:System.Drawing.Font> finden Sie unter [Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).  
+ <span data-ttu-id="69a8a-111">Weitere Informationen zum Abrufen einer <xref:System.Drawing.Graphics>, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="69a8a-111">For more information about obtaining a <xref:System.Drawing.Graphics>, see [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span> <span data-ttu-id="69a8a-112">Weitere Informationen zum Erstellen einer <xref:System.Drawing.Font>, finden Sie unter [Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).</span><span class="sxs-lookup"><span data-stu-id="69a8a-112">For more information about constructing a <xref:System.Drawing.Font>, see [How to: Construct Font Families and Fonts](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).</span></span>  
   
-## Kompilieren des Codes  
- Das vorangehende Codebeispiel ist für die Verwendung mit Windows Forms vorgesehen und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="69a8a-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="69a8a-113">Compiling the Code</span></span>  
+ <span data-ttu-id="69a8a-114">Im vorangehenden Codebeispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="69a8a-114">The preceding code example is designed for use with Windows Forms, and it requires the <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.TextRenderer>   
- <xref:System.Drawing.Font>   
- <xref:System.Drawing.Color>   
- <xref:System.Drawing.Color>   
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="69a8a-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69a8a-115">See Also</span></span>  
+ <xref:System.Windows.Forms.TextRenderer>  
+ <xref:System.Drawing.Font>  
+ <xref:System.Drawing.Color>  
+ <xref:System.Drawing.Color>  
+ [<span data-ttu-id="69a8a-116">Verwenden von Schriftarten und Text</span><span class="sxs-lookup"><span data-stu-id="69a8a-116">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

@@ -1,85 +1,86 @@
 ---
-title: "Gewusst wie: Binden des DataGrid-Steuerelements in Windows&#160;Forms an eine Datenquelle mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Gebundene Steuerelemente"
-  - "Gebundene Steuerelemente, DataGrid-Steuerelement"
-  - "Datenbindung, DataGrid-Steuerelement"
-  - "Datengebundene Steuerelemente, DataGrid"
-  - "DataGrid-Steuerelement [Windows Forms], Datenbindung"
-  - "Datasets [Windows Forms], Binden an DataGrid-Steuerelement"
-  - "Windows Forms-Steuerelemente, Datenbindung"
+title: "Gewusst wie: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- datasets [Windows Forms], binding to DataGrid control
+- data binding [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], data binding
+- Windows Forms controls, data binding
+- bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 378f1d80392ae7b2058d5c3b2d987e4810cbd07b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Binden des DataGrid-Steuerelements in Windows&#160;Forms an eine Datenquelle mithilfe des Designers
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a><span data-ttu-id="6fe3c-102">Gewusst wie: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="6fe3c-102">How to: Bind the Windows Forms DataGrid Control to a Data Source Using the Designer</span></span>
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="6fe3c-103">Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="6fe3c-104">Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="6fe3c-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Das <xref:System.Windows.Forms.DataGrid>\-Steuerelement in Windows Forms wurde speziell für die Anzeige von Informationen aus einer Datenquelle entwickelt.  Sie binden das Steuerelement zur Entwurfszeit, indem Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft festlegen oder zur Laufzeit die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\-Methode aufrufen.  Daten können aus einer Vielzahl von Datenquellen angezeigt werden. Die gebräuchlichsten sind jedoch DataSets und Datenansichten.  
+ <span data-ttu-id="6fe3c-105">Windows Forms <xref:System.Windows.Forms.DataGrid> Steuerelement ist speziell für die Anzeige von Informationen aus einer Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-105">The Windows Forms <xref:System.Windows.Forms.DataGrid> control is specifically designed to display information from a data source.</span></span> <span data-ttu-id="6fe3c-106">Binden des Steuerelements zur Entwurfszeit durch Festlegen der <xref:System.Windows.Forms.DataGrid.DataSource%2A> und <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaften oder zur Laufzeit durch Aufrufen der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-106">You bind the control at design time by setting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties, or at run time by calling the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method.</span></span> <span data-ttu-id="6fe3c-107">Obwohl Sie Daten aus einer Vielzahl von Datenquellen anzeigen können, sind die häufigsten Quellen Datasets und Ansichten.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-107">Although you can display data from a variety of data sources, the most typical sources are datasets and data views.</span></span>  
   
- Wenn die Datenquelle zur Entwurfszeit verfügbar ist – wenn das Formular z. B. eine Instanz eines DataSets oder einer Datenansicht enthält – kann das Datenblatt zur Entwurfszeit an die Datenquelle gebunden werden.  Sie können dann eine Vorschau der Daten im Raster anzeigen lassen.  
+ <span data-ttu-id="6fe3c-108">Wenn die Datenquelle zur Entwurfszeit verfügbar ist – z. B., wenn das Formular eine Instanz eines Datasets oder einer Datenansicht enthält – Sie können das Raster zur Entwurfszeit an die Datenquelle binden.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-108">If the data source is available at design time—for example, if the form contains an instance of a dataset or a data view—you can bind the grid to the data source at design time.</span></span> <span data-ttu-id="6fe3c-109">Anschließend können Sie anzeigen, wie die Daten im Raster aussehen werden.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-109">You can then preview what the data will look like in the grid.</span></span>  
   
- Das Datenblatt kann auch programmgesteuert zur Laufzeit gebunden werden.  Dies ist dann sinnvoll, wenn die Datenquelle anhand von Informationen festgelegt wird, die sich zur Laufzeit ergeben,  beispielsweise, wenn der Benutzer in der Anwendung den Namen der Tabelle angeben kann, die angezeigt werden soll.  Außerdem ist es in solchen Fällen notwendig, in denen die Datenquelle zur Entwurfszeit nicht vorhanden ist.  Dazu gehören Datenquellen wie Arrays, Auflistungen, nicht typisierte DataSets und Datenreader.  
+ <span data-ttu-id="6fe3c-110">Sie können im Raster auch programmgesteuert zur Laufzeit binden.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-110">You can also bind the grid programmatically, at run time.</span></span> <span data-ttu-id="6fe3c-111">Dies ist hilfreich, wenn Sie eine Datenquelle basierend auf Informationen erhalten Sie zur Laufzeit festlegen möchten.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-111">This is useful when you want to set a data source based on information you get at run time.</span></span> <span data-ttu-id="6fe3c-112">Beispielsweise kann die Anwendung den Benutzer aus, geben Sie den Namen einer Tabelle anzeigen lassen.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-112">For example, the application might let the user specify the name of a table to view.</span></span> <span data-ttu-id="6fe3c-113">Es ist auch in Situationen, in denen die Datenquelle zur Entwurfszeit nicht vorhanden ist, erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-113">It is also necessary in situations where the data source does not exist at design time.</span></span> <span data-ttu-id="6fe3c-114">Dies schließt Datenquellen wie z. B. Arrays, Auflistungen, nicht typisierte Datasets und Datenleser.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-114">This includes data sources such as arrays, collections, untyped datasets, and data readers.</span></span>  
   
- Für das folgende Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** mit einem Formular benötigt, das ein <xref:System.Windows.Forms.DataGrid>\-Steuerelement enthält.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] ist das <xref:System.Windows.Forms.DataGrid>\-Steuerelement in der **Toolbox** standardmäßig nicht enthalten.  Weitere Informationen zum Hinzufügen dieses Steuerelements finden Sie unter [How to: Add Items to the Toolbox](http://msdn.microsoft.com/de-de/458e119e-17fe-450b-b889-e31c128bd7e0).  Zusätzlich können Sie in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] das **Datenquellenfenster** verwenden, um Daten zur Entwurfszeit zu binden.  Weitere Informationen finden Sie unter [Binden von Steuerelementen an Daten in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md).  
+ <span data-ttu-id="6fe3c-115">Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.DataGrid> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-115">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="6fe3c-116">Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="6fe3c-116">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="6fe3c-117">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> Steuerelement befindet sich nicht in der **Toolbox** standardmäßig.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-117">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="6fe3c-118">Informationen zum Hinzufügen, finden Sie unter [wie: Hinzufügen von Elementen zur Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span><span class="sxs-lookup"><span data-stu-id="6fe3c-118">For information about adding it, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span> <span data-ttu-id="6fe3c-119">Darüber hinaus können in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], können Sie die **Datenquellen** Fenster für die Datenbindung zur Entwurfszeit.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-119">Additionally in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you can use the **Data Sources** window for design-time data binding.</span></span> <span data-ttu-id="6fe3c-120">Weitere Informationen finden Sie unter [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="6fe3c-120">For more information see [Bind controls to data in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).</span></span>  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="6fe3c-121">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-121">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="6fe3c-122">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-122">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="6fe3c-123">Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="6fe3c-123">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### So binden Sie das DataGrid\-Steuerelement im Designer an eine einzelne Tabelle  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a><span data-ttu-id="6fe3c-124">Daten-binden von DataGrid-Steuerelement mit einer einzelnen Tabelle im designer</span><span class="sxs-lookup"><span data-stu-id="6fe3c-124">To data-bind the DataGrid control to a single table in the designer</span></span>  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft des Steuerelements das Objekt fest, das die Datenelemente enthält, an die die Bindung erfolgen soll.  
+1.  <span data-ttu-id="6fe3c-125">Legen Sie das Steuerelement <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt mit den Datenelementen, die Sie binden möchten.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-125">Set the control's <xref:System.Windows.Forms.DataGrid.DataSource%2A> property to the object containing the data items you want to bind to.</span></span>  
   
-2.  Wenn es sich bei der Datenquelle um ein DataSet handelt, legen Sie für die <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft den Namen der Tabelle fest, an die die Bindung erfolgen soll.  
+2.  <span data-ttu-id="6fe3c-126">Wenn die Datenquelle ein Dataset ist, legen Sie die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der Tabelle zu binden.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-126">If the data source is a dataset, set the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property to the name of the table to bind to.</span></span>  
   
-3.  Wenn es sich bei der Datenquelle um ein DataSet oder eine auf einer DataSet\-Tabelle beruhende Datenansicht handelt, fügen Sie dem Formular Code zum Füllen des DataSets hinzu.  
+3.  <span data-ttu-id="6fe3c-127">Ist die Datenquelle ein Dataset oder einer Datenansicht basierend auf einer Dataset-Tabelle, fügen Sie Code zum Formular, um das Dataset zu füllen.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-127">If the data source is a dataset or a data view based on a dataset table, add code to the form to fill the dataset.</span></span>  
   
-     Der genaue Code richtet sich dabei danach, woher das DataSet die Daten bezieht.  Wenn ein DataSet direkt aus einer Datenbank gefüllt wird, wird üblicherweise die `Fill`\-Methode eines Datenadapters aufgerufen, wie in folgendem Codebeispiel, in dem das DataSet `DsCategories1` gefüllt wird:  
+     <span data-ttu-id="6fe3c-128">Der genaue Code, den Sie verwenden, hängt davon ab, in dem das Dataset Daten erhält.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-128">The exact code you use depends on where the dataset is getting data.</span></span> <span data-ttu-id="6fe3c-129">Wenn das Dataset direkt aus einer Datenbank aufgefüllt wird, rufen Sie in der Regel die `Fill` Methode eines Datenadapters, wie im folgenden Codebeispiel wird, die ein Dataset mit dem Namen füllt `DsCategories1`:</span><span class="sxs-lookup"><span data-stu-id="6fe3c-129">If the dataset is being populated directly from a database, you typically call the `Fill` method of a data adapter, as in the following code example, which populates a dataset called `DsCategories1`:</span></span>  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
-  
     ```  
   
     ```csharp  
     sqlDataAdapter1.Fill(DsCategories1);  
-  
     ```  
   
     ```cpp  
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  \(Optional\) Weisen Sie dem Raster die gewünschten Tabellen\- und Spaltenformate zu.  
+4.  <span data-ttu-id="6fe3c-130">(Optional) Fügen Sie die entsprechenden Tabellenformate und Spaltenformate zum Raster an.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-130">(Optional) Add the appropriate table styles and column styles to the grid.</span></span>  
   
-     Die Tabelle wird zwar auch ohne Tabellenformate angezeigt, jedoch mit einer minimalen Formatierung und allen vorhandenen Spalten.  
+     <span data-ttu-id="6fe3c-131">Wenn keine Tabellenformate sind, sehen Sie die Tabelle, jedoch mit minimaler Formatierung und alle Spalten angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-131">If there are no table styles, you will see the table, but with minimal formatting and with all columns visible.</span></span>  
   
-### So binden Sie das DataGrid\-Steuerelement im Designer an mehrere Tabellen in einem DataSet  
+### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a><span data-ttu-id="6fe3c-132">Um das DataGrid-Steuerelement an mehrere Tabellen in einem Dataset im Designer Datenbindung</span><span class="sxs-lookup"><span data-stu-id="6fe3c-132">To data-bind the DataGrid control to multiple tables in a dataset in the designer</span></span>  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft des Steuerelements das Objekt fest, das die Datenelemente enthält, an die die Bindung erfolgen soll.  
+1.  <span data-ttu-id="6fe3c-133">Legen Sie das Steuerelement <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt mit den Datenelementen, die Sie binden möchten.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-133">Set the control's <xref:System.Windows.Forms.DataGrid.DataSource%2A> property to the object containing the data items you want to bind to.</span></span>  
   
-2.  Wenn das DataSet verknüpfte Tabellen enthält, d. h. ein Beziehungsobjekt, legen Sie für die <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft den Namen der übergeordneten Tabelle fest.  
+2.  <span data-ttu-id="6fe3c-134">Wenn das Dataset verknüpfte Tabellen enthält (d. h., wenn sie über ein Beziehungsobjekt enthält), legen die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der übergeordneten Tabelle.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-134">If the dataset contains related tables (that is, if it contains a relation object), set the <xref:System.Windows.Forms.DataGrid.DataMember%2A> property to the name of the parent table.</span></span>  
   
-3.  Schreiben Sie Code, um das DataSet aufzufüllen.  
+3.  <span data-ttu-id="6fe3c-135">Schreiben Sie Code zum Füllen des Datasets.</span><span class="sxs-lookup"><span data-stu-id="6fe3c-135">Write code to fill the dataset.</span></span>  
   
-## Siehe auch  
- [Übersicht über das DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)   
- [DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Datenbindung in Web Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Zugreifen auf Daten in Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="6fe3c-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6fe3c-136">See Also</span></span>  
+ [<span data-ttu-id="6fe3c-137">Übersicht über das DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6fe3c-137">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6fe3c-138">Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6fe3c-138">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="6fe3c-139">DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6fe3c-139">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="6fe3c-140">Windows Forms-Datenbindung</span><span class="sxs-lookup"><span data-stu-id="6fe3c-140">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [<span data-ttu-id="6fe3c-141">Zugreifen auf Daten in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6fe3c-141">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)

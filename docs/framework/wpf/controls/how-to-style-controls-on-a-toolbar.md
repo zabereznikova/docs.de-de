@@ -1,29 +1,32 @@
 ---
-title: "Gewusst wie: Formatieren von Steuerelementen auf einer Symbolleiste | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anpassen von Steuerelementen in einer Symbolleiste"
-  - "Formatieren von Steuerelementen in einer Symbolleiste"
-  - "Symbolleisten"
+title: 'Gewusst wie: Formatieren von Steuerelementen auf einer Symbolleiste'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styling controls on toolbar [WPF]
+- toolbars [WPF]
+- customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce090ace11262e4809dbecadd5fe89d7dfaf62e5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Formatieren von Steuerelementen auf einer Symbolleiste
-Das <xref:System.Windows.Controls.ToolBar>\-Element definiert <xref:System.Windows.ResourceKey>\-Objekte, um den Stil von Steuerelementen auf der <xref:System.Windows.Controls.ToolBar> anzugeben.  Um ein Steuerelement auf einer <xref:System.Windows.Controls.ToolBar> zu formatieren, legen Sie das `x:key`\-Attribut des Stils auf einen in <xref:System.Windows.Controls.ToolBar> definierten <xref:System.Windows.ResourceKey> fest.  
+# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="03cd9-102">Gewusst wie: Formatieren von Steuerelementen auf einer Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="03cd9-102">How to: Style Controls on a ToolBar</span></span>
+<span data-ttu-id="03cd9-103">Die <xref:System.Windows.Controls.ToolBar> definiert <xref:System.Windows.ResourceKey> Objekte an, den Stil von Steuerelementen innerhalb der <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="03cd9-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="03cd9-104">So formatieren Sie ein Steuerelement in ein <xref:System.Windows.Controls.ToolBar>legen die `x:key` Attribut des Formats, eine <xref:System.Windows.ResourceKey> in definierten <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="03cd9-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- Das <xref:System.Windows.Controls.ToolBar>\-Element definiert die folgenden <xref:System.Windows.ResourceKey>\-Objekte:  
+ <span data-ttu-id="03cd9-105">Die <xref:System.Windows.Controls.ToolBar> definiert die folgenden <xref:System.Windows.ResourceKey> Objekte:</span><span class="sxs-lookup"><span data-stu-id="03cd9-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
   
 -   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
@@ -41,11 +44,11 @@ Das <xref:System.Windows.Controls.ToolBar>\-Element definiert <xref:System.Windo
   
 -   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
-## Beispiel  
- Im folgenden Beispiel werden Stile für die Steuerelemente auf einer <xref:System.Windows.Controls.ToolBar> definiert.  
+## <a name="example"></a><span data-ttu-id="03cd9-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="03cd9-106">Example</span></span>  
+ <span data-ttu-id="03cd9-107">Das folgende Beispiel definiert Stile für die Steuerelemente in einem <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="03cd9-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- [!code-xml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
-[!code-xml[ToolBar_snip#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
+ [!code-xaml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
+[!code-xaml[ToolBar_snip#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
-## Siehe auch  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="03cd9-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03cd9-108">See Also</span></span>  
+ [<span data-ttu-id="03cd9-109">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="03cd9-109">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

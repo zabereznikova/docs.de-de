@@ -1,43 +1,35 @@
 ---
-title: "Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
-Dieses Beispiel zeigt, wie Sie Daten aus verschiedenen Quellen in eine Sequenz neuer Typen zusammenführen.  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="293c2-102">Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="293c2-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="293c2-103">In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in einer Sequenz aus neuen Typen zusammenführen können.</span><span class="sxs-lookup"><span data-stu-id="293c2-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  Versuchen Sie nicht, Daten im Speicher oder Daten im Dateisystem mit Daten zu verknüpfen, noch in einer Datenbank ist. Solche domänenübergreifenden Joins können nicht definierte Ergebnisse aufgrund unterschiedlich erzielt werden, in der Join-Vorgänge für die Datenbankabfragen und andere Typen von Datenquellen definiert werden können. Darüber hinaus besteht ein Risiko, dass dieser Vorgang eine Out-of-Memory-Ausnahme auslösen könnte, wenn die Menge der Daten in der Datenbank groß genug ist. Um Daten aus einer Datenbank mit Daten im Speicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbank abzufragen, und führen Sie dann den Join für die zurückgegebene Auflistung.  
+>  <span data-ttu-id="293c2-104">Versuchen Sie nicht, Daten im Arbeitsspeicher oder Daten im Dateisystem mit Daten, die sich noch in der Datenbank befinden, zusammenzuführen.</span><span class="sxs-lookup"><span data-stu-id="293c2-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="293c2-105">Derartige domänenübergreifende Verknüpfungen können aufgrund von möglichen unterschiedlichen Definitionen von Verknüpfungsvorgänge für Datenbankabfragen und anderen Quelltypen zu undefinierten Ergebnissen führen.</span><span class="sxs-lookup"><span data-stu-id="293c2-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="293c2-106">Zusätzlich kann eine derartige Verknüpfung eine Ausnahme außerhalb des Speichers verursachen, wenn die Datenmenge in der Datenbank groß genug ist.</span><span class="sxs-lookup"><span data-stu-id="293c2-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="293c2-107">Um Daten aus einer Datenbank mit Daten im Arbeitsspeicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbankabfrage auf, und führen Sie dann die Verknüpfung in der zurückgegebenen Auflistung durch.</span><span class="sxs-lookup"><span data-stu-id="293c2-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="293c2-108">So erstellen Sie die Datendatei</span><span class="sxs-lookup"><span data-stu-id="293c2-108">To create the data file</span></span>  
   
--   Die names.csv- und scores.csv-Dateien in den Projektordner kopieren, wie im [How to: Join Content aus mehreren unähnlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
+-   <span data-ttu-id="293c2-109">Kopieren Sie die names.csv und scores.csv-Dateien in den Projektordner, wie in beschrieben [wie: Verknüpfen Inhalte aus unterschiedlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span><span class="sxs-lookup"><span data-stu-id="293c2-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie einen benannten Typ `Student` zusammengeführte Daten von zwei speicherinterne Auflistungen von Zeichenfolgen zu speichern, die Tabellendaten im CSV-Format zu simulieren. Die erste Auflistung von Zeichenfolgen darstellt, die Schüler-Namen und IDs und die zweite Auflistung dar, die Schüler-ID (in der ersten Spalte) und vier Prüfungsergebnisse. Die ID wird als Fremdschlüssel verwendet.  
+## <a name="example"></a><span data-ttu-id="293c2-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="293c2-110">Example</span></span>  
+ <span data-ttu-id="293c2-111">In folgendem Beispiel erfahren Sie, wie Sie einen benannten Typ `Student` zum Speichern zusammengeführter Daten aus zwei Zeichenfolgeauflistungen, die Arbeitsblätter im .csv-Format simulieren, im Arbeitsspeicher verwenden könne.</span><span class="sxs-lookup"><span data-stu-id="293c2-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="293c2-112">Die erste Zeichenfolgeauflistung stellt die Namen der Studenten und deren Matrikelnummer dar, und die zweite Zeichenfolgeauflistung stellt die Matrikelnummer (in der ersten Spalte) und vier Prüfungsergebnisse dar.</span><span class="sxs-lookup"><span data-stu-id="293c2-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="293c2-113">Die Matrikelnummer wird als Fremdschlüssel verwendet.</span><span class="sxs-lookup"><span data-stu-id="293c2-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) -Klausel eines Objektinitialisierers wird zum Instanziieren jedes neuen `Student` Objekt mit den Daten aus beiden Quellen.  
+ <span data-ttu-id="293c2-114">In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) -Klausel ein Objektinitialisierer wird verwendet, um instanziieren jedes neuen `Student` Objekt, indem Sie die Daten aus beiden Quellen verwenden.</span><span class="sxs-lookup"><span data-stu-id="293c2-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- Wenn Sie nicht zum Speichern der Ergebnisse einer Abfrage verfügen, können anonyme Typen besser geeignet als die benannte Typen sein. Benannte Typen sind erforderlich, wenn Sie die Abfrageergebnisse außerhalb der Methode übergeben, in denen die Abfrage ausgeführt wird. Das folgende Beispiel führt die gleiche Aufgabe wie im vorherigen Beispiel, jedoch anonyme Typen statt benannter Typen verwendet:  
+ <span data-ttu-id="293c2-115">Wenn Sie die Ergebnisse einer Abfrage nicht speichern müssen, können anonyme Typen praktischer als benannte Typen sein.</span><span class="sxs-lookup"><span data-stu-id="293c2-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="293c2-116">Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich.</span><span class="sxs-lookup"><span data-stu-id="293c2-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="293c2-117">In folgendem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt; allerdings werden statt benannter anonyme Typen verwendet:</span><span class="sxs-lookup"><span data-stu-id="293c2-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -140,8 +132,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen eines Projekts, die auf .NET Framework, Version 3.5 oder höher mit einem Verweis auf System.Core.dll und eine `Imports` -Anweisung für den Namespace "System.Linq".  
+## <a name="compiling-the-code"></a><span data-ttu-id="293c2-118">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="293c2-118">Compiling the Code</span></span>  
+ <span data-ttu-id="293c2-119">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="293c2-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="293c2-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="293c2-120">See Also</span></span>  
+ [<span data-ttu-id="293c2-121">LINQ und Zeichenfolgen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="293c2-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

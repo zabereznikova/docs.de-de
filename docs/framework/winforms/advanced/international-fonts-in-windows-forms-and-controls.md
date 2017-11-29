@@ -1,38 +1,39 @@
 ---
-title: "Internationale Schriftarten in Windows&#160;Forms und Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schriftart-Fallback in Windows Forms"
-  - "Schriftarten, Überlegungen zur Globalisierung"
-  - "Schriftarten, International"
-  - "Globalisierung [Windows Forms], Zeichensätze"
-  - "Internationale Anwendungen [Windows Forms], Zeichenanzeige"
-  - "Lokalisierung [Windows Forms], Schriftarten"
-  - "Windows Forms-Steuerelemente, Bezeichnungen"
+title: "Internationale Schriftarten in Windows Forms und Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fonts [Windows Forms], international
+- international applications [Windows Forms], character display
+- fonts [Windows Forms], globalization considerations
+- localization [Windows Forms], fonts
+- Windows Forms controls, labels
+- font fallback in Windows Forms
+- globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Internationale Schriftarten in Windows&#160;Forms und Steuerelementen
-Für internationale Anwendungen sollte möglichst die automatische Schriftartauswahl verwendet werden.  Automatische Schriftartauswahl bedeutet, dass das System bestimmt, zu welcher Schrift ein Zeichen gehört.  
+# <a name="international-fonts-in-windows-forms-and-controls"></a><span data-ttu-id="0c642-102">Internationale Schriftarten in Windows Forms und Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="0c642-102">International Fonts in Windows Forms and Controls</span></span>
+<span data-ttu-id="0c642-103">Die empfohlene Methode zum Auswählen von Schriftarten werden in internationalen Anwendungen Schriftartauswahl transaktionsanweisungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0c642-103">In International applications the recommended method of selecting fonts is to use font fallback wherever possible.</span></span> <span data-ttu-id="0c642-104">Automatische Schriftartauswahl bedeutet, dass das System bestimmt, was das Zeichen Skript gehört.</span><span class="sxs-lookup"><span data-stu-id="0c642-104">Font fallback means that the system determines what script the character belongs to.</span></span>  
   
-## Verwenden der automatischen Schriftartauswahl  
- Legen Sie die <xref:System.Drawing.Font>\-Eigenschaft für das Formular oder ein beliebiges anderes Element nicht fest, wenn Sie dieses Feature nutzen möchten.  Die Anwendung greift in diesem Fall automatisch auf die Standardschrift des Systems zurück, die sich nach der Sprache richtet, in die das Betriebsystem lokalisiert wurde.  Wenn die Anwendung ausgeführt wird, stellt das System automatisch die richtige Schrift für die im Betriebssystem ausgewählte Kultur bereit.  
+## <a name="using-font-fallback"></a><span data-ttu-id="0c642-105">Verwenden Schriftart-Fallback</span><span class="sxs-lookup"><span data-stu-id="0c642-105">Using Font Fallback</span></span>  
+ <span data-ttu-id="0c642-106">Um dieses Feature nutzen zu können, stellen Sie keine der <xref:System.Drawing.Font> -Eigenschaft für das Formular oder ein anderes Element.</span><span class="sxs-lookup"><span data-stu-id="0c642-106">To take advantage of this feature, do not set the <xref:System.Drawing.Font> property for your form or any other element.</span></span> <span data-ttu-id="0c642-107">Die Anwendung wird automatisch der Standardsystemschriftart verwenden, die von einer lokalisierten Sprache des Betriebssystems auf einen anderen abweicht.</span><span class="sxs-lookup"><span data-stu-id="0c642-107">The application will automatically use the default system font, which differs from one localized language of the operating system to another.</span></span> <span data-ttu-id="0c642-108">Wenn die Anwendung ausgeführt wird, wird das System automatisch die richtige Schriftart für die Kultur, die im Betriebssystem aktiviert bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="0c642-108">When the application runs, the system will automatically provide the correct font for the culture selected in the operating system.</span></span>  
   
- Es gibt jedoch eine Ausnahme zu der Regel, dass die Schrift nicht festgelegt wird. Sie betrifft die Änderung des Schriftschnitts.  In einer Anwendung kommt sie dann zum Tragen, wenn der Benutzer auf eine Schaltfläche klickt, um Text in einem Textfeld in Fettschrift darzustellen.  Dazu würden Sie eine Funktion schreiben, die auf der Grundlage der Formularschrift den Schriftschnitt des Textfelds in fett ändert.  Diese Funktion muss unbedingt an zwei Stellen aufgerufen werden: im <xref:System.Windows.Forms.Control.Click>\-Ereignishandler der Schaltfläche und im <xref:System.Windows.Forms.Control.FontChanged>\-Ereignishandler.  Wenn die Funktion nur im <xref:System.Windows.Forms.Control.Click>\-Ereignishandler aufgerufen und die Schriftfamilie des gesamten Formulars durch anderen Code geändert wird, ändert sich das Textfeld nicht mit dem restlichen Formular.  
+ <span data-ttu-id="0c642-109">Es wird eine Ausnahme von der Regel der Schriftart an, die zum Ändern der Schriftart wird nicht festlegen.</span><span class="sxs-lookup"><span data-stu-id="0c642-109">There is an exception to the rule of not setting the font, which is for changing the font style.</span></span> <span data-ttu-id="0c642-110">Dies könnte wichtig für eine Anwendung sein in dem der Benutzer eine Schaltfläche, um Text in einem Textfeld angezeigt werden in Fettschrift klickt.</span><span class="sxs-lookup"><span data-stu-id="0c642-110">This might be important for an application in which the user clicks a button to make text in a text box appear in boldface.</span></span> <span data-ttu-id="0c642-111">Dazu würden Sie eine Funktion zum Ändern der Schriftart fett formatiert, das Textfeld schreiben, basierend auf den des Formulars Schriftart ist.</span><span class="sxs-lookup"><span data-stu-id="0c642-111">To do that, you would write a function to change the text box's font style to bold, based on whatever the form's font is.</span></span> <span data-ttu-id="0c642-112">Es ist wichtig, diesen Funktionsaufruf an zwei Orten: in der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignishandler und klicken Sie in der <xref:System.Windows.Forms.Control.FontChanged> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="0c642-112">It is important to call this function in two places: in the button's <xref:System.Windows.Forms.Control.Click> event handler and in the <xref:System.Windows.Forms.Control.FontChanged> event handler.</span></span> <span data-ttu-id="0c642-113">Wenn die Funktion, nur in aufgerufen wird der <xref:System.Windows.Forms.Control.Click> -Ereignishandler und einigen anderen Codeabschnitt ändert die Schriftfamilie des gesamten Formulars, im Textfeld wird nicht mit dem Rest des Formulars ändern.</span><span class="sxs-lookup"><span data-stu-id="0c642-113">If the function is called only in the <xref:System.Windows.Forms.Control.Click> event handler and some other piece of code changes the font family of the entire form, the text box will not change with the rest of the form.</span></span>  
   
 ```  
 ' Visual Basic  
@@ -78,7 +79,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }  
 ```  
   
- Beim Lokalisieren der Anwendung wird die Fettschrift jedoch in bestimmten Sprachen möglicherweise nur mangelhaft dargestellt.  Wenn dies Probleme aufwirft, sollten die Lokalisierungsspezialisten die Möglichkeit haben, die Schrift von fett auf normalen Text umzuschalten.  Da Lokalisierungsspezialisten in der Regel keine Entwickler sind und nur Zugriff auf die Ressourcendateien, jedoch nicht auf den Quellcode haben, muss diese Option in den Ressourcendateien festgelegt werden.  Zu diesem Zweck würden Sie die <xref:System.Drawing.Font.Bold%2A>\-Eigenschaft auf `true` festlegen.  Dadurch wird die Schrifteinstellung in die Ressourcendateien geschrieben, wo sie von den Lokalisierungsspezialisten bearbeitet werden kann.  Fügen Sie anschließend nach der `InitializeComponent` \-Methode Code ein, der die Schriftart auf die Formularschrift zurücksetzt, dabei jedoch den in der Ressourcendatei festgelegten Schriftschnitt verwendet.  
+ <span data-ttu-id="0c642-114">Jedoch, wenn Sie die Anwendung zu lokalisieren, möglicherweise die fettformatierung Verschlechterung der Leistung für bestimmte Sprachen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0c642-114">However, when you localize your application, the bold font may display poorly for certain languages.</span></span> <span data-ttu-id="0c642-115">Wenn dies eine wichtige Überlegung ist, sollen die Lokalisierungsexperten haben die Möglichkeit, wechseln die Schriftart von fetter zu normaler Text.</span><span class="sxs-lookup"><span data-stu-id="0c642-115">If this is a concern, you want the localizers to have the option of switching the font from bold to regular text.</span></span> <span data-ttu-id="0c642-116">Da Lokalisierungsexperten nicht in der Regel Entwickler sind und haben keinen Zugriff auf den Quellcode, muss diese Option nur für Ressourcendateien, in den Ressourcendateien festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="0c642-116">Since localizers are typically not developers and do not have access to source code, only to resource files, this option needs to be set in the resource files.</span></span> <span data-ttu-id="0c642-117">Zu diesem Zweck legen Sie die <xref:System.Drawing.Font.Bold%2A> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="0c642-117">To do this, you would set the <xref:System.Drawing.Font.Bold%2A> property to `true`.</span></span> <span data-ttu-id="0c642-118">Dadurch wird der Einstellung "Schriftart" in die Ressourcendateien, in dem Sie Lokalisierungsexperten bearbeiten können geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="0c642-118">This results in the font setting being written out to the resource files, where localizers can edit it.</span></span> <span data-ttu-id="0c642-119">Anschließend schreiben Sie Code nach der `InitializeComponent` Methode, um die Schriftart basierend auf beliebigen des Formulars Schriftart ist, jedoch mit den Schriftschnitt in der Ressourcendatei angegeben.</span><span class="sxs-lookup"><span data-stu-id="0c642-119">You then write code after the `InitializeComponent` method to reset the font based on whatever the form's font is, but using the font style specified in the resource file.</span></span>  
   
 ```  
 ' Visual Basic  
@@ -88,6 +89,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## Siehe auch  
- [Globalisieren von Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)   
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="0c642-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c642-120">See Also</span></span>  
+ [<span data-ttu-id="0c642-121">Globalisieren von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0c642-121">Globalizing Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [<span data-ttu-id="0c642-122">Verwenden von Schriftarten und Text</span><span class="sxs-lookup"><span data-stu-id="0c642-122">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

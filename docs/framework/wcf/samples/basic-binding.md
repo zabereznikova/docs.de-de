@@ -1,30 +1,33 @@
 ---
-title: "Standardbindung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Standardbindung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a0e8ac4-23e7-45ef-98dc-40691aac530a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0d971cb50ad52b9a9fd913d4c10714eee1eed444
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Standardbindung
-Dieser Abschnitt enthält grundlegende Beispiele, in denen die Verwendung des Bindungsattributs eines Endpunktelements veranschaulicht wird.  
+# <a name="basic-binding"></a><span data-ttu-id="1c03c-102">Standardbindung</span><span class="sxs-lookup"><span data-stu-id="1c03c-102">Basic Binding</span></span>
+<span data-ttu-id="1c03c-103">Dieser Abschnitt enthält grundlegende Beispiele, in denen die Verwendung des Bindungsattributs eines Endpunktelements veranschaulicht wird.</span><span class="sxs-lookup"><span data-stu-id="1c03c-103">This section contains basic samples that demonstrate using the binding attribute of an endpoint element.</span></span>  
   
-## In diesem Abschnitt  
- [Beispiel für Nachrichtensicherheit](../../../../docs/framework/wcf/samples/message-security-sample.md)  
- Zeigt, wie eine Anwendung implementiert wird, die die `basicHttpBinding` und Nachrichtensicherheit verwendet.  
+## <a name="in-this-section"></a><span data-ttu-id="1c03c-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1c03c-104">In This Section</span></span>  
+ [<span data-ttu-id="1c03c-105">Beispiel für Nachrichtensicherheit</span><span class="sxs-lookup"><span data-stu-id="1c03c-105">Message Security Sample</span></span>](../../../../docs/framework/wcf/samples/message-security-sample.md)  
+ <span data-ttu-id="1c03c-106">Zeigt, wie eine Anwendung implementiert wird, die die `basicHttpBinding` und Nachrichtensicherheit verwendet.</span><span class="sxs-lookup"><span data-stu-id="1c03c-106">Demonstrates how to implement an application that uses the `basicHttpBinding` and message security.</span></span>  
   
- [Standardbindung mit Transportsicherheit](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
- Veranschaulicht die Verwendung der SSL\-Transportsicherheit mit der Standardbindung.  
+ [<span data-ttu-id="1c03c-107">Standardbindung mit Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="1c03c-107">BasicBinding with Transport Security</span></span>](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ <span data-ttu-id="1c03c-108">Veranschaulicht die Verwendung der SSL-Transportsicherheit mit der Standardbindung.</span><span class="sxs-lookup"><span data-stu-id="1c03c-108">Demonstrates the use of SSL transport security with the basic binding.</span></span>  
   
- [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  
- Veranschaulicht die Verwendung von `basicHttpBinding`, bei der HTTP\-Kommunikation und maximale Interoperabilität mit Webdiensten der ersten und zweiten Generation sichergestellt wird.
+ [<span data-ttu-id="1c03c-109">Standardbindung</span><span class="sxs-lookup"><span data-stu-id="1c03c-109">BasicBinding</span></span>](../../../../docs/framework/wcf/samples/basicbinding.md)  
+ <span data-ttu-id="1c03c-110">Veranschaulicht die Verwendung von `basicHttpBinding`, bei der HTTP-Kommunikation und maximale Interoperabilität mit Webdiensten der ersten und zweiten Generation sichergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="1c03c-110">Demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>

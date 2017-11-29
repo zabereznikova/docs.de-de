@@ -1,49 +1,50 @@
 ---
-title: "LinkLabel-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Label-Steuerelement [Windows Forms]"
-  - "LinkLabel-Steuerelement [Windows Forms]"
-  - "Verknüpfungen, Hinzufügen zu Windows Forms"
-  - "Link-Steuerelement für Webseiten"
-  - "Windows Forms, Hinzufügen von Links"
+title: "LinkLabel-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Label control [Windows Forms]
+- links [Windows Forms], adding to Windows Forms
+- Windows Forms, adding links
+- Web page link control
+- LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9627634f30ebdabe75ccfc7ff0ffa8fdd50655b9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# LinkLabel-Steuerelement (Windows&#160;Forms)
-Mit dem `LinkLabel`\-Steuerelement in Windows Forms können Sie Ihren Windows Forms\-Anwendungen Webhyperlinks hinzufügen.  Grundsätzlich hat das `LinkLabel`\-Steuerelement dieselben Funktionsmerkmale wie das <xref:System.Windows.Forms.Label>\-Steuerelement. Darüber hinaus können Sie damit einen Textteil als Link definieren, der auf ein Objekt oder eine Webseite verweist.  
+# <a name="linklabel-control-windows-forms"></a><span data-ttu-id="41764-102">LinkLabel-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="41764-102">LinkLabel Control (Windows Forms)</span></span>
+<span data-ttu-id="41764-103">Windows Forms `LinkLabel` Steuerelement können Sie Weblinks zu Windows Forms-Anwendungen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="41764-103">The Windows Forms `LinkLabel` control enables you to add Web-style links to Windows Forms applications.</span></span> <span data-ttu-id="41764-104">Können Sie die `LinkLabel` Control für alle Elemente, die Sie verwenden können, die <xref:System.Windows.Forms.Label> für steuern; Sie können auch Teile des Texts als Link auf ein Objekt oder Webseite festlegen.</span><span class="sxs-lookup"><span data-stu-id="41764-104">You can use the `LinkLabel` control for everything that you can use the <xref:System.Windows.Forms.Label> control for; you also can set part of the text as a link to an object or Web page.</span></span>  
   
-## In diesem Abschnitt  
- [Übersicht über das LinkLabel\-Steuerelement](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- Erläutert die Verwendung dieses Steuerelements sowie seine wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a><span data-ttu-id="41764-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="41764-105">In This Section</span></span>  
+ [<span data-ttu-id="41764-106">Übersicht über das LinkLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="41764-106">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ <span data-ttu-id="41764-107">Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.</span><span class="sxs-lookup"><span data-stu-id="41764-107">Explains what this control is and its key features and properties.</span></span>  
   
- [Gewusst wie: Ändern der Darstellung des LinkLabel\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- Listet Möglichkeiten auf, wie Farbe und Unterstreichung bei webähnlichen Links in Linkbezeichnungen definiert werden können.  
+ [<span data-ttu-id="41764-108">Gewusst wie: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41764-108">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ <span data-ttu-id="41764-109">Listet Möglichkeiten, die Farbe und die Unterstreichung von Weblinks in linkbezeichnungen anzugeben.</span><span class="sxs-lookup"><span data-stu-id="41764-109">Lists ways to specify the color and underlining of Web-style links in link labels.</span></span>  
   
- [Gewusst wie: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- Enthält eine Schritt\-für\-Schritt\-Anweisung zum Öffnen eines Formulars oder einer Webseite, wenn auf einen Link geklickt wird.  
+ [<span data-ttu-id="41764-110">Gewusst wie: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41764-110">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ <span data-ttu-id="41764-111">Enthält eine schrittweise Anleitung für ein Formular oder eine Webseite öffnen, wenn auf ein Link geklickt wird.</span><span class="sxs-lookup"><span data-stu-id="41764-111">Provides how-to instructions for opening a form or Web page when a link is clicked.</span></span>  
   
- [Gewusst wie: Anzeigen einer Webseite über ein LinkLabel\-Steuerelement in Windows Forms \(Visual Basic\)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
- Veranschaulicht, wie eine Webseite im Standardbrowser angezeigt wird, wenn der Benutzer auf das `LinkLabel`\-Steuerelement in Windows Forms klickt.  
+ [<span data-ttu-id="41764-112">Gewusst wie: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41764-112">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
+ <span data-ttu-id="41764-113">Gewusst wie: Anzeigen einer Webseite im Standardbrowser klickt ein Benutzer einer Windows Forms zeigt `LinkLabel` Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="41764-113">Shows how to display a Web page in the default browser when a user clicks a Windows Forms `LinkLabel` control.</span></span>  
   
-## Referenz  
- <xref:System.Windows.Forms.LinkLabel>\-Klasse  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+## <a name="reference"></a><span data-ttu-id="41764-114">Verweis</span><span class="sxs-lookup"><span data-stu-id="41764-114">Reference</span></span>  
+ <span data-ttu-id="41764-115"><xref:System.Windows.Forms.LinkLabel>-Klasse</span><span class="sxs-lookup"><span data-stu-id="41764-115"><xref:System.Windows.Forms.LinkLabel> class</span></span>  
+ <span data-ttu-id="41764-116">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="41764-116">Describes this class and has links to all its members.</span></span>  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu ihren Verwendungsmöglichkeiten.
+## <a name="related-sections"></a><span data-ttu-id="41764-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="41764-117">Related Sections</span></span>  
+ [<span data-ttu-id="41764-118">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="41764-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="41764-119">Stellt eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen über ihre Verwendung bereit.</span><span class="sxs-lookup"><span data-stu-id="41764-119">Provides a complete list of Windows Forms controls, with links to information about their use.</span></span>

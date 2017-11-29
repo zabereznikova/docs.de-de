@@ -1,26 +1,29 @@
 ---
-title: "WCF-Web-HTTP-Fehlerbehandlung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WCF-Web-HTTP-Fehlerbehandlung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3366ab851c6e6b66a5df94bdb24baad4ae0c8d14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# WCF-Web-HTTP-Fehlerbehandlung
-Die Web\-HTTP\-Fehlerbehandlung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Fehler von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Web\-HTTP\-Diensten zurückzugeben, die einen HTTP\-Statuscode angeben, sowie Fehlerdetails im gleichen Format wie der Vorgang \(z. B. XML oder JSON\) zurückzugeben.  
+# <a name="wcf-web-http-error-handling"></a><span data-ttu-id="78c18-102">WCF-Web-HTTP-Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="78c18-102">WCF Web HTTP Error Handling</span></span>
+<span data-ttu-id="78c18-103">Die Web-HTTP-Fehlerbehandlung von [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ermöglicht es Ihnen, Fehler von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Web-HTTP-Diensten zurückzugeben, die einen HTTP-Statuscode angeben, sowie Fehlerdetails im gleichen Format wie der Vorgang (z. B. XML oder JSON) zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="78c18-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP error handling enables you to return errors from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP services that specify an HTTP status code and return error details using the same format as the operation (for example, XML or JSON).</span></span>  
   
-## WCF\-Web\-HTTP\-Fehlerbehandlung  
- Die <xref:System.ServiceModel.Web.WebFaultException>\-Klasse definiert einen Konstruktor, der Ihnen das Angeben eines HTTP\-Statuscodes ermöglicht.Dieser Statuscode wird dann an den Client zurückgegeben.Dies ist eine generische Version der <xref:System.ServiceModel.Web.WebFaultException>\-Klasse. Mit <xref:System.ServiceModel.Web.WebFaultException%601> können Sie einen benutzerdefinierten Typ zurückgeben, der Informationen zum aufgetretenen Fehler enthält.Dieses benutzerdefinierte Objekt wird in dem Format serialisiert, das vom Vorgang angegeben und an den Client zurückgegeben wird.Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP\-Statuscode zurückgeben.  
+## <a name="wcf-web-http-error-handling"></a><span data-ttu-id="78c18-104">WCF-Web-HTTP-Fehlerbehandlung</span><span class="sxs-lookup"><span data-stu-id="78c18-104">WCF Web HTTP Error Handling</span></span>  
+ <span data-ttu-id="78c18-105">Die <xref:System.ServiceModel.Web.WebFaultException>-Klasse definiert einen Konstruktor, der Ihnen das Angeben eines HTTP-Statuscodes ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="78c18-105">The <xref:System.ServiceModel.Web.WebFaultException> class defines a constructor that allows you to specify an HTTP status code.</span></span> <span data-ttu-id="78c18-106">Dieser Statuscode wird dann an den Client zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="78c18-106">This status code is then returned to the client.</span></span> <span data-ttu-id="78c18-107">Dies ist eine generische Version der <xref:System.ServiceModel.Web.WebFaultException>-Klasse. Mit <xref:System.ServiceModel.Web.WebFaultException%601> können Sie einen benutzerdefinierten Typ zurückgeben, der Informationen zum aufgetretenen Fehler enthält.</span><span class="sxs-lookup"><span data-stu-id="78c18-107">A generic version of the <xref:System.ServiceModel.Web.WebFaultException> class, <xref:System.ServiceModel.Web.WebFaultException%601> enables you to return a user-defined type that contains information about the error that occurred.</span></span> <span data-ttu-id="78c18-108">Dieses benutzerdefinierte Objekt wird in dem Format serialisiert, das vom Vorgang angegeben und an den Client zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="78c18-108">This custom object is serialized using the format specified by the operation and returned to the client.</span></span> <span data-ttu-id="78c18-109">Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP-Statuscode zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="78c18-109">The following example shows how to return an HTTP status code.</span></span>  
   
 ```  
 Public string Operation1()  
@@ -30,35 +33,35 @@ Public string Operation1()
 }  
 ```  
   
- Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP\-Statuscode und zusätzliche Informationen in einem benutzerdefinierten Typ zurückgeben.`MyErrorDetail` ist ein benutzerdefinierter Typ, der zusätzliche Informationen zum aufgetretenen Fehler enthält.  
+ <span data-ttu-id="78c18-110">Im folgenden Beispiel wird gezeigt, wie Sie einen HTTP-Statuscode und zusätzliche Informationen in einem benutzerdefinierten Typ zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="78c18-110">The following example shows how to return an HTTP status code and extra information in a user-defined type.</span></span> <span data-ttu-id="78c18-111">`MyErrorDetail` ist ein benutzerdefinierter Typ, der zusätzliche Informationen zum aufgetretenen Fehler enthält.</span><span class="sxs-lookup"><span data-stu-id="78c18-111">`MyErrorDetail` is a user-defined type that contains extra information about the error that occurred.</span></span>  
   
 ```  
 Public string Operation2()  
    // Operation logic  
    // ...   MyErrorDetail detail = new MyErrorDetail  
    {  
-      Message = “Error Message”,  
+      Message = "Error Message",  
       ErrorCode = 123,  
    }  
    throw new WebFaultException<MyErrorDetail>(detail, HttpStatusCode.Forbidden);  
 }  
 ```  
   
- Der oben angegebene Code gibt eine HTTP\-Antwort mit dem unzulässigen Statuscode und einem Text zurück, in der eine Instanz des `MyErrorDetails`\-Objekts enthalten ist.Zum Bestimmen des Formats des `MyErrorDetails`\-Objekts werden folgende Komponenten herangezogen:  
+ <span data-ttu-id="78c18-112">Der oben angegebene Code gibt eine HTTP-Antwort mit dem unzulässigen Statuscode und einem Text zurück, in der eine Instanz des `MyErrorDetails`-Objekts enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="78c18-112">The preceding code returns an HTTP response with the forbidden status code and a body that contains an instance of the `MyErrorDetails` object.</span></span> <span data-ttu-id="78c18-113">Zum Bestimmen des Formats des `MyErrorDetails`-Objekts werden folgende Komponenten herangezogen:</span><span class="sxs-lookup"><span data-stu-id="78c18-113">The format of the `MyErrorDetails` object is determined by:</span></span>  
   
--   Der Wert des `ResponseFormat`\-Parameters des <xref:System.ServiceModel.Web.WebGetAttribute>\- oder <xref:System.ServiceModel.Web.WebInvokeAttribute>\-Attributs, das für den Dienstvorgang angegeben wurde.  
+-   <span data-ttu-id="78c18-114">Der Wert des `ResponseFormat`-Parameters des <xref:System.ServiceModel.Web.WebGetAttribute>- oder <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attributs, das für den Dienstvorgang angegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="78c18-114">The value of the `ResponseFormat` parameter of the <xref:System.ServiceModel.Web.WebGetAttribute> or <xref:System.ServiceModel.Web.WebInvokeAttribute> attribute specified on the service operation.</span></span>  
   
--   Der Wert von <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+-   <span data-ttu-id="78c18-115">Der Wert von <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.</span><span class="sxs-lookup"><span data-stu-id="78c18-115">The value of <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.</span></span>  
   
--   Der Wert der <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>\-Eigenschaft, indem auf <xref:System.ServiceModel.Web.OutgoingWebResponseContext> zugegriffen wird.  
+-   <span data-ttu-id="78c18-116">Der Wert der <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>-Eigenschaft, indem auf <xref:System.ServiceModel.Web.OutgoingWebResponseContext> zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="78c18-116">The value of the <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> property by accessing the <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dazu, wie sich diese Werte auf die Formatierung des Vorgangs auswirken, finden Sie unter [WCF\-Web\-HTTP\-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="78c18-117">Diese Werte beeinflussen die Formatierung des Vorgangs, finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="78c18-117"> how these values affect the formatting of the operation, see [WCF Web HTTP Formatting](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span></span>  
   
- <xref:System.ServiceModel.Web.WebFaultException> ist ein <xref:System.ServiceModel.FaultException>\-Objekt und kann daher als Fehlerausnahme\-Programmiermodell für Dienste verwendet werden, die SOAP\-Endpunkte sowie Web\-HTTP\-Endpunkte verfügbar machen.  
+ <span data-ttu-id="78c18-118"><xref:System.ServiceModel.Web.WebFaultException> ist ein <xref:System.ServiceModel.FaultException>-Objekt und kann daher als Fehlerausnahme-Programmiermodell für Dienste verwendet werden, die SOAP-Endpunkte sowie Web-HTTP-Endpunkte verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="78c18-118"><xref:System.ServiceModel.Web.WebFaultException> is a <xref:System.ServiceModel.FaultException> and therefore can be used as the fault exception programming model for services that expose SOAP endpoints as well as web HTTP endpoints.</span></span>  
   
-## Siehe auch  
- [WCF\-Web\-HTTP\-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [WCF\-Web\-HTTP\-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)   
- [Definieren und Angeben von Fehlern](../../../../docs/framework/wcf/defining-and-specifying-faults.md)   
- [Behandeln von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)   
- [Senden und Empfangen von Fehlern](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+## <a name="see-also"></a><span data-ttu-id="78c18-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="78c18-119">See Also</span></span>  
+ [<span data-ttu-id="78c18-120">WCF-Web-HTTP-Programmiermodell</span><span class="sxs-lookup"><span data-stu-id="78c18-120">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="78c18-121">WCF Web-HTTP-Formatierung</span><span class="sxs-lookup"><span data-stu-id="78c18-121">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ [<span data-ttu-id="78c18-122">Definieren und Angeben von Fehlern</span><span class="sxs-lookup"><span data-stu-id="78c18-122">Defining and Specifying Faults</span></span>](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
+ [<span data-ttu-id="78c18-123">Behandeln von Ausnahmen und Fehlern</span><span class="sxs-lookup"><span data-stu-id="78c18-123">Handling Exceptions and Faults</span></span>](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
+ [<span data-ttu-id="78c18-124">Senden und Empfangen von Fehlern</span><span class="sxs-lookup"><span data-stu-id="78c18-124">Sending and Receiving Faults</span></span>](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
