@@ -1,59 +1,58 @@
 ---
-title: "Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, arguments"
-  - "procedure arguments"
-  - "arguments [Visual Basic], nonmodifiable"
-  - "Visual Basic code, procedures"
-  - "arguments [Visual Basic], modifiable"
+title: "Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedure arguments
+- arguments [Visual Basic], nonmodifiable
+- Visual Basic code, procedures
+- arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ab108d064f5c6740f80328a9b6db4785334550ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn Sie eine Prozedur aufrufen, übergeben Sie i. d. R. mindestens ein Argument an die Prozedur.  Jedes Argument entspricht einem zugrunde liegenden Programmierelement.  Sowohl die zugrunde liegenden Elemente als auch die Argumente selbst können veränderbar oder nicht veränderbar sein.  
+# <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a><span data-ttu-id="565fd-102">Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="565fd-102">Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)</span></span>
+<span data-ttu-id="565fd-103">Wenn Sie eine Prozedur aufrufen, übergeben Sie ein oder mehrere Argumente in der Regel darauf.</span><span class="sxs-lookup"><span data-stu-id="565fd-103">When you call a procedure, you typically pass one or more arguments to it.</span></span> <span data-ttu-id="565fd-104">Jedes Argument entspricht einem zugrunde liegenden Programmierelement.</span><span class="sxs-lookup"><span data-stu-id="565fd-104">Each argument corresponds to an underlying programming element.</span></span> <span data-ttu-id="565fd-105">Die zugrunde liegenden Elemente und die Argumente selbst können geändert werden kann oder nicht veränderbaren sein.</span><span class="sxs-lookup"><span data-stu-id="565fd-105">Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.</span></span>  
   
-## Veränderbare und nicht veränderbare Elemente  
- Ein Programmierelement kann entweder ein *veränderbares Element* sein, dessen Wert sich ändert, oder ein *nicht veränderbares Element*, dessen Wert fest bleibt, nachdem es erstellt wurde.  
+## <a name="modifiable-and-nonmodifiable-elements"></a><span data-ttu-id="565fd-106">Veränderbaren und nicht veränderbaren Elemente</span><span class="sxs-lookup"><span data-stu-id="565fd-106">Modifiable and Nonmodifiable Elements</span></span>  
+ <span data-ttu-id="565fd-107">Ein Programmierelement kann es sich um eine *änderbare Element*, wofür den Wert geändert, oder ein *nicht veränderbaren Element*, die einen festen Wert aufweist, nachdem es erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="565fd-107">A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.</span></span>  
   
- In der folgenden Tabelle werden veränderbare und nicht veränderbare Programmierelemente aufgeführt.  
+ <span data-ttu-id="565fd-108">Die folgende Tabelle enthält die veränderbaren und nicht veränderbaren Programmierelemente.</span><span class="sxs-lookup"><span data-stu-id="565fd-108">The following table lists modifiable and nonmodifiable programming elements.</span></span>  
   
-|Veränderbare Elemente|Nicht veränderbare Elemente|  
-|---------------------------|---------------------------------|  
-|Lokale Variablen \(deklariert in Prozeduren\) einschließlich Objektvariablen, außer schreibgeschützten Variablen|Schreibgeschützte Variablen, Felder und Eigenschaften|  
-|Felder \(Membervariablen von Modulen, Klassen und Strukturen\), außer schreibgeschützten Feldern|Konstanten und Literale|  
-|Eigenschaften, außer schreibgeschützten Eigenschaften|Enumerationsmember|  
-|Arrayelemente|Ausdrücke \(auch wenn deren Elemente veränderbar sind\)|  
+|<span data-ttu-id="565fd-109">Änderbare Elemente</span><span class="sxs-lookup"><span data-stu-id="565fd-109">Modifiable elements</span></span>|<span data-ttu-id="565fd-110">Nicht veränderbaren Elemente</span><span class="sxs-lookup"><span data-stu-id="565fd-110">Nonmodifiable elements</span></span>|  
+|-------------------------|----------------------------|  
+|<span data-ttu-id="565fd-111">Lokale Variablen (deklariert in Prozeduren), einschließlich Objektvariablen, mit Ausnahme von nur-Lese</span><span class="sxs-lookup"><span data-stu-id="565fd-111">Local variables (declared inside procedures), including object variables, except for read-only</span></span>|<span data-ttu-id="565fd-112">Schreibgeschützte Variablen, Felder und Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="565fd-112">Read-only variables, fields, and properties</span></span>|  
+|<span data-ttu-id="565fd-113">Felder (Membervariablen von Modulen, Klassen und Strukturen), mit Ausnahme von nur-Lese</span><span class="sxs-lookup"><span data-stu-id="565fd-113">Fields (member variables of modules, classes, and structures), except for read-only</span></span>|<span data-ttu-id="565fd-114">Konstanten und Literale</span><span class="sxs-lookup"><span data-stu-id="565fd-114">Constants and literals</span></span>|  
+|<span data-ttu-id="565fd-115">Eigenschaften, mit Ausnahme von nur-Lese</span><span class="sxs-lookup"><span data-stu-id="565fd-115">Properties, except for read-only</span></span>|<span data-ttu-id="565fd-116">Enumerationsmember</span><span class="sxs-lookup"><span data-stu-id="565fd-116">Enumeration members</span></span>|  
+|<span data-ttu-id="565fd-117">Array-Elemente</span><span class="sxs-lookup"><span data-stu-id="565fd-117">Array elements</span></span>|<span data-ttu-id="565fd-118">Ausdrücke (selbst wenn ihre Elemente geändert werden)</span><span class="sxs-lookup"><span data-stu-id="565fd-118">Expressions (even if their elements are modifiable)</span></span>|  
   
-## Veränderbare und nicht veränderbare Argumente  
- Einem *veränderbaren Argument* liegt ein veränderbares Element zugrunde.  Der Aufrufcode kann jederzeit einen neuen Wert speichern. Wenn eine [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\-Übergabe des Arguments erfolgt, kann der Code in der Prozedur das zugrunde liegende Element im Aufrufcode ebenfalls ändern.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a><span data-ttu-id="565fd-119">Veränderbaren und nicht veränderbaren Argumenten</span><span class="sxs-lookup"><span data-stu-id="565fd-119">Modifiable and Nonmodifiable Arguments</span></span>  
+ <span data-ttu-id="565fd-120">Ein *änderbaren Argument* ist eine mit einem änderbaren zugrunde liegende Element.</span><span class="sxs-lookup"><span data-stu-id="565fd-120">A *modifiable argument* is one with a modifiable underlying element.</span></span> <span data-ttu-id="565fd-121">Der aufrufende Code kann einen neuen Wert zu einem beliebigen Zeitpunkt zu speichern, und wenn das Argument zu übergeben [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), den Code in der Prozedur kann auch das zugrunde liegende Element im aufrufenden Code ändern.</span><span class="sxs-lookup"><span data-stu-id="565fd-121">The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.</span></span>  
   
- Einem *nicht veränderbaren Argument* liegt entweder ein nicht veränderbares Element zugrunde, oder es wird mit [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) übergeben.  Die Prozedur kann das zugrunde liegende Element im Aufrufcode nicht ändern, auch wenn es sich um ein veränderbares Element handelt.  Wenn es sich um ein nicht veränderbares Element handelt, kann es vom Aufrufcode selbst nicht geändert werden.  
+ <span data-ttu-id="565fd-122">Ein *nicht veränderbaren Argument* verfügt über einen nicht veränderbaren zugrunde liegende Element, oder übergeben [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).</span><span class="sxs-lookup"><span data-stu-id="565fd-122">A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).</span></span> <span data-ttu-id="565fd-123">Die Prozedur kann nicht das zugrunde liegende Element im aufrufenden Code ändern, selbst wenn es sich um einen änderbaren Element handelt.</span><span class="sxs-lookup"><span data-stu-id="565fd-123">The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element.</span></span> <span data-ttu-id="565fd-124">Wenn es sich um einen nicht veränderbaren Element handelt, kann nicht der aufrufende Code selbst es ändern.</span><span class="sxs-lookup"><span data-stu-id="565fd-124">If it is a nonmodifiable element, the calling code itself cannot modify it.</span></span>  
   
- Die aufgerufene Prozedur ändert gegebenenfalls die Kopie eines nicht veränderbaren Arguments; die Änderung hat jedoch keinen Einfluss auf das im Aufrufcode zugrunde liegende Element.  
+ <span data-ttu-id="565fd-125">Die aufgerufene Prozedur kann die lokale Kopie eines nicht veränderbaren Arguments ändern, aber diese Änderung nicht auf das zugrunde liegende Element im aufrufenden Code auswirkt.</span><span class="sxs-lookup"><span data-stu-id="565fd-125">The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.</span></span>  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Differences Between Passing an Argument By Value and By Reference](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)   
- [How to: Change the Value of a Procedure Argument](../../../../visual-basic/programming-guide/language-features/procedures/how-to-change-the-value-of-a-procedure-argument.md)   
- [How to: Protect a Procedure Argument Against Value Changes](../../../../visual-basic/programming-guide/language-features/procedures/how-to-protect-a-procedure-argument-against-value-changes.md)   
- [How to: Force an Argument to Be Passed by Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md)   
- [Passing Arguments by Position and by Name](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a><span data-ttu-id="565fd-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="565fd-126">See Also</span></span>  
+ [<span data-ttu-id="565fd-127">Verfahren</span><span class="sxs-lookup"><span data-stu-id="565fd-127">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="565fd-128">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="565fd-128">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="565fd-129">Gewusst wie: Übergeben von Argumenten an eine Prozedur</span><span class="sxs-lookup"><span data-stu-id="565fd-129">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="565fd-130">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="565fd-130">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="565fd-131">Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="565fd-131">Differences Between Passing an Argument By Value and By Reference</span></span>](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
+ [<span data-ttu-id="565fd-132">Gewusst wie: Ändern des Werts eines Prozedurarguments</span><span class="sxs-lookup"><span data-stu-id="565fd-132">How to: Change the Value of a Procedure Argument</span></span>](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [<span data-ttu-id="565fd-133">Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen</span><span class="sxs-lookup"><span data-stu-id="565fd-133">How to: Protect a Procedure Argument Against Value Changes</span></span>](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [<span data-ttu-id="565fd-134">Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird</span><span class="sxs-lookup"><span data-stu-id="565fd-134">How to: Force an Argument to Be Passed by Value</span></span>](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [<span data-ttu-id="565fd-135">Übergeben von Argumenten nach Position und Name</span><span class="sxs-lookup"><span data-stu-id="565fd-135">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="565fd-136">Werttypen und Verweistypen</span><span class="sxs-lookup"><span data-stu-id="565fd-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

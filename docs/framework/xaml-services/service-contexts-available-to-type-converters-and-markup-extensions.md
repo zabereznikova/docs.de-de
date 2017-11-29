@@ -1,176 +1,202 @@
 ---
-title: "Service Contexts Available to Type Converters and Markup Extensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], type converter services how-to"
+title: "Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-caps.latest.revision: 13
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 229601515442b5e84f6c4278b17db7ae25945a42
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Service Contexts Available to Type Converters and Markup Extensions
-Autoren der Typen, die Typ\-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet. Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können. Wenn Sie .NET Framework\-XAML\-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss. Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird. Der XAML\-Schemakontext ist direkt über einen solchen Dienst verfügbar. In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.  
+# <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a><span data-ttu-id="bb5e9-102">Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte</span><span class="sxs-lookup"><span data-stu-id="bb5e9-102">Service Contexts Available to Type Converters and Markup Extensions</span></span>
+<span data-ttu-id="bb5e9-103">Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-103">Authors of the types that support type converter and markup extension usages must often have contextual information about where a usage is located in the markup, or in surrounding object graph structure.</span></span> <span data-ttu-id="bb5e9-104">Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-104">Information might be needed so that the provided object is instantiated correctly or so that object references to existing objects in the object graph can be made.</span></span> <span data-ttu-id="bb5e9-105">Wenn Sie .NET Framework-XAML-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-105">When using .NET Framework XAML Services, the context that might be required is exposed as a series of service interfaces.</span></span> <span data-ttu-id="bb5e9-106">Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-106">Type converter or markup extension support code can query for a service by using a service provider context that is available and passed through from <xref:System.Xaml.XamlObjectWriter> or related types.</span></span> <span data-ttu-id="bb5e9-107">Der XAML-Schemakontext ist direkt über einen solchen Dienst verfügbar.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-107">The XAML schema context is directly available through one such service.</span></span> <span data-ttu-id="bb5e9-108">In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-108">This topic describes how to access service contexts from a value converter implementation, and lists typically available services and their roles.</span></span>  
   
 <a name="obtaining_services"></a>   
-## Abrufen von Diensten  
- Als Implementierer eines Wertkonverters benötigen Sie häufig Zugriff auf einen Kontexttypen, auf den der Wertkonverter angewendet wird. Dieser Kontext kann möglicherweise  Informationen wie z. B. den aktiven XAML\-Schemakontext, den Zugriff auf die Typsystemzuordnung enthalten, die der XAML\-Schemakontext und der XAML\-Objektwriter bereitstellen usw. Die für eine Markuperweiterung oder eine Typenkonverter\-Implementierung verfügbaren Dienste werden über die Kontextparameter übermittelt, die Teil der Signatur der einzelnen virtuellen Methoden sind. In jedem Fall haben Sie <xref:System.IServiceProvider> im Kontext implementiert und können <xref:System.IServiceProvider.GetService%2A?displayProperty=fullName> aufrufen, um einen Dienst anzufordern.  
+## <a name="obtaining-services"></a><span data-ttu-id="bb5e9-109">Abrufen von Diensten</span><span class="sxs-lookup"><span data-stu-id="bb5e9-109">Obtaining Services</span></span>  
+ <span data-ttu-id="bb5e9-110">Als Implementierer eines Wertkonverters benötigen Sie häufig Zugriff auf einen Kontexttypen, auf den der Wertkonverter angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-110">As an implementer of a value converter, you often need access to some type of context in which the value converter is applied.</span></span> <span data-ttu-id="bb5e9-111">Dieser Kontext kann möglicherweise  Informationen wie z. B. den aktiven XAML-Schemakontext, den Zugriff auf die Typsystemzuordnung enthalten, die der XAML-Schemakontext und der XAML-Objektwriter bereitstellen usw.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-111">This context might include information such as the active XAML schema context, access to the type mapping system that the XAML schema context and XAML object writer provide, and so on.</span></span> <span data-ttu-id="bb5e9-112">Die für eine Markuperweiterung oder eine Typenkonverter-Implementierung verfügbaren Dienste werden über die Kontextparameter übermittelt, die Teil der Signatur der einzelnen virtuellen Methoden sind.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-112">The services available for a markup extension or type converter implementation are communicated through the context parameters that are part of the signature of each virtual method.</span></span> <span data-ttu-id="bb5e9-113">In jedem Fall haben Sie <xref:System.IServiceProvider> im Kontext implementiert und können <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> aufrufen, um einen Dienst anzufordern.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-113">In every case, you have <xref:System.IServiceProvider> implemented in the context, and can call <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> to request a service.</span></span>  
   
 <a name="services_for_a_markup_extension"></a>   
-## Dienste für eine Markuperweiterung  
- <xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider`\-Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML\-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> abfragen kann:  
+## <a name="services-for-a-markup-extension"></a><span data-ttu-id="bb5e9-114">Dienste für eine Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="bb5e9-114">Services for a Markup Extension</span></span>  
+ <span data-ttu-id="bb5e9-115"><xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-115"><xref:System.Windows.Markup.MarkupExtension> has only one virtual method, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>.</span></span> <span data-ttu-id="bb5e9-116">Der Zweck des `serviceProvider` -Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-116">The input `serviceProvider` parameter is how the services are communicated to implementations when the markup extension is called by a XAML processor.</span></span> <span data-ttu-id="bb5e9-117">Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:</span><span class="sxs-lookup"><span data-stu-id="bb5e9-117">The following pseudocode illustrates how a markup extension implementation might query for services in its <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>:</span></span>  
   
 ```  
-public override object ProvideValue(IServiceProvider serviceProvider) { ... // Get the IXamlTypeResolver from the service provider if (serviceProvider == null) { throw new ArgumentNullException("serviceProvider"); } IXamlTypeResolver xamlTypeResolver = serviceProvider.GetService(typeof(IXamlTypeResolver)) as IXamlTypeResolver; if (xamlTypeResolver == null) { throw new ArgumentException("IXamlTypeResolver")); } ... }  
+public override object ProvideValue(IServiceProvider serviceProvider)  
+{  
+...  
+    // Get the IXamlTypeResolver from the service provider  
+    if (serviceProvider == null)  
+    {  
+        throw new ArgumentNullException("serviceProvider");  
+    }  
+    IXamlTypeResolver xamlTypeResolver = serviceProvider.GetService(typeof(IXamlTypeResolver)) as IXamlTypeResolver;  
+    if (xamlTypeResolver == null)  
+   {  
+        throw new ArgumentException("IXamlTypeResolver"));  
+    }  
+...  
+}  
 ```  
   
 <a name="services_for_a_type_converter"></a>   
-## Dienste für einen Typkonverter  
- <xref:System.ComponentModel.TypeConverter> verfügt über vier virtuelle Methoden, die einen Dienstkontext verwenden und XAML\-Verwendungen unterstützen. Jede dieser Methoden übergibt einen `context`\-Eingabeparameter. Dieser Parameter ist vom Typ <xref:System.ComponentModel.ITypeDescriptorContext>, diese Schnittstelle erbt jedoch <xref:System.IServiceProvider>, und es ist daher eine <xref:System.IServiceProvider.GetService%2A> \-Methode, die für Typkonverterimplementierungen verfügbar sind.  
+## <a name="services-for-a-type-converter"></a><span data-ttu-id="bb5e9-118">Dienste für einen Typkonverter</span><span class="sxs-lookup"><span data-stu-id="bb5e9-118">Services for a Type Converter</span></span>  
+ <span data-ttu-id="bb5e9-119"><xref:System.ComponentModel.TypeConverter> verfügt über vier virtuelle Methoden, die einen Dienstkontext verwenden und XAML-Verwendungen unterstützen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-119"><xref:System.ComponentModel.TypeConverter> has four virtual methods that use a service context and that support XAML usages.</span></span> <span data-ttu-id="bb5e9-120">Jede dieser Methoden übergibt einen `context` -Eingabeparameter.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-120">Each of these methods passes an input `context` parameter.</span></span> <span data-ttu-id="bb5e9-121">Dieser Parameter ist vom Typ <xref:System.ComponentModel.ITypeDescriptorContext>, diese Schnittstelle erbt jedoch <xref:System.IServiceProvider>, und es ist daher eine <xref:System.IServiceProvider.GetService%2A> -Methode, die für Typkonverterimplementierungen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-121">This parameter is of type <xref:System.ComponentModel.ITypeDescriptorContext>, but that interface inherits <xref:System.IServiceProvider>, and therefore, there is a <xref:System.IServiceProvider.GetService%2A> method available to type converter implementations.</span></span>  
   
- Der folgende Pseudocode veranschaulicht, wie eine Typkonverter\-Implementierung für XAML\-Verwendungen Dienste in einer seiner Überschreibungen abfragen kann, in diesem Fall <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:  
+ <span data-ttu-id="bb5e9-122">Der folgende Pseudocode veranschaulicht, wie eine Typkonverter-Implementierung für XAML-Verwendungen Dienste in einer seiner Überschreibungen abfragen kann, in diesem Fall <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:</span><span class="sxs-lookup"><span data-stu-id="bb5e9-122">The following pseudocode illustrates how a type converter implementation for XAML usages might query for services in one of its overrides, in this case <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:</span></span>  
   
 ```  
-public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source) { IRootObjectProvider rootProvider = typeDescriptorContext.GetService(typeof(IRootObjectProvider)) as IRootObjectProvider; if (rootProvider != null && source is String) { //return something, else ... } throw GetConvertFromException(source); }  
+public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,  
+  CultureInfo cultureInfo,  
+  object source)  
+{  
+    IRootObjectProvider rootProvider = typeDescriptorContext.GetService(typeof(IRootObjectProvider)) as IRootObjectProvider;  
+    if (rootProvider != null && source is String)  
+    {  
+        //return something, else ...  
+    }  
+    throw GetConvertFromException(source);  
+}  
 ```  
   
 <a name="services_for_a_value_serializer"></a>   
-## Dienste für ein Wertserialisierungsprogramm  
- Für den Wertserialisierungsprogrammkontext verwenden Sie einen Diensttyp für Anbieter, der spezifisch für die <xref:System.Windows.Markup.ValueSerializer> \-Klasse ist, <xref:System.Windows.Markup.IValueSerializerContext>. Dieser Kontext wird an Überschreibungen der vier <xref:System.Windows.Markup.ValueSerializer> virtuellem Methoden übergeben. Rufen Sie <xref:System.IServiceProvider.GetService%2A> aus dem Kontext auf, um Dienste abzurufen.  
+## <a name="services-for-a-value-serializer"></a><span data-ttu-id="bb5e9-123">Dienste für ein Wertserialisierungsprogramm</span><span class="sxs-lookup"><span data-stu-id="bb5e9-123">Services for a Value Serializer</span></span>  
+ <span data-ttu-id="bb5e9-124">Für den Wertserialisierungsprogrammkontext verwenden Sie einen Diensttyp für Anbieter, der spezifisch für die <xref:System.Windows.Markup.ValueSerializer> -Klasse ist, <xref:System.Windows.Markup.IValueSerializerContext>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-124">For value serializer context, you use a service provider type that is specific to the <xref:System.Windows.Markup.ValueSerializer> class, <xref:System.Windows.Markup.IValueSerializerContext>.</span></span> <span data-ttu-id="bb5e9-125">Dieser Kontext wird an Überschreibungen der vier <xref:System.Windows.Markup.ValueSerializer> virtuellem Methoden übergeben.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-125">That context is passed to overrides of the four <xref:System.Windows.Markup.ValueSerializer> virtual methods.</span></span> <span data-ttu-id="bb5e9-126">Rufen Sie <xref:System.IServiceProvider.GetService%2A> aus dem Kontext auf, um Dienste abzurufen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-126">Call <xref:System.IServiceProvider.GetService%2A> from the context to obtain services.</span></span>  
   
 <a name="using_the_xaml_service_provider_contexts"></a>   
-## Verwenden der XAML\-Dienstanbieterkontexte  
- Der Dienstanbieter für den <xref:System.IServiceProvider.GetService%2A>\-Zugriff auf XAML\-Dienste, die für Markuperweiterungen oder Typkonverter verfügbar sind, wird als interne Klasse implementiert, die nur über die Schnittstelle verfügbar gemacht wird und im entsprechenden Kontext übergeben wird. Wenn ein XAML\-Verarbeitungsvorgang in den .NET Framework\-XAML\-Dienste\-Standardimplementierungen des Lade\- oder Speicherpfads das relevante Markup oder die Konvertermethoden aufruft, für die ein Dienstkontext erforderlich ist, wird dieses interne Objekt übergeben. Abhängig von der Situation stellt der Systemdienstkontext entweder `MarkupExtensionContext` oder `TextSyntaxContext` bereit, die Einzelheiten dieser beiden Klassen sind jedoch intern. Die Interaktion mit diesen Klassen ist darauf beschränkt, daraus über <xref:System.IServiceProvider.GetService%2A> Dienste anzufordern.  
+## <a name="using-the-xaml-service-provider-contexts"></a><span data-ttu-id="bb5e9-127">Verwenden der XAML-Dienstanbieterkontexte</span><span class="sxs-lookup"><span data-stu-id="bb5e9-127">Using the XAML Service Provider Contexts</span></span>  
+ <span data-ttu-id="bb5e9-128">Der Dienstanbieter für den <xref:System.IServiceProvider.GetService%2A> -Zugriff auf XAML-Dienste, die für Markuperweiterungen oder Typkonverter verfügbar sind, wird als interne Klasse implementiert, die nur über die Schnittstelle verfügbar gemacht wird und im entsprechenden Kontext übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-128">The service provider for <xref:System.IServiceProvider.GetService%2A> access to XAML services available to markup extensions or type converters is implemented as an internal class, with exposure only through the interface and how it is passed into the relevant context .</span></span> <span data-ttu-id="bb5e9-129">Wenn ein XAML-Verarbeitungsvorgang in den .NET Framework-XAML-Dienste-Standardimplementierungen des Lade- oder Speicherpfads das relevante Markup oder die Konvertermethoden aufruft, für die ein Dienstkontext erforderlich ist, wird dieses interne Objekt übergeben.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-129">Whenever a XAML processing operation in the default .NET Framework XAML Services implementations of load path or save path invokes the relevant markup extension or type converter methods that require a service context, this internal object is passed.</span></span> <span data-ttu-id="bb5e9-130">Abhängig von der Situation stellt der Systemdienstkontext entweder `MarkupExtensionContext` oder `TextSyntaxContext`bereit, die Einzelheiten dieser beiden Klassen sind jedoch intern.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-130">Depending on the circumstance, the system service context provides either `MarkupExtensionContext` or `TextSyntaxContext`, but the specifics of both of these classes are internal.</span></span> <span data-ttu-id="bb5e9-131">Die Interaktion mit diesen Klassen ist darauf beschränkt, daraus über <xref:System.IServiceProvider.GetService%2A>Dienste anzufordern.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-131">Your interaction with these classes is limited to requesting services from them, through <xref:System.IServiceProvider.GetService%2A>.</span></span>  
   
 <a name="available_systemxaml_services"></a>   
-## Verfügbare Dienste aus dem .NET Framework XAML\-Dienstkontext  
- .NET Framework\-XAML\-Dienste definieren Dienste für Markuperweiterungen, Typkonverter, Wertserialisierungsprogramme und potenziell andere Verwendungen. In den folgenden Abschnitten wird jeder dieser Dienste beschrieben, und darin ist ein Leitfaden zur Verwendung einer Implementierung enthalten.  
+## <a name="available-services-from-the-net-framework-xaml-service-context"></a><span data-ttu-id="bb5e9-132">Verfügbare Dienste aus dem .NET Framework XAML-Dienstkontext</span><span class="sxs-lookup"><span data-stu-id="bb5e9-132">Available Services from the .NET Framework XAML Service Context</span></span>  
+ <span data-ttu-id="bb5e9-133">.NET Framework-XAML-Dienste definieren Dienste für Markuperweiterungen, Typkonverter, Wertserialisierungsprogramme und potenziell andere Verwendungen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-133">.NET Framework XAML Services defines services for markup extensions, type converters, value serializers, and potentially other usages.</span></span> <span data-ttu-id="bb5e9-134">In den folgenden Abschnitten wird jeder dieser Dienste beschrieben, und darin ist ein Leitfaden zur Verwendung einer Implementierung enthalten.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-134">The following sections describe each of these services and provide guidance about how the service might be used in an implementation.</span></span>  
   
-### IServiceProvider  
- **Referenzdokumentation**: <xref:System.IServiceProvider>  
+### <a name="iserviceprovider"></a><span data-ttu-id="bb5e9-135">IServiceProvider</span><span class="sxs-lookup"><span data-stu-id="bb5e9-135">IServiceProvider</span></span>  
+ <span data-ttu-id="bb5e9-136">**Referenzdokumentation**: <xref:System.IServiceProvider></span><span class="sxs-lookup"><span data-stu-id="bb5e9-136">**Reference documentation**: <xref:System.IServiceProvider></span></span>  
   
- **Relevant für:** Grundlegende Vorgänge einer dienstbasierten Infrastruktur in .NET Framework, damit Sie <xref:System.IServiceProvider.GetService%2A?displayProperty=fullName> aufrufen können.  
+ <span data-ttu-id="bb5e9-137">**Relevant für:** grundlegende Vorgänge einer dienstbasierten Infrastruktur in .NET Framework, damit Sie aufrufen können <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-137">**Relevant to:** Basic operation of a service-based infrastructure in the .NET Framework so that you can call <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.</span></span>  
   
-### ITypeDescriptorContext  
- **Referenzdokumentation**: <xref:System.ComponentModel.ITypeDescriptorContext>  
+### <a name="itypedescriptorcontext"></a><span data-ttu-id="bb5e9-138">ITypeDescriptorContext</span><span class="sxs-lookup"><span data-stu-id="bb5e9-138">ITypeDescriptorContext</span></span>  
+ <span data-ttu-id="bb5e9-139">**Referenzdokumentation**: <xref:System.ComponentModel.ITypeDescriptorContext></span><span class="sxs-lookup"><span data-stu-id="bb5e9-139">**Reference documentation**: <xref:System.ComponentModel.ITypeDescriptorContext></span></span>  
   
- Wird von <xref:System.IServiceProvider> abgeleitet. Diese Klasse stellt den Kontext in den <xref:System.ComponentModel.TypeConverter>\-Standardsignaturen dar; <xref:System.ComponentModel.TypeConverter> ist eine Klasse, die seit .NET Framework 1.0 vorhanden ist. Es ist ein Vorläufer des XAML\- und XAML\- <xref:System.ComponentModel.TypeConverter>\-Szenarios für die Zeichenfolgewert\-Typkonvertierung. Im .NET Framework\-XAML\-Dienste\-Kontext werden Methoden von <xref:System.ComponentModel.TypeConverter> explizit implementiert. Das explizite Verhalten der Implementierung gibt Aufrufern an, dass die <xref:System.ComponentModel.ITypeDescriptorContext> \-API für XAML\-Typsysteme oder zum Lesen oder Schreiben von Objekten aus XAML nicht relevant ist.<xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, und <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> geben in der Regel `null` aus den .NET Framework\-XAML\-Dienste\-Kontexten zurück.  
+ <span data-ttu-id="bb5e9-140">Wird von <xref:System.IServiceProvider>abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-140">Derives from <xref:System.IServiceProvider>.</span></span> <span data-ttu-id="bb5e9-141">Diese Klasse stellt den Kontext in den <xref:System.ComponentModel.TypeConverter> -Standardsignaturen dar; <xref:System.ComponentModel.TypeConverter> ist eine Klasse, die seit .NET Framework 1.0 vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-141">This class represents context in the standard <xref:System.ComponentModel.TypeConverter> signatures; <xref:System.ComponentModel.TypeConverter> is a class that has existed since .NET Framework 1.0.</span></span> <span data-ttu-id="bb5e9-142">Es ist ein Vorläufer des XAML- und XAML- <xref:System.ComponentModel.TypeConverter> -Szenarios für die Zeichenfolgewert-Typkonvertierung.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-142">It predates XAML and the XAML <xref:System.ComponentModel.TypeConverter> scenario for string-value type conversion.</span></span> <span data-ttu-id="bb5e9-143">Im .NET Framework-XAML-Dienste-Kontext werden Methoden von <xref:System.ComponentModel.TypeConverter> explizit implementiert.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-143">In the .NET Framework XAML Services context, methods of <xref:System.ComponentModel.TypeConverter> are implemented explicitly.</span></span> <span data-ttu-id="bb5e9-144">Das explizite Verhalten der Implementierung gibt Aufrufern an, dass die <xref:System.ComponentModel.ITypeDescriptorContext> -API für XAML-Typsysteme oder zum Lesen oder Schreiben von Objekten aus XAML nicht relevant ist.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-144">The explicit implementation's behavior indicates to callers that the <xref:System.ComponentModel.ITypeDescriptorContext> API is not relevant for XAML type systems, or for reading or writing objects from XAML.</span></span> <span data-ttu-id="bb5e9-145"><xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, und <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> geben in der Regel `null` aus den .NET Framework-XAML-Dienste-Kontexten zurück.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-145"><xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, and <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> generally return `null` from .NET Framework XAML Services contexts.</span></span>  
   
-### IValueSerializerContext  
- **Referenzdokumentation**: <xref:System.Windows.Markup.IValueSerializerContext>  
+### <a name="ivalueserializercontext"></a><span data-ttu-id="bb5e9-146">IValueSerializerContext</span><span class="sxs-lookup"><span data-stu-id="bb5e9-146">IValueSerializerContext</span></span>  
+ <span data-ttu-id="bb5e9-147">**Referenzdokumentation**: <xref:System.Windows.Markup.IValueSerializerContext></span><span class="sxs-lookup"><span data-stu-id="bb5e9-147">**Reference documentation**: <xref:System.Windows.Markup.IValueSerializerContext></span></span>  
   
- Leitet sich von <xref:System.ComponentModel.ITypeDescriptorContext> ab und stützt sich auch auf explizite Implementierungen, um falsche Auswirkungen zum XAML\-Typsystem zu unterdrücken. Unterstützt die statischen Nachschlage\-Hilfsmethoden unter <xref:System.Windows.Markup.ValueSerializer>.  
+ <span data-ttu-id="bb5e9-148">Leitet sich von <xref:System.ComponentModel.ITypeDescriptorContext> ab und stützt sich auch auf explizite Implementierungen, um falsche Auswirkungen zum XAML-Typsystem zu unterdrücken.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-148">Derives from <xref:System.ComponentModel.ITypeDescriptorContext> and also relies on explicit implementations to suppress false implications about the XAML type system.</span></span> <span data-ttu-id="bb5e9-149">Unterstützt die statischen Nachschlage-Hilfsmethoden unter <xref:System.Windows.Markup.ValueSerializer>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-149">Supports the static lookup helper methods on <xref:System.Windows.Markup.ValueSerializer>.</span></span>  
   
-### IXamlTypeResolver  
- **Referenzdokumentation**: <xref:System.Windows.Markup.IXamlTypeResolver>  
+### <a name="ixamltyperesolver"></a><span data-ttu-id="bb5e9-150">IXamlTypeResolver</span><span class="sxs-lookup"><span data-stu-id="bb5e9-150">IXamlTypeResolver</span></span>  
+ <span data-ttu-id="bb5e9-151">**Referenzdokumentation**: <xref:System.Windows.Markup.IXamlTypeResolver></span><span class="sxs-lookup"><span data-stu-id="bb5e9-151">**Reference documentation**: <xref:System.Windows.Markup.IXamlTypeResolver></span></span>  
   
- **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml\-Assembly\-Namespace  
+ <span data-ttu-id="bb5e9-152">**Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-152">**Defined by:**  <xref:System.Windows.Markup> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfad\-Szenarios sowie die Interaktion mit dem XAML\-Schemakontext  
+ <span data-ttu-id="bb5e9-153">**Relevant für:** Ladepfad-Szenarios sowie die Interaktion mit dem XAML-Schemakontext</span><span class="sxs-lookup"><span data-stu-id="bb5e9-153">**Relevant to:** Load path scenarios, and interaction with XAML schema context</span></span>  
   
- **Dienst\-API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
+ <span data-ttu-id="bb5e9-154">**Dienst-API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A></span><span class="sxs-lookup"><span data-stu-id="bb5e9-154">**Service API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A></span></span>  
   
- Kann die XAML\-zu\-CLR\-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML\-Writer ein CLR\-Objekt in einem Objektdiagramm erstellt.<xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einem XAML\-Typnamen \(<xref:System.Xaml.XamlType.Name%2A?displayProperty=fullName>\) entspricht, und gibt eine CLR <xref:System.Type> zurück. Das Auflösen von Typen hängt in der Regel stark vom XAML\-Schemakontext ab. Nur der XAML\-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.  
+ <span data-ttu-id="bb5e9-155">Kann die XAML-zu-CLR-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML-Writer ein CLR-Objekt in einem Objektdiagramm erstellt.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-155">Can influence the XAML-to-CLR type mapping that is necessary when the XAML writer constructs a CLR object in an object graph.</span></span> <span data-ttu-id="bb5e9-156"><xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einem XAML-Typnamen (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) entspricht, und gibt eine CLR <xref:System.Type> zurück.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-156"><xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> processes a potentially prefix-qualified string that corresponds to a XAML type name (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>), and returns a CLR <xref:System.Type>.</span></span> <span data-ttu-id="bb5e9-157">Das Auflösen von Typen hängt in der Regel stark vom XAML-Schemakontext ab.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-157">Resolving types is typically heavily dependent on XAML schema context.</span></span> <span data-ttu-id="bb5e9-158">Nur der XAML-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-158">Only the XAML schema context is aware of considerations such as which assemblies are loaded, and which of these assemblies can or should be accessed for type resolution.</span></span>  
   
-### IUriContext  
- **Referenzdokumentation**: <xref:System.Windows.Markup.IUriContext>  
+### <a name="iuricontext"></a><span data-ttu-id="bb5e9-159">IUriContext</span><span class="sxs-lookup"><span data-stu-id="bb5e9-159">IUriContext</span></span>  
+ <span data-ttu-id="bb5e9-160">**Referenzdokumentation**: <xref:System.Windows.Markup.IUriContext></span><span class="sxs-lookup"><span data-stu-id="bb5e9-160">**Reference documentation**: <xref:System.Windows.Markup.IUriContext></span></span>  
   
- **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml\-Assembly\-Namespace  
+ <span data-ttu-id="bb5e9-161">**Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-161">**Defined by:**  <xref:System.Windows.Markup> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Verarbeitung des Ladepfads und Speicherpfads von Elementwerten, bei denen es sich um URIs oder `x:Uri`\-Werte handelt.  
+ <span data-ttu-id="bb5e9-162">**Relevant für:** Verarbeitung des Ladepfads und Speicherpfads von Elementwerten, bei denen es sich um URIs oder `x:Uri` -Werte handelt.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-162">**Relevant to:** Load path and save path handling of member values that are URIs or `x:Uri` values.</span></span>  
   
- **Dienst\-API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
+ <span data-ttu-id="bb5e9-163">**Dienst-API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A></span><span class="sxs-lookup"><span data-stu-id="bb5e9-163">**Service API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A></span></span>  
   
- Dieser Dienst meldet ggf. einen global verfügbaren URI\-Stamm. Der URI\-Stamm kann verwendet werden, um relative URIs in absolute URIs oder umgekehrt aufzulösen. Dieses Szenario ist vor allem für Anwendungsdienste relevant, die von einem bestimmten Framework oder Funktionen einer häufig verwendeten Stammelementklasse in einem Framework verfügbar gemacht werden. Der Basis\-URI kann als XAML\-Readereinstellung eingerichtet werden, die dann über den XAML\-Objekt\-Writer übergeben und von diesem Dienst gemeldet wird.  
+ <span data-ttu-id="bb5e9-164">Dieser Dienst meldet ggf. einen global verfügbaren URI-Stamm.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-164">This service reports a globally available URI root, if any.</span></span> <span data-ttu-id="bb5e9-165">Der URI-Stamm kann verwendet werden, um relative URIs in absolute URIs oder umgekehrt aufzulösen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-165">The URI root can be used to resolve relative URIs to absolute URIs or vice versa.</span></span> <span data-ttu-id="bb5e9-166">Dieses Szenario ist vor allem für Anwendungsdienste relevant, die von einem bestimmten Framework oder Funktionen einer häufig verwendeten Stammelementklasse in einem Framework verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-166">This scenario is mainly relevant to application services that are exposed by a particular framework, or capabilities of a frequently used root element class in a framework.</span></span> <span data-ttu-id="bb5e9-167">Der Basis-URI kann als XAML-Readereinstellung eingerichtet werden, die dann über den XAML-Objekt-Writer übergeben und von diesem Dienst gemeldet wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-167">The base URI can be established as a XAML reader setting, which is then passed through to the XAML object writer and reported by this service.</span></span>  
   
-### IAmbientProvider  
- **Referenzdokumentation**: <xref:System.Xaml.IAmbientProvider>  
+### <a name="iambientprovider"></a><span data-ttu-id="bb5e9-168">IAmbientProvider</span><span class="sxs-lookup"><span data-stu-id="bb5e9-168">IAmbientProvider</span></span>  
+ <span data-ttu-id="bb5e9-169">**Referenzdokumentation**: <xref:System.Xaml.IAmbientProvider></span><span class="sxs-lookup"><span data-stu-id="bb5e9-169">**Reference documentation**: <xref:System.Xaml.IAmbientProvider></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-170">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-170">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Verarbeitung des Ladepfads und Typsuchen\- Verzögerungen oder Optimierungen.  
+ <span data-ttu-id="bb5e9-171">**Relevant für:** Verarbeitung des Ladepfads und Typsuchen- Verzögerungen oder Optimierungen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-171">**Relevant to:** Load path handling and type lookup deferrals or optimizations.</span></span>  
   
- **Dienst\-APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 weitere.  
+ <span data-ttu-id="bb5e9-172">**Dienst-APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 weitere.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-172">**Service APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 others.</span></span>  
   
- Das Umgebungskonzept in XAML ist eine Technik zum Kennzeichnen eines bestimmten Elements eines Typs als Umgebung. Alternativ kann ein Typ eine Umgebung sein, damit alle Eigenschaftswerte, die eine Instanz des Typs enthält, die als Umgebungseigenschaften berücksichtigt werden soll. Markuperweiterungen oder Typkonverter, die sich weiter unten im XAML\-Knotenstream befinden und Nachfolger im Objektdiagramm sind, können zur Ladezeit auf die Umgebungseigenschaft oder Typinstanz zugreifen; oder sie können Kenntnisse der Umgebungsstruktur zur Speicherzeit verwenden. Dies kann den Grad der Qualifizierung beeinflussen, der zum Auflösen von Typen für andere Dienste erforderlich ist, wie z. B. für <xref:System.Windows.Markup.IXamlTypeResolver> oder `x:Type`. Siehe auch <xref:System.Xaml.AmbientPropertyValue>.  
+ <span data-ttu-id="bb5e9-173">Das Umgebungskonzept in XAML ist eine Technik zum Kennzeichnen eines bestimmten Elements eines Typs als Umgebung.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-173">The ambience concept in XAML is a technique for marking a particular member of a type as ambient.</span></span> <span data-ttu-id="bb5e9-174">Alternativ kann ein Typ eine Umgebung sein, damit alle Eigenschaftswerte, die eine Instanz des Typs enthält, die als Umgebungseigenschaften berücksichtigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-174">Alternatively, a type can be ambient so that all property values that hold an instance of the type should be considered ambient properties.</span></span> <span data-ttu-id="bb5e9-175">Markuperweiterungen oder Typkonverter, die sich weiter unten im XAML-Knotenstream befinden und Nachfolger im Objektdiagramm sind, können zur Ladezeit auf die Umgebungseigenschaft oder Typinstanz zugreifen; oder sie können Kenntnisse der Umgebungsstruktur zur Speicherzeit verwenden.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-175">Markup extensions or type converters that are further along the XAML node stream and that are descendants in the object graph can access the ambient property or type instance at load time; or they can use knowledge of the ambient structure at save time.</span></span> <span data-ttu-id="bb5e9-176">Dies kann den Grad der Qualifizierung beeinflussen, der zum Auflösen von Typen für andere Dienste erforderlich ist, wie z. B. für <xref:System.Windows.Markup.IXamlTypeResolver> oder `x:Type`.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-176">This can affect the degree of qualification that is needed to resolve types for other services, such as for <xref:System.Windows.Markup.IXamlTypeResolver> or for `x:Type`.</span></span> <span data-ttu-id="bb5e9-177">Siehe auch <xref:System.Xaml.AmbientPropertyValue>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-177">See also <xref:System.Xaml.AmbientPropertyValue>.</span></span>  
   
-### IXamlSchemaContextProvider  
- **Referenzdokumentation**: <xref:System.Xaml.IXamlSchemaContextProvider>  
+### <a name="ixamlschemacontextprovider"></a><span data-ttu-id="bb5e9-178">IXamlSchemaContextProvider</span><span class="sxs-lookup"><span data-stu-id="bb5e9-178">IXamlSchemaContextProvider</span></span>  
+ <span data-ttu-id="bb5e9-179">**Referenzdokumentation**: <xref:System.Xaml.IXamlSchemaContextProvider></span><span class="sxs-lookup"><span data-stu-id="bb5e9-179">**Reference documentation**: <xref:System.Xaml.IXamlSchemaContextProvider></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-180">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-180">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfad und Vorgänge, die einen XAML\-Typ in einen Unterstützungstyp auflösen müssen.  
+ <span data-ttu-id="bb5e9-181">**Relevant für:** Ladepfad und Vorgänge, die einen XAML-Typ in einen Unterstützungstyp auflösen müssen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-181">**Relevant to:** Load path, and any operation that must resolve a XAML type to a backing type.</span></span>  
   
- **Dienst\-API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
+ <span data-ttu-id="bb5e9-182">**Dienst-API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A></span><span class="sxs-lookup"><span data-stu-id="bb5e9-182">**Service API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A></span></span>  
   
- Der XAML\-Schemakontext ist für alle Vorgänge zur Ladeverzögerung erforderlich, da derselbe Schemakontext in dem verzögerten Bereich fungieren muss, um den verzögerten Inhalt zu integrieren. Weitere Informationen zur Rolle des XAML\-Schemakontexts finden Sie unter [XAML Services](../../../docs/framework/xaml-services/index.md).  
+ <span data-ttu-id="bb5e9-183">Der XAML-Schemakontext ist für alle Vorgänge zur Ladeverzögerung erforderlich, da derselbe Schemakontext in dem verzögerten Bereich fungieren muss, um den verzögerten Inhalt zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-183">XAML schema context is necessary for any defer load operations, because the same schema context must act on the deferred area in order to integrate the deferred content.</span></span> <span data-ttu-id="bb5e9-184">Weitere Informationen zur Rolle des XAML-Schemakontexts finden Sie unter [XAML Services](../../../docs/framework/xaml-services/index.md).</span><span class="sxs-lookup"><span data-stu-id="bb5e9-184">For more information about the role of the XAML schema context, see [XAML Services](../../../docs/framework/xaml-services/index.md).</span></span>  
   
-### IRootObjectProvider  
- **Referenzdokumentation**: <xref:System.Xaml.IRootObjectProvider>  
+### <a name="irootobjectprovider"></a><span data-ttu-id="bb5e9-185">IRootObjectProvider</span><span class="sxs-lookup"><span data-stu-id="bb5e9-185">IRootObjectProvider</span></span>  
+ <span data-ttu-id="bb5e9-186">**Referenzdokumentation**: <xref:System.Xaml.IRootObjectProvider></span><span class="sxs-lookup"><span data-stu-id="bb5e9-186">**Reference documentation**: <xref:System.Xaml.IRootObjectProvider></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-187">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-187">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfad.  
+ <span data-ttu-id="bb5e9-188">**Relevant für:** Ladepfad.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-188">**Relevant to:** Load path.</span></span>  
   
- **Dienst\-API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
+ <span data-ttu-id="bb5e9-189">**Dienst-API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A></span><span class="sxs-lookup"><span data-stu-id="bb5e9-189">**Service API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A></span></span>  
   
- Der Dienst ist für Anwendungsdienste relevant, die von einem bestimmten Framework oder Funktionen einer häufig verwendeten Stammelementklasse in einem Framework verfügbar gemacht werden. Ein Szenario zum Abrufen des Stammobjekts ist das Verknüpfen von CodeBehind und Ereignisverbindungen. Angenommen, die WPF\-Implementierung von `x:Class` dient für die Markupkompilierung und das Verknüpfen eines Ereignishandler\-Attributs, das an einer beliebigen anderen Position im XAML\-Markup gefunden wird. Der Verbindungspunkt von Markup und CodeBehind definiert Teilklassen für die Markupkompilierung im Stammelement.  
+ <span data-ttu-id="bb5e9-190">Der Dienst ist für Anwendungsdienste relevant, die von einem bestimmten Framework oder Funktionen einer häufig verwendeten Stammelementklasse in einem Framework verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-190">The service is relevant to application services that are exposed by a particular framework or by capabilities of a frequently used root element class in a framework.</span></span> <span data-ttu-id="bb5e9-191">Ein Szenario zum Abrufen des Stammobjekts ist das Verknüpfen von CodeBehind und Ereignisverbindungen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-191">One scenario for obtaining the root object is connecting code-behind and event wiring.</span></span> <span data-ttu-id="bb5e9-192">Angenommen, die WPF-Implementierung von `x:Class` dient für die Markupkompilierung und das Verknüpfen eines Ereignishandler-Attributs, das an einer beliebigen anderen Position im XAML-Markup gefunden wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-192">For example, the WPF implementation of `x:Class` is used for markup compile and wiring of any event handler attribute that is found at any other position in the XAML markup.</span></span> <span data-ttu-id="bb5e9-193">Der Verbindungspunkt von Markup und CodeBehind definiert Teilklassen für die Markupkompilierung im Stammelement.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-193">The connection point of markup and code-behind defined partial classes for markup compile is at the root element.</span></span>  
   
-### IXamlNamespaceResolver  
- **Referenzdokumentation**: <xref:System.Xaml.IXamlNamespaceResolver>  
+### <a name="ixamlnamespaceresolver"></a><span data-ttu-id="bb5e9-194">IXamlNamespaceResolver</span><span class="sxs-lookup"><span data-stu-id="bb5e9-194">IXamlNamespaceResolver</span></span>  
+ <span data-ttu-id="bb5e9-195">**Referenzdokumentation**: <xref:System.Xaml.IXamlNamespaceResolver></span><span class="sxs-lookup"><span data-stu-id="bb5e9-195">**Reference documentation**: <xref:System.Xaml.IXamlNamespaceResolver></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-196">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-196">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfad, Speicherpfad.  
+ <span data-ttu-id="bb5e9-197">**Relevant für:** Ladepfad, Speicherpfad.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-197">**Relevant to:** Load path, save path.</span></span>  
   
- **Dienst\-API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> für den Ladepfad, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> für den Speicherpfad.  
+ <span data-ttu-id="bb5e9-198">**Dienst-API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> für den Ladepfad, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> für den Speicherpfad.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-198">**Service API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> for load path, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> for save path.</span></span>  
   
- <xref:System.Xaml.IXamlNamespaceResolver> ist ein Dienst, der einen XAML\-Namespacebezeichner zurückgeben kann\/URI basierend auf dem Präfix, wie in dem ursprünglichen XAML\-Markup zugeordnet.  
+ <span data-ttu-id="bb5e9-199"><xref:System.Xaml.IXamlNamespaceResolver> ist ein Dienst, der einen XAML-Namespacebezeichner zurückgeben kann/URI basierend auf dem Präfix, wie in dem ursprünglichen XAML-Markup zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-199"><xref:System.Xaml.IXamlNamespaceResolver> is a service that can return a XAML namespace identifier / URI based on its prefix as mapped in the originating XAML markup.</span></span>  
   
-### IProvideValueTarget  
- **Referenzdokumentation**: <xref:System.Windows.Markup.IProvideValueTarget>  
+### <a name="iprovidevaluetarget"></a><span data-ttu-id="bb5e9-200">IProvideValueTarget</span><span class="sxs-lookup"><span data-stu-id="bb5e9-200">IProvideValueTarget</span></span>  
+ <span data-ttu-id="bb5e9-201">**Referenzdokumentation**: <xref:System.Windows.Markup.IProvideValueTarget></span><span class="sxs-lookup"><span data-stu-id="bb5e9-201">**Reference documentation**: <xref:System.Windows.Markup.IProvideValueTarget></span></span>  
   
- **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml\-Assembly\-Namespace  
+ <span data-ttu-id="bb5e9-202">**Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-202">**Defined by:**  <xref:System.Windows.Markup> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfad und Speicherpfad.  
+ <span data-ttu-id="bb5e9-203">**Relevant für:** Ladepfad und Speicherpfad.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-203">**Relevant to:** Load path and save path.</span></span>  
   
- **Dienste\-APIs:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
+ <span data-ttu-id="bb5e9-204">**Dienste-APIs:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-204">**Service APIs:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.</span></span>  
   
- Mit <xref:System.Windows.Markup.IProvideValueTarget> kann ein Typkonverter oder die Markuperweiterung den Kontext dazu abrufen, wo sie zur Ladezeit fungieren. Implementierungen könnten diesen Kontext verwenden, um eine Verwendung ungültig zu machen. WPF verfügt innerhalb einiger der  Markuperweiterungen wie z. B. <xref:System.Windows.DynamicResourceExtension> über eine Logik. Die Logik überprüft die <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>, um sicherzustellen, dass die Erweiterung nur zum Festlegen von Abhängigkeitseigenschaften \(oder eine kurze Liste mit anderen Eigenschaften ohne Abhängigkeiten\) verwendet wird.  
+ <span data-ttu-id="bb5e9-205">Mit<xref:System.Windows.Markup.IProvideValueTarget> kann ein Typkonverter oder die Markuperweiterung den Kontext dazu abrufen, wo sie zur Ladezeit fungieren.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-205"><xref:System.Windows.Markup.IProvideValueTarget> enables a type converter or markup extension to obtain context about where it is acting at load time.</span></span> <span data-ttu-id="bb5e9-206">Implementierungen könnten diesen Kontext verwenden, um eine Verwendung ungültig zu machen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-206">Implementations might use this context to invalidate a usage.</span></span> <span data-ttu-id="bb5e9-207">WPF verfügt innerhalb einiger der  Markuperweiterungen wie z. B. <xref:System.Windows.DynamicResourceExtension>über eine Logik.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-207">For example, WPF has logic inside some of its markup extensions such as <xref:System.Windows.DynamicResourceExtension>.</span></span> <span data-ttu-id="bb5e9-208">Die Logik überprüft die <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> , um sicherzustellen, dass die Erweiterung nur zum Festlegen von Abhängigkeitseigenschaften (oder eine kurze Liste mit anderen Eigenschaften ohne Abhängigkeiten) verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-208">The logic checks the <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> to make sure that the extension is only used to set dependency properties (or a short list of other non-dependency properties).</span></span>  
   
-### IXamlNameResolver  
- **Referenzdokumentation**: <xref:System.Xaml.IXamlNameResolver>  
+### <a name="ixamlnameresolver"></a><span data-ttu-id="bb5e9-209">IXamlNameResolver</span><span class="sxs-lookup"><span data-stu-id="bb5e9-209">IXamlNameResolver</span></span>  
+ <span data-ttu-id="bb5e9-210">**Referenzdokumentation**: <xref:System.Xaml.IXamlNameResolver></span><span class="sxs-lookup"><span data-stu-id="bb5e9-210">**Reference documentation**: <xref:System.Xaml.IXamlNameResolver></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-211">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-211">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Definition des Ladepfadobjektdiagramms, Auflösen von durch `x:Name`, `x:Reference` oder Framework\-spezifischen Techniken identifizierten Objekten.  
+ <span data-ttu-id="bb5e9-212">**Relevant für:** Definition des Ladepfadobjektdiagramms, Auflösen von durch `x:Name`, `x:Reference`oder Framework-spezifischen Techniken identifizierten Objekten.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-212">**Relevant to:** Load path object graph definition, resolving objects identified by `x:Name`, `x:Reference`, or framework-specific techniques.</span></span>  
   
- **Dienst\-APIs:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; andere APIs für erweiterte Szenarios, z. B. den Umgang mit Vorwärtsverweisen.  
+ <span data-ttu-id="bb5e9-213">**Dienst-APIs:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; andere APIs für erweiterte Szenarios, z. B. den Umgang mit Vorwärtsverweisen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-213">**Service APIs:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; other APIs for more advanced scenarios such as dealing with forward references.</span></span>  
   
- Die .NET Framework\-XAML\-Dienste\-Implementierung der `x:Reference`\-Behandlung beruht auf diesem Dienst. Bestimmte Frameworks oder Tools, die die Frameworknutzung dieses Diensts für die `x:Name`\-Verarbeitung oder entsprechende \(<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> attributierte\)\-Eigenschaftsverarbeitung unterstützen.  
+ <span data-ttu-id="bb5e9-214">Die .NET Framework-XAML-Dienste-Implementierung der `x:Reference` -Behandlung beruht auf diesem Dienst.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-214">The .NET Framework XAML Services implementation of `x:Reference` handling relies on this service.</span></span> <span data-ttu-id="bb5e9-215">Bestimmte Frameworks oder Tools, die die Frameworknutzung dieses Diensts für die `x:Name` -Verarbeitung oder entsprechende (<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> attributierte)-Eigenschaftsverarbeitung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-215">Specific frameworks or tools that support the framework use this service for `x:Name` handling or equivalent (<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> attributed) property handling.</span></span>  
   
-### IDestinationTypeProvider  
- **Referenzdokumentation**: <xref:System.Xaml.IDestinationTypeProvider>  
+### <a name="idestinationtypeprovider"></a><span data-ttu-id="bb5e9-216">IDestinationTypeProvider</span><span class="sxs-lookup"><span data-stu-id="bb5e9-216">IDestinationTypeProvider</span></span>  
+ <span data-ttu-id="bb5e9-217">**Referenzdokumentation**: <xref:System.Xaml.IDestinationTypeProvider></span><span class="sxs-lookup"><span data-stu-id="bb5e9-217">**Reference documentation**: <xref:System.Xaml.IDestinationTypeProvider></span></span>  
   
- **Definiert durch:**  <xref:System.Xaml> namespace, System.Xaml assembly  
+ <span data-ttu-id="bb5e9-218">**Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace</span><span class="sxs-lookup"><span data-stu-id="bb5e9-218">**Defined by:**  <xref:System.Xaml> namespace, System.Xaml assembly</span></span>  
   
- **Relevant für:** Ladepfadauflösung von indirekten CLR\-Typinformationen.  
+ <span data-ttu-id="bb5e9-219">**Relevant für:** Ladepfadauflösung von indirekten CLR-Typinformationen.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-219">**Relevant to:** Load path resolution of indirect CLR type information.</span></span>  
   
- **Dienst\-API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
+ <span data-ttu-id="bb5e9-220">**Dienst-API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A></span><span class="sxs-lookup"><span data-stu-id="bb5e9-220">**Service API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A></span></span>  
   
- Weitere Informationen finden Sie unter <xref:System.Xaml.IDestinationTypeProvider>.  
+ <span data-ttu-id="bb5e9-221">Weitere Informationen finden Sie unter <xref:System.Xaml.IDestinationTypeProvider>.</span><span class="sxs-lookup"><span data-stu-id="bb5e9-221">For more information, see <xref:System.Xaml.IDestinationTypeProvider>.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Markup.MarkupExtension>   
- <xref:System.Xaml.XamlObjectWriter>   
- [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)   
- [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a><span data-ttu-id="bb5e9-222">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bb5e9-222">See Also</span></span>  
+ <xref:System.Windows.Markup.MarkupExtension>  
+ <xref:System.Xaml.XamlObjectWriter>  
+ [<span data-ttu-id="bb5e9-223">Übersicht über Markuperweiterungen für XAML</span><span class="sxs-lookup"><span data-stu-id="bb5e9-223">Markup Extensions for XAML Overview</span></span>](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
+ [<span data-ttu-id="bb5e9-224">Übersicht über Typkonverter für XAML</span><span class="sxs-lookup"><span data-stu-id="bb5e9-224">Type Converters for XAML Overview</span></span>](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)

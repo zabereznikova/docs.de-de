@@ -7,65 +7,59 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 963850f2ef05ec51c4a9548b77eadf12fcf978c1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cadca32d5aa34d5cb6f9091f65c34c7cba603ff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt;-Element
-Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serialization.XmlSerializer> durchgeführt wird.  
+# <a name="ltxmlserializergt-element"></a><span data-ttu-id="c7c3c-102">&lt;xmlSerializer&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="c7c3c-102">&lt;xmlSerializer&gt; Element</span></span>
+<span data-ttu-id="c7c3c-103">Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serialization.XmlSerializer> durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
   
- \<configuration>  
-\<system.xml.serialization>  
+ <span data-ttu-id="c7c3c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c7c3c-104">\<configuration></span></span>  
+<span data-ttu-id="c7c3c-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="c7c3c-105">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="c7c3c-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="c7c3c-106">Syntax</span></span>  
   
 ```xml  
 <xmlSerializer checkDeserializerAdvance = "true"|"false" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c7c3c-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="c7c3c-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="c7c3c-108">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a><span data-ttu-id="c7c3c-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="c7c3c-109">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
+|<span data-ttu-id="c7c3c-110">Attribut</span><span class="sxs-lookup"><span data-stu-id="c7c3c-110">Attribute</span></span>|<span data-ttu-id="c7c3c-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c7c3c-111">Description</span></span>|  
 |---------------|-----------------|  
-|**checkDeserializeAdvances**|Gibt an, ob der Zustand von <xref:System.Xml.Serialization.XmlSerializer> überprüft wird. Legen Sie das Attribut auf "true" oder "false" fest. Der Standardwert ist "true".|  
-|**useLegacySerializationGeneration**|Gibt an, ob <xref:System.Xml.Serialization.XmlSerializer> eine Vorgänger-Serialisierungsgenerierung verwendet, die Assemblys generiert, indem C#-Code in eine Datei geschrieben und anschließend in eine Assembly kompiliert wird. Der Standardwert ist **FALSE**.|  
+|<span data-ttu-id="c7c3c-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="c7c3c-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="c7c3c-113">Gibt an, ob der Zustand von <xref:System.Xml.Serialization.XmlSerializer> überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="c7c3c-114">Legen Sie das Attribut auf "true" oder "false" fest.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="c7c3c-115">Der Standardwert ist "true".</span><span class="sxs-lookup"><span data-stu-id="c7c3c-115">The default is "true".</span></span>|  
+|<span data-ttu-id="c7c3c-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="c7c3c-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="c7c3c-117">Gibt an, ob <xref:System.Xml.Serialization.XmlSerializer> eine Vorgänger-Serialisierungsgenerierung verwendet, die Assemblys generiert, indem C#-Code in eine Datei geschrieben und anschließend in eine Assembly kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="c7c3c-118">Der Standardwert ist **FALSE**.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-118">The default is **false**.</span></span>|  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="c7c3c-119">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c7c3c-119">Child Elements</span></span>  
+ <span data-ttu-id="c7c3c-120">Keine</span><span class="sxs-lookup"><span data-stu-id="c7c3c-120">None.</span></span>  
   
-### <a name="parent-elements"></a>Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="c7c3c-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c7c3c-121">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="c7c3c-122">Element</span><span class="sxs-lookup"><span data-stu-id="c7c3c-122">Element</span></span>|<span data-ttu-id="c7c3c-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c7c3c-123">Description</span></span>|  
 |-------------|-----------------|  
-|[\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Enthält Konfigurationseinstellungen für die <xref:System.Xml.Serialization.XmlSerializer>-Klasse und die <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse.|  
+|[<span data-ttu-id="c7c3c-124">\<system.xml.serialization>-Element</span><span class="sxs-lookup"><span data-stu-id="c7c3c-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="c7c3c-125">Enthält Konfigurationseinstellungen für die <xref:System.Xml.Serialization.XmlSerializer>-Klasse und die <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig bietet <xref:System.Xml.Serialization.XmlSerializer> eine zusätzliche Sicherheitsebene, um mögliche Denial-of-Service-Angriffe beim Serialisieren nicht vertrauenswürdiger Daten zu verhindern. Hierzu wird während der Deserialisierung versucht, Endlosschleifen zu erkennen. Wenn eine solche Bedingung erkannt wird, wird eine Ausnahme ausgelöst und folgende Meldung ausgegeben: "Interner Fehler: Deserialisierung des zugrunde liegenden Streams konnte nicht fortgesetzt werden."  
+## <a name="remarks"></a><span data-ttu-id="c7c3c-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c7c3c-126">Remarks</span></span>  
+ <span data-ttu-id="c7c3c-127">Standardmäßig bietet <xref:System.Xml.Serialization.XmlSerializer> eine zusätzliche Sicherheitsebene, um mögliche Denial-of-Service-Angriffe beim Serialisieren nicht vertrauenswürdiger Daten zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="c7c3c-128">Hierzu wird während der Deserialisierung versucht, Endlosschleifen zu erkennen.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="c7c3c-129">Wenn eine solche Bedingung erkannt wird, wird eine Ausnahme ausgelöst und folgende Meldung ausgegeben: "Interner Fehler: Deserialisierung des zugrunde liegenden Streams konnte nicht fortgesetzt werden."</span><span class="sxs-lookup"><span data-stu-id="c7c3c-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
   
- Diese Meldung bedeutet nicht unbedingt, dass gerade ein Denial-of-Service-Angriff ausgeführt wird. In einigen seltenen Fällen erzeugt der Erkennungsmechanismus für Endlosschleifen einen falschen positiven Wert und die Ausnahme wird aufgrund einer zulässigen eingehenden Meldung ausgelöst. Wenn in Ihrer Anwendung zulässige Meldungen durch diese zusätzliche Sicherheitsebene verweigert werden, legen Sie das **checkDeserializeAdvances**-Attribut auf FALSE fest.  
+ <span data-ttu-id="c7c3c-130">Diese Meldung bedeutet nicht unbedingt, dass gerade ein Denial-of-Service-Angriff ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="c7c3c-131">In einigen seltenen Fällen erzeugt der Erkennungsmechanismus für Endlosschleifen einen falschen positiven Wert und die Ausnahme wird aufgrund einer zulässigen eingehenden Meldung ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="c7c3c-132">Wenn in Ihrer Anwendung zulässige Meldungen durch diese zusätzliche Sicherheitsebene verweigert werden, legen Sie das **checkDeserializeAdvances**-Attribut auf FALSE fest.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird das **checkDeserializeAdvances**-Attribut auf FALSE festgelegt.  
+## <a name="example"></a><span data-ttu-id="c7c3c-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c7c3c-133">Example</span></span>  
+ <span data-ttu-id="c7c3c-134">Im folgenden Codebeispiel wird das **checkDeserializeAdvances**-Attribut auf FALSE festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c7c3c-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +69,7 @@ Gibt an, ob eine zusätzliche Zustandsüberprüfung für <xref:System.Xml.Serial
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Serialization.XmlSerializer>   
- [\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)   
- [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="c7c3c-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c7c3c-135">See Also</span></span>  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [<span data-ttu-id="c7c3c-136">\<system.xml.serialization>-Element</span><span class="sxs-lookup"><span data-stu-id="c7c3c-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [<span data-ttu-id="c7c3c-137">XML- und SOAP-Serialisierung</span><span class="sxs-lookup"><span data-stu-id="c7c3c-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

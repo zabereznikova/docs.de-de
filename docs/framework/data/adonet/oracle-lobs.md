@@ -1,40 +1,41 @@
 ---
-title: "Oracle-LOBs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle-LOBs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle-LOBs
-Der .NET Framework\-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob>\-Klasse, die für das Arbeiten mit Oracle\-**LOB**\-Datentypen verwendet wird.  
+# <a name="oracle-lobs"></a><span data-ttu-id="37656-102">Oracle-LOBs</span><span class="sxs-lookup"><span data-stu-id="37656-102">Oracle LOBs</span></span>
+<span data-ttu-id="37656-103">Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** Datentypen.</span><span class="sxs-lookup"><span data-stu-id="37656-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
   
- Ein **OracleLob** ist möglicherweise einer der folgenden <xref:System.Data.OracleClient.OracleType>\-Datentypen:  
+ <span data-ttu-id="37656-104">Ein **OracleLob** möglicherweise eine der folgenden <xref:System.Data.OracleClient.OracleType> -Datentypen:</span><span class="sxs-lookup"><span data-stu-id="37656-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
   
-|Datentyp|Beschreibung|  
-|--------------|------------------|  
-|**Blob**|Ein Oracle\-**BLOB**\-Datentyp, der binäre Daten mit einer maximalen Größe von 4 Gigabyte enthält.  Dieser wird einem **Array** vom Typ **Byte** zugeordnet.|  
-|**CLOB**|Ein Oracle\-**CLOB**\-Datentyp, der binäre Daten auf der Grundlage des Standardzeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte enthält.  Dieser wird einer **Zeichenfolge** zugeordnet.|  
-|**NClob**|Ein Oracle\-**NCLOB**\-Datentyp, der binäre Daten auf der Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte enthält.  Dieser wird einer **Zeichenfolge** zugeordnet.|  
+|<span data-ttu-id="37656-105">Datentyp</span><span class="sxs-lookup"><span data-stu-id="37656-105">Data type</span></span>|<span data-ttu-id="37656-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37656-106">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="37656-107">**BLOB**</span><span class="sxs-lookup"><span data-stu-id="37656-107">**Blob**</span></span>|<span data-ttu-id="37656-108">Ein Oracle **BLOB** -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält.</span><span class="sxs-lookup"><span data-stu-id="37656-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="37656-109">Dies ordnet eine **Array** des Typs **Byte**.</span><span class="sxs-lookup"><span data-stu-id="37656-109">This maps to an **Array** of type **Byte**.</span></span>|  
+|<span data-ttu-id="37656-110">**CLOB**</span><span class="sxs-lookup"><span data-stu-id="37656-110">**Clob**</span></span>|<span data-ttu-id="37656-111">Ein Oracle **CLOB** -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 Gigabyte festgelegt.</span><span class="sxs-lookup"><span data-stu-id="37656-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="37656-112">Entspricht dem **Zeichenfolge**.</span><span class="sxs-lookup"><span data-stu-id="37656-112">This maps to **String**.</span></span>|  
+|<span data-ttu-id="37656-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="37656-113">**NClob**</span></span>|<span data-ttu-id="37656-114">Ein Oracle **NCLOB** -Datentyp, Zeichendaten enthält, auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte.</span><span class="sxs-lookup"><span data-stu-id="37656-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="37656-115">Entspricht dem **Zeichenfolge**.</span><span class="sxs-lookup"><span data-stu-id="37656-115">This maps to **String**.</span></span>|  
   
- Ein **OracleLob** unterscheidet sich von einer <xref:System.Data.OracleClient.OracleBFile> dadurch, dass die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert werden.  Es kann sich auch um ein Objekt mit Lese\- und Schreibzugriff im Unterschied zu einer **OracleBFile** handeln, die immer schreibgeschützt ist.  
+ <span data-ttu-id="37656-116">Ein **OracleLob** unterscheidet sich von einer <xref:System.Data.OracleClient.OracleBFile> darin, dass die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="37656-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="37656-117">Sie können auch ein Objekt mit Lese-/ Schreibzugriff sein, im Gegensatz zu einer **OracleBFile**, die immer schreibgeschützt ist.</span><span class="sxs-lookup"><span data-stu-id="37656-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
   
-## Erstellen, Abrufen und Schreiben in ein LOB  
- Im folgenden C\#\-Beispiel wird veranschaulicht, wie LOBs in einer Oracle\-Tabelle erstellt und anschließend abgerufen werden und wie in Form von **OracleLob**\-Objekten in LOBs geschrieben wird.  In dem Beispiel wird die Verwendung des <xref:System.Data.OracleClient.OracleDataReader>\-Objekts und der **OracleLob**\-**Read**\-Methode und der **Write**\-Methode veranschaulicht.  In dem Beispiel werden die Oracle\-Datentypen **BLOB**, **CLOB** und **NCLOB** verwendet.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="37656-118">Erstellen, Abrufen und Schreiben in ein LOB</span><span class="sxs-lookup"><span data-stu-id="37656-118">Creating, Retrieving, and Writing to a LOB</span></span>  
+ <span data-ttu-id="37656-119">Im folgenden C#-Beispiel wird veranschaulicht, wie Sie erstellen LOBs in einer Oracle-Tabelle, und klicken Sie dann abrufen und in Form von geschrieben **OracleLob** Objekte.</span><span class="sxs-lookup"><span data-stu-id="37656-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="37656-120">Im Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleLob** **lesen** und **schreiben** Methoden.</span><span class="sxs-lookup"><span data-stu-id="37656-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="37656-121">Im Beispiel wird Oracle **BLOB**, **CLOB**, und **NCLOB** Datentypen.</span><span class="sxs-lookup"><span data-stu-id="37656-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.IO;              
 using System.Text;             
@@ -224,12 +225,10 @@ public class LobExample
 }  
 ```  
   
-## Erstellen eines temporären LOBs  
- Im folgenden C\#\-Beispiel wird das Erstellen eines temporären LOBs veranschaulicht.  
+## <a name="creating-a-temporary-lob"></a><span data-ttu-id="37656-122">Erstellen eines temporären LOBs</span><span class="sxs-lookup"><span data-stu-id="37656-122">Creating a Temporary LOB</span></span>  
+ <span data-ttu-id="37656-123">Im folgenden C#-Beispiel wird das Erstellen eines temporären LOBs veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="37656-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
   
- \[C\#\]  
-  
-```  
+```csharp  
 OracleConnection conn = new OracleConnection(  
   "server=test8172; integrated security=yes;");  
 conn.Open();  
@@ -258,6 +257,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## Siehe auch  
- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="37656-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37656-124">See Also</span></span>  
+ [<span data-ttu-id="37656-125">Oracle und ADO.NET</span><span class="sxs-lookup"><span data-stu-id="37656-125">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [<span data-ttu-id="37656-126">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="37656-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

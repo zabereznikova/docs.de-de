@@ -1,48 +1,46 @@
 ---
-title: "Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc36532"
-  - "bc36532"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36532"
+title: "Geschachtelte Funktion verfügt über keine Signatur, die kompatibel mit Delegaten &#39; &lt;Delegatname&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc36532
+- bc36532
+helpviewer_keywords: BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 60cf15343023110561da3e3fcf202bd00394127a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ein Lambda\-Ausdruck wurde einem Delegaten zugewiesen, der über eine nicht kompatible Signatur verfügt.  Im folgenden Code verfügt der `Del`\-Delegat beispielsweise über zwei ganzzahlige Parameter.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="cb85d-102">Geschachtelte Funktion verfügt über keine Signatur, die kompatibel mit Delegaten &#39; &lt;Delegatname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="cb85d-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
+<span data-ttu-id="cb85d-103">Ein Lambda-Ausdruck wurde an einen Delegaten zugewiesen, die eine nicht kompatible Signatur verfügt.</span><span class="sxs-lookup"><span data-stu-id="cb85d-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="cb85d-104">Im folgenden Code wird z. B. Delegieren `Del` verfügt über zwei Integer-Parameter.</span><span class="sxs-lookup"><span data-stu-id="cb85d-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  
   
-```vb#  
+```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- Der Fehler wird ausgelöst, wenn ein Lambda\-Ausdruck mit einem Argument als Typ `Del` deklariert wird:  
+ <span data-ttu-id="cb85d-105">Der Fehler wird ausgelöst, wenn ein Lambda-Ausdruck mit einem Argument als Typ deklariert wird `Del`:</span><span class="sxs-lookup"><span data-stu-id="cb85d-105">The error is raised if a lambda expression with one argument is declared as type `Del`:</span></span>  
   
-```vb#  
+```vb  
 ' Neither of these is valid.   
 ' Dim lambda1 As Del = Function(n As Integer) n + 1  
 ' Dim lambda2 As Del = Function(n) n + 1  
 ```  
   
- **Fehler\-ID:** BC36532  
+ <span data-ttu-id="cb85d-106">**Fehler-ID:** BC36532</span><span class="sxs-lookup"><span data-stu-id="cb85d-106">**Error ID:** BC36532</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cb85d-107">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="cb85d-107">To correct this error</span></span>  
   
--   Passen Sie entweder die Delegatdefinition oder den zugewiesenen Lambda\-Ausdruck an, damit die Signaturen kompatibel sind.  
+-   <span data-ttu-id="cb85d-108">Passen Sie die Delegatdefinition oder den zugewiesenen Lambda-Ausdruck, damit die Signaturen kompatibel sind.</span><span class="sxs-lookup"><span data-stu-id="cb85d-108">Adjust either the delegate definition or the assigned lambda expression so that the signatures are compatible.</span></span>  
   
-## Siehe auch  
- [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="cb85d-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb85d-109">See Also</span></span>  
+ [<span data-ttu-id="cb85d-110">Gelockerte Delegatenkonvertierung</span><span class="sxs-lookup"><span data-stu-id="cb85d-110">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [<span data-ttu-id="cb85d-111">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="cb85d-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
