@@ -1,41 +1,44 @@
 ---
-title: "SqlClient-Streamingunterst&#252;tzung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SqlClient-Streamingunterstützung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# SqlClient-Streamingunterst&#252;tzung
-Die Streamingunterstützung zwischen [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] und einer Anwendung \(neu in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]\) unterstützt unstrukturierte Daten auf dem Server \(Dokumente, Bilder und Mediendateien\).  Eine [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]\-Datenbank kann BLOBs \(Binary Large Objects\) speichern, beim Abrufen von BLOBs kann jedoch viel Arbeitsspeicher beansprucht werden.  
+# <a name="sqlclient-streaming-support"></a>SqlClient-Streamingunterstützung
+Die Streamingunterstützung zwischen [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] und einer Anwendung (neu in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) unterstützt unstrukturierte Daten auf dem Server (Dokumente, Bilder und Mediendateien). Eine [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Datenbank kann BLOBs (Binary Large Objects) speichern, beim Abrufen von BLOBs kann jedoch viel Arbeitsspeicher beansprucht werden.  
   
  Durch die Unterstützung des Streamings an und von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] wird das Schreiben von Anwendungen vereinfacht, die Daten streamen. Daten müssen nicht vollständig in den Arbeitsspeicher geladen werden, was zu weniger Ausnahmefehlern aufgrund Arbeitsspeicherüberlaufs führt.  
   
  Die Streamingunterstützung ermöglicht auch Anwendungen der mittleren Ebene eine bessere Skalierung, insbesondere in Szenarien, in denen Geschäftsobjekte eine Verbindung mit SQL Azure herstellen, um große BLOBs zu senden, abzurufen und zu bearbeiten.  
   
 > [!WARNING]
->  Asynchrone Aufrufe werden nicht unterstützt, wenn eine Anwendung auch das `Context Connection`\-Schlüsselwort für Verbindungszeichenfolgen verwendet.  
+>  Asynchrone Aufrufe werden nicht unterstützt, wenn eine Anwendung auch das `Context Connection`-Schlüsselwort für Verbindungszeichenfolgen verwendet.  
 >   
->  Die zur Unterstützung des Streamings hinzugefügten Member werden verwendet, um Daten aus Abfragen abzurufen und um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben.  Die Streamingfunktion ist für grundlegende OLTP\- und Datenmigrationsszenarien konzipiert und eignet sich für lokale und externe Datenmigrationsumgebungen.  
+>  Die zur Unterstützung des Streamings hinzugefügten Member werden verwendet, um Daten aus Abfragen abzurufen und um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben. Die Streamingfunktion ist für grundlegende OLTP- und Datenmigrationsszenarien konzipiert und eignet sich für lokale und externe Datenmigrationsumgebungen.  
   
-## Unterstützung des Streamings von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Mit der Unterstützung des Streamings von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] werden neue Funktionen in der <xref:System.Data.Common.DbDataReader>\-Klasse und in der <xref:System.Data.SqlClient.SqlDataReader>\-Klasse eingeführt, um <xref:System.IO.Stream>\-, <xref:System.Xml.XmlReader>\- und <xref:System.IO.TextReader>\-Objekte abzurufen und darauf zu reagieren.  Diese Klassen werden verwendet, um Daten aus Abfragen abzurufen.  Daher betrifft das unterstützte Streaming von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] OLTP\-Szenarien und ist für lokale und externe Umgebungen geeignet.  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Unterstützung des Streamings von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+ Mit der Unterstützung des Streamings von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] werden neue Funktionen in der <xref:System.Data.Common.DbDataReader>-Klasse und in der <xref:System.Data.SqlClient.SqlDataReader>-Klasse eingeführt, um <xref:System.IO.Stream>-, <xref:System.Xml.XmlReader>- und <xref:System.IO.TextReader>-Objekte abzurufen und darauf zu reagieren.  Diese Klassen werden verwendet, um Daten aus Abfragen abzurufen. Daher betrifft das unterstützte Streaming von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] OLTP-Szenarien und ist für lokale und externe Umgebungen geeignet.  
   
  Die folgenden Member wurden <xref:System.Data.SqlClient.SqlDataReader> hinzugefügt, um das Streaming von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] zu unterstützen:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>  
   
@@ -53,18 +56,18 @@ Die Streamingunterstützung zwischen [!INCLUDE[ssNoVersion](../../../../includes
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## Unterstützung des Streamings an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Mit der Unterstützung des Streamings an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] werden neue Funktionen in der <xref:System.Data.SqlClient.SqlParameter>\-Klasse eingeführt, um <xref:System.Xml.XmlReader>\-, <xref:System.IO.Stream>\- und <xref:System.IO.TextReader>\-Objekte zu akzeptieren und darauf zu reagieren.  <xref:System.Data.SqlClient.SqlParameter> wird verwendet, um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben.  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Unterstützung des Streamings an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+ Mit der Unterstützung des Streamings an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] werden neue Funktionen in der <xref:System.Data.SqlClient.SqlParameter>-Klasse eingeführt, um <xref:System.Xml.XmlReader>-, <xref:System.IO.Stream>- und <xref:System.IO.TextReader>-Objekte zu akzeptieren und darauf zu reagieren. <xref:System.Data.SqlClient.SqlParameter> wird verwendet, um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben.  
   
- Durch das Verwerfen eines <xref:System.Data.SqlClient.SqlCommand>\-Objekts oder das Aufrufen von <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> muss jeglicher Streamingvorgang abgebrochen werden.  Wenn eine Anwendung <xref:System.Threading.CancellationToken> sendet, wird der Abbruch nicht sichergestellt.  
+ Durch das Verwerfen eines <xref:System.Data.SqlClient.SqlCommand>-Objekts oder das Aufrufen von <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> muss jeglicher Streamingvorgang abgebrochen werden. Wenn eine Anwendung <xref:System.Threading.CancellationToken> sendet, wird der Abbruch nicht sichergestellt.  
   
- Die folgenden <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>\-Typen akzeptieren den <xref:System.Data.SqlClient.SqlParameter.Value%2A>\-Wert <xref:System.IO.Stream>:  
+ Die folgenden <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>-Typen akzeptieren den <xref:System.Data.SqlClient.SqlParameter.Value%2A>-Wert <xref:System.IO.Stream>:  
   
 -   **Binary**  
   
 -   **VarBinary**  
   
- Die folgenden <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>\-Typen akzeptieren den <xref:System.Data.SqlClient.SqlParameter.Value%2A>\-Wert <xref:System.IO.TextReader>:  
+ Die folgenden <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>-Typen akzeptieren den <xref:System.Data.SqlClient.SqlParameter.Value%2A>-Wert <xref:System.IO.TextReader>:  
   
 -   **Char**  
   
@@ -72,15 +75,15 @@ Die Streamingunterstützung zwischen [!INCLUDE[ssNoVersion](../../../../includes
   
 -   **NVarChar**  
   
--   **Xml**  
+-   **XML**  
   
- Der **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>\-Typ akzeptiert den <xref:System.Data.SqlClient.SqlParameter.Value%2A>\-Wert <xref:System.Xml.XmlReader>.  
+ Die **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> -Typ akzeptiert eine <xref:System.Data.SqlClient.SqlParameter.Value%2A> von <xref:System.Xml.XmlReader>.  
   
  <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> kann Werte des Typs <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> und <xref:System.IO.Stream> akzeptieren.  
   
- Das <xref:System.Xml.XmlReader>\-, <xref:System.IO.TextReader>\- und <xref:System.IO.Stream>\-Objekt wird bis zu dem von <xref:System.Data.SqlClient.SqlParameter.Size%2A> definierten Wert übertragen.  
+ Das <xref:System.Xml.XmlReader>-, <xref:System.IO.TextReader>- und <xref:System.IO.Stream>-Objekt wird bis zu dem von <xref:System.Data.SqlClient.SqlParameter.Size%2A> definierten Wert übertragen.  
   
-## Beispiel: Streamen von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Beispiel: Streamen von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  Verwenden Sie folgende [!INCLUDE[tsql](../../../../includes/tsql-md.md)], um die Beispieldatenbank zu erstellen:  
   
 ```  
@@ -106,11 +109,11 @@ GO
   
 -   Übertragen einer großen Textdatei von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Übertragen einer großen XML\-Datei von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Übertragen einer großen XML-Datei von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Abrufen von Daten von [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
--   Übertragen großer Dateien \(BLOB\)s von einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]\-Datenbank in eine andere, ohne dass der Arbeitsspeicher knapp wird.  
+-   Übertragen großer Dateien (BLOB)s von einer [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Datenbank in eine andere, ohne dass der Arbeitsspeicher knapp wird.  
   
 ```  
 using System;  
@@ -299,10 +302,9 @@ namespace StreamingFromServer {
       }  
    }  
 }  
-  
 ```  
   
-## Beispiel: Streamen an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Beispiel: Streamen an [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  Verwenden Sie folgende [!INCLUDE[tsql](../../../../includes/tsql-md.md)], um die Beispieldatenbank zu erstellen:  
   
 ```  
@@ -332,7 +334,7 @@ GO
   
 -   Verwenden der neuen asynchronen Funktion zur Übertragung eines großen BLOBs.  
   
--   Verwenden der neuen asynchronen Funktion und des await\-Schlüsselworts zur Übertragung eines großen BLOBs.  
+-   Verwenden der neuen asynchronen Funktion und des await-Schlüsselworts zur Übertragung eines großen BLOBs.  
   
 -   Abbrechen der Übertragung eines großen BLOBs.  
   
@@ -456,10 +458,9 @@ namespace StreamingToServer {
       }  
    }  
 }  
-  
 ```  
   
-## Beispiel: Streamen von einem [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] an einen anderen [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Beispiel: Streamen von einem [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] an einen anderen [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
  Dieses Beispiel zeigt, wie ein großes BLOB asynchron von einem [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] an einen anderen gestreamt wird, während der Abbruch unterstützt wird.  
   
 ```  
@@ -523,8 +524,7 @@ namespace StreamingFromServerToAnother {
       }  
    }  
 }  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

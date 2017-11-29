@@ -1,26 +1,28 @@
 ---
-title: "&lt;Erweiterungen&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;Erweiterungen&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;Erweiterungen&gt;
-Dieses Konfigurationselement enthält eine Auflistung von XML\-Elementen mit benutzerdefinierten Metadaten, die mit den standardmäßigen sichtbaren Metadaten \(EPR, ContractTypeName, BindingName, Bereich und ListenURI\) veröffentlicht werden sollen.  Es folgt ein Beispiel zur Verwendung dieses Konfigurationselements.  
+# <a name="ltextensionsgt"></a>&lt;Erweiterungen&gt;
+Dieses Konfigurationselement enthält eine Auflistung von XML-Elementen mit benutzerdefinierten Metadaten, die mit den standardmäßigen sichtbaren Metadaten (EPR, ContractTypeName, BindingName, Bereich und ListenURI) veröffentlicht werden sollen. Es folgt ein Beispiel zur Verwendung dieses Konfigurationselements.  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -51,8 +53,7 @@ Dieses Konfigurationselement enthält eine Auflistung von XML\-Elementen mit ben
     </behavior>  
   </endpointBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

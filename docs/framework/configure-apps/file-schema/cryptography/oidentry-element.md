@@ -1,70 +1,74 @@
 ---
-title: "&lt;oidEntry&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidEntry>-Element"
-  - "oidEntry-Element"
+title: '&lt;OidEntry&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
+helpviewer_keywords:
+- <oidEntry> element
+- oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;oidEntry&gt;-Element
-Ordnet einen ASN.1‑Objektbezeichner \(OID\) einem angezeigten Namen zu.  
+# <a name="ltoidentrygt-element"></a>&lt;OidEntry&gt; Element
+Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.  
   
-## Syntax  
+ \<configuration>  
+\<"mscorlib" >  
+\<CryptographySettings >  
+\<OidMap >  
+\<OidEntry >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|**OID**|Erforderliches Attribut.<br /><br /> Gibt den ASN.1 ‑OID an, der dem von der Klasse implementierten Algorithmus entspricht.|  
-|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert des **name** \-Attribut im [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)\-Tag an.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|**OID**|Erforderliches Attribut.<br /><br /> Gibt die ASN. 1-OID für den Algorithmus, der von der Klasse implementiert.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** Attribut in der [ \<NameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Tag.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
-|`mscorlib`|Enthält das `cryptographySettings`\-Element.|  
-|`oidMap`|Enthält ASN.1‑OID\-Zuordnungen zu Klassen.|  
+|`mscorlib`|Enthält die `cryptographySettings` Element.|  
+|`oidMap`|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.|  
   
-## Hinweise  
- ASN.1‑Objektbezeichner geben Algorithmen in bestimmten kryptografischen Formaten an.  Ordnen Sie für die Algorithmen, die Sie angeben möchten, Objektbezeichner angezeigten Namen zu.  Weitere Informationen über Objektbezeichner finden Sie in der MSDN Library.  
+## <a name="remarks"></a>Hinweise  
+ ASN. 1-Objektbezeichner identifizieren, in einigen Formaten kryptografischen Algorithmen. Ordnen Sie Objektbezeichner Anzeigenamen für die Algorithmen, die Sie ermitteln möchten.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie das Element **\<oidEntry\>** verwendet, um einer Hashwerts für den Hashalgorithmus RIPEMD\-160 an eine Implementierung dieses Hashalgorithmus zuzuordnen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie die  **\<OidEntry >** -Element einen Objektbezeichner für die RIPEMD-160-Hashalgorithmus zu einer Implementierung dieses Hashalgorithmus zuordnen.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -84,9 +88,9 @@ Ordnet einen ASN.1‑Objektbezeichner \(OID\) einem angezeigten Namen zu.
 </configuration>  
 ```  
   
-## Siehe auch  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)   
- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)  
+ [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

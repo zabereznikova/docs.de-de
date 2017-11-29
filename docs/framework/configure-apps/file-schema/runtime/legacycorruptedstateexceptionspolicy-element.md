@@ -1,81 +1,83 @@
 ---
-title: "&lt;legacyCorruptedStateExceptionsPolicy&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<legacyCorruptedStateExceptionsPolicy>-Element"
-  - "legacyCorruptedStateExceptionsPolicy-Element"
+title: '&lt;LegacyCorruptedStateExceptionsPolicy&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <legacyCorruptedStateExceptionsPolicy> element
+- legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e4379f6f38c886504905483cefd7c7a6bbd519ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;legacyCorruptedStateExceptionsPolicy&gt;-Element
-Gibt an, ob die Common Language Runtime zulässt, dass Zugriffsverletzungen und andere beschädigte Zustandsausnahmen von verwaltetem Code abgefangen werden.  
+# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;LegacyCorruptedStateExceptionsPolicy&gt; Element
+Gibt an, ob die common Language Runtime verwalteten Codes zugriffsverletzungen und Beschädigung Ausnahmen abfangen kann.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<LegacyCorruptedStateExceptionsPolicy >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <legacyCorruptedStateExceptionsPolicy enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass Fehler aufgrund von beschädigten Zustandsausnahmen, beispielsweise Zugriffsverletzungen, von der Anwendung abgefangen werden.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass die Anwendung abgefangen werden Fehler wie z. B. zugriffsverletzungen beschädigen.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`false`|Fehler aufgrund von beschädigten Zustandsausnahmen, beispielsweise Zugriffsverletzungen, werden von der Anwendung nicht abgefangen.  Dies ist der Standardwert.|  
-|`true`|Fehler aufgrund von beschädigten Zustandsausnahmen, beispielsweise Zugriffsverletzungen, werden von der Anwendung abgefangen.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`false`|Die Anwendung wird nicht abfangen Fehler wie z. B. zugriffsverletzungen beschädigen. Dies ist die Standardeinstellung.|  
+|`true`|Die Anwendung fängt Fehler wie z. B. zugriffsverletzungen beschädigen.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- In .NET Framework und älteren Versionen ermöglichte die Common Language Runtime das Abfangen von Ausnahmen durch verwalteten Code, die von beschädigten Prozesszuständen ausgelöst wurden.  Eine Zugriffsverletzung ist ein Beispiel für diesen Ausnahmetyp.  
+## <a name="remarks"></a>Hinweise  
+ In .NET Framework, Version 3.5 und früher zulässig die common Language Runtime verwalteten Code zum Abfangen von Ausnahmen, die nach beschädigten Prozess Status ausgelöst wurden. Eine zugriffsverletzung ist ein Beispiel für diese Art von Ausnahme.  
   
- Ab [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] werden diese Ausnahmetypen nicht mehr von verwaltetem Code in `catch`\-Blöcken abgefangen.  Sie können diese Änderung jedoch überschreiben und die Behandlung von beschädigten Zustandsausnahmen beibehalten. Dazu stehen Ihnen zwei Möglichkeiten zur Verfügung:  
+ Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], verwalteten Code nicht mehr fängt diese Arten von Ausnahmen in `catch` blockiert. Allerdings können außer Kraft setzen diese Änderung und die Handhabung von beschädigten Zustandsausnahmen auf zwei Arten verwalten:  
   
--   Legen Sie im `<legacyCorruptedStateExceptionsPolicy>`\-Element das `enabled`\-Attribut auf `true` fest.  Diese Konfigurationseinstellung ist wird prozessweit übernommen und wirkt sich auf alle Methoden aus.  
+-   Legen Sie die `<legacyCorruptedStateExceptionsPolicy>` des Elements `enabled` -Attribut `true`. Diese Konfigurationseinstellung wird Processwide angewendet und wirkt sich auf alle Methoden.  
   
- \- oder \-  
+ - oder -   
   
--   Wenden Sie das <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=fullName>\-Attribut auf die Methode an, die die `catch`\-Ausnahmeblöcke enthält.  
+-   Anwenden der <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> -Attribut auf die Methode, die Ausnahmen enthält `catch` Block.  
   
- Dieses Konfigurationselement ist erst ab [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] verfügbar.  
+ Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] und höher.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie angegeben wird, dass das Verhalten vor [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] von der Anwendung wiederhergestellt und alle Fehler aufgrund beschädigter Zustandsausnahmen abgefangen werden sollen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie angegeben, dass die Anwendung zurückgesetzt werden soll, um das Verhalten vor dem [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], und alle fehlt Fehler abgefangen.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <legacyCorruptedStateExceptionsPolicy enabled="true" />  
@@ -83,7 +85,7 @@ Gibt an, ob die Common Language Runtime zulässt, dass Zugriffsverletzungen und 
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>   
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

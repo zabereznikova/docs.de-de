@@ -1,25 +1,28 @@
 ---
-title: "MessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f750742-b96b-498f-bf5e-05933a1a5961
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81c4e168195068c3e76bb9191635009ce49d290c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# MessageEncodingBindingElement
+# <a name="messageencodingbindingelement"></a>MessageEncodingBindingElement
 MessageEncodingBindingElement  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `class MessageEncodingBindingElement : BindingElement`  
   
  `{`  
@@ -28,24 +31,24 @@ MessageEncodingBindingElement
   
  `};`  
   
-## Methoden  
+## <a name="methods"></a>Methoden  
  Die Klasse MessageEncodingBindingElement definiert keine Methoden.  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  Die Klasse MessageEncodingBindingElement verfügt über die folgende Eigenschaft:  
   
-### MessageVersion  
- Datentyp: Zeichenfolge  
+### <a name="messageversion"></a>MessageVersion  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die SOAP\-Version der Meldungen, die mit dieser Bindung gesendet werden.  
+ Die SOAP-Version der Meldungen, die mit dieser Bindung gesendet werden.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

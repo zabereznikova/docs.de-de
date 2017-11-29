@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
 Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> und verwandte Klassen im System.Net-Namespace behandelt wird. Diese Änderungen können sich auf Anwendungen auswirken, die diese Klassen für Webanforderungen und den Empfang der Antworten verwenden, in denen die integrierte Windows-Authentifizierung auf NTLM-Basis verwendet wird. Die Änderung kann sich auf Webserver und Clientanwendungen auswirken, die für die Verwendung der integrierten Windows-Authentifizierung konfiguriert sind.  
@@ -39,9 +33,9 @@ Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vo
   
  Bei der Konfiguration für große Bereitstellungen erhält die Bereitstellung mit dem zugrunde liegenden Computernamen, die nie von Clientanwendungen und Endbenutzern verwendet werden, in der Regel einen einzelnen virtuellen Servernamen. Sie können den Server z.B. www.contoso.com nennen, jedoch in einem internen Netzwerk einfach „Contoso“ verwenden. Dieser Name ist der Hostheader in der Clientwebanforderung. Das Feld „Host-Anforderungsheader“ gibt gemäß dem HTTP-Protokoll den Internet-Host und die Portanzahl der angeforderten Ressource an. Diese Information wird aus dem ursprünglichen URI abgerufen, der vom Benutzer oder der Referenzressource (in der Regel eine HTTP-URL) angegeben wird. Auf .NET Framework, Version 4, können diese Informationen auch vom Client mit der neuen <xref:System.Net.HttpWebRequest.Host%2A>-Eigenschaft festgelegt werden.  
   
- Die <xref:System.Net.AuthenticationManager>-Klasse steuert die verwalteten Authentifizierungskomponenten („Module“), die von abgeleiteten <xref:System.Net.WebRequest>-und den <xref:System.Net.WebClient>-Klassen verwendet werden. Die <xref:System.Net.AuthenticationManager>-Klasse enthält eine Eigenschaft, die ein <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>-Objekt verfügbar macht, das von einer URI-Zeichenfolge indiziert ist, damit Anwendungen eine benutzerdefinierte SPN-Zeichenfolge bereitstellen können, die während der Authentifizierung verwendet wird.  
+ Die <xref:System.Net.AuthenticationManager>-Klasse steuert die verwalteten Authentifizierungskomponenten („Module“), die von abgeleiteten <xref:System.Net.WebRequest>-und den <xref:System.Net.WebClient>-Klassen verwendet werden. Die <xref:System.Net.AuthenticationManager>-Klasse enthält eine Eigenschaft, die ein <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>-Objekt verfügbar macht, das von einer URI-Zeichenfolge indiziert ist, damit Anwendungen eine benutzerdefinierte SPN-Zeichenfolge bereitstellen können, die während der Authentifizierung verwendet wird.  
   
- Version 3.5 SP1 gibt jetzt standardmäßig den Hostnamen in der Anforderungs-URL in der SPN im NTLM-Authentifizierungsaustausch (NT LAN Manager) an, wenn die <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>-Eigenschaft nicht festgelegt ist. Der Hostname in der Anforderungs-URL kann vom in <xref:System.Net.HttpRequestHeader?displayProperty=fullName> in der Clientanforderung angegebenen Hostheader abweichen. Der Hostname in der Anforderungs-URL kann vom tatsächlichen Hostnamen des Servers, dem Computernamen des Servers, der IP-Adresse des Computers oder der Loopbackadresse abweichen. In diesen Fällen schlägt die Authentifizierungsanforderung in Windows fehl. Um das Problem zu beheben, müssen wir Windows benachrichtigen, dass der Hostname in der Anforderungs-URL in der Client-Anforderung (z.B. „Contoso“) tatsächlich ein alternativer Name für den lokalen Computer ist.  
+ Version 3.5 SP1 gibt jetzt standardmäßig den Hostnamen in der Anforderungs-URL in der SPN im NTLM-Authentifizierungsaustausch (NT LAN Manager) an, wenn die <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A>-Eigenschaft nicht festgelegt ist. Der Hostname in der Anforderungs-URL kann vom in <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> in der Clientanforderung angegebenen Hostheader abweichen. Der Hostname in der Anforderungs-URL kann vom tatsächlichen Hostnamen des Servers, dem Computernamen des Servers, der IP-Adresse des Computers oder der Loopbackadresse abweichen. In diesen Fällen schlägt die Authentifizierungsanforderung in Windows fehl. Um das Problem zu beheben, müssen wir Windows benachrichtigen, dass der Hostname in der Anforderungs-URL in der Client-Anforderung (z.B. „Contoso“) tatsächlich ein alternativer Name für den lokalen Computer ist.  
   
  Es gibt mehrere Methoden, mit denen eine Serveranwendung diese Änderung umgehen kann. Die empfohlene Vorgehensweise ist, den Hostnamen in der Anforderungs-URL zum `BackConnectionHostNames`-Schlüssel in der Registrierung auf dem Server zuzuordnen. Der `BackConnectionHostNames`-Registrierungsschlüssel wird normalerweise verwendet, um einen Hostnamen einer Loopbackadresse zuzuordnen. Die Schritte sind unten aufgeführt.  
   
@@ -66,7 +60,6 @@ Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vo
  Eine unsicherere Lösung ist die Deaktivierung der Loopbacküberprüfung, die in [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657) beschrieben ist. Der Schutz vor Reflektionsangriffen wird somit deaktiviert. Daher ist es besser, den Satz von alternativen Namen auf jene einzuschränken, von denen Sie erwarten, dass sie tatsächlich vom Computer verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
- <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
-
+ <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
+ <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
+ <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

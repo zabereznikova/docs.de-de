@@ -1,91 +1,92 @@
 ---
-title: "&lt;requestCaching&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<requestCaching>-Element"
-  - "requestCaching-Element"
+title: '&lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching
+helpviewer_keywords:
+- requestCaching element
+- <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f2737e67fe1fe1e33b2600f448b02321f6ce1888
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;requestCaching&gt;-Element (Netzwerkeinstellungen)
-Steuert den Cachingmechanismus für Netzwerkanforderungen.  
+# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;RequestCaching&gt; -Element (Netzwerkeinstellungen)
+Steuert den Zwischenspeichermechanismus für Anforderungen über das Netzwerk an.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<RequestCaching >  
   
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+      <requestCaching>  
+        isPrivateCache ="true|false"  
+        disableAllCaching="true|false"  
+        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+        unspecifiedMaximumAge= "d.hh.mm.ss">  
+          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
+          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
+      </requestCaching>
 ```  
   
-      <requestCaching  
-  isPrivateCache ="true|false"  
-  disableAllCaching="true|false"  
-  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss""  
-  <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-  <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-/>  
-```  
-  
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`isPrivateCache`|Gibt an, ob der Zwischenspeicher eine Isolierung zwischen den Informationen unterschiedlicher Benutzer bereitstellt.  Der Standardwert ist `true`.  Dieser Wert sollte für Anwendungen auf mittlerer Ebene `false` sein.|  
-|`disableAllCaching`|Gibt an, dass das Caching für alle Webantworten deaktiviert ist und nicht programmgesteuert überschrieben werden kann.|  
-|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>\-Enumeration.  Der Standardwert ist `BypassCache`.|  
-|`unspecifiedMaximumAge`|Gibt die Standardzeitspanne an, nach deren Ende der Inhalt als abgelaufen markiert wird.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`isPrivateCache`|Gibt an, ob der Cache Isolation zwischen den Informationen von anderen Benutzern bereitstellt. Der Standardwert ist `true`. Dieser Wert sollte `false` für Anwendungen der mittleren Ebene.|  
+|`disableAllCaching`|Gibt an, dass Zwischenspeichern für alle Webantworten deaktiviert ist und kann nicht programmgesteuert überschrieben werden.|  
+|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>-Enumeration. Der Standardwert ist `BypassCache`.|  
+|`unspecifiedMaximumAge`|Gibt die Standardzeit, die nach der Inhalt als abgelaufen gekennzeichnet wird.|  
   
-## policyLevel\-Attribut  
+## <a name="policylevel-attribute"></a>PolicyLevel-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource aktuell und die Inhaltslänge präzise ist und wenn die Attribute für Ablauf, Änderung und Inhaltslänge vorhanden sind.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource frische ist und die Inhaltslänge genau wird den Ablauf, Änderung und Content-Length-Attribute vorhanden sind.|  
 |`BypassCache`|Gibt die Ressource vom Server zurück.|  
-|`CacheOnly`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge vorhanden ist und mit der Eintragsgröße übereinstimmt.|  
-|`CacheIfAvailable`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge angegeben ist und mit der Eintragsgröße übereinstimmt. Andernfalls wird die Ressource vom Server heruntergeladen und an den Aufrufer zurückgegeben.|  
-|`Revalidate`|Gibt die zwischengespeicherte Ressource zurück, falls der Zeitstempel der zwischengespeicherten Ressource identisch mit dem Zeitstempel der auf dem Server befindlichen Ressource ist; andernfalls wird die Ressource vom Server heruntergeladen, im Cache zwischengespeichert und an den Aufrufer zurückgegeben.|  
-|`Reload`|Die Ressource wird vom Server heruntergeladen, im Cache zwischengespeichert und an den Aufrufer zurückgegeben.|  
-|`NoCacheNoStore`|Wenn eine zwischengespeicherte Ressource vorhanden ist, wird sie gelöscht.  Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben.|  
-|`Revalidate`|Erfüllt eine Anforderung, indem die zwischengespeicherte Kopie der Ressource verwendet wird, sofern der Zeitstempel mit dem Zeitstempel der auf dem Server befindlichen Ressource identisch ist; andernfalls wird die Ressource vom Server heruntergeladen, dem Aufrufer angezeigt und im Cache zwischengespeichert.|  
+|`CacheOnly`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge vorhanden ist und der Größe des Eintrags übereinstimmt.|  
+|`CacheIfAvailable`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge bereitgestellt werden und der Größe des Eintrags übereinstimmt. Andernfalls wird die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.|  
+|`Revalidate`|Gibt die zwischengespeicherte Ressource zurück, wenn der Zeitstempel der zwischengespeicherten Ressource identisch mit dem Zeitstempel der Ressource auf dem Server ist; Andernfalls wird die Ressource wird vom Server, im Cache gespeicherten heruntergeladen und an den Aufrufer zurückgegeben wird.|  
+|`Reload`|Die Ressource vom Server heruntergeladen, speichert ihn im Cache und die Ressource an den Aufrufer zurückgegeben.|  
+|`NoCacheNoStore`|Wenn eine zwischengespeicherte Ressource vorhanden ist, wird er gelöscht. Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.|  
+|`Revalidate`|Führt eine Anforderung mithilfe die zwischengespeicherte Kopie der Ressource, wenn der Zeitstempel der Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls wird die Ressource wird heruntergeladen, vom Server an den Aufrufer angezeigt und im Cache gespeichert ist,|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob HTTP\-Caching aktiv ist und beschreibt die Standardcachingrichtlinie.|  
-|[\<defaultFtpCachePolicy\>\-Element \(Netzwerkeinstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob FTP\-Caching aktiv ist und beschreibt die Standardcachingrichtlinie.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob HTTP-caching aktiv ist und beschreibt die Standardcachingrichtlinie.|  
+|[\<DefaultFtpCachePolicy >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob der FTP-caching ist aktiv und beschreibt die Standardcachingrichtlinie.|  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie .NET Framework eine Verbindung mit dem Netzwerk herstellt.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
-## Beispiel  
- Das folgende Codebeispiel veranschaulicht, wie das Caching vollständig deaktiviert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie das caching vollständig deaktiviert wird.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <requestCaching  
@@ -95,6 +96,6 @@ Steuert den Cachingmechanismus für Netzwerkanforderungen.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.Cache?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.Cache?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

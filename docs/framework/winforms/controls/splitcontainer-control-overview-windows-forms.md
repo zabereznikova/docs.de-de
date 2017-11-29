@@ -1,64 +1,63 @@
 ---
-title: "&#220;bersicht &#252;ber das SplitContainer-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SplitContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer-Steuerelement [Windows Forms], Informationen über das SplitContainer-Steuerelement"
+title: "Übersicht über das SplitContainer-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SplitContainer
+helpviewer_keywords: SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das SplitContainer-Steuerelement (Windows&#160;Forms)
-Das <xref:System.Windows.Forms.SplitContainer>\-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind.  Wenn sich der Mauszeiger über der Leiste befindet, ändert sich sein Aussehen, um anzuzeigen, dass die Leiste verschiebbar ist.  
+# <a name="splitcontainer-control-overview-windows-forms"></a>Übersicht über das SplitContainer-Steuerelement (Windows Forms)
+Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind. Wenn sich der Mauszeiger über der Leiste befindet, ändert sich seine Form und zeigt an, dass die Leiste verschiebbar ist.  
   
 > [!IMPORTANT]
->  In der **Toolbox** ersetzt das <xref:System.Windows.Forms.SplitContainer>\-Steuerelement das <xref:System.Windows.Forms.Splitter>\-Steuerelement, das in der Vorgängerversion von [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] enthalten war.  Das <xref:System.Windows.Forms.SplitContainer>\-Steuerelement ist das bevorzugte Steuerelement gegenüber dem <xref:System.Windows.Forms.Splitter>\-Steuerelement.  Die <xref:System.Windows.Forms.Splitter>\-Klasse ist aus Gründen der Kompatibilität mit vorhandenen Anwendungen weiterhin in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enthalten. Wir empfehlen jedoch ausdrücklich die Verwendung des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements bei neuen Projekten.  
+>  In der **Toolbox**, <xref:System.Windows.Forms.SplitContainer> steuern ersetzt die <xref:System.Windows.Forms.Splitter> Steuerelement, das in der vorherigen Version von war [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement ist dem <xref:System.Windows.Forms.Splitter>-Steuerelement vorzuziehen. Die <xref:System.Windows.Forms.Splitter> Klasse dient weiterhin in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für Kompatibilität mit vorhandenen Anwendungen, aber wir empfehlen Ihnen die Verwendung stark der <xref:System.Windows.Forms.SplitContainer> Steuerelement für neue Projekte.  
   
- Mit dem <xref:System.Windows.Forms.SplitContainer>\-Steuerelement können Sie komplexe Benutzeroberflächen erstellen. Häufig bestimmt die Auswahl in dem einen Bereich, welche Objekte in dem anderen Bereich angezeigt werden.  Diese Anordnung eignet sich sehr gut für die Anzeige und das Durchsuchen von Informationen.  Die beiden Bereiche ermöglichen die in Bereiche getrennte Anordnung von Informationen. Mithilfe der Leiste, die auch "Splitter" genannt wird, können die Benutzer die Größe der Bereiche leicht anpassen.  
+ Mit der <xref:System.Windows.Forms.SplitContainer> -Steuerelement, können Sie komplexe Benutzeroberflächen erstellen; häufig bestimmt die Auswahl in einem Fensterbereich, welche Objekte im anderen Fensterbereich angezeigt werden. Diese Anordnung eignet sich sehr gut für die Anzeige und das Durchsuchen von Informationen. Mit zwei Bereichen können Sie die Informationen in Bereichen aggregieren, und das Balken- oder "Splitter" erleichtert es Benutzern, die Größe der Bereiche ändern.  
   
- Es können auch mehrere <xref:System.Windows.Forms.SplitContainer>\-Steuerelemente verwendt werden. Dabei wird das zweite <xref:System.Windows.Forms.SplitContainer>\-Steuerelement horizontal ausgerichtet, um die Bereiche übereinander anzuordnen.  
+ Mehrere <xref:System.Windows.Forms.SplitContainer> Steuerelement kann auch geschachtelt werden können und mit der zweiten <xref:System.Windows.Forms.SplitContainer> Steuerelement dienstorientierten horizontal, oberen und unteren Bereiche zu erstellen.  
   
- Beachten Sie, dass auf das <xref:System.Windows.Forms.SplitContainer>\-Steuerelement standardmäßig über Tastatureingaben zugegriffen werden kann. Wenn die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>\-Eigenschaft auf `false` festgelegt ist, können Benutzer den Splitter durch Drücken der PFEILTASTEN verschieben.  
+ Beachten Sie, den <xref:System.Windows.Forms.SplitContainer> Steuerelement ist Tastatur standardmäßig; Benutzer können die Pfeiltasten zum Verschieben des Splitters, wenn die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaftensatz auf `false`.  
   
- Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A>\-Eigenschaft des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements bestimmt die Richtung des Splitters, nicht die des Steuerelements.  Wenn diese Eigenschaft auf <xref:System.Windows.Forms.Orientation> festgelegt ist, verläuft der Splitter daher von oben nach unten und erstellt einen linken und einen rechten Bereich.  
+ Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft von der <xref:System.Windows.Forms.SplitContainer> Steuerelement bestimmt die Richtung des Splitters, nicht des Steuerelements selbst. Daher, wenn diese Eigenschaft auf festgelegt ist <xref:System.Windows.Forms.Orientation.Vertical>, verläuft der Splitter von oben nach unten, links und rechts Bereiche erstellen.  
   
- Beachten Sie außerdem, dass der Wert der <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>\-Eigenschaft entsprechend dem Wert der <xref:System.Windows.Forms.SplitContainer.Orientation%2A>\-Eigenschaft variiert.  Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>\-Eigenschaft.  
+ Achten Sie außerdem darauf, den Wert von der <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> Eigenschaft variiert abhängig vom Wert der <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> Eigenschaft.  
   
- Sie können auch die Größe und die Bewegung des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements beschränken.  Die <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>\-Eigenschaft bestimmt, welcher Bereich bei einer Größenänderung des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements seine ursprüngliche Größe beibehält. Die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>\-Eigenschaft legt fest, ob der Splitter mithilfe der Tastatur oder der Maus verschoben werden kann.  
+ Sie können auch die Größe und die Verschiebung der Einschränken der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Die <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Eigenschaft bestimmt, welcher Bereich bleibt die gleiche Größe nach der <xref:System.Windows.Forms.SplitContainer> die Größe des Steuerelements wird geändert, und die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Eigenschaft bestimmt, ob der Splitter durch die Tastatur oder Maus verschiebbar ist.  
   
 > [!NOTE]
->  Auch wenn die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>\-Eigenschaft auf `true` festgelegt ist, kann der Splitter zum Beispiel unter Verwendung der <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>\-Eigenschaft programmgesteuert verschoben werden.  
+>  Auch wenn die <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaftensatz auf `true`, Splitters möglicherweise immer noch verschoben werden, programmgesteuert, z. B. mithilfe der <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Eigenschaft.  
   
- Nicht zuletzt verfügt jeder Bereich des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements über Eigenschaften, um die individuelle Bereichsgröße zu bestimmen.  
+ Schließlich jeder Bereich, der die <xref:System.Windows.Forms.SplitContainer> Steuerelement verfügt über Eigenschaften, deren individuelle Größe zu bestimmen.  
   
-## Häufig verwendete Eigenschaften, Methoden und Ereignisse  
+## <a name="commonly-used-properties-methods-and-events"></a>Häufig verwendete Eigenschaften, Methoden und Ereignisse  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>\-Eigenschaft|Bestimmt, welcher Bereich bei einer Größenänderung des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements die ursprüngliche Größe beibehält.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>\-Eigenschaft|Bestimmt, ob der Splitter mit der Tastatur oder der Maus verschoben werden kann.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A>\-Eigenschaft|Bestimmt, ob der Splitter vertikal oder horizontal verläuft.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>\-Eigenschaft|Bestimmt den Abstand zwischen dem linken bzw. oberen Rand und der verschiebbaren Splitterleiste in Pixel.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>\-Eigenschaft|Bestimmt den Mindestabstand in Pixel, um den der Benutzer den Splitter verschieben kann.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>\-Eigenschaft|Bestimmt die Breite des Splitters in Pixel.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>\-Ereignis|Tritt auf, wenn der Splitter gerade verschoben wird.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>\-Ereignis|Tritt auf, wenn der Splitter verschoben wurde.|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>-Eigenschaft|Bestimmt der Bereich, das unverändert bleibt nach der Größe der <xref:System.Windows.Forms.SplitContainer> Größe des Steuerelements geändert.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>-Eigenschaft|Bestimmt, ob der Splitter mit der Tastatur oder Maus verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A>-Eigenschaft|Bestimmt, ob der Splitter vertikal oder horizontal angeordnet sind.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>-Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>-Eigenschaft|Bestimmt die minimale Entfernung in Pixel, dass der Splitter vom Benutzer verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>-Eigenschaft|Bestimmt die Breite des Splitters in Pixel an.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>-Ereignis|Tritt auf, wenn der Splitter verschoben werden.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>-Ereignis|Tritt auf, wenn der Splitter verschoben wurde.|  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer\-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [SplitContainer Control Sample](http://msdn.microsoft.com/de-de/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [SplitContainer-Steuerelement-Beispiel](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

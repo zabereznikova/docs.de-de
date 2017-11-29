@@ -1,80 +1,78 @@
 ---
-title: "Inherits Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Inherits"
-  - "Inherits"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Inherits statement"
-  - "Inherits statement, syntax"
+title: Inherits Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Inherits
+- Inherits
+helpviewer_keywords:
+- Inherits statement [Visual Basic]
+- Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Inherits Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Bewirkt, dass die aktuelle Klasse oder Schnittstelle Attribute, Variablen, Eigenschaften, Prozeduren und Ereignisse von einer anderen Klasse oder Gruppe von Schnittstellen erbt.  
+# <a name="inherits-statement"></a>Inherits Statement
+Bewirkt, dass die aktuelle Klasse oder Schnittstelle, um die Attribute, Variablen, Eigenschaften, Prozeduren und Ereignisse von einer anderen Klasse oder Gruppe von Schnittstellen erben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Inherits basetypenames  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`basetypenames`|Erforderlich.  Der Name der Klasse, von der diese Klasse abgeleitet wird.<br /><br /> \- oder \-<br /><br /> Die Namen der Schnittstellen, von denen diese Schnittstelle abgeleitet wird.  Trennen Sie mehrere Namen mit Komma.|  
+|---|---|  
+|`basetypenames`|Erforderlich. Der Name der Klasse, von der diese Klasse abgeleitet wird.<br /><br /> - oder - <br /><br /> Die Namen der Schnittstellen, die von denen diese Schnittstelle abgeleitet wird. Verwenden Sie Kommas zum Trennen Sie mehrere Namen ein.|  
   
-## Hinweise  
- Die `Inherits`\-Anweisung muss die erste nicht leere, kommentarlose Zeile in einer Klassen\- oder Schnittstellendefinition sein.  Sie muss direkt auf die `Class`\-Anweisung oder die `Interface`\-Anweisung folgen.  
+## <a name="remarks"></a>Hinweise  
+ Wenn verwendet, die `Inherits` -Anweisung muss die erste nicht leere, nicht kommentierten Zeile in der Definition einer Klasse oder Schnittstelle sein. Folgen sie sofort die `Class` oder `Interface` Anweisung.  
   
- Sie können `Inherits` nur in einer Klasse oder einer Schnittstelle verwenden.  Daher kann der Deklarationskontext für Vererbung keine Quelldatei, kein Namespace, keine Struktur, kein Modul, keine Prozedur und kein Block sein.  
+ Sie können `Inherits` nur in einer Klasse oder Schnittstelle. Dies bedeutet, dass der Deklarationskontext für Vererbung eine Quelldatei, Namespace, Struktur, Modul, Prozedur oder Block nicht möglich.  
   
-## Regeln  
+## <a name="rules"></a>Regeln  
   
--   **Klassenvererbung.** Wenn eine Klasse die `Inherits`\-Anweisung verwendet, können Sie nur eine Basisklasse angeben.  
+-   **Klassenvererbung.** Wenn einer Klasse verwendet die `Inherits` -Anweisung können Sie nur eine Basisklasse angeben.  
   
-     Eine Klasse kann nicht von einer Klasse erben, die in ihr geschachtelt ist.  
+     Eine Klasse kann nicht von einer Klasse, die in ihr geschachtelt erben.  
   
--   **Schnittstellenvererbung.** Wenn eine Schnittstelle die `Inherits`\-Anweisung verwendet, können Sie eine oder mehrere Basisschnittstellen angeben.  Sie können zwei Schnittstellen vererben, auch wenn jede Schnittstelle einen Member mit dem gleichen Namen definiert.  In diesem Fall muss der implementierende Code Namensqualifizierung verwenden, um anzugeben, welcher Member implementiert wird.  
+-   **Schnittstellenvererbung.** Wenn eine Schnittstelle verwendet, die `Inherits` -Anweisung können Sie eine oder mehrere Basisschnittstellen angeben. Sie können von zwei Schnittstellen erben, auch wenn sie jeweils ein Element mit demselben Namen definieren. In diesem Fall muss der implementierende Code Namensqualifikation verwenden, um die Member anzugeben implementiert wird.  
   
-     Eine Schnittstelle kann nicht von einer anderen Schnittstelle mit einer restriktiveren Zugriffsebene erben.  Eine Schnittstelle mit `Public`\-Zugriff kann beispielweise nicht von einer Schnittstelle mit `Friend`\-Zugriff erben.  
+     Eine Schnittstelle kann nicht von einer anderen Schnittstelle mit einer stärker einschränkende Zugriffsebene erben. Z. B. eine `Public` Schnittstelle kann nicht Vererben eine `Friend` Schnittstelle.  
   
-     Eine Schnittstelle kann nicht von einer Schnittstelle erben, die in ihr geschachtelt ist.  
+     Eine Schnittstelle kann nicht von einer Schnittstelle, die in ihr geschachtelt erben.  
   
- Ein Beispiel für Klassenvererbung in .NET Framework ist die <xref:System.ArgumentException>\-Klasse, die von der <xref:System.SystemException>\-Klasse erbt.  Hierdurch erhält <xref:System.ArgumentException> alle vordefinierten Eigenschaften und Prozeduren, die für Systemausnahmen erforderlich sind, z. B. die <xref:System.Exception.Message%2A>\-Eigenschaft und die <xref:System.Exception.ToString%2A>\-Methode.  
+ Ein Beispiel der klassenvererbung in .NET Framework ist die <xref:System.ArgumentException> -Klasse, die erbt die <xref:System.SystemException> Klasse. Dies ermöglicht auf <xref:System.ArgumentException> alle vordefinierten Eigenschaften und Prozeduren, die erforderlichen Systemausnahmen, z. B. die <xref:System.Exception.Message%2A> Eigenschaft und die <xref:System.Exception.ToString%2A> Methode.  
   
- Ein Beispiel für Schnittstellenvererbung in .NET Framework ist die <xref:System.Collections.ICollection>\-Schnittstelle, die von der <xref:System.Collections.IEnumerable>\-Schnittstelle erbt.  Dies bewirkt, dass <xref:System.Collections.ICollection> die Definition des Enumerators erbt, der zum Durchlaufen einer Auflistung erforderlich ist.  
+ Ein Beispiel für schnittstellenvererbung in .NET Framework ist die <xref:System.Collections.ICollection> -Schnittstelle, die erbt die <xref:System.Collections.IEnumerable> Schnittstelle. Dies bewirkt, dass <xref:System.Collections.ICollection> erben die Definition der Enumerator zum Durchlaufen einer Auflistung erforderlich.  
   
-## Beispiel  
- In diesem Beispiel wird die `Inherits`\-Anweisung verwendet, um zu zeigen, wie die Klasse `thisClass` alle Member der Basisklasse `anotherClass` erben kann.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `Inherits` Anweisung, um anzuzeigen, wie eine Klasse mit dem Namen `thisClass` können alle Member der Basisklasse erben `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird die Vererbung von mehreren Schnittstellen veranschaulicht.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt die Vererbung von mehreren Schnittstellen.  
   
  [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
- Die Schnittstelle `thisInterface` enthält jetzt alle Definitionen in den Schnittstellen <xref:System.IComparable>, <xref:System.IDisposable> und <xref:System.IFormattable>. Die geerbten Member ermöglichen den typspezifischen Vergleich von zwei Objekten, die Freigabe reservierter Ressourcen bzw. die Darstellung des Werts eines Objekts als `String`.  Eine Klasse, die `thisInterface` implementiert, muss jeden Member jeder Basisschnittstelle implementieren.  
+ Die Schnittstelle mit dem Namen `thisInterface` enthält jetzt alle Definitionen in der <xref:System.IComparable>, <xref:System.IDisposable>, und <xref:System.IFormattable> Schnittstellen, die die geerbten Member bzw. für typspezifische Vergleich von zwei Objekten bereitstellen: Freigeben von zugeordneten Ressourcen , und geben den Wert eines Objekts als ein `String`. Eine Klasse, die implementiert `thisInterface` muss jedes Mitglied jeder Basisschnittstelle implementieren.  
   
-## Siehe auch  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

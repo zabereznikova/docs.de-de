@@ -1,53 +1,59 @@
 ---
-title: "&lt;add&gt; von &lt;defaultPorts&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt; von &lt;defaultPorts&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd487238ebe327a5f89b737fdf764d94f955a411
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt; von &lt;defaultPorts&gt;
+# <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;add&gt; von &lt;defaultPorts&gt;
 Ein Standardkommunikationsendpunkt, den die Clientanwendung überwacht.  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Verhalten >  
+\<ServiceBehaviors >  
+\<Verhalten >  
+\<UseRequestHeadersForMetadataAddress >  
+\<DefaultPorts >  
+\<add>  
   
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
 ```  
   
-<useRequestHeadersForMetadataAddress>  
-   <defaultPorts>  
-      <add port="Integer" scheme="String" />  
-   </defaultPorts>  
-</useRequestHeadersForMetadataAddress>  
-```  
-  
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
+|---------------|-----------------|  
 |Port|Eine ganze Zahl, die die Nummer des Standardkommunikationsports angibt.|  
 |scheme|Eine Zeichenfolge, die die Gruppe von Protokolleinstellungen angibt, die einem Kommunikationsport zugeordnet ist.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<defaultPorts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Eine Auflistung von Standardports mit den Standardkommunikationsendpunkten, die von der Clientanwendung überwacht werden.|  
+|-------------|-----------------|  
+|[\<DefaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Eine Auflistung von Standardports mit den Standardkommunikationsendpunkten, die von der Clientanwendung überwacht werden.|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.DefaultPortElement>

@@ -1,84 +1,87 @@
 ---
-title: "&lt;add&gt;-Element f&#252;r schemeSettings (URI-Einstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Hinzufügen&gt; -Element für SchemeSettings (Uri-Einstellungen)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 8ce4cc33d054e74fc9868a16764e744daf260c10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt;-Element f&#252;r schemeSettings (URI-Einstellungen)
-Fügt eine Schemaeinstellung für einen Schemanamen hinzu.  
+# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;Hinzufügen&gt; -Element für SchemeSettings (Uri-Einstellungen)
+Fügt eine Schema-Einstellung für den Schemanamen eines.  
   
-## Syntax  
+ \<configuration>  
+\<URI >  
+\<SchemeSettings >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <add   
-   name = "http|https" genericUriParserOptions="DontUnescapePathDotsAndSlashes"  
+```xml  
+<add
+  name="http|https"
+  genericUriParserOptions="DontUnescapePathDotsAndSlashes"
 />  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
+ In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|name|Der Schemaname, für den diese Einstellung gültig ist.  Die einzigen unterstützten Werte sind Name \= "http" und Name \= "https".|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|Name|Der Schemaname für die diese Einstellung gilt. Der nur die unterstützten Werte sind Name = "http" und Name = "Https".|  
   
-## {Attributname} Attribut  
+## <a name="attribute-name-attribute"></a>{Attributnamen} Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|genericUriParserOptions|Die Parseroptionen für dieses Schema.  Der einzige unterstützte Wert ist genericUriParserOptions \= "DontUnescapePathDotsAndSlashes".|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|genericUriParserOptions|Die Parseroptionen für dieses Schema. Der nur unterstützte Wert GenericUriParserOptions ist = "DontUnescapePathDotsAndSlashes".|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[\<schemeSettings\>\-Element \(Uri\-Einstellungen\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, wie ein <xref:System.Uri>\-Objekt für bestimmte Schemen analysiert wird.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
-## Hinweise  
- Standardmäßig entfernt die <xref:System.Uri?displayProperty=fullName>\-Klasse Escapezeichen aus als Prozentwert codierte Pfadtrennzeichen vor dem Ausführen der Pfadkomprimierung.  Dies wurde als Sicherheitsmechanismus gegen Angriffe implementiert. Beispiel:  
+## <a name="remarks"></a>Hinweise  
+ Wird standardmäßig die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen Prozent codiert Pfadtrennzeichen vor dem Pfad Komprimierung ausführen. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Wenn dieser URI an Module übergeben wird und als Prozentwert codierte Zeichen nicht ordnungsgemäß behandelt werden, kann dies dazu führen, dass vom Server der folgende Befehl ausgeführt wird:  
+ Wenn dieser URI übergeben wird auf Module nicht behandeln Prozent codierten Zeichen richtig, kann dies dazu führen den folgenden Befehl, der vom Server ausgeführt wird:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund entfernt die <xref:System.Uri?displayProperty=fullName>\-Klasse zuerst Escapezeichen aus Pfadtrennzeichen und wendet dann die Pfadkomprimierung an.  Das Übergeben der böswilligen URL oben an den <xref:System.Uri?displayProperty=fullName>\-Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund <xref:System.Uri?displayProperty=nameWithType> -Klasse erste un-Escapezeichen Pfadtrennzeichen und wendet dann Pfad Komprimierung. Das Ergebnis der Übergabe der böswilligen URL oben auf <xref:System.Uri?displayProperty=nameWithType> Klassenkonstruktor führt der folgende URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Dieses Standardverhalten kann so abgeändert werden, dass aus prozentcodierten Pfadtrennzeichen, die die schemeSettings\-Konfigurationsoption für ein bestimmtes Schema verwenden, die Escapezeichen nicht gelöscht werden.  
+ Dieses Standardverhalten kann auf keine Escapezeichen Prozentzeichen codierten Pfadtrennzeichen mithilfe der Konfigurationsoption SchemeSettings für ein bestimmtes Schema geändert werden.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird ebenfalls eine von der <xref:System.Uri>\-Klasse verwendete Konfiguration gezeigt, die das Nichthinzufügen von Escapezeichen zu als Prozentwert codierten Pfadabgrenzungszeichen für das HTTP\-Schema unterstützt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine Konfiguration von verwendet die <xref:System.Uri> Klasse keine Escapezeichen Prozentzeichen codiert Pfadtrennzeichen für die http-Protokollschema unterstützt.  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -88,11 +91,11 @@ Fügt eine Schemaeinstellung für einen Schemanamen hinzu.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

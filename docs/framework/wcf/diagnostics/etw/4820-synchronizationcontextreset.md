@@ -1,35 +1,38 @@
 ---
-title: "4820 - SynchronizationContextReset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4820 - SynchronizationContextReset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8a5c1597-5270-4b0a-9c8c-bf5f07f7e816
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 59c9a183e05005adc89156ee024f9b3cba50962b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 4820 - SynchronizationContextReset
-## Eigenschaften  
+# <a name="4820---synchronizationcontextreset"></a>4820 - SynchronizationContextReset
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|4820|  
 |Stichwörter|Suche|  
 |Ebene|Information|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird ausgegeben, wenn der SynchronizationContext vom DiscoveryClientChannel auf den ursprünglichen Wert zurückgesetzt wurde.  
   
-## Meldung  
+## <a name="message"></a>Meldung  
  Der SynchronizationContext wurde von DiscoveryClientChannel auf den ursprünglichen Wert "%1" zurückgesetzt.  
   
-## Details
+## <a name="details"></a>Details

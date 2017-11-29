@@ -1,74 +1,77 @@
 ---
-title: "&lt;performanceCounters&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<performanceCounter>-Element"
-  - "performanceCounter-Element"
+title: '&lt;PerformanceCounter&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
+helpviewer_keywords:
+- performanceCounter element
+- <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ca6debc4458c34e9f76b0bfaa0e2047ce0be2cae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;performanceCounters&gt;-Element (Netzwerkeinstellungen)
+# <a name="ltperformancecountergt-element-network-settings"></a>&lt;PerformanceCounter&gt; -Element (Netzwerkeinstellungen)
 Aktiviert oder deaktiviert Netzwerkleistungsindikatoren.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<Einstellungen >  
+\<PerformanceCounters >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <performanceCounters  
   enabled="true|false"  
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Gibt an, ob die Netzwerkleistungsindikatoren aktiviert sind.  Der Standardwert ist `false`.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Gibt an, ob die Netzwerkleistungsindikatoren aktiviert sind. Der Standardwert ist `false`.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>\-Namespace.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
-## Hinweise  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
- Netzwerkleistungsindikatoren müssen zur Verwendung in der Konfigurationsdatei aktiviert werden.  Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert oder deaktiviert.  Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden.  Weitere Informationen zu den bestimmten Netzwerkleistungsindikatoren finden Sie unter [Networking Performance Counters](http://msdn.microsoft.com/de-de/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen zu bestimmten Netzwerkleistungsindikatoren finden Sie unter [Netzwerkleistungsindikatoren](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
   
- Der Standardwert ist, dass Netzwerkleistungsindikatoren deaktiviert sind.  
+ Der Standardwert ist, dass Netzwerkleistungsindikatoren Leistungsindikatoren deaktiviert sind.  
   
- Die <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName>\-Eigenschaft kann verwendet werden, um den aktuellen Wert des **enabled**\-Attributs aus anwendbaren Konfigurationsdateien abzurufen.  
+ Die <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Eigenschaft kann verwendet werden, den aktuellen Wert der abzurufenden der **aktiviert** Attribut aus anwendbaren Konfigurationsdateien.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird gezeigt, wie <xref:System.Net> und verwandte Namespaces konfiguriert werden, um Netzwerkleistungsindikatoren zu aktivieren.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren die <xref:System.Net> und in verwandten Namespaces Netzwerkleistungsindikatoren zu aktivieren.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -80,8 +83,8 @@ Aktiviert oder deaktiviert Netzwerkleistungsindikatoren.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=fullName>   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Networking Performance Counters](http://msdn.microsoft.com/de-de/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [Netzwerkleistungsindikatoren](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

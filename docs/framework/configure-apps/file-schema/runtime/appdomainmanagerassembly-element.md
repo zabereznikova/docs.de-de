@@ -1,75 +1,77 @@
 ---
-title: "&lt;appDomainManagerAssembly&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<appDomainManagerAssembly>-Element"
-  - "appDomainManagerAssembly-Element"
+title: '&lt;AppDomainManagerAssembly&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <appDomainManagerAssembly> element
+- appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e07b7bd18f19439f64ed8eaef5bda3bad5cef77
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;appDomainManagerAssembly&gt;-Element
-Gibt die Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.  
+# <a name="ltappdomainmanagerassemblygt-element"></a>&lt;AppDomainManagerAssembly&gt; Element
+Gibt die Assembly an, die den Anwendungsdomänen-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<AppDomainManagerAssembly >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <appDomainManagerAssembly   
    value="assembly display name" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`value`|Erforderliches Attribut.  Gibt den Anzeigenamen der Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`value`|Erforderliches Attribut. Gibt den Anzeigenamen der Assembly, die den Anwendungsdomänen-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Um den Typ des Anwendungsdomänen\-Managers anzugeben, müssen Sie dieses Element und das [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)\-Element angeben.  Wenn eines dieser Elemente nicht angegeben wird, wird das andere ignoriert.  
+## <a name="remarks"></a>Hinweise  
+ Um den Typ des Anwendungsdomänen-Managers anzugeben, müssen Sie dieses Element angeben und die [ \<AppDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) Element. Wenn eines dieser Elemente nicht angegeben ist, wird die andere ignoriert.  
   
- Wenn die Standardanwendungsdomäne geladen wird, wird <xref:System.TypeLoadException> ausgelöst, falls die angegebene Assembly nicht vorhanden ist, oder nicht den Typ enthält, der vom [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)\-Element angegeben wird; und der Prozess nicht gestartet.  Wenn die Assembly gefunden wird, die Versionsinformationen jedoch nicht übereinstimmen, wird eine <xref:System.IO.FileLoadException> ausgelöst.  
+ Wenn die Standardanwendungsdomäne geladen wird, <xref:System.TypeLoadException> wird ausgelöst, wenn die angegebene Assembly nicht vorhanden ist oder wenn die Assembly nicht mit den vom angegebenen Typ enthält die [ \<AppDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) -Element ist; und der Prozess nicht gestartet. Wenn die Assembly gefunden wird, aber die Versionsinformationen nicht überein stimmt, eine <xref:System.IO.FileLoadException> ausgelöst wird.  
   
- Wenn Sie den Typ des Anwendungsdomänen\-Managers für die Standardanwendungsdomäne angeben, erben andere Anwendungsdomänen, die aus der Standardanwendungsdomäne erstellt wurden, den Typ des Anwendungsdomänen\-Managers.  Verwenden Sie die <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName>\-Eigenschaft und die <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>\-Eigenschaft, um für eine neue Anwendungsdomäne einen anderen Anwendungsdomänen\-Managertyp anzugeben.  
+ Wenn Sie die Anwendung Manager Domänentyp für die Standardanwendungsdomäne angeben, erben andere Anwendungsdomänen, die von der Standardanwendungsdomäne erstellt Managertyp die Anwendung an. Verwenden der <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> und <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> Eigenschaften zur Angabe einer anderen Anwendung Manager Domänentyp für eine neue Anwendungsdomäne.  
   
- Um den Anwendungsdomänen\-Managertyp anzugeben, ist vollständige Vertrauenswürdigkeit für die Anwendung erforderlich. \(Eine Anwendung, die auf dem Desktop ausgeführt wird, hat beispielsweise vollständige Vertrauenswürdigkeit.\) Wenn die Anwendung keine vollständige Vertrauenswürdigkeit hat, wird eine <xref:System.TypeLoadException> ausgelöst.  
+ Die Anwendungsdomänen-Managertyp angeben, muss die Anwendung volle Vertrauenswürdigkeit. (Z. B. weist eine Anwendung, die auf dem Desktop ausgeführte volle Vertrauenswürdigkeit.) Wenn die Anwendung nicht über die volle Vertrauenswürdigkeit verfügt eine <xref:System.TypeLoadException> ausgelöst wird.  
   
- Informationen zum Format des Anzeigenamens der Assembly finden Sie unter der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>\-Eigenschaft.  
+ Das Format des Assemblyanzeigenamens, finden Sie unter der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> Eigenschaft.  
   
- Dieses Konfigurationselement ist erst ab [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] verfügbar.  
+ Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angegeben werden kann, dass der `MyMgr`\-Typ in der `AdMgrExample`\-Assembly als Anwendungsdomänen\-Manager für die Standardanwendungsdomäne eines Prozesses verwendet wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie angeben, dass die Anwendungsdomänen-Manager für die Standardanwendungsdomäne eines Prozesses ist die `MyMgr` Geben Sie in der `AdMgrExample` Assembly.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <appDomainManagerType value="MyMgr" />  
@@ -79,10 +81,10 @@ Gibt die Assembly an, die den Anwendungsdomänen\-Manager für die Standardanwen
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>   
- [\<appDomainManagerType\>\-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)   
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [SetAppDomainManagerType\-Methode](../Topic/ICLRControl::SetAppDomainManagerType%20Method.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
+ [\<AppDomainManagerType >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [SetAppDomainManagerType-Methode](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

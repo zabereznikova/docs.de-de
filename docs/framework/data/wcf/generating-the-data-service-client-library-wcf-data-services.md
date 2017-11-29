@@ -1,48 +1,51 @@
 ---
-title: "Generieren der Datendienst-Clientbibliothek (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dienstverweis hinzufügen (Dialogfeld)"
-  - "Clientanwendungen, WCF Data Services"
-  - "WCF Data Services, Clientbibliothek"
+title: Generieren der Datendienst-Clientbibliothek (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client applications, WCF Data Services
+- WCF Data Services, client library
+- Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5fbf45a3447a1dc5fb449628bdd7f741fb3e8324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Generieren der Datendienst-Clientbibliothek (WCF Data Services)
-Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, kann ein Dienstmetadatendokument zurückgeben, in dem das vom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed verfügbar gemachte Datenmodell beschrieben wird.  Weitere Informationen finden Sie in [OData: Dienstmetadatendokument](http://go.microsoft.com/fwlink/?LinkId=186070). Sie können das Dialogfeld **Dienstverweis hinzufügen** in Visual Studio verwenden, um einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-basierten Dienst einen Verweis hinzuzufügen.  Wenn Sie dieses Tool verwenden, um den von einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed in einem Clientprojekt zurückgegebenen Metadaten einen Verweis hinzuzufügen, führt es die folgenden Aktionen aus:  
+# <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generieren der Datendienst-Clientbibliothek (WCF Data Services)
+Ein Datendienst, der implementiert die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kann ein dienstmetadatendokument an, die das Datenmodell verfügbar gemacht werden, indem Sie beschreibt Zurückgeben der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Weitere Informationen finden Sie unter [OData: Dienstmetadatendokument](http://go.microsoft.com/fwlink/?LinkId=186070). Können Sie die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio einen Verweis zum Hinzufügen einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]--basierten Diensts. Wenn Sie dieses Tool verwenden, um einen Verweis auf die Metadaten zurückgegebenes Hinzufügen einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in ein Clientprojekt, er führt die folgenden Aktionen:  
   
 -   Fordert das Dienstmetadatendokument vom Datendienst an und interpretiert die zurückgegebenen Metadaten.  
   
     > [!NOTE]
-    >  Die zurückgegebenen Metadaten werden im Clientprojekt als EDMX\-Datei gespeichert.  Diese EDMX\-Datei kann nicht mit dem Entity Data Model\-Designer geöffnet werden, da sie nicht das gleiche Format wie eine vom Entity Framework verwendete EDMX\-Datei aufweist.  Sie können diese Metadatendatei mit dem XML\-Editor oder einem beliebigen Texteditor anzeigen.  Weitere Informationen finden Sie in der Spezifikation [\[MC\-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833).  
+    >  Die zurückgegebenen Metadaten werden im Clientprojekt als EDMX-Datei gespeichert. Diese EDMX-Datei kann nicht mit dem Entity Data Model-Designer geöffnet werden, da sie nicht das gleiche Format wie eine vom Entity Framework verwendete EDMX-Datei aufweist. Sie können diese Metadatendatei mit dem XML-Editor oder einem beliebigen Texteditor anzeigen. Weitere Informationen finden Sie unter der [ \[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833) Spezifikation  
   
--   Generiert eine Darstellung des Diensts als Entitätscontainerklasse, die vom <xref:System.Data.Services.Client.DataServiceContext> erbt.  Diese generierte Entitätscontainerklasse entspricht dem Entitätscontainer, den die Entity Data Model\-Tools generieren.  Weitere Informationen finden Sie unter [Object Services Overview \(Entity Framework\)](http://msdn.microsoft.com/de-de/43014cf9-c9cb-4538-bfbb-197820b60038).  
+-   Generiert eine Darstellung des Diensts als Entitätscontainerklasse, die vom <xref:System.Data.Services.Client.DataServiceContext> erbt. Diese generierte Entitätscontainerklasse entspricht dem Entitätscontainer, den die Entity Data Model-Tools generieren. Weitere Informationen finden Sie unter [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 -   Generiert Datenklassen für die in den Dienstmetadaten erkannten Datenmodelltypen.  
   
--   Fügt dem Projekt einen Verweis auf die `System.Data.Services.Client`\-Assembly hinzu.  
+-   Fügt dem Projekt einen Verweis auf die `System.Data.Services.Client`-Assembly hinzu.  
   
- Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [wie: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
   
- Die Clientdatendienstklassen können auch an der Eingabeaufforderung mit dem Tool [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) generiert werden.  Weitere Informationen finden Sie unter [Gewusst wie: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ Die Client-Datendienstklassen können auch generiert werden, mithilfe der [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) Tool an der Eingabeaufforderung. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
-## Zuordnung von Clientdatentypen  
- Wenn Sie mithilfe des Dialogfelds **Dienstverweis hinzufügen** in Visual Studio oder des `DataSvcUtil.exe`\-Tools Clientdatenklassen generieren, die auf einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]\-Feed basieren, werden die .NET Framework\-Datentypen wie folgt den primitiven Typen aus dem Datenmodell zugeordnet:  
+## <a name="client-data-type-mapping"></a>Zuordnung von Clientdatentypen  
+ Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio oder die `DataSvcUtil.exe` Tool zum Generieren von clientdatenklassen auf der Grundlage von ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, um den primitiven Typen von .NET Framework-Datentypen zugeordnet werden die Daten wie folgt modellieren:  
   
-|Datenmodelltyp|.NET Framework\-Datentyp|  
-|--------------------|------------------------------|  
+|Datenmodelltyp|.NET Framework-Datentyp|  
+|---------------------|------------------------------|  
 |`Edm.Binary`|<xref:System.Byte> `[]`|  
 |`Edm.Boolean`|<xref:System.Boolean>|  
 |`Edm.Byte`|<xref:System.Byte>|  
@@ -59,6 +62,6 @@ Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.
   
  Weitere Informationen finden Sie unter [OData: Primitive Datentypen](http://go.microsoft.com/fwlink/?LinkId=186072).  
   
-## Siehe auch  
- [WCF Data Services\-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
+## <a name="see-also"></a>Siehe auch  
+ [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

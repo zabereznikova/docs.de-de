@@ -2,14 +2,8 @@
 title: "Schema für App-Einstellungen"
 ms.date: 05/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - schema app settings
 - app settings, schema [Windows Forms]
@@ -19,14 +13,12 @@ ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16d43acc3a26c8ce7212d100e0792d40de6fa2fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 1d51d06895e61be60bbe9153eacb2028cb32a1fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="app-settings-schema"></a>Schema für App-Einstellungen
 
 Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung.
@@ -85,4 +77,3 @@ Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstell
 
 [Übersicht über Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [Architektur der Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-architecture.md)
-

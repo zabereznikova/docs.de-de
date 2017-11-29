@@ -1,37 +1,41 @@
 ---
-title: "2029 - CompileVbExpressionStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 2029 - CompileVbExpressionStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f0752c88-61f9-4579-81a1-d804fbc000a9
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ec76e0845878f7b6f998248bb7ea387f908b1b43
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 2029 - CompileVbExpressionStop
-## Eigenschaften  
+# <a name="2029---compilevbexpressionstop"></a>2029 - CompileVbExpressionStop
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|2029|  
 |Schlüsselwörter|WFRuntime|  
 |Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
- Gibt den Abschluss einer VB\-Ausdruckskompilierung an.  
+## <a name="description"></a>Beschreibung  
+ Gibt den Abschluss einer VB-Ausdruckskompilierung an.  
   
-## Meldung  
- Das Kompilieren des VB\-Ausdrucks wurde abgeschlossen.  
+## <a name="message"></a>Meldung  
+ Das Kompilieren des VB-Ausdrucks wurde abgeschlossen.  
   
-## Details  
+## <a name="details"></a>Details  
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
+|--------------------|--------------------|-----------------|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

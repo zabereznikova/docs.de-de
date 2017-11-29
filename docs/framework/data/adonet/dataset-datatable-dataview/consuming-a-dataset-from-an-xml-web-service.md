@@ -1,36 +1,42 @@
 ---
-title: "Verwenden eines DataSet aus einem XML-Webdienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden eines "DataSet" von einem XML-Webdienst aus
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 73af93286530fe94145cb5c05f4c70eed110d6ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden eines DataSet aus einem XML-Webdienst
-Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht.  Das **DataSet** ist insofern "serialisierbar", als es als Eingabe in oder Ausgabe aus XML\-Webdiensten angegeben werden kann, ohne dass eine zusätzliche Codierung erforderlich ist, um den Inhalt des **DataSet** von einem XML\-Webdienst zu einem Client und zurück zu übertragen.  Das **DataSet** wird implizit mit dem DiffGram\-Format in einen XML\-Stream konvertiert, über das Netzwerk gesendet und dann beim Empfänger aus dem XML\-Stream als **DataSet** wiederhergestellt.  Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML\-Webdiensten zur Verfügung.  Weitere Informationen zum DiffGram\-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
+# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Verwenden eines "DataSet" von einem XML-Webdienst aus
+Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Die **DataSet** ist "serializable", als Eingabe für angegeben werden, oder Ausgabe aus XML-Webdiensten, ohne eine zusätzliche Codierung erforderlich, um den Inhalt zu streamen der **DataSet** aus einem XML-Webdienst zu einem Client und zurück. Die **DataSet** wird implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und dann aus dem XML-Stream als rekonstruiert ein **DataSet** auf der Empfängerseite. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen über das DiffGram-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
   
- Im folgenden Beispiel werden die Schritte zum Erstellen eines XML\-Webdiensts sowie eines Clients für diesen Dienst veranschaulicht, der das **DataSet** zur Übertragung relationaler Daten \(einschließlich der Änderungen an diesen Daten\) verwendet und alle Updates mit der ursprünglichen Datenquelle abgleicht.  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer XML-Webdienst und den Client, mit denen die **DataSet** Übertragung relationaler Daten (einschließlich der geänderte Daten), und beheben Sie alle Updates zurück, an die ursprüngliche Datenquelle.  
   
 > [!NOTE]
->  Es wird empfohlen, beim Erstellen eines XML\-Webdiensts immer die Sicherheitsaspekte zu berücksichtigen.  Informationen zum Gewährleisten der Sicherheit für XML\-Webdienste finden Sie unter [Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/de-de/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Es wird empfohlen, beim Erstellen eines XML-Webdiensts immer die Sicherheitsaspekte zu berücksichtigen. Informationen zum Sichern von einem XML-Webdienst finden Sie unter [Sichern von mit ASP.NET erstellte XML-Webdienste Services](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
-### So erstellen Sie einen XML\-Webdienst, der ein "DataSet" zurückgibt und verarbeitet  
+### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>So erstellen Sie einen XML-Webdienst, der ein "DataSet" zurückgibt und verarbeitet  
   
-1.  Erstellen Sie den XML\-Webdienst.  
+1.  Erstellen Sie den XML-Webdienst.  
   
-     Im Beispiel wird ein XML\-Webdienst erstellt, der Daten zurückgibt – in diesem Fall eine Kundenliste aus der **Northwind**\-Datenbank – und ein **DataSet** mit Updates zu den Daten empfängt, die der XML\-Webdienst mit der ursprünglichen Datenquelle abgleicht.  
+     Im Beispiel wird ein XML-Webdienst erstellt, das Daten zurückgibt, in diesem Fall eine Liste von Kunden aus der **Northwind** Datenbank, und erhält eine **DataSet** mit Updates, die die Daten der der XML-Webdienst Löst in der ursprünglichen Datenquelle zurück.  
   
-     Der XML\-Webdienst enthält zwei Methoden: **GetCustomers**, um die Kundenliste zurückzugeben, und **UpdateCustomers**, um Updates mit der Datenquelle abzugleichen.  Der XML\-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert.  Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
+     Der XML-Webdienst stellt zwei Methoden: **GetCustomers**, um die Liste mit Kunden zurückzugeben und **UpdateCustomers**, um Updates an der Datenquelle zu beheben. Der XML-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert. Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -94,7 +100,6 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
         Return custDS  
       End Function  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -162,41 +167,41 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
     }  
     ```  
   
-     In einem typischen Szenario würde die **UpdateCustomers**\-Methode geschrieben, um Verletzungen der vollständigen Parallelität abzufangen.  Zur Vereinfachung wurde in diesem Beispiel darauf verzichtet.  Weitere Informationen zur vollständigen Parallelität finden Sie unter [Vollständige Parallelität](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
+     In einem typischen Szenario die **UpdateCustomers** Methode würde geschrieben werden, um Verletzung der vollständigen Parallelität abzufangen. Zur Vereinfachung wurde in diesem Beispiel darauf verzichtet. Weitere Informationen zur vollständigen Parallelität finden Sie unter [vollständige Parallelität](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
   
-2.  Erstellen Sie einen XML\-Webdienstproxy.  
+2.  Erstellen Sie einen XML-Webdienstproxy.  
   
-     Clients des XML\-Webdiensts benötigen einen SOAP\-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können.  Sie können diesen Proxy von Visual Studio generieren lassen.  Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen.  Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen.  In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
+     Clients des XML-Webdiensts benötigen einen SOAP-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können. Sie können diesen Proxy von Visual Studio generieren lassen. Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen. Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen. In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
   
-     Ein Proxy kann mit dem Web Services Description Language\-Tool erstellt werden.  Wenn der XML\-Webdienst z. B. unter der URL **http:\/\/myserver\/data\/DataSetSample.asmx** verfügbar gemacht wird, verwenden Sie einen Befehl ähnlich dem folgenden, um einen Visual Basic .NET\-Proxy mit dem Namespace "WebData.DSSample" zu erstellen und in der Datei "sample.vb" zu speichern.  
+     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Z. B. wenn der XML-Webdienst auf die URL-http://myserver/data/DataSetSample.asmx verfügbar gemacht wird, einen Befehl wie folgt So erstellen Sie einen Visual Basic .NET Proxy mit dem Namespace ausgeben **http://myserver/data/DataSetSample.asmx** und speichern Sie sie in der Datei Datei "Sample.vb".  
   
     ```  
     wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     Zum Erstellen eines C\#\-Proxys in der Datei "sample.cs" verwenden Sie den folgenden Befehl:  
+     Zum Erstellen eines C#-Proxys in der Datei "sample.cs" verwenden Sie den folgenden Befehl:  
   
     ```  
     wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     Der Proxy kann dann als Bibliothek kompiliert und in einen XML\-Webdienstclient importiert werden.  Zum Kompilieren des Visual Basic .NET\-Proxycodes, der in der Datei "sample.vb" als "sample.dll" gespeichert wird, verwenden Sie den folgenden Befehl:  
+     Der Proxy kann dann als Bibliothek kompiliert und in einen XML-Webdienstclient importiert werden. Zum Kompilieren des Visual Basic .NET-Proxycodes, der in der Datei "sample.vb" als "sample.dll" gespeichert wird, verwenden Sie den folgenden Befehl:  
   
     ```  
     vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-     Zum Kompilieren des C\#\-Proxycodes, der in der Datei "sample.vb" als "sample.dll" gespeichert wird, verwenden Sie den folgenden Befehl:  
+     Zum Kompilieren des C#-Proxycodes, der in der Datei "sample.vb" als "sample.dll" gespeichert wird, verwenden Sie den folgenden Befehl:  
   
     ```  
     csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-3.  Erstellen Sie einen XML\-Webdienstclient.  
+3.  Erstellen Sie einen XML-Webdienstclient.  
   
-     Wenn Sie die Webdienst\-Proxyklasse von Visual Studio generieren lassen möchten, erstellen Sie einfach das Clientprojekt. Klicken Sie anschließend im Fenster des Projektmappen\-Explorers mit der rechten Maustaste auf das Projekt, klicken Sie auf **Webverweis hinzufügen**, und wählen Sie in der Liste der verfügbaren Webdienste den gewünschten Webdienst aus. \(Möglicherweise müssen Sie die Adresse des Webdienst\-Endpunkts angeben, wenn der Webdienst in der aktuellen Projektmappe oder auf dem aktuellen Computer nicht verfügbar ist.\) Wenn Sie den XML\-Webdienstproxy \(wie im vorigen Schritt beschrieben\) selbst erstellen, können Sie ihn in den Clientcode importieren und die XML\-Webdienstmethoden verwenden.  Im folgenden Codebeispiel wird die Proxybibliothek importiert, anschließend zum Abrufen einer Kundenliste **GetCustomers** aufgerufen, ein neuer Kunde hinzugefügt und dann ein **DataSet** mit den Updates an **UpdateCustomers** zurückgegeben.  
+     Wenn Sie Visual Studio die Webdienst-Proxyklasse für Sie generiert haben möchten, einfach das Client-Projekt erstellen und im Fenster Projektmappen-Explorer das Projekt der rechten Maustaste auf **Webverweis hinzufügen**, und wählen Sie den Webdienst aus die Liste der verfügbaren Webdienste (Dies erfordert möglicherweise die Adresse des Webdienst-Endpunkts, wenn der Webdienst nicht innerhalb der aktuellen Projektmappe oder auf dem aktuellen Computer verfügbar ist.) Wenn Sie den XML-Webdienstproxy (wie im vorigen Schritt beschrieben) selbst erstellen, können Sie ihn in den Clientcode importieren und die XML-Webdienstmethoden verwenden. Im folgenden Beispielcode wird die Proxybibliothek, Aufrufe importiert **GetCustomers** zum Abrufen einer Liste von Kunden, fügt einen neuen Kunden und gibt dann eine **DataSet** mit den Updates **UpdateCustomers** .  
   
-     Beachten Sie, dass in diesem Beispiel das von **DataSet.GetChanges** zurückgegebene **DataSet** an **UpdateCustomers** übergeben wird, da nur geänderte Zeilen an **UpdateCustomers** übergeben werden müssen.  **UpdateCustomers** gibt das aufgelöste **DataSet** zurück, das Sie anschließend über **Merge** mit dem vorhandenen **DataSet** zusammenführen können, um die aufgelösten Änderungen und die Zeilenfehlerinformationen aus dem Update zu integrieren.  Bei dem folgenden Codebeispiel wird davon ausgegangen, dass Sie den Webverweis mithilfe von Visual Studio erstellt haben und ihn im Dialogfeld **Webverweis hinzufügen** in "DsSample" umbenannt haben.  
+     Beachten Sie, die das Beispiel übergibt die **DataSet** zurückgegebenes **DataSet.GetChanges** auf **UpdateCustomers** da nur geänderte Zeilen übergeben werden müssen  **UpdateCustomers**. **UpdateCustomers** gibt das aufgelöste **DataSet**, die Sie dann **Merge** mit dem vorhandenen **DataSet** integriert die aufgelösten Änderungen und Zeilenfehlerinformationen aus dem Update. Im folgende Code wird davon ausgegangen, dass Sie Visual Studio verwendet haben, um den Webverweis zu erstellen und Sie den Webverweis DsSample umbenannt haben die **Webverweis hinzufügen** (Dialogfeld).  
   
     ```vb  
     Imports System  
@@ -222,7 +227,6 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
         customersDataSet.AcceptChanges()  
       End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -253,24 +257,24 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
     }  
     ```  
   
-     Wenn Sie sich entschlossen haben, die Proxyklasse selbst zu erstellen, müssen Sie die folgenden zusätzlichen Schritte ausführen.  Zum Kompilieren des Beispiels geben Sie die erstellte Proxybibliothek \("sample.dll"\) und die diesbezüglichen .NET\-Bibliotheken an.  Zum Kompilieren der Visual Basic .NET\-Version des Beispiels, die in der Datei "client.vb" gespeichert wurde, verwenden Sie den folgenden Befehl:  
+     Wenn Sie sich entschlossen haben, die Proxyklasse selbst zu erstellen, müssen Sie die folgenden zusätzlichen Schritte ausführen. Zum Kompilieren des Beispiels geben Sie die erstellte Proxybibliothek ("sample.dll") und die diesbezüglichen .NET-Bibliotheken an. Zum Kompilieren der Visual Basic .NET-Version des Beispiels, die in der Datei "client.vb" gespeichert wurde, verwenden Sie den folgenden Befehl:  
   
     ```  
     vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-     Zum Kompilieren der C\#\-Version des Beispiels, die in der Datei "client.cs" gespeichert wurde, verwenden Sie den folgenden Befehl:  
+     Zum Kompilieren der C#-Version des Beispiels, die in der Datei "client.cs" gespeichert wurde, verwenden Sie den folgenden Befehl:  
   
     ```  
     csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-## Siehe auch  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)   
- [Aktualisieren von Datenquellen mit DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- ['DataAdapter'\-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)   
- [Web Services Description Language Tool \(Wsdl.exe\)](http://msdn.microsoft.com/de-de/b9210348-8bc2-4367-8c91-d1a04b403e88)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
+ [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

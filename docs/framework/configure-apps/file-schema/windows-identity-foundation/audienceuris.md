@@ -1,76 +1,86 @@
 ---
-title: "&lt;audienceUris&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;audienceUris&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3ce884c19d205df4727dcce96ffdf34144ff1dd6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;audienceUris&gt;
-Gibt den Satz der URIs, die zulässigen Bezeichner der relying Party \(RP\) sind.  Token werden nicht angenommen, wenn sie einen, für eine der zulässigen Zielgruppen\-URIs Bereich.  
+# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden (RP) sind. Token werden nicht akzeptiert, es sei denn, sie eines der zulässigen "Audience"-URIs begrenzt sind.  
   
-## Syntax  
+ \<system.identityModel >  
+\<IdentityConfiguration >  
+\<SecurityTokenHandlers >  
+\<SecurityTokenHandlerConfiguration >  
+\<AudienceUris >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <audienceUris mode=xs:string>  
-          <add value=xs:string />  
-          <clear />  
-          <remove value=xs:string />  
-        </audienceUris>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <audienceUris mode=xs:string>  
+          <add value=xs:string />  
+          <clear />  
+          <remove value=xs:string />  
+        </audienceUris>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|mode|Ein <xref:System.IdentityModel.Selectors.AudienceUriMode> Wert, der angibt, ob die Publikum Beschränkung auf eine eingehende Token angewendet werden soll.  Die möglichen Werte sind "Always", "Nie" und "BearerKeyOnly".  Der Standardwert ist "Immer".  Optional.|  
+|---------------|-----------------|  
+|mode|Ein <xref:System.IdentityModel.Selectors.AudienceUriMode> Wert, der angibt, ob die Zielgruppe Einschränkung auf ein eingehendes Token angewendet werden soll. Die möglichen Werte sind "Immer", "Nie" und "BearerKeyOnly". Der Standardwert ist "Immer". Dies ist optional.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|`<add value=xs:string>`|Fügt den angegebenen URI die `value` \-Attribut auf die AudienceUris\-Auflistung.  Das `value`\-Attribut ist erforderlich.  Der URI ist Groß\-\/Kleinschreibung beachtet.|  
-|`<clear>`|Löscht die Auflistung der AudienceUris.  Alle Bezeichner werden aus der Auflistung entfernt.|  
-|`<remove value=xs:string>`|Entfernt den angegebenen URI die `value` \-Attribut aus der Auflistung der AudienceUris.  Das `value`\-Attribut ist erforderlich.  Der URI ist Groß\-\/Kleinschreibung beachtet.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheit Tokenhandler.|  
+|-------------|-----------------|  
+|`<add value=xs:string>`|Fügt den angegebenen URI der `value` -Attribut auf die AudienceUris-Auflistung. Das `value`-Attribut ist erforderlich. Der URI ist Groß-/Kleinschreibung beachtet.|  
+|`<clear>`|Löscht die AudienceUris-Auflistung. Alle Bezeichner werden aus der Auflistung entfernt.|  
+|`<remove value=xs:string>`|Entfernt den angegebenen URI der `value` Attribut aus der Auflistung AudienceUris. Das `value`-Attribut ist erforderlich. Der URI ist Groß-/Kleinschreibung beachtet.|  
   
-## Hinweise  
- Standardmäßig ist die Auflistung leer; Verwenden Sie `<add>`, `<clear>`, und `<remove>` Elemente die Auflistung zu ändern.  <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>und <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> verwenden die Werte im Publikum URI\-Auflistung eine konfigurieren Publikum URI\-Einschränkungen in erlaubt <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> Objekte.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
- Die `<audienceUris>` Element dargestellt durch die <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> Klasse.  Ein einzelner URI, der der Auflistung hinzugefügt wird dargestellt durch die <xref:System.IdentityModel.Configuration.AudienceUriElement> Klasse.  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Ermöglicht die Konfiguration für eine Auflistung der Tokenhandler.|  
+  
+## <a name="remarks"></a>Hinweise  
+ Standardmäßig ist die Auflistung leer. Verwenden Sie `<add>`, `<clear>`, und `<remove>` Elemente zum Ändern der Auflistung. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>und <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Objekte verwenden, die die Werte in der Zielgruppe URI Auflistung so konfigurieren Sie eine Zielgruppe URI-Einschränkungen in zulässige <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> Objekte.  
+  
+ Die `<audienceUris>` Element dargestellt ist, durch die <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> Klasse. Ein einzelne URI der Teamprojektsammlung hinzugefügt wird dargestellt, durch die <xref:System.IdentityModel.Configuration.AudienceUriElement> Klasse.  
   
 > [!NOTE]
->  Die Verwendung der `<audienceUris>` Element als untergeordnetes Element von der [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber wird aus Kompatibilitätsgründen weiterhin unterstützt.  Einstellungen auf die `<securityTokenHandlerConfiguration>` Element überschreiben die auf die `<identityConfiguration>` Element.  
+>  Die Verwendung von der `<audienceUris>` Element als untergeordnetes Element von der [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element wurde als veraltet markiert, aber noch für die Abwärtskompatibilität unterstützt. Einstellungen auf der `<securityTokenHandlerConfiguration>` Element, überschreiben Sie die auf die `<identityConfiguration>` Element.  
   
-## Beispiel  
- Das folgende XML veranschaulicht die zulässigen Zielgruppen\-URIs für eine Anwendung konfigurieren.  In diesem Beispiel wird einen einzelnen URI.  Der Gültigkeitsbereich für diesen URI Token akzeptiert werden, alle anderen werden abgelehnt.  
+## <a name="example"></a>Beispiel  
+ Das folgende XML zeigt, wie die zulässigen "Audience"-URIs für eine Anwendung zu konfigurieren. In diesem Beispiel wird einen einzelnen URI. Bereich für diesen URI Token akzeptiert, werden alle anderen zurückgewiesen werden.  
   
-```  
+```xml  
 <audienceUris>  
   <add value="http://localhost:19851/"/>  
 </audienceUris>  

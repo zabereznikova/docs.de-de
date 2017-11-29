@@ -1,64 +1,65 @@
 ---
-title: "Eigenschaften von Windows&#160;Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Eigenschaften"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Eigenschaftenübersicht (mit Code)"
-  - "Eigenschaften [Windows Forms]"
+title: "Eigenschaften von Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], properties overview (using code)
+- controls [Windows Forms], properties
+- properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Eigenschaften von Windows&#160;Forms-Steuerelementen
-Ein Windows Forms\-Steuerelement erbt zahlreiche Eigenschaften von der Basisklasse <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Zu diesen Eigenschaften zählen <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A> und viele andere.  Ausführliche Informationen zu geerbten Ereignissen finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+# <a name="properties-in-windows-forms-controls"></a>Eigenschaften von Windows Forms-Steuerelementen
+Ein Windows Forms-Steuerelement erbt zahlreiche Eigenschaften die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Hierzu zählen Eigenschaften wie z. B. <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, und viele andere. Ausführliche Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
- Sie können sowohl geerbte Eigenschaften in dem Steuerelement überschreiben als auch neue Eigenschaften definieren.  
+ Sie können geerbte Eigenschaften in Ihrem Steuerelement außer Kraft setzen oder neue Eigenschaften definieren.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- Beschreibt, wie eine Eigenschaft für ein benutzerdefiniertes Steuerelement oder eine benutzerdefinierte Komponente implementiert wird und wie die Eigenschaft in die Entwurfsumgebung integriert wird.  
+ Demonstriert das Implementieren einer Eigenschaft für ein benutzerdefiniertes Steuerelement oder eine Komponente und das Integrieren der Eigenschaft in die Entwurfsumgebung.  
   
- [Definieren von Standardwerten mit der ShouldSerialize\-Methode und der Reset\-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- Beschreibt, wie Standardeigenschaftswerte für ein benutzerdefiniertes Steuerelement oder eine benutzerdefinierte Komponente definiert werden.  
+ [Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ Demonstriert das Definieren von Standardeigenschaftswerten für ein benutzerdefiniertes Steuerelement oder eine Komponente.  
   
  [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- Beschreibt, wie Benachrichtigungen zu Eigenschaftenänderungen aktiviert werden, wenn sich ein Eigenschaftswert ändert.  
+ Beschreibt das Aktivieren von Benachrichtigungen über Eigenschaftsänderungen, wenn ein Eigenschaftswert geändert wird.  
   
- [Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
- Beschreibt, wie Eigenschaften konstituierender Steuerelemente in einem benutzerdefinierten zusammengesetzten Steuerelement verfügbar gemacht werden.  
+ [Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ Veranschaulicht, wie man Eigenschaften von konstituierenden Steuerelementen in einem benutzerdefinierten zusammengesetzten Steuerelement verfügbar macht.  
   
  [Implementierung von Methoden in benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
- Beschreibt, wie Methoden in benutzerdefinierten Steuerelementen und Komponenten implementiert werden.  
+ Beschreibt die Implementierung von Methoden in benutzerdefinierten Steuerelementen und Komponenten.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.UserControl>  
- Enthält die Dokumentation der Basisklasse zum Implementieren von zusammengesetzten Steuerelementen.  
+ Dokumentiert die Basisklasse für das Implementieren von zusammengesetzten Steuerelementen.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Enthält die Dokumentation des Attributs, das <xref:System.ComponentModel.TypeConverter> für einen benutzerdefinierten Eigenschaftentyp angibt.  
+ Die Dokumentation des Attributs, der angibt, die <xref:System.ComponentModel.TypeConverter> für eine benutzerdefinierte Eigenschaft verwenden.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Enthält die Dokumentation des Attributs, das <xref:System.Drawing.Design.UITypeEditor> für eine benutzerdefinierte Eigenschaft angibt.  
+ Die Dokumentation des Attributs, der angibt, die <xref:System.Drawing.Design.UITypeEditor> für eine benutzerdefinierte Eigenschaft verwenden.  
   
-## Verwandte Abschnitte  
- [Attribute in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Attribute in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Beschreibt die Attribute, die Sie auf Eigenschaften oder andere Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können.  
   
- [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md)  
- Enthält eine Liste von Metadatenattributen, die auf Komponenten und Steuerelemente angewendet werden, sodass diese in visuellen Designern zur Entwurfszeit korrekt angezeigt werden.  
+ [Entwurfszeitattribute für Komponenten](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ Listet die Metadatenattribute für Komponenten und Steuerelemente auf, damit sie in visuellen Designern zur Entwurfszeit korrekt angezeigt werden.  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
- Beschreibt die Implementierung von Klassen, z. B. Editoren und Designern, die Entwurfszeitunterstützung bereitstellen.
+ [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ Beschreibt die Implementierung von Klassen wie Editoren und Designern, die Entwurfszeitunterstützung bereitstellen.

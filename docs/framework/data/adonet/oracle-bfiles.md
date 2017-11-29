@@ -1,44 +1,47 @@
 ---
-title: "Oracle-BFILEs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle-BFILEs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f48bd85559d55d9a1190310bcf13cd4a68625011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle-BFILEs
-Der .NET Framework\-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleBFile>\-Klasse, die für das Arbeiten mit dem Oracle\-<xref:System.Data.OracleClient.OracleType>\-Datentyp verwendet wird.  
+# <a name="oracle-bfiles"></a>Oracle-BFILEs
+Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die für das Arbeiten mit dem Oracle-<xref:System.Data.OracleClient.OracleType.BFile>-Datentyp verwendet wird.  
   
- Der Oracle\-**BFILE**\-Datentyp ist ein Oracle\-**LOB**\-Datentyp, der einen Verweis auf Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält.  Eine Oracle\-**BFILE** unterscheidet sich von anderen Oracle\-**LOB**\-Datentypen darin, dass ihre Daten in einer physischen Datei im Betriebssystem statt auf dem Server gespeichert sind.  Beachten Sie, dass der **BFILE**\-Datentyp nur den Lesezugriff auf Daten ermöglicht.  
+ Die Oracle **BFILE** -Datentyp ist ein Oracle- **LOB** -Datentyp, der einen Verweis auf Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Ein Oracle **BFILE** unterscheidet sich von anderen Oracle- **LOB** -Datentypen darin, dass ihre Daten in einer physischen Datei im Betriebssystem statt auf dem Server gespeichert sind. Beachten Sie, dass die **BFILE** Datentyp bietet schreibgeschützten Zugriff auf Daten.  
   
- Es folgen weitere Eigenschaften, die einen **BFILE**\-Datentyp von einem **LOB**\-Datentyp unterscheiden:  
+ Andere Merkmale der eine **BFILE** -Datentyp, der Unterscheidung von einer **LOB** -Datentyp sind:  
   
 -   Er enthält unstrukturierte Daten.  
   
 -   Er unterstützt das serverseitige Aufteilen in kleine Blöcke.  
   
--   Er verwendet die Semantik zum Kopieren von Verweisen.  Wenn Sie z. B. einen Kopiervorgang für eine **BFILE** ausführen, wird nur der **BFILE**\-Locator \(dies ist der Verweis auf die Datei\) kopiert.  Die Daten in der Datei werden nicht kopiert.  
+-   Er verwendet die Semantik zum Kopieren von Verweisen. Angenommen, Sie für einen Kopiervorgang Ausführen eine **BFILE**wird nur der **BFILE** Locator (Dies ist ein Verweis auf die Datei) kopiert wird. Die Daten in der Datei werden nicht kopiert.  
   
- Der **BFILE**\-Datentyp sollte zum Verweisen auf LOBs verwendet werden, die umfangreich und deshalb nicht unbedingt zum Speichern in der Datenbank geeignet sind.  Für das Verwenden eines **BFILE**\-Datentyps ist im Vergleich zum **LOB**\-Datentyp ein Mehraufwand an Client\-, Server\- und Kommunikationskapazitäten erforderlich.  Es ist effektiver, auf eine **BFILE** zuzugreifen, wenn nur eine kleine Menge Daten abgerufen werden muss.  Es ist effektiver, auf datenbankresidente LOBs zuzugreifen, wenn das ganze Objekt abgerufen werden soll.  
+ Die **BFILE** -Datentyp sollte zum Verweisen auf LOBs, die groß ist, verwendet werden und daher nicht praktikabel ist, in der Datenbank gespeichert. Client und Server-Kommunikation Aufwands beteiligt ist, bei Verwendung einer **BFILE** Datentyp im Vergleich mit der **LOB** -Datentyp. Es ist jedoch effizienter, den Zugriff auf eine **BFILE** Wenn nur eine kleine Menge Daten abgerufen werden müssen. Es ist effektiver, auf datenbankresidente LOBs zuzugreifen, wenn das ganze Objekt abgerufen werden soll.  
   
- Jedem von NULL verschiedenen **OracleBFile**\-Objekt werden zwei Entitäten zugeordnet, die den Speicherort der zugrunde liegenden physischen Datei definieren:  
+ Jeder Wert ungleich NULL **OracleBFile** Objekt bezieht sich auf zwei Entitäten, die den Speicherort der zugrunde liegenden physischen Datei definieren:  
   
-1.  Ein Oracle\-DIRECTORY\-Objekt, das als Datenbank\-Alias für ein Verzeichnis im Dateisystem fungiert.  
+1.  Ein Oracle-DIRECTORY-Objekt, das als Datenbank-Alias für ein Verzeichnis im Dateisystem fungiert.  
   
-2.  Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY\-Objekt zugeordneten Verzeichnis befindet.  
+2.  Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY-Objekt zugeordneten Verzeichnis befindet.  
   
-## Beispiel  
- Im folgenden C\#\-Beispiel wird veranschaulicht, wie eine **BFILE** in einer Oracle\-Tabelle erstellt und anschließend in Form eines **OracleBFile**\-Objekts abgerufen wird.  In dem Beispiel wird die Verwendung des <xref:System.Data.OracleClient.OracleDataReader>\-Objekts und der **OracleBFile**\-**Seek**\-Methode und der **Read**\-Methode veranschaulicht.  Beachten Sie, dass Sie, bevor Sie das Beispiel verwenden können, erst das Verzeichnis "c:\\\\bfiles" und die Datei "MyFile.jpg" auf dem Oracle\-Server erstellen müssen.  
+## <a name="example"></a>Beispiel  
+ Im folgenden C#-Beispiel wird veranschaulicht, wie kann ein **BFILE** in einer Oracle-Tabelle, und klicken Sie dann in Form von Abrufen einer **OracleBFile** Objekt. Im Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleBFile** **Seek** und **lesen** Methoden. Beachten Sie, dass in diesem Beispiel verwenden möchten, Sie zuerst ein Verzeichnis namens erstellen müssen "" c: "\\\bfiles" und die Datei "MyFile.jpg" auf dem Oracle-Server.  
   
 ```csharp  
 using System;  
@@ -93,6 +96,6 @@ public class Sample
 }  
 ```  
   
-## Siehe auch  
- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

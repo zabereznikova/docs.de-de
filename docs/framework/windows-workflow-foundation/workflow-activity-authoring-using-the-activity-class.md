@@ -1,30 +1,34 @@
 ---
-title: "Erstellen von Workflowaktivit&#228;ten mit der Aktivit&#228;tsklasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen von Workflowaktivitäten mit der Aktivitätsklasse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4fc6d0807c07952e9b3abe2861ef04bc225142f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erstellen von Workflowaktivit&#228;ten mit der Aktivit&#228;tsklasse
-Die einfachste Möglichkeit, eine Aktivität mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zu erstellen, besteht darin, eine Klasse zu erstellen, die vom <xref:System.Activities.Activity>\-Objekt erbt. Dieses erzeugt Funktionalität, indem benutzerdefinierte Aktivitäten oder Aktivitäten aus der [Integrierte Aktivitätsbibliothek](../../../docs/framework/windows-workflow-foundation//net-framework-4-5-built-in-activity-library.md) zusammengesetzt werden.In diesem Thema wird veranschaulicht, wie eine Aktivität erstellt wird, die zwei Meldungen in die Konsole schreibt.  
+# <a name="workflow-activity-authoring-using-the-activity-class"></a>Erstellen von Workflowaktivitäten mit der Aktivitätsklasse
+Die einfachste Möglichkeit zum Erstellen eine Aktivität mit [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] besteht darin, eine Klasse erstellen, die von erben <xref:System.Activities.Activity> erstellt Funktionalität durch das Zusammenfügen von benutzerdefinierten Aktivitäten oder Aktivitäten aus der [integrierte Aktivitätsbibliothek ](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). In diesem Thema wird veranschaulicht, wie eine Aktivität erstellt wird, die zwei Meldungen in die Konsole schreibt.  
   
-### So erstellen Sie eine benutzerdefinierte Aktivität mit dem Aktivitätsdesigner  
+### <a name="to-create-a-custom-activity-using-the-activity-designer"></a>So erstellen Sie eine benutzerdefinierte Aktivität mit dem Aktivitätsdesigner  
   
 1.  Öffnen Sie [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-2.  Wählen Sie "Datei", "Neu" und "Projekt" aus.Wählen Sie unter **Visual C\#** im Fenster **Projekttypen** die Option **Workflow 4.0** und danach den Knoten **v2010** aus.Wählen Sie im Fenster **Vorlagen** die Option **Aktivitätsbibliothek** aus.Geben Sie dem neuen Projekt den Namen "HelloActivity".  
+2.  Wählen Sie "Datei", "Neu" und "Projekt" aus. Wählen Sie **Workflow 4.0** unter **Visual C#-** in der **Projekttypen** , und wählen Sie die **v2010** Knoten. Wählen Sie **Aktivitätsbibliothek** in der **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen "HelloActivity".  
   
-3.  Öffnen Sie die neue Aktivität.Ziehen Sie eine <xref:System.Activities.Statements.Sequence>\-Aktivität von der Toolbox auf die Designeroberfläche.  
+3.  Öffnen Sie die neue Aktivität.  Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität von der Toolbox auf die Designeroberfläche.  
   
-4.  Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>\-Aktivität in die <xref:System.Activities.Statements.Sequence>\-Aktivität.Geben Sie `"Hello World"` \(mit Anführungszeichen\) in das Feld **Text** ein.  
+4.  Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität in die <xref:System.Activities.Statements.Sequence>-Aktivität. Geben Sie `"Hello World"` (mit Anführungszeichen) in der **Text** Feld.  
   
-5.  Ziehen Sie eine zweite <xref:System.Activities.Statements.WriteLine>\-Aktivität in die <xref:System.Activities.Statements.Sequence>\-Aktivität \(unter die erste\).Geben Sie `"Goodbye"` \(mit Anführungszeichen\) in das Feld **Text** ein.
+5.  Ziehen Sie eine zweite <xref:System.Activities.Statements.WriteLine>-Aktivität in die <xref:System.Activities.Statements.Sequence>-Aktivität (unter die erste). Geben Sie `"Goodbye"` (mit Anführungszeichen) in der **Text** Feld.

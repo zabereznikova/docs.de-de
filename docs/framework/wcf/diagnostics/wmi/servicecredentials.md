@@ -1,25 +1,28 @@
 ---
-title: "ServiceCredentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceCredentials
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e4cc9d7d7d46157b7df202c6daffb31b90fa98c1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceCredentials
+# <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class ServiceCredentials : Behavior  
@@ -34,66 +37,66 @@ class ServiceCredentials : Behavior
 };  
 ```  
   
-## Methoden  
+## <a name="methods"></a>Methoden  
  Die Klasse ServiceCredentials definiert keine Methoden.  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  Die Klasse ServiceCredentials verfügt über die folgenden Eigenschaften:  
   
-### ClientCertificate  
- Datentyp: Zeichenfolge  
+### <a name="clientcertificate"></a>ClientCertificate  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Authentifizierungs\- und Bereitstellungseinstellungen des Clientzertifikats für diesen Dienst.  
+ Die Authentifizierungs- und Bereitstellungseinstellungen des Clientzertifikats für diesen Dienst.  
   
-### IssuedTokenAuthentication  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="issuedtokenauthentication"></a>IssuedTokenAuthentication  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Authentifizierungseinstellungen des aktuell ausgegebenen Tokens für diesen Dienst.  
   
-### Peer  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="peer"></a>Peer  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die aktuellen Authentifizierungs\- und Bereitstellungseinstellungen für Anmeldeinformationen, die von Peertransportendpunkten verwendet werden sollen.  
+ Die aktuellen Authentifizierungs- und Bereitstellungseinstellungen für Anmeldeinformationen, die von Peertransportendpunkten verwendet werden sollen.  
   
-### SecureConversationAuthentication  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="secureconversationauthentication"></a>SecureConversationAuthentication  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt die aktuellen sicheren Konversationseinstellungen an.  
   
-### ServiceCertificate  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="servicecertificate"></a>ServiceCertificate  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Das diesem Dienst zugeordnete Zertifikat.  
   
-### UserNameAuthentication  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="usernameauthentication"></a>UserNameAuthentication  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Benutzernamen\-\/Kennworteinstellungen für diesen Dienst.  
+ Die Benutzernamen-/Kennworteinstellungen für diesen Dienst.  
   
-### WindowsAuthentication  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="windowsauthentication"></a>WindowsAuthentication  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Windows\-Authentifizierungseinstellungen für diesen Dienst.  
+ Die Windows-Authentifizierungseinstellungen für diesen Dienst.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.ServiceCredentials>

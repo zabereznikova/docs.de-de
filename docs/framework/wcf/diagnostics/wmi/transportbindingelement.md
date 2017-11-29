@@ -1,25 +1,28 @@
 ---
-title: "TransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c130093b9600c324e7179febce6857341b8a7d3c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# TransportBindingElement
+# <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class TransportBindingElement : BindingElement  
@@ -31,45 +34,45 @@ class TransportBindingElement : BindingElement
 };  
 ```  
   
-## Methoden  
+## <a name="methods"></a>Methoden  
  Von der Klasse TransportBindingElement werden keine Methoden definiert.  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  Die Klasse TransportBindingElement verfügt über die folgenden Eigenschaften:  
   
-### ManualAddressing  
- Datentyp: Boolescher Wert  
+### <a name="manualaddressing"></a>ManualAddressing  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein boolescher Wert, der angibt, ob der Benutzer die Kontrolle über die Nachrichtenadressierung übernehmen möchte.  
   
-### MaxBufferPoolSize  
+### <a name="maxbufferpoolsize"></a>MaxBufferPoolSize  
  Datentyp: sint64  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Pufferpoolgröße der Bindung.  
   
-### MaxReceivedMessageSize  
+### <a name="maxreceivedmessagesize"></a>MaxReceivedMessageSize  
  Datentyp: sint64  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Größe einer Nachricht, die von dieser Bindung verarbeitet wird.  
   
-### Schema  
- Datentyp: Zeichenfolge  
+### <a name="scheme"></a>Schema  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Das URI\-Schema für den Transport.  
+ Das URI-Schema für den Transport.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.TransportBindingElement>

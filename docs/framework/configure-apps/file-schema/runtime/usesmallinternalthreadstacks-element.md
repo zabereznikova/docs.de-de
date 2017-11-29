@@ -1,76 +1,78 @@
 ---
-title: "&lt;UseSmallInternalThreadStacks&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<UseSmallInternalThreadStacks>-Element"
-  - "UseSmallInternalThreadStacks-Element"
+title: '&lt;UseSmallInternalThreadStacks&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UseSmallInternalThreadStacks element
+- <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2558423b412333a4d6ac9f650ad8ff3dab449d74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;UseSmallInternalThreadStacks&gt;-Element
-Fordert an, dass die Common Language Runtime \(CLR\) die Arbeitsspeicherverwendung reduziert, indem sie explizite Stapelgrößen beim Erstellen bestimmter Threads angibt, die intern verwendet werden, anstatt die Standardstapelgröße für diese Threads zu verwenden.  
+# <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; Element
+Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden, indem Sie explizite Stack-Größe angeben, wenn es bestimmte Threads, die sie intern verwendet erstellt, anstatt die Standardgröße des Stapel für diese Threads.  
   
-## Syntax  
+ \<Konfiguration >-Element  
+\<Common Language Runtime >-Element  
+\<UseSmallInternalThreadStacks >-Element  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob angefordert werden soll, dass bei der Erstellung bestimmter Threads, die intern verwendet werden, die CLR explizite Stapelgrößen statt der Standardstapelgröße verwendet.  Die expliziten Stapelgrößen sind kleiner als die Standardstapelgröße von 1 MB.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob anfordern, die die CLR verwenden expliziter Stapelgrößen statt die standardmäßige Stapelgröße, wenn sie bestimmte Threads erstellt, die intern verwendet. Die explizite Stapelgrößen sind kleiner als die Standardstapelgröße 1 MB.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|true|Fordern Sie explizite Stapelgrößen an.|  
-|false|Verwenden Sie die Standardstapelgröße.  Dies ist der Standard für [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|true|Anforderungsgrößen Sie explizite Stapel.|  
+|false|Verwenden Sie die Standardgröße des Stapel an. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Dieses Konfigurationselement dient zur Anforderung von geringerer Verwendung von virtuellem Arbeitsspeicher in einem Prozess, da die expliziten Threadgrößen, die die CLR für die internen Threads verwendet, wenn die Anforderung umgesetzt wird, kleiner als die Standardgröße sind.  
+## <a name="remarks"></a>Hinweise  
+ Dieses Konfigurationselements wird verwendet, um reduzierte virtueller Arbeitsspeicher-Verwendung in einem Prozess anzufordern, da die expliziten Threadgrößen, die die CLR für die internen Threads verwendet werden, wenn die Anforderung berücksichtigt wird, kleiner als die Standardgröße sind.  
   
 > [!IMPORTANT]
->  Dieses Konfigurationselement ist eine Anforderung an die CLR und keine absolute Anforderung.  In [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] wird die Anforderung nur für die x86\-Architektur berücksichtigt.  Dieses Element könnte in zukünftigen Versionen der CLR völlig ignoriert oder durch explizite Stapelgrößen ersetzt werden, die immer für ausgewählte interne Threads verwendet werden.  
+>  Dieses Element ist eine Anforderung an die CLR anstatt eine zwingende Voraussetzung nicht erfüllt. In der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], die Anforderung wird nur für die X86 berücksichtigt Architektur. Dieses Element möglicherweise in künftigen Versionen der CLR vollständig ignoriert, oder durch explizite Stack-Größe, die immer für ausgewählte interne Threads verwendet werden ersetzt werden.  
   
- Das Angeben dieses Konfigurationselements tauscht Zuverlässigkeit gegen kleinere virtuelle Arbeitsspeicherverwendung ein, wenn die CLR die Anforderung berücksichtigt, da kleinere Stapelgrößen die Wahrscheinlichkeit für Stapelüberläufe potenziell vergrößern können.  
+ Angeben, dass dieses Konfigurationselements Geschäftsbeziehungen Zuverlässigkeit kleiner virtueller Arbeitsspeicher verwendet, wenn die CLR die Anforderung berücksichtigt da kleinere Stapel potenziell Stapel vornehmen können führt zu einem Überlauf wahrscheinlicher ist.  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angefordert wird, dass die CLR explizite Stapelgrößen für bestimmte Threads verwenden, die intern verwendet werden.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie um anzufordern, dass die CLR verwenden explizite Stapel für bestimmte Threads Größen, die intern verwendet wird.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <UseSmallInternalThreadStacks enabled="true" />  
@@ -78,6 +80,6 @@ Fordert an, dass die Common Language Runtime \(CLR\) die Arbeitsspeicherverwendu
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

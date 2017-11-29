@@ -1,42 +1,40 @@
 ---
-title: "Namen von Typmembern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "[Ereignisse [.NET Framework], Namen"
-  - "[Methoden [.NET Framework], Namen"
-  - "Typmember"
-  - "[Eigenschaften [.NET Framework], Namen"
-  - "Felder, Namen"
-  - "Feldnamen"
-  - "[Namen [.NET Framework], Typmember"
-  - "[Member [.NET Framework], Typ"
+title: Namen von Typmembern
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [.NET Framework], names
+- methods [.NET Framework], names
+- type members
+- properties [.NET Framework], names
+- fields, names
+- field names
+- names [.NET Framework], type members
+- members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1a3460b734d5bab6f5362fa9d3631e06821f6d49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Namen von Typmembern
-Typen von Elementen bestehen: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden Richtlinien für die Benennung von Typmembern beschrieben.  
+# <a name="names-of-type-members"></a>Namen von Typmembern
+Typen von Elementen vorgenommen werden: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien für die Benennung von Typmembern beschrieben.  
   
-## Namen von Methoden  
- Da Methoden die Mittel der Aktion sind, müssen die Entwurfsrichtlinien Methodennamen Verben oder verbale Ausdrücke sein. Befolgen diese Richtlinie auch dient, Eigenschaft und Typnamen, Methodennamen unterscheiden die Nomen oder Adjektiv Ausdrücke sind.  
+## <a name="names-of-methods"></a>Namen von Methoden  
+ Da Methoden überprüfbarer Aktionen sind, müssen die Entwurfsrichtlinien Methodennamen Verben oder verbale Ausdrücke sein. Befolgen diese Richtlinie auch dient zur Unterscheidung von Methodennamen aus den Namen der Eigenschaft, und geben die Nomen oder Adjektiv Ausdrücke sind.  
   
- **✓ führen** Methoden Namen, die Verben oder verbale Ausdrücke sind.  
+ **Führen Sie ✓** Geben Sie einen Methodennamen, die Verben oder verbale Ausdrücke sind.  
   
 ```  
 public class String {  
@@ -44,28 +42,27 @@ public class String {
     public string[] Split(...);  
     public string Trim();  
 }  
-  
 ```  
   
-## Namen von Eigenschaften  
- Im Gegensatz zu anderen Membern Eigenschaften nominaler Ausdruck oder adjektivische Namen anzugeben. Das liegt daran eine Eigenschaft bezieht sich auf Daten und der Namen der Eigenschaft angibt, die. PascalCasing wird immer Eigenschaftsnamen verwendet werden.  
+## <a name="names-of-properties"></a>Namen von Eigenschaften  
+ Im Gegensatz zu anderen Mitgliedern Eigenschaften nominaler Ausdruck oder adjektivische Namen Unternehmensservern benötigen. Grund hierfür eine Eigenschaft bezieht sich auf Daten und der Namen der Eigenschaft angibt, ist. PascalCasing wird immer für Eigenschaftennamen verwendet.  
   
- **✓ führen** benennen Sie Eigenschaften mit einem Substantiv, nominaler Ausdruck oder Adjektiv.  
+ **Führen Sie ✓** Benennen von Eigenschaften, die über ein Nomen, nominaler Ausdruck oder Adjektiv.  
   
- **X nicht** verfügen über Eigenschaften, die den Namen des "Get"\-Methoden wie im folgenden Beispiel entsprechen:  
+ **X nicht** verfügen über Eigenschaften, die den Namen des "Get"-Methoden, wie im folgenden Beispiel entsprechen:  
   
- `public string TextWriter { get {...} set {...} }`   
+ `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Dieses Muster gibt normalerweise an, dass die Eigenschaft wirklich eine Methode.  
+ Dieses Muster gibt normalerweise an, dass die Eigenschaft wirklich ein Methode sein sollte.  
   
- **✓ führen** Namen Auflistungseigenschaften mit einem im plural Ausdruck beschreiben die Elemente in der Auflistung anstelle eines singular Ausdrucks gefolgt von "List" oder "Auflistung".  
+ **Führen Sie ✓** benennen Sammlungseigenschaften mit einem im plural Ausdruck beschreiben die Elemente in der Auflistung anstatt im singular Ausdruck gefolgt von "List" oder "Collection".  
   
- **✓ führen** benennen Sie boolesche Eigenschaften mit einem positiven Begriff \(`CanSeek` anstelle von `CantSeek`\). Optional können Sie auch boolesche Eigenschaften Präfix mit "Is", "kann" oder "Hat," jedoch nur, sofern dies sinnvoll.  
+ **Führen Sie ✓** benennen boolesche Eigenschaften, die mit einem positiven Begriff (`CanSeek` anstelle von `CantSeek`). Optional, Sie können auch das Präfix boolescher Eigenschaften, die mit "Is", "kann" oder "Hat," jedoch nur, sofern der Wert hinzugefügt.  
   
- **✓ ggf.** mit einer Eigenschaft den gleichen Namen wie der Typ.  
+ **✓ GGF.** erteilen einer Eigenschaft den gleichen Namen wie den Typ.  
   
- Beispielsweise wird die folgende Eigenschaft ordnungsgemäß und legt einen Enumerationswert, der mit dem Namen `Color`, sodass die Eigenschaft mit dem Namen `Color`:  
+ Beispielsweise ruft die folgende Eigenschaft ordnungsgemäß und legt einen Enumerationswert, der mit dem Namen `Color`, sodass die Eigenschaft heißt `Color`:  
   
 ```  
 public enum Color {...}  
@@ -74,44 +71,44 @@ public class Control {
 }  
 ```  
   
-## Namen von Ereignissen  
- Ereignisse beziehen sich immer auf eine Aktion ausführen, entweder einen Fehler oder eine, die aufgetreten ist. Daher wie bei Methoden, Ereignisse mit Verben heißen und Verb benannt wird verwendet, um den Zeitpunkt anzugeben, wenn das Ereignis ausgelöst wird.  
+## <a name="names-of-events"></a>Namen von Ereignissen  
+ Ereignisse beziehen sich immer auf eine Aktion aus, entweder ein Fehler oder eine, die aufgetreten ist. Daher wie bei Methoden, Ereignisse mit Verben heißen und Verb Zeitformen wird verwendet, um den Zeitpunkt angibt, wann das Ereignis ausgelöst wird.  
   
- **✓ führen** benennen Sie Ereignisse mit einem Verb oder ein Ausdruck.  
+ **Führen Sie ✓** benennen Sie Ereignisse mit einem Verb oder ein Ausdruck.  
   
- Beispiele hierfür sind `Clicked`, `Painting`, `DroppedDown`, und so weiter.  
+ Beispiele hierfür sind `Clicked`, `Painting`, `DroppedDown`und so weiter.  
   
- **✓ führen** weisen Ereignisse Namen durch ein Konzept von vorher und Nachher, mithilfe der Gegenwart und Vergangenheit Zeitformen.  
+ **Führen Sie ✓** benennen Ereignisse Namen durch ein Konzept von vor und nach, mit der vorhanden und der Vergangenheit Zeitformen.  
   
- Beispielsweise würde ein Schließen\-Ereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird aufgerufen werden `Closing`, und eine, die ausgelöst wird, nachdem das Fenster geschlossen wird `Closed`.  
+ Beispielsweise würde ein Schließen-Ereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird aufgerufen werden `Closing`, und eine, die ausgelöst wird, nachdem das Fenster geschlossen wird aufgerufen `Closed`.  
   
- **X nicht** "Before" oder "After"\-Präfixe oder Suffixe an, dass vor und nach der Ereignisse verwenden. Verwenden Sie vorhanden und Vergangenheit Zeitformen wie gerade beschrieben.  
+ **X nicht** "Before" oder "After"-Präfixe oder Suffixe an, dass vor und nach der Ereignisse verwenden. Verwenden Sie vorhanden und Vergangenheit Zeitformen wie gerade beschrieben.  
   
- **✓ führen** Ereignishandler \(Delegaten als Typen von Ereignissen verwendet\) mit dem Suffix "EventHandler" nennen, wie im folgenden Beispiel gezeigt:  
+ **Führen Sie ✓** Ereignishandlerauflistung (Delegaten als Typen von Ereignissen verwendet) mit dem Suffix "EventHandler" nennen, wie im folgenden Beispiel gezeigt:  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ führen** verwenden zwei Parameter mit dem Namen `sender` und `e` im Ereignishandler.  
+ **Führen Sie ✓** verwenden zwei Parameter mit dem Namen `sender` und `e` in den Ereignishandlern.  
   
- Der Parameter Sender stellt das Objekt, das das Ereignis ausgelöst hat. Sender\-Parameter ist in der Regel vom Typ `object`, auch wenn es möglich ist, einen spezifischeren Typ zu verwenden.  
+ Der Parameter Sender stellt das Objekt, das das Ereignis ausgelöst hat. Der Absenderparameter ist in der Regel vom Typ `object`, selbst wenn es möglich ist, einen spezifischeren Typ zu verwenden.  
   
- **✓ führen** benennen Sie Ereignisargumentklassen mit dem Suffix "EventArgs".  
+ **Führen Sie ✓** benennen Sie Ereignisargumentklassen mit dem Suffix "EventArgs".  
   
-## Namen von Feldern  
- Die Benennung von Feld\-Richtlinien gelten für statische öffentliche und geschützte Felder. Interne und private Felder fallen nicht unter Richtlinien und öffentliche oder geschützte Instanzfelder dürfen nicht von der [Memberentwurfsrichtlinien](../../../docs/standard/design-guidelines/member.md).  
+## <a name="names-of-fields"></a>Namen von Feldern  
+ Die Benennung von Feld-Richtlinien gelten für statische öffentliche und geschützte Felder. Interne und private Felder werden nicht behandelt, durch die Richtlinien und öffentlichen oder geschützten Instanzfelder sind nicht zulässig, durch die [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md).  
   
- **✓ führen** PascalCasing in Feldnamen verwenden.  
+ **Führen Sie ✓** PascalCasing in Feldnamen verwenden.  
   
- **✓ führen** benennen Sie Felder mit Substantiven, nominaler Ausdruck oder Adjektiv.  
+ **Führen Sie ✓** Namen von Feldern an, indem ein Nomen, nominaler Ausdruck oder Adjektiv.  
   
  **X nicht** verwenden Sie ein Präfix für Feldnamen.  
   
- Verwenden Sie z. B. nicht "G\_" oder "S\_" an, dass statische Felder.  
+ Verwenden Sie z. B. nicht "G_" oder "S_" an, dass statische Felder.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+ [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)

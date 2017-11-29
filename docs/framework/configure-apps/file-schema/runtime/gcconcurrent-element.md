@@ -1,105 +1,103 @@
 ---
-title: "&lt;gcConcurrent&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcConcurrent>-Element"
-  - "Containertags, <gcConcurrent>-Element"
-  - "gcConcurrent-Element"
+title: '&lt;GcConcurrent&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
+helpviewer_keywords:
+- container tags, <gcConcurrent> element
+- gcConcurrent element
+- <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;gcConcurrent&gt;-Element
+# <a name="ltgcconcurrentgt-element"></a>&lt;GcConcurrent&gt; Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separaten Thread ausführt.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<GcConcurrent >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <gcConcurrent    
    enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
+|---------------|-----------------|  
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime die Garbage Collection gleichzeitig ausführt.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
+|-----------|-----------------|  
 |`false`|Die Garbage Collection wird nicht gleichzeitig ausgeführt.|  
-|`true`|Die Garbage Collection wird gleichzeitig ausgeführt.  Dies ist die Standardeinstellung.|  
+|`true`|Die Garbage Collection wird gleichzeitig ausgeführt. Dies ist die Standardeinstellung.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Vor .NET Framework 4 unterstützt die Garbage Collection auf einer Arbeitsstation gleichzeitige Garbage Collection, bei der die Garbage Collection im Hintergrund auf einem separaten Thread ausgeführt wird.  In .NET Framework 4 wurde die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt, bei der die Garbage Collection ebenfalls im Hintergrund auf einem separaten Thread ausgeführt wird.  Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für Garbage Collection auf dem Server verfügbar.  Das `<gcConcurrent>`\-Element steuert, ob die Runtime entweder gleichzeitige Garbage Collection oder Garbage Collection im Hintergrund ausführt, sofern diese verfügbar ist, oder ob die Runtime die Garbage Collection im Vordergrund ausführt.  
+## <a name="remarks"></a>Hinweise  
+ Vor .NET Framework 4 unterstützt die Garbage Collection auf einer Arbeitsstation gleichzeitige Garbage Collection, bei der die Garbage Collection im Hintergrund auf einem separaten Thread ausgeführt wird. In .NET Framework 4 wurde die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt, bei der die Garbage Collection ebenfalls im Hintergrund auf einem separaten Thread ausgeführt wird. Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für Garbage Collection auf dem Server verfügbar. Das `<gcConcurrent>`-Element steuert, ob die Runtime entweder gleichzeitige Garbage Collection oder Garbage Collection im Hintergrund ausführt, sofern diese verfügbar ist, oder ob die Runtime die Garbage Collection im Vordergrund ausführt.  
   
 > [!WARNING]
->  Ab .NET Framework 4 wird die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt.  Die Begriffe *gleichzeitig* und *Hintergrund* werden in der .NET Framework\-Dokumentation synonym verwendet.  Um die Garbage Collection im Hintergrund zu deaktivieren, verwenden Sie das `<gcConcurrent>`\-Element wie in diesem Artikel beschrieben.  
+>  Ab .NET Framework 4 wird die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt. Die Begriffe *gleichzeitige* und *Hintergrund* werden in der .NET Framework-Dokumentation synonym verwendet. Um die Garbage Collection im Hintergrund zu deaktivieren, verwenden Sie das `<gcConcurrent>`-Element wie in diesem Artikel beschrieben.  
   
- Standardmäßig verwendet die Runtime gleichzeitige Garbage Collection oder Garbage Collection im Hintergrund, die für Wartezeiten optimiert ist.  Wenn Ihre Anwendung intensive Benutzerinteraktion bedingt, belassen Sie die parallele Garbage Collection aktiviert, damit die Pausenzeiten der Anwendung für die Ausführung der Garbage Collection minimiert werden.  Wenn Sie das `enabled`\-Attribut des `<gcConcurrent>`\-Elements auf `false` festlegen, verwendet die Runtime die nicht\-parallele Garbage Collection, die für Durchsatz optimiert ist.  Die folgende Konfigurationsdatei deaktiviert die Garbage Collection im Hintergrund.  
+ Standardmäßig verwendet die Runtime gleichzeitige Garbage Collection oder Garbage Collection im Hintergrund, die für Wartezeiten optimiert ist. Wenn Ihre Anwendung intensive Benutzerinteraktion bedingt, belassen Sie die parallele Garbage Collection aktiviert, damit die Pausenzeiten der Anwendung für die Ausführung der Garbage Collection minimiert werden. Wenn Sie das `enabled`-Attribut des `<gcConcurrent>`-Elements auf `false` festlegen, verwendet die Runtime die nicht-parallele Garbage Collection, die für Durchsatz optimiert ist. Die folgende Konfigurationsdatei deaktiviert die Garbage Collection im Hintergrund.  
   
 ```xml  
-  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="false"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
- Gibt es eine `<gcConcurrentSetting>`\-Einstellung in der Computerkonfigurationsdatei, legt diese den Standardwert für alle .NET Framework\-Anwendungen fest.  Die Einstellung in der Computerkonfigurationsdatei setzt die Einstellung in der Anwendungskonfigurationsdatei außer Kraft.  
+ Gibt es eine `<gcConcurrentSetting>`-Einstellung in der Computerkonfigurationsdatei, legt diese den Standardwert für alle .NET Framework-Anwendungen fest. Die Einstellung in der Computerkonfigurationsdatei setzt die Einstellung in der Anwendungskonfigurationsdatei außer Kraft.  
   
- Weitere Informationen zur gleichzeitigen Garbage Collection und zur Garbage Collection im Hintergrund finden Sie im Abschnitt "Gleichzeitige Garbage Collection" im Thema [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md).  
+ Weitere Informationen zur gleichzeitigen und Garbagecollection im Hintergrund finden Sie im Abschnitt "gleichzeitige Garbagecollection" in der [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) Thema.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die gleichzeitige Garbage Collection aktiviert.  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -1,27 +1,30 @@
 ---
-title: "Zugriff auf Identit&#228;tsinformationen in einem Workflowdienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zugriff auf Identitätsinformationen in einem Workflowdienst"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zugriff auf Identit&#228;tsinformationen in einem Workflowdienst
-Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>\-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren.In der <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True\-Methode können Sie auf den <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> zugreifen, um auf Identitätsinformationen zuzugreifen.In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft sowie einer benutzerdefinierten Aktivität, die diese Eigenschaft zur Laufzeit für die <xref:System.ServiceModel.Activities.Receive>\-Aktivität sichtbar macht.Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <xref:System.ServiceModel.Activities.Sequence>\-Aktivität. Wenn jedoch <xref:System.ServiceModel.Activities.Receive> darin platziert wird, wird <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen, und die Identitätsinformationen werden abgerufen.  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a>Zugriff auf Identitätsinformationen in einem Workflowdienst
+Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren. In der <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & AutoUpgrade = "true"-Methode können Sie auf die <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> Identitätsinformationen zugegriffen. In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft sowie einer benutzerdefinierten Aktivität, die diese Eigenschaft zur Laufzeit für die <xref:System.ServiceModel.Activities.Receive>-Aktivität sichtbar macht.  Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität, wenn jedoch eine <xref:System.ServiceModel.Activities.Receive> darin platziert wird, die <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen, und die Identitätsinformationen werden abgerufen.  
   
-### Implementieren von IReceiveMessageCallback  
+### <a name="implement-ireceivemessagecallback"></a>Implementieren von IReceiveMessageCallback  
   
-1.  Erstellen Sie eine leere [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Projektmappe.  
+1.  Erstellen Sie eine leere [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Projektmappe.  
   
 2.  Fügen Sie der Projektmappe eine neue Konsolenanwendung mit dem Namen `Service` hinzu.  
   
@@ -53,16 +56,15 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
           }  
         }  
     }  
-  
     ```  
   
      In diesem Code wird mit dem an die Methode übergebenen <xref:System.ServiceModel.OperationContext> auf Identitätsinformationen zugegriffen.  
   
-### Implementieren einer systemeigenen Aktivität, um dem NativeActivityContext die IReceiveMessageCallback\-Implementierung hinzuzufügen  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementieren einer systemeigenen Aktivität, um dem NativeActivityContext die IReceiveMessageCallback-Implementierung hinzuzufügen  
   
 1.  Fügen Sie eine neue, von <xref:System.Activities.NativeActivity> abgeleitete Klasse mit dem Namen `AccessIdentityScope` hinzu.  
   
-2.  Fügen Sie lokale Variablen hinzu, um untergeordnete Aktivitäten, Variablen, den aktuellen Aktivitätsindex und einen <xref:System.Activities.CompletionCallback>\-Rückruf zu verfolgen.  
+2.  Fügen Sie lokale Variablen hinzu, um untergeordnete Aktivitäten, Variablen, den aktuellen Aktivitätsindex und einen <xref:System.Activities.CompletionCallback>-Rückruf zu verfolgen.  
   
     ```  
     public sealed class AccessIdentityScope : NativeActivity  
@@ -72,7 +74,6 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
         Variable<int> currentIndex;  
         CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  Implementieren des Konstruktors  
@@ -84,10 +85,9 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
         this.variables = new Collection<Variable>();  
         this.currentIndex = new Variable<int>();  
     }  
-  
     ```  
   
-4.  Implementieren Sie die `Activities`\-Eigenschaft und die `Variables`\-Eigenschaft.  
+4.  Implementieren Sie die `Activities`-Eigenschaft und die `Variables`-Eigenschaft.  
   
     ```  
     public Collection<Activity> Activities  
@@ -99,7 +99,6 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  Überschreiben Sie <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
@@ -112,7 +111,6 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  Überschreiben Sie <xref:System.Activities.NativeActivity.Execute%2A>.  
@@ -149,12 +147,11 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
        //increment the currentIndex  
        this.currentIndex.Set(context, ++currentActivityIndex);  
     }  
-  
     ```  
   
-### Implementieren des Workflowdiensts  
+### <a name="implement-the-workflow-service"></a>Implementieren des Workflowdiensts  
   
-1.  Öffnen Sie die vorhandene `Program`\-Klasse.  
+1.  Öffnen Sie die vorhandene `Program` Klasse.  
   
 2.  Definieren Sie die folgenden Konstanten:  
   
@@ -164,7 +161,6 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  Fügen Sie eine statische Methode mit dem Namen `GetWorkflowService` hinzu, die den Workflowdienst erstellt.  
@@ -204,10 +200,9 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
           }  
        };  
      }  
-  
     ```  
   
-4.  Hosten Sie den Workflowdienst in der vorhandenen `Main`\-Methode.  
+4.  Hosten Sie den Workflowdienst in der vorhandenen `Main`-Methode.  
   
     ```  
     static void Main(string[] args)  
@@ -226,10 +221,9 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
           host.Close();  
        }  
     }  
-  
     ```  
   
-### Implementieren eines Workflowclients  
+### <a name="implement-a-workflow-client"></a>Implementieren eines Workflowclients  
   
 1.  Erstellen Sie ein neues Konsolenanwendungsprojekt mit dem Namen `Client`.  
   
@@ -293,10 +287,9 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
           };  
        }  
     }  
-  
     ```  
   
-4.  Fügen Sie der `Main()`\-Methode den folgenden Hostcode hinzu.  
+4.  Fügen Sie der `Main()`-Methode den folgenden Hostcode hinzu.  
   
     ```  
     static void Main(string[] args)  
@@ -307,14 +300,12 @@ Für den Zugriff auf Identitätsinformationen in einem Workflowdienst müssen Si
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im Folgenden finden Sie eine vollständige Auflistung des in diesem Thema verwendeten Quellcodes.  
   
 ```  
-  
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -352,11 +343,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -439,11 +428,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -516,11 +503,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // client.cs   
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -596,10 +581,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
-## Siehe auch  
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Zugreifen auf OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Siehe auch  
+ [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Zugreifen auf OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

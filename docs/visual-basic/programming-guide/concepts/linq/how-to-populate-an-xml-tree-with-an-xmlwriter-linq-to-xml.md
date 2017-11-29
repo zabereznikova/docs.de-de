@@ -1,38 +1,30 @@
 ---
-title: "Gewusst wie: Auffüllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Füllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dfd10ec04e7293d90929d6f629201868028819ad
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 548e931a120a319bbd45885e6d1b60685d983c01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Gewusst wie: Auffüllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (Visual Basic)
-Eine Möglichkeit, eine XML-Struktur aufzufüllen ist die Verwendung <xref:System.Xml.Linq.XContainer.CreateWriter%2A>zum Erstellen einer <xref:System.Xml.XmlWriter>, und Schreiben Sie dann mit dem <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> Die XML-Struktur wird mit allen Knoten aufgefüllt, die mit dem <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> geschrieben werden  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Vorgehensweise: Füllen einer XML-Struktur mit einem XmlWriter (LINQ to XML) (Visual Basic)
+Eine Möglichkeit, eine XML-Struktur aufzufüllen, besteht darin, mit <xref:System.Xml.Linq.XContainer.CreateWriter%2A> einen <xref:System.Xml.XmlWriter> zu erstellen und dann in den <xref:System.Xml.XmlWriter> zu schreiben. Die XML-Struktur wird mit allen Knoten aufgefüllt, die in den <xref:System.Xml.XmlWriter> geschrieben werden.  
   
- Sie möchten in der Regel verwenden Sie diese Methode bei Verwendung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] mit einer anderen Klasse, die zum Schreiben in erwartet ein <xref:System.Xml.XmlWriter>, wie z. B. <xref:System.Xml.Xsl.XslCompiledTransform>.</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter>  
+ Diese Methode kommt in der Regel zum Einsatz, wenn Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit einer anderen Klasse verwenden, die davon ausgeht, dass sie in einen <xref:System.Xml.XmlWriter>, z.B. <xref:System.Xml.Xsl.XslCompiledTransform>, schreibt.  
   
 ## <a name="example"></a>Beispiel  
- Eine Verwendungsmöglichkeit für <xref:System.Xml.Linq.XContainer.CreateWriter%2A>wird eine XSLT-Transformation aufrufen.</xref:System.Xml.Linq.XContainer.CreateWriter%2A> In diesem Beispiel wird eine XML-Struktur erstellt, erstellt ein <xref:System.Xml.XmlReader>aus der XML-Struktur ein neues Dokument erstellt, und erstellt dann eine <xref:System.Xml.XmlWriter>, in das neue Dokument schreibt.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Anschließend ruft Sie die XSLT-Transformation übergeben <xref:System.Xml.XmlReader>und <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A> kann beispielsweise verwendet werden, wenn eine XSLT-Transformation aufgerufen wird. In diesem Beispiel wird zunächst eine XML-Struktur erstellt, aus der dann ein <xref:System.Xml.XmlReader> erstellt wird. Anschließend wird ein neues Dokument angelegt und dann für das Schreiben in das neue Dokument ein <xref:System.Xml.XmlWriter> erstellt. Nachfolgend wird die XSLT-Transformation aufgerufen, wobei <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> verwendet werden. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -80,7 +72,7 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A></xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter></xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform></xref:System.Xml.Xsl.XslCompiledTransform>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
+ <xref:System.Xml.XmlWriter>  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
  [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

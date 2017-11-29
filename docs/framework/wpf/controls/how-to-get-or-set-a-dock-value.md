@@ -1,35 +1,41 @@
 ---
-title: "Gewusst wie: Abrufen oder Festlegen eines Dockwerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dock-Werte, Abrufen"
-  - "Dock-Werte, Festlegen"
+title: 'Gewusst wie: Abrufen oder Festlegen eines Dockwerts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Dock values [WPF], setting
+- Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ca4d7e753282a7c1d2236a70535e10d5109cd3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen oder Festlegen eines Dockwerts
-Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.Dock>\-Wert einem Objekt zugewiesen wird.  Im Beispiel werden die <xref:System.Windows.Controls.DockPanel.GetDock%2A>\-Methode und die <xref:System.Windows.Controls.DockPanel.SetDock%2A>\-Methode von <xref:System.Windows.Controls.DockPanel> verwendet.  
+# <a name="how-to-get-or-set-a-dock-value"></a>Gewusst wie: Abrufen oder Festlegen eines Dockwerts
+Das folgende Beispiel zeigt das Zuweisen einer <xref:System.Windows.Controls.Dock> Wert für ein Objekt. Im Beispiel wird die <xref:System.Windows.Controls.DockPanel.GetDock%2A> und <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methoden der <xref:System.Windows.Controls.DockPanel>.  
   
-## Beispiel  
- Das Beispiel erstellt eine Instanz des <xref:System.Windows.Controls.TextBlock>\-Elements `txt1` und weist einen <xref:System.Windows.Controls.Dock>\-Wert von `Top` durch die Verwendung der <xref:System.Windows.Controls.DockPanel.SetDock%2A>\-Methode von <xref:System.Windows.Controls.DockPanel> zu.  Anschließend wird der Wert der <xref:System.Windows.Controls.Dock>\-Eigenschaft dem <xref:System.Windows.Controls.TextBlock.Text%2A> des <xref:System.Windows.Controls.TextBlock>\-Elements unter Verwendung der <xref:System.Windows.Controls.DockPanel.GetDock%2A>\-Methode hinzugefügt.  Im Beispiel wird schließlich das <xref:System.Windows.Controls.TextBlock>\-Element dem übergeordneten <xref:System.Windows.Controls.DockPanel>, `dp1` hinzugefügt.  
+## <a name="example"></a>Beispiel  
+ Das Beispiel erstellt eine Instanz von der <xref:System.Windows.Controls.TextBlock> Element, `txt1`, und weist eine <xref:System.Windows.Controls.Dock> Wert `Top` mithilfe der <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode <xref:System.Windows.Controls.DockPanel>. Anschließend fügt den Wert des der <xref:System.Windows.Controls.Dock> Eigenschaft, um die <xref:System.Windows.Controls.TextBlock.Text%2A> von der <xref:System.Windows.Controls.TextBlock> -Element mithilfe der <xref:System.Windows.Controls.DockPanel.GetDock%2A> Methode. Im Beispiel wird schließlich fügt die <xref:System.Windows.Controls.TextBlock> Element an der übergeordneten Tabelle <xref:System.Windows.Controls.DockPanel>, `dp1`.  
   
  [!code-csharp[DockPanelSetDock#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelSetDock/CSharp/DockPanel_SetDock.cs#1)]
  [!code-vb[DockPanelSetDock#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelSetDock/VisualBasic/DockPanel_SetDock.vb#1)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.DockPanel>   
- <xref:System.Windows.Controls.DockPanel.GetDock%2A>   
- <xref:System.Windows.Controls.DockPanel.SetDock%2A>   
- [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.DockPanel>  
+ <xref:System.Windows.Controls.DockPanel.GetDock%2A>  
+ <xref:System.Windows.Controls.DockPanel.SetDock%2A>  
+ [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)

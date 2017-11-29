@@ -1,25 +1,31 @@
 ---
-title: "&#39;DataRows&#39; und &#39;DataRowViews&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"DataRows\" und \"DataRowViews\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;DataRows&#39; und &#39;DataRowViews&#39;
-Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>\-Objekten verfügbar.  Die **DataRowView**\-Objekte machen die Werte als Objektarrays verfügbar, die entweder durch den Namen oder den Ordinalzahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden.  Sie können auf die von der **DataRowView** verfügbar gemachte <xref:System.Data.DataRow> mit der <xref:System.Data.DataRowView.Row%2A>\-Eigenschaft der **DataRowView** zugreifen.  
+# <a name="datarows-and-datarowviews"></a>"DataRows" und "DataRowViews"
+Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. Die **DataRowView** Objekte, die Werte als Objektarrays, die durch den Namen oder den Ordinalzahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden verfügbar gemacht. Sie erreichen die <xref:System.Data.DataRow> , verfügbar gemacht wird durch die **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.  
   
- Beim Anzeigen von Werten mit einer **DataRowView** legt die <xref:System.Data.DataView.RowStateFilter%2A>\-Eigenschaft der **DataView** fest, welche Zeilenversion der zugrunde liegenden **DataRow** verfügbar gemacht wird.  	Informationen zum Zugriff auf verschiedene Zeilenversionen mithilfe von **DataRow** finden Sie unter [Zeilenstatus und Zeilenversion](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Beim Anzeigen von Werten mit einer **DataRowView**, die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft von der **"DataView"** bestimmt, welche Zeilenversion der zugrunde liegenden **DataRow** verfügbar gemacht wird. Informationen zum Zugreifen auf unterschiedliche Zeilenversionen, die mit einem **DataRow**, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  Im folgenden Codebeispiel werden alle aktuellen und ursprünglichen Werte in einer Tabelle angezeigt.  
   
@@ -42,7 +48,6 @@ Public Shared Sub WriteView(thisDataView As DataView)
     Console.WriteLine()  
   Next  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -64,10 +69,10 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## Siehe auch  
- <xref:System.Data.DataRowVersion>   
- <xref:System.Data.DataViewRowState>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Data.DataRowVersion>  
+ <xref:System.Data.DataViewRowState>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

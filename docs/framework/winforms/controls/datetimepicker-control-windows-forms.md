@@ -1,54 +1,55 @@
 ---
-title: "DateTimePicker-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datums- und Zeitauswahlsteuerelemente"
-  - "Datumsangaben, Auswählen aus einer Liste"
-  - "Datumsangaben, Windows Forms-Steuerelemente"
-  - "DateTimePicker-Steuerelement [Windows Forms]"
+title: "DateTimePicker-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dates [Windows Forms], choosing from a list
+- dates [Windows Forms], Windows Forms controls
+- DateTimePicker control [Windows Forms]
+- date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d87d1968b2a605a45f9cb0a918e6345679aa9c2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# DateTimePicker-Steuerelement (Windows&#160;Forms)
-Das `DateTimePicker`\-Steuerelement in Windows Forms ermöglicht es Benutzern, ein einzelnes Element aus einer Liste mit Datums\- oder Zeitangaben auszuwählen.  Für die Datumsdarstellung besteht es aus zwei Teilen: einer Dropdownliste mit einer Datumsangabe, die als Text dargestellt wird, und einem Datenblatt, das angezeigt wird, wenn Sie auf den Abwärtspfeil neben der Liste klicken.  
+# <a name="datetimepicker-control-windows-forms"></a>DateTimePicker-Steuerelement (Windows Forms)
+Windows Forms `DateTimePicker` Control ermöglicht dem Benutzer die Auswahl eines einzelnen Elements aus einer Liste von Datums- oder Zeitangaben. Zur Darstellung eines Datums verwendet, wird in zwei Teilen: einer Dropdownliste mit einem Datum dargestellt in Text- und ein Raster, das angezeigt wird, wenn Sie auf den Dropdownpfeil neben der Liste klicken.  
   
-## In diesem Abschnitt  
- [Übersicht über das DateTimePicker\-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des `DateTimePicker`\-Steuerelements vor, das Benutzern die Auswahl eines einzelnen Elements aus einer Liste mit Datums\- und Zeitangaben ermöglicht.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über das DateTimePicker-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
+ Stellt die allgemeinen Konzepte von der `DateTimePicker` -Steuerelement, das Benutzer ein einzelnes Element aus einer Liste von Datumsangaben oder Uhrzeiten auswählen kann.  
   
- [Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
- Erläutert die Verwendung von Formatzeichenfolgen zum Anzeigen von Datumsangaben in einem bestimmten Format  
+ [Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ Erläutert die Formatzeichenfolgen verwenden, um Datumsangaben in einem bestimmten Format anzuzeigen.  
   
- [Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
- Erläutert die Schritte zum Festlegen des Datums im Steuerelement sowie für den Zugriff auf das vom Benutzer ausgewählte Datum.  
+ [Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)  
+ Enthält eine schrittweise Anleitung zum Festlegen des Datums im Steuerelement und für den Zugriff auf das Datum, das der Benutzer ausgewählt hat.  
   
- [Gewusst wie: Anzeigen der Zeit mithilfe des DateTimePicker\-Steuerelements](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)  
- Erläutert die Schritte, die erforderlich sind, damit von `DateTimePicker` ausschließlich Uhrzeiten angezeigt werden.  
+ [Gewusst wie: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)  
+ Zeigt die Schritte für die für eine `DateTimePicker` ausschließlich Uhrzeiten angezeigt.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DateTimePicker>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
  <xref:System.Windows.Forms.MonthCalendar>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- [MonthCalendar\-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- Bietet eine intuitive, grafische Oberfläche, mit der Benutzer Datumsinformationen anzeigen und festlegen können
+ [MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ Bietet eine intuitive grafische Oberfläche, auf der Benutzer Datumsinformationen anzeigen und festlegen können.

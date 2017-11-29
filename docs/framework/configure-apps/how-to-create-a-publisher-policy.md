@@ -1,45 +1,43 @@
 ---
-title: "Gewusst wie: Erstellen einer Herausgeberrichtlinie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GAC (Globaler Assembly-Cache), Herausgeberrichtlinienassembly"
-  - "Globaler Assemblycache, Herausgeberrichtlinienassembly"
-  - "Herausgeberrichtlinienassembly"
-  - "Herausgeberrichtliniendateien"
+title: 'Gewusst wie: Erstellen einer Herausgeberrichtlinie'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publisher policy assembly
+- publisher policy files
+- GAC (global assembly cache), publisher policy assembly
+- global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer Herausgeberrichtlinie
-Anbieter von Assemblys können bestimmen, dass Anwendungen eine neuere Assemblyversion verwenden sollen, indem sie der aktualisierten Assembly eine Herausgeberrichtliniendatei hinzufügen.  In der Herausgeberrichtliniendatei werden Assemblyumleitungen und CodeBase\-Einstellungen festgelegt. Sie hat dasselbe Format wie eine Anwendungskonfigurationsdatei.  Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache abgelegt.  
+# <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
+Anbieter von Assemblys können der Status, Anwendungen auf eine neuere Version einer Assembly verwenden soll, indem Sie z. B. eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly. Die Herausgeberrichtliniendatei gibt Assemblyumleitung und CodeBase-Einstellungen Code und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei wird in eine Assembly kompiliert und im globalen Assemblycache platziert.  
   
- Die Erstellung einer Herausgeberrichtlinie umfasst drei Schritte:  
+ Erstellen einer Herausgeberrichtlinie umfasst drei Schritte:  
   
-1.  Erstellen einer Herausgeberrichtliniendatei.  
+1.  Erstellen Sie eine Herausgeberrichtliniendatei.  
   
-2.  Erstellen einer Herausgeberrichtlinienassembly.  
+2.  Erstellen Sie eine Herausgeberrichtlinienassembly.  
   
-3.  Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache.  
+3.  Fügen Sie die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzu.  
   
- Das Schema für Herausgeberrichtlinien wird unter [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md) näher erläutert.  Das folgende Beispiel enthält eine Herausgeberrichtliniendatei, durch die eine Version von `myAssembly` zu einer anderen umgeleitet wird.  
+ Das Schema für Herausgeberrichtlinien wird beschrieben, [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md). Das folgende Beispiel zeigt einen Verleger Richtliniendatei, die eine Version der leitet `myAssembly` in eine andere.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -56,67 +54,67 @@ Anbieter von Assemblys können bestimmen, dass Anwendungen eine neuere Assemblyv
 </configuration>  
 ```  
   
- Unter [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md) erfahren Sie, wie eine CodeBase festgelegt wird.  
+ Gewusst wie: angeben eine Codebasis finden Sie unter [angeben des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).  
   
-## Erstellen der Herausgeberrichtlinienassembly  
- Verwenden Sie das [Assembly Linker\-Tool \(Al.exe\)](../../../docs/framework/tools/al-exe-assembly-linker.md), um die Herausgeberrichtlinienassembly zu erstellen.  
+## <a name="creating-the-publisher-policy-assembly"></a>Erstellen der Herausgeberrichtlinienassembly  
+ Verwenden der [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) die Herausgeberrichtlinienassembly zu erstellen.  
   
-#### So erstellen Sie eine Herausgeberrichtlinienassembly  
+#### <a name="to-create-a-publisher-policy-assembly"></a>So erstellen eine Herausgeberrichtlinienassembly  
   
 1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
   
-     **al \/link:** *publisherPolicyFile* **\/out:** *publisherPolicyAssemblyFile* **\/keyfile:** *keyPairFile* **\/platform:** *processorArchitecture*  
+     **Al/Link:** *PublisherPolicyFile* **/out:** *PublisherPolicyAssemblyFile* **/keyfile:**  *KeyPairFile* **/Platform:** *ProcessorArchitecture*  
   
-     Erläuterungen zu diesem Befehl:  
+     In diesem Befehl:  
   
-    -   Das *publisherPolicyFile*\-Argument entspricht dem Namen der Herausgeberrichtliniendatei.  
+    -   Die *PublisherPolicyFile* Argument ist der Name des der Herausgeberrichtliniendatei.  
   
-    -   Das *publisherPolicyAssemblyFile*\-Argument entspricht dem Namen der Herausgeberrichtlinienassembly, die durch diesen Befehl erstellt wird.  Der Name der Assemblydatei muss folgendes Format aufweisen:  
+    -   Die *PublisherPolicyAssemblyFile* -Argument ist der Name der Herausgeberrichtlinienassembly an, die durch diesen Befehl entsteht. Der Dateiname der Assembly muss Folgendes Format aufweisen:  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **Richtlinie.** *MajorNumber* **.** *MinorNumber* **.** *MainAssemblyName* **DLL**  
   
-    -   Das *keyPairFile*\-Argument entspricht dem Namen der Datei, in der das Schlüsselpaar enthalten ist.  Die Assembly und die Herausgeberrichtlinienassembly müssen mit demselben Schlüsselpaar signiert werden.  
+    -   Die *KeyPairFile* -Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly und die Herausgeberrichtlinienassembly mit dem gleichen Schlüsselpaar anmelden.  
   
-    -   Das *processorArchitecture*\-Argument identifiziert die von einer prozessorspezifischen Assembly verwendete Plattform.  
+    -   Die *ProcessorArchitecture* Argument identifiziert die Plattform, die auf eine Assembly prozessorspezifische.  
   
         > [!NOTE]
-        >  Die Möglichkeit, eine bestimmte Prozessorarchitektur zu verwenden, ist neu in .NET Framework, Version 2.0.  
+        >  Die Möglichkeit, eine bestimmte Prozessorarchitektur ist neu in .NET Framework, Version 2.0.  
   
-     Durch den folgenden Befehl wird eine Herausgeberrichtlinienassembly mit dem Namen `policy.1.0.myAssembly` aus einer Herausgeberrichtliniendatei namens `pub.config` erstellt und der Assembly mithilfe des Schlüsselpaars in der Datei `sgKey.snk` ein starker Name zugewiesen. Darüber hinaus gibt der Befehl an, dass die Assembly die x86\-Prozessorarchitektur verwendet.  
+     Der folgende Befehl erstellt eine Herausgeberrichtlinienassembly aufgerufen `policy.1.0.myAssembly` eine Herausgeberrichtliniendatei aufgerufen `pub.config`, weist einen starken Namen auf die Assembly mit dem Schlüsselpaar in der `sgKey.snk` Datei, und gibt an, dass die Assembly der X86 ausgerichtet ist. Architektur des Prozessors.  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     Die Herausgeberrichtlinienassembly muss mit der Prozessorarchitektur der Assembly übereinstimmen, für die sie gilt.  Wenn die Assembly einen <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>\-Wert von <xref:System.Reflection.ProcessorArchitecture> hat, muss die Herausgeberrichtlinienassembly mit `/platform:anycpu` erstellt werden.  Sie müssen eine separate Herausgeberrichtlinienassembly für jede prozessorspezifische Assembly bereitstellen.  
+     Die Herausgeberrichtlinienassembly muss die Prozessorarchitektur der Assembly übereinstimmen, die er gilt. Daher verfügt die Assembly ein <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> Wert <xref:System.Reflection.ProcessorArchitecture.MSIL>, die Herausgeberrichtlinienassembly für diese Assembly muss erstellt werden, mit `/platform:anycpu`. Geben Sie eine Separate Herausgeberrichtlinienassembly für jede prozessorspezifische Assembly.  
   
-     Aufgrund dieser Regel müssen Sie zum Ändern der Prozessorarchitektur einer Assembly die Haupt\- oder Nebenkomponente der Versionsnummer ändern, damit Sie eine neue Herausgeberrichtlinienassembly mit der richtigen Prozessorarchitektur zur Verfügung stellen können.  Die alte Herausgeberrichtlinienassembly kann die Assembly nicht bedienen, sobald die Assembly über eine andere Prozessorarchitektur verfügt.  
+     Eine Folge von dieser Regel ist, um die Prozessorarchitektur für eine Assembly zu ändern, die Komponente Haupt- oder Nebenversion der Versionsnummer geändert werden muss, damit Sie eine neue Herausgeberrichtlinienassembly mit der richtigen Prozessorarchitektur bereitstellen können. Die alte Herausgeberrichtlinienassembly Ihre Assembly nicht verarbeitet werden, sobald die Assembly über eine andere Prozessorarchitektur aufweist.  
   
-     Des Weiteren kann der Version 2.0\-Linker nicht zum Erstellen einer Herausgeberrichtlinienassembly für eine Assembly verwendet werden, die mit früheren Versionen von .NET Framework kompiliert wurde, da immer eine Prozessorarchitektur angegeben wird.  
+     Ein weitere Konsequenz ist, dass der Linker Version 2.0 verwendet werden kann, erstellen Sie eine Herausgeberrichtlinienassembly für eine Assembly, die mit früheren Versionen von .NET Framework kompiliert, da sie immer die Prozessorarchitektur angibt.  
   
-## Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache  
- Verwenden Sie das [Global Assembly Cache\-Tool \(Gacutil.exe\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzuzufügen.  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Hinzufügen der Herausgeberrichtlinienassembly zum globalen Assemblycache  
+ Verwenden der [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzufügen.  
   
-#### So fügen Sie die Herausgeberrichtlinienassembly zum globalen Assemblycache hinzu  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>So fügen Sie die Herausgeberrichtlinienassembly im globalen Assemblycache hinzu  
   
 1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
   
-     **gacutil \/i**  *publisherPolicyAssemblyFile*  
+     **Gacutil/i***PublisherPolicyAssemblyFile*   
   
-     Durch den folgenden Befehl wird `policy.1.0.myAssembly.dll` zum globalen Assemblycache hinzugefügt.  
+     Der folgende Befehl fügt `policy.1.0.myAssembly.dll` im globalen Assemblycache.  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  Die Herausgeberrichtlinienassembly kann nur zum globalen Assemblycache hinzugefügt werden, wenn sich die ursprüngliche Herausgeberrichtliniendatei in demselben Verzeichnis wie die Assembly befindet.  
+    >  Die Herausgeberrichtlinienassembly kann nicht im globalen Assemblycache hinzugefügt werden, es sei denn, die ursprünglichen Herausgeberrichtlinien-Datei im gleichen Verzeichnis wie die Assembly befindet.  
   
-## Siehe auch  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/de-de/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)   
- [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)  
+ [Konfigurieren von .NET Framework-Apps](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

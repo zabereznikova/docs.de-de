@@ -1,47 +1,48 @@
 ---
-title: "Koordinatensysteme und Transformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Grafiken, Transformationen"
-  - "Matrixtransformationen"
-  - "Transformationen"
+title: Koordinatensysteme und Transformationen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations
+- graphics [Windows Forms], transformations
+- matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Koordinatensysteme und Transformationen
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet eine globale Transformation und eine Seitentransformation, sodass Sie die gezeichneten Elemente transformieren \(drehen, skalieren, verschieben usw.\) können.  Dank der zwei Transformationen können Sie außerdem in den verschiedensten Koordinatensystemen arbeiten.  
+# <a name="coordinate-systems-and-transformations"></a>Koordinatensysteme und Transformationen
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet eine globale Transformation und eine Seitentransformation, damit Sie transformieren können (Drehen, zu skalieren, übersetzen usw.) die Elemente, die Sie zeichnen. Die beiden Transformationen können in einer Vielzahl von Koordinatensysteme arbeiten.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Typen von Koordinatensystemen](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
- Enthält eine Einführung in Koordinatensysteme und Transformationen.  
+ Führt ein Koordinatensysteme und Transformationen.  
   
  [Matrixdarstellung von Transformationen](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
- Erörtert die Verwendung von Matrizen für Koordinatentransformationen.  
+ Erläutert die Verwendung von Matrizen für-Koordinate Transformationen.  
   
  [Globale und lokale Transformationen](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
- Erörtert globale und lokale Transformationen.  
+ Erläutert, globale und lokale Transformationen.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Kapselt eine affine 3 x 3\-Matrix ein, die eine geometrische Transformation darstellt.  
+ Kapselt eine affine 3 x 3-Matrix ein, die eine geometrische Transformation darstellt.  
   
-## Verwandte Abschnitte  
- [Verwenden von Transformationen in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Stellt eine Liste von Themen bereit, die weitere Informationen zur Verwendung von Matrixtransformationen erhalten.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Verwenden von Transformationen in Managed GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ Enthält eine Liste der Themen, die Weitere Informationen zur Verwendung von Matrixtransformationen bereitstellen.  
   
- [Verwalteter Code in GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- Enthält eine Liste von Themen, in denen die von .NET Framework unterstützten Grafikkonstrukte beschrieben werden.
+ [Verwalteter Code in GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ Enthält eine Liste der Themen, in denen die Grafiken-Konstrukte, die Sie in .NET Framework verwenden können.

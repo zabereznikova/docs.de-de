@@ -1,65 +1,74 @@
 ---
-title: "&lt;message&gt; von &lt;netHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;message&gt; von &lt;netHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9ee45fe84a7134eea442b19a6f3e123a464cbb5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;message&gt; von &lt;netHttpBinding&gt;
-Definiert die Einstellungen für die Sicherheit von [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) auf Nachrichtenebene.  
+# <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; von &lt;netHttpBinding&gt;
+Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
-## Syntax  
+ \<System. ServiceModel >  
+\<Bindungen >  
+\<NetHttpBinding >  
+\<Binden von >  
+\<Sicherheit >  
+\<Meldung >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
       clientCredentialType="UserName/Certificate"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|algorithmSuite|Legt die Nachrichtenverschlüsselungs\- und Key Wrap\-Algorithmen fest.  Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> und gibt die Algorithmen und Schlüsselgrößen an.  Diese Algorithmen entsprechen den in der Security Policy Language \(WS\-SecurityPolicy\)\-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist `Basic256`.|  
-|clientCredentialType|Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mithilfe von nachrichtenbasierter Sicherheit verwendet werden.  Die Standardeinstellung ist `UserName`.|  
+|---------------|-----------------|  
+|algorithmSuite|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> und gibt die Algorithmen und Schlüsselgrößen an. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist `Basic256`.|  
+|clientCredentialType|Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mithilfe von nachrichtenbasierter Sicherheit verwendet werden. Die Standardeinstellung ist `UserName`.|  
   
-## clientCredentialType\-Attribut  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
 |Wert|Beschreibung|  
-|----------|------------------|  
-|UserName|-   Erfordert, dass der Client beim Server mit einem UserName authentifiziert wird.  Diese Anmeldeinformationen müssen mithilfe des \<`clientCredentials`\>\-Elements angegeben werden.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] unterstützt kein Kennwortdigest und keine ableitenden Schlüssel mit Kennwörtern sowie keine Verwendung solcher Schlüssel für die Nachrichtensicherheit.  Daher setzt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den UserName erfolgt.  Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL\-Kanals.|  
-|Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird.  Die Clientanmeldeinformationen müssen in diesem Fall über \<`clientCredentials`\> und \<`clientCertificate`\> angegeben werden.  Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden.  Die Dienstanmeldeinformationen müssen in diesem Fall mithilfe der <xref:System.ServiceModel.Description.ClientCredentials>\-Klasse oder dem `ClientCredentials`\-Verhaltenselement und durch Angabe des Dienstzertifikats mit dem \<serviceCertificate\>\-Element von "serviceCredentials" angegeben werden.|  
+|-----------|-----------------|  
+|UserName|-Erfordert der Client an den Server mit einem UserName authentifiziert werden. Diese Anmeldeinformationen müssen mithilfe des <`clientCredentials`>-Elements angegeben werden.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]ein Kennwort ableitenden Schlüssel mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit unterstützt nicht. Daher setzt [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] prinzipiell durch, dass der Transport geschützt wird, wenn der Identitätsnachweis über den UserName erfolgt. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
+|Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird. Die Clientanmeldeinformationen müssen in diesem Fall über <`clientCredentials`> und <`clientCertificate`> angegeben werden. Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden. Die Dienstanmeldeinformationen in diesem Fall muss mit angegeben werden <xref:System.ServiceModel.Description.ClientCredentials> Klasse oder `ClientCredentials` -verhaltenselement und durch Angabe des Diensts-Zertifikat mithilfe der \<ServiceCertificate >-Element von ServiceCredentials.|  
   
-### Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|\<`security`\>\-Element von \<`netHttpBinding`\>|Definiert die Sicherheitsfunktionen für das \<`netHttpBinding`\>\-Element.|  
+|-------------|-----------------|  
+|<`security`>-Element des <`netHttpBinding`>|Definiert die Sicherheitsfunktionen für das <`netHttpBinding`>-Element.|  
   
-## Beispiel  
- In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die basicHttpBinding und Nachrichtensicherheit verwendet.  Im folgenden Konfigurationsbeispiel für einen Dienst gibt die Endpunktdefinition die basicHttpBinding an und verweist auf die Bindungskonfiguration `Binding1`.  Das Zertifikat, das der Dienst zur Authentifizierung beim Client verwendet, wird im `behaviors`\-Abschnitt der Konfigurationsdatei im `serviceCredentials`\-Element festgelegt.  Der Prüfungsmodus für das Zertifikat, das der Client zum Authentifizieren beim Dienst verwendet, ist auch im `behaviors`\-Abschnitt im `clientCertificate`\-Element festgelegt.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die basicHttpBinding und Nachrichtensicherheit verwendet. Im folgenden Konfigurationsbeispiel für einen Dienst gibt die Endpunktdefinition die basicHttpBinding an und verweist auf die Bindungskonfiguration `Binding1`. Das Zertifikat, das der Dienst zur Authentifizierung beim Client verwendet, wird im `behaviors`-Abschnitt der Konfigurationsdatei im `serviceCredentials`-Element festgelegt. Der Prüfungsmodus für das Zertifikat, das der Client zum Authentifizieren beim Dienst verwendet, ist auch im `behaviors`-Abschnitt im `clientCertificate`-Element festgelegt.  
   
- Die gleichen Bindungs\- und Sicherheitsinformationen sind in der Clientkonfigurationsdatei angegeben.  
+ Die gleichen Bindungs- und Sicherheitsinformationen sind in der Clientkonfigurationsdatei angegeben.  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -126,13 +135,9 @@ Definiert die Einstellungen für die Sicherheit von [\<basicHttpBinding\>](../..
 </system.serviceModel>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.NetHttpMessageSecurity>   
- <xref:System.ServiceModel.Configuration.NetHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.NetHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.NetHttpMessageSecurityElement>   
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/de-de/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<Bindung\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch  
+ [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Binden von >](../../../../../docs/framework/misc/binding.md)
