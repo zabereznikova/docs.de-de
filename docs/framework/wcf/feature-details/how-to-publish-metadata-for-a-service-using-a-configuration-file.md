@@ -1,28 +1,31 @@
 ---
-title: "Gewusst wie: Ver&#246;ffentlichen von Metadaten f&#252;r einen Dienst mithilfe einer Konfigurationsdatei | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e94fe7135d51c4e1578ca69768b6d0ba2aa6ae6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ver&#246;ffentlichen von Metadaten f&#252;r einen Dienst mithilfe einer Konfigurationsdatei
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
 Dies ist eines der beiden "Gewusst wie"-Themen, die veranschaulichen, wie Sie Metadaten für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst veröffentlichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
   
 > [!CAUTION]
->  In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Wenn Sie Ihren Dienst zum Veröffentlichen von Metadaten auf sichere Weise benötigen, finden Sie unter [sicheren Metadatenendpunkt benutzerdefinierte](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+>  In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Wenn Sie den Dienst zum Veröffentlichen von Metadaten auf sichere Weise benötigen, finden Sie unter [benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veröffentlichen von Metadaten im Code finden Sie unter [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Erstellen Sie einen grundlegenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, um sicherzustellen, dass der Code funktioniert. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veröffentlichen von Metadaten im Code finden Sie unter [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Erstellen Sie einen grundlegenden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst, um sicherzustellen, dass der Code funktioniert. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
   
 ```csharp  
 using System;  
@@ -95,7 +98,6 @@ namespace Metadata.Samples
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>So veröffentlichen Sie Metadaten für einen WCF-Dienst mithilfe einer Konfigurationsdatei  
@@ -178,7 +180,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>So verwenden Sie Standardendpunkte  
   
-1.  Um Metadaten für einen Dienst zu konfigurieren, die Standard-Endpunkte verwendet, geben Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in der Konfiguration wie im vorherigen Beispiel, jedoch keine Endpunkte fest. Die Konfigurationsdatei sieht dann wie folgt aus.  
+1.  Um Metadaten für einen Dienst zu konfigurieren, der Standardendpunkte verwendet, geben Sie das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in der Konfigurationsdatei fest, so wie im vorherigen Beispiel. Legen Sie jedoch keine Endpunkte fest. Die Konfigurationsdatei sieht dann wie folgt aus.  
   
     ```xml  
     <configuration>  
@@ -195,7 +197,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Da der Dienst hat eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit der `httpGetEnabled` festgelegt `true`, der Dienst hat die Veröffentlichung von Metadaten aktiviert, und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standardendpunkte, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Da für den Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit `httpGetEnabled` auf `true` festgelegt wurde, ist für den Dienst die Veröffentlichung von Metadaten aktiviert. Und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standardendpunkte, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Implementierung eines einfachen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Diensts und der Konfigurationsdatei, die für diesen Dienst Metadaten veröffentlicht, veranschaulicht.  
@@ -270,9 +272,9 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [Gewusst wie: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [Self-Hosting](../../../../docs/framework/wcf/samples/self-host.md)   
- [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [Vorgehensweise Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [Selbsthosting](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Mithilfe von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

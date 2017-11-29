@@ -1,56 +1,55 @@
 ---
-title: "How to: Create a Procedure that Returns a Value (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "procedures, returning a value"
+title: "Gewusst wie: Erstellen einer Prozedur, die einen Wert zurückgibt (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 787eddc1fd1cdb9dd6b655a8556b75044b2a49dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Procedure that Returns a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Mit einer `Function`\-Prozedur geben Sie einen Wert an den Aufrufcode zurück.  
+# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Gewusst wie: Erstellen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
+Sie verwenden eine `Function` -Prozedur, einen Wert an den aufrufenden Code zurückgibt.  
   
-### So erstellen Sie eine Prozedur, die einen Wert zurückgibt  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>So erstellen Sie eine Prozedur, die einen Wert zurückgibt  
   
-1.  Verwenden Sie außerhalb anderer Prozeduren eine `Function`\-Anweisung, auf die eine `End Function`\-Anweisung folgt.  
+1.  Außerhalb eine beliebige andere Prozedur verwendet eine `Function` Anweisung, gefolgt von einem `End Function` Anweisung.  
   
-2.  Geben Sie in der `Function`\-Anweisung nach dem `Function`\-Schlüsselwort den Namen der Prozedur und danach die Parameterliste in Klammern ein.  
+2.  In der `Function` -Anweisung, befolgen Sie die `Function` Schlüsselwort mit dem Namen der Prozedur, und klicken Sie dann die Parameterliste in Klammern.  
   
-3.  Geben Sie nach den Klammern eine `As`\-Klausel ein, um den Datentyp des zurückgegebenen Werts anzugeben.  
+3.  Führen Sie die Klammern mit einer `As` -Klausel, um den Datentyp des zurückgegebenen Werts angeben.  
   
-4.  Setzen Sie die Codeanweisungen der Prozedur zwischen die Anweisungen `Function` und `End Function`.  
+4.  Platzieren Sie die Prozedur codeanweisungen zwischen der `Function` und `End Function` Anweisungen.  
   
-5.  Verwenden Sie eine `Return`\-Anweisung, um den Wert an den Aufrufcode zurückzugeben.  
+5.  Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
   
-     Mit der folgenden `Function`\-Prozedur wird die längste Seite \(die Hypotenuse\) eines rechtwinkligen Dreiecks anhand der Werte der beiden anderen Seiten berechnet.  
+     Die folgenden `Function` Prozedur berechnet die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  
   
      [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
   
-     Im folgenden Beispiel wird ein typischer Aufruf von `hypotenuse` dargestellt.  
+     Das folgende Beispiel zeigt einen typischen Aufruf `hypotenuse`.  
   
      [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
   
-## Siehe auch  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Eigenschaftenprozeduren](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md)   
- [How to: Return a Value from a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-return-a-value-from-a-procedure.md)   
- [How to: Call a Procedure That Returns a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-returns-a-value.md)
+## <a name="see-also"></a>Siehe auch  
+ [Verfahren](./index.md)  
+ [Sub-Prozeduren](./sub-procedures.md)  
+ [Eigenschaftenprozeduren](./property-procedures.md)  
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
+ [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Gewusst wie: Abrufen eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)  
+ [Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -1,34 +1,30 @@
 ---
-title: Funktionale Programmierung und Imperative Programmierung (Visual Basic) | Microsoft-Dokumentation
+title: Funktionale Programmierung und Imperative Programmierung (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7fd7a2defabe2d03b658977cc0106e3bbf985202
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8519ca7fcda63e73e29d33a768c589829aafa0b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Funktionale Programmierung und Imperative Programmierung (Visual Basic)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>Funktionale Programmierung und Imperative Programmierung  
- Die *funktionale Programmierung* Paradigma explizit erstellt wurde, um eine reine funktionale Lösung von Problemen zu unterstützen. Funktionaler Programmierung ist eine Form der *deklarativen Programmierung*. Im Gegensatz dazu die meisten normalen Programmiersprachen, einschließlich der objektorientierten Programmierung (OOP) Sprachen wie c#, Visual Basic, C++ und Java, in erster Linie Unterstützung konzipiert wurden *imperative* (prozedurale) Programmierung.  
+ Explizite Aufgabe der *funktionalen Programmierung* ist die Unterstützung eines reinen funktionalen Ansatzes bei der Problemlösung. Die funktionale Programmierung ist eine Form der *deklarativen Programmierung*. Im Unterschied dazu unterstützen die meisten normalen Programmiersprachen, darunter auch OOP-Sprachen wie C#, Visual Basic, C++ und Java, in erster Linie die *imperative* (prozedurale) Programmierung.  
   
- Beim imperativen Ansatz schreibt ein Entwickler Code, der detailliert die Schritte beschreibt, die der Computer zur Erfüllung der Aufgabe ausführen muss. Dies wird manchmal als *algorithmische* programmieren. Beim funktionalen Ansatz hingegen wird das Problem als Satz von auszuführenden Funktionen formuliert. Sie definieren sorgfältig, was für jede Funktion eingegeben wird und was die jeweilige Funktion zurückgibt. In der folgenden Tabelle werden einige der allgemeinen Unterschiede zwischen diesen beiden Ansätzen beschrieben:  
+ Beim imperativen Ansatz schreibt ein Entwickler Code, der detailliert die Schritte beschreibt, die der Computer zur Erfüllung der Aufgabe ausführen muss. Diese Form der Programmierung wird mitunter auch als *algorithmische* Programmierung bezeichnet. Beim funktionalen Ansatz hingegen wird das Problem als Satz von auszuführenden Funktionen formuliert. Sie definieren sorgfältig, was für jede Funktion eingegeben wird und was die jeweilige Funktion zurückgibt. In der folgenden Tabelle werden einige der allgemeinen Unterschiede zwischen diesen beiden Ansätzen beschrieben:  
   
 |Merkmal|Imperativer Ansatz|Funktionaler Ansatz|  
 |--------------------|-------------------------|-------------------------|  
@@ -38,12 +34,12 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
 |Primäre Datenflusskontrolle|Schleifen, Bedingungen und Funktions- (Methoden-)Aufrufe|Funktionsaufrufe, einschließlich Rekursion|  
 |Primäre Manipulationseinheit|Instanzen von Strukturen oder Klassen|Funktionen als erstklassige Objekte und Datensammlungen|  
   
- Die meisten Sprachen unterstützen zwar ein bestimmtes Programmierparadigma, viele allgemeine Sprachen sind aber ausreichend flexibel, um mehrere Paradigmen zu unterstützen. So können z. B. die meisten Sprachen, die Funktionszeiger enthalten, zur glaubwürdigen Unterstützung der funktionalen Programmierung verwendet werden. Darüber hinaus umfasst Visual Basic explizite spracherweiterungen zur Unterstützung der funktionalen Programmierung, einschließlich Lambda-Ausdrücke und typableitung. Eine Form der deklarativen, funktionalen Programmierung ist die LINQ-Technologie.  
+ Die meisten Sprachen unterstützen zwar ein bestimmtes Programmierparadigma, viele allgemeine Sprachen sind aber ausreichend flexibel, um mehrere Paradigmen zu unterstützen. So können z. B. die meisten Sprachen, die Funktionszeiger enthalten, zur glaubwürdigen Unterstützung der funktionalen Programmierung verwendet werden. Visual Basic verfügt darüber hinaus explizite spracherweiterungen zur Unterstützung der funktionalen Programmierung, darunter Lambda-Ausdrücke und typableitung. Eine Form der deklarativen, funktionalen Programmierung ist die LINQ-Technologie.  
   
 ## <a name="functional-programming-using-xslt"></a>Funktionale Programmierung mit XSLT  
- Viele XSLT-Entwickler sind mit dem reinen funktionalen Ansatz vertraut. Der effektivste Weg bei der Entwicklung eines XSLT-Stylesheets besteht darin, jede Vorlage als isolierte, zusammensetzbare Transformation zu behandeln. Die Reihenfolge der Ausführung ist dabei ohne jede Bedeutung. XSLT lässt keine Nebenwirkungen zu (lediglich die Escapemechanismen für die Ausführung von prozeduralem Code können Nebenwirkungen mit sich bringen, die zu funktionaler Unreinheit führen). XSLT ist zwar ein wirksames Tool, dennoch sind einige seiner Eigenschaften nicht optimal. So führt z. B. das Ausdrücken von Programmierkonstrukten in XML dazu, dass Code relativ weitschweifig und damit schwierig zu unterhalten ist. Auch die schwere Abhängigkeit von der Rekursion zur Flusssteuerung kann dazu führen, dass Code schwer lesbar ist. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03).  
+ Viele XSLT-Entwickler sind mit dem reinen funktionalen Ansatz vertraut. Der effektivste Weg bei der Entwicklung eines XSLT-Stylesheets besteht darin, jede Vorlage als isolierte, zusammensetzbare Transformation zu behandeln. Die Reihenfolge der Ausführung ist dabei ohne jede Bedeutung. XSLT lässt keine Nebenwirkungen zu (lediglich die Escapemechanismen für die Ausführung von prozeduralem Code können Nebenwirkungen mit sich bringen, die zu funktionaler Unreinheit führen). XSLT ist zwar ein wirksames Tool, dennoch sind einige seiner Eigenschaften nicht optimal. So führt z. B. das Ausdrücken von Programmierkonstrukten in XML dazu, dass Code relativ weitschweifig und damit schwierig zu unterhalten ist. Auch die schwere Abhängigkeit von der Rekursion zur Flusssteuerung kann dazu führen, dass Code schwer lesbar ist. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](../../../../standard/data/xml/xslt-transformations.md).  
   
- Dennoch hat XSLT bewiesen, dass die Verwendung eines reinen funktionalen Ansatzes bei der Transformierung von XML von einer Form in eine andere sinnvoll ist. Die reine funktionale Programmierung mit LINQ to XML ähnelt in vielerlei Hinsicht XSLT. Allerdings können mit die Programmierkonstrukten von LINQ to XML und Visual Basic Sie reine funktionale Transformationen schreiben, die besser lesbar und unterhaltbar als XSLT sind.  
+ Dennoch hat XSLT bewiesen, dass die Verwendung eines reinen funktionalen Ansatzes bei der Transformierung von XML von einer Form in eine andere sinnvoll ist. Die reine funktionale Programmierung mit LINQ to XML ähnelt in vielerlei Hinsicht XSLT. Allerdings können mit die Programmierkonstrukten von LINQ to XML- und Visual Basic reine funktionale Transformationen schreiben, die besser lesbar und unterhaltbar als XSLT sind.  
   
 ## <a name="advantages-of-pure-functions"></a>Vorteile von reinen Funktionen  
  Der Hauptgrund für die Implementierung von funktionalen Transformationen als reinen Funktionen (Pure-Funktionen) besteht darin, dass reine Funktionen zusammenstellbar sind, d. h., sie sind in sich abgeschlossen und zustandslos. Diese Eigenschaften bieten u. a. die folgenden Vorteile:  
@@ -61,9 +57,9 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
   
  Dagegen werden die Berechnungsprobleme bei der funktionalen Programmierung als Übung für die Auswertung reiner funktionaler Transformationen von Datensammlungen angesehen. Bei der funktionalen Programmierung werden Zustands- und änderbare Daten vermieden, stattdessen steht die Anwendung von Funktionen im Mittelpunkt.  
   
- Glücklicherweise erfordert Visual Basic den kompletten Umstieg auf die funktionale Programmierung, da er sowohl den imperativen als auch den funktionalen Programmierungsansatz unterstützt. Der Entwickler kann daher selbst entscheiden, welcher Ansatz für ein bestimmtes Szenario am geeignetsten ist. Bei vielen Programme werden beide Ansätze häufig miteinander kombiniert.  
+ Glücklicherweise erfordert Visual Basic den kompletten Umstieg auf die funktionale Programmierung, da sie sowohl den imperativen als auch den funktionalen Programmierungsansatz unterstützt. Der Entwickler kann daher selbst entscheiden, welcher Ansatz für ein bestimmtes Szenario am geeignetsten ist. Bei vielen Programme werden beide Ansätze häufig miteinander kombiniert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT-Transformationen](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)  
  [Umgestalten in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

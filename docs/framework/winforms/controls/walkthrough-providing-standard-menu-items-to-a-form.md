@@ -1,134 +1,138 @@
 ---
-title: "Exemplarische Vorgehensweise: Bereitstellen von Standardmen&#252;elementen f&#252;r ein Formular | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Menüelemente, Standard"
-  - "StatusStrip-Steuerelement [Windows Forms]"
-  - "Symbolleisten [Windows Forms], Exemplarische Vorgehensweisen"
-  - "ToolStrip-Steuerelement [Windows Forms]"
+title: "Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], standard
+- toolbars [Windows Forms], walkthroughs
+- StatusStrip control [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eccb033dd07f634f3629fd6f314eaa3df56b422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Bereitstellen von Standardmen&#252;elementen f&#252;r ein Formular
-Mit dem <xref:System.Windows.Forms.MenuStrip>\-Steuerelement können Sie ein Standardmenü für Formulare bereitstellen.  
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular
+Mit dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie ein Standardmenü für Formulare bereitstellen.  
   
- Diese exemplarische Vorgehensweise veranschaulicht, wie ein <xref:System.Windows.Forms.MenuStrip>\-Steuerelement zum Erstellen eines Standardmenüs verwendet wird.  Das Formular reagiert auch, wenn ein Benutzer ein Menüelement auswählt.  Die folgenden Aufgaben werden in dieser exemplarischen Vorgehensweise veranschaulicht:  
+ Diese exemplarische Vorgehensweise veranschaulicht, wie ein <xref:System.Windows.Forms.MenuStrip> Steuerelement ein Standardmenü erstellt. Das Formular reagiert auch auf, wenn ein Benutzer ein Menüelement auswählt. In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms\-Projekts  
+-   Erstellen ein Windows Forms-Projekt.  
   
--   Erstellen eines Standardmenüs  
+-   Erstellen ein Standardmenü.  
   
--   Erstellen eines <xref:System.Windows.Forms.StatusStrip>\-Steuerelements  
+-   Erstellen einer <xref:System.Windows.Forms.StatusStrip> Steuerelement.  
   
--   Behandeln der Auswahl von Menüelementen  
+-   Behandlung von Menüauswahl-Element.  
   
- Zum Schluss verfügen Sie über ein Formular mit einem Standardmenü, in dem die Menüelementauswahlen in einem <xref:System.Windows.Forms.StatusStrip>\-Steuerelement angezeigt werden.  
+ Wenn Sie fertig sind, haben Sie ein Formular mit Standardmenü, die Menüelementauswahlen in zeigt ein <xref:System.Windows.Forms.StatusStrip> Steuerelement.  
   
- Informationen zum Kopieren des in diesem Thema behandelten Codes als einzelne Auflistung finden Sie unter [Gewusst wie: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
+ Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms\-Anwendungsprojekten auf dem Computer, auf dem [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] installiert ist.  
+-   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] installiert ist.  
   
-## Erstellen des Projekts  
- Zunächst wird das Projekt erstellt und das Formular eingerichtet.  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
+ Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
-#### So erstellen Sie das Projekt  
+#### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie ein Windows\-Anwendungsprojekt mit dem Namen StandardMenuForm.  
+1.  Erstellen Sie ein Windows-Anwendungsprojekt namens **StandardMenuForm**.  
   
-     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Wählen Sie das Formular im Windows Forms\-Designer aus.  
+2.  Wählen Sie in der Windows Forms-Designer das Formular aus.  
   
-## Erstellen eines Standardmenüs  
- Der Windows Forms\-Designer ist in der Lage, ein <xref:System.Windows.Forms.MenuStrip>\-Steuerelement automatisch mit Standardmenüelementen zu füllen.  
+## <a name="creating-a-standard-menu"></a>Erstellen ein Standardmenü  
+ Windows Forms-Designer automatisch Auffüllen einer <xref:System.Windows.Forms.MenuStrip> -Steuerelement mit Standardmenüelementen.  
   
-#### So erstellen Sie ein Standardmenü  
+#### <a name="to-create-a-standard-menu"></a>So erstellen Sie ein Standardmenü  
   
-1.  Ziehen Sie aus der **Toolbox** ein <xref:System.Windows.Forms.MenuStrip>\-Steuerelement auf das Formular.  
+1.  Aus der **Toolbox**, ziehen Sie ein <xref:System.Windows.Forms.MenuStrip> Steuerelement auf das Formular.  
   
-2.  Klicken Sie auf das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) des <xref:System.Windows.Forms.MenuStrip>\-Steuerelements, und wählen Sie **Standardelemente einfügen**.  
+2.  Klicken Sie auf die <xref:System.Windows.Forms.MenuStrip> des Steuerelements Smarttag-Glyphe (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), und wählen Sie **Standardelemente einfügen**.  
   
-     Das <xref:System.Windows.Forms.MenuStrip>\-Steuerelement wird mit den Standardmenüelementen gefüllt.  
+     Die <xref:System.Windows.Forms.MenuStrip> Steuerelement mit der Standardmenüelementen gefüllt wird.  
   
-3.  Klicken Sie auf das Menüelement **File**, um die Standardmenüelemente und entsprechende Symbole anzuzeigen.  
+3.  Klicken Sie auf die **Datei** Menüelement, um die Standard-Menüelemente und entsprechende Symbole anzuzeigen.  
   
-## Erstellen eines StatusStrip\-Steuerelements  
- Verwenden Sie das <xref:System.Windows.Forms.StatusStrip>\-Steuerelement, um Statusinformationen für Windows Forms\-Anwendungen anzuzeigen.  Im aktuellen Beispiel werden die vom Benutzer ausgewählten Menüelemente in einem <xref:System.Windows.Forms.StatusStrip>\-Steuerelement angezeigt.  
+## <a name="creating-a-statusstrip-control"></a>Erstellen ein StatusStrip-Steuerelement  
+ Verwenden der <xref:System.Windows.Forms.StatusStrip> -Steuerelement zum Anzeigen des Status für Windows Forms-Anwendungen. Im aktuellen Beispiel Menüelemente, die vom Benutzer ausgewählten angezeigt werden, einem <xref:System.Windows.Forms.StatusStrip> Steuerelement.  
   
-#### So erstellen Sie ein StatusStrip\-Steuerelement  
+#### <a name="to-create-a-statusstrip-control"></a>So erstellen ein StatusStrip-Steuerelement  
   
-1.  Ziehen Sie aus der **Toolbox** ein <xref:System.Windows.Forms.StatusStrip>\-Steuerelement auf das Formular.  
+1.  Aus der **Toolbox**, ziehen Sie ein <xref:System.Windows.Forms.StatusStrip> Steuerelement auf das Formular.  
   
-     Das <xref:System.Windows.Forms.StatusStrip>\-Steuerelement wird automatisch am unteren Rand des Formulars angedockt.  
+     Die <xref:System.Windows.Forms.StatusStrip> Steuerelement wird automatisch an das Ende des Formulars angedockt.  
   
-2.  Klicken Sie auf die Dropdown\-Schaltfläche des <xref:System.Windows.Forms.StatusStrip>\-Steuerelements, und wählen Sie **StatusLabel** aus, um ein <xref:System.Windows.Forms.ToolStripStatusLabel>\-Steuerelement zum <xref:System.Windows.Forms.StatusStrip>\-Steuerelement hinzuzufügen.  
+2.  Klicken Sie auf die <xref:System.Windows.Forms.StatusStrip> des Steuerelements Dropdown-Schaltfläche und wählen Sie **StatusLabel** Hinzufügen einer <xref:System.Windows.Forms.ToolStripStatusLabel> die Steuerung an die <xref:System.Windows.Forms.StatusStrip> Steuerelement.  
   
-## Behandeln der Auswahl von Elementen  
- Behandeln Sie das <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>\-Ereignis, um auf das Auswählen von Menüelementen durch den Benutzer zu reagieren.  
+## <a name="handling-item-selection"></a>Behandlung Elementauswahl  
+ Behandeln der <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> Ereignis reagiert, wenn der Benutzer ein Menüelement auswählt.  
   
-#### So behandeln Sie die Auswahl von Elementen  
+#### <a name="to-handle-item-selection"></a>Elementauswahl behandeln  
   
-1.  Klicken Sie auf das Menüelement **Datei**, das Sie im Abschnitt "Erstellen eines Standardmenüs" erstellt haben.  
+1.  Klicken Sie auf die **Datei** Menüelement, das Sie in der erstellen erstellt ein Standardmenü-Abschnitt.  
   
-2.  Klicken Sie im **Eigenschaftenfenster** auf **Ereignisse**.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf **Ereignisse**.  
   
-3.  Doppelklicken Sie auf das <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>\-Ereignis.  
+3.  Doppelklicken Sie auf die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> Ereignis.  
   
-     Der Windows Forms\-Designer generiert einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>\-Ereignis.  
+     Windows Forms-Designer wird ein Ereignishandler für das <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> Ereignis.  
   
-4.  Fügen Sie folgenden Code in den Ereignishandler ein.  
+4.  Fügen Sie den folgenden Code in den Ereignishandler an.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Fügen Sie die Definition der `UpdateStatus`\-Dienstprogrammmethode in das Formular ein.  
+5.  Fügen Sie der `UpdateStatus` Hilfsprogramm Methodendefinition in das Formular.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
   
-## Checkpoint  
+## <a name="checkpoint"></a>Checkpoint  
   
-#### So testen Sie das Formular  
+#### <a name="to-test-your-form"></a>So testen Sie das Formular  
   
-1.  Drücken Sie F5, um das Formular zu kompilieren und auszuführen.  
+1.  Drücken Sie F5, um zu kompilieren und führen das Formular aus.  
   
-2.  Klicken Sie auf das Menüelement **File**, um das Menü zu öffnen.  
+2.  Klicken Sie auf die **Datei** Menüelement, um das Menü zu öffnen.  
   
-3.  Klicken Sie im Menü **File** auf eines der Elemente, um es auszuwählen.  
+3.  Auf der **Datei** Menü klicken Sie auf eines der Elemente, um ihn auszuwählen.  
   
-     Das ausgewählte Element wird vom <xref:System.Windows.Forms.StatusStrip>\-Steuerelement angezeigt.  
+     Die <xref:System.Windows.Forms.StatusStrip> -Steuerelement zeigt das ausgewählte Element.  
   
-## Nächste Schritte  
- In dieser exemplarischen Vorgehensweise haben Sie ein Formular mit einem Standardmenü erstellt.  Sie können die <xref:System.Windows.Forms.ToolStrip>\-Steuerelementfamilie für viele andere Zwecke verwenden:  
+## <a name="next-steps"></a>Nächste Schritte  
+ In dieser exemplarischen Vorgehensweise haben Sie ein Formular mit Standardmenü erstellt. Sie können die <xref:System.Windows.Forms.ToolStrip> -Steuerelementfamilie zu vielen anderen Zwecken:  
   
--   Erstellen von Kontextmenüs für die Steuerelemente mithilfe von <xref:System.Windows.Forms.ContextMenuStrip>.  Weitere Informationen finden Sie unter [Übersicht über die ContextMenu\-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   Erstellen von Kontextmenüs für die Steuerelemente mit <xref:System.Windows.Forms.ContextMenuStrip>. Weitere Informationen finden Sie unter [Übersicht über die ContextMenu-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Erstellen eines MDI \(Multiple Document Interface\-\)Formulars mit andockbaren <xref:System.Windows.Forms.ToolStrip>\-Steuerelementen.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines MDI\-Formulars mit der Zusammenführungsfunktion für Menüs und ToolStrip\-Steuerelemente](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Erstellen Sie ein Formular der multiple Document Interface (MDI) mit andockbaren <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines MDI-Formulars mit das Zusammenführen von Menüs und ToolStrip-Steuerelementen](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Gestalten von <xref:System.Windows.Forms.ToolStrip>\-Steuerelementen mit professionellem Aussehen.  Weitere Informationen finden Sie unter [Gewusst wie: Festlegen des ToolStrip\-Renderers für eine Anwendung](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Geben Sie Ihre <xref:System.Windows.Forms.ToolStrip> steuert ein professionelles Aussehen. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen des ToolStrip-Renderers für eine Anwendung](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [MenuStrip\-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

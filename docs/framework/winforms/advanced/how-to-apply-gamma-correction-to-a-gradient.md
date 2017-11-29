@@ -1,42 +1,46 @@
 ---
-title: "Gewusst wie: Anwenden der Gammakorrektur bei einem Farbverlauf | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farbverlaufspinsel, Gammakorrektur"
-  - "Farbverläufe, Gammakorrektur"
+title: 'Gewusst wie: Anwenden der Gammakorrektur bei einem Farbverlauf'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gradient brushes [Windows Forms], gamma correction
+- gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2721a45381f2d0befe82d6d0db2630f3eae08d51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anwenden der Gammakorrektur bei einem Farbverlauf
-Sie können die Gammakorrektur für einen Pinsel mit linearem Farbverlauf aktivieren, indem Sie für seine <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A>\-Eigenschaft `true` festlegen.  Sie können die Gammakorrektur deaktivieren, indem Sie für die <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A>\-Eigenschaft `false` festlegen.  Die Gammakorrektur ist standardmäßig deaktiviert.  
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Gewusst wie: Anwenden der Gammakorrektur bei einem Farbverlauf
+Sie können die Gammakorrektur für einem linearen Farbverlaufspinsel aktivieren, durch Festlegen des Pinsels <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> Eigenschaft `true`. Sie können die Gammakorrektur deaktivieren, indem die <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> Eigenschaft `false`. Gammakorrektur ist standardmäßig deaktiviert.  
   
-## Beispiel  
- Im Beispiel wird ein Pinsel mit linearem Farbverlauf erstellt und zum Ausfüllen von zwei Rechtecken verwendet.  Das erste Rechteck wird ohne und das zweite Rechteck mit Gammakorrektur ausgefüllt.  
+## <a name="example"></a>Beispiel  
+ Im Beispiel wird einen linearen Farbverlaufspinsel erstellt und verwendet den Pinsel zwei Rechtecken ausgefüllt. Das erste Rechteck wird ohne Gammakorrektur, und das zweite Rechteck mit Gammakorrektur gefüllt ist.  
   
- In der folgenden Abbildung sind die beiden ausgefüllten Rechtecke dargestellt.  Das obere Rechteck \(ohne Gammakorrektur\) wirkt in der Mitte dunkler.  Das untere Rechteck \(mit Gammakorrektur\) weist eine gleichmäßige Intensität auf.  
+ Die folgende Abbildung zeigt die beiden ausgefüllten Rechtecke an. Die oberste Rechteck, das Gammakorrektur kein ist, wird in der Mitte dunkel angezeigt. Gleichmäßige Intensität der unteren Rechteck an, das Gammakorrektur verfügt, wird angezeigt.  
   
  ![Farbverlauf](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
   
-## Siehe auch  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush>  
  [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

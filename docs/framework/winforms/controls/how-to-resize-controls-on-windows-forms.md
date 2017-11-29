@@ -1,50 +1,51 @@
 ---
-title: "Gewusst wie: &#196;ndern der Gr&#246;&#223;e von Steuerelementen in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Size.Height"
-  - "Size.Width"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Größenänderung"
-  - "Größe, Steuerelemente"
-  - "Windows Forms-Steuerelemente, Größe"
+title: "Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Size.Height
+- Size.Width
+helpviewer_keywords:
+- controls [Windows Forms], resizing
+- size [Windows Forms], controls
+- Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#196;ndern der Gr&#246;&#223;e von Steuerelementen in Windows&#160;Forms
-Sie können die Größe von einzelnen Steuerelementen und die Größe von mehreren Steuerelementen unterschiedlicher oder gleicher Art ändern, z. B. <xref:System.Windows.Forms.Button> und <xref:System.Windows.Forms.GroupBox>.  
+# <a name="how-to-resize-controls-on-windows-forms"></a>Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms
+Sie können einzelne Steuerelemente ändern und Sie können mehrere Steuerelemente des gleichen oder anderen Art, wie z. B. Größe <xref:System.Windows.Forms.Button> und <xref:System.Windows.Forms.GroupBox> Steuerelemente.  
   
-### So ändern Sie die Größe eines Steuerelements  
+### <a name="to-resize-a-control"></a>Um die Größe eines Steuerelements  
   
-1.  Klicken Sie auf das zu ändernde Steuerelement, und ziehen Sie einen der acht Ziehpunkte.  
+1.  Klicken Sie auf das Steuerelement, um die Größe geändert werden, und ziehen eine der acht Ziehpunkte.  
   
     > [!NOTE]
-    >  Wählen Sie das Steuerelement aus, und drücken Sie bei gedrückter UMSCHALTTASTE die PFEILTASTEN, um das Steuerelement Pixel für Pixel zu ändern.  Drücken Sie bei gedrückter UMSCHALTTASTE und STRG\-TASTE die NACH\-UNTEN\- oder NACH\-RECHTS\-TASTE, um die Größe des Steuerelements in großen Schritten zu ändern.  
+    >  Wählen Sie das Steuerelement, und drücken Sie die Pfeiltasten, halten Sie die UMSCHALTTASTE gedrückt, wenn das Steuerelement ein Pixel zu ändern. Drücken Sie die Pfeiltasten nach unten oder rechts halten Sie die UMSCHALT- oder STRG-Taste des Steuerelements in großen Schritten ändern.  
   
-### So ändern Sie die Größe mehrerer Steuerelemente in einem Formular  
+### <a name="to-resize-multiple-controls-on-a-form"></a>Um die Größe von mehreren Steuerelementen in einem Formular  
   
-1.  Halten Sie die STRG\-TASTE oder die UMSCHALTTASTE gedrückt, und wählen Sie die Steuerelemente aus, deren Größe Sie ändern möchten.  Die Größe des ersten ausgewählten Steuerelements wird für die anderen Steuerelemente verwendet.  
+1.  Halten Sie die STRG-Taste oder UMSCHALTTASTE gedrückt, und wählen Sie die Steuerelemente, die Sie ändern möchten. Die Größe des ersten Steuerelements, die Sie auswählen, wird für andere Steuerelemente verwendet.  
   
-2.  Wählen Sie im Menü **Format** erst den Befehl **Größe angleichen** und anschließend eine der vier Optionen.  Durch die ersten drei Befehle werden die Abmessungen der Steuerelemente in Anpassung an das zuerst ausgewählte Steuerelement geändert.  
+2.  Auf der **Format** Menü wählen **Größe angleichen**, und wählen Sie eine der vier Optionen. Die ersten drei Befehle ändern die Dimensionen der Steuerelemente entsprechend der ersten ausgewählten Steuerelements an.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [How to: Resize Windows Forms Using the Designer](http://msdn.microsoft.com/de-de/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Vorgehensweise: Ändern der Größe Windows Forms mithilfe des Designers](http://msdn.microsoft.com/en-us/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

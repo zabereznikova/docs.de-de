@@ -1,47 +1,39 @@
 ---
-title: "Projektionsvorgänge (Visual Basic) | Microsoft-Dokumentation"
+title: "Projektionsvorgänge (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8876e65e752e0b18404ec32aecdcad7805533840
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4927a27795881c34b689a2054ee8697575b53026
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="projection-operations-visual-basic"></a>Projektionsvorgänge (Visual Basic)
-Projektion bezeichnet das Transformieren eines Objekts in ein neues Format, das häufig nur aus den Eigenschaften besteht, die später verwendet wird. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projiziert und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu konvertieren.  
+Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
   
- Die Standardabfrageoperator-Methoden, die Projektion ausführen, werden im folgenden Abschnitt aufgelistet.  
+ Die Methoden des Standardabfrageoperators, die Projektion ausführen, sind im folgenden Abschnitt aufgeführt.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methodenname|Beschreibung|Visual Basic-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Auswählen|Werte, die auf einer Transformationsfunktion basieren.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName></xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
-|SelectMany|Projiziert Sequenzen von Werten, die auf einer Transformationsfunktion basieren, und fasst diese dann in einer einzigen Sequenz.|Verwenden Sie mehrere `From` Klauseln|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+|Auswählen|Projektwerte, die auf einer Transform-Funktion basieren.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Projiziert Sequenzen von Werten, die auf einer Transform-Funktion basieren, und fasst diese dann in eine Sequenz zusammen.|Mehrere `From`-Klauseln verwenden|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="select"></a>Auswählen  
- Im folgenden Beispiel wird die `Select` -Klausel, um den ersten Buchstaben der einzelnen Zeichenfolgen aus einer Liste von Zeichenfolgen projizieren.  
+ Im folgenden Beispiel wird die `Select`-Klausel verwendet, um den ersten Buchstaben jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
   
 ```vb  
 Dim words = New List(Of String) From {"an", "apple", "a", "day"}  
@@ -66,7 +58,7 @@ MsgBox(sb.ToString())
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- Im folgende Beispiel wird mithilfe mehrerer `From` -Klauseln, um jedes Wort der einzelnen Zeichenfolgen aus einer Liste von Zeichenfolgen projizieren.  
+ Im folgenden Beispiel wird mehrere `From` Klauseln, um jedes Wort aus einer einzelnen Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
   
 ```vb  
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}  
@@ -95,21 +87,21 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="select-versus-selectmany"></a>Wählen Sie im Vergleich zu SelectMany  
- Die Arbeit der beiden `Select()` und `SelectMany()` besteht darin, einen Ergebniswert (oder Werte) aus der Source-Werte. `Select()`generiert einen Ergebniswert für jeden Quellwert. Das Ergebnis ist daher eine Auflistung, die die gleiche von Elementen wie die quellauflistung Anzahl. Im Gegensatz dazu `SelectMany()` erzeugt ein einziges Gesamtergebnis, die verkettete untergeordnete Sammlungen aus jedem Quellwert enthält. Die Transformationsfunktion, die als Argument übergeben wird, `SelectMany()` muss eine aufzählbare Sequenz von Werten für jeden Quellwert zurückgeben. Diese aufzählbaren Sequenzen werden verkettet, von `SelectMany()` zu einer großen Sequenz.  
+## <a name="select-versus-selectmany"></a>Select im Vergleich zu SelectMany  
+ Die Arbeit von jeweils `Select()` und `SelectMany()` besteht darin, einen Ergebniswert (oder Werte) aus den Quellwerten zu erstellen. `Select()` generiert einen Ergebniswert für jeden Quellwert. Das Ergebnis ist daher eine Auflistung, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt. Im Gegensatz dazu erzeugt `SelectMany()` ein einziges Gesamtergebnis, das verkettete untergeordnete Auflistungen aus jedem Quellwert enthält. Die Transform-Funktion, die als Argument an `SelectMany()` übergeben wird, muss eine aufzählbare Sequenz von Werten für jeden Quellwert zurückgeben. Diese aufzählbaren Sequenzen werden anschließend von `SelectMany()` zu einer großen Sequenz verkettet.  
   
- Die folgenden zwei Abbildungen zeigen die konzeptionellen Unterschied zwischen den Aktionen der beiden Methoden. In jedem Fall wird davon ausgegangen Sie, dass die Auswahlfunktion (Transformation) das Array von Blumen aus jedem Quellwert auswählt.  
+ Die folgenden zwei Abbildungen zeigen den konzeptionellen Unterschied zwischen den Aktionen der beiden Methoden. In jedem Fall wird davon ausgegangen, dass die Auswahlfunktion (Transform) das Array von Blumen aus jedem Quellwert auswählt.  
   
- Diese Abbildung zeigt, wie `Select()` gibt eine Auflistung, die die gleiche von Elementen als Auflistung Anzahl zurück.  
+ Die Abbildung zeigt, wie `Select()` eine Auflistung zurückgibt, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt.  
   
- ![Konzeptionelle Darstellung der Aktion Select()](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Konzeptionelle Abbildung der Aktion Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
   
- Diese Abbildung zeigt, wie `SelectMany()` verkettet die intermediate Sequenz von Arrays in einem Endergebnis-Wert, der jeden Wert aus jedem intermediate Array enthält.  
+ Diese Abbildung zeigt, wie `SelectMany()` die Zwischenmodus-Sequenz von Arrays in einem Endergebniswert verkettet, der jeden Wert aus jedem Zwischenmodus-Array enthält.  
   
- ![Grafik, die der Aktion SelectMany(). ] (../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![Grafische Darstellung der Aktion SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
   
 ### <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel wird das Verhalten der `Select()` und `SelectMany()`. Der Code erstellt eine "Zukunft" Blumen dazu führt er die ersten beiden Elemente aus jeder Liste der Namen der Blume in der Auflistung. In diesem Beispiel "einzelner Wert", der Transformationsfunktion <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>verwendet wird, ist selbst eine Auflistung von Werten.</xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> Dies erfordert, dass die zusätzlichen `For Each` Schleife um jede Zeichenfolge in den einzelnen Untersequenzen aufgelistet.  
+ Im folgenden Beispiel wird das Verhalten von `Select()` und `SelectMany()` verglichen. Der Code erstellt eine „Bouquet“ von Blumen, indem er die ersten beiden Elemente aus jeder Liste der Blumennamen in der Quellauflistung aufführt. In diesem Beispiel ist der „einzelne Wert“, den die Transformationsfunktion <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> verwendet, selbst eine Auflistung von Werten. Dies erfordert die zusätzliche `For Each`-Schleife, um jede Zeichenfolge in den einzelnen Untersequenzen aufzulisten.  
   
 ```vb  
 Class Bouquet  
@@ -188,10 +180,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq></xref:System.Linq>   
- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [SELECT-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md)   
- [Gewusst wie: Kombinieren von Daten mithilfe von Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)   
- [Gewusst wie: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
- [Gewusst wie: zurückgeben ein LINQ-Abfrageergebnisses als einen bestimmten Typ](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)   
- [Gewusst wie: Teilen eine Datei in mehrere Dateien mithilfe von Gruppen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+ <xref:System.Linq>  
+ [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Kombinieren von Daten mithilfe von Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
+ [Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ [Gewusst wie: Zurückgeben eines LINQ-Abfrageergebnisses als bestimmter Typ](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ [Vorgehensweise: Teilen einer Datei in mehrere Dateien mithilfe von Gruppen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

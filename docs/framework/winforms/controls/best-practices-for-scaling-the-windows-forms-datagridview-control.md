@@ -1,154 +1,155 @@
 ---
-title: "Empfohlene Vorgehensweisen f&#252;r das Skalieren des DataGridView-Steuerelements in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bewährte Methoden, DataGridView-Steuerelement"
-  - "Datenblätter, Bewährte Methoden"
-  - "DataGridView-Steuerelement [Windows Forms], Bewährte Methoden"
-  - "DataGridView-Steuerelement [Windows Forms], Freigeben von Zeilen"
-  - "DataGridView-Steuerelement [Windows Forms], Skalieren"
-  - "DataGridView-Steuerelement [Windows Forms], Freigegebene Zeilen"
+title: "Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], row sharing
+- data grids [Windows Forms], best practices
+- DataGridView control [Windows Forms], shared rows
+- DataGridView control [Windows Forms], best practices
+- best practices [Windows Forms], dataGridView control
+- DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bfefd41a4773c81757f73e725095057f988cef2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Empfohlene Vorgehensweisen f&#252;r das Skalieren des DataGridView-Steuerelements in Windows Forms
-Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement ist für maximale Skalierbarkeit ausgelegt.  Wenn Sie umfangreiche Datenmengen anzeigen müssen, sollten Sie die in diesem Thema beschriebenen Richtlinien befolgen, um zu verhindern, dass der Arbeitsspeicher überlastet oder die Reaktionsfähigkeit der Benutzeroberfläche beeinträchtigt wird.  In diesem Thema werden folgende Aspekte behandelt:  
+# <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms
+Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um maximale Skalierbarkeit bereitzustellen. Wenn Sie große Mengen von Daten anzeigen möchten, sollten Sie die in diesem Thema, um große Mengen an Arbeitsspeicher fest, und beeinträchtigt die Reaktionsfähigkeit der Benutzeroberfläche (UI) beschriebenen Richtlinien folgen. In diesem Thema wird Folgendes erläutert:  
   
--   Effiziente Verwendung von Zellenstilen  
+-   Effizientes Verwenden von Zellenstile  
   
--   Effiziente Verwendung von Kontextmenüs  
+-   Effizientes Verwenden von Kontextmenüs  
   
--   Effiziente Verwendung der automatischen Größenanpassung  
+-   Automatische Größenänderung effizient verwenden  
   
--   Effiziente Verwendung der Auflistungen für ausgewählte Zellen, Zeilen und Spalten  
+-   Effizientes Verwenden von den ausgewählten Zellen, Zeilen und Spalten Sammlungen  
   
--   Verwenden freigegebener Zeilen  
+-   Verwenden freigegebene Zeilen  
   
--   Verhindern, dass die Zeilenfreigabe aufgehoben wird  
+-   Verhindert, dass Zeilen aufgehoben  
   
- Bei besonderen Leistungsanforderungen können Sie den virtuellen Modus implementieren und eigene Datenverwaltungsoperationen bereitstellen.  Weitere Informationen finden Sie unter [Datenanzeigemodi im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).  
+ Wenn Sie spezielle leistungsanforderungen haben, können Implementieren des virtuellen Modus und eigene Datenverwaltungsvorgänge bereitzustellen. Weitere Informationen finden Sie unter [Datenanzeigemodi im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).  
   
-## Effiziente Verwendung von Zellenstilen  
- Jede Zelle, Zeile und Spalte kann eigene Formatinformationen haben.  Formatinformationen werden in <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekten gespeichert.  Das Erstellen von Zellenstilobjekten für viele einzelne <xref:System.Windows.Forms.DataGridView>\-Elemente kann sich als ineffizient erweisen, besonders bei der Bearbeitung umfangreicher Datenmengen.  Befolgen Sie die nachstehenden Richtlinien, um Leistungseinbußen zu vermeiden:  
+## <a name="using-cell-styles-efficiently"></a>Effizientes Verwenden von Zellenstile  
+ Jede Zelle, Zeile und Spalte kann einen eigenen Formatinformationen haben. Formatinformationen befindet sich in <xref:System.Windows.Forms.DataGridViewCellStyle> Objekte. Erstellen Zelle Formatobjekte für viele einzelne <xref:System.Windows.Forms.DataGridView> Elemente können ineffizient sein, insbesondere bei der Arbeit mit großen Mengen von Daten. Um Leistungseinbußen zu vermeiden, verwenden Sie die folgenden Richtlinien:  
   
--   Legen Sie keine Zellenstileigenschaften für ein einzelnes <xref:System.Windows.Forms.DataGridViewCell>\-Objekt oder <xref:System.Windows.Forms.DataGridViewRow>\-Objekt fest.  Dies schließt das von der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>\-Eigenschaft angegebene Zeilenobjekt ein.  Jeder von der Zeilenvorlage geklonten neuen Zeile wird eine eigene Kopie des Zellenstilobjekts der Vorlage zugewiesen.  Um maximale Skalierbarkeit zu erzielen, sollten Sie die Zellenstileigenschaften auf <xref:System.Windows.Forms.DataGridView>\-Ebene festlegen.  Legen Sie beispielsweise die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>\-Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>\-Eigenschaft fest.  
+-   Vermeiden Sie das Festlegen von Eigenschaften für den Zellstil für einzelne <xref:System.Windows.Forms.DataGridViewCell> oder <xref:System.Windows.Forms.DataGridViewRow> Objekte. Dies schließt das Zeilenobjekt gemäß der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft. Jede neue Zeile, die von der Zeilenvorlage geklont wurde, erhält eine eigene Kopie der Vorlage Zelle Formatvorlagenobjekt. Für maximale Skalierbarkeit, legen Sie Eigenschaften für den Zellstil an die <xref:System.Windows.Forms.DataGridView> Ebene. Legen Sie z. B. die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft.  
   
--   Falls einige Zellen eine vom Standardformat abweichende Formatierung erfordern, verwenden Sie dieselbe <xref:System.Windows.Forms.DataGridViewCellStyle>\-Instanz übergreifend für Zellen\-, Zeilen\- oder Spaltengruppen.  Vermeiden Sie es, Eigenschaften des Typs <xref:System.Windows.Forms.DataGridViewCellStyle> für einzelne Zellen, Zeilen und Spalten direkt festzulegen.  Ein Beispiel für die Freigabe von Zellenstilen finden Sie unter [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  Sie können außerdem eine Leistungsminderung beim Festlegen individueller Zellenstile vermeiden, indem Sie den <xref:System.Windows.Forms.DataGridView.CellFormatting>\-Ereignishandler behandeln.  Ein Beispiel finden Sie unter [Gewusst wie: Anpassen der Datenformatierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+-   Wenn einige Zellen Formatieren von anderen benötigen als den Standardwert zu formatieren, verwenden Sie den gleichen <xref:System.Windows.Forms.DataGridViewCellStyle> Instanz auf Gruppen von Zellen, Zeilen oder Spalten. Vermeiden Sie direkt festlegen von Eigenschaften des Typs <xref:System.Windows.Forms.DataGridViewCellStyle> auf einzelne Zellen, Zeilen und Spalten. Beispielsweise eine Freigabe von Zellenstilen finden Sie unter [Vorgehensweise: Festlegen von standardmäßigen Zellenstilen für DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Sie können auch eine Leistungseinbuße umgehen, der zum Einstellen Zellenstile einzeln durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignishandler. Ein Beispiel finden Sie unter [wie: Anpassen der Datenformatierung im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
--   Verwenden Sie beim Festlegen eines Zellenstils die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=fullName>\-Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>\-Eigenschaft.  Beim Zugriff auf die <xref:System.Windows.Forms.DataGridViewCell.Style%2A>\-Eigenschaft wird eine neue Instanz der <xref:System.Windows.Forms.DataGridViewCellStyle>\-Klasse erstellt, falls die Eigenschaft noch nicht verwendet wurde.  Außerdem enthält dieses Objekt u. U. nicht die vollständigen Formatinformation für die Zelle, wenn einige Stile von der Zeile bzw. Spalte oder dem Steuerelement geerbt wurden.  Weitere Informationen über die Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+-   Wenn eine Zellenstils verwenden die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> Eigenschaft statt über das <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft. Zugreifen auf die <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft erstellt eine neue Instanz der dem <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse, wenn die Eigenschaft noch nicht verwendet wurde. Darüber hinaus kann dieses Objekt nicht enthalten, die vollständige Stilinformationen für die Zelle Wenn Formate von der Zeilen-, Spalten- oder Steuerelement geerbt werden. Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
   
-## Effiziente Verwendung von Kontextmenüs  
- Jede Zelle, Zeile und Spalte kann über ein eigenes Kontextmenü verfügen.  Kontextmenüs werden im <xref:System.Windows.Forms.DataGridView>\-Steuerelement durch <xref:System.Windows.Forms.ContextMenuStrip>\-Steuerelemente dargestellt.  Genauso wie bei Zellenstilobjekten hat das Erstellen von Kontextmenüs für viele einzelne <xref:System.Windows.Forms.DataGridView>\-Elemente negative Auswirkungen auf die Systemleistung.  Um diese Leistungsminderung zu vermeiden, beachten Sie die folgenden Richtlinien:  
+## <a name="using-shortcut-menus-efficiently"></a>Effizientes Verwenden von Kontextmenüs  
+ Jede Zelle, Zeile und Spalte kann ein eigenen Kontextmenü verfügen. Kontextmenüs in der <xref:System.Windows.Forms.DataGridView> Steuerelements dargestellte <xref:System.Windows.Forms.ContextMenuStrip> Steuerelemente. Wie bei Zelle Formatobjekte, Erstellen von Kontextmenüs für viele einzelne <xref:System.Windows.Forms.DataGridView> Elemente werden die Leistung negativ beeinträchtigt. Um dieser Nachteil zu vermeiden, verwenden Sie die folgenden Richtlinien:  
   
--   Erstellen Sie keine Kontextmenüs für einzelne Zellen und Zeilen.  Dies gilt auch für die Zeilenvorlage, die zusammen mit ihrem Kontextmenü geklont wird, sobald dem Steuerelement neue Zeilen hinzugefügt werden.  Um optimale Skalierbarkeit zu gewährleisten, verwenden Sie ausschließlich die <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>\-Eigenschaft des Steuerelements, um ein einziges Kontextmenü für das gesamte Steuerelement zu erstellen.  
+-   Vermeiden Sie das Erstellen von Kontextmenüs für einzelne Zellen, Zeilen. Dies schließt die Zeilenvorlage, die zusammen mit dem Kontextmenü geklont wird, wenn das Steuerelement neue Zeilen hinzugefügt werden. Verwenden Sie nur des Steuerelements für maximale Skalierbarkeit <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> Eigenschaft, um ein einzelnes Kontextmenü für das gesamte Steuerelement anzugeben.  
   
--   Wenn Sie mehrere Kontextmenüs für mehrere Zeilen oder Zellen benötigen, behandeln Sie das <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded>\-Ereignis oder das <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>\-Ereignis.  Diese Ereignisse ermöglichen es Ihnen, die Kontextmenüobjekte selbst zu verwalten und so die Leistung zu optimieren.  
+-   Wenn Sie mehrere Kontextmenüs für mehrere Zeilen oder Zellen benötigen, behandeln die <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> oder <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> Ereignisse. Diese Ereignisse können Sie die Verknüpfung im Menü-Objekte zu verwalten, selbst ermöglicht Ihnen, die Leistung zu optimieren.  
   
-## Effiziente Verwendung der automatischen Größenanpassung  
- Die Größe von Zeilen, Spalten und Headern kann in Anpassung an veränderte Zellinhalte automatisch geändert werden, damit der gesamte Inhalt der Zellen sichtbar ist und keine Informationen abgeschnitten werden.  Durch das Ändern von Größenanpassungsmodi kann auch die Größe von Zeilen, Spalten und Headern geändert werden.  Um die richtige Größe zu bestimmen, muss das <xref:System.Windows.Forms.DataGridView>\-Steuerelement den Wert jeder Zelle überprüfen, die es aufnehmen muss.  Bei der Arbeit mit umfangreichen Datasets kann sich diese Analyse bei einer automatischen Größenanpassung negativ auf die Steuerelementleistung auswirken.  Um Leistungsminderungen zu vermeiden, beachten Sie die folgenden Richtlinien:  
+## <a name="using-automatic-resizing-efficiently"></a>Automatische Größenänderung effizient verwenden  
+ Zeilen, Spalten und Header können automatisch als Änderungen am Inhalt der Zelle einnimmt, damit der gesamte Inhalt von Zellen angezeigt werden, ohne ihn abzuschneiden. Ändern von Größenanpassungsmodi kann auch Zeilen, Spalten und Header ändern. Um die richtige Größe zu bestimmen, die <xref:System.Windows.Forms.DataGridView> Steuerelement muss untersuchen Sie den Wert jeder Zelle, die angepasst werden müssen. Bei der Arbeit mit großen Datasets kann auf Basis dieser Analyse beeinträchtigen die Leistung des Steuerelements automatische Größenänderung tritt. Um Leistungseinbußen zu vermeiden, verwenden Sie die folgenden Richtlinien:  
   
--   Verzichten Sie bei einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit umfangreichen Rowsets auf die automatische Größenanpassung.  Wenn Sie die automatische Größenanpassung trotzdem verwenden, führen Sie die Anpassung nur auf der Grundlage der angezeigten Zeilen aus.  Auch im virtuellen Modus sollten nur die angezeigten Zeilen verwendet werden.  
+-   Vermeiden Sie die Verwendung der automatischen Größenänderung auf eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer großen Gruppe von Zeilen. Wenn Sie automatische größenanpassung, nur die Größe, die basierend auf der angezeigten Zeilen verwenden. Verwenden Sie nur die Zeilen angezeigten, in als auch der virtuelle Modus.  
   
-    -   Verwenden Sie für Zeilen und Spalten das `DisplayedCells`\-Feld oder das `DisplayedCellsExceptHeaders`\-Feld der Enumerationen <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>, <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode> und <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>.  
+    -   Verwenden Sie für Zeilen und Spalten, die `DisplayedCells` oder `DisplayedCellsExceptHeaders` Feld der <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>, <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>, und <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> Enumerationen.  
   
-    -   Verwenden Sie für Zeilenheader das <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>\-Feld oder das <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>\-Feld der <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>\-Enumeration.  
+    -   Verwenden Sie für die Zeilenkopfzeilen, die <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders> oder <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader> Feld der <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode> Enumeration.  
   
--   Deaktivieren Sie die automatische Größenanpassung, und verwenden Sie die programmgesteuerte Größenanpassung, um optimale Skalierbarkeit zu erzielen.  
+-   Deaktivieren Sie für maximale Skalierbarkeit automatische größenanpassung und verwenden Sie programmgesteuerten größenanpassung.  
   
- Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
   
-## Effiziente Verwendung der Auflistungen für ausgewählte Zellen, Zeilen und Spalten  
- Die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>\-Auflistung bietet bei umfangreichen Auswahlen keine effiziente Leistung.  Auch die <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>\-Auflistung und die <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>\-Auflistung können sich ineffizient erweisen – wenn auch in einem geringeren Grad. Dies liegt daran, dass ein typisches <xref:System.Windows.Forms.DataGridView>\-Steuerelement wesentlich weniger Zeilen als Zellen und wesentlich weniger Spalten als Zeilen enthält.  Um Leistungseinbußen bei Verwendung dieser Auflistungen zu vermeiden, beachten Sie die folgenden Richtlinien:  
+## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>Effizientes Verwenden von der ausgewählten Zellen, Zeilen und Spalten Sammlungen  
+ Die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Auflistung führt keine effizient mit großen Auswahl. Die <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> und <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Sammlungen können auch ineffizient sein, auch in geringerem Maße kommen viele weniger Zeilen als Zellen in einem typischen <xref:System.Windows.Forms.DataGridView> -Steuerelement, und viele weniger Spalten als Zeilen. Um Leistungseinbußen zu vermeiden, bei der Arbeit mit diesen Auflistungen, verwenden Sie die folgenden Richtlinien:  
   
--   Um festzustellen, ob alle Zellen in <xref:System.Windows.Forms.DataGridView> ausgewählt wurden, bevor Sie auf den Inhalt der <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>\-Auflistung zugreifen, überprüfen Sie den Rückgabewert der <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>\-Methode.  Diese Methode kann jedoch bewirken, dass die Freigabe von Zeilen aufgehoben wird.  Weitere Informationen finden Sie im nächsten Abschnitt.  
+-   Um zu bestimmen, ob alle Zellen in der <xref:System.Windows.Forms.DataGridView> ausgewählt wurden, bevor Sie den Inhalt der Zugriff auf die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> -Auflistung, überprüfen den Rückgabewert von der <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> Methode. Beachten Sie jedoch, dass diese Methode Zeilen aufgehoben verursachen kann. Weitere Informationen finden Sie im nächsten Abschnitt.  
   
--   Vermeiden Sie es, die <xref:System.Collections.ICollection.Count%2A>\-Eigenschaft von <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=fullName> zu verwenden, um die Anzahl ausgewählter Zellen zu ermitteln.  Verwenden Sie stattdessen die <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=fullName>\-Methode, und übergeben Sie den <xref:System.Windows.Forms.DataGridViewElementStates?displayProperty=fullName>\-Wert.  Entsprechend sollten Sie die <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=fullName>\-Methode und die <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=fullName>\-Methode verwenden, um die Anzahl ausgewählter Elemente zu ermitteln, anstatt auf die Auflistungen für ausgewählte Zeilen und Spalten zuzugreifen.  
+-   Vermeiden Sie die Verwendung der <xref:System.Collections.ICollection.Count%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType> bestimmt die Anzahl der ausgewählten Zellen. Verwenden Sie stattdessen die <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType> Methode und übergeben der <xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType> Wert. Auf ähnliche Weise mithilfe der <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType> Methoden zur Bestimmung der Anzahl der ausgewählten Elemente, anstatt den Zugriff auf den ausgewählten Sammlungen von Zeile und Spalte.  
   
--   Vermeiden Sie zellenbasierte Auswahlmodi.  Legen Sie stattdessen die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> oder <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> fest.  
+-   Vermeiden Sie zellenbasierte Auswahlmodi. Legen Sie stattdessen die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> Eigenschaft <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect?displayProperty=nameWithType>.  
   
-## Verwenden freigegebener Zeilen  
- Eine effiziente Speichernutzung wird im <xref:System.Windows.Forms.DataGridView>\-Steuerelement durch freigegebene Zeilen erreicht.  Dabei werden von den Zeilen möglichst viele Informationen über Zeilendarstellung und \-verhalten gemeinsam genutzt, indem Instanzen der <xref:System.Windows.Forms.DataGridViewRow>\-Klasse freigegeben werden.  
+## <a name="using-shared-rows"></a>Verwenden von freigegebenen Zeilen  
+ Effiziente speichernutzung erfolgt der <xref:System.Windows.Forms.DataGridView> Kontrolle über freigegebene Zeilen. Zeilen werden so viele Informationen zu ihrer Darstellung und Verhalten wie möglich freigeben, indem Sie Instanzen der Freigabe der <xref:System.Windows.Forms.DataGridViewRow> Klasse.  
   
- Die gemeinsame Nutzung von Zeileninstanzen entlastet zwar den Arbeitsspeicher, kann aber dazu führen, dass die Freigabe von Zeilen aufgehoben wird.  Beispielsweise wird jedes Mal, wenn ein Benutzer direkt mit einer Zelle interagiert, die Freigabe der betreffenden Zeile aufgehoben.  Da dieses Verhalten nicht unterbunden werden kann, sind die Richtlinien in diesem Thema nur bei der Arbeit mit sehr großen Datenmengen hilfreich und auch nur dann, wenn Benutzer bei jeder Ausführung des Programms mit einem relativ geringen Teil der Daten interagieren.  
+ Freigabe Zeileninstanz Arbeitsspeicher speichert, können die Zeilen einfach aufgehoben werden. Wenn ein Benutzer direkt mit einer Zelle interagiert, wird die Zeile aufgehoben. Da dies vermieden werden kann, eignen sich die Richtlinien in diesem Thema nur bei der Arbeit mit sehr großen Mengen von Daten und nur, wenn Benutzer mit einer relativ kleinen Teil der Daten jedes Mal interagieren werden, wenn das Programm ausgeführt wird.  
   
- Eine Zeile kann in einem ungebundenen <xref:System.Windows.Forms.DataGridView>\-Steuerelement nicht freigegeben werden, wenn eine ihrer Zellen Werte enthält.  Wenn das <xref:System.Windows.Forms.DataGridView>\-Steuerelement an eine externe Datenquelle gebunden ist, oder wenn Sie den virtuellen Modus implementieren und eine eigene Datenquelle bereitstellen, werden die Zellwerte außerhalb des Steuerelements und nicht in Zellobjekten gespeichert, wodurch die Zeilen freigegeben werden können.  
+ Eine Zeile kann nicht freigegeben werden in einer nicht gebundenen <xref:System.Windows.Forms.DataGridView> steuern, wenn eine ihrer Zellen Werte enthält. Wenn die <xref:System.Windows.Forms.DataGridView> Steuerelement an einer externen Datenquelle gebunden ist, oder wenn Sie virtuellen Modus implementieren und eine eigene Datenquelle bereitstellen, werden die Zellenwerte gespeichert, außerhalb der Kontrolle und nicht in Zelle Objekte, wodurch die Zeilen gemeinsam genutzt werden.  
   
- Ein Zeilenobjekt kann nur freigegeben werden, wenn der Zustand all seiner Zellen über den Zustand der Zeile und den jeweiligen Zustand der Spalten ermittelt werden kann, in denen die Zellen enthalten sind.  Wenn Sie den Zustand einer Zelle ändern, sodass er nicht mehr vom Zustand der zugehörigen Zeile und Spalte abgeleitet werden kann, kann die Zeile nicht freigegeben werden.  
+ Ein Zeilenobjekt kann nur freigegeben werden, wenn der Status ihrer Zellen aus dem Zustand der Zeile und den Status der Spalten mit den Zellen bestimmt werden kann. Wenn Sie den Zustand einer Zelle ändern, sodass es nicht mehr aus dem Zustand ihrer Zeile und Spalte abgeleitet werden kann, kann die Zeile nicht freigegeben werden.  
   
- Beispielsweise können Zeilen in folgenden Situationen nicht freigegeben werden:  
+ Beispielsweise kann keine Zeile in den folgenden Situationen freigegeben werden:  
   
--   Die Zeile enthält eine einzelne ausgewählte Zelle, die sich nicht in einer ausgewählten Spalte befindet.  
+-   Die Zeile enthält eine einzelne ausgewählte Zelle, die nicht in einer ausgewählten Spalte ist.  
   
--   Die Zeile enthält eine Zelle, deren <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>\-Eigenschaft oder <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A>\-Eigenschaft festgelegt ist.  
+-   Die Zeile enthält eine Zelle mit seiner <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> oder <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A> festgelegten Eigenschaften.  
   
--   Die Zeile enthält <xref:System.Windows.Forms.DataGridViewComboBoxCell> mit festgelegter <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A>\-Eigenschaft.  
+-   Die Zeile enthält eine <xref:System.Windows.Forms.DataGridViewComboBoxCell> mit seiner <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> Eigenschaftensatz.  
   
- Im gebundenen oder virtuellen Modus können Sie QuickInfos und Kontextmenüs für einzelne Zellen bereitstellen, indem Sie das <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>\-Ereignis und das <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded>\-Ereignis behandeln.  
+ Im gebundenen oder virtuellen Modus können Sie QuickInfos und Kontextmenüs für einzelne Zellen angeben, durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> und <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> Ereignisse.  
   
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement versucht automatisch, freigegebene Zeilen zu verwenden, sobald <xref:System.Windows.Forms.DataGridViewRowCollection> Zeilen hinzugefügt werden.  Beachten Sie die folgenden Richtlinien, um sicherzustellen, dass die Zeilenfreigabe erhalten bleibt:  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement versucht automatisch, freigegebene Zeilen zu verwenden, wenn Zeilen hinzugefügt werden die <xref:System.Windows.Forms.DataGridViewRowCollection>. Verwenden Sie die folgenden Richtlinien, um sicherzustellen, dass Zeilen gemeinsam genutzt werden:  
   
--   Vermeiden Sie es, die `Add(Object[])`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>\-Methode und die `Insert(Object[])`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>\-Methode aus der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName>\-Auflistung aufzurufen.  Durch diese Überladungen wird die Freigabe von Zeilen automatisch aufgehoben.  
+-   Vermeiden Sie Aufrufe der `Add(Object[])` Überladung von der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> Methode und die `Insert(Object[])` Überladung der der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> Methode der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType> Auflistung. Diese Überladungen werden automatisch nicht freigegebene Zeilen erstellen.  
   
--   Stellen Sie sicher, dass die Freigabe der in der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=fullName>\-Eigenschaft angegebenen Zeile in den folgenden Fällen erhalten bleibt:  
+-   Stellen Sie sicher, dass der Zeile angegeben wird, der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> Eigenschaft in den folgenden Fällen gemeinsam genutzt werden kann:  
   
-    -   Beim Aufrufen der `Add()`\-Überladung oder der `Add(Int32)`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>\-Methode bzw. der `Insert(Int32,Int32)`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>\-Methode aus der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName>\-Auflistung  
+    -   Beim Aufrufen der `Add()` oder `Add(Int32)` Überladungen der der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> Methode oder die `Insert(Int32,Int32)` Überladung von der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> Methode der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType> Auflistung.  
   
-    -   Beim Erhöhen des Werts der <xref:System.Windows.Forms.DataGridView.RowCount%2A?displayProperty=fullName>\-Eigenschaft  
+    -   Erhöhen Sie den Wert von der <xref:System.Windows.Forms.DataGridView.RowCount%2A?displayProperty=nameWithType> Eigenschaft.  
   
-    -   Beim Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>\-Eigenschaft  
+    -   Beim Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType> Eigenschaft.  
   
--   Achten Sie darauf, dass die Freigabe der durch den `indexSource`\-Parameter angegebenen Zeile erhalten bleibt, wenn die Methoden <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopy%2A> und <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopies%2A> der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName>\-Auflistung aufgerufen werden.  
+-   Stellen Sie sicher, dass die Zeile, angegeben durch die `indexSource` Parameter kann freigegeben werden, beim Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopy%2A>, und <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopies%2A> Methoden der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType> Auflistung.  
   
--   Achten Sie darauf, dass die Freigabe der angegebenen Zeile\(n\) erhalten bleibt, wenn die `Add(DataGridViewRow)`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>\-Methode, die <xref:System.Windows.Forms.DataGridViewRowCollection.AddRange%2A>\-Methode, die `Insert(Int32,DataGridViewRow)`\-Überladung der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>\-Methode und die <xref:System.Windows.Forms.DataGridViewRowCollection.InsertRange%2A>\-Methode aus der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName>\-Auflistung aufgerufen werden.  
+-   Achten Sie darauf, dass beim Aufrufen der angegebenen Zeile bzw. Zeilen freigegeben werden können die `Add(DataGridViewRow)` Überladung der der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> -Methode, die <xref:System.Windows.Forms.DataGridViewRowCollection.AddRange%2A> -Methode, die `Insert(Int32,DataGridViewRow)` Überladung der der <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> -Methode, und die <xref:System.Windows.Forms.DataGridViewRowCollection.InsertRange%2A> Methode von der <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType>Auflistung.  
   
- Um festzustellen, ob eine Zeile freigegeben ist, rufen Sie das Zeilenobjekt mit der <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=fullName>\-Methode ab und überprüfen dann die <xref:System.Windows.Forms.DataGridViewBand.Index%2A>\-Eigenschaft des Objekts.  Freigegebene Zeilen verfügen immer über einen <xref:System.Windows.Forms.DataGridViewBand.Index%2A>\-Eigenschaftswert von \-1.  
+ Um zu bestimmen, ob eine Zeile freigegeben ist, verwenden die <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> Methode, um das Zeilenobjekt abgerufen, und überprüfen Sie des Objekts <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Eigenschaft. Freigegebene Zeilen verfügen immer über ein <xref:System.Windows.Forms.DataGridViewBand.Index%2A> Eigenschaftswert von – 1.  
   
-## Verhindern, dass die Zeilenfreigabe aufgehoben wird  
- Die Freigabe von Zeilen kann durch Code oder aufgrund einer Benutzeraktion aufgehoben werden.  Um Auswirkungen auf die Systemleistung zu vermeiden, sollten Sie darauf achten, dass die Freigabe von Zeilen nicht aufgehoben wird.  Während der Anwendungsentwicklung können Sie das <xref:System.Windows.Forms.DataGridView.RowUnshared>\-Ereignis behandeln, um festzustellen, wann die Freigabe von Zeilen aufgehoben wird.  Dies ist beim Debuggen von Problemen bei der Zeilenfreigabe von Nutzen.  
+## <a name="preventing-rows-from-becoming-unshared"></a>Verhindert, dass Zeilen aufgehoben  
+ Freigegebene Zeilen können als Ergebnis der Aktion "Code" oder "Benutzer aufgehoben werden. Um Leistungseinbußen zu vermeiden, sollten Sie vermeiden, sodass Zeilen aufgehoben wird. Sie können während der Anwendungsentwicklung behandeln die <xref:System.Windows.Forms.DataGridView.RowUnshared> Ereignis, um zu bestimmen, wann Zeilen aufgehoben wird. Dies ist hilfreich beim Debuggen von Problemen Freigeben von Zeilen.  
   
- Um zu verhindern, dass die Freigabe von Zeilen aufgehoben wird, beachten Sie die folgenden Richtlinien:  
+ Um zu verhindern, dass Zeilen aufgehoben, verwenden Sie die folgenden Richtlinien:  
   
--   Vermeiden Sie es, die <xref:System.Windows.Forms.DataGridView.Rows%2A>\-Auflistung zu indizieren oder sie mit einer `foreach`\-Schleife zu durchlaufen.  In aller Regel müssen Sie nicht direkt auf Zeilen zugreifen.  <xref:System.Windows.Forms.DataGridView>\-Methoden, die für Zeilen verwendet werden, verwenden anstelle von Zeileninstanzen die Argumente für den Zeilenindex.  Darüber hinaus empfangen Handler für zeilenbezogene Ereignisse Ereignisargumentobjekte mit Zeileneigenschaften, die Sie zum Bearbeiten von Zeilen verwenden können, ohne dass dabei die Zeilenfreigabe aufgehoben wird.  
+-   Vermeiden Sie die Indizierung der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung oder durchlaufen, bis sie mit einer `foreach` Schleife. Normalerweise müssen Sie nicht direkt auf Zeilen zugreifen. <xref:System.Windows.Forms.DataGridView>Methoden, die für Zeilen ausgeführt werden, nehmen Zeileninstanz, anstatt Argumente für den Zeilenindex. Darüber hinaus Empfangshandler für Ereignisse in Zusammenhang mit Zeile Argument Ereignisobjekten mit Eigenschaften für die Zeile, die Sie verwenden können, um Zeilen zu bearbeiten, ohne dass aufgehoben wird.  
   
--   Verwenden Sie die <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=fullName>\-Methode, und übergeben Sie den tatsächlichen Index der Zeile, um auf ein Zeilenobjekt zuzugreifen.  Beachten Sie jedoch, dass durch das Ändern eines freigegebenen Zeilenobjekts, das über diese Methode abgerufen wird, alle Zeilen geändert werden, die dieses Objekt gemeinsam nutzen.  Die Zeile für neue Datensätze wird jedoch nicht mit anderen Zeilen freigegeben, sodass das Ändern anderer Zeilen sich nicht auf diese Zeile auswirkt.  Beachten Sie auch, dass verschiedene, durch eine freigegebene Zeile dargestellte Zeilen über unterschiedliche Kontextmenüs verfügen können.  Um das korrekte Kontextmenü von der Instanz einer freigegebenen Zeile abzurufen, verwenden Sie die <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A>\-Methode und übergeben den tatsächlichen Index der Zeile.  Falls Sie stattdessen auf die <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A>\-Eigenschaft der freigegebenen Zeile zugreifen, wird der Index \-1 der freigegebenen Zeile verwendet und das falsche Kontextmenü abgerufen.  
+-   Wenn Sie ein Zeilenobjekt zugreifen müssen, verwenden die <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> -Methode und übergeben Sie den tatsächlichen Zeilenindex. Beachten Sie jedoch, dass das Ändern von freigegebenen Zeilenobjekts abgerufen, die durch diese Methode alle Zeilen geändert werden, die dieses Objekt aufweisen. Die Zeile für neue Datensätze ist nicht mit anderen Zeilen hat jedoch freigegeben, sodass es nicht betroffen sind, wenn Sie eine anderen Zeile ändern. Beachten Sie außerdem, dass unterschiedliche Zeilen, die durch eine freigegebene Zeile dargestellten verschiedene Kontextmenüs aufweisen können. Um das richtige Kontextmenü aus einer Instanz freigegebenen Zeile abzurufen, verwenden die <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> -Methode und übergeben Sie den tatsächlichen Zeilenindex. Wenn der Zugriff auf die freigegebenen Zeile <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> Eigenschaft stattdessen die freigegebene Zeilenindex "-1" wird verwendet und wird nicht das richtige Kontextmenü abrufen.  
   
--   Vermeiden Sie es, die <xref:System.Windows.Forms.DataGridViewRow.Cells%2A?displayProperty=fullName>\-Auflistung zu indizieren.  Durch den direkten Zugriff auf eine Zelle wird die Freigabe der übergeordneten Zeile aufgehoben und eine neue <xref:System.Windows.Forms.DataGridViewRow> instanziiert.  Handler für zellenbezogene Ereignisse empfangen Ereignisargumentobjekte mit Zelleigenschaften, die Sie zum Bearbeiten von Zellen verwenden können, ohne dass dabei Zeilenfreigaben aufgehoben werden.  Sie können auch mithilfe der <xref:System.Windows.Forms.DataGridView.CurrentCellAddress%2A>\-Eigenschaft die Zeilen\- und Spaltenindizes der aktuellen Zelle abrufen, ohne direkt auf die Zelle zuzugreifen.  
+-   Vermeiden Sie die Indizierung der <xref:System.Windows.Forms.DataGridViewRow.Cells%2A?displayProperty=nameWithType> Auflistung. Direkten Zugriff auf eine Zelle führt dazu, dass die übergeordneten Zeile aufgehoben und Instanziierung eines neuen <xref:System.Windows.Forms.DataGridViewRow>. Empfangshandler für Ereignisse in Zusammenhang mit Zelle Argument Ereignisobjekten mit Zelleigenschaften, die Sie verwenden können, um Zellen zu bearbeiten, ohne Zeilen aufgehoben wird. Sie können auch die <xref:System.Windows.Forms.DataGridView.CurrentCellAddress%2A> Eigenschaft, um die Zeilen- und Spaltenindizes der aktuellen Zelle abrufen, ohne den direkten Zugriff auf die Zelle.  
   
--   Vermeiden Sie zellenbasierte Auswahlmodi.  Diese Modi bewirken, dass Zeilenfreigaben aufgehoben werden.  Legen Sie stattdessen die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> oder <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> fest.  
+-   Vermeiden Sie zellenbasierte Auswahlmodi. Diese Modi dazu führen, dass Zeilen aufgehoben wird. Legen Sie stattdessen die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> Eigenschaft <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect?displayProperty=nameWithType>.  
   
--   Das <xref:System.Windows.Forms.DataGridViewRowCollection.CollectionChanged?displayProperty=fullName>\-Ereignis oder das <xref:System.Windows.Forms.DataGridView.RowStateChanged?displayProperty=fullName>\-Ereignis sollte nicht behandelt werden.  Diese Ereignisse bewirken, dass Zeilenfreigaben aufgehoben werden.  Vermeiden Sie es auch, die <xref:System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged%2A?displayProperty=fullName>\-Methode oder die <xref:System.Windows.Forms.DataGridView.OnRowStateChanged%2A?displayProperty=fullName>\-Methode aufzurufen, durch die diese Ereignisse ausgelöst werden.  
+-   Behandeln Sie keine der <xref:System.Windows.Forms.DataGridViewRowCollection.CollectionChanged?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridView.RowStateChanged?displayProperty=nameWithType> Ereignisse. Diese Ereignisse dazu führen, dass Zeilen aufgehoben wird. Rufen Sie außerdem nicht den <xref:System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridView.OnRowStateChanged%2A?displayProperty=nameWithType> Methoden, die diese Ereignisse auslösen.  
   
--   Greifen Sie nicht auf die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A?displayProperty=fullName>\-Auflistung zu, wenn der Wert der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>\-Eigenschaft <xref:System.Windows.Forms.DataGridViewSelectionMode>, <xref:System.Windows.Forms.DataGridViewSelectionMode>, <xref:System.Windows.Forms.DataGridViewSelectionMode> oder <xref:System.Windows.Forms.DataGridViewSelectionMode> lautet.  Dadurch wird die Freigabe aller ausgewählten Zeilen aufgehoben.  
+-   Nicht auf die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A?displayProperty=nameWithType> Auflistung bei der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>, oder <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>. Dies bewirkt, dass alle ausgewählten Zeilen aufgehoben wird.  
   
--   Rufen Sie nicht die <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A?displayProperty=fullName>\-Methode auf.  Diese Methode kann bewirken, dass Zeilenfreigaben aufgehoben werden.  
+-   Rufen Sie nicht die <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A?displayProperty=nameWithType> Methode. Diese Methode kann dazu führen, dass Zeilen aufgehoben wird.  
   
--   Vermeiden Sie es, die <xref:System.Windows.Forms.DataGridView.SelectAll%2A?displayProperty=fullName>\-Methode aufzurufen, wenn der Wert der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>\-Eigenschaft <xref:System.Windows.Forms.DataGridViewSelectionMode> lautet.  Dadurch wird die Freigabe aller Zeilen aufgehoben.  
+-   Rufen Sie nicht die <xref:System.Windows.Forms.DataGridView.SelectAll%2A?displayProperty=nameWithType> Methode bei der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> Eigenschaftswert ist <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>. Dies bewirkt, dass alle Zeilen aufgehoben wird.  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A>\-Eigenschaft oder <xref:System.Windows.Forms.DataGridViewCell.Selected%2A>\-Eigenschaft einer Zelle nicht auf `false` fest, wenn die entsprechende Eigenschaft in der zugehörigen Spalte auf `true` festgelegt ist.  Dadurch wird die Freigabe aller Zeilen aufgehoben.  
+-   Legen Sie nicht die <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A> oder <xref:System.Windows.Forms.DataGridViewCell.Selected%2A> Eigenschaft einer Zelle, `false` Wenn die entsprechende Eigenschaft in der Spalte auf festgelegt ist `true`. Dies bewirkt, dass alle Zeilen aufgehoben wird.  
   
--   Greifen Sie nicht auf die <xref:System.Windows.Forms.DataGridViewRowCollection.List%2A?displayProperty=fullName>\-Eigenschaft zu.  Dadurch wird die Freigabe aller Zeilen aufgehoben.  
+-   Nicht auf die <xref:System.Windows.Forms.DataGridViewRowCollection.List%2A?displayProperty=nameWithType> Eigenschaft. Dies bewirkt, dass alle Zeilen aufgehoben wird.  
   
--   Rufen Sie nicht die `Sort(IComparer)`\-Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>\-Methode auf.  Sortierungen mit einem benutzerdefinierten Vergleich führen dazu, dass die Freigabe sämtlicher Zeilen aufgehoben wird.  
+-   Rufen Sie nicht die `Sort(IComparer)` Überladung von der <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode. Sortieren mit einem benutzerdefinierten Vergleich bewirkt, dass alle Zeilen aufgehoben wird.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- [Leistungsoptimierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Virtueller Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [Datenanzeigemodi im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)   
- [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)   
- [Größenänderungsoptionen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)

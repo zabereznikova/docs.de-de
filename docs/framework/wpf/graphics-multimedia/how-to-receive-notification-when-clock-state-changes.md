@@ -1,51 +1,57 @@
 ---
-title: "Gewusst wie: Empfangen von Benachrichtigungen bei Status&#228;nderungen der Uhr | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Uhren, Benachrichtigung von Zustandsänderungen"
-  - "Benachrichtigungen, Zustandsänderung der Uhr"
+title: "Vorgehensweise: Benachrichtigung bei einer Uhr &#39; s Statusänderungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- clocks [WPF], notification of state changes
+- notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f59fddb1add29d52ccba6fc8b8ce84938b53a1c2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Empfangen von Benachrichtigungen bei Status&#228;nderungen der Uhr
-Das <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated>\-Ereignis einer Uhr tritt auf, wenn ihr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> ungültig wird, beispielsweise, wenn die Uhr angehalten oder gestartet wird.  Sie können dieses Ereignis registrieren, indem Sie entweder direkt eine <xref:System.Windows.Media.Animation.Clock> verwenden, oder indem Sie die Registrierung mit einer <xref:System.Windows.Media.Animation.Timeline> vornehmen.  
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Vorgehensweise: Benachrichtigung bei einer Uhr &#39; s Statusänderungen
+Einer Uhr <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> Ereignis tritt auf, wenn seine <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> ungültig, z. B. wenn die Uhr startet oder beendet wird. Registrieren Sie sich, für dieses Ereignis mit der Verwendung von direkt eine <xref:System.Windows.Media.Animation.Clock>, oder registrieren Sie mithilfe einer <xref:System.Windows.Media.Animation.Timeline>.  
   
- Im folgenden Beispiel werden ein <xref:System.Windows.Media.Animation.Storyboard>\-Objekt und zwei <xref:System.Windows.Media.Animation.DoubleAnimation>\-Objekte verwendet, um die Breite von zwei Rechtecken zu animieren.  Das <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>\-Ereignis wird verwendet, um Statusänderungen der Uhr zu überwachen.  
+ Im folgenden Beispiel ein <xref:System.Windows.Media.Animation.Storyboard> und zwei <xref:System.Windows.Media.Animation.DoubleAnimation> Objekte werden verwendet, um die Breite von zwei Rechtecken zu animieren. Die <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Ereignis wird verwendet, um die Uhr Zustandsänderungen abhören.  
   
-## Beispiel  
- [!code-xml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
+## <a name="example"></a>Beispiel  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
   
  [!code-csharp[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml.cs#_graphicsmm_stateeventhandlers)]
  [!code-vb[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/stateexample.xaml.vb#_graphicsmm_stateeventhandlers)]  
   
- Die folgende Abbildung zeigt die unterschiedlichen Zustände an, in die die Animationen übergehen, während die übergeordnete Zeitachse \(*Storyboard*\) fortschreitet.  
+ Die folgende Abbildung zeigt die verschiedenen Zustände-Animationen geben Sie als die übergeordnete Zeitachse (*Storyboard*) im Verlauf.  
   
- ![Uhr&#45;Zustände für ein Drehbuch mit zwei Animationen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm\_3timelines")  
+ ![Zustände für ein Drehbuch mit zwei Animationen Clock](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm_3timelines")  
   
- In der folgenden Tabelle sind die Zeiten aufgeführt, zu denen das <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>\-Ereignis von *Animation1* ausgelöst wird:  
+ Die folgende Tabelle zeigt die Zeiten, zu dem *Animation1*des <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> -Ereignis ausgelöst:  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|Zeit \(Sekunden\)|1|10|19|21|30|39|  
+|Zeit (in Sekunden)|1|10|19|21|30|39|  
 |Zustand|Aktiv|Aktiv|Beendet|Aktiv|Aktiv|Beendet|  
   
- In der folgenden Tabelle sind die Zeiten aufgeführt, zu denen das <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>\-Ereignis von *Animation2* ausgelöst wird:  
+ Die folgende Tabelle zeigt die Zeiten, zu dem *Animation2*des <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> -Ereignis ausgelöst:  
   
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
-|Zeit \(Sekunden\)|1|9|11|19|21|29|31|39|  
-|Zustand|Aktiv|Füllung|Aktiv|Beendet|Aktiv|Füllung|Aktiv|Beendet|  
+|Zeit (in Sekunden)|1|9|11|19|21|29|31|39|  
+|Zustand|Aktiv|Ausfüllen|Aktiv|Beendet|Aktiv|Ausfüllen|Aktiv|Beendet|  
   
- Beachten Sie, dass das <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>\-Ereignis von *Animation1* bei 10 Sekunden ausgelöst wird, obwohl der Status weiterhin <xref:System.Windows.Media.Animation.ClockState> ist.  Dies kommt daher, dass sich der Status bei 10 Sekunden geändert hat, wobei er sich jedoch von <xref:System.Windows.Media.Animation.ClockState> in <xref:System.Windows.Media.Animation.ClockState> und am selben Teilstrich wieder in <xref:System.Windows.Media.Animation.ClockState> geändert hat.
+ Beachten Sie, dass *Animation1*des <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Ereignis bei 10 Sekunden ausgelöst wird, obwohl Datenbankzustands bleibt <xref:System.Windows.Media.Animation.ClockState.Active>. Liegt darin, dass seinen Status geändert 10 Sekunden, aber es von <xref:System.Windows.Media.Animation.ClockState.Active> auf <xref:System.Windows.Media.Animation.ClockState.Filling> und dann zurück in <xref:System.Windows.Media.Animation.ClockState.Active> am selben Teilstrich.

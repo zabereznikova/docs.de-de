@@ -1,25 +1,28 @@
 ---
-title: "WSAT_TraceRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSAT_TraceRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3966311bc10b5ad2ee401ef9e3e13c8f36e14505
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# WSAT_TraceRecord
-WSAT\_TraceRecord  
+# <a name="wsattracerecord"></a>WSAT_TraceRecord
+WSAT_TraceRecord  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -30,32 +33,32 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 };  
 ```  
   
-## Methoden  
- Die Klasse WSAT\_TraceRecord definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die Klasse WSAT_TraceRecord definiert keine Methoden.  
   
-## Eigenschaften  
- Die Klasse WSAT\_TraceRecord weist die folgenden Eigenschaften auf:  
+## <a name="properties"></a>Eigenschaften  
+ Die Klasse WSAT_TraceRecord weist die folgenden Eigenschaften auf:  
   
-### ActivityID  
+### <a name="activityid"></a>ActivityID  
  Datentyp: object  
 Zugriffstyp: Schreibgeschützt  
   
- Die Aktivitäts\-ID des Ablaufverfolgungsdatensatzes.  
+ Die Aktivitäts-ID des Ablaufverfolgungsdatensatzes.  
   
-### EventID  
+### <a name="eventid"></a>EventID  
  Datentyp: sint32  
 Zugriffstyp: Schreibgeschützt  
   
- Die Ziel\-ID des Ablaufverfolgungsdatensatzes.  
+ Die Ziel-ID des Ablaufverfolgungsdatensatzes.  
   
-### TraceRecord  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="tracerecord"></a>TraceRecord  
+ Datentyp: string (Zeichenfolge)  
 Zugriffstyp: Schreibgeschützt  
   
  TraceRecord  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|

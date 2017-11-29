@@ -1,38 +1,43 @@
 ---
-title: "Gewusst wie: Festlegen von Bildern zur Laufzeit (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bitmaps [Windows Forms], Anzeigen in PictureBox-Steuerelementen [Windows Forms]"
-  - "Beispiele [Windows Forms], PictureBox-Steuerelement"
-  - "Bilder [Windows Forms], Hinzufügen mit PictureBox-Steuerelementen [Windows Forms]"
-  - "PictureBox-Steuerelement [Windows Forms], Hinzufügen von Grafiken"
-  - "PictureBox-Steuerelement [Windows Forms], Hinzufügen von Bildern"
-  - "Bilder, Festlegen von Anzeigeoptionen"
+title: "Gewusst wie: Festlegen von Bildern zur Laufzeit (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- pictures [Windows Forms], setting display
+- examples [Windows Forms], PictureBox control
+- bitmaps [Windows Forms], displaying in PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding images
+- images [Windows Forms], adding with PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen von Bildern zur Laufzeit (Windows&#160;Forms)
-Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Windows.Forms.PictureBox>\-Steuerelement in Windows Forms angezeigt wird.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Gewusst wie: Festlegen von Bildern zur Laufzeit (Windows Forms)
+Bild von einer Windows Forms angezeigt können programmgesteuert festgelegt werden <xref:System.Windows.Forms.PictureBox> Steuerelement.  
   
-### So legen Sie ein Bild programmgesteuert fest  
+### <a name="to-set-a-picture-programmatically"></a>So legen Sie ein Bild programmgesteuert fest  
   
--   Legen Sie die <xref:System.Windows.Forms.PictureBox.Image%2A>\-Eigenschaft mit der <xref:System.Drawing.Image.FromFile%2A>\-Methode der <xref:System.Drawing.Image>\-Klasse fest.  
+-   Legen Sie die <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft mit der <xref:System.Drawing.Image.FromFile%2A> Methode der <xref:System.Drawing.Image> Klasse.  
   
-     Im unten stehenden Beispiel wurde als Speicherort für das Bild der Ordner **Eigene Dateien** festgelegt.  Dieser Speicherort wird verwendet, weil vorausgesetzt werden kann, dass die meisten Computer mit einem Windows\-Betriebssystem über dieses Verzeichnis verfügen.  Auf diese Weise können auch Benutzer mit minimalen Systemzugriffsberechtigungen die Anwendung sicher ausführen.  Im unten stehenden Beispiel wird davon ausgegangen, dass einem Formular bereits ein <xref:System.Windows.Forms.PictureBox>\-Steuerelement hinzugefügt wurde.  
+     Im folgenden Beispiel wird der Pfad für den Speicherort des Bilds Festlegen der Ordner "Eigene Dokumente". Dies geschieht, da Sie davon ausgehen können, die meisten Computer das Windows-Betriebssystem ausgeführt werden, dieses Verzeichnis enthält. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement bereits hinzugefügt.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -43,7 +48,6 @@ Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Win
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -56,7 +60,6 @@ Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Win
        (System.Environment.SpecialFolder.Personal)  
        + @"\Image.gif");  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,16 +75,15 @@ Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Win
        }  
     ```  
   
-### So löschen Sie eine Grafik  
+### <a name="to-clear-a-graphic"></a>So löschen Sie eine Grafik  
   
--   Geben Sie zuerst den vom Bild verwendeten Speicherplatz frei, und löschen Sie anschließend die Grafik.  Wenn es bei der Speicherverwaltung zu Problemen kommt, gibt die Garbage Collection den Speicher zu einem späteren Zeitpunkt frei.  
+-   Zunächst freigegeben Sie vom Image verwendeten Speicherplatz, und deaktivieren Sie dann auf die Grafik. Garbagecollection wird später um den Arbeitsspeicher freizugeben, wenn die Verwaltung des Arbeitsspeichers ein Problem aufgetreten ist.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
        PictureBox1.Image.Dispose()  
        PictureBox1.Image = Nothing  
     End If  
-  
     ```  
   
     ```csharp  
@@ -90,7 +92,6 @@ Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Win
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
     }  
-  
     ```  
   
     ```cpp  
@@ -102,14 +103,14 @@ Sie können programmgesteuert festlegen, welches Bild von einem <xref:System.Win
     ```  
   
     > [!NOTE]
-    >  Weitere Informationen dazu, warum die <xref:System.Drawing.Image.Dispose%2A>\-Methode auf diese Weise verwendet werden sollte, finden Sie unter [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Weitere Informationen dazu, warum sollten Sie verwenden die <xref:System.Drawing.Image.Dispose%2A> Methode auf diese Weise finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](../../../../docs/standard/garbage-collection/unmanaged.md).  
   
-     Der Code löscht das Bild selbst dann, wenn eine Grafik zur Entwurfszeit in das Steuerelement geladen wurde.  
+     Mit diesem Code wird das Bild gelöscht, selbst wenn das Steuerelement zur Entwurfszeit eine Grafik geladen wurde.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.PictureBox>   
- <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName>   
- [Übersicht über das PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)   
- [PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.PictureBox>  
+ <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
+ [Übersicht über das PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

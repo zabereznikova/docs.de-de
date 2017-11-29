@@ -1,39 +1,43 @@
 ---
-title: "39458 - TrackingRecordTruncated | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 39458 - TrackingRecordTruncated
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5352f0eb-d571-454a-bab5-e2162888b218
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ecf18d6d751edd47dbeca7d2e5f4491892e41e6d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 39458 - TrackingRecordTruncated
-## Eigenschaften  
+# <a name="39458---trackingrecordtruncated"></a>39458 - TrackingRecordTruncated
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|39458|  
 |Schlüsselwörter|WFTracking|  
 |Ebene|Warnung|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
- Gibt an, dass ein Nachverfolgungsdatensatz abgeschnitten wurde.  Variablen, Anmerkungen und Benutzerdaten wurden entfernt.  
+## <a name="description"></a>Beschreibung  
+ Gibt an, dass ein Nachverfolgungsdatensatz abgeschnitten wurde. Variablen, Anmerkungen und Benutzerdaten wurden entfernt.  
   
-## Meldung  
- Abgeschnittener Überwachungsdatensatz %1 wurde in die ETW\-Sitzung mit Anbieter %2 geschrieben.  Variablen, Anmerkungen und Benutzerdaten wurden entfernt.  
+## <a name="message"></a>Meldung  
+ Abgeschnittener Überwachungsdatensatz %1 wurde in die ETW-Sitzung mit Anbieter %2 geschrieben. Variablen, Anmerkungen und Benutzerdaten wurden entfernt.  
   
-## Details  
+## <a name="details"></a>Details  
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
-|----------------------|---------------------|------------------|  
+|--------------------|--------------------|-----------------|  
 |RecordNumber|xs:string|Die Nummer des Nachverfolgungsdatensatzes.|  
-|ProviderId|xs:string|Die ETW\-Anbieter\-ID.|  
+|ProviderId|xs:string|Die ETW-Anbieter-ID.|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

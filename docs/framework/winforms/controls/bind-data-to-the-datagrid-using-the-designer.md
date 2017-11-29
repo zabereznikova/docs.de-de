@@ -1,71 +1,72 @@
 ---
-title: "Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenquellen, Bindung an Windows Forms-Steuerelemente"
-  - "DataGridView-Steuerelement [Windows Forms], Datenbindung"
-  - "Windows Forms-Steuerelemente, Binden an eine Datenquelle"
+title: 'Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, binding to a data source
+- data sources [Windows Forms], binding to Windows Forms controls
+- DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a203aa20865a4180b4eb9a7b192fc3c9b73a2f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
-Mit dem Designer können Sie ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement an verschiedene Datenquellen binden, z. B. an Datenbanken, Geschäftsobjekte oder Webdienste.  Wenn Sie das Steuerelement mit dem Designer an eine Datenquelle binden, wird es automatisch an eine <xref:System.Windows.Forms.BindingSource>\-Komponente gebunden, die der Datenquelle entspricht.  Des Weiteren werden gemäß den von der Datenquelle bereitgestellten Schemainformationen automatisch Spalten im Steuerelement generiert.  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
+Können Sie die Verbindung den Designer einen <xref:System.Windows.Forms.DataGridView> Steuerelement Datenquellen verschiedenster, z. B. Datenbanken, Geschäftsobjekte oder Webdienste. Wenn Sie das Steuerelement mit einer Datenquelle mithilfe des Designers binden, wird das Steuerelement automatisch an gebunden eine <xref:System.Windows.Forms.BindingSource> Komponente, die die Datenquelle darstellt. Darüber hinaus werden automatisch Spalten im Steuerelement erstellt, damit sie den Schemainformationen der Datenquelle entsprechen.  
   
- Nachdem Spalten generiert wurden, können Sie sie an Ihre Anforderungen anpassen.  Beispielsweise können Sie Spalten, die Sie nicht interessieren, entfernen oder ausblenden, die Spalten neu anordnen oder die Spaltentypen ändern.  Weitere Informationen über das Ändern von Spalten finden Sie im Abschnitt mit den weiterführenden Themen.  
+ Nachdem die Spalten erzeugt wurden, können Sie sie Ihren Bedürfnissen entsprechend ändern. Sie können z.B. Spalten entfernen oder ausblenden, die für Sie nicht interessant sind, die Spalten neu anordnen oder die Typen der Spalten ändern. Weitere Informationen zum Modifizieren von Spalten finden Sie in den Themen im Abschnitt „Siehe auch“.  
   
- Sie können auch mehrere <xref:System.Windows.Forms.DataGridView>\-Steuerelemente an verknüpfte Tabellen binden, um Master\/Detail\-Beziehungen herzustellen.  Bei dieser Konfiguration zeigt ein Steuerelement eine übergeordnete Tabelle an, und ein anderes Steuerelement zeigt nur die Zeilen in einer untergeordneten Tabelle an, die in Beziehung zu der aktuellen Zeile in der übergeordneten Tabelle stehen.  Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen von verknüpften Daten in einer Windows Forms\-Anwendung](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md).  
+ Sie können auch mehrere binden <xref:System.Windows.Forms.DataGridView> Steuerelemente zu verknüpften Tabellen Master/Detail-Beziehung zu erstellen. In dieser Konfiguration zeigt ein Steuerelement eine übergeordnete Tabelle und ein anderes Steuerelement nur die Reihen einer untergeordneten Tabelle an, die sich auf die aktuelle Reihe in der übergeordneten Tabelle beziehen. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von verknüpften Daten in einer Windows Forms-Anwendung](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
- Für das folgende Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** mit einem Formular benötigt, das ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement bzw. zwei Steuerelemente für eine Master\/Detail\-Beziehung enthält.  Informationen zum Starten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Das folgende Verfahren erfordert eine **Windows-Anwendung** -Projekts mit einem Formular, enthält eine <xref:System.Windows.Forms.DataGridView> zwei Steuerelemente für eine Master/Detail-Beziehung. Informationen zum Starten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts)](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Vorgehensweise: Hinzufügen von Steuerelementen für Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So binden Sie das Steuerelement an eine Datenquelle  
+### <a name="to-bind-the-control-to-a-data-source"></a>So binden Sie das Steuerelement an eine Datenquelle  
   
-1.  Klicken Sie auf das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) in der rechten oberen Ecke des <xref:System.Windows.Forms.DataGridView>\-Steuerelements.  
+1.  Klicken Sie auf das Smarttag-Symbol (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) in der oberen rechten Ecke des der <xref:System.Windows.Forms.DataGridView> Steuerelement.  
   
 2.  Klicken Sie auf den Dropdownpfeil für die Option **Datenquelle auswählen**.  
   
-3.  Wenn Ihr Projekt noch nicht über eine Datenquelle verfügt, klicken Sie auf **Projektdatenquelle hinzufügen**, und führen Sie die im Assistenten angezeigten Schritte aus.  
+3.  Klicken Sie auf **Projektdatenquelle hinzufügen**, wenn Ihr Projekt noch nicht über eine Datenquelle verfügt, und befolgen Sie die Schritte des Assistenten.  
   
-     Weitere Informationen finden Sie unter [Assistent zum Konfigurieren von Datenquellen](../Topic/Data%20Source%20Configuration%20Wizard.md).  Die neue Datenquelle wird im Dropdownfenster **Datenquelle auswählen** angezeigt.  Wenn die neue Datenquelle nur einen Member enthält \(z. B. eine einzelne Datenbanktabelle\), wird das Steuerelement automatisch an diesen Member gebunden.  Fahren Sie andernfalls mit dem nächsten Schritt fort.  
+     Weitere Informationen finden Sie unter [Assistent zum Konfigurieren von Datenquellen](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f). Die neue Datenquelle wird im Dropdownfenster **Datenquelle auswählen** angezeigt. Wenn Ihre neue Datenquelle nur einen Member enthält, z.B. eine einzelne Datenbanktabelle, bindet das Steuerelement automatisch an diesen Member. Setzen Sie andernfalls den Vorgang mit dem nächsten Schritt fort.  
   
-4.  Erweitern Sie die Knoten **Weitere Datenquellen** und **Projektdatenquellen**, sofern diese noch nicht erweitert sind, und wählen Sie anschließend die Datenquelle aus, an die das Steuerelement gebunden werden soll.  
+4.  Erweitern Sie die Knoten **Weitere Datenquellen** und **Projektdatenquellen**, wenn Sie noch nicht erweitert sind, und wählen Sie die Datenquelle aus, an die Sie das Steuerelement binden wollen.  
   
-5.  Wenn die Datenquelle mehrere Member enthält \(wenn Sie beispielsweise einen <xref:System.Data.DataSet?displayProperty=fullName> mit mehreren Tabellen erstellt haben\), erweitern Sie die Datenquelle und wählen den Member aus, an den gebunden werden soll.  
+5.  Wenn die Datenquelle mehrere Member enthält, z. B. Wenn Sie haben eine <xref:System.Data.DataSet?displayProperty=nameWithType> , die mehrere Tabellen enthält, erweitern Sie die Datenquelle, und wählen Sie dann auf das ein bestimmte Element zum Binden an.  
   
-6.  Um eine Master\/Detail\-Beziehung zu erstellen, erweitern Sie im Dropdownfenster **Datenquelle auswählen** eines zweiten <xref:System.Windows.Forms.DataGridView>\-Steuerelements die für die übergeordnete Tabelle erstellte <xref:System.Windows.Forms.BindingSource>, und wählen Sie dann in der angezeigten Liste die gewünschte untergeordnete Tabelle aus.  
+6.  So erstellen eine Master/Detail-Beziehung in der **Datenquelle auswählen** Dropdown-Fenster für eine zweite <xref:System.Windows.Forms.DataGridView> steuern, erweitern Sie die <xref:System.Windows.Forms.BindingSource> für die übergeordnete Tabelle erstellt, und wählen Sie dann die zugehörige untergeordnete Tabelle aus der Liste angezeigt.  
   
     > [!NOTE]
-    >  Wenn das Projekt bereits über eine Datenquelle verfügt, haben Sie zusätzlich die Möglichkeit, über das **Datenquellenfenster** ein Datenformular zu erstellen.  Weitere Informationen finden Sie unter [Datenquellenfenster](../Topic/Data%20Sources%20Window.md).  
+    >  Wenn Ihr Projekt bereits über eine Datenquelle verfügt, können Sie auch das Fenster **Datenquellen** verwenden, um ein Datenformular zu erstellen. Weitere Informationen finden Sie unter [Datenquellenfenster](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>   
- [Gewusst wie: Herstellen einer Verbindung zu Daten in einer Datenbank](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)   
- [Gewusst wie: Hinzufügen und Entfernen von Spalten im DataGridView\-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)   
- [Gewusst wie: Ändern der Reihenfolge von Spalten des DataGridView\-Steuerelements in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)   
- [Gewusst wie: Ändern des Typs einer DataGridView\-Spalte in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)   
- [Gewusst wie: Fixieren von Spalten im DataGridView\-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)   
- [Gewusst wie: Ausblenden von Spalten im DataGridView\-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)   
- [Gewusst wie: Festlegen von schreibgeschützten Spalten im DataGridView\-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Datenquellenfenster](../Topic/Data%20Sources%20Window.md)   
- [Gewusst wie: Anzeigen von verknüpften Daten in einer Windows Forms\-Anwendung](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ [Gewusst wie: Herstellen einer Verbindung zu Daten in einer Datenbank](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)  
+ [Vorgehensweise: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
+ [Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Festlegen von schreibgeschützten Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Datenquellenfenster](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)  
+ [Gewusst wie: Anzeigen von verknüpften Daten in einer Windows Forms-Anwendung](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)

@@ -1,40 +1,43 @@
 ---
-title: "Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Eigenschaftenmethoden"
-  - "Reset-Methode"
-  - "ShouldPersist-Methode"
+title: Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], property methods
+- ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d082b0e3db1e1c115d28446cf515cf6acf60a7d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
-`ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft bereitstellen können, wenn die Eigenschaft keinen einfachen Standardwert aufweist.  Bei einem einfachen Standardwert hingegen sollten Sie das <xref:System.ComponentModel.DefaultValueAttribute> anwenden und den Standardwert stattdessen dem Konstruktor der Attributklasse zur Verfügung stellen.  Durch beide Verfahren werden die folgenden Features des Designers aktiviert:  
+# <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
+`ShouldSerialize`und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Eine der folgenden Mechanismen können im Designer die folgenden Funktionen:  
   
--   Wenn der Standardwert der Eigenschaft geändert wurde, wird dies im Eigenschaftenbrowser visuell angezeigt.  
+-   Die Eigenschaft enthält visuellen Hinweis im Eigenschaftenbrowser an, wenn sie ihren Standardwert geändert wurde.  
   
--   Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft klicken und die Option **Zurücksetzen** wählen, um den Standardwert der Eigenschaft wiederherzustellen.  
+-   Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft, und wählen Sie **zurücksetzen** die Eigenschaft auf den Standardwert wiederherzustellen.  
   
 -   Der Designer generiert effizienteren Code.  
   
     > [!NOTE]
-    >  Wenden Sie entweder <xref:System.ComponentModel.DefaultValueAttribute> an, oder stellen Sie die `Reset`*PropertyName*\-Methode und die `ShouldSerialize`*PropertyName*\-Methode bereit.  Verwenden Sie nicht beide gleichzeitig.  
+    >  Übernehmen Sie entweder die <xref:System.ComponentModel.DefaultValueAttribute> , oder geben Sie `Reset` *PropertyName* und `ShouldSerialize` *PropertyName* Methoden. Verwenden Sie nicht beide.  
   
- Die `Reset`*PropertyName*\-Methode setzt eine Eigenschaft auf ihren Standardwert zurück, wie im folgenden Codefragment dargestellt.  
+ Die `Reset` *PropertyName* Methode legt eine Eigenschaft auf den Standardwert fest, wie im folgenden Codefragment dargestellt.  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -49,9 +52,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Wenn eine Eigenschaft nicht über eine `Reset` \-Methode verfügt, nicht mit einem <xref:System.ComponentModel.DefaultValueAttribute> gekennzeichnet ist und in ihrer Deklaration nicht über einen Standardwert verfügt, ist die Option `Reset` für diese Eigenschaft im Kontextmenü des **Eigenschaftenfenster** im Windows Forms\-Designer von [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] deaktiviert.  
+>  Verfügt eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert in der Deklaration der `Reset` -Option für diese Eigenschaft, klicken Sie im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster von Windows Forms-Designer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
- Designer wie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] verwenden die `ShouldSerialize`*PropertyName*\-Methode, um zu überprüfen, ob der Standardwert einer Eigenschaft geändert wurde, und um Code in ein Formular zu schreiben, sofern eine Eigenschaft geändert wurde. Dadurch wird das Generieren von Code effizienter.  Beispiele:  
+ Designer, z. B. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] verwenden die `ShouldSerialize` *PropertyName* Methode zum Überprüfen, ob eine Eigenschaft ihren Standardwert geändert hat und Schreiben von Code in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere codegenerierung. Zum Beispiel:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -69,7 +72,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- Es folgt ein vollständiges Codebeispiel.  
+ Ein vollständiges Codebeispiel folgt.  
   
 ```vb  
 Option Explicit  
@@ -148,9 +151,9 @@ public class MyControl : Control {
 }  
 ```  
   
- Auch wenn der Wert der privaten Variable, der von der `MyFont`\-Eigenschaft aufgerufen wird, in diesem Fall `null` lautet, wird im Eigenschaftenbrowser nicht `null` angezeigt. Stattdessen wird die <xref:System.Windows.Forms.Control.Font%2A>\-Eigenschaft des übergeordneten Elements angezeigt, sofern sie nicht `null` lautet, oder der in <xref:System.Windows.Forms.Control> definierte <xref:System.Windows.Forms.Control.Font%2A>\-Standardwert.  Daher kann der Standardwert für `MyFont`  nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> kann auf diese Eigenschaft nicht angewendet werden.  Stattdessen müssen die `ShouldSerialize`\-Methode und `Reset`\-Methode für die `MyFont`\-Eigenschaft implementiert werden.  
+ In diesem Fall, selbst wenn der Wert der privaten Variablen zugreifen der `MyFont` Eigenschaft ist `null`, Eigenschaftenbrowser zeigt keine `null`; stattdessen zeigt der <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Elements, wenn er nicht ist `null`, Der Standardwert <xref:System.Windows.Forms.Control.Font%2A> Wert im definierten <xref:System.Windows.Forms.Control>. Daher ist der Standardwert für `MyFont` kann nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> kann nicht auf diese Eigenschaft angewendet werden. Stattdessen die `ShouldSerialize` und `Reset` -Methode müssen implementiert werden, für die `MyFont` Eigenschaft.  
   
-## Siehe auch  
- [Eigenschaften von Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)

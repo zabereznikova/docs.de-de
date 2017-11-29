@@ -1,61 +1,65 @@
 ---
-title: "Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Eingabe, Sicherstellen der Gültigkeit"
-  - "MaskedTextBox-Steuerelement [Windows Forms], Überprüfung"
-  - "MaskedTextBox-Steuerelement [Windows Forms], Exemplarische Vorgehensweisen"
-  - "Text, Steuerelemente für Eingabe"
-  - "Benutzereingabe, Steuern"
+title: 'Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- input [Windows Forms], controlling to ensure validity
+- MaskedTextBox control [Windows Forms], walkthroughs
+- MaskedTextBox control [Windows Forms], validation
+- user input [Windows Forms], controlling
+- text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06b8ffd2bda9597198d94c99a785c59cc7cc052e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Initialisieren des <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelements  
+-   Initialisieren der <xref:System.Windows.Forms.MaskedTextBox> Steuerelement  
   
--   Verwenden des <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>\-Ereignishandlers, um den Benutzer zu warnen, wenn ein eingegebenes Zeichen nicht der Maske entspricht  
+-   Mithilfe der <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> -Ereignishandler, um den Benutzer zu warnen, wenn ein Zeichen nicht der Maske entspricht  
   
--   Zuweisen eines Typs zur <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>\-Eigenschaft und Verwenden des <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>\-Ereignishandlers, um den Benutzer zu warnen, wenn der Wert, für den ein Commit ausgeführt wird, für den Typ nicht gültig ist  
+-   Zuweisen eines Typs für die <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> -Eigenschaft und die Verwendung der <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> -Ereignishandler, um den Benutzer zu warnen, wenn sie versuchen, einen commit für Wert für den Typ ungültig ist  
   
-## Erstellen des Projekts und Hinzufügen eines Steuerelements  
+## <a name="creating-the-project-and-adding-a-control"></a>Erstellen des Projekts und Hinzufügen eines Steuerelements  
   
-#### So fügen Sie dem Formular ein MaskedTextBox\-Steuerelement hinzu  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>MaskedTextBox-Steuerelement zum Formular hinzufügen  
   
-1.  Öffnen Sie das Formular, in dem Sie das <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelement platzieren möchten.  
+1.  Öffnen Sie das Formular, das auf dem sollen die <xref:System.Windows.Forms.MaskedTextBox> Steuerelement.  
   
-2.  Ziehen Sie ein <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelement aus der **Toolbox** in das Formular.  
+2.  Ziehen Sie eine <xref:System.Windows.Forms.MaskedTextBox> -Steuerelement aus der **Toolbox** in Ihr Formular.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Steuerelement, und wählen Sie **Eigenschaften** aus.  Klicken Sie im **Eigenschaftenfenster** auf die **Mask**\-Eigenschaft und dann auf die Schaltfläche mit dem Auslassungszeichen **...** neben dem Eigenschaftennamen.  
+3.  Mit der rechten Maustaste in des Steuerelements, und wählen Sie **Eigenschaften**. In der **Eigenschaften** wählen die **Maske** -Eigenschaft, und klicken Sie auf der **...**  (Schaltfläche) neben dem Eigenschaftennamen.  
   
-4.  Wählen Sie im Dialogfeld **Eingabeformat** die Maske **Datum \(Kurzformat\)** aus, und klicken Sie auf **OK**.  
+4.  In der **Eingabeformat** wählen Sie im Dialogfeld die **kurzes Datum** verborgen sind, und klicken Sie auf **OK**.  
   
-5.  Legen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>\-Eigenschaft auf `true` fest.  Durch diese Eigenschaft wird jedes Mal ein kurzer Signalton ausgegeben, wenn der Benutzer ein Zeichen eingibt, das nicht der Maskendefinition entspricht.  
+5.  In der **Eigenschaften** Fenster Satz der <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> Eigenschaft `true`. Diese Eigenschaft bewirkt, dass einen kurze Signalton ausgegeben, jedes Mal, wenn der Benutzer versucht, ein Eingabezeichen, das die Maskendefinition verletzt.  
   
- Eine Übersicht der von der Mask\-Eigenschaft unterstützten Zeichen finden Sie in den Hinweisen zur <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>\-Eigenschaft.  
+ Eine Zusammenfassung der Zeichen, die die Mask-Eigenschaft unterstützt, finden Sie im Abschnitt "Hinweise" der <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft.  
   
-## Warnen des Benutzers bei Eingabefehlern  
+## <a name="alert-the-user-to-input-errors"></a>Benachrichtigt den Benutzer zur Eingabe von Fehlern  
   
-#### Hinzufügen einer QuickInfo\-Sprechblase für abgelehnte Maskeneingaben  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Fügen Sie eine SprechblasenInfo für abgelehnte Maskeneingabe hinzu  
   
-1.  Kehren Sie zur **Toolbox** zurück, und fügen Sie dem Formular <xref:System.Windows.Forms.ToolTip> hinzu.  
+1.  Zurück zu den **Toolbox** und Hinzufügen einer <xref:System.Windows.Forms.ToolTip> in Ihr Formular.  
   
-2.  Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>\-Ereignis, durch das <xref:System.Windows.Forms.ToolTip> beim Auftreten eines Eingabefehlers ausgelöst wird.  Die QuickInfo\-Sprechblase bleibt entweder fünf Sekunden oder so lange sichtbar, bis der Benutzer darauf klickt.  
+2.  Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> Ereignis, das löst die <xref:System.Windows.Forms.ToolTip> tritt ein Eingabefehler. Die SprechblasenInfo bleibt sichtbar, fünf Sekunden lang oder bis der Benutzer darauf klickt.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,14 +86,13 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
         ToolTip1.ToolTipTitle = "Invalid Input"  
         ToolTip1.Show("We're sorry, but only digits (0-9) are allowed in dates.", MaskedTextBox1, 5000)  
     End Sub  
-  
     ```  
   
-## Warnen des Benutzers bei ungültigen Typen  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>Warnen des Benutzers auf einen Typ, der ungültig ist  
   
-#### Hinzufügen einer QuickInfo\-Sprechblase für ungültige Datentypen  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Fügen Sie eine SprechblasenInfo für ungültige Datentypen  
   
-1.  Weisen Sie im <xref:System.Windows.Forms.Form.Load>\-Ereignishandler des Formulars ein <xref:System.Type>\-Objekt zu, das den <xref:System.DateTime>\-Typ der zum <xref:System.Windows.Forms.MaskedTextBox>\-Steuerelement gehörigen <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>\-Eigenschaft darstellt:  
+1.  In Ihrem Formulars <xref:System.Windows.Forms.Form.Load> Ereignishandler, d. h. weisen eine <xref:System.Type> Objekt darstellt der <xref:System.DateTime> Geben Sie auf der <xref:System.Windows.Forms.MaskedTextBox> des Steuerelements <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> Eigenschaft:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -107,7 +110,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
     End Sub  
     ```  
   
-2.  Fügen Sie einen Ereignishandler für das <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>\-Ereignis hinzu:  
+2.  Fügen Sie einen Ereignishandler für das <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>-Ereignis hinzu:  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -129,9 +132,8 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
            e.Cancel = True  
         End If  
     End Sub  
-  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.MaskedTextBox>   
- [MaskedTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.MaskedTextBox>  
+ [MaskedTextBox-Steuerelement](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)

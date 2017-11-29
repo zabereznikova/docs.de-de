@@ -1,52 +1,55 @@
 ---
-title: "Formularbereitstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formularbereitstellung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55e19679bfd24d26e5a918f425fb2a821059a91e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Formularbereitstellung
-In diesem Beispiel wird veranschaulicht, wie das WCF\-REST\-Programmiermodell zur Unterstützung neuer Formate für eingehende Antworten erweitert wird.  Das Beispiel umfasst auch die Implementierung eines Formatierungsprogramms, mit dem eine Anforderung von einer HTML\-Formularbereitstellung in einen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Typ deserialisiert werden kann.  Im Beispiel wird außerdem eine T4\-Vorlage verwendet, um eine HTML\-Seite zurückzugeben. Sie stellt das HTML\-Formular bereit, das die Benutzer an den WCF REST\-Dienst zurücksenden können.  
+# <a name="form-post"></a>Formularbereitstellung
+In diesem Beispiel wird veranschaulicht, wie das WCF-REST-Programmiermodell zur Unterstützung neuer Formate für eingehende Antworten erweitert wird. Das Beispiel umfasst auch die Implementierung eines Formatierungsprogramms, mit dem eine Anforderung von einer HTML-Formularbereitstellung in einen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ deserialisiert werden kann. Im Beispiel wird außerdem eine T4-Vorlage verwendet, um eine HTML-Seite zurückzugeben. Sie stellt das HTML-Formular bereit, das die Benutzer an den WCF REST-Dienst zurücksenden können.  
   
-## Veranschaulicht  
+## <a name="demonstrates"></a>Veranschaulicht  
   
 -   Erweitern der Unterstützung des Formats von eingehenden Anforderungen  
   
--   Integrieren von T4\-Vorlagen  
+-   Integrieren von T4-Vorlagen  
   
-## Diskussion  
- Dieses Beispiel besteht aus zwei Projekten.  Ein Projekt ist die HtmlFormProcessing\-Bibliothek. Sie enthält ein benutzerdefiniertes Formatierungsprogramm für Anforderungen, mit dem HTML\-Formularbereitstellungen zu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Typen deserialisiert werden können.  Das zweite Projekt ist eine Konsolenanwendung, mit der das Beispiel eines grundlegenden Ressourcendiensts dahingehend erweitert wird, dass ein benutzerdefiniertes Formatierungsprogramm für Anforderungen aus der HtmlFormProcessing\-Bibliothek verwendet wird.  
+## <a name="discussion"></a>Diskussion  
+ Dieses Beispiel besteht aus zwei Projekten. Ein Projekt ist die HtmlFormProcessing-Bibliothek. Sie enthält ein benutzerdefiniertes Formatierungsprogramm für Anforderungen, mit dem HTML-Formularbereitstellungen zu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen deserialisiert werden können. Das zweite Projekt ist eine Konsolenanwendung, mit der das Beispiel eines grundlegenden Ressourcendiensts dahingehend erweitert wird, dass ein benutzerdefiniertes Formatierungsprogramm für Anforderungen aus der HtmlFormProcessing-Bibliothek verwendet wird.  
   
- Das benutzerdefinierte Formatierungsprogramm kann HTML\-Formularbereitstellungen \(HtmlFormRequestDispatchFormatter\) deserialisieren und akzeptiert beide [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Typen, die mithilfe des <xref:System.ServiceModel.Dispatcher.QueryStringConverter> und mit <xref:System.Runtime.Serialization.DataContractAttribute> markierten Typen von einer Zeichenfolge konvertiert werden können. Dieses Attribut verfügt nur über Member, die mit dem QueryStringConverter von einer Zeichenfolge konvertiert werden können.  
+ Das benutzerdefinierte Formatierungsprogramm kann HTML-Formularbereitstellungen (HtmlFormRequestDispatchFormatter) deserialisieren und akzeptiert beide [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen, die mithilfe des <xref:System.ServiceModel.Dispatcher.QueryStringConverter> und mit <xref:System.Runtime.Serialization.DataContractAttribute> markierten Typen von einer Zeichenfolge konvertiert werden können. Dieses Attribut verfügt nur über Member, die mit dem QueryStringConverter von einer Zeichenfolge konvertiert werden können.  
   
- Das HtmlFormProcessing\-Bibliotheksprojekt enthält außerdem eine abstrakte Basisklasse, `RequestBodyDispatchFormatter`, mit der andere benutzerdefinierte Anforderungsformatierungsprogramme erstellt werden können.  Die Ableitung vom `RequestBodyDispatchFormatter` ermöglicht es Entwicklern, sich auf die Deserialisierungslogik des Anforderungstexts zu konzentrieren. Auf diese Weise können die URI\-Vorlagenparameter von der Basisklasse den Methodenparametern des Vorgangs zugeordnet werden.  Im HtmlFormProcessing\-Bibliothekprojekt befindet sich weiterhin die `HtmlFormProcessingBehavior`\-Klasse, die veranschaulicht, wie vom <xref:System.ServiceModel.Description.WebHttpBehavior> abgeleitet wird, um das Standardformatierungsprogramm für Anforderungen durch ein benutzerdefiniertes Formatierungsprogramm für Anforderungen zu ersetzen.  
+ Das HtmlFormProcessing-Bibliotheksprojekt enthält außerdem eine abstrakte Basisklasse, `RequestBodyDispatchFormatter`, mit der andere benutzerdefinierte Anforderungsformatierungsprogramme erstellt werden können. Die Ableitung vom `RequestBodyDispatchFormatter` ermöglicht es Entwicklern, sich auf die Deserialisierungslogik des Anforderungstexts zu konzentrieren. Auf diese Weise können die URI-Vorlagenparameter von der Basisklasse den Methodenparametern des Vorgangs zugeordnet werden. Im HtmlFormProcessing-Bibliothekprojekt befindet sich weiterhin die `HtmlFormProcessingBehavior`-Klasse, die veranschaulicht, wie vom <xref:System.ServiceModel.Description.WebHttpBehavior> abgeleitet wird, um das Standardformatierungsprogramm für Anforderungen durch ein benutzerdefiniertes Formatierungsprogramm für Anforderungen zu ersetzen.  
   
- Dieses Konsolenanwendungsprojekt ist eine Erweiterung des Beispiels [Einfacher Ressourcendienst](../../../../docs/framework/wcf/samples/basic-resource-service.md).  Im Beispiel eines grundlegenden Ressourcendiensts wird veranschaulicht, wie eine Ressource in einer Weise verfügbar gemacht wird, die das WCF REST\-Programmiermodell verwendet.  Im Beispiel eines grundlegenden Ressourcendiensts wird eine Kundenauflistungsressource so verfügbar gemacht, dass Kunden in der Auflistung erstellt, abgerufen, aktualisiert und gelöscht werden können.  Im Beispiel eines grundlegenden Ressourcendiensts werden nur die zwei systemintern unterstützten, eingehenden Anforderungsformate XML und JSON verwendet.  
+ Diese Konsolenanwendungsprojekt erweitert die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel. Im Beispiel eines grundlegenden Ressourcendiensts wird veranschaulicht, wie eine Ressource in einer Weise verfügbar gemacht wird, die das WCF REST-Programmiermodell verwendet. Im Beispiel eines grundlegenden Ressourcendiensts wird eine Kundenauflistungsressource so verfügbar gemacht, dass Kunden in der Auflistung erstellt, abgerufen, aktualisiert und gelöscht werden können. Im Beispiel eines grundlegenden Ressourcendiensts werden nur die zwei systemintern unterstützten, eingehenden Anforderungsformate XML und JSON verwendet.  
   
- Die Konsolenanwendung in diesem Beispiel zur Formularbereitstellung verwendet das benutzerdefinierte Formatierungsprogramm in der HtmlFormProcessing\-Bibliothek, mit dem Benutzer Kunden erstellen können, indem sie über einen Browser eine Anfrage von einer HTML\-Formularbereitstellung senden.  Damit wird auch ein Vorgang hinzugefügt, mit dem eine HTML\-Seite zurückgegeben wird. Dazu gehört u. a., dass das Formular an den Dienst zurückgesendet wird.  Diese HTML\-Seite wird mit einer vorverarbeiteten T4\-Vorlage generiert, die aus einer TT\-Datei und einer automatisch generierten CS\-Datei besteht.  Die TT\-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Die Konsolenanwendung in diesem Beispiel zur Formularbereitstellung verwendet das benutzerdefinierte Formatierungsprogramm in der HtmlFormProcessing-Bibliothek, mit dem Benutzer Kunden erstellen können, indem sie über einen Browser eine Anfrage von einer HTML-Formularbereitstellung senden. Damit wird auch ein Vorgang hinzugefügt, mit dem eine HTML-Seite zurückgegeben wird. Dazu gehört u. a., dass das Formular an den Dienst zurückgesendet wird. Diese HTML-Seite wird mit einer vorverarbeiteten T4-Vorlage generiert, die aus einer TT-Datei und einer automatisch generierten CS-Datei besteht. Die TT-Datei ermöglicht es Entwicklern, eine Antwort in ein Vorlagenformular zu schreiben, das Variablen und Steuerelementstrukturen enthält. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4 finden Sie unter [Generieren von Artefakten mithilfe von Textvorlagen](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
-#### So führen Sie das Beispiel aus  
+#### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Öffnen Sie die Projektmappe für das Beispiel zur Formularbereitstellung.  Sie müssen [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] als Administrator ausführen, damit das Beispiel erfolgreich ausgeführt werden kann.  Klicken Sie dazu mit der rechten Maustaste auf das [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Symbol, und wählen Sie im Kontextmenü die Option "Als Administrator ausführen" aus.  
+1.  Öffnen Sie die Projektmappe für das Beispiel zur Formularbereitstellung. Sie müssen [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] als Administrator ausführen, damit das Beispiel erfolgreich ausgeführt werden kann. Zu diesem Zweck mit der rechten Maustaste die [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Symbol "und"Als Administrator ausführen"aus dem Kontextmenü auswählen.  
   
-2.  Drücken Sie STRG\+UMSCHALT\+B, um die Projektmappe zu erstellen, und dann STRG\+F5, um das FormPost\-Konsolenanwendungsprojekt auszuführen.  
+2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und dann STRG+F5, um das FormPost-Konsolenanwendungsprojekt auszuführen.  
   
-3.  Im eingeblendeten Konsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML\-Hilfeseite für den ausgeführten Dienst angezeigt.  
+3.  Im eingeblendeten Konsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt.  
   
 4.  Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität in das Konsolenfenster, unabhängig davon, ob es sich dabei um das Hinzufügen, Aktualisieren oder Löschen eines Kunden oder das Abrufen einer Liste der aktuellen Kunden aus dem Dienst handelt.  
   
-5.  Sie werden aufgefordert, zum URI des Kundenformulars zu wechseln.  Öffnen Sie einen Browser, und wechseln Sie zum angegebenen URI.  Geben Sie einen Namen und eine Adresse für den Kunden ein, und klicken Sie auf die Schaltfläche **Senden**.  
+5.  Sie werden aufgefordert, zum URI des Kundenformulars zu wechseln. Öffnen Sie einen Browser, und wechseln Sie zum angegebenen URI. Geben Sie einen Namen und eine Adresse für den Kunden und klicken Sie auf die **Absenden** Schaltfläche.  
   
 6.  Drücken Sie eine beliebige Taste, damit das Konsolenfenster das Beispiel weiterhin ausführt.  
   
@@ -55,10 +58,10 @@ In diesem Beispiel wird veranschaulicht, wie das WCF\-REST\-Programmiermodell zu
 8.  Drücken Sie eine beliebige Taste, um das Beispiel zu beenden.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

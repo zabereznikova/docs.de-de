@@ -1,47 +1,50 @@
 ---
-title: "Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS
-Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet werden.  Dies ist hilfreich, wenn ein Workflow gehostet werden muss, der von einem anderen Benutzer geschrieben wurde.  Beispiel: Der Workflow\-Designer wird erneut gehostet, und Benutzer können eigene Workflows erstellen.  Durch das Hosten eines Workflows in IIS, bei dem es sich nicht um einen Dienstworkflow handelt, wird Unterstützung für Funktionen wie die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die meldungsbasierte Aktivierung bereitgestellt.  Workflowdienste, die in IIS gehostet werden, enthalten <xref:System.ServiceModel.Activities.Receive>\-Aktivitäten und werden beim Empfang einer Meldung durch IIS aktiviert.  Workflows, die keine Dienstworkflows sind, enthalten keine Messagingaktivitäten und können standardmäßig nicht durch Senden einer Meldung aktiviert werden.  Um eine Instanz des Workflows zu erstellen, müssen Sie eine Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ableiten und einen Dienstvertrag mit Vorgängen erstellen.  In diesem Thema erhalten Sie schrittweise Anweisungen zum Erstellen eines einfachen Workflows, Definieren eines Dienstvertrags, mit dem der Workflow von einem Client aktiviert werden kann, und Ableiten einer Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, die mit dem Dienstvertrag auf Anforderungen zum Erstellen von Workflows lauscht.  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a>Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS
+Workflows, die keine Workflowdienste darstellen, können unter IIS/WAS gehostet werden. Dies ist hilfreich, wenn ein Workflow gehostet werden muss, der von einem anderen Benutzer geschrieben wurde. Beispiel: Der Workflow-Designer wird erneut gehostet, und Benutzer können eigene Workflows erstellen.  Durch das Hosten eines Workflows in IIS, bei dem es sich nicht um einen Dienstworkflow handelt, wird Unterstützung für Funktionen wie die Prozesswiederverwendung, das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf, die Prozessüberwachung und die meldungsbasierte Aktivierung bereitgestellt. Workflowdienste, die in IIS gehostet werden, enthalten <xref:System.ServiceModel.Activities.Receive>-Aktivitäten und werden beim Empfang einer Meldung durch IIS aktiviert. Workflows, die keine Dienstworkflows sind, enthalten keine Messagingaktivitäten und können standardmäßig nicht durch Senden einer Meldung aktiviert werden.  Um eine Instanz des Workflows zu erstellen, müssen Sie eine Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ableiten und einen Dienstvertrag mit Vorgängen erstellen. Dieses Thema führt Sie durch das Erstellen eines einfachen Workflows, definieren einen Dienstvertrag, ein Client verwenden kann, um den Workflow zu aktivieren, und Ableiten einer Klasse von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> verwendet den Dienstvertrag für Workflow Erstellen von Anforderungen zu lauschen.  
   
-### Erstellen eines einfachen Workflows  
+### <a name="create-a-simple-workflow"></a>Erstellen eines einfachen Workflows  
   
-1.  Erstellen Sie eine neue leere [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]\-Projektmappe mit dem Namen `CreationEndpointTest`.  
+1.  Erstellen Sie eine neue leere [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]-Projektmappe mit dem Namen `CreationEndpointTest`.  
   
-2.  Fügen Sie der Projektmappe ein neues Projekt für eine WCF\-Workflowdienstanwendung mit dem Namen `SimpleWorkflow` hinzu.  Der Workflow\-Designer wird geöffnet.  
+2.  Fügen Sie der Projektmappe ein neues Projekt für eine WCF-Workflowdienstanwendung mit dem Namen `SimpleWorkflow` hinzu. Der Workflow-Designer wird geöffnet.  
   
-3.  Löschen Sie die ReceiveRequest\-Aktivität und die SendResponse\-Aktivität.  Durch diese Aktivitäten wird aus einem Workflow ein Workflowdienst.  Da im vorliegenden Fall nicht mit einem Workflowdienst gearbeitet wird, sind sie nicht länger erforderlich.  
+3.  Löschen Sie die ReceiveRequest-Aktivität und die SendResponse-Aktivität. Durch diese Aktivitäten wird aus einem Workflow ein Workflowdienst. Da im vorliegenden Fall nicht mit einem Workflowdienst gearbeitet wird, sind sie nicht länger erforderlich.  
   
-4.  Legen Sie den DisplayName für die Sequenzaktivität auf "Sequenzieller Workflow" fest.  
+4.  Legen Sie den DisplayName für die Sequenzaktivität auf "Sequenzieller Workflow".  
   
 5.  Benennen Sie Service1.xamlx in Workflow1.xamlx um.  
   
-6.  Klicken Sie außerhalb der Sequenzaktivität auf den Designer, und legen Sie die Name\- und die ConfigurationName\-Eigenschaft auf "Workflow1" fest.  
+6.  Klicken Sie auf den Designer außerhalb der Sequenzaktivität, und legen Sie die Eigenschaften "Name" und "ConfigurationName" auf "Workflow1"fest.  
   
-7.  Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>\-Aktivität in die <xref:System.Activities.Statements.Sequence>.  Die <xref:System.Activities.Statements.WriteLine>\-Aktivität befindet sich im Abschnitt **Primitive** der Toolbox.  Legen Sie die <xref:System.Activities.Statements.WriteLine.Text%2A>\-Eigenschaft der <xref:System.Activities.Statements.WriteLine>\-Aktivität auf "Hello, world" fest.  
+7.  Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität in die <xref:System.Activities.Statements.Sequence>. Die <xref:System.Activities.Statements.WriteLine> -Aktivität befindet sich der **primitive** Abschnitt der Toolbox. Festlegen der <xref:System.Activities.Statements.WriteLine.Text%2A> Eigenschaft von der <xref:System.Activities.Statements.WriteLine> Aktivität "Hello, World".  
   
      Der Workflow sollte jetzt wie das folgende Diagramm aussehen.  
   
      ![Ein einfacher Workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
-### Erstellen des Dienstvertrags für die Workflowerstellung  
+### <a name="create-the-workflow-creation-service-contract"></a>Erstellen des Dienstvertrags für die Workflowerstellung  
   
-1.  Fügen Sie der Projektmappe `CreationEndpointTest` das neue Klassenbibliotheksprojekt `Shared` hinzu.  
+1.  Fügen Sie der Projektmappe `Shared` das neue Klassenbibliotheksprojekt `CreationEndpointTest` hinzu.  
   
 2.  Fügen Sie dem Projekt `Shared` Verweise auf System.ServiceModel.dll, System.Configuration und System.ServiceModel.Activities hinzu.  
   
@@ -69,11 +72,11 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-     Mit diesem Vertrag werden zwei Vorgänge definiert, mit denen jeweils eine neue Instanz des soeben erstellten Workflows erstellt wird, der kein Dienstworkflow ist.  Während in dem einem Vorgang eine neue Instanz mit einer generierten Instanz\-ID erstellt wird, können Sie die Instanz\-ID für die neue Workflowinstanz in dem anderen Vorgang selbst angeben.  Beide Methoden ermöglichen das Übergeben von Parametern an die neue Workflowinstanz.  Dieser Vertrag wird vom <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> verfügbar gemacht, damit Clients neue Instanzen von Workflows erstellen können, die keine Dienstworkflows sind.  
+     Mit diesem Vertrag werden zwei Vorgänge definiert, mit denen jeweils eine neue Instanz des soeben erstellten Workflows erstellt wird, der kein Dienstworkflow ist. Während in dem einem Vorgang eine neue Instanz mit einer generierten Instanz-ID erstellt wird, können Sie die Instanz-ID für die neue Workflowinstanz in dem anderen Vorgang selbst angeben.  Beide Methoden ermöglichen das Übergeben von Parametern an die neue Workflowinstanz. Dieser Vertrag wird verfügbar gemacht werden, indem die <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> damit Clients neue Instanzen eines nicht-Workflows erstellen können.  
   
-### Ableiten einer Klasse von WorkflowHostingEndpoint  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a>Ableiten einer Klasse von WorkflowHostingEndpoint  
   
-1.  Fügen Sie dem Projekt `Shared` die neue `CreationEndpoint`\-Klasse hinzu, die von <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> abgeleitet wurde.  
+1.  Fügen Sie eine neue Klasse namens `CreationEndpoint` abgeleitet <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> auf die `Shared` Projekt.  
   
     ```  
     using System;  
@@ -92,7 +95,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-2.  Fügen Sie der `CreationEndpoint`\-Klasse die lokale statische <xref:System.Uri>\-Variable mit dem Namen `defaultBaseUri` hinzu.  
+2.  Fügen Sie der <xref:System.Uri>-Klasse die lokale statische `defaultBaseUri`-Variable mit dem Namen `CreationEndpoint` hinzu.  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -101,7 +104,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-3.  Fügen Sie der `CreationEndpoint`\-Klasse den folgenden Konstruktor hinzu.  Beachten Sie, dass der `IWorkflowCreation`\-Dienstvertrag im Aufruf des Basiskonstruktors angegeben wird.  
+3.  Fügen Sie der `CreationEndpoint`-Klasse den folgenden Konstruktor hinzu. Beachten Sie, dass der `IWorkflowCreation`-Dienstvertrag im Aufruf des Basiskonstruktors angegeben wird.  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -110,7 +113,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
        }  
     ```  
   
-4.  Fügen Sie der `CreationEndpoint`\-Klasse den folgenden Standardkonstruktor hinzu.  
+4.  Fügen Sie der `CreationEndpoint`-Klasse den folgenden Standardkonstruktor hinzu.  
   
     ```  
     public CreationEndpoint()  
@@ -120,7 +123,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
        }  
     ```  
   
-5.  Fügen Sie der `CreationEndpoint`\-Klasse eine statische `DefaultBaseUri`\-Eigenschaft hinzu.  Diese Eigenschaft enthält einen standardmäßigen Basis\-URI, sofern keiner angegeben wurde.  
+5.  Fügen Sie der `DefaultBaseUri`-Klasse eine statische `CreationEndpoint`-Eigenschaft hinzu. Diese Eigenschaft enthält einen standardmäßigen Basis-URI, sofern keiner angegeben wurde.  
   
     ```  
     static Uri DefaultBaseUri  
@@ -148,7 +151,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-7.  Überschreiben Sie die <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>\-Methode, um die Instanz\-ID für den Workflow zurückzugeben.  Wenn der `Action`\-Header mit "Create" endet, wird eine leere GUID zurückgegeben, wenn der `Action`\-Header mit "CreateWithInstanceId" endet, die GUID, die an die Methode übergeben wurde.  Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst.  Diese `Action`\-Header entsprechen den beiden Vorgängen, die im `IWorkflowCreation`\-Dienstvertrag definiert sind.  
+7.  Überschreiben Sie die <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>-Methode, um die Instanz-ID für den Workflow zurückzugeben. Wenn die `Action` Header endet mit "Create" eine leere GUID zurück, wenn die `Action` Header mit die GUID, die an die Methode übergebenen "CreateWithInstanceId" endet. Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst. Diese `Action`-Header entsprechen den beiden Vorgängen, die im `IWorkflowCreation`-Dienstvertrag definiert sind.  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -170,7 +173,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-8.  Überschreiben Sie die <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>\-Methode, um einen <xref:System.ServiceModel.Activities.WorkflowCreationContext> zu erstellen. Fügen Sie Argumente für den Workflow hinzu, senden Sie die Instanz\-ID an den Client, und geben Sie den <xref:System.ServiceModel.Activities.WorkflowCreationContext> zurück.  
+8.  Überschreiben Sie die <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>-Methode, um einen <xref:System.ServiceModel.Activities.WorkflowCreationContext> zu erstellen. Fügen Sie Argumente für den Workflow hinzu, senden Sie die Instanz-ID an den Client, und geben Sie den <xref:System.ServiceModel.Activities.WorkflowCreationContext> zurück.  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -198,11 +201,11 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-### Erstellen eines Standardendpunktelements zum Konfigurieren des WorkflowCreationEndpoint  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a>Erstellen eines Standardendpunktelements zum Konfigurieren des WorkflowCreationEndpoint  
   
 1.  Fügen Sie dem Projekt `CreationEndpoint` einen Verweis auf Shared hinzu.  
   
-2.  Fügen Sie dem Projekt `CreationEndpoint` die neue `CreationEndpointElement`\-Klasse hinzu, die von <xref:System.ServiceModel.Configuration.StandardEndpointElement> abgeleitet wurde.  Diese Klasse stellt einen `CreationEndpoint` in einer web.config\-Datei dar.  
+2.  Fügen Sie dem Projekt `CreationEndpointElement` die neue <xref:System.ServiceModel.Configuration.StandardEndpointElement>-Klasse hinzu, die von `CreationEndpoint` abgeleitet wurde. Diese Klasse stellt einen `CreationEndpoint` in einer web.config-Datei dar.  
   
     ```  
     using System;  
@@ -220,7 +223,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
        }  
     ```  
   
-3.  Fügen Sie die `EndpointType`\-Eigenschaft hinzu, um den Typ des Endpunkts zurückzugeben.  
+3.  Fügen Sie die `EndpointType`-Eigenschaft hinzu, um den Typ des Endpunkts zurückzugeben.  
   
     ```  
     protected override Type EndpointType  
@@ -229,17 +232,16 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-4.  Überschreiben Sie die <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A>\-Methode, und geben Sie einen neuen `CreationEndpoint` zurück.  
+4.  Überschreiben Sie die <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A>-Methode, und geben Sie einen neuen `CreationEndpoint` zurück.  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  Überladen Sie die folgenden Methoden: <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> und <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.  Diese Methoden müssen lediglich definiert werden; es ist nicht erforderlich, Code hinzuzufügen.  
+5.  Überladen Sie die folgenden Methoden: <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> und <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>. Diese Methoden müssen lediglich definiert werden; es ist nicht erforderlich, Code hinzuzufügen.  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-6.  Fügen Sie der Datei CreationEndpointElement.cs im Projekt `CreationEndpoint` die Auflistungsklasse für `CreationEndpoint` hinzu.  Diese Klasse wird von der Konfiguration für eine Reihe von `CreationEndpoint`\-Instanzen in einer web.config\-Datei verwendet.  
+6.  Fügen Sie der Datei CreationEndpointElement.cs im Projekt `CreationEndpoint` die Auflistungsklasse für `CreationEndpoint` hinzu. Diese Klasse wird von der Konfiguration für eine Reihe von `CreationEndpoint`-Instanzen in einer web.config-Datei verwendet.  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,15 +271,15 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
   
 7.  Erstellen Sie die Projektmappe.  
   
-### Hosten des Workflows in IIS  
+### <a name="host-the-workflow-in-iis"></a>Hosten des Workflows in IIS  
   
 1.  Erstellen Sie in IIS die neue Anwendung `MyCreationEndpoint`.  
   
-2.  Kopieren Sie die Datei workflow1.xaml, die vom Workflow\-Designer generiert wurde, in das Anwendungsverzeichnis, und benennen Sie sie in workflow1.xamlx um.  
+2.  Kopieren Sie die Datei workflow1.xaml, die vom Workflow-Designer generiert wurde, in das Anwendungsverzeichnis, und benennen Sie sie in workflow1.xamlx um.  
   
-3.  Kopieren Sie die Datei shared.dll und die Datei CreationEndpoint.dll in das BIN\-Verzeichnis der Anwendung \(ggf. müssen Sie das Verzeichnis zunächst erstellen\).  
+3.  Kopieren Sie die Datei shared.dll und die Datei CreationEndpoint.dll in das BIN-Verzeichnis der Anwendung (ggf. müssen Sie das Verzeichnis zunächst erstellen).  
   
-4.  Ersetzen Sie den Inhalt der web.config\-Datei im Projekt `CreationEndpoint` durch folgenden Code.  
+4.  Ersetzen Sie den Inhalt der web.config-Datei im Projekt `CreationEndpoint` durch folgenden Code.  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -288,9 +290,9 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     </configuration>  
     ```  
   
-5.  Registrieren Sie den `CreationEndpoint` nach dem `<system.web>`\-Element durch Hinzufügen des folgenden Konfigurationscodes.  
+5.  Registrieren Sie den `<system.web>` nach dem `CreationEndpoint`-Element durch Hinzufügen des folgenden Konfigurationscodes.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
-     Dadurch wird die `CreationEndpointCollection`\-Klasse registriert, und Sie können einen `CreationEndpoint` in einer web.config\-Datei konfigurieren.  
+     Dadurch wird die `CreationEndpointCollection`-Klasse registriert, und Sie können einen `CreationEndpoint` in einer web.config-Datei konfigurieren.  
   
-6.  Fügen Sie \(nach dem \<\/extensions\>\-Tag\) ein `<service>`\-Element mit einem `CreationEndpoint` hinzu, um auf eingehende Meldungen zu lauschen.  
+6.  Hinzufügen einer `<service>` Element (nach der \</extensions > Tag) mit einem `CreationEndpoint` , um eingehende Nachrichten zu lauschen.  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  Fügen Sie \(nach dem \<\/services\>\-Tag\) ein \<behaviors\>\-Element hinzu, um Dienstmetadaten zu aktivieren.  
+7.  Hinzufügen einer \<Verhalten > Element (nach der  \< /services > Tag) um Dienstmetadaten zu aktivieren.  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
-8.  Kopieren Sie die web.config\-Datei in Ihr IIS\-Anwendungsverzeichnis.  
+8.  Kopieren Sie die web.config-Datei in Ihr IIS-Anwendungsverzeichnis.  
   
-9. Überprüfen Sie die Funktion des Erstellungsendpunkts, indem Sie Internet Explorer starten und zu http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx navigieren.  Internet Explorer sollte nun folgenden Bildschirm anzeigen:  
+9. Überprüfen Sie die Funktion des Erstellungsendpunkts, indem Sie Internet Explorer starten und zu http://localhost/MyCreationEndpoint/Workflow1.xamlx navigieren. Internet Explorer sollte nun folgenden Bildschirm anzeigen:  
   
      ![Testen des Diensts](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
-### Erstellen Sie einen Client, mit dem der CreationEndpoint aufgerufen wird.  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a>Erstellen Sie einen Client, mit dem der CreationEndpoint aufgerufen wird.  
   
 1.  Fügen Sie der Projektmappe `CreationEndpointTest` eine neue Konsolenanwendung hinzu.  
   
 2.  Fügen Sie Verweise auf System.ServiceModel.dll und System.ServiceModel.Activities sowie das Projekt `Shared` hinzu.  
   
-3.  Erstellen Sie in der `Main`\-Methode eine <xref:System.ServiceModel.ChannelFactory%601> vom Typ `IWorkflowCreation`, und rufen Sie <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> auf.  Dadurch wird ein Proxy zurückgegeben.  Anschließend können Sie `Create` für den Proxy aufrufen, um die Workflowinstanz zu erstellen, die unter IIS gehostet wird:  
+3.  In der `Main` Methode erstellt eine <xref:System.ServiceModel.ChannelFactory%601> des Typs `IWorkflowCreation` , und rufen Sie <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>. Dadurch wird ein Proxy zurückgegeben. Anschließend können Sie `Create` für den Proxy aufrufen, um die Workflowinstanz zu erstellen, die unter IIS gehostet wird:  
   
     ```  
     using System.Text;  
@@ -374,18 +373,16 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     }  
     ```  
   
-4.  Führen Sie den CreationEndpointClient aus.  Die Ausgabe sollte wie folgt aussehen:  
+4.  Führen Sie den CreationEndpointClient aus. Die Ausgabe sollte wie folgt aussehen:  
   
     ```Output  
-  
-                Workflow Instance created using CreationEndpoint added in config.  Instanz-ID: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    EINGABETASTE zum Beenden ...    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
     >  Die Ausgabe des Workflows wird nicht angezeigt, da IIS nicht über eine Konsolenausgabe verfügt.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Nachfolgend ist der vollständige Code für dieses Beispiel angegeben.  
   
 ```xaml  
@@ -430,7 +427,6 @@ Workflows, die keine Workflowdienste darstellen, können unter IIS\/WAS gehostet
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- Möglicherweise erscheint dieses Beispiel verwirrend, da zu keiner Zeit ein Dienst implementiert wird, der `IWorkflowCreation` implementiert.  Diese Aufgabe wird von `CreationEndpoint` übernommen.  
+ Möglicherweise erscheint dieses Beispiel verwirrend, da zu keiner Zeit ein Dienst implementiert wird, der `IWorkflowCreation` implementiert. Diese Aufgabe wird von `CreationEndpoint` übernommen.  
   
-## Siehe auch  
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Hosten in Internetinformationsdiensten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Architektur von Windows\-Workflows](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [WorkflowHostingEndpoint \- Lesezeichen\-Wiederaufnahme](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [Erneutes Hosten des Workflow\-Designers](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Übersicht über Windows\-Workflow](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Hosten in Internetinformationsdienste (IIS)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internetinformation Services Hosting bewährte Methoden](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Architektur von Windows-Workflows](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [Lesezeichen-Wiederaufnahme WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [Erneutes Hosten des Workflow-Designers](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Übersicht über Windows-Workflow](../../../../docs/framework/windows-workflow-foundation/overview.md)

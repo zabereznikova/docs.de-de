@@ -1,35 +1,38 @@
 ---
-title: "514 - WebHostRequestStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 514 - WebHostRequestStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c5858bf6-3330-4f2a-9907-a99692fa8817
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc56f58833b2bbc8ad9a23d985d1bb06b1c2d9db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 514 - WebHostRequestStop
-## Eigenschaften  
+# <a name="514---webhostrequeststop"></a>514 - WebHostRequestStop
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|514|  
 |Schlüsselwörter|WebHost|  
 |Ebene|Information|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird ausgegeben, WebHostRequest beendet wurde.  
   
-## Meldung  
+## <a name="message"></a>Meldung  
  WebHostRequest anhalten.  
   
-## Details
+## <a name="details"></a>Details

@@ -1,53 +1,57 @@
 ---
-title: "Verwenden der globalen Transformation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Grafiken, Globale Transformation"
-  - "Globale Transformation, Beispiele"
+title: Verwenden der globalen Transformation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], world transformation
+- world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden der globalen Transformation
-Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphics>\-Klasse.  Die Zahlen, die die globale Transformation angeben, sind in einem <xref:System.Drawing.Drawing2D.Matrix>\-Objekt gespeichert, das eine 3x3\-Matrix darstellt.  Die <xref:System.Drawing.Drawing2D.Matrix>\-Klasse und die <xref:System.Drawing.Graphics>\-Klasse verfügen über mehrere Methoden zum Festlegen der Zahlen in der globalen Transformationsmatrix.  
+# <a name="using-the-world-transformation"></a>Verwenden der globalen Transformation
+Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphics> Klasse. Die Zahlen, die die globale Transformation angeben befinden sich einem <xref:System.Drawing.Drawing2D.Matrix> Objekt, das eine 3 x 3-Matrix darstellt. Die <xref:System.Drawing.Drawing2D.Matrix> und <xref:System.Drawing.Graphics> Klassen verfügen über mehrere Methoden zum Festlegen der Zahlen in die globale Transformationsmatrix.  
   
-## Andere Typen von Transformationen  
- Im folgenden Beispiel wird durch den Code zunächst ein 50x50\-Rechteck erstellt und dann am Ursprung \(0, 0\) positioniert.  Der Ursprung befindet sich in der oberen linken Ecke des Clientbereichs.  
+## <a name="different-types-of-transformations"></a>Verschiedene Arten von Transformationen  
+ Im folgenden Beispiel wird der Code zuerst erstellt ein Rechteck, 50 x 50, und sucht er am ursprünglichen Speicherort (0, 0). Der Ursprung befindet sich in der oberen linken Ecke des Clientbereichs.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- Durch folgenden Code wird eine Skalierungstransformation durchgeführt, die das Rechteck in x\-Richtung um den Faktor 1.75 vergrößert und es in y\-Richtung um den Faktor 0.5 verkleinert:  
+ Der folgende Code wendet eine Skalierungstransformation, die das Rechteck mit dem Faktor 1,75 entlang der x-Achse an erweitert und verkleinert das Rechteck mit einem Faktor von 0,5 entlang der y-Achse an:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- Das Ergebnis ist ein Rechteck, das in der x\-Richtung länger und in der y\-Richtung kürzer als das Ursprungsrechteck ist.  
+ Das Ergebnis ist ein Rechteck, das länger in X-Richtung und in der y-Richtung kürzer ist als die ursprüngliche ist.  
   
- Um das Rechteck zu drehen, anstatt es zu skalieren, verwenden Sie folgenden Code:  
+ Um das Rechteck statt Skalierung zu wechseln, verwenden Sie den folgenden Code ein:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
- Um das Rechteck zu verschieben, verwenden Sie folgenden Code:  
+ Um das Rechteck zu übersetzen, verwenden Sie den folgenden Code:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## Siehe auch  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Verwenden von Transformationen in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Verwenden von Transformationen in Managed GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

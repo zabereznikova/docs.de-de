@@ -1,120 +1,117 @@
 ---
-title: "Const Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Const"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Const statement [Visual Basic]"
+title: Const-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Const
+helpviewer_keywords: Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Const Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="const-statement-visual-basic"></a>Const-Anweisung (Visual Basic)
 Deklariert und definiert eine oder mehrere Konstanten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
+[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `attributelist`  
- Optional.  Liste von Attributen, die für alle in dieser Anweisung deklarierten Konstanten zutreffen.  Siehe [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) \(in spitzen Klammern "`<`" und "`>`"\).  
+ Dies ist optional. Liste der Attribute, die für alle Konstanten gelten, die in dieser Anweisung deklariert werden. Finden Sie unter [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").  
   
  `accessmodifier`  
- Optional.  Geben Sie damit an, welcher Code auf diese Konstanten zugreifen kann.  Kann [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend` oder [Private](../../../visual-basic/language-reference/modifiers/private.md) sein.  
+ Dies ist optional. Verwenden Sie diese Option, um anzugeben, welcher Code auf diese Konstanten zugreifen kann. Kann [öffentlichen](../../../visual-basic/language-reference/modifiers/public.md), [geschützte](../../../visual-basic/language-reference/modifiers/protected.md), ["Friend"](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, oder [Private](../../../visual-basic/language-reference/modifiers/private.md).  
   
  `Shadows`  
- Optional.  Verwenden Sie dieses Schlüsselwort, um ein Programmierelement in einer Basisklasse neu zu deklarieren und auszublenden.  Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Dies ist optional. Hiermit können Sie deklarieren und ein Programmierelement in einer Basisklasse auszublenden. Finden Sie unter [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Erforderlich.  Liste der Konstanten, die in dieser Anweisung deklariert werden.  
+ Erforderlich. Liste der Konstanten, die in dieser Anweisung deklariert wird.  
   
- `constant` `[ ,` `constant` `... ]`  
+ `constant` `[ ,` `constant` `... ]`  
   
- Jede `constant` hat folgende Syntax und folgende Bestandteile:  
+ Jede `constant` weist folgende Syntax und Bestandteile auf:  
   
- `constantname` `[ As` `datatype` `] =` `initializer`  
+ `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|Bestandteil|Beschreibung|  
-|-----------------|------------------|  
-|`constantname`|Erforderlich.  Name der Konstanten.  Weitere Informationen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`datatype`|Erforderlich, wenn `Option Strict` den Wert `On` aufweist.  Datentyp der Konstanten.|  
-|`initializer`|Erforderlich.  Ausdruck, der zur Kompilierzeit ausgewertet und dieser Konstante zugewiesen wird.|  
+|Segment|Beschreibung|  
+|----------|-----------------|  
+|`constantname`|Erforderlich. Die Namen der Konstanten. Finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`datatype`|Erforderlich, wenn `Option Strict` ist `On`. Der Datentyp der Konstante.|  
+|`initializer`|Erforderlich. Ausdruck, der zur Kompilierzeit ausgewertet und die Konstante zugewiesen wird.|  
   
-## Hinweise  
- Wenn sich ein Wert in der Anwendung niemals ändert, können Sie eine benannte Konstante definieren und statt eines Literalwerts verwenden.  Ein Name ist einprägsamer als ein Wert.  Sie können die Konstante einmal definieren und an verschiedenen Stellen im Code verwenden.  Wenn der Wert in einer neueren Version neu definiert werden muss, muss lediglich in der `Const`\-Anweisung eine Änderung durchgeführt werden.  
+## <a name="remarks"></a>Hinweise  
+ Wenn Sie einen Wert, der nie ändert, in der Anwendung haben, können Sie definieren eine benannte Konstante und verwenden sie statt eines Literalwerts. Ein Name ist leichter zu merken als ein Wert. Sie können die Konstante nur einmal definieren und an vielen Stellen im Code verwenden. Wenn in einer höheren Version Sie den Wert neu definieren müssen die `Const` -Anweisung ist der einzige Ort, Sie eine Änderung vornehmen müssen.  
   
- `Const` kann nur auf Modul\- oder Prozedurebene verwendet werden.  Dies bedeutet, dass der *Deklarationskontext* für eine Variable eine Klasse, eine Struktur, ein Modul, eine Prozedur oder ein Block sein muss und keine Quelldatei, kein Namespace und keine Schnittstelle sein kann.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können `Const` nur auf Modul- oder Prozedur. Dies bedeutet, dass die *Deklarationskontext* für eine Variable muss eine Klasse, Struktur, Modul, Prozedur oder blockieren, und nicht mit einer Quelldatei, Namespace oder Schnittstelle. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Für lokale Konstanten \(in einer Prozedur\) gilt standardmäßig der öffentliche Zugriff. Für diese Konstanten können keine Zugriffsmodifizierer verwendet werden.  Standardmäßig gilt für Klassen\- und Modulmemberkonstanten \(außerhalb einer Prozedur\) privater Zugriff und für Strukturmemberkonstanten öffentlicher Zugriff.  Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
+ Lokale Konstanten (innerhalb einer Prozedur)-Standard, um öffentlichen Zugriff, und Sie können keine keine Zugriffsmodifizierer darauf. Standardmäßig gilt für Klassen- und Konstanten (außerhalb einer Prozedur) privaten Zugriff und Struktur Member Konstanten standardmäßig öffentlichen Zugriff auf. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.  
   
-## Regeln  
+## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Eine auf Modulebene deklarierte Konstante, die sich außerhalb jeglicher Prozedur befindet, ist eine *Memberkonstante*. Sie ist ein Member der Klasse, der Struktur oder des Moduls, in der bzw. dem sie deklariert ist.  
+-   **Deklarationskontext.** Eine Konstante deklariert auf Modulebene außerhalb einer Prozedur wird eine *Memberkonstante*; es ist ein Member der Klasse, Struktur oder Modul deklariert, die ihn.  
   
-     Eine auf Prozedurebene deklarierte Konstante ist eine *lokale Konstante*. Sie ist nur lokal in der Prozedur oder dem Block gültig, in der\/dem sie deklariert ist.  
+     Eine Konstante deklariert auf Prozedurebene ist ein *lokale Konstante*; es lokal auf dem Prozedur oder ein Block, der sie deklariert ist.  
   
--   **Attribute.** Sie können Attribute nur auf Memberkonstanten und nicht auf lokale Konstanten anwenden.  Ein Attribut fügt den Metadaten einer Assembly Informationen hinzu. Dies ist für die temporäre Speicherung, z. B. in lokalen Konstanten, nicht sinnvoll.  
+-   **Attribute.** Sie können Attribute nur für Memberkonstanten und nicht auf lokale Konstanten anwenden. Ein Attribut trägt dazu bei Informationen zu den Metadaten der Assembly, für die temporäre Speicherung, z. B. lokale Konstanten sinnvoll ist.  
   
--   **Modifizierer.** Standardmäßig sind alle Konstanten `Shared`, `Static` und `ReadOnly`.  Beim Deklarieren einer Konstante können Sie keines dieser Schlüsselwörter verwenden.  
+-   **Modifizierer.** Standardmäßig sind alle Konstanten `Shared`, `Static`, und `ReadOnly`. Sämtliche dieser Schlüsselwörter können keine beim Deklarieren einer Konstante.  
   
-     Auf Prozedurebene können Sie zum Deklarieren lokaler Konstanten weder `Shadows` noch Zugriffsmodifizierer verwenden.  
+     Auf Prozedurebene, können keine `Shadows` Zugriffsmodifizierern Lokale Konstanten deklarieren.  
   
--   **Mehrere Konstanten.** Sie können mehrere Konstanten in derselben Deklarationsanweisung deklarieren, indem Sie für jede Konstante den Bestandteil `constantname` angeben.  Mehrere Konstanten werden durch Komma voneinander getrennt.  
+-   **Mehrere Konstanten.** Sie können mehrere Konstanten in der gleichen deklarationsanweisung deklarieren angeben der `constantname` für jeden Teil. Mehrere Konstanten werden durch Kommas getrennt.  
   
-## Datentypregeln  
+## <a name="data-type-rules"></a>Regeln für die Art von Daten  
   
--   **Datentypen.** Die `Const`\-Anweisung kann den Datentyp einer Variablen deklarieren.  Sie können einen beliebigen Datentyp oder den Namen einer Enumeration angeben.  
+-   **Datentypen.** Die `Const` -Anweisung kann den Datentyp einer Variablen deklarieren. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration angeben.  
   
--   **Standardtyp.** Wenn Sie `datatype` nicht angeben, übernimmt die Konstante automatisch den Datentyp von `initializer`.  Wenn Sie sowohl `datatype` als auch `initializer` angeben, muss der Datentyp `initializer` in `datatype` konvertiert werden können.  Wenn weder `datatype` noch `initializer` angegeben werden, wird standardmäßig `Object` als Datentyp verwendet.  
+-   **Der Standardtyp.** Wenn Sie keinen angeben `datatype`, die Konstante hat den Datentyp der `initializer`. Wenn Sie beide angeben `datatype` und `initializer`, der Datentyp des `initializer` konvertierbar sein muss `datatype`. Wenn weder `datatype` noch `initializer` vorhanden ist, der Datentyp der Standardwert ist `Object`.  
   
--   **Andere Typen.** Sie können für verschiedene Konstanten unterschiedliche Datentypen angeben, indem Sie für jede deklarierte Variable eine eigene `As`\-Klausel verwenden.  Sie können jedoch nicht mit einer gemeinsamen `As`\-Klausel denselben Typ für mehrere Konstanten deklarieren.  
+-   **Andere Typen.** Sie können für unterschiedliche Konstanten unterschiedliche Datentypen angeben, indem Sie eine separate `As` -Klausel für jede Variable, die Sie deklarieren. Allerdings kann nicht mehrere Konstanten desselben Typs werden mit einer gemeinsamen deklariert `As` Klausel.  
   
--   **Initialisierung.** Sie müssen den Wert der einzelnen Konstanten in `constantlist` initialisieren.  Der `initializer` wird verwendet, um einen Ausdruck bereitzustellen, der der Konstante zugewiesen werden soll.  Bei dem Ausdruck kann es sich um eine beliebige Kombination von Literalen, anderen bereits definierten Konstanten und bereits definierten Enumerationsmembern handeln.  Zur Kombination dieser Elemente können Sie arithmetische und logische Operatoren verwenden.  
+-   **Die Initialisierung.** Sie müssen den Wert jeder Konstante in initialisieren `constantlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der Konstante zugewiesen werden soll. Der Ausdruck kann eine beliebige Kombination von Literalen, anderen, die bereits definierte, Konstanten und Enumerationsmembern, die bereits definiert sind. Sie können arithmetische und logische Operatoren verwenden, solche Elemente kombinieren.  
   
-     Variablen und Funktionen können in `initializer` nicht verwendet werden.  Sie können jedoch Konvertierungsschlüsselwörter wie `CByte` und `CShort` verwenden.  In Kombination mit einem konstanten `String`\- oder `Char`\-Argument, das zur Kompilierungszeit ausgewertet wird, kann auch `AscW` verwendet werden.  
+     Sie können keine Variablen oder Funktionen in `initializer`. Sie können jedoch Konvertierungsschlüsselwörter wie z. B. `CByte` und `CShort`. Sie können auch `AscW` Aufruf mit einer Konstanten `String` oder `Char` Argument, da, die zur Kompilierzeit ausgewertet werden kann.  
   
-## Verhalten  
+## <a name="behavior"></a>Verhalten  
   
--   **Gültigkeitsbereich.** Auf lokale Konstanten kann nur in ihrer Prozedur oder ihrem Block zugegriffen werden.  Auf Memberkonstanten kann von jeder Stelle in ihrer Klasse, ihrer Struktur oder ihrem Modul zugegriffen werden.  
+-   **Bereich.** Lokale Konstanten werden nur innerhalb ihrer Prozedur oder eines Blocks zugegriffen werden. Memberkonstanten sind kann an einer beliebigen Stelle innerhalb ihrer Klasse, Struktur oder Modul zugegriffen werden.  
   
--   **Qualifikation.** Code außerhalb einer Klasse, einer Struktur oder eines Moduls muss den Namen einer Memberkonstanten mit dem Namen der Klasse, der Struktur bzw. des Moduls qualifizieren.  Code außerhalb einer Prozedur oder eines Blocks kann auf keine lokalen Konstanten innerhalb dieser Prozedur bzw. Blocks verweisen.  
+-   **Qualifizierung.** Code außerhalb einer Klasse, einer Struktur oder eines Moduls muss eine Memberkonstante Name durch den Namen der Klasse, der Struktur oder des Moduls qualifizieren. Code außerhalb einer Prozedur oder eines Blocks kann auf keine lokalen Konstanten innerhalb dieser Prozedur oder eines Blocks verweisen.  
   
-## Beispiel  
- Im folgenden Beispiel wird mit der `Const`\-Anweisung die Verwendung von Konstanten anstelle von Literalwerten deklariert.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `Const` -Anweisung zum Deklarieren von Konstanten für die Verwendung anstelle von literalen Werten.  
   
  [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
-## Beispiel  
- Wenn Sie eine Konstante mit dem Datentyp `Object` definieren, weist ihr der Visual Basic\-Compiler anstelle von `Object` den Typ `initializer` zu.  Im folgenden Beispiel verfügt die Konstante `naturalLogBase` über den Laufzeittyp `Decimal`.  
+## <a name="example"></a>Beispiel  
+ Wenn Sie eine Konstante mit dem Datentyp definieren `Object`, Visual Basic-Compiler gibt den Typ des `initializer`, anstelle von `Object`. Im folgenden Beispiel wird die Konstante `naturalLogBase` hat den Laufzeittyp `Decimal`.  
   
  [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
- Im vorherigen Beispiel wird die <xref:System.Type.ToString%2A>\-Methode für das vom [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md) zurückgegebene <xref:System.Type>\-Objekt verwendet, weil <xref:System.Type> nicht mit `CStr` in `String` konvertiert werden kann.  
+ Im vorherige Beispiel wird die <xref:System.Type.ToString%2A> Methode für die <xref:System.Type> zurückgegebenes Objekt der [Operators "GetType"](../../../visual-basic/language-reference/operators/gettype-operator.md), da <xref:System.Type> kann nicht konvertiert werden, um `String` mit `CStr`.  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Constants and Enumerations](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)   
- [Constants and Enumerations](../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [ReDim-Anweisung](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Konstanten und Enumerationen](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [Konstanten und Enumerationen](../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

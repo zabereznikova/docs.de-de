@@ -1,25 +1,28 @@
 ---
-title: "Kanalklasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Kanalklasse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1df634a61cce695fca74fdfe53beea6c0f83d082
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Kanalklasse
+# <a name="channel-class"></a>Kanalklasse
 Kanal  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class Channel  
@@ -32,52 +35,52 @@ class Channel
 };  
 ```  
   
-## Methoden  
+## <a name="methods"></a>Methoden  
  Die Kanalklasse definiert keine Methoden.  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  Die Kanalklasse verfügt über die folgenden Eigenschaften.  
   
-### LocalAddress  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="localaddress"></a>LocalAddress  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der lokale Endpunkt für den Kanal.  
   
-### ref  
+### <a name="ref"></a>ref  
  Datentyp: Endpunkt  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Verweis auf den Endpunkt, mit dem der Kanal verbunden ist.  
   
-### RemoteAddress  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="remoteaddress"></a>RemoteAddress  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die dem Kanal zugeordnete Remoteadresse.  
   
-### SessionId  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="sessionid"></a>SessionId  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die aktuelle Sitzungs\-ID \(sofern vorhanden\).  
+ Die aktuelle Sitzungs-ID (sofern vorhanden).  
   
-### Typ  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="type"></a>Typ  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Kanaltyp.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.ChannelBase>

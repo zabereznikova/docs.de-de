@@ -1,27 +1,30 @@
 ---
-title: "Zuordnen von f&#252;r geschachtelte Elemente angegebenen Beziehungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9866b556f2ba09cef7616fea4a2a6d8135e6b8e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Zuordnen von f&#252;r geschachtelte Elemente angegebenen Beziehungen
-Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben.  Die beiden in **msdata:Relationship** angegebenen Elemente können im Schema geschachtelt sein. Sie müssen aber nicht geschachtelt sein.  Der Zuordnungsprozess verwendet **msdata:Relationship** im Schema, um die Primärschlüssel\-Fremdschlüssel\-Beziehung zwischen den beiden Spalten zu generieren.  
+# <a name="map-relations-specified-for-nested-elements"></a>Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
+Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben. Die zwei Elemente im angegebenen **msdata: Relationship** können im Schema geschachtelt sein, aber nicht unbedingt sein. Der Zuordnungsprozess verwendet **msdata: Relationship** im Schema für den primären Schlüssel/Fremdschlüssel-Beziehung zwischen den beiden Spalten zu generieren.  
   
- Im folgenden Beispiel wird ein XML\-Schema dargestellt, in dem das **OrderDetail**\-Element ein untergeordnetes Element des **Order**\-Elements ist.  **msdata:Relationship** legt die Beziehung zwischen übergeordneten und untergeordneten Elementen für diese Elemente fest und gibt an, dass sich die **OrderNumber**\-Spalte der daraus resultierenden **Order**\-Tabelle auf die **OrderNo**\-Spalte der daraus resultierenden **OrderDetail**\-Tabelle bezieht.  
+ Das folgende Beispiel zeigt ein XML-Schema, in dem die **OrderDetail** Element ist ein untergeordnetes Element des **Reihenfolge**. Die **msdata: Relationship** identifiziert diese über-/ unterordnungsbeziehung und gibt an, dass die **OrderNumber** Spalte des resultierenden **Reihenfolge** Tabelle bezieht sich auf die **OrderNo** Spalte des resultierenden **OrderDetail** Tabelle.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -59,16 +62,16 @@ Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordn
 </xs:schema>  
 ```  
   
- Durch den XML\-Schemazuordnungsprozess werden im <xref:System.Data.DataSet> folgende Elemente erstellt:  
+ Durch den XML-Schemazuordnungsprozess werden im <xref:System.Data.DataSet> folgende Elemente erstellt:  
   
--   Eine **Order**\-Tabelle und eine **OrderDetail**\-Tabelle.  
+-   Ein **Reihenfolge** und ein **OrderDetail** Tabelle.  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Eine Beziehung zwischen der **Order**\-Tabelle und der **OrderDetail**\-Tabelle.  Die **Nested**\-Eigenschaft für diese Beziehung ist auf **True** festgelegt, da das **Order**\-Element und das **OrderDetail**\-Element im Schema geschachtelt sind.  
+-   Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen. Die **geschachtelte** -Eigenschaft für diese Beziehung wird festgelegt, um **"true"** da die **Reihenfolge** und **OrderDetail** Elemente im Schema geschachtelt sind .  
   
     ```  
     ParentTable: Order  
@@ -81,7 +84,7 @@ Ein Schema kann eine **msdata:Relationship**\-Anmerkung enthalten, um die Zuordn
   
  Der Zuordnungsprozess erstellt keine Einschränkungen.  
   
-## Siehe auch  
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Generieren von DataSet-Beziehungen aus XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

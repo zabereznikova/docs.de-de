@@ -1,37 +1,35 @@
 ---
-title: "&#39;Optional&#39; expected | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30202"
-  - "vbc30202"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30202"
+title: '&#39; optional &#39; erwartet'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30202
+- vbc30202
+helpviewer_keywords: BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e84371935fdd2d558e6828c05fa952b9cc4cf4f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;Optional&#39; expected
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Nach einem optionalen Argument in einer Prozedurdeklaration steht ein erforderliches Argument.  Jedes Argument, dass nach einem optionalen Argument steht, muss ebenfalls optional sein.  
+# <a name="39optional39-expected"></a>&#39; optional &#39; erwartet
+Ein optionales Argument in einer Prozedurdeklaration folgt ein erforderliches Argument. Jedes Argument ein optionales Argument muss ebenfalls optional sein.  
   
- **Fehler\-ID:** BC30202  
+ **Fehler-ID:** BC30202  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Wenn das Argument erforderlich sein soll, verschieben Sie es, sodass es vor dem ersten optionalen Argument in der Argumentliste steht.  
+1.  Wenn das Argument erforderlich sein soll, verschieben Sie sie vor dem ersten optionalen Argument in der Argumentliste an.  
   
-2.  Wenn das Argument optional sein soll, verwenden Sie das `Optional`\-Schlüsselwort.  
+2.  Wenn das Argument optional sein soll, verwenden Sie die `Optional` Schlüsselwort.  
   
-## Siehe auch  
- [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+## <a name="see-also"></a>Siehe auch  
+ [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

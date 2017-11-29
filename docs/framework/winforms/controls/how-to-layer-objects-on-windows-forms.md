@@ -1,55 +1,58 @@
 ---
-title: "Gewusst wie: &#220;berlagern von Objekten in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Schichten"
-  - "Steuerelemente [Windows Forms], Positionieren"
-  - "Windows Forms-Steuerelemente, Schichten"
-  - "Z-Reihenfolge"
-  - "Z-Reihenfolge"
+title: "Gewusst wie: Überlagern von Objekten in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms controls, layering
+- controls [Windows Forms], layering
+- z order
+- controls [Windows Forms], positioning
+- z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bda4cb3641ff890646614af35d38ff13621cc16b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#220;berlagern von Objekten in Windows&#160;Forms
-Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem MDI\-Formular \(Multiple Document Interface \= Mehrfachdokumentschnittstelle\) arbeiten, empfiehlt es sich häufig, Steuerelemente und untergeordnete Formulare zu überlagern, sodass mehrschichtige Benutzeroberflächen \(UI\) entstehen.  Um die Steuerelemente und Fenster innerhalb einer Gruppe zu verschieben und zu kontrollieren, passen Sie deren Z\-Anordnung an.  Bei der *Z\-Anordnung* handelt es sich um die visuelle Überlagerung von Steuerelementen auf einem Formular entlang der Z\-Achse des Formulars \(Tiefenebene\).  Das Fenster, das zuoberst in der Z\-Anordnung angelegt ist, überlappt alle anderen Fenster.  Alle anderen Fenster überlappen wiederum das Fenster, das sich zuunterst in der Z\-Anordnung befindet.  
+# <a name="how-to-layer-objects-on-windows-forms"></a>Gewusst wie: Überlagern von Objekten in Windows Forms
+Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem Formular der multiple Document Interface (MDI arbeiten), sollten Sie häufig überlagern Sie die Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) zu erstellen. Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie ihre Z-Reihenfolge. *Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular auf das Formular z-Achse (Tiefe). Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern. Alle überlappen anderen Fenster am unteren Rand der Z-Reihenfolge.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So überlagern Sie Steuerelemente zur Entwurfszeit  
+### <a name="to-layer-controls-at-design-time"></a>Auf Ebene-Steuerelementen zur Entwurfszeit  
   
-1.  Markieren Sie ein zu überlagerndes Steuerelement.  
+1.  Wählen Sie ein Steuerelement an die gewünschte Ebene.  
   
-2.  Zeigen Sie im Menü **Format**  auf **Reihenfolge**, und klicken Sie dann auf **In den Vordergrund** oder **In den Hintergrund**.  
+2.  Auf der **Format** Sie im Menü **Reihenfolge**, und klicken Sie dann auf **in den Vordergrund** oder **in den Hintergrund**.  
   
-### So überlagern Sie Steuerelemente programmgesteuert  
+### <a name="to-layer-controls-programmatically"></a>Layer-Steuerelemente programmgesteuert  
   
--   Verwenden Sie die <xref:System.Windows.Forms.Control.BringToFront%2A>\-Methode und die <xref:System.Windows.Forms.Control.SendToBack%2A>\-Methode, um die Z\-Anordnung der Steuerelemente zu ändern.  
+-   Verwenden der <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden, um die Z-Reihenfolge der Steuerelemente zu bearbeiten.  
   
-     Falls sich beispielsweise das <xref:System.Windows.Forms.TextBox>\-Steuerelement `txtFirstName` unter einem anderen Steuerelement befindet, Sie es jedoch in den Vordergrund verlagern möchten, verwenden Sie folgenden Code:  
+     Z. B. wenn ein <xref:System.Windows.Forms.TextBox> Steuerelement `txtFirstName`, wird unter einem anderen Steuerelement und möchten es im Vordergrund, verwenden Sie den folgenden Code:  
   
     ```vb  
     txtFirstName.BringToFront()  
-  
     ```  
   
     ```csharp  
     txtFirstName.BringToFront();  
-  
     ```  
   
     ```cpp  
@@ -57,11 +60,11 @@ Wenn Sie eine komplexe Benutzeroberfläche erstellen oder mit einem MDI\-Formula
     ```  
   
 > [!NOTE]
->  Windows Forms unterstützt die *Steuerelementkapselung*.  Bei der Steuerelementkapselung werden mehrere Steuerelemente innerhalb eines Steuerelements platziert, z. B. eine Reihe von <xref:System.Windows.Forms.RadioButton>\-Steuerelementen in einem <xref:System.Windows.Forms.GroupBox>\-Steuerelement.  Sie können die Steuerelemente dann innerhalb des aufnehmenden Steuerelements überlagern.  Beim Verschieben des Gruppenfelds werden automatisch auch die Steuerelemente verschoben, da sie in diesem Feld enthalten sind.  
+>  Windows Forms unterstützt *steuern Containment*. Steuerelementcontainern umfasst eine Reihe von Steuerelementen in einem enthaltenden Steuerelement, z. B. eine Anzahl von platzieren <xref:System.Windows.Forms.RadioButton> steuert innerhalb einer <xref:System.Windows.Forms.GroupBox> Steuerelement. Sie können dann die Steuerelemente innerhalb des enthaltenden Steuerelements Ebene. Das Gruppenfeld verschieben, die Steuerelemente auch, da sie darin enthalten sind.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

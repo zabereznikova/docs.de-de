@@ -1,6 +1,6 @@
 ---
 title: Generika (F#)
-description: Generika (F#)
+description: "Informationen Sie zum Verwenden von f# generische Funktionen und Typen, bei die ermöglichen es Ihnen, Code zu schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code zu wiederholen."
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>Generika
 
 F#-Funktionswerte, -Methoden, -Eigenschaften und -Aggregattypen, wie z.B. Klassen und Unterscheidungs-Unions können *generisch* sein. Generische Konstrukte enthalten mindestens einen Typparameter, die in der Regel vom Benutzer des generischen Konstrukts angegeben wird. Mit generischen Funktionen und Typen können Sie Code schreiben, der mit einer Vielzahl von Typen funktioniert, ohne den Code für jeden Typ zu wiederholen. Ihren Code generisch zu erstellen kann einfach sein, da Ihr Code häufig implizit abgeleitet wird, um durch den Typrückschluss des Compilers und durch automatische Verallgemeinerungsmechanismen generisch zu sein.
@@ -81,7 +80,7 @@ Der folgende Code zeigt die Verwendung der Funktionen, die in den vorherigen Abs
 Es gibt zwei Möglichkeiten zum Verweisen auf einen generischen Typ anhand des Namens. Beispielsweise sind `list<int>` und `int list` zwei Methoden zum Verweisen auf einen generischen Typ `list`, der über ein einzelnes Typargument `int` verfügt. Die letztgenannte Form wird konventionell nur mit integrierten F#-Typen verwendet, wie z.B. `list` und `option`. Wenn mehrere Typargumente vorhanden sind, verwenden Sie normalerweise die Syntax `Dictionary<int, string>`, aber Sie können auch die Syntax `(int, string) Dictionary` verwenden.
 
 ## <a name="wildcards-as-type-arguments"></a>Platzhalter als Typargumente
-Um anzugeben, dass ein Typargument vom Compiler abgeleitet werden soll, können Sie den Unterstrich bzw. das Platzhaltersymbol (`_`) anstatt eines benannten Typarguments verwenden. Dies wird im folgenden Code dargestellt.
+Um anzugeben, dass ein Typargument vom Compiler abgeleitet werden soll, können Sie den Unterstrich bzw. das Platzhaltersymbol (`_`) anstatt eines benannten Typarguments verwenden. Dies wird im folgenden Code veranschaulicht.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
     
@@ -103,7 +102,7 @@ Es gibt zwei Arten von Typparametern, die in F#-Programmen verwendet werden kön
 
 [Statisch aufgelöste Typparameter](statically-resolved-type-parameters.md)
 
-[Generika in .NET Framework](https://msdn.microsoft.com/library/ms172192.aspx)
+[Generika in .NET Framework](~/docs/standard/generics/index.md)
 
 [Automatische Verallgemeinerung](automatic-generalization.md)
 

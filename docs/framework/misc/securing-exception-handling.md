@@ -1,33 +1,32 @@
 ---
-title: "Securing Exception Handling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "code security, exception handling"
-  - "security [.NET Framework], exception handling"
-  - "secure coding, exception handling"
-  - "exception handling, security"
+title: Sichern der Ausnahmebehandlung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- code security, exception handling
+- security [.NET Framework], exception handling
+- secure coding, exception handling
+- exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Securing Exception Handling
-In Visual C\+\+ und in Visual Basic wird ein Filterausdruck an höherer Position im Stapel vor der **finally**\-Anweisung ausgeführt.  Der dem Filter zugewiesene **catch**\-Block wird nach der **finally**\-Anweisung ausgeführt.  Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).  In diesem Abschnitt werden die Auswirkungen dieser Reihenfolge auf die Sicherheit erläutert.  Sehen Sie sich das folgende Pseudocodebeispiel an, das die Reihenfolge der Ausführung von Filteranweisungen und **finally**\-Anweisungen veranschaulicht.  
+# <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
+In Visual C++ und Visual Basic ein Filterausdruck weiter oben im Stapel ausgeführt wird, bevor eine **schließlich** Anweisung. Die **catch** Block zugeordnet diesen Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Auswirkungen auf die Sicherheit der angegebenen Reihenfolge. Betrachten Sie die folgenden Pseudocodebeispiel zur Veranschaulichung der Reihenfolge, in welcher filteranweisungen und **schließlich** Anweisungen ausführen.  
   
 ```cpp  
 void Main()   
@@ -68,7 +67,7 @@ Finally
 Catch  
 ```  
   
- Der Filter wird vor der **finally**\-Anweisung ausgeführt, sodass Sicherheitsprobleme durch alle Vorgänge entstehen können, die eine Änderung in einen Zustand bewirken können, in dem anderer Code ausgeführt werden kann.  Beispiel:  
+ Der Filter wird ausgeführt, bevor die **schließlich** Anweisung, damit Sicherheitsprobleme nichts ergeben können, die einen Zustand zu ändern, in dem Ausführung von anderem Code nutzen kann. Zum Beispiel:  
   
 ```cpp  
 try   
@@ -87,7 +86,7 @@ finally
 }  
 ```  
   
- Dieser Pseudocode ermöglicht einem Filter an höherer Position im Stapel das Ausführen von beliebigem Code.  Weitere Beispiele für Operationen mit ähnlichen Auswirkungen sind der vorübergehende Identitätswechsel, das Festlegen eines internen Flags zum Umgehen einer Sicherheitsüberprüfung und das Ändern der dem Thread zugeordneten Kultur.  Als Lösung wird empfohlen, einen Ausnahmehandler einzuführen, um die Codeänderungen am Threadzustand von den Filterblöcken des Aufrufers zu isolieren.  Es ist jedoch unbedingt zu beachten, dass der Ausnahmehandler ordnungsgemäß eingeführt wird. Andernfalls wird dieses Problem nicht behoben.  Im folgenden Beispiel werden die benutzeroberflächenspezifischen Kultureinstellungen gewechselt. Alle Änderungen am Threadzustand können jedoch ebenso verfügbar gemacht werden.  
+ Dieser Pseudocode ermöglicht einen Filter, die weiter oben im Stapel, beliebigen Code auszuführen. Weitere Beispiele für Vorgänge, die einen ähnlichen Effekt hätte sind temporäre Identitätswechsel von einer anderen Identität, die eine interne Flag, das einige sicherheitsüberprüfung umgeht festlegen oder Ändern der Kultur des Threads zugeordnet. Die empfohlene Lösung ist, einen Ausnahmehandler, um Änderungen des Codes zu Threadzustand von Aufrufern Filter-Blöcken zu isolieren einzuführen. Allerdings ist es wichtig, dass der Ausnahmehandler ordnungsgemäß eingeführt werden, oder wird dieses Problem nicht behoben werden. Das folgende Beispiel schaltet die Benutzeroberflächenkultur, aber jede Art von Änderung des Threads kann auf ähnliche Weise verfügbar gemacht werden.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +100,6 @@ YourObject.YourMethod()
       Thread.CurrentThread.CurrentUICulture = saveCulture;  
    }  
 }  
-  
 ```  
   
 ```vb  
@@ -125,7 +123,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Die richtige Lösung in diesem Fall ist das Umschließen des vorhandenen **try**\/**finally**\-Blocks mit einem **try**\/**catch**\-Block.  Das Problem wird nicht behoben, indem einfach eine **catch\-throw**\-Klausel in den vorhandenen **try**\/**finally**\-Block eingeführt wird, wie im folgenden Beispiel verdeutlicht wird.  
+ Die richtige Lösung ist in diesem Fall die vorhandenen umschließen **versuchen**/**schließlich** -block in ein **versuchen**/**catch** Block. Einführung einfach in eine **Catch-Throw** Klausel in der vorhandenen **versuchen**/**schließlich** Block nicht das Problem beheben, wie im folgenden Beispiel gezeigt.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -145,9 +143,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Das Problem wird dadurch nicht behoben, da die **finally**\-Anweisung vor der Übernahme der Kontrolle durch `FilterFunc` nicht ausgeführt wurde.  
+ Wird dadurch das Problem nicht behoben, da die **schließlich** Anweisung wurde nicht ausgeführt, bevor die `FilterFunc` Ruft das Steuerelement ab.  
   
- Im folgenden Beispiel wird das Problem behoben, indem sichergestellt wird, dass die **finally**\-Klausel ausgeführt wird, bevor an die Ausnahmefilterblöcke des Aufrufers eine Ausnahme ausgegeben wird.  
+ Im folgende Beispiel wird das Problem behebt, indem Sie sicherstellen, dass die **schließlich** -Klausel wurde ausgeführt, bevor eine Ausnahme des Aufrufers Filter Ausnahmeblöcke angeboten.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -169,5 +167,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## Siehe auch  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Siehe auch  
+ [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

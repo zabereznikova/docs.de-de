@@ -1,94 +1,97 @@
 ---
-title: "&lt;defaultHttpCachePolicy&gt;-Element (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<defaultHttpCachePolicy>-Element"
-  - "defaultHttpCachePolicy-Element"
+title: '&lt;DefaultHttpCachePolicy&gt; -Element (Netzwerkeinstellungen)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy
+helpviewer_keywords:
+- defaultHttpCachePolicy element
+- <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;defaultHttpCachePolicy&gt;-Element (Netzwerkeinstellungen)
-Beschreibt, ob HTTP\-Caching aktiv ist und beschreibt die Standardcachingrichtlinie.  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;DefaultHttpCachePolicy&gt; -Element (Netzwerkeinstellungen)
+Beschreibt, ob HTTP-caching aktiv ist und beschreibt die Standardcachingrichtlinie.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<RequestCaching >  
+\<DefaultHttpCachePolicy >  
   
-```  
-< defaultHttpCachePolicy  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
+<defaultHttpCachePolicy  
   policyLevel="BypassCache|Default"  
-  minimumFresh="d.hh:mm:ss"|"minValue"  
-  maximumAge  ="d.hh:mm:ss"|"maxValue"  
-  maximumStale="d.hh:mm:ss"|"maxValue"  
+  minimumFresh="d.hh:mm:ss|minValue|maxValue"  
+  maximumAge="d.hh:mm:ss|minValue|maxValue"  
+  maximumStale="d.hh:mm:ss|minValue|maxValue"  
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`maximumAge`|Gibt das maximale Zeitintervall an, bevor ein zwischengespeichertes Objekt als abgelaufen markiert wird.|  
-|`maximumStale`|Gibt die maximale Zeit nach der berechneten Aktualitätszeit an, bevor ein zwischengespeichertes Objekt als abgelaufen markiert wird.|  
-|`minimumFresh`|Gibt die minimale Zeit an, während der ein zwischengespeichertes Objekt als neu betrachtet wird.|  
-|`policyLevel`|Gibt an, ob die Cachingrichtlinie automatisch ist oder ob der Cache umgegangen wird.  Der Standardwert ist `BypassCache`.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`maximumAge`|Gibt das maximale Zeitintervall an, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
+|`maximumStale`|Gibt die maximale Zeit berechnete Aktualität-Verzögerung, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
+|`minimumFresh`|Gibt die minimale Zeit für ein zwischengespeichertes Objekt als aktuell angesehen.|  
+|`policyLevel`|Gibt an, ob die Cachingrichtlinie für automatische oder gibt an, ob der Cache umgangen wird. Der Standardwert ist `BypassCache`.|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|[RequestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Cachingmechanismus für Netzwerkanforderungen.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für Anforderungen über das Netzwerk an.|  
   
-## Hinweise  
- Der Wert für das `policyLevel`\-Attribut ist `BypassCache` oder `Default`.  
+## <a name="remarks"></a>Hinweise  
+ Der Wert für die `policyLevel` -Attribut ist entweder `BypassCache` oder `Default`.  
   
- Werte für `maximumAge`, `maximumStale` und `minimumFresh`\-Elemente sind entweder ein explizites Zeitintervall mit dem Format von *d*.*hh*:*mm*:*ss* \(in Tagen, Stunden, Minuten und Sekunden\) oder die Konstanten `minValue` oder `maxValue`, je nach Bedarf.  
+ Werte für die `maximumAge`, `maximumStale`, und `minimumFresh` Elemente sind ein explizites Zeitintervall im Format *d*. *"hh"*:*mm*:*ss* (Tage, Stunden, Minuten und Sekunden), oder die Konstanten `minValue` oder `maxValue`je nach Bedarf.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Das folgende Codebeispiel zeigt, wie eine minimale Aktualitätszeit von sechs Stunden, eine maximale Alterszeit von zwei Tagen und eine maximale Veralterungszeit von vier Stunden angegeben wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie eine neue Mindestzeit von sechs Stunden kommen, ein maximales Alter von zwei Tagen und eine maximale veraltete von vier Stunden an.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <requestCaching>  
-      <defaultHttpCachePolicy>  
-        <set minimumFresh="0.06:00:00" />  
-        <set maximumAge  ="2.00:00:00" />  
-        <set maximumStale="0.04:00:00" />  
-      </defaultHttpCachePolicy>  
+      <defaultHttpCachePolicy  
+        minimumFresh="0.06:00:00"  
+        maximumAge="2.00:00:00"  
+        maximumStale="0.04:00:00"
+      />  
     </requestCaching>  
   </system.net>  
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.Cache>   
- <xref:System.Net.WebRequest>   
- <xref:System.Net.Cache.RequestCacheLevel>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.Cache>  
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.Cache.RequestCacheLevel>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

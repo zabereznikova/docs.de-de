@@ -1,50 +1,48 @@
 ---
-title: "Main Procedure in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Main"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Main procedure"
-  - "Main method [Visual Basic]"
-  - "main function"
+title: Main-Prozedur in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Main
+helpviewer_keywords:
+- Main procedure
+- Main method [Visual Basic]
+- main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Main Procedure in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enthalten.  Diese Prozedur fungiert als Ausgangspunkt und Gesamtsteuerung für die Anwendung.  Wenn .NET Framework die Anwendung geladen hat und die Steuerung an sie übergeben kann, wird die `Main`\-Prozedur aufgerufen.  Sofern Sie keine Windows Forms\-Anwendung erstellen, müssen Sie die `Main`\-Prozedur für Anwendungen schreiben, die eigenständig ausgeführt werden.  
+# <a name="main-procedure-in-visual-basic"></a>Main-Prozedur in Visual Basic
+Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Diese Prozedur dient, wie die Start- und gesamtsteuerung für Ihre Anwendung. Die .NET Framework Aufrufe der `Main` -Prozedur, wenn die Anwendung geladen hat und bereit für die Steuerung an sie übergeben wird. Wenn Sie eine Windows Forms-Anwendung erstellen, müssen Sie schreiben die `Main` Verfahren für Anwendungen, die auf ihre eigenen ausgeführt.  
   
- `Main` enthält den Code, der zuerst ausgeführt wird.  In `Main` können Sie festlegen, welches Formular beim Programmstart zuerst geladen wird, feststellen, ob eine Kopie der Anwendung bereits auf dem System ausgeführt wird, eine Reihe von Variablen für die Anwendung definieren oder eine Datenbank öffnen, die für die Anwendung erforderlich ist.  
+ `Main`enthält den Code, der zuerst ausgeführt wird. In `Main`, Sie bestimmen, welche Form zuerst geladen werden, wenn das Programm gestartet wird, festzustellen, ob eine Kopie der Anwendung bereits auf dem System ausgeführt wird, richten Sie einen Satz von Variablen für die Anwendung oder öffnen Sie eine Datenbank, die die Anwendung erfordert.  
   
-## Anforderungen für die Main\-Prozedur  
- Eine Datei, die eigenständig ausgeführt wird \(normalerweise mit der Erweiterung .exe\), muss eine `Main`\-Prozedur enthalten.  Eine Bibliothek \(z. B. mit der Erweiterung .dll\) wird nicht eigenständig ausgeführt und erfordert keine `Main`\-Prozedur.  Für die unterschiedlichen Typen von Projekten, die Sie erstellen können, gelten folgende Anforderungen:  
+## <a name="requirements-for-the-main-procedure"></a>Anforderungen für die Main-Prozedur  
+ Eine Datei, die einen eigenen (normalerweise mit der Erweiterung .exe) wird ausgeführt auf darf eine `Main` Prozedur. Eine Bibliothek (z. B. mit der Erweiterung .dll) wird nicht eigenständig ausgeführt und erfordert keine `Main` Prozedur. Die Anforderungen für die verschiedenen Typen von Projekten, die Sie erstellen können, lauten folgendermaßen:  
   
--   Konsolenanwendungen werden eigenständig ausgeführt, und Sie müssen mindestens eine `Main`\-Prozedur angeben.  .  
+-   Konsolenanwendungen führen Sie auf ihre eigenen, und geben Sie an mindestens eine `Main` Prozedur. .  
   
--   Windows Forms\-Anwendungen werden eigenständig ausgeführt.  Jedoch generiert der Visual Basic\-Compiler automatisch eine `Main`\-Prozedur in einer solchen Anwendung, und Sie müssen sie nicht schreiben.  
+-   Führen Sie auf ihren eigenen Windows Forms-Anwendungen. Visual Basic-Compiler automatisch generiert jedoch eine `Main` Prozedur z. B. eine Anwendung, und Sie müssen nicht schreiben.  
   
--   Klassenbibliotheken erfordern keine `Main`\-Prozedur.  Zu diesen zählen Windows\-Steuerelementbibliotheken und Websteuerelementbibliotheken.  Webanwendungen werden als Klassenbibliotheken bereitgestellt.  
+-   Klassenbibliotheken erfordern keine `Main` Prozedur. Dazu gehören Windows-Steuerelement-Bibliotheken und Websteuerelementbibliotheken. Webanwendungen werden als Klassenbibliotheken bereitgestellt.  
   
-## Deklarieren der Main\-Prozedur  
- Es gibt vier Möglichkeiten, die `Main`\-Prozedur zu deklarieren.  Sie kann Argumente akzeptieren oder keine Argumente akzeptieren und einen Wert zurückgeben oder keinen Wert zurückgeben.  
+## <a name="declaring-the-main-procedure"></a>Deklarieren Sie die Main-Prozedur  
+ Es gibt vier Möglichkeiten zum Deklarieren der `Main` Prozedur. Es kann Argumente annehmen, oder nicht, und sie können einen Wert zurückgeben, oder nicht.  
   
 > [!NOTE]
->  Wenn Sie `Main` in einer Klasse deklarieren, müssen Sie das `Shared`\-Schlüsselwort verwenden.  In einem Modul muss `Main` dagegen nicht `Shared` sein.  
+>  Wenn Sie deklarieren `Main` in einer Klasse, verwenden Sie die `Shared` Schlüsselwort. In einem Modul `Main` muss nicht werden `Shared`.  
   
--   Das einfachste Verfahren ist das Deklarieren einer `Sub`\-Prozedur, die keine Argumente akzeptiert und keinen Wert zurückgibt.  
+-   Die einfachste Möglichkeit ist das Deklarieren einer `Sub` Prozedur, die keine Argumente übernehmen oder einen Wert zurückgeben.  
   
     ```  
     Module mainModule  
@@ -56,7 +54,7 @@ Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enth
     End Module  
     ```  
   
--   `Main` kann auch einen `Integer`\-Wert zurückgeben, der vom Betriebssystem als Exitcode für das Programm verwendet wird.  Andere Programme können diesen Code testen, indem Sie den Windows\-Wert ERRORLEVEL prüfen.  Um Exitcode zurückzugeben, müssen Sie `Main` als eine `Function`\-Prozedur und nicht als `Sub`\-Prozedur deklarieren.  
+-   `Main`kann auch Zurückgeben einer `Integer` -Wert, der das Betriebssystem als Exitcode für das Programm verwendet. Andere Programme können diesen Code mithilfe den Windows-ERRORLEVEL-Wert zu testen. Um einen Exitcode zurückzugeben, müssen Sie deklarieren `Main` als eine `Function` Prozedur anstelle von einer `Sub` Prozedur.  
   
     ```  
     Module mainModule  
@@ -73,7 +71,7 @@ Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enth
     End Module  
     ```  
   
--   `Main` kann auch ein `String`\-Array als Argument enthalten.  Jede Zeichenfolge im Array enthält eines der Befehlszeilenargumente, die zum Aufrufen des Programms verwendet werden.  In Abhängigkeit von den Werten können Sie unterschiedliche Aktionen vornehmen.  
+-   `Main`akzeptieren können auch eine `String` Array als Argument. Jede Zeichenfolge im Array enthält einen der Befehlszeilenargumente verwendet, um das Programm aufzurufen. Sie können unterschiedliche Aktionen abhängig von deren Werten ausführen.  
   
     ```  
     Module mainModule  
@@ -97,7 +95,7 @@ Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enth
     End Module  
     ```  
   
--   Sie können `Main` deklarieren, um Befehlszeilenargumente zu überprüfen, ohne Exitcode zurückzugeben \(siehe folgendes Beispiel\).  
+-   Sie können deklarieren, `Main` , überprüfen Sie die Befehlszeilenargumente, jedoch wie folgt einen Exitcode zurückgibt.  
   
     ```  
     Module mainModule  
@@ -117,15 +115,15 @@ Jede Visual Basic\-Anwendung muss eine Prozedur mit der Bezeichnung `Main` enth
     End Module  
     ```  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>   
- <xref:System.Array.Length%2A>   
- <xref:Microsoft.VisualBasic.Information.UBound%2A>   
- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)   
- [NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/de-de/9d030b60-e148-4366-a462-69532f02294c)   
- [\/main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+ <xref:System.Array.Length%2A>  
+ <xref:Microsoft.VisualBasic.Information.UBound%2A>  
+ [Struktur eines Visual Basic-Programms](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ [NIB: Visual Basic-Version von Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
+ [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md)

@@ -1,64 +1,71 @@
 ---
-title: "Gewusst wie: Aufl&#246;sen mehrdeutiger Zeiten durch den Benutzer | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mehrdeutige Zeit [.NET Framework]"
-  - "Zeitzonen [.NET Framework], Mehrdeutige Zeit"
+title: "Vorgehensweise: ermöglicht Benutzern, Auflösen von mehrdeutigen Zeiten"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time zones [.NET Framework], ambiguous time
+- ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6409e676944f64931b197fda1a6a7b392c268c97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Gewusst wie: Aufl&#246;sen mehrdeutiger Zeiten durch den Benutzer
-Bei einer mehrdeutigen Zeit handelt es sich um eine Zeit, die mehreren koordinierten Weltzeiten \(Coordinated Universal Time; UTC\) zugeordnet ist.  Sie tritt auf, wenn die Uhrzeit zurückgestellt wird, beispielsweise bei der Umstellung von der Sommerzeit in einer Zeitzone auf die Standardzeit.  Bei der Behandlung einer mehrdeutigen Zeit können Sie wie folgt vorgehen:  
-  
--   Wenn die mehrdeutige Zeit vom Benutzer eingegeben wurde, können Sie dem Benutzer die Auslösung der Mehrdeutigkeit überlassen.  
-  
--   Treffen Sie eine Annahme darüber, wie die Zeit UTC zugeordnet ist.  Sie können zum Beispiel annehmen, dass eine mehrdeutige Zeit immer als Standardzeit der Zeitzone ausgedrückt wird.  
-  
- In diesem Thema wird erläutert, wie Sie einen Benutzer eine mehrdeutige Zeit auflösen lassen.  
-  
-### So lassen Sie einen Benutzer eine mehrdeutige Zeit auflösen  
-  
-1.  Lassen Sie das Datum und die Uhrzeit vom Benutzer eingeben.  
-  
-2.  Rufen Sie die <xref:System.TimeZoneInfo.IsAmbiguousTime%2A>\-Methode auf, um festzustellen, ob die Zeit mehrdeutig ist.  
-  
-3.  Wenn die Zeit mehrdeutig ist, rufen Sie die <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A>\-Methode auf, um ein Array von <xref:System.TimeSpan>\-Objekten abzurufen.  Jedes Element im Array enthält einen UTC\-Offset, dem die mehrdeutige Zeit zugeordnet werden kann.  
-  
-4.  Lassen Sie den Benutzer den gewünschten Offset auswählen.  
-  
-5.  Ermitteln Sie das UTC\-Datum und die UTC\-Uhrzeit, indem Sie den vom Benutzer ausgewählten Offset von der Ortszeit abziehen.  
-  
-6.  Rufen Sie die `static` \(`Shared` in Visual Basic .NET\) <xref:System.DateTime.SpecifyKind%2A>\-Methode auf, um für die <xref:System.DateTime.Kind%2A>\-Eigenschaft des UTC\-Datums und der UTC\-Uhrzeit den Wert <xref:System.DateTimeKind?displayProperty=fullName> festzulegen.  
-  
-## Beispiel  
- Im folgenden Beispiel wird der Benutzer zur Eingabe eines Datums und einer Uhrzeit aufgefordert. Wenn diese nicht eindeutig sind, kann der Benutzer die UTC\-Zeit auswählen, die der mehrdeutigen Zeit zugeordnet ist.  
-  
- [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
- [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]  
-  
- Der Kern des Beispielcodes verwendet ein Array von <xref:System.TimeSpan>\-Objekten, um mögliche Offsets der mehrdeutigen Zeit von UTC anzugeben.  Die Bedeutung dieser Offsets ist für den Benutzer wahrscheinlich jedoch nicht ersichtlich.  Um die Bedeutung der Offsets klarzustellen, gibt der Code auch an, ob ein Offset die Normalzeit der lokalen Zeitzone darstellt oder die entsprechende Sommerzeit.  Der Code ermittelt, welche Zeit die Normalzeit und welche die Sommerzeit ist, indem der Offset mit dem Wert der <xref:System.TimeZoneInfo.BaseUtcOffset%2A>\-Eigenschaft verglichen wird.  Diese Eigenschaft gibt den Unterschied zwischen UTC und der Normalzeit der Zeitzone an.  
-  
- In diesem Beispiel erfolgen alle Verweise auf die lokale Zeitzone über die <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName>\-Eigenschaft, und die lokale Zeitzone ist nie einer Objektvariablen zugewiesen.  Hierbei handelt es sich um eine empfohlene Vorgehensweise, da durch einen Aufruf der <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=fullName>\-Methode alle Objekte, denen die lokale Zeitzone zugewiesen ist, ungültig werden.  
-  
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
-  
--   Dem Projekt muss ein Verweis auf System.Core.dll hinzugefügt werden.  
-  
--   Der <xref:System>\-Namespace muss mit der `using`\-Anweisung \(in C\#\-Code erforderlich\) importiert werden.  
-  
-## Siehe auch  
- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)   
- [Gewusst wie: Auflösen von mehrdeutigen Zeiten](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Vorgehensweise: ermöglicht Benutzern, Auflösen von mehrdeutigen Zeiten
+
+Eine mehrdeutige Zeit ist eine Zeit, die mehreren koordinierten Weltzeiten (UTC) zugeordnet werden kann. Dies ist der Fall, wenn die Uhrzeit umgestellt wird, beispielsweise während des Übergangs von der Sommerzeit einer Zeitzone auf die Standardzeit. Bei der Verarbeitung einer mehrdeutigen Zeit haben Sie eine der folgenden Möglichkeiten:
+
+* Wenn die mehrdeutige Zeit ein vom Benutzer eingegebenes Datenelement ist, können Sie es dem Benutzer überlassen, die Mehrdeutigkeit aufzulösen.
+
+* Treffen Sie eine Annahme darüber, wie die Zeit UTC zuzuordnen ist. Beispielsweise können Sie davon ausgehen, dass eine mehrdeutige Zeit immer in der Standardzeit der Zeitzone ausgedrückt wird.
+
+In diesem Thema wird gezeigt, wie damit einen Benutzer eine mehrdeutige Zeit aufgelöst wird.
+
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>So lassen Sie eine mehrdeutige Zeit vom Benutzer auflösen
+
+1. Holen Sie die Datums- und Uhrzeiteingabe vom Benutzer ein.
+
+2. Rufen Sie die <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> Methode, um zu bestimmen, ob die Zeit mehrdeutig ist.
+
+3. Wenn die Zeit mehrdeutig ist, rufen Sie die <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> Methode zum Abrufen eines Arrays von <xref:System.TimeSpan> Objekte. Jedes Element im Array enthält einen UTC-zeitverschiebung, die die mehrdeutige Zeit zuordnen kann.
+
+4. Ermöglichen Sie dem Benutzer die Auswahl der gewünschten Abweichung.
+
+5. Sie erhalten das UTC-Datum und die UTC-Uhrzeit durch Subtrahieren der vom Benutzer ausgewählten Abweichung von der lokalen Zeit.
+
+6. Rufen Sie die `static` (`Shared` in Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> -Methode zum Festlegen der UTC Datums- oder Zeitwerts <xref:System.DateTime.Kind%2A> Eigenschaft <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird der Benutzer zur Eingabe eines Datums und einer Uhrzeit aufgefordert. Wenn die Angabe mehrdeutig ist, muss der Benutzer die UTC-Zeit auswählen, die der mehrdeutigen Zeit zuzuordnen ist.
+
+[!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
+[!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
+
+Der Kern des Beispielcodes verwendet ein Array von <xref:System.TimeSpan> Objekte, um mögliche Offsets der mehrdeutigen Zeit von UTC anzugeben. Allerdings sind diese Abweichungen für den Benutzer wahrscheinlich eher unverständlich. Um die Bedeutung der Abweichungen zu erläutern, bezeichnet der Code außerdem, ob eine Abweichung die Standardzeit oder die Sommerzeit der lokalen Zeitzone darstellt. Im Code wird ermittelt, welche Zeit standardmäßig vorhanden sind und welche Zeit Sommerzeit durch Vergleichen des Offsets mit dem Wert von der <xref:System.TimeZoneInfo.BaseUtcOffset%2A> Eigenschaft. Diese Eigenschaft gibt die Differenz zwischen UTC und der Standardzeit der Zeitzone an.
+
+In diesem Beispiel werden alle Verweise auf die lokale Zeitzone vorgenommen, durch die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> -Eigenschaft, die lokale Zeit, die Zone wird nie etwas zugewiesen, um eine Objektvariable. Dies ist eine empfohlene Vorgehensweise, da ein Aufruf der <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> Methode werden alle Objekte, die die lokale Zeitzone zugewiesen ist ungültig.
+
+## <a name="compiling-the-code"></a>Kompilieren des Codes
+
+Für dieses Beispiel benötigen Sie Folgendes:
+
+* Dem Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
+
+* Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+[wie: Auflösen von mehrdeutigen Zeiten](../../../docs/standard/datetime/resolve-ambiguous-times.md)

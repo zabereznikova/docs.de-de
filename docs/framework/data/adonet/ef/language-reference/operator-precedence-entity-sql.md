@@ -1,44 +1,43 @@
 ---
-title: "Operatorrangfolge (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Operatorrangfolge (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 484eedffeaffb625cd43352dadedb8c99fbc65ed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Operatorrangfolge (Entity SQL)
-Wenn in einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]\-Abfrage mehrere Operatoren vorkommen, bestimmt die Operatorrangfolge die Reihenfolge, in der die einzelnen Operationen durchgeführt werden.  Die Ausführungsreihenfolge kann sich entscheidend auf das Abfrageergebnis auswirken.  
+# <a name="operator-precedence-entity-sql"></a>Operatorrangfolge (Entity SQL)
+Wenn ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage besitzt mehrere Operatoren, bestimmt die Operatorrangfolge die Reihenfolge, in der die Vorgänge ausgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Abfrageergebnis auswirken.  
   
- Operatoren besitzen die in der folgenden Tabelle dargestellte Rangfolge.  Ein Operator, der höher in der Rangfolge steht, wird vor einem Operator niedrigeren Ranges ausgewertet.  
+ Operatoren besitzen die in der folgenden Tabelle dargestellte Rangfolge. Ein Operator, der höher in der Rangfolge steht, wird vor einem Operator niedrigeren Ranges ausgewertet.  
   
 |Ebene|Operationstyp|Operator|  
-|-----------|-------------------|--------------|  
-|1|Primär|`. , [] ()`|  
-|2|Unär|`! not`|  
-|3|Multiplikativ|`* / %`|  
-|4|Additiv|`+ -`|  
-|5|Sortieren|`< > <= >=`|  
-|6|Gleichheit|`= != <>`|  
-|7|Bedingtes AND|`and &&`|  
-|8|Bedingtes OR|`or &#124;&#124;`|  
+|-----------|--------------------|--------------|  
+|1|Primär|`. , [] ()`|  
+|2|Unär|`! not`|  
+|3|Multiplikativ|`* / %`|  
+|4|Additiv|`+ -`|  
+|5|Sortieren|`< > <= >=`|  
+|6|Gleichheit|`= != <>`|  
+|7|Bedingtes AND|`and &&`|  
+|8|Bedingtes OR|`or &#124;&#124;`|  
   
- Verfügen zwei Operatoren in einem Ausdruck über die gleiche Rangstufe, werden sie von links nach rechts, ausgehend von ihrer Position innerhalb der Abfrage, ausgewertet.   `x+y-z`  wird beispielsweise als  `(x+y)-z` ausgewertet.  
+ Verfügen zwei Operatoren in einem Ausdruck über die gleiche Rangstufe, werden sie von links nach rechts, ausgehend von ihrer Position innerhalb der Abfrage, ausgewertet. `x+y-z` wird beispielsweise als `(x+y)-z` ausgewertet.  
   
- Mit Klammern kann die definierte Rangfolge von Operatoren in einer Abfrage außer Kraft gesetzt werden.  Die Operatoren innerhalb der Klammern werden zuerst ausgewertet, bevor das sich ergebende einzelne Ergebnis von den Operatoren außerhalb der Klammern verwendet werden kann.  Zum Beispiel wird bei `x+y*z`  `y` mit `z` multipliziert und dann `x` addiert, bei `(x+y)*z` wird jedoch `x` zu `y` addiert und dann das Ergebnis mit `z` multipliziert.  
+ Mit Klammern kann die definierte Rangfolge von Operatoren in einer Abfrage außer Kraft gesetzt werden. Die Operatoren innerhalb der Klammern werden zuerst ausgewertet, bevor das sich ergebende einzelne Ergebnis von den Operatoren außerhalb der Klammern verwendet werden kann. Beispielsweise `x+y*z` multipliziert `y` von `z` und fügt dann `x`, aber `(x+y)*z` fügt `x` auf `y` und multipliziert dann das Ergebnis von `z`.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

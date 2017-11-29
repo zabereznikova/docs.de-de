@@ -1,37 +1,40 @@
 ---
-title: "Benutzerdefinierte WSDL-Ver&#246;ffentlichung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Benutzerdefinierte WSDL-Veröffentlichung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e390bf728cde703a967fcea954583f6e5f84002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Benutzerdefinierte WSDL-Ver&#246;ffentlichung
+# <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
   
--   Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>\-Attribut zum Exportieren von Attributeigenschaften als WSDL\-Anmerkungen implementieren.  
+-   Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=fullName> zum Importieren der benutzerdefinierten WSDL\-Anmerkungen implementieren.  
+-   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zum Importieren der benutzerdefinierten WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=fullName> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=fullName> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
+-   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> die WSDL herunterladen, mit einem <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> die WSDL mithilfe des benutzerdefinierten WSDL\-Importer importieren, und mit dem <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=fullName>[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Clientcode mit den WSDL\-Anmerkungen in Form von \/\/\/\- und '''\-Anmerkungen in C\# und Visual Basic generieren.  
+-   Mit dem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> die WSDL herunterladen, mit einem <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> die WSDL mithilfe des benutzerdefinierten WSDL-Importer importieren, und mit dem <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Clientcode mit den WSDL-Anmerkungen in Form von ///- und '''-Anmerkungen in C# und Visual Basic generieren.  
   
 > [!NOTE]
->  Die Setupprozedur und Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
-## Dienst  
- Der Dienst in diesem Beispiel ist mit zwei benutzerdefinierten Attributen versehen.Das erste Attribut \(`WsdlDocumentationAttribute`\) nimmt eine Zeichenfolge im Konstruktor entgegen und kann angewendet werden, um eine Vertragsschnittstelle oder einen \-vorgang mit einer Zeichenfolge zur Verfügung zu stellen, die dessen Verwendung beschreibt.Das zweite Attribut \(`WsdlParamOrReturnDocumentationAttribute`\) kann zum Zurückgeben von Werten oder Parametern verwendet werden, um diese Werte im Vorgang zu beschreiben.Das folgende Beispiel zeigt einen Dienstvertrag \(`ICalculator`\), der mit diesen Attributen beschrieben wird.  
+## <a name="service"></a>Dienst  
+ Der Dienst in diesem Beispiel ist mit zwei benutzerdefinierten Attributen versehen. Das erste Attribut (`WsdlDocumentationAttribute`) nimmt eine Zeichenfolge im Konstruktor entgegen und kann angewendet werden, um eine Vertragsschnittstelle oder einen -vorgang mit einer Zeichenfolge zur Verfügung zu stellen, die dessen Verwendung beschreibt. Das zweite Attribut (`WsdlParamOrReturnDocumentationAttribute`) kann zum Zurückgeben von Werten oder Parametern verwendet werden, um diese Werte im Vorgang zu beschreiben. Das folgende Beispiel zeigt einen Dienstvertrag (`ICalculator`), der mit diesen Attributen beschrieben wird.  
   
 ```  
 // Define a service contract.      
@@ -72,12 +75,11 @@ public interface ICalculator
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
-  
 ```  
   
- Das `WsdlDocumentationAttribute` implementiert <xref:System.ServiceModel.Description.IContractBehavior> und <xref:System.ServiceModel.Description.IOperationBehavior>, daher werden die Attributinstanzen beim Öffnen des Diensts zur entsprechenden <xref:System.ServiceModel.Description.ContractDescription> oder <xref:System.ServiceModel.Description.OperationDescription> hinzugefügt.Außerdem implementiert das Attribut <xref:System.ServiceModel.Description.IWsdlExportExtension>.Beim Aufruf von <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> werden <xref:System.ServiceModel.Description.WsdlExporter> \(das zum Exportieren der Metadaten verwendet wird\) und <xref:System.ServiceModel.Description.WsdlContractConversionContext> \(das die Dienstbeschreibungsobjekte enthält\) als Parameter übergeben, was ermöglicht, die exportierten Metadaten zu ändern.  
+ Das `WsdlDocumentationAttribute` implementiert <xref:System.ServiceModel.Description.IContractBehavior> und <xref:System.ServiceModel.Description.IOperationBehavior>, daher werden die Attributinstanzen beim Öffnen des Diensts zur entsprechenden <xref:System.ServiceModel.Description.ContractDescription> oder <xref:System.ServiceModel.Description.OperationDescription> hinzugefügt. Außerdem implementiert das Attribut <xref:System.ServiceModel.Description.IWsdlExportExtension>. Beim Aufruf von <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> werden <xref:System.ServiceModel.Description.WsdlExporter> (das zum Exportieren der Metadaten verwendet wird) und <xref:System.ServiceModel.Description.WsdlContractConversionContext> (das die Dienstbeschreibungsobjekte enthält) als Parameter übergeben, was ermöglicht, die exportierten Metadaten zu ändern.  
   
- In diesem Beispiel wird je nachdem, ob das Exportkontextobjekt über ein <xref:System.ServiceModel.Description.ContractDescription> oder ein <xref:System.ServiceModel.Description.OperationDescription> verfügt, mithilfe der Texteigenschaft eine Anmerkung aus dem Attribut extrahiert und dem WSDL\-Anmerkungselement hinzugefügt \(wie im folgenden Code gezeigt\).  
+ In diesem Beispiel wird je nachdem, ob das Exportkontextobjekt über ein <xref:System.ServiceModel.Description.ContractDescription> oder ein <xref:System.ServiceModel.Description.OperationDescription> verfügt, mithilfe der Texteigenschaft eine Anmerkung aus dem Attribut extrahiert und dem WSDL-Anmerkungselement hinzugefügt (wie im folgenden Code gezeigt).  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -113,7 +115,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
             operation.DocumentationElement.AppendChild(newSummaryElement);  
 ```  
   
- Beim Exportieren eines Vorgangs ruft das Beispiel `WsdlParamOrReturnDocumentationAttribute`\-Werte für Parameter und Rückgabewerte mittels Reflektion ab und fügt sie den WSDL\-Anmerkungselementen hinzu \(wie nachfolgend gezeigt\).  
+ Beim Exportieren eines Vorgangs ruft das Beispiel `WsdlParamOrReturnDocumentationAttribute`-Werte für Parameter und Rückgabewerte mittels Reflektion ab und fügt sie den WSDL-Anmerkungselementen hinzu (wie nachfolgend gezeigt).  
   
 ```  
 // Get returns information  
@@ -143,12 +145,11 @@ for (int i = 0; i < args.Length; i++)
         operation.DocumentationElement.AppendChild(newParamElement);  
     }  
 }  
-  
 ```  
   
  Dann veröffentlicht das Beispiel die Metadaten auf die übliche Weise mit der folgenden Konfigurationsdatei.  
   
-```  
+```xml  
 <services>  
   <service   
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -173,16 +174,15 @@ for (int i = 0; i < args.Length; i++)
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Svcutil\-Client  
- In diesem Beispiel wird Svcutil.exe nicht verwendet.Der Vertrag wird in der Datei generatedClient.cs angegeben, so dass nach der Demonstration von benutzerdefiniertem WSDL\-Import und Codegenerierung der Dienst aufgerufen werden kann.Wenn Sie den folgenden benutzerdefinierten WSDL\-Importer für dieses Beispiel verwenden möchten, können Sie Svcutil.exe ausführen und mit der Option `/svcutilConfig` den Pfad zu der in diesem Beispiel verwendeten Clientkonfigurationsdatei angeben, die auf die Bibliothek `WsdlDocumentation.dll` verweist.Zum Laden des `WsdlDocumentationImporter` muss Svuctil.exe jedoch die Bibliothek `WsdlDocumentation.dll` finden und laden können, was bedeutet, dass sie entweder im globalen Assemblycache oder im Pfad registriert ist oder sich im selben Verzeichnis wie Svcutil.exe befindet.Bei einem so grundlegenden Beispiel wie diesem ist es am einfachsten, wenn man Svcutil.exe und die Clientkonfigurationsdatei in dasselbe Verzeichnis wie `WsdlDocumentation.dll` kopiert und es von dort aus ausführt.  
+## <a name="svcutil-client"></a>Svcutil-Client  
+ In diesem Beispiel wird Svcutil.exe nicht verwendet. Der Vertrag wird in der Datei generatedClient.cs angegeben, so dass nach der Demonstration von benutzerdefiniertem WSDL-Import und Codegenerierung der Dienst aufgerufen werden kann. Wenn Sie den folgenden benutzerdefinierten WSDL-Importer für dieses Beispiel verwenden möchten, können Sie Svcutil.exe ausführen und mit der Option `/svcutilConfig` den Pfad zu der in diesem Beispiel verwendeten Clientkonfigurationsdatei angeben, die auf die Bibliothek `WsdlDocumentation.dll` verweist. Zum Laden des `WsdlDocumentationImporter` muss Svuctil.exe jedoch die Bibliothek `WsdlDocumentation.dll` finden und laden können, was bedeutet, dass sie entweder im globalen Assemblycache oder im Pfad registriert ist oder sich im selben Verzeichnis wie Svcutil.exe befindet. Bei einem so grundlegenden Beispiel wie diesem ist es am einfachsten, wenn man Svcutil.exe und die Clientkonfigurationsdatei in dasselbe Verzeichnis wie `WsdlDocumentation.dll` kopiert und es von dort aus ausführt.  
   
-## Der benutzerdefinierte WSDL\-Importer  
- Das benutzerdefinierte <xref:System.ServiceModel.Description.IWsdlImportExtension>\-Objekt `WsdlDocumentationImporter` implementiert auch, dass <xref:System.ServiceModel.Description.IContractBehavior> und <xref:System.ServiceModel.Description.IOperationBehavior> den importierten Dienstendpunkten hinzugefügt und <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> zum Ändern der Codegenerierung aufgerufen werden, wenn der Vertrags\- oder Vorgangscode erstellt wird.  
+## <a name="the-custom-wsdl-importer"></a>Der benutzerdefinierte WSDL-Importer  
+ Das benutzerdefinierte <xref:System.ServiceModel.Description.IWsdlImportExtension>-Objekt `WsdlDocumentationImporter` implementiert auch, dass <xref:System.ServiceModel.Description.IContractBehavior> und <xref:System.ServiceModel.Description.IOperationBehavior> den importierten Dienstendpunkten hinzugefügt und <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> zum Ändern der Codegenerierung aufgerufen werden, wenn der Vertrags- oder Vorgangscode erstellt wird.  
   
- Zuerst bestimmt das Beispiel in der <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>\-Methode, ob sich die WSDL\-Anmerkung auf der Vertrags\- oder der Vorgangsebene befindet und fügt sich selbst dem entsprechenden Bereich als Verhalten hinzu, wobei der importierte Anmerkungstext an ihren Konstruktor übergeben wird.  
+ Zuerst bestimmt das Beispiel in der <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>-Methode, ob sich die WSDL-Anmerkung auf der Vertrags- oder der Vorgangsebene befindet und fügt sich selbst dem entsprechenden Bereich als Verhalten hinzu, wobei der importierte Anmerkungstext an ihren Konstruktor übergeben wird.  
   
 ```  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -207,10 +207,9 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
         }  
     }  
 }  
-  
 ```  
   
- Wenn der Code dann generiert ist, ruft das System die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>\-Methode und die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>\-Methode auf, wobei die entsprechenden Kontextinformationen übergeben werden.Die benutzerdefinierten WSDL\-Anmerkungen werden formatiert und als Kommentare in das CodeDOM eingefügt.  
+ Wenn der Code dann generiert ist, ruft das System die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>-Methode und die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>-Methode auf, wobei die entsprechenden Kontextinformationen übergeben werden. Die benutzerdefinierten WSDL-Anmerkungen werden formatiert und als Kommentare in das CodeDOM eingefügt.  
   
 ```  
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -224,13 +223,12 @@ public void GenerateOperation(OperationContractGenerationContext context)
     context.SyncMethod.Comments.AddRange(FormatComments(text));  
     Debug.WriteLine("In generate operation.");  
 }  
-  
 ```  
   
-## Die Clientanwendung  
- Die Clientanwendung lädt den benutzerdefinierten WSDL\-Importer, indem sie ihn in der Anwendungskonfigurationsdatei angibt.  
+## <a name="the-client-application"></a>Die Clientanwendung  
+ Die Clientanwendung lädt den benutzerdefinierten WSDL-Importer, indem sie ihn in der Anwendungskonfigurationsdatei angibt.  
   
-```  
+```xml  
 <client>  
   <endpoint address="http://localhost/servicemodelsamples/service.svc"   
   binding="wsHttpBinding"   
@@ -241,10 +239,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
     </wsdlImporters>  
   </metadata>  
 </client>  
-  
 ```  
   
- Sobald der benutzerdefinierte Importer angegeben ist, lädt das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Metadatensystem den benutzerdefinierten Importer in einen zu diesem Zweck erstellten <xref:System.ServiceModel.Description.WsdlImporter>.In diesem Beispiel werden die Metadaten mithilfe des <xref:System.ServiceModel.Description.MetadataExchangeClient> heruntergeladen, der <xref:System.ServiceModel.Description.WsdlImporter> wird entsprechend konfiguriert, um die Metadaten mit dem in dem Beispiel erstellten benutzerdefinierten Importer zu importieren, und die geänderten Vertragsinformationen werden mithilfe des <xref:System.ServiceModel.Description.ServiceContractGenerator> in Visual Basic\- und C\#\-Clientcode kompiliert, der in Visual Studio verwendet werden kann, um IntelliSense zu unterstützen, oder der in XML\-Dokumentation kompiliert werden kann.  
+ Sobald der benutzerdefinierte Importer angegeben ist, lädt das [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Metadatensystem den benutzerdefinierten Importer in einen zu diesem Zweck erstellten <xref:System.ServiceModel.Description.WsdlImporter>. In diesem Beispiel werden die Metadaten mithilfe des <xref:System.ServiceModel.Description.MetadataExchangeClient> heruntergeladen, der <xref:System.ServiceModel.Description.WsdlImporter> wird entsprechend konfiguriert, um die Metadaten mit dem in dem Beispiel erstellten benutzerdefinierten Importer zu importieren, und die geänderten Vertragsinformationen werden mithilfe des <xref:System.ServiceModel.Description.ServiceContractGenerator> in Visual Basic- und C#-Clientcode kompiliert, der in Visual Studio verwendet werden kann, um IntelliSense zu unterstützen, oder der in XML-Dokumentation kompiliert werden kann.  
   
 ```  
 /// From WSDL Documentation:  
@@ -300,21 +297,21 @@ public interface ICalculator
 }  
 ```  
   
-#### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, befolgen Sie die Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

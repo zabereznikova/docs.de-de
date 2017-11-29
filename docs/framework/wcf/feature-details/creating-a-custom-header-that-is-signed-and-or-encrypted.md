@@ -1,26 +1,29 @@
 ---
-title: "Erstellen eines signierten und/oder verschl&#252;sselten benutzerdefinierten Headers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Erstellen einen benutzerdefinierten Header, signiert und- oder verschlüsselte"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ac43be1978a2a6e80b08e0c4bcd5e0e92043719e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erstellen eines signierten und/oder verschl&#252;sselten benutzerdefinierten Headers
-Beim Aufrufen eines Nicht\-WCF\-Dienstes mit einem WCF\-Client müssen in einigen Fällen benutzerdefinierte SOAP\-Header verwendet werden.  In WCF ist ein Kanonisierungsfehler vorhanden, der verhindert, dass signierte und verschlüsselte benutzerdefinierte Header mit einem Nicht\-WCF\-Dienst verwendet werden können.  Dieses Problem wird durch die inkorrekte Kanonisierung von XML\-Standardnamespaces verursacht.  Es ist jedoch nur problematisch, wenn Nicht\-WCF\-Dienste mit benutzerdefinierten Headern aufgerufen werden, die signiert und\/oder verschlüsselt sind.  Wenn der Dienst die Nachricht mit dem signierten und\/oder verschlüsselten benutzerdefinierten Header empfängt, kann er die Signatur nicht verifizieren.  Mit der folgenden Problemumgehung wird der Kanonisierungsfehler vermieden, und die Interoperabilität mit Nicht\-WCF\-Diensten wird ermöglicht. Die Interoperabilität mit WCF\-Diensten wird dabei jedoch nicht beeinträchtigt.  
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Erstellen einen benutzerdefinierten Header, signiert und- oder verschlüsselte
+Beim Aufrufen eines Nicht-WCF-Dienstes mit einem WCF-Client müssen in einigen Fällen benutzerdefinierte SOAP-Header verwendet werden. In WCF ist ein Kanonisierungsfehler vorhanden, der verhindert, dass signierte und verschlüsselte benutzerdefinierte Header mit einem Nicht-WCF-Dienst verwendet werden können. Dieses Problem wird durch die inkorrekte Kanonisierung von XML-Standardnamespaces verursacht. Es ist jedoch nur problematisch, wenn Nicht-WCF-Dienste mit benutzerdefinierten Headern aufgerufen werden, die signiert und/oder verschlüsselt sind.  Wenn der Dienst die Nachricht mit dem signierten und/oder verschlüsselten benutzerdefinierten Header empfängt, kann er die Signatur nicht verifizieren. Mit der folgenden Problemumgehung wird der Kanonisierungsfehler vermieden, und die Interoperabilität mit Nicht-WCF-Diensten wird ermöglicht. Die Interoperabilität mit WCF-Diensten wird dabei jedoch nicht beeinträchtigt.  
   
-## Definieren des benutzerdefinierten Headers  
- Benutzerdefinierte Header werden definiert, indem ein Nachrichtenvertrag festgelegt wird und die als Header zu sendenden Member mit einem <xref:System.ServiceModel.MessageHeaderAttribute>\-Attribut markiert werden.  Zur Umgehung des Kanonisierungsfehlers müssen Sie sicherstellen, dass das XML\-Serialisierungsprogramm den Namespace für den benutzerdefinierten Header mit einem Präfix deklariert und nicht die Standardnamespacedeklaration verwendet.  Im folgenden Code wird veranschaulicht, wie der Datentyp für den Nachrichtenheader mit einer korrekten Namespacedeklaration definiert wird.  
+## <a name="defining-the-custom-header"></a>Definieren des benutzerdefinierten Headers  
+ Benutzerdefinierte Header werden definiert, indem ein Nachrichtenvertrag festgelegt wird und die als Header zu sendenden Member mit einem <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut markiert werden. Zur Umgehung des Kanonisierungsfehlers müssen Sie sicherstellen, dass das XML-Serialisierungsprogramm den Namespace für den benutzerdefinierten Header mit einem Präfix deklariert und nicht die Standardnamespacedeklaration verwendet. Im folgenden Code wird veranschaulicht, wie der Datentyp für den Nachrichtenheader mit einer korrekten Namespacedeklaration definiert wird.  
   
 ```  
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
@@ -50,7 +53,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- In diesem Code wird der neue Typ `msgHeaderElement` deklariert, der mit dem XML\-Serialisierungsprogramm serialisiert wird.  Beim Serialisieren einer Instanz dieses Typs wird ein Namespace mit dem Präfix 'h' definiert, wodurch der Kanonisierungsfehler umgangen wird.  Im Nachrichtenvertrag wird dann eine Instanz von `msgHeaderElement` definiert, die mit dem <xref:System.ServiceModel.MessageHeaderAttribute>\-Attribut markiert wird, wie im folgenden Beispiel veranschaulicht.  
+ In diesem Code wird der neue Typ `msgHeaderElement` deklariert, der mit dem XML-Serialisierungsprogramm serialisiert wird. Beim Serialisieren einer Instanz dieses Typs wird ein Namespace mit dem Präfix 'h' definiert, wodurch der Kanonisierungsfehler umgangen wird.  Im Nachrichtenvertrag wird dann eine Instanz von `msgHeaderElement` definiert, die mit dem <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut markiert wird, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 [MessageContract]  
@@ -61,10 +64,9 @@ public  class MyMessageContract
    public msgHeaderElement;  
    // other message contents...  
 }  
-  
 ```  
   
-## Siehe auch  
- [Standardnachrichtenvertrag](../../../../docs/framework/wcf/samples/default-message-contract.md)   
- [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Standardnachrichtenvertrag](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)  
  [Verwendung von Nachrichtenverträgen](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

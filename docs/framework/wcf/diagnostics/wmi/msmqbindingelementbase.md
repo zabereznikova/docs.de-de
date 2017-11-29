@@ -1,25 +1,28 @@
 ---
-title: "MsmqBindingElementBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MsmqBindingElementBase
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 009596ee8fd7218a07487183d932e91dad07797c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# MsmqBindingElementBase
+# <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class MsmqBindingElementBase : TransportBindingElement  
@@ -38,95 +41,95 @@ class MsmqBindingElementBase : TransportBindingElement
 };  
 ```  
   
-## Methoden  
+## <a name="methods"></a>Methoden  
  Die Klasse MsmqBindingElementBase definiert keine Methoden.  
   
-## Eigenschaften  
+## <a name="properties"></a>Eigenschaften  
  Die Klasse MsmqBindingElementBase verfügt über die folgenden Eigenschaften:  
   
-### CustomDeadLetterQueue  
- Datentyp: Zeichenfolge  
+### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein URI, der den Speicherort der Warteschlange für unzustellbare Nachrichten für jede Anwendung enthält, in der Nachrichten platziert werden, die abgelaufen sind oder für die die Übertragung oder Zustellung fehlgeschlagen ist.  
   
-### DeadLetterQueue  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="deadletterqueue"></a>DeadLetterQueue  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Enumerationswert, der den Typ der zu verwendenden Warteschlange für unzustellbare Meldungen angibt.  
   
-### Durable  
- Datentyp: Boolescher Wert  
+### <a name="durable"></a>Durable  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten permanent oder flüchtig sind.  
   
-### ExactlyOnce  
+### <a name="exactlyonce"></a>ExactlyOnce  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten genau einmal empfangen werden.  
   
-### MaxRetryCycles  
+### <a name="maxretrycycles"></a>MaxRetryCycles  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Anzahl der Neuversuche für die Zustellung von Nachrichten an die empfangende Anwendung.  
   
-### ReceiveErrorHandling  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Einstellungen für die Warteschlange für potenziell schädliche Nachrichten.  
   
-### ReceiveRetryCount  
+### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Anzahl von unmittelbaren Wiederholungsversuchen auf einer Nachricht, die aus der Anwendungswarteschlange gelesen wird.  
   
-### RetryCycleDelay  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="retrycycledelay"></a>RetryCycleDelay  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der die Zeitverzögerung zwischen den Wiederholungszyklen beim Versuch, eine Nachricht zuzustellen, die nicht sofort zugestellt werden konnte, angibt.  
   
-### TimeToLive  
- Datentyp: Zeitpunkt \(Datum und Uhrzeit\)  
+### <a name="timetolive"></a>TimeToLive  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Das Zeitintervall, das angibt, wie lange die von dieser Bindung verarbeiteten Nachrichten in der Warteschlange bleiben können, bevor sie ablaufen.  
   
-### UseMsmqTracing  
+### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein boolescher Wert, der angibt, ob von dieser Bindung verarbeitete Nachrichten nachverfolgt werden sollen.  
   
-### UseSourceJournal  
+### <a name="usesourcejournal"></a>UseSourceJournal  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein boolescher Wert, der angibt, ob von dieser Bindung verarbeitete Nachrichtenkopien in der Quelljournalwarteschlange gespeichert werden sollen.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
- <xref:System.ServiceModel.NetMsmqBinding>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.MsmqBindingBase>

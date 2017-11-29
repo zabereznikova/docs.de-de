@@ -1,47 +1,49 @@
 ---
-title: "Klassenbibliothek (WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassenbibliothek"
-  - "Windows Presentation Foundation-Klassenbibliothek"
-  - "WPF-Klassenbibliothek"
+title: Klassenbibliothek (WPF)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF class library [WPF]
+- Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85e5eb11f1eee12a15d19b0e0ecd93dd8042c15f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Klassenbibliothek (WPF)
-Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]\-[!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)] enthalten.  
+# <a name="class-library-wpf"></a>Klassenbibliothek (WPF)
+Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
   
 -   <xref:Microsoft.Build.Tasks.Windows>  
   
--   <xref:Microsoft.Win32> \(freigegeben\)  
+-   <xref:Microsoft.Win32>(freigegebene)  
   
 -   <xref:Microsoft.Windows.Themes>  
   
--   <xref:System.Collections.ObjectModel> \(freigegeben\)  
+-   <xref:System.Collections.ObjectModel>(freigegebene)  
   
--   <xref:System.Collections.Specialized> \(freigegeben\)  
+-   <xref:System.Collections.Specialized>(freigegebene)  
   
--   <xref:System.ComponentModel> \(freigegeben\)  
+-   <xref:System.ComponentModel>(freigegebene)  
   
--   <xref:System.Diagnostics> \(freigegeben\)  
+-   <xref:System.Diagnostics>(freigegebene)  
   
--   <xref:System.IO> \(freigegeben\)  
+-   <xref:System.IO>(freigegebene)  
   
 -   <xref:System.IO.Packaging>  
   
@@ -51,7 +53,7 @@ Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](.
   
 -   <xref:System.Printing.Interop>  
   
--   <xref:System.Security.Permissions> \(freigegeben\)  
+-   <xref:System.Security.Permissions>(freigegebene)  
   
 -   <xref:System.Security.RightsManagement>  
   
@@ -93,7 +95,7 @@ Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](.
   
 -   <xref:System.Windows.Interop>  
   
--   <xref:System.Windows.Markup> \(freigegeben\)  
+-   <xref:System.Windows.Markup>(freigegebene)  
   
 -   <xref:System.Windows.Markup.Localizer>  
   
@@ -131,10 +133,10 @@ Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](.
   
 -   <xref:UIAutomationClientsideProviders>  
   
-## XAML\-Unterstützung in .NET 4  
- Die folgenden Namespaces enthalten Typen aus der System.Xaml\-Assembly.  System.Xaml bietet eine allgemeine XAML\-Sprachunterstützung für Frameworks wie WPF, die auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] basieren.  
+## <a name="xaml-support-in-net-4"></a>Verwendung von XAML-Unterstützung in .NET 4  
+ Die folgenden Namespaces enthalten Typen aus der System.Xaml-Assembly. "System.xaml" bietet allgemeine XAML-sprachunterstützung für Frameworks, z. B. WPF, die erstellt werden, auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
   
--   <xref:System.Windows.Markup> \(freigegeben\)  
+-   <xref:System.Windows.Markup>(freigegebene)  
   
 -   <xref:System.Xaml>  
   

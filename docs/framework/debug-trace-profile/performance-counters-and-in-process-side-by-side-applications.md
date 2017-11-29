@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Leistungsindikatoren und prozessinterne parallele Anwendungen
 Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro Laufzeit unterschieden werden. Dieses Thema beschreibt die erforderlichen Registrierungsänderungen zur Aktivierung dieser Funktion.  
@@ -59,7 +55,8 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
   
  Im folgenden Beispiel wird veranschaulicht, wie ein `ProcessNameFormat`-Wert programmgesteuert verändert werden kann.  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  Wenn Sie diese Registrierungsänderung vornehmen, zeigt Perfmon.exe die Namen der Anwendungen an, die auf die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* abzielen, wobei *Anwendung* der Name der Anwendung, *ProcessID* der Prozess-ID für die Anwendung, und  *RuntimeID* ein Common Language Runtime-Bezeichner ist. Wenn beispielsweise eine Anwendung namens myapp.exe zwei Instanzen der Common Language Runtime lädt, wird Perfmon.exe möglicherweise eine Instanz als myapp_p1416_r10 und eine zweite als myapp_p3160_r10 identifizieren. Der Laufzeitbezeichner unterscheidet nur zwischen den Laufzeiten innerhalb eines Prozesses; er stellt keine andere Informationen über die Common Language Runtime bereit. (Die Common Language Runtime-ID hat beispielsweise keine Beziehung mit der Version oder der SKU der Laufzeit.)  
   
@@ -69,4 +66,3 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
 >  Die Prozess-ID beseitigt die Mehrdeutigkeit der Auflösung von zwei Anwendungen mit dem gleichen Namen, die frühere Versionen der Laufzeit verwenden. Ein Laufzeitbezeichner ist nicht für frühere Versionen erforderlich, da frühere Versionen der Common Language Runtime keine parallelen Szenarios unterstützen.  
   
  Wenn die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nicht vorhanden ist oder deinstalliert wurde, hat die Einstellung des Registrierungsschlüssels keine Auswirkungen. Dies bedeutet, dass zwei Anwendungen mit dem gleichen Namen in Perfmon.exe weiterhin als *Anwendung* und *Anwendung#1* angezeigt werden (z.B. **MyApp** und **MyApp#1**).
-

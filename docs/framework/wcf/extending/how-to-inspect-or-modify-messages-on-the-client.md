@@ -1,33 +1,36 @@
 ---
-title: "Vorgehensweise: &#220;berpr&#252;fen oder &#196;ndern von Nachrichten auf dem Client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 164e19891e576b6d310839a1221ad8ed0d315444
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: &#220;berpr&#252;fen oder &#196;ndern von Nachrichten auf dem Client
-Sie können die eingehenden oder ausgehenden Nachrichten für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Client überprüfen oder ändern, indem Sie einen <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> implementieren und in die Clientlaufzeit einfügen.  Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md).  Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>.  Ein vollständiges Codebeispiel finden Sie im Beispiel für [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
+Sie können die eingehenden oder ausgehenden Nachrichten für einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client überprüfen oder ändern, indem Sie einen <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> implementieren und in die Clientlaufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein vollständiges Codebeispiel finden Sie unter der [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md) Beispiel.  
   
-### So überprüfen oder ändern Sie Nachrichten  
+### <a name="to-inspect-or-modify-messages"></a>So überprüfen oder ändern Sie Nachrichten  
   
-1.  Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>\-Schnittstelle.  
+1.  Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>-Schnittstelle.  
   
-2.  Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten.  Mit <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> können Sie das Verhalten auf Endpunktebene ändern.  Mit <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> können Sie das Verhalten auf Vertragsebene ändern.  
+2.  Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>können Sie das Verhalten auf Endpunktebene ändern. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>können Sie das Verhalten auf Vertragsebene ändern.  
   
-3.  Fügen Sie das Verhalten ein, bevor Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=fullName>\-Methode oder die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName>\-Methode für die <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName> aufrufen.  Ausführliche Informationen finden Sie unter [Konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3.  Fügen Sie das Verhalten ein, bevor Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für die <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> aufrufen. Weitere Informationen finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Die unten aufgeführten Codebeispiele zeigen der Reihe nach Folgendes:  
   
 -   Eine Clientinspektorimplementierung.  
@@ -57,7 +60,6 @@ public class SimpleMessageInspector : IClientMessageInspector
         return null;  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -102,10 +104,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
         return new SimpleEndpointBehavior();  
     }  
 }  
-  
 ```  
   
-```vb  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <system.serviceModel>  
@@ -132,10 +133,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
       </extensions>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
  [Konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

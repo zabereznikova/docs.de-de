@@ -1,40 +1,43 @@
 ---
-title: "Gewusst wie: Anwenden eines F&#252;hrungsliniensatzes auf eine Zeichnung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grafiken [WPF], GuidelineSet-Eigenschaft"
-  - "GuidelineSet-Eigenschaft, Anwenden auf Zeichnungen"
+title: "Gewusst wie: Anwenden eines Führungsliniensatzes auf eine Zeichnung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GuidelineSet property [WPF], applying to drawings
+- graphics [WPF], GuidelineSet property
 ms.assetid: 45f3e0b4-8820-45a7-b865-b8ea5b17b0c8
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd8d93d128c03cb9ee482860603e5734e96c6fc2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anwenden eines F&#252;hrungsliniensatzes auf eine Zeichnung
-In diesem Beispiel wird das Anwenden eines <xref:System.Windows.Media.GuidelineSet> auf eine <xref:System.Windows.Media.DrawingGroup> erläutert.  
+# <a name="how-to-apply-a-guidelineset-to-a-drawing"></a>Gewusst wie: Anwenden eines Führungsliniensatzes auf eine Zeichnung
+In diesem Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.GuidelineSet> auf eine <xref:System.Windows.Media.DrawingGroup>.  
   
- Die <xref:System.Windows.Media.DrawingGroup>\-Klasse ist der einzige Typ von <xref:System.Windows.Media.Drawing>, der über eine <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>\-Eigenschaft verfügt.  Wenn Sie einen <xref:System.Windows.Media.GuidelineSet> auf einen anderen Typ von <xref:System.Windows.Media.Drawing> anwenden möchten, fügen Sie ihn einer <xref:System.Windows.Media.DrawingGroup> hinzu und wenden den <xref:System.Windows.Media.GuidelineSet> auf die <xref:System.Windows.Media.DrawingGroup> an.  
+ Die <xref:System.Windows.Media.DrawingGroup> Klasse ist der einzige Typ von <xref:System.Windows.Media.Drawing> , besitzt eine <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> Eigenschaft. Anwenden einer <xref:System.Windows.Media.GuidelineSet> in einen anderen Typ von <xref:System.Windows.Media.Drawing>, fügen Sie diese eine <xref:System.Windows.Media.DrawingGroup> und wenden Sie dann die <xref:System.Windows.Media.GuidelineSet> zu Ihrer <xref:System.Windows.Media.DrawingGroup>.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei nahezu identische <xref:System.Windows.Media.DrawingGroup>\-Objekte erstellt. Der einzige Unterschied besteht darin, dass im Gegensatz zum ersten Objekt das zweite Objekt <xref:System.Windows.Media.DrawingGroup> über einen <xref:System.Windows.Media.GuidelineSet> verfügt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt zwei <xref:System.Windows.Media.DrawingGroup> Objekte, die sind nahezu identisch sind; der einzige Unterschied ist: das zweite <xref:System.Windows.Media.DrawingGroup> verfügt über eine <xref:System.Windows.Media.GuidelineSet> und das erste nicht.  
   
- Die folgende Abbildung zeigt die Ausgabe des Codebeispiels.  Da die Unterschiede im Renderverhalten beider <xref:System.Windows.Media.DrawingGroup>\-Objekte so gering sind, werden Teile der Zeichnung vergrößert dargestellt.  
+ Die folgende Abbildung zeigt die Ausgabe des Beispiels. Da das Rendering zu den Unterschieden zwischen den beiden <xref:System.Windows.Media.DrawingGroup> Objekte ist schwer erkennbare, Teile der Zeichnung vergrößert werden.  
   
- ![Eine DrawingGroup mit und ohne ein GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm\_drawinggroup\_guidelineset")  
+ ![Eine DrawingGroup mit und ohne ein GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "Graphicsmm_drawinggroup_guidelineset")  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupGuidelineSetExample.cs#graphicsmmdrawinggroupguidelinesetexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupGuidelineSetExample.xaml#graphicsmmdrawinggroupguidelinesetexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupGuidelineSetExample.xaml#graphicsmmdrawinggroupguidelinesetexamplewholepage)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.DrawingGroup>   
- <xref:System.Windows.Media.GuidelineSet>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Media.DrawingGroup>  
+ <xref:System.Windows.Media.GuidelineSet>  
  [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

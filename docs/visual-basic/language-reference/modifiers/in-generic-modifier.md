@@ -1,58 +1,55 @@
 ---
-title: "In (Generic Modifier) (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.VarianceIn"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "contravariance, In keyword [Visual Basic]"
-  - "In keyword [Visual Basic]"
+title: In (generischer Modifizierer) (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.VarianceIn
+helpviewer_keywords:
+- contravariance, In keyword [Visual Basic]
+- In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# In (Generic Modifier) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Für generische Typparameter gibt das `In`\-Schlüsselwort an, dass der Typparameter kontravariant ist.  
+# <a name="in-generic-modifier-visual-basic"></a>In (generischer Modifizierer) (Visual Basic)
+Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparameter kontravariant ist.  
   
-## Hinweise  
- Kontravarianz ermöglicht es, einen weniger stark abgeleiteten Typ zu verwenden als durch den generischen Parameter angegeben.  Dies ermöglicht die implizite Konvertierung von Klassen, die abweichende Schnittstellen implementieren, und die implizite Konvertierung von Delegattypen.  
+## <a name="remarks"></a>Hinweise  
+ Kontravarianz ermöglicht Ihnen die Verwendung eines weniger stark abgeleiteten Typs als der durch den generischen Parameter angegebene. Dadurch wird eine implizite Konvertierung von Klassen berücksichtigt, die variante Schnittstellen und Konvertierung von Delegattypen implementiert.  
   
- Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md).  
+ Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
-## Regeln  
- Sie können das `In`\-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
+## <a name="rules"></a>Regeln  
+ Sie können das `In`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
   
- Ein Typparameter kann in einer generischen Schnittstelle oder einem Delegaten kontravariant deklariert werden, wenn er nur als Typ von Methodenargumenten und nicht als Methodenrückgabetyp verwendet wird.  `ByRef`\-Parameter können nicht kovariant oder kontravariant sein.  
+ Ein Typparameter kann kontravariant in eine generische Schnittstelle oder ein Delegattyp deklariert werden, wenn er nicht als einen Methodenrückgabetyp verwendet und nur als eine Art von Methodenargumenten verwendet wird. `ByRef`nicht mit Parametern kovariant oder kontravariant.  
   
- Kovarianz und Kontravarianz werden für Verweistypen, aber nicht für Werttypen unterstützt.  
+ Kovarianz und Kontravarianz werden für Verweistypen unterstützt und für Werttypen nicht unterstützt.  
   
- In Visual Basic können Sie keine Ereignisse in kontravarianten Schnittstellen deklarieren, ohne den Delegattyp anzugeben.  Kontravariante Schnittstellen können außerdem zwar geschachtelte Schnittstellen, jedoch keine geschachtelten Klassen, Enumerationen oder Strukturen aufweisen.  
+ In Visual Basic können Sie Ereignisse in Schnittstellen über Kontravariante deklarieren, ohne den Delegattyp angeben. Darüber hinaus kontravarianten Schnittstellen keine geschachtelten Klassen, Enumerationen und Strukturen, aber geschachtelte Schnittstellen.  
   
-## Verhalten  
- Eine Schnittstelle mit einem kontravarianten Typparameter ermöglicht es, dass die zugehörigen Methoden Argumente von weniger stark abgeleiteten Typen akzeptieren können als die vom Schnittstellentypparameter angegebenen.  Da in .NET Framework 4 Typ T in der <xref:System.Collections.Generic.IComparer%601>\-Schnittstelle z. B. kontravariant ist, können Sie einem Objekt des `IComparer(Of Employee)`\-Typs ein Objekt des `IComparer(Of Person)`\-Typs zuweisen, ohne spezifische Konvertierungsmethoden zu verwenden, wenn `Person` `Employee` erbt.  
+## <a name="behavior"></a>Verhalten  
+ Mit einer Schnittstelle, die einen kontravarianten Typparameter hat, kann ihre Methode mehr abgeleitete Typen, als durch den Typparameter der Schnittstelle angegeben, akzeptieren. Da z.B. in .NET Framework 4 Typ T in der Schnittstelle <xref:System.Collections.Generic.IComparer%601> kontravariant ist, können Sie ein Objekt des `IComparer(Of Person)`-Typs an ein Objekt des `IComparer(Of Employee)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden, wenn `Person` von `Employee` erbt.  
   
- Einem kontravarianten Delegaten kann ein anderer Delegat desselben Typs zugewiesen werden, allerdings mit einem weniger stark abgeleiteten generischen Typparameter.  
+ Ein kontravarianter Delegat kann einem anderen Delegaten desselben Typs zugewiesen werden, jedoch mit einem weniger stark abgeleiteten generischen Typparameter.  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine kontravariante generische Schnittstelle deklariert, erweitert und implementiert wird.  Außerdem wird gezeigt, wie Sie die implizite Konvertierung für Klassen verwenden können, die diese Schnittstelle implementieren.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird gezeigt, wie Sie eine kontravariante generische Schnittstelle deklarieren, erweitern und implementieren können. Es wird auch gezeigt, wie Sie die implizite Konvertierung für Klassen verwenden können, die eine diese Schnittstelle implementieren können.  
   
  [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein kontravarianter generischer Delegat deklariert, instanziiert und aufgerufen wird.  Darüber hinaus wird gezeigt, wie Sie einen Delegattyp implizit konvertieren können.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt, wie Sie einen kontravarianten generischen Delegaten deklarieren, instanziieren und aufrufen. Es zeigt außerdem, wie Sie einen Delegattyp implizit konvertieren können.  
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## Siehe auch  
- [Abweichungen bei generischen Schnittstellen](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Siehe auch  
+ [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -1,45 +1,49 @@
 ---
-title: "Energieverwaltung in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Batteriezustände"
-  - "Energieverbrauchszustand"
+title: Energieverwaltung in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- battery states
+- power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Energieverwaltung in Windows Forms
-Ihre Windows Forms\-Anwendungen können die Features zur Energieverwaltung des Windows\-Betriebssystems nutzen.  Anwendungen können den Energiestatus eines Computers überprüfen und Aktionen durchführen, sobald sich der Status ändert.  Wenn die Anwendung beispielsweise auf einem tragbaren Computer ausgeführt wird, möchten Sie möglicherweise bestimmte Features in der Anwendung deaktivieren, wenn der Ladezustand des Akkus unter ein bestimmtes Niveau fällt.  
+# <a name="power-management-in-windows-forms"></a>Energieverwaltung in Windows Forms
+Windows Forms-Anwendungen können die Power Management-Funktionen in Windows-Betriebssystems nutzen. Ihre Anwendungen können den Energiezustand eines Computers überwachen und Maßnahmen ergreifen, tritt eine statusänderung. Wenn Ihre Anwendung auf einem tragbaren Computer ausgeführt wird, sollten Sie z. B. bestimmte Funktionen in Ihrer Anwendung deaktivieren, wenn der Akku des Computers unter einer bestimmten Ebene liegt.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] stellt ein <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>\-Ereignis bereit, das auftritt, sobald sich der Energiezustand ändert, d. h., wenn ein Benutzer das Betriebssystem in den Standbymodus versetzt oder diesen beendet oder wenn sich der Zustand der Netzstrom\- oder Akkuversorgung ändert.  Die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>\-Eigenschaft der <xref:System.Windows.Forms.SystemInformation>\-Klasse kann verwendet werden, um den aktuellen Zustand abzufragen, wie im folgenden Codebeispiel gezeigt:  
+ Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet eine <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> Ereignis, das auftritt, sobald sich eine Änderung im Energiestatus, z. B. wenn ein Benutzer hält oder das Betriebssystem, oder wenn der Status des AC oder Akkustatus ändert. Die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> Eigenschaft von der <xref:System.Windows.Forms.SystemInformation> Klasse kann Folgendes sein zur Abfrage für den aktuellen Status, wie im folgenden Codebeispiel gezeigt.  
   
  [!code-csharp[PowerMode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
  [!code-vb[PowerMode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
   
- Neben den <xref:System.Windows.Forms.BatteryChargeStatus>\-Enumerationen enthält auch die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>\-Eigenschaft bestimmte Enumerationen zur Bestimmung der Akkukapazität \(<xref:System.Windows.Forms.PowerStatus.BatteryFullLifetime%2A>\) und des prozentualen Ladezustands des Akkus \(<xref:System.Windows.Forms.PowerStatus.BatteryLifePercent%2A> und <xref:System.Windows.Forms.PowerStatus.BatteryLifeRemaining%2A>\).  
+ Neben den <xref:System.Windows.Forms.BatteryChargeStatus> Enumerationen, die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> Eigenschaft enthält auch Enumerationen zur Bestimmung der Akkukapazität (<xref:System.Windows.Forms.PowerStatus.BatteryFullLifetime%2A>) und Akku Prozent Rechnung zu stellen (<xref:System.Windows.Forms.PowerStatus.BatteryLifePercent%2A>, <xref:System.Windows.Forms.PowerStatus.BatteryLifeRemaining%2A>).  
   
- Mit der <xref:System.Windows.Forms.Application.SetSuspendState%2A>\-Methode der <xref:System.Windows.Forms.Application> können Sie einen Computer in den Ruhezustand oder Standbymodus versetzen.  Wenn das `force`\-Argument auf `false` gesetzt ist, sendet das Betriebssystem ein Ereignis an alle Anwendungen, um die Erlaubnis für den Standbymodus anzufordern.  Wenn das `disableWakeEvent`\-Argument auf `true` gesetzt ist, deaktiviert das Betriebssystem alle Aktivierungsereignisse.  
+ Können Sie die <xref:System.Windows.Forms.Application.SetSuspendState%2A> Methode der <xref:System.Windows.Forms.Application> auf einen Computer in den Ruhezustand oder Standby-Modus. Wenn die `force` -Argument festgelegt wird `false`, das Betriebssystem ein Ereignis für alle Anwendungen, die Zustimmung zum Anhalten übertragen wird. Wenn die `disableWakeEvent` -Argument festgelegt wird `true`, des Betriebssystems deaktiviert alle Aktivierungsereignisse.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie ein Computer in den Ruhezustand versetzt werden kann.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf einen Computer in den Ruhezustand versetzt wird.  
   
  [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
  [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
-## Siehe auch  
- <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>   
- <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>   
- <xref:System.Windows.Forms.Application.SetSuspendState%2A>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>  
+ <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>  
+ <xref:System.Windows.Forms.Application.SetSuspendState%2A>  
  <xref:Microsoft.Win32.SystemEvents.SessionSwitch>

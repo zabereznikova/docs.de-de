@@ -1,54 +1,52 @@
 ---
-title: "Continue Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.continue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Continue statement [Visual Basic]"
-  - "loops, transferring to next iteration"
+title: Continue-Anweisung (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.continue
+helpviewer_keywords:
+- Continue statement [Visual Basic]
+- loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Continue Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Überträgt die Steuerung direkt an die nächste Iteration einer Schleife  
+# <a name="continue-statement-visual-basic"></a>Continue-Anweisung (Visual Basic)
+Überträgt die Steuerung sofort an die nächste Iteration einer Schleife.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-Continue { Do | For | While }  
+Continue { Do | For | While }  
 ```  
   
-## Hinweise  
- Sie können die Steuerung aus einer `Do`\-Schleife, einer `For`\-Schleife oder einer `While`\-Schleife an die nächste Iteration der jeweiligen Schleife übertragen.  Die Steuerung wird direkt an den Test der Schleifenbedingung übergeben. Dies entspricht dem Übertragen der Steuerung an die `For`\-Anweisung oder die `While`\-Anweisung bzw. die `Do`\-Anweisung oder die `Loop`\-Anweisung, die die `Until`\-Klausel bzw. die `While`\-Klausel enthält.  
+## <a name="remarks"></a>Hinweise  
+ Sie können aus übertragen innerhalb einer `Do`, `For`, oder `While` -Schleife zur nächsten Iteration der Schleife. Wird sofort mit dem Test der Schleife-Bedingung, das Äquivalent zum Übertragen von in ist die Steuerung der `For` oder `While` -Anweisung oder der `Do` oder `Loop` -Anweisung, enthält die `Until` oder `While` Klausel.  
   
- Sie können `Continue` an einer beliebigen Position in der Schleife verwenden, die das Übertragen der Steuerung zulässt.  Die Regeln, die das Übertragen der Steuerung zulassen, entsprechen den Regeln für die [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ Sie können `Continue` an einer beliebigen Stelle in der Schleife, die Übertragung zulässt. Die Übertragung der Steuerung ermöglicht Regeln sind identisch mit der [GoTo-Anweisung](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Wenn sich beispielsweise eine Schleife vollständig in einem `Try`\-Block, einem `Catch`\-Block oder einem `Finally`\-Block befindet, können Sie mit `Continue` die Steuerung aus der Schleife übertragen.  Wenn sich hingegen die `Try`...`End Try`\-Struktur in der Schleife befindet, können Sie nicht mit `Continue` die Steuerung aus dem `Finally`\-Block übertragen, und Sie können mit dieser Anweisung die Steuerung nur aus einem `Try`\-Block oder einem `Catch`\-Block übertragen, wenn die Steuerung vollständig aus der `Try`...`End Try`\-Struktur übertragen wird.  
+ Beispielsweise eine Schleife vollständig in Ihr enthalten ist eine `Try` Block, eine `Catch` Block oder ein `Finally` blockieren, können Sie `Continue` aus der Schleife zu übertragen. Wenn sich hingegen der `Try`... `End Try` Struktur innerhalb der Schleife enthalten ist, können keine `Continue` zum Übertragen der Steuerung aus der `Finally` Block, und Sie können es zum Übertragen von einer `Try` oder `Catch` blockiert werden, nur, wenn Sie vollständig übertragen der `Try`... `End Try` Struktur.  
   
- Bei geschachtelten Schleifen desselben Typs, z. B. einer `Do`\-Schleife in einer weiteren `Do`\-Schleife, springt eine `Continue Do`\-Anweisung zur nächsten Iteration der innersten `Do`\-Schleife, die sie enthält.  Sie können nicht mit `Continue` zur nächsten Iteration einer enthaltenden Schleife desselben Typs springen.  
+ Wenn Sie geschachtelte Schleifen desselben Typs, z. B. verfügen eine `Do` Schleife innerhalb einer anderen `Do` Schleife, eine `Continue Do` Anweisung springt zur nächsten Iteration der innersten `Do` Schleife, die es enthält. Sie können keine `Continue` an die nächste Iteration einer Schleife enthaltenden desselben Typs zu überspringen.  
   
- Bei geschachtelten Schleifen von unterschiedlichem Typ, z. B. einer `Do`\-Schleife in einer `For`\-Schleife, können Sie mit `Continue Do` bzw. `Continue For` zur nächsten Iteration einer der beiden Schleifen springen.  
+ Wenn Sie z. B. geschachtelte Schleifen verschiedener Typen haben eine `Do` innerhalb einer Schleife eine `For` Schleife, können Sie an die nächste Iteration einer Schleife überspringen, indem Sie entweder `Continue Do` oder `Continue For`.  
   
-## Beispiel  
- Im folgenden Codebeispiel wird die `Continue While`\-Anweisung verwendet, um zur nächsten Spalte eines Arrays zu springen, wenn ein Divisor 0 \(null\) ist.  `Continue While` befindet sich in einer `For`\-Schleife.  Die Steuerung wird an die `While col < lastcol`\-Anweisung übertragen, bei der es sich um die nächste Iteration der innersten `While`\-Schleife handelt, die die `For`\-Schleife enthält.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird mit der `Continue While` Anweisung zur nächsten Spalte eines Arrays zu überspringen, wenn eine Division durch 0 (null) ist. Die `Continue While` befindet sich innerhalb einer `For` Schleife. Er überträgt, um die `While col < lastcol` -Anweisung, die die nächste Iteration der innersten ist `While` -Schleife, enthält die `For` Schleife.  
   
  [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
-## Siehe auch  
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next\-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [While...End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -1,82 +1,84 @@
 ---
-title: "&lt;add&gt;-Element f&#252;r webRequestModules (Netzwerkeinstellungen) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add>-Element, webRequestModules"
-  - "<webRequestModules>, add-Element"
-  - "add-Element, webRequestModules"
-  - "webRequestModules, add-Element"
+title: "&lt;Hinzufügen&gt; WebRequestModules (Network Settings)-Element"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <webRequestModules>, add element
+- webRequestModules, add element
+- add element, webRequestModules
+- <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt;-Element f&#252;r webRequestModules (Netzwerkeinstellungen)
-Fügt der Anwendung eine benutzerdefinierte Webanforderung hinzu.  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Hinzufügen&gt; WebRequestModules (Network Settings)-Element
+Fügt eine benutzerdefinierte Webmodul der Anforderung an die Anwendung an.  
   
-## Syntax  
+ \<configuration>  
+\<System.NET >  
+\<WebRequestModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Syntax  
   
-      <add   
-  prefix = "URI prefix"   
-  type = "module name, Version, Culture, PublicKeyToken"   
+```xml  
+<add   
+  prefix="URI prefix"   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|**Attribute**|****Beschreibung****|  
-|-------------------|--------------------------|  
-|`prefix`|Das URI\-Präfix für von diesem Webanforderungsmodul behandelte Anforderungen.|  
-|`type`|Der Name der Assembly und der Klasse des Moduls, das dieses Webanforderungsmodul implementiert.|  
+|**Attribut**|**Beschreibung**|  
+|-------------------|---------------------|  
+|`prefix`|Das URI-Präfix für Anforderungen, die von dieser Anforderung Webmodul behandelt werden soll.|  
+|`type`|Den vollqualifizierten Typnamen (erkennbar die <xref:System.Type.FullName%2A> Eigenschaft) und der Name der Assembly (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma, die diese Web-Request-Modul implementiert.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|**Element**|****Beschreibung****|  
-|-----------------|--------------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die zum Anfordern von Informationen von Netzwerkhosts verwendeten Module an.|  
+|**Element**|**Beschreibung**|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen von Netzwerkhosts anfordern.|  
   
-## Hinweise  
- Das `prefix`\-Attribut definiert das URI\-Präfix, das das angegebene Webanforderungsmodul verwendet.  Webanforderungsmodule werden in der Regel zum Behandeln eines bestimmten Protokolls, wie HTTP oder FTP, registriert, können jedoch auch zum Behandeln einer Anforderung an einen bestimmten Server oder Pfad auf dem Server registriert werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `prefix` Attribut definiert die URI-Präfix, das das angegebene Modul der Web-Anforderung verwendet. Anforderung Webmodule werden in der Regel zum Behandeln eines bestimmten Protokolls, z. B. HTTP oder FTP, registriert, jedoch können registriert werden, um eine Anforderung für einen bestimmten Server oder einen Pfad auf einem Server zu behandeln.  
   
- Das Webanforderungsmodul wird erstellt, wenn ein mit dem URI übereinstimmendes Präfix an die <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>\-Methode übergeben wird.  
+ Die Anforderung Webmodul wird erstellt, wenn ein übereinstimmendes URI-Präfix an übergeben wird die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Methode.  
   
- Der Wert für das `prefix`\-Attribut sollte den ersten Zeichen einer gültigen URL entsprechen, z. B. "http" oder "http:\/\/www.contoso.com".  
+ Der Wert für die `prefix` Attribut muss die ersten Zeichen ein gültiger URI – z. B. "http" oder "http://www.contoso.com".  
   
- Der Wert für das `type`\-Attribut sollte ein gültiger DLL\-Name und der entsprechende Klassenname sein, die durch ein Komma getrennt sind.  
+ Der Wert für die `type` Attribut muss eine gültige Typnamen und die entsprechenden Assemblynamen an, die durch ein Komma getrennt werden.  
   
-## Konfigurationsdateien  
- Dieses Element kann in der Konfigurationsdatei der Anwendung oder in der Konfigurationsdatei des Computers \(Machine.config\) verwendet werden.  
+## <a name="configuration-files"></a>Konfigurationsdateien  
+ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
-## Beispiel  
- Das folgende Codebeispiel registriert ein benutzerdefiniertes Webanforderungsmodul für HTTP.  Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel registriert ein benutzerdefiniertes Web-Request-Modul für HTTP. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -89,6 +91,6 @@ Fügt der Anwendung eine benutzerdefinierte Webanforderung hinzu.
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.Net.WebRequest>   
- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Net.WebRequest>  
+ [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,52 +1,44 @@
 ---
-title: 'Gewusst wie: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 46c5cb9328f2fa1a4ffc5116d318bc3286419e13
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 49cca45336cb25850c888e3389e97b323c70d89d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Gewusst wie: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)
-Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) mithilfe der <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>Methode.</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)
+Sie können die Leistung der asynchronen Lösung in verbessern [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) mithilfe der <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Methode. Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.  
   
  Sie haben möglicherweise in der exemplarischen Vorgehensweise bemerkt, dass die Websites Downloads in verschiedenen Geschwindigkeiten anbieten. Manchmal ist eine Website sehr langsam und verzögert alle verbleibenden Downloads. Wenn Sie die asynchronen Projektmappen ausführen, die Sie in der exemplarischen Vorgehensweise erstellt haben, können Sie das Programm einfach beenden, wenn Sie nicht warten möchten. Eine bessere Option wäre jedoch, alle Downloads gleichzeitig zu starten und schnellere Downloads einfach fortfahren, ohne auf langsamere zu warten.  
   
  Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an. Die Anwendung von `WhenAll` gibt eine einzelne Aufgabe zurück, die nicht abgeschlossen ist, bevor jede Aufgabe in der Auflistung abgeschlossen ist. Die Aufgaben scheinen parallel ausgeführt zu werden, es werden jedoch keine weiteren Threads erstellt. Die Aufgaben können in jeder Reihenfolge abschließen.  
   
 > [!IMPORTANT]
->  Die folgenden Prozeduren beschreiben Erweiterungen zu asynchronen Anwendungen, die in entwickelt wurden [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Sie können die Anwendung entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder Herunterladen von Code aus [Codebeispielen für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191).  
+>  Die folgenden Verfahren beschreiben die Erweiterungen für die Async-Anwendungen, die in entwickelt wurden [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Sie können die Anwendungen entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder den Code von [Codebeispiele für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191) herunterladen.  
 >   
->  Zum Ausführen des Beispiels müssen Sie Visual Studio 2012 oder höher auf Ihrem Computer installiert.  
+>  Für die Ausführung des Beispiels muss Visual Studio 2012 oder höher auf dem Computer installiert sein.  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>So fügen Sie der GetURLContentsAsync-Lösung Task.WhenAll hinzu  
   
-1.  Hinzufügen der `ProcessURLAsync` Methode, um die erste Anwendung, die in Entwicklung [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Hinzufügen der `ProcessURLAsync` Methode, um die erste Anwendung, die in entwickelt wird [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Wenn Sie den Code aus heruntergeladen [Codebeispielen für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191), öffnen Sie das Projekt AsyncWalkthrough, und fügen Sie dann `ProcessURLAsync` auf die Datei "MainWindow.Xaml.vb".  
+    -   Wenn Sie den Code von heruntergeladen [Codebeispiele für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191), öffnen Sie das AsyncWalkthrough-Projekt, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
   
-    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das erste Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
+    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das erste Beispiel im Abschnitt "Vollständige Beispiele aus der exemplarischen Vorgehensweise".  
   
-     Die `ProcessURLAsync` -Methode konsolidiert die Aktionen im Hauptteil der `For Each` eine Schleife in der `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
+     Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `For Each`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String) As Task(Of Integer)  
@@ -57,7 +49,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     End Function  
     ```  
   
-2.  Kommentieren Sie Sie aus, oder Löschen der `For Each` eine Schleife in der `SumPageSizesAsync`, wie der folgende Code zeigt.  
+2.  Kommentieren Sie die Schleife `For Each` in `SumPageSizesAsync` aus, oder löschen Sie sie, wie der folgenden Code zeigt.  
   
     ```vb  
     'Dim total = 0  
@@ -79,7 +71,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     'Next  
     ```  
   
-3.  Erstellen Sie eine Auflistung von Aufgaben. Der folgende Code definiert ein [Abfrage](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , die bei Ausführung durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode erstellt eine Auflistung von Aufgaben, die die Inhalte jeder Website herunterladen.</xref:System.Linq.Enumerable.ToArray%2A> Die Aufgaben werden beim Auswerten der Abfrage gestartet.  
+3.  Erstellen Sie eine Auflistung von Aufgaben. Der folgende Code definiert eine [Abfrage](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt. Die Aufgaben werden beim Auswerten der Abfrage gestartet.  
   
      Fügen Sie nach der Deklaration von `SumPageSizesAsync` den folgenden Code der `urlList`-Methode hinzu:  
   
@@ -94,7 +86,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
   
 4.  Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben `downloadTasks` an. `Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.  
   
-     Im folgenden Beispiel die `Await` Ausdruck wartet auf den Abschluss der einzelnen Aufgabe, `WhenAll` zurückgibt. Der Ausdruck wird gegen ein Array mit ganzen Zahlen ausgewertet, wobei jede ganze Zahl die Länge einer heruntergeladenen Website ist. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
+     Im folgenden Beispiel erwartet der `Await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt. Der Ausdruck wird gegen ein Array mit ganzen Zahlen ausgewertet, wobei jede ganze Zahl die Länge einer heruntergeladenen Website ist. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -105,7 +97,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  Verwenden Sie schließlich die <xref:System.Linq.Enumerable.Sum%2A>Methode, um die Summe der Größen aller Websites zu berechnen.</xref:System.Linq.Enumerable.Sum%2A> Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.  
+5.  Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen. Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -113,15 +105,15 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>So fügen Sie der HttpClient.GetByteArrayAsync-Lösung Task.WhenAll hinzu  
   
-1.  Fügen Sie die folgende Version des `ProcessURLAsync` der zweiten Anwendung, die in Entwicklung [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Fügen Sie die folgende Version `ProcessURLAsync` für die zweite Anwendung, die in entwickelt wird [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Wenn Sie den Code aus heruntergeladen [Codebeispielen für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough_HttpClient-Projekt zu öffnen, und fügen Sie dann `ProcessURLAsync` auf die Datei "MainWindow.Xaml.vb".  
+    -   Wenn Sie den Code von heruntergeladen [Codebeispiele für Entwickler](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough_HttpClient-Projekt öffnen, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
   
-    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das zweite Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
+    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das zweite Beispiel im Abschnitt "Vollständige Beispiele aus der exemplarischen Vorgehensweise".  
   
-     Die `ProcessURLAsync` -Methode konsolidiert die Aktionen im Hauptteil der `For Each` eine Schleife in der `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
+     Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `For Each`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
   
-     Der einzige Unterschied gegenüber der `ProcessURLAsync` -Methode in der vorherigen Prozedur ist die Verwendung von der <xref:System.Net.Http.HttpClient>Instanz `client`.</xref:System.Net.Http.HttpClient>  
+     Der einzige Unterschied der `ProcessURLAsync`-Methode in der vorherigen Prozedur ist die Verwendung der <xref:System.Net.Http.HttpClient>-Instanz, `client`.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -132,7 +124,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     End Function  
     ```  
   
-2.  Kommentieren Sie Sie aus, oder Löschen der `For Each` eine Schleife in der `SumPageSizesAsync`, wie der folgende Code zeigt.  
+2.  Kommentieren Sie die Schleife `For Each` in `SumPageSizesAsync` aus, oder löschen Sie sie, wie der folgenden Code zeigt.  
   
     ```vb  
     'Dim total = 0   
@@ -150,10 +142,9 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     '    ' Update the total.   
     '    total += urlContents.Length   
     'Next  
-  
     ```  
   
-3.  Definieren einer [Abfrage](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , die bei Ausführung durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode erstellt eine Auflistung von Aufgaben, die die Inhalte jeder Website herunterladen.</xref:System.Linq.Enumerable.ToArray%2A> Die Aufgaben werden beim Auswerten der Abfrage gestartet.  
+3.  Definieren Sie eine [Abfrage](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt. Die Aufgaben werden beim Auswerten der Abfrage gestartet.  
   
      Fügen Sie nach der Deklaration von `SumPageSizesAsync` und `client` den folgenden Code der `urlList`-Methode hinzu:  
   
@@ -168,7 +159,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
   
 4.  Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben an, `downloadTasks`. `Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.  
   
-     Im folgenden Beispiel die `Await` Ausdruck wartet auf den Abschluss der einzelnen Aufgabe, `WhenAll` zurückgibt. Nach Abschluss des Vorgangs die `Await` Ausdruck ausgewertet wird, um ein Array von ganzen Zahlen, wobei jede ganze Zahl die Länge einer heruntergeladenen Website. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
+     Im folgenden Beispiel erwartet der `Await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt. Wenn vollständig, wertet der `Await`-Ausdruck als Ergebnis ein Array von ganzen Zahlen aus, wobei jede ganze Zahl die Länge einer heruntergeladenen Website hat. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -179,7 +170,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  Verwenden Sie schließlich die <xref:System.Linq.Enumerable.Sum%2A>Methode, um die Summe der Größen aller Websites zu erhalten.</xref:System.Linq.Enumerable.Sum%2A> Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.  
+5.  Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen. Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -187,7 +178,7 @@ Sie können die Leistung der asynchronen Projektmappe in verbessern [Exemplarisc
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>So testen Sie die Task.WhenAll-Lösungen  
   
--   Wählen Sie für die beiden Projektmappen F5, um das Programm auszuführen, und wählen Sie dann die **Start** Schaltfläche. Die Ausgabe entspricht in etwa die Ausgabe der asynchronen Projektmappen in [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.  
+-   Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**. Die Ausgabe entspricht in etwa die Ausgabe die Async-Lösungen in [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt die Erweiterungen des Projekts, das die `GetURLContentsAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.  
@@ -438,5 +429,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName></xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+ [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic))

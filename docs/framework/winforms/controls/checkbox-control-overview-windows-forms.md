@@ -1,42 +1,40 @@
 ---
-title: "&#220;bersicht &#252;ber das CheckBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CheckBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Gebundene Steuerelemente, Kontrollkästchen"
-  - "Kontrollkästchen, Informationen über Kontrollkästchen"
-  - "CheckBox-Steuerelement [Windows Forms], Informationen über das CheckBox-Steuerelement"
-  - "Datenbindung, CheckBox-Steuerelement"
-  - "Datengebundene Steuerelemente, Kontrollkästchen"
+title: "Übersicht über das CheckBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CheckBox
+helpviewer_keywords:
+- CheckBox control [Windows Forms], about CheckBox control
+- data binding [Windows Forms], checkbox controls
+- check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a154a3f639102e3f3e2acd62626379e12bbd1344
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das CheckBox-Steuerelement (Windows&#160;Forms)
-Das <xref:System.Windows.Forms.CheckBox>\-Steuerelement in Windows Forms gibt an, ob eine bestimmte Bedingung erfüllt wird oder nicht.  Es wird im Allgemeinen verwendet, um dem Benutzer eine eindeutige Auswahl \(Yes\/No bzw. True\/False\) zu ermöglichen.  Sie können Kontrollkästchen\-Steuerelemente gruppieren, um mehrere Optionen anzuzeigen, aus denen der Benutzer eine oder mehrere auswählen kann.  
+# <a name="checkbox-control-overview-windows-forms"></a>Übersicht über das CheckBox-Steuerelement (Windows Forms)
+Das Windows Forms-Steuerelement <xref:System.Windows.Forms.CheckBox> zeigt an, ob eine bestimmte Bedingung aktiviert oder deaktiviert ist. Es wird häufig verwendet, um dem Benutzer eine Ja/Nein- oder Wahr/Falsch-Auswahl zu präsentieren. Sie können Kontrollkästchen-Steuerelemente in Gruppen verwenden, um mehrere Optionen anzuzeigen, unter denen der Benutzer eine oder mehrere auswählen kann.  
   
- Das Kontrollkästchen\-Steuerelement ist insofern mit dem Optionsfeld\-Steuerelement vergleichbar, als dass beide Steuerelemente für eine Benutzerauswahl stehen.  Der Unterschied besteht darin, dass jeweils nur ein Optionsfeld aus einer Gruppe aktiviert werden kann.  Beim Kontrollkästchen\-Steuerelement können dagegen beliebig viele Kontrollkästchen aktiviert werden.  
+ Das Kontrollkästchensteuerelement ähnelt das Optionsfeld-Steuerelement jeder verwendet wird, eine Auswahl an, die vom Benutzer stammt. Sie unterscheiden sich in, denen nur ein Optionsfeld in einer Gruppe zu einem Zeitpunkt ausgewählt werden kann. Mit dem Kontrollkästchen-Steuerelement kann jedoch eine beliebige Anzahl von Kontrollkästchen ausgewählt werden.  
   
- Ein Kontrollkästchen kann durch einfache Datenbindung mit Elementen in einer Datenbank verbunden werden.  Mehrere Kontrollkästchen können mithilfe des <xref:System.Windows.Forms.GroupBox>\-Steuerelements gruppiert werden.  Dieses Steuerelement ist für die visuelle Darstellung und für die Gestaltung von Benutzeroberflächen hilfreich, da gruppierte Steuerelemente im Formular\-Designer zusammen bewegt werden können.  Weitere Informationen finden Sie unter [Datenbindung in Web Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md) und [GroupBox\-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
+ Ein Kontrollkästchen kann mit Elementen in einer Datenbank mit der einfachen Datenbindung verbunden sein. Mehrere Kontrollkästchen können gruppiert werden, mithilfe der <xref:System.Windows.Forms.GroupBox> Steuerelement. Dies eignet sich für die visuelle Darstellung und auch für den Entwurf der Benutzeroberfläche, da im Formular-Designer zusammen gruppierte Steuerelemente verschoben werden können. Weitere Informationen finden Sie unter [Windows Forms-Datenbindung](../../../../docs/framework/winforms/windows-forms-data-binding.md) und [GroupBox-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
   
- Das <xref:System.Windows.Forms.CheckBox>\-Steuerelement verfügt über zwei wichtige Eigenschaften, nämlich <xref:System.Windows.Forms.CheckBox.Checked%2A> und <xref:System.Windows.Forms.CheckBox.CheckState%2A>.  Die <xref:System.Windows.Forms.CheckBox.Checked%2A>\-Eigenschaft gibt `true` oder `false` zurück.  Die <xref:System.Windows.Forms.CheckBox.CheckState%2A>\-Eigenschaft gibt <xref:System.Windows.Forms.CheckState> oder <xref:System.Windows.Forms.CheckState> zurück. Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A>\-Eigenschaft auf `true` festgelegt ist, kann <xref:System.Windows.Forms.CheckBox.CheckState%2A> auch <xref:System.Windows.Forms.CheckState> zurückgeben.  Im unbestimmten Zustand wird das Kontrollkästchen abgeblendet angezeigt, was darauf hinweist, dass die Option nicht verfügbar ist.  
+ Die <xref:System.Windows.Forms.CheckBox> Steuerelement verfügt über zwei wichtige Eigenschaften <xref:System.Windows.Forms.CheckBox.Checked%2A> und <xref:System.Windows.Forms.CheckBox.CheckState%2A>. Die <xref:System.Windows.Forms.CheckBox.Checked%2A> Eigenschaft gibt entweder `true` oder `false`. Die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft gibt entweder <xref:System.Windows.Forms.CheckState.Checked> oder <xref:System.Windows.Forms.CheckState.Unchecked>; oder, wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> können zurückgeben <xref:System.Windows.Forms.CheckState.Indeterminate>. In den unbestimmten Zustand befindet wird das Dialogfeld angezeigt, abgeblendet, um anzugeben, dass die Option nicht verfügbar ist.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.CheckBox>   
- [Gewusst wie: Festlegen von Optionen mit CheckBox\-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)   
- [Gewusst wie: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
- [CheckBox\-Steuerelement](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.CheckBox>  
+ [Gewusst wie: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [Gewusst wie: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [CheckBox-Steuerelement](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

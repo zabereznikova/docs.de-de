@@ -1,28 +1,34 @@
 ---
-title: "Intranet: Ungesicherter Client und Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Intranet: Ungesicherter Client und Dienst'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9a3faa27d54f2aa67cd974bc1827d71163e411b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Intranet: Ungesicherter Client und Dienst
-In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst, mit dem einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Anwendung Informationen in einem sicheren privaten Netzwerk zur Verfügung gestellt werden.  Sicherheit ist nicht erforderlich, da die Daten eher unwichtig sind, das Netzwerk als grundsätzlich sicher eingestuft wird oder Sicherheit durch eine Ebene unterhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Infrastruktur bereitgestellt wird.  
+# <a name="intranet-unsecured-client-and-service"></a>Intranet: Ungesicherter Client und Dienst
+In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst, mit dem einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Anwendung Informationen in einem sicheren privaten Netzwerk zur Verfügung gestellt werden. Sicherheit ist nicht erforderlich, da die Daten eher unwichtig sind, das Netzwerk als grundsätzlich sicher eingestuft wird oder Sicherheit durch eine Ebene unterhalb der [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur bereitgestellt wird.  
   
- ![Szenario für ungesicherten Intranetclient und Dienst](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Intranet: ungesicherter Client und Dienstszenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
 |Merkmal|Beschreibung|  
-|-------------|------------------|  
+|--------------------|-----------------|  
 |Sicherheitsmodus|Keine|  
 |Transport|TCP|  
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
@@ -31,23 +37,23 @@ In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../
 |Integrität|Keine|  
 |Vertraulichkeit|Keine|  
   
-## Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.  Führen Sie einen der folgenden Schritte aus:  
+## <a name="service"></a>Dienst  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 -   Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
 -   Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
-### Code  
+### <a name="code"></a>Code  
  Im folgenden Code wird gezeigt, wie ein Endpunkt ohne Sicherheit erstellt wird:  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -74,26 +80,26 @@ In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../
 </configuration>  
 ```  
   
-## Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.  Führen Sie einen der folgenden Schritte aus:  
+## <a name="client"></a>Client  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
--   Erstellen Sie mit dem Code \(und Clientcode\) einen eigenständigen Client.  
+-   Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert.  Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.  Beispiel:  
+-   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Code  
- Im folgenden Code wird ein Basis\-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Client gezeigt, der mit dem TCP\-Protokoll auf einen ungesicherten Endpunkt zugreift.  
+### <a name="code"></a>Code  
+ Im folgenden Code wird ein Basis-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client gezeigt, der mit dem TCP-Protokoll auf einen ungesicherten Endpunkt zugreift.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Der folgende Konfigurationscode gilt für den Client:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -116,7 +122,7 @@ In der folgenden Darstellung sehen Sie einen einfachen [!INCLUDE[indigo1](../../
 </configuration>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.NetTcpBinding>   
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.NetTcpBinding>  
+ [Sicherheit (Übersicht)](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

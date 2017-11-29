@@ -1,62 +1,63 @@
 ---
-title: "Auswahlmodi im DataGridView-Steuerelement von Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView-Steuerelement [Windows Forms], Auswahlmodus"
-  - "Auswahl, Modi im DataGridView-Steuerelement"
+title: Auswahlmodi im DataGridView-Steuerelement von Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- selection [Windows Forms], modes in DataGridView control
+- DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Auswahlmodi im DataGridView-Steuerelement von Windows Forms
-Zeitweise ist es erforderlich, dass eine Anwendung auf Benutzerauswahlen basierende Aktionen innerhalb eines <xref:System.Windows.Forms.DataGridView>\-Steuerelements ausführt.  Abhängig von den Aktionen möchten Sie die möglichen Auswahlen vielleicht beschränken.  Angenommen, die Anwendung kann einen Bericht für den aktuell ausgewählten Datensatz ausgeben.  In diesem Fall können Sie das <xref:System.Windows.Forms.DataGridView>\-Steuerelement so konfigurieren, dass beim Klicken in eine Zeile immer die gesamte Zeile ausgewählt wird. Folglich kann immer nur diese eine Zeile ausgewählt werden.  
+# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Auswahlmodi im DataGridView-Steuerelement von Windows Forms
+In einigen Fällen soll Ihre Anwendung für Aktionen, die basierend auf der Auswahl des Benutzers innerhalb einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Abhängig von der Aktionen empfiehlt es sich um die Arten der Auswahl zu beschränken, die möglich sind. Nehmen Sie beispielsweise an, dass Ihre Anwendung für den aktuell ausgewählten Datensatz einen Bericht drucken kann. In diesem Fall sollten Sie so konfigurieren Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement, damit an einer beliebigen Stelle innerhalb einer Zeile immer auf die gesamte Zeile ausgewählt, und so, dass nur eine Zeile zu einem Zeitpunkt ausgewählt werden kann.  
   
- Sie können die zulässigen Auswahlen angeben, indem Sie die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>\-Eigenschaft auf einen der folgenden <xref:System.Windows.Forms.DataGridViewSelectionMode>\-Enumerationswerte festlegen.  
+ Sie können angeben, dass die Auswahl zulässig durch Festlegen der <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> -Eigenschaft auf einen der folgenden <xref:System.Windows.Forms.DataGridViewSelectionMode> Enumerationswerte.  
   
-|DataGridViewSelectionMode\-Wert|Beschreibung|  
-|-------------------------------------|------------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Durch Klicken auf eine Zelle wird diese ausgewählt.  Zeilen\- und Spaltenheader können nicht zum Auswählen verwendet werden.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Durch Klicken auf eine Zelle wird diese ausgewählt.  Durch Klicken auf einen Spaltenheader wird die gesamte Spalte ausgewählt.  Spaltenheader können nicht zum Sortieren verwendet werden.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Durch Klicken auf eine Zelle oder einen Spaltenheader wird die gesamte Spalte ausgewählt.  Spaltenheader können nicht zum Sortieren verwendet werden.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Durch Klicken auf eine Zelle oder einen Zeilenheader wird die gesamte Zeile ausgewählt.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Standardauswahlmodus.  Durch Klicken auf eine Zelle wird diese ausgewählt.  Durch Klicken auf einen Zeilenheader wird die gesamte Zeile ausgewählt.|  
+|DataGridViewSelectionMode-Wert|Beschreibung|  
+|-------------------------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Klicken auf eine Zelle ausgewählt. Zeilen- und Spaltenköpfe können nicht für die Auswahl verwendet werden.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Klicken auf eine Zelle ausgewählt. Klicken auf eine Spaltenüberschrift, wählt die gesamte Spalte aus. Spaltenüberschriften können nicht für die Sortierung verwendet werden.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Klicken Sie auf eine Zelle oder eine Spaltenüberschrift, wählt die gesamte Spalte aus. Spaltenüberschriften können nicht für die Sortierung verwendet werden.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Klicken Sie auf eine Zelle oder einen Zeilenheader wird die gesamte Zeile ausgewählt.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Standardmäßig den Mehrfachauswahlmodus aufweist. Klicken auf eine Zelle ausgewählt. Auf einen Zeilenkopf klicken, wird die gesamte Zeile ausgewählt.|  
   
 > [!NOTE]
->  Durch Änderung des Auswahlmodus zur Laufzeit wird die aktuelle Auswahl automatisch aufgehoben.  
+>  Ändern den Auswahlmodus zur Laufzeit automatisch löscht die aktuelle Auswahl.  
   
- Benutzer können standardmäßig mehrere Zeilen, Spalten oder Zellen auswählen, indem sie den Mauszeiger ziehen und während der Auswahl die STRG\- oder UMSCHALTTASTE gedrückt halten, um die Auswahl zu erweitern bzw. zu ändern. Alternativ können sie auf die obere linke Headerzelle klicken, um sämtliche Zellen im Steuerelement auszuwählen.  Legen Sie die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>\-Eigenschaft auf den Wert `false` fest, um dieses Verhalten zu vermeiden.  
+ Standardmäßig können Benutzer auswählen mehrere Zeilen, Spalten oder Zellen durch Ziehen mit der Maus, drücken STRG-Taste oder UMSCHALTTASTE beim Erweitern oder ändern eine Auswahl auswählen, oder klicken Sie auf der linken oberen Headerzelle um alle Zellen im Steuerelement auszuwählen. Um dieses Verhalten zu verhindern, legen die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> Eigenschaft `false`.  
   
- Im <xref:System.Windows.Forms.DataGridViewSelectionMode>\-Modus und im <xref:System.Windows.Forms.DataGridViewSelectionMode>\-Modus können Benutzer Zeilen löschen, indem Sie sie auswählen und die ENTF\-TASTE drücken.  Benutzer können Zeilen nur dann löschen, wenn sich die aktuelle Zelle nicht im Bearbeitungsmodus befindet, die <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A>\-Eigenschaft auf `true` festgelegt ist und die zugrunde liegende Datenquelle das Löschen von Zeilen durch Benutzer unterstützt.  Beachten Sie, dass das programmgesteuerte Löschen von Zeilen durch diese Einstellungen nicht verhindert wird.  
+ Die <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> und <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> Modi ermöglichen Benutzern die Zeilen zu löschen, indem Sie sie auswählen und die ENTF-Taste drücken. Benutzer können Zeilen löschen, nur, wenn die aktuelle Zelle nicht in den Bearbeitungsmodus wechseln, ist die <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> -Eigenschaftensatz auf `true`, und die zugrunde liegenden Datenquelle unterstützt anwendergesteuerte Zeile löschen. Beachten Sie, dass diese Einstellungen nicht programmgesteuerte Zeile löschen verhindern.  
   
-## Programmgesteuerte Auswahl  
- Der aktuelle Auswahlmodus beschränkt das Verhalten bei der programmgesteuerten Auswahl sowie bei der Benutzerauswahl.  Sie können die aktuelle Auswahl programmgesteuert ändern, indem Sie die `Selected`\-Eigenschaft beliebiger Zellen, Zeilen oder Spalten im <xref:System.Windows.Forms.DataGridView>\-Steuerelement festlegen.  Außerdem können Sie abhängig vom Auswahlmodus alle im Steuerelement enthaltenen Zellen mithilfe der <xref:System.Windows.Forms.DataGridView.SelectAll%2A>\-Methode auswählen.  Um die Auswahl aufzuheben, verwenden Sie die <xref:System.Windows.Forms.DataGridView.ClearSelection%2A>\-Methode.  
+## <a name="programmatic-selection"></a>Programmgesteuerte Auswahl  
+ Der aktuelle Auswahlmodus schränkt das Verhalten der programmgesteuerte Auswahl sowie die Auswahl des Benutzers. Sie können die aktuelle Auswahl programmgesteuert ändern, indem Sie festlegen der `Selected` Eigenschaft alle Zellen, Zeilen oder Spalten in der <xref:System.Windows.Forms.DataGridView> Steuerelement. Sie können auch alle Zellen im Steuerelement durch Auswählen der <xref:System.Windows.Forms.DataGridView.SelectAll%2A> -Methode, je nach Auswahlmodus. Verwenden Sie zum Aufheben der Auswahl der <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> Methode.  
   
- Wenn die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>\-Eigenschaft auf `true` festgelegt ist, können Sie der Auswahl <xref:System.Windows.Forms.DataGridView>\-Elemente hinzufügen oder diese daraus entfernen, indem Sie die `Selected`\-Eigenschaft des Elements ändern.  Wenn Sie die `Selected`\-Eigenschaft für ein Element in einem anderen Fall auf `true` festlegen, werden andere Elemente automatisch aus der Auswahl entfernt.  
+ Wenn die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> -Eigenschaftensatz auf `true`, können Sie hinzufügen <xref:System.Windows.Forms.DataGridView> Elemente, oder entfernen Sie sie aus der Auswahl durch Ändern der `Selected` -Eigenschaft des Elements. Andernfalls werden beim Festlegen der `Selected` Eigenschaft `true` für ein Element automatisch auf andere Elemente aus der Auswahl entfernt.  
   
- Beachten Sie, dass die aktuelle Auswahl durch eine Änderung des Werts der <xref:System.Windows.Forms.DataGridView.CurrentCell%2A>\-Eigenschaft nicht geändert wird.  
+ Beachten Sie, dass den Wert der Änderungen der <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Eigenschaft wird die aktuelle Auswahl nicht verändert.  
   
- Eine Auflistung der momentan ausgewählten Zellen, Zeilen oder Spalten können Sie über die Eigenschaften <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> und <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> des <xref:System.Windows.Forms.DataGridView>\-Steuerelements abrufen.  Der Zugriff auf diese Eigenschaften ist ineffizient, wenn jede Zelle im Steuerelement ausgewählt ist.  Um in diesem Fall Leistungseinbußen zu vermeiden, verwenden Sie zuerst die <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>\-Methode.  Außerdem kann sich der Zugriff auf diese Auflistungen als ineffizient erweisen, wenn die Anzahl der ausgewählten Zellen, Zeilen oder Spalten ermittelt werden soll.  Sie sollten stattdessen die Methode <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A> oder <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> verwenden und den <xref:System.Windows.Forms.DataGridViewElementStates>\-Wert übergeben.  
+ Sie können eine Auflistung von der gerade ausgewählten Zellen, Zeilen oder Spalten durch Abrufen der <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, und <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Eigenschaften der <xref:System.Windows.Forms.DataGridView> Steuerelement. Zugriff auf diese Eigenschaften ist ineffizient, wenn jede Zelle im Steuerelement ausgewählt ist. Um in diesem Fall eine Leistungseinbuße zu vermeiden, verwenden die <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> Methode erste. Darüber hinaus können den Zugriff auf diese Auflistungen zum Ermitteln der Anzahl der ausgewählten Zellen, Zeilen oder Spalten ineffizient sein. Stattdessen sollten Sie verwenden die <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, oder <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> -Methode auf und übergibt die <xref:System.Windows.Forms.DataGridViewElementStates.Selected> Wert.  
   
 > [!TIP]
->  Beispielcode zur Veranschaulichung der programmgesteuerten Verwendung ausgewählter Zellen finden Sie in der Übersicht über die <xref:System.Windows.Forms.DataGridView>\-Klasse.  
+>  Beispielcode, der veranschaulicht, die programmgesteuerte Verwendung der ausgewählten Zellen Schemadokumentation in der <xref:System.Windows.Forms.DataGridView> -Klassenübersicht.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>   
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>   
- <xref:System.Windows.Forms.DataGridViewSelectionMode>   
- [Verwendung von Auswahl und Zwischenablage mit dem DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Festlegen des Auswahlmodus des DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
+ <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode>  
+ [Verwendung von Auswahl und Zwischenablage mit dem DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

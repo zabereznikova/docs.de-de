@@ -1,77 +1,60 @@
 ---
-title: 'Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operator procedures, calling
-- procedures, operator
-- procedures, calling
+- operator procedures [Visual Basic], calling
+- procedures [Visual Basic], operator
+- procedures [Visual Basic], calling
 - examples [Visual Basic], CType
-- syntax, Operator procedures
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- return values, Operator procedures
+- return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1db7c0b2a6fd8160baa48892b5f2214df24674e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Gewusst wie: Verwenden einer Klasse, die Operatoren definiert (Visual Basic)
-Wenn Sie eine Klasse oder Struktur, die ihre eigenen Operatoren definiert verwenden, können Sie diese Operatoren aus zugreifen [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+Wenn Sie eine Klasse oder Struktur, die ihre eigenen Operatoren definiert verwenden, können Sie diese Operatoren aus zugreifen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- Definieren eines Operators für eine Klasse oder Struktur ist die Abkürzung *überladen* des Operators.  
+ Definieren eines Operators in einer Klasse oder Struktur ist so genannte *überladen* den Operator.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel ruft die SQL-Struktur <xref:System.Data.SqlTypes.SqlString>, die die Konvertierungsoperatoren definiert ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) in beide Richtungen zwischen einer SQL-Zeichenfolge und eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Zeichenfolge.</xref:System.Data.SqlTypes.SqlString> Verwenden `CType(` *SQL-Zeichenfolgenausdruck*, `String)` konvertieren Sie eine SQL-Zeichenfolge, die eine [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Zeichenfolge und `CType(` *Visual Basic-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString> `)` für die Konvertierung in die andere Richtung.</xref:System.Data.SqlTypes.SqlString>  
+ Das folgende Beispiel greift auf die SQL-Struktur <xref:System.Data.SqlTypes.SqlString>, die die Konvertierungsoperatoren definiert ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) in beide Richtungen zwischen einer SQL-Zeichenfolge und ein [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Zeichenfolge. Verwenden `CType(` *SQL-Zeichenfolgenausdruck*, `String)` zum Konvertieren einer SQL-Zeichenfolge auf eine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Zeichenfolge, und `CType(` *Visual Basic-Zeichenfolgenausdruck*, <xref:System.Data.SqlTypes.SqlString> `)` in die andere Richtung konvertiert.  
   
- [!code-vb[VbVbcnProcedures&#30;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures&#31;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- Die <xref:System.Data.SqlTypes.SqlString>Struktur einen Konvertierungsoperator definiert ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) von `String` , <xref:System.Data.SqlTypes.SqlString>und anderen von <xref:System.Data.SqlTypes.SqlString>, `String`.</xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> Die Anweisung, zuweist `title` auf `jobTitle` verwendet den ersten Operator, und die <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>-Funktionsaufruf verwendet das zweite.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+ Die <xref:System.Data.SqlTypes.SqlString> Struktur definiert einen Konvertierungsoperator ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md)) von `String` auf <xref:System.Data.SqlTypes.SqlString> und einem anderen <xref:System.Data.SqlTypes.SqlString> auf `String`. Die Anweisung, zuweist `title` auf `jobTitle` binärencoder wird der erste Operator und die <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktionsaufruf mithilfe des zweiten.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Achten Sie darauf, dass die Klasse oder Struktur, die Sie verwenden den Operator definiert, den Sie verwenden möchten. Gehen Sie nicht davon aus, dass die Klasse oder Struktur jeder zum Überladen verfügbare Operator definiert wurde. Eine Liste der verfügbaren Operatoren finden Sie unter [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Achten Sie darauf, dass die Klasse oder Struktur, die Sie verwenden den Operator definiert, die, den Sie verwenden möchten. Führen Sie Sie nicht davon gehen Sie aus, dass die Klasse oder Struktur jeder Operator überladen zur definiert wurde. Eine Liste der verfügbaren Operatoren, finden Sie unter [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Fügen Sie die entsprechenden `Imports` -Anweisung für die SQL-Zeichenfolge am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlTypes>).</xref:System.Data.SqlTypes>  
+ Fügen Sie die entsprechenden `Imports` -Anweisung für die SQL-Zeichenfolge am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlTypes>).  
   
- Das Projekt muss Verweise auf System.Data und System.XML enthalten.  
+ Das Projekt benötigen Verweise auf "System.Data" und "System.xml".  
   
 ## <a name="see-also"></a>Siehe auch  
- [Operatorprozeduren](./operator-procedures.md)   
- [Gewusst wie: Definieren eines Operators](./how-to-define-an-operator.md)   
- [Gewusst wie: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)   
- [Gewusst wie: Aufrufen einer Operatorprozedur](./how-to-call-an-operator-procedure.md)   
- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [Einschränkende](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
+ [Operatorprozeduren](./operator-procedures.md)  
+ [Gewusst wie: Definieren eines Operators](./how-to-define-an-operator.md)  
+ [Gewusst wie: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)  
+ [Gewusst wie: Aufrufen einer Operatorprozedur](./how-to-call-an-operator-procedure.md)  
+ [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

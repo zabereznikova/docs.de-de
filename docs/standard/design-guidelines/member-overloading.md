@@ -1,34 +1,32 @@
 ---
-title: "&#220;berladen von Membern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Standardargumente"
-  - "[Member [.NET Framework], überladen"
-  - "Entwurfsrichtlinien für Member [.NET Framework], überladen"
-  - "Überladene Member"
-  - "Signaturen, Mitglieder"
+title: "Überladen von Membern"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default arguments
+- members [.NET Framework], overloaded
+- member design guidelines [.NET Framework], overloading
+- overloaded members
+- signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8b54a99ab88e4cfa0569b2095a0be3750c91f244
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berladen von Membern
-Überladen von Membern bedeutet das Erstellen von zwei oder mehr Elemente auf dem gleichen Typ, die den gleichen Namen haben, unterscheiden sich nur hinsichtlich der Anzahl oder Typ der Parameter. Z. B. im folgenden die `WriteLine` \-Methode ist überladen:  
+# <a name="member-overloading"></a>Überladen von Membern
+Überladen von Membern bedeutet das Erstellen von zwei oder mehr Elemente für den gleichen Typ, die denselben Namen aufweisen, unterscheiden sich nur hinsichtlich der Anzahl oder dem Typ der Parameter. Im folgenden wird beispielsweise der `WriteLine` -Methode ist überladen:  
   
 ```  
 public static class Console {  
@@ -37,37 +35,36 @@ public static class Console {
     public void WriteLine(bool value);  
     ...  
 }  
-  
 ```  
   
- Da nur Methoden, Konstruktoren und indizierte Eigenschaften\-Parameter verfügen, können nur die Member überladen werden.  
+ Da nur Methoden, Konstruktoren und indizierte Eigenschaften über Parameter verfügen können, können nur für die Elemente überladen werden.  
   
- Überladen ist eines der wichtigsten Verfahren zum Verbessern der Verwendbarkeit, Produktivität und die Lesbarkeit von wieder verwendbaren Bibliotheken. Überladen für die Anzahl von Parametern ermöglicht die einfachere Versionen der Konstruktoren und Methoden bereitstellen. Überladen für den Parametertyp vereinfacht den gleichen Membernamen für Elemente, die identische Vorgänge für eine ausgewählte Gruppe verschiedener Typen verwenden.  
+ Überladen ist eine der wichtigsten Methoden zur Verbesserung der Nutzbarkeit und Produktivität und Lesbarkeit wieder verwendbare Bibliotheken. Auf der Anzahl von Parametern überladen ermöglicht die einfachere Versionen von Konstruktoren und Methoden bereitstellen. Überladen für den Parametertyp erleichtert möglich, demselben Membernamen für Elemente, die identische Vorgänge für eine ausgewählte Gruppe von verschiedenen Typen zu verwenden.  
   
- **✓ führen** beschreibende Parameternamen verwenden an, dass vom kürzeren Überladungen als Standardwert verwendet.  
+ **Führen Sie ✓** versuchen, beschreibende Parameternamen zu verwenden, um anzugeben, die Standardeinstellung von kürzeren Überladungen verwendet.  
   
- **X vermeiden** willkürlich unterschiedliche Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe als Parameter in einer anderen Überladung darstellt, sollte der Parameter den gleichen Namen aufweisen.  
+ **X vermeiden** nach dem Zufallsprinzip varying Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe als Parameter in einer anderen Überladung darstellt, sollte der Parameter denselben Namen aufweisen.  
   
- **X vermeiden** Mitglieder überlastet werden in der Reihenfolge der Parameter im inkonsistent. Parameter mit dem gleichen Namen in der gleichen Position in alle Überladungen angezeigt.  
+ **X vermeiden** Mitglieder überlastet werden in der Reihenfolge der Parameter in inkonsistent. Parameter mit dem gleichen Namen sollte in der gleichen Position alle Überladungen angezeigt werden.  
   
- **✓ führen** machen die längste Überladung nur virtuell \(wenn Erweiterbarkeit erforderlich ist\). Kürzere Überladungen sollte über eine längere Überladung aufrufen.  
+ **Führen Sie ✓** stellen nur die längste Überladung virtuellen (wenn Erweiterbarkeit erforderlich ist). Kürzere Überladungen sollten einfach über eine längere Überladung aufrufen.  
   
  **X nicht** verwenden `ref` oder `out` Modifizierer zum Überladen von Membern.  
   
- Einige Sprachen nicht Aufrufe Überladungen wie folgt aufgelöst. Darüber hinaus sollte solche Überladungen normalerweise völlig andere Semantik und wahrscheinlich nicht Überladungen jedoch zwei separate Methoden stattdessen.  
+ Für einige Sprachen nicht aufrufen an Überladungen wie folgt aufgelöst werden. Darüber hinaus sollte solche Überladungen wurden in der Regel vollständig unterschiedliche Semantiken wahrscheinlich auch nicht Überladungen jedoch zwei separate Methoden stattdessen.  
   
- **X nicht** verfügen über Überladungen mit Parametern, die an der gleichen Position und ähnliche Typen noch mit einer anderen Semantik.  
+ **X nicht** Überladungen mit Parametern, die an der gleichen Position und ähnliche Typen noch mit einer anderen Semantik haben.  
   
- **✓ führen**  ermöglichen `null` für optionale Argumente übergeben werden soll.  
+ **Führen Sie ✓** zulassen `null` für optionale Argumente übergeben werden soll.  
   
- **✓ führen** verwenden Member überladen, statt Member mit Standardargumenten zu definieren.  
+ **Führen Sie ✓** verwenden Member überladen, anstatt Elemente mit Standardargumenten definieren.  
   
- Standardargumente sind nicht CLS\-kompatibel.  
+ Standardargumente sind nicht CLS-kompatibel.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

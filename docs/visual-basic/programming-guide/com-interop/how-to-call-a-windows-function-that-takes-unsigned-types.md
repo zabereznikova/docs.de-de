@@ -1,65 +1,48 @@
 ---
-title: 'Gewusst wie: Aufrufen eine Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Windows functions, calling
-- unsigned data types
-- UShort data type, using
+- Windows functions [Visual Basic], calling
+- unsigned data types [Visual Basic]
+- UShort data type [Visual Basic], using
 - functions [Visual Basic], calling Windows functions
-- ULong data type, using
-- UInteger data type, using
+- ULong data type [Visual Basic], using
+- UInteger data type [Visual Basic], using
 - data types [Visual Basic], using
-- unsigned types
+- unsigned types [Visual Basic]
 - data types [Visual Basic], unsigned
 - data types [Visual Basic], numeric
-- unsigned types, using
+- unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbff07f4923b0633a2bc9b4fd558d9d51f64370a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d1d59c29a83ede97d90926c8e499788676e2c235
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)
-Wenn Sie eine Klasse, Moduls oder der Struktur, die Mitglieder der Ganzzahltypen ohne Vorzeichen verwenden, können Sie diese Elemente mit zugreifen [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+Wenn Sie eine Klasse, Modul oder Struktur, die Mitglieder der Ganzzahltypen ohne Vorzeichen in Anspruch genommen, können Sie diese Elemente zugreifen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Eine Windows-Funktion aufrufen, die einen Typ ohne Vorzeichen akzeptiert.  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aufrufen eine Windows-Funktion, die einen Typ ohne Vorzeichen akzeptiert.  
   
-1.  Verwenden einer [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) anzuweisen, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] die Bibliothek die Funktion enthalten, welchen Namen Sie in dieser Bibliothek hat, wie ihre Aufruffolge lautet und wie Zeichenfolgen konvertiert, wenn der Aufruf.  
+1.  Verwenden einer [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) informieren [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] welche Bibliothek die Funktion enthält, was seinen Namen in diese Bibliothek ist, was die Aufrufsequenz ist und wie Zeichenfolgen konvertiert, wenn der Aufruf.  
   
-2.  In der `Declare` -Anweisung sollten Sie `UInteger`, `ULong`, `UShort`, oder `Byte` nach Bedarf für jeden Parameter mit einem Typ ohne Vorzeichen.  
+2.  In der `Declare` -Anweisung sollten Sie `UInteger`, `ULong`, `UShort`, oder `Byte` je nach Bedarf für jeden Parameter mit einem Datentyp ohne Vorzeichen.  
   
-3.  Lesen Sie die Dokumentation für die Windows-Funktion, die Sie aufrufen, um die Namen und Werte der Konstanten verwendet. Viele davon werden in der Datei WinUser.h definiert.  
+3.  Die Dokumentation für die Windows-Funktion, die Sie aufrufen, suchen Sie die Namen und Werten der Konstanten, die verwendet wird. Viele davon werden in der Datei WinUser.h definiert.  
   
-4.  Deklarieren Sie die erforderlichen Konstanten im Code. Viele Windows-Konstanten sind 32-Bit-Werte ohne Vorzeichen, deklarieren Sie diese `As``UInteger`.  
+4.  Deklarieren Sie die erforderlichen Konstanten im Code. Viele Windows-Konstanten sind 32-Bit-Werten ohne Vorzeichen, und deklarieren Sie diese `As``UInteger`.  
   
-5.  Rufen Sie die Funktion auf die übliche Weise. Im folgenden Beispiel wird die Windows-Funktion `MessageBox`, der ein Ganzzahlargument ohne Vorzeichen akzeptiert.  
+5.  Rufen Sie die Funktion auf die übliche Weise. Im folgenden Beispiel wird die Windows-Funktion `MessageBox`, der eine ganze Zahl ohne Vorzeichen-Argument akzeptiert.  
   
     ```  
     Public Class windowsMessage  
@@ -94,17 +77,17 @@ Wenn Sie eine Klasse, Moduls oder der Struktur, die Mitglieder der Ganzzahltypen
     ```  
   
     > [!CAUTION]
-    >  Die `UInteger`, `ULong`, `UShort`, und `SByte` Datentypen sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), d. h. CLS-kompatibler Code kann keine Komponente verwenden, die sie verwendet.  
+    >  Die `UInteger`, `ULong`, `UShort`, und `SByte` Datentypen sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](https://msdn.microsoft.com/library/12a7a7h3) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, werden diese verwendet.  
   
     > [!IMPORTANT]
-    >  Einen Anruf an nicht verwalteten Code, z. B. die Windows-Anwendungsprogrammierschnittstelle (API), macht den Code auf potenzielle Sicherheitsrisiken.  
+    >  Aufruf von nicht verwaltetem Code, z. B. die Windows-Anwendungsprogrammierschnittstelle (API), macht den Code auf potenzielle Sicherheitsrisiken.  
   
     > [!IMPORTANT]
-    >  Aufrufen der Windows-API erfordert eine Berechtigung nicht verwaltetem Code die Ausführung in teilweise vertrauenswürdigen Umgebungen beeinflussen kann. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission>und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).</xref:System.Security.Permissions.SecurityPermission>  
+    >  Aufrufen der Windows-API erfordert die Berechtigung für nicht verwalteten Code, der die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)   
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)   
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
  [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

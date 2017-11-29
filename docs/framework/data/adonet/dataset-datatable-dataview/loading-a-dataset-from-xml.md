@@ -1,44 +1,50 @@
 ---
-title: "Laden eines DataSet aus XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Laden eines "DataSets" aus XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db507bf4f90d875960408857c7e6b1e3aa145730
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Laden eines DataSet aus XML
-Der Inhalt eines ADO.NET\-<xref:System.Data.DataSet> kann aus einem XML\-Stream oder einem XML\-Dokument erstellt werden.  Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML\-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
+# <a name="loading-a-dataset-from-xml"></a>Laden eines "DataSets" aus XML
+Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream oder einem XML-Dokument erstellt werden. Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
   
- Verwenden Sie zum Füllen eines <xref:System.Data.DataSet> mit Daten aus einer XML\-Quelle die **ReadXml**\-Methode des <xref:System.Data.DataSet>\-Objekts.  Die **ReadXml**\-Methode liest Daten aus einer Datei, einem Stream oder einem **XmlReader** und verwendet die Quelle der XML\-Daten sowie ein optionales **XmlReadMode**\-Argument als Argumente.  \(Weitere Informationen zum **XmlReader** finden Sie unter [NIB: Reading XML Data with XmlTextReader](http://msdn.microsoft.com/de-de/762c069b-b50c-41b8-936e-39eacfb0d540).\) Die **ReadXml**\-Methode liest den Inhalt des XML\-Streams oder des XML\-Dokuments und füllt das <xref:System.Data.DataSet> mit Daten.  In Abhängigkeit vom angegebenen **XmlReadMode** und vom Vorhandensein eines relationalen Schemas erstellt die Methode außerdem das relationale Schema des <xref:System.Data.DataSet>.  
+ Zum Auffüllen einer <xref:System.Data.DataSet> anhand der Daten aus XML, die **ReadXml** Methode der <xref:System.Data.DataSet> Objekt. Die **ReadXml** Methode liest aus einer Datei, einen Stream oder eine **XmlReader**, und verwendet als Argumente die Quelle der XML-Daten sowie ein optionales **XmlReadMode** Argument. (Weitere Informationen zu den **XmlReader**, finden Sie unter [NIB: Lesen von XML-Daten mit XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) Die **ReadXml** Methode liest den Inhalt der XML-Stream oder das Dokument und lädt die <xref:System.Data.DataSet> mit Daten. Erstellt jedoch auch das relationale Schema der <xref:System.Data.DataSet> je nach den **XmlReadMode** angegeben und davon, ob ein relationales Schema bereits vorhanden ist.  
   
- In der folgenden Tabelle werden die Optionen für das **XmlReadMode**\-Argument beschrieben.  
+ Die folgende Tabelle beschreibt die Optionen für die **XmlReadMode** Argument.  
   
 |Option|Beschreibung|  
-|------------|------------------|  
-|**Auto**|Dies ist die Standardeinstellung.  Prüft die XML\-Daten und wählt die am besten geeignete Option in der folgenden Reihenfolge aus:<br /><br /> -   Wenn die XML\-Daten im DiffGram\-Format vorliegen, wird **DiffGram** verwendet.<br />-   Wenn das <xref:System.Data.DataSet> ein Schema enthält oder die XML\-Daten ein Inlineschema besitzen, wird **ReadSchema** verwendet.<br />-   Wenn das <xref:System.Data.DataSet> kein Schema enthält und die XML\-Daten kein Inlineschema besitzen, wird **InferSchema** verwendet.<br /><br /> Wenn Sie das Format der gelesenen XML\-Daten kennen, besteht die effizienteste Methode darin, anstelle der Standardeinstellung **Auto** ein explizites **XmlReadMode**\-Argument anzugeben.|  
-|**ReadSchema**|Liest beliebige Inlineschemata und lädt Daten und Schemata.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, werden neue Tabellen aus dem Inlineschema zum vorhandenen Schema im <xref:System.Data.DataSet> hinzugefügt.  Wenn bereits Tabellen im Inlineschema des <xref:System.Data.DataSet> vorhanden sind, wird eine Ausnahme ausgelöst.  Sie können das Schema einer vorhandenen Tabelle nicht mit **XmlReadMode.ReadSchema** ändern.<br /><br /> Wenn das <xref:System.Data.DataSet> kein Schema enthält und kein Inlineschema vorhanden ist, werden keine Daten gelesen.<br /><br /> Ein Inlineschema kann mit dem XSD\-Schema \(XML Schema Definition Language\) definiert werden.  Ausführliche Informationen zum Schreiben eines Inlineschemas als XML\-Schema finden Sie unter [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
-|**IgnoreSchema**|Ignoriert alle Inlineschemata und lädt die Daten in das vorhandene <xref:System.Data.DataSet>\-Schema.  Daten, die nicht mit dem vorhandenen Schema übereinstimmen, werden gelöscht.  Wenn kein Schema im <xref:System.Data.DataSet> vorhanden ist, werden keine Daten geladen.<br /><br /> Wenn es sich bei den Daten um DiffGram\-Daten handelt, hat **IgnoreSchema** dieselbe Funktion wie **DiffGram**|  
-|**InferSchema**|Ignoriert alle Inlineschemata, leitet das Schema aus der Struktur der XML\-Daten ab und lädt anschließend die Daten.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, wird das aktuelle Schema durch Hinzufügen von Spalten zu den vorhandenen Tabellen erweitert.  Wenn keine Tabellen vorhanden sind, werden keine zusätzlichen Tabellen hinzugefügt.  Eine Ausnahme wird ausgelöst, wenn bereits eine hergeleitete Tabelle mit einem anderen Namespace vorhanden ist oder wenn hergeleitete Spalten mit vorhandenen Spalten kollidieren.<br /><br /> Ausführliche Informationen zum Herleiten eines Schemas aus einem XML\-Dokument durch **ReadXmlSchema** finden Sie unter [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
-|**DiffGram**|Liest ein DiffGram und fügt die Daten dem aktuellen Schema hinzu.  **DiffGram** führt neue Zeilen mit vorhandenen Zeilen zusammen, wenn die eindeutigen Bezeichnerwerte übereinstimmen.  Informationen hierzu finden Sie unter "Zusammenführen von Daten aus XML\-Dokumenten" am Ende dieses Themas.  Weitere Informationen zu DiffGrams finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
-|**Fragment**|Setzt den Lesevorgang für mehrere XML\-Fragmente fort, bis das Ende des Streams erreicht ist.  Fragmente, die mit dem <xref:System.Data.DataSet>\-Schema übereinstimmen, werden an die entsprechenden Tabellen angehängt.  Fragmente, die nicht mit dem <xref:System.Data.DataSet>\-Schema übereinstimmen, werden gelöscht.|  
+|------------|-----------------|  
+|**Auto**|Dies ist die Standardeinstellung. Prüft die XML-Daten und wählt die am besten geeignete Option in der folgenden Reihenfolge aus:<br /><br /> – Wenn es sich um eine XML-Daten um DiffGram, sind **DiffGram** verwendet wird.<br />-If die <xref:System.Data.DataSet> enthält ein Schema oder der XML-Code enthält ein Inlineschema **ReadSchema** verwendet wird.<br />-If die <xref:System.Data.DataSet> enthält kein Schema und der XML-Code enthält kein Inlineschema **InferSchema** verwendet wird.<br /><br /> Wenn Sie das Format der gelesenen XML-Daten kennen, für eine optimale Leistung wird empfohlen, dass ein explizites **XmlReadMode**, sondern als akzeptieren die **Auto** Standard.|  
+|**ReadSchema**|Liest beliebige Inlineschemata und lädt Daten und Schemata.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, werden neue Tabellen aus dem Inlineschema zum vorhandenen Schema im <xref:System.Data.DataSet> hinzugefügt. Wenn bereits Tabellen im Inlineschema des <xref:System.Data.DataSet> vorhanden sind, wird eine Ausnahme ausgelöst. Sie werden nicht in der Lage sind, Ändern des Schemas von einer vorhandenen Tabelle mit **XmlReadMode.ReadSchema**.<br /><br /> Wenn das <xref:System.Data.DataSet> kein Schema enthält und kein Inlineschema vorhanden ist, werden keine Daten gelesen.<br /><br /> Ein Inlineschema kann mit dem XSD-Schema (XML Schema Definition Language) definiert werden. Informationen über das Schreiben von Inlineschema als XML-Schema finden Sie unter [ableiten relationalen DataSet-Struktur von XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
+|**IgnoreSchema**|Ignoriert alle Inlineschemata und lädt die Daten in das vorhandene <xref:System.Data.DataSet>-Schema. Daten, die nicht mit dem vorhandenen Schema übereinstimmen, werden gelöscht. Wenn kein Schema im <xref:System.Data.DataSet> vorhanden ist, werden keine Daten geladen.<br /><br /> Wenn die Daten eines Diffgrams **IgnoreSchema** hat die gleiche Funktion wie **DiffGram** *.*|  
+|**InferSchema**|Ignoriert alle Inlineschemata, leitet das Schema aus der Struktur der XML-Daten ab und lädt anschließend die Daten.<br /><br /> Wenn das <xref:System.Data.DataSet> bereits ein Schema enthält, wird das aktuelle Schema durch Hinzufügen von Spalten zu den vorhandenen Tabellen erweitert. Wenn keine Tabellen vorhanden sind, werden keine zusätzlichen Tabellen hinzugefügt. Eine Ausnahme wird ausgelöst, wenn bereits eine hergeleitete Tabelle mit einem anderen Namespace vorhanden ist oder wenn hergeleitete Spalten mit vorhandenen Spalten kollidieren.<br /><br /> Weitere Informationen dazu, wie **ReadXmlSchema** leitet ein Schema aus einem XML-Dokument, finden Sie unter [Ableiten von relationalen DataSet-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
+|**DiffGram-Objekt**|	Liest ein DiffGram und fügt die Daten dem aktuellen Schema hinzu. **DiffGram** führt neue Zeilen mit vorhandenen Zeilen, bei denen die eindeutigen Bezeichnerwerte übereinstimmen. Informationen hierzu finden Sie unter "Zusammenführen von Daten aus XML-Dokumenten" am Ende dieses Themas. Weitere Informationen zu DiffGrams, finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**Fragment**|Setzt den Lesevorgang für mehrere XML-Fragmente fort, bis das Ende des Streams erreicht ist. Fragmente, die mit dem <xref:System.Data.DataSet>-Schema übereinstimmen, werden an die entsprechenden Tabellen angehängt. Fragmente, die nicht mit dem <xref:System.Data.DataSet>-Schema übereinstimmen, werden gelöscht.|  
   
 > [!NOTE]
->  Wenn Sie einen **XmlReader** an die **ReadXml**\-Methode übergeben, die sich innerhalb eines XML\-Dokuments befindet, liest **ReadXml** bis zum nächsten Elementknoten, behandelt diesen als Stammelement und liest dann nur bis zum Ende des Elementknotens.  Dies trifft nicht zu, wenn Sie **XmlReadMode.Fragment** verwenden.  
+>  Wenn Sie übergeben ein **XmlReader** auf **ReadXml** , positioniert das Teil der Art und Weise, in eine XML-Dokument **ReadXml** gelesen wird, um den nächsten Elementknoten und behandelt, der als Stamm Element, bis zum Ende des Elementknotens nur lesen. Dies gilt nicht, wenn Sie angeben, **XmlReadMode.Fragment**.  
   
-## DTD\-Entitäten  
- Bei einem XML\-Dokument mit Entitäten, die in einem DTD\-Schema \(Document Type Definition\) definiert sind, wird eine Ausnahme ausgelöst, wenn Sie versuchen, ein <xref:System.Data.DataSet> zu laden, indem Sie einen Dateinamen, einen Stream oder einen nicht validierten **XmlReader** an **ReadXml** übergeben.  Erstellen Sie stattdessen einen **XmlValidatingReader**, bei dem **EntityHandling** auf **EntityHandling.ExpandEntities** festgelegt ist, und übergeben Sie anschließend den **XmlValidatingReader** an **ReadXml**.  Der **XmlValidatingReader** erweitert die Entitäten, bevor er vom <xref:System.Data.DataSet> gelesen wird.  
+## <a name="dtd-entities"></a>DTD-Entitäten  
+ Enthält das XML-Entitäten, die in einem Document Type Definition (DTD) Schema definiert, wird eine Ausnahme ausgelöst, wenn Sie versuchen, laden ein <xref:System.Data.DataSet> durch Übergeben einer Datei Name, Stream- oder nicht überprüfender **XmlReader** auf  **ReadXml**. Erstellen Sie stattdessen eine **XmlValidatingReader**, mit **EntityHandling** festgelegt **EntityHandling.ExpandEntities**, und übergeben Sie die  **XmlValidatingReader** auf **ReadXml**. Die **XmlValidatingReader** erweitert die Entitäten, bevor Sie gelesen werden, indem Sie die <xref:System.Data.DataSet>.  
   
- In den folgenden Codebeispielen wird dargestellt, wie ein <xref:System.Data.DataSet> aus einem XML\-Stream geladen wird.  Im ersten Beispiel wird ein Dateiname an die **ReadXml**\-Methode übergeben.  Im zweiten Beispiel wird eine Zeichenfolge mit XML\-Daten mithilfe eines <xref:System.IO.StringReader> geladen.  
+ In den folgenden Codebeispielen wird dargestellt, wie ein <xref:System.Data.DataSet> aus einem XML-Stream geladen wird. Im ersten Beispiel wird ein Dateiname übergeben werden, um die **ReadXml** Methode. Im zweiten Beispiel wird eine Zeichenfolge mit XML-Daten mithilfe eines <xref:System.IO.StringReader> geladen.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -77,7 +83,7 @@ dataSet.ReadXml(xmlSR, XmlReadMode.IgnoreSchema);
 ```  
   
 > [!NOTE]
->  Wenn für das Laden einer sehr großen Datei **ReadXml** aufgerufen wird, führt dies möglicherweise zu einem Leistungsabfall.  Damit **ReadXml** mit optimaler Effizienz verwendet werden kann, rufen Sie bei einer großen Datei zunächst die <xref:System.Data.DataTable.BeginLoadData%2A>\-Methode für jede Tabelle im <xref:System.Data.DataSet> auf, und rufen Sie anschließend **ReadXml** auf.  Rufen Sie zum Schluss <xref:System.Data.DataTable.EndLoadData%2A> für jede Tabelle im <xref:System.Data.DataSet> auf. Dies wird im folgenden Beispiel dargestellt.  
+>  Beim Aufrufen **ReadXml** um einen sehr großen Datei zu laden, treten möglicherweise langsam. Um optimale Leistung für sicherzustellen, dass **ReadXml**, rufen Sie bei einer großen Datei die <xref:System.Data.DataTable.BeginLoadData%2A> Methode für jede Tabelle in der <xref:System.Data.DataSet>, und rufen Sie anschließend **ReadXml**. Rufen Sie zum Schluss <xref:System.Data.DataTable.EndLoadData%2A> für jede Tabelle im <xref:System.Data.DataSet> auf. Dies wird im folgenden Beispiel dargestellt.  
   
 ```vb  
 Dim dataTable As DataTable  
@@ -104,9 +110,9 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  Wenn zum XSD\-Schema für das <xref:System.Data.DataSet> ein **targetNamespace** gehört, werden die Daten möglicherweise nicht gelesen. Außerdem können Ausnahmen ausgelöst werden, wenn Sie **ReadXml** zum Laden des <xref:System.Data.DataSet> mit XML aufrufen, das Elemente ohne qualifizierenden Namespace enthält.  Damit in diesem Fall nicht qualifizierte Elemente gelesen werden können, legen Sie im XSD\-Schema **elementFormDefault** auf "qualified" fest.  Beispiel:  
+>  Wenn das XSD-Schema für Ihre <xref:System.Data.DataSet> enthält eine **TargetNamespace**, möglicherweise keine Daten gelesen und beim Aufrufen können Ausnahmen auftreten **ReadXml** beim Laden der <xref:System.Data.DataSet> mit XML, die enthält Elemente ohne qualifizierenden Namespace. Legen Sie zum Lesen von nicht gekennzeichneten Elemente in diesem Fall **ElementFormDefault** auf "qualified" in der XSD-Schema entspricht. Zum Beispiel:  
   
-```  
+```xml  
 <xsd:schema id="customDataSet"   
   elementFormDefault="qualified"  
   targetNamespace="http://www.tempuri.org/customDataSet.xsd"   
@@ -116,15 +122,15 @@ foreach (DataTable dataTable in dataSet.Tables)
 </xsd:schema>  
 ```  
   
-## Zusammenführen von Daten aus XML\-Dokumenten  
- Wenn das <xref:System.Data.DataSet> bereits Daten enthält, werden die neuen Daten aus der XML\-Quelle den im <xref:System.Data.DataSet> bereits vorhandenen Daten hinzugefügt.  **ReadXml** fügt keine Zeileninformationen mit übereinstimmenden Primärschlüsseln aus dem XML\-Dokument in das <xref:System.Data.DataSet> ein.  Wenn vorhandene Zeileninformationen mit neuen XML\-Informationen überschrieben werden sollen, müssen Sie mit **ReadXml** zunächst ein neues <xref:System.Data.DataSet> erstellen. Führen Sie anschließend einen <xref:System.Data.DataSet.Merge%2A>\-Vorgang aus, um das neue <xref:System.Data.DataSet> mit dem vorhandenen <xref:System.Data.DataSet> zusammenzuführen.  Wenn Sie ein DiffGram mit **ReadXML** laden und **XmlReadMode** auf **DiffGram** festgelegt ist, werden die Zeilen mit identischem Bezeichner zusammengeführt.  
+## <a name="merging-data-from-xml"></a>	Zusammenführen von Daten aus XML-Dokumenten  
+ Wenn das <xref:System.Data.DataSet> bereits Daten enthält, werden die neuen Daten aus der XML-Quelle den im <xref:System.Data.DataSet> bereits vorhandenen Daten hinzugefügt. **ReadXml** nicht zusammen aus dem XML-Dokument in der <xref:System.Data.DataSet> alle Zeileninformationen mit übereinstimmenden Primärschlüsseln. Zum Überschreiben vorhandene Zeileninformationen mit neuen Informationen aus XML verwenden **ReadXml** zum Erstellen eines neuen <xref:System.Data.DataSet>, und klicken Sie dann <xref:System.Data.DataSet.Merge%2A> neuen <xref:System.Data.DataSet> mit dem vorhandenen <xref:System.Data.DataSet>. Laden ein DiffGram mit **ReadXML** mit einem **XmlReadMode** von **DiffGram** Zeilen mit identischem Bezeichner zusammengeführt.  
   
-## Siehe auch  
- <xref:System.Data.DataSet.Merge%2A?displayProperty=fullName>   
- [Verwenden von XML in einem DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)   
- [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)   
- [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Laden von DataSet\-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
+ [Ableiten von relationalen DataSet-Struktur von XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Ableiten von relationalen DataSet-Struktur von XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Beim Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

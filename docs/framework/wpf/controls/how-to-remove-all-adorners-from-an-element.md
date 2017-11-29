@@ -1,37 +1,42 @@
 ---
-title: "Gewusst wie: Entfernen aller Adorner aus einem Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Adorner, Entfernen"
+title: 'Gewusst wie: Entfernen aller Adorner aus einem Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e9b69b9150e8d2c2938c53fcd47e72b7fcb6d238
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Entfernen aller Adorner aus einem Element
-In diesem Beispiel wird gezeigt, wie alle Adorner programmgesteuert aus einem angegebenen <xref:System.Windows.UIElement> entfernt werden.  
+# <a name="how-to-remove-all-adorners-from-an-element"></a>Gewusst wie: Entfernen aller Adorner aus einem Element
+In diesem Beispiel wird gezeigt, wie So entfernen Sie alle Adorner programmgesteuert aus einem angegebenen <xref:System.Windows.UIElement>.  
   
-## Beispiel  
- In diesem ausführlichen Codebeispiel werden alle Adorner im Array mit Adornern entfernt, das von <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> zurückgegeben wird.  In diesem Beispiel werden die Adorner für ein <xref:System.Windows.UIElement> mit dem Namen *myTextBox* abgerufen.  Wenn das Element, das im Aufruf von <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> angegeben ist, keine Adorner aufweist, wird `null` zurückgegeben.  Dieser Code führt eine explizite Prüfung auf ein NULL\-Array durch und eignet sich am besten für Anwendungen, in denen ein NULL\-Array relativ häufig vorkommt.  
+## <a name="example"></a>Beispiel  
+ Diese ausführlichen Codebeispiel entfernt alle Adorner im Array von Adornern zurückgegebenes <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  In diesem Beispiel erfolgt, Abrufen von Adorner auf eine <xref:System.Windows.UIElement> mit dem Namen *MyTextBox*.  Wenn das Element im Aufruf angegeben <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> verfügt über keine Adorner `null` zurückgegeben wird.  Dieser Code überprüft, ob ein null-Array explizit und eignet sich optimal für Anwendungen, in denen ein null-Array erwartet wird, relativ häufig verwendet.  
   
  [!code-csharp[AdornersMiscCode#_RemoveAllAdornersLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removealladornerslong)]
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornerslong)]  
   
-## Beispiel  
- Dieses gekürzte Codebeispiel entspricht in Bezug auf seine Funktion dem oben gezeigten ausführlichen Beispiel.  Dieser Code führt keine explizite Prüfung auf ein NULL\-Array durch, so dass ggf. eine <xref:System.NullReferenceException>\-Ausnahme ausgelöst wird.  Dieser Code eignet sich am besten für Anwendungen, in denen ein NULL\-Array nicht häufig verwendet wird.  
+## <a name="example"></a>Beispiel  
+ Dieser verkürzte Codebeispiel ist funktionell gleichwertig mit der oben gezeigten ausführlichen Beispiel. Dieser Code explizit überprüft nicht für ein null-Array, daher ist es möglich, eine <xref:System.NullReferenceException> Ausnahme kann ausgelöst werden.  Dieser Code eignet sich optimal für Anwendungen, in denen ist ein null-Array eher selten.  
   
  [!code-csharp[AdornersMiscCode#_RemoveAllAdornersShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removealladornersshort)]
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornersshort)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über Adorner](../../../../docs/framework/wpf/controls/adorners-overview.md)

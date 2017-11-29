@@ -1,35 +1,38 @@
 ---
-title: "5012 - DCJsonGenReaderStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5012 - DCJsonGenReaderStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d2ad3c9-47ee-4e77-b1c6-259ab15b0cfb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc7c4e9a3d3e1b5cb844c039d66abf7e33c9cedd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 5012 - DCJsonGenReaderStart
-## Eigenschaften  
+# <a name="5012---dcjsongenreaderstart"></a>5012 - DCJsonGenReaderStart
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|5012|  
 |Stichwörter|Serialisierung|  
 |Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
- Das Ereignis wird ausgegeben, wenn der Json\-generierte Leser gestartet wird.  
+## <a name="description"></a>Beschreibung  
+ Das Ereignis wird ausgegeben, wenn der Json-generierte Leser gestartet wird.  
   
-## Meldung  
- Json\-Generierung von %1 Reader für "%2" starten.  
+## <a name="message"></a>Meldung  
+ Json-Generierung von %1 Reader für "%2" starten.  
   
-## Details
+## <a name="details"></a>Details

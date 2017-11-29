@@ -1,35 +1,35 @@
 ---
-title: "&#220;bersicht &#252;ber das GroupBox-Steuerelement (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GroupBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GroupBox-Steuerelement [Windows Forms], Informationen über das GroupBox-Steuerelement"
-  - "Gruppieren von Steuerelementen, Windows Forms"
+title: "Übersicht über das GroupBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GroupBox
+helpviewer_keywords:
+- GroupBox control [Windows Forms], about GroupBox control
+- grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# &#220;bersicht &#252;ber das GroupBox-Steuerelement (Windows Forms)
-<xref:System.Windows.Forms.GroupBox>\-Steuerelemente in Windows Forms werden dazu verwendet, andere Steuerelemente zu identifizierbaren Gruppen zusammenzufassen.  Normalerweise wird ein Formular mithilfe von Gruppenfeldern nach Funktionsbereichen unterteilt.  Angenommen, in einem Bestellformular sind Zustelloptionen, beispielsweise der zu verwendende Overnight\-Zustelldienst, definiert.  Durch das Gruppieren aller Optionen in einem Gruppenfeld erhält der Benutzer eine logische visuelle Orientierungshilfe. Darüber hinaus können alle Steuerelemente zur Entwurfszeit problemlos verschoben werden. Sie brauchen nur ein einzelnes <xref:System.Windows.Forms.GroupBox>\-Steuerelement zu bewegen, um alle enthaltenen Steuerelemente mit zu verschieben.  
+# <a name="groupbox-control-overview-windows-forms"></a>Übersicht über das GroupBox-Steuerelement (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.GroupBox> Steuerelemente werden verwendet, um eine erkennbare Gruppierung für andere Steuerelemente bereitstellen. Normalerweise verwenden Sie Gruppenfelder darin, um eine Form von Funktion zu unterteilen. Sie möglicherweise z. B. ein Bestellformular, der angibt, mailing Optionen wie z. B. welche über Nacht Netzbetreiber verwenden. Gruppieren alle Optionen in einem Gruppenfeld erhält der Benutzer einen logischen visuellen Hinweis und zur Entwurfszeit alle Steuerelemente können verschoben werden, leicht – Wenn Sie die einzelnen verschieben <xref:System.Windows.Forms.GroupBox> alle darin enthaltenen Steuerelemente zu verschieben, zu steuern.  
   
- Die Beschriftung des Gruppenfelds wird durch die <xref:System.Windows.Forms.GroupBox.Text%2A>\-Eigenschaft definiert.  Weitere Informationen finden Sie unter [Gewusst wie: Festlegen des durch ein Windows Forms\-Steuerelement angezeigten Textes](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Das Gruppenfeld Beschriftung wird definiert, indem die <xref:System.Windows.Forms.GroupBox.Text%2A> Eigenschaft. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen der Text, die durch ein Windows Forms-Steuerelement angezeigt](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## GroupBox und Panel  
- Das <xref:System.Windows.Forms.GroupBox>\-Steuerelement ist grundsätzlich mit dem <xref:System.Windows.Forms.Panel>\-Steuerelement vergleichbar. Allerdings kann nur das <xref:System.Windows.Forms.GroupBox>\-Steuerelement mit einer Beschriftung versehen werden und nur das <xref:System.Windows.Forms.Panel>\-Steuerelement mit Bildlaufleisten.  
+## <a name="groupbox-and-panel"></a>GroupBox und Bereich  
+ Die <xref:System.Windows.Forms.GroupBox> Steuerelement ähnelt der <xref:System.Windows.Forms.Panel> steuern; allerdings nur die <xref:System.Windows.Forms.GroupBox> -Steuerelement zeigt eine Beschriftung und nur die <xref:System.Windows.Forms.Panel> Steuerelement Bildlaufleisten haben kann.  
   
-## Siehe auch  
- [GroupBox\-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ [GroupBox-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

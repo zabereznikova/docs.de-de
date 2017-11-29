@@ -1,43 +1,46 @@
 ---
-title: "Gewusst wie: Erstellen einer einfachen Bindung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Binden von Daten, Erstellen"
-  - "Datenbindung, Erstellen von einfachen Bindungen"
-  - "Einfache Bindung, Erstellen"
+title: 'Gewusst wie: Erstellen einer einfachen Bindung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simple binding [WPF], creating
+- data binding [WPF], creating simple bindings
+- binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a61844f917539f5d5e7c99299c8a33f4aa18450f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen einer einfachen Bindung
-Dieses Beispiel zeigt, wie Sie eine einfache Bindung mithilfe von <xref:System.Windows.Data.Binding> erstellen können.  
+# <a name="how-to-create-a-simple-binding"></a>Gewusst wie: Erstellen einer einfachen Bindung
+Dieses Beispiel veranschaulicht das Erstellen eines einfachen <xref:System.Windows.Data.Binding>.  
   
-## Beispiel  
- In diesem Beispiel wird ein `Person`\-Objekt mit einer Zeichenfolgeneigenschaft mit dem Namen `PersonName` verwendet.  Das `Person`\-Objekt wird im Namespace mit dem Namen `SDKSample` definiert.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel haben Sie eine `Person` Objekt mit der eine Zeichenfolgeneigenschaft, die mit dem Namen `PersonName`. Die `Person` Objekt ist im Namespace namens definiert `SDKSample`.  
   
- Im folgenden Beispiel wird das `Person`\-Objekt mit dem `PersonName`\-Eigenschaftswert `Joe` instanziiert.  Dies geschieht im Abschnitt `Resources` und weist einen `x:Key` zu.  
+ Das folgende Beispiel instanziiert die `Person` -Objekt mit einer `PersonName` Eigenschaftswert `Joe`. Dies erfolgt in der `Resources` Abschnitt zugewiesen, und wählen Sie eine `x:Key`.  
   
- [!code-xml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
-[!code-xml[SimpleBinding#EndWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#endwindow)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
+[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+[!code-xaml[SimpleBinding#EndWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#endwindow)]  
   
- Um eine Bindung zur `PersonName`\-Eigenschaft vorzunehmen, gehen Sie wie folgt vor:  
+ Zum Binden an die `PersonName` Eigenschaft würden Sie Folgendes tun:  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- Als Ergebnis wird der <xref:System.Windows.Controls.TextBlock> mit dem Wert "Joe" angezeigt.  
+ Daher die <xref:System.Windows.Controls.TextBlock> wird mit dem Wert "Joe" angezeigt.  
   
-## Siehe auch  
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,70 +1,71 @@
 ---
-title: "Gewusst wie: Festlegen und Zur&#252;ckgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Numerische Werte, Windows Forms"
-  - "NumericUpDown-Steuerelement [Windows Forms], Festlegen und Zurückgeben von Werten"
-  - "Windows Forms-Steuerelemente, NumericUpDown"
-  - "Windows Forms, Numerische Werte"
+title: "Gewusst wie: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- numeric values [Windows Forms], Windows Forms
+- Windows Forms, numeric values
+- Windows Forms controls, NumericUpDown
+- NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen und Zur&#252;ckgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows&#160;Forms
-Der numerische Wert des <xref:System.Windows.Forms.NumericUpDown>\-Steuerelements in Windows Forms wird durch seine <xref:System.Windows.Forms.NumericUpDown.Value%2A>\-Eigenschaft bestimmt.  Für den Wert des Steuerelements können Sie ebenso wie für alle anderen Eigenschaften Bedingungsabfragen schreiben.  Sobald die <xref:System.Windows.Forms.NumericUpDown.Value%2A>\-Eigenschaft festgelegt wurde, können Sie diese direkt durch Code zum Ausführen von Operationen oder durch Aufrufen der Methoden <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> anpassen.  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Gewusst wie: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms
+Der numerische Wert des Windows Forms <xref:System.Windows.Forms.NumericUpDown> Steuerelement richtet sich nach seiner <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft. Sie können die bedingte Tests für den Wert des Steuerelements wie bei einer anderen Eigenschaft schreiben. Einmal die <xref:System.Windows.Forms.NumericUpDown.Value%2A> festgelegt wird, können Sie es direkt durch Schreiben von Code zum Ausführen von Vorgängen auf Anpassen oder Sie erreichen die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methoden.  
   
-### So legen Sie den numerischen Wert fest  
+### <a name="to-set-the-numeric-value"></a>Zum Festlegen des numerischen Werts  
   
-1.  Weisen Sie der <xref:System.Windows.Forms.NumericUpDown.Value%2A>\-Eigenschaft im Code oder im Eigenschaftenfenster einen Wert zu.  
+1.  Weisen Sie einen Wert, der <xref:System.Windows.Forms.NumericUpDown.Value%2A> -Eigenschaft im Code oder im Eigenschaftenfenster angezeigt.  
   
     ```vb  
     NumericUpDown1.Value = 55  
-  
     ```  
   
     ```csharp  
     numericUpDown1.Value = 55;  
-  
     ```  
   
     ```cpp  
     numericUpDown1->Value = 55;  
     ```  
   
-     \- oder \-  
+     - oder -   
   
-2.  Rufen Sie die Methode <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oder <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> auf, um den Wert entsprechend der Angabe in der <xref:System.Windows.Forms.NumericUpDown.Increment%2A>\-Eigenschaft zu erhöhen oder zu verringern.  
+2.  Rufen Sie die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oder <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methode zu erhöhen oder verringern Sie den Wert entsprechend der Angabe der <xref:System.Windows.Forms.NumericUpDown.Increment%2A> Eigenschaft.  
   
     ```vb  
     NumericUpDown1.UpButton()  
-  
     ```  
   
     ```csharp  
     numericUpDown1.UpButton();  
-  
     ```  
   
     ```cpp  
     numericUpDown1->UpButton();  
     ```  
   
-### So geben Sie den numerischen Wert zurück  
+### <a name="to-return-the-numeric-value"></a>Um den numerischen Wert zurückzugeben  
   
--   Greifen Sie im Code auf die <xref:System.Windows.Forms.NumericUpDown.Value%2A>\-Eigenschaft zu.  
+-   Zugriff der <xref:System.Windows.Forms.NumericUpDown.Value%2A> -Eigenschaft im Code.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -72,7 +73,6 @@ Der numerische Wert des <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement
     Else  
        MessageBox.Show("The customer is ineligible for a senior citizen discount.")  
     End If  
-  
     ```  
   
     ```csharp  
@@ -84,7 +84,6 @@ Der numerische Wert des <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement
     {  
        MessageBox.Show("The customer is ineligible for a senior citizen discount.");  
     }  
-  
     ```  
   
     ```cpp  
@@ -100,11 +99,11 @@ Der numerische Wert des <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement
     }  
     ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.NumericUpDown>   
- <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=fullName>   
- [NumericUpDown\-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)   
- [Übersicht über das NumericUpDown\-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>  
+ [NumericUpDown-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [Übersicht über das NumericUpDown-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

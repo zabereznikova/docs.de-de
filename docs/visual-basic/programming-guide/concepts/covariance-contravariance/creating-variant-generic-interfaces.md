@@ -1,46 +1,38 @@
 ---
-title: Erstellen von Varianten generischen Schnittstellen (Visual Basic) | Microsoft-Dokumentation
+title: Erstellen von Varianten generischen Schnittstellen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 324e2a906e84950aa9019bbf68a524458492646e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Erstellen von Varianten generischen Schnittstellen (Visual Basic)
-Sie können deklarieren, generischen Typparametern in Schnittstellen als kovariant oder kontravariant. *Kovarianz* ermöglicht Schnittstellenmethoden, stärker abgeleitete Rückgabetypen zu verwenden, als durch die generischen Typparameter definiert. *Kontravarianz* ermöglicht Schnittstellenmethoden Argumenttypen zu verwenden, die weniger stark abgeleitet sind, als durch die generischen Parameter angegeben. Eine generische Schnittstelle mit ko- oder kontravarianten generischen Typparametern heißt *Variante*.  
+Sie können generische Typparameter in Schnittstellen als Kovariante oder als Kontravariante deklarieren. *Kovarianz* ermöglicht Schnittstellenmethoden, stärker abgeleitete Rückgabetypen zu verwenden, als durch die generischen Typparameter definiert. *Kontravarianz* ermöglicht Schnittstellenmethoden, Argumenttypen zu verwenden, die weniger stark abgeleitet sind, als durch die generischen Parameter angegeben. Eine generische Schnittstelle mit ko- oder kontravarianten generischen Typparametern wird als *variant* bezeichnet.  
   
 > [!NOTE]
->  Varianz-Unterstützung für mehrere vorhandene generische Schnittstellen wurde in .NET Framework 4 eingeführt. Die Liste der Varianten Schnittstellen in .NET Framework finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+>  In .NET Framework 4 wurde die Varianzunterstützung für mehrere vorhandene generische Schnittstellen eingeführt. Die Liste der Varianten Schnittstellen in .NET Framework, finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
-## <a name="declaring-variant-generic-interfaces"></a>Deklarieren von Varianten generischen Schnittstellen  
- Sie können Variante generische Schnittstellen deklarieren, indem die `in` und `out` Schlüsselwörter für generische Typparameter.  
+## <a name="declaring-variant-generic-interfaces"></a>Deklarieren von varianten generischen Schnittstellen  
+ Sie können variante generische Schnittstellen deklarieren, indem Sie die `in`- und `out`-Schlüsselwörter für generische Typparameter verwenden.  
   
 > [!IMPORTANT]
->  `ByRef`-Parameter in Visual Basic nicht Variant-Wert. Varianz unterstützt Werttypen auch nicht.  
+>  `ByRef`-Parameter in Visual Basic nicht Variant-Wert. Auch Werttypen unterstützen keine Varianz.  
   
- Sie können einen generischen Typparameter kovariant deklarieren, indem die `out` Schlüsselwort. Der kovariante Typ muss Folgendes erfüllen:  
+ Sie können einen generischen Typparameter mithilfe des Schlüsselworts `out` als Kovariante deklarieren. Der kovariante Typ muss die folgenden Bedingungen erfüllen:  
   
--   Der Typ wird nur als Rückgabetyp von Schnittstellenmethoden verwendet und nicht als Typ von Methodenargumenten verwendet. Dies wird im folgenden Beispiel, in dem veranschaulicht den Typ `R` als kovariant deklariert ist.  
+-   Der Typ wird nur als Rückgabetyp von Schnittstellenmethoden verwendet, und nicht als Typ von Methodenargumenten. Dies wird im folgenden Beispiel veranschaulicht, in dem der Typ `R` als Kovariante deklariert wird.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -50,7 +42,7 @@ Sie können deklarieren, generischen Typparametern in Schnittstellen als kovaria
     End Interface  
     ```  
   
-     Es gibt allerdings eine Ausnahme zu dieser Regel. Wenn Sie einen kontravarianten generischen Delegaten als Methodenparameter angegeben haben, können Sie den Typ als einen generischen Typparameter für den Delegaten verwenden. Dies wird durch den Typ veranschaulicht `R` im folgenden Beispiel. Weitere Informationen finden Sie unter [Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) und [mithilfe von Varianz für die Aktion generischen Delegaten Func und (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+     Es gibt allerdings eine Ausnahme zu dieser Regel. Wenn Sie einen kontravarianten generischen Delegaten als Methodenparameter angegeben haben, können Sie den Typ als generischen Typparameter für den Delegaten verwenden. Dies wird im folgenden Beispiel von Typ `R` veranschaulicht. Weitere Informationen finden Sie unter [Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) und [Verwenden von Varianz für Func und Action generische Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -58,7 +50,7 @@ Sie können deklarieren, generischen Typparametern in Schnittstellen als kovaria
     End Interface  
     ```  
   
--   Der Typ wird nicht als generische Einschränkung für die Schnittstellenmethoden verwendet. Dies wird im folgenden Code veranschaulicht.  
+-   Der Typ wird nicht als generische Einschränkung für die Schnittstellenmethoden verwendet. Der folgende Code veranschaulicht dies.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -69,7 +61,7 @@ Sie können deklarieren, generischen Typparametern in Schnittstellen als kovaria
     End Interface  
     ```  
   
- Sie können einen generischen Typparameter als Kontravariante deklarieren, indem die `in` Schlüsselwort. Der kontravariante Typ kann nur als Typ von Methodenargumenten und nicht als Rückgabetyp von Schnittstellenmethoden verwendet werden. Der kontravariante Typ kann auch für generische Einschränkungen verwendet werden. Der folgende Code zeigt, wie eine kontravariante Schnittstelle deklariert und eine generische Einschränkung für eine seiner Methoden verwenden.  
+ Sie können einen generischen Typparameter mithilfe des Schlüsselworts `in` als Kovariante deklarieren. Der kontravariante Typ kann nur als Typ von Methodenargumenten und nicht von Schnittstellenmethoden verwendet werden. Der kontravariante Typ kann auch für generische Einschränkungen verwendet werden. Der folgende Code zeigt, wie eine kontravariante Schnittstelle deklariert und eine generische Einschränkung für eine ihrer Methoden verwendet wird.  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -80,7 +72,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- Es ist auch möglich, Kovarianz und Kontravarianz in derselben Schnittstelle, aber für unterschiedliche Typparameter unterstützen, wie im folgenden Codebeispiel gezeigt.  
+ Bei unterschiedlichen Typparametern ist jedoch auch die Verwendung verschiedener Ko- und Kontravarianzen in der gleichen Schnittstelle möglich, wie im folgenden Codebeispiel veranschaulicht wird.  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -90,7 +82,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- In Visual Basic können Sie Ereignisse in Varianten Schnittstellen deklarieren, ohne den Delegattyp anzugeben. Außerdem eine Variante Schnittstelle kann jedoch keine geschachtelten Klassen, Enumerationen und Strukturen, Schnittstellen geschachtelt haben. Dies wird im folgenden Code veranschaulicht.  
+ In Visual Basic kann Ereignisse in Varianten Schnittstellen nicht deklariert werden, ohne Angabe des Delegattyps. Darüber hinaus eine Variante-Schnittstelle kann jedoch keine geschachtelten Klassen, Enumerationen und Strukturen, Schnittstellen geschachtelt sind. Der folgende Code veranschaulicht dies.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -113,8 +105,8 @@ Interface ICovariant(Of Out R)
 End Interface  
 ```  
   
-## <a name="implementing-variant-generic-interfaces"></a>Implementieren von Varianten generischen Schnittstellen  
- Variante generische Schnittstellen in Klassen zu implementieren, mit der gleichen Syntax, die für invariante Schnittstellen verwendet wird. Im folgenden Codebeispiel wird veranschaulicht, wie eine kovariante Schnittstelle in einer generischen Klasse implementiert wird.  
+## <a name="implementing-variant-generic-interfaces"></a>Implementieren von varianten generischen Schnittstellen  
+ Sie können variante generische Schnittstellen in Klassen implementieren, indem Sie die gleiche Syntax verwenden, die für invariante Schnittstellen verwendet wird. Im folgenden Codebeispiel wird veranschaulicht, wie eine kovariante Schnittstelle in einer generischen Klasse implementiert wird.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -130,7 +122,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- Klassen, die Variante Schnittstellen zu implementieren sind unveränderlich. Betrachten Sie hierzu den folgenden Beispielcode:  
+ Klassen, die variante Schnittstellen implementieren, sind nicht variant. Betrachten Sie hierzu den folgenden Beispielcode:  
   
 ```vb  
  The interface is covariant.  
@@ -146,8 +138,8 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button  
 ```  
   
-## <a name="extending-variant-generic-interfaces"></a>Erweitern von Varianten generischen Schnittstellen  
- Wenn Sie eine Variante generische Schnittstelle erweitern, müssen Sie die `in` und `out` Schlüsselwörter explizit angeben, ob Varianz von der abgeleitete Schnittstelle unterstützt. Der Compiler leitet sich nicht auf die Abweichung von der Schnittstelle aus, der erweitert wird. Betrachten Sie beispielsweise die folgenden Schnittstellen.  
+## <a name="extending-variant-generic-interfaces"></a>Erweitern von varianten generischen Schnittstellen  
+ Wenn Sie eine variante generische Schnittstelle erweitern, müssen Sie mit den `in`- und `out`-Schlüsselwörtern explizit angeben, ob Varianz von der abgeleiteten Schnittstelle unterstützt wird. Der Compiler leitet eine Varianz nicht von der Schnittstelle ab, die erweitert wird. Beachten Sie z.B. die folgenden Schnittstellen.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -162,9 +154,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- In der `Invariant(Of T)` Schnittstelle, die generischen Typparameter `T` ist unveränderlich, während in `IExtCovariant (Of Out T)`der Typparameter ist kovariant, obwohl beide Schnittstellen die gleiche Schnittstelle erweitern. Die gleiche Regel gilt für kontravariante generische Typparameter.  
+ In der `Invariant(Of T)` Netzwerkschnittstelle, die den generischen Typparameter `T` ist unveränderlich, während in `IExtCovariant (Of Out T)`der Typparameter ist covariant, obwohl beide Schnittstellen die gleiche Schnittstelle zu erweitern. Die gleiche Regel gilt für kontravariante generische Typparameter.  
   
- Sie können eine Schnittstelle, die die Schnittstelle, in dem der generische Typparameter, erweitert erstellen `T` ist kovariant sowie die Schnittstelle mit dem kontravarianten in der erweiternden Schnittstelle den generische Typparameter `T` ist unveränderlich. Dies wird im folgenden Codebeispiel veranschaulicht.  
+ Sie können eine Schnittstelle erstellen, die sowohl die Schnittstelle mit dem kovarianten generischen Typparameter `T` als auch die Schnittstelle mit dem kontravarianten Typparameter implementiert, wenn der generische Typparameter `T` in der erweiternden Schnittstelle nicht variant ist. Dies wird im folgenden Codebeispiel veranschaulicht.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -178,7 +170,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- Jedoch, wenn ein generischer Typparameter `T` ist kovariant in einer Schnittstelle deklariert, Deklaration kann nicht über kontravariante in der erweiternden Schnittstelle (oder umgekehrt). Dies wird im folgenden Codebeispiel veranschaulicht.  
+ Wenn der generische Typparameter `T` jedoch in einer Schnittstelle als Kovariante deklariert wird, können Sie ihn nicht in der erweiternden Schnittstelle als Kontravariante deklarieren oder umgekehrt. Dies wird im folgenden Codebeispiel veranschaulicht.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -190,13 +182,13 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>Vermeiden von Mehrdeutigkeit  
- Wenn Sie eine Variante generische Schnittstellen implementieren, kann Varianz manchmal zu Mehrdeutigkeit führen. Dies sollte vermieden werden.  
+### <a name="avoiding-ambiguity"></a>Vermeiden von Mehrdeutigkeiten  
+ Wenn Sie variante generische Schnittstellen implementieren, kann Varianz manchmal zu Mehrdeutigkeit führen. Dies sollte vermieden werden.  
   
- Wenn Sie explizit die gleiche Variante generische Schnittstelle mit unterschiedlichen generischen Typparametern in einer Klasse implementieren, können sie z. B. Mehrdeutigkeit erstellen. Der Compiler einen Fehler in diesem Fall erzeugt, aber es ist nicht angegeben, welche Implementierung zur Laufzeit ausgewählt wird. Dies kann zu schwer erkennbaren Fehlern im Code führen. Betrachten Sie das folgende Codebeispiel.  
+ Wenn Sie z.B. die gleiche variante generische Schnittstelle explizit mit unterschiedlichen generischen Typparametern in einer Klasse implementieren, kann dies zu Mehrdeutigkeit führen. Der Compiler erzeugt in diesem Fall keinen Fehler, aber es wird nicht angegeben, welche Schnittstellenimplementierung zur Laufzeit ausgewählt wird. Dies kann zu schwer erkennbaren Fehlern im Code führen. Betrachten Sie folgendes Codebeispiel.  
   
 > [!NOTE]
->  Mit `Option Strict Off`, Visual Basic generiert eine Warnung der Compiler, wenn eine Implementierung von mehrdeutiger vorhanden ist. Mit `Option Strict On`, Visual Basic wird ein Compilerfehler generiert.  
+>  Mit `Option Strict Off`, Visual Basic generiert eine Warnung der Compiler, wenn es eine mehrdeutige-Implementierung ist. Mit `Option Strict On`, Visual Basic generiert einen Compilerfehler.  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -240,8 +232,8 @@ Sub Main()
 End Sub  
 ```  
   
- In diesem Beispiel ist nicht angegeben wie die `pets.GetEnumerator` Methode wählt zwischen `Cat` und `Dog`. Dies kann Probleme im Code verursachen.  
+ In diesem Beispiel ist nicht angegeben, wie die `pets.GetEnumerator`-Methode zwischen `Cat` und `Dog` auswählt. Dies könnte Probleme im Code verursachen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [Verwenden von Varianz für die Aktion generischen Delegaten Func und (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Using Variance for Func and Action Generic Delegates (Visual Basic) (Verwenden von Varianz für die generischen Delegaten Func und Action (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

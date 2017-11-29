@@ -1,34 +1,37 @@
 ---
-title: "Gewusst wie: Erkennen einer .NET Framework 3.0-Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erkennen von WPF-Präsenz"
-  - "Präsenz von WPT, Ermitteln"
-  - "WinFX-Laufzeit-Benutzer-Agent-Zeichenfolge"
+title: 'Gewusst wie: Erkennen einer .NET Framework 3.0-Installation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WinFX Runtime user-agent string
+- presence of WPT [WPF], detecting
+- detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e013c9426507e20da05df26932a1f9cf1e5df761
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Erkennen einer .NET Framework 3.0-Installation
-Bevor Administratoren [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]\-Anwendungen in einem System einsetzen können, müssen sie sich vergewissern, dass die [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]\-Laufzeit vorhanden ist.  Dieses Thema enthält ein in HTML\/JavaScript geschriebenes Skript, das Administratoren verwenden können, um zu ermitteln, ob [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] auf einem System vorhanden ist.  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Gewusst wie: Erkennen einer .NET Framework 3.0-Installation
+Bevor Administratoren bereitstellen, können [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] Anwendungen auf einem System, sie müssen zunächst bestätigen, dass die [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] Common Language Runtime vorhanden ist. Dieses Thema enthält ein Skript geschrieben in HTML/JavaScript, die Administratoren verwenden können, um zu bestimmen, ob [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] auf einem System vorhanden ist.  
   
 > [!NOTE]
->  Ausführlichere Informationen zur Installation, Bereitstellung und Erkennung von [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] finden Sie unter [Bereitstellen von Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739) \(möglicherweise in englischer Sprache\).  
+>  Ausführlichere Informationen zum Installieren, bereitstellen und Erkennen von der [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], finden Sie unter den Ausführungen im [Bereitstellen von Microsoft .NET Framework, Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
-## Erkennen des Benutzer\-Agent\-Texts ".NET CLR"  
- Wenn [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] installiert ist, fügt das MSI der UserAgent\-Zeichenfolge ".NET CLR" und die Versionsnummer hinzu.  Im folgenden Beispiel wird ein Skript gezeigt, das in eine einfache HTML\-Seite eingebettet ist.  Das Skript durchsucht die UserAgent\-Zeichenfolge, um zu bestimmen, ob [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] installiert ist, und zeigt eine Statusmeldung zu den Suchergebnissen an.  
+## <a name="detect-the-net-clr-user-agent-string"></a>Ermitteln Sie die Benutzer-Agent-Zeichenfolge ".NET CLR"  
+ Wenn [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] ist installiert, die MSI-Datei ".NET CLR" und die Versionsnummer der UserAgent Zeichenfolge hinzugefügt. Das folgende Beispiel zeigt ein Skript in einen einfachen HTML-Seite eingebettet. Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] installiert ist, und zeigt eine Statusmeldung an, auf dem die Ergebnisse der Suche.  
   
 ```  
 <HTML>  
@@ -118,16 +121,15 @@ Bevor Administratoren [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasha
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- Wenn die Suche nach der ".NET CLR"\-Version erfolgreich ist, wird die folgende Art von Statusmeldung angezeigt:  
+ Wenn die Suche nach der Version ".NET CLR" erfolgreich ist, wird die folgende Art von Meldung mit dem Status angezeigt:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- Andernfalls wird die folgende Art von Statusmeldung angezeigt:  
+ Andernfalls wird folgende Art von Meldung mit dem Status angezeigt:  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

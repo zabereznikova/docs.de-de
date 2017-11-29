@@ -1,48 +1,51 @@
 ---
-title: "Gewusst wie: Animieren einer Matrix mithilfe von Keyframes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, Matrixeigenschaften mit Keyframes"
-  - "Keyframes, Animieren von Matrixeigenschaften mit"
-  - "Matrixeigenschaften, Animieren mit Keyframes"
+title: 'Gewusst wie: Animieren einer Matrix mithilfe von Keyframes'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], Matrix properties with key frames
+- Matrix properties [WPF], animating with key frames
+- key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8c67b5c8e179485083a40aa8a196fbee3e0fc24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Animieren einer Matrix mithilfe von Keyframes
-In diesem Beispiel wird die Animation der <xref:System.Windows.Media.MatrixTransform.Matrix%2A>\-Eigenschaft einer <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes veranschaulicht.  
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Gewusst wie: Animieren einer Matrix mithilfe von Keyframes
+In diesem Beispiel wird gezeigt, wie zum Animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes.  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>\-Klasse verwendet, um die <xref:System.Windows.Media.MatrixTransform.Matrix%2A>\-Eigenschaft eines <xref:System.Windows.Media.MatrixTransform>\-Elements zu animieren.  Es wird das <xref:System.Windows.Media.MatrixTransform>\-Objekt verwendet, um das Aussehen und die Position eines <xref:System.Windows.Controls.Button>\-Steuerelements zu transformieren.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform>. Im Beispiel wird die <xref:System.Windows.Media.MatrixTransform> Objekt, das die Darstellung und die Position des transformiert eine <xref:System.Windows.Controls.Button>.  
   
- Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>\-Klasse, um zwei Keyframes zu erstellen, und behandelt die Keyframes dann wie folgt:  
+ Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> -Klasse zum Erstellen von zwei Keyframes und wird mit ihnen Folgendes:  
   
-1.  Animiert während der ersten 0,2 Sekunden die erste <xref:System.Windows.Media.Matrix>.  Im Beispiel werden die Eigenschaften <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> der <xref:System.Windows.Media.Matrix> geändert.  Diese Änderung bewirkt, dass sich die Schaltfläche streckt und dass sie verzerrt wird.  Im Beispiel werden außerdem die Eigenschaften <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> geändert, um die Position der Schaltfläche zu ändern.  
+1.  Erstellt eine Animation der ersten <xref:System.Windows.Media.Matrix> während der ersten 0,2 Sekunden. Die Beispiel-Änderungen der <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> Eigenschaften der <xref:System.Windows.Media.Matrix>. Diese Änderung bewirkt, dass die Schaltfläche, um stretch-verzerrt werden. Im Beispiel ändert sich auch die <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> Eigenschaften so, dass die Position der Schaltfläche zu ändern.  
   
-2.  Animiert bei 1,0 Sekunden die zweite <xref:System.Windows.Media.Matrix>.  Die Schaltfläche wird an eine andere Position verschoben, und die Schaltfläche ist nicht mehr verzerrt oder gestreckt.  
+2.  Erstellt eine Animation der zweiten <xref:System.Windows.Media.Matrix> bei 1,0 Sekunden. Die Schaltfläche bewegt sich in eine andere Position, während die Schaltfläche nicht mehr verzerrt oder gestreckt wird.  
   
-3.  Wiederholt die Animation ohne zeitliche Begrenzung.  
+3.  Die Animation wiederholt auf unbestimmte Zeit.  
   
 > [!NOTE]
->  Keyframes, die vom <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>\-Objekt abgeleitet sind, führen zu plötzlichen Sprüngen zwischen verschiedenen Werten. Die Ausführung der Animation erfolgt also ruckartig.  
+>  Keyframes, die Ableitung der <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> Objekt einen plötzlichen Sprünge zwischen Werten, d. h. die Verschiebung der Animation holprig ist.  
   
- [!code-xml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine Keyframe\-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Das vollständige Beispiel finden Sie unter [Beispiel für KeyFrame-Animationen](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## Siehe auch  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>   
- <xref:System.Windows.Media.MatrixTransform>   
- [Übersicht über Keyframe\-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Gewusst\-wie\-Themen zu Keyframes](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
+ <xref:System.Windows.Media.MatrixTransform>  
+ [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

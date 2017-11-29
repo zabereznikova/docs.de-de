@@ -1,35 +1,38 @@
 ---
-title: "3301 - ReceiveContextAbandonFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3301 - ReceiveContextAbandonFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4495e0c4-3518-4a40-a203-760782e2b1f0
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 79ac4da14595a5ecbf4d2f12ec4e03c8fbafcbf8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3301 - ReceiveContextAbandonFailed
-## Eigenschaften  
+# <a name="3301---receivecontextabandonfailed"></a>3301 - ReceiveContextAbandonFailed
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|3301|  
 |Stichwörter|Kanal|  
 |Ebene|Warnung|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird ausgegeben, wenn der Empfangskontext nicht abgebrochen werden kann.  
   
-## Meldung  
+## <a name="message"></a>Meldung  
  %1 konnte nicht aufgegeben werden.  
   
-## Details
+## <a name="details"></a>Details

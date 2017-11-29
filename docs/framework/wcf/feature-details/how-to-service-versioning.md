@@ -1,50 +1,53 @@
 ---
-title: "Vorgehensweise: Dienstversionskontrolle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Dienstversionskontrolle'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Dienstversionskontrolle
-In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet.In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` \(v1\) und `regularCalc` \(v2\).Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert.Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`\-Dienst verwendet werden soll.  
+# <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionskontrolle
+In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
   
 > [!WARNING]
->  Um eine Nachricht an eine bestimmte Dienstversion weiterzuleiten, muss der Routingdienst das Nachrichtziel anhand des Nachrichteninhalts ermitteln können.In der Methode unten veranschaulichten Methode gibt der Client die Version an, indem er Informationen in einen Nachrichtenheader einfügt.Es gibt Methoden für die Dienstversionsverwaltung, für es nicht erforderlich ist, dass Clients zusätzliche Daten übergeben.Eine Nachricht kann z. B. an die aktuelle Version oder die Version mit dem höchsten Kompatibilitätsgrad eines Diensts weitergeleitet werden, oder der Router kann einen Teil des SOAP\-Standardumschlags verwenden.  
+>  Um eine Nachricht an eine bestimmte Dienstversion weiterzuleiten, muss der Routingdienst das Nachrichtziel anhand des Nachrichteninhalts ermitteln können. In der Methode unten veranschaulichten Methode gibt der Client die Version an, indem er Informationen in einen Nachrichtenheader einfügt. Es gibt Methoden für die Dienstversionsverwaltung, für es nicht erforderlich ist, dass Clients zusätzliche Daten übergeben. Eine Nachricht kann z. B. an die aktuelle Version oder die Version mit dem höchsten Kompatibilitätsgrad eines Diensts weitergeleitet werden, oder der Router kann einen Teil des SOAP-Standardumschlags verwenden.  
   
  Beide Dienste machen die folgenden Vorgänge verfügbar:  
   
--   Add \(Addieren\)  
+-   Hinzufügen  
   
--   Subtract \(Subtrahieren\)  
+-   Subtrahieren  
   
--   Multiply \(Multiplizieren\)  
+-   Multiplizieren  
   
--   Divide \(Dividieren\)  
+-   Trennen  
   
- Da beide Dienstimplementierungen die gleichen Vorgänge behandeln und bis auf die zurückgegebenen Daten im Wesentlichen identisch sind, sind die Basisdaten von Nachrichten, die aus Clientanwendungen gesendet werden, nicht eindeutig genug, um die Weiterleitung der Anforderung einwandfrei bestimmen zu können.Aktionsfilter können z. B. nicht verwendet werden, weil die Standardaktionen für beide Dienste gleich sind.  
+ Da beide Dienstimplementierungen die gleichen Vorgänge behandeln und bis auf die zurückgegebenen Daten im Wesentlichen identisch sind, sind die Basisdaten von Nachrichten, die aus Clientanwendungen gesendet werden, nicht eindeutig genug, um die Weiterleitung der Anforderung einwandfrei bestimmen zu können. Aktionsfilter können z. B. nicht verwendet werden, weil die Standardaktionen für beide Dienste gleich sind.  
   
- Dies kann auf verschiedene Arten gelöst werden. Sie können z. B. für jede Version des Diensts einen bestimmten Endpunkt auf dem Router verfügbar machen, oder Sie können der Nachricht ein benutzerdefiniertes Headerelement hinzufügen, um die Dienstversion anzugeben.Bei all diesen Ansätzen können Sie eingehende Nachrichten eindeutig an eine bestimmte Version des Diensts weiterleiten. Die bevorzugte Methode zur Unterscheidung zwischen Anforderungen für unterschiedliche Dienstversionen ist jedoch die Verwendung von eindeutigem Nachrichteninhalt.  
+ Dies kann auf verschiedene Arten gelöst werden. Sie können z. B. für jede Version des Diensts einen bestimmten Endpunkt auf dem Router verfügbar machen, oder Sie können der Nachricht ein benutzerdefiniertes Headerelement hinzufügen, um die Dienstversion anzugeben.  Bei all diesen Ansätzen können Sie eingehende Nachrichten eindeutig an eine bestimmte Version des Diensts weiterleiten. Die bevorzugte Methode zur Unterscheidung zwischen Anforderungen für unterschiedliche Dienstversionen ist jedoch die Verwendung von eindeutigem Nachrichteninhalt.  
   
- In diesem Beispiel fügt die Clientanwendung der Anforderungsnachricht den benutzerdefinierten Header dem "CalcVer" hinzu.Dieser Header enthält einen Wert, der die Version des Diensts angibt, an den die Nachricht weitergeleitet werden soll.Der Wert "1" gibt an, dass die Nachricht vom roundingCalc\-Dienst verarbeitet werden muss, und der "2" steht für den regularCalc\-Dienst.Auf diese Weise kann die Clientanwendung direkt steuern, welche Version des Diensts die Nachricht verarbeitet.Da der benutzerdefinierte Header ein in der Nachricht enthaltener Wert ist, können Sie einen Endpunkt zum Empfangen von Nachrichten verwenden, die für beide Versionen des Diensts bestimmt sind.Der folgende Code kann in der Clientanwendung verwendet werden, um der Nachricht diesen benutzerdefinierten Header hinzuzufügen:  
+ In diesem Beispiel fügt die Clientanwendung der Anforderungsnachricht den benutzerdefinierten Header dem "CalcVer" hinzu. Dieser Header enthält einen Wert, der die Version des Diensts angibt, an den die Nachricht weitergeleitet werden soll. Der Wert "1" gibt an, dass die Nachricht vom roundingCalc-Dienst verarbeitet werden muss, und der "2" steht für den regularCalc-Dienst. Auf diese Weise kann die Clientanwendung direkt steuern, welche Version des Diensts die Nachricht verarbeitet.  Da der benutzerdefinierte Header ein in der Nachricht enthaltener Wert ist, können Sie einen Endpunkt zum Empfangen von Nachrichten verwenden, die für beide Versionen des Diensts bestimmt sind. Der folgende Code kann in der Clientanwendung verwendet werden, um der Nachricht diesen benutzerdefinierten Header hinzuzufügen:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### Implementieren der Dienstversionsverwaltung  
+### <a name="implement-service-versioning"></a>Implementieren der Dienstversionsverwaltung  
   
-1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben.Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird.Außerdem werden die Clientendpunkte definiert, die zum Senden von Nachrichten an die Dienste `roundingCalc` \(v1\) und `regularCalc` \(v2\) verwendet werden.  
+1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben. Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird. Außerdem werden die Clientendpunkte definiert, die zum Senden von Nachrichten an die Dienste `roundingCalc` (v1) und `regularCalc` (v2) verwendet werden.  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.In diesem Beispiel wird der XPath\-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer" zu ermitteln und festzulegen, an welche Version die Nachricht weitergeleitet werden soll.Ein XPath\-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "CalcVer" nicht enthalten.Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
+2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, auf den Wert des benutzerdefinierten Headers "CalcVer" bestimmen, welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "CalcVer" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,9 +104,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  Das Namespacepräfix "s12" ist in der Namespacetabelle standardmäßig definiert und steht für den Namespace "http:\/\/www.w3.org\/2003\/05\/soap\-envelope".  
+    >  Das Namespacepräfix s12 wird in der namespacetabelle standardmäßig definiert und steht für den Namespace "http://www.w3.org/2003/05/soap-envelope".  
   
-3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird.Falls die Nachricht den Header "CalcVer" mit einem Wert von 1 enthält, wird sie an den regularCalc\-Dienst gesendet.Enthält der Header den Wert 2, wird sie an den roundingCalc\-Dienst gesendet.Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
+3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "CalcVer" mit einem Wert von 1 enthält, wird sie an den RegularCalc-Dienst gesendet werden. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
+4.  Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.  Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
   
     ```xml  
     <behaviors>  
@@ -136,10 +138,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Es folgt eine vollständige Auflistung der Konfigurationsdatei.  
   
 ```xml  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Es folgt eine vollständige Auflistung der Clientanwendung.  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

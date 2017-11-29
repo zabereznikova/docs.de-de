@@ -1,37 +1,37 @@
 ---
-title: "&#220;bersicht &#252;ber das TrackBar-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TrackBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schieberegler-Steuerelemente, Informationen über Schieberegler-Steuerelemente"
-  - "Schieberegler, Informationen über Schieberegler"
-  - "TrackBar-Steuerelement [Windows Forms], Informationen über das TrackBar-Steuerelement"
+title: "Übersicht über das TrackBar-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TrackBar
+helpviewer_keywords:
+- sliders [Windows Forms], about sliders
+- TrackBar control [Windows Forms], about TrackBar control
+- slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das TrackBar-Steuerelement (Windows&#160;Forms)
-Mit dem <xref:System.Windows.Forms.TrackBar>\-Steuerelement in Windows Forms \(manchmal als auch "Schieberegler"\-Steuerelement bezeichnet\) können Sie durch große Datenmengen navigieren oder eine numerische Einstellung visuell anpassen.  Das <xref:System.Windows.Forms.TrackBar>\-Steuerelement besteht aus zwei Teilen: dem Ziehpunkt \(Schieberegler\) und den Teilstrichen.  Der Ziehpunkt ist der Teil, der angepasst werden kann.  Seine Position wird durch die <xref:System.Windows.Forms.TrackBar.Value%2A>\-Eigenschaft vorgegeben.  Die Teilstriche sind visuelle Zähler, die in regelmäßigen Abständen angeordnet sind.  Der Schieberegler der Positionsleiste wird in von Ihnen festgelegten Schrittweiten verschoben. Die Leiste kann horizontal oder vertikal ausgerichtet werden.  Mit der Trackleiste steuern Sie z. B. die Cursorblinkrate oder die Mausgeschwindigkeit eines Systems.  
+# <a name="trackbar-control-overview-windows-forms"></a>Übersicht über das TrackBar-Steuerelement (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.TrackBar> -Steuerelement (manchmal auch "Schiebereglersteuerung" genannt) wird verwendet, zum Navigieren durch eine große Menge an Informationen oder für eine numerische Einstellung visuell anpassen. Die <xref:System.Windows.Forms.TrackBar> Steuerelement besteht aus zwei Teilen: dem Ziehpunkt, auch bekannt als ein Schieberegler, und die Teilstriche. Der Ziehpunkt ist der Teil, das angepasst werden kann. Entspricht die Position der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Die Teilstriche sind visuelle Indikatoren, die in regelmäßigen Abständen angeordnet sind. Die Trackbar verschiebt, die Sie angeben, und horizontal oder vertikal ausgerichtet werden können. Beispielsweise können Sie die Trackleiste verwenden, können Sie den Cursor Blink Rate oder mit dem Mauszeiger Geschwindigkeit für ein System steuern.  
   
-## Haupteigenschaften  
- Die wichtigsten Eigenschaften des <xref:System.Windows.Forms.TrackBar>\-Steuerelements sind <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A> und <xref:System.Windows.Forms.TrackBar.Maximum%2A>.  <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> entspricht dem Abstand der Teilstriche.  <xref:System.Windows.Forms.TrackBar.Minimum%2A> und <xref:System.Windows.Forms.TrackBar.Maximum%2A> sind die niedrigsten und höchsten Werte, die auf der Trackleiste dargestellt werden können.  
+## <a name="key-properties"></a>Wichtige Eigenschaften  
+ Wichtigsten Eigenschaften der <xref:System.Windows.Forms.TrackBar> Steuerelement sind <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, und <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>Gibt den Abstand der Teilstriche. <xref:System.Windows.Forms.TrackBar.Minimum%2A>und <xref:System.Windows.Forms.TrackBar.Maximum%2A> sind die kleinsten und größten Werte, die auf der Trackleiste dargestellt werden können.  
   
- Zwei andere wichtige Eigenschaften sind <xref:System.Windows.Forms.TrackBar.SmallChange%2A> und <xref:System.Windows.Forms.TrackBar.LargeChange%2A>.  Mit dem Wert der <xref:System.Windows.Forms.TrackBar.SmallChange%2A>\-Eigenschaft legen Sie die Anzahl der Positionen fest, um die ein Ziehpunkt bewegt wird, nachdem die NACH\-LINKS\- oder NACH\-RECHTS\-TASTE gedrückt wurde.  Der Wert der <xref:System.Windows.Forms.TrackBar.LargeChange%2A>\-Eigenschaft bestimmt die Anzahl der Positionen, um die der Ziehpunkt bewegt wird, nachdem die BILD\-AUF\- oder BILD\-AB\-TASTE gedrückt oder seitlich des Ziehpunkts auf die Trackleiste geklickt wurde.  
+ Zwei wichtige Eigenschaften sind <xref:System.Windows.Forms.TrackBar.SmallChange%2A> und <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Der Wert, der die <xref:System.Windows.Forms.TrackBar.SmallChange%2A> Eigenschaft ist die Anzahl von Positionen Ziehpunkt bewegt wird, müssen die links oder nach-rechts-Taste gedrückt. Der Wert, der die <xref:System.Windows.Forms.TrackBar.LargeChange%2A> Eigenschaft ist die Anzahl von Positionen Ziehpunkt bewegt wird, nachdem die Bild-auf oder Bild-ab-Taste gedrückt, oder als Antwort auf Maus klickt auf der Trackleiste auf beiden Seiten des Ziehpunkts.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.TrackBar>   
- [TrackBar\-Steuerelement](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.TrackBar>  
+ [TrackBar-Steuerelement](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)

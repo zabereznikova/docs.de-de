@@ -1,61 +1,65 @@
 ---
-title: "Mehr Sicherheit beim Datei- und Datenzugriff in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Daten [Windows Forms], Sicherer Zugriff"
-  - "Datenzugriff [Windows Forms]"
-  - "Datenbankzugriff (Windows Forms-Sicherheit)"
-  - "Dateizugriff [Windows Forms]"
-  - "Registrierung [Windows Forms]"
-  - "Sicherheit [Windows Forms], Datenzugriff"
-  - "Sicherheit [Windows Forms], Dateizugriff"
+title: "Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [Windows Forms], file access
+- registry [Windows Forms]
+- data access [Windows Forms]
+- database access (Windows Forms security)
+- data [Windows Forms], secure access
+- file access [Windows Forms]
+- security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Mehr Sicherheit beim Datei- und Datenzugriff in Windows&#160;Forms
-In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtigungen zum Schutz von Ressourcen und Daten verwendet.  In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden.  Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
+# <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
+In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtigungen zum Schutz von Ressourcen und Daten verwendet. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
   
- Wenn eine Sicherheitseinschränkung auftritt, haben Sie zwei Möglichkeiten: Sie können die Berechtigung bestätigen \(in der Annahme, dass diese der Anwendung gewährt wurde\), oder Sie verwenden eine Version des Features, die für die Ausführung mit teilweiser Vertrauenswürdigkeit geschrieben wurde.  In den folgenden Abschnitten wird der Zugriff auf Dateien, Datenbanken und die Registrierung aus Anwendungen erläutert, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden.  
-  
-> [!NOTE]
->  Standardmäßig werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Bereitstellungen von den entsprechenden Tools so generiert, dass diese auf den Computern , auf denen sie ausgeführt werden, volle Vertrauenswürdigkeit anfordern.  Wenn Sie für eine höhere Sicherheit beim Ausführen teilweise Vertrauenswürdigkeit verwenden möchten, müssen Sie diese Standardeinstellung in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]\-Tools \(Mage.exe oder MageUI.exe\) ändern.  Weitere Informationen zur Sicherheit in Windows Forms und zum Ermitteln der für die Anwendung geeigneten Vertrauensebene finden Sie unter [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
-  
-## Dateizugriff  
- Der Zugriff auf Dateien und Ordner wird in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] über die <xref:System.Security.Permissions.FileIOPermission>\-Klasse gesteuert.  Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>.  Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden.  Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen.  Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  
-  
-### Benutzerdefinierte Dateien  
- Wenn keine Dateizugriffsberechtigung vorliegt, können Sie z. B. den Benutzer mithilfe der <xref:System.Windows.Forms.OpenFileDialog>\-Klasse oder der <xref:System.Windows.Forms.SaveFileDialog>\-Klasse auffordern, bestimmte Dateiinformationen bereitzustellen.  Durch diese Interaktion mit dem Benutzer soll verhindert werden, dass die Anwendung in böser Absicht vertrauliche Dateien lädt oder wichtige Dateien überschreibt.  Die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>\-Methode und die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>\-Methode ermöglichen den Lese\- und Schreibzugriff durch Öffnen des vom Benutzer für die Datei angegebenen Dateistreams.  Diese Methoden dienen ebenfalls dem Schutz der Datei des Benutzers, indem der Dateipfad verdeckt wird.  
+ Wenn eine Sicherheitseinschränkung auftritt, haben Sie zwei Möglichkeiten: Sie können die Berechtigung bestätigen (in der Annahme, dass diese der Anwendung gewährt wurde), oder Sie verwenden eine Version des Features, die für die Ausführung mit teilweiser Vertrauenswürdigkeit geschrieben wurde. In den folgenden Abschnitten wird der Zugriff auf Dateien, Datenbanken und die Registrierung aus Anwendungen erläutert, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden.  
   
 > [!NOTE]
->  Diese Berechtigungen unterscheiden sich in Abhängigkeit davon, ob die Anwendung in der Internetzone oder der Intranetzone ausgeführt wird.  Anwendungen für die Internetzone können nur <xref:System.Windows.Forms.OpenFileDialog> verwenden. Intranetanwendungen verfügen hingegen über uneingeschränkte Berechtigungen für Dateidialogfelder.  
+>  Standardmäßig werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellungen von den entsprechenden Tools so generiert, dass diese auf den Computern , auf denen sie ausgeführt werden, volle Vertrauenswürdigkeit anfordern. Wenn Sie für eine höhere Sicherheit beim Ausführen teilweise Vertrauenswürdigkeit verwenden möchten, müssen Sie diese Standardeinstellung in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder einem der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]-Tools (Mage.exe oder MageUI.exe) ändern. Weitere Informationen zu Windows Forms-Sicherheit sowie Informationen zum Ermitteln der für Ihre Anwendung geeigneten Vertrauensebene finden Sie unter [Sicherheit in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
- Durch die <xref:System.Security.Permissions.FileDialogPermission>\-Klasse wird angegeben, welcher Typ von Dateidialogfeld von der Anwendung verwendet werden kann.  In der folgenden Tabelle sind die Werte aufgeführt, die für die Verwendung der einzelnen <xref:System.Windows.Forms.FileDialog>\-Klassen erforderlich sind.  
+## <a name="file-access"></a>Dateizugriff  
+ Der Zugriff auf Dateien und Ordner wird in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] über die <xref:System.Security.Permissions.FileIOPermission>-Klasse gesteuert. Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>. Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden. Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen. Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  
+  
+### <a name="user-specified-files"></a>Benutzerdefinierte Dateien  
+ Wenn keine Dateizugriffsberechtigung vorliegt, können Sie z. B. den Benutzer mithilfe der <xref:System.Windows.Forms.OpenFileDialog>-Klasse oder der <xref:System.Windows.Forms.SaveFileDialog>-Klasse auffordern, bestimmte Dateiinformationen bereitzustellen. Durch diese Interaktion mit dem Benutzer soll verhindert werden, dass die Anwendung in böser Absicht vertrauliche Dateien lädt oder wichtige Dateien überschreibt. Die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>-Methode und die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>-Methode ermöglichen den Lese- und Schreibzugriff durch Öffnen des vom Benutzer für die Datei angegebenen Dateistreams. Diese Methoden dienen ebenfalls dem Schutz der Datei des Benutzers, indem der Dateipfad verdeckt wird.  
+  
+> [!NOTE]
+>  Diese Berechtigungen unterscheiden sich in Abhängigkeit davon, ob die Anwendung in der Internetzone oder der Intranetzone ausgeführt wird. Anwendungen für die Internetzone können nur <xref:System.Windows.Forms.OpenFileDialog> verwenden. Intranetanwendungen verfügen hingegen über uneingeschränkte Berechtigungen für Dateidialogfelder.  
+  
+ Durch die <xref:System.Security.Permissions.FileDialogPermission>-Klasse wird angegeben, welcher Typ von Dateidialogfeld von der Anwendung verwendet werden kann. In der folgenden Tabelle sind die Werte aufgeführt, die für die Verwendung der einzelnen <xref:System.Windows.Forms.FileDialog>-Klassen erforderlich sind.  
   
 |Klasse|Erforderlicher Zugriffswert|  
-|------------|---------------------------------|  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
+|-----------|---------------------------|  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
->  Die jeweilige Berechtigung wird erst angefordert, wenn die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>\-Methode aufgerufen wird.  
+>  Die jeweilige Berechtigung wird erst angefordert, wenn die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>-Methode aufgerufen wird.  
   
- Die Berechtigung zum Anzeigen eines Dateidialogfelds gewährt der Anwendung keinen vollständigen Zugriff auf alle Member der Klassen <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog>.  Die genauen Berechtigungen, die zum Aufrufen der einzelnen Methoden erforderlich sind, finden Sie im Referenzthema der jeweiligen Methode in der Dokumentation zur [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]\-Klassenbibliothek.  
+ Die Berechtigung zum Anzeigen eines Dateidialogfelds gewährt der Anwendung keinen vollständigen Zugriff auf alle Member der Klassen <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog>. Die genauen Berechtigungen, die zum Aufrufen der einzelnen Methoden erforderlich sind, finden Sie im Referenzthema der jeweiligen Methode in der Dokumentation zur [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
- Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>\-Methode zum Öffnen einer benutzerdefinierten Datei in einem <xref:System.Windows.Forms.RichTextBox>\-Steuerelement verwendet.  Für dieses Beispiel sind <xref:System.Security.Permissions.FileDialogPermission> und der zugehörige <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>\-Enumerationswert erforderlich.  In diesem Beispiel wird gezeigt, wie mit der <xref:System.Security.SecurityException> ermittelt werden kann, ob die Speicherfunktion deaktiviert werden sollte.  Für dieses Beispiel ist es erforderlich, dass <xref:System.Windows.Forms.Form> über ein <xref:System.Windows.Forms.Button>\-Steuerelement mit dem Namen `ButtonOpen` und ein <xref:System.Windows.Forms.RichTextBox>\-Steuerelement mit dem Namen `RtfBoxMain` verfügt.  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>-Methode zum Öffnen einer benutzerdefinierten Datei in einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement verwendet. Für dieses Beispiel sind <xref:System.Security.Permissions.FileDialogPermission> und der zugehörige <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>-Enumerationswert erforderlich. In diesem Beispiel wird gezeigt, wie mit der <xref:System.Security.SecurityException> ermittelt werden kann, ob die Speicherfunktion deaktiviert werden sollte. Für dieses Beispiel ist es erforderlich, dass <xref:System.Windows.Forms.Form> über ein <xref:System.Windows.Forms.Button>-Steuerelement mit dem Namen `ButtonOpen` und ein <xref:System.Windows.Forms.RichTextBox>-Steuerelement mit dem Namen `RtfBoxMain` verfügt.  
   
 > [!NOTE]
 >  Die Programmierlogik für die Speicherfunktion ist im Beispiel nicht dargestellt.  
@@ -95,7 +99,6 @@ Private Sub ButtonOpen_Click(ByVal sender As System.Object, _
         End Try  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -140,12 +143,12 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Achten Sie in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] darauf, Code zum Aktivieren des Ereignishandlers hinzuzufügen.  Im folgenden Code wird unter Verwendung des obigen Codebeispiels der Ereignishandler aktiviert: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Achten Sie in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] darauf, Code zum Aktivieren des Ereignishandlers hinzuzufügen. Im folgenden Code wird unter Verwendung des obigen Codebeispiels der Ereignishandler aktiviert: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### Weitere Dateien  
- Gelegentlich müssen Sie Dateien lesen oder in Dateien schreiben, die der Benutzer nicht angibt, beispielsweise beim Speichern von Anwendungseinstellungen.  In der lokalen Intranetzone und der Internetzone haben Anwendungen keine Berechtigung zum Speichern von Daten in einer lokalen Datei.  Die Anwendung jedoch Daten in isoliertem Speicher ablegen.  Der isolierte Speicher ist ein abstraktes Datendepot \(kein bestimmter Speicherort\), das aus einer oder mehreren isolierten Speicherdateien, so genannten Speichern, besteht. Diese Speicher enthalten die tatsächlichen Speicherorte der Verzeichnisse, in denen Daten gespeichert werden.  Berechtigungen für den Dateizugriff wie <xref:System.Security.Permissions.FileIOPermission> sind nicht erforderlich. Stattdessen werden die Berechtigungen für isolierten Speicher von der <xref:System.Security.Permissions.IsolatedStoragePermission>\-Klasse gesteuert.  Standardmäßig können Anwendungen, die in der lokalen Intranetzone oder der Internetzone ausgeführt werden, Daten mithilfe des isolierten Speichers ablegen. Einstellungen wie das Datenträgerkontingent können jedoch variieren.  Weitere Informationen zum isolierten Speicher finden Sie unter [Isolierte Speicherung](../../../docs/standard/io/isolated-storage.md).  
+### <a name="other-files"></a>Weitere Dateien  
+ Gelegentlich müssen Sie Dateien lesen oder in Dateien schreiben, die der Benutzer nicht angibt, beispielsweise beim Speichern von Anwendungseinstellungen. In der lokalen Intranetzone und der Internetzone haben Anwendungen keine Berechtigung zum Speichern von Daten in einer lokalen Datei. Die Anwendung jedoch Daten in isoliertem Speicher ablegen. Der isolierte Speicher ist ein abstraktes Datendepot (kein bestimmter Speicherort), das aus einer oder mehreren isolierten Speicherdateien, so genannten Speichern, besteht. Diese Speicher enthalten die tatsächlichen Speicherorte der Verzeichnisse, in denen Daten gespeichert werden. Berechtigungen für den Dateizugriff wie <xref:System.Security.Permissions.FileIOPermission> sind nicht erforderlich. Stattdessen werden die Berechtigungen für isolierten Speicher von der <xref:System.Security.Permissions.IsolatedStoragePermission>-Klasse gesteuert. Standardmäßig können Anwendungen, die in der lokalen Intranetzone oder der Internetzone ausgeführt werden, Daten mithilfe des isolierten Speichers ablegen. Einstellungen wie das Datenträgerkontingent können jedoch variieren. Weitere Informationen zum isolierten Speicher finden Sie unter [isolierten Speicher](../../../docs/standard/io/isolated-storage.md).  
   
- Im folgenden Beispiel wird der isolierte Speicher dazu verwendet, Daten in eine Datei in einem Speicher zu schreiben.  Für dieses Beispiel sind <xref:System.Security.Permissions.IsolatedStorageFilePermission> und der <xref:System.Security.Permissions.IsolatedStorageContainment>\-Enumerationswert erforderlich.  In diesem Beispiel wird das Lesen und Schreiben bestimmter Eigenschaftswerte des <xref:System.Windows.Forms.Button>\-Steuerelements in einer Datei im isolierten Speicher gezeigt.  Die `Read`\-Funktion wird nach dem Starten der Anwendung aufgerufen, und die `Write`\-Funktion vor dem Beenden der Anwendung.  Für dieses Beispiel ist es erforderlich, dass die `Read`\-Funktion und die `Write`\-Funktion als Member eines <xref:System.Windows.Forms.Form> vorhanden sind, das ein <xref:System.Windows.Forms.Button>\-Steuerelementmit dem Namen `MainButton` enthält.  
+ Im folgenden Beispiel wird der isolierte Speicher dazu verwendet, Daten in eine Datei in einem Speicher zu schreiben. Für dieses Beispiel sind <xref:System.Security.Permissions.IsolatedStorageFilePermission> und der <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>-Enumerationswert erforderlich. In diesem Beispiel wird das Lesen und Schreiben bestimmter Eigenschaftswerte des <xref:System.Windows.Forms.Button>-Steuerelements in einer Datei im isolierten Speicher gezeigt. Die `Read`-Funktion wird nach dem Starten der Anwendung aufgerufen, und die `Write`-Funktion vor dem Beenden der Anwendung. Im Beispiel erfordert, dass die `Read` und `Write` Funktionen, die als Mitglieder der vorhanden ist eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.Button> -Steuerelement namens `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -242,7 +245,6 @@ Public Sub Write()
         writer.Close()  
     End Try  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -356,20 +358,20 @@ public void Write()
 }  
 ```  
   
-## Datenbankzugriff  
- Die für den Zugriff auf eine Datenbank erforderlichen Berechtigungen hängen jeweils vom Datenbankanbieter ab. Jedoch können nur Anwendungen, die mit den entsprechenden Berechtigungen ausgeführt werden, über eine Datenverbindung auf eine Datenbank zugreifen.  Weitere Informationen zu den Berechtigungen, die für den Zugriff auf eine Datenbank erforderlich sind, finden Sie unter [Codezugriffssicherheit und ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+## <a name="database-access"></a>Datenbankzugriff  
+ Die für den Zugriff auf eine Datenbank erforderlichen Berechtigungen hängen jeweils vom Datenbankanbieter ab. Jedoch können nur Anwendungen, die mit den entsprechenden Berechtigungen ausgeführt werden, über eine Datenverbindung auf eine Datenbank zugreifen. Weitere Informationen zu den Berechtigungen, die Zugriff auf eine Datenbank erforderlich sind, finden Sie unter [Codezugriffssicherheit und ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Wenn Sie nicht direkt auf eine Datenbank zugreifen können, da Sie die Anwendung nur mit teilweiser Vertrauenswürdigkeit ausführen möchten, können Sie auf die Daten auch über einen Webdienst zugreifen.  Ein Webdienst ist eine Softwarekomponente, auf die über ein Netzwerk programmgesteuert zugegriffen werden kann.  Mit Webdiensten können Anwendungen Daten über Codegruppenzonen hinweg gemeinsam verwenden.  Anwendungen in der lokalen Intranetzone und der Internetzone wird standardmäßig die Berechtigung gewährt, auf ihre Ursprungssite zuzugreifen. Dadurch sind diese Anwendungen in der Lage, auf demselben Server gehostete Webdienste aufzurufen.  Weitere Informationen finden Sie unter [ASP.NET AJAX und Webdienste](http://msdn.microsoft.com/de-de/8290e543-7eff-47a4-aace-681f3c07229b) bzw. unter [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Wenn Sie nicht direkt auf eine Datenbank zugreifen können, da Sie die Anwendung nur mit teilweiser Vertrauenswürdigkeit ausführen möchten, können Sie auf die Daten auch über einen Webdienst zugreifen. Ein Webdienst ist eine Softwarekomponente, auf die über ein Netzwerk programmgesteuert zugegriffen werden kann. Mit Webdiensten können Anwendungen Daten über Codegruppenzonen hinweg gemeinsam verwenden. Anwendungen in der lokalen Intranetzone und der Internetzone wird standardmäßig die Berechtigung gewährt, auf ihre Ursprungssite zuzugreifen. Dadurch sind diese Anwendungen in der Lage, auf demselben Server gehostete Webdienste aufzurufen. Weitere Informationen finden Sie unter [Webdienste in ASP.NET AJAX](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) oder [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
-## Zugriff auf die Registrierung  
- Durch die <xref:System.Security.Permissions.RegistryPermission>\-Klasse wird der Zugriff auf die Registrierung des Betriebssystems gesteuert.  Standardmäßig haben nur lokal ausgeführte Anwendungen Zugriff auf die Registrierung.  Durch <xref:System.Security.Permissions.RegistryPermission> wird einer Anwendung nur die Berechtigung gewährt, den Versuch zu unternehmen, auf die Registrierung zuzugreifen. Ein erfolgreicher Zugriff wird dadurch nicht garantiert, da das Betriebssystem immer noch die Einhaltung von Sicherheitsrichtlinien für die Registrierung erzwingt.  
+## <a name="registry-access"></a>Zugriff auf die Registrierung  
+ Durch die <xref:System.Security.Permissions.RegistryPermission>-Klasse wird der Zugriff auf die Registrierung des Betriebssystems gesteuert. Standardmäßig haben nur lokal ausgeführte Anwendungen Zugriff auf die Registrierung.  Durch <xref:System.Security.Permissions.RegistryPermission> wird einer Anwendung nur die Berechtigung gewährt, den Versuch zu unternehmen, auf die Registrierung zuzugreifen. Ein erfolgreicher Zugriff wird dadurch nicht garantiert, da das Betriebssystem immer noch die Einhaltung von Sicherheitsrichtlinien für die Registrierung erzwingt.  
   
- Da bei teilweiser Vertrauenswürdigkeit nicht auf die Registrierung zugegriffen werden kann, müssen Sie unter Umständen einen anderen Weg zum Speichern Ihrer Daten finden.  Verwenden Sie beim Speichern von Anwendungseinstellungen anstelle der Registrierung den isolierten Speicher.  Der isolierte Speicher kann auch zum Speichern anderer anwendungsspezifischer Dateien verwendet werden.  Ebenso können Sie globale Anwendungsinformationen zum Server oder zur Ursprungssite speichern, da Anwendungen standardmäßig berechtigt sind, auf die Ursprungssite zuzugreifen.  
+ Da bei teilweiser Vertrauenswürdigkeit nicht auf die Registrierung zugegriffen werden kann, müssen Sie unter Umständen einen anderen Weg zum Speichern Ihrer Daten finden. Verwenden Sie beim Speichern von Anwendungseinstellungen anstelle der Registrierung den isolierten Speicher. Der isolierte Speicher kann auch zum Speichern anderer anwendungsspezifischer Dateien verwendet werden. Ebenso können Sie globale Anwendungsinformationen zum Server oder zur Ursprungssite speichern, da Anwendungen standardmäßig berechtigt sind, auf die Ursprungssite zuzugreifen.  
   
-## Siehe auch  
- [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)   
- [Weitere Überlegungen zur Sicherheit in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)   
- [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)   
- [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)   
- [Mage.exe \(Tool zum Generieren und Bearbeiten von Manifesten\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Siehe auch  
+ [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Weitere Überlegungen zur Sicherheit in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

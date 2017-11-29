@@ -1,6 +1,6 @@
 ---
 title: F#-Sprachreferenz
-description: F#-Sprachreferenz
+description: "Finden Sie F#-Sprache Funktionsinformationen aus dieser Referenz in sprachtoken, Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen."
 keywords: Visual F#, F#, funktionale Programmierung
 author: cartermp
 ms.author: phcart
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e0b7058513b0487902b2a57b889e77df1abfef98
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
-Dieser Abschnitt ist ein Verweis auf die Sprache F#, eine Programmiersprache mit vielen Paradigmen, die auf die .NET-Plattform ausgerichtet ist. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
+Dieser Abschnitt ist ein Verweis auf die F#-Sprache, eine Programmiersprache Zielversion .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
 
 
 ## <a name="f-tokens"></a>F#-Token

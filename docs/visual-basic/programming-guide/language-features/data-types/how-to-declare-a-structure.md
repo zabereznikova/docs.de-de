@@ -1,51 +1,50 @@
 ---
-title: "How to: Declare a Structure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declarations, structures"
-  - "structure statements"
-  - "statements [Visual Basic], structure"
-  - "structures, declaring"
+title: 'Gewusst wie: Deklarieren einer Struktur (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declarations [Visual Basic], structures
+- structure statements [Visual Basic]
+- statements [Visual Basic], structure
+- structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8203327e189d095c9f7ceeb3b68ea24efe9ba882
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Declare a Structure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Sie beginnen eine Strukturdeklaration mit der [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)\-Anweisung und beenden sie mit der `End` `Structure`\-Anweisung.  Zwischen diesen beiden Anweisungen müssen Sie mindestens ein *Element* deklarieren.  Die Elemente können einen beliebigen Datentyp haben, allerdings muss mindestens ein Element eine nicht freigegebene Variable oder ein nicht freigegebenes, nicht benutzerdefiniertes Ereignis sein.  
+# <a name="how-to-declare-a-structure-visual-basic"></a>Gewusst wie: Deklarieren einer Struktur (Visual Basic)
+Structure-Deklarationen mit Beginn der [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md), und beenden sie mit der `End` `Structure` Anweisung. Zwischen diesen beiden Anweisungen müssen Sie mindestens eine deklarieren *Element*. Die Elemente können einen beliebigen Datentyp aufweisen, jedoch muss mindestens eine nicht freigegebene Variable oder ein nicht freigegebenes, nicht benutzerdefinierte Ereignis.  
   
- Es ist nicht möglich, Strukturelemente in der Strukturdeklaration zu initialisieren.  Wenn Sie eine Variable als einen Strukturtyp deklarieren, weisen Sie den Elementen Werte zu, indem Sie über die Variable darauf zugreifen.  
+ Sie können nicht der Struktur Elemente in der Strukturdeklaration initialisiert werden. Wenn Sie eine Variable eines Strukturtyps deklarieren, weisen Sie Werte mit den Elementen, indem Sie auf diese über die Variable zuzugreifen.  
   
- Eine Erläuterung der Unterschiede zwischen Strukturen und Klassen finden Sie unter [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Eine Erläuterung der Unterschiede zwischen Strukturen und Klassen, finden Sie unter [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Zu Demonstrationszwecken betrachten wir einen Fall, in dem Name, Nebenstelle und Gehalt eines Mitarbeiters verfolgt werden soll.  Eine Struktur erlaubt es, diese Angaben in einer einzelnen Variablen zu speichern.  
+ Erwägen Sie zu Demonstrationszwecken, wo Sie zum Nachverfolgen eines Mitarbeiters Name Durchwahl und Gehalt erwünscht. Eine Struktur können Sie hierzu in eine einzelne Variable sein.  
   
-### So deklarieren Sie eine Struktur  
+### <a name="to-declare-a-structure"></a>Um eine Struktur zu deklarieren.  
   
-1.  Erstellen Sie die Anweisungen, mit der die Deklaration der Struktur begonnen und beendet wird.  
+1.  Beginn und Ende von Anweisungen für die Struktur zu erstellen.  
   
-     Sie können die Zugriffsebene mithilfe des Schlüsselworts [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) oder [Private](../../../../visual-basic/language-reference/modifiers/private.md) festlegen oder die Angabe weglassen. Wenn die Angabe fehlt, wird die Standardzugriffsebene `Public` verwendet.  
+     Sie können angeben, die Zugriffsebene einer Struktur mit der [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md), [geschützte](../../../../visual-basic/language-reference/modifiers/protected.md), ["Friend"](../../../../visual-basic/language-reference/modifiers/friend.md), oder [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort, oder Sie können Standardmäßig `Public`.  
   
     ```  
     Private Structure employee  
     End Structure  
     ```  
   
-2.  Fügen Sie Elemente dem Text der Struktur hinzu.  
+2.  Fügen Sie Elemente in den Text der Struktur hinzu.  
   
-     Eine Struktur muss mindestens ein Element enthalten.  Sie müssen jeden Member deklarieren und die Zugriffsebene dafür festlegen.  Wenn Sie die [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)\-Anweisung ohne Schlüsselwörter verwenden, wird als Zugriffsebene standardmäßig `Public` festgelegt.  
+     Eine Struktur muss mindestens ein Element enthalten. Sie müssen jedes Element deklarieren und eine Zugriffsebene dafür angeben. Bei Verwendung der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) ohne Schlüsselwörter, die Zugriffsebene standardmäßig `Public`.  
   
     ```  
     Private Structure employee  
@@ -60,18 +59,18 @@ Sie beginnen eine Strukturdeklaration mit der [Structure Statement](../../../../
     End Structure  
     ```  
   
-     Im vorhergehenden Beispiel ist das Feld `salary` als `Private` deklariert, was bedeutet, dass nur Elemente der Struktur darauf zugreifen können. Sogar die Klasse, in der die Struktur enthalten ist, hat keinen Zugriff darauf.  Dagegen ist die `giveRaise`\-Prozedur als `Public` deklariert, sodass sie von außerhalb aufgerufen werden kann.  Analog gilt, dass das `salaryReviewTime`\-Ereignis von Elementen außerhalb der Struktur ausgelöst werden kann.  
+     Die `salary` Feld im vorherigen Beispiel ist `Private`, d. h. außerhalb der Struktur nicht verfügbar ist. Allerdings die `giveRaise` Verfahren ist `Public`, sodass sie von außerhalb der Struktur aufgerufen werden kann. Sie können auf ähnliche Weise Auslösen der `salaryReviewTime` Ereignis außerhalb der Struktur.  
   
-     Neben Variablen, `Sub`\-Prozeduren und Ereignissen können Sie in einer Struktur auch Konstanten, `Function`\-Prozeduren und Eigenschaften definieren.  Sie können höchstens eine Eigenschaft als die *Standardeigenschaft* festlegen, vorausgesetzt, sie verarbeitet mindestens ein Argument.  Ereignisse können mit einer [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`\-Prozedur behandelt werden.  Weitere Informationen finden Sie unter [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Zusätzlich zu den Variablen `Sub` Prozeduren und Ereignisse, Sie können auch Konstanten definieren `Function` Prozeduren und Eigenschaften in einer Struktur. Sie können festlegen, dass höchstens eine Eigenschaft als die *Standardeigenschaft*, sofern er mindestens ein Argument erhält. Sie können ein Ereignis mit Behandeln einer [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` Prozedur. Weitere Informationen finden Sie unter [wie: Deklarieren und Aufrufen einer Default-Eigenschaft in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
-## Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Structure Variables](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [User\-Defined Data Type](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Benutzerdefinierter Datentyp](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

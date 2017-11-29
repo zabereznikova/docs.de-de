@@ -1,28 +1,33 @@
 ---
-title: "&lt;net.tcp&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;NET.TCP&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6cd220b07c2d8f9a24591fc6e9614099e8460139
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;net.tcp&gt;
-Gibt Konfigurationseinstellungen für den NET.TCP\-Anschlussfreigabedienst an, der ermöglicht, dass mehrere Prozesse den gleichen TCP\-Anschluss nutzen.  
+# <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
+Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, der ermöglicht, dass mehrere Prozesse den gleichen TCP-Anschluss nutzen.  
   
-## Syntax  
+ \<system.serviceModel.activation >  
+\<NET.TCP >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <configuration>  
    <system.serviceModel.activation>  
        <net.tcp listenBacklog="Integer"  
@@ -47,38 +52,38 @@ Gibt Konfigurationseinstellungen für den NET.TCP\-Anschlussfreigabedienst an, d
 </configuration>  
 ```  
   
-## Typ  
+## <a name="type"></a>Typ  
  `Type`  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|`listenBacklog`|Eine ganze Zahl, die den Höchstwert für ausstehende Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden können, aber noch nicht an [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienste weitergeleitet werden.  Der Standard ist 10.|  
-|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt.  Der Standard ist 2.|  
-|`MaxPendingConnections`|Die maximale Anzahl von Verbindungen, die für einen Listener darauf warten können, von der Anwendung angenommen zu werden.  Wenn dieser Kontingentwert überstiegen wird, werden neue eingehende Verbindungen gelöscht, statt weiter auf die Annahme zu warten.  Verbindungsfunktionen, wie Nachrichtensicherheit, können dazu führen, dass ein Client mehr als eine Verbindung öffnet.  Dienstadministratoren sollten diese zusätzlichen Verbindungen bei der Einrichtung des Kontingentwerts berücksichtigen.  Der Standard ist 10.|  
-|`receiveTimeout`|Eine <xref:System.Timespan>, die das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen angibt.  Der Standardwert ist "00:00:10".|  
-|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der Anschlussfreigabedienst den Dienst Microsoft Teredo verwendet, um TCP\-Anschlüsse für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Dienste zu überwachen.  Die Standardeinstellung ist `false`.|  
+|---------------|-----------------|  
+|`listenBacklog`|Eine ganze Zahl, die den Höchstwert für ausstehende Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden können, aber noch nicht an [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]-Dienste weitergeleitet werden. Der Standard ist 10.|  
+|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standard ist 2.|  
+|`MaxPendingConnections`|Die maximale Anzahl von Verbindungen, die für einen Listener darauf warten können, von der Anwendung angenommen zu werden. Wenn dieser Kontingentwert überstiegen wird, werden neue eingehende Verbindungen gelöscht, statt weiter auf die Annahme zu warten. Verbindungsfunktionen, wie Nachrichtensicherheit, können dazu führen, dass ein Client mehr als eine Verbindung öffnet. Dienstadministratoren sollten diese zusätzlichen Verbindungen bei der Einrichtung des Kontingentwerts berücksichtigen. Der Standard ist 10.|  
+|`receiveTimeout`|Eine `TimeSpan`, die das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen angibt. Der Standardwert ist "00:00:10".|  
+|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der Anschlussfreigabedienst den Dienst Microsoft Teredo verwendet, um TCP-Anschlüsse für [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienste zu überwachen. Die Standardeinstellung ist `false`.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<allowAccounts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Eine Auflistung von Konfigurationselementen, die ein `securityIdentifier`\-Attribut zum Angeben von Benutzerkonten für Prozesse enthalten, die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Dienste hosten und Verbindungszugriff auf den Freigabedienst haben.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<system.serviceModel.activation\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
+|-------------|-----------------|  
+|[\<AllowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Eine Auflistung von Konfigurationselementen, die ein `securityIdentifier`-Attribut zum Angeben von Benutzerkonten für Prozesse enthalten, die [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]-Dienste hosten und Verbindungszugriff auf den Freigabedienst haben.|  
   
-## Hinweise  
- Weitere Informationen zur Anschlussfreigabe finden Sie unter [Net.TCP Port Sharing](http://msdn.microsoft.com/de-de/f13692ee-a179-4439-ae72-50db9534eded).  Informationen dazu, wie der Anschlussfreigabedienst konfiguriert wird, finden Sie unter [Configuring the Net.TCP Port Sharing Service](http://msdn.microsoft.com/de-de/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-## Siehe auch  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>   
- [Net.TCP Port Sharing](http://msdn.microsoft.com/de-de/f13692ee-a179-4439-ae72-50db9534eded)   
- [Configuring the Net.TCP Port Sharing Service](http://msdn.microsoft.com/de-de/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
+  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen über die Portfreigabe finden Sie unter [Net.TCP Port Sharing](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded). Um zu verstehen, wie der anschlussfreigabedienst den Dienst zu konfigurieren, finden Sie unter [konfigurieren den Net.TCP-Portfreigabedienst](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
+ [Net.TCP-Portfreigabe](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Konfigurieren des Net.TCP-Portfreigabediensts](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

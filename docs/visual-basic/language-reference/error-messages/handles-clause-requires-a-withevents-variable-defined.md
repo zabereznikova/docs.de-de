@@ -1,35 +1,33 @@
 ---
-title: "Handles clause requires a WithEvents variable defined in the containing type or one of its base types | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30506"
-  - "bc30506"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30506"
+title: Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30506
+- bc30506
+helpviewer_keywords: BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e007b371886ab721df6f099e289ea860474c915b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Handles clause requires a WithEvents variable defined in the containing type or one of its base types
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Sie haben in der `Handles`\-Klausel keine `WithEvents`\-Variable angegeben.  Verwenden Sie das `Handles`\-Schlüsselwort am Ende einer Prozedurdeklaration, damit es Ereignisse behandelt, die durch eine mit dem `WithEvents`\-Schlüsselwort deklarierte Objektvariable ausgelöst werden.  
+# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.
+Sie keine angeben eine `WithEvents` -Variable in Ihre `Handles` Klausel. Die `Handles` -Schlüsselwort am Ende der Prozedurdeklaration, bewirkt, dass durch eine Objektvariable deklariert mit ausgelöste Ereignisse behandeln die `WithEvents` Schlüsselwort.  
   
- **Fehler\-ID:** BC30506  
+ **Fehler-ID:** BC30506  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Stellen Sie die erforderliche `WithEvents`\-Variable bereit.  
+-   Geben Sie die erforderlichen `WithEvents` Variable.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

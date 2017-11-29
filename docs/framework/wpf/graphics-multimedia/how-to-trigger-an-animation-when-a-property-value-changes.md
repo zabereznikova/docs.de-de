@@ -1,36 +1,39 @@
 ---
-title: "Gewusst wie: Ausl&#246;sen einer Animation bei &#196;nderung eines Eigenschaftswerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, Starten beim Ändern eines Eigenschaftswerts"
-  - "Storyboards, Starten beim Ändern eines Eigenschaftswerts"
-  - "Auslösen der Animation"
+title: "Gewusst wie: Auslösen einer Animation bei Änderung eines Eigenschaftswerts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], starting when property values change
+- triggering animation [WPF]
+- Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d722be0f0367f7e6e98ef1c8451ce58ee28fedd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ausl&#246;sen einer Animation bei &#196;nderung eines Eigenschaftswerts
-In diesem Beispiel wird gezeigt, wie mit einem <xref:System.Windows.Trigger> ein <xref:System.Windows.Media.Animation.Storyboard> gestartet wird, wenn sich ein Eigenschaftswert ändert.  Sie können einen <xref:System.Windows.Trigger> in einem <xref:System.Windows.Style>, einer <xref:System.Windows.Controls.ControlTemplate> oder einer <xref:System.Windows.DataTemplate> verwenden.  
+# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Gewusst wie: Auslösen einer Animation bei Änderung eines Eigenschaftswerts
+Dieses Beispiel zeigt, wie eine <xref:System.Windows.Trigger> zum Starten einer <xref:System.Windows.Media.Animation.Storyboard> Wenn sich ein Eigenschaftswert ändert. Sie können eine <xref:System.Windows.Trigger> innerhalb einer <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, oder <xref:System.Windows.DataTemplate>.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein <xref:System.Windows.Trigger> zum Animieren der <xref:System.Windows.UIElement.Opacity%2A> eines <xref:System.Windows.Controls.Button> verwendet, wenn dessen <xref:System.Windows.UIElement.IsMouseOver%2A>\-Eigenschaft in `true` geändert wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Trigger> zum Animieren der <xref:System.Windows.UIElement.Opacity%2A> des eine <xref:System.Windows.Controls.Button> beim seine <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschaft `true`.  
   
- [!code-xml[AnimatePropertyStoryboards#PropertyTriggerExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/PropertyTriggerExample.xaml#propertytriggerexample)]  
+ [!code-xaml[AnimatePropertyStoryboards#PropertyTriggerExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/PropertyTriggerExample.xaml#propertytriggerexample)]  
   
- Von <xref:System.Windows.Trigger>\-Eigenschaftenobjekten angewendete Animationen verhalten sich komplexer als <xref:System.Windows.EventTrigger>\-Animationen oder Animationen, die mithilfe von <xref:System.Windows.Media.Animation.Storyboard>\-Methoden gestartet wurden.  Sie werden mit Animationen "übergeben", die von anderen <xref:System.Windows.Trigger>\-Objekten definiert wurden, setzen sich aber aus <xref:System.Windows.EventTrigger> und durch Methoden ausgelösten Animationen zusammen.  
+ Animationen, die von der Eigenschaft angewendet <xref:System.Windows.Trigger> Objekte verhalten sich in einer komplexeren Weise als <xref:System.Windows.EventTrigger> Animationen oder Animationen Schritte mit <xref:System.Windows.Media.Animation.Storyboard> Methoden.  Diese "Übergabe" mit Animationen definiert, die von anderen <xref:System.Windows.Trigger> Objekte, bilden jedoch mit <xref:System.Windows.EventTrigger> und Animationen Methode ausgelöst.  
   
-## Siehe auch  
- <xref:System.Windows.Trigger>   
- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Trigger>  
+ [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
  [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

@@ -1,39 +1,43 @@
 ---
-title: "Definieren einer Eigenschaft in Windows&#160;Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Definieren von Eigenschaften im Code"
-  - "Eigenschaften [Windows Forms], Definieren im Code"
+title: "Definieren einer Eigenschaft in Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [Windows Forms], defining in code
+- custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c3c25b9c408e5b8f0b76cdf87375875cdb06a13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Definieren einer Eigenschaft in Windows&#160;Forms-Steuerelementen
-Eine Übersicht über Eigenschaften finden Sie unter [Properties Overview](../Topic/Properties%20Overview.md).  Beim Definieren von Eigenschaften sind einige wichtige Aspekte zu beachten:  
+# <a name="defining-a-property-in-windows-forms-controls"></a>Definieren einer Eigenschaft in Windows Forms-Steuerelementen
+Eine Übersicht über Eigenschaften finden Sie unter [Übersicht über Eigenschaften](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Es gibt einige wichtige Überlegungen beim Definieren einer Eigenschaft:  
   
--   Sie müssen den Eigenschaften, die Sie definieren, Attribute zuweisen.  Attribute legen fest, wie der Designer eine Eigenschaft anzeigen soll.  Ausführliche Informationen finden Sie unter [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md).  
+-   Sie müssen auf die Eigenschaften, die Sie definieren, Attribute anwenden. Attribute geben an, wie der Designer eine Eigenschaft anzeigen sollte. Einzelheiten hierzu finden Sie unter [Attribute für Komponenten in der Entwurfszeit](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Wenn sich die Änderung der Eigenschaft auf die visuelle Darstellung des Steuerelements auswirkt, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A>\-Methode \(die das Steuerelement von <xref:System.Windows.Forms.Control> geerbt hat\) vom `set`\-Accessor auf.  Dagegen ruft <xref:System.Windows.Forms.Control.Invalidate%2A> die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode auf, durch die das Steuerelement neu gezeichnet wird.  Aus Effizienzgründen wird das mehrmalige Aufrufen von <xref:System.Windows.Forms.Control.Invalidate%2A> zu einem einzigen Aufruf von <xref:System.Windows.Forms.Control.OnPaint%2A> zusammengefasst.  
+-   Wenn die visuelle Darstellung des Steuerelements ändern der Eigenschaft betroffen sind, rufen die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode (, die das Steuerelement erbt von <xref:System.Windows.Forms.Control>) aus der `set` Accessor. <xref:System.Windows.Forms.Control.Invalidate%2A>Ruft die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, die das Steuerelement neu gezeichnet wird. Mehrere Aufrufe <xref:System.Windows.Forms.Control.Invalidate%2A> führen zu einem einzigen Aufruf <xref:System.Windows.Forms.Control.OnPaint%2A> Gründen der Effizienz.  
   
--   Die.NET Framework\-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie ganze Zahlen, Dezimalwerte, boolesche Werte und andere bereit.  Typkonverter werden in erster Linie für Umwandlungen von Zeichenfolgen in Werte verwendet \(von Zeichenfolgendaten in andere Datentypen\).  Geläufige Datentypen werden Standardtypkonvertern zugeordnet, die Werte in Zeichenfolgen bzw. Zeichenfolgendaten in die entsprechenden Datentypen konvertieren.  Wenn Sie eine Eigenschaft definieren, die ein benutzerdefinierter Datentyp ist \(d. h. kein Standardtyp\), müssen Sie ein Attribut zur Festlegung des Typkonverters anwenden, der dieser Eigenschaft zugewiesen wird.  Sie können auch ein Attribut verwenden, um einem benutzerdefinierten Typ\-Editor für Benutzeroberflächen eine Eigenschaft zuzuweisen.  Ein Typ\-Editor für Benutzeroberflächen stellt eine Benutzeroberfläche zur Bearbeitung von Eigenschaften oder Datentypen bereit.  Ein Beispiel für einen Typ\-Editor für Benutzeroberflächen ist die Farbauswahl.  Beispiele für Attribute werden am Ende dieses Themas gegeben.  
+-   Die .NET Framework-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie z.B. ganze Zahlen, Dezimalzahlen, boolesche Werte und andere bereit. Der Zweck eines Typkonverters ist im Allgemeinen, die Konvertierung von einer Zeichenfolge in einen Wert (von Zeichenfolgedaten in andere Datentypen) bereitzustellen. Allgemeine Datentypen sind Standardtypkonverter, die Werte in Zeichenfolgen und Zeichenfolgen in die entsprechenden Datentypen konvertieren. Wenn Sie eine Eigenschaft definieren (d.h. nicht dem Standard entsprechend), die einen benutzerdefinierten Datentyp aufweist, müssen Sie ein Attribut anwenden, das den dieser Eigenschaft zuzuordnenden Typkonverter angibt. Sie können ein Attribut auch verwenden, um einer Eigenschaft einen benutzerdefinierten Typeditor für die Benutzeroberfläche zuzuordnen. Ein Typeditor für die Benutzeroberfläche stellt eine Benutzeroberfläche für die Bearbeitung einer Eigenschaft oder eines Datentyps bereit. So ist beispielsweise ein Farbwähler ein Typeditor für die Benutzeroberfläche. Beispiele für Attribute werden am Ende dieses Themas angegeben.  
   
     > [!NOTE]
-    >  Wenn kein Typkonverter oder Typ\-Editor für Benutzeroberflächen für die benutzerdefinierte Eigenschaft verfügbar ist, können Sie diesen gemäß der Beschreibung in [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md) implementieren.  
+    >  Wenn für Ihre benutzerdefinierte Eigenschaft kein Typkonverter oder Typeditor für die Benutzeroberfläche verfügbar ist, können Sie einen implementieren, wie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
- Im folgenden Codefragment wird eine benutzerdefinierte Eigenschaft mit dem Namen `EndColor` für das benutzerdefinierte Steuerelement `FlashTrackBar` definiert.  
+ Das folgende Codefragment definiert eine benutzerdefinierte Eigenschaft mit dem Namen `EndColor` für das benutzerdefinierte Steuerelement `FlashTrackBar`.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -66,7 +70,6 @@ Public Class FlashTrackBar
    End Property  
    ...  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -102,7 +105,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Im folgenden Codefragment wird einem Typkonverter und einem Typ\-Editor für Benutzeroberflächen die Eigenschaft `Value` zugewiesen.  In diesem Fall handelt es sich bei `Value` um eine ganze Zahl mit einem Standardtypkonverter. Allerdings wendet das <xref:System.ComponentModel.TypeConverterAttribute>\-Attribut einen benutzerdefinierten Typkonverter \(`FlashTrackBarValueConverter`\) an, wodurch der Designer die Eigenschaft als Prozentsatz anzeigt.  Der Typ\-Editor für Benutzeroberflächen, `FlashTrackBarValueEditor`, ermöglicht die visuelle Darstellung der Prozentangabe.  In diesem Beispiel wird auch deutlich, dass der Standardkonverter durch den Typkonverter bzw. Typ\-Editor überschrieben wird, der durch das Attribut <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> festgelegt wurde.  
+ Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu. In diesem Fall `Value` ist eine ganze Zahl und verfügt über einen Standard-Typkonverter, aber die <xref:System.ComponentModel.TypeConverterAttribute> Attribut angewendet wird, einen benutzerdefinierten Typkonverter (`FlashTrackBarValueConverter`) mit der der Designer für die anzuzeigenden als Prozentsatz. Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden. In diesem Beispiel wird außerdem gezeigt, dass der Typkonverter oder Editor gemäß der <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> Attribut überschreibt der Standardkonverter.  
   
 ```vb  
 <Category("Flash"), _  
@@ -113,7 +116,6 @@ Description("The current value of the track bar.  You can enter an actual value 
 Public ReadOnly Property Value() As Integer  
 ...  
 End Property  
-  
 ```  
   
 ```csharp  
@@ -128,8 +130,8 @@ public int Value {
 }  
 ```  
   
-## Siehe auch  
- [Eigenschaften von Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Definieren von Standardwerten mit der ShouldSerialize\-Methode und der Reset\-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)   
- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)   
- [Attribute in Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a>Siehe auch  
+ [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [Attribute in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)

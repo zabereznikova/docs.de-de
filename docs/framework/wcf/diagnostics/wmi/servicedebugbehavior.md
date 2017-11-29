@@ -1,25 +1,28 @@
 ---
-title: "ServiceDebugBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceDebugBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d6b866c90e3e6c6e72dc75f230bcf7b4e03a6bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceDebugBehavior
+# <a name="servicedebugbehavior"></a>ServiceDebugBehavior
 ServiceDebugBehavior  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class ServiceDebugBehavior : Behavior  
@@ -32,52 +35,52 @@ class ServiceDebugBehavior : Behavior
 };  
 ```  
   
-## Methoden  
- Die ServiceDebugBehavior\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die ServiceDebugBehavior-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die ServiceDebugBehavior\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die ServiceDebugBehavior-Klasse verfügt über die folgenden Eigenschaften:  
   
-### HttpHelpPageEnabled  
- Datentyp: Boolescher Wert  
-  
- Zugriffstyp: Schreibgeschützt  
-  
- Steuert, ob der Dienst seine WSDL unter der vom `HttpGetUrl`\-Attribut gesteuerten Adresse veröffentlicht.  
-  
-### HttpHelpPageUrl  
- Datentyp: Zeichenfolge  
-  
- Zugriffstyp: Schreibgeschützt  
-  
- Legt den Speicherort fest, an dem die Dienst\-WSDL für den Abruf mithilfe von HTTPS veröffentlicht wird.  
-  
-### HttpsHelpPageEnabled  
+### <a name="httphelppageenabled"></a>HttpHelpPageEnabled  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Steuert, ob der Dienst seine WSDL oder HTTPS unter der vom `HttpsGetUrl`\-Attribut gesteuerten Adresse veröffentlicht.  
+ Steuert, ob der Dienst seine WSDL unter der vom `HttpGetUrl`-Attribut gesteuerten Adresse veröffentlicht.  
   
-### HttpsHelpPageUrl  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="httphelppageurl"></a>HttpHelpPageUrl  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Legt den Speicherort fest, an dem die Dienst\-WSDL für den Abruf mithilfe von HTTPS veröffentlicht wird.  
+ Legt den Speicherort fest, an dem die Dienst-WSDL für den Abruf mithilfe von HTTPS veröffentlicht wird.  
   
-### IncludeExceptionDetailInFaults  
+### <a name="httpshelppageenabled"></a>HttpsHelpPageEnabled  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, ob verwaltete Ausnahmeinformationen in Details der SOAP\-Fehler für Debugzwecke an die Clients zurückgegeben werden.  
+ Steuert, ob der Dienst seine WSDL oder HTTPS unter der vom `HttpsGetUrl`-Attribut gesteuerten Adresse veröffentlicht.  
   
-## Voraussetzungen  
+### <a name="httpshelppageurl"></a>HttpsHelpPageUrl  
+ Datentyp: string (Zeichenfolge)  
+  
+ Zugriffstyp: Schreibgeschützt  
+  
+ Legt den Speicherort fest, an dem die Dienst-WSDL für den Abruf mithilfe von HTTPS veröffentlicht wird.  
+  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
+ Datentyp: Boolesch  
+  
+ Zugriffstyp: Schreibgeschützt  
+  
+ Gibt an, ob verwaltete Ausnahmeinformationen in Details der SOAP-Fehler für Debugzwecke an die Clients zurückgegeben werden.  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.ServiceDebugBehavior>

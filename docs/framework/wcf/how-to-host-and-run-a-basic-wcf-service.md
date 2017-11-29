@@ -1,33 +1,31 @@
 ---
-title: "Gewusst wie: Hosten und Ausf&#252;hren eines grundlegenden Windows Communication Foundation-Diensts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF-Dienste [WCF]"
-  - "WCF-Dienste [WCF], Ausführen"
+title: "Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF services [WCF]
+- WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-caps.latest.revision: 58
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 58
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f0368e2e605f3f5c5b5a7b0d8c05f7276d8df22d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hosten und Ausf&#252;hren eines grundlegenden Windows Communication Foundation-Diensts
-Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Anwendung erforderlich sind.Eine Übersicht über alle sechs Aufgaben finden Sie im Thema [Lernprogramm 'Erste Schritte'](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
+Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
   
- In diesem Thema wird beschrieben, wie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Dienst in einer Konsolenanwendung gehostet wird.Dieses Verfahren umfasst die folgenden Schritte:  
+ In diesem Thema wird beschrieben, wie ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]-Dienst in einer Konsolenanwendung gehostet wird. Dieses Verfahren umfasst die folgenden Schritte:  
   
--   Erstellen Sie ein Konsolenanwendungsprojekt, um den Dienst zu hosten.  
+-   Erstellen eines Konsolenanwendungsprojekts zum Hosten des Diensts  
   
 -   Erstellen eines Diensthosts für den Dienst  
   
@@ -37,23 +35,23 @@ Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
   
  Eine vollständige Liste des für diese Aufgabe geschriebenen Codes wird in einem Beispiel im Anschluss an das Verfahren bereitgestellt.  
   
-### So erstellen Sie eine neue Konsolenanwendung, um den Dienst zu hosten  
+## <a name="to-create-a-new-console-application-to-host-the-service"></a>So erstellen Sie eine neue Konsolenanwendung zum Hosten des Diensts  
   
-1.  Erstellen Sie ein neues Konsolenanwendungsprojekt, indem Sie mit der rechten Maustaste auf die Projektmappe "Erste Schritte" klicken und dann **Hinzufügen** und **Neues Projekt** auswählen.Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** auf der linken Seite des Dialogfelds **Windows** unter **C\#** oder **VB** aus.Wählen Sie im mittleren Abschnitt des Dialogfelds **Konsolenanwendung** aus.Nennen Sie das Projekt "GettingStartedHost".  
+1.  Erstellen Sie ein neues Konsolenanwendungsprojekt mit der rechten Maustaste auf die erste Schritte-Projektmappe, wenn Sie auswählen, **hinzufügen**, **neues Projekt**. In der **neues Projekt hinzufügen** -Dialogfeld auf der linken Seite der Dialogfeld Select **Windows** unter **c#** oder **VB**. Wählen Sie im mittleren Abschnitt des Dialogfelds **Konsolenanwendung**. Nennen Sie das Projekt GettingStartedHost.  
   
-2.  Legen Sie das Zielframework des GettingStartedHost\-Projekts auf .NET Framework 4.5 fest, indem Sie im Projektmappen\-Explorer mit der rechten Maustaste auf **GettingStartedHost** klicken und **Eigenschaften** auswählen.Wählen Sie im Dropdownfeld **Zielframework** den Eintrag **.NET Framework 4.5** aus.Das Festlegen des Zielframeworks für ein VB\-Projekt weicht etwas davon ab. Klicken Sie im Eigenschaftendialogfelds des GettingStartedHost\-Projekts links im Bildschirm auf die Registerkarte **Kompilieren**, und klicken Sie dann unten links im Dialogfeld auf die Schaltfläche **Erweiterte Kompilierungsoptionen**.Wählen Sie im Dropdownfeld **Zielframework**den Eintrag **.NET Framework 4.5** aus.  
+2.  Legen Sie das Zielframework des GettingStartedHost-Projekts auf .NET Framework 4.5 per Rechtsklick auf **"gettingstartedhost"** im Projektmappen-Explorer auswählen und **Eigenschaften**. Im Dropdownfeld mit der Bezeichnung **Zielframework** wählen **.NET Framework 4.5**. Festlegen des Zielframeworks für ein VB-Projekt weicht etwas im Eigenschaftendialogfeld GettingStartedHost-Projekts klicken Sie auf die **Kompilieren** Registerkarte auf der linken Seite des Bildschirms, und klicken Sie dann auf die **erweiterte kompilieren Optionen** Schaltfläche auf der unteren linken Ecke des Dialogfelds. Wählen Sie dann **.NET Framework 4.5** im Dropdownfeld mit der Bezeichnung **Zielframework**.  
   
-     Das Festlegen des Zielframeworks führt dazu, dass die Projektmappe von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] neu geladen wird. Klicken Sie auf **OK**, wenn Sie dazu aufgefordert werden.  
+     Festlegen des Zielframeworks führt dazu, dass [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] um die Projektmappe erneut zu laden, drücken Sie die **OK** Aufforderung.  
   
-3.  Fügen Sie dem GettingStartedHost\-Projekt einen Verweis auf das GettingStartedLib\-Projekt hinzu, indem Sie im Projektmappen\-Explorer auf den Ordner **Verweise** unterhalb des GettingStartedHost\-Projekt klicken, und wählen Sie **Verweis hinzufügen** aus.Wählen Sie im Dialogfeld **Verweis hinzufügen** links im Dialogfeld **Projektmappe hinzufügen** und im mittleren Abschnitt des Dialogfelds "GettingStartedLib" aus, und klicken Sie auf **Hinzufügen**.Dadurch werden die in GettingStartedLib definierten Typen für das GettingStartedHost\-Projekt verfügbar.  
+3.  GettingStartedHost-Projekts einen Verweis auf das GettingStartedLib-Projekt hinzugefügt, indem Sie mit der mit der rechten Maustaste auf die **Verweise** Ordner unter dem GettingStartedHost-Projekt im Projektmappen-Explorer und wählen **Verweis hinzufügen** . In der **Verweis hinzufügen** wählen Sie im Dialogfeld **Lösung** auf der linken Seite des Dialogfeld und wählen GettingStartedLib im mittleren Abschnitt des Dialogfeld und klicken Sie auf **hinzufügen**. Dadurch werden die in GettingStartedLib definierten Typen für das GettingStartedHost-Projekt verfügbar.  
   
-4.  Fügen Sie dem GettingStartedHost\-Projekt einen Verweis auf System.ServiceModel hinzu, indem Sie im Projektmappen\-Explorer mit der rechten Maustaste auf den Ordner **Verweis** unter dem GettingStartedHost\-Projekt klicken, und wählen Sie **Verweis hinzufügen** aus.Wählen Sie im Dialogfeld **Verweis hinzufügen** links im Dialogfeld **Framework** aus.Geben Sie im Textfeld **Assemblys suchen**`System.ServiceModel` ein.Wählen Sie im mittleren Abschnitt des Dialogfelds **System.ServiceModel** aus, und klicken Sie auf die Schaltfläche **Hinzufügen** und auf die Schaltfläche **Schließen**.Speichern Sie die Projektmappe, indem Sie unterhalb des Hauptmenüs auf die Schaltfläche **Alle speichern** klicken.  
+4.  Fügen Sie einen Verweis auf System.ServiceModel dem GettingStartedHost-Projekt, indem Sie mit der rechten Maustaste die **Verweis** Ordner unter dem GettingStartedHost-Projekt im Projektmappen-Explorer und wählen **hinzufügen** Verweis. In der **Verweis hinzufügen** Dialogfeld wählen **Framework** auf der linken Seite des Dialogfelds. Geben Sie im Textfeld Assemblys suchen`System.ServiceModel` ein. Wählen Sie im mittleren Abschnitt des Dialogfelds **System.ServiceModel**, klicken Sie auf die **hinzufügen** aus, und klicken Sie auf die **schließen** Schaltfläche. Speichern Sie die Projektmappe, indem Sie unterhalb des Hauptmenüs auf die Schaltfläche Alle speichern klicken.  
   
-### So hosten Sie den Dienst  
+### <a name="to-host-the-service"></a>So hosten Sie den Dienst  
   
 -   Öffnen Sie die Datei Program.cs oder Module.vb, und geben Sie den folgenden Code ein:  
   
-    ```  
+    ```csharp
     // program.cs  
     using System;  
     using System.Collections.Generic;  
@@ -103,11 +101,10 @@ Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
             }  
         }  
     }  
-  
     ```  
   
-    ```  
-    ‘Module1.vb  
+    ```vb
+    'Module1.vb  
     Imports System  
     Imports System.ServiceModel  
     Imports System.ServiceModel.Description  
@@ -153,34 +150,33 @@ Dies ist die dritte von sechs Aufgaben, die zum Erstellen einer grundlegenden [!
         End Class  
   
     End Module  
-  
     ```  
   
-    1.  Schritt 1: Erstellt eine Instanz der URI\-Klasse, die die Basisadresse des Diensts enthält.Dienste werden über eine URL identifiziert, die eine Basisadresse und einen optionalen URI enthält.Die Basisadresse wird wie folgt formatiert: transport\]:\/\/\[machine\-name oder domain\]\[:optional port \#\]\/\[optional URI segment\]Die Basisadresse für den Rechnerdienst verwendet den HTTP\-Transport, localhost, Port 8000 und das URI\-Segment “GettingStarted”  
+    1.  Schritt 1: Erstellt eine Instanz der URI-Klasse, die die Basisadresse des Diensts enthält. Dienste werden über eine URL identifiziert, die eine Basisadresse und einen optionalen URI enthält. Die Basisadresse weist das folgende Format: [transport] :// [-Computernamen oder die Domäne] [: optionale # port] / [optionale URI-Segment] die Basisadresse für den rechnerdienst verwendet den HTTP-Transport, "localhost", Port 8000 und der URI-segment "Erste Schritte"  
   
-    2.  Schritt 2: Erstellt eine Instanz der <xref:System.ServiceModel.ServicHost>\-Klasse zum Hosten des Diensts.Der Konstruktor akzeptiert zwei Parameter, den Typ der Klasse, die den Dienstvertrag implementiert, und die Basisadresse des Diensts.  
+    2.  Schritt 2: Erstellt eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse zum Hosten des Diensts. Der Konstruktor akzeptiert zwei Parameter: den Typ der Klasse, die den Dienstvertrag implementiert, und die Basisadresse des Diensts.  
   
-    3.  Schritt 3: Erstellt eine neue <xref:System.ServiceModel.ServiceEndpoint>\-Instanz.Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen.Der <xref:System.ServiceModel.ServiceEndpoint>\-Konstruktor akzeptiert daher den Schnittstellentyp des Dienstvertrags, eine Bindung und eine Adresse.Der Dienstvertrag ist `ICalculator`, den Sie im Diensttyp definiert und implementiert haben.Die in diesem Beispiel verwendete Bindung ist <xref:System.ServiceModel.WSHttpBinding>. Dies ist eine integrierte Bindung, die für die Verbindung mit Endpunkten verwendet wird, die den WS\-\*\-Spezifikationen entsprechen.Weitere Informationen zu WCF\-Bindungen finden Sie unter [WCF\-Bindungsübersicht](../../../docs/framework/wcf/bindings-overview.md).Die Adresse wird an die Basisadresse angefügt, um den Endpunkt zu identifizieren.Die Adresse, die in diesem Code angegeben wird, ist "Calculator". Daher ist die vollqualifizierte Adresse für den Endpunkt `“http://localhost:8000/GettingStartedService/Calculator”`.  
+    3.  Schritt 3: erstellt eine <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Instanz. Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen. Die <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Konstruktor akzeptiert daher den Schnittstellentyp des Dienstvertrags, einer Bindung und eine Adresse. Der Dienstvertrag ist `ICalculator`, den Sie definiert haben und im Diensttyp implementieren. Die in diesem Beispiel verwendete Bindung ist <xref:System.ServiceModel.WSHttpBinding>. Dies ist eine integrierte Bindung, die für die Verbindung mit Endpunkten verwendet wird, die den WS-*-Spezifikationen entsprechen. Weitere Informationen zu WCF-Bindungen, finden Sie unter [WCF-Bindungsübersicht](../../../docs/framework/wcf/bindings-overview.md). Die Adresse wird an die Basisadresse angefügt, um den Endpunkt zu identifizieren. In diesem Code die angegebene Adresse ist "CalculatorService" aus, damit die vollqualifizierte Adresse für den Endpunkt ist `"http://localhost:8000/GettingStarted/CalculatorService"` Hinzufügen eines Dienstendpunkts ist optional, wenn mithilfe von .NET Framework 4.0 oder höher. Wenn im Code oder in der Konfiguration keine Endpunkte hinzugefügt wurden, fügt WCF in diesen Versionen einen Standardendpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wurden. Weitere Informationen zu Endpunkten finden Sie unter [angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
         > [!IMPORTANT]
-        >  Das Hinzufügen eines Dienstendpunkts ist optional, wenn .NET Framework 4 oder höher verwendet wird.Wenn im Code oder in der Konfiguration keine Endpunkte hinzugefügt wurden, fügt WCF in diesen Versionen einen Standardendpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wurden.Weitere Informationen zu Standardendpunkten finden Sie unter [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md) und [Vereinfachte Konfiguration für WCF\-Dienste](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  Das Hinzufügen eines Dienstendpunkts ist optional, wenn .NET Framework 4 oder höher verwendet wird. Wenn im Code oder in der Konfiguration keine Endpunkte hinzugefügt wurden, fügt WCF in diesen Versionen einen Standardendpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wurden. Weitere Informationen zu Endpunkten finden Sie unter [angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-    4.  Schritt 4: Aktiviert den Metadatenaustausch.Clients verwenden den Metadatenaustausch, um Proxys zu generieren, die zum Aufrufen von Dienstvorgänge verwendet werden.Zum Aktivieren von Metadatenaustausch erstellen Sie eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior>\-Instanz, legen Sie deren Eigenschaft auf <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> ist `true` fest und fügen das Verhalten der <xref:System.ServiceModel.ServiceHost.Behaviors%2A>\-Auflistung der <xref:System.ServiceModel.ServiceHost> \-Instanz hinzu.  
+    4.  Schritt 4: Aktiviert den Metadatenaustausch. Clients verwenden den Metadatenaustausch, um Proxys zu generieren, die zum Aufrufen von Dienstvorgängen verwendet werden. Zum Aktivieren von Metadatenaustausch erstellen eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Instanz, legen Sie es des <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> Eigenschaft `true`, und Hinzufügen des Verhaltens zur der <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` Auflistung von der <xref:System.ServiceModel.ServiceHost> Instanz.  
   
-    5.  Schritt 5: Öffnet den <xref:System.ServiceModel.ServiceHost>, um auf eingehende Nachrichten zu lauschen.Der Code wartet darauf, dass der Benutzer die EINGABETASTE drückt.Wenn dies nicht erfolgt, wird die App sofort geschlossen und der Dienst heruntergefahren. Beachten Sie auch, dass ein try\/catch\-Block verwendet wird.Nachdem <xref:System.ServiceModel.ServiceHost> instanziiert wurde, wird der gesamte Code in einen try\/catch\-Block platziert.Weitere Informationen zum sicheren Abfangen von Ausnahmen, die von <xref:System.ServiceModel.ServiceHost> ausgelöst werden, finden Sie unter [Vermeiden von Problemen mit der Using\-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+    5.  Schritt 5: Öffnet den <xref:System.ServiceModel.ServiceHost>, um auf eingehende Nachrichten zu lauschen. Der Code wartet darauf, dass der Benutzer die EINGABETASTE drückt. Wenn dies nicht erfolgt, wird die App sofort geschlossen und der Dienst heruntergefahren. Beachten Sie auch, dass ein try/catch-Block verwendet wird. Nachdem der <xref:System.ServiceModel.ServiceHost> instanziiert wurde, wird der gesamte sonstige Code in einen try/catch-Block eingefügt. Weitere Informationen zu sicher ausgelöste Ausnahmen abfangen <xref:System.ServiceModel.ServiceHost>, finden Sie unter [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
-### So überprüfen Sie, ob der Dienst funktioniert  
+### <a name="to-verify-the-service-is-working"></a>So überprüfen Sie, ob der Dienst funktioniert  
   
-1.  Führen Sie die GettingStartedHost\-Konsolenanwendung aus [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] heraus aus.Beim Ausführen unter [!INCLUDE[wv](../../../includes/wv-md.md)] und höher muss der Dienst mit Administratorrechten ausgeführt werden.Da [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] mit Administratorrechten ausgeführt wurde, wird auch GettingStartedHost mit Administratorrechten ausgeführt.Sie können auch eine neue Eingabeaufforderung mit Administratorrechten starten und "service.exe" damit ausführen.  
+1.  Führen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] die GettingStartedHost-Konsolenanwendung aus. Beim Ausführen unter [!INCLUDE[wv](../../../includes/wv-md.md)] und höher muss der Dienst mit Administratorrechten ausgeführt werden. Da [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] mit Administratorrechten ausgeführt wurde, wird auch GettingStartedHost mit Administratorrechten ausgeführt. Sie können auch eine neue Eingabeaufforderung mit Administratorrechten starten und "service.exe" damit ausführen.  
   
 2.  Öffnen Sie Internet Explorer, und navigieren Sie unter `http://localhost:8000/GettingStarted/CalculatorService` zur Debuggingseite des Diensts.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Das folgende Beispiel enthält den Dienstvertrag und die Implementierung aus den vorangegangenen Schritten im Lernprogramm und hostet den Dienst in einer Konsolenanwendung.  
   
- Zur Kompilierung mit einem Befehlszeilencompiler kompilieren Sie IService1.cs und Service2.cs in eine Klassenbibliothek, die auf `System.ServiceModel.dll` verweist.Und kompilieren Sie Program.cs in eine Konsolenanwendung.  
+ Um dies mit einem Befehlszeilen-Compiler kompilieren, kompilieren Sie "IService1.cs" und "Service1.cs" in einer Klasse Bibliothek verweisen auf `System.ServiceModel.dll`. Und kompilieren Sie Program.cs in eine Konsolenanwendung.  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +200,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -254,10 +249,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp
 //Program.cs  
 using System;  
 using System.Collections.Generic;  
@@ -307,11 +301,10 @@ namespace GettingStartedHost
         }  
     }  
 }  
-  
 ```  
   
-```  
-‘IService1.vb  
+```vb
+'IService1.vb  
 Imports System  
 Imports System.ServiceModel  
   
@@ -330,11 +323,10 @@ Namespace GettingStartedLib
         Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
     End Interface  
 End Namespace  
-  
 ```  
   
-```  
-‘Service1.vb  
+```vb
+'Service1.vb  
 Imports System  
 Imports System.ServiceModel  
   
@@ -376,11 +368,10 @@ Namespace GettingStartedLib
         End Function  
     End Class  
 End Namespace  
-  
 ```  
   
-```  
-‘Module1.vb  
+```vb
+'Module1.vb  
 Imports System  
 Imports System.ServiceModel  
 Imports System.ServiceModel.Description  
@@ -427,14 +418,13 @@ Module Service
     End Class  
   
 End Module  
-  
 ```  
   
 > [!NOTE]
->  Dienste wie dieser müssen dazu berechtigt sein, zu belauschende HTTP\-Adressen auf dem Computer zu registrieren.Administratorkonten verfügen über diese Berechtigung, anderen Konten muss diese Berechtigung für HTTP\-Namespaces gewährt werden.[!INCLUDE[crabout](../../../includes/crabout-md.md)] dazu, wie Namespacereservierungen konfiguriert werden, finden Sie unter [Konfigurieren von HTTP und HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).Wird der Dienst unter [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] ausgeführt, muss "service.exe" über Administratorrechte verfügen.  
+>  Dienste wie dieser müssen dazu berechtigt sein, HTTP-Adressen auf dem Computer zum Überwachen zu registrieren. Administratorkonten verfügen über diese Berechtigung, anderen Konten muss jedoch die Berechtigung für HTTP-Namespaces erteilt werden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Wird der Dienst unter [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] ausgeführt, muss "service.exe" über Administratorrechte verfügen.  
   
- Der Dienst wird nun ausgeführt.Fahren Sie mit [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fort.Informationen zur Problembehandlung finden Sie unter [Problembehandlung für das Lernprogramm "Erste Schritte"](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ Der Dienst wird nun ausgeführt. Fahren Sie mit [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Informationen zur Problembehandlung finden Sie unter [Problembehandlung für das Lernprogramm für erste Schritte](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   
-## Siehe auch  
- [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Selbsthosting](../../../docs/framework/wcf/samples/self-host.md)

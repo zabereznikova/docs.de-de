@@ -1,63 +1,61 @@
 ---
-title: "Entwurf der Benutzeroberfl&#228;che | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "[Schnittstellen [.NET Framework], Entwurfsrichtlinien"
-  - "Typentwurfsrichtlinien Schnittstellen"
-  - "Klassenbibliotheken – Entwurfsrichtlinien [.NET Framework], Schnittstellen"
+title: Schnittstellenentwurf
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interfaces [.NET Framework], design guidelines
+- type design guidelines, interfaces
+- class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d04011622321638e1f3b0c5f4d270f840c7070e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Entwurf der Benutzeroberfl&#228;che
-Die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert werden, es gibt jedoch Fälle, in denen Schnittstellen sind besser geeignet, oder die einzige Option.  
+# <a name="interface-design"></a>Schnittstellenentwurf
+Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert werden, stehen die Fälle, in denen Schnittstellen sind besser geeignet oder die einzige Option.  
   
- Die CLR unterstützt keine mehrfache Vererbung \(d. h. CLR\-Klassen aus mehr als einer Basisklasse erben nicht möglich\), jedoch Typen eine oder mehrere Schnittstellen neben der von einer Basisklasse erben. Schnittstellen werden daher häufig verwendet, um mehrfache Vererbung zu unterbinden. Z. B. <xref:System.IDisposable> ist eine Schnittstelle, über die Typen, die unabhängig von jedem anderen Vererbungshierarchie Disposability unterstützen, in dem sie teilnehmen möchten.  
+ Die CLR unterstützt keine mehrfachvererbung (d. h., CLR-Klassen aus mehr als einer Basisklasse erben können nicht), jedoch Typen eine oder mehrere Schnittstellen zusätzlich zu den von einer Basisklasse erben. Daher sind Schnittstellen häufig verwendet, um die Auswirkung der mehrfachvererbung zu erzielen. Beispielsweise <xref:System.IDisposable> ist eine Schnittstelle, über Typen zur Unterstützung Disposability unabhängig von anderen Vererbungshierarchie-befindet, in dem sie teilnehmen möchten.  
   
- Das andere Szenario, in der, das Definition eine Schnittstelle geeignet ist, ist in eine gemeinsame Schnittstelle, die von unterschiedlichen Typs, darunter einige Werttypen unterstützt werden können. Werttypen nicht von Typen erben, außer <xref:System.ValueType>, jedoch können Schnittstellen implementieren, also mit einer Schnittstelle ist die einzige Option, um einen allgemeinen Basistyp bereitzustellen.  
+ Das andere Szenario, in welche, das definieren eine Schnittstelle geeignet ist, ist bei der Erstellung einer gemeinsamen Schnittstelle, die von mehreren Typen, z. B. einige Werttypen unterstützt werden kann. Werttypen nicht außer von Typen erben <xref:System.ValueType>, jedoch Schnittstellen implementieren, also über eine Schnittstelle ist die einzige Option, um einen allgemeinen Basistyp bereitzustellen.  
   
- **✓ führen** eine Schnittstelle definieren, sollten Sie einige allgemeine API durch einen Satz von Typen unterstützt werden, die Werttypen enthält.  
+ **Führen Sie ✓** definieren Sie eine Schnittstelle aus, wenn Sie einige gemeinsame-API benötigen, von einem Satz von Typen unterstützt werden müssen, die Werttypen enthält.  
   
- **✓ ggf.** eine Schnittstelle definiert, wenn Sie ihre Funktionalität für Typen zu unterstützen, die bereits von einem anderen Typ erben müssen.  
+ **✓ GGF.** zum Definieren einer Schnittstelle, wenn Sie seine Funktionalität auf Typen zu unterstützen, die bereits von einem anderen Typ erben müssen.  
   
- **X vermeiden** mithilfe der Markerschnittstellen \(Schnittstellen ohne Member\).  
+ **X vermeiden** Markerschnittstellen (ohne Member) verwenden.  
   
- Wenn eine Klasse als ein bestimmtes Merkmal \(Marker\) markiert werden sollen, verwenden Sie im Allgemeinen ein benutzerdefiniertes Attribut anstelle einer Schnittstelle.  
+ Wenn Sie eine Klasse mit einem bestimmten Merkmal (Marker) markieren müssen, verwenden Sie in der Regel eine Schnittstelle, anstatt ein benutzerdefiniertes Attribut.  
   
- **✓ führen** Geben Sie mindestens einen Typ, die Implementierung einer Schnittstelle.  
+ **Führen Sie ✓** Geben Sie mindestens einen Typ, die Implementierung einer Schnittstelle.  
   
- Dies erleichtert den Entwurf der Schnittstelle zu überprüfen. Z. B. <xref:System.Collections.Generic.List%601> ist eine Implementierung der <xref:System.Collections.Generic.IList%601> Schnittstelle.  
+ Dies So überprüfen Sie den Entwurf der Schnittstelle. Beispielsweise <xref:System.Collections.Generic.List%601> ist eine Implementierung der <xref:System.Collections.Generic.IList%601> Schnittstelle.  
   
- **✓ führen** Geben Sie mindestens eine API, die jede Schnittstelle nutzt Sie definieren \(eine Methode, die die Schnittstelle als Parameter oder einer Eigenschaft annimmt, die als Schnittstelle eingegeben wird\).  
+ **Führen Sie ✓** Geben Sie mindestens eine API, die jede Schnittstelle nutzt Sie definieren (eine Methode, die die Schnittstelle als Parameter oder einer Eigenschaft annimmt, die als Schnittstelle eingegeben wird).  
   
- Dies erleichtert den Entwurf der Benutzeroberfläche zu überprüfen. Z. B. <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> nutzt die <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> Schnittstelle.  
+ Dies So überprüfen Sie den Schnittstellenentwurf. Beispielsweise <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> nutzt die <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> Schnittstelle.  
   
- **X nicht** Hinzufügen von Mitgliedern zu einer Schnittstelle, die bereits veröffentlicht wurden.  
+ **X nicht** Hinzufügen von Mitgliedern zu einer Schnittstelle, die zuvor gesendet wurde.  
   
- Dadurch würde die Implementierung der Schnittstelle ausgesetzt. Erstellen Sie eine neue Schnittstelle, um Versionsprobleme zu vermeiden.  
+ Auf diese Weise wird die Implementierung der Schnittstelle unterbrochen. Sie sollten eine neue Schnittstelle erstellen, um Versionsprobleme zu vermeiden.  
   
- Außer in diesen Richtlinien beschriebenen Situationen sollte im allgemeinen Klassen statt Schnittstellen wählen Sie in Design wiederverwendbarer Bibliotheken von verwaltetem Code.  
+ Außer den in der folgenden Richtlinien beschriebenen Situationen, in der Regel Klassen statt Schnittstellen Entscheidung können Sie in verwalteten Codebibliotheken wiederverwendbare entwerfen.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Typentwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Typ-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/type.md)  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

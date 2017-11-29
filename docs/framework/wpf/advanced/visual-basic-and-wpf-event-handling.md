@@ -1,56 +1,59 @@
 ---
-title: "Visual Basic- und WPF-Ereignisbehandlung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ereignishandler, Visual Basic"
-  - "Visual Basic, Ereignishandler"
+title: Visual Basic- und WPF-Ereignisbehandlung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic [WPF], event handlers
+- event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca55e31060388012e6bb94e40159c2e602484911
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Visual Basic- und WPF-Ereignisbehandlung
-Für die [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)]\-Sprache können Sie das sprachspezifische `Handles`\-Schlüsselwort verwenden, um Instanzen Ereignishandler zuzuordnen, anstatt Ereignishandlern Attribute anzufügen oder die <xref:System.Windows.UIElement.AddHandler%2A>\-Methode zu verwenden.  Das `Handles`\-Verfahren für das Anfügen von Handlern an Instanzen unterliegt jedoch einigen Einschränkungen, da die `Handles`\-Syntax einige der spezifischen [Routingereignis](GTMT)\-Features des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Ereignissystems nicht unterstützen kann.  
+# <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
+Für die [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] Sprache insbesondere können Sie die sprachspezifischen `Handles` Instanzen, anstelle von Anfügen von Ereignishandlern mit Attributen oder mithilfe von Ereignishandlern zuzuordnende Schlüsselwort der <xref:System.Windows.UIElement.AddHandler%2A> Methode. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
   
-## Verwenden von "Handles" in einer WPF\-Anwendung  
- Die Ereignishandler, die über `Handles` mit Instanzen und Ereignissen verbunden sind, müssen alle innerhalb der partiellen Klassendeklaration der Instanz definiert sein. Dies gilt auch für Ereignishandler, die über Attributwerte für Elemente zugewiesen sind.  Sie können nur `Handles` für ein Element auf einer Seite angeben, das einen <xref:System.Windows.FrameworkContentElement.Name%2A>\-Eigenschaftswert hat \(oder für das [x:Name\-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert ist\).  Das liegt daran, dass die <xref:System.Windows.FrameworkContentElement.Name%2A>\-Eigenschaft in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] den Instanzverweis erstellt, der erforderlich ist, um das durch die `Handles`\-Syntax geforderte *Instance.Event*\-Verweisformat zu unterstützen.  Das einzige Element, das für `Handles` ohne einen <xref:System.Windows.FrameworkContentElement.Name%2A>\-Verweis verwendet werden kann, ist die Stammelementinstanz, die die partielle Klasse definiert.  
+## <a name="using-handles-in-a-wpf-application"></a>Verwenden von „Handles“ in einer WPF-Anwendung  
+ Die Ereignishandler, die über `Handles` mit Instanzen und Ereignissen verbunden sind, müssen alle innerhalb der partiellen Klassendefinition der Instanz definiert sein, die auch eine Anforderung für Ereignishandler darstellt, die über Attributwerte für Elemente zugewiesen werden. Sie können nur angeben, `Handles` für ein Element auf die Seite mit einer <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaftswert (oder [X: Name-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert). Grund hierfür ist, die <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellt die Instanzverweis, der erforderlich ist, unterstützt die *Instance.Event* erforderlich sind, indem Sie das Format der `Handles` Syntax. Das einzige Element, das für Verteilungsszenarien `Handles` ohne eine <xref:System.Windows.FrameworkContentElement.Name%2A> Verweis ist das Stammelement-Instanz, die die partielle Klasse definiert.  
   
- Sie können mehreren Elementen den gleichen Handler zuweisen, indem Sie *Instance.Event*\-Verweise nach `Handles` durch Kommas trennen.  
+ Sie können mehreren Elemente den gleichen Handler zuweisen, indem Sie *Instance.Event*-Verweise nach `Handles` durch Kommas trennen.  
   
- Sie können `Handles` verwenden, um dem gleichen *Instance.Event*\-Verweis mehrere Handler zuzuweisen.  Die Reihenfolge, in der die Handler im `Handles`\-Verweis angegeben sind, spielt keine Rolle. Sie sollten davon ausgehen, dass Handler, die dasselbe Ereignis behandeln, in beliebiger Reihenfolge aufgerufen werden können.  
+ Sie können `Handles` dazu nutzen, um dem gleichen *Instance.Event*-Verweis mehr als einen Handler zuzuweisen. Bemessen Sie der Reihenfolge, in der Handler im `Handles`-Verweis gegeben werden, keine Wichtigkeit zu. Sie können davon ausgehen, dass Handler, die dasselbe Ereignis behandlen, in beliebiger Reihenfolge aufgerufen werden können.  
   
- Um einen Handler zu entfernen, der mit `Handles` in der Deklaration hinzugefügt wurde, können Sie <xref:System.Windows.UIElement.RemoveHandler%2A> aufrufen.  
+ Um einen Ereignishandler zu entfernen, die mit hinzugefügten `Handles` in der Deklaration, rufen Sie <xref:System.Windows.UIElement.RemoveHandler%2A>.  
   
- Sie können `Handles` verwenden, um Handler für [Routingereignisse](GTMT) anzufügen, solange Sie Handler an Instanzen anfügen, die das zu behandelnde Ereignis in ihren Membertabellen definieren.  Für [Routingereignisse](GTMT) beachten Handler, die mit `Handles` angefügt sind, dieselben Routingregeln wie Handler, die als [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Attribute oder mit der <xref:System.Windows.UIElement.AddHandler%2A>\-Common\-Signatur angefügt werden.  Wenn das Ereignis bereits als behandelt markiert ist \(die <xref:System.Windows.RoutedEventArgs.Handled%2A>\-Eigenschaft in den Ereignisdaten ist `True`\), werden Handler, die mit `Handles` angefügt sind, nicht als Reaktion auf diese Ereignisinstanz aufgerufen.  Das Ereignis könnte durch Instanzhandler für andere Elemente auf der Route oder durch die Klassenbehandlung des aktuellen Elements oder eines früheren Elements auf der Route als behandelt markiert werden.  Bei Eingabeereignissen, die Tunneling\-Bubbling\-Ereignispaare unterstützen, kann die Tunneling\-Route das Ereignispaar als behandelt markiert haben.  Weitere Informationen zu Routingereignissen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Mithilfe von `Handles` können Sie Handler für Routingereignisse anfügen, solange Sie Handler an Instanzen anfügen, die das behandelte Ereignis in ihren Membertabellen definieren. Für die weitergeleitete Ereignisse, Ereignishandler, die mit angefügt sind `Handles` führen Sie die gleichen Senderegeln, wie Handler, die als angefügt sind [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute, oder mit der allgemeinen Signatur des <xref:System.Windows.UIElement.AddHandler%2A>. Dies bedeutet, dass, wenn das Ereignis bereits als behandelt markiert ist (die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft in der Ereignisdaten ist `True`), und klicken Sie dann mit Handler angefügt `Handles` werden nicht als Antwort auf diese Instanz des Ereignisses aufgerufen. Das Ereignis kann von Instanzhandlern auf ein anderes Element in der Route oder von der Klassenbehandlung für das aktuelle Element oder frühere Elemente entlang der Route als behandelt markiert werden. Für Eingabeereignisse, die gekoppelte Tunneling-/Bubblingereignisse unterstützen, kann die Tunnelingroute das Ereignispaar als behandelt markiert haben. Weitere Informationen zu Routingereignissen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
-## Einschränkungen für "Handles" beim Hinzufügen von Handlern  
- `Handles` können nicht auf Handler für [angefügte Ereignisse](GTMT) verweisen.  Für das angefügte Ereignis müssen die `add`\-Accessormethode oder *typename.eventname*\-Ereignisattribute in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwendet werden.  Ausführliche Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+## <a name="limitations-of-handles-for-adding-handlers"></a>Einschränkungen von „Handles“ beim Hinzufügen von Handlern  
+ `Handles` kann für angefügte Ereignisse nicht auf Handler verweisen. Verwenden Sie die `add`-Accessormethode für das angefügte Ereignis oder *typename.eventname*-Ereignisattribute in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- Für [Routingereignisse](GTMT) können Sie nur `Handles` verwenden, um Handler für Instanzen zuzuweisen, wenn das Ereignis in der Instanzmembertabelle vorhanden ist.  Bei Routingereignissen im Allgemeinen kann jedoch ein übergeordnetes Element als Listener für Ereignisse aus untergeordneten Elementen fungieren, auch wenn das übergeordnete Element dieses Ereignis nicht in seiner Membertabelle hat.  In der Attributsyntax können Sie dies über eine *typename.membername*\-Attributform angeben, die festlegt, welcher Typ tatsächlich das Ereignis definiert, das Sie behandeln möchten.  So kann beispielsweise eine übergeordnete `Page` \(für die kein `Click`\-Ereignis definiert ist\) Klickereignisse der Schaltflächen überwachen, indem ein Attributhandler in der `Button.Click`\-Form zugewiesen wird.  `Handles` unterstützt jedoch die *typename.membername*\-Form nicht, da es eine *Instance.Event*\-Form unterstützen muss, das im Konflikt dazu steht.  Ausführliche Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Für Routingereignisse können Sie nur `Handles` dazu verwenden, um Handler für Instanzen zuzuweisen, auf denen das Ereignis in der Instanzmembertabelle vorhanden ist. Mit Routingereignissen kann ein übergeordnetes Element aber im Allgemeinen ein Listener für ein Ereignis aus untergeordneten Elementen sein, selbst wenn dieses Ereignis nicht in der Membertabelle des übergeordneten Elements vorkommt. In der Attributsyntax können Sie dies über die *typename.membername*-Attributform angeben, die beschreibt, welcher Typ tatsächlich das zu behandlende Ereignis definiert. Z. B. ein übergeordnetes Element `Page` (ohne `Click` definiertes Ereignis) Lauschen Schaltfläche – Click-Ereignisse können durch Zuweisen eines ereignishandlers Attribut in der Form `Button.Click`. `Handles` unterstützt aber nicht die Form *typename.membername*, da es eine in Konflikt stehende *Instance.Event*-Form unterstützen muss. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- `Handles` können keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt gekennzeichnet sind.  Stattdessen müssen Sie Code verwenden und die `handledEventsToo`\-Überladung von <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> aufrufen.  
-  
-> [!NOTE]
->  Verwenden Sie die `Handles`\-Syntax nicht im [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)]\-Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben.  In diesem Fall wird der Ereignishandler zweimal  aufgerufen.  
-  
-## Implementieren der "Handles"\-Funktionalität in WPF  
- Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Seite kompiliert wird, deklariert die Zwischendatei `Friend` `WithEvents`\-Verweise für jedes Element einer Seite, für das eine <xref:System.Windows.FrameworkContentElement.Name%2A>\-Eigenschaft festgelegt wurde \(oder für das [x:Name\-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert wurde\).  Jede benannte Instanz ist potenziell ein Element, das über `Handles` einem Handler zugewiesen werden kann.  
+ `Handles` kann keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt markiert sind. Stattdessen müssen Sie verwenden, Code, und rufen die `handledEventsToo` Überladung der <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  Innerhalb von [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] kann [!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] den Abschluss für die Elemente zeigen, die für einen `Handles`\-Verweis in einer Seite verfügbar sind.  Dies kann jedoch einen Kompilierungsschritt in Anspruch nehmen, da die Zwischendatei alle `Friends`\-Verweise ausfüllen muss.  
+>  Verwenden Sie nicht die `Handles`-Syntax in [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)]-Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
   
-## Siehe auch  
- <xref:System.Windows.UIElement.AddHandler%2A>   
- [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Übersicht über XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="how-wpf-implements-handles-functionality"></a>So implementiert WPF die „Handles“-Funktionalität  
+ Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite kompiliert wird, deklariert die Zwischendatei `Friend` `WithEvents` Verweise auf jedes Element auf die Seite mit eine <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaftensatz (oder [X: Name-Direktive](../../../../docs/framework/xaml-services/x-name-directive.md) deklariert). Jede benannte Instanz ist potenziell ein Element, das an einem Handler mit `Handles` zugewiesen werden kann.  
+  
+> [!NOTE]
+>  In [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] kann [!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] Ihnen eine Auto-Vervollständigung für alle Elemente anbieten, die für einen `Handles`-Verweis verfügbar sind. Dies kann jedoch einen Kompilierungsschritt dauern, sodass die Zwischendatei alle `Friends`-Verweise auffüllen kann.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.UIElement.AddHandler%2A>  
+ [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

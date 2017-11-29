@@ -1,71 +1,75 @@
 ---
-title: "Abh&#228;ngigkeitseigenschaften vom Auflistungstyp | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auflistungseigenschaften"
-  - "Abhängigkeitseigenschaften"
-  - "Eigenschaften, Auflistungstyp"
-  - "Eigenschaften, Abhängigkeit"
+title: "Abhängigkeitseigenschaften vom Auflistungstyp"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Abh&#228;ngigkeitseigenschaften vom Auflistungstyp
-In diesem Thema finden Sie Unterstützung und Mustervorschläge für das Implementieren einer [Abhängigkeitseigenschaft](GTMT), wenn die Eigenschaft zum Auflistungstyp gehört.  
+# <a name="collection-type-dependency-properties"></a>Abhängigkeitseigenschaften vom Auflistungstyp
+Dieses Thema enthält einen Leitfaden und empfohlene Muster zur Implementierung einer Abhängigkeitseigenschaft für Eigenschaften vom Auflistungstyp.  
   
-   
+ 
   
 <a name="implementing"></a>   
-## Implementieren einer Abhängigkeitseigenschaft vom Auflistungstyp  
- Für Abhängigkeitseigenschaften wird im Allgemeinen folgendes Implementierungsmuster verwendet: Sie definieren einen [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]\-Eigenschaftenwrapper, in dem diese Eigenschaft durch einen <xref:System.Windows.DependencyProperty>\-Bezeichner statt durch ein Feld oder ein anderes Konstrukt unterstützt wird.  Dieses Muster gilt auch, wenn Sie eine Eigenschaft vom Auflistungstyp implementieren.  Bei einer Eigenschaft vom Auflistungstyp wird dieses Muster jedoch komplexer, wenn der in der Auflistung enthaltene Typ selbst ein <xref:System.Windows.DependencyObject> oder eine von <xref:System.Windows.Freezable> abgeleitete Klasse ist.  
+## <a name="implementing-a-collection-type-dependency-property"></a>Implementieren einer Abhängigkeitseigenschaft vom Auflistungstyp  
+ Für eine Abhängigkeitseigenschaft ist im Allgemeinen das Implementierungsmuster, die Sie befolgen, die Sie definieren eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper sind, wird diese Eigenschaft, durch gesichert eine <xref:System.Windows.DependencyProperty> Bezeichner statt ein Feld oder ein anderes Konstrukt. Folgen Sie diesem Muster auch bei der Implementierung einer Eigenschaft vom Auflistungstyp. Eine Eigenschaft vom Typ Auflistung stellt jedoch gewisse Komplexität mit dem Muster, wenn der Typ, der in der Auflistung enthalten ist, die selbst ist ein <xref:System.Windows.DependencyObject> oder <xref:System.Windows.Freezable> abgeleitete Klasse.  
   
 <a name="initializing"></a>   
-## Initialisieren der Auflistung mit einem anderem Wert als dem Standardwert  
- Wenn Sie eine Abhängigkeitseigenschaft erstellen, geben Sie den Standardwert der Eigenschaft nicht als anfänglichen Feldwert an.  Stattdessen geben Sie den Standardwert über die Metadaten für die Abhängigkeitseigenschaft an.  Wenn die Eigenschaft ein Verweistyp ist, so ist der in den Metadaten für die Abhängigkeitseigenschaft angegebene Standardwert kein Standardwert pro Instanz, sondern ein Standardwert, der für alle Instanzen dieses Typs gilt.  Daher müssen Sie sorgfältig darauf achten, dass Sie nicht die durch die Metadaten für die Auflistungseigenschaft definierte einzelne statische Auflistung als funktionierenden Standardwert für neu erstellte Instanzen Ihres Typs verwenden.  Stattdessen müssen Sie sicherstellen, dass Sie den Auflistungswert bewusst auf eine eindeutige \(Instanz\-\) Auflistung im Rahmen der Klassenkonstruktorlogik festlegen.  Andernfalls haben Sie eine unbeabsichtigte Singletonklasse erstellt.  
+## <a name="initializing-the-collection-beyond-the-default-value"></a>Initialisieren der Auflistung für einen anderen Wert als den Standardwert  
+ Beim Erstellen einer Abhängigkeitseigenschaft geben Sie nicht den Standardwert der Eigenschaft als Anfangsfeldwert an. Geben Sie den Standardwert stattdessen über die Metadaten für Abhängigkeitseigenschaften an. Handelt es sich bei der Eigenschaft um einen Verweistyp, ist der in den Metadaten für Abhängigkeitseigenschaften angegebene Standardwert kein Standardwert pro Instanz. Er stellt vielmehr einen Standardwert dar, der für alle Instanzen des Typs gilt. Achten Sie also darauf, dass Sie nicht die durch die Metadaten für Auflistungseigenschaften definierte, einzelne statische Auflistung als funktionierenden Standardwert für neu erstellte Instanzen des Typs verwenden. Vergewissern Sie sich stattdessen, dass Sie den Auflistungswert bewusst als eine eindeutige (Instanz-)Auflistung als Teil Ihrer Klassenkonstruktorlogik festlegen. Andernfalls erstellen Sie unbeabsichtigterweise eine Singleton-Klasse.  
   
- Betrachten Sie das folgende Beispiel.  Im nachstehenden Abschnitt des Beispiels wird die Definition für eine `Aquarium`\-Klasse veranschaulicht.  Die Klasse definiert die `AquariumObjects`\-Abhängigkeitseigenschaft vom Auflistungstyp, die den generischen <xref:System.Collections.Generic.List%601>\-Typ mit einer <xref:System.Windows.FrameworkElement>\-Typeinschränkung verwendet.  Im <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>\-Aufruf für die Abhängigkeitseigenschaft legen die Metadaten den Standardwert als neue generische <xref:System.Collections.Generic.List%601> fest.  
+ Betrachten Sie das folgende Beispiel. Der nachfolgende Abschnitt des Beispiels veranschaulicht die Definition einer `Aquarium`-Klasse. Die Klasse definiert die Auflistung Typ Abhängigkeitseigenschaft `AquariumObjects`, verwendet die generische <xref:System.Collections.Generic.List%601> Geben Sie mit einem <xref:System.Windows.FrameworkElement> Einschränkung geben. In der <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> Aufruf für die Abhängigkeitseigenschaft, die Metadaten richtet den Standardwert, um eine neue generische <xref:System.Collections.Generic.List%601>.  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- Wenn Sie jedoch den Code einfach so wie dargestellt lassen, wird der einzelne Listenstandardwert für alle Instanzen von `Aquarium` freigegeben.  Beim Ausführen des folgenden Testcodes, der zeigen soll, wie Sie zwei separate `Aquarium`\-Instanzen instanziieren und jeder einen einzelnen unterschiedlichen `Fish` hinzufügen würden, wäre das Ergebnis überraschend:  
+ Wenn Sie den Code unverändert lassen, wird dieser einzelne Listenstandardwert für alle Instanzen von `Aquarium` freigegeben. Beim Ausführen des folgenden Testcodes, der zeigen soll, wie zwei getrennte `Aquarium`-Instanzen instanziiert und jeder ein einzelner unterschiedlicher `Fish` hinzugefügt würde, käme es zu einem überraschenden Ergebnis:  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- Statt über einen Eintrag in jeder Auflistung verfügt jede Auflistung über zwei Einträge\!  Dies liegt daran, dass jedes `Aquarium` seinen `Fish` der Standardwertauflistung hinzugefügt hat, die aus einem einzigen Konstruktoraufruf in den Metadaten resultiert und daher für alle Instanzen freigegeben ist.  Diese Situation ist in nahezu keinem Fall erwünscht.  
+ Anstatt eines Eintrags besitzt jede Auflistung nun zwei! Das liegt daran, dass jedes `Aquarium` seinen `Fish` der Standardwertauflistung hinzugefügt hat, die das Ergebnis eines einzelnen Konstruktoraufrufs in den Metadaten ist und daher für alle Instanzen freigegeben ist. Diese Situation ist so gut wie nie erwünscht.  
   
- Um dieses Problem zu beheben, müssen Sie für den Abhängigkeitseigenschaftswert der Auflistung eine eindeutige Instanz im Rahmen der Klassenkonstruktorlogik festlegen.  Da diese Eigenschaft eine schreibgeschützte Abhängigkeitseigenschaft ist, verwenden Sie zur Festlegung die <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>\-Methode, mit dem <xref:System.Windows.DependencyPropertyKey>, der nur innerhalb der Klasse verfügbar ist.  
+ Zur Behebung des Problems müssen Sie den Abhängigkeitseigenschaftswert der Auflistung auf eine eindeutige Instanz als Teil des Klassenkonstruktoraufrufs zurücksetzen. Da die Eigenschaft eine schreibgeschützte Abhängigkeitseigenschaft ist, verwenden Sie die <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> Methode fest, mit der <xref:System.Windows.DependencyPropertyKey> , ist nur innerhalb der Klasse zugegriffen werden kann.  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- Wenn Sie nun denselben Test erneut ausführen würden, entsprächen die Ergebnisse eher Ihren Erwartungen, da jedes `Aquarium` jetzt seine eigene eindeutige Auflistung unterstützt.  
+ Bei einer erneuten Ausführung des Testcodes wären die Ergebnisse nun eher wie erwartet, da jedes `Aquarium` seine eigene eindeutige Auflistung unterstützen würde.  
   
- Dieses Muster sieht geringfügig anders aus, wenn Sie sich für eine nicht schreibgeschützte Auflistungseigenschaft entscheiden.  In diesem Fall rufen Sie den öffentlichen set\-Accessor vom Konstruktor aus auf, um die Initialisierung durchzuführen. Dadurch würde weiterhin die Nicht\-Schlüssel\-Signatur von <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> innerhalb Ihres set\-Wrappers aufgerufen, mit einem öffentlichen <xref:System.Windows.DependencyProperty>\-Bezeichner.  
+ Dieses Muster wäre geringfügig abgewandelt, wenn Sie die Auflistungseigenschaft mit Lese-/Schreibzugriff wählen würden. Sie können in diesem Fall den öffentlichen Set-Accessor aufrufen, aus dem Konstruktor, um die Initialisierung möchten weiterhin die Nichtschlüsselspalte Signatur aufrufen würde <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> innerhalb Ihres Wrappers Menge mithilfe einen öffentlichen <xref:System.Windows.DependencyProperty> Bezeichner.  
   
-## Melden von Bindungswertänderungen durch Auflistungseigenschaften  
- Eine Auflistungseigenschaft, die selbst eine Abhängigkeitseigenschaft ist, meldet nicht automatisch Änderungen an ihren untergeordneten Eigenschaften.  Wenn Sie Bindungen in einer Auflistung erstellen, kann dies die Bindung daran hindern, Änderungen zu melden, sodass einige Datenbindungsszenarien ungültig gemacht werden.  Wenn Sie jedoch den <xref:System.Windows.FreezableCollection%601>\-Auflistungstyp als Ihren Auflistungstyp verwenden, werden Änderungen an untergeordneten Elementen in der Auflistung ordnungsgemäß gemeldet, und die Bindung funktioniert wie erwartet.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a>Melden von Bindungswertänderungen durch Auflistungseigenschaften  
+ Eine Auflistungseigenschaft, die selbst eine Abhängigkeitseigenschaft ist, meldet nicht automatisch Änderungen an die ihr untergeordneten Eigenschaften. Wenn Sie in einer Auflistung Bindungen erstellen, kann möglicherweise das Melden von Änderungen durch die Bindung verhindert werden, wodurch einige Datenbindungsszenarios ungültig gemacht werden können. Allerdings bei Verwendung den Auflistungstyp <xref:System.Windows.FreezableCollection%601> als Ihre Sammlungstyp dann Untereigenschaften Änderungen an den darin enthaltenen Elemente in der Auflistung werden ordnungsgemäß gemeldet und Bindung erwartungsgemäß funktioniert.  
   
- Um die Bindung von untergeordneten Eigenschaften in einem Abhängigkeitsobjekt zu aktivieren, erstellen Sie die Auflistungseigenschaft als <xref:System.Windows.FreezableCollection%601>\-Typ mit einer Typeinschränkung für diese Auflistung bezüglich jeder vom <xref:System.Windows.DependencyObject> abgeleiteten Klasse.  
+ Um untergeordnete Bindung in einer abhängigkeitsauflistung-Objekt zu aktivieren, erstellen Sie die Auflistungseigenschaft als Typ <xref:System.Windows.FreezableCollection%601>, mit einer Einschränkung für die jeweilige Sammlung an ein beliebiges <xref:System.Windows.DependencyObject> abgeleitete Klasse.  
   
-## Siehe auch  
- <xref:System.Windows.FreezableCollection%601>   
- [XAML\- und benutzerdefinierte Klassen für WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.FreezableCollection%601>  
+ [XAML- und benutzerdefinierte Klassen für WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

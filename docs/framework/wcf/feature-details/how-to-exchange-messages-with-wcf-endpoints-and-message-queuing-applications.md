@@ -1,29 +1,35 @@
 ---
-title: "Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen
 Sie können vorhandene Message Queuing (MSMQ)- Anwendungen mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Anwendungen integrieren, indem Sie mithilfe der Bindung für die MSMQ-Integration MSMQ-Nachrichten in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Nachrichten und WCF-Nachrichten in MSMQ-Nachrichten konvertieren. So können Sie mit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Clients MSMQ-Empfängeranwendungen und mit MSMQ-Sendeanwendungen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste aufrufen.  
   
- In diesem Abschnitt wird erläutert, wie mit <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die warteschlangenkommunikation zwischen (1) ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client und ein MSMQ-Anwendungsdienst mit System.Messaging und (2) einem MSMQ-Anwendungsclient geschrieben und ein [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service.  
+ In diesem Abschnitt wird erläutert, wie Sie <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die Warteschlangenkommunikation zwischen (1) einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client und einem mit System.Messaging geschriebenen MSMQ-Anwendungsdienst und (2) einem MSMQ-Anwendungsclient und einem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst verwenden können.  
   
- Ein vollständiges Beispiel, das veranschaulicht, wie eine MSMQ-empfängeranwendung von einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Client finden Sie unter der [Windows Communication Foundation zu Message Queuing-](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiel.  
+ Ein vollständiges Beispiel, das veranschaulicht, wie eine MSMQ-empfängeranwendung aus Aufrufen einer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Client finden Sie unter der [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) Beispiel.  
   
- Ein vollständiges Beispiel, das veranschaulicht, wie eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service aus einem MSMQ-Client, finden Sie unter der [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) Beispiel.  
+ Ein vollständiges Beispiel, das veranschaulicht, wie eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Dienst von einem MSMQ-Client, finden Sie unter der [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) Beispiel.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>So erstellen Sie einen WCF-Dienst, der Nachrichten von einem MSMQ-Client empfängt  
   
@@ -32,16 +38,16 @@ Sie können vorhandene Message Queuing (MSMQ)- Anwendungen mit [!INCLUDE[indigo1
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2.  Die-Schnittstelle implementieren und Anwenden der <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut auf die Klasse, wie im folgenden Beispielcode gezeigt.  
+2.  Implementieren Sie die Schnittstelle, und wenden Sie das <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attribut wie im folgenden Beispielcode gezeigt auf die Klasse an.  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3.  Eine Konfigurationsdatei erstellen, die angibt, die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
+3.  Erstellen Sie eine Konfigurationsdatei, die die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> angibt.  
   
   
   
-4.  Instanziieren einer <xref:System.ServiceModel.ServiceHost> -Objekt, das die konfigurierte Bindung verwendet.  
+4.  Instanziieren Sie ein <xref:System.ServiceModel.ServiceHost>-Objekt, das die konfigurierte Bindung verwendet.  
   
   
   
@@ -67,9 +73,9 @@ Sie können vorhandene Message Queuing (MSMQ)- Anwendungen mit [!INCLUDE[indigo1
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [Gewusst wie: Austauschen in einer Warteschlange Nachrichten mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)   
- [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)   
- [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)   
- [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)   
+ [Nachrichtenwarteschlangen (Übersicht)](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Vorgehensweise: Exchange in der Warteschlange Nachrichten mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

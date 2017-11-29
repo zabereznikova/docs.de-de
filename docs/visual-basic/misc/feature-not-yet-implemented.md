@@ -1,25 +1,27 @@
 ---
-title: "Die Funktion ist noch nicht implementiert. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID32768"
+title: Die Funktion ist noch nicht implementiert.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID32768
 ms.assetid: 487361ea-7158-479f-ad25-9e7c9b5ea3a6
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4a925a8d459c7a8ac6fed2b77aa757dee36f2998
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Die Funktion ist noch nicht implementiert.
+# <a name="feature-not-yet-implemented"></a>Die Funktion ist noch nicht implementiert.
 Sie haben versucht, auf eine Funktion zuzugreifen, die derzeit nicht in Visual Basic implementiert ist.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Entfernen Sie den Verweis.  
   
-## Siehe auch  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER Produktsupport und Barrierefreiheit](http://msdn.microsoft.com/de-de/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [PAVEOVER Produktsupport und Barrierefreiheit](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)

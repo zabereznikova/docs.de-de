@@ -1,25 +1,28 @@
 ---
-title: "Vertrag | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contract1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2e92c5d804fca3c04506e951a5c341c89eed1c54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vertrag
-Contract  
+# <a name="contract"></a>Vertrag
+Vertrag  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class Contract  
@@ -36,80 +39,80 @@ class Contract
 };  
 ```  
   
-## Methoden  
- Die Contract\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die Contract-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die Contract\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die Contract-Klasse verfügt über die folgenden Eigenschaften:  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Anwendungsdomänen\-ID der Anwendungsdomäne, die den Vertrag hostet.  
+ Die Anwendungsdomänen-ID der Anwendungsdomäne, die den Vertrag hostet.  
   
-### Behaviors  
- Datentyp: Behavior\-Array  
+### <a name="behaviors"></a>Verhalten  
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die mit diesem Vertrag verknüpften Verhalten.  
   
-### Name  
- Datentyp: Zeichenfolge  
+### <a name="name"></a>Name  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name des Vertrags in WSDL.  
   
-### Namespace  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="namespace"></a>Namespace  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Der Namespace des `portType`\-Elements in WSDL.  
+ Der Namespace des `portType`-Elements in WSDL.  
   
-### Operations  
- Datentyp: Operation\-Array  
+### <a name="operations"></a>Vorgänge  
+ Datentyp: Operation-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Vorgang dieses Vertrags.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
- Die Porzess\-ID des Prozesses, der den Vertrag hostet.  
+ Die Porzess-ID des Prozesses, der den Vertrag hostet.  
   
-### ref  
+### <a name="ref"></a>ref  
  Datentyp: Contract  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Typ des Rückrufs, wenn es sich beim Vertrag um einen Duplexvertrag handelt.  
   
-### SessionMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="sessionmode"></a>SessionMode  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob der Vertrag die ihm zugeordnete Bindung für die Verwendung der Kanalsitzung benötigt.  
   
-### Type  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="type"></a>Typ  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Typ des Vertrags.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Description.ContractDescription>

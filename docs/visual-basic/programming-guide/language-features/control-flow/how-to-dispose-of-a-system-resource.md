@@ -1,41 +1,40 @@
 ---
-title: "How to: Dispose of a System Resource (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Using statement, disposing of system resources"
-  - "Visual Basic code, control flow"
-  - "system resources, disposing of"
-  - "resources [Visual Basic], disposing of system"
-  - "system resources"
-  - "Using statement, Using...End Using"
-  - "Using block"
+title: 'Gewusst wie: Freigeben einer Systemressource (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Using statement [Visual Basic], disposing of system resources
+- Visual Basic code, control flow
+- system resources, disposing of
+- resources [Visual Basic], disposing of system
+- system resources
+- Using statement [Visual Basic], Using...End Using
+- Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5b5c65c9d123c6f481852eb249cb4d479a180c5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Dispose of a System Resource (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Mit einem `Using`\-Block können Sie sicherstellen, dass das System eine Ressource freigibt, wenn der Code den Block beendet.  Dies ist hilfreich, wenn Sie eine Systemressource verwenden, die sehr viel Speicher beansprucht oder auf die auch andere Komponenten zugreifen.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Gewusst wie: Freigeben einer Systemressource (Visual Basic)
+Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block verlässt. Dies ist hilfreich, wenn Sie eine Systemressource, die eine große Menge an Arbeitsspeicher beansprucht oder andere Komponenten auch verwenden möchten.  
   
-### So geben Sie eine Datenbankverbindung frei, wenn sie vom Code nicht mehr benötigt wird  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Um eine Verbindung mit Datenbank freigeben, wenn der Code beendet wurde  
   
-1.  Fügen Sie am Anfang der Quelldatei die entsprechende [Imports Statement \(.NET Namespace and Type\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für die Datenbankverbindung ein \(in diesem Fall <xref:System.Data.SqlClient>\).  
+1.  Stellen Sie sicher, dass Sie die entsprechende [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für eine Verbindung mit der Datenbank am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>).  
   
-2.  Erstellen Sie einen `Using`\-Block mit der `Using`\-Anweisung und der `End Using`\-Anweisung.  Fügen Sie in den Block den Code ein, der die Datenbankverbindung definiert.  
+2.  Erstellen einer `Using` -block mit der `Using` und `End Using` Anweisungen. Platzieren Sie den Code, der Verbindung mit der Datenbank behandelt, innerhalb des Blocks.  
   
-3.  Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz davon als Teil der `Using`\-Anweisung.  
+3.  Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz als Teil der `Using` Anweisung.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -47,17 +46,17 @@ Mit einem `Using`\-Block können Sie sicherstellen, dass das System eine Ressour
     End Sub  
     ```  
   
-     Das System gibt die Ressource frei. Dies gilt unabhängig davon, wie der Block beendet wird, beispielsweise auch bei Auftreten einer nicht behandelten Ausnahme.  
+     Das System, verwirft der Ressource unabhängig davon, wie Sie den Block, einschließlich der Groß-/Kleinschreibung eine nicht behandelte Ausnahme beenden.  
   
-     Sie können nur innerhalb des `Using`\-Blocks auf `sqc` zugreifen, da der Gültigkeitsbereich auf den Block beschränkt ist.  
+     Beachten Sie, die Sie nicht zugreifen können `sqc` von außerhalb der `Using` blockiert werden, da der Gültigkeitsbereich auf den Block beschränkt ist.  
   
-     Das gleiche Verfahren kann auch auf andere Systemressourcen wie ein Dateihandle oder einen COM\-Wrapper angewendet werden.  Sie verwenden einen `Using`\-Block, wenn Sie sicher sein möchten, dass die Ressource auch anderen Komponenten zur Verfügung steht, nachdem Sie den `Using`\-Block beendet haben.  
+     Sie können auf die gleiche Weise auf eine Systemressource, z. B. ein Dateihandle oder einen COM-Wrapper verwenden. Sie verwenden eine `Using` blockieren, wenn Sie möchten sicherstellen, dass die Ressource für andere Komponenten lassen, nachdem Sie geschlossen haben die `Using` Block.  
   
-## Siehe auch  
- <xref:System.Data.SqlClient.SqlConnection>   
- [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Other Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Data.SqlClient.SqlConnection>  
+ [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
+ [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md)

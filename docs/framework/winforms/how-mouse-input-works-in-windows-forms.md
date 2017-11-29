@@ -1,67 +1,68 @@
 ---
-title: "Funktionsweise von Mauseingaben in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Maus, Eingabe"
-  - "Windows Forms, Mauseingabe"
+title: Funktionsweise von Mauseingaben in Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, mouse input
+- mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20de05b5df3737ccc525cb50c81b51bcba766287
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Funktionsweise von Mauseingaben in Windows Forms
-Das Empfangen und Behandeln von Mauseingaben ist ein wichtiger Bestandteil jeder Windows\-Anwendung.  Sie können Mausereignisse behandeln, um eine Aktion in der Anwendung auszuführen, oder mithilfe von Mauspositionsdaten Hit\-Testing oder andere Aktionen ausführen.  Außerdem können Sie die Art und Weise ändern, wie die Steuerelemente in der Anwendung Mauseingaben behandeln.  In diesem Thema werden diese Mausereignisse im Einzelnen beschrieben. Außerdem wird erläutert, wie Systemeinstellungen für die Maus abgerufen und geändert werden.  Weitere Informationen über die mit den Mausereignissen bereitgestellten Daten und die Reihenfolge, in der die Mausklickereignisse ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+# <a name="how-mouse-input-works-in-windows-forms"></a>Funktionsweise von Mauseingaben in Windows Forms
+Empfangen und Behandeln von Mauseingaben ist ein wichtiger Bestandteil jeder Windows-Anwendung. Sie können verarbeitet Mausereignisse in Ihrer Anwendung eine Aktion auszuführen oder Mauspositionsinformationen zum Ausführen von Treffertests oder andere Aktionen verwenden. Darüber hinaus können Sie die Art ändern, die Steuerelemente in Ihrer Anwendung Mauseingaben behandeln. Dieses Thema beschreibt diese Mausereignisse in Detail- und das Abrufen und Ändern von Systemeinstellungen für die Maus. Weitere Informationen zu den Daten bereitgestellt, mit der Maus Ereignisse und die Reihenfolge, in dem die Maus click-Ereignisse, ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
   
-## Mausposition und Hit\-Testing  
- Wenn der Benutzer die Maus bewegt, bewegt das Betriebssystem den Mauszeiger.  Der Mauszeiger enthält ein einzelnes Pixel, den so genannten Hotspot, den das Betriebssystem verfolgt und als Position des Zeigers erkennt.  Wenn der Benutzer die Maus bewegt oder eine Maustaste drückt, löst das <xref:System.Windows.Forms.Control>, das <xref:System.Windows.Forms.Cursor.HotSpot%2A> enthält, ein entsprechendes Mausereignis aus.  Sie können die aktuelle Mausposition mit der <xref:System.Windows.Forms.MouseEventArgs.Location%2A>\-Eigenschaft des <xref:System.Windows.Forms.MouseEventArgs> abrufen, wenn Sie ein Mausereignis behandeln, oder über die <xref:System.Windows.Forms.Cursor.Position%2A>\-Eigenschaft des <xref:System.Windows.Forms.Cursor>.  Anschließend können Sie mithilfe der Mauspositionsinformationen Hit\-Testing ausführen und dann eine Aktion, die auf der Position der Maus basiert.  Die Hit\-Testing\-Funktion ist in zahlreiche Steuerelemente in Windows Forms integriert, beispielsweise in die Steuerelemente <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> und <xref:System.Windows.Forms.DataGridView>.  In Verbindung mit einem entsprechenden Mausereignis, beispielsweise <xref:System.Windows.Forms.Control.MouseHover>, eignet sich Hit\-Testing, um zu bestimmen, wann die Anwendung eine bestimmte Aktion ausführen soll.  
+## <a name="mouse-location-and-hit-testing"></a>Position des Mauszeigers und Treffertests  
+ Wenn der Benutzer die Maus bewegt, verschiebt das Betriebssystem der Mauszeiger die Form an. Der Mauszeiger die Form enthält ein einzelnes Pixel, den Hotspot, die das Betriebssystem nachverfolgt und als die Position des Zeigers erkennt aufgerufen. Wenn der Benutzer die Maus so bewegt oder eine Maustaste drückt, die <xref:System.Windows.Forms.Control> , enthält die <xref:System.Windows.Forms.Cursor.HotSpot%2A> löst das entsprechende Mausereignis aus. Erhalten Sie mit die aktuellen Position der <xref:System.Windows.Forms.MouseEventArgs.Location%2A> Eigenschaft der <xref:System.Windows.Forms.MouseEventArgs> beim ein Mausereignis zu behandeln oder mithilfe der <xref:System.Windows.Forms.Cursor.Position%2A> Eigenschaft der <xref:System.Windows.Forms.Cursor> Klasse. Sie können anschließend mit der Mauspositionsinformationen Treffertests ausführen, und führen Sie dann eine Aktion basierend auf der Position des Mauszeigers. Treffertest-Funktion ist in integriert mehrerer Windows Forms-Steuerelemente wie z. B. die <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> und <xref:System.Windows.Forms.DataGridView> Steuerelemente. Verwendet das entsprechende Mausereignis <xref:System.Windows.Forms.Control.MouseHover> z. B. Treffertests ist sehr nützlich, um zu bestimmen, wenn Ihre Anwendung eine bestimmte Aktion durchführen soll.  
   
-## Mausereignisse  
- Eine Möglichkeit der Reaktion auf Mauseingaben besteht in erster Linie darin, Mausereignisse zu behandeln.  In der folgenden Tabelle werden die Mausereignisse angezeigt, und es wird beschrieben, wann sie ausgelöst werden.  
+## <a name="mouse-events"></a>Mausereignisse  
+ Die primäre Methode zur Beantwortung von Mauseingaben ist Mausereignisse zu behandeln. In der folgenden Tabelle werden die Mausereignisse und beschreibt, wann sie ausgelöst werden.  
   
 |Mausereignis|Beschreibung|  
-|------------------|------------------|  
-|<xref:System.Windows.Forms.Control.Click>|Dieses Ereignis tritt auf, wenn die Maustaste losgelassen wird, normalerweise vor dem <xref:System.Windows.Forms.Control.MouseUp>\-Ereignis.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.  Behandeln Sie dieses Ereignis, wenn Sie nur feststellen müssen, wann ein Klick erfolgt.|  
-|<xref:System.Windows.Forms.Control.MouseClick>|Dieses Ereignis tritt auf, wenn der Benutzer mit der Maus auf das Steuerelement klickt.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.  Behandeln Sie dieses Ereignis, wenn Sie Informationen über die Maus abrufen müssen, wenn ein Klick erfolgt.|  
-|<xref:System.Windows.Forms.Control.DoubleClick>|Dieses Ereignis tritt auf, wenn auf das Steuerelement doppelt geklickt wird.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.  Behandeln Sie dieses Ereignis, wenn Sie nur feststellen müssen, wann ein Doppelklick erfolgt.|  
-|<xref:System.Windows.Forms.Control.MouseDoubleClick>|Dieses Ereignis tritt auf, wenn der Benutzer mit der Maus auf das Steuerelement doppelklickt.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.  Behandeln Sie dieses Ereignis, wenn Sie Informationen über die Maus abrufen müssen, wenn ein Doppelklick erfolgt.|  
-|<xref:System.Windows.Forms.Control.MouseDown>|Dieses Ereignis tritt auf, wenn sich der Mauszeiger über dem Steuerelement befindet und der Benutzer eine Maustaste drückt.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseEnter>|Dieses Ereignis tritt auf, wenn der Mauszeiger den Rand oder den Innenbereich des Steuerelements berührt, je nach Art des Steuerelements.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseHover>|Dieses Ereignis tritt auf, wenn der Mauszeiger über dem Steuerelement ruht.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseLeave>|Dieses Ereignis tritt auf, wenn der Mauszeiger den Rand oder den Innenbereich des Steuerelements verlässt, je nach Art des Steuerelements.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseMove>|Dieses Ereignis tritt auf, wenn der Mauszeiger bewegt wird, während er sich über einem Steuerelement befindet.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseUp>|Dieses Ereignis tritt auf, wenn sich der Mauszeiger über dem Steuerelement befindet und der Benutzer eine Maustaste loslässt.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
-|<xref:System.Windows.Forms.Control.MouseWheel>|Dieses Ereignis tritt auf, wenn der Benutzer das Mausrad dreht, während das Steuerelement im Fokus ist.  Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.  Sie können mithilfe der <xref:System.Windows.Forms.MouseEventArgs.Delta%2A>\-Eigenschaft von <xref:System.Windows.Forms.MouseEventArgs> bestimmen, wie weit die Maus einen Bildlauf durchgeführt hat.|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.Click>|Dieses Ereignis tritt auf, wenn die Maustaste losgelassen wird, in der Regel vor dem <xref:System.Windows.Forms.Control.MouseUp> Ereignis. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>. Behandeln Sie dieses Ereignis, wenn Sie müssen nur bestimmen, wann ein Klick erfolgt.|  
+|<xref:System.Windows.Forms.Control.MouseClick>|Dieses Ereignis tritt auf, wenn der Benutzer das Steuerelement mit der Maus klickt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>. Behandeln Sie dieses Ereignis, wenn Sie zum Abrufen von Informationen über die Maus beim Klicken müssen.|  
+|<xref:System.Windows.Forms.Control.DoubleClick>|Dieses Ereignis tritt auf, wenn das Steuerelement doppelgeklickt wird. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>. Behandeln Sie dieses Ereignis, wenn Sie nur müssen Sie bestimmen, wann ein Doppelklick erfolgt.|  
+|<xref:System.Windows.Forms.Control.MouseDoubleClick>|Dieses Ereignis tritt auf, wenn der Benutzer das Steuerelement mit der Maus doppelklickt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>. Behandeln Sie dieses Ereignis, wenn Sie zum Abrufen von Informationen über die Maus bei ein Doppelklick benötigen.|  
+|<xref:System.Windows.Forms.Control.MouseDown>|Dieses Ereignis tritt auf, wenn der Mauszeiger über dem Steuerelement und der Benutzer eine Maustaste drückt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseEnter>|Dieses Ereignis tritt auf, wenn der Mauszeiger auf den Rand oder den Clientbereich des Steuerelements, je nach Typ des Steuerelements eintritt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseHover>|Dieses Ereignis tritt auf, wenn der Mauszeiger die Form beendet und über dem Steuerelement verbleibt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseLeave>|Dieses Ereignis tritt auf, wenn der Mauszeiger auf den Rand oder den Clientbereich des Steuerelements, je nach Typ des Steuerelements verlässt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseMove>|Dieses Ereignis tritt auf, wenn der Mauszeiger bewegt wird, während es über ein Steuerelement befindet. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseUp>|Dieses Ereignis tritt auf, wenn der Mauszeiger über dem Steuerelement und der Benutzer eine Maustaste loslässt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>.|  
+|<xref:System.Windows.Forms.Control.MouseWheel>|Dieses Ereignis tritt auf, wenn der Benutzer das Mausrad dreht, während das Steuerelement den Fokus besitzt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>. Können Sie die <xref:System.Windows.Forms.MouseEventArgs.Delta%2A> Eigenschaft <xref:System.Windows.Forms.MouseEventArgs> um zu bestimmen, wie weit die Maus Bildlauf durchgeführt wurde.|  
   
-## Ändern von Mauseingabe und Erkennen von Systemeinstellungen  
- Sie können die Art, wie ein Steuerelement die Mauseingabe behandelt, erkennen und ändern, indem Sie von dem Steuerelement ableiten sowie die <xref:System.Windows.Forms.Control.GetStyle%2A>\-Methode und die <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode verwenden.  Die <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode bestimmt anhand einer bitweisen Kombination von <xref:System.Windows.Forms.ControlStyles>\-Werten, ob das Steuerelement Standard\- oder Doppelklickverhalten aufweist oder ob es seine eigene Mausverarbeitung behandelt.  Darüber hinaus umfasst die <xref:System.Windows.Forms.SystemInformation>\-Klasse Eigenschaften, die die Funktionen der Maus beschreiben und die festlegen, wie die Maus mit dem Betriebssystem interagiert.  In der folgenden Tabelle werden diese Eigenschaften zusammengefasst.  
+## <a name="changing-mouse-input-and-detecting-system-settings"></a>Ändern die Mauseingabe und Erkennen von Systemeinstellungen  
+ Können Sie erkennen und ändern, wie ein Steuerelement Mauseingabe behandelt durch Ableiten aus dem Steuerelement sowie den <xref:System.Windows.Forms.Control.GetStyle%2A> und <xref:System.Windows.Forms.Control.SetStyle%2A> Methoden. Die <xref:System.Windows.Forms.Control.SetStyle%2A> Methode akzeptiert eine bitweise Kombination von <xref:System.Windows.Forms.ControlStyles> Werte, um zu bestimmen, ob das Steuerelement Standard klicken oder doppelklicken Sie auf das Verhalten aufweisen, oder wenn das Steuerelement seine eigenen Maus Verarbeitung behandelt wird. Darüber hinaus die <xref:System.Windows.Forms.SystemInformation> Klasse enthält Eigenschaften, die beschreiben die Funktionen der Maus und angeben, wie die Maus mit dem Betriebssystem interagiert. In der folgenden Tabelle werden diese Eigenschaften zusammengefasst.  
   
-|Property|Beschreibung|  
-|--------------|------------------|  
-|<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Ruft die Abmessungen des Bereichs in Pixel ab, in den der Benutzer zweimal klicken muss, damit das Betriebssystem die beiden Klicks als einen Doppelklick interpretiert.|  
-|<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Ruft die maximale Anzahl an Millisekunden ab, die zwischen einem ersten und einem zweiten Klick verstreichen können, damit das Betriebssystem die Mausaktion als Doppelklick interpretiert.|  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Ruft die Abmessungen in Pixel ab, der den Bereich, in dem der Benutzer für das Betriebssystem, berücksichtigen die beiden zweimal klicken muss, Mausklicks als Doppelklick erkannt.|  
+|<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Ruft die maximale Anzahl von Millisekunden, die zwischen dem ersten und einem zweiten Mausklick für das Betriebssystem, damit die Mausaktion Doppelklick vergehen kann.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseButtons%2A>|Ruft die Anzahl der Maustasten ab.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseButtonsSwapped%2A>|Ruft einen Wert ab, der angibt, ob die Funktionen der linken und der rechten Maustaste vertauscht wurden.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseHoverSize%2A>|Ruft die Abmessungen des Rechtecks in Pixel ab, auf das der Mauszeiger für eine bestimmte Zeit zeigen muss, bevor eine Mausbewegungsmeldung generiert wird.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseHoverTime%2A>|Ruft die Zeit in Millisekunden ab, für die sich der Mauszeiger im Bewegungsrechteck befinden muss, bevor eine Mausbewegungsmeldung generiert wird.|  
-|<xref:System.Windows.Forms.SystemInformation.MousePresent%2A>|Ruft einen Wert ab, der angibt, ob eine Maus installiert ist.|  
-|<xref:System.Windows.Forms.SystemInformation.MouseSpeed%2A>|Ruft einen Wert ab, der die aktuelle Mausgeschwindigkeit angibt \(zwischen 1 und 20\).|  
+|<xref:System.Windows.Forms.SystemInformation.MousePresent%2A>|Ruft einen Wert, der angibt, ob eine Maus installiert ist.|  
+|<xref:System.Windows.Forms.SystemInformation.MouseSpeed%2A>|Ruft einen Wert, der angibt, der aktuelle mausgeschwindigkeit von 1 bis 20.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelPresent%2A>|Ruft einen Wert ab, der angibt, ob eine Maus mit einem Mausrad installiert ist.|  
-|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|Ruft die Höhe des Deltawerts der Erhöhung einer einzelnen Mausraddrehung ab.|  
+|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|Ruft die Größe des deltawerts des Inkrements des Mausrades ein einzelnes ab.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Ruft die Anzahl der Zeilen ab, die mit einem Bildlauf erfasst werden, wenn das Mausrad gedreht wird.|  
   
-## Siehe auch  
- [Mauseingabe in einer Windows Forms\-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Mauserfassung in Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [Mauserfassung in Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
  [Mauszeiger in Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)

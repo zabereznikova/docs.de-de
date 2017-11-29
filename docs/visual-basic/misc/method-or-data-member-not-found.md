@@ -1,24 +1,26 @@
 ---
-title: "Die Methode oder der Datenmember wurde nicht gefunden. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID461"
+title: Die Methode oder der Datenmember wurde nicht gefunden.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID461
 ms.assetid: 40b178c3-7dc4-4216-8460-17ff8d9aedf1
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9e25e24a13e1d8e86dc28f852c23e00717e9d763
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Die Methode oder der Datenmember wurde nicht gefunden.
+# <a name="method-or-data-member-not-found"></a>Die Methode oder der Datenmember wurde nicht gefunden.
 Die Methode oder der Datenmember, auf den Sie zugreifen möchten, wurde nicht gefunden.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Stellen Sie sicher, dass Sie den Namen der Methode oder des Datenmembers nicht falsch geschrieben haben.  
   
-## Siehe auch  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../visual-basic/programming-guide/language-features/error-types.md)

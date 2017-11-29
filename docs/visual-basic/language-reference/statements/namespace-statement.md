@@ -1,36 +1,34 @@
 ---
-title: "Namespace Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Namespace"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "namespaces, root"
-  - "Namespace statement"
-  - "namespaces, nested"
-  - "declaring namespaces, syntax"
-  - "namespaces, declaring"
-  - "root namespaces"
-  - "declarations, namespaces"
+title: Namespace-Anweisung
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Namespace
+helpviewer_keywords:
+- namespaces [Visual Basic], root
+- Namespace statement [Visual Basic]
+- namespaces [Visual Basic], nested
+- declaring namespaces [Visual Basic], syntax
+- namespaces [Visual Basic], declaring
+- root namespaces
+- declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-caps.latest.revision: 39
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Namespace Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Deklariert den Namen eines Namespaces und bewirkt, dass der auf die Deklaration folgende Quellcode in diesem Namespace kompiliert wird.  
+# <a name="namespace-statement"></a>Namespace-Anweisung
+Der Name eines Namespace deklariert und bewirkt, dass den Quellcode, der die Deklaration in diesem Namespace kompiliert werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Namespace [Global.] { name | name.name }  
@@ -38,68 +36,68 @@ Namespace [Global.] { name | name.name }
 End Namespace  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  Global  
- Optional.  Hiermit können Sie einen Namespace aus dem Stammnamespace des Projekts zu definieren.  Weitere Informationen finden Sie unter [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Dies ist optional. Können Sie einen Namespace aus der Stammnamespace des Projekts definieren. Finden Sie unter [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Erforderlich.  Ein eindeutiger Name, der den Namespace bezeichnet.  Muss ein gültiger Visual Basic\-Bezeichner sein.  Weitere Informationen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Erforderlich. Ein eindeutiger Name, der den Namespace identifiziert. Ein gültiger Visual Basic-Bezeichner muss sein. Weitere Informationen finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Optional.  Elemente, aus denen sich der Namespace zusammensetzt.  Dazu zählen, aber nicht für Strukturen, Enumerationen, Schnittstellen, Klassen, Module, Delegaten und andere Namespaces beschränkt.  
+ Dies ist optional. Elemente, die den Namespace bilden. Diese umfassen, aber Sie sind nicht darauf beschränkt, Strukturen, Schnittstellen, Klassen, Module, Delegaten, Enumerationen und andere Namespaces.  
   
  `End Namespace`  
- Beendet einen `Namespace`\-Block.  
+ Beendet eine `Namespace` Block.  
   
-## Hinweise  
- Namespaces fungieren als Organisationssystem.  Sie bieten eine Möglichkeit zum Klassifizieren und Darstellen von Programmierelementen, die für andere Programme und Anwendungen verfügbar gemacht werden.  Beachten Sie, dass ein Namespace kein *Typ* ist insofern, dass eine Klasse oder Struktur sein\-Sie kein Programmierelement deklarieren können, um den Datentyp eines Namespace verfügen.  
+## <a name="remarks"></a>Hinweise  
+ Namespaces werden als ein Organisations-System verwendet. Sie bieten eine Möglichkeit zum Klassifizieren und Präsentieren von Programmierelementen, die für andere Programme und Anwendungen verfügbar gemacht werden. Beachten Sie, dass ein Namespace keine *Typ* in dem Sinne, dass eine Klasse oder Struktur ist – ein Programmierelement haben Sie den Datentyp eines Namespace kann nicht deklariert werden.  
   
- Alle Programmierelemente, die nach einer `Namespace`\-Anweisung deklariert werden, gehören zu diesem Namespace.  Visual Basic kompiliert Elemente in den zuletzt deklarierten Namespace, bis entweder eine `End Namespace`\-Anweisung oder eine andere `Namespace`\-Anweisung auftritt.  
+ Alle Programmierelemente deklariert wird, nach einem `Namespace` Anweisung zu diesem Namespace gehören. Visual Basic kompilieren Sie Elemente in den zuletzt deklarierten Namespace, bis er entweder trifft weiterhin ein `End Namespace` -Anweisung oder eine andere `Namespace` Anweisung.  
   
- Wenn ein Namespace bereits definiert ist, auch außerhalb des Projekts, können Sie diesem Programmierelemente hinzufügen.  Hierzu verwenden Sie eine `Namespace`\-Anweisung Visual Basic auf sie verweisen um Elemente in diesen Namespace zu kompilieren.  
+ Wenn ein Namespace bereits, auch außerhalb des Projekts definiert ist können Sie Programmierelemente hinzufügen. Zu diesem Zweck verwenden Sie eine `Namespace` Anweisung, damit Visual Basic können Sie Elemente in diesem Namespace zu kompilieren.  
   
- Sie können eine `Namespace`\-Anweisung nur auf Datei\- oder Namespaceebene verwenden.  Dies bedeutet, dass der *Deklarationskontext* für einen Namespace eine Quelldatei oder ein anderer Namespace sein muss und keine Klasse, keine Struktur, kein Modul, keine Schnittstelle und keine Prozedur sein kann.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können eine `Namespace` Anweisung nur auf der Namespace- oder Dateiebene. Dies bedeutet, dass die *Deklarationskontext* für ein Namespace muss eine Quelldatei oder einen anderen Namespace, und eine Klasse, Struktur, Modul, Schnittstelle oder Prozedur nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Sie können einen Namespace in einem anderen Namespace deklarieren.  Die Anzahl der Schachtelungsebenen, die Sie deklarieren können, ist nicht streng begrenzt, allerdings sollten Sie Folgendes beachten: Wenn anderer Code auf die im innersten Namespace deklarierten Elemente zugreift, muss ein Qualifizierungspfad verwendet werden, der alle Namespacenamen der Schachtelungshierarchie enthält.  
+ Sie können mehrere Namespaces innerhalb einer anderen deklarieren. Es ist keine flexiblen Grenzwert, der Schachtelungsebenen deklarieren, aber beachten Sie, dass wenn anderer Code, die im innersten Namespace deklarierten Elemente zugreift, muss ein Qualifizierungspfad verwendet werden, die die Namespacenamen in der Schachtelungshierarchie enthält.  
   
-## Zugriffsebene  
- Namespaces werden behandelt, als wäre sie eine `Public` Zugriffsebene aufweisen.  Auf einen Namespace kann von Code an einer beliebigen Stelle in demselben Projekt, von anderen Projekten, die auf dieses Projekt verweisen, und von einer aus dem Projekt erstellten Assembly aus zugegriffen werden.  
+## <a name="access-level"></a>Zugriffsebene  
+ Namespaces werden behandelt, als hätten sie eine `Public` Zugriffsebene. Ein Namespace kann zugegriffen werden, aus Code an einer beliebigen Stelle im selben Projekt als andere Projekte, die auf das Projekt zu verweisen und von einer Assembly aus dem Projekt erstellt.  
   
- Programmierelemente, die auf Namespaceebene deklariert sind, d. h. in einem Namespace, jedoch in keinem anderen Element, können `Public`\-Zugriff oder `Friend`\-Zugriff aufweisen.  Wenn keine Zugriffsebene angegeben wurde, ist die Standardzugriffsebene eines solchen Elements `Friend`.  Zu den Elementen, die Sie auf Namespaceebene deklarieren können, zählen Klassen, Strukturen, Module, Schnittstellen, Enumerationen und Delegaten.  Weitere Informationen finden Sie unter [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Programmierelemente, die auf Namespace-Ebene, d. h. in einem Namespace, jedoch in keinem anderen Element deklariert haben `Public` oder `Friend` Zugriff. Falls nicht angegeben, verwendet die Zugriffsebene wie ein Element `Friend` standardmäßig. Elemente, die Sie auf Namespaceebene deklarieren können beinhalten Klassen, Strukturen, Modulen, Schnittstellen, Enumerationen und Delegaten. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## Stamm\-Namespace  
- Alle Namespacenamen im Projekt beruhen auf einem *Stammnamespace*.  Visual Studio weist den Projektnamen als Standardstammnamespace für den gesamten Code in diesem Projekt zu.  Wenn der Name des Projekts z. B. `Payroll` lautet, gehören die Programmierelemente des Projekts zu dem Namespace `Payroll`.  Wenn Sie `Namespace funding` deklarieren, ist der vollständige Name dieses Namespaces `Payroll.funding`.  
+## <a name="root-namespace"></a>Stamm-Namespace  
+ Alle Namespacenamen im Projekt basieren auf einer *Stammnamespace*. Visual Studio weist den Projektnamen als den Standard-Stammnamespace für den gesamten Code des Projekts zu. Wenn Ihr Projekt beispielsweise den Namen `Payroll` hat, gehören die Programmierelemente zum Namespace `Payroll`. Wenn Sie deklarieren `Namespace funding`, ist der vollständige Name des Namespaces `Payroll.funding`.  
   
- Wenn Sie einen vorhandenen Namespace in einer `Namespace`\-Anweisung angeben möchten, wie z. B. im Beispiel für die generische Listenklasse, können Sie den Stammnamespace auf einen NULL\-Wert festlegen.  Klicken Sie hierfür im Menü **Projekt** auf **Projekteigenschaften**, und löschen Sie den Eintrag **Stammnamespace**.  Wenn Sie diesen Schritt im Beispiel für die generische Listenklasse nicht ausführen, verwendet der Visual Basic\-Compiler `System.Collections.Generic` als neuen Namespace im Projekt `Payroll`, mit dem vollständigen Namen `Payroll.System.Collections.Generic`.  
+ Wenn Sie einen vorhandenen Namespace im angeben möchten, eine `Namespace` -Anweisung, wie im Beispiel für die generische Liste, den Stammnamespace auf einen null-Wert festgelegt werden können. Klicken Sie hierzu auf **Projekteigenschaften** aus der **Projekt** Menü- und deaktivieren Sie dann die **Stammnamespace** Eintrag so, dass das Feld leer ist. Wenn Sie dies im Beispiel für die generische Liste nicht, würde der Visual Basic-Compiler `System.Collections.Generic` als einen neuen Namespace im Projekt `Payroll`, mit dem vollständigen Namen des `Payroll.System.Collections.Generic`.  
   
- Stattdessen können Sie auch mit dem `Global`\-Schlüsselwort auf Elemente von Namespaces verweisen, die außerhalb des Projekts definiert sind.  So kann der Projektname als Stammnamespace beibehalten werden.  Hierdurch wird die Wahrscheinlichkeit verringert, dass Ihre Programmierelemente versehentlich mit den Programmierelementen vorhandener Namespaces zusammengeführt werden.  Weitere Informationen finden Sie im Abschnitt „globales Schlüsselwort in den voll gekennzeichneten Namen“ \- Abschnitt in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Alternativ können Sie die `Global` Schlüsselwort verweisen auf Elemente des Namespaces, die außerhalb des Projekts definiert. Auf diese Weise können Sie den Projektnamen als Stammnamespace beibehalten werden sollen. Dies reduziert die Wahrscheinlichkeit, dass versehentlich von Programmierelementen zusammen mit den vorhandenen Namespaces zusammengeführt. Weitere Informationen finden Sie im Abschnitt "Global-Schlüsselwort in vollständig qualifizierte Namen" [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- Das `Global`\-Schlüsselwort kann in einem Namespace Statement ebenfalls verwendet werden.  Dadurch können Sie einen Namespace aus dem Stammnamespace des Projekts Bereichs definieren.  Weitere Informationen finden Sie im Abschnitt „globales Schlüsselwort in den Namespace\-Anweisungen im Abschnitt“ [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Die `Global` -Schlüsselwort kann auch in einem Namespace-Anweisung verwendet werden. Dadurch können Sie einen Namespace aus dem Stammnamespace des Projekts definieren. Weitere Informationen finden Sie im Abschnitt "Global-Schlüsselwort im Namespace-Anweisungen" [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- **Problembehandlung** Der Stammnamespace kann zu unerwarteten Verkettungen von Namespacenamen führen.  Wenn Sie auf außerhalb des Projekts definierte Namespaces verweisen, können diese vom Visual Basic\-Compiler als geschachtelte Namespaces im Stammnamespace interpretiert werden.  In diesem Fall erkennt der Compiler keine Typen, die bereits in den externen Namespaces definiert wurden.  Um dies zu vermeiden, legen Sie den Stammnamespace auf einen NULL\-Wert fest, wie in „Stamm\-Namespace“ beschrieben und verwendet das Schlüsselwort `Global` von Elementen aus externen Namespaces zuzugreifen.  
+ **Problembehandlung bei.** Der Stammnamespace kann zu unerwarteten Verkettungen Namespacenamen führen. Wenn Sie den Verweis auf die Namespaces, die außerhalb des Projekts definiert vornehmen, können sie Visual Basic-Compiler als geschachtelte Namespaces im Stammnamespace construe. In diesem Fall erkennt der Compiler keine Typen, die bereits in den externen Namespaces definiert wurden. Um dies zu vermeiden, legen Sie den Stammnamespace auf einen null-Wert in "Stamm-Namespace" erläuterten oder verwenden Sie die `Global` Schlüsselwort, um Zugriff auf Elemente des externen Namespaces.  
   
-## Attribute und Modifizierer  
- Sie können auf einen Namespace keine Attribute anwenden.  Ein Attribut fügt den Metadaten einer Assembly Informationen hinzu. Dies ist für Herkunftsklassifizierer wie Namespaces nicht sinnvoll.  
+## <a name="attributes-and-modifiers"></a>Attribute und -Modifizierern  
+ Attribute können nicht mit einem Namespace angewendet werden. Ein Attribut trägt dazu bei Informationen zu den Metadaten der Assembly, die hat keine Bedeutung für Quelle Klassifizierern wie Namespaces.  
   
- Sie können auf einen Namespace weder Zugriffs\- noch Prozedurmodifizierer oder andere Modifizierer anwenden.  Da ein Namespace kein Typ ist, sind diese Modifizierer nicht sinnvoll.  
+ Zugriff oder Prozedurmodifizierer oder andere Modifizierer, kann nicht mit einem Namespace angewendet werden. Da es sich nicht um einen Typ handelt, sind diese Modifizierer nicht aussagekräftig.  
   
-## Beispiel  
- Im folgenden Beispiel werden zwei ineinander geschachtelte Namespaces deklariert.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel deklariert zwei Namespaces, die in einer anderen geschachtelten.  
   
  [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel werden mehrere geschachtelte Namespaces in einer einzigen Zeile deklariert. Dieses Beispiel entspricht dem vorherigen Beispiel.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel deklariert mehrere geschachtelte Namespaces in einer einzelnen Zeile ein, und dies ist äquivalent zum vorherigen Beispiel.  
   
  [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird auf die in den vorherigen Beispielen definierte Klasse zugegriffen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel greift auf die Klasse, die in den vorherigen Beispielen definiert.  
   
  [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
-## Beispiel  
- Im folgenden Beispiel wird das Skelett einer neuen generischen Listenklasse definiert und dem <xref:System.Collections.Generic?displayProperty=fullName>\-Namespace hinzugefügt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel definiert das Skeleton des einen neuen generischen List-Klasse und fügt es der <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace.  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -110,7 +108,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## Siehe auch  
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

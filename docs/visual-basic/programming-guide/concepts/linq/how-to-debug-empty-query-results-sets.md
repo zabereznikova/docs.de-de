@@ -1,28 +1,24 @@
 ---
-title: "Gewusst wie: Debuggen von leeren Abfrageergebnissätzen (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5564e88d1a861f2ce3760e9450d68aee5b57a64
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c483153f8ff41c08cfaa0141fed056de7f5f680
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Gewusst wie: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  
   
  Der erste Satz von Beispielen in diesem Thema zeigt eine typische Vorgehensweise, bei der XML in einem Standardnamespace geladen und dann nicht ordnungsgemäß abgefragt wird.  
@@ -64,7 +60,7 @@ End of result set
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Erstellung von XML in einem Namespace und eine Abfrage, die korrekt codiert ist.  
   
- Die Lösung besteht darin zu deklarieren und initialisieren einen globalen Standardnamespace. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
+ Die Lösung besteht darin, deklarieren und initialisieren einen globalen Standardnamespace. Dadurch werden alle XML-Eigenschaften im Standardnamespace platziert. Weitere Änderungen sind für das ordnungsgemäße Funktionieren des Beispiels nicht erforderlich.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  

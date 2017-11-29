@@ -1,85 +1,83 @@
 ---
-title: "Ereignisentwurf | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Vorherige Ereignisse"
-  - "[Ereignisse [.NET Framework], Entwurfsrichtlinien"
-  - "Entwurfsrichtlinien für Member, Ereignisse"
-  - "Ereignishandler [.NET Framework], ereignisentwurfsrichtlinien"
-  - "spätere Ereignisse"
-  - "Signaturen-Ereignisbehandlung"
+title: Ereignisentwurf
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pre-events
+- events [.NET Framework], design guidelines
+- member design guidelines, events
+- event handlers [.NET Framework], event design guidelines
+- post-events
+- signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Ereignisentwurf
-Ereignisse sind die am häufigsten verwendeten Form von Rückrufen \(Konstrukten, mit denen das Framework in Benutzercode aufruft\). Andere Rückrufmechanismen enthalten Elemente übernehmen, Delegaten und virtuelle Member\-basierten\-Plug\-ins. Daten aus Benutzerstudien Teil darauf hinweisen, dass die meisten Entwickler sind komfortabler als mit die anderen Rückrufmechanismen sind das Verwenden von Ereignissen. Ereignisse sind gut in Visual Studio und vielen Sprachen integriert.  
+# <a name="event-design"></a>Ereignisentwurf
+Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die das Framework zum Aufrufen von Benutzercode zu ermöglichen). Andere Rückrufmechanismen enthalten Elemente und Delegaten, virtuelle Member und schnittstellenbasierten-Plug-ins. Daten aus der Verwendbarkeit Studien anzugeben, dass die meisten Entwickler sind nachrichtenorientierten Ereignisse verwenden, als sie die anderen Rückrufmechanismen verwenden. Ereignisse sind gut mit Visual Studio und vielen Sprachen integriert.  
   
- Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignisse: Ereignisse ausgelöst, bevor ein Status des Systems ändert, Namens vor auch Ereignisse ausgelöst, nachdem ein Zustand ändert, nach der Ereignisse aufgerufen. Ein Beispiel für ein Ereignis vor wäre `Form.Closing`, die wird ausgelöst, bevor ein Formular geschlossen wird. Ein Beispiel für ein Ereignis nach der wäre `Form.Closed`, die wird ausgelöst, nachdem ein Formular geschlossen wird.  
+ Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignisse gibt: Ereignisse, die ausgelöst wird, bevor ein Status des Systems ändert, aufgerufen wird, vorab auch Ereignisse, die ausgelöst wird, nachdem ein Zustand ändert, sogenannte nach der Ereignisse. Ein Beispiel eines Ereignisses vor wäre `Form.Closing`, der Fehler wird ausgelöst, bevor ein Formular geschlossen wird. Ein Beispiel für ein Ereignis nach der wäre `Form.Closed`, der Fehler wird ausgelöst, nachdem ein Formular geschlossen wird.  
   
- **✓ führen** verwenden den Begriff "heraufstufen" für Ereignisse statt "Feuer" oder "trigger".  
+ **Führen Sie ✓** verwenden Sie den Begriff "Auslösen" Ereignisse anstatt "Feuer" oder "Auslösen" an.  
   
- **✓ führen** verwenden <xref:System.EventHandler%601?displayProperty=fullName> anstelle der manuellen Erstellung von neuen Delegaten, die als Ereignishandler verwendet werden.  
+ **Führen Sie ✓** verwenden <xref:System.EventHandler%601?displayProperty=nameWithType> statt Sie manuell neue Delegaten als Ereignishandler verwendet werden soll.  
   
- **✓ ggf.** verwenden eine Unterklasse von <xref:System.EventArgs> als Ereignisargument, es sei denn, Sie sicher, dass das Ereignis müssen nie zum Übertragen von Daten an die Ereignisbehandlungsmethode sind in diesem Fall können Sie die `EventArgs` direkt eingeben.  
+ **✓ GGF.** verwenden eine Unterklasse von <xref:System.EventArgs> als Ereignisargument, es sei denn, Sie sicher, dass das Ereignis nie zur Übertragung von Daten an die Ereignisbehandlungsmethode müssen sind in diesem Fall können Sie die `EventArgs` direkt eingeben.  
   
- Wenn Sie eine API mit liefern `EventArgs` direkt, Sie werden nie von Daten, die mit dem Ereignis ausgeführt werden, ohne die Kompatibilität hinzufügen. Wenn Sie eine Unterklasse verwenden, auch wenn Anfangs vollständig leer ist, die Unterklasse bei Bedarf Eigenschaften hinzugefügt werden kann.  
+ Wenn Sie eine API mit liefern `EventArgs` direkt, Sie werden nie mehr Daten mit dem Ereignis ausgeführt werden, ohne Unterbrechung der Kompatibilität hinzuzufügen. Wenn Sie eine Unterklasse verwenden, auch wenn anfänglich vollständig leer ist, die Unterklasse bei Bedarf Eigenschaften hinzugefügt werden kann.  
   
- **✓ führen** eine geschützte virtuelle Methode zum Auslösen jedes Ereignisses verwenden. Dies gilt nur für nicht statische Ereignisse in unversiegelten Klassen, nicht für Strukturen, versiegelte Klassen oder statische Ereignisse.  
+ **Führen Sie ✓** verwenden Sie eine geschützte virtuelle Methode jedes Ereignis ausgelöst werden soll. Dies gilt nur für nicht statische Ereignisse für nicht versiegelte Klassen, nicht für Strukturen, versiegelte Klassen oder statische Ereignisse.  
   
- Der Zweck der Methode ist für eine abgeleitete Klasse zum Behandeln des Ereignisses mit einer Überschreibung zu ermöglichen. Überschreiben ist eine flexiblere, schnellere und einfachere Möglichkeit zum Behandeln von Basisklassenereignissen in abgeleiteten Klassen. Gemäß der Konvention wird der Name der Methode beginnen mit "On" und mit dem Namen des Ereignisses folgen.  
+ Der Zweck der Methode ist eine Möglichkeit für eine abgeleitete Klasse für die Ereignisbehandlung mit einer Außerkraftsetzung bereitstellen. Überschreiben ist eine flexiblere, schnellere und besser Möglichkeit zum Basisklassenereignissen in abgeleiteten Klassen zu verarbeiten. Gemäß der Konvention werden der Name der Methode sollte mit "On" beginnen und mit dem Namen des Ereignisses folgen.  
   
- Die abgeleitete Klasse können nicht die grundlegende Implementierung der Methode in der Überschreibung aufrufen. Bereiten Sie sich für diese dazu Verarbeitungsvorgänge nicht in der Methode, die für die Basisklasse ordnungsgemäß funktioniert.  
+ Die abgeleitete Klasse können nicht die grundlegende Implementierung der Methode in der Überschreibung aufrufen. Für diesen vorbereitet werden, ausgenommen Verarbeitungen in der Methode, die für die Basisklasse ordnungsgemäß funktioniert erforderlich ist.  
   
- **✓ führen** akzeptieren einen Parameter für die geschützte Methode, die ein Ereignis auslöst.  
+ **Führen Sie ✓** akzeptieren einen Parameter für die geschützte Methode, die ein Ereignis auslöst.  
   
- Der Parameter sollte heißen `e` und muss als die Ereignisargumentklasse eingegeben werden.  
+ Der Parameter heißen `e` und sollten als Ereignisargumentklasse eingegeben werden.  
   
- **X nicht** als Absender null übergeben, wenn ein nicht statisches Ereignis auslösen.  
+ **X nicht** übergeben Sie null als Sender an, wenn eine nicht statische Ereignis durch das auslösen.  
   
- **✓ führen** als Absender null übergeben, wenn ein statisches Ereignis auslösen.  
+ **Führen Sie ✓** übergeben Sie null als Sender an, wenn ein statisches Ereignis auslösen.  
   
- **X nicht** beim Auslösen eines Ereignisses wird als Parameter für das Data null übergeben.  
+ **X nicht** übergeben Sie null als Parameter für das Daten, beim Auslösen eines Ereignisses.  
   
- Übergeben Sie `EventArgs.Empty` wenn Sie keine Daten an die Ereignisbehandlungsmethode übergeben möchten. Entwickler erwarten, dass dieser Parameter nicht null sein.  
+ Übergeben Sie `EventArgs.Empty` Wenn keine Daten an die Ereignisbehandlungsmethode übergeben werden sollen. Entwickler erwarten, dass dieser Parameter nicht null sein.  
   
- **✓ ggf.** Auslösen von Ereignissen, die der Endbenutzer abbrechen können. Dies gilt nur für vorherige Ereignisse.  
+ **✓ GGF.** Auslösen von Ereignissen, die der Endbenutzer abbrechen können. Dies gilt nur für Ereignisse vor.  
   
- Verwendung <xref:System.ComponentModel.CancelEventArgs?displayProperty=fullName> oder dessen Unterklasse als Ereignisargument an den Endbenutzer Ereignisse ermöglichen.  
+ Verwendung <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> oder seiner Unterklasse als das Ereignisargument für die Endbenutzer zum Abbrechen von Ereignissen ermöglichen.  
   
-### Entwurf benutzerdefinierter Ereignishandler  
- Es gibt Fälle, in denen `EventHandler<T>` kann nicht verwendet werden, z. B. wenn das Framework mit früheren Versionen der CLR arbeiten, das keine Generika unterstützen muss. In solchen Fällen müssen Sie zum Entwerfen und entwickeln ein benutzerdefiniertes Ereignis\-Handler\-Delegat.  
+### <a name="custom-event-handler-design"></a>Entwurf benutzerdefinierter Ereignishandler  
+ Es gibt Fälle, in denen `EventHandler<T>` kann nicht verwendet werden, z. B. wenn das Framework benötigt Arbeit mit früheren Versionen der CLR, Generika nicht unterstützt. In solchen Fällen müssen Sie möglicherweise entwerfen und entwickeln einen benutzerdefinierten Ereignishandler-Delegaten.  
   
- **✓ führen** verwenden Sie für Ereignishandler einen Rückgabetyp "void".  
+ **Führen Sie ✓** verwenden Sie den Rückgabetyp "void" für den Ereignishandler.  
   
- Ein Ereignishandler kann mehrere Ereignisbehandlungsmethoden möglicherweise auf mehrere Objekte aufrufen. Ereignisbehandlungsmethoden zugelassen wird, einen Wert zurückzugeben, wäre mehrere Rückgabewerte für jeden Aufruf des Ereignisses.  
+ Ein Ereignishandler kann mehrere Methoden, die möglicherweise bei mehreren Objekten für die Ereignisbehandlung aufrufen. Ereignisbehandlung Methoden zugelassen wird, einen Wert zurückzugeben, wäre mehrere Rückgabewerte für jeden Aufruf des Ereignisses.  
   
- **✓ führen** verwenden `object` als Typ des ersten Parameters für den Ereignishandler, und nennen Sie es `sender`.  
+ **Führen Sie ✓** verwenden `object` als Typ des ersten Parameters der Ereignishandler, und rufen sie `sender`.  
   
- **✓ führen** verwenden <xref:System.EventArgs?displayProperty=fullName> oder dessen Unterklasse als Typ des zweiten Parameters im Ereignishandler, und nennen Sie es `e`.  
+ **✓ FÜHREN** verwenden <xref:System.EventArgs?displayProperty=nameWithType> oder seiner Unterklasse als Typ des zweiten Parameters der Ereignishandler, und nennen Sie es `e`.  
   
  **X nicht** verfügen über mehr als zwei Parameter auf Ereignishandler.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

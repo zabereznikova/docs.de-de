@@ -1,33 +1,37 @@
 ---
-title: "&#220;berwachungsteilnehmer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Überwachungsteilnehmer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6ec7c5d164a8c47787e9667a84fc5185c1afedbc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;berwachungsteilnehmer
-Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwickler auf <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A>\-Objekte zugreifen und sie verarbeiten kann.  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Überwachungsdatensätze als ETW \(Ereignisablaufverfolgung für Windows\)\-Ereignisse schreibt.  Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  
+# <a name="tracking-participants"></a>Überwachungsteilnehmer
+Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwickler auf <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A>-Objekte zugreifen und sie verarbeiten kann. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Überwachungsdatensätze als ETW (Ereignisablaufverfolgung für Windows)-Ereignisse schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  
   
-## Überwachungsteilnehmer  
- Die Überwachungsinfrastruktur ermöglicht die Anwendung eines Filters für ausgehende Überwachungsdatensätze, sodass ein Teilnehmer eine Teilmenge der Datensätze abonnieren kann.  Die Anwendung eines Filters erfolgt durch ein Überwachungsprofil.  
+## <a name="tracking-participants"></a>Überwachungsteilnehmer  
+ Die Überwachungsinfrastruktur ermöglicht die Anwendung eines Filters für ausgehende Überwachungsdatensätze, sodass ein Teilnehmer eine Teilmenge der Datensätze abonnieren kann. Die Anwendung eines Filters erfolgt durch ein Überwachungsprofil.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] stellt einen Überwachungsteilnehmer bereit, der die Überwachungsdatensätze in eine ETW\-Sitzung schreibt.  Der Teilnehmer wird für einen Workflowdienst konfiguriert, indem einer Konfigurationsdatei ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.  Durch Aktivierung eines ETW\-Nachverfolgungsteilnehmers können Nachverfolgungsdatensätze in der Ereignisanzeige angezeigt werden.  Das SDK\-Beispiel für ETW\-basierte Überwachung ist eine gute Möglichkeit, über den ETW\-basierten Überwachungsteilnehmer mit der WF\-Überwachung vertraut zu werden.  
+ [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] stellt einen Überwachungsteilnehmer bereit, der die Überwachungsdatensätze in eine ETW-Sitzung schreibt. Der Teilnehmer wird für einen Workflowdienst konfiguriert, indem einer Konfigurationsdatei ein nachverfolgungsspezifisches Verhalten hinzugefügt wird. Durch Aktivierung eines ETW-Nachverfolgungsteilnehmers können Nachverfolgungsdatensätze in der Ereignisanzeige angezeigt werden. Das SDK-Beispiel für ETW-basierte Überwachung ist eine gute Möglichkeit, über den ETW-basierten Überwachungsteilnehmer mit der WF-Überwachung vertraut zu werden.  
   
-## ETW\-Überwachungsteilnehmer  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält einen ETW\-Überwachungsteilnehmer, der die Überwachungsdatensätze in eine ETW\-Sitzung schreibt.  Dies geschieht auf sehr effiziente Weise mit minimalen Auswirkungen auf die Leistung der Anwendung oder den Serverdurchsatz.  Ein Vorteil der Verwendung des standardmäßigen ETW\-Überwachungsteilnehmers besteht darin, dass die empfangenen Überwachungsdatensätze mit den anderen Anwendungs\- und Systemprotokollen in der Windows\-Ereignisanzeige angezeigt werden können.  
+## <a name="etw-tracking-participant"></a>ETW-Überwachungsteilnehmer  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält einen ETW-Überwachungsteilnehmer, der die Überwachungsdatensätze in eine ETW-Sitzung schreibt. Dies geschieht auf sehr effiziente Weise mit minimalen Auswirkungen auf die Leistung der Anwendung oder den Serverdurchsatz. Ein Vorteil der Verwendung des standardmäßigen ETW-Überwachungsteilnehmers besteht darin, dass die empfangenen Überwachungsdatensätze mit den anderen Anwendungs- und Systemprotokollen in der Windows-Ereignisanzeige angezeigt werden können.  
   
- Der standardmäßige ETW\-Überwachungsteilnehmer wird, wie im folgenden Beispiel dargestellt, in der Datei "Web.config" konfiguriert.  
+ Der standardmäßige ETW-Überwachungsteilnehmer wird, wie im folgenden Beispiel dargestellt, in der Datei "Web.config" konfiguriert.  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <compilation debug="true" targetFramework="4.0" />  
@@ -52,52 +56,52 @@ Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwick
 ```  
   
 > [!NOTE]
->  Wenn ein `trackingProfile`\-Name nicht angegeben wurde, z. B. nur `<etwTracking/>` oder `<etwTracking profileName=""/>`, wird das mit [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] installierte Standardüberwachungsprofil in der Datei "Machine.config" verwendet.  
+>  Wenn ein `trackingProfile`-Name nicht angegeben wurde, z. B. nur `<etwTracking/>` oder `<etwTracking profileName=""/>`, wird das mit [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] installierte Standardüberwachungsprofil in der Datei "Machine.config" verwendet.  
   
- In der Datei "Machine.config" abonniert das Standardüberwachungsprofil Workflowinstanz\-Datensätze und \-fehler.  
+ In der Datei "Machine.config" abonniert das Standardüberwachungsprofil Workflowinstanz-Datensätze und -fehler.  
   
- In der ETW werden Ereignisse mithilfe einer Anbieter\-ID in die ETW\-Sitzung geschrieben.  Die Anbieter\-ID, die der ETW\-Überwachungsteilnehmer zum Schreiben der Überwachungsdatensätze in der ETW verwendet, wird im Diagnoseabschnitt der Datei "Web.config" \(unter `<system.serviceModel><diagnostics>`\) definiert.  In der Regel verwendet der ETW\-Überwachungsteilnehmer, wie im folgenden Beispiel dargestellt, eine standardmäßige Anbieter\-ID, wenn keine angegeben wurde.  
+ In der ETW werden Ereignisse mithilfe einer Anbieter-ID in die ETW-Sitzung geschrieben. Die Anbieter-ID, die der ETW-Überwachungsteilnehmer zum Schreiben der Überwachungsdatensätze in der ETW verwendet, wird im Diagnoseabschnitt der Datei "Web.config" (unter `<system.serviceModel><diagnostics>`) definiert. In der Regel verwendet der ETW-Überwachungsteilnehmer, wie im folgenden Beispiel dargestellt, eine standardmäßige Anbieter-ID, wenn keine angegeben wurde.  
   
-```  
+```xml  
 <system.serviceModel>  
         <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />  
 ```  
   
- Die folgende Abbildung zeigt den Überwachungsdatenstrom über den ETW\-Überwachungsteilnehmer.  Sobald die Überwachungsdaten die ETW\-Sitzung erreichen, kann auf unterschiedliche Weise darauf zugegriffen werden.  Eine der besten Möglichkeiten für den Zugriff auf diese Ereignisse ist die Ereignisanzeige, ein häufig verwendetes Windows\-Tool für die Anzeige von Protokollen und Ablaufverfolgungen von Anwendungen und Diensten.  
+ Die folgende Abbildung zeigt den Überwachungsdatenstrom über den ETW-Überwachungsteilnehmer. Sobald die Überwachungsdaten die ETW-Sitzung erreichen, kann auf unterschiedliche Weise darauf zugegriffen werden. Eine der besten Möglichkeiten für den Zugriff auf diese Ereignisse ist die Ereignisanzeige, ein häufig verwendetes Windows-Tool für die Anzeige von Protokollen und Ablaufverfolgungen von Anwendungen und Diensten.  
   
- ![Der Fluss für Nachverfolgung und ETW&#45;Nachverfolgungsanbieter](../../../docs/framework/windows-workflow-foundation//media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Der Fluss der nachverfolgung und ETW-Nachverfolgungsanbieter](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
-## Ereignisdaten von Überwachungsteilnehmern  
- Ein Überwachungsteilnehmer serialisiert verfolgte Ereignisdaten in einer ETW\-Sitzung jeweils im Format von einem Ereignis pro Überwachungsdatensatz.  Ein Ereignis wird innerhalb des Bereichs von 100 bis 199 durch eine ID identifiziert.  Definitionen der Nachverfolgungsereignis\-Datensätze, die von einem Nachverfolgungsteilnehmer ausgegeben wurden, finden Sie im Thema [Referenz zu Nachverfolgungsereignissen](../../../docs/framework/windows-workflow-foundation//tracking-events-reference.md).  
+## <a name="tracking-participant-event-data"></a>Ereignisdaten von Überwachungsteilnehmern  
+ Ein Überwachungsteilnehmer serialisiert verfolgte Ereignisdaten in einer ETW-Sitzung jeweils im Format von einem Ereignis pro Überwachungsdatensatz.  Ein Ereignis wird innerhalb des Bereichs von 100 bis 199 durch eine ID identifiziert. Definitionen des verfolgungsereignisses ausgegeben, die für ein Nachverfolgungsteilnehmer Datensätze finden Sie unter der [Referenz zu Nachverfolgungsereignissen](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) Thema.  
   
- Die Größe eines ETW\-Ereignisses wird durch die Größe des ETW\-Puffers oder durch die maximale Nutzlast für ein ETW\-Ereignis beschränkt, wobei jeweils der niedrigere Wert angewendet wird.  Wenn die Größe des Ereignisses beide ETW\-Grenzen überschreitet, wird das Ereignis abgeschnitten und sein Inhalt willkürlich entfernt.  Variablen, Argumente, Anmerkungen und benutzerdefinierte Daten werden nicht selektiv entfernt.  Bei abgeschnittenen Daten werden alle Daten abgeschnitten, unabhängig davon, welcher Wert zur Überschreitung der ETW\-Grenze für die Ereignisgröße geführt hat.  Die entfernten Daten werden durch `<item>..<item>` ersetzt.  
+ Die Größe eines ETW-Ereignisses wird durch die Größe des ETW-Puffers oder durch die maximale Nutzlast für ein ETW-Ereignis beschränkt, wobei jeweils der niedrigere Wert angewendet wird. Wenn die Größe des Ereignisses beide ETW-Grenzen überschreitet, wird das Ereignis abgeschnitten und sein Inhalt willkürlich entfernt. Variablen, Argumente, Anmerkungen und benutzerdefinierte Daten werden nicht selektiv entfernt. Bei abgeschnittenen Daten werden alle Daten abgeschnitten, unabhängig davon, welcher Wert zur Überschreitung der ETW-Grenze für die Ereignisgröße geführt hat.  Die entfernten Daten werden durch `<item>..<item>` ersetzt.  
   
- Komplexe Typen in Variablen, Argumenten und benutzerdefinierten Datenelementen werden mit der [NetDataContractSerializer\-Klasse](http://go.microsoft.com/fwlink/?LinkId=177537) in den ETW\-Ereignisdatensatz serialisiert.  Diese Klasse enthält Informationen zum CLR\-Typ im serialisierten XML\-Stream.  
+ Komplexe Typen in Variablen, Argumenten und benutzerdefinierten Datenelementen werden mit dem ETW-Ereignis Datensatz serialisiert die ["NetDataContractSerializer"-Klasse](http://go.microsoft.com/fwlink/?LinkId=177537). Diese Klasse enthält Informationen zum CLR-Typ im serialisierten XML-Stream.  
   
- Aufgrund der ETW\-Beschränkung abgeschnittene Nutzlastdaten können dazu führen, dass Überwachungsdatensätze mehrfach an eine ETW\-Sitzung gesendet werden.  Dies kann geschehen, wenn mehr als eine Sitzung die Ereignisse überwacht und die Sitzungen unterschiedliche Nutzlastgrenzen für die Ereignisse aufweisen.  
+ Aufgrund der ETW-Beschränkung abgeschnittene Nutzlastdaten können dazu führen, dass Überwachungsdatensätze mehrfach an eine ETW-Sitzung gesendet werden. Dies kann geschehen, wenn mehr als eine Sitzung die Ereignisse überwacht und die Sitzungen unterschiedliche Nutzlastgrenzen für die Ereignisse aufweisen.  
   
- Bei der Sitzung mit der niedrigeren Begrenzung wird das Ereignis möglicherweise abgeschnitten.  Der ETW\-Überwachungsteilnehmer hat keine Informationen zur Anzahl von Sitzungen, die die Ereignisse überwachen. Wenn ein Ereignis für eine Sitzung abgeschnitten wird, versucht der ETW\-Teilnehmer noch ein Mal, das Ereignis zu senden.  In diesem Fall empfängt die Sitzung, für die eine höhere Nutzlastgröße konfiguriert ist, das Ereignis zweimal \(das nicht abgeschnittene und das abgeschnittene Ereignis\).  Diese Duplizierung kann verhindert werden, indem für alle ETW\-Sitzungen die gleichen Begrenzungen der Puffergröße konfiguriert werden.  
+ Bei der Sitzung mit der niedrigeren Begrenzung wird das Ereignis möglicherweise abgeschnitten. Der ETW-Überwachungsteilnehmer hat keine Informationen zur Anzahl von Sitzungen, die die Ereignisse überwachen. Wenn ein Ereignis für eine Sitzung abgeschnitten wird, versucht der ETW-Teilnehmer noch ein Mal, das Ereignis zu senden. In diesem Fall empfängt die Sitzung, für die eine höhere Nutzlastgröße konfiguriert ist, das Ereignis zweimal (das nicht abgeschnittene und das abgeschnittene Ereignis). Diese Duplizierung kann verhindert werden, indem für alle ETW-Sitzungen die gleichen Begrenzungen der Puffergröße konfiguriert werden.  
   
-## Zugreifen auf Überwachungsdaten über einen ETW\-Teilnehmer in der Ereignisanzeige  
- Sie können über die Ereignisanzeige auf Ereignisse zugreifen, die vom ETW\-Überwachungsteilnehmer in eine ETW\-Sitzung geschrieben werden, falls die standardmäßige Anbieter\-ID verwendet wird.  Auf diese Weise können Überwachungsdatensätze, die vom Workflow ausgegeben wurden, schnell angezeigt werden.  
+## <a name="accessing-tracking-data-from-an-etw-participant-in-the-event-viewer"></a>Zugreifen auf Überwachungsdaten über einen ETW-Teilnehmer in der Ereignisanzeige  
+ Sie können über die Ereignisanzeige auf Ereignisse zugreifen, die vom ETW-Überwachungsteilnehmer in eine ETW-Sitzung geschrieben werden, falls die standardmäßige Anbieter-ID verwendet wird. Auf diese Weise können Überwachungsdatensätze, die vom Workflow ausgegeben wurden, schnell angezeigt werden.  
   
 > [!NOTE]
->  Überwachungsdatensatz\-Ereignisse, die an eine ETW\-Sitzung ausgegeben werden, verwenden Ereignis\-IDs im Bereich von 100 bis 199.  
+>  Überwachungsdatensatz-Ereignisse, die an eine ETW-Sitzung ausgegeben werden, verwenden Ereignis-IDs im Bereich von 100 bis 199.  
   
-#### So aktivieren Sie das Anzeigen der Überwachungsdatensätze in der Ereignisanzeige  
+#### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>So aktivieren Sie das Anzeigen der Überwachungsdatensätze in der Ereignisanzeige  
   
-1.  Starten der Ereignisanzeige \(EVENTVWR.EXE\)  
+1.  Starten der Ereignisanzeige (EVENTVWR.EXE)  
   
-2.  Wählen Sie **Ereignisanzeige, Anwendungs\- und Dienstprotokolle, Microsoft, Windows, Anwendungsserver\-Anwendungen** aus.  
+2.  Wählen Sie **-Ereignisanzeige, Anwendungen und Dienstprotokolle, Microsoft, Windows, Anwendungsserver-Anwendungen**.  
   
-3.  Klicken Sie mit der rechten Maustaste, und stellen Sie sicher, dass **Ansicht, Analytische und Debugprotokolle einblenden** ausgewählt ist.  Wenn dies nicht der Fall ist, aktivieren Sie die Option, sodass das Häkchen daneben angezeigt wird.  Dadurch werden die Protokolle **Analytic**, **Perf** und **Debug** angezeigt.  
+3.  Mit der rechten Maustaste, und sicherstellen, dass **Ansicht anzeigen analytische und Debugprotokolle** ausgewählt ist. Wenn dies nicht der Fall ist, aktivieren Sie die Option, sodass das Häkchen daneben angezeigt wird. Dadurch wird die **analytisch**, **bezogen**, und **Debuggen** Protokolle.  
   
-4.  Klicken Sie mit der rechten Maustaste auf das Protokoll **Analytic**, und wählen Sie **Protokoll aktivieren** aus.  Das Protokoll befindet sich in der Datei unter "%SystemRoot%\\System32\\Winevt\\Logs\\Microsoft\-Windows\-Application Server\-Applications%4Analytic.etl".  
+4.  Mit der rechten Maustaste die **analytisch** melden Sie sich, und wählen Sie dann **Protokoll aktivieren**. Das Protokoll befindet sich in der Datei unter "%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl".  
   
-## Benutzerdefinierte Nachverfolgungskomponente  
- Die Überwachungsteilnehmer\-API ermöglicht eine Erweiterung der Überwachungslaufzeit mit einem vom Benutzer bereitgestellten Überwachungsteilnehmer. Dieser kann benutzerdefinierte Logik enthalten, mit der von der Workflowlaufzeit ausgegebene Überwachungsdatensätze behandelt werden.  Zum Schreiben eines benutzerdefinierten Überwachungsteilnehmers muss der Entwickler die `Track`\-Methode für die <xref:System.Activities.Tracking.TrackingParticipant>\-Klasse implementieren.  Diese Methode wird aufgerufen, wenn ein Überwachungsdatensatz von der Workflowlaufzeit ausgegeben wird.  
+## <a name="custom-tracking-participant"></a>Benutzerdefinierte Nachverfolgungskomponente  
+ Die Überwachungsteilnehmer-API ermöglicht eine Erweiterung der Überwachungslaufzeit mit einem vom Benutzer bereitgestellten Überwachungsteilnehmer. Dieser kann benutzerdefinierte Logik enthalten, mit der von der Workflowlaufzeit ausgegebene Überwachungsdatensätze behandelt werden. Zum Schreiben eines benutzerdefinierten Überwachungsteilnehmers muss der Entwickler die `Track`-Methode für die <xref:System.Activities.Tracking.TrackingParticipant>-Klasse implementieren. Diese Methode wird aufgerufen, wenn ein Überwachungsdatensatz von der Workflowlaufzeit ausgegeben wird.  
   
- Überwachungsteilnehmer sind von der <xref:System.Activities.Tracking.TrackingParticipant>\-Klasse abgeleitet.  Das vom System bereitgestellte <xref:System.Activities.Tracking.EtwTrackingParticipant>\-Objekt gibt ein ETW \(Ereignisablaufverfolgung für Windows\)\-Ereignis für jeden empfangenen Überwachungsdatensatz aus.  Zum Erstellen eines benutzerdefinierten Überwachungsteilnehmers wird eine Klasse erstellt, die von <xref:System.Activities.Tracking.TrackingParticipant> abgeleitet ist.  Um grundlegende Funktionen für Nachverfolgung bereitzustellen, überschreiben Sie <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>.  <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> wird aufgerufen, wenn ein Nachverfolgungsdatensatz von der Laufzeit gesendet wird und wie gewünscht verarbeitet werden kann.  Im folgenden Beispiel wird eine benutzerdefinierte Überwachungsteilnehmer\-Klasse definiert, die alle Überwachungsdatensätze an das Konsolenfenster ausgibt.  Sie können auch ein <xref:System.Activities.Tracking.TrackingParticipant>\-Objekt implementieren, das die Überwachungsdatensätze mit der `BeginTrack`\-Methode und der `EndTrack`\-Methode asynchron verarbeitet.  
+ Überwachungsteilnehmer sind von der <xref:System.Activities.Tracking.TrackingParticipant>-Klasse abgeleitet. Das vom System bereitgestellte <xref:System.Activities.Tracking.EtwTrackingParticipant>-Objekt gibt ein ETW (Ereignisablaufverfolgung für Windows)-Ereignis für jeden empfangenen Überwachungsdatensatz aus. Zum Erstellen eines benutzerdefinierten Überwachungsteilnehmers wird eine Klasse erstellt, die von <xref:System.Activities.Tracking.TrackingParticipant> abgeleitet ist. Um grundlegende Funktionen für Nachverfolgung bereitzustellen, überschreiben Sie <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> wird aufgerufen, wenn ein Nachverfolgungsdatensatz von der Laufzeit gesendet wird und wie gewünscht verarbeitet werden kann. Im folgenden Beispiel wird eine benutzerdefinierte Überwachungsteilnehmer-Klasse definiert, die alle Überwachungsdatensätze an das Konsolenfenster ausgibt. Sie können auch ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt implementieren, das die Überwachungsdatensätze mit der `BeginTrack`-Methode und der `EndTrack`-Methode asynchron verarbeitet.  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -119,7 +123,7 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- Im folgenden Beispiel wird ein Workflow erstellt, der aus einer <xref:System.Activities.Statements.Sequence>\-Aktivität mit einer <xref:System.Activities.Statements.WriteLine>\-Aktivität besteht.  Der `ConsoleTrackingParticipant` wird den Erweiterungen hinzugefügt, und der Workflow wird aufgerufen.  
+ Im folgenden Beispiel wird ein Workflow erstellt, der aus einer <xref:System.Activities.Statements.Sequence>-Aktivität mit einer <xref:System.Activities.Statements.WriteLine>-Aktivität besteht. Der `ConsoleTrackingParticipant` wird den Erweiterungen hinzugefügt, und der Workflow wird aufgerufen.  
   
 ```csharp  
 Activity activity= new Sequence()  
@@ -143,9 +147,8 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             };  
             instance.Run();  
             Console.ReadLine();  
-  
 ```  
   
-## Siehe auch  
- [Überwachung mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201273)   
+## <a name="see-also"></a>Siehe auch  
+ [Windows Server App Fabric-Überwachung](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [Überwachen von Anwendungen mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)

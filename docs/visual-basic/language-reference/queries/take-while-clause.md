@@ -1,59 +1,56 @@
 ---
-title: "Take While Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryTakeWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Take While"
-  - "Take While clause"
-  - "Take While statement"
+title: Take While-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryTakeWhile
+helpviewer_keywords:
+- queries [Visual Basic], Take While
+- Take While clause [Visual Basic]
+- Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c8add6c55bb9353bac3489e68f497cb32785aad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Take While Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="take-while-clause-visual-basic"></a>Take While-Klausel (Visual Basic)
 Gibt Elemente in einer Auflistung zurück, solange eine angegebene Bedingung `true` ist, und überspringt dann die übrigen Elemente.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Take While expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`expression`|Erforderlich.  Ein Ausdruck, der eine Bedingung darstellt, auf die Elemente getestet werden sollen.  Der Ausdruck muss einen `Boolean`\-Wert oder eine funktionale Entsprechung wie beispielsweise einen `Integer`\-Wert zurückgeben, um als `Boolean` ausgewertet zu werden.|  
+|---|---|  
+|`expression`|Erforderlich. Ein Ausdruck, der eine zu testende Bedingung an Elementen für darstellt. Der Ausdruck muss zurückgeben eine `Boolean` Wert oder eine funktionell gleichwertig, wie z. B. ein `Integer` als ausgewertet werden eine `Boolean`.|  
   
-## Hinweise  
- Mit der `Take While`\-Klausel werden Elemente vom Anfang eines Abfrageergebnisses bis zu der Stelle eingeschlossen, an der der vorgegebene `expression` den Wert `false` zurückgibt.  Sobald von `expression` der Wert `false` zurückgegeben wird, werden alle übrigen Elemente von der Abfrage nicht mehr berücksichtigt.  Für die übrigen Ergebnisse wird `expression` ignoriert.  
+## <a name="remarks"></a>Hinweise  
+ Die `Take While` -Klausel enthält Elemente vom Beginn eines Abfrageergebnisses, bis die angegebene `expression` gibt `false`. Nach der `expression` gibt `false`, die Abfrage werden alle verbleibenden Elemente zu umgehen. Die `expression` wird für die restlichen Ergebnisse ignoriert.  
   
- Die `Take While`\-Klausel unterscheidet sich von der `Where`\-Klausel insofern, als mit der `Where`\-Klausel alle Elemente einer Abfrage, die eine bestimmte Bedingung erfüllen, eingeschlossen werden können.  Mit der `Take While`\-Klausel werden Elemente nur so lange eingeschlossen, bis die Bedingung zum ersten Mal nicht erfüllt wird.  Die `Take While`\-Klausel ist besonders hilfreich, wenn Sie mit einem sortierten Abfrageergebnis arbeiten.  
+ Die `Take While` Klausel unterscheidet sich von der `Where` -Klausel, die die `Where` -Klausel kann verwendet werden, um alle Elemente aus einer Abfrage enthalten, die eine bestimmte Bedingung erfüllen. Die `Take While` -Klausel enthält Elemente nur bis zum ersten Mal, die die Bedingung nicht erfüllt wird. Die `Take While` -Klausel ist besonders hilfreich bei der Arbeit mit einer sortierten Abfrageergebnis.  
   
-## Beispiel  
- Im folgenden Codebeispiel werden mit der `Take While`\-Klausel Ergebnisse abgerufen, bis der erste Kunde ohne Bestellungen gefunden wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird mit der `Take While` -Klausel, um die Ergebnisse abzurufen, bis die erste Kunden ohne Bestellungen gefunden wird.  
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## Siehe auch  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Take Clause](../../../visual-basic/language-reference/queries/take-clause.md)   
- [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Take-Klausel](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Skip While-Klausel](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -1,34 +1,37 @@
 ---
-title: "Vorgehensweise: Dienstdatenpartitionierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Dienstdatenpartitionierung'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Dienstdatenpartitionierung
-In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren.Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen.Es kann beispielsweise der Fall sein, dass Nachrichten von wichtigen Kunden oder "Gold"\-Kunden mit einer höheren Priorität verarbeitet werden müssen als Meldungen von einem Standardkunden.  
+# <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
+In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  
   
- In diesem Beispiel werden Nachrichten zu einem von zwei Instanzen des regularCalc\-Diensts geleitet.Beide Instanzen des Diensts sind identisch. Der vom calculator1\-Endpunkt vertretene Dienst verarbeitet jedoch Nachrichten von wichtigen Kunden, und der calculator2\-Endpunkt verarbeitet Nachrichten von anderen Kunden.  
+ In diesem Beispiel werden Nachrichten zu einem von zwei Instanzen des regularCalc-Diensts geleitet. Beide Instanzen des Diensts sind identisch. Der vom calculator1-Endpunkt vertretene Dienst verarbeitet jedoch Nachrichten von wichtigen Kunden, und der calculator2-Endpunkt verarbeitet Nachrichten von anderen Kunden.  
   
- Die vom Client gesendete Nachricht enthält keine eindeutigen Daten, anhand denen ermittelt werden kann, an welche Dienstinstanz die Meldung weitergeleitet werden soll.Um es allen Clients zu ermöglichen, Daten an einen bestimmten Zieldienst weiterzuleiten, implementieren wir zwei Dienstendpunkte, die zum Empfangen von Nachrichten verwendet werden.  
+ Die vom Client gesendete Nachricht enthält keine eindeutigen Daten, anhand denen ermittelt werden kann, an welche Dienstinstanz die Meldung weitergeleitet werden soll. Um es allen Clients zu ermöglichen, Daten an einen bestimmten Zieldienst weiterzuleiten, implementieren wir zwei Dienstendpunkte, die zum Empfangen von Nachrichten verwendet werden.  
   
 > [!NOTE]
->  In diesem Beispiel werden zwar bestimmte Endpunkte zum Partitionieren von Daten verwendet, aber dies kann auch mit Informationen erreicht werden, die innerhalb der Meldung selbst enthalten sind, z. B. Header\- oder Textdaten.  
+>  In diesem Beispiel werden zwar bestimmte Endpunkte zum Partitionieren von Daten verwendet, aber dies kann auch mit Informationen erreicht werden, die innerhalb der Meldung selbst enthalten sind, z. B. Header- oder Textdaten.  
   
-### Implementieren der Dienstdatenpartitionierung  
+### <a name="implement-service-data-partitioning"></a>Implementieren der Dienstdatenpartitionierung  
   
-1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie die vom Dienst verfügbar gemachten Dienstendpunkte angeben.Im folgenden Beispiel werden zwei Endpunkte definiert, die zum Empfangen von Meldungen verwendet werden.Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten an die regularCalc Dienstinstanzen zu senden.  
+1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie die vom Dienst verfügbar gemachten Dienstendpunkte angeben. Im folgenden Beispiel werden zwei Endpunkte definiert, die zum Empfangen von Meldungen verwendet werden. Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten an die regularCalc Dienstinstanzen zu senden.  
   
     ```xml  
     <services>  
@@ -63,10 +66,9 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
                   binding="netTcpBinding"  
                   contract="*" />  
      </client>  
-  
     ```  
   
-2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.In diesem Beispiel wird mithilfe des EndpointName\-Filters ermittelt, welcher Dienstendpunkt die Nachricht empfangen hat.Im folgenden Beispiel werden der erforderliche Routingabschnitt und die Filter definiert.  
+2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird mithilfe des EndpointName-Filters ermittelt, welcher Dienstendpunkt die Nachricht empfangen hat. Im folgenden Beispiel werden der erforderliche Routingabschnitt und die Filter definiert.  
   
     ```xml  
     <filters>  
@@ -79,7 +81,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filters>  
     ```  
   
-3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird.In diesem Beispiel wird die Nachricht basierend auf dem jeweiligen Endpunkt weitergeleitet, über den sie empfangen wurde.Da die Nachricht nur mit einem von zwei möglichen Filtern übereinstimmen kann, ist eine Filterpriorität zum Steuern der Reihenfolge, in der Filter ausgewertet werden, nicht erforderlich.  
+3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. In diesem Beispiel wird die Nachricht basierend auf dem jeweiligen Endpunkt weitergeleitet, über den sie empfangen wurde. Da die Nachricht nur mit einem von zwei möglichen Filtern übereinstimmen kann, ist eine Filterpriorität zum Steuern der Reihenfolge, in der Filter ausgewertet werden, nicht erforderlich.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -91,10 +93,9 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
          <add filterName="NormalPriority" endpointName="CalcEndpoint2"/>  
        </filterTable>  
     </filterTables>  
-  
     ```  
   
-4.  Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
+4.  Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
   
     ```xml  
     <behaviors>  
@@ -105,10 +106,9 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Es folgt eine vollständige Auflistung der Konfigurationsdatei.  
   
 ```xml  
@@ -183,5 +183,5 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 </configuration>  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

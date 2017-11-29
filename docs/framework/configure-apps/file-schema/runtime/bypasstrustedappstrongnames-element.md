@@ -1,87 +1,89 @@
 ---
-title: "&lt;bypassTrustedAppStrongNames&gt;-Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypassTrustedAppStrongNames>-Element"
-  - "bypassTrustedAppStrongNames-Element"
-  - "Strong-Name Bypass-Funktion"
-  - "Assemblys mit starken Namen, Laden in vertrauenswürdige Anwendungsdomänen"
+title: '&lt;BypassTrustedAppStrongNames&gt; Element'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-name bypass feature
+- bypassTrustedAppStrongNames element
+- strong-named assemblies, loading into trusted application domains
+- <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2b3e1cb839e9e7fd81a5452c0e034c3552b230cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;bypassTrustedAppStrongNames&gt;-Element
-Gibt an, ob die Validierung von starken Namen in vollständig vertrauenswürdigen Assemblys umgangen werden soll, wenn die Assemblys in einen vollständig vertrauenswürdigen <xref:System.AppDomain> geladen werden.  
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;BypassTrustedAppStrongNames&gt; Element
+Gibt an, ob die Überprüfung von starken Namen für vollständig vertrauenswürdige Assemblys zu umgehen, die in ein voll vertrauenswürdiges geladen werden <xref:System.AppDomain>.  
   
-## Syntax  
+ \<configuration>  
+\<Common Language Runtime >  
+\<BypassTrustedAppStrongNames >  
   
-```  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <bypassTrustedAppStrongNames    
    enabled="true|false"/>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
-|Attribute|**Beschreibung**|  
-|---------------|----------------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob das Bypassfeature aktiviert wird, mit dem die Überprüfung starker Namen für vollständig vertrauenswürdige Assemblys umgangen wird.  Wenn diese Funktion aktiviert wird, werden starke Namen beim Laden der Assembly nicht auf deren Korrektheit überprüft.  Die Standardeinstellung ist `true`.|  
+|Attribut|Beschreibung|  
+|---------------|-----------------|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Bypass-Funktion, die Überprüfung starke Namen für vollständig vertrauenswürdige Assemblys aktiviert ist. Wenn diese Funktion aktiviert ist, werden starke Namen nicht auf Richtigkeit überprüft werden, wird beim Laden der Assembly. Die Standardeinstellung ist `true`.|  
   
-## Enabled\-Attribut  
+## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|**Beschreibung**|  
-|----------|----------------------|  
-|`true`|Signaturen mit starkem Namen auf vollständig vertrauenswürdigen Assemblys werden nicht überprüft, wenn die Assemblys in einen vollständig vertrauenswürdigen <xref:System.AppDomain> geladen werden.  Dies ist der Standardwert.|  
-|`false`|Signaturen mit starkem Namen auf vollständig vertrauenswürdigen Assemblys werden überprüft, wenn die Assemblys in einen vollständig vertrauenswürdigen <xref:System.AppDomain> geladen werden.  Die Signaturen mit starkem Namen werden nur auf die Richtigkeit der Signatur geprüft, die starken Namen werden jedoch nicht auf Übereinstimmungen verglichen.|  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`true`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden nicht überprüft werden, wenn die Assemblys in ein voll vertrauenswürdiges geladen werden <xref:System.AppDomain>. Dies ist die Standardeinstellung.|  
+|`false`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden überprüft, wenn die Assemblys in ein voll vertrauenswürdiges geladen werden <xref:System.AppDomain>. Die Signatur mit starkem Namen wird nur für Signatur Richtigkeit überprüft. Es wird nicht mit einem anderen starken Namen nach einer Übereinstimmung verglichen.|  
   
-### Untergeordnete Elemente  
- Keine.  
+### <a name="child-elements"></a>Untergeordnete Elemente  
+ Keine  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|**Beschreibung**|  
-|-------------|----------------------|  
-|`configuration`|Das Stammelement in jeder von den Common Language Runtime\- und .NET Framework\-Anwendungen verwendeten Konfigurationsdatei.|  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## Hinweise  
- Die Strong\-Name\-Bypass\-Funktion vermeidet den Aufwand von Überprüfungen von Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys.  
+## <a name="remarks"></a>Hinweise  
+ Das strong Name-Bypass-Feature vermeidet den Aufwand der Überprüfung der Signatur mit starkem Namen für vollständig vertrauenswürdige Assemblys.  
   
- Das Bypass\-Feature gilt für jede Assembly, die mit einem starken Namen signiert ist und die folgenden Eigenschaften aufweist:  
+ Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert ist und die folgenden Eigenschaften aufweist:  
   
--   Voll vertrauenswürdig ohne <xref:System.Security.Policy.StrongName>\-Beweis \(hat z. B. `MyComputer`\-Zone\-Beweis\).  
+-   Voll vertrauenswürdig ohne die <xref:System.Security.Policy.StrongName> Beweis (z. B. hat `MyComputer` Zonenbeweis).  
   
--   Geladen in eine voll vertrauenswürdige <xref:System.AppDomain>.  
+-   Geladen in eine voll vertrauenswürdige <xref:System.AppDomain>  
   
--   Geladen von einem Speicherort unter der <xref:System.AppDomainSetup.ApplicationBase%2A>\-Eigenschaft von diesem <xref:System.AppDomain>.  
+-   Geladen von einem Speicherort unter der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft von dieser <xref:System.AppDomain>  
   
--   Nicht verzögert signiert.  
+-   Nicht verzögert signiert  
   
 > [!NOTE]
->  Wenn die Bypass\-Funktion mithilfe eines Registrierungsschlüssels für alle Anwendungen auf dem Computer deaktiviert wurde, hat diese Einstellung der Konfigurationsdatei keine Auswirkungen.  Weitere Informationen finden Sie unter [Gewusst wie: Deaktivieren des Strong\-Name\-Bypass\-Features](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Wenn das Bypass-Feature für alle Anwendungen auf dem Computer deaktiviert wurde mithilfe eines Registrierungsschlüssels, wirkt sich diese Einstellung in der Konfigurationsdatei nicht. Weitere Informationen finden Sie unter [Vorgehensweise: Deaktivieren des Strong-Name Bypass-Features](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das Verhalten angegeben wird, das die Signatur mit starkem Namen auf vollständig vertrauenswürdigen Assemblys überprüft.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird gezeigt, wie das Verhalten an, das die Signatur mit starkem Namen für vollständig vertrauenswürdige Assemblys überprüft wird.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <bypassTrustedAppStrongNames enabled="false"/>  
@@ -89,7 +91,7 @@ Gibt an, ob die Validierung von starken Namen in vollständig vertrauenswürdige
 </configuration>  
 ```  
   
-## Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Gewusst wie: Deaktivieren des Strong\-Name\-Bypass\-Features](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Gewusst wie: Deaktivieren der Strong-Name-Bypass-Funktion](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

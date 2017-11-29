@@ -1,35 +1,38 @@
 ---
-title: "3402 - SignatureVerificationSuccess | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3402 - SignatureVerificationSuccess
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d3a3026-25a8-4f13-a76f-8d3afdeb3bf3
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4aecbf430c09980915c0102fd7e771a0575b895
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# 3402 - SignatureVerificationSuccess
-## Eigenschaften  
+# <a name="3402---signatureverificationsuccess"></a>3402 - SignatureVerificationSuccess
+## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
 |ID|3402|  
 |Stichwörter|Sicherheit|  
 |Ebene|Ausführlich|  
-|Kanal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Dieses Ereignis wird ausgegeben, wenn die Signaturprüfung erfolgreich war.  
   
-## Meldung  
+## <a name="message"></a>Meldung  
  Signaturüberprüfung erfolgreich  
   
-## Details
+## <a name="details"></a>Details

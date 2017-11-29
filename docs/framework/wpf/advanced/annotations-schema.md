@@ -1,54 +1,48 @@
 ---
-title: "Annotations-Schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dokumente, Anmerkungen"
-  - "Microsoft Annotations Framework"
-  - "XML-Schemadefinition (XSD)"
+title: Annotations-Schema
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schema definition (XSD)
+- Microsoft Annotations Framework [WPF]
+- documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Annotations-Schema
-In diesem Thema wird die XML\-Schemadefinition \(XSD\) beschrieben, die vom Microsoft Annotations Framework zum Speichern und Abrufen von Anmerkungsdaten von Benutzern verwendet wird.  
+# <a name="annotations-schema"></a>Annotations-Schema
+Dieses Thema beschreibt die XML-Schemadefinition (XSD), die von Microsoft Annotations Framework zum Speichern und Abrufen von Anmerkungsdaten von Benutzern verwendet wird.  
   
- Das [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] [serialisiert](GTMT) Anmerkungsdaten von einer internen Darstellung eines XML\-Formats.  Das für diese Konvertierung verwendete XML\-Format wird vom [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)]\-XSD\-Schema beschrieben.  Das Schema definiert das implementierungsunabhängige XML\-Format, das verwendet werden kann, um Anmerkungsdaten zwischen Anwendungen auszutauschen.  
+ Das [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serialisiert Anmerkungsdaten von einer internen Darstellung zu einem XML-Format.  Das XML-Format, das für diese Konvertierung verwendet wird, wird vom [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD-Schema beschrieben.  Das Schema definiert das implementierungsunabhängige XML-Format, das zum Austausch von Anmerkungsdaten zwischen Anwendungen verwendet werden kann.  
   
- Die [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)]\-XML\-Schemadefinition besteht aus zwei Teilschemata:  
+ Die [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML-Schemadefinition besteht aus zwei Unterschemas  
   
--   Annotations XML Core\-Schema \(Core\-Schema\)  
+-   Das Annotations XML Core Schema (Kernschema)  
   
--   Annotations XML Base\-Schema \(Base\-Schema\)  
+-   Das Annotation XML Base Schema (Basisschema)  
   
- Das Core\-Schema definiert die primäre XML\-Struktur einer <xref:System.Windows.Annotations.Annotation>.  Die Mehrheit der XML\-Elemente, die im Core\-Schema definiert wird, entspricht Typen im <xref:System.Windows.Annotations>\-Namespace.  Das Core\-Schema macht drei Erweiterungspunkte verfügbar, an denen Anwendungen ihre eigenen XML\-Daten hinzufügen können.  Diese Erweiterungspunkte schließen <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> und "Content" ein.  \(Content\-Elemente werden als <xref:System.Xml.XmlElement>\-Liste bereitgestellt.\)  
+ Das Core-Schema definiert die primäre XML-Struktur ein <xref:System.Windows.Annotations.Annotation>.  Entspricht die Mehrheit der XML-Elemente, die in die Core-Schema definierten Typen im die <xref:System.Windows.Annotations> Namespace.  Das Core-Schema macht drei Erweiterungspunkte verfügbar, wo die Anwendungen eigene XML-Daten hinzufügen können.  Diese Erweiterungspunkte enthalten die <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, und "Content".  (Content-Elemente werden bereitgestellt, in Form von einer <xref:System.Xml.XmlElement> Liste.)  
   
- Das in diesem Thema beschriebene Base\-Schema definiert die Erweiterungen für den <xref:System.Windows.Annotations.Annotation.Authors%2A>\-Typ, den <xref:System.Windows.Annotations.ContentLocatorPart>\-Typ und den Content\-Typ, die in der ursprünglichen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Version enthalten sind.  
-  
- Dieses Thema enthält folgende Abschnitte:  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [Annotations XML Core\-Schema](#CoreSchema)  
-  
--   [Annotations XML Base\-Schema](#BaseSchema)  
-  
--   [Von Annotations XmlStreamStore erstelltes Beispiel\-XML](#SampleXML)  
+ Das Base-Schema, das in diesem Thema beschriebenen definiert, die Erweiterungen für die <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, und Inhaltstypen, die mit dem ersten enthalten [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] freizugeben.  
   
 <a name="CoreSchema"></a>   
-## Annotations XML Core\-Schema  
- Das Annotations XML Core\-Schema definiert die XML\-Struktur, die verwendet wird, um <xref:System.Windows.Annotations.Annotation>\-Objekte zu speichern.  
+## <a name="annotations-xml-core-schema"></a>Annotations XML-Kernschema  
+ Die Anmerkungen XML Core-Schema definiert die XML-Struktur, die zum Speichern von <xref:System.Windows.Annotations.Annotation> Objekte.  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
             blockDefault="#all"  
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -197,10 +191,10 @@ In diesem Thema wird die XML\-Schemadefinition \(XSD\) beschrieben, die vom Micr
 ```  
   
 <a name="BaseSchema"></a>   
-## Annotations XML Base\-Schema  
- Das Base\-Schema definiert die XML\-Struktur für die drei abstrakten Elemente, die im Core\-Schema definiert sind: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> und <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+## <a name="annotations-xml-base-schema"></a>Annotations XML-Basisschema  
+ Das Base-Schema definiert die XML-Struktur für die drei abstrakten Elemente, die in das Core-Schema definierten <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, und <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
      blockDefault="#all"  
      xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -508,10 +502,10 @@ In diesem Thema wird die XML\-Schemadefinition \(XSD\) beschrieben, die vom Micr
 ```  
   
 <a name="SampleXML"></a>   
-## Von Annotations XmlStreamStore erstelltes Beispiel\-XML  
- Der folgende XML\-Code zeigt die Ausgabe eines Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> und den Aufbau einer Beispieldatei, die drei Anmerkungen enthält: eine Hervorhebung, eine Texthaftnotiz und eine Freihandhaftnotiz.  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Von Annotations XmlStreamStore erstellte Beispiel-XML  
+ Der folgende XML zeigt die Ausgabe der Anmerkungen <xref:System.Windows.Annotations.Storage.XmlStreamStore> und die Organisation von eine Beispieldatei, die drei Anmerkungen - hervorgehoben, einem Text-Kurznotiz und ein Freihand-Stick-Hinweis enthält.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <anc:Annotations  
      xmlns:anc="http://schemas.microsoft.com/windows/annotations/2003/11/core"  
@@ -597,10 +591,10 @@ In diesem Thema wird die XML\-Schemadefinition \(XSD\) beschrieben, die vom Micr
 </anc:Annotations>  
 ```  
   
-## Siehe auch  
- <xref:System.Windows.Annotations>   
- <xref:System.Windows.Annotations.Storage>   
- <xref:System.Windows.Annotations.Annotation>   
- <xref:System.Windows.Annotations.Storage.AnnotationStore>   
- <xref:System.Windows.Annotations.Storage.XmlStreamStore>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Annotations>  
+ <xref:System.Windows.Annotations.Storage>  
+ <xref:System.Windows.Annotations.Annotation>  
+ <xref:System.Windows.Annotations.Storage.AnnotationStore>  
+ <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
  [Übersicht über Anmerkungen](../../../../docs/framework/wpf/advanced/annotations-overview.md)

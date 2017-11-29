@@ -1,39 +1,37 @@
 ---
-title: "Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc40056"
-  - "vbc40056"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40056"
+title: "Namespace oder Typ angegeben, in die Importe &#39; &lt;qualifizierterelementname&gt;&#39; ist nicht &#39; t jeden öffentlichen Member enthalten oder kann nicht gefunden werden"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc40056
+- vbc40056
+helpviewer_keywords: BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Der in Imports '\<QualifizierterElementname\>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden.Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält.Stellen Sie weiterhin sicher, dass der Aliasname keine weiteren Aliase enthält.  
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben, in die Importe &#39; &lt;qualifizierterelementname&gt;&#39; ist nicht &#39; t jeden öffentlichen Member enthalten oder kann nicht gefunden werden
+Namespace oder Typ angegeben, in die Importe\<qualifizierter_elementname >' enthält keine öffentlichen Member oder kann nicht gefunden werden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentlichen Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.  
   
- In einer `Imports`\-Anweisung ist ein enthaltendes Element angegeben, das entweder nicht gefunden werden kann oder keine `Public`\-Member definiert.  
+ Ein `Imports` Anweisung gibt ein enthaltendes Element, das entweder nicht gefunden werden oder keine definiert `Public` Elemente.  
   
- Ein *enthaltendes Element* kann ein Namespace, eine Klasse, eine Struktur, ein Modul, eine Schnittstelle oder eine Enumeration sein.  Das enthaltende Element enthält Member, z. B. Variablen, Prozeduren oder andere enthaltende Elemente.  
+ Ein *mit Element* möglich, einen Namespace, Klasse, Struktur, Modul, Schnittstelle oder Enumeration. Das enthaltende Element enthält Elemente, z. B. Variablen, Prozeduren oder andere Elemente enthält.  
   
- Der Sinn des Importierens besteht darin, im Code den Zugriff auf Namespaces oder Typmember zu ermöglichen, ohne diese vollständig bezeichnen zu müssen.  Unter Umständen ist es für das Projekt auch erforderlich, einen Verweis auf den Namespace oder den Typ hinzuzufügen.  Weitere Informationen finden Sie unter [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) in "Importieren von enthaltenden Elementen".  
+ Importieren von dient zum Code den Zugriff auf Member für Namespace oder Typ zu ermöglichen, ohne sie zu qualifizieren. Das Projekt müssen möglicherweise auch einen Verweis auf den Namespace oder Typ hinzufügen. Weitere Informationen finden Sie unter "Importieren von enthaltenen Elementen" in [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Wenn der Compiler das angegebene enthaltende Element nicht finden kann, ist er nicht in der Lage, Verweise aufzulösen, in denen dieses Element verwendet wird.  Wenn das Element gefunden wird, dieses jedoch keine `Public`\-Member bereitstellt, schlägt jeder Zugriff über einen Verweis fehl.  In beiden Fällen ist es sinnlos, das Element zu importieren.  
+ Wenn der Compiler die angegebene enthaltende Element nicht finden kann, und klicken Sie dann nicht Verweise aufgelöst werden kann, die sie verwenden. Wenn das Element gefunden wird, aber das Element nicht macht `Public` Elemente, und klicken Sie dann auf kein Verweis erfolgreich sein kann. In beiden Fällen ist es ohne Bedeutung, um das Element zu importieren.  
   
- Beachten Sie, dass Sie nach dem Importieren eines enthaltenden Elements und der Zuweisung eines Importalias zu diesem Element den Importalias nicht mehr verwenden können, um ein weiteres Element zu importieren.  Im folgenden Code wird ein Compilerfehler generiert.  
+ Sollten Sie bedenken, wenn Sie ein enthaltendes Element importieren und ein Importalias zuweisen, dann Sie Importalias nicht verwenden, um ein anderes Element zu importieren. Der folgende Code generiert einen Compilerfehler.  
   
  `Imports`   `winfrm`   `= System.Windows.Forms`  
   
@@ -41,19 +39,19 @@ Der in Imports '\<QualifizierterElementname\>' angegebene Namespace oder Typ ent
   
  `Imports behav =`   `winfrm`  `.Design.Behavior`  
   
- **Fehler\-ID:** BC40056  
+ **Fehler-ID:** BC40056  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass vom Projekt aus der Zugriff auf das enthaltende Element möglich ist.  
+1.  Stellen Sie sicher, dass das enthaltende Element aus Ihrem Projekt zugänglich ist.  
   
-2.  Stellen Sie sicher, dass die Spezifikation des enthaltenden Elements keinen Importalias eines anderen Imports enthält.  
+2.  Stellen Sie sicher, dass die Spezifikation des enthaltenden Elements Importalias bereits ein anderer Import nicht enthalten ist.  
   
-3.  Stellen Sie sicher, dass das enthaltende Element mindestens einen `Public`\-Member bereitstellt.  
+3.  Stellen Sie sicher, dass das enthaltende Element verfügbar, mindestens eine macht `Public` Member.  
   
-## Siehe auch  
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Siehe auch  
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

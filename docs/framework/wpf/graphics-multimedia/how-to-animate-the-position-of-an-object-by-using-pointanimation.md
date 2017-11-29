@@ -1,42 +1,46 @@
 ---
-title: "Gewusst wie: Animieren der Position eines Objekts mit PointAnimation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, PointAnimation"
-  - "Klassen, PointAnimation"
-  - "Grafiken [WPF], Animation"
-  - "PointAnimation-Klasse"
+title: 'Gewusst wie: Animieren der Position eines Objekts mit PointAnimation'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], animation
+- animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6590c79ac6b6f104d9944a32da4c99318d334eec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Animieren der Position eines Objekts mit PointAnimation
-In diesem Beispiel wird veranschaulicht, wie die <xref:System.Windows.Media.Animation.PointAnimation>\-Klasse verwendet wird, um ein Objekt entlang eines <xref:System.Windows.Shapes.Path> zu animieren.  
+# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Gewusst wie: Animieren der Position eines Objekts mit PointAnimation
+Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.Animation.PointAnimation> Klasse, um ein Objekt entlang Animieren einer <xref:System.Windows.Shapes.Path>.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Ellipse entlang eines <xref:System.Windows.Shapes.Path> von einem Punkt auf dem Bildschirm zu einem anderen verschoben.  Im Beispiel wird die Position einer <xref:System.Windows.Media.EllipseGeometry> animiert, indem es <xref:System.Windows.Media.Animation.PointAnimation> verwendet, um die <xref:System.Windows.Media.EllipseGeometry.Center%2A>\-Eigenschaft zu animieren.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine Ellipse, die zusammen eine <xref:System.Windows.Shapes.Path> von einem Punkt auf dem Bildschirm zu einem anderen. Das Beispiel erstellt eine Animation, die Position des ein <xref:System.Windows.Media.EllipseGeometry> mit <xref:System.Windows.Media.Animation.PointAnimation> zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Eigenschaft.  
   
  [!code-csharp[BasicAnimations_snip#PointAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/PointAnimationExample.cs#pointanimationwholepage)]
  [!code-vb[BasicAnimations_snip#PointAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/PointAnimationExample.vb#pointanimationwholepage)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.Animation.PointAnimation>   
- <xref:System.Windows.Shapes.Path>   
- <xref:System.Windows.Media.EllipseGeometry>   
- <xref:System.Windows.Media.EllipseGeometry.Center%2A>   
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)   
- [Animation and Timing](http://msdn.microsoft.com/de-de/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Media.Animation.PointAnimation>  
+ <xref:System.Windows.Shapes.Path>  
+ <xref:System.Windows.Media.EllipseGeometry>  
+ <xref:System.Windows.Media.EllipseGeometry.Center%2A>  
+ [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Animation und zeitlichen Steuerung](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

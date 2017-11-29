@@ -1,100 +1,98 @@
 ---
-title: "Namen von Namespaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "[Namen [.NET Framework], Konflikte"
-  - "[Namen [.NET Framework], namespaces"
-  - "Typnamen, Konflikte"
-  - "[Namespaces [.NET Framework], Namen"
-  - "[Namen [.NET Framework], Namen"
+title: Namen von Namespaces
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], conflicts
+- names [.NET Framework], namespaces
+- type names, conflicts
+- namespaces [.NET Framework], names
+- names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4fc0cb9183fde33887a3e84bb30cc3f79892586e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Namen von Namespaces
-Da mit anderen Benennungsrichtlinien erstellen das Ziel bei der Benennung von Namespaces ausreichend Klarheit für Programmierer, die mit dem Framework sofort wissen, was der Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für die Benennung von Namespaces an:  
+# <a name="names-of-namespaces"></a>Namen von Namespaces
+Als ist mit anderen Benennungsrichtlinien das Ziel beim Benennen von Namespaces erstellen ausreichend Klarheit für Programmierer, die mithilfe des Frameworks sofort zu wissen, was der Inhalt des Namespaces wahrscheinlich ist. Die folgende Vorlage gibt an, die in der Regel für die Benennung von Namespaces:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
- Die folgenden Beispiele:  
+ Es folgen Beispiele für:  
   
- `Fabrikam.Math`   
+ `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ führen** Präfix Namespacenamen mit einem Firmennamen Namespaces aus unterschiedlichen Unternehmen aus den gleichen Namen zu verhindern.  
+ **Führen Sie ✓** Präfix Namespacenamen mit einem Firmennamen, um zu verhindern, dass Namespaces aus verschiedenen Unternehmen über den gleichen Namen verfügen.  
   
- **✓ führen** verwenden einen stabilen, versionsunabhängigen Produktnamen auf der zweiten Ebene des Namespace ein.  
+ **Führen Sie ✓** ein stabiler, versionsunabhängige Produktname auf der zweiten Ebene eine Namespace-Namen verwenden.  
   
- **X nicht** verwenden Sie Organisationshierarchien als Grundlage für Namen in Namespacehierarchien, weil Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie der Namespaces, um Gruppen von verwandten Technologien.  
+ **X nicht** Organisationseinheit Hierarchien für Namen in Namespacehierarchien, als Grundlage verwenden, da Gruppennamen in Unternehmen häufig kurzlebig sind. Organisieren Sie die Hierarchie von Namespaces, um Gruppen von verwandten Technologien.  
   
- **✓ führen** PascalCasing und separaten Namespace\-Komponenten mit Punkten verwendet \(z. B. `Microsoft.Office.PowerPoint`\). Wenn Ihre Marke nicht traditionelle Groß\-\/Kleinschreibung verwendet, sollten Sie die Groß\-\/Kleinschreibung, Ihre Marke definierte folgen, selbst wenn es von der normalen Schreibweise für Namespaces abweicht.  
+ **Führen Sie ✓** PascalCasing und abgetrennten Namespacekomponenten mit Zeiträumen verwenden (z. B. `Microsoft.Office.PowerPoint`). Wenn Ihre Marke traditionelle Groß-/Kleinschreibung verwendet, sollten Sie die Groß-/Kleinschreibung definiert Ihre Marke folgen, selbst wenn er von der normalen Namespace Groß-/Kleinschreibung abweicht.  
   
- **✓ ggf.** mit plural Namespacenamen gegebenenfalls.  
+ **✓ GGF.** plural Namespacenamen verwenden, falls zutreffend.  
   
  Verwenden Sie z. B. `System.Collections` anstelle von `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen von dieser Regel. Verwenden Sie z. B. `System.IO` anstelle von `System.IOs`.  
   
- **X nicht** verwenden Sie denselben Namen für einen Namespace und einen Typ im Namespace.  
+ **X nicht** denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.  
   
- Verwenden Sie z. B. nicht `Debug` als Namespace benennen, und geben Sie dann auch eine Klasse namens `Debug` im selben Namespace. Einige Compiler erfordern, dass solche Typen vollqualifiziert sein.  
+ Verwenden Sie z. B. nicht `Debug` wie ein Namespace benennen, und geben Sie dann auch eine Klasse namens `Debug` im selben Namespace. Einige Compiler erfordern, dass solche Typen vollqualifiziert sein.  
   
-### Namespaces und Typnamenskonflikte  
- **X nicht** führen Sie generische Typnamen wie z. B. `Element`, `Node`, `Log`, und `Message`.  
+### <a name="namespaces-and-type-name-conflicts"></a>Namespaces und Typnamenskonflikte  
+ **X nicht** führen Sie die generischen Namen wie z. B. `Element`, `Node`, `Log`, und `Message`.  
   
- Es gibt eine sehr hohe Wahrscheinlichkeit, dass dies hätte zur Folge hat, geben Sie den Namen in gängigen Szenarien Konflikt steht. Sie sollten die generischen Typnamen qualifizieren \(`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`\).  
+ Es ist ein sehr hoher Wahrscheinlichkeit, dass dies hätte, führen um zu eingeben gemeinsame Szenarien steht in Konflikt. Sie sollten die generischen Namen qualifizieren (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
- Es gibt spezielle Richtlinien zur Vermeidung von Namenskonflikten für verschiedene Kategorien von Namespaces Typ.  
+ Es gibt spezielle Richtlinien für die Typ-Namenskonflikte für verschiedene Kategorien von Namespaces zu vermeiden.  
   
--   **Application Model\-namespaces**  
+-   **Application-Modell-namespaces**  
   
-     Namespaces für eine einzelne Anwendungsmodell werden sehr häufig zusammen verwendet werden, aber sie werden fast nie mit Namespaces anderer Modelle der Anwendung verwendet. Z. B. der <xref:System.Windows.Forms?displayProperty=fullName> \-Namespace werden nur sehr selten zusammen mit den <xref:System.Web.UI?displayProperty=fullName> Namespace. Im folgenden finden eine Liste der bekannten Modell Namespace Anwendungsgruppen:  
+     Namespaces, gehören zu einem einzelnen Anwendungsmodell werden häufig zusammen verwendet werden, aber sie fast nie mit Namespaces anderer Modelle der Anwendung verwendet werden. Z. B. die <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace wird sehr selten verwendet werden, zusammen mit den <xref:System.Web.UI?displayProperty=nameWithType> Namespace. Im folgenden finden eine Liste der bekannten Anwendung Namespace Modellgruppen:  
   
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X nicht** Typen in Namespaces in einem einzigen Anwendungsmodell den gleichen Namen zuweisen.  
+     **X nicht** weisen den gleichen Namen auf Typen in Namespaces in einem einzigen Anwendungsmodell.  
   
-     Z. B. einen Typ mit dem Namen nicht hinzufügen `Page` auf der <xref:System.Web.UI.Adapters?displayProperty=fullName> \-Namespace, da die <xref:System.Web.UI?displayProperty=fullName> \-Namespace enthält bereits einen Typ mit dem Namen `Page`.  
+     Z. B. einen Typ mit dem Namen nicht hinzufügen `Page` auf die <xref:System.Web.UI.Adapters?displayProperty=nameWithType> Namespace, da die <xref:System.Web.UI?displayProperty=nameWithType> -Namespace enthält bereits einen Typ mit dem Namen `Page`.  
   
 -   **Infrastrukturnamespaces**  
   
-     Diese Gruppe enthält die Namespaces, die nur selten während der Entwicklung der Anwendung importiert werden. Z. B. `.Design` Namespaces werden hauptsächlich verwendet, wenn tools entwickeln programmieren. Vermeiden von Konflikten mit Typen in diesen Namespaces ist unerheblich.  
+     Diese Gruppe enthält die Namespaces, die nur selten während der Entwicklung der Anwendung importiert werden. Beispielsweise `.Design` Namespaces werden hauptsächlich verwendet, bei der Entwicklung, Programmierung tools. Vermeiden von Konflikten mit Typen aus den Namespaces ist unerheblich.  
   
--   **Core\-namespaces**  
+-   **Core-namespaces**  
   
-     Core\-Namespaces enthalten alle `System` Namespaces, ohne Namespaces der Anwendungsmodelle und die Infrastruktur\-Namespaces. Core\-Namespaces enthalten, u. a. `System`, `System.IO`, `System.Xml`, und `System.Net`.  
+     Core-Namespaces enthalten alle `System` Namespaces, die ausschließlich Namespaces und die Anwendungsmodelle und der Infrastruktur-Namespaces. Core-Namespaces enthalten, u. a. `System`, `System.IO`, `System.Xml`, und `System.Net`.  
   
-     **X nicht** Geben Sie Namen, die in Konflikt stehen würde mit einem Typ in den Kernnamespaces Typen.  
+     **X nicht** erteilen, die in Konflikt stehenden Namen mit einem beliebigen Typ in den Core-Namespaces Typen.  
   
-     Verwenden Sie z. B. niemals `Stream` als Typname. Es steht in Konflikt mit <xref:System.IO.Stream?displayProperty=fullName>, häufig verwendete Typ.  
+     Verwenden Sie z. B. niemals `Stream` als Typname. Es steht in Konflikt mit <xref:System.IO.Stream?displayProperty=nameWithType>, eine sehr häufig verwendete Typ.  
   
--   **Technologie\-Namespace\-Gruppen**  
+-   **Technologie Namespace Gruppen**  
   
-     Diese Kategorie umfasst alle Namespaces mit derselben ersten beiden Namespaceknoten `(<Company>.<Technology>*`\), wie z. B. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die für eine einzelne Technologie nicht miteinander in Konflikt stehen.  
+     Diese Kategorie umfasst alle Namespaces mit den gleichen ersten beiden Namespaceknoten `(<Company>.<Technology>*`), wie z. B. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die auf eine einzelne Technologie gehören nicht miteinander in Konflikt stehen.  
   
-     **X nicht** zuweisen, die in Konflikt stehenden Namen zusammen mit anderen Typen in einer einzelnen Technologie.  
+     **X nicht** Typnamen, die in Konflikt stehen würde mit anderen Typen in einer einzelnen Technologie zuweisen.  
   
-     **X nicht** Typnamenskonflikte zwischen Typen in Technologienamespaces und einer Anwendungsmodellnamespace einführen, \(es sei denn, die Technologie nicht mit dem Anwendungsmodell verwendet werden soll\).  
+     **X nicht** einführen Typnamenskonflikte zwischen Typen in Technologienamespaces und eine Anwendungsmodellnamespace (es sei denn, die Technologie nicht mit dem Anwendungsmodell verwendet werden sollen).  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+ [Benennungsrichtlinien](../../../docs/standard/design-guidelines/naming-guidelines.md)

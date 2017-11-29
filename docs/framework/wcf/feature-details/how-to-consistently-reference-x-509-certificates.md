@@ -1,35 +1,40 @@
 ---
-title: "Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zertifikate [WCF], Verweisen auf X.509-Zertifikate"
+title: 'Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8d42af919b9792fc5a5303737187be7ffef6405d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate
-Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwerts des Zertifikats, anhand des Ausstellers und der Seriennummer oder anhand der Schlüsselkennung des Antragstellers \(Subject Key Identifier, SKI\).Die Schlüsselkennung des Antragstellers gibt den öffentlichen Schlüssel des Zertifikatantagstellers eindeutig an. Sie wird häufig für digitale XML\-Signaturen verwendet.Der SKI\-Wert ist in der Regel als *X.509\-Zertifikatserweiterung* Bestandteil des X.509\-Zertifikats.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verfügt über einen standardmäßigen *Verweisstil*, der den Aussteller und die Seriennummer verwendet, wenn die SKI\-Erweiterung im Zertifikat fehlt.Enthält das Zertifikat die SKI\-Erweiterung, verwendet der Standardverweis die Schlüsselkennung des Antragstellers, um auf das Zertifikat zu verweisen.Wenn Sie während der Entwicklung einer Anwendung von Zertifikaten, die die SKI\-Erweiterung nicht verwenden, auf Zertifikate umstellen, die die SKI\-Erweiterung verwenden, ändert sich auch der Verweisstil in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-generierten Nachrichten.  
+# <a name="how-to-consistently-reference-x509-certificates"></a>Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate
+Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwerts des Zertifikats, anhand des Ausstellers und der Seriennummer oder anhand der Schlüsselkennung des Antragstellers (Subject Key Identifier, SKI). Die Schlüsselkennung des Antragstellers gibt den öffentlichen Schlüssel des Zertifikatantagstellers eindeutig an. Sie wird häufig für digitale XML-Signaturen verwendet. Der SKI-Wert wird in der Regel Bestandteil des x. 509-Zertifikats als ein *x. 509-zertifikatserweiterung*. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]verfügt über einen standardmäßigen *verweisstil* , den Aussteller und die Seriennummer verwendet, wenn die SKI-Erweiterung das Zertifikat nicht vorhanden ist. Enthält das Zertifikat die SKI-Erweiterung, verwendet der Standardverweis die Schlüsselkennung des Antragstellers, um auf das Zertifikat zu verweisen. Wenn Sie während der Entwicklung einer Anwendung von Zertifikaten, die die SKI-Erweiterung nicht verwenden, auf Zertifikate umstellen, die die SKI-Erweiterung verwenden, ändert sich auch der Verweisstil in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-generierten Nachrichten.  
   
- Wenn unabhängig vom Vorhandensein einer SKI\-Erweiterung ein einheitlicher Verweisstil erforderlich ist, kann der gewünschte Verweisstil wie im folgenden Code dargestellt konfiguriert werden.  
+ Wenn unabhängig vom Vorhandensein einer SKI-Erweiterung ein einheitlicher Verweisstil erforderlich ist, kann der gewünschte Verweisstil wie im folgenden Code dargestellt konfiguriert werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein benutzerdefiniertes Sicherheitsbindungselement erstellt, das einen einzigen einheitlichen Verweisstil, den Namen des Ausstellers und die Seriennummer verwendet.  
   
  [!code-csharp[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_referencingcertificatesconsistently/cs/source.cs#1)]
  [!code-vb[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_referencingcertificatesconsistently/vb/source.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:  
   
 -   <xref:System>  
@@ -40,5 +45,5 @@ Sie haben verschiedene Möglichkeiten, Zertifikate anzugeben: anhand des Hashwer
   
 -   <xref:System.ServiceModel.Security.Tokens>  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

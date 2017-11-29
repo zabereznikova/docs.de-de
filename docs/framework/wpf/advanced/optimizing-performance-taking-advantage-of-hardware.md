@@ -1,73 +1,76 @@
 ---
-title: "Optimieren der Leistung: Vorteile der Hardware nutzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Renderingebenen für Grafiken"
-  - "Grafiken, Leistung"
-  - "Grafiken, Renderingebenen"
-  - "Hardwarerenderingpipeline"
-  - "Renderingebenen"
-  - "Softwarerenderingpipeline"
+title: 'Optimieren der Leistung: Vorteile der Hardware nutzen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], performance
+- hardware rendering pipeline [WPF]
+- rendering tiers [WPF]
+- graphics rendering tiers [WPF]
+- graphics [WPF], rendering tiers
+- software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8828ff0f263943c6094af0073ec4cad6068c6e1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Optimieren der Leistung: Vorteile der Hardware nutzen
-Die interne Architektur von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software.  Dieses Thema enthält Informationen über diese Renderingpipelines, die Sie bei den Entscheidungen hinsichtlich Leistungsoptimierungen Ihrer Anwendungen unterstützen.  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Vorteile der Hardware nutzen
+Der internen Architektur von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen zu dieser Renderingpipelines, um Entscheidungen zur leistungsoptimierung von Anwendungen treffen zu können.  
   
-## Hardwarerenderingpipeline  
- Einer der wichtigsten Faktoren bei der Bestimmung der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Leistung besteht darin, dass sie renderinggebunden ist \- je mehr Pixel gerendert werden müssen, desto höher sind die Kosten für die Leistung.  Je mehr Rendering jedoch an die [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)] übergeben werden kann, desto mehr Leistungsvorteile sind möglich.  Die Hardwarerenderingpipeline der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung kann in vollem Umfang die Vorteile der [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]\- Funktionen für Hardware nutzen, die mindestens [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Version 7.0 unterstützt.  Weitere Optimierungen lassen sich bei Hardware erzielen, die [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], Version 7.0, und PixelShader 2.0\+\-Funktionen unterstützt.  
+## <a name="hardware-rendering-pipeline"></a>Hardwarerenderingpipeline  
+ Eines der wichtigsten Faktoren bei der Ermittlung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Leistung ist die renderbegrenzung – Sie gerendert werden, desto größere sind die Kosten für die Leistung müssen mehr Pixel. Allerdings mehr rendering auf ausgelagert werden können die [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], die weitere Leistungsvorteile, die Sie gewinnen können. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hardwarerenderingpipeline Anwendung nutzt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Features auf Hardware, die mindestens unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Version 7.0. Weitere Optimierungen gewonnen werden können, von der Hardware, die unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] , Version 7.0 und PixelShader 2.0 +-Funktionen.  
   
-## Softwarerenderingpipeline  
- Die Softwarerenderingpipeline von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist vollständig CPU\-gebunden.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nutzt die Vorteile der SSE\- und SSE2\-Anweisungssets der CPU, um eine optimierte und mit allen Funktionen ausgestattete Rasterisierungsfunktion zu implementieren.  Wenn beliebige Anwendungsfunktionalität nicht mit der Hardwarerenderingpipeline gerendert werden kann, kann nahtlos auf die Software zurückgegriffen werden.  
+## <a name="software-rendering-pipeline"></a>Softwarerenderingpipeline  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Softwarerenderingpipeline basiert vollständig auf CPU-gebunden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nutzt die SSE- und SSE2-Anweisung wird in der CPU auf eine optimierte und gleichberechtigt Rasterisierungsfunktion zu implementieren. Fallback auf Software ist eine nahtlose jedes Mal, wenn in der Anwendungsfunktion die Hardwarerenderingpipeline gerendert werden kann.  
   
- Das größte Leistungsproblem, das beim Rendern im Softwaremodus auftreten kann, betrifft die Füllrate, die als Anzahl der Pixel definiert ist, die gerendert werden.  Wenn Sie Bedenken hinsichtlich der Leistung im Softwarerenderingmodus haben, minimieren Sie die Häufigkeit, mit der ein Pixel neu gezeichnet wird.  Beispielsweise werden bei einer Anwendung mit einem blauen Hintergrund, die dann ein leicht transparentes Bild auf diesem Hintergrund rendert, alle Pixel der Anwendung zweimal gerendert.  Deshalb nimmt das Rendern der Anwendung inklusive Bild doppelt soviel Zeit in Anspruch wie das alleinige Rendern des blauen Hintergrunds.  
+ Das größte Leistungsproblem treten beim Rendern in Software-Modus verknüpft ist, Füllrate, definiert als die Anzahl der Pixel, die gerendert werden. Wenn Sie über die Leistung in Software-Renderingmodus Bedenken haben, versuchen Sie, wie oft zu minimieren, die eine Pixel neu gezeichnet wird. Z. B. Wenn Sie eine Anwendung mit einem blauen Hintergrund, dann über diese ein leicht transparentes Bild gerendert wird verfügen, werden Sie alle Pixel in der Anwendung zweimal gerendert. Folglich dauert zweimal es zulässig, die die Anwendung mit dem Bild, als wenn Sie nur die blauen Hintergrund gerendert.  
   
-### Renderingebenen für Grafiken  
- Möglicherweise ist es sehr schwierig, die Hardwarekonfiguration vorherzusagen, auf der die Anwendung ausgeführt wird.  Sie sollten jedoch einen Entwurf in Betracht ziehen, der es der Anwendung ermöglicht, bei der Ausführung auf unterschiedlicher Hardware nahtlos zwischen den Features zu wechseln. Auf diese Weise können die Vorteile der jeweiligen Hardwarekonfiguration vollständig genutzt werden.  
+### <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken  
+ Es ist möglicherweise sehr schwierig, die Hardwarekonfiguration vorherzusagen, die die Anwendung ausgeführt wird. Möglicherweise möchten Sie jedoch, einen Entwurf zu berücksichtigen, der Ihre Anwendung nahtlos Funktionen wechseln, wenn auf andere Hardware ausgeführt, damit sie vollständige jede Konfiguration auf anderer Hardware nutzen kann.  
   
- Zu diesem Zweck stellt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionalität bereit, um die Grafikfähigkeit eines Systems zur Laufzeit zu bestimmen.  Die Grafikfähigkeit wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Renderingfähigkeit bestimmt.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] verfügbar, mit der eine Anwendung die Ebene der Renderingfähigkeit abfragen kann.  Je nach der von der Hardware unterstützten Renderingebene kann die Anwendung zur Laufzeit dann verschiedenen Codepfaden folgen.  
+ Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt Funktionen bereit, die Grafikfunktionen eines Systems zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]macht eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , mit dessen Hilfe einer Anwendung für die Ebene der Funktion Abfragen. Die Anwendung kann dann unterschiedlichen Codepfaden zur Laufzeit je nach der Renderingebene, die von der Hardware unterstützt vornehmen.  
   
- Folgende Features der Grafikhardware wirken sich besonders stark auf die Renderingebenen aus:  
+ Die Funktionen der Grafikhardware, die sich am stärksten auf die Renderingebenen auswirken, sind:  
   
--   **Video\-RAM**: Der Umfang des Video\-Arbeitsspeichers der Grafikhardware bestimmt die Größe und Anzahl der Puffer, die für die Zusammensetzung von Grafiken verwendet werden können.  
+-   **Video-RAM**: Die Videospeichermenge der Grafikhardware bestimmt die Größe und Anzahl der Puffer, die für die Zusammensetzung von Grafiken verwendet werden kann.  
   
--   **Pixelshader**: Ein Pixelshader ist eine Grafikverarbeitungsfunktion, die Effekte auf der Basis einzelner Pixel berechnet.  Je nach Auflösung der angezeigten Grafiken müssen möglicherweise für jeden angezeigten Frame mehrere Millionen Pixel verarbeitet werden.  
+-   **Pixel-Shader**: Ein Pixel-Shader ist eine Grafikprozessorfunktion, die Auswirkungen auf eine Pro-Pixel-Basis berechnet. Abhängig von der Auflösung der angezeigten Grafiken kann es mehrere Millionen Pixel geben, die für jeden Frame des Displays verarbeitet werden müssen.  
   
--   **Vertexshader**: Ein Vertexshader ist eine Grafikverarbeitungsfunktion, die mathematische Operationen für die Vertexdaten des Objekts ausführt.  
+-   **Vertex-Shader**: Ein Vertex-Shader ist eine Grafikprozessorfunktion, die mathematische Operationen für die Vertexdaten des Objekts ausführt.  
   
--   **Unterstützung von Mehrfachtexturen**: Hierbei handelt es sich um die Fähigkeit, während eines Blendingvorgangs mehrere unterschiedliche Texturen auf ein 3D\-Grafikobjekt anzuwenden.  Der Grad der Unterstützung von Mehrfachtexturen hängt von der Anzahl der Mehrfachtextureinheiten in der Grafikhardware ab.  
+-   **Multitexturunterstützung**: Bei Multitexturunterstützung handelt es sich um die Möglichkeit, zwei oder mehr unterschiedliche Texturen während eines Mischvorgangs für ein 3D-Grafikobjekt anzuwenden. Der Grad der Multitexturunterstützung wird durch die Anzahl der Multitextureinheiten in der Grafikhardware bestimmt.  
   
- Mithilfe der Features Pixelshader, Vertexshader und Mehrfachtextur werden bestimmte [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]\-Versionsebenen definiert, mit denen wiederum die unterschiedlichen Renderingebenen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definiert werden.  
+ Die Pixel-Shader, Vertex-Shader und Mehrfachtextur Funktionen werden verwendet, um bestimmte definieren [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Versionsebenen, die wiederum verwendet werden, definieren Sie die unterschiedlichen Renderingebenen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Die Features der Grafikhardware bestimmen die Renderingfähigkeit einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung.  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-System definiert drei Renderingebenen:  
+ Die Funktionen der Grafikhardware bestimmen die Renderingfunktion einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-System definiert drei Renderingebenen:  
   
--   **Renderingebene 0 \(null\)** Keine Grafikhardwarebeschleunigung.  Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]\-Versionsebene liegt in einer niedrigeren Version als 7.0 vor.  
+-   **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Versionsebene ist kleiner als die Version 7.0.  
   
--   **Renderingebene 1** Eingeschränkte Grafikhardwarebeschleunigung.  Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]\-Versionsebene liegt in mindestens Version 7.0 und einer **niedrigeren** Version als 9.0 vor.  
+-   **Rendern von Ebene-1** Hardwarebeschleunigung teilweise Grafiken. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Versionsebene ist größer als oder gleich 7.0 verwenden, und **kleinere** als Version 9.0.  
   
--   **Renderingebene 2** Die meisten Grafikfeatures verwenden die Grafikhardwarebeschleunigung.  Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]\-Versionsebene liegt mindestens in Version 9.0 vor.  
+-   **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
   
- Weitere Informationen über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Renderingebenen finden Sie unter [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingebenen finden Sie unter [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
   
-## Siehe auch  
- [Optimieren der WPF\-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2D\-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Projektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Objektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

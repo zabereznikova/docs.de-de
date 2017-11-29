@@ -1,42 +1,42 @@
 ---
-title: "&#220;bersicht &#252;ber die PrintDocument-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintDocument"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrintDocument-Komponente [Windows Forms], Informationen über die PrintDocument-Komponente"
-  - "Drucken [Windows Forms], PrintDocument-Komponente"
+title: "Übersicht über die PrintDocument-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintDocument
+helpviewer_keywords:
+- PrintDocument component [Windows Forms], about PrintDocument component
+- printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber die PrintDocument-Komponente (Windows&#160;Forms)
-Die [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)\-Komponente in Windows Forms wird verwendet, um die Eigenschaften der zu druckenden Elemente festzulegen und das Dokument anschließend innerhalb von Windows\-Anwendungen zu drucken.  Sie kann in Verbindung mit der [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)\-Komponente verwendet werden, um alle Aspekte zu steuern, die mit dem Drucken von Dokumenten zusammenhängen.  
+# <a name="printdocument-component-overview-windows-forms"></a>Übersicht über die PrintDocument-Komponente (Windows Forms)
+Die Komponente [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) von Windows Forms wird verwendet, um die Eigenschaften festzulegen, die beschreiben, was gedruckt werden soll. Außerdem wird sie verwendet, um das Dokument in Windows-basierten Anwendungen drucken zu können. Sie kann zusammen mit der Komponente [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) verwendet werden, um alle Aspekte des Druckens eines Dokuments zu steuern.  
   
-## Arbeiten mit der PrintDocument\-Komponente  
- Die beiden Hauptszenarien für die <xref:System.Drawing.Printing.PrintDocument>\-Komponente sind folgende:  
+## <a name="working-with-the-printdocument-component"></a>Arbeiten mit der PrintDocument-Komponente  
+ Zwei der wichtigsten Szenarien, bei denen, die <xref:System.Drawing.Printing.PrintDocument> Komponente sind:  
   
--   Einfache Druckaufträge, z. B. das Drucken einer einzelnen Textdatei.  In einem solchen Fall würden Sie die <xref:System.Drawing.Printing.PrintDocument>\-Komponente in ein Windows Form einfügen und dann eine Programmierlogik hinzufügen, die eine Datei im <xref:System.Drawing.Printing.PrintDocument.PrintPage>\-Ereignishandler ausgibt.  Die Programmierlogik muss zum Drucken des Dokuments mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A>\-Methode zusammenwirken.  Diese Methode sendet ein <xref:System.Drawing.Graphics>\-Objekt an den Drucker, das in der <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>\-Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs>\-Klasse enthalten ist.  Ein Beispiel, das veranschaulicht, wie ein Textdokument mit der <xref:System.Drawing.Printing.PrintDocument>\-Komponente gedruckt wird, finden Sie unter [Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
+-   Einfache Druckaufträge wie das Drucken einer einzelnen Textdatei. In diesem Fall fügen Sie der <xref:System.Drawing.Printing.PrintDocument> Komponente auf einem Windows Form hinzufügen dann Programmierlogik, der ausgibt, eine Datei in der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignishandler. Die Programmierlogik muss mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode, um das Dokument zu drucken. Diese Methode sendet eine <xref:System.Drawing.Graphics> in enthaltenes Objekt die <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> Eigenschaft von der <xref:System.Drawing.Printing.PrintPageEventArgs> -Klasse, an den Drucker. Ein Beispiel, das so drucken Sie ein Textdokument mit veranschaulicht die <xref:System.Drawing.Printing.PrintDocument> Komponente finden Sie unter [wie: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
   
--   Komplexere Druckaufträge, wenn Sie z. B. die geschriebene Drucklogik wiederverwenden möchten.  In einem solchen Fall würden Sie eine neue Komponente von der <xref:System.Drawing.Printing.PrintDocument>\-Komponente ableiten und das <xref:System.Drawing.Printing.PrintDocument.PrintPage>\-Ereignis überschreiben \(siehe [Overrides](../Topic/Overrides%20\(Visual%20Basic\).md) für Visual Basic oder [override](../Topic/override%20\(C%23%20Reference\).md) für C\#\).  
+-   Komplexere Druckaufträge, z.B. eine Situation, in der Sie bereits geschriebene Drucklogik wiederverwenden möchten. In einem solchen Fall leiten Sie eine neue Komponente aus der <xref:System.Drawing.Printing.PrintDocument> Komponente und überschreiben (finden Sie unter [überschreibt](~/docs/visual-basic/language-reference/modifiers/overrides.md) für Visual Basic oder [überschreiben](~/docs/csharp/language-reference/keywords/override.md) für c#) die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis.  
   
- Nachdem die <xref:System.Drawing.Printing.PrintDocument>\-Komponente einem Formular hinzugefügt wurde, wird sie auf der Komponentenleiste am unteren Rand des Windows Forms\-Designers angezeigt.  
+ Wenn sie zu einem Formular hinzugefügt wird die <xref:System.Drawing.Printing.PrintDocument> Komponente in der Taskleiste am unteren Rand der Windows Forms-Designer angezeigt.  
   
-## Siehe auch  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Printing.PrintDocument>   
- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
- [PrintDocument\-Komponente](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [PrintDocument-Komponente](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)

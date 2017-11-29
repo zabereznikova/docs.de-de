@@ -1,44 +1,46 @@
 ---
-title: "IWpfHostSupport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IWpfHostSupport-Schnittstelle"
+title: IWpfHostSupport
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85d4ed09d6c5ca17e148d531e6aac483ff737d51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# IWpfHostSupport
-Anwendungen, die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]\-Inhalte mithilfe von PresentationHost.exe hosten, implementieren diese Schnittstelle, um für den Host und PresentationHost.exe einen Integrationspunkt bereitzustellen.  
+# <a name="iwpfhostsupport"></a>IWpfHostSupport
+Anwendungen, die hosten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Inhalt über PresentationHost.exe implementieren diese Schnittstelle für einen Integration zwischen dem Host und PresentationHost.exe bereitstellen.  
   
-## Hinweise  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]\-Anwendungen, z. B. Webbrowser, können [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]\-Inhalt hosten, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und lose XAML\-Daten.  Zum Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]\-Inhalten erstellen [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]\-Anwendungen eine Instanz des [WebBrowser\-Steuerelements](http://go.microsoft.com/fwlink/?LinkId=97911) \(möglicherweise in englischer Sprache\).  Zum Hosten erstellt [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] eine Instanz von PresentationHost.exe, über die der gehostete [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]\-Inhalt dem Host zur Anzeige im [WebBrowser\-Steuerelement](http://go.microsoft.com/fwlink/?LinkId=97911) bereitgestellt wird.  
+## <a name="remarks"></a>Hinweise  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]Hosten von Anwendungen wie Webbrowsern können [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Inhalt, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose XAML. Auf Host [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Inhalt [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Anwendungen erstellen Sie eine Instanz von der [WebBrowser-Steuerelement](http://go.microsoft.com/fwlink/?LinkId=97911). Gehostet werden, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] erstellt eine Instanz von PresentationHost.exe, die der gehostete [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Content an den Host für die Anzeige in der [WebBrowser-Steuerelement](http://go.microsoft.com/fwlink/?LinkId=97911).  
   
- Die von `IWpfHostSupport` aktivierte Integration ermöglicht für PresentationHost.exe Folgendes:  
+ Die Integration von aktiviert `IWpfHostSupport` PresentationHost.exe ermöglicht:  
   
--   Erkennen der und Registrieren bei den Geräten für die unformatierte Eingabe \(Human Interface Device\), die für die Hostanwendung von Bedeutung sind  
+-   Ermitteln Sie, und registrieren Sie mit der Eingaben unformatierten Medien (Human Interface Devices), denen die hostanwendung interessiert ist.  
   
--   Empfangen von Eingabemeldungen von den registrierten Geräten für die unformatierte Eingabe und Weiterleiten von entsprechenden Meldungen an die Hostanwendung  
+-   Erhalten Sie eingehende Nachrichten aus der registrierten Geräte für unformatierte Eingabe und die entsprechenden Weiterleiten von Nachrichten an die hostanwendung.  
   
--   Abfragen der Hostanwendung nach benutzerdefinierten Benutzeroberflächen zur Fortschritts\- und Fehleranzeige  
+-   Fragen Sie die hostanwendung für benutzerdefinierte Benutzeroberflächen Status- und Fehlerinformationen.  
   
 > [!NOTE]
->  Diese API ist lediglich zur Verwendung auf dem lokalen Clientcomputer gedacht und wird nur dafür unterstützt.  
+>  Diese API ist nur für die Verwendung auf dem lokalen Clientcomputer vorgesehen und wird nur zu diesem Zweck unterstützt.  
   
-## Mitglieder  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
-|------------|------------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Ermöglicht PresentationHost.exe die Erkennung der Geräte für die unformatierte Eingabe \(Human Interface Device\), die für die Hostanwendung von Bedeutung sind.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Wird von der Datei PresentationHost.exe aufgerufen, wenn eine Meldung empfangen wird, sofern nicht E\_NOTIMPL zurückgegeben wird.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|Standardmäßig verfügt PresentationHost.exe über eigene Benutzeroberflächen zur Anzeige von Bereitstellungsfortschritt und \-fehlern, die beim Bereitstellen von WPF\-Inhalten angezeigt werden.|
+|------------|-----------------|  
+|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Ermöglicht es der Datei "PresentationHost.exe", Geräte für die Eingabe von Rohdaten (Eingabegeräte, Human Interface Devices) zu erkennen, die für die Hostanwendung interessant sind.|  
+|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Wird immer dann von "PresentationHost.exe" aufgerufen, wenn eine Meldung empfangen wurde, es sei denn, E_NOTIMPL wurde zurückgegeben.|  
+|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|Bietet standardmäßig PresentationHost.exe eigene Bereitstellungsstatus und Fehler bei der Bereitstellung von Benutzeroberflächen, die angezeigt werden, wenn WPF-Inhalt bereitgestellt wird.|

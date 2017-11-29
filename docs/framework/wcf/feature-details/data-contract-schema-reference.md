@@ -1,190 +1,192 @@
 ---
-title: "Datenvertrags-Schemareferenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Datenverträge [WCF], Schemareferenz"
+title: Datenvertrags-Schemareferenz
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b0838eeae79dff6e7f0371abe3a3ad23df0384a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datenvertrags-Schemareferenz
-In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime \(CLR\)\-Typen für die XML\-Serialisierung verwendete Teilmenge des XML\-Schemas \(XSD\) beschrieben.  
+# <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
+In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
   
-## DataContractSerializer\-Zuordnungen  
- Der `DataContractSerializer` ordnet CLR\-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) exportiert werden.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+## <a name="datacontractserializer-mappings"></a>DataContractSerializer-Zuordnungen  
+ Der `DataContractSerializer` ordnet CLR-Typen XSD zu, wenn Metadaten von einem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Dienst mithilfe eines Metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert werden. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrags-Serialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
- Der `DataContractSerializer` ordnet XSD auch dann CLR\-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL\- \(Web Services Description Language\) oder XSD\-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
+ Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
   
- Nur XML\-Schemainstanzen, die den in diesem Dokument beschriebenen Anforderungen entsprechen, können mit `DataContractSerializer` CLR\-Typen zugeordnet werden.  
+ Nur XML-Schemainstanzen, die den in diesem Dokument beschriebenen Anforderungen entsprechen, können mit `DataContractSerializer`CLR-Typen zugeordnet werden.  
   
-### Unterstützungsebenen  
- Der `DataContractSerializer` stellt die folgenden Unterstützungsebenen für eine gegebene XML\-Schemafunktion bereit:  
+### <a name="support-levels"></a>Unterstützungsebenen  
+ Der `DataContractSerializer` stellt die folgenden Unterstützungsebenen für eine gegebene XML-Schemafunktion bereit:  
   
--   **Unterstützt**. Es gibt eine explizite Zuordnung dieser Funktion zu CLR\-Typen oder \-Attributen \(oder beiden\) mit `DataContractSerializer`.  
+-   **Unterstützt**. Es gibt eine explizite Zuordnung dieser Funktion zu CLR-Typen oder -Attributen (oder beiden) mit `DataContractSerializer`.  
   
--   **Ignoriert**. Die Funktion ist in vom `DataContractSerializer` importierten Schemas zugelassen, hat aber keine Auswirkungen auf die Codegenerierung.  
+-   **Ignoriert**. Die Funktion ist in vom `DataContractSerializer`importierten Schemas zugelassen, hat aber keine Auswirkungen auf die Codegenerierung.  
   
--   **Unzulässig**. Der `DataContractSerializer` unterstützt nicht den Import eines Schemas, das diese Funktion verwendet. Svcutil.exe verwendet beispielsweise wieder den <xref:System.Xml.Serialization.XmlSerializer>, wenn auf ein WSDL mit einem Schema zugegriffen wird, das eine solche Funktion verwendet. Dies ist das Standardverhalten.  
+-   **Unzulässig**. Der `DataContractSerializer` unterstützt nicht den Import eines Schemas, das diese Funktion verwendet. Svcutil.exe verwendet beispielsweise wieder den <xref:System.Xml.Serialization.XmlSerializer> , wenn auf ein WSDL mit einem Schema zugegriffen wird, das eine solche Funktion verwendet. Dies ist das Standardverhalten.  
   
-## Allgemeine Informationen  
+## <a name="general-information"></a>Allgemeine Informationen  
   
--   Der Schemanamespace wird unter [XML\-Schema](http://go.microsoft.com/fwlink/?LinkId=95475) beschrieben. In diesem Dokument wird das Präfix "xs" verwendet.  
+-   Der Schemanamespace wird unter [XML-Schema](http://go.microsoft.com/fwlink/?LinkId=95475)beschrieben. In diesem Dokument wird das Präfix "xs" verwendet.  
   
--   Alle Attribute mit einem Nicht\-Schema\-Namespace werden ignoriert.  
+-   Alle Attribute mit einem Nicht-Schema-Namespace werden ignoriert.  
   
--   Alle Anmerkungen \(außer den in diesem Dokument beschriebenen\) werden ignoriert.  
+-   Alle Anmerkungen (außer den in diesem Dokument beschriebenen) werden ignoriert.  
   
-### \<xs:schema\>: Attribute  
+### <a name="xsschema-attributes"></a>\<xs: Schema >: Attribute  
   
 |Attribut|DataContract|  
-|--------------|------------------|  
+|---------------|------------------|  
 |`attributeFormDefault`|Ignoriert.|  
 |`blockDefault`|Ignoriert.|  
-|`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer` unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem bei jeder einzelnen Elementdeklaration entweder xs:schema\/@elementFormDefault auf "qualified" oder xs:element\/@form auf "qualified" festgelegt wird.|  
+|`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault auf "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".|  
 |`finalDefault`|Ignoriert.|  
 |`Id`|Ignoriert.|  
-|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Dies darf nicht der reservierte Namespace http:\/\/schemas.microsoft.com\/2003\/10\/Serialization sein.|  
+|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Dies darf nicht der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization sein.|  
 |`version`|Ignoriert.|  
   
-### \<xs:schema\>: Inhalt  
+### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`include`|Unterstützt.`DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation`\- und `xs:import/@location`\-Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out\-of\-Band\-Mechanismus und nicht mittels `include` übergeben werden. Mit `include` angegebene Schemadokumente werden ignoriert.|  
-|`redefine`|Unzulässig. Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird. Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation` ein.|  
-|`import`|Unterstützt.`DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation`\- und `xs:import/@location`\-Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out\-of\-Band\-Mechanismus und nicht mittels `include` übergeben werden. Mit `include` angegebene Schemadokumente werden ignoriert.|  
-|`simpleType`|Unterstützt. Siehe den Abschnitt `xs:simpleType`.|  
-|`complexType`|Unterstützt, wird Datenverträgen zugeordnet. Siehe den Abschnitt `xs:complexType`.|  
-|`group`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`attributeGroup`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`element`|Unterstützt. Siehe Globale Elementdeklaration \(GED\).|  
-|`attribute`|Ignoriert.`DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup` und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|--------------|------------|  
+|`include`|Unterstützt. `DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
+|`redefine`|Unzulässig. Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird. Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation`ein.|  
+|`import`|Unterstützt. `DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
+|`simpleType`|Unterstützt. Siehe den Abschnitt `xs:simpleType` .|  
+|`complexType`|Unterstützt, wird Datenverträgen zugeordnet. Siehe den Abschnitt `xs:complexType` .|  
+|`group`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`attributeGroup`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`element`|Unterstützt. Siehe Globale Elementdeklaration (GED).|  
+|`attribute`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`notation`|Ignoriert.|  
   
-## Komplexe Typen &\#8211; \<xs:complexType\>  
+## <a name="complex-types--xscomplextype"></a>Komplexe Typen – \<xs: complexType >  
   
-### Allgemeine Informationen  
- Jeder komplexe Typ \<xs:complexType\> wird einem Datenvertrag zugeordnet.  
+### <a name="general-information"></a>Allgemeine Informationen  
+ Jeder komplexe Typ \<xs: complexType > wird einem Datenvertrag zugeordnet.  
   
-### \<xs:complexType\>: Attribute  
+### <a name="xscomplextype-attributes"></a>\<xs: complexType >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
-|`abstract`|Muss den Wert false aufweisen \(Standardwert\)|  
+|---------------|------------|  
+|`abstract`|Muss den Wert false aufweisen (Standardwert)|  
 |`block`|Unzulässig.|  
 |`final`|Ignoriert.|  
 |`id`|Ignoriert.|  
-|`mixed`|Muss den Wert false aufweisen \(Standardwert\)|  
-|`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A` ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&\#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
+|`mixed`|Muss den Wert false aufweisen (Standardwert)|  
+|`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A`ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&amp;#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
   
-### \<xs:complexType\>: Inhalt  
+### <a name="xscomplextype-contents"></a>\<xs: complexType >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`simpleContent`|Erweiterungen sind unzulässig.<br /><br /> Einschränkung wird nur von `anySimpleType` zugelassen.|  
+|--------------|------------|  
+|`simpleContent`|Erweiterungen sind unzulässig.<br /><br /> Einschränkung wird nur von `anySimpleType`zugelassen.|  
 |`complexContent`|Unterstützt. Siehe "Vererbung".|  
 |`group`|Unzulässig.|  
 |`all`|Unzulässig.|  
-|`choice`|Verboten|  
+|`choice`|Unzulässig|  
 |`sequence`|Unterstützt, wird Datenmembern eines Datenvertrags zugeordnet.|  
-|`attribute`|Unzulässig, auch wenn use\="prohibited" \(mit einer Ausnahme\). Nur optionale Attribute aus dem Standardserialisierungsschema\-Namespace werden unterstützt. Sie werden Datenmembern im Datenvertragsprogrammiermodell nicht zugeordnet. Aktuell hat nur ein solches Attribut Bedeutung, es wird im Abschnitt ISerializable erläutert. Alle anderen werden ignoriert.|  
-|`attributeGroup`|Unzulässig. In Version&\#160;1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert `DataContractSerializer` das Vorhandensein von `attributeGroup` in `xs:complexType`.|  
+|`attribute`|Unzulässig, auch wenn use="prohibited" (mit einer Ausnahme). Nur optionale Attribute aus dem Standardserialisierungsschema-Namespace werden unterstützt. Sie werden Datenmembern im Datenvertragsprogrammiermodell nicht zugeordnet. Aktuell hat nur ein solches Attribut Bedeutung, es wird im Abschnitt ISerializable erläutert. Alle anderen werden ignoriert.|  
+|`attributeGroup`|Unzulässig. In Version&amp;#160;1 von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ignoriert `DataContractSerializer` das Vorhandensein von `attributeGroup` in `xs:complexType`.|  
 |`anyAttribute`|Unzulässig.|  
-|\(leer\)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
+|(leer)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
   
-### \<xs:sequence\> in einem komplexen Typ: Attribute  
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs: Sequence > in einem komplexen Typ: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`id`|Ignoriert.|  
-|`maxOccurs`|Muss 1 \(Standard\) sein.|  
-|`minOccurs`|Muss 1 \(Standard\) sein.|  
+|`maxOccurs`|Muss 1 (Standard) sein.|  
+|`minOccurs`|Muss 1 (Standard) sein.|  
   
-### \<xs:sequence\> in einem komplexen Typ: Inhalt  
+### <a name="xssequence-in-a-complex-type-contents"></a>\<xs: Sequence > in einem komplexen Typ: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
+|--------------|------------|  
 |`element`|Jede Instanz wird einem Datenmember zugeordnet.|  
 |`group`|Unzulässig.|  
 |`choice`|Unzulässig.|  
 |`sequence`|Unzulässig.|  
 |`any`|Unzulässig.|  
-|\(leer\)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
+|(leer)|Wird einem Datenvertrag ohne Datenmember zugeordnet.|  
   
-## Elemente &\#8211; \<xs:element\>  
+## <a name="elements--xselement"></a>Elemente – \<xs: Element >  
   
-### Allgemeine Informationen  
+### <a name="general-information"></a>Allgemeine Informationen  
  `<xs:element>` kann in den folgenden Kontexten auftreten:  
   
--   Es kann innerhalb eines `<xs:sequence>`\-Elements auftreten, das einen Datenmember eines regulären Datenvertrags \(keines Auflistungsdatenvertrags\) beschreibt. In diesem Fall muss das `maxOccurs`\-Attribut 1 sein. \(Der Wert 0 ist nicht zulässig.\)  
+-   Es kann innerhalb eines `<xs:sequence>`-Elements auftreten, das einen Datenmember eines regulären Datenvertrags (keines Auflistungsdatenvertrags) beschreibt. In diesem Fall muss das `maxOccurs` -Attribut 1 sein. (Der Wert 0 ist nicht zulässig.)  
   
--   Es kann innerhalb eines `<xs:sequence>`\-Elements auftreten, das einen Datenmember eines Auflistungsdatenvertrags beschreibt. In diesem Fall muss der Wert des `maxOccurs`\-Attributs größer&\#160;1 oder "unbounded" sein.  
+-   Es kann innerhalb eines `<xs:sequence>`-Elements auftreten, das einen Datenmember eines Auflistungsdatenvertrags beschreibt. In diesem Fall muss der Wert des `maxOccurs` -Attributs größer&amp;#160;1 oder "unbounded" sein.  
   
--   Es kann innerhalb eines `<xs:schema>`\-Elements als eine globale Elementdeklaration \(GED\) auftreten.  
+-   Es kann innerhalb eines `<xs:schema>` -Elements als eine globale Elementdeklaration (GED) auftreten.  
   
-### \<xs:element\> mit maxOccurs\=1 innerhalb eines \<xs:sequence\>\-Elements \(Datenmember\)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: Element > mit MaxOccurs = 1 innerhalb einer \<xs: Sequence > (Datenmember)  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`ref`|Unzulässig.|  
 |`name`|Unterstützt, wird dem Datenmembernamen zugeordnet.|  
-|`type`|Unterstützt, wird dem Datenmembertyp zugeordnet. Weitere Informationen finden Sie unter Zuordnung von Typen zu primitivem Typen. Wenn nicht angegeben \(und wenn das Element keinen anonymen Typ enthält\), wird `xs:anyType` angenommen.|  
+|`type`|Unterstützt, wird dem Datenmembertyp zugeordnet. Weitere Informationen finden Sie unter Zuordnung von Typen zu primitivem Typen. Wenn nicht angegeben (und wenn das Element keinen anonymen Typ enthält), wird `xs:anyType` angenommen.|  
 |`block`|Ignoriert.|  
 |`default`|Unzulässig.|  
 |`fixed`|Unzulässig.|  
-|`form`|Muss qualifiziert sein. Dieses Attribut kann über `elementFormDefault` auf `xs:schema` festgelegt werden.|  
+|`form`|Muss qualifiziert sein. Dieses Attribut kann über `elementFormDefault` auf `xs:schema`festgelegt werden.|  
 |`id`|Ignoriert.|  
 |`maxOccurs`|1|  
-|`minOccurs`|Wird der <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>\-Eigenschaft eines Datenmembers zugeordnet \(`IsRequired` hat den Wert true, wenn `minOccurs`&\#160;1 ist\).|  
+|`minOccurs`|Wird der <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft eines Datenmembers zugeordnet (`IsRequired` hat den Wert true, wenn `minOccurs` &amp;#160;1 ist).|  
 |`nillable`|Beeinflusst die Typzuordnung. Siehe Zuordnung von Typen zu primitivem Typen.|  
   
-### \<xs:element\> mit maxOccurs\>1 innerhalb eines \<xs:sequence\>\-Elements \(Auflistungen\)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: Element > mit MaxOccurs > 1 innerhalb einer \<xs: Sequence > (Auflistungen)  
   
--   Wird einem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> zugeordnet.  
+-   Wird einem <xref:System.Runtime.Serialization.CollectionDataContractAttribute>zugeordnet.  
   
--   In Auflistungstypen ist nur ein xs:element innerhalb eines xs:sequence\-Elements zugelassen.  
+-   In Auflistungstypen ist nur ein xs:element innerhalb eines xs:sequence-Elements zugelassen.  
   
  Auflistungen können einen der folgenden Typen aufweisen:  
   
--   Reguläre Auflistungen \(z.&\#160;B. Arrays\).  
+-   Reguläre Auflistungen (z.&#160;B. Arrays).  
   
--   Wörterbuchauflistungen \(die einen Wert einem anderen zuordnen, z.&\#160;B. eine <xref:System.Collections.Hashtable>\).  
+-   Wörterbuchauflistungen (die einen Wert einem anderen zuordnen, z.&amp;#160;B. eine <xref:System.Collections.Hashtable>).  
   
--   Der einzige Unterschied zwischen einem Wörterbuchtyp und einem Array mit Schlüssel\-Wert\-Paaren liegt im generierten Programmiermodell. Es gibt einen Schemaanmerkungsmechanismus, der verwendet werden kann, um anzugeben, dass ein bestimmter Typ eine Wörterbuchauflistung ist.  
+-   Der einzige Unterschied zwischen einem Wörterbuchtyp und einem Array mit Schlüssel-Wert-Paaren liegt im generierten Programmiermodell. Es gibt einen Schemaanmerkungsmechanismus, der verwendet werden kann, um anzugeben, dass ein bestimmter Typ eine Wörterbuchauflistung ist.  
   
- Die Regeln für die Attribute `ref`, `block`, `default`, `fixed`, `form` und `id` sind die gleichen wie für diejenigen, die keine Auflistungstypen sind. Die anderen Attribute sind in der folgenden Tabelle aufgeführt:  
+ Die Regeln für die Attribute `ref`, `block`, `default`, `fixed`, `form`und `id` sind die gleichen wie für diejenigen, die keine Auflistungstypen sind. Die anderen Attribute sind in der folgenden Tabelle aufgeführt:  
   
 |Attribut|Schema|  
-|--------------|------------|  
-|`name`|Unterstützt, wird der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A>\-Eigenschaft des `CollectionDataContractAttribute`\-Attributs zugeordnet.|  
+|---------------|------------|  
+|`name`|Unterstützt, wird der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> -Eigenschaft des `CollectionDataContractAttribute` -Attributs zugeordnet.|  
 |`type`|Unterstützt, wird dem in der Auflistung gespeicherten Typ zugeordnet.|  
-|`maxOccurs`|Größer&\#160;1 oder "unbounded". Das DC\-Schema sollte "unbounded" verwenden.|  
+|`maxOccurs`|Größer&#160;1 oder "unbounded". Das DC-Schema sollte "unbounded" verwenden.|  
 |`minOccurs`|Ignoriert.|  
 |`nillable`|Beeinflusst die Typzuordnung. Dieses Attribut wird für Wörterbuchauflistungen ignoriert.|  
   
-### \<xs:element\> innerhalb einer globalen Elementdeklaration \<xs:schema\>  
+### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: Element > innerhalb einer \<xs: Schema > globale Elementdeklaration  
   
--   Eine globale Elementdeklaration \(GED\), die den gleichen Namen und Namespace wie ein Typ im Schema besitzt, oder die innerhalb ihrer selbst einen anonymen Typ definiert, wird als diesem Typ zugeordnet angesehen.  
+-   Eine globale Elementdeklaration (GED), die den gleichen Namen und Namespace wie ein Typ im Schema besitzt, oder die innerhalb ihrer selbst einen anonymen Typ definiert, wird als diesem Typ zugeordnet angesehen.  
   
 -   Schemaexport: Für alle generierten Typen, sowohl einfache als auch komplexe, werden zugeordnete GEDs generiert.  
   
--   Deserialisierung\/Serialisierung: Zugeordnete GEDs werden als Stammelemente für den Typ verwendet.  
+-   Deserialisierung/Serialisierung: Zugeordnete GEDs werden als Stammelemente für den Typ verwendet.  
   
--   Schemaimport: Zugeordnete GEDs sind nicht erforderlich und werden ignoriert, wenn sie den folgenden Regeln entsprechen \(es sei denn, sie definieren Typen\).  
+-   Schemaimport: Zugeordnete GEDs sind nicht erforderlich und werden ignoriert, wenn sie den folgenden Regeln entsprechen (es sei denn, sie definieren Typen).  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`abstract`|Muss für zugeordnete GEDs den Wert false aufweisen.|  
 |`block`|Unzulässig in zugeordneten GEDs.|  
 |`default`|Unzulässig in zugeordneten GEDs.|  
@@ -194,64 +196,64 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`name`|Unterstützt. Siehe die Definition von zugeordneten GEDs.|  
 |`nillable`|Muss für zugeordnete GEDs den Wert true aufweisen.|  
 |`substitutionGroup`|Unzulässig in zugeordneten GEDs.|  
-|`type`|Unterstützt. Muss dem zugeordneten Typ für zugeordnete GEDs entsprechen \(außer wenn das Element einen anonymen Typ enthält\).|  
+|`type`|Unterstützt. Muss dem zugeordneten Typ für zugeordnete GEDs entsprechen (außer wenn das Element einen anonymen Typ enthält).|  
   
-### \<xs:element\>: Inhalt  
+### <a name="xselement-contents"></a>\<xs: Element >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Unterstützt.\*|  
-|`complexType`|Unterstützt.\*|  
+|--------------|------------|  
+|`simpleType`|Unterstützt.*|  
+|`complexType`|Unterstützt.*|  
 |`unique`|Ignoriert.|  
 |`key`|Ignoriert.|  
 |`keyref`|Ignoriert.|  
-|\(leer\)|Unterstützt.|  
+|(leer)|Unterstützt.|  
   
- \* Werden `simpleType` und `complexType,` verwendet, ist die Zuordnung von anonymen Typen dieselbe wie für nicht anonyme Typen, mit der Ausnahme, dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet wird. Die folgende Liste enthält die Regeln für anonyme Typen:  
+ \*Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Implementierungsdetail: Wenn der `xs:element`\-Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig \(kein innerer Typ\).  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] -Implementierungsdetail: Wenn der `xs:element` -Name keine Punkte enthält, wird der anonyme Typ einem inneren Typ des äußeren Datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
   
 -   Der generierte Datenvertragsname des inneren Typs setzt sich zusammen aus dem Namen des äußeren Typs, gefolgt von einem Punkt, dem Namen des Elements und der Zeichenfolge "Type".  
   
--   Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&\#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.  
+-   Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.  
   
-## Einfache Typen &\#8211; \<xs:simpleType\>  
+## <a name="simple-types---xssimpletype"></a>Einfache Typen – \<simpleType >  
   
-### \<xs:simpleType\>: Attribute  
+### <a name="xssimpletype-attributes"></a>\<simpleType >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`final`|Ignoriert.|  
 |`id`|Ignoriert.|  
 |`name`|Unterstützt, wird dem Namen des Datenvertrags zugeordnet.|  
   
-### \<xs:simpleType\>: Inhalt  
+### <a name="xssimpletype-contents"></a>\<simpleType >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`restriction`|Unterstützt. Wird Enumerationsdatenverträgen zugeordnet. Dieses Attribut wird ignoriert, wenn es nicht zum Enumerationsmuster passt. Siehe den Abschnitt `xs:simpleType`\-Einschränkungen.|  
-|`list`|Unterstützt. Wird Flagenumerationsdatenverträgen zugeordnet. Siehe den Abschnitt `xs:simpleType`\-Listen.|  
+|--------------|------------|  
+|`restriction`|Unterstützt. Wird Enumerationsdatenverträgen zugeordnet. Dieses Attribut wird ignoriert, wenn es nicht zum Enumerationsmuster passt. Siehe den Abschnitt `xs:simpleType` -Einschränkungen.|  
+|`list`|Unterstützt. Wird Flagenumerationsdatenverträgen zugeordnet. Siehe den Abschnitt `xs:simpleType` -Listen.|  
 |`union`|Unzulässig.|  
   
-### \<xs:restriction\>  
+### <a name="xsrestriction"></a>\<xs: restriction >  
   
--   Einschränkungen komplexer Typen werden nur für base\="`xs:anyType`" unterstützt.  
+-   Einschränkungen komplexer Typen werden nur für base="`xs:anyType`" unterstützt.  
   
--   Einfache Typeinschränkungen von `xs:string`, die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.  
+-   Einfache Typeinschränkungen von `xs:string` , die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.  
   
--   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
+-   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Zuordnung primitiver Typen finden Sie unter "Zuordnung von Typen zu primitiven Typen".  
   
-### \<xs:restriction\>: Attribute  
+### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
-|`base`|Muss ein unterstützter einfacher Typ oder `xs:anyType` sein.|  
+|---------------|------------|  
+|`base`|Muss ein unterstützter einfacher Typ oder `xs:anyType`sein.|  
 |`id`|Ignoriert.|  
   
-### \<xs:restriction\> für alle anderen Fälle: Inhalt  
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs: restriction > für alle anderen Fälle: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
+|--------------|------------|  
 |`simpleType`|Muss, falls vorhanden, von einem unterstützten primitiven Typ abgeleitet sein.|  
 |`minExclusive`|Ignoriert.|  
 |`minInclusive`|Ignoriert.|  
@@ -265,22 +267,22 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`enumeration`|Ignoriert.|  
 |`whiteSpace`|Ignoriert.|  
 |`pattern`|Ignoriert.|  
-|\(leer\)|Unterstützt.|  
+|(leer)|Unterstützt.|  
   
-## Enumeration  
+## <a name="enumeration"></a>Enumeration  
   
-### \<xs:restriction\> für Enumerationen: Attribute  
+### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs: restriction > für Enumerationen: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
-|`base`|Muss, falls vorhanden, `xs:string` sein.|  
+|---------------|------------|  
+|`base`|Muss, falls vorhanden, `xs:string`sein.|  
 |`id`|Ignoriert.|  
   
-### \<xs:restriction\> für Enumerationen: Inhalt  
+### <a name="xsrestriction-for-enumerations-contents"></a>\<xs: restriction > für Enumerationen: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Muss, falls vorhanden, eine vom Datenvertrag \(dieser Abschnitt\) unterstützte Enumerationsbeschränkung sein.|  
+|--------------|------------|  
+|`simpleType`|Muss, falls vorhanden, eine vom Datenvertrag (dieser Abschnitt) unterstützte Enumerationsbeschränkung sein.|  
 |`minExclusive`|Ignoriert.|  
 |`minInclusive`|Ignoriert.|  
 |`maxExclusive`|Ignoriert.|  
@@ -290,12 +292,12 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`length`|Unzulässig.|  
 |`minLength`|Unzulässig.|  
 |`maxLength`|Unzulässig.|  
-|`enumeration`|Unterstützt. Enumerations\-"ID" wird ignoriert, und "value" wird dem Wertnamen im Enumerationsdatenvertrag zugeordnet.|  
+|`enumeration`|Unterstützt. Enumerations-"ID" wird ignoriert, und "value" wird dem Wertnamen im Enumerationsdatenvertrag zugeordnet.|  
 |`whiteSpace`|Unzulässig.|  
 |`pattern`|Unzulässig.|  
-|\(leer\)|Unterstützt, wird leerem Enumerationstyp zugeordnet.|  
+|(leer)|Unterstützt, wird leerem Enumerationstyp zugeordnet.|  
   
- Der folgende Code zeigt eine C\#\-Enumerationsklasse.  
+ Der folgende Code zeigt eine C#-Enumerationsklasse.  
   
 ```  
 public enum MyEnum  
@@ -307,9 +309,9 @@ public enum MyEnum
   
  }  
   
- Diese Klasse wird vom `DataContractSerializer` dem folgenden Schema zugeordnet. Wenn die Enumerationswerte mit&\#160;1 beginnen, werden keine `xs:annotation`\-Blöcke generiert.  
+ Diese Klasse wird vom `DataContractSerializer`dem folgenden Schema zugeordnet. Wenn die Enumerationswerte mit&amp;#160;1 beginnen, werden keine `xs:annotation` -Blöcke generiert.  
   
-```  
+```xml  
 <xs:simpleType name="MyEnum">  
 <xs:restriction base="xs:string">  
  <xs:enumeration value="first">  
@@ -331,30 +333,30 @@ public enum MyEnum
     </EnumerationValue>  
    </xs:appinfo>  
   </xs:annotation>  
- </xs:enumeration>   
+ </xs:enumeration>  
 </xs:restriction>  
 </xs:simpleType>  
 ```  
   
-### \<xs:list\>  
- `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string` zu. Andere `xs:list`\-Variationen werden nicht unterstützt.  
+### <a name="xslist"></a>\<xs: List >  
+ `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu. Andere `xs:list` -Variationen werden nicht unterstützt.  
   
-### \<xs:list\>: Attribute  
+### <a name="xslist-attributes"></a>\<xs: List >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`itemType`|Unzulässig.|  
 |`id`|Ignoriert.|  
   
-### \<xs:list\>: Inhalt  
+### <a name="xslist-contents"></a>\<xs: List >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`simpleType`|Muss eine Einschränkung von `xs:string` mit `xs:enumeration`\-Facet sein.|  
+|--------------|------------|  
+|`simpleType`|Muss eine Einschränkung von `xs:string` mit `xs:enumeration` -Facet sein.|  
   
- Sind die Enumerationswerte keine Folge mit Potenzen des Werts&\#160;2 \(für Flags der Standard\), wird der Wert im `xs:annotation/xs:appInfo/ser:EnumerationValue`\-Element gespeichert.  
+ Sind die Enumerationswerte keine Folge mit Potenzen des Werts&amp;#160;2 (für Flags der Standard), wird der Wert im `xs:annotation/xs:appInfo/ser:EnumerationValue` -Element gespeichert.  
   
- Der folgende Code definiert z.&\#160;B. einen Enumerationstyp für Flags.  
+ Der folgende Code definiert z.&#160;B. einen Enumerationstyp für Flags.  
   
 ```  
 [Flags]  
@@ -370,7 +372,7 @@ public enum AuthFlags
   
  Dieser Typ wird dem folgenden Schema zugeordnet.  
   
-```  
+```xml  
 <xs:simpleType name="AuthFlags">  
     <xs:list>  
       <xs:simpleType>  
@@ -400,14 +402,14 @@ rialization/">64</EnumerationValue>
   </xs:simpleType>  
 ```  
   
-## Vererbung  
+## <a name="inheritance"></a>Vererbung  
   
-### Allgemeine Regeln  
- Ein Datenvertrag kann von einem anderen Datenvertrag erben. Solche Datenverträge werden einem Basistyp zugeordnet und durch Erweiterungstypen mithilfe des `<xs:extension>`\-XML\-Schemakonstrukts abgeleitet.  
+### <a name="general-rules"></a>Allgemeine Regeln  
+ Ein Datenvertrag kann von einem anderen Datenvertrag erben. Solche Datenverträge werden einem Basistyp zugeordnet und durch Erweiterungstypen mithilfe des `<xs:extension>` -XML-Schemakonstrukts abgeleitet.  
   
  Ein Datenvertrag kann nicht von einem Auflistungsdatenvertrag erben.  
   
- Der folgende Code stellt z.&\#160;B. einen Datenvertrag dar.  
+ Der folgende Code stellt z.&#160;B. einen Datenvertrag dar.  
   
 ```  
 [DataContract]  
@@ -424,9 +426,9 @@ public class Employee : Person
 }  
 ```  
   
- Dieser Datenvertrag wird der folgenden XML\-Schema\-Typdeklaration zugeordnet.  
+ Dieser Datenvertrag wird der folgenden XML-Schema-Typdeklaration zugeordnet.  
   
-```  
+```xml  
 <xs:complexType name="Employee">  
  <xs:complexContent mixed="false">  
   <xs:extension base="tns:Person">  
@@ -444,50 +446,50 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### \<xs:complexContent\>: Attribute  
+### <a name="xscomplexcontent-attributes"></a>\<complexContent >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`id`|Ignoriert.|  
 |`mixed`|Muss den Wert false aufweisen.|  
   
-### \<xs:complexContent\>: Inhalt  
+### <a name="xscomplexcontent-contents"></a>\<complexContent >: Inhalt  
   
 |Inhalt|Schema|  
-|------------|------------|  
-|`restriction`|Unzulässig, außer wenn base\="`xs:anyType`". Letzteres entspricht der Platzierung des Inhalts von `xs:restriction` direkt unter den Container von `xs:complexContent`.|  
+|--------------|------------|  
+|`restriction`|Unzulässig, außer wenn base="`xs:anyType`". Letzteres entspricht der Platzierung des Inhalts von `xs:restriction` direkt unter den Container von `xs:complexContent`.|  
 |`extension`|Unterstützt. Wird der Datenvertragsvererbung zugeordnet.|  
   
-### \<xs:extension\> in \<xs:complexContent\>: Attribute  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: Extension > in \<complexContent >: Attribute  
   
 |Attribut|Schema|  
-|--------------|------------|  
+|---------------|------------|  
 |`id`|Ignoriert.|  
 |`base`|Unterstützt. Wird dem Basisdatenvertragstyp zugeordnet, von dem dieser Typ erbt.|  
   
-### \<xs:extension\> in \<xs:complexContent\>: Inhalt  
- Die Regeln sind die gleichen wie für den `<xs:complexType>`\-Inhalt.  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: Extension > in \<complexContent >: Inhalt  
+ Die Regeln sind die gleichen wie für den `<xs:complexType>` -Inhalt.  
   
  Wird `<xs:sequence>` angegeben, werden dessen Memberelemente den zusätzlichen Datenmembern zugeordnet, die im abgeleiteten Datenvertrag vorhanden sind.  
   
- Wenn ein abgeleiteter Typ ein Element mit dem gleichen Namen wie ein Element in einem Basistyp enthält, wird die doppelte Elementdeklaration einem Datenmember zugeordnet, für den ein eindeutiger Name generiert wurde. Dazu werden dem Datenmember so lange positive Ganzzahlen hinzugefügt \("member1", "member2" usw.\), bis ein eindeutiger Name gefunden ist. Umgekehrt:  
+ Wenn ein abgeleiteter Typ ein Element mit dem gleichen Namen wie ein Element in einem Basistyp enthält, wird die doppelte Elementdeklaration einem Datenmember zugeordnet, für den ein eindeutiger Name generiert wurde. Dazu werden dem Datenmember so lange positive Ganzzahlen hinzugefügt ("member1", "member2" usw.), bis ein eindeutiger Name gefunden ist. Umgekehrt:  
   
 -   Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen und Typ wie ein Datenmember in einem Basisdatenvertrag enthält, generiert der `DataContractSerializer` dieses entsprechende Element im abgeleiteten Typ.  
   
--   Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen, jedoch einem anderen Typ als ein Datenmember in einem Basisdatenvertrag enthält, importiert der `DataContractSerializer` ein Schema mit einem Element des Typs `xs:anyType` in die Deklarationen sowohl des Basistyps als auch des abgeleiteten Typs. Der ursprüngliche Typname wird in `xs:annotations/xs:appInfo/ser:ActualType/@Name` beibehalten.  
+-   Wenn ein abgeleiteter Datenvertrag einen Datenmember mit dem gleichen Namen, jedoch einem anderen Typ als ein Datenmember in einem Basisdatenvertrag enthält, importiert der `DataContractSerializer` ein Schema mit einem Element des Typs `xs:anyType` in die Deklarationen sowohl des Basistyps als auch des abgeleiteten Typs. Der ursprüngliche Typname wird in `xs:annotations/xs:appInfo/ser:ActualType/@Name`beibehalten.  
   
  Beide Variationen können zu einem Schema mit einem mehrdeutigen Inhaltsmodell führen, das von der Reihenfolge der jeweiligen Datenmember abhängt.  
   
-## Zuordnung von Typen zu primitivem Typen  
- Der `DataContractSerializer` verwendet die folgende Zuordnung für primitive Typen von XML\-Schemas.  
+## <a name="typeprimitive-mapping"></a>Zuordnung von Typen zu primitivem Typen  
+ Der `DataContractSerializer` verwendet die folgende Zuordnung für primitive Typen von XML-Schemas.  
   
-|XSD\-Typ|.NET\-Typ|  
+|XSD-Typ|.NET-Typ|  
 |--------------|---------------|  
 |`anyType`|<xref:System.Object>.|  
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
 |`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset\-Serialisierung \(unten\).|  
+|`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset-Serialisierung (unten).|  
 |`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
@@ -496,7 +498,7 @@ public class Employee : Person
 |`gDay`|<xref:System.String>.|  
 |`gMonth`|<xref:System.String>.|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte>\-Array.|  
+|`base64Binary`|<xref:System.Byte> -Array.|  
 |`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
@@ -530,10 +532,10 @@ public class Employee : Person
 |`unsignedByte`|<xref:System.Byte>.|  
 |`positiveInteger`|<xref:System.Int64>.|  
   
-## Zuordnung von ISerializable\-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&\#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können.`DataContractSerializer` unterstützt von sich aus `ISerializable`\-Klassen. Der `DataContractSerializer` ordnet `ISerializable`\-Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen \(QName\) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Zum Beispiel ordnet der `DataContractSerializer`<xref:System.Exception> dem folgenden XSD\-Typ im Namespace http:\/\/schemas.datacontract.org\/2004\/07\/System zu.  
+## <a name="iserializable-types-mapping"></a>Zuordnung von ISerializable-Typen  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Zum Beispiel ordnet der `DataContractSerializer` <xref:System.Exception> dem folgenden XSD-Typ im Namespace http://schemas.datacontract.org/2004/07/System zu.  
   
-```  
+```xml  
 <xs:complexType name="Exception">  
  <xs:sequence>  
   <xs:any minOccurs="0" maxOccurs="unbounded"   
@@ -543,16 +545,16 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer`\-Instanz sein.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)exportiert werden.  
   
-## DataContract\-Serialisierungsschema  
- Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags\-Serialisierungsnamespace:  
+## <a name="datacontract-serialization-schema"></a>DataContract-Serialisierungsschema  
+ Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags-Serialisierungsnamespace:  
   
- http:\/\/schemas.microsoft.com\/2003\/10\/Serialization  
+ http://schemas.microsoft.com/2003/10/Serialization  
   
  Das Folgende ist eine vollständige Schemadeklaration für die Datenvertragsserialisierung.  
   
-```  
+```xml  
 <xs:schema attributeFormDefault="qualified"          
    elementFormDefault="qualified"        
    targetNamespace =   
@@ -563,7 +565,7 @@ public class Employee : Person
  <!-- Top-level elements for primitive types. -->  
  <xs:element name="anyType" nillable="true" type="xs:anyType"/>  
  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>  
- <xs:element name="base64Binary"   
+ <xs:element name="base64Binary"  
        nillable="true" type="xs:base64Binary"/>  
  <xs:element name="boolean" nillable="true" type="xs:boolean"/>  
  <xs:element name="byte" nillable="true" type="xs:byte"/>  
@@ -576,13 +578,13 @@ public class Employee : Person
  <xs:element name="QName" nillable="true" type="xs:QName"/>  
  <xs:element name="short" nillable="true" type="xs:short"/>  
  <xs:element name="string" nillable="true" type="xs:string"/>  
- <xs:element name="unsignedByte"   
+ <xs:element name="unsignedByte"  
        nillable="true" type="xs:unsignedByte"/>  
- <xs:element name="unsignedInt"   
+ <xs:element name="unsignedInt"  
        nillable="true" type="xs:unsignedInt"/>  
- <xs:element name="unsignedLong"   
+ <xs:element name="unsignedLong"  
        nillable="true" type="xs:unsignedLong"/>  
- <xs:element name="unsignedShort"   
+ <xs:element name="unsignedShort"  
        nillable="true" type="xs:unsignedShort"/>  
   
  <!-- Primitive types introduced for certain .NET simple types. -->  
@@ -591,7 +593,7 @@ public class Employee : Person
   <xs:restriction base="xs:int"/>  
  </xs:simpleType>  
   
- <!-- xs:duration is restricted to an ordered value space,   
+ <!-- xs:duration is restricted to an ordered value space,  
     to map to System.TimeSpan -->  
  <xs:element name="duration" nillable="true" type="tns:duration"/>  
  <xs:simpleType name="duration">  
@@ -617,14 +619,14 @@ public class Employee : Person
   
  Auf Folgendes sollte geachtet werden:  
   
--   `ser:char` wurde eingeführt, um Unicode\-Zeichen des Typs <xref:System.Char> darzustellen.  
+-   `ser:char` wurde eingeführt, um Unicode-Zeichen des Typs <xref:System.Char>darzustellen.  
   
--   Der `valuespace` von `xs:duration` wurde zu einer geordneten Menge reduziert, damit diese einem <xref:System.TimeSpan> zugeordnet werden kann.  
+-   Der `valuespace` von `xs:duration` wurde zu einer geordneten Menge reduziert, damit diese einem <xref:System.TimeSpan>zugeordnet werden kann.  
   
--   `FactoryType` wird in Schemas verwendet, die von Typen exportiert werden, die von <xref:System.Runtime.Serialization.ISerializable> abgeleitet wurden.  
+-   `FactoryType` wird in Schemas verwendet, die von Typen exportiert werden, die von <xref:System.Runtime.Serialization.ISerializable>abgeleitet wurden.  
   
-## Importieren von Nicht\-DataContract\-Schemas  
- `DataContractSerializer` verfügt über die `ImportXmlTypes`\-Option, die den Import von Schemas erlaubt, die dem `DataContractSerializer`\-XSD\-Profil nicht entsprechen \(siehe die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>\-Eigenschaft\). Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht\-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt \(nur der Klassenname unterscheidet sich\).  
+## <a name="importing-non-datacontract-schemas"></a>Importieren von Nicht-DataContract-Schemas  
+ `DataContractSerializer` verfügt über die `ImportXmlTypes` -Option, die den Import von Schemas erlaubt, die dem `DataContractSerializer` -XSD-Profil nicht entsprechen (siehe die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> -Eigenschaft). Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt (nur der Klassenname unterscheidet sich).  
   
 ```  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
@@ -660,15 +662,15 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 }  
 ```  
   
-## DateTimeOffset\-Serialisierung  
- <xref:System.DateTimeOffset> wird nicht als primitiver Typ behandelt. Stattdessen wird dieser Typ als komplexes Element mit zwei Teilen serialisiert. Der erste Teil stellt die Datums\- und Uhrzeitangabe dar und der zweite Teil den Offset dieser Datums\- und Uhrzeitangabe. Ein Beispiel für einen serialisierten DateTimeOffset\-Wert wird im folgenden Code gezeigt.  
+## <a name="datetimeoffset-serialization"></a>DateTimeOffset-Serialisierung  
+ <xref:System.DateTimeOffset> wird nicht als primitiver Typ behandelt. Stattdessen wird dieser Typ als komplexes Element mit zwei Teilen serialisiert. Der erste Teil stellt die Datums- und Uhrzeitangabe dar und der zweite Teil den Offset dieser Datums- und Uhrzeitangabe. Ein Beispiel für einen serialisierten DateTimeOffset-Wert wird im folgenden Code gezeigt.  
   
-```  
+```xml  
 <OffSet xmlns:a="http://schemas.datacontract.org/2004/07/System">  
-  <DateTime i:type="b:dateTime"   
+  <DateTime i:type="b:dateTime" xmlns=""   
     xmlns:b="http://www.w3.org/2001/XMLSchema">2008-08-28T08:00:00    
   </DateTime>   
-  <OffsetMinutes i:type="b:short"   
+  <OffsetMinutes i:type="b:short" xmlns=""   
    xmlns:b="http://www.w3.org/2001/XMLSchema">-480  
    </OffsetMinutes>   
 </OffSet>  
@@ -676,7 +678,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
   
  Das Schema lautet folgendermaßen:  
   
-```  
+```xml  
 <xs:schema targetNamespace="http://schemas.datacontract.org/2004/07/System">  
    <xs:complexType name="DateTimeOffset">  
       <xs:sequence minOccurs="1" maxOccurs="1">  
@@ -689,9 +691,9 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.XsdDataContractImporter>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

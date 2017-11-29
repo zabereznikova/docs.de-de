@@ -1,39 +1,42 @@
 ---
-title: "PnrpPeerResolverBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: PnrpPeerResolverBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ca9597ddd54ca073b5e156f415745a3fcd5ed2e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# PnrpPeerResolverBindingElement
+# <a name="pnrppeerresolverbindingelement"></a>PnrpPeerResolverBindingElement
 PnrpPeerResolverBindingElement  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `class PnrpPeerResolverBindingElement : PeerResolverBindingElement`  
   
  `{`  
   
  `};`  
   
-## Methoden  
- Die PnrpPeerResolverBindingElement\-Klasse erbt vom PeerResolverBindingElement, definiert aber keine zusätzlichen Methoden oder Eigenschaften.  
+## <a name="methods"></a>Methoden  
+ Die PnrpPeerResolverBindingElement-Klasse erbt vom PeerResolverBindingElement, definiert aber keine zusätzlichen Methoden oder Eigenschaften.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
-|MOF|Deklariert in Servicemodel.mof|  
-|---------|------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|MOF|Deklariert in Servicemodel.mof.|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

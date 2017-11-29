@@ -1,31 +1,22 @@
 ---
 title: Language Integrated Query (LINQ) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eca96e5d9be109bf5b8a9eff1bdf289b5b16ac06
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 4c465d18ec8b728b9b06d3de70e55b1275d1a565
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Language Integrated Query (LINQ) (Visual Basic)
 LINQ ist eine neue Gruppe von Funktionen, durch die leistungsstarke Abfragefunktionen auf die Sprachsyntax von Visual Basic erweitert werden. LINQ bietet einfach zu erlernende Standardmuster für das Abfragen und Aktualisieren von Daten, und die Technologie kann so erweitert werden, dass potenziell alle Datenspeicherarten unterstützt werden.  Das .NET Framework enthält LINQ-Anbieterassemblys, welche die Verwendung von LINQ mit .NET Framework-Auflistungen, SQL Server-Datenbanken, ADO.NET-Datasets und XML-Dokumenten ermöglichen.  
@@ -54,4 +45,3 @@ LINQ ist eine neue Gruppe von Funktionen, durch die leistungsstarke Abfragefunkt
   
  [Aktivieren einer Datenquelle für LINQ-Abfragen](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
  Enthält eine Einführung in benutzerdefinierte LINQ-Anbieter, LINQ-Ausdrucksbaumstrukturen und weitere Methoden zum Erweitern von LINQ.
-

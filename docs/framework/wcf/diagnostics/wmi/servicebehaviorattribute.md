@@ -1,25 +1,28 @@
 ---
-title: "ServiceBehaviorAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceBehaviorAttribute
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f7401acd5aefcb7a8c02ea6c05a94374e41d9b9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceBehaviorAttribute
+# <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class ServiceBehaviorAttribute : Behavior  
@@ -42,121 +45,121 @@ class ServiceBehaviorAttribute : Behavior
 };  
 ```  
   
-## Methoden  
- Die ServiceBehaviorAttribute\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die ServiceBehaviorAttribute-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die ServiceBehaviorAttribute\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die ServiceBehaviorAttribute-Klasse verfügt über die folgenden Eigenschaften:  
   
-### AutomaticSessionShutdown  
- Datentyp: Boolescher Wert  
+### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob eine Sitzung automatisch geschlossen werden soll, wenn ein Client eine Ausgabesitzung schließt.  
   
-### ConcurrencyMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="concurrencymode"></a>ConcurrencyMode  
+ Datentyp: string (Zeichenfolge)  
 Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob ein Dienst einen Thread, mehrere Threads oder wiedereintrittsfähige Aufrufe unterstützt.  
   
-### ConfigurationName  
- Datentyp: Zeichenfolge  
+### <a name="configurationname"></a>ConfigurationName  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name der Dienstkonfiguration.  
   
-### IgnoreExtensionDataObject  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob unbekannte Serialisierungsdaten gesendet werden sollen.  
   
-### IncludeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, ob verwaltete Ausnahmeinformationen in Details der SOAP\-Fehler für Debugzwecke an die Clients zurückgegeben werden.  
+ Gibt an, ob verwaltete Ausnahmeinformationen in Details der SOAP-Fehler für Debugzwecke an die Clients zurückgegeben werden.  
   
-### InstanceContextMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="instancecontextmode"></a>InstanceContextMode  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, wann ein neues Dienstobjekt erstellt wird.  
   
-### MaxItemsInObjectGraph  
+### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die maximale Anzahl von in einem serialisierten Objekt zugelassenen Elementen.  
   
-### Name  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="name"></a>Name  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Das Namensattribut des Diensts in WSDL.  
   
-### Namespace  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="namespace"></a>Namespace  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Zielnamespace des Diensts in WSDL.  
   
-### ReleaseServiceInstanceOnTransactionComplete  
+### <a name="releaseserviceinstanceontransactioncomplete"></a>ReleaseServiceInstanceOnTransactionComplete  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob das Dienstobjekt wiederverwendet wird, wenn die aktuelle Transaktion abgeschlossen wird.  
   
-### TransactionAutoCompleteOnSessionClose  
+### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob ausstehende Transaktionen abgeschlossen werden, wenn die aktuelle Sitzung schließt.  
   
-### TransactionIsolationLevel  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt die Isolierungsebene für die Transaktion an.  
+ Gibt die Isolationsstufe für die Transaktion an.  
   
-### TransactionTimeout  
- Datentyp: datetime \(Datum und Uhrzeit\)  
+### <a name="transactiontimeout"></a>TransactionTimeout  
+ Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Zeitraum, in dem eine Transaktion abgeschlossen werden muss.  
   
-### UseSynchronizationContext  
+### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob der aktuelle Synchronisierungskontext zur Auswahl der Threadausführung verwendet werden soll.  
   
-### ValidateMustUnderstand  
+### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Legt fest, ob das System oder die Anwendung die Verarbeitung von SOAP MustUnderstand\-Headern erzwingt.  
+ Legt fest, ob das System oder die Anwendung die Verarbeitung von SOAP MustUnderstand-Headern erzwingt.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

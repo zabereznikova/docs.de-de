@@ -1,46 +1,48 @@
 ---
-title: "How to: Search Data in a DataRepeater Control (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, implementing search"
-  - "DataRepeater, searching data"
+title: "Gewusst wie: Suchen von Daten in einem DataRepeater-Steuerelement (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, implementing search
+- DataRepeater, searching data
 ms.assetid: a8ab5d17-b94f-43c4-8dd7-d0450226d73f
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a3ed7138c142a83584ecd19ccaebe0e31e421ce3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Search Data in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Wenn Sie ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement mit zahlreichen Datensätzen verwenden, können Sie den Benutzern ermöglichen, einen spezifischen Datensatz zu suchen.  Anstatt die Daten in dem Steuerelement selbst zu durchsuchen, können Sie eine Suche in Form einer Abfrage der zugrunde liegenden <xref:System.Windows.Forms.BindingSource> implementieren.  Wenn das Element gefunden wurde, können Sie es mit der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A>\-Eigenschaft auswählen und einblenden.  
+# <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Gewusst wie: Suchen von Daten in einem DataRepeater-Steuerelement (Visual Studio)
+Beim Verwenden einer <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement, das viele Datensätze enthält, können Sie Benutzern die Suche nach einem bestimmten Datensatz empfiehlt. Sie können eine Suche durch Abfragen der zugrunde liegende implementieren, anstatt das Durchsuchen der Daten in das Steuerelement, <xref:System.Windows.Forms.BindingSource>. Wenn das Element gefunden wird, können Sie dann die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> Eigenschaft wählen Sie das Element, und es per Bildlauf anzeigen.  
   
-### So implementieren Sie eine Suche  
+### <a name="to-implement-search"></a>Suche implementiert.  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TextBox>\-Steuerelement aus der **Toolbox** auf das Formular mit dem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement.  
+1.  Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular, das das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement enthält.  
   
-2.  Ändern Sie im Eigenschaftenfenster die **Name**\-Eigenschaft in SearchTextBox.  
+2.  Ändern Sie im Eigenschaftenfenster die Eigenschaft **Name** in **SearchTextBox**.  
   
-3.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** auf das Formular mit dem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement.  
+3.  Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular, das das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement enthält.  
   
-4.  Ändern Sie im Eigenschaftenfenster die **Name**\-Eigenschaft in SearchButton.  Ändern Sie die **Text**\-Eigenschaft in Search.  
+4.  Ändern Sie im Eigenschaftenfenster die Eigenschaft **Name** in **SearchButton**. Ändern Sie die **Text** -Eigenschaft in **Search**.  
   
-5.  Doppelklicken Sie auf das <xref:System.Windows.Forms.Button>\-Steuerelement, um den Code\-Editor zu öffnen, und fügen Sie dem `SearchButton_Click`\-Ereignishandler den folgenden Code hinzu.  
+5.  Doppelklicken Sie auf das <xref:System.Windows.Forms.Button> -Steuerelement, um den Code-Editor zu öffnen, und fügen Sie dem `SearchButton_Click` -Ereignishandler den folgenden Code hinzu:  
   
      [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-search-data-in-a-datarepeater-control-visual-studio_1.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
+     [!code-csharp[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
   
-     Ersetzen Sie *ProductsBindingSource* durch den Namen der <xref:System.Windows.Forms.BindingSource> für <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, und ersetzen Sie *ProductID* durch den Namen des Felds, das Sie durchsuchen möchten.  
+     Ersetzen Sie *ProductsBindingSource* durch den Namen des der <xref:System.Windows.Forms.BindingSource> für Ihre <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, und Ersetzen Sie *"ProductID"* mit dem Namen des Felds, das Sie suchen möchten.  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Troubleshooting the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Problembehandlung beim DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)

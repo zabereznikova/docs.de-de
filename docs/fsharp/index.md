@@ -1,6 +1,6 @@
 ---
 title: "Leitfaden für F#"
-description: "Leitfaden für F#"
+description: "Erfahren Sie, bis der F#-Programmiersprache, eine Open-Source-Sprache für .NET, die erstklassige Unterstützung für die funktionale Programmierung bereitstellt."
 keywords: .NET, .NET Core
 author: jackfoxy
 ms.author: phcart
@@ -10,34 +10,27 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e9b4a6e0936b49e0b8f1cd68fcb37ef3b25ada93
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 4ddd77cef6cf70a63f1af81359d82eda27a01593
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-guide"></a>Leitfaden für F#
 
 F# ist eine plattformübergreifende, Oopen-Source-Programmiersprache für .NET und bietet erstklassige Unterstützung für funktionale Programmierung, zusammen mit Unterstützung für objektorientierte und imperative Programmierung.  Der Visual F#-Compiler und die dazugehörigen Tools sind die Implementierung und das Tool von Microsoft für die Programmiersprache F#, was F# zu einem hochwertigen Member von .NET macht.
 
-## <a name="if-youre-new-to-programming"></a>Wenn Sie noch wenig Erfahrung mit Programmierung haben
+## <a name="if-youre-new-to-f"></a>Wenn Sie in F#-vertraut sind. #
 
-Wenn Sie noch wenig Erfahrung mit Programmierung haben, beginnen Sie mit dem Abschnitt [Tutorials](tutorials/index.md). Die Tutorials haben einen Abschnitt für Anfänger, der Ihnen zeigt, wie Sie eigene F#-Programme schreiben und ausführen.
+Wenn Sie in F#-vertraut sind, beginnen Sie mit der [Tour von f#](tour.md) abzurufenden einen Überblick über die Sprache.
 
-Wenn Sie sich lieber eine thematische Übersicht von F# und einigen der kennzeichnenden Funktionen ansehen möchten, gehen Sie unter [Einführung in F#](tour.md).
+Es wird empfohlen, dass Sie durchlaufen die [Funktionen als erstrangige Werte](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Progamming](introduction-to-functional-programming/index.md)--> funktionale Programmierung Konzepte erfahren Sie, die für das Arbeiten mit f# unverzichtbar sind.
 
-## <a name="if-youre-new-to-f"></a>Wenn Sie noch nicht mit F# vertraut sind
+In den [Tutorials](tutorials/getting-started/index.md) erhalten Sie auch ausführliche Anleitungen für unterschiedliche Fähigkeitslevel und Funktionen der Sprache.
 
-Wenn Sie programmieren können, jedoch noch nichts mit F gemacht haben, beginnen Sie mit der [Einführung in F#](tour.md), um eine Übersicht über die Sprache zu erhalten.
+## <a name="if-youre-experienced-with-f"></a>Wenn Sie bereits Erfahrung mit [F#] #
 
-Es wird auch empfohlen, die [Introduction to Functional Progamming (Einführung in die funktionale Programmierung)](introduction-to-functional-programming/index.md) durchzulaufen, um die Konzepte der funktionalen Programmierung zu lernen, die wichtig für die Arbeit mit F# sind.
-
-In den [Tutorials](tutorials/index.md) erhalten Sie auch ausführliche Anleitungen für unterschiedliche Fähigkeitslevel und Funktionen der Sprache.
-
-## <a name="if-youre-experienced-with-f"></a>Wenn Sie bereits Erfahrung mit F# haben
-
-Wenn Sie mit F# vertraut sind, finden Sie viel Interessantes in der [Sprachreferenz](language-reference/index.md), worin jeder Aspekt der Sprache gründlich dokumentiert ist und durch viele Codebeispiele wird.  Die [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) wird ebenso sehr interessant für Sie sein.
+Wenn Sie mit F# vertraut sind, finden Sie viel Interessantes in der [Sprachreferenz](language-reference/index.md), worin jeder Aspekt der Sprache gründlich dokumentiert ist und durch viele Codebeispiele wird.  Die [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) wird ebenso sehr interessant für Sie sein.  Der F#-Referenz zur Kernbibliothek werden schließlich von MSDN und in diese aktuelle Docs verschoben.
 
 ## <a name="the-f-software-foundation"></a>Die F# Software Foundation
 
@@ -49,8 +42,8 @@ Um mehr zu erfahren und mitzumachen, gehen Sie unter [fsharp.org](http://fsharp.
 
 ## <a name="documentation"></a>Dokumentation
 
-* [Tutorials](tutorials/index.md)
-* [Einführung in die funktionale Programmierung](introduction-to-functional-programming/index.md)
+* [Tutorials](tutorials/getting-started/index.md)
+* [Funktionen als erstrangige Werte](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)-->
 * [Sprachreferenz](language-reference/index.md)
 * [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
 
@@ -59,7 +52,7 @@ Um mehr zu erfahren und mitzumachen, gehen Sie unter [fsharp.org](http://fsharp.
 * [F# for Fun and Profit Gitbook (F# für Fun und Profit – Gitbook)](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
 * [F# Programming Wikibook (F#-Programmierung – Wikibook)](https://en.wikibooks.org/wiki/F_Sharp_Programming)
 
-## <a name="video-learning-resources"></a>Videos
+## <a name="video-learning-resources"></a>Videolernressourcen
 
 * [Introduction to Programming with F# series on YouTube (Einführung in die Programmierung mit der F#-Reihe auf YouTube)](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
 * [Introduction to F# series on FSharpTV (Einführung in die F#-Reihe auf FSharpTV)](https://fsharp.tv/courses/fsharp-programming-intro/)
@@ -69,4 +62,3 @@ Um mehr zu erfahren und mitzumachen, gehen Sie unter [fsharp.org](http://fsharp.
 * [F#-Lernressourcen auf fsharp.org](http://fsharp.org/learn.html)
 * [Website für F#-Ausschnitte](http://www.fssnip.net)
 * [F# Software Foundation](http://fsharp.org)
-

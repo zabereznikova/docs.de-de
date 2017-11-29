@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  
@@ -50,7 +45,7 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
  Tools und detaillierte Anweisungen zur Verwendung von Codeverträgen finden Sie auf der MSDN DevLabs-Website unter [Codeverträge](http://go.microsoft.com/fwlink/?LinkId=152461).  
   
 ## <a name="preconditions"></a>Vorbedingungen  
- Sie können Vorbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName>-Methode ausdrücken. Vorbedingungen geben den Zustand beim Aufrufen einer Methode an. Sie werden im Allgemeinen zum Angeben gültiger Parameterwerte verwendet. Auf alle Member, die in Vorbedingungen erwähnt werden, muss mindestens wie auf die Methode selbst zugegriffen werden können. Andernfalls wird die Vorbedingung möglicherweise nicht von allen Aufrufern einer Methode verstanden. Die Bedingung darf keine Nebeneffekte haben. Das Laufzeitverhalten fehlerhafter Vorbedingungen wird durch die Laufzeitanalyse bestimmt.  
+ Sie können Vorbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>-Methode ausdrücken. Vorbedingungen geben den Zustand beim Aufrufen einer Methode an. Sie werden im Allgemeinen zum Angeben gültiger Parameterwerte verwendet. Auf alle Member, die in Vorbedingungen erwähnt werden, muss mindestens wie auf die Methode selbst zugegriffen werden können. Andernfalls wird die Vorbedingung möglicherweise nicht von allen Aufrufern einer Methode verstanden. Die Bedingung darf keine Nebeneffekte haben. Das Laufzeitverhalten fehlerhafter Vorbedingungen wird durch die Laufzeitanalyse bestimmt.  
   
  Die folgende Vorbedingung drückt z. B. aus, dass der Parameter `x` nicht NULL sein darf.  
   
@@ -67,7 +62,7 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
 -   Auf den gesamten Satz solcher Anweisungen folgt ein expliziter <xref:System.Diagnostics.Contracts.Contract>-Methodenaufruf, beispielsweise ein Aufruf der <xref:System.Diagnostics.Contracts.Contract.Requires%2A>-, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>-, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>- oder <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>-Methode.  
   
- Wenn `if`-`then`-`throw`-Anweisungen in dieser Form angezeigt werden, erkennen die Tools sie als ältere `requires`-Anweisungen. Wenn keine anderen Verträge auf die `if`-`then`-`throw`-Sequenz folgen, beenden Sie den Code mit der <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName>-Methode.  
+ Wenn `if`-`then`-`throw`-Anweisungen in dieser Form angezeigt werden, erkennen die Tools sie als ältere `requires`-Anweisungen. Wenn keine anderen Verträge auf die `if`-`then`-`throw`-Sequenz folgen, beenden Sie den Code mit der <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>-Methode.  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>Ausnahmenachbedingungen  
- Ausnahmenachbedingungen sind Nachbedingungen, die `true` sein sollten, wenn eine bestimmte Ausnahme von einer Methode ausgelöst wird. Sie können diese Nachbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName>-Methode (wie im folgenden Beispiel gezeigt) angeben.  
+ Ausnahmenachbedingungen sind Nachbedingungen, die `true` sein sollten, wenn eine bestimmte Ausnahme von einer Methode ausgelöst wird. Sie können diese Nachbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>-Methode (wie im folgenden Beispiel gezeigt) angeben.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   Eine beliebige Methode, deren vollqualifizierter Name mit "System.Diagnostics.Contracts.Contract", "System.String", "System.IO.Path" oder "System.Type" beginnt.  
   
--   Ein beliebiger aufgerufener Delegat, vorausgesetzt, dass dem Delegattyp selbst das <xref:System.Diagnostics.Contracts.PureAttribute> zugewiesen ist. Die Delegattypen <xref:System.Predicate%601?displayProperty=fullName> und <xref:System.Comparison%601?displayProperty=fullName> werden als rein eingestuft.  
+-   Ein beliebiger aufgerufener Delegat, vorausgesetzt, dass dem Delegattyp selbst das <xref:System.Diagnostics.Contracts.PureAttribute> zugewiesen ist. Die Delegattypen <xref:System.Predicate%601?displayProperty=nameWithType> und <xref:System.Comparison%601?displayProperty=nameWithType> werden als rein eingestuft.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>Sichtbarkeit  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Verwendung von Codeverträgen veranschaulicht.  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

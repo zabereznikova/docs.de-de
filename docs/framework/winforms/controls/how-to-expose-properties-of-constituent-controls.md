@@ -1,34 +1,38 @@
 ---
-title: "Gewusst wie: Verf&#252;gbarmachen der Eigenschaften konstituierender Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Konstituierende Steuerelemente"
-  - "Steuerelemente [Windows Forms], Konstituierende"
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Verfügbarmachen von Eigenschaften"
-  - "Benutzersteuerelemente [Windows Forms], Verfügbarmachen von konstituierenden Steuerelementen"
+title: "Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user controls [Windows Forms], exposing constituent controls
+- controls [Windows Forms], constituent
+- custom controls [Windows Forms], exposing properties
+- constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb85cb77c28ad443fb6837a5305a080c450220f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verf&#252;gbarmachen der Eigenschaften konstituierender Steuerelemente
-Die Steuerelemente, aus denen ein zusammengesetztes Steuerelement besteht, werden als *konstituierende Steuerelemente* bezeichnet.  Sie werden im Allgemeinen als privat deklariert, daher kann der Entwickler nicht auf sie zugreifen.  Wenn Eigenschaften dieser Steuerelemente zukünftigen Benutzern verfügbar gemacht werden sollen, müssen sie dem Benutzer gegenüber verfügbar gemacht werden.  Eine Eigenschaft eines konstituierenden Steuerelements wird verfügbar gemacht, indem eine Eigenschaft im Benutzersteuerelement erstellt wird. Anschließend werden die Accessoren `get` und `set` dieser Eigenschaft verwendet, um die Änderung in der privaten Eigenschaft des konstituierenden Steuerelements auszuführen.  
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente
+Die Steuerelemente, die ein zusammengesetztes Steuerelement bilden heißen *konstituierende Steuerelemente*. Diese Steuerelemente werden normalerweise als privat deklariert und kann daher nicht von der Entwickler zugegriffen werden. Wenn Sie die Eigenschaften dieser Steuerelemente zukünftigen Benutzern zur Verfügung stellen möchten, müssen Sie für den Benutzer verfügbar machen. Eine Eigenschaft eines konstituierenden Steuerelements wird verfügbar gemacht, durch eine Eigenschaft im Benutzersteuerelement erstellen und Verwenden der `get` und `set` Accessoren der Eigenschaft, um die Auswirkungen auf der Änderung in der privaten Eigenschaft des konstituierenden Steuerelements.  
   
- Stellen Sie sich ein hypothetisches Benutzersteuerelement mit einer konstituierenden Schaltfläche mit dem Namen `MyButton` vor.  Wenn ein Benutzer in diesem Beispiel die `ConstituentButtonBackColor`\-Eigenschaft anfordert, wird der Wert übermittelt, der in der <xref:System.Windows.Forms.Control.BackColor%2A>\-Eigenschaft von `MyButton` gespeichert ist.  Wenn der Benutzer dieser Eigenschaft einen Wert zuweist, wird dieser automatisch an die <xref:System.Windows.Forms.Control.BackColor%2A>\-Eigenschaft von `MyButton` übergeben. Außerdem wird der `set`\-Code ausgeführt, sodass sich die Farbe von `MyButton` ändert.  
+ Betrachten Sie ein hypothetisches Benutzersteuerelement mit einer konstituierenden Schaltfläche mit dem Namen `MyButton`. In diesem Beispiel, wenn der Benutzer fordert die `ConstituentButtonBackColor` -Eigenschaft, die in gespeicherten Wert der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft `MyButton` übermittelt wird. Wenn der Benutzer diese Eigenschaft einen Wert zuweist, wird dieser Wert automatisch zum Übergeben der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft des `MyButton` und die `set` Code wird ausgeführt, ändern die Farbe des `MyButton`.  
   
- Im nachstehenden Beispiel wird gezeigt, wie die <xref:System.Windows.Forms.Control.BackColor%2A>\-Eigenschaft der konstituierenden Schaltfläche verfügbar gemacht wird:  
+ Im folgende Beispiel wird gezeigt, wie verfügbar machen die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft der konstituierenden Schaltfläche:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -55,15 +59,15 @@ public Color ButtonColor
 }  
 ```  
   
-### So machen Sie eine Eigenschaft eines konstituierenden Steuerelements verfügbar  
+### <a name="to-expose-a-property-of-a-constituent-control"></a>Eine Eigenschaft eines konstituierenden Steuerelements verfügbar machen.  
   
 1.  Erstellen Sie eine öffentliche Eigenschaft für das Benutzersteuerelement.  
   
-2.  Schreiben Sie im `get`\-Abschnitt der Eigenschaft Code, mit dem der Wert der Eigenschaft abgerufen wird, die verfügbar gemacht werden soll.  
+2.  In der `get` Abschnitt der Eigenschaft, Schreiben Sie Code, der den Wert der Eigenschaft abruft, Sie verfügbar machen möchten.  
   
-3.  Schreiben Sie im `set`\-Abschnitt der Eigenschaft Code, mit dem der Wert der Eigenschaft an die verfügbar gemachte Eigenschaft des konstituierenden Steuerelements übergeben wird.  
+3.  In der `set` Abschnitt der Eigenschaft, Schreiben Sie Code, der den Wert der Eigenschaft an die verfügbar gemachte Eigenschaft des konstituierenden Steuerelements übergibt.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.UserControl>   
- [Eigenschaften von Windows Forms\-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Arten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.UserControl>  
+ [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

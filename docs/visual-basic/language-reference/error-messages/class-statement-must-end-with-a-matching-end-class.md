@@ -1,38 +1,36 @@
 ---
-title: "&#39;Class&#39; statement must end with a matching &#39;End Class&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30481"
-  - "bc30481"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30481"
+title: "&#39; Klasse &#39; Anweisung enden mit einem übereinstimmenden &#39; End-Klasse &#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30481
+- bc30481
+helpviewer_keywords: BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e8643a0a5b55e220ca8dd53065500fe4b1e473d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;Class&#39; statement must end with a matching &#39;End Class&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-`Class` wird zum Einleiten eines `Class`\-Blocks verwendet und kann daher nur am Anfang des Blocks stehen. Der Block muss mit einer passenden `End Class`\-Anweisung beendet werden.  Entweder es existiert eine weitere `Class`\-Anweisung, oder der `Class`\-Block wurde nicht durch `End Class` beendet.  
+# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39; Klasse &#39; Anweisung enden mit einem übereinstimmenden &#39; End-Klasse &#39;
+`Class`Dient zum Initiieren einer `Class` blockieren; kann daher nur am Anfang des Blocks mit einer passenden auftreten `End Class` -Anweisung beendet den Block. Entweder ist eine redundante `Class` -Anweisung, oder Sie wurde nicht beendet. Ihr `Class` -block mit `End Class`.  
   
- **Fehler\-ID:** BC30481  
+ **Fehler-ID:** BC30481  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Suchen und entfernen Sie die nicht erforderliche `Class`\-Anweisung.  
+-   Suchen und entfernen Sie die unnötige `Class` Anweisung.  
   
--   Beenden Sie den `Class`\-Block mit einer entsprechenden `End Class`\-Anweisung.  
+-   Beenden der `Class` Block mit einer passenden `End Class`.  
   
-## Siehe auch  
- [End \<keyword\> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
+ [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)

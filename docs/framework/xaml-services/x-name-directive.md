@@ -1,79 +1,82 @@
 ---
-title: "x:Name Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Name"
-  - "xName"
-  - "Name"
-helpviewer_keywords: 
-  - "x:Name attribute [XAML Services]"
-  - "XAML [XAML Services], x:Name attribute"
-  - "Name attribute in XAML [XAML Services]"
+title: x:Name-Anweisung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Name
+- xName
+- Name
+helpviewer_keywords:
+- x:Name attribute [XAML Services]
+- XAML [XAML Services], x:Name attribute
+- Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:Name Directive
-Identifiziert eindeutig XAML\-definierte Elemente in einem XAML\-Namescope.  XAML\-Namescopes und ihre Eindeutigkeitsmodelle können auf die instanziierten Objekte angewendet werden, wenn Frameworks APIs oder Implementierungsverhalten bereitstellen, die während der Laufzeit auf das XAML\-erstellte Objektdiagramm zugreifen.  
+# <a name="xname-directive"></a>x:Name-Anweisung
+Identifiziert eindeutig XAML-definierte Elemente in einem XAML-Namensbereich. Verwendung von XAML-Namescopes und ihre Eindeutigkeitsmodelle können Frameworks APIs bereit, oder zum Implementieren von Verhaltensweisen, die Zugriff auf die XAML-erstellte Objektdiagramm zur Laufzeit auf die instanziierte Objekte angewendet werden.  
   
-## Verwendung von XAML\-Attributen  
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
+```xaml  
+<object x:Name="XAMLNameValue".../>  
 ```  
-<object x:Name="XAMLNameValue".../>  
-```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a>XAML-Werte  
   
 |||  
 |-|-|  
-|`XAMLNameValue`|Eine Zeichenfolge, die den Einschränkungen der [XamlName\-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md) entspricht.|  
+|`XAMLNameValue`|Eine Zeichenfolge, die Einschränkungen der entspricht, der [XamlName-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
   
-## Hinweise  
- Nachdem `x:Name` auf das Sicherungsprogrammiermodell eines Frameworks angewendet wurde, entspricht der Name der Variablen, die einen von einem Konstruktor zurückgegebenen Objektverweis oder eine Instanz enthält.  
+## <a name="remarks"></a>Hinweise  
+ Nach dem `x:Name` wird angewendet, um ein Framework des Programmiermodell sichern, der Namen der Variablen, die einen Objektverweis oder eine Instanz von einem Konstruktor zurückgegebene enthält entspricht.  
   
- Der Wert des Verbrauchs einer `x:Name`\-Direktive muss eindeutig innerhalb eines XAML\-Namescope sein.  Standardmäßig wird der primäre XAML\-Namescope bei Verwendung durch die .NET Framework\-XAML\-Dienste\-API am XAML\-Stammelement einer einzelnen XAML\-Produktion definiert und enthält die Elemente in dieser XAML\-Produktion.  Zusätzliche diskrete XAML\-Namensbereiche, die innerhalb einer einzelnen XAML\-Produktion auftreten können, können von Frameworks definiert werden, um bestimmte Szenarios zu behandeln.  Beispielsweise werden in WPF neue XAML\-Namescopes von jeder ebenfalls für diese XAML\-Erstellung definierten Vorlage definiert und erstellt.  Weitere Informationen zu XAML\-Namescopes \(geschrieben für WPF, aber relevant für viele XAML\-Namescope\-Konzepte\) finden Sie unter [WPF\-XAML\-Namescopes](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ Der Wert, der eine `x:Name` Richtlinie Verwendung muss in einem XAML-Namensbereich eindeutig sein. Standardmäßig bei Verwendung durch .NET Framework XAML-Dienste-API, die primäre Verwendung von XAML-Namensbereich auf die Verwendung von XAML-Stammelement einer XAML-Produktion definiert und umfasst die Elemente, die in XAML-Produktion enthalten sind. Zusätzliche diskrete XAML-Namensbereiche, die innerhalb einer einzelnen XAML-Produktion auftreten können, können von Frameworks für bestimmte Szenarien definiert werden. Z. B. in WPF werden neue XAML-Namescopes definiert und erstellt, die von beliebigen Vorlagen, die auch für die Verwendung von XAML-Produktion definiert ist. Weitere Informationen zur Verwendung von XAML-Namescopes (geschrieben für WPF, aber für viele XAML-Namensbereich Konzepte relevant) finden Sie unter [WPF-XAML-Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- `x:Name` sollte meist nicht in Situationen übernommen werden, die auch `x:Key` verwenden.  XAML\-Implementierungen von bestimmten vorhandenen Frameworks haben Ersetzungskonzepte zwischen `x:Key` und `x:Name` eingeführt, aber das ist keine empfohlene Vorgehensweise.  Beim Behandeln von Name\-\/Schlüssel\-Informationen wie z. B. <xref:System.Windows.Markup.INameScope> oder <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> unterstützt .NET Framework\-XAML\-Dienst keine solchen Ersetzungskonzepte.  
+ Im allgemeinen `x:Name` sollten nicht in Situationen, in denen auch verwenden, angewendet werden `x:Key`. Verwendung von XAML-Implementierungen von bestimmten vorhandenen Frameworks eingeführt, die der Ersetzungskonzepte zwischen `x:Key` und `x:Name`, allerdings ist keine empfohlene Vorgehensweise. .NET Framework XAML Services unterstützt keine solche Ersetzungskonzepte beim Behandeln von Namen/Schlüssel-Informationen wie z. B. <xref:System.Windows.Markup.INameScope> oder <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.  
   
- Regeln für die Zulassung von `x:Name` sowie der Namenseindeutigkeitserzwingung werden potenziell von bestimmten implementierenden Frameworks definiert.  Damit sie jedoch mit .NET Framework\-XAML\-Diensten verwendbar sind, sollten die Frameworkdefinitionen der XAML\-Namescope\-Eindeutigkeit mit der Definition der <xref:System.Windows.Markup.INameScope>\-Informationen in dieser Dokumentation konsistent sein und dieselben Regeln in Bezug darauf verwenden, wo die Informationen übernommen werden.  Beispielswiese unterteilt die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]\-Implementierung verschiedene Markupelemente in separate <xref:System.Windows.NameScope>\-Bereiche, z. B. Ressourcenwörterbücher, die von der XAML auf Seitenebene erstellte logische Elementstruktur, Vorlagen und anderen Inhalt, und setzt dann die Eindeutigkeit des XAML\-Namens innerhalb jeder dieser XAML\-Namescopes durch.  
+ Regeln für Permittance von `x:Name` sowie die Namen Eindeutigkeit erzwungen werden möglicherweise von bestimmten implementierende Frameworks definiert. Allerdings um mit .NET Framework XAML Services verwendet werden, die Frameworkdefinitionen der Verwendung von XAML-Namensbereich Eindeutigkeit muss konsistent mit der Definition von <xref:System.Windows.Markup.INameScope> Informationen in dieser Dokumentation und sollten die gleichen Regeln bezüglich Where mit der Informationen wird angewendet. Z. B. die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung unterteilt verschiedene Markupelementen in separaten <xref:System.Windows.NameScope> Bereiche die logische Struktur, die durch die Verwendung von XAML-Seitenebene, Vorlagen und andere verzögert-Inhalt erstellt, z. B. Ressourcenverzeichnis, und klicken Sie dann erzwingt XAML die Eindeutigkeit der Namen innerhalb jeder dieser XAML-Namescopes.  
   
- Für benutzerdefinierte Typen mit XAML\-Serien\-Objektwriter der .NET Framework\-XAML\-Dienste, kann eine Eigenschaft erstellt oder geändert werden, die `x:Name` einem Typ zugeordnet.  Definieren Sie dieses Verhalten, indem Sie auf den Namen der Eigenschaft verweisen, die <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> im Typdefinitionscode zugeordnet werden soll.  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> ist ein Attribut auf Typebene.  
+ Für benutzerdefinierte Typen, die .NET Framework XAML Services-XAML-Objektwriter verwenden, eine Eigenschaft, die ordnet `x:Name` auf ein Typ festgelegt oder geändert werden kann. Durch Verweisen auf den Namen der Eigenschaft zugeordnet werden soll, definieren Sie dieses Verhalten der <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> in den Typcode für die Definition.  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>ist ein Attribut auf Typebene.  
   
- Mit .NET Framework XAML\-Diensten, kann die Unterstützungslogik für XAML\-Namescope\-Unterstützung auf eine frameworkneutrale Weise definiert werden, indem die <xref:System.Windows.Markup.INameScope>\-Schnittstelle implementiert wird.  
+ Frameworkneutrale Framework-XAML-Dienste, die dahinter liegende Logik für die Unterstützung von XAML-Namensbereich können in einer Weise definiert werden, durch die Implementierung der <xref:System.Windows.Markup.INameScope> Schnittstelle.  
   
-## Hinweise zur WPF\-Verwendung  
- In der Standardbuildkonfiguration für eine [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung, die XAML, partielle Klassen und Code\-Behind verwendet, wird der angegebene `x:Name` zum Namen eines Felds, das im zugrunde liegende Code erstellt wird, wenn [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] von einer Buildaufgabe zur Markupkompilierung verarbeitet wird, und das Feld einen Verweis auf das Objekt enthält. Standardmäßig ist das erstellte Feld intern.  Sie können den Feldzugriff ändern, indem Sie das [x:FieldModifier\-Attribut](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md) angeben.  In WPF und Silverlight gilt die Reihenfolge, dass die Markupkompilierung das Feld in einer partiellen Klasse definiert und benennt, der Wert anfänglich jedoch leer ist.  Anschließend wird eine generierte Methode mit dem Namen `InitializeComponent` aus dem Klassenkonstruktor aufgerufen.  `InitializeComponent` besteht aus `FindName`\-Aufrufen mithilfe aller `x:Name`\-Werte, die im XAML\-definierten Teil der partiellen Klasse als Eingabezeichenfolgen vorhanden sind.  Die Rückgabewerte werden dann auf den Feldverweis mit demselben Namen zugewiesen, um die Feldwerte mit Objekten zu füllen, die beim XAML\-Analysieren erstellt wurden.  Die Ausführung von `InitializeComponent` ermöglicht es, direkt auf das Laufzeitobjektdiagramm mit `x:Name`\/Feldname zu verweisen, anstatt `FindName` immer dann explizit aufrufen zu müssen, wenn Sie einen Verweis auf ein XAML\-definiertes Objekt benötigen.  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ In der standard Buildkonfiguration für eine [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Anwendung, die Verwendung von XAML-partielle Klassen und Code-Behind, dem angegebenen verwendet `x:Name` wird der Name eines Felds, das in der zugrunde liegenden erstellt wird code, wenn [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] wird durch ein Markup verarbeitet Kompilierung Build-Aufgabe und das Feld enthält einen Verweis auf das Objekt. Standardmäßig ist das erstellte Feld intern. Sie können den Feldzugriff ändern, durch Angeben der [X: FieldModifier-Attribut](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md). In WPF und Silverlight ist die Sequenz an, dass die Markupkompilierung definiert und Namen das Feld in einer partiellen Klasse, aber der Wert anfangs leer ist. Klicken Sie dann eine generierte Methode mit dem Namen `InitializeComponent` aus dem Klassenkonstruktor aufgerufen wird. `InitializeComponent`besteht aus `FindName` Ruft jede mithilfe der `x:Name` Eingabezeichenfolgen für Werte, die in der XAML-definierte Teil der partiellen Klasse als vorhanden sind. Die Rückgabewerte werden anschließend füllen die Feldwerte mit Objekten, die in XAML erstellt wurden, analysieren, der gleichnamigen Feldverweis zugewiesen. Die Ausführung von `InitializeComponent` stellen zu verweisen, das zur Laufzeit Diagramm mit den `x:Name` / Feldname direkt aufrufen, anstatt `FindName` explizit jederzeit benötigen Sie einen Verweis auf eine XAML-definierte-Objekt.  
   
- Für eine WPF\-Anwendung, die die [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]\-Ziele verwendet und XAML\-Dateien mit `Page`\-Buildvorgang enthält, wird während der Kompilierung eine separate Verweiseigenschaft erstellt. Diese Eigenschaft fügt das `WithEvents`\-Schlüsselwort allen Elementen hinzu, die über einen `x:Name` verfügen, um die `Handles`\-Syntax für Ereignishandlerdelegaten zu unterstützen.  Diese Eigenschaft ist immer öffentlich.  Weitere Informationen finden Sie unter [Visual Basic\- und WPF\-Ereignisbehandlung](../../../ocs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Für eine WPF-Anwendung, die verwendet die [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] ausgerichtet ist, und schließt die Verwendung von XAML-Dateien mit `Page` Buildvorgang, eine separate Reference (Eigenschaft) wird während der Kompilierung erstellt die `WithEvents` Schlüsselwort, um alle Elemente, deren ein `x:Name`in Unterstützung von `Handles` Syntax für Ereignishandlerdelegaten. Diese Eigenschaft ist immer öffentlich. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
- `x:Name` wird vom WPF\-XAML\-Prozessor verwendet, um einen Namen in einem XAML\-Namescope zur Ladezeit zu registrieren, auch für Fälle, in denen die Seite nicht von Buildvorgängen kompiliertes Markup darstellt \(z. B. Loose XAML eines Ressourcenwörterbuchs\).  Ein Grund für dieses Verhalten liegt darin, dass der `x:Name` ggf. für die <xref:System.Windows.Data.Binding.ElementName%2A>\-Bindung benötigt wird.  Ausführlichere Informationen finden Sie unter [Übersicht über Datenbindung](../../../ocs/framework/wpf/data/data-binding-overview.md).  
+ `x:Name`wird von der WPF XAML-Prozessor verwendet, um einen Namen in einem XAML-Namensbereich zur Ladezeit auch für Fälle registrieren, in denen die Seite nicht markupkompiliert von Buildvorgängen (z. B. loose XAML eines Ressourcenverzeichnisses) ist. Ein Grund für dieses Verhalten ist, da die `x:Name` ist ggf. für <xref:System.Windows.Data.Binding.ElementName%2A> Bindung. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Wie zuvor erwähnt, sollte `x:Name` \(oder `Name`\) nicht in Situationen übernommen werden, die auch `x:Key` verwenden.  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> hat das spezielle Verhalten, sich selbst als XAML\-Namensbereich zu definieren, gibt aber für <xref:System.Windows.Markup.INameScope>\-APIs "Nicht implementiert" zurück, um dieses Verhalten zu erzwingen.  Wenn der WPF\-XAML\-Parser `Name` oder `x:Name` in einem XAML\-definierten <xref:System.Windows.ResourceDictionary> feststellt, wird der Name keinem XAML\-Namescope hinzugefügt.  Der Versuch, diesen Namen in einem XAML\-Namescope und `FindName`\-Methoden zu suchen, gibt keine gültige Ergebnisse zurück.  
+ Wie bereits erwähnt, `x:Name` (oder `Name`) sollten nicht in Situationen, in denen auch verwenden, angewendet werden `x:Key`. Die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> verfügt über ein spezielles Verhalten von sich selbst als einen XAML-Namensbereich definieren jedoch zurückgeben, nicht implementiert oder null-Werte für <xref:System.Windows.Markup.INameScope> -APIs als eine Möglichkeit, dieses Verhalten zu erzwingen. Wenn der WPF XAML-Parser erkennt `Name` oder `x:Name` in einer XAML-definierte <xref:System.Windows.ResourceDictionary>, der Name wird nicht auf eine beliebige XAML-Namensbereich hinzugefügt. Es wird versucht, dieses Namens alle XAML-Namensbereich wurde nicht gefunden und der `FindName` Methoden werden nicht gültige Ergebnisse zurückgegeben.  
   
-### x:Name und Name  
- Viele WPF\-Anwendungsszenarien sind in der Lage, jegliche Verwendung des `x:Name`\-Attributs zu verhindern, da die `Name`\-Abhängigkeitseigenschaft, die im standardmäßigen XAML\-Namespace für mehrere der wichtigen Basisklassen wie <xref:System.Windows.FrameworkElement> und <xref:System.Windows.FrameworkContentElement> angegeben ist, denselben Zweck erfüllt.  Es gibt noch einige allgemeine XAML\- und WPF\-Szenarien, in denen Codezugriff auf ein Element ohne `Name`\-Eigenschaft auf Frameworkebene wichtig ist.  Zum Beispiel unterstützten bestimmte Animations\- und Storyboard\-Unterstützungsklassen keine `Name`\-Eigenschaft. Auf diese muss jedoch häufig in Code verwiesen werden, um die Animation zu steuern.  Sie sollten `x:Name` als Attribut für in XAML erstellte Zeitachsen und Transformationen angeben, wenn Sie auf diese später in Code verweisen möchten.  
+### <a name="xname-and-name"></a>X: Name und Name  
+ Viele Szenarien der WPF-Anwendung können vermeiden, alle Verwendungen von der `x:Name` Attribut, da die `Name` Abhängigkeitseigenschaft als angegeben in der standardmäßigen XAML-Namespace für einige der wichtigen Basisklassen wie z. B. <xref:System.Windows.FrameworkElement> und <xref:System.Windows.FrameworkContentElement> denselben Zweck erfüllt. Es sind noch einige allgemeinen Szenarien zur Verwendung von XAML- und WPF-code, in dem Zugriff auf ein Element ohne `Name` Eigenschaft auf Frameworkebene ist wichtig. Z. B. bestimmte Unterstützungsklassen für Animationen und Storyboards unterstützen eine `Name` -Eigenschaft, aber sie müssen häufig im Code verwiesen werden, um zu steuern, die Animation. Geben Sie `x:Name` als Attribut für die Zeitachsen und Transformationen, die in XAML erstellt werden, wenn Sie später in Code verweisen möchten.  
   
- Wenn <xref:System.Windows.FrameworkElement.Name%2A> als Eigenschaft eines Elements in der Klasse verfügbar ist, können <xref:System.Windows.FrameworkElement.Name%2A> und `x:Name` austauschbar als Attribute verwendet werden, aber es tritt eine Analyseausnahme auf, wenn beide für ein und dasselbe Element angegeben werden.  Wenn das XAML kompiliertes Markup ist, tritt die Ausnahme bei der Markupkompilierung auf, andernfalls tritt sie beim Laden auf.  
+ Wenn <xref:System.Windows.FrameworkElement.Name%2A> steht als eine Eigenschaft der Klasse <xref:System.Windows.FrameworkElement.Name%2A> und `x:Name` austauschbar als Attribute verwendet werden können, aber eine Analyseausnahme führt, wenn beide auf demselben Element angegeben werden. Wenn der XAML-Code Markupkompilierung handelt, wird die Ausnahme für die Markupkompilierung erfolgen, andernfalls auf Last tritt auf.  
   
- <xref:System.Windows.FrameworkElement.Name%2A> kann mithilfe der XAML\-Attributsyntax und im Code mithilfe von <xref:System.Windows.DependencyObject.SetValue%2A> festgelegt werden. Beachten Sie jedoch, dass das Festlegen der <xref:System.Windows.FrameworkElement.Name%2A>\-Eigenschaft im Code in den meisten Fällen nicht dazu führt, dass der repräsentative Feldverweis im XAML\-Namensbereich erstellt wird, wenn XAML bereits geladen ist.  Statt zu versuchen, <xref:System.Windows.FrameworkElement.Name%2A> in Code festzulegen, verwenden Sie die <xref:System.Windows.NameScope>\-Methoden aus dem Code für den entsprechenden Namensbereich.  
+ <xref:System.Windows.FrameworkElement.Name%2A>Mithilfe von XAML-Attributsyntax festgelegt werden können und in Code mit <xref:System.Windows.DependencyObject.SetValue%2A>; Beachten Sie jedoch, dass durch Festlegen der <xref:System.Windows.FrameworkElement.Name%2A> -Eigenschaft im Code erstellt die repräsentative Feldverweis für die Verwendung von XAML-Namensbereich nicht in den meisten Fällen, in dem der XAML-Code bereits ist, geladen. Anstatt beim Festlegen <xref:System.Windows.FrameworkElement.Name%2A> im Code verwenden, <xref:System.Windows.NameScope> Methoden aus dem Code für den entsprechenden Namensbereich.  
   
- <xref:System.Windows.FrameworkElement.Name%2A> kann auch mit Eigenschaftenelementsyntax mit innerem Text festgelegt werden, aber das ist unüblich.  Im Gegensatz dazu kann `x:Name` nicht in der XAML\-Eigenschaftenelementsyntax oder in Code mit <xref:System.Windows.DependencyObject.SetValue%2A> verwendet werden. Er kann nur mithilfe der Attributsyntax in Objekten festgelegt werden, weil es sich um eine Direktive handelt.  
+ <xref:System.Windows.FrameworkElement.Name%2A>kann auch mit Eigenschaftenelementsyntax mit innerem Text festgelegt werden, aber das ist unüblich. Im Gegensatz dazu `x:Name` kann nicht festgelegt werden, im XAML-Eigenschaftenelementsyntax oder in Code mit <xref:System.Windows.DependencyObject.SetValue%2A>; er kann nur festgelegt werden für Objekte Attributsyntax verwenden, da es sich um eine Richtlinie handelt.  
   
-## Silverlight\-Verwendungshinweise  
- `x:Name` für Silverlight wird separat dokumentiert.  Weitere Informationen finden Sie unter [Sprachfeatures des XAML\-Namespace \(x:\)](http://go.microsoft.com/fwlink/?LinkId=199081).  
+## <a name="silverlight-usage-notes"></a>Silverlight-Verwendungshinweise  
+ `x:Name` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace ("x:") Sprachfunktionen (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## Siehe auch  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=fullName>   
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=fullName>   
- [Strukturen in WPF](../../../ocs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
+ [Strukturen in WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

@@ -1,37 +1,35 @@
 ---
-title: "My.Computer.Keyboard Object | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Keyboard object"
+title: My.Computer.Keyboard-Objekt
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56fd59d0048a680bdd476b05144dfdb66f641287
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# My.Computer.Keyboard Object
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur, z. B. Informationen über die derzeit gedrückten Tasten, und eine Methode zum Senden von Tastaturanschlägen an das aktive Fenster bereit.  
+# <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard-Objekt
+Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur bereit, z.B. welche Tasten werden gerade gedrückt? Außerdem bietet es eine Methode, mit der Sie Tastatureingaben an ein aktives Fenster schicken können.  
   
-## Hinweise  
- Weitere Informationen zu den Methoden und Eigenschaften des `My.Computer.Keyword`\-Objekts finden Sie unter <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
+## <a name="remarks"></a>Hinweise  
+ Informationen zu den Methoden und Eigenschaften der `My.Computer.Keyword` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
- Weitere Informationen finden Sie unter [Accessing the Keyboard](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
+ Weitere Informationen finden Sie unter [Zugreifen auf die Tastatur](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## Anforderungen  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+## <a name="requirements"></a>Anforderungen  
+ **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **Klasse:**<xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic\-Laufzeitbibliothek \(in Microsoft.VisualBasic.dll\)  
+ **Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")  
   
-## Siehe auch  
- [My.Computer Object](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Siehe auch  
+ [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

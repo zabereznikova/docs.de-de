@@ -1,48 +1,53 @@
 ---
-title: "Gewusst wie: Zeichnen von Text in einem Windows&#160;Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Formulare, Zeichnen von Text"
-  - "Text, Zeichnen"
+title: "Gewusst wie: Zeichnen von Text in einem Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- forms [Windows Forms], drawing text
+- text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23919145a04bb4b3d1674b153649aca2228364eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen von Text in einem Windows&#160;Form
-Im folgenden Codebeispiel wird gezeigt, wie die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode von <xref:System.Drawing.Graphics> verwendet wird, um Text auf einem Formular zu zeichnen.  Wahlweise können Sie hierfür <xref:System.Windows.Forms.TextRenderer> verwenden.  Weitere Informationen finden Sie unter [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  
+# <a name="how-to-draw-text-on-a-windows-form"></a>Gewusst wie: Zeichnen von Text in einem Windows Form
+Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> zum Zeichnen von Text in einem Formular. Alternativ können Sie <xref:System.Windows.Forms.TextRenderer> zum Zeichnen von Text in einem Formular. Weitere Informationen finden Sie unter [wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-cpp[System.Drawing.ConceptualHowTos#7](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#7)]
  [!code-csharp[System.Drawing.ConceptualHowTos#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#7)]
  [!code-vb[System.Drawing.ConceptualHowTos#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#7)]  
   
-## Kompilieren des Codes  
- Sie können die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode nicht im <xref:System.Windows.Forms.Form.Load>\-Ereignishandler aufrufen.  Der gezeichnete Inhalt wird nicht neu gezeichnet, wenn die Größe des Formulars geändert oder das Formular durch ein anderes Formular verdeckt wird.  Wenn der Inhalt automatisch neu gezeichnet werden soll, müssen Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>\-Methode überschreiben.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Sie nicht aufrufen, die <xref:System.Drawing.Graphics.DrawString%2A> Methode in der <xref:System.Windows.Forms.Form.Load> -Ereignishandler. Der gezeichnete Inhalt wird nicht neu gezeichnet wird, wenn das Formular vergrößert bzw. verkleinert oder durch eine andere Form verdeckt. Damit der Inhalt automatisch neu gezeichnet werden soll, sollten Sie überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.  
   
-## Robuste Programmierung  
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 -   Die Schriftart Arial ist nicht installiert.  
   
-## Siehe auch  
- <xref:System.Drawing.Graphics.DrawString%2A>   
- <xref:System.Windows.Forms.TextRenderer.DrawText%2A>   
- <xref:System.Drawing.StringFormat.FormatFlags%2A>   
- <xref:System.Drawing.StringFormatFlags>   
- <xref:System.Windows.Forms.TextFormatFlags>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- [Erste Schritte mit der Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Graphics.DrawString%2A>  
+ <xref:System.Windows.Forms.TextRenderer.DrawText%2A>  
+ <xref:System.Drawing.StringFormat.FormatFlags%2A>  
+ <xref:System.Drawing.StringFormatFlags>  
+ <xref:System.Windows.Forms.TextFormatFlags>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ [Erste Schritte mit Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

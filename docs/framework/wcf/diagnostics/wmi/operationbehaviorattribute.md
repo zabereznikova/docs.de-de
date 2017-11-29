@@ -1,25 +1,28 @@
 ---
-title: "OperationBehaviorAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OperationBehaviorAttribute
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd01c5c4d37f5c0ec5673dc9aa4a47cb8affbc29
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# OperationBehaviorAttribute
+# <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class OperationBehaviorAttribute : Behavior  
@@ -32,52 +35,52 @@ class OperationBehaviorAttribute : Behavior
 };  
 ```  
   
-## Methoden  
- Die OperationBehaviorAttribute\-Klasse definiert keine Methoden.  
+## <a name="methods"></a>Methoden  
+ Die OperationBehaviorAttribute-Klasse definiert keine Methoden.  
   
-## Eigenschaften  
- Die OperationBehaviorAttribute\-Klasse verfügt über die folgenden Eigenschaften:  
+## <a name="properties"></a>Eigenschaften  
+ Die OperationBehaviorAttribute-Klasse verfügt über die folgenden Eigenschaften:  
   
-### AutoDisposeParameters  
- Datentyp: Boolescher Wert  
+### <a name="autodisposeparameters"></a>AutoDisposeParameters  
+ Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Zustand der Funktion für automatisches Verwerfen für Parameter.  
   
-### Identitätswechsel  
- Datentyp: Zeichenfolge  
+### <a name="impersonation"></a>Identitätswechsel  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt die Ebene des Aufruferidentitätswechsels an, die von dem Vorgang unterstützt wird.  
   
-### ReleaseInstanceMode  
- Datentyp: string \(Zeichenfolge\)  
+### <a name="releaseinstancemode"></a>ReleaseInstanceMode  
+ Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, wann das Objekt im Verlauf eines Vorgangsaufrufs wiederverwendet werden soll.  
   
-### TransactionAutoComplete  
+### <a name="transactionautocomplete"></a>TransactionAutoComplete  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob die aktuelle Transaktion automatisch übergeben werden soll, wenn keine unbehandelten Ausnahmen auftreten.  
   
-### TransactionScopeRequired  
+### <a name="transactionscoperequired"></a>TransactionScopeRequired  
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
  Gibt an, ob der Vorgang eine Transaktion erfordert.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
   
 |MOF|Deklariert in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Namespace|Definiert in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Namespace|Definiert in root\ServiceModel|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.OperationBehaviorAttribute>

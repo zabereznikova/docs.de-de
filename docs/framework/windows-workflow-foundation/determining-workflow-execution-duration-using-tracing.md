@@ -1,43 +1,47 @@
 ---
-title: "Bestimmen der Workflowausf&#252;hrungsdauer mithilfe der Ablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Bestimmen der Workflowausführungsdauer mithilfe der Ablaufverfolgung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: acdc4f7d58eb0f5737adb59b113ea24d723d3b61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Bestimmen der Workflowausf&#252;hrungsdauer mithilfe der Ablaufverfolgung
+# <a name="determining-workflow-execution-duration-using-tracing"></a>Bestimmen der Workflowausführungsdauer mithilfe der Ablaufverfolgung
 In diesem Thema wird veranschaulicht, wie mit der Workflowüberwachung der Zeitraum bestimmt werden kann, den ein erfolgreich abgeschlossener und selbst gehosteter Workflow zur Ausführung benötigt.  
   
-### So bestimmen Sie die Ausführungsdauer der Workflowanwendung mit der Workflowüberwachung  
+### <a name="to-determine-workflow-application-execution-duration-by-using-workflow-tracing"></a>So bestimmen Sie die Ausführungsdauer der Workflowanwendung mit der Workflowüberwachung  
   
-1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].Wählen Sie **Datei**, **Neu** und **Projekt** aus.Wählen Sie unter **C\#** den Knoten **Workflow** aus.Wählen Sie in der Liste der Vorlagen **Workflowkonsolenanwendung** aus.Nennen Sie das neue Projekt `WorkflowDurationTracing`, und klicken Sie auf **OK**.  
+1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  Wählen Sie **Datei**, **neue**, **Projekt**.  Klicken Sie unter **c#**, wählen die **Workflow** Knoten.  Wählen Sie **Workflowkonsolenanwendung** aus der Liste der Vorlagen.  Nennen Sie das neue Projekt `WorkflowDurationTracing` , und klicken Sie auf **OK**.  
   
-2.  Öffnen Sie Workflow1.xaml.Ziehen Sie eine <xref:System.Activities.Statements.Delay>\-Aktivität auf die Designeroberfläche.Weisen Sie der Duration\-Eigenschaft der Aktivität den Wert 00:00:10 \(zehn Sekunden\) zu.  
+2.  Öffnen Sie Workflow1.xaml.  Ziehen Sie eine <xref:System.Activities.Statements.Delay>-Aktivität auf die Designeroberfläche. Weisen Sie der Duration-Eigenschaft der Aktivität den Wert 00:00:10 (zehn Sekunden) zu.  
   
-3.  Öffnen Sie die Ereignisanzeige, indem Sie auf **Start** und **Ausführen** klicken und dann `eventvwr.exe` eingeben.  
+3.  Ereignisanzeige öffnen, indem Sie auf **starten**, **ausführen**, und geben Sie `eventvwr.exe`.  
   
-4.  Wenn Sie die Workflowüberwachung nicht aktiviert haben, erweitern Sie **Anwendungs\- und Dienstprotokolle**, **Microsoft**, **Windows** und **Anwendungsserver \- Anwendungen**.Wählen Sie **Ansicht** und **Analytische und Debugprotokolle einblenden** aus.Klicken Sie mit der rechten Maustaste auf **Debuggen**, und wählen Sie **Protokoll aktivieren**.Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Workflow ausgeführt wurde.  
+4.  Wenn Sie workflowüberwachung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **Debuggen** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit Ablaufverfolgungen angezeigt werden können, nachdem der Workflow ausgeführt wurde.  
   
-5.  Führen Sie die Workflowanwendung aus, indem Sie STRG\+UMSCHALT\+B drücken.  
+5.  Führen Sie die Workflowanwendung aus, indem Sie STRG+UMSCHALT+B drücken.  
   
-6.  Suchen Sie in der Ereignisanzeige ein aktuelles Ereignis mit der ID 1009 und einer Meldung ähnlich der folgenden.Notieren Sie sich den Zeitpunkt der Protokollierung der Meldung.  
+6.  Suchen Sie in der Ereignisanzeige ein aktuelles Ereignis mit der ID 1009 und einer Meldung ähnlich der folgenden. Notieren Sie sich den Zeitpunkt der Protokollierung der Meldung.  
   
  **Übergeordnete Aktivität '', DisplayName: '', InstanceId: '' geplante untergeordnete Aktivität 'WorkflowDurationTracking.Workflow1', DisplayName: 'Workflow1', InstanceId: '1'.**  
   
-7.  Suchen Sie ein anderes aktuelles Ereignis mit der ID 1001 und einer Meldung ähnlich der folgenden.Subtrahieren Sie den Zeitpunkt der vorherigen Nachricht vom protokollierten Wert für diese Nachricht, um die Ausführungsdauer des Workflows zu bestimmen. Diese sollte sich im Bereich von 10 Sekunden bewegen.  
+7.  Suchen Sie ein anderes aktuelles Ereignis mit der ID 1001 und einer Meldung ähnlich der folgenden.  Subtrahieren Sie den Zeitpunkt der vorherigen Nachricht vom protokollierten Wert für diese Nachricht, um die Ausführungsdauer des Workflows zu bestimmen. Diese sollte sich im Bereich von 10 Sekunden bewegen.  
   
- **WorkflowInstanceId: '1bbac57b\-3322\-498e\-9e27\-8833fda3a5bf' wurde mit dem Status 'Closed' abgeschlossen.**  
+ **WorkflowInstance-Id: '1bbac57b-3322-498e-9e27-8833fda3a5bf' wurde in den geschlossenen Zustand übergeht.**  
   
-## Siehe auch  
- [Workflowüberwachung](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md)   
- [Überwachung mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201273)   
+## <a name="see-also"></a>Siehe auch  
+ [Workflowüberwachung](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ [Windows Server App Fabric-Überwachung](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [Überwachen von Anwendungen mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)

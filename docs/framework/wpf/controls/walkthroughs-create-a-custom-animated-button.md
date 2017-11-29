@@ -1,48 +1,51 @@
 ---
-title: "Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfl&#228;che | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Animation, Schaltflächen"
-  - "Schaltflächen"
-  - "Benutzerdefinierte animierte Schaltflächen"
+title: "Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom animated buttons [WPF]
+- buttons [WPF]
+- animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfl&#228;che
-Wie der Name andeutet, ist [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] gut geeignet, um Kunden vielfältige Darstellungsmöglichkeiten zu bieten.  In diesen exemplarischen Vorgehensweisen wird Ihnen erläutert, wie das Aussehen und das Verhalten einer Schaltfläche \(einschließlich Animationen\) angepasst werden.  Diese Anpassung geschieht mit einem Stil und einer Vorlage, damit Sie diese benutzerdefinierte Schaltfläche problemlos für alle Schaltflächen in Ihrer Anwendung übernehmen können.  Die folgende Abbildung zeigt die benutzerdefinierte Schaltfläche, die Sie erstellen.  
+# <a name="walkthroughs-create-a-custom-animated-button"></a>Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche
+Wie der Name andeutet, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] eignet sich hervorragend für umfangreiche Erfahrungen Kunden zu stellen. In diesen exemplarischen Vorgehensweisen zeigen, wie das Aussehen und Verhalten einer Schaltfläche (einschließlich Animationen) anpassen. Diese Anpassung erfolgt über einen Stil und eine Vorlage, damit Sie diese benutzerdefinierte Schaltfläche leicht auf alle Schaltflächen in der Anwendung anwenden können. Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  
   
- ![Die benutzerdefinierte Schaltfläche, die Sie erstellen werden](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ ![Die benutzerdefinierte Schaltfläche, die Sie erstellen](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "Custom_button_blend_Intro")  
   
- Die Vektorgrafiken für die Darstellung der Schaltfläche werden mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] erstellt.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ähnelt HTML, ist jedoch leistungsfähiger und erweiterbar.  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kann über Microsoft Visual Studio oder den Editor manuell eingegeben werden. Sie können auch ein visuelles Entwurfstool wie z. B. Microsoft Expression Blend verwenden.  Die Funktionsweise von Expression Blend besteht darin, dass zugrunde liegender [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Code erstellt wird. Deshalb erstellen beide Methoden die gleichen Grafiken.  
+ Die Vektorgrafiken für die Darstellung der Schaltfläche Erstellung erfolgt mithilfe von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ähnelt HTML leistungsfähiger und erweiterbar ist. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]über Microsoft Visual Studio oder Editor manuell eingegeben werden können, oder können Sie visuelle Design-Tool wie Microsoft Expression Blend. Expression Blend funktioniert durch das Erstellen der zugrunde liegenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code, sodass beide Methoden die gleichen Grafiken erstellen.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer Schaltfläche mit Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- Veranschaulicht, wie Schaltflächen mit benutzerdefiniertem Verhalten erstellt werden, indem die Designerfeatures von Expression Blend verwendet werden.  
+ Veranschaulicht, wie Schaltflächen mit benutzerdefiniertem Verhalten mithilfe der Designer-Funktionen von Expression Blend.  
   
  [Erstellen einer Schaltfläche mit XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- Veranschaulicht, wie Schaltflächen mit benutzerdefiniertem Verhalten erstellt werden, indem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] verwendet werden.  
+ Veranschaulicht das Erstellen von Schaltflächen mit benutzerdefiniertem Verhalten mithilfe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- Beschreibt, wie Stile und Vorlagen verwendet werden können, um die Darstellung und das Verhalten von Steuerelementen zu bestimmen.  
+ Beschreibt, wie Stile und Vorlagen verwendet werden können, um das Aussehen und Verhalten von Steuerelementen zu bestimmen.  
   
  [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- Beschreibt, wie Objekte mit dem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]\-Animations\- und Zeitsteuerungssystem animiert werden können.  
+ Beschreibt, wie Objekte mit animiert werden können die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Animations- und Zeitsteuerungssystems.  
   
  [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- Beschreibt, wie Pinselobjekte verwendet werden, um mit Volltonfarben, linearen Farbverläufen und radialen Farbverläufen zu zeichnen.  
+ Beschreibt das Pinselobjekte verwenden, um mit Volltonfarben, linearer Farbverläufe und radialen Farbverläufen zu zeichnen.  
   
  [Übersicht über Bitmapeffekte](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
- Beschreibt die von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützten Bitmapeffekte und erklärt, wie sie angewendet werden.
+ Beschreibt die Bitmapeffekte von unterstützten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und erläutert, wie sie angewendet.

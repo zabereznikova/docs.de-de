@@ -1,69 +1,69 @@
 ---
-title: "&#220;bersicht &#252;ber das WebBrowser-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WebBrowser"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Webseiten, Anzeigen in Anwendungen"
-  - "WebBrowser-Steuerelement [Windows Forms], Informationen über"
+title: "Übersicht über das WebBrowser-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: WebBrowser
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], about
+- Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das WebBrowser-Steuerelement
-Das <xref:System.Windows.Forms.WebBrowser>\-Steuerelement stellt einen verwalteten Wrapper für das WebBrowser\-ActiveX\-Steuerelement bereit.  Mit dem verwalteten Wrapper können Sie Webseiten in Windows Forms\-Clientanwendungen anzeigen.  Mit dem <xref:System.Windows.Forms.WebBrowser>\-Steuerelement können Sie die Webbrowserfunktionalität von Internet Explorer in der Anwendung duplizieren oder die Standardfunktionalität von Internet Explorer deaktivieren und das Steuerelement als einfachen HTML\-Dokument\-Viewer verwenden.  Mit diesem Steuerelement können Sie außerdem einem Formular DHTML\-basierte Benutzerschnittstellenelemente hinzufügen und negieren, dass sie im <xref:System.Windows.Forms.WebBrowser>\-Steuerelement integriert sind.  Diese Vorgehensweise ermöglicht die reibungslose Kombination von Websteuerelementen und Windows Forms\-Steuerelementen in einer Anwendung.  
+# <a name="webbrowser-control-overview"></a>Übersicht über das WebBrowser-Steuerelement
+Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwalteten Wrapper für das WebBrowser ActiveX-Steuerelement. Der verwaltete Wrapper können Sie die Anzeige von Webseiten in Windows Forms-Clientanwendungen. Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement in Internet Explorer Webbrowserfunktionalität in Ihre Anwendung oder an Sie duplizieren Standardfunktionalität von Internet Explorer deaktivieren und das Steuerelement als einfache HTML-Dokument-Viewer verwenden kann. Sie können auch das Steuerelement dem Formular DHTML-basierter Elemente der Benutzeroberfläche hinzu, und blenden die Tatsache, dass die in dem sie gehostet werden die <xref:System.Windows.Forms.WebBrowser> Steuerelement. Dieser Ansatz können Sie nahtlos Websteuerelemente mit Windows Forms-Steuerelemente in einer einzigen Anwendung kombiniert.  
   
-## Häufig verwendete Eigenschaften, Methoden und Ereignisse  
- Das <xref:System.Windows.Forms.WebBrowser>\-Steuerelement verfügt über verschiedene Eigenschaften, Methoden und Ereignisse für die Implementierung von Internet Explorer\-Steuerelementen.  So können Sie z. B. mit der `Navigate`\-Methode eine Adressleiste implementieren, und mit den Methoden `GoBack`, `GoForward`, `Stop` und `Refresh` können Sie Navigationsschaltflächen in einer Symbolleiste implementieren.  Durch Behandlung des `Navigated`\-Ereignisses können Sie die Adressleiste mit dem Wert der `Url`\-Eigenschaft und die Titelleiste mit dem Wert der `DocumentTitle`\-Eigenschaft aktualisieren.  
+## <a name="frequently-used-properties-methods-and-events"></a>Häufig verwendete Eigenschaften, Methoden und Ereignisse  
+ Die <xref:System.Windows.Forms.WebBrowser> Steuerelement verfügt über verschiedene Eigenschaften, Methoden und Ereignisse, die Sie verwenden können, finden in Internet Explorer Kontrollen zu implementieren. Können z. B. die `Navigate` Methode, um eine Adressleiste implementieren und die `GoBack`, `GoForward`, `Stop`, und `Refresh` Methoden, die auf einer Symbolleiste Navigationsschaltflächen implementiert. Sie behandeln können die `Navigated` Ereignis beim Aktualisieren der Adressleiste mit dem Wert von der `Url` -Eigenschaft und die Titelleiste mit dem Wert von der `DocumentTitle` Eigenschaft.  
   
- Wenn Sie in der Anwendung einen eigenen Seiteninhalt erstellen möchten, können Sie die `DocumentText`\-Eigenschaft festlegen.  Falls Sie mit dem HTML\-Dokumentenobjektmodell \(DOM\) vertraut sind, können Sie den Inhalt der aktuellen Webseite auch mit der `Document`\-Eigenschaft bearbeiten.  Mit dieser Eigenschaft können Sie Dokumente im Speicher ablegen und bearbeiten, anstatt zwischen Dateien zu navigieren.  
+ Wenn Sie einen eigene Seiteninhalt innerhalb der Anwendung generieren möchten, legen Sie die `DocumentText` Eigenschaft. Wenn Sie mit der HTML-Dokumentobjektmodell (DOM) vertraut sind, können Sie auch den Inhalt der aktuellen Webseite durch Bearbeiten der `Document` Eigenschaft. Sie können diese Eigenschaft speichern und Ändern von Dokumenten im Arbeitsspeicher anstelle von Navigieren zwischen Dateien.  
   
- Mit der `Document`\-Eigenschaft können Sie auch im Webseitenskriptcode implementierte Methoden von Ihrem Clientanwendungscode aus aufrufen.  Um mithilfe des Skriptcodes auf den Clientanwendungscode zuzugreifen, legen Sie die `ObjectForScripting`\-Eigenschaft fest.  Der Skriptcode kann auf das angegebene Objekt als `window.external`\-Objekt zugreifen.  
+ Die `Document` Eigenschaft auch, können Sie in der Webseite Skriptcode aus Ihrem Clientanwendungscode implementierte Methoden aufrufen. Legen Sie den Zugriff auf Ihrem Clientanwendungscode aus Ihrem Skriptcode, den `ObjectForScripting` Eigenschaft. Das Objekt, das Sie angeben, kann zugegriffen werden, durch den Skriptcode als das `window.external` Objekt.  
   
 |Name|Beschreibung|  
-|----------|------------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A>\-Eigenschaft|Ruft ein Objekt ab, das einen verwalteten Zugriff auf das HTML\-Dokumentenobjektmodell \(DOM\) der aktuellen Webseite ermöglicht.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>\-Ereignis|Tritt auf, wenn eine Webseite vollständig geladen ist.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A>\-Eigenschaft|Ruft den HTML\-Inhalt der aktuellen Webseite ab bzw. legt ihn fest.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>\-Eigenschaft|Ruft den Titel der aktuellen Webseite ab.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A>\-Methode|Navigiert im Navigationsverlauf zur vorherigen Seite.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A>\-Methode|Navigiert im Navigationsverlauf zur nächsten Seite.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A>\-Methode|Navigiert zur angegebenen URL.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating>\-Ereignis|Tritt vor dem Beginn der Navigation auf und ermöglicht den Abbruch der Aktion.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>\-Eigenschaft|Ruft ein Objekt ab bzw. legt es fest, das vom Webseitenskriptcode für die Kommunikation mit der Anwendung verwendet werden kann.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A>\-Methode|Druckt die aktuelle Webseite.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A>\-Methode|Lädt die aktuelle Webseite erneut.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A>\-Methode|Hält die aktuelle Navigation an und beendet dynamische Seitenelemente wie Sound und Animation.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A>\-Eigenschaft|Ruft die URL der aktuellen Webseite ab bzw. legt sie fest.  Mit der Festlegung dieser Eigenschaft wird das Steuerelement zur neuen URL navigiert.|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.WebBrowser.Document%2A>-Eigenschaft|Ruft ein Objekt, das bietet verwalteten Zugriff auf das HTML-Dokumentobjektmodell (DOM) der aktuellen Webseite ab.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>-Ereignis|Tritt auf, wenn das Laden eine Webseite abgeschlossen ist.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A>-Eigenschaft|Abrufen oder Festlegen der Inhalt der aktuellen Webseite den HTML-Code.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>-Eigenschaft|Ruft den Titel der aktuellen Webseite ab.|  
+|<xref:System.Windows.Forms.WebBrowser.GoBack%2A>-Methode|Wechselt zur vorherigen Seite im Verlauf.|  
+|<xref:System.Windows.Forms.WebBrowser.GoForward%2A>-Methode|Navigiert zur nächsten Seite im Verlauf.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigate%2A>-Methode|Navigiert zur angegebenen URL.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating>-Ereignis|Tritt vor dem Beginn der Navigation Aktivieren der Aktion abgebrochen werden.|  
+|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>-Eigenschaft|Ruft ab oder legt ein Objekt, das Webseitenskriptcode für die Kommunikation mit Ihrer Anwendung verwenden können.|  
+|<xref:System.Windows.Forms.WebBrowser.Print%2A>-Methode|Druckt die aktuelle Webseite an.|  
+|<xref:System.Windows.Forms.WebBrowser.Refresh%2A>-Methode|Lädt die aktuelle Webseite an.|  
+|<xref:System.Windows.Forms.WebBrowser.Stop%2A>-Methode|Hält die aktuelle Navigation und beendet dynamische Seitenelemente wie Sounds und Animation.|  
+|<xref:System.Windows.Forms.WebBrowser.Url%2A>-Eigenschaft|Ruft ab oder legt die URL der aktuellen Webseite fest. Durch Festlegen dieser Eigenschaft wird das Steuerelement an die neue URL navigiert.|  
   
-## Siehe auch  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>   
- <xref:System.Windows.Forms.WebBrowserEncryptionLevel>   
- <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>   
- <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>   
- <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>   
- <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserReadyState>   
- <xref:System.Windows.Forms.WebBrowserRefreshOption>   
- [Gewusst wie: Navigieren zu einem URL mit dem WebBrowser\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)   
- [Gewusst wie: Drucken mit einem WebBrowser\-Steuerelement](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)   
- [Gewusst wie: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms\-Anwendung](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)   
- [Gewusst wie: Erstellen eines HTML\-Dokumentviewers in einer Windows Forms\-Anwendung](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)   
- [Gewusst wie: Implementieren der bidirektionalen Kommunikation zwischen DHTML\-Code und Clientanwendungscode](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)   
- [WebBrowser\-Sicherheit](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserEncryptionLevel>  
+ <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserReadyState>  
+ <xref:System.Windows.Forms.WebBrowserRefreshOption>  
+ [Gewusst wie: Navigieren zu einer URL mit dem WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Gewusst wie: Drucken mit einem WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Gewusst wie: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Gewusst wie: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [WebBrowser-Sicherheit](../../../../docs/framework/winforms/controls/webbrowser-security.md)

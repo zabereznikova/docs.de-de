@@ -1,82 +1,84 @@
 ---
-title: "How to: Disable Adding and Deleting DataRepeater Items (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, disabling delete"
-  - "DataRepeater, disabling add"
+title: "Gewusst wie: Deaktivieren des Hinzufügens und Löschens von DataRepeater-Elementen (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, disabling delete
+- DataRepeater, disabling add
 ms.assetid: 298d8f60-ddfe-4361-ab66-cf76d0df5220
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b15fe6fb5190855126ffa60ac488aaa74ad9b5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Disable Adding and Deleting DataRepeater Items (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Benutzer können standardmäßig Elemente in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement hinzufügen und löschen.  Wenn <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> den Fokus hat, können Benutzer durch Drücken von STRG\+N ein neues Element hinzufügen, oder sie verwenden die Schaltfläche **AddNewItem** im <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement.  Wenn <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> den Fokus hat, können Benutzer durch Drücken der ENTF\-TASTE ein Element löschen, oder sie verwenden die Schaltfläche **DeleteItem** im <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement.  
+# <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>Gewusst wie: Deaktivieren des Hinzufügens und Löschens von DataRepeater-Elementen (Visual Studio)
+Standardmäßig können Benutzer hinzufügen und Löschen von Elementen in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement. Benutzer können ein neues Element hinzufügen, indem Sie die Tastenkombination STRG + N beim eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> den Fokus hat, oder durch Klicken auf die **AddNewItem** Schaltfläche auf der <xref:System.Windows.Forms.BindingNavigator> Steuerelement. Benutzer können ein Element löschen, durch Drücken von löschen, wenn eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> den Fokus hat, oder durch Klicken auf die **DeleteItem** auf die Schaltfläche der <xref:System.Windows.Forms.BindingNavigator> Steuerelement.  
   
- Sie können das Hinzufügen und\/oder Löschen zur Entwurfszeit oder zur Laufzeit deaktivieren.  
+ Sie können die hinzufügen und/oder löschen zur Entwurfszeit oder zur Laufzeit deaktivieren.  
   
-### So deaktivieren Sie das Hinzufügen und Löschen zur Entwurfszeit  
+### <a name="to-disable-adding-and-deleting-at-design-time"></a>Zum Deaktivieren des Hinzufügens und zur Entwurfszeit löschen  
   
-1.  Wählen Sie im Windows Forms\-Designer das <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement aus.  
+1.  Wählen Sie in der Windows Forms-Designer die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.  
   
     > [!NOTE]
-    >  Wählen Sie den unteren Bereich des Steuerelements aus.  Wenn Sie den Elementvorlagenbereich auswählen, werden andere Eigenschaften angezeigt.  
+    >  Sie müssen den unteren Bereich des Steuerelements auswählen. Wenn Sie den Abschnitt "Element" Vorlage auswählen, wird eine andere Gruppe von Eigenschaften angezeigt.  
   
-2.  Legen Sie im Eigenschaftenfenster die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToAddItems%2A>\-Eigenschaft auf **False** fest.  
+2.  Legen Sie im Fenster Eigenschaften die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToAddItems%2A> Eigenschaft **"false"**.  
   
-3.  Legen Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToDeleteItems%2A>\-Eigenschaft auf **False** fest.  
+3.  Legen Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToDeleteItems%2A> Eigenschaft **"false"**.  
   
-4.  Wählen Sie im Windows Forms\-Designer das <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement aus, und klicken Sie anschließend auf die Schaltfläche **AddNewItem** \(Schaltfläche mit dem Pluszeichen\).  
+4.  Wählen Sie in der Windows Forms-Designer die <xref:System.Windows.Forms.BindingNavigator> steuern, und klicken Sie dann auf die **AddNewItem** Schaltfläche (die Schaltfläche mit dem Pluszeichen).  
   
-5.  Legen Sie im Eigenschaftenfenster die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A>\-Eigenschaft auf **False** fest.  
+5.  Legen Sie im Fenster Eigenschaften die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> Eigenschaft **"false"**.  
   
-6.  Wählen Sie im Windows Forms\-Designer das <xref:System.Windows.Forms.BindingNavigator>\-Steuerelement aus, und klicken Sie anschließend auf die Schaltfläche **DeleteItem** \(Schaltfläche mit dem roten X\).  
+6.  Wählen Sie in der Windows Forms-Designer die <xref:System.Windows.Forms.BindingNavigator> steuern, und klicken Sie dann auf die **DeleteItem** Schaltfläche (die Schaltfläche mit einem roten X darauf).  
   
-7.  Legen Sie im Eigenschaftenfenster die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A>\-Eigenschaft auf **False** fest.  
+7.  Legen Sie im Fenster Eigenschaften die <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> Eigenschaft **"false"**.  
   
-8.  Wählen Sie in der Komponentenleiste die <xref:System.Windows.Forms.BindingSource> aus, an die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> gebunden ist.  
+8.  Wählen Sie auf der Komponentenleiste, die <xref:System.Windows.Forms.BindingSource> , der die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> gebunden ist.  
   
-9. Legen Sie im Eigenschaftenfenster die <xref:System.Windows.Forms.BindingSource.AllowNew%2A>\-Eigenschaft auf **False** fest.  
+9. Legen Sie im Fenster Eigenschaften die <xref:System.Windows.Forms.BindingSource.AllowNew%2A> Eigenschaft **"false"**.  
   
-10. Doppelklicken Sie im Windows Forms\-Designer auf die Schaltfläche **DeleteItem**, um den Code\-Editor zu öffnen.  
+10. Doppelklicken Sie in Windows Forms-Designer auf die **DeleteItem** Schaltfläche, um den Code-Editor zu öffnen.  
   
-11. Wählen Sie in der Dropdownliste **Ereignisse** das `BindingNavigatorDeleteItem_EnabledChanged`\-Ereignis aus.  
+11. Wählen Sie in der Dropdownliste aus der Ereignisliste die `BindingNavigatorDeleteItem_EnabledChanged` Ereignis.  
   
-12. Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged`\-Ereignishandler folgenden Code hinzu:  
+12. Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged` -Ereignishandler folgenden Code hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
-    >  Dieser Schritt ist erforderlich, da <xref:System.Windows.Forms.BindingSource> die **DeleteItem**\-Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  
+    >  Dieser Schritt ist erforderlich, da die <xref:System.Windows.Forms.BindingSource> die **DeleteItem** -Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  
   
-### So deaktivieren Sie das Hinzufügen und Löschen zur Laufzeit  
+### <a name="to-disable-adding-and-deleting-at-run-time"></a>So deaktivieren Sie hinzufügen und Löschen von zur Laufzeit  
   
-1.  Doppelklicken Sie im Windows Forms\-Designer auf das Formular, um den Code\-Editor zu öffnen.  
+1.  Doppelklicken Sie im Windows Forms-Designer auf das Formular, um den Code-Editor zu öffnen.  
   
-2.  Fügen Sie folgenden Code zum `Form_Load`\-Ereignis hinzu:  
+2.  Fügen Sie dem `Form_Load` -Ereignis folgenden Code hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.vb)]  
   
-3.  Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged`\-Ereignishandler folgenden Code hinzu:  
+3.  Fügen Sie dem `BindingNavigatorDeleteItem_EnabledChanged` -Ereignishandler folgenden Code hinzu:  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
-    >  Dieser Schritt ist erforderlich, da <xref:System.Windows.Forms.BindingSource> die **DeleteItem**\-Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  
+    >  Dieser Schritt ist erforderlich, da die <xref:System.Windows.Forms.BindingSource> die **DeleteItem** -Schaltfläche bei jeder Änderung des aktuellen Datensatzes aktiviert.  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Troubleshooting the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Problembehandlung beim DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

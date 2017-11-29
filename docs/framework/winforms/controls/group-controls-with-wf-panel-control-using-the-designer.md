@@ -1,44 +1,45 @@
 ---
-title: "Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Gruppieren"
-  - "Panel-Steuerelement [Windows Forms], Gruppieren von Steuerelementen"
-  - "Windows Forms-Steuerelemente, Gruppieren"
+title: 'Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Panel control [Windows Forms], grouping controls
+- controls [Windows Forms], grouping
+- Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer
-<xref:System.Windows.Forms.Panel>\-Steuerelemente in Windows Forms werden zur Gruppierung anderer Steuerelemente verwendet.  Drei Gründe sprechen für das Gruppieren von Steuerelementen.  Erstens sorgt die visuelle Gruppierung zusammengehöriger Formularelemente für eine übersichtliche Benutzeroberfläche, zweitens können Elemente wie Optionsfelder programmgesteuert gruppiert werden und drittens können die Steuerelemente zur Entwurfszeit als Einheit verschoben werden.  
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Gewusst wie: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer
+Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente. Es gibt drei Gründe zum Gruppieren von Steuerelementen. Gruppieren von verwandten Form-Elemente für eine klare Benutzeroberfläche visual ist. Ein weiterer Vorteil ist die programmgesteuerte Gruppierung von Optionsfeldern z. B.; die letzte ist für die Steuerelemente zur Entwurfszeit als Einheit verschieben.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So erstellen Sie eine Gruppe von Steuerelementen  
+### <a name="to-create-a-group-of-controls"></a>So erstellen eine Gruppe von Steuerelementen  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.Panel>\-Steuerelement von der Registerkarte **Windows Forms** der Toolbox in ein Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.Panel> -Steuerelement aus der **Windows Forms** Registerkarte der Toolbox auf das Formular.  
   
-2.  Fügen Sie dem Auswahlbereich weitere Steuerelemente hinzu, indem Sie diese im Auswahlbereich zeichnen.  
+2.  Fügen Sie weitere Steuerelemente, wenn der Bereich, und Zeichnen im Auswahlbereich aus.  
   
-     Um bestehende Steuerelemente in einen Auswahlbereich aufzunehmen, wählen Sie alle Steuerelemente aus, schneiden sie aus und kopieren sie in die Zwischenablage. Wählen Sie dann das <xref:System.Windows.Forms.Panel>\-Steuerelement aus, und fügen Sie es in den Auswahlbereich ein.  Sie können Steuerelemente auch in den Auswahlbereich ziehen.  
+     Wenn Sie vorhandene Steuerelemente verfügen, die in einem Bereich eingeschlossen werden sollen, können Sie wählen Sie alle Steuerelemente, Ausschneiden in die Zwischenablage, wählen Sie die <xref:System.Windows.Forms.Panel> steuern, und fügen Sie sie in der Systemsteuerung. Sie können auch in den Bereich ziehen.  
   
-3.  \(Optional\) Um einen Auswahlbereich mit einem Rahmen zu versehen, definieren Sie seine <xref:System.Windows.Forms.BorderStyle>\-Eigenschaft.  Es gibt drei Auswahlmöglichkeiten: <xref:System.Windows.Forms.BorderStyle>, <xref:System.Windows.Forms.BorderStyle> und <xref:System.Windows.Forms.BorderStyle>.  
+3.  (Optional) Wenn Sie ein Panel einen Rahmen hinzufügen möchten, legen Sie dessen <xref:System.Windows.Forms.BorderStyle> Eigenschaft. Es gibt drei Möglichkeiten zur Auswahl: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, und <xref:System.Windows.Forms.BorderStyle.None>.  
   
-## Siehe auch  
- [Panel\-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)   
- [Übersicht über das Panel\-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Übersicht über das Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  [Gewusst wie: Festlegen des Hintergrunds eines Bereichs](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

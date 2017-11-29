@@ -1,40 +1,40 @@
 ---
-title: "&#220;bersicht &#252;ber das StatusBar-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StatusBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Statusleisten"
-  - "StatusBar-Steuerelement [Windows Forms], Informationen über das StatusBar-Steuerelement"
+title: "Übersicht über das StatusBar-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StatusBar
+helpviewer_keywords:
+- StatusBar control [Windows Forms], about StatusBar control
+- status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c26463fae5beca23026a71dd83b19bf3eb52875
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das StatusBar-Steuerelement (Windows&#160;Forms)
+# <a name="statusbar-control-overview-windows-forms"></a>Übersicht über das StatusBar-Steuerelement (Windows Forms)
 > [!IMPORTANT]
->  Obwohl die Steuerelemente <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> durch die Steuerelemente <xref:System.Windows.Forms.StatusStrip> und <xref:System.Windows.Forms.ToolStripStatusLabel> ersetzt und funktionell erweitert werden, werden die Steuerelemente <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+>  Die <xref:System.Windows.Forms.StatusStrip> und <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelemente ersetzen und Funktionen hinzufügen der <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> steuert; allerdings die <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> Steuerelemente werden für die Abwärtskompatibilität und für zukünftige Verwendung beibehalten, wenn Sie Wählen Sie aus.  
   
- Das Windows Forms [StatusBar\-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) wird in Formularen als \(normalerweise unten im Fenster angezeigter\) Bereich verwendet, in dem Anwendungen verschiedene Arten von Statusinformationen ausgeben können.  <xref:System.Windows.Forms.StatusBar>\-Steuerelemente können Statusleistenbereiche mit Text oder Symbolen enthalten, die den Status angeben. Sie können auch eine Reihe von Symbolen in einer Animation enthalten, die anzeigen, dass ein Prozess ausgeführt wird, wie beispielsweise die Animation beim Speichern eines Dokuments in [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)].  
+ Windows Forms [StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) wird auf Formularen als Bereich, in der Regel am unteren Rand eines Fensters, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann angezeigt verwendet. <xref:System.Windows.Forms.StatusBar>Steuerelemente können Status Statusleistenbereiche mit Text enthalten, Text oder Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. z. B. [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] , der angibt, das das Dokument gespeichert wird.  
   
-## Verwenden des StatusBar\-Steuerelements  
- Der Internet Explorer zeigt in der Statusleiste die URL einer Seite an, wenn der Mauszeiger über Links bewegt wird. [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] zeigt Informationen über die Seitenzahl, die Abschnittsnummer und die Bearbeitungsmodi \(z. B. Überschreiben und Änderungsverfolgung\) an, und [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] gibt in der Statusleiste kontextabhängige Informationen an. So werden Sie z. B. darüber informiert, wie andockbare Fenster entweder gedockt oder nicht gedockt verwendet werden.  
+## <a name="using-the-statusbar-control"></a>Verwenden das StatusBar-Steuerelement  
+ Internet Explorer verwendet eine Statusleiste, um die URL einer Seite anzugeben, wenn die Maus über den Link wird ein; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] erhalten Sie Informationen zu Seite Speicherort, den Abschnitt Speicherort und Bearbeitungsmodi z. B. Überschreibmodus und revisionsnachverfolgung; und [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] verwendet die Statusleiste, z. B. mitteilen, wie die andockbare bearbeitet gedockt von Windows als angedockt oder unverankert.  
   
- Sie können eine einzelne Meldung auf der Statusleiste anzeigen, indem Sie für die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>\-Eigenschaft `false` \(die Standardeinstellung\) festlegen und die <xref:System.Windows.Forms.StatusBar.Text%2A>\-Eigenschaft der Statusleiste auf den Text festlegen, der in der Statusleiste angezeigt werden soll.  Die Statusleiste kann in Bereiche unterteilt werden, um mehrere Arten von Informationen anzuzeigen. Legen Sie dazu für die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>\-Eigenschaft `true` fest, und verwenden Sie die <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>\-Methode von <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ Sie können eine einzelne Nachricht auf der Statusleiste anzeigen, indem Sie die Einstellung der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft, um `false` (Standard) und die Einstellung der <xref:System.Windows.Forms.StatusBar.Text%2A> Eigenschaft der Statusleiste auf den Text in der Statusleiste angezeigt werden sollen. Bereiche zum Anzeigen von mehr als eine Art von Informationen durch Festlegen die Statusleiste unterteilen der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft `true` und mithilfe der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Gewusst wie: Bestimmen, auf welchen Bereich im StatusBar\-Steuerelement in Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)

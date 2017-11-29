@@ -1,103 +1,107 @@
 ---
-title: "Exemplarische Vorgehensweise: Behandeln von Fehlern, die w&#228;hrend der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Dateneingabe, Fehlerbehandlung"
-  - "Datenblätter, Fehlerbehandlung"
-  - "DataGridView-Steuerelement [Windows Forms], Fehlerbehandlung"
-  - "Fehlerbehandlung, Dateneingabe"
-  - "Fehlerbehandlung, DataGridView-Steuerelement"
-  - "Exemplarische Vorgehensweisen [Windows Forms], DataGridView-Steuerelement"
+title: "Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- error handling [Windows Forms], dataGridView control
+- data grids [Windows Forms], error handling
+- DataGridView control [Windows Forms], error handling
+- data entry [Windows Forms], error handling
+- error handling [Windows Forms], data entry
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c602af6799da57fec904c87da7bed77c0040eff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Behandeln von Fehlern, die w&#228;hrend der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten
-Das Behandeln von Fehlern, die vom zugrunde liegenden Datenspeicher gemeldet werden, ist für ein Datenerfassungsprogramm unverzichtbar.  Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement in Windows Forms unterstützt diesen Aspekt mithilfe des <xref:System.Windows.Forms.DataGridView.DataError>\-Ereignisses, das ausgelöst wird, wenn vom Datenspeicher die Verletzung einer Einschränkung oder Geschäftsregel festgestellt wird.  
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten
+Behandeln von Fehlern aus dem zugrunde liegenden Datenspeicher ist ein erforderliches Feature für die eine Dateneingabe Anwendung. Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement macht dies einfach, verfügbar machen, die <xref:System.Windows.Forms.DataGridView.DataError> Ereignis, das ausgelöst wird, wenn der Datenspeicher Verletzung einer Einschränkung oder Geschäftsregel ermittelt werden.  
   
- In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der Tabelle `Customers` in der Beispieldatenbank Northwind ab und zeigen diese in einem <xref:System.Windows.Forms.DataGridView>\-Steuerelement an.  Wenn in einer neuen oder bearbeiteten vorhandenen Zeile ein doppelter Wert `CustomerID` gefunden wird, tritt das <xref:System.Windows.Forms.DataGridView.DataError>\-Ereignis auf. Das Ereignis wird durch die Anzeige von <xref:System.Windows.Forms.MessageBox> behandelt, in dem die Ausnahme beschrieben wird.  
+ In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` -Tabelle in der Northwind-Beispieldatenbank und angezeigt werden können, die in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn ein Duplikat `CustomerID` Wert wird erkannt, in eine neue Zeile oder eine bearbeitete vorhandene Zeile der <xref:System.Windows.Forms.DataGridView.DataError> Ereignis erfolgt, wird durch das Anzeigen von behandelt werden eine <xref:System.Windows.Forms.MessageBox> , die die Ausnahme beschreibt.  
   
- Informationen zum Kopieren des in diesem Thema enthaltenen Codes als einzelne Auflistung finden Sie unter [Gewusst wie: Behandeln von Fehlern, die während der Dateneingabe im DataGridView\-Steuerelement in Windows Forms auftreten](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+ Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [wie: Behandeln Fehler, dass auftreten, während der Dateneingabe im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
-## Vorbereitungsmaßnahmen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Zugriff auf einen Server mit der SQL Server\-Beispieldatenbank Northwind  
+-   Zugriff auf einen Server, der die Northwind-SQL Server-Beispieldatenbank ist.  
   
-## Erstellen des Formulars  
+## <a name="creating-the-form"></a>Erstellen des Formulars  
   
-#### So behandeln Sie Dateneingabefehler im DataGridView\-Steuerelement  
+#### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>Zum Behandeln von Fehlern der Dateneingabe im DataGridView-Steuerelement  
   
-1.  Erstellen Sie eine Klasse, die von <xref:System.Windows.Forms.Form> abgeleitet ist und die ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement sowie eine <xref:System.Windows.Forms.BindingSource>\-Komponente enthält.  
+1.  Erstellen Sie eine Klasse, die abgeleitet <xref:System.Windows.Forms.Form> und enthält eine <xref:System.Windows.Forms.DataGridView> Steuerelement und ein <xref:System.Windows.Forms.BindingSource> Komponente.  
   
-     Im folgenden Codebeispiel werden grundlegende Initialisierungsfeatures und eine `Main`\-Methode dargestellt.  
+     Das folgende Codebeispiel stellt die grundlegende Initialisierung bereit und enthält eine `Main` Methode.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
   
-2.  Implementieren Sie in der Klassendefinition des Formulars eine Methode zum Behandeln der Verbindungsdetails für die Datenbank.  
+2.  Implementieren Sie eine Methode, in dem Formular Klassendefinition für die Behandlung der Details zum Herstellen einer Verbindung mit der Datenbank.  
   
-     In diesem Codebeispiel wird eine  `GetData` \-Methode verwendet, die ein gefülltes <xref:System.Data.DataTable>\-Objekt zurückgibt.  Die `connectionString`\-Variable muss auf einen Wert festgelegt werden, der für Ihre Datenbank geeignet ist.  
+     Dieses Codebeispiel verwendet eine `GetData` Methode, die ein aufgefülltes zurückgibt <xref:System.Data.DataTable> Objekt. Achten Sie darauf, dass Sie legen die `connectionString` -Variable auf einen Wert, der für Ihre Datenbank geeignet ist.  
   
     > [!IMPORTANT]
-    >  Das Speichern vertraulicher Informationen, beispielsweise Kennwörter, innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen.  Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows\-Authentifizierung \(wird auch als integrierte Sicherheit bezeichnet\) sicherer steuern.  Weitere Informationen finden Sie unter [Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+    >  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
   
-3.  Implementieren Sie einen Handler für das <xref:System.Windows.Forms.Form.Load>\-Ereignis des Formulars, durch das <xref:System.Windows.Forms.DataGridView> und <xref:System.Windows.Forms.BindingSource> initialisiert und die Datenbindung eingerichtet werden.  
+3.  Implementieren Sie einen Handler für Ihr Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das initialisiert die <xref:System.Windows.Forms.DataGridView> und <xref:System.Windows.Forms.BindingSource> und dem Datenbindung eingerichtet.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
   
-4.  Behandeln Sie das <xref:System.Windows.Forms.DataGridView.DataError>\-Ereignis in <xref:System.Windows.Forms.DataGridView>.  
+4.  Behandeln der <xref:System.Windows.Forms.DataGridView.DataError> Ereignis auf der <xref:System.Windows.Forms.DataGridView>.  
   
-     Wenn der Kontext für den Fehler einem Commitvorgang entspricht, zeigen Sie den Fehler in <xref:System.Windows.Forms.MessageBox> an.  
+     Wenn der Kontext für den Fehler einem Commitvorgang ist, zeigen Sie den Fehler in einem <xref:System.Windows.Forms.MessageBox>.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]  
   
-## Testen der Anwendung  
- Sie können das Formular jetzt testen und prüfen, ob es sich wie wie erwartet verhält.  
+## <a name="testing-the-application"></a>Testen der Anwendung  
+ Sie können das Formular jetzt testen, um sicherzustellen, dass das Verhalten wie erwartet ausfällt.  
   
-#### So testen Sie das Formular  
+#### <a name="to-test-the-form"></a>So testen Sie das Formular  
   
 -   Drücken Sie F5, um die Anwendung auszuführen.  
   
-     Es wird ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement angezeigt, das mit Daten aus der Tabelle Customers gefüllt ist.  Wenn Sie für `CustomerID` einen doppelten Wert eingeben und ein Commit für den Bearbeitungsvorgang ausführen, wird der Zellwert automatisch wieder zurückversetzt und <xref:System.Windows.Forms.MessageBox> mit dem Dateneingabefehler angezeigt.  
+     Sehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit Daten aus der Customers-Tabelle gefüllt. Wenn Sie einen doppelten Wert für eingeben `CustomerID` und commit bearbeiten, der Wert der Zelle wird automatisch zurückgesetzt, und sehen Sie eine <xref:System.Windows.Forms.MessageBox> , die die Dateneingabefehler anzeigt.  
   
-## Nächste Schritte  
- Anhand dieser Anwendung erhalten Sie einen grundlegenden Einblick in die Fähigkeiten des <xref:System.Windows.Forms.DataGridView>\-Steuerelements.  Sie können die Darstellung und das Verhalten des <xref:System.Windows.Forms.DataGridView>\-Steuerelements auf vielfältige Weisen anpassen:  
+## <a name="next-steps"></a>Nächste Schritte  
+ Diese Anwendung erhalten Sie einen grundlegenden Überblick der <xref:System.Windows.Forms.DataGridView> Funktionen des Steuerelements. Sie können das Aussehen und Verhalten der Anpassen der <xref:System.Windows.Forms.DataGridView> Steuerelements auf unterschiedliche Weise:  
   
--   Ändern von Rahmenart und Headerstil.  Weitere Informationen finden Sie unter [Gewusst wie: Ändern des Rahmen\- und Rasterlinienstils im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
+-   Ändern von Formaten für Rahmen und Header. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern der Rahmen- und Rasterlinienstils im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Aktivieren oder Beschränken von Benutzereingaben im <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  Weitere Informationen finden Sie unter [Gewusst wie: Verhindern, das Zeilen im DataGridView\-Steuerelement in Windows Forms hinzugefügt und gelöscht werden](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md) und [Gewusst wie: Zuweisen von schreibgeschützten Spalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+-   Aktivieren oder Einschränken von Benutzereingaben an das <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [wie: verhindern Hinzufügens und Löschens im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), und [Vorgehensweise: Stellen Spalten schreibgeschützter im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Validieren von Benutzereingaben in das <xref:System.Windows.Forms.DataGridView>\-Steuerelement.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Validieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+-   Überprüfen Sie alle Benutzereingaben, die <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
--   Behandeln sehr umfangreicher Datasets mithilfe des virtuellen Modus.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+-   Behandeln von sehr großen Datasets, die Verwendung des virtuellen Modus. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Anpassen der Darstellung von Zellen.  Weitere Informationen finden Sie unter [Gewusst wie: Anpassen der Darstellung von Zellen im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) und [Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+-   Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [wie: Anpassen der Darstellung von Zellen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von standardmäßigen Zellenstilen für DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- [Dateneingabe im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Behandeln von Fehlern, die während der Dateneingabe im DataGridView\-Steuerelement in Windows Forms auftreten](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)   
- [Exemplarische Vorgehensweise: Validieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)   
- [Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [Dateneingabe im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Gewusst wie: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [Exemplarische Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)

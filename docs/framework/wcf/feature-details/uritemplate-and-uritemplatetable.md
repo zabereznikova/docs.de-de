@@ -1,145 +1,148 @@
 ---
-title: "UriTemplate und UriTemplateTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: UriTemplate und UriTemplateTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# UriTemplate und UriTemplateTable
-Webentwickler benötigen die Fähigkeit, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren.In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, mit denen die Entwickler ihre URIs gut kontrollieren können.<xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Basis des URI\-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI\-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst implementieren zu müssen.  
+# <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
+Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wurden zwei neue Klassen hinzugefügt, die Entwicklern das Steuern der URIs erleichtern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage des URI-basierten Dispatchmoduls in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Diese Klassen können auch alleine verwendet werden und geben so den Entwicklern die Möglichkeit, Vorlagen und den URI-Abbildungsmechanismus zu nutzen, ohne einen  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst implementieren zu müssen.  
   
-## Vorlagen  
- Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben.Der Satz von URI\-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.  
+## <a name="templates"></a>Vorlagen  
+ Eine Vorlage ist eine Möglichkeit, einen Satz relativer URIs zu beschreiben. Der Satz von URI-Vorlagen in der folgenden Tabelle zeigt, wie ein System, das verschiedene Arten von Wetterdaten abruft, definiert werden könnte.  
   
 |Daten|Vorlage|  
-|-----------|-------------|  
-|Nationale Vorhersage|Wetter\/national|  
-|Bundeslandvorhersage|Wetter\/{Staat}|  
-|Ortsvorhersage|Wetter\/{Bundesland}\/{Stadt}|  
-|Aktivitätsvorhersage|Wetter\/{Bundesland}\/{Stadt}\/{Aktivität}|  
+|----------|--------------|  
+|Nationale Vorhersage|Wetter/national|  
+|Bundeslandvorhersage|Wetter/{Staat}|  
+|Ortsvorhersage|Wetter/{Bundesland}/{Stadt}|  
+|Aktivitätsvorhersage|Wetter/{Bundesland}/{Stadt}/{Aktivität}|  
   
- In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben.Jeder Eintrag ist eine URI\-Vorlage.Die Segmente in geschweiften Klammern beschreiben Variablen.Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen.Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Vorlagenklassen ermöglichen dem Entwickler, einen eingehenden URI \(z. B. "\/Wetter\/BW\/Mannheim\/wechselhaft"\) anzunehmen und ihn mit einer Vorlage abzugleichen, die ihn beschreibt, "\/Wetter\/{Bundesland}\/{Stadt}\/{Aktivität}".  
+ In dieser Tabelle wird ein Satz strukturell ähnlicher URIs beschrieben. Jeder Eintrag ist eine URI-Vorlage. Die Segmente in geschweiften Klammern beschreiben Variablen. Die Segmente, die nicht in geschweifte Klammern eingefasst sind, beschreiben Literalzeichenfolgen. Die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Vorlagenklassen ermöglichen dem Entwickler, einen eingehenden URI (z. B. "/Wetter/BW/Mannheim/wechselhaft") anzunehmen und ihn mit einer Vorlage abzugleichen, die ihn beschreibt, "/Wetter/{Bundesland}/{Stadt}/{Aktivität}".  
   
-## UriTemplate  
- <xref:System.UriTemplate> ist eine Klasse, die eine URI\-Vorlage kapselt.Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert.Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format.Die <xref:System.UriTemplate>\-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.  
+## <a name="uritemplate"></a>UriTemplate  
+ <xref:System.UriTemplate> ist eine Klasse, die eine URI-Vorlage kapselt. Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert. Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format. Die <xref:System.UriTemplate>-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> nimmt eine Basisadresse und einen möglichen URI und versucht, den URI der Vorlage zuzuweisen.Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>\-Instanz zurückgegeben.Das <xref:System.UriTemplateMatch>\-Objekt enthält einen Basis\-URI, den möglichen URI, eine Name\-Wert\-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name\-Wert\-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>\-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten\-URI enthält \(wird verwendet, wenn die Vorlage über einen Platzhalter verfügt\), und ein Objekt, das der Vorlage zugewiesen ist.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> nimmt eine Basisadresse und einen möglichen URI und versucht, den URI der Vorlage zuzuweisen. Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>-Instanz zurückgegeben. Das <xref:System.UriTemplateMatch>-Objekt enthält einen Basis-URI, den möglichen URI, eine Name-Wert-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name-Wert-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten-URI enthält (wird verwendet, wenn die Vorlage über einen Platzhalter verfügt), und ein Objekt, das der Vorlage zugewiesen ist.  
   
 > [!NOTE]
->  Beim Vergleichen eines möglichen URIs mit einer Vorlage ignoriert die <xref:System.UriTemplate>\-Klasse das Schema und die Portnummer.  
+>  Beim Vergleichen eines möglichen URIs mit einer Vorlage ignoriert die <xref:System.UriTemplate>-Klasse das Schema und die Portnummer.  
   
- Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und [BindByPosition\(Uri, String\<xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> .<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name\-Wert\-Sammlung der Parameter.Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt.[BindByPosition\(Uri, String\<xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> nimmt die Name\-Wert\-Paare und ersetzt sie von links nach rechts.  
+ Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name-Wert-Auflistung der Parameter. Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> akzeptiert die Name-Wert-Paare und ersetzt sie von links nach rechts.  
   
  <xref:System.UriTemplate.ToString> gibt die Vorlagenzeichenfolge zurück,  
   
- Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>\-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.  
+ Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen Booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] im Abschnitt "Vorlagenäquivalenz" finden Sie weiter unten in diesem Thema.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] dem Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.  
   
- <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI\-Schema entwickelt, das der HTTP URI\-Grammatik entspricht.Im Folgenden finden Sie Beispiele für unterstützte URI\-Schemas:  
+ <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI-Schema entwickelt, das der HTTP URI-Grammatik entspricht. Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:  
   
--   http:\/\/  
+-   http://  
   
--   https:\/\/  
+-   https://  
   
--   net.tcp:\/\/  
+-   net.tcp://  
   
--   net.pipe:\/\/  
+-   net.pipe://  
   
--   sb:\/\/  
+-   sb://  
   
- Schemas wie "file:\/\/" und "urn:\/\/" entsprechen nicht der HTTP\-URI\-Grammatik und führen bei der Verwendung mit URI\-Vorlagen zu unvorhersehbaren Ergebnissen.  
+ Schemas wie "file://" und "urn://" entsprechen nicht der HTTP-URI-Grammatik und führen bei der Verwendung mit URI-Vorlagen zu unvorhersehbaren Ergebnissen.  
   
-### Vorlagenzeichenfolgen\-Syntax  
- Eine Vorlage besteht aus drei Teilen: einem Pfad, einer optionalen Abfrage und einem optionalen Fragment.Ein Beispiel finden Sie in der folgenden Vorlage:  
+### <a name="template-string-syntax"></a>Vorlagenzeichenfolgen-Syntax  
+ Eine Vorlage besteht aus drei Teilen: einem Pfad, einer optionalen Abfrage und einem optionalen Fragment. Ein Beispiel finden Sie in der folgenden Vorlage:  
   
 ```  
 "/weather/{state}/{city}?forecast={length)#frag1  
 ```  
   
- Der Pfad besteht aus "\/Wetter\/{Bundesland}\/{Ort}", die Abfrage besteht  aus "?forecast\={Länge}, und das Fragment besteht aus "\#frag1."  
+ Der Pfad besteht aus "/Wetter/{Bundesland}/{Ort}", die Abfrage besteht aus "?forecast={Länge}, und das Fragment besteht aus "#frag1."  
   
- Führende und nachstehende Schrägstriche sind im Pfadausdruck optional.Sowohl der Abfrage\- als auch der Fragmentausdruck kann vollständig weggelassen werden.Ein Pfad besteht aus einer Reihe von Segmenten, die durch "\/" voneinander getrennt sind; jedes Segment kann einen Literalwert, einen Variablennamen \(der in {geschweiften Klammern} steht\) oder einen Platzhalter \(der als "\*" geschrieben wird\) besitzen.In der vorherigen Vorlage ist das "\\Wetter\\"\-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind.Variablen erhalten ihren Namen von den Inhalten der geschweiften Klammern und können später durch einen bestimmten Wert ersetzt werden, um einen *geschlossenen URI* zu erschaffen.Der Platzhalter ist optional, kann aber nur am Ende des URI eingesetzt werden, wo er logisch "dem Rest des Pfads" entspricht.  
+ Führende und nachstehende Schrägstriche sind im Pfadausdruck optional. Sowohl der Abfrage- als auch der Fragmentausdruck kann vollständig weggelassen werden. Ein Pfad besteht aus einer Reihe von Segmenten, getrennt durch "/"; jedes Segment kann über einen Literalwert, einen Variablennamen (Schreiben in {geschweiften Klammern}) oder einen Platzhalter verfügen (geschrieben als\*"). In der vorherigen Vorlage ist das "\Wetter\"-Segment ein Literalwert, während "{Bundesland}" und "{Ort}" Variablen sind. Variablen erhalten ihren Namen aus den Inhalten der geschweiften Klammern und sie können später ersetzt durch einen bestimmten Wert zum Erstellen einer *geschlossenen URI*. Der Platzhalter kann ist optional, aber nur am Ende des URIS, wo er logisch "den Rest des Pfads" entspricht.  
   
- Der Abfrageausdruck gibt ggf. eine Reihe ungeordneter Name\-Wert\-Paare an, die durch "&" getrennt werden.Bei den Elementen des Abfrageausdrucks kann es sich entweder um Literalpaare \(x\=2\) oder ein Variablenpaar \(x\={var}\) handeln.Nur die rechte Seite der Abfrage kann einen variablen Ausdruck enthalten.\({someName} \= {someValue} ist nicht zulässig.Ungepaarte Werte \(?x\) sind nicht zulässig.Es besteht kein Unterschied zwischen einem leeren Abfrageausdruck und einem Abfrageausdruck, der aus einem einzelnen "?" besteht. \(beide bedeuten "beliebige Anfrage"\).  
+ Der Abfrageausdruck gibt ggf. eine Reihe ungeordneter Name-Wert-Paare an, die durch "&" getrennt werden. Bei den Elementen des Abfrageausdrucks kann es sich entweder um Literalpaare (x=2) oder ein Variablenpaar (x={var}) handeln. Nur die rechte Seite der Abfrage kann einen variablen Ausdruck enthalten. ({someName} = {someValue} ist nicht zulässig. Ungepaarte Werte (?x) sind nicht zulässig. Es besteht kein Unterschied zwischen einem leeren Abfrageausdruck und einem Abfrageausdruck, der aus einem einzelnen "?" besteht (beide stehen für "jede Abfrage").  
   
  Der Fragmentausdruck kann aus einem Literalwert bestehen, Variablen sind nicht zulässig.  
   
- Alle Vorlagenvariablennamen innerhalb einer Vorlagenzeichenfolge müssen eindeutig sein.Bei Namen von Vorlagenvariablen wird die Groß\- und Kleinschreibung nicht berücksichtigt.  
+ Alle Vorlagenvariablennamen innerhalb einer Vorlagenzeichenfolge müssen eindeutig sein. Bei Namen von Vorlagenvariablen wird die Groß- und Kleinschreibung nicht berücksichtigt.  
   
  Beispiele für gültige Vorlagenzeichenfolgen:  
   
 -   ""  
   
--   "\/Schuh"  
+-   "/Schuh"  
   
--   "\/Schuh\/\*"  
+-   "/Schuh/*"  
   
--   "{Schuh}\/Boot"  
+-   "{Schuh}/Boot"  
   
--   "{Schuh}\/{Boot}\/Bett\/{Steppdecke}"  
+-   "{Schuh} / {Bereitschaftsboots /bed/ {Quilt}}"  
   
--   "Schuh\/{Boot}"  
+-   "Schuh / {Bereitschaftsboots}"  
   
--   "Schuh\/{Boot}\/\*"  
+-   "Schuh / {Bereitschaftsboots} / *"  
   
--   "Schuh\/Boot?x\=2"  
+-   "Schuh Boot /? X = 2"  
   
--   "Schuh\/{Boot}?x\={Bett}"  
+-   "Schuh / {Bereitschaftsboots}? x = {Bett}"  
   
--   "Schuh\/{Boot}?x\={Bett}&y\=band"  
+-   "Schuh/{Boot}?x={Bett}&y=band"  
   
--   "?x\={Schuh}"  
+-   "? x = {Schuh}"  
   
--   "Schuh?x\=3&y\={var}  
+-   "Schuh?x=3&y={var}  
   
  Beispiele für ungültige Vorlagenzeichenfolgen sind:  
   
--   "{Schuh}\/{SCHUH}\/x\=2" – doppelte Variablennamen.  
+-   "{Schuh} / {SCHUH} / x = 2" – doppelte Variablennamen.  
   
--   "{Schuh}\/Boot\/?Bett\={SCHUH}" – doppelte Variablennamen.  
+-   "{Schuh} Bett? Bett = {Schuh}" – doppelte Variablennamen.  
   
--   "?x\=2&x\=3" – Name\-Wert\-Paare innerhalb einer Abfragezeichenfolge müssen eindeutig sein, auch wenn sie Literale sind.  
+-   "? X = 2 & X = 3" – Name/Wert-Paare innerhalb einer Abfragezeichenfolge müssen eindeutig sein, auch wenn sie Literale sind.  
   
--   "?x\=2&" – Abfragezeichenfolge ist fehlerhaft.  
+-   "? X = 2 &" – Abfragezeichenfolge ist fehlerhaft.  
   
--   "?2&x\={Schuh}" – Abfragezeichenfolge muss Name\-Wert\-Paar sein.  
+-   "? 2 & x = {Schuh}" – Abfragezeichenfolge muss Name/Wert-Paaren sein.  
   
--   "?y\=2&&X\=3" – Abfragezeichenfolge muss Name\-Wert\-Paar sein; Namen dürfen nicht mit "& " beginnen.  
+-   "? y = 2 & & X = 3" – Abfragezeichenfolge muss Name-Wert-Paare, dürfen nicht mit beginnen "&".  
   
-### Zusammengesetzte Pfadsegmente  
- Bei zusammengesetzten Pfadsegmenten kann ein einzelnes URI\-Pfadsegment mehrere Variablen sowie mit Literalwerten kombinierte Variablen enhalten.Im Folgenden finden Sie Beispiele für gültige zusammengesetzte Pfadsegmente:  
+### <a name="compound-path-segments"></a>Zusammengesetzte Pfadsegmente  
+ Bei zusammengesetzten Pfadsegmenten kann ein einzelnes URI-Pfadsegment mehrere Variablen sowie mit Literalwerten kombinierte Variablen enhalten. Im Folgenden finden Sie Beispiele für gültige zusammengesetzte Pfadsegmente:  
   
--   \/Dateiname.{Erw.}\/  
+-   /Dateiname.{Erw.}/  
   
--   \/{Dateiname}.jpg\/  
+-   /{Dateiname}.jpg/  
   
--   \/{Dateiname}.{Erw.}\/  
+-   /{Dateiname}.{Erw.}/  
   
--   \/{a}.{b}Literalwert{c}\({d}\)\/  
+-   /{a}.{b}Literalwert{c}({d})/  
   
  Im Folgenden finden Sie Beispiele für ungültige Pfadsegmente:  
   
--   \/{} – Variablen müssen benannt werden.  
+-   /{} – Variablen müssen benannt werden.  
   
--   \/{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
+-   /{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
   
-### Zuordnung und zusammengesetzte Pfadsegmente  
- Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment.In der Vorlagenzeichenfolge "Addresses\/{state}.{city}" sind zwei Variablen \(state und city\) in demselben Segment definiert.Durch diese Vorlage würde eine URL wie "http:\/\/example.com\/Washington.Redmond" zugeordnet werden, aber auch eine URL wie "http:\/\/example.com\/Washington.Redmond.Microsoft".In letzterem Fall enthält die state\-Variable "Washington" und die city\-Variable "Redmond.Microsoft".In diesem Fall entspricht jeder Text \(mit Ausnahme von "\/"\) der {city}\-Variable.Wenn Sie eine Vorlage erstellen möchten, durch die der "zusätzliche" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B. "Addresses\/{state}\/{city}".  
+### <a name="matching-and-compound-path-segments"></a>Zuordnung und zusammengesetzte Pfadsegmente  
+ Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Beispielsweise ist in der Vorlagenzeichenfolge: "Adressen / {State}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert. Diese Vorlage würde eine URL wie "http://example.com/Washington.Redmond" überein, aber es wird auch eine URL wie "http://example.com/Washington.Redmond.Microsoft" überein. In letzterem Fall enthält die State-Variable "Washington" und die City-Variable "Redmond.Microsoft". In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die die "zusätzlichen" Text nicht zugeordnet wird, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B.: "Adressen / {Bundesland} / {Stadt}.  
   
-### Benannte Platzhaltersegmente  
- Bei einem benannten Platzhaltersegment handelt es sich um ein beliebiges Pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen "\*" beginnt.Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
+### <a name="named-wildcard-segments"></a>Benannte Platzhaltersegmente  
+ Bei einem benannten Platzhaltersegment handelt es sich um ein beliebiges Pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen "*" beginnt. Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
   
 ```  
 "literal/{*shoe}"  
@@ -157,10 +160,10 @@ Webentwickler benötigen die Fähigkeit, die Form und das Layout der URIs zu bes
   
 -   Benannte Platzhaltersegmente können keine Standardwerte besitzen.  
   
--   Benannte Platzhaltersegmente können nicht mit "\/" enden.  
+-   Benannte platzhaltersegmente darf nicht mit enden "/".  
   
-### Standardvariablenwerte  
- Standardvariablenwerte ermöglichen das Angeben von Standardwerten für Variablen innerhalb einer Vorlage.Standardvariablen können mit den geschweiften Klammern, durch die die Variable deklariert wird, oder durch eine an den UriTemplate\-Konstruktor weitergegebene Sammlung angegeben werden.Die folgende Vorlage zeigt zwei Möglichkeiten, eine <xref:System.UriTemplate> mit Variablen mit Standardwerten anzugeben:  
+### <a name="default-variable-values"></a>Standardvariablenwerte  
+ Standardvariablenwerte ermöglichen das Angeben von Standardwerten für Variablen innerhalb einer Vorlage. Standardvariablen können mit den geschweiften Klammern, durch die die Variable deklariert wird, oder durch eine an den UriTemplate-Konstruktor weitergegebene Sammlung angegeben werden. Die folgende Vorlage zeigt zwei Möglichkeiten, eine <xref:System.UriTemplate> mit Variablen mit Standardwerten anzugeben:  
   
 ```  
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
@@ -169,7 +172,7 @@ UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");
  In dieser Vorlage werden die Variable `a` mit dem Standardwert `1` und die Variable `b` mit dem Standardwert `5` deklariert.  
   
 > [!NOTE]
->  Nur Pfadsegmentvariablen können Standardwerte besitzen.Bei Abfragezeichenfolgenvariablen, zusammengesetzten Segmentvariablen sowie bei benannten Platzhaltervariablen sind Standardwerte nicht zulässig.  
+>  Nur Pfadsegmentvariablen können Standardwerte besitzen. Bei Abfragezeichenfolgenvariablen, zusammengesetzten Segmentvariablen sowie bei benannten Platzhaltervariablen sind Standardwerte nicht zulässig.  
   
  Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Abgleichen eines möglichen URI gezeigt:  
   
@@ -193,13 +196,12 @@ foreach (string key in m1.BoundVariables.AllKeys)
 // BoundVariables:  
 //      STATE=OR  
 //       CITY=Redmond  
-  
 ```  
   
 > [!NOTE]
->  Der URI "http:\/\/localhost:8000\/\/\/" entspricht nicht der im vorhergehenden Code enthaltenen Vorlage, der URI "http:\/\/localhost:8000\/" dagegen schon.  
+>  Der URI "http://localhost:8000///" entspricht nicht der im vorhergehenden Code enthaltenen Vorlage, der URI "http://localhost:8000/" dagegen schon.  
   
- Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht.  
+ Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht:  
   
 ```  
 Uri baseAddress = new Uri("http://localhost:8000/");  
@@ -225,15 +227,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Values:  
 //     Key = a, Value = 10  
 // Bound URI: http://localhost:8000/test/10/5  
-  
 ```  
   
- Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einschränkungen.Eine Variable kann den Standardwert `null` besitzen, wenn sich die Variable im am weitesten rechts befindlichen Segment der Vorlagenzeichenfolge befindet oder wenn alle Segmente rechts des Segments jeweils den Standardwert `null` besitzen.Im Folgenden finden Sie gültige Vorlagenzeichenfolgen mit dem Standardwert `null`:  
+ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einschränkungen. Eine Variable kann den Standardwert `null` besitzen, wenn sich die Variable im am weitesten rechts befindlichen Segment der Vorlagenzeichenfolge befindet oder wenn alle Segmente rechts des Segments jeweils den Standardwert `null` besitzen. Im Folgenden finden Sie gültige Vorlagenzeichenfolgen mit dem Standardwert `null`:  
   
 -   ```  
     UriTemplate t = new UriTemplate("shoe/{boat=null}");  
     ```  
-  
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
     ```  
@@ -241,7 +241,6 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
     ```  
-  
  Im Folgenden finden Sie ungültige Vorlagenzeichenfolgen mit dem Standardwert `null`:  
   
 -   ```  
@@ -251,102 +250,101 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 -   ```  
     UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
     ```  
+### <a name="default-values-and-matching"></a>Standardwerte und Vergleich  
+ Beim Vergleichen eines möglichen URI mit einer Vorlage mit Standardwerten werden die Standardwerte in der <xref:System.UriTemplateMatch.BoundVariables%2A>-Sammlung platziert, wenn im möglichen URI keine Werte angegeben sind.  
   
-### Standardwerte und Vergleich  
- Beim Vergleichen eines möglichen URI mit einer Vorlage mit Standardwerten werden die Standardwerte in der <xref:System.UriTemplateMatch.BoundVariables%2A>\-Sammlung platziert, wenn im möglichen URI keine Werte angegeben sind.  
+### <a name="template-equivalence"></a>Vorlagenäquivalenz  
+ Zwei Vorlagen gelten als *strukturell Äquivalent* Wenn alle Literalwerte der Vorlagen übereinstimmen und sie die Variablen in den gleichen Segmenten verfügen. Beispielsweise sind die folgenden Vorlagen strukturell äquivalent:  
   
-### Vorlagenäquivalenz  
- Zwei Vorlagen gelten als *strukturell äquivalent*, wenn alle Literalwerte der Vorlagen übereinstimmen und sie über Variablen in den gleichen Segmenten verfügen.Beispielsweise sind die folgenden Vorlagen strukturell äquivalent:  
+-   /a/{var1}/b b/{var2}?x=1&y=2  
   
--   \/a\/{var1}\/b b\/{var2}?x\=1&y\=2  
+-   a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a\/{x}\/b%20b\/{var1}?y\=2&x\=1  
-  
--   a\/{y}\/B%20B\/{z}\/?y\=2&x\=1  
+-   a/{y}/B%20B/{z}/?y=2&x=1  
   
  Hierbei müssen noch einige Punkte beachtet werden:  
   
 -   Wenn eine Vorlage führende Schrägstriche enthält, wird nur der erste ignoriert.  
   
--   Wenn Vorlagenzeichenfolgen auf strukturelle Äquivalenz verglichen werden, wird die Groß\-\/Kleinschreibungen bei den Variablennamen und Pfadsegmenten ignoriert; bei den Abfragezeichenfolgen muss sie beachtet werden.  
+-   Wenn Vorlagenzeichenfolgen auf strukturelle Äquivalenz verglichen werden, wird die Groß-/Kleinschreibungen bei den Variablennamen und Pfadsegmenten ignoriert; bei den Abfragezeichenfolgen muss sie beachtet werden.  
   
 -   Abfragezeichenfolgen sind unsortiert.  
   
-## UriTemplateTable  
- Die Klasse <xref:System.UriTemplateTable> stellt eine assoziative Tabelle aus <xref:System.UriTemplate>\-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind.<xref:System.UriTemplateTable> muss vor Aufruf von <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> mindestens eine <xref:System.UriTemplate> enthalten.Der Inhalt einer <xref:System.UriTemplateTable> kann geändert werden, bis <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.Die Überprüfung wird ausgeführt, wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird.Der Typ der ausgeführten Prüfung hängt vom Wert des Parameters `allowMultiple` zur <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> ab.  
+## <a name="uritemplatetable"></a>UriTemplateTable  
+ Die Klasse <xref:System.UriTemplateTable> stellt eine assoziative Tabelle aus <xref:System.UriTemplate>-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind. <xref:System.UriTemplateTable> muss vor Aufruf von <xref:System.UriTemplate> mindestens eine <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> enthalten. Der Inhalt einer <xref:System.UriTemplateTable> kann geändert werden, bis <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird. Die Überprüfung wird ausgeführt, wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> aufgerufen wird. Der Typ der ausgeführten Prüfung hängt vom Wert des Parameters `allowMultiple` zur <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> ab.  
   
- Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei Übergabe in `false` aufgerufen wird, überprüft die <xref:System.UriTemplateTable>, dass sich keine Vorlagen in der Tabelle befinden.Wenn strukturell äquivalente Vorlagen gefunden werden, wird eine Ausnahme ausgelöst.Dies wird zusammen mit <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> verwendet, wenn sichergestellt werden soll, dass nur eine Vorlage einem eingehenden URI entspricht.  
+ Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei Übergabe in `false` aufgerufen wird, überprüft die <xref:System.UriTemplateTable>, dass sich keine Vorlagen in der Tabelle befinden. Wenn strukturell äquivalente Vorlagen gefunden werden, wird eine Ausnahme ausgelöst. Dies wird zusammen mit <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> verwendet, wenn sichergestellt werden soll, dass nur eine Vorlage einem eingehenden URI entspricht.  
   
  Wenn <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> bei der Übergabe von `true` aufgerufen wird, lässt <xref:System.UriTemplateTable> mehrere strukturell äquivalente Vorlagen in einer <xref:System.UriTemplateTable> zu.  
   
- Wenn ein Satz <xref:System.UriTemplate>\-Objekte, die einer <xref:System.UriTemplateTable> hinzugefügt sind, Abfragezeichenfolgen enthält, dürfen sie nicht mehrdeutig sein.Identische Abfragezeichenfolgen sind zulässig.  
+ Wenn ein Satz <xref:System.UriTemplate>-Objekte, die einer <xref:System.UriTemplateTable> hinzugefügt sind, Abfragezeichenfolgen enthält, dürfen sie nicht mehrdeutig sein. Identische Abfragezeichenfolgen sind zulässig.  
   
 > [!NOTE]
->  Zwar lässt die <xref:System.UriTemplateTable> Basisadressen mit HTTP\-fremden Schemas zu, Schema und Portnummer werden beim Vergleichen möglicher URIs mit Vorlagen jedoch ignoriert.  
+>  Zwar lässt die <xref:System.UriTemplateTable> Basisadressen mit HTTP-fremden Schemas zu, Schema und Portnummer werden beim Vergleichen möglicher URIs mit Vorlagen jedoch ignoriert.  
   
-### Abfragezeichenfolgenmehrdeutigkeit  
+### <a name="query-string-ambiguity"></a>Abfragezeichenfolgenmehrdeutigkeit  
  Vorlagen, die einen äquivalenten Pfad teilen, enthalten mehrdeutige Abfragezeichenfolgen, wenn es einen URI gibt, der mehr als einer Vorlage entspricht.  
   
  Die folgenden Sätze von Abfragezeichenfolgen sind in sich selbst eindeutig:  
   
--   ?x\=1  
+-   ?x=1  
   
--   ?x\=2  
+-   ?x=2  
   
--   ?x\=3  
+-   ?x=3  
   
--   ?x\=1&y\={var}  
+-   ?x=1&y={var}  
   
--   ?x\=2&z\={var}  
+-   ?x=2&z={var}  
   
--   ?x\=3  
+-   ?x=3  
   
--   ?x\=1  
-  
--   ?  
-  
--   ?x\={var}  
+-   ?x=1  
   
 -   ?  
   
--   ?m\=get&c\=rss  
+-   ? x={var}  
   
--   ?m\=put&c\=rss  
+-   ?  
   
--   ?m\=get&c\=atom  
+-   ?m=get&c=rss  
   
--   ?m\=put&c\=atom  
+-   ?m=put&c=rss  
+  
+-   ?m=get&c=atom  
+  
+-   ?m=put&c=atom  
   
  Die folgenden Abfragezeichenfolgenvorlagen sind in sich selbst mehrdeutig:  
   
--   ?x\=1  
+-   ?x=1  
   
--   ?x\={var}  
+-   ?x={var}  
   
- "x\=1" – passt zu beiden Vorlagen.  
+ "x=1" – passt zu beiden Vorlagen.  
   
--   ?x\=1  
+-   ?x=1  
   
--   ?y\=2  
+-   ?y=2  
   
- "x\=1&y\=2" passt zu beiden Vorlagen.Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen\-Variablen enthalten kann als die Vorlage, zu der sie passt.  
+ "x=1&y=2" passt zu beiden Vorlagen. Das liegt daran, dass eine Abfragezeichenfolge mehr Abfragezeichenfolgen-Variablen enthalten kann als die Vorlage, zu der sie passt.  
   
--   ?x\=1  
+-   ?x=1  
   
--   ?x\=1&y\={var}  
+-   ?x=1&y={var}  
   
- "x\=1&y\=3" passt zu beiden Vorlagen.  
+ "x=1&y=3" passt zu beiden Vorlagen.  
   
--   ?x\=3&y\=4  
+-   ?x=3&y=4  
   
--   ?x\=3&z\=5  
+-   ?x=3&z=5  
   
 > [!NOTE]
->  Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI\-Pfads oder eines <xref:System.UriTemplate>\-Pfadsegmentliterals verwendet werden. \(Die Zeichen "a" und "A" gelten hingegen als gleich.\)Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen \(a und A gelten ebenfalls als gleiche Zeichen\).  
+>  Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI-Pfads oder eines <xref:System.UriTemplate>-Pfadsegmentliterals verwendet werden. (Die Zeichen "a" und "A" gelten hingegen als gleich.) Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen (a und A gelten ebenfalls als gleiche Zeichen).  
   
-## Siehe auch  
- [Überblick über WCF\-Web\-HTTP\-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
- [Objektmodell für WCF\-Web\-HTTP\-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)   
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)   
- [UriTemplate\-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)   
- [UriTemplate\-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Siehe auch  
+ [WCF-Web-HTTP-Programmierung Übersicht über das Objektmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [WCF Web-HTTP-Programmiermodell Objekt](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [URI-Vorlage](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplate-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

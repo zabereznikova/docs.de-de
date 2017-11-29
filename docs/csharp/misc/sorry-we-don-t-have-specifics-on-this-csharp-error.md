@@ -1,9 +1,8 @@
 ---
-title: Leider wir haben keine Einzelheiten zu diesem Fehler c# | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: "Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -178,7 +177,6 @@ f1_keywords:
 - CS1912
 - CS0743
 - CS2016
-- CS4009
 - CS0315
 - CS1609
 - CS1102
@@ -875,54 +873,46 @@ f1_keywords:
 - CS0057
 - CS0589
 - CS0656
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- errors [C#], additional information
+- CS8038
+- CS8132
+- CS8136
+- CS8137
+- CS8139
+- CS8156
+- CS8168
+- CS8172
+- CS8179
+helpviewer_keywords: errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Leider haben wir keine Einzelheiten zu diesem C#-Fehler
-Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Leider können wir Stefan &#39; t Einzelheiten zu diesem Fehler c# haben
+Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:  
   
- [Visual C#-Sprache](http://go.microsoft.com/fwlink/?LinkId=146921)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)]-Sprachsyntax und -Compiler.  
+ [Visual C# Language](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Sprachsyntax und -Compiler.  
   
- [Visual C#-IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]-Umgebung.  
+ [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ Bietet ein Forum für Fragen zum Arbeiten in der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]-Umgebung.  
   
- [Visual c# Allgemein](http://go.microsoft.com/fwlink/?LinkId=146920)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)], die in anderen Foren nicht diskutiert werden.  
+ [Visual C# General](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)], die in anderen Foren nicht diskutiert werden.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Bietet ein Forum für Fragen und Probleme in Bezug auf [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  Siehe auch:  
  [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)   
- [C#-Referenz](../../csharp/language-reference/index.md)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [Sprechen Sie mit uns](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
+ [C#-Referenz](../../csharp/language-reference/index.md)  
+ [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
+ [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

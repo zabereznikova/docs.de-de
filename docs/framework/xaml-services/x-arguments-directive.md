@@ -1,75 +1,78 @@
 ---
-title: "x:Arguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Arguments directive [XAML Services]"
-  - "Arguments directive in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Arguments directive"
+title: x:Arguments-Direktive
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Arguments directive [XAML Services]
+- Arguments directive in XAML [XAML Services]
+- XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# x:Arguments Directive
-Packt Konstruktionsargumente für eine nicht standardmäßige Konstruktor\-Objektelementdeklaration in XAML oder für eine Factorymethoden\-Objektdeklaration.  
+# <a name="xarguments-directive"></a>x:Arguments-Direktive
+Pakete Konstruktionsargumente für einen nicht standardmäßigen Konstruktor Element Objektdeklaration in XAML oder eine Objektdeklaration der Factory-Methode.  
   
-## Verwendung von XAML\-Elementen \(nicht standardmäßiger Konstruktor\)  
+## <a name="xaml-element-usage-nondefault-constructor"></a>XAML-Elementverwendung (nicht standardmäßigen Konstruktor)  
   
 ```  
-<object ...>  
+<object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## Verwendung von XAML\-Elementen \(Factorymethode\)  
+## <a name="xaml-element-usage-factory-method"></a>XAML-Elementverwendung (Factory-Methode)  
   
 ```  
-<object x:FactoryMethod="methodName"...>  
+<object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## XAML\-Werte  
+## <a name="xaml-values"></a>XAML-Werte  
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|Mindestens ein Objektelement, das Argumente angibt, die an den nicht standardmäßigen Unterstützungskonstruktor oder die Factorymethode übergeben werden sollen.<br /><br /> Typische Verwendung ist die Nutzung von Initialisierungstext in Objektelementen, um die tatsächlichen Argumentwerte anzugeben.  Weitere Informationen finden Sie im Beispielabschnitt.<br /><br /> Die Reihenfolge der Elemente ist von Bedeutung.  Die geordneten XAML\-Typen müssen mit den Typen und der Typreihenfolge des Unterstützungskonstruktors oder der Factorymethodenüberladung übereinstimmen.|  
-|`methodName`|Der Name der Factory\-Methode, die alle `x:Arguments`\-Argumente verarbeiten soll.|  
+|`oneOrMoreObjectElements`|Ein oder mehrere Objektelemente, die Argumente angeben, die an die dahinter liegende nicht standardmäßiger Konstruktor oder eine Factory-Methode übergeben werden.<br /><br /> Typische Verwendung ist, Initialisierungstext innerhalb der Objektelemente zu verwenden, um die tatsächliche Argumentwerte anzugeben. Siehe Abschnitt "Beispiele".<br /><br /> Die Reihenfolge der Elemente ist wichtig. Die Verwendung von XAML-Typen in der Reihenfolge müssen den Typen entsprechen und geben Sie die Reihenfolge der methodenüberladung für das dahinter liegende Konstruktor oder eine Factory.|  
+|`methodName`|Der Name der Factorymethode, die alle verarbeiten soll `x:Arguments` Argumente.|  
   
-## Abhängigkeiten  
- `x:FactoryMethod` kann den Bereich und das Verhalten, in dem `x:Arguments` gültig ist, ändern.  
+## <a name="dependencies"></a>Abhängigkeiten  
+ `x:FactoryMethod`der Bereich und das Verhalten ändern können, in denen `x:Arguments` gilt.  
   
- Wenn kein `x:FactoryMethod`\-Element angegeben wird, gilt `x:Arguments` für alternative \(nicht standardmäßig\) Signaturen der Unterstützungskonstruktoren.  
+ Wenn kein `x:FactoryMethod` angegeben wird, `x:Arguments` alternativen (nicht standardmäßige) Signaturen der dahinter liegende Konstruktoren betrifft.  
   
- Wenn `x:FactoryMethod` angegeben wird, gilt `x:Arguments` für eine Überlastung der benannten Methode.  
+ Wenn `x:FactoryMethod` angegeben wird, `x:Arguments` an eine Überladung der Methode mit dem Namen gilt.  
   
-## Hinweise  
- XAML 2006 kann nicht standardmäßige Initialisierung durch Initialisierungstext unterstützen.  Die praktische Anwendung einer Initialisierungstextkonstruktionstechnik ist jedoch beschränkt.  Initialisierungstext wird als einzelne Textzeichenfolge behandelt. Er fügt daher nur die Möglichkeit für eine einzelne Parameterinitialisierung hinzu, es sei denn, ein Typkonverter ist für das Konstruktionsverhalten definiert, das benutzerdefinierte Informationselemente und benutzerdefinierte Trennzeichen aus der Zeichenfolge analysieren kann.  Außerdem ist die Textzeichenfolge\-zu\-Objekt\-Logik potenziell der systemeigene Standardtypkonverter eines angegebenen XAML\-Parsers zur Behandlung anderer Primitive als eine wahre Zeichenfolge.  
+## <a name="remarks"></a>Hinweise  
+ XAML 2006 können nicht standardmäßigen Initialisierung durch Initialisierungstext unterstützen. Die praktische Anwendung eine Initialisierung Text Konstruktion Technik ist jedoch beschränkt. Initialisierungstext wird als eine einzelne Zeichenfolge behandelt; Daher fügt er nur-Funktion für die Initialisierung eines einzelnen Parameter, wenn ein Typkonverter für das Konstruktionsverhalten definiert ist, die benutzerdefinierte Informationselementen und benutzerdefinierte Trennzeichen aus der Zeichenfolge analysieren können. Darüber hinaus ist die Textzeichenfolge, Objekt-Logik potenziell einen angegebenen XAML-Parser systemeigene Typkonverter für das Behandeln von primitiven als eine Zeichenfolge mit "true".  
   
- Die Verwendung von `x:Arguments`\-XAML ist keine Eigenschaftenelementverwendung im typischen Sinn, da das Direktivenmarkup nicht auf den Objekttyp des enthaltenen Elements verweist.  Es ist anderen Direktiven, z. B. `x:Code`, ähnlicher, wo das Element einen Bereich ausweist, in dem das Markup als vom standardmäßigen Inhalt für untergeordnete Elemente abweichend interpretiert werden soll.  In diesem Fall übermittelt der XAML\-Typ jedes Objektelements Informationen über die Argumenttypen, mit denen XAML\-Parser bestimmen, auf welche spezifische Konstruktor\-\/Factory\-Methodensignatur eine `x:Arguments`\-Verwendung zu verweisen versucht.  
+ Die `x:Arguments` XAML-Verwendung ist nicht Eigenschaftenelementen insofern typisch, da die Richtlinie Markup nicht des enthaltenden Objektelements Typ verweist. Es ist z. B. andere Direktiven, die eher `x:Code` , in dem das Element ein Bereichs, in dem das Markup interpretiert werden soll, wie der Standardnummer Inhalt für untergeordnete, demarks. In diesem Fall der Verwendung von XAML-Typ jedes Elements des Objekts Informationen zu den Typen, die XAML-Parser verwendet wird, um zu bestimmen, welche bestimmten Konstruktor Factory-Methodensignatur kommuniziert ein `x:Arguments` Verwendung verweisen möchten.  
   
- `x:Arguments` für ein Objektelement, das erstellt wird, muss anderen Eigenschaftenelementen, Inhalt, innerem Text oder Initialisierungszeichenfolgen des Objektelements vorangestellt werden.  Die Objektelemente in `x:Arguments` können Attribute und Initialisierungszeichenfolgen enthalten, wie durch diesen XAML\-Typ und seinen Unterstützungskonstruktor oder die Factory\-Methode zulässig.  Entweder für das Objekt oder die Argumente können Sie benutzerdefinierte XAML\-Typen oder XAML\-Typen angeben, die andernfalls außerhalb des XAML\-Standardnamespace sind, indem auf eingerichtete Präfixzuordnungen verwiesen wird.  
+ `x:Arguments`für ein Object-Element muss zu erstellenden alle anderen Eigenschaftenelemente, Inhalte, innere Text oder Initialisierungszeichenfolgen des Object-Element vorangestellt sein. Die Objektelemente in `x:Arguments` zählen Attribute und Initialisierungszeichenfolgen, gemäß diesem XAML-Typ und die dahinter liegende Konstruktor oder eine Factory-Methode. Für das Objekt oder die Argumente können Sie benutzerdefinierte XAML- oder XAML-Typen, die andernfalls außerhalb der Verwendung von XAML-Standardnamespace sind durch Verweisen auf die eingerichtete/Präfix-Zuordnungen angeben.  
   
- XAML\-Prozessoren verwenden die folgenden Richtlinien, um zu bestimmen, wie die Argumente, die in `x:Arguments` angegeben sind, verwendet werden sollen, um ein Objekt zu erstellen.  Wenn `x:FactoryMethod` angegeben wird, werden Informationen mit der angegebenen `x:FactoryMethod` verglichen. Beachten Sie, dass der Wert von `x:FactoryMethod` der Methodenname ist und die benannte Methode Überladungen besitzen kann.  Wenn `x:FactoryMethod` nicht angegeben wird, werden Informationen mit der Menge aller öffentlichen Konstruktorüberladungen des Objekts verglichen.  XAML\-Verarbeitungslogik vergleicht dann die Anzahl der Parameter und wählt die Überladung mit entsprechender Stelligkeit aus.  Wenn es mehr als eine Übereinstimmung gibt, sollte der XAML\-Prozessor Typen der Parameter auf Grundlage des XAML\-Typen der bereitgestellten Objektelemente vergleichen.  Wenn es noch immer mehr als eine Übereinstimmung gibt, ist das Verhalten des XAML\-Prozessors nicht definiert.  Wenn `x:FactoryMethod` angegeben ist, aber die Methode nicht aufgelöst werden kann, sollte ein XAML\-Prozessor eine Ausnahme auslösen.  
+ Verwendung von XAML-Prozessoren verwenden die folgenden Richtlinien, um zu bestimmen, wie die Argumente in angegeben `x:Arguments` sollte verwendet werden, um ein Objekt zu erstellen. Wenn `x:FactoryMethod` angegeben ist, werden die Informationen werden verglichen mit dem angegebenen `x:FactoryMethod` (Beachten Sie, dass der Wert des `x:FactoryMethod` ist der Name der Methode, und die benannte Methode kann Überladungen. Wenn `x:FactoryMethod` nicht angegeben ist, werden die Informationen auf den Satz von Überladungen, die alle öffentlichen Konstruktor des Objekts verglichen wird. Verwendung von XAML-Verarbeitungslogik vergleicht die Anzahl von Parametern und wählt die Überladung ohne übereinstimmende Stelligkeit. Wenn mehr als eine Übereinstimmung vorhanden ist, sollte der XAML-Prozessor die Typen der Parameter auf Grundlage der Verwendung von XAML-Typen der bereitgestellten Objektelemente vergleichen. Wenn noch mehr als eine Übereinstimmung vorhanden ist, ist die Verwendung von XAML-Prozessor-Verhalten nicht definiert. Wenn eine `x:FactoryMethod` angegeben ist, aber die Methode kann nicht aufgelöst werden, sollte ein XAML-Prozessor eine Ausnahme auslösen.  
   
- Eine XAML\-Attributverwendung `<x:Arguments>string</x:Arguments>` ist technisch möglich.  Dies bietet jedoch keine Funktionen über das hinaus, was über Initialisierungstext und Typkonverter durchgeführt werden könnte, und die Verwendung dieser Syntax ist nicht der Zweck der Funktionen der XAML 2009\-Factorymethode.  
+ Eine Verwendung von XAML-Attributen `<x:Arguments>string</x:Arguments>` technisch möglich ist. Allerdings Dies bietet keine Funktionen über hinaus, was andernfalls durch Initialisierung und -Typkonverter erzielt werden kann, und mithilfe dieser Syntax ist nicht die Absicht Entwurf der XAML 2009-Funktionen für die Factory-Methode.  
   
-## Beispiele  
- Im folgenden Beispiel werden eine nicht standardmäßige Konstruktorsignatur und dann die XAML\-Verwendung von `x:Arguments` veranschaulicht, die auf diese Signatur zugreift.  
+## <a name="examples"></a>Beispiele  
+ Das folgende Beispiel zeigt einen Standardkonstruktor, Signatur, und klicken Sie dann auf die Verwendung von XAML-Verwendung von `x:Arguments` , die auf diese Signatur zugreift.  
   
 ```csharp  
 public class Food {  
@@ -82,7 +85,7 @@ public class Food {
 }  
 ```  
   
-```  
+```xaml  
 <my:Food>  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -91,7 +94,7 @@ public class Food {
 </my:Food>  
 ```  
   
- Im folgenden Beispiel werden eine Signatur einer Ziel\-Factory\-Methode und dann die XAML\-Verwendung von `x:Arguments` veranschaulicht, die auf diese Signatur zugreift.  
+ Das folgende Beispiel zeigt die Signatur einer Ziel-Factory-Methode, und klicken Sie dann auf die Verwendung von XAML-Verwendung von `x:Arguments` , die auf diese Signatur zugreift.  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -105,7 +108,7 @@ public Food TryLookupFood(string name)
 }  
 ```  
   
-```  
+```xaml  
 <my:Food x:FactoryMethod="TryLookupFood">  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -113,6 +116,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## Siehe auch  
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)   
- [Übersicht über XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Siehe auch  
+ [Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
+ [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

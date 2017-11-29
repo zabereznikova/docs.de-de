@@ -1,61 +1,43 @@
 ---
-title: WithEvents (Visual Basic) | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: WithEvents (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.WithEvents
 - WithEvents
-dev_langs:
-- VB
-helpviewer_keywords:
-- WithEvents keyword
+helpviewer_keywords: WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 708cf6fec78faf2c7a5959a3a2694d237d728882
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 68a58fd130c04f2ed0cb1f2e5b9250f6c85f120d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Gibt an, dass eine oder mehrere Membervariablen auf eine Instanz einer Klasse verweisen, die Ereignisse auslösen kann.  
+Gibt an, dass eine oder mehrere deklarierten Member-Variablen mit einer Instanz einer Klasse verweisen, die Ereignisse auslösen kann.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Variable mit definiert wird `WithEvents`, können Sie deklarativ angeben, dass eine Methode die Ereignisse der Variablen mit behandelt die `Handles` Schlüsselwort.  
+ Wenn eine Variable definiert ist mit `WithEvents`, können Sie deklarativ angeben, dass eine Methode Ereignisse der Variablen mit verarbeitet die `Handles` Schlüsselwort.  
   
- Sie können `WithEvents` nur auf Klassen-oder Modulebene. Dies bedeutet, dass der Deklarationskontext für eine `WithEvents` Variable muss eine Klasse oder ein Modul und eine Quelldatei, Namespace, Struktur oder Prozedur nicht möglich.  
+ Sie können `WithEvents` nur auf Klassen-oder Modulebene. Dies bedeutet, dass der Deklarationskontext für eine `WithEvents` Variable muss eine Klasse oder ein Modul sein und darf keine Quelldatei, Namespace, Struktur oder Prozedur.  
   
  Sie können keine `WithEvents` auf einen Member einer Struktur.  
   
- Sie können nur einzelne Variablen deklarieren, keine arrays – mit `WithEvents`.  
+ Sie können nur einzelne Variablen deklarieren – keine arrays – mit `WithEvents`.  
   
 ## <a name="rules"></a>Regeln  
   
--   **Elementtypen.** Deklarieren Sie `WithEvents` Variablen als Objektvariablen, damit sie akzeptieren können Klasseninstanzen. Jedoch nicht Sie deklarieren diese als `Object`. Sie müssen diese als spezifische Klasse deklarieren, die Ereignisse auslösen kann.  
+-   **Elementtypen.** Sie müssen deklarieren `WithEvents` -Klasseninstanzen für Variablen Objektvariablen sein, damit sie akzeptieren können. Allerdings kann nicht deklariert werden als `Object`. Sie müssen diese als spezifische Klasse deklarieren, die die Ereignisse auslösen kann.  
   
  Die `WithEvents` Modifizierer kann in diesem Kontext verwendet werden: [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)   
+ [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
  [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)

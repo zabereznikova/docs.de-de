@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 623d66f1-389f-43c7-a6ea-afe7f80651a5
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ab59904a8de7f0bb1158fb6a6d4e78814d5f748c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded
+# <a name="systemservicemodeldiagnosticstracetruncatedquotaexceeded"></a>System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded
 System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded  
   
-## Beschreibung  
- Es wurde ein Kontingent für die Ablaufverfolgungsgröße überschritten.Die Ablaufverfolgung wurde abgeschnitten.  
+## <a name="description"></a>Beschreibung  
+ Es wurde ein Kontingent für die Ablaufverfolgungsgröße überschritten. Die Ablaufverfolgung wurde abgeschnitten.  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

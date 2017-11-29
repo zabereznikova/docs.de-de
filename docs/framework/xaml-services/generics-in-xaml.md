@@ -1,55 +1,57 @@
 ---
-title: "Generics in XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "generics [XAML Services]"
+title: Generika in XAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 05eaab4497949231d32ceab0ba696b9f252d67ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Generics in XAML
-Die in "System.Xaml" implementierten .NET Framework\-XAML\-Dienste bieten Unterstützung für die Verwendung generischer CLR\-Typen.  Diese Unterstützung umfasst das Angeben der Einschränkungen der Generika als Typargument und das Erzwingen der Einschränkung durch das Aufrufen der entsprechenden `Add`\-Methode für generische Auflistungsfälle.  In diesem Thema werden Aspekte der Verwendung von generischen Typen und des Verweisens auf generische Typen in XAML beschrieben.  
+# <a name="generics-in-xaml"></a>Generika in XAML
+.NET Framework XAML Services wie in "System.xaml" implementiert bietet Unterstützung für die Verwendung von generischer CLR-Typen. Diese Unterstützung umfasst, die Einschränkungen von Generika als Typargument angeben und erzwingen die Einschränkung durch Aufrufen der entsprechenden `Add` Methode für die generische Auflistung von Fällen. In diesem Thema werden Aspekte der Verwendung von und verweisen auf generische Typen in XAML beschrieben.  
   
-## x:TypeArguments  
- `x:TypeArguments` ist eine durch die XAML\-Sprache definierte Direktive.  Bei Verwendung als Member eines XAML\-Typs, der von einem generischen Typ unterstützt wird, übergibt `x:TypeArguments` einschränkende Typargumente vom generischen an den unterstützenden Konstruktor.  Die Verweissyntax für die Verwendung von `x:TypeArguments` in .NET Framework\-XAML\-Diensten und Syntaxbeispiele finden Sie unter [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+## <a name="xtypearguments"></a>X: TypeArguments-  
+ `x:TypeArguments`eine Richtlinie wird durch die Verwendung von XAML-Sprache definiert werden. Wenn sie als Mitglied einer XAML-Typ verwendet wird, der einen generischen Typ verarbeitet `x:TypeArguments` übergibt einschränken Typargumente der generischen an den Konstruktor sichern. Referenz-Syntax, die auf .NET Framework XAML Services beziehen nutzen `x:TypeArguments`, inklusive der Syntaxbeispiele, finden Sie unter [X: TypeArguments-Direktive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
- Da das `x:TypeArguments`\-Element eine Zeichenfolge annimmt und Typkonverterunterstützung aufweist, wird es in der Regel unter XAML als Attribut deklariert.  
+ Da `x:TypeArguments` akzeptiert eine Zeichenfolge und dahinter liegende Typ-Konverter, hat er in der Regel in XAML-Verwendung als Attribut deklariert ist.  
   
- Im XAML\-Knotenstream können die von `x:TypeArguments` deklarierten Informationen von <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=fullName> an einer `StartObject`\-Position im Knotenstream abgerufen werden.  Der Rückgabewert von <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=fullName> ist eine Liste mit <xref:System.Xaml.XamlType>\-Werten.  Durch den Aufruf von <xref:System.Xaml.XamlType.IsGeneric%2A?displayProperty=fullName> wird festgelegt, ob ein XAML\-Typ einen generischen Typ darstellen darf.  
+ In der XAML-Knotenstream deklariert die Informationen von `x:TypeArguments` abgerufen werden kann, aus <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> an eine `StartObject` Position im Knotenstream. Der Rückgabewert der <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> ist eine Liste von <xref:System.Xaml.XamlType> Werte. Bestimmung, ob ein XAML-Typ für einen generischen Typ darstellt, kann durch Aufrufen vorgenommen werden <xref:System.Xaml.XamlType.IsGeneric%2A?displayProperty=nameWithType>.  
   
-## Regeln und Syntaxkonventionen für Generika in XAML  
- In XAML muss ein generischer Typ immer als eingeschränkt generisch dargestellt werden. Ein uneingeschränkt generischer Typ kann im XAML\-Typsystem oder einem XAML\-Knotenstream nicht vorhanden sein und kann nicht in XAML\-Markup dargestellt werden.  Auf einen generischen Typ kann in XAML\-Attributsyntax verwiesen werden, wenn von `x:TypeArguments` auf eine geschachtelte Typeinschränkung eines generischen Typs verwiesen wird oder wenn von `x:Type` ein CLR\-Typverweis für einen generischen Typ bereitgestellt wird.  Dies wird durch die von .NET Framework\-XAML\-Diensten definierte <xref:System.Xaml.Schema.XamlTypeTypeConverter>\-Klasse unterstützt.  
+## <a name="rules-and-syntax-conventions-for-generics-in-xaml"></a>Regeln und Syntaxkonventionen für Generika in XAML  
+ In XAML muss ein generischer Typ immer als eingeschränkte generische dargestellt werden; ein uneingeschränkter generischer nie in das XAML-Typsystem oder einem XAML-Knotenstream vorhanden ist und nicht in XAML-Markup dargestellt werden. Eine generische verwiesen werden kann, im XAML-Attributsyntax für Fälle, in dem es eine Einschränkung geschachtelter Typ einer Generika, indem Sie auf das verwiesen wird `x:TypeArguments`, oder in Fällen, in denen `x:Type` einen CLR-Typ-Verweis für einen generischen Typ bereitstellt. Dies wird unterstützt, über die <xref:System.Xaml.Schema.XamlTypeTypeConverter> Klasse durch .NET Framework XAML Services definiert.  
   
- Das von <xref:System.Xaml.Schema.XamlTypeTypeConverter> aktivierte XAML\-Attributsyntaxformular ändert die typische MSIL\/CLR\-Syntaxkonvention, in der spitze Klammern für Typen und Einschränkungen von Generika verwendet werden, und ersetzt stattdessen den Einschränkungscontainer durch Klammern.  Ein Beispiel finden Sie unter [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+ Der XAML-Code-Attribut Syntaxformat aktivierte <xref:System.Xaml.Schema.XamlTypeTypeConverter> ändert die typische MSIL / CLR Syntax Konvention, die Spitze verwendet für Typen und Einschränkungen von Generika Klammern und Klammern für den Container Einschränkung stattdessen ersetzt. Ein Beispiel finden Sie unter [X: TypeArguments-Direktive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
-## Generika und XAML 2009\-Funktionen  
- Wenn Sie zum Abrufen von XAML\-Typen für gemeinsame Sprachprimitiven XAML 2009 verwenden, anstatt CLR\-Basistypen zuzuordnen, können Sie [integrierte XAML 2009\-Datentypen](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) als Informationselemente in `x:TypeArguments` verwenden.  Sie können z. B. Folgendes deklarieren \(Präfixzuordnungen werden nicht dargestellt, `x` ist jedoch der XAML\-Sprachnamespace in XAML 2009\):  
+## <a name="generics-and-xaml-2009-features"></a>Generika und XAML 2009-Funktionen  
+ Bei Verwendung von XAML 2009 anstelle von mapping des CLR-Basistypen um XAML-Typen für häufige Sprachprimitive zu erhalten, können Sie [integrierte XAML 2009-Typen](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) als Informationselementen in `x:TypeArguments`. Beispielsweise konnten Sie die folgenden deklarieren (Präfix-Zuordnungen, die nicht angezeigt, aber `x` ist die Verwendung von XAML-Verwendung von XAML-Sprachnamespace für XAML 2009):  
   
-```  
+```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
-## Generikaunterstützung in WPF und anderen v3.5\-Frameworks  
- Zur Verwendung in XAML 2006 muss [x:Class](../../../docs/framework/xaml-services/x-class-directive.md) auch für das gleiche Element wie `x:TypeArguments` angegeben werden, wenn WPF ausdrücklich als Ziel festgelegt ist, und das Element muss das Stammelement in einem XAML\-Dokument sein.  Das Stammelement muss einem generischen Typ mit mindestens einem Typargument zugeordnet werden.  Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>.  
+## <a name="generics-support-in-wpf-and-other-v35-frameworks"></a>Generikunterstützung in WPF und andere v3. 5-Frameworks  
+ Für XAML 2006-Nutzung bei ausdrücklich auf WPF abzielen [X: Class](../../../docs/framework/xaml-services/x-class-directive.md) muss auch angegeben werden, auf demselben Element wie `x:TypeArguments`, und dieses Element muss das Stammelement in einem XAML-Dokument. Das Stammelement muss ein generischer Typ mit mindestens einem Typargument zuordnen. Ein Beispiel ist <xref:System.Windows.Navigation.PageFunction%601>.  
   
- Mögliche Problemumgehungen zur Unterstützung generischer Verwendungen sind z. B. das Definieren einer benutzerdefinierten Markuperweiterung, die generische Typen zurückgeben kann, oder das Bereitstellen einer Umbruchklassendefinition, die von einem generischen Typ abgeleitet wird, aber die generische Einschränkung in einer eigenen Klassendefinition vereinfacht.  
+ Mögliche problemumgehungen zur Unterstützung von generischen Verwendungen einschließen, definieren eine benutzerdefinierte Markuperweiterung, die generische Typen zurückgeben oder Bereitstellen einer Wrapping Klassendefinition, die aus einem generischen Typ abgeleitet wird, aber vereinfacht die generische Einschränkung in einem eigenen Klassendefinition.  
   
- In WPF und mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] als Zielversion können Sie XAML 2009\-Funktionen mit `x:TypeArguments` verwenden, allerdings nur für Loose XAML \(nicht markupkompiliertes XAML\).  Markupkompilierte XAML für WPF und die BAML\-Form von XAML unterstützen die XAML 2009\-Schlüsselwörter und \-Funktionen derzeit nicht.  
+ In WPF und Zielgruppenadressierung [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments`, jedoch nur für loose XAML (, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
   
- Benutzerdefinierte Workflows in [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützen keine generische XAML\-Verwendung.  
+ Benutzerdefinierte Workflows in [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] generische XAML-Verwendung nicht unterstützt.  
   
-## Siehe auch  
- [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)   
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [Built\-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+## <a name="see-also"></a>Siehe auch  
+ [x:TypeArguments-Anweisung](../../../docs/framework/xaml-services/x-typearguments-directive.md)  
+ [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [Integrierte Typen für häufige XAML-Sprachprimitive](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)

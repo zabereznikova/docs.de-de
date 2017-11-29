@@ -1,39 +1,39 @@
 ---
-title: "MainMenu-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MainMenu-Steuerelement [Windows Forms]"
+title: "MainMenu-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# MainMenu-Komponente (Windows&#160;Forms)
+# <a name="mainmenu-component-windows-forms"></a>MainMenu-Komponente (Windows Forms)
 > [!NOTE]
->  `MenuStrip` und `ContextMenuStrip` ersetzen das `MainMenu`\-Steuerelement und das <xref:System.Windows.Forms.ContextMenu>\-Steuerelement früherer Versionen und erweitern dieses um Funktionen, jedoch werden `MainMenu` und <xref:System.Windows.Forms.ContextMenu> aus Gründen der Abwärtskompatibilität und, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+>  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzt und funktionell die `MainMenu` und <xref:System.Windows.Forms.ContextMenu> Steuerelemente von früheren Versionen `MainMenu` und <xref:System.Windows.Forms.ContextMenu> für Abwärtskompatibilität und für zukünftige Verwendung beibehalten werden, falls gewünscht.  
   
- Durch die `MainMenu`\-Komponente in Windows Forms wird zur Laufzeit ein Menü angezeigt.  
+ Windows Forms `MainMenu` Komponente wird ein Menü angezeigt, zur Laufzeit.  
   
-## In diesem Abschnitt  
- [Übersicht über die MainMenu\-Komponente](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
- Erläutert die Verwendung dieser Komponente sowie ihre wichtigsten Features und Eigenschaften.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über die MainMenu-Komponente](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
+ Erläutert, was diese Komponente und seine wichtigsten Funktionen und Eigenschaften.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.MainMenu>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>
