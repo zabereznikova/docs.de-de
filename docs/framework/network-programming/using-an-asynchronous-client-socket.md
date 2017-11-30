@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Verwenden von asynchronen Clientsockets
 Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewartet wird, dass Netzwerkvorgänge abgeschlossen werden. Stattdessen wird das standardmäßige asynchrone Programmiermodell von .NET Framework verwendet, um die Netzwerkverbindung in einem Thread zu verarbeiten, während die Anwendung weiterhin auf dem ursprünglichen Thread ausgeführt wird. Asynchrone Sockets eignen sich für Anwendungen, die das Netzwerk stark nutzen, oder die nicht warten können, bis Netzwerkvorgänge vor dem Fortsetzen abgeschlossen werden.  
@@ -43,9 +40,9 @@ Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewar
   
  Asynchrone Vorgänge erfordern eine Rückrufmethode, die das Ergebnis des Vorgangs zurückgibt. Wenn Ihre Anwendung das Ergebnis nicht wissen muss, ist keine Rückrufmethode erforderlich. Der Beispielcode in diesem Abschnitt veranschaulicht die Verwendung einer Methode zum Start einer Verbindung mit einem Netzwerkgerät und einer Rückrufmethode zum Abschließen der Verbindung, einer Methode zum Start des Datenversands und einer Rückrufmethode zum Abschließen des Versands, einer Methode zum Start des Datenempfangs und einer Rückrufmethode zum Abschließen des Datenempfangs.  
   
- Asynchrone Sockets verwenden mehrere Threads aus dem Systemthreadpool, um Netzwerkverbindungen zu bearbeiten. Ein Thread ist verantwortlich für das Initiieren des Datenversands oder Datenempfangs. Andere Threads schließen die Verbindung zum Netzwerkgerät ab und senden oder empfangen Daten. In den folgenden Beispielen werden Instanzen der <xref:System.Threading.ManualResetEvent?displayProperty=fullName>-Klasse verwendet, um die Ausführung des Hauptthreads anzuhalten und zu signalisieren, wann die Ausführung fortgesetzt werden kann.  
+ Asynchrone Sockets verwenden mehrere Threads aus dem Systemthreadpool, um Netzwerkverbindungen zu bearbeiten. Ein Thread ist verantwortlich für das Initiieren des Datenversands oder Datenempfangs. Andere Threads schließen die Verbindung zum Netzwerkgerät ab und senden oder empfangen Daten. In den folgenden Beispielen werden Instanzen der <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>-Klasse verwendet, um die Ausführung des Hauptthreads anzuhalten und zu signalisieren, wann die Ausführung fortgesetzt werden kann.  
   
- Zur Verbindung eines asynchronen Sockets mit einem Netzwerkgerät initialisiert die `Connect`-Methode im folgenden Beispiel ein **Socket**, ruft dann die <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Rückrufmethode „Connect“ und ein Zustandsobjekt (der Client-**Socket**), darstellt. Dieses wird verwendet, um Zustandsinformationen zwischen asynchronen Aufrufen zu übergeben. Das Beispiel implementiert die `Connect`-Methode zur Verbindung des angegebenen **Socket** mit dem angegebenen Endpunkt. Ein globales **ManualResetEvent** mit dem Namen `connectDone` wird vorausgesetzt.  
+ Zur Verbindung eines asynchronen Sockets mit einem Netzwerkgerät initialisiert die `Connect`-Methode im folgenden Beispiel ein **Socket**, ruft dann die <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Rückrufmethode „Connect“ und ein Zustandsobjekt (der Client-**Socket**), darstellt. Dieses wird verwendet, um Zustandsinformationen zwischen asynchronen Aufrufen zu übergeben. Das Beispiel implementiert die `Connect`-Methode zur Verbindung des angegebenen **Socket** mit dem angegebenen Endpunkt. Ein globales **ManualResetEvent** mit dem Namen `connectDone` wird vorausgesetzt.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-
