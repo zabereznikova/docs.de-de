@@ -1,1 +1,1 @@
-Microsoft-Internetinformationsdienste 5.0 (Internet Information Services; IIS)
+<span data-ttu-id="a5384-101">Microsoft-Internetinformationsdienste 5.0 (Internet Information Services; IIS)</span><span class="sxs-lookup"><span data-stu-id="a5384-101">Microsoft Internet Information Services (IIS) 5.0</span></span>

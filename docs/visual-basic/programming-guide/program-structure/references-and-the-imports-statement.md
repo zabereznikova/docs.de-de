@@ -1,83 +1,66 @@
 ---
-title: Verweise und die Imports-Anweisung (Visual Basic) | Microsoft-Dokumentation
+title: Verweise und die Imports-Anweisung (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - assemblies [Visual Basic], namespaces
-- references, assembly
-- namespaces, assemblies
+- references [Visual Basic], assembly
+- namespaces [Visual Basic], assemblies
 - referencing assemblies
-- Imports statement, referencing assemblies
+- Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283a27e7703b31a9aeed8f7e4104e89b7ff78525
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 739934b65241a7846b5323d5e75446832d83e5d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="references-and-the-imports-statement-visual-basic"></a>Verweise und die Imports-Anweisung (Visual Basic)
-Sie können externe Objekte zur Verfügung stellen zu Ihrem Projekt durch Auswahl der **Verweis hinzufügen** Befehl die **Projekt** Menü. Verweise in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] können auf Assemblys zeigen, die vergleichbar Typbibliotheken jedoch mehr Informationen enthalten sind.  
+# <a name="references-and-the-imports-statement-visual-basic"></a><span data-ttu-id="e2563-102">Verweise und die Imports-Anweisung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2563-102">References and the Imports Statement (Visual Basic)</span></span>
+<span data-ttu-id="e2563-103">Sie können externe Objekte verfügbar machen zu Ihrem Projekt durch Auswahl der **Verweis hinzufügen** Befehl der **Projekt** im Menü.</span><span class="sxs-lookup"><span data-stu-id="e2563-103">You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu.</span></span> <span data-ttu-id="e2563-104">Verweise in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] können zeigen auf Assemblys, die wie Typbibliotheken jedoch mehr Informationen enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="e2563-104">References in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can point to assemblies, which are like type libraries but contain more information.</span></span>  
   
-## <a name="the-imports-statement"></a>Die Imports-Anweisung  
- Assemblys umfassen einen oder mehrere Namespaces. Wenn Sie einen Verweis auf eine Assembly hinzufügen, können Sie auch hinzufügen eine `Imports` Anweisung, um ein Modul, das die Sichtbarkeit der Switch-Namespaces innerhalb des Moduls steuert. Die `Imports` -Anweisung stellt einen Kontextbereich, die nur den Teil eines eindeutigen Verweises zum Namespace verwenden kann.  
+## <a name="the-imports-statement"></a><span data-ttu-id="e2563-105">Imports-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e2563-105">The Imports Statement</span></span>  
+ <span data-ttu-id="e2563-106">Assemblys umfassen einen oder mehrere Namespaces.</span><span class="sxs-lookup"><span data-stu-id="e2563-106">Assemblies include one or more namespaces.</span></span> <span data-ttu-id="e2563-107">Wenn Sie einen Verweis auf eine Assembly hinzufügen, können Sie auch Hinzufügen einer `Imports` Anweisung, um ein Modul, das die Sichtbarkeit von dieser Assembly Namespaces innerhalb des Moduls gesteuert.</span><span class="sxs-lookup"><span data-stu-id="e2563-107">When you add a reference to an assembly, you can also add an `Imports` statement to a module that controls the visibility of that assembly's namespaces within the module.</span></span> <span data-ttu-id="e2563-108">Die `Imports` Anweisung stellt einen Kontextbereich, die nur den Teil des Namespaces erforderlich, geben Sie einen eindeutigen Verweis verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="e2563-108">The `Imports` statement provides a scoping context that lets you use only the portion of the namespace necessary to supply a unique reference.</span></span>  
   
- Die `Imports` Anweisung hat die folgende Syntax:  
+ <span data-ttu-id="e2563-109">Die `Imports` Anweisung hat folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="e2563-109">The `Imports` statement has the following syntax:</span></span>  
   
- `Imports` [`|``Aliasname` =] `Namespace`  
+ <span data-ttu-id="e2563-110">`Imports` [`|``Aliasname` =] `Namespace`</span><span class="sxs-lookup"><span data-stu-id="e2563-110">`Imports` [`|``Aliasname` =] `Namespace`</span></span>  
   
- `Aliasname`bezieht sich auf einen kurzen Namen, den Sie innerhalb des Codes verwenden können, um auf einen importierten Namespace zu verweisen. `Namespace`ist ein Namespace, die verfügbar sind, entweder durch einen Projektverweis, durch eine Definition innerhalb des Projekts oder durch eine vorherige `Imports` Anweisung.  
+ <span data-ttu-id="e2563-111">`Aliasname`bezieht sich auf einen kurzen Namen, den Sie innerhalb des Codes verwenden können, um auf einen importierten Namespace zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="e2563-111">`Aliasname` refers to a short name you can use within code to refer to an imported namespace.</span></span> <span data-ttu-id="e2563-112">`Namespace`ist ein Namespace ist verfügbar, entweder durch einen Projektverweis, durch eine Definition innerhalb des Projekts oder durch einen vorherigen `Imports` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="e2563-112">`Namespace` is a namespace available through either a project reference, through a definition within the project, or through a previous `Imports` statement.</span></span>  
   
- Ein Modul kann eine beliebige Anzahl von enthalten `Imports` Anweisungen. Müssen sie nach jedem erscheinen `Option` -Anweisungen, falls vorhanden, aber vor allem anderen Code.  
+ <span data-ttu-id="e2563-113">Ein Modul kann eine beliebige Anzahl von enthalten `Imports` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="e2563-113">A module may contain any number of `Imports` statements.</span></span> <span data-ttu-id="e2563-114">Müssen sie nach allen stehen `Option` Anweisungen, falls vorhanden, jedoch vor jedem anderen Code.</span><span class="sxs-lookup"><span data-stu-id="e2563-114">They must appear after any `Option` statements, if present, but before any other code.</span></span>  
   
 > [!NOTE]
->  Verwechseln Sie nicht die Projektverweise mit den `Imports` Anweisung oder der `Declare` Anweisung. Projektverweisen werden externe Objekte, z. B. Objekte in Assemblys, auf [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Projekte. Die `Imports` Anweisung wird verwendet, um den Zugriff auf Projektverweise zu vereinfachen, bietet jedoch keinen Zugriff auf diese Objekte. Die `Declare` -Anweisung verwendet, um einen Verweis auf eine externe Prozedur in einer Dynamic Link Library (DLL) zu deklarieren.  
+>  <span data-ttu-id="e2563-115">Verwechseln Sie nicht die Projektverweise mit der `Imports` Anweisung oder der `Declare` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="e2563-115">Do not confuse project references with the `Imports` statement or the `Declare` statement.</span></span> <span data-ttu-id="e2563-116">Projektverweise auf externe Objekte, z. B. Objekte in Assemblys, verfügbar machen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Projekte.</span><span class="sxs-lookup"><span data-stu-id="e2563-116">Project references make external objects, such as objects in assemblies, available to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projects.</span></span> <span data-ttu-id="e2563-117">Die `Imports` -Anweisung wird verwendet, um den Zugriff auf Projektverweise vereinfachen, jedoch keinen Zugriff auf diese Objekte.</span><span class="sxs-lookup"><span data-stu-id="e2563-117">The `Imports` statement is used to simplify access to project references, but does not provide access to these objects.</span></span> <span data-ttu-id="e2563-118">Die `Declare` Anweisung wird verwendet, um einen Verweis auf eine externe Prozedur in einer Dynamic Link Library (DLL) zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="e2563-118">The `Declare` statement is used to declare a reference to an external procedure in a dynamic-link library (DLL).</span></span>  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Verwenden von Aliasen mit der Imports-Anweisung  
- Die `Imports` -Anweisung erleichtert Zugriff auf Methoden von Klassen durch den Wegfall um explizit die vollqualifizierten Namen von verweisen. Aliase können Sie nur einen Teil eines Namespace einen benutzerfreundlicheren Namen zuweisen. Beispielsweise ist der Wagenrücklauf/Zeilenvorschub Sequenz, die bewirkt, dass ein einzelnes Stück Text, der in mehreren Zeilen angezeigt werden Teil der <xref:Microsoft.VisualBasic.ControlChars>-Modul in die <xref:Microsoft.VisualBasic?displayProperty=fullName>Namespace.</xref:Microsoft.VisualBasic?displayProperty=fullName> </xref:Microsoft.VisualBasic.ControlChars> Um diese Konstante in einem Programm ohne Alias verwenden, müssen Sie den folgenden Code eingeben:  
+## <a name="using-aliases-with-the-imports-statement"></a><span data-ttu-id="e2563-119">Verwenden von Aliasen mit der Imports-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e2563-119">Using Aliases with the Imports Statement</span></span>  
+ <span data-ttu-id="e2563-120">Die `Imports` Anweisung erleichtert es Zugriff auf Methoden von Klassen durch den Wegfall um explizit die vollqualifizierten Namen von verweisen.</span><span class="sxs-lookup"><span data-stu-id="e2563-120">The `Imports` statement makes it easier to access methods of classes by eliminating the need to explicitly type the fully qualified names of references.</span></span> <span data-ttu-id="e2563-121">Aliase können Sie nur einen Teil eines Namespace einen benutzerfreundlicheren Namen zuweisen.</span><span class="sxs-lookup"><span data-stu-id="e2563-121">Aliases let you assign a friendlier name to just one part of a namespace.</span></span> <span data-ttu-id="e2563-122">Beispielsweise ist der Wagenrücklauf/Zeilenvorschub Sequenz, die bewirkt, dass ein einzelnes Stück Text, der in mehreren Zeilen angezeigt werden Teil der <xref:Microsoft.VisualBasic.ControlChars> Modul in die <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace.</span><span class="sxs-lookup"><span data-stu-id="e2563-122">For example, the carriage return/line feed sequence that causes a single piece of text to be displayed on multiple lines is part of the <xref:Microsoft.VisualBasic.ControlChars> module in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="e2563-123">Um diese Konstante in einem Programm ohne Alias zu verwenden, müssten Sie den folgenden Code eingeben:</span><span class="sxs-lookup"><span data-stu-id="e2563-123">To use this constant in a program without an alias, you would need to type the following code:</span></span>  
   
- [!code-vb[VbVbalrApplication&3;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
- `Imports`Anweisungen muss immer die ersten Zeilen direkt nach einem `Option` Anweisungen in einem Modul. Das folgende Codefragment zeigt, wie zum Importieren und Zuweisen eines Alias für die <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>Modul:</xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>  
+ <span data-ttu-id="e2563-124">`Imports`Anweisungen muss immer die ersten Zeilen, die unmittelbar nach einem `Option` Anweisungen in einem Modul.</span><span class="sxs-lookup"><span data-stu-id="e2563-124">`Imports` statements must always be the first lines immediately following any `Option` statements in a module.</span></span> <span data-ttu-id="e2563-125">Das folgende Codefragment zeigt, wie zum Importieren und einen Alias Zuweisen der <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> Modul:</span><span class="sxs-lookup"><span data-stu-id="e2563-125">The following code fragment shows how to import and assign an alias to the <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> module:</span></span>  
   
- [!code-vb[VbVbalrApplication&4;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
- Zukünftige Verweise auf diesen Namespace können wesentlich kürzer sein:  
+ <span data-ttu-id="e2563-126">Zukünftige Verweise auf diesen Namespace können deutlich kürzer sein:</span><span class="sxs-lookup"><span data-stu-id="e2563-126">Future references to this namespace can be considerably shorter:</span></span>  
   
- [!code-vb[VbVbalrApplication&5;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
- Wenn eine `Imports` -Anweisung keinen Aliasnamen, den importierten Namespace definierte Elemente ohne Qualifikation im Modul verwendet werden können. Wenn der Aliasname angegeben ist, muss er für Namen in diesem Namespace enthaltenen als Qualifizierer verwendet werden.  
+ <span data-ttu-id="e2563-127">Wenn ein `Imports` -Anweisung keines Aliasnamens, in den importierten Namespace definierte Elementen können im Modul ohne Qualifizierung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e2563-127">If an `Imports` statement does not include an alias name, elements defined within the imported namespace can be used in the module without qualification.</span></span> <span data-ttu-id="e2563-128">Wenn der Aliasname angegeben wird, muss sie für Namen, die in diesem Namespace enthaltenen als Qualifizierer verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e2563-128">If the alias name is specified, it must be used as a qualifier for names contained within that namespace.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ControlChars></xref:Microsoft.VisualBasic.ControlChars>   
- <xref:Microsoft.VisualBasic></xref:Microsoft.VisualBasic>   
- [NIB: Vorgehensweise: Hinzufügen oder Entfernen von Verweisen mithilfe des Dialogfelds „Verweis hinzufügen“](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)   
- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+## <a name="see-also"></a><span data-ttu-id="e2563-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e2563-129">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ControlChars>  
+ <xref:Microsoft.VisualBasic>  
+ [<span data-ttu-id="e2563-130">NIB: Gewusst wie: Hinzufügen oder Entfernen von Verweisen mithilfe des Dialogfelds "Verweis hinzufügen"</span><span class="sxs-lookup"><span data-stu-id="e2563-130">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+ [<span data-ttu-id="e2563-131">Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2563-131">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ [<span data-ttu-id="e2563-132">Assemblys und der globale Assemblycache</span><span class="sxs-lookup"><span data-stu-id="e2563-132">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="e2563-133">Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="e2563-133">How to: Create and Use Assemblies Using the Command Line</span></span>](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
+ [<span data-ttu-id="e2563-134">Imports-Anweisung (.NET-Namespace und -Typ)</span><span class="sxs-lookup"><span data-stu-id="e2563-134">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

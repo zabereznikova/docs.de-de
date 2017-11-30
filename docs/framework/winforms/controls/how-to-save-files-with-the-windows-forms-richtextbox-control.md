@@ -1,56 +1,61 @@
 ---
-title: "Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".rtf-Dateien, Speichern im RichTextBox-Steuerelement"
-  - "Beispiele [Windows Forms], Textfelder"
-  - "Dateien, Speichern mit dem RichTextBox-Steuerelement"
-  - "RichTextBox-Steuerelement [Windows Forms], Speichern von Dateien"
-  - "RTF-Dateien, Speichern im RichTextBox-Steuerelement"
-  - "Speichern von Dateien"
-  - "Speichern von Dateien, RichTextBox-Steuerelement"
-  - "Textdateien, Speichern eines RichTextBox-Steuerelements"
+title: "Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- saving files
+- RTF files [Windows Forms], saving in RichTextBox control
+- examples [Windows Forms], text boxes
+- saving files [Windows Forms], RichTextBox control
+- files [Windows Forms], saving with RichTextBox control
+- RichTextBox control [Windows Forms], saving files
+- .rtf files [Windows Forms], saving in RichTextBox control
+- text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows&#160;Forms
-Das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement von Windows Forms kann die in ihm angezeigten Informationen in verschiedenen Formaten ausgeben:  
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="cdd0a-102">Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cdd0a-102">How to: Save Files with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="cdd0a-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann Schreiben der Informationen, die in einem von mehreren Formaten angezeigt:</span><span class="sxs-lookup"><span data-stu-id="cdd0a-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can write the information it displays in one of several formats:</span></span>  
   
--   Nur\-Text  
+-   <span data-ttu-id="cdd0a-104">Nur-Text</span><span class="sxs-lookup"><span data-stu-id="cdd0a-104">Plain text</span></span>  
   
--   Unicode\-Nur\-Text  
+-   <span data-ttu-id="cdd0a-105">Unicode-nur-text</span><span class="sxs-lookup"><span data-stu-id="cdd0a-105">Unicode plain text</span></span>  
   
--   Rich Text Format \(RTF\)  
+-   <span data-ttu-id="cdd0a-106">Rich-Text-Format (RTF)</span><span class="sxs-lookup"><span data-stu-id="cdd0a-106">Rich-Text Format (RTF)</span></span>  
   
--   RTF mit Leerzeichen anstelle von OLE\-Objekten  
+-   <span data-ttu-id="cdd0a-107">RTF mit Leerzeichen anstelle von OLE-Objekte</span><span class="sxs-lookup"><span data-stu-id="cdd0a-107">RTF with spaces in place of OLE objects</span></span>  
   
--   Nur\-Text mit einer Textdarstellung von OLE\-Objekten  
+-   <span data-ttu-id="cdd0a-108">Nur-Text mit einer Textdarstellung des OLE-Objekte</span><span class="sxs-lookup"><span data-stu-id="cdd0a-108">Plain text with a textual representation of OLE objects</span></span>  
   
- Rufen Sie zum Speichern einer Datei die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>\-Methode auf.  Sie können die **SaveFile**\-Methode auch zum Speichern von Daten in einen Stream verwenden.  Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+ <span data-ttu-id="cdd0a-109">Um eine Datei zu speichern, rufen die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-109">To save a file, call the <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> method.</span></span> <span data-ttu-id="cdd0a-110">Sie können auch die **SaveFile** Methode zum Speichern von Daten in einen Stream.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-110">You can also use the **SaveFile** method to save data to a stream.</span></span> <span data-ttu-id="cdd0a-111">Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-111">For more information, see <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.</span></span>  
   
-### So speichern Sie den Inhalt des Steuerelements in einer Datei  
+### <a name="to-save-the-contents-of-the-control-to-a-file"></a><span data-ttu-id="cdd0a-112">Um den Inhalt des Steuerelements in einer Datei speichern</span><span class="sxs-lookup"><span data-stu-id="cdd0a-112">To save the contents of the control to a file</span></span>  
   
-1.  Bestimmen Sie den Pfad der zu speichernden Datei.  
+1.  <span data-ttu-id="cdd0a-113">Bestimmen Sie den Pfad der Datei gespeichert werden soll.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-113">Determine the path of the file to be saved.</span></span>  
   
-     In einer realen Anwendung wird hierzu normalerweise die <xref:System.Windows.Forms.SaveFileDialog>\-Komponente verwendet.  Eine Übersicht finden Sie unter [Übersicht über die SaveFileDialog\-Komponente](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     <span data-ttu-id="cdd0a-114">Zu diesem Zweck in einer realen Anwendung verwenden Sie in der Regel die <xref:System.Windows.Forms.SaveFileDialog> Komponente.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-114">To do this in a real-world application, you would typically use the <xref:System.Windows.Forms.SaveFileDialog> component.</span></span> <span data-ttu-id="cdd0a-115">Eine Übersicht finden Sie unter [Übersicht über die SaveFileDialog-Komponente](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="cdd0a-115">For an overview, see [SaveFileDialog Component Overview](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).</span></span>  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>\-Methode des <xref:System.Windows.Forms.RichTextBox>\-Steuerelements auf, und geben Sie die zu speichernde Datei und optional einen Dateityp an.  Wenn Sie die Methode mit einem Dateinamen als einziges Argument aufrufen, wird die Datei im RTF\-Format gespeichert.  Rufen Sie zum Angeben eines anderen Dateityps die Methode mit einem Wert der <xref:System.Windows.Forms.RichTextBoxStreamType>\-Enumeration als zweites Argument auf.  
+2.  <span data-ttu-id="cdd0a-116">Rufen Sie die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> Methode der <xref:System.Windows.Forms.RichTextBox> Steuerelement, das die Datei zu speichern und optional einen Dateityp angeben.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-116">Call the <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> method of the <xref:System.Windows.Forms.RichTextBox> control, specifying the file to save and optionally a file type.</span></span> <span data-ttu-id="cdd0a-117">Wenn Sie die Methode mit einem Dateinamen als einziges Argument aufrufen, wird die Datei im RTF-Format gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-117">If you call the method with a file name as its only argument, the file will be saved as RTF.</span></span> <span data-ttu-id="cdd0a-118">Rufen Sie zum Angeben eines anderen Dateityps die Methode mit dem Wert der <xref:System.Windows.Forms.RichTextBoxStreamType> -Enumeration als zweites Argument auf.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-118">To specify another file type, call the method with a value of the <xref:System.Windows.Forms.RichTextBoxStreamType> enumeration as its second argument.</span></span>  
   
-     Im nachstehenden Beispiel wurde als Speicherort der RTF\-Datei der Ordner **Eigene Dateien** festgelegt.  Dieser Speicherort wird verwendet, weil vorausgesetzt werden kann, dass die meisten Computer mit Windows als Betriebssystem über einen Ordner mit diesem Namen verfügen.  Dieser Speicherort ermöglicht auch Benutzern mit minimalen Systemzugriffsberechtigungen, die Anwendung sicher auszuführen.  Im unten stehenden Beispiel wird davon ausgegangen, dass einem Formular bereits ein <xref:System.Windows.Forms.RichTextBox>\-Steuerelement hinzugefügt wurde.  
+     <span data-ttu-id="cdd0a-119">Im folgenden Beispiel wird der Pfad festgelegt, für der Speicherort der RTF-Datei ist die **eigene** Ordner.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-119">In the example below, the path set for the location of the rich-text file is the **My Documents** folder.</span></span> <span data-ttu-id="cdd0a-120">Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass dieser Ordner die meisten Computer das Windows-Betriebssystem ausgeführt wird enthält.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-120">This location is used because you can assume that most computers running the Windows operating system will include this folder.</span></span> <span data-ttu-id="cdd0a-121">Dieser Speicherort kann sich Benutzer mit minimalen sicher auf die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-121">Choosing this location also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="cdd0a-122">Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement bereits hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-122">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control already added.</span></span>  
   
     ```vb  
     Public Sub SaveFile()  
@@ -61,7 +66,6 @@ Das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement von Windows Forms ka
        & "\Testdoc.rtf", _  
           RichTextBoxStreamType.RichNoOleObjs)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -75,7 +79,6 @@ Das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement von Windows Forms ka
        + @"\Testdoc.rtf",  
           RichTextBoxStreamType.RichNoOleObjs);  
     }  
-  
     ```  
   
     ```cpp  
@@ -92,10 +95,10 @@ Das <xref:System.Windows.Forms.RichTextBox>\-Steuerelement von Windows Forms ka
     ```  
   
     > [!IMPORTANT]
-    >  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.  Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine Erstellungsberechtigung für den Ordner.  Berechtigungen werden unter Verwendung von Zugriffssteuerungslisten festgelegt.  Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den Schreibzugriff, also eine geringere Berechtigung.  Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die Leseberechtigung für eine einzelne Datei erteilt werden \(anstatt Erstellungsberechtigungen für den gesamten Ordner zu gewähren\).  Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in den Stammordner oder den Ordner Programme zu schreiben.  
+    >  <span data-ttu-id="cdd0a-123">Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-123">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="cdd0a-124">Wenn eine Anwendung eine Datei erstellen muss, benötigt die Anwendung erstellen-Zugriff für den Ordner an.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-124">If an application needs to create a file, that application needs Create access for the folder.</span></span> <span data-ttu-id="cdd0a-125">Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-125">Permissions are set using access control lists.</span></span> <span data-ttu-id="cdd0a-126">Wenn die Datei bereits vorhanden ist, benötigt die Anwendung nur Schreibzugriff, also eine geringere Berechtigung.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-126">If the file already exists, the application needs only Write access, a lesser privilege.</span></span> <span data-ttu-id="cdd0a-127">Wenn möglich, ist es sicherer, erstellen Sie die Datei während der Bereitstellung und nur Lesezugriff auf eine einzelne Datei zu gewähren, anstatt den Zugriff für einen Ordner erstellen.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-127">Where possible, it is more secure to create the file during deployment, and only grant Read access to a single file, rather than Create access for a folder.</span></span> <span data-ttu-id="cdd0a-128">Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner „Programme“ zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="cdd0a-128">Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cdd0a-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cdd0a-129">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="cdd0a-130">RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="cdd0a-130">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="cdd0a-131">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="cdd0a-131">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

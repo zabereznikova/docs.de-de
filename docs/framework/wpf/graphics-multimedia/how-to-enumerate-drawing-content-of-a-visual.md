@@ -1,38 +1,41 @@
 ---
-title: "Gewusst wie: Auflisten des Zeichnungsinhalts eines visuellen Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auflisten der Inhalte eines visuellen Objekts [WPF]"
-  - "Abrufen des DrawingGroup-Werts eines visuellen Objekts [WPF]"
+title: 'Gewusst wie: Auflisten des Zeichnungsinhalts eines visuellen Objekts'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- retrieving the DrawingGroup value of a Visual [WPF]
+- enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-caps.latest.revision: 3
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5e498bc8e425198e479d7ce0b2328e0efa3ede70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Auflisten des Zeichnungsinhalts eines visuellen Objekts
-Das <xref:System.Windows.Media.Drawing>\-Objekt stellt ein Objektmodell für das Auflisten des Inhalts eines <xref:System.Windows.Media.Visual> bereit.  
+# <a name="how-to-enumerate-drawing-content-of-a-visual"></a><span data-ttu-id="60eb6-102">Gewusst wie: Auflisten des Zeichnungsinhalts eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="60eb6-102">How to: Enumerate Drawing Content of a Visual</span></span>
+<span data-ttu-id="60eb6-103">Die <xref:System.Windows.Media.Drawing> Objekt enthalten ein Objektmodell zum Aufzählen der Inhalt von einem <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="60eb6-103">The <xref:System.Windows.Media.Drawing> object provide an object model for enumerating the contents of a <xref:System.Windows.Media.Visual>.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird mit der <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>\-Methode der <xref:System.Windows.Media.DrawingGroup>\-Wert von einem <xref:System.Windows.Media.Visual> abgerufen und aufgelistet.  
+## <a name="example"></a><span data-ttu-id="60eb6-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="60eb6-104">Example</span></span>  
+ <span data-ttu-id="60eb6-105">Im folgenden Beispiel wird die <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> Methode zum Abrufen der <xref:System.Windows.Media.DrawingGroup> Wert, der eine <xref:System.Windows.Media.Visual> und aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="60eb6-105">The following example uses the <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> method to retrieve the <xref:System.Windows.Media.DrawingGroup> value of a <xref:System.Windows.Media.Visual> and enumerate it.</span></span>  
   
 > [!NOTE]
->  Wenn Sie den Visualinhalt auflisten, rufen Sie <xref:System.Windows.Media.Drawing>\-Objekte ab, und nicht die zugrunde liegende Darstellung der Renderingdaten als Anweisungsliste für Vektorgrafiken.  Weitere Informationen finden Sie unter [Übersicht über das WPF\-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+>  <span data-ttu-id="60eb6-106">Wenn Sie den Inhalt des visuellen Elements auflisten, rufen Sie <xref:System.Windows.Media.Drawing> Objekte und nicht die zugrunde liegende Darstellung der Renderingdaten als Anweisungsliste für Vektor.</span><span class="sxs-lookup"><span data-stu-id="60eb6-106">When you are enumerating the contents of the visual, you are retrieving <xref:System.Windows.Media.Drawing> objects, and not the underlying representation of the render data as a vector graphics instruction list.</span></span> <span data-ttu-id="60eb6-107">Weitere Informationen finden Sie unter [Übersicht über das WPF-Grafikenrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).</span><span class="sxs-lookup"><span data-stu-id="60eb6-107">For more information, see [WPF Graphics Rendering Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.Drawing>   
- <xref:System.Windows.Media.DrawingGroup>   
- <xref:System.Windows.Media.VisualTreeHelper>   
- [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Übersicht über das WPF\-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="60eb6-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60eb6-108">See Also</span></span>  
+ <xref:System.Windows.Media.Drawing>  
+ <xref:System.Windows.Media.DrawingGroup>  
+ <xref:System.Windows.Media.VisualTreeHelper>  
+ [<span data-ttu-id="60eb6-109">Übersicht über Zeichnungsobjekte</span><span class="sxs-lookup"><span data-stu-id="60eb6-109">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="60eb6-110">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="60eb6-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

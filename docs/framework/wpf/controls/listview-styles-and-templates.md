@@ -1,82 +1,83 @@
 ---
-title: "ListView-Stile und -Vorlagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ListView"
-  - "ListView [WPF], Stile und Vorlagen"
-  - "Bestandteile [WPF], ListView"
-  - "Zustände [WPF], ListView"
-  - "Formate [WPF], ListView"
-  - "Vorlagen [WPF], ListView"
+title: ListView-Stile und -Vorlagen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], ListView
+- states [WPF], ListView
+- ControlTemplate [WPF], ListView
+- styles [WPF], ListView
+- ListView [WPF], styles and templates
+- templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccd597aa6d517bb3a7dda347c26c0eaf731a278f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ListView-Stile und -Vorlagen
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.ListView>\-Steuerelement beschrieben.  Sie können die standardmäßige <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement ein individuelles Aussehen zu verleihen.  Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="listview-styles-and-templates"></a><span data-ttu-id="ff0b6-102">ListView-Stile und -Vorlagen</span><span class="sxs-lookup"><span data-stu-id="ff0b6-102">ListView Styles and Templates</span></span>
+<span data-ttu-id="ff0b6-103">In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="ff0b6-104">Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="ff0b6-105">Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="ff0b6-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## ListView\-Teile  
- Das <xref:System.Windows.Controls.ListView>\-Steuerelement verfügt nicht über benannte Teile.  
+## <a name="listview-parts"></a><span data-ttu-id="ff0b6-106">ListView-Teile</span><span class="sxs-lookup"><span data-stu-id="ff0b6-106">ListView Parts</span></span>  
+ <span data-ttu-id="ff0b6-107">Die <xref:System.Windows.Controls.ListView> Steuerelement enthält keine benannten Teile.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-107">The <xref:System.Windows.Controls.ListView> control does not have any named parts.</span></span>  
   
- Wenn Sie eine <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ListView> erstellen, kann die Vorlage einen <xref:System.Windows.Controls.ItemsPresenter> in einem <xref:System.Windows.Controls.ScrollViewer> enthalten.  \(Der <xref:System.Windows.Controls.ItemsPresenter> zeigt jedes Element im <xref:System.Windows.Controls.ListView> an. Der <xref:System.Windows.Controls.ScrollViewer> ermöglicht einen Bildlauf im Steuerelement\).  Wenn der <xref:System.Windows.Controls.ItemsPresenter> kein direkt untergeordnetes Element des <xref:System.Windows.Controls.ScrollViewer> ist, müssen Sie dem <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter` zuweisen.  
+ <span data-ttu-id="ff0b6-108">Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.ListView>, Ihrer Vorlage enthalten möglicherweise eine <xref:System.Windows.Controls.ItemsPresenter> innerhalb einer <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-108">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ListView>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="ff0b6-109">(Die <xref:System.Windows.Controls.ItemsPresenter> wird jedes Element in der <xref:System.Windows.Controls.ListView>; das <xref:System.Windows.Controls.ScrollViewer> Bildlauf im Steuerelement aktiviert).</span><span class="sxs-lookup"><span data-stu-id="ff0b6-109">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ListView>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="ff0b6-110">Wenn die <xref:System.Windows.Controls.ItemsPresenter> ist kein direkte untergeordnetes Element von der <xref:System.Windows.Controls.ScrollViewer>, geben Sie die <xref:System.Windows.Controls.ItemsPresenter> den Namen `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-110">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## ListView\-Zustände  
- In der folgenden Tabelle sind die visuellen Zustände für das <xref:System.Windows.Controls.ListView>\-Steuerelement aufgelistet.  
+## <a name="listview-states"></a><span data-ttu-id="ff0b6-111">ListView-Zustände</span><span class="sxs-lookup"><span data-stu-id="ff0b6-111">ListView States</span></span>  
+ <span data-ttu-id="ff0b6-112">Die folgende Tabelle enthält die visueller Zustände für die <xref:System.Windows.Controls.ListView> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-112">The following table lists the visual states for the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-||||  
+|<span data-ttu-id="ff0b6-113">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="ff0b6-113">VisualState Name</span></span>|<span data-ttu-id="ff0b6-114">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="ff0b6-114">VisualStateGroup Name</span></span>|<span data-ttu-id="ff0b6-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ff0b6-115">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="ff0b6-116">Gültig</span><span class="sxs-lookup"><span data-stu-id="ff0b6-116">Valid</span></span>|<span data-ttu-id="ff0b6-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-117">ValidationStates</span></span>|<span data-ttu-id="ff0b6-118">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-118">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="ff0b6-119">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="ff0b6-119">InvalidFocused</span></span>|<span data-ttu-id="ff0b6-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-120">ValidationStates</span></span>|<span data-ttu-id="ff0b6-121">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="ff0b6-122">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="ff0b6-122">InvalidUnfocused</span></span>|<span data-ttu-id="ff0b6-123">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-123">ValidationStates</span></span>|<span data-ttu-id="ff0b6-124">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-124">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## ListViewItem\-Teile  
- Das <xref:System.Windows.Controls.ListViewItem>\-Steuerelement verfügt nicht über benannte Teile.  
+## <a name="listviewitem-parts"></a><span data-ttu-id="ff0b6-125">ListViewItem-Teile</span><span class="sxs-lookup"><span data-stu-id="ff0b6-125">ListViewItem Parts</span></span>  
+ <span data-ttu-id="ff0b6-126">Die <xref:System.Windows.Controls.ListViewItem> Steuerelement enthält keine benannten Teile.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-126">The <xref:System.Windows.Controls.ListViewItem> control does not have any named parts.</span></span>  
   
-## ListViewItem\-Zustände  
- In der folgenden Tabelle sind die Zustände für das <xref:System.Windows.Controls.ListViewItem>\-Steuerelement aufgelistet.  
+## <a name="listviewitem-states"></a><span data-ttu-id="ff0b6-127">ListViewItem-Zustände</span><span class="sxs-lookup"><span data-stu-id="ff0b6-127">ListViewItem States</span></span>  
+ <span data-ttu-id="ff0b6-128">Die folgende Tabelle enthält die Zustände für die <xref:System.Windows.Controls.ListViewItem> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-128">The following table lists the states for the <xref:System.Windows.Controls.ListViewItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="ff0b6-129">VisualState-Name</span><span class="sxs-lookup"><span data-stu-id="ff0b6-129">VisualState Name</span></span>|<span data-ttu-id="ff0b6-130">VisualStateGroup-Name</span><span class="sxs-lookup"><span data-stu-id="ff0b6-130">VisualStateGroup Name</span></span>|<span data-ttu-id="ff0b6-131">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ff0b6-131">Description</span></span>|  
 |-|-|-|  
-|VisualState\-Name|VisualStateGroup\-Name|Beschreibung|  
-|Normal|CommonStates|Der Standardzustand.|  
-|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|  
-|MouseOver|CommonStates|Der Mauszeiger befindet sich über dem <xref:System.Windows.Controls.ComboBox>\-Steuerelement.|  
-|Focused|FocusStates|Das Steuerelement besitzt den Fokus.|  
-|Unfocused|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|  
-|Ausgewählt|SelectionStates|Das Element ist derzeit ausgewählt.|  
-|Nicht ausgewählt|SelectionStates|Das Element ist nicht ausgewählt.|  
-|SelectedUnfocused|SelectionStates|Das Element ist ausgewählt, besitzt aber den Fokus nicht.|  
-|Valid|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation>\-Klasse, und die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft ist `false`.|  
-|InvalidFocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement den Fokus.|  
-|InvalidUnfocused|ValidationStates|Wenn die angefügte <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>\-Eigenschaft `true` ist, hat das Steuerelement nicht den Fokus.|  
+|<span data-ttu-id="ff0b6-132">Normal</span><span class="sxs-lookup"><span data-stu-id="ff0b6-132">Normal</span></span>|<span data-ttu-id="ff0b6-133">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-133">CommonStates</span></span>|<span data-ttu-id="ff0b6-134">Der Standardzustand</span><span class="sxs-lookup"><span data-stu-id="ff0b6-134">The default state.</span></span>|  
+|<span data-ttu-id="ff0b6-135">Deaktiviert</span><span class="sxs-lookup"><span data-stu-id="ff0b6-135">Disabled</span></span>|<span data-ttu-id="ff0b6-136">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-136">CommonStates</span></span>|<span data-ttu-id="ff0b6-137">Das Steuerelement ist deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-137">The control is disabled.</span></span>|  
+|<span data-ttu-id="ff0b6-138">MouseOver</span><span class="sxs-lookup"><span data-stu-id="ff0b6-138">MouseOver</span></span>|<span data-ttu-id="ff0b6-139">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-139">CommonStates</span></span>|<span data-ttu-id="ff0b6-140">Der Mauszeiger befindet, über die <xref:System.Windows.Controls.ComboBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-140">The mouse pointer is over the <xref:System.Windows.Controls.ComboBox> control.</span></span>|  
+|<span data-ttu-id="ff0b6-141">Mit Fokus</span><span class="sxs-lookup"><span data-stu-id="ff0b6-141">Focused</span></span>|<span data-ttu-id="ff0b6-142">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-142">FocusStates</span></span>|<span data-ttu-id="ff0b6-143">Der Fokus liegt auf dem Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-143">The control has focus.</span></span>|  
+|<span data-ttu-id="ff0b6-144">Ohne Fokus</span><span class="sxs-lookup"><span data-stu-id="ff0b6-144">Unfocused</span></span>|<span data-ttu-id="ff0b6-145">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-145">FocusStates</span></span>|<span data-ttu-id="ff0b6-146">Der Fokus liegt nicht auf dem Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-146">The control does not have focus.</span></span>|  
+|<span data-ttu-id="ff0b6-147">Ausgewählt</span><span class="sxs-lookup"><span data-stu-id="ff0b6-147">Selected</span></span>|<span data-ttu-id="ff0b6-148">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-148">SelectionStates</span></span>|<span data-ttu-id="ff0b6-149">Das Element ist derzeit ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-149">The item is currently selected.</span></span>|  
+|<span data-ttu-id="ff0b6-150">Nicht markiert</span><span class="sxs-lookup"><span data-stu-id="ff0b6-150">Unselected</span></span>|<span data-ttu-id="ff0b6-151">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-151">SelectionStates</span></span>|<span data-ttu-id="ff0b6-152">Das Element ist nicht ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-152">The item is not selected.</span></span>|  
+|<span data-ttu-id="ff0b6-153">SelectedUnfocused</span><span class="sxs-lookup"><span data-stu-id="ff0b6-153">SelectedUnfocused</span></span>|<span data-ttu-id="ff0b6-154">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-154">SelectionStates</span></span>|<span data-ttu-id="ff0b6-155">Das Element ist ausgewählt, besitzt jedoch keinen Fokus.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-155">The item is selected, but does not have focus.</span></span>|  
+|<span data-ttu-id="ff0b6-156">Gültig</span><span class="sxs-lookup"><span data-stu-id="ff0b6-156">Valid</span></span>|<span data-ttu-id="ff0b6-157">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-157">ValidationStates</span></span>|<span data-ttu-id="ff0b6-158">Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-158">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="ff0b6-159">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="ff0b6-159">InvalidFocused</span></span>|<span data-ttu-id="ff0b6-160">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-160">ValidationStates</span></span>|<span data-ttu-id="ff0b6-161">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` weist das Steuerelement den Fokus hat.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-161">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="ff0b6-162">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="ff0b6-162">InvalidUnfocused</span></span>|<span data-ttu-id="ff0b6-163">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ff0b6-163">ValidationStates</span></span>|<span data-ttu-id="ff0b6-164">Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement verfügt nicht über den Fokus.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-164">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Beispiele für eine ListView\-ControlTemplate  
- Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.ListView>\-Steuerelement und die zugehörigen Typen definiert wird.  
+## <a name="listview-controltemplate-examples"></a><span data-ttu-id="ff0b6-165">ListView-ControlTemplate-Beispiele</span><span class="sxs-lookup"><span data-stu-id="ff0b6-165">ListView ControlTemplate Examples</span></span>  
+ <span data-ttu-id="ff0b6-166">Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ListView> -Steuerelement und seine zugehörigen Typen.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-166">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ListView> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
+ [!code-xaml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
   
- Im <xref:System.Windows.Controls.ControlTemplate>\-Beispiel werden eine oder mehrere der folgenden Ressourcen verwendet.  
+ <span data-ttu-id="ff0b6-167">Die <xref:System.Windows.Controls.ControlTemplate> Beispiele verwenden eine oder mehrere der folgenden Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="ff0b6-167">The <xref:System.Windows.Controls.ControlTemplate> examples use one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Das vollständige Beispiel finden Sie unter [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ <span data-ttu-id="ff0b6-168">Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="ff0b6-168">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Steuerelementformate und \-vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="ff0b6-169">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ff0b6-169">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="ff0b6-170">Steuerelementformate und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="ff0b6-170">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="ff0b6-171">Anpassung von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="ff0b6-171">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="ff0b6-172">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="ff0b6-172">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="ff0b6-173">Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="ff0b6-173">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

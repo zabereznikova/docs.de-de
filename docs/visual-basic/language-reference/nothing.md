@@ -1,65 +1,64 @@
 ---
-title: "Nothing (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Nothing"
-  - "vb.Nothing"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing keyword"
-  - "Nothing keyword, syntax"
+title: Nothing (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Nothing
+- vb.Nothing
+helpviewer_keywords:
+- Nothing keyword [Visual Basic]
+- Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: 31
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Nothing (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-Stellt den Standardwert jedes beliebigen Datentyps dar.  Bei Verweistypen lautet der Standardwert der `null` Reference.  Für Werttypen Der Standardwert hängt davon ab, ob der Werttyp NULL\-Werte zulässig sind.  
+# <a name="nothing-visual-basic"></a><span data-ttu-id="63ec2-102">Nothing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63ec2-102">Nothing (Visual Basic)</span></span>
+<span data-ttu-id="63ec2-103">Stellt den Standardwert eines beliebigen Datentyps dar.</span><span class="sxs-lookup"><span data-stu-id="63ec2-103">Represents the default value of any data type.</span></span> <span data-ttu-id="63ec2-104">Für Verweistypen, der Standardwert ist die `null` Verweis.</span><span class="sxs-lookup"><span data-stu-id="63ec2-104">For reference types, the default value is the `null` reference.</span></span> <span data-ttu-id="63ec2-105">Der Standardwert hängt für Werttypen gibt an, ob der Werttyp NULL ist.</span><span class="sxs-lookup"><span data-stu-id="63ec2-105">For value types, the default value depends on whether the value type is nullable.</span></span>  
   
 > [!NOTE]
->  Für nicht auf NULL festlegbare Werttypen unterscheiden sich `Nothing` in Visual Basic aus `null` in C\#.  Wenn Sie in Visual Basic in einer Variablen eines Werttyps keine NULL\-Werte zulassen auf `Nothing`, die Variable auf den Standardwert für den deklarierten Typ festgelegt werden.  In C\# `null`Wenn Sie eine Variable eines nicht auf NULL festlegbare Werttyp zuweisen, tritt ein Kompilierungsfehler auf.  
+>  <span data-ttu-id="63ec2-106">Für Typen mit NULL-Werten `Nothing` in Visual Basic unterscheidet sich vom `null` in C# geschrieben.</span><span class="sxs-lookup"><span data-stu-id="63ec2-106">For non-nullable value types, `Nothing` in Visual Basic differs from `null` in C#.</span></span> <span data-ttu-id="63ec2-107">In Visual Basic, wenn Sie eine Variable eines Typs NULL-Wert für `Nothing`, die Variable wird auf den Standardwert für den deklarierten Typ festgelegt.</span><span class="sxs-lookup"><span data-stu-id="63ec2-107">In Visual Basic, if you set a variable of a non-nullable value type to `Nothing`, the variable is set to the default value for its declared type.</span></span> <span data-ttu-id="63ec2-108">In C# geschrieben, wenn Sie eine Variable eines Werttyps auf NULL-zuweisen `null`, tritt ein Kompilierzeitfehler auf.</span><span class="sxs-lookup"><span data-stu-id="63ec2-108">In C#, if you assign a variable of a non-nullable value type to `null`, a compile-time error occurs.</span></span>  
   
-## Hinweise  
- `Nothing` stellt den Standardwert eines Datentyps dar.  Der Standardwert hängt davon ab, ob die Variable von einem Werttyp oder ein Verweistyp ist.  
+## <a name="remarks"></a><span data-ttu-id="63ec2-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="63ec2-109">Remarks</span></span>  
+ <span data-ttu-id="63ec2-110">`Nothing`Stellt den Standardwert eines Datentyps dar.</span><span class="sxs-lookup"><span data-stu-id="63ec2-110">`Nothing` represents the default value of a data type.</span></span> <span data-ttu-id="63ec2-111">Der Standardwert hängt davon ab, ob die Variable ein Werttyp oder ein Verweistyp ist.</span><span class="sxs-lookup"><span data-stu-id="63ec2-111">The default value depends on whether the variable is of a value type or of a reference type.</span></span>  
   
- Eine Variable eines *Werttyps* enthält den Wert direkt.  Werttypen umfassen alle numerischen Datentypen `Boolean`, `Char`, `Date`, alle Strukturen und Enumerationen.  Eine Variable eines *Referenztyps* enthält einen Verweis auf eine Instanz eines Objekts im Arbeitsspeicher.  Verweistypen umfassen Klassen, Arrays, \- Delegaten und die Zeichenfolgen.  Weitere Informationen finden Sie unter [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ <span data-ttu-id="63ec2-112">Eine Variable vom eine *Werttyp* direkt den Wert enthält.</span><span class="sxs-lookup"><span data-stu-id="63ec2-112">A variable of a *value type* directly contains its value.</span></span> <span data-ttu-id="63ec2-113">Werttypen gehören alle numerischen Datentypen `Boolean`, `Char`, `Date`, werden alle vorhandenen Strukturen und alle Enumerationen.</span><span class="sxs-lookup"><span data-stu-id="63ec2-113">Value types include all numeric data types, `Boolean`, `Char`, `Date`, all structures, and all enumerations.</span></span> <span data-ttu-id="63ec2-114">Eine Variable vom eine *Verweistyp* speichert einen Verweis auf eine Instanz des Objekts im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="63ec2-114">A variable of a *reference type* stores a reference to an instance of the object in memory.</span></span> <span data-ttu-id="63ec2-115">Verweistypen enthalten Klassen, Arrays, Delegaten und Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="63ec2-115">Reference types include classes, arrays, delegates, and strings.</span></span> <span data-ttu-id="63ec2-116">Weitere Informationen finden Sie unter [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="63ec2-116">For more information, see [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span></span>  
   
- Wenn eine Variable von einem Werttyp ist, hängt das Verhalten von `Nothing` davon ab, ob die Variable von einem Datentyp NULL\-Werte zulässt.  Um einen Werttyp, der auf NULL festgelegt werden `?` darzustellen, fügen Sie einen Typnamen dem Modifizierer hinzu.  Das Zuweisen von `Nothing` auf eine Variable, die NULL\-Werte zulassen `null`zu legt den Wert fest.  Weitere Informationen und Beispiele finden Sie unter [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ <span data-ttu-id="63ec2-117">Geben Sie, wenn eine Variable einen Werttyp handelt, das Verhalten des `Nothing` abhängig, ob die Variable mit einem Datentyp NULL-Werte zulässt.</span><span class="sxs-lookup"><span data-stu-id="63ec2-117">If a variable is of a value type, the behavior of `Nothing` depends on whether the variable is of a nullable data type.</span></span> <span data-ttu-id="63ec2-118">Um einen Werttyp darzustellen, fügen einen `?` Modifizierer dem Typnamen.</span><span class="sxs-lookup"><span data-stu-id="63ec2-118">To represent a nullable value type, add a `?` modifier to the type name.</span></span> <span data-ttu-id="63ec2-119">Zuweisen von `Nothing` auf eine NULL-Werte zulassen Variable wird der Wert auf `null`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-119">Assigning `Nothing` to a nullable variable sets the value to `null`.</span></span> <span data-ttu-id="63ec2-120">Weitere Informationen und Beispiele finden Sie unter [auf NULL festlegbaren Werttypen](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).</span><span class="sxs-lookup"><span data-stu-id="63ec2-120">For more information and examples, see [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).</span></span>  
   
- Wenn eine Variable von einem Werttyp ist, der keine NULL\-Werte zulässig sind, wird das Zuweisen von `Nothing` an den Standardwert für den deklarierten Typ fest.  Wenn der Typ Variablenmember enthält, werden für alle die jeweiligen Standardwerte festgelegt.  Im folgenden Beispiel wird dieses für skalare Typen veranschaulicht.  
+ <span data-ttu-id="63ec2-121">Wenn eine Variable eines Werttyps, die NULL-Werte zulässt ist, Zuweisen von `Nothing` , wird er auf den Standardwert für den deklarierten Typ.</span><span class="sxs-lookup"><span data-stu-id="63ec2-121">If a variable is of a value type that is not nullable, assigning `Nothing` to it sets it to the default value for its declared type.</span></span> <span data-ttu-id="63ec2-122">Wenn dieses Typs Variablenmember enthält, sind sie bereit, die sich mit ihren Standardwerten.</span><span class="sxs-lookup"><span data-stu-id="63ec2-122">If that type contains variable members, they are all set to their default values.</span></span> <span data-ttu-id="63ec2-123">Das folgende Beispiel veranschaulicht dies für skalare Typen.</span><span class="sxs-lookup"><span data-stu-id="63ec2-123">The following example illustrates this for scalar types.</span></span>  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- Wenn eine Variable von einem Referenztyp ist, und weist `Nothing` in den variablen oder legt sie auf einen `null` Verweis vom Typ der Variablen zu.  Eine Variable, die einem `null` Verweis festgelegt wird, ist keinem Objekt zugeordnet.  Das folgende Beispiel veranschaulicht dies.  
+ <span data-ttu-id="63ec2-124">Wenn eine Variable eines Verweistyps ist, Zuweisen von `Nothing` auf die Variable wird auf eine `null` Verweis vom Typ der Variablen.</span><span class="sxs-lookup"><span data-stu-id="63ec2-124">If a variable is of a reference type, assigning `Nothing` to the variable sets it to a `null` reference of the variable's type.</span></span> <span data-ttu-id="63ec2-125">Eine Variable, die festgelegt wird, um eine `null` Verweis ist nicht mit jedem Objekt verknüpft.</span><span class="sxs-lookup"><span data-stu-id="63ec2-125">A variable that is set to a `null` reference is not associated with any object.</span></span> <span data-ttu-id="63ec2-126">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="63ec2-126">The following example demonstrates this.</span></span>  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- Beim Überprüfen, ob eine Bezugs\- NULL\-Werte zulässt \(oder Werttyp\) \- Variable `null`ist, verwenden Sie nicht `= Nothing` oder `<> Nothing`.  Immer Verwendung `Is Nothing` oder `IsNot Nothing`.  
+ <span data-ttu-id="63ec2-127">Beim Überprüfen von, ob ein Verweis (oder geben Sie NULL-Werte zulassen) des Variable `null`, verwenden Sie keine `= Nothing` oder `<> Nothing`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-127">When checking whether a reference (or nullable value type) variable is `null`, do not use `= Nothing` or `<> Nothing`.</span></span> <span data-ttu-id="63ec2-128">Verwenden Sie immer `Is Nothing` oder `IsNot Nothing`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-128">Always use `Is Nothing` or `IsNot Nothing`.</span></span>  
   
- Für Zeichenfolgen in Visual Basic ist die leere Zeichenfolge `Nothing`.  Daher ist `"" = Nothing` true.  
+ <span data-ttu-id="63ec2-129">Für Zeichenfolgen in Visual Basic wird der leeren Zeichenfolge entspricht `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-129">For strings in Visual Basic, the empty string equals `Nothing`.</span></span> <span data-ttu-id="63ec2-130">Aus diesem Grund `"" = Nothing` ist "true".</span><span class="sxs-lookup"><span data-stu-id="63ec2-130">Therefore, `"" = Nothing` is true.</span></span>  
   
- Im folgenden Beispiel werden Vergleiche mithilfe des `Is`\-Operators und des `IsNot`\-Operators veranschaulicht.  
+ <span data-ttu-id="63ec2-131">Das folgende Beispiel zeigt vergleichen, verwenden die `Is` und `IsNot` Operatoren.</span><span class="sxs-lookup"><span data-stu-id="63ec2-131">The following example shows comparisons that use the `Is` and `IsNot` operators.</span></span>  
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- Wenn Sie eine Variable ohne Verwendung einer `As`\-Klausel deklarieren und auf `Nothing` festlegen, ist die Variable vom Typ `Object`.  Ein Beispiel hierfür ist `Dim something = Nothing`.  In diesem Fall tritt ein Kompilierungsfehler auf, wenn `Option Strict` aktiviert ist und `Option Infer` deaktiviert ist.  
+ <span data-ttu-id="63ec2-132">Wenn eine Variable zu, ohne deklarieren eine `As` Klausel und legen Sie dafür `Nothing`, hat die Variable einen Typ von `Object`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-132">If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`.</span></span> <span data-ttu-id="63ec2-133">Ein Beispiel hierfür ist `Dim something = Nothing`.</span><span class="sxs-lookup"><span data-stu-id="63ec2-133">An example of this is `Dim something = Nothing`.</span></span> <span data-ttu-id="63ec2-134">Ein Fehler während der Kompilierung tritt in diesem Fall auf, wenn `Option Strict` befindet sich auf und `Option Infer` ist deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="63ec2-134">A compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is off.</span></span>  
   
- Wenn `Nothing` einer Objektvariablen zugewiesen wird, verweist diese Variable nicht mehr auf eine Objektinstanz.  Wenn die Variable zuvor auf eine Instanz verwies, wird mit `Nothing` die Instanz selbst nicht beendet.  Die Beendigung der Instanz sowie die Freigabe des benötigten Speicherplatzes und der benötigten Systemressourcen erfolgt erst dann, wenn der Garbage Collector \(GC\) keine aktiven Verweise mehr findet.  
+ <span data-ttu-id="63ec2-135">Wenn Sie zuweisen `Nothing` einer Objektvariablen es nicht mehr bezieht sich auf eine Objektinstanz.</span><span class="sxs-lookup"><span data-stu-id="63ec2-135">When you assign `Nothing` to an object variable, it no longer refers to any object instance.</span></span> <span data-ttu-id="63ec2-136">Wenn die Variable mit einer Instanz bereits verwiesen hat, eine Festlegung auf `Nothing` wird die Instanz selbst nicht beendet.</span><span class="sxs-lookup"><span data-stu-id="63ec2-136">If the variable had previously referred to an instance, setting it to `Nothing` does not terminate the instance itself.</span></span> <span data-ttu-id="63ec2-137">Die Instanz beendet ist, und der Arbeitsspeicher und Ressourcen zugeordnet werden freigegeben, erst nach der Garbage Collector (GC) erkennt, dass keine aktiven Verweise mehr vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="63ec2-137">The instance is terminated, and the memory and system resources associated with it are released, only after the garbage collector (GC) detects that there are no active references remaining.</span></span>  
   
- `Nothing` unterscheidet sich vom <xref:System.DBNull>\-Objekt, das eine nicht initialisierte Variante oder eine nicht vorhandene Datenbankspalte darstellt.  
+ <span data-ttu-id="63ec2-138">`Nothing`unterscheidet sich von der <xref:System.DBNull> Objekt, das eine nicht initialisierte Variante oder eine Spalte nicht vorhandene Datenbank darstellt.</span><span class="sxs-lookup"><span data-stu-id="63ec2-138">`Nothing` differs from the <xref:System.DBNull> object, which represents an uninitialized variant or a nonexistent database column.</span></span>  
   
-## Siehe auch  
- [Dim Statement](../../visual-basic/language-reference/statements/dim-statement.md)   
- [Object Lifetime: How Objects Are Created and Destroyed](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Lifetime in Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Is Operator](../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot Operator](../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="63ec2-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="63ec2-139">See Also</span></span>  
+ [<span data-ttu-id="63ec2-140">Dim-Anweisung</span><span class="sxs-lookup"><span data-stu-id="63ec2-140">Dim Statement</span></span>](../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="63ec2-141">Objektlebensdauer: Erstellen und Zerstören von Objekten</span><span class="sxs-lookup"><span data-stu-id="63ec2-141">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [<span data-ttu-id="63ec2-142">Lebensdauer in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="63ec2-142">Lifetime in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="63ec2-143">Is-Operator</span><span class="sxs-lookup"><span data-stu-id="63ec2-143">Is Operator</span></span>](../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="63ec2-144">IsNot-Operator</span><span class="sxs-lookup"><span data-stu-id="63ec2-144">IsNot Operator</span></span>](../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="63ec2-145">Auf NULL festlegbare Werttypen</span><span class="sxs-lookup"><span data-stu-id="63ec2-145">Nullable Value Types</span></span>](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

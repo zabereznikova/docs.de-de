@@ -1,1 +1,1 @@
-Windows°7-Betriebssystem
+<span data-ttu-id="c51ec-101">Windows°7-Betriebssystem</span><span class="sxs-lookup"><span data-stu-id="c51ec-101">Windows°7 operating system</span></span>

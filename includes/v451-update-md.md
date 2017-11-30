@@ -1,1 +1,1 @@
-4.5.2, Update auf 4.5.1 vom November 2013
+<span data-ttu-id="327b4-101">4.5.2, Update auf 4.5.1 vom November 2013</span><span class="sxs-lookup"><span data-stu-id="327b4-101">4.6, 4.5.2, November 2013 update to 4.5.1</span></span>

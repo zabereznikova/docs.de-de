@@ -1,1 +1,1 @@
-BAML
+<span data-ttu-id="c8bb5-101">BAML</span><span class="sxs-lookup"><span data-stu-id="c8bb5-101">BAML</span></span>

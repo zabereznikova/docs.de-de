@@ -1,1 +1,1 @@
-Microsoft XPS-Dokument-Generator
+<span data-ttu-id="867ee-101">Microsoft XPS-Dokument-Generator</span><span class="sxs-lookup"><span data-stu-id="867ee-101">Microsoft XPS Document Writer</span></span>

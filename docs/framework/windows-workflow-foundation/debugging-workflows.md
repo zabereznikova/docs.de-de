@@ -1,39 +1,43 @@
 ---
-title: "Debuggen von Workflows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Debuggen von Workflows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9304622ff4243f7f885de2175a66cfae1c192aeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Debuggen von Workflows
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bietet mehrere Optionen für das Debuggen ausgeführter Workflows über die Entwicklungsumgebung.  Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.  
+# <a name="debugging-workflows"></a><span data-ttu-id="47742-102">Debuggen von Workflows</span><span class="sxs-lookup"><span data-stu-id="47742-102">Debugging Workflows</span></span>
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="47742-103"> bietet mehrere Optionen für das Debuggen ausgeführter Workflows über die Entwicklungsumgebung.</span><span class="sxs-lookup"><span data-stu-id="47742-103"> offers several options for debugging running workflows from the development environment.</span></span> <span data-ttu-id="47742-104">Das Debugging von Workflows kann im Designer, in XAML und in Code erfolgen.</span><span class="sxs-lookup"><span data-stu-id="47742-104">Workflows can be debugged in the designer, in XAML, and in code.</span></span>  
   
-## Debuggen des Workflow\-Designers  
- Haltepunkte können im Workflow\-Designer für Aktivitäten festgelegt werden, indem entweder die Aktivität markiert und **F9** gedrückt wird oder das Kontextmenü der Aktivität verwendet wird.  Die Ausführung des Workflows wird daraufhin unterbrochen, wenn der Workflowhost im Debugmodus ausgeführt wird.  In der folgenden Bildschirmabbildung wird die Ausführung des Workflows an einem Haltepunkt angehalten.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Debuggen von Workflows mit dem Workflow\-Designer](../Topic/Debugging%20Workflows%20with%20the%20Workflow%20Designer.md).  
+## <a name="debugging-in-the-workflow-designer"></a><span data-ttu-id="47742-105">Debuggen des Workflow-Designers</span><span class="sxs-lookup"><span data-stu-id="47742-105">Debugging in the Workflow Designer</span></span>  
+ <span data-ttu-id="47742-106">Haltepunkte können für Aktivitäten im Workflow-Designer festgelegt werden, indem Sie entweder die Aktivität markiert, und drücken **F9** oder mithilfe der Aktivität-Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="47742-106">Breakpoints can be set on activities in the workflow designer by either highlighting the activity and pressing **F9** or by using the activity’s context menu.</span></span> <span data-ttu-id="47742-107">Die Ausführung des Workflows wird daraufhin unterbrochen, wenn der Workflowhost im Debugmodus ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="47742-107">Execution of the workflow then breaks when the workflow host is run in debug mode.</span></span> <span data-ttu-id="47742-108">In der folgenden Bildschirmabbildung wird die Ausführung des Workflows an einem Haltepunkt angehalten.</span><span class="sxs-lookup"><span data-stu-id="47742-108">In the following screenshot, workflow execution is paused at a breakpoint.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="47742-109">[Debuggen von Workflows mit dem Workflow-Designer](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).</span><span class="sxs-lookup"><span data-stu-id="47742-109"> [Debugging Workflows with the Workflow Designer](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer).</span></span>  
   
-## Debugging in XAML  
- Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen.  Wählen Sie zum Anzeigen des Ausführungspunkts in XAML die Option **XAML\-Ansicht** im Workflow\-Designer aus, wenn die Ausführung des Workflows angehalten wird.  Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen\-Explorer erneut im Designer geöffnet wird.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Vorgehensweise: Debuggen von XAML mit dem Workflow\-Designer](../Topic/How%20to:%20Debug%20XAML%20with%20the%20Workflow%20Designer.md).  
+## <a name="debugging-in-xaml"></a><span data-ttu-id="47742-110">Debugging in XAML</span><span class="sxs-lookup"><span data-stu-id="47742-110">Debugging in XAML</span></span>  
+ <span data-ttu-id="47742-111">Wenn ein Workflow an einem Haltepunkt im Designer angehalten wird, kann das Debugging des Workflows auch in XAML erfolgen.</span><span class="sxs-lookup"><span data-stu-id="47742-111">If a workflow has paused at a breakpoint in the designer, the workflow can also be debugged in XAML.</span></span> <span data-ttu-id="47742-112">Wählen Sie zum Anzeigen des Ausführungspunkts in XAML **XAML-Ansicht** im Workflow-Designer bei der Ausführung des Workflows angehalten wird.</span><span class="sxs-lookup"><span data-stu-id="47742-112">To view the point of execution in XAML, select **XAML View** in the workflow designer when workflow execution is paused.</span></span> <span data-ttu-id="47742-113">Das Debugging kann erneut vom Designer übernommen werden, indem der Workflow aus dem Projektmappen-Explorer erneut im Designer geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="47742-113">Debugging can be switched back to the designer by re-opening the workflow in the designer from the solution explorer.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="47742-114">[Vorgehensweise: Debuggen von XAML mit dem Workflow-Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).</span><span class="sxs-lookup"><span data-stu-id="47742-114"> [How to: Debug XAML with the Workflow Designer](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer).</span></span>  
   
-## Debugging in Code  
- Codehaltepunkte können in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] auf die gleiche Weise verwendet werden wie in anderen imperativen Anwendungen.  Klicken Sie im Codebereich auf den linken Rand, um einen Codehaltepunkt zu erstellen, oder drücken Sie **F9**, um einen Haltepunkt an der Cursorposition zu platzieren.  
+## <a name="debugging-in-code"></a><span data-ttu-id="47742-115">Debugging in Code</span><span class="sxs-lookup"><span data-stu-id="47742-115">Debugging in Code</span></span>  
+ <span data-ttu-id="47742-116">Codehaltepunkte können in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] auf die gleiche Weise verwendet werden wie in anderen imperativen Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="47742-116">Code breakpoints can be used in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in the same way that they can be used in other imperative applications.</span></span> <span data-ttu-id="47742-117">Klicken Sie auf den linken Rand der Codebereich, um einen codehaltepunkt zu erstellen, oder drücken Sie **F9** um einen Haltepunkt an der Cursorposition zu platzieren.</span><span class="sxs-lookup"><span data-stu-id="47742-117">Click the left margin of the code pane to create a code breakpoint, or press **F9** to place a breakpoint at the cursor location.</span></span>  
   
-## Anfügen an einen Workflowprozess  
- Das Debugging von Workflows unterstützt auch die Verwendung der Visual Studio\-Infrastruktur zum Anfügen an einen Prozess.  Dies ermöglicht es dem Workflowautor, einen Workflow zu debuggen, der in einer anderen Hostumgebung ausgeführt wird, z. B. in Internetinformationsdienste \(IIS\) 7.0.  
+## <a name="attaching-to-a-workflow-process"></a><span data-ttu-id="47742-118">Anfügen an einen Workflowprozess</span><span class="sxs-lookup"><span data-stu-id="47742-118">Attaching to a Workflow Process</span></span>  
+ <span data-ttu-id="47742-119">Das Debugging von Workflows unterstützt auch die Verwendung der Visual Studio-Infrastruktur zum Anfügen an einen Prozess.</span><span class="sxs-lookup"><span data-stu-id="47742-119">Workflow debugging also supports using Visual Studio’s infrastructure to attach to a process.</span></span> <span data-ttu-id="47742-120">Dies ermöglicht es dem Workflowautor, einen Workflow zu debuggen, der in einer anderen Hostumgebung ausgeführt wird, z. B. in Internetinformationsdienste (IIS) 7.0.</span><span class="sxs-lookup"><span data-stu-id="47742-120">This enables the workflow author to debug a workflow running in a different host environment such as Internet Information Services (IIS) 7.0.</span></span>  
   
-## Remotedebuggen  
- Das Remotedebugging in [!INCLUDE[wf](../../../includes/wf-md.md)] funktioniert genauso wie das Remotedebugging for andere [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]\-Komponenten.  Weitere Informationen über die Verwendung des Remotedebuggens finden Sie unter [Gewusst wie: Aktivieren von Remotedebuggen](http://go.microsoft.com/fwlink/?LinkId=196257).  
+## <a name="remote-debugging"></a><span data-ttu-id="47742-121">Remotedebuggen</span><span class="sxs-lookup"><span data-stu-id="47742-121">Remote Debugging</span></span>  
+ <span data-ttu-id="47742-122">Das Remotedebugging in [!INCLUDE[wf](../../../includes/wf-md.md)] funktioniert genauso wie das Remotedebugging for andere [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]-Komponenten.</span><span class="sxs-lookup"><span data-stu-id="47742-122">[!INCLUDE[wf](../../../includes/wf-md.md)] remote debugging functions the same as remote debugging for other [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] components.</span></span> <span data-ttu-id="47742-123">Informationen zur Verwendung des Remotedebuggens finden Sie unter [Vorgehensweise: Aktivieren von Remotedebuggen](http://go.microsoft.com/fwlink/?LinkId=196257).</span><span class="sxs-lookup"><span data-stu-id="47742-123">For information on using remote debugging, see [How to: Enable Remote Debugging](http://go.microsoft.com/fwlink/?LinkId=196257).</span></span>  
   
 > [!NOTE]
->  Wenn die Workflowanwendung für die x86\-Architektur konzipiert ist und auf einem Computer gehostet wird, auf dem ein 64\-Bit\-Betriebssystem ausgeführt wird, funktioniert das Remotedebuggen nur, wenn [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] auf dem Remotecomputer installiert wird oder das Ziel für die Workflowanwendung in **Any CPU** geändert wird.  
+>  <span data-ttu-id="47742-124">Wenn die workflowanwendung für die X86 diejenige Architektur und auf einem Computer unter einem 64-Bit-Betriebssystem gehostet wird, Remotedebuggen nicht funktioniert, wenn [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] auf dem Remotecomputer oder das Ziel installiert ist, für die workflowanwendung geändert wird um **beliebige CPU**.</span><span class="sxs-lookup"><span data-stu-id="47742-124">If the workflow application targets the x86 architecture and is hosted on a computer running a 64 bit operating system, then remote debugging will not work unless [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] is installed on the remote computer or the target for the workflow application is changed to **Any CPU**.</span></span>  
   
-## Erweitern der Debugdienste für Workflows  
- Der Debugdienst für Workflows ist jetzt öffentlich und kann zum Erstellen benutzerdefinierter Anwendungen wie Überwachung, Simulation und Debugging in einem erneut gehosteten Designer verwendet werden.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] dem folgenden Thema: <xref:System.Activities.Presentation.Debug.DebuggerService>.
+## <a name="extending-the-workflow-debugging-service"></a><span data-ttu-id="47742-125">Erweitern der Debugdienste für Workflows</span><span class="sxs-lookup"><span data-stu-id="47742-125">Extending the Workflow Debugging Service</span></span>  
+ <span data-ttu-id="47742-126">Der Debugdienst für Workflows ist jetzt öffentlich und kann zum Erstellen benutzerdefinierter Anwendungen wie Überwachung, Simulation und Debugging in einem erneut gehosteten Designer verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="47742-126">The workflow debugger service is now public and can be used to create custom applications such as monitoring, simulation, and debugging in a re-hosted designer.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="47742-127"> dem folgenden Thema: <xref:System.Activities.Presentation.Debug.DebuggerService>.</span><span class="sxs-lookup"><span data-stu-id="47742-127"> the <xref:System.Activities.Presentation.Debug.DebuggerService> topic.</span></span>

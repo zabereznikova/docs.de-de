@@ -1,59 +1,57 @@
 ---
-title: "How to: Create a Variable that Does Not Change in Value (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], read-only"
-  - "variables [Visual Basic], constant value"
+title: "Gewusst wie: Erstellen einer Variablen mit unveränderlichem Wert (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], read-only
+- variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Variable that Does Not Change in Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Variablen mit unveränderlichem Wert scheinen auf den ersten Blick widersinnig zu sein.  Es gibt jedoch Situationen, in denen eine Konstante nicht zulässig ist, während eine Variable mit einem festen Wert hilfreich ist.  In einem solchen Fall können Sie eine Membervariable mit dem [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)\-Schlüsselwort definieren.  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="17baf-102">Gewusst wie: Erstellen einer Variablen mit unveränderlichem Wert (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="17baf-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
+<span data-ttu-id="17baf-103">Das Konzept einer Variablen, die nicht mit seinen Wert ändert möglicherweise widersprüchlich werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="17baf-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="17baf-104">Aber es gibt Situationen, wenn eine Konstante nicht möglich ist, und es ist sinnvoll, eine Variable mit einem festen Wert aufweisen.</span><span class="sxs-lookup"><span data-stu-id="17baf-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="17baf-105">In diesem Fall definieren Sie eine Membervariable mit dem [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="17baf-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
   
- In folgenden Fällen können Sie die [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) nicht zum Deklarieren und Zuweisen eines konstanten Werts verwenden:  
+ <span data-ttu-id="17baf-106">Sie können keine der [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md) zu deklarieren und Zuweisen eines konstanten Werts in den folgenden Situationen:</span><span class="sxs-lookup"><span data-stu-id="17baf-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>  
   
--   Die `Const`\-Anweisung übernimmt den gewünschten Datentyp nicht.  
+-   <span data-ttu-id="17baf-107">Die `Const` Anweisung nimmt nicht an den Datentyp, die Sie verwenden möchten</span><span class="sxs-lookup"><span data-stu-id="17baf-107">The `Const` statement does not accept the data type you want to use</span></span>  
   
--   Der Wert ist zur Kompilierungszeit nicht bekannt.  
+-   <span data-ttu-id="17baf-108">Sie den Wert zum Zeitpunkt der Kompilierung nicht bekannt.</span><span class="sxs-lookup"><span data-stu-id="17baf-108">You do not know the value at compile time</span></span>  
   
--   Sie können den konstanten Wert zur Kompilierungszeit nicht berechnen.  
+-   <span data-ttu-id="17baf-109">Sie sind nicht zum Zeitpunkt der Kompilierung den konstanten Wert zu berechnen</span><span class="sxs-lookup"><span data-stu-id="17baf-109">You are unable to compute the constant value at compile time</span></span>  
   
-### So erstellen Sie eine Variable mit unveränderlichem Wert  
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="17baf-110">So erstellen eine Variable, die nicht geändert wird, Wert</span><span class="sxs-lookup"><span data-stu-id="17baf-110">To create a variable that does not change in value</span></span>  
   
-1.  Deklarieren Sie auf Modulebene eine Membervariable mit der [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), und fügen Sie das [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)\-Schlüsselwort ein.  
+1.  <span data-ttu-id="17baf-111">Auf Modulebene, deklarieren Sie eine Membervariable mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md), und enthalten die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="17baf-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
   
     ```  
-  
     Dim ReadOnly timeStarted  
     ```  
   
-     Sie können `ReadOnly` nur bei einer Membervariablen angeben.  Dies bedeutet, dass Sie die Variable außerhalb jeder Prozedur auf Modulebene definieren müssen.  
+     <span data-ttu-id="17baf-112">Sie können angeben, `ReadOnly` nur in einer Membervariablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="17baf-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="17baf-113">Dies bedeutet, dass Sie die Variable auf Modulebene außerhalb einer Prozedur definieren müssen.</span><span class="sxs-lookup"><span data-stu-id="17baf-113">This means you must define the variable at module level, outside of any procedure.</span></span>  
   
-2.  Wenn Sie den Wert zur Kompilierungszeit in einer einzigen Anweisung berechnen können, verwenden Sie in der `Dim`\-Anweisung eine Initialisierungsklausel.  Fügen Sie nach der [As](../../../../visual-basic/language-reference/statements/as-clause.md)\-Klausel ein Gleichheitszeichen \(`=`\) und danach einen Ausdruck ein.  Stellen Sie sicher, dass der Compiler diesen Ausdruck als einen konstanten Wert auswerten kann.  
+2.  <span data-ttu-id="17baf-114">Wenn Sie den Wert in einer einzelnen Anweisung zum Zeitpunkt der Kompilierung berechnen können, verwenden Sie eine Initialisierungsklausel in der `Dim` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="17baf-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="17baf-115">Führen Sie die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel mit einem Gleichheitszeichen (`=`), gefolgt von einem Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="17baf-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="17baf-116">Achten Sie darauf, dass der Compiler diesen Ausdruck mit einem konstanten Wert ausgewertet werden kann.</span><span class="sxs-lookup"><span data-stu-id="17baf-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  
     ```  
   
-     Einer `ReadOnly`\-Variablen können Sie einen Wert nur einmal zuweisen.  Anschließend kann dieser Wert durch keinen Code mehr geändert werden.  
+     <span data-ttu-id="17baf-117">Sie können einen Wert zuweisen einer `ReadOnly` Variable nur einmal.</span><span class="sxs-lookup"><span data-stu-id="17baf-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="17baf-118">Sobald dies geschehen ist, kann kein Code sein Wert jemals ändern.</span><span class="sxs-lookup"><span data-stu-id="17baf-118">Once you do so, no code can ever change its value.</span></span>  
   
-     Wenn der Wert zur Kompilierungszeit nicht bekannt ist oder Sie ihn nicht in einer einzelnen Anweisung berechnen können, haben Sie zur Laufzeit immer noch die Möglichkeit, ihn in einem Konstruktor zuzuweisen.  Dazu müssen Sie die `ReadOnly`\-Variable auf Klassen\- oder Strukturebene deklarieren.  Berechnen Sie im Konstruktor für die betreffende Klasse oder Struktur den unveränderlichen Wert der Variablen, und weisen Sie ihn der Variablen zu, bevor Sie den Konstruktor verlassen.  
+     <span data-ttu-id="17baf-119">Wenn Sie den Wert zum Zeitpunkt der Kompilierung nicht bekannt, oder können nicht zum Zeitpunkt der Kompilierung in einer einzelnen Anweisung berechnet, können Sie immer noch zur Laufzeit in einem Konstruktor zuweisen.</span><span class="sxs-lookup"><span data-stu-id="17baf-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="17baf-120">Zu diesem Zweck müssen Sie deklarieren die `ReadOnly` Variable Ebene der Klasse oder Struktur.</span><span class="sxs-lookup"><span data-stu-id="17baf-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="17baf-121">Berechnen Sie im Konstruktor für diese Klasse oder Struktur die Variable festen Wert zu, und weisen sie der Variablen vor der Rückgabe aus dem Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="17baf-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>  
   
-## Siehe auch  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)   
- [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)
+## <a name="see-also"></a><span data-ttu-id="17baf-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="17baf-122">See Also</span></span>  
+ [<span data-ttu-id="17baf-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="17baf-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [<span data-ttu-id="17baf-124">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="17baf-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)

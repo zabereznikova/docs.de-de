@@ -1,1 +1,1 @@
-Punkte pro Zoll (dots per inch, dpi)
+<span data-ttu-id="59cdf-101">Punkte pro Zoll (dots per inch, dpi)</span><span class="sxs-lookup"><span data-stu-id="59cdf-101">dots per inch (dpi)</span></span>

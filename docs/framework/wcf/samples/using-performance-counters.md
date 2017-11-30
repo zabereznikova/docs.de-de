@@ -1,32 +1,35 @@
 ---
-title: "Verwenden von Leistungsindikatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Verwenden von Leistungsindikatoren
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 84cbbf83c240ae11099e2c9646150c810a437e71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden von Leistungsindikatoren
-In diesem Beispiel wird veranschaulicht, wie auf [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Leistungsindikatoren zugegriffen wird und wie benutzerdefinierte Leistungsindikatoren erstellt werden.Dieses Beispiel basiert auf dem [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="using-performance-counters"></a><span data-ttu-id="de7a1-102">Verwenden von Leistungsindikatoren</span><span class="sxs-lookup"><span data-stu-id="de7a1-102">Using Performance Counters</span></span>
+<span data-ttu-id="de7a1-103">In diesem Beispiel wird veranschaulicht, wie auf [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Leistungsindikatoren zugegriffen wird und wie benutzerdefinierte Leistungsindikatoren erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="de7a1-103">This sample demonstrates how to access [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="de7a1-104">Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="de7a1-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+>  <span data-ttu-id="de7a1-105">Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.</span><span class="sxs-lookup"><span data-stu-id="de7a1-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In diesem Beispiel ruft der Client die vier Methoden des `ICalculator`\-Diensts auf.Der Client setzt dies fort, bis er vom Benutzer unterbrochen wird.Der Dienst bleibt unverändert.  
+ <span data-ttu-id="de7a1-106">In diesem Beispiel ruft der Client die vier Methoden des `ICalculator`-Diensts auf.</span><span class="sxs-lookup"><span data-stu-id="de7a1-106">In this sample, the client calls the four methods of the `ICalculator` service.</span></span> <span data-ttu-id="de7a1-107">Der Client setzt dies fort, bis er vom Benutzer unterbrochen wird.</span><span class="sxs-lookup"><span data-stu-id="de7a1-107">The client continues to do this until it is interrupted by the user.</span></span> <span data-ttu-id="de7a1-108">Der Dienst bleibt unverändert.</span><span class="sxs-lookup"><span data-stu-id="de7a1-108">The service remains unchanged.</span></span>  
   
- Die Leistungsindikatoren sind im Diagnoseabschnitt der Datei "Web.config" für diesen Dienst aktiviert, wie in der folgenden Beispielkonfiguration dargestellt.  
+ <span data-ttu-id="de7a1-109">Die Leistungsindikatoren sind im Diagnoseabschnitt der Datei "Web.config" für diesen Dienst aktiviert, wie in der folgenden Beispielkonfiguration dargestellt.</span><span class="sxs-lookup"><span data-stu-id="de7a1-109">Performance counters are enabled in the diagnostics section of the Web.config file for the service, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <diagnostics performanceCounters="All" />   
@@ -34,54 +37,54 @@ In diesem Beispiel wird veranschaulicht, wie auf [!INCLUDE[indigo1](../../../../
 </configuration>  
 ```  
   
- Diese Aufgabe kann auch mit [Configuration Editor\-Tool \(SvcConfigEditor.exe\)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) ausgeführt werden.  
+ <span data-ttu-id="de7a1-110">Diese Aufgabe kann auch erfolgen mithilfe der [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span><span class="sxs-lookup"><span data-stu-id="de7a1-110">This task can also be done using the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span></span>  
   
- Wenn Leistungsindikatoren aktiviert sind, wird die ganze Suite von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Leistungsindikatoren für den Dienst aktiviert..NET Framework behält Leistungsdaten automatisch auf drei Ebenen bei: `ServiceModelService`, `ServiceModelEndpoint` und `ServiceModelOperation`.Jede dieser Ebenen verfügt über Leistungsindikatoren wie "Calls", "Calls per Second" und "Security Calls Not Authorized".  
+ <span data-ttu-id="de7a1-111">Wenn Leistungsindikatoren aktiviert sind, wird die ganze Suite von [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Leistungsindikatoren für den Dienst aktiviert.</span><span class="sxs-lookup"><span data-stu-id="de7a1-111">When performance counters are enabled, the entire suite of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performance counters is enabled for the service.</span></span> <span data-ttu-id="de7a1-112">.NET Framework behält Leistungsdaten automatisch auf drei Ebenen bei: `ServiceModelService`, `ServiceModelEndpoint` und `ServiceModelOperation`.</span><span class="sxs-lookup"><span data-stu-id="de7a1-112">The .NET Framework automatically maintains performance data at three levels: `ServiceModelService`, `ServiceModelEndpoint` and `ServiceModelOperation`.</span></span> <span data-ttu-id="de7a1-113">Jede dieser Ebenen verfügt über Leistungsindikatoren wie "Calls", "Calls per Second" und "Security Calls Not Authorized".</span><span class="sxs-lookup"><span data-stu-id="de7a1-113">Each of these levels has performance counters such as "Calls", "Calls per Second", and "Security Calls Not Authorized".</span></span>  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="de7a1-114">So können Sie das Beispiel einrichten, erstellen und ausführen</span><span class="sxs-lookup"><span data-stu-id="de7a1-114">To set up, build, and run the sample</span></span>  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  <span data-ttu-id="de7a1-115">Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="de7a1-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="de7a1-116">Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="de7a1-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="de7a1-117">Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="de7a1-117">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### So zeigen Sie Leistungsdaten an  
+### <a name="to-view-performance-data"></a><span data-ttu-id="de7a1-118">So zeigen Sie Leistungsdaten an</span><span class="sxs-lookup"><span data-stu-id="de7a1-118">To view performance data</span></span>  
   
-1.  Starten Sie das Leistungsmonitor\-Tool, indem Sie auf **Start**, **Ausführen…** klicken, `perfmon` eingeben und dann auf **OK** klicken. Sie können auch in der Systemsteuerung **Verwaltung** auswählen und auf **Leistung** doppelklicken.  
-  
-    > [!NOTE]
-    >  Sie können erst Indikatoren hinzufügen, wenn der Beispielcode ausgeführt wird.  
-  
-2.  Entfernen Sie die aufgeführten Leistungsindikatoren, indem Sie sie auswählen und dann die ENTF\-TASTE drücken.  
-  
-3.  Fügen Sie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Indikatoren hinzu, indem Sie mit der rechten Maustaste in den Diagrammbereich klicken und **Leistungsindikatoren hinzufügen** auswählen.Wählen Sie im Dialogfeld **Leistungsindikatoren hinzufügen** im Dropdownlistenfeld **Leistungsobjekt** die Option ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 oder ServiceModelService 3.0.0.0 aus.Wählen Sie die anzuzeigenden Indikatoren in der Liste aus.  
+1.  <span data-ttu-id="de7a1-119">Starten Sie das Leistungsmonitor-Tool, indem Sie auf **starten**, **ausführen...** , geben Sie `perfmon` , und klicken Sie auf **"OK".** , oder wählen Sie in der Systemsteuerung **Verwaltung** und doppelklicken Sie auf **Leistung**.</span><span class="sxs-lookup"><span data-stu-id="de7a1-119">Start the Performance Monitor Tool by clicking **Start**, **Run…**, enter `perfmon` and click **OK,** or from Control Panel, select **Administrative Tools** and double-click **Performance**.</span></span>  
   
     > [!NOTE]
-    >  Es werden keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Leistungsindikatoren für einen Dienst angezeigt, wenn keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste auf dem Computer ausgeführt werden.  
+    >  <span data-ttu-id="de7a1-120">Sie können erst Indikatoren hinzufügen, wenn der Beispielcode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="de7a1-120">You cannot add counters until the sample code is running.</span></span>  
   
-### So aktivieren Sie Indikatoren mit dem Konfigurations\-Editor  
+2.  <span data-ttu-id="de7a1-121">Entfernen Sie die aufgeführten Leistungsindikatoren, indem Sie sie auswählen und dann die ENTF-TASTE drücken.</span><span class="sxs-lookup"><span data-stu-id="de7a1-121">Remove the performance counters that are listed by selecting them and pressing the Delete key.</span></span>  
   
-1.  Öffnen Sie eine Instanz von SvcConfigEditor.exe.  
+3.  <span data-ttu-id="de7a1-122">Add [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Leistungsindikatoren, indem Sie mit der rechten Maustaste in des Diagrammbereich klicken und auswählen **Leistungsindikatoren hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="de7a1-122">Add [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] counters by right-clicking the graph pane and selecting **Add Counters**.</span></span> <span data-ttu-id="de7a1-123">In der **Leistungsindikatoren hinzufügen** wählen Sie im Dialogfeld **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 oder ServiceModelService 3.0.0.0** in das Leistungsobjekt "" im Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="de7a1-123">In the **Add Counters** dialog box, select **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0, or ServiceModelService 3.0.0.0** in the Performance object drop down list box.</span></span> <span data-ttu-id="de7a1-124">Wählen Sie die anzuzeigenden Indikatoren in der Liste aus.</span><span class="sxs-lookup"><span data-stu-id="de7a1-124">Select the counters you want to view from the list.</span></span>  
   
-2.  Klicken Sie im Menü **Datei** auf **Öffnen** und dann auf Konfigurationsdatei....  
+    > [!NOTE]
+    >  <span data-ttu-id="de7a1-125">Es werden keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Leistungsindikatoren für einen Dienst angezeigt, wenn keine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste auf dem Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="de7a1-125">There are no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performance counters for a service if there are no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services running on the computer.</span></span>  
   
-3.  Navigieren Sie zum Dienstordner der Beispielanwendung, und öffnen Sie die Datei "Web.config".  
+### <a name="to-use-the-configuration-editor-to-enable-counters"></a><span data-ttu-id="de7a1-126">So aktivieren Sie Indikatoren mit dem Konfigurations-Editor</span><span class="sxs-lookup"><span data-stu-id="de7a1-126">To use the Configuration Editor to enable counters</span></span>  
   
-4.  Klicken Sie in der Konfigurationsstruktur auf **Diagnose**.  
+1.  <span data-ttu-id="de7a1-127">Öffnen Sie eine Instanz von SvcConfigEditor.exe.</span><span class="sxs-lookup"><span data-stu-id="de7a1-127">Open an instance of the SvcConfigEditor.exe.</span></span>  
   
-5.  Schalten Sie im Fenster **Diagnose** die Option **Leistungsindikator** um, um "Alle" anzuzeigen.  
+2.  <span data-ttu-id="de7a1-128">Klicken Sie auf das Menü Datei auf **öffnen** , und klicken Sie dann auf **Datei "App.config"...** .</span><span class="sxs-lookup"><span data-stu-id="de7a1-128">On the File menu, click **Open** and then click **Config file…**.</span></span>  
   
-6.  Speichern Sie die Konfigurationsdatei, und beenden Sie den Editor.  
+3.  <span data-ttu-id="de7a1-129">Navigieren Sie zum Dienstordner der Beispielanwendung, und öffnen Sie die Datei "Web.config".</span><span class="sxs-lookup"><span data-stu-id="de7a1-129">Navigate to the sample application's service folder and open the Web.config file.</span></span>  
+  
+4.  <span data-ttu-id="de7a1-130">Klicken Sie auf **Diagnose** in der Konfigurationsstruktur.</span><span class="sxs-lookup"><span data-stu-id="de7a1-130">Click **Diagnostics** on the Configuration tree.</span></span>  
+  
+5.  <span data-ttu-id="de7a1-131">Zum ein-/ausschalten **Leistungsindikator** in der **Diagnose** Fenster werden "All" angezeigt.</span><span class="sxs-lookup"><span data-stu-id="de7a1-131">Toggle **Performance Counter** in the **Diagnostics** window to show 'All'.</span></span>  
+  
+6.  <span data-ttu-id="de7a1-132">Speichern Sie die Konfigurationsdatei, und beenden Sie den Editor.</span><span class="sxs-lookup"><span data-stu-id="de7a1-132">Save the configuration file and exit the editor.</span></span>  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  <span data-ttu-id="de7a1-133">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="de7a1-133">The samples may already be installed on your computer.</span></span> <span data-ttu-id="de7a1-134">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="de7a1-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  <span data-ttu-id="de7a1-135">Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="de7a1-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="de7a1-136">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="de7a1-136">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## Siehe auch  
- [AppFabric\-Überwachungsbeispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="de7a1-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="de7a1-137">See Also</span></span>  
+ [<span data-ttu-id="de7a1-138">Überwachen der AppFabric-Beispiele</span><span class="sxs-lookup"><span data-stu-id="de7a1-138">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

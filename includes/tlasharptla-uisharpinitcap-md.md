@@ -1,1 +1,1 @@
-Benutzeroberfläche (User Interface, UI)
+<span data-ttu-id="d9931-101">Benutzeroberfläche (User Interface, UI)</span><span class="sxs-lookup"><span data-stu-id="d9931-101">User interface (UI)</span></span>

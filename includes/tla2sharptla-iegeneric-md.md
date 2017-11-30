@@ -1,1 +1,1 @@
-Internet Explorer
+<span data-ttu-id="bda93-101">Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="bda93-101">Internet Explorer</span></span>

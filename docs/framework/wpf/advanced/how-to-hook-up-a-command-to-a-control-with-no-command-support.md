@@ -1,55 +1,61 @@
 ---
-title: "Gewusst wie: Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterst&#252;tzung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, Steuerelement, Anfügen eines RoutedCommand"
-  - "Klassen, RoutedCommand, Anfügen an ein Steuerelement"
-  - "Control-Klasse, Anfügen eines RoutedCommand"
-  - "RoutedCommand-Klasse, Anfügen an ein Steuerelement"
+title: "Gewusst wie: Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterstützung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Control class [WPF], attaching a RoutedCommand
+- classes [WPF], Control [WPF], attaching a RoutedCommand
+- RoutedCommand class [WPF], attaching to a Control
+- classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterst&#252;tzung
-Das folgende Beispiel zeigt, wie Sie einen <xref:System.Windows.Input.RoutedCommand> in ein <xref:System.Windows.Controls.Control> einbinden, das nicht über eine integrierte Unterstützung für den Befehl verfügt.  Ein vollständiges Beispiel, in dem Befehle in mehrere Quellen eingebunden werden, finden Sie unter [Beispiel für das Erstellen eines benutzerdefinierten "RoutedCommand"](http://go.microsoft.com/fwlink/?LinkID=159980).  
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a><span data-ttu-id="47b9f-102">Gewusst wie: Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterstützung</span><span class="sxs-lookup"><span data-stu-id="47b9f-102">How to: Hook Up a Command to a Control with No Command Support</span></span>
+<span data-ttu-id="47b9f-103">Im folgende Beispiel wird gezeigt, wie zum Einbinden einer <xref:System.Windows.Input.RoutedCommand> auf eine <xref:System.Windows.Controls.Control> die nicht über eine integrierte Unterstützung für den Befehl.</span><span class="sxs-lookup"><span data-stu-id="47b9f-103">The following example shows how to hook up a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Control> which does not have built in support for the command.</span></span>  <span data-ttu-id="47b9f-104">Ein vollständiges Beispiel, das Befehle mit mehrere Quellen verknüpft, finden Sie im Beispiel unter [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](http://go.microsoft.com/fwlink/?LinkID=159980).</span><span class="sxs-lookup"><span data-stu-id="47b9f-104">For a complete sample which hooks up commands to multiple sources, see the [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980) sample.</span></span>  
   
-## Beispiel  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine Bibliothek mit allgemeinen Befehlen bereit, die Anwendungsprogrammierer häufig nutzen.  Die Befehlsbibliothek enthält die folgenden Klassen: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> und <xref:System.Windows.Documents.EditingCommands>.  
+## <a name="example"></a><span data-ttu-id="47b9f-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="47b9f-105">Example</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="47b9f-106"> stellt eine Bibliothek mit allgemeinen Befehlen bereit, die Anwendungsprogrammierer häufig nutzen.</span><span class="sxs-lookup"><span data-stu-id="47b9f-106"> provides a library of common commands which application programmers encounter regularly.</span></span>  <span data-ttu-id="47b9f-107">Die Klassen, die Befehlsbibliothek sind: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, und <xref:System.Windows.Documents.EditingCommands>.</span><span class="sxs-lookup"><span data-stu-id="47b9f-107">The classes which comprise the command library are: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, and <xref:System.Windows.Documents.EditingCommands>.</span></span>  
   
- Die statischen <xref:System.Windows.Input.RoutedCommand>\-Objekte, aus denen diese Klassen bestehen, stellen keine Befehlslogik bereit.  Die Logik für den Befehl wird dem Befehl mithilfe von <xref:System.Windows.Input.CommandBinding> bereitgestellt.  Viele Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügen über eine integrierte Unterstützung für einige Befehle der Befehlsbibliothek.  <xref:System.Windows.Controls.TextBox> unterstützt zum Beispiel viele Bearbeitungsbefehle der Anwendung, wie <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> und <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Anwendungsentwickler müssen keine speziellen Schritte ausführen, damit diese Befehle mit diesen Steuerelementen funktionieren.  Wenn das <xref:System.Windows.Controls.TextBox> das Befehlsziel ist, wenn der Befehl ausgeführt wird, behandelt es den Befehl mithilfe des <xref:System.Windows.Input.CommandBinding>\-Elements, das in das Steuerelement integriert ist.  
+ <span data-ttu-id="47b9f-108">Die statische <xref:System.Windows.Input.RoutedCommand> Geben Sie Objekte, die diese Klassen bilden keine Logik.</span><span class="sxs-lookup"><span data-stu-id="47b9f-108">The static <xref:System.Windows.Input.RoutedCommand> objects which make up these classes do not supply command logic.</span></span>  <span data-ttu-id="47b9f-109">Die Logik für den Befehl bezieht sich auf den Befehl mit einem <xref:System.Windows.Input.CommandBinding>.</span><span class="sxs-lookup"><span data-stu-id="47b9f-109">The logic for the command is associated with the command with a <xref:System.Windows.Input.CommandBinding>.</span></span>  <span data-ttu-id="47b9f-110">Viele Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Unterstützung für einige der Befehle in der Befehlsbibliothek erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="47b9f-110">Many controls in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] have built in support for some of the commands in the command library.</span></span>  <span data-ttu-id="47b9f-111"><xref:System.Windows.Controls.TextBox>, z. B. unterstützt viele der Anwendung Bearbeitungsbefehle wie z. B. <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, und <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span><span class="sxs-lookup"><span data-stu-id="47b9f-111"><xref:System.Windows.Controls.TextBox>, for example, supports many of the application edit commands such as <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, and <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span></span>  <span data-ttu-id="47b9f-112">Der Anwendungsentwickler muss gar nichts Besonderes tun, um diese Befehle zum Arbeiten mit diesen Steuerelementen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="47b9f-112">The application developer does not have to do anything special to get these commands to work with these controls.</span></span>  <span data-ttu-id="47b9f-113">Wenn die <xref:System.Windows.Controls.TextBox> ist das Befehlsziel, wenn der Befehl ausgeführt wird, wird er behandeln, den Befehl mithilfe der <xref:System.Windows.Input.CommandBinding> , die in das Steuerelement erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="47b9f-113">If the <xref:System.Windows.Controls.TextBox> is the command target when the command is executed, it will handle the command using the <xref:System.Windows.Input.CommandBinding> that is built into the control.</span></span>  
   
- Das folgende Beispiel zeigt, wie Sie ein <xref:System.Windows.Controls.Button> als Befehlsquelle für den <xref:System.Windows.Input.ApplicationCommands.Open%2A>\-Befehl verwenden.  Eine <xref:System.Windows.Input.CommandBinding> wird erstellt, die dem <xref:System.Windows.Input.RoutedCommand> die angegebenen <xref:System.Windows.Input.CanExecuteRoutedEventHandler> und <xref:System.Windows.Input.CanExecuteRoutedEventHandler> zuordnet.  
+ <span data-ttu-id="47b9f-114">Im folgenden wird gezeigt, wie eine <xref:System.Windows.Controls.Button> als Befehlsquelle für die <xref:System.Windows.Input.ApplicationCommands.Open%2A> Befehl.</span><span class="sxs-lookup"><span data-stu-id="47b9f-114">The following shows how to use a <xref:System.Windows.Controls.Button> as the command source for the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  <span data-ttu-id="47b9f-115">Ein <xref:System.Windows.Input.CommandBinding> erstellt wird, ordnet das angegebene <xref:System.Windows.Input.CanExecuteRoutedEventHandler> und <xref:System.Windows.Input.CanExecuteRoutedEventHandler> mit der <xref:System.Windows.Input.RoutedCommand>.</span><span class="sxs-lookup"><span data-stu-id="47b9f-115">A <xref:System.Windows.Input.CommandBinding> is created that associates the specified <xref:System.Windows.Input.CanExecuteRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- Zuerst wird die Befehlsquelle erstellt.  Eine <xref:System.Windows.Controls.Button> wird als Befehlsquelle verwendet.  
+ <span data-ttu-id="47b9f-116">Zuerst wird die Befehlsquelle erstellt.</span><span class="sxs-lookup"><span data-stu-id="47b9f-116">First, the command source is created.</span></span>  <span data-ttu-id="47b9f-117">Ein <xref:System.Windows.Controls.Button> als die Befehlsquelle verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="47b9f-117">A <xref:System.Windows.Controls.Button> is used as the command source.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- Anschließend werden <xref:System.Windows.Input.ExecutedRoutedEventHandler> und <xref:System.Windows.Input.CanExecuteRoutedEventHandler> erstellt.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> öffnet einfach ein <xref:System.Windows.MessageBox>, um die Ausführung des Befehls zu kennzeichnen.  Der <xref:System.Windows.Input.CanExecuteRoutedEventHandler> setzt die <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A>\-Eigenschaft auf `true`.  Normalerweise nimmt der CanExecute\-Handler gründlichere Überprüfungen vor, um festzustellen, ob der Befehl für das aktuelle Befehlsziel ausgeführt werden konnte.  
+ <span data-ttu-id="47b9f-118">Als Nächstes wird die <xref:System.Windows.Input.ExecutedRoutedEventHandler> und <xref:System.Windows.Input.CanExecuteRoutedEventHandler> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="47b9f-118">Next, the <xref:System.Windows.Input.ExecutedRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> are created.</span></span>  <span data-ttu-id="47b9f-119">Die <xref:System.Windows.Input.ExecutedRoutedEventHandler> öffnet einfach eine <xref:System.Windows.MessageBox> um anzugeben, dass der Befehl ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="47b9f-119">The <xref:System.Windows.Input.ExecutedRoutedEventHandler> simply opens a <xref:System.Windows.MessageBox> to signify that the command executed.</span></span>  <span data-ttu-id="47b9f-120">Die <xref:System.Windows.Input.CanExecuteRoutedEventHandler> legt die <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="47b9f-120">The <xref:System.Windows.Input.CanExecuteRoutedEventHandler> sets the <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> property to `true`.</span></span>  <span data-ttu-id="47b9f-121">Normalerweise kann der führen Handler würde führen Sie eine robustere Überprüfungen aus, um festzustellen, ob der Befehl für das aktuelle Befehlsziel ausgeführt werden konnte.</span><span class="sxs-lookup"><span data-stu-id="47b9f-121">Normally, the can execute handler would perform more robust checks to see if the command could execute on the current command target.</span></span>  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- Schließlich wird eine <xref:System.Windows.Input.CommandBinding> für das Stamm\-<xref:System.Windows.Window> der Anwendung erstellt, die die Routingereignishandler dem <xref:System.Windows.Input.ApplicationCommands.Open%2A> zuordnet.  
+ <span data-ttu-id="47b9f-122">Schließlich eine <xref:System.Windows.Input.CommandBinding> wird im Stammverzeichnis erstellt <xref:System.Windows.Window> der Anwendung, die die Routingereignishandler ordnet die <xref:System.Windows.Input.ApplicationCommands.Open%2A> Befehl.</span><span class="sxs-lookup"><span data-stu-id="47b9f-122">Finally, a <xref:System.Windows.Input.CommandBinding> is created on the root <xref:System.Windows.Window> of the application that associates the routed events handlers to the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## Siehe auch  
- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a><span data-ttu-id="47b9f-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="47b9f-123">See Also</span></span>  
+ [<span data-ttu-id="47b9f-124">Befehlsübersicht</span><span class="sxs-lookup"><span data-stu-id="47b9f-124">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="47b9f-125">Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung</span><span class="sxs-lookup"><span data-stu-id="47b9f-125">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

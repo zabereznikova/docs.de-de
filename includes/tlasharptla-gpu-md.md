@@ -1,1 +1,1 @@
-Grafikprozessor (Graphics Processing Unit; GPU)
+<span data-ttu-id="e1547-101">Grafikprozessor (Graphics Processing Unit; GPU)</span><span class="sxs-lookup"><span data-stu-id="e1547-101">graphics processing unit (GPU)</span></span>

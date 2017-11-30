@@ -1,1 +1,1 @@
-OpenType
+<span data-ttu-id="db651-101">OpenType</span><span class="sxs-lookup"><span data-stu-id="db651-101">OpenType</span></span>

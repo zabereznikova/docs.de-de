@@ -1,46 +1,38 @@
 ---
-title: Threadpooling (Visual Basic) | Microsoft-Dokumentation
+title: Threadpooling (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6037d7ea17e260d44bae571aa25d413996f5a123
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="thread-pooling-visual-basic"></a>Threadpooling (Visual Basic)
-Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund ausgeführt. (Siehe [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) Hintergrundinformationen.) Dies bewirkt, dass der primären Thread asynchron andere Aufgaben ausführen.  
+# <a name="thread-pooling-visual-basic"></a><span data-ttu-id="dd59a-102">Threadpooling (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd59a-102">Thread Pooling (Visual Basic)</span></span>
+<span data-ttu-id="dd59a-103">Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund auszuführen.</span><span class="sxs-lookup"><span data-stu-id="dd59a-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="dd59a-104">(Siehe [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) Hintergrundinformationen.) Dies lässt den primären Thread frei, um andere Aufgaben asynchron auszuführen.</span><span class="sxs-lookup"><span data-stu-id="dd59a-104">(See [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  
   
- Threadpools sind häufig in serveranwendungen verwendet. Jede eingehende Anforderung wird einem Thread aus dem Threadpool zugewiesen, sodass die Anforderung asynchron verarbeitet werden kann, ohne den primären Thread binden oder die Verarbeitung von nachfolgenden Anforderungen zu verzögern.  
+ <span data-ttu-id="dd59a-105">Threadpools werden häufig in Serveranwendungen verwendet.</span><span class="sxs-lookup"><span data-stu-id="dd59a-105">Thread pools are often employed in server applications.</span></span> <span data-ttu-id="dd59a-106">Jede eingehende Anforderung wird einem Thread aus dem Threadpool zugeordnet, sodass die Anforderung asynchron verarbeitet werden kann, ohne den primären Thread zu beschäftigen oder die Verarbeitung von nachfolgenden Anforderungen zu verzögern.</span><span class="sxs-lookup"><span data-stu-id="dd59a-106">Each incoming request is assigned to a thread from the thread pool, so that the request can be processed asynchronously, without tying up the primary thread or delaying the processing of subsequent requests.</span></span>  
   
- Wenn ein Thread im Pool seine Aufgabe abgeschlossen ist, wird es zurückgegeben an eine Warteschlange der wartenden Threads, in dem es wiederverwendet werden. Diese wiederverwenden können Clientanwendungen, die Kosten für das Erstellen eines neuen Threads für jeden Vorgang zu vermeiden.  
+ <span data-ttu-id="dd59a-107">Wenn ein Thread im Pool seine Aufgabe abgeschlossen hat, wird er an eine Warteschlange von wartenden Threads zurückgegeben, in der er wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dd59a-107">Once a thread in the pool completes its task, it is returned to a queue of waiting threads, where it can be reused.</span></span> <span data-ttu-id="dd59a-108">Aufgrund der Wiederverwendung müssen Anwendungen nicht für jede Aufgabe einen neuen Threads erstellen.</span><span class="sxs-lookup"><span data-stu-id="dd59a-108">This reuse enables applications to avoid the cost of creating a new thread for each task.</span></span>  
   
- Threadpools haben in der Regel eine maximale Anzahl von Threads. Wenn alle Threads aktiv sind, werden zusätzliche Aufgaben in Warteschlange eingereiht, bis sie von wieder verfügbaren Threads verarbeitet werden können.  
+ <span data-ttu-id="dd59a-109">Threadpools haben in der Regel eine maximale Anzahl von Threads.</span><span class="sxs-lookup"><span data-stu-id="dd59a-109">Thread pools typically have a maximum number of threads.</span></span> <span data-ttu-id="dd59a-110">Wenn alle Threads aktiv sind, werden zusätzliche Aufgaben in die Warteschlange eingereiht, bis sie von wieder verfügbaren Threads verarbeitet werden können.</span><span class="sxs-lookup"><span data-stu-id="dd59a-110">If all the threads are busy, additional tasks are put in queue until they can be serviced as threads become available.</span></span>  
   
- Sie können einen eigenen Threadpool implementieren, aber es ist einfacher, die von .NET Framework durch die <xref:System.Threading.ThreadPool>Klasse</xref:System.Threading.ThreadPool> bereitgestellten Threadpool zu verwenden  
+ <span data-ttu-id="dd59a-111">Sie können einen eigenen Threadpool implementieren. Es ist allerdings einfacher, den Threadpool zu verwenden, der von .NET Framework durch die <xref:System.Threading.ThreadPool>-Klasse bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="dd59a-111">You can implement your own thread pool, but it is easier to use the thread pool provided by the .NET Framework through the <xref:System.Threading.ThreadPool> class.</span></span>  
   
- Beim pooling von Threads rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>-Methode mit einem Delegaten für die Prozedur, die Sie ausführen möchten, und Visual Basic wird der Thread erstellt und führt die Prozedur.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>  
+ <span data-ttu-id="dd59a-112">Beim pooling von Threads, rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> Methode mit einem Delegaten für die Prozedur, die Sie ausführen möchten, und Visual Basic wird der Thread erstellt und führt die Prozedur.</span><span class="sxs-lookup"><span data-stu-id="dd59a-112">With thread pooling, you call the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> method with a delegate for the procedure you want to run, and Visual Basic creates the thread and runs your procedure.</span></span>  
   
-## <a name="thread-pooling-example"></a>Beispiel für Pooling von Threads  
- Das folgende Beispiel zeigt, wie Sie mehrere Aufgaben gestartet pooling von Threads verwenden können.  
+## <a name="thread-pooling-example"></a><span data-ttu-id="dd59a-113">Beispiele zum Pooling von Threads</span><span class="sxs-lookup"><span data-stu-id="dd59a-113">Thread Pooling Example</span></span>  
+ <span data-ttu-id="dd59a-114">Das folgende Beispiel zeigt, wie Sie das Pooling von Threads zum Starten von mehreren Aufgaben verwenden können.</span><span class="sxs-lookup"><span data-stu-id="dd59a-114">The following example shows how you can use thread pooling to start several tasks.</span></span>  
   
 ```vb  
 Public Sub DoWork()  
@@ -59,22 +51,22 @@ Private Sub AnotherLongTask(ByVal state As Object)
 End Sub  
 ```  
   
- Ein Vorteil der pooling von Threads ist, dass Argumente ein Zustandsobjekt an den Task-Prozedur übergeben werden kann. Wenn die aufgerufene Prozedur mehr als ein Argument erfordert, können Sie eine Struktur oder eine Instanz einer Klasse in Umwandeln einer `Object` -Datentyp.  
+ <span data-ttu-id="dd59a-115">Ein Vorteil des Poolings von Threads ist, dass Sie Argumente in einem Zustandsobjekt an die Aufgabenprozedur übergeben können.</span><span class="sxs-lookup"><span data-stu-id="dd59a-115">One advantage of thread pooling is that you can pass arguments in a state object to the task procedure.</span></span> <span data-ttu-id="dd59a-116">Wenn die aufgerufene Prozedur mehr als ein Argument erfordert, können Sie eine Struktur oder eine Instanz einer Klasse in einen `Object`-Datentyp umwandeln.</span><span class="sxs-lookup"><span data-stu-id="dd59a-116">If the procedure you are calling requires more than one argument, you can cast a structure or an instance of a class into an `Object` data type.</span></span>  
   
-## <a name="thread-pool-parameters-and-return-values"></a>Thread-Pool-Parameter und Rückgabewerte  
- Rückgabe von Werten aus einem Threadpool-Thread ist nicht einfach. Das Standardverfahren für die Rückgabe von Werten aus einem Funktionsaufruf ist nicht zulässig, da `Sub` Verfahren sind die einzige Art von Prozedur, die einen Threadpool in die Warteschlange gestellt werden kann. Eine Möglichkeit, Sie können Parameter angeben und Werte wird durch die Parameter, Rückgabewerte und Methoden in einem Wrapper gemäß [Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
+## <a name="thread-pool-parameters-and-return-values"></a><span data-ttu-id="dd59a-117">Parameter und Rückgabewerte des Threadpools</span><span class="sxs-lookup"><span data-stu-id="dd59a-117">Thread Pool Parameters and Return Values</span></span>  
+ <span data-ttu-id="dd59a-118">Die Rückgabe von Werten aus einem Thread des Threadpools ist nicht einfach.</span><span class="sxs-lookup"><span data-stu-id="dd59a-118">Returning values from a thread-pool thread is not straightforward.</span></span> <span data-ttu-id="dd59a-119">Das Standardverfahren für die Rückgabe von Werten von einem Funktionsaufruf ist nicht zulässig, da `Sub`-Prozeduren die einzigen Typen der Prozedur sind, die in einem Threadpool in die Warteschlagen gestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="dd59a-119">The standard way of returning values from a function call is not allowed because `Sub` procedures are the only type of procedure that can be queued to a thread pool.</span></span> <span data-ttu-id="dd59a-120">Eine Möglichkeit, Sie können Parameter und Werte wird durch die Parameter, Rückgabewerte und Methoden in einem Wrapper wie beschrieben in [Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="dd59a-120">One way you can provide parameters and return values is by wrapping the parameters, return values, and methods in a wrapper class as described in [Parameters and Return Values for Multithreaded Procedures (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).</span></span>  
   
- Ein einfacheres Verfahren geben Sie Parameter und Rückgabewerte wird mithilfe des optionalen `ByVal` Objektvariable des Status der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Wenn Sie diese Variable verwenden, um einen Verweis auf eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Threadpool-Thread geändert und als Rückgabewerte verwendet werden.  
+ <span data-ttu-id="dd59a-121">Ein einfacherer Weg zum Bereitstellen von Parametern und Rückgabewerten besteht darin, die optionale Zustandsobjektvariable `ByVal` der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="dd59a-121">An easer way to provide parameters and return values is by using the optional `ByVal` state object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="dd59a-122">Wenn Sie diese Variable verwenden, um einen Verweis an eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Thread des Threadpools geändert und als Rückgabewerte verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dd59a-122">If you use this variable to pass a reference to an instance of a class, the members of the instance can be modified by the thread-pool thread and used as return values.</span></span>  
   
- Zunächst kann es nicht offensichtlich, ändern Sie ein Objekt verweist auf eine Variable, die als Wert übergeben wird. Dies ist möglich, da nur der Objektverweis als Wert übergeben wird. Wenn Sie Member des Objekts gemäß den Objektverweis ändern, werden die Änderungen auf die tatsächliche Instanz anwenden.  
+ <span data-ttu-id="dd59a-123">Es liegt nicht unbedingt auf der Hand, dass Sie ein Objekt ändern können, auf das von einer als Wert übergebenen Variable verwiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="dd59a-123">At first it may not be obvious that you can modify an object referred to by a variable that is passed by value.</span></span> <span data-ttu-id="dd59a-124">Dies ist allein möglich, da nur der Objektverweis als Wert übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="dd59a-124">You can do this because only the object reference is passed by value.</span></span> <span data-ttu-id="dd59a-125">Wenn Sie Member des Objekts ändern, auf das vom Objektverweis verwiesen wurde, werden die Änderungen auf die eigentliche Klasseninstanz angewendet.</span><span class="sxs-lookup"><span data-stu-id="dd59a-125">When you make changes to members of the object referred to by the object reference, the changes apply to the actual class instance.</span></span>  
   
- Strukturen können zum Zurückgeben von Werten in Statusobjekten verwendet werden. Da Strukturen Werttypen sind, ändern Änderungen, die der asynchrone Prozess vornimmt nicht die Elemente der Originalstruktur. Verwenden Sie Strukturen, um Parameter bereitzustellen, wenn keine Rückgabewerte benötigt werden.  
+ <span data-ttu-id="dd59a-126">Strukturen können nicht zum Zurückgeben von Werten in Zustandsobjekten verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dd59a-126">Structures cannot be used to return values inside state objects.</span></span> <span data-ttu-id="dd59a-127">Da Strukturen Werttypen sind, haben Änderungen, die der asynchrone Prozess vornimmt, keine Auswirkungen auf die Elemente der ursprünglichen Struktur.</span><span class="sxs-lookup"><span data-stu-id="dd59a-127">Because structures are value types, changes that the asynchronous process makes do not change the members of the original structure.</span></span> <span data-ttu-id="dd59a-128">Verwenden Sie Strukturen, um Parameter bereitzustellen, wenn keine Rückgabewerte erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="dd59a-128">Use structures to provide parameters when return values are not needed.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- [Gewusst wie: Verwenden eines Threadpools (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Threadsynchronisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)
+## <a name="see-also"></a><span data-ttu-id="dd59a-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dd59a-129">See Also</span></span>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [<span data-ttu-id="dd59a-130">Vorgehensweise: Verwenden eines Threadpools (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd59a-130">How to: Use a Thread Pool (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [<span data-ttu-id="dd59a-131">Threading (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd59a-131">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="dd59a-132">Multithreadanwendungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd59a-132">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [<span data-ttu-id="dd59a-133">Threadsynchronisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd59a-133">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)

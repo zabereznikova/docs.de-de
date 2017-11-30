@@ -1,1 +1,1 @@
-Software Development Kit (SDK)
+<span data-ttu-id="bd2cc-101">Software Development Kit (SDK)</span><span class="sxs-lookup"><span data-stu-id="bd2cc-101">software development kit (SDK)</span></span>

@@ -1,1 +1,1 @@
-Integrierte Entwicklungsumgebung (Integrated Development Environment; IDE)
+<span data-ttu-id="707bb-101">Integrierte Entwicklungsumgebung (Integrated Development Environment; IDE)</span><span class="sxs-lookup"><span data-stu-id="707bb-101">Integrated Development Environment (IDE)</span></span>

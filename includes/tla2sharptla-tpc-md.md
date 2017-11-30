@@ -1,1 +1,1 @@
-Tablet PC
+<span data-ttu-id="a454c-101">Tablet PC</span><span class="sxs-lookup"><span data-stu-id="a454c-101">Tablet PC</span></span>

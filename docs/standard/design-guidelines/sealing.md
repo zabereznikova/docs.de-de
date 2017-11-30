@@ -1,63 +1,61 @@
 ---
-title: "Versiegeln | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beschränken der Erweiterbarkeit"
-  - "[Klassen [.NET Framework], versiegeln"
-  - "Verhindern der Anpassung"
-  - "Versiegelte Klassen"
+title: Versiegeln
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- limiting extensibility
+- classes [.NET Framework], sealing
+- preventing customization
+- sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Versiegeln
-Eines der Features von objektorientierten Frameworks ist, dass Entwickler auf unvorhergesehene durch die Framework\-Entwickler Weise anpassen und erweitern können. Dies ist die Leistungsfähigkeit und die Gefahr eines erweiterbaren Entwurf. Wenn Sie Ihr Framework entwerfen, es ist daher sehr wichtig für die Erweiterbarkeit sorgfältig entworfen wird, wenn es gewünscht wird, und Erweiterbarkeit zu beschränken, wenn es gefährlich sein kann.  
+# <a name="sealing"></a><span data-ttu-id="72b7f-102">Versiegeln</span><span class="sxs-lookup"><span data-stu-id="72b7f-102">Sealing</span></span>
+<span data-ttu-id="72b7f-103">Eine der Funktionen des Frameworks objektorientierte ist, dass Entwickler erweitern und Möglichkeiten, die bis zur servicebereitstellung durch die Framework-Designer anpassen können.</span><span class="sxs-lookup"><span data-stu-id="72b7f-103">One of the features of object-oriented frameworks is that developers can extend and customize them in ways unanticipated by the framework designers.</span></span> <span data-ttu-id="72b7f-104">Dies ist die Leistungsfähigkeit und die Gefahr eines extensible Entwurf.</span><span class="sxs-lookup"><span data-stu-id="72b7f-104">This is both the power and danger of extensible design.</span></span> <span data-ttu-id="72b7f-105">Wenn Sie Ihr Framework entwerfen, es ist daher sehr wichtig für die Erweiterbarkeit sorgfältig entworfen wird, wenn es gewünscht wird, und Erweiterbarkeit eingeschränkt werden, wenn es gefährlich ist.</span><span class="sxs-lookup"><span data-stu-id="72b7f-105">When you design your framework, it is, therefore, very important to carefully design for extensibility when it is desired, and to limit extensibility when it is dangerous.</span></span>  
   
- Eine leistungsstarke Möglichkeit, Erweiterbarkeit ist versiegeln. Sie können die Klasse oder die einzelnen Mitglieder versiegeln. Versiegelns einer Klasse wird verhindert, dass Benutzer von der\-Klasse erben. Versiegeln ein Element wird verhindert, dass Benutzer einen bestimmten Member zu überschreiben.  
+ <span data-ttu-id="72b7f-106">Ein leistungsstarken Mechanismus, der die Erweiterbarkeit verhindert wird versiegeln.</span><span class="sxs-lookup"><span data-stu-id="72b7f-106">A powerful mechanism that prevents extensibility is sealing.</span></span> <span data-ttu-id="72b7f-107">Sie können die Klasse oder die einzelnen Mitglieder versiegeln.</span><span class="sxs-lookup"><span data-stu-id="72b7f-107">You can seal either the class or individual members.</span></span> <span data-ttu-id="72b7f-108">Versiegelns einer Klasse wird verhindert, dass Benutzer von der Klasse erben.</span><span class="sxs-lookup"><span data-stu-id="72b7f-108">Sealing a class prevents users from inheriting from the class.</span></span> <span data-ttu-id="72b7f-109">Versiegeln ein Element wird verhindert, dass Benutzer einen bestimmten Member überschreiben.</span><span class="sxs-lookup"><span data-stu-id="72b7f-109">Sealing a member prevents users from overriding a particular member.</span></span>  
   
- **X nicht** versiegeln Sie Klassen ohne einen guten Grund dafür.  
+ <span data-ttu-id="72b7f-110">**X nicht** Klassen ohne einen guten Grund dazu versiegeln.</span><span class="sxs-lookup"><span data-stu-id="72b7f-110">**X DO NOT** seal classes without having a good reason to do so.</span></span>  
   
- Versiegelns einer Klasse, da Sie ein Szenario Erweiterbarkeit einfällt ist keinen guten Grund. Framework\-Benutzer wie aus verschiedenen Gründen nonobvious wie das Hinzufügen der Einfachheit halber Member von Klassen erben. Finden Sie unter [Nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md) für Beispiele für Gründe für nonobvious Benutzer von einem Typ erben soll.  
+ <span data-ttu-id="72b7f-111">Versiegelns einer Klasse, da Sie eine Erweiterbarkeitsszenarios vorstellen können keine ist keinen guten Grund.</span><span class="sxs-lookup"><span data-stu-id="72b7f-111">Sealing a class because you cannot think of an extensibility scenario is not a good reason.</span></span> <span data-ttu-id="72b7f-112">Framework-Benutzer mögen aus verschiedenen Gründen nonobvious wie das Hinzufügen von halber Member von Klassen erben.</span><span class="sxs-lookup"><span data-stu-id="72b7f-112">Framework users like to inherit from classes for various nonobvious reasons, like adding convenience members.</span></span> <span data-ttu-id="72b7f-113">Finden Sie unter [nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md) Beispiele nonobvious Gründe für Benutzer von einem Typ erben möchten.</span><span class="sxs-lookup"><span data-stu-id="72b7f-113">See [Unsealed Classes](../../../docs/standard/design-guidelines/unsealed-classes.md) for examples of nonobvious reasons users want to inherit from a type.</span></span>  
   
- Gute Gründe für Versiegelns einer Klasse umfassen Folgendes:  
+ <span data-ttu-id="72b7f-114">Gute Gründe für Versiegelns einer Klasse umfassen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="72b7f-114">Good reasons for sealing a class include the following:</span></span>  
   
--   Die\-Klasse ist eine statische Klasse. Siehe [Entwurf statischer Klassen](../../../docs/standard/design-guidelines/static-class.md).  
+-   <span data-ttu-id="72b7f-115">Die Klasse ist eine statische Klasse.</span><span class="sxs-lookup"><span data-stu-id="72b7f-115">The class is a static class.</span></span> <span data-ttu-id="72b7f-116">Finden Sie unter [statische-Klassenentwurf](../../../docs/standard/design-guidelines/static-class.md).</span><span class="sxs-lookup"><span data-stu-id="72b7f-116">See [Static Class Design](../../../docs/standard/design-guidelines/static-class.md).</span></span>  
   
--   Die Klasse speichert vertrauliche geheime Schlüssel in geerbte geschützte Member.  
+-   <span data-ttu-id="72b7f-117">Die Klasse speichert sicherheitsrelevante geheime Schlüssel in geerbte geschützte Member an.</span><span class="sxs-lookup"><span data-stu-id="72b7f-117">The class stores security-sensitive secrets in inherited protected members.</span></span>  
   
--   Die Klasse erbt zahlreiche virtuelle Member, und die Kosten für diese einzeln versiegeln würde überwiegen die Vorteile der Klasse nicht versiegelt.  
+-   <span data-ttu-id="72b7f-118">Die Klasse erbt zahlreiche virtuelle Member und die Kosten für diese einzeln versiegeln würde überwiegen die Vorteile der Klasse nicht versiegelt.</span><span class="sxs-lookup"><span data-stu-id="72b7f-118">The class inherits many virtual members and the cost of sealing them individually would outweigh the benefits of leaving the class unsealed.</span></span>  
   
--   Die Klasse ist ein Attribut, das sehr schnelle Common Language Runtime\-Suche erfordert. Versiegelte Attribute haben etwas mehr Leistung als nicht versiegeltes. Siehe [Attribute](../../../docs/standard/design-guidelines/attribute.md).  
+-   <span data-ttu-id="72b7f-119">Die Klasse ist ein Attribut, das sehr schnelle Runtime Suche erfordert.</span><span class="sxs-lookup"><span data-stu-id="72b7f-119">The class is an attribute that requires very fast runtime look-up.</span></span> <span data-ttu-id="72b7f-120">Versiegelte Attribute haben leicht höhere Leistung als nicht versiegelten diejenigen.</span><span class="sxs-lookup"><span data-stu-id="72b7f-120">Sealed attributes have slightly higher performance levels than unsealed ones.</span></span> <span data-ttu-id="72b7f-121">finden Sie unter [Attribute](../../../docs/standard/design-guidelines/attributes.md).</span><span class="sxs-lookup"><span data-stu-id="72b7f-121">See [Attributes](../../../docs/standard/design-guidelines/attributes.md).</span></span>  
   
- **X nicht** geschützten oder virtuellen Member in versiegelten Typen deklarieren.  
+ <span data-ttu-id="72b7f-122">**X nicht** geschützten oder virtuellen Member für versiegelte Typen deklarieren.</span><span class="sxs-lookup"><span data-stu-id="72b7f-122">**X DO NOT** declare protected or virtual members on sealed types.</span></span>  
   
- Per Definition können von versiegelte Typen geerbt werden. Dies bedeutet, dass geschützte Member in versiegelten Typen nicht aufgerufen werden, und virtuelle Methoden in versiegelten Typen nicht überschrieben werden.  
+ <span data-ttu-id="72b7f-123">Per Definition können nicht versiegelte Typen von vererbt werden.</span><span class="sxs-lookup"><span data-stu-id="72b7f-123">By definition, sealed types cannot be inherited from.</span></span> <span data-ttu-id="72b7f-124">Dies bedeutet, dass geschützte Member in versiegelten Typen nicht aufgerufen werden, und virtuelle Methoden für versiegelte Typen können nicht überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="72b7f-124">This means that protected members on sealed types cannot be called, and virtual methods on sealed types cannot be overridden.</span></span>  
   
- **✓ ggf.** versiegeln Member, die Sie außer Kraft setzen.  
+ <span data-ttu-id="72b7f-125">**✓ GGF.** versiegeln Elemente, die Sie außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="72b7f-125">**✓ CONSIDER** sealing members that you override.</span></span>  
   
- Probleme, die entstehen können, Einführung in virtuelle Member \(beschrieben [Virtuelle Member](../../../docs/standard/design-guidelines/virtual-members.md)\) überschreibt, auch in etwas geringerem Maß zuweisen. Versiegeln einer Außerkraftsetzung schützt Sie vor solchen Problemen, die von diesem Punkt in der Vererbungshierarchie ab.  
+ <span data-ttu-id="72b7f-126">Probleme, die auftreten können, aus der Einführung in virtuelle Member (in behandelten [virtuelle Member](../../../docs/standard/design-guidelines/virtual-members.md)) gelten für Außerkraftsetzungen, auch in einem etwas geringeren Grad an.</span><span class="sxs-lookup"><span data-stu-id="72b7f-126">Problems that can result from introducing virtual members (discussed in [Virtual Members](../../../docs/standard/design-guidelines/virtual-members.md)) apply to overrides as well, although to a slightly lesser degree.</span></span> <span data-ttu-id="72b7f-127">Versiegeln einer Außerkraftsetzung schützt Sie vor solchen Problemen, die von diesem Punkt in der Vererbungshierarchie ab.</span><span class="sxs-lookup"><span data-stu-id="72b7f-127">Sealing an override shields you from these problems starting from that point in the inheritance hierarchy.</span></span>  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ <span data-ttu-id="72b7f-128">*Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*</span><span class="sxs-lookup"><span data-stu-id="72b7f-128">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ <span data-ttu-id="72b7f-129">*Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*</span><span class="sxs-lookup"><span data-stu-id="72b7f-129">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)   
- [Nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md)
+## <a name="see-also"></a><span data-ttu-id="72b7f-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72b7f-130">See Also</span></span>  
+ [<span data-ttu-id="72b7f-131">Frameworkentwurfsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="72b7f-131">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="72b7f-132">Entwerfen für Erweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="72b7f-132">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [<span data-ttu-id="72b7f-133">Nicht versiegelte Klassen</span><span class="sxs-lookup"><span data-stu-id="72b7f-133">Unsealed Classes</span></span>](../../../docs/standard/design-guidelines/unsealed-classes.md)

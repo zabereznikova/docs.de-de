@@ -1,74 +1,56 @@
 ---
-title: "Übersicht über Konstanten (Visual Basic) | Microsoft-Dokumentation"
+title: "Übersicht über Konstanten (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- constants
+helpviewer_keywords: constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8004045d233da0db017b26b350743ad9f8d61845
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e6526f7270602b3e1a4e8d953732c393ff252b2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constants-overview-visual-basic"></a>Übersicht über Konstanten (Visual Basic)
-Eine Konstante ist ein aussagekräftiger Name, der anstelle einer Zahl oder Zeichenfolge, die nicht geändert werden. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung unverändert bleiben. Sie können erheblich verbessern die Lesbarkeit des Codes und zu verwalten, indem Sie mithilfe von Konstanten erleichtern. In Code, der Werte enthält, die wieder verwenden oder das hängt vom bestimmte Zahlen, die schwer zu merken oder keine offensichtliche Bedeutung haben.  
+# <a name="constants-overview-visual-basic"></a><span data-ttu-id="e8405-102">Übersicht über Konstanten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8405-102">Constants Overview (Visual Basic)</span></span>
+<span data-ttu-id="e8405-103">Eine Konstante ist, einen aussagekräftigen Namen, der anstelle einer Zahl oder eine Zeichenfolge, die nicht geändert wird.</span><span class="sxs-lookup"><span data-stu-id="e8405-103">A constant is a meaningful name that takes the place of a number or string that does not change.</span></span> <span data-ttu-id="e8405-104">Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung unverändert bleiben.</span><span class="sxs-lookup"><span data-stu-id="e8405-104">Constants store values that, as the name implies, remain the same throughout the execution of an application.</span></span> <span data-ttu-id="e8405-105">Sie können erheblich verbessern die Lesbarkeit des Codes und stellen die einfacher zu verwalten, bei dem Konstanten.</span><span class="sxs-lookup"><span data-stu-id="e8405-105">You can greatly improve the readability of your code and make it easier to maintain by using constants.</span></span> <span data-ttu-id="e8405-106">In Code, der Werte enthält, die wieder zu verwenden, oder, abhängig ist, bestimmte Zahlen, die schwer zu merken, oder keine offensichtliche Bedeutung haben.</span><span class="sxs-lookup"><span data-stu-id="e8405-106">Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.</span></span>  
   
-## <a name="how-to-create-and-use-constants"></a>Gewusst wie: Erstellen und Verwenden von Konstanten  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]enthält eine Reihe von vordefinierten Konstanten, die hauptsächlich zum Drucken und anzeigen. Sie können auch Ihre eigenen Konstanten durch Erstellen der `Const` Anweisung, verwenden Sie dieselben Richtlinien für die Erstellung eines Variablennamens. Wenn `Option Strict` ist `On`, müssen Sie den Konstantentyp explizit deklarieren.  
+## <a name="how-to-create-and-use-constants"></a><span data-ttu-id="e8405-107">Gewusst wie: Erstellen und Verwenden von Konstanten</span><span class="sxs-lookup"><span data-stu-id="e8405-107">How to Create and Use Constants</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="e8405-108">enthält eine Reihe vordefinierter Konstanten, die hauptsächlich zum Drucken und anzeigen.</span><span class="sxs-lookup"><span data-stu-id="e8405-108"> contains a number of predefined constants, mainly using for printing and displaying.</span></span> <span data-ttu-id="e8405-109">Sie können auch eigene Konstanten mit Erstellen der `Const` verwenden Sie dieselben Richtlinien zum Erstellen eines Variablennamens-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="e8405-109">You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name.</span></span> <span data-ttu-id="e8405-110">Wenn `Option Strict` ist `On`, müssen Sie den Konstantentyp explizit deklarieren.</span><span class="sxs-lookup"><span data-stu-id="e8405-110">If `Option Strict` is `On`, you must explicitly declare the constant type.</span></span>  
   
- Der Gültigkeitsbereich einer Konstanten, die den Satz des gesamten Codes auf sie verweisen können, ohne dessen Namen zu qualifizieren, ist eine Variable, die am gleichen Speicherort identisch. Um eine Konstante zu erstellen, die im Rahmen einer bestimmten Prozedur vorhanden ist, deklarieren sie innerhalb der Prozedur. Um eine Konstante zu erstellen, die innerhalb der gesamten Anwendung verfügbar ist, deklarieren Sie sie mithilfe der `Public` -Schlüsselwort in der Sie im Deklarationsabschnitt der Klasse.  
+ <span data-ttu-id="e8405-111">Der Gültigkeitsbereich einer Konstanten, d. h. die Menge des gesamten Codes, die darauf verweisen kann, ohne dessen Namen zu qualifizieren, ist dieselbe wie eine Variable deklariert, die am gleichen Speicherort.</span><span class="sxs-lookup"><span data-stu-id="e8405-111">A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location.</span></span> <span data-ttu-id="e8405-112">Um eine Konstante zu erstellen, die innerhalb des Bereichs einer bestimmten Prozedur vorhanden ist, deklarieren Sie es in dieser Prozedur aus.</span><span class="sxs-lookup"><span data-stu-id="e8405-112">To create a constant that exists within the scope of a particular procedure, declare it inside that procedure.</span></span> <span data-ttu-id="e8405-113">Um eine Konstante zu erstellen, die innerhalb der gesamten Anwendung verfügbar ist, deklarieren Sie sie mithilfe der `Public` Schlüsselwort im Deklarationsabschnitt der Klasse.</span><span class="sxs-lookup"><span data-stu-id="e8405-113">To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.</span></span>  
   
 > [!NOTE]
->  Obwohl Konstanten etwas Variablen ähneln, nicht ändern oder neue Werte zuordnen wie Variablen.  
+>  <span data-ttu-id="e8405-114">Obwohl Konstanten etwas Variablen ähneln, nicht ändern, oder weisen wie Variablen Sie können neue Werte zu werden.</span><span class="sxs-lookup"><span data-stu-id="e8405-114">Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.</span></span>  
   
- Die Konstanten, die Sie in Ihrem Code verwenden, können das Objektmodell für Steuerelemente oder Komponenten definiert werden oder kann es sich um eine benutzerdefinierte (d. h. von Ihnen selbst erstellte).  
+ <span data-ttu-id="e8405-115">Die Konstanten, die Sie in Ihrem Code verwenden, können das Objektmodell für Steuerelemente oder Komponenten definiert werden, oder sie können eine benutzerdefinierte (d. h., die Sie selbst erstellen).</span><span class="sxs-lookup"><span data-stu-id="e8405-115">The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).</span></span>  
   
-## <a name="compile-time-and-run-time-constants"></a>Während der Kompilierung und Laufzeit-Konstanten  
- Eine Kompilierzeitkonstante wird zur Zeit berechnet, die der Code kompiliert wird, obwohl nur eine Konstante zur Laufzeit berechnet werden kann, während die Anwendung ausgeführt wird. Eine Kompilierzeitkonstante haben den gleichen Wert jedes Mal, eine Anwendung ausgeführt wird, während eine Laufzeitkonstanten jedes Mal ändern kann. Während der Kompilierung Konstanten sind z. B. Arraygrenzen, Case-Ausdrücke oder Enumerator Initialisierer erforderlich.  
+## <a name="compile-time-and-run-time-constants"></a><span data-ttu-id="e8405-116">Zeitpunkt der Kompilierung und Laufzeit-Konstanten</span><span class="sxs-lookup"><span data-stu-id="e8405-116">Compile-time and Run-time Constants</span></span>  
+ <span data-ttu-id="e8405-117">Zum Zeitpunkt, den der Code kompiliert wird, während eine Konstante zur Laufzeit nur ermittelt werden kann, während die Anwendung ausgeführt wird, wird eine Kompilierzeitkonstante berechnet.</span><span class="sxs-lookup"><span data-stu-id="e8405-117">A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running.</span></span> <span data-ttu-id="e8405-118">Eine Kompilierzeitkonstante, den gleichen Wert jedes Mal haben, die eine Anwendung ausgeführt wird, während eine Konstante zur Laufzeit jedes Mal ändern kann.</span><span class="sxs-lookup"><span data-stu-id="e8405-118">A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time.</span></span> <span data-ttu-id="e8405-119">Kompilierungszeitskonstanten sind für Fälle, z. B. Arraygrenzen, Case-Ausdrücke oder Enumerator Initialisierer erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e8405-119">Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a><span data-ttu-id="e8405-120">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e8405-120">In This Section</span></span>  
   
-|Definition|Begriff|  
+|<span data-ttu-id="e8405-121">Definition</span><span class="sxs-lookup"><span data-stu-id="e8405-121">Definition</span></span>|<span data-ttu-id="e8405-122">Begriff</span><span class="sxs-lookup"><span data-stu-id="e8405-122">Term</span></span>|  
 |---|---|  
-|[Gewusst wie: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Erläutert, wie die `Const` -Anweisung zum Deklarieren einer Konstante und legen Sie seinen Wert; durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen, dem Wert.|  
-|[Benutzerdefinierte Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Beschreibt wie Sie Ihre eigenen Konstanten, einschließlich Informationen zum Gültigkeitsbereich zu erstellen und um Zirkelverweise zu vermeiden.|  
-|[Konstanten und literale Datentypen](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Enthält Informationen darüber, wie der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] -Compiler Konstanten initialisiert, wenn `Option Explicit` deaktiviert wurde.|  
-|[Gewusst wie: Gruppieren verwandter konstanter Werte](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Veranschaulicht, wie Konstante Werte gruppiert, die verknüpft sind.|  
+|[<span data-ttu-id="e8405-123">Gewusst wie: Deklarieren einer Konstante</span><span class="sxs-lookup"><span data-stu-id="e8405-123">How to: Declare A Constant</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|<span data-ttu-id="e8405-124">Erklärt, wie die `Const` -Anweisung zum Deklarieren einer Konstante mit dem Wert; durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen, mit dem Wert.</span><span class="sxs-lookup"><span data-stu-id="e8405-124">Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.</span></span>|  
+|[<span data-ttu-id="e8405-125">Benutzerdefinierte Konstanten</span><span class="sxs-lookup"><span data-stu-id="e8405-125">User-Defined Constants</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|<span data-ttu-id="e8405-126">Beschreibt, wie Ihre eigenen Konstanten, einschließlich Informationen über den Bereichsdefinition erstellt und wie, Zirkelverweise zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="e8405-126">Describes how to create your own constants, including information on scoping and how to avoid circular references.</span></span>|  
+|[<span data-ttu-id="e8405-127">Konstanten und literale Datentypen</span><span class="sxs-lookup"><span data-stu-id="e8405-127">Constant and Literal Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|<span data-ttu-id="e8405-128">Enthält Informationen darüber, wie der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler initialisiert Konstanten beim `Option Explicit` ist deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="e8405-128">Provides information on how the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler initializes constants when `Option Explicit` is turned off.</span></span>|  
+|[<span data-ttu-id="e8405-129">Gewusst wie: Gruppieren verwandter konstanter Werte</span><span class="sxs-lookup"><span data-stu-id="e8405-129">How to: Group Related Constant Values Together</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|<span data-ttu-id="e8405-130">Veranschaulicht, wie Konstante Werte gruppiert, die verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="e8405-130">Demonstrates how to group constant values that are related.</span></span>|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a><span data-ttu-id="e8405-131">Verweis</span><span class="sxs-lookup"><span data-stu-id="e8405-131">Reference</span></span>  
   
-|Definition|Begriff|  
+|<span data-ttu-id="e8405-132">Definition</span><span class="sxs-lookup"><span data-stu-id="e8405-132">Definition</span></span>|<span data-ttu-id="e8405-133">Begriff</span><span class="sxs-lookup"><span data-stu-id="e8405-133">Term</span></span>|  
 |---|---|  
-|[Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Listet die vordefinierten Konstanten [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].|  
-|[Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)|Beschreibt die `Const` Anweisung und deren Verwendung.|  
-|[Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Beschreibt die `Option Strict` Anweisung und deren Verwendung.|  
+|[<span data-ttu-id="e8405-134">Konstanten und Enumerationen</span><span class="sxs-lookup"><span data-stu-id="e8405-134">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)|<span data-ttu-id="e8405-135">Listet die vordefinierten Konstanten [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e8405-135">Lists the constants predefined by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>|  
+|[<span data-ttu-id="e8405-136">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e8405-136">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)|<span data-ttu-id="e8405-137">Beschreibt die `Const` -Anweisung und dessen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="e8405-137">Describes the `Const` statement and its use.</span></span>|  
+|[<span data-ttu-id="e8405-138">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e8405-138">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|<span data-ttu-id="e8405-139">Beschreibt die `Option Strict` -Anweisung und dessen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="e8405-139">Describes the `Option Strict` statement and its use.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
- [Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a><span data-ttu-id="e8405-140">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e8405-140">See Also</span></span>  
+ [<span data-ttu-id="e8405-141">Übersicht über Enumerationen</span><span class="sxs-lookup"><span data-stu-id="e8405-141">Enumerations Overview</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ <span data-ttu-id="e8405-142">[How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8405-142">[How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)</span></span>

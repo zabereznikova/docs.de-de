@@ -1,1 +1,1 @@
-Grafische Benutzeroberflächen (GUIs)
+<span data-ttu-id="2d105-101">Grafische Benutzeroberflächen (GUIs)</span><span class="sxs-lookup"><span data-stu-id="2d105-101">graphical user interfaces (GUIs)</span></span>

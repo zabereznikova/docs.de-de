@@ -1,21 +1,25 @@
 ---
-title: "Migrationsaktivit&#228;t in WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Migrationsaktivität in WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ad46db7-5744-410e-8fac-6c3b325b1dd0
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 512c025dc8c69b7a2e29cfafead40572de9a73f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Migrationsaktivit&#228;t in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Stellt die <xref:> System.Activities.Statements.Interop?qualifyHint=False&autoUpgrade=True Aktivität zum Ausführen von Aktivitäten, die von abgeleitet <xref:System.WorkflowModel.Activities.Activity> innerhalb eines Workflows auf der Grundlage <xref:System.Activities.Activity>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] die [Hinweise zur Migration](../../../docs/framework/windows-workflow-foundation//migration-guidance.md) Abschnitt.  
+# <a name="migration-activity-in-wf"></a><span data-ttu-id="e35f5-102">Migrationsaktivität in WF</span><span class="sxs-lookup"><span data-stu-id="e35f5-102">Migration Activity in WF</span></span>
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="e35f5-103">Stellt die <xref:System.Activities.Statements.Interop> Aktivität zum Ausführen von Aktivitäten, die von der Aktivität innerhalb eines Workflows abgeleitet, die basierend werden auf <xref:System.Activities.Activity>.</span><span class="sxs-lookup"><span data-stu-id="e35f5-103"> provides the <xref:System.Activities.Statements.Interop> activity for executing activities that derive from Activity within a workflow that is based on <xref:System.Activities.Activity>.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="e35f5-104">die [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="e35f5-104"> the [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) section.</span></span>  
   
 > [!NOTE]
->  Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designers angezeigt, es sei denn, der Workflow-Projekt die **Zielframework** eingestellt **.Net Framework 4** oder höher.
+>  <span data-ttu-id="e35f5-105">Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designer angezeigt, es sei denn, das Projekt des Workflows dessen **Zielframework** eingestellt **.Net Framework 4** oder höher.</span><span class="sxs-lookup"><span data-stu-id="e35f5-105">The <xref:System.Activities.Statements.Interop> activity does not appear in the workflow designer toolbox unless the workflow's project has its **Target Framework** setting set to **.Net Framework 4** or higher.</span></span>

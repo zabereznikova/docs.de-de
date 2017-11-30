@@ -1,1 +1,1 @@
-Uniform Resource Identifier (URIs)
+<span data-ttu-id="db305-101">Uniform Resource Identifier (URIs)</span><span class="sxs-lookup"><span data-stu-id="db305-101">uniform resource identifiers (URIs)</span></span>

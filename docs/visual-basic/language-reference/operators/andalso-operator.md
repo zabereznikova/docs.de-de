@@ -1,84 +1,80 @@
 ---
-title: "AndAlso Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.AndAlso"
-  - "AndAlso"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "short-circuiting"
-  - "AndAlso operator"
-  - "operators [Visual Basic], short-circuiting"
-  - "operators [Visual Basic], conjunction"
-  - "short-circuit evaluation"
+title: AndAlso-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.AndAlso
+- AndAlso
+helpviewer_keywords:
+- short-circuiting
+- AndAlso operator [Visual Basic]
+- operators [Visual Basic], short-circuiting
+- operators [Visual Basic], conjunction
+- short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# AndAlso Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt eine logische Kurzschlusskonjunktion zweier Ausdrücke aus.  
+# <a name="andalso-operator-visual-basic"></a><span data-ttu-id="22136-102">AndAlso-Operator (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22136-102">AndAlso Operator (Visual Basic)</span></span>
+<span data-ttu-id="22136-103">Führt eine verkürzte logischen Konjunktion zweier Ausdrücke.</span><span class="sxs-lookup"><span data-stu-id="22136-103">Performs short-circuiting logical conjunction on two expressions.</span></span>  
   
-## Syntax  
+## <a name="syntax"></a><span data-ttu-id="22136-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="22136-104">Syntax</span></span>  
   
 ```  
-  
 result = expression1 AndAlso expression2  
 ```  
   
-## Teile  
+## <a name="parts"></a><span data-ttu-id="22136-105">Teile</span><span class="sxs-lookup"><span data-stu-id="22136-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Begriff|Definition|  
-|`result`|Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.  Das Ergebnis ist das `Boolean`\-Ergebnis des Vergleichs zwischen zwei Ausdrücken.|  
-|`expression1`|Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.|  
-|`expression2`|Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.|  
+|<span data-ttu-id="22136-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="22136-106">Term</span></span>|<span data-ttu-id="22136-107">Definition</span><span class="sxs-lookup"><span data-stu-id="22136-107">Definition</span></span>|  
+|---|---|  
+|`result`|<span data-ttu-id="22136-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="22136-108">Required.</span></span> <span data-ttu-id="22136-109">Beliebiger `Boolean`-Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="22136-109">Any `Boolean` expression.</span></span> <span data-ttu-id="22136-110">Das Ergebnis ist die `Boolean` Ergebnis des Vergleichs von zwei Ausdrücken.</span><span class="sxs-lookup"><span data-stu-id="22136-110">The result is the `Boolean` result of comparison of the two expressions.</span></span>|  
+|`expression1`|<span data-ttu-id="22136-111">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="22136-111">Required.</span></span> <span data-ttu-id="22136-112">Beliebiger `Boolean`-Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="22136-112">Any `Boolean` expression.</span></span>|  
+|`expression2`|<span data-ttu-id="22136-113">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="22136-113">Required.</span></span> <span data-ttu-id="22136-114">Beliebiger `Boolean`-Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="22136-114">Any `Boolean` expression.</span></span>|  
   
-## Hinweise  
- Eine logische Operation wird als *Kurzschlussoperation* bezeichnet, wenn der kompilierte Code die Auswertung eines Ausdrucks abhängig von dem Ergebnis eines anderen Ausdrucks umgehen kann.  Wenn das Ergebnis des ersten ausgewerteten Ausdrucks das Endergebnis der Operation bestimmt, muss der zweite Ausdruck nicht ausgewertet werden, da dieser das Endergebnis nicht ändern kann.  Kurzschlussoperationen können zu einer Leistungssteigerung führen, wenn der umgangene Ausdruck sehr komplex ist oder Prozeduraufrufe enthält.  
+## <a name="remarks"></a><span data-ttu-id="22136-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="22136-115">Remarks</span></span>  
+ <span data-ttu-id="22136-116">Eine logische Operation gilt als *verkürzte* Wenn der kompilierte Code die Auswertung eines Ausdrucks abhängig vom Ergebnis eines anderen Ausdrucks umgehen kann.</span><span class="sxs-lookup"><span data-stu-id="22136-116">A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression.</span></span> <span data-ttu-id="22136-117">Wenn das Ergebnis des ersten Ausdrucks, ausgewertet über das endgültige Ergebnis des Vorgangs feststellt, besteht keine Notwendigkeit, der zweite Ausdruck ausgewertet werden, da das Endergebnis nicht geändert werden kann.</span><span class="sxs-lookup"><span data-stu-id="22136-117">If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.</span></span> <span data-ttu-id="22136-118">Verkürzte kann die Leistung verbessern, wenn der umgehen Ausdruck komplex ist oder sie Prozeduraufrufe umfasst.</span><span class="sxs-lookup"><span data-stu-id="22136-118">Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.</span></span>  
   
- Wenn beide Ausdrücke `True` ergeben, ist `result` ebenfalls `True`.  Die folgende Tabelle veranschaulicht, wie `result` bestimmt wird.  
+ <span data-ttu-id="22136-119">Wenn beide Ausdrücke `True`, `result` ist `True`.</span><span class="sxs-lookup"><span data-stu-id="22136-119">If both expressions evaluate to `True`, `result` is `True`.</span></span> <span data-ttu-id="22136-120">Die folgende Tabelle veranschaulicht wie `result` bestimmt wird.</span><span class="sxs-lookup"><span data-stu-id="22136-120">The following table illustrates how `result` is determined.</span></span>  
   
-||||  
-|-|-|-|  
-|Wert von `expression1`|Und `expression2` gleich|hat `result` den Wert|  
+|<span data-ttu-id="22136-121">Wenn `expression1` ist</span><span class="sxs-lookup"><span data-stu-id="22136-121">If `expression1` is</span></span>|<span data-ttu-id="22136-122">Und `expression2` ist</span><span class="sxs-lookup"><span data-stu-id="22136-122">And `expression2` is</span></span>|<span data-ttu-id="22136-123">Der Wert des `result` ist</span><span class="sxs-lookup"><span data-stu-id="22136-123">The value of `result` is</span></span>|  
+|---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
-|`False`|\(nicht ausgewertet\)|`False`|  
+|`False`|<span data-ttu-id="22136-124">(nicht ausgewertet)</span><span class="sxs-lookup"><span data-stu-id="22136-124">(not evaluated)</span></span>|`False`|  
   
-## Datentypen  
- Der Operator `AndAlso` wird nur für den [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) definiert.  Visual Basic konvertiert jeden Operanden je nach Bedarf in `Boolean`\-Werte und führt die Operation ganz als `Boolean` aus.  Wenn Sie das Ergebnis einem numerischen Typ zuweisen, konvertiert Visual Basic es vom `Boolean`\-Typ in diesen Typ.  Dies kann zu unerwartetem Verhalten führen.  Bei der Konvertierung in `Integer` ergibt `5 AndAlso 12` z. B. `–1`.  
+## <a name="data-types"></a><span data-ttu-id="22136-125">Datentypen</span><span class="sxs-lookup"><span data-stu-id="22136-125">Data Types</span></span>  
+ <span data-ttu-id="22136-126">Die `AndAlso` Operator definiert ist, nur für die [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="22136-126">The `AndAlso` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md).</span></span> <span data-ttu-id="22136-127">Visual Basic konvertiert jeden Operanden nach Bedarf `Boolean` und führt den Vorgang, die vollständig in `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="22136-127">Visual Basic converts each operand as necessary to `Boolean` and performs the operation entirely in `Boolean`.</span></span> <span data-ttu-id="22136-128">Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ.</span><span class="sxs-lookup"><span data-stu-id="22136-128">If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type.</span></span> <span data-ttu-id="22136-129">Dies kann zu unerwartetem Verhalten führen.</span><span class="sxs-lookup"><span data-stu-id="22136-129">This could produce unexpected behavior.</span></span> <span data-ttu-id="22136-130">Beispielsweise `5 AndAlso 12` führt `–1` bei der Konvertierung in `Integer`.</span><span class="sxs-lookup"><span data-stu-id="22136-130">For example, `5 AndAlso 12` results in `–1` when converted to `Integer`.</span></span>  
   
-## Überladen  
- Der [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) und der [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) können *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur ihr Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `And` und des Operators `IsFalse` beeinflusst das Verhalten des Operators `AndAlso`.  Wenn im Code `AndAlso` für eine Klasse oder Struktur verwendet wird, die `And` und `IsFalse` überlädt, müssen Sie das neu definierte Verhalten der Operatoren kennen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="22136-131">Überladen</span><span class="sxs-lookup"><span data-stu-id="22136-131">Overloading</span></span>  
+ <span data-ttu-id="22136-132">Die [And-Operators](../../../visual-basic/language-reference/operators/and-operator.md) und die [IsFalse-Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur ihr Verhalten definieren kann, wenn ein Operand den Typ dieses hat Klasse oder Struktur.</span><span class="sxs-lookup"><span data-stu-id="22136-132">The [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) and the [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="22136-133">Überladen der `And` und `IsFalse` Operatoren wirkt sich auf das Verhalten der `AndAlso` Operator.</span><span class="sxs-lookup"><span data-stu-id="22136-133">Overloading the `And` and `IsFalse` operators affects the behavior of the `AndAlso` operator.</span></span> <span data-ttu-id="22136-134">Wenn im Code verwendet `AndAlso` auf eine Klasse oder Struktur, die Überladungen `And` und `IsFalse`, achten Sie verstehen, dass ihr neu definierten Verhalten.</span><span class="sxs-lookup"><span data-stu-id="22136-134">If your code uses `AndAlso` on a class or structure that overloads `And` and `IsFalse`, be sure you understand their redefined behavior.</span></span> <span data-ttu-id="22136-135">Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="22136-135">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Beispiel  
- In diesem Beispiel wird mit dem Operator `AndAlso` eine logische Konjunktion zweier Ausdrücke ausgeführt.  Das Ergebnis ist ein `Boolean`\-Wert, der darstellt, ob der gesamte verbundene Ausdruck **True** ist.  Wenn der erste Ausdruck `False` ist, wird der zweite nicht ausgewertet.  
+## <a name="example"></a><span data-ttu-id="22136-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="22136-136">Example</span></span>  
+ <span data-ttu-id="22136-137">Im folgenden Beispiel wird die `AndAlso` Operator, um eine logische Konjunktion zweier Ausdrücke auszuführen.</span><span class="sxs-lookup"><span data-stu-id="22136-137">The following example uses the `AndAlso` operator to perform a logical conjunction on two expressions.</span></span> <span data-ttu-id="22136-138">Das Ergebnis ist ein `Boolean` Wert, der angibt, ob der gesamte verbundene Ausdruck true ist "true".</span><span class="sxs-lookup"><span data-stu-id="22136-138">The result is a `Boolean` value that represents whether the entire conjoined expression is true.</span></span> <span data-ttu-id="22136-139">Wenn der erste Ausdruck ist `False`, die zweite wird nicht ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="22136-139">If the first expression is `False`, the second is not evaluated.</span></span>  
   
  [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
   
- Durch das vorangehende Beispiel werden die Ergebnisse `True`, `False` bzw. `False` erzeugt.  Bei der Berechnung von `secondCheck` wird der zweite Ausdruck nicht ausgewertet, da der erste Ausdruck bereits `False` ist.  Der zweite Ausdruck wird jedoch bei der Berechnung von `thirdCheck` ausgewertet.  
+ <span data-ttu-id="22136-140">Das obige Beispiel erzeugt die Ergebnisse der `True`, `False`, und `False`zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="22136-140">The preceding example produces results of `True`, `False`, and `False`, respectively.</span></span> <span data-ttu-id="22136-141">Bei der Berechnung der `secondCheck`, der zweite Ausdruck nicht ausgewertet, da die erste bereits ist `False`.</span><span class="sxs-lookup"><span data-stu-id="22136-141">In the calculation of `secondCheck`, the second expression is not evaluated because the first is already `False`.</span></span> <span data-ttu-id="22136-142">Allerdings wird der zweite Ausdruck ausgewertet, bei der Berechnung der `thirdCheck`.</span><span class="sxs-lookup"><span data-stu-id="22136-142">However, the second expression is evaluated in the calculation of `thirdCheck`.</span></span>  
   
-## Beispiel  
- Das folgende Beispiel zeigt eine `Function`\-Prozedur, die in den Elementen eines Arrays nach einem gegebenen Wert sucht.  Wenn das Array leer ist oder die zulässige Arraylänge überschritten wurde, wird das Arrayelement von der `While`\-Anweisung nicht auf den Suchwert überprüft.  
+## <a name="example"></a><span data-ttu-id="22136-143">Beispiel</span><span class="sxs-lookup"><span data-stu-id="22136-143">Example</span></span>  
+ <span data-ttu-id="22136-144">Das folgende Beispiel zeigt eine `Function` Prozedur, die für einen bestimmten Wert zwischen den Elementen eines Arrays sucht.</span><span class="sxs-lookup"><span data-stu-id="22136-144">The following example shows a `Function` procedure that searches for a given value among the elements of an array.</span></span> <span data-ttu-id="22136-145">Wenn das Array leer ist oder wenn die Länge des Arrays überschritten wurde, die `While` testet Anweisung keine Arrayelements mit dem Suchwert.</span><span class="sxs-lookup"><span data-stu-id="22136-145">If the array is empty, or if the array length has been exceeded, the `While` statement does not test the array element against the search value.</span></span>  
   
  [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
-## Siehe auch  
- [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [And Operator](../../../visual-basic/language-reference/operators/and-operator.md)   
- [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="22136-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="22136-146">See Also</span></span>  
+ [<span data-ttu-id="22136-147">Logische/bitweise Operatoren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22136-147">Logical/Bitwise Operators (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [<span data-ttu-id="22136-148">Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22136-148">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="22136-149">Nach Funktionalität sortierte Operatoren</span><span class="sxs-lookup"><span data-stu-id="22136-149">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="22136-150">And-Operator</span><span class="sxs-lookup"><span data-stu-id="22136-150">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [<span data-ttu-id="22136-151">IsFalse-Operator</span><span class="sxs-lookup"><span data-stu-id="22136-151">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [<span data-ttu-id="22136-152">Logische und bitweise Operatoren in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="22136-152">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

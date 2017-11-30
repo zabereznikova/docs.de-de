@@ -1,69 +1,52 @@
 ---
-title: Strukturen (Visual Basic)-Schleife | Microsoft-Dokumentation
+title: Schleifenstruktur (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- control flow, loops
+- control flow [Visual Basic], loops
 - For keyword [Visual Basic], loop structures
 - loops
-- loop structures
+- loop structures [Visual Basic]
 - statements [Visual Basic], loop
-- Do statement, Do loops
-- conditional statements, loop structures
+- Do statement [Visual Basic], Do loops
+- conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c2835b9d9d22196447fb1863f6e4fa9bd11ecf0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2f813a555677e3828297c9c360b7a47217c39524
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="loop-structures-visual-basic"></a>Schleifenstruktur (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Schleifenstruktur können Sie eine oder mehrere Zeilen Code wiederholt auszuführen. Sie können die Anweisungen in einer Schleife wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung `False`, oft, oder einmal für jedes Element in einer angegebenen Auflistung.  
+# <a name="loop-structures-visual-basic"></a><span data-ttu-id="d01e4-102">Schleifenstruktur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d01e4-102">Loop Structures (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="d01e4-103">Schleifenstruktur ermöglichen Ihnen, eine oder mehrere Codezeilen wiederholt auszuführen.</span><span class="sxs-lookup"><span data-stu-id="d01e4-103"> loop structures allow you to run one or more lines of code repetitively.</span></span> <span data-ttu-id="d01e4-104">Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine angegebene Anzahl, wie oft oder einmal für jedes Element in einer Auflistung.</span><span class="sxs-lookup"><span data-stu-id="d01e4-104">You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.</span></span>  
   
- Die folgende Abbildung zeigt eine Schleife, die eine Gruppe von Anweisungen ausgeführt wird, bis eine Bedingung erfüllt wird.  
+ <span data-ttu-id="d01e4-105">Die folgende Abbildung zeigt eine Schleifenstruktur, die eine Reihe von Anweisungen ausgeführt, bis eine Bedingung "true" ist.</span><span class="sxs-lookup"><span data-stu-id="d01e4-105">The following illustration shows a loop structure that runs a set of statements until a condition becomes true.</span></span>  
   
- ![Flussdiagramm Do... Until-Schleife](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-Eine Gruppe von Anweisungen ausgeführt, bis eine Bedingung erfüllt wird.  
+ <span data-ttu-id="d01e4-106">![Flussdiagramm des einem stimmen... Schleife](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")</span><span class="sxs-lookup"><span data-stu-id="d01e4-106">![Flow chart of a Do...Until loop](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")</span></span>  
+<span data-ttu-id="d01e4-107">Eine Reihe von Anweisungen ausgeführt, bis eine Bedingung "true" ist.</span><span class="sxs-lookup"><span data-stu-id="d01e4-107">Running a set of statements until a condition becomes true</span></span>  
   
-## <a name="while-loops"></a>While-Schleifen  
- The `While`... `End While` Konstruktion führt eine Gruppe von Anweisungen, solange die Bedingung angegeben werden, in der `While` -Anweisung ist `True`. Weitere Informationen finden Sie unter [während... While-Anweisung beendet](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a><span data-ttu-id="d01e4-108">While-Schleifen</span><span class="sxs-lookup"><span data-stu-id="d01e4-108">While Loops</span></span>  
+ <span data-ttu-id="d01e4-109">Die `While`... `End While` Konstruktion führt eine Reihe von Anweisungen aus, solange die Bedingung angegeben werden, in der `While` -Anweisung ist `True`.</span><span class="sxs-lookup"><span data-stu-id="d01e4-109">The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`.</span></span> <span data-ttu-id="d01e4-110">Weitere Informationen finden Sie unter [während... While-Anweisung enden](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d01e4-110">For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).</span></span>  
   
-## <a name="do-loops"></a>Do-Schleifen  
- The `Do`... `Loop` Konstruktion können Sie eine Bedingung am Anfang oder am Ende einer Schleifenstruktur zu testen. Sie können auch angeben, ob die Schleife wiederholt wird, solange die Bedingung ist `True` oder annimmt `True`. Weitere Informationen finden Sie unter [tun... Loop-Anweisung](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+## <a name="do-loops"></a><span data-ttu-id="d01e4-111">Do-Schleifen</span><span class="sxs-lookup"><span data-stu-id="d01e4-111">Do Loops</span></span>  
+ <span data-ttu-id="d01e4-112">Die `Do`... `Loop` Konstruktion können Sie eine Bedingung am Anfang oder Ende einer Schleifenstruktur zu testen.</span><span class="sxs-lookup"><span data-stu-id="d01e4-112">The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure.</span></span> <span data-ttu-id="d01e4-113">Sie können auch angeben, ob die Schleife wiederholt wird, während die Bedingung bleibt `True` oder bis er wieder ist `True`.</span><span class="sxs-lookup"><span data-stu-id="d01e4-113">You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`.</span></span> <span data-ttu-id="d01e4-114">Weitere Informationen finden Sie unter [werden... Loop-Anweisung](../../../../visual-basic/language-reference/statements/do-loop-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d01e4-114">For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).</span></span>  
   
-## <a name="for-loops"></a>For-Schleifen  
- The `For`... `Next` zur Erstellung einer festgelegten Anzahl an, wie oft die Schleife ausführt. Eine Schleifensteuerungsvariable, so genannte verwendet eine *Leistungsindikator*, Einsatz von. Angabe der Start- und Endwert für diesen Zähler, und Sie können optional angeben, den Betrag, den es über eine Wiederholung zur nächsten erhöht. Weitere Informationen finden Sie unter [für... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a><span data-ttu-id="d01e4-115">For-Schleifen</span><span class="sxs-lookup"><span data-stu-id="d01e4-115">For Loops</span></span>  
+ <span data-ttu-id="d01e4-116">Die `For`... `Next` Konstruktion führt die Schleife eine festgelegte Anzahl von Zeiten.</span><span class="sxs-lookup"><span data-stu-id="d01e4-116">The `For`...`Next` construction performs the loop a set number of times.</span></span> <span data-ttu-id="d01e4-117">Er verwendet eine Loop-Steuerelementvariable, die so genannte eine *Leistungsindikator*, zum Nachverfolgen der Wiederholungen.</span><span class="sxs-lookup"><span data-stu-id="d01e4-117">It uses a loop control variable, also called a *counter*, to keep track of the repetitions.</span></span> <span data-ttu-id="d01e4-118">Sie geben die Start- und Endwerten für diesen Leistungsindikator, und Sie können optional angeben, die Menge von der aus eine Wiederholung zur nächsten erhöht gleichzeitig die.</span><span class="sxs-lookup"><span data-stu-id="d01e4-118">You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next.</span></span> <span data-ttu-id="d01e4-119">Weitere Informationen finden Sie unter [für... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d01e4-119">For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).</span></span>  
   
-## <a name="for-each-loops"></a>For Each-Schleife  
- The `For Each`... `Next` Konstruktion wird eine Gruppe von Anweisungen, die einmal für jedes Element in einer Auflistung ausgeführt. Sie geben die Schleifensteuerungsvariable, aber Sie haben keinen Anfangs- oder Endwert dieser bestimmen. Weitere Informationen finden Sie unter [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+## <a name="for-each-loops"></a><span data-ttu-id="d01e4-120">For Each-Schleife</span><span class="sxs-lookup"><span data-stu-id="d01e4-120">For Each Loops</span></span>  
+ <span data-ttu-id="d01e4-121">Die `For Each`... `Next` Konstruktion wird eine Reihe von Anweisungen, die einmal für jedes Element in einer Auflistung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="d01e4-121">The `For Each`...`Next` construction runs a set of statements once for each element in a collection.</span></span> <span data-ttu-id="d01e4-122">Geben Sie die Loop-Steuerelementvariable, aber Sie müssen keine Anfangs- oder Endwert dafür bestimmen.</span><span class="sxs-lookup"><span data-stu-id="d01e4-122">You specify the loop control variable, but you do not have to determine starting or ending values for it.</span></span> <span data-ttu-id="d01e4-123">Weitere Informationen finden Sie unter [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).</span><span class="sxs-lookup"><span data-stu-id="d01e4-123">For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+## <a name="see-also"></a><span data-ttu-id="d01e4-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d01e4-124">See Also</span></span>  
+ [<span data-ttu-id="d01e4-125">Ablaufsteuerung</span><span class="sxs-lookup"><span data-stu-id="d01e4-125">Control Flow</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [<span data-ttu-id="d01e4-126">Entscheidungsstrukturen</span><span class="sxs-lookup"><span data-stu-id="d01e4-126">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [<span data-ttu-id="d01e4-127">Weitere Steuerungsstrukturen</span><span class="sxs-lookup"><span data-stu-id="d01e4-127">Other Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
+ [<span data-ttu-id="d01e4-128">Geschachtelte Steuerungsstrukturen</span><span class="sxs-lookup"><span data-stu-id="d01e4-128">Nested Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)

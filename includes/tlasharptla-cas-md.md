@@ -1,1 +1,1 @@
-Codezugriffssicherheit (Code Access Security, CAS)
+<span data-ttu-id="fd839-101">Codezugriffssicherheit (Code Access Security, CAS)</span><span class="sxs-lookup"><span data-stu-id="fd839-101">Code Access Security (CAS)</span></span>
