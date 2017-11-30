@@ -1,51 +1,52 @@
 ---
-title: "&#220;bersicht &#252;ber das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HScrollBar"
-  - "VScrollBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "HScrollBar-Steuerelement [Windows Forms], Informationen über HScrollBar"
-  - "Bildlaufleisten, Informationen über Bildlaufleisten"
-  - "ScrollBar-Steuerelement [Windows Forms]"
-  - "ScrollBar-Steuerelement [Windows Forms], Informationen über das ScrollBar-Steuerelement"
-  - "VScrollBar-Steuerelement [Windows Forms], Informationen über das VScrollBar-Steuerelement"
+title: "Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HScrollBar
+- VScrollBar
+helpviewer_keywords:
+- ScrollBar control [Windows Forms]
+- HScrollBar control [Windows Forms], about HScrollBar
+- VScrollBar control [Windows Forms], about VScrollBar control
+- ScrollBar control [Windows Forms], about ScrollBar control
+- scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
-<xref:System.Windows.Forms.ScrollBar>\-Steuerelemente von Windows Forms werden zur einfachen Navigation in einer langen Liste von Elementen oder einer großen Menge von Informationen mithilfe eines horizontalen bzw. vertikalen Bildlaufs in der Anwendung oder im Steuerelement eingesetzt.  Schiebeleisten sind ein häufig verwendetes Element der Windows\-Benutzeroberfläche. Daher wird das <xref:System.Windows.Forms.ScrollBar>\-Steuerelement häufig mit Steuerelementen verwendet, die nicht von der <xref:System.Windows.Forms.ScrollableControl>\-Klasse abgeleitet werden.  Außerdem beziehen viele Entwickler das <xref:System.Windows.Forms.ScrollBar>\-Steuerelement beim Erstellen eigener Benutzersteuerelemente mit ein.  
+# <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.ScrollBar> Steuerelemente werden verwendet, um die einfache Navigation in einer langen Liste von Elementen oder eine große Menge an Informationen entweder horizontal oder vertikal innerhalb einer Anwendung bzw. eines Steuerelements bereitzustellen. Bildlaufleisten sind ein häufiges Element der Windows-Schnittstelle, damit die <xref:System.Windows.Forms.ScrollBar> Steuerelement wird häufig mit Steuerelementen, die nicht von abgeleitet sind, verwendet der <xref:System.Windows.Forms.ScrollableControl> Klasse. Ebenso viele Entwickler wählen, integriert der <xref:System.Windows.Forms.ScrollBar> gesteuert werden, wenn ihre eigenen Benutzersteuerelemente zu erstellen.  
   
- Das <xref:System.Windows.Forms.HScrollBar>\-Steuerelement \(horizontal\) und das <xref:System.Windows.Forms.VScrollBar>\-Steuerelement \(vertikal\) funktionieren unabhängig von anderen Steuerelementen und verfügen über ihre eigenen Ereignisse, Eigenschaften und Methoden.  <xref:System.Windows.Forms.ScrollBar>\-Steuerelemente sind nicht mit den integrierten Bildlaufleisten identisch, die an Textfelder, Listenfelder, Kombinationsfelder oder MDI\-Formulare angehängt sind \(das <xref:System.Windows.Forms.TextBox>\-Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A>\-Eigenschaft zum Anzeigen oder Ausblenden von Bildlaufleisten, die an das Steuerelement angehängt sind\).  
+ Die <xref:System.Windows.Forms.HScrollBar> (horizontal) und <xref:System.Windows.Forms.VScrollBar> (vertikal) funktionieren unabhängig von anderen Steuerelementen und verfügen über ihre eigenen Satz von Ereignissen, Eigenschaften und Methoden. <xref:System.Windows.Forms.ScrollBar>Steuerelemente sind nicht identisch mit den integrierten Bildlaufleisten, die Textfelder, Kombinationsfelder oder MDI-Formulare zugeordnet sind (die <xref:System.Windows.Forms.TextBox> Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaft anzeigen oder Ausblenden von Bildlaufleisten, die dem Steuerelement zugeordnet sind).  
   
- Die <xref:System.Windows.Forms.ScrollBar>\-Steuerelemente überwachen mithilfe des <xref:System.Windows.Forms.ScrollBar.Scroll>\-Ereignisses die Bewegungen des Bildlauffelds \(gelegentlich auch als Ziehpunkt bezeichnet\) auf der Schiebeleiste.  Die Verwendung des <xref:System.Windows.Forms.ScrollBar.Scroll>\-Ereignisses ermöglicht den Zugriff auf den Schiebeleistenwert während des Ziehvorgangs.  
+ Die <xref:System.Windows.Forms.ScrollBar> steuert die Verwendung der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis zum Überwachen von der Verschiebung des Bildlauffelds (auch als Ziehpunkt bezeichnet) entlang der Bildlaufleiste angezeigt. Mithilfe der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis ermöglicht den Zugriff auf den Wert der Scroll Bar gezogen wird.  
   
-## Werteigenschaft  
- Die <xref:System.Windows.Forms.ScrollBar.Value%2A>\-Eigenschaft \(deren Standardeinstellung 0 ist\) ist ein `integer`\-Wert, der der Position des Bildlauffelds auf der Schiebeleiste entspricht.  Wenn die Position des Bildlauffelds den kleinsten Wert aufweist, wird dieses an die äußerste linke Position \(bei horizontalen Schiebeleisten\) bzw. an die oberste Position \(bei vertikalen Schiebeleisten\) verschoben.  Wenn das Bildlauffeld den höchsten Wert aufweist, wird es an die äußerste rechte bzw. an die unterste Position verschoben.  Beim einem Wert in der Mitte zwischen der untersten und der obersten Position des Bereichs wird die Vorderkante des Bildlauffelds in der Mitte der Schiebeleiste platziert.  
+## <a name="value-property"></a>Value-Eigenschaft  
+ Die <xref:System.Windows.Forms.ScrollBar.Value%2A> -Eigenschaft (d. h. in der Standardeinstellung 0) ist ein `integer` Wert, der die Position des Bildlauffelds auf der Bildlaufleiste. Die Position des Bildlauffelds auf den Mindestwert ist, verschoben in die linke Position (für horizontale Bildlaufleisten) oder die obere Position (für die vertikalen Schiebeleisten). Wenn das Bildlauffeld auf der maximale Wert, der verschoben, die sich ganz rechts oder untere Position ist. Auf ähnliche Weise fügt ein Wert in der Mitte zwischen dem unteren und oberen Ende des Bereichs führenden Rand des Bildlauffelds in der Mitte der Bildlaufleiste angezeigt.  
   
- Der Benutzer kann den Schiebeleistenwert durch Mausklicks ändern oder das Bildlauffeld auch an einen beliebigen Punkt auf der Leiste ziehen.  Der resultierende Wert hängt von der Position des Bildlauffelds ab, liegt jedoch immer im Bereich zwischen der <xref:System.Windows.Forms.ScrollBar.Minimum%2A>\-Eigenschaft und der <xref:System.Windows.Forms.ScrollBar.Maximum%2A>\-Eigenschaft, die vom Benutzer festgelegt werden.  
+ Benutzer kann mit Mausklicks so ändern Sie den Wert der Bildlaufleiste an, das Bildlauffeld auch auf einen beliebigen Punkt auf der Leiste ziehen. Der resultierende Wert hängt von der Position des Bildlauffelds allerdings handelt es sich immer innerhalb des Bereichs von der <xref:System.Windows.Forms.ScrollBar.Minimum%2A> auf <xref:System.Windows.Forms.ScrollBar.Maximum%2A> Eigenschaften, die vom Benutzer festgelegt.  
   
-## LargeChange\-Eigenschaft und SmallChange\-Eigenschaft  
- Wenn der Benutzer die BILD\-AUF\- oder die BILD\-AB\-TASTE drückt oder auf den Symbolleistenbereich neben bzw. oberhalb oder unterhalb des Bildlauffelds klickt, ändert sich die <xref:System.Windows.Forms.ScrollBar.Value%2A>\-Eigenschaft entsprechend dem in der <xref:System.Windows.Forms.ScrollBar.LargeChange%2A>\-Eigenschaft festgelegten Wert.  
+## <a name="largechange-and-smallchange-properties"></a>LargeChange und SmallChange-Eigenschaften  
+ Wenn der Benutzer die Bild-auf oder Bild-ab-Taste drückt oder in der Schiebeleiste auf beiden Seiten des Bildlauffelds, klickt auf die <xref:System.Windows.Forms.ScrollBar.Value%2A> Eigenschaft ändert sich entsprechend der im festgelegte Wert die <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> Eigenschaft.  
   
- Wenn der Benutzer eine der Pfeiltasten drückt oder auf eine der Schaltflächen der Schiebeleiste klickt, ändert sich die <xref:System.Windows.Forms.ScrollBar.Value%2A>\-Eigenschaft entsprechend dem in der <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>\-Eigenschaft festgelegten Wert.  
+ Tasten oder auf eine der Schaltflächen der Bildlaufleiste, wenn der Benutzer eine der Pfeiltasten drückt die <xref:System.Windows.Forms.ScrollBar.Value%2A> Eigenschaft ändert sich entsprechend der im festgelegte Wert die <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> Eigenschaft.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.HScrollBar>   
- <xref:System.Windows.Forms.VScrollBar>   
- [Additions to Windows Forms for the .NET Framework 2.0](http://msdn.microsoft.com/de-de/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.HScrollBar>  
+ <xref:System.Windows.Forms.VScrollBar>  
+ [Ergänzungen für Windows Forms für .NET Framework 2.0](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

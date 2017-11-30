@@ -1,60 +1,52 @@
 ---
-title: Konvertieren von Datentypen (Visual Basic) | Microsoft-Dokumentation
+title: Konvertieren von Datentypen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 53d8ad292891a567e13ec8a5396bcc114b379351
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5fb0e9dfb0f1fb882116449757ed0f0bf9029b39
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="converting-data-types-visual-basic"></a>Konvertieren von Datentypen (Visual Basic)
-Konvertierungsmethoden ändern Sie den Typ von Eingabeobjekten.  
+Konvertierungsmethoden ändern den Typ von Eingabeobjekten.  
   
- Konvertierungsoperationen in LINQ-Abfragen eignen sich in einer Vielzahl von Anwendungen. Im folgenden sind einige Beispiele:  
+ Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Nachstehend sind einige Beispiele aufgeführt:  
   
--   Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>Methode kann verwendet werden, um einen Typ benutzerdefinierte Implementierung eines Standardabfrageoperators ausblenden.</xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>  
+-   Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>-Methode kann zum Ausblenden einer benutzerdefinierten Implementierung eines Standardabfrageoperators eines Typs verwendet werden.  
   
--   Die <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>Methode kann verwendet werden, um Sammlungen für LINQ-Abfragen nicht parametrisierten aktivieren.</xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>  
+-   Die <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType>-Methode kann verwendet werden, um nicht parametrisierte Auflistungen für LINQ-Abfragen zu ermöglichen.  
   
--   Die <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>, und <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>Methoden verwendet werden können, erzwingen der unmittelbaren Ausführung statt es verzögern, bis die Abfrage aufgelistet wird.</xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>  
+-   Die Methoden <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> und <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> können verwendet werden, um die sofortige Ausführung einer Abfrage zu erzwingen, statt sie zu verzögern, bis die Abfrage enumeriert wurde.  
   
 ## <a name="methods"></a>Methoden  
  Die folgende Tabelle enthält die Standardabfrageoperator-Methoden, die Datentypumwandlungen ausführen.  
   
- Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit beginnen, "Wie" ändern den statischen Typ der Auflistung, aber nicht aufgelistet, wird. Geben Sie die Methoden, deren Namen mit "Zu Auflisten der Quellsammlung und die Elemente in der entsprechenden Auflistung" zu beginnen.  
+ Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen, ändern den statischen Typ der Quellauflistung, listen ihn jedoch nicht auf. Die Methoden, deren Namen mit „To“ anfangen, listen die Quellauflistung auf und verschieben die Elemente in den entsprechenden Auflistungstyp.  
   
 |Methodenname|Beschreibung|Visual Basic-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601>.</xref:System.Collections.Generic.IEnumerable%601>|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName></xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
-|AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>auf eine <xref:System.Linq.IQueryable>.</xref:System.Linq.IQueryable> (Standard)</xref:System.Collections.IEnumerable>|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName></xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
-|Typumwandlung|Wandelt die Elemente einer Auflistung in einen angegebenen Typ.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName></xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
-|OfType|Filtert je nach ihrer Fähigkeit in einen angegebenen Typ umgewandelt werden.|Nicht zutreffend.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName></xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|ToArray|Konvertiert eine Auflistung in ein Array. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>|  
-|ToDictionary|Fügt Elemente in einer <xref:System.Collections.Generic.Dictionary%602>basierend auf einer Schlüsselauswahlfunktion.</xref:System.Collections.Generic.Dictionary%602> Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
-|ToList|Konvertiert eine Auflistung in eine <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>|  
-|ToLookup|Fügt Elemente in einer <xref:System.Linq.Lookup%602>(ein&1;: n-Wörterbuch) basierend auf einer Schlüsselauswahlfunktion.</xref:System.Linq.Lookup%602> Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
+|AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
+|Typumwandlung|Kopiert die Elemente einer Auflistung in einen bestimmten Typ.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
+|OfType|Filtert Werte, je nach ihrer Fähigkeit, die in einen angegebenen Typ umgewandelt werden sollen.|Nicht zutreffend.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|ToArray|Konvertiert eine Auflistung in ein Array. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
+|ToDictionary|Platziert Elemente in ein <xref:System.Collections.Generic.Dictionary%602> auf Grundlage einer Schlüsselauswahlfunktion. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
+|ToList|Konvertiert eine Auflistung in eine <xref:System.Collections.Generic.List%601>. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
+|ToLookup|Platziert Elemente, basierend auf einer Schlüsselauswahlfunktion, in ein <xref:System.Linq.Lookup%602> (one-to-many-Wörterbuch) ein. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Beispiele für die Abfrageausdruckssyntax  
- Im folgenden Codebeispiel wird die `From As` -Klausel, um einen Typ in einen Untertyp umzuwandeln, vor dem Zugriff auf ein Element, das nur im Untertyp verfügbar ist.  
+## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
+ Im folgenden Codebeispiel wird mit der `From As` -Klausel, um einen Typ in einen Untertyp umgewandelt, bevor der Zugriff auf ein Element, das nur auf den Untertyp verfügbar ist.  
   
 ```vb  
 Class Plant  
@@ -95,7 +87,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq></xref:System.Linq>   
- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [FROM-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md)   
- [Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+ <xref:System.Linq>  
+ [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

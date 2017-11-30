@@ -1,75 +1,74 @@
 ---
-title: "How to: Display Item Headers in a DataRepeater Control (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, item headers"
-  - "DataRepeater, selection indicators"
+title: 'Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement (Visual Studio)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- DataRepeater, item headers
+- DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Display Item Headers in a DataRepeater Control (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Der Elementheader in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelement fungiert als visueller Hinweis, wenn ein <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> ausgewählt wird.  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> \(Standardeinstellung\) festgelegt ist, wird der Header auf der linken Seite jedes Elements angezeigt.  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> festgelegt ist, wird der Header am Anfang jedes Elements angezeigt.  
+# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement (Visual Studio)
+Elementheaders in einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement verfügt über einen visuellen Indikator bei einem <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> ausgewählt ist. Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (Standard), der Header wird auf der linken Seite jedes Elements angezeigt. Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, wird der Header am oberen Rand jedes Element angezeigt.  
   
- Der Elementheader wird nach der ersten Auswahl in der durch die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>\-Eigenschaft definierten Farbe dargestellt, und es wird ein weißes Pfeilsymbol angezeigt.  
+ Wenn es zuerst aktiviert ist, wird der Header in der Farbe, die von angegeben wird angezeigt die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> Eigenschaft und das Symbol mit einem weißen Pfeil angezeigt wird.  
   
 > [!NOTE]
->  Wenn Sie <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> auf <xref:System.Drawing.Color.White%2A> festlegen, wird das Auswahlsymbol bei der ersten Auswahl des Elements nicht eingeblendet.  
+>  Wenn Sie festlegen, die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> zu <xref:System.Drawing.Color.White%2A>, das Auswahlsymbol wird nicht sichtbar sein, wenn Sie zuerst das Element ausgewählt ist.  
   
- Hat ein Feld in <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> den Fokus, ändert sich die Farbe des Elementheaders in die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>\-Hintergrundfarbe, und des Pfeilsymbol wird schwarz angezeigt.  Wenn Daten geändert wurden, wird im Elementheader ein Stiftsymbol angezeigt.  
+ Wenn ein Feld in der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> den Fokus besitzt, die Farbe des Elementheaders in die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> Hintergrundfarbe und das Pfeilsymbol auf Schwarz festgelegt wird. Wenn Daten geändert werden, wird im Elementheader ein Stiftsymbol angezeigt.  
   
- Die Standardbreite des Elementheaders \(bzw. die Standardhöhe, wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>\-Eigenschaft auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> festgelegt ist\) beträgt 15 Pixel.  Sie ändern die Breite durch Festlegen der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>\-Eigenschaft.  
-  
-> [!NOTE]
->  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>\-Eigenschaft auf einen Wert unter 11 festgelegt ist, werden die Indikatorsymbole im Elementheader nicht angezeigt.  
-  
- Sie können die Elementheader ausblenden, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A>\-Eigenschaft auf **False** festlegen.  Wenn <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> auf **False** festgelegt ist, wird die Auswahl eines Elements nur durch eine gestrichelte Linie entlang des Umfangs von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> angezeigt.  
+ Die Standardbreite (oder der Höhe bei der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> -Eigenschaftensatz auf <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) des Elements Header beträgt 15 Pixel. Sie können die Breite ändern, durch Festlegen der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> Eigenschaft.  
   
 > [!NOTE]
->  Sie können auch einen eigenen Auswahlindikator angeben, indem Sie die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>\-Eigenschaft von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> im <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>\-Ereignis des <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelements überwachen.  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+>  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> Eigenschaft auf einen Wert, der kleiner als 11 festgelegt ist, werden die Indikatorsymbole im Elementheader nicht angezeigt werden.  
   
-### So ändern Sie die Darstellung von Elementheadern  
+ Sie können die Elementheader ausblenden, indem Sie festlegen der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> Eigenschaft **"false"**. Wenn <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> festgelegt ist, um **"false"**, lediglich den Hinweis, dass ein Element ausgewählt ist, wird eine gepunktete Linie, um den Umriss der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
   
-1.  Wählen Sie im Windows Forms\-Designer den unteren Bereich des <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelements aus.  
+> [!NOTE]
+>  Sie können auch eigene Auswahlindikator angeben, durch die Überwachung der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> Eigenschaft von der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> in der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> -Ereignis für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
-    > [!NOTE]
-    >  Achten Sie darauf, dass Sie den unteren Bereich des Steuerelements auswählen.  Wenn Sie den Elementvorlagenbereich auswählen, werden im Eigenschaftenfenster andere Eigenschaften angezeigt.  
+### <a name="to-change-the-appearance-of-item-headers"></a>So ändern Sie die Darstellung von Elementheadern  
   
-2.  Sie können die Farbe des Elementheaders mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>\-Eigenschaft im Eigenschaftenfenster ändern.  
-  
-    > [!NOTE]
-    >  Wenn Sie <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> auf <xref:System.Drawing.Color.White%2A> festlegen, wird das Auswahlsymbol bei der ersten Auswahl des Elements nicht eingeblendet.  
-  
-3.  Mit der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>\-Eigenschaft können Sie die Breite \(oder Höhe\) der Elementheader ändern.  
+1.  Wählen Sie in der Windows Forms-Designer den unteren Bereich des der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.  
   
     > [!NOTE]
-    >  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>\-Eigenschaft auf einen Wert unter 11 festgelegt ist, werden die Indikatorsymbole im Elementheader nicht angezeigt.  
+    >  Sie müssen den unteren Bereich des Steuerelements auswählen. Wenn Sie den Abschnitt "Element" Vorlage auswählen, wird eine andere Gruppe von Eigenschaften im Eigenschaftenfenster angezeigt.  
   
-### So blenden Sie Elementheader aus  
-  
-1.  Wählen Sie im Windows Forms\-Designer den unteren Bereich des <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>\-Steuerelements aus.  
+2.  Verwenden Sie im Fenster Eigenschaften die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> Eigenschaft, die die Farbe des Elementheaders geändert.  
   
     > [!NOTE]
-    >  Achten Sie darauf, dass Sie den unteren Bereich des Steuerelements auswählen.  Wenn Sie den Elementvorlagenbereich auswählen, werden im Eigenschaftenfenster andere Eigenschaften angezeigt.  
+    >  Wenn Sie festlegen, die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> zu <xref:System.Drawing.Color.White%2A>, das Auswahlsymbol wird nicht sichtbar sein, wenn Sie zuerst das Element ausgewählt ist.  
   
-2.  Legen Sie im Eigenschaftenfenster die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A>\-Eigenschaft auf **False** fest.  
+3.  Verwenden der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> Eigenschaft, die (Höhe oder Breite) des Elementheaders geändert.  
   
-     Wenn ein Element in <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> ausgewählt wurde, wird als einziger Hinweis eine gestrichelte Linie entlang des Umfangs von <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> angezeigt.  
+    > [!NOTE]
+    >  Wenn die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> Eigenschaft auf einen Wert, der kleiner als 11 festgelegt ist, werden die Indikatorsymbole im Elementheader nicht angezeigt werden.  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [How to: Change the Layout of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [Troubleshooting the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+### <a name="to-hide-item-headers"></a>So blenden Sie Elementheader aus  
+  
+1.  Wählen Sie in der Windows Forms-Designer den unteren Bereich des der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.  
+  
+    > [!NOTE]
+    >  Sie müssen den unteren Bereich des Steuerelements auswählen. Wenn Sie den Abschnitt "Element" Vorlage auswählen, wird eine andere Gruppe von Eigenschaften im Eigenschaftenfenster angezeigt.  
+  
+2.  Legen Sie im Fenster Eigenschaften die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> Eigenschaft **"false"**.  
+  
+     Wenn ein Element in der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> ist ausgewählt, wird das einzige Anzeichen einer gepunkteten Linie um den Umriss werden die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Gewusst wie: Ändern des Layouts eines DataRepeater-Steuerelements](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Problembehandlung beim DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

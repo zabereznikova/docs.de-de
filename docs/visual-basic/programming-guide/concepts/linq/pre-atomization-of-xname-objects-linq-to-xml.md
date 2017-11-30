@@ -1,31 +1,27 @@
 ---
-title: Voratomisierung von XName-Objekten (LINQ to XML) (Visual Basic) | Microsoft-Dokumentation
+title: Voratomisierung von XName-Objekten (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 519b64a96e03e098d7325cfb779bcd5d53db3741
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 967e41afc70290a4e4bdccabb8f3f4dd4ac4f6ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Voratomisierung von XName-Objekten (LINQ to XML) (Visual Basic)
-Eine Möglichkeit zur Verbesserung der Leistung in LINQ to XML ist, um das voratomisieren <xref:System.Xml.Linq.XName>Objekte.</xref:System.Xml.Linq.XName> Voratomisierung bedeutet, dass Sie eine Zeichenfolge zuweisen einer <xref:System.Xml.Linq.XName>Objekt vor dem Erstellen der XML-Struktur mit den Konstruktoren von der <xref:System.Xml.Linq.XElement>und <xref:System.Xml.Linq.XAttribute>Klassen.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XName> Verwenden Sie dann anstelle eine Zeichenfolge an den Konstruktor übergeben, das würde die implizite Konvertierung von String in <xref:System.Xml.Linq.XName>, übergeben Sie das initialisierte <xref:System.Xml.Linq.XName>Objekt.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName>  
+Eine Möglichkeit zum Verbessern der Leistung in LINQ to XML ist, <xref:System.Xml.Linq.XName>-Objekte vorab zu atomisieren. Voratomisierung bedeutet, dass einem <xref:System.Xml.Linq.XName>-Objekt eine Zeichenfolge zugeordnet wird, bevor Sie mithilfe der Konstruktoren der <xref:System.Xml.Linq.XElement>-Klasse und der <xref:System.Xml.Linq.XAttribute>-Klasse die XML-Struktur erstellen. Anschließend wird anstelle der Übergabe einer Zeichenfolge an den Konstruktor, der die implizite Konvertierung von Zeichenfolge in <xref:System.Xml.Linq.XName> verwenden würde, das initialisierte <xref:System.Xml.Linq.XName>-Objekt übergeben.  
   
- Dies verbessert die Leistung beim Erstellen von großen XML-Strukturen, in denen bestimmte Namen wiederholt werden. Dazu deklarieren und initialisieren <xref:System.Xml.Linq.XName>Objekte, bevor Sie die XML-Struktur erstellen, und Sie dann verwenden die <xref:System.Xml.Linq.XName>Objekte, anstatt für die Element- und Attributnamen Zeichenfolgen anzugeben.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName> Mit dieser Vorgehensweise können beim Erstellen einer großen Anzahl von Elementen (oder Attributen) wesentliche Leistungsverbesserungen erzielt werden.  
+ Dies verbessert die Leistung beim Erstellen von großen XML-Strukturen, in denen bestimmte Namen wiederholt werden. Deklarieren und initialisieren Sie hierzu <xref:System.Xml.Linq.XName>-Objekte, bevor Sie die XML-Struktur erstellen, und verwenden Sie dann die <xref:System.Xml.Linq.XName>-Objekte, anstatt für die Element- und Attributnamen Zeichenfolgen anzugeben. Mit dieser Vorgehensweise können beim Erstellen einer großen Anzahl von Elementen (oder Attributen) wesentliche Leistungsverbesserungen erzielt werden.  
   
  Sie sollten Voratomisierung innerhalb Ihres Szenarios testen, um eine Entscheidung über die Anwendbarkeit dieses Verfahrens zu treffen.  
   
@@ -100,5 +96,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Leistung (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)   
+ [Leistung (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)  
  [Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
