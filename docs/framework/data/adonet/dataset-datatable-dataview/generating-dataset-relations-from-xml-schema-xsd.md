@@ -1,34 +1,37 @@
 ---
-title: "Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
-In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen.  Es gibt drei Möglichkeiten, eine **DataSet**\-Beziehung innerhalb eines XSD\-Schemas \(XML Schema Definition Language\) darzustellen:  
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="89696-102">Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="89696-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
+<span data-ttu-id="89696-103">In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen.</span><span class="sxs-lookup"><span data-stu-id="89696-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="89696-104">Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in einem Schema für XML Schema Definition Language (XSD):</span><span class="sxs-lookup"><span data-stu-id="89696-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  
   
--   Geben Sie geschachtelte komplexe Typen an.  
+-   <span data-ttu-id="89696-105">Geben Sie geschachtelte komplexe Typen an.</span><span class="sxs-lookup"><span data-stu-id="89696-105">Specify nested complex types.</span></span>  
   
--   Verwenden Sie die **msdata:Relationship**\-Anmerkung.  
+-   <span data-ttu-id="89696-106">Verwenden der **msdata: Relationship** Anmerkung.</span><span class="sxs-lookup"><span data-stu-id="89696-106">Use the **msdata:Relationship** annotation.</span></span>  
   
--   Geben Sie **xs:keyref** ohne die **msdata:ConstraintOnly**\-Anmerkung an.  
+-   <span data-ttu-id="89696-107">Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.</span><span class="sxs-lookup"><span data-stu-id="89696-107">Specify an **xs:keyref** without the **msdata:ConstraintOnly** annotation.</span></span>  
   
-## Geschachtelte komplexe Typen  
- Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an.  Im folgenden Ausschnitt eines XML\-Schemas wird dargestellt, dass **OrderDetail** ein untergeordnetes Element des **Order**\-Elements ist.  
+## <a name="nested-complex-types"></a><span data-ttu-id="89696-108">Geschachtelte komplexe Typen</span><span class="sxs-lookup"><span data-stu-id="89696-108">Nested Complex Types</span></span>  
+ <span data-ttu-id="89696-109">Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an.</span><span class="sxs-lookup"><span data-stu-id="89696-109">Nested complex type definitions in a schema indicate the parent-child relationships of the elements.</span></span> <span data-ttu-id="89696-110">Das folgende XML-Schema-Fragment zeigt, dass **OrderDetail** ist ein untergeordnetes Element von der **Reihenfolge** Element.</span><span class="sxs-lookup"><span data-stu-id="89696-110">The following XML Schema fragment shows that **OrderDetail** is a child element of the **Order** element.</span></span>  
   
-```  
+```xml  
 <xs:element name="Order">  
   <xs:complexType>  
      <xs:sequence>          
@@ -40,25 +43,24 @@ In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei 
 </xs:element>  
 ```  
   
- Der XML\-Schemazuordnungsprozess erstellt Tabellen im **DataSet**, die den geschachtelten komplexen Typen im Schema entsprechen.  Er erstellt ebenfalls zusätzliche Spalten, die als übergeordnete **\-**und untergeordnete Spalten für die generierten Tabellen verwendet werden.  Beachten Sie, dass durch diese übergeordneten **\-**und untergeordneten Spalten Beziehungen angegeben werden. Dies ist nicht mit dem Angeben von Primärschlüssel\- und Fremdschlüsseleinschränkungen identisch.  
+ <span data-ttu-id="89696-111">Die XML-Schemazuordnungsprozess erstellt Tabellen in der **DataSet** , die den geschachtelten komplexen Typen im Schema entsprechen.</span><span class="sxs-lookup"><span data-stu-id="89696-111">The XML Schema mapping process creates tables in the **DataSet** that correspond to the nested complex types in the schema.</span></span> <span data-ttu-id="89696-112">Er erstellt ebenfalls zusätzliche Spalten, die als übergeordnete verwendet**-**untergeordnete Spalten für die generierten Tabellen.</span><span class="sxs-lookup"><span data-stu-id="89696-112">It also creates additional columns that are used as parent**-**child columns for the generated tables.</span></span> <span data-ttu-id="89696-113">Beachten Sie, die diese übergeordneten**-**untergeordneten Spalten Beziehungen ist derselbe, als wenn primary Key/foreign Key-Einschränkungen angegeben.</span><span class="sxs-lookup"><span data-stu-id="89696-113">Note that these parent**-**child columns specify relationships, which is not the same as specifying primary key/foreign key constraints.</span></span>  
   
-## Die "msdata:Relationship"\-Anmerkung  
- Mit der **msdata:Relationship**\-Anmerkung können Sie für nicht geschachtelte Elemente im Schema die Beziehungen zwischen übergeordneten und untergeordneten Elementen explizit angeben.  Im folgenden Beispiel wird die Struktur des **Relationship**\-Elements dargestellt.  
+## <a name="msdatarelationship-annotation"></a><span data-ttu-id="89696-114">Die "msdata:Relationship"-Anmerkung</span><span class="sxs-lookup"><span data-stu-id="89696-114">msdata:Relationship Annotation</span></span>  
+ <span data-ttu-id="89696-115">Die **msdata: Relationship** -Anmerkung können Sie explizit die über-/ unterordnungsbeziehungen zwischen Elementen im Schema angeben, die nicht geschachtelt sind.</span><span class="sxs-lookup"><span data-stu-id="89696-115">The **msdata:Relationship** annotation allows you to explicitly specify parent-child relationships between elements in the schema that are not nested.</span></span> <span data-ttu-id="89696-116">Das folgende Beispiel zeigt die Struktur der **Beziehung** Element.</span><span class="sxs-lookup"><span data-stu-id="89696-116">The following example shows the structure of the **Relationship** element.</span></span>  
   
-```  
-  
-  <msdata:Relationship name="CustOrderRelationship"    
-msdata:parent=""    
-msdata:child=""    
-msdata:parentkey=""    
+```xml  
+<msdata:Relationship name="CustOrderRelationship"    
+msdata:parent=""    
+msdata:child=""    
+msdata:parentkey=""    
 msdata:childkey="" />  
 ```  
   
- Mit den Attributen der **msdata:Relationship**\-Anmerkung werden die einzubeziehenden Elemente für die Beziehung zwischen übergeordneten und untergeordneten Elementen sowie das **parentkey**\-Element und das **childkey**\-Element und die erforderlichen Attribute der Beziehung angegeben.  Der Zuordnungsprozess verwendet diese Informationen, um Tabellen im **DataSet** zu generieren und die Primärschlüssel\-Fremdschlüssel\-Beziehung zwischen diesen Tabellen zu erstellen.  
+ <span data-ttu-id="89696-117">Die Attribute der **msdata: Relationship** Anmerkung identifizieren die Elemente für die über-und untergeordneten Elementen sowie als die **Parentkey** und **Childkey** Elemente und Attribute, die an der Beziehung beteiligte.</span><span class="sxs-lookup"><span data-stu-id="89696-117">The attributes of the **msdata:Relationship** annotation identify the elements involved in the parent-child relationship, as well as the **parentkey** and **childkey** elements and attributes involved in the relationship.</span></span> <span data-ttu-id="89696-118">Der Zuordnungsprozess verwendet diese Informationen zum Generieren von Tabellen in der **DataSet** und den primäre Schlüssel/Fremdschlüssel-Beziehung zwischen diesen Tabellen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="89696-118">The mapping process uses this information to generate tables in the **DataSet** and to create the primary key/foreign key relationship between these tables.</span></span>  
   
- Im folgenden Schemaausschnitt werden beispielsweise das **Order**\-Element und das **OrderDetail**\-Element auf derselben Ebene \(nicht geschachtelt\) angegeben.  In dem Schema ist eine **msdata:Relationship**\-Anmerkung angegeben, die die Beziehung zwischen übergeordneten und untergeordneten Elementen für diese beiden Elementen festlegt.  In diesem Fall muss mithilfe der **msdata:Relationship**\-Anmerkung eine explizite Beziehung angegeben werden.  
+ <span data-ttu-id="89696-119">Das folgende Schemafragment gibt z. B. **Reihenfolge** und **OrderDetail** Elemente auf derselben Ebene (nicht geschachtelt).</span><span class="sxs-lookup"><span data-stu-id="89696-119">For example, the following schema fragment specifies **Order** and **OrderDetail** elements at the same level (not nested).</span></span> <span data-ttu-id="89696-120">Das Schema gibt ein **msdata: Relationship** Anmerkung, der angibt, die über-/ unterordnungsbeziehung zwischen diesen beiden Elementen.</span><span class="sxs-lookup"><span data-stu-id="89696-120">The schema specifies an **msdata:Relationship** annotation, which specifies the parent-child relationship between these two elements.</span></span> <span data-ttu-id="89696-121">In diesem Fall eine explizite Beziehung angegeben werden mithilfe der **msdata: Relationship** Anmerkung.</span><span class="sxs-lookup"><span data-stu-id="89696-121">In this case, an explicit relationship must be specified using the **msdata:Relationship** annotation.</span></span>  
   
-```  
+```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
     <xs:choice maxOccurs="unbounded">  
@@ -84,27 +86,26 @@ msdata:childkey="" />
           msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
-  
 ```  
   
- Der Zurordnungsprozess erstellt mit dem **Relationship**\-Element eine Beziehung zwischen übergeordneten und untergeordneten Elementen für die **OrderNumber**\-Spalte in der **Order**\-Tabelle und der **OrderNo**\-Spalte in der **OrderDetail**\-Tabelle des **DataSet**.  Der Zuordnungsprozess gibt nur die Beziehung an. Einschränkungen für die Werte in diesen Spalten werden nicht wie bei den Primärschlüssel\- und Fremdschlüsseleinschränkungen in relationalen Datenbanken automatisch angegeben.  
+ <span data-ttu-id="89696-122">Der Zuordnungsprozess verwendet die **Beziehung** Element zum Erstellen einer über-/ unterordnungsbeziehung zwischen den **OrderNumber** Spalte in der **Reihenfolge** Tabelle und die **OrderNo** Spalte in der **OrderDetail** -Tabelle in der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="89696-122">The mapping process uses the **Relationship** element to create a parent-child relationship between the **OrderNumber** column in the **Order** table and the **OrderNo** column in the **OrderDetail** table in the **DataSet**.</span></span> <span data-ttu-id="89696-123">Der Zuordnungsprozess gibt nur die Beziehung an. Einschränkungen für die Werte in diesen Spalten werden nicht wie bei den Primärschlüssel- und Fremdschlüsseleinschränkungen in relationalen Datenbanken automatisch angegeben.</span><span class="sxs-lookup"><span data-stu-id="89696-123">The mapping process only specifies the relationship; it does not automatically specify any constraints on the values in these columns, as do the primary key/foreign key constraints in relational databases.</span></span>  
   
-### In diesem Abschnitt  
- [Zuordnen von impliziten Beziehungen zwischen im Schema geschachtelten Elementen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- Beschreibt die Einschränkungen und Beziehungen, die implizit in einem **DataSet** erstellt werden, wenn geschachtelte Elemente im XML\-Schema vorhanden sind.  
+### <a name="in-this-section"></a><span data-ttu-id="89696-124">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="89696-124">In This Section</span></span>  
+ [<span data-ttu-id="89696-125">Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen</span><span class="sxs-lookup"><span data-stu-id="89696-125">Map Implicit Relations Between Nested Schema Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ <span data-ttu-id="89696-126">Beschreibt die Einschränkungen und Beziehungen, die implizit in erstellt werden ein **DataSet** Wenn geschachtelte Elemente im XML-Schema gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="89696-126">Describes the constraints and relations that are implicitly created in a **DataSet** when nested elements are encountered in XML Schema.</span></span>  
   
- [Zuordnen von für geschachtelte Elemente angegebenen Beziehungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Beschreibt das explizite Festlegen von Beziehungen in einem **DataSet** für geschachtelte Elemente in einem XML\-Schema.  
+ [<span data-ttu-id="89696-127">Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben</span><span class="sxs-lookup"><span data-stu-id="89696-127">Map Relations Specified for Nested Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ <span data-ttu-id="89696-128">Beschreibt das explizite Festlegen von Beziehungen einem **DataSet** für geschachtelte Elemente im XML-Schema.</span><span class="sxs-lookup"><span data-stu-id="89696-128">Describes how to explicitly set relations in a **DataSet** for nested elements in XML Schema.</span></span>  
   
- [Angeben von Beziehungen zwischen Elementen ohne Schachtelung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- Beschreibt das Erstellen von Beziehungen in einem **DataSet** zwischen nicht geschachtelten XML\-Schemaelementen.  
+ [<span data-ttu-id="89696-129">Angeben von Beziehungen zwischen Elementen ohne Verschachtelung</span><span class="sxs-lookup"><span data-stu-id="89696-129">Specify Relations Between Elements with No Nesting</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ <span data-ttu-id="89696-130">Enthält Informationen zum Erstellen von Beziehungen in einem **DataSet** zwischen XML-Schemaelemente, die nicht geschachtelt sind.</span><span class="sxs-lookup"><span data-stu-id="89696-130">Describes how to create relations in a **DataSet** between XML Schema elements that are not nested.</span></span>  
   
-### Verwandte Abschnitte  
- [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Beschreibt die relationale Struktur bzw. das Schema eines **DataSet**, das aus einem XSD\-Schema \(XML Schema Definition Language\) erstellt wird.  
+### <a name="related-sections"></a><span data-ttu-id="89696-131">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="89696-131">Related Sections</span></span>  
+ [<span data-ttu-id="89696-132">Ableiten von relationalen DataSet-Struktur von XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="89696-132">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="89696-133">Beschreibt die relationale Struktur bzw. das Schema von einem **DataSet** , die vom Schema für XML Schema Definition Language (XSD) erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="89696-133">Describes the relational structure, or schema, of a **DataSet** that is created from XML Schema definition language (XSD) schema.</span></span>  
   
- [Zuordnen von XSD\-Einschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die zum Erstellen von eindeutigen Einschränkungen und Fremdschlüsseleinschränkungen in einem **DataSet** verwendeten XML\-Schemaelemente.  
+ [<span data-ttu-id="89696-134">Zuordnen von XML-Schema (XSD) Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="89696-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="89696-135">Beschreibt die XML-Schema-Elemente, die zum Erstellen von Unique- und foreign Key-Einschränkungen in einer **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="89696-135">Describes the XML Schema elements used to create unique and foreign key constraints in a **DataSet**.</span></span>  
   
-## Siehe auch  
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="89696-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89696-136">See Also</span></span>  
+ [<span data-ttu-id="89696-137">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="89696-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

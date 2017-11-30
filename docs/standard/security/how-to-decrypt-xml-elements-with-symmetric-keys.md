@@ -1,93 +1,93 @@
 ---
-title: "How to: Decrypt XML Elements with Symmetric Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "symmetric keys"
-  - "System.Security.Cryptography.EncryptedXml class"
-  - "System.Security.Cryptography.RijndaelManaged class"
-  - "XML encryption"
-  - "Rijndael"
-  - "decryption"
+title: "Gewusst wie: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- symmetric keys
+- System.Security.Cryptography.EncryptedXml class
+- System.Security.Cryptography.RijndaelManaged class
+- XML encryption
+- Rijndael
+- decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6bacdb47d1107f6a800d9beec2578c0f7085a894
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Decrypt XML Elements with Symmetric Keys
-Sie können die Klassen im <xref:System.Security.Cryptography.Xml>\-Namespace verwenden, um ein Element in einem XML\-Dokument zu verschlüsseln.  Die XML\-Verschlüsselung ermöglicht Ihnen das Speichern oder Transportieren von vertraulichen XML\-Dokumenten, ohne befürchten zu müssen, dass die Daten einfach gelesen werden können.  In diesem Codebeispiel wird ein XML\-Element mithilfe des AES\-Algorithmus \(Advanced Encryption Standard\) entschlüsselt, der auch unter dem Namen Rijndael bekannt ist.  
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a><span data-ttu-id="84022-102">Gewusst wie: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln</span><span class="sxs-lookup"><span data-stu-id="84022-102">How to: Decrypt XML Elements with Symmetric Keys</span></span>
+<span data-ttu-id="84022-103">Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="84022-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to encrypt an element within an XML document.</span></span>  <span data-ttu-id="84022-104">Die XML-Verschlüsselung ermöglicht Ihnen das Speichern oder Transportieren von vertraulichen XML-Dokumenten, ohne befürchten zu müssen, dass die Daten einfach gelesen werden können.</span><span class="sxs-lookup"><span data-stu-id="84022-104">XML Encryption allows you to store or transport sensitive XML, without worrying about the data being easily read.</span></span>  <span data-ttu-id="84022-105">In diesem Codebeispiel wird ein XML-Element mithilfe des AES-Algorithmus (Advanced Encryption Standard) entschlüsselt, der auch unter dem Namen Rijndael bekannt ist.</span><span class="sxs-lookup"><span data-stu-id="84022-105">This code example decrypts an XML element using the Advanced Encryption Standard (AES) algorithm, also known as Rijndael.</span></span>  
   
- Informationen dazu, wie ein XML\-Element mit dieser Prozedur verschlüsselt wird, finden Sie unter [How to: Encrypt XML Elements with Symmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+ <span data-ttu-id="84022-106">Informationen über das Verschlüsseln Sie ein XML-Element, das mit dieser Prozedur finden Sie unter [wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).</span><span class="sxs-lookup"><span data-stu-id="84022-106">For information about how to encrypt an XML element using this procedure, see [How to: Encrypt XML Elements with Symmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
   
- Wenn Sie einen symmetrischen Algorithmus wie AES verwenden, um XML\-Daten zu verschlüsseln, müssen Sie für das Verschlüsseln und Entschlüsseln der XML\-Daten denselben Schlüssel verwenden.  Für das Beispiel in dieser Prozedur wird angenommen, dass das verschlüsselte XML\-Element mit demselben Schlüssel verschlüsselt wurde und dass sich die verschlüsselnden und die entschlüsselnden Beteiligten über den zu verwendenden Algorithmus und Schlüssel verständigt haben.  In diesem Beispiel wird der AES\-Schlüssel weder im verschlüsselten XML\-Element gespeichert noch dort verschlüsselt.  
+ <span data-ttu-id="84022-107">Wenn Sie einen symmetrischen Algorithmus wie AES verwenden, um XML-Daten zu verschlüsseln, müssen Sie für das Verschlüsseln und Entschlüsseln der XML-Daten denselben Schlüssel verwenden.</span><span class="sxs-lookup"><span data-stu-id="84022-107">When you use a symmetric algorithm like AES to encrypt XML data, you must use the same key to encrypt and decrypt the XML data.</span></span>  <span data-ttu-id="84022-108">Für das Beispiel in dieser Prozedur wird angenommen, dass das verschlüsselte XML-Element mit demselben Schlüssel verschlüsselt wurde und dass sich die verschlüsselnden und die entschlüsselnden Beteiligten über den zu verwendenden Algorithmus und Schlüssel verständigt haben.</span><span class="sxs-lookup"><span data-stu-id="84022-108">The example in this procedure assumes that the encrypted XML was encrypted using the same key, and that the encrypting and decrypting parties agree on the algorithm and key to use.</span></span>  <span data-ttu-id="84022-109">In diesem Beispiel wird der AES-Schlüssel weder im verschlüsselten XML-Element gespeichert noch dort verschlüsselt.</span><span class="sxs-lookup"><span data-stu-id="84022-109">This example does not store or encrypt the AES key within the encrypted XML.</span></span>  
   
- Dieses Beispiel ist für Situationen geeignet, in denen eine einzelne Anwendung Daten auf Basis eines Sitzungsschlüssels, der sich im Arbeitsspeicher befindet, oder auf Basis eines starken kryptografischen Schlüssels verschlüsseln muss, der aus einem Kennwort abgeleitet wurde.  Für Situationen, in denen zwei oder mehr Anwendungen verschlüsselte XML\-Daten gemeinsam verwenden müssen, empfiehlt sich die Verwendung eines Verschlüsselungsschemas, dem ein asymmetrischer Algorithmus oder ein X.509\-Zertifikat zugrunde liegt.  
+ <span data-ttu-id="84022-110">Dieses Beispiel ist für Situationen geeignet, in denen eine einzelne Anwendung Daten auf Basis eines Sitzungsschlüssels, der sich im Arbeitsspeicher befindet, oder auf Basis eines starken kryptografischen Schlüssels verschlüsseln muss, der aus einem Kennwort abgeleitet wurde.</span><span class="sxs-lookup"><span data-stu-id="84022-110">This example is appropriate for situations where a single application needs to encrypt data based on a session key stored in memory, or based on a cryptographically strong key derived from a password.</span></span>  <span data-ttu-id="84022-111">Für Situationen, in denen zwei oder mehr Anwendungen verschlüsselte XML-Daten gemeinsam verwenden müssen, empfiehlt sich die Verwendung eines Verschlüsselungsschemas, dem ein asymmetrischer Algorithmus oder ein X.509-Zertifikat zugrunde liegt.</span><span class="sxs-lookup"><span data-stu-id="84022-111">For situations where two or more applications need to share encrypted XML data, consider using an encryption scheme based on an asymmetric algorithm or an X.509 certificate.</span></span>  
   
-### So entschlüsseln Sie ein XML\-Element mit einem symmetrischen Schlüssel  
+### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a><span data-ttu-id="84022-112">So entschlüsseln Sie ein XML-Element mit einem symmetrischen Schlüssel</span><span class="sxs-lookup"><span data-stu-id="84022-112">To decrypt an XML element with a symmetric key</span></span>  
   
-1.  Verschlüsseln Sie ein XML\-Element mit dem zuvor generierten Schlüssel. Verwenden Sie dazu die Verfahren, die unter [How to: Encrypt XML Elements with Symmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md) beschrieben sind.  
+1.  <span data-ttu-id="84022-113">Verschlüsseln Sie ein XML-Element mit dem zuvor generierten Schlüssel, die beschriebenen Techniken verwenden [wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).</span><span class="sxs-lookup"><span data-stu-id="84022-113">Encrypt an XML element with the previously generated key using the techniques described in [How to: Encrypt XML Elements with Symmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).</span></span>  
   
-2.  Suchen Sie das `EncryptedData`\-Element \(definiert im Standard für XML\-Verschlüsselung\) in einem <xref:System.Xml.XmlDocument>\-Objekt, das das verschlüsselte XML\-Element enthält, und erstellen Sie ein neues <xref:System.Xml.XmlElement>\-Objekt, das dieses Element darstellt.  
+2.  <span data-ttu-id="84022-114">Suchen Sie das `EncryptedData`-Element (definiert im Standard für XML-Verschlüsselung) in einem <xref:System.Xml.XmlDocument>-Objekt, das das verschlüsselte XML-Element enthält, und erstellen Sie ein neues <xref:System.Xml.XmlElement>-Objekt, das dieses Element darstellt.</span><span class="sxs-lookup"><span data-stu-id="84022-114">Find the <`EncryptedData`> element (defined by the XML Encryption standard) in an <xref:System.Xml.XmlDocument> object that contains the encrypted XML and create a new <xref:System.Xml.XmlElement> object to represent that element.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptedData>\-Objekt, indem Sie die unformatierten XML\-Daten aus dem zuvor erstellten <xref:System.Xml.XmlElement>\-Objekt laden.  
+3.  <span data-ttu-id="84022-115">Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptedData>-Objekt, indem Sie die unformatierten XML-Daten aus dem zuvor erstellten <xref:System.Xml.XmlElement>-Objekt laden.</span><span class="sxs-lookup"><span data-stu-id="84022-115">Create an <xref:System.Security.Cryptography.Xml.EncryptedData> object by loading the raw XML data from the previously created <xref:System.Xml.XmlElement> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  Erstellen Sie ein neues <xref:System.Security.Cryptography.Xml.EncryptedXml>\-Objekt, und verwenden Sie dieses Objekt, um die XML\-Daten zu entschlüsseln. Verwenden Sie dazu den Schlüssel, der für die Verschlüsselung verwendet wurde.  
+4.  <span data-ttu-id="84022-116">Erstellen Sie ein neues <xref:System.Security.Cryptography.Xml.EncryptedXml>-Objekt, und verwenden Sie dieses Objekt, um die XML-Daten zu entschlüsseln. Verwenden Sie dazu den Schlüssel, der für die Verschlüsselung verwendet wurde.</span><span class="sxs-lookup"><span data-stu-id="84022-116">Create a new <xref:System.Security.Cryptography.Xml.EncryptedXml> object and use it to decrypt the XML data using the same key that was used for encryption.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  Ersetzen Sie das verschlüsselte Element durch das neu entschlüsselte Nur\-Text Element innerhalb des XML\-Dokuments.  
+5.  <span data-ttu-id="84022-117">Ersetzen Sie das verschlüsselte Element durch das neu entschlüsselte Nur-Text Element innerhalb des XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="84022-117">Replace the encrypted element with the newly decrypted plaintext element within the XML document.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
-## Beispiel  
- Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Außerdem wird angenommen, dass `"test.xml"` ein `"creditcard"`\-Element enthält.  Sie können den folgenden XML\-Code in eine Datei namens `test.xml` einfügen und mit diesem Beispiel verwenden.  
+## <a name="example"></a><span data-ttu-id="84022-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="84022-118">Example</span></span>  
+ <span data-ttu-id="84022-119">Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="84022-119">This example assumes that a file named `"test.xml"` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="84022-120">Außerdem wird angenommen, dass `"test.xml"` ein `"creditcard"`-Element enthält.</span><span class="sxs-lookup"><span data-stu-id="84022-120">It also assumes that `"test.xml"` contains a `"creditcard"` element.</span></span>  <span data-ttu-id="84022-121">Sie können den folgenden XML-Code in eine Datei namens `test.xml` einfügen und mit diesem Beispiel verwenden.</span><span class="sxs-lookup"><span data-stu-id="84022-121">You can place the following XML into a file called `test.xml` and use it with this example.</span></span>  
   
-```  
+```xml  
 <root>  
     <creditcard>  
         <number>19834209</number>  
         <expiry>02/02/2002</expiry>  
     </creditcard>  
 </root>  
-  
 ```  
   
  [!code-csharp[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#1)]
  [!code-vb[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#1)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="84022-122">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="84022-122">Compiling the Code</span></span>  
   
--   Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
+-   <span data-ttu-id="84022-123">Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.</span><span class="sxs-lookup"><span data-stu-id="84022-123">To compile this example, you need to include a reference to `System.Security.dll`.</span></span>  
   
--   Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
+-   <span data-ttu-id="84022-124">Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.</span><span class="sxs-lookup"><span data-stu-id="84022-124">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## .NET Framework-Sicherheit  
- Speichern Sie einen kryptografischen Schlüssel nie im Klartextformat, und übertragen Sie einen Schlüssel nie im Klartextformat zwischen Computern.  
+## <a name="net-framework-security"></a><span data-ttu-id="84022-125">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="84022-125">.NET Framework Security</span></span>  
+ <span data-ttu-id="84022-126">Speichern Sie einen kryptografischen Schlüssel nie im Klartextformat, und übertragen Sie einen Schlüssel nie im Klartextformat zwischen Computern.</span><span class="sxs-lookup"><span data-stu-id="84022-126">Never store a cryptographic key in plaintext or transfer a key between machines in plaintext.</span></span>  
   
- Wenn Sie einen symmetrischen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 \(null\) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>\-Methode der verwalteten Kryptografieklasse aufrufen.  
+ <span data-ttu-id="84022-127">Wenn Sie einen symmetrischen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.</span><span class="sxs-lookup"><span data-stu-id="84022-127">When you are done using a symmetric cryptographic key, clear it from memory by setting each byte to zero or by calling the <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> method of the managed cryptography class.</span></span>  
   
-## Siehe auch  
- <xref:System.Security.Cryptography.Xml>   
- [How to: Encrypt XML Elements with Symmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a><span data-ttu-id="84022-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="84022-128">See Also</span></span>  
+ <xref:System.Security.Cryptography.Xml>  
+ [<span data-ttu-id="84022-129">Gewusst wie: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln</span><span class="sxs-lookup"><span data-stu-id="84022-129">How to: Encrypt XML Elements with Symmetric Keys</span></span>](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

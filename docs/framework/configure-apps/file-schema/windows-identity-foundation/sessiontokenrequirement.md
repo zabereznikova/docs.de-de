@@ -1,59 +1,69 @@
 ---
-title: "&lt;sessionTokenRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;auf "sessiontokenrequirement"&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
-caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 8b729f588d2195992b231661f7bb718240141fdd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;sessionTokenRequirement&gt;
-Stellt Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>\-Klasse oder \-abgeleiteten Klassen bereit.  
+# <a name="ltsessiontokenrequirementgt"></a><span data-ttu-id="eda51-102">&lt;auf "sessiontokenrequirement"&gt;</span><span class="sxs-lookup"><span data-stu-id="eda51-102">&lt;sessionTokenRequirement&gt;</span></span>
+<span data-ttu-id="eda51-103">Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> abgeleiteten Klassen.</span><span class="sxs-lookup"><span data-stu-id="eda51-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
   
-## Syntax  
+ <span data-ttu-id="eda51-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="eda51-104">\<system.identityModel></span></span>  
+<span data-ttu-id="eda51-105">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="eda51-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="eda51-106">\<SecurityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="eda51-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="eda51-107">\<add></span><span class="sxs-lookup"><span data-stu-id="eda51-107">\<add></span></span>  
+<span data-ttu-id="eda51-108">\<auf "sessiontokenrequirement" ></span><span class="sxs-lookup"><span data-stu-id="eda51-108">\<sessionTokenRequirement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="eda51-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="eda51-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">  
-        <sessionTokenRequirement lifetime=TimeSpan >  
-        </sessionTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">  
+        <sessionTokenRequirement lifetime=TimeSpan >  
+        </sessionTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="eda51-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="eda51-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="eda51-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="eda51-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attribute  
+### <a name="attributes"></a><span data-ttu-id="eda51-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="eda51-112">Attributes</span></span>  
   
-|Attribut|Description|  
-|--------------|-----------------|  
-|Lebensdauer|Gibt die Lebensdauer von Sitzungstoken an.|  
+|<span data-ttu-id="eda51-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="eda51-113">Attribute</span></span>|<span data-ttu-id="eda51-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eda51-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="eda51-115">Lebensdauer</span><span class="sxs-lookup"><span data-stu-id="eda51-115">lifetime</span></span>|<span data-ttu-id="eda51-116">Gibt die Lebensdauer der Sitzungstoken.</span><span class="sxs-lookup"><span data-stu-id="eda51-116">Specifies the lifetime of session tokens.</span></span>|  
   
-### Untergeordnete Elemente  
- Kein  
+### <a name="child-elements"></a><span data-ttu-id="eda51-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="eda51-117">Child Elements</span></span>  
+ <span data-ttu-id="eda51-118">Keine</span><span class="sxs-lookup"><span data-stu-id="eda51-118">None</span></span>  
   
-### Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="eda51-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="eda51-119">Parent Elements</span></span>  
   
-|Element|Description|  
+|<span data-ttu-id="eda51-120">Element</span><span class="sxs-lookup"><span data-stu-id="eda51-120">Element</span></span>|<span data-ttu-id="eda51-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eda51-121">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Fügt den angegebenen Sicherheitstokenhandler der Tokenhandlerauflistung hinzu.|  
+|[<span data-ttu-id="eda51-122">\<add></span><span class="sxs-lookup"><span data-stu-id="eda51-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="eda51-123">Fügt den angegebenen Sicherheits-Tokenhandler der Tokenhandler Auflistung hinzu.</span><span class="sxs-lookup"><span data-stu-id="eda51-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="eda51-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="eda51-124">Example</span></span>  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           
     <sessionTokenRequirement lifetime="10:00" />  
 </add>  

@@ -8,54 +8,52 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 43057a4b0014ac2ea8aec6f298ccc0b2d9103154
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e518d9c4477377e6d0d7e569a29efcf4801101fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="version-tolerant-serialization-technology-sample"></a>Technologiebeispiel für versionstolerante Serialisierung
-[Beispiel herunterladen](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+# <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="0f5a9-102">Technologiebeispiel für versionstolerante Serialisierung</span><span class="sxs-lookup"><span data-stu-id="0f5a9-102">Version Tolerant Serialization Technology Sample</span></span>
+[<span data-ttu-id="0f5a9-103">Beispiel herunterladen</span><span class="sxs-lookup"><span data-stu-id="0f5a9-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
- In diesem Beispiel werden die Funktionen für die Versionstoleranz von .NET Serialisierung veranschaulicht. Im Beispiel werden Anwendungen erstellt, die zum Serialisieren und Deserialisieren von Daten andere Versionen von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> verwenden. Obwohl verschiedene Typversionen verwendet werden, kommunizieren die Anwendungen reibungslos miteinander. Weitere Informationen finden Sie unter [Versionstolerante Serialisierung](../../../docs/standard/serialization/version-tolerant-serialization.md).  
+ <span data-ttu-id="0f5a9-104">In diesem Beispiel werden die Funktionen für die Versionstoleranz von .NET Serialisierung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-104">This sample demonstrates the version tolerance features of .NET Serialization.</span></span> <span data-ttu-id="0f5a9-105">Im Beispiel werden Anwendungen erstellt, die zum Serialisieren und Deserialisieren von Daten andere Versionen von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> verwenden.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-105">The sample builds applications that use different versions of a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> to serialize and deserialize data.</span></span> <span data-ttu-id="0f5a9-106">Obwohl verschiedene Typversionen verwendet werden, kommunizieren die Anwendungen reibungslos miteinander.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-106">Despite the presence of different type versions, the applications communicate seamlessly.</span></span> <span data-ttu-id="0f5a9-107">Weitere Informationen finden Sie unter [Versionstolerante Serialisierung](../../../docs/standard/serialization/version-tolerant-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="0f5a9-107">For more information, see [Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md).</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a>So erstellen Sie das Beispiel mithilfe der Eingabeaufforderung  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="0f5a9-108">So erstellen Sie das Beispiel mithilfe der Eingabeaufforderung</span><span class="sxs-lookup"><span data-stu-id="0f5a9-108">To build the sample using the command prompt</span></span>  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse (unter V1 Application oder V2 Application) für das Beispiel.  
+1.  <span data-ttu-id="0f5a9-109">Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse (unter V1 Application oder V2 Application) für das Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-109">Open a Command Prompt window and navigate to one of the language-specific subdirectories (under V1 Application or V2 Application) for the sample.</span></span>  
   
-2.  Geben Sie in die Befehlszeile **msbuild.exe \<ver> application.sln** ein (wobei „\<ver>“ entweder v1 oder v2 entspricht).  
+2.  <span data-ttu-id="0f5a9-110">Geben Sie in die Befehlszeile **msbuild.exe \<ver> application.sln** ein (wobei „\<ver>“ entweder v1 oder v2 entspricht).</span><span class="sxs-lookup"><span data-stu-id="0f5a9-110">Type **msbuild.exe \<ver> application.sln** at the command line (where \<ver> is either v1 or v2).</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="0f5a9-111">So erstellen Sie das Beispiel mithilfe von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0f5a9-111">To build the sample using Visual Studio</span></span>  
   
-1.  Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
+1.  <span data-ttu-id="0f5a9-112">Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-112">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  Navigieren Sie zum Unterverzeichnis V1 Application in dem Verzeichnis, das Sie im vorherigen Schritt ausgewählt haben.  
+2.  <span data-ttu-id="0f5a9-113">Navigieren Sie zum Unterverzeichnis V1 Application in dem Verzeichnis, das Sie im vorherigen Schritt ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-113">Navigate to the V1 Application subdirectory of the directory you selected in the previous step.</span></span>  
   
-3.  Doppelklicken Sie auf das Symbol für V1 Application.sln, um die Datei in Visual Studio zu öffnen.  
+3.  <span data-ttu-id="0f5a9-114">Doppelklicken Sie auf das Symbol für V1 Application.sln, um die Datei in Visual Studio zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-114">Double-click the icon for V1 Application.sln to open the file in Visual Studio.</span></span>  
   
-4.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
+4.  <span data-ttu-id="0f5a9-115">Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-115">On the **Build** menu, click **Build Solution**.</span></span>  
   
-5.  Navigieren Sie zum Unterverzeichnis V2 Application, und wiederholen Sie die beiden vorherigen Schritte, um die V2-Anwendung zu erstellen.  
+5.  <span data-ttu-id="0f5a9-116">Navigieren Sie zum Unterverzeichnis V2 Application, und wiederholen Sie die beiden vorherigen Schritte, um die V2-Anwendung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-116">Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.</span></span>  
   
- Die Anwendungen werden im Standardunterverzeichnis \bin oder \bin\Debug des zugehörigen Projektverzeichnisses erstellt.  
+ <span data-ttu-id="0f5a9-117">Die Anwendungen werden im Standardunterverzeichnis \bin oder \bin\Debug des zugehörigen Projektverzeichnisses erstellt.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-117">The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.</span></span>  
   
-### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
+### <a name="to-run-the-sample"></a><span data-ttu-id="0f5a9-118">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="0f5a9-118">To run the sample</span></span>  
   
-1.  Navigieren Sie im Eingabeaufforderungsfenster zu dem sprachspezifischen Unterverzeichnis, das Sie beim Erstellen der Beispielanwendungen ausgewählt haben.  
+1.  <span data-ttu-id="0f5a9-119">Navigieren Sie im Eingabeaufforderungsfenster zu dem sprachspezifischen Unterverzeichnis, das Sie beim Erstellen der Beispielanwendungen ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-119">In the Command Prompt window, navigate to the language-specific subdirectory that you selected when you built the sample applications.</span></span>  
   
-2.  Geben Sie **runme.cmd** in der Befehlszeile ein, um sofort beide Anwendungen auszuführen.  
+2.  <span data-ttu-id="0f5a9-120">Geben Sie **runme.cmd** in der Befehlszeile ein, um sofort beide Anwendungen auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-120">Type **runme.cmd** at the command line to run both applications at once.</span></span>  
   
- Alternativ können Sie zu den Verzeichnissen navigieren, die die neuen ausführbaren Dateien enthalten, und diese dann nacheinander ausführen.  
+ <span data-ttu-id="0f5a9-121">Alternativ können Sie zu den Verzeichnissen navigieren, die die neuen ausführbaren Dateien enthalten, und diese dann nacheinander ausführen.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-121">Alternatively, navigate to the directories that contain the new executables and run them sequentially.</span></span>  
   
 > [!NOTE]
->  In diesem Beispiel werden Konsolenanwendungen erstellt. Sie müssen diese in einem Eingabeaufforderungsfenster starten und ausführen, um die Ausgabe anzuzeigen.  
+>  <span data-ttu-id="0f5a9-122">In diesem Beispiel werden Konsolenanwendungen erstellt.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-122">The sample builds console applications.</span></span> <span data-ttu-id="0f5a9-123">Sie müssen diese in einem Eingabeaufforderungsfenster starten und ausführen, um die Ausgabe anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="0f5a9-123">You must launch and run them in a Command Prompt window to view their output.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>   
+## <a name="see-also"></a><span data-ttu-id="0f5a9-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0f5a9-124">See Also</span></span>  
+ <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
  <xref:System.IO.FileStream>
-

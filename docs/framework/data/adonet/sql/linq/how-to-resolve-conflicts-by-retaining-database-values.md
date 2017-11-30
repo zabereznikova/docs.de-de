@@ -1,48 +1,54 @@
 ---
-title: "Vorgehensweise: Beheben von Konflikten durch Beibehalten von Datenbankwerten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gewusst wie: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1c2abc3f5ddd2daf9befc93e4469bd0e785fa6f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Beheben von Konflikten durch Beibehalten von Datenbankwerten
-Wenn Sie Unterschiede zwischen den erwarteten und den tatsächlichen Datenbankwerten ausgleichen möchten, bevor Sie versuchen, Ihre Änderungen erneut zu übergeben, können Sie die Datenbankwerte mithilfe von <xref:System.Data.Linq.RefreshMode> erhalten.  Die aktuellen Werte im Objektmodell werden dann überschrieben.  Weitere Informationen finden Sie unter [Vollständige Parallelität: Übersicht](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a><span data-ttu-id="531e5-102">Gewusst wie: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten</span><span class="sxs-lookup"><span data-stu-id="531e5-102">How to: Resolve Conflicts by Retaining Database Values</span></span>
+<span data-ttu-id="531e5-103">Wenn Sie Unterschiede zwischen den erwarteten und den tatsächlichen Datenbankwerten ausgleichen möchten, bevor Sie versuchen, Ihre Änderungen erneut zu übergeben, können Sie die Datenbankwerte mithilfe von <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> erhalten.</span><span class="sxs-lookup"><span data-stu-id="531e5-103">To reconcile differences between expected and actual database values before you try to resubmit your changes, you can use <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> to retain the values found in the database.</span></span> <span data-ttu-id="531e5-104">Die aktuellen Werte im Objektmodell werden dann überschrieben.</span><span class="sxs-lookup"><span data-stu-id="531e5-104">The current values in the object model are then overwritten.</span></span> <span data-ttu-id="531e5-105">Weitere Informationen finden Sie unter [vollständige Parallelität: Übersicht über](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="531e5-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
   
 > [!NOTE]
->  In allen Fällen wird der Datensatz auf dem Client erst durch Abrufen der geänderten Daten aus der Datenbank aktualisiert.  Diese Aktion stellt sicher, dass der nächste Updateversuch nicht bei den gleichen Parallelitätsprüfungen fehlschlägt.  
+>  <span data-ttu-id="531e5-106">In allen Fällen wird der Datensatz auf dem Client erst durch Abrufen der geänderten Daten aus der Datenbank aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="531e5-106">In all cases, the record on the client is first refreshed by retrieving the updated data from the database.</span></span> <span data-ttu-id="531e5-107">Diese Aktion stellt sicher, dass der nächste Updateversuch nicht bei den gleichen Parallelitätsprüfungen fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="531e5-107">This action makes sure that the next update try will not fail on the same concurrency checks.</span></span>  
   
-## Beispiel  
- In diesem Szenario wird eine <xref:System.Data.Linq.ChangeConflictException>\-Ausnahme ausgelöst, wenn User1 versucht, Änderungen zu übergeben, da User2 zwischenzeitlich die Assistant\-Spalte und die Department\-Spalte geändert hat.  Die folgende Tabelle zeigt die Situation.  
+## <a name="example"></a><span data-ttu-id="531e5-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="531e5-108">Example</span></span>  
+ <span data-ttu-id="531e5-109">In diesem Szenario wird eine <xref:System.Data.Linq.ChangeConflictException>-Ausnahme ausgelöst, wenn User1 versucht, Änderungen zu übergeben, da User2 zwischenzeitlich die Assistant-Spalte und die Department-Spalte geändert hat.</span><span class="sxs-lookup"><span data-stu-id="531e5-109">In this scenario, a <xref:System.Data.Linq.ChangeConflictException> exception is thrown when User1 tries to submit changes, because User2 has in the meantime changed the Assistant and Department columns.</span></span> <span data-ttu-id="531e5-110">Die folgende Tabelle zeigt die Situation.</span><span class="sxs-lookup"><span data-stu-id="531e5-110">The following table shows the situation.</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="531e5-111">Manager</span><span class="sxs-lookup"><span data-stu-id="531e5-111">Manager</span></span>|<span data-ttu-id="531e5-112">Assistant</span><span class="sxs-lookup"><span data-stu-id="531e5-112">Assistant</span></span>|<span data-ttu-id="531e5-113">Department</span><span class="sxs-lookup"><span data-stu-id="531e5-113">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|Ursprünglicher Datenbankzustand bei Abfrage durch User1 und User2.|Alfreds|Maria|Sales|  
-|User1 bereitet sich auf die Übergabe dieser Änderungen vor.|Alfred||Marketing|  
-|User2 hat diese Änderungen bereits übergeben.||Mary|Dienst|  
+|<span data-ttu-id="531e5-114">Ursprünglicher Datenbankzustand bei Abfrage durch User1 und User2.</span><span class="sxs-lookup"><span data-stu-id="531e5-114">Original database state when queried by User1 and User2.</span></span>|<span data-ttu-id="531e5-115">Alfreds</span><span class="sxs-lookup"><span data-stu-id="531e5-115">Alfreds</span></span>|<span data-ttu-id="531e5-116">Maria</span><span class="sxs-lookup"><span data-stu-id="531e5-116">Maria</span></span>|<span data-ttu-id="531e5-117">Sales</span><span class="sxs-lookup"><span data-stu-id="531e5-117">Sales</span></span>|  
+|<span data-ttu-id="531e5-118">User1 bereitet sich auf die Übergabe dieser Änderungen vor.</span><span class="sxs-lookup"><span data-stu-id="531e5-118">User1 prepares to submit these changes.</span></span>|<span data-ttu-id="531e5-119">Alfred</span><span class="sxs-lookup"><span data-stu-id="531e5-119">Alfred</span></span>||<span data-ttu-id="531e5-120">Marketing</span><span class="sxs-lookup"><span data-stu-id="531e5-120">Marketing</span></span>|  
+|<span data-ttu-id="531e5-121">User2 hat diese Änderungen bereits übergeben.</span><span class="sxs-lookup"><span data-stu-id="531e5-121">User2 has already submitted these changes.</span></span>||<span data-ttu-id="531e5-122">Mary</span><span class="sxs-lookup"><span data-stu-id="531e5-122">Mary</span></span>|<span data-ttu-id="531e5-123">Dienst</span><span class="sxs-lookup"><span data-stu-id="531e5-123">Service</span></span>|  
   
- User1 entscheidet sich, diesen Konflikt zu beheben, indem die neueren Datenbankwerte die aktuellen Werte im Objektmodell überschreiben.  
+ <span data-ttu-id="531e5-124">User1 entscheidet sich, diesen Konflikt zu beheben, indem die neueren Datenbankwerte die aktuellen Werte im Objektmodell überschreiben.</span><span class="sxs-lookup"><span data-stu-id="531e5-124">User1 decides to resolve this conflict by having the newer database values overwrite the current values in the object model.</span></span>  
   
- Wenn User1 den Konflikt durch Verwendung von <xref:System.Data.Linq.RefreshMode> behebt, entspricht das Ergebnis in der Datenbank der folgenden Tabelle:  
+ <span data-ttu-id="531e5-125">Wenn User1 den Konflikt durch Verwendung von <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> behebt, entspricht das Ergebnis in der Datenbank der folgenden Tabelle:</span><span class="sxs-lookup"><span data-stu-id="531e5-125">When User1 resolves the conflict by using <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, the result in the database is as follows in the table:</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="531e5-126">Manager</span><span class="sxs-lookup"><span data-stu-id="531e5-126">Manager</span></span>|<span data-ttu-id="531e5-127">Assistant</span><span class="sxs-lookup"><span data-stu-id="531e5-127">Assistant</span></span>|<span data-ttu-id="531e5-128">Department</span><span class="sxs-lookup"><span data-stu-id="531e5-128">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|Neuer Zustand nach Konfliktlösung.|Alfreds<br /><br /> \(Original\)|Mary<br /><br /> \(von User2\)|Dienst<br /><br /> \(von User2\)|  
+|<span data-ttu-id="531e5-129">Neuer Zustand nach Konfliktlösung.</span><span class="sxs-lookup"><span data-stu-id="531e5-129">New state after conflict resolution.</span></span>|<span data-ttu-id="531e5-130">Alfreds</span><span class="sxs-lookup"><span data-stu-id="531e5-130">Alfreds</span></span><br /><br /> <span data-ttu-id="531e5-131">(Original)</span><span class="sxs-lookup"><span data-stu-id="531e5-131">(original)</span></span>|<span data-ttu-id="531e5-132">Mary</span><span class="sxs-lookup"><span data-stu-id="531e5-132">Mary</span></span><br /><br /> <span data-ttu-id="531e5-133">(von User2)</span><span class="sxs-lookup"><span data-stu-id="531e5-133">(from User2)</span></span>|<span data-ttu-id="531e5-134">Dienst</span><span class="sxs-lookup"><span data-stu-id="531e5-134">Service</span></span><br /><br /> <span data-ttu-id="531e5-135">(von User2)</span><span class="sxs-lookup"><span data-stu-id="531e5-135">(from User2)</span></span>|  
   
- Im folgenden Beispielcode wird gezeigt, wie die aktuellen Werte im Objektmodell mit den Datenbankwerten überschrieben werden.  \(Keine Inspektion oder benutzerdefinierte Behandlung einzelner Memberkonflikte.\)  
+ <span data-ttu-id="531e5-136">Im folgenden Beispielcode wird gezeigt, wie die aktuellen Werte im Objektmodell mit den Datenbankwerten überschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="531e5-136">The following example code shows how to overwrite current values in the object model with the database values.</span></span> <span data-ttu-id="531e5-137">(Keine Inspektion oder benutzerdefinierte Behandlung einzelner Memberkonflikte.)</span><span class="sxs-lookup"><span data-stu-id="531e5-137">(No inspection or custom handling of individual member conflicts occurs.)</span></span>  
   
  [!code-csharp[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
-## Siehe auch  
- [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="531e5-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="531e5-138">See Also</span></span>  
+ [<span data-ttu-id="531e5-139">Vorgehensweise: Verwalten von Änderungskonflikten</span><span class="sxs-lookup"><span data-stu-id="531e5-139">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

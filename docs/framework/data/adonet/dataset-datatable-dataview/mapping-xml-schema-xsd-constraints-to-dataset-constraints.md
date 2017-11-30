@@ -1,54 +1,57 @@
 ---
-title: "Zuordnen von XSD-Einschr&#228;nkungen (XML-Schema) zu DataSet-Einschr&#228;nkungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9ac8e64c02d96450d41233cfbe65e1db839df9e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zuordnen von XSD-Einschr&#228;nkungen (XML-Schema) zu DataSet-Einschr&#228;nkungen
-Die XSD\-Sprache \(XML Schema Definition Language\) ermöglicht Einschränkungen, die Sie für die Elemente und Attribute angeben können, die durch XSD definiert werden.  Beim Zuordnen eines XML\-Schemas zu einem relationalen Schema in einem <xref:System.Data.DataSet> werden XML\-Schemaeinschränkungen den entsprechenden relationalen Einschränkungen in den Tabellen und Spalten innerhalb des **DataSet** zugeordnet.  
+# <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="dc605-102">Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="dc605-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="dc605-103">Die XSD-Sprache (XML Schema Definition Language) ermöglicht Einschränkungen, die Sie für die Elemente und Attribute angeben können, die durch XSD definiert werden.</span><span class="sxs-lookup"><span data-stu-id="dc605-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="dc605-104">Beim Zuordnen eines XML-Schemas zum relationalen Schema in einer <xref:System.Data.DataSet>, XML-schemaeinschränkungen zugeordnet sind, auf den entsprechenden relationalen Einschränkungen in den Tabellen und Spalten innerhalb der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  
   
- In diesem Abschnitt wird die Zuordnung der folgenden XML\-Schemaeinschränkungen behandelt:  
+ <span data-ttu-id="dc605-105">In diesem Abschnitt wird die Zuordnung der folgenden XML-Schemaeinschränkungen behandelt:</span><span class="sxs-lookup"><span data-stu-id="dc605-105">This section discusses the mapping of the following XML Schema constraints:</span></span>  
   
--   Die Eindeutigkeitseinschränkung, die mit dem **unique**\-Element angegeben wird.  
+-   <span data-ttu-id="dc605-106">Die Unique-Einschränkung angegeben wird, mit der **eindeutige** Element.</span><span class="sxs-lookup"><span data-stu-id="dc605-106">The uniqueness constraint specified using the **unique** element.</span></span>  
   
--   Die Schlüsseleinschränkung, die mit dem **key**\-Element angegeben wird.  
+-   <span data-ttu-id="dc605-107">Die Key-Einschränkung angegeben wird, mit der **Schlüssel** Element.</span><span class="sxs-lookup"><span data-stu-id="dc605-107">The key constraint specified using the **key** element.</span></span>  
   
--   Die keyref\-Einschränkung, die mit dem **keyref**\-Element angegeben wird.  
+-   <span data-ttu-id="dc605-108">Die Keyref-Einschränkung angegeben wird, mit der **Keyref** Element.</span><span class="sxs-lookup"><span data-stu-id="dc605-108">The keyref constraint specified using the **keyref** element.</span></span>  
   
- Mit einer Einschränkung für ein Element oder Attribut geben Sie bestimmte Beschränkungen für den Wert des Elements in einer beliebigen Instanz des Dokuments an.  Eine Schlüsseleinschränkung gibt beispielsweise für ein untergeordnetes Element **CustomerID** eines **Customer**\-Elements in einem Schema an, dass die Werte des untergeordneten Elements **CustomerID** in jeder Dokumentinstanz eindeutig sein müssen und Nullwerte nicht erlaubt sind.  
+ <span data-ttu-id="dc605-109">Mit einer Einschränkung für ein Element oder Attribut geben Sie bestimmte Beschränkungen für den Wert des Elements in einer beliebigen Instanz des Dokuments an.</span><span class="sxs-lookup"><span data-stu-id="dc605-109">By using a constraint on an element or attribute, you specify certain restrictions on the values of the element in any instance of the document.</span></span> <span data-ttu-id="dc605-110">Z. B. eine schlüsseleinschränkung für ein **CustomerID** untergeordnetes Element von einer **Kunden** -Element im Schema gibt an, dass die Werte der der **CustomerID** untergeordnete Element muss sein in jeder Dokumentinstanz eindeutig und null-Werte nicht zulässig sind.</span><span class="sxs-lookup"><span data-stu-id="dc605-110">For example, a key constraint on a **CustomerID** child element of a **Customer** element in the schema indicates that the values of the **CustomerID** child element must be unique in any document instance, and that null values are not allowed.</span></span>  
   
- Einschränkungen können auch zwischen Elementen und Attributen in einem Dokument angegeben werden, um eine Beziehung innerhalb des Dokuments zu erstellen.  Die key\-Einschränkung und die keyref\-Einschränkung werden im Schema verwendet, um Einschränkungen innerhalb des Dokuments anzugeben, die zu einer Beziehung zwischen Dokumentelementen und Attributen führen.  
+ <span data-ttu-id="dc605-111">Einschränkungen können auch zwischen Elementen und Attributen in einem Dokument angegeben werden, um eine Beziehung innerhalb des Dokuments zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="dc605-111">Constraints can also be specified between elements and attributes in a document, in order to establish a relationship within the document.</span></span> <span data-ttu-id="dc605-112">Die key-Einschränkung und die keyref-Einschränkung werden im Schema verwendet, um Einschränkungen innerhalb des Dokuments anzugeben, die zu einer Beziehung zwischen Dokumentelementen und Attributen führen.</span><span class="sxs-lookup"><span data-stu-id="dc605-112">The key and keyref constraints are used in the schema to specify the constraints within the document, resulting in a relationship between document elements and attributes.</span></span>  
   
- Der Zuordnungsprozess konvertiert diese Schemaeinschränkungen in die entsprechenden Einschränkungen in Tabellen, die innerhalb des **DataSet** erstellt werden.  
+ <span data-ttu-id="dc605-113">Der Zuordnungsprozess konvertiert diese schemaeinschränkungen in die entsprechenden Einschränkungen für die Tabellen erstellt, die innerhalb der **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-113">The mapping process converts these schema constraints into appropriate constraints on the tables created within the **DataSet**.</span></span>  
   
-## In diesem Abschnitt  
- [Zuordnen eindeutiger XSD\-Einschränkungen \(XML\-Schema\) zu 'DataSet'\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die zum Erstellen von unique\-Einschränkungen in einem **DataSet** verwendeten XML\-Schemaelemente.  
+## <a name="in-this-section"></a><span data-ttu-id="dc605-114">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="dc605-114">In This Section</span></span>  
+ [<span data-ttu-id="dc605-115">Ordnen Sie eindeutig XML-Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="dc605-115">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="dc605-116">Beschreibt die XML-Schema-Elemente, die zum Erstellen von unique-Einschränkungen in einer **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-116">Describes the XML Schema elements used to create unique constraints in a **DataSet**.</span></span>  
   
- [Zuordnen von XSD\-Schlüsseleinschränkungen \(XML\-Schema\) zu 'DataSet'\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML\-Schemaelemente, mit denen die key\-Einschränkungen \(unique\-Einschränkungen, bei denen Nullwerte nicht erlaubt sind\) in einem **DataSet** erstellt werden.  
+ [<span data-ttu-id="dc605-117">Zuordnen von Schlüssel-XML-Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="dc605-117">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="dc605-118">Beschreibt die XML-Schema-Elemente, die zum Erstellen der Key-Einschränkungen (unique-Einschränkungen, in denen null-Werte sind nicht zulässig) in einem **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-118">Describes the XML Schema elements used to create key constraints (unique constraints where null values are not allowed) in a **DataSet**.</span></span>  
   
- [Zuordnen von XSD\-'keyref'\-Schlüsseleinschränkungen \(XML\-Schema\) zu DataSet\-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML\-Schemaelemente, mit denen keyref\-Einschränkungen \(Fremdschlüssel\) in einem **DataSet** erstellt werden.  
+ [<span data-ttu-id="dc605-119">Zuordnen von Keyref-XML-Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen</span><span class="sxs-lookup"><span data-stu-id="dc605-119">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="dc605-120">Beschreibt die XML-Schema-Elemente, die zum Erstellen von Keyref-Einschränkungen (Fremdschlüssel) in einem **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-120">Describes the XML Schema elements used to create keyref (foreign key) constraints in a **DataSet**.</span></span>  
   
-## Verwandte Abschnitte  
- [Ableiten einer relationalen 'DataSet'\-Struktur aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Beschreibt die relationale Struktur oder das Schema eines **DataSet**, das aus einem XSD\-Schema erstellt wird.  
+## <a name="related-sections"></a><span data-ttu-id="dc605-121">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="dc605-121">Related Sections</span></span>  
+ [<span data-ttu-id="dc605-122">Ableiten von relationalen DataSet-Struktur von XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="dc605-122">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="dc605-123">Beschreibt die relationale Struktur bzw. das Schema von einem **DataSet** , aus der XSD-Schema erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="dc605-123">Describes the relational structure, or schema, of a **DataSet** that is created from XSD schema.</span></span>  
   
- [Generieren von DataSet\-Beziehungen aus einem XML\-Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Beschreibt die zum Erstellen von Beziehungen zwischen Tabellenspalten in einem **DataSet** verwendeten XML\-Schemaelemente.  
+ [<span data-ttu-id="dc605-124">Generieren von DataSet-Beziehungen aus XML-Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="dc605-124">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ <span data-ttu-id="dc605-125">Beschreibt die XML-Schema-Elemente, die zum Erstellen von Beziehungen zwischen Tabellenspalten in einer **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="dc605-125">Describes the XML Schema elements used to create relations between table columns in a **DataSet**.</span></span>  
   
-## Siehe auch  
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="dc605-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dc605-126">See Also</span></span>  
+ [<span data-ttu-id="dc605-127">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="dc605-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

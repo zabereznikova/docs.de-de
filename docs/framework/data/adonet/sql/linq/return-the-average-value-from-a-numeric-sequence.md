@@ -1,52 +1,58 @@
 ---
-title: "Zur&#252;ckgeben des Durchschnittswerts aus einer numerischen Sequenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Zurückgeben des Durchschnittswerts aus einer numerischen Sequenz"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 87a23bce302ac7eed3081b5670cb8c532a550cde
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zur&#252;ckgeben des Durchschnittswerts aus einer numerischen Sequenz
-Der <xref:System.Linq.Enumerable.Average%2A>\-Operator ermittelt den Durchschnitt aus einer Sequenz numerischer Werte.  
+# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="1502e-102">Zurückgeben des Durchschnittswerts aus einer numerischen Sequenz</span><span class="sxs-lookup"><span data-stu-id="1502e-102">Return the Average Value From a Numeric Sequence</span></span>
+<span data-ttu-id="1502e-103">Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt aus einer Sequenz numerischer Werte.</span><span class="sxs-lookup"><span data-stu-id="1502e-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
   
 > [!NOTE]
->  Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]\-Übersetzung von `Average` für ganzzahlige Werte wird als ganze Zahl, nicht als Double berechnet.  
+>  <span data-ttu-id="1502e-104">Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Übersetzung von `Average` für ganzzahlige Werte wird als ganze Zahl, nicht als Double berechnet.</span><span class="sxs-lookup"><span data-stu-id="1502e-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird der Mittelwert von `Freight`\-Werten in der `Orders`\-Tabelle zurückgegeben.  
+## <a name="example"></a><span data-ttu-id="1502e-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1502e-105">Example</span></span>  
+ <span data-ttu-id="1502e-106">Im folgenden Beispiel wird der Mittelwert von `Freight`-Werten in der `Orders`-Tabelle zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1502e-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
   
- Die Ergebnisse aus der Beispieldatenbank Northwind lauten `78.2442`.  
+ <span data-ttu-id="1502e-107">Die Ergebnisse aus der Beispieldatenbank Northwind lauten `78.2442`.</span><span class="sxs-lookup"><span data-stu-id="1502e-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## Beispiel  
- Im folgenden Beispiel wird der durchschnittliche Einzelpreis aller `Products` in der `Products`\-Tabelle zurückgegeben.  
+## <a name="example"></a><span data-ttu-id="1502e-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1502e-108">Example</span></span>  
+ <span data-ttu-id="1502e-109">Im folgenden Beispiel wird der durchschnittliche Einzelpreis aller `Products` in der `Products`-Tabelle zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1502e-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
   
- Die Ergebnisse aus der Beispieldatenbank Northwind lauten `28.8663`.  
+ <span data-ttu-id="1502e-110">Die Ergebnisse aus der Beispieldatenbank Northwind lauten `28.8663`.</span><span class="sxs-lookup"><span data-stu-id="1502e-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## Beispiel  
- Im folgenden Beispiel wird der `Average`\-Operator verwendet, um jene `Products` zu ermitteln, deren Einzelpreis höher als der Durchschnittspreis der entsprechenden Kategorie ist.  Anschließend werden die Ergebnisse in Gruppen angezeigt.  
+## <a name="example"></a><span data-ttu-id="1502e-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1502e-111">Example</span></span>  
+ <span data-ttu-id="1502e-112">Im folgenden Beispiel wird der `Average`-Operator verwendet, um jene `Products` zu ermitteln, deren Einzelpreis höher als der Durchschnittspreis der entsprechenden Kategorie ist.</span><span class="sxs-lookup"><span data-stu-id="1502e-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="1502e-113">Anschließend werden die Ergebnisse in Gruppen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="1502e-113">The example then displays the results in groups.</span></span>  
   
- Beachten Sie, dass dieses Beispiel in C\# die Verwendung des `var`\-Schlüsselworts erfordert, da der Rückgabetyp anonym ist.  
+ <span data-ttu-id="1502e-114">Beachten Sie, dass dieses Beispiel in C# die Verwendung des `var`-Schlüsselworts erfordert, da der Rückgabetyp anonym ist.</span><span class="sxs-lookup"><span data-stu-id="1502e-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- Wenn Sie diese Abfrage mit der Beispieldatenbank Northwind ausführen, sehen die Ergebnisse wie folgt aus:  
+ <span data-ttu-id="1502e-115">Wenn Sie diese Abfrage mit der Beispieldatenbank Northwind ausführen, sehen die Ergebnisse wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="1502e-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
   
  `1`  
   
@@ -118,5 +124,5 @@ Der <xref:System.Linq.Enumerable.Average%2A>\-Operator ermittelt den Durchschnit
   
  `Gravad lax`  
   
-## Siehe auch  
- [Aggregatabfragen](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a><span data-ttu-id="1502e-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1502e-116">See Also</span></span>  
+ [<span data-ttu-id="1502e-117">Aggregatabfragen</span><span class="sxs-lookup"><span data-stu-id="1502e-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

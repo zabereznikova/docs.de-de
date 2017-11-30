@@ -1,29 +1,28 @@
 ---
-title: "Erste Schritte (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Erste Schritte (Entity Framework)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 74752600dc5d673bd18715232ee4f6cda01ca1ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erste Schritte (Entity Framework)
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenorientierte Anwendungen und Dienste und stellt eine Plattform für das Programmieren für Daten bereit, die die Abstraktionsebene von der logischen relationalen Ebene auf die konzeptionelle Ebene anhebt.  Indem es Entwicklern ermöglicht, auf einer höheren Abstraktionsebene mit Daten zu arbeiten, unterstützt [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeichermodulen oder relationalen Schemas unabhängig ist. Weitere Informationen finden Sie unter [Übersicht über das Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  
+# <a name="getting-started-entity-framework"></a><span data-ttu-id="a3069-102">Erste Schritte (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="a3069-102">Getting Started (Entity Framework)</span></span>
+<span data-ttu-id="a3069-103">Die [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenorientierte Anwendungen und Dienste, und bietet eine Plattform für das Programmieren für Daten, die die Ebene der Abstraktion, die von der logischen relationalen Ebene auf die konzeptionelle Ebene auslöst.</span><span class="sxs-lookup"><span data-stu-id="a3069-103">The [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data-centric applications and services, and provides a platform for programming against data that raises the level of abstraction from the logical relational level to the conceptual level.</span></span> <span data-ttu-id="a3069-104">Da Entwickler nun auf einer höheren Abstraktionsebene mit Daten arbeiten können, unterstützt das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeichermodulen oder relationalen Schemas unabhängig ist.</span><span class="sxs-lookup"><span data-stu-id="a3069-104">By enabling developers to work with data at a greater level of abstraction, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports code that is independent of any particular data storage engine or relational schema.</span></span> <span data-ttu-id="a3069-105">Weitere Informationen finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).</span><span class="sxs-lookup"><span data-stu-id="a3069-105">For more information, see [Entity Framework Overview](../../../../../docs/framework/data/adonet/ef/overview.md).</span></span>  
   
- Informationen zum schnellen Einstieg in die neueste Entity Framework\-Version finden Sie unter [Erste Schritte](http://go.microsoft.com/fwlink/?LinkId=235280).  
+ <span data-ttu-id="a3069-106">Um schnell zu starten, verwenden die neueste Version von Entity Framework, finden Sie unter [erste Schritte](http://go.microsoft.com/fwlink/?LinkId=235280)</span><span class="sxs-lookup"><span data-stu-id="a3069-106">To quickly start using the latest version of the Entity Framework, see [Get Started](http://go.microsoft.com/fwlink/?LinkId=235280)</span></span>  
   
-## Siehe auch  
- [Entity Framework](http://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="a3069-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a3069-107">See Also</span></span>  
+ [<span data-ttu-id="a3069-108">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a3069-108">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)
