@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339f0e2a-452b-43eb-9f6d-f48ceb1414f3
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: d9f96d04443dc4c81a1d9672ddff85cf8a02a50c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded
+# <a name="systemservicemodelsecuritysecurityclientsessionpreviouskeydiscarded"></a>System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded
 System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded  
   
-## Beschreibung  
+## <a name="description"></a>Beschreibung  
  Die Clientsicherheitssitzung hat den vorherigen Sitzungsschlüssel verworfen.  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

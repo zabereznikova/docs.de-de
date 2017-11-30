@@ -1,36 +1,32 @@
 ---
-title: 'Gewusst wie: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d665ddc1e7ad7340b05c97e790195abbc53e4f95
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Gewusst wie: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic)
-XPath-Ausdrücke können nach Knoten in einem bestimmten Namespace suchen. Zum Angeben der Namespaces werden Namespacepräfixe verwendet. Um einen XPath-Ausdruck, der Namespacepräfixe enthält zu analysieren, müssen Sie ein Objekt übergeben, die XPath-Methoden, die implementiert <xref:System.Xml.IXmlNamespaceResolver>.</xref:System.Xml.IXmlNamespaceResolver> Dieses Beispiel verwendet <xref:System.Xml.XmlNamespaceManager>.</xref:System.Xml.XmlNamespaceManager>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic)
+XPath-Ausdrücke können nach Knoten in einem bestimmten Namespace suchen. Zum Angeben der Namespaces werden Namespacepräfixe verwendet. Wenn Sie einen XPath-Ausdruck, der Namespacepräfixe enthält, analysieren möchten, müssen Sie den XPath-Methoden ein Objekt übergeben, das <xref:System.Xml.IXmlNamespaceResolver> implementiert. In diesem Beispiel wird <xref:System.Xml.XmlNamespaceManager> verwendet.  
   
  Der XPath-Ausdruck lautet:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel liest eine XML-Struktur, die zwei Namespaces enthält. Er verwendet eine <xref:System.Xml.XmlReader>zum Lesen des XML-Dokuments.</xref:System.Xml.XmlReader> Danach wird ein <xref:System.Xml.XmlNameTable>aus der <xref:System.Xml.XmlReader>, und eine <xref:System.Xml.XmlNamespaceManager>aus dem <xref:System.Xml.XmlNameTable>.</xref:System.Xml.XmlNameTable> </xref:System.Xml.XmlNamespaceManager> </xref:System.Xml.XmlReader> </xref:System.Xml.XmlNameTable> Er verwendet die <xref:System.Xml.XmlNamespaceManager>beim Auswählen von Elementen.</xref:System.Xml.XmlNamespaceManager>  
+ Das folgende Beispiel liest eine XML-Struktur, die zwei Namespaces enthält. Zum Lesen des XML-Dokuments kommt dabei ein <xref:System.Xml.XmlReader> zum Einsatz. Anschließend werden eine <xref:System.Xml.XmlNameTable> aus dem <xref:System.Xml.XmlReader> und ein <xref:System.Xml.XmlNamespaceManager> aus der <xref:System.Xml.XmlNameTable> abgerufen. Beim Auswählen von Elementen wird der <xref:System.Xml.XmlNamespaceManager> verwendet.  
   
 ```vb  
 Dim reader As XmlReader = _  

@@ -1,29 +1,32 @@
 ---
-title: "Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
-Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren.Im vorherigen Thema, [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), haben Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst implementiert, der sich beim Suchproxy registriert.In diesem Thema erstellen Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Client, der den Suchproxy verwendet, um nach dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienst zu suchen.  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
+Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), Sie implementiert eine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dienst, der sich der beim suchproxy registriert. In diesem Thema erstellen Sie einen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Client, der den Suchproxy verwendet, um nach dem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienst zu suchen.  
   
-### Implementieren des Clients  
+### <a name="implement-the-client"></a>Implementieren des Clients  
   
 1.  Fügen Sie der Projektmappe `DiscoveryProxyExample` ein neues Konsolenanwendungsprojekt mit dem Namen `Client` hinzu.  
   
-2.  Fügen Sie den folgenden Assemblys Verweise hinzu:  
+2.  Fügen Sie Verweise auf die folgenden Assemblys hinzu:  
   
     1.  System.ServiceModel  
   
@@ -32,9 +35,9 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
 3.  Fügen Sie dem Projekt die Datei GeneratedClient.cs hinzu, die Sie am Ende dieses Themas finden.  
   
     > [!NOTE]
-    >  Diese Datei wird normalerweise mit einem Tool wie Svcutil.exe generiert.Sie wird der Einfachheit halber in diesem Thema bereitgestellt.  
+    >  Diese Datei wird normalerweise mit einem Tool wie Svcutil.exe generiert. Sie wird der Einfachheit halber in diesem Thema bereitgestellt.  
   
-4.  Öffnen Sie die Datei Program.cs, und fügen Sie die folgende Methode hinzu.Diese Methode verwendet eine Endpunktadresse und verwendet sie zum Initialisieren des Dienstclients \(Proxy\).  
+4.  Öffnen Sie die Datei Program.cs, und fügen Sie die folgende Methode hinzu. Diese Methode verwendet eine Endpunktadresse und verwendet sie zum Initialisieren des Dienstclients (Proxy).  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,10 +70,9 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
-5.  Fügen Sie der `Main`\-Methode folgenden Code hinzu:  
+5.  Fügen Sie der `Main`-Methode folgenden Code hinzu.  
   
     ```  
     public static void Main()  
@@ -107,12 +109,11 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- Sie haben das Implementieren der Clientanwendung abgeschlossen.Fahren Sie mit [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md) fort.  
+ Sie haben das Implementieren der Clientanwendung abgeschlossen. Fortfahren mit [wie: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Dies ist die vollständige Codeauflistung für dieses Thema.  
   
 ```  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## Siehe auch  
- [Übersicht über die WCF\-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über den WCF-Ermittlung](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

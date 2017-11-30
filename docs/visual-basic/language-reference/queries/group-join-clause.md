@@ -1,35 +1,34 @@
 ---
-title: "Group Join Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join clause"
-  - "Group Join statement"
-  - "queries [Visual Basic], Group Join"
+title: Group Join-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Group Join Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen.  Die Joinoperation beruht auf übereinstimmenden Schlüsseln.  
+# <a name="group-join-clause-visual-basic"></a>Group Join-Klausel (Visual Basic)
+Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. Die Join-Vorgang basiert auf übereinstimmenden Schlüsseln.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`element`|Erforderlich.  Die Steuerelementvariable für die zu verknüpfende Auflistung.|  
-|`type`|Optional.  Der Typ von `element`.  Wenn kein `type` angegeben ist, wird der Typ von `element` von `collection` abgeleitet.|  
-|`collection`|Erforderlich.  Die Auflistung, die mit der Auflistung auf der linken Seite des Operators `Group Join` verknüpft werden soll.  Eine `Group Join`\-Klausel kann in einer `Join`\-Klausel oder einer anderen `Group Join`\-Klausel geschachtelt werden.|  
-|`key1` `Equals` `key2`|Erforderlich.  Identifiziert Schlüssel für die zu verknüpfenden Auflistungen.  Mit dem Operator `Equals` müssen Sie Schlüssel der zu verknüpfenden Auflistungen vergleichen.  Sie können Joinbedingungen kombinieren, indem Sie mit dem Operator `And` mehrere Schlüssel identifizieren.  Der `key1`\-Parameter muss von der Auflistung auf der linken Seite des Operators `Join` stammen.  Der `key2`\-Parameter muss von der Auflistung auf der rechten Seite des Operators `Join` stammen.<br /><br /> Die in der Joinbedingung verwendeten Schlüssel können Ausdrücke sein, die mehrere Elemente der Auflistung enthalten.  Jeder Schlüsselausdruck kann jedoch nur Elemente seiner zugehörigen Auflistung enthalten.|  
-|`expressionList`|Erforderlich.  Mindestens ein Ausdruck, der identifiziert, wie die Gruppen der Elemente aus der Auflistung aggregiert werden.  Verwenden Sie das `Group`\-Schlüsselwort \(`<alias> = Group`\), um einen Membernamen für die gruppierten Ergebnisse zu identifizieren.  Sie können auch Aggregatfunktionen auf die Gruppe anwenden.|  
+|---|---|  
+|`element`|Erforderlich. Die Steuerelementvariable für die zu verknüpfende Auflistung.|  
+|`type`|Dies ist optional. Der `element`-Typ. Wenn kein `type` angegeben wird, den Typ des `element` von hergeleitet `collection`.|  
+|`collection`|Erforderlich. Die Auflistung, mit der Auflistung zu kombinieren, die auf der linken Seite des ist die `Group Join` Operator. Ein `Group Join` Klausel kann geschachtelt sein, einem `Join` Klausel oder in einer anderen `Group Join` Klausel.|  
+|`key1` `Equals` `key2`|Erforderlich. Identifiziert die Schlüssel für die zu verknüpfenden Auflistungen. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus der zu verknüpfenden Auflistungen. Sie können die Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. Die `key1` Parameter muss aus der Auflistung auf der linken Seite von der `Join` Operator. Die `key2` Parameter muss aus der Auflistung auf der rechten Seite des der `Join` Operator.<br /><br /> Die in der Joinbedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüsselausdruck kann jedoch nur die Elemente aus der entsprechenden Auflistung enthalten.|  
+|`expressionList`|Erforderlich. Mindestens ein Ausdruck, die angibt, wie die Gruppen von Elementen aus der Auflistung aggregiert werden. Um einen Elementnamen für die gruppierten Ergebnisse zu suchen, verwenden die `Group` Schlüsselwort (`<alias> = Group`). Sie können auch Aggregatfunktionen einschließen, die auf die Gruppe angewendet werden sollen.|  
   
-## Hinweise  
- Durch die `Group Join`\-Klausel werden zwei Auflistungen auf Grundlage der übereinstimmenden Schlüsselwerte der zu verknüpfenden Auflistungen kombiniert.  Die entstehende Auflistung kann einen Member enthalten, der auf eine Auflistung von Elementen aus der zweiten Auflistung verweist, die mit dem Schlüsselwert aus der ersten Auflistung übereinstimmen.  Sie können auch Aggregatfunktionen angeben, die auf die gruppierten Elemente aus der zweiten Auflistung angewendet werden.  Informationen über Aggregatfunktionen finden Sie unter [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `Group Join` Klausel Fasst zwei Auflistungen, die basierend auf übereinstimmenden Schlüsselwerten von zu verknüpfenden Auflistungen zusammen. Die resultierende Auflistung kann es sich um ein Element enthalten, die verweist auf eine Auflistung von Elementen aus der zweiten Auflistung, die den Schlüsselwert aus der ersten Auflistung entsprechen. Sie können auch Aggregatfunktionen auf die gruppierten Elemente beziehen, über die zweite Sammlung angeben. Informationen zu Aggregatfunktionen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Betrachten Sie beispielsweise eine Auflistung von Managern und eine Auflistung von Mitarbeitern.  Elemente aus beiden Auflistungen verfügen über eine ManagerID\-Eigenschaft, die die Mitarbeiter identifiziert, die an einen bestimmten Manager berichten.  Die Ergebnisse einer Joinoperation würden ein Ergebnis für jeden Manager und Mitarbeiter mit übereinstimmendem ManagerID\-Wert beinhalten.  Zu den Ergebnissen einer `Group Join`\-Operation würde die vollständige Liste der Manager gehören.  Das Ergebnis für jeden Manager enthielte einen Member, der auf die Liste der Mitarbeiter verweist, die mit diesem Manager übereinstimmen.  
+ Betrachten Sie z. B. eine Auflistung von Managern und eine Auflistung von Mitarbeitern. Elemente aus beiden Auflistungen haben eine ManagerID-Eigenschaft, die die Mitarbeiter identifiziert, die einem bestimmten Manager Berichten. Die Ergebnisse einer Join-Operation würde ein Ergebnis für jeden Manager und Mitarbeiter mit übereinstimmendem ManagerID Wert enthalten. Die Ergebnisse aus einem `Group Join` Vorgang würde eine vollständige Liste der Manager enthalten. Jedes Ergebnis Manager müsste ein Element, das die Liste der Mitarbeiter auf die verwiesen wird, die eine Übereinstimmung für den bestimmten Manager waren.  
   
- Die Auflistung, die sich aus einem `Group Join`\-Vorgang ergibt, kann jede Kombination von Werten der in der `From`\-Klausel definierten Auflistung und den Ausdrücken, die in der `Into`\-Klausel der `Group Join`\-Klausel identifiziert werden, enthalten.  Weitere Informationen zu gültigen Ausdrücken für die `Into`\-Klausel finden Sie unter [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Der Auflistung, die aus einer `Group Join` Vorgang darf eine beliebige Kombination von Werten aus der Auflistung identifiziert, der `From` -Klausel und die Ausdrücke identifiziert die `Into` -Klausel der der `Group Join` Klausel. Weitere Informationen zu gültigen Ausdrücken für die `Into` -Klausel finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Ein `Group Join`\-Vorgang gibt alle Ergebnisse der identifizierten Auflistung auf der linken Seite des Operators `Group Join` zurück.  Dies gilt auch, wenn es in der zu verknüpfenden Auflistung keine Übereinstimmungen gibt.  Dies entspricht einem `LEFT OUTER JOIN` in SQL.  
+ Ein `Group Join` Vorgang werden alle Ergebnisse zurückgegeben, aus der Auflistung, die auf der linken Seite des identifiziert die `Group Join` Operator. Dies gilt auch, wenn keine Übereinstimmungen in der zu verknüpfenden Auflistung vorhanden sind. Dies ist z. B. eine `LEFT OUTER JOIN` in SQL.  
   
- Mit der `Join`\-Klausel können Sie mehrere Auflistungen in einer einzelnen Auflistung kombinieren.  Dies entspricht einem `INNER JOIN` in SQL.  
+ Sie können die `Join` -Klausel, um Auflistungen zu einer einzelnen Auflistung zu kombinieren. Dies ist gleichbedeutend mit einem `INNER JOIN` in SQL.  
   
-## Beispiel  
- Im folgenden Codebeispiel werden mit der `Group Join`\-Klausel zwei Auflistungen miteinander verknüpft.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird verknüpft zwei Auflistungen mithilfe der `Group Join` Klausel.  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## Siehe auch  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Join Clause](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Group By\-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Join-Klausel](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6089336f0b4c37e0bf867fbb18376705848b4104
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e477a870107a8d4d8fbac9a3d4fb10a285158280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException-Klasse (.NET Native)
 **.NET für Windows-Apps für Windows 10, nur [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -49,14 +47,14 @@ ms.lasthandoff: 08/21/2017
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public string HelpLink { get; set; }`|Ruft einen Link zu der mit dieser Ausnahme verbundenen Hilfedatei ab oder legt diesen fest. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public int HResult { get; protected set; }`|Ruft `HRESULT`, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist, ab oder legt ihn fest. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public Exception InnerException { get; }`|Ruft die Ausnahme ab, die die aktuelle Ausnahme verursacht hat. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public string Message { get; }`|Ruft eine Meldung ab, die die aktuelle Ausnahme beschreibt. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public string Source { get; set; }`|Ruft den Namen der Anwendung oder des Objekts ab, die bzw. das den Fehler verursacht hat, oder legt den Namen fest. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public string StackTrace { get; }`|Ruft eine Zeichenfolgendarstellung der unmittelbaren Frames in der Aufrufliste ab. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public MethodBase TargetSite { get; }`|Ruft die Methode ab, die die aktuelle Ausnahme ausgelöst hat. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
+|`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string HelpLink { get; set; }`|Ruft einen Link zu der mit dieser Ausnahme verbundenen Hilfedatei ab oder legt diesen fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public int HResult { get; protected set; }`|Ruft `HRESULT`, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist, ab oder legt ihn fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Exception InnerException { get; }`|Ruft die Ausnahme ab, die die aktuelle Ausnahme verursacht hat. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string Message { get; }`|Ruft eine Meldung ab, die die aktuelle Ausnahme beschreibt. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string Source { get; set; }`|Ruft den Namen der Anwendung oder des Objekts ab, die bzw. das den Fehler verursacht hat, oder legt den Namen fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string StackTrace { get; }`|Ruft eine Zeichenfolgendarstellung der unmittelbaren Frames in der Aufrufliste ab. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public MethodBase TargetSite { get; }`|Ruft die Methode ab, die die aktuelle Ausnahme ausgelöst hat. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="methods"></a>Methoden  
   
@@ -64,18 +62,18 @@ ms.lasthandoff: 08/21/2017
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.  (Geerbt von <xref:System.Object>.)|  
 |`protected void Finalize()`|Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird. (Geerbt von <xref:System.Object>.)|  
-|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Ursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
+|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Ursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public int GetHashCode()`|Gibt einen Hashcode für eine `MissingRuntimeArtifactException`-Instanz zurück.   (Geerbt von <xref:System.Object>.)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Legt ein <xref:System.Runtime.Serialization.SerializationInfo>-Objekt mit Informationen über die Ausnahme fest.  (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
-|`public Type GetType()`|Ruft den Laufzeittyp der aktuellen Instanz ab. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Legt ein <xref:System.Runtime.Serialization.SerializationInfo>-Objekt mit Informationen über die Ausnahme fest.  (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Type GetType()`|Ruft den Laufzeittyp der aktuellen Instanz ab. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`protected Object MemberwiseClone()`|Erstellt eine flache Kopie des aktuellen Objekts. (Geerbt von <xref:System.Object>.)|  
-|`public string ToString()`|Gibt die Zeichenfolgendarstellung der aktuellen Ausnahme zurück. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
+|`public string ToString()`|Gibt die Zeichenfolgendarstellung der aktuellen Ausnahme zurück. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="events"></a>Ereignisse  
   
 |Ereignis|Beschreibung|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Tritt auf, wenn eine Ausnahme serialisiert wird, um ein Ausnahmezustandsobjekt mit serialisierten Daten über die Ausnahme zu erstellen. (Geerbt von <xref:System.Exception?displayProperty=fullName>.)|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Tritt auf, wenn eine Ausnahme serialisiert wird, um ein Ausnahmezustandsobjekt mit serialisierten Daten über die Ausnahme zu erstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
   
 ## <a name="usage-details"></a>Details zur Verwendung  
  Die `MissingRuntimeArtifactException`-Ausnahme wird ausgelöst, wenn beim Versuch, einen Typ zu instanziieren oder einen Typmember aufzurufen, zwar die Metadaten des Typs oder Members vorhanden sind, aber die Implementierung entfernt wurde.  
@@ -91,6 +89,5 @@ ms.lasthandoff: 08/21/2017
  Die `MissingRuntimeArtifactException`-Klasse enthält keine speziellen Elemente. Sie erbt alle Member von ihrer Basisklasse <xref:System.MemberAccessException>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

@@ -1,36 +1,38 @@
 ---
-title: "IEnumRAWINPUTDEVIC:Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Skip-Methode"
+title: IEnumRAWINPUTDEVIC:Skip
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Skip method [WPF]
 ms.assetid: c967b0f8-1c6a-459c-8c16-d4f08918ab65
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 216be1bc48a140bdd326010a87899cc342feb41d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# IEnumRAWINPUTDEVIC:Skip
-Weist den Enumerator an, die nächsten `celt`\-Elemente in der Enumeration zu überspringen, sodass der nächste Aufruf von [IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md) diese Elemente nicht zurückgibt.  
+# <a name="ienumrawinputdevicskip"></a>IEnumRAWINPUTDEVIC:Skip
+Weist den Enumerator auf das nächste überspringen `celt` Elemente in der Enumeration, damit der nächste Aufruf von [Ienumrawinputdevic](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md) diese Elemente werden nicht zurückgegeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HRESULT Skip( [in] ULONG celt);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `celt`  
   
- \[in\] Anzahl der Elemente, die übersprungen werden sollen.  
+ [in] Die Anzahl von Elementen übersprungen werden soll.  
   
-## Eigenschaftswert\/Rückgabewert  
- HRESULT: S\_OK, wenn die Anzahl der Elemente `celt` ist. Andernfalls S\_FALSE.
+## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
+ HRESULT: S_OK, wenn die Anzahl der Elemente `celt` ist. Andernfalls S_FALSE.

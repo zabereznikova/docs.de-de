@@ -1,36 +1,40 @@
 ---
-title: "Windows-Anwendungen, die R&#252;ckrufe verwenden | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verwenden von Rückrufen in Windows-Anwendungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Windows-Anwendungen, die R&#252;ckrufe verwenden
-In den meisten asynchronen Verarbeitungsszenarien möchten Sie eine Datenbankoperation starten und weitere Prozesse ausführen, ohne dabei warten zu müssen, bis die Datenbankoperation abgeschlossen ist.  Viele Szenarien erfordern allerdings nach dem Beenden der Datenbankoperation eine Aktion.  So möchten Sie beispielsweise in einer Windows\-Anwendung die länger dauernde Operation an einen Hintergrundthread weitergeben, während der Benutzeroberflächenthread weiterhin reagieren kann.  Nach dem Beenden der Datenbankoperation möchten Sie allerdings die Ergebnisse verwenden, um das Formular zu füllen.  Dieser Typ von Szenario wird am Besten durch einen Rückruf implementiert.  
+# <a name="windows-applications-using-callbacks"></a>Verwenden von Rückrufen in Windows-Anwendungen
+In den meisten asynchronen Verarbeitungsszenarien möchten Sie eine Datenbankoperation starten und weitere Prozesse ausführen, ohne dabei warten zu müssen, bis die Datenbankoperation abgeschlossen ist. Viele Szenarien erfordern allerdings nach dem Beenden der Datenbankoperation eine Aktion. So möchten Sie beispielsweise in einer Windows-Anwendung die länger dauernde Operation an einen Hintergrundthread weitergeben, während der Benutzeroberflächenthread weiterhin reagieren kann. Nach dem Beenden der Datenbankoperation möchten Sie allerdings die Ergebnisse verwenden, um das Formular zu füllen. Dieser Typ von Szenario wird am Besten durch einen Rückruf implementiert.  
   
- Einen Rückruf implementieren Sie, indem Sie einen <xref:System.AsyncCallback>\-Delegaten in der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>\-Methode, der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>\-Methode oder der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>\-Methode angeben.  Der Delegat wird nach Abschluss der Operation aufgerufen.  Sie können dem Delegaten einen Verweis auf den <xref:System.Data.SqlClient.SqlCommand> selbst zuweisen, wodurch der Zugriff auf das <xref:System.Data.SqlClient.SqlCommand>\-Objekt und das Aufrufen der passenden `End`\-Methode vereinfacht wird, ohne eine globale Variable verwenden zu müssen.  
+ Einen Rückruf implementieren Sie, indem Sie einen <xref:System.AsyncCallback>-Delegaten in der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>-Methode oder der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>-Methode angeben. Der Delegat wird nach Abschluss der Operation aufgerufen. Sie können dem Delegaten einen Verweis auf den <xref:System.Data.SqlClient.SqlCommand> selbst zuweisen, wodurch der Zugriff auf das <xref:System.Data.SqlClient.SqlCommand>-Objekt und das Aufrufen der passenden `End`-Methode vereinfacht wird, ohne eine globale Variable verwenden zu müssen.  
   
-## Beispiel  
- In der folgenden Windows\-Anwendung wird die Verwendung der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>\-Methode gezeigt, wobei eine Transact\-SQL\-Anweisung ausgeführt wird, die eine Verzögerung von einigen Sekunden beinhaltet \(Emulieren eines zeitintensiven Befehls\).  
+## <a name="example"></a>Beispiel  
+ In der folgenden Windows-Anwendung wird die Verwendung der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode gezeigt, wobei eine Transact-SQL-Anweisung ausgeführt wird, die eine Verzögerung von einigen Sekunden beinhaltet (Emulieren eines zeitintensiven Befehls).  
   
- In diesem Beispiel werden einige wichtige Techniken gezeigt, darunter das Aufrufen einer Methode, die mit dem Formular von einem separaten Thread aus zusammenwirkt.  Zusätzlich zeigt dieses Beispiel, wie Sie Benutzer vom mehrfachen Ausführen eines Befehls abhalten können und wie Sie sicherstellen müssen, dass das Formular nicht vor dem Aufruf der Rückrufprozedur geschlossen wird.  
+ In diesem Beispiel werden einige wichtige Techniken gezeigt, darunter das Aufrufen einer Methode, die mit dem Formular von einem separaten Thread aus zusammenwirkt. Zusätzlich zeigt dieses Beispiel, wie Sie Benutzer vom mehrfachen Ausführen eines Befehls abhalten können und wie Sie sicherstellen müssen, dass das Formular nicht vor dem Aufruf der Rückrufprozedur geschlossen wird.  
   
- Erstellen Sie zum Einrichten dieses Beispiels eine neue Windows\-Anwendung.  Positionieren Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement und zwei <xref:System.Windows.Forms.Label>\-Steuerelemente auf dem Formular \(übernehmen Sie für jedes Steuerelement den Standardnamen\).  Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+ Erstellen Sie zum Einrichten dieses Beispiels eine neue Windows-Anwendung. Positionieren Sie ein <xref:System.Windows.Forms.Button>-Steuerelement und zwei <xref:System.Windows.Forms.Label>-Steuerelemente auf dem Formular (übernehmen Sie für jedes Steuerelement den Standardnamen). Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Siehe auch  
- [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

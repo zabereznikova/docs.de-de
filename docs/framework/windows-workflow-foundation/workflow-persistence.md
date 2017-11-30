@@ -1,61 +1,64 @@
 ---
-title: "Workflowpersistenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Programmieren [WF], Persistenz"
+title: Workflowpersistenz
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e51873533d75e85c59baf0c77f587ed38a689770
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Workflowpersistenz
-Workflowpersistenz bezeichnet die permanente Erfassung des Zustands einer Workflowinstanz unabhängig von Prozess\- oder Computerinformationen.Sie wird durchgeführt, um einen bekannten Wiederherstellungspunkt für die Workflowinstanz im Fall eines Systemfehlers bereitzustellen oder um Arbeitsspeicher beizubehalten, indem Workflowinstanzen entladen werden, die gerade nicht aktiv sind, bzw. um den Zustand der Workflowinstanz von einem Knoten zu einem anderen Knoten in einer Serverfarm zu verschieben.  
+# <a name="workflow-persistence"></a>Workflowpersistenz
+Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workflowinstanz unabhängig von Prozess- oder Computerinformationen. Sie wird durchgeführt, um einen bekannten Wiederherstellungspunkt für die Workflowinstanz im Fall eines Systemfehlers bereitzustellen oder um Arbeitsspeicher beizubehalten, indem Workflowinstanzen entladen werden, die gerade nicht aktiv sind, bzw. um den Zustand der Workflowinstanz von einem Knoten zu einem anderen Knoten in einer Serverfarm zu verschieben.  
   
- Die Persistenz aktiviert die Flexibilität, Skalierbarkeit und Wiederherstellung von Prozessen bei einem Fehler und bietet die Möglichkeit, den Arbeitsspeicher effizienter zu verwalten.Der Persistenzvorgang umfasst die Identifikation eines Persistenzpunkts, das Sammeln der zu speichernden Daten und schließlich die Delegierung des tatsächlichen Speichers der Daten an einen Persistenzanbieter.  
+ Die Persistenz aktiviert die Flexibilität, Skalierbarkeit und Wiederherstellung von Prozessen bei einem Fehler und bietet die Möglichkeit, den Arbeitsspeicher effizienter zu verwalten. Der Persistenzvorgang umfasst die Identifikation eines Persistenzpunkts, das Sammeln der zu speichernden Daten und schließlich die Delegierung des tatsächlichen Speichers der Daten an einen Persistenzanbieter.  
   
- Um die Persistenz für einen Workflow zu aktivieren, müssen Sie der **WorkflowApplication** oder dem **WorkflowServiceHost** einen Instanzspeicher zuordnen, wie in [Vorgehensweise: Aktivieren der Persistenz für Workflows und Workflowdienste](../../../docs/framework/windows-workflow-foundation//how-to-enable-persistence-for-workflows-and-workflow-services.md) beschrieben.Die **WorkflowApplication** und der **WorkflowServiceHost** verwenden den Instanzspeicher, der Ihnen zugeordnet wurde, um das Speichern von Workflowinstanzen in einen persistenten Speicher und das Laden von Workflowinstanzen in den Arbeitsspeicher auf Grundlage der im persistenten Speicher gespeicherten Workflowinstanzdaten zu aktivieren.  
+ Um die Persistenz für einen Workflow zu aktivieren, müssen Sie mit einen Instanzspeicher Zuordnen der **WorkflowApplication** oder **WorkflowServiceHost** Siehe [wie: Aktivieren der Persistenz für Workflows und Workflowdienste](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). Die **WorkflowApplication** und **WorkflowServiceHost** verwenden Sie den Instanzspeicher, die ihnen zugeordneten zum Beibehalten von Workflowinstanzen in einem persistenten Speicher und das Laden von Workflowinstanzen in aktivieren Arbeitsspeicher auf Grundlage der im persistenten Speicher gespeicherten workflowinstanzdaten.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält die **SqlWorkflowInstanceStore**\-Klasse, die die Persistenz von Daten und Metadaten zu Workflowinstanzen in eine Datenbank von SQL Server 2005 oder SQL Server 2008 zulässt.Weitere Informationen finden Sie unter [SQL\-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  
+ Die [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] im Lieferumfang der **SqlWorkflowInstanceStore** -Klasse, die Persistenz von Daten und Metadaten zu Workflowinstanzen in einer SQL Server 2005 oder SQL Server 2008-Datenbank ermöglicht. Finden Sie unter [SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) Weitere Details.  
   
- Zum Speichern und Laden Ihrer anwendungsspezifischen Daten zusammen mit den Informationen zur Workflowinstanz können Sie Persistenzteilnehmer erstellen, die die <xref:System.Activities.Persistence.PersistenceParticipant>\-Klasse erweitern.Ein Persistenzteilnehmer nimmt am Persistenzvorgang teil, um benutzerdefinierte serialisierbare Daten in den persistenten Speicher zu speichern, die Daten aus dem Instanzspeicher in den Arbeitsspeicher zu laden und ggf. die zusätzliche Logik einer Persistenztransaktion auszuführen.Weitere Informationen finden Sie unter [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation//persistence-participants.md).  
+ Zum Speichern und Laden Ihrer anwendungsspezifischen Daten zusammen mit den Informationen zur Workflowinstanz können Sie Persistenzteilnehmer erstellen, die die <xref:System.Activities.Persistence.PersistenceParticipant>-Klasse erweitern. Ein Persistenzteilnehmer nimmt am Persistenzvorgang teil, um benutzerdefinierte serialisierbare Daten in den persistenten Speicher zu speichern, die Daten aus dem Instanzspeicher in den Arbeitsspeicher zu laden und ggf. die zusätzliche Logik einer Persistenztransaktion auszuführen. Weitere Informationen finden Sie unter [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server AppFabric vereinfacht die Konfiguration von Persistenz.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistenzkonzepte mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistenz Konzepte mit Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
-## Implizite Persistenzpunkte  
+## <a name="implicit-persistence-points"></a>Implizite Persistenzpunkte  
  Die folgende Liste enthält Beispiele der Bedingungen, zu denen ein Workflow beibehalten wird, wenn ein Instanzspeicher einem Workflow zugeordnet ist.  
   
--   Wenn eine **TransactionScope**\-Aktivität oder eine **TransactedReceiveScope**\-Aktivität abgeschlossen wird.  
+-   Wenn eine **TransactionScope** Aktivität abgeschlossen wird oder ein **TransactedReceiveScope** Aktivität abgeschlossen wird.  
   
--   Wenn eine Workflowinstanz in den Leerlauf wechselt und das **WorkflowIdleBehavior** auf den Workflowhost festgelegt ist.Dies ist z. B. der Fall, wenn Sie Messagingaktivitäten oder eine **Delay**\-Aktivität verwenden.  
+-   Wenn eine Workflowinstanz im Leerlauf ist und die **WorkflowIdleBehavior** auf den Workflowhost festgelegt ist. In diesem Fall z. B. Wenn Sie messagingaktivitäten verwenden oder eine **Verzögerung** Aktivität.  
   
--   Wenn eine Workflowanwendung in den Leerlauf wechselt und die **PersistableIdle**\-Eigenschaft der Anwendung auf **PersistableIdleAction.Persist** festgelegt ist.  
+-   Wenn eine Leerlauf und der **PersistableIdle** der Anwendung ist-Eigenschaftensatz auf **PersistableIdleAction.Persist**.  
   
 -   Wenn eine Hostanwendung angewiesen ist, eine Workflowinstanz beizubehalten oder zu entladen.  
   
 -   Wenn eine Workflowinstanz beendet oder fertig gestellt wird.  
   
--   Wenn eine **Persist**\-Aktivität ausgeführt wird.  
+-   Wenn eine **Persist** Aktivität ausgeführt wird.  
   
 -   Wenn eine Instanz eines Workflows, die mit einer früheren Version von Windows Workflow Foundation entwickelt wurde, während einer interoperablen Ausführung auf einen Persistenzpunkt trifft.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [SQL\-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md)  
+-   [SQL-Workflowinstanzspeicher](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
   
--   [Instanzspeicher](../../../docs/framework/windows-workflow-foundation//instance-stores.md)  
+-   [Instanzspeicher](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
   
--   [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation//persistence-participants.md)  
+-   [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
   
--   [Empfohlene Vorgehensweisen für die Persistenz](../../../docs/framework/windows-workflow-foundation//persistence-best-practices.md)  
+-   [Empfohlene Vorgehensweisen für die Persistenz](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
   
--   [Nicht beibehaltene Workflowinstanzen](../../../docs/framework/windows-workflow-foundation//non-persisted-workflow-instances.md)  
+-   [Nicht beibehaltene Workflowinstanzen](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
   
--   [Anhalten und Fortsetzen eines Workflows](../../../docs/framework/windows-workflow-foundation//pausing-and-resuming-a-workflow.md)
+-   [Anhalten und Fortsetzen eines Workflows](../../../docs/framework/windows-workflow-foundation/pausing-and-resuming-a-workflow.md)

@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - debugger, display attributes
 - DebuggerTypeProxyAttribute attribute
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dbc4c9a7e0c0fb43802c594934a683546f87a5b8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c396a794cd3afa394cbb6b2393257a3103c6239d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Verbessern des Debuggens mit den Debuggeranzeigeattributen
 Debuggeranzeigeattribute ermöglichen es dem Entwickler des Typs, der dessen Laufzeitverhalten angibt und am besten versteht, ebenfalls anzugeben, wie der Typ aussieht, wenn er in einem Debugger angezeigt wird. Zusätzlich können Debuggeranzeigeattribute, die eine `Target`-Eigenschaft bereitstellen, von den Benutzern auf Assemblyebene angewendet werden, ohne dass diese den Quellcode kennen müssen. Das <xref:System.Diagnostics.DebuggerDisplayAttribute>-Attribut steuert die Anzeige eines Typs oder Members in den Variablenfenstern des Debuggers. Das <xref:System.Diagnostics.DebuggerBrowsableAttribute>-Attribut bestimmt, ob und wie ein Feld oder eine Eigenschaft in den Variablenfenstern des Debuggers angezeigt wird. Das <xref:System.Diagnostics.DebuggerTypeProxyAttribute>-Attribut gibt einen Ersatztyp oder einen Proxy für einen Typ an und ändert die Art, wie dieser Typ in Debuggerfenstern angezeigt wird. Wenn Sie eine Variable mit einem Proxy oder einem Ersatztyp anzeigen, wird der Proxy stellvertretend für den ursprünglichen Typ im Anzeigefenster des Debuggers angezeigt **.** Im Debuggervariablenfenster werden nur die öffentlichen Member des Proxytyps angezeigt. Private Member werden nicht angezeigt.  
@@ -108,10 +105,11 @@ class MyHashtable : Hashtable
  Das folgende Codebeispiel kann in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] angezeigt werden, um die Ergebnisse der Anwendung der <xref:System.Diagnostics.DebuggerDisplayAttribute>-, <xref:System.Diagnostics.DebuggerBrowsableAttribute>- und <xref:System.Diagnostics.DebuggerTypeProxyAttribute>-Attribute anzuzeigen.  
   
 ### <a name="code"></a>Code  
- [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)] [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)] [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.DebuggerDisplayAttribute>   
- <xref:System.Diagnostics.DebuggerBrowsableAttribute>   
+ <xref:System.Diagnostics.DebuggerDisplayAttribute>  
+ <xref:System.Diagnostics.DebuggerBrowsableAttribute>  
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute>
-

@@ -1,72 +1,73 @@
 ---
-title: "Verwenden von verwalteten Grafikklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, Verwaltete Klassen"
-  - "Grafiken, Verwaltete Klassen"
-  - "Grafiken, Verwenden in Windows Forms"
+title: Verwenden von verwalteten Grafikklassen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, managed classes
+- graphics [Windows Forms], using in Windows Forms
+- graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Verwenden von verwalteten Grafikklassen
-Unter den folgenden Themen wird beschrieben, wie Sie die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]\-API im Framework mit verwalteten Klassen verwenden.  
+# <a name="using-managed-graphics-classes"></a>Verwenden von verwalteten Grafikklassen
+In den folgenden Themen wird beschrieben, wie die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] -API in der verwalteten Klassenframework.  
   
-## In diesem Abschnitt  
- [Erste Schritte mit der Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Beschreibt das Ausführen grundlegender Aufgaben mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Erste Schritte mit Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ Beschreibt die grundlegenden Aufgaben mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Veranschaulicht, wie Sie einen Stift erstellen, mit dem Sie verschiedene Linien und Formen zeichnen.  
+ [Verwenden eines Stifts zum Zeichnen von Linien und Formen](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ Veranschaulicht das Erstellen eines Stiftes und verwenden, um eine Vielzahl von Linien und Formen zu zeichnen.  
   
  [Verwenden eines Pinsels zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Veranschaulicht, wie Sie einen Pinsel erstellen und Formen mit einer Vielzahl von Effekten füllen.  
+ Veranschaulicht, wie ein Pinsel und ausfüllen Formen mit einer Vielzahl von Effekten erstellen.  
   
  [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Veranschaulicht das Erstellen und Verwenden verschiedener Farbverlaufspinsel.  
+ Veranschaulicht das Erstellen und verwenden verschiedene Typen von Farbverlaufspinsel verwendet.  
   
  [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
  Veranschaulicht das Erstellen und Bearbeiten von Bildern.  
   
  [Alphablending von Linien und Füllungen](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Veranschaulicht, wie Transparenz für Formen und Linien erzielt wird.  
+ Veranschaulicht, wie Transparenz für Formen und Linien zu erreichen.  
   
  [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Veranschaulicht das Zeichnen von Text sowie die Verwendung von Schriftarten und Schriftfamilien.  
+ Zeigt, wie Zeichnen von Text und Verwenden von Schriftarten und Schriftartfamilien.  
   
  [Erstellen und Zeichnen von Kurven](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Veranschaulicht das Zeichnen von kardinalen und Bezier\-Splines.  
+ Veranschaulicht das Zeichnen von kardinalen und Bézier-Splines.  
   
  [Erstellen und Zeichnen von Pfaden](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- Veranschaulicht das Erstellen von Abbildungen mithilfe von Pfaden.  
+ Zeigt, wie Zahlen, die mithilfe von Pfaden zu erstellen.  
   
- [Verwenden von Transformationen in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Veranschaulicht Matrixtransformationen.  
+ [Verwenden von Transformationen in Managed GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ Matrixtransformationen veranschaulicht wird.  
   
  [Verwenden von Grafikcontainern](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Veranschaulicht das Verwalten des Zustands von Grafikobjekten und das Verwalten geschachtelter Grafikcontainer.  
+ Zeigt, wie Grafiken-Objekt Systemstatus- und geschachtelter Grafikcontainer zu verwalten.  
   
  [Verwenden von Bereichen](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Veranschaulicht die Trefferüberprüfung und das Clipping mit Bereichen.  
+ Veranschaulicht, Treffertests und clipping mit Bereichen.  
   
- [Neueinfärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- Veranschaulicht verschiedene Aspekte der Farbänderung.  
+ [Neufärben von Bildern](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ Veranschaulicht verschiedene Aspekte der Bearbeitung von Farben an.  
   
- [Verwenden von Bildencodern und \-decodern in Managed GDI\+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Veranschaulicht die Bildbearbeitung unter Verwendung von Bildencoder und \-decoder.  
+ [Verwenden von Bildencodern und -decodern in Managed GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Erläutert das Verwenden von Bildencodern und-Decodern zum Bearbeiten von Bildern.  
   
  [Doppelt gepufferte Grafiken](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Veranschaulicht, wie das Flimmern mittels doppelter Pufferung reduziert wird.
+ Veranschaulicht, wie mit doppelter Pufferung Flackern zu verringern.

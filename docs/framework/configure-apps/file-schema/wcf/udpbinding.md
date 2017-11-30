@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 20e488b57b0d17e9c6705c32dc4c4b6b8387fabf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8eb4d28885308c400c445ae71019373ec92ed27a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.UdpBinding>-Bindung verwendet wird.  
@@ -114,12 +112,11 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)   
- [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
+ [Konfigurieren der vom System bereitgestellte Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Binden von >](../../../../../docs/framework/misc/binding.md)
-

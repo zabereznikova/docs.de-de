@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7323c93ef89e340595f6b62947ea45867e651425
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 375c3b44f505a9bf36ce721c5ccde9b888114309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
@@ -54,8 +48,7 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
  Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-

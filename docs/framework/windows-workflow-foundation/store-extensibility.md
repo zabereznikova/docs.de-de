@@ -1,28 +1,31 @@
 ---
-title: "Erweiterbarkeit des Speichers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Erweiterbarkeit des Speichers
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6700fe67d151e78c8b216d93a4cd7098ed6401d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erweiterbarkeit des Speichers
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> ermöglicht es Benutzern, benutzerdefinierte, anwendungsspezifische Eigenschaften höher zu stufen, die verwendet werden können, um Instanzen in der Persistenzdatenbank abzufragen.Durch das Höherstufen einer Eigenschaft ist der Wert in einer besonderen Ansicht in der Datenbank verfügbar.Diese höhergestuften Eigenschaften sind Eigenschaften, die in Benutzerabfragen verwendet werden können. Dabei kann es sich um einfache Typen wie Int64, Guid, String und DateTime oder um einen serialisierten Binärtyp \(byte\[\]\) handeln.  
+# <a name="store-extensibility"></a>Erweiterbarkeit des Speichers
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> ermöglicht es Benutzern, benutzerdefinierte, anwendungsspezifische Eigenschaften höher zu stufen, die verwendet werden können, um Instanzen in der Persistenzdatenbank abzufragen. Durch das Höherstufen einer Eigenschaft ist der Wert in einer besonderen Ansicht in der Datenbank verfügbar. Diese höhergestuften Eigenschaften sind Eigenschaften, die in Benutzerabfragen verwendet werden können. Dabei kann es sich um einfache Typen wie Int64, Guid, String und DateTime oder um einen serialisierten Binärtyp (byte[]) handeln.  
   
- Die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>\-Klasse verfügt über die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A>\-Methode, mit der Sie eine Eigenschaft zu einer Eigenschaft hochstufen können, die in Abfragen verwendet werden kann.Das folgende Beispiel ist ein End\-to\-End\-Beispiel für die Erweiterbarkeit des Speichers.  
+ Die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse verfügt über die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A>-Methode, mit der Sie eine Eigenschaft zu einer Eigenschaft hochstufen können, die in Abfragen verwendet werden kann. Das folgende Beispiel ist ein End-to-End-Beispiel für die Erweiterbarkeit des Speichers.  
   
-1.  In diesem Beispielszenario verfügt eine Anwendung zur Dokumentverarbeitung \(DP\) über Workflows, die benutzerdefinierte Aktivitäten zur Verarbeitung von Dokumenten verwenden.Diese Workflows enthalten einen Satz von Zustandsvariablen, die für den Endbenutzer sichtbar sein müssen.Um dies zu erreichen, stellt die DP\-Anwendung eine Instanzerweiterung des Typs <xref:System.Activities.Persistence.PersistenceParticipant> bereit, die von Aktivitäten dazu verwendet wird, Zustandsvariablen anzugeben.  
+1.  In diesem Beispielszenario verfügt eine Anwendung zur Dokumentverarbeitung (DP) über Workflows, die benutzerdefinierte Aktivitäten zur Verarbeitung von Dokumenten verwenden. Diese Workflows enthalten einen Satz von Zustandsvariablen, die für den Endbenutzer sichtbar sein müssen. Um dies zu erreichen, stellt die DP-Anwendung eine Instanzerweiterung des Typs <xref:System.Activities.Persistence.PersistenceParticipant> bereit, die von Aktivitäten dazu verwendet wird, Zustandsvariablen anzugeben.  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         public string DocumentId;  
@@ -30,7 +33,6 @@ caps.handback.revision: 15
         public string UserName;  
         public DateTime LastUpdateTime;  
     }  
-  
     ```  
   
 2.  Die neue Erweiterung wird dann dem Host hinzugefügt.  
@@ -40,31 +42,27 @@ caps.handback.revision: 15
     WorkflowApplication application = new WorkflowApplication(workflow);  
     DocumentStatusExtension documentStatusExtension = new DocumentStatusExtension ();  
     application.Extensions.Add(documentStatusExtension);  
-  
     ```  
   
-     Weitere Details zum Hinzufügen eines benutzerdefinierten Persistenzteilnehmers finden Sie im [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation//persistence-participants.md)\-Beispiel.  
+     Weitere Informationen zum Hinzufügen eines benutzerdefinierten persistenzteilnehmers finden Sie unter der [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) Beispiel.  
   
-3.  Die benutzerdefinierten Aktivitäten in der DP\-Anwendung füllen verschiedene Statusfelder in der **Execute**\-Methode auf.  
+3.  Die benutzerdefinierten Aktivitäten in der DP-Anwendung füllen verschiedene Statusfelder in der **Execute** Methode.  
   
     ```  
-  
     public override void Execute(CodeActivityContext context)  
     {  
         // ...  
         context.GetExtension<DocumentStatusExtension>().DocumentId = Guid.NewGuid();  
         context.GetExtension<DocumentStatusExtension>().UserName = "John Smith";  
-        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = “Approved”;  
+        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = "Approved";  
         context.GetExtension<DocumentStatusExtension>().LastUpdateTime = DateTime.Now();  
         // ...  
     }  
-  
     ```  
   
-4.  Wenn eine Workflowinstanz einen Persistenzpunkt erreicht, speichert die **CollectValues**\-Methode des **DocumentStatusExtension** Persistenzteilnehmers diese Eigenschaften in die Persistenzdatensammlung.  
+4.  Wenn eine Workflowinstanz einen Persistenzpunkt erreicht die **CollectValues** Methode der **DocumentStatusExtension** persistenzteilnehmer speichert diese Eigenschaften in den persistenzdaten Auflistung.  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         const XNamespace xNS = XNamespace.Get("http://contoso.com/DocumentStatus");  
@@ -81,13 +79,12 @@ caps.handback.revision: 15
         }  
         // ...  
     }  
-  
     ```  
   
     > [!NOTE]
-    >  All diese Eigenschaften werden vom Persistenzframework über die **SaveWorkflowCommand.InstanceData**\-Auflistung an den **SqlWorkflowInstanceStore** übergeben.  
+    >  Alle diese Eigenschaften werden an übergeben **SqlWorkflowInstanceStore** vom persistenzframework über die **SqlWorkflowInstanceStore** Auflistung.  
   
-5.  Die DP\-Anwendung initialisiert den SQL\-Workflowinstanzspeicher und ruft die **Promote**\-Methode auf, um diese Daten höher zu stufen.  
+5.  Die DP-Anwendung initialisiert den SQL-Workflowinstanzspeicher und ruft die **heraufstufen** Methode, um diese Daten höher zu stufen.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -103,30 +100,28 @@ caps.handback.revision: 15
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     Auf Grundlage dieser Informationen für die Höherstufung fügt **SqlWorkflowInstanceStore** die Dateneigenschaften in die Spalten der [[System.Activities.DurableInstancing.InstancePromotedProperties]-Ansicht](../Topic/Store%20Extensibility.md#InstancePromotedProperties) ein.  
+     Anhand dieser Informationen für die Höherstufung **SqlWorkflowInstanceStore** platziert die Dateneigenschaften in den Spalten von der ["instancepromotedproperties"](#InstancePromotedProperties) anzeigen.
   
-6.  Um eine Teilmenge der Daten aus der Höherstufungstabelle abzufragen, fügt die DP\-Anwendung oben in der Höherstufungsansicht eine benutzerdefinierte Ansicht hinzu.  
+6.  Um eine Teilmenge der Daten aus der Höherstufungstabelle abzufragen, fügt die DP-Anwendung oben in der Höherstufungsansicht eine benutzerdefinierte Ansicht hinzu.  
   
     ```  
-  
     create view [dbo].[DocumentStatus] with schemabinding  
     as  
-        select  P.[InstanceId] as [InstanceId],  
-            P.Value1 as [UserName],  
-            P.Value2 as [ApprovalStatus],  
-            P.Value3 as [DocumentId],  
-            P.Value4 as [LastUpdatedTime]  
+        select  P.[InstanceId] as [InstanceId],  
+            P.Value1 as [UserName],  
+            P.Value2 as [ApprovalStatus],  
+            P.Value3 as [DocumentId],  
+            P.Value4 as [LastUpdatedTime]  
     from [System.Activities.DurableInstancing].[InstancePromotedProperties] as P  
     where P.PromotionName = N'DocumentStatus'  
     go  
-  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> \[System.Activities.DurableInstancing.InstancePromotedProperties\]\-Ansicht  
+##  <a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties]-Ansicht  
   
 |Spaltenname|Spaltentyp|Beschreibung|  
-|-----------------|----------------|------------------|  
+|-----------------|-----------------|-----------------|  
 |InstanceId|GUID|Die Workflowinstanz, der diese Höherstufung angehört.|  
-|PromotionName|nvarchar\(400\)|Der Name der Höherstufung.|  
-|Value1, Value2, Value3, ..., Value32|sql\_variant|Der Wert der höhergestuften Eigenschaft.Die meisten primitiven Datentypen in SQL mit Ausnahme der binären Blobs und Zeichenfolgen über 8000 Byte Länge sind für sql\_variant geeignet.|  
-|Value33, Value34, Value35, …, Value64|varbinary\(max\)|Der Wert von höher gestuften Eigenschaften, die explizit als varbinary\(max\) deklariert werden.|
+|PromotionName|nvarchar(400)|Der Name der Höherstufung.|  
+|Value1, Value2, Value3, ..., Value32|sql_variant|Der Wert der höhergestuften Eigenschaft. Die meisten primitiven Datentypen in SQL mit Ausnahme der binären Blobs und Zeichenfolgen über 8000 Byte Länge sind für sql_variant geeignet.|  
+|Value33, Value34, Value35, …, Value64|varbinary(max)|Der Wert von höher gestuften Eigenschaften, die explizit als varbinary(max) deklariert werden.|

@@ -1,60 +1,64 @@
 ---
-title: "Gewusst wie: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Zellen, Abrufen und Festlegen von aktuellen"
-  - "DataGridView-Steuerelement [Windows Forms], Abrufen der aktuellen Zelle"
-  - "DataGridView-Steuerelement [Windows Forms], Festlegen der aktuellen Zelle"
+title: 'Gewusst wie: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], getting current cell
+- DataGridView control [Windows Forms], setting current cell
+- cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb63c48831e19ce3cbb166e899aeee8b6a331839
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms
-Die Interaktion mit der <xref:System.Windows.Forms.DataGridView> setzt häufig voraus, dass Sie programmgesteuert ermitteln, welche Zelle gerade aktiv ist.  Möglicherweise müssen Sie die aktuelle Zelle auch ändern.  Sie können diese Aufgaben mit der <xref:System.Windows.Forms.DataGridView.CurrentCell%2A>\-Eigenschaft ausführen.  
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms
+Interaktion mit der <xref:System.Windows.Forms.DataGridView> erfordert oft, dass Sie programmgesteuert ermitteln, welche Zelle gerade aktiv ist. Sie müssen möglicherweise auch die aktive Zelle zu ändern. Sie können diese Aufgaben mit der <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Eigenschaft.  
   
 > [!NOTE]
->  Sie können die aktuelle Zelle nicht in einer Zeile oder Spalte festlegen, deren <xref:System.Windows.Forms.DataGridViewBand.Visible%2A>\-Eigenschaft auf `false` festgelegt ist.  
+>  Die aktuelle Zelle kann nicht festgelegt werden, in einer Zeile oder Spalte mit seiner <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> -Eigenschaftensatz auf `false`.  
   
- Je nach Auswahlmodus des <xref:System.Windows.Forms.DataGridView>\-Steuerelements kann die Auswahl durch Ändern der aktuellen Zelle ebenfalls geändert werden.  Weitere Informationen finden Sie unter [Auswahlmodi im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).  
+ Je nach den <xref:System.Windows.Forms.DataGridView> Auswahlmodus des Steuerelements, Ändern der aktuellen Zelle können Sie die Auswahl ändern. Weitere Informationen finden Sie unter [Auswahlmodi im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).  
   
-### So rufen Sie die aktuelle Zelle programmgesteuert ab  
+### <a name="to-get-the-current-cell-programmatically"></a>Die aktuelle Zelle programmgesteuert abrufen  
   
--   Verwenden Sie die <xref:System.Windows.Forms.DataGridView.CurrentCell%2A>\-Eigenschaft des <xref:System.Windows.Forms.DataGridView>\-Steuerelements.  
+-   Verwenden der <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Eigenschaft.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
-### So legen Sie die aktuelle Zelle programmgesteuert fest  
+### <a name="to-set-the-current-cell-programmatically"></a>So legen Sie die aktuelle Zelle programmgesteuert fest  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridView.CurrentCell%2A>\-Eigenschaft des <xref:System.Windows.Forms.DataGridView>\-Steuerelements fest  Im folgenden Codebeispiel wird die aktuelle Zelle auf Zeile 0, Spalte 1 festgelegt.  
+-   Legen Sie die <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridView> Steuerelement. Im folgenden Codebeispiel wird die aktive Zelle 0, Spalte 1 Zeile festgelegt.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   <xref:System.Windows.Forms.Button>\-Steuerelemente mit den Namen `getCurrentCellButton` und `setCurrentCellButton`.  In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] müssen Sie die <xref:System.Windows.Forms.Control.Click>\-Ereignisse für jede Schaltfläche an den zugehörigen Ereignishandler im Beispielcode anfügen.  
+-   <xref:System.Windows.Forms.Button>-Steuerelemente namens `getCurrentCellButton` und `setCurrentCellButton`. In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], Anfügen muss der <xref:System.Windows.Forms.Control.Click> Ereignisse für jede Schaltfläche an den zugehörigen Ereignishandler im Beispielcode.  
   
--   Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement mit dem Namen`dataGridView1` muss vorhanden sein.  
+-   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
--   Verweise auf die <xref:System?displayProperty=fullName>\-Assembly und die <xref:System.Windows.Forms?displayProperty=fullName>\-Assembly.  
+-   Verweise auf die <xref:System?displayProperty=nameWithType>-Assembly und die <xref:System.Windows.Forms?displayProperty=nameWithType>-Assembly.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=fullName>   
- [Grundlegende Spalten\-, Zeilen\- und Zellfeatures im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)   
- [Auswahlmodi im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>  
+ [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Auswahlmodi im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)

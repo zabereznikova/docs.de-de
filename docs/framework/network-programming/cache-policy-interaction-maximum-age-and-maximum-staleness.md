@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - maximum staleness
 - freshness of cached resources
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 834deeff69687e0edf1671b35328d41842914b4d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: baec376501feb70e4a9ceb3f33ac66fa76b91ac1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung
 Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  
@@ -51,10 +45,9 @@ Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückg
 -   Wenn die Cacherichtlinie `maxAge` = 1 Tage und `maxStale` = 1 Tag festlegt, wird der Inhalt am 2. Januar erneut überprüft.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
- [Location-Based Cache Policies (Speicherortbasierte Cacherichtlinien)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
+ [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
-

@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.TcpChannelMessageReceived | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.TcpChannelMessageReceived
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb896d04-e4a5-404f-9df6-5fcaa93e5b60
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a636b6195aa050f75489ee43c5b67ac861ccfc76
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.TcpChannelMessageReceived
+# <a name="systemservicemodelchannelstcpchannelmessagereceived"></a>System.ServiceModel.Channels.TcpChannelMessageReceived
 System.ServiceModel.Channels.TcpChannelMessageReceived  
   
-## Beschreibung  
- Es wurde eine Nachricht über den TCP\-Kanal empfangen.  
+## <a name="description"></a>Beschreibung  
+ Es wurde eine Nachricht über den TCP-Kanal empfangen.  
   
-## Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ereignisablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Verwenden der Ablaufverfolgung beheben](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)

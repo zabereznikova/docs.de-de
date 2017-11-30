@@ -1,28 +1,27 @@
 ---
-title: "Nachrichtensicherheitszertifikat | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WS-Sicherheit"
+title: Nachrichtensicherheitszertifikat
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 51
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0587883a7f354ec03e3fd47ea362b93f006028ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Nachrichtensicherheitszertifikat
-Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS\-Sicherheit mit X.509 v3\-Zertifikatauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509 v3\-Zertifikat des Servers erfordert.Es werden Standardeinstellungen so verwendet, dass alle Anwendungsnachrichten zwischen dem Client und dem Server signiert und verschlüsselt werden.Das Beispiel basiert auf [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) und besteht aus einem Clientkonsolenprogramm und einer von Internetinformationsdiensten \(IIS\) gehosteten Dienstbibliothek.Der Dienst implementiert einen Vertrag, der ein Anforderungs\-Antwort\-Kommunikationsmuster definiert.  
+# <a name="message-security-certificate"></a>Nachrichtensicherheitszertifikat
+Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit mit X.509 v3-Zertifikatauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509 v3-Zertifikat des Servers erfordert. Es werden Standardeinstellungen so verwendet, dass alle Anwendungsnachrichten zwischen dem Client und dem Server signiert und verschlüsselt werden. Dieses Beispiel basiert auf der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) und besteht aus einem clientkonsolenprogramm und einer von IIS (Internetinformationsdienste) gehosteten Dienstbibliothek. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -43,9 +42,9 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Der Dienst macht einen Endpunkt für die Kommunikation mit dem Dienst und einen Endpunkt für das Verfügbarmachen des WSDL\-Dokuments des Diensts mithilfe des WS\-MetadataExchange\-Protokolls verfügbar, das in der Konfigurationsdatei \(Web.config\) definiert wird.Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag.Die Bindung wird mit einem [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)\-Standardelement konfiguriert, das standardmäßig Nachrichtensicherheit verwendet.In diesem Beispiel wird das `clientCredentialType`\-Attribut auf "Certificate" festgelegt, um die Clientauthentifizierung anzufordern.  
+ Der Dienst macht einen Endpunkt für die Kommunikation mit dem Dienst und einen Endpunkt für das Verfügbarmachen des WSDL-Dokuments des Diensts mithilfe des WS-MetadataExchange-Protokolls verfügbar, das in der Konfigurationsdatei (Web.config) definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung ist konfiguriert, mit einer normalen [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) -Element, das die standardmäßig nachrichtensicherheit. In diesem Beispiel wird das `clientCredentialType`-Attribut auf "Certificate" festgelegt, um die Clientauthentifizierung anzufordern.  
   
-```  
+```xml  
 <system.serviceModel>  
     <protocolMapping>  
       <add scheme="http" binding="wsHttpBinding"/>  
@@ -92,12 +91,11 @@ public class CalculatorService : ICalculator
       </serviceBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
- Das Verhalten gibt die Anmeldeinformationen des Diensts an, die verwendet werden, wenn der Client den Dienst authentifiziert.Der Serverzertifikat\-Antragstellername wird im `findValue`\-Attribut im [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)\-Element angegeben.  
+ Das Verhalten gibt die Anmeldeinformationen des Diensts an, die verwendet werden, wenn der Client den Dienst authentifiziert. Der Antragstellername des Server-Zertifikat ist angegeben, der `findValue` Attribut in der [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) Element.  
   
-```  
+```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
 <behaviors>  
       <serviceBehaviors>  
@@ -126,12 +124,11 @@ public class CalculatorService : ICalculator
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
 ```  
   
- Die Clientendpunktkonfiguration besteht aus einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag.Die Clientbindung wird mit dem entsprechenden Sicherheitsmodus und Authentifizierungsmodus konfiguriert.Stellen Sie beim Ausführen in einem computerübergreifenden Szenario sicher, dass die Dienstendpunktadresse entsprechend geändert wird.  
+ Die Clientendpunktkonfiguration besteht aus einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag. Die Clientbindung wird mit dem entsprechenden Sicherheitsmodus und Authentifizierungsmodus konfiguriert. Stellen Sie beim Ausführen in einem computerübergreifenden Szenario sicher, dass die Dienstendpunktadresse entsprechend geändert wird.  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <!-- Use a behavior to configure the client certificate to present to the service. -->  
@@ -153,12 +150,11 @@ public class CalculatorService : ICalculator
     </bindings>  
 ...  
 </system.serviceModel>  
-  
 ```  
   
- Die Clientimplementierung kann das zu verwendende Zertifikat entweder durch die Konfigurationsdatei oder durch Code festlegen.Im folgenden Beispiel wird gezeigt, wie das zu verwendende Zertifikat in der Konfigurationsdatei festgelegt wird.  
+ Die Clientimplementierung kann das zu verwendende Zertifikat entweder durch die Konfigurationsdatei oder durch Code festlegen. Im folgenden Beispiel wird gezeigt, wie das zu verwendende Zertifikat in der Konfigurationsdatei festgelegt wird.  
   
-```  
+```xml  
 <system.serviceModel>  
   ...  
   
@@ -189,7 +185,6 @@ public class CalculatorService : ICalculator
     </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
  Im folgenden Beispiel wird gezeigt, wie der Dienst im Programm aufgerufen wird.  
@@ -205,7 +200,7 @@ Console.WriteLine(client.GetCallerIdentity());
 client.Close();  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt.Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
+ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
 ```  
 CN=client.com  
@@ -216,11 +211,11 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Mit der in den Beispielen für Nachrichtensicherheit enthaltenen Batchdatei Setup.bat können Sie den Client und den Server mit relevanten Zertifikaten zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert.Die Batchdatei kann in drei Modi ausgeführt werden.Um die Batchdatei im Einzelcomputermodus auszuführen, geben Sie an einer Visual Studio\-Eingabeaufforderung **setup.bat** ein; für den Dienstmodustyp geben Sie **setup.bat service** und für den Clientmodustyp **setup.bat client** ein.Verwenden Sie den Client\- und den Dienstmodus, wenn Sie das Beispiel computerübergreifend ausführen.Weitere Informationen finden Sie in der Setupprozedur am Ende dieses Themas.Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:  
+ Mit der in den Beispielen für Nachrichtensicherheit enthaltenen Batchdatei Setup.bat können Sie den Client und den Server mit relevanten Zertifikaten zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Die Batchdatei kann in drei Modi ausgeführt werden. Ausführen im einzelcomputermodus Typ **"Setup.bat"** in einer Visual Studio-Eingabeaufforderung; für den dienstmodustyp geben **"Setup.bat" Dienst**; und für den clientmodustyp **"Setup.bat" Client** . Verwenden Sie den Client- und den Dienstmodus, wenn Sie das Beispiel computerübergreifend ausführen. Weitere Informationen finden Sie in der Setupprozedur am Ende dieses Themas. Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:  
   
 -   Erstellen des Clientzertifikats.  
   
-     Die folgende Zeile in der Batchdatei erstellt das Clientzertifikat.Der angegebene Clientname wird im Antragstellernamen des erstellten Zertifikats verwendet.Das Zertifikat wird im `My`\-Speicher am Speicherort `CurrentUser` gespeichert.  
+     Die folgende Zeile in der Batchdatei erstellt das Clientzertifikat. Der angegebene Clientname wird im Antragstellernamen des erstellten Zertifikats verwendet. Das Zertifikat wird im `My`-Speicher am Speicherort `CurrentUser` gespeichert.  
   
     ```  
     echo ************  
@@ -231,7 +226,7 @@ Press <ENTER> to terminate client.
   
 -   Installieren Sie das Clientzertifikat im Speicher für vertrauenswürdige Zertifikate des Servers.  
   
-     Die folgende Zeile in der Batchdatei kopiert das Clientzertifikat in den Speicher TrustedPeople des Servers, damit der Server selbst entscheiden kann, was vertrauenswürdig ist und was nicht.Damit ein im Speicher TrustedPeople installiertes Zertifikat für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Dienst vertrauenswürdig ist, muss der Validierungsmodus für das Clientzertifikat auf `PeerOrChainTrust` oder auf `PeerTrust` festgelegt werden.Wie dies mithilfe einer Konfigurationsdatei durchgeführt werden kann, wurde im vorherigen Dienstkonfigurationsbeispiel gezeigt.  
+     Die folgende Zeile in der Batchdatei kopiert das Clientzertifikat in den Speicher TrustedPeople des Servers, damit der Server selbst entscheiden kann, was vertrauenswürdig ist. Damit ein im Speicher TrustedPeople installiertes Zertifikat für einen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Dienst vertrauenswürdig ist, muss der Validierungsmodus für das Clientzertifikat auf `PeerOrChainTrust` oder auf `PeerTrust` festgelegt werden. Wie dies mithilfe einer Konfigurationsdatei durchgeführt werden kann, wurde im vorherigen Dienstkonfigurationsbeispiel gezeigt.  
   
     ```  
     echo ************  
@@ -254,11 +249,11 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     Die Variable %SERVER\_NAME% gibt den Servernamen an.Das Zertifikat wird im LocalMachine\-Speicher gespeichert.Wird die Batchdatei Setup.bat mit einem service\-Argument ausgeführt \(z. B. **setup.bat service**\), enthält %SERVER\_NAME% den vollqualifizierten Domänennamen des Computers.Andernfalls wird standardmäßig localhost verwendet.  
+     Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die Batchdatei "Setup.bat" mit einem dienstargument ausgeführt wird (z. B. **"Setup.bat" Service**) "% Servername" enthält den vollqualifizierten Domänennamen des Computers. Andernfalls wird standardmäßig localhost verwendet.  
   
 -   Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
   
-     Die folgenden Zeilen kopieren das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen.Dieser Schritt ist erforderlich, da von Makecert.exe generierten Zertifikaten nicht implizit vom Clientsystem vertraut wird.Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt \(z. B. ein von Microsoft ausgegebenes Zertifikat\), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
+     Die folgenden Zeilen kopieren das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
@@ -266,7 +261,7 @@ Press <ENTER> to terminate client.
   
 -   Gewähren von Berechtigungen auf dem privaten Schlüssel des Zertifikats.  
   
-     Die folgenden Zeilen in der Datei Setup.bat sorgen dafür, dass das Serverzertifikat, das im Speicher LocalMachine gespeichert ist, für das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Arbeitsprozesskonto verfügbar ist.  
+     Die folgenden Zeilen in der Datei Setup.bat sorgen dafür, dass das Serverzertifikat, das im Speicher LocalMachine gespeichert ist, für das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Arbeitsprozesskonto verfügbar ist.  
   
     ```  
     echo ************  
@@ -280,72 +275,72 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  Bei Verwendung einer anderen als derenglischsprachigen US\-Version von Windows müssen Sie in der Datei Setup.bat den Kontonamen "NT AUTHORITY\\NETWORK SERVICE" durch den äquivalenten Kontonamen in der entsprechenden Sprache ersetzen.  
+    >  Bei Verwendung einer anderen als der englischsprachigen US-Version von Windows müssen Sie in der Datei Setup.bat den Kontonamen "NT AUTHORITY\NETWORK SERVICE" durch den äquivalenten Kontonamen in der entsprechenden Sprache ersetzen.  
   
 > [!NOTE]
->  In dieser Batchdatei verwendete Tools befinden sich entweder unter C:\\Programme\\Microsoft Visual Studio 8\\Common7\\tools oder unter C:\\Programme\\Microsoft SDKs\\Windows\\v6.0\\bin.Eines dieser Verzeichnisse muss im Systempfad enthalten sein.Wenn Visual Studio installiert ist, nehmen Sie dieses Verzeichnis am einfachsten in den Pfad auf, indem Sie die Visual Studio\-Eingabeaufforderung öffnen.Klicken Sie auf **Start**, und wählen Sie anschließend **Alle Programme**, **Visual Studio 2012** und dann **Tools** aus.Innerhalb dieser Eingabeaufforderung sind die entsprechenden Pfade bereits konfiguriert.Andernfalls müssen Sie dem Pfad das entsprechende Verzeichnis manuell hinzufügen.  
+>  In dieser Batchdatei verwendete Tools befinden sich entweder unter C:\Programme\Microsoft Visual Studio 8\Common7\tools oder unter C:\Programme\Microsoft SDKs\Windows\v6.0\bin. Eines dieser Verzeichnisse muss im Systempfad enthalten sein. Wenn Visual Studio installiert ist, nehmen Sie dieses Verzeichnis am einfachsten in den Pfad auf, indem Sie die Visual Studio-Eingabeaufforderung öffnen. Klicken Sie auf **starten**, und wählen Sie dann **Programme**, **Visual Studio 2012**, **Tools**. Innerhalb dieser Eingabeaufforderung sind die entsprechenden Pfade bereits konfiguriert. Andernfalls müssen Sie dem Pfad das entsprechende Verzeichnis manuell hinzufügen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren:  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren:  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.Dieses Beispiel befindet sich im folgenden Verzeichnis:  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
-### So richten Sie das Beispiel ein, erstellen es und führen es aus  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Folgen Sie zum Erstellen der C\#\- bzw. Visual Basic .NET\-Version der Projektmappe den Anweisungen unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-### So führen Sie das Beispiel auf demselben Computer aus  
+### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Öffnen Sie eine Visual Studio\-Eingabeaufforderung mit Administratorrechten, und führen Sie die Datei Setup.bat aus dem Beispielinstallationsordner aus.Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+1.  Öffnen Sie eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie die Datei Setup.bat aus dem Beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
   
     > [!NOTE]
-    >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio\-Eingabeaufforderung ausgeführt zu werden.Die PATH\-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist.Diese Umgebungsvariable wird automatisch innerhalb einer Visual Studio\-Eingabeaufforderung \(2010\) festgelegt.  
+    >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Visual Studio-Eingabeaufforderung (2010) festgelegt.  
   
-2.  Überprüfen Sie den Zugriff auf den Dienst, indem Sie in einem Browser die Adresse `http://localhost/servicemodelsamples/service.svc` eingeben.  
+2.  Überprüfen des Zugriffs auf den Dienst mithilfe eines Browsers durch Eingabe der Adresse `http://localhost/servicemodelsamples/service.svc`.  
   
-3.  Starten Sie Client.exe aus dem Ordner \\client\\bin.In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### So führen Sie das Beispiel computerübergreifend aus  
+### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste \(IIS\) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.  
+1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis. Erstellen Sie mithilfe des Verwaltungstools für Internetinformationsdienste (IIS) für dieses Verzeichnis eine virtuelle Anwendung mit dem Namen servicemodelsamples.  
   
-2.  Kopieren Sie die Dienstprogrammdateien aus \\inetpub\\wwwroot\\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer.Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \\bin kopieren.Kopieren Sie auch die Dateien Setup.bat, Cleanup.bat und ImportClientCert.bat auf den Dienstcomputer.  
+2.  Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren. Kopieren Sie auch die Dateien Setup.bat, Cleanup.bat und ImportClientCert.bat auf den Dienstcomputer.  
   
 3.  Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.  
   
-4.  Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer.Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
+4.  Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien "Setup.bat", "Cleanup.bat" und "ImportServiceCert.bat" ebenfalls auf den Client.  
   
-5.  Führen Sie auf dem Server **setup.bat service** an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.Durch Ausführen von **setup.bat** mit dem Argument **service** wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und in die Datei Service.cer exportiert.  
+5.  Führen Sie auf dem Server **"Setup.bat" Dienst** an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus. Ausführen **"Setup.bat"** mit der **Service** Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei "Service.cer" exportiert exportiert.  
   
-6.  Bearbeiten Sie die Datei Web.config so, dass sie den neuen Zertifikatnamen \(im `findValue`\-Attribut im [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) enthält, der dem vollqualifizierten Domänennamen des Computers entspricht.  
+6.  Bearbeiten der Datei "Web.config", um den neuen Zertifikatnamen entspricht (in der `findValue` Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) die ist identisch mit den vollqualifizierten Domänennamen des Computers.  
   
 7.  Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
-8.  Führen Sie auf dem Client **setup.bat client** an einer Visual Studio\-Eingabeaufforderung mit Administratorrechten aus.Durch Ausführen von **setup.bat**mit dem Argument **client** wird ein Clientzertifikat mit dem Namen client.com erstellt und in die Datei Client.cer exportiert.  
+8.  Führen Sie auf dem Client **"Setup.bat" Client** an einer Visual Studio-Eingabeaufforderung mit Administratorrechten aus. Ausführen **"Setup.bat"** mit der **Client** Argument wird ein Clientzertifikat mit dem Namen Client.com erstellt und das Clientzertifikat in der Datei Client.cer exportiert.  
   
-9. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers.  
+9. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers.  
   
 10. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.  
   
-11. Öffnen Sie auf dem Client eine Visual Studio\-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportServiceCert.bat aus.Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+11. Öffnen Sie auf dem Client eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportServiceCert.bat aus. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
   
-12. Öffnen Sie auf dem Server eine Visual Studio\-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportClientCert.bat aus.Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.  
+12. Öffnen Sie auf dem Server eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie ImportClientCert.bat aus. Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.  
   
-13. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.Wenn der Client und der Dienst nicht miteinander kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/de-de/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 -   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
   
     > [!NOTE]
-    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client.Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden.Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Beispiele ausgeführt haben, die Zertifikate computerübergreifend verwenden, müssen Sie die Dienstzertifikate entfernen, die im Speicher CurrentUser – TrustedPeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

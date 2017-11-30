@@ -1,26 +1,29 @@
 ---
-title: "Verarbeiten von Nachrichten au&#223;erhalb der normalen Reihenfolge | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2ffd220babe99661d8b6aaf271a566d415af5eb1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verarbeiten von Nachrichten au&#223;erhalb der normalen Reihenfolge
-Workflowdienste können davon abhängig sein, dass Nachrichten in einer bestimmten Reihenfolge gesendet werden.Ein Workflowdienst enthält eine oder mehrere <xref:System.ServiceModel.Activities.Receive>\-Aktivitäten, und jede <xref:System.ServiceModel.Activities.Receive>\-Aktivität erwartet eine bestimmte Nachricht.Ohne bestimmte Transportübermittlungsgarantien kann es vorkommen, dass von Clients gesendete Nachrichten verzögert und in einer Reihenfolge gesendet werden, die der Workflowdienst ggf. nicht erwartet.Das Implementieren eines Workflowdiensts, der das Senden von Nachrichten in einer bestimmten Reihenfolge nicht erfordert, wird normalerweise mithilfe einer Parallel\-Aktivität durchgeführt.Bei einem komplizierteren Anwendungsprotokoll würde der Workflow schnell sehr komplex werden.Mit der Funktion zur Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Workflow dieser Art ganz ohne die Komplexität geschachtelter Parallel\-Aktivitäten erstellen.Die Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge wird nur auf Kanälen unterstützt, die <xref:System.ServiceModel.Channele.ReceiveContext> unterstützen, z. B. die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-MSMQ\-Bindungen.  
+# <a name="out-of-order-message-processing"></a>Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge
+Workflowdienste können davon abhängig sein, dass Nachrichten in einer bestimmten Reihenfolge gesendet werden. Ein Workflowdienst enthält eine oder mehrere <xref:System.ServiceModel.Activities.Receive>-Aktivitäten, und jede <xref:System.ServiceModel.Activities.Receive>-Aktivität erwartet eine bestimmte Nachricht. Ohne bestimmte Transportübermittlungsgarantien kann es vorkommen, dass von Clients gesendete Nachrichten verzögert und in einer Reihenfolge gesendet werden, die der Workflowdienst ggf. nicht erwartet. Das Implementieren eines Workflowdiensts, der das Senden von Nachrichten in einer bestimmten Reihenfolge nicht erfordert, wird normalerweise mithilfe einer Parallel-Aktivität durchgeführt. Bei einem komplizierteren Anwendungsprotokoll würde der Workflow schnell sehr komplex werden.  Mit der Funktion zur Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] können Sie einen Workflow dieser Art ganz ohne die Komplexität geschachtelter Parallel-Aktivitäten erstellen. Die Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge wird nur auf Kanälen unterstützt, die <xref:System.ServiceModel.Channels.ReceiveContext> unterstützen, z. B. die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-MSMQ-Bindungen.  
   
-## Aktivieren der Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge  
- Sie aktivieren die Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge, indem Sie die <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A>\-Eigenschaft für WorkflowService auf `true` festlegen.Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A>\-Eigenschaft im Code festlegen.  
+## <a name="enabling-out-of-order-message-processing"></a>Aktivieren der Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge  
+ Sie aktivieren die Verarbeitung von Nachrichten außerhalb der normalen Reihenfolge, indem Sie die <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A>-Eigenschaft für WorkflowService auf `true` festlegen. Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A>-Eigenschaft im Code festlegen.  
   
 ```csharp  
 // Code: Opt-in to Buffered Receive processing...  
@@ -30,10 +33,9 @@ WorkflowService service = new WorkflowService
     Body = workflow,  
     AllowBufferedReceive = true  
 };  
-  
 ```  
   
- Sie können das `AllowBufferedReceive`\-Attribut auch auf einen Workflowdienst in XAML anwenden, wie im folgenden Beispiel gezeigt.  
+ Sie können das `AllowBufferedReceive`-Attribut auch auf einen Workflowdienst in XAML anwenden, wie im folgenden Beispiel gezeigt.  
   
 ```xaml  
 // Xaml: Opt-in to Buffered Receive processing...  
@@ -42,7 +44,7 @@ WorkflowService service = new WorkflowService
 </Sequence>  
 ```  
   
-## Siehe auch  
- <xref:System.ServiceModel.Channels.ReceiveContext>   
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ServiceModel.Channels.ReceiveContext>  
+ [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

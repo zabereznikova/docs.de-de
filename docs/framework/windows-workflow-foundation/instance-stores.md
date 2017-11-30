@@ -1,36 +1,40 @@
 ---
-title: "Instanzspeicher | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Instanzspeicher
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c78e5ff1310951defdfaa38a9b63aacb9c27872b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Instanzspeicher
-Ein Instanzspeicher ist ein logischer Container für Instanzen.An diesem Ort werden die Instanzdaten und die Metadaten gespeichert.Ein Instanzspeicher bedeutet keine dedizierte physische Speicherung.Ein Instanzspeicher kann permanente Informationen in einer SQL Server\-Datenbank oder nicht permanente Zustandsinformationen in einem Arbeitsspeicher enthalten.Im Lieferumfang von [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ist der SQL\-Workflowinstanzspeicher enthalten. Dabei handelt es sich um eine konkrete Implementierung eines Instanzspeichers, der Workflows das Beibehalten von Instanzdaten und Metadaten in einer SQL Server 2005\- oder SQL Server 2008\-Datenbank ermöglicht.Außerdem bietet Windows Server AppFabric auch eine konkrete Implementierung eines Instanzspeichers.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server AppFabric\-Instanzspeicher, Abfrage und Steuerelementanbieter](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x407).  
+# <a name="instance-stores"></a>Instanzspeicher
+Ein Instanzspeicher ist ein logischer Container für Instanzen. An diesem Ort werden die Instanzdaten und die Metadaten gespeichert. Ein Instanzspeicher bedeutet keine dedizierte physische Speicherung. Ein Instanzspeicher kann permanente Informationen in einer SQL Server-Datenbank oder nicht permanente Zustandsinformationen in einem Arbeitsspeicher enthalten. Im Lieferumfang von [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ist der SQL-Workflowinstanzspeicher enthalten. Dabei handelt es sich um eine konkrete Implementierung eines Instanzspeichers, der Workflows das Beibehalten von Instanzdaten und Metadaten in einer SQL Server 2005- oder SQL Server 2008-Datenbank ermöglicht. Außerdem bietet Windows Server AppFabric auch eine konkrete Implementierung eines Instanzspeichers. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server AppFabric-Instanzspeicher, Abfrage und Anbietern der Quellcodeverwaltung](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
- Die Persistenz\-API ist die Schnittstelle zwischen einem Host und einem Instanzspeicher, die dem Host das Senden von Befehlsanforderungen \(z. B. <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> und <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>\) an den Instanzspeicher ermöglicht.Die konkrete Implementierung dieser API wird als Persistenzanbieter bezeichnet.Der Persistenzanbieter empfängt Anforderungen von einem Host und ändert den Instanzspeicher.  
+ Die Persistenz-API ist die Schnittstelle zwischen einem Host und einem Instanzspeicher, die dem Host das Senden von Befehlsanforderungen (z. B. <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> und <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) an den Instanzspeicher ermöglicht. Die konkrete Implementierung dieser API wird als Persistenzanbieter bezeichnet. Der Persistenzanbieter empfängt Anforderungen von einem Host und ändert den Instanzspeicher.  
   
- Hosts und Instanzspeicher sind austauschbar, sodass ein Host mit vielen Instanzspeichern und ein Instanzspeicher auch mit vielen Hosts verwendet werden kann.Ein Instanzspeicher ist normalerweise für die Verwendungsmuster eines bestimmten Hosts optimiert, obwohl für den Instanzspeicher und den Host möglicherweise voneinander unabhängige Lebenszyklen gelten.**WorkflowServiceHost** und **SqlWorkflowInstanceStore** sind z. B. für eine gute Zusammenarbeit konzipiert.Sie können einen eigenen Instanzspeicher zum Beibehalten von Daten und Metadaten von Workflowdienstinstanzen erstellen und diesen Instanzspeicher in Verbindung mit **WorkflowServiceHost** verwenden.Beispielsweise können Sie ein OracleWorkflowInstanceStore\-Objekt erstellen, bei dem Workflows Informationen in eine Oracle\-Datenbank beibehalten können, anstatt diese in einer SQL Server\-Datenbank zu speichern.  
+ Hosts und Instanzspeicher sind austauschbar, sodass ein Host mit vielen Instanzspeichern und ein Instanzspeicher auch mit vielen Hosts verwendet werden kann. Ein Instanzspeicher ist normalerweise für die Verwendungsmuster eines bestimmten Hosts optimiert, obwohl für den Instanzspeicher und den Host möglicherweise voneinander unabhängige Lebenszyklen gelten. Z. B. die **WorkflowServiceHost** und **SqlWorkflowInstanceStore** gut miteinander funktionieren. Sie können einen eigenen Instanzspeicher zum Beibehalten von Daten und Metadaten von workflowdienstinstanzen und diesen Instanzspeicher mit Erstellen der **WorkflowServiceHost**. Beispielsweise können Sie ein OracleWorkflowInstanceStore-Objekt erstellen, bei dem Workflows Informationen in eine Oracle-Datenbank beibehalten können, anstatt diese in einer SQL Server-Datenbank zu speichern.  
   
- Hosts werden häufig mit zusätzlicher Funktionalität erweitert, die die beibehaltenen Objekte ändert.Ein Instanzpersistenzsystem kann z. B. über einen Workflowhost, eine Erweiterung, die den "Suspend"\-Vorgang unterstützt, und einen SQL\-Instanzspeicher verfügen.Der Workflowhost kann einen Standardbefehl wie Speichern oder Laden senden, um einen Workflow aus einem Instanzspeicher zu speichern oder zu laden oder um einen Workflow in einem Instanzspeicher zu speichern.Die Suspend\-Erweiterung kann den Befehlen zusätzliche Semantik zum Speichern und Laden von Workflowinstanzen hinzufügen, sodass eine angehaltene Workflowinstanz nicht geladen werden kann.Der Persistenzanbieter für den SQL\-Instanzspeicher versteht die Befehle zum Speichern und Laden von Workflowinstanzen und implementiert die Befehle durch das Aufrufen geeigneter gespeicherter Prozeduren, mit denen die Tabellen persistenter Objekte in einer SQL Server\-Datenbank geändert werden.  
+ Hosts werden häufig mit zusätzlicher Funktionalität erweitert, die die beibehaltenen Objekte ändert. Ein instanzpersistenzsystem kann z. B. einen Workflowhost, eine Erweiterung verfügen, die den "Suspend"-Vorgang und einen SQL-Instanzspeicher unterstützt.  Der Workflowhost kann einen Standardbefehl wie Speichern oder Laden senden, um einen Workflow aus einem Instanzspeicher zu speichern oder zu laden oder um einen Workflow in einem Instanzspeicher zu speichern. Die Suspend-Erweiterung kann den Befehlen zusätzliche Semantik zum Speichern und Laden von Workflowinstanzen hinzufügen, sodass eine angehaltene Workflowinstanz nicht geladen werden kann. Der Persistenzanbieter für den SQL-Instanzspeicher versteht die Befehle zum Speichern und Laden von Workflowinstanzen und implementiert die Befehle durch das Aufrufen geeigneter gespeicherter Prozeduren, mit denen die Tabellen persistenter Objekte in einer SQL Server-Datenbank geändert werden.  
   
- Ein Host fungiert als Instanzbesitzer innerhalb eines Instanzspeichers.Ein Host kann gleichzeitig als mehr als ein Instanzbesitzer und mit mehr als einem Instanzspeicher fungieren.Der Host stellt GUIDs für Instanzschlüssel bereit, die den Instanzen zugeordnet sind.Ein Instanzschlüssel ist ein eindeutiger Alias, der eine Instanz identifiziert.Das Persistenzsystem erstellt, aktualisiert und löscht Instanzbesitzerinformationen, während es die von Hosts angeforderten Befehle ausführt.  
+ Ein Host fungiert als Instanzbesitzer innerhalb eines Instanzspeichers. Ein Host kann gleichzeitig als mehr als ein Instanzbesitzer und mit mehr als einem Instanzspeicher fungieren. Der Host stellt GUIDs für Instanzschlüssel bereit, die den Instanzen zugeordnet sind. Ein Instanzschlüssel ist ein eindeutiger Alias, der eine Instanz identifiziert. Das Persistenzsystem erstellt, aktualisiert und löscht Instanzbesitzerinformationen, während es die von Hosts angeforderten Befehle ausführt.  
   
  Die folgende Liste enthält die wichtigen Schritte für die Interaktion des Hosts mit dem Instanzspeicher:  
   
-1.  Abrufen eines **InstanceStore** von einem Persistenzanbieter  
+1.  Abrufen einer **InstanceStore** von Persistenz-Provider.  
+
+2.  Das Handle für eine Instanz zu erhalten, durch Aufrufen der <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> Methode für die **InstanceStore**.  
   
-2.  Abrufen des Handles zu einer Instanz durch das Aufrufen der <xref:System.Runtime.Persistence.InstanceStore.CreateInstanceHandle%2A>\-Methode im **InstanceStore**  
+3.  Aufrufen von Befehlen für den Instanzhandle durch Aufrufen der <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> Methode für die **InstanceStore**.  
   
-3.  Aufrufen von Befehlen für den Instanzhandle durch das Aufrufen der <xref:System.Runtime.Persistence.InstanceStore.Execute%2A>\-Methode im **InstanceStore**  
-  
-4.  Untersuchen des von **InstanceStore.Execute** zurückgegebenen <xref:System.Runtime.Persistence.InstanceView>\-Elements, um die Ergebnisse der Befehle zu ermitteln
+4.  Überprüfen Sie die <xref:System.Runtime.DurableInstancing.InstanceView> zurückgegebenes **InstanceStore.Execute** um die Ergebnisse der Befehle zu ermitteln.

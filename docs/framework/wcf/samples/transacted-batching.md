@@ -1,61 +1,64 @@
 ---
-title: "Transaktive Batchverarbeitung: | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Transaktive Batchverarbeitung:'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Transaktive Batchverarbeitung:
-In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mithilfe von Message Queuing \(MSMQ\) veranschaulicht.  Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion für durchgeführte Lesevorgänge in Kommunikation unter Verwendung von Warteschlangen.  
+# <a name="transacted-batching"></a>Transaktive Batchverarbeitung:
+In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mithilfe von Message Queuing (MSMQ) veranschaulicht. Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion für durchgeführte Lesevorgänge in Kommunikation unter Verwendung von Warteschlangen.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst.  Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet.  Der Dienst empfängt Nachrichten aus der Warteschlange.  Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
+ In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
   
- Dieses Beispiel veranschaulicht transaktive Batchverarbeitung.  Die transaktive Batchverarbeitung ist ein Verhalten, das beim Lesen und Verarbeiten einer großen Anzahl an Nachrichten in der Warteschlange die Verwendung einer einzelnen Transaktion ermöglicht.  
+ Dieses Beispiel veranschaulicht transaktive Batchverarbeitung. Die transaktive Batchverarbeitung ist ein Verhalten, das beim Lesen und Verarbeiten einer großen Anzahl an Nachrichten in der Warteschlange die Verwendung einer einzelnen Transaktion ermöglicht.  
   
-### So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie die [Einmaliges Setupverfahren für Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) ausgeführt haben.  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist.  Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt.  Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ\-Warteschlangen\-Manager erstellen.  Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
+2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:  
   
-    1.  Öffnen Sie Server\-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Öffnen Sie Server-Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Erweitern Sie die Registerkarte **Features**.  
+    2.  Erweitern Sie die **Funktionen** Registerkarte.  
   
-    3.  Klicken Sie mit der rechten Maustaste auf **Private Meldungswarteschlangen**, und klicken Sie anschließend auf **Neu** und **Private Warteschlange**.  
+    3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.  
   
-    4.  Aktivieren Sie das Kontrollkästchen **Transaktional**.  
+    4.  Überprüfen Sie die **transaktional** Feld.  
   
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen der neuen Warteschlange ein.  
+    5.  Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange.  
   
     > [!NOTE]
-    >  In diesem Beispiel sendet der Client Hunderte von Nachrichten als Teil des Batches.  Es ist normal, dass die Verarbeitung durch die Dienstanwendung eine gewisse Zeit dauert.  
+    >  In diesem Beispiel sendet der Client Hunderte von Nachrichten als Teil des Batches. Es ist normal, dass die Verarbeitung durch die Dienstanwendung eine gewisse Zeit dauert.  
   
-3.  Zum Erstellen der C\#\- oder Visual Basic .NET\-Edition der Projektmappe befolgen Sie die unter [Erstellen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) aufgeführten Anweisungen.  
+3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-4.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den Anweisungen unter [Durchführen der Windows Communication Foundation\-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory\-Integration verfügt  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   
-1.  Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert.  Es gibt zwei relevante Eigenschaften für die MSMQ\-Transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` In der Standardeinstellung ist der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene ist auf `Sign` festgelegt.  Damit MSMQ die Authentifizierungs\- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory\-Integrationsoption für MSMQ muss installiert sein.  Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+1.  Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene festgelegt ist, um `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
-2.  Wenn Ihr Computer nicht zu einer Domäne gehört oder auf ihm keine Active Directory\-Integration installiert ist, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` setzen, wie in der folgenden Beispielkonfiguration gezeigt.  
+2.  Wenn Ihr Computer nicht zu einer Domäne gehört oder auf ihm keine Active Directory-Integration installiert ist, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` setzen, wie in der folgenden Beispielkonfiguration gezeigt.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <behaviors>  
         <serviceBehaviors>  
@@ -101,30 +104,29 @@ In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mith
       </bindings>  
   
     </system.serviceModel>  
-  
     ```  
   
 3.  Ändern Sie die Konfiguration sowohl auf dem Server als auch auf dem Client, bevor Sie das Beispiel ausführen.  
   
     > [!NOTE]
-    >  Wenn Sie `security` `mode` auf `None` festlegen, entspricht dies der Festlegung der Sicherheit von <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> und `Message` auf `None`.  
+    >  Das Festlegen von `security``mode` auf `None` entspricht dem Festlegen von <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> und der `Message`-Sicherheit auf `None`.  
   
 4.  Um die Datenbank auf einem Remotecomputer auszuführen, ändern Sie die Verbindungszeichenfolge so, dass sie auf den Computer verweist, auf dem sich die Datenbank befindet.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Um dieses Beispiel auszuführen, muss MSMQ installiert sein, und SQL oder SQL Express ist erforderlich.  
   
-## Veranschaulicht  
- Das Beispiel veranschaulicht transaktives Batchverarbeitungsverhalten.  Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion, die zusammen mit MSMQ\-Wartenschlangentransport bereitgestellt wird.  
+## <a name="demonstrates"></a>Veranschaulicht  
+ Das Beispiel veranschaulicht transaktives Batchverarbeitungsverhalten. Transaktive Batchverarbeitung ist eine Leistungsoptimierungsfunktion, die zusammen mit MSMQ-Wartenschlangentransport bereitgestellt wird.  
   
- Wenn Transaktionen verwendet werden, um Nachrichten zu senden und zu empfangen, gibt es genau genommen 2 separate Transaktionen.  Wenn der Client innerhalb des Geltungsbereichs einer Transaktion Nachrichten sendet, gilt die Transaktion lokal für den Client und den Warteschlangen\-Manager des Clients.  Wenn der Dienst innerhalb des Geltungsbereichs der Transaktion Nachrichten empfängt, gilt die Transaktion lokal für den Dienst und den empfangenden Warteschlangen\-Manager.  Es ist wichtig, daran zu denken, dass der Client und der Dienst nicht an derselben Transaktion beteiligt sind, sondern zur Durchführung ihrer Vorgänge \(wie Senden und Empfangen\) über die Warteschlange verschiedene Transaktionen verwenden.  
+ Wenn Transaktionen verwendet werden, um Nachrichten zu senden und zu empfangen, gibt es genau genommen 2 separate Transaktionen. Wenn der Client innerhalb des Geltungsbereichs einer Transaktion Nachrichten sendet, gilt die Transaktion lokal für den Client und den Warteschlangen-Manager des Clients. Wenn der Dienst innerhalb des Geltungsbereichs der Transaktion Nachrichten empfängt, gilt die Transaktion lokal für den Dienst und den empfangenden Warteschlangen-Manager. Es ist wichtig, daran zu denken, dass der Client und der Dienst nicht an derselben Transaktion beteiligt sind, sondern zur Durchführung ihrer Vorgänge (wie Senden und Empfangen) über die Warteschlange verschiedene Transaktionen verwenden.  
   
- Im Beispiel wird eine einzelne Transaktion zur Ausführung mehrerer Dienstvorgänge verwendet.  Diese dient lediglich als Leistungsoptimierungsfunktion und hat keine Auswirkungen auf die Semantik der Anwendung.  Dieses Beispiel basiert auf [Abgewickelte MSMQ\-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Im Beispiel wird eine einzelne Transaktion zur Ausführung mehrerer Dienstvorgänge verwendet. Diese dient lediglich als Leistungsoptimierungsfunktion und hat keine Auswirkungen auf die Semantik der Anwendung. Das Beispiel basiert auf [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
-## Kommentare  
- In diesem Beispiel sendet der Client einen Nachrichtenbatch aus dem Geltungsbereich einer Transaktion an den Dienst.  Um die Leistungsoptimierung zu zeigen, wird eine große Anzahl von Nachrichten gesendet; in diesem Fall bis zu 2.500 Nachrichten.  
+## <a name="comments"></a>Kommentare  
+ In diesem Beispiel sendet der Client einen Nachrichtenbatch aus dem Geltungsbereich einer Transaktion an den Dienst. Um die Leistungsoptimierung zu zeigen, wird eine große Anzahl von Nachrichten gesendet; in diesem Fall bis zu 2.500 Nachrichten.  
   
- Die an die Warteschlange gesendeten Nachrichten werden dann vom Dienst innerhalb des vom Dienst definierten Geltungsbereichs der Transaktion empfangen.  Ohne Batchverarbeitung führt dies zu 2.500 Transaktionen für jeden Aufruf des Dienstvorgangs.  Dadurch wird die Leistung des Systems beeinflusst.  Da zwei Ressourcen\-Manager beteiligt sind – die MSMQ\-Warteschlange und die `Orders`\-Datenbank – ist jede dieser Transaktionen eine DTC\-Transaktion.  Dieser Vorgang wurde wie folgt optimiert: Es wird eine wesentlich kleinere Anzahl an Transaktionen verwendet, indem sichergestellt wird, dass ein Batch an Nachrichten und Dienstvorgangsaufrufen in einer einzelnen Transaktion erfolgt.  
+ Die an die Warteschlange gesendeten Nachrichten werden dann vom Dienst innerhalb des vom Dienst definierten Geltungsbereichs der Transaktion empfangen. Ohne Batchverarbeitung führt dies zu 2.500 Transaktionen für jeden Aufruf des Dienstvorgangs. Dadurch wird die Leistung des Systems beeinflusst. Da zwei Ressourcen-Manager beteiligt sind – die MSMQ-Warteschlange und die `Orders`-Datenbank – ist jede dieser Transaktionen eine DTC-Transaktion. Dieser Vorgang wurde wie folgt optimiert: Es wird eine wesentlich kleinere Anzahl an Transaktionen verwendet, indem sichergestellt wird, dass ein Batch an Nachrichten und Dienstvorgangsaufrufen in einer einzelnen Transaktion erfolgt.  
   
  Die Batchverarbeitungsfunktion wird wie folgt verwendet:  
   
@@ -136,9 +138,9 @@ In diesem Beispiel wird die Batchverarbeitung durchgeführter Lesevorgänge mith
   
  In diesem Beispiel werden Leistungssteigerungen durch die Verringerung von Transaktionen gezeigt, die dadurch erreicht werden kann, dass erst 100 Dienstvorgänge in einer einzelnen Transaktion aufgerufen werden, bevor der Commit für die Transaktion ausgeführt wird.  
   
- Das Dienstverhalten definiert ein Vorgangsverhalten, wobei `TransactionScopeRequired` auf `true` gesetzt ist.  Auf diese Weise wird sichergestellt, dass alle Ressourcen\-Manager, auf die diese Methode zugreift, denselben Geltungsbereich einer Transaktion verwenden, der auch zum Abrufen der Nachricht aus der Warteschlange verwendet wurde.  In diesem Beispiel wird eine einfache Datenbank zum Speichern der in der Nachricht enthaltenen Bestellinformation verwendet werden.  Des Weiteren wird durch den Transaktionsbereich gewährleistet, dass die Nachricht an die Warteschlange zurückgegeben wird, wenn die Methode eine Ausnahme auslöst.  Ohne Festlegung dieses Vorgangsverhaltens erstellt ein in der Warteschlange stehender Kanal eine Transaktion, um die Nachricht aus der Warteschlange zu lesen, und führt automatisch vor der Verteilung der Nachricht dafür einen Commit aus, sodass die Nachricht verloren geht, falls der Vorgang fehlschlägt.  Das häufigste Szenario betrifft Dienstvorgänge, die sich in der Transaktion eintragen, die zum Lesen der Nachricht aus der Warteschlange dient, wie im folgenden Code veranschaulicht.  
+ Das Dienstverhalten definiert ein Vorgangsverhalten, wobei `TransactionScopeRequired` auf `true` gesetzt ist. Auf diese Weise wird sichergestellt, dass alle Ressourcen-Manager, auf die diese Methode zugreift, denselben Geltungsbereich einer Transaktion verwenden, der auch zum Abrufen der Nachricht aus der Warteschlange verwendet wurde. In diesem Beispiel wird eine einfache Datenbank zum Speichern der in der Nachricht enthaltenen Bestellinformation verwendet werden. Des Weiteren wird durch den Transaktionsbereich gewährleistet, dass die Nachricht an die Warteschlange zurückgegeben wird, wenn die Methode eine Ausnahme auslöst. Ohne Festlegung dieses Vorgangsverhaltens erstellt ein in der Warteschlange stehender Kanal eine Transaktion, um die Nachricht aus der Warteschlange zu lesen, und führt automatisch vor der Verteilung der Nachricht dafür einen Commit aus, sodass die Nachricht verloren geht, falls der Vorgang fehlschlägt. Das häufigste Szenario betrifft Dienstvorgänge, die sich in der Transaktion eintragen, die zum Lesen der Nachricht aus der Warteschlange dient, wie im folgenden Code veranschaulicht.  
   
- Beachten Sie, dass `ReleaseServiceInstanceOnTransactionComplete` auf `false` gesetzt ist.  Dies ist eine wichtige Anforderung für die Batchverarbeitung.  Die Eigenschaft `ReleaseServiceInstanceOnTransactionComplete` für `ServiceBehaviorAttribute`gibt an, was nach Abschluss der Transaktion mit der Dienstinstanz geschehen soll.  Standardmäßig wird die Dienstinstanz nach Abschluss der Transaktion freigegeben.  Der wichtigste Aspekt bei der Batchverarbeitung ist die Verwendung einer einzelnen Transaktion zum Lesen und Verteilen einer großen Anazahl an Nachrichten in der Warteschlange.  Die Freigabe des Diensts führt also zum Vorzeitigen Abschluss der Transaktion, wodurch der ganze Nutzen der Stapelverarbeitung hinfällig wird.  Wenn diese Eigenschaft auf `true` gesetzt und transaktive Batchverarbeitung zum Endpunkt hinzugefügt wird, löst das Batchverarbeitungsverhalten eine Ausnahme aus.  
+ Beachten Sie, dass `ReleaseServiceInstanceOnTransactionComplete` auf `false` gesetzt ist. Dies ist eine wichtige Anforderung für die Batchverarbeitung. Die Eigenschaft `ReleaseServiceInstanceOnTransactionComplete` für `ServiceBehaviorAttribute`gibt an, was nach Abschluss der Transaktion mit der Dienstinstanz geschehen soll. Standardmäßig wird die Dienstinstanz nach Abschluss der Transaktion freigegeben. Der wichtigste Aspekt bei der Batchverarbeitung ist die Verwendung einer einzelnen Transaktion zum Lesen und Verteilen einer großen Anazahl an Nachrichten in der Warteschlange. Die Freigabe des Diensts führt also zum Vorzeitigen Abschluss der Transaktion, wodurch der ganze Nutzen der Stapelverarbeitung hinfällig wird. Wenn diese Eigenschaft auf `true` gesetzt und transaktive Batchverarbeitung zum Endpunkt hinzugefügt wird, löst das Batchverarbeitungsverhalten eine Ausnahme aus.  
   
 ```  
 // Service class that implements the service contract.  
@@ -157,10 +159,9 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-  
 ```  
   
- Die `Orders`\-Klasse kapselt die Verarbeitung des Auftrags.  Im Beispiel aktualisiert sie die Datenbank mit Bestellinformationen.  
+ Die `Orders`-Klasse kapselt die Verarbeitung des Auftrags. Im Beispiel aktualisiert sie die Datenbank mit Bestellinformationen.  
   
 ```  
 // Order Processing Logic  
@@ -236,7 +237,7 @@ public class Orders
   
  Das Batchverarbeitungsverhalten und seine Konfiguration werden in der Dienstanwendungskonfiguration angegeben.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -281,15 +282,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  Die Batchgröße ist ein Hinweis für das System.  Wenn Sie beispielsweise die Batchgröße 20 angaben, werden 20 Nachrichten in einer einzelnen Transaktion gelesen und verteilt, und anschließend wird ein Commit für die Transaktion ausgeführt.  Aber es gibt Fälle, in denen die Transaktion möglicherweise einen Commit für den Batch ausführt, bevor die Batchgröße erreicht wird.  
+>  Die Batchgröße ist ein Hinweis für das System. Wenn Sie beispielsweise die Batchgröße 20 angaben, werden 20 Nachrichten in einer einzelnen Transaktion gelesen und verteilt, und anschließend wird ein Commit für die Transaktion ausgeführt. Aber es gibt Fälle, in denen die Transaktion möglicherweise einen Commit für den Batch ausführt, bevor die Batchgröße erreicht wird.  
 >   
->  Jeder Transaktion ist ein Timeout zugeordnet, das zu laufen beginnt, sobald die Transaktion erstellt wird.  Wenn dieses Timeout abläuft, wird die Transaktion abgebrochen.  Es ist sogar möglich, dass dieses Timeout abläuft, bevor die Batchgröße erreicht wird.  Um zu vermeiden, dass der Batch aufgrund des Abbruchs erneut verarbeitet werden muss, überprüft `TransactedBatchingBehavior`, wie viel Zeit für die Transaktion noch übrig ist.  Wenn 80 % des Transaktionstimeouts abgelaufen sind, wird ein Commit für die Transaktion ausgeführt.  
+>  Jeder Transaktion ist ein Timeout zugeordnet, das zu laufen beginnt, sobald die Transaktion erstellt wird. Wenn dieses Timeout abläuft, wird die Transaktion abgebrochen. Es ist sogar möglich, dass dieses Timeout abläuft, bevor die Batchgröße erreicht wird. Um zu vermeiden, dass der Batch aufgrund des Abbruchs erneut verarbeitet werden muss, überprüft `TransactedBatchingBehavior`, wie viel Zeit für die Transaktion noch übrig ist. Wenn 80 % des Transaktionstimeouts abgelaufen sind, wird ein Commit für die Transaktion ausgeführt.  
 >   
 >  Falls die Warteschlange keine weiteren Nachrichten mehr enthält, wird nicht weiter auf das Erreichen der Batchgröße gewartet, sondern <xref:System.ServiceModel.Description.TransactedBatchingBehavior> führt einen Commit für die Transaktion durch.  
 >   
->  Die Auswahl der Batchgröße hängt von Ihrer Anwendung ab.  Wenn die Batchgröße zu klein ist, wird möglicherweise nicht die gewünschte Leistung erreicht.  Andererseits kann auch eine zu große Batchgröße zu Leistungseinbußen führen.  Beispielsweise könnte die Transaktion länger erhalten bleiben und die Datenbank sperren, oder die Transaktion könnte blockiert werden, was dazu führen könnte, dass der Batch zurückgesetzt wird und die Arbeit wiederholt werden muss.  
+>  Die Auswahl der Batchgröße hängt von Ihrer Anwendung ab. Wenn die Batchgröße zu klein ist, wird möglicherweise nicht die gewünschte Leistung erreicht. Andererseits kann auch eine zu große Batchgröße zu Leistungseinbußen führen. Beispielsweise könnte die Transaktion länger erhalten bleiben und die Datenbank sperren, oder die Transaktion könnte blockiert werden, was dazu führen könnte, dass der Batch zurückgesetzt wird und die Arbeit wiederholt werden muss.  
   
- Der Client erstellt einen Geltungsbereich für die Transaktion.  Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden.  Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.  
+ Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit der Warteschlange findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der entweder alle oder keine Nachrichten an die Warteschlange gesendet werden. Für die Transaktion wird ein Commit ausgeführt, indem <xref:System.Transactions.TransactionScope.Complete%2A> im Geltungsbereich der Transaktion aufgerufen wird.  
   
 ```  
 //Client implementation code.  
@@ -340,7 +341,7 @@ class Client
 }  
 ```  
   
- Wenn Sie das Beispiel ausführen, werden die Client\- und Dienstaktivitäten sowohl im Dienst\- als auch im Clientkonsolenfenster angezeigt.  Sie können sehen, wie der Dienst Nachrichten vom Client empfängt.  Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen.  Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt.  Sie können eine rollende Ausgabe sehen, während Nachrichten in einen Batch eingelesen und verarbeitet werden.  
+ Wenn Sie das Beispiel ausführen, werden die Client- und Dienstaktivitäten sowohl im Dienst- als auch im Clientkonsolenfenster angezeigt. Sie können sehen, wie der Dienst Nachrichten vom Client empfängt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen. Beachten Sie, dass aufgrund der Verwendung einer Warteschlange der Client und der Dienst nicht gleichzeitig ausgeführt werden müssen. Sie können den Client ausführen, ihn schließen und anschließend den Dienst starten, der dann trotzdem noch die Nachrichten des Clients empfängt. Sie können eine rollende Ausgabe sehen, während Nachrichten in einen Batch eingelesen und verarbeitet werden.  
   
 ```  
 The service is ready.  
@@ -375,12 +376,12 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert.  Suchen Sie nach dem folgenden Verzeichnis \(Standardverzeichnis\), bevor Sie fortfahren.  
+>  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\- und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\-Beispiele herunterzuladen.  Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<Installationslaufwerk>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## Siehe auch
+## <a name="see-also"></a>Siehe auch

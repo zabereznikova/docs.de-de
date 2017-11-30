@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - global proxy instances
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ec177366c955e2ac555519f32fe48ddbc1aba5a0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9e2be47cfd1ce56df7a0ad926166f8224a812449
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Zugreifen auf das Internet über einen Proxy
 Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen, müssen Sie eine Proxyinstanz zum Aktivieren der Anwendung für die Kommunikation mit dem Webproxy konfigurieren.  
@@ -48,6 +42,5 @@ Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen,
 -   [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)  
  [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
-

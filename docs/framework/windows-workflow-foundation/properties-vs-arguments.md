@@ -1,27 +1,31 @@
 ---
-title: "Eigenschaften und Argumente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Eigenschaften im Vergleich zu Argumente
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9b3f06cf91591a373550f876f7b2111159067ba3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Eigenschaften und Argumente
-Es gibt mehrere Möglichkeiten für die Übergabe von Daten an eine Aktivität.Neben dem Verwenden von <xref:System.Activities.InArgument> können auch Aktivitäten entwickelt werden, um Daten entweder mit CLR\-Standardeigenschaften oder öffentlichen <xref:System.Activities.ActivityAction>\-Eigenschaften zu empfangen.In diesem Thema wird erläutert, wie der richtige Methodentyp ausgewählt wird.  
+# <a name="properties-vs-arguments"></a>Eigenschaften im Vergleich zu Argumente
+Es gibt mehrere Möglichkeiten für die Übergabe von Daten an eine Aktivität. Neben dem Verwenden von <xref:System.Activities.InArgument> können auch Aktivitäten entwickelt werden, um Daten entweder mit CLR-Standardeigenschaften oder öffentlichen <xref:System.Activities.ActivityAction>-Eigenschaften zu empfangen. In diesem Thema wird erläutert, wie der richtige Methodentyp ausgewählt wird.  
   
-## Verwenden von CLR\-Eigenschaften  
- Bei der Übergabe von Daten an eine Aktivität bestehen bei CLR\-Eigenschaften \(d. h. öffentliche Methoden, die Get\- und Set\-Routinen zum Verfügbarmachen von Daten verwenden\) die meisten Einschränkungen.Der Wert eines Parameters, der an eine CLR\-Eigenschaft übergeben wird, muss zur Kompilierungszeit der Lösung bekannt sein. Dieser Wert ist für jede Instanz des Workflows identisch.Ein an eine CLR\-Eigenschaft übergebener Wert ist also mit einer Konstante vergleichbar, die im Code definiert wird. Der Wert kann weder für die Lebensdauer der Aktivität noch für verschiedene Instanzen der Aktivität geändert werden.<xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> ist ein Beispiel für eine CLR\-Eigenschaft, die von einer Aktivität verfügbar gemacht wird. Der Methodenname, den die Aktivität aufruft, kann nicht basierend auf den Laufzeitbedingungen geändert werden und ist für jede Instanz der Aktivität identisch.  
+## <a name="using-clr-properties"></a>Verwenden von CLR-Eigenschaften  
+ Bei der Übergabe von Daten an eine Aktivität bestehen bei CLR-Eigenschaften (d. h. öffentliche Methoden, die Get- und Set-Routinen zum Verfügbarmachen von Daten verwenden) die meisten Einschränkungen. Der Wert eines Parameters, der an eine CLR-Eigenschaft übergeben wird, muss zur Kompilierungszeit der Lösung bekannt sein. Dieser Wert ist für jede Instanz des Workflows identisch. Ein an eine CLR-Eigenschaft übergebener Wert ist also mit einer Konstante vergleichbar, die im Code definiert wird. Der Wert kann weder für die Lebensdauer der Aktivität noch für verschiedene Instanzen der Aktivität geändert werden. <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> ist ein Beispiel für eine CLR-Eigenschaft, die von einer Aktivität verfügbar gemacht wird. Der Methodenname, den die Aktivität aufruft, kann nicht basierend auf den Laufzeitbedingungen geändert werden und ist für jede Instanz der Aktivität identisch.  
   
-## Verwenden von Argumenten  
- Argumente sollten verwendet werden, wenn Daten nur einmal während der Lebensdauer der Aktivität ausgewertet werden. Das heißt, der Wert bleibt zwar während der Lebensdauer der Aktivität unverändert, kann aber für verschiedene Instanzen der Aktivität anders lauten.<xref:System.Activities.Statements.If.Condition%2A> ist ein Beispiel für einen Wert, der einmal ausgewertet wird und daher als Argument definiert ist.<xref:System.Activities.Statements.WriteLine.Text%2A> ist ein weiteres Beispiel für eine Methode, die als Argument definiert werden sollte, da sie nur einmal während der Ausführung der Aktivität ausgewertet wird, aber für verschiedene Instanzen der Aktivität anders lauten kann.  
+## <a name="using-arguments"></a>Verwenden von Argumenten  
+ Argumente sollten verwendet werden, wenn Daten nur einmal während der Lebensdauer der Aktivität ausgewertet werden. Das heißt, der Wert bleibt zwar während der Lebensdauer der Aktivität unverändert, kann aber für verschiedene Instanzen der Aktivität anders lauten. <xref:System.Activities.Statements.If.Condition%2A> ist ein Beispiel für einen Wert, der einmal ausgewertet wird und daher als Argument definiert ist. <xref:System.Activities.Statements.WriteLine.Text%2A> ist ein weiteres Beispiel für eine Methode, die als Argument definiert werden sollte, da sie nur einmal während der Ausführung der Aktivität ausgewertet wird, aber für verschiedene Instanzen der Aktivität anders lauten kann.  
   
-## Verwenden von ActivityAction  
- Wenn Daten während der Lebensdauer der Ausführung einer Aktivität mehrmals ausgewertet werden müssen, sollte ein <xref:System.Activities.ActivityAction> verwendet werden.Die <xref:System.Activities.Statements.While.Condition%2A>\-Eigenschaft wird z. B. für jede Iteration der <xref:System.Activities.Statements.While>\-Schleife ausgewertet.Wenn zu diesem Zweck ein <xref:System.Activities.InArgument> verwendet wird, wird die Schleife nie beendet, da das Argument nicht für jede Iteration erneut ausgewertet wird und immer das gleiche Ergebnis zurückgibt.
+## <a name="using-activityaction"></a>Verwenden von ActivityAction  
+ Wenn Daten während der Lebensdauer der Ausführung einer Aktivität mehrmals ausgewertet werden müssen, sollte ein <xref:System.Activities.ActivityAction> verwendet werden. Die <xref:System.Activities.Statements.While.Condition%2A>-Eigenschaft wird z. B. für jede Iteration der <xref:System.Activities.Statements.While>-Schleife ausgewertet. Wenn zu diesem Zweck ein <xref:System.Activities.InArgument> verwendet wird, wird die Schleife nie beendet, da das Argument nicht für jede Iteration erneut ausgewertet wird und immer das gleiche Ergebnis zurückgibt.

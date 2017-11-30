@@ -1,38 +1,39 @@
 ---
-title: "TrackBar-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Schieberegler-Steuerelemente"
-  - "Schieberegler"
-  - "TrackBar-Steuerelement [Windows Forms]"
+title: "TrackBar-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sliders
+- slider controls [Windows Forms]
+- TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# TrackBar-Steuerelement (Windows&#160;Forms)
-Mit dem `TrackBar`\-Steuerelement in Windows Forms \(manchmal als auch "Schieberegler"\-Steuerelement bezeichnet\) können Sie durch große Datenmengen navigieren oder eine numerische Einstellung visuell anpassen.  Das `TrackBar`\-Steuerelement besteht aus zwei Teilen: dem Ziehpunkt \(Schieberegler\) und den Teilstrichen.  Der Ziehpunkt ist der Teil, der angepasst werden kann.  Seine Position wird durch die <xref:System.Windows.Forms.TrackBar.Value%2A>\-Eigenschaft vorgegeben.  Die Teilstriche sind visuelle Zähler, die in regelmäßigen Abständen angeordnet sind.  Der Schieberegler der Positionsleiste wird in von Ihnen festgelegten Schrittweiten verschoben. Die Leiste kann horizontal oder vertikal ausgerichtet werden.  Mit einer Trackleiste können Sie beispielsweise die Cursorblinkrate oder die Mausgeschwindigkeit einstellen.  
+# <a name="trackbar-control-windows-forms"></a>TrackBar-Steuerelement (Windows Forms)
+Windows Forms `TrackBar` -Steuerelement (manchmal auch "Schiebereglersteuerung" genannt) wird verwendet, zum Navigieren durch eine große Menge an Informationen oder für eine numerische Einstellung visuell anpassen. Die `TrackBar` Steuerelement besteht aus zwei Teilen: dem Ziehpunkt, auch bekannt als ein Schieberegler, und die Teilstriche. Der Ziehpunkt ist der Teil, das angepasst werden kann. Entspricht die Position der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Die Teilstriche sind visuelle Indikatoren, die in regelmäßigen Abständen angeordnet sind. Die Trackleiste verschiebt, die Sie angeben, und horizontal oder vertikal ausgerichtet werden können. Eine Beispiel für die Verwendung einer Trackleiste wäre für Cursor Blink Rate oder mit dem Mauszeiger Geschwindigkeit festlegen.  
   
-## In diesem Abschnitt  
- [Übersicht über das TrackBar\-Steuerelement](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des `TrackBar`\-Steuerelements vor, das es Benutzern ermöglicht, mittels visueller Anpassung einer numerischen Einstellung durch Daten zu navigieren.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Übersicht über das TrackBar-Steuerelement](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
+ Stellt die allgemeinen Konzepte von der `TrackBar` -Steuerelement, das Benutzern ermöglicht, die durch Informationen navigieren, indem Sie eine numerische Einstellung visuell anpassen.  
   
-## Referenz  
- <xref:System.Windows.Forms.TrackBar>\-Klasse  
- Stellt Referenzinformationen über die Klasse und ihre Member bereit.  
+## <a name="reference"></a>Verweis  
+ <xref:System.Windows.Forms.TrackBar>-Klasse  
+ Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
-## Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Enthält eine vollständige Liste der Windows Forms\-Steuerelemente sowie Links zu Informationen über ihre Funktion.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

@@ -1,58 +1,59 @@
 ---
-title: "Visuelle Vererbung in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Basisformulare"
-  - "Formularvererbung"
-  - "Vererbung"
-  - "Vererbung, Formulare"
-  - "Geerbte Formulare"
-  - "Geerbte Formulare, Windows Forms"
-  - "Windows Forms, Vererbung"
+title: "Visuelle Vererbung in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- base forms
+- inheritance [Windows Forms], forms
+- inherited forms [Windows Forms], Windows Forms
+- inheritance
+- inherited forms
+- form inheritance
+- Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9d53cf3e54e4a0a0de3207ea59a67f3493f5e88
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Visuelle Vererbung in Windows&#160;Forms
-In einigen Fällen entscheiden Sie sich möglicherweise, im aktuellen Projekt ein Formular zu verwenden, das große Ähnlichkeit mit einem Formular aus einem früheren Projekt hat.  Oder Sie möchten ein Basisformular mit bestimmten Einstellungen, z. B. einem Wasserzeichen oder einem spezifischen Steuerelementlayout, erstellen, das in anderen Projekten wiederverwendet werden kann, wobei Sie bei jeder Wiederverwendung entsprechende Änderungen an der ursprünglichen Formularvorlage vornehmen.  Durch die Formularvererbung können Sie ein Basisformular erstellen sowie dessen Merkmale weitervererben und Änderungen vornehmen, wobei die erforderlichen Originaleinstellungen erhalten bleiben.  
+# <a name="windows-forms-visual-inheritance"></a>Visuelle Vererbung in Windows Forms
+Gelegentlich können Sie entscheiden, dass in einem Projekt ein Formular aufgerufen wird, das einem in einem früheren Projekt erstellten Formular ähnelt. Möglicherweise möchten Sie aber auch ein Basisformular mit Einstellungen wie z.B. Wasserzeichen oder einem bestimmten Steuerelementlayout erstellen, das Sie anschließend erneut in einem Projekt verwenden, wobei jede Iteration Änderungen an der ursprünglichen Formularvorlage umfasst. Bei der Vererbung von Formularen können Sie ein Basisformular erstellen und anschließend von diesem Formular erben und Änderungen vornehmen, während alle ursprünglichen Einstellungen, die Sie benötigen, beibehalten werden.  
   
- Sie können von Klassen abgeleitete Formulare programmgesteuert oder durch die Auswahl für visuelle Vererbung erstellen.  
+ Sie können Formulare mit abgeleiteten Klassen programmgesteuert oder mithilfe der Vererbungsauswahl von Visual erstellen.  
   
-## In diesem Abschnitt  
- [Gewusst wie: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- Hier erfahren Sie, wie Sie geerbte Formulare im Code erstellen.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Vorgehensweise: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ Gibt Anweisungen zum Erstellen geerbter Formulare in Code.  
   
- [Gewusst wie: Erben von Formularen mithilfe des Dialogfelds "Vererbungsauswahl"](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
- Hier erfahren Sie, wie Sie geerbte Formulare mithilfe der Vererbungsauswahl erstellen.  
+ [Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds „Vererbungsauswahl“](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ Gibt Anweisungen zum Erstellen geerbter Formulare mithilfe der Vererbungsauswahl.  
   
  [Auswirkungen beim Ändern der Darstellung von Basisformularen](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- Hier erfahren Sie, wie Sie die Steuerelemente eines Basisformulars sowie die Steuerelementeigenschaften ändern.  
+ Gibt Anweisungen zum Ändern der Steuerelemente eines Basisformulars und der zugehörigen Eigenschaften.  
   
  [Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- Beschreibt die Erstellung eines einfachen Windows Forms und dessen Kompilierung in eine Klassenbibliothek.  Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt.  
+ Beschreibt, wie ein einfaches Windows Form erstellt und in eine Klassenbibliothek kompiliert wird. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt.  
   
- [Gewusst wie: Verwenden von Modifizierern und GenerateMember\-Eigenschaften](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
- Hier erfahren Sie, wie Sie die `GenerateMember`\-Eigenschaft und die `Modifiers`\-Eigenschaft verwenden, die relevant sind, wenn der Windows Forms\-Designer eine Membervariable für eine Komponente generiert.  
+ [Vorgehensweise: Verwenden von Modifizierern und GenerateMember-Eigenschaften](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
+ Gibt Anweisungen zur Verwendung der Eigenschaften `GenerateMember` und `Modifiers`, die relevant sind, wenn der Windows Forms-Designer eine Membervariable für eine Komponente generiert.  
   
-## Verwandte Abschnitte  
- [NOT IN BUILD: Inheritance in Visual Basic](http://msdn.microsoft.com/de-de/e5e6e240-ed31-4657-820c-079b7c79313c)  
- Erläutert die Definition von Visual Basic\-Klassen, die als Basisklassen für andere Klassen verwendet werden.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Grundlagen der Vererbung (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ Beschreibt, wie Visual Basic-Klassen definiert werden, die als Grundlage für andere Klassen dienen.  
   
- [Klasse](../Topic/class%20\(C%23%20Reference\).md)  
- Erläutert die Konzeption von C\#\-Klassen, die die einfache Vererbung unterstützen.  
+ [class](~/docs/csharp/language-reference/keywords/class.md)  
+ Beschreibt den C#-Ansatz von Klassen, in denen die einfache Vererbung zulässig ist.  
   
- [Troubleshooting Inherited Event Handlers in Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)  
- Listet allgemeine Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten können.
+ [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ Führt häufige Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten.

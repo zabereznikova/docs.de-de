@@ -1,45 +1,48 @@
 ---
-title: "Herleiten von Elementtext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ableiten von Elementtext
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66dcc6a98d365f20da6c7f4c075c2fdd8ab936e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Herleiten von Elementtext
-Bei einem Element mit Text, jedoch ohne als Tabellen herzuleitende untergeordnete Elemente \(z. B. Elemente mit Attributen oder sich wiederholende Elemente\), wird der Tabelle, die für das Element hergeleitet wird, eine neue Spalte mit dem Namen **TableName\_Text** hinzugefügt.  Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert.  Die **ColumnMapping**\-Eigenschaft der neuen Spalte wird auf **MappingType.SimpleContent** festgelegt.  
+# <a name="inferring-element-text"></a>Ableiten von Elementtext
+Wenn ein Element Text enthält und verfügt über keine untergeordneten Elemente wie z. B. (Elemente mit Attributen) oder sich wiederholende Elemente eine neue Spalte mit dem Namen Tabellen herzuleitende **TableName_Text** werden hinzugefügt werden, um die Tabelle, die für das Element hergeleitet wird. Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert. Die **ColumnMapping** Eigenschaft der neuen Spalte wird auf festgelegt **MappingType.SimpleContent**.  
   
- Betrachten Sie beispielsweise den folgenden XML\-Code:  
+ Betrachten Sie beispielsweise den folgenden XML-Code:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1">Text1</Element1>  
 </DocumentElement>  
 ```  
   
- Durch die Herleitung wird eine Tabelle mit dem Namen **Element1** und den zwei Spalten **attr1** und **Element1\_Text** erstellt.  Die **ColumnMapping**\-Eigenschaft der **attr1**\-Spalte wird auf **MappingType.Attribute** festgelegt.  Die **ColumnMapping**\-Eigenschaft der **Element1\_Text**\-Spalte wird auf **MappingType.SimpleContent** festgelegt.  
+ Die Herleitung wird einer Tabelle namens **Element1** mit zwei Spalten: **attr1** und **Element1_Text**. Die **ColumnMapping** Eigenschaft von der **attr1** Spaltensatz zu **MappingType.Attribute**. Die **ColumnMapping** Eigenschaft von der **Element1_Text** Spaltensatz zu **MappingType.SimpleContent**.  
   
  **DataSet:** DocumentElement  
   
- **Tabelle:** Element1  
+ **Table:** Element1  
   
-|attr1|Element1\_Text|  
+|attr1|Element1_Text|  
 |-----------|--------------------|  
 |value1|Text1|  
   
- Bei einem Element mit Text und untergeordneten Elementen, die ebenfalls Text enthalten, wird der Tabelle keine Spalte zum Speichern des Elementtexts hinzugefügt.  Der in dem Element enthaltene Text wird ignoriert, während der Text in den untergeordneten Elementen in eine Tabellenzeile eingefügt wird.  Betrachten Sie beispielsweise den folgenden XML\-Code:  
+ Bei einem Element mit Text und untergeordneten Elementen, die ebenfalls Text enthalten, wird der Tabelle keine Spalte zum Speichern des Elementtexts hinzugefügt. Der in dem Element enthaltene Text wird ignoriert, während der Text in den untergeordneten Elementen in eine Tabellenzeile eingefügt wird. Betrachten Sie beispielsweise den folgenden XML-Code:  
   
-```  
+```xml  
 <Element1>  
   Text1  
   <ChildElement1>Text2</ChildElement1>  
@@ -47,20 +50,20 @@ Bei einem Element mit Text, jedoch ohne als Tabellen herzuleitende untergeordnet
 </Element1>  
 ```  
   
- Durch die Herleitung wird eine Tabelle mit dem Namen **Element1** und der Spalte **ChildElement1** erstellt.  Der Text für das **ChildElement1**\-Element wird in eine Zeile der Tabelle eingefügt.  Der restliche Text wird ignoriert.  Die **ColumnMapping**\-Eigenschaft der **ChildElement1**\-Spalte wird auf **MappingType.Element** festgelegt.  
+ Die Herleitung wird einer Tabelle namens **Element1** mit einer Spalte mit dem Namen **ChildElement1**. Der Text für die **ChildElement1** Element wird in einer Zeile in der Tabelle enthalten sein. Der restliche Text wird ignoriert. Die **ColumnMapping** Eigenschaft von der **ChildElement1** Spaltensatz zu **MappingType.Element**.  
   
  **DataSet:** DocumentElement  
   
- **Tabelle:** Element1  
+ **Table:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text2|  
   
-## Siehe auch  
- [Herleiten der relationalen DataSet\-Struktur aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Laden von DataSet\-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Verwenden von XML in einem DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [Ableiten von relationalen DataSet-Struktur von XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Beim Laden eines Datasets aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Beim Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

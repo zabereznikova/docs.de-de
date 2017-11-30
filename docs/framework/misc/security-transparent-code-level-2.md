@@ -1,60 +1,54 @@
 ---
-title: "Security-Transparent Code, Level 2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "transparency"
-  - "level 2 transparency"
-  - "security-transparent code"
-  - "security-critical code"
+title: Sicherheitstransparenter Code, Ebene 2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transparency
+- level 2 transparency
+- security-transparent code
+- security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: 37
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 35
+caps.latest.revision: "37"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 0bd4ee6c43b5089c45789b4f22326e17ec2218c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Security-Transparent Code, Level 2
-<a name="top"></a> Transparenz der Ebene 2 wurde in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.  
+# <a name="security-transparent-code-level-2"></a>Sicherheitstransparenter Code, Ebene 2
+<a name="top"></a>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
+  
+ Transparenz der Ebene 2 wurde in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.  
   
 -   Transparenter Code, einschließlich Code, der mit voller Vertrauenswürdigkeit ausgeführt wird, kann anderen transparenten Code oder sicherheitsgeschützten Code nur aufrufen. Er kann nur Aktionen durchführen, die von der domänenspezifischen Berechtigungseinstellung für teilweise Vertrauenswürdigkeit zugelassen werden. Transparenter Code ist nicht für die folgenden Vorgänge vorgesehen:  
   
-    -   Ausführen eines <xref:System.Security.CodeAccessPermission.Assert%2A>\-Vorgangs oder einer Berechtigungserweiterung.  
+    -   Ausführen eines <xref:System.Security.CodeAccessPermission.Assert%2A>-Vorgangs oder einer Berechtigungserweiterung.  
   
     -   Der Code darf keinen unsicheren oder nicht überprüfbaren Code enthalten.  
   
     -   Direktes Aufrufen von wichtigem Code.  
   
-    -   Aufrufen von systemeigenen Code oder von Code mit dem <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>\-Attribut.  
+    -   Aufrufen von systemeigenen Code oder von Code mit dem <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>-Attribut.  
   
-    -   Aufrufen eines Members, der von einem <xref:System.Security.Permissions.SecurityAction>\-Feld geschützt wird.  
+    -   Aufrufen eines Members, der von einem <xref:System.Security.Permissions.SecurityAction.LinkDemand>-Feld geschützt wird.  
   
     -   Erben von wichtigen Typen.  
   
      Außerdem können transparente Methoden keine wichtigen virtuellen Methoden überschreiben oder wichtige Schnittstellenmethoden implementieren.  
   
--   Sicherheitsgeschützter Code ist vollständig vertrauenswürdig, kann aber durch transparenten Code aufgerufen werden. Er macht einen beschränkten Oberflächenbereich mit vollständig vertrauenswürdigem Code verfügbar. Korrektheits\- und Sicherheitsüberprüfungen werden in sicherheitsgeschütztem Code ausgeführt.  
+-   Sicherheitsgeschützter Code ist vollständig vertrauenswürdig, kann aber durch transparenten Code aufgerufen werden. Er macht einen beschränkten Oberflächenbereich mit vollständig vertrauenswürdigem Code verfügbar. Korrektheits- und Sicherheitsüberprüfungen werden in sicherheitsgeschütztem Code ausgeführt.  
   
--   Sicherheitskritischer Code kann jeden Code aufrufen und ist vollständig vertrauenswürdig, kann jedoch nicht von transparentem Code aufgerufen werden.  
-  
-> [!CAUTION]
->  Codezugriffssicherheit und teilweise vertrauenswürdiger Code  
->   
->  .NET Framework bietet einen Mechanismus namens Codezugriffssicherheit \(Code Access Security, CAS\) zur Erzwingung verschiedener Vertrauensebenen für anderen Code, der in der gleichen Anwendung ausgeführt wird.  Sie sollten die Codezugriffssicherheit in .NET Framework nicht als Sicherheitsbegrenzung bei teilweise vertrauenswürdigem Code verwenden. Dies gilt insbesondere für Code unbekannter Herkunft. Wir raten davon ab, Code unbekannter Herkunft zu laden und auszuführen, ohne alternative Sicherheitsmaßnahmen zu treffen.  
->   
->  Diese Richtlinie gilt für alle Versionen von .NET Framework, außer für die in Silverlight enthaltene .NET Framework\-Version.  
+-   Mit sicherheitskritischem Code kann jeder Code aufgerufen werden, und er ist vollständig vertrauenswürdig, kann jedoch nicht von transparentem Code aufgerufen werden.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -67,60 +61,60 @@ caps.handback.revision: 35
 -   [Zusätzliche Informationen und Regeln](#additional)  
   
 <a name="examples"></a>   
-## Verwendungsbeispiele und Verhalten  
- Verwenden Sie die folgende Anmerkung für eine Assembly, um [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]\-Regeln festzulegen:  
+## <a name="usage-examples-and-behaviors"></a>Verwendungsbeispiele und Verhalten  
+ Verwenden Sie die folgende Anmerkung für eine Assembly, um [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Regeln festzulegen:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level2)]  
 ```  
   
- Um die .NET Framework 2.0\-Regeln \(Transparenz der Ebene 1\) festzulegen, verwenden Sie die folgende Anmerkung:  
+ Um die .NET Framework 2.0-Regeln (Transparenz der Ebene 1) festzulegen, verwenden Sie die folgende Anmerkung:  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- Wenn Sie eine Assembly nicht mit einer Anmerkung versehen, werden standardmäßig die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]\-Regeln verwendet. Die empfohlene bewährte Methode ist jedoch, nicht die Standardeinstellung zu verwenden, sondern das <xref:System.Security.SecurityRulesAttribute>\-Attribut.  
+ Wenn Sie eine Assembly nicht mit einer Anmerkung versehen, werden standardmäßig die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Regeln verwendet. Allerdings die empfohlene bewährte Methode ist die Verwendung der <xref:System.Security.SecurityRulesAttribute> -Attribut anstelle des Standardwerts.  
   
-### Assemblyweite Anmerkung  
+### <a name="assembly-wide-annotation"></a>Assemblyweite Anmerkung  
  Die folgenden Regeln gelten für die Verwendung von Attributen auf Assemblyebene:  
   
--   Keine Attribute: Wenn Sie keine Attribute angeben, interpretiert die Laufzeit den gesamten Code als sicherheitskritisch, es sei denn, die Einstufung als sicherheitskritisch verletzt eine Vererbungsregel \(z. B. beim Überschreiben oder Implementieren einer transparenten virtuellen oder Schnittstellenmethode\). In diesen Fällen sind die Methoden sicherheitsgeschützt. Wenn kein Attribut angegeben wird, bestimmt die Common Language Runtime die Transparenzregeln.  
+-   Keine Attribute: Wenn Sie keine Attribute angeben, interpretiert die Laufzeit den gesamten Code als sicherheitskritisch, es sei denn, die Einstufung als sicherheitskritisch verletzt eine Vererbungsregel (z. B. beim Überschreiben oder Implementieren einer transparenten virtuellen oder Schnittstellenmethode). In diesen Fällen sind die Methoden sicherheitsgeschützt. Wenn kein Attribut angegeben wird, bestimmt die Common Language Runtime die Transparenzregeln.  
   
 -   `SecurityTransparent`: Der gesamte Code ist transparent, und die gesamte Assembly führt keine privilegierten oder unsicheren Aktionen durch.  
   
 -   `SecurityCritical`: Der gesamte Code, der von Typen in dieser Assembly eingeführt wird, ist wichtig, und der gesamte andere Code ist transparent. Dieses Szenario ähnelt dem Fall, dass keine Attribute angegeben werden, allerdings werden die Transparenzregeln nicht automatisch von der Common Language Runtime bestimmt. Wenn Sie beispielsweise eine virtuelle oder abstrakte Methode überschreiben oder eine Schnittstellenmethode implementieren, ist diese Methode standardmäßig transparent. Sie müssen die Methode explizit als `SecurityCritical` oder `SecuritySafeCritical` kommentieren, andernfalls wird zur Ladezeit eine <xref:System.TypeLoadException> ausgelöst. Diese Regel gilt auch, wenn die Basisklasse und die abgeleitete Klasse sich in der gleichen Assembly befinden.  
   
--   `AllowPartiallyTrustedCallers` \(nur Ebene 2\): Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.  
+-   `AllowPartiallyTrustedCallers` (nur Ebene 2): Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.  
   
  In der folgenden Tabelle wird das Assemblyebenenverhalten für Ebene 2 mit Ebene 1 verglichen.  
   
-|Assembly\-Attribut|Ebene 2|Ebene 1|  
+|Assembly-Attribut|Ebene 2|Ebene 1|  
 |------------------------|-------------|-------------|  
 |Kein Attribut in einer teilweise vertrauenswürdigen Assembly|Typen und Member sind standardmäßig transparent, aber können sicherheitskritisch oder sicherheitsgeschützt sein.|Alle Typen und Member sind transparent.|  
-|Kein Attribut|Wenn kein Attribut angegeben wird, bestimmt die Common Language Runtime die Transparenzregeln. Alle Typen und Member sind sicherheitskritisch, es sei denn, die Einstufung als sicherheitskritisch verletzt eine Vererbungsregel.|In einer voll vertrauenswürdigen Assembly \(im globalen Assemblycache oder als voll vertrauenswürdig in der `AppDomain` identifiziert\) sind alle Typen transparent, und alle Member sind sicherheitsgeschützt.|  
+|Kein Attribut|Wenn kein Attribut angegeben wird, bestimmt die Common Language Runtime die Transparenzregeln. Alle Typen und Member sind sicherheitskritisch, es sei denn, die Einstufung als sicherheitskritisch verletzt eine Vererbungsregel.|In einer voll vertrauenswürdigen Assembly (im globalen Assemblycache oder als voll vertrauenswürdig in der `AppDomain` identifiziert) sind alle Typen transparent, und alle Member sind sicherheitsgeschützt.|  
 |`SecurityTransparent`|Alle Typen und Member sind transparent.|Alle Typen und Member sind transparent.|  
 |`SecurityCritical(SecurityCriticalScope.Everything)`|Nicht zutreffend.|Alle Typen und Member sind sicherheitskritisch.|  
 |`SecurityCritical`|Der gesamte Code, der von Typen in dieser Assembly eingeführt wird, ist wichtig, und der gesamte andere Code ist transparent. Wenn Sie eine virtuelle oder abstrakte Methode überschreiben oder eine Schnittstellenmethode implementieren, müssen Sie diese Methode explizit per Anmerkung als `SecurityCritical` oder `SecuritySafeCritical` kennzeichnen.|Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.|  
   
-### Typ\- und Memberanmerkung  
- Die Sicherheitsattribute, die auf einen Typ angewendet werden, gelten auch für die Elemente, die vom Typ eingeführt werden. Allerdings gelten sie nicht für virtuelle oder abstrakte Überschreibungen der Basisklassen\- oder  Schnittstellenimplementierungen. Die folgenden Regeln gelten für die Verwendung von Attributen auf Typ\- und Memberebene:  
+### <a name="type-and-member-annotation"></a>Typ- und Memberanmerkung  
+ Die Sicherheitsattribute, die auf einen Typ angewendet werden, gelten auch für die Elemente, die vom Typ eingeführt werden. Allerdings gelten sie nicht für virtuelle oder abstrakte Überschreibungen der Basisklassen- oder  Schnittstellenimplementierungen. Die folgenden Regeln gelten für die Verwendung von Attributen auf Typ- und Memberebene:  
   
 -   `SecurityCritical`: Der Typ oder Member ist wichtig und kann nur von voll vertrauenswürdigem Code aufgerufen werden. Methoden, die in einem sicherheitsrelevanten Typ eingeführt werden, sind wichtig.  
   
     > [!IMPORTANT]
     >  Virtuelle und abstrakte Methoden, die in Basisklassen oder Schnittstellen eingeführt und überschrieben oder in einer sicherheitskritischen Klasse implementiert werden, sind standardmäßig transparent. Sie müssen als `SecuritySafeCritical` oder `SecurityCritical` identifiziert werden.  
   
--   `SecuritySafeCritical`: Der Typ oder Member ist sicherheitsgeschützt. Allerdings kann der Typ oder Member von transparentem \(teilweise vertrauenswürdigem\) Code aufgerufen werden und ist so leistungsfähig wie jeder andere wichtige Code. Der Code muss hinsichtlich der Sicherheit überwacht werden.  
+-   `SecuritySafeCritical`: Der Typ oder Member ist sicherheitsgeschützt. Allerdings kann der Typ oder Member von transparentem (teilweise vertrauenswürdigem) Code aufgerufen werden und ist so leistungsfähig wie jeder andere wichtige Code. Der Code muss hinsichtlich der Sicherheit überwacht werden.  
   
  [Zurück nach oben](#top)  
   
 <a name="override"></a>   
-## Überschreibungsmuster  
+## <a name="override-patterns"></a>Überschreibungsmuster  
  In der folgenden Tabelle werden die für die Transparenz der Ebene 2 zulässigen Methodenüberschreibungen aufgeführt.  
   
-|Basis virtuell\/Schnittstellenmember|Überschreiben\/Schnittstelle|  
-|------------------------------------------|----------------------------------|  
+|Basis virtuell/Schnittstellenmember|Überschreiben/Schnittstelle|  
+|------------------------------------|-------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`SafeCritical`|`Transparent`|  
@@ -130,10 +124,10 @@ caps.handback.revision: 35
  [Zurück nach oben](#top)  
   
 <a name="inheritance"></a>   
-## Vererbungsregeln  
+## <a name="inheritance-rules"></a>Vererbungsregeln  
  In diesem Abschnitt wird `Transparent`, `Critical` und `SafeCritical` Code basierend auf Zugriff und Funktionalität folgende Reihenfolge zugewiesen:  
   
- `Transparent` \< `SafeCritical` \< `Critical`  
+ `Transparent` < `SafeCritical` < `Critical`  
   
 -   Regeln für Typen: Von links nach rechts wird der Zugriff immer stärker eingeschränkt. Abgeleitete Typen müssen mindestens so restriktiv wie der Basistyp sein.  
   
@@ -142,7 +136,7 @@ caps.handback.revision: 35
  In der folgenden Tabelle werden die zulässigen Muster der Typenvererbung aufgeführt.  
   
 |Basisklasse|Abgeleitete Klasse kann Folgendes sein:|  
-|-----------------|---------------------------------------------|  
+|----------------|--------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`Transparent`|`Critical`|  
@@ -153,7 +147,7 @@ caps.handback.revision: 35
  In der folgenden Tabelle werden die unzulässigen Muster der Typenvererbung aufgeführt.  
   
 |Basisklasse|Abgeleitete Klasse kann Folgendes nicht sein:|  
-|-----------------|---------------------------------------------------|  
+|----------------|-----------------------------|  
 |`SafeCritical`|`Transparent`|  
 |`Critical`|`Transparent`|  
 |`Critical`|`SafeCritical`|  
@@ -161,7 +155,7 @@ caps.handback.revision: 35
  In der folgenden Tabelle werden die zulässigen Muster der Methodenvererbung aufgeführt.  
   
 |Basismethode|Abgeleitete Methode kann Folgendes sein:|  
-|------------------|----------------------------------------------|  
+|-----------------|---------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`SafeCritical`|`Transparent`|  
@@ -171,7 +165,7 @@ caps.handback.revision: 35
  In der folgenden Tabelle werden die unzulässigen Muster der Methodenvererbung aufgeführt.  
   
 |Basismethode|Abgeleitete Methode kann Folgendes nicht sein:|  
-|------------------|----------------------------------------------------|  
+|-----------------|------------------------------|  
 |`Transparent`|`Critical`|  
 |`SafeCritical`|`Critical`|  
 |`Critical`|`Transparent`|  
@@ -183,28 +177,28 @@ caps.handback.revision: 35
  [Zurück nach oben](#top)  
   
 <a name="additional"></a>   
-## Zusätzliche Informationen und Regeln  
+## <a name="additional-information-and-rules"></a>Zusätzliche Informationen und Regeln  
   
-### LinkDemand\-Unterstützung  
- Das Transparenzmodell der Ebene 2 ersetzt <xref:System.Security.Permissions.SecurityAction> durch das <xref:System.Security.SecurityCriticalAttribute>\-Attribut. In Legacycode \(Stufe 1\) wird ein <xref:System.Security.Permissions.SecurityAction> automatisch als ein <xref:System.Security.Permissions.SecurityAction> behandelt.  
+### <a name="linkdemand-support"></a>LinkDemand-Unterstützung  
+ Das Transparenzmodell der Ebene 2 ersetzt <xref:System.Security.Permissions.SecurityAction.LinkDemand> durch das <xref:System.Security.SecurityCriticalAttribute>-Attribut. In Legacycode (Stufe 1) wird ein <xref:System.Security.Permissions.SecurityAction.LinkDemand> automatisch als ein <xref:System.Security.Permissions.SecurityAction.Demand> behandelt.  
   
-### Spiegelung  
- Das Aufrufen einer wichtigen Methode oder das Lesen eines wichtigen Felds löst eine Anforderung vollständiger Vertrauenswürdigkeit aus \(wie beim Aufrufen einer privaten Methode oder eines privaten Felds\). Aus diesem Grund kann voll vertrauenswürdiger Code eine wichtige Methode aufrufen, teilweise vertrauenswürdiger Code hingegen nicht.  
+### <a name="reflection"></a>Spiegelung  
+ Das Aufrufen einer wichtigen Methode oder das Lesen eines wichtigen Felds löst eine Anforderung vollständiger Vertrauenswürdigkeit aus (wie beim Aufrufen einer privaten Methode oder eines privaten Felds). Aus diesem Grund kann voll vertrauenswürdiger Code eine wichtige Methode aufrufen, teilweise vertrauenswürdiger Code hingegen nicht.  
   
  Die folgenden Eigenschaften wurden dem Namespace "<xref:System.Reflection>" hinzugefügt, um zu bestimmen, ob der Typ, die Methode oder das Feld `SecurityCritical`, `SecuritySafeCritical` oder `SecurityTransparent` ist:  <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> und <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Verwenden Sie diese Eigenschaften zur Bestimmung der Transparenz durch Reflektion statt durch Prüfen auf das Vorhandensein des Attributs. Die Transparenzregeln sind komplex, und das Prüfen auf das Attribut ist möglicherweise nicht ausreichend.  
   
 > [!NOTE]
->  Eine `SafeCritical`\-Methode gibt `true` für <xref:System.Type.IsSecurityCritical%2A>``und <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> zurück, da `SafeCritical` tatsächlich wichtig ist \(es hat die gleichen Funktionen wie kritischer Code, aber es kann von transparentem Code aufgerufen werden\).  
+>  Ein `SafeCritical` -Methode zurückkehrt `true` für beide <xref:System.Type.IsSecurityCritical%2A> und <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, da `SafeCritical` tatsächlich wichtig ist (es hat die gleichen Funktionen wie Kritischer Code, aber es kann von transparentem Code aufgerufen werden).  
   
- Dynamische Methoden erben die Transparenz der Module, denen sie zugeordnet sind. Sie erben nicht die Transparenz des Typs \(sofern sie einem Typ zugeordnet sind\).  
+ Dynamische Methoden erben die Transparenz der Module, denen sie zugeordnet sind. Sie erben nicht die Transparenz des Typs (sofern sie einem Typ zugeordnet sind).  
   
-### Überspringen der Überprüfung bei vollständiger Vertrauenswürdigkeit  
+### <a name="skip-verification-in-full-trust"></a>Überspringen der Überprüfung bei vollständiger Vertrauenswürdigkeit  
  Sie können die Überprüfung für vollständig vertrauenswürdige transparente Assemblys überspringen, indem Sie die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" im Attribut "<xref:System.Security.SecurityRulesAttribute>" auf "`true`" festlegen:  
   
  `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
   
- Die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" ist standardmäßig "`false`" und muss daher auf "`true`" festgelegt werden, um die Überprüfung zu überspringen. Dies sollte nur zu Optimierungszwecken erfolgen. Sie sollten sicherstellen, dass der transparente Code in der Assembly mit der Option "`transparent`" im [PEVerify\-Tool](../../../docs/framework/tools/peverify-exe-peverify-tool.md) überprüft werden kann.  
+ Die Eigenschaft "<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A>" ist standardmäßig "`false`" und muss daher auf "`true`" festgelegt werden, um die Überprüfung zu überspringen. Dies sollte nur zu Optimierungszwecken erfolgen. Sie sollten sicherstellen, dass der transparente Code in der Assembly mit überprüfbar ist die `transparent` -Option in der [PEVerify-Tool](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
-## Siehe auch  
- [Security\-Transparent Code, Level 1](../../../docs/framework/misc/security-transparent-code-level-1.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Sicherheitstransparenter Code, Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
  [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)
