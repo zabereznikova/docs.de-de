@@ -1,36 +1,40 @@
 ---
-title: "Windows-Anwendungen, die R&#252;ckrufe verwenden | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verwenden von Rückrufen in Windows-Anwendungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Windows-Anwendungen, die R&#252;ckrufe verwenden
-In den meisten asynchronen Verarbeitungsszenarien möchten Sie eine Datenbankoperation starten und weitere Prozesse ausführen, ohne dabei warten zu müssen, bis die Datenbankoperation abgeschlossen ist.  Viele Szenarien erfordern allerdings nach dem Beenden der Datenbankoperation eine Aktion.  So möchten Sie beispielsweise in einer Windows\-Anwendung die länger dauernde Operation an einen Hintergrundthread weitergeben, während der Benutzeroberflächenthread weiterhin reagieren kann.  Nach dem Beenden der Datenbankoperation möchten Sie allerdings die Ergebnisse verwenden, um das Formular zu füllen.  Dieser Typ von Szenario wird am Besten durch einen Rückruf implementiert.  
+# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="b9068-102">Verwenden von Rückrufen in Windows-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="b9068-102">Windows Applications Using Callbacks</span></span>
+<span data-ttu-id="b9068-103">In den meisten asynchronen Verarbeitungsszenarien möchten Sie eine Datenbankoperation starten und weitere Prozesse ausführen, ohne dabei warten zu müssen, bis die Datenbankoperation abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b9068-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="b9068-104">Viele Szenarien erfordern allerdings nach dem Beenden der Datenbankoperation eine Aktion.</span><span class="sxs-lookup"><span data-stu-id="b9068-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="b9068-105">So möchten Sie beispielsweise in einer Windows-Anwendung die länger dauernde Operation an einen Hintergrundthread weitergeben, während der Benutzeroberflächenthread weiterhin reagieren kann.</span><span class="sxs-lookup"><span data-stu-id="b9068-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="b9068-106">Nach dem Beenden der Datenbankoperation möchten Sie allerdings die Ergebnisse verwenden, um das Formular zu füllen.</span><span class="sxs-lookup"><span data-stu-id="b9068-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="b9068-107">Dieser Typ von Szenario wird am Besten durch einen Rückruf implementiert.</span><span class="sxs-lookup"><span data-stu-id="b9068-107">This type of scenario is best implemented with a callback.</span></span>  
   
- Einen Rückruf implementieren Sie, indem Sie einen <xref:System.AsyncCallback>\-Delegaten in der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>\-Methode, der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>\-Methode oder der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>\-Methode angeben.  Der Delegat wird nach Abschluss der Operation aufgerufen.  Sie können dem Delegaten einen Verweis auf den <xref:System.Data.SqlClient.SqlCommand> selbst zuweisen, wodurch der Zugriff auf das <xref:System.Data.SqlClient.SqlCommand>\-Objekt und das Aufrufen der passenden `End`\-Methode vereinfacht wird, ohne eine globale Variable verwenden zu müssen.  
+ <span data-ttu-id="b9068-108">Einen Rückruf implementieren Sie, indem Sie einen <xref:System.AsyncCallback>-Delegaten in der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>-Methode oder der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>-Methode angeben.</span><span class="sxs-lookup"><span data-stu-id="b9068-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="b9068-109">Der Delegat wird nach Abschluss der Operation aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="b9068-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="b9068-110">Sie können dem Delegaten einen Verweis auf den <xref:System.Data.SqlClient.SqlCommand> selbst zuweisen, wodurch der Zugriff auf das <xref:System.Data.SqlClient.SqlCommand>-Objekt und das Aufrufen der passenden `End`-Methode vereinfacht wird, ohne eine globale Variable verwenden zu müssen.</span><span class="sxs-lookup"><span data-stu-id="b9068-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
   
-## Beispiel  
- In der folgenden Windows\-Anwendung wird die Verwendung der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>\-Methode gezeigt, wobei eine Transact\-SQL\-Anweisung ausgeführt wird, die eine Verzögerung von einigen Sekunden beinhaltet \(Emulieren eines zeitintensiven Befehls\).  
+## <a name="example"></a><span data-ttu-id="b9068-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b9068-111">Example</span></span>  
+ <span data-ttu-id="b9068-112">In der folgenden Windows-Anwendung wird die Verwendung der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode gezeigt, wobei eine Transact-SQL-Anweisung ausgeführt wird, die eine Verzögerung von einigen Sekunden beinhaltet (Emulieren eines zeitintensiven Befehls).</span><span class="sxs-lookup"><span data-stu-id="b9068-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
   
- In diesem Beispiel werden einige wichtige Techniken gezeigt, darunter das Aufrufen einer Methode, die mit dem Formular von einem separaten Thread aus zusammenwirkt.  Zusätzlich zeigt dieses Beispiel, wie Sie Benutzer vom mehrfachen Ausführen eines Befehls abhalten können und wie Sie sicherstellen müssen, dass das Formular nicht vor dem Aufruf der Rückrufprozedur geschlossen wird.  
+ <span data-ttu-id="b9068-113">In diesem Beispiel werden einige wichtige Techniken gezeigt, darunter das Aufrufen einer Methode, die mit dem Formular von einem separaten Thread aus zusammenwirkt.</span><span class="sxs-lookup"><span data-stu-id="b9068-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="b9068-114">Zusätzlich zeigt dieses Beispiel, wie Sie Benutzer vom mehrfachen Ausführen eines Befehls abhalten können und wie Sie sicherstellen müssen, dass das Formular nicht vor dem Aufruf der Rückrufprozedur geschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="b9068-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
   
- Erstellen Sie zum Einrichten dieses Beispiels eine neue Windows\-Anwendung.  Positionieren Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement und zwei <xref:System.Windows.Forms.Label>\-Steuerelemente auf dem Formular \(übernehmen Sie für jedes Steuerelement den Standardnamen\).  Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+ <span data-ttu-id="b9068-115">Erstellen Sie zum Einrichten dieses Beispiels eine neue Windows-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="b9068-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="b9068-116">Positionieren Sie ein <xref:System.Windows.Forms.Button>-Steuerelement und zwei <xref:System.Windows.Forms.Label>-Steuerelemente auf dem Formular (übernehmen Sie für jedes Steuerelement den Standardnamen).</span><span class="sxs-lookup"><span data-stu-id="b9068-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="b9068-117">Fügen Sie der Klasse des Formulars folgenden Code hinzu. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.</span><span class="sxs-lookup"><span data-stu-id="b9068-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Siehe auch  
- [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b9068-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b9068-118">See Also</span></span>  
+ [<span data-ttu-id="b9068-119">Asynchrone Vorgänge</span><span class="sxs-lookup"><span data-stu-id="b9068-119">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="b9068-120">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="b9068-120">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

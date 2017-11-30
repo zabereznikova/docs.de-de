@@ -1,1 +1,1 @@
-Benutzeroberflächenautomatisierung
+<span data-ttu-id="bf027-101">Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="bf027-101">UI Automation</span></span>

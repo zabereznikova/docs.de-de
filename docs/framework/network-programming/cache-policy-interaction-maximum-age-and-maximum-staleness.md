@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - maximum staleness
 - freshness of cached resources
@@ -20,41 +15,39 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 834deeff69687e0edf1671b35328d41842914b4d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: baec376501feb70e4a9ceb3f33ac66fa76b91ac1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung
-Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  
+# <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a><span data-ttu-id="d1e27-102">Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung</span><span class="sxs-lookup"><span data-stu-id="d1e27-102">Cache Policy Interaction—Maximum Age and Maximum Staleness</span></span>
+<span data-ttu-id="d1e27-103">Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie.</span><span class="sxs-lookup"><span data-stu-id="d1e27-103">To help ensure that the freshest content is returned to the client application, the interaction of client cache policy and server revalidation requirements always results in the most conservative cache policy.</span></span> <span data-ttu-id="d1e27-104">Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.</span><span class="sxs-lookup"><span data-stu-id="d1e27-104">All the examples in this topic illustrate the cache policy for a resource that is cached on January 1 and expires on January 4.</span></span>  
   
- In den folgenden Beispielen wird der Wert für die maximale Überalterung (`maxStale`) in Verbindung mit einem maximalen Alter (`maxAge`) verwendet:  
+ <span data-ttu-id="d1e27-105">In den folgenden Beispielen wird der Wert für die maximale Überalterung (`maxStale`) in Verbindung mit einem maximalen Alter (`maxAge`) verwendet:</span><span class="sxs-lookup"><span data-stu-id="d1e27-105">In the following examples, the maximum staleness value (`maxStale`) is used in conjunction with a maximum age (`maxAge`):</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 5 Tage festlegt und keinen `maxStale`-Wert angibt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden. Allerdings läuft der Inhalt gemäß den Anforderungen der Serverüberprüfung am 4. Januar ab. Da das Ablaufdatum des Inhalts konservativer (früher) ist, hat es Vorrang vor der `maxAge`-Richtlinie. Aus diesem Grund läuft der Inhalt am 4. Januar ab und muss erneut überprüft werden, obwohl sein maximales Alter nicht erreicht wurde.  
+-   <span data-ttu-id="d1e27-106">Wenn die Cacherichtlinie `maxAge` = 5 Tage festlegt und keinen `maxStale`-Wert angibt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-106">If the cache policy sets `maxAge` = 5 days and does not specify a `maxStale` value, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="d1e27-107">Allerdings läuft der Inhalt gemäß den Anforderungen der Serverüberprüfung am 4. Januar ab.</span><span class="sxs-lookup"><span data-stu-id="d1e27-107">However, according to the server's revalidation requirements, the content expires on January 4.</span></span> <span data-ttu-id="d1e27-108">Da das Ablaufdatum des Inhalts konservativer (früher) ist, hat es Vorrang vor der `maxAge`-Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="d1e27-108">Because the content expiration date is more conservative (sooner), it takes precedence over the `maxAge` policy.</span></span> <span data-ttu-id="d1e27-109">Aus diesem Grund läuft der Inhalt am 4. Januar ab und muss erneut überprüft werden, obwohl sein maximales Alter nicht erreicht wurde.</span><span class="sxs-lookup"><span data-stu-id="d1e27-109">Therefore, the content expires on January 4 and must be revalidated even though its maximum age has not been reached.</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 5 Tage und `maxStale` = 3 Tage festlegt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden. Entsprechend dem `maxStale`-Wert kann der Inhalt bis zum 7. Januar verwendet werden. Aus diesem Grund muss der Inhalt am 6. Januar erneut überprüft werden.  
+-   <span data-ttu-id="d1e27-110">Wenn die Cacherichtlinie `maxAge` = 5 Tage und `maxStale` = 3 Tage festlegt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-110">If the cache policy sets `maxAge` = 5 days and `maxStale` = 3 days, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="d1e27-111">Entsprechend dem `maxStale`-Wert kann der Inhalt bis zum 7. Januar verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-111">According to the `maxStale` value, the content is usable until January 7.</span></span> <span data-ttu-id="d1e27-112">Aus diesem Grund muss der Inhalt am 6. Januar erneut überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-112">Therefore, the content gets revalidated on January 6.</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 5 Tage und `maxStale` = 1 Tag festlegt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden. Entsprechend dem `maxStale`-Wert kann der Inhalt bis zum 5. Januar verwendet werden. Aus diesem Grund muss der Inhalt am 5. Januar erneut überprüft werden.  
+-   <span data-ttu-id="d1e27-113">Wenn die Cacherichtlinie `maxAge` = 5 Tage und `maxStale` = 1 Tag festlegt, kann der Inhalt gemäß dem `maxAge`-Wert bis zum 6. Januar verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-113">If the cache policy sets `maxAge` = 5 days and `maxStale` = 1 day, according to the `maxAge` value, the content is usable until January 6.</span></span> <span data-ttu-id="d1e27-114">Entsprechend dem `maxStale`-Wert kann der Inhalt bis zum 5. Januar verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-114">According to the `maxStale` value, the content is usable until January 5.</span></span> <span data-ttu-id="d1e27-115">Aus diesem Grund muss der Inhalt am 5. Januar erneut überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="d1e27-115">Therefore, the content gets revalidated on January 5.</span></span>  
   
- Wenn das maximale Alter kleiner als das Ablaufdatum des Inhalts ist, hat immer das konservativere Cachingverhalten Vorrang, und der Wert der maximalen Überalterung hat keine Auswirkungen. Die folgenden Beispiele veranschaulichen die Auswirkung der Einstellung eines Wert für die maximale Überalterung (`maxStale`), wenn das maximale Alter (`maxAge`) erreicht wird, bevor der Inhalt abläuft:  
+ <span data-ttu-id="d1e27-116">Wenn das maximale Alter kleiner als das Ablaufdatum des Inhalts ist, hat immer das konservativere Cachingverhalten Vorrang, und der Wert der maximalen Überalterung hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="d1e27-116">When the maximum age is less than the content expiration date, the more conservative caching behavior always prevails and the maximum staleness value has no effect.</span></span> <span data-ttu-id="d1e27-117">Die folgenden Beispiele veranschaulichen die Auswirkung der Einstellung eines Wert für die maximale Überalterung (`maxStale`), wenn das maximale Alter (`maxAge`) erreicht wird, bevor der Inhalt abläuft:</span><span class="sxs-lookup"><span data-stu-id="d1e27-117">The following examples illustrate the effect of setting a maximum staleness (`maxStale`) value when the maximum age (`maxAge`) is reached before the content expires:</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 1 Tag festlegt, und keinen Wert für den `maxStale`-Wert angibt, wird der Inhalt am 2. Januar erneut überprüft, obwohl er nicht abgelaufen ist.  
+-   <span data-ttu-id="d1e27-118">Wenn die Cacherichtlinie `maxAge` = 1 Tag festlegt, und keinen Wert für den `maxStale`-Wert angibt, wird der Inhalt am 2. Januar erneut überprüft, obwohl er nicht abgelaufen ist.</span><span class="sxs-lookup"><span data-stu-id="d1e27-118">If the cache policy sets `maxAge` = 1 day and does not specify a value for `maxStale` value, the content is revalidated on January 2 even though it has not expired.</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 1 Tag und `maxStale` = 3 Tage festlegt, wird der Inhalt am 2. Januar erneut überprüft, um die konservativere Richtlinie zu erzwingen.  
+-   <span data-ttu-id="d1e27-119">Wenn die Cacherichtlinie `maxAge` = 1 Tag und `maxStale` = 3 Tage festlegt, wird der Inhalt am 2. Januar erneut überprüft, um die konservativere Richtlinie zu erzwingen.</span><span class="sxs-lookup"><span data-stu-id="d1e27-119">If the cache policy sets `maxAge` = 1 day and `maxStale` = 3 days, the content is revalidated on January 2 to enforce the more conservative policy setting.</span></span>  
   
--   Wenn die Cacherichtlinie `maxAge` = 1 Tage und `maxStale` = 1 Tag festlegt, wird der Inhalt am 2. Januar erneut überprüft.  
+-   <span data-ttu-id="d1e27-120">Wenn die Cacherichtlinie `maxAge` = 1 Tage und `maxStale` = 1 Tag festlegt, wird der Inhalt am 2. Januar erneut überprüft.</span><span class="sxs-lookup"><span data-stu-id="d1e27-120">If the cache policy sets `maxAge` = 1 day and `maxStale` = 1 day, the content is revalidated on January 2.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Cache Policy (Cacherichtlinie)](../../../docs/framework/network-programming/cache-policy.md)   
- [Location-Based Cache Policies (Speicherortbasierte Cacherichtlinien)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
-
+## <a name="see-also"></a><span data-ttu-id="d1e27-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1e27-121">See Also</span></span>  
+ [<span data-ttu-id="d1e27-122">Cacheverwaltung für Netzwerkanwendungen</span><span class="sxs-lookup"><span data-stu-id="d1e27-122">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="d1e27-123">Cacherichtlinie</span><span class="sxs-lookup"><span data-stu-id="d1e27-123">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="d1e27-124">Speicherortbasierte Cacherichtlinien</span><span class="sxs-lookup"><span data-stu-id="d1e27-124">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="d1e27-125">Zeitbasierte Cacherichtlinien</span><span class="sxs-lookup"><span data-stu-id="d1e27-125">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="d1e27-126">Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen</span><span class="sxs-lookup"><span data-stu-id="d1e27-126">Configuring Caching in Network Applications</span></span>](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [<span data-ttu-id="d1e27-127">Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität</span><span class="sxs-lookup"><span data-stu-id="d1e27-127">Cache Policy Interaction—Maximum Age and Minimum Freshness</span></span>](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

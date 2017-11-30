@@ -1,51 +1,54 @@
 ---
-title: "Dynamisches Aktivieren der analytischen Ablaufverfolgung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Dynamisches Aktivieren der analytischen Ablaufverfolgung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d86186d3f979d4ec02cb728befb7127edfd07aaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Dynamisches Aktivieren der analytischen Ablaufverfolgung
-Mit Tools, die im Lieferumfang des Windows\-Betriebssystems enthalten sind, können Sie die Ablaufverfolgung mithilfe der Ereignisablaufverfolgung für Windows \(ETW\) aktivieren und deaktivieren. Die analytische Ablaufverfolgung kann für alle [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]\-Dienste dynamisch aktiviert und deaktiviert werden, ohne dass die Web.config\-Datei der Anwendung geändert oder der Dienst neu gestartet werden muss. Auf diese Weise wird die Anwendung, die die Ablaufverfolgungsereignisse ausgibt, nicht beeinträchtigt.  
+# <a name="dynamically-enabling-analytic-tracing"></a><span data-ttu-id="f7362-102">Dynamisches Aktivieren der analytischen Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="f7362-102">Dynamically Enabling Analytic Tracing</span></span>
+<span data-ttu-id="f7362-103">Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, können Sie die Ablaufverfolgung mithilfe der Ereignisablaufverfolgung für Windows (ETW) aktivieren und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="f7362-103">Using tools that ship with the Windows operating system, you can enable or disable tracing dynamically using Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="f7362-104">Die analytische Ablaufverfolgung kann für alle [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] -Dienste dynamisch aktiviert und deaktiviert werden, ohne dass die Web.config-Datei der Anwendung geändert oder der Dienst neu gestartet werden muss.</span><span class="sxs-lookup"><span data-stu-id="f7362-104">For all [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services, analytic tracing can be enabled and disabled dynamically without modifying the application’s Web.config file or restarting the service.</span></span> <span data-ttu-id="f7362-105">Auf diese Weise wird die Anwendung, die die Ablaufverfolgungsereignisse ausgibt, nicht beeinträchtigt.</span><span class="sxs-lookup"><span data-stu-id="f7362-105">This allows the application that emits the trace events to remain undisturbed.</span></span>  
   
- Die Ablaufverfolgungsoptionen von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] können auf ähnliche Weise konfiguriert werden. Sie können z. B. den Schweregrad von **Error** in **Information** ändern, ohne die Anwendung zu beeinträchtigen. Sie können dafür die folgenden Tools verwenden:  
+ <span data-ttu-id="f7362-106">Die Ablaufverfolgungsoptionen von[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] können auf ähnliche Weise konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="f7362-106">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tracing options can be configured in a similar way.</span></span> <span data-ttu-id="f7362-107">Sie können z. B. den Schweregrad von **Error** in **Information** ändern, ohne die Anwendung zu beeinträchtigen.</span><span class="sxs-lookup"><span data-stu-id="f7362-107">For example, you can change the severity level from **Error** to **Information** without disturbing the application.</span></span> <span data-ttu-id="f7362-108">Sie können dafür die folgenden Tools verwenden:</span><span class="sxs-lookup"><span data-stu-id="f7362-108">This can be done using the following tools:</span></span>  
   
--   **Logman** – Ein Befehlszeilentool zum Konfigurieren, Steuern und Abfragen von Ablaufverfolgungsdaten.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) und [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   <span data-ttu-id="f7362-109">**Logman** – Ein Befehlszeilentool zum Konfigurieren, Steuern und Abfragen von Ablaufverfolgungsdaten.</span><span class="sxs-lookup"><span data-stu-id="f7362-109">**Logman** – A command line tool for configuring, controlling, and querying tracing data.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="f7362-110">[Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) und [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span><span class="sxs-lookup"><span data-stu-id="f7362-110"> [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) and [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span></span>  
   
--   **Ereignisanzeige \(EventViewer\)** – Grafisches Windows\-Verwaltungstool zum Anzeigen der Ergebnisse einer Ablaufverfolgung.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [WCF\-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisanzeige](http://go.microsoft.com/fwlink/?LinkId=165428).  
+-   <span data-ttu-id="f7362-111">**Ereignisanzeige (EventViewer)** – Grafisches Windows-Verwaltungstool zum Anzeigen der Ergebnisse einer Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="f7362-111">**EventViewer** - Windows graphical management tool for viewing the results of tracing.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="f7362-112">[WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisanzeige](http://go.microsoft.com/fwlink/?LinkId=165428).</span><span class="sxs-lookup"><span data-stu-id="f7362-112"> [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) and [Event Viewer](http://go.microsoft.com/fwlink/?LinkId=165428).</span></span>  
   
--   **Perfmon** – Grafisches Windows\-Verwaltungstool, das Indikatoren zum Überwachen der Ablaufverfolgung und der Auswirkungen der Ablaufverfolgung auf die Leistung verwendet.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Manuelles Erstellen von Datensammlersätzen](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   <span data-ttu-id="f7362-113">**Perfmon** – Grafisches Windows-Verwaltungstool, das Indikatoren zum Überwachen der Ablaufverfolgung und der Auswirkungen der Ablaufverfolgung auf die Leistung verwendet.</span><span class="sxs-lookup"><span data-stu-id="f7362-113">**Perfmon** – Windows graphical management tool that uses counters to monitor tracing counters and the effects of tracing on performance.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="f7362-114">[Manuelles Erstellen von Datensammlersätzen](http://go.microsoft.com/fwlink/?LinkId=165429).</span><span class="sxs-lookup"><span data-stu-id="f7362-114"> [Create a Data Collector Set Manually](http://go.microsoft.com/fwlink/?LinkId=165429).</span></span>  
   
-### Stichwörter  
- Wenn Sie die <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A>\-Klasse verwenden, werden .NET Framework\-Ablaufverfolgungsmeldungen im Allgemeinen nach dem Schweregrad gefiltert \(z. B. "Error", "Warning" und "Information"\) gefiltert. ETW unterstützt das Schweregradkonzept, führt jedoch einen neuen, flexiblen Filtermechanismus mit Schlüsselwörtern ein. Schlüsselwörter sind beliebige Textwerte, über die Ablaufverfolgungsereignisse zusätzlichen Kontext zur Bedeutung eines Ereignisses bereitstellen können.  
+### <a name="keywords"></a><span data-ttu-id="f7362-115">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f7362-115">Keywords</span></span>  
+ <span data-ttu-id="f7362-116">Wenn Sie die <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> -Klasse verwenden, werden .NET Framework-Ablaufverfolgungsmeldungen im Allgemeinen nach dem Schweregrad gefiltert (z. B. "Error", "Warning" und "Information") gefiltert.</span><span class="sxs-lookup"><span data-stu-id="f7362-116">When using the <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> class, .NET Framework trace messages are generally filtered by the severity level (for example, Error, Warning, and Information).</span></span> <span data-ttu-id="f7362-117">ETW unterstützt das Schweregradkonzept, führt jedoch einen neuen, flexiblen Filtermechanismus mit Schlüsselwörtern ein.</span><span class="sxs-lookup"><span data-stu-id="f7362-117">ETW supports the severity level concept, but introduces a new, flexible filter mechanism using keywords.</span></span> <span data-ttu-id="f7362-118">Schlüsselwörter sind beliebige Textwerte, über die Ablaufverfolgungsereignisse zusätzlichen Kontext zur Bedeutung eines Ereignisses bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="f7362-118">Keywords are arbitrary textual values that let tracing events provide additional context about what that event means.</span></span>  
   
- Bei der analytischen Ablaufverfolgung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügt jedes Ablaufverfolgungsereignis über zwei Schlüsselworttypen. Erstens verfügt jedes Ereignis über ein oder mehrere Szenarioschlüsselwörter. Diese Schlüsselwörter bezeichnen die Szenarien, die das Ereignis unterstützen soll. Es gibt drei Szenarioschlüsselwörter, die jeweils einen bestimmten Zweck haben. Dies ist in der folgenden Tabelle beschrieben. Sie können das Filtern mit Schlüsselwörtern dynamisch ändern, ohne dabei den [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Dienst zu beeinträchtigen. Dies bedeutet, dass Sie das aktuelle Ablaufverfolgungsszenario und die Menge der erfassten Ablaufverfolgungsinformationen dynamisch ändern können. Sie können z. B. `HealthMonitoring` in `Troubleshooting` ändern und die Granularität für Ablaufverfolgungsereignisse erhöhen.  
+ <span data-ttu-id="f7362-119">Bei der analytischen Ablaufverfolgung von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] verfügt jedes Ablaufverfolgungsereignis über zwei Schlüsselworttypen.</span><span class="sxs-lookup"><span data-stu-id="f7362-119">For [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing, each trace event has two types of keywords.</span></span> <span data-ttu-id="f7362-120">Erstens verfügt jedes Ereignis über ein oder mehrere Szenarioschlüsselwörter.</span><span class="sxs-lookup"><span data-stu-id="f7362-120">First, each event has one or more scenario keywords.</span></span> <span data-ttu-id="f7362-121">Diese Schlüsselwörter bezeichnen die Szenarien, die das Ereignis unterstützen soll.</span><span class="sxs-lookup"><span data-stu-id="f7362-121">These keywords denote the scenarios that this event is intended to support.</span></span> <span data-ttu-id="f7362-122">Es gibt drei Szenarioschlüsselwörter, die jeweils einen bestimmten Zweck haben. Dies ist in der folgenden Tabelle beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f7362-122">There are three scenario keywords, each designed for a specific purpose as shown in the following table.</span></span> <span data-ttu-id="f7362-123">Sie können das Filtern mit Schlüsselwörtern dynamisch ändern, ohne dabei den [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Dienst zu beeinträchtigen.</span><span class="sxs-lookup"><span data-stu-id="f7362-123">Filtering using keywords can be changed dynamically without disturbing the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="f7362-124">Dies bedeutet, dass Sie das aktuelle Ablaufverfolgungsszenario und die Menge der erfassten Ablaufverfolgungsinformationen dynamisch ändern können.</span><span class="sxs-lookup"><span data-stu-id="f7362-124">That means that you can dynamically change your current tracing scenario and the amount of tracing information you gather.</span></span> <span data-ttu-id="f7362-125">Sie können z. B. `HealthMonitoring` in `Troubleshooting` ändern und die Granularität für Ablaufverfolgungsereignisse erhöhen.</span><span class="sxs-lookup"><span data-stu-id="f7362-125">For example, you can change `HealthMonitoring` to `Troubleshooting` and increase Tracing Event granularity.</span></span>  
   
-|Stichwort|Beschreibung|  
-|---------------|------------------|  
-|`HealthMonitoring`|Sehr einfache, minimale Ablaufverfolgung, mit der Sie die Aktivität des Diensts überwachen können.|  
-|`EndToEndMonitoring`|Ereignisse, die zum Unterstützen der Ablaufverfolgung des Nachrichtenflusses verwendet werden.|  
-|`Troubleshooting`|Genauere Ereignisse in Bezug auf die Erweiterbarkeitspunkte von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
+|<span data-ttu-id="f7362-126">Stichwort</span><span class="sxs-lookup"><span data-stu-id="f7362-126">Keyword</span></span>|<span data-ttu-id="f7362-127">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7362-127">Description</span></span>|  
+|-------------|-----------------|  
+|`HealthMonitoring`|<span data-ttu-id="f7362-128">Sehr einfache, minimale Ablaufverfolgung, mit der Sie die Aktivität des Diensts überwachen können.</span><span class="sxs-lookup"><span data-stu-id="f7362-128">Very lightweight, minimal tracing that lets you monitor your service’s activity.</span></span>|  
+|`EndToEndMonitoring`|<span data-ttu-id="f7362-129">Ereignisse, die zum Unterstützen der Ablaufverfolgung des Nachrichtenflusses verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f7362-129">Events used to support message flow tracing.</span></span>|  
+|`Troubleshooting`|<span data-ttu-id="f7362-130">Genauere Ereignisse in Bezug auf die Erweiterbarkeitspunkte von [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f7362-130">More granular events around the extensibility points of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>|  
   
- Die zweite Gruppe von Schlüsselwörtern definiert, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat.  
+ <span data-ttu-id="f7362-131">Die zweite Gruppe von Schlüsselwörtern definiert, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat.</span><span class="sxs-lookup"><span data-stu-id="f7362-131">The second group of keywords define which component of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitted the event.</span></span>  
   
-|Stichwort|Beschreibung|  
-|---------------|------------------|  
-|`UserEvents`|Vom Benutzercode und nicht von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ausgegebene Ereignisse.|  
-|`ServiceModel`|Von der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Laufzeit ausgegebene Ereignisse.|  
-|`ServiceHost`|Vom Diensthost ausgegebene Ereignisse.|  
-|`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]\-Ereignisse zur Nachrichtenprotokollierung.|  
+|<span data-ttu-id="f7362-132">Stichwort</span><span class="sxs-lookup"><span data-stu-id="f7362-132">Keyword</span></span>|<span data-ttu-id="f7362-133">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7362-133">Description</span></span>|  
+|-------------|-----------------|  
+|`UserEvents`|<span data-ttu-id="f7362-134">Vom Benutzercode und nicht von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]ausgegebene Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="f7362-134">Events emitted by the user code and not the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|`ServiceModel`|<span data-ttu-id="f7362-135">Von der [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] -Laufzeit ausgegebene Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="f7362-135">Events emitted by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] runtime.</span></span>|  
+|`ServiceHost`|<span data-ttu-id="f7362-136">Vom Diensthost ausgegebene Ereignisse.</span><span class="sxs-lookup"><span data-stu-id="f7362-136">Events emitted by the service host.</span></span>|  
+|`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="f7362-137"> -Ereignisse zur Nachrichtenprotokollierung.</span><span class="sxs-lookup"><span data-stu-id="f7362-137"> message logging events.</span></span>|  
   
-## Siehe auch  
- [WCF\-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a><span data-ttu-id="f7362-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7362-138">See Also</span></span>  
+ [<span data-ttu-id="f7362-139">WCF Services and Event Tracing for Windows</span><span class="sxs-lookup"><span data-stu-id="f7362-139">WCF Services and Event Tracing for Windows</span></span>](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

@@ -1,56 +1,62 @@
 ---
-title: "Vorgehensweise: Annahme der Clientidentit&#228;t durch einen Dienst | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, Identitätswechsel"
-  - "Identitätswechsel"
-  - "WCF, Sicherheit"
+title: "Vorgehensweise: Annahme der Clientidentität durch einen Dienst"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, impersonation
+- impersonation
+- WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e6140e7d66ecdd905c0595cb813752d4e0a870d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Annahme der Clientidentit&#228;t durch einen Dienst
-Nimmt ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]\-Dienst die Identität eines Clients an, kann der Dienst Aktionen im Namen des Clients durchführen. Bei Aktionen, die einer ACL\-Überprüfung \(ACL \= Access Control List, Zugriffssteuerungsliste\) unterliegen, wie der Zugriff auf Verzeichnisse und Dateien auf einem Computer oder der Zugriff auf eine SQL&\#160;Server\-Datenbank, wird die ACL\-Überprüfung für das Clientbenutzerkonto durchgeführt. In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Aktivierung eines Clients in einer Windows\-Domäne erforderlich sind, damit eine Ebene für den Clientidentitätswechsel festgelegt werden kann. Ein funktionsfähiges Beispiel hierfür finden Sie unter [Durchführen eines Identitätswechsels für den Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] zum Clientidentitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+# <a name="how-to-impersonate-a-client-on-a-service"></a><span data-ttu-id="cf32d-102">Vorgehensweise: Annahme der Clientidentität durch einen Dienst</span><span class="sxs-lookup"><span data-stu-id="cf32d-102">How to: Impersonate a Client on a Service</span></span>
+<span data-ttu-id="cf32d-103">Nimmt ein [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] -Dienst die Identität eines Clients an, kann der Dienst Aktionen im Namen des Clients durchführen.</span><span class="sxs-lookup"><span data-stu-id="cf32d-103">Impersonating a client on a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service enables the service to perform actions on behalf of the client.</span></span> <span data-ttu-id="cf32d-104">Bei Aktionen, die einer ACL-Überprüfung (ACL = Access Control List, Zugriffssteuerungsliste) unterliegen, wie der Zugriff auf Verzeichnisse und Dateien auf einem Computer oder der Zugriff auf eine SQL&#160;Server-Datenbank, wird die ACL-Überprüfung für das Clientbenutzerkonto durchgeführt.</span><span class="sxs-lookup"><span data-stu-id="cf32d-104">For actions subject to access control list (ACL) checks, such as access to directories and files on a machine or access to a SQL Server database, the ACL check is against the client user account.</span></span> <span data-ttu-id="cf32d-105">In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Aktivierung eines Clients in einer Windows-Domäne erforderlich sind, damit eine Ebene für den Clientidentitätswechsel festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="cf32d-105">This topic shows the basic steps required to enable a client in a Windows domain to set a client impersonation level.</span></span> <span data-ttu-id="cf32d-106">Ein funktionsfähiges Beispiel hierfür finden Sie unter [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-106">For a working example of this, see [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="cf32d-107">Clientidentitätswechsel, finden Sie unter [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-107"> client impersonation, see [Delegation and Impersonation](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
 > [!NOTE]
->  Wenn Client und Dienst auf demselben Computer ausgeführt werden und der Client unter einem Systemkonto \(das heißt unter `Local System` oder `Network Service`\) ausgeführt wird, kann kein Clientidentitätswechsel vorgenommen werden, wenn mit Token für den Sicherheitszustandskontext eine Sicherheitsverbindung hergestellt wird. Eine Windows&\#160;Forms\- oder Konsolenanwendung wird in der Regel unter dem derzeit angemeldeten Konto ausgeführt, sodass für dieses Konto standardmäßig ein Identitätswechsel durchgeführt werden kann. Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Seite handelt, die auf [!INCLUDE[iis601](../../../includes/iis601-md.md)] oder IIS&\#160;7.0 gehostet wird, wird der Client standardmäßig unter dem `Network Service`\-Konto ausgeführt. Alle vom System bereitgestellten Bindungen, die Sicherheitssitzungen unterstützen, verwenden standardmäßig ein zustandsloses Token für den Sicherheitskontext. Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Seite handelt und sichere Sitzungen mit Sicherheitskontexttoken verwendet werden, kann kein Clientidentitätswechsel durchgeführt werden.[!INCLUDE[crabout](../../../includes/crabout-md.md)] darüber, wie Sicherheitskontexttoken in einer sicheren Sitzung verwendet werden, finden Sie unter [Vorgehensweise: Erstellen eines Tokens für den Sicherheitskontext einer sicheren Sitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  <span data-ttu-id="cf32d-108">Wenn Client und Dienst auf demselben Computer ausgeführt werden und der Client unter einem Systemkonto (das heißt unter `Local System` oder `Network Service`) ausgeführt wird, kann kein Clientidentitätswechsel vorgenommen werden, wenn mit Token für den Sicherheitszustandskontext eine Sicherheitsverbindung hergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="cf32d-108">When the client and service are running on the same computer and the client is running under a system account (that is, `Local System` or `Network Service`), the client cannot be impersonated when a secure session is established with stateful Security Context tokens.</span></span> <span data-ttu-id="cf32d-109">Eine Windows&#160;Forms- oder Konsolenanwendung wird in der Regel unter dem derzeit angemeldeten Konto ausgeführt, sodass für dieses Konto standardmäßig ein Identitätswechsel durchgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="cf32d-109">A WinForms or console application typically is run under the currently logged in account, so that account can be impersonated by default.</span></span> <span data-ttu-id="cf32d-110">Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Seite handelt, die auf [!INCLUDE[iis601](../../../includes/iis601-md.md)] oder IIS&amp;#160;7.0 gehostet wird, wird der Client standardmäßig unter dem `Network Service` -Konto ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cf32d-110">However, when the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and that page is hosted in [!INCLUDE[iis601](../../../includes/iis601-md.md)] or IIS 7.0, then the client does run under the `Network Service` account by default.</span></span> <span data-ttu-id="cf32d-111">Alle vom System bereitgestellten Bindungen, die Sicherheitssitzungen unterstützen, verwenden standardmäßig ein zustandsloses Token für den Sicherheitskontext.</span><span class="sxs-lookup"><span data-stu-id="cf32d-111">All of the system-provided bindings that support secure sessions use a stateless Security Context token by default.</span></span> <span data-ttu-id="cf32d-112">Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Seite handelt und sichere Sitzungen mit Sicherheitskontexttoken verwendet werden, kann kein Clientidentitätswechsel durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="cf32d-112">However, if the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and secure sessions with stateful Security Context tokens are used, the client cannot be impersonated.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="cf32d-113">Mithilfe von Sicherheitskontexttoken in einer sicheren Sitzung finden Sie [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-113"> using stateful Security Context tokens in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### So aktivieren Sie die Annahme der Clientidentität durch einen Dienst über ein Windows\-Token im Cache\-Speicher  
+### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a><span data-ttu-id="cf32d-114">So aktivieren Sie die Annahme der Clientidentität durch einen Dienst über ein Windows-Token im Cache-Speicher</span><span class="sxs-lookup"><span data-stu-id="cf32d-114">To enable impersonation of a client from a cached Windows token on a service</span></span>  
   
-1.  Erstellen Sie den Dienst. Ein Lernprogramm für diesen grundlegenden Vorgang finden Sie unter [Lernprogramm 'Erste Schritte'](../../../docs/framework/wcf/getting-started-tutorial.md).  
+1.  <span data-ttu-id="cf32d-115">Erstellen Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="cf32d-115">Create the service.</span></span> <span data-ttu-id="cf32d-116">Ein Lernprogramm für diesen grundlegenden Vorgang finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-116">For a tutorial of this basic procedure, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-2.  Verwenden Sie eine Bindung, die die Windows\-Authentifizierung verwendet und eine Sitzung erstellt, z.&\#160;B. <xref:System.ServiceModel.NetTcpBinding> oder <xref:System.ServiceModel.WSHttpBinding>.  
+2.  <span data-ttu-id="cf32d-117">Verwenden Sie eine Bindung, die die Windows-Authentifizierung verwendet und eine Sitzung erstellt, z.&amp;#160;B. <xref:System.ServiceModel.NetTcpBinding> oder <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="cf32d-117">Use a binding that uses Windows authentication and creates a session, such as <xref:System.ServiceModel.NetTcpBinding> or <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
   
-3.  Wenden Sie beim Erstellen der Implementierung der Dienstschnittstelle die <xref:System.ServiceModel.OperationBehaviorAttribute>\-Klasse auf die Methode an, für die ein Clientidentitätswechsel erforderlich ist. Legen Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>\-Eigenschaft auf <xref:System.ServiceModel.ImpersonationOption> fest.  
+3.  <span data-ttu-id="cf32d-118">Wenden Sie beim Erstellen der Implementierung der Dienstschnittstelle die <xref:System.ServiceModel.OperationBehaviorAttribute> -Klasse auf die Methode an, für die ein Clientidentitätswechsel erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="cf32d-118">When creating the implementation of the service's interface, apply the <xref:System.ServiceModel.OperationBehaviorAttribute> class to the method that requires client impersonation.</span></span> <span data-ttu-id="cf32d-119">Legen Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaft auf <xref:System.ServiceModel.ImpersonationOption.Required>fest.</span><span class="sxs-lookup"><span data-stu-id="cf32d-119">Set the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property to <xref:System.ServiceModel.ImpersonationOption.Required>.</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
-### So legen Sie die zulässige Ebene des Identitätswechsels auf dem Client fest  
+### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a><span data-ttu-id="cf32d-120">So legen Sie die zulässige Ebene des Identitätswechsels auf dem Client fest</span><span class="sxs-lookup"><span data-stu-id="cf32d-120">To set the allowed impersonation level on the client</span></span>  
   
-1.  Erstellen Sie Dienstclientcode mit dem [ServiceModel Metadata Utility\-Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zugreifen auf Dienste mithilfe eines WCF\-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1.  <span data-ttu-id="cf32d-121">Erstellen Sie Dienstclientcode mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-121">Create service client code by using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="cf32d-122">[Den Zugriff auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-122"> [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span></span>  
   
-2.  Nachdem Sie den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]\-Client erstellt haben, legen Sie für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>\-Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential>\-Klasse einen der <xref:System.Security.Principal.TokenImpersonationLevel>\-Enumerationswerte fest.  
+2.  <span data-ttu-id="cf32d-123">Nachdem Sie den [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] -Client erstellt haben, legen Sie für die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> -Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse einen der <xref:System.Security.Principal.TokenImpersonationLevel> -Enumerationswerte fest.</span><span class="sxs-lookup"><span data-stu-id="cf32d-123">After creating the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, set the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property of the <xref:System.ServiceModel.Security.WindowsClientCredential> class to one of the <xref:System.Security.Principal.TokenImpersonationLevel> enumeration values.</span></span>  
   
     > [!NOTE]
-    >  Damit <xref:System.Security.Principal.TokenImpersonationLevel> verwendet werden kann, muss die ausgehandelte Kerberos\-Authentifizierung \(auch *bilateraler* oder *mehrstufiger* Kerberos\-Prozess genannt\) verwendet werden. Eine Beschreibung des Implementierungsvorgangs finden Sie unter [Best Practices für Sicherheit](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+    >  <span data-ttu-id="cf32d-124">Damit <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>verwendet werden kann, muss die ausgehandelte Kerberos-Authentifizierung (auch *bilateraler* oder *mehrstufiger* Kerberos-Prozess genannt) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cf32d-124">To use <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, negotiated Kerberos authentication (sometimes called *multi-leg* or *multi-step* Kerberos) must be used.</span></span> <span data-ttu-id="cf32d-125">Eine Beschreibung des Implementierungsvorgangs finden Sie in [Best Practices für Sicherheit](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="cf32d-125">For a description of how to implement this, see [Best Practices for Security](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
-## Siehe auch  
- <xref:System.ServiceModel.OperationBehaviorAttribute>   
- <xref:System.Security.Principal.TokenImpersonationLevel>   
- [Durchführen eines Identitätswechsels für den Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)   
- [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="cf32d-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cf32d-126">See Also</span></span>  
+ <xref:System.ServiceModel.OperationBehaviorAttribute>  
+ <xref:System.Security.Principal.TokenImpersonationLevel>  
+ [<span data-ttu-id="cf32d-127">Identität des Clients angenommen</span><span class="sxs-lookup"><span data-stu-id="cf32d-127">Impersonating the Client</span></span>](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [<span data-ttu-id="cf32d-128">Delegierung und Identitätswechsel</span><span class="sxs-lookup"><span data-stu-id="cf32d-128">Delegation and Impersonation</span></span>](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

@@ -1,53 +1,55 @@
 ---
-title: "Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Zertifikate [WCF], Abrufen des Fingerabdrucks"
+title: 'Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4719be3d4e98407062bd246df4f14b9cbf452c74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats
-Beim Schreiben einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Anwendung, die ein X.509\-Zertifikat zur Authentifizierung verwendet, ist es häufig erforderlich, im Zertifikat gefundene Ansprüche anzugeben. Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType>\-Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>\-Methode verwenden. Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich. Öffnen Sie zuerst in der Microsoft Management Console \(MMC\) das Snap\-In für Zertifikate. \(Siehe [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC\-Snap\-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).\) Suchen Sie dann, wie hier beschrieben, ein entsprechendes Zertifikat, und kopieren Sie seinen Fingerabdruck \(oder andere Anspruchswerte\).  
+# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a><span data-ttu-id="160bc-102">Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats</span><span class="sxs-lookup"><span data-stu-id="160bc-102">How to: Retrieve the Thumbprint of a Certificate</span></span>
+<span data-ttu-id="160bc-103">Beim Schreiben einer [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] -Anwendung, die ein X.509-Zertifikat zur Authentifizierung verwendet, ist es häufig erforderlich, im Zertifikat gefundene Ansprüche anzugeben.</span><span class="sxs-lookup"><span data-stu-id="160bc-103">When writing a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application that uses an X.509 certificate for authentication, it is often necessary to specify claims found in the certificate.</span></span> <span data-ttu-id="160bc-104">Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> -Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> -Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="160bc-104">For example, you must supply a thumbprint claim when using the <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeration in the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="160bc-105">Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich.</span><span class="sxs-lookup"><span data-stu-id="160bc-105">Finding the claim value requires two steps.</span></span> <span data-ttu-id="160bc-106">Öffnen Sie zuerst in der Microsoft Management Console (MMC) das Snap-In für Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="160bc-106">First, open the Microsoft Management Console (MMC) snap-in for certificates.</span></span> <span data-ttu-id="160bc-107">(Siehe [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Suchen Sie dann, wie hier beschrieben, ein entsprechendes Zertifikat, und kopieren Sie seinen Fingerabdruck (oder andere Anspruchswerte).</span><span class="sxs-lookup"><span data-stu-id="160bc-107">(See [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Second, as described here, find an appropriate certificate and copy its thumbprint (or other claim values).</span></span>  
   
- Wenn Sie ein Zertifikat für die Dienstauthentifizierung verwenden, ist es wichtig, den Wert der Spalte **Ausgestellt für** zu notieren \(die erste Spalte in der Konsole\). Beim Verwenden von SSL \(Secure Sockets Layer\) als Transportsicherheit wird als eine der ersten Überprüfungen der URI \(Uniform Resource Identifier\) der Basisadresse des Dienstes mit dem Wert **Ausgestellt für** verglichen. Die Werte müssen übereinstimmen, sonst wird die Authentifizierungsvorgang angehalten.  
+ <span data-ttu-id="160bc-108">Wenn Sie ein Zertifikat für die Dienstauthentifizierung verwenden, ist es wichtig, den Wert der Spalte **Ausgestellt für** zu notieren (die erste Spalte in der Konsole).</span><span class="sxs-lookup"><span data-stu-id="160bc-108">If you are using a certificate for service authentication, it is important to note the value of the **Issued To** column (the first column in the console).</span></span> <span data-ttu-id="160bc-109">Beim Verwenden von SSL (Secure Sockets Layer) als Transportsicherheit wird als eine der ersten Überprüfungen der URI (Uniform Resource Identifier) der Basisadresse des Dienstes mit dem Wert **Ausgestellt für** verglichen.</span><span class="sxs-lookup"><span data-stu-id="160bc-109">When using Secure Sockets Layer (SSL) as a transport security, one of the first checks done is to compare the base address Uniform Resource Identifier (URI) of a service to the **Issued To** value.</span></span> <span data-ttu-id="160bc-110">Die Werte müssen übereinstimmen, sonst wird die Authentifizierungsvorgang angehalten.</span><span class="sxs-lookup"><span data-stu-id="160bc-110">The values must match or the authentication process is halted.</span></span>  
   
- Sie können auch mit dem Tool Makecert.exe aus dem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-SDK temporäre Zertifikate nur für die Entwicklung erstellen. Standardmäßig wird ein solches Zertifikat jedoch von einer Zertifizierungsstelle nicht ausgestellt, und es kann zu Produktionszwecken nicht verwendet werden.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Gewusst wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ <span data-ttu-id="160bc-111">Sie können auch mit dem Tool Makecert.exe aus dem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -SDK temporäre Zertifikate nur für die Entwicklung erstellen.</span><span class="sxs-lookup"><span data-stu-id="160bc-111">You can also use the Makecert.exe tool from the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK to create temporary certificates for use only during development.</span></span> <span data-ttu-id="160bc-112">Standardmäßig wird ein solches Zertifikat jedoch von einer Zertifizierungsstelle nicht ausgestellt, und es kann zu Produktionszwecken nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="160bc-112">By default, however, such a certificate is not issued by a certification authority, and is unusable for production purposes.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="160bc-113">[Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).</span><span class="sxs-lookup"><span data-stu-id="160bc-113"> [How to: Create Temporary Certificates for Use During Development](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).</span></span>  
   
-### So rufen Sie den Fingerabdruck eines Zertifikats ab  
+### <a name="to-retrieve-a-certificates-thumbprint"></a><span data-ttu-id="160bc-114">So rufen Sie den Fingerabdruck eines Zertifikats ab</span><span class="sxs-lookup"><span data-stu-id="160bc-114">To retrieve a certificate's thumbprint</span></span>  
   
-1.  Öffnen Sie in der Microsoft Management Console \(MMC\) das Snap\-In für Zertifikate. \(Siehe [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC\-Snap\-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).\)  
+1.  <span data-ttu-id="160bc-115">Öffnen Sie in der Microsoft Management Console (MMC) das Snap-In für Zertifikate.</span><span class="sxs-lookup"><span data-stu-id="160bc-115">Open the Microsoft Management Console (MMC) snap-in for certificates.</span></span> <span data-ttu-id="160bc-116">(Siehe [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)</span><span class="sxs-lookup"><span data-stu-id="160bc-116">(See [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)</span></span>  
   
-2.  Klicken Sie im linken Bereich des Fensters **Konsolenstamm** auf **Zertifikate \(Lokaler Computer\)**.  
+2.  <span data-ttu-id="160bc-117">Klicken Sie im linken Bereich des Fensters **Konsolenstamm** auf **Zertifikate (Lokaler Computer)**.</span><span class="sxs-lookup"><span data-stu-id="160bc-117">In the **Console Root** window's left pane, click **Certificates (Local Computer)**.</span></span>  
   
-3.  Klicken Sie auf den Ordner **Persönlich**, um ihn zu erweitern.  
+3.  <span data-ttu-id="160bc-118">Klicken Sie auf den Ordner **Persönlich** , um ihn zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="160bc-118">Click the **Personal** folder to expand it.</span></span>  
   
-4.  Klicken Sie auf den Ordner **Zertifikate**, um ihn zu erweitern.  
+4.  <span data-ttu-id="160bc-119">Klicken Sie auf den Ordner **Zertifikate** , um ihn zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="160bc-119">Click the **Certificates** folder to expand it.</span></span>  
   
-5.  Suchen Sie in der Liste der Zertifikate die Überschrift **Beabsichtigte Zwecke**. Suchen Sie ein Zertifikat, für das **Clientauthentifizierung** als beabsichtigter Zweck aufgeführt wird.  
+5.  <span data-ttu-id="160bc-120">Suchen Sie in der Liste der Zertifikate die Überschrift **Beabsichtigte Zwecke** .</span><span class="sxs-lookup"><span data-stu-id="160bc-120">In the list of certificates, note the **Intended Purposes** heading.</span></span> <span data-ttu-id="160bc-121">Suchen Sie ein Zertifikat, für das **Clientauthentifizierung** als beabsichtigter Zweck aufgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="160bc-121">Find a certificate that lists **Client Authentication** as an intended purpose.</span></span>  
   
-6.  Doppelklicken Sie auf das Zertifikat.  
+6.  <span data-ttu-id="160bc-122">Doppelklicken Sie auf das Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="160bc-122">Double-click the certificate.</span></span>  
   
-7.  Klicken Sie im Dialogfeld **Zertifikat** auf die Registerkarte **Details**.  
+7.  <span data-ttu-id="160bc-123">Klicken Sie im Dialogfeld **Zertifikat** auf die Registerkarte **Details** .</span><span class="sxs-lookup"><span data-stu-id="160bc-123">In the **Certificate** dialog box, click the **Details** tab.</span></span>  
   
-8.  Verschieben Sie den Inhalt der Feldliste, und klicken Sie auf **Fingerabdruck**.  
+8.  <span data-ttu-id="160bc-124">Verschieben Sie den Inhalt der Feldliste, und klicken Sie auf **Fingerabdruck**.</span><span class="sxs-lookup"><span data-stu-id="160bc-124">Scroll through the list of fields and click **Thumbprint**.</span></span>  
   
-9. Kopieren Sie die hexadezimalen Zeichen aus dem Feld. Wenn dieser Fingerabdruck im Code für `X509FindType` verwendet wird, entfernen Sie die Leerzeichen zwischen den hexadezimalen Zahlen. Beispielsweise muss der Fingerabdruck "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" im Code als "a909502dd82ae41433e6f83886b00d4277a32a7b" angegeben werden.  
+9. <span data-ttu-id="160bc-125">Kopieren Sie die hexadezimalen Zeichen aus dem Feld.</span><span class="sxs-lookup"><span data-stu-id="160bc-125">Copy the hexadecimal characters from the box.</span></span> <span data-ttu-id="160bc-126">Wenn dieser Fingerabdruck im Code für `X509FindType`verwendet wird, entfernen Sie die Leerzeichen zwischen den hexadezimalen Zahlen.</span><span class="sxs-lookup"><span data-stu-id="160bc-126">If this thumbprint is used in code for the `X509FindType`, remove the spaces between the hexadecimal numbers.</span></span> <span data-ttu-id="160bc-127">Beispielsweise muss der Fingerabdruck "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" im Code als "a909502dd82ae41433e6f83886b00d4277a32a7b" angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="160bc-127">For example, the thumbprint "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" should be specified as "a909502dd82ae41433e6f83886b00d4277a32a7b" in code.</span></span>  
   
-## Siehe auch  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>   
- [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL\-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)   
- [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC\-Snap\-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)   
- [Gewusst wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+## <a name="see-also"></a><span data-ttu-id="160bc-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="160bc-128">See Also</span></span>  
+ <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>  
+ [<span data-ttu-id="160bc-129">Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="160bc-129">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [<span data-ttu-id="160bc-130">Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in</span><span class="sxs-lookup"><span data-stu-id="160bc-130">How to: View Certificates with the MMC Snap-in</span></span>](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
+ [<span data-ttu-id="160bc-131">Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung</span><span class="sxs-lookup"><span data-stu-id="160bc-131">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - positions [.NET Framework], accepting
@@ -26,29 +21,27 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6071c69799cf289ad0ecf163dc2de038efefecc1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 102d7d92384d77b5fbb56cd8c3eb859ec64bcca0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="web-and-socket-permissions"></a>Web- und Socketberechtigungen
-Internetsicherheit für Anwendungen, die den <xref:System.Net>-Namespace verwenden, wird von den <xref:System.Net.WebPermission>- und <xref:System.Net.SocketPermission>-Klassen bereitgestellt. Die **WebPermission**-Klasse steuert das Recht einer Anwendung, Daten aus einem URI abzufragen, oder einen URI für das Internet zu verarbeiten. Die **SocketPermission**-Klasse steuert das Recht einer Anwendung zur Verwendung von <xref:System.Net.Sockets.Socket> für das Annehmen von Daten auf einem lokalen Port oder für das Kontaktieren von Remotegeräten, die ein Transportprotokoll an einer anderen Adresse verwenden, und die auf dem Host, der Portnummer und dem Transportprotokoll des Sockets basieren.  
+# <a name="web-and-socket-permissions"></a><span data-ttu-id="3fa6d-102">Web- und Socketberechtigungen</span><span class="sxs-lookup"><span data-stu-id="3fa6d-102">Web and Socket Permissions</span></span>
+<span data-ttu-id="3fa6d-103">Internetsicherheit für Anwendungen, die den <xref:System.Net>-Namespace verwenden, wird von den <xref:System.Net.WebPermission>- und <xref:System.Net.SocketPermission>-Klassen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-103">Internet security for applications using the <xref:System.Net> namespace is provided by the <xref:System.Net.WebPermission> and <xref:System.Net.SocketPermission> classes.</span></span> <span data-ttu-id="3fa6d-104">Die **WebPermission**-Klasse steuert das Recht einer Anwendung, Daten aus einem URI abzufragen, oder einen URI für das Internet zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-104">The **WebPermission** class controls an application's right to request data from a URI or to serve a URI to the Internet.</span></span> <span data-ttu-id="3fa6d-105">Die **SocketPermission**-Klasse steuert das Recht einer Anwendung zur Verwendung von <xref:System.Net.Sockets.Socket> für das Annehmen von Daten auf einem lokalen Port oder für das Kontaktieren von Remotegeräten, die ein Transportprotokoll an einer anderen Adresse verwenden, und die auf dem Host, der Portnummer und dem Transportprotokoll des Sockets basieren.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-105">The **SocketPermission** class controls an application's right to use a <xref:System.Net.Sockets.Socket> to accept data on a local port or to contact remote devices using a transport protocol at another address, based on the host, port number, and transport protocol of the socket.</span></span>  
   
- Welche Berechtigungsklasse Sie verwenden, hängt von Ihrem Anwendungstyp ab. Anwendungen, die <xref:System.Net.WebRequest> und seine Nachfolger verwenden, sollten die **WebPermission**-Klasse verwenden, um Berechtigungen zu verwalten. Anwendungen, die Zugriff auf Socketebene verwenden, sollten die **SocketPermission**-Klasse verwenden, um Berechtigungen zu verwalten.  
+ <span data-ttu-id="3fa6d-106">Welche Berechtigungsklasse Sie verwenden, hängt von Ihrem Anwendungstyp ab.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-106">Which permission class you use depends on your application type.</span></span> <span data-ttu-id="3fa6d-107">Anwendungen, die <xref:System.Net.WebRequest> und seine Nachfolger verwenden, sollten die **WebPermission**-Klasse verwenden, um Berechtigungen zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-107">Applications that use <xref:System.Net.WebRequest> and its descendants should use the **WebPermission** class to manage permissions.</span></span> <span data-ttu-id="3fa6d-108">Anwendungen, die Zugriff auf Socketebene verwenden, sollten die **SocketPermission**-Klasse verwenden, um Berechtigungen zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-108">Applications that use socket-level access should use the **SocketPermission** class to manage permissions.</span></span>  
   
- **WebPermission** und **SocketPermission** definieren zwei Berechtigungen: Akzeptieren und Verbinden. „Akzeptieren“ gewährt der Anwendung das Recht, eine eingehende Verbindung von einer anderen Partei zu beantworten. „Verbinden“ gewährt der Anwendung das Recht, eine eingehende Verbindung von einer anderen Partei zu initiieren.  
+ <span data-ttu-id="3fa6d-109">**WebPermission** und **SocketPermission** definieren zwei Berechtigungen: Akzeptieren und Verbinden.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-109">**WebPermission** and **SocketPermission** define two permissions: accept and connect.</span></span> <span data-ttu-id="3fa6d-110">„Akzeptieren“ gewährt der Anwendung das Recht, eine eingehende Verbindung von einer anderen Partei zu beantworten.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-110">Accept grants the application the right to answer an incoming connection from another party.</span></span> <span data-ttu-id="3fa6d-111">„Verbinden“ gewährt der Anwendung das Recht, eine eingehende Verbindung von einer anderen Partei zu initiieren.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-111">Connect grants the application the right to initiate a connection to another party.</span></span>  
   
- Für **SocketPermission**-Instanzen bedeutet „Akzeptieren“, dass eine Anwendung eingehende Verbindungen auf einer lokalen Transportadresse annehmen kann. „Verbinden“ bedeutet, dass eine Anwendung eine Verbindung zu einer Remotetransportadresse (oder einer lokalen Transportadresse) herstellen kann.  
+ <span data-ttu-id="3fa6d-112">Für **SocketPermission**-Instanzen bedeutet „Akzeptieren“, dass eine Anwendung eingehende Verbindungen auf einer lokalen Transportadresse annehmen kann. „Verbinden“ bedeutet, dass eine Anwendung eine Verbindung zu einer Remotetransportadresse (oder einer lokalen Transportadresse) herstellen kann.</span><span class="sxs-lookup"><span data-stu-id="3fa6d-112">For **SocketPermission** instances, accept means that an application can accept incoming connections on a local transport address; connect means that an application can connect to some remote (or local) transport address.</span></span>  
   
- Für **WebPermission**-Instanzen bedeutet „Akzeptieren“, dass eine Anwendung den von **WebPermission** gesteuerten URI weltweit exportieren kann. „Verbinden“ bedeutet, dass eine Anwendung Zugriff auf diesen URI hat (egal ob Remote oder lokal).  
+ <span data-ttu-id="3fa6d-113">Für **WebPermission**-Instanzen bedeutet „Akzeptieren“, dass eine Anwendung den von **WebPermission** gesteuerten URI weltweit exportieren kann. „Verbinden“ bedeutet, dass eine Anwendung Zugriff auf diesen URI hat (egal ob Remote oder lokal).</span><span class="sxs-lookup"><span data-stu-id="3fa6d-113">For **WebPermission** instances, accept means that an application can export the URI controlled by the **WebPermission** to the world; connect means that an application can access that URI (whether it is remote or local).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheit](../../../docs/standard/security/index.md)   
- [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="3fa6d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3fa6d-114">See Also</span></span>  
+ [<span data-ttu-id="3fa6d-115">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="3fa6d-115">Security</span></span>](../../../docs/standard/security/index.md)  
+ [<span data-ttu-id="3fa6d-116">Sicherheit in der Netzwerkprogrammierung</span><span class="sxs-lookup"><span data-stu-id="3fa6d-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)

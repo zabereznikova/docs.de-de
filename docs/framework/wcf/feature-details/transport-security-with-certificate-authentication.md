@@ -1,42 +1,46 @@
 ---
-title: "Transportsicherheit mit Zertifikatauthentifizierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transportsicherheit mit Zertifikatauthentifizierung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Transportsicherheit mit Zertifikatauthentifizierung
-In diesem Thema wird die Server\- und Clientauthentifizierung mit X.509\-Zertifikaten bei Verwendung der Transportsicherheit behandelt.Weitere Informationen zu X.509\-Zertifikaten finden Sie unter [X.509\-Zertifikate mit öffentlichem Schlüssel](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der es sich oft um einen Drittanbieter\-Zertifikataussteller handelt.In einer Windows Server\-Domäne können Sie Active Directory\-Zertifikatdienste verwenden, um Zertifikate für Clientcomputer in der Domäne auszustellen.Weitere Informationen finden Sie unter [Windows 2008 R2\-Zertifikatdienste](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x407).In diesem Szenario wird der Dienst unter Internetinformationsdienste \(IIS\) konfiguriert mit Secure Sockets Layer \(SSL\) gehostet.Der Dienst ist mit einem SSL\-Zertifikat \(X.509\) konfiguriert, um Clients das Überprüfen der Identität des Servers zu ermöglichen.Der Client ist ebenfalls mit einem X.509\-Zertifikat konfiguriert, das es dem Dienst ermöglicht, die Identität des Clients zu überprüfen.Das Zertifikat des Servers muss für den Client vertrauenswürdig sein und das Zertifikat des Clients für den Server.Die eigentlichen Mechanismen, anhand derer der Dienst und der Client die Identität des anderen überprüfen, werden in diesem Thema nicht behandelt.Weitere Informationen finden Sie unter ["Digitale Signatur" auf Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  
+# <a name="transport-security-with-certificate-authentication"></a><span data-ttu-id="4908d-102">Transportsicherheit mit Zertifikatauthentifizierung</span><span class="sxs-lookup"><span data-stu-id="4908d-102">Transport Security with Certificate Authentication</span></span>
+<span data-ttu-id="4908d-103">In diesem Thema wird die Server- und Clientauthentifizierung mit X.509-Zertifikaten bei Verwendung der Transportsicherheit behandelt.</span><span class="sxs-lookup"><span data-stu-id="4908d-103">This topic discusses using X.509 certificates for server and client authentication when using transport security.</span></span> <span data-ttu-id="4908d-104">Weitere Informationen zum x. 509-Zertifikate, finden Sie unter [x. 509-Zertifikate für öffentliche Schlüssel](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).</span><span class="sxs-lookup"><span data-stu-id="4908d-104">For more information about X.509 certificates see [X.509 Public Key Certificates](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).</span></span> <span data-ttu-id="4908d-105">Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, die häufig ein Drittanbieter-Zertifikataussteller handelt.</span><span class="sxs-lookup"><span data-stu-id="4908d-105">Certificates must be issued by a certification authority, which is often a third-party issuer of certificates.</span></span> <span data-ttu-id="4908d-106">In einer Windows Server-Domäne können Sie Active Directory-Zertifikatdienste verwenden, um Zertifikate für Clientcomputer in der Domäne auszustellen.</span><span class="sxs-lookup"><span data-stu-id="4908d-106">On a Windows Server domain, Active Directory Certificate Services can be used to issue certificates to client computers on the domain.</span></span> <span data-ttu-id="4908d-107">Weitere Informationen finden Sie unter [Windows 2008 R2-Zertifikatdiensten](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409).</span><span class="sxs-lookup"><span data-stu-id="4908d-107">For more information see [Windows 2008 R2 Certificate Services](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409).</span></span> <span data-ttu-id="4908d-108">In diesem Szenario wird der Dienst unter Internetinformationsdienste (IIS) konfiguriert mit Secure Sockets Layer (SSL) gehostet.</span><span class="sxs-lookup"><span data-stu-id="4908d-108">In this scenario, the service is hosted under Internet Information Services (IIS) which is configured with Secure Sockets Layer (SSL).</span></span> <span data-ttu-id="4908d-109">Der Dienst ist mit einem SSL-Zertifikat (X.509) konfiguriert, um Clients das Überprüfen der Identität des Servers zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4908d-109">The service is configured with an SSL (X.509) certificate to allow clients to verify the identity of the server.</span></span> <span data-ttu-id="4908d-110">Der Client ist ebenfalls mit einem X.509-Zertifikat konfiguriert, das es dem Dienst ermöglicht, die Identität des Clients zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="4908d-110">The client is also configured with an X.509 certificate that allows the service to verify the identity of the client.</span></span> <span data-ttu-id="4908d-111">Das Zertifikat des Servers muss für den Client vertrauenswürdig sein und das Zertifikat des Clients für den Server.</span><span class="sxs-lookup"><span data-stu-id="4908d-111">The server’s certificate must be trusted by the client and the client’s certificate must be trusted by the server.</span></span> <span data-ttu-id="4908d-112">Die eigentlichen Mechanismen, anhand derer der Dienst und der Client die Identität des anderen überprüfen, werden in diesem Thema nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="4908d-112">The actual mechanics of how the service and client verifies each other’s identity is beyond the scope of this topic.</span></span> <span data-ttu-id="4908d-113">Weitere Informationen finden Sie unter [digitale Signatur auf Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).</span><span class="sxs-lookup"><span data-stu-id="4908d-113">For more information see [Digital Signature on Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).</span></span>  
   
- In diesem Szenario wird das im folgenden Diagramm dargestellte Anforderungs\-\/Antwortnachrichtenmuster implementiert.  
+ <span data-ttu-id="4908d-114">In diesem Szenario wird das im folgenden Diagramm dargestellte Anforderungs-/Antwortnachrichtenmuster implementiert.</span><span class="sxs-lookup"><span data-stu-id="4908d-114">This scenario implements a request/reply message pattern as illustrated by the following diagram.</span></span>  
   
- ![Sichere Übertragung mit Zertifikaten](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968\-899f\-4538\-a9e8\-0eaa872a291c")  
+ <span data-ttu-id="4908d-115">![Sichere Übertragung mit Zertifikaten](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span><span class="sxs-lookup"><span data-stu-id="4908d-115">![Secure transfer using certificates](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zur Verwendung eines Zertifikats mit einem Dienst finden Sie unter [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL\-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).In der folgenden Tabelle werden die verschiedenen Merkmale des Szenarios beschrieben.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4908d-116">Verwenden eines Zertifikats mit einem Dienst finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="4908d-116"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span> <span data-ttu-id="4908d-117">In der folgenden Tabelle werden die verschiedenen Merkmale des Szenarios beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4908d-117">The following table describes the various characteristics of the scenario.</span></span>  
   
-|Merkmal|Beschreibung|  
-|-------------|------------------|  
-|Sicherheitsmodus|Transport|  
-|Interoperabilität|Mit vorhandenen Webdienstclients und Diensten.|  
-|Authentifizierung \(Server\)<br /><br /> Authentifizierung \(Client\)|Ja \(mit einem SSL\-Zertifikat\)<br /><br /> Ja \(mit einem X.509\-Zertifikat\)|  
-|Datenintegrität|Ja|  
-|Datenvertraulichkeit|Ja|  
-|Transport|HTTPS|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="4908d-118">Merkmal</span><span class="sxs-lookup"><span data-stu-id="4908d-118">Characteristic</span></span>|<span data-ttu-id="4908d-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4908d-119">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="4908d-120">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="4908d-120">Security Mode</span></span>|<span data-ttu-id="4908d-121">Transport</span><span class="sxs-lookup"><span data-stu-id="4908d-121">Transport</span></span>|  
+|<span data-ttu-id="4908d-122">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="4908d-122">Interoperability</span></span>|<span data-ttu-id="4908d-123">Mit vorhandenen Webdienstclients und Diensten.</span><span class="sxs-lookup"><span data-stu-id="4908d-123">With existing Web service clients and services.</span></span>|  
+|<span data-ttu-id="4908d-124">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="4908d-124">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="4908d-125">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="4908d-125">Authentication (Client)</span></span>|<span data-ttu-id="4908d-126">Ja (mit einem SSL-Zertifikat)</span><span class="sxs-lookup"><span data-stu-id="4908d-126">Yes (using an SSL certificate)</span></span><br /><br /> <span data-ttu-id="4908d-127">Ja (mit einem X.509-Zertifikat)</span><span class="sxs-lookup"><span data-stu-id="4908d-127">Yes (using an X.509 certificate)</span></span>|  
+|<span data-ttu-id="4908d-128">Datenintegrität</span><span class="sxs-lookup"><span data-stu-id="4908d-128">Data Integrity</span></span>|<span data-ttu-id="4908d-129">Ja</span><span class="sxs-lookup"><span data-stu-id="4908d-129">Yes</span></span>|  
+|<span data-ttu-id="4908d-130">Datenvertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="4908d-130">Data Confidentiality</span></span>|<span data-ttu-id="4908d-131">Ja</span><span class="sxs-lookup"><span data-stu-id="4908d-131">Yes</span></span>|  
+|<span data-ttu-id="4908d-132">Transport</span><span class="sxs-lookup"><span data-stu-id="4908d-132">Transport</span></span>|<span data-ttu-id="4908d-133">HTTPS</span><span class="sxs-lookup"><span data-stu-id="4908d-133">HTTPS</span></span>|  
+|<span data-ttu-id="4908d-134">Bindung</span><span class="sxs-lookup"><span data-stu-id="4908d-134">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Konfigurieren des Diensts  
- Da der Dienst in diesem Szenario unter IIS gehostet wird, wird er mit einer Datei "web.config" konfiguriert.Die folgende Datei "web.config" zeigt, wie die <xref:System.ServiceModel.WSHttpBinding> zur Verwendung von Transportsicherheit und X.509\-Clientanmeldeinformationen konfiguriert wird.  
+## <a name="configure-the-service"></a><span data-ttu-id="4908d-135">Konfigurieren des Diensts</span><span class="sxs-lookup"><span data-stu-id="4908d-135">Configure the Service</span></span>  
+ <span data-ttu-id="4908d-136">Da der Dienst in diesem Szenario unter IIS gehostet wird, wird er mit einer Datei "web.config" konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="4908d-136">Since the service in this scenario is hosted under IIS, it is configured with a web.config file.</span></span> <span data-ttu-id="4908d-137">Die folgende Datei "web.config" zeigt, wie die <xref:System.ServiceModel.WSHttpBinding> zur Verwendung von Transportsicherheit und X.509-Clientanmeldeinformationen konfiguriert wird.</span><span class="sxs-lookup"><span data-stu-id="4908d-137">The following web.config shows how to configure the <xref:System.ServiceModel.WSHttpBinding> to use transport security and X.509 client credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -64,11 +68,10 @@ In diesem Thema wird die Server\- und Clientauthentifizierung mit X.509\-Zertifi
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Konfigurieren des Clients  
- Der Client kann im Code oder in einer Datei "app.config" konfiguriert werden.Das folgende Beispiel zeigt, wie Sie den Client im Code konfigurieren.  
+## <a name="configure-the-client"></a><span data-ttu-id="4908d-138">Konfigurieren des Clients</span><span class="sxs-lookup"><span data-stu-id="4908d-138">Configure the Client</span></span>  
+ <span data-ttu-id="4908d-139">Der Client kann im Code oder in einer Datei "app.config" konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="4908d-139">The client can be configured in code or in an app.config file.</span></span> <span data-ttu-id="4908d-140">Das folgende Beispiel zeigt, wie Sie den Client im Code konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="4908d-140">The following example shows how to configure the client in code.</span></span>  
   
 ```vb  
 // Create the binding.  
@@ -100,10 +103,9 @@ cc.ClientCredentials.ClientCertificate.SetCertificate(
 Console.WriteLine(cc.Add(100, 1111));  
 //...  
 cc.Close();  
-  
 ```  
   
- Alternativ können Sie den Client wie im folgenden Beispiel dargestellt in einer Datei "app.config" konfigurieren:  
+ <span data-ttu-id="4908d-141">Alternativ können Sie den Client wie im folgenden Beispiel dargestellt in einer Datei "app.config" konfigurieren:</span><span class="sxs-lookup"><span data-stu-id="4908d-141">Alternatively you can configure the client in an App.config file as shown in the following example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -142,9 +144,8 @@ cc.Close();
   </system.serviceModel>  
   
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
-  
 ```  
   
-## Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x407)
+## <a name="see-also"></a><span data-ttu-id="4908d-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4908d-142">See Also</span></span>  
+ [<span data-ttu-id="4908d-143">Sicherheit (Übersicht)</span><span class="sxs-lookup"><span data-stu-id="4908d-143">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="4908d-144">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="4908d-144">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

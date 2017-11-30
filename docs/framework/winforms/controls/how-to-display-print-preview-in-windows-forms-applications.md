@@ -1,44 +1,49 @@
 ---
-title: "Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], Seitenansicht"
-  - "Seitenansicht, Anzeigen"
-  - "Drucken [Windows Forms], Seitenansicht"
+title: 'Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print preview [Windows Forms], displaying
+- printing [Windows Forms], print preview
+- examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
-Mit dem <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement können Sie es Benutzern ermöglichen, ein Dokument anzuzeigen, noch bevor es gedruckt wird.  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a><span data-ttu-id="8957c-102">Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="8957c-102">How to: Display Print Preview in Windows Forms Applications</span></span>
+<span data-ttu-id="8957c-103">Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, damit Benutzer ein Dokument anzuzeigen, noch bevor es gedruckt wird.</span><span class="sxs-lookup"><span data-stu-id="8957c-103">You can use the <xref:System.Windows.Forms.PrintPreviewDialog> control to enable users to display a document, often before it is to be printed.</span></span>  
   
- Dazu müssen Sie eine Instanz der <xref:System.Drawing.Printing.PrintDocument>\-Klasse angeben. Dabei handelt es sich um das Dokument, das gedruckt werden soll.  Weitere Informationen über die Verwendung der Seitenansicht mit der <xref:System.Drawing.Printing.PrintDocument>\-Komponente finden Sie unter [Gewusst wie: Drucken in Windows Forms unter Verwendung der Seitenansicht](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ <span data-ttu-id="8957c-104">Zu diesem Zweck müssen Sie eine Instanz von angeben der <xref:System.Drawing.Printing.PrintDocument> -Klasse; Dies ist das Dokument gedruckt werden.</span><span class="sxs-lookup"><span data-stu-id="8957c-104">To do this, you need to specify an instance of the <xref:System.Drawing.Printing.PrintDocument> class; this is the document to be printed.</span></span> <span data-ttu-id="8957c-105">Weitere Informationen zum Verwenden der Seitenansicht mit der <xref:System.Drawing.Printing.PrintDocument> Komponente finden Sie unter [wie: Drucken in Windows Forms mithilfe von Seitenansicht](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span><span class="sxs-lookup"><span data-stu-id="8957c-105">For more information about using print preview with the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Print in Windows Forms Using Print Preview](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span></span>  
   
 > [!NOTE]
->  Um ein <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement zur Laufzeit verwenden zu können, muss auf dem Computer des Benutzers ein Drucker lokal oder über ein Netzwerk installiert sein, da die <xref:System.Windows.Forms.PrintPreviewDialog>\-Komponente teilweise auf diese Art ermittelt, wie das Dokument beim Drucken aussieht.  
+>  <span data-ttu-id="8957c-106">Verwenden der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement zur Laufzeit müssen Benutzer einen Drucker, die auf ihrem Computer installiert werden, entweder lokal oder über ein Netzwerk aufweisen, da dies teilweise ist wie die <xref:System.Windows.Forms.PrintPreviewDialog> Komponente bestimmt, wie ein Dokument gedruckt aussehen wird.</span><span class="sxs-lookup"><span data-stu-id="8957c-106">To use the <xref:System.Windows.Forms.PrintPreviewDialog> control at run time, users must have a printer installed on their computer, either locally or through a network, as this is partly how the <xref:System.Windows.Forms.PrintPreviewDialog> component determines how a document will look when printed.</span></span>  
   
- Das <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement verwendet die <xref:System.Drawing.Printing.PrinterSettings>\-Klasse.  Zusätzlich verwendet das <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement die <xref:System.Drawing.Printing.PageSettings>\-Klasse, ebenso wie die <xref:System.Windows.Forms.PrintPreviewDialog>\-Komponente.  Das in der <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>\-Eigenschaft des <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelements angegebene Druckdokument verweist auf Instanzen der <xref:System.Drawing.Printing.PrinterSettings>\-Klasse und <xref:System.Drawing.Printing.PageSettings>\-Klasse, die zum Rendern des Dokuments im Vorschaufenster verwendet werden.  
+ <span data-ttu-id="8957c-107">Die <xref:System.Windows.Forms.PrintPreviewDialog> steuern verwendet der <xref:System.Drawing.Printing.PrinterSettings> Klasse.</span><span class="sxs-lookup"><span data-stu-id="8957c-107">The <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PrinterSettings> class.</span></span> <span data-ttu-id="8957c-108">Darüber hinaus die <xref:System.Windows.Forms.PrintPreviewDialog> steuern verwendet der <xref:System.Drawing.Printing.PageSettings> -Klasse, ebenso wie die <xref:System.Windows.Forms.PrintPreviewDialog> -Komponente.</span><span class="sxs-lookup"><span data-stu-id="8957c-108">Additionally, the <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PageSettings> class, just as the <xref:System.Windows.Forms.PrintPreviewDialog> component does.</span></span> <span data-ttu-id="8957c-109">Die zu druckenden Dokument im angegebenen der <xref:System.Windows.Forms.PrintPreviewDialog> des Steuerelements <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> Eigenschaft bezieht sich auf Instanzen von sowohl die <xref:System.Drawing.Printing.PrinterSettings> und <xref:System.Drawing.Printing.PageSettings> Klassen und diese dienen zum Rendern des Dokuments im Vorschaufenster.</span><span class="sxs-lookup"><span data-stu-id="8957c-109">The print document specified in the <xref:System.Windows.Forms.PrintPreviewDialog> control's <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> property refers to instances of both the <xref:System.Drawing.Printing.PrinterSettings> and <xref:System.Drawing.Printing.PageSettings> classes, and these are used to render the document in the preview window.</span></span>  
   
-### So zeigen Sie Seiten mit dem PrintPreviewDialog\-Steuerelement an  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a><span data-ttu-id="8957c-110">Zum Anzeigen von Seiten, die über das PrintPreviewDialog-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="8957c-110">To view pages using the PrintPreviewDialog control</span></span>  
   
--   Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>\-Methode zum Anzeigen des Dialogfelds, und geben Sie dabei die zu verwendende <xref:System.Drawing.Printing.PrintDocument>\-Komponente an.  
+-   <span data-ttu-id="8957c-111">Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.</span><span class="sxs-lookup"><span data-stu-id="8957c-111">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.</span></span>  
   
-     Im folgenden Codebeispiel wird vom <xref:System.Windows.Forms.Control.Click>\-Ereignishandler des <xref:System.Windows.Forms.Button>\-Steuerelements eine Instanz des <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelements geöffnet.  Das Druckdokument wird in der <xref:System.Windows.Forms.PrintDialog.Document%2A>\-Eigenschaft festgelegt.  Im nachstehenden Beispiel ist kein Druckdokument festgelegt.  
+     <span data-ttu-id="8957c-112">Im folgenden Codebeispiel die <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Click> Ereignishandler öffnet eine Instanz von der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="8957c-112">In the following code example, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span> <span data-ttu-id="8957c-113">Die zu druckenden Dokument wird angegeben, der <xref:System.Windows.Forms.PrintDialog.Document%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="8957c-113">The print document is specified in the <xref:System.Windows.Forms.PrintDialog.Document%2A> property.</span></span> <span data-ttu-id="8957c-114">Im folgenden Beispiel wird keine zu druckenden Dokument angegeben.</span><span class="sxs-lookup"><span data-stu-id="8957c-114">In the example below, no print document is specified.</span></span>  
   
-     In diesem Beispiel wird vorausgesetzt, dass das Formular über ein <xref:System.Windows.Forms.Button>\-Steuerelement, eine <xref:System.Drawing.Printing.PrintDocument>\-Komponente mit dem Namen`myDocument` und ein <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement verfügt.  
+     <span data-ttu-id="8957c-115">Im Beispiel erfordert, dass das Formular verfügt über eine <xref:System.Windows.Forms.Button> -Steuerelement, eine <xref:System.Drawing.Printing.PrintDocument> Komponente, die mit dem Namen `myDocument`, und ein <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="8957c-115">The example requires that your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -49,7 +54,6 @@ Mit dem <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement können Si
        PrintPreviewDialog1.Document = myDocument  
        PrintPreviewDialog1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ Mit dem <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement können Si
        printPreviewDialog1.Document = myDocument;  
        printPreviewDialog1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  
@@ -77,11 +80,10 @@ Mit dem <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement können Si
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Fügen Sie den folgenden Code im Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     <span data-ttu-id="8957c-116">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Fügen Sie den folgenden Code in den Konstruktor der Form ein, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="8957c-116">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -89,8 +91,8 @@ Mit dem <xref:System.Windows.Forms.PrintPreviewDialog>\-Steuerelement können Si
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## Siehe auch  
- [PrintDocument\-Komponente](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)   
- [PrintPreviewDialog\-Steuerelement](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="8957c-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8957c-117">See Also</span></span>  
+ [<span data-ttu-id="8957c-118">PrintDocument-Komponente</span><span class="sxs-lookup"><span data-stu-id="8957c-118">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [<span data-ttu-id="8957c-119">PrintPreviewDialog-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="8957c-119">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [<span data-ttu-id="8957c-120">Druckunterstützung in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8957c-120">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [<span data-ttu-id="8957c-121">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8957c-121">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)

@@ -1,66 +1,69 @@
 ---
-title: "Konfigurieren von Internetinformationsdienste 7.0 f&#252;r Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Konfigurieren von Internetinformationsdienste 7.0 f&#252;r Windows Communication Foundation
-Internetinformationsdienste \(IIS\) 7.0 weist einen modularen Aufbau auf, der es Ihnen ermöglicht, die benötigten Komponenten selektiv zu installieren.Dieser Aufbau basiert auf der neuen manifest\-gesteuerten Komponententechnologie, die in [!INCLUDE[wv](../../../../includes/wv-md.md)] eingeführt wurde.Es gibt mehr als 40 eigenständige Funktionskomponenten von [!INCLUDE[iisver](../../../../includes/iisver-md.md)], die unabhängig voneinander installiert werden können.Dies ermöglicht es IT\-Profis, die Installation problemlos nach Bedarf anzupassen.In diesem Thema wird erläutert, wie [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zur Verwendung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] konfiguriert wird, und ermittelt, welche Komponenten erforderlich sind.  
+# <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a><span data-ttu-id="dbd40-102">Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="dbd40-102">Configuring Internet Information Services 7.0 for Windows Communication Foundation</span></span>
+<span data-ttu-id="dbd40-103">Internetinformationsdienste (IIS) 7.0 weist einen modularen Aufbau auf, der es Ihnen ermöglicht, die benötigten Komponenten selektiv zu installieren.</span><span class="sxs-lookup"><span data-stu-id="dbd40-103">Internet Information Services (IIS) 7.0 has a modular design that allows you to selectively install components that are required.</span></span> <span data-ttu-id="dbd40-104">Dieser Aufbau basiert auf der neuen manifest-gesteuerten Komponententechnologie, die in [!INCLUDE[wv](../../../../includes/wv-md.md)] eingeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="dbd40-104">This design is based on the new manifest-driven componentization technology introduced in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="dbd40-105">Es gibt mehr als 40 eigenständige Funktionskomponenten von [!INCLUDE[iisver](../../../../includes/iisver-md.md)], die unabhängig voneinander installiert werden können.</span><span class="sxs-lookup"><span data-stu-id="dbd40-105">There are more than 40 standalone feature components of [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that can be installed independently.</span></span> <span data-ttu-id="dbd40-106">Dies ermöglicht es IT-Profis, die Installation problemlos nach Bedarf anzupassen.</span><span class="sxs-lookup"><span data-stu-id="dbd40-106">This allows IT professionals to easily customize the installation as required.</span></span> <span data-ttu-id="dbd40-107">In diesem Thema wird erläutert, wie [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zur Verwendung mit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] konfiguriert wird, und ermittelt, welche Komponenten erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="dbd40-107">This topic discusses how to configure [!INCLUDE[iisver](../../../../includes/iisver-md.md)] for use with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and determine which components are required.</span></span>  
   
-## Minimale Installation: Installieren von WAS  
- Die minimale Installation des gesamten [!INCLUDE[iisver](../../../../includes/iisver-md.md)]\-Pakets besteht in der Installation des Windows\-Prozessaktivierungsdiensts \(WAS\).WAS ist eine eigenständige Funktion und die einzige Funktion in [!INCLUDE[iisver](../../../../includes/iisver-md.md)], die für alle [!INCLUDE[wv](../../../../includes/wv-md.md)]\-Betriebssysteme \(Home Basic, Home Premium, Business und Ultimate sowie Enterprise\) zur Verfügung steht.  
+## <a name="minimal-installation-installing-was"></a><span data-ttu-id="dbd40-108">Minimale Installation: Installieren von WAS</span><span class="sxs-lookup"><span data-stu-id="dbd40-108">Minimal Installation: Installing WAS</span></span>  
+ <span data-ttu-id="dbd40-109">Die minimale Installation des gesamten [!INCLUDE[iisver](../../../../includes/iisver-md.md)]-Pakets besteht in der Installation des Windows-Prozessaktivierungsdiensts (WAS).</span><span class="sxs-lookup"><span data-stu-id="dbd40-109">The minimal installation of the whole [!INCLUDE[iisver](../../../../includes/iisver-md.md)] package is to install the Windows Process Activation Service (WAS).</span></span> <span data-ttu-id="dbd40-110">WAS ist eine eigenständige Funktion und die einzige Funktion in [!INCLUDE[iisver](../../../../includes/iisver-md.md)], die für alle [!INCLUDE[wv](../../../../includes/wv-md.md)]-Betriebssysteme (Home Basic, Home Premium, Business und Ultimate sowie Enterprise) zur Verfügung steht.</span><span class="sxs-lookup"><span data-stu-id="dbd40-110">WAS is a standalone feature and it is the only feature from the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that is available for all [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems (Home Basic, Home Premium, Business, and Ultimate and Enterprise).</span></span>  
   
- Klicken Sie in der Systemsteuerung auf **Programme** und dann auf die Option **Windows\-Funktionen ein\- oder ausschalten**, die sich unter **Programme und Funktionen** befindet. Die WAS\-Komponente wird in der Liste wie in der folgenden Abbildung dargestellt angezeigt.  
+ <span data-ttu-id="dbd40-111">Klicken Sie in der Systemsteuerung auf **Programme** , und klicken Sie dann auf **Windows-Funktionen ein- oder ausschalten** unter aufgeführt **Programme und Funktionen**, die WAS-Komponente wird angezeigt, der die Liste wie in der folgenden Abbildung dargestellt.</span><span class="sxs-lookup"><span data-stu-id="dbd40-111">From the Control Panel, click **Programs** and then click **Turn Windows features on or off** which is listed under **Programs and Features**, the WAS component is shown in the list as in the following illustration.</span></span>  
   
- ![Dialogfeld zum Ein&#45;&#47;Ausschalten von Funktionen](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc\_TurnFeaturesOnOrOffs")  
+ <span data-ttu-id="dbd40-112">![-Funktionen ein-oder ausschalten Dialogfeld](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "Wcfc_TurnFeaturesOnOrOffs")</span><span class="sxs-lookup"><span data-stu-id="dbd40-112">![Turn Features On or Off Dialog](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")</span></span>  
   
- Diese Funktion weist die folgenden untergeordneten Komponenten auf:  
+ <span data-ttu-id="dbd40-113">Diese Funktion weist die folgenden untergeordneten Komponenten auf:</span><span class="sxs-lookup"><span data-stu-id="dbd40-113">This feature has the following sub-components:</span></span>  
   
--   .NET\-Umgebung  
+-   <span data-ttu-id="dbd40-114">.NET-Umgebung</span><span class="sxs-lookup"><span data-stu-id="dbd40-114">.NET Environment</span></span>  
   
--   Konfigurations\-APIs  
+-   <span data-ttu-id="dbd40-115">Konfigurations-APIs</span><span class="sxs-lookup"><span data-stu-id="dbd40-115">Configuration APIs</span></span>  
   
--   Prozessmodell  
+-   <span data-ttu-id="dbd40-116">Prozessmodell</span><span class="sxs-lookup"><span data-stu-id="dbd40-116">Process Model</span></span>  
   
- Wenn Sie den Stammknoten von WAS auswählen, ist nur der untergeordnete Knoten **Prozessmodell** standardmäßig aktiviert.Beachten Sie, dass Sie mit dieser Installation lediglich WAS installieren, da kein Webserver unterstützt wird.  
+ <span data-ttu-id="dbd40-117">Wenn Sie nur den Stammknoten von WAS, wählen Sie die **Prozessmodell** Unterknoten ist standardmäßig aktiviert.</span><span class="sxs-lookup"><span data-stu-id="dbd40-117">If you select the root node of WAS, only the **Process Model** sub-node is checked by default.</span></span> <span data-ttu-id="dbd40-118">Beachten Sie, dass Sie mit dieser Installation lediglich WAS installieren, da kein Webserver unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="dbd40-118">Please note that with this installation you are only installing WAS, because there is no support for a Web server.</span></span>  
   
- Wenn Sie möchten, dass [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oder eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Anwendung funktionieren soll, aktivieren Sie das Kontrollkästchen für die .NET\-Umgebung.Dies bedeutet, dass alle WAS\-Komponenten erforderlich sind, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ordnungsgemäß funktionieren.Diese werden automatisch überprüft, sobald Sie eine dieser Komponenten installieren.  
+ <span data-ttu-id="dbd40-119">Vornehmen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oder eine beliebige [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung funktioniert, überprüfen Sie die **'.NET-umgebung'** Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="dbd40-119">To make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] or any [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application to work, check the **.NET Environment** checkbox.</span></span> <span data-ttu-id="dbd40-120">Dies bedeutet, dass alle WAS-Komponenten erforderlich sind, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ordnungsgemäß funktionieren.</span><span class="sxs-lookup"><span data-stu-id="dbd40-120">This means that all of WAS components are required to make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to work well.</span></span> <span data-ttu-id="dbd40-121">Diese werden automatisch überprüft, sobald Sie eine dieser Komponenten installieren.</span><span class="sxs-lookup"><span data-stu-id="dbd40-121">These are automatically checked once you install any of those components.</span></span>  
   
-## IIS 7.0: Standardinstallation  
- Wenn Sie die Funktion **Internetinformationsdienste** aktivieren, werden einige der untergeordneten Knoten wie in der folgenden Abbildung dargestellt automatisch aktiviert.  
+## <a name="iis-70-default-installation"></a><span data-ttu-id="dbd40-122">IIS 7.0: Standardinstallation</span><span class="sxs-lookup"><span data-stu-id="dbd40-122">IIS 7.0: Default Installation</span></span>  
+ <span data-ttu-id="dbd40-123">Durch Überprüfen der **Internetinformationsdienste (IIS)** Feature, einige der untergeordneten Knoten sind wie in der folgenden Abbildung dargestellt automatisch aktiviert.</span><span class="sxs-lookup"><span data-stu-id="dbd40-123">By checking the **Internet Information Services** feature, some of the sub-nodes are automatically checked as shown in the following illustration.</span></span>  
   
- ![Standardeinstellungen für IIS 7.0&#45;Funktionen](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc\_TurningFeaturesOnOrOff2")  
+ <span data-ttu-id="dbd40-124">![Standardeinstellungen für IIS 7.0-Funktionen](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span><span class="sxs-lookup"><span data-stu-id="dbd40-124">![Default settings for IIS 7.0 features](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span></span>  
   
- Dies ist die Standardinstallation von [!INCLUDE[iisver](../../../../includes/iisver-md.md)].Mit dieser Installation können Sie [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zum Verarbeiten von statischem Inhalt \(wie HTML\-Seiten und anderen Inhalt\) verwenden.Sie können jedoch keine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\- und CGI\-Anwendungen oder [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Dienste ausführen.  
+ <span data-ttu-id="dbd40-125">Dies ist die Standardinstallation von [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dbd40-125">This is the default installation of [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="dbd40-126">Mit dieser Installation können Sie [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zum Verarbeiten von statischem Inhalt (wie HTML-Seiten und anderen Inhalt) verwenden.</span><span class="sxs-lookup"><span data-stu-id="dbd40-126">With this installation, you can use [!INCLUDE[iisver](../../../../includes/iisver-md.md)] to service static content (such as HTML pages and other content).</span></span> <span data-ttu-id="dbd40-127">Sie können jedoch keine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]- und CGI-Anwendungen oder [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Dienste ausführen.</span><span class="sxs-lookup"><span data-stu-id="dbd40-127">However, you cannot run [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] or CGI applications or host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## IIS 7.0: Installation mit ASP.NET\-Unterstützung  
- Sie müssen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] installieren, um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS 7.0 verwenden zu können.Nachdem Sie **ASP.NET** aktiviert haben, sollte am Bildschirm Folgendes angezeigt werden.  
+## <a name="iis-70-installation-with-aspnet-support"></a><span data-ttu-id="dbd40-128">IIS 7.0: Installation mit ASP.NET-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="dbd40-128">IIS 7.0: Installation with ASP.NET Support</span></span>  
+ <span data-ttu-id="dbd40-129">Sie müssen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] installieren, um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS 7.0 verwenden zu können.</span><span class="sxs-lookup"><span data-stu-id="dbd40-129">You must install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to make [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] work on IIS 7.0.</span></span> <span data-ttu-id="dbd40-130">Nach der Überprüfung **ASP.NET**, sollte am Bildschirm Folgendes angezeigt.</span><span class="sxs-lookup"><span data-stu-id="dbd40-130">After checking **ASP.NET**, your screen should look like the following illustration.</span></span>  
   
- ![Erforderliche Asp.NET&#45;Einstellungen](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc\_TrunFeaturesOnOrOFf3s")  
+ <span data-ttu-id="dbd40-131">![Asp.NET Erforderliche Einstellungen](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span><span class="sxs-lookup"><span data-stu-id="dbd40-131">![Asp.NET required settings](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span></span>  
   
- Dies ist die minimale Umgebung, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\-Anwendungen in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] funktionieren.  
+ <span data-ttu-id="dbd40-132">Dies ist die minimale Umgebung, damit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungen in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] funktionieren.</span><span class="sxs-lookup"><span data-stu-id="dbd40-132">This is the minimal environment for both [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications to work in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span>  
   
-## IIS 7.0: Installation mit IIS 6.0\-Kompatibilitätskomponenten  
- Wenn [!INCLUDE[iisver](../../../../includes/iisver-md.md)] auf einem System mit Visual Studio 2005 oder anderen Automatisierungsskripts oder Tools \(wie z. B. Adsutil.vbs\) installiert wird, mit denen virtuelle Anwendungen konfiguriert werden, welche die [!INCLUDE[iis601](../../../../includes/iis601-md.md)]\-Metabasis\-API verwenden, müssen Sie sicherstellen, dass Sie die [!INCLUDE[iis601](../../../../includes/iis601-md.md)]\-**Skriptingtools** aktivieren.Dadurch werden automatisch die anderen untergeordneten Knoten der [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Verwaltungskompatibilität** aktiviert.Die folgende Abbildung zeigt den Bildschirm, nachdem dies durchgeführt wurde.  
+## <a name="iis-70-installation-with-iis-60-compatibility-components"></a><span data-ttu-id="dbd40-133">IIS 7.0: Installation mit IIS 6.0-Kompatibilitätskomponenten</span><span class="sxs-lookup"><span data-stu-id="dbd40-133">IIS 7.0: Installation with IIS 6.0 Compatibility Components</span></span>  
+ <span data-ttu-id="dbd40-134">Bei der Installation von [!INCLUDE[iisver](../../../../includes/iisver-md.md)] auf einem System mit Visual Studio 2005 oder ein anderer Automatisierungsskripts oder Tools (z. B. "Adsutil.vbs"), die Konfiguration virtueller Anwendungen, mit denen [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Metabasis-API, stellen Sie sicher, dass Sie sich beim dem [!INCLUDE[iis601](../../../../includes/iis601-md.md)]  **Skriptingtools**.</span><span class="sxs-lookup"><span data-stu-id="dbd40-134">When installing [!INCLUDE[iisver](../../../../includes/iisver-md.md)] on a system with Visual Studio 2005 or some other automation scripts or tools (such as Adsutil.vbs) that configure virtual applications that use [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Metabase API, ensure that you check the [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Scripting Tools**.</span></span> <span data-ttu-id="dbd40-135">Dies automatisch geprüft, ob die untergeordneten Knoten des [!INCLUDE[iis601](../../../../includes/iis601-md.md)] **-Verwaltungskompatibilität**.</span><span class="sxs-lookup"><span data-stu-id="dbd40-135">This automatically checks the other sub-nodes of [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Management Compatibility**.</span></span> <span data-ttu-id="dbd40-136">Die folgende Abbildung zeigt den Bildschirm, nachdem dies durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="dbd40-136">The following illustration shows the screen after this is done.</span></span>  
   
- ![IIS 6.0&#45;Verwaltungskompatibilitätseinstellungen](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc\_TurnFeaturesOnOrOff5s")  
+ <span data-ttu-id="dbd40-137">![IIS 6.0-Verwaltungskompatibilitätseinstellungen](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span><span class="sxs-lookup"><span data-stu-id="dbd40-137">![IIS 6.0 Management Compatibility Settings](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span></span>  
   
- Bei dieser Installation steht Ihnen alles zur Verfügung, was Sie zur Verwendung der [!INCLUDE[iisver](../../../../includes/iisver-md.md)]\-, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]\- und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Funktionen und \-Beispiele im Internet benötigen.  
+ <span data-ttu-id="dbd40-138">Bei dieser Installation steht Ihnen alles zur Verfügung, was Sie zur Verwendung der [!INCLUDE[iisver](../../../../includes/iisver-md.md)]-, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]- und [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Funktionen und -Beispiele im Internet benötigen.</span><span class="sxs-lookup"><span data-stu-id="dbd40-138">With this installation, you have everything required to use [!INCLUDE[iisver](../../../../includes/iisver-md.md)], [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features and samples available on the Web.</span></span>  
   
-## Anforderungsbeschränkungen  
- Unter [!INCLUDE[wv](../../../../includes/wv-md.md)] mit IIS 7 wurden der Standardwert von `maxUri` und die `maxQueryStringSize`\-Einstellungen geändert.Standardmäßig sind in Anforderungsfiltern in IIS 7.0 eine URL\-Länge von 4096 Zeichen und Abfragezeichenfolgen mit einer Länge von 2048 Zeichen zulässig.Um diese Standardwerte zu ändern, fügen Sie das folgende XML der Datei App.config hinzu.  
+## <a name="request-limits"></a><span data-ttu-id="dbd40-139">Anforderungsbeschränkungen</span><span class="sxs-lookup"><span data-stu-id="dbd40-139">Request Limits</span></span>  
+ <span data-ttu-id="dbd40-140">Unter [!INCLUDE[wv](../../../../includes/wv-md.md)] mit IIS 7 wurden der Standardwert von `maxUri` und die `maxQueryStringSize`-Einstellungen geändert.</span><span class="sxs-lookup"><span data-stu-id="dbd40-140">On [!INCLUDE[wv](../../../../includes/wv-md.md)] with IIS 7 the default value of the `maxUri` and `maxQueryStringSize` settings have been changed.</span></span> <span data-ttu-id="dbd40-141">Standardmäßig sind in Anforderungsfiltern in IIS 7.0 eine URL-Länge von 4096 Zeichen und Abfragezeichenfolgen mit einer Länge von 2048 Zeichen zulässig.</span><span class="sxs-lookup"><span data-stu-id="dbd40-141">By default, request filtering in IIS 7.0 allows a URL length of 4096 characters and a query string length of 2048 characters.</span></span> <span data-ttu-id="dbd40-142">Um diese Standardwerte zu ändern, fügen Sie das folgende XML der Datei App.config hinzu.</span><span class="sxs-lookup"><span data-stu-id="dbd40-142">To change these defaults add the following XML to your App.config file.</span></span>  
   
  `<system.webServer>`  
   
@@ -68,7 +71,7 @@ Internetinformationsdienste \(IIS\) 7.0 weist einen modularen Aufbau auf, der es
   
  `<requestFiltering>`  
   
- `<requestLimits maxUrl=”8192” maxQueryString=”8192” />`  
+ `<requestLimits maxUrl="8192" maxQueryString="8192" />`  
   
  `</requestFiltering>`  
   
@@ -76,8 +79,8 @@ Internetinformationsdienste \(IIS\) 7.0 weist einen modularen Aufbau auf, der es
   
  `</system.webServer>`  
   
-## Siehe auch  
- [WAS\-Aktivierungsarchitektur](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)   
- [Konfigurieren von WAS zur Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
- [Gewusst wie: Installieren und Konfigurieren von WCF\-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)   
- [Windows Server AppFabric\-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="dbd40-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dbd40-143">See Also</span></span>  
+ [<span data-ttu-id="dbd40-144">WAS-Aktivierungsarchitektur</span><span class="sxs-lookup"><span data-stu-id="dbd40-144">WAS Activation Architecture</span></span>](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+ [<span data-ttu-id="dbd40-145">Konfigurieren von WAS zur Verwendung mit WCF</span><span class="sxs-lookup"><span data-stu-id="dbd40-145">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [<span data-ttu-id="dbd40-146">Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten</span><span class="sxs-lookup"><span data-stu-id="dbd40-146">How to: Install and Configure WCF Activation Components</span></span>](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [<span data-ttu-id="dbd40-147">Windows Server AppFabric-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="dbd40-147">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

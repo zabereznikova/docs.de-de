@@ -1,39 +1,44 @@
 ---
-title: "Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], TreeView-Steuerelement"
-  - "Strukturknoten im TreeView-Steuerelement, Durchlaufen"
-  - "TreeView-Steuerelement [Windows Forms], Durchlaufen von Knoten"
+title: "Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- TreeView control [Windows Forms], iterating through nodes
+- tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows&#160;Forms
-Manchmal ist es sinnvoll, alle Knoten in einem <xref:System.Windows.Forms.TreeView>\-Steuerelement von Windows Forms zu prüfen, um Berechnungen an den Knotenwerten durchzuführen.  Diese Operation kann mit einer rekursiven Prozedur \(rekursive Methode in C\# und C\+\+\) durchgeführt werden, die alle Knoten in allen Auflistungen der Struktur durchläuft.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="62b5d-102">Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="62b5d-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
+<span data-ttu-id="62b5d-103">Es ist manchmal hilfreich, untersuchen Sie jeden Knoten in einer Windows Forms <xref:System.Windows.Forms.TreeView> Steuerelement, um eine Berechnung für die Knotenwerte ausführen.</span><span class="sxs-lookup"><span data-stu-id="62b5d-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="62b5d-104">Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.</span><span class="sxs-lookup"><span data-stu-id="62b5d-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
   
- Jedes <xref:System.Windows.Forms.TreeNode>\-Objekt in einer Strukturansicht verfügt über Eigenschaften, mit deren Hilfe Sie in der Strukturansicht navigieren können: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A> und <xref:System.Windows.Forms.TreeNode.Parent%2A>.  Der Wert der <xref:System.Windows.Forms.TreeNode.Parent%2A>\-Eigenschaft entspricht dem Knoten, der dem aktuellen Knoten übergeordnet ist.  Die Knoten, die dem aktuellen Knoten untergeordnet sind \(falls vorhanden\), sind in dessen <xref:System.Windows.Forms.TreeNode.Nodes%2A>\-Eigenschaft aufgeführt.  Das <xref:System.Windows.Forms.TreeView>\-Steuerelement selbst verfügt über die <xref:System.Windows.Forms.TreeView.TopNode%2A>\-Eigenschaft, bei der es sich um den Stammknoten der gesamten Strukturansicht handelt.  
+ <span data-ttu-id="62b5d-105">Jede <xref:System.Windows.Forms.TreeNode> Objekt in einer Strukturansicht verfügt über Eigenschaften, die Sie verwenden können, um die Strukturansicht zu navigieren: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, und <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span><span class="sxs-lookup"><span data-stu-id="62b5d-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="62b5d-106">Der Wert, der die <xref:System.Windows.Forms.TreeNode.Parent%2A> Eigenschaft ist der übergeordnete Knoten des aktuellen Knotens.</span><span class="sxs-lookup"><span data-stu-id="62b5d-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="62b5d-107">Die untergeordneten Knoten des aktuellen Knotens, sofern vorhanden, sind aufgeführt seine <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="62b5d-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="62b5d-108">Die <xref:System.Windows.Forms.TreeView> Steuerelement selbst verfügt über die <xref:System.Windows.Forms.TreeView.TopNode%2A> Eigenschaft, die den Stammknoten der gesamten Strukturansicht darstellt.</span><span class="sxs-lookup"><span data-stu-id="62b5d-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
   
-### So gehen Sie alle Knoten des TreeView\-Steuerelements durch  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="62b5d-109">So durchlaufen Sie alle Knoten des TreeView-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="62b5d-109">To iterate through all nodes of the TreeView control</span></span>  
   
-1.  Erstellen Sie eine rekursive Prozedur \(rekursive Methode in C\# und C\+\+\), die jeden einzelnen Knoten testet.  
+1.  <span data-ttu-id="62b5d-110">Erstellen Sie eine rekursive Prozedur (rekursive Methode in C# und C++), die jeden einzelnen Knoten testet.</span><span class="sxs-lookup"><span data-stu-id="62b5d-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
   
-2.  Rufen Sie die Prozedur auf.  
+2.  <span data-ttu-id="62b5d-111">Rufen Sie die Prozedur auf.</span><span class="sxs-lookup"><span data-stu-id="62b5d-111">Call the procedure.</span></span>  
   
-     Das folgende Beispiel zeigt, wie die <xref:System.Windows.Forms.TreeNode.Text%2A>\-Eigenschaft der verschiedenen <xref:System.Windows.Forms.TreeNode>\-Objekte ausgegeben werden kann:  
+     <span data-ttu-id="62b5d-112">Im folgende Beispiel wird gezeigt, wie jede Drucken <xref:System.Windows.Forms.TreeNode> des Objekts <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="62b5d-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -52,7 +57,6 @@ Manchmal ist es sinnvoll, alle Knoten in einem <xref:System.Windows.Forms.TreeVi
           PrintRecursive(n)  
        Next  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -78,7 +82,6 @@ Manchmal ist es sinnvoll, alle Knoten in einem <xref:System.Windows.Forms.TreeVi
           PrintRecursive(n);  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -130,6 +133,6 @@ Manchmal ist es sinnvoll, alle Knoten in einem <xref:System.Windows.Forms.TreeVi
        }  
     ```  
   
-## Siehe auch  
- [TreeView\-Steuerelement](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Recursive Procedures](../Topic/Recursive%20Procedures%20\(Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="62b5d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62b5d-113">See Also</span></span>  
+ [<span data-ttu-id="62b5d-114">TreeView-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="62b5d-114">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="62b5d-115">Rekursive Prozeduren</span><span class="sxs-lookup"><span data-stu-id="62b5d-115">Recursive Procedures</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

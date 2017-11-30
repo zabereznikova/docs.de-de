@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - OverlappedFreeError MDA
 - overlapped free method call error
@@ -22,40 +16,39 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68d5098c1a26e186790ba9dafb27b66fedc3f1e9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 645c9f6c5a2a693fb2b88b2b2bc1c40501eecde8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="overlappedfreeerror-mda"></a>overlappedFreeError-MDA
-Der `overlappedFreeError`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=fullName>-Methode aufgerufen wird, bevor der überlappende Vorgang abgeschlossen ist.  
+# <a name="overlappedfreeerror-mda"></a><span data-ttu-id="4fd65-102">overlappedFreeError-MDA</span><span class="sxs-lookup"><span data-stu-id="4fd65-102">overlappedFreeError MDA</span></span>
+<span data-ttu-id="4fd65-103">Der `overlappedFreeError`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType>-Methode aufgerufen wird, bevor der überlappende Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="4fd65-103">The `overlappedFreeError` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> method is called before the overlapped operation has completed.</span></span>  
   
-## <a name="symptoms"></a>Symptome  
- Zugriffsverletzungen oder Beschädigungen des Heaps der Garbage Collection.  
+## <a name="symptoms"></a><span data-ttu-id="4fd65-104">Symptome</span><span class="sxs-lookup"><span data-stu-id="4fd65-104">Symptoms</span></span>  
+ <span data-ttu-id="4fd65-105">Zugriffsverletzungen oder Beschädigungen des Heaps der Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="4fd65-105">Access violations or corruption of the garbage-collected heap.</span></span>  
   
-## <a name="cause"></a>Ursache  
- Eine überlappende Struktur wurde freigegeben, bevor der Vorgang abgeschlossen wurde. Die Funktion, die den überlappenden Zeiger verwendet, wird möglicherweise später auf die Struktur schreiben, nachdem dieser freigegeben wurde. Dies kann den Heap beschädigen, da ein anderes Objekt jetzt diesen Bereich einnehmen kann.  
+## <a name="cause"></a><span data-ttu-id="4fd65-106">Ursache</span><span class="sxs-lookup"><span data-stu-id="4fd65-106">Cause</span></span>  
+ <span data-ttu-id="4fd65-107">Eine überlappende Struktur wurde freigegeben, bevor der Vorgang abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="4fd65-107">An overlapped structure was freed before the operation completed.</span></span> <span data-ttu-id="4fd65-108">Die Funktion, die den überlappenden Zeiger verwendet, wird möglicherweise später auf die Struktur schreiben, nachdem dieser freigegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="4fd65-108">The function that is using the overlapped pointer might write to the structure later, after it has been freed.</span></span> <span data-ttu-id="4fd65-109">Dies kann den Heap beschädigen, da ein anderes Objekt jetzt diesen Bereich einnehmen kann.</span><span class="sxs-lookup"><span data-stu-id="4fd65-109">That can cause heap corruption because another object might now occupy that region.</span></span>  
   
- Dieser MDA stellt möglicherweise keine Fehler dar, wenn der überlappende Vorgang nicht erfolgreich gestartet wurde.  
+ <span data-ttu-id="4fd65-110">Dieser MDA stellt möglicherweise keine Fehler dar, wenn der überlappende Vorgang nicht erfolgreich gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="4fd65-110">This MDA might not represent an error if the overlapped operation did not start successfully.</span></span>  
   
-## <a name="resolution"></a>Auflösung  
- Stellen Sie sicher, dass der E/A-Vorgang die überlappende Struktur verwendet, bevor Sie die <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29>-Methode aufrufen.  
+## <a name="resolution"></a><span data-ttu-id="4fd65-111">Auflösung</span><span class="sxs-lookup"><span data-stu-id="4fd65-111">Resolution</span></span>  
+ <span data-ttu-id="4fd65-112">Stellen Sie sicher, dass der E/A-Vorgang die überlappende Struktur verwendet, bevor Sie die <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29>-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="4fd65-112">Ensure that the I/O operation using the overlapped structure has completed before calling the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
- Dieser MDA hat keine Auswirkungen auf die CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4fd65-113">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="4fd65-113">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4fd65-114">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="4fd65-114">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Ausgabe  
- Nachfolgend wird eine Beispielausgabe für diesen MDA angezeigt.  
+## <a name="output"></a><span data-ttu-id="4fd65-115">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="4fd65-115">Output</span></span>  
+ <span data-ttu-id="4fd65-116">Nachfolgend wird eine Beispielausgabe für diesen MDA angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4fd65-116">The following is sample output for this MDA.</span></span>  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## <a name="configuration"></a>Konfiguration  
+## <a name="configuration"></a><span data-ttu-id="4fd65-117">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="4fd65-117">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -65,8 +58,7 @@ Der `overlappedFreeError`-MDA (Assistent für verwaltetes Debuggen) wird aktivie
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="4fd65-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4fd65-118">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="4fd65-119">Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)</span><span class="sxs-lookup"><span data-stu-id="4fd65-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="4fd65-120">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="4fd65-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
