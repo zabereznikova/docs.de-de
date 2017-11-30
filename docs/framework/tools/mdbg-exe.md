@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f65251d5712f981eaa038cd8fbfe66b5e690b4b6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
@@ -53,7 +46,7 @@ MDbg [ProgramName[arguments]] [options]
 |-------------|-----------------|  
 |**ap**[**rocess**] [*nummer*]|Wechselt zu einem anderen debuggten Prozess oder druckt verfügbare Prozesse. Die Zahlen sind keine echten Prozess-IDs (PID), sondern eine 0-indizierte Liste.|  
 |**a**[**ttach**] [*pid*]|Fügt an einen Prozess an oder druckt verfügbare Prozesse.|  
-|**b**[**reak**] [*klassenname.methode* &#124; *dateiname:zeilennr*]|Legt einen Haltepunkt bei der angegebenen Methode fest. Module werden nacheinander überprüft.<br /><br /> -   **break** *dateiname:zeilennr* legt einen Haltepunkt an einer Position in der Quelle fest.<br />-   **break** *~zahl* legt einen Haltepunkt an einem Symbol fest, das kurz vorher mit dem **x**-Befehl angezeigt wurde.<br />-   break**** *modul!klassenname.methode+IlOffset* legt einen Haltepunkt am vollqualifizierten Speicherort fest.|  
+|**b**[**reak**] [*klassenname.methode* &#124; *dateiname:zeilennr*]|Legt einen Haltepunkt bei der angegebenen Methode fest. Module werden nacheinander überprüft.<br /><br /> -   **break** *dateiname:zeilennr* legt einen Haltepunkt an einer Position in der Quelle fest.<br />-   **break** *~zahl* legt einen Haltepunkt an einem Symbol fest, das kurz vorher mit dem **x**-Befehl angezeigt wurde.<br />-   **break** *modul!klassenname.methode+IlOffset* legt einen Haltepunkt am vollqualifizierten Speicherort fest.|  
 |**block**[**ingObjects**]|Zeigt Monitorsperren an, die blockierende Threads sind.|  
 |**ca**[**tch**] [*ausnahmentyp*]|Bewirkt, dass der Debugger nicht nur bei Ausnahmefehlern, sondern bei allen Ausnahmen unterbricht.|  
 |**cl**[**earException**]|Markiert die aktuelle Ausnahme als behandelt, sodass die Ausführung fortgesetzt werden kann. Wenn die Ursache der Ausnahme nicht behandelt wurde, kann die Ausnahme erneut schnell ausgelöst werden.|  
@@ -122,6 +115,5 @@ mdbg>
 ## <a name="examples"></a>Beispiele  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools](../../../docs/framework/tools/index.md)   
+ [Extras](../../../docs/framework/tools/index.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
