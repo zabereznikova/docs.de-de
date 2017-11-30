@@ -1,41 +1,41 @@
 ---
-title: "&#220;bersicht &#252;ber die ContextMenu-Komponente (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ContextMenu"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kontextmenüs, ContextMenu-Komponente"
-  - "ContextMenu-Komponente [Windows Forms], Informationen über die ContextMenu-Komponente"
-  - "Kontextmenüs, ContextMenu-Komponente"
+title: "Übersicht über die ContextMenu-Komponente (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ContextMenu
+helpviewer_keywords:
+- ContextMenu component [Windows Forms], about ContextMenu component
+- context menus [Windows Forms], ContextMenu component
+- shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6c2542ca7ee27bec96bb5010bcdb2fcd7416f72
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber die ContextMenu-Komponente (Windows&#160;Forms)
+# <a name="contextmenu-component-overview-windows-forms"></a><span data-ttu-id="d7024-102">Übersicht über die ContextMenu-Komponente (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d7024-102">ContextMenu Component Overview (Windows Forms)</span></span>
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> ersetzen das <xref:System.Windows.Forms.MainMenu>\-Steuerelement und das <xref:System.Windows.Forms.ContextMenu>\-Steuerelement früherer Versionen und erweitern dieses um Funktionen, jedoch werden <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> aus Gründen der Abwärtskompatibilität und, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+>  <span data-ttu-id="d7024-103">Obwohl <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> ersetzt und funktionell die <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> Steuerelemente von früheren Versionen <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> für Abwärtskompatibilität und für zukünftige Verwendung beibehalten werden, falls gewünscht.</span><span class="sxs-lookup"><span data-stu-id="d7024-103">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
- Mit der <xref:System.Windows.Forms.ContextMenu>\-Komponente von Windows Forms können Sie Benutzern ein leicht zugängliches Kontextmenü mit häufig verwendeten Befehlen zur Verfügung stellen, die sich direkt auf das ausgewählte Objekt beziehen.  Bei den Elementen eines Kontextmenüs handelt es sich oft um eine Auswahl der Elemente aus den Hauptmenüs, die an anderen Stellen der Anwendung zu finden sind.  Im Normalfall kann ein Benutzer durch Klicken mit der rechten Maustaste auf ein Kontextmenü zugreifen.  In Windows Forms werden Kontextmenüs zu Steuerelementen zugeordnet.  
+ <span data-ttu-id="d7024-104">Mit dem Windows Forms <xref:System.Windows.Forms.ContextMenu> Komponente, können Sie Benutzer bereitstellen, ein leicht zugänglichen Kontextmenü mit häufig verwendeten Befehlen, die dem ausgewählten Objekt zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="d7024-104">With the Windows Forms <xref:System.Windows.Forms.ContextMenu> component, you can provide users with an easily accessible shortcut menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="d7024-105">Die Elemente in einem Kontextmenü sind häufig eine Teilmenge der Elemente aus den Hauptmenüs, die an anderer Stelle in der Anwendung angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d7024-105">The items in a shortcut menu are frequently a subset of the items from main menus that appear elsewhere in the application.</span></span> <span data-ttu-id="d7024-106">Benutzer kann ein Kontextmenü mit der rechten Maustaste des Mauszeiger in der Regel zugreifen.</span><span class="sxs-lookup"><span data-stu-id="d7024-106">A user can typically access a shortcut menu by right-clicking the mouse.</span></span> <span data-ttu-id="d7024-107">In Windows Forms sind Kontextmenüs Steuerelementen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d7024-107">On Windows Forms, shortcut menus are associated with controls.</span></span>  
   
-## Haupteigenschaften  
- Sie können ein Kontextmenü einem Steuerelement zuordnen, indem Sie die <xref:System.Windows.Forms.Control.ContextMenu%2A>\-Eigenschaft des Steuerelements auf die <xref:System.Windows.Forms.ContextMenu>\-Komponente festlegen.  Ein einzelnes Kontextmenü kann mehreren Steuerelementen zugeordnet werden. Jedes Steuerelement kann jedoch nur ein Kontextmenü besitzen.  
+## <a name="key-properties"></a><span data-ttu-id="d7024-108">Wichtige Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d7024-108">Key Properties</span></span>  
+ <span data-ttu-id="d7024-109">Sie können ein Kontextmenü mit einem Steuerelement zuordnen, indem Sie des Steuerelements <xref:System.Windows.Forms.Control.ContextMenu%2A> Eigenschaft, um die <xref:System.Windows.Forms.ContextMenu> Komponente.</span><span class="sxs-lookup"><span data-stu-id="d7024-109">You can associate a shortcut menu with a control by setting the control's <xref:System.Windows.Forms.Control.ContextMenu%2A> property to the <xref:System.Windows.Forms.ContextMenu> component.</span></span> <span data-ttu-id="d7024-110">Ein einzelnes Kontextmenü kann mehreren Steuerelementen zugeordnet werden, aber jedes Steuerelement nur ein Kontextmenü haben kann.</span><span class="sxs-lookup"><span data-stu-id="d7024-110">A single shortcut menu can be associated with multiple controls, but each control can have only one shortcut menu.</span></span>  
   
- Die wichtigste Eigenschaft der <xref:System.Windows.Forms.ContextMenu>\-Komponente ist die <xref:System.Windows.Forms.Menu.MenuItems%2A>\-Eigenschaft.  Sie können Menüelemente hinzufügen, indem Sie programmgesteuert <xref:System.Windows.Forms.MenuItem>\-Objekte erstellen und diese der <xref:System.Windows.Forms.Menu.MenuItemCollection> des Kontextmenüs hinzufügen.  Da die Elemente eines Kontextmenüs im Allgemeinen aus anderen Menüs stammen, werden Sie die Elemente wahrscheinlich meistens durch Kopieren einem Kontextmenü hinzufügen.  
+ <span data-ttu-id="d7024-111">Die wichtigste Eigenschaft die <xref:System.Windows.Forms.ContextMenu> Komponente ist die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="d7024-111">The key property of the <xref:System.Windows.Forms.ContextMenu> component is the <xref:System.Windows.Forms.Menu.MenuItems%2A> property.</span></span> <span data-ttu-id="d7024-112">Sie können Menüelemente hinzufügen, indem Sie programmgesteuert erstellen <xref:System.Windows.Forms.MenuItem> -Objekte und durch Hinzufügen, damit die <xref:System.Windows.Forms.Menu.MenuItemCollection> des Kontextmenüs.</span><span class="sxs-lookup"><span data-stu-id="d7024-112">You can add menu items by programmatically creating <xref:System.Windows.Forms.MenuItem> objects and adding them to the <xref:System.Windows.Forms.Menu.MenuItemCollection> of the shortcut menu.</span></span> <span data-ttu-id="d7024-113">Da die Elemente in einem Kontextmenü in der Regel aus anderen Menüs gezeichnet werden, werden Sie am häufigsten Elemente ein Kontextmenü hinzugefügt durch Kopieren.</span><span class="sxs-lookup"><span data-stu-id="d7024-113">Because the items in a shortcut menu are usually drawn from other menus, you will most frequently add items to a shortcut menu by copying them.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ContextMenu>   
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a><span data-ttu-id="d7024-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d7024-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ContextMenu>  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

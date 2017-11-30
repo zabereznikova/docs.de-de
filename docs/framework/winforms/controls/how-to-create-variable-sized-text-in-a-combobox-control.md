@@ -1,33 +1,35 @@
 ---
-title: "Gewusst wie: Erstellen von Text mit variabler Gr&#246;&#223;e in einem ComboBox-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kombinationsfelder, Zeichnen von Text"
-  - "ComboBox-Steuerelement [Windows Forms], Zeichnen von benutzerdefiniertem Text"
-  - "ComboBox-Steuerelement [Windows Forms], Beispiele [C#]"
-  - "Beispiele [Windows Forms], ComboBox-Steuerelement"
-  - "Text, Zeichnen in Kombinationsfeldern"
+title: "Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- text [Windows Forms], drawing in combo boxes
+- examples [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], drawing text
+- ComboBox control [Windows Forms], examples [C#]
+- ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Text mit variabler Gr&#246;&#223;e in einem ComboBox-Steuerelement
-In diesem Beispiel wird das benutzerdefinierte Zeichnen von Text in einem <xref:System.Windows.Forms.ComboBox>\-Steuerelement veranschaulicht.  Wenn ein Element ein bestimmtes Kriterium erfüllt, wird es in einer größeren Schriftart gezeichnet und rot dargestellt.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="962ca-102">Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="962ca-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="962ca-103">In diesem Beispiel veranschaulicht das benutzerdefinierte Zeichnen von Text in einem <xref:System.Windows.Forms.ComboBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="962ca-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="962ca-104">Wenn ein Element eine bestimmte Kriterien erfüllt, ist es in einer größeren Schrift gezeichnet und Rot.</span><span class="sxs-lookup"><span data-stu-id="962ca-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="962ca-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="962ca-105">Example</span></span>  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -62,22 +64,22 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a><span data-ttu-id="962ca-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="962ca-106">Compiling the Code</span></span>  
+ <span data-ttu-id="962ca-107">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="962ca-107">This example requires:</span></span>  
   
--   Ein Windows Form muss vorhanden sein.  
+-   <span data-ttu-id="962ca-108">Ein Windows Form.</span><span class="sxs-lookup"><span data-stu-id="962ca-108">A Windows form.</span></span>  
   
--   Ein <xref:System.Windows.Forms.ComboBox>\-Steuerelement mit dem Namen  `ListBox1`  mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A>\-Eigenschaft.  In diesem Beispiel lauten die drei Elemente `"One", Two", and Three"`.  Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A>\-Eigenschaft von `ComboBox1` muss auf <xref:System.Windows.Forms.DrawMode> festgelegt sein.  
+-   <span data-ttu-id="962ca-109">Ein <xref:System.Windows.Forms.ComboBox> Steuerelement namens `ListBox1` mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="962ca-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="962ca-110">In diesem Beispiel werden die drei Elemente mit Namen `"One", Two", and Three"`.</span><span class="sxs-lookup"><span data-stu-id="962ca-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="962ca-111">Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Eigenschaft `ComboBox1` muss festgelegt werden, um <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span><span class="sxs-lookup"><span data-stu-id="962ca-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
   
     > [!NOTE]
-    >  Diese Methode kann auch auf das <xref:System.Windows.Forms.ListBox>\-Steuerelement angewendet werden – Sie können eine <xref:System.Windows.Forms.ListBox> für die <xref:System.Windows.Forms.ComboBox> ersetzen.  
+    >  <span data-ttu-id="962ca-112">Dieses Verfahren gilt auch für die <xref:System.Windows.Forms.ListBox> Steuerelement – können Sie auch eine <xref:System.Windows.Forms.ListBox> für die <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="962ca-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
   
--   Verweise auf den <xref:System.Windows.Forms?displayProperty=fullName>\-Namespace und den <xref:System.Drawing?displayProperty=fullName>\-Namespace.  
+-   <span data-ttu-id="962ca-113">Verweise auf die Namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="962ca-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ComboBox.DrawItem>   
- <xref:System.Windows.Forms.DrawItemEventArgs>   
- <xref:System.Windows.Forms.ComboBox.MeasureItem>   
- [Steuerelemente mit integrierter Ownerdrawing\-Unterstützung](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [ListBox\-Steuerelement](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)   
- [ComboBox\-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="962ca-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="962ca-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox.DrawItem>  
+ <xref:System.Windows.Forms.DrawItemEventArgs>  
+ <xref:System.Windows.Forms.ComboBox.MeasureItem>  
+ [<span data-ttu-id="962ca-115">Steuerelemente mit integrierter Ownerdrawing-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="962ca-115">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [<span data-ttu-id="962ca-116">ListBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="962ca-116">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [<span data-ttu-id="962ca-117">ComboBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="962ca-117">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

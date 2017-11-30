@@ -1,108 +1,91 @@
 ---
-title: Sub-Prozeduren (Visual Basic) | Microsoft-Dokumentation
+title: Sub-Prozeduren (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Sub procedures, about Sub procedures
+- Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
-- Sub procedures, calling
-- procedures, calling
-- Sub procedures, syntax
+- Sub procedures [Visual Basic], calling
+- procedures [Visual Basic], calling
+- Sub procedures [Visual Basic], syntax
 - Sub procedures
-- procedures, Sub
-- syntax, Sub procedures
+- procedures [Visual Basic], Sub
+- syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d224fa3338ca707070ee431380578a8fdde47e07
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
-Ein `Sub` Prozedur ist eine Reihe von [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Anweisungen, die durch die `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur eine Aufgabe ausführt, und dann wird die Steuerung an den aufrufenden Code zurückgegeben, aber keinen Wert an den aufrufenden Code zurück.  
+# <a name="sub-procedures-visual-basic"></a><span data-ttu-id="4199b-102">Sub-Prozeduren (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4199b-102">Sub Procedures (Visual Basic)</span></span>
+<span data-ttu-id="4199b-103">Ein `Sub` Verfahren besteht aus einer Reihe von [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Anweisungen, die durch die `Sub` und `End Sub` Anweisungen.</span><span class="sxs-lookup"><span data-stu-id="4199b-103">A `Sub` procedure is a series of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] statements enclosed by the `Sub` and `End Sub` statements.</span></span> <span data-ttu-id="4199b-104">Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die Steuerung an den aufrufenden Code zurückgegeben, aber es wird keinen Wert an den aufrufenden Code zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="4199b-104">The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.</span></span>  
   
- Jedes Mal die Prozedur aufgerufen wird, die Anweisungen ausgeführt werden, beginnend mit der ersten ausführbaren Anweisung nach der `Sub` -Anweisung und endet mit dem ersten `End Sub`, `Exit Sub`, oder `Return` Anweisung aufgetreten.  
+ <span data-ttu-id="4199b-105">Jedes Mal, die die Prozedur aufgerufen wird, die Anweisungen werden ausgeführt, beginnend mit der ersten ausführbaren Anweisung nach der `Sub` -Anweisung und endet mit dem ersten `End Sub`, `Exit Sub`, oder `Return` Anweisung wurde gefunden.</span><span class="sxs-lookup"><span data-stu-id="4199b-105">Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.</span></span>  
   
- Sie können eine `Sub` Verfahren in Modulen, Klassen und Strukturen. In der Standardeinstellung ist `Public`, womit Sie können ihn Aufrufen von überall in Ihrer Anwendung, die Zugriff auf das Modul, Klasse oder Struktur, in der Sie definiert, wurde. Der Begriff *Methode*, beschreibt eine `Sub` oder `Function` -Prozedur, die außerhalb der definieren aus zugegriffen werden kann-Modul, die Klasse oder Struktur. Weitere Informationen finden Sie unter [Prozeduren](./index.md).  
+ <span data-ttu-id="4199b-106">Sie können definieren, eine `Sub` Prozedur in Modulen, Klassen und Strukturen.</span><span class="sxs-lookup"><span data-stu-id="4199b-106">You can define a `Sub` procedure in modules, classes, and structures.</span></span> <span data-ttu-id="4199b-107">Standardmäßig ist es `Public`, das bedeutet, dass erreichen sie von jedem beliebigen Standort in Ihrer Anwendung, die Zugriff auf das Modul, Klasse oder Struktur an, in dem Sie definiert, wurde.</span><span class="sxs-lookup"><span data-stu-id="4199b-107">By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.</span></span> <span data-ttu-id="4199b-108">Der Begriff *Methode*, beschreibt eine `Sub` oder `Function` Prozedur, die aus außerhalb seiner Definition erfolgt-Modul, die Klasse oder Struktur.</span><span class="sxs-lookup"><span data-stu-id="4199b-108">The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure.</span></span> <span data-ttu-id="4199b-109">Weitere Informationen finden Sie unter [Prozeduren](./index.md).</span><span class="sxs-lookup"><span data-stu-id="4199b-109">For more information, see [Procedures](./index.md).</span></span>  
   
- Ein `Sub` -Prozeduren können Argumente, wie z. B. Konstanten, Variablen oder Ausdrücke, die durch den Aufrufcode an sie übergeben werden.  
+ <span data-ttu-id="4199b-110">Ein `Sub` Argumenten, z. B. Konstanten, Variablen oder Ausdrücke, die an ihn, der aufrufende Code übergeben werden kann in Anspruch nehmen.</span><span class="sxs-lookup"><span data-stu-id="4199b-110">A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.</span></span>  
   
-## <a name="declaration-syntax"></a>Deklarationssyntax  
- Die Syntax zum Deklarieren einer `Sub` Prozedur lautet wie folgt:  
+## <a name="declaration-syntax"></a><span data-ttu-id="4199b-111">Deklarationssyntax</span><span class="sxs-lookup"><span data-stu-id="4199b-111">Declaration Syntax</span></span>  
+ <span data-ttu-id="4199b-112">Die Syntax zum Deklarieren einer `Sub` Prozedur lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="4199b-112">The syntax for declaring a `Sub` procedure is as follows:</span></span>  
   
- `[`*modifiers* `] Sub`*subname* `[(` *parameterlist*  `)]`  
+ <span data-ttu-id="4199b-113">`[`*Modifizierer* `] Sub` *Subname* `[(` *Parameterlist*  `)]`</span><span class="sxs-lookup"><span data-stu-id="4199b-113">`[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`</span></span>  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- Die `modifiers` können Zugriffsebene und Informationen zum Überladen, überschreiben, freigeben und shadowing angeben. Weitere Informationen finden Sie unter [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ <span data-ttu-id="4199b-114">Die `modifiers` Zugriffsebene und Informationen zu überladen, überschreiben, freigeben und shadowing angeben können.</span><span class="sxs-lookup"><span data-stu-id="4199b-114">The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing.</span></span> <span data-ttu-id="4199b-115">Weitere Informationen finden Sie unter [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md).</span><span class="sxs-lookup"><span data-stu-id="4199b-115">For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).</span></span>  
   
-## <a name="parameter-declaration"></a>Parameterdeklaration  
- Sie deklarieren jeder Prozedurparameter wird auf ähnliche Weise, wie Sie eine Variable deklarieren, den Parametertyp und den Datentyp angibt. Sie können auch angeben, den Mechanismus übergeben, und gibt an, ob der Parameter optional ist oder ein Parameterarray.  
+## <a name="parameter-declaration"></a><span data-ttu-id="4199b-116">Parameterdeklaration</span><span class="sxs-lookup"><span data-stu-id="4199b-116">Parameter Declaration</span></span>  
+ <span data-ttu-id="4199b-117">Sie deklarieren, jede Prozedurparameter auf ähnliche Weise, wie Sie eine Variable zu deklarieren, die Parameter und den Datentyp angibt.</span><span class="sxs-lookup"><span data-stu-id="4199b-117">You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type.</span></span> <span data-ttu-id="4199b-118">Sie können auch den Übergabemechanismus angeben und gibt an, ob der Parameter optional ist oder ein Parameterarray.</span><span class="sxs-lookup"><span data-stu-id="4199b-118">You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.</span></span>  
   
- Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:  
+ <span data-ttu-id="4199b-119">Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="4199b-119">The syntax for each parameter in the parameter list is as follows:</span></span>  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datentyp    *  
+ <span data-ttu-id="4199b-120">`[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datatype* </span><span class="sxs-lookup"><span data-stu-id="4199b-120">`[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*</span></span>  
   
- Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert lautet wie folgt:  
+ <span data-ttu-id="4199b-121">Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben.</span><span class="sxs-lookup"><span data-stu-id="4199b-121">If the parameter is optional, you must also supply a default value as part of its declaration.</span></span> <span data-ttu-id="4199b-122">Die Syntax zum Angeben der Standardwert lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="4199b-122">The syntax for specifying a default value is as follows:</span></span>  
   
- `Optional [ByVal | ByRef]`  *Parametername*`As`*Datentyp*`=`*Defaultvalue        *  
+ <span data-ttu-id="4199b-123">`Optional [ByVal | ByRef]`  *Parametername*`As`*Datatype*`=`*"DefaultValue"* </span><span class="sxs-lookup"><span data-stu-id="4199b-123">`Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*</span></span>  
   
-### <a name="parameters-as-local-variables"></a>Parameter als lokale Variablen  
- Wenn die Steuerung an die Prozedur übergeben wird, wird jeder Parameter als lokale Variable behandelt. Dies bedeutet, dass seine Lebensdauer identisch mit der Prozedur ist, und der Gültigkeitsbereich die gesamte Prozedur ist.  
+### <a name="parameters-as-local-variables"></a><span data-ttu-id="4199b-124">Parameter als lokale Variablen</span><span class="sxs-lookup"><span data-stu-id="4199b-124">Parameters as Local Variables</span></span>  
+ <span data-ttu-id="4199b-125">Wenn die Steuerung an die Prozedur übergeben wird, wird jeder Parameter als lokale Variable behandelt.</span><span class="sxs-lookup"><span data-stu-id="4199b-125">When control passes to the procedure, each parameter is treated as a local variable.</span></span> <span data-ttu-id="4199b-126">Dies bedeutet, dass seine Lebensdauer identisch mit der Prozedur ist und der Bereich die gesamte Prozedur ist.</span><span class="sxs-lookup"><span data-stu-id="4199b-126">This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.</span></span>  
   
-## <a name="calling-syntax"></a>Aufrufen der Syntax  
- Rufen Sie eine `Sub` Prozedur explizit mit dem eigenständigen aufrufen. Sie können nicht durch die Verwendung des Namens in einem Ausdruck aufgerufen werden. Geben Sie Werte für alle Argumente, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen. Wenn keine Argumente angegeben sind, können Sie die Klammern auch weglassen. Die Verwendung der `Call` -Schlüsselwort ist optional, wird aber empfohlen.  
+## <a name="calling-syntax"></a><span data-ttu-id="4199b-127">Aufrufen der Syntax</span><span class="sxs-lookup"><span data-stu-id="4199b-127">Calling Syntax</span></span>  
+ <span data-ttu-id="4199b-128">Rufen Sie eine `Sub` Prozedur explizit mit einer eigenständigen aufrufende Anweisung.</span><span class="sxs-lookup"><span data-stu-id="4199b-128">You invoke a `Sub` procedure explicitly with a stand-alone calling statement.</span></span> <span data-ttu-id="4199b-129">Es kann nicht anhand des Namens in einem Ausdruck aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="4199b-129">You cannot call it by using its name in an expression.</span></span> <span data-ttu-id="4199b-130">Geben Sie Werte für alle Argumente, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen.</span><span class="sxs-lookup"><span data-stu-id="4199b-130">You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses.</span></span> <span data-ttu-id="4199b-131">Wenn keine Argumente übergeben werden, können Sie die Klammern optional weglassen.</span><span class="sxs-lookup"><span data-stu-id="4199b-131">If no arguments are supplied, you can optionally omit the parentheses.</span></span> <span data-ttu-id="4199b-132">Die Verwendung der `Call` -Schlüsselwort ist optional, jedoch nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="4199b-132">The use of the `Call` keyword is optional but not recommended.</span></span>  
   
- Die Syntax für einen Aufruf einer `Sub` Prozedur lautet wie folgt:  
+ <span data-ttu-id="4199b-133">Die Syntax für einen Aufruf einer `Sub` Prozedur lautet wie folgt:</span><span class="sxs-lookup"><span data-stu-id="4199b-133">The syntax for a call to a `Sub` procedure is as follows:</span></span>  
   
- `[Call]`  *Subname* `[(` *Argumentlist*`)]`  
+ <span data-ttu-id="4199b-134">`[Call]`  *Subname* `[(` *Argumentlist*`)]`</span><span class="sxs-lookup"><span data-stu-id="4199b-134">`[Call]`  *subname* `[(` *argumentlist* `)]`</span></span>  
   
- Rufen Sie eine `Sub` -Methode außerhalb der Klasse, die es definiert. Zuerst müssen Sie verwenden die `New` -Schlüsselwort verwenden, um eine Instanz der Klasse erstellen oder eine Methode aufrufen, gibt eine Instanz der Klasse zurück. Weitere Informationen finden Sie unter [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md). Anschließend können die folgende Syntax zum Aufrufen der `Sub` -Methode für das Instanzobjekt:  
+ <span data-ttu-id="4199b-135">Sie erreichen eine `Sub` Methode von außerhalb der Klasse, die ihn definiert.</span><span class="sxs-lookup"><span data-stu-id="4199b-135">You can call a `Sub` method from outside the class that defines it.</span></span> <span data-ttu-id="4199b-136">Zunächst müssen Sie die `New` Schlüsselwort erstellen Sie eine Instanz der Klasse oder eine Methode aufrufen, gibt eine Instanz der Klasse zurück.</span><span class="sxs-lookup"><span data-stu-id="4199b-136">First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class.</span></span> <span data-ttu-id="4199b-137">Weitere Informationen finden Sie unter [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="4199b-137">For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md).</span></span> <span data-ttu-id="4199b-138">Anschließend können die folgende Syntax zum Aufrufen der `Sub` -Methode für das Instance-Objekt:</span><span class="sxs-lookup"><span data-stu-id="4199b-138">Then, you can use the following syntax to call the `Sub` method on the instance object:</span></span>  
   
- *Object*.* MethodName*`[(`*Argumentlist*`)]`  
+ <span data-ttu-id="4199b-139">*Objekt*. *Methodenname*`[(`*Argumentlist*`)]`</span><span class="sxs-lookup"><span data-stu-id="4199b-139">*Object*.*methodname*`[(`*argumentlist*`)]`</span></span>  
   
-### <a name="illustration-of-declaration-and-call"></a>Darstellung von Deklaration und Aufruf  
- Die folgenden `Sub` -Prozedur meldet die welche Aufgabe die Anwendung sowie einen Zeitstempel an. Anstatt diesen Code am Anfang jeder Aufgabe wiederholt auszuführen, ruft die Anwendung nur `tellOperator` von verschiedenen Standorten. Jeder Aufruf übergibt eine Zeichenfolge in der `task` -Argument, das die gestartete Aufgabe identifiziert.  
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="4199b-140">Abbildung der Deklaration und Aufruf</span><span class="sxs-lookup"><span data-stu-id="4199b-140">Illustration of Declaration and Call</span></span>  
+ <span data-ttu-id="4199b-141">Die folgenden `Sub` Prozedur Computer der Operator weist die Aufgabe die Anwendung und zeigt außerdem einen Zeitstempel.</span><span class="sxs-lookup"><span data-stu-id="4199b-141">The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp.</span></span> <span data-ttu-id="4199b-142">Anstelle von duplizieren diesen Code am Anfang jeder Aufgabe an, ruft die Anwendung nur `tellOperator` an verschiedenen Standorten.</span><span class="sxs-lookup"><span data-stu-id="4199b-142">Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations.</span></span> <span data-ttu-id="4199b-143">Jeder Aufruf übergibt eine Zeichenfolge in der `task` Argument, das die gestartete Aufgabe identifiziert.</span><span class="sxs-lookup"><span data-stu-id="4199b-143">Each call passes a string in the `task` argument that identifies the task being started.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#2;](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
- Das folgende Beispiel zeigt einen normalen Aufruf `tellOperator`.  
+ <span data-ttu-id="4199b-144">Das folgende Beispiel zeigt einen typischen Aufruf `tellOperator`.</span><span class="sxs-lookup"><span data-stu-id="4199b-144">The following example shows a typical call to `tellOperator`.</span></span>  
   
- [!code-vb[VbVbcnProcedures&3;](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)   
- [Function-Prozeduren](./function-procedures.md)   
- [Property-Prozeduren](./property-procedures.md)   
- [Operatorprozeduren](./operator-procedures.md)   
- [Prozedurparameter und Argumente](./procedure-parameters-and-arguments.md)   
- [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt](./how-to-call-a-procedure-that-does-not-return-a-value.md)   
- [Gewusst wie: Aufrufen von einem Ereignishandler in Visual Basic](./how-to-call-an-event-handler.md)
+## <a name="see-also"></a><span data-ttu-id="4199b-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4199b-145">See Also</span></span>  
+ [<span data-ttu-id="4199b-146">Verfahren</span><span class="sxs-lookup"><span data-stu-id="4199b-146">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="4199b-147">Function-Prozeduren</span><span class="sxs-lookup"><span data-stu-id="4199b-147">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="4199b-148">Eigenschaftenprozeduren</span><span class="sxs-lookup"><span data-stu-id="4199b-148">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="4199b-149">Operatorprozeduren</span><span class="sxs-lookup"><span data-stu-id="4199b-149">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="4199b-150">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="4199b-150">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="4199b-151">Sub-Anweisung</span><span class="sxs-lookup"><span data-stu-id="4199b-151">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="4199b-152">Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt</span><span class="sxs-lookup"><span data-stu-id="4199b-152">How to: Call a Procedure that Does Not Return a Value</span></span>](./how-to-call-a-procedure-that-does-not-return-a-value.md)  
+ [<span data-ttu-id="4199b-153">Vorgehensweise: Aufrufen eines Ereignishandlers in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4199b-153">How to: Call an Event Handler in Visual Basic</span></span>](./how-to-call-an-event-handler.md)

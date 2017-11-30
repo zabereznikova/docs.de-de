@@ -1,48 +1,51 @@
 ---
-title: "Gewusst wie: Reduzieren von Grafikflimmern mit doppelter Pufferung f&#252;r Formulare und Steuerelemente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DoubleBuffered-Eigenschaft"
-  - "Flimmern, Vermindern in Windows Forms"
-  - "Grafiken, Vermindern des Flimmerns durch doppelte Pufferung"
+title: "Gewusst wie: Reduzieren von Grafikflimmern mit doppelter Pufferung für Formulare und Steuerelemente"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing in Windows Forms
+- graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Reduzieren von Grafikflimmern mit doppelter Pufferung f&#252;r Formulare und Steuerelemente
-Bei der doppelten Pufferung werden Flimmerprobleme, die durch mehrere Zeichenoperationen entstehen, mithilfe eines Arbeitsspeicherpuffers behoben.  Wenn die doppelte Pufferung aktiviert ist, werden alle Zeichenoperationen anstelle der Zeichenoberfläche auf dem Bildschirm zunächst in einen Arbeitsspeicherpuffer gerendert.  Nachdem alle Zeichenoperationen abgeschlossen sind, wird der Arbeitsspeicherpuffer direkt in die damit verbundene Zeichenoberfläche kopiert.  Da auf dem Bildschirm nur ein einzelner Grafikvorgang ausgeführt wird, tritt das bei komplexen Zeichenvorgängen übliche Bildflimmern nicht mehr auf. Bei den meisten Anwendungen bietet die standardmäßige doppelte Pufferung von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] optimale Ergebnisse.  Herkömmliche Windows Forms\-Steuerelemente sind standardmäßig doppelt gepuffert.  Sie können die standardmäßige doppelte Pufferung in den Formularen und erstellten Steuerelementen auf zwei Weisen aktivieren.  Sie können entweder die <xref:System.Windows.Forms.Control.DoubleBuffered%2A>\-Eigenschaft auf `true` festlegen oder die <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode aufrufen, um das <xref:System.Windows.Forms.ControlStyles>\-Flag auf `true` festzulegen.  Mit beiden Methoden wird die standardmäßige doppelte Pufferung für das Formular bzw. Steuerelement eingerichtet und flimmerfreies Grafikrendering ermöglicht.  Das Aufrufen der <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode empfiehlt sich nur für benutzerdefinierte Steuerelemente, für die Sie den gesamten Renderingcode geschrieben haben.  
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a><span data-ttu-id="5820a-102">Gewusst wie: Reduzieren von Grafikflimmern mit doppelter Pufferung für Formulare und Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="5820a-102">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>
+<span data-ttu-id="5820a-103">Bei der doppelten Pufferung werden Flimmerprobleme, die durch mehrere Zeichenoperationen entstehen, mithilfe eines Arbeitsspeicherpuffers behoben.</span><span class="sxs-lookup"><span data-stu-id="5820a-103">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="5820a-104">Wenn die doppelte Pufferung aktiviert ist, werden alle Zeichenoperationen anstelle der Zeichenoberfläche auf dem Bildschirm zunächst in einen Arbeitsspeicherpuffer gerendert.</span><span class="sxs-lookup"><span data-stu-id="5820a-104">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="5820a-105">Nachdem alle Zeichenoperationen abgeschlossen sind, wird der Arbeitsspeicherpuffer direkt in die damit verbundene Zeichenoberfläche kopiert.</span><span class="sxs-lookup"><span data-stu-id="5820a-105">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="5820a-106">Da nur ein Graphics-Vorgang auf dem Bildschirm ausgeführt wird, wird das Bildflimmern komplexe Zeichenoperationen zugeordneten entfernt. Für die meisten Anwendungen, die standardmäßig doppelte Pufferung gebotenen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet die besten Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="5820a-106">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.For most applications, the default double buffering provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] will provide the best results.</span></span> <span data-ttu-id="5820a-107">Standard-Windows Forms-Steuerelemente sind doppelte standardmäßig gepuffert.</span><span class="sxs-lookup"><span data-stu-id="5820a-107">Standard Windows Forms controls are double buffered by default.</span></span> <span data-ttu-id="5820a-108">Sie können die standardmäßige doppelte Pufferung in Ihrem Formularen aktivieren und Steuerelemente auf zwei Arten erstellt.</span><span class="sxs-lookup"><span data-stu-id="5820a-108">You can enable default double buffering in your forms and authored controls in two ways.</span></span> <span data-ttu-id="5820a-109">Können Sie entweder die <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft `true`, oder Sie rufen die <xref:System.Windows.Forms.Control.SetStyle%2A> -Methode zum Festlegen der <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag auf `true`.</span><span class="sxs-lookup"><span data-stu-id="5820a-109">You can either set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`, or you can call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span> <span data-ttu-id="5820a-110">Beide Methoden aktiviert standardmäßig doppelte Pufferung für das Formular oder Steuerelement und flimmerfreier Grafikrendering bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="5820a-110">Both methods will enable default double buffering for your form or control and provide flicker-free graphics rendering.</span></span> <span data-ttu-id="5820a-111">Aufrufen der <xref:System.Windows.Forms.Control.SetStyle%2A> Methode wird empfohlen, nur für benutzerdefinierte Steuerelemente, die für das gesamte Renderingcode geschrieben haben.</span><span class="sxs-lookup"><span data-stu-id="5820a-111">Calling the <xref:System.Windows.Forms.Control.SetStyle%2A> method is recommended only for custom controls for which you have written all the rendering code.</span></span>  
   
- Bei anspruchsvolleren Szenarien zur doppelten Pufferung, wie Animationen oder erweitere Speicherverwaltung, können Sie Ihre eigene doppelte Pufferungslogik implementieren.  Weitere Informationen finden Sie unter [Gewusst wie: Manuelles Verwalten von gepufferten Grafiken](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+ <span data-ttu-id="5820a-112">Für erweiterte Szenarien mit doppelter Pufferung, z. B. Animation oder erweiterte Speicherverwaltungsfunktionen können Sie Ihre eigene doppelte Pufferung Logik implementieren.</span><span class="sxs-lookup"><span data-stu-id="5820a-112">For more advanced double buffering scenarios, such as animation or advanced memory management, you can implement your own double buffering logic.</span></span> <span data-ttu-id="5820a-113">Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Verwalten von gepufferten Grafiken](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span><span class="sxs-lookup"><span data-stu-id="5820a-113">For more information, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-### So reduzieren Sie das Flimmern  
+### <a name="to-reduce-flicker"></a><span data-ttu-id="5820a-114">Um Flackern zu verringern.</span><span class="sxs-lookup"><span data-stu-id="5820a-114">To reduce flicker</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.Control.DoubleBuffered%2A>\-Eigenschaft auf `true` fest.  
+-   <span data-ttu-id="5820a-115">Legen Sie die <xref:System.Windows.Forms.Control.DoubleBuffered%2A>-Eigenschaft auf `true` fest.</span><span class="sxs-lookup"><span data-stu-id="5820a-115">Set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- oder \-  
+ <span data-ttu-id="5820a-116">\- oder –</span><span class="sxs-lookup"><span data-stu-id="5820a-116">\- or -</span></span>  
   
--   Rufen Sie die <xref:System.Windows.Forms.Control.SetStyle%2A>\-Methode auf, um das <xref:System.Windows.Forms.ControlStyles>\-Flag auf `true` festzulegen.  
+-   <span data-ttu-id="5820a-117">Rufen Sie die <xref:System.Windows.Forms.Control.SetStyle%2A> -Methode zum Festlegen der <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag `true`.</span><span class="sxs-lookup"><span data-stu-id="5820a-117">Call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>   
- <xref:System.Windows.Forms.Control.SetStyle%2A>   
- [Doppelt gepufferte Grafiken](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5820a-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5820a-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
+ <xref:System.Windows.Forms.Control.SetStyle%2A>  
+ [<span data-ttu-id="5820a-119">Doppelt gepufferte Grafiken</span><span class="sxs-lookup"><span data-stu-id="5820a-119">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="5820a-120">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5820a-120">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

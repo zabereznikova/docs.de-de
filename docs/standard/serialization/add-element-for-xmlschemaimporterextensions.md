@@ -7,61 +7,55 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <xmlSchemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 859e348359ed35e971baff8611fa4f676808f5a7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 766d04dd792534f0da33116ed959d81ff376e026
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;add&gt;-Element für &lt;xmlSchemaImporterExtensions&gt;
-Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> verwendet werden, um XSD-Typen .NET Framework-Typen zuzuordnen. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a><span data-ttu-id="ea3f4-102">&lt;add&gt;-Element für &lt;xmlSchemaImporterExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="ea3f4-102">&lt;add&gt; Element for &lt;xmlSchemaImporterExtensions&gt;</span></span>
+<span data-ttu-id="ea3f4-103">Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> verwendet werden, um XSD-Typen .NET Framework-Typen zuzuordnen.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-103">Adds types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping XSD types to .NET Framework types.</span></span> <span data-ttu-id="ea3f4-104">Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="ea3f4-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- \<configuration>  
-\<system.xml.serialization>  
-\<XmlSchemaImporterExtensions>  
-\<add>  
+ <span data-ttu-id="ea3f4-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ea3f4-105">\<configuration></span></span>  
+<span data-ttu-id="ea3f4-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="ea3f4-106">\<system.xml.serialization></span></span>  
+<span data-ttu-id="ea3f4-107">\<XmlSchemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="ea3f4-107">\<XmlSchemaImporterExtensions></span></span>  
+<span data-ttu-id="ea3f4-108">\<add></span><span class="sxs-lookup"><span data-stu-id="ea3f4-108">\<add></span></span>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a><span data-ttu-id="ea3f4-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="ea3f4-109">Syntax</span></span>  
   
 ```xml  
 <add name = "typeName" type="fully qualified type [,Version=version number] [,Culture=culture] [,PublicKeyToken= token]"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ea3f4-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="ea3f4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ea3f4-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a><span data-ttu-id="ea3f4-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="ea3f4-112">Attributes</span></span>  
   
-|Attribut|Beschreibung|  
+|<span data-ttu-id="ea3f4-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="ea3f4-113">Attribute</span></span>|<span data-ttu-id="ea3f4-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ea3f4-114">Description</span></span>|  
 |---------------|-----------------|  
-|**name**|Ein einfacher Name, der zum Suchen der Instanz verwendet wird.|  
-|**Typ**|Erforderlich. Gibt die Schemaerweiterungsklasse an, die hinzugefügt werden soll. Der Wert des **type**-Attributs muss sich in einer Zeile befinden und schließt den vollständigen Typnamen enthalten. Wenn die Assembly im globalen Assemblycache (GAC) gespeichert ist, muss außerdem die Version, die Kultur und das Token des öffentlichen Schlüssels der signierten Assembly enthalten sein.|  
+|<span data-ttu-id="ea3f4-115">**name**</span><span class="sxs-lookup"><span data-stu-id="ea3f4-115">**name**</span></span>|<span data-ttu-id="ea3f4-116">Ein einfacher Name, der zum Suchen der Instanz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-116">A simple name that is used to find the instance.</span></span>|  
+|<span data-ttu-id="ea3f4-117">**Typ**</span><span class="sxs-lookup"><span data-stu-id="ea3f4-117">**type**</span></span>|<span data-ttu-id="ea3f4-118">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-118">Required.</span></span> <span data-ttu-id="ea3f4-119">Gibt die Schemaerweiterungsklasse an, die hinzugefügt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-119">Specifies the schema  extension class to add.</span></span> <span data-ttu-id="ea3f4-120">Der Wert des **type**-Attributs muss sich in einer Zeile befinden und schließt den vollständigen Typnamen enthalten.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-120">The **type** attribute value must be on one line, and include the fully qualified type name.</span></span> <span data-ttu-id="ea3f4-121">Wenn die Assembly im globalen Assemblycache (GAC) gespeichert ist, muss außerdem die Version, die Kultur und das Token des öffentlichen Schlüssels der signierten Assembly enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-121">When the assembly is placed in the Global Assembly Cache (GAC), it must also include the version, culture, and public key token of the signed assembly.</span></span>|  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a><span data-ttu-id="ea3f4-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ea3f4-122">Child Elements</span></span>  
+ <span data-ttu-id="ea3f4-123">Keine</span><span class="sxs-lookup"><span data-stu-id="ea3f4-123">None.</span></span>  
   
-### <a name="parent-elements"></a>Übergeordnete Elemente  
+### <a name="parent-elements"></a><span data-ttu-id="ea3f4-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ea3f4-124">Parent Elements</span></span>  
   
-|Element|Beschreibung|  
+|<span data-ttu-id="ea3f4-125">Element</span><span class="sxs-lookup"><span data-stu-id="ea3f4-125">Element</span></span>|<span data-ttu-id="ea3f4-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ea3f4-126">Description</span></span>|  
 |-------------|-----------------|  
-|\<xmlSchemaImporterExtensions>|Enthält die Typen, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse verwendet werden.|  
+|<span data-ttu-id="ea3f4-127">\<xmlSchemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="ea3f4-127">\<xmlSchemaImporterExtensions></span></span>|<span data-ttu-id="ea3f4-128">Enthält die Typen, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-128">Contains the types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter>.</span></span>|  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird ein Erweiterungstyp hinzugefügt, den XmlSchemaImporter zum Zuordnen von Typen verwenden kann.  
+## <a name="example"></a><span data-ttu-id="ea3f4-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ea3f4-129">Example</span></span>  
+ <span data-ttu-id="ea3f4-130">Im folgenden Codebeispiel wird ein Erweiterungstyp hinzugefügt, den XmlSchemaImporter zum Zuordnen von Typen verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="ea3f4-130">The following code example adds an extension type that the XmlSchemaImporter can use when mapping types.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +69,7 @@ Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> ver
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Serialization.XmlSchemaImporter>   
- [\<system.xml.serialization>-Element](../../../docs/standard/serialization/system-xml-serialization-element.md)   
- [\<schemaImporterExtensions>-Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-
+## <a name="see-also"></a><span data-ttu-id="ea3f4-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea3f4-131">See Also</span></span>  
+ <xref:System.Xml.Serialization.XmlSchemaImporter>  
+ [<span data-ttu-id="ea3f4-132">\<system.xml.serialization>-Element</span><span class="sxs-lookup"><span data-stu-id="ea3f4-132">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [<span data-ttu-id="ea3f4-133">\<schemaImporterExtensions>-Element</span><span class="sxs-lookup"><span data-stu-id="ea3f4-133">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)

@@ -1,88 +1,92 @@
 ---
-title: "Gewusst wie: Erstellen eines linearen Farbverlaufs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farben, Erstellen linearer Farbverläufe"
-  - "Farbverläufe"
-  - "Farbverläufe, Erstellen von linearen"
-  - "Lineare Farbverläufe, Erstellen"
+title: 'Gewusst wie: Erstellen eines linearen Farbverlaufs'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- linear gradients [Windows Forms], creating
+- gradients [Windows Forms], creating linear
+- colors [Windows Forms], creating linear gradients
+- gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbf3b1657a5a6b91ba88a0968b6b92d4e4bdbf0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines linearen Farbverlaufs
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet horizontale, vertikale und diagonale lineare Farbverläufe.  Die Farbe in einem linearen Farbverlauf wird im Normalfall gleichmäßig geändert.  Sie können einen linearen Farbverlauf jedoch auch anpassen, sodass die Farbe ungleichmäßig geändert wird.  
+# <a name="how-to-create-a-linear-gradient"></a><span data-ttu-id="0a6e8-102">Gewusst wie: Erstellen eines linearen Farbverlaufs</span><span class="sxs-lookup"><span data-stu-id="0a6e8-102">How to: Create a Linear Gradient</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="0a6e8-103">bietet horizontale, vertikale und diagonale lineare Farbverläufe.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-103"> provides horizontal, vertical, and diagonal linear gradients.</span></span> <span data-ttu-id="0a6e8-104">Standardmäßig ändert sich die Farbe in einem linearen Farbverlauf einheitlich.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-104">By default, the color in a linear gradient changes uniformly.</span></span> <span data-ttu-id="0a6e8-105">Allerdings können Sie einen linearen Farbverlauf anpassen, sodass sich die Farbe auf nicht einheitliche Weise ändert.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-105">However, you can customize a linear gradient so that the color changes in a non-uniform fashion.</span></span>  
   
- Im folgenden Beispiel werden eine Linie, eine Ellipse und ein Rechteck mit einem Pinsel mit horizontalem linearem Farbverlauf ausgefüllt.  
+ <span data-ttu-id="0a6e8-106">Im folgenden Beispiel wird eine Zeile und einer Ellipse, die ein Rechteck mit einem horizontalen linearen Farbverlaufspinsel.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-106">The following example fills a line, an ellipse, and a rectangle with a horizontal linear gradient brush.</span></span>  
   
- Der <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>\-Konstruktor empfängt vier Argumente: zwei Punkte und zwei Farben.  Der erste Punkt \(0, 10\) ist mit der ersten Farbe \(Rot\) und der zweite Punkt \(200, 10\) mit der zweiten Farbe \(Blau\) verknüpft.  Erwartungsgemäß ändert sich die Farbe der Linie, die von \(0, 10\) nach \(200, 10\) gezeichnet wird, graduell von Rot nach Blau.  
+ <span data-ttu-id="0a6e8-107">Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor empfängt vier Argumente: zwei Punkten und mit zwei Farben aus.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-107">The <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor receives four arguments: two points and two colors.</span></span> <span data-ttu-id="0a6e8-108">Der erste Punkt (0, 10) bezieht sich auf der ersten Farbe (Rot), und der zweite Punkt (200, 10) der zweiten Farbe (Blau) zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-108">The first point (0, 10) is associated with the first color (red), and the second point (200, 10) is associated with the second color (blue).</span></span> <span data-ttu-id="0a6e8-109">Erwartungsgemäß, der Linie von (0, 10), (200, 10) ändert sich allmählich von Rot und Blau.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-109">As you would expect, the line drawn from (0, 10) to (200, 10) changes gradually from red to blue.</span></span>  
   
- Die Werte 10 in den Punkten \(50, 10\) und \(200, 10\) sind nicht wichtig.  Es kommt lediglich darauf an, dass die zweite Koordinate der beiden Punkte identisch ist, die Verbindungslinie also horizontal verläuft.  Auch die Farbe der Ellipse und des Rechtecks ändert sich von Rot nach Blau, wenn die horizontale Koordinate von 0 auf 200 ansteigt.  
+ <span data-ttu-id="0a6e8-110">Die Werte 10 in den Punkten (50, 10) und (200, 10) sind nicht wichtig.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-110">The 10s in the points (50, 10) and (200, 10) are not important.</span></span> <span data-ttu-id="0a6e8-111">Wichtig ist, dass die beiden Punkte derselben zweite Koordinate haben – die verbindenden Zeile ist horizontal.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-111">What is important is that the two points have the same second coordinate — the line connecting them is horizontal.</span></span> <span data-ttu-id="0a6e8-112">Ellipse und des Rechtecks ändert auch allmählich von Rot in Blau, da die horizontale Koordinate von 0 bis 200 wird.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-112">The ellipse and the rectangle also change gradually from red to blue as the horizontal coordinate goes from 0 to 200.</span></span>  
   
- In der folgenden Abbildung werden die Linie, die Ellipse und das Rechteck angezeigt.  Beachten Sie, dass der Farbverlauf sich wiederholt, wenn die horizontale Koordinate über den Wert 200 hinausgeht.  
+ <span data-ttu-id="0a6e8-113">Die folgende Abbildung zeigt die Zeile, das die Ellipse und das Rechteck.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-113">The following illustration shows the line, the ellipse, and the rectangle.</span></span> <span data-ttu-id="0a6e8-114">Beachten Sie, dass der Farbverlauf wird wiederholt als die horizontale Koordinate 200 hinausgeht.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-114">Note that the color gradient repeats itself as the horizontal coordinate increases beyond 200.</span></span>  
   
- ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ <span data-ttu-id="0a6e8-115">![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")</span><span class="sxs-lookup"><span data-stu-id="0a6e8-115">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")</span></span>  
   
-### So verwenden Sie horizontale lineare Farbverläufe  
+### <a name="to-use-horizontal-linear-gradients"></a><span data-ttu-id="0a6e8-116">Verwenden Sie horizontale lineare Farbverläufe</span><span class="sxs-lookup"><span data-stu-id="0a6e8-116">To use horizontal linear gradients</span></span>  
   
--   Übergeben Sie die nicht transparenten Farben Rot und Blau als drittes bzw. viertes Argument.  
+-   <span data-ttu-id="0a6e8-117">Übergeben Sie die nicht transparenten Rot und Blau als die dritte und vierte Argument.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-117">Pass in the opaque red and opaque blue as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- Die Farbkomponenten im vorhergehenden Beispiel verändern sich beim Verschieben der horizontalen Koordinate von 0 auf 200 linear.  Wenn sich beispielsweise ein Punkt genau zwischen 0 und 200 befindet, liegt sein Blauwert genau in der Mitte zwischen 0 und 255.  
+ <span data-ttu-id="0a6e8-118">Im vorherigen Beispiel Ändern der Farbkomponenten linear beim Wechseln von einer horizontale Koordinate von 0 bis zu einer horizontalen Koordinate 200.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-118">In the preceding example, the color components change linearly as you move from a horizontal coordinate of 0 to a horizontal coordinate of 200.</span></span> <span data-ttu-id="0a6e8-119">Beispielsweise wird ein Punkt, dessen erste Koordinate in der Mitte zwischen 0 und 200 ist, eine blaue Komponente aufweisen, in der Mitte zwischen 0 und 255 ist.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-119">For example, a point whose first coordinate is halfway between 0 and 200 will have a blue component that is halfway between 0 and 255.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ermöglicht es Ihnen, die Art des Farbwechsels von einem Ende des Farbverlaufs zum anderen anzupassen.  Angenommen, Sie möchten einen Farbverlaufspinsel erstellen, der entsprechend der folgenden Tabelle von Schwarz in Rot übergeht:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="0a6e8-120">können Sie, wie eine Farbe aus einer Kante eines Farbverlaufs zum anderen anzupassen.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-120"> allows you to adjust the way a color varies from one edge of a gradient to the other.</span></span> <span data-ttu-id="0a6e8-121">Angenommen Sie, Sie möchten einen Pinsel mit Farbverlauf erstellen, der sich in Rot entsprechend der folgenden Tabelle aus Schwarz ändert.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-121">Suppose you want to create a gradient brush that changes from black to red according to the following table.</span></span>  
   
-|Horizontale Koordinate|RGB\-Komponenten|  
-|----------------------------|----------------------|  
-|0|\(0, 0, 0\)|  
-|40|\(128, 0, 0\)|  
-|200|\(255, 0, 0\)|  
+|<span data-ttu-id="0a6e8-122">Horizontale Koordinate</span><span class="sxs-lookup"><span data-stu-id="0a6e8-122">Horizontal coordinate</span></span>|<span data-ttu-id="0a6e8-123">RGB-Komponenten</span><span class="sxs-lookup"><span data-stu-id="0a6e8-123">RGB components</span></span>|  
+|---------------------------|--------------------|  
+|<span data-ttu-id="0a6e8-124">0</span><span class="sxs-lookup"><span data-stu-id="0a6e8-124">0</span></span>|<span data-ttu-id="0a6e8-125">(0, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="0a6e8-125">(0, 0, 0)</span></span>|  
+|<span data-ttu-id="0a6e8-126">40</span><span class="sxs-lookup"><span data-stu-id="0a6e8-126">40</span></span>|<span data-ttu-id="0a6e8-127">(128, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="0a6e8-127">(128, 0, 0)</span></span>|  
+|<span data-ttu-id="0a6e8-128">300</span><span class="sxs-lookup"><span data-stu-id="0a6e8-128">200</span></span>|<span data-ttu-id="0a6e8-129">(255, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="0a6e8-129">(255, 0, 0)</span></span>|  
   
- Beachten Sie, dass der Rotanteil bereits die Hälfte der maximalen Intensität hat, wenn die horizontale Koordinate erst 20 Prozent der Strecke von 0 nach 200 entspricht.  
+ <span data-ttu-id="0a6e8-130">Beachten Sie, dass Rotanteils zur Hälfte Intensität ist, wird die horizontale Koordinate nur 20 Prozent der Möglichkeit von 0 bis 200.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-130">Note that the red component is at half intensity when the horizontal coordinate is only 20 percent of the way from 0 to 200.</span></span>  
   
- Im folgenden Beispiel wird die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>\-Eigenschaft eines <xref:System.Drawing.Drawing2D.LinearGradientBrush>\-Objekts festgelegt, um drei relative Intensitäten mit drei relativen Positionen zu verknüpfen.  Wie in der vorangehenden Tabelle wird die relative Intensität 0.5 mit der relativen Position 0.2 verknüpft.  Durch den Code werden eine Ellipse und ein Rechteck mit dem Farbverlaufspinsel ausgefüllt.  
+ <span data-ttu-id="0a6e8-131">Im folgenden Beispiel wird die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> Eigenschaft von einem <xref:System.Drawing.Drawing2D.LinearGradientBrush> Objekt, das drei relative Intensitäten mit drei relativen Positionen zu verknüpfen.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-131">The following example sets the <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> property of a <xref:System.Drawing.Drawing2D.LinearGradientBrush> object to associate three relative intensities with three relative positions.</span></span> <span data-ttu-id="0a6e8-132">Wie in der obigen Tabelle ist eine relative Intensität von 0,5 eine relative Position von 0,2 zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-132">As in the preceding table, a relative intensity of 0.5 is associated with a relative position of 0.2.</span></span> <span data-ttu-id="0a6e8-133">Der Code füllt eine Ellipse und ein Rechteck mit dem Farbverlaufspinsel.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-133">The code fills an ellipse and a rectangle with the gradient brush.</span></span>  
   
- In der folgenden Abbildung sind die resultierende Ellipse und das resultierende Rechteck dargestellt.  
+ <span data-ttu-id="0a6e8-134">Die folgende Abbildung zeigt das resultierende Ellipse und das Rechteck.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-134">The following illustration shows the resulting ellipse and rectangle.</span></span>  
   
- ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ <span data-ttu-id="0a6e8-135">![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")</span><span class="sxs-lookup"><span data-stu-id="0a6e8-135">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")</span></span>  
   
-### So passen Sie lineare Farbverläufe an  
+### <a name="to-customize-linear-gradients"></a><span data-ttu-id="0a6e8-136">Lineare Farbverläufe anpassen</span><span class="sxs-lookup"><span data-stu-id="0a6e8-136">To customize linear gradients</span></span>  
   
--   Übergeben Sie die nicht transparenten Farben Schwarz und Rot als drittes bzw. viertes Argument.  
+-   <span data-ttu-id="0a6e8-137">Übergeben Sie die deckend Schwarz und Rot als die dritte und vierte Argument.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-137">Pass in the opaque black and opaque red as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- Die Farbverläufe in den bisherigen Beispielen verlaufen in horizontaler Richtung, d. h., die Farbe wechselt graduell entlang einer beliebigen horizontalen Linie.  Darüber hinaus können Sie auch vertikale und diagonale Farbverläufe festlegen.  
+ <span data-ttu-id="0a6e8-138">Die Farbverläufe in den vorherigen Beispielen wurden horizontale; d. h. ändert sich die Farbe graduell ab, wie Sie auf einer horizontalen Linie verschieben.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-138">The gradients in the preceding examples have been horizontal; that is, the color changes gradually as you move along any horizontal line.</span></span> <span data-ttu-id="0a6e8-139">Sie können auch die vertikale und diagonale Farbverläufe definieren.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-139">You can also define vertical gradients and diagonal gradients.</span></span>  
   
- Im folgenden Beispiel werden die Punkte \(0, 0\) und \(200, 100\) an einen <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>\-Konstruktor übergeben.  Die Farbe Blau wird mit \(0, 0\) und die Farbe Grün mit \(200, 100\) verknüpft.  Eine Linie \(mit Stiftbreite 10\) und eine Ellipse werden mit dem Pinsel mit linearem Farbverlauf ausgefüllt.  
+ <span data-ttu-id="0a6e8-140">Das folgende Beispiel übergibt die Punkte (0, 0) und (200, 100), um eine <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-140">The following example passes the points (0, 0) and (200, 100) to a <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor.</span></span> <span data-ttu-id="0a6e8-141">Die Farbe Blau zugeordnet ist (0, 0), und die Farbe Grün zugeordnet ist (200, 100).</span><span class="sxs-lookup"><span data-stu-id="0a6e8-141">The color blue is associated with (0, 0), and the color green is associated with (200, 100).</span></span> <span data-ttu-id="0a6e8-142">Eine Linie (mit Stiftbreite 10) und einer Ellipse, die sind mit der linearen Farbverlaufspinsel gefüllt.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-142">A line (with pen width 10) and an ellipse are filled with the linear gradient brush.</span></span>  
   
- In der folgenden Abbildung sind die Linie und die Ellipse dargestellt.  Die Farbe in der Ellipse wechselt graduell entlang einer beliebigen Linie, die parallel zu der Linie mit den Punkten \(0, 0\) und \(200, 100\) verläuft.  
+ <span data-ttu-id="0a6e8-143">Die folgende Abbildung zeigt die Zeile und die Ellipse.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-143">The following illustration shows the line and the ellipse.</span></span> <span data-ttu-id="0a6e8-144">Beachten Sie, dass die Farbe in der Ellipse wechselt allmählich entlang einer Linie wird parallel zu der Position übergeben (0, 0) und (200, 100).</span><span class="sxs-lookup"><span data-stu-id="0a6e8-144">Note that the color in the ellipse changes gradually as you move along any line that is parallel to the line passing through (0, 0) and (200, 100).</span></span>  
   
- ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ <span data-ttu-id="0a6e8-145">![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")</span><span class="sxs-lookup"><span data-stu-id="0a6e8-145">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")</span></span>  
   
-### So erstellen Sie diagonale lineare Farbverläufe  
+### <a name="to-create-diagonal-linear-gradients"></a><span data-ttu-id="0a6e8-146">So erstellen diagonaler, linearer Farbverläufe</span><span class="sxs-lookup"><span data-stu-id="0a6e8-146">To create diagonal linear gradients</span></span>  
   
--   Übergeben Sie die nicht transparenten Farben Blau und Grün als drittes bzw. viertes Argument.  
+-   <span data-ttu-id="0a6e8-147">Übergeben Sie die nicht transparenten Blau und Grün als die dritte und vierte Argument.</span><span class="sxs-lookup"><span data-stu-id="0a6e8-147">Pass in the opaque blue and opaque green as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## Siehe auch  
- [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)   
- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0a6e8-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0a6e8-148">See Also</span></span>  
+ [<span data-ttu-id="0a6e8-149">Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen</span><span class="sxs-lookup"><span data-stu-id="0a6e8-149">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ [<span data-ttu-id="0a6e8-150">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0a6e8-150">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

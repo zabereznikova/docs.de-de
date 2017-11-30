@@ -1,88 +1,90 @@
 ---
-title: "Datenvertragsnamen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Datenverträge [WCF], Benennen"
+title: Datenvertragsnamen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 27
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Datenvertragsnamen
-Zuweilen verfügen Client und Dienst nicht über dieselben Typen.Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind.[Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrags\- und Datenmembernamen, und daher wird ein Mechanismus bereitgestellt, der diesen Namen Typen und Member zuordnet.In diesem Thema werden die Regeln für die Namensgebung von Datenverträgen sowie das Standardverhalten der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Infrastruktur bei der Namenserstellung erläutert.  
+# <a name="data-contract-names"></a><span data-ttu-id="ceade-102">Datenvertragsnamen</span><span class="sxs-lookup"><span data-stu-id="ceade-102">Data Contract Names</span></span>
+<span data-ttu-id="ceade-103">Zuweilen verfügen Client und Dienst nicht über dieselben Typen.</span><span class="sxs-lookup"><span data-stu-id="ceade-103">Sometimes a client and a service do not share the same types.</span></span> <span data-ttu-id="ceade-104">Sie können jedoch Daten austauschen, wenn die Datenverträge auf beiden Seiten gleich sind.</span><span class="sxs-lookup"><span data-stu-id="ceade-104">They can still pass data to each other as long as the data contracts are equivalent on both sides.</span></span> <span data-ttu-id="ceade-105">[Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) basiert auf Datenvertrag und Datenmembernamen und aus diesem Grund wird ein Mechanismus bereitgestellt, um die Typen und Member dieser Namen zuordnen.</span><span class="sxs-lookup"><span data-stu-id="ceade-105">[Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) is based on data contract and data member names, and therefore a mechanism is provided to map types and members to those names.</span></span> <span data-ttu-id="ceade-106">In diesem Thema werden die Regeln für die Namensgebung von Datenverträgen sowie das Standardverhalten der [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Infrastruktur bei der Namenserstellung erläutert.</span><span class="sxs-lookup"><span data-stu-id="ceade-106">This topic explains the rules for naming data contracts as well as the default behavior of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure when creating names.</span></span>  
   
-## Grundregeln  
- Zu den Grundregeln bei der Namensvergabe von Datenverträgen gehören:  
+## <a name="basic-rules"></a><span data-ttu-id="ceade-107">Grundregeln</span><span class="sxs-lookup"><span data-stu-id="ceade-107">Basic Rules</span></span>  
+ <span data-ttu-id="ceade-108">Zu den Grundregeln bei der Namensvergabe von Datenverträgen gehören:</span><span class="sxs-lookup"><span data-stu-id="ceade-108">Basic rules regarding naming data contracts include:</span></span>  
   
--   Ein vollständig qualifizierter Datenvertragsname besteht aus einem Namespace und einem Namen.  
+-   <span data-ttu-id="ceade-109">Ein vollständig qualifizierter Datenvertragsname besteht aus einem Namespace und einem Namen.</span><span class="sxs-lookup"><span data-stu-id="ceade-109">A fully-qualified data contract name consists of a namespace and a name.</span></span>  
   
--   Datenelemente verfügen nur über Namen, aber nicht über Namespaces.  
+-   <span data-ttu-id="ceade-110">Datenelemente verfügen nur über Namen, aber nicht über Namespaces.</span><span class="sxs-lookup"><span data-stu-id="ceade-110">Data members have only names, but no namespaces.</span></span>  
   
--   Bei der Verarbeitung von Datenverträgen unterscheidet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Infrastruktur bei den Namespaces, den Namen der Datenverträge und den Datenelementen zwischen Groß\- und Kleinschreibung.  
+-   <span data-ttu-id="ceade-111">Bei der Verarbeitung von Datenverträgen unterscheidet die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur bei den Namespaces, den Namen der Datenverträge und den Datenelementen zwischen Groß- und Kleinschreibung.</span><span class="sxs-lookup"><span data-stu-id="ceade-111">When processing data contracts, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure is case-sensitive to both the namespaces and the names of data contracts and data members.</span></span>  
   
-## Datenvertragsnamespaces  
- Ein Datenvertragsnamespace nimmt die Form eines URI \(Uniform Resource Identifiers\) an.Der URI kann entweder absolut oder relativ sein.Standardmäßig wird Datenverträgen eines bestimmten Typs ein Namespace zugeordnet, der aus dem Namespace der CLR \(Common Language Runtime\) desselben Typs resultiert.  
+## <a name="data-contract-namespaces"></a><span data-ttu-id="ceade-112">Datenvertragsnamespaces</span><span class="sxs-lookup"><span data-stu-id="ceade-112">Data Contract Namespaces</span></span>  
+ <span data-ttu-id="ceade-113">Ein Datenvertragsnamespace nimmt die Form eines URI (Uniform Resource Identifiers) an.</span><span class="sxs-lookup"><span data-stu-id="ceade-113">A data contract namespace takes the form of a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="ceade-114">Der URI kann entweder absolut oder relativ sein.</span><span class="sxs-lookup"><span data-stu-id="ceade-114">The URI can be either absolute or relative.</span></span> <span data-ttu-id="ceade-115">Standardmäßig wird Datenverträgen eines bestimmten Typs ein Namespace zugeordnet, der aus dem Namespace der CLR (Common Language Runtime) desselben Typs resultiert.</span><span class="sxs-lookup"><span data-stu-id="ceade-115">By default, data contracts for a particular type are assigned a namespace that comes from the common language runtime (CLR) namespace of that type.</span></span>  
   
- Standardmäßig wird jeder beliebige CLR\-Namespace \(im Format *Clr.Namespace*\) dem Namespace "http:\/\/schemas.datacontract.org\/2004\/07\/Clr.Namespace" zugeordnet.Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>\-Attribut für das ganze Modul oder die Assembly.Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>\-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.  
-  
-> [!NOTE]
->  Der "http:\/\/schemas.microsoft.com\/2003\/10\/Serialization\-"Namespace wird reserviert und kann nicht als Datenvertragsnamespace verwendet werden.  
+ <span data-ttu-id="ceade-116">Standardmäßig wird jeder beliebige CLR-Namespace (im Format *Clr.Namespace*) den Namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace" zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="ceade-116">By default, any given CLR namespace (in the format *Clr.Namespace*) is mapped to the namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace".</span></span> <span data-ttu-id="ceade-117">Um diesen Standard zu überschreiben, übernehmen Sie das <xref:System.Runtime.Serialization.ContractNamespaceAttribute>-Attribut für das ganze Modul oder die Assembly.</span><span class="sxs-lookup"><span data-stu-id="ceade-117">To override this default, apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to the entire module or assembly.</span></span> <span data-ttu-id="ceade-118">Alternativ können Sie den Datenvertragsnamespace für jeden Typ kontrollieren, indem Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute> festlegen.</span><span class="sxs-lookup"><span data-stu-id="ceade-118">Alternatively, to control the data contract namespace for each type, set the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.</span></span>  
   
 > [!NOTE]
->  Sie können den Standardnamespace nicht in Datenvertragstypen überschreiben, die `delegate`\-Deklarationen enthalten.  
+>  <span data-ttu-id="ceade-119">Der "http://schemas.microsoft.com/2003/10/Serialization-"Namespace wird reserviert und kann nicht als Datenvertragsnamespace verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ceade-119">The "http://schemas.microsoft.com/2003/10/Serialization"namespace is reserved and cannot be used as a data contract namespace.</span></span>  
   
-## Datenvertragsnamen  
- Der Standardname eines Datenvertrags für einen gegebenen Typ ist der Name des Typs.Um diesen Standard zu überschreiben, legen Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>\-Eigenschaft auf dem <xref:System.Runtime.Serialization.DataContractAttribute> auf einen alternativen Namen fest.Besondere Regeln für generische Typen werden weiter unten in diesem Thema unter "Datenvertragsnamen für generische Typen" beschrieben.  
+> [!NOTE]
+>  <span data-ttu-id="ceade-120">Sie können den Standardnamespace nicht in Datenvertragstypen überschreiben, die `delegate`-Deklarationen enthalten.</span><span class="sxs-lookup"><span data-stu-id="ceade-120">You cannot override the default namespace in data contract types that contain `delegate` declarations.</span></span>  
   
-## Datenelementnamen  
- Der Standardname eines Datenelements für ein gegebenes Feld oder eine gegebene Eigenschaft ist der Name des Felds oder der Eigenschaft.Um diesen Standard zu überschreiben, legen Sie die <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>\-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> auf einen alternativen Wert fest.  
+## <a name="data-contract-names"></a><span data-ttu-id="ceade-121">Datenvertragsnamen</span><span class="sxs-lookup"><span data-stu-id="ceade-121">Data Contract Names</span></span>  
+ <span data-ttu-id="ceade-122">Der Standardname eines Datenvertrags für einen gegebenen Typ ist der Name des Typs.</span><span class="sxs-lookup"><span data-stu-id="ceade-122">The default name of a data contract for a given type is the name of that type.</span></span> <span data-ttu-id="ceade-123">Um diesen Standard zu überschreiben, legen Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft auf dem <xref:System.Runtime.Serialization.DataContractAttribute> auf einen alternativen Namen fest.</span><span class="sxs-lookup"><span data-stu-id="ceade-123">To override the default, set the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute> to an alternative name.</span></span> <span data-ttu-id="ceade-124">Besondere Regeln für generische Typen werden weiter unten in diesem Thema unter "Datenvertragsnamen für generische Typen" beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ceade-124">Special rules for generic types are described in "Data Contract Names for Generic Types" later in this topic.</span></span>  
   
-### Beispiele  
- Das folgende Beispiel zeigt, wie Sie das Standardbenennungsverhalten für Datenverträge und Datenelemente überschreiben können.  
+## <a name="data-member-names"></a><span data-ttu-id="ceade-125">Datenelementnamen</span><span class="sxs-lookup"><span data-stu-id="ceade-125">Data Member Names</span></span>  
+ <span data-ttu-id="ceade-126">Der Standardname eines Datenelements für ein gegebenes Feld oder eine gegebene Eigenschaft ist der Name des Felds oder der Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ceade-126">The default name of a data member for a given field or property is the name of that field or property.</span></span> <span data-ttu-id="ceade-127">Um diesen Standard zu überschreiben, legen Sie die <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> auf einen alternativen Wert fest.</span><span class="sxs-lookup"><span data-stu-id="ceade-127">To override the default, set the <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to an alternative value.</span></span>  
+  
+### <a name="examples"></a><span data-ttu-id="ceade-128">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ceade-128">Examples</span></span>  
+ <span data-ttu-id="ceade-129">Das folgende Beispiel zeigt, wie Sie das Standardbenennungsverhalten für Datenverträge und Datenelemente überschreiben können.</span><span class="sxs-lookup"><span data-stu-id="ceade-129">The following example shows how you can override the default naming behavior of data contracts and data members.</span></span>  
   
  [!code-csharp[C_DataContractNames#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
  [!code-vb[C_DataContractNames#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]  
   
-## Datenvertragsnamen für generische Typen  
- Für die Bestimmung von Datenvertragsnamen für generische Typen existieren besondere Regeln.Diese Regeln helfen, Übereinstimmungen von Datenvertragsnamen zwischen zwei geschlossenen Generika des gleichen generischen Typs zu vermeiden.  
+## <a name="data-contract-names-for-generic-types"></a><span data-ttu-id="ceade-130">Datenvertragsnamen für generische Typen</span><span class="sxs-lookup"><span data-stu-id="ceade-130">Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="ceade-131">Für die Bestimmung von Datenvertragsnamen für generische Typen existieren besondere Regeln.</span><span class="sxs-lookup"><span data-stu-id="ceade-131">Special rules exist for determining data contract names for generic types.</span></span> <span data-ttu-id="ceade-132">Diese Regeln helfen, Übereinstimmungen von Datenvertragsnamen zwischen zwei geschlossenen Generika des gleichen generischen Typs zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="ceade-132">These rules help avoid data contract name collisions between two closed generics of the same generic type.</span></span>  
   
- Standardmäßig ist der Datenvertragsname eines generischen Typs der Name des Typs, gefolgt von der Zeichenfolge "Of", gefolgt von den Datenvertragsnamen der generischen Parameter, gefolgt von einem *Hash* und errechnet mithilfe der Datenvertragsnamespaces der generischen Parameter.Ein Hash ist das Ergebnis einer mathematischen Funktion, die als "Fingerabdruck" fungiert, der Daten eindeutig identifiziert.Wenn es sich bei allen generischen Parametern um primitive Typen handelt, wird der Hash weggelassen.  
+ <span data-ttu-id="ceade-133">Wird standardmäßig der Datenvertragsname für ein generischer Typ den Namen des Typs, gefolgt von der Zeichenfolge "Of" wird gefolgt von den Datenvertragsnamen der generischen Parameter, gefolgt von einem *Hash* mithilfe der datenvertragsnamespaces der berechnet der generische Parameter.</span><span class="sxs-lookup"><span data-stu-id="ceade-133">By default, the data contract name for a generic type is the name of the type, followed by the string "Of", followed by the data contract names of the generic parameters, followed by a *hash* computed using the data contract namespaces of the generic parameters.</span></span> <span data-ttu-id="ceade-134">Ein Hash ist das Ergebnis einer mathematischen Funktion, die als "Fingerabdruck" fungiert, der Daten eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="ceade-134">A hash is the result of a mathematical function that acts as a "fingerprint" that uniquely identifies a piece of data.</span></span> <span data-ttu-id="ceade-135">Wenn es sich bei allen generischen Parametern um primitive Typen handelt, wird der Hash weggelassen.</span><span class="sxs-lookup"><span data-stu-id="ceade-135">When all of the generic parameters are primitive types, the hash is omitted.</span></span>  
   
- Betrachten Sie beispielsweise die Typen im folgenden Beispiel:  
+ <span data-ttu-id="ceade-136">Betrachten Sie beispielsweise die Typen im folgenden Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ceade-136">For example, see the types in the following example.</span></span>  
   
  [!code-csharp[C_DataContractNames#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
  [!code-vb[C_DataContractNames#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]  
   
- In diesem Beispiel hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsnamen "DrawingOfSquareRedBrush5HWGAU6h", wobei "5HWGAU6h" ein Hash der Namespaces "urn:shapes" und "urn:default" ist.Der Typ `Drawing<Square,SpecialRedBrush>` hat den Datenvertragsnamen "DrawingOfSquareRedBrushjpB5LgQ\_S", wobei "jpB5LgQ\_S" ein Hash der Namespaces "urn:shapes" und "urn:special" ist.Beachten Sie, dass die beiden Namen bei Nichtverwendung des Hashes identisch sind und daher ein Namenskonflikt auftritt.  
+ <span data-ttu-id="ceade-137">In diesem Beispiel hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsnamen "DrawingOfSquareRedBrush5HWGAU6h", wobei "5HWGAU6h" ein Hash der Namespaces "urn:shapes" und "urn:default" ist.</span><span class="sxs-lookup"><span data-stu-id="ceade-137">In this example, the type `Drawing<Square,RegularRedBrush>` has the data contract name "DrawingOfSquareRedBrush5HWGAU6h", where "5HWGAU6h" is a hash of the "urn:shapes" and "urn:default" namespaces.</span></span> <span data-ttu-id="ceade-138">Der Typ `Drawing<Square,SpecialRedBrush>` hat den Datenvertragsnamen "DrawingOfSquareRedBrushjpB5LgQ_S", wobei "jpB5LgQ_S" ein Hash der Namespaces "urn:shapes" und "urn:special" ist.</span><span class="sxs-lookup"><span data-stu-id="ceade-138">The type `Drawing<Square,SpecialRedBrush>` has the data contract name "DrawingOfSquareRedBrushjpB5LgQ_S", where "jpB5LgQ_S" is a hash of the "urn:shapes" and the "urn:special" namespaces.</span></span> <span data-ttu-id="ceade-139">Beachten Sie, dass die beiden Namen bei Nichtverwendung des Hashes identisch sind und daher ein Namenskonflikt auftritt.</span><span class="sxs-lookup"><span data-stu-id="ceade-139">Note that if the hash is not used, the two names are identical, and thus a name collision occurs.</span></span>  
   
-## Anpassen von Datenvertragsnamen für generische Typen  
- Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel.Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen.In diesem Fall können Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>\-Eigenschaft des `DataContractAttribute`\-Attributs nutzen, um eine andere Art der Erstellung der Namen festzulegen.Sie können Zahlen in geschweiften Klammern innerhalb der `Name`\-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen.\(0 \(null\) verweist auf den ersten Parameter, 1 verweist auf den zweiten usw.\) Um auf den Hash zu verweisen, können Sie ein Rautezeichen \(\#\) in geschweiften Klammern verwenden.Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.  
+## <a name="customizing-data-contract-names-for-generic-types"></a><span data-ttu-id="ceade-140">Anpassen von Datenvertragsnamen für generische Typen</span><span class="sxs-lookup"><span data-stu-id="ceade-140">Customizing Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="ceade-141">Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel.</span><span class="sxs-lookup"><span data-stu-id="ceade-141">Sometimes, the data contract names generated for generic types, as described previously, are unacceptable.</span></span> <span data-ttu-id="ceade-142">Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen.</span><span class="sxs-lookup"><span data-stu-id="ceade-142">For example, you may know in advance that you will not run into name collisions and may want to remove the hash.</span></span> <span data-ttu-id="ceade-143">In diesem Fall können Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des `DataContractAttribute`-Attributs nutzen, um eine andere Art der Erstellung der Namen festzulegen.</span><span class="sxs-lookup"><span data-stu-id="ceade-143">In this case, you can use the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the `DataContractAttribute` attribute to specify a different way to generate names.</span></span> <span data-ttu-id="ceade-144">Sie können Zahlen in geschweiften Klammern innerhalb der `Name`-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="ceade-144">You can use numbers in curly braces inside of the `Name` property to refer to data contract names of the generic parameters.</span></span> <span data-ttu-id="ceade-145">(0 (null) verweist auf den ersten Parameter, 1 verweist auf den zweiten usw.) Um auf den Hash zu verweisen, können Sie ein Rautezeichen (#) in geschweiften Klammern verwenden.</span><span class="sxs-lookup"><span data-stu-id="ceade-145">(0 refers to the first parameter, 1 refers to the second, and so on.) You can use a number (#) sign inside curly braces to refer to the hash.</span></span> <span data-ttu-id="ceade-146">Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.</span><span class="sxs-lookup"><span data-stu-id="ceade-146">You can use each of these references multiple times or not at all.</span></span>  
   
- Beispielsweise könnte der vorangehende allgemeine `Drawing`\-Typ deklariert worden sein, wie im folgenden Beispiel gezeigt:  
+ <span data-ttu-id="ceade-147">Beispielsweise könnte der vorangehende allgemeine `Drawing`-Typ deklariert worden sein, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="ceade-147">For example, the preceding generic `Drawing` type could have been declared as shown in the following example.</span></span>  
   
  [!code-csharp[c_DataContractNames#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
  [!code-vb[c_DataContractNames#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]  
   
- In diesem Fall hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsnamen "Drawing\_using\_RedBrush\_brush\_and\_Square\_shape".Beachten Sie, dass der Hash aufgrund des "{\#}" in der <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>\-Eigenschaft nicht Teil des Namens ist und der Typ somit einer Benennungsübereinstimmung unterliegen kann. Beispielsweise hätte der Typ `Drawing<Square,SpecialRedBrush>` den gleichen Datenvertragsnamen.  
+ <span data-ttu-id="ceade-148">In diesem Fall hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertragsnamen "Drawing_using_RedBrush_brush_and_Square_shape".</span><span class="sxs-lookup"><span data-stu-id="ceade-148">In this case, the type `Drawing<Square,RegularRedBrush>` has the data contract name "Drawing_using_RedBrush_brush_and_Square_shape".</span></span> <span data-ttu-id="ceade-149">Beachten Sie, dass der Hash aufgrund des "{#}" in der <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft nicht Teil des Namens ist und der Typ somit einer Benennungsübereinstimmung unterliegen kann. Beispielsweise hätte der Typ `Drawing<Square,SpecialRedBrush>` den gleichen Datenvertragsnamen.</span><span class="sxs-lookup"><span data-stu-id="ceade-149">Note that because there is a "{#}" in the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property, the hash is not a part of the name, and thus the type is susceptible to naming collisions; for example, the type `Drawing<Square,SpecialRedBrush>` would have exactly the same data contract name.</span></span>  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.ContractNamespaceAttribute>   
- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
- [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)   
- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+## <a name="see-also"></a><span data-ttu-id="ceade-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ceade-150">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
+ [<span data-ttu-id="ceade-151">Verwenden von Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="ceade-151">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="ceade-152">Datenvertragsäquivalenz</span><span class="sxs-lookup"><span data-stu-id="ceade-152">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="ceade-153">Datenvertragsnamen</span><span class="sxs-lookup"><span data-stu-id="ceade-153">Data Contract Names</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [<span data-ttu-id="ceade-154">Datenvertragsversionsverwaltung</span><span class="sxs-lookup"><span data-stu-id="ceade-154">Data Contract Versioning</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

@@ -1,57 +1,40 @@
 ---
-title: My.Computer.Registry-Objekt | Microsoft-Dokumentation
-ms.date: 2015-07-20
+title: My.Computer.Registry-Objekt
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- DeleteSetting function, increasing performance
+- DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e416f3044024f3e24b945077a350bfb2e500fd65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1881bd3eadbecc4d6128fc8e09cca612494d4e24
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="mycomputerregistry-object"></a>My.Computer.Registry-Objekt
-Stellt Eigenschaften und Methoden zum Bearbeiten der Registrierung.  
+# <a name="mycomputerregistry-object"></a><span data-ttu-id="4082c-102">My.Computer.Registry-Objekt</span><span class="sxs-lookup"><span data-stu-id="4082c-102">My.Computer.Registry Object</span></span>
+<span data-ttu-id="4082c-103">Stellt Eigenschaften und Methoden zur Bearbeitung der Registrierung bereit.</span><span class="sxs-lookup"><span data-stu-id="4082c-103">Provides properties and methods for manipulating the registry.</span></span>  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Methoden und Eigenschaften der `My.Computer.Registry` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+## <a name="remarks"></a><span data-ttu-id="4082c-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4082c-104">Remarks</span></span>  
+ <span data-ttu-id="4082c-105">Informationen zu den Methoden und Eigenschaften der `My.Computer.Registry` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span><span class="sxs-lookup"><span data-stu-id="4082c-105">For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
- Weitere Informationen finden Sie unter [lesen und Schreiben in die Registrierung](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ <span data-ttu-id="4082c-106">Weitere Informationen finden Sie unter [lesen und Schreiben in die Registrierung](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span><span class="sxs-lookup"><span data-stu-id="4082c-106">For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span></span>  
   
 > [!NOTE]
->  Sie können auch die Registrierung bearbeiten, mithilfe der Methoden der <xref:Microsoft.Win32.Registry?displayProperty=fullName>Klasse.</xref:Microsoft.Win32.Registry?displayProperty=fullName>  
+>  <span data-ttu-id="4082c-107">Sie können auch die Registrierung bearbeiten, mithilfe der Methoden der der <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> Klasse.</span><span class="sxs-lookup"><span data-stu-id="4082c-107">You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.</span></span>  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a><span data-ttu-id="4082c-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4082c-108">Requirements</span></span>  
+ <span data-ttu-id="4082c-109">**Namespace:**<xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="4082c-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- **Klasse:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>(ermöglicht den Zugriff auf <xref:Microsoft.Win32.Registry>)</xref:Microsoft.Win32.Registry> </xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <span data-ttu-id="4082c-110">**Klasse:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (ermöglicht den Zugriff auf <xref:Microsoft.Win32.Registry>)</span><span class="sxs-lookup"><span data-stu-id="4082c-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)</span></span>  
   
- **Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="4082c-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4082c-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="4082c-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4082c-112">See Also</span></span>  
+ [<span data-ttu-id="4082c-113">My.Computer-Objekt</span><span class="sxs-lookup"><span data-stu-id="4082c-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,36 +1,39 @@
 ---
-title: "Gewusst wie: Verwenden eines zwischengespeicherten Elements als Pinsel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BitmapCache [WPF], Verwenden"
-  - "BitmapCacheBrush [WPF], Verwenden"
-  - "Zwischengespeichertes Element [WPF], Als Pinsel verwenden"
-  - "CacheMode [WPF], Verwenden"
+title: 'Gewusst wie: Verwenden eines zwischengespeicherten Elements als Pinsel'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BitmapCache [WPF], using
+- cached element [WPF], use as a brush
+- BitmapCacheBrush [WPF], using
+- CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden eines zwischengespeicherten Elements als Pinsel
-Verwenden Sie zum effizienten Wiederverwenden eines zwischengespeicherten Elements die <xref:System.Windows.Media.BitmapCacheBrush>\-Klasse.  Erstellen Sie zum Zwischenspeichern eines Elements eine neue Instanz der <xref:System.Windows.Media.BitmapCache>\-Klasse, und weisen Sie sie der <xref:System.Windows.UIElement.CacheMode%2A>\-Eigenschaft des Elements zu.  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="1c856-102">Gewusst wie: Verwenden eines zwischengespeicherten Elements als Pinsel</span><span class="sxs-lookup"><span data-stu-id="1c856-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="1c856-103">Verwenden der <xref:System.Windows.Media.BitmapCacheBrush> -Klasse zum effizienten Wiederverwenden eines zwischengespeichertes Elements.</span><span class="sxs-lookup"><span data-stu-id="1c856-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="1c856-104">Um ein Element zu zwischenzuspeichern, erstellen Sie eine neue Instanz der dem <xref:System.Windows.Media.BitmapCache> -Klasse und weisen sie auf des Elements <xref:System.Windows.UIElement.CacheMode%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="1c856-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## Beispiel  
- Im folgenden Codebeispiel wird die Wiederverwendung eines zwischengespeicherten Element veranschaulicht.  Bei diesem zwischengespeicherten Element handelt es sich um ein <xref:System.Windows.Controls.Image>\-Steuerelement, von dem ein großes Bild angezeigt wird.  Das <xref:System.Windows.Controls.Image>\-Steuerelement wird mithilfe der <xref:System.Windows.Media.BitmapCache>\-Klasse als Bitmap zwischengespeichert, und der Cache wird wiederverwendet, indem er einem <xref:System.Windows.Media.BitmapCacheBrush> zugewiesen wird.  Der Pinsel wird dem Hintergrund von fünfundzwanzig Schaltflächen zugewiesen, um die effiziente Wiederverwendung zu verdeutlichen.  
+## <a name="example"></a><span data-ttu-id="1c856-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1c856-105">Example</span></span>  
+ <span data-ttu-id="1c856-106">Im folgenden Codebeispiel wird veranschaulicht, wie zum Wiederverwenden eines zwischengespeicherten Elements.</span><span class="sxs-lookup"><span data-stu-id="1c856-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="1c856-107">Das zwischengespeicherte Element wird ein <xref:System.Windows.Controls.Image> Steuerelement, das ein großes Bild anzeigt.</span><span class="sxs-lookup"><span data-stu-id="1c856-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="1c856-108">Die <xref:System.Windows.Controls.Image> Steuerelement wird als Bitmap zwischengespeichert, mit der <xref:System.Windows.Media.BitmapCache> -Klasse, und der Cache wird wiederverwendet, indem Sie die Zuweisung zu einem <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="1c856-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="1c856-109">Der Pinsel wird dem Hintergrund eines fünfundzwanzig Schaltflächen anzuzeigende effiziente Wiederverwendung zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="1c856-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
- [!code-xml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## Siehe auch  
- <xref:System.Windows.Media.BitmapCache>   
- <xref:System.Windows.Media.BitmapCacheBrush>   
- <xref:System.Windows.UIElement.CacheMode%2A>   
- [Gewusst wie: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+## <a name="see-also"></a><span data-ttu-id="1c856-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c856-110">See Also</span></span>  
+ <xref:System.Windows.Media.BitmapCache>  
+ <xref:System.Windows.Media.BitmapCacheBrush>  
+ <xref:System.Windows.UIElement.CacheMode%2A>  
+ [<span data-ttu-id="1c856-111">Gewusst wie: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements</span><span class="sxs-lookup"><span data-stu-id="1c856-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

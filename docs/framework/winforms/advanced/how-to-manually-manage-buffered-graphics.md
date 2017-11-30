@@ -1,50 +1,53 @@
 ---
-title: "Gewusst wie: Manuelles Verwalten von gepufferten Grafiken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BufferedGraphicsContext-Klasse"
-  - "Flimmern, Reduzieren durch manuelles Verwalten von Grafiken"
-  - "Grafiken, Verwalten, gepuffert"
+title: 'Gewusst wie: Manuelles Verwalten von gepufferten Grafiken'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing by manually managing graphics
+- graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Manuelles Verwalten von gepufferten Grafiken
-Für anspruchsvollere Szenarien mit doppelter Pufferung können Sie die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]\-Klassen verwenden, um Ihre eigene doppelte Pufferungslogik zu implementieren.  Die Klasse, die für das Zuordnen und Verwalten einzelner Grafikpuffer verantwortlich ist, ist die <xref:System.Drawing.BufferedGraphicsContext>\-Klasse.  Jede Anwendung verfügt über einen standardmäßigen <xref:System.Drawing.BufferedGraphicsContext>, der die gesamte standardmäßige doppelte Pufferung für die Anwendung verwaltet.  Sie können einen Verweis auf diese Instanz abrufen, indem Sie <xref:System.Drawing.BufferedGraphicsManager.Current%2A> aufrufen.  
+# <a name="how-to-manually-manage-buffered-graphics"></a><span data-ttu-id="5ebcb-102">Gewusst wie: Manuelles Verwalten von gepufferten Grafiken</span><span class="sxs-lookup"><span data-stu-id="5ebcb-102">How to: Manually Manage Buffered Graphics</span></span>
+<span data-ttu-id="5ebcb-103">Für erweiterte Szenarien mit doppelter Pufferung können Sie die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Klassen, Ihre eigene Logik Doppelpufferung implementieren.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-103">For more advanced double buffering scenarios, you can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes to implement your own double-buffering logic.</span></span> <span data-ttu-id="5ebcb-104">Die Klasse, die verantwortlich für das zuordnen und Verwalten einzelner Grafikpuffer ist die <xref:System.Drawing.BufferedGraphicsContext> Klasse.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-104">The class responsible for allocating and managing individual graphics buffers is the <xref:System.Drawing.BufferedGraphicsContext> class.</span></span> <span data-ttu-id="5ebcb-105">Jede Anwendung verfügt über einen eigenen Standard <xref:System.Drawing.BufferedGraphicsContext> , verwaltet alle Standardeinstellungen, die doppelte Pufferung für die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-105">Every application has its own default <xref:System.Drawing.BufferedGraphicsContext> that manages all of the default double buffering for that application.</span></span> <span data-ttu-id="5ebcb-106">Sie können einen Verweis auf diese Instanz abrufen, durch Aufrufen der <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-106">You can retrieve a reference to this instance by calling the <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span></span>  
   
-### So erhalten Sie einen Verweis auf den standardmäßigen BufferedGraphicsContext  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a><span data-ttu-id="5ebcb-107">Abrufen eines Verweises auf den standardmäßigen BufferedGraphicsContext</span><span class="sxs-lookup"><span data-stu-id="5ebcb-107">To obtain a reference to the default BufferedGraphicsContext</span></span>  
   
--   Legen Sie die <xref:System.Drawing.BufferedGraphicsManager.Current%2A>\-Eigenschaft fest, wie im folgenden Codebeispiel gezeigt.  
+-   <span data-ttu-id="5ebcb-108">Legen Sie die <xref:System.Drawing.BufferedGraphicsManager.Current%2A> Eigenschaft, wie im folgenden Codebeispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-108">Set the <xref:System.Drawing.BufferedGraphicsManager.Current%2A> property, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  Sie müssen nicht die `Dispose`\-Methode für den <xref:System.Drawing.BufferedGraphicsContext>\-Verweis aufrufen, den Sie von der <xref:System.Drawing.BufferedGraphicsManager>\-Klasse abrufen.  Der <xref:System.Drawing.BufferedGraphicsManager> übernimmt die gesamte Speicherbelegung und \-verteilung für standardmäßige <xref:System.Drawing.BufferedGraphicsContext>\-Instanzen.  
+    >  <span data-ttu-id="5ebcb-109">Sie müssen nicht Aufrufen der `Dispose` Methode auf die <xref:System.Drawing.BufferedGraphicsContext> -Referenz, die Sie von erhalten die <xref:System.Drawing.BufferedGraphicsManager> Klasse.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-109">You do not need to call the `Dispose` method on the <xref:System.Drawing.BufferedGraphicsContext> reference that you receive from the <xref:System.Drawing.BufferedGraphicsManager> class.</span></span> <span data-ttu-id="5ebcb-110">Die <xref:System.Drawing.BufferedGraphicsManager> behandelt die speicherbelegung und die Verteilung für standardmäßige <xref:System.Drawing.BufferedGraphicsContext> Instanzen.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-110">The <xref:System.Drawing.BufferedGraphicsManager> handles all of the memory allocation and distribution for default <xref:System.Drawing.BufferedGraphicsContext> instances.</span></span>  
   
-     Bei grafisch anspruchsvollen Anwendungen wie Animationen können Sie manchmal die Leistung verbessern, indem Sie einen dedizierten <xref:System.Drawing.BufferedGraphicsContext> anstelle des <xref:System.Drawing.BufferedGraphicsContext> verwenden, der vom <xref:System.Drawing.BufferedGraphicsManager> bereitgestellt wird.  Dadurch können Sie Grafikpuffer einzeln erstellen und verwalten, ohne dass die Verwaltung aller anderen gepufferten Anwendungsgrafiken die Leistung beeinträchtigt. Der von der Anwendung beanspruchte Arbeitsspeicher nimmt jedoch zu.  
+     <span data-ttu-id="5ebcb-111">Für grafisch anspruchsvolle Anwendungen z. B. Animation, Sie können in einigen Fällen verbessern, indem mithilfe einer dedizierten <xref:System.Drawing.BufferedGraphicsContext> statt der <xref:System.Drawing.BufferedGraphicsContext> gebotenen der <xref:System.Drawing.BufferedGraphicsManager>.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-111">For graphically intensive applications such as animation, you can sometimes improve performance by using a dedicated <xref:System.Drawing.BufferedGraphicsContext> instead of the <xref:System.Drawing.BufferedGraphicsContext> provided by the <xref:System.Drawing.BufferedGraphicsManager>.</span></span> <span data-ttu-id="5ebcb-112">Dadurch können Sie zum Erstellen und verwalten Grafikpuffer einzeln ohne Beeinträchtigung der Systemleistung, verwalten Sie alle anderen gepufferten Grafiken Ihrer Anwendung zugeordnet, obwohl die von der Anwendung belegten Arbeitsspeichers größer werden.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-112">This enables you to create and manage graphics buffers individually, without incurring the performance overhead of managing all the other buffered graphics associated with your application, though the memory consumed by the application will be greater.</span></span>  
   
-### So erstellen Sie einen dedizierten BufferedGraphicsContext  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a><span data-ttu-id="5ebcb-113">So erstellen einen dedizierten BufferedGraphicsContext</span><span class="sxs-lookup"><span data-stu-id="5ebcb-113">To create a dedicated BufferedGraphicsContext</span></span>  
   
--   Deklarieren und erstellen Sie eine neue Instanz der <xref:System.Drawing.BufferedGraphicsContext>\-Klasse, wie im folgenden Codebeispiel gezeigt.  
+-   <span data-ttu-id="5ebcb-114">Deklarieren und erstellen Sie eine neue Instanz der dem <xref:System.Drawing.BufferedGraphicsContext> Klasse, wie im folgenden Codebeispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="5ebcb-114">Declare and create a new instance of the <xref:System.Drawing.BufferedGraphicsContext> class, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
-## Siehe auch  
- <xref:System.Drawing.BufferedGraphicsContext>   
- [Doppelt gepufferte Grafiken](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Gewusst wie: Manuelles Rendern von gepufferten Grafiken](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)
+## <a name="see-also"></a><span data-ttu-id="5ebcb-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5ebcb-115">See Also</span></span>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ [<span data-ttu-id="5ebcb-116">Doppelt gepufferte Grafiken</span><span class="sxs-lookup"><span data-stu-id="5ebcb-116">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="5ebcb-117">Gewusst wie: Manuelles Rendern von gepufferten Grafiken</span><span class="sxs-lookup"><span data-stu-id="5ebcb-117">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)

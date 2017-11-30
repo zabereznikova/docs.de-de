@@ -1,78 +1,79 @@
 ---
-title: "Verwenden von Schriftarten und Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], Schriftarten und Text"
-  - "Schriftarten, Verwenden in Windows Forms"
-  - "GDI, Zeichnen von Text [Windows Forms]"
-  - "Zeichenfolgen [Windows Forms], Zeichnen in Windows Forms"
-  - "Text [Windows Forms], Zeichnen in Windows Forms"
+title: Verwenden von Schriftarten und Text
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI [Windows Forms], drawing text [Windows Forms]
+- text [Windows Forms], drawing in Windows Forms
+- examples [Windows Forms], fonts and text
+- fonts [Windows Forms], using in Windows Forms
+- strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c18dde7265a07eb45e0211a882b19acc6342e924
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Verwenden von Schriftarten und Text
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bieten mehrere Klassen zum Zeichnen von Text in Windows Forms.  Die <xref:System.Drawing.Graphics>\-Klasse in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verfügt über mehrere <xref:System.Drawing.Graphics.DrawString%2A>\-Methoden, mit denen Sie verschiedene Textfunktionen festlegen können, z. B. Position, umschließendes Rechteck, Schriftart und Format.  Zusätzlich können Sie Text in [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] mithilfe der statischen <xref:System.Windows.Forms.TextRenderer.DrawText%2A>\-Methode und der <xref:System.Windows.Forms.TextRenderer.MeasureText%2A>\-Methode, die von der `TextRenderer`\-Klasse bereitgestellt wird, zeichnen und messen.  Über die [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]\-Methoden können Sie außerdem Speicherort, Schriftart und Format angeben.  Zum Rendern von Text können Sie entweder [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] oder [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] auswählen. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bietet im Allgemeinen jedoch bessere Leistung und genauere Textabmessungen.  Andere Klassen, die für das Rendern von Text verwendet werden können, sind `FontFamily`, `Font`, <xref:System.Drawing.StringFormat> und `TextFormatFlags`.  
+# <a name="using-fonts-and-text"></a><span data-ttu-id="7b0a8-102">Verwenden von Schriftarten und Text</span><span class="sxs-lookup"><span data-stu-id="7b0a8-102">Using Fonts and Text</span></span>
+<span data-ttu-id="7b0a8-103">Es gibt mehrere Klassen von Angeboten [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text in Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-103">There are several classes offered by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] for drawing text on Windows Forms.</span></span> <span data-ttu-id="7b0a8-104">Die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> -Klasse verfügt über mehrere <xref:System.Drawing.Graphics.DrawString%2A> Methoden, die Ihnen ermöglichen, verschiedene Funktionen des Texts, z. B. der Speicherort, umgebende Rechteck, Schriftart und Format anzugeben.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-104">The [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> class has several <xref:System.Drawing.Graphics.DrawString%2A> methods that allow you to specify various features of text, such as location, bounding rectangle, font, and format.</span></span> <span data-ttu-id="7b0a8-105">Darüber hinaus können Sie zeichnen und Messen von Text mit [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] mithilfe der statischen <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden bereitgestellt werden, indem die `TextRenderer` Klasse.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-105">In addition, you can draw and measure text with [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] using the static <xref:System.Windows.Forms.TextRenderer.DrawText%2A> and <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> methods offered by the `TextRenderer` class.</span></span> <span data-ttu-id="7b0a8-106">Die [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Methoden ermöglichen auch die Position, Schriftart und Format angeben.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-106">The [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] methods also allow you to specify location, font, and format.</span></span> <span data-ttu-id="7b0a8-107">Stehen Ihnen beide [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] oder [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Textrendering; allerdings [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bietet im Allgemeinen besser, Leistung und genauere Text messen.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-107">You can choose either [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] or [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] for text rendering; however, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] generally offers better performance and more accurate text measuring.</span></span> <span data-ttu-id="7b0a8-108">Schließen Sie andere Klassen, die zum Rendern von Text beitragen `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, und `TextFormatFlags`.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-108">Other classes that contribute to text rendering include `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, and `TextFormatFlags`.</span></span>  
   
-## In diesem Abschnitt  
- [Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
- Erläutert das Erstellen des `Font`\-Objekts und des `FontFamily`\-Objekts.  
+## <a name="in-this-section"></a><span data-ttu-id="7b0a8-109">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7b0a8-109">In This Section</span></span>  
+ [<span data-ttu-id="7b0a8-110">Gewusst wie: Erstellen von Schriftartfamilien und Schriftarten</span><span class="sxs-lookup"><span data-stu-id="7b0a8-110">How to: Construct Font Families and Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ <span data-ttu-id="7b0a8-111">Zeigt, wie `Font` und `FontFamily` Objekte.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-111">Shows how to create `Font` and `FontFamily` objects.</span></span>  
   
- [Gewusst wie: Zeichnen von Text an einer angegebenen Position](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
- Erläutert das Platzieren von Text an einer bestimmten Position mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ [<span data-ttu-id="7b0a8-112">Gewusst wie: Zeichnen von Text an einer angegebenen Position</span><span class="sxs-lookup"><span data-stu-id="7b0a8-112">How to: Draw Text at a Specified Location</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
+ <span data-ttu-id="7b0a8-113">Beschreibt, wie Zeichnen von Text in einem bestimmten Speicherort mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b0a8-113">Describes how to draw text in a certain location using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span>  
   
- [Gewusst wie: Zeichnen von umbrochenem Text in einem Rechteck](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
- Erläutert das Platzieren von Text in einem Rechteck mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ [<span data-ttu-id="7b0a8-114">Gewusst wie: Zeichnen von umbrochenem Text in einem Rechteck</span><span class="sxs-lookup"><span data-stu-id="7b0a8-114">How to: Draw Wrapped Text in a Rectangle</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
+ <span data-ttu-id="7b0a8-115">Erläutert das Zeichnen von Text in einem Rechteck von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b0a8-115">Explains how to draw text in a rectangle using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span>  
   
- [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- Veranschaulicht, wie [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text verwendet wird.  
+ [<span data-ttu-id="7b0a8-116">Gewusst wie: Zeichnen von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="7b0a8-116">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ <span data-ttu-id="7b0a8-117">Veranschaulicht, wie [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-117">Demonstrates how to use [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] for drawing text.</span></span>  
   
- [Gewusst wie: Ausrichten von gezeichnetem Text](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
- Veranschaulicht das Formatieren von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]\- und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]\-Text.  
+ [<span data-ttu-id="7b0a8-118">Gewusst wie: Ausrichten von gezeichnetem Text</span><span class="sxs-lookup"><span data-stu-id="7b0a8-118">How to: Align Drawn Text</span></span>](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
+ <span data-ttu-id="7b0a8-119">Veranschaulicht das Formatieren von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Text.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-119">Shows how to format [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] text.</span></span>  
   
- [Gewusst wie: Erstellen von vertikalem Text](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
- Beschreibt das Zeichnen von vertikal ausgerichtetem Text mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [<span data-ttu-id="7b0a8-120">Gewusst wie: Erstellen von vertikalem Text</span><span class="sxs-lookup"><span data-stu-id="7b0a8-120">How to: Create Vertical Text</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
+ <span data-ttu-id="7b0a8-121">Beschreibt das Zeichnen von Texts mit vertikal ausgerichteten [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b0a8-121">Describes how to draw vertically aligned text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
- Veranschaulicht das Zeichnen von Text mit Tabstopps mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [<span data-ttu-id="7b0a8-122">Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text</span><span class="sxs-lookup"><span data-stu-id="7b0a8-122">How to: Set Tab Stops in Drawn Text</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
+ <span data-ttu-id="7b0a8-123">Veranschaulicht das Zeichnen von Text mit Tabstopps mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b0a8-123">Shows how draw text with tab stops with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [Gewusst wie: Auflisten installierter Schriftarten](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
- Erläutert das Auflisten der Namen installierter Schriftarten.  
+ [<span data-ttu-id="7b0a8-124">Gewusst wie: Auflisten installierter Schriftarten</span><span class="sxs-lookup"><span data-stu-id="7b0a8-124">How to: Enumerate Installed Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
+ <span data-ttu-id="7b0a8-125">Erläutert, wie die Namen der installierten Schriftarten aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-125">Explains how to list the names of installed fonts.</span></span>  
   
- [Gewusst wie: Erstellen einer privaten Schriftartenauflistung](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
- Beschreibt das Erstellen eines <xref:System.Drawing.Text.PrivateFontCollection>\-Objekts.  
+ [<span data-ttu-id="7b0a8-126">Gewusst wie: Erstellen einer privaten Schriftartenauflistung</span><span class="sxs-lookup"><span data-stu-id="7b0a8-126">How to: Create a Private Font Collection</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
+ <span data-ttu-id="7b0a8-127">Enthält Informationen zum Erstellen einer <xref:System.Drawing.Text.PrivateFontCollection> Objekt.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-127">Describes how to create a <xref:System.Drawing.Text.PrivateFontCollection> object.</span></span>  
   
- [Gewusst wie: Abrufen von Schriftarteigenschaften](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
- Veranschaulicht das Abrufen von Schriftarteigenschaften wie Versalhöhe und Unterlänge.  
+ [<span data-ttu-id="7b0a8-128">Gewusst wie: Abrufen von Schriftarteigenschaften</span><span class="sxs-lookup"><span data-stu-id="7b0a8-128">How to: Obtain Font Metrics</span></span>](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
+ <span data-ttu-id="7b0a8-129">Veranschaulicht das Abrufen von Schriftarteigenschaften wie Versalhöhe und Unterlänge.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-129">Shows how to obtain font metrics such as cell ascent and descent.</span></span>  
   
- [Gewusst wie: Verwenden der Bildkantenglättung mit Text](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
- Erläutert, wie das Antialiasing beim Zeichnen von Text verwendet wird.  
+ [<span data-ttu-id="7b0a8-130">Gewusst wie: Verwenden der Bildkantenglättung mit Text</span><span class="sxs-lookup"><span data-stu-id="7b0a8-130">How to: Use Antialiasing with Text</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
+ <span data-ttu-id="7b0a8-131">Erklärt, wie Antialiasing beim Zeichnen von Text.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-131">Explains how to use antialiasing when drawing text.</span></span>  
   
-## Referenz  
+## <a name="reference"></a><span data-ttu-id="7b0a8-132">Verweis</span><span class="sxs-lookup"><span data-stu-id="7b0a8-132">Reference</span></span>  
  <xref:System.Drawing.Font>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="7b0a8-133">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-133">Describes this class and contains links to all of its members.</span></span>  
   
  <xref:System.Drawing.FontFamily>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="7b0a8-134">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-134">Describes this class and contains links to all of its members.</span></span>  
   
  <xref:System.Drawing.Text.PrivateFontCollection>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="7b0a8-135">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-135">Describes this class and contains links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.  
+ <span data-ttu-id="7b0a8-136">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-136">Describes this class and contains links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.TextFormatFlags>  
- Beschreibt diese Klasse und enthält Links zu allen Membern.
+ <span data-ttu-id="7b0a8-137">Beschreibt diese Klasse und enthält Links zu allen Membern.</span><span class="sxs-lookup"><span data-stu-id="7b0a8-137">Describes this class and contains links to all of its members.</span></span>

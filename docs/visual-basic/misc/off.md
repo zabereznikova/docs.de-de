@@ -1,34 +1,34 @@
 ---
-title: "Off (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Off"
-  - "vb.Off"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Off-Schlüsselwort"
+title: Off (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Off
+- vb.Off
+helpviewer_keywords: Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cddbac85a54f000656a758468240ddfbaf5ebafd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Off (Visual Basic)
-Deaktiviert eine Compileroption.  
+# <a name="off-visual-basic"></a><span data-ttu-id="24740-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24740-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="24740-103">Deaktiviert eine Compileroption.</span><span class="sxs-lookup"><span data-stu-id="24740-103">Turns a compiler option off.</span></span>  
   
-## Hinweise  
- Das `Off`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
+## <a name="remarks"></a><span data-ttu-id="24740-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="24740-104">Remarks</span></span>  
+ <span data-ttu-id="24740-105">Das `Off`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="24740-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [Option Explicit\-Anweisung](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="24740-106">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="24740-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [Option Strict\-Anweisung](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="24740-107">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="24740-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [Option Infer Statement](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="24740-108">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="24740-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## Siehe auch  
- [Stichwörter](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="24740-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24740-109">See Also</span></span>  
+ [<span data-ttu-id="24740-110">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="24740-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

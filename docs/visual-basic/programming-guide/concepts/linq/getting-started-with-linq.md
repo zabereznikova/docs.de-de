@@ -1,16 +1,13 @@
 ---
-title: Erste Schritte mit LINQ in Visual Basic | Microsoft-Dokumentation
+title: "Erste Schritte mit LINQ in Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
 - queries [LINQ in Visual Basic]
@@ -18,73 +15,58 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b8a45dff4600c71cf7395d5eee626b7ffd365b7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 02672e88709dbe01aedcc31c76819728ca30dfb9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="getting-started-with-linq-in-visual-basic"></a>Erste Schritte mit LINQ in Visual Basic
-Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, die Sie verstehen und Verwenden von Visual Basic und Language-Integrated Query (LINQ) unterstützen.  
+# <a name="getting-started-with-linq-in-visual-basic"></a><span data-ttu-id="6961c-102">Erste Schritte mit LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6961c-102">Getting Started with LINQ in Visual Basic</span></span>
+<span data-ttu-id="6961c-103">Dieser Abschnitt enthält Übersichten, Beispiele und Hintergrundinformationen, die Sie verstehen und Verwenden von Visual Basic- und Language-Integrated Query (LINQ) unterstützen.</span><span class="sxs-lookup"><span data-stu-id="6961c-103">This section contains overviews, examples, and background information that will help you understand and use Visual Basic and Language-Integrated Query (LINQ).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Schreiben der ersten LINQ-Abfrage](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
- Beschreibt die drei Stufen beim Schreiben einer grundlegenden LINQ-Abfrage: Abrufen der Datenquelle, Schreiben der Abfrage und Ausführen der Abfrage.  
+## <a name="in-this-section"></a><span data-ttu-id="6961c-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="6961c-104">In This Section</span></span>  
+ [<span data-ttu-id="6961c-105">Schreiben der ersten LINQ-Abfrage</span><span class="sxs-lookup"><span data-stu-id="6961c-105">Writing Your First LINQ Query</span></span>](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
+ <span data-ttu-id="6961c-106">Beschreibt die drei Stufen in einer grundlegenden LINQ-Abfrage schreiben: Abrufen der Datenquelle, die Abfrage schreiben und Ausführen der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="6961c-106">Describes the three stages in writing a basic LINQ query: obtaining the data source, writing the query, and executing the query.</span></span>  
   
- [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
- Beschreibt die am häufigsten verwendeten Typen von Abfrageoperationen und wie diese in Visual Basic ausgedrückt werden.  
+ [<span data-ttu-id="6961c-107">Grundlegende Abfrageoperationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6961c-107">Basic Query Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
+ <span data-ttu-id="6961c-108">Beschreibt die am häufigsten verwendeten Arten von Abfrageoperationen und wie diese in Visual Basic ausgedrückt werden.</span><span class="sxs-lookup"><span data-stu-id="6961c-108">Describes the most common types of query operations and how they are expressed in Visual Basic.</span></span>  
   
- [Visual Basic-Features, die LINQ unterstützen](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)  
- Beschreibt die Visual Basic-Sprachfeatures, die LINQ unterstützen, z. B. anonyme Typen und Typrückschluss.  
+ [<span data-ttu-id="6961c-109">Visual Basic-Features, die LINQ unterstützen</span><span class="sxs-lookup"><span data-stu-id="6961c-109">Visual Basic Features That Support LINQ</span></span>](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)  
+ <span data-ttu-id="6961c-110">Beschreibt die Funktionen der Visual Basic-Sprache, die LINQ unterstützen, z. B. anonyme Typen und Typrückschluss.</span><span class="sxs-lookup"><span data-stu-id="6961c-110">Describes the Visual Basic language features that support LINQ, such as anonymous types and type inference.</span></span>  
   
- [Typbeziehungen in Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
- Beschreibt, wie Datentypen beibehalten oder beim Schreiben und Ausführen von Abfragen transformiert werden.  
+ [<span data-ttu-id="6961c-111">Typbeziehungen in Abfrageoperationen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6961c-111">Type Relationships in Query Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
+ <span data-ttu-id="6961c-112">Beschreibt, wie Datentypen beibehalten oder transformiert werden, wenn Abfragen geschrieben und ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="6961c-112">Describes how data types are preserved or transformed when queries are written and executed.</span></span>  
   
- [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Eine schrittweise Anleitung zum Erstellen eines Visual Basic-LINQ-Projekts und Hinzufügen einer einfachen Datenquelle einige grundlegende Abfrageoperationen durchführen.  
+ [<span data-ttu-id="6961c-113">Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6961c-113">Walkthrough: Writing Queries in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ <span data-ttu-id="6961c-114">Eine schrittweise Anleitung zum Erstellen eines Visual Basic LINQ-Projekts, eine einfache Datenquelle hinzufügen und einige grundlegende Abfrageoperationen ausführen.</span><span class="sxs-lookup"><span data-stu-id="6961c-114">Step-by-step instructions for creating a Visual Basic LINQ project, adding a simple data source, and performing some basic query operations.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen.  
+## <a name="related-sections"></a><span data-ttu-id="6961c-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="6961c-115">Related Sections</span></span>  
+ [<span data-ttu-id="6961c-116">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6961c-116">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ <span data-ttu-id="6961c-117">Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen bereit</span><span class="sxs-lookup"><span data-stu-id="6961c-117">Includes an overview of queries in LINQ and provides links to additional resources.</span></span>  
   
- [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Beschreibt, wie Visual Basic LINQ to XML unterstützt.  
+ [<span data-ttu-id="6961c-118">Übersicht über LINQ to XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6961c-118">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ <span data-ttu-id="6961c-119">Beschreibt, wie Visual Basic LINQ to XML unterstützt.</span><span class="sxs-lookup"><span data-stu-id="6961c-119">Describes how Visual Basic supports LINQ to XML.</span></span>  
   
- [LINQ to DataSet (Übersicht)](http://msdn.microsoft.com/library/dc20a8fb-03f6-4b68-9c2b-7f7299e3070b)  
- Enthält eine konzeptionelle Übersicht über LINQ to DataSet.  
+ [<span data-ttu-id="6961c-120">LINQ to DataSet-Übersicht</span><span class="sxs-lookup"><span data-stu-id="6961c-120">LINQ to DataSet Overview</span></span>](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ <span data-ttu-id="6961c-121">Bietet eine konzeptionelle Übersicht über LINQ to DataSet an.</span><span class="sxs-lookup"><span data-stu-id="6961c-121">Provides a conceptual overview of LINQ to DataSet.</span></span>  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
- Erläutert die LINQ to SQL-Technologie und bietet Links zu Themen, in denen LINQ to SQL verwenden.  
+ [<span data-ttu-id="6961c-122">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="6961c-122">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
+ <span data-ttu-id="6961c-123">Erläutert die LINQ to SQL-Technologie und bietet Links zu Themen, mit denen Sie LINQ to SQL verwenden.</span><span class="sxs-lookup"><span data-stu-id="6961c-123">Explains the LINQ to SQL technology and provides links to topics that help you use LINQ to SQL.</span></span>  
   
- [Visual Studio-IDE und Toolunterstützung für LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Beschreibt Tools, die in der Visual Studio-Umgebung zum Entwerfen, codieren und Debuggen von LINQ-fähige verfügbar sind.  
+ [<span data-ttu-id="6961c-124">Visual Studio IDE and Tools Support for LINQ (Visual Basic) (Visual Studio-IDE und Toolunterstützung für LINQ (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="6961c-124">Visual Studio IDE and Tools Support for LINQ (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ <span data-ttu-id="6961c-125">Beschreibt die Tools, die in der Visual Studio-Umgebung zum Entwerfen, codieren und Debuggen von LINQ-aktivierte Anwendungen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="6961c-125">Describes tools that are available in the Visual Studio environment for designing, coding, and debugging LINQ-enabled applications.</span></span>  
   
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- Enthält eine Auswahl von Gewusst-wie-Themen für die Verwendung von LINQ mit Auflistungen im Arbeitsspeicher.  
+ [<span data-ttu-id="6961c-126">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6961c-126">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ <span data-ttu-id="6961c-127">Enthält eine Auswahl von Themen zur Vorgehensweise für die Verwendung von LINQ mit Auflistungen im Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="6961c-127">Includes a selection of How-to topics for using LINQ with in-memory collections.</span></span>  
   
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
- Enthält Links zu Themen über die Verwendung von LINQ to XML, die die speicherresidenten Dokumentänderungsfunktionen des Model (DOM) und unterstützt LINQ-Abfrageausdrücke.  
+ [<span data-ttu-id="6961c-128">LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6961c-128">LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ <span data-ttu-id="6961c-129">Umfasst Links zu Themen, in denen die Verwendung von LINQ to XML erläutert wird, wodurch die speicherresidenten Dokumentänderungsfunktionen des Dokumentobjektmodells (Document Object Model, DOM) bereitgestellt werden, und unterstützt LINQ-Abfrageausdrücke.</span><span class="sxs-lookup"><span data-stu-id="6961c-129">Includes links to topics that explain how to use LINQ to XML, which provides the in-memory document modification capabilities of the Document Object Model (DOM), and supports LINQ query expressions.</span></span>  
   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Enthält Links zu Themen, in denen die LINQ-Technologien.  
+ [<span data-ttu-id="6961c-130">Language-Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6961c-130">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="6961c-131">Enthält Links zu Themen, die die LINQ-Technologie erläutern</span><span class="sxs-lookup"><span data-stu-id="6961c-131">Provides links to topics that explain the LINQ technologies.</span></span>  
   
- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Enthält Links zu Themen über die Verwendung von LINQ in c#.
+ [<span data-ttu-id="6961c-132">Erste Schritte mit LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="6961c-132">Getting Started with LINQ in C#</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ <span data-ttu-id="6961c-133">Enthält Links zu Themen über die Verwendung von LINQ in C# geschrieben.</span><span class="sxs-lookup"><span data-stu-id="6961c-133">Provides links to topics about using LINQ in C#.</span></span>

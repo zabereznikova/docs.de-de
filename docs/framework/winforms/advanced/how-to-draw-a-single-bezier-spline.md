@@ -1,43 +1,47 @@
 ---
-title: "Gewusst wie: Zeichnen eines einzelnen B&#233;zier-Splines | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Béziersplinekurven, Zeichnen"
-  - "Zeichnen, Béziersplinekurven"
+title: 'Vorgehensweise: Zeichnen einer einzigen B &#233; Zier Spline'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Bezier splines [Windows Forms], drawing
+- drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ebdba9e01824cc764a6ab759da049add180ba83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Zeichnen eines einzelnen B&#233;zier-Splines
-Ein Bézier\-Spline wird durch vier Punkte definiert: einen Anfangspunkt, zwei Orientierungspunkte und einen Endpunkt.  
+# <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="71946-102">Vorgehensweise: Zeichnen einer einzigen B &#233; Zier Spline</span><span class="sxs-lookup"><span data-stu-id="71946-102">How to: Draw a Single B&#233;zier Spline</span></span>
+<span data-ttu-id="71946-103">Eine Béziersplinekurve wird durch vier Punkte definiert: einem Startpunkt, die beiden Steuerpunkte und einen Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="71946-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Bézier\-Spline mit dem Anfangspunkt \(10, 100\) und dem Endpunkt \(200, 100\) gezeichnet.  Die Orientierungspunkte sind \(100, 10\) und \(150, 150\).  
+## <a name="example"></a><span data-ttu-id="71946-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="71946-104">Example</span></span>  
+ <span data-ttu-id="71946-105">Im folgende Beispiel zeichnet eine Béziersplinekurve mit Startpunkt (10, 100) und Endpunkt (200, 100).</span><span class="sxs-lookup"><span data-stu-id="71946-105">The following example draws a Bézier spline with start point (10, 100) and endpoint (200, 100).</span></span> <span data-ttu-id="71946-106">Das Steuerelement zeigt sind (100, 10) und (150, 150).</span><span class="sxs-lookup"><span data-stu-id="71946-106">The control points are (100, 10) and (150, 150).</span></span>  
   
- Die folgende Abbildung zeigt den resultierenden Bézier\-Spline mit Anfangspunkt, Orientierungspunkten und Endpunkt.  Die Abbildung zeigt auch die konvexe Hülle der Kurve. Dabei handelt es sich um ein Polygon, das entsteht, wenn die vier Punkte mit geraden Linien verbunden werden.  
+ <span data-ttu-id="71946-107">Die folgende Abbildung zeigt die resultierenden Béziersplinekurve sowie dessen Startpunkt, Steuerpunkte und Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="71946-107">The following illustration shows the resulting Bézier spline along with its start point, control points, and endpoint.</span></span> <span data-ttu-id="71946-108">Die Abbildung zeigt auch die Splinekurve konvexe Hülle, also ein Polygon gebildet, indem Sie die vier Punkte mit geraden verbindet.</span><span class="sxs-lookup"><span data-stu-id="71946-108">The illustration also shows the spline's convex hull, which is a polygon formed by connecting the four points with straight lines.</span></span>  
   
- ![Bézier&#45;Spline](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")  
+ <span data-ttu-id="71946-109">![Bézier-Spline](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")</span><span class="sxs-lookup"><span data-stu-id="71946-109">![Bezier Spline](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>\-Ereignishandlers.  
+## <a name="compiling-the-code"></a><span data-ttu-id="71946-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="71946-110">Compiling the Code</span></span>  
+ <span data-ttu-id="71946-111">Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="71946-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Siehe auch  
- <xref:System.Drawing.Graphics.DrawBezier%2A>   
- [Bézier\-Splines in GDI\+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)   
- [Gewusst wie: Zeichnen einer Folge von Bézier\-Splines](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)
+## <a name="see-also"></a><span data-ttu-id="71946-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="71946-112">See Also</span></span>  
+ <xref:System.Drawing.Graphics.DrawBezier%2A>  
+ [<span data-ttu-id="71946-113">Bézier-Splines in GDI+</span><span class="sxs-lookup"><span data-stu-id="71946-113">Bézier Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [<span data-ttu-id="71946-114">Gewusst wie: Zeichnen einer Folge von Bézier-Splines</span><span class="sxs-lookup"><span data-stu-id="71946-114">How to: Draw a Sequence of Bézier Splines</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)

@@ -1,39 +1,39 @@
 ---
-title: "&#220;bersicht &#252;ber das NumericUpDown-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NumericUpDown"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Numerisches Drehfeld-Steuerelement, Windows Forms"
-  - "NumericUpDown-Steuerelement [Windows Forms], Informationen über das NumericUpDown-Steuerelement"
-  - "Drehfeld-Steuerelement, Windows Forms"
+title: "Übersicht über das NumericUpDown-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NumericUpDown
+helpviewer_keywords:
+- numeric spin button control [Windows Forms], Windows Forms
+- NumericUpDown control [Windows Forms], about NumericUpDown control
+- spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das NumericUpDown-Steuerelement (Windows&#160;Forms)
-Das <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement sieht wie eine Kombination aus einem Textfeld und einem Paar Pfeilen aus, auf die der Benutzer klicken kann, um einen Wert anzupassen.  Das Steuerelement zeigt einen einzelnen numerischen Wert aus einer Liste mit festen numerischen Werten an und legt ihn fest.  Die Zahl kann durch Klicken auf den Nach\-oben\- bzw. Nach\-unten\-Pfeil oder durch Drücken der NACH\-OBEN\- bzw. NACH\-UNTEN\-TASTE und Eingabe einer Zahl in das Textfeld des Steuerelements vergrößert oder verkleinert werden.  Durch Drücken der NACH\-OBEN\-TASTE wird die Zahl in Richtung Maximalwert geändert; durch Drücken der NACH\-UNTEN\-TASTE wird die Zahl in Richtung Minimum geändert.  
+# <a name="numericupdown-control-overview-windows-forms"></a><span data-ttu-id="ac18e-102">Übersicht über das NumericUpDown-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ac18e-102">NumericUpDown Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="ac18e-103">Die <xref:System.Windows.Forms.NumericUpDown> -Steuerelement sieht wie eine Kombination aus einem Textfeld und einem pfeilepaar zusammenlaufen, die der Benutzer klicken kann, um einen Wert anzupassen.</span><span class="sxs-lookup"><span data-stu-id="ac18e-103">The <xref:System.Windows.Forms.NumericUpDown> control looks like a combination of a text box and a pair of arrows that the user can click to adjust a value.</span></span> <span data-ttu-id="ac18e-104">Das Steuerelement zeigt an, und legt einen einzelnen numerischen Wert aus einer Liste von Optionen für feste numerischen Werten.</span><span class="sxs-lookup"><span data-stu-id="ac18e-104">The control displays and sets a single numeric value from a list of fixed numeric-value choices.</span></span> <span data-ttu-id="ac18e-105">Der Benutzer kann zu erhöhen und verringern Sie die Anzahl durch Klicken auf den nach-oben und nach unten weisenden Pfeil, durch Drücken der nach-oben und nach unten-Taste oder durch Eingabe einer Zahl in die Text-Feld-Teil des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="ac18e-105">The user can increase and decrease the number by clicking the up and down arrows, by pressing the UP and DOWN ARROW keys, or by typing a number in the text box part of the control.</span></span> <span data-ttu-id="ac18e-106">Durch Drücken der nach-oben-Taste wird die Zahl für die maximale Anzahl; durch Drücken der nach-unten-Taste wird die Zahl in Richtung der Mindestwert.</span><span class="sxs-lookup"><span data-stu-id="ac18e-106">Clicking the UP ARROW key moves the number toward the maximum; clicking the DOWN ARROW key moves the number toward the minimum.</span></span>  
   
- Aufgrund der vielseitigen Funktionalität bietet sich dieses Steuerelement beispielsweise zur Erstellung eines Lautstärkereglers für die Musikwiedergabe an.  Das <xref:System.Windows.Forms.NumericUpDown>\-Steuerelement wird in vielen Anwendungen der Windows\-Systemsteuerung verwendet.  
+ <span data-ttu-id="ac18e-107">Dieses Steuerelement ist ein naheliegend aufgrund seiner vielseitigen Funktionen z. B. an, wenn Sie ein Volume-Steuerelement für einen Musik-Player-Anwendung erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="ac18e-107">Because of its versatile functionality, this control is an obvious choice, for example, if you want to create a volume control for a music player application.</span></span> <span data-ttu-id="ac18e-108">Die <xref:System.Windows.Forms.NumericUpDown> Steuerelement wird in vielen Anwendungen für Windows-Systemsteuerung verwendet.</span><span class="sxs-lookup"><span data-stu-id="ac18e-108">The <xref:System.Windows.Forms.NumericUpDown> control is used in many Windows Control Panel applications.</span></span>  
   
-## Wichtige Eigenschaften und Methoden  
- Die im Textfeld des Steuerelements angezeigten Zahlen können diverse Formate aufweisen, z. B. das hexadezimale Format.  Weitere Informationen finden Sie unter [Gewusst wie: Festlegen des Formats für das NumericUpDown\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).  Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> \(Standardwert 100\), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> \(Standardwert 0\) und <xref:System.Windows.Forms.NumericUpDown.Increment%2A> \(Standardwert 1\).  Die <xref:System.Windows.Forms.NumericUpDown.Value%2A>\-Eigenschaft legt die aktuelle Zahl fest, die im Steuerelement ausgewählt ist.  Die <xref:System.Windows.Forms.NumericUpDown.Increment%2A>\-Eigenschaft legt fest, in welchem Maße die Zahl angepasst wird, wenn der Benutzer auf den Nach\-oben\- bzw. Nach\-unten\-Pfeil klickt.  Wenn der Fokus nicht mehr auf dem Steuerelement liegt, wird die Eingabe anhand des minimalen und maximalen numerischen Werts überprüft.  Sie können die Geschwindigkeit, mit der das Steuerelement die Zahlen durchläuft, wenn der Benutzer den Nach\-oben\- bzw. Nach\-unten\-Pfeil dauerhaft drückt, mithilfe der <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>\-Eigenschaft erhöhen.  Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="ac18e-109">Wichtige Eigenschaften und Methoden</span><span class="sxs-lookup"><span data-stu-id="ac18e-109">Key Properties and Methods</span></span>  
+ <span data-ttu-id="ac18e-110">Die Zahlen im Textfeld des Steuerelements angezeigten können in einer Vielzahl von Formaten, z. B. eine Hexadezimalzahl sein.</span><span class="sxs-lookup"><span data-stu-id="ac18e-110">The numbers displayed in the control's text box can be in a variety of formats, including hexadecimal.</span></span> <span data-ttu-id="ac18e-111">Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen des Formats für das NumericUpDown-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span><span class="sxs-lookup"><span data-stu-id="ac18e-111">For more information, see [How to: Set the Format for the Windows Forms NumericUpDown Control](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span></span> <span data-ttu-id="ac18e-112">Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (Standardwert 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (Standardwert 0), und <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (Standardwert 1).</span><span class="sxs-lookup"><span data-stu-id="ac18e-112">The key properties of the control are <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (default value 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (default value 0), and <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (default value 1).</span></span> <span data-ttu-id="ac18e-113">Die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft legt die aktuelle Anzahl, die im Steuerelement ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="ac18e-113">The <xref:System.Windows.Forms.NumericUpDown.Value%2A> property sets the current number selected in the control.</span></span> <span data-ttu-id="ac18e-114">Die <xref:System.Windows.Forms.NumericUpDown.Increment%2A> Eigenschaft legt fest, wie die Anzahl von klickt der Benutzer auf eine nach-oben oder nach-unten angepasst wird.</span><span class="sxs-lookup"><span data-stu-id="ac18e-114">The <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property sets the amount that the number is adjusted by when the user clicks an up or down arrow.</span></span> <span data-ttu-id="ac18e-115">Wenn deaktiviert das Steuerelement den Fokus verschoben wird, wird die Eingabe für die minimalen und maximalen numerischen Werte überprüft.</span><span class="sxs-lookup"><span data-stu-id="ac18e-115">When focus moves off the control, any typed input will be validated against the minimum and maximum numeric values.</span></span> <span data-ttu-id="ac18e-116">Sie können die Geschwindigkeit, die das Steuerelement über Zahlen, verschoben, wenn der Benutzer die auf- oder nach-unten, erhöhen, mit der <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ac18e-116">You can increase the speed that the control moves through numbers, when the user continuously presses the up or down arrow, with the <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> property.</span></span> <span data-ttu-id="ac18e-117">Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="ac18e-117">The key methods of the control are <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.NumericUpDown>   
- [NumericUpDown\-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)   
- [Gewusst wie: Festlegen des Formats für das NumericUpDown\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)   
- [TextBox\-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ac18e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac18e-118">See Also</span></span>  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ [<span data-ttu-id="ac18e-119">NumericUpDown-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ac18e-119">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [<span data-ttu-id="ac18e-120">Gewusst wie: Festlegen des Formats für das NumericUpDown-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ac18e-120">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [<span data-ttu-id="ac18e-121">TextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="ac18e-121">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

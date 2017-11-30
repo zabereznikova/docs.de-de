@@ -1,54 +1,69 @@
 ---
-title: "Byte Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Byte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Byte data type"
-  - "data types [Visual Basic], assigning"
+title: Byte-Datentyp (Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Byte
+helpviewer_keywords:
+- Byte data type
+- data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Byte Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="byte-data-type-visual-basic"></a><span data-ttu-id="af65f-102">Byte-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af65f-102">Byte data type (Visual Basic)</span></span>
+<span data-ttu-id="af65f-103">Enthält die 8-Bit (1-Byte)-Ganzzahlen ohne Vorzeichen, die im Wert von 0 bis 255 liegen.</span><span class="sxs-lookup"><span data-stu-id="af65f-103">Holds unsigned 8-bit (1-byte) integers that range in value from 0 through 255.</span></span>
 
-Speichert 8\-Bit\-\(1\-Byte\)\-Ganzzahlen ohne Vorzeichen, deren Werte im Bereich von 0 bis 255 liegen.  
+## <a name="remarks"></a><span data-ttu-id="af65f-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="af65f-104">Remarks</span></span>
+
+<span data-ttu-id="af65f-105">Verwenden der `Byte` -Datentyp, um Binärdaten enthalten.</span><span class="sxs-lookup"><span data-stu-id="af65f-105">Use the `Byte` data type to contain binary data.</span></span>  
   
-## Hinweise  
- Verwenden Sie den `Byte`\-Datentyp für Binärdaten.  
+<span data-ttu-id="af65f-106">Der Standardwert von `Byte` lautet 0.</span><span class="sxs-lookup"><span data-stu-id="af65f-106">The default value of `Byte` is 0.</span></span>
+
+## <a name="literal-assignments"></a><span data-ttu-id="af65f-107">Literal Zuweisungen</span><span class="sxs-lookup"><span data-stu-id="af65f-107">Literal assignments</span></span>
+
+<span data-ttu-id="af65f-108">Sie können deklarieren und Initialisieren einer `Byte` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal.</span><span class="sxs-lookup"><span data-stu-id="af65f-108">You can declare and initialize a `Byte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span> <span data-ttu-id="af65f-109">Ganzzahlige Literal ist außerhalb des Bereichs von einer `Byte` (d. h., wenn es ist kleiner als <xref:System.Byte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Byte.MaxValue?displayProperty=nameWithType>), tritt ein Kompilierungsfehler auf.</span><span class="sxs-lookup"><span data-stu-id="af65f-109">If the integral literal is outside the range of a `Byte` (that is, if it is less than <xref:System.Byte.MinValue?displayProperty=nameWithType> or greater than <xref:System.Byte.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
+
+<span data-ttu-id="af65f-110">Im folgenden Beispiel Ganzzahlen 201, die als dezimale, hexadezimale, dargestellt sind gleich und binäre Literale werden implizit konvertiert, aus [Ganzzahl](integer-data-type.md) zu `byte` Werte.</span><span class="sxs-lookup"><span data-stu-id="af65f-110">In the following example, integers equal to 201 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [Integer](integer-data-type.md) to `byte` values.</span></span>
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
+
+> [!NOTE]
+> <span data-ttu-id="af65f-111">Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen.</span><span class="sxs-lookup"><span data-stu-id="af65f-111">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="af65f-112">Dezimale Literale haben kein Präfix.</span><span class="sxs-lookup"><span data-stu-id="af65f-112">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="af65f-113">Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="af65f-113">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
+
+## <a name="programming-tips"></a><span data-ttu-id="af65f-114">Tipps für die Programmierung</span><span class="sxs-lookup"><span data-stu-id="af65f-114">Programming tips</span></span>
+
+-   <span data-ttu-id="af65f-115">**Negative Zahlen.**</span><span class="sxs-lookup"><span data-stu-id="af65f-115">**Negative Numbers.**</span></span> <span data-ttu-id="af65f-116">Da `Byte` ein Typ ohne Vorzeichen ist es nicht darstellen kann eine negative Zahl.</span><span class="sxs-lookup"><span data-stu-id="af65f-116">Because `Byte` is an unsigned type, it cannot represent a negative number.</span></span> <span data-ttu-id="af65f-117">Bei Verwendung der unäres minus (`-`) Operator auf einen Ausdruck, der ausgewertet wird, um geben `Byte`, konvertiert den Ausdruck, der Visual Basic `Short` erste.</span><span class="sxs-lookup"><span data-stu-id="af65f-117">If you use the unary minus (`-`) operator on an expression that evaluates to type `Byte`, Visual Basic converts the expression to `Short` first.</span></span>
   
- Der Standardwert von `Byte` ist 0 \(null\).  
+-   <span data-ttu-id="af65f-118">**Konvertierung des Formats.**</span><span class="sxs-lookup"><span data-stu-id="af65f-118">**Format Conversions.**</span></span> <span data-ttu-id="af65f-119">Wenn Sie Visual Basic liest oder schreibt Dateien oder beim Aufrufen von DLLs, Methoden und Eigenschaften, können sie automatisch zwischen Datenformate konvertieren.</span><span class="sxs-lookup"><span data-stu-id="af65f-119">When Visual Basic reads or writes files, or when it calls DLLs, methods, and properties, it can automatically convert between data formats.</span></span> <span data-ttu-id="af65f-120">Binäre Daten, die in gespeicherten `Byte` Variablen und Arrays werden solche Konvertierungen Format beibehalten.</span><span class="sxs-lookup"><span data-stu-id="af65f-120">Binary data stored in `Byte` variables and arrays is preserved during such format conversions.</span></span> <span data-ttu-id="af65f-121">Verwenden Sie keine `String` Variable für binäre Daten, da der Inhalt bei der Konvertierung zwischen ANSI- und Unicode-Formaten beschädigt werden können.</span><span class="sxs-lookup"><span data-stu-id="af65f-121">You should not use a `String` variable for binary data, because its contents can be corrupted during conversion between ANSI and Unicode formats.</span></span>
+
+-   <span data-ttu-id="af65f-122">**Widening.**</span><span class="sxs-lookup"><span data-stu-id="af65f-122">**Widening.**</span></span> <span data-ttu-id="af65f-123">Die `Byte` -Datentyp zu `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, oder `Double`.</span><span class="sxs-lookup"><span data-stu-id="af65f-123">The `Byte` data type widens to `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`.</span></span> <span data-ttu-id="af65f-124">Dies bedeutet, Sie können konvertieren `Byte` keinem dieser Typen ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.</span><span class="sxs-lookup"><span data-stu-id="af65f-124">This means you can convert `Byte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>
   
-## Programmiertipps  
-  
--   **Negative Zahlen.** Da `Byte` ein Typ ohne Vorzeichen ist, kann er keine negativen Zahlen darstellen.  Wenn Sie den unären Minusoperator \(`-`\) in einem Ausdruck verwenden, der vom Typ `Byte` ist, wandelt Visual Basic den Ausdruck zunächst in den `Short`\-Typ um.  
-  
--   **Formatkonvertierungen.** Wenn Visual Basic Dateien liest oder schreibt bzw. DLLs, Methoden und Eigenschaften aufruft, können die Datenformate automatisch konvertiert werden.  Die in `Byte`\-Variablen und in Arrays gespeicherten binären Daten bleiben bei solchen Formatkonvertierungen erhalten.  Sie sollten für binäre Daten keine `String`\-Variable verwenden, da der Inhalt bei der Konvertierung von ANSI in Unicode beschädigt werden kann.  
-  
--   **Erweiterung.** Der `Byte`\-Datentyp wird zu `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` oder `Double` erweitert.  Dies bedeutet, dass Sie `Byte` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
-  
--   **Typzeichen.** `Byte` hat kein Literaltypzeichen oder Typkennzeichen.  
-  
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Byte?displayProperty=fullName>\-Struktur.  
-  
-## Beispiel  
- Im folgenden Beispiel ist `b` eine `Byte`\-Variable.  Die Anweisungen veranschaulichen den Bereich der Variablen und die Anwendung von Bitschiebeoperatoren auf die Variable.  
-  
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
-  
-## Siehe auch  
- <xref:System.Byte?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   <span data-ttu-id="af65f-125">**Typzeichen.**</span><span class="sxs-lookup"><span data-stu-id="af65f-125">**Type Characters.**</span></span> <span data-ttu-id="af65f-126">`Byte`hat kein literal-Typzeichen oder Bezeichner-Typzeichen.</span><span class="sxs-lookup"><span data-stu-id="af65f-126">`Byte` has no literal type character or identifier type character.</span></span>
+
+-   <span data-ttu-id="af65f-127">**Framework-Typ.**</span><span class="sxs-lookup"><span data-stu-id="af65f-127">**Framework Type.**</span></span> <span data-ttu-id="af65f-128">Der entsprechende Typ in .NET Framework ist die <xref:System.Byte?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="af65f-128">The corresponding type in the .NET Framework is the <xref:System.Byte?displayProperty=nameWithType> structure.</span></span>
+
+## <a name="example"></a><span data-ttu-id="af65f-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="af65f-129">Example</span></span>
+
+ <span data-ttu-id="af65f-130">Im folgenden Beispiel `b` ist eine `Byte` Variable.</span><span class="sxs-lookup"><span data-stu-id="af65f-130">In the following example, `b` is a `Byte` variable.</span></span> <span data-ttu-id="af65f-131">Die Anweisungen veranschaulichen den Bereich der Variablen und die Anwendung Bitschiebeoperatoren darauf.</span><span class="sxs-lookup"><span data-stu-id="af65f-131">The statements demonstrate the range of the variable and the application of bit-shift operators to it.</span></span>
+
+[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+
+## <a name="see-also"></a><span data-ttu-id="af65f-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af65f-132">See Also</span></span>
+
+ <xref:System.Byte?displayProperty=nameWithType>  
+ [<span data-ttu-id="af65f-133">Datentypen</span><span class="sxs-lookup"><span data-stu-id="af65f-133">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="af65f-134">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="af65f-134">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="af65f-135">Konvertierung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="af65f-135">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="af65f-136">Effiziente Verwendung von Datentypen</span><span class="sxs-lookup"><span data-stu-id="af65f-136">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

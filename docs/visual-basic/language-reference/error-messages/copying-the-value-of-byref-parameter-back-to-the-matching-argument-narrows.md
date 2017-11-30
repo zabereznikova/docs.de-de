@@ -1,69 +1,51 @@
 ---
-title: "Kopieren des Wertes des ByRef-Parameters &quot;&lt;Parametername&gt;&quot;wieder in das entsprechende Argument führt zu einer Einschränkung vom Typ&quot;&lt;&quot;Typname1&quot;&gt;&quot; in Typ&quot;&lt;typename2&gt;&quot; | Microsoft-Dokumentation"
-ms.date: 2015-07-20
+title: Kopieren den Wert des &#39; ByRef &#39; Parameter &#39; &lt;Parametername&gt;&#39; wieder an das entsprechende Argument eingegrenzt vom Typ &#39;&lt; Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39;
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32053
 - vbc32053
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC32053
+helpviewer_keywords: BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 84574006b2e2ccc669fdd83ebfb6eec06b00f041
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Kopieren des Wertes des ByRef-Parameters '&lt;Parametername&gt;'wieder in das entsprechende Argument führt zu einer Einschränkung vom Typ'&lt;"Typname1"&gt;' in Typ'&lt;typename2&gt;'
-Eine Prozedur wird mit einem Argument, das in den entsprechenden Parametertyp erweitert wird aufgerufen, und die Konvertierung vom Parameter in das Argument führt zu einer Einschränkung.  
+# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a><span data-ttu-id="7eabe-102">Kopieren den Wert des &#39; ByRef &#39; Parameter &#39; &lt;Parametername&gt;&#39; wieder an das entsprechende Argument eingegrenzt vom Typ &#39;&lt; Typname1&gt;&#39; Eingabe &#39;&lt; Typname2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="7eabe-102">Copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument narrows from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39;</span></span>
+<span data-ttu-id="7eabe-103">Eine Prozedur wird aufgerufen, mit der ein Argument, das auf den entsprechenden Parametertyp erweitert, und die Konvertierung aus dem Parameter an das Argument einschränkend.</span><span class="sxs-lookup"><span data-stu-id="7eabe-103">A procedure is called with an argument that widens to the corresponding parameter type, and the conversion from the parameter to the argument is narrowing.</span></span>  
   
- Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren zum Konvertieren dieses Klassen- oder Strukturtyps in andere Typen definieren. Sie können auch Operatoren für die umgekehrte Konvertierung definieren, um dieser anderen Typen zurück in den Klassen- oder Strukturtyp zu konvertieren. Wenn Sie die Klasse oder Struktur in einem Prozeduraufruf verwenden [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] können mithilfe dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.  
+ <span data-ttu-id="7eabe-104">Wenn Sie eine Klasse oder Struktur definieren, können Sie einen oder mehrere Konvertierungsoperatoren zum Konvertieren dieses Klassen- oder Strukturtyps in andere Typen definieren.</span><span class="sxs-lookup"><span data-stu-id="7eabe-104">When you define a class or structure, you can define one or more conversion operators to convert that class or structure type to other types.</span></span> <span data-ttu-id="7eabe-105">Sie können auch Operatoren für die umgekehrte Konvertierung definieren, um dieser anderen Typen zurück in den Klassen- oder Strukturtyp zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="7eabe-105">You can also define reverse conversion operators to convert those other types back to your class or structure type.</span></span> <span data-ttu-id="7eabe-106">Wenn Sie den Klassen- oder Strukturtyp in einem Prozeduraufruf verwenden, kann [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mithilfe dieser Konvertierungsoperatoren den Typ eines Arguments in den Typ des entsprechenden Parameters konvertieren.</span><span class="sxs-lookup"><span data-stu-id="7eabe-106">When you use your class or structure type in a procedure call, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can use these conversion operators to convert the type of an argument to the type of its corresponding parameter.</span></span>  
   
- Wenn Sie das Argument übergeben [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] kopiert zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben. In diesem Fall gibt die Prozedur [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] müssen den Wert der lokalen Variablen in das Argument im aufrufenden Code kopieren.  
+ <span data-ttu-id="7eabe-107">Wenn das Argument zu übergeben [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kopiert zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="7eabe-107">If you pass the argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sometimes copies the argument value into a local variable in the procedure instead of passing a reference.</span></span> <span data-ttu-id="7eabe-108">In diesem Fall muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nach Abschluss der Prozedur den Wert der lokalen Variablen zurück in das Argument im aufrufenden Code kopieren.</span><span class="sxs-lookup"><span data-stu-id="7eabe-108">In such a case, when the procedure returns, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must then copy the local variable value back into the argument in the calling code.</span></span>  
   
- Wenn ein `ByRef` -Argumentwert in die Prozedur kopiert wird und das Argument und der Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich. Wenn die Typen unterschiedlich sind, aber [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] müssen in beide Richtungen konvertieren. Wenn der Typ den Typ Klasse oder Struktur ist [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] müssen sie umwandeln, um sowohl vom anderen Typ. Wenn eine dieser Konvertierungen erweiternde ist, kann die umgekehrte Konvertierung einschränken.  
+ <span data-ttu-id="7eabe-109">Wenn ein `ByRef` -Argumentwert in die Prozedur kopiert wird und das Argument und der Parameter denselben Typ aufweisen, ist keine Konvertierung erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7eabe-109">If a `ByRef` argument value is copied into the procedure and the argument and parameter are of the same type, no conversion is necessary.</span></span> <span data-ttu-id="7eabe-110">Wenn hingegen die Typen unterschiedlich sind, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] die Konvertierung in beide Richtungen ausführen.</span><span class="sxs-lookup"><span data-stu-id="7eabe-110">But if the types are different, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must convert in both directions.</span></span> <span data-ttu-id="7eabe-111">Wenn einer der Typen Ihr Klassen- oder Strukturtyp ist, muss [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ihn sowohl in den als auch aus dem anderen Typ konvertieren.</span><span class="sxs-lookup"><span data-stu-id="7eabe-111">If one of the types is your class or structure type, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must convert it both to and from the other type.</span></span> <span data-ttu-id="7eabe-112">Wenn einer dieser Konvertierungen eine erweiternde Konvertierung handelt, kann die umgekehrte Konvertierung einschränkend.</span><span class="sxs-lookup"><span data-stu-id="7eabe-112">If one of these conversions is widening, the reverse conversion might be narrowing.</span></span>  
   
- **Fehler-ID:** BC32053  
+ <span data-ttu-id="7eabe-113">**Fehler-ID:** BC32053</span><span class="sxs-lookup"><span data-stu-id="7eabe-113">**Error ID:** BC32053</span></span>  
   
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7eabe-114">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="7eabe-114">To correct this error</span></span>  
   
--   Verwenden Sie nach Möglichkeit ein aufrufendes Argument vom gleichen Typ wie der Prozedurparameter also [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] muss nicht Konvertierung ausführen.  
+-   <span data-ttu-id="7eabe-115">Verwenden Sie nach Möglichkeit ein aufrufendes Argument, das denselben Typ aufweist wie der Prozedurparameter, sodass [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] keine Konvertierung ausführen muss.</span><span class="sxs-lookup"><span data-stu-id="7eabe-115">If possible, use a calling argument of the same type as the procedure parameter, so [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] does not need to do any conversion.</span></span>  
   
--   Wenn Sie die Prozedur mit einem Argument aufrufen müssen anderen vom Parametertyp müssen jedoch nicht in das aufrufende Argument kein Wert zurückgegeben, definieren Sie den Parameter als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anstelle von `ByRef`.  
+-   <span data-ttu-id="7eabe-116">Wenn Sie die Prozedur mit einem Argument aufrufen müssen, Typ sich vom Parametertyp unterscheidet, jedoch müssen nicht in das aufrufende Argument einen Wert zurückgeben, definieren Sie den Parameter als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anstelle von `ByRef`.</span><span class="sxs-lookup"><span data-stu-id="7eabe-116">If you need to call the procedure with an argument type different from the parameter type but do not need to return a value into the calling argument, define the parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) instead of `ByRef`.</span></span>  
   
--   Wenn in das aufrufende Argument ein Wert zurückgegeben werden sollen, definieren Sie den Operator für die umgekehrte Konvertierung als [Widening](../../../visual-basic/language-reference/modifiers/widening.md), sofern dies möglich.  
+-   <span data-ttu-id="7eabe-117">Wenn einen Wert in das aufrufende Argument zurückgegeben werden müssen, definieren Sie den Operator für die umgekehrte Konvertierung als [Widening](../../../visual-basic/language-reference/modifiers/widening.md), sofern dies möglich.</span><span class="sxs-lookup"><span data-stu-id="7eabe-117">If you need to return a value into the calling argument, define the reverse conversion operator as [Widening](../../../visual-basic/language-reference/modifiers/widening.md), if possible.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Prozedurparameter und Argumente](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Gewusst wie: Definieren eines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Gewusst wie: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Typumwandlungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Erweiternde und eingrenzende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="7eabe-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7eabe-118">See Also</span></span>  
+ [<span data-ttu-id="7eabe-119">Verfahren</span><span class="sxs-lookup"><span data-stu-id="7eabe-119">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="7eabe-120">Parameter und Argumente von Prozeduren</span><span class="sxs-lookup"><span data-stu-id="7eabe-120">Procedure Parameters and Arguments</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="7eabe-121">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="7eabe-121">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="7eabe-122">Operatorprozeduren</span><span class="sxs-lookup"><span data-stu-id="7eabe-122">Operator Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [<span data-ttu-id="7eabe-123">Operator-Anweisung</span><span class="sxs-lookup"><span data-stu-id="7eabe-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="7eabe-124">Gewusst wie: Definieren eines Operators</span><span class="sxs-lookup"><span data-stu-id="7eabe-124">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [<span data-ttu-id="7eabe-125">Gewusst wie: Definieren eines Konvertierungsoperators</span><span class="sxs-lookup"><span data-stu-id="7eabe-125">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="7eabe-126">Konvertierungen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7eabe-126">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="7eabe-127">Erweiternde und eingrenzende Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="7eabe-127">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

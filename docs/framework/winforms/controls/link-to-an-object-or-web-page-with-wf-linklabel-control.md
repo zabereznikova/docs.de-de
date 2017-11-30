@@ -1,49 +1,53 @@
 ---
-title: "Gewusst wie: Verkn&#252;pfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Beispiele [Windows Forms], LinkLabel-Steuerelement"
-  - "Verknüpfen, Für andere Formulare"
-  - "LinkLabel-Steuerelement [Windows Forms], Beispiele"
-  - "LinkLabel-Steuerelement [Windows Forms], Verknüpfen mit Objekt oder Webseite"
-  - "Verknüpfungen, Für andere Formulare"
-  - "Link-Steuerelement für Webseiten"
-  - "Windows Forms, Verknüpfen mit Objekten"
-  - "Windows Forms, Verknüpfen mit Webseiten"
+title: "Gewusst wie: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Windows Forms, linking to objects
+- Web page link control
+- linking [Windows Forms], to other forms
+- Windows Forms, linking to Web pages
+- links [Windows Forms], to other forms
+- LinkLabel control [Windows Forms], linking to object or Web page
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verkn&#252;pfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows&#160;Forms
-Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms können Sie in einem Formular Webhyperlinks erstellen.  Die Farbe des Links kann, nachdem darauf geklickt wurde, geändert werden, um zu signalisieren, dass er bereits besucht wurde.  Weitere Informationen über das Ändern der Farbe finden Sie unter [Gewusst wie: Ändern der Darstellung des LinkLabel\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a><span data-ttu-id="45cfe-102">Gewusst wie: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="45cfe-102">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="45cfe-103">Windows Forms <xref:System.Windows.Forms.LinkLabel> Steuerelement können Sie Weblinks in einem Formular zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="45cfe-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to create Web-style links on your form.</span></span> <span data-ttu-id="45cfe-104">Wenn auf der Link geklickt wird, können Sie ändern die Farbe, um anzugeben, dass der Link aktiviert wurde.</span><span class="sxs-lookup"><span data-stu-id="45cfe-104">When the link is clicked, you can change its color to indicate the link has been visited.</span></span> <span data-ttu-id="45cfe-105">Weitere Informationen zum Ändern der Farbe finden Sie unter [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span><span class="sxs-lookup"><span data-stu-id="45cfe-105">For more information on changing the color, see [How to: Change the Appearance of the Windows Forms LinkLabel Control](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span></span>  
   
-## Verknüpfen mit einem anderen Formular  
+## <a name="linking-to-another-form"></a><span data-ttu-id="45cfe-106">Verknüpfen mit einer anderen Form</span><span class="sxs-lookup"><span data-stu-id="45cfe-106">Linking to Another Form</span></span>  
   
-#### So stellen Sie mit einem LinkLabel\-Steuerelement einen Link mit einem anderen Steuerelement her  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a><span data-ttu-id="45cfe-107">So verknüpfen Sie mit einer anderen Form mit einem LinkLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="45cfe-107">To link to another form with a LinkLabel control</span></span>  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.LinkLabel.Text%2A>\-Eigenschaft eine geeignete Beschriftung fest.  
+1.  <span data-ttu-id="45cfe-108">Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft, um eine geeignete Beschriftung.</span><span class="sxs-lookup"><span data-stu-id="45cfe-108">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  Definieren Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>\-Eigenschaft, um festzulegen, welcher Teil der Beschriftung als Link gekennzeichnet wird.  Wie der Link gekennzeichnet wird, hängt von den Darstellungseigenschaften der Linkbezeichnung ab.  Der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>\-Wert wird durch ein <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>\-Objekt mit zwei Zahlen dargestellt. Diese stehen für die Position des ersten Zeichens und die Anzahl der Zeichen.  Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>\-Eigenschaft kann im Eigenschaftenfenster oder in Code ähnlich wie folgt festgelegt werden:  
+2.  <span data-ttu-id="45cfe-109">Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft können Sie bestimmen, welcher Teil der Beschriftung als Link gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="45cfe-109">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span> <span data-ttu-id="45cfe-110">Wie es angegeben wird, hängt die Darstellungseigenschaften der Beschriftung für den Link ab.</span><span class="sxs-lookup"><span data-stu-id="45cfe-110">How it is indicated depends on the appearance-related properties of the link label.</span></span> <span data-ttu-id="45cfe-111">Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> dargestellte Wert ein <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Objekt, das zwei Zahlen, die Anfangsposition und die Anzahl der Zeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="45cfe-111">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented by a <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> object containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="45cfe-112">Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft kann festgelegt werden, im Eigenschaftenfenster oder im Code ähnlich dem folgenden:</span><span class="sxs-lookup"><span data-stu-id="45cfe-112">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property can be set in the Properties window or in code in a manner similar to the following:</span></span>  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
     ' at the first character and extend for eight characters.  
     ' You may need to modify this based on the text entered in Step 1.  
     LinkLabel1.LinkArea = New LinkArea(0, 8)  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
     // at the first character and extend for eight characters.  
     // You may need to modify this based on the text entered in Step 1.  
     linkLabel1.LinkArea = new LinkArea(0,8);  
-  
     ```  
   
     ```cpp  
@@ -61,10 +64,10 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  Rufen Sie im <xref:System.Windows.Forms.LinkLabel.LinkClicked>\-Ereignishandler die <xref:System.Windows.Forms.Form.Show%2A>\-Methode auf, um ein weiteres Formular im Projekt zu öffnen, und legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>\-Eigenschaft auf `true` fest.  
+3.  <span data-ttu-id="45cfe-113">In der <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignishandler, d. h. Aufrufen der <xref:System.Windows.Forms.Form.Show%2A> Methode, um eine andere Form im Projekt öffnen, und legen die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="45cfe-113">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, invoke the <xref:System.Windows.Forms.Form.Show%2A> method to open another form in the project, and set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
     > [!NOTE]
-    >  Eine Instanz der <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>\-Klasse enthält einen Verweis auf das <xref:System.Windows.Forms.LinkLabel>\-Steuerelement, auf das geklickt wurde, sodass eine Umwandlung des `sender` \-Objekts nicht erforderlich ist.  
+    >  <span data-ttu-id="45cfe-114">Eine Instanz von der <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> Klasse übergibt einen Verweis auf die <xref:System.Windows.Forms.LinkLabel> Steuerelement, das auf die geklickt wurde, keine Notwendigkeit besteht, umgewandelt, die `sender` Objekt.</span><span class="sxs-lookup"><span data-stu-id="45cfe-114">An instance of the <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> class carries a reference to the <xref:System.Windows.Forms.LinkLabel> control that was clicked, so there is no need to cast the `sender` object.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -75,7 +78,6 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        f2.Show  
        LinkLabel1.LinkVisited = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -86,7 +88,6 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        f2.Show();  
        linkLabel1.LinkVisited = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -101,19 +102,19 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        }  
     ```  
   
-## Verknüpfen zu einer Webseite  
- Darüber hinaus kann mithilfe des <xref:System.Windows.Forms.LinkLabel>\-Steuerelements eine Webseite in einem Standardbrowser angezeigt werden.  
+## <a name="linking-to-a-web-page"></a><span data-ttu-id="45cfe-115">Verknüpfen mit einer Webseite</span><span class="sxs-lookup"><span data-stu-id="45cfe-115">Linking to a Web Page</span></span>  
+ <span data-ttu-id="45cfe-116">Die <xref:System.Windows.Forms.LinkLabel> -Steuerelement kann auch verwendet werden, um eine Webseite mit den Standardbrowser anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="45cfe-116">The <xref:System.Windows.Forms.LinkLabel> control can also be used to display a Web page with the default browser.</span></span>  
   
-#### So starten Sie Internet Explorer und stellen einen Link mit einer Webseite mit einem LinkLabel\-Steuerelement her  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a><span data-ttu-id="45cfe-117">Starten Sie Internet Explorer und Link zu einer Webseite mit einem LinkLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="45cfe-117">To start Internet Explorer and link to a Web page with a LinkLabel control</span></span>  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.LinkLabel.Text%2A>\-Eigenschaft eine geeignete Beschriftung fest.  
+1.  <span data-ttu-id="45cfe-118">Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft, um eine geeignete Beschriftung.</span><span class="sxs-lookup"><span data-stu-id="45cfe-118">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  Definieren Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>\-Eigenschaft, um festzulegen, welcher Teil der Beschriftung als Link gekennzeichnet wird.  
+2.  <span data-ttu-id="45cfe-119">Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft können Sie bestimmen, welcher Teil der Beschriftung als Link gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="45cfe-119">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-3.  Rufen Sie im <xref:System.Windows.Forms.LinkLabel.LinkClicked>\-Ereignishandler in einem Ausnahmebehandlungsblock eine zweite Prozedur auf, die für die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>\-Eigenschaft `true` festlegt und die <xref:System.Diagnostics.Process.Start%2A>\-Methode verwendet, um den Standardbrowser mit einer URL zu starten.  Um die <xref:System.Diagnostics.Process.Start%2A>\-Methode zu verwenden, müssen Sie einen Verweis auf den <xref:System.Diagnostics?displayProperty=fullName>\-Namespace hinzufügen.  
+3.  <span data-ttu-id="45cfe-120">In der <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignishandler, d. h. in einen Ausnahmebehandlungsblock rufen Sie eine zweite Prozedur, der festlegt der <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft `true` und verwendet die <xref:System.Diagnostics.Process.Start%2A> Methode, um den Standardbrowser mit einer URL zu starten.</span><span class="sxs-lookup"><span data-stu-id="45cfe-120">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, in the midst of an exception-handling block, call a second procedure that sets the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true` and uses the <xref:System.Diagnostics.Process.Start%2A> method to start the default browser with a URL.</span></span> <span data-ttu-id="45cfe-121">Verwenden der <xref:System.Diagnostics.Process.Start%2A> Methode Sie einen Verweis zum hinzufügen müssen der <xref:System.Diagnostics?displayProperty=nameWithType> Namespace.</span><span class="sxs-lookup"><span data-stu-id="45cfe-121">To use the <xref:System.Diagnostics.Process.Start%2A> method you need to add a reference to the <xref:System.Diagnostics?displayProperty=nameWithType> namespace.</span></span>  
   
     > [!IMPORTANT]
-    >  Wenn der unten stehende Code in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird \(z. B. auf einem freigegebenen Laufwerk\), schlägt die Umwandlung durch den JIT\-Compiler fehl, wenn die `VisitLink`\-Methode aufgerufen wird.  Die Anweisung`System.Diagnostics.Process.Start` verursacht einen Linkaufruf, der fehlschlägt.  Bei einem Fehlschlag des JIT\-Compilers stellt der unten stehende Code die erfolgreiche Behandlung des Fehlers sicher, indem die Ausnahme abgefangen wird, wenn die `VisitLink`\-Methode aufgerufen wird.  
+    >  <span data-ttu-id="45cfe-122">Wenn Sie der folgenden Code in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird (z. B. auf einem freigegebenen Laufwerk), schlägt fehl, wenn der JIT-Compiler die `VisitLink` Methode wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="45cfe-122">If the code below is run in a partial-trust environment (such as on a shared drive), the JIT compiler fails when the `VisitLink` method is called.</span></span> <span data-ttu-id="45cfe-123">Die `System.Diagnostics.Process.Start` Anweisung bewirkt, dass einen Linkaufruf, der ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="45cfe-123">The `System.Diagnostics.Process.Start` statement causes a link demand that fails.</span></span> <span data-ttu-id="45cfe-124">Indem Sie Sie Abfangen der Ausnahme bei der `VisitLink` -Methode aufgerufen wird, der folgenden Code wird sichergestellt, dass der JIT-Compiler ein Fehler auftritt, der Fehler ordnungsgemäß behandelt wird.</span><span class="sxs-lookup"><span data-stu-id="45cfe-124">By catching the exception when the `VisitLink` method is called, the code below ensures that if the JIT compiler fails, the error is handled gracefully.</span></span>  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -135,7 +136,6 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        ' with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -160,7 +160,6 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        //with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com");  
     }  
-  
     ```  
   
     ```cpp  
@@ -189,8 +188,8 @@ Mit dem <xref:System.Windows.Forms.LinkLabel>\-Steuerelement in Windows Forms k
        }  
     ```  
   
-## Siehe auch  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName>   
- [Übersicht über das LinkLabel\-Steuerelement](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)   
- [Gewusst wie: Ändern der Darstellung des LinkLabel\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)   
- [LinkLabel\-Steuerelement](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="45cfe-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45cfe-125">See Also</span></span>  
+ <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="45cfe-126">Übersicht über das LinkLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="45cfe-126">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="45cfe-127">Gewusst wie: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="45cfe-127">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ [<span data-ttu-id="45cfe-128">LinkLabel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="45cfe-128">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

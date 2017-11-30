@@ -1,57 +1,60 @@
 ---
-title: "Gewusst wie: Festlegen und Zur&#252;ckgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datumsangaben, Festlegen in DateTimePicker"
-  - "DateTimePicker-Steuerelement [Windows Forms], Festlegen und Zurückgeben von Datumsangaben"
-  - "Beispiele [Windows Forms], DateTimePicker-Steuerelement"
+title: "Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- dates [Windows Forms], setting in DateTimePicker
+- DateTimePicker control [Windows Forms], setting and returning dates
+- examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4df12d196c02b1d868d395a10ca17abafaa0fb9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen und Zur&#252;ckgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows&#160;Forms
-Die aktuell im <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement von Windows Forms ausgewählte Datumsangabe \(Datum und Uhrzeit\) ist durch die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft bestimmt.  Sie können die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft festlegen, bevor das Steuerelement angezeigt wird \(z. B. zur Entwurfszeit oder im <xref:System.Windows.Forms.Form.Load>\-Ereignis des Formulars\), um zu bestimmen, welches Datum zunächst im Steuerelement ausgewählt ist.  Standardmäßig wird die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft des Steuerelements auf das aktuelle Datum festgelegt.  Wenn Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft des Steuerelements im Code ändern, wird das Steuerelement auf dem Formular automatisch entsprechend der neuen Einstellung aktualisiert.  
+# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a><span data-ttu-id="f7eda-102">Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f7eda-102">How to: Set and Return Dates with the Windows Forms DateTimePicker Control</span></span>
+<span data-ttu-id="f7eda-103">Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Windows Forms ausgewählte Datumsangabe (Datum und Uhrzeit) ist durch die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft bestimmt.</span><span class="sxs-lookup"><span data-stu-id="f7eda-103">The currently selected date or time in the Windows Forms <xref:System.Windows.Forms.DateTimePicker> control is determined by the <xref:System.Windows.Forms.DateTimePicker.Value%2A> property.</span></span> <span data-ttu-id="f7eda-104">Sie können die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft festlegen, bevor das Steuerelement angezeigt wird (z. B. zur Entwurfszeit oder im <xref:System.Windows.Forms.Form.Load>-Ereignis des Formulars), um zu bestimmen, welches Datum zunächst im Steuerelement ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="f7eda-104">You can set the <xref:System.Windows.Forms.DateTimePicker.Value%2A> property before the control is displayed (for example, at design time or in the form's <xref:System.Windows.Forms.Form.Load> event) to determine which date will be initially selected in the control.</span></span> <span data-ttu-id="f7eda-105">Standardmäßig wird die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements auf das aktuelle Datum festgelegt.</span><span class="sxs-lookup"><span data-stu-id="f7eda-105">By default, the control's <xref:System.Windows.Forms.DateTimePicker.Value%2A> is set to the current date.</span></span> <span data-ttu-id="f7eda-106">Wenn Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements im Code ändern, wird das Steuerelement auf dem Formular automatisch entsprechend der neuen Einstellung aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="f7eda-106">If you change the control's <xref:System.Windows.Forms.DateTimePicker.Value%2A> in code, the control is automatically updated on the form to reflect the new setting.</span></span>  
   
- Die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft gibt eine <xref:System.DateTime>\-Struktur als ihren Wert zurück.  Es gibt verschiedene Eigenschaften der <xref:System.DateTime>\-Struktur, die bestimmte Informationen zum angezeigten Datum zurückgeben.  Mit diesen Eigenschaften können Werte nur zurückgegeben, aber nicht festgelegt werden.  
+ <span data-ttu-id="f7eda-107">Die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft gibt eine <xref:System.DateTime>-Struktur als ihren Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="f7eda-107">The <xref:System.Windows.Forms.DateTimePicker.Value%2A> property returns a <xref:System.DateTime> structure as its value.</span></span> <span data-ttu-id="f7eda-108">Es gibt verschiedene Eigenschaften der <xref:System.DateTime>-Struktur, die bestimmte Informationen zum angezeigten Datum zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="f7eda-108">There are several properties of the <xref:System.DateTime> structure that return specific information about the displayed date.</span></span> <span data-ttu-id="f7eda-109">Mit diesen Eigenschaften können Werte nur zurückgegeben, aber nicht festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="f7eda-109">These properties can only be used to return a value; do not use them to set a value.</span></span>  
   
--   Für Datumswerte geben die Eigenschaften <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> und <xref:System.DateTime.Year%2A> Ganzzahlwerte für diese Zeiteinheiten des ausgewählten Datums zurück.  Die <xref:System.DateTime.DayOfWeek%2A>\-Eigenschaft gibt einen Wert zurück, der den ausgewählten Wochentag angibt \(mögliche Werte sind in der <xref:System.DayOfWeek>\-Enumeration aufgelistet\).  
+-   <span data-ttu-id="f7eda-110">Für Datumswerte geben die Eigenschaften <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> und <xref:System.DateTime.Year%2A> Ganzzahlwerte für diese Zeiteinheiten des ausgewählten Datums zurück.</span><span class="sxs-lookup"><span data-stu-id="f7eda-110">For date values, the <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A>, and <xref:System.DateTime.Year%2A> properties return integer values for those time units of the selected date.</span></span> <span data-ttu-id="f7eda-111">Die <xref:System.DateTime.DayOfWeek%2A>-Eigenschaft gibt einen Wert zurück, der den ausgewählten Wochentag angibt (mögliche Werte sind in der <xref:System.DayOfWeek>-Enumeration aufgelistet).</span><span class="sxs-lookup"><span data-stu-id="f7eda-111">The <xref:System.DateTime.DayOfWeek%2A> property returns a value indicating the selected day of the week (possible values are listed in the <xref:System.DayOfWeek> enumeration).</span></span>  
   
--   Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück.  Informationen, wie das Steuerelement zu konfigurieren ist, damit es Uhrzeiten anzeigt, finden Sie unter [Gewusst wie: Anzeigen der Zeit mithilfe des DateTimePicker\-Steuerelements](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+-   <span data-ttu-id="f7eda-112">Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück.</span><span class="sxs-lookup"><span data-stu-id="f7eda-112">For time values, the <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A>, and <xref:System.DateTime.Millisecond%2A> properties return integer values for those time units.</span></span> <span data-ttu-id="f7eda-113">So konfigurieren das Steuerelement, um anzuzeigen, finden Sie unter [Vorgehensweise: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="f7eda-113">To configure the control to display times, see [How to: Display Time with the DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span></span>  
   
-### So legen Sie das Datum und die Uhrzeit für das Steuerelement fest  
+### <a name="to-set-the-date-and-time-value-of-the-control"></a><span data-ttu-id="f7eda-114">So legen Sie das Datum und die Uhrzeit für das Steuerelement fest</span><span class="sxs-lookup"><span data-stu-id="f7eda-114">To set the date and time value of the control</span></span>  
   
--   Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft auf einen Datums\- oder Uhrzeitwert fest.  
+-   <span data-ttu-id="f7eda-115">Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft auf einen Datums- oder Uhrzeitwert fest.</span><span class="sxs-lookup"><span data-stu-id="f7eda-115">Set the <xref:System.Windows.Forms.DateTimePicker.Value%2A> property to a date or time value.</span></span>  
   
     ```vb  
     DateTimePicker1.Value = New DateTime(2001, 10, 20)  
-  
     ```  
   
     ```csharp  
     dateTimePicker1.Value = new DateTime(2001, 10, 20);  
-  
     ```  
   
     ```cpp  
     dateTimePicker1->Value = DateTime(2001, 10, 20);  
     ```  
   
-### So geben Sie den Datums\- und den Uhrzeitwert zurück  
+### <a name="to-return-the-date-and-time-value"></a><span data-ttu-id="f7eda-116">So geben Sie den Datums- und den Uhrzeitwert zurück</span><span class="sxs-lookup"><span data-stu-id="f7eda-116">To return the date and time value</span></span>  
   
--   Rufen Sie die <xref:System.Windows.Forms.DateTimePicker.Text%2A>\-Eigenschaft auf, um den gesamten Wert so zurückzugeben, wie er im Steuerelement formatiert ist, oder rufen Sie die entsprechende Methode der <xref:System.Windows.Forms.DateTimePicker.Value%2A>\-Eigenschaft auf, um einen Teil des Werts zurückzugeben  Verwenden Sie <xref:System.Windows.Forms.DateTimePicker.ToString%2A>, um die Informationen in eine Zeichenfolge zu konvertieren, die Benutzern angezeigt werden kann.  
+-   <span data-ttu-id="f7eda-117">Rufen Sie die <xref:System.Windows.Forms.DateTimePicker.Text%2A>-Eigenschaft auf, um den gesamten Wert so zurückzugeben, wie er im Steuerelement formatiert ist, oder rufen Sie die entsprechende Methode der <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft auf, um einen Teil des Werts zurückzugeben</span><span class="sxs-lookup"><span data-stu-id="f7eda-117">Call the <xref:System.Windows.Forms.DateTimePicker.Text%2A> property to return the entire value as formatted in the control, or call the appropriate method of the <xref:System.Windows.Forms.DateTimePicker.Value%2A> property to return a part of the value.</span></span> <span data-ttu-id="f7eda-118">Verwenden Sie <xref:System.Windows.Forms.DateTimePicker.ToString%2A>, um die Informationen in eine Zeichenfolge zu konvertieren, die Benutzern angezeigt werden kann.</span><span class="sxs-lookup"><span data-stu-id="f7eda-118">Use <xref:System.Windows.Forms.DateTimePicker.ToString%2A> to convert the information into a string that can be displayed to the user.</span></span>  
   
     ```vb  
     MessageBox.Show("The selected value is ", DateTimePicker1.Text)  
@@ -59,7 +62,6 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement von Win
        DateTimePicker1.Value.DayOfWeek.ToString)  
     MessageBox.Show("Millisecond is: ",   
        DateTimePicker1.Value.Millisecond.ToString)  
-  
     ```  
   
     ```csharp  
@@ -69,7 +71,6 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement von Win
        dateTimePicker1.Value.DayOfWeek.ToString());  
     MessageBox.Show("Millisecond is: " +   
        dateTimePicker1.Value.Millisecond.ToString());  
-  
     ```  
   
     ```cpp  
@@ -81,6 +82,6 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>\-Steuerelement von Win
        dateTimePicker1->Value.Millisecond.ToString()));  
     ```  
   
-## Siehe auch  
- [DateTimePicker\-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)   
- [Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+## <a name="see-also"></a><span data-ttu-id="f7eda-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7eda-119">See Also</span></span>  
+ [<span data-ttu-id="f7eda-120">DateTimePicker-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f7eda-120">DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [<span data-ttu-id="f7eda-121">Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f7eda-121">How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

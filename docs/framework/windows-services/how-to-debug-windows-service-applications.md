@@ -1,89 +1,92 @@
 ---
-title: "How to: Debug Windows Service Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "debugging Windows Service applications"
-  - "debugging [Visual Studio], Windows services"
-  - "Windows NT services, debugging"
-  - "Windows Service applications, debugging"
-  - "services, debugging"
+title: 'Gewusst wie: Debuggen von Windows-Dienstanwendungen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging Windows Service applications
+- debugging [Visual Studio], Windows services
+- Windows NT services, debugging
+- Windows Service applications, debugging
+- services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-caps.latest.revision: 16
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Debug Windows Service Applications
-Ein Dienst muss im Kontext des Dienststeuerelement\-Managers und nicht innerhalb von Visual Studio ausgeführt werden.  Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio.  Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird.  Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  
+# <a name="how-to-debug-windows-service-applications"></a><span data-ttu-id="ad8d3-102">Gewusst wie: Debuggen von Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="ad8d3-102">How to: Debug Windows Service Applications</span></span>
+<span data-ttu-id="ad8d3-103">Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-103">A service must be run from within the context of the Services Control Manager rather than from within Visual Studio.</span></span> <span data-ttu-id="ad8d3-104">Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-104">For this reason, debugging a service is not as straightforward as debugging other Visual Studio application types.</span></span> <span data-ttu-id="ad8d3-105">Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-105">To debug a service, you must start the service and then attach a debugger to the process in which it is running.</span></span> <span data-ttu-id="ad8d3-106">Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-106">You can then debug your application by using all of the standard debugging functionality of Visual Studio.</span></span>  
   
 > [!CAUTION]
->  Das Anhängen darf nur bei bekannten Prozessen durchgeführt werden. Außerdem müssen die Konsequenzen bekannt sein, wenn an den Prozess angehängt wird und dieser u. U. abgebrochen wird.  Wenn z. B. an den WinLogon\-Prozess angehängt und anschließend das Debuggen beendet wird, hält das System an, weil es ohne WinLogon nicht lauffähig ist.  
+>  <span data-ttu-id="ad8d3-107">Das Anhängen darf nur bei bekannten Prozessen durchgeführt werden. Außerdem müssen die Konsequenzen bekannt sein, wenn an den Prozess angehängt wird und dieser u. U. abgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-107">You should not attach to a process unless you know what the process is and understand the consequences of attaching to and possibly killing that process.</span></span> <span data-ttu-id="ad8d3-108">Wenn z. B. an den WinLogon-Prozess angehängt und anschließend das Debuggen beendet wird, hält das System an, weil es ohne WinLogon nicht lauffähig ist.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-108">For example, if you attach to the WinLogon process and then stop debugging, the system will halt because it can’t operate without WinLogon.</span></span>  
   
- Ein Debugger kann nur an einen Dienst angehängt werden, der ausgeführt wird.  Durch den Vorgang des Anhängens wird die aktuelle Funktion des Diensts unterbrochen. Die Verarbeitung des Diensts wird nicht tatsächlich beendet oder angehalten.  Das bedeutet: Wenn mit dem Debuggen eines Diensts begonnen wird, während er ausgeführt wird, befindet er sich während des Debuggens technisch gesehen weiterhin im Status Gestartet. Die Verarbeitung ist jedoch unterbrochen worden.  
+ <span data-ttu-id="ad8d3-109">Ein Debugger kann nur an einen Dienst angehängt werden, der ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-109">You can attach the debugger only to a running service.</span></span> <span data-ttu-id="ad8d3-110">Durch den Vorgang des Anhängens wird die aktuelle Funktion des Diensts unterbrochen. Die Verarbeitung des Diensts wird nicht tatsächlich beendet oder angehalten.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-110">The attachment process interrupts the current functioning of your service; it doesn’t actually stop or pause the service's processing.</span></span> <span data-ttu-id="ad8d3-111">Das bedeutet: Wenn mit dem Debuggen eines Diensts begonnen wird, während er ausgeführt wird, befindet er sich während des Debuggens technisch gesehen weiterhin im Status Gestartet. Die Verarbeitung ist jedoch unterbrochen worden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-111">That is, if your service is running when you begin debugging, it is still technically in the Started state as you debug it, but its processing has been suspended.</span></span>  
   
- Nach dem Anhängen an den Prozess können Sie Haltepunkte einrichten und diese zum Debuggen des Codes verwenden.  Sobald Sie das zum Anhängen des Prozesses verwendete Dialogfeld verlassen haben, befinden Sie sich im Debugmodus.  Dann kann der Dienst mit dem Dienststeuerungs\-Manager gestartet, beendet, angehalten und fortgesetzt werden, sodass die festgelegten Haltepunkte angesteuert werden.  Nach erfolgreichem Debuggen kann der Dummydienst entfernt werden.  
+ <span data-ttu-id="ad8d3-112">Nach dem Anhängen an den Prozess können Sie Haltepunkte einrichten und diese zum Debuggen des Codes verwenden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-112">After attaching to the process, you can set breakpoints and use these to debug your code.</span></span> <span data-ttu-id="ad8d3-113">Sobald Sie das zum Anhängen des Prozesses verwendete Dialogfeld verlassen haben, befinden Sie sich im Debugmodus.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-113">Once you exit the dialog box you use to attach to the process, you are effectively in debug mode.</span></span> <span data-ttu-id="ad8d3-114">Dann kann der Dienst mit dem Dienststeuerungs-Manager gestartet, beendet, angehalten und fortgesetzt werden, sodass die festgelegten Haltepunkte angesteuert werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-114">You can use the Services Control Manager to start, stop, pause and continue your service, thus hitting the breakpoints you've set.</span></span> <span data-ttu-id="ad8d3-115">Nach erfolgreichem Debuggen kann der Dummydienst entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-115">You can later remove this dummy service after debugging is successful.</span></span>  
   
- Dieser Artikel umfasst das Debuggen eines Dienstes, der auf dem lokalen Computer ausgeführt wird, aber Sie können auch Windows\-Dienste debuggen, die auf einem Remotecomputer ausgeführt werden.  Weitere Informationen finden Sie unter [Remotedebugging](../Topic/Remote%20Debugging.md).  
+ <span data-ttu-id="ad8d3-116">Dieser Artikel umfasst das Debuggen eines Dienstes, der auf dem lokalen Computer ausgeführt wird, aber Sie können auch Windows-Dienste debuggen, die auf einem Remotecomputer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-116">This article covers debugging a service that's running on the local computer, but you can also debug Windows Services that are running on a remote computer.</span></span> <span data-ttu-id="ad8d3-117">Finden Sie unter [Remotedebuggen](/visualstudio/debugger/debug-installed-app-package).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-117">See [Remote Debugging](/visualstudio/debugger/debug-installed-app-package).</span></span>  
   
 > [!NOTE]
->  Das Debuggen der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>\-Methode kann Schwierigkeiten bereiten, da vom Dienststeuerungs\-Manager ein Limit von 30 Sekunden für alle Versuche erzwungen wird, einen Dienst zu starten.  Weitere Informationen finden Sie unter [Troubleshooting: Debugging Windows Services](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+>  <span data-ttu-id="ad8d3-118">Das Debuggen der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode kann Schwierigkeiten bereiten, da vom Dienststeuerungs-Manager ein Limit von 30 Sekunden für alle Versuche erzwungen wird, einen Dienst zu starten.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-118">Debugging the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method can be difficult because the Services Control Manager imposes a 30-second limit on all attempts to start a service.</span></span> <span data-ttu-id="ad8d3-119">Weitere Informationen finden Sie unter [Problembehandlung: Debuggen von Windows-Diensten](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-119">For more information, see [Troubleshooting: Debugging Windows Services](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).</span></span>  
   
 > [!WARNING]
->  Um aussagekräftige Informationen für das Debuggen zu erhalten, muss der Visual Studio\-Debugger Symboldateien für die Binärdateien finden, die gerade gedebuggt werden.  Wenn Sie einen Dienst debuggen, den Sie in Visual Studio erstellt haben, befinden sich die Symboldateien \(PDB\-Dateien\) in demselben Ordner wie die ausführbare Datei oder Bibliothek, und der Debugger lädt diese automatisch.  Wenn Sie einen Dienst debuggen, den Sie erstellt haben, sollten Sie zuerst die Symbole für den Dienst suchen und sicherstellen, dass sie vom Debugger gefunden werden können.  Weitere Informationen finden Sie unter [Angeben von Symbol\(PDB\)\- und Quelldateien](../Topic/Specify%20Symbol%20\(.pdb\)%20and%20Source%20Files%20in%20the%20Visual%20Studio%20Debugger.md).  Wenn Sie einen Systemprozess debuggen oder Symbole für Systemaufrufe in Ihren Diensten haben möchten, sollten Sie die Microsoft\-Symbolserver hinzufügen.  Siehe [Debugging\-Symbole](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).  
+>  <span data-ttu-id="ad8d3-120">Um aussagekräftige Informationen für das Debuggen zu erhalten, muss der Visual Studio-Debugger Symboldateien für die Binärdateien finden, die gerade gedebuggt werden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-120">To get meaningful information for debugging, the Visual Studio debugger needs to find symbol files for the binaries that are being debugged.</span></span> <span data-ttu-id="ad8d3-121">Wenn Sie einen Dienst debuggen, den Sie in Visual Studio erstellt haben, befinden sich die Symboldateien (PDB-Dateien) in demselben Ordner wie die ausführbare Datei oder Bibliothek, und der Debugger lädt diese automatisch.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-121">If you are debugging a service that you built in Visual Studio, the symbol files (.pdb files) are in the same folder as the executable or library, and the debugger loads them automatically.</span></span> <span data-ttu-id="ad8d3-122">Wenn Sie einen Dienst debuggen, den Sie erstellt haben, sollten Sie zuerst die Symbole für den Dienst suchen und sicherstellen, dass sie vom Debugger gefunden werden können.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-122">If you are debugging a service that you didn't build, you should first find symbols for the service and make sure they can be found by the debugger.</span></span> <span data-ttu-id="ad8d3-123">Finden Sie unter [angeben von Symbol(PDB)- und Quelldateien](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-123">See [Specify Symbol (.pdb) and Source Files](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b).</span></span> <span data-ttu-id="ad8d3-124">Wenn Sie einen Systemprozess debuggen oder Symbole für Systemaufrufe in Ihren Diensten haben möchten, sollten Sie die Microsoft-Symbolserver hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-124">If you're debugging a system process or want to have symbols for system calls in your services, you should add the Microsoft Symbol Servers.</span></span> <span data-ttu-id="ad8d3-125">Finden Sie unter [Debugsymbole](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-125">See [Debugging Symbols](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).</span></span>  
   
-### So debuggen Sie einen Dienst  
+### <a name="to-debug-a-service"></a><span data-ttu-id="ad8d3-126">So debuggen Sie einen Dienst</span><span class="sxs-lookup"><span data-stu-id="ad8d3-126">To debug a service</span></span>  
   
-1.  Erstellen Sie Ihren Dienst in der Debugkonfiguration.  
+1.  <span data-ttu-id="ad8d3-127">Erstellen Sie Ihren Dienst in der Debugkonfiguration.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-127">Build your service in the Debug configuration.</span></span>  
   
-2.  Installieren Sie den Dienst.  Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  <span data-ttu-id="ad8d3-128">Installieren Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-128">Install your service.</span></span> <span data-ttu-id="ad8d3-129">Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-129">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
   
-3.  Starten Sie den Dienst entweder mit dem **Dienststeuerungs\-Manager**, mit dem **Server\-Explorer** oder programmgesteuert.  Weitere Informationen finden Sie unter [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md).  
+3.  <span data-ttu-id="ad8d3-130">Starten Sie den Dienst aus **Dienststeuerungs-Manager**, **Server-Explorer**, oder von Code.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-130">Start your service, either from **Services Control Manager**, **Server Explorer**, or from code.</span></span> <span data-ttu-id="ad8d3-131">Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-131">For more information, see [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md).</span></span>  
   
-4.  Starten Sie Visual Studio mit Administratorrechten, damit Sie die Systemprozesse zuordnen können.  
+4.  <span data-ttu-id="ad8d3-132">Starten Sie Visual Studio mit Administratorrechten, damit Sie die Systemprozesse zuordnen können.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-132">Start Visual Studio with administrative credentials so you can attach to system processes.</span></span>  
   
-5.  \(Optional\) Klicken Sie in Visual Studio auf der Menüleiste auf **Extras**, **Optionen**.  Wählen Sie im Dialogfeld **Optionen** **Debuggen**, **Symbole**, aktivieren Sie das Kontrollkästchen **Microsoft\-Symbolserver** und wählen Sie dann die Schaltfläche **OK**.  
+5.  <span data-ttu-id="ad8d3-133">(Optional) Wählen Sie in der Visual Studio-Menüleiste **Tools**, **Optionen**.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-133">(Optional) On the Visual Studio menu bar, choose **Tools**, **Options**.</span></span> <span data-ttu-id="ad8d3-134">In der **Optionen** Dialogfeld Wählen Sie **Debuggen**, **Symbole**, wählen die **Microsoft-Symbolserver** Kontrollkästchen, und wählen Sie dann die **OK** Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-134">In the **Options** dialog box, choose **Debugging**, **Symbols**, select the **Microsoft Symbol Servers** check box, and then choose the **OK** button.</span></span>  
   
-6.  Wählen Sie auf der Menüleiste **An den Prozess anhängen** aus dem Menü **Debuggen** oder **Extras**.  \(Tastatur: Strg \+ Alt \+ P\)  
+6.  <span data-ttu-id="ad8d3-135">Wählen Sie in der Menüleiste **an den Prozess anhängen** aus der **Debuggen** oder **Tools** Menü.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-135">On the menu bar, choose **Attach to Process** from the **Debug** or **Tools** menu.</span></span> <span data-ttu-id="ad8d3-136">(Tastatur: Strg + Alt + P)</span><span class="sxs-lookup"><span data-stu-id="ad8d3-136">(Keyboard: Ctrl+Alt+P)</span></span>  
   
-     Das Dialogfeld **Prozesse** wird angezeigt.  
+     <span data-ttu-id="ad8d3-137">Die **Prozesse** Dialogfeld wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-137">The **Processes** dialog box appears.</span></span>  
   
-7.  Aktivieren Sie das Kontrollkästchen **Prozesse aller Benutzer anzeigen**.  
+7.  <span data-ttu-id="ad8d3-138">Wählen Sie die **Prozesse aller Benutzer anzeigen** Kontrollkästchen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-138">Select the **Show processes from all users** check box.</span></span>  
   
-8.  Wählen Sie im Abschnitt **Verfügbare Prozesse** den Prozess für den Dienst und anschließend **Anfügen**.  
+8.  <span data-ttu-id="ad8d3-139">In der **verfügbare Prozesse** Abschnitt, wählen Sie den Prozess für den Dienst, und wählen Sie dann **Anfügen**.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-139">In the **Available Processes** section, choose the process for your service, and then choose **Attach**.</span></span>  
   
     > [!TIP]
-    >  Der Prozess weist den gleichen Namen wie die ausführbare Datei für den Dienst auf.  
+    >  <span data-ttu-id="ad8d3-140">Der Prozess weist den gleichen Namen wie die ausführbare Datei für den Dienst auf.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-140">The process will have the same name as the executable file for your service.</span></span>  
   
-     Das Dialogfeld **An den Prozess anhängen** wird angezeigt.  
+     <span data-ttu-id="ad8d3-141">Das Dialogfeld **An den Prozess anhängen** wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-141">The **Attach to Process** dialog box appears.</span></span>  
   
-9. Wählen Sie alle entsprechenden Optionen aus und klicken Sie dann auf **OK**, um das Dialogfeld zu schließen.  
+9. <span data-ttu-id="ad8d3-142">Wählen Sie die gewünschten Optionen aus, und wählen Sie dann **OK** um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-142">Choose the appropriate options, and then choose **OK** to close the dialog box.</span></span>  
   
     > [!NOTE]
-    >  Sie befinden sich jetzt im Debugmodus.  
+    >  <span data-ttu-id="ad8d3-143">Sie befinden sich jetzt im Debugmodus.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-143">You are now in debug mode.</span></span>  
   
-10. Legen Sie die Haltepunkte fest, die im Code verwendet werden sollen.  
+10. <span data-ttu-id="ad8d3-144">Legen Sie die Haltepunkte fest, die im Code verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-144">Set any breakpoints you want to use in your code.</span></span>  
   
-11. Öffnen Sie den Dienststeuerungs\-Manager und bearbeiten Sie den Dienst, indem Sie Befehle zum Beenden, Anhalten und Fortsetzen ausgeben, um die festgelegten Haltepunkte anzusteuern.  Weitere Informationen zum Ausführen des Dienststeuerungs\-Managers finden Sie unter [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md).  Siehe auch [Troubleshooting: Debugging Windows Services](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. <span data-ttu-id="ad8d3-145">Öffnen Sie den Dienststeuerungs-Manager und bearbeiten Sie den Dienst, indem Sie Befehle zum Beenden, Anhalten und Fortsetzen ausgeben, um die festgelegten Haltepunkte anzusteuern.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-145">Access the Services Control Manager and manipulate your service, sending stop, pause, and continue commands to hit your breakpoints.</span></span> <span data-ttu-id="ad8d3-146">Weitere Informationen zum Ausführen des Dienststeuerungs-Managers finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-146">For more information about running the Services Control Manager, see [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md).</span></span> <span data-ttu-id="ad8d3-147">Siehe auch [Problembehandlung: Debuggen von Windows-Diensten](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-147">Also, see [Troubleshooting: Debugging Windows Services](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).</span></span>  
   
-## Tipps zum Debuggen für Windows\-Dienste  
- Durch das Anfügen an den Prozess des Dienstes können Sie die meisten, aber nicht alle, Codes für diesen Dienst debuggen.  Z. B. weil der Dienst bereits gestartet wurde, können Sie den Code in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>\-Methode des Dienstes oder den Code in der `Main`\-Methode nicht debuggen, die verwendet wird, um den Dienst auf diese Weise zu lassen.  Dies kann dadurch umgangen werden, dass ein zweiter temporärer Dienst in der Dienstanweisung erstellt wird, der lediglich als Hilfsmittel für das Debuggen verwendet wird.  Beide Dienste können installiert werden. Anschließend wird der Dienstprozess geladen, indem der "Dummydienst" gestartet wird.  Wenn der Prozess vom temporären Dienst gestartet wurde, kann das Anhängen an den Dienstprozess über das Menü **Debuggen** in Visual Studio erfolgen.  
+## <a name="debugging-tips-for-windows-services"></a><span data-ttu-id="ad8d3-148">Tipps zum Debuggen für Windows-Dienste</span><span class="sxs-lookup"><span data-stu-id="ad8d3-148">Debugging Tips for Windows Services</span></span>  
+ <span data-ttu-id="ad8d3-149">Durch das Anfügen an den Prozess des Dienstes können Sie die meisten, aber nicht alle, Codes für diesen Dienst debuggen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-149">Attaching to the service's process allows you to debug most, but not all, the code for that service.</span></span> <span data-ttu-id="ad8d3-150">Z. B. weil der Dienst bereits gestartet wurde, können Sie den Code in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode des Dienstes oder den Code in der `Main`-Methode nicht debuggen, die verwendet wird, um den Dienst auf diese Weise zu lassen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-150">For example, because the service has already been started, you cannot debug the code in the service's <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method or the code in the `Main` method that is used to load the service this way.</span></span> <span data-ttu-id="ad8d3-151">Dies kann dadurch umgangen werden, dass ein zweiter temporärer Dienst in der Dienstanweisung erstellt wird, der lediglich als Hilfsmittel für das Debuggen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-151">One way to work around this limitation is to create a temporary second service in your service application that exists only to aid in debugging.</span></span> <span data-ttu-id="ad8d3-152">Beide Dienste können installiert werden. Anschließend wird der Dienstprozess geladen, indem der "Dummydienst" gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-152">You can install both services, and then start this dummy service to load the service process.</span></span> <span data-ttu-id="ad8d3-153">Nachdem vom temporäre Dienst den Prozess gestartet wurde, können Sie die **Debuggen** Menü in Visual Studio an den Dienstprozess anfügen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-153">Once the temporary service has started the process, you can use the **Debug** menu in Visual Studio to attach to the service process.</span></span>  
   
- Versuchen Sie, Aufrufe an die <xref:System.Threading.Thread.Sleep%2A>\-Methode zur Verzögerung der Aktion hinzuzufügen, bis Sie sie an den Prozess anfügen können.  
+ <span data-ttu-id="ad8d3-154">Versuchen Sie, Aufrufe an die <xref:System.Threading.Thread.Sleep%2A>-Methode zur Verzögerung der Aktion hinzuzufügen, bis Sie sie an den Prozess anfügen können.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-154">Try adding calls to the <xref:System.Threading.Thread.Sleep%2A> method to delay action until you’re able to attach to the process.</span></span>  
   
- Versuchen Sie, das Programm in eine reguläre Konsolenanwendung umzuwandeln.  Dazu schreiben Sie die `Main`\-Methode wie folgt um, damit sie sowohl als Windows\-Dienst als auch als Konsolenanwendung ausgeführt werden kann, je nachdem, wie sie gestartet wird.  
+ <span data-ttu-id="ad8d3-155">Versuchen Sie, das Programm in eine reguläre Konsolenanwendung umzuwandeln.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-155">Try changing the program to a regular console application.</span></span> <span data-ttu-id="ad8d3-156">Dazu schreiben Sie die `Main`-Methode wie folgt um, damit sie sowohl als Windows-Dienst als auch als Konsolenanwendung ausgeführt werden kann, je nachdem, wie sie gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-156">To do this, rewrite the `Main` method as follows so it can run both as a Windows Service and as a console application, depending on how it's started.</span></span>  
   
-#### Vorgehensweise: Ausführen eines Windows\-Dienstes als Konsolenanwendung  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a><span data-ttu-id="ad8d3-157">Vorgehensweise: Ausführen eines Windows-Dienstes als Konsolenanwendung</span><span class="sxs-lookup"><span data-stu-id="ad8d3-157">How to: Run a Windows Service as a console application</span></span>  
   
-1.  Fügen Sie eine Methode zu Ihrem Dienst hinzu, die die Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> ausführt:  
+1.  <span data-ttu-id="ad8d3-158">Fügen Sie eine Methode zu Ihrem Dienst hinzu, die die Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> ausführt:</span><span class="sxs-lookup"><span data-stu-id="ad8d3-158">Add a method to your service that runs the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods:</span></span>  
   
     ```  
     internal void TestStartupAndStop(string[] args)  
@@ -94,7 +97,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement\-Managers und nicht innerhalb
     }  
     ```  
   
-2.  Schreiben Sie die `Main`\-Methode wie folgt um:  
+2.  <span data-ttu-id="ad8d3-159">Schreiben Sie die `Main`-Methode wie folgt um:</span><span class="sxs-lookup"><span data-stu-id="ad8d3-159">Rewrite the `Main` method as follows:</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -110,16 +113,16 @@ Ein Dienst muss im Kontext des Dienststeuerelement\-Managers und nicht innerhalb
                 }  
     ```  
   
-3.  In der Registerkarte **Anwendung** der Projekteigenschaften legen Sie den **Ausgabetyp** auf **Konsolenanwendung** fest.  
+3.  <span data-ttu-id="ad8d3-160">In der **Anwendung** der Projekteigenschaften auf der Registerkarte legen Sie die **Ausgabetyp** auf **Konsolenanwendung**.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-160">In the **Application** tab of the project's properties, set the **Output type** to **Console Application**.</span></span>  
   
-4.  Wählen Sie **Debugging starten** \(F5\) aus.  
+4.  <span data-ttu-id="ad8d3-161">Wählen Sie **Starten des Debuggens** (F5).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-161">Choose **Start Debugging** (F5).</span></span>  
   
-5.  Wenn Sie das Programm als Windows\-Dienst ausführen, installieren Sie es, und starten Sie sie wie gewohnt für einen Windows\-Dienst.  Es ist nicht notwendig, diese Änderungen rückgängig zu machen.  
+5.  <span data-ttu-id="ad8d3-162">Wenn Sie das Programm als Windows-Dienst ausführen, installieren Sie es, und starten Sie sie wie gewohnt für einen Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-162">To run the program as a Windows Service again, install it and start it as usual for a Windows Service.</span></span> <span data-ttu-id="ad8d3-163">Es ist nicht notwendig, diese Änderungen rückgängig zu machen.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-163">It's not necessary to reverse these changes.</span></span>  
   
- In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows\-Debugger verwenden.  Installieren Sie [Debugging\-Tools für Windows](http://msdn.microsoft.com/windows/hardware/hh852365) finden Sie unter:[Vorgehensweise beim Debuggen von Windows\-Diensten](http://support.microsoft.com/kb/824344).  
+ <span data-ttu-id="ad8d3-164">In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows-Debugger verwenden.</span><span class="sxs-lookup"><span data-stu-id="ad8d3-164">In some cases, such as when you want to debug an issue that occurs only on system startup, you have to use the Windows debugger.</span></span> <span data-ttu-id="ad8d3-165">Installieren Sie [Debugtools für Windows](http://msdn.microsoft.com/windows/hardware/hh852365) und finden Sie unter [zum Debuggen von Windows-Dienste](http://support.microsoft.com/kb/824344).</span><span class="sxs-lookup"><span data-stu-id="ad8d3-165">Install [Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/hh852365) and see [How to debug Windows Services](http://support.microsoft.com/kb/824344).</span></span>  
   
-## Siehe auch  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md)   
- [Debuggen eines Diensts](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)
+## <a name="see-also"></a><span data-ttu-id="ad8d3-166">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ad8d3-166">See Also</span></span>  
+ [<span data-ttu-id="ad8d3-167">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="ad8d3-167">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="ad8d3-168">Vorgehensweise: Installieren und Deinstallieren von Diensten</span><span class="sxs-lookup"><span data-stu-id="ad8d3-168">How to: Install and Uninstall Services</span></span>](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [<span data-ttu-id="ad8d3-169">Vorgehensweise: Starten von Diensten</span><span class="sxs-lookup"><span data-stu-id="ad8d3-169">How to: Start Services</span></span>](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [<span data-ttu-id="ad8d3-170">Debuggen eines Diensts</span><span class="sxs-lookup"><span data-stu-id="ad8d3-170">Debugging a Service</span></span>](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)

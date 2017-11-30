@@ -1,25 +1,30 @@
 ---
-title: "Angeben von Daten&#252;bertragung in Dienstvertr&#228;gen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dienstverträge [WCF], Datenübertragung"
+title: "Angeben von Datenübertragung in Dienstverträgen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 50d55a9eea39e45a9608f27ad02706ad56de89f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Angeben von Daten&#252;bertragung in Dienstvertr&#228;gen
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann man sich als Messaginginfrastruktur vorstellen.Dienstvorgänge können Nachrichten empfangen, sie verarbeiten und ihnen Nachrichten schicken.Nachrichten werden mit Vorgangsverträgen beschrieben.Beispiel:  
+# <a name="specifying-data-transfer-in-service-contracts"></a><span data-ttu-id="4df18-102">Angeben von Datenübertragung in Dienstverträgen</span><span class="sxs-lookup"><span data-stu-id="4df18-102">Specifying Data Transfer in Service Contracts</span></span>
+<span data-ttu-id="4df18-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann man sich als Messaginginfrastruktur vorstellen.</span><span class="sxs-lookup"><span data-stu-id="4df18-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] can be thought of as a messaging infrastructure.</span></span> <span data-ttu-id="4df18-104">Dienstvorgänge können Nachrichten empfangen, sie verarbeiten und ihnen Nachrichten schicken.</span><span class="sxs-lookup"><span data-stu-id="4df18-104">Service operations can receive messages, process them, and send them messages.</span></span> <span data-ttu-id="4df18-105">Nachrichten werden mit Vorgangsverträgen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4df18-105">Messages are described using operation contracts.</span></span> <span data-ttu-id="4df18-106">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="4df18-106">For example, consider the following contract.</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -39,12 +44,12 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Hier akzeptiert der `GetAirfare`\-Vorgang eine Nachricht mit Informationen über `fromCity` und `toCity` und gibt dann eine Nachricht zurück, die eine Zahl enthält.  
+ <span data-ttu-id="4df18-107">Hier akzeptiert der `GetAirfare`-Vorgang eine Nachricht mit Informationen über `fromCity` und `toCity` und gibt dann eine Nachricht zurück, die eine Zahl enthält.</span><span class="sxs-lookup"><span data-stu-id="4df18-107">Here, the `GetAirfare` operation accepts a message with information about `fromCity` and `toCity`, and then returns a message that contains a number.</span></span>  
   
- In diesem Thema werden die verschiedenen Möglichkeiten erläutert, wie ein Vorgangsvertrag Nachrichten beschreiben kann.  
+ <span data-ttu-id="4df18-108">In diesem Thema werden die verschiedenen Möglichkeiten erläutert, wie ein Vorgangsvertrag Nachrichten beschreiben kann.</span><span class="sxs-lookup"><span data-stu-id="4df18-108">This topic explains the various ways in which an operation contract can describe messages.</span></span>  
   
-## Beschreiben von Nachrichten mithilfe von Parametern  
- Die einfachste Art zur Beschreibung einer Nachricht ist die Verwendung einer Parameterliste und des Rückgabewerts.Im vorherigen Beispiel wurden der `fromCity`\- und der `toCity`\-Zeichenfolgenparameter zur Beschreibung der Anforderungsnachricht verwendet, und der Gleitkommarückgabewert wurde zur Beschreibung der Antwortnachricht verwendet.Wenn der Rückgabewert allein zur Beschreibung einer Antwortnachricht nicht ausreicht, können out\-Parameter verwendet werden.Der folgende Vorgang enthält z. B. `fromCity` und `toCity` in der Anforderungsnachricht und eine Zahl zusammen mit einer Währung in der Antwortnachricht:  
+## <a name="describing-messages-by-using-parameters"></a><span data-ttu-id="4df18-109">Beschreiben von Nachrichten mithilfe von Parametern</span><span class="sxs-lookup"><span data-stu-id="4df18-109">Describing Messages by Using Parameters</span></span>  
+ <span data-ttu-id="4df18-110">Die einfachste Art zur Beschreibung einer Nachricht ist die Verwendung einer Parameterliste und des Rückgabewerts.</span><span class="sxs-lookup"><span data-stu-id="4df18-110">The simplest way to describe a message is to use a parameter list and the return value.</span></span> <span data-ttu-id="4df18-111">Im vorherigen Beispiel wurden der `fromCity`- und der `toCity`-Zeichenfolgenparameter zur Beschreibung der Anforderungsnachricht verwendet, und der Gleitkommarückgabewert wurde zur Beschreibung der Antwortnachricht verwendet.</span><span class="sxs-lookup"><span data-stu-id="4df18-111">In the preceding example, the `fromCity` and `toCity` string parameters were used to describe the request message, and the float return value was used to describe the reply message.</span></span> <span data-ttu-id="4df18-112">Wenn der Rückgabewert allein zur Beschreibung einer Antwortnachricht nicht ausreicht, können out-Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-112">If the return value alone is not enough to describe a reply message, out parameters may be used.</span></span> <span data-ttu-id="4df18-113">Der folgende Vorgang enthält z. B. `fromCity` und `toCity` in der Anforderungsnachricht und eine Zahl zusammen mit einer Währung in der Antwortnachricht:</span><span class="sxs-lookup"><span data-stu-id="4df18-113">For example, the following operation has `fromCity` and `toCity` in its request message, and a number together with a currency in its reply message:</span></span>  
   
 ```csharp  
 [OperationContract]  
@@ -56,9 +61,9 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- Sie können zusätzlich Verweisparameter verwenden, um einen Parameter sowohl zu einem Teil der Anforderungs\- als auch der Antwortnachricht zu machen.Die Parameter müssen Typen angehören, die serialisiert \(zu XML konvertiert\) werden können.Standardmäßig verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine Komponente, die als <xref:System.Runtime.Serialization.DataContractSerializer>\-Klasse bezeichnet wird, um diese Konvertierung auszuführen.Die meisten primitiven Typen \(wie `int`, `string`, `float` und `DateTime`\) werden unterstützt.Benutzerdefinierte Typen müssen normalerweise einen Datenvertrag aufweisen.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ <span data-ttu-id="4df18-114">Sie können zusätzlich Verweisparameter verwenden, um einen Parameter sowohl zu einem Teil der Anforderungs- als auch der Antwortnachricht zu machen.</span><span class="sxs-lookup"><span data-stu-id="4df18-114">Additionally, you may use reference parameters to make a parameter part of both the request and the reply message.</span></span> <span data-ttu-id="4df18-115">Die Parameter müssen Typen angehören, die serialisiert (zu XML konvertiert) werden können.</span><span class="sxs-lookup"><span data-stu-id="4df18-115">The parameters must be of types that can be serialized (converted to XML).</span></span> <span data-ttu-id="4df18-116">Standardmäßig verwendet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eine Komponente, die als <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse bezeichnet wird, um diese Konvertierung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="4df18-116">By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses a component called the <xref:System.Runtime.Serialization.DataContractSerializer> class to perform this conversion.</span></span> <span data-ttu-id="4df18-117">Die meisten primitiven Typen (z. B. `int`, `string`, `float` und `DateTime`) werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="4df18-117">Most primitive types (such as `int`, `string`, `float`, and `DateTime`.) are supported.</span></span> <span data-ttu-id="4df18-118">Benutzerdefinierte Typen müssen normalerweise einen Datenvertrag aufweisen.</span><span class="sxs-lookup"><span data-stu-id="4df18-118">User-defined types must normally have a data contract.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-119">[Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-119"> [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  
   
-```  
+```csharp
 public interface IAirfareQuoteService  
 {  
     [OperationContract]  
@@ -89,10 +94,9 @@ Public Interface IAirfareQuoteService
         Public toCity As String  
     End Class  
 End Interface  
-  
 ```  
   
- Gelegentlich ist `DataContractSerializer` nicht zur Serialisierung der Typen geeignet.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unterstützt ein alternatives Serialisierungsmodul <xref:System.Xml.Serialization.XmlSerializer>, das Sie zur Serialisierung von Parametern verwenden können.Das <xref:System.Xml.Serialization.XmlSerializer> bietet mehr Kontrolle über den resultierenden XML\-Code durch Verwendung von Attributen, wie z. B. `XmlAttributeAttribute`.Um zur Verwendung von <xref:System.Xml.Serialization.XmlSerializer> für einen bestimmten Vorgang oder den gesamten Dienst überzugehen, wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>\-Attribut auf einen Vorgang oder einen Dienst an.So gilt z. B. Folgendes:  
+ <span data-ttu-id="4df18-120">Gelegentlich ist der `DataContractSerializer` nicht zur Serialisierung der Typen geeignet.</span><span class="sxs-lookup"><span data-stu-id="4df18-120">Occasionally, the `DataContractSerializer` is not adequate to serialize your types.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="4df18-121"> unterstützt das alternative Serialisierungsmodul <xref:System.Xml.Serialization.XmlSerializer>, das Sie auch zur Serialisierung von Parametern verwenden können.</span><span class="sxs-lookup"><span data-stu-id="4df18-121"> supports an alternative serialization engine, the <xref:System.Xml.Serialization.XmlSerializer>, which you can also use to serialize parameters.</span></span> <span data-ttu-id="4df18-122">Das <xref:System.Xml.Serialization.XmlSerializer> bietet mehr Kontrolle über den resultierenden XML-Code durch Verwendung von Attributen, wie z. B. `XmlAttributeAttribute`.</span><span class="sxs-lookup"><span data-stu-id="4df18-122">The <xref:System.Xml.Serialization.XmlSerializer> allows you to use more control over the resultant XML using attributes such as the `XmlAttributeAttribute`.</span></span> <span data-ttu-id="4df18-123">Um zur Verwendung von <xref:System.Xml.Serialization.XmlSerializer> für einen bestimmten Vorgang oder den gesamten Dienst überzugehen, wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf einen Vorgang oder einen Dienst an.</span><span class="sxs-lookup"><span data-stu-id="4df18-123">To switch to using the <xref:System.Xml.Serialization.XmlSerializer> for a particular operation or for the entire service, apply the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute to an operation or a service.</span></span> <span data-ttu-id="4df18-124">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="4df18-124">For example:</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -109,7 +113,6 @@ public class Itinerary
     [XmlAttribute]  
     public bool isFirstClass;  
 }  
-  
 ```  
   
 ```vb  
@@ -128,72 +131,65 @@ Class Itinerary
     <XmlSerializerFormat()>  
     Public isFirstClass As Boolean  
 End Class  
-  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verwenden der XmlSerializer\-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).Vergessen Sie nicht, dass ein manueller Wechsel zum <xref:System.Xml.Serialization.XmlSerializer>, wie hier dargestellt, nicht empfohlen wird, wenn nicht triftige Gründe dafür vorliegen, wie sie in diesem Thema ausführlich beschrieben werden.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-125">[Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-125"> [Using the XmlSerializer Class](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).</span></span> <span data-ttu-id="4df18-126">Vergessen Sie nicht, dass ein manueller Wechsel zum <xref:System.Xml.Serialization.XmlSerializer>, wie hier dargestellt, nicht empfohlen wird, wenn nicht triftige Gründe dafür vorliegen, wie sie in diesem Thema ausführlich beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-126">Remember that manually switching to the <xref:System.Xml.Serialization.XmlSerializer> as shown here is not recommended unless you have specific reasons to do so as detailed in that topic.</span></span>  
   
- Zur Isolierung von .NET\-Parameternamen von Vertragsnamen können Sie das <xref:System.ServiceModel.MessageParameterAttribute>\-Attribut verwenden. Verwenden Sie die `Name`\-Eigenschaft zur Festlegung des Vertragsnamens.Der folgende Vorgangsvertrag entspricht z. B. dem ersten Beispiel in diesem Thema.  
+ <span data-ttu-id="4df18-127">Zur Isolierung von .NET-Parameternamen von Vertragsnamen können Sie das <xref:System.ServiceModel.MessageParameterAttribute>-Attribut verwenden. Verwenden Sie die `Name`-Eigenschaft zur Festlegung des Vertragsnamens.</span><span class="sxs-lookup"><span data-stu-id="4df18-127">To isolate .NET parameter names from contract names, you can use the <xref:System.ServiceModel.MessageParameterAttribute> attribute, and use the `Name` property to set the contract name.</span></span> <span data-ttu-id="4df18-128">Der folgende Vorgangsvertrag entspricht z. B. dem ersten Beispiel in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="4df18-128">For example, the following operation contract is equivalent to the first example in this topic.</span></span>  
   
 ```csharp  
 [OperationContract]  
 public float GetAirfare(  
     [MessageParameter(Name="fromCity")] string originCity,  
     [MessageParameter(Name="toCity")] string destinationCity);  
-  
 ```  
   
 ```vb  
 <OperationContract()>  
   Function GetAirfare(<MessageParameter(Name := "fromCity")> fromCity As String, <MessageParameter(Name := "toCity")> toCity As String) As Double  
-  
 ```  
   
-## Beschreiben von leeren Nachrichten  
- Eine leere Anforderungsnachricht kann dadurch beschrieben werden, dass sie keine Eingabe\- oder Verweisparameter aufweist.Zum Beispiel in C\#:  
+## <a name="describing-empty-messages"></a><span data-ttu-id="4df18-129">Beschreiben von leeren Nachrichten</span><span class="sxs-lookup"><span data-stu-id="4df18-129">Describing Empty Messages</span></span>  
+ <span data-ttu-id="4df18-130">Eine leere Anforderungsnachricht kann dadurch beschrieben werden, dass sie keine Eingabe- oder Verweisparameter aufweist.</span><span class="sxs-lookup"><span data-stu-id="4df18-130">An empty request message can be described by having no input or reference parameters.</span></span> <span data-ttu-id="4df18-131">Beispiel in C#:</span><span class="sxs-lookup"><span data-stu-id="4df18-131">For example in C#:</span></span>  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- Zum Beispiel in VB:  
+ <span data-ttu-id="4df18-132">Beispiel in VB:</span><span class="sxs-lookup"><span data-stu-id="4df18-132">For example in VB:</span></span>  
   
  `<OperationContract()>`  
   
  `Function GetCurrentTemperature() as Integer`  
   
- Eine leere Antwortnachricht kann dadurch beschrieben werden, dass sie einen `void`\-Rückgabetyp und keine Ausgabe\- oder Verweisparameter aufweist.Zum Beispiel in:  
+ <span data-ttu-id="4df18-133">Eine leere Antwortnachricht kann dadurch beschrieben werden, dass sie einen `void`-Rückgabetyp und keine Ausgabe- oder Verweisparameter aufweist.</span><span class="sxs-lookup"><span data-stu-id="4df18-133">An empty reply message can be described by having a `void` return type and no output or reference parameters.</span></span> <span data-ttu-id="4df18-134">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="4df18-134">For example in:</span></span>  
   
 ```csharp  
 [OperationContract]  
 public void SetTemperature(int temperature);  
-  
 ```  
   
 ```vb  
 <OperationContract()>  
 Sub SetTemperature(temperature As Integer)  
-  
 ```  
   
- Dies unterscheidet sich von einem unidirektionalen Vorgang wie z. B.:  
+ <span data-ttu-id="4df18-135">Dies unterscheidet sich von einem unidirektionalen Vorgang wie z. B.:</span><span class="sxs-lookup"><span data-stu-id="4df18-135">This is different from a one-way operation, such as:</span></span>  
   
 ```csharp  
 [OperationContract(IsOneWay=true)]  
 public void SetLightbulbStatus(bool isOn);  
-  
 ```  
   
 ```vb  
 <OperationContract(IsOneWay:=True)>  
 Sub SetLightbulbStatus(isOne As Boolean)  
-  
 ```  
   
- Der `SetTemperatureStatus`\-Vorgang gibt eine leere Nachricht zurück.Er gibt stattdessen möglicherweise einen Fehler zurück, wenn es ein Problem beim Verarbeiten der Eingabenachricht gibt.Der `SetLightbulbStatus`\-Vorgang gibt keinen Wert zurück.Es gibt keine Möglichkeit, eine Fehlerbedingung dieses Vorgangs zu übermitteln.  
+ <span data-ttu-id="4df18-136">Der `SetTemperatureStatus`-Vorgang gibt eine leere Nachricht zurück.</span><span class="sxs-lookup"><span data-stu-id="4df18-136">The `SetTemperatureStatus` operation returns an empty message.</span></span> <span data-ttu-id="4df18-137">Er gibt stattdessen möglicherweise einen Fehler zurück, wenn es ein Problem beim Verarbeiten der Eingabenachricht gibt.</span><span class="sxs-lookup"><span data-stu-id="4df18-137">It may return a fault instead if there is a problem processing the input message.</span></span> <span data-ttu-id="4df18-138">Der `SetLightbulbStatus`-Vorgang gibt keinen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="4df18-138">The `SetLightbulbStatus` operation returns nothing.</span></span> <span data-ttu-id="4df18-139">Es gibt keine Möglichkeit, eine Fehlerbedingung dieses Vorgangs zu übermitteln.</span><span class="sxs-lookup"><span data-stu-id="4df18-139">There is no way to communicate a fault condition from this operation.</span></span>  
   
-## Beschreiben von Nachrichten mithilfe von Nachrichtenverträgen  
- Sie können einen einzelnen Typ verwenden, um die ganze Nachricht darzustellen.Es ist zwar möglich, für diesen Zweck einen Datenvertrag zu verwenden, empfohlen wird jedoch die Verwendung eines Nachrichtenvertrags – dadurch werden unnötige Wrappingebenen im resultierenden XML\-Code vermieden.Darüber hinaus ermöglichen Nachrichtenverträge eine bessere Kontrolle über die resultierenden Nachrichten.Sie können z. B. entscheiden, welche Informationen im Nachrichtentext und welche in den Nachrichtenheadern enthalten sein sollen.Im folgenden Beispiel wird die Verwendung von Nachrichtenverträgen veranschaulicht.  
+## <a name="describing-messages-by-using-message-contracts"></a><span data-ttu-id="4df18-140">Beschreiben von Nachrichten mithilfe von Nachrichtenverträgen</span><span class="sxs-lookup"><span data-stu-id="4df18-140">Describing Messages by Using Message Contracts</span></span>  
+ <span data-ttu-id="4df18-141">Sie können einen einzelnen Typ verwenden, um die ganze Nachricht darzustellen.</span><span class="sxs-lookup"><span data-stu-id="4df18-141">You may want to use a single type to represent the entire message.</span></span> <span data-ttu-id="4df18-142">Es ist zwar möglich, für diesen Zweck einen Datenvertrag zu verwenden, empfohlen wird jedoch die Verwendung eines Nachrichtenvertrags – dadurch werden unnötige Wrappingebenen im resultierenden XML-Code vermieden.</span><span class="sxs-lookup"><span data-stu-id="4df18-142">While it is possible to use a data contract for this purpose, the recommended way to do this is to use a message contract—this avoids unnecessary levels of wrapping in the resultant XML.</span></span> <span data-ttu-id="4df18-143">Darüber hinaus ermöglichen Nachrichtenverträge eine bessere Kontrolle über die resultierenden Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="4df18-143">Additionally, message contracts allow you to exercise more control over resultant messages.</span></span> <span data-ttu-id="4df18-144">Sie können z. B. entscheiden, welche Informationen im Nachrichtentext und welche in den Nachrichtenheadern enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="4df18-144">For instance, you can decide which pieces of information should be in the message body and which should be in the message headers.</span></span> <span data-ttu-id="4df18-145">Im folgenden Beispiel wird die Verwendung von Nachrichtenverträgen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4df18-145">The following example shows the use of message contracts.</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -223,7 +219,6 @@ public class Itinerary
     [DataMember] public string fromCity;  
     [DataMember] public string toCity;  
 }  
-  
 ```  
   
 ```vb  
@@ -253,47 +248,42 @@ Public Class Itinerary
     <DataMember()> Public Property fromCity As String  
     <DataMember()> Public Property toCity As String  
 End Class  
-  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Verwendung von Nachrichtenverträgen](../../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-146">[Nachrichtenverträge](../../../../docs/framework/wcf/feature-details/using-message-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-146"> [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md).</span></span>  
   
- Im vorigen Beispiel wird die <xref:System.Runtime.Serialization.DataContractSerializer>\-Klasse noch standardmäßig verwendet.Die <xref:System.Xml.Serialization.XmlSerializer>\-Klasse kann auch in Verbindung mit Nachrichtenverträgen verwendet werden.Zu diesem Zweck wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>\-Attribut entweder auf den Vorgang oder auf den Vertrag an, und verwenden Sie Typen, die mit der <xref:System.Xml.Serialization.XmlSerializer>\-Klasse in den Nachrichtenheadern und Textmembern kompatibel sind.  
+ <span data-ttu-id="4df18-147">Im vorigen Beispiel wird die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse noch standardmäßig verwendet.</span><span class="sxs-lookup"><span data-stu-id="4df18-147">In the previous example, the <xref:System.Runtime.Serialization.DataContractSerializer> class is still used by default.</span></span> <span data-ttu-id="4df18-148">Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse kann auch in Verbindung mit Nachrichtenverträgen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-148">The <xref:System.Xml.Serialization.XmlSerializer> class can also be used with message contracts.</span></span> <span data-ttu-id="4df18-149">Zu diesem Zweck wenden Sie das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut entweder auf den Vorgang oder auf den Vertrag an, und verwenden Sie Typen, die mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in den Nachrichtenheadern und Textmembern kompatibel sind.</span><span class="sxs-lookup"><span data-stu-id="4df18-149">To do this, apply the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute to either the operation or the contract, and use types compatible with the <xref:System.Xml.Serialization.XmlSerializer> class in the message headers and body members.</span></span>  
   
-## Beschreiben von Nachrichten mithilfe von Streams  
- Eine andere Möglichkeit zur Beschreibung von Nachrichten in Vorgängen ist die Verwendung der <xref:System.IO.Stream>\-Klasse oder einer der von ihr abgeleiteten Klasse in einem Vorgangsvertrag oder als Textmember eines Nachrichtenvertrags \(es muss sich in diesem Fall um den einzigen Member handeln\).Für eingehende Nachrichten muss der Typ `Stream` sein – es können keine abgeleiteten Klassen verwendet werden.  
+## <a name="describing-messages-by-using-streams"></a><span data-ttu-id="4df18-150">Beschreiben von Nachrichten mithilfe von Streams</span><span class="sxs-lookup"><span data-stu-id="4df18-150">Describing Messages by Using Streams</span></span>  
+ <span data-ttu-id="4df18-151">Eine andere Möglichkeit zur Beschreibung von Nachrichten in Vorgängen ist die Verwendung der <xref:System.IO.Stream>-Klasse oder einer der von ihr abgeleiteten Klasse in einem Vorgangsvertrag oder als Textmember eines Nachrichtenvertrags (es muss sich in diesem Fall um den einzigen Member handeln).</span><span class="sxs-lookup"><span data-stu-id="4df18-151">Another way to describe messages in operations is to use the <xref:System.IO.Stream> class or one of its derived classes in an operation contract or as a message contract body member (it must be the only member in this case).</span></span> <span data-ttu-id="4df18-152">Für eingehende Nachrichten muss der Typ `Stream` sein – es können keine abgeleiteten Klassen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-152">For incoming messages, the type must be `Stream`—you cannot use derived classes.</span></span>  
   
- Statt das Serialisierungsprogramm aufzurufen, ruft [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Daten aus einem Stream ab und setzt sie direkt in eine ausgehende Nachricht ein oder ruft Daten aus einer eingehenden Nachricht ab und setzt sie direkt in einen Stream ein.Im folgenden Beispiel wird die Verwendung von Streams veranschaulicht.  
+ <span data-ttu-id="4df18-153">Statt das Serialisierungsprogramm aufzurufen, ruft [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Daten aus einem Stream ab und setzt sie direkt in eine ausgehende Nachricht ein oder ruft Daten aus einer eingehenden Nachricht ab und setzt sie direkt in einen Stream ein.</span><span class="sxs-lookup"><span data-stu-id="4df18-153">Instead of invoking the serializer, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] retrieves data from a stream and puts it directly into an outgoing message, or retrieves data from an incoming message and puts it directly into a stream.</span></span> <span data-ttu-id="4df18-154">Im folgenden Beispiel wird die Verwendung von Streams veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4df18-154">The following sample shows the use of streams.</span></span>  
   
 ```csharp  
 [OperationContract]  
 public Stream DownloadFile(string fileName);  
-  
 ```  
   
 ```vb  
 <OperationContract()>  
 Function DownloadFile(fileName As String) As String  
-  
 ```  
   
- Sie können `Stream`\- und Nicht\-Stream\-Daten in einem einzelnen Nachrichtentext nicht kombinieren.Verwenden Sie einen Nachrichtenvertrag, um die zusätzlichen Daten in Nachrichtenheader einzusetzen.Im folgenden Beispiel wird die falsche Verwendung von Streams bei der Definition des Vorgangsvertrags veranschaulicht.  
+ <span data-ttu-id="4df18-155">Sie können `Stream`- und Nicht-Stream-Daten in einem einzelnen Nachrichtentext nicht kombinieren.</span><span class="sxs-lookup"><span data-stu-id="4df18-155">You cannot combine `Stream` and non-stream data in a single message body.</span></span> <span data-ttu-id="4df18-156">Verwenden Sie einen Nachrichtenvertrag, um die zusätzlichen Daten in Nachrichtenheader einzusetzen.</span><span class="sxs-lookup"><span data-stu-id="4df18-156">Use a message contract to put the extra data in message headers.</span></span> <span data-ttu-id="4df18-157">Im folgenden Beispiel wird die falsche Verwendung von Streams bei der Definition des Vorgangsvertrags veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4df18-157">The following example shows the incorrect usage of streams when defining the operation contract.</span></span>  
   
 ```csharp  
 //Incorrect:  
 // [OperationContract]  
 // public void UploadFile (string fileName, Stream fileData);  
-  
 ```  
   
 ```vb  
 'Incorrect:  
     '<OperationContract()>  
     Public Sub UploadFile(fileName As String, fileData As StreamingContext)  
-  
 ```  
   
- Im folgenden Beispiel wird die korrekte Verwendung von Streams bei der Definition eines Vorgangsvertrags veranschaulicht.  
+ <span data-ttu-id="4df18-158">Im folgenden Beispiel wird die korrekte Verwendung von Streams bei der Definition eines Vorgangsvertrags veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4df18-158">The following sample shows the correct usage of streams when defining an operation contract.</span></span>  
   
 ```csharp  
 [OperationContract]  
@@ -305,7 +295,6 @@ public class UploadFileMessage
     [MessageHeader] public string fileName;  
     [MessageBodyMember] public Stream fileData;  
 }  
-  
 ```  
   
 ```vb  
@@ -319,46 +308,41 @@ Public Class UploadFileMessage
     <MessageBodyMember()>  
     Public Property fileData As Stream  
 End Class  
-  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-159">[Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-159"> [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).</span></span>  
   
-## Verwenden der Nachrichtenklasse  
- Um umfassende programmgesteuerte Kontrolle über gesendete oder empfangene Nachrichten zu haben, können Sie die <xref:System.ServiceModel.Channels.Message>\-Klasse direkt verwenden, wie im folgenden Beispielcode dargestellt wird.  
+## <a name="using-the-message-class"></a><span data-ttu-id="4df18-160">Verwenden der Message-Klasse</span><span class="sxs-lookup"><span data-stu-id="4df18-160">Using the Message Class</span></span>  
+ <span data-ttu-id="4df18-161">Um umfassende programmgesteuerte Kontrolle über gesendete oder empfangene Nachrichten zu haben, können Sie die <xref:System.ServiceModel.Channels.Message>-Klasse direkt verwenden, wie im folgenden Beispielcode dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-161">To have complete programmatic control over messages sent or received, you can use the <xref:System.ServiceModel.Channels.Message> class directly, as shown in the following example code.</span></span>  
   
 ```csharp  
 [OperationContract]  
 public void LogMessage(Message m);  
-  
 ```  
   
 ```vb  
 <OperationContract()>  
 Sub LogMessage(m As Message)  
-  
 ```  
   
- Dies ist ein erweitertes Szenario, das ausführlich in [Verwenden der Message\-Klasse](../../../../docs/framework/wcf/feature-details/using-the-message-class.md) beschrieben wird.  
+ <span data-ttu-id="4df18-162">Dies ist eine erweiterte-remotezugriffsszenario, das ausführlich beschrieben wird [verwenden der Meldungsklasse](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-162">This is an advanced scenario, which is described in detail in [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).</span></span>  
   
-## Beschreiben von Fehlernachrichten  
- Zusätzlich zu den Nachrichten, die durch den Rückgabewert und Ausgabe\- oder Verweisparameter beschrieben werden, kann jeder nicht unidirektionale Vorgang mindestes zwei mögliche Nachrichten zurückgeben: die normale Antwortnachricht und eine Fehlernachricht.Betrachten Sie den folgenden Vorgangsvertrag.  
+## <a name="describing-fault-messages"></a><span data-ttu-id="4df18-163">Beschreiben von Fehlernachrichten</span><span class="sxs-lookup"><span data-stu-id="4df18-163">Describing Fault Messages</span></span>  
+ <span data-ttu-id="4df18-164">Zusätzlich zu den Nachrichten, die durch den Rückgabewert und Ausgabe- oder Verweisparameter beschrieben werden, kann jeder nicht unidirektionale Vorgang mindestes zwei mögliche Nachrichten zurückgeben: die normale Antwortnachricht und eine Fehlernachricht.</span><span class="sxs-lookup"><span data-stu-id="4df18-164">In addition to the messages that are described by the return value and output or reference parameters, any operation that is not one-way can return at least two possible messages: its normal response message and a fault message.</span></span> <span data-ttu-id="4df18-165">Betrachten Sie den folgenden Vorgangsvertrag.</span><span class="sxs-lookup"><span data-stu-id="4df18-165">Consider the following operation contract.</span></span>  
   
 ```csharp  
 [OperationContract]  
 float GetAirfare(string fromCity, string toCity, DateTime date);  
-  
 ```  
   
 ```vb  
 <OperationContract()>  
 Function GetAirfare(fromCity As String, toCity As String, date as DateTime)  
-  
 ```  
   
- Dieser Vorgang kann entweder eine normale Nachricht zurückgeben, die eine `float`\-Zahl enthält, oder eine Fehlernachricht, die einen Fehlercode und eine Beschreibung enthält.Dies kann durch Auslösen einer <xref:System.ServiceModel.FaultException> in der Dienstimplementierung erreicht werden.  
+ <span data-ttu-id="4df18-166">Dieser Vorgang kann entweder eine normale Nachricht zurückgeben, die eine `float`-Zahl enthält, oder eine Fehlernachricht, die einen Fehlercode und eine Beschreibung enthält.</span><span class="sxs-lookup"><span data-stu-id="4df18-166">This operation may either return a normal message that contains a `float` number, or a fault message that contains a fault code and a description.</span></span> <span data-ttu-id="4df18-167">Dies kann durch Auslösen einer <xref:System.ServiceModel.FaultException> in der Dienstimplementierung erreicht werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-167">You can accomplish this by throwing a <xref:System.ServiceModel.FaultException> in your service implementation.</span></span>  
   
- Sie können weitere mögliche Fehlermeldungen angeben, indem Sie das <xref:System.ServiceModel.FaultContractAttribute>\-Attribut verwenden.Die zusätzlichen Fehler müssen mit dem <xref:System.Runtime.Serialization.DataContractSerializer> serialisierbar sein, wie im folgenden Beispielcode gezeigt.  
+ <span data-ttu-id="4df18-168">Sie können weitere mögliche Fehlermeldungen angeben, indem Sie das <xref:System.ServiceModel.FaultContractAttribute>-Attribut verwenden.</span><span class="sxs-lookup"><span data-stu-id="4df18-168">You can specify additional possible fault messages by using the <xref:System.ServiceModel.FaultContractAttribute> attribute.</span></span> <span data-ttu-id="4df18-169">Die zusätzlichen Fehler müssen mit dem <xref:System.Runtime.Serialization.DataContractSerializer> serialisierbar sein, wie im folgenden Beispielcode gezeigt.</span><span class="sxs-lookup"><span data-stu-id="4df18-169">The additional faults must be serializable using the <xref:System.Runtime.Serialization.DataContractSerializer>, as shown in the following example code.</span></span>  
   
 ```csharp  
 [OperationContract]  
@@ -376,7 +360,6 @@ public class ItineraryNotAvailableFault
     [DataMember]  
     public DateTime alternativeSuggestedDate;  
 }  
-  
 ```  
   
 ```vb  
@@ -392,29 +375,26 @@ Public Class
   <DataMember()>  
   Public Property alternativeSuggestedDate As DateTime  
 End Class  
-  
 ```  
   
- Diese zusätzlichen Fehler können durch Auslösen einer <xref:System.ServiceModel.FaultException%601> des geeigneten Datenvertragstyps generiert werden.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Behandeln von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ <span data-ttu-id="4df18-170">Diese zusätzlichen Fehler können durch Auslösen einer <xref:System.ServiceModel.FaultException%601> des geeigneten Datenvertragstyps generiert werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-170">These additional faults can be generated by throwing a <xref:System.ServiceModel.FaultException%601> of the appropriate data contract type.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-171">[Behandeln von Ausnahmen und Fehlern](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-171"> [Handling Exceptions and Faults](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).</span></span>  
   
- Sie können die <xref:System.Xml.Serialization.XmlSerializer>\-Klasse nicht verwenden, um Fehler zu beschreiben.Das <xref:System.ServiceModel.XmlSerializerFormatAttribute> hat keine Auswirkungen auf Fehlerverträge.  
+ <span data-ttu-id="4df18-172">Sie können die <xref:System.Xml.Serialization.XmlSerializer>-Klasse nicht verwenden, um Fehler zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="4df18-172">You cannot use the <xref:System.Xml.Serialization.XmlSerializer> class to describe faults.</span></span> <span data-ttu-id="4df18-173">Das <xref:System.ServiceModel.XmlSerializerFormatAttribute> hat keine Auswirkungen auf Fehlerverträge.</span><span class="sxs-lookup"><span data-stu-id="4df18-173">The <xref:System.ServiceModel.XmlSerializerFormatAttribute> has no effect on fault contracts.</span></span>  
   
-## Verwenden von abgeleiteten Typen  
- Sie können einen Basistyp für einen Vorgangs\- oder Nachrichtenvertrag verwenden und dann einen abgeleiteten Typ verwenden, wenn Sie den Vorgang tatsächlich aufrufen.In diesem Fall müssen Sie entweder das <xref:System.ServiceModel.ServiceKnownTypeAttribute>\-Attribut oder einen alternativen Mechanismus verwenden, um die Verwendung von abgeleiteten Typen zu ermöglichen.Betrachten Sie den folgenden Vorgang.  
+## <a name="using-derived-types"></a><span data-ttu-id="4df18-174">Verwenden von abgeleiteten Typen</span><span class="sxs-lookup"><span data-stu-id="4df18-174">Using Derived Types</span></span>  
+ <span data-ttu-id="4df18-175">Sie können einen Basistyp für einen Vorgangs- oder Nachrichtenvertrag verwenden und dann einen abgeleiteten Typ verwenden, wenn Sie den Vorgang tatsächlich aufrufen.</span><span class="sxs-lookup"><span data-stu-id="4df18-175">You may want to use a base type in an operation or a message contract, and then use a derived type when actually invoking the operation.</span></span> <span data-ttu-id="4df18-176">In diesem Fall müssen Sie entweder das <xref:System.ServiceModel.ServiceKnownTypeAttribute>-Attribut oder einen alternativen Mechanismus verwenden, um die Verwendung von abgeleiteten Typen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4df18-176">In this case, you must use either the <xref:System.ServiceModel.ServiceKnownTypeAttribute> attribute or some alternative mechanism to allow the use of derived types.</span></span> <span data-ttu-id="4df18-177">Betrachten Sie den folgenden Vorgang.</span><span class="sxs-lookup"><span data-stu-id="4df18-177">Consider the following operation.</span></span>  
   
 ```csharp  
 [OperationContract]  
 public bool IsLibraryItemAvailable(LibraryItem item);  
-  
 ```  
   
-```vbs  
+```vb
 <OperationContract()>  
     Function IsLibraryItemAvailable(item As LibraryItem) As Boolean  
-  
 ```  
   
- Angenommen, zwei Typen, `Book` und `Magazine`, werden aus `LibraryItem` abgeleitet.Um diese Typen im `IsLibraryItemAvailable`\-Vorgang zu verwenden, können Sie den Vorgang wie folgt ändern:  
+ <span data-ttu-id="4df18-178">Angenommen, zwei Typen, `Book` und `Magazine`, werden aus `LibraryItem` abgeleitet.</span><span class="sxs-lookup"><span data-stu-id="4df18-178">Assume that two types, `Book` and `Magazine`, derive from `LibraryItem`.</span></span> <span data-ttu-id="4df18-179">Um diese Typen im `IsLibraryItemAvailable`-Vorgang zu verwenden, können Sie den Vorgang wie folgt ändern:</span><span class="sxs-lookup"><span data-stu-id="4df18-179">To use these types in the `IsLibraryItemAvailable` operation, you can change the operation as follows:</span></span>  
   
  `[OperationContract]`  
   
@@ -424,10 +404,9 @@ public bool IsLibraryItemAvailable(LibraryItem item);
   
  `public bool IsLibraryItemAvailable(LibraryItem item);`  
   
- Alternativ dazu können Sie, wie im folgenden Beispielcode dargestellt, das <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attribut verwenden, wenn das Standard\-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird.  
+ <span data-ttu-id="4df18-180">Alternativ dazu können Sie, wie im folgenden Beispielcode dargestellt, das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut verwenden, wenn das Standard-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-180">Alternatively, you can use the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute when the default <xref:System.Runtime.Serialization.DataContractSerializer> is in use, as shown in the following example code.</span></span>  
   
 ```csharp  
-  
 [OperationContract]  
 public bool IsLibraryItemAvailable(LibraryItem item);  
   
@@ -440,7 +419,6 @@ public class LibraryItem
 {  
     //code omitted  
 }  
-  
 ```  
   
 ```vb  
@@ -454,28 +432,26 @@ Function IsLibraryItemAvailable(item As LibraryItem) As Boolean
 Public Class LibraryItem  
   'Code Omitted  
 End Class  
-  
 ```  
   
- Sie können das <xref:System.Xml.Serialization.XmlIncludeAttribute>\-Attribut verwenden, wenn Sie <xref:System.Xml.Serialization.XmlSerializer> verwenden.  
+ <span data-ttu-id="4df18-181">Sie können das <xref:System.Xml.Serialization.XmlIncludeAttribute>-Attribut verwenden, wenn Sie <xref:System.Xml.Serialization.XmlSerializer> verwenden.</span><span class="sxs-lookup"><span data-stu-id="4df18-181">You can use the <xref:System.Xml.Serialization.XmlIncludeAttribute> attribute when using the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
- Sie können das <xref:System.ServiceModel.ServiceKnownTypeAttribute>\-Attribut auf einen Vorgang oder auf den gesamten Dienst anwenden.Es akzeptiert entweder einen Typ oder den Namen der Methode, die aufgerufen werden soll, um eine Liste bekannter Typen zu erzeugen, genau wie das <xref:System.Runtime.Serialization.KnownTypeAttribute>\-Attribut.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ <span data-ttu-id="4df18-182">Sie können das <xref:System.ServiceModel.ServiceKnownTypeAttribute>-Attribut auf einen Vorgang oder auf den gesamten Dienst anwenden.</span><span class="sxs-lookup"><span data-stu-id="4df18-182">You can apply the <xref:System.ServiceModel.ServiceKnownTypeAttribute> attribute to an operation or to the entire service.</span></span> <span data-ttu-id="4df18-183">Es akzeptiert entweder einen Typ oder den Namen der Methode, die aufgerufen werden soll, um eine Liste bekannter Typen zu erzeugen, genau wie das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut.</span><span class="sxs-lookup"><span data-stu-id="4df18-183">It accepts either a type or the name of the method to call to get a list of known types, just like the <xref:System.Runtime.Serialization.KnownTypeAttribute> attribute.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-184">[Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-184"> [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## Angeben der Verwendung und des Stils  
- Bei der Beschreibung von Diensten mithilfe von Web Services Description Language \(WSDL\) sind die beiden am häufigsten verwendeten Stile der Dokumentstil und der Remoteprozeduraufruf \(RPC, remote procedure call\).Beim Dokumentstil wird der gesamte Nachrichtentext mithilfe des Schemas beschrieben, und WSDL beschreibt die verschiedenen Nachrichtentextteile durch Verweisen auf Elemente innerhalb dieses Schemas.Beim RPC\-Stil verweist WSDL auf einen Schematyp für jeden Nachrichtenteil statt auf ein Element.In einigen Fällen müssen Sie einen dieser Stile manuell auswählen.Zu diesem Zweck können Sie das <xref:System.ServiceModel.DataContractFormatAttribute>\-Attribut anwenden und die `Style`\-Eigenschaft festlegen \(wenn das <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird\), oder Sie legen `Style` in dem <xref:System.ServiceModel.XmlSerializerFormatAttribute>\-Attribut fest \(wenn das <xref:System.Xml.Serialization.XmlSerializer> verwendet wird\).  
+## <a name="specifying-the-use-and-style"></a><span data-ttu-id="4df18-185">Angeben der Verwendung und des Stils</span><span class="sxs-lookup"><span data-stu-id="4df18-185">Specifying the Use and Style</span></span>  
+ <span data-ttu-id="4df18-186">Bei der Beschreibung von Diensten mithilfe von Web Services Description Language (WSDL) sind die beiden am häufigsten verwendeten Stile der Dokumentstil und der Remoteprozeduraufruf (RPC, remote procedure call).</span><span class="sxs-lookup"><span data-stu-id="4df18-186">When describing services using Web Services Description Language (WSDL), the two commonly used styles are Document and remote procedure call (RPC).</span></span> <span data-ttu-id="4df18-187">Beim Dokumentstil wird der gesamte Nachrichtentext mithilfe des Schemas beschrieben, und WSDL beschreibt die verschiedenen Nachrichtentextteile durch Verweisen auf Elemente innerhalb dieses Schemas.</span><span class="sxs-lookup"><span data-stu-id="4df18-187">In the Document style, the entire message body is described using the schema, and the WSDL describes the various message body parts by referring to elements within that schema.</span></span> <span data-ttu-id="4df18-188">Beim RPC-Stil verweist WSDL auf einen Schematyp für jeden Nachrichtenteil statt auf ein Element.</span><span class="sxs-lookup"><span data-stu-id="4df18-188">In the RPC style, the WSDL refers to a schema type for each message part rather than an element.</span></span> <span data-ttu-id="4df18-189">In einigen Fällen müssen Sie einen dieser Stile manuell auswählen.</span><span class="sxs-lookup"><span data-stu-id="4df18-189">In some cases, you have to manually select one of these styles.</span></span> <span data-ttu-id="4df18-190">Zu diesem Zweck können Sie das <xref:System.ServiceModel.DataContractFormatAttribute>-Attribut anwenden und die `Style`-Eigenschaft festlegen (wenn das <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird), oder Sie legen `Style` in dem <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut fest (wenn das <xref:System.Xml.Serialization.XmlSerializer> verwendet wird).</span><span class="sxs-lookup"><span data-stu-id="4df18-190">You can do this by applying the <xref:System.ServiceModel.DataContractFormatAttribute> attribute and setting the `Style` property (when the <xref:System.Runtime.Serialization.DataContractSerializer> is in use), or by setting `Style` on the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute (when using the <xref:System.Xml.Serialization.XmlSerializer>).</span></span>  
   
- Außerdem unterstützt das <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`.`Literal` ist die am häufigsten akzeptierte Form und die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird.Legacy `Encoded` ist eine Legacyform, die in Abschnitt 5 der SOAP\-Spezifikation beschrieben wird und die für neue Dienste nicht empfohlen wird.Um zum `Encoded`\-Modus zu wechseln, legen Sie die `Use`\-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>\-Attribut auf `Encoded` fest.  
+ <span data-ttu-id="4df18-191">Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`.</span><span class="sxs-lookup"><span data-stu-id="4df18-191">Additionally, the <xref:System.Xml.Serialization.XmlSerializer> supports two forms of serialized XML: `Literal` and `Encoded`.</span></span> <span data-ttu-id="4df18-192">`Literal` ist die am häufigsten akzeptierte Form und die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-192">`Literal` is the most commonly accepted form, and is the only form the <xref:System.Runtime.Serialization.DataContractSerializer> supports.</span></span> <span data-ttu-id="4df18-193">`Encoded` ist eine Legacyform, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird. Sie wird für neue Dienste nicht empfohlen.</span><span class="sxs-lookup"><span data-stu-id="4df18-193">`Encoded` is a legacy form described in section 5 of the SOAP specification, and is not recommended for new services.</span></span> <span data-ttu-id="4df18-194">Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.</span><span class="sxs-lookup"><span data-stu-id="4df18-194">To switch to `Encoded` mode, set the `Use` property on the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute to `Encoded`.</span></span>  
   
- In den meisten Fällen sollten Sie die Standardeinstellungen für die `Style`\- und die `Use`\-Eigenschaft nicht ändern.  
+ <span data-ttu-id="4df18-195">In den meisten Fällen sollten Sie die Standardeinstellungen für die `Style`- und die `Use`-Eigenschaft nicht ändern.</span><span class="sxs-lookup"><span data-stu-id="4df18-195">In most cases, you should not change the default settings for the `Style` and `Use` properties.</span></span>  
   
-## Kontrollieren des Serialisierungsprozesses  
- Es gibt eine Reihe von Möglichkeiten, die Art und Weise anzupassen, in der Daten serialisiert werden.  
+## <a name="controlling-the-serialization-process"></a><span data-ttu-id="4df18-196">Kontrollieren des Serialisierungsprozesses</span><span class="sxs-lookup"><span data-stu-id="4df18-196">Controlling the Serialization Process</span></span>  
+ <span data-ttu-id="4df18-197">Es gibt eine Reihe von Möglichkeiten, die Art und Weise anzupassen, in der Daten serialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-197">You can do a number of things to customize the way data is serialized.</span></span>  
   
-### Ändern der Serverserialisierungseinstellungen  
- Wenn das Standard\-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, können Sie einige Aspekte des Serialisierungsprozesses für den Dienst durch Anwenden des <xref:System.ServiceModel.ServiceBehaviorAttribute>\-Attributs auf den Dienst steuern.Sie können insbesondere die `MaxItemsInObjectGraph`\-Eigenschaft verwenden, um das Kontingent festzulegen, das die maximale Anzahl an Objekten einschränkt, die das <xref:System.Runtime.Serialization.DataContractSerializer> deserialisiert.Sie können die `IgnoreExtensionDataObject`\-Eigenschaft verwenden, um die Roundtrip\-Versionsverwaltungsfunktion zu deaktivieren.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Kontingenten finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu Roundtrips finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+### <a name="changing-server-serialization-settings"></a><span data-ttu-id="4df18-198">Ändern der Serverserialisierungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="4df18-198">Changing Server Serialization Settings</span></span>  
+ <span data-ttu-id="4df18-199">Wenn das Standard-<xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, können Sie einige Aspekte des Serialisierungsprozesses für den Dienst durch Anwenden des <xref:System.ServiceModel.ServiceBehaviorAttribute>-Attributs auf den Dienst steuern.</span><span class="sxs-lookup"><span data-stu-id="4df18-199">When the default <xref:System.Runtime.Serialization.DataContractSerializer> is in use, you can control some aspects of the serialization process on the service by applying the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to the service.</span></span> <span data-ttu-id="4df18-200">Sie können insbesondere die `MaxItemsInObjectGraph`-Eigenschaft verwenden, um das Kontingent festzulegen, das die maximale Anzahl an Objekten einschränkt, die das <xref:System.Runtime.Serialization.DataContractSerializer> deserialisiert.</span><span class="sxs-lookup"><span data-stu-id="4df18-200">Specifically, you may use the `MaxItemsInObjectGraph` property to set the quota that limits the maximum number of objects the <xref:System.Runtime.Serialization.DataContractSerializer> deserializes.</span></span> <span data-ttu-id="4df18-201">Sie können die `IgnoreExtensionDataObject`-Eigenschaft verwenden, um die Roundtrip-Versionsverwaltungsfunktion zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="4df18-201">You can use the `IgnoreExtensionDataObject` property to turn off the round-tripping versioning feature.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4df18-202">Kontingente, finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-202"> quotas, see [Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4df18-203">Round-Tripping, finden Sie unter [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-203"> round-tripping, see [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span></span>  
   
 ```csharp  
-  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
 public class MyDataService:IDataService  
 {  
@@ -487,7 +463,6 @@ public class MyDataService:IDataService
 ```  
   
 ```vb  
-  
 <ServiceBehavior(MaxItemsInObjectGraph:=100000)>  
 Public Class MyDataService Implements IDataService  
   
@@ -495,15 +470,14 @@ Public Class MyDataService Implements IDataService
          ‘ Implementation omitted  
     End Function  
 End Interface  
-  
 ```  
   
-### Serialisierungsverhalten  
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stehen zwei Arten von Verhalten zur Verfügung, das <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> und das <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>, die automatisch geladen werden, je nachdem, welches Serialisierungsprogramm für einen bestimmten Vorgang verwendet wird.Da diese Arten von Verhalten automatisch angewendet werden, müssen Sie sie normalerweise nicht beachten.  
+### <a name="serialization-behaviors"></a><span data-ttu-id="4df18-204">Serialisierungsverhalten</span><span class="sxs-lookup"><span data-stu-id="4df18-204">Serialization Behaviors</span></span>  
+ <span data-ttu-id="4df18-205">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stehen zwei Arten von Verhalten zur Verfügung, das <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> und das <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>, die automatisch geladen werden, je nachdem, welches Serialisierungsprogramm für einen bestimmten Vorgang verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-205">Two behaviors are available in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> and the <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> that are automatically plugged in depending on which serializer is in use for a particular operation.</span></span> <span data-ttu-id="4df18-206">Da diese Arten von Verhalten automatisch angewendet werden, müssen Sie sie normalerweise nicht beachten.</span><span class="sxs-lookup"><span data-stu-id="4df18-206">Because these behaviors are applied automatically, you normally do not have to be aware of them.</span></span>  
   
- `DataContractSerializerOperationBehavior` weist jedoch die `MaxItemsInObjectGraph`\-, die `IgnoreExtensionDataObject`\- und die `DataContractSurrogate`\-Eigenschaften auf, die Sie zur Anpassung des Serialisierungsprozesses verwenden können.Die ersten beiden Eigenschaften haben die gleiche Bedeutung, wie im vorherigen Abschnitt erläutert.Sie können die `DataContractSurrogate`\-Eigenschaft verwenden, um Datenvertrag\-Ersatzzeichen zu aktivieren, die ein leistungsfähiges Werkzeug zum Anpassen und Erweitern des Serialisierungsprozesses darstellen.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Datenvertrag\-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ <span data-ttu-id="4df18-207">`DataContractSerializerOperationBehavior` weist jedoch die `MaxItemsInObjectGraph`-, die `IgnoreExtensionDataObject`- und die `DataContractSurrogate`-Eigenschaften auf, die Sie zur Anpassung des Serialisierungsprozesses verwenden können.</span><span class="sxs-lookup"><span data-stu-id="4df18-207">However, the `DataContractSerializerOperationBehavior` has the `MaxItemsInObjectGraph`, `IgnoreExtensionDataObject`, and `DataContractSurrogate` properties that you may use to customize the serialization process.</span></span> <span data-ttu-id="4df18-208">Die ersten beiden Eigenschaften haben die gleiche Bedeutung, wie im vorherigen Abschnitt erläutert.</span><span class="sxs-lookup"><span data-stu-id="4df18-208">The first two properties have the same meaning as discussed in the previous section.</span></span> <span data-ttu-id="4df18-209">Sie können die `DataContractSurrogate`-Eigenschaft verwenden, um Datenvertrag-Ersatzzeichen zu aktivieren, die ein leistungsfähiges Werkzeug zum Anpassen und Erweitern des Serialisierungsprozesses darstellen.</span><span class="sxs-lookup"><span data-stu-id="4df18-209">You can use the `DataContractSurrogate` property to enable data contract surrogates, which are a powerful mechanism for customizing and extending the serialization process.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4df18-210">[Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-210"> [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).</span></span>  
   
- Sie können das `DataContractSerializerOperationBehavior` verwenden, um sowohl die Client\- als auch die Serverserialisierung anzupassen.Im folgenden Beispiel wird das Erhöhen des `MaxItemsInObjectGraph`\-Kontingents für den Client veranschaulicht.  
+ <span data-ttu-id="4df18-211">Sie können das `DataContractSerializerOperationBehavior` verwenden, um sowohl die Client- als auch die Serverserialisierung anzupassen.</span><span class="sxs-lookup"><span data-stu-id="4df18-211">You can use the `DataContractSerializerOperationBehavior` to customize both client and server serialization.</span></span> <span data-ttu-id="4df18-212">Im folgenden Beispiel wird das Erhöhen des `MaxItemsInObjectGraph`-Kontingents für den Client veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="4df18-212">The following example shows how to increase the `MaxItemsInObjectGraph` quota on the client.</span></span>  
   
 ```csharp  
 ChannelFactory<IDataService> factory = new ChannelFactory<IDataService>(binding, address);  
@@ -518,7 +492,6 @@ foreach (OperationDescription op in factory.Endpoint.Contract.Operations)
     }  
 }  
 IDataService client = factory.CreateChannel();  
-  
 ```  
   
 ```vb  
@@ -530,10 +503,9 @@ For Each op As OperationDescription In factory.Endpoint.Contract.Operations
         End If  
      Next  
     Dim client As IDataService = factory.CreateChannel  
-  
 ```  
   
- Es folgt der entsprechende Code für den Dienst, falls er selbst gehostet wird.  
+ <span data-ttu-id="4df18-213">Es folgt der entsprechende Code für den Dienst, falls er selbst gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-213">Following is the equivalent code on the service, in the self-hosted case.</span></span>  
   
 ```csharp  
 ServiceHost serviceHost = new ServiceHost(typeof(IDataService))  
@@ -551,7 +523,6 @@ foreach (OperationDescription op in ep.Contract.Operations)
 }  
 }  
 serviceHost.Open();  
-  
 ```  
   
 ```vb  
@@ -566,15 +537,14 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
             Next  
         Next  
         serviceHost.Open()  
-  
 ```  
   
- Falls er im Internet gehostet wird, müssen Sie eine neue abgeleitete `ServiceHost`\-Klasse erstellen und die Diensthostfactory verwenden, um sie zu laden.  
+ <span data-ttu-id="4df18-214">Falls er im Internet gehostet wird, müssen Sie eine neue abgeleitete `ServiceHost`-Klasse erstellen und die Diensthostfactory verwenden, um sie zu laden.</span><span class="sxs-lookup"><span data-stu-id="4df18-214">In the Web-hosted case, you must create a new `ServiceHost` derived class and use a service host factory to plug it in.</span></span>  
   
-### Steuern von Serialisierungseinstellungen in der Konfiguration  
- `MaxItemsInObjectGraph` und `IgnoreExtensionDataObject` können über die Konfiguration mithilfe des `dataContractSerializer`\-Endpunkts oder \-Dienstverhaltens gesteuert werden, wie im folgenden Beispiel dargestellt wird.  
+### <a name="controlling-serialization-settings-in-configuration"></a><span data-ttu-id="4df18-215">Steuern von Serialisierungseinstellungen in der Konfiguration</span><span class="sxs-lookup"><span data-stu-id="4df18-215">Controlling Serialization Settings in Configuration</span></span>  
+ <span data-ttu-id="4df18-216">`MaxItemsInObjectGraph` und `IgnoreExtensionDataObject` können über die Konfiguration mithilfe des `dataContractSerializer`-Endpunkts oder -Dienstverhaltens gesteuert werden, wie im folgenden Beispiel dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-216">The `MaxItemsInObjectGraph` and `IgnoreExtensionDataObject` can be controlled through configuration by using the `dataContractSerializer` endpoint or service behavior, as shown in the following example.</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.serviceModel>  
         <behaviors>  
@@ -594,27 +564,26 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
         </client>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-### Serialisierung von gemeinsamen Typen, Objektdiagrammbeibehaltung und benutzerdefinierte Serialisierungsprogramme  
- Das <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert mithilfe von Datenvertragsnamen und nicht mithilfe von .NET\-Typnamen.Dies entspricht dienstorientierten Architekturgrundsätzen und ermöglicht einen hohen Grad an Flexibilität – die .NET\-Typen können sich ändern, ohne sich auf den Übertragungsvertrag auszuwirken.In seltenen Fällen kann es notwendig sein, tatsächliche .NET\-Typnamen zu serialisieren und dabei eine enge Verknüpfung zwischen dem Client und dem Server vorzunehmen, ähnlich wie bei der .NET\-Framework\-Remotetechnologie.Dies wird nicht empfohlen, außer in seltenen Fällen, die normalerweise auftreten, wenn zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] von .NET Framework\-Remoting migriert wird.In diesem Fall müssen Sie die <xref:System.Runtime.Serialization.NetDataContractSerializer>\-Klasse statt der <xref:System.Runtime.Serialization.DataContractSerializer>\-Klasse verwenden.  
+### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a><span data-ttu-id="4df18-217">Serialisierung von gemeinsamen Typen, Objektdiagrammbeibehaltung und benutzerdefinierte Serialisierungsprogramme</span><span class="sxs-lookup"><span data-stu-id="4df18-217">Shared Type Serialization, Object Graph Preservation, and Custom Serializers</span></span>  
+ <span data-ttu-id="4df18-218">Das <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert mithilfe von Datenvertragsnamen und nicht mithilfe von .NET-Typnamen.</span><span class="sxs-lookup"><span data-stu-id="4df18-218">The <xref:System.Runtime.Serialization.DataContractSerializer> serializes using data contract names and not .NET type names.</span></span> <span data-ttu-id="4df18-219">Dies entspricht dienstorientierten Architekturgrundsätzen und ermöglicht einen hohen Grad an Flexibilität – die .NET-Typen können sich ändern, ohne sich auf den Übertragungsvertrag auszuwirken.</span><span class="sxs-lookup"><span data-stu-id="4df18-219">This is consistent with service-oriented architecture tenets and allows for a great degree of flexibility—the .NET types can change without affecting the wire contract.</span></span> <span data-ttu-id="4df18-220">In seltenen Fällen kann es notwendig sein, tatsächliche .NET-Typnamen zu serialisieren und dabei eine enge Verknüpfung zwischen dem Client und dem Server vorzunehmen, ähnlich wie bei der .NET-Framework-Remotetechnologie.</span><span class="sxs-lookup"><span data-stu-id="4df18-220">In rare cases, you may want to serialize actual .NET type names, thereby introducing a tight coupling between the client and the server, similar to the .NET Framework remoting technology.</span></span> <span data-ttu-id="4df18-221">Dies wird nicht empfohlen, außer in seltenen Fällen, die normalerweise auftreten, wenn zu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] von .NET Framework-Remoting migriert wird.</span><span class="sxs-lookup"><span data-stu-id="4df18-221">This is not a recommended practice, except in rare cases that usually occur when migrating to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] from .NET Framework remoting.</span></span> <span data-ttu-id="4df18-222">In diesem Fall müssen Sie die <xref:System.Runtime.Serialization.NetDataContractSerializer>-Klasse statt der <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse verwenden.</span><span class="sxs-lookup"><span data-stu-id="4df18-222">In this case, you must use the <xref:System.Runtime.Serialization.NetDataContractSerializer> class instead of the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span>  
   
- Das <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert normalerweise Objektdiagramme als Objektstrukturen, d. h. auf dasselbe Objekt wird mehr als einmal verwiesen, es wird mehr als einmal serialisiert.Betrachten Sie z. B. eine `PurchaseOrder`\-Instanz, die über zwei Felder vom Typ Adresse mit den Namen `billTo` und `shipTo` verfügt.Wenn beide Felder auf dieselbe Adressinstanz festgelegt werden, gibt es zwei identische Adressinstanzen nach der Serialisierung und der Deserialisierung.Dies erfolgt, weil es kein interoperables Standardverfahren zur Darstellung von Objektdiagrammen in XML gibt \(außer dem älteren SOAP\-Codierungsstandard, der für <xref:System.Xml.Serialization.XmlSerializer> verfügbar ist, wie im vorigen Abschnitt über `Style` und `Use` beschrieben\).Objektdiagramme als Strukturen zu serialisieren, bringt gewisse Nachteile mit sich, z. B. können Diagramme mit Zirkelverweisen nicht serialisiert werden.Gelegentlich ist es erforderlich, auf echte Objektdiagrammserialisierung umzustellen, obwohl sie nicht interoperabel ist.Dies kann durch Verwendung vom <xref:System.Runtime.Serialization.DataContractSerializer> erfolgen, das mit dem `preserveObjectReferences`\-Parameter konstruiert ist, der auf `true` festgelegt ist.  
+ <span data-ttu-id="4df18-223">Das <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert normalerweise Objektdiagramme als Objektstrukturen, </span><span class="sxs-lookup"><span data-stu-id="4df18-223">The <xref:System.Runtime.Serialization.DataContractSerializer> normally serializes object graphs as object trees.</span></span> <span data-ttu-id="4df18-224">d. h. auf dasselbe Objekt wird mehr als einmal verwiesen, es wird mehr als einmal serialisiert.</span><span class="sxs-lookup"><span data-stu-id="4df18-224">That is, if the same object is referred to more than once, it is serialized more than once.</span></span> <span data-ttu-id="4df18-225">Betrachten Sie z. B. eine `PurchaseOrder`-Instanz, die über zwei Felder vom Typ Adresse mit den Namen `billTo` und `shipTo` verfügt.</span><span class="sxs-lookup"><span data-stu-id="4df18-225">For example, consider a `PurchaseOrder` instance that has two fields of type Address called `billTo` and `shipTo`.</span></span> <span data-ttu-id="4df18-226">Wenn beide Felder auf dieselbe Adressinstanz festgelegt werden, gibt es zwei identische Adressinstanzen nach der Serialisierung und der Deserialisierung.</span><span class="sxs-lookup"><span data-stu-id="4df18-226">If both fields are set to the same Address instance, there are two identical Address instances after serialization and deserialization.</span></span> <span data-ttu-id="4df18-227">Dies erfolgt, weil es kein interoperables Standardverfahren zur Darstellung von Objektdiagrammen in XML gibt (außer dem älteren SOAP-Codierungsstandard, der für <xref:System.Xml.Serialization.XmlSerializer> verfügbar ist, wie im vorigen Abschnitt über `Style` und `Use` beschrieben).</span><span class="sxs-lookup"><span data-stu-id="4df18-227">This is done because there is no standard interoperable way to represent object graphs in XML (except for the legacy SOAP encoded standard available on the <xref:System.Xml.Serialization.XmlSerializer>, as described in the previous section on `Style` and `Use`).</span></span> <span data-ttu-id="4df18-228">Objektdiagramme als Strukturen zu serialisieren, bringt gewisse Nachteile mit sich, z. B. können Diagramme mit Zirkelverweisen nicht serialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-228">Serializing object graphs as trees has certain disadvantages, for example, graphs with circular references cannot be serialized.</span></span> <span data-ttu-id="4df18-229">Gelegentlich ist es erforderlich, auf echte Objektdiagrammserialisierung umzustellen, obwohl sie nicht interoperabel ist.</span><span class="sxs-lookup"><span data-stu-id="4df18-229">Occasionally, it is necessary to switch to true object graph serialization, even though it is not interoperable.</span></span> <span data-ttu-id="4df18-230">Dies kann durch Verwendung vom <xref:System.Runtime.Serialization.DataContractSerializer> erfolgen, das mit dem `preserveObjectReferences`-Parameter konstruiert ist, der auf `true` festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="4df18-230">This can be done by using the <xref:System.Runtime.Serialization.DataContractSerializer> constructed with the `preserveObjectReferences` parameter set to `true`.</span></span>  
   
- Gelegentlich reichen die integrierten Serialisierungsprogramme nicht für das Szenario aus.In den meisten Fällen können Sie trotzdem die <xref:System.Runtime.Serialization.XmlObjectSerializer>\-Abstraktion verwenden, von der sowohl das <xref:System.Runtime.Serialization.DataContractSerializer> als auch das <xref:System.Runtime.Serialization.NetDataContractSerializer> abgeleitet werden.  
+ <span data-ttu-id="4df18-231">Gelegentlich reichen die integrierten Serialisierungsprogramme nicht für das Szenario aus.</span><span class="sxs-lookup"><span data-stu-id="4df18-231">Occasionally, the built-in serializers are not enough for your scenario.</span></span> <span data-ttu-id="4df18-232">In den meisten Fällen können Sie trotzdem die <xref:System.Runtime.Serialization.XmlObjectSerializer>-Abstraktion verwenden, von der sowohl das <xref:System.Runtime.Serialization.DataContractSerializer> als auch das <xref:System.Runtime.Serialization.NetDataContractSerializer> abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="4df18-232">In most cases, you can still use the <xref:System.Runtime.Serialization.XmlObjectSerializer> abstraction from which both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Runtime.Serialization.NetDataContractSerializer> derive.</span></span>  
   
- Die drei vorherigen Fälle \(.NET\-Typbeibehaltung, Objektdiagrammbeibehaltung und die vollkommen benutzerdefinierte `XmlObjectSerializer`\-basierte Serialisierung\) erfordern alle die Einbindung eines benutzerdefinierten Serialisierungsprogramms.Gehen Sie hierzu folgendermaßen vor:  
+ <span data-ttu-id="4df18-233">Die drei vorherigen Fälle (.NET-Typbeibehaltung, Objektdiagrammbeibehaltung und die vollkommen benutzerdefinierte `XmlObjectSerializer`-basierte Serialisierung) erfordern alle die Einbindung eines benutzerdefinierten Serialisierungsprogramms.</span><span class="sxs-lookup"><span data-stu-id="4df18-233">The previous three cases (.NET type preservation, object graph preservation, and completely custom `XmlObjectSerializer`-based serialization) all require a custom serializer be plugged in.</span></span> <span data-ttu-id="4df18-234">Gehen Sie hierzu folgendermaßen vor:</span><span class="sxs-lookup"><span data-stu-id="4df18-234">To do this, perform the following steps:</span></span>  
   
-1.  Schreiben Sie ein eigenes Verhalten, das sich vom <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> herleitet.  
+1.  <span data-ttu-id="4df18-235">Schreiben Sie ein eigenes Verhalten, das sich vom <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> herleitet.</span><span class="sxs-lookup"><span data-stu-id="4df18-235">Write your own behavior deriving from the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.</span></span>  
   
-2.  Überschreiben Sie die beiden `CreateSerializer`\-Methoden, um Ihr eigenes Serialisierungsprogramm zurückzugeben \(entweder das <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> mit `preserveObjectReferences` festgelegt auf `true` oder Ihr eigenes benutzerdefiniertes <xref:System.Runtime.Serialization.XmlObjectSerializer>\).  
+2.  <span data-ttu-id="4df18-236">Überschreiben Sie die beiden `CreateSerializer`-Methoden, um Ihr eigenes Serialisierungsprogramm zurückzugeben (entweder das <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> mit `preserveObjectReferences` festgelegt auf `true` oder Ihr eigenes benutzerdefiniertes <xref:System.Runtime.Serialization.XmlObjectSerializer>).</span><span class="sxs-lookup"><span data-stu-id="4df18-236">Override the two `CreateSerializer` methods to return your own serializer (either the <xref:System.Runtime.Serialization.NetDataContractSerializer>, the <xref:System.Runtime.Serialization.DataContractSerializer> with `preserveObjectReferences` set to `true`, or your own custom <xref:System.Runtime.Serialization.XmlObjectSerializer>).</span></span>  
   
-3.  Vor dem Öffnen des Diensthosts oder dem Erstellen eines Clientkanals entfernen Sie das vorhandene <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>\-Verhalten und binden die benutzerdefinierte abgeleitete Klasse ein, die Sie in den vorherigen Schritten erstellt haben.  
+3.  <span data-ttu-id="4df18-237">Vor dem Öffnen des Diensthosts oder dem Erstellen eines Clientkanals entfernen Sie das vorhandene <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>-Verhalten und binden die benutzerdefinierte abgeleitete Klasse ein, die Sie in den vorherigen Schritten erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="4df18-237">Before opening the service host or creating a client channel, remove the existing <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> behavior and plug in the custom derived class that you created in the previous steps.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zu erweiterten Serialisierungskonzepten finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4df18-238">Erweiterte Serialisierungskonzepte, finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).</span><span class="sxs-lookup"><span data-stu-id="4df18-238"> advanced serialization concepts, see [Serialization and Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).</span></span>  
   
-## Siehe auch  
- [Verwenden der XmlSerializer\-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)   
- [Vorgehensweise: Aktivieren des Streamingmodus](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)   
- [Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+## <a name="see-also"></a><span data-ttu-id="4df18-239">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4df18-239">See Also</span></span>  
+ [<span data-ttu-id="4df18-240">Verwenden der XmlSerializer-Klasse</span><span class="sxs-lookup"><span data-stu-id="4df18-240">Using the XmlSerializer Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [<span data-ttu-id="4df18-241">Vorgehensweise: Aktivieren von Streaming</span><span class="sxs-lookup"><span data-stu-id="4df18-241">How to: Enable Streaming</span></span>](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
+ [<span data-ttu-id="4df18-242">Vorgehensweise: erstellen ein grundlegenden Datenvertrags für eine Klasse oder Struktur</span><span class="sxs-lookup"><span data-stu-id="4df18-242">How to: Create a Basic Data Contract for a Class or Structure</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

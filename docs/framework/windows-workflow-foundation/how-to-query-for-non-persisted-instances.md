@@ -1,69 +1,67 @@
 ---
-title: "Vorgehensweise: Abfrage von nicht persistenten Instanzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Abfrage von nicht persistenten Instanzen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Abfrage von nicht persistenten Instanzen
-Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL\-Workflowinstanzspeicher\-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher.Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL\-Workflowinstanzspeicher\-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.  
+# <a name="how-to-query-for-non-persisted-instances"></a><span data-ttu-id="4c530-102">Vorgehensweise: Abfrage von nicht persistenten Instanzen</span><span class="sxs-lookup"><span data-stu-id="4c530-102">How to: Query for Non-persisted Instances</span></span>
+<span data-ttu-id="4c530-103">Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL-Workflowinstanzspeicher-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher.</span><span class="sxs-lookup"><span data-stu-id="4c530-103">When a new instance of a service is created and the service has the SQL Workflow Instance Store behavior defined, the service host creates a initial entry for that service instance in the instance store.</span></span> <span data-ttu-id="4c530-104">Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL-Workflowinstanzspeicher-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="4c530-104">Subsequently when the service instance persists for the first time, the SQL Workflow Instance Store behavior stores the current instance state together with additional data that is required for activation, recovery, and control.</span></span>  
   
- Wenn eine Instanz nach dem Erstellen des ersten Eintrags nicht permanent gespeichert wird, ist der Status der Instanz "nicht permanent".Alle permanent gespeicherten Dienstinstanzen können abgefragt und gesteuert werden.Nicht permanente Dienstinstanzen können weder abgefragt noch gesteuert werden.Wenn eine nicht permanente Instanz aufgrund einer nicht behandelten Ausnahme angehalten wird, kann diese abgefragt, jedoch nicht gesteuert werden.  
+ <span data-ttu-id="4c530-105">Wenn eine Instanz nach dem Erstellen des ersten Eintrags nicht permanent gespeichert wird, ist der Status der Instanz "nicht permanent".</span><span class="sxs-lookup"><span data-stu-id="4c530-105">If an instance is not persisted after the initial entry for the instance is created, the service instance is said to be in the non-persisted state.</span></span> <span data-ttu-id="4c530-106">Alle permanent gespeicherten Dienstinstanzen können abgefragt und gesteuert werden.</span><span class="sxs-lookup"><span data-stu-id="4c530-106">All the persisted service instances can be queried and controlled.</span></span> <span data-ttu-id="4c530-107">Nicht permanente Dienstinstanzen können weder abgefragt noch gesteuert werden.</span><span class="sxs-lookup"><span data-stu-id="4c530-107">Non-persisted service instances can neither be queried nor controlled.</span></span> <span data-ttu-id="4c530-108">Wenn eine nicht permanente Instanz aufgrund einer nicht behandelten Ausnahme angehalten wird, kann diese abgefragt, jedoch nicht gesteuert werden.</span><span class="sxs-lookup"><span data-stu-id="4c530-108">If a non-persisted instance is suspended due to an unhandled exception it can be queried but not controlled.</span></span>  
   
- Permanente Dienstinstanzen, die noch nicht persistent gespeichert wurden, behalten in den folgenden Szenarios den Status "nicht persistent":  
+ <span data-ttu-id="4c530-109">Permanente Dienstinstanzen, die noch nicht persistent gespeichert wurden, behalten in den folgenden Szenarios den Status "nicht persistent":</span><span class="sxs-lookup"><span data-stu-id="4c530-109">Durable service instances that are not yet persisted remain in a non-persisted state in the following scenarios:</span></span>  
   
--   Der Diensthost stürzt ab, bevor die Instanz zum ersten Mal persistent gespeichert wurde.Der ursprüngliche Eintrag für die Instanz verbleibt im Instanzspeicher.Die Instanz ist nicht wiederherstellbar.Bei Empfang einer korrelierten Meldung wird die Instanz erneut aktiviert.  
+-   <span data-ttu-id="4c530-110">Der Diensthost stürzt ab, bevor die Instanz zum ersten Mal persistent gespeichert wurde.</span><span class="sxs-lookup"><span data-stu-id="4c530-110">The service host crashes before the instance persisted for the first time.</span></span> <span data-ttu-id="4c530-111">Der ursprüngliche Eintrag für die Instanz verbleibt im Instanzspeicher.</span><span class="sxs-lookup"><span data-stu-id="4c530-111">The initial entry for the instance remains in the instance store.</span></span> <span data-ttu-id="4c530-112">Die Instanz ist nicht wiederherstellbar.</span><span class="sxs-lookup"><span data-stu-id="4c530-112">The instance is not recoverable.</span></span> <span data-ttu-id="4c530-113">Bei Empfang einer korrelierten Meldung wird die Instanz erneut aktiviert.</span><span class="sxs-lookup"><span data-stu-id="4c530-113">If a correlated message arrives, the instance becomes active again.</span></span>  
   
--   Es tritt eine nicht behandelte Ausnahme auf, bevor die Instanz zum ersten Mal persistent gespeichert wurde.Die folgenden Szenarios treten auf:  
+-   <span data-ttu-id="4c530-114">Es tritt eine nicht behandelte Ausnahme auf, bevor die Instanz zum ersten Mal persistent gespeichert wurde.</span><span class="sxs-lookup"><span data-stu-id="4c530-114">The instance experiences an unhandled exception before it persisted for the first time.</span></span> <span data-ttu-id="4c530-115">Die folgenden Szenarios treten auf:</span><span class="sxs-lookup"><span data-stu-id="4c530-115">The following scenarios arise</span></span>  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **Abandon** festgelegt ist, werden die Dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und die Instanz wird aus dem Arbeitsspeicher entladen.Die Instanz verbleibt in der Persistenzdatenbank im nicht persistenten Status.  
+    -   <span data-ttu-id="4c530-116">Wenn der Wert der **UnhandledExceptionAction** -Eigenschaftensatz auf **verwerfen**, die dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und die Instanz wird aus dem Arbeitsspeicher entladen.</span><span class="sxs-lookup"><span data-stu-id="4c530-116">If the value of the **UnhandledExceptionAction** property is set to **Abandon**, the service deployment information is written to the instance store and the instance is unloaded from memory.</span></span> <span data-ttu-id="4c530-117">Die Instanz verbleibt in der Persistenzdatenbank im nicht persistenten Status.</span><span class="sxs-lookup"><span data-stu-id="4c530-117">The instance remains in non-persisted state in the persistence database.</span></span>  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **AbandonAndSuspsend** festgelegt ist, werden die Dienstbereitstellungsinformationen in die Persistenzdatenbank geschrieben, und der Instanzstatus wird auf **Angehalten** festgelegt.Die Instanz kann nicht fortgesetzt, abgebrochen oder beendet werden.Der Diensthost kann die Instanz nicht laden, da die Instanz noch nicht persistent gespeichert wurde, d. h. der Datenbankeintrag für die Instanz ist noch nicht abgeschlossen.  
+    -   <span data-ttu-id="4c530-118">Wenn der Wert der **UnhandledExceptionAction** -Eigenschaftensatz auf **AbandonAndSuspsend**, die dienstbereitstellungsinformationen in die Persistenzdatenbank geschrieben, und der Instanzstatus auf festgelegtist **Angehalten**.</span><span class="sxs-lookup"><span data-stu-id="4c530-118">If the value of the **UnhandledExceptionAction** property is set to **AbandonAndSuspsend**, the service deployment information is written to the persistence database and the instance state is set to **Suspended**.</span></span> <span data-ttu-id="4c530-119">Die Instanz kann nicht fortgesetzt, abgebrochen oder beendet werden.</span><span class="sxs-lookup"><span data-stu-id="4c530-119">The instance cannot be resumed, canceled, or terminated.</span></span> <span data-ttu-id="4c530-120">Der Diensthost kann die Instanz nicht laden, da die Instanz noch nicht persistent gespeichert wurde, d. h. der Datenbankeintrag für die Instanz ist noch nicht abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="4c530-120">The service host cannot load the instance because the instance hasn't persisted yet and, hence the database entry for the instance is not complete.</span></span>  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **Cancel** oder **Terminate** festgelegt ist, werden die Dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und der Instanzstatus wird auf **Abgeschlossen** festgelegt.  
+    -   <span data-ttu-id="4c530-121">Wenn der Wert des der **UnhandledExceptionAction** -Eigenschaftensatz auf **"Abbrechen"** oder **terminieren**, die dienstbereitstellungsinformationen in den Instanzspeicher geschrieben und die Instanzstatus wird festgelegt, um **abgeschlossen**.</span><span class="sxs-lookup"><span data-stu-id="4c530-121">If the value of the **UnhandledExceptionAction** property is set to **Cancel** or **Terminate**, the service deployment information is written to the instance store and the instance state is set to **Completed**.</span></span>  
   
- Die folgenden Abschnitte enthalten Beispielabfragen zur Suche von nicht persistenten Instanzen in der SQL\-Persistenzdatenbank und zum Löschen dieser Instanzen aus der Datenbank.  
+ <span data-ttu-id="4c530-122">Die folgenden Abschnitte enthalten Beispielabfragen zur Suche von nicht persistenten Instanzen in der SQL-Persistenzdatenbank und zum Löschen dieser Instanzen aus der Datenbank.</span><span class="sxs-lookup"><span data-stu-id="4c530-122">The following sections provide sample queries to find non-persisted instances in the SQL persistence database and to delete these instances from the database.</span></span>  
   
-## So suchen Sie nach allen noch nicht persistenten Instanzen  
- Die folgende SQL\-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die noch nicht persistent in der Persistenzdatenbank gespeichert wurden.  
+## <a name="to-find-all-instances-not-persisted-yet"></a><span data-ttu-id="4c530-123">So suchen Sie nach allen noch nicht persistenten Instanzen</span><span class="sxs-lookup"><span data-stu-id="4c530-123">To find all instances not persisted yet</span></span>  
+ <span data-ttu-id="4c530-124">Die folgende SQL-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die noch nicht persistent in der Persistenzdatenbank gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="4c530-124">The following SQL query returns the ID and creation time for all instances that are not persisted in to the persistence database yet.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0;  
-  
 ```  
   
-## So suchen Sie nach allen noch nicht persistenten und nicht geladenen Instanzen  
- Die folgende SQL\-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die nicht persistent gespeichert und auch nicht geladen wurden.  
+## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a><span data-ttu-id="4c530-125">So suchen Sie nach allen noch nicht persistenten und nicht geladenen Instanzen</span><span class="sxs-lookup"><span data-stu-id="4c530-125">To find all instances not persisted yet and also not loaded</span></span>  
+ <span data-ttu-id="4c530-126">Die folgende SQL-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die nicht persistent gespeichert und auch nicht geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="4c530-126">The following SQL query returns ID and creation time for all instances that are not persisted and also are not loaded.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and CurrentMachine is NULL;  
-  
 ```  
   
-## So suchen Sie nach allen angehaltenen noch nicht persistenten Instanzen  
- Die folgende SQL\-Abfrage gibt die ID, den Erstellungszeitpunkt, den Unterbrechungsgrund und den Namen der Unterbrechungsausnahme für alle Instanzen an, die nicht persistent sind und angehalten wurden.  
+## <a name="to-find-all-suspended-instances-not-persisted-yet"></a><span data-ttu-id="4c530-127">So suchen Sie nach allen angehaltenen noch nicht persistenten Instanzen</span><span class="sxs-lookup"><span data-stu-id="4c530-127">To find all suspended instances not persisted yet</span></span>  
+ <span data-ttu-id="4c530-128">Die folgende SQL-Abfrage gibt die ID, den Erstellungszeitpunkt, den Unterbrechungsgrund und den Namen der Unterbrechungsausnahme für alle Instanzen an, die nicht persistent sind und angehalten wurden.</span><span class="sxs-lookup"><span data-stu-id="4c530-128">The following SQL query returns ID, creation time, suspension reason, and suspension exception name for all instances that are not persisted and also in a suspended state.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and IsSuspended = 1;  
-  
 ```  
   
-## So löschen Sie nicht persistente Instanzen aus der Persistenzdatenbank  
- Es wird empfohlen, den Instanzspeicher in regelmäßigen Abständen auf nicht persistente Instanzen zu überprüfen und diese aus dem Instanzspeicher zu entfernen, wenn Sie sicher sind, dass die Instanz keine korrelierte Meldung empfangen wird.Beispiel: Wenn eine Instanz sich bereits mehrere Monate in der Datenbank befindet und Sie wissen, dass der Workflow in der Regel eine Lebensdauer von einigen Tagen hat, können Sie sicher annehmen, dass es sich um eine nicht initialisierte Instanz handelt, die abgestürzt ist.  
+## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a><span data-ttu-id="4c530-129">So löschen Sie nicht persistente Instanzen aus der Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="4c530-129">To delete non-persisted instances from the persistence database</span></span>  
+ <span data-ttu-id="4c530-130">Es wird empfohlen, den Instanzspeicher in regelmäßigen Abständen auf nicht persistente Instanzen zu überprüfen und diese aus dem Instanzspeicher zu entfernen, wenn Sie sicher sind, dass die Instanz keine korrelierte Meldung empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="4c530-130">You should periodically check the instance store for non-persisted instances and remove instances from the instance store if you are sure that the instance will not receive a correlated message.</span></span> <span data-ttu-id="4c530-131">Beispiel: Wenn eine Instanz sich bereits mehrere Monate in der Datenbank befindet und Sie wissen, dass der Workflow in der Regel eine Lebensdauer von einigen Tagen hat, können Sie sicher annehmen, dass es sich um eine nicht initialisierte Instanz handelt, die abgestürzt ist.</span><span class="sxs-lookup"><span data-stu-id="4c530-131">For example, if the instance has been in the database for several months and you know that the workflow typically has a lifetime of a few days, it would be safe to assume that this is an uninitialized instance that had crashed.</span></span>  
   
- Im Allgemeinen ist es sicher, nicht persistente Instanzen zu löschen, die nicht angehalten oder geladen wurden.Löschen Sie nicht **alle** nicht persistenten Instanzen. Darunter sind auch gerade erstellte Instanzen, die noch nicht persistent gespeichert werden konnten.Löschen Sie nur nicht persistente Instanzen, die nicht mehr verwendet werden können, da beim Laden der Instanz durch den Workflowdiensthost oder durch die Instanz selbst eine Ausnahme ausgelöst wurde.  
+ <span data-ttu-id="4c530-132">Im Allgemeinen ist es sicher, nicht persistente Instanzen zu löschen, die nicht angehalten oder geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="4c530-132">In general, it is safe to delete non-persisted instances that are not suspended or not loaded.</span></span> <span data-ttu-id="4c530-133">Sie sollten nicht löschen **alle** nicht persistenter Instanzen, da diese Instanz Instanzen enthält, die gerade erstellt haben, aber nicht noch beibehalten.</span><span class="sxs-lookup"><span data-stu-id="4c530-133">You should not delete **all** the non-persisted instances because this instance set includes instances that are just created but are not persisted yet.</span></span> <span data-ttu-id="4c530-134">Löschen Sie nur nicht persistente Instanzen, die nicht mehr verwendet werden können, da beim Laden der Instanz durch den Workflowdiensthost oder durch die Instanz selbst eine Ausnahme ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="4c530-134">You should only delete non-persisted instances that are left over because the workflow service host that had the instance loaded caused an exception or the instance itself caused an exception.</span></span>  
   
 > [!WARNING]
->  Durch das Löschen nicht persistenter Instanzen aus dem Instanzspeicher wird weniger Speicher belegt und die Leistung von Speichervorgängen möglicherweise verbessert.
+>  <span data-ttu-id="4c530-135">Durch das Löschen nicht persistenter Instanzen aus dem Instanzspeicher wird weniger Speicher belegt und die Leistung von Speichervorgängen möglicherweise verbessert.</span><span class="sxs-lookup"><span data-stu-id="4c530-135">Deleting non-persisted instances from the instance store decreases the size of the store and may improve the performance of store operations.</span></span>

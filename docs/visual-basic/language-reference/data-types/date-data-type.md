@@ -1,91 +1,89 @@
 ---
-title: "Date Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Date"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Date data type"
-  - "dates, Visual Basic data types"
-  - "times, Date data type"
-  - "Date literals"
-  - "data values"
-  - "times, Visual Basic data types"
-  - "dates, Date data type"
-  - "data types [Visual Basic], assigning"
-  - "literals, Date"
-  - "# specifier for Date literals"
+title: Date-Datentyp (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Date
+helpviewer_keywords:
+- Date data type
+- dates [Visual Basic], Visual Basic data types
+- times [Visual Basic], Date data type
+- Date literals [Visual Basic]
+- data values [Visual Basic]
+- times [Visual Basic], Visual Basic data types
+- dates [Visual Basic], Date data type
+- data types [Visual Basic], assigning
+- literals [Visual Basic], Date
+- '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 190b40888dc4a42075b7b6b27bdb1bd403a7efb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Date Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Enthält IEEE\-64\-Bit\(8\-Byte\)\-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr \(Mitternacht\) bis 23:59:59.9999999 Uhr darstellen.  Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar.  Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.  
+# <a name="date-data-type-visual-basic"></a><span data-ttu-id="43262-102">Date-Datentyp (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43262-102">Date Data Type (Visual Basic)</span></span>
+<span data-ttu-id="43262-103">Enthält IEEE-64-Bit(8-Byte)-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr (Mitternacht) bis 23:59:59.9999999 Uhr darstellen.</span><span class="sxs-lookup"><span data-stu-id="43262-103">Holds IEEE 64-bit (8-byte) values that represent dates ranging from January 1 of the year 0001 through December 31 of the year 9999, and times from 12:00:00 AM (midnight) through 11:59:59.9999999 PM.</span></span> <span data-ttu-id="43262-104">Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar.</span><span class="sxs-lookup"><span data-stu-id="43262-104">Each increment represents 100 nanoseconds of elapsed time since the beginning of January 1 of the year 1 in the Gregorian calendar.</span></span> <span data-ttu-id="43262-105">Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.</span><span class="sxs-lookup"><span data-stu-id="43262-105">The maximum value represents 100 nanoseconds before the beginning of January 1 of the year 10000.</span></span>  
   
-## Hinweise  
- Verwenden Sie den `Date`\-Datentyp, um Datumswerte, Uhrzeitwerte oder Datums\-und Uhrzeitwerte einzuschließen.  
+## <a name="remarks"></a><span data-ttu-id="43262-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="43262-106">Remarks</span></span>  
+ <span data-ttu-id="43262-107">Verwenden Sie den `Date`-Datentyp, um Datumswerte, Uhrzeitwerte oder Datums-und Uhrzeitwerte einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="43262-107">Use the `Date` data type to contain date values, time values, or date and time values.</span></span>  
   
- Der Standardwert von `Date` ist 0:00:00 \(Mitternacht\) am 1. Januar 0001.  
+ <span data-ttu-id="43262-108">Der Standardwert von `Date` ist 0:00:00 (Mitternacht) am 1. Januar 0001.</span><span class="sxs-lookup"><span data-stu-id="43262-108">The default value of `Date` is 0:00:00 (midnight) on January 1, 0001.</span></span>  
   
- Sie erhalten das aktuelle Datum und die aktuelle Uhrzeit aus der <xref:Microsoft.VisualBasic.DateAndTime>\-Klasse.  
+ <span data-ttu-id="43262-109">Sie erhalten das aktuelle Datum und die aktuelle Uhrzeit aus der <xref:Microsoft.VisualBasic.DateAndTime>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="43262-109">You can get the current date and time from the <xref:Microsoft.VisualBasic.DateAndTime> class.</span></span>  
   
-## Formatanforderungen  
- Sie müssen einen `Date`\-Literal zwischen Nummernzeichen \(`# #`\) einschließen.  Sie müssen den Datumswert im Format M\/T\/JJJJ angeben, z. B. `#5/31/1993#`, oder JJJJ\-MM\-TT, z. B. `#1993-5-31#`.  Wenn Sie das Jahr zuerst angeben, können Sie Schrägstriche verwenden.  Dies gilt unabhängig vom Gebietsschema und den Formateinstellungen für Datum und Uhrzeit Ihres Computers .  
+## <a name="format-requirements"></a><span data-ttu-id="43262-110">Formatanforderungen</span><span class="sxs-lookup"><span data-stu-id="43262-110">Format Requirements</span></span>  
+ <span data-ttu-id="43262-111">Sie müssen einen `Date`-Literal zwischen Nummernzeichen (`# #`) einschließen.</span><span class="sxs-lookup"><span data-stu-id="43262-111">You must enclose a `Date` literal within number signs (`# #`).</span></span> <span data-ttu-id="43262-112">Sie müssen den Datumswert im Format M/T/JJJJ angeben, z. B. `#5/31/1993#`, oder JJJJ-MM-TT, z. B. `#1993-5-31#`.</span><span class="sxs-lookup"><span data-stu-id="43262-112">You must specify the date value in the format M/d/yyyy, for example `#5/31/1993#`, or yyyy-MM-dd, for example `#1993-5-31#`.</span></span> <span data-ttu-id="43262-113">Wenn Sie das Jahr zuerst angeben, können Sie Schrägstriche verwenden.</span><span class="sxs-lookup"><span data-stu-id="43262-113">You can use slashes when specifying the year first.</span></span>  <span data-ttu-id="43262-114">Dies gilt unabhängig vom Gebietsschema und den Formateinstellungen für Datum und Uhrzeit Ihres Computers .</span><span class="sxs-lookup"><span data-stu-id="43262-114">This requirement is independent of your locale and your computer's date and time format settings.</span></span>  
   
- Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll.  Angenommen, Sie möchten ein `Date`\-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen.  In einem Gebietsschema, das MM\/TT\/JJJJ verwendet, wird 3\/4\/1998 wie gewünscht kompiliert.  Aber nehmen wir an, dass Sie die Anwendung in vielen Ländern bereitstellen.  In einem Gebietsschema, das TT\/MM\/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert.  In einem Gebietsschema, das JJJJ\/MM\/TT verwendet, wäre das Literal ungültig \(1998. April 0003\) und würde einen Compilerfehler verursachen.  
+ <span data-ttu-id="43262-115">Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll.</span><span class="sxs-lookup"><span data-stu-id="43262-115">The reason for this restriction is that the meaning of your code should never change depending on the locale in which your application is running.</span></span> <span data-ttu-id="43262-116">Angenommen, Sie möchten ein `Date`-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen.</span><span class="sxs-lookup"><span data-stu-id="43262-116">Suppose you hard-code a `Date` literal of `#3/4/1998#` and intend it to mean March 4, 1998.</span></span> <span data-ttu-id="43262-117">In einem Gebietsschema, das MM/TT/JJJJ verwendet, wird 3/4/1998 wie gewünscht kompiliert.</span><span class="sxs-lookup"><span data-stu-id="43262-117">In a locale that uses mm/dd/yyyy, 3/4/1998 compiles as you intend.</span></span> <span data-ttu-id="43262-118">Aber nehmen wir an, dass Sie die Anwendung in vielen Ländern bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="43262-118">But suppose you deploy your application in many countries.</span></span> <span data-ttu-id="43262-119">In einem Gebietsschema, das TT/MM/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert.</span><span class="sxs-lookup"><span data-stu-id="43262-119">In a locale that uses dd/mm/yyyy, your hard-coded literal would compile to April 3, 1998.</span></span> <span data-ttu-id="43262-120">In einem Gebietsschema, das JJJJ/MM/TT verwendet, wäre das Literal ungültig (1998. April 0003) und würde einen Compilerfehler verursachen.</span><span class="sxs-lookup"><span data-stu-id="43262-120">In a locale that uses yyyy/mm/dd, the literal would be invalid (April 1998, 0003) and cause a compiler error.</span></span>  
   
-## Problemumgehung  
- Um ein `Date`\-Literal in das Format Ihres Gebietsschemas oder in ein benutzerdefiniertes Format zu konvertieren, müssen Sie das Literal für die <xref:Microsoft.VisualBasic.Strings.Format%2A>\-Funktion bereitstellen und entweder ein vordefiniertes oder ein benutzerdefiniertes Datumsformat angeben.  Dies wird im folgenden Beispiel veranschaulicht:  
+## <a name="workarounds"></a><span data-ttu-id="43262-121">Problemumgehung</span><span class="sxs-lookup"><span data-stu-id="43262-121">Workarounds</span></span>  
+ <span data-ttu-id="43262-122">Um ein `Date`-Literal in das Format Ihres Gebietsschemas oder in ein benutzerdefiniertes Format zu konvertieren, müssen Sie das Literal für die <xref:Microsoft.VisualBasic.Strings.Format%2A>-Funktion bereitstellen und entweder ein vordefiniertes oder ein benutzerdefiniertes Datumsformat angeben.</span><span class="sxs-lookup"><span data-stu-id="43262-122">To convert a `Date` literal to the format of your locale, or to a custom format, supply the literal to the <xref:Microsoft.VisualBasic.Strings.Format%2A> function, specifying either a predefined or user-defined date format.</span></span> <span data-ttu-id="43262-123">Dies wird im folgenden Beispiel veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="43262-123">The following example demonstrates this.</span></span>  
   
 ```  
 MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))  
 ```  
   
- Alternativ können Sie einen der überladenen Konstruktoren der <xref:System.DateTime>\-Struktur verwenden, um einen Datums\- und Uhrzeitwert zu assemblieren.  Im folgenden Beispiel wird ein Wert für den 31. Mai 1993 um 12:14 Uhr nachmittags erstellt.  
+ <span data-ttu-id="43262-124">Alternativ können Sie einen der überladenen Konstruktoren der <xref:System.DateTime>-Struktur verwenden, um einen Datums- und Uhrzeitwert zu assemblieren.</span><span class="sxs-lookup"><span data-stu-id="43262-124">Alternatively, you can use one of the overloaded constructors of the <xref:System.DateTime> structure to assemble a date and time value.</span></span> <span data-ttu-id="43262-125">Im folgenden Beispiel wird ein Wert für den 31. Mai 1993 um 12:14 Uhr nachmittags erstellt.</span><span class="sxs-lookup"><span data-stu-id="43262-125">The following example creates a value to represent May 31, 1993 at 12:14 in the afternoon.</span></span>  
   
 ```  
-Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)   
+Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)  
 ```  
   
-## Stundenformat  
- Sie können den Zeitwert im 12\- oder 24\-Stunden\-Format angeben, z. B. `#1:15:30 PM#` oder `#13:15:30#`.  Wenn Sie allerdings weder Minuten noch Sekunden angeben, müssen Sie AM oder PM angeben.  
+## <a name="hour-format"></a><span data-ttu-id="43262-126">Stundenformat</span><span class="sxs-lookup"><span data-stu-id="43262-126">Hour Format</span></span>  
+ <span data-ttu-id="43262-127">Sie können den Zeitwert im 12- oder 24-Stunden-Format angeben, z. B. `#1:15:30 PM#` oder `#13:15:30#`.</span><span class="sxs-lookup"><span data-stu-id="43262-127">You can specify the time value in either 12-hour or 24-hour format, for example `#1:15:30 PM#` or `#13:15:30#`.</span></span> <span data-ttu-id="43262-128">Wenn Sie allerdings weder Minuten noch Sekunden angeben, müssen Sie AM oder PM angeben.</span><span class="sxs-lookup"><span data-stu-id="43262-128">However, if you do not specify either the minutes or the seconds, you must specify AM or PM.</span></span>  
   
-## Standardwerte für Datum und Uhrzeit  
- Wenn Sie in einem Datum\-\/Uhrzeit\-Literal kein Datum angeben, legt Visual Basic den Datumsteil des Werts auf den 1. Januar 0001 fest.  Wenn Sie in einem Datum\-\/Uhrzeit\-Literal keine Uhrzeit angeben, legt Visual Basic den Uhrzeitteil des Werts auf den Beginn des Tages, d. h. Mitternacht \(0:00:00\) fest.  
+## <a name="date-and-time-defaults"></a><span data-ttu-id="43262-129">Standardwerte für Datum und Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="43262-129">Date and Time Defaults</span></span>  
+ <span data-ttu-id="43262-130">Wenn Sie in einem Datum-/Uhrzeit-Literal kein Datum angeben, legt Visual Basic den Datumsteil des Werts auf den 1. Januar 0001 fest.</span><span class="sxs-lookup"><span data-stu-id="43262-130">If you do not include a date in a date/time literal, Visual Basic sets the date part of the value to January 1, 0001.</span></span> <span data-ttu-id="43262-131">Wenn Sie in einem Datum-/Uhrzeit-Literal keine Uhrzeit angeben, legt Visual Basic den Uhrzeitteil des Werts auf den Beginn des Tages, d. h. Mitternacht (0:00:00) fest.</span><span class="sxs-lookup"><span data-stu-id="43262-131">If you do not include a time in a date/time literal, Visual Basic sets the time part of the value to the start of the day, that is, midnight (0:00:00).</span></span>  
   
-## Typkonvertierungen  
- Beim Konvertieren eines `Date`\-Werts in den `String`\-Typ, gibt Visual Basic das Datum gemäß dem kurzen Datumsformat wieder, das vom Laufzeitgebietsschema angegeben wird, und die Uhrzeit gemäß dem Zeitformat \(entweder 12\- oder 24\-Stunden\-Format\), das vom Laufzeitgebietsschema angegeben wird.  
+## <a name="type-conversions"></a><span data-ttu-id="43262-132">Typkonvertierungen</span><span class="sxs-lookup"><span data-stu-id="43262-132">Type Conversions</span></span>  
+ <span data-ttu-id="43262-133">Beim Konvertieren eines `Date`-Werts in den `String`-Typ, gibt Visual Basic das Datum gemäß dem kurzen Datumsformat wieder, das vom Laufzeitgebietsschema angegeben wird, und die Uhrzeit gemäß dem Zeitformat (entweder 12- oder 24-Stunden-Format), das vom Laufzeitgebietsschema angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="43262-133">If you convert a `Date` value to the `String` type, Visual Basic renders the date according to the short date format specified by the run-time locale, and it renders the time according to the time format (either 12-hour or 24-hour) specified by the run-time locale.</span></span>  
   
-## Programmiertipps  
+## <a name="programming-tips"></a><span data-ttu-id="43262-134">Programmiertipps</span><span class="sxs-lookup"><span data-stu-id="43262-134">Programming Tips</span></span>  
   
--   **Interop\-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden \(z. B. Automatisierungs\- oder COM\-Objekte\), müssen Sie beachten, dass Datums\-\/Uhrzeittypen in anderen Umgebungen nicht zum `Date`\-Typ von Visual Basic kompatibel sind.  Wenn Sie ein Datums\-\/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic\-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=fullName> und <xref:System.DateTime.ToOADate%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="43262-135">**Interop-Überlegungen.**</span><span class="sxs-lookup"><span data-stu-id="43262-135">**Interop Considerations.**</span></span> <span data-ttu-id="43262-136">Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind.</span><span class="sxs-lookup"><span data-stu-id="43262-136">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that date/time types in other environments are not compatible with the Visual Basic `Date` type.</span></span> <span data-ttu-id="43262-137">Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="43262-137">If you are passing a date/time argument to such a component, declare it as `Double` instead of `Date` in your new Visual Basic code, and use the conversion methods <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> and <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.</span></span>  
   
--   **Typzeichen.** `Date` hat kein Literal\-Typzeichen oder Bezeichner\-Typzeichen.  Der Compiler behandelt jedoch Literale, die in Nummernzeichen \(`# #`\) eingeschlossen sind, als `Date`.  
+-   <span data-ttu-id="43262-138">**Typzeichen.**</span><span class="sxs-lookup"><span data-stu-id="43262-138">**Type Characters.**</span></span> <span data-ttu-id="43262-139">`Date`hat kein literal-Typzeichen oder Bezeichner-Typzeichen.</span><span class="sxs-lookup"><span data-stu-id="43262-139">`Date` has no literal type character or identifier type character.</span></span> <span data-ttu-id="43262-140">Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.</span><span class="sxs-lookup"><span data-stu-id="43262-140">However, the compiler treats literals enclosed within number signs (`# #`) as `Date`.</span></span>  
   
--   **Framework\-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=fullName>\-Struktur.  
+-   <span data-ttu-id="43262-141">**Framework-Typ.**</span><span class="sxs-lookup"><span data-stu-id="43262-141">**Framework Type.**</span></span> <span data-ttu-id="43262-142">Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.</span><span class="sxs-lookup"><span data-stu-id="43262-142">The corresponding type in the .NET Framework is the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>  
   
-## Beispiel  
- Eine Variable oder Konstante des `Date`\-Datentyps enthält das Datum und die Uhrzeit.  Dies wird anhand des folgenden Beispiels veranschaulicht.  
+## <a name="example"></a><span data-ttu-id="43262-143">Beispiel</span><span class="sxs-lookup"><span data-stu-id="43262-143">Example</span></span>  
+ <span data-ttu-id="43262-144">Eine Variable oder Konstante des `Date`-Datentyps enthält das Datum und die Uhrzeit.</span><span class="sxs-lookup"><span data-stu-id="43262-144">A variable or constant of the `Date` data type holds both the date and the time.</span></span> <span data-ttu-id="43262-145">Dies wird anhand des folgenden Beispiels veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="43262-145">The following example illustrates this.</span></span>  
   
 ```  
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
 ```  
   
-## Siehe auch  
- <xref:System.DateTime?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Standard\-Formatzeichenfolgen für Datum und Uhrzeit](../Topic/Standard%20Date%20and%20Time%20Format%20Strings.md)   
- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../Topic/Custom%20Date%20and%20Time%20Format%20Strings.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="43262-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43262-146">See Also</span></span>  
+ <xref:System.DateTime?displayProperty=nameWithType>  
+ [<span data-ttu-id="43262-147">Datentypen</span><span class="sxs-lookup"><span data-stu-id="43262-147">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="43262-148">Standardformatzeichenfolgen für Datum und Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="43262-148">Standard Date and Time Format Strings</span></span>](../../../standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="43262-149">Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit</span><span class="sxs-lookup"><span data-stu-id="43262-149">Custom Date and Time Format Strings</span></span>](../../../standard/base-types/custom-date-and-time-format-strings.md)  
+ [<span data-ttu-id="43262-150">Typkonvertierungsfunktionen</span><span class="sxs-lookup"><span data-stu-id="43262-150">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="43262-151">Konvertierung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="43262-151">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="43262-152">Effiziente Verwendung von Datentypen</span><span class="sxs-lookup"><span data-stu-id="43262-152">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

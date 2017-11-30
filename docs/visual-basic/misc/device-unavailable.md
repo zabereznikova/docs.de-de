@@ -1,26 +1,28 @@
 ---
-title: "Das Ger&#228;t ist nicht verf&#252;gbar | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID68"
+title: "Das Gerät ist nicht verfügbar"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ccf846937d1eb36c45cb91627978fec979f44edc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Das Ger&#228;t ist nicht verf&#252;gbar
-Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.  
+# <a name="device-unavailable"></a><span data-ttu-id="e300a-102">Das Gerät ist nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="e300a-102">Device unavailable</span></span>
+<span data-ttu-id="e300a-103">Entweder wurde die Netzwerkverbindung getrennt, oder das Gerät, auf das Sie zugreifen möchten, ist offline oder nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="e300a-103">Either you have lost your network connection, or the device that you are trying to access is offline or does not exist.</span></span>  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e300a-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="e300a-104">To correct this error</span></span>  
   
-1.  Überprüfen Sie die Stromversorgung des Geräts und den Sitz der Kabel, über die der Computer mit dem Gerät verbunden ist. Wenn Sie versuchen, über ein Netzwerk auf einen Drucker zuzugreifen, muss eine logische Verbindung zwischen Computer und Drucker bestehen, z. B. eine Verbindung, die LPT1 mit der Netzwerkdrucker\-ID verknüpft.  
+1.  <span data-ttu-id="e300a-105">Überprüfen Sie die Stromversorgung des Geräts und den Sitz der Kabel, über die der Computer mit dem Gerät verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="e300a-105">Check power to the device and any cables connecting your computer to the device.</span></span> <span data-ttu-id="e300a-106">Wenn Sie versuchen, über ein Netzwerk auf einen Drucker zuzugreifen, muss eine logische Verbindung zwischen Computer und Drucker bestehen, z. B. eine Verbindung, die LPT1 mit der Netzwerkdrucker-ID verknüpft.</span><span class="sxs-lookup"><span data-stu-id="e300a-106">If you are trying to access a printer over a network, make sure there is a logical connection between your computer and the printer, for example, a connection associating LPT1 with the network printer ID.</span></span>  
   
-2.  Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.  
+2.  <span data-ttu-id="e300a-107">Stellen Sie erneut eine Verbindung mit dem Netzwerk her, und versuchen Sie es erneut.</span><span class="sxs-lookup"><span data-stu-id="e300a-107">Reconnect to the network and try again.</span></span>  
   
-## Siehe auch  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="e300a-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e300a-108">See Also</span></span>  
+ [<span data-ttu-id="e300a-109">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="e300a-109">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

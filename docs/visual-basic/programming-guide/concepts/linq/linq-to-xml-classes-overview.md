@@ -1,107 +1,99 @@
 ---
-title: "LINQ to XML-Klassen (Übersicht) (Visual Basic) | Microsoft-Dokumentation"
+title: "LINQ to XML-Klassen (Übersicht) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12885f93bb7e56dd66d36090d41700195313e944
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f22f1b7e4f94acda3a9279baf92fbce0840e55ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML-Klassen (Übersicht) (Visual Basic)
-Dieses Thema enthält eine Liste der [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] Klassen in der <xref:System.Xml.Linq>-Namespace und eine kurze Beschreibung der einzelnen.</xref:System.Xml.Linq>  
+# <a name="linq-to-xml-classes-overview-visual-basic"></a><span data-ttu-id="5ff4b-102">LINQ to XML-Klassen (Übersicht) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ff4b-102">LINQ to XML Classes Overview (Visual Basic)</span></span>
+<span data-ttu-id="5ff4b-103">In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen im <xref:System.Xml.Linq>-Namespace sowie jeweils eine kurze Beschreibung.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-103">This topic provides a list of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes in the <xref:System.Xml.Linq> namespace, and a short description of each.</span></span>  
   
-## <a name="linq-to-xml-classes"></a>LINQ to XML-Klassen  
+## <a name="linq-to-xml-classes"></a><span data-ttu-id="5ff4b-104">LINQ to XML-Klassen</span><span class="sxs-lookup"><span data-stu-id="5ff4b-104">LINQ to XML Classes</span></span>  
   
-### <a name="xattribute-class"></a>"XAttribute"-Klasse  
- <xref:System.Xml.Linq.XAttribute>Stellt ein XML-Attribut.</xref:System.Xml.Linq.XAttribute> Ausführliche Informationen und Beispiele finden Sie unter [Übersicht über XAttribute-Klasse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
+### <a name="xattribute-class"></a><span data-ttu-id="5ff4b-105">"XAttribute"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-105">XAttribute Class</span></span>  
+ <span data-ttu-id="5ff4b-106"><xref:System.Xml.Linq.XAttribute> stellt ein XML-Attribut dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-106"><xref:System.Xml.Linq.XAttribute> represents an XML attribute.</span></span> <span data-ttu-id="5ff4b-107">Ausführliche Informationen und Beispiele finden Sie unter ["XAttribute"-Klasse (Übersicht) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5ff4b-107">For detailed information and examples, see [XAttribute Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).</span></span>  
   
-### <a name="xcdata-class"></a>"XCData"-Klasse  
- <xref:System.Xml.Linq.XCData>Stellt einen CDATA-Textknoten dar.</xref:System.Xml.Linq.XCData>  
+### <a name="xcdata-class"></a><span data-ttu-id="5ff4b-108">"XCData"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-108">XCData Class</span></span>  
+ <span data-ttu-id="5ff4b-109"><xref:System.Xml.Linq.XCData> stellt einen CDATA-Textknoten dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-109"><xref:System.Xml.Linq.XCData> represents a CDATA text node.</span></span>  
   
-### <a name="xcomment-class"></a>"XComment"-Klasse  
- <xref:System.Xml.Linq.XComment>Stellt einen XML-Kommentar dar.</xref:System.Xml.Linq.XComment>  
+### <a name="xcomment-class"></a><span data-ttu-id="5ff4b-110">"XComment"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-110">XComment Class</span></span>  
+ <span data-ttu-id="5ff4b-111"><xref:System.Xml.Linq.XComment> stellt einen XML-Kommentar dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-111"><xref:System.Xml.Linq.XComment> represents an XML comment.</span></span>  
   
-### <a name="xcontainer-class"></a>"XContainer"-Klasse  
- <xref:System.Xml.Linq.XContainer>ist eine abstrakte Basisklasse für alle Knoten, die untergeordnete Knoten besitzen dürfen.</xref:System.Xml.Linq.XContainer> Die folgenden Klassen leiten sich von der <xref:System.Xml.Linq.XContainer>Klasse:</xref:System.Xml.Linq.XContainer>  
+### <a name="xcontainer-class"></a><span data-ttu-id="5ff4b-112">"XContainer"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-112">XContainer Class</span></span>  
+ <span data-ttu-id="5ff4b-113"><xref:System.Xml.Linq.XContainer> ist eine abstrakte Basisklasse für alle Knoten, die untergeordnete Knoten besitzen dürfen.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-113"><xref:System.Xml.Linq.XContainer> is an abstract base class for all nodes that can have child nodes.</span></span> <span data-ttu-id="5ff4b-114">Die folgenden Klassen leiten sich von der <xref:System.Xml.Linq.XContainer>-Klasse her:</span><span class="sxs-lookup"><span data-stu-id="5ff4b-114">The following classes derive from the <xref:System.Xml.Linq.XContainer> class:</span></span>  
   
 -   <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument></xref:System.Xml.Linq.XDocument>  
+-   <xref:System.Xml.Linq.XDocument>  
   
-### <a name="xdeclaration-class"></a>XDeclaration-Klasse  
- <xref:System.Xml.Linq.XDeclaration>Stellt eine XML-Deklaration dar.</xref:System.Xml.Linq.XDeclaration> XML-Deklarationen werden zum Deklarieren der XML-Version und zum Codieren von Dokumenten verwendet. Außerdem geben XML-Deklarationen an, ob das XML-Dokument eigenständig ist. Wenn ein Dokument eigenständig ist, sind keine externen Markupdeklarationen vorhanden (weder in einer externen DTD, noch in einer externen Parameterentität, auf die von der internen Teilmenge aus verwiesen wird).  
+### <a name="xdeclaration-class"></a><span data-ttu-id="5ff4b-115">"XDeclaration"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-115">XDeclaration Class</span></span>  
+ <span data-ttu-id="5ff4b-116"><xref:System.Xml.Linq.XDeclaration> stellt eine XML-Deklaration dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-116"><xref:System.Xml.Linq.XDeclaration> represents an XML declaration.</span></span> <span data-ttu-id="5ff4b-117">XML-Deklarationen werden zum Deklarieren der XML-Version und zum Codieren von Dokumenten verwendet.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-117">An XML declaration is used to declare the XML version and the encoding of a document.</span></span> <span data-ttu-id="5ff4b-118">Außerdem geben XML-Deklarationen an, ob das XML-Dokument eigenständig ist.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-118">In addition, an XML declaration specifies whether the XML document is stand-alone.</span></span> <span data-ttu-id="5ff4b-119">Wenn ein Dokument eigenständig ist, sind keine externen Markupdeklarationen vorhanden (weder in einer externen DTD, noch in einer externen Parameterentität, auf die von der internen Teilmenge aus verwiesen wird).</span><span class="sxs-lookup"><span data-stu-id="5ff4b-119">If a document is stand-alone, there are no external markup declarations, either in an external DTD, or in an external parameter entity referenced from the internal subset.</span></span>  
   
-### <a name="xdocument-class"></a>"XDocument"-Klasse  
- <xref:System.Xml.Linq.XDocument>Stellt ein XML-Dokument dar.</xref:System.Xml.Linq.XDocument> Ausführliche Informationen und Beispiele finden Sie unter [Übersicht über das XDocument-Klasse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xdocument-class"></a><span data-ttu-id="5ff4b-120">"XDocument"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-120">XDocument Class</span></span>  
+ <span data-ttu-id="5ff4b-121"><xref:System.Xml.Linq.XDocument> stellt ein XML-Dokument dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-121"><xref:System.Xml.Linq.XDocument> represents an XML document.</span></span> <span data-ttu-id="5ff4b-122">Ausführliche Informationen und Beispiele finden Sie unter ["XDocument"-Klasse (Übersicht) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5ff4b-122">For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).</span></span>  
   
-### <a name="xdocumenttype-class"></a>"XDocumentType"-Klasse  
- <xref:System.Xml.Linq.XDocumentType>Stellt eine XML-Dokumenttypdefinition (DTD) dar.</xref:System.Xml.Linq.XDocumentType>  
+### <a name="xdocumenttype-class"></a><span data-ttu-id="5ff4b-123">"XDocumentType"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-123">XDocumentType Class</span></span>  
+ <span data-ttu-id="5ff4b-124"><xref:System.Xml.Linq.XDocumentType> stellt eine XML-Dokumenttypdefinition (DTD) dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-124"><xref:System.Xml.Linq.XDocumentType> represents an XML Document Type Definition (DTD).</span></span>  
   
-### <a name="xelement-class"></a>"XElement"-Klasse  
- <xref:System.Xml.Linq.XElement>Stellt ein XML-Element.</xref:System.Xml.Linq.XElement> Ausführliche Informationen und Beispiele finden Sie unter [Übersicht über das XElement-Klasse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
+### <a name="xelement-class"></a><span data-ttu-id="5ff4b-125">"XElement"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-125">XElement Class</span></span>  
+ <span data-ttu-id="5ff4b-126"><xref:System.Xml.Linq.XElement> stellt ein XML-Element dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-126"><xref:System.Xml.Linq.XElement> represents an XML element.</span></span> <span data-ttu-id="5ff4b-127">Ausführliche Informationen und Beispiele finden Sie unter ["XElement"-Klasse (Übersicht) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5ff4b-127">For detailed information and examples, see [XElement Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).</span></span>  
   
-### <a name="xname-class"></a>"XName"-Klasse  
- <xref:System.Xml.Linq.XName>stellt Namen von Elementen (<xref:System.Xml.Linq.XElement>) und Attribute (<xref:System.Xml.Linq.XAttribute>).</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement></xref:System.Xml.Linq.XName> Ausführliche Informationen und Beispiele finden Sie unter [Übersicht über das XDocument-Klasse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xname-class"></a><span data-ttu-id="5ff4b-128">"XName"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-128">XName Class</span></span>  
+ <span data-ttu-id="5ff4b-129"><xref:System.Xml.Linq.XName> stellt Namen von Elementen (<xref:System.Xml.Linq.XElement>) und Attributen (<xref:System.Xml.Linq.XAttribute>) dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-129"><xref:System.Xml.Linq.XName> represents names of elements (<xref:System.Xml.Linq.XElement>) and attributes (<xref:System.Xml.Linq.XAttribute>).</span></span> <span data-ttu-id="5ff4b-130">Ausführliche Informationen und Beispiele finden Sie unter ["XDocument"-Klasse (Übersicht) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5ff4b-130">For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).</span></span>  
   
- Bei der Entwicklung von [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] wurde auf einen möglichst einfachen Umgang mit XML-Namen Wert gelegt. Aufgrund ihrer Komplexität werden XML-Namen in XML oft als Angelegenheit für Fortgeschrittene betrachtet. Ursache dieser Komplexität sind aber nicht die von den Entwicklern regelmäßig beim Programmieren verwendeten Namespaces, sondern die Namespacepräfixe. Namespace-Präfixe kann nützlich, die Tastatureingaben erforderlich, wenn Sie die XML-Eingabe zu reduzieren oder um XML leichter lesbar zu machen. Präfixe sind jedoch häufig nur eine Verknüpfung zur Verwendung des vollständigen XML-Namespace und in den meisten Fällen nicht erforderlich. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]XML-Namen einfacher, indem alle Präfixe in ihren entsprechenden XML-Namespace aufgelöst. Präfixe sind verfügbar, wenn erforderlich, durch die <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>-Methode.</xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>  
+ <span data-ttu-id="5ff4b-131">Bei der Entwicklung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wurde auf einen möglichst einfachen Umgang mit XML-Namen Wert gelegt.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-131">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is designed to make XML names as straightforward as possible.</span></span> <span data-ttu-id="5ff4b-132">Aufgrund ihrer Komplexität werden XML-Namen in XML oft als Angelegenheit für Fortgeschrittene betrachtet.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-132">Due to their complexity, XML names are often considered to be an advanced topic in XML.</span></span> <span data-ttu-id="5ff4b-133">Ursache dieser Komplexität sind aber nicht die von den Entwicklern regelmäßig beim Programmieren verwendeten Namespaces, sondern die Namespacepräfixe.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-133">Arguably, this complexity comes not from namespaces, which developers use regularly in programming, but from namespace prefixes.</span></span> <span data-ttu-id="5ff4b-134">Namespacepräfixe können helfen, die Anzahl der Tastaturanschläge zu verringern, die beim Eingeben von XML oder beim Bearbeiten von XML im Sinne einer besseren Lesbarkeit notwendig sind.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-134">Namespace prefixes can be useful to reduce the keystrokes required when you input XML, or to make XML easier to read.</span></span> <span data-ttu-id="5ff4b-135">Präfixe sind jedoch häufig nur eine Verknüpfung zur Verwendung des vollständigen XML-Namespace und in den meisten Fällen nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-135">However, prefixes are often just a shortcut for using the full XML namespace, and are not required in most cases.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="5ff4b-136"> vereinfacht XML-Namen, indem alle Präfixe in ihren entsprechenden XML-Namespace aufgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-136"> simplifies XML names by resolving all prefixes to their corresponding XML namespace.</span></span> <span data-ttu-id="5ff4b-137">Wenn erforderlich, sind Präfixe über die <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>-Methode verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-137">Prefixes are available, if they are required, through the <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> method.</span></span>  
   
- Bei Bedarf ist es möglich, Namespacepräfixe zu steuern. Eine solche Steuerung von Namespacepräfixen ist z. B. dann erforderlich, wenn Sie mit anderen XML-Systemen, wie XSLT oder XAML, arbeiten. Wenn Sie beispielsweise einen XPath-Ausdruck verwenden, der Namespacepräfixe verwendet und in ein XSLT-Stylesheet eingebettet ist, müssen Sie sicherstellen, dass Ihr XML-Dokument mit Namespacepräfixen serialisiert wird, die den im XPath-Ausdruck verwendeten Namespacepräfixen entsprechen.  
+ <span data-ttu-id="5ff4b-138">Bei Bedarf ist es möglich, Namespacepräfixe zu steuern.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-138">It is possible, if necessary, to control namespace prefixes.</span></span> <span data-ttu-id="5ff4b-139">Eine solche Steuerung von Namespacepräfixen ist z. B. dann erforderlich, wenn Sie mit anderen XML-Systemen, wie XSLT oder XAML, arbeiten.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-139">In some circumstances, if you are working with other XML systems, such as XSLT or XAML, you need to control namespace prefixes.</span></span> <span data-ttu-id="5ff4b-140">Wenn Sie beispielsweise einen XPath-Ausdruck verwenden, der Namespacepräfixe verwendet und in ein XSLT-Stylesheet eingebettet ist, müssen Sie sicherstellen, dass Ihr XML-Dokument mit Namespacepräfixen serialisiert wird, die den im XPath-Ausdruck verwendeten Namespacepräfixen entsprechen.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-140">For example, if you have an XPath expression that uses namespace prefixes and is embedded in an XSLT stylesheet, you must make sure that your XML document is serialized with namespace prefixes that match those used in the XPath expression.</span></span>  
   
-### <a name="xnamespace-class"></a>"XNamespace"-Klasse  
- <xref:System.Xml.Linq.XNamespace>Stellt einen Namespace für ein <xref:System.Xml.Linq.XElement>oder <xref:System.Xml.Linq.XAttribute>.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement></xref:System.Xml.Linq.XNamespace> Namespaces sind eine Komponente von einer <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName>  
+### <a name="xnamespace-class"></a><span data-ttu-id="5ff4b-141">"XNamespace"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-141">XNamespace Class</span></span>  
+ <span data-ttu-id="5ff4b-142"><xref:System.Xml.Linq.XNamespace> stellt einen Namespace für ein <xref:System.Xml.Linq.XElement> oder ein <xref:System.Xml.Linq.XAttribute> dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-142"><xref:System.Xml.Linq.XNamespace> represents a namespace for an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="5ff4b-143">Namespaces sind eine Komponente eines <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-143">Namespaces are a component of an <xref:System.Xml.Linq.XName>.</span></span>  
   
-### <a name="xnode-class"></a>"XNode"-Klasse  
- <xref:System.Xml.Linq.XNode>ist eine abstrakte Klasse, die die Knoten einer XML-Struktur darstellt.</xref:System.Xml.Linq.XNode> Die folgenden Klassen leiten sich von der <xref:System.Xml.Linq.XNode>Klasse:</xref:System.Xml.Linq.XNode>  
+### <a name="xnode-class"></a><span data-ttu-id="5ff4b-144">"XNode"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-144">XNode Class</span></span>  
+ <span data-ttu-id="5ff4b-145"><xref:System.Xml.Linq.XNode> ist eine abstrakte Klasse, die die Knoten einer XML-Struktur darstellt.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-145"><xref:System.Xml.Linq.XNode> is an abstract class that represents the nodes of an XML tree.</span></span> <span data-ttu-id="5ff4b-146">Die folgenden Klassen leiten sich von der <xref:System.Xml.Linq.XNode>-Klasse her:</span><span class="sxs-lookup"><span data-stu-id="5ff4b-146">The following classes derive from the <xref:System.Xml.Linq.XNode> class:</span></span>  
   
--   <xref:System.Xml.Linq.XText></xref:System.Xml.Linq.XText>  
+-   <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer></xref:System.Xml.Linq.XContainer>  
+-   <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment></xref:System.Xml.Linq.XComment>  
+-   <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction></xref:System.Xml.Linq.XProcessingInstruction>  
+-   <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType></xref:System.Xml.Linq.XDocumentType>  
+-   <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>"XNodeDocumentOrderComparer"-Klasse  
- <xref:System.Xml.Linq.XNodeDocumentOrderComparer>bietet Funktionen zum Vergleichen von Knoten anhand ihrer Dokumentreihenfolge.</xref:System.Xml.Linq.XNodeDocumentOrderComparer>  
+### <a name="xnodedocumentordercomparer-class"></a><span data-ttu-id="5ff4b-147">"XNodeDocumentOrderComparer"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-147">XNodeDocumentOrderComparer Class</span></span>  
+ <span data-ttu-id="5ff4b-148"><xref:System.Xml.Linq.XNodeDocumentOrderComparer> ermöglicht das Vergleichen von Knoten anhand ihrer Dokumentreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-148"><xref:System.Xml.Linq.XNodeDocumentOrderComparer> provides functionality to compare nodes for their document order.</span></span>  
   
-### <a name="xnodeequalitycomparer-class"></a>"XNodeEqualityComparer"-Klasse  
- <xref:System.Xml.Linq.XNodeEqualityComparer>Stellt Funktionen zur Knoten auf Wertgleichheit vergleichen.</xref:System.Xml.Linq.XNodeEqualityComparer>  
+### <a name="xnodeequalitycomparer-class"></a><span data-ttu-id="5ff4b-149">"XNodeEqualityComparer"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-149">XNodeEqualityComparer Class</span></span>  
+ <span data-ttu-id="5ff4b-150"><xref:System.Xml.Linq.XNodeEqualityComparer> ermöglicht das Vergleichen von Knoten anhand ihrer Wertgleichheit.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-150"><xref:System.Xml.Linq.XNodeEqualityComparer> provides functionality to compare nodes for value equality.</span></span>  
   
-### <a name="xobject-class"></a>"XObject"-Klasse  
- <xref:System.Xml.Linq.XObject>ist eine abstrakte Basisklasse von <xref:System.Xml.Linq.XNode>und <xref:System.Xml.Linq.XAttribute>.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XNode></xref:System.Xml.Linq.XObject> Sie stellt Anmerkungs- und Ereignisfunktionen bereit.  
+### <a name="xobject-class"></a><span data-ttu-id="5ff4b-151">"XObject"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-151">XObject Class</span></span>  
+ <span data-ttu-id="5ff4b-152"><xref:System.Xml.Linq.XObject> ist eine abstrakte Basisklasse von <xref:System.Xml.Linq.XNode> und <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-152"><xref:System.Xml.Linq.XObject> is an abstract base class of <xref:System.Xml.Linq.XNode> and <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="5ff4b-153">Sie stellt Anmerkungs- und Ereignisfunktionen bereit.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-153">It provides annotation and event functionality.</span></span>  
   
-### <a name="xobjectchange-class"></a>"XObjectChange"-Klasse  
- <xref:System.Xml.Linq.XObjectChange>Gibt den Ereignistyp beim Auslösen eines Ereignisses für eine <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject></xref:System.Xml.Linq.XObjectChange>  
+### <a name="xobjectchange-class"></a><span data-ttu-id="5ff4b-154">"XObjectChange"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-154">XObjectChange Class</span></span>  
+ <span data-ttu-id="5ff4b-155"><xref:System.Xml.Linq.XObjectChange> gibt den Ereignistyp an, wenn ein Ereignis für ein <xref:System.Xml.Linq.XObject> ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-155"><xref:System.Xml.Linq.XObjectChange> specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>  
   
-### <a name="xobjectchangeeventargs-class"></a>"XObjectChangeEventArgs"-Klasse  
- <xref:System.Xml.Linq.XObjectChangeEventArgs>Stellt Daten für die <xref:System.Xml.Linq.XObject.Changing>und <xref:System.Xml.Linq.XObject.Changed>Ereignisse.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing></xref:System.Xml.Linq.XObjectChangeEventArgs>  
+### <a name="xobjectchangeeventargs-class"></a><span data-ttu-id="5ff4b-156">"XObjectChangeEventArgs"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-156">XObjectChangeEventArgs Class</span></span>  
+ <span data-ttu-id="5ff4b-157"><xref:System.Xml.Linq.XObjectChangeEventArgs> stellt Daten für die Ereignisse <xref:System.Xml.Linq.XObject.Changing> und <xref:System.Xml.Linq.XObject.Changed> bereit.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-157"><xref:System.Xml.Linq.XObjectChangeEventArgs> provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>  
   
-### <a name="xprocessinginstruction-class"></a>XProcessingInstruction-Klasse  
- <xref:System.Xml.Linq.XProcessingInstruction>Stellt eine XML-verarbeitungsanweisung dar.</xref:System.Xml.Linq.XProcessingInstruction> Eine Verarbeitungsanweisung stellt der Anwendung, die das XML-Dokument verarbeitet, entsprechende Informationen zur Verarbeitung bereit.  
+### <a name="xprocessinginstruction-class"></a><span data-ttu-id="5ff4b-158">"XProcessingInstruction"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-158">XProcessingInstruction Class</span></span>  
+ <span data-ttu-id="5ff4b-159"><xref:System.Xml.Linq.XProcessingInstruction> stellt eine XML-Verarbeitungsanweisung dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-159"><xref:System.Xml.Linq.XProcessingInstruction> represents an XML processing instruction.</span></span> <span data-ttu-id="5ff4b-160">Eine Verarbeitungsanweisung stellt der Anwendung, die das XML-Dokument verarbeitet, entsprechende Informationen zur Verarbeitung bereit.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-160">A processing instruction communicates information to an application that processes the XML.</span></span>  
   
-### <a name="xtext-class"></a>"XText"-Klasse  
- <xref:System.Xml.Linq.XText>Stellt einen Textknoten dar.</xref:System.Xml.Linq.XText> Diese Klasse muss in den meisten Fällen nicht verwendet werden. Sie wird hauptsächlich für gemischten Inhalt eingesetzt.  
+### <a name="xtext-class"></a><span data-ttu-id="5ff4b-161">"XText"-Klasse</span><span class="sxs-lookup"><span data-stu-id="5ff4b-161">XText Class</span></span>  
+ <span data-ttu-id="5ff4b-162"><xref:System.Xml.Linq.XText> stellt einen Textknoten dar.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-162"><xref:System.Xml.Linq.XText> represents a text node.</span></span> <span data-ttu-id="5ff4b-163">Diese Klasse muss in den meisten Fällen nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-163">In most cases, you do not have to use this class.</span></span> <span data-ttu-id="5ff4b-164">Sie wird hauptsächlich für gemischten Inhalt eingesetzt.</span><span class="sxs-lookup"><span data-stu-id="5ff4b-164">This class is primarily used for mixed content.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML-Programmierung (Übersicht) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5ff4b-165">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5ff4b-165">See Also</span></span>  
+ [<span data-ttu-id="5ff4b-166">LINQ to XML-Programmierung (Übersicht) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ff4b-166">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

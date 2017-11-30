@@ -1,64 +1,65 @@
 ---
-title: "Tastenkombinationen f&#252;r das DataGrid-Steuerelement von Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid-Steuerelement [Windows Forms], Navigationstasten"
-  - "Tastenkombinationen, DataGrid-Steuerelement"
+title: "Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Tastenkombinationen f&#252;r das DataGrid-Steuerelement von Windows&#160;Forms
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="f0941-102">Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f0941-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="f0941-103">Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="f0941-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="f0941-104">Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="f0941-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- In der folgenden Tabelle sind die Tastenkombinationen aufgelistet, die innerhalb des <xref:System.Windows.Forms.DataGrid>\-Steuerelements in Windows Forms zur Navigation verwendet werden können:  
+ <span data-ttu-id="f0941-105">Die folgende Tabelle enthält die Tastenkombinationen aufgeführt, die für die Navigation in Windows Forms verwendet werden können <xref:System.Windows.Forms.DataGrid> Steuerelement:</span><span class="sxs-lookup"><span data-stu-id="f0941-105">The following table lists the keyboard shortcuts that can be used for navigation within the Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
-|Aktion|Tastenkombination|  
-|------------|-----------------------|  
-|Bestätigen einer Zelleingabe und Wechseln um eine Zelle nach unten.<br /><br /> Wenn sich der Fokus auf einem Link mit einer untergeordneten Tabelle befindet, navigieren zu dieser Tabelle.|EINGABETASTE|  
-|Abbrechen der Zellenbearbeitung im Zellenbearbeitungsmodus.<br /><br /> Abbrechen der Zeilenbearbeitung in einer Laufschriftmarkierung.|ESC|  
-|Löschen des Zeichens vor der Einfügemarke beim Bearbeiten einer Zelle.|RÜCKTASTE|  
-|Löschen des Zeichens nach der Einfügemarke beim Bearbeiten einer Zelle.|ENTFERNEN|  
-|Wechseln zur ersten Zelle der aktuellen Zeile.|POS1|  
-|Wechseln zur letzten Zelle der aktuellen Zeile.|ENDE|  
-|Markieren der Zeichen in der aktuellen Zelle und Positionieren der Einfügemarke am Zeilenende.  Gleiches Verhalten wie beim Doppelklicken auf eine Zelle.|F2|  
-|Wenn sich der Fokus auf einer Zelle befindet, Wechseln zur nächsten Zelle in der Zeile.<br /><br /> Wenn sich der Fokus auf der letzten Zelle einer Zeile befindet, Wechseln zum ersten Link mit einer untergeordneten Tabelle in der Zeile und Erweitern des Links.<br /><br /> Wenn sich der Fokus auf einem Link mit einem untergeordneten Element befindet, Navigieren zum nächsten Link mit einem untergeordneten Element.<br /><br /> Wenn sich der Fokus auf dem letzten Link mit einem untergeordneten Element befindet, Wechseln zur ersten Zelle der nächsten Zeile.|TAB|  
-|Wenn sich der Fokus auf einer Zelle befindet, Wechseln zur vorherigen Zelle in der Zeile.<br /><br /> Wenn sich der Fokus auf der ersten Zelle einer Zeile befindet, Wechseln zum letzten erweiterten Link mit einer untergeordneten Tabelle in der vorherigen Zeile oder zur letzten Zelle der vorherigen Zeile.<br /><br /> Wenn sich der Fokus auf einem Link mit einem untergeordneten Element befindet, Navigieren zum vorherigen Link mit einem untergeordneten Element.<br /><br /> Wenn sich der Fokus auf dem ersten Link mit einem untergeordneten Element befindet, Wechseln zur letzten Zelle der vorherigen Zeile.|UMSCHALT\+TAB|  
-|Wechseln zum nächsten Steuerelement in der Aktivierreihenfolge.|STRG\+TAB|  
-|Wechseln zum vorherigen Steuerelement in der Aktivierreihenfolge.|STRG\+UMSCHALT \+TAB|  
-|Wechseln aus einer untergeordneten Tabelle zur übergeordneten Tabelle.  Gleiches Verhalten wie beim Klicken auf die Schaltfläche Zurück.|ALT\+NACH\-LINKS|  
-|Erweitern von Links mit untergeordneten Tabellen.  Mit ALT\+NACH\-UNTEN werden alle Links erweitert, nicht nur die markierten.|ALT\+NACH\-UNTEN  oder  STRG\+PLUSZEICHEN|  
-|Reduzieren von Links mit untergeordneten Tabellen.  Mit ALT\+NACH\-OBEN werden alle Links reduziert, nicht nur die markierten.|ALT\+NACH\-OBEN  oder  STRG\+MINUSZEICHEN|  
-|Wechseln zur am weitesten entfernten, nicht leeren Zelle in Richtung des Pfeils.|STRG\+PFEILTASTE|  
-|Erweitern der Markierung um eine Zeile in Richtung des Pfeils \(ohne Links mit untergeordneten Tabellen zu berücksichtigen\).|UMSCHALT\+NACH\-OBEN\/UNTEN|  
-|Erweitern der Markierung bis zur am weitesten entfernten, nicht leeren Zeile in Richtung des Pfeils \(ohne Links mit untergeordneten Tabellen zu berücksichtigen\).|STRG\+UMSCHALT\+ NACH\-OBEN\/UNTEN|  
-|Wechseln zur obersten linken Zelle.|STRG\+POS1|  
-|Wechseln zur untersten rechten Zelle.|STRG\+ENDE|  
-|Erweitern der Markierung bis zur ersten Zeile.|STRG\+UMSCHALT\+POS1|  
-|Erweitern der Markierung bis zur letzten Zeile.|STRG\+UMSCHALT\+ENDE|  
-|Markieren der aktuellen Zeile \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+LEERTASTE|  
-|Markieren des gesamten Rasters \(außer Links mit untergeordneten Tabellen\).|STRG\+A|  
-|In einer untergeordneten Tabelle: Anzeigen der übergeordneten Zeile.|STRG\+BILD\-AB|  
-|In einer untergeordneten Tabelle: Ausblenden der übergeordneten Zeile.|STRG\+BILD\-AUF|  
-|Erweitern der Markierung um eine Seite nach unten \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+BILD\-AB|  
-|Erweitern der Markierung um eine Seite nach oben \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+BILD\-AUF|  
-|Aufrufen der <xref:System.Windows.Forms.DataGrid.EndEdit%2A>\-Methode für die aktuelle Zeile.|STRG\+EINGABE|  
-|Geben Sie im Bearbeitungsmodus einen <xref:System.DBNull.Value?displayProperty=fullName>\-Wert in eine Zelle ein.|CTRL\+0|  
+|<span data-ttu-id="f0941-106">Aktion</span><span class="sxs-lookup"><span data-stu-id="f0941-106">Action</span></span>|<span data-ttu-id="f0941-107">Verknüpfung</span><span class="sxs-lookup"><span data-stu-id="f0941-107">Shortcut</span></span>|  
+|------------|--------------|  
+|<span data-ttu-id="f0941-108">Schließen Sie die Eingabe in eine Zelle, und nach unten zur nächsten Zelle zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="f0941-108">Complete a cell entry and move down to the next cell.</span></span><br /><br /> <span data-ttu-id="f0941-109">Wenn der Fokus auf die Verknüpfung mit einer untergeordneten Tabelle befindet, navigieren Sie zu dieser Tabelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-109">If focus is on a child table link, navigate to that table.</span></span>|<span data-ttu-id="f0941-110">EINGABETASTE</span><span class="sxs-lookup"><span data-stu-id="f0941-110">ENTER</span></span>|  
+|<span data-ttu-id="f0941-111">Abbrechen der Bearbeitung der Zelle befindet sich im Bearbeitungsmodus für die Zelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-111">Cancel cell editing if in cell edit mode.</span></span><br /><br /> <span data-ttu-id="f0941-112">Wenn in Auswahlrahmen, brechen Sie auf die Zeile Bearbeitung ab.</span><span class="sxs-lookup"><span data-stu-id="f0941-112">If in marquee selection, cancel editing on the row.</span></span>|<span data-ttu-id="f0941-113">ESC</span><span class="sxs-lookup"><span data-stu-id="f0941-113">ESC</span></span>|  
+|<span data-ttu-id="f0941-114">Löschen Sie die Zeichen vor der Einfügemarke beim Bearbeiten einer Zelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-114">Delete the character before the insertion point when editing a cell.</span></span>|<span data-ttu-id="f0941-115">RÜCKTASTE</span><span class="sxs-lookup"><span data-stu-id="f0941-115">BACKSPACE</span></span>|  
+|<span data-ttu-id="f0941-116">Löschen Sie das Zeichen nach der Einfügemarke beim Bearbeiten einer Zelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-116">Delete the character after the insertion point when editing a cell.</span></span>|<span data-ttu-id="f0941-117">DELETE</span><span class="sxs-lookup"><span data-stu-id="f0941-117">DELETE</span></span>|  
+|<span data-ttu-id="f0941-118">Wechseln Sie zur ersten Zelle in der aktuellen Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-118">Move to the first cell in the current row.</span></span>|<span data-ttu-id="f0941-119">START</span><span class="sxs-lookup"><span data-stu-id="f0941-119">HOME</span></span>|  
+|<span data-ttu-id="f0941-120">Wechselt zur letzten Zelle in der aktuellen Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-120">Move to the last cell in the current row.</span></span>|<span data-ttu-id="f0941-121">ENDE</span><span class="sxs-lookup"><span data-stu-id="f0941-121">END</span></span>|  
+|<span data-ttu-id="f0941-122">Markieren Sie die Zeichen in der aktiven Zelle, und positionieren Sie die Einfügemarke an das Ende der Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-122">Highlight characters in the current cell and position the insertion point at the end of the line.</span></span> <span data-ttu-id="f0941-123">Dasselbe Verhalten wie beim Doppelklicken auf eine Zelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-123">Same behavior as double-clicking a cell.</span></span>|<span data-ttu-id="f0941-124">F2</span><span class="sxs-lookup"><span data-stu-id="f0941-124">F2</span></span>|  
+|<span data-ttu-id="f0941-125">Wenn der Fokus auf einer Zelle befindet, verschieben Sie zur nächsten Zelle in der Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-125">If focus is on a cell, move to the next cell in the row.</span></span><br /><br /> <span data-ttu-id="f0941-126">Wenn der Fokus auf die letzte Zelle in einer Zeile befindet, verschieben Sie die erste untergeordnete Tabelle Verknüpfung der Zeile, und erweitern Sie ihn.</span><span class="sxs-lookup"><span data-stu-id="f0941-126">If focus is on the last cell in a row, move to the first child table link of the row and expand it.</span></span><br /><br /> <span data-ttu-id="f0941-127">Wenn der Fokus auf einen untergeordneten Link ist, verschieben Sie auf den nächsten untergeordneten Link.</span><span class="sxs-lookup"><span data-stu-id="f0941-127">If focus is on a child link, move to the next child link.</span></span><br /><br /> <span data-ttu-id="f0941-128">Wenn der Fokus auf den letzten untergeordneten Link ist, verschieben Sie bis zur ersten Zelle der nächsten Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-128">If focus is on the last child link, move to the first cell of the next row.</span></span>|<span data-ttu-id="f0941-129">TAB</span><span class="sxs-lookup"><span data-stu-id="f0941-129">TAB</span></span>|  
+|<span data-ttu-id="f0941-130">Wenn der Fokus auf einer Zelle befindet, verschoben Sie und die vorherige Zelle in der Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-130">If focus is on a cell, move to the previous cell in the row.</span></span><br /><br /> <span data-ttu-id="f0941-131">Wenn der Fokus auf die erste Zelle in einer Zeile befindet, verschieben Sie in den letzten Link der erweiterten untergeordneten Tabelle der vorherigen Zeile oder wechselt zur letzten Zelle der vorherigen Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-131">If focus is on the first cell in a row, move to the last expanded child table link of the previous row, or move to the last cell of the previous row.</span></span><br /><br /> <span data-ttu-id="f0941-132">Fahren Sie Fokus auf einen untergeordneten Link ist, mit der vorherigen Untergeordnet-Links.</span><span class="sxs-lookup"><span data-stu-id="f0941-132">If focus is on a child link, move to the previous child link.</span></span><br /><br /> <span data-ttu-id="f0941-133">Wenn der Fokus auf den ersten untergeordneten Link befindet, verschieben Sie bis zum letzten Zelle der vorherigen Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-133">If focus is on the first child link, move to the last cell of the previous row.</span></span>|<span data-ttu-id="f0941-134">UMSCHALT+TAB</span><span class="sxs-lookup"><span data-stu-id="f0941-134">SHIFT+TAB</span></span>|  
+|<span data-ttu-id="f0941-135">Wechseln Sie zum nächsten Steuerelement in der Aktivierreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="f0941-135">Move to the next control in the tab order.</span></span>|<span data-ttu-id="f0941-136">STRG+TAB</span><span class="sxs-lookup"><span data-stu-id="f0941-136">CTRL+TAB</span></span>|  
+|<span data-ttu-id="f0941-137">Wechseln Sie zum vorherigen Steuerelement in der Aktivierreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="f0941-137">Move to the previous control in the tab order.</span></span>|<span data-ttu-id="f0941-138">STRG+UMSCHALT +TAB</span><span class="sxs-lookup"><span data-stu-id="f0941-138">CTRL+SHIFT+TAB</span></span>|  
+|<span data-ttu-id="f0941-139">Nach oben an die übergeordnete Tabelle in einer untergeordneten Tabelle.</span><span class="sxs-lookup"><span data-stu-id="f0941-139">Move up to the parent table if in a child table.</span></span> <span data-ttu-id="f0941-140">Dasselbe Verhalten wie das Klicken auf die Schaltfläche "zurück".</span><span class="sxs-lookup"><span data-stu-id="f0941-140">Same behavior as clicking the Back button.</span></span>|<span data-ttu-id="f0941-141">ALT+NACH-UNTEN</span><span class="sxs-lookup"><span data-stu-id="f0941-141">ALT+LEFT ARROW</span></span>|  
+|<span data-ttu-id="f0941-142">Erweitern Sie die untergeordnete Tabelle verknüpft.</span><span class="sxs-lookup"><span data-stu-id="f0941-142">Expand child table links.</span></span> <span data-ttu-id="f0941-143">ALT + nach-unten werden alle Links, nicht nur die markierten erweitert.</span><span class="sxs-lookup"><span data-stu-id="f0941-143">ALT+DOWN ARROW expands all links, not just the ones selected.</span></span>|<span data-ttu-id="f0941-144">ALT + nach-unten oder STRG + Pluszeichen</span><span class="sxs-lookup"><span data-stu-id="f0941-144">ALT+DOWN ARROW or CTRL+PLUS SIGN</span></span>|  
+|<span data-ttu-id="f0941-145">Reduzieren Sie die untergeordnete Tabelle verknüpft.</span><span class="sxs-lookup"><span data-stu-id="f0941-145">Collapse child table links.</span></span> <span data-ttu-id="f0941-146">ALT + nach-oben werden alle Links, nicht nur die markierten reduziert.</span><span class="sxs-lookup"><span data-stu-id="f0941-146">ALT+UP ARROW collapses all links, not just the ones selected.</span></span>|<span data-ttu-id="f0941-147">ALT + nach-oben-Taste oder Strg + Minuszeichen ()</span><span class="sxs-lookup"><span data-stu-id="f0941-147">ALT+UP ARROW or CTRL+MINUS SIGN</span></span>|  
+|<span data-ttu-id="f0941-148">Wechseln Sie zur äußersten nicht leeren Zelle in die Richtung des Pfeils.</span><span class="sxs-lookup"><span data-stu-id="f0941-148">Move to the farthest nonblank cell in the direction of the arrow.</span></span>|<span data-ttu-id="f0941-149">STRG + PFEILTASTE</span><span class="sxs-lookup"><span data-stu-id="f0941-149">CTRL+ARROW</span></span>|  
+|<span data-ttu-id="f0941-150">Erweitern der Markierung um eine Zeile in die Richtung des Pfeils (ausgenommen der untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-150">Extend the selection one row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="f0941-151">UMSCHALT + NACH-OBEN/NACH-UNTEN</span><span class="sxs-lookup"><span data-stu-id="f0941-151">SHIFT+UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="f0941-152">Erweitern der Markierung zum am weitesten nicht leeren Zeile in die Richtung des Pfeils (ausgenommen der untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-152">Extend the selection to farthest nonblank row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="f0941-153">STRG + UMSCHALT + NACH-OBEN/NACH-UNTEN</span><span class="sxs-lookup"><span data-stu-id="f0941-153">CTRL+SHIFT+ UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="f0941-154">Auf die linke obere Zelle zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="f0941-154">Move to the upper-left cell.</span></span>|<span data-ttu-id="f0941-155">STRG + POS1</span><span class="sxs-lookup"><span data-stu-id="f0941-155">CTRL+HOME</span></span>|  
+|<span data-ttu-id="f0941-156">Wechseln Sie zur Zelle unten rechts.</span><span class="sxs-lookup"><span data-stu-id="f0941-156">Move to the lower-right cell.</span></span>|<span data-ttu-id="f0941-157">STRG + ENDE</span><span class="sxs-lookup"><span data-stu-id="f0941-157">CTRL+END</span></span>|  
+|<span data-ttu-id="f0941-158">Erweitern der Markierung an die oberste Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-158">Extend the selection to the top row.</span></span>|<span data-ttu-id="f0941-159">STRG + UMSCHALT + POS1</span><span class="sxs-lookup"><span data-stu-id="f0941-159">CTRL+SHIFT+HOME</span></span>|  
+|<span data-ttu-id="f0941-160">Erweitern Sie die Auswahl auf der untersten Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-160">Extend the selection to the bottom row.</span></span>|<span data-ttu-id="f0941-161">STRG + UMSCHALT + ENDE</span><span class="sxs-lookup"><span data-stu-id="f0941-161">CTRL+SHIFT+END</span></span>|  
+|<span data-ttu-id="f0941-162">Wählen Sie die aktuelle Zeile (mit Ausnahme von untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-162">Select the current row (excluding child table links).</span></span>|<span data-ttu-id="f0941-163">UMSCHALT + LEERTASTE</span><span class="sxs-lookup"><span data-stu-id="f0941-163">SHIFT+SPACEBAR</span></span>|  
+|<span data-ttu-id="f0941-164">Wählen Sie das gesamte Raster (mit Ausnahme von untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-164">Select the entire grid (excluding child table links).</span></span>|<span data-ttu-id="f0941-165">STRG+A</span><span class="sxs-lookup"><span data-stu-id="f0941-165">CTRL+A</span></span>|  
+|<span data-ttu-id="f0941-166">Anzeigen der übergeordneten Zeile in einer untergeordneten Tabelle an.</span><span class="sxs-lookup"><span data-stu-id="f0941-166">Display the parent row when in a child table.</span></span>|<span data-ttu-id="f0941-167">STRG+BILD-AB</span><span class="sxs-lookup"><span data-stu-id="f0941-167">CTRL+PAGE DOWN</span></span>|  
+|<span data-ttu-id="f0941-168">Ausblenden der übergeordneten Zeile in einer untergeordneten Tabelle an.</span><span class="sxs-lookup"><span data-stu-id="f0941-168">Hide the parent row when in a child table.</span></span>|<span data-ttu-id="f0941-169">STRG+BILD-AUF</span><span class="sxs-lookup"><span data-stu-id="f0941-169">CTRL+PAGE UP</span></span>|  
+|<span data-ttu-id="f0941-170">Erweitern der Auswahl nach unten einen Bildschirm (ausgenommen der untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-170">Extend the selection down one screen (excluding child table links).</span></span>|<span data-ttu-id="f0941-171">UMSCHALT+BILD-AB</span><span class="sxs-lookup"><span data-stu-id="f0941-171">SHIFT+PAGE DOWN</span></span>|  
+|<span data-ttu-id="f0941-172">Erweitern der Markierung Bildschirmseite (ausgenommen der untergeordneten Tabelle verknüpft).</span><span class="sxs-lookup"><span data-stu-id="f0941-172">Extend the selection up one screen (excluding child table links).</span></span>|<span data-ttu-id="f0941-173">UMSCHALT+BILD-AUF</span><span class="sxs-lookup"><span data-stu-id="f0941-173">SHIFT+PAGE UP</span></span>|  
+|<span data-ttu-id="f0941-174">Rufen Sie die <xref:System.Windows.Forms.DataGrid.EndEdit%2A> Methode für die aktuelle Zeile.</span><span class="sxs-lookup"><span data-stu-id="f0941-174">Call the <xref:System.Windows.Forms.DataGrid.EndEdit%2A> method for the current row.</span></span>|<span data-ttu-id="f0941-175">STRG+EINGABE</span><span class="sxs-lookup"><span data-stu-id="f0941-175">CTRL+ENTER</span></span>|  
+|<span data-ttu-id="f0941-176">Geben Sie einen <xref:System.DBNull.Value?displayProperty=nameWithType> Wert in einer Zelle im Bearbeitungsmodus.</span><span class="sxs-lookup"><span data-stu-id="f0941-176">Enter a <xref:System.DBNull.Value?displayProperty=nameWithType> value into a cell when in edit mode.</span></span>|<span data-ttu-id="f0941-177">STRG+0</span><span class="sxs-lookup"><span data-stu-id="f0941-177">CTRL+0</span></span>|  
   
-## Siehe auch  
- [Übersicht über das DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f0941-178">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0941-178">See Also</span></span>  
+ [<span data-ttu-id="f0941-179">Übersicht über das DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f0941-179">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f0941-180">DataGrid-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f0941-180">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

@@ -1,45 +1,46 @@
 ---
-title: "Informationen &#252;ber Eingabehilfen f&#252;r Steuerelemente in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms-Steuerelemente, Barrierefreiheit"
-  - "Steuerelemente [Windows Forms], Barrierefreiheit"
-  - "Barrierefreiheit, Windows Forms-Steuerelemente"
+title: "Informationen über Eingabehilfen für Steuerelemente in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- controls [Windows Forms], accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Informationen &#252;ber Eingabehilfen f&#252;r Steuerelemente in Windows&#160;Forms
-Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen. Beispiele hierfür sind Sprachausgaben für Blinde sowie Spracheingabe\-Hilfsprogramme für Personen, die verbale Befehle geben, statt Maus oder Tastatur zu verwenden. Diese Eingabehilfen interagieren mit den Eingabehilfeeigenschaften, die von Windows Forms\-Steuerelementen verfügbar gemacht werden. Dies sind die folgenden Eigenschaften:  
+# <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a><span data-ttu-id="b4a47-102">Informationen über Eingabehilfen für Steuerelemente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4a47-102">Providing Accessibility Information for Controls on a Windows Form</span></span>
+<span data-ttu-id="b4a47-103">Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen.</span><span class="sxs-lookup"><span data-stu-id="b4a47-103">Accessibility aids are specialized programs and devices that help people with disabilities use computers more effectively.</span></span> <span data-ttu-id="b4a47-104">Beispiele hierfür sind Sprachausgaben für Blinde sowie Spracheingabe-Hilfsprogramme für Personen, die verbale Befehle geben, statt Maus oder Tastatur zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="b4a47-104">Examples include screen readers for people who are blind and voice input utilities for people who provide verbal commands instead of using the mouse or keyboard.</span></span> <span data-ttu-id="b4a47-105">Diese Eingabehilfen interagieren mit den Eingabehilfeeigenschaften, die von Windows Forms-Steuerelementen verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="b4a47-105">These accessibility aids interact with the accessibility properties exposed by Windows Forms controls.</span></span> <span data-ttu-id="b4a47-106">Dies sind die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="b4a47-106">These properties are:</span></span>  
   
--   **AccessibilityObject**  
+-   <span data-ttu-id="b4a47-107">**AccessibilityObject**</span><span class="sxs-lookup"><span data-stu-id="b4a47-107">**AccessibilityObject**</span></span>  
   
--   **AccessibleDefaultActionDescription**  
+-   <span data-ttu-id="b4a47-108">**AccessibleDefaultActionDescription**</span><span class="sxs-lookup"><span data-stu-id="b4a47-108">**AccessibleDefaultActionDescription**</span></span>  
   
--   **AccessibleDescription**  
+-   <span data-ttu-id="b4a47-109">**AccessibleDescription**</span><span class="sxs-lookup"><span data-stu-id="b4a47-109">**AccessibleDescription**</span></span>  
   
--   **AccessibleName**  
+-   <span data-ttu-id="b4a47-110">**AccessibleName**</span><span class="sxs-lookup"><span data-stu-id="b4a47-110">**AccessibleName**</span></span>  
   
--   **AccessibleRole**  
+-   <span data-ttu-id="b4a47-111">**AccessibleRole**</span><span class="sxs-lookup"><span data-stu-id="b4a47-111">**AccessibleRole**</span></span>  
   
-## AccessibilityObject\-Eigenschaft  
- Diese schreibgeschützte Eigenschaft enthält eine Instanz der [AccessibleObject\-Klasse](frlrfSystemWindowsFormsAccessibleObjectClassTopic). Die **AccessibleObject**\-Klasse implementiert die <xref:Accessibility.IAccessible>\-Schnittstelle, die Informationen zur Beschreibung, zur Bildschirmposition, zu den Navigationsfähigkeiten und zum Wert des Steuerelements enthält. Der Entwickler legt diesen Wert fest, wenn das Steuerelement zum Formular hinzugefügt wird.  
+## <a name="accessibilityobject-property"></a><span data-ttu-id="b4a47-112">AccessibilityObject-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b4a47-112">AccessibilityObject Property</span></span>  
+ <span data-ttu-id="b4a47-113">Diese schreibgeschützte Eigenschaft enthält eine Instanz der <xref:System.Windows.Forms.AccessibleObject> .</span><span class="sxs-lookup"><span data-stu-id="b4a47-113">This read-only property contains an <xref:System.Windows.Forms.AccessibleObject> instance.</span></span> <span data-ttu-id="b4a47-114">Die **AccessibleObject** -Klasse implementiert die <xref:Accessibility.IAccessible> -Schnittstelle, die Informationen zur Beschreibung, zur Bildschirmposition, zu den Navigationsfähigkeiten und zum Wert des Steuerelements enthält.</span><span class="sxs-lookup"><span data-stu-id="b4a47-114">The **AccessibleObject** implements the <xref:Accessibility.IAccessible> interface, which provides information about the control's description, screen location, navigational abilities, and value.</span></span> <span data-ttu-id="b4a47-115">Der Entwickler legt diesen Wert fest, wenn das Steuerelement zum Formular hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="b4a47-115">The designer sets this value when the control is added to the form.</span></span>  
   
-## AccessibleDefaultActionDescription\-Eigenschaft  
- Diese Zeichenfolge beschreibt die Aktion des Steuerelements. Sie wird nicht im Eigenschaftenfenster angezeigt und kann nur in Code festgelegt werden. Im folgenden Beispiel wird diese Eigenschaft für ein Schaltflächen\-Steuerelement \(Button\) festgelegt.  
+## <a name="accessibledefaultactiondescription-property"></a><span data-ttu-id="b4a47-116">AccessibleDefaultActionDescription-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b4a47-116">AccessibleDefaultActionDescription Property</span></span>  
+ <span data-ttu-id="b4a47-117">Diese Zeichenfolge beschreibt die Aktion des Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="b4a47-117">This string describes the action of the control.</span></span> <span data-ttu-id="b4a47-118">Sie wird nicht im Eigenschaftenfenster angezeigt und kann nur in Code festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="b4a47-118">It does not appear in the Properties window and may only be set in code.</span></span> <span data-ttu-id="b4a47-119">Im folgenden Beispiel wird diese Eigenschaft für ein Schaltflächen-Steuerelement (Button) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b4a47-119">The following example sets this property for a button control:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -55,8 +56,8 @@ button1->AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```  
   
-## Control.AccessibleDescription\-Eigenschaft  
- Diese Zeichenfolge beschreibt das Steuerelement. Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
+## <a name="accessibledescription-property"></a><span data-ttu-id="b4a47-120">Control.AccessibleDescription-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b4a47-120">AccessibleDescription Property</span></span>  
+ <span data-ttu-id="b4a47-121">Diese Zeichenfolge beschreibt das Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="b4a47-121">This string describes the control.</span></span> <span data-ttu-id="b4a47-122">Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:</span><span class="sxs-lookup"><span data-stu-id="b4a47-122">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -69,8 +70,8 @@ Button1.AccessibleDescription = "A button with text 'Exit'";
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
-## Control.AccessibleName\-Eigenschaft  
- Diese Eigenschaft enthält den Namen des Steuerelements, der an Eingabehilfen gemeldet wird. Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
+## <a name="accessiblename-property"></a><span data-ttu-id="b4a47-123">Control.AccessibleName-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b4a47-123">AccessibleName Property</span></span>  
+ <span data-ttu-id="b4a47-124">Diese Eigenschaft enthält den Namen des Steuerelements, der an Eingabehilfen gemeldet wird.</span><span class="sxs-lookup"><span data-stu-id="b4a47-124">This is the name of a control reported to accessibility aids.</span></span> <span data-ttu-id="b4a47-125">Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:</span><span class="sxs-lookup"><span data-stu-id="b4a47-125">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -83,8 +84,8 @@ Button1.AccessibleName = "Order";
 button1->AccessibleName = "Order";  
 ```  
   
-## AccessibleRole\-Eigenschaft  
- Diese Eigenschaft, die eine [AccessibleRole\-Enumeration](frlrfSystemWindowsFormsAccessibleRoleClassTopic) enthält, beschreibt die Rolle des Steuerelements in der Benutzeroberfläche. Bei einem neuen Steuerelement ist die Eigenschaft auf `Default` festgelegt. Das heißt, dass sich ein **Schaltflächen**\-Steuerelement standardmäßig wie eine **Schaltfläche** verhält. Sie können diese Eigenschaft auf einen anderen Wert festlegen, wenn das jeweilige Steuerelement eine andere Rolle hat. Beispielsweise könnte es sein, dass Sie ein **PictureBox**\-Steuerelement als **Diagramm** verwenden und möchten, dass Eingabehilfen die Rolle als **Diagramm**, nicht als **PictureBox** melden. Es ist auch möglich, dass Sie diese Eigenschaft für benutzerdefinierte Steuerelemente angeben, die Sie entwickelt haben. Diese Eigenschaft kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
+## <a name="accessiblerole-property"></a><span data-ttu-id="b4a47-126">AccessibleRole-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="b4a47-126">AccessibleRole Property</span></span>  
+ <span data-ttu-id="b4a47-127">Diese Eigenschaft, die eine <xref:System.Windows.Forms.AccessibleRole> enthält, beschreibt die Rolle des Steuerelements in der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="b4a47-127">This property, which contains an <xref:System.Windows.Forms.AccessibleRole> enumeration, describes the user interface role of the control.</span></span> <span data-ttu-id="b4a47-128">Bei einem neuen Steuerelement ist die Eigenschaft auf `Default`festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b4a47-128">A new control has the value set to `Default`.</span></span> <span data-ttu-id="b4a47-129">Das heißt, dass sich ein **Schaltflächen** -Steuerelement standardmäßig wie eine **Schaltfläche**verhält.</span><span class="sxs-lookup"><span data-stu-id="b4a47-129">This would mean that by default, a **Button** control acts as a **Button**.</span></span> <span data-ttu-id="b4a47-130">Sie können diese Eigenschaft auf einen anderen Wert festlegen, wenn das jeweilige Steuerelement eine andere Rolle hat.</span><span class="sxs-lookup"><span data-stu-id="b4a47-130">You may want to reset this property if a control has another role.</span></span> <span data-ttu-id="b4a47-131">Beispielsweise könnte es sein, dass Sie ein **PictureBox** -Steuerelement als **Diagramm**verwenden und möchten, dass Eingabehilfen die Rolle als **Diagramm**, nicht als **PictureBox**melden.</span><span class="sxs-lookup"><span data-stu-id="b4a47-131">For example, you may be using a **PictureBox** control as a **Chart**, and you may want accessibility aids to report the role as a **Chart**, not as a **PictureBox**.</span></span> <span data-ttu-id="b4a47-132">Es ist auch möglich, dass Sie diese Eigenschaft für benutzerdefinierte Steuerelemente angeben, die Sie entwickelt haben.</span><span class="sxs-lookup"><span data-stu-id="b4a47-132">You may also want to specify this property for custom controls you have developed.</span></span> <span data-ttu-id="b4a47-133">Diese Eigenschaft kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:</span><span class="sxs-lookup"><span data-stu-id="b4a47-133">This property may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -97,11 +98,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.AccessibleObject>   
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>   
+## <a name="see-also"></a><span data-ttu-id="b4a47-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4a47-134">See Also</span></span>  
+ <xref:System.Windows.Forms.AccessibleObject>  
+ <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.AccessibleRole>

@@ -1,56 +1,62 @@
 ---
-title: "Gewusst wie: Angeben der Bindungsquelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Binden von Daten, Bindungsquellen"
-  - "Bindungsquellen"
-  - "Datenbindung, Bindungsquelle"
+title: 'Gewusst wie: Angeben der Bindungsquelle'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- binding data [WPF], binding sources
+- data binding [WPF], binding source
+- binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 05f77e8939b9b81a9e3861df6a44bc3585a0a504
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Angeben der Bindungsquelle
-Bei der Datenbindung verweist das [Bindungsquellenobjekt](GTMT) auf das Objekt, von dem Sie die Daten abrufen.  In diesem Thema werden die verschiedenen Methoden zur Angabe der [Bindungsquelle](GTMT) beschrieben.  
+# <a name="how-to-specify-the-binding-source"></a><span data-ttu-id="8ac9d-102">Gewusst wie: Angeben der Bindungsquelle</span><span class="sxs-lookup"><span data-stu-id="8ac9d-102">How to: Specify the Binding Source</span></span>
+<span data-ttu-id="8ac9d-103">Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Ihre Daten abrufen.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-103">In data binding, the binding source object refers to the object you obtain your data from.</span></span> <span data-ttu-id="8ac9d-104">In diesem Thema werden die verschiedenen Methoden zur Angabe der Bindungsquelle beschrieben.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-104">This topic describes the different ways of specifying the binding source.</span></span>  
   
-## Beispiel  
- Wenn Sie mehrere Eigenschaften an eine gemeinsame Quelle binden, sollten Sie die `DataContext`\-Eigenschaft verwenden. Diese Eigenschaft bietet eine komfortable Möglichkeit, einen Bereich festzulegen, innerhalb dessen alle datengebundenen Eigenschaften eine gemeinsame Quelle erben.  
+## <a name="example"></a><span data-ttu-id="8ac9d-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8ac9d-105">Example</span></span>  
+ <span data-ttu-id="8ac9d-106">Wenn Sie mehrere Eigenschaften an eine gemeinsame Quelle binden, sollten Sie die `DataContext`-Eigenschaft verwenden. Diese bietet eine bequeme Möglichkeit, einen Bereich festzulegen, in dem alle datengebundenen Eigenschaften eine gemeinsame Quelle erben.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-106">If you are binding several properties to a common source, you want to use the `DataContext` property, which provides a convenient way to establish a scope within which all data-bound properties inherit a common source.</span></span>  
   
- Im folgenden Beispiel wird der Datenkontext auf dem Stammelement der Anwendung eingerichtet.  Dies ermöglicht es allen untergeordneten Elementen, diesen Datenkontext zu erben.  Die Daten für die Bindung werden aus einer benutzerdefinierten Datenklasse abgerufen \(`NetIncome`\), auf die direkt über eine Zuordnung verwiesen wird und die den Ressourcenschlüssel `incomeDataSource` erhält.  
+ <span data-ttu-id="8ac9d-107">Im folgenden Beispiel wird der Datenkontext für das Stammelement der Anwendung eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-107">In the following example, the data context is established on the root element of the application.</span></span> <span data-ttu-id="8ac9d-108">Dies ermöglicht es allen untergeordneten Elementen, diesen Datenkontext zu erben.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-108">This allows all child elements to inherit that data context.</span></span> <span data-ttu-id="8ac9d-109">Die Daten für die Bindung werden aus einer benutzerdefinierten Datenklasse abgerufen (`NetIncome`), auf die direkt über eine Zuordnung verwiesen wird und die den Ressourcenschlüssel `incomeDataSource` erhält.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-109">Data for the binding comes from a custom data class, `NetIncome`, referenced directly through a mapping and given the resource key of `incomeDataSource`.</span></span>  
   
- [!code-xml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
- Das folgende Beispiel zeigt die Definition der `NetIncome`\-Klasse.  
+ <span data-ttu-id="8ac9d-110">Im folgenden Beispiel wird die Definition der `NetIncome`-Klasse veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-110">The following example shows the definition of the `NetIncome` class.</span></span>  
   
  [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
  [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  Im vorherigen Beispiel wird das Objekt im Markup instanziiert und als Ressource verwendet.  Wenn Sie eine Bindung zu einem Objekt erstellen möchten, das bereits im Code instanziiert wurde, müssen Sie die `DataContext`\-Eigenschaft programmgesteuert festlegen.  Ein Beispiel finden Sie unter [Bereitstellen von Daten für die Bindung in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  <span data-ttu-id="8ac9d-111">Im vorherigen Beispiel wird das Objekt im Markup instanziiert und als Ressource verwendet.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-111">The above example instantiates the object in markup and uses it as a resource.</span></span> <span data-ttu-id="8ac9d-112">Wenn Sie eine Bindung zu einem Objekt erstellen möchten, das bereits im Code instanziiert wurde, müssen Sie die `DataContext`-Eigenschaft programmgesteuert festlegen.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-112">If you want to bind to an object that has already been instantiated in code, you need to set the `DataContext` property programmatically.</span></span> <span data-ttu-id="8ac9d-113">Ein Beispiel finden Sie unter [Bereitstellen von Daten, um diese in XAML zu binden](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="8ac9d-113">For an example, see [Make Data Available for Binding in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).</span></span>  
   
- Wenn Sie die Quelle einzelner Bindungen explizit festlegen möchten, stehen Ihnen die folgenden Optionen zur Verfügung.  Diese haben Vorrang gegenüber dem geerbten Datenkontext.  
+ <span data-ttu-id="8ac9d-114">Wenn Sie alternativ die Quelle einzelner Bindungen explizit festlegen möchten, stehen Ihnen die folgenden Optionen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-114">Alternatively, if you want to specify the source on your individual bindings explicitly, you have the following options.</span></span> <span data-ttu-id="8ac9d-115">Diese haben Vorrang gegenüber dem geerbten Datenkontext.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-115">These take precedence over the inherited data context.</span></span>  
   
-|Property|Beschreibung|  
-|--------------|------------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Verwenden Sie diese Eigenschaft, um als Quelle die Instanz eines Objekts festzulegen.  Wenn Sie keinen Bereich festlegen möchten, innerhalb dessen mehrere Eigenschaften denselben Datenkontext erben, können Sie die <xref:System.Windows.Data.Binding.Source%2A>\-Eigenschaft anstelle der `DataContext`\-Eigenschaft verwenden.  Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.Source%2A>.|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Dies ist hilfreich, wenn Sie die Quelle relativ zum Standort Ihres [Bindungsziels](GTMT) festlegen möchten.  Sie können diese Eigenschaft beispielsweise verwenden, wenn Sie eine Eigenschaft Ihres Elements an eine andere Eigenschaft desselben Elements binden möchten oder wenn Sie eine Bindung in einem Stil oder einer Vorlage definieren möchten.  Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|Sie geben eine Zeichenfolge an, die das Element darstellt, an das die Bindung erfolgen soll.  Dies ist hilfreich, wenn Sie eine Bindung zur Eigenschaft eines anderen Elements Ihrer Anwendung erstellen möchten.  Wenn Sie z. B. einen <xref:System.Windows.Controls.Slider> verwenden möchten, um die Höhe eines anderen Steuerelements der Anwendung zu steuern, oder wenn Sie den <xref:System.Windows.Controls.ContentControl.Content%2A> des Steuerelements an die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>\-Eigenschaft des <xref:System.Windows.Controls.ListBox>\-Steuerelements binden möchten.  Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.ElementName%2A>.|  
+|<span data-ttu-id="8ac9d-116">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="8ac9d-116">Property</span></span>|<span data-ttu-id="8ac9d-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8ac9d-117">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Windows.Data.Binding.Source%2A>|<span data-ttu-id="8ac9d-118">Verwenden Sie diese Eigenschaft, um als Quelle die Instanz eines Objekts festzulegen.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-118">You use this property to set the source to an instance of an object.</span></span> <span data-ttu-id="8ac9d-119">Wenn Sie nicht die Funktionalität zum Einrichten eines Bereichs benötigen, welche mehrere Eigenschaften erben den gleichen Datenkontext, können Sie mithilfe der <xref:System.Windows.Data.Binding.Source%2A> -Eigenschaft anstelle der `DataContext` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-119">If you do not need the functionality of establishing a scope in which several properties inherit the same data context, you can use the <xref:System.Windows.Data.Binding.Source%2A> property instead of the `DataContext` property.</span></span> <span data-ttu-id="8ac9d-120">Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.Source%2A>.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-120">For more information, see <xref:System.Windows.Data.Binding.Source%2A>.</span></span>|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|<span data-ttu-id="8ac9d-121">Dies ist hilfreich, wenn Sie die Quelle relativ zum Speicherort Ihres Bindungsziels festlegen möchten.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-121">This is useful when you want to specify the source relative to where your binding target is.</span></span> <span data-ttu-id="8ac9d-122">Sie können diese Eigenschaft beispielsweise verwenden, wenn Sie eine Eigenschaft Ihres Elements an eine andere Eigenschaft desselben Elements binden möchten oder wenn Sie eine Bindung in einem Stil oder einer Vorlage definieren möchten.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-122">Some common scenarios where you may use this property is when you want to bind one property of your element to another property of the same element or if you are defining a binding in a style or a template.</span></span> <span data-ttu-id="8ac9d-123">Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.RelativeSource%2A>.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-123">For more information, see <xref:System.Windows.Data.Binding.RelativeSource%2A>.</span></span>|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|<span data-ttu-id="8ac9d-124">Sie geben eine Zeichenfolge an, die das Element darstellt, an das die Bindung erfolgen soll.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-124">You specify a string that represents the element you want to bind to.</span></span> <span data-ttu-id="8ac9d-125">Dies ist hilfreich, wenn Sie eine Bindung zur Eigenschaft eines anderen Elements Ihrer Anwendung erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-125">This is useful when you want to bind to the property of another element on your application.</span></span> <span data-ttu-id="8ac9d-126">Angenommen, Sie verwenden möchten eine <xref:System.Windows.Controls.Slider> die Höhe eines anderen Steuerelements in der Anwendung oder wenn Sie binden möchten die <xref:System.Windows.Controls.ContentControl.Content%2A> des Steuerelements die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> Eigenschaft Ihrer <xref:System.Windows.Controls.ListBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-126">For example, if you want to use a <xref:System.Windows.Controls.Slider> to control the height of another control in your application, or if you want to bind the <xref:System.Windows.Controls.ContentControl.Content%2A> of your control to the <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property of your <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="8ac9d-127">Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.ElementName%2A>.</span><span class="sxs-lookup"><span data-stu-id="8ac9d-127">For more information, see <xref:System.Windows.Data.Binding.ElementName%2A>.</span></span>|  
   
-## Siehe auch  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=fullName>   
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=fullName>   
- [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)   
- [Übersicht über Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Übersicht über Bindungsdeklarationen](../../../../docs/framework/wpf/data/binding-declarations-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="8ac9d-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8ac9d-128">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="8ac9d-129">Vererbung von Eigenschaftswerten</span><span class="sxs-lookup"><span data-stu-id="8ac9d-129">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
+ [<span data-ttu-id="8ac9d-130">Übersicht zur Datenbindung</span><span class="sxs-lookup"><span data-stu-id="8ac9d-130">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="8ac9d-131">Übersicht über Bindungsdeklarationen</span><span class="sxs-lookup"><span data-stu-id="8ac9d-131">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [<span data-ttu-id="8ac9d-132">Themen zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="8ac9d-132">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

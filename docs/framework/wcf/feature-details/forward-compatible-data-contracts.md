@@ -1,55 +1,57 @@
 ---
-title: "Aufw&#228;rtskompatible Datenvertr&#228;ge | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Datenverträge [WCF], Aufwärtskompatibilität"
+title: "Aufwärtskompatible Datenverträge"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7a0153533ce5ec748c6396676988fcdc73eae6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Aufw&#228;rtskompatible Datenvertr&#228;ge
-Ein Merkmal des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\-Datenvertragssystems ist, dass sich Verträge im Laufe der Zeit ohne Unterbrechung weiterentwickeln können.Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+# <a name="forward-compatible-data-contracts"></a><span data-ttu-id="b880d-102">Aufwärtskompatible Datenverträge</span><span class="sxs-lookup"><span data-stu-id="b880d-102">Forward-Compatible Data Contracts</span></span>
+<span data-ttu-id="b880d-103">Ein Merkmal des [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]-Datenvertragssystems ist, dass sich Verträge im Laufe der Zeit ohne Unterbrechung weiterentwickeln können.</span><span class="sxs-lookup"><span data-stu-id="b880d-103">A feature of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] data contract system is that contracts can evolve over time in nonbreaking ways.</span></span> <span data-ttu-id="b880d-104">Dies bedeutet, dass ein Client mit einer älteren Version eines Datenvertrags mit einem Dienst, der eine neuere Version dieses Datenvertrags aufweist, kommunizieren kann bzw. dass ein Client mit einer neueren Version eines Datenvertrags mit einer älteren Version dieses Datenvertrags kommunizieren kann.</span><span class="sxs-lookup"><span data-stu-id="b880d-104">That is, a client with an older version of a data contract can communicate with a service with a newer version of the same data contract, or a client with a newer version of a data contract can communicate with an older version of the same data contract.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b880d-105">[Vorgehensweisen: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).</span><span class="sxs-lookup"><span data-stu-id="b880d-105"> [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).</span></span>  
   
- Sie können beim Erstellen neuer Versionen eines bestehenden Datenvertrags die meisten Versionsverwaltungsfunktionen nach Bedarf verwenden.Eine Versionsverwaltungsfunktion, der *Roundtrip*, muss jedoch von Anfang an in den Typ integriert werden, damit sie richtig funktioniert.  
+ <span data-ttu-id="b880d-106">Sie können beim Erstellen neuer Versionen eines bestehenden Datenvertrags die meisten Versionsverwaltungsfunktionen nach Bedarf verwenden.</span><span class="sxs-lookup"><span data-stu-id="b880d-106">You can apply most of the versioning features on an as-needed basis when new versions of an existing data contract are created.</span></span> <span data-ttu-id="b880d-107">Allerdings eine Versionsverwaltungsfunktion, *Round-Tripping*, muss in den Typ der ersten Version erstellt werden, damit Sie richtig funktioniert.</span><span class="sxs-lookup"><span data-stu-id="b880d-107">However, one versioning feature, *round-tripping*, must be built into the type from the first version in order to work properly.</span></span>  
   
-## Roundtrip\-Funktion  
- Ein Roundtrip findet statt, wenn Daten von einer neuen Version an eine alte Version und wieder zurück an die neue Version eines Datenvertrags übergeben werden.Durch den Roundtrip wird sichergestellt, dass keine Daten verloren gehen.Durch die aktivierte Roundtrip\-Funktion wird der Typ aufwärtskompatibel, das heißt, dass alle zukünftigen Änderungen vom Versionsverwaltungsmodell des Datenvertrags unterstützt werden.  
+## <a name="round-tripping"></a><span data-ttu-id="b880d-108">Roundtrip-Funktion</span><span class="sxs-lookup"><span data-stu-id="b880d-108">Round-Tripping</span></span>  
+ <span data-ttu-id="b880d-109">Ein Roundtrip findet statt, wenn Daten von einer neuen Version an eine alte Version und wieder zurück an die neue Version eines Datenvertrags übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="b880d-109">Round-tripping occurs when data passes from a new version to an old version and back to the new version of a data contract.</span></span> <span data-ttu-id="b880d-110">Durch den Roundtrip wird sichergestellt, dass keine Daten verloren gehen.</span><span class="sxs-lookup"><span data-stu-id="b880d-110">Round-tripping guarantees that no data is lost.</span></span> <span data-ttu-id="b880d-111">Durch die aktivierte Roundtrip-Funktion wird der Typ aufwärtskompatibel, das heißt, dass alle zukünftigen Änderungen vom Versionsverwaltungsmodell des Datenvertrags unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="b880d-111">Enabling round-tripping makes the type forward-compatible with any future changes supported by the data contract versioning model.</span></span>  
   
- Um die Roundtrip\-Funktion für einen bestimmten Typ zu aktivieren, muss der Typ die <xref:System.Runtime.Serialization.IExtensibleDataObject>\-Schnittstelle implementieren.Die Schnittstelle enthält die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>\-Eigenschaft \(und gibt den <xref:System.Runtime.Serialization.ExtensionDataObject>\-Typ zurück\).In der Eigenschaft werden alle Daten aus zukünftigen Versionen des Datenvertrags, die in der aktuellen Version unbekannt sind, gespeichert.  
+ <span data-ttu-id="b880d-112">Um die Roundtrip-Funktion für einen bestimmten Typ zu aktivieren, muss der Typ die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="b880d-112">To enable round-tripping for a particular type, the type must implement the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface.</span></span> <span data-ttu-id="b880d-113">Die Schnittstelle enthält die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft (und gibt den <xref:System.Runtime.Serialization.ExtensionDataObject>-Typ zurück).</span><span class="sxs-lookup"><span data-stu-id="b880d-113">The interface contains one property, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> (returning the <xref:System.Runtime.Serialization.ExtensionDataObject> type).</span></span> <span data-ttu-id="b880d-114">In der Eigenschaft werden alle Daten aus zukünftigen Versionen des Datenvertrags, die in der aktuellen Version unbekannt sind, gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b880d-114">The property stores any data from future versions of the data contract that is unknown to the current version.</span></span>  
   
-### Beispiel  
- Der folgende Datenvertrag ist nicht mit zukünftigen Änderungen aufwärtskompatibel:  
+### <a name="example"></a><span data-ttu-id="b880d-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b880d-115">Example</span></span>  
+ <span data-ttu-id="b880d-116">Der folgende Datenvertrag ist nicht mit zukünftigen Änderungen aufwärtskompatibel:</span><span class="sxs-lookup"><span data-stu-id="b880d-116">The following data contract is not forward-compatible with future changes.</span></span>  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]
  [!code-vb[C_DataContract#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#7)]  
   
- Damit der Typ mit zukünftigen Änderungen \(wie zum Beispiel einem hinzugefügten Datenmember "phoneNumber"\) kompatibel wird, muss die <xref:System.Runtime.Serialization.IExtensibleDataObject>\-Schnittstelle implementiert werden.  
+ <span data-ttu-id="b880d-117">Damit der Typ mit zukünftigen Änderungen (wie zum Beispiel einem hinzugefügten Datenmember "phoneNumber") kompatibel wird, muss die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="b880d-117">To make the type compatible with future changes (such as adding a new data member named "phoneNumber"), implement the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface.</span></span>  
   
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Wenn die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\-Infrastruktur auf Daten trifft, die nicht zum ursprünglichen Datenvertrag gehören, werden die Daten in der Eigenschaft gespeichert und so aufbewahrt.Eine Verarbeitung erfolgt nur für die vorübergehende Speicherung.Wird das Objekt an seinen Ursprungsort zurückgegeben, werden die ursprünglichen \(unbekannten\) Daten ebenfalls zurückgegeben.Auf diese Weise durchlaufen die Daten ohne Verlust einen Roundtrip zum und vom ursprünglichen Endpunkt.Beachten Sie jedoch, dass der Endpunkt die Änderungen selbst erkennen und umsetzen muss, falls der ursprüngliche Endpunkt eine Verarbeitung der Daten erfordert und diese Voraussetzung nicht erfüllt werden kann.  
+ <span data-ttu-id="b880d-118">Wenn die [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-Infrastruktur auf Daten trifft, die nicht zum ursprünglichen Datenvertrag gehören, werden die Daten in der Eigenschaft gespeichert und so aufbewahrt.</span><span class="sxs-lookup"><span data-stu-id="b880d-118">When the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure encounters data that is not part of the original data contract, the data is stored in the property and preserved.</span></span> <span data-ttu-id="b880d-119">Eine Verarbeitung erfolgt nur für die vorübergehende Speicherung.</span><span class="sxs-lookup"><span data-stu-id="b880d-119">It is not processed in any other way except for temporary storage.</span></span> <span data-ttu-id="b880d-120">Wird das Objekt an seinen Ursprungsort zurückgegeben, werden die ursprünglichen (unbekannten) Daten ebenfalls zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b880d-120">If the object is returned back to where it originated, the original (unknown) data is also returned.</span></span> <span data-ttu-id="b880d-121">Auf diese Weise durchlaufen die Daten ohne Verlust einen Roundtrip zum und vom ursprünglichen Endpunkt.</span><span class="sxs-lookup"><span data-stu-id="b880d-121">Therefore, the data has made a round trip to and from the originating endpoint without loss.</span></span> <span data-ttu-id="b880d-122">Beachten Sie jedoch, dass der Endpunkt die Änderungen selbst erkennen und umsetzen muss, falls der ursprüngliche Endpunkt eine Verarbeitung der Daten erfordert und diese Voraussetzung nicht erfüllt werden kann.</span><span class="sxs-lookup"><span data-stu-id="b880d-122">Note, however, that if the originating endpoint required the data to be processed, that expectation is unmet, and the endpoint must somehow detect and accommodate the change.</span></span>  
   
- Der <xref:System.Runtime.Serialization.ExtensionDataObject>\-Typ enthält keine öffentlichen Methoden oder Eigenschaften.Daher kann nicht direkt auf die in der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>\-Eigenschaft gespeicherten Daten zugegriffen werden.  
+ <span data-ttu-id="b880d-123">Der <xref:System.Runtime.Serialization.ExtensionDataObject>-Typ enthält keine öffentlichen Methoden oder Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="b880d-123">The <xref:System.Runtime.Serialization.ExtensionDataObject> type contains no public methods or properties.</span></span> <span data-ttu-id="b880d-124">Daher kann nicht direkt auf die in der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft gespeicherten Daten zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="b880d-124">Thus, it is impossible to get direct access to the data stored inside the <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> property.</span></span>  
   
- Sie können die Roundtrip\-Funktion deaktivieren. Legen Sie hierfür entweder `ignoreExtensionDataObject` im <xref:System.Runtime.Serialization.DataContractSerializer>\-Konstruktor auf `true` fest, oder legen Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>\-Eigenschaft im <xref:System.ServiceModel.ServiceBehaviorAttribute> auf `true` fest.Wenn diese Funktion deaktiviert ist, wird die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>\-Eigenschaft nicht vom Deserialisierungsprogramm gefüllt, und der Inhalt der Eigenschaft wird nicht vom Serialisierungsprogramm ausgegeben.  
+ <span data-ttu-id="b880d-125">Sie können die Roundtrip-Funktion deaktivieren. Legen Sie hierfür entweder `ignoreExtensionDataObject` im `true`-Konstruktor auf <xref:System.Runtime.Serialization.DataContractSerializer> fest, oder legen Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>-Eigenschaft im `true` auf <xref:System.ServiceModel.ServiceBehaviorAttribute> fest.</span><span class="sxs-lookup"><span data-stu-id="b880d-125">The round-tripping feature may be turned off, either by setting `ignoreExtensionDataObject` to `true` in the <xref:System.Runtime.Serialization.DataContractSerializer> constructor or by setting the <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> property to `true` on the <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span></span> <span data-ttu-id="b880d-126">Wenn diese Funktion deaktiviert ist, wird die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft nicht vom Deserialisierungsprogramm gefüllt, und der Inhalt der Eigenschaft wird nicht vom Serialisierungsprogramm ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="b880d-126">When this feature is off, the deserializer will not populate the <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> property, and the serializer will not emit the contents of the property.</span></span>  
   
-## Siehe auch  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>   
- <xref:System.Runtime.Serialization.ExtensionDataObject>   
- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)   
- [Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+## <a name="see-also"></a><span data-ttu-id="b880d-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b880d-127">See Also</span></span>  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject>  
+ <xref:System.Runtime.Serialization.ExtensionDataObject>  
+ [<span data-ttu-id="b880d-128">Datenvertragsversionsverwaltung</span><span class="sxs-lookup"><span data-stu-id="b880d-128">Data Contract Versioning</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [<span data-ttu-id="b880d-129">Bewährte Methoden: Versionsverwaltung von Datenverträgen</span><span class="sxs-lookup"><span data-stu-id="b880d-129">Best Practices: Data Contract Versioning</span></span>](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

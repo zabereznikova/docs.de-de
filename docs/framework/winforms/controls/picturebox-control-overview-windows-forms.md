@@ -1,38 +1,38 @@
 ---
-title: "&#220;bersicht &#252;ber das PictureBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PictureBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Image-Steuerelemente, Informationen über Image-Steuerelemente"
-  - "Bildsteuerelemente, Informationen über Bildsteuerelemente"
-  - "PictureBox-Steuerelement [Windows Forms], Informationen über PictureBox-Steuerelemente"
+title: "Übersicht über das PictureBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PictureBox
+helpviewer_keywords:
+- PictureBox control [Windows Forms], about PictureBox controls
+- picture controls [Windows Forms], about picture controls
+- image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057d8af46325321360039af000ad8ce68bde39d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das PictureBox-Steuerelement (Windows&#160;Forms)
-Das <xref:System.Windows.Forms.PictureBox>\-Steuerelement in Windows Forms wird zum Anzeigen von Grafiken im Bitmap\-, GIF\-, JPEG\-, Metadatei\- oder Symbolformat verwendet.  
+# <a name="picturebox-control-overview-windows-forms"></a><span data-ttu-id="48b21-102">Übersicht über das PictureBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="48b21-102">PictureBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="48b21-103">Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement wird verwendet, um die Anzeige von Grafiken in Bitmap, GIF, JPEG, Metadatei oder Symbol-Format.</span><span class="sxs-lookup"><span data-stu-id="48b21-103">The Windows Forms <xref:System.Windows.Forms.PictureBox> control is used to display graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
   
-## Wichtige Eigenschaften und Methoden  
- Das angezeigte Bild wird durch die <xref:System.Windows.Forms.PictureBox.Image%2A>\-Eigenschaft bestimmt, die zur Laufzeit oder zur Entwurfszeit festgelegt werden kann.  Alternativ können Sie das Bild angeben, indem Sie die <xref:System.Windows.Forms.PictureBox.ImageLocation%2A>\-Eigenschaft festlegen und das Bild dann mit der <xref:System.Windows.Forms.PictureBox.Load%2A>\-Methode synchron oder mit der <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>\-Methode asynchron laden.  Die <xref:System.Windows.Forms.PictureBox.SizeMode%2A>\-Eigenschaft legt fest, auf welche Weise die Größe von Bild und Steuerelement aufeinander abgestimmt wird.  Weitere Informationen finden Sie unter [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="48b21-104">Wichtige Eigenschaften und Methoden</span><span class="sxs-lookup"><span data-stu-id="48b21-104">Key Properties and Methods</span></span>  
+ <span data-ttu-id="48b21-105">Das Bild, das angezeigt wird, richtet sich nach der <xref:System.Windows.Forms.PictureBox.Image%2A> -Eigenschaft, die zur Laufzeit oder zur Entwurfszeit festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="48b21-105">The picture that is displayed is determined by the <xref:System.Windows.Forms.PictureBox.Image%2A> property, which can be set at run time or at design time.</span></span> <span data-ttu-id="48b21-106">Können Sie alternativ das Bild angeben, durch Festlegen der <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> Eigenschaft und Laden Sie das Bild synchron mit der <xref:System.Windows.Forms.PictureBox.Load%2A> -Methode oder asynchron mit der <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="48b21-106">You can alternatively specify the image by setting the <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> property and then load the image synchronously using the <xref:System.Windows.Forms.PictureBox.Load%2A> method or asynchronously using the <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> method.</span></span> <span data-ttu-id="48b21-107">Die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft steuert, wie das Bild und Steuerelement miteinander passen.</span><span class="sxs-lookup"><span data-stu-id="48b21-107">The <xref:System.Windows.Forms.PictureBox.SizeMode%2A> property controls how the image and control fit with each other.</span></span> <span data-ttu-id="48b21-108">Weitere Informationen finden Sie unter [Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="48b21-108">For more information, see [How to: Modify the Size or Placement of a Picture at Run Time](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Windows.Forms.PictureBox>   
- [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)   
- [Gewusst wie: Festlegen von Bildern zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
- [PictureBox\-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="48b21-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48b21-109">See Also</span></span>  
+ <xref:System.Windows.Forms.PictureBox>  
+ [<span data-ttu-id="48b21-110">Gewusst wie: Laden eines Bilds mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="48b21-110">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [<span data-ttu-id="48b21-111">Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="48b21-111">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="48b21-112">Gewusst wie: Festlegen von Bildern zur Laufzeit</span><span class="sxs-lookup"><span data-stu-id="48b21-112">How to: Set Pictures at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="48b21-113">PictureBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="48b21-113">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
