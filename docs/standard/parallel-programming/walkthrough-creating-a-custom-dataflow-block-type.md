@@ -1,71 +1,77 @@
 ---
-title: "Walkthrough: Creating a Custom Dataflow Block Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, creating custom dataflow blocks"
-  - "dataflow blocks, creating custom in TPL"
+title: 'Exemplarische Vorgehensweise: Erstellen eines Datenflussblock-Typs'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, creating custom dataflow blocks
+- dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 809b21fa6e1470890011604792d849998dd03ede
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Walkthrough: Creating a Custom Dataflow Block Type
-Obwohl die TPL\-Datenfluss\-Bibliothek einige Datenflussblockstypen bereitstellt, die eine Vielzahl von Funktionen aktivieren, können Sie benutzerdefinierte Blockstypen auch erstellen.  Dieses Dokument beschreibt, wie einen Datenfluss Nachrichtenblocktyp erstellt, der benutzerdefinierte Verhalten implementiert.  
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="2bbba-102">Exemplarische Vorgehensweise: Erstellen eines Datenflussblock-Typs</span><span class="sxs-lookup"><span data-stu-id="2bbba-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
+<span data-ttu-id="2bbba-103">Obwohl die TPL-Datenflussbibliothek mehrere datenflussblocktypen, die eine Vielzahl von Funktionen zu aktivieren enthält, können Sie auch benutzerdefinierte Blocktypen erstellen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="2bbba-104">Dieses Dokument beschreibt, wie Sie einen datenflussblocktyp zu erstellen, der benutzerdefiniertes Verhalten implementiert.</span><span class="sxs-lookup"><span data-stu-id="2bbba-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  
   
-## Vorbereitungsmaßnahmen  
- Lesen [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), bevor Sie dieses Dokument lesen.  
+## <a name="prerequisites"></a><span data-ttu-id="2bbba-105">Erforderliche Komponenten</span><span class="sxs-lookup"><span data-stu-id="2bbba-105">Prerequisites</span></span>  
+ <span data-ttu-id="2bbba-106">Lesen [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) , bevor Sie dieses Dokument zu lesen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-106">Read [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) before you read this document.</span></span>  
   
 > [!TIP]
->  Die TPL\-Datenflussbibliothek \(<xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\-Namespace\) ist nicht in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enthalten.  Öffnen Sie zum Installieren des <xref:System.Threading.Tasks.Dataflow>\-Namespace das Projekt in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wählen Sie im Menü "Projekt" die Option **NuGet\-Pakete verwalten** aus, und suchen Sie online nach dem `Microsoft.Tpl.Dataflow`\-Paket.  
+>  <span data-ttu-id="2bbba-107">Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>-Namespace) ist nicht in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enthalten.</span><span class="sxs-lookup"><span data-stu-id="2bbba-107">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="2bbba-108">Öffnen Sie zum Installieren des <xref:System.Threading.Tasks.Dataflow>-Namespace das Projekt in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wählen Sie im Menü "Projekt" die Option **NuGet-Pakete verwalten** aus, und suchen Sie online nach dem `Microsoft.Tpl.Dataflow` -Paket.</span><span class="sxs-lookup"><span data-stu-id="2bbba-108">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## Definieren des Datenfluss\-Blocks gleitenden des Fensters  
- Erwägen Sie eine Datenfluss\-Anwendung, die erfordert, dass Eingabewerte gepuffert werden und dann in einer Art des Fensters gleitenden ausgeben.  Beispielsweise für die Eingabewerte {0, 1, 2, 3, 4, 5} und eine von Fenstergröße drei, erzeugt ein Datenflussblock gleitenden des Fensters die Ausgabearrays {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {und 3, 4, 5}.  In den folgenden Abschnitten werden zwei Möglichkeiten, einen eigenen Datenfluss zu erstellen, der diesem benutzerdefinierten Verhalten implementiert.  Die erste Methode verwendet die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> methode, um die Funktionalität eines <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>\-Objekts und des <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>\-Objekts in einen Weitergabeblock zu kombinieren.  Die zweite Methode definiert eine Klasse, die von <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> abgeleitet und vorhandene Funktionen kombiniert, um benutzerdefiniertes Verhalten auszuführen.  
+## <a name="defining-the-sliding-window-dataflow-block"></a><span data-ttu-id="2bbba-109">Definieren das gleitende Fenster Datenflussblock</span><span class="sxs-lookup"><span data-stu-id="2bbba-109">Defining the Sliding Window Dataflow Block</span></span>  
+ <span data-ttu-id="2bbba-110">Erwägen Sie eine Datenfluss-Anwendung, die erfordert, dass die Eingabewerte gepuffert werden, und klicken Sie dann auf eine gleitende Fenster Weise ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="2bbba-110">Consider a dataflow application that requires that input values be buffered and then output in a sliding window manner.</span></span> <span data-ttu-id="2bbba-111">Ein gleitendes Fenster Datenflussblock erzeugt z. B. für die Eingabewerte {0, 1, 2, 3, 4, 5} und einer Fenstergröße von drei Ausgabearrays, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, und {3, 4, 5}.</span><span class="sxs-lookup"><span data-stu-id="2bbba-111">For example, for the input values {0, 1, 2, 3, 4, 5} and a window size of three, a sliding window dataflow block produces the output arrays {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, and {3, 4, 5}.</span></span> <span data-ttu-id="2bbba-112">Den folgenden Abschnitten werden zwei Möglichkeiten, einen datenflussblocktyp zu erstellen, der diesem benutzerdefinierte Verhalten implementiert.</span><span class="sxs-lookup"><span data-stu-id="2bbba-112">The following sections describe two ways to create a dataflow block type that implements this custom behavior.</span></span> <span data-ttu-id="2bbba-113">Das erste Verfahren verwendet die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> Methode, um die Funktionalität kombinieren einer <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> Objekt und ein <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> Objekt in ein Weitergabeblock.</span><span class="sxs-lookup"><span data-stu-id="2bbba-113">The first technique uses the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> method to combine the functionality of an <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> object and an <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> object into one propagator block.</span></span> <span data-ttu-id="2bbba-114">Die zweite Methode definiert eine Klasse, die abgeleitet <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> und vorhandene Funktionen, um benutzerdefiniertes Verhalten auszuführen, kombiniert.</span><span class="sxs-lookup"><span data-stu-id="2bbba-114">The second technique defines a class that derives from <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> and combines existing functionality to perform custom behavior.</span></span>  
   
-## Verwenden der kapselns\-Methode, um den Datenfluss\-Blocks gleitenden des Fensters definieren  
- Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> methode, um einen Weitergabeblock eines Ziels und von einer Quelle zu erstellen.  Ein Weitergabeblock aktiviert Verknüpfung eines Quellnachrichtenblocks und einem Zielblock, um als Empfänger und ein Absender von Daten fungiert.  
+## <a name="using-the-encapsulate-method-to-define-the-sliding-window-dataflow-block"></a><span data-ttu-id="2bbba-115">Mithilfe der Methode zum Definieren der gleitende Fenster Datenflussblock kapseln</span><span class="sxs-lookup"><span data-stu-id="2bbba-115">Using the Encapsulate Method to Define the Sliding Window Dataflow Block</span></span>  
+ <span data-ttu-id="2bbba-116">Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> Methode, um ein Weitergabeblock aus Ziel und eine Quelle zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-116">The following example uses the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> method to create a propagator block from a target and a source.</span></span> <span data-ttu-id="2bbba-117">Ein Weitergabeblock ermöglicht ein Quellblock und als Zielblock fungiert als Empfänger und Absender der Daten.</span><span class="sxs-lookup"><span data-stu-id="2bbba-117">A propagator block enables a source block and a target block to act as a receiver and sender of data.</span></span>  
   
- Diese Methode ist hilfreich, wenn Sie benutzerdefinierte Datenflussfunktionalität benötigen, aber Sie keinen Typ benötigen, der zusätzliche Methoden, Eigenschaften oder Felder bietet.  
+ <span data-ttu-id="2bbba-118">Diese Technik ist nützlich, wenn Sie benutzerdefinierte datenflussfunktionalität benötigen, aber Sie benötigen keinen Typ, der zusätzliche Methoden, Eigenschaften oder Felder enthält.</span><span class="sxs-lookup"><span data-stu-id="2bbba-118">This technique is useful when you require custom dataflow functionality, but you do not require a type that provides additional methods, properties, or fields.</span></span>  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#1)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#1)]  
   
-## Ableiten von IPropagatorBlock, um den Datenfluss\-Blocks gleitenden des Fensters definieren  
- Das folgende Beispiel zeigt die `SlidingWindowBlock`\-Klasse.  Diese Klasse wird von <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>, sodass diese als Datenquelle und ein Ziel von Daten auftreten kann.  Wie im vorherigen Beispiel, wird die Klasse `SlidingWindowBlock` auf vorhandenen Datenflussblockstypen erstellt.  Allerdings implementiert die `SlidingWindowBlock`\-Klasse auch Methoden, die von <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> und <xref:System.Threading.Tasks.Dataflow.IDataflowBlock>\-Schnittstellen benötigt werden.  Diese Arbeit leiten alle Methoden an die Blockformatmember des vordefinierten Datenflusses weiter.  Beispielsweise überträgt die `Post`\-Methode Arbeiten am `m_target` Datenmember, der auch ein <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>\-Objekt ist.  
+## <a name="deriving-from-ipropagatorblock-to-define-the-sliding-window-dataflow-block"></a><span data-ttu-id="2bbba-119">Ableiten von IPropagatorBlock das gleitende Fenster Datenflussblock definieren</span><span class="sxs-lookup"><span data-stu-id="2bbba-119">Deriving from IPropagatorBlock to Define the Sliding Window Dataflow Block</span></span>  
+ <span data-ttu-id="2bbba-120">Das folgende Beispiel zeigt die `SlidingWindowBlock` Klasse.</span><span class="sxs-lookup"><span data-stu-id="2bbba-120">The following example shows the `SlidingWindowBlock` class.</span></span> <span data-ttu-id="2bbba-121">Diese Klasse leitet sich von <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> , damit es als eine Quelle und ein Ziel der Daten verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="2bbba-121">This class derives from <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> so that it can act as both a source and a target of data.</span></span> <span data-ttu-id="2bbba-122">Wie im vorherigen Beispiel die `SlidingWindowBlock` Klasse basiert auf vorhandenen datenflussblocktypen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-122">As in the previous example, the `SlidingWindowBlock` class is built on existing dataflow block types.</span></span> <span data-ttu-id="2bbba-123">Allerdings die `SlidingWindowBlock` Klasse implementiert auch Methoden, die erforderlich sind die <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, und <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> Schnittstellen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-123">However, the `SlidingWindowBlock` class also implements the methods that are required by the <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, and <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> interfaces.</span></span> <span data-ttu-id="2bbba-124">Diese Methoden alle vorwärts funktionieren auf die vordefinierten Datenfluss Block Typmember.</span><span class="sxs-lookup"><span data-stu-id="2bbba-124">These methods all forward work to the predefined dataflow block type members.</span></span> <span data-ttu-id="2bbba-125">Z. B. die `Post` -Methode verzögert Arbeit der `m_target` Datenmember, die auch ist ein <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> Objekt.</span><span class="sxs-lookup"><span data-stu-id="2bbba-125">For example, the `Post` method defers work to the `m_target` data member, which is also an <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> object.</span></span>  
   
- Diese Methode ist hilfreich, wenn Sie benutzerdefinierte Datenflussfunktionalität benötigen, und erfordert auch einen Typ, der zusätzliche Methoden, Eigenschaften oder Felder bietet.  Beispielsweise berechnet die `SlidingWindowBlock`\-Klasse auch von <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601>, sodass die <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> und <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A>\-Methoden bereitstellen kann.  Die `SlidingWindowBlock`\-Klasse wird auch Erweiterbarkeit, mithilfe der `WindowSize`\-Eigenschaft bereitstellt, die die Anzahl der Elemente im gleitende Fenster abrufen.  
+ <span data-ttu-id="2bbba-126">Diese Technik ist nützlich, wenn Sie benutzerdefinierte datenflussfunktionalität erfordern erforderlich, und einen Typ, der zusätzliche Methoden, Eigenschaften oder Felder enthält.</span><span class="sxs-lookup"><span data-stu-id="2bbba-126">This technique is useful when you require custom dataflow functionality, and also require a type that provides additional methods, properties, or fields.</span></span> <span data-ttu-id="2bbba-127">Z. B. die `SlidingWindowBlock` Klasse auch abgeleitet <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601> so, dass diese bereitstellen, kann die <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> und <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> Methoden.</span><span class="sxs-lookup"><span data-stu-id="2bbba-127">For example, the `SlidingWindowBlock` class also derives from <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601> so that it can provide the <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> and <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> methods.</span></span> <span data-ttu-id="2bbba-128">Die `SlidingWindowBlock` Klasse veranschaulicht auch Erweiterbarkeit durch Bereitstellen der `WindowSize` -Eigenschaft, die die Anzahl der Elemente in das gleitende Fenster abruft.</span><span class="sxs-lookup"><span data-stu-id="2bbba-128">The `SlidingWindowBlock` class also demonstrates extensibility by providing the `WindowSize` property, which retrieves the number of elements in the sliding window.</span></span>  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#2)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#2)]  
   
-## Vollständiges Beispiel  
- Im folgenden Beispiel wird der vollständige Code für diese exemplarische Vorgehensweise angezeigt.  Es zeigt auch, wie die Blöcke des gleitenden Fensters in einer Methode verwendet, die auf den Block schreibt, davon liest und die Ergebnisse an die Konsole ausgibt.  
+## <a name="the-complete-example"></a><span data-ttu-id="2bbba-129">Vollständiges Beispiel</span><span class="sxs-lookup"><span data-stu-id="2bbba-129">The Complete Example</span></span>  
+ <span data-ttu-id="2bbba-130">Das folgende Beispiel enthält den vollständigen Code für diese exemplarische Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="2bbba-130">The following example shows the complete code for this walkthrough.</span></span> <span data-ttu-id="2bbba-131">Es wird veranschaulicht, wie beide gleitende Fenster Blöcke in einer Methode verwenden, die an den Block schreibt, liest aus und gibt die Ergebnisse an die Konsole.</span><span class="sxs-lookup"><span data-stu-id="2bbba-131">It also demonstrates how to use the both sliding window blocks in a method that writes to the block, reads from it, and prints the results to the console.</span></span>  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio\-Projekt ein, oder fügen Sie ihn in eine Datei, die `SlidingWindowBlock.cs` \(`SlidingWindowBlock.vb` für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) trägt und dann folgenden Befehl in einem Visual Studio\-Eingabeaufforderung ausgeführt.  
+## <a name="compiling-the-code"></a><span data-ttu-id="2bbba-132">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="2bbba-132">Compiling the Code</span></span>  
+ <span data-ttu-id="2bbba-133">Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` für [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.</span><span class="sxs-lookup"><span data-stu-id="2bbba-133">Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) and then run the following command in a Visual Studio Command Prompt window.</span></span>  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
+ <span data-ttu-id="2bbba-134">**csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**</span><span class="sxs-lookup"><span data-stu-id="2bbba-134">**csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**</span></span>  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
+ <span data-ttu-id="2bbba-135">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**</span><span class="sxs-lookup"><span data-stu-id="2bbba-135">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**</span></span>  
   
-## Nächste Schritte  
+## <a name="next-steps"></a><span data-ttu-id="2bbba-136">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="2bbba-136">Next Steps</span></span>  
   
-## Siehe auch  
- [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="2bbba-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2bbba-137">See Also</span></span>  
+ [<span data-ttu-id="2bbba-138">Dataflow (Datenfluss)</span><span class="sxs-lookup"><span data-stu-id="2bbba-138">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -1,86 +1,89 @@
 ---
-title: "Exceptions in Managed Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unhandled exceptions,in managed threads"
-  - "threading [.NET Framework],unhandled exceptions"
-  - "threading [.NET Framework],exceptions in managed threads"
-  - "managed threading"
+title: Ausnahmen in verwalteten Threads
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unhandled exceptions,in managed threads
+- threading [.NET Framework],unhandled exceptions
+- threading [.NET Framework],exceptions in managed threads
+- managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Exceptions in Managed Threads
-Ab .NET Framework Version 2.0 erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads, dass diese ordnungsgemäß fortgesetzt werden.  Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
+# <a name="exceptions-in-managed-threads"></a><span data-ttu-id="49039-102">Ausnahmen in verwalteten Threads</span><span class="sxs-lookup"><span data-stu-id="49039-102">Exceptions in Managed Threads</span></span>
+<span data-ttu-id="49039-103">Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung.</span><span class="sxs-lookup"><span data-stu-id="49039-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="49039-104">Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.</span><span class="sxs-lookup"><span data-stu-id="49039-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  
   
 > [!NOTE]
->  Dies ist ein wichtige Änderung im Vergleich zu den .NET Framework\-Versionen 1.0 und 1.1, die für zahlreiche unbehandelte Ausnahmen ein Sicherheitsnetz bereitstellen, z. B. für unbehandelte Ausnahmen in Threadpoolthreads.  Weitere Informationen finden Sie später in diesem Thema unter [Änderung von früheren Versionen](#ChangeFromPreviousVersions).  
+>  <span data-ttu-id="49039-105">Dies ist eine wichtige Änderung im Vergleich zu den .NET Framework-Versionen 1.0 und 1.1, die für zahlreiche unbehandelte Ausnahmen ein Sicherheitsnetz bereitstellen, z. B. für unbehandelte Ausnahmen in Threadpoolthreads.</span><span class="sxs-lookup"><span data-stu-id="49039-105">This is a significant change from the .NET Framework versions 1.0 and 1.1, which provide a backstop for many unhandled exceptions — for example, unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="49039-106">Weitere Informationen finden Sie später in diesem Thema unter [Änderung von früheren Versionen](#ChangeFromPreviousVersions).</span><span class="sxs-lookup"><span data-stu-id="49039-106">See [Change from Previous Versions](#ChangeFromPreviousVersions) later in this topic.</span></span>  
   
- Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zum Steuern des Programmablaufs verwendet werden, ein Sicherheitsnetz bereit:  
+ <span data-ttu-id="49039-107">Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zum Steuern des Programmablaufs verwendet werden, ein Sicherheitsnetz bereit:</span><span class="sxs-lookup"><span data-stu-id="49039-107">The common language runtime provides a backstop for certain unhandled exceptions that are used for controlling program flow:</span></span>  
   
--   In einem Thread wird eine <xref:System.Threading.ThreadAbortException> ausgelöst, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.  
+-   <span data-ttu-id="49039-108">Ein <xref:System.Threading.ThreadAbortException> in einem Thread ausgelöst wird, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="49039-108">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   In einem Thread wird eine <xref:System.AppDomainUnloadedException> ausgelöst, da die Anwendungsdomäne, in der der Thread ausgeführt wird, entladen wird.  
+-   <span data-ttu-id="49039-109">Ein <xref:System.AppDomainUnloadedException> in einem Thread ausgelöst wird, da entladen die Anwendungsdomäne, in dem der Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="49039-109">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain in which the thread is executing is being unloaded.</span></span>  
   
--   Die Common Language Runtime oder ein Hostprozess beendet den Thread durch Auslösen einer internen Ausnahme.  
+-   <span data-ttu-id="49039-110">Die Common Language Runtime oder ein Hostprozess beendet den Thread durch Auslösen einer internen Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="49039-110">The common language runtime or a host process terminates the thread by throwing an internal exception.</span></span>  
   
- Wenn eine dieser Ausnahmen in Threads, die von der Common Language Runtime erstellt wurden, nicht behandelt werden, beendet die Ausnahme den Thread, die Common Language Runtime lässt jedoch die weitere Ausführung der Ausnahme nicht zu.  
+ <span data-ttu-id="49039-111">Wenn eine dieser Ausnahmen in Threads, die von der Common Language Runtime erstellt wurden, nicht behandelt werden, beendet die Ausnahme den Thread, die Common Language Runtime lässt jedoch die Weiterreichung der Ausnahme nicht zu.</span><span class="sxs-lookup"><span data-stu-id="49039-111">If any of these exceptions are unhandled in threads created by the common language runtime, the exception terminates the thread, but the common language runtime does not allow the exception to proceed further.</span></span>  
   
- Wenn diese Ausnahmen im Hauptthread oder in Threads, die von nicht verwaltetem Code in die Laufzeit eintreten, nicht behandelt werden, werden sie normal fortgesetzt, d. h. sie beenden die Anwendung.  
+ <span data-ttu-id="49039-112">Wenn diese Ausnahmen im Hauptthread oder in Threads, die von nicht verwaltetem Code in die Laufzeit eintreten, nicht behandelt werden, werden sie normal fortgesetzt, d. h., sie beenden die Anwendung.</span><span class="sxs-lookup"><span data-stu-id="49039-112">If these exceptions are unhandled in the main thread, or in threads that entered the runtime from unmanaged code, they proceed normally, resulting in termination of the application.</span></span>  
   
 > [!NOTE]
->  Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann.  Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
+>  <span data-ttu-id="49039-113">Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann.</span><span class="sxs-lookup"><span data-stu-id="49039-113">It is possible for the runtime to throw an unhandled exception before any managed code has had a chance to install an exception handler.</span></span> <span data-ttu-id="49039-114">Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="49039-114">Even though managed code had no chance to handle such an exception, the exception is allowed to proceed naturally.</span></span>  
   
-## Aufdecken von Threadingproblemen bei der Entwicklung  
- Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen.  Dies ist insbesondere bei Diensten und andere Anwendungen, die über einen längeren Zeitraum ausgeführt werden, ein Problem.  Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt.  Die Anwendungsleistung kann beeinträchtigt werden, oder es kann soweit kommen, dass die Anwendung gar nicht mehr reagiert.  
+## <a name="exposing-threading-problems-during-development"></a><span data-ttu-id="49039-115">Aufdecken von Threadingproblemen bei der Entwicklung</span><span class="sxs-lookup"><span data-stu-id="49039-115">Exposing Threading Problems During Development</span></span>  
+ <span data-ttu-id="49039-116">Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen.</span><span class="sxs-lookup"><span data-stu-id="49039-116">When threads are allowed to fail silently, without terminating the application, serious programming problems can go undetected.</span></span> <span data-ttu-id="49039-117">Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="49039-117">This is a particular problem for services and other applications which run for extended periods.</span></span> <span data-ttu-id="49039-118">Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt.</span><span class="sxs-lookup"><span data-stu-id="49039-118">As threads fail, program state gradually becomes corrupted.</span></span> <span data-ttu-id="49039-119">Die Anwendungsleistung kann beeinträchtigt werden, oder es kann soweit kommen, dass die Anwendung gar nicht mehr reagiert.</span><span class="sxs-lookup"><span data-stu-id="49039-119">Application performance may degrade, or the application might hang.</span></span>  
   
- Wenn Sie die normale Fortsetzung von unbehandelten Ausnahmen in Threads zulassen, bis das Programm vom Betriebssystem beendet wird, werden derartige Probleme bei der Entwicklung und beim Testen entdeckt.  Fehlerberichte über Beendigungen des Programms unterstützen das Debuggen.  
+ <span data-ttu-id="49039-120">Wenn Sie die normale Fortsetzung von unbehandelten Ausnahmen in Threads zulassen, bis das Programm vom Betriebssystem beendet wird, werden derartige Probleme bei der Entwicklung und beim Testen entdeckt.</span><span class="sxs-lookup"><span data-stu-id="49039-120">Allowing unhandled exceptions in threads to proceed naturally, until the operating system terminates the program, exposes such problems during development and testing.</span></span> <span data-ttu-id="49039-121">Fehlerberichte über Beendigungen des Programms unterstützen das Debuggen.</span><span class="sxs-lookup"><span data-stu-id="49039-121">Error reports on program terminations support debugging.</span></span>  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## Änderung von früheren Versionen  
- Die wichtigste Änderung betrifft verwaltete Threads.  In den .NET Framework\-Versionen 1.0 und 1.1 stellt die Common Language Runtime für unbehandelte Ausnahmen in den folgenden Situationen ein Sicherheitsnetz bereit:  
+## <a name="change-from-previous-versions"></a><span data-ttu-id="49039-122">Änderung von früheren Versionen</span><span class="sxs-lookup"><span data-stu-id="49039-122">Change from Previous Versions</span></span>  
+ <span data-ttu-id="49039-123">Die wichtigste Änderung betrifft verwaltete Threads.</span><span class="sxs-lookup"><span data-stu-id="49039-123">The most significant change pertains to managed threads.</span></span> <span data-ttu-id="49039-124">In den .NET Framework-Versionen 1.0 und 1.1 stellt die Common Language Runtime für unbehandelte Ausnahmen in den folgenden Situationen ein Sicherheitsnetz bereit:</span><span class="sxs-lookup"><span data-stu-id="49039-124">In the .NET Framework versions 1.0 and 1.1, the common language runtime provides a backstop for unhandled exceptions in the following situations:</span></span>  
   
--   In einem Threadpoolthread gibt es keine unbehandelten Ausnahmen.  Wenn eine Aufgabe eine Ausnahme auslöst, die sie nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus, und gibt den Thread an den Threadpool zurück.  
+-   <span data-ttu-id="49039-125">In einem Threadpoolthread gibt es keine unbehandelten Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="49039-125">There is no such thing as an unhandled exception on a thread pool thread.</span></span> <span data-ttu-id="49039-126">Wenn eine Aufgabe eine Ausnahme auslöst, die sie nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus, und gibt den Thread an den Threadpool zurück.</span><span class="sxs-lookup"><span data-stu-id="49039-126">When a task throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then returns the thread to the thread pool.</span></span>  
   
--   In einem Thread, der mit der <xref:System.Threading.Thread.Start%2A>\-Methode der <xref:System.Threading.Thread>\-Klasse erstellt wurde, gibt es keine unbehandelten Ausnahmen.  Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.  
+-   <span data-ttu-id="49039-127">Solche vorhanden ist, wie eine nicht behandelte Ausnahme in einem Thread mit erstellt die <xref:System.Threading.Thread.Start%2A> Methode der <xref:System.Threading.Thread> Klasse.</span><span class="sxs-lookup"><span data-stu-id="49039-127">There is no such thing as an unhandled exception on a thread created with the <xref:System.Threading.Thread.Start%2A> method of the <xref:System.Threading.Thread> class.</span></span> <span data-ttu-id="49039-128">Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.</span><span class="sxs-lookup"><span data-stu-id="49039-128">When code running on such a thread throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then gracefully terminates the thread.</span></span>  
   
--   In einem Finalizerthread gibt keine unbehandelten Ausnahmen.  Wenn ein Finalizer eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und lässt den Finalizerthread dann die Ausführung von Finalizern fortsetzen.  
+-   <span data-ttu-id="49039-129">In einem Finalizerthread gibt keine unbehandelten Ausnahmen.</span><span class="sxs-lookup"><span data-stu-id="49039-129">There is no such thing as an unhandled exception on the finalizer thread.</span></span> <span data-ttu-id="49039-130">Wenn ein Finalizer eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und lässt den Finalizerthread dann die Ausführung von Finalizern fortsetzen.</span><span class="sxs-lookup"><span data-stu-id="49039-130">When a finalizer throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then allows the finalizer thread to resume running finalizers.</span></span>  
   
- Der Vordergrund\- oder Hintergrundstatus eines verwalteten Threads beeinflusst dieses Verhalten nicht.  
+ <span data-ttu-id="49039-131">Der Vordergrund- oder Hintergrundstatus eines verwalteten Threads beeinflusst dieses Verhalten nicht.</span><span class="sxs-lookup"><span data-stu-id="49039-131">The foreground or background status of a managed thread does not affect this behavior.</span></span>  
   
- Bei unbehandelten Ausnahmen in Threads, die aus nicht verwaltetem Code stammen, ist der Unterschied feiner.  Das Dialogfeld des an einen Prozess angefügten JIT hat bei verwalteten Ausnahmen oder systemeigenen Ausnahmen in Threads, die durch systemeigenen Code übergeben wurden, Vorrang vor dem Dialogfeld des Betriebssystems.  Der Prozess wird in allen Fällen beendet.  
+ <span data-ttu-id="49039-132">Bei unbehandelten Ausnahmen in Threads, die aus nicht verwaltetem Code stammen, ist der Unterschied feiner.</span><span class="sxs-lookup"><span data-stu-id="49039-132">For unhandled exceptions on threads originating in unmanaged code, the difference is more subtle.</span></span> <span data-ttu-id="49039-133">Das Dialogfeld des an einen Prozess angefügten JIT hat bei verwalteten Ausnahmen oder systemeigenen Ausnahmen in Threads, die durch systemeigenen Code übergeben wurden, Vorrang vor dem Dialogfeld des Betriebssystems.</span><span class="sxs-lookup"><span data-stu-id="49039-133">The runtime JIT-attach dialog preempts the operating system dialog for managed exceptions or native exceptions on threads that have passed through native code.</span></span> <span data-ttu-id="49039-134">Der Prozess wird in allen Fällen beendet.</span><span class="sxs-lookup"><span data-stu-id="49039-134">The process terminates in all cases.</span></span>  
   
-### Migrieren von Code  
- Die Änderung deckt im Allgemeinen zuvor unerkannte Programmierfehler auf, sodass diese behoben werden können.  In einigen Fällen war das Sicherheitsnetz der Laufzeit jedoch für Programmierer praktisch, z. B. zum Beenden von Threads.  Je nach Situation bietet sich eine der folgenden Migrationsstrategien an:  
+### <a name="migrating-code"></a><span data-ttu-id="49039-135">Migrieren von Code</span><span class="sxs-lookup"><span data-stu-id="49039-135">Migrating Code</span></span>  
+ <span data-ttu-id="49039-136">Die Änderung deckt im Allgemeinen zuvor unerkannte Programmierfehler auf, sodass diese behoben werden können.</span><span class="sxs-lookup"><span data-stu-id="49039-136">In general, the change will expose previously unrecognized programming problems so that they can be fixed.</span></span> <span data-ttu-id="49039-137">In einigen Fällen war das Sicherheitsnetz der Laufzeit jedoch für Programmierer praktisch, z. B. zum Beenden von Threads.</span><span class="sxs-lookup"><span data-stu-id="49039-137">In some cases, however, programmers might have taken advantage of the runtime backstop, for example to terminate threads.</span></span> <span data-ttu-id="49039-138">Je nach Situation bietet sich eine der folgenden Migrationsstrategien an:</span><span class="sxs-lookup"><span data-stu-id="49039-138">Depending on the situation, they should consider one of the following migration strategies:</span></span>  
   
--   Strukturieren Sie den Code so um, dass der Thread beim Empfang eines Signals ordnungsgemäß beendet wird.  
+-   <span data-ttu-id="49039-139">Strukturieren Sie den Code so um, dass der Thread beim Empfang eines Signals ordnungsgemäß beendet wird.</span><span class="sxs-lookup"><span data-stu-id="49039-139">Restructure the code so the thread exits gracefully when a signal is received.</span></span>  
   
--   Beenden Sie den Thread mit der <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>\-Methode.  
+-   <span data-ttu-id="49039-140">Verwenden der <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Methode, um den Thread abzubrechen.</span><span class="sxs-lookup"><span data-stu-id="49039-140">Use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method to abort the thread.</span></span>  
   
--   Wenn ein Thread angehalten werden muss, um die Prozessbeendigung fortzusetzen, machen Sie den Thread zu einem Hintergrundthread, damit er beim Prozessende automatisch beendet wird.  
+-   <span data-ttu-id="49039-141">Wenn ein Thread angehalten werden muss, um die Prozessbeendigung fortzusetzen, machen Sie den Thread zu einem Hintergrundthread, damit er beim Prozessende automatisch beendet wird.</span><span class="sxs-lookup"><span data-stu-id="49039-141">If a thread must be stopped so that process termination can proceed, make the thread a background thread so that it is automatically terminated on process exit.</span></span>  
   
- Sie sollten dabei auf jeden die Entwurfsrichtlinien für Ausnahmen einhalten.  Siehe [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md).  
+ <span data-ttu-id="49039-142">Sie sollten dabei auf jeden die Entwurfsrichtlinien für Ausnahmen einhalten.</span><span class="sxs-lookup"><span data-stu-id="49039-142">In all cases, the strategy should follow the design guidelines for exceptions.</span></span> <span data-ttu-id="49039-143">Siehe [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="49039-143">See [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md).</span></span>  
   
-### Anwendungskompatibilitätsflag  
- Administratoren können als vorübergehende Kompatibilitätsmaßnahme im `<runtime>`\-Abschnitt der Anwendungskonfigurationsdatei ein Kompatibilitätsflag angeben.  Dadurch wird die Common Language Runtime auf das Verhalten der Versionen 1.0 und 1.1 zurückgesetzt.  
+### <a name="application-compatibility-flag"></a><span data-ttu-id="49039-144">Anwendungskompatibilitätsflag</span><span class="sxs-lookup"><span data-stu-id="49039-144">Application Compatibility Flag</span></span>  
+ <span data-ttu-id="49039-145">Administratoren können als vorübergehende Kompatibilitätsmaßnahme im `<runtime>`-Abschnitt der Anwendungskonfigurationsdatei ein Kompatibilitätsflag angeben.</span><span class="sxs-lookup"><span data-stu-id="49039-145">As a temporary compatibility measure, administrators can place a compatibility flag in the `<runtime>` section of the application configuration file.</span></span> <span data-ttu-id="49039-146">Dadurch wird die Common Language Runtime auf das Verhalten der Versionen 1.0 und 1.1 zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="49039-146">This causes the common language runtime to revert to the behavior of versions 1.0 and 1.1.</span></span>  
   
-```  
+```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## Hostüberschreibung  
- In .NET Framework, Version 2.0, kann ein nicht verwalteter Host über die [ICLRPolicyManager](../../../ocs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)\-Schnittstelle in der Hosting\-API die Standardrichtlinie für unbehandelte Ausnahmen der Common Language Runtime überschreiben.  Die [ICLRPolicyManager::SetUnhandledExceptionPolicy](../Topic/ICLRPolicyManager::SetUnhandledExceptionPolicy%20Method.md)\-Funktion wird zum Festlegen der Richtlinie für unbehandelte Ausnahmen verwendet.  
+## <a name="host-override"></a><span data-ttu-id="49039-147">Hostüberschreibung</span><span class="sxs-lookup"><span data-stu-id="49039-147">Host Override</span></span>  
+ <span data-ttu-id="49039-148">In .NET Framework, Version 2.0, kann ein nicht verwalteter Host über die [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)-Schnittstelle in der Hosting-API die Standardrichtlinie für unbehandelte Ausnahmen der Common Language Runtime überschreiben.</span><span class="sxs-lookup"><span data-stu-id="49039-148">In the .NET Framework version 2.0, an unmanaged host can use the [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interface in the Hosting API to override the default unhandled exception policy of the common language runtime.</span></span> <span data-ttu-id="49039-149">Die [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)-Funktion wird zum Festlegen der Richtlinie für unbehandelte Ausnahmen verwendet.</span><span class="sxs-lookup"><span data-stu-id="49039-149">The [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) function is used to set the policy for unhandled exceptions.</span></span>  
   
-## Siehe auch  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a><span data-ttu-id="49039-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="49039-150">See Also</span></span>  
+ [<span data-ttu-id="49039-151">Grundlagen des verwalteten Threadings</span><span class="sxs-lookup"><span data-stu-id="49039-151">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)

@@ -1,42 +1,43 @@
 ---
-title: "Ereignisbehandlung in einem XML-Dokument mit &quot;XmlNodeChangedEventArgs&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Ereignisbehandlung in einem XML-Dokument mit &quot;XmlNodeChangedEventArgs&quot;
-**XmlNodeChangedEventArgs** kapselt die Argumente ein, die den beim **XmlDocument**\-Objekt zur Behandlung von Ereignissen registrierten Ereignishandlern übergeben werden.  	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="09a82-102">Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"</span><span class="sxs-lookup"><span data-stu-id="09a82-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="09a82-103">Die **"XmlNodeChangedEventArgs"** kapselt die Argumente, die an die registrierten Ereignishandlern übergeben der **XmlDocument** Objekt für die Behandlung von Ereignissen.</span><span class="sxs-lookup"><span data-stu-id="09a82-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="09a82-104">	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="09a82-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|Ereignis|Wird ausgelöst|  
-|--------------|--------------------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wird.|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wurde.|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade aus dem Dokument entfernt wird.|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|Wenn ein Knoten, der zum aktuellen Dokument gehört, aus dem übergeordneten Knoten entfernt wurde.|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|Wenn der Wert eines Knotens gerade geändert wird.|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|Wenn der Wert eines Knotens geändert wurde.|  
+|<span data-ttu-id="09a82-105">Ereignis</span><span class="sxs-lookup"><span data-stu-id="09a82-105">Event</span></span>|<span data-ttu-id="09a82-106">Wird ausgelöst</span><span class="sxs-lookup"><span data-stu-id="09a82-106">Fired</span></span>|  
+|-----------|-----------|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="09a82-107">Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="09a82-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="09a82-108">Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="09a82-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="09a82-109">Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade aus dem Dokument entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="09a82-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="09a82-110">Wenn ein Knoten, der zum aktuellen Dokument gehört, aus dem übergeordneten Knoten entfernt wurde.</span><span class="sxs-lookup"><span data-stu-id="09a82-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="09a82-111">Wenn der Wert eines Knotens gerade geändert wird.</span><span class="sxs-lookup"><span data-stu-id="09a82-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="09a82-112">Wenn der Wert eines Knotens geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="09a82-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
->  Wenn die Speichernutzung von **XmlDataDocument** vollständig für die **DataSet**\-Speicherung optimiert ist, wird durch **XmlDataDocument** bei Änderungen des zugrunde liegenden **DataSet** möglicherweise keines der oben aufgeführten Ereignisse ausgelöst.  Wenn diese Ereignisse benötigt werden, muss das ganze **XmlDocument** einmal durchlaufen werden, damit die Speichernutzung nicht vollständig optimiert wird.  
+>  <span data-ttu-id="09a82-113">Wenn die **XmlDataDocument** speicherauslastung wird vollständig optimiert, um verwenden **DataSet** Speicher, der **XmlDataDocument** möglicherweise nicht ausgelöst, wenn Änderungen sind oben aufgeführten Ereignisse versucht, die zugrunde liegende **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="09a82-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="09a82-114">Wenn Sie diese Ereignisse benötigt werden, müssen Sie die gesamte durchlaufen **XmlDocument** einmal, um die Auslastung des Speichers nicht vollständig optimiert stellen.</span><span class="sxs-lookup"><span data-stu-id="09a82-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie ein Ereignishandler definiert und dann einem Ereignis hinzugefügt wird.  
+ <span data-ttu-id="09a82-115">Im folgenden Codebeispiel wird veranschaulicht, wie ein Ereignishandler definiert und dann einem Ereignis hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="09a82-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Manche DOM\-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können.  **AppendChild** muss den gerade angefügten Knoten möglicherweise aus dem übergeordneten Element entfernen.  In diesem Fall wird zuerst ein **NodeRemoved**\-Ereignis und dann ein **NodeInserted**\-Ereignis ausgelöst.  Operationen \(z. B. das Festlegen von **InnerXml**\) können zu mehreren Ereignissen führen.  
+ <span data-ttu-id="09a82-116">Manche DOM-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können.</span><span class="sxs-lookup"><span data-stu-id="09a82-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="09a82-117">Beispielsweise **AppendChild** ggf. So entfernen Sie den Knoten aus dem übergeordneten Element angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="09a82-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="09a82-118">In diesem Fall finden Sie unter einem **NodeRemoved** zunächst ausgelöste Ereignis gefolgt von einer **NodeInserted** Ereignis.</span><span class="sxs-lookup"><span data-stu-id="09a82-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="09a82-119">Vorgänge wie Einstellung **InnerXml** mehrere Ereignisse verursachen.</span><span class="sxs-lookup"><span data-stu-id="09a82-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- Im folgenden Codebeispiel wird das Erstellen des Ereignishandlers und die Behandlung des **NodeInserted**\-Ereignisses veranschaulicht.  
+ <span data-ttu-id="09a82-120">Im folgenden Codebeispiel wird veranschaulicht, die Erstellung des ereignishandlers und die Fehlerbehandlung der **NodeInserted** Ereignis.</span><span class="sxs-lookup"><span data-stu-id="09a82-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- Weitere Informationen finden Sie unter [XmlNodeChangeEventArgs\-Member](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic) und [XmlNodeChangedEventHandler\-Delegat](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ <span data-ttu-id="09a82-121">Weitere Informationen finden Sie unter <xref:System.Xml.XmlNodeChangedEventArgs> und <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="09a82-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="09a82-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="09a82-122">See Also</span></span>  
+ [<span data-ttu-id="09a82-123">XML-Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="09a82-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

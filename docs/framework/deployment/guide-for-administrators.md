@@ -5,273 +5,265 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
-In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
+# <a name="net-framework-deployment-guide-for-administrators"></a><span data-ttu-id="f6393-102">Handbuch für die Bereitstellung von .NET Framework für Administratoren</span><span class="sxs-lookup"><span data-stu-id="f6393-102">.NET Framework Deployment Guide for Administrators</span></span>
+<span data-ttu-id="f6393-103">In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="f6393-103">This step-by-step article describes how a system administrator can deploy the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] and its system dependencies across a network by using Microsoft System Center Configuration Manager.</span></span> <span data-ttu-id="f6393-104">In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen.</span><span class="sxs-lookup"><span data-stu-id="f6393-104">This article assumes that all target client computers meet the minimum requirements for the .NET Framework.</span></span> <span data-ttu-id="f6393-105">Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6393-105">For a list of the software and hardware requirements for installing the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], see [System Requirements](../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
 > [!NOTE]
->  Die Software, auf die in diesem Dokument verwiesen wird, einschließlich und ohne Einschränkung [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager und Active Directory, unterliegen jeweils den geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.  
+>  <span data-ttu-id="f6393-106">Die Software, auf die in diesem Dokument verwiesen wird, einschließlich und ohne Einschränkung [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager und Active Directory, unterliegen jeweils den geltenden Lizenzbedingungen.</span><span class="sxs-lookup"><span data-stu-id="f6393-106">The software referenced in this document, including, without limitation, the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager, and Active Directory, are each subject to license terms and conditions.</span></span> <span data-ttu-id="f6393-107">In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden.</span><span class="sxs-lookup"><span data-stu-id="f6393-107">These instructions assume that such license terms and conditions have been reviewed and accepted by the appropriate licensees of the software.</span></span> <span data-ttu-id="f6393-108">Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.</span><span class="sxs-lookup"><span data-stu-id="f6393-108">These instructions do not waive any of the terms and conditions of such license agreements.</span></span>  
 >   
->  Informationen zur Unterstützung für .NET Framework finden Sie unter [Microsoft .NET Framework Support Lifecycle-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=196607) auf der Microsoft Support-Website.  
+>  <span data-ttu-id="f6393-109">Informationen zur Unterstützung für .NET Framework finden Sie unter [Microsoft .NET Framework Support Lifecycle-Richtlinien](http://go.microsoft.com/fwlink/?LinkId=196607) auf der Microsoft Support-Website.</span><span class="sxs-lookup"><span data-stu-id="f6393-109">For information about support for the .NET Framework, see [Microsoft .NET Framework Support Lifecycle Policy](http://go.microsoft.com/fwlink/?LinkId=196607) on the Microsoft Support website.</span></span>  
   
- Dieses Thema enthält folgende Abschnitte:  
+ <span data-ttu-id="f6393-110">Dieses Thema enthält folgende Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="f6393-110">This topic contains the following sections:</span></span>  
   
- [Bereitstellungsprozess](#the_deployment_process)   
- [Bereitstellen von .NET Framework](#deploying_in_a_test_environment)   
- [Erstellen einer Sammlung](#creating_a_collection)  
- [Erstellen eines Pakets und Programms](#creating_a_package)  
- [Auswählen eines Verteilungspunkts](#select_dist_point)  
- [Bereitstellen des Pakets](#deploying_package)  
-[Ressourcen](#resources)  
-[Problembehandlung](#troubleshooting)  
+ [<span data-ttu-id="f6393-111">Der Bereitstellungsprozess</span><span class="sxs-lookup"><span data-stu-id="f6393-111">The deployment process</span></span>](#the_deployment_process)  
+ [<span data-ttu-id="f6393-112">Bereitstellen von .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f6393-112">Deploying the .NET Framework</span></span>](#deploying_in_a_test_environment)  
+ [<span data-ttu-id="f6393-113">Erstellen einer Sammlung</span><span class="sxs-lookup"><span data-stu-id="f6393-113">Create a collection</span></span>](#creating_a_collection)  
+ [<span data-ttu-id="f6393-114">Erstellen eines Pakets und Programms</span><span class="sxs-lookup"><span data-stu-id="f6393-114">Create a package and program</span></span>](#creating_a_package)  
+ [<span data-ttu-id="f6393-115">Auswählen eines Verteilungspunkts</span><span class="sxs-lookup"><span data-stu-id="f6393-115">Select a distribution point</span></span>](#select_dist_point)  
+ [<span data-ttu-id="f6393-116">Bereitstellen des Pakets</span><span class="sxs-lookup"><span data-stu-id="f6393-116">Deploy the package</span></span>](#deploying_package)  
+[<span data-ttu-id="f6393-117">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="f6393-117">Resources</span></span>](#resources)  
+[<span data-ttu-id="f6393-118">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="f6393-118">Troubleshooting</span></span>](#troubleshooting)  
   
 <a name="the_deployment_process"></a>   
-## <a name="the-deployment-process"></a>Bereitstellungsprozess  
- Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit System Center 2012 Configuration Manager auf Computern im Netzwerk bereit. Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.  
+## <a name="the-deployment-process"></a><span data-ttu-id="f6393-119">Bereitstellungsprozess</span><span class="sxs-lookup"><span data-stu-id="f6393-119">The deployment process</span></span>  
+ <span data-ttu-id="f6393-120">Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit System Center 2012 Configuration Manager auf Computern im Netzwerk bereit.</span><span class="sxs-lookup"><span data-stu-id="f6393-120">When you have the supporting infrastructure in place, you use System Center 2012 Configuration Manager to deploy the .NET Framework redistributable package to computers on the network.</span></span> <span data-ttu-id="f6393-121">Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.</span><span class="sxs-lookup"><span data-stu-id="f6393-121">Building the infrastructure involves creating and defining five primary areas: collections, a package and program for the software, distribution points, and deployments.</span></span>  
   
--   Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx).  
+-   <span data-ttu-id="f6393-122">Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="f6393-122">**Collections** are groups of Configuration Manager resources, such as users, user groups, or computers, to which the .NET Framework is deployed.</span></span> <span data-ttu-id="f6393-123">Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-123">For more information, see [Collections in Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx) in the Configuration Manager documentation library.</span></span>  
   
--   **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in Configuration Manager](http://technet.microsoft.com/library/gg699369.aspx).  
+-   <span data-ttu-id="f6393-124">**Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten.</span><span class="sxs-lookup"><span data-stu-id="f6393-124">**Packages and programs** typically represent software applications to be installed on a client computer, but they might also contain individual files, updates, or even individual commands.</span></span> <span data-ttu-id="f6393-125">Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in Configuration Manager](http://technet.microsoft.com/library/gg699369.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-125">For more information, see [Packages and Programs in Configuration Manager](http://technet.microsoft.com/library/gg699369.aspx) in the Configuration Manager documentation library.</span></span>  
   
--   **Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern. Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in die Inhaltsverwaltung in Configuration Manager](http://technet.microsoft.com/library/gg682083.aspx).  
+-   <span data-ttu-id="f6393-126">**Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern.</span><span class="sxs-lookup"><span data-stu-id="f6393-126">**Distribution points** are Configuration Manager site system roles that store files required for software to run on client computers.</span></span> <span data-ttu-id="f6393-127">Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten.</span><span class="sxs-lookup"><span data-stu-id="f6393-127">When the Configuration Manager client receives and processes a software deployment, it contacts a distribution point to download the content associated with the software and to start the installation process.</span></span> <span data-ttu-id="f6393-128">Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in die Inhaltsverwaltung in Configuration Manager](http://technet.microsoft.com/library/gg682083.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-128">For more information, see [Introduction to content Management in Configuration Manager](http://technet.microsoft.com/library/gg682083.aspx) in the Configuration Manager documentation library.</span></span>  
   
--   **Bereitstellungen** weisen zutreffende Member der angegebenen Zielsammlung an, das Softwarepaket zu installieren. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Bereitstellen von Anwendungen in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).  
+-   <span data-ttu-id="f6393-129">**Bereitstellungen** weisen zutreffende Member der angegebenen Zielsammlung an, das Softwarepaket zu installieren.</span><span class="sxs-lookup"><span data-stu-id="f6393-129">**Deployments** instruct applicable members of the specified target collection to install the software package.</span></span> <span data-ttu-id="f6393-130">Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Bereitstellen von Anwendungen in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-130">For more information, see [How to Deploy Applications in Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx) in the Configuration Manager documentation library.</span></span>  
   
 > [!IMPORTANT]
->  Die Prozeduren in diesem Thema enthalten typische Einstellungen für das Erstellen und Bereitstellen eines Pakets und Programms und umfassen möglicherweise nicht alle möglichen Einstellungen. Weitere Bereitstellungsoptionen im Configuration Manager finden Sie in der [Dokumentationsbibliothek zum Configuration Manager](http://technet.microsoft.com/library/gg682041.aspx).  
+>  <span data-ttu-id="f6393-131">Die Prozeduren in diesem Thema enthalten typische Einstellungen für das Erstellen und Bereitstellen eines Pakets und Programms und umfassen möglicherweise nicht alle möglichen Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="f6393-131">The procedures in this topic contain typical settings for creating and deploying a package and program, and might not cover all possible settings.</span></span> <span data-ttu-id="f6393-132">Weitere Bereitstellungsoptionen im Configuration Manager finden Sie in der [Dokumentationsbibliothek zum Configuration Manager](http://technet.microsoft.com/library/gg682041.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-132">For other Configuration Manager deployment options, see the [Configuration Manager Documentation Library](http://technet.microsoft.com/library/gg682041.aspx).</span></span>  
   
 <a name="deploying_in_a_test_environment"></a>   
-## <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework  
- Sie können mit System Center 2012 Configuration Manager eine automatische Installation von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen. Führen Sie folgende Schritte aus:  
+## <a name="deploying-the-net-framework"></a><span data-ttu-id="f6393-133">Bereitstellen von .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f6393-133">Deploying the .NET Framework</span></span>  
+ <span data-ttu-id="f6393-134">Sie können mit System Center 2012 Configuration Manager eine automatische Installation von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen.</span><span class="sxs-lookup"><span data-stu-id="f6393-134">You can use System Center 2012 Configuration Manager to deploy a silent installation of the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], where the users do not interact with the installation process.</span></span> <span data-ttu-id="f6393-135">Führen Sie folgende Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="f6393-135">Follow these steps:</span></span>  
   
-1.  [Erstellen Sie eine Sammlung](#creating_a_collection).  
+1.  <span data-ttu-id="f6393-136">[Erstellen Sie eine Sammlung](#creating_a_collection).</span><span class="sxs-lookup"><span data-stu-id="f6393-136">[Create a collection](#creating_a_collection).</span></span>  
   
-2.  [Erstellen Sie ein Paket und Programm für das verteilbare .NET Framework-Paket](#creating_a_package).  
+2.  <span data-ttu-id="f6393-137">[Erstellen Sie ein Paket und Programm für das verteilbare .NET Framework-Paket](#creating_a_package).</span><span class="sxs-lookup"><span data-stu-id="f6393-137">[Create a package and program for the .NET Framework redistributable](#creating_a_package).</span></span>  
   
-3.  [Wählen Sie einen Verteilungspunkt aus](#select_dist_point).  
+3.  <span data-ttu-id="f6393-138">[Wählen Sie einen Verteilungspunkt aus](#select_dist_point).</span><span class="sxs-lookup"><span data-stu-id="f6393-138">[Select a distribution point](#select_dist_point).</span></span>  
   
-4.  [Stellen Sie das Paket bereit](#deploying_package).  
+4.  <span data-ttu-id="f6393-139">[Stellen Sie das Paket bereit](#deploying_package).</span><span class="sxs-lookup"><span data-stu-id="f6393-139">[Deploy the package](#deploying_package).</span></span>  
   
 <a name="creating_a_collection"></a>   
-### <a name="create-a-collection"></a>Erstellen einer Sammlung  
- In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung. Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben). Weitere Informationen zu abfragebezogenen und direkten Mitgliedschaftsregeln finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Introduction to Collections in Configuration Manager (Einführung in die Sammlungen in Configuration Manager)](http://technet.microsoft.com/library/gg682177.aspx).  
+### <a name="create-a-collection"></a><span data-ttu-id="f6393-140">Erstellen einer Sammlung</span><span class="sxs-lookup"><span data-stu-id="f6393-140">Create a collection</span></span>  
+ <span data-ttu-id="f6393-141">In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung.</span><span class="sxs-lookup"><span data-stu-id="f6393-141">In this step, you select the computers to which you will deploy the package and program, and group them into a device collection.</span></span> <span data-ttu-id="f6393-142">Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben).</span><span class="sxs-lookup"><span data-stu-id="f6393-142">To create a collection in Configuration Manager, you can use direct membership rules (where you manually specify the collection members) or query rules (where Configuration Manager determines the collection members based on criteria you specify).</span></span> <span data-ttu-id="f6393-143">Weitere Informationen zu abfragebezogenen und direkten Mitgliedschaftsregeln finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Introduction to Collections in Configuration Manager (Einführung in die Sammlungen in Configuration Manager)](http://technet.microsoft.com/library/gg682177.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-143">For more information about membership rules, including queries and direct rules, see [Introduction to Collections in Configuration Manager](http://technet.microsoft.com/library/gg682177.aspx) in the Configuration Manager Documentation Library.</span></span>  
   
- So erstellen Sie eine Sammlung  
+ <span data-ttu-id="f6393-144">So erstellen Sie eine Sammlung</span><span class="sxs-lookup"><span data-stu-id="f6393-144">To create a collection:</span></span>  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.  
+1.  <span data-ttu-id="f6393-145">Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-145">In the Configuration Manager console, choose **Assets and Compliance**.</span></span>  
   
-2.  Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** die Option **Gerätesammlungen** aus.  
+2.  <span data-ttu-id="f6393-146">Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** die Option **Gerätesammlungen** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-146">In the **Assets and Compliance** workspace, choose **Device Collections**.</span></span>  
   
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Gerätesammlung erstellen** aus.  
+3.  <span data-ttu-id="f6393-147">Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Gerätesammlung erstellen** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-147">On the **Home** tab in the **Create** group, choose **Create Device Collection**.</span></span>  
   
-4.  Geben Sie im **Assistent zum Erstellen von Gerätesammlungen** auf der Seite **Allgemein** einen Namen für die Auflistung ein.  
+4.  <span data-ttu-id="f6393-148">Geben Sie im **Assistent zum Erstellen von Gerätesammlungen** auf der Seite **Allgemein** einen Namen für die Auflistung ein.</span><span class="sxs-lookup"><span data-stu-id="f6393-148">On the **General** page of the **Create Device Collection Wizard**, enter a name for the collection.</span></span>  
   
-5.  Wählen **Durchsuchen** aus, um eine begrenzende Sammlung anzugeben.  
+5.  <span data-ttu-id="f6393-149">Wählen **Durchsuchen** aus, um eine begrenzende Sammlung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="f6393-149">Choose **Browse** to specify a limiting collection.</span></span>  
   
-6.  Wählen Sie auf der Seite **Mitgliedschaftsregeln** die Option **Regel hinzufügen** aus, und wählen Sie dann **Direkte Regel** aus, um den **Assistent für die Erstellung von Regeln der direkten Mitgliedschaft** zu öffnen. Wählen Sie **Weiter** aus.  
+6.  <span data-ttu-id="f6393-150">Wählen Sie auf der Seite **Mitgliedschaftsregeln** die Option **Regel hinzufügen** aus, und wählen Sie dann **Direkte Regel** aus, um den **Assistent für die Erstellung von Regeln der direkten Mitgliedschaft** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="f6393-150">On the **Membership Rules** page, choose **Add Rule**, and then choose **Direct Rule** to open the **Create Direct Membership Rule Wizard**.</span></span> <span data-ttu-id="f6393-151">Wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-151">Choose **Next**.</span></span>  
   
-7.  Wählen Sie auf der Seite **Ressourcen suchen** in der Liste **Ressourcenklasse** die Option **Systemressource** aus. Wählen Sie in der Liste **Attributname** die Option **Name** aus. Geben Sie im Feld **Wert** das Zeichen `%` ein, und wählen Sie dann **Weiter** aus.  
+7.  <span data-ttu-id="f6393-152">Wählen Sie auf der Seite **Ressourcen suchen** in der Liste **Ressourcenklasse** die Option **Systemressource** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-152">On the **Search for Resources** page, in the **Resource class** list, choose **System Resource**.</span></span> <span data-ttu-id="f6393-153">Wählen Sie in der Liste **Attributname** die Option **Name** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-153">In the **Attribute name** list, choose **Name**.</span></span> <span data-ttu-id="f6393-154">Geben Sie im Feld **Wert** das Zeichen `%` ein, und wählen Sie dann **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-154">In the **Value** field, enter `%`, and then choose **Next**.</span></span>  
   
-8.  Aktivieren Sie auf der Seite **Ressourcen auswählen** das Kontrollkästchen für jeden Computer, für den Sie .NET Framework bereitstellen möchten. Wählen Sie **Weiter** aus, und schließen Sie den Assistenten.  
+8.  <span data-ttu-id="f6393-155">Aktivieren Sie auf der Seite **Ressourcen auswählen** das Kontrollkästchen für jeden Computer, für den Sie .NET Framework bereitstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="f6393-155">On the **Select Resources** page, select the check box for each computer that you want to deploy the .NET Framework to.</span></span> <span data-ttu-id="f6393-156">Wählen Sie **Weiter** aus, und schließen Sie den Assistenten.</span><span class="sxs-lookup"><span data-stu-id="f6393-156">Choose **Next**, and then complete the wizard.</span></span>  
   
-9. Wählen Sie auf der Seite **Mitgliedschaftsregeln** im **Assistent zum Erstellen von Gerätesammlungen** die Option **Weiter** aus, und schließen Sie den Assistenten ab.  
+9. <span data-ttu-id="f6393-157">Wählen Sie auf der Seite **Mitgliedschaftsregeln** im **Assistent zum Erstellen von Gerätesammlungen** die Option **Weiter** aus, und schließen Sie den Assistenten ab.</span><span class="sxs-lookup"><span data-stu-id="f6393-157">On the **Membership Rules** page of the **Create Device Collection Wizard**, choose **Next**, and then complete the wizard.</span></span>  
   
- Weitere Informationen zu Sammlungen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](http://technet.microsoft.com/library/bb693730.aspx).  
+ <span data-ttu-id="f6393-158">Weitere Informationen zu Sammlungen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](http://technet.microsoft.com/library/bb693730.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-158">For more information about collections, see [Collections in Configuration Manager](http://technet.microsoft.com/library/bb693730.aspx) in the Configuration Manager Documentation Library.</span></span>  
   
 <a name="creating_a_package"></a>   
-### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Erstellen eines Pakets und Programms für das verteilbare .NET Framework-Paket  
- Mit den folgenden Schritten erstellen Sie manuell ein Paket für das verteilbare .NET Framework-Paket. Das Paket enthält die angegebenen Parameter zum Installieren von .NET Framework und zu dem Speicherort, von dem das Paket an die Zielcomputer verteilt wird.  
+### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a><span data-ttu-id="f6393-159">Erstellen eines Pakets und Programms für das verteilbare .NET Framework-Paket</span><span class="sxs-lookup"><span data-stu-id="f6393-159">Create a package and program for the .NET Framework redistributable package</span></span>  
+ <span data-ttu-id="f6393-160">Mit den folgenden Schritten erstellen Sie manuell ein Paket für das verteilbare .NET Framework-Paket.</span><span class="sxs-lookup"><span data-stu-id="f6393-160">The following steps create a package for the .NET Framework redistributable manually.</span></span> <span data-ttu-id="f6393-161">Das Paket enthält die angegebenen Parameter zum Installieren von .NET Framework und zu dem Speicherort, von dem das Paket an die Zielcomputer verteilt wird.</span><span class="sxs-lookup"><span data-stu-id="f6393-161">The package contains the specified parameters for installing the .NET Framework and the location from where the package will be distributed to the target computers.</span></span>  
   
- So erstellen Sie ein Paket  
+ <span data-ttu-id="f6393-162">So erstellen Sie ein Paket</span><span class="sxs-lookup"><span data-stu-id="f6393-162">To create a package:</span></span>  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1.  <span data-ttu-id="f6393-163">Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-163">In the Configuration Manager console, choose **Software Library**..</span></span>  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2.  <span data-ttu-id="f6393-164">Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-164">In the **Software Library** workspace, expand **Application Management**, and then choose **Packages**.</span></span>  
   
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Paket erstellen** aus.  
+3.  <span data-ttu-id="f6393-165">Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Paket erstellen** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-165">On the **Home** tab, in the **Create** group, choose **Create Package**.</span></span>  
   
-4.  Geben Sie auf der Seite **Paket** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
+4.  <span data-ttu-id="f6393-166">Geben Sie auf der Seite **Paket** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:</span><span class="sxs-lookup"><span data-stu-id="f6393-166">On the **Package** page of the **Create Package and Program Wizard**, enter the following information:</span></span>  
   
-    -   Name: `.NET Framework 4.5`  
+    -   <span data-ttu-id="f6393-167">Name: `.NET Framework 4.5`</span><span class="sxs-lookup"><span data-stu-id="f6393-167">Name: `.NET Framework 4.5`</span></span>  
   
-    -   Hersteller: `Microsoft`  
+    -   <span data-ttu-id="f6393-168">Hersteller: `Microsoft`</span><span class="sxs-lookup"><span data-stu-id="f6393-168">Manufacturer: `Microsoft`</span></span>  
   
-    -   Sprache: `English (US)`  
+    -   <span data-ttu-id="f6393-169">Sprache:</span><span class="sxs-lookup"><span data-stu-id="f6393-169">Language.</span></span> `English (US)`  
   
-5.  Wählen Sie **Dieses Paket enthält Quelldateien** aus, und wählen Sie anschließend **Durchsuchen** aus, um den lokalen oder Netzwerkordner mit den .NET Framework-Installationsdateien auszuwählen. Wenn Sie den Ordner ausgewählt haben, wählen Sie **OK** und anschließend **Weiter** aus.  
+5.  <span data-ttu-id="f6393-170">Wählen Sie **Dieses Paket enthält Quelldateien** aus, und wählen Sie anschließend **Durchsuchen** aus, um den lokalen oder Netzwerkordner mit den .NET Framework-Installationsdateien auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="f6393-170">Choose **This package contains source files**, and then choose **Browse** to select the local or network folder that contains the .NET Framework installation files.</span></span> <span data-ttu-id="f6393-171">Wenn Sie den Ordner ausgewählt haben, wählen Sie **OK** und anschließend **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-171">When you have selected the folder, choose **OK**, and then choose **Next**.</span></span>  
   
-6.  Wählen Sie auf der Seite **Programmtyp** des Assistenten **Standardprogramm** und anschließend **Weiter** aus.  
+6.  <span data-ttu-id="f6393-172">Wählen Sie auf der Seite **Programmtyp** des Assistenten **Standardprogramm** und anschließend **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-172">On the **Program Type** page of the wizard, choose **Standard Program**, and then choose **Next**.</span></span>  
   
-7.  Geben Sie auf der Seite **Programm** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
+7.  <span data-ttu-id="f6393-173">Geben Sie auf der Seite **Programm** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:</span><span class="sxs-lookup"><span data-stu-id="f6393-173">On the **Program** page of the **Create Package and Program Wizard**, enter the following information:</span></span>  
   
-    1.  **Name:** `.NET Framework 4.5`  
+    1.  <span data-ttu-id="f6393-174">**Name:** `.NET Framework 4.5`</span><span class="sxs-lookup"><span data-stu-id="f6393-174">**Name:** `.NET Framework 4.5`</span></span>  
   
-    2.  **Befehlszeile:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Befehlszeilenoptionen werden in der Tabelle weiter unten beschrieben)  
+    2.  <span data-ttu-id="f6393-175">**Befehlszeile:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Befehlszeilenoptionen werden in der Tabelle weiter unten beschrieben)</span><span class="sxs-lookup"><span data-stu-id="f6393-175">**Command line:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (command-line options are described in the table after these steps)</span></span>  
   
-    3.  **Ausführen:** Wählen Sie **Ausgeblendet** aus.  
+    3.  <span data-ttu-id="f6393-176">**Ausführen:** Wählen Sie **Ausgeblendet** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-176">**Run:** Choose **Hidden**.</span></span>  
   
-    4.  **Programmausführung:** Wählen Sie die Option aus, die angibt, dass das Programm unabhängig davon, ob ein Benutzer angemeldet ist, ausgeführt werden kann.  
+    4.  <span data-ttu-id="f6393-177">**Programmausführung:** Wählen Sie die Option aus, die angibt, dass das Programm unabhängig davon, ob ein Benutzer angemeldet ist, ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="f6393-177">**Program can run:** Choose the option that specifies that the program can run regardless of whether a user is logged on.</span></span>  
   
-8.  Wählen Sie auf der Seite **Anforderungen** zum Übernehmen der Standardwerte **Weiter** aus, und schließen Sie dann den Assistenten ab.  
+8.  <span data-ttu-id="f6393-178">Wählen Sie auf der Seite **Anforderungen** zum Übernehmen der Standardwerte **Weiter** aus, und schließen Sie dann den Assistenten ab.</span><span class="sxs-lookup"><span data-stu-id="f6393-178">On the **Requirements** page, choose **Next** to accept the default values, and then complete the wizard.</span></span>  
   
- In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.  
+ <span data-ttu-id="f6393-179">In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f6393-179">The following table describes the command-line options specified in step 7.</span></span>  
   
-|Option|Beschreibung|  
+|<span data-ttu-id="f6393-180">Option</span><span class="sxs-lookup"><span data-stu-id="f6393-180">Option</span></span>|<span data-ttu-id="f6393-181">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f6393-181">Description</span></span>|  
 |------------|-----------------|  
-|**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|  
-|**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|  
-|**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim [Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.|  
+|<span data-ttu-id="f6393-182">**/q**</span><span class="sxs-lookup"><span data-stu-id="f6393-182">**/q**</span></span>|<span data-ttu-id="f6393-183">Legt den stillen Modus fest.</span><span class="sxs-lookup"><span data-stu-id="f6393-183">Sets quiet mode.</span></span> <span data-ttu-id="f6393-184">Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f6393-184">No user input is required, and no output is shown.</span></span>|  
+|<span data-ttu-id="f6393-185">**/norestart**</span><span class="sxs-lookup"><span data-stu-id="f6393-185">**/norestart**</span></span>|<span data-ttu-id="f6393-186">Verhindert, dass das Setupprogramm automatisch erneut gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="f6393-186">Prevents the Setup program from rebooting automatically.</span></span> <span data-ttu-id="f6393-187">Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.</span><span class="sxs-lookup"><span data-stu-id="f6393-187">If you use this option, Configuration Manager must handle the computer restart.</span></span>|  
+|<span data-ttu-id="f6393-188">**/chainingpackage** *PackageName*</span><span class="sxs-lookup"><span data-stu-id="f6393-188">**/chainingpackage** *PackageName*</span></span>|<span data-ttu-id="f6393-189">Gibt den Namen des Pakets an, das das Verketten ausführt.</span><span class="sxs-lookup"><span data-stu-id="f6393-189">Specifies the name of the package that is doing the chaining.</span></span> <span data-ttu-id="f6393-190">Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim [Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) registriert haben.</span><span class="sxs-lookup"><span data-stu-id="f6393-190">This information is reported with other installation session information for those who have signed up for the [Microsoft Customer Experience Improvement Program (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244).</span></span> <span data-ttu-id="f6393-191">Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.</span><span class="sxs-lookup"><span data-stu-id="f6393-191">If the package name includes spaces, use double quotation marks as delimiters; for example: **/chainingpackage "Chaining Product"**.</span></span>|  
   
- Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer in den Installationsvorgang nicht ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der MSDN-Bibliothek im Artikel zum [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606).  
-  
+ <span data-ttu-id="f6393-192">Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt.</span><span class="sxs-lookup"><span data-stu-id="f6393-192">These steps create a package named .NET Framework 4.5.</span></span> <span data-ttu-id="f6393-193">Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit.</span><span class="sxs-lookup"><span data-stu-id="f6393-193">The program deploys a silent installation of the .NET Framework 4.5.</span></span> <span data-ttu-id="f6393-194">Bei einer automatischen Installation-Benutzer interagieren nicht mit der Installation, und die chaining Anwendung muss den Rückgabecode erfassen und den Neustart initiieren; finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606).</span><span class="sxs-lookup"><span data-stu-id="f6393-194">In a silent installation, users do not interact with the installation process, and the chaining application has to capture the return code and handle rebooting; see [Getting Progress Information from an Installation Package](http://go.microsoft.com/fwlink/?LinkId=179606).</span></span>  
+ 
 <a name="select_dist_point"></a>   
-### <a name="select-a-distribution-point"></a>Auswählen eines Verteilungspunkts  
- Um das Paket und Programm von einem Server an Clientcomputer zu verteilen, müssen Sie zuerst ein Standortsystem als Verteilungspunkt festlegen und das Paket dann an den Verteilungspunkt verteilen.  
+### <a name="select-a-distribution-point"></a><span data-ttu-id="f6393-195">Auswählen eines Verteilungspunkts</span><span class="sxs-lookup"><span data-stu-id="f6393-195">Select a distribution point</span></span>  
+ <span data-ttu-id="f6393-196">Um das Paket und Programm von einem Server an Clientcomputer zu verteilen, müssen Sie zuerst ein Standortsystem als Verteilungspunkt festlegen und das Paket dann an den Verteilungspunkt verteilen.</span><span class="sxs-lookup"><span data-stu-id="f6393-196">To distribute the package and program to client computers from a server, you must first designate a site system as a distribution point and then distribute the package to the distribution point.</span></span>  
   
- Führen Sie die folgenden Schritte aus, um einen Verteilungspunkt für das im vorherigen Abschnitt erstellte .NET Framework 4.5-Paket auszuwählen:  
+ <span data-ttu-id="f6393-197">Führen Sie die folgenden Schritte aus, um einen Verteilungspunkt für das im vorherigen Abschnitt erstellte .NET Framework 4.5-Paket auszuwählen:</span><span class="sxs-lookup"><span data-stu-id="f6393-197">Use the following steps to select a distribution point for the .NET Framework 4.5 package you created in the previous section:</span></span>  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1.  <span data-ttu-id="f6393-198">Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-198">In the Configuration Manager console, choose **Software Library**.</span></span>  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2.  <span data-ttu-id="f6393-199">Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-199">In the **Software Library** workspace, expand **Application Management**, and then choose **Packages**.</span></span>  
   
-3.  Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie im vorherigen Abschnitt erstellt haben.  
+3.  <span data-ttu-id="f6393-200">Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie im vorherigen Abschnitt erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="f6393-200">From the list of packages, select the package **.NET Framework 4.5** that you created in the previous section.</span></span>  
   
-4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Inhalt verteilen** aus.  
+4.  <span data-ttu-id="f6393-201">Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Inhalt verteilen** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-201">On the **Home** tab, in the **Deployment** group, choose **Distribute Content**.</span></span>  
   
-5.  Wählen Sie auf der Registerkarte **Allgemein** im **Assistent für die Verteilung von Inhalt** die Option **Weiter** aus.  
+5.  <span data-ttu-id="f6393-202">Wählen Sie auf der Registerkarte **Allgemein** im **Assistent für die Verteilung von Inhalt** die Option **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-202">On the **General** tab of the **Distribute Content Wizard**, choose **Next**.</span></span>  
   
-6.  Wählen Sie auf der Seite **Inhaltsziel** des Assistenten **Hinzufügen** und anschließend **Verteilungspunkt** aus.  
+6.  <span data-ttu-id="f6393-203">Wählen Sie auf der Seite **Inhaltsziel** des Assistenten **Hinzufügen** und anschließend **Verteilungspunkt** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-203">On the **Content Destination** page of the wizard, choose **Add**, and then choose **Distribution Point**.</span></span>  
   
-7.  Wählen Sie im Dialogfeld **Verteilungspunkte hinzufügen** mindestens einen Verteilungspunkt aus, von dem das Paket und Programm gehostet werden sollen, und wählen Sie dann **OK** aus.  
+7.  <span data-ttu-id="f6393-204">Wählen Sie im Dialogfeld **Verteilungspunkte hinzufügen** mindestens einen Verteilungspunkt aus, von dem das Paket und Programm gehostet werden sollen, und wählen Sie dann **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-204">In the **Add Distribution Points** dialog box, select the distribution point(s) that will host the package and program, and then choose **OK**.</span></span>  
   
-8.  Durchlaufen Sie den Assistenten.  
+8.  <span data-ttu-id="f6393-205">Durchlaufen Sie den Assistenten.</span><span class="sxs-lookup"><span data-stu-id="f6393-205">Complete the wizard.</span></span>  
   
- Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Stellen Sie vor dem Bereitstellen des Pakets und Programms sicher, dass es auf dem Verteilungspunkt installiert wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek im Abschnitt „Überwachen von Inhalt“ unter [Vorgänge und Wartungstasks für die Inhaltsverwaltung in Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent).  
+ <span data-ttu-id="f6393-206">Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen.</span><span class="sxs-lookup"><span data-stu-id="f6393-206">The packagenow contains all the information you need to silently deploy the .NET Framework 4.5.</span></span> <span data-ttu-id="f6393-207">Stellen Sie vor dem Bereitstellen des Pakets und Programms sicher, dass es auf dem Verteilungspunkt installiert wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek im Abschnitt „Überwachen von Inhalt“ unter [Vorgänge und Wartungstasks für die Inhaltsverwaltung in Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent).</span><span class="sxs-lookup"><span data-stu-id="f6393-207">Before you deploy the package and program, verify that it was installed on the distribution point; see the "Monitor Content" section of [Operations and Maintenance for Content Management in Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) in the Configuration Manager Documentation Library.</span></span>  
   
 <a name="deploying_package"></a>   
-### <a name="deploy-the-package"></a>Bereitstellen des Pakets  
- So stellen Sie das .NET Framework 4.5-Paket und -Programm bereit  
+### <a name="deploy-the-package"></a><span data-ttu-id="f6393-208">Bereitstellen des Pakets</span><span class="sxs-lookup"><span data-stu-id="f6393-208">Deploy the package</span></span>  
+ <span data-ttu-id="f6393-209">So stellen Sie das .NET Framework 4.5-Paket und -Programm bereit</span><span class="sxs-lookup"><span data-stu-id="f6393-209">To deploy the .NET Framework 4.5 package and program:</span></span>  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1.  <span data-ttu-id="f6393-210">Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-210">In the Configuration Manager console, choose **Software Library**.</span></span>  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2.  <span data-ttu-id="f6393-211">Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-211">In the **Software Library** workspace, expand **Application Management**, and then choose **Packages**.</span></span>  
   
-3.  Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie erstellt haben.  
+3.  <span data-ttu-id="f6393-212">Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="f6393-212">From the list of packages, select the package you created named **.NET Framework 4.5**.</span></span>  
   
-4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Bereitstellen** aus.  
+4.  <span data-ttu-id="f6393-213">Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Bereitstellen** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-213">On the **Home** tab, in the **Deployment** group, choose **Deploy**.</span></span>  
   
-5.  Wählen Sie auf der Seite **Allgemein** im **Assistent zum Bereitstellen von Software** die Option **Durchsuchen** und anschließend die Sammlung aus, die Sie zuvor erstellt haben. Wählen Sie **Weiter** aus.  
+5.  <span data-ttu-id="f6393-214">Wählen Sie auf der Seite **Allgemein** im **Assistent zum Bereitstellen von Software** die Option **Durchsuchen** und anschließend die Sammlung aus, die Sie zuvor erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="f6393-214">On the **General** page of the **Deploy Software Wizard**, choose **Browse**, and then select the collection that you created earlier.</span></span> <span data-ttu-id="f6393-215">Wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-215">Choose **Next**.</span></span>  
   
-6.  Überprüfen Sie auf der Seite **Inhalt** des Assistenten, ob der Punkt, von dem Sie die Software verteilen möchten, angezeigt wird. Wählen Sie anschließend **Weiter** aus.  
+6.  <span data-ttu-id="f6393-216">Überprüfen Sie auf der Seite **Inhalt** des Assistenten, ob der Punkt, von dem Sie die Software verteilen möchten, angezeigt wird. Wählen Sie anschließend **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-216">On the **Content** page of the wizard, verify that the point from which you want to distribute the software is displayed, and then choose **Next**.</span></span>  
   
-7.  Bestätigen Sie auf der Seite **Bereitstellungseinstellungen** des Assistenten, dass **Aktion** auf **Installieren** festgelegt ist und dass **Zweck** auf **Erforderlich** festgelegt ist. Dadurch wird sichergestellt, dass die Installation des Softwarepakets auf den Zielcomputern erforderlich ist. Wählen Sie **Weiter** aus.  
+7.  <span data-ttu-id="f6393-217">Bestätigen Sie auf der Seite **Bereitstellungseinstellungen** des Assistenten, dass **Aktion** auf **Installieren** festgelegt ist und dass **Zweck** auf **Erforderlich** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="f6393-217">On the **Deployment Settings** page of the wizard, confirm that **Action** is set to **Install**, and **Purpose** is set to **Required**.</span></span> <span data-ttu-id="f6393-218">Dadurch wird sichergestellt, dass die Installation des Softwarepakets auf den Zielcomputern erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="f6393-218">This ensures that the software package will be a mandatory installation on the targeted computers.</span></span> <span data-ttu-id="f6393-219">Wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-219">Choose **Next**.</span></span>  
   
-8.  Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann .NET Framework installiert werden soll. Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen. Wählen Sie **Weiter** aus.  
+8.  <span data-ttu-id="f6393-220">Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann .NET Framework installiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="f6393-220">On the **Scheduling** page of the wizard, specify when you want the .NET Framework to be installed.</span></span> <span data-ttu-id="f6393-221">Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="f6393-221">You can choose **New** to assign an installation time, or instruct the software to install when the user logs on or off, or as soon as possible.</span></span> <span data-ttu-id="f6393-222">Wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-222">Choose **Next**.</span></span>  
   
-9. Verwenden Sie auf der Seite **Benutzerfreundlichkeit** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.  
+9. <span data-ttu-id="f6393-223">Verwenden Sie auf der Seite **Benutzerfreundlichkeit** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-223">On the **User Experience** page of the wizard, use the default values and choose **Next**.</span></span>  
   
     > [!WARNING]
-    >  Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern. Weitere Informationen zu diesen Optionen finden Sie in der Microsoft TechNet-Bibliothek unter [Eigenschaften von „Ankündigungsname“: Registerkarte „Zeitplan“](http://technet.microsoft.com/library/bb694016.aspx).  
+    >  <span data-ttu-id="f6393-224">Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern.</span><span class="sxs-lookup"><span data-stu-id="f6393-224">Your production environment might have policies that require different selections for the deployment schedule.</span></span> <span data-ttu-id="f6393-225">Weitere Informationen zu diesen Optionen finden Sie in der Microsoft TechNet-Bibliothek unter [Eigenschaften von „Ankündigungsname“: Registerkarte „Zeitplan“](http://technet.microsoft.com/library/bb694016.aspx).</span><span class="sxs-lookup"><span data-stu-id="f6393-225">For information about these options, see [Advertisement Name Properties: Schedule Tab](http://technet.microsoft.com/library/bb694016.aspx) in the TechNet Library.</span></span>  
   
-10. Verwenden Sie auf der Seite **Verteilungspunkte** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.  
+10. <span data-ttu-id="f6393-226">Verwenden Sie auf der Seite **Verteilungspunkte** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.</span><span class="sxs-lookup"><span data-stu-id="f6393-226">On the **Distribution Points** page of the wizard, use the default values and choose **Next**.</span></span>  
   
-11. Durchlaufen Sie den Assistenten. Sie können den Status der Bereitstellung im Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung** überwachen.  
+11. <span data-ttu-id="f6393-227">Durchlaufen Sie den Assistenten.</span><span class="sxs-lookup"><span data-stu-id="f6393-227">Complete the wizard.</span></span> <span data-ttu-id="f6393-228">Sie können den Status der Bereitstellung im Knoten **Bereitstellungen** des Arbeitsbereichs **Überwachung** überwachen.</span><span class="sxs-lookup"><span data-stu-id="f6393-228">You can monitor the progress of the deployment in the **Deployments** node of the **Monitoring** workspace.</span></span>  
   
- Das Paket wird nun in der als Ziel festgelegten Sammlung bereitgestellt, und die automatische Installation von .NET Framework 4.5 beginnt. Informationen zu Fehlercodes für die .NET Framework 4.5-Installation finden Sie weiter unten in diesem Thema im Abschnitt [Rückgabecodes](#return_codes).  
+ <span data-ttu-id="f6393-229">Das Paket wird nun in der als Ziel festgelegten Sammlung bereitgestellt, und die automatische Installation von .NET Framework 4.5 beginnt.</span><span class="sxs-lookup"><span data-stu-id="f6393-229">The package will now be deployed to the targeted collection and the silent installation of .NET Framework 4.5 will begin.</span></span> <span data-ttu-id="f6393-230">Informationen zu Fehlercodes für die .NET Framework 4.5-Installation finden Sie weiter unten in diesem Thema im Abschnitt [Rückgabecodes](#return_codes).</span><span class="sxs-lookup"><span data-stu-id="f6393-230">For information about .NET Framework 4.5 installation error codes, see the [Return Codes](#return_codes) section later in this topic.</span></span>  
   
 <a name="resources"></a>   
-## <a name="resources"></a>Ressourcen  
- Weitere Informationen zur Infrastruktur zum Testen der Bereitstellung des verteilbaren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Pakets finden Sie in den folgenden Ressourcen.  
+## <a name="resources"></a><span data-ttu-id="f6393-231">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="f6393-231">Resources</span></span>  
+ <span data-ttu-id="f6393-232">Weitere Informationen zur Infrastruktur zum Testen der Bereitstellung des verteilbaren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Pakets finden Sie in den folgenden Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="f6393-232">For more information about the infrastructure for testing the deployment of the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] redistributable package, see the following resources.</span></span>  
   
- **Active Directory, DNS, DHCP:**  
+ <span data-ttu-id="f6393-233">**Active Directory, DNS, DHCP:**</span><span class="sxs-lookup"><span data-stu-id="f6393-233">**Active Directory, DNS, DHCP:**</span></span>  
   
--   [Active Directory-Domänendienste für Windows Server 2008](http://technet.microsoft.com/library/dd378891.aspx)  
+-   [<span data-ttu-id="f6393-234">Active Directory-Domänendienste für Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="f6393-234">Active Directory Domain Services for Windows Server 2008</span></span>](http://technet.microsoft.com/library/dd378891.aspx)  
   
--   [DNS-Server](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [<span data-ttu-id="f6393-235">DNS-Server</span><span class="sxs-lookup"><span data-stu-id="f6393-235">DNS Server</span></span>](http://technet.microsoft.com/library/cc732997.aspx)  
   
--   [DHCP-Server](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [<span data-ttu-id="f6393-236">DHCP-Server</span><span class="sxs-lookup"><span data-stu-id="f6393-236">DHCP Server</span></span>](http://technet.microsoft.com/library/cc896553.aspx)  
   
- **SQL Server 2008:**  
+ <span data-ttu-id="f6393-237">**SQL Server 2008:**</span><span class="sxs-lookup"><span data-stu-id="f6393-237">**SQL Server 2008:**</span></span>  
   
--   [Installieren von SQL Server 2008 (SQL Server-Video)](http://technet.microsoft.com/library/dd299415.aspx)  
+-   [<span data-ttu-id="f6393-238">Installieren von SQL Server 2008 (SQL Server-Video)</span><span class="sxs-lookup"><span data-stu-id="f6393-238">Installing SQL Server 2008 (SQL Server Video)</span></span>](http://technet.microsoft.com/library/dd299415.aspx)  
   
--   [SQL Server 2008-Sicherheit: Übersicht für Datenbankadministratoren](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [<span data-ttu-id="f6393-239">SQL Server 2008-Sicherheit: Übersicht für Datenbankadministratoren</span><span class="sxs-lookup"><span data-stu-id="f6393-239">SQL Server 2008 Security Overview for Database Administrators</span></span>](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
- **System Center 2012 Configuration Manager (Verwaltungspunkt, Verteilungspunkt):**  
+ <span data-ttu-id="f6393-240">**System Center 2012 Configuration Manager (Verwaltungspunkt, Verteilungspunkt):**</span><span class="sxs-lookup"><span data-stu-id="f6393-240">**System Center 2012 Configuration Manager (Management Point, Distribution Point):**</span></span>  
   
--   [Standortverwaltung für System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg681983.aspx)  
+-   [<span data-ttu-id="f6393-241">Standortverwaltung für System Center 2012 Configuration Manager</span><span class="sxs-lookup"><span data-stu-id="f6393-241">Site Administration for System Center 2012 Configuration Manager</span></span>](http://technet.microsoft.com/library/gg681983.aspx)  
   
--   [Planen und Bereitstellen einzelner Standorte mit Configuration Manager](http://technet.microsoft.com/library/bb680961.aspx)  
+-   [<span data-ttu-id="f6393-242">Planen und Bereitstellen einzelner Standorte mit Configuration Manager</span><span class="sxs-lookup"><span data-stu-id="f6393-242">Configuration Manager Single Site Planning and Deployment</span></span>](http://technet.microsoft.com/library/bb680961.aspx)  
   
- **System Center 2012 Configuration Manager-Client für Windows-Computer:**  
+ <span data-ttu-id="f6393-243">**System Center 2012 Configuration Manager-Client für Windows-Computer:**</span><span class="sxs-lookup"><span data-stu-id="f6393-243">**System Center 2012 Configuration Manager client for Windows computers:**</span></span>  
   
--   [Bereitstellen von Clients für System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg699391.aspx)  
+-   [<span data-ttu-id="f6393-244">Bereitstellen von Clients für System Center 2012 Configuration Manager</span><span class="sxs-lookup"><span data-stu-id="f6393-244">Deploying Clients for System Center 2012 Configuration Manager</span></span>](http://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
-## <a name="troubleshooting"></a>Problembehandlung  
+## <a name="troubleshooting"></a><span data-ttu-id="f6393-245">Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="f6393-245">Troubleshooting</span></span>  
   
-### <a name="log-file-locations"></a>Protokolldateispeicherorte  
- Beim [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup werden die folgenden Protokolldateien generiert:  
+### <a name="log-file-locations"></a><span data-ttu-id="f6393-246">Protokolldateispeicherorte</span><span class="sxs-lookup"><span data-stu-id="f6393-246">Log file locations</span></span>  
+ <span data-ttu-id="f6393-247">Beim [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup werden die folgenden Protokolldateien generiert:</span><span class="sxs-lookup"><span data-stu-id="f6393-247">The following log files are generated during [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] setup:</span></span>  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
- %temp%\Microsoft .NET Framework 4.5\*.html  
+ <span data-ttu-id="f6393-248">%temp%\Microsoft .NET Framework 4.5*.txt</span><span class="sxs-lookup"><span data-stu-id="f6393-248">%temp%\Microsoft .NET Framework 4.5*.txt</span></span>  
+ <span data-ttu-id="f6393-249">%temp%\Microsoft .NET Framework 4.5\*.html</span><span class="sxs-lookup"><span data-stu-id="f6393-249">%temp%\Microsoft .NET Framework 4.5\*.html</span></span>  
   
- Mit dem [Protokollerfassungstool (Log Collection Tool)](http://www.microsoft.com/download/details.aspx?id=12493) können Sie die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Protokolldateien erfassen und eine komprimierte CAB-Datei erstellen, um die Größe der Dateien zu reduzieren.  
+ <span data-ttu-id="f6393-250">Mit dem [Protokollerfassungstool (Log Collection Tool)](http://www.microsoft.com/download/details.aspx?id=12493) können Sie die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Protokolldateien erfassen und eine komprimierte CAB-Datei erstellen, um die Größe der Dateien zu reduzieren.</span><span class="sxs-lookup"><span data-stu-id="f6393-250">You can use the [log collection tool](http://www.microsoft.com/download/details.aspx?id=12493) to collect the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] log files and to create a compressed cabinet (.cab) file that reduces the size of the files.</span></span>  
   
 <a name="return_codes"></a>   
-### <a name="return-codes"></a>Rückgabecodes  
- In der folgenden Tabelle sind die häufigsten Rückgabecodes des verteilbaren Installationsprogramms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aufgeführt. Die Rückgabecodes sind für alle Versionen des Installationsprogramms identisch.  
+### <a name="return-codes"></a><span data-ttu-id="f6393-251">Rückgabecodes</span><span class="sxs-lookup"><span data-stu-id="f6393-251">Return codes</span></span>  
+ <span data-ttu-id="f6393-252">In der folgenden Tabelle sind die häufigsten Rückgabecodes des verteilbaren Installationsprogramms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="f6393-252">The following table lists the most common return codes from the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] redistributable installation program.</span></span> <span data-ttu-id="f6393-253">Die Rückgabecodes sind für alle Versionen des Installationsprogramms identisch.</span><span class="sxs-lookup"><span data-stu-id="f6393-253">The return codes are the same for all versions of the installer.</span></span>  
   
- Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt [Downloadfehlercodes](#additional_error_codes).  
+ <span data-ttu-id="f6393-254">Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt [Downloadfehlercodes](#additional_error_codes).</span><span class="sxs-lookup"><span data-stu-id="f6393-254">For links to detailed information, see the next section, [Download error codes](#additional_error_codes).</span></span>  
   
-|Rückgabecode|Beschreibung|  
+|<span data-ttu-id="f6393-255">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="f6393-255">Return code</span></span>|<span data-ttu-id="f6393-256">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f6393-256">Description</span></span>|  
 |-----------------|-----------------|  
-|0|Die Installation wurde erfolgreich abgeschlossen.|  
-|1602|Der Benutzer hat die Installation abgebrochen.|  
-|1603|Während der Installation ist ein schwerwiegender Fehler aufgetreten.|  
-|1641|Ein Neustart ist erforderlich, um die Installation abzuschließen. Diese Meldung zeigt eine erfolgreiche Installation an.|  
-|3010|Ein Neustart ist erforderlich, um die Installation abzuschließen. Diese Meldung zeigt eine erfolgreiche Installation an.|  
-|5100|Der Computer des Benutzers erfüllt die Systemanforderungen nicht.|  
+|<span data-ttu-id="f6393-257">0</span><span class="sxs-lookup"><span data-stu-id="f6393-257">0</span></span>|<span data-ttu-id="f6393-258">Die Installation wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="f6393-258">Installation completed successfully.</span></span>|  
+|<span data-ttu-id="f6393-259">1602</span><span class="sxs-lookup"><span data-stu-id="f6393-259">1602</span></span>|<span data-ttu-id="f6393-260">Der Benutzer hat die Installation abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="f6393-260">The user canceled installation.</span></span>|  
+|<span data-ttu-id="f6393-261">1603</span><span class="sxs-lookup"><span data-stu-id="f6393-261">1603</span></span>|<span data-ttu-id="f6393-262">Während der Installation ist ein schwerwiegender Fehler aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="f6393-262">A fatal error occurred during installation.</span></span>|  
+|<span data-ttu-id="f6393-263">1641</span><span class="sxs-lookup"><span data-stu-id="f6393-263">1641</span></span>|<span data-ttu-id="f6393-264">Ein Neustart ist erforderlich, um die Installation abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="f6393-264">A restart is required to complete the installation.</span></span> <span data-ttu-id="f6393-265">Diese Meldung zeigt eine erfolgreiche Installation an.</span><span class="sxs-lookup"><span data-stu-id="f6393-265">This message indicates success.</span></span>|  
+|<span data-ttu-id="f6393-266">3010</span><span class="sxs-lookup"><span data-stu-id="f6393-266">3010</span></span>|<span data-ttu-id="f6393-267">Ein Neustart ist erforderlich, um die Installation abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="f6393-267">A restart is required to complete the installation.</span></span> <span data-ttu-id="f6393-268">Diese Meldung zeigt eine erfolgreiche Installation an.</span><span class="sxs-lookup"><span data-stu-id="f6393-268">This message indicates success.</span></span>|  
+|<span data-ttu-id="f6393-269">5100</span><span class="sxs-lookup"><span data-stu-id="f6393-269">5100</span></span>|<span data-ttu-id="f6393-270">Der Computer des Benutzers erfüllt die Systemanforderungen nicht.</span><span class="sxs-lookup"><span data-stu-id="f6393-270">The user's computer does not meet system requirements.</span></span>|  
   
 <a name="additional_error_codes"></a>   
-### <a name="download-error-codes"></a>Downloadfehlercodes  
+### <a name="download-error-codes"></a><span data-ttu-id="f6393-271">Downloadfehlercodes</span><span class="sxs-lookup"><span data-stu-id="f6393-271">Download error codes</span></span>  
   
--   [Fehlercodes für BITS (Background Intelligent Transfer Service)](http://msdn.microsoft.com/library/aa362823.aspx)  
+-   [<span data-ttu-id="f6393-272">Fehlercodes für BITS (Background Intelligent Transfer Service)</span><span class="sxs-lookup"><span data-stu-id="f6393-272">Background Intelligent Transfer Service (BITS) error codes</span></span>](http://msdn.microsoft.com/library/aa362823.aspx)  
   
--   [Fehlercodes für URL-Moniker](http://msdn.microsoft.com/library/ms775145.aspx)  
+-   [<span data-ttu-id="f6393-273">Fehlercodes für URL-Moniker</span><span class="sxs-lookup"><span data-stu-id="f6393-273">URL moniker error codes</span></span>](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [Fehlercodes für WinHttp](http://msdn.microsoft.com/library/aa383770.aspx)  
+-   [<span data-ttu-id="f6393-274">Fehlercodes für WinHttp</span><span class="sxs-lookup"><span data-stu-id="f6393-274">WinHttp error codes</span></span>](http://msdn.microsoft.com/library/aa383770.aspx)  
   
- Sonstige Fehlercodes  
+ <span data-ttu-id="f6393-275">Sonstige Fehlercodes</span><span class="sxs-lookup"><span data-stu-id="f6393-275">Other error codes:</span></span>  
   
--   [Fehlercodes für Windows Installer](http://msdn.microsoft.com/library/aa368542.aspx)  
+-   [<span data-ttu-id="f6393-276">Fehlercodes für Windows Installer</span><span class="sxs-lookup"><span data-stu-id="f6393-276">Windows Installer error codes</span></span>](http://msdn.microsoft.com/library/aa368542.aspx)  
   
--   [Ergebniscodes für Windows Update Agent](http://technet.microsoft.com/library/cc720442.aspx)  
+-   [<span data-ttu-id="f6393-277">Ergebniscodes für Windows Update Agent</span><span class="sxs-lookup"><span data-stu-id="f6393-277">Windows Update Agent result codes</span></span>](http://technet.microsoft.com/library/cc720442.aspx)  
   
-## <a name="see-also"></a>Siehe auch  
- [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
-
+## <a name="see-also"></a><span data-ttu-id="f6393-278">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6393-278">See Also</span></span>  
+ [<span data-ttu-id="f6393-279">Bereitstellungshandbuch für Entwickler</span><span class="sxs-lookup"><span data-stu-id="f6393-279">Deployment Guide for Developers</span></span>](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [<span data-ttu-id="f6393-280">Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="f6393-280">System Requirements</span></span>](../../../docs/framework/get-started/system-requirements.md)

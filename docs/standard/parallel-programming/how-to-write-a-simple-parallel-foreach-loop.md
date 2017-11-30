@@ -1,54 +1,60 @@
 ---
-title: "How to: Write a Simple Parallel.ForEach Loop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "foreach, parallel version"
-  - "parallel programming, foreach"
+title: 'Gewusst wie: Schreiben einer einfachen Parallel.ForEach-Schleife'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- foreach, parallel version
+- parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 16d8cd3c3c01c2f9d83786e78f0eb1c45a38a49b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write a Simple Parallel.ForEach Loop
-In diesem Beispiel wird gezeigt, wie Sie mithilfe einer <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>\-Schleife Datenparallelität für jede <xref:System.Collections.IEnumerable?displayProperty=fullName>\- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>\-Datenquelle ermöglichen.  
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a><span data-ttu-id="1bdc9-102">Gewusst wie: Schreiben einer einfachen Parallel.ForEach-Schleife</span><span class="sxs-lookup"><span data-stu-id="1bdc9-102">How to: Write a Simple Parallel.ForEach Loop</span></span>
+<span data-ttu-id="1bdc9-103">Dieses Beispiel zeigt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Schleife zum Aktivieren von Datenparallelität über alle <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> -Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-103">This example shows how to use a <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> loop to enable data parallelism over any <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> data source.</span></span>  
   
 > [!NOTE]
->  In dieser Dokumentation werden Delegaten in PLINQ mithilfe von Lambda\-Ausdrücken definiert.  Falls Sie nicht mit der Verwendung von Lambda\-Ausdrücken in C\# oder Visual Basic vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+>  <span data-ttu-id="1bdc9-104">In dieser Dokumentation werden Delegaten in PLINQ mithilfe von Lambdaausdrücken definiert.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-104">This documentation uses lambda expressions to define delegates in PLINQ.</span></span> <span data-ttu-id="1bdc9-105">Falls Sie mit der Verwendung von Lambda-Ausdrücken in C# oder Visual Basic nicht vertraut sind, finden Sie entsprechende Informationen unter [Lambda Expressions in PLINQ and TPL (Lambda-Ausdrücke in PLINQ und TPL)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="1bdc9-105">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
-## Beispiel  
+## <a name="example"></a><span data-ttu-id="1bdc9-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1bdc9-106">Example</span></span>  
  [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
  [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]  
   
- Eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife hat die gleiche Funktion wie eine <xref:System.Threading.Tasks.Parallel.For%2A>\-Schleife.  Die Quellauflistung wird partitioniert, und die Arbeit wird basierend auf der Systemumgebung in mehreren Threads geplant.  Je mehr Prozessoren im System vorhanden sind, umso schneller wird die parallele Methode ausgeführt.  In einigen Quellauflistungen ist eine sequenzielle Schleife möglicherweise schneller. Dies ist abhängig von der Größe der Quelle und der Art von Arbeit, die ausgeführt wird.  Weitere Informationen zur Leistung finden Sie unter [Potential Pitfalls in Data and Task Parallelism](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md).  
+ <span data-ttu-id="1bdc9-107">Ein <xref:System.Threading.Tasks.Parallel.ForEach%2A> Schleife funktioniert wie ein <xref:System.Threading.Tasks.Parallel.For%2A> Schleife.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-107">A <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop works like a <xref:System.Threading.Tasks.Parallel.For%2A> loop.</span></span> <span data-ttu-id="1bdc9-108">Die quellauflistung partitioniert ist, und die Arbeit auf mehrere Threads, die basierend auf den Systemumgebungsvariablen geplant ist.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-108">The source collection is partitioned and the work is scheduled on multiple threads based on the system environment.</span></span> <span data-ttu-id="1bdc9-109">Die weitere Prozessoren auf dem System ausgeführt wird, desto schnellere parallele-Methode.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-109">The more processors on the system, the faster the parallel method runs.</span></span> <span data-ttu-id="1bdc9-110">Bei einigen Auflistungen Quelle möglicherweise eine sequenzielle Schleife schneller, je nach Größe der Quelle und die Art der ausgeführten Arbeit.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-110">For some source collections, a sequential loop may be faster, depending on the size of the source, and the kind of work being performed.</span></span> <span data-ttu-id="1bdc9-111">Weitere Informationen zur Leistung finden Sie unter [potenzielle Fehler bei Daten- und Aufgabenparallelität](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)</span><span class="sxs-lookup"><span data-stu-id="1bdc9-111">For more information about performance, see [Potential Pitfalls in Data and Task Parallelism](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)</span></span>  
   
- Weitere Informationen zu parallelen Schleifen finden Sie unter [How to: Write a Simple Parallel.For Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)  
+ <span data-ttu-id="1bdc9-112">Weitere Informationen zu parallelen Schleifen finden Sie unter [wie: Schreiben einer einfachen Parallel.For-Schleife](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).</span><span class="sxs-lookup"><span data-stu-id="1bdc9-112">For more information about parallel loops, see [How to: Write a Simple Parallel.For Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).</span></span>  
   
- Um <xref:System.Threading.Tasks.Parallel.ForEach%2A> für eine nicht generische Auflistung zu verwenden, können Sie die Auflistung mit der <xref:System.Linq.Enumerable.Cast%2A>\-Erweiterungsmethode in eine generische Auflistung umwandeln, wie im folgenden Beispiel gezeigt:  
+ <span data-ttu-id="1bdc9-113">Mit <xref:System.Threading.Tasks.Parallel.ForEach%2A> mit eine nicht generische Auflistung können Sie mithilfe der <xref:System.Linq.Enumerable.Cast%2A> Erweiterungsmethode, um die Auflistung in eine generische Auflistung umzuwandeln, wie im folgenden Beispiel gezeigt:</span><span class="sxs-lookup"><span data-stu-id="1bdc9-113">To use <xref:System.Threading.Tasks.Parallel.ForEach%2A> with a non-generic collection, you can use the <xref:System.Linq.Enumerable.Cast%2A> extension method to convert the collection to a generic collection, as shown in the following example:</span></span>  
   
  [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
  [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]  
   
- Sie können auch Parallel LINQ \(PLINQ\) verwenden, um die Verarbeitung von <xref:System.Collections.Generic.IEnumerable%601>\-Datenquellen zu parallelisieren.  PLINQ ermöglicht Ihnen, mithilfe von deklarativer Abfragesyntax das Schleifenverhalten anzugeben.  Weitere Informationen finden Sie unter [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ <span data-ttu-id="1bdc9-114">Sie können auch Parallel LINQ (PLINQ) verwenden, um Verarbeitung zu parallelisieren <xref:System.Collections.Generic.IEnumerable%601> Datenquellen.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-114">You can also use Parallel LINQ (PLINQ) to parallelize processing of <xref:System.Collections.Generic.IEnumerable%601> data sources.</span></span> <span data-ttu-id="1bdc9-115">PLINQ können Sie deklarative Abfragesyntax zu verwenden, um das Schleifenverhalten auszudrücken.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-115">PLINQ enables you to use declarative query syntax to express the loop behavior.</span></span> <span data-ttu-id="1bdc9-116">Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="1bdc9-116">For more information, see [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).</span></span>  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a><span data-ttu-id="1bdc9-117">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="1bdc9-117">Compiling the Code</span></span>  
   
--   Kopieren Sie diesen Code, und fügen Sie ihn in ein [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 2010\-Konsolenanwendungsprojekt ein.  
+-   <span data-ttu-id="1bdc9-118">Kopieren Sie diesen Code in eine [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 2010-Konsolenanwendungsprojekt.</span><span class="sxs-lookup"><span data-stu-id="1bdc9-118">Copy and paste this code into a [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 2010 Console Application project.</span></span>  
   
--   Fügen Sie einen Verweis auf "System.Design.dll" hinzu.  
+-   <span data-ttu-id="1bdc9-119">Hinzufügen eines Verweises auf System.Drawing.dll</span><span class="sxs-lookup"><span data-stu-id="1bdc9-119">Add a reference to System.Drawing.dll</span></span>  
   
--   Drücken von F5  
+-   <span data-ttu-id="1bdc9-120">Drücken Sie F5</span><span class="sxs-lookup"><span data-stu-id="1bdc9-120">Press F5</span></span>  
   
-## Siehe auch  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="1bdc9-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1bdc9-121">See Also</span></span>  
+ [<span data-ttu-id="1bdc9-122">Datenparallelität</span><span class="sxs-lookup"><span data-stu-id="1bdc9-122">Data Parallelism</span></span>](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+ [<span data-ttu-id="1bdc9-123">Parallele Programmierung</span><span class="sxs-lookup"><span data-stu-id="1bdc9-123">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
+ [<span data-ttu-id="1bdc9-124">Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))</span><span class="sxs-lookup"><span data-stu-id="1bdc9-124">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

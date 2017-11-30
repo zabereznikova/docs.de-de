@@ -5,58 +5,55 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
-ms.contentlocale: de-de
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="net-core-and-open-source"></a>.NET Core und Open-Source
-Dieses Thema enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können. Die vollständige Liste der Themen für .NET Core finden Sie im [Leitfaden für .NET Core](../../core/index.md).
+# <a name="net-core-and-open-source"></a><span data-ttu-id="c5cf6-102">.NET Core und Open-Source</span><span class="sxs-lookup"><span data-stu-id="c5cf6-102">.NET Core and Open-Source</span></span>
+<span data-ttu-id="c5cf6-103">Dieses Thema enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-103">This topic provides a brief overview  of what .NET Core is and shows how you can find more information.</span></span> <span data-ttu-id="c5cf6-104">Die vollständige Liste der Themen für .NET Core finden Sie im [Leitfaden für .NET Core](../../core/index.md).</span><span class="sxs-lookup"><span data-stu-id="c5cf6-104">To find the complete list of topics for .NET Core, visit the [.NET Core Guide](../../core/index.md).</span></span>
   
 <a name="BKMK_WhatisNETCore"></a>   
-## <a name="what-is-net-core"></a>Was ist .NET Core?  
- .NET Core ist eine allgemeine, modulare, plattformübergreifende Open Source-Implementierung der .NET-Standards. Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt. Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Implementierung. Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.  
+## <a name="what-is-net-core"></a><span data-ttu-id="c5cf6-105">Was ist .NET Core?</span><span class="sxs-lookup"><span data-stu-id="c5cf6-105">What is .NET Core?</span></span>  
+ <span data-ttu-id="c5cf6-106">.NET Core ist eine allgemeine, modulare, plattformübergreifende Open Source-Implementierung der .NET-Standards.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-106">.NET Core is a general purpose, modular, cross-platform and open source implementation of the .NET Standard.</span></span> <span data-ttu-id="c5cf6-107">Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-107">It contains many of the same APIs as the .NET Framework (but .NET Core is a smaller set) and includes runtime, framework, compiler and tools components that support a variety of operating systems and chip targets.</span></span> <span data-ttu-id="c5cf6-108">Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Implementierung.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-108">The .NET Core implementation was primarily driven by the ASP.NET Core workloads but also by the need and desire to have a more modern implementation.</span></span> <span data-ttu-id="c5cf6-109">Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-109">It can be used in device, cloud and embedded/IoT scenarios.</span></span>  
   
- Besuchen Sie für die ersten Schritte mit .NET Core die [.NET Core-Homepage](https://www.microsoft.com/net/core).  
+ <span data-ttu-id="c5cf6-110">Besuchen Sie für die ersten Schritte mit .NET Core die [.NET Core-Homepage](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="c5cf6-110">To get started with .NET Core, please visit the [.NET Core homepage](https://www.microsoft.com/net/core).</span></span>  
   
- Im Folgenden sind die wesentlichen Merkmale von .NET Core aufgeführt:  
+ <span data-ttu-id="c5cf6-111">Im Folgenden sind die wesentlichen Merkmale von .NET Core aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="c5cf6-111">Here are the main characteristics of .NET Core:</span></span>  
   
--   **Plattformübergreifend:** .NET Core stellt Hauptfunktionen zur Implementierung der erforderlichen App-Funktionen bereit sowie zur Wiederverwendung dieses Codes unabhängig von Ihrer Zielplattform. Es unterstützt derzeit die drei Hauptbetriebssysteme: Windows, Linux und Mac OS. Sie können Apps und Bibliotheken schreiben, die über unterstützte Betriebssysteme hinweg unverändert ausgeführt werden. Die Liste der unterstützten Betriebssysteme finden Sie unter [.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   <span data-ttu-id="c5cf6-112">**Plattformübergreifend:** .NET Core stellt Hauptfunktionen zur Implementierung der erforderlichen App-Funktionen bereit sowie zur Wiederverwendung dieses Codes unabhängig von Ihrer Zielplattform.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-112">**Cross-platform:** .NET Core provides key functionality to implement the app features you need and reuse this code regardless of your platform target.</span></span> <span data-ttu-id="c5cf6-113">Es unterstützt derzeit die drei Hauptbetriebssysteme: Windows, Linux und Mac OS.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-113">It currently supports three main operating systems (OS): Windows, Linux and macOS.</span></span> <span data-ttu-id="c5cf6-114">Sie können Apps und Bibliotheken schreiben, die über unterstützte Betriebssysteme hinweg unverändert ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-114">You can write apps and libraries that run unmodified across supported operating systems.</span></span> <span data-ttu-id="c5cf6-115">Die Liste der unterstützten Betriebssysteme finden Sie unter [.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).</span><span class="sxs-lookup"><span data-stu-id="c5cf6-115">To see the list of supported operating systems, visit [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).</span></span>
   
--   **Open Source:** .NET Core ist eines der vielen Projekten unter der Leitung der [.NET Foundation](http://www.dotnetfoundation.org/) und ist auf [GitHub](https://github.com/) verfügbar.  Die Entwicklung von .NET Core als Open Source-Projekt fördert einen transparenteren Entwicklungsprozess sowie eine aktive und engagierte Community.  
+-   <span data-ttu-id="c5cf6-116">**Open Source:** .NET Core ist eines der vielen Projekten unter der Leitung der [.NET Foundation](http://www.dotnetfoundation.org/) und ist auf [GitHub](https://github.com/) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-116">**Open source:** .NET Core is one of the many projects under the stewardship of the [.NET Foundation](http://www.dotnetfoundation.org/) and is available on [GitHub](https://github.com/).</span></span>  <span data-ttu-id="c5cf6-117">Die Entwicklung von .NET Core als Open Source-Projekt fördert einen transparenteren Entwicklungsprozess sowie eine aktive und engagierte Community.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-117">Having .NET Core as an open source project promotes a more transparent development process and promotes an active and engaged community.</span></span>  
   
--   **Flexible Bereitstellung:** Es gibt zwei Hauptmethoden zum Bereitstellen Ihrer App: Frameworkabhängige oder eigenständige Bereitstellung. Bei der frameworkabhängigen Bereitstellung werden nur Ihre App und Abhängigkeiten von Drittanbietern installiert. Zudem hängt Ihre App von der Verfügbarkeit einer systemweiten Version von .NET Core ab.  Bei der eigenständigen Bereitstellung wird die .NET Core-Version, die zum Erstellen der Anwendung verwendet wird, auch zusammen mit Ihrer App und Abhängigkeiten von Drittanbietern bereitgestellt. Sie kann auch parallel mit anderen Versionen ausgeführt werden.    Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../../core/deploying/index.md).
+-   <span data-ttu-id="c5cf6-118">**Flexible Bereitstellung:** Es gibt zwei Hauptmethoden zum Bereitstellen Ihrer App: Frameworkabhängige oder eigenständige Bereitstellung.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-118">**Flexible deployment:** there are two main ways to deploy your app: framework-dependent deployment or self-contained deployment.</span></span> <span data-ttu-id="c5cf6-119">Bei der frameworkabhängigen Bereitstellung werden nur Ihre App und Abhängigkeiten von Drittanbietern installiert. Zudem hängt Ihre App von der Verfügbarkeit einer systemweiten Version von .NET Core ab.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-119">With framework-dependent deployment, only your app and third-party dependencies are installed and your app depends on a system-wide version of .NET Core to be present.</span></span>  <span data-ttu-id="c5cf6-120">Bei der eigenständigen Bereitstellung wird die .NET Core-Version, die zum Erstellen der Anwendung verwendet wird, auch zusammen mit Ihrer App und Abhängigkeiten von Drittanbietern bereitgestellt. Sie kann auch parallel mit anderen Versionen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-120">With self-contained deployment, the .NET Core version used to build your application is also deployed along with your app and third-party dependencies and can run side-by-side with other versions.</span></span>    <span data-ttu-id="c5cf6-121">Weitere Informationen finden Sie unter [.NET Core Anwendungsbereitstellung](../../core/deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="c5cf6-121">For more information, see [.NET Core Application Deployment](../../core/deploying/index.md).</span></span>
 
--   **Modular:** .NET Core ist modular aufgebaut, weil es über NuGet in kleineren Assemblypaketen veröffentlicht wird. Statt in einer großen Assembly, die die meisten der Kernfunktionalitäten enthält, wird .NET Core in kleineren, funktionsorientierten Pakete zur Verfügung gestellt. Dies ermöglicht uns ein flexibleres Entwicklungsmodell und gestattet es Ihnen, Ihre App zu optimieren, um nur die erforderlichen NuGet-Pakete einzubeziehen. Die Vorteile eines kleineren App-Oberflächenbereichs umfassen straffere Sicherheit, verringerte Wartungsarbeiten, verbesserte Leistung und niedrigere Kosten bei einem Modell mit nutzungsabhängiger Preisgestaltung.  
+-   <span data-ttu-id="c5cf6-122">**Modular:** .NET Core ist modular aufgebaut, weil es über NuGet in kleineren Assemblypaketen veröffentlicht wird.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-122">**Modular:** .NET Core is modular because it's released through NuGet in smaller assembly packages.</span></span> <span data-ttu-id="c5cf6-123">Statt in einer großen Assembly, die die meisten der Kernfunktionalitäten enthält, wird .NET Core in kleineren, funktionsorientierten Pakete zur Verfügung gestellt.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-123">Rather than one large assembly that contains most of the core functionality, .NET Core is made available as smaller feature-centric packages.</span></span> <span data-ttu-id="c5cf6-124">Dies ermöglicht uns ein flexibleres Entwicklungsmodell und gestattet es Ihnen, Ihre App zu optimieren, um nur die erforderlichen NuGet-Pakete einzubeziehen.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-124">This enables a more agile development model for us and allows you to optimize your app to include just the NuGet packages you need.</span></span> <span data-ttu-id="c5cf6-125">Die Vorteile eines kleineren App-Oberflächenbereichs umfassen straffere Sicherheit, verringerte Wartungsarbeiten, verbesserte Leistung und niedrigere Kosten bei einem Modell mit nutzungsabhängiger Preisgestaltung.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-125">The benefits of a smaller app surface area include tighter security, reduced servicing, improved performance, and decreased costs in a pay-for-what-you-use model.</span></span>  
   
-## <a name="the-net-core-platform"></a>.NET Core-Plattform  
- Die .NET Core-Plattform besteht aus mehreren Komponenten, die den verwalteten Compiler, die Runtime, die Basisklassenbibliotheken sowie zahlreiche Anwendungsmodelle wie ASP.NET Core umfassen. Weitere Informationen zu den verschiedenen Komponenten finden Sie in den folgenden [GitHub](https://github.com/)-Repositorys:  
+## <a name="the-net-core-platform"></a><span data-ttu-id="c5cf6-126">.NET Core-Plattform</span><span class="sxs-lookup"><span data-stu-id="c5cf6-126">The .NET Core Platform</span></span>  
+ <span data-ttu-id="c5cf6-127">Die .NET Core-Plattform besteht aus mehreren Komponenten, die den verwalteten Compiler, die Runtime, die Basisklassenbibliotheken sowie zahlreiche Anwendungsmodelle wie ASP.NET Core umfassen.</span><span class="sxs-lookup"><span data-stu-id="c5cf6-127">The .NET Core platform is made of several components, which includes the managed compilers, the runtime, the base class libraries, and numerous application models, such as ASP.NET Core.</span></span> <span data-ttu-id="c5cf6-128">Weitere Informationen zu den verschiedenen Komponenten finden Sie in den folgenden [GitHub](https://github.com/)-Repositorys:</span><span class="sxs-lookup"><span data-stu-id="c5cf6-128">You can learn more about the different components and get engaged, by visiting the following [GitHub](https://github.com/) repos:</span></span>  
   
--   [.NET Core](https://github.com/dotnet/core)  
+-   [<span data-ttu-id="c5cf6-129">.NET Core</span><span class="sxs-lookup"><span data-stu-id="c5cf6-129">.NET Core</span></span>](https://github.com/dotnet/core)  
   
--   [CoreFX – Grundlegende .NET Core-Bibliotheken](https://github.com/dotnet/corefx)  
+-   [<span data-ttu-id="c5cf6-130">CoreFX – Grundlegende .NET Core-Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="c5cf6-130">CoreFX - .NET Core foundational libraries</span></span>](https://github.com/dotnet/corefx)  
   
--   [CoreCLR – .NET Core-Runtime](https://github.com/dotnet/coreclr)  
+-   [<span data-ttu-id="c5cf6-131">CoreCLR – .NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="c5cf6-131">CoreCLR - .NET Core runtime</span></span>](https://github.com/dotnet/coreclr)  
   
--   [CLI – Tools für die .NET Core-Befehlszeile](https://github.com/dotnet/cli)  
+-   [<span data-ttu-id="c5cf6-132">CLI – Tools für die .NET Core-Befehlszeile</span><span class="sxs-lookup"><span data-stu-id="c5cf6-132">CLI - .NET Core command-line tools</span></span>](https://github.com/dotnet/cli)  
   
--   [Roslyn – .NET-Compilerplattform](https://github.com/dotnet/roslyn)  
+-   [<span data-ttu-id="c5cf6-133">Roslyn – .NET-Compilerplattform</span><span class="sxs-lookup"><span data-stu-id="c5cf6-133">Roslyn - .NET Compiler Platform</span></span>](https://github.com/dotnet/roslyn)  
   
--   [ASP.NET Core](https://github.com/aspnet/home)  
+-   [<span data-ttu-id="c5cf6-134">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c5cf6-134">ASP.NET Core</span></span>](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>Siehe auch  
- [.NET Core-Homepage](https://www.microsoft.com/net/core)   
- [Leitfaden für .NET Core](../../core/index.md)   
- [ASP.NET Core-Dokumentation](/aspnet/core/)
-
+## <a name="see-also"></a><span data-ttu-id="c5cf6-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5cf6-135">See Also</span></span>  
+ [<span data-ttu-id="c5cf6-136">.NET Core-homepage</span><span class="sxs-lookup"><span data-stu-id="c5cf6-136">.NET Core homepage</span></span>](https://www.microsoft.com/net/core)  
+ [<span data-ttu-id="c5cf6-137">Leitfaden für .NET Core</span><span class="sxs-lookup"><span data-stu-id="c5cf6-137">.NET Core Guide</span></span>](../../core/index.md)  
+ [<span data-ttu-id="c5cf6-138">ASP.NET Core-Dokumentation</span><span class="sxs-lookup"><span data-stu-id="c5cf6-138">ASP.NET Core Documentation</span></span>](/aspnet/core/)

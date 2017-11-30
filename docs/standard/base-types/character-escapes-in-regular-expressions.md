@@ -1,74 +1,80 @@
 ---
-title: "Escapezeichen in regul&#228;ren Ausdr&#252;cken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reguläre Ausdrücke von .NET Framework, Escapezeichen"
-  - "Zeichen, Escapezeichen"
-  - "Konstrukte, Escapezeichen"
-  - "Escapezeichen"
-  - "Reguläre Ausdrücke, Escapezeichen"
-  - "Ersetzungsmuster"
-  - "Zeichen ohne Escapezeichen"
+title: "Escapezeichen in regulären Ausdrücken"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- unescaped characters
+- replacement patterns
+- characters, escapes
+- regular expressions, character escapes
+- escape characters
+- .NET Framework regular expressions, character escapes
+- constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: 31
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "31"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0149bd97b997da8b29e225a7a1aeda17a6ffa226
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Escapezeichen in regul&#228;ren Ausdr&#252;cken
-Der umgekehrte Schrägstrich \(\\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
+# <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="99d76-102">Escapezeichen in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="99d76-102">Character Escapes in Regular Expressions</span></span>
+<span data-ttu-id="99d76-103">Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:</span><span class="sxs-lookup"><span data-stu-id="99d76-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  
   
--   Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt.  `\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.  
+-   <span data-ttu-id="99d76-104">Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt.</span><span class="sxs-lookup"><span data-stu-id="99d76-104">The character that follows it is a special character, as shown in the table in the following section.</span></span> <span data-ttu-id="99d76-105">`\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.</span><span class="sxs-lookup"><span data-stu-id="99d76-105">For example, `\b` is an anchor that indicates that a regular expression match should begin on a word boundary, `\t` represents a tab, and `\x020` represents a space.</span></span>  
   
--   Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden.  Durch eine geschweifte Klammer \(`{`\) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer \(`\{`\) gefolgter umgekehrter Schrägstrich gibt an, dass das Modul für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte.  Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche \(`\\`\) geben an, dass das Modul für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.  
+-   <span data-ttu-id="99d76-106">Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden.</span><span class="sxs-lookup"><span data-stu-id="99d76-106">A character that otherwise would be interpreted as an unescaped language construct should be interpreted literally.</span></span> <span data-ttu-id="99d76-107">Durch eine geschweifte Klammer (`{`) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer (`\{`) gefolgter umgekehrter Schrägstrich gibt an, dass das Modul für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte.</span><span class="sxs-lookup"><span data-stu-id="99d76-107">For example, a brace (`{`) begins the definition of a quantifier, but a backslash followed by a brace (`\{`) indicates that the regular expression engine should match the brace.</span></span> <span data-ttu-id="99d76-108">Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche (`\\`) geben an, dass das Modul für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.</span><span class="sxs-lookup"><span data-stu-id="99d76-108">Similarly, a single backslash marks the beginning of an escaped language construct, but two backslashes (`\\`) indicate that the regular expression engine should match the backslash.</span></span>  
   
 > [!NOTE]
->  Escapezeichen werden in Mustern von regulären Ausdrücken, jedoch nicht in Ersetzungsmustern erkannt.  
+>  <span data-ttu-id="99d76-109">Escapezeichen werden in Mustern von regulären Ausdrücken, jedoch nicht in Ersetzungsmustern erkannt.</span><span class="sxs-lookup"><span data-stu-id="99d76-109">Character escapes are recognized in regular expression patterns but not in replacement patterns.</span></span>  
   
-## Escapezeichen in .NET Framework  
- In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären .NET Framework\-Ausdrücken unterstützt werden.  
+## <a name="character-escapes-in-net"></a><span data-ttu-id="99d76-110">Escapezeichen in .NET</span><span class="sxs-lookup"><span data-stu-id="99d76-110">Character Escapes in .NET</span></span>  
+ <span data-ttu-id="99d76-111">In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="99d76-111">The following table lists the character escapes supported by regular expressions in .NET.</span></span>  
   
-|Zeichen oder Sequenz|Beschreibung|  
-|--------------------------|------------------|  
-|Alle Zeichen außer Folgenden:<br /><br /> .  $ ^ { \[ \( &#124; \) \* \+ ?  \\|Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke.  Um diese in einem regulären Ausdruck zu vergleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden.  Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
-|`\a`|Entspricht dem Klingelzeichen \(Warnsignal\) `\u0007`.|  
-|`\b`|Entspricht in einer `[`*character\_group*`]`\-Zeichenklasse einem Rücktastenzeichen `\u0008`.  \(Siehe [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).\) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht.  \(Siehe [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).\)|  
-|`\t`|Entspricht dem Tabstoppzeichen `\u0009`.|  
-|`\r`|Entspricht dem Wagenrücklaufzeichen `\u000D`.  `\r` ist nicht mit dem Zeilenumbruchzeichen \(`\n`\) identisch.|  
-|`\v`|Entspricht dem vertikalen Tabstoppzeichen `\u000B`.|  
-|`\f`|Entspricht dem Seitenvorschubzeichen `\u000C`.|  
-|`\n`|Entspricht einer neuen Zeile `\u000A`.|  
-|`\e`|Entspricht dem Escapezeichen `\u001B`.|  
-|`\` *nnn*|Findet eine Entsprechung für ein ASCII\-Zeichen, wobei *nnn* aus zwei oder drei Ziffern besteht, die den oktalen Zeichencode darstellen.  Beispielsweise stellt `\040` ein Leerzeichen dar.  Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer \(z. B. `\2`\) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht.  \(Siehe [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).\)|  
-|`\x` *nn*|Findet eine Entsprechung für ein ASCII\-Zeichen, wobei *nn* ein zweistelliger Hexadezimalzeichencode ist.|  
-|`\c` *X*|Entspricht einem ASCII\-Steuerzeichen, wobei X der Buchstabe des Steuerzeichens ist.  Beispielsweise ist `\cC` STRG\+C.|  
-|`\u` *nnnn*|Entspricht einer Codeeinheit UTF\-16 ab, deren Wert *nnnn* hexadezimal ist. **Note:**  Das Perl 5\-Escapezeichen zum Festlegen, dass Unicode von .NET Framework nicht unterstützt wird.  Das Perl 5\-Escape\-Zeichen hat das Format `\x{`*\#\#\#\#*`…}`, wobei *\#\#\#\#*`…` einer Reihe von Hexadezimalziffern entspricht.  Verwenden Sie stattdessen `\u`*nnnn*.|  
-|`\`|Folgt diesem Zeichen ein Zeichen, das nicht als Escapezeichen erkannt wird, entspricht es diesem Zeichen.  `\*` entspricht beispielsweise einem Sternchen \(\*\) und ist gleich `\x2A`.|  
+|<span data-ttu-id="99d76-112">Zeichen oder Sequenz</span><span class="sxs-lookup"><span data-stu-id="99d76-112">Character or sequence</span></span>|<span data-ttu-id="99d76-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99d76-113">Description</span></span>|  
+|---------------------------|-----------------|  
+|<span data-ttu-id="99d76-114">Alle Zeichen außer Folgenden:</span><span class="sxs-lookup"><span data-stu-id="99d76-114">All characters except for the following:</span></span><br /><br /> <span data-ttu-id="99d76-115">.</span><span class="sxs-lookup"><span data-stu-id="99d76-115">.</span></span> <span data-ttu-id="99d76-116">$ ^ { [ ( &#124; ) * + ?</span><span class="sxs-lookup"><span data-stu-id="99d76-116">$ ^ { [ ( &#124; ) * + ?</span></span> \|<span data-ttu-id="99d76-117">Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.</span><span class="sxs-lookup"><span data-stu-id="99d76-117">Characters other than those listed in the **Character or sequence** column have no special meaning in regular expressions; they match themselves.</span></span><br /><br /> <span data-ttu-id="99d76-118">Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke.</span><span class="sxs-lookup"><span data-stu-id="99d76-118">The characters included in the **Character or sequence** column are special regular expression language elements.</span></span> <span data-ttu-id="99d76-119">Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden.</span><span class="sxs-lookup"><span data-stu-id="99d76-119">To match them in a regular expression, they must be escaped or included in a [positive character group](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span> <span data-ttu-id="99d76-120">Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".</span><span class="sxs-lookup"><span data-stu-id="99d76-120">For example, the regular expression `\$\d+` or `[$]\d+` matches "$1200".</span></span>|  
+|`\a`|<span data-ttu-id="99d76-121">Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.</span><span class="sxs-lookup"><span data-stu-id="99d76-121">Matches a bell (alarm) character, `\u0007`.</span></span>|  
+|`\b`|<span data-ttu-id="99d76-122">Entspricht in einer `[`*Zeichengruppe*`]`-Zeichenklasse einem Rücktastenzeichen `\u0008`.</span><span class="sxs-lookup"><span data-stu-id="99d76-122">In a `[`*character_group*`]` character class, matches a backspace, `\u0008`.</span></span>  <span data-ttu-id="99d76-123">(Siehe [Zeichenklassen](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Außerhalb einer Zeichenklasse ist `\b` ein Anker, der einer Wortgrenze entspricht.</span><span class="sxs-lookup"><span data-stu-id="99d76-123">(See [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Outside a character class, `\b` is an anchor that matches a word boundary.</span></span> <span data-ttu-id="99d76-124">(Siehe [Anker](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)</span><span class="sxs-lookup"><span data-stu-id="99d76-124">(See [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)</span></span>|  
+|`\t`|<span data-ttu-id="99d76-125">Entspricht dem Tabstoppzeichen `\u0009`.</span><span class="sxs-lookup"><span data-stu-id="99d76-125">Matches a tab, `\u0009`.</span></span>|  
+|`\r`|<span data-ttu-id="99d76-126">Entspricht dem Wagenrücklaufzeichen `\u000D`.</span><span class="sxs-lookup"><span data-stu-id="99d76-126">Matches a carriage return, `\u000D`.</span></span> <span data-ttu-id="99d76-127">`\r` ist nicht mit dem Zeilenumbruchzeichen (`\n`) identisch.</span><span class="sxs-lookup"><span data-stu-id="99d76-127">Note that `\r` is not equivalent to the newline character, `\n`.</span></span>|  
+|`\v`|<span data-ttu-id="99d76-128">Entspricht dem vertikalen Tabstoppzeichen `\u000B`.</span><span class="sxs-lookup"><span data-stu-id="99d76-128">Matches a vertical tab, `\u000B`.</span></span>|  
+|`\f`|<span data-ttu-id="99d76-129">Entspricht dem Seitenvorschubzeichen `\u000C`.</span><span class="sxs-lookup"><span data-stu-id="99d76-129">Matches a form feed, `\u000C`.</span></span>|  
+|`\n`|<span data-ttu-id="99d76-130">Entspricht einer neuen Zeile `\u000A`.</span><span class="sxs-lookup"><span data-stu-id="99d76-130">Matches a new line, `\u000A`.</span></span>|  
+|`\e`|<span data-ttu-id="99d76-131">Entspricht dem Escapezeichen `\u001B`.</span><span class="sxs-lookup"><span data-stu-id="99d76-131">Matches an escape, `\u001B`.</span></span>|  
+|<span data-ttu-id="99d76-132">`\` *nnn*</span><span class="sxs-lookup"><span data-stu-id="99d76-132">`\` *nnn*</span></span>|<span data-ttu-id="99d76-133">Entspricht einem ASCII-Zeichen, in denen  *nnn*  besteht aus zwei oder drei Ziffern, die den oktalen Zeichencode darstellen.</span><span class="sxs-lookup"><span data-stu-id="99d76-133">Matches an ASCII character, where *nnn* consists of two or three digits that represent the octal character code.</span></span> <span data-ttu-id="99d76-134">Beispielsweise stellt `\040` ein Leerzeichen dar.</span><span class="sxs-lookup"><span data-stu-id="99d76-134">For example, `\040` represents a space character.</span></span> <span data-ttu-id="99d76-135">Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer (z. B. `\2`) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht.</span><span class="sxs-lookup"><span data-stu-id="99d76-135">This construct is interpreted as a backreference if it has only one digit (for example, `\2`) or if it corresponds to the number of a capturing group.</span></span> <span data-ttu-id="99d76-136">(Siehe [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)</span><span class="sxs-lookup"><span data-stu-id="99d76-136">(See [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)</span></span>|  
+|<span data-ttu-id="99d76-137">`\x` *nn*</span><span class="sxs-lookup"><span data-stu-id="99d76-137">`\x` *nn*</span></span>|<span data-ttu-id="99d76-138">Entspricht einem ASCII-Zeichen, in denen  *nn*  ein zweistelliger Hexadezimalzeichencode ist.</span><span class="sxs-lookup"><span data-stu-id="99d76-138">Matches an ASCII character, where *nn* is a two-digit hexadecimal character code.</span></span>|  
+|<span data-ttu-id="99d76-139">`\c` *X*</span><span class="sxs-lookup"><span data-stu-id="99d76-139">`\c` *X*</span></span>|<span data-ttu-id="99d76-140">Entspricht einem ASCII-Steuerzeichen, wobei X der Buchstabe des Steuerzeichens ist.</span><span class="sxs-lookup"><span data-stu-id="99d76-140">Matches an ASCII control character, where X is the letter of the control character.</span></span> <span data-ttu-id="99d76-141">Beispielsweise ist `\cC` STRG+C.</span><span class="sxs-lookup"><span data-stu-id="99d76-141">For example, `\cC` is CTRL-C.</span></span>|  
+|<span data-ttu-id="99d76-142">`\u` *nnnn*</span><span class="sxs-lookup"><span data-stu-id="99d76-142">`\u` *nnnn*</span></span>|<span data-ttu-id="99d76-143">Entspricht, dessen Wert, eine UTF-16-Codeeinheit  *nnnn*  hexadezimale.</span><span class="sxs-lookup"><span data-stu-id="99d76-143">Matches a UTF-16 code unit whose value is *nnnn* hexadecimal.</span></span> <span data-ttu-id="99d76-144">**Hinweis:** Perl 5-Escapezeichen ab, das Angeben von Unicode wird von .NET nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="99d76-144">**Note:**  The Perl 5 character escape that is used to specify Unicode is not supported by .NET.</span></span> <span data-ttu-id="99d76-145">Das Perl 5-Escape-Zeichen hat das Format `\x{`*####*`…}`, wobei *####*`…` einer Reihe von Hexadezimalziffern entspricht.</span><span class="sxs-lookup"><span data-stu-id="99d76-145">The Perl 5 character escape has the form `\x{`*####*`…}`, where *####*`…` is a series of hexadecimal digits.</span></span> <span data-ttu-id="99d76-146">Verwenden Sie stattdessen `\u`  *nnnn* .</span><span class="sxs-lookup"><span data-stu-id="99d76-146">Instead, use `\u`*nnnn*.</span></span>|  
+|`\`|<span data-ttu-id="99d76-147">Folgt diesem Zeichen ein Zeichen, das nicht als Escapezeichen erkannt wird, entspricht es diesem Zeichen.</span><span class="sxs-lookup"><span data-stu-id="99d76-147">When followed by a character that is not recognized as an escaped character, matches that character.</span></span> <span data-ttu-id="99d76-148">`\*` entspricht beispielsweise einem Sternchen (*) und ist gleich `\x2A`.</span><span class="sxs-lookup"><span data-stu-id="99d76-148">For example, `\*` matches an asterisk (*) and is the same as `\x2A`.</span></span>|  
   
-## Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung von Escapezeichen in einem regulären Ausdruck.  Es analysiert eine Zeichenfolge, die die Namen der größten Orten der Welt und ihre Bevölkerungen in 2009 enthält.  Jeder Ortsname wird durch ein Tabstoppzeichen \(`\t`\) oder einen senkrechten Strich \(&#124; oder `\u007c`\) von seiner Einwohnerzahl getrennt.  Einzelne Orte und ihre Einwohnerzahlen werden durch einen Wagenrücklauf und einen Zeilenvorschub von einander getrennt.  
+## <a name="an-example"></a><span data-ttu-id="99d76-149">Beispiel</span><span class="sxs-lookup"><span data-stu-id="99d76-149">An Example</span></span>  
+ <span data-ttu-id="99d76-150">Das folgende Beispiel veranschaulicht die Verwendung von Escapezeichen in einem regulären Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="99d76-150">The following example illustrates the use of character escapes in a regular expression.</span></span> <span data-ttu-id="99d76-151">Es analysiert eine Zeichenfolge, die die Namen der größten Städte der Welt und deren Einwohnerzahlen im Jahr 2009 enthält.</span><span class="sxs-lookup"><span data-stu-id="99d76-151">It parses a string that contains the names of the world's largest cities and their populations in 2009.</span></span> <span data-ttu-id="99d76-152">Jeder Ortsname wird durch ein Tabstoppzeichen (`\t`) oder einen senkrechten Strich (&#124; oder `\u007c`) von seiner Einwohnerzahl getrennt.</span><span class="sxs-lookup"><span data-stu-id="99d76-152">Each city name is separated from its population by a tab (`\t`) or a vertical bar (&#124; or `\u007c`).</span></span> <span data-ttu-id="99d76-153">Einzelne Orte und ihre Einwohnerzahlen werden durch einen Wagenrücklauf und einen Zeilenvorschub von einander getrennt.</span><span class="sxs-lookup"><span data-stu-id="99d76-153">Individual cities and their populations are separated from each other by a carriage return and line feed.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]
  [!code-vb[RegularExpressions.Language.Escapes#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.escapes/vb/escape1.vb#1)]  
   
- Der reguläre Ausdruck `\G(.+)[\t|\u007c](../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
+ <span data-ttu-id="99d76-154">Der reguläre Ausdruck `\G(.+)[\t|\u007c](.+)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.</span><span class="sxs-lookup"><span data-stu-id="99d76-154">The regular expression `\G(.+)[\t|\u007c](.+)\r?\n` is interpreted as shown in the following table.</span></span>  
   
-|Muster|Beschreibung|  
-|------------|------------------|  
-|`\G`|Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.|  
-|`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen.  Dies ist die erste Erfassungsgruppe.|  
-|`[\t\u007c]`|Entsprechung für einen Tabulator \(`\t`\) oder einen senkrechten Strich \(&#124;\).|  
-|`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen.  Dies ist die zweite Erfassungsgruppe.|  
-|`\r?  \n`|Entspricht 0 \(Null\) oder einem Vorkommen des Wagenrücklaufs, gefolgt von einer neuen Zeile.|  
+|<span data-ttu-id="99d76-155">Muster</span><span class="sxs-lookup"><span data-stu-id="99d76-155">Pattern</span></span>|<span data-ttu-id="99d76-156">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99d76-156">Description</span></span>|  
+|-------------|-----------------|  
+|`\G`|<span data-ttu-id="99d76-157">Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.</span><span class="sxs-lookup"><span data-stu-id="99d76-157">Begin the match where the last match ended.</span></span>|  
+|`(.+)`|<span data-ttu-id="99d76-158">Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen.</span><span class="sxs-lookup"><span data-stu-id="99d76-158">Match any character one or more times.</span></span> <span data-ttu-id="99d76-159">Dies ist die erste Erfassungsgruppe.</span><span class="sxs-lookup"><span data-stu-id="99d76-159">This is the first capturing group.</span></span>|  
+|`[\t\u007c]`|<span data-ttu-id="99d76-160">Entspricht einem Tabulator (`\t`) oder einem senkrechten Strich (&#124;).</span><span class="sxs-lookup"><span data-stu-id="99d76-160">Match a tab (`\t`) or a vertical bar (&#124;).</span></span>|  
+|`(.+)`|<span data-ttu-id="99d76-161">Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen.</span><span class="sxs-lookup"><span data-stu-id="99d76-161">Match any character one or more times.</span></span> <span data-ttu-id="99d76-162">Dies ist die zweite Erfassungsgruppe.</span><span class="sxs-lookup"><span data-stu-id="99d76-162">This is the second capturing group.</span></span>|  
+|`\r?\n`|<span data-ttu-id="99d76-163">Entspricht 0 (Null) oder einem Vorkommen des Wagenrücklaufs, gefolgt von einer neuen Zeile.</span><span class="sxs-lookup"><span data-stu-id="99d76-163">Match zero or one occurrence of a carriage return followed by a new line.</span></span>|  
   
-## Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="99d76-164">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99d76-164">See Also</span></span>  
+ [<span data-ttu-id="99d76-165">Sprachelemente für reguläre Ausdrücke – Kurzübersicht</span><span class="sxs-lookup"><span data-stu-id="99d76-165">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

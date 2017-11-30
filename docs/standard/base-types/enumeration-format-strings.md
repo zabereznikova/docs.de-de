@@ -1,56 +1,58 @@
 ---
-title: "Enumerationsformatzeichenfolgen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Enumerationsformatzeichenfolgen"
-  - "Formatbezeichner, Enumerationsformatzeichenfolgen"
-  - "Formatieren [.NET Framework], Enumeration"
+title: Enumerationsformatzeichenfolgen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, enumeration format strings
+- enumeration format strings
+- formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Enumerationsformatzeichenfolgen
-Sie können mit der <xref:System.Enum.ToString%2A?displayProperty=fullName>\-Methode ein neues Zeichenfolgenobjekt erstellen, das den numerischen, hexadezimalen oder den Zeichenfolgenwert eines Enumerationsmembers darstellt.  Diese Methode übernimmt eine der Enumerationsformatzeichenfolgen, um den Wert anzugeben, den Sie zurückgeben möchten.  
+# <a name="enumeration-format-strings"></a><span data-ttu-id="f5090-102">Enumerationsformatzeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="f5090-102">Enumeration Format Strings</span></span>
+<span data-ttu-id="f5090-103">Sie können die <xref:System.Enum.ToString%2A?displayProperty=nameWithType> Methode, um ein neues Zeichenfolgeobjekt zu erstellen, die numerische, hexadezimalen oder String-Wert, der einen Enumerationsmember darstellt.</span><span class="sxs-lookup"><span data-stu-id="f5090-103">You can use the <xref:System.Enum.ToString%2A?displayProperty=nameWithType> method to create a new string object that represents the numeric, hexadecimal, or string value of an enumeration member.</span></span> <span data-ttu-id="f5090-104">Diese Methode akzeptiert eine der Enumerationsformatzeichenfolgen, um den Wert anzugeben, der zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="f5090-104">This method takes one of the enumeration formatting strings to specify the value that you want returned.</span></span>  
   
- In der folgenden Tabelle werden die Enumerationsformatzeichenfolgen und die Werte aufgelistet, die von diesen zurückgegeben werden.  Bei diesen Formatbezeichnern wird die Groß\- und Kleinschreibung nicht berücksichtigt.  
+ <span data-ttu-id="f5090-105">In der folgenden Tabelle sind die Enumerationsformatzeichenfolgen sowie die Werte aufgeführt, die diese zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="f5090-105">The following table lists the enumeration formatting strings and the values they return.</span></span> <span data-ttu-id="f5090-106">Bei diesen Formatbezeichnern wird die Groß- und Kleinschreibung nicht berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="f5090-106">These format specifiers are not case-sensitive.</span></span>  
   
-|Formatzeichenfolge|Ergebnis|  
-|------------------------|--------------|  
-|G oder g|Zeigt, soweit möglich, den Enumerationseintrag als Zeichenfolgenwert an. Andernfalls wird der Ganzzahlwert der aktuellen Instanz angezeigt.  Wenn die Enumeration mit festgelegtem **Flags**\-Attribut definiert ist, werden die Zeichenfolgenwerte der einzelnen gültigen Einträge verkettet und durch Kommas getrennt.  Wenn das **Flags**\-Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt.  Im folgenden Beispiel wird der G\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
- [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]|  
-|F oder f|Zeigt den Enumerationseintrag, soweit möglich, als Zeichenfolgenwert an.  Wenn der Wert vollständig als eine Summe der Einträge in der Enumeration angezeigt werden kann \(auch wenn das **Flags**\-Attribut fehlt\), werden die Zeichenfolgenwerte der einzelnen gültigen Einträge verkettet und durch Kommas getrennt.  Wenn der Wert nicht vollständig durch die Enumerationseinträge bestimmt werden kann, wird der Wert als Ganzzahlwert formatiert.  Im folgenden Beispiel wird der F\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
- [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]|  
-|D oder d|Zeigt den Enumerationseintrag als Ganzzahlwert in der kürzesten möglichen Darstellung an.  Im folgenden Beispiel wird der D\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
- [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]|  
-|X oder x|Zeigt den Enumerationseintrag als hexadezimalen Wert an.  Der Wert wird mit ggf. mit vorangestellten Nullen dargestellt, damit der Wert mindestens acht Ziffern enthält.  Im folgenden Beispiel wird der X\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
- [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]|  
+| <span data-ttu-id="f5090-107">Formatierungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="f5090-107">Format string</span></span> | <span data-ttu-id="f5090-108">Ergebnis</span><span class="sxs-lookup"><span data-stu-id="f5090-108">Result</span></span> |  
+| ------------- | ------ |  
+| <span data-ttu-id="f5090-109">G oder g</span><span class="sxs-lookup"><span data-stu-id="f5090-109">G or g</span></span> | <span data-ttu-id="f5090-110">Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an, zeigt andernfalls den ganzzahligen Wert der aktuellen Instanz an.</span><span class="sxs-lookup"><span data-stu-id="f5090-110">Displays the enumeration entry as a string value, if possible, and otherwise displays the integer value of the current instance.</span></span> <span data-ttu-id="f5090-111">Wenn die Enumeration mit festgelegtem **Flags**-Attribut definiert ist, werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt.</span><span class="sxs-lookup"><span data-stu-id="f5090-111">If the enumeration is defined with the **Flags** attribute set, the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="f5090-112">Wenn das **Flags**-Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt.</span><span class="sxs-lookup"><span data-stu-id="f5090-112">If the **Flags** attribute is not set, an invalid value is displayed as a numeric entry.</span></span> <span data-ttu-id="f5090-113">Das folgende Beispiel veranschaulicht den Formatbezeichner „G“.</span><span class="sxs-lookup"><span data-stu-id="f5090-113">The following example illustrates the G format specifier.</span></span><br><br><span data-ttu-id="f5090-114">[!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]</span><span class="sxs-lookup"><span data-stu-id="f5090-114">[!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]</span></span> |  
+| <span data-ttu-id="f5090-115">F oder f</span><span class="sxs-lookup"><span data-stu-id="f5090-115">F or f</span></span> | <span data-ttu-id="f5090-116">Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an.</span><span class="sxs-lookup"><span data-stu-id="f5090-116">Displays the enumeration entry as a string value, if possible.</span></span> <span data-ttu-id="f5090-117">Wenn der Wert vollständig als Summe der Einträge in der Enumeration angezeigt werden kann (selbst wenn das **Flags**-Attribut nicht vorhanden ist), werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt.</span><span class="sxs-lookup"><span data-stu-id="f5090-117">If the value can be completely displayed as a summation of the entries in the enumeration (even if the **Flags** attribute is not present), the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="f5090-118">Wenn der Wert nicht vollständig durch die Enumerationseinträge ermittelt werden kann, wird der Wert als ganzzahliger Wert formatiert.</span><span class="sxs-lookup"><span data-stu-id="f5090-118">If the value cannot be completely determined by the enumeration entries, then the value is formatted as the integer value.</span></span> <span data-ttu-id="f5090-119">Das folgende Beispiel veranschaulicht den Formatbezeichner „F“.</span><span class="sxs-lookup"><span data-stu-id="f5090-119">The following example illustrates the F format specifier.</span></span><br><br><span data-ttu-id="f5090-120">[!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]</span><span class="sxs-lookup"><span data-stu-id="f5090-120">[!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]</span></span> |  
+| <span data-ttu-id="f5090-121">D oder d</span><span class="sxs-lookup"><span data-stu-id="f5090-121">D or d</span></span> | <span data-ttu-id="f5090-122">Zeigt den Enumerationseintrag in der kürzestmöglichen Darstellung als ganzzahligen Wert an.</span><span class="sxs-lookup"><span data-stu-id="f5090-122">Displays the enumeration entry as an integer value in the shortest representation possible.</span></span> <span data-ttu-id="f5090-123">Das folgende Beispiel veranschaulicht den Formatbezeichner „D“.</span><span class="sxs-lookup"><span data-stu-id="f5090-123">The following example illustrates the D format specifier.</span></span><br><br><span data-ttu-id="f5090-124">[!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]</span><span class="sxs-lookup"><span data-stu-id="f5090-124">[!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]</span></span> |  
+| <span data-ttu-id="f5090-125">X oder x</span><span class="sxs-lookup"><span data-stu-id="f5090-125">X or x</span></span> | <span data-ttu-id="f5090-126">Zeigt den Enumerationseintrag als Hexadezimalwert an.</span><span class="sxs-lookup"><span data-stu-id="f5090-126">Displays the enumeration entry as a hexadecimal value.</span></span> <span data-ttu-id="f5090-127">Der Wert wird mit so vielen führenden Nullen wie nötig dargestellt, um sicherzustellen, dass der Wert mindestens acht Stellen lang ist.</span><span class="sxs-lookup"><span data-stu-id="f5090-127">The value is represented with leading zeros as necessary, to ensure that the value is a minimum eight digits in length.</span></span> <span data-ttu-id="f5090-128">Das folgende Beispiel veranschaulicht den Formatbezeichner „X“.</span><span class="sxs-lookup"><span data-stu-id="f5090-128">The following example illustrates the X format specifier.</span></span><br /><br /> <span data-ttu-id="f5090-129">[!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]</span><span class="sxs-lookup"><span data-stu-id="f5090-129">[!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]</span></span> |  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Enumeration mit der Bezeichnung `Colors` definiert, die drei Einträge enthält: `Red`, `Blue` und `Green`.  
+## <a name="example"></a><span data-ttu-id="f5090-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f5090-130">Example</span></span>  
+ <span data-ttu-id="f5090-131">Das folgende Beispiel definiert eine Enumeration namens `Colors`, die aus drei Einträgen besteht: `Red`, `Blue` und `Green`.</span><span class="sxs-lookup"><span data-stu-id="f5090-131">The following example defines an enumeration called `Colors` that consists of three entries: `Red`, `Blue`, and `Green`.</span></span>  
   
  [!code-csharp[Formatting.Enum#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
  [!code-vb[Formatting.Enum#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]  
   
- Nachdem die Enumeration definiert wurde, kann folgendermaßen eine Instanz deklariert werden.  
+ <span data-ttu-id="f5090-132">Nachdem die Enumeration definiert wurde, kann auf folgende Weise eine Instanz deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="f5090-132">After the enumeration is defined, an instance can be declared in the following manner.</span></span>  
   
  [!code-csharp[Formatting.Enum#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
  [!code-vb[Formatting.Enum#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]  
   
- Die `Color.ToString(System.String)`\-Methode kann dann dazu verwendet werden, den Enumerationswert auf verschiedene Arten anzuzeigen. Wie er angezeigt wird, hängt vom übergebenen Formatbezeichner ab.  
+ <span data-ttu-id="f5090-133">Dann kann die `Color.ToString(System.String)`-Methode verwendet werden, um den Enumerationswert je nach übergebenem Formatbezeichner auf verschiedene Arten anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="f5090-133">The `Color.ToString(System.String)` method can then be used to display the enumeration value in different ways, depending on the format specifier passed to it.</span></span>  
   
  [!code-csharp[Formatting.Enum#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
  [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
   
-## Siehe auch  
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="f5090-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f5090-134">See Also</span></span>  
+ [<span data-ttu-id="f5090-135">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="f5090-135">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)

@@ -1,28 +1,26 @@
 ---
-title: "Erstellen von neuen Knoten im Dokumentobjektmodell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Erstellen von neuen Knoten im Dokumentobjektmodell
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ec624a02f98fda4352b5ba8ff43681fba040c676
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Erstellen von neuen Knoten im Dokumentobjektmodell
-Die <xref:System.Xml.XmlDocument> hat eine Create-Methode für alle Knotentypen. Stellen Sie der Methode, falls erforderlich, einen Namen und Inhalt oder andere Parameter für die Knoten bereit, die Inhalt aufweisen (z. B. ein Textknoten), und der Knoten wird erstellt. Für die folgenden Methoden muss ein Name angegeben sein und es müssen einige andere Parameter ausgefüllt sein, damit ein entsprechender Knoten erstellt wird.  
+# <a name="create-new-nodes-in-the-dom"></a><span data-ttu-id="98123-102">Erstellen von neuen Knoten im Dokumentobjektmodell</span><span class="sxs-lookup"><span data-stu-id="98123-102">Create New Nodes in the DOM</span></span>
+<span data-ttu-id="98123-103">Das <xref:System.Xml.XmlDocument> verfügt über eine create-Methode für alle Knotentypen.</span><span class="sxs-lookup"><span data-stu-id="98123-103">The <xref:System.Xml.XmlDocument> has a create method for all of the node types.</span></span> <span data-ttu-id="98123-104">Stellen Sie der Methode, falls erforderlich, einen Namen und Inhalt oder andere Parameter für die Knoten bereit, die Inhalt aufweisen (z. B. ein Textknoten), und der Knoten wird erstellt.</span><span class="sxs-lookup"><span data-stu-id="98123-104">Supply the method with a name when required, and content or other parameters for those nodes that have content (for example, a text node), and the node is created.</span></span> <span data-ttu-id="98123-105">Für die folgenden Methoden muss ein Name angegeben sein und es müssen einige andere Parameter ausgefüllt sein, damit ein entsprechender Knoten erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="98123-105">The following methods are ones that need a name and a few other parameters filled to create an appropriate node.</span></span>  
   
 -   <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
@@ -46,19 +44,19 @@ Die <xref:System.Xml.XmlDocument> hat eine Create-Methode für alle Knotentypen.
   
 -   <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
   
- Für andere Knoten müssen über das Bereitstellen von Daten für Parameter hinausgehende Anforderungen erfüllt werden.  
+ <span data-ttu-id="98123-106">Für andere Knoten müssen über das Bereitstellen von Daten für Parameter hinausgehende Anforderungen erfüllt werden.</span><span class="sxs-lookup"><span data-stu-id="98123-106">Other node types have more requirements than just providing data to parameters.</span></span>  
   
- Weitere Informationen zu Attributen finden Sie unter [Erstellen von neuen Attributen für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md). Informationen zur Validierung von Element- und Attributnamen finden Sie unter [-XML-Element- und-Attributnamen beim Erstellen neuer Knoten](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md). Zum Erstellen von Entitätsverweisen finden Sie unter [Erstellen neuer Entitätsverweise](../../../../docs/standard/data/xml/creating-new-entity-references.md). Informationen über die Auswirkungen von Namespaces auf die Erweiterung von Entitätsverweisen finden Sie unter [Namespace Auswirkung auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md).  
+ <span data-ttu-id="98123-107">Weitere Informationen zu Attributen finden Sie unter [Erstellen von neuen Attributen für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="98123-107">For information on attributes, see [Creating New Attributes for Elements in the DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span></span> <span data-ttu-id="98123-108">Informationen zur Validierung von Element- und Attributnamen finden Sie unter [XML-Element- und-Attributnamen beim Erstellen neuer Knoten](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md).</span><span class="sxs-lookup"><span data-stu-id="98123-108">For information on element and attribute name validation, see [XML Element and Attribute Name Verification when Creating New Nodes](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md).</span></span> <span data-ttu-id="98123-109">Zum Erstellen von Entitätsverweisen finden Sie unter [Erstellen neuer Entitätsverweise](../../../../docs/standard/data/xml/creating-new-entity-references.md).</span><span class="sxs-lookup"><span data-stu-id="98123-109">For creating entity references, see [Creating New Entity References](../../../../docs/standard/data/xml/creating-new-entity-references.md).</span></span> <span data-ttu-id="98123-110">Informationen wie Namespaces für die Erweiterung von Entitätsverweisen auswirken, finden Sie unter [Namespace Auswirkung auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md).</span><span class="sxs-lookup"><span data-stu-id="98123-110">For information on how namespaces affect the expansion of entity references, see [Namespace Affect on Entity Reference Expansion for New Nodes Containing Elements and Attributes](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md).</span></span>  
   
- Nach dem Erstellen von neuen Knoten stehen verschiedene Methoden zum Einfügen der Knoten in die Struktur zur Verfügung. In der Tabelle sind die Methoden und eine Beschreibung der Position des neuen Knotens im XML-DOM (Dokumentobjektmodell) aufgelistet.  
+ <span data-ttu-id="98123-111">Nach dem Erstellen von neuen Knoten stehen verschiedene Methoden zum Einfügen der Knoten in die Struktur zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="98123-111">Once new nodes are created, there are several methods available to insert them into the tree.</span></span> <span data-ttu-id="98123-112">In der Tabelle sind die Methoden und eine Beschreibung der Position des neuen Knotens im XML-DOM (Dokumentobjektmodell) aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="98123-112">The table lists the methods with a description of where the new node appears in the XML Document Object Model (DOM).</span></span>  
   
-|Methode|Knotenposition|  
+|<span data-ttu-id="98123-113">Methode</span><span class="sxs-lookup"><span data-stu-id="98123-113">Method</span></span>|<span data-ttu-id="98123-114">Knotenposition</span><span class="sxs-lookup"><span data-stu-id="98123-114">Node placement</span></span>|  
 |------------|--------------------|  
-|<xref:System.Xml.XmlNode.InsertBefore%2A>|Vor dem Referenzknoten eingefügt. So fügen Sie beispielsweise den neuen Knoten an Position 5 ein:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Weitere Informationen finden Sie unter der <xref:System.Xml.XmlNode.InsertBefore%2A> Methode.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|Nach dem Referenzknoten eingefügt. Zum Beispiel:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Weitere Informationen finden Sie unter der <xref:System.Xml.XmlNode.InsertAfter%2A> Methode.|  
-|<xref:System.Xml.XmlNode.AppendChild%2A>|Fügt den Knoten am Ende der Liste der untergeordneten Knoten für den angegebenen Knoten an. Wenn der Knoten, der hinzugefügt wird ein <xref:System.Xml.XmlDocumentFragment>, den gesamten Inhalt des Dokumentfragments in die Liste untergeordneten Elemente dieses Knotens verschoben. Weitere Informationen finden Sie unter der <xref:System.Xml.XmlNode.AppendChild%2A> Methode.|  
-|<xref:System.Xml.XmlNode.PrependChild%2A>|Fügt den Knoten am Anfang der Liste der untergeordneten Knoten für den angegebenen Knoten an. Wenn der Knoten, der hinzugefügt wird ein <xref:System.Xml.XmlDocumentFragment>, den gesamten Inhalt des Dokumentfragments in die Liste untergeordneten Elemente dieses Knotens verschoben. Weitere Informationen finden Sie unter der <xref:System.Xml.XmlNode.PrependChild%2A> Methode.|  
-|<xref:System.Xml.XmlAttributeCollection.Append%2A>|Fügt ein <xref:System.Xml.XmlAttribute> Knoten am Ende der Auflistung ein Element zugeordnet. Weitere Informationen finden Sie unter der <xref:System.Xml.XmlAttributeCollection.Append%2A> Methode.|  
+|<xref:System.Xml.XmlNode.InsertBefore%2A>|<span data-ttu-id="98123-115">Vor dem Referenzknoten eingefügt.</span><span class="sxs-lookup"><span data-stu-id="98123-115">Inserted before the reference node.</span></span> <span data-ttu-id="98123-116">So fügen Sie beispielsweise den neuen Knoten an Position 5 ein:</span><span class="sxs-lookup"><span data-stu-id="98123-116">For example, to insert the new node in position 5:</span></span><br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> <span data-ttu-id="98123-117">Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.InsertBefore%2A>.</span><span class="sxs-lookup"><span data-stu-id="98123-117">For more information, see the <xref:System.Xml.XmlNode.InsertBefore%2A> method.</span></span>|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|<span data-ttu-id="98123-118">Nach dem Referenzknoten eingefügt.</span><span class="sxs-lookup"><span data-stu-id="98123-118">Inserted after the reference node.</span></span> <span data-ttu-id="98123-119">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="98123-119">For example:</span></span><br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> <span data-ttu-id="98123-120">Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.InsertAfter%2A>.</span><span class="sxs-lookup"><span data-stu-id="98123-120">For more information, see the <xref:System.Xml.XmlNode.InsertAfter%2A> method.</span></span>|  
+|<xref:System.Xml.XmlNode.AppendChild%2A>|<span data-ttu-id="98123-121">Fügt den Knoten am Ende der Liste der untergeordneten Knoten für den angegebenen Knoten an.</span><span class="sxs-lookup"><span data-stu-id="98123-121">Adds the node to the end of the list of child nodes for the given node.</span></span> <span data-ttu-id="98123-122">Wenn der Knoten, der hinzugefügt wird, ein <xref:System.Xml.XmlDocumentFragment> ist, wird der gesamte Inhalt des Dokumentfragments in die Liste der untergeordneten Elemente dieses Knotens verschoben.</span><span class="sxs-lookup"><span data-stu-id="98123-122">If the node being added is an <xref:System.Xml.XmlDocumentFragment>, the entire contents of the document fragment are moved into the child list of this node.</span></span> <span data-ttu-id="98123-123">Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.AppendChild%2A>.</span><span class="sxs-lookup"><span data-stu-id="98123-123">For more information, see the <xref:System.Xml.XmlNode.AppendChild%2A> method.</span></span>|  
+|<xref:System.Xml.XmlNode.PrependChild%2A>|<span data-ttu-id="98123-124">Fügt den Knoten am Anfang der Liste der untergeordneten Knoten für den angegebenen Knoten an.</span><span class="sxs-lookup"><span data-stu-id="98123-124">Adds the node to the beginning of the list of child nodes of the given node.</span></span> <span data-ttu-id="98123-125">Wenn der Knoten, der hinzugefügt wird, ein <xref:System.Xml.XmlDocumentFragment> ist, wird der gesamte Inhalt des Dokumentfragments in die Liste der untergeordneten Elemente dieses Knotens verschoben.</span><span class="sxs-lookup"><span data-stu-id="98123-125">If the node being added is an <xref:System.Xml.XmlDocumentFragment>, the entire contents of the document fragment are moved into the child list of this node.</span></span> <span data-ttu-id="98123-126">Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.PrependChild%2A>.</span><span class="sxs-lookup"><span data-stu-id="98123-126">For more information, see the <xref:System.Xml.XmlNode.PrependChild%2A> method.</span></span>|  
+|<xref:System.Xml.XmlAttributeCollection.Append%2A>|<span data-ttu-id="98123-127">Fügt am Ende der einem Element zugeordneten Attributauflistung einen <xref:System.Xml.XmlAttribute>-Knoten an.</span><span class="sxs-lookup"><span data-stu-id="98123-127">Appends an <xref:System.Xml.XmlAttribute> node to the end of the attribute collection associated with an element.</span></span> <span data-ttu-id="98123-128">Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlAttributeCollection.Append%2A>.</span><span class="sxs-lookup"><span data-stu-id="98123-128">For more information, see the <xref:System.Xml.XmlAttributeCollection.Append%2A> method.</span></span>|  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="98123-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="98123-129">See Also</span></span>  
+ [<span data-ttu-id="98123-130">XML-Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="98123-130">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,64 +1,71 @@
 ---
-title: "Interlocked Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Interlocked class, about Interlocked class"
-  - "threading [.NET Framework], Interlocked class"
+title: "Interlocked-Vorgänge"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Interlocked class, about Interlocked class
+- threading [.NET Framework], Interlocked class
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 122058b7e826e27fe6c60c5b07610f7c63e64f78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Interlocked Operations
-Die <xref:System.Threading.Interlocked>\-Klasse stellt Methoden bereit, die den Zugriff auf eine Variable synchronisieren, die von mehreren Threads gemeinsam genutzt wird.  Threads aus verschiedenen Prozessen können diesen Mechanismus verwenden, wenn sich die Variable im freigegebenen Speicher befindet.  Interlocked\-Vorgänge sind unteilbare \(atomarische\) Vorgänge. Der gesamte Vorgang ist eine Einheit, die durch einen anderen Interlocked\-Vorgang mit derselben Variablen nicht unterbrochen werden kann.  Dies ist in Betriebssystemen mit präemptivem Multithreading von Bedeutung, bei denen ein Thread nach dem Laden eines Werts aus einer Speicheradresse unterbrochen werden kann, bevor der Wert geändert oder gespeichert wurde.  
+# <a name="interlocked-operations"></a><span data-ttu-id="8b450-102">Interlocked-Vorgänge</span><span class="sxs-lookup"><span data-stu-id="8b450-102">Interlocked Operations</span></span>
+<span data-ttu-id="8b450-103">Die <xref:System.Threading.Interlocked> Klasse enthält Methoden, die Zugriff auf eine Variable zu synchronisieren, die von mehreren Threads gemeinsam verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8b450-103">The <xref:System.Threading.Interlocked> class provides methods that synchronize access to a variable that is shared by multiple threads.</span></span> <span data-ttu-id="8b450-104">Threads aus verschiedenen Prozessen können diesen Mechanismus verwenden, wenn sich die Variable im freigegebenen Speicher befindet.</span><span class="sxs-lookup"><span data-stu-id="8b450-104">The threads of different processes can use this mechanism if the variable is in shared memory.</span></span> <span data-ttu-id="8b450-105">Interlocked-Vorgänge sind unteilbare (atomarische) Vorgänge. Der gesamte Vorgang ist eine Einheit, die durch einen anderen Interlocked-Vorgang mit derselben Variablen nicht unterbrochen werden kann.</span><span class="sxs-lookup"><span data-stu-id="8b450-105">Interlocked operations are atomic — that is, the entire operation is a unit that cannot be interrupted by another interlocked operation on the same variable.</span></span> <span data-ttu-id="8b450-106">Dies ist in Betriebssystemen mit präemptivem Multithreading von Bedeutung, bei denen ein Thread nach dem Laden eines Werts aus einer Speicheradresse unterbrochen werden kann, bevor der Wert geändert oder gespeichert wurde.</span><span class="sxs-lookup"><span data-stu-id="8b450-106">This is important in operating systems with preemptive multithreading, where a thread can be suspended after loading a value from a memory address, but before having the chance to alter it and store it.</span></span>  
   
- Die <xref:System.Threading.Interlocked>\-Klasse stellt die folgenden Vorgänge bereit:  
+ <span data-ttu-id="8b450-107">Die <xref:System.Threading.Interlocked> Klasse bietet die folgenden Vorgänge:</span><span class="sxs-lookup"><span data-stu-id="8b450-107">The <xref:System.Threading.Interlocked> class provides the following operations:</span></span>  
   
--   In .NET Framework, Version 2.0, wird einer Variablen durch die <xref:System.Threading.Interlocked.Add%2A>\-Methode ein ganzzahliger Wert hinzugefügt und der neue Wert der Variablen zurückgegeben.  
+-   <span data-ttu-id="8b450-108">In .NET Framework, Version 2.0 die <xref:System.Threading.Interlocked.Add%2A> Methode fügt einen ganzzahligen Wert einer Variablen und gibt den neuen Wert der Variablen zurück.</span><span class="sxs-lookup"><span data-stu-id="8b450-108">In the .NET Framework version 2.0, the <xref:System.Threading.Interlocked.Add%2A> method adds an integer value to a variable and returns the new value of the variable.</span></span>  
   
--   In .NET Framework, Version 2.0, liest die <xref:System.Threading.Interlocked.Read%2A>\-Methode einen 64\-Bit\-Ganzzahlwert in einem atomaren Vorgang.  Dies ist von Vorteil für 32\-Bit\-Betriebssysteme, bei denen das Lesen eines 64\-Bit\-Ganzzahlwerts normalerweise keinen atomaren Vorgang darstellt.  
+-   <span data-ttu-id="8b450-109">In .NET Framework, Version 2.0 die <xref:System.Threading.Interlocked.Read%2A> Methode liest einen 64-Bit-Ganzzahlwert einer atomaren Operation.</span><span class="sxs-lookup"><span data-stu-id="8b450-109">In the .NET Framework version 2.0, the <xref:System.Threading.Interlocked.Read%2A> method reads a 64-bit integer value as an atomic operation.</span></span> <span data-ttu-id="8b450-110">Dies ist von Vorteil für 32-Bit-Betriebssysteme, bei denen das Lesen eines 64-Bit-Ganzzahlwerts normalerweise keinen atomaren Vorgang darstellt.</span><span class="sxs-lookup"><span data-stu-id="8b450-110">This is useful on 32-bit operating systems, where reading a 64-bit integer is not ordinarily an atomic operation.</span></span>  
   
--   Die <xref:System.Threading.Interlocked.Increment%2A>\-Methode und die <xref:System.Threading.Interlocked.Decrement%2A>\-Methode inkrementieren oder dekrementieren eine Variable und geben den daraus resultierenden Wert zurück.  
+-   <span data-ttu-id="8b450-111">Die <xref:System.Threading.Interlocked.Increment%2A> und <xref:System.Threading.Interlocked.Decrement%2A> Methoden inkrementieren oder dekrementieren eine Variable und den resultierenden Wert zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="8b450-111">The <xref:System.Threading.Interlocked.Increment%2A> and <xref:System.Threading.Interlocked.Decrement%2A> methods increment or decrement a variable and return the resulting value.</span></span>  
   
--   Die <xref:System.Threading.Interlocked.Exchange%2A>\-Methode führt einen atomaren Werteaustausch in einer bestimmten Variablen aus. Dabei wird dieser Wert zurückgegeben und durch einen neuen Wert ersetzt.  In .NET Framework, Version 2.0, kann eine generische Überladung dieser Methode verwendet werden, um diesen Austausch für eine Variable eines beliebigen Referenztyps auszuführen.  Siehe <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29>.  
+-   <span data-ttu-id="8b450-112">Die <xref:System.Threading.Interlocked.Exchange%2A> -Methode führt einen unteilbaren Austauschvorgang des Werts in einer angegebenen Variablen, diesen Wert zurückgeben, und ersetzen es durch einen neuen Wert.</span><span class="sxs-lookup"><span data-stu-id="8b450-112">The <xref:System.Threading.Interlocked.Exchange%2A> method performs an atomic exchange of the value in a specified variable, returning that value and replacing it with a new value.</span></span> <span data-ttu-id="8b450-113">In .NET Framework Version 2.0 kann eine generische Überladung dieser Methode verwendet werden, um diesen Austausch für eine Variable eines beliebigen Referenztyps auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8b450-113">In the .NET Framework version 2.0, a generic overload of this method can be used to perform this exchange on a variable of any reference type.</span></span> <span data-ttu-id="8b450-114">Siehe <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29>.</span><span class="sxs-lookup"><span data-stu-id="8b450-114">See <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29>.</span></span>  
   
--   Auch von der <xref:System.Threading.Interlocked.CompareExchange%2A>\-Methode werden zwei Werte ausgetauscht, und zwar abhängig vom Ergebnis eines Vergleichs.  In .NET Framework, Version 2.0, kann eine generische Überladung dieser Methode verwendet werden, um diesen Austausch für eine Variable eines beliebigen Referenztyps auszuführen.  Siehe <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>.  
+-   <span data-ttu-id="8b450-115">Die <xref:System.Threading.Interlocked.CompareExchange%2A> Methode außerdem tauscht zwei Werte jedoch abhängig vom Ergebnis eines Vergleichs.</span><span class="sxs-lookup"><span data-stu-id="8b450-115">The <xref:System.Threading.Interlocked.CompareExchange%2A> method also exchanges two values, but contingent on the result of a comparison.</span></span> <span data-ttu-id="8b450-116">In .NET Framework Version 2.0 kann eine generische Überladung dieser Methode verwendet werden, um diesen Austausch für eine Variable eines beliebigen Referenztyps auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8b450-116">In the .NET Framework version 2.0, a generic overload of this method can be used to perform this exchange on a variable of any reference type.</span></span> <span data-ttu-id="8b450-117">Siehe <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>.</span><span class="sxs-lookup"><span data-stu-id="8b450-117">See <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>.</span></span>  
   
- Bei modernen Prozessoren können die Methoden der <xref:System.Threading.Interlocked>\-Klasse oft durch eine einzige Anweisung implementiert werden.  Sie bieten folglich eine Hochleistungssynchronisierung und können verwendet werden, um Mechanismen für höherstufige Synchronisierung zu erstellen \(z. B. Spinlocks\).  
+ <span data-ttu-id="8b450-118">Moderne Prozessoren, die Methoden der <xref:System.Threading.Interlocked> -Klasse kann häufig durch eine einzige Anweisung implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="8b450-118">On modern processors, the methods of the <xref:System.Threading.Interlocked> class can often be implemented by a single instruction.</span></span> <span data-ttu-id="8b450-119">Sie bieten folglich eine Hochleistungssynchronisierung und können verwendet werden, um Mechanismen für höherstufige Synchronisierung zu erstellen (z.B. Spinlocks).</span><span class="sxs-lookup"><span data-stu-id="8b450-119">Thus, they provide very high-performance synchronization and can be used to build higher-level synchronization mechanisms, like spin locks.</span></span>  
   
- Ein Beispiel, in dem die <xref:System.Threading.Monitor>\-Klasse und die <xref:System.Threading.Interlocked>\-Klasse zusammen verwendet werden, finden Sie unter [Monitore](../Topic/Monitors.md).  
+ <span data-ttu-id="8b450-120">Ein Beispiel, verwendet der <xref:System.Threading.Monitor> und <xref:System.Threading.Interlocked> Klassen in Kombination, finden Sie unter [Monitore](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).</span><span class="sxs-lookup"><span data-stu-id="8b450-120">For an example that uses the <xref:System.Threading.Monitor> and <xref:System.Threading.Interlocked> classes in combination, see [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).</span></span>  
   
-## CompareExchange\-Beispiel  
- Mit der <xref:System.Threading.Interlocked.CompareExchange%2A>\-Methode können Sie Berechnungen schützen, die komplexer sind als einfaches Inkrementieren und Dekrementieren.  Im folgenden Beispiel wird eine threadsichere Methode dargestellt, durch die einer als Gleitkommazahl gespeicherten laufenden Summe Werte hinzugefügt werden. \(Bei ganzen Zahlen empfiehlt sich die Verwendung der <xref:System.Threading.Interlocked.Add%2A>\-Methode.\) Ausführliche Codebeispiele finden Sie in den Überladungen von <xref:System.Threading.Interlocked.CompareExchange%2A>, die Gleitkommaargumente mit einfacher und doppelter Genauigkeit akzeptieren \(<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> und <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>\).  
+## <a name="compareexchange-example"></a><span data-ttu-id="8b450-121">CompareExchange-Beispiel</span><span class="sxs-lookup"><span data-stu-id="8b450-121">CompareExchange Example</span></span>  
+ <span data-ttu-id="8b450-122">Die <xref:System.Threading.Interlocked.CompareExchange%2A> Methode kann verwendet werden, um Berechnungen zu schützen, die komplizierter als einfache Inkrementieren und dekrementieren.</span><span class="sxs-lookup"><span data-stu-id="8b450-122">The <xref:System.Threading.Interlocked.CompareExchange%2A> method can be used to protect computations that are more complicated than simple increment and decrement.</span></span> <span data-ttu-id="8b450-123">Im folgenden Beispiel wird eine threadsichere Methode dargestellt, durch die einer als Gleitkommazahl gespeicherten laufenden Summe Werte hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="8b450-123">The following example demonstrates a thread-safe method that adds to a running total stored as a floating point number.</span></span> <span data-ttu-id="8b450-124">(Für ganze Zahlen, die <xref:System.Threading.Interlocked.Add%2A> Methode ist eine einfachere Lösung.) Vollständige Codebeispiele finden Sie unter der Überladungen der <xref:System.Threading.Interlocked.CompareExchange%2A> , die Argumente mit einfacher Genauigkeit und mit doppelter Genauigkeit Gleitkomma (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> und <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).</span><span class="sxs-lookup"><span data-stu-id="8b450-124">(For integers, the <xref:System.Threading.Interlocked.Add%2A> method is a simpler solution.) For complete code examples, see the overloads of <xref:System.Threading.Interlocked.CompareExchange%2A> that take single-precision and double-precision floating-point arguments (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> and <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).</span></span>  
   
  [!code-cpp[Conceptual.Interlocked#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interlocked/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.Interlocked#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source1.cs#1)]
  [!code-vb[Conceptual.Interlocked#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source1.vb#1)]  
   
-## Nicht typisierte Überladungen von Exchange und CompareExchange  
- Die <xref:System.Threading.Interlocked.Exchange%2A>\-Methode und die <xref:System.Threading.Interlocked.CompareExchange%2A>\-Methode verfügen über Überladungen, die Argumente des Typs <xref:System.Object> akzeptieren.  Das erste Argument für jede dieser Überladungen ist `ref Object` \(`ByRef … As Object` in Visual Basic\). Die Typsicherheit erfordert, dass die an dieses Argument übergebene Variable strikt als <xref:System.Object> typisiert sein muss. Sie können beim Aufruf dieser Methoden das erste Argument nicht ohne weiteres in den Typ <xref:System.Object> umwandeln.  
+## <a name="untyped-overloads-of-exchange-and-compareexchange"></a><span data-ttu-id="8b450-125">Nicht typisierte Überladungen von Exchange und CompareExchange</span><span class="sxs-lookup"><span data-stu-id="8b450-125">Untyped Overloads of Exchange and CompareExchange</span></span>  
+ <span data-ttu-id="8b450-126">Die <xref:System.Threading.Interlocked.Exchange%2A> und <xref:System.Threading.Interlocked.CompareExchange%2A> Methoden verfügen über Überladungen, die Argumente des Typs <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="8b450-126">The <xref:System.Threading.Interlocked.Exchange%2A> and <xref:System.Threading.Interlocked.CompareExchange%2A> methods have overloads that take arguments of type <xref:System.Object>.</span></span> <span data-ttu-id="8b450-127">Das erste Argument der einzelnen diese Überladungen ist `ref Object` (`ByRef … As Object` in Visual Basic), und typsicherheit erfordert die Variable übergeben, um dieses Argument als streng typisiert werden <xref:System.Object>; Sie können nicht einfach das erste Argument in den Typ umwandeln <xref:System.Object> Wenn diese Methoden aufrufen.</span><span class="sxs-lookup"><span data-stu-id="8b450-127">The first argument of each of these overloads is `ref Object` (`ByRef … As Object` in Visual Basic), and type safety requires the variable passed to this argument to be typed strictly as <xref:System.Object>; you cannot simply cast the first argument to type <xref:System.Object> when calling these methods.</span></span>  
   
 > [!NOTE]
->  Verwenden Sie in .NET Framework, Version 2.0, die generischen Überladungen der <xref:System.Threading.Interlocked.Exchange%2A>\-Methode und der <xref:System.Threading.Interlocked.CompareExchange%2A>\-Methode, um stark typisierte Variablen auszutauschen.  
+>  <span data-ttu-id="8b450-128">In .NET Framework, Version 2.0, verwenden Sie die generische Überladung von der <xref:System.Threading.Interlocked.Exchange%2A> und <xref:System.Threading.Interlocked.CompareExchange%2A> Methoden für den Austausch von stark typisierten Variablen.</span><span class="sxs-lookup"><span data-stu-id="8b450-128">In the .NET Framework version 2.0, use the generic overloads of the <xref:System.Threading.Interlocked.Exchange%2A> and <xref:System.Threading.Interlocked.CompareExchange%2A> methods to exchange strongly typed variables.</span></span>  
   
- Das folgende Codebeispiel enthält eine Eigenschaft vom Typ `ClassA`, die nur einmal festgelegt werden kann, da sie möglicherweise in .NET Framework, Version 1.0 oder 1.1, implementiert wurde.  
+ <span data-ttu-id="8b450-129">Das folgende Codebeispiel enthält eine Eigenschaft vom Typ `ClassA`, die nur einmal festgelegt werden kann, da sie möglicherweise in .NET Framework Version 1.0 oder 1.1 implementiert wurde.</span><span class="sxs-lookup"><span data-stu-id="8b450-129">The following code example shows a property of type `ClassA` that can be set only once, as it might be implemented in the .NET Framework version 1.0 or 1.1.</span></span>  
   
  [!code-cpp[Conceptual.Interlocked#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interlocked/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.Interlocked#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source2.cs#2)]
  [!code-vb[Conceptual.Interlocked#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source2.vb#2)]  
   
-## Siehe auch  
- <xref:System.Threading.Interlocked>   
- <xref:System.Threading.Monitor>   
- [Threading](../../../docs/standard/threading/index.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="8b450-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b450-130">See Also</span></span>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.Monitor>  
+ [<span data-ttu-id="8b450-131">Threading</span><span class="sxs-lookup"><span data-stu-id="8b450-131">Threading</span></span>](../../../docs/standard/threading/index.md)  
+ [<span data-ttu-id="8b450-132">Threading Objects and Features (Threadingobjekte und -funktionen)</span><span class="sxs-lookup"><span data-stu-id="8b450-132">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)

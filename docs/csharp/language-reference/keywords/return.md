@@ -1,60 +1,41 @@
 ---
 title: return (C#-Referenz)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - return_CSharpKeyword
 - return
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 90c84b51c6ee57864eac552bc488c9f9c15e9394
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 596375a1cba8f5ecbad636a6829c1a0599f8c0f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="return-c-reference"></a>return (C#-Referenz)
-Die Anweisung `return` beendet die Ausführung der Methode, in der sie angezeigt wird, und gibt das Steuerelement an die aufrufende Methode zurück. Zudem kann ein optionaler Wert zurückgegeben werden. Wenn es sich bei der Methode um einen `void`-Typ handelt, kann die Anweisung `return` ausgelassen werden.  
+# <a name="return-c-reference"></a><span data-ttu-id="6239c-102">return (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="6239c-102">return (C# Reference)</span></span>
+<span data-ttu-id="6239c-103">Die Anweisung `return` beendet die Ausführung der Methode, in der sie angezeigt wird, und gibt das Steuerelement an die aufrufende Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="6239c-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="6239c-104">Zudem kann ein optionaler Wert zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="6239c-104">It can also return an optional value.</span></span> <span data-ttu-id="6239c-105">Wenn es sich bei der Methode um einen `void`-Typ handelt, kann die Anweisung `return` ausgelassen werden.</span><span class="sxs-lookup"><span data-stu-id="6239c-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  
   
- Wenn sich die „return“-Anweisung in einem `try`-Block befindet, wird der `finally`-Block, falls vorhanden, ausgeführt bevor das Steuerelement an die aufrufende Methode zurückgegeben wird.  
+ <span data-ttu-id="6239c-106">Wenn sich die „return“-Anweisung in einem `try`-Block befindet, wird der `finally`-Block, falls vorhanden, ausgeführt bevor das Steuerelement an die aufrufende Methode zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="6239c-106">If the return statement is inside a `try` block, the `finally` block, if one exists, will be executed before control returns to the calling method.</span></span>  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel gibt die Methode `A()` die Variable `Area` als [double](../../../csharp/language-reference/keywords/double.md)-Wert zurück.  
+## <a name="example"></a><span data-ttu-id="6239c-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6239c-107">Example</span></span>  
+ <span data-ttu-id="6239c-108">Im folgenden Beispiel wird die Methode `CalculateArea()` gibt die lokale Variable `area` als eine [doppelte](../../../csharp/language-reference/keywords/double.md) Wert.</span><span class="sxs-lookup"><span data-stu-id="6239c-108">In the following example, the method `CalculateArea()` returns the local variable `area` as a [double](../../../csharp/language-reference/keywords/double.md) value.</span></span>  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
+ [!code-csharp[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="6239c-109">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="6239c-109">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [return Statement („return“-Anweisung)](/cpp/cpp/return-statement-cpp)   
- [Sprunganweisungen](../../../csharp/language-reference/keywords/jump-statements.md)
-
+## <a name="see-also"></a><span data-ttu-id="6239c-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6239c-110">See Also</span></span>  
+ [<span data-ttu-id="6239c-111">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="6239c-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="6239c-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="6239c-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6239c-113">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="6239c-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="6239c-114">return-Anweisung</span><span class="sxs-lookup"><span data-stu-id="6239c-114">return Statement</span></span>](/cpp/cpp/return-statement-cpp)  
+ [<span data-ttu-id="6239c-115">Sprunganweisungen</span><span class="sxs-lookup"><span data-stu-id="6239c-115">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)

@@ -1,60 +1,41 @@
 ---
 title: "Operator ?: (C#-Referenz)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
 - :_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9abfe4ca6be29b54edd591b503069c15e02c3532
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 794ff53fe471ef23163503f59599b528df127e2e
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a>Operator ?: (C#-Referenz)
-Der bedingte Operator (`?:`) gibt abhängig vom Wert eines booleschen Ausdrucks einen von zwei Werten zurück. Nachfolgend ist die Syntax für den bedingten Operator aufgeführt.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="69b1a-102">Operator ?: (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="69b1a-102">?: Operator (C# Reference)</span></span>
+<span data-ttu-id="69b1a-103">Der bedingte Operator (`?:`) gibt abhängig vom Wert eines booleschen Ausdrucks einen von zwei Werten zurück.</span><span class="sxs-lookup"><span data-stu-id="69b1a-103">The conditional operator (`?:`) returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="69b1a-104">Nachfolgend ist die Syntax für den bedingten Operator aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="69b1a-104">Following is the syntax for the conditional operator.</span></span>  
   
 ```  
 condition ? first_expression : second_expression;  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- `condition` muss mit `true` oder `false` ausgewertet werden. Wenn `condition` den Wert `true` hat, wird `first_expression` ausgewertet. Wenn `condition` den Wert `false` hat, wird `second_expression` ausgewertet. Nur einer der beiden Ausdrücke wird ausgewertet.  
+## <a name="remarks"></a><span data-ttu-id="69b1a-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="69b1a-105">Remarks</span></span>  
+ <span data-ttu-id="69b1a-106">`condition` muss mit `true` oder `false` ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="69b1a-106">The `condition` must evaluate to `true` or `false`.</span></span> <span data-ttu-id="69b1a-107">Wenn `condition` den Wert `true` hat, wird `first_expression` ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="69b1a-107">If `condition` is `true`, `first_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="69b1a-108">Wenn `condition` den Wert `false` hat, wird `second_expression` ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="69b1a-108">If `condition` is `false`, `second_expression` is evaluated and becomes the result.</span></span> <span data-ttu-id="69b1a-109">Nur einer der beiden Ausdrücke wird ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="69b1a-109">Only one of the two expressions is evaluated.</span></span>  
   
- Entweder muss der Typ von `first_expression` und `second_expression` identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.  
+ <span data-ttu-id="69b1a-110">Entweder muss der Typ von `first_expression` und `second_expression` identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="69b1a-110">Either the type of `first_expression` and `second_expression` must be the same, or an implicit conversion must exist from one type to the other.</span></span>  
   
- Sie können mithilfe des bedingten Operators Berechnungen präziser ausdrücken, die andernfalls möglicherweise eine `if-else`-Konstruktion benötigen. Im folgenden Code wird z. B. zuerst eine `if`-Anweisung und anschließend ein bedingter Operator verwendet, um eine ganze Zahl als positiv oder negativ zu klassifizieren.  
+ <span data-ttu-id="69b1a-111">Sie können mithilfe des bedingten Operators Berechnungen präziser ausdrücken, die andernfalls möglicherweise eine `if-else`-Konstruktion benötigen.</span><span class="sxs-lookup"><span data-stu-id="69b1a-111">You can express calculations that might otherwise require an `if-else` construction more concisely by using the conditional operator.</span></span> <span data-ttu-id="69b1a-112">Im folgenden Code wird z. B. zuerst eine `if`-Anweisung und anschließend ein bedingter Operator verwendet, um eine ganze Zahl als positiv oder negativ zu klassifizieren.</span><span class="sxs-lookup"><span data-stu-id="69b1a-112">For example, the following code uses first an `if` statement and then a conditional operator to classify an integer as positive or negative.</span></span>  
   
-```  
+```csharp
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -68,18 +49,17 @@ else
 classify = (input > 0) ? "positive" : "negative";  
 ```  
   
- Der bedingte Operator ist rechtsassoziativ. Der Ausdruck `a ? b : c ? d : e` wird als `a ? b : (c ? d : e)` und nicht als `(a ? b : c) ? d : e` ausgewertet.  
+ <span data-ttu-id="69b1a-113">Der bedingte Operator ist rechtsassoziativ.</span><span class="sxs-lookup"><span data-stu-id="69b1a-113">The conditional operator is right-associative.</span></span> <span data-ttu-id="69b1a-114">Der Ausdruck `a ? b : c ? d : e` wird als `a ? b : (c ? d : e)` und nicht als `(a ? b : c) ? d : e` ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="69b1a-114">The expression `a ? b : c ? d : e` is evaluated as `a ? b : (c ? d : e)`, not as `(a ? b : c) ? d : e`.</span></span>  
   
- Der bedingte Operator kann nicht überladen werden.  
+ <span data-ttu-id="69b1a-115">Der bedingte Operator kann nicht überladen werden.</span><span class="sxs-lookup"><span data-stu-id="69b1a-115">The conditional operator cannot be overloaded.</span></span>  
   
-## <a name="example"></a>Beispiel  
- [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="69b1a-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="69b1a-116">Example</span></span>  
+ [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)   
- [if-else](../../../csharp/language-reference/keywords/if-else.md)   
- [?.- und ?-Operatoren](../../../csharp/language-reference/operators/null-conditional-operators.md)   
- [?? Operator](../../../csharp/language-reference/operators/null-conditional-operator.md)
-
+## <a name="see-also"></a><span data-ttu-id="69b1a-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69b1a-117">See Also</span></span>  
+ [<span data-ttu-id="69b1a-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="69b1a-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="69b1a-119">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="69b1a-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="69b1a-120">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="69b1a-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+ [<span data-ttu-id="69b1a-121">if-else</span><span class="sxs-lookup"><span data-stu-id="69b1a-121">if-else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+ [<span data-ttu-id="69b1a-122">?. und? Operatoren</span><span class="sxs-lookup"><span data-stu-id="69b1a-122">?. and ?Operators</span></span>](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+ [<span data-ttu-id="69b1a-123">?? Operator</span><span class="sxs-lookup"><span data-stu-id="69b1a-123">?? Operator</span></span>](../../../csharp/language-reference/operators/null-conditional-operator.md)

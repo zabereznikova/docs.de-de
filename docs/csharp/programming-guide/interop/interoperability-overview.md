@@ -1,12 +1,9 @@
 ---
 title: "Überblick über die Interoperabilität (C#-Programmierhandbuch)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - C# language, interoperability
@@ -14,77 +11,61 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
-Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
+# <a name="interoperability-overview-c-programming-guide"></a><span data-ttu-id="d630e-102">Überblick über die Interoperabilität (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="d630e-102">Interoperability Overview (C# Programming Guide)</span></span>
+<span data-ttu-id="d630e-103">Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="d630e-103">The topic describes methods to enable interoperability between C# managed code and unmanaged code.</span></span>  
   
-## <a name="platform-invoke"></a>Plattformaufruf  
- Der *Plattformaufruf* ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Microsoft Win32-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
+## <a name="platform-invoke"></a><span data-ttu-id="d630e-104">Plattformaufruf</span><span class="sxs-lookup"><span data-stu-id="d630e-104">Platform Invoke</span></span>  
+ <span data-ttu-id="d630e-105">Der *Plattformaufruf* ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Microsoft Win32-API enthaltenen Funktionen.</span><span class="sxs-lookup"><span data-stu-id="d630e-105">*Platform invoke* is a service that enables managed code to call unmanaged functions that are implemented in dynamic link libraries (DLLs), such as those in the Microsoft Win32 API.</span></span> <span data-ttu-id="d630e-106">Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.</span><span class="sxs-lookup"><span data-stu-id="d630e-106">It locates and invokes an exported function and marshals its arguments (integers, strings, arrays, structures, and so on) across the interoperation boundary as needed.</span></span>  
   
- Weitere Informationen finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ <span data-ttu-id="d630e-107">Weitere Informationen finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md) und [Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).</span><span class="sxs-lookup"><span data-stu-id="d630e-107">For more information, see [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md) and [How to: Use Platform Invoke to Play a Wave File](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).</span></span>  
   
 > [!NOTE]
->  Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [.NET Framework-Sicherheit](http://go.microsoft.com/fwlink/?LinkId=37122).  
+>  <span data-ttu-id="d630e-108">Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen.</span><span class="sxs-lookup"><span data-stu-id="d630e-108">The [Common Language Runtime](../../../standard/clr.md) (CLR) manages access to system resources.</span></span> <span data-ttu-id="d630e-109">Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar.</span><span class="sxs-lookup"><span data-stu-id="d630e-109">Calling unmanaged code that is outside the CLR bypasses this security mechanism, and therefore presents a security risk.</span></span> <span data-ttu-id="d630e-110">Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR.</span><span class="sxs-lookup"><span data-stu-id="d630e-110">For example, unmanaged code might call resources in unmanaged code directly, bypassing CLR security mechanisms.</span></span> <span data-ttu-id="d630e-111">Weitere Informationen finden Sie unter [.NET Framework-Sicherheit](http://go.microsoft.com/fwlink/?LinkId=37122).</span><span class="sxs-lookup"><span data-stu-id="d630e-111">For more information, see [.NET Framework Security](http://go.microsoft.com/fwlink/?LinkId=37122).</span></span>  
   
-## <a name="c-interop"></a>C++ Interop  
- Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET-Programmiersprachen verfügt [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] über eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden können. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  
+## <a name="c-interop"></a><span data-ttu-id="d630e-112">C++ Interop</span><span class="sxs-lookup"><span data-stu-id="d630e-112">C++ Interop</span></span>  
+ <span data-ttu-id="d630e-113">Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="d630e-113">You can use C++ interop, also known as It Just Works (IJW), to wrap a native C++ class so that it can be consumed by code that is authored in C# or another .NET Framework language.</span></span> <span data-ttu-id="d630e-114">Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann.</span><span class="sxs-lookup"><span data-stu-id="d630e-114">To do this, you write C++ code to wrap a native DLL or COM component.</span></span> <span data-ttu-id="d630e-115">Im Gegensatz zu anderen .NET-Programmiersprachen verfügt [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] über eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="d630e-115">Unlike other .NET Framework languages, [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] has interoperability support that enables managed and unmanaged code to be located in the same application and even in the same file.</span></span> <span data-ttu-id="d630e-116">Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen.</span><span class="sxs-lookup"><span data-stu-id="d630e-116">You then build the C++ code by using the **/clr** compiler switch to produce a managed assembly.</span></span> <span data-ttu-id="d630e-117">Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.</span><span class="sxs-lookup"><span data-stu-id="d630e-117">Finally, you add a reference to the assembly in your C# project and use the wrapped objects just as you would use other managed classes.</span></span>  
   
-## <a name="exposing-com-components-to-c"></a>Verfügbarmachen von COM-Komponenten in C#  
- Sie können eine COM-Komponente aus einem C#-Projekt nutzen. Dies sind die Hauptschritte:  
+## <a name="exposing-com-components-to-c"></a><span data-ttu-id="d630e-118">Verfügbarmachen von COM-Komponenten in C#</span><span class="sxs-lookup"><span data-stu-id="d630e-118">Exposing COM Components to C#</span></span>  
+ <span data-ttu-id="d630e-119">Sie können eine COM-Komponente aus einem C#-Projekt nutzen.</span><span class="sxs-lookup"><span data-stu-id="d630e-119">You can consume a COM component from a C# project.</span></span> <span data-ttu-id="d630e-120">Dies sind die Hauptschritte:</span><span class="sxs-lookup"><span data-stu-id="d630e-120">The general steps are as follows:</span></span>  
   
-1.  Suchen Sie eine COM-Komponenten, die Sie verwenden möchten, und registrieren Sie diese. Verwenden Sie „regsvr32.exe“ zur Registrierung und Aufhebung der Registrierung einer COM-DLL.  
+1.  <span data-ttu-id="d630e-121">Suchen Sie eine COM-Komponenten, die Sie verwenden möchten, und registrieren Sie diese.</span><span class="sxs-lookup"><span data-stu-id="d630e-121">Locate a COM component to use and register it.</span></span> <span data-ttu-id="d630e-122">Verwenden Sie „regsvr32.exe“ zur Registrierung und Aufhebung der Registrierung einer COM-DLL.</span><span class="sxs-lookup"><span data-stu-id="d630e-122">Use regsvr32.exe to register or un–register a COM DLL.</span></span>  
   
-2.  Fügen Sie dem Projekt einen Verweis auf eine COM-Komponente oder eine Typbibliothek hinzu.  
+2.  <span data-ttu-id="d630e-123">Fügen Sie dem Projekt einen Verweis auf eine COM-Komponente oder eine Typbibliothek hinzu.</span><span class="sxs-lookup"><span data-stu-id="d630e-123">Add to the project a reference to the COM component or type library.</span></span>  
   
-     Beim Hinzufügen des Verweises verwendet [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das [Tlbimp.exe (Type Library Importer-Tool)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), das eine Typbibliothek als Eingabe akzeptiert, um eine .NET Framework-Interopassembly auszugeben. Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.  
+     <span data-ttu-id="d630e-124">Beim Hinzufügen des Verweises verwendet [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das [Tlbimp.exe (Type Library Importer-Tool)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), das eine Typbibliothek als Eingabe akzeptiert, um eine .NET Framework-Interopassembly auszugeben.</span><span class="sxs-lookup"><span data-stu-id="d630e-124">When you add the reference, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] uses the [Tlbimp.exe (Type Library Importer)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), which takes a type library as input, to output a .NET Framework interop assembly.</span></span> <span data-ttu-id="d630e-125">Die Assembly – auch als Runtime Callable Wrapper (RCW) bezeichnet – enthält verwaltete Klassen und Schnittstellen, die die COM-Klassen und -Schnittstellen umschließen, die sich in der Typbibliothek befinden.</span><span class="sxs-lookup"><span data-stu-id="d630e-125">The assembly, also named a runtime callable wrapper (RCW), contains managed classes and interfaces that wrap the COM classes and interfaces that are in the type library.</span></span> [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="d630e-126"> fügt dem Projekt einen Verweis auf die generierte Assembly hinzu.</span><span class="sxs-lookup"><span data-stu-id="d630e-126"> adds to the project a reference to the generated assembly.</span></span>  
   
-3.  Erstellen Sie eine Instanz einer im RCW definierten Klasse. Dadurch wird wiederum eine Instanz des COM-Objekts erstellt.  
+3.  <span data-ttu-id="d630e-127">Erstellen Sie eine Instanz einer im RCW definierten Klasse.</span><span class="sxs-lookup"><span data-stu-id="d630e-127">Create an instance of a class that is defined in the RCW.</span></span> <span data-ttu-id="d630e-128">Dadurch wird wiederum eine Instanz des COM-Objekts erstellt.</span><span class="sxs-lookup"><span data-stu-id="d630e-128">This, in turn, creates an instance of the COM object.</span></span>  
   
-4.  Verwenden Sie das Objekt genauso, wie Sie andere verwaltete Objekte verwenden. Wenn das Objekt von der automatische Speicherbereinigung freigegeben wird, wird auch die Instanz des COM-Objekts aus dem Speicher freigestellt.  
+4.  <span data-ttu-id="d630e-129">Verwenden Sie das Objekt genauso, wie Sie andere verwaltete Objekte verwenden.</span><span class="sxs-lookup"><span data-stu-id="d630e-129">Use the object just as you use other managed objects.</span></span> <span data-ttu-id="d630e-130">Wenn das Objekt von der automatische Speicherbereinigung freigegeben wird, wird auch die Instanz des COM-Objekts aus dem Speicher freigestellt.</span><span class="sxs-lookup"><span data-stu-id="d630e-130">When the object is reclaimed by garbage collection, the instance of the COM object is also released from memory.</span></span>  
   
- Weitere Informationen finden Sie unter [Verfügbarmachen von COM-Komponenten für .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730).  
+ <span data-ttu-id="d630e-131">Weitere Informationen finden Sie unter [Verfügbarmachen von COM-Komponenten für .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730).</span><span class="sxs-lookup"><span data-stu-id="d630e-131">For more information, see [Exposing COM Components to the .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730).</span></span>  
   
-## <a name="exposing-c-to-com"></a>Verfügbarmachen von C# für COM  
- COM-Clients können C#-Typen nutzen, die ordnungsgemäß verfügbar gemacht wurden. Dies sind die grundlegenden Schritte für das Verfügbarmachen von C#-Typen:  
+## <a name="exposing-c-to-com"></a><span data-ttu-id="d630e-132">Verfügbarmachen von C# für COM</span><span class="sxs-lookup"><span data-stu-id="d630e-132">Exposing C# to COM</span></span>  
+ <span data-ttu-id="d630e-133">COM-Clients können C#-Typen nutzen, die ordnungsgemäß verfügbar gemacht wurden.</span><span class="sxs-lookup"><span data-stu-id="d630e-133">COM clients can consume C# types that have been correctly exposed.</span></span> <span data-ttu-id="d630e-134">Dies sind die grundlegenden Schritte für das Verfügbarmachen von C#-Typen:</span><span class="sxs-lookup"><span data-stu-id="d630e-134">The basic steps to expose C# types are as follows:</span></span>  
   
-1.  Fügen Sie Ihrem C#-Projekt Interop-Attribute hinzu.  
+1.  <span data-ttu-id="d630e-135">Fügen Sie Ihrem C#-Projekt Interop-Attribute hinzu.</span><span class="sxs-lookup"><span data-stu-id="d630e-135">Add interop attributes in the C# project.</span></span>  
   
-     Durch das Modifizieren der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Projekteinstellungen können Sie eine Assembly COM-sichtbar machen. Weitere Informationen finden Sie unter [Dialogfeld „Assemblyinformationen“](/visualstudio/ide/reference/assembly-information-dialog-box).  
+     <span data-ttu-id="d630e-136">Durch das Modifizieren der [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Projekteinstellungen können Sie eine Assembly COM-sichtbar machen.</span><span class="sxs-lookup"><span data-stu-id="d630e-136">You can make an assembly COM visible by modifying [!INCLUDE[csprcs](~/includes/csprcs-md.md)] project properties.</span></span> <span data-ttu-id="d630e-137">Weitere Informationen finden Sie unter [Dialogfeld „Assemblyinformationen“](/visualstudio/ide/reference/assembly-information-dialog-box).</span><span class="sxs-lookup"><span data-stu-id="d630e-137">For more information, see [Assembly Information Dialog Box](/visualstudio/ide/reference/assembly-information-dialog-box).</span></span>  
   
-2.  Generieren Sie eine COM-Typbibliothek, und registrieren Sie diese für den Gebrauch mit COM.  
+2.  <span data-ttu-id="d630e-138">Generieren Sie eine COM-Typbibliothek, und registrieren Sie diese für den Gebrauch mit COM.</span><span class="sxs-lookup"><span data-stu-id="d630e-138">Generate a COM type library and register it for COM usage.</span></span>  
   
-     Sie können die [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Projekteinstellungen so modifizieren, dass die C#-Assembly automatisch für COM-Interop registriert wird. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] verwendet das [Regasm.exe (Assembly Registration-Tool)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb) mithilfe des Befehlszeilenschalters `/tlb`, das die verwaltete Assembly als Eingabe akzeptiert, um eine Typbibliothek zu generieren. Diese Typbibliothek beschreibt den Typ `public` in der Assembly und fügt Verzeichniseinträge hinzu, um COM-Clients das Erstellen verwalteter Klassen zu ermöglichen.  
+     <span data-ttu-id="d630e-139">Sie können die [!INCLUDE[csprcs](~/includes/csprcs-md.md)]-Projekteinstellungen so modifizieren, dass die C#-Assembly automatisch für COM-Interop registriert wird.</span><span class="sxs-lookup"><span data-stu-id="d630e-139">You can modify [!INCLUDE[csprcs](~/includes/csprcs-md.md)] project properties to automatically register the C# assembly for COM interop.</span></span> [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="d630e-140"> verwendet das [Regasm.exe (Assembly Registration-Tool)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb) mithilfe des Befehlszeilenschalters `/tlb`, das die verwaltete Assembly als Eingabe akzeptiert, um eine Typbibliothek zu generieren.</span><span class="sxs-lookup"><span data-stu-id="d630e-140"> uses the [Regasm.exe (Assembly Registration Tool)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb), using the `/tlb` command-line switch, which takes a managed assembly as input, to generate a type library.</span></span> <span data-ttu-id="d630e-141">Diese Typbibliothek beschreibt den Typ `public` in der Assembly und fügt Verzeichniseinträge hinzu, um COM-Clients das Erstellen verwalteter Klassen zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="d630e-141">This type library describes the `public` types in the assembly and adds registry entries so that COM clients can create managed classes.</span></span>  
   
- Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) und [COM-Beispielklasse](../../../csharp/programming-guide/interop/example-com-class.md).  
+ <span data-ttu-id="d630e-142">Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) und [COM-Beispielklasse](../../../csharp/programming-guide/interop/example-com-class.md).</span><span class="sxs-lookup"><span data-stu-id="d630e-142">For more information, see [Exposing .NET Framework Components to COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) and [Example COM Class](../../../csharp/programming-guide/interop/example-com-class.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Improving Interop Performance (Optimieren der Interopleistung)](http://go.microsoft.com/fwlink/?LinkId=99564)   
- [Einführung in COM-Interop](http://go.microsoft.com/fwlink/?LinkId=112406)   
- [Marshalling zwischen verwaltetem und nicht verwaltetem Code](http://go.microsoft.com/fwlink/?LinkId=112398)   
- [Interoperation mit nicht verwaltetem Code](https://msdn.microsoft.com/library/sd10k43k)   
- [Erweiterte COM-Interoperabilität](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d630e-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d630e-143">See Also</span></span>  
+ [<span data-ttu-id="d630e-144">Verbessern der Interop-Leistung</span><span class="sxs-lookup"><span data-stu-id="d630e-144">Improving Interop Performance</span></span>](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [<span data-ttu-id="d630e-145">Einführung in COM-Interop</span><span class="sxs-lookup"><span data-stu-id="d630e-145">Introduction to COM Interop</span></span>](http://go.microsoft.com/fwlink/?LinkId=112406)  
+ [<span data-ttu-id="d630e-146">Datenmarshalling zwischen verwaltetem und nicht verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="d630e-146">Marshaling between Managed and Unmanaged Code</span></span>](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [<span data-ttu-id="d630e-147">Interoperabilität mit nicht verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="d630e-147">Interoperating with Unmanaged Code</span></span>](https://msdn.microsoft.com/library/sd10k43k)  
+ [<span data-ttu-id="d630e-148">Erweiterte COM-Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="d630e-148">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [<span data-ttu-id="d630e-149">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d630e-149">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)

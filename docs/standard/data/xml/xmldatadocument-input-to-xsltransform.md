@@ -1,42 +1,41 @@
 ---
-title: "XmlDataDocument-Eingaben in &quot;XslTransform&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: XmlDataDocument-Eingaben in "XslTransform"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 813c240ca0115015158988e1226d25890cde6939
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XmlDataDocument-Eingaben in &quot;XslTransform&quot;
+# <a name="xmldatadocument-input-to-xsltransform"></a><span data-ttu-id="59aab-102">XmlDataDocument-Eingaben in "XslTransform"</span><span class="sxs-lookup"><span data-stu-id="59aab-102">XmlDataDocument Input to XslTransform</span></span>
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>\-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse können Sie XSLT\-Transformationen \(Extensible Stylesheet Language for Transformations\) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform\-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform\-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  <span data-ttu-id="59aab-103">Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="59aab-103">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="59aab-104">Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.</span><span class="sxs-lookup"><span data-stu-id="59aab-104">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="59aab-105">Finden Sie unter [mithilfe der Klasse "XslCompiledTransform"](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="59aab-105">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] von Microsoft implementiert XML\-DOMs \(Document Object Models\), um Zugriff auf Daten in XML\-Dokumenten und zusätzliche Klassen zum Lesen und Schreiben von sowie zum Navigieren in XML\-Dokumenten bereitzustellen. Das <xref:System.Xml.XmlDataDocument> im <xref:System.Xml>\-Namespace bietet relationalen Zugriff auf Daten durch die Funktion der Synchronisierung mit relationalen Daten im <xref:System.Data.DataSet>. Sie können strukturiertes XML durch die relationale Darstellung des <xref:System.Data.DataSet> gleichzeitig anzeigen und bearbeiten, oder Sie können teilstrukturiertes XML durch die DOM\-Darstellung des <xref:System.Xml.XmlDataDocument> bearbeiten. Das <xref:System.Xml.XmlDataDocument> überschreitet daher die Grenzen von XML und relationalen Darstellungen.  
+ <span data-ttu-id="59aab-106">
+          [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] von Microsoft implementiert XML-DOMs (Document Object Models), um Zugriff auf Daten in XML-Dokumenten und zusätzliche Klassen zum Lesen und Schreiben von sowie zum Navigieren in XML-Dokumenten bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="59aab-106">The Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implements the XML Document Object Model (DOM) to provide access to data in XML documents and additional classes to read, write, and navigate in XML documents.</span></span> <span data-ttu-id="59aab-107">Die <xref:System.Xml.XmlDataDocument>, die sich in der <xref:System.Xml> Namespace bietet relationalen Zugriff auf Daten mit der Fähigkeit zur Synchronisierung mit relationalen Daten in der <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="59aab-107">The <xref:System.Xml.XmlDataDocument>, found in the <xref:System.Xml> namespace, provides relational access to data with its ability to synchronize with the relational data in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="59aab-108">Sie können strukturiertes XML durch die relationale Darstellung des <xref:System.Data.DataSet> gleichzeitig anzeigen und bearbeiten, oder Sie können teilstrukturiertes XML durch die DOM-Darstellung des <xref:System.Xml.XmlDataDocument> bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="59aab-108">You can simultaneously view and manipulate structured XML through the relational representation of the <xref:System.Data.DataSet> or manipulate the semi-structured XML through the DOM representation of the <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="59aab-109">Das <xref:System.Xml.XmlDataDocument> überschreitet daher die Grenzen von XML und relationalen Darstellungen.</span><span class="sxs-lookup"><span data-stu-id="59aab-109">The <xref:System.Xml.XmlDataDocument> therefore crosses the boundaries of the XML and the relational worlds.</span></span>  
   
- Wenn Daten in einer relationalen Struktur gespeichert sind, und Sie diese Daten als Eingabe für eine XSLT\-Transformation verwenden möchten, können Sie die relationalen Daten in ein <xref:System.Data.DataSet> laden und dem <xref:System.Xml.XmlDataDocument> zuordnen. Der <xref:System.Xml.XPath.XPathNavigator>, die Eingabe für <xref:System.Xml.Xsl.XslTransform>, wird durch die <xref:System.Xml.XmlDataDocument>\-Schnittstelle für das <xref:System.Xml.XPath.IXPathNavigable> implementiert. Durch Annahme der relationalen Daten, das Laden in ein <xref:System.Data.DataSet> und die Synchronisierung im <xref:System.Xml.XmlDataDocument> können für relationale Daten XSLT\-Transformationen ausgeführt werden.  
+ <span data-ttu-id="59aab-110">Wenn Daten in einer relationalen Struktur gespeichert sind, und Sie diese Daten als Eingabe für eine XSLT-Transformation verwenden möchten, können Sie die relationalen Daten in ein <xref:System.Data.DataSet> laden und dem <xref:System.Xml.XmlDataDocument> zuordnen.</span><span class="sxs-lookup"><span data-stu-id="59aab-110">If data is stored in a relational structure and you want it to be input to an XSLT transformation, you can load the relational data into a <xref:System.Data.DataSet> and associate it with the <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="59aab-111">Der <xref:System.Xml.XPath.XPathNavigator>, die Eingabe für <xref:System.Xml.Xsl.XslTransform>, wird durch die <xref:System.Xml.XmlDataDocument>-Schnittstelle für das <xref:System.Xml.XPath.IXPathNavigable> implementiert.</span><span class="sxs-lookup"><span data-stu-id="59aab-111">The <xref:System.Xml.XPath.XPathNavigator>, the input to the <xref:System.Xml.Xsl.XslTransform>, is implemented on the <xref:System.Xml.XmlDataDocument> through the <xref:System.Xml.XPath.IXPathNavigable> interface.</span></span> <span data-ttu-id="59aab-112">Durch Annahme der relationalen Daten, das Laden in ein <xref:System.Data.DataSet> und die Synchronisierung im <xref:System.Xml.XmlDataDocument> können für relationale Daten XSLT-Transformationen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="59aab-112">By taking relational data, loading it into a <xref:System.Data.DataSet>, and using the synchronizing within the <xref:System.Xml.XmlDataDocument>, the relational data can now have XSLT transformations performed on it.</span></span>  
   
- Weitere Informationen zur Anwendung einer Transformation für relationale Daten finden Sie unter [Anwenden einer XSLT\-Transformation auf ein DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
+ <span data-ttu-id="59aab-113">Weitere Informationen zum Anwenden von einer Transformation für relationale Daten finden Sie unter [Anwenden einer XSLT-Transformation auf ein DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="59aab-113">For more information on applying a transform to relational data, see [Applying an XSLT Transform to a DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).</span></span>  
   
-## Siehe auch  
- <xref:System.Xml.XmlDataDocument>   
- [Synchronisierung zwischen 'DataSet' und 'XmlDataDocument'](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [XSLT\-Transformationen mit der XslTransform\-Klasse](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)   
- [Implementierung des XSLT\-Prozessors durch die XslTransform\-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)   
- ["XPathNavigator" in Transformationen](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)   
- ["XPathNodeIterator" in Transformationen](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)   
- [XPathDocument\-Eingaben in "XslTransform"](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)   
- [XmlDocument\-Eingaben in "XslTransform"](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a><span data-ttu-id="59aab-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="59aab-114">See Also</span></span>  
+ <xref:System.Xml.XmlDataDocument>  
+ [<span data-ttu-id="59aab-115">DataSet- und XmlDataDocument-Synchronisierung</span><span class="sxs-lookup"><span data-stu-id="59aab-115">DataSet and XmlDataDocument Synchronization</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="59aab-116">XSLT-Transformationen mit der XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="59aab-116">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+ [<span data-ttu-id="59aab-117">XslTransform-Klasse implementiert die XSLT-Prozessor</span><span class="sxs-lookup"><span data-stu-id="59aab-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [<span data-ttu-id="59aab-118">"XPathNavigator" in Transformationen</span><span class="sxs-lookup"><span data-stu-id="59aab-118">XPathNavigator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [<span data-ttu-id="59aab-119">"XPathNodeIterator" in Transformationen</span><span class="sxs-lookup"><span data-stu-id="59aab-119">XPathNodeIterator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [<span data-ttu-id="59aab-120">XPathDocument-Eingaben in "XslTransform"</span><span class="sxs-lookup"><span data-stu-id="59aab-120">XPathDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="59aab-121">XmlDocument-Eingaben in "XslTransform"</span><span class="sxs-lookup"><span data-stu-id="59aab-121">XmlDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

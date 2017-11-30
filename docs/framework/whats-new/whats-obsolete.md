@@ -1,59 +1,53 @@
 ---
 title: Veraltete Elemente in der .NET Framework-Klassenbibliothek
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
-.NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
+# <a name="what39s-obsolete-in-the-net-framework-class-library"></a><span data-ttu-id="a2ec1-102">Veraltete Elemente in der .NET Framework-Klassenbibliothek</span><span class="sxs-lookup"><span data-stu-id="a2ec1-102">What&#39;s Obsolete in the .NET Framework Class Library</span></span>
+<span data-ttu-id="a2ec1-103">.NET Framework unterliegt im Laufe der Zeit Änderungen.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-103">The .NET Framework changes over time.</span></span> <span data-ttu-id="a2ec1-104">Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-104">Each new version adds new types and type members that provide new functionality.</span></span> <span data-ttu-id="a2ec1-105">Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-105">Existing types and their members also change over time.</span></span> <span data-ttu-id="a2ec1-106">Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-106">For example, some types become less important as the technology they support is replaced by a new technology, and some methods are superseded by newer methods that are either more convenient or more full-featured.</span></span>  
   
- .NET Framework und die Common Language Runtime sollen Abwärtskompatibilität unterstützen (dadurch können Anwendungen, die mit einer bestimmten Version von .NET Framework entwickelt wurden, unter der nächsten Version von .NET Framework ausgeführt werden). Dadurch wird es schwierig, einfach einen Typ oder einen Typmember zu entfernen. Stattdessen gibt .NET Framework an, dass ein Typ oder Typmember nicht mehr verwendet werden sollte, indem er als veraltet markiert wird. Ein veralteter Typ oder Member muss entsprechend markiert werden, damit Entwickler Bescheid wissen, dass er entfernt werden soll und die Zeit haben, auf das Entfernen des Typs zu reagieren. Allerdings wird vorhandener Code, in dem der Typ oder Member verwendet wird, weiterhin in der neuen Version von .NET Framework ausgeführt.  
+ <span data-ttu-id="a2ec1-107">.NET Framework und die Common Language Runtime sollen Abwärtskompatibilität unterstützen (dadurch können Anwendungen, die mit einer bestimmten Version von .NET Framework entwickelt wurden, unter der nächsten Version von .NET Framework ausgeführt werden).</span><span class="sxs-lookup"><span data-stu-id="a2ec1-107">The .NET Framework and the common language runtime strive to support backward compatibility (allowing applications that were developed with one version of the .NET Framework to run on the next version of the .NET Framework).</span></span> <span data-ttu-id="a2ec1-108">Dadurch wird es schwierig, einfach einen Typ oder einen Typmember zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-108">This makes it difficult to simply remove a type or a type member.</span></span> <span data-ttu-id="a2ec1-109">Stattdessen gibt .NET Framework an, dass ein Typ oder Typmember nicht mehr verwendet werden sollte, indem er als veraltet markiert wird.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-109">Instead, the .NET Framework indicates that a type or a type member should no longer be used by marking it as obsolete or deprecated.</span></span> <span data-ttu-id="a2ec1-110">Ein veralteter Typ oder Member muss entsprechend markiert werden, damit Entwickler Bescheid wissen, dass er entfernt werden soll und die Zeit haben, auf das Entfernen des Typs zu reagieren.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-110">Deprecating a type or a member involves marking it so that developers are aware it will go away and have time to respond to its removal.</span></span> <span data-ttu-id="a2ec1-111">Allerdings wird vorhandener Code, in dem der Typ oder Member verwendet wird, weiterhin in der neuen Version von .NET Framework ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-111">However, existing code that uses the type or member continues to run in the new version of the .NET Framework.</span></span>  
   
 > [!NOTE]
->  Die Begriffe *veraltet* und *nicht mehr aktuell* haben die gleiche Bedeutung, wenn sie in Bezug auf die Typen und Member von .NET Framework angewendet werden.  
+>  <span data-ttu-id="a2ec1-112">Die Begriffe *veraltet* und *nicht mehr aktuell* haben die gleiche Bedeutung, wenn sie in Bezug auf die Typen und Member von .NET Framework angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-112">The terms *obsolete* and *deprecated* have the same meaning when applied to the types and members of the .NET Framework.</span></span>  
   
-## <a name="the-obsoleteattribute-attribute"></a>Das ObsoleteAttribute-Attribut  
- .NET Framework gibt an, dass ein Typ oder ein Typmember veraltet ist, indem er mit dem <xref:System.ObsoleteAttribute>-Attribut markiert wird. Das Anwenden des Attributs auf einen Typ oder Member gibt an, dass der Typ oder Member in einer künftigen Version von .NET Framework entfernt wird, ohne dass kompilierter Code in Mitleidenschaft gezogen wird, der diesen Member verwendet.  
+## <a name="the-obsoleteattribute-attribute"></a><span data-ttu-id="a2ec1-113">Das ObsoleteAttribute-Attribut</span><span class="sxs-lookup"><span data-stu-id="a2ec1-113">The ObsoleteAttribute Attribute</span></span>  
+ <span data-ttu-id="a2ec1-114">.NET Framework gibt an, dass ein Typ oder ein Typmember veraltet ist, indem er mit dem <xref:System.ObsoleteAttribute>-Attribut markiert wird.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-114">The .NET Framework indicates that a type or type member is obsolete by marking it with the <xref:System.ObsoleteAttribute> attribute.</span></span> <span data-ttu-id="a2ec1-115">Das Anwenden des Attributs auf einen Typ oder Member gibt an, dass der Typ oder Member in einer künftigen Version von .NET Framework entfernt wird, ohne dass kompilierter Code in Mitleidenschaft gezogen wird, der diesen Member verwendet.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-115">Applying the attribute to a type or member indicates that that type or member will be removed in some future version of the .NET Framework without breaking compiled code that uses that member.</span></span>  
   
- Neben der Angabe, dass ein Typ oder Typmember veraltet ist, wird mit <xref:System.ObsoleteAttribute> definiert, wie der Compiler Quellcode behandelt, der den Typ oder Member enthält. Der Compiler kann den Code kompilieren, aber eine Warnmeldung ausgeben, oder er kann die Verwendung des Typs oder Members als Fehler behandeln. Im ersten Fall kann der Code kompiliert werden, doch eine Warnmeldung zeigt an, dass der Typ oder der Member veraltet ist. Im zweiten Fall schlägt die Kompilierung fehl.  
+ <span data-ttu-id="a2ec1-116">Neben der Angabe, dass ein Typ oder Typmember veraltet ist, wird mit <xref:System.ObsoleteAttribute> definiert, wie der Compiler Quellcode behandelt, der den Typ oder Member enthält.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-116">In addition to indicating that a type or a type member is obsolete, <xref:System.ObsoleteAttribute> defines how the compiler handles source code that includes that type or member.</span></span> <span data-ttu-id="a2ec1-117">Der Compiler kann den Code kompilieren, aber eine Warnmeldung ausgeben, oder er kann die Verwendung des Typs oder Members als Fehler behandeln.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-117">The compiler can compile the code but emit a warning message, or it can treat the use of the type or member as an error.</span></span> <span data-ttu-id="a2ec1-118">Im ersten Fall kann der Code kompiliert werden, doch eine Warnmeldung zeigt an, dass der Typ oder der Member veraltet ist.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-118">In the first case, the code can successfully compile, but a warning message indicates that the type or member is obsolete.</span></span> <span data-ttu-id="a2ec1-119">Im zweiten Fall schlägt die Kompilierung fehl.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-119">In the second case, compilation fails.</span></span>  
   
- Auch wenn bei einer Kompilierung keine Warnmeldung angezeigt wird, sondern ein Fehler auftritt, wirkt sich <xref:System.ObsoleteAttribute> nicht auf das Laufzeitverhalten aus. Das heißt, dass Anwendungen, die den Typ oder den Member verwenden und die kompiliert wurden, immer ausgeführt werden. Nur der Versuch der erneuten Kompilierung einer Anwendung, die den Typ oder Member verwendet, schlägt fehl.  
+ <span data-ttu-id="a2ec1-120">Auch wenn bei einer Kompilierung keine Warnmeldung angezeigt wird, sondern ein Fehler auftritt, wirkt sich <xref:System.ObsoleteAttribute> nicht auf das Laufzeitverhalten aus.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-120">Even if compilation produces an error instead of a warning message, <xref:System.ObsoleteAttribute> does not affect run-time behavior.</span></span> <span data-ttu-id="a2ec1-121">Das heißt, dass Anwendungen, die den Typ oder den Member verwenden und die kompiliert wurden, immer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-121">That is, applications that use the type or member and that have compiled successfully will always run successfully.</span></span> <span data-ttu-id="a2ec1-122">Nur der Versuch der erneuten Kompilierung einer Anwendung, die den Typ oder Member verwendet, schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-122">Only the attempt to recompile an application that uses the type or member fails.</span></span>  
   
-## <a name="how-to-handle-obsolete-types-and-members"></a>Behandeln von veralteten Typen und Membern  
- Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres ein veralteter Typ oder Member verwendet werden, durch den eine Compilerwarnung in der Anwendung erzeugt wird. Lesen Sie jedoch die Compilerwarnungsmeldung, um festzustellen, ob der Anwendungscode geändert werden sollte. Wenn in der Meldung nicht auf eine geeignete Alternative hingewiesen wird, führen Sie einen der folgenden Schritte aus:  
+## <a name="how-to-handle-obsolete-types-and-members"></a><span data-ttu-id="a2ec1-123">Behandeln von veralteten Typen und Membern</span><span class="sxs-lookup"><span data-stu-id="a2ec1-123">How to Handle Obsolete Types and Members</span></span>  
+ <span data-ttu-id="a2ec1-124">Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres ein veralteter Typ oder Member verwendet werden, durch den eine Compilerwarnung in der Anwendung erzeugt wird.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-124">When you upgrade and recompile existing code, using an obsolete type or member that produces a compiler warning in your application is perfectly acceptable.</span></span> <span data-ttu-id="a2ec1-125">Lesen Sie jedoch die Compilerwarnungsmeldung, um festzustellen, ob der Anwendungscode geändert werden sollte.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-125">However, you should review the compiler warning message to determine whether you should change your application code.</span></span> <span data-ttu-id="a2ec1-126">Wenn in der Meldung nicht auf eine geeignete Alternative hingewiesen wird, führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="a2ec1-126">If the message does not point to a suitable alternative, you should do either of the following:</span></span>  
   
--   Ändern Sie, falls möglich, den Code durch Entfernen der Verwendung des Typs oder des Members.  
+-   <span data-ttu-id="a2ec1-127">Ändern Sie, falls möglich, den Code durch Entfernen der Verwendung des Typs oder des Members.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-127">Change your code by removing the use of the type or member, if possible.</span></span>  
   
-     - oder -   
+     <span data-ttu-id="a2ec1-128">- oder - </span><span class="sxs-lookup"><span data-stu-id="a2ec1-128">-or-</span></span>  
   
--   Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.  
+-   <span data-ttu-id="a2ec1-129">Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-129">Review the documentation for this technology area to determine how to respond to the deprecation.</span></span>  
   
- Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Beispiel: Angenommen, Sie besitzen eine Anwendung mit dem Namen "app1.exe", die für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompiliert wurde, doch Sie möchten, dass die Anwendung für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ausgeführt wird. Gehen Sie dazu folgendermaßen vor:  
+ <span data-ttu-id="a2ec1-130">Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-130">You may choose not to recompile existing code against a later version of the .NET Framework.</span></span> <span data-ttu-id="a2ec1-131">Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-131">Instead, you can specify the version of the .NET Framework against which your existing compiled code runs.</span></span> <span data-ttu-id="a2ec1-132">Beispiel: Angenommen, Sie besitzen eine Anwendung mit dem Namen "app1.exe", die für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompiliert wurde, doch Sie möchten, dass die Anwendung für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-132">For example, suppose that you have an application named app1.exe that was compiled against the [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], but you want the application to run against the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="a2ec1-133">Gehen Sie dazu folgendermaßen vor:</span><span class="sxs-lookup"><span data-stu-id="a2ec1-133">This requires the following steps:</span></span>  
   
-1.  Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.  
+1.  <span data-ttu-id="a2ec1-134">Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-134">Create a configuration file for your main executable and name it *appName*.exe.config, where *appName* is the name of the application executable.</span></span> <span data-ttu-id="a2ec1-135">Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-135">For the application named app1.exe in our example, you would create a configuration file named app1.exe.config.</span></span>  
   
-2.  Fügen Sie der Konfigurationsdatei Folgendes hinzu:  
+2.  <span data-ttu-id="a2ec1-136">Fügen Sie der Konfigurationsdatei Folgendes hinzu:</span><span class="sxs-lookup"><span data-stu-id="a2ec1-136">Add the following to the configuration file.</span></span>  
   
     ```xml  
     <configuration>  
@@ -63,33 +57,32 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
- In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `version`-Attribut zuweisen können, um eine bestimmte Version von .NET Framework als Zielversion festzulegen.  
+ <span data-ttu-id="a2ec1-137">In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `version`-Attribut zuweisen können, um eine bestimmte Version von .NET Framework als Zielversion festzulegen.</span><span class="sxs-lookup"><span data-stu-id="a2ec1-137">The following table lists the string values that you can assign to the `version` attribute to target a specific version of the .NET Framework.</span></span>  
   
-|.NET Framework-Version|`version`-Zeichenfolge|
+|<span data-ttu-id="a2ec1-138">.NET Framework-Version</span><span class="sxs-lookup"><span data-stu-id="a2ec1-138">.NET Framework version</span></span>|<span data-ttu-id="a2ec1-139">`version`-Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="a2ec1-139">`version` string</span></span>|
 |-|-|  
-|4.7|v4.0|  
-|4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|  
-|4.5 (inklusive 4.5.1 und 4.5.2)|v4.0|  
-|4|v4.0|  
-|3.5|v2.0.50727|  
-|2.0|v2.0.50727|  
-|1.1|v1.1.4322|  
-|1.0|v1.0.3705|  
+|<span data-ttu-id="a2ec1-140">4.7 (einschließlich 4.7.1)</span><span class="sxs-lookup"><span data-stu-id="a2ec1-140">4.7 (including 4.7.1)</span></span>|<span data-ttu-id="a2ec1-141">v4.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-141">v4.0</span></span>|  
+|<span data-ttu-id="a2ec1-142">4.6 (einschließlich 4.6.1 und 4.6.2)</span><span class="sxs-lookup"><span data-stu-id="a2ec1-142">4.6 (including 4.6.1 and 4.6.2)</span></span>|<span data-ttu-id="a2ec1-143">v4.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-143">v4.0</span></span>|  
+|<span data-ttu-id="a2ec1-144">4.5 (inklusive 4.5.1 und 4.5.2)</span><span class="sxs-lookup"><span data-stu-id="a2ec1-144">4.5 (including 4.5.1 and 4.5.2)</span></span>|<span data-ttu-id="a2ec1-145">v4.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-145">v4.0</span></span>|  
+|<span data-ttu-id="a2ec1-146">4</span><span class="sxs-lookup"><span data-stu-id="a2ec1-146">4</span></span>|<span data-ttu-id="a2ec1-147">v4.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-147">v4.0</span></span>|  
+|<span data-ttu-id="a2ec1-148">3.5</span><span class="sxs-lookup"><span data-stu-id="a2ec1-148">3.5</span></span>|<span data-ttu-id="a2ec1-149">v2.0.50727</span><span class="sxs-lookup"><span data-stu-id="a2ec1-149">v2.0.50727</span></span>|  
+|<span data-ttu-id="a2ec1-150">2.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-150">2.0</span></span>|<span data-ttu-id="a2ec1-151">v2.0.50727</span><span class="sxs-lookup"><span data-stu-id="a2ec1-151">v2.0.50727</span></span>|  
+|<span data-ttu-id="a2ec1-152">1.1</span><span class="sxs-lookup"><span data-stu-id="a2ec1-152">1.1</span></span>|<span data-ttu-id="a2ec1-153">v1.1.4322</span><span class="sxs-lookup"><span data-stu-id="a2ec1-153">v1.1.4322</span></span>|  
+|<span data-ttu-id="a2ec1-154">1.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-154">1.0</span></span>|<span data-ttu-id="a2ec1-155">v1.0.3705</span><span class="sxs-lookup"><span data-stu-id="a2ec1-155">v1.0.3705</span></span>|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Listen mit veralteten Komponenten für .NET Framework 4.5 und 4.6  
- [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md)  
+## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a><span data-ttu-id="a2ec1-156">Listen mit veralteten Komponenten für .NET Framework 4.5 und 4.6</span><span class="sxs-lookup"><span data-stu-id="a2ec1-156">Obsolete Lists for the .NET Framework 4.5 and 4.6</span></span>  
+ [<span data-ttu-id="a2ec1-157">Veraltete Typen</span><span class="sxs-lookup"><span data-stu-id="a2ec1-157">Obsolete Types</span></span>](../../../docs/framework/whats-new/obsolete-types.md)  
   
- [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md)  
+ [<span data-ttu-id="a2ec1-158">Veraltete Member</span><span class="sxs-lookup"><span data-stu-id="a2ec1-158">Obsolete Members</span></span>](../../../docs/framework/whats-new/obsolete-members.md)  
   
-## <a name="obsolete-lists-for-previous-versions"></a>Listen mit veralteten Komponenten für frühere Versionen  
- [Veraltete Typen in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+## <a name="obsolete-lists-for-previous-versions"></a><span data-ttu-id="a2ec1-159">Listen mit veralteten Komponenten für frühere Versionen</span><span class="sxs-lookup"><span data-stu-id="a2ec1-159">Obsolete Lists for Previous Versions</span></span>  
+ [<span data-ttu-id="a2ec1-160">Veraltete Typen in .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="a2ec1-160">Obsolete Types in the .NET Framework 4</span></span>](http://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Veraltete Member in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [<span data-ttu-id="a2ec1-161">Veraltete Member in .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="a2ec1-161">Obsolete Members in the .NET Framework 4</span></span>](http://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Liste veralteter Elemente in .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [<span data-ttu-id="a2ec1-162">Liste veralteter Elemente in .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="a2ec1-162">.NET Framework 3.5 Obsolete List</span></span>](http://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Liste veralteter Elemente in .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [<span data-ttu-id="a2ec1-163">Liste veralteter Elemente in .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="a2ec1-163">.NET Framework 2.0 Obsolete List</span></span>](http://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>Siehe auch  
- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-
+## <a name="see-also"></a><span data-ttu-id="a2ec1-164">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2ec1-164">See Also</span></span>  
+ [<span data-ttu-id="a2ec1-165">\<supportedRuntime> Element</span><span class="sxs-lookup"><span data-stu-id="a2ec1-165">\<supportedRuntime> Element</span></span>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

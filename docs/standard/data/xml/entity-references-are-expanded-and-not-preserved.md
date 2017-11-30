@@ -1,53 +1,51 @@
 ---
-title: "Entit&#228;tsverweise werden erweitert und nicht beibehalten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Entitätsverweise werden erweitert und nicht beibehalten"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 069d3b94a0269917400e75fdbe975ec39dcfdb71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Entit&#228;tsverweise werden erweitert und nicht beibehalten
-Wenn der Entitätsverweis erweitert und durch den Text ersetzt wird, für den er steht, wird der **XmlEntityReference**\-Knoten nicht erstellt.  Stattdessen wird die Entitätsdeklaration analysiert, und die Knoten, die aus dem Inhalt der Deklaration erstellt werden, werden an die Stelle von **XmlEntityReference** kopiert.  Daher wird im `&publisher;`\-Beispiel `&publisher;` nicht gespeichert. Stattdessen wird ein **XmlText**\-Knoten erstellt.  
+# <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="b05a0-102">Entitätsverweise werden erweitert und nicht beibehalten</span><span class="sxs-lookup"><span data-stu-id="b05a0-102">Entity References are Expanded and Not Preserved</span></span>
+<span data-ttu-id="b05a0-103">Wenn der Entitätsverweis erweitert und durch den Text, der er steht, ersetzt die **XmlEntityReference** -Knoten nicht erstellt.</span><span class="sxs-lookup"><span data-stu-id="b05a0-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="b05a0-104">Stattdessen wird die Entitätsdeklaration analysiert, und Knoten aus dem Inhalt der Deklaration erstellt werden an die Stelle von kopiert die **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="b05a0-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="b05a0-105">Aus diesem Grund in die `&publisher;` beispielsweise die `&publisher;` nicht gespeichert, sondern stattdessen ein **XmlText** Knoten erstellt.</span><span class="sxs-lookup"><span data-stu-id="b05a0-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  
   
- ![Erweiterte Struktur](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.png "xmlentityref\_expanded\_nodes")  
-Struktur für Entitätsverweise, die erweitert werden  
+ <span data-ttu-id="b05a0-106">![Struktur der Aufrufstruktur erweitert](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "Xmlentityref_expanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="b05a0-106">![expanded tree structure](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span></span>  
+<span data-ttu-id="b05a0-107">Struktur für Entitätsverweise, die erweitert werden</span><span class="sxs-lookup"><span data-stu-id="b05a0-107">Tree structure for entity references that are expanded</span></span>  
   
- Zeichenentitäten, z. B. `B` oder `<`, werden nicht beibehalten.  Stattdessen werden sie stets erweitert und als Textknoten dargestellt.  
+ <span data-ttu-id="b05a0-108">Zeichenentitäten, z. B. `B` oder `<`, werden nicht beibehalten.</span><span class="sxs-lookup"><span data-stu-id="b05a0-108">Character entities such as `B` or `<` are not preserved.</span></span> <span data-ttu-id="b05a0-109">Stattdessen werden sie stets erweitert und als Textknoten dargestellt.</span><span class="sxs-lookup"><span data-stu-id="b05a0-109">Instead, they are always expanded and represented as text nodes.</span></span>  
   
- Damit **XmlEntityReference**\-Knoten und die untergeordneten Knoten des damit verknüpften Entitätsverweises beibehalten werden, legen Sie das **EntityHandling**\-Flag auf **ExpandCharEntities** fest.  Andernfalls behalten Sie den Standardwert des **EntityHandling**\-Flags \(**ExpandEntities**\) bei.  In diesem Fall werden im DOM keine Entitätsverweisknoten angezeigt.  Die Knoten werden durch die Knoten ersetzt, die Kopien der untergeordneten Knoten der Entitätsdeklaration sind.  
+ <span data-ttu-id="b05a0-110">Beibehalten **XmlEntityReference** Knoten und die untergeordneten Knoten des Entitätsverweises angefügt ist, legen Sie die **EntityHandling** flag **ExpandCharEntities**.</span><span class="sxs-lookup"><span data-stu-id="b05a0-110">To preserve **XmlEntityReference** nodes and child nodes of the entity reference attached to it, set the **EntityHandling** flag to **ExpandCharEntities**.</span></span> <span data-ttu-id="b05a0-111">Lassen Sie andernfalls die **EntityHandling** Flag den Standardwert, also **ExpandEntities**.</span><span class="sxs-lookup"><span data-stu-id="b05a0-111">Otherwise, leave the **EntityHandling** flag at the default, which is to **ExpandEntities**.</span></span> <span data-ttu-id="b05a0-112">In diesem Fall werden im DOM keine Entitätsverweisknoten angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b05a0-112">In this case, you will not see entity reference nodes in the DOM.</span></span> <span data-ttu-id="b05a0-113">Die Knoten werden durch die Knoten ersetzt, die Kopien der untergeordneten Knoten der Entitätsdeklaration sind.</span><span class="sxs-lookup"><span data-stu-id="b05a0-113">The nodes are replaced by the nodes that are copies of the child nodes of the entity declaration.</span></span>  
   
- Wenn Entitätsverweise nicht beibehalten werden, hat dies u. U. den Nebeneffekt, dass der Zielanwendung beim Speichern und Übergeben des Dokuments an eine andere Anwendung nicht bekannt ist, dass die Knoten durch einen Entitätsverweis erstellt wurden.  Wenn die Entitätsverweise dagegen beibehalten werden, erkennt die Zielanwendung den Entitätsverweis und liest die untergeordneten Knoten.  Es ist offensichtlich, dass die untergeordneten Knoten die Informationen darstellen, die sich in der Entitätsdeklaration befanden.  Wenn Entitätsverweise beibehalten werden, hat das DOM theoretisch die folgende Struktur:  
+ <span data-ttu-id="b05a0-114">Wenn Entitätsverweise nicht beibehalten werden, hat dies u. U. den Nebeneffekt, dass der Zielanwendung beim Speichern und Übergeben des Dokuments an eine andere Anwendung nicht bekannt ist, dass die Knoten durch einen Entitätsverweis erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="b05a0-114">One side effect of not preserving entity references is that when the document is saved and passed on to another application, the receiving application does not know that the nodes were generated by an entity reference.</span></span> <span data-ttu-id="b05a0-115">Wenn die Entitätsverweise dagegen beibehalten werden, erkennt die Zielanwendung den Entitätsverweis und liest die untergeordneten Knoten.</span><span class="sxs-lookup"><span data-stu-id="b05a0-115">However, when entity references are preserved, a receiving application sees an entity reference and reads the child nodes.</span></span> <span data-ttu-id="b05a0-116">Es ist offensichtlich, dass die untergeordneten Knoten die Informationen darstellen, die sich in der Entitätsdeklaration befanden.</span><span class="sxs-lookup"><span data-stu-id="b05a0-116">It is apparent that the child nodes represent the information that was in the entity declaration.</span></span> <span data-ttu-id="b05a0-117">Wenn Entitätsverweise beibehalten werden, hat das DOM theoretisch die folgende Struktur:</span><span class="sxs-lookup"><span data-stu-id="b05a0-117">For example, the DOM theoretically has the following structure if entity references are preserved.</span></span>  
   
- XmlElement: Verleger  
+ <span data-ttu-id="b05a0-118">XmlElement: Verleger</span><span class="sxs-lookup"><span data-stu-id="b05a0-118">XmlElement: publisher</span></span>  
   
- XmlEntityReference: `&publisher;`  
+ <span data-ttu-id="b05a0-119">XmlEntityReference: `&publisher;`</span><span class="sxs-lookup"><span data-stu-id="b05a0-119">XmlEntityReference: `&publisher;`</span></span>  
   
- XmlText: Microsoft Press  
+ <span data-ttu-id="b05a0-120">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="b05a0-120">XmlText: Microsoft Press</span></span>  
   
- Wenn Entitätsverweise im DOM erweitert werden \(dies ist die Standardvorgehensweise\), ergibt sich folgende Struktur:  
+ <span data-ttu-id="b05a0-121">Wenn Entitätsverweise im DOM erweitert werden (dies ist die Standardvorgehensweise), ergibt sich folgende Struktur:</span><span class="sxs-lookup"><span data-stu-id="b05a0-121">If entity references are expanded in the DOM, which is the default method, the structure has this type of tree:</span></span>  
   
- XmlElement: Verleger  
+ <span data-ttu-id="b05a0-122">XmlElement: Verleger</span><span class="sxs-lookup"><span data-stu-id="b05a0-122">XmlElement: publisher</span></span>  
   
- XmlText: Microsoft Press  
+ <span data-ttu-id="b05a0-123">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="b05a0-123">XmlText: Microsoft Press</span></span>  
   
- Beachten Sie, dass der Entitätsverweisknoten nun nicht mehr vorhanden ist, und die Zielanwendung nicht erkennen kann, dass der **XmlText**\-Knoten mit "Microsoft Press" aus einer Entitätsdeklaration erstellt wurde.  
+ <span data-ttu-id="b05a0-124">Beachten Sie, dass der Entitätsverweisknoten nicht mehr vorhanden ist und nicht von die empfangende Anwendung, dass mitzuteilen kann die **XmlText** Knoten mit "Microsoft Press" aus einer Entitätsdeklaration erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="b05a0-124">Notice that the entity reference node is gone, and the receiving application cannot tell that the **XmlText** node containing "Microsoft Press" was created from an entity declaration.</span></span>  
   
- Wenn Sie einen Reader verwenden, der keine Entitäten auflösen kann, löst die **Load**\-Methode eine Ausnahme aus, wenn sie auf einen Entitätsverweis trifft.  
+ <span data-ttu-id="b05a0-125">Wenn Sie einen Reader verwenden, die keine Entitäten auflösen kann die **laden** Methode löst eine Ausnahme aus, wenn einen Entitätsverweis gefunden wird.</span><span class="sxs-lookup"><span data-stu-id="b05a0-125">If you use a reader that cannot resolve entities, the **Load** method throws an exception when it encounters an entity reference.</span></span>  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="b05a0-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b05a0-126">See Also</span></span>  
+ [<span data-ttu-id="b05a0-127">XML-Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="b05a0-127">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,35 +1,38 @@
 ---
-title: "Threadsicherheit in regul&#228;ren Ausdr&#252;cken | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reguläre Ausdrücke von .NET Framework, Threads"
-  - "Analysieren von Text mit regulären Ausdrücken, Threads"
-  - "Mustervergleich mit regulären Ausdrücken, Threads"
-  - "Reguläre Ausdrücke, Threads"
-  - "Suchen mit regulären Ausdrücken, Threads"
+title: "Threadsicherheit in regulären Ausdrücken"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework regular expressions, threads
+- regular expressions, threads
+- searching with regular expressions, threads
+- parsing text with regular expressions, threads
+- pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b4cfa24da8083eac01275ad76f5c2db974b39a25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Threadsicherheit in regul&#228;ren Ausdr&#252;cken
-Die <xref:System.Text.RegularExpressions.Regex>\-Klasse selbst ist threadsicher und unveränderlich \(schreibgeschützt\).  Somit können **Regex**\-Objekte von jedem beliebigen Thread erzeugt und von Threads gemeinsam verwendet werden; Suchmethoden können von jedem Thread aufgerufen werden, ohne den globalen Zustand zu verändern.  
+# <a name="thread-safety-in-regular-expressions"></a><span data-ttu-id="194ef-102">Threadsicherheit in regulären Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="194ef-102">Thread Safety in Regular Expressions</span></span>
+<span data-ttu-id="194ef-103">Die <xref:System.Text.RegularExpressions.Regex> -Klasse selbst ist threadsicher und unveränderlich (schreibgeschützt).</span><span class="sxs-lookup"><span data-stu-id="194ef-103">The <xref:System.Text.RegularExpressions.Regex> class itself is thread safe and immutable (read-only).</span></span> <span data-ttu-id="194ef-104">**Regex**-Objekte können also in jedem Thread erzeugt und von mehreren Threads gemeinsam genutzt werden. Übereinstimmende Methoden können von jedem Thread aufgerufen werden und ändern keinen globalen Zustand.</span><span class="sxs-lookup"><span data-stu-id="194ef-104">That is, **Regex** objects can be created on any thread and shared between threads; matching methods can be called from any thread and never alter any global state.</span></span>  
   
- Allerdings sollten Ergebnisobjekte \(**Match** und **MatchCollection**\), die von **Regex** zurückgegeben werden, von einem einzigen Thread verwendet werden.  Obwohl viele dieser Objekte logisch unveränderlich sind, könnte durch ihre Implementierung die Berechnung einiger Ergebnisse verzögert werden, um die Leistung zu verbessern. Dies würde dazu führen, dass Aufrufer den Zugriff auf die Objekte serialisieren müssen.  
+ <span data-ttu-id="194ef-105">Allerdings Ergebnisobjekte (**Übereinstimmung** und **MatchCollection**) zurückgegebene **Regex** sollte in einem einzelnen Thread verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="194ef-105">However, result objects (**Match** and **MatchCollection**) returned by **Regex** should be used on a single thread.</span></span> <span data-ttu-id="194ef-106">Obwohl viele dieser Objekte logisch nicht änderbar sind, können ihre Implementierungen die Berechnung einiger Ergebnisse zur Verbesserung der Leistung verzögern. Daher müssen Aufrufer den Zugriff darauf serialisieren.</span><span class="sxs-lookup"><span data-stu-id="194ef-106">Although many of these objects are logically immutable, their implementations could delay computation of some results to improve performance, and as a result, callers must serialize access to them.</span></span>  
   
- Wenn **Regex**\-Ergebnisobjekte von mehreren Threads gemeinsam verwendet werden sollen, können diese Objekte durch den Aufruf ihrer synchronisierten Methoden in threadsichere Instanzen konvertiert werden.  Mit Ausnahme von Enumeratoren sind alle Klassen zur Behandlung regulärer Ausdrücke threadsicher oder können über eine synchronisierte Methode in threadsichere Objekte konvertiert werden.  
+ <span data-ttu-id="194ef-107">Wenn **Regex**-Ergebnisobjekte in mehreren Threads gemeinsam genutzt werden müssen, können diese Objekte durch den Aufruf ihrer synchronisierten Methoden in threadsichere Instanzen konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="194ef-107">If there is a need to share **Regex** result objects on multiple threads, these objects can be converted to thread-safe instances by calling their synchronized methods.</span></span> <span data-ttu-id="194ef-108">Mit Ausnahme von Enumeratoren sind alle Klassen für reguläre Ausdrücke threadsicher oder können von einer synchronisierten Methode in threadsichere Objekte konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="194ef-108">With the exception of enumerators, all regular expression classes are thread safe or can be converted into thread-safe objects by a synchronized method.</span></span>  
   
- Enumeratoren sind die einzige Ausnahme.  Eine Anwendung muss Aufrufe von Auflistungsenumeratoren serialisieren.  Wenn eine Auflistung von mehr als einem Thread gleichzeitig durchlaufen werden kann, sollten die Enumeratormethoden mit dem übergeordneten Objekt der Auflistung, die der Enumerator durchläuft, synchronisiert werden.  
+ <span data-ttu-id="194ef-109">Enumeratoren sind die einzige Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="194ef-109">Enumerators are the only exception.</span></span> <span data-ttu-id="194ef-110">Eine Anwendung muss Aufrufe von Sammlungsenumeratoren serialisieren.</span><span class="sxs-lookup"><span data-stu-id="194ef-110">An application must serialize calls to collection enumerators.</span></span> <span data-ttu-id="194ef-111">Die Regel ist, dass für eine Sammlung, die in mehr als einem Thread gleichzeitig als Enumeration verwendet werden kann, die Enumeratormethoden im Stammobjekt der Sammlung, die der Enumerator durchläuft, synchronisiert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="194ef-111">The rule is that if a collection can be enumerated on more than one thread simultaneously, you should synchronize enumerator methods on the root object of the collection traversed by the enumerator.</span></span>  
   
-## Siehe auch  
- [Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="194ef-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="194ef-112">See Also</span></span>  
+ [<span data-ttu-id="194ef-113">Reguläre Ausdrücke von .NET</span><span class="sxs-lookup"><span data-stu-id="194ef-113">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

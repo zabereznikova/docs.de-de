@@ -1,37 +1,39 @@
 ---
-title: "Herleiten von Schemata aus XML-Dokumenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Herleiten von Schemata aus XML-Dokumenten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: aa4d6d2758392fc48969b08db30b91bdfe0eeaa1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Herleiten von Schemata aus XML-Dokumenten
-In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse zum Herleiten eines XSD\-Schemas \(XML Schema Definition Language\) aus der Struktur eines XML\-Dokuments verwendet wird.  
+# <a name="inferring-schemas-from-xml-documents"></a><span data-ttu-id="0c50e-102">Herleiten von Schemata aus XML-Dokumenten</span><span class="sxs-lookup"><span data-stu-id="0c50e-102">Inferring Schemas from XML Documents</span></span>
+<span data-ttu-id="0c50e-103">In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0c50e-103">This topic describes how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  
   
-## Der Schemarückschlussprozess  
- Die <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse des <xref:System.Xml.Schema?displayProperty=fullName>\-Namespaces wird verwendet, um mindestens ein XSD\-Schema \(XML Schema Definition Language\) aus der Struktur eines XML\-Dokuments herzuleiten.  Die generierten Schemata können zum Validieren des ursprünglichen XML\-Dokuments verwendet werden.  
+## <a name="the-schema-inference-process"></a><span data-ttu-id="0c50e-104">Der Schemarückschlussprozess</span><span class="sxs-lookup"><span data-stu-id="0c50e-104">The Schema Inference Process</span></span>  
+ <span data-ttu-id="0c50e-105">Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse des <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespaces wird verwendet, um mindestens ein XSD-Schema (XML Schema Definition Language) aus der Struktur eines XML-Dokuments herzuleiten.</span><span class="sxs-lookup"><span data-stu-id="0c50e-105">The <xref:System.Xml.Schema.XmlSchemaInference> class of the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace is used to generate one or more XML Schema definition language (XSD) schemas from the structure of an XML document.</span></span> <span data-ttu-id="0c50e-106">Die generierten Schemata können zum Validieren des ursprünglichen XML-Dokuments verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0c50e-106">The generated schemas may be used to validate the original XML document.</span></span>  
   
- Da ein XML\-Dokument von der <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse verarbeitet wird, bestehen seitens der <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse Einschränkungen hinsichtlich der Schemakomponenten, die die Elemente und Attribute im XML\-Dokument beschreiben.  Die <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse leitet Schemakomponenten auch nur eingeschränkt her, indem sie für ein bestimmtes Element oder Attribut den eingeschränktesten Typ herleitet.  Da weitere Informationen zum XML\-Dokument erfasst werden, werden die Einschränkungen zunehmend aufgehoben, indem weniger eingeschränkte Typen hergeleitet werden.  Der Typ mit der geringsten Einschränkung, der hergeleitet wird, ist `xs:string`.  
+ <span data-ttu-id="0c50e-107">Da ein XML-Dokument von der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse verarbeitet wird, bestehen seitens der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse Einschränkungen hinsichtlich der Schemakomponenten, die die Elemente und Attribute im XML-Dokument beschreiben.</span><span class="sxs-lookup"><span data-stu-id="0c50e-107">As an XML document is processed by the <xref:System.Xml.Schema.XmlSchemaInference> class, the <xref:System.Xml.Schema.XmlSchemaInference> class makes assumptions about the schema components that describe the elements and attributes in the XML document.</span></span> <span data-ttu-id="0c50e-108">Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet Schemakomponenten auch nur eingeschränkt her, indem sie für ein bestimmtes Element oder Attribut den eingeschränktesten Typ herleitet.</span><span class="sxs-lookup"><span data-stu-id="0c50e-108">The <xref:System.Xml.Schema.XmlSchemaInference> class also infers schema components in a constrained way by inferring the most restrictive type for a particular element or attribute.</span></span> <span data-ttu-id="0c50e-109">Da weitere Informationen zum XML-Dokument erfasst werden, werden die Einschränkungen zunehmend aufgehoben, indem weniger eingeschränkte Typen hergeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="0c50e-109">As more information about the XML document is gathered, these constraints are loosened by inferring less restrictive types.</span></span> <span data-ttu-id="0c50e-110">Der Typ mit der geringsten Einschränkung, der hergeleitet wird, ist `xs:string`.</span><span class="sxs-lookup"><span data-stu-id="0c50e-110">The least restrictive type that can be inferred is `xs:string`.</span></span>  
   
- Betrachten Sie beispielsweise den folgenden Teil eines XML\-Dokuments.  
+ <span data-ttu-id="0c50e-111">Betrachten Sie beispielsweise den folgenden Teil eines XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="0c50e-111">Take, for example, the following piece of an XML document.</span></span>  
   
-```  
+```xml  
 <parent attribute1="6">  
     <child>One</child>  
     <child>Two</child>  
@@ -39,43 +41,43 @@ In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInfer
 <parent attribute1="A">  
 ```  
   
- Im obigen Beispiel wird angenommen, dass das Attribut dem Typ `xs:unsignedByte` angehört, wenn der <xref:System.Xml.Schema.XmlSchemaInference>\-Prozess das `attribute1`\-Attribut mit dem Wert `6` ermittelt.  Wenn das zweite `parent`\-Element vom <xref:System.Xml.Schema.XmlSchemaInference>\-Prozess ermittelt wird, wird die Einschränkung zunehmend aufgehoben, indem der Typ `xs:string` geändert wird, da der Wert des `attribute1`\-Attributs jetzt `A` ist.  Das `minOccurs`\-Attribut für alle im Schema hergeleiteten `child`\-Elemente wird in ähnlicher Weise bis zu `minOccurs="0"` gelockert, da das zweite direkt übergeordnete Element nicht über direkt untergeordnete Elemente verfügt.  
+ <span data-ttu-id="0c50e-112">Im obigen Beispiel wird angenommen, dass das Attribut dem Typ `attribute1` angehört, wenn der `6`-Prozess das <xref:System.Xml.Schema.XmlSchemaInference>-Attribut mit dem Wert `xs:unsignedByte` ermittelt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-112">In the example above, when the `attribute1` attribute is encountered with a value of `6` by the <xref:System.Xml.Schema.XmlSchemaInference> process, it is assumed to be of type `xs:unsignedByte`.</span></span> <span data-ttu-id="0c50e-113">Wenn das zweite `parent`-Element vom <xref:System.Xml.Schema.XmlSchemaInference>-Prozess ermittelt wird, wird die Einschränkung zunehmend aufgehoben, indem der Typ `xs:string` geändert wird, da der Wert des `attribute1`-Attributs jetzt `A` ist.</span><span class="sxs-lookup"><span data-stu-id="0c50e-113">When the second `parent` element is encountered by the <xref:System.Xml.Schema.XmlSchemaInference> process, the constraint is loosened by modifying the type to `xs:string` because the value of the `attribute1` attribute is now `A`.</span></span> <span data-ttu-id="0c50e-114">Das `minOccurs`-Attribut für alle im Schema hergeleiteten `child`-Elemente wird in ähnlicher Weise bis zu `minOccurs="0"` gelockert, da das zweite direkt übergeordnete Element nicht über direkt untergeordnete Elemente verfügt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-114">Similarly, the `minOccurs` attribute for all the `child` elements inferred in the schema are loosened to `minOccurs="0"` because the second parent element has no child elements.</span></span>  
   
-## Herleiten von Schemata aus XML\-Dokumenten  
- Die <xref:System.Xml.Schema.XmlSchemaInference>\-Klasse verwendet zwei überladene <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>\-Methoden, um ein Schema aus einem XML\-Dokument herzuleiten.  
+## <a name="inferring-schemas-from-xml-documents"></a><span data-ttu-id="0c50e-115">Herleiten von Schemata aus XML-Dokumenten</span><span class="sxs-lookup"><span data-stu-id="0c50e-115">Inferring Schemas from XML Documents</span></span>  
+ <span data-ttu-id="0c50e-116">Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse verwendet zwei überladene <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methoden, um ein Schema aus einem XML-Dokument herzuleiten.</span><span class="sxs-lookup"><span data-stu-id="0c50e-116">The <xref:System.Xml.Schema.XmlSchemaInference> class uses two overloaded <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> methods to infer a schema from an XML document.</span></span>  
   
- Die erste <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=fullName>\-Methode wird verwendet, um ein auf ein XML\-Dokument beruhendes Schema zu erstellen.  Die zweite <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=fullName>\-Methode wird verwendet, um ein Schema herzuleiten, das mehrere XML\-Dokumente beschreibt.  Sie können beispielsweise mehrere XML\-Dokumente nacheinander an die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=fullName>\-Methode übertragen, um ein Schema zu erstellen, dass die gesamte Gruppe von XML\-Dokumenten beschreibt.  
+ <span data-ttu-id="0c50e-117">Die erste <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType>-Methode wird verwendet, um ein auf ein XML-Dokument beruhendes Schema zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0c50e-117">The first <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> method is used to create a schema based on an XML document.</span></span> <span data-ttu-id="0c50e-118">Die zweite <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType>-Methode wird verwendet, um ein Schema herzuleiten, das mehrere XML-Dokumente beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-118">The second <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> method is used to infer a schema that describes multiple XML documents.</span></span> <span data-ttu-id="0c50e-119">Sie können beispielsweise mehrere XML-Dokumente nacheinander an die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType>-Methode übertragen, um ein Schema zu erstellen, dass die gesamte Gruppe von XML-Dokumenten beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-119">For example, you can feed multiple XML documents to the <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> method one at a time to produce a schema that describes the entire set of XML documents.</span></span>  
   
- Die erste <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=fullName>\-Methode leitet ein Schema aus einem XML\-Dokument her, das in einem <xref:System.Xml.XmlReader>\-Objekt enthalten ist, und gibt ein <xref:System.Xml.Schema.XmlSchemaSet>\-Objekt zurück, das das hergeleitete Schema enthält.  Die zweite <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=fullName>\-Methode sucht ein <xref:System.Xml.Schema.XmlSchemaSet>\-Objekt für ein Schema mit demselben Zielnamespace wie das XML\-Dokument, das im <xref:System.Xml.XmlReader>\-Objekt enthalten ist. Sie präzisiert das vorhandene Schema und gibt ein <xref:System.Xml.Schema.XmlSchemaSet>\-Objekt zurück, das das hergeleitete Schema enthält.  
+ <span data-ttu-id="0c50e-120">Die erste <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType>-Methode leitet ein Schema aus einem XML-Dokument her, das in einem <xref:System.Xml.XmlReader>-Objekt enthalten ist, und gibt ein <xref:System.Xml.Schema.XmlSchemaSet>-Objekt zurück, das das hergeleitete Schema enthält.</span><span class="sxs-lookup"><span data-stu-id="0c50e-120">The first <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> method infers a schema from an XML document contained in an <xref:System.Xml.XmlReader> object, and returns an <xref:System.Xml.Schema.XmlSchemaSet> object containing the inferred schema.</span></span> <span data-ttu-id="0c50e-121">Die zweite <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType>-Methode sucht ein <xref:System.Xml.Schema.XmlSchemaSet>-Objekt für ein Schema mit demselben Zielnamespace wie das XML-Dokument, das im <xref:System.Xml.XmlReader>-Objekt enthalten ist. Sie präzisiert das vorhandene Schema und gibt ein <xref:System.Xml.Schema.XmlSchemaSet>-Objekt zurück, das das hergeleitete Schema enthält.</span><span class="sxs-lookup"><span data-stu-id="0c50e-121">The second <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> method searches an <xref:System.Xml.Schema.XmlSchemaSet> object for a schema with the same target namespace as the XML document contained in the <xref:System.Xml.XmlReader> object, refines the existing schema, and returns an <xref:System.Xml.Schema.XmlSchemaSet> object containing the inferred schema.</span></span>  
   
- Die Änderungen am präzisierten Schema beruhen auf der neuen im XML\-Dokument gefundenen Struktur.  Wenn beispielsweise ein XML\-Dokument durchlaufen wird, werden Vermutungen über die gefundenen Datentypen angestellt, und das Schema wird auf der Grundlage dieser Vermutungen erstellt.  Wenn jedoch bei einer zweiten Herleitungsübergabe Daten ermittelt werden, die nicht mit der ursprünglichen Vermutung übereinstimmen, wird das Schema präzisiert.  Im folgenden Beispiel wird der Präzisierungsvorgang veranschaulicht.  
+ <span data-ttu-id="0c50e-122">Die Änderungen am präzisierten Schema beruhen auf der neuen im XML-Dokument gefundenen Struktur.</span><span class="sxs-lookup"><span data-stu-id="0c50e-122">The changes made to the refined schema are based on new structure found in the XML document.</span></span> <span data-ttu-id="0c50e-123">Wenn beispielsweise ein XML-Dokument durchlaufen wird, werden Vermutungen über die gefundenen Datentypen angestellt, und das Schema wird auf der Grundlage dieser Vermutungen erstellt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-123">For example, as an XML document is traversed, assumptions are made about the data types found, and the schema is created based on those assumptions.</span></span> <span data-ttu-id="0c50e-124">Wenn jedoch bei einer zweiten Herleitungsübergabe Daten ermittelt werden, die nicht mit der ursprünglichen Vermutung übereinstimmen, wird das Schema präzisiert.</span><span class="sxs-lookup"><span data-stu-id="0c50e-124">However, if data is encountered on a second inference pass that differs from the original assumption, the schema is refined.</span></span> <span data-ttu-id="0c50e-125">Im folgenden Beispiel wird der Präzisierungsvorgang veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="0c50e-125">The following example illustrates the refinement process.</span></span>  
   
  [!code-cpp[XmlSchemaInferenceExamples#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaInferenceExamples/CPP/XmlSchemaInferenceExamples.cpp#4)]
  [!code-csharp[XmlSchemaInferenceExamples#4](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaInferenceExamples/CS/XmlSchemaInferenceExamples.cs#4)]
  [!code-vb[XmlSchemaInferenceExamples#4](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaInferenceExamples/VB/XmlSchemaInferenceExamples.vb#4)]  
   
- In diesem Beispiel wird die folgende Datei, `item1.xml`, als erste Eingabe verwendet.  
+ <span data-ttu-id="0c50e-126">In diesem Beispiel wird die folgende Datei, `item1.xml`, als erste Eingabe verwendet.</span><span class="sxs-lookup"><span data-stu-id="0c50e-126">The example takes the following file, `item1.xml`, as its first input.</span></span>  
   
  [!code-xml[XmlSchemaInferenceExamples#13](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/item1.xml#13)]  
   
- Im Beispiel wird dann die Datei `item2.xml` als zweite Eingabe verwendet:  
+ <span data-ttu-id="0c50e-127">Im Beispiel wird dann die Datei `item2.xml` als zweite Eingabe verwendet:</span><span class="sxs-lookup"><span data-stu-id="0c50e-127">The example then takes the `item2.xml` file as its second input:</span></span>  
   
  [!code-xml[XmlSchemaInferenceExamples#14](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/item2.xml#14)]  
   
- Wenn das `productID`\-Attribut im ersten XML\-Dokument ermittelt wird, wird angenommen, dass der Wert `123456789` dem Typ `xs:unsignedInt` angehört.  Wenn jedoch das zweite XML\-Dokument gelesen und der Wert `A53-246` gefunden wird, kann nicht mehr davon ausgegangen werden, dass es sich um den `xs:unsignedInt`\-Typ handelt.  Das Schema wird präzisiert, und der Typ `productID` wird in `xs:string` geändert.  Außerdem wird das `minOccurs`\-Attribut für das `supplierID`\-Element auf `0` festgelegt, da das zweite XML\-Dokument kein `supplierID`\-Element enthält.  
+ <span data-ttu-id="0c50e-128">Wenn das `productID`-Attribut im ersten XML-Dokument ermittelt wird, wird angenommen, dass der Wert `123456789` dem Typ `xs:unsignedInt` angehört.</span><span class="sxs-lookup"><span data-stu-id="0c50e-128">When the `productID` attribute is encountered in the first XML document, the value of `123456789` is assumed to be an `xs:unsignedInt` type.</span></span> <span data-ttu-id="0c50e-129">Wenn jedoch das zweite XML-Dokument gelesen und der Wert `A53-246` gefunden wird, kann nicht mehr davon ausgegangen werden, dass es sich um den `xs:unsignedInt`-Typ handelt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-129">However, when the second XML document is read and the value of `A53-246` is found, the `xs:unsignedInt` type can no longer be assumed.</span></span> <span data-ttu-id="0c50e-130">Das Schema wird präzisiert, und der Typ `productID` wird in `xs:string` geändert.</span><span class="sxs-lookup"><span data-stu-id="0c50e-130">The schema is refined and the type of `productID` is changed to `xs:string`.</span></span> <span data-ttu-id="0c50e-131">Außerdem wird das `minOccurs`-Attribut für das `supplierID`-Element auf `0` festgelegt, da das zweite XML-Dokument kein `supplierID`-Element enthält.</span><span class="sxs-lookup"><span data-stu-id="0c50e-131">In addition, the `minOccurs` attribute for the `supplierID` element is set to `0`, because the second XML document contains no `supplierID` element.</span></span>  
   
- Im Folgenden wird das aus dem ersten XML\-Dokument hergeleitete Schema dargestellt.  
+ <span data-ttu-id="0c50e-132">Im Folgenden wird das aus dem ersten XML-Dokument hergeleitete Schema dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0c50e-132">The following is the schema inferred from the first XML document.</span></span>  
   
  [!code-xml[XmlSchemaInferenceExamples#15](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema1.xml#15)]  
   
- Im Folgenden wird das Schema dargestellt, das aus dem ersten XML\-Dokument hergeleitet und durch das zweite XML\-Dokument präzisiert wurde.  
+ <span data-ttu-id="0c50e-133">Im Folgenden wird das Schema dargestellt, das aus dem ersten XML-Dokument hergeleitet und durch das zweite XML-Dokument präzisiert wurde.</span><span class="sxs-lookup"><span data-stu-id="0c50e-133">The following is the schema inferred from the first XML document, refined by the second XML document.</span></span>  
   
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
-## Inlineschemata  
- Wenn während des <xref:System.Xml.Schema.XmlSchemaInference>\-Prozesses ein XSD\-Schema \(XML Schema Definition Language\) ermittelt wurde, wird eine <xref:System.Xml.Schema.XmlSchemaInferenceException> ausgelöst.  Das folgende Inlineschema löst beispielsweise eine <xref:System.Xml.Schema.XmlSchemaInferenceException> aus.  
+## <a name="inline-schemas"></a><span data-ttu-id="0c50e-134">Inlineschemata</span><span class="sxs-lookup"><span data-stu-id="0c50e-134">Inline Schemas</span></span>  
+ <span data-ttu-id="0c50e-135">Wenn während des <xref:System.Xml.Schema.XmlSchemaInference>-Prozesses ein XSD-Schema (XML Schema Definition Language) ermittelt wurde, wird eine <xref:System.Xml.Schema.XmlSchemaInferenceException> ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="0c50e-135">If an inline XML Schema definition language (XSD) schema is encountered during the <xref:System.Xml.Schema.XmlSchemaInference> process, an <xref:System.Xml.Schema.XmlSchemaInferenceException> is thrown.</span></span> <span data-ttu-id="0c50e-136">Das folgende Inlineschema löst beispielsweise eine <xref:System.Xml.Schema.XmlSchemaInferenceException> aus.</span><span class="sxs-lookup"><span data-stu-id="0c50e-136">For example, the following inline schema throws an <xref:System.Xml.Schema.XmlSchemaInferenceException>.</span></span>  
   
-```  
+```xml  
 <root xmlns:ex="http://www.contoso.com" xmlns="http://www.tempuri.org">  
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.contoso.com">  
         <xs:element name="Contoso" type="xs:normalizedString" />  
@@ -84,12 +86,12 @@ In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInfer
 </root>  
 ```  
   
-## Nicht präzisierbare Schemata  
- Es existieren XML\-Schemakonstrukte des W3C, die der <xref:System.Xml.Schema.XmlSchemaInference>\-Prozess für das XSD\-Schema \(XML Schema Definition Language\) nicht behandeln kann, wenn ein Typ zum Präzisieren und zum Hervorrufen einer auszulösenden Ausnahme vorhanden ist.  Dabei handelt es sich um einen komplexen Typ, dessen Compositor auf der obersten Ebene keine Folge ist.  In einem SOM \(Schemaobjektmodell\) entspricht dies einem <xref:System.Xml.Schema.XmlSchemaComplexType>, dessen <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A>\-Eigenschaft keine Instanz von <xref:System.Xml.Schema.XmlSchemaSequence> ist.  
+## <a name="schemas-that-cannot-be-refined"></a><span data-ttu-id="0c50e-137">Nicht präzisierbare Schemata</span><span class="sxs-lookup"><span data-stu-id="0c50e-137">Schemas that Cannot be Refined</span></span>  
+ <span data-ttu-id="0c50e-138">Es existieren XML-Schemakonstrukte des W3C, die der <xref:System.Xml.Schema.XmlSchemaInference>-Prozess für das XSD-Schema (XML Schema Definition Language) nicht behandeln kann, wenn ein Typ zum Präzisieren und zum Hervorrufen einer auszulösenden Ausnahme vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="0c50e-138">There are W3C XML Schema constructs that the XML Schema definition language (XSD) schema <xref:System.Xml.Schema.XmlSchemaInference> process cannot handle if given a type to refine and cause an exception to be thrown.</span></span> <span data-ttu-id="0c50e-139">Dabei handelt es sich um einen komplexen Typ, dessen Compositor auf der obersten Ebene keine Folge ist.</span><span class="sxs-lookup"><span data-stu-id="0c50e-139">Such as a complex type whose top-level compositor is anything other than a sequence.</span></span> <span data-ttu-id="0c50e-140">In einem SOM (Schemaobjektmodell) entspricht dies einem <xref:System.Xml.Schema.XmlSchemaComplexType>, dessen <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A>-Eigenschaft keine Instanz von <xref:System.Xml.Schema.XmlSchemaSequence> ist.</span><span class="sxs-lookup"><span data-stu-id="0c50e-140">In the Schema Object Model (SOM), this corresponds to an <xref:System.Xml.Schema.XmlSchemaComplexType> whose <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> property is not an instance of <xref:System.Xml.Schema.XmlSchemaSequence>.</span></span>  
   
-## Siehe auch  
- <xref:System.Xml.Schema.XmlSchemaInference>   
- [XML\-Schemaobjektmodell \(SOM\)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)   
- [Herleiten eines XML\-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)   
- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)   
- [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a><span data-ttu-id="0c50e-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c50e-141">See Also</span></span>  
+ <xref:System.Xml.Schema.XmlSchemaInference>  
+ [<span data-ttu-id="0c50e-142">XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))</span><span class="sxs-lookup"><span data-stu-id="0c50e-142">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [<span data-ttu-id="0c50e-143">Herleiten eines XML-Schemas</span><span class="sxs-lookup"><span data-stu-id="0c50e-143">Inferring an XML Schema</span></span>](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+ [<span data-ttu-id="0c50e-144">Regeln für Rückschlussschemaknotentypen Schemaknotentypen und Struktur</span><span class="sxs-lookup"><span data-stu-id="0c50e-144">Rules for Inferring Schema Node Types and Structure</span></span>](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+ [<span data-ttu-id="0c50e-145">Regeln zum Herleiten einfacher Typen</span><span class="sxs-lookup"><span data-stu-id="0c50e-145">Rules for Inferring Simple Types</span></span>](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

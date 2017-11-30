@@ -1,95 +1,98 @@
 ---
-title: "Deciding When to Implement the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: "Gründe für das Implementieren des ereignisbasierten asynchronen Musters"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Deciding When to Implement the Event-based Asynchronous Pattern
-Das ereignisbasierte asynchrone Muster stellt ein Muster bereit, mit dem das asynchrone Verhalten einer Klasse verfügbar gemacht werden kann.  Mit diesem Muster definiert [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zwei Muster zum Verfügmachen des asynchronen Verhaltens: das auf der <xref:System.IAsyncResult?displayProperty=fullName>\-Schnittstelle beruhende asynchrone Muster und das ereignisbasierte Muster.  In diesem Thema werden Gründe für die Implementierung beider Muster erläutert.  
+# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a><span data-ttu-id="e062c-102">Gründe für das Implementieren des ereignisbasierten asynchronen Musters</span><span class="sxs-lookup"><span data-stu-id="e062c-102">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="e062c-103">Das ereignisbasierte asynchrone Muster stellt ein Muster zum Verfügbarmachen von asynchronem Verhalten einer Klasse.</span><span class="sxs-lookup"><span data-stu-id="e062c-103">The Event-based Asynchronous Pattern provides a pattern for exposing the asynchronous behavior of a class.</span></span> <span data-ttu-id="e062c-104">Mit der Einführung dieses Muster der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert zwei Muster zum Verfügbarmachen von asynchronem Verhalten: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType> Schnittstelle und das ereignisbasierte Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-104">With the introduction of this pattern, the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defines two patterns for exposing asynchronous behavior: the Asynchronous Pattern based on the <xref:System.IAsyncResult?displayProperty=nameWithType> interface, and the event-based pattern.</span></span> <span data-ttu-id="e062c-105">In diesem Thema wird beschrieben, wenn für beide Muster implementieren geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="e062c-105">This topic describes when it is appropriate for you to implement both patterns.</span></span>  
   
- Weitere Informationen über asynchrone Programmierung mit der <xref:System.IAsyncResult>\-Schnittstelle finden Sie unter [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ <span data-ttu-id="e062c-106">Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult> Benutzeroberfläche, siehe [das ereignisbasierte asynchrone Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span><span class="sxs-lookup"><span data-stu-id="e062c-106">For more information about asynchronous programming with the <xref:System.IAsyncResult> interface, see [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  
   
-## Allgemeine Prinzipien  
- Asynchrone Features sollten nach Möglichkeit mit dem ereignisbasierten asynchronen Muster verfügbar gemacht werden.  Das ereignisbasierte Muster kann einige Anforderungen jedoch nicht erfüllen.  In diesen Fällen müssen Sie möglicherweise neben dem ereignisbasierten Muster auch das <xref:System.IAsyncResult>\-Muster implementieren.  
+## <a name="general-principles"></a><span data-ttu-id="e062c-107">Allgemeine Prinzipien</span><span class="sxs-lookup"><span data-stu-id="e062c-107">General Principles</span></span>  
+ <span data-ttu-id="e062c-108">Im Allgemeinen sollten Sie asynchrone Funktionen, die das ereignisbasierte asynchrone Muster nach Möglichkeit verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="e062c-108">In general, you should expose asynchronous features using the Event-based Asynchronous Pattern whenever possible.</span></span> <span data-ttu-id="e062c-109">Es gibt jedoch einige Anforderungen, die das ereignisbasierte Muster nicht erfüllen.</span><span class="sxs-lookup"><span data-stu-id="e062c-109">However, there are some requirements that the event-based pattern cannot meet.</span></span> <span data-ttu-id="e062c-110">In diesen Fällen müssen Sie möglicherweise zum Implementieren der <xref:System.IAsyncResult> Muster zusätzlich zu den ereignisbasierten Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-110">In those cases, you may need to implement the <xref:System.IAsyncResult> pattern in addition to the event-based pattern.</span></span>  
   
 > [!NOTE]
->  Das <xref:System.IAsyncResult>\-Muster wird nur selten ohne das ereignisbasierte Muster implementiert.  
+>  <span data-ttu-id="e062c-111">Es ist nur in wenigen Fällen die <xref:System.IAsyncResult> Muster implementiert werden, ohne das ereignisbasierte Muster ebenfalls implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="e062c-111">It is rare for the <xref:System.IAsyncResult> pattern to be implemented without the event-based pattern also being implemented.</span></span>  
   
-## Richtlinien  
- In der folgenden Liste werden Richtlinien für die Implementierung des ereignisbasierten asynchronen Musters beschrieben:  
+## <a name="guidelines"></a><span data-ttu-id="e062c-112">Richtlinien</span><span class="sxs-lookup"><span data-stu-id="e062c-112">Guidelines</span></span>  
+ <span data-ttu-id="e062c-113">Die folgende Liste beschreibt die Richtlinien für, wenn Sie das ereignisbasierte asynchrone Muster implementieren soll:</span><span class="sxs-lookup"><span data-stu-id="e062c-113">The following list describes the guidelines for when you should implement Event-based Asynchronous Pattern:</span></span>  
   
--   Verwenden Sie das ereignisbasierte Muster als Standard\-API, um asynchrones Verhalten für die Klasse verfügbar zu machen.  
+-   <span data-ttu-id="e062c-114">Verwenden Sie das ereignisbasierte Muster als Standard-API, um asynchrones Verhalten für die Klasse verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="e062c-114">Use the event-based pattern as the default API to expose asynchronous behavior for your class.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nicht verfügbar, wenn die Klasse in erster Linie in einer Clientanwendung wie Windows Forms verwendet wird.  
+-   <span data-ttu-id="e062c-115">Machen Sie nicht die <xref:System.IAsyncResult> Muster, wenn die Klasse in einer Clientanwendung, z. B. Windows Forms in erster Linie verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e062c-115">Do not expose the <xref:System.IAsyncResult> pattern when your class is primarily used in a client application, for example Windows Forms.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nur verfügbar, wenn es im Rahmen ihrer Arbeit notwendig ist.  So müssen Sie das <xref:System.IAsyncResult>\-Muster möglicherweise aus Gründen der Kompatibilität mit einer vorhandenen API verfügbar machen.  
+-   <span data-ttu-id="e062c-116">Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster bei Bedarf für Ihre Anforderungen erfüllt.</span><span class="sxs-lookup"><span data-stu-id="e062c-116">Only expose the <xref:System.IAsyncResult> pattern when it is necessary for meeting your requirements.</span></span> <span data-ttu-id="e062c-117">Z. B. Kompatibilität mit einer vorhandenen API müssen Sie möglicherweise verfügbar machen die <xref:System.IAsyncResult> Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-117">For example, compatibility with an existing API may require you to expose the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nur zusammen mit dem ereignisbasierten Muster verfügbar.  
+-   <span data-ttu-id="e062c-118">Machen Sie nicht die <xref:System.IAsyncResult> -Muster nur zusammen mit die ereignisbasierten Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-118">Do not expose the <xref:System.IAsyncResult> pattern without also exposing the event-based pattern.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster, wenn es verfügbar gemacht werden muss, als erweiterte Option verfügbar.  Wenn Sie z. B. ein Proxyobjekt generieren, generieren Sie standardmäßig das ereignisbasierte Muster mit der Option, das <xref:System.IAsyncResult>\-Muster zu generieren.  
+-   <span data-ttu-id="e062c-119">Wenn Sie verfügbar machen, müssen die <xref:System.IAsyncResult> Muster, holen Sie dies als eine erweiterte Option.</span><span class="sxs-lookup"><span data-stu-id="e062c-119">If you must expose the <xref:System.IAsyncResult> pattern, do so as an advanced option.</span></span> <span data-ttu-id="e062c-120">Beispielsweise ein Proxyobjekt zu generieren, generieren die ereignisbasierte standardmäßig mit einer Option zum Generieren der <xref:System.IAsyncResult> Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-120">For example, if you generate a proxy object, generate the event-based pattern by default, with an option to generate the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Erstellen Sie die Implementierung des ereignisbasierten Musters auf der Grundlage der Implementierung des <xref:System.IAsyncResult> Musters.  
+-   <span data-ttu-id="e062c-121">Ihre Implementierung ereignisbasierte Muster als Grundlage Ihrer <xref:System.IAsyncResult> Muster-Implementierung.</span><span class="sxs-lookup"><span data-stu-id="e062c-121">Build your event-based pattern implementation on your <xref:System.IAsyncResult> pattern implementation.</span></span>  
   
--   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>\-Muster nach Möglichkeit nicht für die gleiche Klasse verfügbar.  Machen Sie das ereignisbasierte Muster für Klassen auf "höherer Ebene" und das <xref:System.IAsyncResult>\-Muster für Klassen auf "niedrigerer Ebene" verfügbar.  Vergleichen Sie z. B. das ereignisbasierte Muster für die <xref:System.Net.WebClient>\-Komponente mit dem <xref:System.IAsyncResult>\-Muster für die <xref:System.Web.HttpRequest>\-Klasse.  
+-   <span data-ttu-id="e062c-122">Vermeiden Sie die Muster ereignisbasierten verfügbar zu machen und die <xref:System.IAsyncResult> Muster für die gleiche Klasse.</span><span class="sxs-lookup"><span data-stu-id="e062c-122">Avoid exposing both the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class.</span></span> <span data-ttu-id="e062c-123">Verfügbar machen das ereignisbasierte Muster für Klassen "höherer Ebene" und die <xref:System.IAsyncResult> Muster Klassen auf "niedrigerer Ebene".</span><span class="sxs-lookup"><span data-stu-id="e062c-123">Expose the event-based pattern on "higher level" classes and the <xref:System.IAsyncResult> pattern on "lower level" classes.</span></span> <span data-ttu-id="e062c-124">Vergleichen Sie das ereignisbasierte Muster z. B. auf die <xref:System.Net.WebClient> Komponente mit dem die <xref:System.IAsyncResult> Muster auf der <xref:System.Web.HttpRequest> Klasse.</span><span class="sxs-lookup"><span data-stu-id="e062c-124">For example, compare the event-based pattern on the <xref:System.Net.WebClient> component with the <xref:System.IAsyncResult> pattern on the <xref:System.Web.HttpRequest> class.</span></span>  
   
-    -   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>\-Muster für die gleiche Klasse verfügbar, wenn dies aus Gründen der Kompatibilität erforderlich ist.  Wenn Sie z. B. eine API freigegeben haben, die das <xref:System.IAsyncResult>\-Muster verwendet, müssten Sie das <xref:System.IAsyncResult>\-Muster aus Gründen der Abwärtskompatibilität beibehalten.  
+    -   <span data-ttu-id="e062c-125">Verfügbar machen das ereignisbasierte Muster und die <xref:System.IAsyncResult> Muster in der gleichen Klasse, wenn Kompatibilität erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="e062c-125">Expose the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class when compatibility requires it.</span></span> <span data-ttu-id="e062c-126">Wenn Sie bereits eine API freigegeben haben, verwendet z. B. die <xref:System.IAsyncResult> Muster, müssten Sie die beibehalten werden sollen die <xref:System.IAsyncResult> Muster für die Abwärtskompatibilität.</span><span class="sxs-lookup"><span data-stu-id="e062c-126">For example, if you have already released an API that uses the <xref:System.IAsyncResult> pattern, you would need to retain the <xref:System.IAsyncResult> pattern for backward compatibility.</span></span>  
   
-    -   Machen Sie das ereignisbasierte Muster und das <xref:System.IAsyncResult>\-Muster für die gleiche Klasse verfügbar, wenn das resultierende komplexe Objektmodell die Vorteile getrennter Implementierungen überwiegt.  Es ist besser, beide Muster für die gleiche Klasse verfügbar zu machen, als das ereignisbasierte Muster nicht verfügbar zu machen.  
+    -   <span data-ttu-id="e062c-127">Verfügbar machen das ereignisbasierte Muster und die <xref:System.IAsyncResult> in der gleichen Klasse Muster, wenn das resultierende Objekt Modell Komplexität den Vorteil, dass die Implementierungen trennen überwiegt.</span><span class="sxs-lookup"><span data-stu-id="e062c-127">Expose the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class if the resulting object model complexity outweighs the benefit of separating the implementations.</span></span> <span data-ttu-id="e062c-128">Es ist besser, beide Muster für eine einzelne Klasse als zu vermeiden, zu machen das ereignisbasierte Muster verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="e062c-128">It is better to expose both patterns on a single class than to avoid exposing the event-based pattern.</span></span>  
   
-    -   Wenn Sie sowohl das ereignisbasierte als auch das <xref:System.IAsyncResult>\-Muster für die gleiche Klasse verfügbar machen müssen, kennzeichnen Sie die Implementierung des <xref:System.IAsyncResult>\-Musters mit dem auf <xref:System.ComponentModel.EditorBrowsableState> festgelegte <xref:System.ComponentModel.EditorBrowsableAttribute> als erweitertes Feature.  In der Entwurfsumgebung, z. B. in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, werden dann die Eigenschaften und Methoden von <xref:System.IAsyncResult> nicht angezeigt.  Diese Eigenschaften und Methoden können weiterhin vollständig eingesetzt ein, lassen Entwickler, die mit IntelliSense arbeiten, die API jedoch deutlicher erkennen.  
+    -   <span data-ttu-id="e062c-129">Wenn Sie sowohl das ereignisbasierte Muster verfügbar machen müssen und <xref:System.IAsyncResult> Muster für eine einzelne Klasse, verwenden <xref:System.ComponentModel.EditorBrowsableAttribute> festgelegt <xref:System.ComponentModel.EditorBrowsableState.Advanced> zum Kennzeichnen der <xref:System.IAsyncResult> Muster Implementierung als erweiterte Funktion.</span><span class="sxs-lookup"><span data-stu-id="e062c-129">If you must expose both the event-based pattern and <xref:System.IAsyncResult> pattern on a single class, use <xref:System.ComponentModel.EditorBrowsableAttribute> set to <xref:System.ComponentModel.EditorBrowsableState.Advanced> to mark the <xref:System.IAsyncResult> pattern implementation as an advanced feature.</span></span> <span data-ttu-id="e062c-130">Dies weist darauf hin, entwurfsumgebungen, wie z. B. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, nicht zum Anzeigen der <xref:System.IAsyncResult> Eigenschaften und Methoden.</span><span class="sxs-lookup"><span data-stu-id="e062c-130">This indicates to design environments, such as [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, not to display the <xref:System.IAsyncResult> properties and methods.</span></span> <span data-ttu-id="e062c-131">Diese Eigenschaften und Methoden sind weiterhin voll verwendbar, aber der Entwickler mit IntelliSense arbeiten hat eine genauere Ansicht der API.</span><span class="sxs-lookup"><span data-stu-id="e062c-131">These properties and methods are still fully usable, but the developer working through IntelliSense has a clearer view of the API.</span></span>  
   
-## Kriterien für das Verfügbarmachen des IAsyncResult\-Musters als Ergänzung des ereignisbasierten Musters  
- Das ereignisbasierte asynchrone Muster bietet in den besprochenen Situationen viele Vorteile. Es geht jedoch auch mit einigen Nachteilen einher, die Ihnen bekannt sein sollten, wenn Sie großen Wert auf Leistung legen.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a><span data-ttu-id="e062c-132">Kriterien für das Verfügbarmachen von IAsyncResult-Muster, zusätzlich zu den ereignisbasierten Muster</span><span class="sxs-lookup"><span data-stu-id="e062c-132">Criteria for Exposing the IAsyncResult Pattern in Addition to the Event-based Pattern</span></span>  
+ <span data-ttu-id="e062c-133">Während das ereignisbasierte asynchrone Muster in den zuvor erwähnten Szenarios viele Vorteile hat, verfügt diese noch einige Nachteile, über die Sie berücksichtigen sollten, wenn Leistung Ihren Anforderungen am wichtigsten ist.</span><span class="sxs-lookup"><span data-stu-id="e062c-133">While the Event-based Asynchronous Pattern has many benefits under the previously mentioned scenarios, it does have some drawbacks, which you should be aware of if performance is your most important requirement.</span></span>  
   
- Es gibt drei Situationen, in denen sich das ereignisbasierte Muster weniger gut als das <xref:System.IAsyncResult> eignet:  
+ <span data-ttu-id="e062c-134">Es gibt drei Szenarien, die das ereignisbasierte Muster nicht berücksichtigt wird, sowie die <xref:System.IAsyncResult> Muster:</span><span class="sxs-lookup"><span data-stu-id="e062c-134">There are three scenarios that the event-based pattern does not address as well as the <xref:System.IAsyncResult> pattern:</span></span>  
   
--   Blockieren des Wartevorgang für ein <xref:System.IAsyncResult>  
+-   <span data-ttu-id="e062c-135">Warten Sie auf einem blockieren<xref:System.IAsyncResult></span><span class="sxs-lookup"><span data-stu-id="e062c-135">Blocking wait on one <xref:System.IAsyncResult></span></span>  
   
--   Blockieren des Wartevorgang für mehrere <xref:System.IAsyncResult>\-Objekte  
+-   <span data-ttu-id="e062c-136">Blockieren des Wartevorgang für viele <xref:System.IAsyncResult> Objekte</span><span class="sxs-lookup"><span data-stu-id="e062c-136">Blocking wait on many <xref:System.IAsyncResult> objects</span></span>  
   
--   Abrufen der Beendigung des <xref:System.IAsyncResult>  
+-   <span data-ttu-id="e062c-137">Abrufen der Beendigung der<xref:System.IAsyncResult></span><span class="sxs-lookup"><span data-stu-id="e062c-137">Polling for completion on the <xref:System.IAsyncResult></span></span>  
   
- Sie können das ereignisbasierte Muster in diesen Fällen zwar einsetzen, es ist jedoch umständlicher als das <xref:System.IAsyncResult>\-Muster.  
+ <span data-ttu-id="e062c-138">Sie können diese Szenarien unter Verwendung des ereignisbasierten Musters adressieren, aber auf diese Weise ist komplizierter als die Verwendung der <xref:System.IAsyncResult> Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-138">You can address these scenarios by using the event-based pattern, but doing so is more cumbersome than using the <xref:System.IAsyncResult> pattern.</span></span>  
   
- Entwickler verwenden das <xref:System.IAsyncResult>\-Muster häufig für Dienste mit besonders hohen Leistungsanforderungen.  Das Abrufen der Beendigung ist beispielsweise ein äußerst leistungsintensiver Vorgang auf dem Server.  
+ <span data-ttu-id="e062c-139">Entwickler verwenden häufig die <xref:System.IAsyncResult> Muster für Dienste, die in der Regel sehr hohe leistungsanforderungen verfügen.</span><span class="sxs-lookup"><span data-stu-id="e062c-139">Developers often use the <xref:System.IAsyncResult> pattern for services that typically have very high performance requirements.</span></span> <span data-ttu-id="e062c-140">Dem Abruf für Abschluss Szenario ist beispielsweise eine Technik Hochleistungs-Server.</span><span class="sxs-lookup"><span data-stu-id="e062c-140">For example, the polling for completion scenario is a high-performance server technique.</span></span>  
   
- Das ereignisbasierte Muster ist zudem nicht so effektiv wie das <xref:System.IAsyncResult>\-Muster, da es mehr Objekte \(insbesondere <xref:System.EventArgs>\) erstellt und threadübergreifend synchronisiert.  
+ <span data-ttu-id="e062c-141">Darüber hinaus das ereignisbasierte Muster ist weniger effizient als die <xref:System.IAsyncResult> Muster, da mehrere Objekte, insbesondere erstellt <xref:System.EventArgs>, und da threadübergreifend synchronisiert.</span><span class="sxs-lookup"><span data-stu-id="e062c-141">Additionally, the event-based pattern is less efficient than the <xref:System.IAsyncResult> pattern because it creates more objects, especially <xref:System.EventArgs>, and because it synchronizes across threads.</span></span>  
   
- In der folgenden Liste sind einige Empfehlungen aufgeführt, die Sie bei der Verwendung des <xref:System.IAsyncResult>\-Musters einhalten sollten:  
+ <span data-ttu-id="e062c-142">Die folgende Liste enthält einige Empfehlungen ausführen, wenn Sie möchten, verwenden Sie die <xref:System.IAsyncResult> Muster:</span><span class="sxs-lookup"><span data-stu-id="e062c-142">The following list shows some recommendations to follow if you decide to use the <xref:System.IAsyncResult> pattern:</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nur verfügbar, wenn Sie ausdrücklich Unterstützung für <xref:System.Threading.WaitHandle>\-Objekte oder <xref:System.IAsyncResult>\-Objekte benötigen.  
+-   <span data-ttu-id="e062c-143">Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster, wenn Sie ausdrücklich Unterstützung für benötigen <xref:System.Threading.WaitHandle> oder <xref:System.IAsyncResult> Objekte.</span><span class="sxs-lookup"><span data-stu-id="e062c-143">Only expose the <xref:System.IAsyncResult> pattern when you specifically require support for <xref:System.Threading.WaitHandle> or <xref:System.IAsyncResult> objects.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nur verfügbar, wenn Sie über eine API verfügen, die das <xref:System.IAsyncResult>\-Muster verwendet.  
+-   <span data-ttu-id="e062c-144">Nur verfügbar zu machen die <xref:System.IAsyncResult> Muster, wenn Sie eine vorhandene API haben, verwendet die <xref:System.IAsyncResult> Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-144">Only expose the <xref:System.IAsyncResult> pattern when you have an existing API that uses the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Wenn Sie über eine auf dem <xref:System.IAsyncResult>\-Muster basierende API verfügen, empfiehlt es sich, in der nächsten Version auch das ereignisbasierte Muster verfügbar zu machen.  
+-   <span data-ttu-id="e062c-145">Haben eine vorhandene API basierend auf den <xref:System.IAsyncResult> Muster, sollten Sie auch das ereignisbasierte Muster in der nächsten Version verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="e062c-145">If you have an existing API based on the <xref:System.IAsyncResult> pattern, consider also exposing the event-based pattern in your next release.</span></span>  
   
--   Machen Sie das <xref:System.IAsyncResult>\-Muster nur verfügbar, wenn hohe Leistungsanforderungen bestehen, die Sie sich nachgewiesenermaßen nicht mit dem ereignisbasierten Muster, jedoch mit dem <xref:System.IAsyncResult>\-Muster erfüllen lassen.  
+-   <span data-ttu-id="e062c-146">Nur verfügbar zu machen <xref:System.IAsyncResult> Muster, wenn Sie hohe leistungsanforderungen haben Sie überprüft haben kann nicht mit dem ereignisbasierten Muster erfüllt sein, aber erfüllt werden können, indem die <xref:System.IAsyncResult> Muster.</span><span class="sxs-lookup"><span data-stu-id="e062c-146">Only expose <xref:System.IAsyncResult> pattern if you have high performance requirements which you have verified cannot be met by the event-based pattern but can be met by the <xref:System.IAsyncResult> pattern.</span></span>  
   
-## Siehe auch  
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)   
- [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e062c-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e062c-147">See Also</span></span>  
+ [<span data-ttu-id="e062c-148">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern (Exemplarische Vorgehensweise: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt)</span><span class="sxs-lookup"><span data-stu-id="e062c-148">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="e062c-149">Ereignisbasiertes asynchrones Muster (EAP)</span><span class="sxs-lookup"><span data-stu-id="e062c-149">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [<span data-ttu-id="e062c-150">Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster</span><span class="sxs-lookup"><span data-stu-id="e062c-150">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="e062c-151">Implementieren des ereignisbasierten asynchronen Entwurfsmusters</span><span class="sxs-lookup"><span data-stu-id="e062c-151">Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="e062c-152">Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters</span><span class="sxs-lookup"><span data-stu-id="e062c-152">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="e062c-153">Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)</span><span class="sxs-lookup"><span data-stu-id="e062c-153">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

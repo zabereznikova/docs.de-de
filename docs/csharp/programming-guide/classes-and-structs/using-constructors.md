@@ -1,71 +1,52 @@
 ---
 title: Verwenden von Konstruktoren (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- constructors [C#], about constructors
+helpviewer_keywords: constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb9fcd1e4090da300de17c7fd808669ba51767c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75b55fde2fbd1697aed7eb0665a571c63b9b0b42
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-constructors-c-programming-guide"></a>Verwenden von Konstruktoren (C#-Programmierhandbuch)
-Wenn eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) erstellt wird, wird deren Konstruktor aufgerufen. Konstruktoren haben den gleichen Namen wie die Klasse oder Struktur, und sie initialisieren normalerweise die Datenmember des neuen Objekts.  
+# <a name="using-constructors-c-programming-guide"></a><span data-ttu-id="f8c9d-102">Verwenden von Konstruktoren (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="f8c9d-102">Using Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="f8c9d-103">Wenn eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) erstellt wird, wird deren Konstruktor aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-103">When a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="f8c9d-104">Konstruktoren haben den gleichen Namen wie die Klasse oder Struktur, und sie initialisieren normalerweise die Datenmember des neuen Objekts.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-104">Constructors have the same name as the class or struct, and they usually initialize the data members of the new object.</span></span>  
   
- Im folgenden Beispiel wird eine Klasse mit dem Namen `Taxi` durch Verwendung eines einfachen Konstruktors definiert. Die Klasse wird dann mit dem [new](../../../csharp/language-reference/keywords/new.md)-Operator instanziiert. Der `Taxi`-Konstruktor wird sofort durch den `new`-Operator aufgerufen, nachdem Speicher für das neue Objekt zugewiesen wurde.  
+ <span data-ttu-id="f8c9d-105">Im folgenden Beispiel wird eine Klasse mit dem Namen `Taxi` durch Verwendung eines einfachen Konstruktors definiert.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-105">In the following example, a class named `Taxi` is defined by using a simple constructor.</span></span> <span data-ttu-id="f8c9d-106">Die Klasse wird dann mit dem [new](../../../csharp/language-reference/keywords/new.md)-Operator instanziiert.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-106">This class is then instantiated with the [new](../../../csharp/language-reference/keywords/new.md) operator.</span></span> <span data-ttu-id="f8c9d-107">Der `Taxi`-Konstruktor wird sofort durch den `new`-Operator aufgerufen, nachdem Speicher für das neue Objekt zugewiesen wurde.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-107">The `Taxi` constructor is invoked by the `new` operator immediately after memory is allocated for the new object.</span></span>  
   
- [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
- Ein Konstruktor, der keine Parameter akzeptiert, wird *Standardkonstruktor* genannt. Standardkonstruktoren werden aufgerufen, wenn ein Objekt durch Verwendung des `new`-Operators instanziiert wird und keine Argumente für `new` bereitgestellt werden. Weitere Informationen finden Sie unter [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+ <span data-ttu-id="f8c9d-108">Ein Konstruktor, der keine Parameter akzeptiert, wird *Standardkonstruktor* genannt.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-108">A constructor that takes no parameters is called a *default constructor*.</span></span> <span data-ttu-id="f8c9d-109">Standardkonstruktoren werden aufgerufen, wenn ein Objekt durch Verwendung des `new`-Operators instanziiert wird und keine Argumente für `new` bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-109">Default constructors are invoked whenever an object is instantiated by using the `new` operator and no arguments are provided to `new`.</span></span> <span data-ttu-id="f8c9d-110">Weitere Informationen finden Sie unter [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-110">For more information, see [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span></span>  
   
- Klassen ohne Konstruktoren erhalten vom C#-Compiler einen öffentlichen Standardkonstruktor, um die Instanziierung der Klasse zuzulassen, außer die Klasse ist [static](../../../csharp/language-reference/keywords/static.md). Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ <span data-ttu-id="f8c9d-111">Klassen ohne Konstruktoren erhalten vom C#-Compiler einen öffentlichen Standardkonstruktor, um die Instanziierung der Klasse zuzulassen, außer die Klasse ist [static](../../../csharp/language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-111">Unless the class is [static](../../../csharp/language-reference/keywords/static.md), classes without constructors are given a public default constructor by the C# compiler in order to enable class instantiation.</span></span> <span data-ttu-id="f8c9d-112">Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-112">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- Sie können verhindern, dass eine Klasse instanziiert wird, indem Sie den Konstruktor auf „privat“ einstellen; dazu müssen Sie wie folgt vorgehen:  
+ <span data-ttu-id="f8c9d-113">Sie können verhindern, dass eine Klasse instanziiert wird, indem Sie den Konstruktor auf „privat“ einstellen; dazu müssen Sie wie folgt vorgehen:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-113">You can prevent a class from being instantiated by making the constructor private, as follows:</span></span>  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
- Weitere Informationen finden Sie unter [Private Konstruktoren](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
+ <span data-ttu-id="f8c9d-114">Weitere Informationen finden Sie unter [Private Konstruktoren](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-114">For more information, see [Private Constructors](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).</span></span>  
   
- Konstruktoren für [struct](../../../csharp/language-reference/keywords/struct.md)-Typen ähneln Klassenkonstruktoren, `structs` können aber keinen expliziten Standardkonstruktor enthalten, da er automatisch vom Compiler bereitgestellt wird. Dieser Konstruktor initialisiert alle Felder in `struct` auf die Standardwerte. Weitere Informationen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md). Dieser Standardkonstruktor wird jedoch nur aufgerufen, wenn `struct` mit `new` instanziiert wird. Dieser Code verwendet den Standardkonstruktor z.B. für <xref:System.Int32>, damit sichergestellt ist, dass der ganzzahlige Typ initialisiert wird:  
+ <span data-ttu-id="f8c9d-115">Konstruktoren für [struct](../../../csharp/language-reference/keywords/struct.md)-Typen ähneln Klassenkonstruktoren, `structs` können aber keinen expliziten Standardkonstruktor enthalten, da er automatisch vom Compiler bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-115">Constructors for [struct](../../../csharp/language-reference/keywords/struct.md) types resemble class constructors, but `structs` cannot contain an explicit default constructor because one is provided automatically by the compiler.</span></span> <span data-ttu-id="f8c9d-116">Dieser Konstruktor initialisiert alle Felder in `struct` auf die Standardwerte.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-116">This constructor initializes each field in the `struct` to the default values.</span></span> <span data-ttu-id="f8c9d-117">Weitere Informationen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-117">For more information, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="f8c9d-118">Dieser Standardkonstruktor wird jedoch nur aufgerufen, wenn `struct` mit `new` instanziiert wird.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-118">However, this default constructor is only invoked if the `struct` is instantiated with `new`.</span></span> <span data-ttu-id="f8c9d-119">Dieser Code verwendet den Standardkonstruktor z.B. für <xref:System.Int32>, damit sichergestellt ist, dass der ganzzahlige Typ initialisiert wird:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-119">For example, this code uses the default constructor for <xref:System.Int32>, so that you are assured that the integer is initialized:</span></span>  
   
 ```  
 int i = new int();  
 Console.WriteLine(i);  
 ```  
   
- Der folgende Code verursacht jedoch einen Compilerfehler, da nicht `new` verwendet wird, und da versucht wird, ein Objekt zu verwenden, das nicht initialisiert wurde:  
+ <span data-ttu-id="f8c9d-120">Der folgende Code verursacht jedoch einen Compilerfehler, da nicht `new` verwendet wird, und da versucht wird, ein Objekt zu verwenden, das nicht initialisiert wurde:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-120">The following code, however, causes a compiler error because it does not use `new`, and because it tries to use an object that has not been initialized:</span></span>  
   
 ```  
 int i;  
 Console.WriteLine(i);  
 ```  
   
- Alternativ können auch Objekte, die auf `structs` basieren, – einschließlich aller integrierten numerischen Typen – initialisiert oder zugewiesen und anschließend verwendet werden, so wie im folgenden Beispiel:  
+ <span data-ttu-id="f8c9d-121">Alternativ können auch Objekte, die auf `structs` basieren, – einschließlich aller integrierten numerischen Typen – initialisiert oder zugewiesen und anschließend verwendet werden, so wie im folgenden Beispiel:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-121">Alternatively, objects based on `structs` (including all built-in numeric types) can be initialized or assigned and then used as in the following example:</span></span>  
   
 ```  
 int a = 44;  // Initialize the value type...  
@@ -74,48 +55,47 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Es ist also nicht erforderlich, einen Standardkonstruktor für einen Werttyp aufzurufen.  
+ <span data-ttu-id="f8c9d-122">Es ist also nicht erforderlich, einen Standardkonstruktor für einen Werttyp aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-122">So calling the default constructor for a value type is not required.</span></span>  
   
- Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen. Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../../csharp/language-reference/keywords/base.md)-Anweisung aufgerufen werden. Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines Standardkonstruktors benötigt. Beispiel:  
+ <span data-ttu-id="f8c9d-123">Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-123">Both classes and `structs` can define constructors that take parameters.</span></span> <span data-ttu-id="f8c9d-124">Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../../csharp/language-reference/keywords/base.md)-Anweisung aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-124">Constructors that take parameters must be called through a `new` statement or a [base](../../../csharp/language-reference/keywords/base.md) statement.</span></span> <span data-ttu-id="f8c9d-125">Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines Standardkonstruktors benötigt.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-125">Classes and `structs` can also define multiple constructors, and neither is required to define a default constructor.</span></span> <span data-ttu-id="f8c9d-126">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-126">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
+ [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
- Diese Klasse kann mithilfe aller folgenden Anweisungen erstellt werden:  
+ <span data-ttu-id="f8c9d-127">Diese Klasse kann mithilfe aller folgenden Anweisungen erstellt werden:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-127">This class can be created by using either of the following statements:</span></span>  
   
- [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
+ [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
- Ein Konstruktor kann das Schlüsselwort `base` verwenden, um den Konstruktor einer Basisklasse aufzurufen. Zum Beispiel:  
+ <span data-ttu-id="f8c9d-128">Ein Konstruktor kann das Schlüsselwort `base` verwenden, um den Konstruktor einer Basisklasse aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-128">A constructor can use the `base` keyword to call the constructor of a base class.</span></span> <span data-ttu-id="f8c9d-129">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-129">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
+ [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
- In diesem Beispiel wird der Konstruktor der Basisklasse aufgerufen, bevor der Block eines Konstruktors ausgeführt wird. Das Schlüsselwort `base` kann mit oder ohne Parameter verwendet werden. Alle Parameter des Konstruktors können als Parameter für `base` oder als Teil eines Ausdrucks verwendet werden. Weitere Informationen finden Sie unter [base](../../../csharp/language-reference/keywords/base.md).  
+ <span data-ttu-id="f8c9d-130">In diesem Beispiel wird der Konstruktor der Basisklasse aufgerufen, bevor der Block eines Konstruktors ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-130">In this example, the constructor for the base class is called before the block for the constructor is executed.</span></span> <span data-ttu-id="f8c9d-131">Das Schlüsselwort `base` kann mit oder ohne Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-131">The `base` keyword can be used with or without parameters.</span></span> <span data-ttu-id="f8c9d-132">Alle Parameter des Konstruktors können als Parameter für `base` oder als Teil eines Ausdrucks verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-132">Any parameters to the constructor can be used as parameters to `base`, or as part of an expression.</span></span> <span data-ttu-id="f8c9d-133">Weitere Informationen finden Sie unter [base](../../../csharp/language-reference/keywords/base.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-133">For more information, see [base](../../../csharp/language-reference/keywords/base.md).</span></span>  
   
- Wenn ein Konstruktor der Basisklasse in einer abgeleiteten Klasse nicht explizit durch das Schlüsselwort `base` aufgerufen wird, wird der Standardkonstruktor (falls vorhanden) implizit aufgerufen. Dies bedeutet, dass die folgenden Deklarationen identisch sind:  
+ <span data-ttu-id="f8c9d-134">Wenn ein Konstruktor der Basisklasse in einer abgeleiteten Klasse nicht explizit durch das Schlüsselwort `base` aufgerufen wird, wird der Standardkonstruktor (falls vorhanden) implizit aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-134">In a derived class, if a base-class constructor is not called explicitly by using the `base` keyword, the default constructor, if there is one, is called implicitly.</span></span> <span data-ttu-id="f8c9d-135">Dies bedeutet, dass die folgenden Deklarationen identisch sind:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-135">This means that the following constructor declarations are effectively the same:</span></span>  
   
- [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
+ [!code-csharp[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
- [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
+ [!code-csharp[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
- Wenn eine Basisklasse keinen Standardkonstruktor bereitstellt, muss die abgeleitete Klasse einen expliziten Aufruf an den Basiskonstruktor mithilfe von `base` durchführen.  
+ <span data-ttu-id="f8c9d-136">Wenn eine Basisklasse keinen Standardkonstruktor bereitstellt, muss die abgeleitete Klasse einen expliziten Aufruf an den Basiskonstruktor mithilfe von `base` durchführen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-136">If a base class does not offer a default constructor, the derived class must make an explicit call to a base constructor by using `base`.</span></span>  
   
- Ein Konstruktor kann einen anderen Konstruktor in demselben Objekt über das Schlüsselwort [this](../../../csharp/language-reference/keywords/this.md) aufrufen. Genau wie `base` kann `this` mit oder ohne Parameter verwendet werden, und alle Parameter im Konstruktor sind als Parameter für `this` oder als Teil eines Ausdrucks verfügbar. Der zweite Konstruktor im vorherigen Beispiel kann z.B. über `this` neu geschrieben werden:  
+ <span data-ttu-id="f8c9d-137">Ein Konstruktor kann einen anderen Konstruktor in demselben Objekt über das Schlüsselwort [this](../../../csharp/language-reference/keywords/this.md) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-137">A constructor can invoke another constructor in the same object by using the [this](../../../csharp/language-reference/keywords/this.md) keyword.</span></span> <span data-ttu-id="f8c9d-138">Genau wie `base` kann `this` mit oder ohne Parameter verwendet werden, und alle Parameter im Konstruktor sind als Parameter für `this` oder als Teil eines Ausdrucks verfügbar.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-138">Like `base`, `this` can be used with or without parameters, and any parameters in the constructor are available as parameters to `this`, or as part of an expression.</span></span> <span data-ttu-id="f8c9d-139">Der zweite Konstruktor im vorherigen Beispiel kann z.B. über `this` neu geschrieben werden:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-139">For example, the second constructor in the previous example can be rewritten using `this`:</span></span>  
   
- [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
+ [!code-csharp[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
- Die Verwendung des Schlüsselworts `this` im vorherigen Beispiel bewirkt, dass dieser Konstruktor aufgerufen wird:  
+ <span data-ttu-id="f8c9d-140">Die Verwendung des Schlüsselworts `this` im vorherigen Beispiel bewirkt, dass dieser Konstruktor aufgerufen wird:</span><span class="sxs-lookup"><span data-stu-id="f8c9d-140">The use of the `this` keyword in the previous example causes this constructor to be called:</span></span>  
   
- [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
+ [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- Konstruktoren können als [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) oder `protected internal` markiert werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse die Klasse konstruieren können. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ <span data-ttu-id="f8c9d-141">Konstruktoren können gekennzeichnet werden, als [öffentlichen](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [geschützt](../../../csharp/language-reference/keywords/protected.md), [interne](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)oder [privaten, geschützten](../../../csharp/language-reference/keywords/private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-141">Constructors can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="f8c9d-142">Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse die Klasse konstruieren können.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-142">These access modifiers define how users of the class can construct the class.</span></span> <span data-ttu-id="f8c9d-143">Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-143">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- Ein Konstruktor kann mithilfe des Schlüsselworts [static](../../../csharp/language-reference/keywords/static.md) als statisch deklariert werden. Statische Konstruktoren werden automatisch aufgerufen, unmittelbar bevor auf ein statisches Feld zugegriffen wird, und werden generell zum Initialisieren statischer Klassenmember verwendet. Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ <span data-ttu-id="f8c9d-144">Ein Konstruktor kann mithilfe des Schlüsselworts [static](../../../csharp/language-reference/keywords/static.md) als statisch deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-144">A constructor can be declared static by using the [static](../../../csharp/language-reference/keywords/static.md) keyword.</span></span> <span data-ttu-id="f8c9d-145">Statische Konstruktoren werden automatisch aufgerufen, unmittelbar bevor auf ein statisches Feld zugegriffen wird, und werden generell zum Initialisieren statischer Klassenmember verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8c9d-145">Static constructors are called automatically, immediately before any static fields are accessed, and are generally used to initialize static class members.</span></span> <span data-ttu-id="f8c9d-146">Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="f8c9d-146">For more information, see [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="f8c9d-147">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="f8c9d-147">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-
+## <a name="see-also"></a><span data-ttu-id="f8c9d-148">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8c9d-148">See Also</span></span>  
+ [<span data-ttu-id="f8c9d-149">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f8c9d-149">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="f8c9d-150">Klassen und Strukturen</span><span class="sxs-lookup"><span data-stu-id="f8c9d-150">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="f8c9d-151">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="f8c9d-151">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="f8c9d-152">Finalizer</span><span class="sxs-lookup"><span data-stu-id="f8c9d-152">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)

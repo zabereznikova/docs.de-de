@@ -1,79 +1,59 @@
 ---
 title: Felder (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="fields-c-programming-guide"></a>Felder (C#-Programmierhandbuch)
-Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../../csharp/language-reference/keywords/class.md) oder [struct](../../../csharp/language-reference/keywords/struct.md) deklariert ist. Felder sind *Member* Ihres enthaltenden Typs.  
+# <a name="fields-c-programming-guide"></a><span data-ttu-id="9349e-102">Felder (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="9349e-102">Fields (C# Programming Guide)</span></span>
+<span data-ttu-id="9349e-103">Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../../csharp/language-reference/keywords/class.md) oder [struct](../../../csharp/language-reference/keywords/struct.md) deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="9349e-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="9349e-104">Felder sind *Member* Ihres enthaltenden Typs.</span><span class="sxs-lookup"><span data-stu-id="9349e-104">Fields are *members* of their containing type.</span></span>  
   
- Eine Klasse oder Struktur kann möglicherweise über Instanzenfelder, statische Felder oder beides verfügen. Instanzenfelder sind für eine Instanz eines Typs spezifisch. Wenn Sie eine Klasse T mit einem Instanzenfeld F haben, können Sie zwei Objekte vom Typ T erstellen und den Wert von F in jedem Objekt ändern, ohne dabei den Wert in dem anderen Objekt zu beeinflussen. Im Gegensatz dazu gehört ein statisches Feld zur Klasse selbst und wird in allen Instanzen dieser Klasse gemeinsam verwendet. Änderungen, die von der Instanz A vorgenommen wurden, werden für die Instanzen B und C direkt sichtbar, sobald sie auf das Feld zugreifen.  
+ <span data-ttu-id="9349e-105">Eine Klasse oder Struktur kann möglicherweise über Instanzenfelder, statische Felder oder beides verfügen.</span><span class="sxs-lookup"><span data-stu-id="9349e-105">A class or struct may have instance fields or static fields or both.</span></span> <span data-ttu-id="9349e-106">Instanzenfelder sind für eine Instanz eines Typs spezifisch.</span><span class="sxs-lookup"><span data-stu-id="9349e-106">Instance fields are specific to an instance of a type.</span></span> <span data-ttu-id="9349e-107">Wenn Sie eine Klasse T mit einem Instanzenfeld F haben, können Sie zwei Objekte vom Typ T erstellen und den Wert von F in jedem Objekt ändern, ohne dabei den Wert in dem anderen Objekt zu beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="9349e-107">If you have a class T, with an instance field F, you can create two objects of type T, and modify the value of F in each object without affecting the value in the other object.</span></span> <span data-ttu-id="9349e-108">Im Gegensatz dazu gehört ein statisches Feld zur Klasse selbst und wird in allen Instanzen dieser Klasse gemeinsam verwendet.</span><span class="sxs-lookup"><span data-stu-id="9349e-108">By contrast, a static field belongs to the class itself, and is shared among all instances of that class.</span></span> <span data-ttu-id="9349e-109">Änderungen, die von der Instanz A vorgenommen wurden, werden für die Instanzen B und C direkt sichtbar, sobald sie auf das Feld zugreifen.</span><span class="sxs-lookup"><span data-stu-id="9349e-109">Changes made from instance A will be visibly immediately to instances B and C if they access the field.</span></span>  
   
- Im Allgemeinen sollten Sie Felder nur für Variablen verwenden, die private oder geschützte Zugriffsmöglichkeiten haben. Daten, die Ihre Klasse für Clientcode verfügbar macht, sollten über [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md), [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md) und [Indexer](../../../csharp/programming-guide/indexers/index.md) bereitgestellt werden. Sie können sich mit diesen Konstrukten für indirekten Zugriff auf interne Felder vor ungültigen Eingabewerten schützen. Ein privates Feld, das über eine öffentliche Eigenschaft bereitgestellte Daten speichert, wird als *Sicherungsspeicher* oder *Unterstützungsfeld* bezeichnet.  
+ <span data-ttu-id="9349e-110">Im Allgemeinen sollten Sie Felder nur für Variablen verwenden, die private oder geschützte Zugriffsmöglichkeiten haben.</span><span class="sxs-lookup"><span data-stu-id="9349e-110">Generally, you should use fields only for variables that have private or protected accessibility.</span></span> <span data-ttu-id="9349e-111">Daten, die Ihre Klasse für Clientcode verfügbar macht, sollten über [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md), [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md) und [Indexer](../../../csharp/programming-guide/indexers/index.md) bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="9349e-111">Data that your class exposes to client code should be provided through [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) and [indexers](../../../csharp/programming-guide/indexers/index.md).</span></span> <span data-ttu-id="9349e-112">Sie können sich mit diesen Konstrukten für indirekten Zugriff auf interne Felder vor ungültigen Eingabewerten schützen.</span><span class="sxs-lookup"><span data-stu-id="9349e-112">By using these constructs for indirect access to internal fields, you can guard against invalid input values.</span></span> <span data-ttu-id="9349e-113">Ein privates Feld, das über eine öffentliche Eigenschaft bereitgestellte Daten speichert, wird als *Sicherungsspeicher* oder *Unterstützungsfeld* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="9349e-113">A private field that stores the data exposed by a public property is called a *backing store* or *backing field*.</span></span>  
   
- Felder speichern in der Regel die Daten, die über Zugriff auf mehr als eine Klassenmethode verfügen müssen und länger als die Lebensdauer einer einzelnen Methode gespeichert werden müssen. Z.B. verfügt eine Klasse, die ein Kalenderdatum darstellt, möglicherweise über drei Felder: Jeweils eines für Monat, Tag und Jahr. Variablen, die außerhalb des Bereichs einer einzelnen Methode nicht verwendet werden, sollten als *lokale Variablen* innerhalb des Methodentexts selbst deklariert werden.  
+ <span data-ttu-id="9349e-114">Felder speichern in der Regel die Daten, die über Zugriff auf mehr als eine Klassenmethode verfügen müssen und länger als die Lebensdauer einer einzelnen Methode gespeichert werden müssen.</span><span class="sxs-lookup"><span data-stu-id="9349e-114">Fields typically store the data that must be accessible to more than one class method and must be stored for longer than the lifetime of any single method.</span></span> <span data-ttu-id="9349e-115">Z.B. verfügt eine Klasse, die ein Kalenderdatum darstellt, möglicherweise über drei Felder: Jeweils eines für Monat, Tag und Jahr.</span><span class="sxs-lookup"><span data-stu-id="9349e-115">For example, a class that represents a calendar date might have three integer fields: one for the month, one for the day, and one for the year.</span></span> <span data-ttu-id="9349e-116">Variablen, die außerhalb des Bereichs einer einzelnen Methode nicht verwendet werden, sollten als *lokale Variablen* innerhalb des Methodentexts selbst deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="9349e-116">Variables that are not used outside the scope of a single method should be declared as *local variables* within the method body itself.</span></span>  
   
- Felder werden innerhalb des Class-Blocks deklariert, indem Sie die Zugriffsebene des Felds, gefolgt vom Typ des Felds, gefolgt vom Namen des Felds angeben. Beispiel:  
+ <span data-ttu-id="9349e-117">Felder werden innerhalb des Class-Blocks deklariert, indem Sie die Zugriffsebene des Felds, gefolgt vom Typ des Felds, gefolgt vom Namen des Felds angeben.</span><span class="sxs-lookup"><span data-stu-id="9349e-117">Fields are declared in the class block by specifying the access level of the field, followed by the type of the field, followed by the name of the field.</span></span> <span data-ttu-id="9349e-118">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="9349e-118">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt hinter dem Objektnamen ein, gefolgt vom Namen des Felds, wie in `objectname.fieldname`. Beispiel:  
+ <span data-ttu-id="9349e-119">Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt hinter dem Objektnamen ein, gefolgt vom Namen des Felds, wie in `objectname.fieldname`.</span><span class="sxs-lookup"><span data-stu-id="9349e-119">To access a field in an object, add a period after the object name, followed by the name of the field, as in `objectname.fieldname`.</span></span> <span data-ttu-id="9349e-120">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="9349e-120">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
- Einem Feld kann ein Anfangswert durch Verwendung des Zuweisungsoperators zugewiesen werden, wenn das Feld deklariert wird. Sie würden z.B. `day` wie im folgenden Beispiel deklarieren, um das `day`-Feld automatisch `"Monday"` zuzuweisen:  
+ <span data-ttu-id="9349e-121">Einem Feld kann ein Anfangswert durch Verwendung des Zuweisungsoperators zugewiesen werden, wenn das Feld deklariert wird.</span><span class="sxs-lookup"><span data-stu-id="9349e-121">A field can be given an initial value by using the assignment operator when the field is declared.</span></span> <span data-ttu-id="9349e-122">Sie würden z.B. `day` wie im folgenden Beispiel deklarieren, um das `day`-Feld automatisch `"Monday"` zuzuweisen:</span><span class="sxs-lookup"><span data-stu-id="9349e-122">To automatically assign the `day` field to `"Monday"`, for example, you would declare `day` as in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
- Felder werden umgehend initialisiert, bevor der Konstruktor für die Objektinstanz aufgerufen wird. Wenn der Konstruktor den Wert eines Felds zuweist, überschreibt er jeden während der Felddeklaration angegebenen Wert. Weitere Informationen finden Sie unter [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
+ <span data-ttu-id="9349e-123">Felder werden umgehend initialisiert, bevor der Konstruktor für die Objektinstanz aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="9349e-123">Fields are initialized immediately before the constructor for the object instance is called.</span></span> <span data-ttu-id="9349e-124">Wenn der Konstruktor den Wert eines Felds zuweist, überschreibt er jeden während der Felddeklaration angegebenen Wert.</span><span class="sxs-lookup"><span data-stu-id="9349e-124">If the constructor assigns the value of a field, it will overwrite any value given during field declaration.</span></span> <span data-ttu-id="9349e-125">Weitere Informationen finden Sie unter [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="9349e-125">For more information, see [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).</span></span>  
   
 > [!NOTE]
->  Ein Feldinitialisierer kann nicht auf andere Instanzfelder verweisen.  
+>  <span data-ttu-id="9349e-126">Ein Feldinitialisierer kann nicht auf andere Instanzfelder verweisen.</span><span class="sxs-lookup"><span data-stu-id="9349e-126">A field initializer cannot refer to other instance fields.</span></span>  
   
- Felder können markiert werden als [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) oder `protected internal`. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Felder zugreifen können. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ <span data-ttu-id="9349e-127">Felder können als [öffentlichen](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [geschützt](../../../csharp/language-reference/keywords/protected.md), [interne](../../../csharp/language-reference/keywords/internal.md), [geschützte interne](../../../csharp/language-reference/keywords/protected-internal.md) oder [privaten, geschützten](../../../csharp/language-reference/keywords/private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="9349e-127">Fields can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="9349e-128">Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Felder zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="9349e-128">These access modifiers define how users of the class can access the fields.</span></span> <span data-ttu-id="9349e-129">Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="9349e-129">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- Ein Feld kann optional als [static](../../../csharp/language-reference/keywords/static.md) deklariert werden. Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ <span data-ttu-id="9349e-130">Ein Feld kann optional als [static](../../../csharp/language-reference/keywords/static.md) deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="9349e-130">A field can optionally be declared [static](../../../csharp/language-reference/keywords/static.md).</span></span> <span data-ttu-id="9349e-131">Dadurch steht das Feld Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="9349e-131">This makes the field available to callers at any time, even if no instance of the class exists.</span></span> <span data-ttu-id="9349e-132">Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="9349e-132">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- Ein Feld kann als [readonly](../../../csharp/language-reference/keywords/readonly.md) deklariert werden. Einem schreibgeschützten Feld kann nur ein Wert während der Initialisierung oder in einem Konstruktor zugewiesen werden. Ein `static``readonly`-Feld ist einer Konstanten sehr ähnlich, außer dass der C#-Compiler nicht auf den Wert eines statischen schreibgeschützten Felds zur Kompilierzeit, sondern nur zur Laufzeit zugreifen kann. Weitere Informationen finden Sie unter [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md).  
+ <span data-ttu-id="9349e-133">Ein Feld kann als [readonly](../../../csharp/language-reference/keywords/readonly.md) deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="9349e-133">A field can be declared [readonly](../../../csharp/language-reference/keywords/readonly.md).</span></span> <span data-ttu-id="9349e-134">Einem schreibgeschützten Feld kann nur ein Wert während der Initialisierung oder in einem Konstruktor zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="9349e-134">A read-only field can only be assigned a value during initialization or in a constructor.</span></span> <span data-ttu-id="9349e-135">Ein `static``readonly`-Feld ist einer Konstanten sehr ähnlich, außer dass der C#-Compiler nicht auf den Wert eines statischen schreibgeschützten Felds zur Kompilierzeit, sondern nur zur Laufzeit zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="9349e-135">A `static``readonly` field is very similar to a constant, except that the C# compiler does not have access to the value of a static read-only field at compile time, only at run time.</span></span> <span data-ttu-id="9349e-136">Weitere Informationen finden Sie unter [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md).</span><span class="sxs-lookup"><span data-stu-id="9349e-136">For more information, see [Constants](../../../csharp/programming-guide/classes-and-structs/constants.md).</span></span>  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a><span data-ttu-id="9349e-137">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="9349e-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="9349e-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9349e-138">See Also</span></span>  
+ [<span data-ttu-id="9349e-139">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="9349e-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9349e-140">Klassen und Strukturen</span><span class="sxs-lookup"><span data-stu-id="9349e-140">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="9349e-141">Verwenden von Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="9349e-141">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="9349e-142">Vererbung</span><span class="sxs-lookup"><span data-stu-id="9349e-142">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="9349e-143">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="9349e-143">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="9349e-144">Abstrakte und versiegelte Klassen und Klassenmember</span><span class="sxs-lookup"><span data-stu-id="9349e-144">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

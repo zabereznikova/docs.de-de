@@ -1,41 +1,47 @@
 ---
-title: "Blocking Application Execution by Ending an Async Operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "blocks, asynchronous operations"
-  - "AsyncWaitHandle property"
-  - "asynchronous programming, blocking applications"
-  - "blocking application execution"
+title: "Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- blocks, asynchronous operations
+- AsyncWaitHandle property
+- asynchronous programming, blocking applications
+- blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: ccca6e1e4f6b5cdf098018b59426fb2262e2b346
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Blocking Application Execution by Ending an Async Operation
-Anwendungen, die während des Wartens auf die Ergebnisse asynchroner Operationen keine anderen Aufgaben ausführen können, müssen bis zum Abschluss der Operation blockieren.  Um den Hauptthread der Anwendung zu blockieren, wenn auf den Abschluss einer asynchronen Operation gewartet wird, verwenden Sie eine der folgenden Optionen:  
+# <a name="blocking-application-execution-by-ending-an-async-operation"></a><span data-ttu-id="57345-102">Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs</span><span class="sxs-lookup"><span data-stu-id="57345-102">Blocking Application Execution by Ending an Async Operation</span></span>
+<span data-ttu-id="57345-103">Anwendungen, die nicht fortgesetzt werden können, andere Aufgaben während des Wartens auf die Ergebnisse eines asynchronen Vorgangs blockiert, bis der Vorgang abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="57345-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="57345-104">Hauptthread der Anwendung blockiert wird, beim Abschluss eines asynchronen Vorgangs warten, verwenden Sie eine der folgenden Optionen:</span><span class="sxs-lookup"><span data-stu-id="57345-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  
   
--   Rufen Sie die **Beenden** *OperationName*\-Methode der asynchronen Operation auf.  Diese Vorgehensweise wird in diesem Thema veranschaulicht.  
+-   <span data-ttu-id="57345-105">Rufen Sie die asynchronen Vorgänge **End** *OperationName* Methode.</span><span class="sxs-lookup"><span data-stu-id="57345-105">Call the asynchronous operations **End** *OperationName* method.</span></span> <span data-ttu-id="57345-106">Dieser Ansatz wird in diesem Thema veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="57345-106">This approach is demonstrated in this topic.</span></span>  
   
--   Verwenden Sie die <xref:System.IAsyncResult.AsyncWaitHandle%2A>\-Eigenschaft <xref:System.IAsyncResult>, das von der **Begin** *OperationName*\-Methode der asynchronen Operation zurückgegeben wird.  Ein Beispiel zu dieser Vorgehensweise finden Sie unter [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+-   <span data-ttu-id="57345-107">Verwenden der <xref:System.IAsyncResult.AsyncWaitHandle%2A> Eigenschaft von der <xref:System.IAsyncResult> zurückgegeben, die für des asynchronen Vorgangs **beginnen** *OperationName* Methode.</span><span class="sxs-lookup"><span data-stu-id="57345-107">Use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> returned by the asynchronous operation's **Begin** *OperationName* method.</span></span> <span data-ttu-id="57345-108">Ein Beispiel für diesen Ansatz finden Sie unter [blockieren Anwendung Ausführung mithilfe von AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span><span class="sxs-lookup"><span data-stu-id="57345-108">For an example that demonstrates this approach, see [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span></span>  
   
- Anwendungen, die die **Beenden** *OperationName*\-Methode verwenden, um zu blockieren, bis ein asynchroner Vorgang abgeschlossen ist, rufen im Normalfall die **Begin** *OperationName*\-Methode auf, führen dann Aufgaben, für die die Ergebnisse der Operation ausgeführt werden kann, aufrufen und dann auf **Beenden** *OperationName*.  
+ <span data-ttu-id="57345-109">Anwendungen, die die **End** *OperationName* Methode blockiert, bis ein asynchroner Vorgang abgeschlossen ist in der Regel ruft der **beginnen**  *OperationName* -Methode, führen Sie alle Daten, die ausgeführt werden kann, ohne die Ergebnisse des Vorgangs, und rufen dann **End** *OperationName*.</span><span class="sxs-lookup"><span data-stu-id="57345-109">Applications that use the **End** *OperationName* method to block until an asynchronous operation is complete will typically call the **Begin** *OperationName* method, perform any work that can be done without the results of the operation, and then call **End** *OperationName*.</span></span>  
   
-## Beispiel  
- Das folgende Codebeispiel veranschaulicht, wie asynchrone Methoden in der <xref:System.Net.Dns>\-Klasse verwendet werden, um DNS\-Daten für einen vom Benutzer festgelegten Computer abzurufen.  Beachten Sie, dass für den <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback`\-Parameter und den `stateObject`\-Parameter `null` \(`Nothing` in Visual Basic\) übergeben wird, da solche Argumente für diese Vorgehensweise entbehrlich sind.  
+## <a name="example"></a><span data-ttu-id="57345-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="57345-110">Example</span></span>  
+ <span data-ttu-id="57345-111">Das folgende Codebeispiel veranschaulicht die Verwendung asynchroner Methoden in der <xref:System.Net.Dns> Klasse Domain Name System-Informationen für einen Benutzer angegebenen Computer abgerufen.</span><span class="sxs-lookup"><span data-stu-id="57345-111">The following code example demonstrates using asynchronous methods in the <xref:System.Net.Dns> class to retrieve Domain Name System information for a user-specified computer.</span></span> <span data-ttu-id="57345-112">Beachten Sie, dass `null` (`Nothing` in Visual Basic) übergeben wird, für die <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` und `stateObject` Parameter, da diese Argumente bei dieser Vorgehensweise nicht erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="57345-112">Note that `null` (`Nothing` in Visual Basic) is passed for the <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` and `stateObject` parameters because these arguments are not required when using this approach.</span></span>  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  
   
-## Siehe auch  
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="57345-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="57345-113">See Also</span></span>  
+ [<span data-ttu-id="57345-114">Ereignisbasiertes asynchrones Muster (EAP)</span><span class="sxs-lookup"><span data-stu-id="57345-114">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [<span data-ttu-id="57345-115">Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)</span><span class="sxs-lookup"><span data-stu-id="57345-115">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

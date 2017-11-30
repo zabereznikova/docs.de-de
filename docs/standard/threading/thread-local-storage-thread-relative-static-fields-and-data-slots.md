@@ -1,69 +1,72 @@
 ---
-title: "Thread Local Storage: Thread-Relative Static Fields and Data Slots | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], local storage"
-  - "threading [.NET Framework], thread-relative static fields"
-  - "local thread storage"
-  - "TLS"
+title: 'Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], local storage
+- threading [.NET Framework], thread-relative static fields
+- local thread storage
+- TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 39dd80d378171563f2aadadaa146278e8a417d32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Thread Local Storage: Thread-Relative Static Fields and Data Slots
-Verwaltete lokale Threadspeicher \(TLS\) können zur Speicherung von Daten verwendet werden, die für einen Thread und eine Anwendungsdomäne eindeutig sind.  .NET Framework bietet zwei Möglichkeiten zur Verwendung verwalteter lokaler Threadspeicher: threadbezogene statische Felder und Datenslots.  
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="03e7f-102">Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots</span><span class="sxs-lookup"><span data-stu-id="03e7f-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
+<span data-ttu-id="03e7f-103">Sie können lokale Threadspeicher (TLS) zum Speichern von Daten verwenden, die für einen Thread und die Anwendung eindeutig ist.</span><span class="sxs-lookup"><span data-stu-id="03e7f-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="03e7f-104">.NET Framework bietet zwei Möglichkeiten zur Verwendung verwaltet TLS: threadbezogene statische Felder und Datenslots.</span><span class="sxs-lookup"><span data-stu-id="03e7f-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  
   
--   Verwenden Sie threadbezogene statische Felder \(threadbezogene `Shared`\-Felder in Visual Basic\), wenn Sie die Anforderungen zur Kompilierzeit genau einschätzen können.  Threadbezogene statische Felder bieten die beste Leistung.  Außerdem ermöglichen sie die Typüberprüfung zur Kompilierzeit.  
+-   <span data-ttu-id="03e7f-105">Verwenden Sie threadbezogene statische Felder (threadbezogene `Shared` Felder in Visual Basic), wenn Sie Ihre Bedürfnisse exakt zum Zeitpunkt der Kompilierung erwarten können.</span><span class="sxs-lookup"><span data-stu-id="03e7f-105">Use thread-relative static fields (thread-relative `Shared` fields in Visual Basic) if you can anticipate your exact needs at compile time.</span></span> <span data-ttu-id="03e7f-106">Threadbezogene statische Felder bieten die beste Leistung.</span><span class="sxs-lookup"><span data-stu-id="03e7f-106">Thread-relative static fields provide the best performance.</span></span> <span data-ttu-id="03e7f-107">Außerdem können Sie die Vorteile der typüberprüfung zur Kompilierzeit.</span><span class="sxs-lookup"><span data-stu-id="03e7f-107">They also give you the benefits of compile-time type checking.</span></span>  
   
--   Verwenden Sie Datenslots, wenn Sie die tatsächlichen Anforderungen unter Umständen erst zur Laufzeit kennen.  Datenslots sind langsamer und umständlicher als threadbezogene statische Felder. Außerdem werden die Daten als <xref:System.Object>\-Typ gespeichert, sodass Sie sie vor der Verwendung in den richtigen Typ umwandeln müssen.  
+-   <span data-ttu-id="03e7f-108">Verwenden Sie Datenslots aus, wenn die tatsächlichen Anforderungen nur zur Laufzeit ermittelt werden können.</span><span class="sxs-lookup"><span data-stu-id="03e7f-108">Use data slots when your actual requirements might be discovered only at run time.</span></span> <span data-ttu-id="03e7f-109">Datenslots sind langsamer und umständlicher als threadbezogene statische Felder verwenden, und Daten werden als Typ gespeichert <xref:System.Object>, sodass Sie es in den richtigen Typ umwandeln müssen, bevor Sie ihn verwenden.</span><span class="sxs-lookup"><span data-stu-id="03e7f-109">Data slots are slower and more awkward to use than thread-relative static fields, and data is stored as type <xref:System.Object>, so you must cast it to the correct type before you use it.</span></span>  
   
- In nicht verwaltetem C\+\+ wird `TlsAlloc` verwendet, um Slots dynamisch zuzuweisen, und `__declspec(thread)`, um zu deklarieren, dass eine Variable in threadbezogenem Speicher zugewiesen werden soll.  Threadbezogene statische Felder und Datenslots stellen die verwaltete Version dieses Verhaltens bereit.  
+ <span data-ttu-id="03e7f-110">Verwenden Sie in nicht verwalteten C++ `TlsAlloc` Slots dynamisch zuordnen und `__declspec(thread)` zu deklarieren, dass eine Variable in threadbezogene Speicher zugewiesen werden soll.</span><span class="sxs-lookup"><span data-stu-id="03e7f-110">In unmanaged C++, you use `TlsAlloc` to allocate slots dynamically and `__declspec(thread)` to declare that a variable should be allocated in thread-relative storage.</span></span> <span data-ttu-id="03e7f-111">Threadbezogene statische Felder und Datenslots stellen die verwaltete Version dieses Verhaltens bereit.</span><span class="sxs-lookup"><span data-stu-id="03e7f-111">Thread-relative static fields and data slots provide the managed version of this behavior.</span></span>  
   
- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie threadlokale Objekte, die spät initialisiert werden, mithilfe der <xref:System.Threading.ThreadLocal%601?displayProperty=fullName>\-Klasse erstellen, sobald das Objekt erstmals genutzt wird.  Weitere Informationen finden Sie unter [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+ <span data-ttu-id="03e7f-112">In der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie die <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> Klasse threadlokale Objekte zu erstellen, der verzögert initialisiert werden, wenn das Objekt zuerst genutzt wird.</span><span class="sxs-lookup"><span data-stu-id="03e7f-112">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to create thread-local objects that are initialized lazily when the object is first consumed.</span></span> <span data-ttu-id="03e7f-113">Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="03e7f-113">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## Eindeutigkeit der Daten im verwalteten TLS  
- Die Daten im verwalteten TLS sind für die Kombination aus Thread und Anwendungsdomäne eindeutig, und zwar unabhängig davon, ob Sie threadbezogene statische Felder oder Datenslots verwenden.  
+## <a name="uniqueness-of-data-in-managed-tls"></a><span data-ttu-id="03e7f-114">Eindeutigkeit der Daten im verwalteten TLS</span><span class="sxs-lookup"><span data-stu-id="03e7f-114">Uniqueness of Data in Managed TLS</span></span>  
+ <span data-ttu-id="03e7f-115">Sowohl bei Verwendung von threadbezogene statische Felder oder Datenslots sind Daten in verwalteten TLS für die Kombination von Threads und eine Anwendungsdomäne eindeutig.</span><span class="sxs-lookup"><span data-stu-id="03e7f-115">Whether you use thread-relative static fields or data slots, data in managed TLS is unique to the combination of thread and application domain.</span></span>  
   
--   Innerhalb einer Anwendungsdomäne kann ein Thread die Daten eines anderen Threads nicht ändern, auch wenn beide Threads das gleiche Feld oder den gleichen Slot verwenden.  
+-   <span data-ttu-id="03e7f-116">Innerhalb einer Anwendungsdomäne kann nicht nur ein Thread Daten aus einem anderen Thread ändern, selbst wenn beide Threads das gleiche Feld oder Slot verwenden.</span><span class="sxs-lookup"><span data-stu-id="03e7f-116">Within an application domain, one thread cannot modify data from another thread, even when both threads use the same field or slot.</span></span>  
   
--   Wenn ein Thread aus mehreren Anwendungsdomänen auf das gleiche Feld oder den gleichen Slot zugreift, wird in jeder Anwendungsdomäne ein separater Wert beibehalten.  
+-   <span data-ttu-id="03e7f-117">Wenn ein Thread das gleiche Feld oder den Slot aus mehreren Anwendungsdomänen zugreift, wird in jeder Anwendungsdomäne ein separater Wert beibehalten.</span><span class="sxs-lookup"><span data-stu-id="03e7f-117">When a thread accesses the same field or slot from multiple application domains, a separate value is maintained in each application domain.</span></span>  
   
- Wenn z. B. ein Thread den Wert eines threadbezogenen statischen Felds festlegt, in eine andere Anwendungsdomäne wechselt und anschließend den Wert des Felds abruft, unterscheidet sich der in der zweiten Anwendungsdomäne abgerufene Wert von dem Wert in der ersten Anwendungsdomäne.  Wenn für das Feld in der zweiten Anwendungsdomäne ein neuer Wert festgelegt wird, hat dies keine Auswirkungen auf den Wert des Felds in der ersten Anwendungsdomäne.  
+ <span data-ttu-id="03e7f-118">Z. B. wenn ein Thread legt der Wert eines statischen Felds threadbezogene geht in einer anderen Anwendungsdomäne und ruft dann den Wert des Felds ab, der in der zweiten Anwendungsdomäne abgerufene Wert unterscheidet sich von den Wert in der ersten Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="03e7f-118">For example, if a thread sets the value of a thread-relative static field, enters another application domain, and then retrieves the value of the field, the value retrieved in the second application domain differs from the value in the first application domain.</span></span> <span data-ttu-id="03e7f-119">Ein neuer Wert für das Feld in der zweiten Anwendungsdomäne festgelegt wirkt sich nicht auf den Wert des Felds in der ersten Anwendungsdomäne aus.</span><span class="sxs-lookup"><span data-stu-id="03e7f-119">Setting a new value for the field in the second application domain does not affect the field's value in the first application domain.</span></span>  
   
- Ähnlich verhält es sich, wenn ein Thread den gleichen benannten Datenslot in zwei verschiedenen Anwendungsdomänen abruft: Die Daten in der ersten Anwendungsdomäne sind unabhängig von den Daten in der zweiten Anwendungsdomäne.  
+ <span data-ttu-id="03e7f-120">Wenn ein Thread die gleichen benannten Datenslot in zwei unterschiedlichen Anwendungsdomänen abruft, bleiben die Daten in der ersten Anwendungsdomäne auf ähnliche Weise, unabhängig von den Daten in der zweiten Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="03e7f-120">Similarly, when a thread gets the same named data slot in two different application domains, the data in the first application domain remains independent of the data in the second application domain.</span></span>  
   
-## Threadbezogene statische Felder  
- Wenn Sie wissen, dass bestimmte Daten für eine Kombination aus Thread und Anwendungsdomäne stets eindeutig sind, wenden Sie das <xref:System.ThreadStaticAttribute>\-Attribut auf das statische Feld an.  Die Verwendung des Felds unterscheidet sich nicht von der eines anderen statischen Felds.  Die Daten im Feld sind für jeden Thread, der sie verwendet, eindeutig.  
+## <a name="thread-relative-static-fields"></a><span data-ttu-id="03e7f-121">Threadbezogene statische Felder</span><span class="sxs-lookup"><span data-stu-id="03e7f-121">Thread-Relative Static Fields</span></span>  
+ <span data-ttu-id="03e7f-122">Wenn Sie wissen, dass es sich bei ein Teil der Daten immer für eine Anwendungsdomäne Kombination aus "und" Thread eindeutig ist, gelten die <xref:System.ThreadStaticAttribute> -Attribut auf das statische Feld.</span><span class="sxs-lookup"><span data-stu-id="03e7f-122">If you know that a piece of data is always unique to a thread and application-domain combination, apply the <xref:System.ThreadStaticAttribute> attribute to the static field.</span></span> <span data-ttu-id="03e7f-123">Verwenden Sie das Feld wie jedes andere statische Feld verwenden.</span><span class="sxs-lookup"><span data-stu-id="03e7f-123">Use the field as you would use any other static field.</span></span> <span data-ttu-id="03e7f-124">Die Daten in das Feld ist nur für jeden Thread, der verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="03e7f-124">The data in the field is unique to each thread that uses it.</span></span>  
   
- Threadbezogene statische Felder bieten eine bessere Leistung als Datenslots und ermöglichen zudem die Typüberprüfung zur Kompilierzeit.  
+ <span data-ttu-id="03e7f-125">Threadbezogene statische Felder Geben Sie eine bessere Leistung als Datenslots und haben den Vorteil, dass typüberprüfung zur Kompilierzeit.</span><span class="sxs-lookup"><span data-stu-id="03e7f-125">Thread-relative static fields provide better performance than data slots and have the benefit of compile-time type checking.</span></span>  
   
- Beachten Sie, dass jeder Klassenkonstruktorcode auf dem ersten Thread im ersten Kontext ausgeführt wird, der auf das Feld zugreift.  In allen anderen Threads oder Kontexten in der gleichen Anwendungsdomäne werden die Felder mit `null` \(`Nothing` in Visual Basic\) initialisiert, wenn sie Referenztypen sind, oder mit ihren Standardwerten, wenn es sich um Werttypen handelt.  Daher sollten Sie die Initialisierung threadbezogener statischer Felder nicht von Klassenkonstruktoren abhängig machen.  Stattdessen sollten Sie threadbezogene statische Felder nach Möglichkeit nicht initialisieren und davon ausgehen, dass sie mit `null` \(`Nothing`\) oder mit ihren Standardwerten initialisiert werden.  
+ <span data-ttu-id="03e7f-126">Denken Sie daran, dass die Klasse Konstruktorcode auf dem ersten Thread im ersten Kontext ausgeführt wird, die auf das Feld zugreift.</span><span class="sxs-lookup"><span data-stu-id="03e7f-126">Be aware that any class constructor code will run on the first thread in the first context that accesses the field.</span></span> <span data-ttu-id="03e7f-127">In allen anderen Threads oder Kontexten in der gleichen Anwendungsdomäne werden die Felder auf initialisiert `null` (`Nothing` in Visual Basic) Wenn sie Verweistypen sind, oder an Standardeinstellung Werte hat, wenn sie sind Werttypen.</span><span class="sxs-lookup"><span data-stu-id="03e7f-127">In all other threads or contexts in the same application domain, the fields will be initialized to `null` (`Nothing` in Visual Basic) if they are reference types, or to their default values if they are value types.</span></span> <span data-ttu-id="03e7f-128">Aus diesem Grund sollten Sie nicht auf Klassenkonstruktoren threadbezogene statische Felder initialisieren verlassen.</span><span class="sxs-lookup"><span data-stu-id="03e7f-128">Therefore, you should not rely on class constructors to initialize thread-relative static fields.</span></span> <span data-ttu-id="03e7f-129">Stattdessen vermeiden Sie beim Initialisieren des threadbezogene statische Felder und wird davon ausgegangen, dass sie mit initialisiert werden `null` (`Nothing`) oder mit ihren Standardwerten.</span><span class="sxs-lookup"><span data-stu-id="03e7f-129">Instead, avoid initializing thread-relative static fields and assume that they are initialized to `null` (`Nothing`) or to their default values.</span></span>  
   
-## Datenslots  
- .NET Framework stellt dynamische Datenslots bereit, die für eine Kombination aus Thread und Anwendungsdomäne eindeutig sind.  Es gibt zwei Arten von Datenslots: benannte und nicht benannte.  Beide werden mit der <xref:System.LocalDataStoreSlot>\-Struktur implementiert.  
+## <a name="data-slots"></a><span data-ttu-id="03e7f-130">Datenslots</span><span class="sxs-lookup"><span data-stu-id="03e7f-130">Data Slots</span></span>  
+ <span data-ttu-id="03e7f-131">.NET Framework bietet dynamische Datenslots, die eine Kombination aus Thread und Anwendungsdomäne eindeutig sind.</span><span class="sxs-lookup"><span data-stu-id="03e7f-131">The .NET Framework provides dynamic data slots that are unique to a combination of thread and application-domain.</span></span> <span data-ttu-id="03e7f-132">Es gibt zwei Arten von Datenslots: benannte und nicht benannte Slots.</span><span class="sxs-lookup"><span data-stu-id="03e7f-132">There are two types of data slots: named slots and unnamed slots.</span></span> <span data-ttu-id="03e7f-133">Beide implementiert werden, mithilfe der <xref:System.LocalDataStoreSlot> Struktur.</span><span class="sxs-lookup"><span data-stu-id="03e7f-133">Both are implemented by using the <xref:System.LocalDataStoreSlot> structure.</span></span>  
   
--   Um einen benannten Datenslot zu erstellen, verwenden Sie die <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=fullName>\-Methode oder die <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=fullName>\-Methode.  Zum Abrufen eines Verweises auf einen vorhandenen benannten Slot übergeben Sie seinen Namen an die <xref:System.Threading.Thread.GetNamedDataSlot%2A>\-Methode.  
+-   <span data-ttu-id="03e7f-134">Um einen benannten Datenslot zu erstellen, verwenden Sie die <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="03e7f-134">To create a named data slot, use the <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> or <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="03e7f-135">Um einen Verweis auf einen vorhandenen benannten Slot zu erhalten, übergeben Sie den Namen in der <xref:System.Threading.Thread.GetNamedDataSlot%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="03e7f-135">To get a reference to an existing named slot, pass its name to the <xref:System.Threading.Thread.GetNamedDataSlot%2A> method.</span></span>  
   
--   Um einen unbenannten Datenslot zu erstellen, verwenden Sie die <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=fullName>\-Methode.  
+-   <span data-ttu-id="03e7f-136">Um einen unbenannten Datenslot zu erstellen, verwenden Sie die <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="03e7f-136">To create an unnamed data slot, use the <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> method.</span></span>  
   
- Verwenden Sie für benannte und unbenannte Datenslots die <xref:System.Threading.Thread.SetData%2A?displayProperty=fullName>\-Methode und die <xref:System.Threading.Thread.GetData%2A?displayProperty=fullName>\-Methode, um die Informationen im Slot festzulegen und abzurufen.  Hierbei handelt es sich um statische Methoden, die stets auf die Daten für den Thread angewendet werden, der sie zurzeit ausführt.  
+ <span data-ttu-id="03e7f-137">Verwenden Sie für benannte und Steckplätze unbenannte, die <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> Methoden festlegen und Abrufen der Informationen im Slot.</span><span class="sxs-lookup"><span data-stu-id="03e7f-137">For both named and unnamed slots, use the <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> and <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> methods to set and retrieve the information in the slot.</span></span> <span data-ttu-id="03e7f-138">Hierbei handelt es sich um statische Methoden, die immer auf die Daten für den Thread, der derzeit diese ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="03e7f-138">These are static methods that always act on the data for the thread that is currently executing them.</span></span>  
   
- Benannte Slots können von Vorteil sein, da Sie den Slot bei Bedarf abrufen können, indem Sie seinen Namen an die <xref:System.Threading.Thread.GetNamedDataSlot%2A>\-Methode übergeben, anstatt einen Verweis auf einen unbenannten Slot beizubehalten.  Wenn jedoch eine andere Komponente den gleichen Namen für ihren threadbezogenen Speicher verwendet und ein Thread Code sowohl aus Ihrer Komponente als auch aus der anderen Komponente ausführt, können die beiden Komponenten die Daten der jeweils anderen Komponente beschädigen. \(In diesem Szenario wird davon ausgegangen, dass beide Komponenten in der gleichen Anwendungsdomäne ausgeführt werden und nicht zur Verwendung der gleichen Daten vorgesehen sind.\)  
+ <span data-ttu-id="03e7f-139">Benannte Slots ist besonders angenehm beim, da das Einschubfach abgerufen werden können, bei Bedarf durch übergeben den Namen in der <xref:System.Threading.Thread.GetNamedDataSlot%2A> -Methode, statt einen Verweis auf einen unbenannten Slot beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="03e7f-139">Named slots can be convenient, because you can retrieve the slot when you need it by passing its name to the <xref:System.Threading.Thread.GetNamedDataSlot%2A> method, instead of maintaining a reference to an unnamed slot.</span></span> <span data-ttu-id="03e7f-140">Allerdings möglicherweise einer anderen Komponente verwendet den gleichen Namen für den Speicher threadbezogene und ein Thread führt Code aus der Komponente und die andere Komponente, die zwei Komponenten gegenseitig Daten beschädigt werden.</span><span class="sxs-lookup"><span data-stu-id="03e7f-140">However, if another component uses the same name for its thread-relative storage and a thread executes code from both your component and the other component, the two components might corrupt each other's data.</span></span> <span data-ttu-id="03e7f-141">(Dieses Szenario wird davon ausgegangen, dass beide Komponenten in der gleichen Anwendungsdomäne ausgeführt werden und sie nicht entwickelt werden, um dieselben Daten verwenden.)</span><span class="sxs-lookup"><span data-stu-id="03e7f-141">(This scenario assumes that both components are running in the same application domain, and that they are not designed to share the same data.)</span></span>  
   
-## Siehe auch  
- <xref:System.ContextStaticAttribute>   
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=fullName>   
- <xref:System.ThreadStaticAttribute>   
- <xref:System.Runtime.Remoting.Messaging.CallContext>   
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a><span data-ttu-id="03e7f-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="03e7f-142">See Also</span></span>  
+ <xref:System.ContextStaticAttribute>  
+ <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+ <xref:System.ThreadStaticAttribute>  
+ <xref:System.Runtime.Remoting.Messaging.CallContext>  
+ [<span data-ttu-id="03e7f-143">Threading</span><span class="sxs-lookup"><span data-stu-id="03e7f-143">Threading</span></span>](../../../docs/standard/threading/index.md)

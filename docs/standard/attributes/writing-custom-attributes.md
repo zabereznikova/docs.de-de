@@ -1,162 +1,169 @@
 ---
-title: "Verfassen von benutzerdefinierten Attributen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AllowMultiple-Eigenschaft"
-  - "Attributklassen, Deklarieren"
-  - "Attribute [.NET Framework], Benutzerdefiniert"
-  - "AttributeTargets-Enumeration"
-  - "AttributeUsageAttribute-Klasse, Benutzerdefinierte Attribute"
-  - "Benutzerdefinierte Attribute"
-  - "Inherited-Eigenschaft"
-  - "Mehrere Attributinstanzen"
+title: Verfassen von benutzerdefinierten Attributen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- multiple attribute instances
+- AttributeTargets enumeration
+- attributes [.NET Framework], custom
+- AllowMultiple property
+- custom attributes
+- AttributeUsageAttribute class, custom attributes
+- Inherited property
+- attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verfassen von benutzerdefinierten Attributen
-Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=fullName> ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
+# <a name="writing-custom-attributes"></a><span data-ttu-id="4012c-102">Verfassen von benutzerdefinierten Attributen</span><span class="sxs-lookup"><span data-stu-id="4012c-102">Writing Custom Attributes</span></span>
+<span data-ttu-id="4012c-103">Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen.</span><span class="sxs-lookup"><span data-stu-id="4012c-103">To design your own custom attributes, you do not need to master many new concepts.</span></span> <span data-ttu-id="4012c-104">Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="4012c-104">If you are familiar with object-oriented programming and know how to design classes, you already have most of the knowledge needed.</span></span> <span data-ttu-id="4012c-105">Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die direkt oder indirekt ableiten <xref:System.Attribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4012c-105">Custom attributes are essentially traditional classes that derive directly or indirectly from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4012c-106">Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.</span><span class="sxs-lookup"><span data-stu-id="4012c-106">Just like traditional classes, custom attributes contain methods that store and retrieve data.</span></span>  
   
- Die wichtigsten Schritte beim ordnungsgemäßen Entwerfen von benutzerdefinierten Attributklassen sind die folgenden:  
+ <span data-ttu-id="4012c-107">Die wichtigsten Schritte beim ordnungsgemäßen Entwerfen von benutzerdefinierten Attributklassen sind die folgenden:</span><span class="sxs-lookup"><span data-stu-id="4012c-107">The primary steps to properly design custom attribute classes are as follows:</span></span>  
   
--   [Anwenden des AttributeUsage\-Attributs](#cpconapplyingattributeusageattribute)  
+-   [<span data-ttu-id="4012c-108">Anwenden des AttributeUsage-Attributs</span><span class="sxs-lookup"><span data-stu-id="4012c-108">Applying the AttributeUsageAttribute</span></span>](#cpconapplyingattributeusageattribute)  
   
--   [Deklarieren der Attributklasse](#cpcondeclaringattributeclass)  
+-   [<span data-ttu-id="4012c-109">Deklarieren der Attributklasse</span><span class="sxs-lookup"><span data-stu-id="4012c-109">Declaring the attribute class</span></span>](#cpcondeclaringattributeclass)  
   
--   [Deklarieren von Konstruktoren](#cpcondeclaringconstructors)  
+-   [<span data-ttu-id="4012c-110">Deklarieren von Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="4012c-110">Declaring constructors</span></span>](#cpcondeclaringconstructors)  
   
--   [Deklarieren von Eigenschaften](#cpcondeclaringproperties)  
+-   [<span data-ttu-id="4012c-111">Deklarieren von Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4012c-111">Declaring properties</span></span>](#cpcondeclaringproperties)  
   
- In diesem Abschnitt wird jeder dieser Schritte beschrieben, den Schluss bildet ein [Beispiel für ein benutzerdefiniertes Attribut](#cpconcustomattributeexample).  
+ <span data-ttu-id="4012c-112">In diesem Abschnitt wird jeder dieser Schritte beschrieben, den Schluss bildet ein [Beispiel für ein benutzerdefiniertes Attribut](#cpconcustomattributeexample).</span><span class="sxs-lookup"><span data-stu-id="4012c-112">This section describes each of these steps and concludes with a [custom attribute example](#cpconcustomattributeexample).</span></span>  
   
 <a name="cpconapplyingattributeusageattribute"></a>   
-## Anwenden des AttributeUsage\-Attributs  
- Die Deklaration eines benutzerdefinierten Attributs beginnt mit dem **AttributeUsage\-Attribut**, das einige der Hauptmerkmale Ihrer Attributklasse definiert. Sie können beispielsweise angeben, ob das Attribut von anderen Klassen geerbt werden kann, oder festlegen, auf welche Elemente das Attribut angewendet werden kann. Das folgende Codefragment zeigt, wie das **AttributeUsage\-Attribut** verwendet wird.  
+## <a name="applying-the-attributeusageattribute"></a><span data-ttu-id="4012c-113">Anwenden des AttributeUsage-Attributs</span><span class="sxs-lookup"><span data-stu-id="4012c-113">Applying the AttributeUsageAttribute</span></span>  
+ <span data-ttu-id="4012c-114">Die Deklaration eines benutzerdefinierten Attributs beginnt mit dem **AttributeUsage-Attribut**, das einige der Hauptmerkmale Ihrer Attributklasse definiert.</span><span class="sxs-lookup"><span data-stu-id="4012c-114">A custom attribute declaration begins with the **AttributeUsageAttribute**, which defines some of the key characteristics of your attribute class.</span></span> <span data-ttu-id="4012c-115">Sie können beispielsweise angeben, ob das Attribut von anderen Klassen geerbt werden kann, oder festlegen, auf welche Elemente das Attribut angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4012c-115">For example, you can specify whether your attribute can be inherited by other classes or specify which elements the attribute can be applied to.</span></span> <span data-ttu-id="4012c-116">Das folgende Codefragment zeigt, wie das **AttributeUsage-Attribut**verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4012c-116">The following code fragment demonstrates how to use the **AttributeUsageAttribute**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- Das <xref:System.AttributeUsageAttribute?displayProperty=fullName> weist drei Member auf, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2) und [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ <span data-ttu-id="4012c-117">Die <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> hat drei Member, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#cpconwritingcustomattributesanchor1), [geerbte](#cpconwritingcustomattributesanchor2), und [AllowMultiple](#cpconwritingcustomattributesanchor3).</span><span class="sxs-lookup"><span data-stu-id="4012c-117">The <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> has three members that are important for the creation of custom attributes: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), and [AllowMultiple](#cpconwritingcustomattributesanchor3).</span></span>  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
-### AttributeTargets\-Member  
- Im vorherigen Beispiel wird **AttributeTargets.All** angegeben, was darauf hinweist, dass dieses Attribut auf alle Programmelemente angewendet werden kann. Alternativ können Sie **AttributeTargets.Class** angeben und so festlegen, dass Ihr Attribut nur auf eine Klasse angewendet werden kann, oder **AttributeTargets.Method**, was angibt, dass Ihr Attribut nur auf eine Methode angewendet werden kann. Alle Programmelemente können in dieser Weise für die Beschreibung durch ein benutzerdefiniertes Attribut gekennzeichnet werden.  
+### <a name="attributetargets-member"></a><span data-ttu-id="4012c-118">AttributeTargets-Member</span><span class="sxs-lookup"><span data-stu-id="4012c-118">AttributeTargets Member</span></span>  
+ <span data-ttu-id="4012c-119">Im vorherigen Beispiel wird **AttributeTargets.All** angegeben, was darauf hinweist, dass dieses Attribut auf alle Programmelemente angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4012c-119">In the previous example, **AttributeTargets.All** is specified, indicating that this attribute can be applied to all program elements.</span></span> <span data-ttu-id="4012c-120">Alternativ können Sie **AttributeTargets.Class**angeben und so festlegen, dass Ihr Attribut nur auf eine Klasse angewendet werden kann, oder **AttributeTargets.Method**, was angibt, dass Ihr Attribut nur auf eine Methode angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4012c-120">Alternatively, you can specify **AttributeTargets.Class**, indicating that your attribute can be applied only to a class, or **AttributeTargets.Method**, indicating that your attribute can be applied only to a method.</span></span> <span data-ttu-id="4012c-121">Alle Programmelemente können in dieser Weise für die Beschreibung durch ein benutzerdefiniertes Attribut gekennzeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="4012c-121">All program elements can be marked for description by a custom attribute in this manner.</span></span>  
   
- Sie können auch mehrere Instanzen von <xref:System.AttributeTargets> übergeben. Das folgende Codefragment gibt an, dass ein benutzerdefiniertes Attribut auf beliebige Klassen oder Methoden angewendet werden kann.  
+ <span data-ttu-id="4012c-122">Sie können auch mehrere Instanzen von <xref:System.AttributeTargets>übergeben.</span><span class="sxs-lookup"><span data-stu-id="4012c-122">You can also pass multiple instances of <xref:System.AttributeTargets>.</span></span> <span data-ttu-id="4012c-123">Das folgende Codefragment gibt an, dass ein benutzerdefiniertes Attribut auf beliebige Klassen oder Methoden angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4012c-123">The following code fragment specifies that a custom attribute can be applied to any class or method.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#6)]
  [!code-csharp[Conceptual.Attributes.Usage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#6)]
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
-### Inherited Property  
- Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=fullName> \-Eigenschaft gibt an, ob das Attribut von Klassen geerbt werden kann, die von den Klassen abgeleitet werden, auf die das Attribut angewendet wird. Diese Eigenschaft akzeptiert die Kennzeichen **true** \(den Standardwert\) oder **false**. Beispielsweise hat im folgenden Beispiel `MyAttribute` für <xref:System.AttributeUsageAttribute.Inherited%2A> den Standardwert **true**, während `YourAttribute` den <xref:System.AttributeUsageAttribute.Inherited%2A>\-Standardwert **false** aufweist.  
+### <a name="inherited-property"></a><span data-ttu-id="4012c-124">Inherited Property</span><span class="sxs-lookup"><span data-stu-id="4012c-124">Inherited Property</span></span>  
+ <span data-ttu-id="4012c-125">Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Eigenschaft gibt an, ob das Attribut von Klassen geerbt werden kann, die von den Klassen abgeleitet werden, der das Attribut angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="4012c-125">The <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> property indicates whether your attribute can be inherited by classes that are derived from the classes to which your attribute is applied.</span></span> <span data-ttu-id="4012c-126">Diese Eigenschaft akzeptiert die Kennzeichen **true** (den Standardwert) oder **false** .</span><span class="sxs-lookup"><span data-stu-id="4012c-126">This property takes either a **true** (the default) or **false** flag.</span></span> <span data-ttu-id="4012c-127">Beispielsweise hat im folgenden Beispiel `MyAttribute` für <xref:System.AttributeUsageAttribute.Inherited%2A> den Standardwert **true**, während `YourAttribute` den <xref:System.AttributeUsageAttribute.Inherited%2A> -Standardwert **false**aufweist.</span><span class="sxs-lookup"><span data-stu-id="4012c-127">For example, in the following example, `MyAttribute` has a default <xref:System.AttributeUsageAttribute.Inherited%2A> value of **true**, while `YourAttribute` has an <xref:System.AttributeUsageAttribute.Inherited%2A> value of **false**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
  [!code-vb[Conceptual.Attributes.Usage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#7)]  
   
- Die beiden Attribute werden dann auf eine Methode in der Basisklasse `MyClass` angewendet.  
+ <span data-ttu-id="4012c-128">Die beiden Attribute werden dann auf eine Methode in der Basisklasse `MyClass`angewendet.</span><span class="sxs-lookup"><span data-stu-id="4012c-128">The two attributes are then applied to a method in the base class `MyClass`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#9)]
  [!code-csharp[Conceptual.Attributes.Usage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#9)]
  [!code-vb[Conceptual.Attributes.Usage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#9)]  
   
- Schließlich wird die Klasse `YourClass` von der Basisklasse `MyClass` geerbt. Die Methode `MyMethod` zeigt `MyAttribute`, aber nicht `YourAttribute`.  
+ <span data-ttu-id="4012c-129">Schließlich wird die Klasse `YourClass` von der Basisklasse `MyClass`geerbt.</span><span class="sxs-lookup"><span data-stu-id="4012c-129">Finally, the class `YourClass` is inherited from the base class `MyClass`.</span></span> <span data-ttu-id="4012c-130">Die Methode `MyMethod` zeigt `MyAttribute`, aber nicht `YourAttribute`.</span><span class="sxs-lookup"><span data-stu-id="4012c-130">The method `MyMethod` shows `MyAttribute`, but not `YourAttribute`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#10)]
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
-### AllowMultiple\-Eigenschaft  
- Die <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=fullName>\-Eigenschaft gibt an, ob mehrere Instanzen eines Attributs für ein Element vorhanden sein können. Wenn es auf **true** festgelegt ist, sind mehrere Instanzen zulässig; bei **false** \(dem Standardwert\) ist nur eine Instanz erlaubt.  
+### <a name="allowmultiple-property"></a><span data-ttu-id="4012c-131">AllowMultiple-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4012c-131">AllowMultiple Property</span></span>  
+ <span data-ttu-id="4012c-132">Die <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> Eigenschaft gibt an, ob mehrere Instanzen eines Attributs auf ein Element vorhanden sein können.</span><span class="sxs-lookup"><span data-stu-id="4012c-132">The <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> property indicates whether multiple instances of your attribute can exist on an element.</span></span> <span data-ttu-id="4012c-133">Wenn es auf **true**festgelegt ist, sind mehrere Instanzen zulässig; bei **false** (dem Standardwert) ist nur eine Instanz erlaubt.</span><span class="sxs-lookup"><span data-stu-id="4012c-133">If set to **true**, multiple instances are allowed; if set to **false** (the default), only one instance is allowed.</span></span>  
   
- Im folgenden Beispiel weist `MyAttribute` für <xref:System.AttributeUsageAttribute.AllowMultiple%2A> den Standardwert **false** auf, während `YourAttribute` den Wert **true** hat.  
+ <span data-ttu-id="4012c-134">Im folgenden Beispiel weist `MyAttribute` für <xref:System.AttributeUsageAttribute.AllowMultiple%2A> den Standardwert **false**auf, während `YourAttribute` den Wert **true**hat.</span><span class="sxs-lookup"><span data-stu-id="4012c-134">In the following example, `MyAttribute` has a default <xref:System.AttributeUsageAttribute.AllowMultiple%2A> value of **false**, while `YourAttribute` has a value of **true**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#11)]
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
  [!code-vb[Conceptual.Attributes.Usage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#11)]  
   
- Wenn mehrere Instanzen dieser Attribute angewendet werden, führt `MyAttribute` zu einem Compilerfehler. Das folgende Codebeispiel zeigt die gültige Verwendung von `YourAttribute` und die ungültige Verwaltung von `MyAttribute`.  
+ <span data-ttu-id="4012c-135">Wenn mehrere Instanzen dieser Attribute angewendet werden, führt `MyAttribute` zu einem Compilerfehler.</span><span class="sxs-lookup"><span data-stu-id="4012c-135">When multiple instances of these attributes are applied, `MyAttribute` produces a compiler error.</span></span> <span data-ttu-id="4012c-136">Das folgende Codebeispiel zeigt die gültige Verwendung von `YourAttribute` und die ungültige Verwaltung von `MyAttribute`.</span><span class="sxs-lookup"><span data-stu-id="4012c-136">The following code example shows the valid use of `YourAttribute` and the invalid use of `MyAttribute`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#13)]
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
  [!code-vb[Conceptual.Attributes.Usage#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#13)]  
   
- Wenn sowohl die <xref:System.AttributeUsageAttribute.AllowMultiple%2A>\-Eigenschaft als auch die <xref:System.AttributeUsageAttribute.Inherited%2A>\-Eigenschaft auf **true** festgelegt sind, kann eine Klasse, die von einer anderen Klasse geerbt wurde, ein Attribut erben, und zugleich kann in der gleichen untergeordneten Klasse eine weitere Instanz des gleichen Attributs angewendet werden. Wenn <xref:System.AttributeUsageAttribute.AllowMultiple%2A> auf **false** festgelegt ist, werden die Werte aller Attribute in der übergeordneten Klasse durch neue Instanzen der gleichen Attribute in der untergeordneten Klasse überschrieben.  
+ <span data-ttu-id="4012c-137">Wenn sowohl die <xref:System.AttributeUsageAttribute.AllowMultiple%2A> -Eigenschaft als auch die <xref:System.AttributeUsageAttribute.Inherited%2A> -Eigenschaft auf **true**festgelegt sind, kann eine Klasse, die von einer anderen Klasse geerbt wurde, ein Attribut erben, und zugleich kann in der gleichen untergeordneten Klasse eine weitere Instanz des gleichen Attributs angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="4012c-137">If both the <xref:System.AttributeUsageAttribute.AllowMultiple%2A> property and the <xref:System.AttributeUsageAttribute.Inherited%2A> property are set to **true**, a class that is inherited from another class can inherit an attribute and have another instance of the same attribute applied in the same child class.</span></span> <span data-ttu-id="4012c-138">Wenn <xref:System.AttributeUsageAttribute.AllowMultiple%2A> auf **false**festgelegt ist, werden die Werte aller Attribute in der übergeordneten Klasse durch neue Instanzen der gleichen Attribute in der untergeordneten Klasse überschrieben.</span><span class="sxs-lookup"><span data-stu-id="4012c-138">If <xref:System.AttributeUsageAttribute.AllowMultiple%2A> is set to **false**, the values of any attributes in the parent class will be overwritten by new instances of the same attribute in the child class.</span></span>  
   
 <a name="cpcondeclaringattributeclass"></a>   
-## Deklarieren der Attributklasse  
- Nach dem Anwenden von <xref:System.AttributeUsageAttribute> können Sie beginnen, die Einzelheiten Ihres Attributs zu definieren. Die Deklaration einer Attributklasse ähnelt der Deklaration einer traditionellen Klasse, wie im folgenden Code zu sehen.  
+## <a name="declaring-the-attribute-class"></a><span data-ttu-id="4012c-139">Deklarieren der Attributklasse</span><span class="sxs-lookup"><span data-stu-id="4012c-139">Declaring the Attribute Class</span></span>  
+ <span data-ttu-id="4012c-140">Nach dem Anwenden von <xref:System.AttributeUsageAttribute>können Sie beginnen, die Einzelheiten Ihres Attributs zu definieren.</span><span class="sxs-lookup"><span data-stu-id="4012c-140">After you apply the <xref:System.AttributeUsageAttribute>, you can begin to define the specifics of your attribute.</span></span> <span data-ttu-id="4012c-141">Die Deklaration einer Attributklasse ähnelt der Deklaration einer traditionellen Klasse, wie im folgenden Code zu sehen.</span><span class="sxs-lookup"><span data-stu-id="4012c-141">The declaration of an attribute class looks similar to the declaration of a traditional class, as demonstrated by the following code.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
  [!code-csharp[Conceptual.Attributes.Usage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#14)]
  [!code-vb[Conceptual.Attributes.Usage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#14)]  
   
- Diese Attibutdefinition veranschaulicht die folgenden Punkte:  
+ <span data-ttu-id="4012c-142">Diese Attibutdefinition veranschaulicht die folgenden Punkte:</span><span class="sxs-lookup"><span data-stu-id="4012c-142">This attribute definition demonstrates the following points:</span></span>  
   
--   Attributklassen müssen als öffentliche Klassen deklariert werden.  
+-   <span data-ttu-id="4012c-143">Attributklassen müssen als öffentliche Klassen deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="4012c-143">Attribute classes must be declared as public classes.</span></span>  
   
--   Gemäß Konvention endet der Name der Attributklasse mit dem Wort **Attribute**. Dies ist zwar nicht erforderlich, die Einhaltung dieser Konvention empfiehlt sich aber aus Gründen der besseren Übersicht. Wenn das Attribut angewendet wird, ist die Aufnahme des Wortes „Attribute“ optional.  
+-   <span data-ttu-id="4012c-144">Gemäß Konvention endet der Name der Attributklasse mit dem Wort **Attribute**.</span><span class="sxs-lookup"><span data-stu-id="4012c-144">By convention, the name of the attribute class ends with the word **Attribute**.</span></span> <span data-ttu-id="4012c-145">Dies ist zwar nicht erforderlich, die Einhaltung dieser Konvention empfiehlt sich aber aus Gründen der besseren Übersicht.</span><span class="sxs-lookup"><span data-stu-id="4012c-145">While not required, this convention is recommended for readability.</span></span> <span data-ttu-id="4012c-146">Wenn das Attribut angewendet wird, ist die Aufnahme des Wortes „Attribute“ optional.</span><span class="sxs-lookup"><span data-stu-id="4012c-146">When the attribute is applied, the inclusion of the word Attribute is optional.</span></span>  
   
--   Alle Attributklassen müssen direkt oder indirekt von **System.Attribute** erben.  
+-   <span data-ttu-id="4012c-147">Alle Attributklassen müssen direkt oder indirekt von **System.Attribute**erben.</span><span class="sxs-lookup"><span data-stu-id="4012c-147">All attribute classes must inherit directly or indirectly from **System.Attribute**.</span></span>  
   
--   In Microsoft Visual Basic müssen alle Attributklassen über das Attribut **AttributeUsageAttribute** verfügen.  
+-   <span data-ttu-id="4012c-148">In Microsoft Visual Basic müssen alle Attributklassen über das Attribut **AttributeUsageAttribute** verfügen.</span><span class="sxs-lookup"><span data-stu-id="4012c-148">In Microsoft Visual Basic, all custom attribute classes must have the **AttributeUsageAttribute** attribute.</span></span>  
   
 <a name="cpcondeclaringconstructors"></a>   
-## Deklarieren von Konstruktoren  
- Attribute werden in der gleichen Weise wie traditionelle Klassen mit Konstruktoren initialisiert. Das folgende Codefragment stellt ein Beispiel für einen typischen Attributkonstruktor dar. Dieser öffentliche Konstruktor akzeptiert einen Parameter und legt seinen Wert auf eine Membervariable fest.  
+## <a name="declaring-constructors"></a><span data-ttu-id="4012c-149">Deklarieren von Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="4012c-149">Declaring Constructors</span></span>  
+ <span data-ttu-id="4012c-150">Attribute werden in der gleichen Weise wie traditionelle Klassen mit Konstruktoren initialisiert.</span><span class="sxs-lookup"><span data-stu-id="4012c-150">Attributes are initialized with constructors in the same way as traditional classes.</span></span> <span data-ttu-id="4012c-151">Das folgende Codefragment stellt ein Beispiel für einen typischen Attributkonstruktor dar.</span><span class="sxs-lookup"><span data-stu-id="4012c-151">The following code fragment illustrates a typical attribute constructor.</span></span> <span data-ttu-id="4012c-152">Dieser öffentliche Konstruktor akzeptiert einen Parameter und legt seinen Wert auf eine Membervariable fest.</span><span class="sxs-lookup"><span data-stu-id="4012c-152">This public constructor takes a parameter and sets its value equal to a member variable.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Sie können den Konstruktor überladen, um verschiedene Kombinationen von Werten zu ermöglichen. Wenn Sie darüber hinaus eine [Eigenschaft](../Topic/Properties%20Overview.md) für Ihre benutzerdefinierte Attributklasse definieren, können Sie eine Kombination aus benannten und Positionsparametern zum Initialisieren des Attributs verwenden. Normalerweise definieren Sie alle erforderlichen Parameter als Positionsparameter und alle optionalen Parameter als benannt. In diesem Fall kann das Attribut nicht ohne den erforderlichen Parameter initialisiert werden. Alle anderen Parameter sind optional. Beachten Sie, dass in Visual Basic die Konstruktoren für eine Attributklasse kein ParamArray\-Argument verwenden sollten.  
+ <span data-ttu-id="4012c-153">Sie können den Konstruktor überladen, um verschiedene Kombinationen von Werten zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="4012c-153">You can overload the constructor to accommodate different combinations of values.</span></span> <span data-ttu-id="4012c-154">Wenn Sie darüber hinaus eine [Eigenschaft](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) für Ihre benutzerdefinierte Attributklasse definieren, können Sie eine Kombination aus benannten und Positionsparametern zum Initialisieren des Attributs verwenden.</span><span class="sxs-lookup"><span data-stu-id="4012c-154">If you also define a [property](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) for your custom attribute class, you can use a combination of named and positional parameters when initializing the attribute.</span></span> <span data-ttu-id="4012c-155">Normalerweise definieren Sie alle erforderlichen Parameter als Positionsparameter und alle optionalen Parameter als benannt.</span><span class="sxs-lookup"><span data-stu-id="4012c-155">Typically, you define all required parameters as positional and all optional parameters as named.</span></span> <span data-ttu-id="4012c-156">In diesem Fall kann das Attribut nicht ohne den erforderlichen Parameter initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="4012c-156">In this case, the attribute cannot be initialized without the required parameter.</span></span> <span data-ttu-id="4012c-157">Alle anderen Parameter sind optional.</span><span class="sxs-lookup"><span data-stu-id="4012c-157">All other parameters are optional.</span></span> <span data-ttu-id="4012c-158">Beachten Sie, dass in Visual Basic die Konstruktoren für eine Attributklasse kein ParamArray-Argument verwenden sollten.</span><span class="sxs-lookup"><span data-stu-id="4012c-158">Note that in Visual Basic, constructors for an attribute class should not use a ParamArray argument.</span></span>  
   
- Das folgende Codebeispiel zeigt, wie ein Attribut, das den oben angegebenen Konstruktor verwendet, mithilfe von optionalen und erforderlichen Parametern angewendet werden kann. Es wird angenommen, dass das Attribut einen erforderlichen Booleschen Wert und eine optionale Zeichenfolgeneigenschaft aufweist.  
+ <span data-ttu-id="4012c-159">Das folgende Codebeispiel zeigt, wie ein Attribut, das den oben angegebenen Konstruktor verwendet, mithilfe von optionalen und erforderlichen Parametern angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="4012c-159">The following code example shows how an attribute that uses the previous constructor can be applied using optional and required parameters.</span></span> <span data-ttu-id="4012c-160">Es wird angenommen, dass das Attribut einen erforderlichen Booleschen Wert und eine optionale Zeichenfolgeneigenschaft aufweist.</span><span class="sxs-lookup"><span data-stu-id="4012c-160">It assumes that the attribute has one required Boolean value and one optional string property.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#17)]
  [!code-csharp[Conceptual.Attributes.Usage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#17)]
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 <a name="cpcondeclaringproperties"></a>   
-## Deklarieren von Eigenschaften  
- Wenn Sie einen benannten Parameter definieren oder eine einfache Möglichkeit zum Zurückgeben der von Ihrem Attribut gespeicherten Werte bereitstellen möchten, deklarieren Sie eine [Eigenschaft](../Topic/Properties%20Overview.md). Attributeigenschaften müssen als öffentliche Entitäten mit einer Beschreibung des zurückgegebenen Datentyps deklariert werden. Definieren Sie die Variable, die den Wert der Eigenschaft enthalten soll, und ordnen Sie sie den Methoden **get** und **set** zu. Das folgende Codebeispiel veranschaulicht, wie eine einfache Eigenschaft in Ihrem Attribut implementiert wird.  
+## <a name="declaring-properties"></a><span data-ttu-id="4012c-161">Deklarieren von Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4012c-161">Declaring Properties</span></span>  
+ <span data-ttu-id="4012c-162">Wenn Sie einen benannten Parameter definieren oder eine einfache Möglichkeit zum Zurückgeben der von Ihrem Attribut gespeicherten Werte bereitstellen möchten, deklarieren Sie eine [Eigenschaft](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span><span class="sxs-lookup"><span data-stu-id="4012c-162">If you want to define a named parameter or provide an easy way to return the values stored by your attribute, declare a [property](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span> <span data-ttu-id="4012c-163">Attributeigenschaften müssen als öffentliche Entitäten mit einer Beschreibung des zurückgegebenen Datentyps deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="4012c-163">Attribute properties should be declared as public entities with a description of the data type that will be returned.</span></span> <span data-ttu-id="4012c-164">Definieren Sie die Variable, die den Wert der Eigenschaft enthalten soll, und ordnen Sie sie den Methoden **get** und **set** zu.</span><span class="sxs-lookup"><span data-stu-id="4012c-164">Define the variable that will hold the value of your property and associate it with the **get** and **set** methods.</span></span> <span data-ttu-id="4012c-165">Das folgende Codebeispiel veranschaulicht, wie eine einfache Eigenschaft in Ihrem Attribut implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="4012c-165">The following code example demonstrates how to implement a simple property in your attribute.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 <a name="cpconcustomattributeexample"></a>   
-## Beispiel für ein benutzerdefiniertes Attribut  
- Dieser Abschnitt beinhaltet die Informationen aus den vorhergehenden Abschnitten und zeigt das Entwerfen eines einfachen Attributs, das Informationen über den Autor eines Codeabschnitts dokumentiert. Das Attribut in diesem Beispiel speichert den Namen und die Qualifikation des Programmierers und gibt an, ob der Code überprüft wurde. Es verwendet drei private Variablen zum Speichern der eigentlichen, zu speichernden Werte. Jede Variable wird durch eine öffentliche Eigenschaft dargestellt, die zum Abrufen und Festlegen der Werte verwendet wird. Schließlich wird der Konstruktor mit zwei erforderlichen Parametern definiert.  
+## <a name="custom-attribute-example"></a><span data-ttu-id="4012c-166">Beispiel für ein benutzerdefiniertes Attribut</span><span class="sxs-lookup"><span data-stu-id="4012c-166">Custom Attribute Example</span></span>  
+ <span data-ttu-id="4012c-167">Dieser Abschnitt beinhaltet die Informationen aus den vorhergehenden Abschnitten und zeigt das Entwerfen eines einfachen Attributs, das Informationen über den Autor eines Codeabschnitts dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="4012c-167">This section incorporates the previous information and shows how to design a simple attribute that documents information about the author of a section of code.</span></span> <span data-ttu-id="4012c-168">Das Attribut in diesem Beispiel speichert den Namen und die Qualifikation des Programmierers und gibt an, ob der Code überprüft wurde.</span><span class="sxs-lookup"><span data-stu-id="4012c-168">The attribute in this example stores the name and level of the programmer, and whether the code has been reviewed.</span></span> <span data-ttu-id="4012c-169">Es verwendet drei private Variablen zum Speichern der eigentlichen, zu speichernden Werte.</span><span class="sxs-lookup"><span data-stu-id="4012c-169">It uses three private variables to store the actual values to save.</span></span> <span data-ttu-id="4012c-170">Jede Variable wird durch eine öffentliche Eigenschaft dargestellt, die zum Abrufen und Festlegen der Werte verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="4012c-170">Each variable is represented by a public property that gets and sets the values.</span></span> <span data-ttu-id="4012c-171">Schließlich wird der Konstruktor mit zwei erforderlichen Parametern definiert.</span><span class="sxs-lookup"><span data-stu-id="4012c-171">Finally, the constructor is defined with two required parameters.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]
  [!code-csharp[Conceptual.Attributes.Usage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#4)]
  [!code-vb[Conceptual.Attributes.Usage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#4)]  
   
- Sie können das Attribut mit seinem vollständigen Namen `DeveloperAttribute` oder mit seinem abgekürzten Namen `Developer` auf eine der folgenden Weisen anwenden.  
+ <span data-ttu-id="4012c-172">Sie können das Attribut mit seinem vollständigen Namen `DeveloperAttribute`oder mit seinem abgekürzten Namen `Developer`auf eine der folgenden Weisen anwenden.</span><span class="sxs-lookup"><span data-stu-id="4012c-172">You can apply this attribute using the full name, `DeveloperAttribute`, or using the abbreviated name, `Developer`, in one of the following ways.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#12)]
  [!code-csharp[Conceptual.Attributes.Usage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#12)]
  [!code-vb[Conceptual.Attributes.Usage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#12)]  
   
- Im ersten Beispiel wird das Attribut nur mit den erforderlichen benannten Parametern angewendet, während das zweite Beispiel die Anwendung des Attributs mit den erforderlichen und den optionalen Parametern zeigt.  
+ <span data-ttu-id="4012c-173">Im ersten Beispiel wird das Attribut nur mit den erforderlichen benannten Parametern angewendet, während das zweite Beispiel die Anwendung des Attributs mit den erforderlichen und den optionalen Parametern zeigt.</span><span class="sxs-lookup"><span data-stu-id="4012c-173">The first example shows the attribute applied with only the required named parameters, while the second example shows the attribute applied with both the required and optional parameters.</span></span>  
   
-## Siehe auch  
- <xref:System.Attribute?displayProperty=fullName>   
- <xref:System.AttributeUsageAttribute>   
- [Attribute](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="4012c-174">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4012c-174">See Also</span></span>  
+ <xref:System.Attribute?displayProperty=nameWithType>  
+ <xref:System.AttributeUsageAttribute>  
+ [<span data-ttu-id="4012c-175">Attribute</span><span class="sxs-lookup"><span data-stu-id="4012c-175">Attributes</span></span>](../../../docs/standard/attributes/index.md)

@@ -1,47 +1,52 @@
 ---
-title: "Durchf&#252;hren kulturunabh&#228;ngiger Schreibungs&#228;nderungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "String.ToLower-Methode"
-  - "Kultur, Groß-/Kleinschreibung"
-  - "Char.ToLower-Methode"
-  - "Groß-/Kleinschreibung, Ändern in kulturunabhängigen Zeichenfolgen"
-  - "Char.ToUpper-Methode"
-  - "Kulturunabhängige Zeichenfolgenoperationen, Änderung der Groß-/Kleinschreibung"
-  - "String.ToUpper-Methode"
-  - "culture-Parameter"
+title: "Durchführen kulturunabhängiger Schreibungsänderungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- String.ToLower method
+- culture, case sensitivity
+- Char.ToLower method
+- case, changing in culture-insensitive strings
+- Char.ToUpper method
+- culture-insensitive string operations, case changes
+- String.ToUpper method
+- culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Durchf&#252;hren kulturunabh&#228;ngiger Schreibungs&#228;nderungen
-Die Methoden <xref:System.String.ToUpper%2A?displayProperty=fullName>, <xref:System.String.ToLower%2A?displayProperty=fullName>, <xref:System.Char.ToUpper%2A?displayProperty=fullName> und <xref:System.Char.ToLower%2A?displayProperty=fullName> stellen Überladungen bereit, die keine Parameter akzeptieren.  Standardmäßig führen diese Überladungen ohne Parameter die Schreibungsänderungen auf Basis des <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>\-Werts durch.  Die unter Berücksichtigung der Groß\-\/Kleinschreibung erzielten Ergebnisse variieren je nach Kultur.  Um klar anzugeben, ob die Schreibungsänderungen kulturabhängig oder kulturunabhängig erfolgen sollen, empfiehlt sich die Verwendung der Überladungen dieser Methoden, für die explizit ein `culture`\-Parameter festgelegt werden muss.  Um kulturabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.CurrentCulture` für den `culture`\-Parameter an.  Um kulturunabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.InvariantCulture` für den `culture`\-Parameter an.  
+# <a name="performing-culture-insensitive-case-changes"></a><span data-ttu-id="1430a-102">Durchführen kulturunabhängiger Schreibungsänderungen</span><span class="sxs-lookup"><span data-stu-id="1430a-102">Performing Culture-Insensitive Case Changes</span></span>
+<span data-ttu-id="1430a-103">Die Methoden <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> und <xref:System.Char.ToLower%2A?displayProperty=nameWithType> stellen Überladungen bereit, die keine Parameter akzeptieren.</span><span class="sxs-lookup"><span data-stu-id="1430a-103">The <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, and <xref:System.Char.ToLower%2A?displayProperty=nameWithType> methods provide overloads that do not accept any parameters.</span></span> <span data-ttu-id="1430a-104">Standardmäßig führen diese Überladungen ohne Parameter die Schreibungsänderungen auf Basis des <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Werts durch.</span><span class="sxs-lookup"><span data-stu-id="1430a-104">By default, these overloads without parameters perform case changes based on the value of the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1430a-105">Die unter Berücksichtigung der Groß-/Kleinschreibung erzielten Ergebnisse variieren je nach Kultur.</span><span class="sxs-lookup"><span data-stu-id="1430a-105">This produces case-sensitive results that can vary by culture.</span></span> <span data-ttu-id="1430a-106">Um klar anzugeben, ob die Schreibungsänderungen kulturabhängig oder kulturunabhängig erfolgen sollen, empfiehlt sich die Verwendung der Überladungen dieser Methoden, für die explizit ein `culture`-Parameter festgelegt werden muss.</span><span class="sxs-lookup"><span data-stu-id="1430a-106">To make it clear whether you want case changes to be culture-sensitive or culture-insensitive, you should use the overloads of these methods that require you to explicitly specify a `culture` parameter.</span></span> <span data-ttu-id="1430a-107">Um kulturabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.CurrentCulture` für den `culture`-Parameter an.</span><span class="sxs-lookup"><span data-stu-id="1430a-107">For culture-sensitive case changes, specify `CultureInfo.CurrentCulture` for the `culture` parameter.</span></span> <span data-ttu-id="1430a-108">Um kulturunabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.InvariantCulture` für den `culture`-Parameter an.</span><span class="sxs-lookup"><span data-stu-id="1430a-108">For culture-insensitive case changes, specify `CultureInfo.InvariantCulture` for the `culture` parameter.</span></span>  
   
- Häufig werden Zeichenfolgen in eine Standardschreibweise konvertiert, um spätere Suchvorgänge zu vereinfachen.  Wenn Zeichenfolgen auf diese Weise verwendet werden, sollte `CultureInfo.InvariantCulture` für den `culture`\-Parameter angegeben werden, da sich der Wert von <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> zwischen dem Zeitpunkt der Schreibungsänderung und dem Zeitpunkt des Suchvorgangs ändern kann.  
+ <span data-ttu-id="1430a-109">Häufig werden Zeichenfolgen in eine Standardschreibweise konvertiert, um spätere Suchvorgänge zu vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="1430a-109">Often, strings are converted to a standard case to enable easier lookup later.</span></span> <span data-ttu-id="1430a-110">Wenn Zeichenfolgen auf diese Weise verwendet werden, sollte `CultureInfo.InvariantCulture` für den `culture`-Parameter angegeben werden, da sich der Wert von <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> zwischen dem Zeitpunkt der Schreibungsänderung und dem Zeitpunkt des Suchvorgangs ändern kann.</span><span class="sxs-lookup"><span data-stu-id="1430a-110">When strings are used in this way, you should specify `CultureInfo.InvariantCulture` for the `culture` parameter, because the value of <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> can potentially change between the time that the case is changed and the time that the lookup occurs.</span></span>  
   
- Wenn darüber hinaus eine Sicherheitsentscheidung auf einer Änderung von Groß\- und Kleinschreibung beruht, sollte die Operation kulturunabhängig sein, um sicherzustellen, dass das Ergebnis nicht durch den Wert von `CultureInfo.CurrentCulture` beeinflusst wird.  Im Abschnitt "Zeichenfolgenvergleiche mit der aktuellen Kultur" im Artikel [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md) finden Sie ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenoperationen zu inkonsistenten Ergebnissen führen können.  
+ <span data-ttu-id="1430a-111">Wenn darüber hinaus eine Sicherheitsentscheidung auf einer Änderung von Groß- und Kleinschreibung beruht, sollte die Operation kulturunabhängig sein, um sicherzustellen, dass das Ergebnis nicht durch den Wert von `CultureInfo.CurrentCulture` beeinflusst wird.</span><span class="sxs-lookup"><span data-stu-id="1430a-111">If a security decision is based on a case change operation, the operation should be culture-insensitive to ensure that the result is not affected by the value of `CultureInfo.CurrentCulture`.</span></span> <span data-ttu-id="1430a-112">Finden Sie im Abschnitt "Zeichenfolge vergleichen, verwenden die aktuelle Kultur" der [bewährte Methoden für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md) Artikel für ein Beispiel, das veranschaulicht, wie kulturabhängige Zeichenfolgenoperationen stellen jedoch zu inkonsistenten Ergebnissen führen kann.</span><span class="sxs-lookup"><span data-stu-id="1430a-112">See the "String Comparisons that Use the Current Culture" section of the [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md) article for an example that demonstrates how culture-sensitive string operations can produce inconsistent results.</span></span>  
   
-## Verwenden der String.ToUpper\-Methode und der String.ToLower\-Methode  
- Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, immer die Überladungen der `String.ToUpper`\-Methode und der `String.ToLower`\-Methode zu verwenden, bei denen ein `culture`\-Parameter explizit angegeben werden kann.  Mit dem folgenden Code wird z. B. nach einem Bezeichner gesucht.  In der Standardeinstellung ist die `key.ToLower`\-Operation kulturabhängig, jedoch wird dieses Verhalten beim Lesen des Codes nicht deutlich.  
+## <a name="using-the-stringtoupper-and-stringtolower-methods"></a><span data-ttu-id="1430a-113">Verwenden der String.ToUpper-Methode und der String.ToLower-Methode</span><span class="sxs-lookup"><span data-stu-id="1430a-113">Using the String.ToUpper and String.ToLower Methods</span></span>  
+ <span data-ttu-id="1430a-114">Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, immer die Überladungen der `String.ToUpper`-Methode und der `String.ToLower`-Methode zu verwenden, bei denen ein `culture`-Parameter explizit angegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="1430a-114">For code clarity, it is recommended that you always use overloads of the `String.ToUpper` and `String.ToLower` methods that allow you to specify a `culture` parameter explicitly.</span></span> <span data-ttu-id="1430a-115">Mit dem folgenden Code wird z. B. nach einem Bezeichner gesucht.</span><span class="sxs-lookup"><span data-stu-id="1430a-115">For example, the following code performs an identifier lookup.</span></span> <span data-ttu-id="1430a-116">In der Standardeinstellung ist die `key.ToLower`-Operation kulturabhängig, jedoch wird dieses Verhalten beim Lesen des Codes nicht deutlich.</span><span class="sxs-lookup"><span data-stu-id="1430a-116">The `key.ToLower` operation is culture-sensitive by default, but this behavior is not clear from reading the code.</span></span>  
   
-### Beispiel  
+### <a name="example"></a><span data-ttu-id="1430a-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1430a-117">Example</span></span>  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
    Return internalHashtable(key.ToLower())  
 End Function  
-  
 ```  
   
 ```csharp  
@@ -51,13 +56,12 @@ static object LookupKey(string key)
 }  
 ```  
   
- Wenn Sie eine kulturunabhängige `key.ToLower`\-Operation ausführen möchten, muss das vorige Beispiel so geändert werden, dass beim Ändern der Schreibweise `CultureInfo.InvariantCulture` explizit verwendet wird:  
+ <span data-ttu-id="1430a-118">Wenn Sie eine kulturunabhängige `key.ToLower`-Operation ausführen möchten, muss das vorige Beispiel so geändert werden, dass beim Ändern der Schreibweise `CultureInfo.InvariantCulture` explizit verwendet wird:</span><span class="sxs-lookup"><span data-stu-id="1430a-118">If you want the `key.ToLower` operation to be culture-insensitive, you should change the preceding example as follows to explicitly use the `CultureInfo.InvariantCulture` when changing the case.</span></span>  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
     Return internalHashtable(key.ToLower(CultureInfo.InvariantCulture))  
 End Function  
-  
 ```  
   
 ```csharp  
@@ -67,12 +71,12 @@ static object LookupKey(string key)
 }  
 ```  
   
-## Verwenden der Char.ToUpper\-Methode und der Char.ToLower\-Methode  
- Obwohl die `Char.ToUpper`\-Methode und die `Char.ToLower` \-Methode über die gleichen Eigenschaften wie die `String.ToUpper`\-Methode und die `String.ToLower`\-Methode verfügen, sind nur die Kulturen Türkisch \(Türkei\) und Aserbaidschanisch \(lateinisch, Aserbaidschan\) betroffen.  Hierbei handelt es sich um die beiden einzigen Kulturen mit Unterschieden in der Groß\-\/Kleinschreibung für ein einzelnes Zeichen.  Weitere Informationen über diese Besonderheit bei der Groß\-\/Kleinschreibung finden Sie im Abschnitt "Groß\-\/Kleinschreibung" im Thema zur <xref:System.String>\-Klasse.  Aus Gründen der Übersichtlichkeit des Codes empfiehlt es sich, immer die Überladungen dieser Methoden zu verwenden, bei denen ein `culture`\-Parameter explizit festgelegt werden kann.  
+## <a name="using-the-chartoupper-and-chartolower-methods"></a><span data-ttu-id="1430a-119">Verwenden der Char.ToUpper-Methode und der Char.ToLower-Methode</span><span class="sxs-lookup"><span data-stu-id="1430a-119">Using the Char.ToUpper and Char.ToLower Methods</span></span>  
+ <span data-ttu-id="1430a-120">Obwohl die `Char.ToUpper` und `Char.ToLower` Methoden haben dieselben Merkmale wie die `String.ToUpper` und `String.ToLower` werden von Methoden, die betroffen sind nur die Kulturen Türkisch (Türkei) und Aserbaidschanisch (Lateinisch, Aserbaidschan).</span><span class="sxs-lookup"><span data-stu-id="1430a-120">Although the `Char.ToUpper` and `Char.ToLower` methods have the same characteristics as the `String.ToUpper` and `String.ToLower` methods, the only cultures that are affected are Turkish (Turkey) and Azerbaijani (Latin, Azerbaijan).</span></span> <span data-ttu-id="1430a-121">Hierbei handelt es sich um die beiden einzigen Kulturen mit Unterschieden in der Groß-/Kleinschreibung für ein einzelnes Zeichen.</span><span class="sxs-lookup"><span data-stu-id="1430a-121">These are the only two cultures with single-character casing differences.</span></span> <span data-ttu-id="1430a-122">Weitere Informationen über diese Besonderheit bei der Groß-/Kleinschreibung finden Sie im Abschnitt "Groß-/Kleinschreibung" im Thema zur <xref:System.String>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="1430a-122">For more details about this unique case mapping, see the "Casing" section in the <xref:System.String> class topic.</span></span> <span data-ttu-id="1430a-123">Aus Gründen der Übersichtlichkeit des Codes empfiehlt es sich, immer die Überladungen dieser Methoden zu verwenden, bei denen ein `culture`-Parameter explizit festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="1430a-123">For code clarity and to ensure consistent results, it is recommended that you always use the overloads of these methods that allow you to explicitly specify a `culture` parameter.</span></span>  
   
-## Siehe auch  
- <xref:System.String.ToUpper%2A?displayProperty=fullName>   
- <xref:System.String.ToLower%2A?displayProperty=fullName>   
- <xref:System.Char.ToUpper%2A?displayProperty=fullName>   
- <xref:System.Char.ToLower%2A?displayProperty=fullName>   
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="1430a-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1430a-124">See Also</span></span>  
+ <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+ <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+ <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+ <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="1430a-125">Durchführen kulturunabhängiger Zeichenfolgenoperationen</span><span class="sxs-lookup"><span data-stu-id="1430a-125">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

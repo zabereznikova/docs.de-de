@@ -1,62 +1,44 @@
 ---
 title: '#<a name="define-c-reference"></a>define (C#-Referenz)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#define'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#define directive [C#]'
+f1_keywords: '#define'
+helpviewer_keywords: '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ae72a1b6c19421c51348a0d93691ba3fe29a191c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ace15f79480c9aeb0fcb4c7d46c207d4904cef0
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="define-c-reference"></a>#define (C#-Referenz)
-Mit `#define` wird ein Symbol definiert. Wenn Sie das Symbol als Ausdruck verwenden, der an die [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)-Anweisung übergeben wird, wird der Ausdruck als `true` ausgewertet, wie in folgendem Beispiel dargestellt:  
+# <a name="define-c-reference"></a><span data-ttu-id="fae6a-102">#define (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="fae6a-102">#define (C# Reference)</span></span>
+<span data-ttu-id="fae6a-103">Mit `#define` wird ein Symbol definiert.</span><span class="sxs-lookup"><span data-stu-id="fae6a-103">You use `#define` to define a symbol.</span></span> <span data-ttu-id="fae6a-104">Wenn Sie das Symbol als Ausdruck verwenden, der an die [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)-Anweisung übergeben wird, wird der Ausdruck als `true` ausgewertet, wie in folgendem Beispiel dargestellt:</span><span class="sxs-lookup"><span data-stu-id="fae6a-104">When you use the symbol as the expression that's passed to the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `true`, as the following example shows:</span></span>  
+ 
+ ```csharp
+ #define DEBUG
+ ```
   
- `#`  `define`   `DEBUG`  
-  
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a><span data-ttu-id="fae6a-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fae6a-105">Remarks</span></span>  
   
 > [!NOTE]
->  Die `#define`-Direktive kann nicht zur Deklaration konstanter Werte wie in C und C++ verwendet werden. Definieren Sie Konstanten in C# als statische Member einer Klasse oder einer Struktur. Wenn Sie über mehrere solcher Konstanten verfügen, erwägen Sie, eine separate "Constants"-Klasse zu erstellen.  
+>  <span data-ttu-id="fae6a-106">Die `#define`-Direktive kann nicht zur Deklaration konstanter Werte wie in C und C++ verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-106">The `#define` directive cannot be used to declare constant values as is typically done in C and C++.</span></span> <span data-ttu-id="fae6a-107">Definieren Sie Konstanten in C# als statische Member einer Klasse oder einer Struktur.</span><span class="sxs-lookup"><span data-stu-id="fae6a-107">Constants in C# are best defined as static members of a class or struct.</span></span> <span data-ttu-id="fae6a-108">Wenn Sie über mehrere solcher Konstanten verfügen, erwägen Sie, eine separate "Constants"-Klasse zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="fae6a-108">If you have several such constants, consider creating a separate "Constants" class to hold them.</span></span>  
   
- Symbole können verwendet werden, um Bedingungen für die Kompilierung anzugeben. Ein Symbol kann entweder mit [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) oder mit [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) überprüft werden. Für bedingte Kompilierung kann auch das `conditional`-Attribut verwendet werden.  
+ <span data-ttu-id="fae6a-109">Symbole können verwendet werden, um Bedingungen für die Kompilierung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="fae6a-109">Symbols can be used to specify conditions for compilation.</span></span> <span data-ttu-id="fae6a-110">Ein Symbol kann entweder mit [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) oder mit [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-110">You can test for the symbol with either [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) or [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md).</span></span> <span data-ttu-id="fae6a-111">Für bedingte Kompilierung kann auch das `conditional`-Attribut verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-111">You can also use the `conditional` attribute to perform conditional compilation.</span></span>  
   
- Ein Symbol kann zwar definiert werden, aber es kann ihm kein Wert zugewiesen werden. Die `#define`-Direktive muss in einer Datei vor allen Anweisungen, bei denen es sich nicht um Präprozessordirektiven handelt, verwendet werden.  
+ <span data-ttu-id="fae6a-112">Ein Symbol kann zwar definiert werden, aber es kann ihm kein Wert zugewiesen werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-112">You can define a symbol, but you cannot assign a value to a symbol.</span></span> <span data-ttu-id="fae6a-113">Die `#define`-Direktive muss in einer Datei vor allen Anweisungen, bei denen es sich nicht um Präprozessordirektiven handelt, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-113">The `#define` directive must appear in the file before you use any instructions that aren't also preprocessor directives.</span></span>  
   
- Ein Symbol kann auch mit der Compileroption [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) definiert werden. Die Definition eines Symbols kann mit [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) aufgehoben werden.  
+ <span data-ttu-id="fae6a-114">Ein Symbol kann auch mit der Compileroption [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) definiert werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-114">You can also define a symbol with the [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="fae6a-115">Die Definition eines Symbols kann mit [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) aufgehoben werden.</span><span class="sxs-lookup"><span data-stu-id="fae6a-115">You can undefine a symbol with [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).</span></span>  
   
- Zwischen einem Symbol, das mit `/define` oder mit `#define` definiert wird, und einer Variablen mit dem gleichen Namen kommt es zu keinem Konflikt. Das bedeutet, dass ein Variablenname nicht an eine Präprozessordirektive übergeben werden sollte und ein Symbol nur von einer Präprozessordirektive ausgewertet werden kann.  
+ <span data-ttu-id="fae6a-116">Zwischen einem Symbol, das mit `/define` oder mit `#define` definiert wird, und einer Variablen mit dem gleichen Namen kommt es zu keinem Konflikt.</span><span class="sxs-lookup"><span data-stu-id="fae6a-116">A symbol that you define with `/define` or with `#define` does not conflict with a variable of the same name.</span></span> <span data-ttu-id="fae6a-117">Das bedeutet, dass ein Variablenname nicht an eine Präprozessordirektive übergeben werden sollte und ein Symbol nur von einer Präprozessordirektive ausgewertet werden kann.</span><span class="sxs-lookup"><span data-stu-id="fae6a-117">That is, a variable name should not be passed to a preprocessor directive and a symbol can only be evaluated by a preprocessor directive.</span></span>  
   
- Bei dem Gültigkeitsbereich eines mit `#define` erstellten Symbols handelt es sich um die Datei, in der es definiert wurde.  
+ <span data-ttu-id="fae6a-118">Bei dem Gültigkeitsbereich eines mit `#define` erstellten Symbols handelt es sich um die Datei, in der es definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="fae6a-118">The scope of a symbol that was created by using `#define` is the file in which the symbol was defined.</span></span>  
   
- Wie im folgenden Beispiel dargestellt, müssen Sie die `#define`-Direktive am Anfang der Datei eingeben.  
+ <span data-ttu-id="fae6a-119">Wie im folgenden Beispiel dargestellt, müssen Sie die `#define`-Direktive am Anfang der Datei eingeben.</span><span class="sxs-lookup"><span data-stu-id="fae6a-119">As the following example shows, you must put `#define` directives at the top of the file.</span></span>  
   
 ```csharp  
 #define DEBUG  
@@ -82,14 +64,13 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- Ein Beispiel dafür, wie eine Symboldefinition aufgehoben wird, finden Sie unter [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ <span data-ttu-id="fae6a-120">Ein Beispiel dafür, wie eine Symboldefinition aufgehoben wird, finden Sie unter [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).</span><span class="sxs-lookup"><span data-stu-id="fae6a-120">For an example of how to undefine a symbol, see [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [const](../../../csharp/language-reference/keywords/const.md)   
- [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)   
- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
-
+## <a name="see-also"></a><span data-ttu-id="fae6a-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fae6a-121">See Also</span></span>  
+ [<span data-ttu-id="fae6a-122">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="fae6a-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="fae6a-123">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="fae6a-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="fae6a-124">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="fae6a-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)  
+ [<span data-ttu-id="fae6a-125">const</span><span class="sxs-lookup"><span data-stu-id="fae6a-125">const</span></span>](../../../csharp/language-reference/keywords/const.md)  
+ [<span data-ttu-id="fae6a-126">Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen</span><span class="sxs-lookup"><span data-stu-id="fae6a-126">How to: Compile Conditionally with Trace and Debug</span></span>](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [<span data-ttu-id="fae6a-127">#undef</span><span class="sxs-lookup"><span data-stu-id="fae6a-127">#undef</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+ [<span data-ttu-id="fae6a-128">#if</span><span class="sxs-lookup"><span data-stu-id="fae6a-128">#if</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

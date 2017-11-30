@@ -1,55 +1,60 @@
 ---
-title: "How to: Write a Parallel.ForEach Loop with Thread-Local Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parallel foreach loop, how to use local state"
+title: 'Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write a Parallel.ForEach Loop with Thread-Local Variables
-Im folgenden Beispiel wird gezeigt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Methode geschrieben wird, für die threadlokale Variablen verwendet werden.  Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt.  Jede Partition erhält eine eigene Kopie der "threadlokalen" Variable.  \(Der Begriff "threadlokal" ist hier etwas ungenau, da in einigen Fälle zwei Partitionen möglicherweise im gleichen Thread ausgeführt werden.\)  
+# <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a><span data-ttu-id="09dd6-102">Gewusst wie: Schreiben einer Parallel.ForEach-Schleife mit thread-lokalen Variablen</span><span class="sxs-lookup"><span data-stu-id="09dd6-102">How to: Write a Parallel.ForEach Loop with Thread-Local Variables</span></span>
+<span data-ttu-id="09dd6-103">Im folgenden Beispiel wird gezeigt, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode geschrieben wird, für die threadlokale Variablen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="09dd6-103">The following example shows how to write a <xref:System.Threading.Tasks.Parallel.ForEach%2A> method that uses thread-local variables.</span></span> <span data-ttu-id="09dd6-104">Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt.</span><span class="sxs-lookup"><span data-stu-id="09dd6-104">When a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop executes, it divides its source collection into multiple partitions.</span></span> <span data-ttu-id="09dd6-105">Jede Partition erhält eine eigene Kopie der "threadlokalen" Variable.</span><span class="sxs-lookup"><span data-stu-id="09dd6-105">Each partition will get its own copy of the "thread-local" variable.</span></span> <span data-ttu-id="09dd6-106">(Der Begriff "threadlokal" ist hier etwas ungenau, da in einigen Fälle zwei Partitionen möglicherweise im gleichen Thread ausgeführt werden.)</span><span class="sxs-lookup"><span data-stu-id="09dd6-106">(The term "thread-local" is slightly inaccurate here, because in some cases two partitions may run on the same thread.)</span></span>  
   
- Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>\-Methode.  Weitere Informationen finden Sie unter [How to: Write a Parallel.For Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ <span data-ttu-id="09dd6-107">Der Code und die Parameter in diesem Beispiel ähneln stark der entsprechenden <xref:System.Threading.Tasks.Parallel.For%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="09dd6-107">The code and parameters in this example closely resemble the corresponding <xref:System.Threading.Tasks.Parallel.For%2A> method.</span></span> <span data-ttu-id="09dd6-108">Weitere Informationen finden Sie unter [wie: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="09dd6-108">For more information, see [How to: Write a Parallel.For Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).</span></span>  
   
- Um eine threadlokale Variable in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife verwenden zu können, müssen Sie eine der Methodenüberladungen aufrufen, die zwei type\-Parameter erhält.  Der erste type\-Parameter, `TSource`, gibt den Typ des Quellelements, der zweite type\-Parameter, `TLocal`, den Typ der threadlokalen Variable an.  
+ <span data-ttu-id="09dd6-109">Um eine threadlokale Variable in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife verwenden zu können, müssen Sie eine der Methodenüberladungen aufrufen, die zwei type-Parameter erhält.</span><span class="sxs-lookup"><span data-stu-id="09dd6-109">To use a thread-local variable in a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop, you must call one of the method overloads that takes two type parameters.</span></span> <span data-ttu-id="09dd6-110">Der erste type-Parameter, `TSource`, gibt den Typ des Quellelements, der zweite type-Parameter, `TLocal`, den Typ der threadlokalen Variable an.</span><span class="sxs-lookup"><span data-stu-id="09dd6-110">The first type parameter, `TSource`, specifies the type of the source element, and the second type parameter, `TLocal`, specifies the type of the thread-local variable.</span></span>  
   
-## Beispiel  
- Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=fullName>\-Überladung aufgerufen, um die Summe eines Arrays mit einer Million Elementen zu berechnen.  Diese Überladung hat vier Parameter:  
+## <a name="example"></a><span data-ttu-id="09dd6-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="09dd6-111">Example</span></span>  
+ <span data-ttu-id="09dd6-112">Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType>-Überladung aufgerufen, um die Summe eines Arrays mit einer Million Elementen zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="09dd6-112">The following example calls <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> overload to compute the sum of an array of one million elements.</span></span> <span data-ttu-id="09dd6-113">Diese Überladung hat vier Parameter:</span><span class="sxs-lookup"><span data-stu-id="09dd6-113">This overload has four parameters:</span></span>  
   
--   `source` ist die Datenquelle.  Der Parameter muss <xref:System.Collections.Generic.IEnumerable%601> implementieren.  Die Datenquelle in unserem Beispiel ist `IEnumerable<Int32>`\-Objekt mit einer Million Mitgliedern, das von der <xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>\-Methode zurückgegeben wird.  
+-   <span data-ttu-id="09dd6-114">`source` ist die Datenquelle.</span><span class="sxs-lookup"><span data-stu-id="09dd6-114">`source`, which is the data source.</span></span> <span data-ttu-id="09dd6-115">Der Parameter muss <xref:System.Collections.Generic.IEnumerable%601> implementieren.</span><span class="sxs-lookup"><span data-stu-id="09dd6-115">It must implement <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="09dd6-116">Die Datenquelle in unserem Beispiel ist `IEnumerable<Int32>`-Objekt mit einer Million Mitgliedern, das von der <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>-Methode zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="09dd6-116">The data source in our example is the one million member `IEnumerable<Int32>` object returned by the <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> method.</span></span>  
   
--   `localInit` oder die Funktion, die die threadlokale Variable initialisiert.  Diese Funktion wird einmal für jede Partition aufgerufen, in der der <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>\-Vorgang ausgeführt wird.  In unserem Beispiel wird die threadlokale Variable auf Null initialisiert.  
+-   <span data-ttu-id="09dd6-117">`localInit` oder die Funktion, die die threadlokale Variable initialisiert.</span><span class="sxs-lookup"><span data-stu-id="09dd6-117">`localInit`, or the function that initializes the thread-local variable.</span></span> <span data-ttu-id="09dd6-118">Diese Funktion wird einmal für jede Partition aufgerufen, in der der <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Vorgang ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="09dd6-118">This function is called once for each partition in which the <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> operation executes.</span></span> <span data-ttu-id="09dd6-119">In unserem Beispiel wird die threadlokale Variable auf Null initialisiert.</span><span class="sxs-lookup"><span data-stu-id="09dd6-119">Our example initializes the thread-local variable to zero.</span></span>  
   
--   `body`, ein <xref:System.Func%604>\-Objekt, wird von der parallelen Schleife in jeder Iteration der Schleife aufgerufen.  Die Signatur lautet `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.  Sie stellen den Code für den Delegaten bereit, und die Schleife übergibt die folgenden Eingabeparameter:  
+-   <span data-ttu-id="09dd6-120">`body`, ein <xref:System.Func%604>-Objekt, wird von der parallelen Schleife in jeder Iteration der Schleife aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="09dd6-120">`body`, a <xref:System.Func%604> that is invoked by the parallel loop on each iteration of the loop.</span></span> <span data-ttu-id="09dd6-121">Die Signatur lautet `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.</span><span class="sxs-lookup"><span data-stu-id="09dd6-121">Its signature is `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.</span></span> <span data-ttu-id="09dd6-122">Sie stellen den Code für den Delegaten bereit, und die Schleife übergibt die folgenden Eingabeparameter:</span><span class="sxs-lookup"><span data-stu-id="09dd6-122">You supply the code for the delegate, and the loop passes in the input parameters, which are:</span></span>  
   
-    -   Das aktuelle Element von <xref:System.Collections.Generic.IEnumerable%601>.  
+    -   <span data-ttu-id="09dd6-123">Das aktuelle Element von <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="09dd6-123">The current element of the <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
-    -   Eine <xref:System.Threading.Tasks.ParallelLoopState>\-Variable, die Sie im Code Ihres Delegaten verwenden können, um den Zustand der Schleife zu untersuchen.  
+    -   <span data-ttu-id="09dd6-124">Eine <xref:System.Threading.Tasks.ParallelLoopState>-Variable, die Sie im Code Ihres Delegaten verwenden können, um den Zustand der Schleife zu untersuchen.</span><span class="sxs-lookup"><span data-stu-id="09dd6-124">A <xref:System.Threading.Tasks.ParallelLoopState> variable that you can use in your delegate's code to examine the state of the loop.</span></span>  
   
-    -   Die threadlokale Variable.  
+    -   <span data-ttu-id="09dd6-125">Die threadlokale Variable.</span><span class="sxs-lookup"><span data-stu-id="09dd6-125">The thread-local variable.</span></span>  
   
-     Ihr Delegat gibt die threadlokale Variable zurück, die dann an die nächste Iteration der Schleife übergeben wird, die in dieser bestimmten Partition ausgeführt wird.  Jede Schleifenpartition behält eine separate Instanz dieser Variable bei.  
+     <span data-ttu-id="09dd6-126">Ihr Delegat gibt die threadlokale Variable zurück, die dann an die nächste Iteration der Schleife übergeben wird, die in dieser bestimmten Partition ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="09dd6-126">Your delegate returns the thread-local variable, which is then passed to the next iteration of the loop that executes in that particular partition.</span></span> <span data-ttu-id="09dd6-127">Jede Schleifenpartition behält eine separate Instanz dieser Variable bei.</span><span class="sxs-lookup"><span data-stu-id="09dd6-127">Each loop partition maintains a separate instance of this variable.</span></span>  
   
-     In dem Beispiel fügt der Delegat den Wert jeder Ganzzahl zur threadlokalen Variable hinzu, die einen laufenden Gesamtbetrag der Werte der Ganzzahlelemente in dieser Partition beibehält.  
+     <span data-ttu-id="09dd6-128">In dem Beispiel fügt der Delegat den Wert jeder Ganzzahl zur threadlokalen Variable hinzu, die einen laufenden Gesamtbetrag der Werte der Ganzzahlelemente in dieser Partition beibehält.</span><span class="sxs-lookup"><span data-stu-id="09dd6-128">In the example, the delegate adds the value of each integer to the thread-local variable, which maintains a running total of the values of the integer elements in that partition.</span></span>  
   
--   `localFinally`, ein `Action<TLocal>`\-Delegat, der von <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> aufgerufen wird, wenn die Schleifenvorgänge in jeder Partition abgeschlossen wurden.  Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>\-Methode übergibt Ihrem `Action<TLocal>`\-Delegat den ersten Wert der threadlokalen Variable für diesen Thread \(oder diese Schleifenpartition\), und Sie stellen den Code bereit, der die erforderliche Aktion zum Kombinieren des Ergebnisses von dieser Partition mit den Ergebnissen der andere Partitionen bereit.  Dieser Delegat kann von mehreren Aufgaben gleichzeitig aufgerufen werden.  Darum verwendet das Beispiel die <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=fullName>\-Methode, um den Zugriff auf die Variable `total` zu synchronisieren.  Da der Delegattyp ein <xref:System.Action%601>\-Objekt ist, ist kein Rückgabewert vorhanden.  
+-   <span data-ttu-id="09dd6-129">`localFinally`, ein `Action<TLocal>`-Delegat, der von <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aufgerufen wird, wenn die Schleifenvorgänge in jeder Partition abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="09dd6-129">`localFinally`, an `Action<TLocal>` delegate that the <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> invokes when the looping operations in each partition have completed.</span></span> <span data-ttu-id="09dd6-130">Die <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Methode übergibt Ihrem `Action<TLocal>`-Delegat den ersten Wert der threadlokalen Variable für diesen Thread (oder diese Schleifenpartition), und Sie stellen den Code bereit, der die erforderliche Aktion zum Kombinieren des Ergebnisses von dieser Partition mit den Ergebnissen der andere Partitionen bereit.</span><span class="sxs-lookup"><span data-stu-id="09dd6-130">The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method passes your `Action<TLocal>` delegate the final value of the thread-local variable for this thread (or loop partition), and you provide the code that performs the required action for combining the result from this partition with the results from the other partitions.</span></span> <span data-ttu-id="09dd6-131">Dieser Delegat kann von mehreren Aufgaben gleichzeitig aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="09dd6-131">This delegate can be invoked concurrently by multiple tasks.</span></span> <span data-ttu-id="09dd6-132">Darum verwendet das Beispiel die <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType>-Methode, um den Zugriff auf die Variable `total` zu synchronisieren.</span><span class="sxs-lookup"><span data-stu-id="09dd6-132">Because of this, the example uses the <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> method to synchronize access to the `total` variable.</span></span> <span data-ttu-id="09dd6-133">Da der Delegattyp ein <xref:System.Action%601>-Objekt ist, ist kein Rückgabewert vorhanden.</span><span class="sxs-lookup"><span data-stu-id="09dd6-133">Because the delegate type is an <xref:System.Action%601>, there is no return value.</span></span>  
   
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
-## Siehe auch  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)   
- [How to: Write a Parallel.For Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)   
- [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a><span data-ttu-id="09dd6-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="09dd6-134">See Also</span></span>  
+ [<span data-ttu-id="09dd6-135">Datenparallelität</span><span class="sxs-lookup"><span data-stu-id="09dd6-135">Data Parallelism</span></span>](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+ [<span data-ttu-id="09dd6-136">How to: Write a Parallel.For Loop with Thread-Local Variables (Vorgehensweise: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen)</span><span class="sxs-lookup"><span data-stu-id="09dd6-136">How to: Write a Parallel.For Loop with Thread-Local Variables</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+ [<span data-ttu-id="09dd6-137">Lambdaausdrücke in PLINQ und TPL</span><span class="sxs-lookup"><span data-stu-id="09dd6-137">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

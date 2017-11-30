@@ -1,57 +1,52 @@
 ---
-title: "Exception-Klasse und Exception-Eigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ausnahmeklasse"
-  - "Ausnahmen, Ausnahmeklasse"
+title: Exception-Klasse und Exception-Eigenschaften
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions, Exception class
+- Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-# Exception-Klasse und Exception-Eigenschaften
-Die <xref:System.Exception>\-Klasse ist die Basisklasse, von der Ausnahmen erben.  Die meisten Ausnahmeobjekte sind Instanzen einer von  **Exception** abgeleiteten Klasse . Es können jedoch beliebige Objekte als Ausnahme ausgelöst werden, die von der <xref:System.Object>\-Klasse abgeleitet sind.  Beachten Sie, dass nicht alle Sprachen das Auslösen und Abfangen von Objekten unterstützen, die nicht von der **Exception**\-Klasse abgeleitet wurden.  In fast allen Fällen ist es ratsam, nur **Exception**\-Objekte auszulösen und abzufangen.  
+# <a name="exception-class-and-properties"></a><span data-ttu-id="b6e75-102">Ausnahmeklasse und -eigenschaften</span><span class="sxs-lookup"><span data-stu-id="b6e75-102">Exception class and properties</span></span>
+
+<span data-ttu-id="b6e75-103">Die <xref:System.Exception>-Klasse ist die Basisklasse, von der Ausnahmen erben.</span><span class="sxs-lookup"><span data-stu-id="b6e75-103">The <xref:System.Exception> class is the base class from which exceptions inherit.</span></span> <span data-ttu-id="b6e75-104">Die Hierarchie der <xref:System.InvalidCastException>-Klasse sieht beispielsweise wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="b6e75-104">For example, the <xref:System.InvalidCastException> class hierarchy is as follows:</span></span>
+
+```
+Object
+  Exception
+    SystemException
+       InvalidCastException
+```
+
+<span data-ttu-id="b6e75-105">Die <xref:System.Exception>-Klasse verfügt über die folgenden Eigenschaften, die das Verständnis einer Ausnahme erleichtern.</span><span class="sxs-lookup"><span data-stu-id="b6e75-105">The <xref:System.Exception> class has the following properties that help make understanding an exception easier.</span></span>
+
+| <span data-ttu-id="b6e75-106">Eigenschaftenname</span><span class="sxs-lookup"><span data-stu-id="b6e75-106">Property Name</span></span> | <span data-ttu-id="b6e75-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b6e75-107">Description</span></span> |
+| ------------- | ----------- |
+| <xref:System.Exception.Data> | <span data-ttu-id="b6e75-108">Ein <xref:System.Collections.IDictionary>, das beliebige Daten in Schlüssel-Wert-Paaren enthält.</span><span class="sxs-lookup"><span data-stu-id="b6e75-108">An <xref:System.Collections.IDictionary> that holds arbitrary data in key-value pairs.</span></span> |
+| <xref:System.Exception.HelpLink> | <span data-ttu-id="b6e75-109">Kann einen URL (oder URN) zu einer Hilfedatei enthalten, die ausführliche Informationen zur Ursache einer Ausnahme bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="b6e75-109">Can hold a URL (or URN) to a help file that provides extensive information about the cause of an exception.</span></span> |
+| <xref:System.Exception.InnerException> | <span data-ttu-id="b6e75-110">Diese Eigenschaft kann verwendet werden, um während der Ausnahmebehandlung eine Reihe von Ausnahmen zu erstellen und beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="b6e75-110">This property can be used to create and preserve a series of exceptions during exception handling.</span></span> <span data-ttu-id="b6e75-111">Sie können sie verwenden, um eine neue Ausnahme zu erstellen, die zuvor bereits abgefangene Ausnahmen enthält.</span><span class="sxs-lookup"><span data-stu-id="b6e75-111">You can use it to create a new exception that contains previously caught exceptions.</span></span> <span data-ttu-id="b6e75-112">Die ursprüngliche Ausnahme kann durch die zweite Ausnahme in der <xref:System.Exception.InnerException>-Eigenschaft abgefangen werden. So kann der Code, der die zweite Ausnahme verarbeitet, die zusätzlichen Informationen untersuchen.</span><span class="sxs-lookup"><span data-stu-id="b6e75-112">The original exception can be captured by the second exception in the <xref:System.Exception.InnerException> property, allowing code that handles the second exception to examine the additional information.</span></span> <span data-ttu-id="b6e75-113">Ein Beispiel: Sie verfügen über eine Methode, die ein unzureichend formatiertes Argument erhält.</span><span class="sxs-lookup"><span data-stu-id="b6e75-113">For example, suppose you have a method that receives an argument that's improperly formatted.</span></span>  <span data-ttu-id="b6e75-114">Der Code versucht, das Argument zu lesen, es wird aber eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="b6e75-114">The code tries to read the argument, but an exception is thrown.</span></span> <span data-ttu-id="b6e75-115">Die Methode fängt die Ausnahme ab und löst eine <xref:System.FormatException> aus.</span><span class="sxs-lookup"><span data-stu-id="b6e75-115">The method catches the exception and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="b6e75-116">Um die Fähigkeit des Aufrufers zu erhöhen, den Grund für eine Ausnahme zu ermitteln, ist es manchmal wünschenswert, dass eine Methode eine von einer Hilfsroutine ausgelöste Ausnahme abfängt und dann eine Ausnahme auslöst, die bessere Hinweise auf den aufgetretenen Fehler bietet.</span><span class="sxs-lookup"><span data-stu-id="b6e75-116">To improve the caller's ability to determine the reason an exception is thrown, it is sometimes desirable for a method to catch an exception thrown by a helper routine and then throw an exception more indicative of the error that has occurred.</span></span> <span data-ttu-id="b6e75-117">Es kann eine neue, aussagekräftigere Ausnahme erstellt werden, in der der Verweis auf die innere Ausnahme auf die ursprüngliche Ausnahme festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="b6e75-117">A new and more meaningful exception can be created, where the inner exception reference can be set to the original exception.</span></span> <span data-ttu-id="b6e75-118">Diese aussagekräftigere Ausnahme kann für den Aufrufer ausgelöst werden.</span><span class="sxs-lookup"><span data-stu-id="b6e75-118">This more meaningful exception can then be thrown to the caller.</span></span> <span data-ttu-id="b6e75-119">Beachten Sie, dass Sie mit dieser Funktionalität eine Reihe von verknüpften Ausnahmen erstellen können, die mit der Ausnahme endet, die zuerst ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="b6e75-119">Note that with this functionality, you can create a series of linked exceptions that ends with the exception that was thrown first.</span></span> |
+| <xref:System.Exception.Message> | <span data-ttu-id="b6e75-120">Bietet Informationen zur Ursache einer Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="b6e75-120">Provides details about the cause of an exception.</span></span>
+| <xref:System.Exception.Source> | <span data-ttu-id="b6e75-121">Gibt den Namen der Anwendung oder des Objekts zurück, die bzw. das den Fehler verursacht hat, oder legt diesen fest.</span><span class="sxs-lookup"><span data-stu-id="b6e75-121">Gets or sets the name of the application or the object that causes the error.</span></span> |
+| <xref:System.Exception.StackTrace>| <span data-ttu-id="b6e75-122">Enthält eine Stapelüberwachung, die verwendet kann, um zu ermitteln, wo ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="b6e75-122">Contains a stack trace that can be used to determine where an error occurred.</span></span> <span data-ttu-id="b6e75-123">Die Stapelüberwachung beinhaltet den Quelldateinamen und die Programmzeilennummer, falls Debuginformationen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="b6e75-123">The stack trace includes the source file name and program line number if debugging information is available.</span></span> |
+
+<span data-ttu-id="b6e75-124">Die meisten der Klassen, die von <xref:System.Exception> erben, implementieren keine weiteren Member und stellen keine weitere Funktionalität bereit. Sie erben einfach von <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="b6e75-124">Most of the classes that inherit from <xref:System.Exception> do not implement additional members or provide additional functionality; they simply inherit from <xref:System.Exception>.</span></span> <span data-ttu-id="b6e75-125">Daher finden sich die wichtigsten Informationen für eine Ausnahme in der Hierarchie der Ausnahmeklassen, dem Namen der Ausnahme und den in der Ausnahme enthaltenen Details.</span><span class="sxs-lookup"><span data-stu-id="b6e75-125">Therefore, the most important information for an exception can be found in the hierarchy of exception classes, the exception name, and the information contained in the exception.</span></span>
+
+<span data-ttu-id="b6e75-126">Es wird empfohlen, dass Sie auslösen und nur Abfangen von abgeleiteten Objekte <xref:System.Exception>, aber Sie können jedes Objekt, das von abgeleitet ist Auslösen der <xref:System.Object> Klasse als eine Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="b6e75-126">We recommend that you throw and catch only objects that derive from <xref:System.Exception>, but you can throw any object that derives from the <xref:System.Object> class as an exception.</span></span> <span data-ttu-id="b6e75-127">Beachten Sie, dass einige Sprachen nur das Auslösen und Abfangen von Objekten unterstützen, die nicht von <xref:System.Exception> abgeleitet sind.</span><span class="sxs-lookup"><span data-stu-id="b6e75-127">Note that not all languages support throwing and catching objects that do not derive from <xref:System.Exception>.</span></span>
   
- Die **Exception**\-Klasse verfügt über verschiedene Eigenschaften, die zum Verständnis einer Ausnahme beitragen.  Diese Eigenschaften beinhalten:  
-  
--   Die <xref:System.Exception.StackTrace%2A>\-Eigenschaft  
-  
-     Diese Eigenschaft enthält eine Stapelüberwachung, mit deren Hilfe ermittelt werden kann, wo ein Fehler aufgetreten ist.  Die Stapelüberwachung beinhaltet den Quelldateinamen und die Programmzeilennummer, falls Debuginformationen verfügbar sind.  
-  
--   Die <xref:System.Exception.InnerException%2A>\-Eigenschaft  
-  
-     Mit dieser Eigenschaft können während der Ausnahmebehandlung eine Reihe von Ausnahmen erstellt und erhalten werden.  Verwenden Sie diese Eigenschaft, um eine neue Ausnahme zu erstellen, die vorher abgefangene Ausnahmen enthält.  Die ursprüngliche Ausnahme kann durch die zweite Ausnahme in der **InnerException**\-Eigenschaft abgefangen werden. Dadurch können die zusätzlichen Informationen von dem Code ausgewertet werden, der die zweite Ausnahme behandelt.  
-  
-     Ein Beispiel: Angenommen, Sie verfügen über eine Methode, die eine Datei liest und die Daten formatiert.  Der Code versucht, die Datei zu lesen, aber eine FileException\-Ausnahme wird ausgelöst.  Diese Ausnahme wird durch die Methode abgefangen, und es wird eine BadFormatException\-Ausnahme ausgelöst.  In diesem Fall kann die FileException\-Ausnahme in der **InnerException**\-Eigenschaft der BadFormatException\-Ausnahme gespeichert werden.  
-  
-     Damit der Aufrufer leichter ermitteln kann, warum eine Ausnahme ausgelöst wurde, ist es für eine Methode manchmal nützlich, die von einer Hilfsfunktion ausgelöste Ausnahme abzufangen und dann eine Ausnahme auszulösen, die den aufgetretenen Fehler besser verdeutlicht.  Eine neue, aussagekräftigere Ausnahme kann erstellt werden, wobei als Verweis zur inneren Ausnahme die ursprüngliche Ausnahme festgelegt werden kann.  Diese aussagekräftige Ausnahme kann dann für den Aufrufer ausgelöst werden.  Beachten Sie, dass Sie mit dieser Funktion eine Reihe von verknüpften Ausnahmen erstellen können, die mit der zuerst ausgelösten Ausnahme endet.  
-  
--   Die <xref:System.Exception.Message%2A>\-Eigenschaft  
-  
-     Diese Eigenschaft enthält nähere Angaben über die Ursache einer Ausnahme.  Die **Message** wird in der Sprache angezeigt, die in der <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>\-Eigenschaft des Threads angegeben ist, der die Ausnahme auslöst.  
-  
--   Die <xref:System.Exception.HelpLink%2A>\-Eigenschaft  
-  
-     Diese Eigenschaft kann eine URL \(oder URN\) zu einer Hilfedatei enthalten, die ausführliche Informationen über die Ursache der Ausnahme enthält.  
-  
--   Die <xref:System.Exception.Data%2A>\-Eigenschaft.  
-  
-     Diese Eigenschaft stellt ein IDictionary dar, in dem beliebige Daten in Schlüssel\-Wert\-Paaren enthalten sind.  
-  
- Fast alle Klassen, die von der **Exception**\-Klasse erben, implementieren keine weiteren Member oder stellen keine zusätzlichen Funktionen bereit; sie erben lediglich von der **Exception**\-Klasse.  Daher sind die wichtigsten Informationen über eine Ausnahme in der Ausnahmehierarchie, in der Bezeichnung und in den in ihr selbst enthaltenen Informationen enthalten.  
-  
-## Siehe auch  
- [Ausnahmenhierarchie](../../../docs/standard/exceptions/exception-hierarchy.md)   
- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Best Practices für Ausnahmen](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [Ausnahmen](../../../docs/standard/exceptions/index.md)
+## <a name="see-also"></a><span data-ttu-id="b6e75-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6e75-128">See Also</span></span>  
+[<span data-ttu-id="b6e75-129">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="b6e75-129">Exceptions</span></span>](index.md)

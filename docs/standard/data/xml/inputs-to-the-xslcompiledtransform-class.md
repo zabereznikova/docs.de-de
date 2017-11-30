@@ -1,64 +1,65 @@
 ---
-title: "Eingaben f&#252;r die XslCompiledTransform-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Eingaben für die XslCompiledTransform-Klasse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 97d636583393ab856a9c17af4c974c53fbde5767
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Eingaben f&#252;r die XslCompiledTransform-Klasse
-Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>\-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>\-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen\-URI.  
+# <a name="inputs-to-the-xslcompiledtransform-class"></a><span data-ttu-id="7d597-102">Eingaben für die XslCompiledTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="7d597-102">Inputs to the XslCompiledTransform Class</span></span>
+<span data-ttu-id="7d597-103">Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.</span><span class="sxs-lookup"><span data-stu-id="7d597-103">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method accepts three input types for the source document: an object that implements the <xref:System.Xml.XPath.IXPathNavigable> interface, an <xref:System.Xml.XmlReader> object that reads the source document, or a string URI.</span></span>  
   
 > [!NOTE]
->  Mit der <xref:System.Xml.Xsl.XslCompiledTransform>\-Klasse wird Leerraum standardmäßig beibehalten.  Dies entspricht Abschnitt 3.4 der Empfehlung des W3C zu XSLT, Version 1.0, \(Abschnitt 3.4, http:\/\/www.w3.org\/TR\/xslt.html\#strip\).  
+>  <span data-ttu-id="7d597-104">Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten.</span><span class="sxs-lookup"><span data-stu-id="7d597-104">The <xref:System.Xml.Xsl.XslCompiledTransform> class preserves white space by default.</span></span> <span data-ttu-id="7d597-105">Dies entspricht Abschnitt 3.4 der Empfehlung des W3C zu XSLT, Version 1.0, (Abschnitt 3.4, http://www.w3.org/TR/xslt.html#strip).</span><span class="sxs-lookup"><span data-stu-id="7d597-105">This is in accordance with section 3.4 of the W3C XSLT 1.0 recommendation (section 3.4, http://www.w3.org/TR/xslt.html#strip).</span></span>  
   
-## "IXPathNavigable"\-Schnittstelle  
- Die <xref:System.Xml.XPath.IXPathNavigable>\-Schnittstelle ist in der <xref:System.Xml.XmlNode>\-Klasse und der <xref:System.Xml.XPath.XPathDocument>\-Klasse implementiert.  Diese Klassen stellen einen speicherinternen Cache der XML\-Daten dar.  
+## <a name="ixpathnavigable-interface"></a><span data-ttu-id="7d597-106">"IXPathNavigable"-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7d597-106">IXPathNavigable Interface</span></span>  
+ <span data-ttu-id="7d597-107">Die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle ist in der <xref:System.Xml.XmlNode>-Klasse und der <xref:System.Xml.XPath.XPathDocument>-Klasse implementiert.</span><span class="sxs-lookup"><span data-stu-id="7d597-107">The <xref:System.Xml.XPath.IXPathNavigable> interface is implemented in the <xref:System.Xml.XmlNode> and <xref:System.Xml.XPath.XPathDocument> classes.</span></span> <span data-ttu-id="7d597-108">Diese Klassen stellen einen speicherinternen Cache der XML-Daten dar.</span><span class="sxs-lookup"><span data-stu-id="7d597-108">These classes represent an in-memory cache of XML data.</span></span>  
   
--   Die <xref:System.Xml.XmlNode>\-Klasse basiert auf dem W3C\-DOM \(Document Object Model\) und umfasst Bearbeitungsfunktionen.  
+-   <span data-ttu-id="7d597-109">Die <xref:System.Xml.XmlNode>-Klasse basiert auf dem W3C-DOM (Document Object Model) und umfasst Bearbeitungsfunktionen.</span><span class="sxs-lookup"><span data-stu-id="7d597-109">The <xref:System.Xml.XmlNode> class is based on the W3C Document Object Model (DOM) and includes editing capabilities.</span></span>  
   
--   Die <xref:System.Xml.XPath.XPathDocument>\-Klasse ist ein schreibgeschützter Datenspeicher, der auf dem XPath\-Datenmodell basiert.  <xref:System.Xml.XPath.XPathDocument> ist die empfohlene Klasse zu XSLT\-Verarbeitung.  Im Vergleich zur <xref:System.Xml.XmlNode>\-Klasse bietet sie eine schnellere Leistung.  
+-   <span data-ttu-id="7d597-110">Die <xref:System.Xml.XPath.XPathDocument>-Klasse ist ein schreibgeschützter Datenspeicher, der auf dem XPath-Datenmodell basiert.</span><span class="sxs-lookup"><span data-stu-id="7d597-110">The <xref:System.Xml.XPath.XPathDocument> class is a read-only data store based on the XPath data model.</span></span> <span data-ttu-id="7d597-111"><xref:System.Xml.XPath.XPathDocument> ist die empfohlene Klasse zu XSLT-Verarbeitung.</span><span class="sxs-lookup"><span data-stu-id="7d597-111"><xref:System.Xml.XPath.XPathDocument> is the recommended class for XSLT processing.</span></span> <span data-ttu-id="7d597-112">Im Vergleich zur <xref:System.Xml.XmlNode>-Klasse bietet sie eine schnellere Leistung.</span><span class="sxs-lookup"><span data-stu-id="7d597-112">It provides faster performance when compared to the <xref:System.Xml.XmlNode> class.</span></span>  
   
 > [!NOTE]
->  Transformationen werden auf das gesamte Dokument angewendet.  Wenn Sie einen anderen Knoten als den Stammknoten des Dokuments übergeben, wird dadurch nicht verhindert, dass im Transformationsprozess auf alle Knoten im geladenen Dokument zugegriffen wird.  Zum Transformieren eines Knotenfragments müssen Sie ein Objekt erstellen, das nur das Knotenfragment enthält, und dieses Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode übergeben.  Weitere Informationen finden Sie unter [Vorgehensweise: Transformieren eines Knotenfragments](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+>  <span data-ttu-id="7d597-113">Transformationen werden auf das gesamte Dokument angewendet.</span><span class="sxs-lookup"><span data-stu-id="7d597-113">Transformations apply to the document as a whole.</span></span> <span data-ttu-id="7d597-114">Wenn Sie einen anderen Knoten als den Stammknoten des Dokuments übergeben, wird dadurch nicht verhindert, dass im Transformationsprozess auf alle Knoten im geladenen Dokument zugegriffen wird.</span><span class="sxs-lookup"><span data-stu-id="7d597-114">In other words, if you pass in a node other than the document root node, this does not prevent the transformation process from accessing all nodes in the loaded document.</span></span> <span data-ttu-id="7d597-115">Zum Transformieren eines Knotenfragments müssen Sie ein Objekt erstellen, das nur das Knotenfragment enthält, und dieses Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben.</span><span class="sxs-lookup"><span data-stu-id="7d597-115">To transform a node fragment, you must create an object containing just the node fragment, and pass that object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="7d597-116">Weitere Informationen finden Sie unter [wie: Transformieren eines Knotenfragments](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).</span><span class="sxs-lookup"><span data-stu-id="7d597-116">For more information, see [How to: Transform a Node Fragment](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).</span></span>  
   
- Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName>\-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.  Die Dateien books.xml und transform.xsl befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT\-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="7d597-117">Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.</span><span class="sxs-lookup"><span data-stu-id="7d597-117">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="7d597-118">Die books.xml und transform.xsl-Dateien befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="7d597-118">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
-## "XmlReader"\-Objekt  
- Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode wird aus dem aktuellen Knoten vom <xref:System.Xml.XmlReader> über alle untergeordneten Elemente geladen.  Dadurch können Sie einen Teil eines Dokuments als Kontextdokument verwenden.  Nach der Rückgabe der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode wird der <xref:System.Xml.XmlReader> auf dem nächsten Knoten nach dem Ende des Kontextdokuments platziert.  Wenn das Ende des Dokuments erreicht wird, wird der <xref:System.Xml.XmlReader> am Ende der Datei \(EOF\) platziert.  
+## <a name="xmlreader-object"></a><span data-ttu-id="7d597-119">"XmlReader"-Objekt</span><span class="sxs-lookup"><span data-stu-id="7d597-119">XmlReader Object</span></span>  
+ <span data-ttu-id="7d597-120">Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode wird aus dem aktuellen Knoten vom <xref:System.Xml.XmlReader> über alle untergeordneten Elemente geladen.</span><span class="sxs-lookup"><span data-stu-id="7d597-120">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method loads from the current node of the <xref:System.Xml.XmlReader> through all its children.</span></span> <span data-ttu-id="7d597-121">Dadurch können Sie einen Teil eines Dokuments als Kontextdokument verwenden.</span><span class="sxs-lookup"><span data-stu-id="7d597-121">This enables you to use a portion of a document as the context document.</span></span> <span data-ttu-id="7d597-122">Nach der Rückgabe der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode wird der <xref:System.Xml.XmlReader> auf dem nächsten Knoten nach dem Ende des Kontextdokuments platziert.</span><span class="sxs-lookup"><span data-stu-id="7d597-122">After the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method returns, the <xref:System.Xml.XmlReader> is positioned on the next node after the end of the context document.</span></span> <span data-ttu-id="7d597-123">Wenn das Ende des Dokuments erreicht wird, wird der <xref:System.Xml.XmlReader> am Ende der Datei (EOF) platziert.</span><span class="sxs-lookup"><span data-stu-id="7d597-123">If the end of the document is reached, the <xref:System.Xml.XmlReader> is positioned at the end of file (EOF).</span></span>  
   
- Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName>\-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.  Die Dateien books.xml und transform.xsl befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT\-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="7d597-124">Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.</span><span class="sxs-lookup"><span data-stu-id="7d597-124">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="7d597-125">Die books.xml und transform.xsl-Dateien befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="7d597-125">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
-## Zeichenfolgen\-URI  
- Sie können auch den URI des Quelldokuments als XSLT\-Eingabe angeben.  Mit einem <xref:System.Xml.XmlResolver> wird der URI aufgelöst.  Sie können angeben, welcher <xref:System.Xml.XmlResolver> verwendet werden soll, indem Sie ihn an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode übergeben.  Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, verwendet die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>\-Methode einen Standard\-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen.  
+## <a name="string-uri"></a><span data-ttu-id="7d597-126">Zeichenfolgen-URI</span><span class="sxs-lookup"><span data-stu-id="7d597-126">String URI</span></span>  
+ <span data-ttu-id="7d597-127">Sie können auch den URI des Quelldokuments als XSLT-Eingabe angeben.</span><span class="sxs-lookup"><span data-stu-id="7d597-127">You can also specify the source document URI as your XSLT input.</span></span> <span data-ttu-id="7d597-128">Mit einem <xref:System.Xml.XmlResolver> wird der URI aufgelöst.</span><span class="sxs-lookup"><span data-stu-id="7d597-128">An <xref:System.Xml.XmlResolver> is used to resolve the URI.</span></span> <span data-ttu-id="7d597-129">Sie können angeben, welcher <xref:System.Xml.XmlResolver> verwendet werden soll, indem Sie ihn an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben.</span><span class="sxs-lookup"><span data-stu-id="7d597-129">You can specify the <xref:System.Xml.XmlResolver> to use by passing it to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="7d597-130">Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, verwendet die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode einen Standard-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="7d597-130">If an <xref:System.Xml.XmlResolver> is not specified, the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method uses a default <xref:System.Xml.XmlUrlResolver> with no credentials.</span></span>  
   
- Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName>\-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.  Die Dateien books.xml und transform.xsl befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT\-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="7d597-131">Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet.</span><span class="sxs-lookup"><span data-stu-id="7d597-131">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="7d597-132">Die books.xml und transform.xsl-Dateien befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="7d597-132">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  
   
- Weitere Informationen finden Sie unter [Auflösen von externen Ressourcen während der XSLT\-Verarbeitung](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).  
+ <span data-ttu-id="7d597-133">Weitere Informationen finden Sie unter [Auflösen von externen Ressourcen während der XSLT-Verarbeitung](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).</span><span class="sxs-lookup"><span data-stu-id="7d597-133">For more information, see [Resolving External Resources During XSLT Processing](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).</span></span>  
   
-## Siehe auch  
- [XSLT\-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="7d597-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d597-134">See Also</span></span>  
+ [<span data-ttu-id="7d597-135">XSLT Transformations (XSLT-Transformationen)</span><span class="sxs-lookup"><span data-stu-id="7d597-135">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

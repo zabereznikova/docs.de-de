@@ -7,50 +7,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - cache [.NET Framework], network applications
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b960942d17e402b333354bbd932cf63d11b1209f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="cache-management-for-network-applications"></a>Cacheverwaltung für Netzwerkanwendungen
-Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicherung von Ressourcen, die mithilfe der <xref:System.Net.WebClient>-, <xref:System.Net.WebRequest>-, <xref:System.Net.HttpWebRequest>- und <xref:System.Net.FtpWebRequest>-Klassen erhalten werden.  
+# <a name="cache-management-for-network-applications"></a><span data-ttu-id="969c6-102">Cacheverwaltung für Netzwerkanwendungen</span><span class="sxs-lookup"><span data-stu-id="969c6-102">Cache Management for Network Applications</span></span>
+<span data-ttu-id="969c6-103">Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicherung von Ressourcen, die mithilfe der <xref:System.Net.WebClient>-, <xref:System.Net.WebRequest>-, <xref:System.Net.HttpWebRequest>- und <xref:System.Net.FtpWebRequest>-Klassen erhalten werden.</span><span class="sxs-lookup"><span data-stu-id="969c6-103">This topic and its related subtopics describe caching for resources obtained using the <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, and <xref:System.Net.FtpWebRequest> classes.</span></span>  
   
- Ein Zwischenspeicher dient als temporärer Speicher von Ressourcen, die von einer Anwendung angefordert wurden. Wenn eine Anwendung mehrere Male die gleiche Ressource anfordert, kann die Ressource aus dem Zwischenspeicher zurückgegeben werden. Der Mehraufwand einer erneuten Aufforderung vom Server wird somit verhindert. Zwischenspeichern kann die Anwendungsleistung durch Verringern des Zeitaufwands für den Abruf einer angeforderten Ressource verbessern. Zwischenspeichern kann auch den Netzwerkverkehr verringern, indem die Anzahl der Roundtrips zum Server reduziert werden. Bei der Zwischenspeicherung wird die Leistung verbessert, aber sie erhöht auch das Risiko, dass die an die Anwendung zurückgegebene Ressource veraltet ist, was bedeutet, dass sie nicht identisch zu der Ressource ist, die vom Server gesendet worden wäre, wenn das Zwischenspeichern nicht in Gebrauch wäre.  
+ <span data-ttu-id="969c6-104">Ein Zwischenspeicher dient als temporärer Speicher von Ressourcen, die von einer Anwendung angefordert wurden.</span><span class="sxs-lookup"><span data-stu-id="969c6-104">A cache provides temporary storage of resources that have been requested by an application.</span></span> <span data-ttu-id="969c6-105">Wenn eine Anwendung mehrere Male die gleiche Ressource anfordert, kann die Ressource aus dem Zwischenspeicher zurückgegeben werden. Der Mehraufwand einer erneuten Aufforderung vom Server wird somit verhindert.</span><span class="sxs-lookup"><span data-stu-id="969c6-105">If an application requests the same resource more than once, the resource can be returned from the cache, avoiding the overhead of re-requesting it from the server.</span></span> <span data-ttu-id="969c6-106">Zwischenspeichern kann die Anwendungsleistung durch Verringern des Zeitaufwands für den Abruf einer angeforderten Ressource verbessern.</span><span class="sxs-lookup"><span data-stu-id="969c6-106">Caching can improve application performance by reducing the time required to get a requested resource.</span></span> <span data-ttu-id="969c6-107">Zwischenspeichern kann auch den Netzwerkverkehr verringern, indem die Anzahl der Roundtrips zum Server reduziert werden.</span><span class="sxs-lookup"><span data-stu-id="969c6-107">Caching can also decrease network traffic by reducing the number of trips to the server.</span></span> <span data-ttu-id="969c6-108">Bei der Zwischenspeicherung wird die Leistung verbessert, aber sie erhöht auch das Risiko, dass die an die Anwendung zurückgegebene Ressource veraltet ist, was bedeutet, dass sie nicht identisch zu der Ressource ist, die vom Server gesendet worden wäre, wenn das Zwischenspeichern nicht in Gebrauch wäre.</span><span class="sxs-lookup"><span data-stu-id="969c6-108">While caching improves performance, it increases the risk that the resource returned to the application is stale, meaning that it is not identical to the resource that would have been sent by the server if caching were not in use.</span></span>  
   
- Durch Zwischenspeichern können nicht autorisierte Benutzer vertrauliche Daten lesen oder verarbeiten. Eine authentifizierte Antwort, die zwischengespeichert ist, kann möglicherweise ohne eine zusätzliche Autorisierung aus dem Zwischenspeicher abgerufen werden. Wenn das Zwischenspeichern aktiviert wurde, ändern Sie <xref:System.Net.WebRequest.CachePolicy%2A> auf <xref:System.Net.Cache.RequestCacheLevel.BypassCache> oder <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore>, um es für diese Anforderung zu deaktivieren.  
+ <span data-ttu-id="969c6-109">Durch Zwischenspeichern können nicht autorisierte Benutzer vertrauliche Daten lesen oder verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="969c6-109">Caching may allow unauthorized users or processes to read sensitive data.</span></span> <span data-ttu-id="969c6-110">Eine authentifizierte Antwort, die zwischengespeichert ist, kann möglicherweise ohne eine zusätzliche Autorisierung aus dem Zwischenspeicher abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="969c6-110">An authenticated response that is cached may be retrieved from the cache without an additional authorization.</span></span> <span data-ttu-id="969c6-111">Wenn das Zwischenspeichern aktiviert wurde, ändern Sie <xref:System.Net.WebRequest.CachePolicy%2A> auf <xref:System.Net.Cache.RequestCacheLevel.BypassCache> oder <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore>, um es für diese Anforderung zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="969c6-111">If caching is enabled, change to <xref:System.Net.WebRequest.CachePolicy%2A> to <xref:System.Net.Cache.RequestCacheLevel.BypassCache> or <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> to disable caching for this request.</span></span>  
   
- Aus Sicherheitsgründen wird das Zwischenspeichern **nicht** für Szenarios der mittleren Ebene empfohlen.  
+ <span data-ttu-id="969c6-112">Aus Sicherheitsgründen wird das Zwischenspeichern **nicht** für Szenarios der mittleren Ebene empfohlen.</span><span class="sxs-lookup"><span data-stu-id="969c6-112">Due to security concerns, caching is **not** recommended for middle tier scenarios.</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
- Erläutert, was eine Cacherichtlinie ist und wie sie definiert werden kann.  
+## <a name="in-this-section"></a><span data-ttu-id="969c6-113">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="969c6-113">In This Section</span></span>  
+ [<span data-ttu-id="969c6-114">Cacherichtlinie</span><span class="sxs-lookup"><span data-stu-id="969c6-114">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ <span data-ttu-id="969c6-115">Erläutert, was eine Cacherichtlinie ist und wie sie definiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="969c6-115">Explains what a cache policy is and how to define one.</span></span>  
   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- Definiert jeden Typ von verfügbaren speicherortbasierten Cacherichtlinien für Ressourcen von Hypertext Transfer Protocol (http und https).  
+ [<span data-ttu-id="969c6-116">Speicherortbasierte Cacherichtlinien</span><span class="sxs-lookup"><span data-stu-id="969c6-116">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ <span data-ttu-id="969c6-117">Definiert jeden Typ von verfügbaren speicherortbasierten Cacherichtlinien für Ressourcen von Hypertext Transfer Protocol (http und https).</span><span class="sxs-lookup"><span data-stu-id="969c6-117">Defines each type of location-based cache policy available for Hypertext Transfer Protocol (http and https) resources.</span></span>  
   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- Beschreibt die Kriterien, die zum Anpassen einer zeitbasierten Cacherichtlinie verwendet werden können.  
+ [<span data-ttu-id="969c6-118">Zeitbasierte Cacherichtlinien</span><span class="sxs-lookup"><span data-stu-id="969c6-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ <span data-ttu-id="969c6-119">Beschreibt die Kriterien, die zum Anpassen einer zeitbasierten Cacherichtlinie verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="969c6-119">Describes the criteria that can be used to customize a time-based cache policy.</span></span>  
   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- Beschreibt, wie Sie programmgesteuert Cacherichtlinien und Anforderungen erstellen, die Zwischenspeicher verwenden.  
+ [<span data-ttu-id="969c6-120">Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen</span><span class="sxs-lookup"><span data-stu-id="969c6-120">Configuring Caching in Network Applications</span></span>](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ <span data-ttu-id="969c6-121">Beschreibt, wie Sie programmgesteuert Cacherichtlinien und Anforderungen erstellen, die Zwischenspeicher verwenden.</span><span class="sxs-lookup"><span data-stu-id="969c6-121">Describes how to programmatically create cache policies and requests that use caching.</span></span>  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a><span data-ttu-id="969c6-122">Verweis</span><span class="sxs-lookup"><span data-stu-id="969c6-122">Reference</span></span>  
  <xref:System.Net.Cache>  
- Definiert die Typen und Enumerationen, mit denen Cacherichtlinien für Ressourcen definiert werden, die mithilfe der Klassen <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> und <xref:System.Net.FtpWebRequest> abgerufen werden.
-
+ <span data-ttu-id="969c6-123">Definiert die Typen und Enumerationen, mit denen Cacherichtlinien für Ressourcen definiert werden, die mithilfe der Klassen <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> und <xref:System.Net.FtpWebRequest> abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="969c6-123">Defines the types and enumerations used to define cache policies for resources obtained using the <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, and <xref:System.Net.FtpWebRequest> classes.</span></span>

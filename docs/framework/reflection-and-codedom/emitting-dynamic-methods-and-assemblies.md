@@ -1,12 +1,11 @@
 ---
 title: Ausgeben von dynamischen Methoden und Assemblys
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 08/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,60 +14,69 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
-In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.Emit>-Namespace beschrieben, mit denen ein Compiler oder ein Tool zur Laufzeit Metadaten und Microsoft Intermediate Language (MSIL) ausgeben und optional eine übertragbare ausführbare Datei (PE-Datei) auf dem Datenträger generieren kann. Dieser Namespace wird primär von Skriptmodulen und Compilern verwendet. Die vom <xref:System.Reflection.Emit>-Namespace bereitgestellte Funktionalität wird in diesem Abschnitt als Reflektionsausgabe bezeichnet.  
+# <a name="emitting-dynamic-methods-and-assemblies"></a><span data-ttu-id="01e7e-102">Ausgeben von dynamischen Methoden und Assemblys</span><span class="sxs-lookup"><span data-stu-id="01e7e-102">Emitting Dynamic Methods and Assemblies</span></span>
+<span data-ttu-id="01e7e-103">In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.Emit>-Namespace beschrieben, mit denen ein Compiler oder ein Tool zur Laufzeit Metadaten und Microsoft Intermediate Language (MSIL) ausgeben und optional eine übertragbare ausführbare Datei (PE-Datei) auf dem Datenträger generieren kann.</span><span class="sxs-lookup"><span data-stu-id="01e7e-103">This section describes a set of managed types in the <xref:System.Reflection.Emit> namespace that allow a compiler or tool to emit metadata and Microsoft intermediate language (MSIL) at run time and optionally generate a portable executable (PE) file on disk.</span></span> <span data-ttu-id="01e7e-104">Dieser Namespace wird primär von Skriptmodulen und Compilern verwendet.</span><span class="sxs-lookup"><span data-stu-id="01e7e-104">Script engines and compilers are the primary users of this namespace.</span></span> <span data-ttu-id="01e7e-105">Die vom <xref:System.Reflection.Emit>-Namespace bereitgestellte Funktionalität wird in diesem Abschnitt als Reflektionsausgabe bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="01e7e-105">In this section, the functionality provided by the <xref:System.Reflection.Emit> namespace is referred to as reflection emit.</span></span>  
   
- Die Reflektionsausgabe bietet die folgenden Funktionen:  
+ <span data-ttu-id="01e7e-106">Die Reflektionsausgabe bietet die folgenden Funktionen:</span><span class="sxs-lookup"><span data-stu-id="01e7e-106">Reflection emit provides the following capabilities:</span></span>  
   
--   Sie können mithilfe der <xref:System.Reflection.Emit.DynamicMethod>-Klasse einfache globale Methoden zur Laufzeit definieren und diese mithilfe von Delegaten ausführen.  
+-   <span data-ttu-id="01e7e-107">Sie können mithilfe der <xref:System.Reflection.Emit.DynamicMethod>-Klasse einfache globale Methoden zur Laufzeit definieren und diese mithilfe von Delegaten ausführen.</span><span class="sxs-lookup"><span data-stu-id="01e7e-107">Define lightweight global methods at run time, using the <xref:System.Reflection.Emit.DynamicMethod> class, and execute them using delegates.</span></span>  
   
--   Sie können Assemblys zur Laufzeit definieren und anschließend ausführen und/oder auf dem Datenträger speichern.  
+-   <span data-ttu-id="01e7e-108">Sie können Assemblys zur Laufzeit definieren und anschließend ausführen und/oder auf dem Datenträger speichern.</span><span class="sxs-lookup"><span data-stu-id="01e7e-108">Define assemblies at run time and then run them and/or save them to disk.</span></span>  
   
--   Sie können Assemblys zur Laufzeit definieren, sie ausführen und dann entladen und der Garbage Collection ermöglichen, die zugehörigen Ressourcen freizugeben.  
+-   <span data-ttu-id="01e7e-109">Sie können Assemblys zur Laufzeit definieren, sie ausführen und dann entladen und der Garbage Collection ermöglichen, die zugehörigen Ressourcen freizugeben.</span><span class="sxs-lookup"><span data-stu-id="01e7e-109">Define assemblies at run time, run them, and then unload them and allow garbage collection to reclaim their resources.</span></span>  
   
--   Sie können Module in neuen Assemblys zur Laufzeit definieren und anschließend ausführen und/oder auf dem Datenträger speichern.  
+-   <span data-ttu-id="01e7e-110">Sie können Module in neuen Assemblys zur Laufzeit definieren und anschließend ausführen und/oder auf dem Datenträger speichern.</span><span class="sxs-lookup"><span data-stu-id="01e7e-110">Define modules in new assemblies at run time and then run and/or save them to disk.</span></span>  
   
--   Sie können Typen in Modulen zur Laufzeit definieren, Instanzen dieser Typen erstellen und deren Methoden aufrufen.  
+-   <span data-ttu-id="01e7e-111">Sie können Typen in Modulen zur Laufzeit definieren, Instanzen dieser Typen erstellen und deren Methoden aufrufen.</span><span class="sxs-lookup"><span data-stu-id="01e7e-111">Define types in modules at run time, create instances of these types, and invoke their methods.</span></span>  
   
--   Sie können symbolische Informationen für definierte Module angeben, die von Tools wie Debuggern und Codeprofilern verwendet werden können.  
+-   <span data-ttu-id="01e7e-112">Sie können symbolische Informationen für definierte Module angeben, die von Tools wie Debuggern und Codeprofilern verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="01e7e-112">Define symbolic information for defined modules that can be used by tools such as debuggers and code profilers.</span></span>  
   
- Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
+ <span data-ttu-id="01e7e-113">Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="01e7e-113">In addition to the managed types in the <xref:System.Reflection.Emit> namespace, there are unmanaged metadata interfaces which are described in the [Metadata Interfaces](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) reference documentation.</span></span> <span data-ttu-id="01e7e-114">Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.</span><span class="sxs-lookup"><span data-stu-id="01e7e-114">Managed reflection emit provides stronger semantic error checking and a higher level of abstraction of the metadata than the unmanaged metadata interfaces.</span></span>  
   
- In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](http://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.  
+ <span data-ttu-id="01e7e-115">In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL.</span><span class="sxs-lookup"><span data-stu-id="01e7e-115">Another useful resource for working with metadata and MSIL is the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set".</span></span> <span data-ttu-id="01e7e-116">Die Dokumentation ist online auf [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](http://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="01e7e-116">The documentation is available online on [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) and at the [Ecma Web site](http://go.microsoft.com/fwlink/?LinkId=116487).</span></span>  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- Beschreibt Sicherheitsaspekte im Zusammenhang mit dem Erstellen dynamischer Assemblys mithilfe der Reflektionsausgabe.  
+## <a name="in-this-section"></a><span data-ttu-id="01e7e-117">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="01e7e-117">In This Section</span></span>
   
-## <a name="reference"></a>Verweis  
+[<span data-ttu-id="01e7e-118">Sicherheitsaspekte bei der Reflektionsausgabe</span><span class="sxs-lookup"><span data-stu-id="01e7e-118">Security issues in reflection emit</span></span>](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+<span data-ttu-id="01e7e-119">Beschreibt Sicherheitsaspekte im Zusammenhang mit dem Erstellen dynamischer Assemblys mithilfe der Reflektionsausgabe.</span><span class="sxs-lookup"><span data-stu-id="01e7e-119">Describes security issues related to creating dynamic assemblies using reflection emit.</span></span>  
+
+<span data-ttu-id="01e7e-120">[Vorgehensweise: definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md) </span><span class="sxs-lookup"><span data-stu-id="01e7e-120">[How to: Define and execute dynamic methods](how-to-define-and-execute-dynamic-methods.md) </span></span>  
+<span data-ttu-id="01e7e-121">Zeigt, wie eine einfache dynamische Methode und eine dynamische Methode, die an eine Instanz einer Klasse gebunden ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="01e7e-121">Shows how to execute a simple dynamic method and a dynamic method bound to an instance of a class.</span></span>
+
+<span data-ttu-id="01e7e-122">[Vorgehensweise: definieren ein generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md) </span><span class="sxs-lookup"><span data-stu-id="01e7e-122">[How to: Define a generic type with reflection emit](how-to-define-a-generic-type-with-reflection-emit.md) </span></span>  
+<span data-ttu-id="01e7e-123">Zeigt, wie einen einfachen generischen Typ mit zwei Typparametern erstellt, wie Klasse, die Schnittstelle und die speziellen Einschränkungen auf die Typparameter angewendet und Memers erstellen, die die Typparameter der Klasse als Parametertypen und Rückgabetypen von.</span><span class="sxs-lookup"><span data-stu-id="01e7e-123">Shows how to create a simple generic type with two type parameters, how to apply class, interface, and special constraints to the type parameters, and how to create memers that use the type parameters of the class as parameter types and return types.</span></span>
+
+<span data-ttu-id="01e7e-124">[Vorgehensweise: definieren eine generische Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md) </span><span class="sxs-lookup"><span data-stu-id="01e7e-124">[How to: Define a generic method with reflection emit](how-to-define-a-generic-method-with-reflection-emit.md) </span></span>  
+<span data-ttu-id="01e7e-125">Zeigt, wie erstellen, auszugeben und eine einfache generische Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="01e7e-125">Shows how to create, emit, and invoke a simple generic method.</span></span>
+
+<span data-ttu-id="01e7e-126">[Entladbare Assemblys für die dynamische typgenerierung](collectible-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="01e7e-126">[Collectible assemblies for dynamic type generation](collectible-assemblies.md) </span></span>  
+<span data-ttu-id="01e7e-127">Führt ein entladbare Assemblys, bei die dynamische Assemblys sind, die entladen werden können, ohne Entladen der Anwendungsdomäne, in der sie erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="01e7e-127">Introduces collectible assemblies, which are dynamic assemblies that can be unloaded without unloading the application domain in which they were created.</span></span>
+  
+## <a name="reference"></a><span data-ttu-id="01e7e-128">Verweis</span><span class="sxs-lookup"><span data-stu-id="01e7e-128">Reference</span></span>  
  <xref:System.Reflection.Emit.OpCodes>  
- Hier werden die MSIL-Anweisungcodes zum Erstellen von Methodentexten katalogisiert.  
+ <span data-ttu-id="01e7e-129">Hier werden die MSIL-Anweisungcodes zum Erstellen von Methodentexten katalogisiert.</span><span class="sxs-lookup"><span data-stu-id="01e7e-129">Catalogs the MSIL instruction codes you can use to build method bodies.</span></span>  
   
  <xref:System.Reflection.Emit>  
- Hier werden verwaltete Klassen aufgeführt, die zum Ausgeben von dynamischen Methoden, Assemblys und Typen verwendet werden.  
+ <span data-ttu-id="01e7e-130">Hier werden verwaltete Klassen aufgeführt, die zum Ausgeben von dynamischen Methoden, Assemblys und Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="01e7e-130">Contains managed classes used to emit dynamic methods, assemblies, and types.</span></span>  
   
  <xref:System.Type>  
- Hier wird die <xref:System.Type>-Klasse beschrieben, die Typen in der verwalteten Reflektion und Reflektionsausgabe darstellt. Diese Klasse ist das wichtigste Element bei der Verwendung dieser Technologien.  
+ <span data-ttu-id="01e7e-131">Hier wird die <xref:System.Type>-Klasse beschrieben, die Typen in der verwalteten Reflektion und Reflektionsausgabe darstellt. Diese Klasse ist das wichtigste Element bei der Verwendung dieser Technologien.</span><span class="sxs-lookup"><span data-stu-id="01e7e-131">Describes the <xref:System.Type> class, which represents types in managed reflection and reflection emit, and which is key to the use of these technologies.</span></span>  
   
  <xref:System.Reflection>  
- Hier werden verwaltete Klassen aufgeführt, die zum Durchsuchen von Metadaten und verwaltetem Code verwendet werden.  
+ <span data-ttu-id="01e7e-132">Hier werden verwaltete Klassen aufgeführt, die zum Durchsuchen von Metadaten und verwaltetem Code verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="01e7e-132">Contains managed classes used to explore metadata and managed code.</span></span>  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Erläutert das Durchsuchen von Metadaten und verwaltetem Code.  
+## <a name="related-sections"></a><span data-ttu-id="01e7e-133">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="01e7e-133">Related Sections</span></span>  
+ [<span data-ttu-id="01e7e-134">Reflektion</span><span class="sxs-lookup"><span data-stu-id="01e7e-134">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="01e7e-135">Erläutert das Durchsuchen von Metadaten und verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="01e7e-135">Explains how to explore metadata and managed code.</span></span>  
   
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Bietet eine Übersicht über Assemblys in .NET Framework.
-
+ [<span data-ttu-id="01e7e-136">Assemblys in der Common Language Runtime (CLR)</span><span class="sxs-lookup"><span data-stu-id="01e7e-136">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ <span data-ttu-id="01e7e-137">Bietet eine Übersicht über Assemblys in .NET Implementierungen.</span><span class="sxs-lookup"><span data-stu-id="01e7e-137">Provides an overview of assemblies in .NET implementations.</span></span>

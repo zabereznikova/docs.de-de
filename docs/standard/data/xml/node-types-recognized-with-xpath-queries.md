@@ -1,67 +1,65 @@
 ---
-title: "In XPath-Abfragen erkannte Knotentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: In XPath-Abfragen erkannte Knotentypen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 1c1e48bbfd6388686fdb83f08668f7f0234275a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# In XPath-Abfragen erkannte Knotentypen
-Die in einer XPath\-Abfrage erkannten Knotentypen sind nicht dieselben wie die Knotentypen des DOM \(Document Object Model\).  
+# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="93835-102">In XPath-Abfragen erkannte Knotentypen</span><span class="sxs-lookup"><span data-stu-id="93835-102">Node Types Recognized with XPath Queries</span></span>
+<span data-ttu-id="93835-103">Die in einer XPath-Abfrage erkannten Knotentypen sind nicht dieselben wie die Knotentypen des DOM (Document Object Model).</span><span class="sxs-lookup"><span data-stu-id="93835-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
   
-## W3C\-XPath\-Knotentypen  
- Die in einer XPath\-Abfrage erkannten Knotentypen sind nicht dieselben Knotentypen wie die Knotentypen des DOM \(Document Object Model\).  Es folgen die von der <xref:System.Xml.XPath.XPathNodeType>\-Enumeration dargestellten XPath\-Knotentypen.  
+## <a name="w3c-xpath-node-types"></a><span data-ttu-id="93835-104">W3C-XPath-Knotentypen</span><span class="sxs-lookup"><span data-stu-id="93835-104">W3C XPath Node Types</span></span>  
+ <span data-ttu-id="93835-105">Die in einer XPath-Abfrage erkannten Knotentypen sind nicht dieselben Knotentypen wie die Knotentypen des DOM (Document Object Model).</span><span class="sxs-lookup"><span data-stu-id="93835-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="93835-106">Es folgen die von der <xref:System.Xml.XPath.XPathNodeType>-Enumeration dargestellten XPath-Knotentypen.</span><span class="sxs-lookup"><span data-stu-id="93835-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- Diesen Knotentypen liegt das XPath\-Datenmodell zu Grunde, dessen Knoten vom XML\-Infoset abgeleitet sind.  Der <xref:System.Xml.XPath.XPathNodeType>\-Knotentyp und der <xref:System.Xml.XPath.XPathNodeType>\-Knotentyp sind Microsoft .NET Framework\-Erweiterungen der im XPath\-Datenmodell beschriebenen Basisknotentypen.  
+ <span data-ttu-id="93835-107">Diesen Knotentypen liegt das XPath-Datenmodell zu Grunde, dessen Knoten vom XML-Infoset abgeleitet sind.</span><span class="sxs-lookup"><span data-stu-id="93835-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="93835-108">Der <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>-Knotentyp und der <xref:System.Xml.XPath.XPathNodeType.Whitespace>-Knotentyp sind Microsoft .NET Framework-Erweiterungen der im XPath-Datenmodell beschriebenen Basisknotentypen.</span><span class="sxs-lookup"><span data-stu-id="93835-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
   
- Der Attributknotentyp wird im XPath\-Datenmodell und im DOM unterschiedlich verwendet.  Im XPath\-Datenmodell ist dem Elementknoten eine Gruppe von Attributknoten zugeordnet, und der Elementknoten ist der übergeordnete Knoten jedes Attributknotens.  Im DOM ist der Elementknoten dagegen der Besitzer und nicht der übergeordnete Knoten.  In beiden Modellen werden Attribut\- und Namespaceknoten nicht als untergeordnete Knoten des Elementknotens betrachtet.  
+ <span data-ttu-id="93835-109">Der Attributknotentyp wird im XPath-Datenmodell und im DOM unterschiedlich verwendet.</span><span class="sxs-lookup"><span data-stu-id="93835-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="93835-110">Im XPath-Datenmodell ist dem Elementknoten eine Gruppe von Attributknoten zugeordnet, und der Elementknoten ist der übergeordnete Knoten jedes Attributknotens.</span><span class="sxs-lookup"><span data-stu-id="93835-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="93835-111">Im DOM ist der Elementknoten dagegen der Besitzer und nicht der übergeordnete Knoten.</span><span class="sxs-lookup"><span data-stu-id="93835-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="93835-112">In beiden Modellen werden Attribut- und Namespaceknoten nicht als untergeordnete Knoten des Elementknotens betrachtet.</span><span class="sxs-lookup"><span data-stu-id="93835-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
   
- Der Namespaceknotentyp ist eine Erweiterung des XPath\-Datenmodells, der nicht als DOM\-Knotentyp erkannt wird.  
+ <span data-ttu-id="93835-113">Der Namespaceknotentyp ist eine Erweiterung des XPath-Datenmodells, der nicht als DOM-Knotentyp erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="93835-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
   
- Weitere Informationen zum Navigieren durch Element\-, Attribut\- und Namespaceknoten finden Sie unter den Themen [Navigieren in Knotengruppen mit "XPathNavigator"](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) und [Das Navigieren durch Attribut\- und Namespaceknoten mit "XPathNavigator"](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
+ <span data-ttu-id="93835-114">Weitere Informationen zu navigieren, Element-, Attribut- und Namespaceknoten, finden Sie unter der [Node Set Navigation mithilfe von XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) und [Attribut und Namespace Knoten Navigation mithilfe von "XPathNavigator"](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) Themen.</span><span class="sxs-lookup"><span data-stu-id="93835-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
   
-## Siehe auch  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Verarbeiten von XML\-Daten mithilfe des XPath\-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Auswählen von XML\-Daten mit 'XPathNavigator'](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)   
- [Auswerten von XPath\-Ausdrücken mit "XPathNavigator"](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)   
- [Vergleich von Knoten mit "XPathNavigator"](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)   
- [XPath\-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)   
- [Kompilierte XPath\-Ausdrücke](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="93835-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93835-115">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="93835-116">Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells</span><span class="sxs-lookup"><span data-stu-id="93835-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="93835-117">Wählen Sie die XML-Daten mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="93835-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="93835-118">Auswerten von XPath-Ausdrücken mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="93835-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [<span data-ttu-id="93835-119">Vergleich von Knoten mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="93835-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [<span data-ttu-id="93835-120">XPath-Abfragen und Namespaces</span><span class="sxs-lookup"><span data-stu-id="93835-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+ [<span data-ttu-id="93835-121">Kompilierte XPath-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="93835-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

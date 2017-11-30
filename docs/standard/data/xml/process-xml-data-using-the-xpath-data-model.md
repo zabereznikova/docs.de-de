@@ -1,51 +1,49 @@
 ---
-title: "Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3d2c8db03d494be13a93df06a359e4e4294c22a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
-Der <xref:System.Xml?displayProperty=fullName>\-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>\-Klasse oder der <xref:System.Xml.XPath.XPathDocument>\-Klasse eine programmgesteuerte Darstellung von XML\-Dokumenten, XML\-Fragmenten, XML\-Knoten oder XML\-Knotengruppen im Speicher.  
+# <a name="process-xml-data-using-the-xpath-data-model"></a><span data-ttu-id="67380-102">Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells</span><span class="sxs-lookup"><span data-stu-id="67380-102">Process XML Data Using the XPath Data Model</span></span>
+<span data-ttu-id="67380-103">Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>-Klasse oder der <xref:System.Xml.XPath.XPathDocument>-Klasse eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten oder XML-Knotengruppen im Speicher.</span><span class="sxs-lookup"><span data-stu-id="67380-103">The <xref:System.Xml?displayProperty=nameWithType> namespace provides a programmatic representation of XML documents, fragments, nodes, or node-sets in-memory, using the <xref:System.Xml.XmlDocument> or <xref:System.Xml.XPath.XPathDocument> classes.</span></span>  
   
- Die <xref:System.Xml.XPath.XPathDocument>\-Klasse bietet eine schnelle, schreibgeschützte Darstellung eines XML\-Dokuments im Speicher mithilfe des XPath\-Datenmodells.  Die <xref:System.Xml.XmlDocument>\-Klasse stellt eine editierbare speicherresidente Darstellung eines XML\-Dokuments bereit, die das DOM Level 1 Core und das DOM Level 2 Core des W3C implementiert.  Beide Klassen implementieren die <xref:System.Xml.XPath.IXPathNavigable>\-Schnittstelle und geben ein <xref:System.Xml.XPath.XPathNavigator>\-Objekt zurück, das verwendet wird, um die zugrunde liegenden XML\-Daten auszuwählen, auszuwerten, darin zu navigieren und in einigen Fällen zu bearbeiten.  
+ <span data-ttu-id="67380-104">Die <xref:System.Xml.XPath.XPathDocument>-Klasse bietet eine schnelle, schreibgeschützte Darstellung eines XML-Dokuments im Speicher mithilfe des XPath-Datenmodells.</span><span class="sxs-lookup"><span data-stu-id="67380-104">The <xref:System.Xml.XPath.XPathDocument> class provides a fast, read-only, in-memory representation of an XML document using the XPath data model.</span></span> <span data-ttu-id="67380-105">Die <xref:System.Xml.XmlDocument>-Klasse stellt eine editierbare speicherresidente Darstellung eines XML-Dokuments bereit, die das DOM Level 1 Core und das DOM Level 2 Core des W3C implementiert.</span><span class="sxs-lookup"><span data-stu-id="67380-105">The <xref:System.Xml.XmlDocument> class provides an editable in-memory representation of an XML document implementing W3C Document Object Model (DOM) Level 1 Core and Core DOM Level 2.</span></span> <span data-ttu-id="67380-106">Beide Klassen implementieren die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle und geben ein <xref:System.Xml.XPath.XPathNavigator>-Objekt zurück, das verwendet wird, um die zugrunde liegenden XML-Daten auszuwählen, auszuwerten, darin zu navigieren und in einigen Fällen zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="67380-106">Both classes implement the <xref:System.Xml.XPath.IXPathNavigable> interface and return an <xref:System.Xml.XPath.XPathNavigator> object used to select, evaluate, navigate, and in some cases, edit the underlying XML data.</span></span>  
   
- In den folgenden Abschnitten werden die Funktionen der <xref:System.Xml.XPath.XPathNavigator>\-Klasse beschrieben, die auf der Klasse basiert, von der sie zurückgegeben wird.  
+ <span data-ttu-id="67380-107">In den folgenden Abschnitten werden die Funktionen der <xref:System.Xml.XPath.XPathNavigator>-Klasse beschrieben, die auf der Klasse basiert, von der sie zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="67380-107">The following sections describe the functionality of the <xref:System.Xml.XPath.XPathNavigator> class based on the class that returns it.</span></span>  
   
-## In diesem Abschnitt  
- [Lesen von XML\-Daten mithilfe von "XPathDocument" und "XmlDocument"](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- Beschreibt die Erstellung eines schreibgeschützten Objekts der <xref:System.Xml.XPath.XPathDocument>\-Klasse zum Lesen eines XML\-Dokuments sowie die Erstellung eines editierbaren Objekts der <xref:System.Xml.XmlDocument>\-Klasse zum Lesen und Bearbeiten eines XML\-Dokuments.  In diesem Thema wird auch beschrieben, wie ein <xref:System.Xml.XPath.XPathNavigator>\-Objekt aus jeder Klasse zum Navigieren und Bearbeiten eines XML\-Dokuments zurückgegeben wird.  
+## <a name="in-this-section"></a><span data-ttu-id="67380-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="67380-108">In This Section</span></span>  
+ [<span data-ttu-id="67380-109">Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument</span><span class="sxs-lookup"><span data-stu-id="67380-109">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ <span data-ttu-id="67380-110">Beschreibt die Erstellung eines schreibgeschützten Objekts der <xref:System.Xml.XPath.XPathDocument>-Klasse zum Lesen eines XML-Dokuments sowie die Erstellung eines editierbaren Objekts der <xref:System.Xml.XmlDocument>-Klasse zum Lesen und Bearbeiten eines XML-Dokuments.</span><span class="sxs-lookup"><span data-stu-id="67380-110">Describes how to create a read-only <xref:System.Xml.XPath.XPathDocument> class object to read an XML document and how to create an editable <xref:System.Xml.XmlDocument> class object to read and edit an XML document.</span></span> <span data-ttu-id="67380-111">In diesem Thema wird auch beschrieben, wie ein <xref:System.Xml.XPath.XPathNavigator>-Objekt aus jeder Klasse zum Navigieren und Bearbeiten eines XML-Dokuments zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="67380-111">This topic also describes how return an <xref:System.Xml.XPath.XPathNavigator> object from each class to navigate and edit an XML document.</span></span>  
   
- [Auswählen, Auswerten und Zuordnen von XML\-Daten mithilfe von "XPathNavigator"](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>\-Klasse für das Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>\-Objekt oder einem <xref:System.Xml.XmlDocument>\-Objekt mithilfe einer XPath\-Abfrage, für das Auswerten und Überprüfen der Ergebnisse eines XPath\-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem XML\-Dokument mit einem angegebenen XPath\-Ausdruck übereinstimmt.  
+ [<span data-ttu-id="67380-112">Auswählen, auswerten und Zuordnen von XML-Daten mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="67380-112">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="67380-113">Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage, für das Auswerten und Überprüfen der Ergebnisse eines XPath-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem XML-Dokument mit einem angegebenen XPath-Ausdruck übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="67380-113">Describes the methods of the <xref:System.Xml.XPath.XPathNavigator> class used to select nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath query, evaluate and examine the results of an XPath expression, and determine if a node in an XML document matches a given XPath expression.</span></span>  
   
- [Zugreifen auf XML\-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>\-Klasse für das Navigieren von Knoten, das Extrahieren von XML\-Daten und das Zugreifen auf stark typisierte XML\-Daten in einem <xref:System.Xml.XPath.XPathDocument>\-Objekt oder einem <xref:System.Xml.XmlDocument>\-Objekt bereit.  
+ [<span data-ttu-id="67380-114">Zugreifen auf XML-Daten mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="67380-114">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="67380-115">Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Navigieren von Knoten, das Extrahieren von XML-Daten und das Zugreifen auf stark typisierte XML-Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt bereit.</span><span class="sxs-lookup"><span data-stu-id="67380-115">Describes the methods of the <xref:System.Xml.XPath.XPathNavigator> class used to navigate nodes, extract XML data and access strongly typed XML data in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  
   
- [Bearbeiten von XML\-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>\-Klasse für das Einfügen, Ändern oder Entfernen von Knoten und Werten aus einem XML\-Dokument, das in einem <xref:System.Xml.XmlDocument>\-Objekt enthalten ist.  
+ [<span data-ttu-id="67380-116">Bearbeiten von XML-Daten mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="67380-116">Editing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="67380-117">Beschreibt die Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse für das Einfügen, Ändern oder Entfernen von Knoten und Werten aus einem XML-Dokument, das in einem <xref:System.Xml.XmlDocument>-Objekt enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="67380-117">Describes the methods of the <xref:System.Xml.XPath.XPathNavigator> class used to insert, modify and remove nodes and values from an XML document contained in an <xref:System.Xml.XmlDocument> object.</span></span>  
   
- [Schema\-Validierung mithilfe von "XPathNavigator"](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
- Beschreibt die Möglichkeiten zum Validieren der XML\-Inhalte, die in einem <xref:System.Xml.XPath.XPathDocument>\-Objekt oder einem <xref:System.Xml.XmlDocument>\-Objekt enthalten sind.  
+ [<span data-ttu-id="67380-118">Schema-Validierung mit "XPathNavigator"</span><span class="sxs-lookup"><span data-stu-id="67380-118">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ <span data-ttu-id="67380-119">Beschreibt die Möglichkeiten zum Validieren der XML-Inhalte, die in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="67380-119">Describes the ways to validate the XML content contained in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  
   
-## Siehe auch  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Verarbeiten von XML\-Daten mithilfe des DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+## <a name="see-also"></a><span data-ttu-id="67380-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67380-120">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="67380-121">Verarbeiten von XML-Daten mithilfe des DOM</span><span class="sxs-lookup"><span data-stu-id="67380-121">Process XML Data Using the DOM Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

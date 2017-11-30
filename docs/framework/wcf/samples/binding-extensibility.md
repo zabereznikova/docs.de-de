@@ -13,18 +13,19 @@ caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 61c8ae647012c5f1fffe5cf65c63b64cde62af1b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 251d89af938b4bf104ddb86689b2573856386d75
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="binding-extensibility"></a><span data-ttu-id="386a9-102">Bindungserweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="386a9-102">Binding Extensibility</span></span>
-<span data-ttu-id="386a9-103">Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Bindung in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] demonstriert wird.</span><span class="sxs-lookup"><span data-stu-id="386a9-103">This section contains samples that demonstrate custom binding in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
+# <a name="binding-extensibility"></a><span data-ttu-id="c5373-102">Bindungserweiterbarkeit</span><span class="sxs-lookup"><span data-stu-id="c5373-102">Binding Extensibility</span></span>
+
+<span data-ttu-id="c5373-103">Dieser Abschnitt enthält Beispiele, in denen die benutzerdefinierte Bindung in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] demonstriert wird.</span><span class="sxs-lookup"><span data-stu-id="c5373-103">This section contains samples that demonstrate custom binding in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="386a9-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="386a9-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c5373-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c5373-104">In This Section</span></span>  
  <xref:System.ServiceModel.NetHttpBinding>  
- <span data-ttu-id="386a9-105">Veranschaulicht, wie eine Bindung implementiert wird, bei der das <xref:System.ServiceModel.Channels.HttpTransportBindingElement> oder das <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> über das <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> gestapelt wird.</span><span class="sxs-lookup"><span data-stu-id="386a9-105">Demonstrates how to implement a binding that stacks <xref:System.ServiceModel.Channels.HttpTransportBindingElement> or the <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> on top of the <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>.</span></span>  
+ <span data-ttu-id="c5373-105">Veranschaulicht, wie eine Bindung implementiert wird, bei der das <xref:System.ServiceModel.Channels.HttpTransportBindingElement> oder das <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> über das <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> gestapelt wird.</span><span class="sxs-lookup"><span data-stu-id="c5373-105">Demonstrates how to implement a binding that stacks <xref:System.ServiceModel.Channels.HttpTransportBindingElement> or the <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> on top of the <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>.</span></span>  
   
- <!--zz <xref:System.ServiceModel.WSStreamedHttpBinding> --> `System.ServiceModel.WSStreamedHttpBinding` 
- <span data-ttu-id="386a9-106">Veranschaulicht das Erstellen einer Bindung, die Streamingszenarios unterstützt, wenn HTTP-Transport verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="386a9-106">Demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>
+ [<span data-ttu-id="c5373-106">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="c5373-106">WSStreamedHttpBinding</span></span>](wsstreamedhttpbinding.md)  
+ <span data-ttu-id="c5373-107">Veranschaulicht das Erstellen einer Bindung, die Streamingszenarios unterstützt, wenn HTTP-Transport verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c5373-107">Demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

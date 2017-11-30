@@ -1,117 +1,124 @@
 ---
-title: "Verwenden der StringBuilder-Klasse in .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Remove-Methode"
-  - "Zeichenfolgen [.NET Framework], Kapazitäten"
-  - "StringBuilder-Objekt"
-  - "Replace-Methode"
-  - "AppendFormat-Methode"
-  - "Append-Methode"
-  - "Insert-Methode"
-  - "Zeichenfolgen [.NET Framework], StringBuilder-Objekt"
+title: Verwenden der StringBuilder-Klasse in .NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Remove method
+- strings [.NET Framework], capacities
+- StringBuilder object
+- Replace method
+- AppendFormat method
+- Append method
+- Insert method
+- strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3a6c8f6dee9f2a1da6ed4a8219c1b4832464d9aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Verwenden der StringBuilder-Klasse in .NET Framework
-Das <xref:System.String>\-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=fullName>\-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Arbeitsspeicher, das eine neue Zuordnung von Speicherplatz für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Aufwand, der mit dem Erstellen eines neuen <xref:System.String>\-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=fullName>\-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>\-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  
+# <a name="using-the-stringbuilder-class-in-net"></a><span data-ttu-id="d670d-102">Verwenden der StringBuilder-Klasse in .NET</span><span class="sxs-lookup"><span data-stu-id="d670d-102">Using the StringBuilder Class in .NET</span></span>
+<span data-ttu-id="d670d-103">Die <xref:System.String> -Objekt unveränderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d670d-103">The <xref:System.String> object is immutable.</span></span> <span data-ttu-id="d670d-104">Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType> -Klasse, erstellen Sie ein neues Zeichenfolgenobjekt im Arbeitsspeicher, das eine neue Zuordnung von Speicherplatz für das neue Objekt erfordert.</span><span class="sxs-lookup"><span data-stu-id="d670d-104">Every time you use one of the methods in the <xref:System.String?displayProperty=nameWithType> class, you create a new string object in memory, which requires a new allocation of space for that new object.</span></span> <span data-ttu-id="d670d-105">In Situationen, in denen Sie wiederholte Änderungen an einer Zeichenfolge durchführen müssen, der Aufwand beim Erstellen eines neuen zugeordneten <xref:System.String> Objekt kann recht kostenaufwendig sein.</span><span class="sxs-lookup"><span data-stu-id="d670d-105">In situations where you need to perform repeated modifications to a string, the overhead associated with creating a new <xref:System.String> object can be costly.</span></span> <span data-ttu-id="d670d-106">Die <xref:System.Text.StringBuilder?displayProperty=nameWithType> -Klasse kann verwendet werden, wenn Sie eine Zeichenfolge zu ändern, ohne ein neues Objekt erstellen möchten.</span><span class="sxs-lookup"><span data-stu-id="d670d-106">The <xref:System.Text.StringBuilder?displayProperty=nameWithType> class can be used when you want to modify a string without creating a new object.</span></span> <span data-ttu-id="d670d-107">Beispiel für die Verwendung der <xref:System.Text.StringBuilder> Klasse Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet.</span><span class="sxs-lookup"><span data-stu-id="d670d-107">For example, using the <xref:System.Text.StringBuilder> class can boost performance when concatenating many strings together in a loop.</span></span>  
   
-## Importieren des System.Type\-Namespace  
- Die <xref:System.Text.StringBuilder>\-Klasse befindet sich im <xref:System.Text>\-Namespace.  Wenn Sie in Ihrem Code nicht den vollqualifizierten Typnamen bereitstellen möchten, können Sie den <xref:System.Text>\-Namespace importieren:  
+## <a name="importing-the-systemtext-namespace"></a><span data-ttu-id="d670d-108">Importieren des System.Text-Namespace</span><span class="sxs-lookup"><span data-stu-id="d670d-108">Importing the System.Text Namespace</span></span>  
+ <span data-ttu-id="d670d-109">Die <xref:System.Text.StringBuilder> Klasse befindet sich der <xref:System.Text> Namespace.</span><span class="sxs-lookup"><span data-stu-id="d670d-109">The <xref:System.Text.StringBuilder> class is found in the <xref:System.Text> namespace.</span></span>  <span data-ttu-id="d670d-110">Um zu vermeiden, einen voll qualifizierten Typnamen im Code angeben zu müssen, können Sie importieren die <xref:System.Text> Namespace:</span><span class="sxs-lookup"><span data-stu-id="d670d-110">To avoid having to provide a fully qualified type name in your code,  you can import the <xref:System.Text> namespace:</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#11)]
  [!code-csharp[Conceptual.StringBuilder#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#11)]
  [!code-vb[Conceptual.StringBuilder#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#11)]  
   
-## Instanziieren eines StringBuilder\-Objekts  
- Sie können eine neue Instanz der <xref:System.Text.StringBuilder>\-Klasse erstellen, indem Sie Ihre Variable mit einer der Methoden für überladene Konstruktoren initialisieren, wie im folgenden Beispiel verdeutlicht.  
+## <a name="instantiating-a-stringbuilder-object"></a><span data-ttu-id="d670d-111">Instanziieren eines StringBuilder-Objekts</span><span class="sxs-lookup"><span data-stu-id="d670d-111">Instantiating a StringBuilder Object</span></span>  
+ <span data-ttu-id="d670d-112">Sie können eine neue Instanz der erstellen die <xref:System.Text.StringBuilder> Klasse, indem Sie die Variable mit einer der Methoden für überladene Konstruktoren initialisieren, wie im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="d670d-112">You can create a new instance of the <xref:System.Text.StringBuilder> class by initializing your variable with one of the overloaded constructor methods, as illustrated in the following example.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#1)]
  [!code-csharp[Conceptual.StringBuilder#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#1)]
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
-## Festlegen von Kapazität und Länge  
- Obwohl ein <xref:System.Text.StringBuilder>\-Objekt ein dynamisches Objekt ist, das es Ihnen ermöglicht, die Anzahl der Zeichen in der darin gekapselten Zeichenfolge zu erhöhen, können Sie einen Wert für die maximale Anzahl von Zeichen festlegen, die das Objekt enthalten darf. Dieser Wert wird als die Kapazität des Objekts bezeichnet und darf nicht mit der Länge der Zeichenfolge verwechselt werden, die im aktuellen <xref:System.Text.StringBuilder>\-Objekt enthalten ist. Sie könnten z. B. eine neue Instanz der <xref:System.Text.StringBuilder>\-Klasse mit der Zeichenfolge „Hello“ erstellen, die eine Länge von 5 Zeichen hat, und Sie könnten angeben, dass das Objekt eine maximale Kapazität von 25 Zeichen hat. Wenn das <xref:System.Text.StringBuilder>\-Objekt geändert wird, ordnet es für sich selbst keine neue Größe zu, bis die Kapazität erreicht ist. Tritt dieser Fall ein, wird der neue Speicherplatz automatisch zugeordnet, und die Kapazität wird verdoppelt. Sie können die Kapazität der <xref:System.Text.StringBuilder>\-Klasse angeben, indem Sie einen der überladenen Konstruktoren verwenden. Im folgenden Beispiel wird festgelegt, dass das `MyStringBuilder`\-Objekt auf maximal 25 Zeichen erweitert werden kann.  
+## <a name="setting-the-capacity-and-length"></a><span data-ttu-id="d670d-113">Festlegen von Kapazität und Länge</span><span class="sxs-lookup"><span data-stu-id="d670d-113">Setting the Capacity and Length</span></span>  
+ <span data-ttu-id="d670d-114">Obwohl die <xref:System.Text.StringBuilder> ist ein dynamisches Objekt, mit dem Sie die Anzahl der Zeichen in der Zeichenfolge zu erweitern, die diese kapselt, können Sie angeben, einen Wert für die maximale Anzahl von Zeichen, die sie aufnehmen kann.</span><span class="sxs-lookup"><span data-stu-id="d670d-114">Although the <xref:System.Text.StringBuilder> is a dynamic object that allows you to expand the number of characters in the string that it encapsulates, you can specify a value for the maximum number of characters that it can hold.</span></span> <span data-ttu-id="d670d-115">Dieser Wert wird als die Kapazität des Objekts bezeichnet und darf nicht mit der Länge der Zeichenfolge verwechselt werden, die das aktuelle <xref:System.Text.StringBuilder> enthält.</span><span class="sxs-lookup"><span data-stu-id="d670d-115">This value is called the capacity of the object and should not be confused with the length of the string that the current <xref:System.Text.StringBuilder> holds.</span></span> <span data-ttu-id="d670d-116">Beispielsweise können Sie eine neue Instanz der erstellen die <xref:System.Text.StringBuilder> -Klasse mit der Zeichenfolge "Hello", die eine Länge von 5, und Sie kann festlegen, dass das Objekt eine maximale Kapazität von 25 hat.</span><span class="sxs-lookup"><span data-stu-id="d670d-116">For example, you might create a new instance of the <xref:System.Text.StringBuilder> class with the string "Hello", which has a length of 5, and you might specify that the object has a maximum capacity of 25.</span></span> <span data-ttu-id="d670d-117">Beim Ändern der <xref:System.Text.StringBuilder>, es ist nicht für sich selbst neu Größe zuzuordnen, bis die Kapazität erreicht ist.</span><span class="sxs-lookup"><span data-stu-id="d670d-117">When you modify the <xref:System.Text.StringBuilder>, it does not reallocate size for itself until the capacity is reached.</span></span> <span data-ttu-id="d670d-118">Tritt dieser Fall ein, wird der neue Speicherplatz automatisch zugeordnet, und die Kapazität wird verdoppelt.</span><span class="sxs-lookup"><span data-stu-id="d670d-118">When this occurs, the new space is allocated automatically and the capacity is doubled.</span></span> <span data-ttu-id="d670d-119">Sie können die Kapazität der angeben der <xref:System.Text.StringBuilder> -Klasse unter Verwendung einer der überladenen Konstruktoren.</span><span class="sxs-lookup"><span data-stu-id="d670d-119">You can specify the capacity of the <xref:System.Text.StringBuilder> class using one of the overloaded constructors.</span></span> <span data-ttu-id="d670d-120">Im folgenden Beispiel wird festgelegt, dass das `MyStringBuilder`-Objekt auf maximal 25 Zeichen erweitert werden kann.</span><span class="sxs-lookup"><span data-stu-id="d670d-120">The following example specifies that the `MyStringBuilder` object can be expanded to a maximum of 25 spaces.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]
  [!code-vb[Conceptual.StringBuilder#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#2)]  
   
- Darüber hinaus können Sie die <xref:System.Text.StringBuilder.Capacity%2A>\-Eigenschaft mit Schreib\-\/Lesezugriff verwenden, um die maximale Länge Ihres Objekts festzulegen. Im folgenden Beispiel wird die **Capacity**\-Eigenschaft verwendet, um die maximale Objektlänge zu definieren.  
+ <span data-ttu-id="d670d-121">Darüber hinaus können Sie den Lese-/Schreibzugriff <xref:System.Text.StringBuilder.Capacity%2A> Eigenschaft, um die maximale Länge Ihres Objekts festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d670d-121">Additionally, you can use the read/write <xref:System.Text.StringBuilder.Capacity%2A> property to set the maximum length of your object.</span></span> <span data-ttu-id="d670d-122">Im folgenden Beispiel wird die **Capacity**-Eigenschaft verwendet, um die maximale Objektlänge zu definieren.</span><span class="sxs-lookup"><span data-stu-id="d670d-122">The following example uses the **Capacity** property to define the maximum object length.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#3)]
  [!code-csharp[Conceptual.StringBuilder#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#3)]
  [!code-vb[Conceptual.StringBuilder#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#3)]  
   
- Mithilfe der <xref:System.Text.StringBuilder.EnsureCapacity%2A>\-Methode kann die Kapazität des aktuellen **StringBuilder**\-Objekts überprüft werden. Ist die Kapazität größer als der übergebene Wert, wird keine Änderung vorgenommen. Ist die Kapazität dagegen kleiner als der übergebene Wert, wird die aktuelle Kapazität entsprechend dem übergebenen Wert geändert.  
+ <span data-ttu-id="d670d-123">Die <xref:System.Text.StringBuilder.EnsureCapacity%2A> Methode kann verwendet werden, um die Kapazität des aktuellen überprüft **StringBuilder**.</span><span class="sxs-lookup"><span data-stu-id="d670d-123">The <xref:System.Text.StringBuilder.EnsureCapacity%2A> method can be used to check the capacity of the current **StringBuilder**.</span></span> <span data-ttu-id="d670d-124">Ist die Kapazität größer als der übergebene Wert, wird keine Änderung vorgenommen. Ist die Kapazität dagegen kleiner als der übergebene Wert, wird die aktuelle Kapazität entsprechend dem übergebenen Wert geändert.</span><span class="sxs-lookup"><span data-stu-id="d670d-124">If the capacity is greater than the passed value, no change is made; however, if the capacity is smaller than the passed value, the current capacity is changed to match the passed value.</span></span>  
   
- Die <xref:System.Text.StringBuilder.Length%2A>\-Eigenschaft kann auch angezeigt oder festgelegt werden. Wenn Sie für die **Length**\-Eigenschaft einen Wert festlegen, der größer ist als der Wert der **Capacity**\-Eigenschaft, wird die **Capacity**\-Eigenschaft automatisch auf den Wert der **Length**\-Eigenschaft festgelegt. Ist die **Length**\-Eigenschaft auf einen Wert festgelegt, der kleiner als die Länge der Zeichenfolge im aktuellen **StringBuilder**\-Objekt ist, wird die Zeichenfolge gekürzt.  
+ <span data-ttu-id="d670d-125">Die <xref:System.Text.StringBuilder.Length%2A> Eigenschaft kann auch angezeigt oder festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="d670d-125">The <xref:System.Text.StringBuilder.Length%2A> property can also be viewed or set.</span></span> <span data-ttu-id="d670d-126">Wenn Sie für die **Length**-Eigenschaft einen Wert festlegen, der größer ist als der Wert der **Capacity**-Eigenschaft, wird die **Capacity**-Eigenschaft automatisch auf den Wert der **Length**-Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d670d-126">If you set the **Length** property to a value that is greater than the **Capacity** property, the **Capacity** property is automatically changed to the same value as the **Length** property.</span></span> <span data-ttu-id="d670d-127">Ist die **Length**-Eigenschaft auf einen Wert festgelegt, der kleiner als die Länge der Zeichenfolge im aktuellen **StringBuilder**-Objekt ist, wird die Zeichenfolge gekürzt.</span><span class="sxs-lookup"><span data-stu-id="d670d-127">Setting the **Length** property to a value that is less than the length of the string within the current **StringBuilder** shortens the string.</span></span>  
   
-## Ändern der StringBuilder\-Zeichenfolge  
- In der folgenden Tabelle sind die Methoden aufgeführt, mit denen Sie den Inhalt eines **StringBuilder**\-Objekts ändern können.  
+## <a name="modifying-the-stringbuilder-string"></a><span data-ttu-id="d670d-128">Ändern der StringBuilder-Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="d670d-128">Modifying the StringBuilder String</span></span>  
+ <span data-ttu-id="d670d-129">In der folgenden Tabelle sind die Methoden aufgeführt, mit denen Sie den Inhalt eines **StringBuilder**-Objekts ändern können.</span><span class="sxs-lookup"><span data-stu-id="d670d-129">The following table lists the methods you can use to modify the contents of a **StringBuilder**.</span></span>  
   
-|Methodenname|Verwendung|  
-|------------------|----------------|  
-|<xref:System.Text.StringBuilder.Append%2A?displayProperty=fullName>|Fügt Informationen an das Ende des aktuellen **StringBuilder**\-Objekts an.|  
-|<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName>|Ersetzt einen in einer Zeichenfolge übergebenen Formatbezeichner durch formatierten Text.|  
-|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=fullName>|Fügt eine Zeichenfolge oder ein Objekt in den angegebenen Index des aktuellen **StringBuilder**\-Objekts ein.|  
-|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=fullName>|Entfernt die jeweils angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder**\-Objekt.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=fullName>|Ersetzt ein angegebenes Zeichen an einem angegebenen Index.|  
+|<span data-ttu-id="d670d-130">Methodenname</span><span class="sxs-lookup"><span data-stu-id="d670d-130">Method name</span></span>|<span data-ttu-id="d670d-131">Verwendung</span><span class="sxs-lookup"><span data-stu-id="d670d-131">Use</span></span>|  
+|-----------------|---------|  
+|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|<span data-ttu-id="d670d-132">Fügt Informationen an das Ende des aktuellen **StringBuilder**-Objekts an.</span><span class="sxs-lookup"><span data-stu-id="d670d-132">Appends information to the end of the current **StringBuilder**.</span></span>|  
+|<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<span data-ttu-id="d670d-133">Ersetzt einen in einer Zeichenfolge übergebenen Formatbezeichner durch formatierten Text.</span><span class="sxs-lookup"><span data-stu-id="d670d-133">Replaces a format specifier passed in a string with formatted text.</span></span>|  
+|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|<span data-ttu-id="d670d-134">Fügt eine Zeichenfolge oder ein Objekt in den angegebenen Index des aktuellen **StringBuilder**-Objekts ein.</span><span class="sxs-lookup"><span data-stu-id="d670d-134">Inserts a string or object into the specified index of the current **StringBuilder**.</span></span>|  
+|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="d670d-135">Entfernt eine angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder**-Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-135">Removes a specified number of characters from the current **StringBuilder**.</span></span>|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|<span data-ttu-id="d670d-136">Ersetzt ein angegebenes Zeichen an einem angegebenen Index.</span><span class="sxs-lookup"><span data-stu-id="d670d-136">Replaces a specified character at a specified index.</span></span>|  
   
-### Anfügen  
- Mithilfe der **Append**\-Methode kann Text oder eine Zeichenfolgendarstellung eines Objekts am Ende einer Zeichenfolge hinzugefügt werden, die durch den aktuellen **StringBuilder** dargestellt wird. Im folgenden Beispiel wird ein **StringBuilder**\-Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt. Speicherplatz wird automatisch nach Bedarf zugeordnet.  
+### <a name="append"></a><span data-ttu-id="d670d-137">Anfügen</span><span class="sxs-lookup"><span data-stu-id="d670d-137">Append</span></span>  
+ <span data-ttu-id="d670d-138">Die **Append** Methode kann verwendet werden, um Text oder eine Zeichenfolgendarstellung eines Objekts an das Ende einer Zeichenfolge, die vom aktuellen hinzufügen **StringBuilder**.</span><span class="sxs-lookup"><span data-stu-id="d670d-138">The **Append** method can be used to add text or a string representation of an object to the end of a string represented by the current **StringBuilder**.</span></span> <span data-ttu-id="d670d-139">Im folgenden Beispiel wird ein **StringBuilder**-Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt.</span><span class="sxs-lookup"><span data-stu-id="d670d-139">The following example initializes a **StringBuilder** to "Hello World" and then appends some text to the end of the object.</span></span> <span data-ttu-id="d670d-140">Speicherplatz wird automatisch nach Bedarf zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="d670d-140">Space is allocated automatically as needed.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
  [!code-csharp[Conceptual.StringBuilder#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#4)]
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
-### AppendFormat  
- Die <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName>\-Methode fügt Text am Ende des <xref:System.Text.StringBuilder>\-Objekts hinzu. Die Methode unterstützt die Funktion für die kombinierte Formatierung \(weitere Informationen finden Sie unter [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)\) durch Aufrufen der <xref:System.IFormattable>\-Implementierung der Objekte, die formatiert werden sollen. Daher akzeptiert sie die Standardformatzeichenfolgen für numerische Werte, Datums\- und Uhrzeitwerte sowie Enumerationswerte, die benutzerdefinierten Formatzeichenfolgen für numerische Werte sowie Datums\- und Uhrzeitwerte und die Formatzeichenfolgen, die für benutzerdefinierte Typen definiert sind. \(Weitere Informationen zur Formatierung finden Sie unter [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md).\) Sie können diese Methode verwenden, um das Format von Variablen anzupassen und diese Werte an <xref:System.Text.StringBuilder>\-Objekt anzufügen. Im folgenden Beispiel wird die <xref:System.Text.StringBuilder.AppendFormat%2A>\-Methode verwendet, um einen als Währungsbetrag formatierten ganzzahligen Wert am Ende eines <xref:System.Text.StringBuilder>\-Objekts einzufügen.  
+### <a name="appendformat"></a><span data-ttu-id="d670d-141">AppendFormat</span><span class="sxs-lookup"><span data-stu-id="d670d-141">AppendFormat</span></span>  
+ <span data-ttu-id="d670d-142">Die <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> Methode fügt Text an das Ende der <xref:System.Text.StringBuilder> Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-142">The <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> method adds text to the end of the <xref:System.Text.StringBuilder> object.</span></span> <span data-ttu-id="d670d-143">Es unterstützt die Funktion für kombinierte Formatierung (Weitere Informationen finden Sie unter [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)) durch Aufrufen der <xref:System.IFormattable> Implementierung des Objekts oder der Objekte, die formatiert werden.</span><span class="sxs-lookup"><span data-stu-id="d670d-143">It supports the composite formatting feature (for more information, see [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md)) by calling the <xref:System.IFormattable> implementation of the object or objects to be formatted.</span></span> <span data-ttu-id="d670d-144">Daher akzeptiert sie die Standardformatzeichenfolgen für numerische Werte, Datums- und Uhrzeitwerte sowie Enumerationswerte, die benutzerdefinierten Formatzeichenfolgen für numerische Werte sowie Datums- und Uhrzeitwerte und die Formatzeichenfolgen, die für benutzerdefinierte Typen definiert sind.</span><span class="sxs-lookup"><span data-stu-id="d670d-144">Therefore, it accepts the standard format strings for numeric, date and time, and enumeration values, the custom format strings for numeric and date and time values, and the format strings defined for custom types.</span></span> <span data-ttu-id="d670d-145">(Weitere Informationen zur Formatierung finden Sie unter [Formatieren von Typen](../../../docs/standard/base-types/formatting-types.md).) Sie können diese Methode verwenden, um das Format von Variablen anzupassen, und fügen diese Werte in einer <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="d670d-145">(For information about formatting, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md).) You can use this method to customize the format of variables and append those values to a <xref:System.Text.StringBuilder>.</span></span> <span data-ttu-id="d670d-146">Im folgenden Beispiel wird die <xref:System.Text.StringBuilder.AppendFormat%2A> Methode, um einen ganzzahligen Wert platzieren formatiert als Währungswert am Ende einer <xref:System.Text.StringBuilder> Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-146">The following example uses the <xref:System.Text.StringBuilder.AppendFormat%2A> method to place an integer value formatted as a currency value at the end of a <xref:System.Text.StringBuilder> object.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
-### Insert  
- Mit der <xref:System.Text.StringBuilder.Insert%2A>\-Methode wird an einer angegebenen Position im aktuellen <xref:System.Text.StringBuilder>\-Objekt eine Zeichenfolge oder ein Objekt hinzugefügt. Im folgenden Beispiel wird mit dieser Methode ein Wort an der sechsten Position eines <xref:System.Text.StringBuilder>\-Objekts eingefügt.  
+### <a name="insert"></a><span data-ttu-id="d670d-147">Insert</span><span class="sxs-lookup"><span data-stu-id="d670d-147">Insert</span></span>  
+ <span data-ttu-id="d670d-148">Die <xref:System.Text.StringBuilder.Insert%2A> Methode fügt eine Zeichenfolge oder ein Objekt an eine angegebene Position in der aktuellen <xref:System.Text.StringBuilder> Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-148">The <xref:System.Text.StringBuilder.Insert%2A> method adds a string or object to a specified position in the current <xref:System.Text.StringBuilder> object.</span></span> <span data-ttu-id="d670d-149">Im folgenden Beispiel wird diese Methode, um ein Wort in der sechsten Position einzufügen ein <xref:System.Text.StringBuilder> Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-149">The following example uses this method to insert a word into the sixth position of a <xref:System.Text.StringBuilder> object.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
  [!code-csharp[Conceptual.StringBuilder#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#6)]
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
-### Remove  
- Über die **Remove**\-Methode können Sie, beginnend bei einem angegebenen nullbasierten Index, eine bestimmte Anzahl von Zeichen aus dem aktuellen <xref:System.Text.StringBuilder>\-Objekt entfernen. Im folgenden Beispiel wird die **Remove**\-Methode verwendet, um ein <xref:System.Text.StringBuilder>\-Objekt zu kürzen.  
+### <a name="remove"></a><span data-ttu-id="d670d-150">Remove</span><span class="sxs-lookup"><span data-stu-id="d670d-150">Remove</span></span>  
+ <span data-ttu-id="d670d-151">Sie können die **entfernen** Methode, um eine angegebene Anzahl von Zeichen aus dem aktuellen entfernen <xref:System.Text.StringBuilder> Objekt, beginnend am angegebenen nullbasierten Index.</span><span class="sxs-lookup"><span data-stu-id="d670d-151">You can use the **Remove** method to remove a specified number of characters from the current <xref:System.Text.StringBuilder> object, beginning at a specified zero-based index.</span></span> <span data-ttu-id="d670d-152">Im folgenden Beispiel wird die **entfernen** Methode zum Kürzen einer <xref:System.Text.StringBuilder> Objekt.</span><span class="sxs-lookup"><span data-stu-id="d670d-152">The following example uses the **Remove** method to shorten a <xref:System.Text.StringBuilder> object.</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### Replace  
- Mithilfe der **Replace**\-Methode können Zeichen im <xref:System.Text.StringBuilder>\-Objekt durch ein anderes angegebenes Zeichen ersetzt werden. Im folgenden Beispiel wird die **Replace**\-Methode verwendet, um in einem <xref:System.Text.StringBuilder>\-Objekt nach allen Vorkommen des Ausrufezeichens \(\!\) zu suchen und diese durch das Fragezeichen \(?\) zu ersetzen.  
+### <a name="replace"></a><span data-ttu-id="d670d-153">Ersetzen</span><span class="sxs-lookup"><span data-stu-id="d670d-153">Replace</span></span>  
+ <span data-ttu-id="d670d-154">Die **ersetzen** Methode kann verwendet werden, um die Zeichen innerhalb der <xref:System.Text.StringBuilder> angegebene Objekt mit einem anderen Zeichen.</span><span class="sxs-lookup"><span data-stu-id="d670d-154">The **Replace** method can be used to replace characters within the <xref:System.Text.StringBuilder> object with another specified character.</span></span> <span data-ttu-id="d670d-155">Im folgenden Beispiel wird die **ersetzen** Methode zum Suchen einer <xref:System.Text.StringBuilder> -Objekt alle Instanzen des Ausrufezeichens (!) und Fragezeichen (?) ersetzt.</span><span class="sxs-lookup"><span data-stu-id="d670d-155">The following example uses the **Replace** method to search a <xref:System.Text.StringBuilder> object for all instances of the exclamation point character (!) and replace them with the question mark character (?).</span></span>  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
  [!code-csharp[Conceptual.StringBuilder#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#8)]
  [!code-vb[Conceptual.StringBuilder#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#8)]  
   
-## Konvertieren eines StringBuilder\-Objekts in eine Zeichenfolge  
- Sie müssen das <xref:System.Text.StringBuilder>\-Objekt in ein <xref:System.String>\-Objekt konvertieren, bevor Sie die vom <xref:System.Text.StringBuilder>\-Objekt dargestellte Zeichenfolge an eine Methode übergeben können, die einen <xref:System.String>\-Parameter hat, oder bevor Sie sie in der Benutzeroberfläche anzeigen. Diese Konvertierung führen Sie aus, indem Sie die <xref:System.Text.StringBuilder.ToString%2A?displayProperty=fullName>\-Methode aufrufen. Im folgenden Beispiel werden einige <xref:System.Text.StringBuilder>\-Methoden aufgerufen, und anschließend wird die <xref:System.Text.StringBuilder.ToString?displayProperty=fullName>\-Methode aufgerufen, um die Zeichenfolge anzuzeigen.  
+## <a name="converting-a-stringbuilder-object-to-a-string"></a><span data-ttu-id="d670d-156">Konvertieren eines StringBuilder-Objekts in eine Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="d670d-156">Converting a StringBuilder Object to a String</span></span>  
+ <span data-ttu-id="d670d-157">Müssen konvertiert die <xref:System.Text.StringBuilder> -Objekt an eine <xref:System.String> -Objekt, bevor Sie die Zeichenfolge dargestellte übergeben können die <xref:System.Text.StringBuilder> Objekt, das eine Methode mit einer <xref:System.String> Parameter oder in der Benutzeroberfläche anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d670d-157">You must convert the <xref:System.Text.StringBuilder> object to a <xref:System.String> object before you can pass the string represented by the <xref:System.Text.StringBuilder> object to a method that has a <xref:System.String> parameter or display it in the user interface.</span></span> <span data-ttu-id="d670d-158">Sie führen diese Konvertierung durch Aufrufen der <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> Methode.</span><span class="sxs-lookup"><span data-stu-id="d670d-158">You do this conversion by calling the <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d670d-159">Im folgenden Beispiel wird eine Anzahl von <xref:System.Text.StringBuilder> Methoden und ruft dann die <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> Methode zur Anzeige der Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="d670d-159">The following example calls a number of <xref:System.Text.StringBuilder> methods and then calls the <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> method to display the string.</span></span>  
   
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## Siehe auch  
- <xref:System.Text.StringBuilder?displayProperty=fullName>   
- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)   
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="d670d-160">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d670d-160">See Also</span></span>  
+ <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
+ [<span data-ttu-id="d670d-161">Grundlegende Zeichenfolgenoperationen</span><span class="sxs-lookup"><span data-stu-id="d670d-161">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)  
+ [<span data-ttu-id="d670d-162">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="d670d-162">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)
