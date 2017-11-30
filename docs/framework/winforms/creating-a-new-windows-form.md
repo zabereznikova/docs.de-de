@@ -16,14 +16,14 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31406d7ed98b462a39e0b57bf66988b1c440a33f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Erstellen neuer Windows Forms
-Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. . Weitere Informationen zu Windows Forms-Anwendungen, zu den Steuerelementen, die Sie hierin verwenden können, zu Ereignissen und die Behandlung von Ereignissen sowie zum Behandeln der Eingaben des Benutzers finden Sie in der zugehörigen Themenliste.  
+Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. Um den Lerneffekt zu Windows Forms-Anwendung finden Sie der zugehörigen Themenliste unter den Steuerelementen in diese, Ereignisse und Behandlung von Ereignissen und zum Behandeln der Eingaben des Benutzers verwendet werden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Windows Forms-Koordinaten](../../../docs/framework/winforms/windows-forms-coordinates.md).  

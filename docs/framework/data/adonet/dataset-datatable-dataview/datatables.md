@@ -1,66 +1,69 @@
 ---
-title: "DataTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "\"DataTables\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# DataTables
-Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Beziehungen und Einschränkungen.  In ADO.NET werden <xref:System.Data.DataTable>\-Objekte dazu verwendet, Tabellen in einem **DataSet** darzustellen.  Eine **DataTable** stellt eine Tabelle mit relationalen Daten im Speicher dar. Die Daten sind für die .NET\-basierte Anwendung, in der sich die Datentabelle befindet, lokal verfügbar, können jedoch mithilfe eines **DataAdapter** aus einer Datenquelle wie Microsoft SQL Server gefüllt werden. Weitere Informationen finden Sie unter [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+# <a name="datatables"></a>"DataTables"
+Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Beziehungen und Einschränkungen. In ADO.NET <xref:System.Data.DataTable> Objekte dienen zum Darstellen von Tabellen in einem **DataSet**. Ein **DataTable** stellt eine Tabelle mit relationalen Daten im Arbeitsspeicher; die Daten sind lokal auf dem. NET-basierte Anwendung, in dem sich befindet, aber ausgefüllt werden, die aus einer Datenquelle, z. B. Microsoft SQL Server mit, einem **"DataAdapter"** Weitere Informationen finden Sie unter [Auffüllen eines Datasets mit "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
   
- Die **DataTable**\-Klasse ist ein Member des **System.Data**\-Namespaces innerhalb der .NET Framework\-Klassenbibliothek.  Eine **DataTable** kann unabhängig oder als Member eines **DataSet** erstellt und verwendet werden. **DataTable**\-Objekte können auch in Verbindung mit anderen .NET Framework\-Objekten, einschließlich <xref:System.Data.DataView>, verwendet werden.  Auf die Auflistung von Tabellen in einem **DataSet** kann über die **Tables**\-Eigenschaft des **DataSet**\-Objekts zugegriffen werden.  
+ Die **DataTable** Klasse ist ein Mitglied der **"System.Data"** Namespaces innerhalb der .NET Framework-Klassenbibliothek. Erstellen und verwenden eine **DataTable** unabhängig oder als Mitglied einer **DataSet**, und **DataTable** Objekte können auch in Verbindung mit anderen .NET Framework-Objekten verwendet werden einschließlich der <xref:System.Data.DataView>. Sie Zugriff auf die Auflistung von Tabellen in einer **DataSet** über die **Tabellen** Eigenschaft von der **DataSet** Objekt.  
   
- Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkungen dargestellt.  Das Schema einer **DataTable** wird mit <xref:System.Data.DataColumn>\-Objekten sowie mit <xref:System.Data.ForeignKeyConstraint>\-Objekten und <xref:System.Data.UniqueConstraint>\-Objekten definiert.  Die Spalten einer Tabelle können Spalten in einer Datenquelle zugeordnet sein, berechnete Werte aus Ausdrücken enthalten, Werte automatisch erhöhen oder primäre Schlüsselwerte enthalten.  
+ Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkungen dargestellt. Definieren Sie das Schema von einem **DataTable** mit <xref:System.Data.DataColumn> Objekte sowie <xref:System.Data.ForeignKeyConstraint> und <xref:System.Data.UniqueConstraint> Objekte. Die Spalten einer Tabelle können Spalten in einer Datenquelle zugeordnet sein, berechnete Werte aus Ausdrücken enthalten, Werte automatisch erhöhen oder primäre Schlüsselwerte enthalten.  
   
- Zusätzlich zu einem Schema muss eine **DataTable** über Zeilen zum Aufnehmen und Sortieren von Daten verfügen.  Die <xref:System.Data.DataRow>\-Klasse stellt die tatsächlich in einer Tabelle enthaltenen Daten dar.  Die Eigenschaften und Methoden von **DataRow** werden dazu verwendet, Daten in einer Tabelle abzurufen, auszuwerten und zu bearbeiten.  Wenn auf Daten in einer Zeile zugegriffen oder diese verändert werden, behält das **DataRow**\-Objekt sowohl den aktuellen als auch den ursprünglichen Status bei.  
+ Zusätzlich zu einem Schema eine **DataTable** benötigen auch Zeilen zum aufnehmen und Sortieren von Daten. Die <xref:System.Data.DataRow>-Klasse stellt die tatsächlich in einer Tabelle enthaltenen Daten dar. Verwenden Sie die **DataRow** und die zugehörigen Eigenschaften und Methoden zum Abrufen von auszuwerten und zu bearbeiten Sie die Daten in einer Tabelle. Beim Zugriff auf und ändern Sie die Daten innerhalb einer Zeile der **DataRow** Objekt behält den aktuellen und ursprünglichen Zustand.  
   
- Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über\- und untergeordnete Tabellen in Beziehung zueinander setzen.  Sie können mithilfe von <xref:System.Data.DataRelation> Beziehungen zwischen **DataTable**\-Objekten erstellen.  **DataRelation**\-Objekte können dann die entsprechenden untergeordneten oder übergeordneten Zeilen für eine bestimmte Zeile zurückgeben.  Weitere Informationen finden Sie unter [Hinzufügen von 'DataRelations'](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über- und untergeordnete Tabellen in Beziehung zueinander setzen. Sie erstellen eine Beziehung zwischen **DataTable** -Objekte mit einer <xref:System.Data.DataRelation>. **DataRelation** Objekte können dann verwendet werden, um die zugehörigen untergeordneten oder übergeordneten Zeilen für eine bestimmte Zeile zurückzugeben. Weitere Informationen finden Sie unter [Hinzufügen von "DataRelations"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
-## In diesem Abschnitt  
- [Erstellen einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- Erläutert, wie eine **DataTable** erstellt und einem **DataSet** hinzugefügt wird.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Erstellen einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ Erläutert das Erstellen einer **DataTable** und Hinzufügen zu einer **DataSet**.  
   
- ['DataTable'\-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- Stellt Informationen zum Erstellen und Verwenden von **DataColumn**\-Objekten und Einschränkungen bereit.  
+ [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ Enthält Informationen zum Erstellen und Verwenden von **DataColumn** Objekte und Einschränkungen.  
   
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- Erläutert, wie Daten in einer Tabelle hinzugefügt, bearbeitet oder gelöscht werden.  Erläutert außerdem, wie mithilfe von **DataTable**\-Ereignissen Änderungen an den Daten in einer Tabelle überprüft werden können.  
+ [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ Erläutert, wie Daten in einer Tabelle hinzugefügt, bearbeitet oder gelöscht werden. Erklärt, wie **DataTable** Ereignisse, um Änderungen an Daten in der Tabelle zu untersuchen.  
   
- [Behandlung von DataTable\-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- Stellt Informationen zu den Ereignissen bereit, die für die Verwendung in einer **DataTable** verfügbar sind, z. B. für das Ändern von Spaltenwerten oder das Hinzufügen oder Löschen von Zeilen.  
+ [Behandeln von DataTable-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ Enthält Informationen zu den verfügbaren Ereignissen für die Verwendung mit einem **DataTable**, einschließlich Ereignissen, die beim Ändern von Spaltenwerten und Zeilen hinzugefügt oder gelöscht werden.  
   
-## Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- Beschreibt die ADO.NET\-Architektur und \-Komponenten und wie diese dazu verwendet werden, auf vorhandene Datenquellen zuzugreifen und Anwendungsdaten zu verwalten.  
+ Beschreibt die ADO.NET-Architektur und -Komponenten und wie diese dazu verwendet werden, auf vorhandene Datenquellen zuzugreifen und Anwendungsdaten zu verwalten.  
   
  [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Stellt Informationen zum ADO.NET\-**DataSet** bereit, einschließlich Informationen zum Erstellen von Beziehungen zwischen Tabellen.  
+ Enthält Informationen zum ADO.NET- **DataSet** einschließlich Informationen zum Erstellen von Beziehungen zwischen Tabellen.  
   
- [Einschränkungsklasse](frlrfSystemDataConstraintClassTopic)  
- Stellt Referenzinformationen zum **Constraint**\-Objekt bereit.  
+ <xref:System.Data.Constraint>  
+ Enthält Referenzinformationen zu den **Einschränkung** Objekt.  
   
- [DataColumn\-Klasse](frlrfSystemDataDataColumnClassTopic)  
- Stellt Referenzinformationen zum **DataColumn**\-Objekt bereit.  
+ <xref:System.Data.DataColumn>  
+ Enthält Referenzinformationen zu den **DataColumn** Objekt.  
   
- [DataSet\-Klasse](frlrfSystemDataDataSetClassTopic)  
- Stellt Referenzinformationen zum **DataSet**\-Objekt bereit.  
+ <xref:System.Data.DataSet>  
+ Enthält Referenzinformationen zu den **DataSet** Objekt.  
   
- [DataTable\-Klasse](frlrfSystemDataDataTableClassTopic)  
- Stellt Referenzinformationen zum **DataTable**\-Objekt bereit.  
+ <xref:System.Data.DataTable>  
+ Enthält Referenzinformationen zu den **DataTable** Objekt.  
   
  [Übersicht über die Klassenbibliothek](../../../../../docs/standard/class-library-overview.md)  
- Stellt eine Übersicht über die .NET Framework\-Klassenbibliothek mit Informationen zum **System**\-Namespace und dessen untergeordnetem **System.Data**\-Namespace bereit.  
+ Bietet eine Übersicht über die .NET Framework-Klassenbibliothek, einschließlich der **System** Namespace sowie dessen Namespace auf zweiter Ebene **"System.Data"**.  
   
-## Siehe auch  
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

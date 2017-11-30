@@ -1,27 +1,30 @@
 ---
-title: "System.Convert-Methoden | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.Convert-Methoden
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7f4ed9cc6ae4668fe978b0e7f685e360f1044e6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# System.Convert-Methoden
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die folgenden <xref:System.Convert>\-Methoden nicht.  
+# <a name="systemconvert-methods"></a>System.Convert-Methoden
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die folgenden <xref:System.Convert>-Methoden nicht.  
   
--   Versionen mit einem <xref:System.IFormatProvider>\-Parameter.  
+-   Versionen mit einem <xref:System.IFormatProvider>-Parameter.  
   
--   Methoden, die Zeichen\- oder Bytearrays einschließen:  
+-   Methoden, die Zeichen- oder Bytearrays einschließen:  
   
     -   <xref:System.Convert.FromBase64CharArray%2A>  
   
@@ -37,11 +40,11 @@ caps.handback.revision: 2
   
          `Type1` und `Type2` gehören jeweils zu `sbyte`, `uint`, `ulong` oder `ushort`.  
   
-    -   C\#:  
+    -   C#:  
   
          `int To<int type>(string value, int fromBase),`  
   
-         `ToString(...  value, int toBase)`  
+         `ToString(... value, int toBase)`  
   
     -   Visual Basic:  
   
@@ -55,5 +58,5 @@ caps.handback.revision: 2
   
     -   <xref:System.Convert.ChangeType%2A>  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

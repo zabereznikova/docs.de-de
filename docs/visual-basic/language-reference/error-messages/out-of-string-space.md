@@ -1,33 +1,31 @@
 ---
-title: "Out of string space (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID14"
-dev_langs: 
-  - "VB"
+title: "Nicht genügend Zeichenfolgenspeicher (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d820bdfd7c66ecbe81f8cb75ada2374045257598
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Out of string space (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-In Visual Basic können Sie sehr umfangreiche Zeichenfolgen verwenden.  Dieser Fehler kann jedoch weiterhin durch Anforderungen anderer Programme und die jeweilige Art der Zeichenfolgenbearbeitung verursacht werden.  
+# <a name="out-of-string-space-visual-basic"></a>Nicht genügend Zeichenfolgenspeicher (Visual Basic)
+In Visual Basic können Sie sehr große Zeichenfolgen verwenden. Die Anforderungen von anderen Programmen und die Möglichkeit, die Sie mit Zeichenfolgen arbeiten können jedoch weiterhin diesen Fehler verursachen.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Prüfen Sie, ob ein Ausdruck, bei dem während der Auswertung temporäre Zeichen erstellt werden, den Fehler verursacht.  
+1.  Stellen Sie sicher, dass ein Ausdruck, Erstellen von temporären Zeichenfolgen während der Auswertung nicht den Fehler verursacht hat.  
   
-2.  Entfernen Sie alle nicht benötigten Anwendungen aus dem Arbeitsspeicher, um Speicher freizugeben.  
+2.  Entfernen Sie alle nicht benötigten Anwendungen aus dem Arbeitsspeicher mehr Platz zu schaffen.  
   
-## Siehe auch  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [String Manipulation Summary](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a>Siehe auch  
+ [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

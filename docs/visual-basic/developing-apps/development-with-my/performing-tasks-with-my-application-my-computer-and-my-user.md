@@ -1,50 +1,49 @@
 ---
-title: "Performing Tasks with My.Application, My.Computer, and My.User (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application object, developing applications"
-  - "rapid application development (RAD), My.Application"
-  - "rapid application development (RAD), My.Computer"
-  - "rapid application development (RAD), My.User"
-  - "My.Computer object, developing applications"
-  - "My.User object, developing applications"
+title: "Ausführen von Aufgaben mit My.Application, My.Computer und My.User (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.Application object [Visual Basic], developing applications
+- rapid application development (RAD), My.Application
+- rapid application development (RAD), My.Computer
+- rapid application development (RAD), My.User
+- My.Computer object [Visual Basic], developing applications
+- My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d55e0b3a126f2216d005c7bddbcaefb7d8f0a580
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Performing Tasks with My.Application, My.Computer, and My.User (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Die drei zentralen `My`\-Objekte, die Zugriff auf Informationen und häufig verwendete Funktionen bereitstellen, sind `My.Application` \(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>\), `My.Computer` \(<xref:Microsoft.VisualBasic.Devices.Computer>\) und `My.User` \(<xref:Microsoft.VisualBasic.ApplicationServices.User>\).  Mit diesen Objekten können Sie auf Informationen zugreifen, die sich auf die aktuelle Anwendung, den Computer, auf dem die Anwendung installiert ist, sowie auf den aktuellen Benutzer der Anwendung beziehen.  
+# <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>Ausführen von Aufgaben mit My.Application, My.Computer und My.User (Visual Basic)
+Die drei wichtigsten `My` sind Objekte, die Zugriff auf Informationen und häufig verwendete Funktionen bereitstellen `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), und `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). Sie können diese Objekte verwenden, auf Informationen, die mit der aktuellen Anwendung, die Computer, dem auf die Anwendung installiert ist oder der aktuelle Benutzer der Anwendung verknüpft ist.  
   
-## My.Application, My.Computer und My.User  
- Die folgenden Beispiele veranschaulichen das Abrufen von Informationen mit `My`.  
+## <a name="myapplication-mycomputer-and-myuser"></a>My.Application, My.Computer und My.User  
+ Die folgenden Beispiele zeigen Informationen wie möglich mit abgerufen `My`.  
   
  [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
   
  [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
   
- Neben dem Abrufen von Informationen ermöglichen die Member, die von diesen drei Objekten bereitgestellt werden, die Ausführung von Methoden mit dem jeweiligen Objekt.  So können Sie z. B. auf eine Vielzahl an Methoden zur Manipulation von Dateien zugreifen oder die Registrierung mithilfe von `My.Computer` aktualisieren.  
+ Zusätzlich zum Abrufen von Informationen ermöglichen die Elemente, die durch diese drei Objekte verfügbar gemacht werden darüber hinaus Methoden, die im Zusammenhang mit diesem Objekt auszuführen. Sie können z. B. eine Vielzahl von Methoden zum Bearbeiten von Dateien oder aktualisieren Sie die Registrierung über zugreifen `My.Computer`.  
   
- Datei\-E\/A\-Operationen sind mit `My` wesentlich einfacher und schneller, da es eine Reihe von Methoden und Eigenschaften für die Bearbeitung von Dateien, Verzeichnissen und Laufwerken enthält.  Mit dem <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>\-Objekt können Sie große strukturierte Dateien lesen, die Felder mit Begrenzungen oder Felder mit fester Breite enthalten.  In diesem Beispiel wird der `reader` von `TextFieldParser` geöffnet und zum Lesen von `C:\TestFolder1\test1.txt` verwendet.  
+ Datei-e/a ist deutlich einfacher und schneller mit `My`, darunter eine Vielzahl von Methoden und Eigenschaften zum Bearbeiten von Dateien, Verzeichnisse und Laufwerke. Die <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Objekts können Sie große strukturierte Dateien, die getrennt wurden oder Felder mit fester Breite gelesen. In diesem Beispiel wird die `TextFieldParser``reader` und verwendet ihn zum Auslesen `C:\TestFolder1\test1.txt`.  
   
  [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
- Mit `My.Application` können Sie die Kultur für die Anwendung ändern.  Das folgende Beispiel veranschaulicht den Aufruf dieser Methode.  
+ `My.Application`können Sie die Kultur für die Anwendung zu ändern. Im folgende Beispiel wird veranschaulicht, wie diese Methode aufgerufen werden kann.  
   
  [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   
-## Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [How My Depends on Project Type](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

@@ -1,83 +1,85 @@
 ---
-title: "&#220;bersicht &#252;ber Transformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "2D-Transformationsklassen"
-  - "Klassen, 2D-Transformation"
-  - "FrameworkElement-Objekte, Drehen"
-  - "FrameworkElement-Objekte, Skalieren"
-  - "FrameworkElement-Objekte, Zerren"
-  - "FrameworkElement-Objekte, Verschieben"
-  - "Transformationsklassen, 2D"
-  - "Transformationen, Informationen über Transformationen"
-  - "Transformationen, Informationen über Transformationen"
+title: "Übersicht über Transformationen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations [WPF], about transformations
+- classes [WPF], 2-D transform
+- transform classes [WPF], 2-D
+- 2-D transform classes
+- FrameworkElement objects [WPF], rotating
+- FrameworkElement objects [WPF], skewing
+- FrameworkElement objects [WPF], translating
+- Transforms [WPF], about Transforms
+- FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber Transformationen
-In diesem Thema wird die Verwendung von [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>\-Klassen zum Drehen, Skalieren, Verschieben \(Übersetzen\) und Neigen von <xref:System.Windows.FrameworkElement>\-Objekten beschrieben.  
+# <a name="transforms-overview"></a>Übersicht über Transformationen
+Dieses Thema beschreibt, wie die [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen, drehen, zu skalieren, zu verschieben (übersetzen) und Zerren von <xref:System.Windows.FrameworkElement> Objekte.  
   
-   
   
 <a name="whatIsATransformSection"></a>   
-## Was ist eine Transformation?  
- Mit einer <xref:System.Windows.Media.Transform>\-Klasse wird festgelegt, wie Punkte von einem Koordinatenraum zu einem anderen zugeordnet bzw. transformiert werden.  Diese Zuordnung wird durch eine Transformations\-<xref:System.Windows.Media.Matrix> beschrieben. Dabei handelt es sich um eine Auflistung von drei Zeilen mit drei Spalten von <xref:System.Double>\-Werten.  
+## <a name="what-is-a-transform"></a>Was ist eine Transformation?  
+ Ein <xref:System.Windows.Media.Transform> definiert, wie einer Karte oder einem Punkt aus einem Koordinatenbereich zu einem anderen Koordinatenbereich zu transformieren. Diese Zuordnung wird durch eine Transformation beschrieben <xref:System.Windows.Media.Matrix>, dies ist eine Auflistung von drei Zeilen mit drei Spalten von <xref:System.Double> Werte.  
   
 > [!NOTE]
->  Von [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] werden zeilengerichtete Matrizen verwendet.  Vektoren werden als Zeilenvektoren und nicht als Spaltenvektoren ausgedrückt.  
+>  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] werden Zeilenmatrizen verwendet. Vektoren werden als Zeilenvektoren und nicht als Spaltenvektoren ausgedrückt.  
   
- In der folgenden Tabelle wird die Struktur einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Matrix angezeigt.  
+ In der folgenden Tabelle wird die Struktur für eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Matrix dargestellt.  
   
-### 2D\-Transformationsmatrix  
+### <a name="a-2-d-transformation-matrix"></a>2D-Transformationsmatrix  
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Standard: 1,0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Standard: 0,0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Standard: 0,0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Standard: 1,0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Standard: 0,0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Standard: 0,0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Standard: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Standard: 0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Standard: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Standard: 1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Standard: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Standard: 0.0|1,0|  
   
- Indem Sie die Werte der Matrix ändern, können Sie ein Objekt drehen, skalieren, neigen und verschieben \(übersetzen\).  Wenn Sie beispielsweise den Wert in der ersten Spalte der dritten Zeile \(<xref:System.Windows.Media.Matrix.OffsetX%2A>\-Wert\) auf 100 ändern, können Sie damit ein Objekt entlang der x\-Achse um 100 Einheiten verschieben.  Wenn der Wert in der zweiten Spalte der zweiten Zeile auf 3 geändert wird, kann damit ein Objekt auf das Dreifache seiner aktuellen Höhe gestreckt werden.  Wenn beide Werte geändert werden, wird das Objekt 100 Einheiten entlang der x\-Achse verschoben und seine Höhe um den Faktor 3 gestreckt.  Da [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] nur affine Transformationen unterstützt, sind die Werte in der rechten Spalte immer auf 0, 0, 1 festgelegt.  
+ Durch Bearbeiten der Matrixwerte können Sie ein Objekt drehen, skalieren, neigen und verschieben (übersetzen). Angenommen, wenn Sie den Wert in der ersten Spalte der dritten Zeile ändern (der <xref:System.Windows.Media.Matrix.OffsetX%2A> Wert) auf 100 erhöht, können sie um ein Objekt 100 Einheiten der x-Achse zu verschieben. Wenn Sie den Wert in der zweiten Spalte der zweiten Zeile in 3 ändern, können Sie ein Objekt um das Dreifache seiner aktuellen Höhe strecken. Wenn Sie beide Werte ändern, wird das Objekt 100 Einheiten entlang der x-Achse verschoben und seine Höhe wird um den Faktor 3 gestreckt. Da [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] nur affine Transformationen unterstützt, lauten die Werte in der rechten Spalte stets 0, 0, 1.  
   
- Obwohl die Werte einer Matrix mithilfe von [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] direkt geändert werden können, werden auch mehrere <xref:System.Windows.Media.Transform>\-Klassen bereitgestellt, mit denen Objekte transformiert werden können, ohne dass die Konfiguration der zugrunde liegenden Matrixstruktur bekannt ist.  Beispielsweise können Sie mit der <xref:System.Windows.Media.ScaleTransform>\-Klasse ein Objekt skalieren, indem Sie die zugehörigen Eigenschaften <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> festlegen, anstatt eine Transformationsmatrix zu bearbeiten.  Ebenso können Sie mit der <xref:System.Windows.Media.RotateTransform>\-Klasse ein Objekt drehen, indem Sie die zugehörige <xref:System.Windows.Media.RotateTransform.Angle%2A>\-Eigenschaft festlegen.  
+ Obwohl [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ermöglicht es Ihnen, Werte einer Matrix direkt bearbeiten auch stellt mehrere <xref:System.Windows.Media.Transform> Klassen, mit denen Sie Transformieren eines Objekts, ohne zu wissen, wie die zugrunde liegende Struktur der Matrix konfiguriert ist. Z. B. die <xref:System.Windows.Media.ScaleTransform> -Klasse ermöglicht es Ihnen Skalieren eines Objekts durch Festlegen seiner <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Eigenschaften, und eine Transformationsmatrix nicht. Entsprechend der <xref:System.Windows.Media.RotateTransform> -Klasse ermöglicht es Ihnen zum Drehen eines Objekts durch Festlegen seiner <xref:System.Windows.Media.RotateTransform.Angle%2A> Eigenschaft.  
   
 <a name="transformClassesSection"></a>   
-## Transformationsklassen  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] bietet die folgenden [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>\-Klassen für allgemeine Transformationsvorgänge:  
+## <a name="transform-classes"></a>Transformationsklassen  
+ [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]bietet die folgenden [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen für allgemeine Transformationsvorgänge:  
   
 |Klasse|Beschreibung|Beispiel|Darstellung|  
-|------------|------------------|--------------|-----------------|  
-|<xref:System.Windows.Media.RotateTransform>|Dreht ein Element anhand des angegebenen Werts für <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Drehen eines Objekts](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)||  
-|<xref:System.Windows.Media.ScaleTransform>|Skaliert ein Element anhand der angegebenen Werte für <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>.|[Skalieren eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)||  
-|<xref:System.Windows.Media.SkewTransform>|Neigt ein Element anhand der angegebenen Werte für <xref:System.Windows.Media.SkewTransform.AngleX%2A> und <xref:System.Windows.Media.SkewTransform.AngleY%2A>.|[Neigen eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)||  
-|<xref:System.Windows.Media.TranslateTransform>|Verschiebt \(übersetzt\) ein Element anhand der angegebenen Werte für <xref:System.Windows.Media.TranslateTransform.X%2A> und <xref:System.Windows.Media.TranslateTransform.Y%2A>.|[Übersetzen eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)||  
+|-----------|-----------------|-------------|------------------|  
+|<xref:System.Windows.Media.RotateTransform>|Dreht ein Element vom angegebenen <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Drehen eines Objekts](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Abbildung drehen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|Skaliert ein Element vom angegebenen <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Mengen.|[Skalieren eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Abbildung skalieren](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|Ein Element vom angegebenen neigt <xref:System.Windows.Media.SkewTransform.AngleX%2A> und <xref:System.Windows.Media.SkewTransform.AngleY%2A> Mengen.|[Neigen eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Abbildung neigen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|Verschiebt (übersetzt) ein Element vom angegebenen <xref:System.Windows.Media.TranslateTransform.X%2A> und <xref:System.Windows.Media.TranslateTransform.Y%2A> Mengen.|[Übersetzen eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Abbildung verschieben](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  Zum Erstellen komplexerer Transformationen bietet [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] die beiden folgenden Klassen:  
   
 |Klasse|Beschreibung|Beispiel|  
-|------------|------------------|--------------|  
-|<xref:System.Windows.Media.TransformGroup>|Gruppiert mehrere <xref:System.Windows.Media.TransformGroup>\-Objekte in einer einzelnen <xref:System.Windows.Media.Transform>\-Klasse, auf die Sie dann Transformationseigenschaften anwenden können.|[Anwenden mehrerer Transformationen auf ein Objekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Erstellt benutzerdefinierte Transformationen, die nicht von den anderen <xref:System.Windows.Media.Transform>\-Klassen bereitgestellt werden.  Durch Verwendung von <xref:System.Windows.Media.MatrixTransform> wird eine Matrix direkt bearbeitet.|[Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|-----------|-----------------|-------------|  
+|<xref:System.Windows.Media.TransformGroup>|Mehrere Gruppen <xref:System.Windows.Media.TransformGroup> Objekte in einem einzelnen <xref:System.Windows.Media.Transform> dann angewendet werden können, um Eigenschaften zu transformieren.|[Anwenden mehrerer Transformationen auf ein Objekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Benutzerdefinierte Transformationen, die nicht von anderen bereitgestellt sind erstellt <xref:System.Windows.Media.Transform> Klassen. Bei Verwendung einer <xref:System.Windows.Media.MatrixTransform>, eine Matrix direkt bearbeiten.|[Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] stellt auch [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]\-Transformationen bereit.  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Media3D.Transform3D>\-Klasse.  
+ [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] bietet auch [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]-Transformationen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Media3D.Transform3D>-Klasse.  
   
 <a name="transformationproperties"></a>   
-## Allgemeine Transformationseigenschaften  
- Eine Möglichkeit zum Transformieren eines Objekts ist die Deklaration des entsprechenden <xref:System.Windows.Media.Transform>\-Typs und dessen Anwendung auf die Transformationseigenschaft des Objekts.  Verschiedene Typen von Objekten haben unterschiedliche Typen von Transformationseigenschaften.  Die folgende Tabelle enthält mehrere häufig verwendete [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Typen sowie die zugehörigen Transformationseigenschaften.  
+## <a name="common-transformation-properties"></a>Allgemeine Transformationseigenschaften  
+ Eine Möglichkeit zum Transformieren eines Objekts ist die Deklaration des entsprechenden <xref:System.Windows.Media.Transform> eingeben und auf die Transformationseigenschaft des Objekts angewendet. Verschiedene Typen von Objekten haben unterschiedliche Typen von Transformationseigenschaften. Die folgende Tabelle enthält mehrere häufig verwendete [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]-Typen und deren Transformationseigenschaften.  
   
 |Typ|Transformationseigenschaften|  
-|---------|----------------------------------|  
+|----------|-------------------------------|  
 |<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|  
@@ -87,83 +89,78 @@ In diesem Thema wird die Verwendung von [!INCLUDE[TLA#tla_2d](../../../../includ
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
   
 <a name="transformcenter"></a>   
-## Transformationen und Koordinatensysteme  
- Bei der Transformation eines Objekts wird nicht nur das Objekt transformiert, sondern auch der Koordinatenraum, in dem sich das Objekt befindet.  Standardmäßig ist eine Transformation am Ursprung des Koordinatensystems des Zielobjekts zentriert: \(0,0\).  Die einzige Ausnahme ist <xref:System.Windows.Media.TranslateTransform>. Für <xref:System.Windows.Media.TranslateTransform> müssen keine Zentrierungseigenschaften festgelegt werden, da sich die Zentrierung nicht auf die Übersetzung auswirkt.  
+## <a name="transformations-and-coordinate-systems"></a>Transformationen und Koordinatensysteme  
+ Beim Transformieren eines Objekts wird nicht nur das Objekt transformiert, sondern auch der Koordinatenbereich, in dem dieses Objekt vorhanden ist. Standardmäßig wird eine Transformation am Ursprung des Koordinatensystems des Zielobjekts zentriert: (0,0). Die einzige Ausnahme ist <xref:System.Windows.Media.TranslateTransform>; ein <xref:System.Windows.Media.TranslateTransform> hat keine Center Eigenschaften festgelegt werden, da die Übersetzung Effekt ist derselbe, unabhängig davon, wo er zentriert ist.  
   
- Im folgenden Beispiel wird mit einem <xref:System.Windows.Media.RotateTransform>\-Element ein <xref:System.Windows.Shapes.Rectangle>\-Element \(vom Typ <xref:System.Windows.FrameworkElement>\) um 45 Grad um seinen Standardmittelpunkt \(0,0\) gedreht.  In der nachstehenden Abbildung sehen Sie die Auswirkung der Drehung.  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.RotateTransform> Rotieren einer <xref:System.Windows.Shapes.Rectangle> -Element, das einen Typ von <xref:System.Windows.FrameworkElement>, durch seinen Mittelpunkt Standard 45-Grad (0, 0). Die folgende Abbildung veranschaulicht die Drehung.  
   
- ![Ein um &#40;0, 0&#41; in 45&#45;Grad&#45;Schritten gedrehtes FrameworkElement](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm\_FE\_rotated\_about\_upperleft\_corner")  
+ ![Eine 45-Grad-Schritten gedrehte "FrameworkElement" &#40; 0,0 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "Graphicsmm_FE_rotated_about_upperleft_corner")  
+Ein in 45-Grad-Schritten um den Punkt (0,0) gedrehtes Rechteck-Element  
   
-        Ein 45 Grad um den Punkt \(0,0\) gedrehtes Rectangle\-Element  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
- [!code-xml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ In der Standardeinstellung dreht das Element um seine obere linke Ecke (0, 0). Die <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, und <xref:System.Windows.Media.SkewTransform> Klassen bieten CenterX und CenterY-Eigenschaften, mit denen Sie an dem Punkt, an dem die Transformation wird angewendet.  
   
- Standardmäßig wird das Element um seine obere linke Ecke \(0, 0\) gedreht.  Die Klassen <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform> und <xref:System.Windows.Media.SkewTransform> enthalten CenterX\- und CenterY\-Eigenschaften, mit denen der Punkt angegeben werden kann, auf den die Transformation angewendet wird.  
+ Im nächste Beispiel verwendet auch ein <xref:System.Windows.Media.RotateTransform> drehen eine <xref:System.Windows.Shapes.Rectangle> Element um 45 Grad; allerdings diesmal die <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> Eigenschaften werden festgelegt, damit die <xref:System.Windows.Media.RotateTransform> verfügt über ein (25, 25). Die folgende Abbildung veranschaulicht die Drehung.  
   
- Im nächsten Beispiel wird ebenfalls eine <xref:System.Windows.Media.RotateTransform>\-Klasse verwendet, um ein <xref:System.Windows.Shapes.Rectangle>\-Element um 45 Grad zu drehen. Dabei sind die Eigenschaften <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> jedoch so festgelegt, dass die <xref:System.Windows.Media.RotateTransform>\-Klasse den Mittelpunkt \(25, 25\) hat.  In der nachstehenden Abbildung sehen Sie die Auswirkung der Drehung.  
+ ![Eine Geometrie gedreht, 45-Grad &#40; 25, 25 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "Graphicsmm_FE_rotated_about_center")  
+Ein in 45-Grad-Schritten um den Punkt (25, 25) gedrehtes Rechteck-Element  
   
- ![Eine um &#40;25, 25&#41; in 45&#45;Grad&#45;Schritten gedrehte Geometrie](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm\_FE\_rotated\_about\_center")  
-  
-        Ein 45 Grad um den Punkt \(25, 25\) gedrehtes Rectangle\-Element  
-  
- [!code-xml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
-## Transformieren eines FrameworkElement  
- Um Transformationen auf eine <xref:System.Windows.FrameworkElement>\-Klasse anzuwenden, erstellen Sie eine <xref:System.Windows.Media.Transform>\-Klasse und wenden diese auf eine der beiden Eigenschaften der <xref:System.Windows.FrameworkElement>\-Klasse an:  
+## <a name="transforming-a-frameworkelement"></a>Transformieren eines FrameworkElement  
+ Anwenden von Transformationen auf ein <xref:System.Windows.FrameworkElement>, erstellen eine <xref:System.Windows.Media.Transform> und wendet ihn auf eine der zwei Eigenschaften, die <xref:System.Windows.FrameworkElement> Klasse bietet:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – Eine Transformation, die vor dem Layoutdurchlauf angewendet wird.  Nach Anwendung der Transformation wird die transformierte Größe und Position des Elements vom Layoutsystem verarbeitet.  
+-   <xref:System.Windows.FrameworkElement.LayoutTransform%2A>– Eine Transformation, die vor dem Layoutdurchlauf angewendet wird. Nachdem die Transformation angewendet wurde, verarbeitet das Layoutsystem die transformierte Größe und Position des Elements.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – Eine Transformation, durch die die Darstellung des Elements geändert wird, die jedoch nach Abschluss des Layoutdurchlaufs angewendet wird.  Sie können die Leistung verbessern, indem Sie die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft anstelle der <xref:System.Windows.FrameworkElement.LayoutTransform%2A>\-Eigenschaft verwenden.  
+-   <xref:System.Windows.UIElement.RenderTransform%2A>– Eine Transformation, die die Darstellung des Elements ändert, jedoch wird angewendet, nachdem die Layoutdurchlauf abgeschlossen ist. Mithilfe der <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft anstelle der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft, können Sie die Leistungsvorteile abrufen.  
   
- Welche Eigenschaft sollte verwendet werden?  Verwenden Sie aufgrund der Leistungsvorteile nach Möglichkeit die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft, insbesondere dann, wenn Sie mit animierten <xref:System.Windows.Media.Transform>\-Objekten arbeiten.  Verwenden Sie die <xref:System.Windows.FrameworkElement.LayoutTransform%2A>\-Eigenschaft zum Skalieren, Drehen oder Neigen, wenn das übergeordnete Element an die transformierte Größe des Elements angepasst werden muss.  Beachten Sie, dass bei Verwendung mit der <xref:System.Windows.FrameworkElement.LayoutTransform%2A>\-Eigenschaft <xref:System.Windows.Media.TranslateTransform>\-Objekte scheinbar keine Auswirkung auf Elemente haben.  Der Grund hierfür ist, dass das übersetzte Element vom Layoutsystem als Teil der Verarbeitung an seine ursprüngliche Position zurückgesetzt wird.  
+ Welche Eigenschaft sollte verwendet werden? Aufgrund der Leistungsvorteile, die es bereitstellt, verwenden die <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft immer möglich, insbesondere bei Verwendung von animiert <xref:System.Windows.Media.Transform> Objekte. Verwenden der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> beim Skalieren, drehen oder neigen-Eigenschaft, und Sie benötigen das übergeordnete Element des Elements, auf die transformierte Größe des Elements anpassen. Beachten Sie, dass bei Verwendung der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Eigenschaft <xref:System.Windows.Media.TranslateTransform> Objekte haben keine Auswirkungen auf die Elemente angezeigt werden. Das liegt daran, dass das Layoutsystem das übersetzte Element an seiner ursprünglichen Position als Teil der Verarbeitung zurückgibt.  
   
- Weitere Informationen über das Layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] finden Sie unter [Layout](../../../../docs/framework/wpf/advanced/layout.md).  
+ Weitere Informationen zum Layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] finden Sie unter [Layout](../../../../docs/framework/wpf/advanced/layout.md) (Übersicht).  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## Beispiel: Drehen eines FrameworkElement um 45 Grad  
- Im folgenden Beispiel wird ein <xref:System.Windows.Media.RotateTransform>\-Element verwendet, um eine Schaltfläche um 45 Grad im Uhrzeigersinn zu drehen.  Die Schaltfläche ist zusammen mit zwei weiteren Schaltflächen in einer <xref:System.Windows.Controls.StackPanel>\-Klasse enthalten.  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Beispiel: Drehen eines FrameworkElement um 45 Grad  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.RotateTransform> auf eine Schaltfläche im Uhrzeigersinn um 45 Grad drehen. Die Schaltfläche befindet sich einem <xref:System.Windows.Controls.StackPanel> , die anderen zwei Schaltflächen hat.  
   
- Standardmäßig erfolgt mit <xref:System.Windows.Media.RotateTransform> eine Drehung um den Punkt \(0, 0\).  Da im Beispiel kein Wert für den Mittelpunkt angegeben ist, wird die Schaltfläche um den Punkt \(0, 0\) gedreht, also um ihre linke obere Ecke.  Die <xref:System.Windows.Media.RotateTransform>\-Klasse wird auf die <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft angewendet.  In der folgenden Darstellung wird das Ergebnis der Transformation veranschaulicht.  
+ Wird standardmäßig ein <xref:System.Windows.Media.RotateTransform> dreht den Punkt (0, 0). Da im Beispiel kein Wert für den Mittelpunkt angegeben ist, wird die Schaltfläche um den Punkt (0, 0) gedreht, d.h. um die linke obere Ecke. Die <xref:System.Windows.Media.RotateTransform> wird angewendet, um die <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft. In der folgenden Abbildung wird das Ergebnis der Transformation dargestellt.  
   
- ![Eine mit RenderTransform transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm\_RenderTransformWithDefaultCenter")  
+ ![Eine mit RenderTransform transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "Graphicsmm_RenderTransformWithDefaultCenter")  
+Drehung im Uhrzeigersinn um 45 Grad von der oberen linken Ecke  
   
-        45\-Grad\-Drehung im Uhrzeigersinn um die obere linke Ecke  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ Im nächste Beispiel verwendet auch ein <xref:System.Windows.Media.RotateTransform> fest, um eine Schaltfläche um 45 Grad im Uhrzeigersinn, sondern auch drehen der <xref:System.Windows.UIElement.RenderTransformOrigin%2A> der Schaltfläche auf (0,5, 0,5). Der Wert, der die <xref:System.Windows.UIElement.RenderTransformOrigin%2A> Eigenschaft ist relativ zur Größe der Schaltfläche. Daher wird die Drehung auf die Mitte der Schaltfläche und nicht auf deren obere linke Ecke angewendet. In der folgenden Abbildung wird das Ergebnis der Transformation dargestellt.  
   
- Im nächsten Beispiel wird ebenfalls eine <xref:System.Windows.Media.RotateTransform>\-Klasse verwendet, um eine Schaltfläche um 45 Grad im Uhrzeigersinn zu drehen. Darüber hinaus wird die <xref:System.Windows.UIElement.RenderTransformOrigin%2A>\-Eigenschaft der Schaltfläche auf \(0,5, 0,5\) gesetzt.  Der Wert der <xref:System.Windows.UIElement.RenderTransformOrigin%2A>\-Eigenschaft verhält sich relativ zur Größe der Schaltfläche.  Als Ergebnis wird die Drehung anstatt um die obere linke Ecke um den Mittelpunkt der Schaltfläche ausgeführt.  In der folgenden Darstellung wird das Ergebnis der Transformation veranschaulicht.  
+ ![Eine um ihren Mittelpunkt transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "Graphicsmm_RenderTransformRelativeCenter")  
+Drehung im Uhrzeigersinn um 45 Grad um die Mitte  
   
- ![Eine um ihren Mittelpunkt transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm\_RenderTransformRelativeCenter")  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
-        45\-Grad\-Drehung im Uhrzeigersinn um den Mittelpunkt  
+ Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft anstelle der <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft auf die Schaltfläche zu drehen.  Dies bewirkt, dass sich die Transformation auf das Layout der Schaltfläche auswirkt, was einen vollständigen Durchlauf des Layoutsystems auslöst. Die Schaltfläche wird dann gedreht und anschließend neu positioniert, da ihre Größe geändert wurde. In der folgenden Abbildung wird das Ergebnis der Transformation dargestellt.  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ ![Eine mit LayoutTransform transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "Graphicsmm_LayoutTransform")  
+LayoutTransform wird zum Drehen der Schaltfläche verwendet  
   
- Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement.LayoutTransform%2A>\-Eigenschaft anstelle der <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft zum Drehen der Schaltfläche verwendet.  Dadurch wirkt sich die Transformation auf das Layout der Schaltfläche aus, wodurch ein vollständiger Durchlauf des Layoutsystems ausgelöst wird.  Als Ergebnis wird die Schaltfläche gedreht und anschließend neu positioniert, da ihre Größe geändert wurde.  In der folgenden Darstellung wird das Ergebnis der Transformation veranschaulicht.  
-  
- ![Eine mit LayoutTransform transformierte Schaltfläche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm\_LayoutTransform")  
-  
-        Mit LayoutTransform gedrehte Schaltfläche  
-  
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
-## Animieren von Transformationen  
- Weil sie von der <xref:System.Windows.Media.Animation.Animatable>\-Klasse erben, können die <xref:System.Windows.Media.Transform>\-Klassen animiert werden.  Um eine <xref:System.Windows.Media.Transform>\-Klasse zu animieren, wenden Sie die Animation eines kompatiblen Typs auf die zu animierende Eigenschaft an.  
+## <a name="animating-transformations"></a>Animieren von Transformationen  
+ Da sie von erben die <xref:System.Windows.Media.Animation.Animatable> -Klasse, die <xref:System.Windows.Media.Transform> Klassen animiert werden können. Zum Animieren einer <xref:System.Windows.Media.Transform>, wenden Sie die Animation eines kompatiblen Typs auf die zu animierende Eigenschaft.  
   
- Im folgenden Beispiel werden ein <xref:System.Windows.Media.Animation.Storyboard> und eine <xref:System.Windows.Media.Animation.DoubleAnimation> zusammen mit einer <xref:System.Windows.Media.RotateTransform>\-Klasse verwendet, um eine <xref:System.Windows.Controls.Button> ohne Positionsänderung zu drehen, wenn darauf geklickt wird.  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.Storyboard> und eine <xref:System.Windows.Media.Animation.DoubleAnimation> mit einem <xref:System.Windows.Media.RotateTransform> vornehmen einer <xref:System.Windows.Controls.Button> Drehfeld vorhanden, wenn darauf geklickt wird.  
   
- [!code-xml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Das vollständige Beispiel finden Sie unter [2\-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).  Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](http://go.microsoft.com/fwlink/?LinkID=158252). Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
 <a name="freezable_features"></a>   
-## Features von Freezable  
- Da die <xref:System.Windows.Media.Transform>\-Klasse von der <xref:System.Windows.Freezable>\-Klasse erbt, bietet sie mehrere spezielle Features: <xref:System.Windows.Media.Transform>\-Objekte können als [Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md) deklariert, von mehreren Objekten gleichzeitig verwendet, zur Leistungsoptimierung als schreibgeschützt definiert, geklont sowie als threadsicher festgelegt werden.  Weitere Informationen über die verschiedenen Features von <xref:System.Windows.Freezable>\-Objekten finden Sie unter [Übersicht über Freezable\-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Transform> Klasse mehrere spezielle Funktionen bereitstellen: <xref:System.Windows.Media.Transform> deklarierte Objekte als [Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)gemeinsam von mehreren Objekten, die zur Verbesserung der Schreibschutz versehen wurden Leistung, geklont und als threadsicher. Weitere Informationen über die verschiedenen Features, die von bereitgestellten <xref:System.Windows.Freezable> Objekten finden Sie die [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## Siehe auch  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.Matrix>   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)   
- [Beispiel für 2D\-Transformation](http://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.Matrix>  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Beispiel für 2D-Transformationen](http://go.microsoft.com/fwlink/?LinkID=158252)

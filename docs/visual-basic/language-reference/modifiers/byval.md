@@ -1,48 +1,47 @@
 ---
-title: "ByVal (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ByVal"
-  - "ByVal"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ByVal keyword, contexts"
-  - "ByVal keyword"
+title: ByVal (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ByVal
+- ByVal
+helpviewer_keywords:
+- ByVal keyword [Visual Basic], contexts
+- ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c192cdb4ac43ad614fbfb663079c03ddc6c358c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ByVal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Kennzeichnet ein Argument, das so übergeben wird, dass der Wert einer Variablen, die dem Argument im Aufrufcode zugrunde liegt, von der aufgerufenen Prozedur oder Eigenschaft nicht geändert werden kann.  
+# <a name="byval-visual-basic"></a>ByVal (Visual Basic)
+Gibt an, dass ein Argument so übergeben wird, dass die aufgerufene Prozedur oder Eigenschaft den Wert einer Variablen, die das Argument im aufrufenden Code zugrunde liegt, ändern kann.  
   
-## Hinweise  
- Der `ByVal`\-Modifizierer kann in folgenden Kontexten verwendet werden:  
+## <a name="remarks"></a>Hinweise  
+ Der `ByVal`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Beispiel  
- Im folgenden Beispiel wird die Verwendung des Übergabemechanismus für den `ByVal`\-Parameter mit einem Referenztypargument veranschaulicht.  Im Beispiel ist das `c1`\-Argument eine Instanz der `Class1`\-Klasse.  `ByVal` verhindert, dass der zugrunde liegende Wert des `c1`\-Verweisarguments vom Code in den Prozeduren geändert wird, die Felder und Eigenschaften von `c1`, auf die zugegriffen werden kann, sind jedoch nicht geschützt.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht die Verwendung von der `ByVal` Parameterübergabe Mechanismus, mit einem Verweisargument-Typ. Im Beispiel wird das Argument `c1`, eine Instanz der Klasse `Class1`. `ByVal`verhindert, dass den Code in den Verfahren ändern den zugrunde liegenden Wert des Arguments Verweis `c1`, aber nicht die verfügbare Felder und Eigenschaften der schützt `c1`.  
   
  [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
-## Siehe auch  
- [Stichwörter](../../../visual-basic/language-reference/keywords/index.md)   
- [Passing Arguments by Value and by Reference](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
+ [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

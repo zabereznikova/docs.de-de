@@ -1,70 +1,73 @@
 ---
-title: "&lt;udpAnnoucementEndpoint&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;udpAnnoucementEndpoint&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 85fcd6b81cca9f9b7a71ebdda96ef75e1dc1405a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;udpAnnoucementEndpoint&gt;
-Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten verwendet wird, um Ankündigungsnachrichten über eine UDP\-Bindung zu senden.  Es weist einen festen Vertrag auf und unterstützt zwei Suchversionen.  Außerdem weist er eine feste UDP\-Bindung und einen Standardadresswert gemäß WS\-Discovery\-Spezifikationen \(WS\-Discovery Version April 2005 oder Version 1.1\) auf.  Sie können die Multicastadresse angeben, die zum Senden und Empfangen der Ankündigungsnachrichten verwendet werden soll.  
+# <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
+Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten verwendet wird, um Ankündigungsnachrichten über eine UDP-Bindung zu senden. Es weist einen festen Vertrag auf und unterstützt zwei Suchversionen. Außerdem weist er eine feste UDP-Bindung und einen Standardadresswert gemäß WS-Discovery-Spezifikationen (WS-Discovery Version April 2005 oder Version 1.1) auf. Sie können die Multicastadresse angeben, die zum Senden und Empfangen der Ankündigungsnachrichten verwendet werden soll.  
   
-## Syntax  
+\<System. ServiceModel >  
+\<StandardEndpoints >  
   
-```  
+## <a name="syntax"></a>Syntax  
   
+```xml  
 <system.serviceModel>  
-    <standardEndpoints>  
-       <announcementEndpoint>   
-          <standardEndpoint  
-                  discoveryVersion=”WSDiscovery11/WSDiscoveryApril2005”  
-                  maxAnnouncementDelay=”Timespan”   
-                  multicastAddress=”Uri”  
-                  name="String" />   
-       </announcementEndpoint>          
-    </standardEndpoints>  
+  <standardEndpoints>
+    <announcementEndpoint>
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
+                        maxAnnouncementDelay="Timespan"
+                        multicastAddress="Uri"
+                        name="String" />
+    </announcementEndpoint>
+  </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## Attribute und Elemente  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### Attribute  
+### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
-|--------------|------------------|  
-|discoveryVersion|Eine Zeichenfolge, die eine der zwei Versionen des WS\-Suchprotokolls angibt.  Gültige Werte sind WSDiscovery11 und WSDiscoveryApril2005.  Dieser Wert ist vom Typ <xref:System.ServiceModel.Discovery.Configuration.DiscoveryVersion>.|  
-|maxAnnouncementDelay|Ein Timespan\-Wert, der den maximalen Wert für die Verzögerung angibt, den das Suchprotokoll wartet, bis eine Hello\-Nachricht gesendet wird.  Die Wartezeit für diese Nachrichten ist ein zufälliger Zeitwert zwischen 0 und dem Wert dieses Attributs.  Dieses Attribut wird zur Angabe einer kurzen, zufällig festgelegten Verzögerung verwendet, um Netzwerküberlastungen zu verhindern, wenn ein Netzwerk ausfällt und alle Dienste zur gleichen Zeit wieder in den Onlinestatus wechseln.|  
-|multicastAddress|Ein URI, der eine Multicastadresse angibt, die zum Senden und Empfangen der Ermittlungsnachrichten verwendet werden soll.  Der Standardwert ist die Multicastadresse gemäß der Protokollspezifikation.|  
-|Name|Eine Zeichenfolge, die den Namen der Konfiguration des Standardendpunkts angibt.  Der Name wird im `endpointConfiguration`\-Attribut des Dienstendpunkts zum Verknüpfen eines Standardendpunkts mit der Konfiguration verwendet.|  
+|---------------|-----------------|  
+|discoveryVersion|Eine Zeichenfolge, die eine der zwei Versionen des WS-Suchprotokolls angibt. Gültige Werte sind WSDiscovery11 und WSDiscoveryApril2005. Dieser Wert ist vom Typ <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.|  
+|maxAnnouncementDelay|Ein Timespan-Wert, der den maximalen Wert für die Verzögerung angibt, den das Suchprotokoll wartet, bis eine Hello-Nachricht gesendet wird. Die Wartezeit für diese Nachrichten ist ein zufälliger Zeitwert zwischen 0 und dem Wert dieses Attributs. Dieses Attribut wird zur Angabe einer kurzen, zufällig festgelegten Verzögerung verwendet, um Netzwerküberlastungen zu verhindern, wenn ein Netzwerk ausfällt und alle Dienste zur gleichen Zeit wieder in den Onlinestatus wechseln.|  
+|multicastAddress|Ein URI, der eine Multicastadresse angibt, die zum Senden und Empfangen der Ermittlungsnachrichten verwendet werden soll. Der Standardwert ist die Multicastadresse gemäß der Protokollspezifikation.|  
+|Name|Eine Zeichenfolge, die den Namen der Konfiguration des Standardendpunkts angibt. Der Name wird im `endpointConfiguration`-Attribut des Dienstendpunkts zum Verknüpfen eines Standardendpunkts mit der Konfiguration verwendet.|  
   
-### Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|------------------|  
-|[\<udpTransportSettings\>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP\-Transporteinstellungen für den UDP\-Endpunkt konfigurieren können.|  
-  
-### Übergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
-|-------------|------------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften \(Adresse, Bindung, Vertrag\) fest vorgegeben sind.|  
+|-------------|-----------------|  
+|[\<UdpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP-Transporteinstellungen für den UDP-Endpunkt konfigurieren können.|  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Client veranschaulicht, der einen UDP\-Multicasttransport mit Standardmulticastadresse auf Ankündigungen überwacht.  
+### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-```  
+|Element|Beschreibung|  
+|-------------|-----------------|  
+|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
   
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird ein Client veranschaulicht, der einen UDP-Multicasttransport mit Standardmulticastadresse auf Ankündigungen überwacht.  
+  
+```xml  
 <services>  
   <service name="ServiceAnnouncementListener">  
       <endpoint name="udpAnnouncementEndpointStandard"  
@@ -84,8 +87,7 @@ Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten 
           multicastAddress="soap.udp://239.255.255.250:3703"/>          
   </udpAnnouncementEndpoint>  
 </standardEndpoints>  
-  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
