@@ -1,90 +1,96 @@
 ---
-title: "R&#252;ckrufe und Validierung von Abh&#228;ngigkeitseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Rückrufe, Überprüfung"
-  - "coerce-Wert-Rückrufe"
-  - "Abhängigkeitseigenschaften, Rückrufe"
-  - "Abhängigkeitseigenschaften, Überprüfung"
-  - "Überprüfung von Abhängigkeitseigenschaften"
+title: "Rückrufe und Validierung von Abhängigkeitseigenschaften"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], validation
+- coerce value callbacks [WPF]
+- callbacks [WPF], validation
+- dependency properties [WPF], callbacks
+- validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# R&#252;ckrufe und Validierung von Abh&#228;ngigkeitseigenschaften
-In diesem Thema wird erläutert, wie Abhängigkeitseigenschaften unter Verwendung alternativer benutzerdefinierter Implementierungen für eigenschaftsbezogene Features erstellt werden, z. B. Validierungsbestimmung, Rückrufe, die aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher äußerer Einflüsse auf die Wertbestimmung.  In diesem Thema werden auch Szenarien diskutiert, bei denen eine Erweiterung der Standardsystemverhaltensweisen von Eigenschaften mithilfe dieser Verfahren angemessen ist.  
+# <a name="dependency-property-callbacks-and-validation"></a>Rückrufe und Validierung von Abhängigkeitseigenschaften
+Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe alternativer benutzerdefinierter Implementierungen für eigenschaftenbezogene Funktionen wie die Überprüfungsbestimmung, Rückrufe, die immer dann aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher externer Einflüsse auf die Wertbestimmung. Dieses Thema enthält auch Szenarios, in denen das Erweitern des Standardverhaltens des Eigenschaftensystems mithilfe dieser Techniken geeignet ist.  
   
-   
+  
   
 <a name="prerequisites"></a>   
-## Vorbereitungsmaßnahmen  
- In diesem Thema wird vorausgesetzt, dass Sie mit den grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft und dem Anwenden von Metadaten auf eine benutzerdefinierte Abhängigkeitseigenschaft vertraut sind.  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
   
 <a name="Validation_Callbacks"></a>   
-## Validierungsrückrufe  
- Einer Abhängigkeitseigenschaft können beim ersten Registrieren Validierungsrückrufe zugewiesen werden.  Der Validierungsrückruf ist nicht Teil der Eigenschaftenmetadaten; er ist eine direkte Eingabe der <xref:System.Windows.DependencyProperty.Register%2A>\-Methode.  Daher kann ein Validierungsrückruf nicht durch eine neue Implementierung überschrieben werden, nachdem er für eine Abhängigkeitseigenschaft erstellt wurde.  
+## <a name="validation-callbacks"></a>Überprüfungsrückrufe  
+ Überprüfungsrückrufe können beim ersten Registrieren einer Abhängigkeitseigenschaft zugewiesen werden. Der Validierungsrückruf ist nicht Teil der Eigenschaftenmetadaten; Es ist eine direkte Eingabe der <xref:System.Windows.DependencyProperty.Register%2A> Methode. Sobald ein Validierungsrückruf für eine Abhängigkeitseigenschaft erstellt wurde, kann er daher nicht durch eine neue Implementierung überschrieben werden.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Die Rückrufe werden so implementiert, dass ein Objektwert für sie bereitgestellt wird.  Sie geben `true` zurück, wenn der bereitgestellte Wert für die Eigenschaft gültig ist. Andernfalls geben sie `false` zurück.  Es wird angenommen, dass die Eigenschaft den richtigen Typ entsprechend dem für das Eigenschaftensystem registrierten Typ hat. Daher wird der Typ innerhalb der Rückrufe normalerweise nicht überprüft.  Die Rückrufe werden vom Eigenschaftensystem bei einer Vielzahl verschiedener Vorgänge verwendet.  Dazu gehören die anfängliche Typinitialisierung nach Standardwert, programmgesteuerte Änderungen durch das Aufrufen von <xref:System.Windows.DependencyObject.SetValue%2A> oder Versuche, die Metadaten mit dem neuen angegebenen Standardwert zu überschreiben.  Wenn der Validierungsrückruf durch einen dieser Vorgänge aufgerufen wird und `false` zurückgibt, wird eine Ausnahme ausgelöst.  Anwendungsentwickler müssen auf die Behandlung solcher Ausnahmen vorbereitet sein.  Validierungsrückrufe werden häufig verwendet, um Enumerationswerte zu validieren oder integer\- und double\-Werte einzuschränken, wenn die Eigenschaft Messungen festlegt, die größer oder gleich null sein müssen.  
+ Die Rückrufe werden so implementiert, dass ihnen ein Objektwert bereitgestellt wird. Sie geben `true` zurück, wenn der bereitgestellte Wert für die Eigenschaft gültig ist. Andernfalls geben sie `false` zurück. Es wird davon ausgegangen, dass die Eigenschaft entsprechend dem im Eigenschaftensystem registrierten Typ zum richtigen Typ gehört. Typüberprüfungen werden daher innerhalb von Rückrufen in der Regel nicht ausgeführt. Die Rückrufe werden vom Eigenschaftensystem bei einer Vielzahl verschiedener Vorgänge verwendet. Dies schließt Ausgangstyp Initialisierung durch den Standardwert, programmgesteuerten Änderung durch den Aufruf <xref:System.Windows.DependencyObject.SetValue%2A>, oder versucht, Metadaten mit bereitgestellten neuen Standardwert zu überschreiben. Wenn der Validierungsrückruf von einem dieser Vorgänge aufgerufen wird und `false` zurückgibt, wird eine Ausnahme ausgelöst. Anwendungsentwickler müssen diese Ausnahmen behandeln können. Rückrufen werden üblicherweise zur Validierung von Enumerationswerten oder der Einschränkung von Werten aus ganzen Zahlen oder Double-Datentypen verwendet, wenn die Eigenschaft Messungen festlegt, die 0 (null) oder höher entsprechen müssen.  
   
- Validierungsrückrufe sind speziell zur Klassenvalidierung und nicht zur Instanzvalidierung gedacht.  Die Parameter des Rückrufs geben kein spezifisches <xref:System.Windows.DependencyObject> an, das für die zu validierenden Eigenschaften festgelegt sind.  Daher eignen sich Validierungsrückrufe nicht dazu, mögliche "Abhängigkeiten" zu erzwingen, die einen Eigenschaftswert beeinflussen könnten, wenn der instanzspezifische Wert einer Eigenschaft abhängig von Faktoren wie den instanzspezifischen Werten anderer Eigenschaften oder dem Laufzeitzustand ist.  
+ Überprüfungsrückrufe sollen Klassen-Validierungssteuerelemente, keine Instanz-Validierungssteuerelemente sein. Die Parameter des Rückrufs kommunizieren kein bestimmtes <xref:System.Windows.DependencyObject> auf der der zu validierenden Eigenschaften festgelegt werden. Daher sind die Validierungsrückrufe nicht nützlich für das Erzwingen der möglichen „Abhängigkeiten“, die einen Eigenschaftswert beeinflussen können, bei dem der instanzspezifische Wert einer Eigenschaft von Faktoren wie instanzspezifischen Werten anderer Eigenschaften oder dem Laufzeitzustand anhängen.  
   
- Der folgende Beispielcode zeigt ein sehr einfaches Validierungsrückruf\-Szenario, das Validieren einer Eigenschaft, die typisiert wird, wenn das <xref:System.Double>\-Primitiv nicht <xref:System.Double.PositiveInfinity> oder <xref:System.Double.NegativeInfinity> ist.  
+ Im folgenden finden Sie Beispielcode für ein sehr einfaches Validierungsrückruf-Szenario: Überprüfung, dass eine Eigenschaft, die als typisiert ist die <xref:System.Double> primitiven nicht <xref:System.Double.PositiveInfinity> oder <xref:System.Double.NegativeInfinity>.  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## Rückrufe zum Umwandeln von Werten und durch geänderte Eigenschaften ausgelöste Ereignisse  
- Rückrufe zum Umwandeln von Werten übergeben die spezifische <xref:System.Windows.DependencyObject>\-Instanz für Eigenschaften, ebenso wie <xref:System.Windows.PropertyChangedCallback>\-Implementierungen dies tun, die durch das Eigenschaftensystem aufgerufen werden, wenn der Wert einer Abhängigkeitseigenschaft geändert wird.  Wenn Sie diese zwei Rückrufe in Verbindung miteinander verwenden, können Sie eine Reihe von Eigenschaften für Elemente erstellen, bei denen Änderungen einer Eigenschaft eine Koersion oder Neuauswertung einer anderen Eigenschaft erzwingt.  
+## <a name="coerce-value-callbacks-and-property-changed-events"></a>Coerce-Wert-Rückrufe und Eigenschaftenänderungsereignisse  
+ Coerce-Wert Rückrufe führen Sie die spezifische übergeben <xref:System.Windows.DependencyObject> für Eigenschaften, wie die Instanz <xref:System.Windows.PropertyChangedCallback> Implementierungen, die vom Eigenschaftensystem aufgerufen werden, wenn der Wert einer Abhängigkeitseigenschaft geändert. Mithilfe dieser zwei Rückrufe können Sie eine Reihe von Eigenschaften für Elemente erstellen, wobei Änderungen an einer Eigenschaft eine Umwandlung oder eine erneute Auswertung von einer anderen Eigenschaft erzwingt.  
   
- Ein typisches Szenario für die Verwendung einer Verknüpfung von Abhängigkeitseigenschaften wäre eine durch die Benutzeroberfläche gesteuerte Eigenschaft, bei der das Element eine Eigenschaft jeweils für den Minimal\- und den Maximalwert und eine dritte Eigenschaft für den tatsächlichen oder aktuellen Wert enthält.  Wenn in diesem Fall der Maximalwert so eingestellt wird, dass der aktuelle Wert den neuen Maximalwert übersteigt, sollte der aktuelle Wert so umgewandelt werden, dass er den neuen Maximalwert nicht übersteigt. Eine vergleichbare Beziehung muss zwischen dem Minimalwert und dem aktuellen Wert hergestellt werden.  
+ In einem typischen Szenario für die Verwendung einer Bindung von Abhängigkeitseigenschaften gibt es eine von einer Benutzerschnittstelle gesteuerte Eigenschaft, in der das Element jeweils eine Eigenschaft für den minimalen und maximalen Wert enthält, und eine dritte Eigenschaft für den tatsächlichen oder den aktuellen Wert. Wenn das Maximum in diesem Szenario so angepasst würde, dass der aktuelle Wert den neuen Maximalwert übersteigt, sollten Sie es erzwingen, dass der aktuellen Wert nicht größer sein darf als der neue Maximalwert, und eine ähnliche Beziehung für den Minimalwert und den aktuellen Wert festlegen.  
   
- Nachfolgend ein sehr kurzer Beispielcode für nur eine der drei Abhängigkeitseigenschaften, um diese Beziehung zu veranschaulichen.  Das Beispiel zeigt, wie die `CurrentReading`\-Eigenschaft eines "Min\/Max\/Aktuell"\-Satzes von miteinander verbundenen \*Reading\-Eigenschaften registriert ist.  Dabei wird die Validierung verwendet, die im vorherigen Abschnitt erläutert wurde.  
+ Im Folgenden finden Sie einen sehr kurzen Beispielcode für nur eine der drei Abhängigkeitseigenschaften, die diese Beziehung veranschaulichen. Im Beispiel wird gezeigt, wie die `CurrentReading`-Eigenschaft eines Satzes aus Minimalwert/Maximalwert/aktuellem Wert von verknüpften *Reading-Eigenschaften registriert wird. Die Überprüfung wird hier wie im vorherigen Abschnitt verwendet.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Der durch die geänderte Eigenschaft ausgelöste Rückruf für den aktuellen Wert wird verwendet, um die Änderung an andere Abhängigkeitseigenschaften weiterzuleiten, indem die Rückrufe zum Umwandeln von Werten explizit aufgerufen werden, die für diese anderen Eigenschaften registriert sind.  
+ Das Eigenschaftenänderungsrückrufen für „Current“ wird verwendet, um die Änderung an andere abhängige Eigenschaften weiterzuleiten, indem explizit die Coerce-Wert-Rückrufe aufgerufen werden, die für diese anderen Eigenschaften registriert sind:  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- Der Rückruf zum Umwandeln von Werten prüft die Werte der Eigenschaften, von denen die aktuelle Eigenschaft potenziell abhängig ist, und wandelt den aktuellen Wert um, falls erforderlich:  
+ Der Coerce-Wert-Rückruf überprüft die Werte von Eigenschaften, von denen die aktuelle Eigenschaft potenziell abhängt, und erzwingt bei Bedarf den aktuellen Wert:  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
->  Standardwerte von Eigenschaften werden nicht umgewandelt.  Ein Eigenschaftswert, der gleich dem Standardwert ist, kann vorkommen, wenn ein Eigenschaftswert immer noch seine anfängliche Standardeinstellung hat oder wenn andere Werte durch <xref:System.Windows.DependencyObject.ClearValue%2A> gelöscht werden.  
+>  Standardwerte von Eigenschaften werden nicht erzwungen. Ein Eigenschaftswert entspricht der Standardwert kann auftreten, wenn ein Eigenschaftswert weiterhin seine anfänglichen Standardwert aufweist oder wenn andere Werte durch <xref:System.Windows.DependencyObject.ClearValue%2A>.  
   
- Die Rückrufe zum Umwandeln von Werten und die durch geänderte Eigenschaften ausgelösten Rückrufe sind Teil der Eigenschaftenmetadaten.  Daher können Sie die Rückrufe für eine bestimmte Abhängigkeitseigenschaft ändern, wie sie für einen Typ vorhanden ist, den Sie von dem Typ ableiten, dem die Abhängigkeitseigenschaft gehört, indem Sie die Metadaten für diese Eigenschaft für Ihren Typ überschreiben.  
+ Der Coerce-Wert und die Eigenschaftenänderungsrückrufen sind Teil der Eigenschaftenmetadaten. Da die Rückrufe für eine bestimmte Abhängigkeitseigenschaft auf einem Typ vorhanden sind, die von dem Typ abgeleitet ist, der die Abhängigkeitseigenschaft besitzt, können sie von Ihnen geändert werden, indem die Metadaten für diese Eigenschaft auf Ihrem Typ überschrieben werden.  
   
 <a name="Advanced"></a>   
-## Erweiterte Umwandlung und Rückrufszenarien  
+## <a name="advanced-coercion-and-callback-scenarios"></a>Erweiterte Umwandlung und Rückrufszenarios  
   
-### Einschränkungen und gewünschte Werte  
- Die <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>\-Rückrufe werden durch das Eigenschaftensystem verwendet, um einen Wert gemäß der von Ihnen deklarierten Logik umzuwandeln. Ein umgewandelter Wert einer lokal festgelegten Eigenschaft bleibt jedoch weiterhin intern ein "gewünschter Wert".  Wenn die Einschränkungen auf anderen Eigenschaftswerten basieren, die sich dynamisch während der Lebensdauer einer Anwendung ändern können, dann werden auch die Umwandlungseinschränkungen dynamisch geändert, und die eingeschränkte Eigenschaft kann ihren Wert ändern, um dem gewünschten Wert unter Berücksichtigung der neuen Einschränkungen möglichst nah zu kommen.  Der Wert nimmt den gewünschten Wert an, wenn alle Einschränkungen aufgehoben werden.  Sie können möglicherweise recht komplizierte Abhängigkeitsszenarien einführen, wenn Sie über mehrere Eigenschaften verfügen, die zirkulär voneinander abhängig sind.  Im Szenario "Min\/Max\/Aktuell" könnten Sie beispielsweise festlegen, dass der Benutzer den Mindest\- und den Höchstwert festlegen kann.  Wenn das der Fall ist, müssten Sie als Umwandlung festlegen, dass der Maximalwert immer größer ist als der Minimalwert und umgekehrt.  Wenn diese Koersion jedoch aktiv ist und der Maximalwert bei der Umwandlung auf den Minimalwert gesetzt wird, nimmt der aktuelle Wert einen nicht festlegbaren Zustand an, da er von dem Minimal\- und Maximalwert abhängig ist und auf den Bereich zwischen diesen beiden Werten eingeschränkt ist, der dann gleich null ist.  Wenn anschließend der Maximal\- oder der Minimalwert angepasst wird, scheint der aktuelle Wert einem dieser Wert zu "folgen", da der gewünschte aktuelle Wert weiterhin gespeichert ist und bei der Lockerung der Einschränkungen der Versuch unternommen wird, den gewünschten Wert zu erreichen.  
+### <a name="constraints-and-desired-values"></a>Einschränkungen und gewünschte Werte  
+ Die <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> Rückrufe werden von dem Eigenschaftensystem verwendet werden, um einen Wert gemäß der Logik, die Sie deklarieren, aber ein lokal festgelegter umgewandelten Wert umzuwandeln-Eigenschaft erhalten weiterhin einen "gewünschten Wert" intern. Wenn die Einschränkungen auf anderen Eigenschaftswerten basieren, kann sich dies während der Lebensdauer der Anwendung dynamisch ändern. Die Umwandlungseinschränkungen werden auch dynamisch geändert, und die eingeschränkte Eigenschaft kann ihren Wert ändern, um sich unter den gegebenen neuen Einschränkungen so stark wie möglich dem gewünschten Wert anzunähern. Der Wert entspricht dem gewünschten Wert, wenn alle Einschränkungen aufgehoben werden. Sie können möglicherweise einige recht komplizierte Abhängigkeitsszenarios einführen, wenn Sie über mehrere Eigenschaften verfügen, die zirkulär voneinander abhängig sind. Beispielsweise könnten der Minimal- und Maximalwert im Szenario zum Minimalwert/Maximalwert/aktuellen Wert vom Benutzer einstellbar sein. Wenn dies der Fall ist, müssen Sie erzwingen, dass der Maximalwert immer größer als Minimalwert ist und umgekehrt. Wenn diese Umwandlung aber aktiv ist und der Maximalwert in den Minimalwert umgewandelt wird, bleibt „Current“ in einem nicht festlegbaren Zustand, da es von beiden abhängt und auf den Bereich zwischen den Werten, der 0 (null) entspricht, eingeschränkt ist. Wenn der Maximal- oder Minimalwert dann angepasst wurde, scheint „Current“ einem dieser Werte zu „folgen“, da der gewünschte Wert von „Current“ noch immer gespeichert ist und versucht, den gewünschten Wert zu erreichen, während die Einschränkungen gelockert werden.  
   
- Technisch gesehen stellen komplexe Abhängigkeiten kein Problem dar, aber sie können die Leistung beeinträchtigen, wenn sie eine große Anzahl von Neuauswertungen erforderlich machen. Außerdem können sie den Benutzer verwirren, wenn sie sich direkt auf die Benutzeroberfläche auswirken.  Sie müssen daher sehr sorgfältig mit durch geänderte Eigenschaften ausgelösten Rückrufen und Rückrufen zum Umwandeln von Werten umgehen, um sicherzustellen, dass die versuchte Umwandlung so eindeutig wie möglich behandelt werden kann und keine zu starke Einschränkung herstellt.  
+ Technisch gesehen gibt es keine Kritik an komplexen Abhängigkeiten. Allerdings können sie leichte Leistungseinbußen mit sich bringen, wenn sie eine große Anzahl von erneuten Auswertung erfordern, und Benutzer verwirren, wenn sie die Benutzeroberfläche direkt beeinflussen. Seien Sie vorsichtig bei Eigenschaftenänderungs- und Coerce-Wert-Rückrufen, und stellen Sie sicher, dass die versuchte Umwandlung so eindeutig wie möglich behandelt werden kann und nicht übermäßig einschränkt.  
   
-### Verwenden von CoerceValue zum Verwerfen von Wertänderungen  
- Das Eigenschaftensystem behandelt jeden <xref:System.Windows.CoerceValueCallback>, der den Wert <xref:System.Windows.DependencyProperty.UnsetValue> zurückgibt, als besonderen Fall.  Dieser besondere Fall bedeutet, dass die Eigenschaftenänderung, die zu dem aufgerufenen <xref:System.Windows.CoerceValueCallback> führt, durch das Eigenschaftensystem zurückgewiesen werden sollte und das Eigenschaftensystem stattdessen den vorherigen Wert der Eigenschaft melden sollte.  Dieser Mechanismus kann nützlich sein, um zu überprüfen, ob asynchron initiierte Änderungen einer Eigenschaft weiterhin gültig für den aktuellen Objektzustand sind, und die Änderungen zu unterdrücken, falls das nicht der Fall ist.  Ein weiteres mögliches Szenario sieht so aus, dass Sie selektiv einen Wert abhängig davon unterdrücken können, welche Komponente der Eigenschaftswertbestimmung verantwortlich für den gemeldeten Wert ist.  Dazu können Sie die im Rückruf übergebene <xref:System.Windows.DependencyProperty> mit dem Eigenschaftenbezeichner als Eingabe für die <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A> verwenden und anschließend die <xref:System.Windows.ValueSource> verarbeiten.  
+### <a name="using-coercevalue-to-cancel-value-changes"></a>Abbrechen von Wertänderungen mit CoerceValue  
+ Im Eigenschaftensystem behandelt alle <xref:System.Windows.CoerceValueCallback> , die den Rückgabewert <xref:System.Windows.DependencyProperty.UnsetValue> ein Sonderfall. Diesem spezielle Fall bedeutet, dass die Änderung der Eigenschaft mit der die <xref:System.Windows.CoerceValueCallback> aufgerufen werden, sollten zurückgewiesen von Eigenschaftenwerten und das Eigenschaftensystem sollten stattdessen den vorherigen Wert, der die Eigenschaft wurde gemeldet. Dieser Mechanismus kann bei der Überprüfung hilfreich sein, dass asynchron initiierte Änderungen an einer Eigenschaft für den aktuellen Objektzustand noch gültig sind, sowie bei der Unterdrückung dieser Änderungen, sofern sie nicht gültig sind. Ein anderes mögliches Szenario ist die selektive Unterdrückung eines Werts, je nachdem welche der Komponenten der Eigenschaftswertermittlung für den gemeldeten Wert verantwortlich ist. Zu diesem Zweck können Sie die <xref:System.Windows.DependencyProperty> übergeben der Rückruf und den Bezeichner als Eingabe für <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, und klicken Sie dann verarbeiten der <xref:System.Windows.ValueSource>.  
   
-## Siehe auch  
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

@@ -4,8 +4,8 @@ ms.date: 08/08/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
+- csharp
+- vb
 helpviewer_keywords:
 - version tolerant serialization
 - serialization, custom serialization
@@ -15,16 +15,15 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 6d21687a7147c7f3f0419c2f63030cc9d43d9c05
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90f2b1e73a24b0f732eaba4422faa9a1dcc15135
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="version-tolerant-serialization"></a>Versionstolerante Serialisierung
 In Version&#160;1.0 und Version 1.1 von .NET&#160;Framework war das Erstellen serialisierbarer Typen problematisch, die für mehrere Anwendungsversionen verwendbar waren. Wenn ein Typ durch Hinzufügen eines zusätzlicher Felder geändert wurde, traten die folgenden Probleme auf:  
@@ -287,16 +286,15 @@ End Class
 -   Vermeiden Sie verzweigte Versionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.SerializableAttribute>   
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>   
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnSerializedAttribute>   
- <xref:System.Runtime.Serialization.StreamingContext>   
- <xref:System.NonSerializedAttribute>   
+ <xref:System.SerializableAttribute>  
+ <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+ <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+ <xref:System.Runtime.Serialization.StreamingContext>  
+ <xref:System.NonSerializedAttribute>  
  [Binäre Serialisierung](binary-serialization.md)
-

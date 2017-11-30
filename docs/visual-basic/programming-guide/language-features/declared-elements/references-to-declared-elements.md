@@ -1,49 +1,32 @@
 ---
-title: Verweise auf deklarierte Elemente (Visual Basic) | Microsoft-Dokumentation
+title: Verweise auf deklarierte Elemente (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- declared elements
-- references, declared elements
-- qualified names
+- declared elements [Visual Basic]
+- references [Visual Basic], declared elements
+- qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48a04f81075accc073b0d1f5b7a61006bef807ae
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
-Wenn der Code auf ein deklariertes Element verweist die [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler mit dem Namen im Verweis der entsprechenden Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit dem gleichen Namen deklariert wird, können Sie steuern, welches dieser Elemente wird durch Verweise auf *qualifizierenden* seinen Namen.  
+Wenn Ihr Code eine deklarierte Element verweist die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler mit dem Namen in den Verweis auf die entsprechende Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, welche dieser Elemente sind von verwiesen wird *qualifizierenden* seinen Namen.  
   
- Der Compiler versucht, einen Namensverweis einen Namen mit entsprechen den *engsten Gültigkeitsbereich*. Dies bedeutet, dass es beginnt mit dem Code, der den Verweis und arbeitet nach außen aufeinander folgende Ebenen der enthaltenden Elemente.  
+ Der Compiler versucht, einen Namensverweis auf eine Namensdeklaration mit entsprechen den *engsten Gültigkeitsbereich*. Dies bedeutet, dass es beginnt mit dem Code, der den Verweis und außen durch aufeinander folgende Ebenen von, die Elemente enthält.  
   
- Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Bereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] löst der Compiler den Verweis in die Deklaration mit dem engsten Gültigkeitsbereich auf, nämlich die lokale Deklaration in `showCount`. Wenn qualifizierten `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis in die Deklaration mit einem größeren Bereich.  
+ Das folgende Beispiel zeigt die Verweise auf zwei Variablen mit dem gleichen Namen. Das Beispiel deklariert zwei Variablen, die jeweils den Namen `totalCount`, auf verschiedenen Ebenen des Gültigkeitsbereichs im Modul `container`. Wenn die Prozedur `showCount` zeigt `totalCount` ohne Qualifizierung der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Compiler löst den Verweis auf die Deklaration mit dem engsten Gültigkeitsbereich, nämlich die lokale Deklaration in `showCount`. Wenn dies qualifiziert `totalCount` mit das enthaltende Modul `container`, löst der Compiler den Verweis auf die Deklaration mit einem größeren Bereich.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -67,15 +50,15 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>Qualifizieren eines Elementnamens  
- Wenn Sie diesen Suchprozess überschreiben und ein Namen deklariert in einem breiteren Bereich müssen Sie angeben möchten *qualifizieren* den Namen mit dem enthaltenden Element des weiteren Gültigkeitsbereichs. In einigen Fällen möglicherweise auch das enthaltende Element qualifiziert.  
+ Wenn Sie möchten diesen Suchprozess überschreiben und geben Sie ein Namen deklariert in einen größeren Bereich müssen Sie *qualifizieren* den Namen mit dem enthaltenden Element des größeren Bereich. In einigen Fällen müssen Sie möglicherweise das enthaltende Element qualifiziert.  
   
- Qualifizieren Namen Mittel vorangeht in der Source-Anweisung mit Informationen, die angibt, in der Target-Element definiert ist. Diese Informationen werden bezeichnet ein *Qualifizierungspfad*. Eine oder mehrere Namespaces und ein Modul, eine Klasse oder Struktur.  
+ Qualifizieren Namen Mittel vorhergehenden in der quellanweisung mit Informationen, die identifizieren, in denen das Target-Element definiert ist. Diese Informationen wird aufgerufen, eine *qualifizierungszeichenfolge*. Eine oder mehrere Namespaces und ein Modul, eine Klasse oder Struktur.  
   
- Der Qualifizierungspfad sollten eindeutig angeben, das Modul, Klasse oder Struktur, die das Zielelement enthält. Der Container kann wiederum in einem anderen enthaltenden Element, in der Regel in einem Namespace befinden. Möglicherweise müssen Sie mehrere enthaltende Elemente in den Qualifizierungspfad aufnehmen.  
+ Der qualifizierungszeichenfolge sollte eindeutig Geben Sie das Modul, Klasse oder Struktur, die den Target-Element enthält. Der Container kann wiederum in ein anderes Element enthält, in der Regel in einem Namespace befinden. Sie müssen möglicherweise mehrere enthaltende Elemente in der qualifizierungszeichenfolge enthalten.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Auf ein deklariertes Element durch Angabe ihres Namens zugreifen  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Auf ein deklarierte Element durch seinen Namen qualifizieren  
   
-1.  Bestimmen Sie den Speicherort aus, in dem das Element definiert wurde. Dies kann einen Namespace oder sogar eine Hierarchie von Namespaces enthalten. Innerhalb des Namespace der untersten Ebene muss das Element in einem Modul, Klasse oder Struktur enthalten sein.  
+1.  Bestimmen Sie den Speicherort, in dem das Element definiert wurde. Dies könnte es sich um einen Namespace oder sogar eine Hierarchie von Namespaces enthalten. Innerhalb des Namespaces untersten Ebene muss das Element in einem Modul, Klasse oder Struktur enthalten sein.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -91,23 +74,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Bestimmen Sie einen Qualifizierungspfad basierend auf der Position des Zielelements. Beginnen Sie mit dem Namespace der obersten Ebene, fahren Sie mit der niedrigsten Ebene-Namespace und endet mit dem Modul, Klasse oder Struktur, die das Zielelement enthält. Jedes Element im Pfad muss es sich um das Element enthalten, das darauf folgt.  
+2.  Bestimmen Sie einen Qualifizierungspfad standortabhängig für den Target-Element. Beginnen Sie mit der Namespace der obersten Ebene, fahren Sie mit der niedrigsten Ebene Namespace und enden mit dem Modul, Klasse oder Struktur, die den Target-Element enthält. Jedes Element im Pfad muss das Element enthalten, das darauf folgt.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Den Qualifizierungspfad für das Zielelement. Punkt (`.`) nach jedem Element im Pfad. Die Anwendung muss Zugriff auf jedes Element im Qualifizierungspfad haben.  
+3.  Vorbereiten der qualifizierungszeichenfolge für den Target-Element. Platzieren Sie einen Punkt (`.`) nach dem jedes Element im Pfad. Ihre Anwendung muss Zugriff auf jedes Element in der qualifizierungszeichenfolge verfügen.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Schreiben Sie den Ausdruck oder Anweisung verweist auf das Zielelement auf die übliche Weise.  
+4.  Schreiben Sie den Ausdruck oder eine zuweisungsanweisung verweisen auf das Zielelement auf die übliche Weise.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Stellen Sie den Qualifizierungspfad dem Namen des Zielelements voran. Der Name muss sofort den Zeitraum (`.`), folgt das Modul, Klasse oder Struktur, die das Element enthält.  
+5.  Der Name des Ziels mit der qualifizierungszeichenfolge vorangestellt werden. Der Name sollte unmittelbar folgen auf den Punkt (`.`), folgt das Modul, Klasse oder Struktur, die das Element enthält.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -118,9 +101,9 @@ End Module
     End Module  
     ```  
   
-6.  Der Compiler verwendet den Qualifizierungspfad eine klare, eindeutige Deklaration gefunden, es den Ziel-Elementverweis zuordnen kann.  
+6.  Der Compiler verwendet den Qualifizierungspfad eine klare, eindeutige Deklaration gefunden, den Ziel-Elementverweis verglichen werden kann.  
   
- Sie möglicherweise auch einen Namensverweis qualifizieren, wenn die Anwendung Zugriff auf mehrere Programmierelemente verfügt, die den gleichen Namen hat. Z. B. die <xref:System.Windows.Forms>und <xref:System.Web.UI.WebControls>beide Namespaces enthalten eine `Label` Klasse (<xref:System.Windows.Forms.Label?displayProperty=fullName> und <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>).</xref:System.Web.UI.WebControls.Label?displayProperty=fullName> </xref:System.Windows.Forms.Label?displayProperty=fullName> </xref:System.Web.UI.WebControls> </xref:System.Windows.Forms> Wenn der Anwendung beide verwendet oder eine eigene definiert `Label` -Klasse, Sie müssen die verschiedenen unterscheiden `Label` Objekte. Schließen Sie den Namespace oder Alias in der Variablendeklaration. Im folgenden Beispiel wird den Importalias.  
+ Außerdem müssen Sie möglicherweise einen Namensverweis zu qualifizieren, wenn die Anwendung den Zugriff auf mehr als ein Programmierelement, die den gleichen Namen hat. Z. B. die <xref:System.Windows.Forms> und <xref:System.Web.UI.WebControls> Namespaces beide enthalten eine `Label` Klasse (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Wenn Ihre Anwendung sowohl verwendet oder wenn sie eine eigene definiert `Label` -Klasse, Sie müssen die verschiedenen unterscheiden `Label` Objekte. Schließen Sie den Namespace oder Alias in der Variablendeklaration. Im folgenden Beispiel wird den Importalias.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -130,20 +113,20 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Mitglieder von anderen Elementen mit  
- Wenn Sie einen nicht freigegebenen Member einer anderen Klasse oder Struktur verwenden, müssen Sie zunächst mit einer Variablen oder Ausdruck, der auf eine Instanz der Klasse oder Struktur zeigt den Elementnamen qualifizieren. Im folgenden Beispiel `demoClass` ist eine Instanz einer Klasse namens `class1`.  
+ Wenn Sie einen nicht freigegebenen Member einer anderen Klasse oder Struktur verwenden, müssen Sie zuerst den Elementnamen mit einer Variable oder ein Ausdruck, der auf eine Instanz der Klasse oder Struktur zeigt qualifizieren. Im folgenden Beispiel `demoClass` ist eine Instanz einer Klasse mit dem Namen `class1`.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- Sie können nicht den Klassennamen selbst verwenden, um einen Member zu qualifizieren, der nicht [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). Sie müssen zunächst eine Instanz in einer Objektvariablen erstellen (in diesem Fall `demoClass`) und anschließend mit dem Variablennamen darauf verweisen.  
+ Sie können nicht den Klassennamen selbst verwenden, um ein Element zu qualifizieren, der nicht [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). Erstellen Sie zunächst eine Instanz in einer Object-Variablen (in diesem Fall `demoClass`), und klicken Sie dann den Variablennamen verweisen.  
   
- Wenn eine Klasse oder Struktur hat ein `Shared` Element können Sie diesen Member entweder mit der Klasse oder Struktur oder mit einer Variablen oder Ausdruck, der auf eine Instanz verweist qualifizieren.  
+ Wenn eine Klasse oder Struktur verfügt über eine `Shared` Member auf, Sie können diesen Member mit den Namen der Klasse oder Struktur oder mit einer Variable oder ein Ausdruck, der auf eine Instanz verweist qualifizieren.  
   
- Ein Modul besitzt keine separaten Instanzen, und alle Member sind `Shared` standardmäßig. Deshalb qualifizieren Sie einen Modulmember mit dem Modulnamen.  
+ Ein Modul keinen separaten Instanzen und alle seine Member sind `Shared` standardmäßig. Aus diesem Grund qualifizieren Sie ein Modul-Element mit den Namen des Moduls.  
   
- Das folgende Beispiel zeigt gekennzeichnete Verweise auf Module-Element-Prozeduren. Das Beispiel deklariert zwei `Sub` Verfahren, mit dem Namen `perform`, in verschiedenen Modulen eines Projekts. Jede kann ohne Qualifizierung innerhalb des eigenen Moduls angegeben werden, jedoch muss qualifiziert werden, wenn keiner anderen Stelle auf die verwiesen wird. Da der letzte Verweis in `module3` nicht geeignet ist, `perform`, kann der Compiler diesen Verweis nicht auflösen.  
+ Das folgende Beispiel zeigt gekennzeichnete Verweise auf Modulmemberprozeduren. Das Beispiel deklariert zwei `Sub` Prozeduren, die beiden benannten `perform`, in anderen Modulen in einem Projekt. Jeweils kann ohne Qualifizierung innerhalb seiner eigenen Modul angegeben werden, jedoch muss qualifiziert werden, wenn an anderer Stelle verwiesen. Da der letzte Verweis in `module3` nicht geeignet ist, `perform`, der Compiler kann nicht aufgelöst werden, die auf verweisen.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -175,9 +158,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Verweise auf Projekte  
- Verwenden [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf Assembly oder die Typbibliothek des Projekts. Um einen Verweis festlegen möchten, klicken Sie auf **Verweis hinzufügen** auf der **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilen-Compileroption.  
+ Mit [öffentlichen](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf dieses Projekt Assembly bzw. Typbibliothek. Klicken Sie zum Festlegen eines Verweises auf **Verweis hinzufügen** auf die **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilen-Compileroption.  
   
- Sie können z. B. das XML-Objektmodell der [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml>-Namespace können Sie deklarieren und verwenden Sie eine der Klassen, z. B. <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument> </xref:System.Xml> Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument>  
+ Sie können z. B. das XML-Objektmodell das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie die Klassen, z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -185,8 +168,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Importieren von enthaltenden Elementen  
- Können Sie die [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) auf *importieren* Namespaces, die enthalten Module oder Klassen, die Sie verwenden möchten. Dadurch können Sie zum Verweisen auf die definierten Elemente in einem importierten Namespace ohne vollständige Qualifizierung ihrer Namen. Im folgende Beispiel ändert die im vorherige Beispiel zum Importieren der <xref:System.Xml>Namespace.</xref:System.Xml>  
+## <a name="importing-containing-elements"></a>Importieren von Elementen mit  
+ Können Sie die [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) auf *importieren* die Namespaces, die enthalten Module oder Klassen, die Sie verwenden möchten. Dadurch können Sie zum Verweisen auf die Elemente in einem importierten Namespace ohne vollständige Qualifizierung ihrer Namen definiert. Im folgende Beispiel ändert das vorherige Beispiel importieren Sie die <xref:System.Xml> Namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -196,7 +179,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Darüber hinaus die `Imports` -Anweisung definieren kann ein *importieren Alias* für jeden importierten Namespace. Dadurch kann den Quellcode kürzer und leichter lesbar zu sein. Im folgende Beispiel ändert das vorherige Beispiel verwenden `xD` als Alias für die <xref:System.Xml>Namespace.</xref:System.Xml>  
+ Darüber hinaus die `Imports` definieren-Anweisung kann eine *Importalias* für jeden importierten Namespace. Dadurch kann der Quellcode kürzer und leichter lesbar sein. Im folgende Beispiel ändert das vorherige Beispiel verwenden `xD` als Alias für die <xref:System.Xml> Namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -206,23 +189,23 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- Die `Imports` Anweisung macht nicht Elemente aus anderen Projekten Ihrer Anwendung zur Verfügung. Also ist es nicht das Festlegen eines Verweises stattfinden. Importieren eines Namespace nur beseitigt die Notwendigkeit, die in diesem Namespace definierten Namen zu qualifizieren.  
+ Die `Imports` Anweisung nimmt Elemente aus anderen Projekten für Ihre Anwendung verfügbar. D. h., dauert es nicht die Stelle der einen Verweis festlegen. Importieren eines Namespaces nur entfällt die Anforderung, die in diesem Namespace definierten Namen zu qualifizieren.  
   
- Sie können auch die `Imports` Anweisung zum Importieren von Modulen, Klassen, Strukturen und Enumerationen. Anschließend können die Member der importierten Elemente ohne Qualifizierung. Allerdings müssen Sie immer qualifizieren nicht freigegebene Member von Klassen und Strukturen mit einer Variable oder einen Ausdruck, der eine Instanz der Klasse oder Struktur ergibt.  
+ Sie können auch die `Imports` Anweisung, um Module, Klassen, Strukturen und Enumerationen zu importieren. Sie können dann die Elemente der importierten Elemente ohne Qualifizierung verwenden. Allerdings müssen Sie immer qualifizieren nicht freigegebene Member von Klassen und Strukturen mit einer Variable oder ein Ausdruck, der eine Instanz der Klasse oder Struktur ergibt.  
   
 ## <a name="naming-guidelines"></a>Richtlinien für die Benennung  
- Wenn Sie zwei oder mehrere Programmierelemente definieren, die den gleichen Namen haben, eine *Namen Mehrdeutigkeit* zu führen, wenn der Compiler versucht, einen Verweis auf diesen Namen aufzulösen. Wenn mehr als eine Definition befindet sich im Gültigkeitsbereich oder keine Definition im Gültigkeitsbereich befinden, wird des Verweis nicht aufgelöst werden kann. Ein Beispiel finden Sie unter "Qualifizierten Verweis-Beispiel" auf dieser Hilfeseite.  
+ Wenn Sie mindestens zwei Programmierelemente definieren, die den gleichen Namen haben ein *benennen Mehrdeutigkeit* kann dazu führen, wenn der Compiler versucht, einen Verweis auf diesen Namen aufzulösen. Wenn mehr als eine Definition befindet sich im Bereich oder keine Definition im Gültigkeitsbereich befindet, der Verweis nicht aufgelöst ist. Ein Beispiel finden Sie unter "Qualifizierten Verweis Beispiel" auf dieser Hilfeseite.  
   
- Mehrdeutigkeit bei Namen können Sie vermeiden, indem alle Elemente einen eindeutige Namen zuweisen. Anschließend können Sie auf jedes beliebige Element verweisen ohne seinen Namen mit einem Namespace, Modul oder Klasse zu qualifizieren. Sie reduzieren außerdem die Chancen, dass versehentlich auf das falsche Element verweisen.  
+ Sie können die Mehrdeutigkeit bei Namen vermeiden, durch die Vergabe alle Ihre Elemente eindeutiger Namen. Sie können dann Verweis auf jedes Element erstellen, ohne dessen Namen einen Namespace, einem Modul oder einer Klasse zu qualifizieren. Sie reduzieren außerdem die Chancen einer versehentlich auf dem falschen Element verweisen.  
   
 ## <a name="shadowing"></a>Shadowing  
- Wenn zwei Programmierelemente denselben Namen haben, eine davon kann auszublenden, oder *Schatten*, eine. Ein gespiegeltes Element ist nicht verfügbar für Verweis. Stattdessen, wenn der Code verwendet den Namen gespiegelte Element der [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Compiler löst den Verweis in das spiegelnde Element. Eine ausführlichere Erläuterung mit Beispielen finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Wenn zwei Programmierelemente denselben Namen tragen, eine von ihnen kann auszublenden, oder *Schatten*, eine andere. Ein schattiertes Element steht nicht zur Referenz; Stattdessen, wenn der Code verwendet den Namen schattiertes Element der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Compiler löst diesen zu das shadowing-Element. Eine ausführlichere Erläuterung mit Beispielen, finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [NIB Gewusst wie: Ändern von Projekteigenschaften und Konfigurationseinstellungen](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)   
+ [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [New-Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Public](../../../../visual-basic/language-reference/modifiers/public.md)

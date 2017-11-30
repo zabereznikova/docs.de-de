@@ -1,37 +1,40 @@
 ---
-title: "Gewusst wie: Erkennen einer .NET Framework 3.5-Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Erkennen einer .NET Framework 3.5-Installation [WPF]"
-  - "Erkennen einer .NET Framework 3.5-Installation [WPF]"
-  - "Bestimmen einer .NET Framework 3.5-Installation [WPF]"
-  - "Überprüfen einer .NET Framework 3.5-Installation [WPF]"
+title: 'Vorgehensweise: erkennen, ob .NET Framework 3.5 installiert ist'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- verifying whether.NET Framework 3.5 is installed [WPF]
+- detecting .NET Framework 3.5 installation [WPF]
+- detecting whether.NET Framework 3.5 is installed [WPF]
+- determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b603bbd86bb5eb12782ff8aff7797b73444b8518
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Gewusst wie: Erkennen einer .NET Framework 3.5-Installation
-Bevor Administratoren [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]\-Anwendungen in einem auf [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] ausgerichteten System einsetzen können, müssen sie sich vergewissern, dass die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]\-Laufzeit vorhanden ist.  In diesem Thema wird ein in HTML\/JavaScript geschriebenes Skript bereitgestellt, das Administratoren verwenden können, um zu ermitteln, ob [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] auf einem System vorhanden ist.  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Vorgehensweise: erkennen, ob .NET Framework 3.5 installiert ist
+Bevor Administratoren bereitstellen, können [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Anwendungen auf einem System, das als Ziel verwendet die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], müssen sie zunächst bestätigen, dass die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] Common Language Runtime vorhanden ist. Dieses Thema enthält ein Skript geschrieben in HTML/JavaScript, die Administratoren verwenden können, um zu bestimmen, ob die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] auf einem System vorhanden ist.  
   
 > [!NOTE]
->  Ausführlichere Informationen zum Installieren, Bereitstellen und Erkennen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] finden Sie unter [Installieren von .NET Framework](../../../../docs/framework/install/guide-for-developers.md).  
+>  Ausführlichere Informationen zum Installieren, bereitstellen und Erkennen von der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], finden Sie unter [installieren Sie .NET Framework für Entwickler](../../../../docs/framework/install/guide-for-developers.md).  
   
-## Beispiel  
- Wenn [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] installiert ist, fügt MSI der UserAgent\-Zeichenfolge ".NET CLR" und die Versionsnummer hinzu.  Im folgenden Beispiel wird ein Skript gezeigt, das in eine einfache HTML\-Seite eingebettet ist.  Das Skript durchsucht die UserAgent\-Zeichenfolge, um festzustellen, ob [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] installiert ist. Daraufhin wird eine Statusmeldung zu den Suchergebnissen angezeigt.  
+## <a name="example"></a>Beispiel  
+ Wenn die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] ist installiert, die MSI-Datei ".NET CLR" und die Versionsnummer der UserAgent Zeichenfolge hinzugefügt. Das folgende Beispiel zeigt ein Skript in einen einfachen HTML-Seite eingebettet. Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob die [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] installiert ist, und zeigt eine Statusmeldung an, auf dem die Ergebnisse der Suche.  
   
 > [!NOTE]
->  Dieses Skript ist für Internet Explorer vorgesehen.  Andere Browser enthalten möglicherweise keine .NET\-CLR\-Informationen in der UserAgent\-Zeichenfolge.  
+>  Dieses Skript dient für Internet Explorer. Andere Browser können .NET CLR-Informationen nicht in der UserAgent-Zeichenfolge enthalten.  
   
 ```  
 <HTML>  
@@ -121,20 +124,19 @@ Bevor Administratoren [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wp
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- Wenn die Suche nach der ".NET CLR"\-Version erfolgreich ist, wird die folgende Art von Statusmeldung angezeigt:  
+ Wenn die Suche nach der Version ".NET CLR" erfolgreich ist, wird die folgende Art von Meldung mit dem Status angezeigt:  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- Andernfalls wird die folgende Art von Statusmeldung angezeigt:  
+ Andernfalls wird folgende Art von Meldung mit dem Status angezeigt:  
   
- `This machine does not have the correct version of the .NET Framework 3.5.  The required version is v3.5.0.0.`  
+ `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## Siehe auch  
- [Erkennen einer .NET Framework 3.0\-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erkennen einer .NET Framework 3.0-Installation](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)

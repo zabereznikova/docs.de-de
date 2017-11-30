@@ -1,33 +1,34 @@
 ---
-title: "Ereignisse in Windows&#160;Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Steuerelemente [Windows Forms], Ereignisübersicht (mit Code)"
-  - "Ereignisse [Windows Forms], Benutzerdefinierte Steuerelemente (mithilfe von Code)"
+title: "Ereignisse in Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [Windows Forms], custom controls (using code)
+- custom controls [Windows Forms], events overview (using code)
 ms.assetid: 7e3d1379-87aa-437c-afce-c99454eff30e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e568dd7fadea8af399a63aa95347f368b4e13a54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Ereignisse in Windows&#160;Forms-Steuerelementen
-Ein Windows Forms\-Steuerelement erbt mehr als sechzig Ereignisse von <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Hierzu gehören das <xref:System.Windows.Forms.Control.Paint>\-Ereignis, durch das ein Steuerelement gezeichnet wird, Ereignisse im Zusammenhang mit der Anzeige eines Fensters, z. B. das <xref:System.Windows.Forms.Control.Resize>\-Ereignis und das <xref:System.Windows.Forms.Control.Layout>\-Ereignis, sowie Maus\- und Tastaturereignisse auf niedriger Ebene.  Einige systemnahe Ereignisse werden von <xref:System.Windows.Forms.Control> in semantische Ereignisse umgewandelt, z. B. <xref:System.Windows.Forms.Control.Click> und <xref:System.Windows.Forms.Control.DoubleClick>.  Ausführliche Informationen über geerbte Ereignisse finden Sie unter <xref:System.Windows.Forms.Control>.  
+# <a name="events-in-windows-forms-controls"></a>Ereignisse in Windows Forms-Steuerelementen
+Ein Windows Forms-Steuerelement erbt mehr als 60 Ereignisse aus <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Dazu gehören die <xref:System.Windows.Forms.Control.Paint> -Ereignis, das bewirkt, dass ein Steuerelement gezeichnet werden, Ereignisse, die im Zusammenhang mit der Anzeige eines Fensters, z. B. die <xref:System.Windows.Forms.Control.Resize> und <xref:System.Windows.Forms.Control.Layout> auch auf niedriger Ebene mit Maus und Tastatur Ereignisse. Einige Ereignisse auf niedriger Ebene werden durch synthetisiert <xref:System.Windows.Forms.Control> in semantische Ereignisse, z. B. <xref:System.Windows.Forms.Control.Click> und <xref:System.Windows.Forms.Control.DoubleClick>. Ausführliche Informationen über geerbte Ereignisse finden Sie unter <xref:System.Windows.Forms.Control>.  
   
- Wenn das benutzerdefinierte Steuerelement geerbte Ereignisfunktionen überschreiben soll, überschreiben Sie die geerbte `On`*EventName*\-Methode, anstatt einen Delegaten anzufügen.  Wenn Sie mit dem Ereignismodell in .NET Framework nicht vertraut sind, finden Sie dazu weitere Informationen unter [Raising Events from a Component](../Topic/Raising%20Events%20from%20a%20Component.md).  
+ Wenn das benutzerdefinierte Steuerelement geerbte Ereignisfunktionen überschreiben muss, hängen Sie keinen Delegaten an, sondern überschreiben Sie die geerbte Methode `On`*EventName*. Wenn Sie mit dem Ereignismodell in .NET Framework nicht vertraut sind, finden Sie unter [Auslösen von Ereignissen aus einer Komponente](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0) weitere Informationen.  
   
-## Siehe auch  
- [Überschreiben der OnPaint\-Methode](../../../../docs/framework/winforms/controls/overriding-the-onpaint-method.md)   
- [Behandeln von Benutzereingaben](../../../../docs/framework/winforms/controls/handling-user-input.md)   
- [Definieren eines Ereignisses](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Überschreiben der OnPaint-Methode](../../../../docs/framework/winforms/controls/overriding-the-onpaint-method.md)  
+ [Behandeln von Benutzereingaben](../../../../docs/framework/winforms/controls/handling-user-input.md)  
+ [Definieren eines Ereignisses](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
  [Ereignisse](../../../../docs/standard/events/index.md)

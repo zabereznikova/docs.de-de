@@ -1,26 +1,28 @@
 ---
-title: "Das Argument kann nicht &#39;Nothing&#39; sein. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrGeneral_ArgumentNullException"
+title: Das Argument kann nicht 'Nothing' sein.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrGeneral_ArgumentNullException
 ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3a54cf0ed9e2b307174c1be0e853a920dfc94202
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Das Argument kann nicht &#39;Nothing&#39; sein.
-Ein NULL\-Wert wurde für ein Argument angegeben, das einen Wert aufweisen muss.  
+# <a name="argument-cannot-be-nothing"></a>Das Argument kann nicht 'Nothing' sein.
+Ein NULL-Wert wurde für ein Argument angegeben, das einen Wert aufweisen muss.  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Sie haben möglicherweise versucht, ein Objekt zu verwenden, ohne eine Instanz des Objekts bereitzustellen. Verwenden Sie in solchen Fällen das `New`\-Schlüsselwort, um die Instanz zu erstellen.  
+-   Sie haben möglicherweise versucht, ein Objekt zu verwenden, ohne eine Instanz des Objekts bereitzustellen. Verwenden Sie in solchen Fällen das `New` -Schlüsselwort, um die Instanz zu erstellen.  
   
 -   Überprüfen Sie, ob der Wert ordnungsgemäß berechnet wird.  
   
-## Siehe auch  
- [Problembehandlung bei Ausnahmen: System.NullReferenceException](../Topic/Troubleshooting%20Exceptions:%20System.NullReferenceException.md)
+## <a name="see-also"></a>Siehe auch  
+ [Problembehandlung bei Ausnahmen: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)

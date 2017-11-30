@@ -1,49 +1,50 @@
 ---
-title: "Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Anordnen mit TableLayoutPanel"
-  - "TableLayoutPanel-Steuerelement [Windows Forms], Exemplarische Vorgehensweisen"
-  - "Windows Forms-Steuerelemente, Anordnen"
+title: 'Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with TableLayoutPanel
+- TableLayoutPanel control [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2d5c07be4ddebc3bfaa8c1979b39e3ef172a428
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
-Einige Anwendungen setzen ein Layout voraus, das bei Änderungen der Größe des Formulars oder des Inhalts automatisch angepasst wird.  Wenn Sie ein dynamisches Layout benötigen und keine <xref:System.Windows.Forms.Control.Layout>\-Ereignisse explizit im Code behandeln möchten, sollten Sie einen Layoutbereich verwenden.  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
+Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
   
- Das <xref:System.Windows.Forms.FlowLayoutPanel>\-Steuerelement und das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement bieten intuitive Möglichkeiten zum Anordnen von Steuerelementen auf dem Formular.  Mit beiden lassen sich die relativen Positionen untergeordneter Steuerelemente, die in ihnen enthalten sind, automatisch und konfigurierbar steuern. Außerdem bieten diese beiden Steuerelemente dynamische Layoutfeatures zur Laufzeit, mit denen die Größe und Position untergeordneter Steuerelemente an die Maße des übergeordneten Formulars angepasst werden können.  Layoutbereiche können in anderen Layoutbereichen verschachtelt sein, um anspruchsvolle Benutzeroberflächen zu ermöglichen.  
+ Das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement und das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement stellen intuitive Verfahren zum Anordnen von Steuerelementen auf Formularen dar. Beide bieten die Möglichkeit, die relativen Positionen der in ihnen enthaltenen untergeordneten Steuerelemente automatisch und konfigurierbar zu steuern, und beide stellen dynamische Layoutfunktionen zur Laufzeit zur Verfügung, sodass sie Größe und Position von untergeordneten Steuerelementen ändern können, wenn sich die Abmessungen des übergeordneten Formulars ändern. Layoutbereiche können in Layoutbereichen geschachtelt werden, um die Realisierung raffinierter Benutzeroberflächen zu ermöglichen.  
   
- Der Inhalt des <xref:System.Windows.Forms.FlowLayoutPanel> wird in einer bestimmten Flussrichtung angeordnet: horizontal oder vertikal.  Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden.  Statt umbrochen zu werden, kann der Inhalt aber auch abgeschnitten werden.  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+ Das <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seinen Inhalt in einer bestimmten Flussrichtung an: horizontal oder vertikal. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden. Alternativ kann dieser Inhalt abgeschnitten werden, statt dass er umbrochen wird. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
- Der Inhalt des <xref:System.Windows.Forms.TableLayoutPanel> ist in einem Raster angeordnet, dessen Funktionalität mit dem HTML\-Element \<table\> vergleichbar ist.  Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement ermöglicht es Ihnen, Steuerelemente in einem Rasterlayout zu platzieren, ohne dass Sie die genaue Position der einzelnen Steuerelemente angeben müssen.  Die Zellen sind in Zeilen und Spalten angeordnet, die unterschiedliche Größen aufweisen können.  Zellen können zwischen Zeilen und Spalten zusammengeführt werden.  Sie können denselben Inhalt wie ein Formular enthalten und verhalten sich in den meisten anderen Beziehungen wie Container.  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> ordnet seinen Inhalt in einem Raster, bietet eine ähnliche auf das HTML Funktionalität \<Tabelle > Element. Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ermöglicht es Ihnen, Steuerelemente in einem Rasterlayout zu platzieren, ohne dass Sie genaue Position der einzelnen Steuerelemente angeben müssen. Seine Zellen sind in Zeilen und Spalten angeordnet, und diese können verschiedene Größen haben. Zellen können in Zeilen und Spalten zusammengeführt werden. Zellen können alles enthalten, ein Formular enthalten und Verhalten sich in den meisten anderen Hinsicht als Container kann.  
   
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement bietet zudem die Möglichkeit der proportionalen Größenanpassung zur Laufzeit, d. h., das Layout kann an die Größe des Formulars angepasst werden.  Dadurch eignet sich das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement speziell für Dateneingabeformulare und lokalisierte Anwendungen.  Weitere Informationen finden Sie unter [Walkthrough: Creating a Resizable Windows Form for Data Entry](http://msdn.microsoft.com/de-de/e193b4fc-912a-4917-b036-b76c7a6f58ab) und unter [Walkthrough: Creating a Localizable Windows Form](http://msdn.microsoft.com/de-de/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement bietet eine proportionale Größenänderung von Fenstern annimmt Funktionalität auch zur Laufzeit, damit das Layout stufenlos ändern kann, während das Formular angepasst wird. Dadurch wird die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement für Zwecke wie Dateneingabe Formulare und lokalisierter Anwendungen geeignet. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines in der Größe veränderbaren Windows Forms für die Dateneingabe](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab) und [Exemplarische Vorgehensweise: Erstellen eines lokalisierbare Windows Forms](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c).  
   
- Im Allgemeinen sollten Sie kein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement als Container für das gesamte Layout verwenden.  Verwenden Sie <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelemente, um für Teile des Layouts die proportionale Größenanpassung zu ermöglichen.  
+ Im Allgemeinen sollten Sie nicht verwenden eine <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement als Container für das gesamte Layout. Verwendung <xref:System.Windows.Forms.TableLayoutPanel> Steuerelemente für Teile des Layouts proportionale Größe-Funktionen bereitzustellen.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms\-Projekts  
+-   Erstellen eines Windows Forms-Projekts  
   
 -   Anordnen von Steuerelementen in Zeilen und Spalten  
   
--   Festlegen von Zeilen\- und Spalteneigenschaften  
+-   Festlegen von Zeilen- und Spalteneigenschaften  
   
--   Überspannen von Zeilen und Spalten mit einem Steuerelement  
+-   Verbinden von Zeilen und Spalten mit einem Steuerelement  
   
 -   Automatische Behandlung von Überläufen  
   
@@ -51,152 +52,152 @@ Einige Anwendungen setzen ein Layout voraus, das bei Änderungen der Größe des
   
 -   Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
   
--   Neuzuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Steuerelement  
+-   Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element  
   
- Anschließend werden Sie verstehen, welche Rolle diese wichtigen Layoutfeatures spielen.  
+ Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Erstellen des Projekts  
- Zunächst wird das Projekt erstellt und das Formular eingerichtet.  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
+ Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
-#### So erstellen Sie das Projekt  
+#### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie ein Windows\-Anwendungsprojekt mit dem Namen "TableLayoutPanelExample".  Weitere Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen Sie ein Windows-Anwendungsprojekt namens "TableLayoutPanelExample". Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
-2.  Wählen Sie im **Windows** **Forms\-Designer** das Formular aus.  
+2.  Wählen Sie das Formular in der **Windows** **Forms-Designer**.  
   
-## Anordnen von Steuerelementen in Zeilen und Spalten  
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement ermöglicht es Ihnen, Steuerelemente mühelos in Zeilen und Spalten anzuordnen.  
+## <a name="arranging-controls-in-rows-and-columns"></a>Anordnen von Steuerelementen in Zeilen und Spalten  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ermöglicht es Ihnen einfach anordnen von Steuerelementen in Zeilen und Spalten.  
   
-#### So ordnen Sie Steuerelemente mit TableLayoutPanel in Zeilen und Spalten an  
+#### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>Anordnen von Steuerelementen in Zeilen und Spalten, die mithilfe von TableLayoutPanel  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement aus der **Toolbox** auf das Formular.  Beachten Sie, dass das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement standardmäßig über vier Zellen verfügt.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular. Beachten Sie, dass standardmäßig die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement enthält vier Zellen.  
   
-2.  Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** in das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement, und fügen Sie es in eine der Zellen ein.  Beachten Sie, dass das <xref:System.Windows.Forms.Button>\-Steuerelement innerhalb der Zelle erstellt wird, die Sie ausgewählt haben.  
+2.  Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und legen Sie es in eine der Zellen. Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement wird erstellt, in der Zelle, die Sie ausgewählt haben.  
   
-3.  Ziehen Sie drei weitere <xref:System.Windows.Forms.Button>\-Steuerelemente aus der **Toolbox** in das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement, sodass jede Zelle über eine Schaltfläche verfügt.  
+3.  Ziehen Sie drei weitere <xref:System.Windows.Forms.Button> -Steuerelemente aus der **Toolbox** in die <xref:System.Windows.Forms.TableLayoutPanel> steuern, sodass jede Zelle über eine Schaltfläche enthält.  
   
-4.  Klicken Sie auf den vertikalen Ziehpunkt zwischen den beiden Spalten, und verschieben Sie ihn bei gedrückter Maustaste nach links.  Beachten Sie, dass die <xref:System.Windows.Forms.Button>\-Steuerelemente in der ersten Spalte schmaler werden, während die Größe der <xref:System.Windows.Forms.Button>\-Steuerelemente in der zweiten Spalte unverändert bleibt.  
+4.  Ziehen Sie den vertikalen Ziehpunkt zwischen den beiden Spalten, und verschieben Sie sie auf der linken Seite. Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelemente in der ersten Spalte auf eine kleinere Breite, während die Größe der Größe der <xref:System.Windows.Forms.Button> Steuerelemente in der zweiten Spalte bleibt unverändert.  
   
-5.  Klicken Sie auf den vertikalen Ziehpunkt zwischen den beiden Spalten, und verschieben Sie ihn bei gedrückter Maustaste nach rechts.  Beachten Sie, dass die <xref:System.Windows.Forms.Button>\-Steuerelemente in der ersten Spalte auf ihre ursprüngliche Größe zurückgesetzt werden, während die <xref:System.Windows.Forms.Button>\-Steuerelemente in der zweiten Spalte nach rechts verschoben werden.  
+5.  Ziehen Sie den vertikalen Ziehpunkt zwischen den beiden Spalten, und verschieben Sie sie auf der rechten Seite. Beachten Sie, dass die <xref:System.Windows.Forms.Button> while-Steuerelemente in der ersten Spalte zurückgeben, auf ihre ursprüngliche Größe der <xref:System.Windows.Forms.Button> Steuerelemente in der zweiten Spalte nach rechts verschoben werden.  
   
-6.  Bewegen Sie den horizontalen Ziehpunkt nach oben und unten, um die Auswirkung auf die Steuerelemente im Bereich zu beobachten.  
+6.  Verschieben Sie den horizontalen Ziehpunkt nach oben oder unten, um die Auswirkungen auf die Steuerelemente im Bereich anzuzeigen.  
   
-## Positionieren von Steuerelementen in Zellen durch Andocken und Verankern  
- Das Ankerverhalten von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.TableLayoutPanel> unterscheidet sich vom Verhalten in anderen Containersteuerelementen.  Das Andockverhalten von untergeordneten Steuerelementen ist mit dem anderer Containersteuerelemente identisch.  
+## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>Positionieren von Steuerelementen in Zellen, die durch Andocken und Verankern  
+ Das Verankerungsverhalten von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.TableLayoutPanel> weicht vom Verhalten in anderen Containersteuerelementen. Das Andockverhalten des untergeordneten Steuerelemente ist identisch mit anderen Containersteuerelementen.  
   
-#### Positionieren von Steuerelementen in Zellen  
+#### <a name="positioning-controls-within-cells"></a>Positionieren von Steuerelementen in Zellen  
   
-1.  Wählen Sie das erste <xref:System.Windows.Forms.Button>\-Steuerelement aus.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft in <xref:System.Windows.Forms.DockStyle>.  Beachten Sie, dass das <xref:System.Windows.Forms.Button>\-Steuerelement auf die Größe seiner Zelle erweitert wird.  
+1.  Wählen Sie die erste <xref:System.Windows.Forms.Button> Steuerelement. Legen Sie den Wert seiner <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest. Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement wird erweitert, um die Zelle ausfüllt.  
   
-2.  Wählen Sie eines der anderen <xref:System.Windows.Forms.Button>\-Steuerelemente aus.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft in <xref:System.Windows.Forms.AnchorStyles>.  Beachten Sie, dass es verschoben wird, sodass sich der rechte Rand in der Nähe des rechten Rands der Zelle befindet.  Der Abstand zwischen den Rändern entspricht der Summe der <xref:System.Windows.Forms.Control.Margin%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements und der <xref:System.Windows.Forms.Control.Padding%2A>\-Eigenschaft des Bereichs.  
+2.  Wählen Sie eine der anderen <xref:System.Windows.Forms.Button> Steuerelemente. Legen Sie den Wert seiner <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft auf <xref:System.Windows.Forms.AnchorStyles.Right>fest. Beachten Sie, dass es verschoben wird, sodass der rechten Rahmen in der Nähe der rechten Rand der Zelle ist. Der Abstand zwischen den Rahmenlinien ist die Summe aus der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft und der Bereich <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft.  
   
-3.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft des <xref:System.Windows.Forms.Button>\-Steuerelements in <xref:System.Windows.Forms.AnchorStyles> und <xref:System.Windows.Forms.AnchorStyles>.  Beachten Sie, dass das Steuerelement anhand der Werte für <xref:System.Windows.Forms.Control.Margin%2A> und <xref:System.Windows.Forms.Control.Padding%2A> an die Breite der Zelle angepasst wird.  
+3.  Ändern Sie den Wert, der die <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft <xref:System.Windows.Forms.AnchorStyles.Right> und <xref:System.Windows.Forms.AnchorStyles.Left>. Beachten Sie, die das Steuerelement an die Breite der Zelle angepasst wird, mit der <xref:System.Windows.Forms.Control.Margin%2A> und <xref:System.Windows.Forms.Control.Padding%2A> Werte berücksichtigt.  
   
-4.  Wiederholen Sie die Schritte 2 und 3 mit dem <xref:System.Windows.Forms.AnchorStyles>\-Stil und dem <xref:System.Windows.Forms.AnchorStyles>\-Stil.  
+4.  Wiederholen Sie die Schritte 2 und 3 für die <xref:System.Windows.Forms.AnchorStyles.Top> und <xref:System.Windows.Forms.AnchorStyles.Bottom> Stile.  
   
-## Festlegen von Zeilen\- und Spalteneigenschaften  
- Sie können individuelle Eigenschaften von Zeilen und Spalten festlegen, indem Sie die <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>\-Auflistung und die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>\-Auflistung verwenden.  
+## <a name="setting-row-and-column-properties"></a>Festlegen von Zeilen- und Spalteneigenschaften  
+ Sie können einzelne Eigenschaften von Zeilen und Spalten festlegen, mit der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> und <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Sammlungen.  
   
-#### So legen Sie Zeilen\- und Spalteneigenschaften fest  
+#### <a name="to-set-row-and-column-properties"></a>Zum Festlegen von Eigenschaften für Zeilen- und  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement im **Windows Forms\-Designer** aus.  
+1.  Wählen Sie die <xref:System.Windows.Forms.TableLayoutPanel> steuern, der **Windows Forms-Designer**.  
   
-2.  Öffnen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>\-Auflistung, indem Sie auf die Schaltfläche mit den Auslassungszeichen \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) neben dem Eintrag **Spalten** klicken.  
+2.  In der **Eigenschaften** Windows, öffnen die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, indem Sie auf die Auslassungspunkte (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) Schaltfläche neben den **Spalten** Eintrag.  
   
-3.  Wählen Sie die erste Spalte aus, und ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>\-Eigenschaft in <xref:System.Windows.Forms.SizeType>.  Klicken Sie auf **OK**, um die Änderung zu übernehmen.  Beachten Sie, dass die Breite der ersten Spalte an das <xref:System.Windows.Forms.Button>\-Steuerelement angepasst wird.  Beachten Sie außerdem, dass die Breite der Spalte nicht veränderbar ist.  
+3.  Die erste Spalte auswählen und ändern Sie den Wert von dessen <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft <xref:System.Windows.Forms.SizeType.AutoSize>. Klicken Sie auf **OK** um die Änderung zu übernehmen. Beachten Sie, dass die Breite der ersten Spalte reduziert wird, entsprechend der <xref:System.Windows.Forms.Button> Steuerelement. Beachten Sie außerdem, dass die Breite der Spalte nicht geändert werden.  
   
-4.  Öffnen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>\-Auflistung, und wählen Sie die erste Spalte aus.  Ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>\-Eigenschaft in <xref:System.Windows.Forms.SizeType>.  Klicken Sie auf **OK**, um die Änderung zu übernehmen.  Vergrößern Sie die Breite des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements, und beachten Sie, dass die erste Spalte breiter wird.  Reduzieren Sie die Breite des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements, und beachten Sie, dass die Schaltflächen in der ersten Spalte an die Größe der Zelle angepasst werden.  Beachten Sie außerdem, dass die Breite der Spalte veränderbar ist.  
+4.  In der **Eigenschaften** geöffnete Fenster die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie die erste Spalte. Ändern Sie den Wert von dessen <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft <xref:System.Windows.Forms.SizeType.Percent>. Klicken Sie auf **OK** um die Änderung zu übernehmen. Ändern Sie die Größe der <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement auf einer größeren Breite und beachten Sie, dass die Breite der ersten Spalte erweitert. Ändern Sie die Größe der <xref:System.Windows.Forms.TableLayoutPanel> die Steuerung an eine kleinere Breite und beachten Sie, dass die Schaltflächen in der ersten Spalte für die Zelle angepasst werden. Beachten Sie außerdem, dass die Breite der Spalte geändert werden.  
   
-5.  Öffnen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>\-Auflistung, und wählen Sie alle aufgelisteten Spalten aus.  Legen Sie den Wert aller <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>\-Eigenschaften auf <xref:System.Windows.Forms.SizeType> fest.  Klicken Sie auf **OK**, um die Änderung zu übernehmen.  Wiederholen Sie dies mit der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>\-Auflistung.  
+5.  In der **Eigenschaften** geöffnete Fenster die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie alle aufgelisteten Spalten. Legen Sie den Wert von jedem <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft <xref:System.Windows.Forms.SizeType.Percent>. Klicken Sie auf **OK** um die Änderung zu übernehmen. Wiederholen Sie dies mit der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> Auflistung.  
   
-6.  Klicken Sie auf einen der Eckziehpunkte, und ändern Sie bei gedrückter Maustaste sowohl die Breite als auch die Höhe des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements.  Beachten Sie, dass die Größe der Zeilen und Spalten mit der Größe des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements geändert wird.  Beachten Sie außerdem, dass die Größe der Zeilen und Spalten mit den horizontalen und vertikalen Ziehpunkten geändert werden kann.  
+6.  Ziehen Sie einen der Ziehpunkte zur Größenänderung Ecke und die Breite und die Höhe der Größe der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Beachten Sie, die die Zeilen und Spalten, als angepasst werden die <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements ändert. Beachten Sie außerdem, dass die Zeilen und Spalten in der Größe veränderbaren mit horizontalen und vertikalen Ziehpunkten sind.  
   
-## Überspannen von Zeilen und Spalten mit einem Steuerelement  
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement fügt Steuerelementen zur Entwurfszeit mehrere neue Eigenschaften hinzu.  Zwei dieser Eigenschaften sind `RowSpan` und `ColumnSpan`.  Sie können diese Eigenschaften verwenden, damit ein Steuerelement mehrere Zeilen und Spalten überspannt.  
+## <a name="spanning-rows-and-columns-with-a-control"></a>Verbinden von Zeilen und Spalten mit einem Steuerelement  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement fügt mehrere neue Eigenschaften für Steuerelemente zur Entwurfszeit. Zwei dieser Eigenschaften sind `RowSpan` und `ColumnSpan`. Sie können diese Eigenschaften verwenden, ein Steuerelement Spanne mehr als eine Zeile oder Spalte vornehmen.  
   
-#### So überspannen Sie Zeilen und Spalten mit einem Steuerelement  
+#### <a name="to-span-rows-and-columns-with-a-control"></a>Zu einzunehmenden Zeilen und Spalten mit einem Steuerelement  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.Button>\-Steuerelement in der ersten Zeile und Spalte aus.  
+1.  Wählen Sie die <xref:System.Windows.Forms.Button> -Steuerelement in der ersten Zeile und ersten Spalte.  
   
-2.  Ändern Sie im **Eigenschaftenfenster** den Wert der `ColumnSpan`\-Eigenschaft in 2.  Beachten Sie, dass das <xref:System.Windows.Forms.Button>\-Steuerelement die erste Spalte und die zweite Spalte ausfüllt.  Beachten Sie außerdem, dass für diese Änderung eine zusätzliche Zeile hinzugefügt wurde.  
+2.  In der **Eigenschaften** Windows, ändern Sie den Wert von der `ColumnSpan` Eigenschaft **2**. Beachten Sie, dass die <xref:System.Windows.Forms.Button> -Steuerelement ausfüllt, der ersten Spalte und die zweite Spalte. Beachten Sie außerdem als eine zusätzliche Zeile hinzugefügt wurde, um diese Änderung zu berücksichtigen.  
   
-3.  Wiederholen Sie Schritt 2 für die `RowSpan`\-Eigenschaft.  
+3.  Wiederholen Sie Schritt 2 für die `RowSpan` Eigenschaft.  
   
-## Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
- Sie können das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement füllen, indem Sie in der **Toolbox** auf Steuerelemente doppelklicken.  
+## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
+ Sie können Auffüllen Ihrer <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement durch Doppelklicken auf die Steuerelemente in der **Toolbox**.  
   
-#### So fügen Sie Steuerelemente durch Doppelklicken in der Toolbox ein  
+#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>So fügen Sie Steuerelemente durch Doppelklicken in der Toolbox ein  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Doppelklicken Sie auf das <xref:System.Windows.Forms.Button>\-Steuerelementsymbol in der **Toolbox**.  Beachten Sie, dass ein neues Schaltflächensteuerelement in der ersten Zelle des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements angezeigt wird.  
+2.  Doppelklicken Sie auf das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements in der **Toolbox**. Beachten Sie, dass ein neue Schaltflächen-Steuerelement in der <xref:System.Windows.Forms.TableLayoutPanel> ersten Zelle des Steuerelements.  
   
-3.  Doppelklicken Sie auf weitere Steuerelemente in der **Toolbox**.  Beachten Sie, dass die neuen Steuerelemente nacheinander in den freien Zellen des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements angezeigt werden.  Beachten Sie außerdem, dass das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement für die neuen Steuerelemente erweitert wird, wenn keine freien Zellen verfügbar sind.  
+3.  Doppelklicken Sie in der **Toolbox**auf verschiedene weitere Steuerelemente. Beachten Sie, dass die neuen Steuerelemente nacheinander im erscheinen die <xref:System.Windows.Forms.TableLayoutPanel> freien Zellen des Steuerelements. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement wird erweitert, um die neuen Steuerelemente zu ermöglichen, wenn keine freien Zellen verfügbar sind.  
   
-## Automatische Behandlung von Überläufen  
- Wenn Sie Steuerelemente in das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement einfügen, fehlen Ihnen möglicherweise leere Zellen für neue Steuerelemente.  Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement behandelt diese Situation automatisch, indem es die Anzahl der Zellen erhöht.  
+## <a name="automatic-handling-of-overflows"></a>Automatische Behandlung von Überläufen  
+ Wenn Sie Einfügen von Steuerelementen in der <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement, Sie möglicherweise nicht genügend leere Zellen für neue Steuerelemente. Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement behandelt diese Situation durch Erhöhen der Anzahl von Zellen.  
   
-#### So erkennen Sie die automatische Behandlung von Überläufen  
+#### <a name="to-observe-automatic-handling-of-overflows"></a>Ermöglicht automatische Behandlung von Überläufen zu beobachten.  
   
-1.  Wenn das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement noch leere Zellen enthält, fügen Sie weiterhin neue <xref:System.Windows.Forms.Button>\-Steuerelemente hinzu, bis das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement voll ist.  
+1.  Treten weiterhin leere Zellen in der <xref:System.Windows.Forms.TableLayoutPanel> steuern, fügen Sie weiterhin neue <xref:System.Windows.Forms.Button> bis steuert die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ist voll.  
   
-2.  Wenn das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement voll ist, doppelklicken Sie auf das <xref:System.Windows.Forms.Button>\-Symbol in der **Toolbox**, um ein weiteres <xref:System.Windows.Forms.Button>\-Steuerelement einzufügen.  Beachten Sie, dass das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement neue Zellen für das neue Steuerelement erstellt.  Fügen Sie weitere Steuerelemente ein, und beachten Sie das Größenanpassungsverhalten.  
+2.  Einmal die <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement voll ist, doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** einzufügende eine andere <xref:System.Windows.Forms.Button> Steuerelement. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements erstellt neue Zellen für das neue Steuerelement. Fügen Sie ein paar weitere Steuerelemente, und beobachten Sie das Größenänderungsverhalten.  
   
-3.  Ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A>\-Eigenschaft des <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelements in <xref:System.Windows.Forms.TableLayoutPanelGrowStyle>.  Doppelklicken Sie auf das <xref:System.Windows.Forms.Button>\-Symbol in der **Toolbox**, um <xref:System.Windows.Forms.Button>\-Steuerelemente einzufügen, bis das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement voll ist.  Doppelklicken Sie erneut auf das <xref:System.Windows.Forms.Button>\-Symbol in der **Toolbox**.  Beachten Sie, dass Sie eine Fehlermeldung vom **Windows Forms\-Designer** darüber erhalten, dass keine weiteren Zeilen und Spalten erstellt werden können.  
+3.  Ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A>-Eigenschaft des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements in <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** einzufügende <xref:System.Windows.Forms.Button> bis steuert die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ist voll. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** erneut aus. Beachten Sie, dass Sie eine Fehlermeldung aus der **Windows Forms-Designer** darüber informiert, dass zusätzliche Zeilen und Spalten erstellt werden können.  
   
-## Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
- Sie können ein Steuerelement in ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement einfügen und seine Größe festlegen, indem Sie in einer Zelle seine Kontur zeichnen.  
+## <a name="inserting-a-control-by-drawing-its-outline"></a>Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
+ Sie können ein Steuerelement in Einfügen einer <xref:System.Windows.Forms.TableLayoutPanel> steuern und seine Größe angeben, indem Sie in einer Zelle seine Kontur zeichnen.  
   
-#### So fügen Sie ein Steuerelement durch Zeichnen seiner Kontur ein  
+#### <a name="to-insert-a-control-by-drawing-its-outline"></a>So fügen Sie ein Steuerelement ein, indem Sie seine Kontur zeichnen  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement aus der **Toolbox** auf das Formular.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Klicken Sie in der **Toolbox** auf das Symbol für das <xref:System.Windows.Forms.Button>\-Steuerelement.  Ziehen Sie es nicht auf das Formular.  
+2.  Klicken Sie in der **Toolbox**auf das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements. Ziehen Sie es nicht auf das Formular.  
   
-3.  Bewegen Sie den Mauszeiger über das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement.  Beachten Sie, dass sich der Zeiger zu einem Fadenkreuz mit angefügtem Symbol des <xref:System.Windows.Forms.Button>\-Steuerelements ändert.  
+3.  Bewegen Sie den Mauszeiger über die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Beachten Sie, dass der Mauszeiger die Form eines Fadenkreuzes annimmt, an das das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements angefügt ist.  
   
-4.  Halten Sie die Maustaste gedrückt.  
+4.  Klicken Sie, und halten Sie die Maustaste gedrückt.  
   
-5.  Ziehen Sie den Mauszeiger, um die Kontur des <xref:System.Windows.Forms.Button>\-Steuerelements zu zeichnen.  Wenn die gewünschte Größe erreicht ist, lassen Sie die Maustaste los.  Beachten Sie, dass das <xref:System.Windows.Forms.Button>\-Steuerelement in der Zelle erstellt wird, in der Sie die Kontur des Steuerelements gezeichnet haben.  
+5.  Ziehen Sie den Mauszeiger, um die Kontur des <xref:System.Windows.Forms.Button> -Steuerelements zu zeichnen. Wenn Sie mit der Größe zufrieden sind, geben Sie die Maustaste frei. Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement wird in der Zelle, in dem Sie die Kontur des Steuerelements gezeichnet wurde, erstellt.  
   
-## Mehrere Steuerelemente in Zellen sind nicht erlaubt  
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement kann nur ein untergeordnetes Steuerelement pro Zelle enthalten.  
+## <a name="multiple-controls-within-cells-are-not-permitted"></a>Mehrere Steuerelemente in Zellen sind nicht zulässig.  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement kann nur ein untergeordnetes Steuerelement pro Zelle enthalten.  
   
-#### So veranschaulichen Sie, dass mehrere Steuerelemente in Zellen nicht erlaubt sind  
+#### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Um zu veranschaulichen, dass mehrere Steuerelemente in Zellen nicht zulässig sind.  
   
--   Ziehen Sie ein <xref:System.Windows.Forms.Button>\-Steuerelement aus der **Toolbox** in das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement, und fügen Sie es in eine bereits gefüllte Zelle ein.  Beachten Sie, dass das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement Sie daran hindert, das <xref:System.Windows.Forms.Button>\-Steuerelement in die gefüllte Zelle einzufügen.  
+-   Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und legen Sie es in eine der Zellen belegten. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement lässt nicht zum Löschen der <xref:System.Windows.Forms.Button> Steuerelement in die gefüllte Zelle.  
   
-## Austauschen von Steuerelementen  
- Das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement ermöglicht Ihnen, Steuerelemente in zwei verschiedenen Zellen auszutauschen.  
+## <a name="swapping-controls"></a>Austauschen von Steuerelementen  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement können Sie Steuerelemente in zwei verschiedenen Zellen auszutauschen.  
   
-#### So tauschen Sie Steuerelemente aus  
+#### <a name="to-swap-controls"></a>Steuerelemente ausgetauscht werden.  
   
--   Ziehen Sie eines der <xref:System.Windows.Forms.Button>\-Steuerelemente aus einer gefüllten Zelle auf eine andere gefüllte Zelle.  Beachten Sie, dass die beiden Steuerelemente von einer Zelle in die andere verschoben werden.  
+-   Ziehen Sie eines der <xref:System.Windows.Forms.Button> Steuerelemente über eine gefüllte Zelle und Drop in auf eine andere gefüllte Zelle. Beachten Sie, dass die beiden Steuerelemente von einer Zelle in die andere verschoben werden.  
   
-## Nächste Schritte  
- Mit einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout erzielen.  Hier einige Vorschläge:  
+## <a name="next-steps"></a>Nächste Schritte  
+ Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Hier sind paar Vorschläge für weitere Experimente:  
   
--   Versuchen Sie, eines der <xref:System.Windows.Forms.Button>\-Steuerelemente zu vergrößern, und beachten Sie die Auswirkung auf das Layout.  
+-   Versuchen Sie es ändern der Größe eines der <xref:System.Windows.Forms.Button> Steuerelemente zu einem größeren und beobachten Sie die Auswirkung auf das Layout.  
   
--   Fügen Sie eine Auswahl mehrerer Steuerelemente in das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement ein, und beachten Sie, wie die Steuerelemente eingefügt werden.  
+-   Fügen Sie eine Auswahl mehrerer Steuerelemente in der <xref:System.Windows.Forms.TableLayoutPanel> steuern, und beachten Sie, wie die Steuerelemente eingefügt werden.  
   
--   Layoutbereiche können andere Layoutbereiche enthalten.  Fügen Sie probeweise ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement in das vorhandene Steuerelement ein.  
+-   Layoutbereiche können andere Layoutbereiche enthalten. Experimentieren Sie mit dem Ablegen eines <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements auf dem vorhandenen Steuerelement.  
   
--   Docken Sie das <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement am übergeordneten Formular an.  Passen Sie die Größe des Formulars an, und beachten Sie die Auswirkung auf das Layout.  
+-   Andocken der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement an das übergeordnete Formular. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. \(USBN: 0\-7356\-0566\-1\)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)   
- [Walkthrough: Creating a Resizable Windows Form for Data Entry](http://msdn.microsoft.com/de-de/e193b4fc-912a-4917-b036-b76c7a6f58ab)   
- [Walkthrough: Creating a Localizable Windows Form](http://msdn.microsoft.com/de-de/c5240b6e-aaca-4286-9bae-778a416edb9c)   
- [Empfohlene Vorgehensweisen für das TableLayoutPanel\-Steuerelement](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)   
- [Übersicht über die AutoSize\-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [Gewusst wie: Verankern von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [Exemplarische Vorgehensweise: Anordnen von Windows Forms\-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize\-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
+ [Exemplarische Vorgehensweise: Erstellen eines in der Größe veränderbaren Windows Forms für die Dateneingabe](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [Exemplarische Vorgehensweise: Erstellen eines lokalisierbare Windows Forms](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
+ [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Gewusst wie: Verankern von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

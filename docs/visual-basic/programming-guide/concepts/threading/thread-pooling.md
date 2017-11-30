@@ -1,46 +1,38 @@
 ---
-title: Threadpooling (Visual Basic) | Microsoft-Dokumentation
+title: Threadpooling (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6037d7ea17e260d44bae571aa25d413996f5a123
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-visual-basic"></a>Threadpooling (Visual Basic)
-Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund ausgeführt. (Siehe [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) Hintergrundinformationen.) Dies bewirkt, dass der primären Thread asynchron andere Aufgaben ausführen.  
+Ein *Threadpool* ist eine Auflistung von Threads, die verwendet werden kann, um verschiedene Aufgaben im Hintergrund auszuführen. (Siehe [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) Hintergrundinformationen.) Dies lässt den primären Thread frei, um andere Aufgaben asynchron auszuführen.  
   
- Threadpools sind häufig in serveranwendungen verwendet. Jede eingehende Anforderung wird einem Thread aus dem Threadpool zugewiesen, sodass die Anforderung asynchron verarbeitet werden kann, ohne den primären Thread binden oder die Verarbeitung von nachfolgenden Anforderungen zu verzögern.  
+ Threadpools werden häufig in Serveranwendungen verwendet. Jede eingehende Anforderung wird einem Thread aus dem Threadpool zugeordnet, sodass die Anforderung asynchron verarbeitet werden kann, ohne den primären Thread zu beschäftigen oder die Verarbeitung von nachfolgenden Anforderungen zu verzögern.  
   
- Wenn ein Thread im Pool seine Aufgabe abgeschlossen ist, wird es zurückgegeben an eine Warteschlange der wartenden Threads, in dem es wiederverwendet werden. Diese wiederverwenden können Clientanwendungen, die Kosten für das Erstellen eines neuen Threads für jeden Vorgang zu vermeiden.  
+ Wenn ein Thread im Pool seine Aufgabe abgeschlossen hat, wird er an eine Warteschlange von wartenden Threads zurückgegeben, in der er wiederverwendet werden. Aufgrund der Wiederverwendung müssen Anwendungen nicht für jede Aufgabe einen neuen Threads erstellen.  
   
- Threadpools haben in der Regel eine maximale Anzahl von Threads. Wenn alle Threads aktiv sind, werden zusätzliche Aufgaben in Warteschlange eingereiht, bis sie von wieder verfügbaren Threads verarbeitet werden können.  
+ Threadpools haben in der Regel eine maximale Anzahl von Threads. Wenn alle Threads aktiv sind, werden zusätzliche Aufgaben in die Warteschlange eingereiht, bis sie von wieder verfügbaren Threads verarbeitet werden können.  
   
- Sie können einen eigenen Threadpool implementieren, aber es ist einfacher, die von .NET Framework durch die <xref:System.Threading.ThreadPool>Klasse</xref:System.Threading.ThreadPool> bereitgestellten Threadpool zu verwenden  
+ Sie können einen eigenen Threadpool implementieren. Es ist allerdings einfacher, den Threadpool zu verwenden, der von .NET Framework durch die <xref:System.Threading.ThreadPool>-Klasse bereitgestellt wird.  
   
- Beim pooling von Threads rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>-Methode mit einem Delegaten für die Prozedur, die Sie ausführen möchten, und Visual Basic wird der Thread erstellt und führt die Prozedur.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>  
+ Beim pooling von Threads, rufen Sie die <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> Methode mit einem Delegaten für die Prozedur, die Sie ausführen möchten, und Visual Basic wird der Thread erstellt und führt die Prozedur.  
   
-## <a name="thread-pooling-example"></a>Beispiel für Pooling von Threads  
- Das folgende Beispiel zeigt, wie Sie mehrere Aufgaben gestartet pooling von Threads verwenden können.  
+## <a name="thread-pooling-example"></a>Beispiele zum Pooling von Threads  
+ Das folgende Beispiel zeigt, wie Sie das Pooling von Threads zum Starten von mehreren Aufgaben verwenden können.  
   
 ```vb  
 Public Sub DoWork()  
@@ -59,22 +51,22 @@ Private Sub AnotherLongTask(ByVal state As Object)
 End Sub  
 ```  
   
- Ein Vorteil der pooling von Threads ist, dass Argumente ein Zustandsobjekt an den Task-Prozedur übergeben werden kann. Wenn die aufgerufene Prozedur mehr als ein Argument erfordert, können Sie eine Struktur oder eine Instanz einer Klasse in Umwandeln einer `Object` -Datentyp.  
+ Ein Vorteil des Poolings von Threads ist, dass Sie Argumente in einem Zustandsobjekt an die Aufgabenprozedur übergeben können. Wenn die aufgerufene Prozedur mehr als ein Argument erfordert, können Sie eine Struktur oder eine Instanz einer Klasse in einen `Object`-Datentyp umwandeln.  
   
-## <a name="thread-pool-parameters-and-return-values"></a>Thread-Pool-Parameter und Rückgabewerte  
- Rückgabe von Werten aus einem Threadpool-Thread ist nicht einfach. Das Standardverfahren für die Rückgabe von Werten aus einem Funktionsaufruf ist nicht zulässig, da `Sub` Verfahren sind die einzige Art von Prozedur, die einen Threadpool in die Warteschlange gestellt werden kann. Eine Möglichkeit, Sie können Parameter angeben und Werte wird durch die Parameter, Rückgabewerte und Methoden in einem Wrapper gemäß [Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
+## <a name="thread-pool-parameters-and-return-values"></a>Parameter und Rückgabewerte des Threadpools  
+ Die Rückgabe von Werten aus einem Thread des Threadpools ist nicht einfach. Das Standardverfahren für die Rückgabe von Werten von einem Funktionsaufruf ist nicht zulässig, da `Sub`-Prozeduren die einzigen Typen der Prozedur sind, die in einem Threadpool in die Warteschlagen gestellt werden können. Eine Möglichkeit, Sie können Parameter und Werte wird durch die Parameter, Rückgabewerte und Methoden in einem Wrapper wie beschrieben in [Parameter und Rückgabewerte für Multithreadprozeduren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Ein einfacheres Verfahren geben Sie Parameter und Rückgabewerte wird mithilfe des optionalen `ByVal` Objektvariable des Status der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Wenn Sie diese Variable verwenden, um einen Verweis auf eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Threadpool-Thread geändert und als Rückgabewerte verwendet werden.  
+ Ein einfacherer Weg zum Bereitstellen von Parametern und Rückgabewerten besteht darin, die optionale Zustandsobjektvariable `ByVal` der <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>-Methode zu verwenden. Wenn Sie diese Variable verwenden, um einen Verweis an eine Instanz einer Klasse zu übergeben, können die Member der Instanz durch den Thread des Threadpools geändert und als Rückgabewerte verwendet werden.  
   
- Zunächst kann es nicht offensichtlich, ändern Sie ein Objekt verweist auf eine Variable, die als Wert übergeben wird. Dies ist möglich, da nur der Objektverweis als Wert übergeben wird. Wenn Sie Member des Objekts gemäß den Objektverweis ändern, werden die Änderungen auf die tatsächliche Instanz anwenden.  
+ Es liegt nicht unbedingt auf der Hand, dass Sie ein Objekt ändern können, auf das von einer als Wert übergebenen Variable verwiesen wurde. Dies ist allein möglich, da nur der Objektverweis als Wert übergeben wird. Wenn Sie Member des Objekts ändern, auf das vom Objektverweis verwiesen wurde, werden die Änderungen auf die eigentliche Klasseninstanz angewendet.  
   
- Strukturen können zum Zurückgeben von Werten in Statusobjekten verwendet werden. Da Strukturen Werttypen sind, ändern Änderungen, die der asynchrone Prozess vornimmt nicht die Elemente der Originalstruktur. Verwenden Sie Strukturen, um Parameter bereitzustellen, wenn keine Rückgabewerte benötigt werden.  
+ Strukturen können nicht zum Zurückgeben von Werten in Zustandsobjekten verwendet werden. Da Strukturen Werttypen sind, haben Änderungen, die der asynchrone Prozess vornimmt, keine Auswirkungen auf die Elemente der ursprünglichen Struktur. Verwenden Sie Strukturen, um Parameter bereitzustellen, wenn keine Rückgabewerte erforderlich sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- [Gewusst wie: Verwenden eines Threadpools (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Vorgehensweise: Verwenden eines Threadpools (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Threadsynchronisierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)

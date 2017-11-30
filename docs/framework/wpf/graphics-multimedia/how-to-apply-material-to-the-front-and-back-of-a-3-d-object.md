@@ -1,37 +1,40 @@
 ---
-title: "Gewusst wie: Anwenden von Material auf die Vorder- und R&#252;ckseite eines 3D-Objekts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3D-Objekte, Anwenden der Material-Klasse"
-  - "Klassen, Material"
-  - "Material-Klasse, Anwenden auf beide Seiten des 3D-Objekts"
+title: "Gewusst wie: Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 3-D objects [WPF], applying Material class
+- Material class [WPF], applying to both sides of 3-D object
+- classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce4605208be264418088399253298798205c3f9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Anwenden von Material auf die Vorder- und R&#252;ckseite eines 3D-Objekts
-Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Windows.Media.Media3D.Material> auf die Vorder\- und die Rückseite eines 3D\-Objekts angewendet und das Objekt animiert wird, um es von beiden Seiten anzuzeigen.  Die <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>\-Eigenschaft von einem <xref:System.Windows.Media.Media3D.GeometryModel3D> wird verwendet, um einen roten <xref:System.Windows.Media.Brush> auf die Vorderseite des Objekts anzuwenden. Mit der <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>\-Eigenschaft vom <xref:System.Windows.Media.Media3D.GeometryModel3D> wird ein blauer <xref:System.Windows.Media.Brush> auf die Rückseite des Objekts angewendet.  Der folgende Code zeigt die Anwendung der Materialien auf das Objekt:  
+# <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Gewusst wie: Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts
+Im folgende Beispiel wird gezeigt, wie zum Anwenden einer <xref:System.Windows.Media.Media3D.Material> in den Vordergrund und Rückseite eine 3D-Objekt und das Objekt zum Anzeigen von beiden Seiten des Objekts animiert. Die <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> Eigenschaft eine <xref:System.Windows.Media.Media3D.GeometryModel3D> wird verwendet, um einen roten gelten <xref:System.Windows.Media.Brush> auf der Vorderseite des Objekts und die <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> Eigenschaft der <xref:System.Windows.Media.Media3D.GeometryModel3D> wird verwendet, um ein blaues anwenden <xref:System.Windows.Media.Brush> auf der Rückseite des Objekts. Der folgende Code zeigt die Anwendung der Materialien auf das Objekt:  
   
- [!code-xml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
+ [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexampleinline1)]  
   
-## Beispiel  
- Im folgenden Code wird das gesamte Beispiel dargestellt.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code zeigt das vollständige Beispiel.  
   
- [!code-xml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#BackMaterialAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/BackMaterialAnimationExample.xaml#backmaterialanimationexamplewholepage)]  
   
-## Siehe auch  
- [Erstellen einer 3D\-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [Übersicht über 3D\-Grafiken](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)   
- [Animieren von Material\-Eigenschaften in einer 3D\-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)   
- [Anwenden von Emissive Material auf ein 3D\-Objekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen einer 3D-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [Übersicht über 3D-Grafiken](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [Animieren von Material-Eigenschaften in einer 3D-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Anwenden von Emissive Material auf ein 3D-Objekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)

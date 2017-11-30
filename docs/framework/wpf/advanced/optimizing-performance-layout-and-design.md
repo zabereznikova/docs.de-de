@@ -1,86 +1,92 @@
 ---
-title: "Optimieren der Leistung: Layout und Entwurf | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Entwurfsaspekte"
-  - "Layoutdurchlauf"
-  - "Layout, Optimieren der Leistung"
+title: 'Optimieren der Leistung: Layout und Entwurf'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- layout [WPF], optimizing performance
+- design considerations [WPF]
+- layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 13763e0487314fdbe7ab6fcb8b7b8711715e7a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Optimieren der Leistung: Layout und Entwurf
-Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung kann deren Leistung durch unnötigen Verwaltungsaufwand bei der Berechnung des Layouts und bei der Überprüfung von Objektverweisen beeinflussen.  Das Erstellen von Objekten, besonders zur Laufzeit, kann sich im Leistungsverhalten der Anwendung bemerkbar machen.  
+# <a name="optimizing-performance-layout-and-design"></a>Optimieren der Leistung: Layout und Entwurf
+Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung kann die Leistung durch unnötigen Mehraufwand durch die Berechnung des Layouts und das Überprüfung von Objektverweisen beeinträchtigen. Das Erstellen von Objekten, insbesondere zur Laufzeit, kann sich auf die Leistungsmerkmale Ihrer Anwendung auswirken.  
   
- Dieses Thema enthält Empfehlungen zur Leistungssteigerung in diesen Bereichen.  
+ In diesem Thema erhalten Sie Empfehlungen bezüglich der Leistung in diesen Bereichen.  
   
-## Layout  
- Der Begriff "Layoutdurchlauf" beschreibt den Vorgang des Messens und Anordnens der Member einer Auflistung untergeordneter Elemente eines von <xref:System.Windows.Controls.Panel> abgeleiteten Objekts und deren anschließender Zeichnung auf dem Bildschirm.  Der Layoutdurchlauf ist ein rechenintensiver Vorgang. Je mehr untergeordnete Elemente sich in der Auflistung befinden, desto mehr Rechenschritte sind nötig.  Jedes Mal, wenn ein untergeordnetes <xref:System.Windows.UIElement>\-Objekt in der Auflistung seine Position ändert, kann ein neuer Durchlauf des Layoutsystems ausgelöst werden.  Aufgrund der engen Beziehung zwischen Objektmerkmalen und Layoutverhalten ist ein Verständnis der Ereignistypen wichtig, die das Layoutsystem aufrufen können.  Die Anwendung bietet eine bessere Leistung, wenn möglichst wenige unnötige Aufrufe des Layoutdurchlaufs erfolgen.  
+## <a name="layout"></a>Layout  
+ Der Begriff "Layoutdurchlauf" beschreibt den Prozess des messen und Anordnen der Member einer <xref:System.Windows.Controls.Panel>-abgeleiteten Objekts Auflistung von untergeordneten Elementen, und zeichnen diese auf dem Bildschirm. Ein Layoutdurchlauf ist ein mathematisch aufwändiger Prozess; je mehr untergeordnete Elementen sich in der Auflistung befinden, desto mehr Berechnungen sind erforderlich. Beispielsweise jedes Mal, wenn ein untergeordnetes Element <xref:System.Windows.UIElement> Objekt in der Auflistung ändert seine Position, es wurde einen neuen Durchlauf vom Layoutsystem ausgelöst. Aufgrund der engen Verbindung zwischen den Merkmalen des Objekts und dem Layoutverhalten ist es unumgänglich, den Ereignistyp zu verstehen, der das Layoutsystem aufrufen kann. Die Leistung Ihrer Anwendung wird optimiert, wenn Sie unnötige Aufrufe des Layoutdurchlaufs so weit wie möglich reduzieren.  
   
- Das Layoutsystem führt pro untergeordnetem Member in einer Auflistung zwei Durchläufe aus: eine Maßübergabe und eine Anordnungsübergabe.  Jedes untergeordnete Objekt bietet eine eigene überschriebene Implementierung der <xref:System.Windows.UIElement.Measure%2A>\-Methode und der <xref:System.Windows.UIElement.Arrange%2A>\-Methode, um sein eigenes spezifisches Layoutverhalten bereitzustellen.  Im einfachsten Fall ist das Layout ein rekursives System, das dafür sorgt, dass ein Element in der Größe angepasst, positioniert und auf dem Bildschirm gezeichnet wird.  
+ Das Layoutsystem führt zwei Durchläufe für jeden untergeordneten Member in einer Auflistung durch: einen Messdurchlauf und einen Anordnungsdurchlauf. Jedes untergeordnete Objekt bietet eine eigene überschriebene Implementierung für die <xref:System.Windows.UIElement.Measure%2A> und <xref:System.Windows.UIElement.Arrange%2A> Methoden, um einen eigenen bestimmten Layoutverhalten bereitzustellen. Ganz einfach ausgedrückt bedeutet dies, dass Layout ein rekursives System ist, das die Größe und Position eines Elements anpasst und dieses auf dem Bildschirm zeichnet.  
   
--   Ein untergeordnetes <xref:System.Windows.UIElement>\-Objekt startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen werden.  
+-   Ein untergeordnetes Element <xref:System.Windows.UIElement> startet im Layoutprozess vom ersten seine Kerneigenschaften gemessen.  
   
--   Die <xref:System.Windows.FrameworkElement>\-Eigenschaften des Objekts, die mit der Größe zusammenhängen, z. B. <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A> und <xref:System.Windows.FrameworkElement.Margin%2A>, werden ausgewertet.  
+-   Des Objekts <xref:System.Windows.FrameworkElement> Eigenschaften, z. B. Datenbankgröße beziehen <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>, ausgewertet werden.  
   
--   Die spezifische Logik von <xref:System.Windows.Controls.Panel>, z. B. die <xref:System.Windows.Controls.DockPanel.Dock%2A>\-Eigenschaft von <xref:System.Windows.Controls.DockPanel> oder die <xref:System.Windows.Controls.StackPanel.Orientation%2A>\-Eigenschaft von <xref:System.Windows.Controls.StackPanel>, wird angewendet.  
+-   <xref:System.Windows.Controls.Panel>-anwendungsspezifische Logik angewendet wird, wie z. B. die <xref:System.Windows.Controls.DockPanel.Dock%2A> Eigenschaft von der <xref:System.Windows.Controls.DockPanel>, oder die <xref:System.Windows.Controls.StackPanel.Orientation%2A> Eigenschaft der <xref:System.Windows.Controls.StackPanel>.  
   
--   Der Inhalt wird angeordnet bzw. positioniert, nachdem alle untergeordneten Objekte gemessen wurden.  
+-   Nachdem alle untergeordneten Objekte ausgemessen wurden, wird der Inhalt angeordnet oder positioniert.  
   
--   Die Auflistung von untergeordneten Objekten wird auf dem Bildschirm gezeichnet.  
+-   Die Auflistung der untergeordneten Objekte wird auf dem Bildschirm dargestellt.  
   
- Der Layoutdurchlaufprozess wird erneut aufgerufen, wenn eine der folgenden Aktionen ausgeführt wird:  
+ Der Layoutdurchlauf wird erneut aufgerufen, wenn eine der folgenden Aktionen ausgeführt wird:  
   
--   Der Auflistung wird ein untergeordnetes Objekt hinzugefügt.  
+-   Ein untergeordnetes Objekt wird der Auflistung hinzugefügt.  
   
--   Eine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> wird auf das untergeordnete Objekt angewendet.  
+-   Ein <xref:System.Windows.FrameworkElement.LayoutTransform%2A> auf das untergeordnete Objekt angewendet wird.  
   
--   Die <xref:System.Windows.UIElement.UpdateLayout%2A>\-Methode wird für das untergeordnete Objekt aufgerufen.  
+-   Die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode wird aufgerufen, für das untergeordnete Objekt.  
   
--   Wenn der Wert einer [Abhängigkeitseigenschaft](GTMT), die mit Metadaten markiert ist, die die Maß\- oder Anordnungsübergaben betreffen, geändert wird.  
+-   Wenn sich der Wert einer Abhängigkeitseigenschaft ändert, die mit Metadaten markiert ist, die die Messungs- oder Anordnungsdurchläufe beeinflussen  
   
-### Verwenden des effizientesten Panels \(nach Möglichkeit\)  
- Die Komplexität des Layoutvorgangs basiert direkt auf dem Layoutverhalten der von <xref:System.Windows.Controls.Panel> abgeleiteten Elemente, die verwendet werden.  So bietet ein <xref:System.Windows.Controls.Grid>\-Steuerelement oder ein <xref:System.Windows.Controls.StackPanel>\-Steuerelement viel mehr Funktionen als ein <xref:System.Windows.Controls.Canvas>\-Steuerelement.  Der Preis für diese Mehrzahl an Funktionen ist eine stärkere Beeinträchtigung der Leistung.  Wenn Sie allerdings die Funktionen eines <xref:System.Windows.Controls.Grid>\-Steuerelements nicht benötigen, sollten Sie die weniger leistungsbeeinträchtigenden Alternativen verwenden, z. B. <xref:System.Windows.Controls.Canvas> oder ein benutzerdefiniertes Panel.  
+### <a name="use-the-most-efficient-panel-where-possible"></a>Verwenden Sie das effizienteste Panel soweit möglich  
+ Die Komplexität im Layoutprozess basiert direkt auf das Layoutverhalten für die <xref:System.Windows.Controls.Panel>-abgeleitete Elemente, die Sie verwenden. Z. B. eine <xref:System.Windows.Controls.Grid> oder <xref:System.Windows.Controls.StackPanel> Steuerelement bietet deutlich mehr Funktionen als ein <xref:System.Windows.Controls.Canvas> Steuerelement. Für diese erhöhte Funktionalität büßen Sie an Leistung ein. Allerdings, wenn Sie nicht die Funktionalität benötigen, die eine <xref:System.Windows.Controls.Grid> Steuerelement bereitgestellt werden, Sie sollten die kostengünstiger Alternativen, wie z. B. Verwenden einer <xref:System.Windows.Controls.Canvas> oder einen benutzerdefinierten Bereich.  
   
- Weitere Informationen finden Sie unter [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Weitere Informationen finden Sie unter [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md).  
   
-### Aktualisieren statt Ersetzen von RenderTransform  
- Sie können eine <xref:System.Windows.Media.Transform> aktualisieren statt sie als Wert einer <xref:System.Windows.UIElement.RenderTransform%2A>\-Eigenschaft zu ersetzen.  Dies gilt insbesondere für Szenarien, die Animationen einschließen.  Durch die Aktualisierung einer vorhandenen <xref:System.Windows.Media.Transform> vermeiden Sie eine unnötige Layoutberechnung.  
+### <a name="update-rather-than-replace-a-rendertransform"></a>Aktualisieren Sie RenderTransform, statt es zu ersetzen  
+ Möglicherweise Aktualisieren einer <xref:System.Windows.Media.Transform> anstatt ersetzt ihn als Wert für eine <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft. Dies gilt besonders für Szenarios mit Animation. Durch Aktualisieren einer vorhandenen <xref:System.Windows.Media.Transform>, vermeiden Sie eine Berechnung unnötige Layout initiieren.  
   
-### Erstellen der Struktur mithilfe eines Top\-Down\-Ansatzes  
- Wenn der [logischen Struktur](GTMT) ein Knoten hinzugefügt oder daraus entfernt wird, werden Ungültigkeitserklärungen von Eigenschaften für das übergeordnete Element des Knotens und alle untergeordneten Elemente ausgelöst.  Daher sollte immer ein Konstruktionsmuster mit einem Top\-Down\-Ansatz gewählt werden, um den Aufwand für unnötige Ungültigkeitserklärungen von Knoten, die bereits überprüft wurden, zu vermeiden.  In der folgenden Tabelle ist der Unterschied in der Ausführungsgeschwindigkeit aufgeführt, wenn eine Struktur mit dem Top\-Down\-Ansatz bzw. mit dem Bottom\-Up\-Ansatz erstellt wird, wobei die Struktur 150 Ebenen tief ist mit einem einzelnen <xref:System.Windows.Controls.TextBlock> und einem <xref:System.Windows.Controls.DockPanel> auf jeder Ebene.  
+### <a name="build-your-tree-top-down"></a>Erstellen Sie Ihre Struktur von oben nach unten  
+ Wenn der logischen Struktur ein Knoten hinzugefügt oder dieser entfernt wird, werden Eigenschafteninvalidierungen auf dem übergeordneten und allen untergeordneten Elementen des Knotens ausgelöst. Demzufolge sollte immer ein Oben-nach-unten-Erstellmuster eingehalten werden, um unnötige Invalidierungen auf Knoten zu verhindern, die bereits validiert wurden. Die folgende Tabelle zeigt den Unterschied im ausführungsgeschwindigkeit zwischen dem Erstellen einer Struktur von oben nach unten oder von unten nach oben, die Struktur, in denen 150 Ebenen mit einem einzelnen ist <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Controls.DockPanel> auf jeder Ebene.  
   
-|**Aktion**|**Strukturerstellung \(in ms\)**|**Rendern \- einschließlich Strukturerstellung \(in ms\)**|  
-|----------------|--------------------------------------|----------------------------------------------------------------|  
-|Bottom\-Up\-Ansatz|366|454|  
-|Top\-Down\-Ansatz|11|96|  
+|**Aktion**|**Strukturerstellung (in ms)**|**Rendern, einschließlich Strukturerstellung (in ms)**|  
+|----------------|---------------------------------|-------------------------------------------------|  
+|Unten-nach-oben|366|454|  
+|Oben-nach-unten|11|96|  
   
- Im folgenden Codebeispiel wird das Erstellen einer Struktur mit dem Top\-Down\-Ansatz gezeigt.  
+ Im folgenden Code wird veranschaulicht, wie Sie eine Struktur von oben nach unten erstellen können.  
   
  [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
  [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
  Weitere Informationen über die logische Struktur finden Sie unter [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
-## Siehe auch  
- [Optimieren der WPF\-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Nutzen der Vorteile der Hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [2D\-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Projektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Vorteile der Hardware nutzen](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Objektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
  [Layout](../../../../docs/framework/wpf/advanced/layout.md)

@@ -1,60 +1,64 @@
 ---
-title: "Gewusst wie: &#220;berpr&#252;fen von Anwendungseinstellungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungseinstellungen, Validieren"
-  - "Anwendungseinstellungen, Windows Forms"
-  - "Validieren von Anwendungseinstellungen"
+title: "Gewusst wie: Überprüfen von Anwendungseinstellungen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating application settings
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: &#220;berpr&#252;fen von Anwendungseinstellungen
-In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden, bevor sie erhalten bleiben.  
+# <a name="how-to-validate-application-settings"></a>Gewusst wie: Überprüfen von Anwendungseinstellungen
+In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft werden, bevor sie persistent gespeichert werden.  
   
- Da Anwendungseinstellungen strikt typisiert sind, können Sie weitestgehend sicher sein, dass Benutzer einer Einstellung keine Daten des falschen Typs zuweisen können.  Dennoch kann es passieren, dass ein Benutzer versucht, einer Einstellung einen Wert zuzuweisen, der außerhalb zulässiger Grenzen liegt, beispielsweise bei der Angabe eines Geburtsdatums in der Zukunft.  <xref:System.Configuration.ApplicationSettingsBase>, die übergeordnete Klasse aller Anwendungseinstellungsklassen, stellt vier Ereignisse für die Überprüfung derartiger Grenzen zur Verfügung.  Beim Behandeln dieser Ereignisse wird der gesamte Validierungscode an einem einzelnen Speicherort abgelegt, anstatt ihn über das gesamte Projekt zu verteilen.  
+ Da die Anwendungseinstellungen stark typisiert sind, müssen Sie darauf vertrauen, dass Benutzer Daten mit einem falschen Typ keiner bestimmten Einstellung zuweisen können. Ein Benutzer kann weiterhin versuchen, einer Einstellung einen Wert zuzuweisen, der außerhalb der zulässigen Grenzen liegt, z.B. die Angabe eines in der Zukunft liegenden Geburtsdatums. <xref:System.Configuration.ApplicationSettingsBase>, die übergeordnete Klasse von allen Anwendungseinstellungsklassen vier Ereignisse so aktivieren Sie solche grenzüberprüfung verfügbar gemacht werden. Durch die Bearbeitung dieser Ereignisse befinden sich alle Überprüfungscodes an einem einzigen Speicherort und sind nicht im gesamten Projekt verteilt.  
   
- Das verwendete Ereignis hängt davon ab, wann Sie die Einstellungen überprüfen müssen, wie in der folgenden Tabelle beschrieben.  
+ Welches Ereignis Sie verwenden, hängt davon ob, wann Sie Ihre Einstellungen überprüfen müssen, wie in der folgenden Tabelle beschrieben.  
   
-|Ereignis|Vorkommnis und Verwendung|  
-|--------------|-------------------------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Tritt nach dem ersten Laden einer Einstellungseigenschaftengruppe auf.<br /><br /> Verwenden Sie dieses Ereignis, um Anfangswerte für die gesamte Eigenschaftengruppe zu überprüfen, bevor sie innerhalb der Anwendung verwendet werden.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Tritt auf, bevor der Wert einer einzelnen Einstellungseigenschaft geändert wird.<br /><br /> Verwenden Sie dieses Ereignis, um eine einzelne Eigenschaft zu überprüfen, bevor sie geändert wird.  Es kann Benutzern unmittelbar Feedback hinsichtlich ihrer Aktionen und Auswahl bereitstellen.|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Tritt auf, nachdem der Wert einer einzelnen Einstellungseigenschaft geändert wurde.<br /><br /> Verwenden Sie dieses Ereignis, um eine einzelne Eigenschaft zu überprüfen, nachdem sie geändert wurde.  Dieses Ereignis wird selten zur Validierung verwendet, außer wenn ein langer, asynchroner Validierungsprozess erforderlich ist.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Tritt auf, bevor die Einstellungseigenschaftengruppe gespeichert wird.<br /><br /> Verwenden Sie dieses Ereignis, um Werte für die gesamte Eigenschaftengruppe zu überprüfen, bevor sie auf der Festplatte erhalten bleiben.|  
+|Ereignis|Vorkommen und Verwendung|  
+|-----------|------------------------|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Tritt nach dem ersten Laden der Eigenschaftengruppe einer Einstellung auf.<br /><br /> Verwenden Sie dieses Ereignis, um die Anfangswerte der gesamten Eigenschaftengruppe zu überprüfen, bevor sie in der Anwendung verwendet werden.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Tritt auf, bevor der Wert einer einzelnen Einstellungseigenschaft geändert wird.<br /><br /> Verwenden Sie dieses Ereignis, um eine einzelne Eigenschaft zu überprüfen, bevor sie geändert wird. Sie kann Benutzern unmittelbares Feedback hinsichtlich ihrer Aktionen und Auswahl geben.|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Tritt auf, nachdem der Wert einer einzelnen Einstellungseigenschaft geändert wurde.<br /><br /> Verwenden Sie dieses Ereignis, um eine einzelne Eigenschaft zu überprüfen, nachdem sie geändert wurde. Dieses Ereignis wird selten zur Überprüfung verwendet, es sei denn, es ist ein langer, asynchroner Überprüfungsprozess erforderlich.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Tritt auf, bevor die Eingenschaftengruppe der Einstellung gespeichert wird.<br /><br /> Verwenden Sie dieses Ereignis, um Werte der gesamten Eigenschaftengruppe zu überprüfen, bevor sie persistent auf dem Datenträger gespeichert werden.|  
   
- Normalerweise verwenden Sie nicht all diese Ereignisse innerhalb der gleichen Anwendung zur Validierung.  Beispielsweise ist es häufig möglich, alle Validierungsanforderungen zu erfüllen, indem nur das <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>\-Ereignis behandelt wird.  
+ Normalerweise verwenden Sie zu Überprüfungszwecken nicht alle diese Ereignisse innerhalb der gleichen Anwendung. Es ist z. B. häufig möglich, alle Prüfungsanforderungen zu erfüllen, indem nur behandeln die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
   
- Ein Ereignishandler führt im Allgemeinen eine der folgenden Aktionen aus, wenn er einen ungültigen Wert findet:  
+ Ein Ereignishandler führt in der Regel eine der folgenden Aktionen aus, wenn ein ungültiger Wert erkannt wurde:  
   
--   Er stellt automatisch einen richtigen Wert bereit, z. B. den Standardwert.  
+-   Er gibt automatisch einen Wert an, der bekanntermaßen richtig ist, z.B. der Standardwert.  
   
--   Er fragt den Benutzer von Servercode erneut nach Informationen ab.  
+-   Er fragt den Benutzer des Servercodes erneut nach Informationen.  
   
--   Er verwendet für Ereignisse, die vor den zugeordneten Aktionen ausgelöst werden, z. B. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> und <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, das <xref:System.ComponentModel.CancelEventArgs>\-Argument, um die Operation abzubrechen.  
+-   Für Ereignisse, die ausgelöst wird, bevor der zugehörigen Aktionen wie z. B. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> und <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, verwendet die <xref:System.ComponentModel.CancelEventArgs> Argument, um den Vorgang abzubrechen.  
   
- Weitere Informationen über das Behandeln von Ereignissen finden Sie unter [Übersicht über Ereignishandler](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Übersicht über Ereignishandler](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Die folgenden Prozeduren zeigen, wie Sie entweder mit dem <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>\-Ereignis oder dem <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>\-Ereignis einen Test zu einem gültigen Geburtsdatum durchführen.  Die Prozeduren wurden in der Annahme geschrieben, dass Sie die Anwendungseinstellungen bereits erstellt haben. In diesem Beispiel werden die Grenzen der Einstellung  `DateOfBirth` überprüft.  Weitere Informationen zum Erstellen von Einstellungen finden Sie unter [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Die folgenden Verfahren wird gezeigt, wie So testen Sie einen gültigen Geburtsdatum entweder die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> oder <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis. Die Verfahren wurden unter der Annahme geschrieben, dass Sie Ihre Anwendungseinstellungen bereits erstellt haben. In diesem Beispiel wird für die Einstellung mit dem Namen `DateOfBirth` eine Überprüfung der Begrenzungen durchgeführt. Weitere Informationen zum Erstellen von Einstellungen finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
-### So rufen Sie das Anwendungseinstellungsobjekt ab  
+### <a name="to-obtain-the-application-settings-object"></a>So rufen Sie das Anwendungseinstellungsobjekt ab  
   
--   Rufen Sie einen Verweis auf das Anwendungseinstellungsobjekt \(die Wrapperinstanz\) ab, indem Sie einen der folgenden Schritte ausführen:  
+-   Rufen Sie einen Verweis auf das Anwendungseinstellungsobjekt (die Wrapperinstanz) ab, indem Sie eines der folgenden gegliederten Elemente abschließen:  
   
-    -   Wenn Sie die Einstellungen über das Dialogfeld mit den Anwendungseinstellungen von Visual Studio im **Eigenschaften\-Editor** erstellt haben, können Sie mit dem folgenden Ausdruck das standardmäßige Einstellungsobjekt abrufen, das für Ihre Sprache generiert wird.  
+    -   Wenn Sie die Einstellungen über das Dialogfeld „Anwendungseinstellungen von Visual Studio“ im **-Eigenschaften-Editor** erstellt haben, können Sie das Standardeinstellungsobjekt abrufen, das über den folgenden Ausdruck für Ihre Sprache generiert wurde.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -64,13 +68,13 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
         MySettings.Default   
         ```  
   
-         \- oder \-  
+         - oder -   
   
-    -   Wenn Sie Visual Basic\-Entwickler sind und die Anwendungseinstellungen über den Projekt\-Designer erstellt haben, können Sie die Einstellungen über das [My.Settings\-Objekt](../../../../ocs/visual-basic/language-reference/objects/my-settings-object.md) abrufen.  
+    -   Wenn Sie Entwickler von Visual Basic sind und Sie Ihre Anwendungseinstellungen mit dem Projekt-Designer erstellt haben, können Sie Ihre Einstellungen über das [My.Settings-Objekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md) abrufen.  
   
-         \- oder \-  
+         - oder -   
   
-    -   Wenn Sie die Einstellungen durch direktes Ableiten von <xref:System.Configuration.ApplicationSettingsBase> erstellt haben, müssen Sie die Klasse manuell instanziieren.  
+    -   Wenn Sie Ihre Einstellungen erstellt haben, durch Ableiten von <xref:System.Configuration.ApplicationSettingsBase> direkt, müssen Sie manuell instanziieren Ihrer Klasse.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -80,15 +84,15 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
         Dim Settings as New MyCustomSettings()  
         ```  
   
- Die folgenden Prozeduren wurden in der Annahme geschrieben, dass das Anwendungseinstellungsobjekt abgerufen wurde, indem Sie den letzten Schritt in der obigen Liste ausgeführt haben.  
+ Die folgenden Prozeduren wurden unter der Annahme geschrieben, dass das Anwendungseinstellungsobjekt abgerufen wurde, indem das letzte gegliederte Element in dieser Prozedur abgeschlossen wurde.  
   
-### So überprüfen Sie die Anwendungseinstellungen, wenn sich eine Einstellung ändert  
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>So überprüfen Sie Anwendungseinstellungen, wenn eine Einstellung geändert wird  
   
-1.  Wenn Sie C\#\-Entwickler sind, fügen Sie im Formular oder  `Load` \-Ereignis des Steuerelements einen Ereignishandler für das <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>\-Ereignis hinzu.  
+1.  Wenn Sie C#-Entwickler in einem Formular oder Steuerelement des sind `Load` Ereignis, fügen Sie einen Ereignishandler für das <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
   
-     \- oder \-  
+     - oder -   
   
-     Wenn Sie Visual Basic\-Entwickler sind, sollten Sie die `Settings`\-Variable mit dem `WithEvents`\-Schlüsselwort deklarieren.  
+     Wenn Sie Visual Basic-Entwickler sind, sollten Sie die `Settings`-Variablen mithilfe des `WithEvents`-Schlüsselworts deklarieren.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -103,7 +107,7 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
     End Sub   
     ```  
   
-2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code dafür, um die Grenzen des Geburtsdatums zu überprüfen.  
+2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -130,9 +134,9 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
     End Sub  
     ```  
   
-### So überprüfen Sie die Anwendungseinstellungen beim Speichern  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a>So überprüfen Sie Anwendungseinstellungen, sobald ein Speichervorgang auftritt  
   
-1.  Fügen Sie im Formular oder im  `Load` \-Ereignis des Steuerelements einen Ereignishandler für das <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>\-Ereignis hinzu.  
+1.  In einem Formular oder Steuerelement des `Load` Ereignis, fügen Sie einen Ereignishandler für das <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -147,7 +151,7 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
     End Sub  
     ```  
   
-2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code dafür, um die Grenzen des Geburtsdatums zu überprüfen.  
+2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -166,6 +170,6 @@ In diesem Thema wird beschrieben, wie Anwendungseinstellungen überprüft werden
     End Sub  
     ```  
   
-## Siehe auch  
- [Erstellen von Ereignishandlern in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>Siehe auch  
+ [Erstellen von Ereignishandlern in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

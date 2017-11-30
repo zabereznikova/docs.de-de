@@ -1,36 +1,28 @@
 ---
-title: Threadzeitgeber (Visual Basic) | Microsoft-Dokumentation
+title: Threadzeitgeber (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 809cba93-cc93-4e21-afda-f299f9a39818
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ea657482d4e8e1465d9bc6ae3f94915badee512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b828476301424ca767e2b581c173d6a2dcd184ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-timers-visual-basic"></a>Threadzeitgeber (Visual Basic)
-Die <xref:System.Threading.Timer?displayProperty=fullName>Klasse eignet sich für eine Aufgabe in regelmäßigen Abständen in einem separaten Thread ausführen.</xref:System.Threading.Timer?displayProperty=fullName> Beispielsweise können Sie einen Threadzeitgeber ein um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.  
+Die <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse eignet sich für eine Aufgabe, die in regelmäßigen Abständen in einem separaten Thread ausgeführt wird. Beispielsweise können Sie einen Threadzeitgeber verwenden, um den Status und die Integrität einer Datenbank zu überprüfen oder wichtige Dateien zu sichern.  
   
 ## <a name="thread-timer-example"></a>Beispiel für Threadzeitgeber  
- Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet und wird mit einem Flag initiiert die <xref:System.IDisposable.Dispose%2A>-Methode, die der Zeitgeber wird angehalten.</xref:System.IDisposable.Dispose%2A> In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.  
+ Im folgenden Beispiel wird eine Aufgabe alle zwei Sekunden gestartet, und ein Flag genutzt, das die <xref:System.IDisposable.Dispose%2A>-Methode initiiert, die den Timer anhält. In diesem Beispiel wird der Status an das Ausgabefenster übermittelt.  
   
 ```vb  
 Private Class StateObjClass  
@@ -76,8 +68,8 @@ Private Sub TimerTask(ByVal StateObj As Object)
 End Sub  
 ```  
   
- Threadzeitgeber sind besonders nützlich, wenn die <xref:System.Windows.Forms.Timer?displayProperty=fullName>Objekt ist nicht verfügbar, z. B. Wenn Sie eine Konsole Anwendung entwickeln.</xref:System.Windows.Forms.Timer?displayProperty=fullName>  
+ Threadzeitgeber sind besonders nützlich, wenn das Objekt <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> nicht verfügbar ist, z.B. wenn Sie Konsolenanwendungen entwickeln.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading></xref:System.Threading>   
+ <xref:System.Threading>  
  [Multithreadanwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

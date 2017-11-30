@@ -1,48 +1,52 @@
 ---
-title: "Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Registerkarten, Gezeichneter Text"
-  - "Text, Zeichnen mit Tabstopps"
+title: 'Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing with tab stops
+- tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e561e8096780301230071e869dac482a6a908a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text
-Sie können Tabstopps für Text festlegen, indem Sie die <xref:System.Drawing.StringFormat.SetTabStops%2A>\-Methode eines <xref:System.Drawing.StringFormat>\-Objekts aufrufen und das <xref:System.Drawing.StringFormat>\-Objekt anschließend an die <xref:System.Drawing.Graphics.DrawString%2A>\-Methode der <xref:System.Drawing.Graphics>\-Klasse übergeben.  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Gewusst wie: Festlegen von Tabstopps in gezeichnetem Text
+Festlegen von Tabstopps für Text können durch Aufrufen der <xref:System.Drawing.StringFormat.SetTabStops%2A> Methode eine <xref:System.Drawing.StringFormat> Objekt und deren Übergabe, die <xref:System.Drawing.StringFormat> -Objekt an die <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> Klasse.  
   
 > [!NOTE]
->  Der <xref:System.Windows.Forms.TextRenderer?displayProperty=fullName> unterstützt nicht das Hinzufügen von Tabstopps zu gezeichnetem Text, obwohl Sie vorhandene Tabstopps mit dem <xref:System.Windows.Forms.TextFormatFlags?displayProperty=fullName>\-Flag erweitern können.  
+>  Die <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> verfügt, die nicht unterstützen das Hinzufügen von Tabstopps in gezeichnetem Text, obwohl Sie vorhandene Registerkarte erweitern können nicht verwendet mehr die <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> Flag.  
   
-## Beispiel  
- Im folgenden Beispiel wurden Tabstopps an den Positionen 150, 250 und 350 gesetzt.  Durch den Code wird anschließend eine tabstoppgetrennte Liste mit Namen und Testergebnissen ausgegeben.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel legt Tabstopps auf 150, 250 und 350 fest. Anschließend zeigt den Code eine im Registerkartenformat Liste mit Namen und Testergebnissen.  
   
- In der folgenden Abbildung ist der tabstoppgetrennte Text dargestellt.  
+ Die folgende Abbildung zeigt den Text im Registerkartenformat.  
   
  ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
   
- Im folgenden Code werden zwei Argumente an die <xref:System.Drawing.StringFormat.SetTabStops%2A>\-Methode übergeben.  Das zweite Argument ist ein Array, das Tabulatoroffsets enthält.  Das erste an <xref:System.Drawing.StringFormat.SetTabStops%2A> übergebene Argument lautet 0. Dies bedeutet, dass der erste Offset im Array von Position 0, also der linken Ecke des umschließenden Rechtecks, gemessen wird.  
+ Folgender Code übergibt zwei Argumente an die <xref:System.Drawing.StringFormat.SetTabStops%2A> Methode. Das zweite Argument ist ein Array, Registerkarte Offsets enthält. Das erste Argument zu übergeben, um <xref:System.Drawing.StringFormat.SetTabStops%2A> ist-0 und bedeutet, dass es sich bei der erste Offset im Array an Position 0 (null) dem linken Rand des umschließenden Rechtecks gemessen wird.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## Kompilieren des Codes  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
-## Siehe auch  
- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Gewusst wie: Zeichnen von Text mit GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

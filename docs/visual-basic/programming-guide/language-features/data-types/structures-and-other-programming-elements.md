@@ -1,39 +1,38 @@
 ---
-title: "Structures and Other Programming Elements (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structures, arrays"
-  - "procedures, structures as arguments to"
-  - "objects [Visual Basic], structure elements"
-  - "arrays [Visual Basic], structure elements"
-  - "nested structures"
+title: Strukturen und andere Programmierelemente (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], arrays
+- procedures [Visual Basic], structures as arguments to
+- objects [Visual Basic], structure elements
+- arrays [Visual Basic], structure elements
+- nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Structures and Other Programming Elements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Sie können Strukturen gemeinsam mit Arrays, Objekten und Prozeduren sowie miteinander verwenden.  Die Interaktionen verwenden dieselbe Syntax, die diese Elemente einzeln verwenden.  
+# <a name="structures-and-other-programming-elements-visual-basic"></a>Strukturen und andere Programmierelemente (Visual Basic)
+Sie können Strukturen in Verbindung mit Arrays, Objekten und Prozeduren sowie miteinander verwenden. Die Interaktionen verwenden dieselbe Syntax wie diese Elemente einzeln zu verwenden.  
   
 > [!NOTE]
->  Es ist nicht möglich, Strukturelemente in der Strukturdeklaration zu initialisieren.  Sie können nur denjenigen Elementen einer Variablen Werte zuweisen, die als Strukturtyp deklariert wurden.  
+>  Sie können nicht der Struktur Elemente in der Strukturdeklaration initialisiert werden. Sie können nur auf Elemente in einer Variablen Werte zuweisen, die einen Strukturtyp deklariert wurde.  
   
-## Strukturen und Arrays  
- Ein Array kann innerhalb einer Struktur ein oder mehrere Elemente darstellen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+## <a name="structures-and-arrays"></a>Strukturen und Arrays  
+ Eine Struktur kann es sich um ein Array als eine oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Public Structure systemInfo  
     Public cPU As String  
     Public memory As Long  
@@ -42,32 +41,32 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Der Zugriff auf die Werte eines Arrays innerhalb einer Struktur erfolgt wie der Zugriff auf die Eigenschaft eines Objekts.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Sie greifen die Werte eines Arrays in einer Struktur genau wie Sie eine Eigenschaft für ein Objekt zuzugreifen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Dim mySystem As systemInfo  
 ReDim mySystem.diskDrives(3)  
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Sie können auch ein Array von Strukturen deklarieren.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Sie können auch ein Array von Strukturen deklarieren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Für den Zugriff auf die Komponenten dieser Datenarchitektur gelten die gleichen Regeln.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Sie gelten dieselben Regeln für den Zugriff auf die Komponenten dieser Daten-Architektur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 ReDim allSystems(5).diskDrives(3)  
 allSystems(5).CPU = "386SX"  
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## Strukturen und Objekte  
- Ein Objekt kann innerhalb einer Struktur ein oder mehrere Elemente darstellen.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+## <a name="structures-and-objects"></a>Strukturen und Objekte  
+ Eine Struktur kann es sich um ein Objekt als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Protected Structure userInput  
     Public userName As String  
     Public inputForm As System.Windows.Forms.Form  
@@ -75,12 +74,12 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Anstelle von `Object` sollten Sie in einer solchen Deklaration ein bestimmtes Objekt verwenden.  
+ Verwenden Sie eine bestimmte Objektklasse in einer solchen Deklaration statt `Object`.  
   
-## Strukturen und Prozeduren  
- Sie können eine Struktur als Prozedurargument übergeben.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+## <a name="structures-and-procedures"></a>Strukturen und Prozeduren  
+ Sie können eine Struktur wie eines Prozedurarguments übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
 Public currentMemorySize As Long = 256  
 Public Sub fillSystem(ByRef someSystem As systemInfo)  
@@ -90,11 +89,11 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Im vorangegangenen Beispiel wird die Struktur *durch einen Verweis* übergeben, wodurch die Prozedur deren Elemente so verändern kann, dass die Änderungen im Aufrufcode wirksam werden.  Wenn Sie eine Struktur vor solchen Änderungen schützen möchten, übergeben Sie sie durch einen Wert.  
+ Das obige Beispiel übergibt die Struktur *Verweisübergabe*, dadurch wird die Prozedur seine Elemente zu ändern, sodass die Änderungen im aufrufenden Code wirksam. Wenn Sie eine Struktur für eine solche Änderung schützen möchten, als Wert übergeben.  
   
- Sie können auch eine Struktur von einer `Function`\-Prozedur zurückgeben.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+ Sie können eine Struktur als auch Zurückgeben einer `Function` Prozedur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 Function findByDate(ByVal searchDate As Date) As systemInfo  
     Dim i As Integer  
@@ -105,10 +104,10 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## Strukturen innerhalb von Strukturen  
- Strukturen können andere Strukturen enthalten.  Dies wird anhand des folgenden Beispiels veranschaulicht:  
+## <a name="structures-within-structures"></a>Strukturen innerhalb von Strukturen  
+ Strukturen können andere Strukturen enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-```vb#  
+```vb  
 Public Structure driveInfo  
     Public type As String  
     Public size As Long  
@@ -121,24 +120,24 @@ Public Structure systemInfo
 End Structure  
 ```  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ReDim allSystems(1).diskDrives(3)  
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Mit diesem Verfahren können Sie eine in einem Modul definierte Struktur in einer Struktur kapseln, die in einem anderen Modul definiert ist.  
+ Diese Technik können auch um eine Struktur, die in einem Modul in einer Struktur in einem anderen Modul definierten definierte zu kapseln.  
   
- Strukturen können beliebig viele andere Strukturen enthalten.  
+ Strukturen können andere Strukturen in beliebiger Tiefe enthalten.  
   
-## Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Structure Variables](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)

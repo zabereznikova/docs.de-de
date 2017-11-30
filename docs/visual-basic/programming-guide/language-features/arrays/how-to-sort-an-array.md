@@ -1,32 +1,30 @@
 ---
-title: "How to: Sort An Array in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Array.Sort"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arrays [Visual Basic], sorting"
-  - "examples [Visual Basic], arrays"
+title: 'Gewusst wie: Sortieren eines Arrays in Visual Basic'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: Array.Sort
+helpviewer_keywords:
+- arrays [Visual Basic], sorting
+- examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 310c2dacb384de49c80073840c6c58d37f3937d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Sort An Array in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Dieses Beispiel deklariert ein Array von `String`\-Objekten mit der Bezeichnung `zooAnimals`, füllt es mit Daten und sortiert es anschließend alphabetisch.  
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Gewusst wie: Sortieren eines Arrays in Visual Basic
+Dieses Beispiel deklariert ein Array von `String` Objekte, die mit dem Namen `zooAnimals`aufgefüllt und dann alphabetisch sortiert.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 Private Sub sortAnimals()  
@@ -38,23 +36,23 @@ Private Sub sortAnimals()
 End Sub  
 ```  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Zugriff auf Mscorlib.dll und den <xref:System>\-Namespace.  
+-   Zugriff auf "mscorlib.dll" und die <xref:System> Namespace.  
   
-## Robuste Programmierung  
- Unter den folgenden Bedingungen kann eine Ausnahme ausgelöst werden:  
+## <a name="robust-programming"></a>Stabile Programmierung  
+ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Das Array ist leer \(<xref:System.ArgumentNullException>\-Klasse\).  
+-   Array ist leer (<xref:System.ArgumentNullException> Klasse)  
   
--   Das Array ist mehrdimensional \(<xref:System.RankException>\-Klasse\).  
+-   Array ist mehrdimensional (<xref:System.RankException> Klasse)  
   
--   Die <xref:System.IComparable>\-Schnittstelle wird von mindestens einem Element des Arrays nicht implementiert \(<xref:System.InvalidOperationException>\-Klasse\).  
+-   Implementiert ein oder mehrere Elemente des Arrays nicht die <xref:System.IComparable> Schnittstelle (<xref:System.InvalidOperationException> Klasse)  
   
-## Siehe auch  
- <xref:System.Array.Sort%2A?displayProperty=fullName>   
- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Auflistungen](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
- [For Each...Next\-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
+ [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

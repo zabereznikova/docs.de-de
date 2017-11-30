@@ -1,47 +1,47 @@
 ---
-title: "Mauseingabe in einer Windows Forms-Anwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, Mauseingabe"
+title: Mauseingabe in einer Windows Forms-Anwendung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb45f22a037b459556f6de2e8cda0e025b621686
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Mauseingabe in einer Windows Forms-Anwendung
-Windows Forms umfasst eine Vielzahl von Mausereignissen und zusätzliche Unterstützung für angepasste Mauscursor, Mauszeigererkennung und Drag & Drop\-Verhalten.  
+# <a name="mouse-input-in-a-windows-forms-application"></a>Mauseingabe in einer Windows Forms-Anwendung
+Windows Forms umfasst eine Vielzahl von Mausereignissen und zusätzliche Unterstützung für benutzerdefinierte Mauscursor, Mauserfassung und Drag & Drop-Verhalten.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Funktionsweise von Mauseingaben in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)  
- Stellt Informationen zu Mausereignissen sowie zum Abrufen aktueller Informationen und Systemeinstellungen für die Maus bereit.  
+ Enthält Informationen zu den Mausereignissen und zur Vorgehensweise beim Abrufen von aktuellen Informationen und Systemeinstellungen für die Maus.  
   
  [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)  
- Stellt Informationen zur Reihenfolge bereit, in der Mausereignisse eintreten, sowie dazu, wie Mausereignisse innerhalb bestimmter Steuerelemente ausgelöst werden.  
+ Enthält Informationen zur Reihenfolge, in der die Mausereignisse auftreten, und zur Vorgehensweise beim Auslösen der Mausereignisse innerhalb bestimmter Steuerelemente.  
   
- [Gewusst wie: Unterscheiden zwischen Klicks und Doppelklicks](../../../docs/framework/winforms/how-to-distinguish-between-clicks-and-double-clicks.md)  
- Veranschaulicht, wie inkompatible Aktionen durch einfaches Klicken oder Doppelklicken initiiert werden.  
+ [Vorgehensweise: Unterscheiden zwischen Klicks und Doppelklicks](../../../docs/framework/winforms/how-to-distinguish-between-clicks-and-double-clicks.md)  
+ Veranschaulicht, wie durch Einfachklicks und Doppelklicks inkompatible Aktionen initiiert werden.  
   
  [Mauszeiger in Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)  
- Beschreibt das Ändern des Mauscursors.  
+ Beschreibt, wie der Mauscursor geändert wird.  
   
  [Mauserfassung in Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
- Beschreibt Erkennen des Mauszeigers durch ein Steuerelement.  
+ Beschreibt, wie ein Steuerelement die Maus erfassen kann.  
   
- [Drag & Drop\-Funktionen in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
- Beschreibt die Implementierung des Drag & Drop\-Verhaltens.  
+ [Drag & Drop-Funktionen in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
+ Beschreibt, wie Drag & Drop-Verhalten implementiert wird.  
   
-## Verwandte Abschnitte  
- [Accessing the Mouse](../Topic/Accessing%20the%20Mouse%20\(Visual%20Basic\).md)  
- Listet Themen über den Mauszugriff in Visual Basic auf.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Zugreifen auf die Maus](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ Listet Themen zum Zugreifen auf die Maus mit Visual Basic auf.

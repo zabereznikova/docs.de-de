@@ -1,39 +1,31 @@
 ---
-title: Debuggen von Ausdrucksbaumstrukturen in Visual Studio (Visual Basic) | Microsoft-Dokumentation
+title: Debuggen von Ausdrucksbaumstrukturen in Visual Studio (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: efbd8c19947c45b3ba15ce7b574000d56526ef45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debuggen von Ausdrucksbaumstrukturen in Visual Studio (Visual Basic)
-Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren, beim Debuggen Ihrer Anwendung. Um einen schnellen Überblick über die Struktur der Ausdruck zu erhalten, können Sie die `DebugView` -Eigenschaft, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debuggen finden Sie unter [Debuggen in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Um den Inhalt von Ausdrucksbaumstrukturen, besser darstellen, die `DebugView` -Eigenschaft verwendet Visual Studio-Schnellansichten. Weitere Informationen finden Sie unter [erstellen Sie benutzerdefinierte Schnellansichten](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar. Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>So öffnen eine Schnellansicht für eine Ausdrucksbaumstruktur  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>So öffnen Sie eine Schnellansicht für eine Ausdrucksbaumstruktur  
   
-1.  Klicken Sie auf das Lupensymbol, das neben der `DebugView` -Eigenschaft einer Ausdrucksbaumstruktur in **DataTips**, **Überwachen** Fenster der **Auto** Fenster oder **lokal** Fenster.  
+1.  Klicken Sie auf das Lupensymbol, das in **DataTips** neben der `DebugView`-Eigenschaft einer Ausdrucksbaumstruktur, neben einem **Überwachungsfenster**, einem **Auto**- oder neben einem **Lokalfenster** angezeigt wird.  
   
      Eine Liste von Schnellansichten wird angezeigt.  
   
@@ -42,9 +34,9 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
  Jeder Ausdruckstyp wird in der Schnellansicht angezeigt, wie in den folgenden Abschnitten beschrieben.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>Namen von Variable werden mit dem Symbol "$" am Anfang angezeigt.</xref:System.Linq.Expressions.ParameterExpression>  
+ Namen von <xref:System.Linq.Expressions.ParameterExpression>-Variablen werden mit einem „$“-Symbol am Anfang angezeigt.  
   
- Wenn ein Parameter nicht über einen Namen verfügt, wird ihm einen automatisch generierten Name, z. B. `$var1` oder `$var2`.  
+ Wenn ein Parameter nicht über einen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `$var1` oder `$var2`.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -71,7 +63,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
      `$var1`  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- Für <xref:System.Linq.Expressions.ConstantExpression>Objekte, die ganzzahlige Werte, Zeichenfolgen, darstellen und `null`, wird der Wert der Konstante angezeigt.</xref:System.Linq.Expressions.ConstantExpression>  
+ Für <xref:System.Linq.Expressions.ConstantExpression>-Objekte, die ganzzahlige Werte, Zeichenfolgen und `null` darstellen, wird der Wert der Konstante angezeigt.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -98,7 +90,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
      10D  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Wenn der Typ des einem <xref:System.Linq.Expressions.BlockExpression>Objekt unterscheidet sich von dem Typ des letzten Ausdrucks im Block wird der Typ angezeigt, der `DebugInfo` Eigenschaft in spitzen Klammern (\< und >).</xref:System.Linq.Expressions.BlockExpression> Andernfalls den Typ des der <xref:System.Linq.Expressions.BlockExpression>Objekt wird nicht angezeigt.</xref:System.Linq.Expressions.BlockExpression>  
+ Wenn sich der Typ eines <xref:System.Linq.Expressions.BlockExpression>-Objekts vom Typ des letzten Ausdrucks im Block unterscheidet, wird der Typ in der `DebugInfo`-Eigenschaft in spitzen Klammern (\< und >) angezeigt. Andernfalls wird der Typ des <xref:System.Linq.Expressions.BlockExpression>-Objekts nicht angezeigt.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -132,9 +124,9 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
      `}`  
   
 ## <a name="lambdaexpression"></a>LambdaExpression.  
- <xref:System.Linq.Expressions.LambdaExpression>Objekte werden zusammen mit ihren Delegattypen angezeigt.</xref:System.Linq.Expressions.LambdaExpression>  
+ <xref:System.Linq.Expressions.LambdaExpression>-Objekte werden zusammen mit ihren Delegattypen angezeigt.  
   
- Wenn ein Lambda-Ausdruck nicht über einen Namen verfügt, wird ihm einen automatisch generierten Name, z. B. `#Lambda1` oder `#Lambda2`.  
+ Wenn ein Lambda-Ausdruck über keinen Namen verfügt, wird ihm ein automatisch generierter Name zugewiesen, z.B. `#Lambda1` oder `#Lambda2`.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -169,11 +161,11 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
      `}`  
   
 ## <a name="labelexpression"></a>LabelExpression  
- Bei Angabe ein Standardwerts für das <xref:System.Linq.Expressions.LabelExpression>Objekt ist, wird dieser Wert wird angezeigt, bevor die <xref:System.Linq.Expressions.LabelTarget>Objekt.</xref:System.Linq.Expressions.LabelTarget> </xref:System.Linq.Expressions.LabelExpression>  
+ Wenn Sie einen Standardwert für das <xref:System.Linq.Expressions.LabelExpression>-Objekt angeben, wird dieser Wert vor dem <xref:System.Linq.Expressions.LabelTarget>-Objekt angezeigt.  
   
- Die `.Label` -Token gibt den Anfang der Bezeichnung. Die `.LabelTarget` -Token gibt den Zielort des Ziels zu springen.  
+ Das `.Label`-Token gibt den Anfang der Bezeichnung an. Das `.LabelTarget`-Token gibt den Zielort an, zu dem gewechselt werden soll.  
   
- Wenn eine Bezeichnung nicht über einen Namen verfügt, wird ihm einen automatisch generierten Name, z. B. `#Label1` oder `#Label2`.  
+ Wenn eine Bezeichnung nicht über einen Namen verfügt, wird ihr ein automatisch generierter Name zugewiesen (z.B. `#Label1` oder `#Label2`).  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -220,8 +212,8 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
   
      `}`  
   
-## <a name="checked-operators"></a>Checked-Operatoren  
- Checked-Operatoren werden mit dem Symbol "#" vor dem Operator angezeigt. Der überprüfte Additionsoperator wird z. B. angezeigt, als `#+`.  
+## <a name="checked-operators"></a>Überprüfte Operatoren  
+ Überprüften Operatoren wird in der Ansicht das Symbol "#" vorangestellt. Der überprüfte Additionsoperator wird z.B. als `#+` angezeigt.  
   
 ### <a name="examples"></a>Beispiele  
   
@@ -248,6 +240,6 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen analysieren,
      `#(System.Int32)10D`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Debuggen in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Erstellen Sie benutzerdefinierte Schnellansichten](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
+ [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)

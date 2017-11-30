@@ -1,47 +1,29 @@
 ---
-title: "Verwendung der Iterationsvariablen in einem Lambda-Ausdruck möglicherweise unerwartete Ergebnisse | Microsoft-Dokumentation"
-ms.date: 2015-07-20
+title: "Die Verwendung der Iterationsvariablen in einem Lambdaausdruck kann zu unerwarteten Ergebnissen führen"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42324
 - bc42324
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC42324
+helpviewer_keywords: BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5b293ec344d816e40d369757fa4d11710b7ecd8d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fb707cd4e09a149d21b70bb0f998a40c7ed58b49
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Die Verwendung der Iterationsvariablen in einem Lambdaausdruck kann zu unerwarteten Ergebnissen führen
-Die Verwendung der Iterationsvariablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen. Stattdessen erstellen Sie eine lokale Variable innerhalb der Schleife, und weisen sie den Wert der Iterationsvariablen.  
+Verwendung der Iterationsvariablen in einem Lambdaausdruck möglicherweise unerwartete Ergebnisse. Stattdessen erstellen Sie eine lokale Variable innerhalb der Schleife, und weisen sie den Wert der Iterationsvariablen.  
   
- Diese Warnung wird angezeigt, wenn Sie eine Schleifeniterationsvariablen in einem Lambda-Ausdruck verwenden, die innerhalb der Schleife deklariert wird. Beispielsweise wird im folgenden Beispiel wird die Warnung angezeigt.  
+ Diese Warnung wird angezeigt, wenn Sie eine Schleifeniterationsvariablen in einem Lambdaausdruck verwenden, die innerhalb der Schleife deklariert wird. Im folgende Beispiel wird z. B. die Warnung angezeigt.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -69,7 +51,7 @@ Module Module1
 End Module  
 ```  
   
- Die `For` Schleife erstellt ein Array von Lambda-Ausdrücken, von denen jeder den Wert der Schleifenvariablen Iteration zurückgibt `i`. Bei der Auswertung von Lambda-Ausdrücke in der `For Each` -Schleife, die Sie erwarten können, um 0, 1, 2, 3 und 4 angezeigt, die nachfolgenden Werte finden Sie unter `i` in den `For` Schleife. Stattdessen sehen Sie den endgültigen Wert der `i` fünfmal angezeigt:  
+ Die `For` Schleife erstellt ein Array von Lambda-Ausdrücke, von denen jede den Wert der Schleifenvariablen Iteration gibt `i`. Bei der Auswertung von Lambda-Ausdrücke in der `For Each` -Schleife, die Sie erwarten können, um 0, 1, 2, 3 und 4 angezeigt, die nachfolgenden Werte finden Sie unter `i` in die `For` Schleife. Den endgültigen Wert der stattdessen angezeigt `i` fünfmal angezeigt:  
   
  `5`  
   
@@ -81,7 +63,7 @@ End Module
   
  `5`  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder Warnungen als Fehler behandeln, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC42324  
   

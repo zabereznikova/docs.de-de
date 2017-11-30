@@ -1,42 +1,46 @@
 ---
-title: "Gewusst wie: Ausschneiden mit einem Bereich | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Bereiche, Clipping"
-  - "Bereiche, Einschränken der Zeichenoberfläche"
+title: 'Gewusst wie: Ausschneiden mit einem Bereich'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- regions [Windows Forms], clipping
+- regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ausschneiden mit einem Bereich
-Der Clipbereich ist eine der Eigenschaften der <xref:System.Drawing.Graphics>\-Klasse.  Alle von einem bestimmten <xref:System.Drawing.Graphics>\-Objekt ausgeführten Zeichenvorgänge sind auf den Clipbereich des jeweiligen <xref:System.Drawing.Graphics>\-Objekts beschränkt.  Der Clipbereich kann durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A>\-Methode festgelegt werden.  
+# <a name="how-to-use-clipping-with-a-region"></a>Gewusst wie: Ausschneiden mit einem Bereich
+Eine der Eigenschaften von der <xref:System.Drawing.Graphics> Klasse ist die Clip-Bereich. Alle Zeichnungen geschieht, indem eine angegebene <xref:System.Drawing.Graphics> Objekt ist nur für den Ausschneidebereich dieses <xref:System.Drawing.Graphics> Objekt. Sie können die Clip-Bereich festlegen, durch Aufrufen der <xref:System.Drawing.Graphics.SetClip%2A> Methode.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Pfad erstellt, der aus einem einzelnen Polygon besteht.  Anschließend wird durch den Code ein auf diesem Pfad basierender Bereich erstellt.  Zunächst wird der Bereich an die <xref:System.Drawing.Graphics.SetClip%2A>\-Methode eines <xref:System.Drawing.Graphics>\-Objekts übergeben, und anschließend werden zwei Zeichenfolgen gezeichnet.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt einen Pfad, der ein einzelnes Polygon besteht. Anschließend erstellt der Code eine Region, basierend auf diesen Pfad. Die Region wird zum Übergeben der <xref:System.Drawing.Graphics.SetClip%2A> Methode eine <xref:System.Drawing.Graphics> -Objekt, und klicken Sie dann zwei Zeichenfolgen werden gezeichnet.  
   
- In der folgenden Abbildung sind die abgeschnittenen Zeichenfolgen dargestellt.  
+ Die folgende Abbildung zeigt die abgeschnittenen Zeichenfolgen.  
   
- ![Zuschneiden](../../../../docs/framework/winforms/advanced/media/clip1.png "clip1")  
+ ![Clip](../../../../docs/framework/winforms/advanced/media/clip1.png "clip1")  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.MiscLegacyTopics#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
   
-## Kompilieren des Codes  
- Das vorhergehende Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
-## Siehe auch  
- [Bereiche in GDI\+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Bereiche in GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [Verwenden von Bereichen](../../../../docs/framework/winforms/advanced/using-regions.md)

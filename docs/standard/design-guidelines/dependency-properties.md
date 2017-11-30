@@ -1,56 +1,54 @@
 ---
-title: "Abh&#228;ngigkeitseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Abhängigkeitseigenschaften"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 21e2026e7ce0f2dcf1ffc9a328b1bb9630cd8fbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Abh&#228;ngigkeitseigenschaften
-Eine Abhängigkeitseigenschaft \(DP\) ist eine reguläre Eigenschaft, die in einem Eigenschaftenspeicher nicht speichern, es in einer Variablen des Typs \(Feld\), z. B. der Wert gespeichert wird.  
+# <a name="dependency-properties"></a>Abhängigkeitseigenschaften
+Eine Abhängigkeitseigenschaft (DP) ist eine reguläre Eigenschaft, die den Wert in einen Eigenschaftenspeicher, z. B. in einer Variablen des Typs (Feld), speichern, statt speichert.  
   
- Eine angefügte Abhängigkeitseigenschaft ist eine Abhängigkeitseigenschaft, die als statischer Get\- und Set\-Methoden, die "Eigenschaften" Beschreiben von Beziehungen zwischen Objekten und deren Container darstellen \(z. B. die Position des ein `Button` \-Objekt, auf eine `Panel` Container\).  
+ Eine angehängte Abhängigkeitseigenschaft ist eine Art von Abhängigkeitseigenschaft modelliert als statische Get- und Set-Methoden, die "Eigenschaften" Beschreiben von Beziehungen zwischen Objekten und deren Container darstellen (z. B. die Position des eine `Button` -Objekt, auf eine `Panel` Container).  
   
- **✓ führen** die Abhängigkeitseigenschaften bereitstellen, sollten Sie die Eigenschaften, WPF\-Funktionen wie formatieren, Trigger, Datenbindung, Animationen, dynamische Ressourcen und Vererbung unterstützen.  
+ **Führen Sie ✓** die Abhängigkeitseigenschaften bereitstellen, sollten Sie die Eigenschaften, WPF-Funktionen wie formatieren, Trigger, Datenbindung, Animationen, dynamische Ressourcen und Vererbung unterstützen.  
   
-## Entwurf der Abhängigkeit\-Eigenschaft  
- **✓ führen** erben von <xref:System.Windows.DependencyObject>, oder einem seiner Untertypen, die bei der Implementierung von Abhängigkeitseigenschaften. Der Typ stellt eine äußerst effiziente Implementierung von einem Eigenschaftenspeicher und WPF\-Datenbindung automatisch unterstützt.  
+## <a name="dependency-property-design"></a>Entwerfen der Abhängigkeit-Eigenschaft  
+ **Führen Sie ✓** Vererben <xref:System.Windows.DependencyObject>, oder einem seiner Untertypen, bei der Implementierung von Abhängigkeitseigenschaften. Der Typ bietet eine äußerst effiziente Implementierung des einen Eigenschaftenspeicher und WPF-Datenbindung automatisch unterstützt.  
   
- **✓ führen** Geben Sie einen regulären CLR\-Eigenschaft und die öffentliche statische schreibgeschützte Feld Speichern von einer Instanz von <xref:System.Windows.DependencyProperty?displayProperty=fullName> für jede Abhängigkeitseigenschaft.  
+ **Führen Sie ✓** Geben Sie einen regulären CLR-Eigenschaft und eine öffentliche statische schreibgeschützte Feld Speichern von einer Instanz von <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> für jede Abhängigkeitseigenschaft.  
   
- **✓ führen** Implementieren von Abhängigkeitseigenschaften durch Aufrufen von Instanzmethoden <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=fullName> und <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=fullName>.  
+ **Führen Sie ✓** Implementieren von Abhängigkeitseigenschaften durch Aufrufen von Instanzmethoden <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> und <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **✓ führen** nennen Sie die statische\-abhängigkeitseigenschaftenfeld Breitzeichenformat den Namen der Eigenschaft mit dem "Property".  
+ **Führen Sie ✓** benennen statische Abhängigkeit Eigenschaftenfeld Breitzeichenformat den Namen der Eigenschaft mit dem "Property".  
   
  **X nicht** Standardwerte von Abhängigkeitseigenschaften explizit im Code festlegen; stattdessen in den Metadaten festgelegte.  
   
- Wenn Sie den Standardwert der Eigenschaft explizit festlegen, können Sie verhindern, dass diese Eigenschaft implizite Weise, wie z. B. einen Stil festgelegt wird.  
+ Wenn Sie den Standardwert der Eigenschaft explizit festlegen, können Sie verhindern, dass diese Eigenschaft implizite Weise, wie z. B. eine Formatvorlage festgelegt wird.  
   
- **X nicht** fügen Sie Code in die Eigenschaftenaccessoren als den standardmäßigen Code Zugriff auf das statische Feld.  
+ **X nicht** fügen Sie Code in den Eigenschaftenaccessoren als standard Code auf das statische Feld zugreifen.  
   
- Verwendet das statische Feld direkt, dass Code ausgeführt wird nicht da formatieren, wenn die Eigenschaft implizite Art und Weise, wie z. B. einen Stil festgelegt ist.  
+ Code ausgeführt wird nicht, wenn implizite Wege, wie z. B. eine Formatvorlage, die Eigenschaft festgelegt ist, da Formatierung verwendet das statische Feld direkt.  
   
- **X nicht** Verwenden von Abhängigkeitseigenschaften zum Speichern von Daten zu sicher. Auch private Abhängigkeitseigenschaften können öffentlich zugegriffen werden.  
+ **X nicht** Abhängigkeitseigenschaften verwenden, um sichere Daten zu speichern. Selbst bei privaten Abhängigkeitseigenschaften können öffentlich zugegriffen werden.  
   
-## Angefügte Abhängigkeitseigenschaft Property Design  
- Abhängigkeitseigenschaften, die im vorherigen Abschnitt beschriebenen stellen systeminterne Eigenschaften des deklarierenden Typs dar. zum Beispiel die `Text` \-Eigenschaft ist eine Eigenschaft des `TextButton`, die es deklariert wird. Eine besondere Art von Abhängigkeitseigenschaft ist das angehängte Abhängigkeitseigenschaft.  
+## <a name="attached-dependency-property-design"></a>Abhängigkeit angefügte Eigenschaftenentwurf  
+ Im vorherigen Abschnitt beschriebene Abhängigkeitseigenschaften darstellen systeminterne Eigenschaften des deklarierenden Typs; z. B. die `Text` Eigenschaft ist eine Eigenschaft des `TextButton`, die es deklariert wird. Eine spezielle Art von Abhängigkeitseigenschaft ist das angehängte Abhängigkeitseigenschaft.  
   
- Ein klassisches Beispiel für eine angefügte Eigenschaft ist die <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=fullName> Eigenschaft. Die Eigenschaft Spaltenposition Schaltfläche \(nicht des Datenblatts\) darstellt, aber dies ist nur relevant, wenn die Schaltfläche in einem Raster enthalten ist, weshalb es "Schaltflächen von Rastern angefügt ist".  
+ Ein klassisches Beispiel einer angefügten Eigenschaft ist die <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> Eigenschaft. Die Eigenschaft darstellt, Spaltenposition Schaltfläche (nicht des Datenblatts), aber es ist nur relevant, wenn die Schaltfläche in einem Raster enthalten ist, weshalb es "Schaltflächen von Rastern angefügt ist".  
   
 ```  
 <Grid>  
@@ -64,7 +62,7 @@ Eine Abhängigkeitseigenschaft \(DP\) ist eine reguläre Eigenschaft, die in ein
 </Grid>  
 ```  
   
- Die Definition einer angefügten Eigenschaft sieht größtenteils, der eine reguläre Abhängigkeit\-Eigenschaft, mit der Ausnahme, dass die Accessoren durch statische Get\- und Set\-Methoden dargestellt werden:  
+ Die Definition einer angefügten Eigenschaft sieht größtenteils wie eine reguläre Abhängigkeit-Eigenschaft, mit dem Unterschied, dass die Accessoren durch statische Get- und Set-Methoden dargestellt werden:  
   
 ```  
 public class Grid {  
@@ -86,27 +84,27 @@ public class Grid {
 }  
 ```  
   
-## Abhängigkeitsüberprüfung\-Eigenschaft  
- Eigenschaften implementieren häufig, was die Validierung aufgerufen wird. Validierungslogik ausgeführt wird, wenn versucht wird, den Wert einer Eigenschaft ändern.  
+## <a name="dependency-property-validation"></a>Abhängigkeitsüberprüfung-Eigenschaft  
+ Eigenschaften implementieren häufig auf, was die Validierung aufgerufen wird. Validierungslogik ausgeführt wird, wenn versucht wird, den Wert einer Eigenschaft zu ändern.  
   
  Leider können keine Abhängigkeit Eigenschaftenaccessoren beliebige Validierungscode enthalten. Stattdessen muss die Abhängigkeit Eigenschaft Validierungslogik während der Registrierung angegeben werden.  
   
- **X nicht** Abhängigkeit Eigenschaft Validierungslogik in den Eigenschaftenaccessoren abgelegt. Übergeben Sie stattdessen einen Validierungsrückruf zu `DependencyProperty.Register` Methode.  
+ **X nicht** Abhängigkeit Eigenschaft Validierungslogik in den Eigenschaftenaccessoren abgelegt. Stattdessen übergeben, um einen Validierungsrückruf `DependencyProperty.Register` Methode.  
   
-## Abhängigkeit Benachrichtigungen für Eigenschaftenänderung  
- **X nicht** Change Notification Logik in Abhängigkeit von Eigenschaftenaccessoren implementieren. Abhängigkeitseigenschaften verfügen über eine integrierte Änderung Benachrichtigungen\-Funktion, die verwendet werden muss, durch Angabe eines Rückrufs zum Ändern der <xref:System.Windows.PropertyMetadata>.  
+## <a name="dependency-property-change-notifications"></a>Abhängigkeit Eigenschaft Änderungsbenachrichtigungen  
+ **X nicht** Change Notification Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren. Abhängigkeitseigenschaften verfügen über eine integrierte Änderung Benachrichtigungen-Funktion, die verwendet werden muss, durch Angabe eines Rückrufs zum Ändern der <xref:System.Windows.PropertyMetadata>.  
   
-## Koersion des Eigenschaftswerts Abhängigkeit  
- Eigenschaft Umwandlung findet statt, wenn der angegebene Wert auf einen Eigenschaften\-Setter von Setter\-Methode geändert wird, bevor der Eigenschaftenspeicher tatsächlich geändert wird.  
+## <a name="dependency-property-value-coercion"></a>Abhängigkeit Eigenschaft-Wert-Umwandlung  
+ Eigenschaft Umwandlung findet statt, wenn der angegebene Wert auf einen Eigenschaften-Setter von Setter-Methode geändert wird, bevor der Eigenschaftenspeicher tatsächlich geändert wird.  
   
- **X nicht** erzwingungslogik in Abhängigkeit von Eigenschaftenaccessoren implementieren.  
+ **X nicht** Umwandlung Logik in den Eigenschaftenaccessoren Abhängigkeit implementieren.  
   
- Abhängigkeitseigenschaften verfügen über eine integrierte Koersion\-Funktion und es kann verwendet werden, durch einen Rückruf Umwandlung zur Angabe der `PropertyMetadata`.  
+ Abhängigkeitseigenschaften verfügen über eine integrierte Koersion-Funktion und kann verwendet werden, durch einen Rückruf Umwandlung zur Angabe der `PropertyMetadata`.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
- [Allgemeine Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+ [Allgemeiner Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)

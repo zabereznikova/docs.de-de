@@ -1,61 +1,58 @@
 ---
-title: "Skip While Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkipWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Skip While statement"
-  - "Skip While clause"
-  - "queries [Visual Basic], Skip While"
+title: Skip While-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkipWhile
+helpviewer_keywords:
+- Skip While statement [Visual Basic]
+- Skip While clause [Visual Basic]
+- queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Skip While Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="skip-while-clause-visual-basic"></a>Skip While-Klausel (Visual Basic)
 Überspringt Elemente in einer Auflistung, solange eine angegebene Bedingung `true` ist, und gibt anschließend die übrigen Elemente zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 Skip While expression  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
-|`expression`|Erforderlich.  Ein Ausdruck, der eine Bedingung darstellt, auf die Elemente getestet werden sollen.  Der Ausdruck muss einen `Boolean`\-Wert oder eine funktionale Entsprechung wie beispielsweise einen `Integer`\-Wert zurückgeben, um als `Boolean` ausgewertet zu werden.|  
+|---|---|  
+|`expression`|Erforderlich. Ein Ausdruck, der eine zu testende Bedingung an Elementen für darstellt. Der Ausdruck muss zurückgeben eine `Boolean` Wert oder eine funktionell gleichwertig, wie z. B. ein `Integer` als ausgewertet werden eine `Boolean`.|  
   
-## Hinweise  
- Mit der `Skip While`\-Klausel werden Elemente zu Beginn eines Abfrageergebnisses übersprungen, bis vom bereitgestellten `expression` der Wert `false` zurückgegeben wird  Sobald von `expression` der Wert `false` zurückgegeben wird, werden alle übrigen Elemente von der Abfrage zurückgegeben.  Für die übrigen Ergebnisse wird `expression` ignoriert.  
+## <a name="remarks"></a>Hinweise  
+ Die `Skip While` Klausel umgeht Elemente vom Anfang bis zum angegebenen eines Abfrageergebnisses `expression` gibt `false`. Nach dem `expression` gibt `false`, die Abfrage gibt alle übrigen Elemente zurück. Die `expression` wird für die restlichen Ergebnisse ignoriert.  
   
- Die `Skip While`\-Klausel unterscheidet sich von der `Where`\-Klausel insofern, als mit der `Where`\-Klausel alle Elemente, die eine bestimmte Bedingung nicht erfüllen, aus einer Abfrage ausgeschlossen werden können.  Mit der `Skip While`\-Klausel werden Elemente nur so lange ausgeschlossen, bis diese Bedingung zum ersten Mal nicht erfüllt wird.  Die `Skip While`\-Klausel ist besonders hilfreich, wenn Sie mit einem sortierten Abfrageergebnis arbeiten.  
+ Die `Skip While` Klausel unterscheidet sich von der `Where` -Klausel, die die `Where` -Klausel kann verwendet werden, sollen alle Elemente aus einer Abfrage, die nicht auf eine bestimmte Bedingung erfüllen. Die `Skip While` -Klausel schließt Elemente nur bis zum ersten Mal, die die Bedingung nicht erfüllt wird. Die `Skip While` -Klausel ist besonders hilfreich bei der Arbeit mit einer sortierten Abfrageergebnis.  
   
- Mithilfe der `Skip`\-Klausel können Sie eine bestimmte Anzahl von Ergebnissen zu Beginn eines Abfrageergebnisses überspringen.  
+ Sie können eine bestimmte Anzahl von Ergebnissen zu Beginn eines Abfrageergebnisses umgehen, indem Sie mit der `Skip` Klausel.  
   
-## Beispiel  
- Im folgenden Codebeispiel werden mit der `Skip While`\-Klausel Ergebnisse übersprungen, bis der erste Kunde aus den USA gefunden wird.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Codebeispiel wird mit der `Skip While` -Klausel, um Ergebnisse zu umgehen, bis die erste Kunden aus den USA gefunden wird.  
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## Siehe auch  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Skip Clause](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Abfragen](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Skip-Klausel](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Take While-Klausel](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -1,79 +1,80 @@
 ---
-title: "Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Sortiermodi"
-  - "DataGridView-Steuerelement [Windows Forms], Sortiermodus"
+title: Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], sort modes
+- DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a98e57d325fc7fd9413babb45d235cbb353a0c86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms
-<xref:System.Windows.Forms.DataGridView>\-Spalten verfügen über drei Sortiermodi.  Der Sortiermodus für die jeweiligen Spalten wird durch die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschaft der Spalte bestimmt, die auf einen der folgenden Werte für die <xref:System.Windows.Forms.DataGridViewColumnSortMode>\-Enumeration festgelegt werden kann.  
+# <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms
+<xref:System.Windows.Forms.DataGridView>Spalten verfügen über drei Sortiermodi. Der Sortiermodus für jede Spalte wird angegeben, über die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> -Eigenschaft der Spalte, die auf eine der folgenden festgelegt werden kann <xref:System.Windows.Forms.DataGridViewColumnSortMode> Enumerationswerte.  
   
-|`DataGridViewColumnSortMode`\-Wert|Beschreibung|  
-|----------------------------------------|------------------|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode>|Die Vorgabe für Textfeldspalten.  Sofern keine Spaltenheader zur Auswahl verwendet werden, wird durch Klicken auf den Spaltenheader die <xref:System.Windows.Forms.DataGridView> automatisch nach dieser Spalte sortiert und die Sortierreihenfolge durch ein Symbol angezeigt.|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode>|Die Vorgabe für Nicht\-Textfeldspalten.  Sie können diese Spalte zwar programmgesteuert sortieren, da sie jedoch nicht zum Sortieren vorgesehen ist, ist kein Platz für das Sortiersymbol reserviert.|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode>|Sie können diese Spalte programmgesteuert sortieren, wobei Platz für das Sortiersymbol reserviert ist.|  
+|`DataGridViewColumnSortMode`-Wert|Beschreibung|  
+|----------------------------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Die Standardeinstellung für Spalten von Text im Feld. Wenn die Spaltenheader für die Auswahl verwendet werden, automatisch Sie auf die Spaltenüberschrift sortiert die <xref:System.Windows.Forms.DataGridView> nach dieser Spalte und zeigt ein Symbol, der die Sortierreihenfolge angibt.|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Die Standardeinstellung für Spalten nicht – Textfeld. Sie können diese Spalte programmgesteuert sortieren. Allerdings sind sie nicht für die Sortierung, vorgesehen, sodass kein Speicherplatz für das Sortiersymbol reserviert ist.|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>|Sie können diese Spalte programmgesteuert sortieren, und Platz für das Sortiersymbol reserviert ist.|  
   
- Möglicherweise möchten Sie den Sortiermodus für eine Spalte ändern, die standardmäßig auf <xref:System.Windows.Forms.DataGridViewColumnSortMode> festgelegt ist, wenn diese Spalte Werte enthält, die sinnvoll sortiert werden können.  Wenn Sie beispielsweise über eine Datenbankspalte mit Zahlen verfügen, die den Elementzustand darstellen, können Sie diese Zahlen als entsprechende Symbole anzeigen, indem Sie eine Bildspalte an die Datenbankspalte binden.  Anschließend können Sie die numerischen Zellenwerte in Bildanzeigewerte in einem Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>\-Ereignis ändern.  In diesem Fall können die Benutzer die Spalte sortieren, wenn Sie die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewColumnSortMode> festlegen.  Durch das automatische Sortieren können die Benutzer Elemente mit demselben Zustand gruppieren, auch wenn die den Zahlen entsprechenden Zustände keine natürliche Abfolge aufweisen.  Ein weiteres Beispiel, bei dem das automatische Sortieren zum Gruppieren von Elementen mit demselben Zustand hilfreich ist, sind Kontrollkästchenspalten.  
+ Möglicherweise möchten Sie den Sortiermodus für eine Spalte zu ändern, die standardmäßig <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable> Werte enthalten, die sinnvoll sortiert werden können. Beispielsweise haben eine Datenbankspalte mit Zahlen, die Elementzustände darstellen, können Sie diese Zahlen als entsprechende Symbole anzeigen, indem binden eine Image-Spalte in der Datenbankspalte. Anschließend können Sie die numerischen Zellenwerte ändern, in der Image-Anzeigewerte in einem Ereignishandler für das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis. In diesem Fall Festlegen der <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaft <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic> können die Benutzer auf die Spalte zu sortieren. Automatische Sortierung können Ihre Benutzer die Gruppierung der Elemente, die den gleichen Status aufweisen, selbst wenn die Zahlen entsprechenden Zustände keine natürliche Abfolge. Kontrollkästchenspalten sind ein weiteres Beispiel, in denen eignet sich automatische Sortierung zum Gruppieren von Elementen im gleichen Zustand.  
   
- Sie können eine <xref:System.Windows.Forms.DataGridView> programmgesteuert anhand der Werte in einer oder mehreren Spalten sortieren, unabhängig davon, welcher <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> eingestellt ist.  Das programmgesteuerte Sortieren bietet sich an, wenn Sie Ihre eigene Benutzeroberfläche \(UI\) zum Sortieren bereitstellen oder benutzerdefiniertes Sortieren implementieren möchten.  Eine eigene Sortierbenutzeroberfläche ist beispielsweise hilfreich, wenn Sie über den <xref:System.Windows.Forms.DataGridView>\-Auswahlmodus die Spaltenheaderauswahl aktivieren.  Auch wenn die Spaltenheader nicht zum Sortieren verwendet werden können, soll in den Headern dennoch das entsprechende Sortiersymbol angezeigt werden. In diesem Fall würden Sie die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschaft auf <xref:System.Windows.Forms.DataGridViewColumnSortMode> festlegen.  
+ Sie sortieren können ein <xref:System.Windows.Forms.DataGridView> programmgesteuert durch die Werte in einer beliebigen Spalte oder in mehreren Spalten, unabhängig von der <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Einstellungen. Programmgesteuertes Sortieren ist hilfreich, wenn Sie eine eigene Benutzeroberfläche (UI) für die Sortierung bieten möchten oder wenn Sie benutzerdefinierte Sortierung implementieren möchten. Die Bereitstellung eine eigenen Benutzeroberfläche Sortierung nützlich ist, z. B. beim Festlegen der <xref:System.Windows.Forms.DataGridView> Auswahlmodus Spaltenheaderauswahl aktivieren. In diesem Fall Obwohl Spaltenheader für die Sortierung verwendet werden können, dennoch sollten Sie der Header an die entsprechende Sortiersymbol angezeigt würde die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaft <xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>.  
   
- In Spalten, für die ein programmgesteuerter Sortiermodus festgelegt ist, wird nicht automatisch ein Sortiersymbol angezeigt.  Für diese Spalten müssen Sie das Symbol selbst anzeigen, indem Sie die <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=fullName>\-Eigenschaft festlegen.  Dies ist erforderlich, wenn Sie die benutzerdefinierte Sortierung flexibel anpassen möchten.  Wenn Sie beispielsweise die <xref:System.Windows.Forms.DataGridView> nach mehreren Spalten sortieren möchten, ist es unter Umständen angebracht, mehrere Sortiersymbole oder gar kein Sortiersymbol anzuzeigen.  
+ Legen Sie auf den programmatischen Sortiermodus Spalten werden nicht automatisch ein Sortiersymbol angezeigt. Für diese Spalten, Sie müssen das Symbol selbst anzeigen durch Festlegen der <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType> Eigenschaft. Dies ist erforderlich, wenn Sie Flexibilität in benutzerdefinierten sortieren möchten. Wenn Sie sortieren, z. B. die <xref:System.Windows.Forms.DataGridView> nach mehreren Spalten möchten Sie möglicherweise mehrere Sortiersymbole oder gar kein Sortiersymbol anzuzeigen.  
   
- Auch wenn Sie eine <xref:System.Windows.Forms.DataGridView> programmgesteuert nach jeder beliebigen Spalte sortieren können, enthalten einige Spalten, z. B. Schaltflächenspalten, möglicherweise keine Werte, die sinnvoll sortiert werden können.  Bei diesen Spalten wird durch die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschafteneinstellung <xref:System.Windows.Forms.DataGridViewColumnSortMode> angegeben, dass sie grundsätzlich nicht zum Sortieren verwendet werden, d. h., im Header muss kein Platz für das Sortiersymbol reserviert werden.  
+ Obwohl Sie programmgesteuert sortieren können ein <xref:System.Windows.Forms.DataGridView> nach einer beliebigen Spalte einige Spalten, z. B. Schaltflächenspalten, möglicherweise keine Werte, die sinnvoll sortiert werden können. Für diese Spalten ein <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> eigenschaftseinstellung <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable> gibt an, dass es nie für die Sortierung, verwendet werden, daher keine Notwendigkeit zum Reservieren von Speicherplatz in der Kopfzeile für das Sortiersymbol besteht.  
   
- Wenn ein <xref:System.Windows.Forms.DataGridView> sortiert wird, können Sie sowohl die Sortierspalte als auch die Sortierreihenfolge bestimmen, indem Sie die Werte der <xref:System.Windows.Forms.DataGridView.SortedColumn%2A>\-Eigenschaft und der <xref:System.Windows.Forms.DataGridView.SortOrder%2A>\-Eigenschaft festlegen.  Diese Werte sind nach einem benutzerdefinierten Sortiervorgang nicht mehr von Bedeutung.  Weitere Informationen über benutzerdefiniertes Sortieren finden Sie weiter unten in diesem Thema unter "Benutzerdefiniertes Sortieren".  
+ Wenn eine <xref:System.Windows.Forms.DataGridView> ist sortiert, können Sie bestimmen die Sortierspalte und die Sortierreihenfolge Überprüfung von Werten der <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> und <xref:System.Windows.Forms.DataGridView.SortOrder%2A> Eigenschaften. Diese Werte sind nach einem benutzerdefinierten Sortiervorgang ohne Bedeutung. Weitere Informationen zum benutzerdefinierten Sortieren finden Sie unter benutzerdefinierte Sortierung im Abschnitt weiter unten in diesem Thema.  
   
- Wenn ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement, das sowohl gebundene als auch ungebundene Spalten enthält, sortiert wird, bleiben die Werte in den ungebundenen Spalten nicht automatisch erhalten.  Um diese Werte zu erhalten, müssen Sie den virtuellen Modus implementieren, indem Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft auf `true` festlegen und das <xref:System.Windows.Forms.DataGridView.CellValueNeeded>\-Ereignis und das <xref:System.Windows.Forms.DataGridView.CellValuePushed>\-Ereignis behandeln.  Weitere Informationen finden Sie unter [Gewusst wie: Implementieren des virtuellen Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).  Das Sortieren nach ungebundenen Spalten im Gebunden\-Modus wird nicht unterstützt.  
+ Wenn ein <xref:System.Windows.Forms.DataGridView> Steuerelement mit gebundene und ungebundene Spalten sortiert wird, die Werte in den ungebundenen Spalten nicht automatisch beibehalten werden. Um diese Werte zu gewährleisten, müssen Sie den virtuellen Modus implementieren, durch Festlegen der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und Behandeln von der <xref:System.Windows.Forms.DataGridView.CellValueNeeded> und <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignisse. Weitere Informationen finden Sie unter [wie: Implementieren des virtuellen Modus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Sortieren nach ungebundenen Spalten im gebundenen Modus wird nicht unterstützt.  
   
-## Programmgesteuertes Sortieren  
- Sie können eine <xref:System.Windows.Forms.DataGridView> programmgesteuert sortieren, indem Sie ihre <xref:System.Windows.Forms.DataGridView.Sort%2A>\-Methode aufrufen.  
+## <a name="programmatic-sorting"></a>Programmgesteuertes Sortieren  
+ Sie sortieren können ein <xref:System.Windows.Forms.DataGridView> programmgesteuert durch Aufrufen seiner <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode.  
   
- Die `Sort(DataGridViewColumn,ListSortDirection)`\-Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>\-Methode verwendet einen <xref:System.Windows.Forms.DataGridViewColumn>\-Enumerationswert und einen <xref:System.ComponentModel.ListSortDirection>\-Enumerationswert als Parameter.  Diese Überladung ist hilfreich, wenn Sie nach Spalten mit Werten sortieren, die sinnvoll sortiert werden können, die Sie jedoch nicht für das automatische Sortieren konfigurieren möchten.  Wenn Sie diese Überladung aufrufen und in einer Spalte mit dem <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>\-Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode?displayProperty=fullName> übergeben, werden die <xref:System.Windows.Forms.DataGridView.SortedColumn%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGridView.SortOrder%2A>\-Eigenschaft automatisch festgelegt, und das entsprechende Sortiersymbol wird im Spaltenheader angezeigt.  
-  
-> [!NOTE]
->  Wenn das <xref:System.Windows.Forms.DataGridView>\-Steuerelement durch Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft an eine externe Datenquelle gebunden ist, kann die überladene `Sort(DataGridViewColumn,ListSortDirection)`\-Methode nicht für ungebundene Spalten verwendet werden.  Wenn die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaft auf `true` festgelegt ist, können Sie diese Überladung außerdem nur für gebundene Spalten aufrufen.  Um zu bestimmen, ob eine Spalte datengebunden ist, überprüfen Sie den <xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A>\-Eigenschaftswert.  Das Sortieren von ungebundenen Spalten im gebundenen Modus wird nicht unterstützt.  
-  
-## Benutzerdefiniertes Sortieren  
- Sie können <xref:System.Windows.Forms.DataGridView> anpassen, indem Sie die `Sort(IComparer)`\-Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>\-Methode verwenden oder das <xref:System.Windows.Forms.DataGridView.SortCompare>\-Ereignis behandeln.  
-  
- Die überladene `Sort(IComparer)`\-Methode verwendet eine Instanz einer Klasse, die die <xref:System.Collections.IComparer>\-Schnittstelle als Parameter implementiert.  Diese Überladung ist hilfreich, wenn Sie benutzerdefiniertes Sortieren bereitstellen, z. B. wenn die Werte in einer Spalte keine natürliche Sortierreihenfolge aufweisen oder die natürliche Sortierreihenfolge ungeeignet ist.  In diesem Fall können Sie keine automatische Sortierung verwenden, möchten es den Benutzern aber möglicherweise trotzdem ermöglichen, durch Klicken auf die Spaltenheader zu sortieren.  Sie können diese Überladung in einem Handler für das <xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick>\-Ereignis aufrufen, wenn Sie keine Spaltenheader zur Auswahl verwenden.  
+ Die `Sort(DataGridViewColumn,ListSortDirection)` Überladung von der <xref:System.Windows.Forms.DataGridView.Sort%2A> -Methode übernimmt ein <xref:System.Windows.Forms.DataGridViewColumn> und ein <xref:System.ComponentModel.ListSortDirection> -Enumerationswert als Parameter. Diese Überladung ist hilfreich beim Sortieren nach Spalten mit Werten, die sinnvoll sortiert werden können, die aber nicht möchten, konfigurieren Sie für die automatische Sortierung. Wenn Sie diese Überladung aufrufen, und übergeben Sie eine Spalte mit einer <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaftswert <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>, die <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> und <xref:System.Windows.Forms.DataGridView.SortOrder%2A> Eigenschaften werden automatisch festgelegt und das entsprechende Sortiersymbol wird in der Kopfzeile der Spalte angezeigt.  
   
 > [!NOTE]
->  Die überladene `Sort(IComparer)`\-Methode funktioniert nur, wenn das <xref:System.Windows.Forms.DataGridView>\-Steuerelement nicht an eine externe Datenquelle gebunden ist und der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaftswert `false` lautet.  Zum Anpassen der Sortierung für Spalten, die an eine externe Datenquelle gebunden sind, müssen Sie die von der Datenquelle bereitgestellten Sortiervorgänge verwenden.  Im virtuellen Modus müssen Sie Ihre eigenen Sortiervorgänge für ungebundene Spalten bereitstellen.  
+>  Wenn die <xref:System.Windows.Forms.DataGridView> Steuerelement an eine externe Datenquelle gebunden ist, durch Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A> -Eigenschaft, die `Sort(DataGridViewColumn,ListSortDirection)` methodenüberladung funktioniert nicht für ungebundene Spalten. Darüber hinaus, wenn die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true`, rufen Sie diese Überladung nur bei gebundenen Spalten. Um zu bestimmen, ob eine Spalte datengebunden ist, überprüfen Sie die <xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A> Eigenschaftswert. Sortieren von ungebundenen Spalten im gebundenen Modus wird nicht unterstützt.  
   
- Zur Verwendung der überladenen `Sort(IComparer)`\-Methode müssen Sie Ihre eigene Klasse erstellen, die die <xref:System.Collections.IComparer>\-Schnittstelle implementiert.  Für diese Schnittstelle ist es erforderlich, dass Sie die <xref:System.Collections.IComparer.Compare%2A?displayProperty=fullName>\-Methode implementieren, an die <xref:System.Windows.Forms.DataGridViewRow>\-Objekte von der <xref:System.Windows.Forms.DataGridView> als Eingabe übergeben werden, wenn die überladene `Sort(IComparer)`\-Methode aufgerufen wird.  Dadurch können Sie die richtige Zeilensortierung anhand der Werte in den Spalten berechnen.  
+## <a name="custom-sorting"></a>Benutzerdefinierte Sortierung  
+ Sie können anpassen, <xref:System.Windows.Forms.DataGridView> mithilfe der `Sort(IComparer)` Überladung von der <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode oder durch das Behandeln der <xref:System.Windows.Forms.DataGridView.SortCompare> Ereignis.  
   
- Die überladene `Sort(IComparer)`\-Methode legt die <xref:System.Windows.Forms.DataGridView.SortedColumn%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGridView.SortOrder%2A>\-Eigenschaft nicht fest. Daher müssen Sie stets die <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=fullName>\-Eigenschaft festlegen, damit das Sortiersymbol angezeigt wird.  
-  
- Alternativ zur überladenen `Sort(IComparer)`\-Methode können Sie benutzerdefiniertes Sortieren bereitstellen, indem Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.SortCompare>\-Ereignis implementieren.  Dieses Ereignis tritt ein, wenn Benutzer auf die Header von Spalten klicken, die für automatisches Sortieren konfiguriert wurden, oder wenn Sie die `Sort(DataGridViewColumn,ListSortDirection)`\-Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>\-Methode aufrufen.  Da das Ereignis für jedes Zeilenpaar im Steuerelement auftritt, können Sie die richtige Reihenfolge berechnen.  
+ Die `Sort(IComparer)` methodenüberladung akzeptiert eine Instanz einer Klasse, die implementiert die <xref:System.Collections.IComparer> -Schnittstelle als Parameter. Diese Überladung ist hilfreich, wenn Sie benutzerdefinierte Sortierung bereitstellen möchten; Wenn die Werte in einer Spalte nicht keine natürliche Sortierreihenfolge verfügen oder wenn die natürliche Sortierreihenfolge ist beispielsweise nicht geeignet. In diesem Fall können Sie keine automatische Sortierung, allerdings sollten Sie immer noch die Benutzer durch Klicken auf die Spaltenüberschriften sortieren. Sie können diese Überladung aufrufen, in einen Handler für das <xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick> -Ereignis, wenn Sie keine Spaltenheader zur Auswahl verwenden.  
   
 > [!NOTE]
->  Das <xref:System.Windows.Forms.DataGridView.SortCompare>\-Ereignis tritt nicht ein, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft festgelegt ist oder der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>\-Eigenschaftswert `true` lautet.  
+>  Die `Sort(IComparer)` methodenüberladung funktioniert nur, wenn die <xref:System.Windows.Forms.DataGridView> Steuerung nicht an eine externe Datenquelle gebunden ist und die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaftswert ist `false`. Zum Anpassen der Sortierung für Spalten, die an eine externe Datenquelle gebunden ist, müssen Sie die von der Datenquelle bereitgestellten Sortiervorgänge verwenden. Im virtuellen Modus müssen Sie eigene Sortieroperationen für ungebundene Spalten angeben.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=fullName>   
- [Sortieren von Daten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)   
- [Gewusst wie: Festlegen der Sortierungsmodi für Spalten im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)   
- [Gewusst wie: Anpassen der Sortierung im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+ Verwenden der `Sort(IComparer)` methodenüberladung, müssen Sie eine eigene Klasse, die implementiert erstellen die <xref:System.Collections.IComparer> Schnittstelle. Für diese Schnittstelle muss Ihre Klasse implementiert die <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> Methode, zu dem die <xref:System.Windows.Forms.DataGridView> übergibt <xref:System.Windows.Forms.DataGridViewRow> Objekte als Eingabe, wenn die `Sort(IComparer)` -methodenüberladung aufgerufen wird. Mit dieser Option können Sie berechnen, die richtige Zeile Reihenfolge basierend auf den Werten in einer beliebigen Spalte.  
+  
+ Die `Sort(IComparer)` methodenüberladung wird nicht festgelegt. die <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> und <xref:System.Windows.Forms.DataGridView.SortOrder%2A> Eigenschaften, sodass immer festgelegt werden muss die <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType> Eigenschaft, um das Sortiersymbol anzuzeigen.  
+  
+ Als Alternative zu der `Sort(IComparer)` methodenüberladung, bieten, da Sie benutzerdefinierte Sortierung durch die Implementierung eines Handlers für das <xref:System.Windows.Forms.DataGridView.SortCompare> Ereignis. Dieses Ereignis tritt auf, wenn Benutzer auf die Header der Spalten, die für die automatische Sortierung oder beim Aufrufen konfiguriert die `Sort(DataGridViewColumn,ListSortDirection)` Überladung von der <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode. Das Ereignis tritt auf, für jedes Paar von Zeilen im Steuerelement, sodass Sie die richtige Reihenfolge berechnen.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.DataGridView.SortCompare> Ereignis tritt nicht auf bei der <xref:System.Windows.Forms.DataGridView.DataSource%2A> festgelegt wird oder wenn die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaftswert ist `true`.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>  
+ [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+ [Gewusst wie: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

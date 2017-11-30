@@ -1,64 +1,57 @@
 ---
-title: "Implements Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ImplementsClause"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "interface implementation, reimplementation"
-  - "interface members, reimplementation"
-  - "interface members, Implements keyword"
-  - "interface members"
-  - "members, reimplementation"
-  - "interface implementation, Implements keyword"
-  - "interface members, implementing"
-  - "Implements keyword"
-  - "Implements statement, about Implements"
-  - "members, implementing"
-  - "members, Implements keyword"
-  - "reimplementation"
+title: Implements-Klausel (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ImplementsClause
+helpviewer_keywords:
+- interface implementation [Visual Basic], reimplementation
+- interface members [Visual Basic], reimplementation
+- interface members [Visual Basic], Implements keyword
+- interface members
+- members [Visual Basic], reimplementation
+- interface implementation [Visual Basic], Implements keyword
+- interface members [Visual Basic], implementing
+- Implements keyword [Visual Basic]
+- Implements statement [Visual Basic], about Implements
+- members [Visual Basic], implementing
+- members [Visual Basic], Implements keyword
+- reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73f66eda29e37fda15b4c838da5a0458684131da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implements Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
+Gibt an, dass die Implementierung für einen in einer Schnittstelle definierten Member einer Klasse oder Struktur-Element bereitstellt.  
+  
+## <a name="remarks"></a>Hinweise  
+Die `Implements` Schlüsselwort ist nicht identisch mit der [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md). Verwenden Sie die `Implements` Anweisung, um anzugeben, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, und klicken Sie dann für jedes Element Sie verwenden die `Implements` Schlüsselwort an, welche Schnittstelle und welcher Member implementiert.
 
-Kennzeichnet Klassen oder Strukturmember, die die Implementierung für einen in einer Schnittstelle definierten Member enthalten.  
+Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss sie enthalten die `Implements` Anweisung unmittelbar nach der [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) oder [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md), und sie müssen alle Member implementiert durch die Schnittstelle definiert.
+
+## <a name="reimplementation"></a>Neuimplementierung  
+In einer abgeleiteten Klasse kann einen Schnittstellenmember erneut implementieren, den die Basisklasse bereits implementiert wurde. Dies unterscheidet sich von überschreiben die Member der Basisklasse in folgender Hinsicht:
+
+- Member der Basisklasse muss nicht [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) , um erneut implementiert werden.
+- Sie können das Element mit einem anderen Namen erneut implementieren.
+
+Die `Implements` -Schlüsselwort kann in den folgenden Kontexten verwendet werden:
+- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Hinweise  
- Das `Implements`\-Schlüsselwort ist nicht mit der [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md) identisch.  Mit der `Implements`\-Anweisung geben Sie an, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert. Für jeden Member geben Sie dann mit dem `Implements`\-Schlüsselwort an, welche Schnittstelle und welcher Member implementiert werden.  
-  
- Wenn eine Klasse oder eine Struktur eine Schnittstelle implementiert, muss die `Implements`\-Anweisung direkt auf die [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) oder die [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) folgen und alle durch die Schnittstelle definierten Member implementieren.  
-  
-## Erneute Implementierung  
- In einer abgeleiteten Klasse können Sie einen Schnittstellenmember, der bereits von der Basisklasse implementiert wurde, erneut implementieren.  Dieses Verfahren unterscheidet sich in folgenden Punkten vom Überschreiben des Basisklassenmembers:  
-  
--   Der Basisklassenmember muss nicht [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) sein, um erneut implementiert werden zu können.  
-  
--   Sie können den Member mit einem anderen Namen erneut implementieren.  
-  
- Das `Implements`\-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
-  
- [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-## Siehe auch  
- [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)

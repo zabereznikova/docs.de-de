@@ -1,55 +1,56 @@
 ---
-title: "Verwenden von Anwendungseinstellungen und Benutzereinstellungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anwendungseinstellungen [Windows Forms], Gewusst wie-Themen"
-  - "Benutzereinstellungen [Windows Forms]"
+title: Verwenden von Anwendungseinstellungen und Benutzereinstellungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user settings [Windows Forms]
+- application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Verwenden von Anwendungseinstellungen und Benutzereinstellungen
-Seit .NET Framework 2.0 können Sie Werte erstellen und verwenden, die zwischen Anwendungsausführungssitzungen erhalten bleiben.  Diese Werte werden als *Einstellungen* bezeichnet.  Einstellungen können Benutzereinstellungen oder wichtige Informationen sein, die von der Anwendung benötigt werden.  Sie können beispielsweise eine Reihe von Einstellungen erstellen, in denen Benutzereinstellungen für das Farbschema einer Anwendung gespeichert sind.  Alternativ können Sie die Verbindungszeichenfolge speichern, in der die von der Anwendung verwendete Datenbank angegeben ist.  Mithilfe von Einstellungen können Sie sowohl Informationen beibehalten, die wichtig für die Anwendung außerhalb des Codes sind, als auch Profile erstellen, in denen die Einstellungen einzelner Benutzer gespeichert sind.  
+# <a name="using-application-settings-and-user-settings"></a>Verwenden von Anwendungseinstellungen und Benutzereinstellungen
+Beginnend mit .NET Framework 2.0, können Sie erstellen und Zugriff auf Werte, die zwischen anwendungssitzungen-Ausführung beibehalten werden. Diese Werte werden als bezeichnet *Einstellungen*. Einstellungen können benutzereinstellungen darstellen, oder wertvoller Informationen, die Anwendung verwenden muss. Sie können z. B. eine Reihe von Einstellungen erstellen, die benutzereinstellungen für das Farbschema für eine Anwendung zu speichern. Oder Sie können die Verbindungszeichenfolge, die eine Datenbank an, die von der Anwendung verwendeten gespeichert werden. Einstellungen zulassen, dass Sie sowohl Informationen beibehalten, die für die Anwendung außerhalb des Codes und zum Erstellen von Profilen, die Einstellungen für die einzelnen Benutzern Speichern von entscheidender Bedeutung ist.  
   
- In den Themen in diesem Abschnitt wird beschrieben, wie Einstellungen zur Entwurfszeit und Laufzeit verwendet werden.  
+ Die Themen in diesem Abschnitt wird beschrieben, wie Einstellungen zur Entwurfszeit und Laufzeit.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Gewusst wie: Erstellen einer neuen Einstellung zur Entwurfszeit](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
- Erläutert die Verwendung von Visual Studio zum Erstellen einer neuen Einstellung für eine Anwendung.  
+ Es wird erläutert, wie Visual Studio verwenden, um eine neue Einstellung für eine Anwendung zu erstellen.  
   
  [Gewusst wie: Ändern des Werts einer vorhandenen Einstellung zur Entwurfszeit](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
- Beschreibt die Verwendung von Visual Studio zum Ändern des Wertes einer vorhandenen Einstellung.  
+ Beschreibt, wie Visual Studio verwenden, um den Wert einer vorhandenen Einstellung zu ändern.  
   
  [Gewusst wie: Ändern des Werts einer Einstellung zwischen Anwendungssitzungen](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- Beschreibt ausführlich das Ändern des Wertes einer Einstellung in einer kompilierten Anwendung zwischen Anwendungssitzungen.  
+ Erläutert, wie Sie den Wert einer Einstellung in einer kompilierten Anwendung zwischen anwendungssitzungen zu ändern.  
   
- [Gewusst wie: Lesen von Einstellungen zur Laufzeit mit C\#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [Gewusst wie: Lesen von Einstellungen zur Laufzeit mit C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
   
- Beschreibt die Verwendung von Code zum Lesen von Einstellungen mit C\#.  
+ Beschreibt, wie Code verwenden, um die Einstellungen mit den C#-gelesen werden.  
   
- [Gewusst wie: Schreiben von Benutzereinstellungen zur Laufzeit mit C\#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Gewusst wie: Schreiben von Benutzereinstellungen zur Laufzeit mit C#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- Erläutert die Verwendung von Code, um die Werte der Benutzereinstellungen mit C\# zu schreiben und zu speichern.  
+ Erläutert, wie Sie per Code schreiben, und speichern Sie die Werte der benutzereinstellungen für mit c#.  
   
- [Gewusst wie: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C\#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Gewusst wie: Hinzufügen mehrerer Gruppen von Einstellungen zur Anwendung in C#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- Beschreibt ausführlich das Hinzufügen mehrerer Gruppen von Einstellungen zu einer Anwendung mit C\#.  
+ Erläutert, wie Sie mehrere Sätze von Einstellungen zu einer Anwendung mit c# hinzufügen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anwendungseinstellungen für Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

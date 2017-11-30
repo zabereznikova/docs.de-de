@@ -1,66 +1,69 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Steuerelementen ohne Benutzeroberfl&#228;che zu Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NonVisualSelection"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Steuerelemente [Windows Forms], Nicht sichtbar"
-  - "Unsichtbare Steuerelemente"
-  - "Nicht sichtbare Steuerelemente"
-  - "Windows Forms-Steuerelemente, Hinzufügen zum Formular"
-  - "Windows Forms-Steuerelemente, Nicht sichtbar"
+title: "Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: NonVisualSelection
+helpviewer_keywords:
+- invisible controls [Windows Forms]
+- Windows Forms controls, adding to form
+- controls [Windows Forms], nonvisual
+- Windows Forms controls, nonvisual
+- nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen von Steuerelementen ohne Benutzeroberfl&#228;che zu Windows&#160;Forms
-Durch ein nicht sichtbares Steuerelement \(bzw. eine Komponente\) werden der Anwendung Funktionen hinzugefügt.  Komponenten stellen dem Benutzer im Gegensatz zu anderen Steuerelementen keine Benutzeroberfläche bereit und müssen daher auch nicht auf der Oberfläche des Windows Forms\-Designers angezeigt werden.  Wenn einem Formular eine Komponente hinzugefügt wird, wird im Windows Forms\-Designer im unteren Formularbereich eine Leiste mit veränderbarer Größe angezeigt, in der alle Komponenten angezeigt werden.  Nachdem ein Steuerelement der Komponentenleiste hinzugefügt wurde, können Sie die Komponente auswählen und ihre Eigenschaften genauso wie für jedes andere Steuerelement im Formular festlegen.  
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
+Nicht sichtbare Steuerelement (bzw. eine Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer keine und müssen daher nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Sobald ein Steuerelement auf der Komponentenleiste hinzugefügt wurde, können Sie wählen Sie die Komponente und seine Eigenschaften festlegen, wie jedem anderen Steuerelement im Formular.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So fügen Sie Windows Forms eine Komponente hinzu  
+### <a name="to-add-a-component-to-a-windows-form"></a>Hinzufügen eine Komponente zu einem Windows Form  
   
-1.  Öffnen Sie das Formular.  Ausführliche Informationen finden Sie unter [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/de-de/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
-2.  Klicken Sie in der **Toolbox** auf eine Komponente, und ziehen Sie sie in das Formular.  
+2.  In der **Toolbox**, klicken Sie auf eine Komponente, und ziehen Sie es in Ihr Formular.  
   
      Die Komponente wird auf der Komponentenleiste angezeigt.  
   
- Komponenten können einem Formular auch zur Laufzeit hinzugefügt werden.  Dies ist ein häufiges Szenario, besonders weil Komponenten im Gegensatz zu Steuerelementen, die über eine Benutzeroberfläche verfügen, keinen visuellen Ausdruck besitzen.  Im nachstehenden Beispiel wird eine <xref:System.Windows.Forms.Timer>\-Komponente zur Laufzeit hinzugefügt.  \(Beachten Sie hierbei, dass [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] eine Reihe unterschiedlicher Zeitgeber enthält. In diesem Fall verwenden Sie eine <xref:System.Windows.Forms.Timer>\-Komponente von Windows Forms.  Weitere Informationen über die verschiedenen Zeitgeber in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] finden Sie unter [Introduction to Server\-Based Timers](http://msdn.microsoft.com/de-de/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).\)  
+ Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein gängiges Szenario, vor allem, da Komponenten nicht visuellen Ausdruck, im Gegensatz zu Steuerelemente verfügen, die über eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt wird. (Beachten Sie, dass [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] enthält eine Reihe von verschiedenen Zeitgeber; in diesem Fall verwenden Sie eine Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen über die verschiedenen Zeitgeber in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], finden Sie unter [Einführung in serverbasierte Zeitgeber](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
->  Komponenten haben häufig steuerelementspezifische Eigenschaften, die festgelegt werden müssen, um ein effektives Arbeiten der Komponente zu gewährleisten.  Für die nachfolgend verwendete <xref:System.Windows.Forms.Timer>\-Komponente muss die `Interval`\-Eigenschaft festgelegt werden.  Achten Sie darauf, die für die jeweilige Komponente erforderlichen Eigenschaften festzulegen, wenn Sie dem Projekt Komponenten hinzufügen.  
+>  Komponenten haben häufig steuerelementspezifischen Eigenschaften, die für die Komponente, für die effiziente Ausführung festgelegt werden müssen. Im Fall von der <xref:System.Windows.Forms.Timer> folgenden Komponente, legen Sie die `Interval` Eigenschaft. Achten Sie darauf, beim Komponenten Ihrem Projekt hinzufügen, Sie die Eigenschaften für die jeweilige Komponente erforderlich legen.  
   
-#### So fügen Sie Windows Forms eine Komponente programmgesteuert hinzu  
+#### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>So fügen Sie eine Komponente zu einem Windows Form programmgesteuert hinzu  
   
-1.  Erstellen Sie im Code eine Instanz der <xref:System.Windows.Forms.Timer>\-Klasse.  
+1.  Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.Timer> -Klasse im Code.  
   
-2.  Legen Sie die `Interval`\-Eigenschaft fest, um die Zeit zwischen den Teilstrichen des Zeitgebers zu bestimmen.  
+2.  Legen Sie die `Interval` Eigenschaft, um die Zeit zwischen den Teilstrichen des Zeitgebers zu bestimmen.  
   
-3.  Konfigurieren Sie beliebige andere Eigenschaften für die Komponente.  
+3.  Konfigurieren Sie alle anderen erforderlichen Eigenschaften für die Komponente.  
   
-     Der folgende Code zeigt die Erstellung eines <xref:System.Windows.Forms.Timer> mit festgelegter `Interval`\-Eigenschaft.  
+     Der folgende Code zeigt die Erstellung einer <xref:System.Windows.Forms.Timer> mit seiner `Interval` Eigenschaftensatz.  
   
     ```vb  
     Public Sub CreateTimer()  
        Dim timerKeepTrack As New System.Windows.Forms.Timer  
        timerKeepTrack.Interval = 1000  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +73,6 @@ Durch ein nicht sichtbares Steuerelement \(bzw. eine Komponente\) werden der Anw
            System.Windows.Forms.Timer();  
        timerKeepTrack.Interval = 1000;  
     }  
-  
     ```  
   
     ```cpp  
@@ -84,14 +86,14 @@ Durch ein nicht sichtbares Steuerelement \(bzw. eine Komponente\) werden der Anw
     ```  
   
     > [!IMPORTANT]
-    >  Möglicherweise setzen Sie den lokalen Computer über das Netzwerk einem Sicherheitsrisiko aus, indem auf ein bösartiges UserControl verwiesen wird.  Allerdings ist dies nur dann ein Problem, wenn ein böswilliger Benutzer ein schädliches benutzerdefiniertes Steuerelement erstellt, das Sie versehentlich zu dem Projekt hinzufügen.  
+    >  Sie können den lokalen Computer über das Netzwerk ein Sicherheitsrisiko durch Verweisen auf ein bösartiges UserControl verfügbar machen. Dies ist nur relevant, wenn ein böswilliger Benutzer, erstellen ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.  
   
-## Siehe auch  
- [Windows Forms\-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)   
- [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Gewusst wie: Hinzufügen von ActiveX\-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Gewusst wie: Kopieren von Steuerelementen zwischen Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)   
- [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Windows Forms\-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Siehe auch  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
+ [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Gewusst wie: Kopieren von Steuerelementen zwischen Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
