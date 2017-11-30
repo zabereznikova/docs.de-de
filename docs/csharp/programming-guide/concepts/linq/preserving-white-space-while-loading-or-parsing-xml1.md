@@ -1,42 +1,33 @@
 ---
 title: Beibehalten von Leerraum beim Laden oder Parsen von XML1
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bc4923ef5ea526de3c988636cd766c3b012c902e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dce6d2afc6c146c346dadeb9d7e4af6fcca1b987
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Beibehalten von Leerzeichen beim Laden oder Parsen von XML
-In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gesteuert werden kann.  
+# <a name="preserving-white-space-while-loading-or-parsing-xml"></a><span data-ttu-id="cc5fe-102">Beibehalten von Leerzeichen beim Laden oder Parsen von XML</span><span class="sxs-lookup"><span data-stu-id="cc5fe-102">Preserving White Space while Loading or Parsing XML</span></span>
+<span data-ttu-id="cc5fe-103">In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gesteuert werden kann.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-103">This topic describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- Es kommt häufig vor, dass XML mit Einzügen gelesen und dann im Arbeitsspeicher eine XML-Struktur ohne Leerraumtextknoten erstellt wird (Leerräume bleiben also nicht erhalten). Anschließend wird der XML-Code geändert und dann mit Einzügen gespeichert. Wenn Sie den XML-Code mit Formatierung serialisieren, bleibt nur signifikanter Leerraum in der XML-Struktur erhalten. Dies ist das Standardverhalten bei [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ <span data-ttu-id="cc5fe-104">Es kommt häufig vor, dass XML mit Einzügen gelesen und dann im Arbeitsspeicher eine XML-Struktur ohne Leerraumtextknoten erstellt wird (Leerräume bleiben also nicht erhalten). Anschließend wird der XML-Code geändert und dann mit Einzügen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-104">A common scenario is to read indented XML, create an in-memory XML tree without any white space text nodes (that is, not preserving white space), perform some operations on the XML, and then save the XML with indentation.</span></span> <span data-ttu-id="cc5fe-105">Wenn Sie den XML-Code mit Formatierung serialisieren, bleibt nur signifikanter Leerraum in der XML-Struktur erhalten.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-105">When you serialize the XML with formatting, only significant white space in the XML tree is preserved.</span></span> <span data-ttu-id="cc5fe-106">Dies ist das Standardverhalten bei [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cc5fe-106">This is the default behavior for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- Aber auch dieses Szenario ist häufig anzutreffen: XML-Code, der bereits absichtlich mit Einzügen versehen wurde, wird gelesen und geändert. Sie möchten nicht, dass diese Einzüge irgendwie geändert werden. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie dies erreichen, indem Sie den Leerraum beim Laden oder Analysieren des XML-Codes beibehalten und dann beim Serialisieren des XML-Codes die Formatierung deaktivieren.  
+ <span data-ttu-id="cc5fe-107">Aber auch dieses Szenario ist häufig anzutreffen: XML-Code, der bereits absichtlich mit Einzügen versehen wurde, wird gelesen und geändert.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-107">Another common scenario is to read and modify XML that has already been intentionally indented.</span></span> <span data-ttu-id="cc5fe-108">Sie möchten nicht, dass diese Einzüge irgendwie geändert werden.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-108">You might not want to change this indentation in any way.</span></span> <span data-ttu-id="cc5fe-109">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie dies erreichen, indem Sie den Leerraum beim Laden oder Analysieren des XML-Codes beibehalten und dann beim Serialisieren des XML-Codes die Formatierung deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-109">To do this in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you preserve white space when you load or parse the XML and disable formatting when you serialize the XML.</span></span>  
   
- In diesem Thema wird das Leerraumverhalten von Methoden beschrieben, die XML-Strukturen auffüllen. Informationen zum Steuern des Leerraumverhaltens beim Serialisieren von XML-Strukturen finden Sie unter [Beibehalten von Leerzeichen beim Serialisieren](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ <span data-ttu-id="cc5fe-110">In diesem Thema wird das Leerraumverhalten von Methoden beschrieben, die XML-Strukturen auffüllen.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-110">This topic describes the white space behavior of methods that populate XML trees.</span></span> <span data-ttu-id="cc5fe-111">Informationen zum Steuern des Leerraumverhaltens beim Serialisieren von XML-Strukturen finden Sie unter [Beibehalten von Leerzeichen beim Serialisieren](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).</span><span class="sxs-lookup"><span data-stu-id="cc5fe-111">For information about controlling white space when you serialize XML trees, see [Preserving White Space While Serializing](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).</span></span>  
   
-## <a name="behavior-of-methods-that-populate-xml-trees"></a>Verhalten von Methoden, die XML-Strukturen auffüllen  
- Die folgenden Methoden in den Klassen <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> füllen eine XML-Struktur auf. Sie können eine XML-Struktur von einer Datei, einem <xref:System.IO.TextReader>, einem <xref:System.Xml.XmlReader> oder einer Zeichenfolge aus auffüllen:  
+## <a name="behavior-of-methods-that-populate-xml-trees"></a><span data-ttu-id="cc5fe-112">Verhalten von Methoden, die XML-Strukturen auffüllen</span><span class="sxs-lookup"><span data-stu-id="cc5fe-112">Behavior of Methods that Populate XML Trees</span></span>  
+ <span data-ttu-id="cc5fe-113">Die folgenden Methoden in den Klassen <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> füllen eine XML-Struktur auf.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-113">The following methods in the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> classes populate an XML tree.</span></span> <span data-ttu-id="cc5fe-114">Sie können eine XML-Struktur von einer Datei, einem <xref:System.IO.TextReader>, einem <xref:System.Xml.XmlReader> oder einer Zeichenfolge aus auffüllen:</span><span class="sxs-lookup"><span data-stu-id="cc5fe-114">You can populate an XML tree from a file, a <xref:System.IO.TextReader>, an <xref:System.Xml.XmlReader>, or a string:</span></span>  
   
 -   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
@@ -46,14 +37,13 @@ In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltec
   
 -   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
- Wenn die Methode nicht <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert, bleibt nicht signifikanter Leerraum nicht erhalten.  
+ <span data-ttu-id="cc5fe-115">Wenn die Methode nicht <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert, bleibt nicht signifikanter Leerraum nicht erhalten.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-115">If the method does not take <xref:System.Xml.Linq.LoadOptions> as an argument, the method will not preserve insignificant white space.</span></span>  
   
- In den meisten Fällen können Sie nicht signifikanten Leerraum optional als Textknoten in der XML-Struktur erhalten, sofern die Methode <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert. Wenn die Methode den XML-Code aber aus einem <xref:System.Xml.XmlReader> lädt, bestimmt dieser <xref:System.Xml.XmlReader> ob Leerraum beibehalten wird. Die Einrichtung von <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> hat keine Auswirkungen.  
+ <span data-ttu-id="cc5fe-116">In den meisten Fällen können Sie nicht signifikanten Leerraum optional als Textknoten in der XML-Struktur erhalten, sofern die Methode <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-116">In most cases, if the method takes <xref:System.Xml.Linq.LoadOptions> as an argument, you can optionally preserve insignificant white space as text nodes in the XML tree.</span></span> <span data-ttu-id="cc5fe-117">Wenn die Methode den XML-Code aber aus einem <xref:System.Xml.XmlReader> lädt, bestimmt dieser, <xref:System.Xml.XmlReader> ob Leerraum beibehalten wird.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-117">However, if the method is loading the XML from an <xref:System.Xml.XmlReader>, then the <xref:System.Xml.XmlReader> determines whether white space will be preserved or not.</span></span> <span data-ttu-id="cc5fe-118">Die Einrichtung von <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> hat keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-118">Setting <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> will have no effect.</span></span>  
   
- Bei diesen Methoden wird nicht signifikanter Leerraum als <xref:System.Xml.Linq.XText>-Knoten in die XML-Struktur eingefügt, sofern Leerraum beibehalten wird. Wenn Leerraum nicht beibehalten wird, erfolgt keine Einfügung von Textknoten.  
+ <span data-ttu-id="cc5fe-119">Bei diesen Methoden wird nicht signifikanter Leerraum als <xref:System.Xml.Linq.XText>-Knoten in die XML-Struktur eingefügt, sofern Leerraum beibehalten wird.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-119">With these methods, if white space is preserved, insignificant white space is inserted into the XML tree as <xref:System.Xml.Linq.XText> nodes.</span></span> <span data-ttu-id="cc5fe-120">Wenn Leerraum nicht beibehalten wird, erfolgt keine Einfügung von Textknoten.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-120">If white space is not preserved, text nodes are not inserted.</span></span>  
   
- Zum Erstellen einer XML-Struktur können Sie einen <xref:System.Xml.XmlWriter> verwenden. Knoten, die in den <xref:System.Xml.XmlWriter> geschrieben werden, werden in der Struktur aufgefüllt. Wenn Sie jedoch eine XML-Struktur mit dieser Methode erstellen, bleiben alle Knoten unabhängig davon erhalten, ob der Knoten Leerraum ist und ob er signifikant ist.  
+ <span data-ttu-id="cc5fe-121">Zum Erstellen einer XML-Struktur können Sie einen <xref:System.Xml.XmlWriter> verwenden.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-121">You can create an XML tree by using an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="cc5fe-122">Knoten, die in den <xref:System.Xml.XmlWriter> geschrieben werden, werden in der Struktur aufgefüllt.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-122">Nodes that are written to the <xref:System.Xml.XmlWriter> are populated in the tree.</span></span> <span data-ttu-id="cc5fe-123">Wenn Sie jedoch eine XML-Struktur mit dieser Methode erstellen, bleiben alle Knoten unabhängig davon erhalten, ob der Knoten Leerraum ist und ob er signifikant ist.</span><span class="sxs-lookup"><span data-stu-id="cc5fe-123">However, when you build an XML tree using this method, all nodes are preserved, regardless of whether the node is white space or not, or whether the white space is significant or not.</span></span>  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="cc5fe-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc5fe-124">See Also</span></span>  
+ [<span data-ttu-id="cc5fe-125">Analysieren von XML (C#)</span><span class="sxs-lookup"><span data-stu-id="cc5fe-125">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
