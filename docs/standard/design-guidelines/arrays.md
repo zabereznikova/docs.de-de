@@ -1,44 +1,42 @@
 ---
-title: "Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Klassenbibliotheken – Entwurfsrichtlinien [.NET Framework], arrays"
-  - "[Arrays [.NET Framework], Richtlinien für die Verwendung"
-  - "leere arrays"
+title: Arrays
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class library design guidelines [.NET Framework], arrays
+- arrays [.NET Framework], usage guidelines
+- empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c957d4336527de8c11b763c31c1fdf0015b675b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Arrays
-**✓ führen** lieber mithilfe von Sammlungen über Arrays von öffentlichen APIs. Die [Auflistungen](../../../docs/standard/design-guidelines/guidelines-for-collections.md) Abschnitt enthält detaillierte Informationen zur Auswahl von Sammlungen und Arrays.  
+# <a name="arrays"></a>Arrays
+**Führen Sie ✓** lieber mithilfe von Sammlungen über Arrays in öffentlichen APIs. Die [Sammlungen](../../../docs/standard/design-guidelines/guidelines-for-collections.md) Abschnitt bietet ausführliche Informationen zur Wahl zwischen Auflistungen und Arrays.  
   
- **X nicht** schreibgeschützte Arrayfelder verwenden. Das Feld selbst ist schreibgeschützt und kann nicht geändert werden, aber die Elemente des Arrays können geändert werden.  
+ **X nicht** schreibgeschützte Arrayfelder verwenden. Das Feld selbst ist schreibgeschützt und kann nicht geändert werden, aber Elemente im Array können geändert werden.  
   
- **✓ ggf.** mehrdimensionale Arrays verzweigte Arrays statt.  
+ **✓ GGF.** verzweigte Arrays anstelle von mehrdimensionalen Arrays verwenden.  
   
- Ein verzweigtes Array ist ein Array mit Elementen, die auch Arrays sind. Die Arrays, die die Elemente bilden, können unterschiedliche Größen haben, was zu weniger Speicherplatz vergeudet bei einigen Gruppen von Daten \(z. B. mit geringer Dichte Matrix\) im Vergleich zu mehrdimensionalen Arrays wird. Darüber hinaus optimiert die CLR Indexvorgänge auf verzweigte Arrays, damit eine bessere Leistung zur Laufzeit in einigen Szenarien weisen möglicherweise.  
+ Ein verzweigtes Array ist ein Array mit Elementen, die auch Arrays sind. Die Arrays, die die Elemente bilden können unterschiedliche Größen haben, was zu weniger Speicherplatz vergeudet bei einigen Gruppen von Daten (z. B. mit geringer Dichte Matrix) im Vergleich zu mehrdimensionalen Arrays sein. Darüber hinaus optimiert die CLR Indexvorgänge auf verzweigte Arrays, damit sie eine bessere Leistung zur Laufzeit in einigen Szenarien weisen möglicherweise.  
   
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- <xref:System.Array>   
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Array>  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
  [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -1,82 +1,82 @@
 ---
-title: "&#220;bersicht &#252;ber die AutoSize-Eigenschaft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Automatische Größenanpassung"
-  - "AutoSize-Eigenschaft"
-  - "AutoSizeMode-Eigenschaft"
-  - "Layout [Windows Forms], AutoSize"
-  - "Größe anpassen, Automatisch"
+title: "Übersicht über die AutoSize-Eigenschaft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sizing [Windows Forms], automatic
+- layout [Windows Forms], AutoSize
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8216880ebdede03bbd01fe53b622c14ca8c514d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber die AutoSize-Eigenschaft
-Die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft ermöglicht es einem Steuerelement, bei Bedarf seine Größe an den durch die <xref:System.Windows.Forms.Control.PreferredSize%2A>\-Eigenschaft festgelegten Wert anzupassen.  Sie stellen das Größenanpassungsverhalten für bestimmte Steuerelemente ein, indem Sie die `AutoSizeMode`\-Eigenschaft festlegen.  
+# <a name="autosize-property-overview"></a>Übersicht über die AutoSize-Eigenschaft
+Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft ein Steuerelement seine Größe ändern, bei Bedarf, um den angegebenen Wert erreichen kann die <xref:System.Windows.Forms.Control.PreferredSize%2A> Eigenschaft. Sie stellen das Größenanpassungsverhalten für bestimmte Steuerelemente durch Festlegen der `AutoSizeMode` Eigenschaft.  
   
-## Das AutoSize\-Verhalten  
- Nur einige Steuerelemente unterstützen die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft.  Außerdem unterstützen einige Steuerelemente, die die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft unterstützen, auch die `AutoSizeMode`\-Eigenschaft.  
+## <a name="autosize-behavior"></a>Das AutoSize-Verhalten  
+ Nur einige Steuerelemente unterstützen die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft. Darüber hinaus unterstützen einige Steuerelemente, die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft unterstützen, auch die `AutoSizeMode` Eigenschaft.  
   
- Die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft löst je nach Steuerelementtyp und Wert der `AutoSizeMode`\-Eigenschaft, falls vorhanden, ein geringfügig anderes Verhalten aus.  Die folgende Tabelle enthält die Verhalten, die immer zutreffen, sowie eine kurze Beschreibung der jeweiligen Verhalten.  
+ Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft erzeugt ein geringfügig anderes Verhalten, je nach bestimmten Steuerelementtyp vorliegt und der Wert der `AutoSizeMode` Eigenschaft, wenn die Eigenschaft vorhanden ist. In der folgenden Tabelle wird beschrieben, die Verhalten, die immer "true" werden und bietet eine kurze Beschreibung der einzelnen:  
   
-|Immer zutreffendes Verhalten|Beschreibung|  
-|----------------------------------|------------------|  
-|Die automatische Größenanpassung ist ein Laufzeitfeature.|Dies bedeutet, dass ein Steuerelement dadurch nie vergrößert oder verkleinert wird und somit keine weiteren Auswirkungen hat.|  
-|Wenn sich die Größe eines Steuerelements ändert, bleibt der Wert seiner <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft immer konstant.|Wenn ein Steuerelement aufgrund seines Inhalts vergrößert wird, erfolgt die Größenanpassung nach rechts und nach unten.  Steuerelemente werden nicht nach links vergrößert.|  
-|Die <xref:System.Windows.Forms.Control.Dock%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.Anchor%2A>\-Eigenschaft werden berücksichtigt, wenn <xref:System.Windows.Forms.Control.AutoSize%2A> auf `true` festgelegt ist.|Der Wert der <xref:System.Windows.Forms.Control.Location%2A>\-Eigenschaft des Steuerelements wird an den richtigen Wert angepasst.<br /><br /> **Hinweis** Das <xref:System.Windows.Forms.Label>\-Steuerelement stellt die Ausnahme von dieser Regel dar.  Wenn Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft eines angedockten <xref:System.Windows.Forms.Label>\-Steuerelements auf `true` festlegen, wird das <xref:System.Windows.Forms.Label>\-Steuerelement nicht gestreckt.|  
-|Die <xref:System.Windows.Forms.Control.MaximumSize%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.MinimumSize%2A>\-Eigenschaft eines Steuerelements werden stets berücksichtigt, unabhängig vom Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft.|Die <xref:System.Windows.Forms.Control.MaximumSize%2A>\-Eigenschaft und die <xref:System.Windows.Forms.Control.MinimumSize%2A>\-Eigenschaft werden von der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft nicht beeinflusst.|  
-|Standardmäßig ist keine Mindestgröße festgelegt.|Wenn ein Steuerelement bei Verwendung von <xref:System.Windows.Forms.Control.AutoSize%2A> verkleinert wird, jedoch über keinen Inhalt verfügt, lautet der Wert der <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft 0,0.  In diesem Fall wird das Steuerelement bis zu einem gewissen Punkt verkleinert und ist nicht ohne weiteres sichtbar.|  
-|Wenn ein Steuerelement die <xref:System.Windows.Forms.Control.GetPreferredSize%2A>\-Methode nicht implementiert, gibt die <xref:System.Windows.Forms.Control.GetPreferredSize%2A>\-Methode den letzten Wert zurück, der der <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft zugewiesen wurde.|Wenn Sie also <xref:System.Windows.Forms.Control.AutoSize%2A> auf `true` festlegen, hat dies keine Auswirkungen.|  
-|Ein Steuerelement in einer <xref:System.Windows.Forms.TableLayoutPanel>\-Zelle passt sich stets der Größe der Zelle an, bis seine <xref:System.Windows.Forms.Control.MinimumSize%2A> erreicht ist.|Diese Größe wird als maximale Größe erzwungen.  Dies ist nicht der Fall, wenn die Zelle Teil einer <xref:System.Windows.Forms.SizeType>\-Zeile oder \-Spalte ist.|  
+|Immer "true" Verhalten|Beschreibung|  
+|--------------------------|-----------------|  
+|Automatische größenanpassung ist ein Feature zur Laufzeit.|Dies bedeutet, dass es nie vergrößert oder verkleinert wird ein Steuerelement und dann hat keine weiteren Auswirkungen.|  
+|Wenn die Größe, den Wert eines Steuerelements ändert seine <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft bleibt immer konstant.|Wenn ein Steuerelement es vergrößert aufgrund des Zeileninhalts, wächst das Steuerelement an der rechten Seite und nach unten. Steuerelemente vergrößern auf der linken Seite nicht.|  
+|Die <xref:System.Windows.Forms.Control.Dock%2A> und <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaften werden berücksichtigt, wenn <xref:System.Windows.Forms.Control.AutoSize%2A> ist `true`.|Der Wert des Steuerelements <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft wird auf den richtigen Wert angepasst.<br /><br /> **Hinweis** der <xref:System.Windows.Forms.Label> Steuerelement stellt eine Ausnahme von dieser Regel. Wenn Sie den Wert eines angedockten festlegen <xref:System.Windows.Forms.Label> des Steuerelements <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft, um `true`, die <xref:System.Windows.Forms.Label> -Steuerelement nicht gestreckt.|  
+|Ein Steuerelement <xref:System.Windows.Forms.Control.MaximumSize%2A> und <xref:System.Windows.Forms.Control.MinimumSize%2A> Eigenschaften immer beachtet, unabhängig vom Wert von dessen <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft.|Die <xref:System.Windows.Forms.Control.MaximumSize%2A> und <xref:System.Windows.Forms.Control.MinimumSize%2A> Eigenschaften sind nicht betroffen, durch die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft.|  
+|Es gibt keine Mindestgröße standardmäßig festgelegt.|Dies bedeutet, dass, wenn ein Steuerelement festgelegt ist, verkleinert unter <xref:System.Windows.Forms.Control.AutoSize%2A> und hat keinen Inhalt, den Wert des seine <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft ist 0,0. In diesem Fall wird das Steuerelement zu einem Zeitpunkt verkleinert, und er wird nicht direkt sichtbar sein.|  
+|Wenn kein Steuerelement implementiert die <xref:System.Windows.Forms.Control.GetPreferredSize%2A> -Methode, die <xref:System.Windows.Forms.Control.GetPreferredSize%2A> Methodenrückgabe letzten zugewiesenen Wert der <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft.|Dies bedeutet, dass diese Einstellung <xref:System.Windows.Forms.Control.AutoSize%2A> auf `true` hat keine Auswirkungen.|  
+|Ein Steuerelement in einem <xref:System.Windows.Forms.TableLayoutPanel> Zelle immer verkleinert die Zelle bis zu groß seine <xref:System.Windows.Forms.Control.MinimumSize%2A> erreicht ist.|Diese Größe wird als maximale Größe erzwungen. Dies ist nicht der Fall, wenn die Zelle gehört eine <xref:System.Windows.Forms.SizeType.AutoSize> Zeile oder Spalte.|  
   
-## AutoSizeMode\-Eigenschaft  
- Die `AutoSizeMode`\-Eigenschaft ermöglicht eine genauere Kontrolle über das standardmäßige <xref:System.Windows.Forms.Control.AutoSize%2A>\-Verhalten.  Die `AutoSizeMode`\-Eigenschaft gibt an, wie sich die Größe eines Steuerelements an dessen Inhalt anpasst.  Bei dem Inhalt könnte es sich beispielsweise um den Text für ein <xref:System.Windows.Forms.Button>\-Steuerelement oder die untergeordneten Steuerelemente für einen Container handeln.  
+## <a name="autosizemode-property"></a>AutoSizeMode-Eigenschaft  
+ Die `AutoSizeMode` Eigenschaft bietet eine präzisere Kontrolle über das standardmäßige <xref:System.Windows.Forms.Control.AutoSize%2A> Verhalten. Die `AutoSizeMode` Eigenschaft gibt an, wie sich die Größe ein Steuerelements zu ihrem Inhalt anpasst. Der Inhalt, z. B. möglicherweise den Text für ein <xref:System.Windows.Forms.Button> Steuerelement oder die untergeordneten Steuerelemente für einen Container.  
   
- Die folgende Tabelle zeigt die <xref:System.Windows.Forms.AutoSizeMode>\-Einstellungen und eine Beschreibung des Verhaltens, das jede Einstellung auslöst.  
+ Die folgende Tabelle zeigt die <xref:System.Windows.Forms.AutoSizeMode> Einstellungen und eine Beschreibung des Verhaltens jeder Einstellung werden.  
   
-|AutoSizeMode\-Einstellung|Verhalten|  
-|-------------------------------|---------------|  
-|GrowAndShrink|Das Steuerelement wird vergrößert oder verkleinert, sodass es seinen Inhalt umgibt.<br /><br /> Der <xref:System.Windows.Forms.Control.MinimumSize%2A>\-Wert und der <xref:System.Windows.Forms.Control.MaximumSize%2A>\-Wert werden berücksichtigt, der aktuelle Wert der <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft wird jedoch ignoriert.<br /><br /> Dies ist das gleiche Verhalten wie das von Steuerelementen mit der <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft und keiner `AutoSizeMode`\-Eigenschaft.|  
-|GrowOnly|Das Steuerelement wird vergrößert, bis es seinen Inhalt umgibt, jedoch maximal bis zum Wert der <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft verkleinert.<br /><br /> Dies ist der Standardwert für `AutoSizeMode`.|  
+|AutoSizeMode-Einstellung|Verhalten|  
+|--------------------------|--------------|  
+|GrowAndShrink|Das Steuerelement vergrößert oder verkleinert wird, um seinen Inhalt umgibt.<br /><br /> Die <xref:System.Windows.Forms.Control.MinimumSize%2A> und <xref:System.Windows.Forms.Control.MaximumSize%2A> Werte berücksichtigt werden, aber der aktuelle Wert der die <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft wird ignoriert.<br /><br /> Dies ist das gleiche Verhalten wie die Steuerelemente mit den <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft und keine `AutoSizeMode` Eigenschaft.|  
+|GrowOnly|Das Steuerelement wird so weit wie erforderlich, um seinen Inhalt umfassen, aber es nicht möglich ist, kleiner als der Wert von dessen <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft.<br /><br /> Dies ist der Standardwert für `AutoSizeMode`.|  
   
-## Steuerelemente, die die AutoSize\-Eigenschaft unterstützen  
- In der folgenden Tabelle werden die Steuerelemente aufgelistet, die die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft und die `AutoSizeMode`\-Eigenschaft unterstützen.  
+## <a name="controls-that-support-the-autosize-property"></a>Steuerelemente, die der AutoSize-Eigenschaft unterstützen.  
+ Die folgende Tabelle enthält die Steuerelemente, die Unterstützung der <xref:System.Windows.Forms.Control.AutoSize%2A> und `AutoSizeMode` Eigenschaften.  
   
-|AutoSize\-Unterstützung|Steuerelementtyp|  
-|-----------------------------|----------------------|  
-|-   Die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft wird unterstützt.<br />-   Keine `AutoSizeMode`\-Eigenschaft.|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox> \(<xref:System.Windows.Forms.TextBox>\-Basis\)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
-|-   Die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft wird unterstützt.<br />-   Die `AutoSizeMode`\-Eigenschaft wird unterstützt.|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
-|-   Keine <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft.|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
+|AutoSize-Unterstützung|Steuerelementtyp|  
+|----------------------|------------------|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A>die Eigenschaft unterstützt.<br />-Nicht `AutoSizeMode` Eigenschaft.|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox>(<xref:System.Windows.Forms.TextBox> Basis)<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A>die Eigenschaft unterstützt.<br />-   `AutoSizeMode`die Eigenschaft unterstützt.|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
+|-Nicht <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft.|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
   
-## AutoSize in der Entwurfsumgebung  
- In der folgenden Tabelle wird das Größenanpassungsverhalten eines Steuerelements zur Entwurfszeit beschrieben, das auf dem Wert seiner <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft und seiner `AutoSizeMode`\-Eigenschaft basiert.  
+## <a name="autosize-in-the-design-environment"></a>AutoSize in der Entwurfsumgebung  
+ Die folgende Tabelle beschreibt das Größenanpassungsverhalten eines Steuerelements zur Entwurfszeit anhand des Werts, der seine <xref:System.Windows.Forms.Control.AutoSize%2A> und `AutoSizeMode` Eigenschaften.  
   
- Überschreiben Sie die <xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A>\-Eigenschaft, um herauszufinden, ob ein bestimmtes Steuerelement vom Benutzer angepasst werden kann.  In der folgenden Tabelle bedeutet "kann nicht" lediglich <xref:System.Windows.Forms.Design.SelectionRules>, während "kann" <xref:System.Windows.Forms.Design.SelectionRules> und <xref:System.Windows.Forms.Design.SelectionRules> bedeutet.  
+ Überschreiben Sie die <xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A> Eigenschaft, um zu bestimmen, ob ein bestimmtes Steuerelement in einem Benutzer veränderbare Größen Zustand befindet. In der folgenden Tabelle "kann nicht" bedeutet, dass <xref:System.Windows.Forms.Design.SelectionRules.Moveable> nur "kann" bedeutet, dass <xref:System.Windows.Forms.Design.SelectionRules.AllSizeable> und <xref:System.Windows.Forms.Design.SelectionRules.Moveable>.  
   
-|AutoSize\-Einstellungen|Größenanpassung zur Entwurfszeit|  
-|-----------------------------|--------------------------------------|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   Keine `AutoSizeMode`\-Eigenschaft.|Der Benutzer kann die Größe des Steuerelements zur Entwurfszeit nicht ändern, außer bei folgenden Steuerelementen:<br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|Der Benutzer kann die Größe des Steuerelements zur Entwurfszeit nicht ändern.|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|Der Benutzer kann die Größe des Steuerelements zur Entwurfszeit ändern.  Wenn die <xref:System.Windows.Forms.Control.Size%2A>\-Eigenschaft festgelegt ist, kann der Benutzer die Größe des Steuerelements lediglich erhöhen.|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `false`, oder die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft ist verborgen.|Der Benutzer kann die Größe des Steuerelements zur Entwurfszeit ändern.|  
+|AutoSize-Einstellungen|Zur Entwurfszeit Sizing Geste|  
+|-----------------------|---------------------------------|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-Nicht `AutoSizeMode` Eigenschaft.|Der Benutzer kann nicht die Größe des Steuerelements zur Entwurfszeit mit Ausnahme der folgenden Steuerelemente:<br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>|Der Benutzer kann nicht die Größe des Steuerelements zur Entwurfszeit.|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>|Der Benutzer kann die Größe des Steuerelements zur Entwurfszeit. Wenn die <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft festgelegt ist, die Benutzer kann nur erhöhen die Größe des Steuerelements.|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `false`, oder <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft ist ausgeblendet.|Benutzer kann die Größe des Steuerelements zur Entwurfszeit.|  
   
 > [!NOTE]
->  Um die Produktivität zu maximieren, führt der Windows Forms\-Designer für die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft der <xref:System.Windows.Forms.Form>\-Klasse Shadowing durch.  Zur Entwurfszeit verhält sich das Formular, als ob die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft auf `false` festgelegt sei, und zwar unabhängig von seiner eigentlichen Einstellung.  Zur Laufzeit werden keine speziellen Anpassungen vorgenommen, und die <xref:System.Windows.Forms.Control.AutoSize%2A>\-Eigenschaft wird entsprechend der Eigenschafteneinstellung angewendet.  
+>  Um die Produktivität Schatten auf der Windows Forms-Designer die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft für die <xref:System.Windows.Forms.Form> Klasse. Zur Entwurfszeit verhält sich das Formular als wäre die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaftensatz auf `false`, unabhängig von seiner eigentlichen Einstellung. Zur Laufzeit keine spezielle Einrichtung erfolgt, und die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft angewendet wird nach den Angaben von der Einstellung der Eigenschaft.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.Control.PreferredSize%2A>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.Control.PreferredSize%2A>  
  <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

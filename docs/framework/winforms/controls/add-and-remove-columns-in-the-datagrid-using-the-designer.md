@@ -1,56 +1,56 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.DataGridViewAddColumnDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView-Steuerelement [Windows Forms], Hinzufügen von Spalten"
-  - "DataGridView-Steuerelement [Windows Forms], Entfernen von Spalten"
+title: "Gewusst wie: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.DataGridViewAddColumnDialog
+helpviewer_keywords:
+- DataGridView control [Windows Forms], adding columns
+- DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71b02124dd68299552737df35163e3b766d4df73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
-Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement in Windows Forms muss Spalten enthalten, damit Daten angezeigt werden.  Wenn Sie das Steuerelement manuell füllen möchten, müssen Sie die Spalten selbst hinzufügen.  Wahlweise können Sie das Steuerelement an eine Datenquelle binden, die die Spalten generiert und automatisch füllt.  Wenn die Datenquelle mehr Spalten enthält, als Sie anzeigen möchten, können Sie die unerwünschten Spalten entfernen.  
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
+Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement muss Spalten enthalten, um Daten anzuzeigen. Wenn das Steuerelement manuell gefüllt werden sollen, müssen Sie die Spalten selbst hinzufügen. Klicken Sie Alternativ können Sie das Steuerelement an eine Datenquelle binden, die generiert und füllt die Spalten automatisch. Wenn die Datenquelle mehr Spalten enthält als angezeigt werden soll, können Sie die benötigte Spalten entfernen.  
   
- Für die folgenden Prozeduren ist ein **Windows\-Anwendung**\-Projekt mit einem Formular erforderlich, das ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement enthält.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Erfordern die folgenden Verfahren eine **Windows-Anwendung** Projekt ein Formular mit einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So fügen Sie eine Spalte mithilfe des Designers hinzu  
+### <a name="to-add-a-column-using-the-designer"></a>Zum Hinzufügen einer Spalte mithilfe des Designers  
   
-1.  Klicken Sie auf das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView>\-Steuerelements, und wählen Sie dann **Spalte hinzufügen** aus.  
+1.  Klicken Sie auf das Smarttag-Symbol (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) in der oberen rechten Ecke des der <xref:System.Windows.Forms.DataGridView> steuern, und wählen Sie dann **Add Column**.  
   
-2.  Wählen Sie im Dialogfeld **Spalte hinzufügen** die Option **Datengebundene Spalte** aus, und markieren Sie eine Spalte aus der Datenquelle, oder wählen Sie die Option **Ungebundene Spalte**, und definieren Sie die Spalte anhand der bereitgestellten Felder.  
+2.  In der **Add Column** Dialogfeld Wählen Sie die **datengebundene Spalte** aus, und wählen Sie eine Spalte aus der Datenquelle, oder wählen Sie die **ungebundenen Spalte** aus, und definieren Sie die Spalte verwenden die angezeigten Felder ein.  
   
-3.  Klicken Sie auf die Schaltfläche **Hinzufügen**, um die Spalte hinzuzufügen. Sofern die vorhandenen Spalten den Anzeigebereich des Steuerelements noch nicht füllen, wird sie im Designer angezeigt.  
+3.  Klicken Sie auf die **hinzufügen** Schaltfläche zum Hinzufügen der Spalte, die wegen der er im Designer angezeigt wird, wenn die vorhandenen Spalten den Anzeigebereich des Steuerelements nicht bereits aufgefüllt.  
   
     > [!NOTE]
-    >  Sie können Spalteneigenschaften im Dialogfeld **Spalten bearbeiten** anpassen. Dieses wird über das Smarttag des Steuerelements aufgerufen.  
+    >  Sie können Spalteneigenschaften im Ändern der **Spalten bearbeiten** (Dialogfeld), die Sie aus dem Smarttag des Steuerelements zugreifen können.  
   
-### So entfernen Sie eine Spalte mithilfe des Designers  
+### <a name="to-remove-a-column-using-the-designer"></a>So entfernen Sie eine Spalte mithilfe des Designers  
   
-1.  Wählen Sie aus dem Smarttag des Steuerelements **Spalten bearbeiten** aus.  
+1.  Wählen Sie **Spalten bearbeiten** aus dem Smarttag des Steuerelements.  
   
-2.  Wählen Sie eine Spalte aus der Liste **Ausgewählte Spalten** aus.  
+2.  Wählen Sie eine Spalte aus der **ausgewählte Spalten** Liste.  
   
-3.  Klicken Sie auf die Schaltfläche **Entfernen**, um die Spalte zu löschen und aus dem Designer zu entfernen.  
+3.  Klicken Sie auf die **entfernen** Schaltfläche beim Löschen der Spalte, die wegen der er vom Designer nicht mehr angezeigt.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

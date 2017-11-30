@@ -1,52 +1,56 @@
 ---
-title: "B&#233;zier-Splines in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Béziersplinekurven"
-  - "GDI+, Béziersplinekurven"
-  - "Splines, Bézier"
+title: B &#233; Zier Splines in GDI +
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Bezier splines
+- splines [Windows Forms], Bezier
+- GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# B&#233;zier-Splines in GDI+
-Ein Bézier\-Spline ist eine Kurve, die durch vier Punkte definiert wird: zwei Endpunkte \(p1 und p2\) und zwei Steuerpunkte \(c1 und c2\).  Die Kurve beginnt bei p1 und endet bei p2.  Die Kurve verläuft nicht durch die Steuerpunkte. Vielmehr fungieren diese Steuerpunkte als Magneten, die die Kurve in bestimmte Richtungen ziehen und die Krümmung der Kurve beeinflussen.  Die folgende Abbildung zeigt eine Bézier\-Kurve mit den End\- und Steuerpunkten.  
+# <a name="b233zier-splines-in-gdi"></a>B &#233; Zier Splines in GDI +
+Ein Bézier-Spline ist eine von vier Punkte angegebene Kurve: zwei Endpunkte (p1 und p2) und die beiden Steuerpunkte (c1 und c2). Die Kurve beginnt bei p1 und p2 endet. Leitet die Kurve nicht über die Steuerpunkte, aber die Steuerpunkte als Magnete, bestimmte erfahren Sie, wie die Kurve herausziehen und Schätzung vor bzw. beeinflusst die Möglichkeit Steuerpunkte fungieren. Die folgende Abbildung zeigt eine Bézier-Kurve zusammen mit den End- und Steuerpunkte.  
   
- ![Bézier&#45;Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.png "Aboutgdip02\_art11a")  
+ ![Bézier-Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")  
   
- Die Kurve beginnt bei p1 und verläuft in Richtung des Steuerpunktes c1.  Die Tangente der Kurve in p1 ist die Linie, die von p1 nach c1 gezogen wird.  Die Tangente im Endpunkt p2 ist die Linie, die von c2 nach p2 gezogen wird.  
+ Die Kurve beginnt bei p1 und gegen das Steuerelement zeigen c1 verschiebt. Die Tangente der Kurve in p1 ist die Zeile, die von p1 c1 gezeichnet. Die Tangente im Endpunkt P2 ist die Zeile zu p2 c2 gezeichnet.  
   
-## Zeichnen von Bézier\-Splines  
- Zum Zeichnen eines Bézier\-Splines benötigen Sie eine Instanz der <xref:System.Drawing.Graphics>\-Klasse sowie <xref:System.Drawing.Pen>.  Die Instanz der <xref:System.Drawing.Graphics>\-Klasse stellt die <xref:System.Drawing.Graphics.DrawBezier%2A>\-Methode bereit, und in <xref:System.Drawing.Pen> werden Attribute, z. B. Breite und Farbe, der zum Rendern der Kurve verwendeten Linie gespeichert.  <xref:System.Drawing.Pen> wird als eines der Argumente an die <xref:System.Drawing.Graphics.DrawBezier%2A>\-Methode übergeben.  Die übrigen Argumente, die an die <xref:System.Drawing.Graphics.DrawBezier%2A>\-Methode übergeben werden, sind die Endpunkte und die Steuerpunkte.  Im folgenden Beispiel wird ein Bézier\-Spline mit dem Anfangspunkt \(0, 0\), den Steuerpunkten \(40, 20\) und \(80, 150\) und dem Endpunkt \(100, 10\) gezeichnet:  
+## <a name="drawing-bzier-splines"></a>Zeichnen von Bézier-Splines  
+ Um eine Béziersplinekurve zu zeichnen, benötigen Sie eine Instanz von der <xref:System.Drawing.Graphics> Klasse und ein <xref:System.Drawing.Pen>. Die Instanz von der <xref:System.Drawing.Graphics> -Klasse stellt die <xref:System.Drawing.Graphics.DrawBezier%2A> -Methode, und die <xref:System.Drawing.Pen> speichert Attribute, z. B. Breite und Farbe der Linie, die zum Rendern der Kurve verwendet. Die <xref:System.Drawing.Pen> wird als eines der Argumente zu übergeben, die <xref:System.Drawing.Graphics.DrawBezier%2A> Methode. Die übrigen Argumente zu übergeben, um die <xref:System.Drawing.Graphics.DrawBezier%2A> Methode sind die Endpunkte und die Steuerpunkte. Im folgende Beispiel zeichnet eine Béziersplinekurve, mit dem Anfangspunkt (0, 0), Punkte (40, 20) und (80, 150) zu steuern, und den Endpunkt (100, 10):  
   
  [!code-csharp[LinesCurvesAndShapes#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#71)]
  [!code-vb[LinesCurvesAndShapes#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#71)]  
   
  Die folgende Abbildung zeigt die Kurve, die Steuerpunkte und zwei Tangenten.  
   
- ![Bézier&#45;Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.png "Aboutgdip02\_art12")  
+ ![Bézier-Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.gif "Aboutgdip02_art12")  
   
- Bézier\-Splines wurden ursprünglich von Pierre Bézier für Entwürfe in der Autoindustrie entwickelt.  Seitdem haben sie sich in vielen CAD‑Bereichen als sehr nützlich erwiesen und werden auch zum Definieren des Umrisses von Schriften verwendet.  Bézier\-Splines können eine Vielzahl von Formen ergeben. Einige Formen sehen Sie in der folgenden Abbildung:  
+ Bézier-Splines wurden ursprünglich von Pierre Bézier für den Entwurf in der Automobilindustrie entwickelt. Da sind aussagekräftig sind in vielen Arten von CAD / CAM erwiesen haben, und werden auch verwendet, um die Umrisse von Schriftarten zu definieren. Bézier-Splines können eine Vielzahl von Formen ergeben, von die einige in der folgenden Abbildung dargestellt sind.  
   
- ![Pfade](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.png "Aboutgdip02\_art13")  
+ ![Pfade](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
-## Siehe auch  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Erstellen und Zeichnen von Kurven](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)   
- [Gewusst wie: Erstellen von Graphics\-Objekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Gewusst wie: Erstellen eines Stiftes](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Erstellen und Zeichnen von Kurven](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
+ [Gewusst wie: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Gewusst wie: Erstellen eines Stifts](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

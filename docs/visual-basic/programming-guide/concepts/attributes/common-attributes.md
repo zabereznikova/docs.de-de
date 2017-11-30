@@ -1,30 +1,22 @@
 ---
-title: Allgemeine Attribute (Visual Basic) | Microsoft-Dokumentation
+title: Allgemeine Attribute (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f470e6ff3e316076d71a34346f741cc4504471a3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4781e7ee60017455796d460d8d7bddb9f7c49676
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-visual-basic"></a>Allgemeine Attribute (Visual Basic)
 Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Programmen verwendet werden.  
@@ -39,60 +31,60 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Progra
   
 -   [Visual Basic-Attribute](#VB)  
   
-##  <a name="Global"></a>Globale Attribute  
- Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Methoden angewendet. Einige Attribute sind jedoch global – gelten für eine gesamte Assembly oder ein Modul. Zum Beispiel die <xref:System.Reflection.AssemblyVersionAttribute>Attribut kann verwendet werden, um Versionsinformationen in eine Assembly wie folgt einzubetten:</xref:System.Reflection.AssemblyVersionAttribute>  
+##  <a name="Global"></a> Globale Attribute  
+ Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Methoden angewendet. Einige Attribute sind jedoch global – sie gelten für eine gesamte Assembly oder ein Modul. Zum Beispiel kann das <xref:System.Reflection.AssemblyVersionAttribute>-Attribut zum Einbetten von Versionsinformationen in eine Assembly verwendet werden. Diese sieht wie folgt aus:  
   
 ```vb  
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Globale Attribute befinden sich im Quellcode nach allen auf der obersten Ebene`Imports` Anweisungen sowie vor jeder Typ-, Modul- oder Namespace. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierung Durchlauf kompiliert werden. Für Visual Basic-Projekten werden globale Attribute im Allgemeinen in der Datei AssemblyInfo.vb eingefügt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).  
+ Globale Attribute befinden sich im Quellcode nach allen auf der obersten Ebene `Imports` Anweisungen und vor jeglichen Deklarationen geben, Modul oder Namespace. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierungsdurchlauf kompiliert werden. Für Visual Basic-Projekten werden globale Attribute in der Regel in der AssemblyInfo.vb-Datei abgelegt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).  
   
- Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie können in den folgenden Kategorien:  
+ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie werden in die folgenden Kategorien eingeteilt:  
   
--   Attribute für die Assemblyidentität  
+-   Attribute für Assemblyidentitäten  
   
 -   Informationsattribute  
   
--   Attribute für Assemblymanifeste  
+-   Attribute für Assemblymanifeste.  
   
 ### <a name="assembly-identity-attributes"></a>Attribute für Assemblyidentitäten  
- Drei Attribute (mit einem starken Namen, falls zutreffend) bestimmen die Identität einer Assembly: Name, Version und Kultur. Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn Sie es im Code verweisen. Sie können die Version und Kultur, die unter Verwendung von Attributen einer Assembly festlegen. Allerdings wird die Name-Wert festgelegt, durch den Compiler, die Visual Studio-IDE in der [Assembly (Dialogfeld)](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box), oder die Assembly Linker (Al.exe) beim Erstellen die Assembly auf Grundlage der Datei, die das Assemblymanifest enthält. Die <xref:System.Reflection.AssemblyFlagsAttribute>Attribut gibt an, ob mehrere Kopien der Assembly vorhanden sein können.</xref:System.Reflection.AssemblyFlagsAttribute>  
+ Drei Attribute bestimmen mit einem starken Namen (falls zutreffend) die Identität einer Assembly: „name“, „version“ und „culture“. Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn im Code auf sie verwiesen wird. Mit Attributen können die Version und Kultur einer Assembly festgelegt werden. Allerdings wird der name-Wert vom Compiler, der Visual Studio-IDE im [Dialogfeld „Assemblyinformationen“](/visualstudio/ide/reference/assembly-information-dialog-box) oder dem Assemblylinker (Al.exe) festgelegt, wenn die Assembly erstellt wird. Die geschieht auf Grundlage der Datei, die das Assemblymanifest enthält. Das Attribut <xref:System.Reflection.AssemblyFlagsAttribute> gibt an, ob mehrere Kopien der Assembly parallel bestehen können.  
   
- Die folgende Tabelle zeigt die Identitätsattribute.  
+ In der folgenden Tabelle werden die Identitätsattribute aufgeführt.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName></xref:System.Reflection.AssemblyName>|Vollständige Beschreibung der Identität einer Assembly.|  
-|<xref:System.Reflection.AssemblyVersionAttribute></xref:System.Reflection.AssemblyVersionAttribute>|Gibt die Version einer Assembly.|  
-|<xref:System.Reflection.AssemblyCultureAttribute></xref:System.Reflection.AssemblyCultureAttribute>|Gibt an, welche Kultur die Assembly unterstützt.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute></xref:System.Reflection.AssemblyFlagsAttribute>|Gibt an, ob eine Assembly Side-by-Side Execution auf demselben Computer, im selben Prozess oder in derselben Anwendungsdomäne unterstützt.|  
+|<xref:System.Reflection.AssemblyName>|Beschreibt vollständig die Identität einer Assembly|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Gibt die Version einer Assembly an|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Gibt an, welche Kultur die Assembly unterstützt.|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|Gibt an, ob eine Assembly die parallele Ausführung auf demselben Computer, im selben Prozess oder in derselben Anwendungsdomäne unterstützt|  
   
 ### <a name="informational-attributes"></a>Informationsattribute  
- Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. In der folgenden Tabelle sind die Informationsattribute gemäß der <xref:System.Reflection?displayProperty=fullName>Namespace.</xref:System.Reflection?displayProperty=fullName>  
+ Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle zeigt die Informationsattribute, die im Namespace <xref:System.Reflection?displayProperty=nameWithType> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute></xref:System.Reflection.AssemblyProductAttribute>|Definiert ein benutzerdefiniertes Attribut, das einen Produktnamen für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute></xref:System.Reflection.AssemblyTrademarkAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Marke für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute></xref:System.Reflection.AssemblyInformationalVersionAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Informationsversion für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute></xref:System.Reflection.AssemblyCompanyAttribute>|Definiert ein benutzerdefiniertes Attribut, das einen Firmennamen für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute></xref:System.Reflection.AssemblyCopyrightAttribute>|Definiert ein benutzerdefiniertes Attribut, das ein Copyright für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute></xref:System.Reflection.AssemblyFileVersionAttribute>|Weist den Compiler an, eine bestimmte Versionsnummer für die Win32-Versionsressource verwenden.|  
-|<xref:System.CLSCompliantAttribute></xref:System.CLSCompliantAttribute>|Gibt an, ob die Assembly mit der Common Language Specification (CLS) kompatibel ist.|  
+|<xref:System.Reflection.AssemblyProductAttribute>|Definiert ein benutzerdefiniertes Attribut, das den Produktnamen für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Marke für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Informationsversion für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|Definiert ein benutzerdefiniertes Attribut, das einen Firmennamen für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|Definiert ein benutzerdefiniertes Attribut, das ein Copyright für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|Weist den Compiler an, eine spezifische Versionsnummer für die Win32-Dateiversionsressource zu verwenden|  
+|<xref:System.CLSCompliantAttribute>|Gibt an, ob die Assembly mit der Common Language Specification (CLS) kompatibel ist|  
   
 ### <a name="assembly-manifest-attributes"></a>Attribute für Assemblymanifeste  
- Attribute für Assemblymanifeste können Sie Informationen im Assemblymanifest bereitstellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration. Die folgende Tabelle zeigt die Attribute für Assemblymanifeste gemäß der <xref:System.Reflection?displayProperty=fullName>Namespace.</xref:System.Reflection?displayProperty=fullName>  
+ Sie können Attribute für Assemblymanifeste verwenden, um Informationen im Assemblymanifest bereitzustellen. Dies schließt Titel, Beschreibung, Standardalias und Konfiguration ein. Die folgende Tabelle zeigt die Attribute für Assemblymanifeste, die im Namespace <xref:System.Reflection?displayProperty=nameWithType> definiert werden.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute></xref:System.Reflection.AssemblyTitleAttribute>|Definiert ein benutzerdefiniertes Attribut, das einen Assemblytitel für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute></xref:System.Reflection.AssemblyDescriptionAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblybeschreibung für ein Assemblymanifest angibt.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute></xref:System.Reflection.AssemblyConfigurationAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblykonfiguration (z. B. Verkaufs- oder Debugversion) für ein Assemblymanifest.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute></xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiert einen langen Standardalias für ein Assemblymanifest.|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|Definiert ein benutzerdefiniertes Attribut, das einen Assemblytitel für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblybeschreibung für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblykonfiguration (z.B. Retail oder Debug) für ein Assemblymanifest angibt|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiert einen benutzerfreundlichen Standardalias für ein Assemblymanifest|  
   
-##  <a name="Obsolete"></a>Obsolete-Attribut  
- Das `Obsolete` -Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert generiert eine Warnung oder ein Fehler auftritt, je nachdem, wie das Attribut konfiguriert ist. Beispiel:  
+##  <a name="Obsolete"></a> Obsolete-Attribut  
+ Das `Obsolete`-Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert ist, generiert anschließend eine Warnung oder einen Fehler, je nachdem, wie das Attribut konfiguriert ist. Zum Beispiel:  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -111,9 +103,9 @@ Class B
 End Class  
 ```  
   
- In diesem Beispiel wird die `Obsolete` -Attribut auf die Klasse angewendet wird `A` und Methode `B.OldMethod`. Da das zweite Argument des Attributkonstruktors zugewiesen `B.OldMethod` auf festgelegt ist `true`, diese Methode verursacht einen Compilerfehler, Verwendung `A` wird nur generieren eine Warnung. Aufrufen von `B.NewMethod`, generiert jedoch keine Warnung oder Fehler.  
+ Dieses Beispiel zeigt, wie das `Obsolete`-Attribut auf die `A`-Klasse und die `B.OldMethod`-Methode angewendet wird. Da das zweite Argument des Attributkonstruktors, das auf `B.OldMethod` angewendet wurde, auf `true` festgelegt wird, verursacht diese Methode einen Compilerfehler. Die Verwendung der `A`-Klasse erzeugt hingegen nur eine Warnung. Wenn Sie `B.NewMethod` aufrufen, werden weder Warnungen noch Fehler erzeugt.  
   
- Als erstes Argument an den Attributkonstruktor bereitgestellte Zeichenfolge wird als Teil der Warnung oder Fehler angezeigt. Wenn Sie es mit den vorherigen Definitionen verwenden, generiert der folgende Code z. B. zwei Warnungen und einen Fehler:  
+ Die Zeichenfolge, die als erstes Argument für den Attributkonstruktor bereitgestellt wurde, wird als Teil der Warnung oder des Fehlers angezeigt. Wenn Sie es mit den vorherigen Definitionen verwenden, generiert der folgende Code zwei Warnungen und einen Fehler:  
   
 ```vb  
 ' Generates 2 warnings:  
@@ -127,16 +119,16 @@ b.NewMethod()
 ' b.OldMethod()  
 ```  
   
- Zwei Warnungen für Klasse `A` generiert werden: eine für die Deklaration der Klassenreferenz und eine für den Klassenkonstruktor.  
+ Es werden zwei Warnungen für die Klasse `A` generiert: eine für die Deklaration des Klassenverweises und eine für den Klassenkonstruktor.  
   
- Das `Obsolete` -Attribut kann ohne Argumente verwendet werden, aber einschließlich der Grund, warum das Element ist veraltet und was verwenden sollte.  
+ Das `Obsolete`-Attribut kann ohne Argumente verwendet werden, jedoch ist das Einschließen einer Erklärung, warum das Element veraltet ist und was demnach verwendet werden soll, empfohlen.  
   
- Das `Obsolete` -Attribut ist ein Attribut und kann auf jede Entität, die Attribute kann angewendet werden. `Obsolete`ist ein Alias für <xref:System.ObsoleteAttribute>.</xref:System.ObsoleteAttribute>  
+ Das `Obsolete`-Attribut ist ein Attribut zur einmaligen Nutzung und kann auf jede Entität angewendet werden, die Attribute zulässt. `Obsolete` ist ein Alias für <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a>Conditional-Attribut  
- Die `Conditional` Attribut macht die Ausführung einer Methode eine Präprozessorbezeichner abhängig. Die `Conditional` -Attribut ist ein Alias für <xref:System.Diagnostics.ConditionalAttribute>, und kann auf eine Methode oder ein Attribut-Klasse angewendet werden</xref:System.Diagnostics.ConditionalAttribute>  
+##  <a name="Conditional"></a> Conditional-Attribut  
+ Das `Conditional`-Attribut macht die Ausführung einer Methode abhängig von einem Vorverarbeitungsbezeichner. Das `Conditional`-Attribut ist ein Alias für <xref:System.Diagnostics.ConditionalAttribute> und kann auf eine Methode oder Attributklasse angewendet werden.  
   
- In diesem Beispiel `Conditional` auf eine Methode zum Aktivieren oder Deaktivieren der Anzeige von Diagnoseinformationen programmspezifische angewendet wird:  
+ In diesem Beispiel wird `Conditional` auf eine Methode angewendet, um die Anzeige programmspezifischer Diagnoseinformationen zu aktivieren oder zu deaktivieren.  
   
 ```vb  
 #Const TRACE_ON = True  
@@ -158,9 +150,9 @@ Module TestConditionalAttribute
 End Module  
 ```  
   
- Wenn die `TRACE_ON` Bezeichner nicht definiert ist, wird keine Ablaufverfolgungsausgabe angezeigt.  
+ Wenn der `TRACE_ON`-Bezeichner nicht definiert ist, wird keine Ablaufverfolgungsausgabe angezeigt.  
   
- Die `Conditional` Attribut wird häufig zusammen mit der `DEBUG` folgendermaßen Bezeichner Trace und Features für Debugbuilds jedoch nicht in Releasebuilds für die Protokollierung zu aktivieren:  
+ Das `Conditional`-Attribut wird oft zusammen mit dem `DEBUG`-Bezeichner verwendet, um die Ablaufverfolgung und Protokollierung von Features zum Debuggen von Builds, jedoch nicht in Releasebuilds, wie folgt zu aktivieren:  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -169,7 +161,7 @@ Shared Sub DebugMethod()
 End Sub  
 ```  
   
- Wenn eine als bedingt gekennzeichnete Methode aufgerufen wird, bestimmt das Vorhandensein oder fehlen von der angegebenen Vorverarbeitungssymbol, ob der Aufruf eingeschlossen oder ausgelassen wird. Wenn das Symbol definiert ist, wird der Aufruf einbezogen; Andernfalls wird der Aufruf ausgelassen. Mithilfe von `Conditional` ist eine sauberere elegantere und weniger fehleranfällige Alternative zum Einschließen von Methoden in `#if…#endif` Blöcken, wie folgt:  
+ Wenn eine als bedingt gekennzeichnete Methode aufgerufen wird, bestimmt das Vorhandensein oder Fehlen des angegebenen Vorverarbeitungssymbols, ob der Aufruf eingeschlossen oder ausgelassen wird. Wenn das Symbol definiert ist, wird der Aufruf einbezogen; andernfalls wird der Aufruf ausgelassen. Die Verwendung von `Conditional` ist eine sauberere, elegantere und auch weniger fehleranfällige Alternative zum Einschließen von Methoden innerhalb von `#if…#endif`-Blöcken, z.B.:  
   
 ```vb  
 #If DEBUG Then  
@@ -178,10 +170,10 @@ End Sub
 #End If  
 ```  
   
- Eine bedingte Methode muss eine Methode in der Deklaration einer Klasse oder Struktur sein und dürfen keinen Rückgabewert.  
+ Eine bedingte Methode muss eine Methode in einer Klassen- oder Stukturdeklaration sein und darf keinen Rückgabewert besitzen.  
   
 ### <a name="using-multiple-identifiers"></a>Verwenden mehrerer Bezeichner  
- Wenn eine Methode mehrere `Conditional` Attribute, ein Aufruf der Methode ist enthalten, wenn mindestens eines der Symbole für bedingte definiert ist (das heißt, die Symbole logisch miteinander verknüpft sind mit dem OR-Operator). In diesem Beispiel ist das Vorhandensein von `A` oder `B` führt zu einem Methodenaufruf:  
+ Wenn eine Methode mehrere `Conditional`-Attribute besitzt, wird ein Aufruf an die Methode eingeschlossen, wenn mindestens eines der bedingten Symbole definiert ist (anders gesagt, sind die Symbole durch Verwendung des OR-Operators logisch miteinander verknüpft). In diesem Beispiel führt das Vorhandensein von `A` oder `B` zu einem Methodenaufruf:  
   
 ```vb  
 <Conditional("A"), Conditional("B")>   
@@ -190,7 +182,7 @@ Shared Sub DoIfAorB()
 End Sub  
 ```  
   
- Symbole mit dem AND-Operator logisch zu verbinden Effekt zu erzielen, können Sie bedingte Methoden definieren. Angenommen, die nachfolgende zweite Methode nur ausgeführt, wenn beide `A` und `B` sind definiert:  
+ Um den Effekt der logischen Verknüpfung von Symbolen durch den AND-Operator zu erzielen, können Sie serielle bedingte Methoden definieren. Zum Beispiel wird die zweite Methode unten nur ausgeführt, wenn jeweils `A` und `B` definiert sind:  
   
 ```vb  
 <Conditional("A")>   
@@ -204,8 +196,8 @@ Shared Sub DoIfAandB()
 End Sub  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>Verwenden von Conditional für Attributklassen  
- Die `Conditional` Attribut kann auch auf die Definition einer Attributklasse angewendet werden. In diesem Beispiel wird das benutzerdefinierte Attribut `Documentation` wird nur auf die Metadaten Informationen hinzufügen, wenn DEBUG definiert ist.  
+### <a name="using-conditional-with-attribute-classes"></a>Verwenden von Conditional mit Attributklassen  
+ Das `Conditional`-Attribut kann auch auf die Definition einer Attributklasse angewendet werden. In diesem Beispiel wird das benutzerdefinierte Attribut `Documentation` den Metadaten nur dann Informationen hinzufügen, wenn DEBUG definiert ist.  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -226,34 +218,34 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a>Aufufrerinfoattribute  
+##  <a name="CallerInfo"></a> Aufufrerinfoattribute  
  Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen.  
   
- Um memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder Optionaler Parameter gibt den Standardwert an. Die folgende Tabelle enthält die Aufrufer-Informationsattribute angegeben, die in definiert sind die <xref:System.Runtime.CompilerServices?displayProperty=fullName>Namespace:</xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
 |Attribut|Beschreibung|Typ|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute></xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute></xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Die Zeilennummer in der Quelldatei, von der die Methode aufgerufen wird.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute></xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Name der Methode oder Eigenschaft des Aufrufers. Weitere Informationen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Der Methoden- oder Eigenschaftenname des Aufrufers Weitere Informationen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
   
- Weitere Informationen zu den Aufrufer-Informationsattribute, finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Weitere Informationen zu den Aufrufer-Informationsattribute angegeben, finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
 ##  <a name="VB"></a>Visual Basic-Attribute  
- Die folgende Tabelle enthält die Attribute, die für Visual Basic spezifisch sind.  
+ Die folgende Tabelle enthält die Attribute, die in Visual Basic spezifisch sind.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute></xref:Microsoft.VisualBasic.ComClassAttribute>|Weist den Compiler an, dass die Klasse als COM-Objekt verfügbar gemacht werden sollen.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute></xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Ermöglicht nur die Zugriffsberechtigungen für das Modul benötigt zugegriffen werden.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute></xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Gibt die Größe einer Zeichenfolge fester Länge in einer Struktur für die Verwendung mit Datei-Eingabe und Ausgabe Funktionen.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute></xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Gibt die Größe eines festen Arrays in einer Struktur für die Verwendung mit Datei-Eingabe und Ausgabe Funktionen.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Weist den Compiler an, dass die Klasse als COM-Objekt verfügbar gemacht werden soll.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Ermöglicht die Modulmember zugegriffen werden nur die für das Modul erforderlichen Qualifikation verwenden.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Gibt die Größe einer Zeichenfolge fester Länge in einer Struktur für die Verwendung mit der Datei, die ein- und Ausgabe Funktionen.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Gibt die Größe von einem Array fester Größe in einer Struktur für die Verwendung mit ein- und Ausgabe-Datei Funktionen.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Verwendung `COMClassAttribute` vereinfacht das Erstellen von COM-Komponenten aus Visual Basic. COM-Objekte unterscheiden sich erheblich von .NET Framework-Assemblys und ohne `COMClassAttribute`, müssen Sie eine Reihe von Schritten, um ein COM-Objekt in Visual Basic zu generieren. Für Klassen mit `COMClassAttribute`, der Compiler viele dieser Schritte automatisch durchführt.  
+ Verwendung `COMClassAttribute` vereinfachen das Erstellen von COM-Komponenten aus Visual Basic. COM-Objekte unterscheiden sich erheblich von .NET Framework-Assemblys und ohne `COMClassAttribute`, müssen Sie eine Reihe von Schritten, um ein COM-Objekt aus Visual Basic zu generieren. Für Klassen mit markiert `COMClassAttribute`, führt der Compiler viele dieser Schritte automatisch.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Verwendung `HideModuleNameAttribute` auf die Member des Moduls nur die Zugriffsberechtigungen für das Modul benötigt zugegriffen werden kann.  
+ Verwendung `HideModuleNameAttribute` auf die Modulmember zugegriffen werden, mithilfe der nur die für das Modul erforderlichen Qualifikation zulassen.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
  Verwendung `VBFixedStringAttribute` zu erzwingen, dass Visual Basic zum Erstellen einer Zeichenfolge fester Länge. Zeichenfolgen mit variabler Länge in der Standardeinstellung sind, und dieses Attribut ist hilfreich, wenn Sie Zeichenfolgen in Dateien zu speichern. Der folgende Code veranschaulicht dies:  
@@ -269,12 +261,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Verwendung `VBFixedArrayAttribute` Arrays deklarieren, die eine feste Größe sind. Ähnlich wie Zeichenfolgen in Visual Basic haben Arrays standardmäßig eine Variable Länge. Dieses Attribut ist hilfreich bei der Serialisierung oder Schreiben von Daten in Dateien.  
+ Verwendung `VBFixedArrayAttribute` Arrays deklarieren, die eine feste Größe sind. Sind z. B. Visual Basic-Zeichenfolgen Arrays standardmäßig eine Variable Länge. Dieses Attribut ist hilfreich beim Serialisieren und Schreiben von Daten in Dateien.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)   
- [Attribute](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Zugriff auf Attribute mit Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
+ [Attribute](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))

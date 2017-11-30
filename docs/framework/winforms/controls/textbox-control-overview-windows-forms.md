@@ -1,42 +1,45 @@
 ---
-title: "&#220;bersicht &#252;ber das TextBox-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Textfelder, Hinzufügen"
-  - "TextBox-Steuerelement [Windows Forms], Informationen über TextBox-Steuerelemente"
+title: "Übersicht über das TextBox-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: TextBox
+helpviewer_keywords:
+- TextBox control [Windows Forms], about TextBox controls
+- text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e8c75392f12b87c7495b1fcdf5419f2463067161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das TextBox-Steuerelement (Windows&#160;Forms)
-Textfelder in Windows Forms werden für Benutzereingaben oder zur Anzeige von Text verwendet.  <xref:System.Windows.Forms.TextBox>\-Steuerelemente werden in der Regel für bearbeitbaren Text verwendet, unterstützen jedoch auch schreibgeschützten Text.  In Textfeldern können mehrere Zeilen angezeigt, Text auf die Größe des Steuerelements umbrochen und grundlegende Formatierungen hinzugefügt werden.  Das <xref:System.Windows.Forms.TextBox>\-Steuerelement enthält eine Formatvorlage mit einem einzelnen Format für Text, der im Steuerelement angezeigt oder eingegeben wird.  Unterschiedlich formatierte Textarten werden mit dem <xref:System.Windows.Forms.RichTextBox>\-Steuerelement angezeigt.  Weitere Informationen finden Sie unter [Übersicht über das RichTextBox\-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  
+# <a name="textbox-control-overview-windows-forms"></a>Übersicht über das TextBox-Steuerelement (Windows Forms)
+Windows Forms-Textfelder dienen, die vom Benutzer Eingabe abzurufen oder um Text anzuzeigen. Die <xref:System.Windows.Forms.TextBox> Steuerelement wird im Allgemeinen für bearbeitbares Textfeld verwendet, obwohl sie auch schreibgeschützt festgelegt werden kann. Textfelder können mehrere Zeilen angezeigt, Zeilenumbruch, um die Größe des Steuerelements und einfache Formatierung hinzufügen. Die <xref:System.Windows.Forms.TextBox> gesteuert Formatvorlage mit einem einzelnen Format für Text im Steuerelement angezeigt oder eingegeben. Um mehrere Arten von formatiertem Text anzuzeigen, verwenden die <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über das RichTextBox-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  
   
-## Arbeiten mit dem TextBox\-Steuerelement  
- Der vom Steuerelement angezeigte Text ist in der <xref:System.Windows.Forms.TextBox.Text%2A>\-Eigenschaft enthalten.  In ein Textfeld können standardmäßig bis zu 2048 Zeichen eingegeben werden.  Wird für die <xref:System.Windows.Forms.TextBox.Multiline%2A>\-Eigenschaft `true` festgelegt, kann das Textfeld bis zu 32 KB Text aufnehmen.  Die <xref:System.Windows.Forms.TextBox.Text%2A>\-Eigenschaft kann zur Entwurfszeit im Eigenschaftenfenster festgelegt oder zur Laufzeit im Code bzw. durch Benutzereingaben definiert werden.  Der aktuelle Inhalt eines Textfeldes kann zur Laufzeit durch Auslesen der <xref:System.Windows.Forms.TextBox.Text%2A>\-Eigenschaft abgerufen werden.  
+## <a name="working-with-the-textbox-control"></a>Arbeiten mit dem TextBox-Steuerelement  
+ Vom Steuerelement angezeigte Text ist Bestandteil der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft. Standardmäßig können Sie bis zu 2048 Zeichen in einem Textfeld eingeben. Wenn Sie festlegen, die <xref:System.Windows.Forms.TextBox.Multiline%2A> Eigenschaft `true`, Sie können bis zu 32 KB Text eingeben. Die <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft kann zur Entwurfszeit im Fenster Eigenschaften zur Laufzeit im Code oder durch die Benutzereingabe zur Laufzeit festgelegt werden. Den aktuellen Inhalt eines Textfelds können zur Laufzeit abgerufen werden, durch Lesen der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
   
- Im folgenden Codebeispiel wird Text zur Laufzeit im Steuerelement festgelegt.  Die`InitializeMyControl`Prozedur führt nicht automatisch aus. Sie muss aufgerufen werden.  
+ Das folgende Codebeispiel legt Text im Steuerelement zur Laufzeit fest. Die `InitializeMyControl` Prozedur wird nicht automatisch ausgeführt; es muss aufgerufen werden.  
   
 ```vb  
 Private Sub InitializeMyControl()  
    ' Put some text into the control first.  
    TextBox1.Text = "This is a TextBox control."  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -44,7 +47,6 @@ private void InitializeMyControl() {
    // Put some text into the control first.  
    textBox1.Text = "This is a TextBox control.";  
 }  
-  
 ```  
   
 ```cpp  
@@ -56,12 +58,12 @@ private:
    }  
 ```  
   
-## Siehe auch  
- <xref:System.Windows.Forms.TextBox>   
- [Gewusst wie: Steuern der Einfügemarke in einem TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Gewusst wie: Erstellen eines Kennwort\-Textfelds mit dem TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Gewusst wie: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Gewusst wie: Programmgesteuertes Auswählen von Text im TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Gewusst wie: Anzeigen mehrerer Zeilen im TextBox\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox\-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.TextBox>  
+ [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

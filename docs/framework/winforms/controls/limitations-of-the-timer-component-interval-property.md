@@ -1,43 +1,44 @@
 ---
-title: "Einschr&#228;nkungen f&#252;r die Interval-Eigenschaft der Timer-Komponente in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interval-Eigenschaft, Einschränkungen"
-  - "Timer-Komponente [Windows Forms], Einschränkungen für die Interval-Eigenschaft"
-  - "Zeitgeber, Ereignisintervalle"
-  - "Zeitgeber, Windows-basiert"
+title: "Einschränkungen der Timer-Komponente in Windows Forms &#39; s Interval-Eigenschaft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timers [Windows Forms], event intervals
+- Interval property [Windows Forms], limitations
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72af16b7dcb7709dd132a3748a454eda57acc168
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Einschr&#228;nkungen f&#252;r die Interval-Eigenschaft der Timer-Komponente in Windows&#160;Forms
-Die <xref:System.Windows.Forms.Timer>\-Komponente in Windows Forms verfügt über eine <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft, durch die die Anzahl der Millisekunden zwischen zwei Zeitgeberereignissen festgelegt wird.  Solange die Komponente nicht deaktiviert wird, erhält ein Zeitgeber in ungefähr gleichen Zeitabständen <xref:System.Windows.Forms.Timer.Tick>\-Ereignisse.  
+# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Einschränkungen der Timer-Komponente in Windows Forms &#39; s Interval-Eigenschaft
+Windows Forms <xref:System.Windows.Forms.Timer> Komponente weist eine <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft, die die Anzahl von Millisekunden angibt, die zwischen einem timerereignisses zu übergeben. Wenn die Komponente nicht deaktiviert wird, weiterhin ein Zeitgeber empfängt die <xref:System.Windows.Forms.Timer.Tick> Ereignis in ungefähr gleich Zeitabständen.  
   
- Diese Komponente ist für eine Windows Forms\-Umgebung gedacht.  Wenn Sie einen Zeitgeber benötigen, der für eine Serverumgebung geeignet ist, informieren Sie sich unter [Introduction to Server\-Based Timers](http://msdn.microsoft.com/de-de/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ Diese Komponente wurde für eine Windows Forms-Umgebung entwickelt. Wenn Sie einen für eine Serverumgebung geeigneten Timer benötigen, lesen Sie die Informationen unter [Introduction to Server-Based Timers (Einführung in serverbasierte Timer)](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
-## Die Interval\-Eigenschaft  
- Bei der Programmierung einer <xref:System.Windows.Forms.Timer>\-Komponente sind einige Einschränkungen für die <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft zu beachten:  
+## <a name="the-interval-property"></a>Die Interval-Eigenschaft  
+ Die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft gelten einige Einschränkungen berücksichtigt, wenn Sie Programmieren einer <xref:System.Windows.Forms.Timer> Komponente:  
   
--   Wenn Ihre oder eine andere Anwendung das System stark beansprucht \(beispielsweise durch lange Schleifen, aufwendige Berechnungen oder Zugriffe auf Laufwerke, Netzwerke bzw. Anschlüsse\), empfängt Ihre Anwendung möglicherweise nicht so häufig Zeitgeberereignisse, wie durch die <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft festgelegt.  
+-   Wenn Ihre Anwendung oder einer anderen Anwendung hohe Anforderungen auf dem System stammt – wie lange Schleifen, rechenintensive Berechnungen oder Laufwerk, Netzwerk oder Portzugriff – Ihre Anwendung kann nicht abgerufen werden Ereignisse für Timer so oft wie die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft gibt.  
   
--   Es ist nicht gewährleistet, dass das Intervall genau zum angegebenen Zeitpunkt abläuft.  Um die Genauigkeit sicherzustellen, sollte der Zeitgeber bei Bedarf die Systemuhr überprüfen, anstatt die bisher abgelaufene Zeit intern zu verfolgen.  
+-   Das Intervall wird nicht unbedingt genau an Zeit vergehen. Um Genauigkeit sicherzustellen, sollte der Zeitgeber die Systemuhr Bedarf überprüfen, anstatt zum Nachverfolgen häufig auftretende Zeitfehler intern versuchen.  
   
--   Die Genauigkeit der <xref:System.Windows.Forms.Timer.Interval%2A>\-Eigenschaft liegt im Millisekundenbereich.  Einige Computer stellen einen hochauflösenden Zähler zur Verfügung, dessen Auflösung über dem Millisekundenbereich liegt.  Ob ein solcher Zähler verfügbar ist, ist von der Prozessorhardware des Computers abhängig.  Weitere Informationen finden Sie im Microsoft Knowledge Base\-Artikel 172338, "How To Use QueryPerformanceCounter to Time Code", unter http:\/\/support.microsoft.com.  
+-   Die Genauigkeit der <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft wird in Millisekunden angegeben. Einige Computer Geben Sie einen hochauflösenden Leistungsindikator, der einer höher als Millisekunden Auflösung. Die Verfügbarkeit solcher eines Indikators hängt von der Prozessorhardware des Computers ab. Weitere Informationen finden Sie in Artikel 172338, "Wie zum Verwenden QueryPerformanceCounter auf Zeitcode" in der Microsoft Knowledge Base unter http://support.microsoft.com.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.Timer>   
- [Timer\-Komponente](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
- [Übersicht über die Timer\-Komponente](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.Timer>  
+ [Timer-Komponente](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [Übersicht über die Timer-Komponente](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

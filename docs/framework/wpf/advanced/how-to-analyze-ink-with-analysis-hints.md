@@ -1,33 +1,39 @@
 ---
-title: "Gewusst wie: Analysieren von Freihandeingaben mit Analysehinweisen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AnalysisHintNode-Objekte"
-  - "Analysieren von Freihandeingaben"
-  - "Freihandeingaben, AnalysisHintNode-Objekte"
-  - "Freihandeingaben, Analysieren"
+title: 'Gewusst wie: Analysieren von Freihandeingaben mit Analysehinweisen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ink [WPF], analyzing
+- analyzing ink [WPF]
+- ink [WPF], AnalysisHintNode objects [WPF]
+- AnalysisHintNode objects [WPF]
 ms.assetid: d4421ed4-77f5-4640-829e-9f1de50b2ff2
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d405ba3659c32a3aa637218c6f3656f6d4dccae2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Analysieren von Freihandeingaben mit Analysehinweisen
-Ein <xref:System.Windows.Ink.AnalysisHintNode>\-Objekt stellt einen Hinweis für das <xref:System.Windows.Ink.InkAnalyzer>\-Objekt zur Verfügung, dem es angefügt wird.  Der Hinweis bezieht sich auf den durch die <xref:System.Windows.Ink.ContextNode.Location%2A>\-Eigenschaft von <xref:System.Windows.Ink.AnalysisHintNode> angegebenen Bereich und stellt dem InkAnalyzer\-Objekt zusätzlichen Kontext zur Verfügung, um die Erkennungsgenauigkeit zu erhöhen.  Das <xref:System.Windows.Ink.InkAnalyzer>\-Objekt verwendet diese Kontextinformationen bei der Analyse von Freihandeingaben, die es aus dem Hinweisbereich abruft.  
+# <a name="how-to-analyze-ink-with-analysis-hints"></a>Gewusst wie: Analysieren von Freihandeingaben mit Analysehinweisen
+Ein [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) bietet einen Hinweis für die [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) , dem er zugeordnet ist.  Der Hinweis gilt für den vom angegebenen Bereich der [System.Windows.Ink.ContextNode.Location%2A](https://msdn.microsoft.com/library/system.windows.ink.contextnode.location(v=vs.100).aspx) Eigenschaft von der [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) und stellt zusätzlichen Kontext, um die Freihand-Analyzer Verbessern Sie die Genauigkeit der Erkennung. Die [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) gilt diese Kontextinformationen beim Analysieren von Freihandeingaben aus innerhalb der Hinweis Bereichs abgerufen werden.  
   
-## Beispiel  
- Bei dem folgenden Beispiel handelt es sich um eine Anwendung, in der mehrere <xref:System.Windows.Ink.AnalysisHintNode>\-Objekte in einem Formular verwendet werden, das Freihandeingaben akzeptiert.  In der Anwendung wird die <xref:System.Windows.Ink.AnalysisHintNode.Factoid%2A>\-Eigenschaft verwendet, um Kontextinformationen für jeden Eintrag im Formular bereitzustellen.  In der Anwendung wird eine Hintergrundanalyse verwendet, um die Freihandeingaben zu analysieren. Fünf Sekunden nach der letzten Freihandeingabe durch den Benutzer werden sämtliche Freihandeingaben aus dem Formular gelöscht.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird eine Anwendung, das mehrere [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) Objekte in einem Formular, das Freihandeingaben akzeptiert. Die Anwendung verwendet die [System.Windows.Ink.AnalysisHintNode.Factoid%2A](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode.factoid(v=vs.100)) -Eigenschaft Kontextinformationen für jeden Eintrag auf dem Formular bereit.  Die Anwendung Hintergrundanalyse verwendet, um die Freihandeingabe zu analysieren und löscht alle Freihand-Form fünf Sekunden, nachdem der Benutzer das Hinzufügen von Freihandeingaben beendet.  
   
- [!code-xml[HowToAnalyzeInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAnalyzeInk/CSharp/FormAnalyzer.xaml#1)]  
+ [!code-xaml[HowToAnalyzeInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAnalyzeInk/CSharp/FormAnalyzer.xaml#1)]  
   
  [!code-csharp[HowToAnalyzeInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAnalyzeInk/CSharp/FormAnalyzer.xaml.cs#2)]
  [!code-vb[HowToAnalyzeInk#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToAnalyzeInk/VisualBasic/FormAnalyzer.xaml.vb#2)]

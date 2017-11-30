@@ -1,80 +1,81 @@
 ---
-title: "ClickOnce-Bereitstellung f&#252;r Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ClickOnce-Bereitstellung [Windows Forms]"
-  - "Exemplarische Vorgehensweisen [Windows Forms], ClickOnce-Bereitstellung"
-  - "Windows Forms, ClickOnce-Bereitstellung"
+title: "ClickOnce-Bereitstellung für Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ClickOnce deployment [Windows Forms]
+- Windows Forms, ClickOnce deployment
+- walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# ClickOnce-Bereitstellung f&#252;r Windows Forms
-Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms\-Anwendungen auf Clientcomputern.  
+# <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
+Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms-Anwendungen auf Clientcomputern.  
   
-## Verwandte Abschnitte  
- [Choosing a ClickOnce Deployment Strategy](../Topic/Choosing%20a%20ClickOnce%20Deployment%20Strategy.md)  
- Stellt mehrere Möglichkeiten zum Bereitstellen von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendungen vor.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
+ Stellt mehrere Möglichkeiten zum Bereitstellen von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen vor.  
   
- [Choosing a ClickOnce Update Strategy](../Topic/Choosing%20a%20ClickOnce%20Update%20Strategy.md)  
- Stellt mehrere Möglichkeiten zum Aktualisieren von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendungen vor.  
+ [Auswählen einer Strategie für die ClickOnce-Aktualisierung](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
+ Stellt mehrere Möglichkeiten zum Aktualisieren von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen vor.  
   
- [Sichern von ClickOnce\-Anwendungen](../Topic/Securing%20ClickOnce%20Applications.md)  
- Erläutert die Sicherheitsauswirkungen der [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Bereitstellung.  
+ [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)  
+ Erläutert die Sicherheitsauswirkungen der [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung.  
   
- [Troubleshooting ClickOnce Deployments](../Topic/Troubleshooting%20ClickOnce%20Deployments.md)  
- Beschreibt verschiedene Probleme, die bei der Bereitstellung von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendungen auftreten können, und dokumentiert die allgemeinen Fehlermeldungen, die möglicherweise von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] generiert werden.  
+ [Problembehandlung bei ClickOnce-Bereitstellungen](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
+ Beschreibt verschiedene Probleme, die bei der Bereitstellung von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen auftreten können, und dokumentiert die allgemeinen Fehlermeldungen, die möglicherweise von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] generiert werden.  
   
- [ClickOnce and Application Settings](../Topic/ClickOnce%20and%20Application%20Settings.md)  
- Beschreibt, wie die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Bereitstellung mit Anwendungseinstellungen, die Anwendungs\- und Benutzereinstellungen für den zukünftigen Abruf speichern, funktioniert.  
+ [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings)  
+ Beschreibt, wie die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung mit Anwendungseinstellungen, die Anwendungs- und Benutzereinstellungen für den zukünftigen Abruf speichern, funktioniert.  
   
- [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](../Topic/Trusted%20Application%20Deployment%20Overview.md)  
- Beschreibt eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Funktion, die es vertrauenswürdigen Anwendungen gestattet, auf Clientcomputern mit einer höheren Berechtigungsebene ausgeführt zu werden.  
+ [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)  
+ Beschreibt eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Funktion, die es vertrauenswürdigen Anwendungen gestattet, auf Clientcomputern mit einer höheren Berechtigungsebene ausgeführt zu werden.  
   
- [ClickOnce und Authenticode](../Topic/ClickOnce%20and%20Authenticode.md)  
- Beschreibt, wie die Authenticode\-Technologie bei der Bereitstellung vertrauenswürdiger Anwendungen verwendet wird.  
+ [ClickOnce und Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
+ Beschreibt, wie die Authenticode-Technologie bei der Bereitstellung vertrauenswürdiger Anwendungen verwendet wird.  
   
- [Walkthrough: Manually Deploying a ClickOnce Application](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)  
- Veranschaulicht die Verwendung von Befehlszeilen\- und SDK\-Tools zum Bereitstellen einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendung ohne Visual Studio.  
+ [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ Veranschaulicht die Verwendung von Befehlszeilen- und SDK-Tools zum Bereitstellen einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ohne Visual Studio.  
   
- [Gewusst wie: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce\-Anwendungen](../Topic/How%20to:%20Add%20a%20Trusted%20Publisher%20to%20a%20Client%20Computer%20for%20ClickOnce%20Applications.md)  
+ [Gewusst wie: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Veranschaulicht die einmalige Konfiguration von Clientcomputern, die für die Bereitstellung vertrauenswürdiger Anwendungen erforderlich ist.  
   
- [How to: Specify an Alternate Location for Deployment Updates](../Topic/How%20to:%20Specify%20an%20Alternate%20Location%20for%20Deployment%20Updates.md)  
- Veranschaulicht das Konfigurieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendung mithilfe von SDK\-Tools, um einen anderen Speicherort auf neue Versionen einer Anwendung zu überprüfen.  
+ [Gewusst wie: Angeben eines anderen Speicherorts für Bereitstellungsaktualisierungen](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ Veranschaulicht das Konfigurieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung mithilfe von SDK-Tools, um einen anderen Speicherort auf neue Versionen einer Anwendung zu überprüfen.  
   
- [Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API](../Topic/Walkthrough:%20Downloading%20Assemblies%20on%20Demand%20with%20the%20ClickOnce%20Deployment%20API.md)  
- Veranschaulicht die Verwendung von API\-Aufrufen zum Abrufen einer Assembly beim ersten Versuch Ihrer Anwendung, diese zu laden.  
+ [Exemplarische Vorgehensweise: Herunterladen von Assemblys bei Bedarf mit der API für die ClickOnce-Bereitstellung](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ Veranschaulicht die Verwendung von API-Aufrufen zum Abrufen einer Assembly beim ersten Versuch Ihrer Anwendung, diese zu laden.  
   
- [Gewusst wie: Abrufen von Abfragezeichenfolgen\-Informationen in einer Online\-ClickOnce\-Anwendung](../Topic/How%20to:%20Retrieve%20Query%20String%20Information%20in%20an%20Online%20ClickOnce%20Application.md)  
- Veranschaulicht das Abrufen von Parametern aus der URL, mit der eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendung ausgeführt wird.  
+ [Gewusst wie: Abrufen von Abfragezeichenfolgen-Informationen in einer Online-ClickOnce-Anwendung](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ Veranschaulicht das Abrufen von Parametern aus der URL, mit der eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ausgeführt wird.  
   
- [ClickOnce Cache Overview](../Topic/ClickOnce%20Cache%20Overview.md)  
+ [Übersicht über den ClickOnce-Cache](/visualstudio/deployment/clickonce-cache-overview)  
  Beschreibt den Cache, der zum Speichern von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Anwendungen auf dem lokalen Computer verwendet wird.  
   
- [Zugreifen auf lokale und Remotedaten in einer ClickOnce\-Anwendung](../Topic/Accessing%20Local%20and%20Remote%20Data%20in%20ClickOnce%20Applications.md)  
- Beschreibt, wie Sie aus einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Anwendung auf lokale Datendateien und Remotedatenquellen zugreifen.  
+ [Zugreifen auf lokale und Remotedaten in einer ClickOnce-Anwendung](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
+ Beschreibt, wie Sie aus einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung auf lokale Datendateien und Remotedatenquellen zugreifen.  
   
- [How to: Include a Data File in a ClickOnce Application](../Topic/How%20to:%20Include%20a%20Data%20File%20in%20a%20ClickOnce%20Application.md)  
- Veranschaulicht, wie Sie eine Datei so markieren, dass sie im [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]\-Datenverzeichnis verfügbar ist.  
+ [Gewusst wie: Einschließen einer Datendatei in eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ Veranschaulicht, wie Sie eine Datei so markieren, dass sie im [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Datenverzeichnis verfügbar ist.  
   
-## Siehe auch  
- [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [Publishing ClickOnce Applications](../Topic/Publishing%20ClickOnce%20Applications.md)   
- [Building ClickOnce Applications from the Command Line](../Topic/Building%20ClickOnce%20Applications%20from%20the%20Command%20Line.md)   
- [Debugging ClickOnce Applications That Use System.Deployment.Application](../Topic/Debugging%20ClickOnce%20Applications%20That%20Use%20System.Deployment.Application.md)   
- [Deploying COM Components with ClickOnce](../Topic/Deploying%20COM%20Components%20with%20ClickOnce.md)   
- [How to: Publish a ClickOnce Application using the Publish Wizard](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)  
+ [Erstellen von ClickOnce-Anwendungen über die Befehlszeile](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
+ [Debuggen von ClickOnce-Anwendungen, die System.Deployment.Application verwenden](http://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
+ [Bereitstellen von COM-Komponenten mit ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
+ [Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

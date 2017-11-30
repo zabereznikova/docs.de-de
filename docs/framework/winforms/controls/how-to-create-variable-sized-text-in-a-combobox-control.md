@@ -1,33 +1,35 @@
 ---
-title: "Gewusst wie: Erstellen von Text mit variabler Gr&#246;&#223;e in einem ComboBox-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kombinationsfelder, Zeichnen von Text"
-  - "ComboBox-Steuerelement [Windows Forms], Zeichnen von benutzerdefiniertem Text"
-  - "ComboBox-Steuerelement [Windows Forms], Beispiele [C#]"
-  - "Beispiele [Windows Forms], ComboBox-Steuerelement"
-  - "Text, Zeichnen in Kombinationsfeldern"
+title: "Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- text [Windows Forms], drawing in combo boxes
+- examples [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], drawing text
+- ComboBox control [Windows Forms], examples [C#]
+- ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen von Text mit variabler Gr&#246;&#223;e in einem ComboBox-Steuerelement
-In diesem Beispiel wird das benutzerdefinierte Zeichnen von Text in einem <xref:System.Windows.Forms.ComboBox>\-Steuerelement veranschaulicht.  Wenn ein Element ein bestimmtes Kriterium erfüllt, wird es in einer größeren Schriftart gezeichnet und rot dargestellt.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement
+In diesem Beispiel veranschaulicht das benutzerdefinierte Zeichnen von Text in einem <xref:System.Windows.Forms.ComboBox> Steuerelement. Wenn ein Element eine bestimmte Kriterien erfüllt, ist es in einer größeren Schrift gezeichnet und Rot.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -62,22 +64,22 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## Kompilieren des Codes  
- Dieses Beispiel setzt Folgendes voraus:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein Windows Form muss vorhanden sein.  
+-   Ein Windows Form.  
   
--   Ein <xref:System.Windows.Forms.ComboBox>\-Steuerelement mit dem Namen  `ListBox1`  mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A>\-Eigenschaft.  In diesem Beispiel lauten die drei Elemente `"One", Two", and Three"`.  Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A>\-Eigenschaft von `ComboBox1` muss auf <xref:System.Windows.Forms.DrawMode> festgelegt sein.  
+-   Ein <xref:System.Windows.Forms.ComboBox> Steuerelement namens `ListBox1` mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A> Eigenschaft. In diesem Beispiel werden die drei Elemente mit Namen `"One", Two", and Three"`. Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Eigenschaft `ComboBox1` muss festgelegt werden, um <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
-    >  Diese Methode kann auch auf das <xref:System.Windows.Forms.ListBox>\-Steuerelement angewendet werden – Sie können eine <xref:System.Windows.Forms.ListBox> für die <xref:System.Windows.Forms.ComboBox> ersetzen.  
+    >  Dieses Verfahren gilt auch für die <xref:System.Windows.Forms.ListBox> Steuerelement – können Sie auch eine <xref:System.Windows.Forms.ListBox> für die <xref:System.Windows.Forms.ComboBox>.  
   
--   Verweise auf den <xref:System.Windows.Forms?displayProperty=fullName>\-Namespace und den <xref:System.Drawing?displayProperty=fullName>\-Namespace.  
+-   Verweise auf die Namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.ComboBox.DrawItem>   
- <xref:System.Windows.Forms.DrawItemEventArgs>   
- <xref:System.Windows.Forms.ComboBox.MeasureItem>   
- [Steuerelemente mit integrierter Ownerdrawing\-Unterstützung](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [ListBox\-Steuerelement](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)   
- [ComboBox\-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.ComboBox.DrawItem>  
+ <xref:System.Windows.Forms.DrawItemEventArgs>  
+ <xref:System.Windows.Forms.ComboBox.MeasureItem>  
+ [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [ListBox-Steuerelement](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

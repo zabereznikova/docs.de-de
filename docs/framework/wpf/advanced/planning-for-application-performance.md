@@ -1,51 +1,54 @@
 ---
-title: "Planen der Anwendungsleistung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Anwendungen, Optimieren"
-  - "WPF-Anwendung, Optimieren"
+title: Planen der Anwendungsleistung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applications [WPF], optimizing
+- WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Planen der Anwendungsleistung
-Das erfolgreiche Erreichen der Leistungsziele hängt davon ab, wie gut Sie die Leistungsstrategie entwickeln.  Planung stellt bei jedem Projekt die erste Phase der Entwicklung dar.  In diesem Thema werden einige sehr einfache Regeln für die Entwicklung einer guten Leistungsstrategie beschrieben.  
+# <a name="planning-for-application-performance"></a>Planen der Anwendungsleistung
+Der Erfolg der Leistungsziele zu erreichen, hängt davon ab, wie gut Ihre Leistungsstrategie entwickeln. Die Planung ist die erste Phase in einem Produkt zu entwickeln. Dieses Thema beschreibt einige sehr einfache Regeln für das Entwickeln einer Strategie für die gute Leistung.  
   
-## Berücksichtigen von Szenarien  
- Mithilfe von Szenarien können Sie sich auf die wichtigen Komponenten der Anwendungen konzentrieren.  Szenarien werden in der Regel von Ihren Kunden oder von Konkurrenzprodukten abgeleitet.  Beobachten Sie immer Ihre Kunden, und finden Sie heraus, was genau sie an Ihren und an den Produkten der Konkurrenz schätzen.  Mithilfe des Feedbacks der Kunden können Sie das primäre Szenario der Anwendung bestimmen.  Wenn Sie z. B. eine Komponente entwerfen, die beim Starten verwendet wird, ist es sehr wahrscheinlich, dass sie nur einmal, nämlich beim Starten der Anwendung, aufgerufen wird.  Die Startzeit wird zum Hauptszenario.  Andere Hauptszenarien könnten die gewünschte Framerate für Animationssequenzen oder das für die Anwendung maximal zulässige Workingset umfassen.  
+## <a name="think-in-terms-of-scenarios"></a>Berücksichtigen von Szenarien  
+ Szenarien können Sie wichtige Komponente Ihrer Anwendung konzentrieren. Szenarien werden in der Regel aus Ihrer Kunden sowie Konkurrenzprodukten abgeleitet. Immer untersuchen Sie Ihre Kunden zu und herauszufinden Sie, was tatsächlich diese Ihres Produkts und Ihrer Mitbewerber Produkte begeistert macht. Ihrer Kunden-Feedback können Sie Ihre primäre Anwendungsszenario zu bestimmen. Für die Instanz, wenn Sie eine Komponente entwerfen, die beim Start verwendet wird, ist es wahrscheinlich, dass die Komponente nur einmal aufgerufen wird, wenn die Anwendung wird gestartet. Die Startzeit wird die Hauptszenario. Weitere Beispiele für wichtige Szenarien konnte die gewünschte Framerate für Animationssequenzen werden oder die maximaler Arbeitssatz, die für die Anwendung zulässig.  
   
-## Definieren von Zielen  
- Mithilfe von Zielen können Sie bestimmten, ob eine Anwendung schneller oder langsamer ausgeführt wird.  Definieren Sie Ziele für alle Szenarien.  Alle definierten Leistungsziele sollten auf den Erwartungen der Kunden basieren.  Das Festlegen von Leistungszielen zu einem frühen Zeitpunkt im Entwicklungszyklus einer Anwendung kann sich als schwierig erweisen, da es noch viele ungelöste Probleme gibt.  Es ist jedoch besser, sich zu Beginn ein Ziel zu setzen und es später zu ändern, als ohne Ziel zu arbeiten.  
+## <a name="define-goals"></a>Definieren von Zielen  
+ Ziele können Sie bestimmen, ob eine Anwendung schneller oder langsamer ausgeführt wird. Sie sollten für alle Szenarien Ziele definieren. Alle Leistungsziele, die Sie definieren sollte auf die kundenerwartungen basieren. Es kann schwierig zu Satz Leistung sein, die Ziele in einer frühen Phase der Anwendungsentwicklung durchlaufen, wenn es noch viele ungelösten Probleme vorliegen sind. Allerdings ist es besser, eine anfängliche Ziel festgelegt, und Überarbeiten es später als nicht auf alle haben ein Ziel.  
   
-## Verstehen der Plattform  
- Behalten Sie während des Entwicklungszyklus der Anwendung immer den Zyklus von Messen, Überprüfen und Verfeinern\/Korrigieren bei.  Sie müssen während des gesamten Entwicklungszyklus die Leistung der Anwendung in einer zuverlässigen und stabilen Umgebung messen.  Vermeiden Sie durch externe Faktoren verursachte Variabilität.  Deaktivieren Sie beim Testen der Leistung beispielsweise Antivirenprogramme oder automatische Updates wie SMS, damit die Ergebnisse des Leistungstests nicht beeinträchtigt werden.  Nachdem Sie die Leistung der Anwendung gemessen haben, müssen Sie die Änderungen identifizieren, mit denen sich die größte Leistungssteigerung erzielen lässt.  Sobald Sie die Anwendung geändert haben, starten Sie den Zyklus erneut.  
+## <a name="understand-your-platform"></a>Verstehen der Plattform  
+ Behalten Sie immer den Zyklus messen, untersuchen, während der Anwendungsentwicklungszyklus optimieren/korrigieren. Vom Anfang bis zum Ende des Entwicklungszyklus müssen Sie die Leistung Ihrer Anwendung in eine zuverlässige und stabile Umgebung messen. Vermeiden Sie die Variabilität durch externe Faktoren verursacht. Beim Testen der Leistung sollten Sie z. B. Deaktivieren von Antiviren- oder automatische Updates wie SMS, damit keine Leistungseinbußen Testergebnisse. Nachdem Sie die Leistung Ihrer Anwendung gemessen haben, müssen Sie die Änderungen zu identifizieren, die die größte Leistungssteigerung führt. Nachdem Sie Ihre Anwendung geändert haben, starten Sie den Zyklus erneut.  
   
-## Leistungsoptimierung als iterativer Prozess  
- Sie sollten die relativen Kosten für jedes Feature kennen, das Sie verwenden.  Beispielsweise ist die Verwendung der Reflektion in [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] in der Regel sehr ressourcenintensiv und sollte daher mit Bedacht verwendet werden.  Dies bedeutet nicht, dass die Reflektion nicht verwendet werden soll. Sie sollten jedoch darauf achten, ein Gleichgewicht zwischen den Leistungsanforderungen der Anwendung und den Leistungsanforderungen der verwendeten Features zu finden.  
+## <a name="make-performance-tuning-an-iterative-process"></a>Stellen Sie einen iterativen Prozess für die Leistungsoptimierung  
+ Sie sollten die relative Kosten der einzelnen Funktionen kennen, die Sie verwenden möchten. Beispielsweise die Verwendung von Reflektion im [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] ist im Allgemeinen Leistung rechenintensiven im Hinblick auf die Computerressourcen, daher würden mit Bedacht verwendet werden sollen. Dies bedeutet nicht die Verwendung von Reflektion zu vermeiden, nur, dass Sie darauf achten, die Erfüllung der leistungsanforderungen Ihrer Anwendung mit den Anforderungen der Leistung der Funktionen zu verteilen, die Sie verwenden werden soll.  
   
-## Erstellen unter Berücksichtigung vielfältiger Grafikmöglichkeiten  
- Eine wichtige Technik beim Erstellen eines skalierbaren Ansatzes zum Erreichen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendungsleistung besteht darin, bei der Erstellung vielfältige und komplexe Grafikmöglichkeiten zu berücksichtigen.  Beginnen Sie immer mit den am wenigsten ressourcenintensiven Features, um die Szenarioziele zu erreichen.  Sobald Sie diese Ziele erreicht haben, können Sie ressourcenintensivere Features verwenden, um vielfältige Grafikmöglichkeiten zu berücksichtigen. Denken Sie dabei immer an Ihre Szenarioziele.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist eine äußerst vielfältige Plattform, die äußerst vielfältige Grafikfeatures bereitstellt.  Das gedankenlose Verwenden ressourcenintensiver Features kann sich negativ auf die Gesamtleistung der Anwendung auswirken.  
+## <a name="build-towards-graphical-richness"></a>Grafische Reichhaltigkeit ergeben  
+ Eine wichtige Verfahren zum Erstellen eines skalierbaren Ansatzes für das erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Leistung der Anwendung ist das grafische Umfang und Komplexität zu erstellen. Beginnen Sie immer mit der geringsten rechenintensiven leistungsressourcen um zu Ihrem Szenarioziele zu erreichen. Nachdem Sie diese Ziele erreichen, mithilfe von weitere rechenintensiven Leistungsfunktionen, beachten Sie Ihre Szenarioziele Beibehaltung für Grafik Reichhaltigkeit erstellen. Beachten Sie, dass [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist eine sehr umfangreiche Plattform und sehr umfangreiche Grafikfeatures bereitstellt. Mit rechenintensiven Leistungsfunktionen ohne nachzudenken kann die gesamtleistung der Anwendungsleistung negativ beeinträchtigt werden.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelemente sind grundsätzlich erweiterbar, da sie eine umfassende Anpassung ihrer Darstellung zulassen, ohne ihr Verhalten als Steuerelement zu ändern.  Indem Sie die Vorteile von Stilen, Datenvorlagen und Steuerelementvorlagen nutzen, können Sie eine anpassbare [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] erstellen bzw. schrittweise entwickeln, die sich Ihren Leistungsanforderungen anpasst.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente sind grundsätzlich erweiterbar werden umfassende Anpassung ihrer Darstellung, ihr Steuerelementverhalten nicht ändern können. Durch die Nutzung von Formatvorlagen, Datenvorlagen und Steuerelementvorlagen, können Sie erstellen und inkrementell weiterentwickelt ein anpassbares [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , die passt sich an Ihren leistungsanforderungen.  
   
-## Siehe auch  
- [Optimieren der WPF\-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Nutzen der Vorteile der Hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2D\-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Projektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Vorteile der Hardware nutzen](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Objektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Anwendungsressourcen](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

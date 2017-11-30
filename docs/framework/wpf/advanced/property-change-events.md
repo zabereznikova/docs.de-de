@@ -1,73 +1,76 @@
 ---
-title: "Eigenschaften&#228;nderungsereignisse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Änderungsereignisse [WPF], Eigenschaft"
-  - "Erstellen von Eigenschaftentriggern [WPF]"
-  - "Abhängigkeitseigenschaften [WPF], Änderungsereignisse"
-  - "Ereignisse [WPF], Änderung in Eigenschaftswerten"
-  - "Identifizieren von geänderten Eigenschaftenereignissen [WPF]"
-  - "Eigenschaftenänderungsereignisse [WPF]"
-  - "Eigenschaftenänderungsereignisse [WPF], Typen"
-  - "Eigenschaftentrigger [WPF]"
-  - "Eigenschaftentrigger [WPF], Definition von"
-  - "Eigenschaftswertänderungen [WPF]"
+title: "Eigenschaftenänderungsereignisse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], change events
+- property value changes [WPF]
+- change events [WPF], property
+- events [WPF], change in property values
+- creating property triggers [WPF]
+- property change events [WPF], types of
+- property change events [WPF]
+- property triggers [WPF]
+- identifying changed property events [WPF]
+- property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Eigenschaften&#228;nderungsereignisse
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiert mehrere Ereignisse, die bei einer Änderung eines Eigenschaftswerts ausgelöst werden.  Häufig handelt es sich hierbei im eine [Abhängigkeitseigenschaft](GTMT).  Das Ereignis ist entweder ein [Routingereignis](GTMT) oder ein [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]\-Standardereignis.  Die Definition des Ereignisses variiert je nach Szenario, da einige Eigenschaftenänderungen besser durch eine Elementstruktur weitergeleitet werden, während andere Eigenschaftenänderungen zumeist nur für das Objekt, für das die Eigenschaft geändert wurde, relevant sind.  
+# <a name="property-change-events"></a>Eigenschaftenänderungsereignisse
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiert mehrere Ereignisse, die ausgelöst werden als Antwort auf eine Änderung des Werts einer Eigenschaft. Häufig ist die Eigenschaft eine Abhängigkeitseigenschaft. Das Ereignis selbst ist manchmal ein Routingereignis und manchmal ein [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Standardereignis. Die Definition des Ereignisses variiert je nach Szenario, da einige Eigenschaftenänderungen besser durch eine Elementstruktur weitergeleitet werden, während andere Eigenschaftenänderungen in der Regel nur für das Objekt von Bedeutung sind, bei dem sich die Eigenschaft geändert hat.  
   
-## Identifizieren eines Eigenschaftenänderungsereignisses  
- Nicht alle Ereignisse, die eine Eigenschaftenänderung kennzeichnen, werden durch ein Signaturmuster oder Benennungsschema explizit als Eigenschaftenänderungsereignis identifiziert.  Die Beschreibung des Ereignisses in der [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]\-Dokumentation gibt in der Regel an, ob das Ereignis unmittelbar mit der Änderung eines Eigenschaftswerts verbunden ist. Weiterhin enthält sie Querverweise zwischen der Eigenschaft und dem Ereignis.  
+## <a name="identifying-a-property-change-event"></a>Identifizierung eines Eigenschaftenänderungsereignisses  
+ Nicht alle Ereignisse, die eine Eigenschaftenänderung melden, werden explizit als Eigenschaftenänderungsereignis identifiziert. Dies geschieht entweder durch ein Signaturmuster oder ein Namensmuster. Im Allgemeinen weist die Beschreibung des Ereignisses in der [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]-Dokumentation darauf hin, ob das Ereignis unmittelbar mit einer Eigenschaftswertänderung verbunden ist und Querverweise zwischen der Eigenschaft und dem Ereignis enthält.  
   
-### RoutedPropertyChanged\-Ereignisse  
- Bestimmte Ereignisse verwenden einen Ereignisdatentyp und einen Delegat, die speziell für Eigenschaftenänderungsereignisse verwendet werden.  Der Ereignisdatentyp ist <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, und der Delegat ist <xref:System.Windows.RoutedPropertyChangedEventHandler%601>.  Die Ereignisdaten und der Delegat verfügen beide über einen allgemeinen Typparameter, mit dem der Typ der geänderten Eigenschaft bei der Definition des Handlers angegeben wird.  Die Ereignisdaten enthalten zwei Eigenschaften, <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> und <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, die beide als Typargument in den Ereignisdaten übergeben werden.  
+### <a name="routedpropertychanged-events"></a>Routingeigenschaftenänderungs-Ereignisse  
+ Bestimmte Ereignisse verwenden einen Ereignisdatentyp und Delegaten, die explizit für Eigenschaftenänderungsereignisse verwendet werden. Der Ereignistyp der Daten ist <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, und der Delegat ist <xref:System.Windows.RoutedPropertyChangedEventHandler%601>. Die Ereignisdaten und Delegaten haben einen generischen Typparameter, der verwendet wird, um den tatsächlichen Typ der zu ändernden Eigenschaft anzugeben, wenn Sie den Handler festlegen. Die Ereignisdaten enthält zwei Eigenschaften <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> und <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, beide sind dann als Typargument in der ereignismeldung Daten übergeben.  
   
- Der "Routed"\-Teil des Namens kennzeichnet, dass das Eigenschaftenänderungsereignis als Routingereignis registriert wird.  Der Vorteil beim Routing eines Eigenschaftenänderungsereignisses besteht darin, dass die übergeordnete Ebene eines Steuerelements Eigenschaftenänderungsereignisse empfangen kann, wenn die Eigenschaftswerte von untergeordneten Elementen \(Komponenten des Steuerelements\) geändert werden.  Sie können beispielsweise ein Steuerelement erstellen, das ein <xref:System.Windows.Controls.Primitives.RangeBase>\-Steuerelement enthält, z. B. <xref:System.Windows.Controls.Slider>.  Wenn sich der Wert der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>\-Eigenschaft für den Schieberegler ändert, können Sie die Änderung auf dem übergeordneten Steuerelement, anstatt auf der Schiebereglerkomponente verarbeiten.  
+ Der „weitergeleitete“ Teil des Namens gibt an, dass das Eigenschaftenänderungsereignis als Routingereignis registriert ist. Der Vorteil des Routings eines Eigenschaftenänderungsereignisses liegt darin, dass die oberste Ebene eines Steuerelements Eigenschaftenänderungsereignisse empfangen kann, wenn Eigenschaften von untergeordneten Elementen (zusammengesetzte Komponenten des Steuerelements) die Werte ändern. Sie erstellen beispielsweise ein Steuerelement mit einem <xref:System.Windows.Controls.Primitives.RangeBase> steuern, wie z. B. eine <xref:System.Windows.Controls.Slider>. Wenn der Wert, der die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> eigenschaftenänderungen für den Schieberegler, Sie können diese Änderung auf das übergeordnete Steuerelement und nicht auf dem Teil behandeln möchten.  
   
- Da Sie hierdurch über einen vorherigen und einen neuen Wert verfügen, läge es nahe, diesen Ereignishandler zum Überprüfen des Eigenschaftswerts zu nutzen.  Dies ist jedoch nicht der Zweck von Eigenschaftenänderungsereignissen.  In der Regel werden die Werte bereitgestellt, damit Sie diese in anderen logischen Bereichen des Codes verwenden können. Es ist jedoch nicht ratsam, die Werte innerhalb des Ereignishandlers zu ändern. Dies könnte je nach Implementierung des Handlers eine unbeabsichtigte Rekursion zur Folge haben.  
+ Da Sie über einen vorherigen und einen neuen Wert verfügen, kann es dazu verleiten, diesen Ereignishandler als ein Validierungssteuerelement für den Eigenschaftswert zu verwenden. Allerdings ist dies nicht der Zweck der meisten Eigenschaften, die durch Ereignisse geändert wurden. Im Allgemeinen werden die Werte bereitgestellt, damit Sie diese Werte in anderen Logikbereichen Ihres Codes ausführen können, aber eigentlich ist das Ändern der Werte aus dem Ereignishandler heraus nicht empfehlenswert und kann zu unbeabsichtigter Rekursion führen, dies ist davon abhängig, wie der Handler implementiert ist.  
   
- Wenn es sich bei der Eigenschaft um eine benutzerdefinierte Abhängigkeitseigenschaft handelt oder wenn Sie eine abgeleitete Klasse verwenden, in der Sie den Code zum Instanziieren definiert haben, ist ein wesentlich effektiverer Mechanismus zum Verfolgen von Eigenschaftenänderungen verfügbar, der in das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Eigenschaftensystem integriert ist: die Eigenschaftensystemrückrufe <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>.  Weitere Informationen über die Verwendung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Eigenschaftensystems für Validierung und Koersion finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Wenn die Eigenschaft eine benutzerdefinierte Abhängigkeitseigenschaft ist oder wenn Sie mit einer abgeleiteten Klasse arbeiten, in dem Sie den Code definiert haben, ein viel bessere Mechanismus zum Nachverfolgen von eigenschaftenänderungen, die besteht in integrierten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem: die System Rückrufen <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>. Weitere Informationen über die Verwendung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems für die Überprüfung und Koersion, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) und [Benutzerdefinierten Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
-### DependencyPropertyChanged\-Ereignisse  
- Zwei weitere Typen, die im Szenario für Eigenschaftenänderungsereignisse zum Einsatz kommen, sind <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler>.  Die Ereignisse für diese Eigenschaftenänderungen werden nicht weitergeleitet. Es handelt sich hierbei um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]\-Standardereignisse.  <xref:System.Windows.DependencyPropertyChangedEventArgs> ist ein spezieller Berichterstellungstyp für Ereignisdaten, da dieser nicht von <xref:System.EventArgs> abgeleitet wird. <xref:System.Windows.DependencyPropertyChangedEventArgs> ist eine Struktur, keine Klasse.  
+### <a name="dependencypropertychanged-events"></a>Abhängigkeitseigenschaftsänderungs-Ereignisse  
+ Eine andere Typen, die eine Eigenschaft geänderten Ereignisses Szenarios sind <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler>. Ereignisse für diese Eigenschaftenänderungen werden nicht weitergeleitet; Sie sind [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignisse. <xref:System.Windows.DependencyPropertyChangedEventArgs>ist ein ungewöhnlicher für Ereignisdaten, da es nicht von abgeleitet ist <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> ist eine Struktur, die nicht in einer Klasse.  
   
- Ereignisse, die <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler> verwenden, treten häufiger auf als `RoutedPropertyChanged`\-Ereignisse.  Ein Beispiel für ein Ereignis, das diese Typen verwendet, ist <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
+ Ereignisse, mit denen <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler> sind etwas häufiger anzutreffen als `RoutedPropertyChanged` Ereignisse. Ist ein Beispiel für ein Ereignis, das diese Typen verwendet <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   
- <xref:System.Windows.DependencyPropertyChangedEventArgs> gibt ebenso wie <xref:System.Windows.RoutedPropertyChangedEventArgs%601> einen vorherigen und einen neuen Wert für die Eigenschaft zurück.  Für die Verwendung der Werte gilt das Gleiche. Es wird davon abgeraten, diese Werte als Reaktion auf ein Ereignis am Sender zu ändern.  
+ Wie <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, <xref:System.Windows.DependencyPropertyChangedEventArgs> gibt auch einen alten und neuen Wert für die Eigenschaft. Außerdem gelten die gleichen Überlegungen dazu, was Sie mit den Werten tun können; im Allgemeinen ist es nicht empfehlenswert, dass Sie versuchen, die Werte für den Absender als Antwort auf das Ereignis erneut zu ändern.  
   
-## Eigenschaftentrigger  
- Eigenschaftentrigger sind eng mit dem Konzept der Eigenschaftenänderungsereignisse verbunden.  Eigenschaftentrigger werden innerhalb eines Formats oder einer Vorlage erstellt und ermöglichen Ihnen, basierend auf dem Wert der Eigenschaft, der der Eigenschaftentrigger zugeordnet ist, ein bedingtes Verhalten zu definieren.  
+## <a name="property-triggers"></a>Eigenschaftsauslöser  
+ Ein eng mit einem Eigenschaftenänderungsereignis verbundenes Konzept ist ein Eigenschaftsauslöser. Ein Eigenschaftsauslöser wird innerhalb eines Stils oder einer Vorlage erstellt und ermöglicht es Ihnen, ein bedingtes Verhalten basierend auf dem Wert der Eigenschaft zu erstellen, in dem der Eigenschaftsauslöser zugeordnet ist.  
   
- Die Eigenschaft für einen Eigenschaftentrigger muss eine Abhängigkeitseigenschaft sein.  Hierbei handelt es sich häufig um eine schreibgeschützte Abhängigkeitseigenschaft.  Einen Hinweis darüber, ob eine von einem Steuerelement verfügbar gemachte Abhängigkeitseigenschaft zumindest teilweise als Eigenschaftentrigger konzipiert wurde, liefert der Eigenschaftenname, wenn dieser mit "Is" beginnt.  Eigenschaften mit einem solchen Namen sind häufig schreibgeschützte boolesche Abhängigkeitseigenschaften. Das Hauptszenario für die Eigenschaft ist, den Steuerelementzustand zu berichten, der sich auf die Echtzeitbenutzeroberfläche auswirken kann und somit ein möglicher Eigenschaftentrigger ist.  
+ Die Eigenschaft für einen Eigenschaftsauslöser muss eine Abhängigkeitseigenschaft sein. Es kann (und ist häufig) eine schreibgeschützte Abhängigkeitseigenschaft sein. Ein guter Indikator für den Fall, dass eine Abhängigkeitseigenschaft von einem Steuerelement verfügbar gemacht wird, ist zumindest teilweise konzipiert, um ein Eigenschaftsauslöser zu sein, wenn der Eigenschaftsname mit „Is“ beginnt. Eigenschaften, die diese Namen tragen, sind häufig schreibgeschützte boolesche Abhängigkeitseigenschaften, in denen das primäre Szenario für die Eigenschaft den Steuerelementzustand meldet, der möglicherweise Konsequenzen für die Benutzeroberfläche in Echtzeit hat und sich somit als Eigenschaftsauslöserkandidat eignet.  
   
- Einige dieser Eigenschaften verfügen zudem über ein dediziertes Eigenschaftenänderungsereignis.  Die Eigenschaft <xref:System.Windows.UIElement.IsMouseCaptured%2A> verfügt beispielsweise über das Eigenschaftenänderungsereignis <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  Die Eigenschaft selbst ist schreibgeschützt, wobei der Wert durch das Eingabesystem angepasst wird. Das Eingabesystem löst dann für jede Echtzeitänderung <xref:System.Windows.UIElement.IsMouseCapturedChanged> aus.  
+ Einige dieser Eigenschaften können auch ein dediziertes Eigenschaftenänderungsereignis haben. Für die Instanz, die Eigenschaft <xref:System.Windows.UIElement.IsMouseCaptured%2A> wurde von einem eigenschaftsänderungsereignis <xref:System.Windows.UIElement.IsMouseCapturedChanged>. Die Eigenschaft selbst ist schreibgeschützt, wobei des Werts von der Eingabesystem angepasst und der Eingabesystem löst <xref:System.Windows.UIElement.IsMouseCapturedChanged> bei jeder Änderung in Echtzeit.  
   
- Die Verwendung eines Eigenschaftentriggers für eine Eigenschaftenänderung ist im Vergleich mit einem echten Eigenschaftenänderungsereignis mit Einschränkungen verbunden.  
+ Im Vergleich zu einem echten Eigenschaftenänderungsereignis, das einen Eigenschaftsauslöser verwendet, um eine Eigenschaftenänderung zu bearbeiten, gelten hier einige Einschränkungen.  
   
- Eigenschaftentrigger basieren auf einer Logik mit genauen Übereinstimmungen.  Sie geben dabei eine Eigenschaft und einen genauen Wert an, bei dem der Trigger reagiert.  Beispiel: `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`.  Aufgrund dieser Einschränkung werden Eigenschaftentrigger zumeist für boolesche Eigenschaften oder Eigenschaften mit einem dedizierten Enumerationswert verwendet, bei denen der mögliche Wertebereich überschaubar genug ist, um einen Trigger für jeden Fall zu definieren.  Zudem können Eigenschaftentrigger nur für spezifische Werte angegeben werden, z. B. wenn die Elementanzahl den Wert Null erreicht, wobei kein Trigger für Fälle verfügbar ist, in denen der Eigenschaftswert ungleich Null ist \(hier benötigen Sie anstelle eines Triggers für jeden Einzelfall ggf. einen Code\-Ereignishandler oder ein Standardverhalten, das bei einem Wert ungleich Null wiederhergestellt wird\).  
+ Eigenschaftsauslöser funktionieren durch eine genaue Übereinstimmungslogik. Sie legen eine Eigenschaft und einen Wert fest, die den spezifischen Wert angeben für den der Auslöser agiert. Zum Beispiel: `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`. Aufgrund dieser Einschränkung werden die meisten Eigenschaftsauslöser für boolesche Eigenschaften verwendet oder für Eigenschaften, die einen dedizierten Enumerationswert haben, wobei der mögliche Wertebereich überschaubar genug ist, um einen Auslöser für jeden Fall festzulegen. Eigenschaftsauslöser können nur für spezielle Werte vorhanden sein, z.B. wenn die Elementanzahl 0 erreicht, und keine Auslöser vorhanden sind, die Rechenschaft für die Fälle ablegen, wenn der Eigenschaftswert sich erneut von 0 entfernt (an Stelle von Auslösern benötigen Sie hier für alle Fälle ggf. einen Code-Ereignishandler oder ein Standardverhalten, das vom Auslöserstatus erneut zurückschaltet, wenn der Wert ungleich 0 ist).  
   
- Die Syntax des Eigenschaftentriggers entspricht einer "if"\-Anweisung beim Programmieren.  Wenn die Triggerbedingung zutrifft \(true\), wird der "Inhalt" des Eigenschaftentriggers "ausgeführt".  Der "Inhalt" eines Eigenschaftentriggers ist dabei kein Code, sondern Markup.  Das Markup ist auf die Verwendung von einem oder mehreren <xref:System.Windows.Setter>\-Elementen beschränkt, um andere Eigenschaften des Objekts festzulegen, auf die das Format oder die Vorlage angewendet wird.  
+ Die Syntax der Eigenschaftsauslöser entspricht einer „if“-Anweisung in der Programmierung. Wenn die Auslöserbedingung echt ist, wird der „Textkörper“ des Eigenschaftsauslösers „ausgeführt“. Der „Textkörper“ von einem Eigenschaftsauslöser ist kein Code, sondern ein Markup. Das Markup ist beschränkt, die mit einem oder mehreren <xref:System.Windows.Setter> Elemente, um andere Eigenschaften des Objekts festzulegen, auf der Stil oder eine Vorlage angewendet wird.  
   
- Um die "if"\-Bedingung eines Eigenschaftentriggers, der eine Vielzahl potenzieller Werte zulässt, zu versetzen, sollten Sie für diesen Eigenschaftswert mithilfe eines <xref:System.Windows.Setter> eine Standardeinstellung festlegen.  Ein im <xref:System.Windows.Trigger> enthaltener Setter hat in diesem Fall Vorrang, wenn die Triggerbedingung zutrifft \(true\). Ein <xref:System.Windows.Setter>, der sich nicht innerhalb eines <xref:System.Windows.Trigger> befindet, hat Vorrang, wenn die Triggerbedingung nicht zutrifft \(false\).  
+ Um die Bedingung "If" einen Eigenschaftsauslöser versetzt wird, die eine Vielzahl von möglichen Werten aufweist, wird in der Regel empfehlenswert, diesen Eigenschaftswert auf den Standardwert festlegen, indem eine <xref:System.Windows.Setter>. Auf diese Weise die <xref:System.Windows.Trigger> enthaltenen Setter haben Vorrang vor, wenn die auslöserbedingung "true" ist und die <xref:System.Windows.Setter> , die sich nicht innerhalb einer <xref:System.Windows.Trigger> wird haben Vorrang vor, wenn die auslöserbedingung auf "false" festgelegt ist.  
   
- Eigenschaftentrigger eignen sich in der Regel für Szenarien, in denen sich mindestens eine Darstellungseigenschaft basierend auf dem Zustand einer anderen Eigenschaft im gleichen Element ändern soll.  
+ Eigenschaftsauslöser eigenen sich im Allgemeinen für Szenarios, in denen eine oder mehrere Darstellungseigenschaften sich basierend auf dem Zustand einer anderen Eigenschaft auf dem selben Element ändern sollten.  
   
- Weitere Informationen zu Eigenschaftentriggern finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Weitere Informationen zu Eigenschaftsauslösern finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## Siehe auch  
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

@@ -1,55 +1,60 @@
 ---
-title: "Laden von XAML und Abh&#228;ngigkeitseigenschaften | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Benutzerdefinierte Abhängigkeitseigenschaften"
-  - "Abhängigkeitseigenschaften, XAML-Laden und"
-  - "Laden von XML-Daten"
+title: "Laden von XAML und Abhängigkeitseigenschaften"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom dependency properties [WPF]
+- dependency properties [WPF], XAML loading and
+- loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97970a8a292eee43b01b1eab235376ae9b8e6fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Laden von XAML und Abh&#228;ngigkeitseigenschaften
-Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessors berücksichtigt Abhängigkeitseigenschaften.  Der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor verwendet beim Laden binärer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Daten und beim Verarbeiten von Attributen, bei denen es sich um Abhängigkeitseigenschaften handelt, Methoden des Eigenschaftensystems für Abhängigkeitseigenschaften.  Hierdurch werden die Eigenschaftenwrapper erfolgreich umgangen.  Wenn Sie benutzerdefinierte Abhängigkeitseigenschaften implementieren, müssen Sie dieses Verhalten berücksichtigen. Fügen Sie keinen anderen Code in den Eigenschaftenwrapper ein als die Methoden <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> des Eigenschaftensystems.  
+# <a name="xaml-loading-and-dependency-properties"></a>Laden von XAML und Abhängigkeitseigenschaften
+Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessors ist mit Abhängigkeitseigenschaften kompatibel. Der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor verwendet Methoden des Eigenschaftensystems zum Laden von binären [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und zum Verarbeiten von Attributen, die Abhängigkeitseigenschaften sind. Dadurch werden Eigenschaftenwrapper praktisch umgangen. Wenn Sie benutzerdefinierte Abhängigkeitseigenschaften implementieren, Sie müssen für dieses Verhalten berücksichtigen sollten gehalten und keinem anderen Code in Ihrer Eigenschaftenwrapper als das System Eigenschaftenmethoden <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-   
   
 <a name="prerequisites"></a>   
-## Vorbereitungsmaßnahmen  
- In diesem Thema wird vorausgesetzt, dass Sie sich mit Abhängigkeitseigenschaften aus Sicht eines Consumers und eines Autors vertraut gemacht sowie [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) gelesen haben.  Sie sollten außerdem [Übersicht über XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML\-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) gelesen haben.  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften sowohl aus Sicht eines Anwenders als auch der eines Autors verstehen, und dass Sie [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) gelesen haben. Sie sollten auch [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) gelesen haben.  
   
 <a name="implementation"></a>   
-## Implementierung und Leistung des WPF\-XAML\-Ladeprogramms  
- Für Implementierungen ist es einfacher, eine Eigenschaft als Abhängigkeitseigenschaft zu erkennen und diese mit der <xref:System.Windows.DependencyObject.SetValue%2A>\-Methode des Eigenschaftensystems festzulegen, als den Eigenschaftenwrapper und den zugehörigen Setter zu verwenden.  Der Grund hierfür ist, dass der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessor das gesamte Objektmodell des zugrunde liegenden Codes herleiten muss, jedoch lediglich die von der Markupstruktur vorgegebenen Typ\- und Memberbeziehungen und verschiedene Zeichenfolgen bekannt sind.  
+## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>Implementierung und Leistung des WPF-XAML-Ladeprogramms  
+ Aus Gründen der Implementierung ist weniger rechenintensiv zu identifiziert eine Eigenschaft als Abhängigkeitseigenschaft im Eigenschaftensystem zugreifen <xref:System.Windows.DependencyObject.SetValue%2A> Methode, um diesen, anstatt den Eigenschaftenwrapper und die Setter-Methode festgelegt. Grund hierfür ist, dass der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor das gesamte Objektmodell des unterstützenden Codes allein auf Basis der Typ- und Mitgliedsbeziehungen, die durch die Markupstruktur und verschiedene Zeichenfolgen erkennbar sind, herleiten muss.  
   
- Der Typ wird durch eine Kombination von xmlns\- und Assembly\-Attributen ermittelt, die Identifizierung der Member, die Ermittlung, welcher Member als Attribut festgelegt werden kann und welche Typen die Eigenschaftswerte unterstützen würde jedoch andernfalls eine komplexe Reflektion unter Verwendung von <xref:System.Reflection.PropertyInfo> erfordern.  Da die Abhängigkeitseigenschaften für einen bestimmten Typ über das Eigenschaftensystem als Speichertabelle zugänglich sind, verwendet die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessors diese Tabelle und leitet her, dass eine gegebene Eigenschaft *ABC* effizienter festgelegt werden kann, indem <xref:System.Windows.DependencyObject.SetValue%2A> für den enthaltenen abgeleiteten Typ <xref:System.Windows.DependencyObject> aufgerufen wird, unter Verwendung des Abhängigkeitseigenschaft\-Bezeichners *ABCProperty*.  
+ Der Typ mit einer Kombination von Xmlns und Assemblyattribute jedoch identifizieren die Elemente, die ermittelt werden, unterstützen kann, der als ein Attribut festgelegt nachgeschlagen und welche Typen die Eigenschaftswerte unterstützen andernfalls würde eine umfangreiche Reflektion erfordern Mithilfe von <xref:System.Reflection.PropertyInfo>. Da Abhängigkeitseigenschaften für einen bestimmten Typ als eine Speichertabelle durch das Eigenschaftensystem zugegriffen werden die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Implementierung seiner [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor verwendet diese Tabelle, und leitet alle angegebene Eigenschaft *ABC* kann effizienter festgelegt werden, durch den Aufruf <xref:System.Windows.DependencyObject.SetValue%2A> für das enthaltende <xref:System.Windows.DependencyObject> abgeleiteten Typ unter Verwendung des Bezeichners der Abhängigkeitseigenschaft *ABCProperty*.  
   
 <a name="implications"></a>   
-## Auswirkungen auf benutzerdefinierte Abhängigkeitseigenschaften  
- Da mit der aktuellen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessorverhaltens für das Festlegen von Eigenschaften die Wrapper vollständig umgangen werden, dürfen Sie keine weitere Logik in die Definitionen des Wrappers für die benutzerdefinierte Abhängigkeitseigenschaft einfügen.  Diese Logik wird nicht ausgeführt, wenn die Eigenschaft in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] statt in Code festgelegt wird.  
+## <a name="implications-for-custom-dependency-properties"></a>Auswirkungen auf Benutzerdefinierte Abhängigkeitseigenschaften  
+ Da die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessorverhaltens für die Festlegung von Eigenschaften die Wrapper vollständig umgeht, dürfen Sie keine zusätzliche Logik in die Set-Definitionen des Wrappers für die benutzerdefinierte Abhängigkeitseigenschaft einfügen. Wenn Sie solche Logik in der Set-Definition einfügen, wird diese Logik nicht ausgeführt werden, wenn die Eigenschaft in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] statt in Code festgelegt wird.  
   
- Andere Aspekte des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Prozessors, die Eigenschaftswerte aus der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]\-Verarbeitung abrufen, verwenden ebenfalls <xref:System.Windows.DependencyObject.GetValue%2A> statt den Wrapper.  Vermeiden Sie aus diesem Grund alle zusätzlichen Implementierungen in der `get`\-Definition, die über den <xref:System.Windows.DependencyObject.GetValue%2A>\-Aufruf hinausgehen.  
+ Auf ähnliche Weise andere Aspekte der der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor, wie die Eigenschaftswerte aus abrufen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Verarbeitung auch verwenden <xref:System.Windows.DependencyObject.GetValue%2A> statt den Wrapper. Aus diesem Grund auch sollten Sie alle zusätzliche-Implementierung in der `get` Definition außerhalb der <xref:System.Windows.DependencyObject.GetValue%2A> aufrufen.  
   
- Das folgende Beispiel zeigt eine empfohlene Abhängigkeitseigenschaft\-Definition mit Wrappern, wobei der Eigenschaftenbezeichner als `public` `static` `readonly`\-Feld gespeichert wird und die `get`\-Definition und die `set`\-Definition außer den erforderlichen Methoden des Eigenschaftensystems, die den zugrunde liegenden Code der Abhängigkeitseigenschaft definieren, keinen weiteren Code enthalten.  
+ Das folgende Beispiel ist eine empfohlene Definition von Abhängigkeitseigenschaften mit Wrappern, wobei der Eigenschaftenbezeichner als `public` `static` `readonly`-Feld gespeichert wird und die `get`- und `set`-Definitionen keinen Code außer den erforderlichen Systemmethoden enthalten, die die Unterstützung der Abhängigkeitseigenschaft definieren.  
   
  [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
  [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
-## Siehe auch  
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Übersicht über XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [Abhängigkeitseigenschaften vom Auflistungstyp](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)   
- [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Abhängigkeitseigenschaften vom Auflistungstyp](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
  [Sichere Konstruktormuster für DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

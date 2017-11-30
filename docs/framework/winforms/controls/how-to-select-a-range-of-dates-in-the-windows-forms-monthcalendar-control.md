@@ -1,34 +1,39 @@
 ---
-title: "Gewusst wie: Ausw&#228;hlen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Kalender, Auswählen des Datumsbereichs"
-  - "Datumsangaben, Auswählen des Bereichs in Calendar-Steuerelementen"
-  - "Beispiele [Windows Forms], Calendar-Steuerelemente"
-  - "MonthCalendar-Steuerelement [Windows Forms], Auswählen des Datumsbereichs"
+title: "Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- dates [Windows Forms], selecting range in calendar controls
+- examples [Windows Forms], calendar controls
+- calendars [Windows Forms], selecting date range
+- MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d6a8d156e6e9a8c5331bd3db1c8e584be5ac154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ausw&#228;hlen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows&#160;Forms
-Ein wichtige Feature des <xref:System.Windows.Forms.MonthCalendar>\-Steuerelements von Windows Forms besteht darin, dass der Benutzer einen Datumsbereich auswählen kann.  Dieses Feature stellt eine Verbesserung gegenüber der Datumsauswahlfunktion des <xref:System.Windows.Forms.DateTimePicker>\-Steuerelements dar, da diese lediglich die Auswahl eines einzelnen Datum\/Zeit\-Wertes durch den Benutzer zulässt.  Sie können einen Datumsbereich festlegen oder einen Auswahlbereich abrufen, den der Benutzer über die Eigenschaften des <xref:System.Windows.Forms.MonthCalendar>\-Steuerelements festgelegt hat.  Im folgenden Codebeispiel wird veranschaulicht, wie ein Auswahlbereich festgelegt wird.  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms
+Ein wichtiges Feature von Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement ist, dass der Benutzer einen Datumsbereich auswählen kann. Diese Funktion ist eine Verbesserung gegenüber der Datumsauswahl Funktion von der <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, das nur die Benutzer in einer einzelnen Datums-/Uhrzeitwert auswählen kann. Sie können einen Datumsbereich festlegen oder Abrufen einer vom Benutzer festgelegt werden, mithilfe der Eigenschaften des Auswahlbereichs der <xref:System.Windows.Forms.MonthCalendar> Steuerelement. Im folgenden Codebeispiel wird veranschaulicht, wie einen Auswahlbereich festgelegt wird.  
   
-### So wählen Sie einen Datumsbereich aus  
+### <a name="to-select-a-range-of-dates"></a>Um einen Datumsbereich auszuwählen.  
   
-1.  Erstellen Sie die <xref:System.DateTime>\-Objekte für das erste und das letzte Datum eines Bereichs.  
+1.  Erstellen Sie <xref:System.DateTime> Objekte, die die erste und letzte Datum in einem Bereich darstellen.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -45,7 +50,7 @@ Ein wichtige Feature des <xref:System.Windows.Forms.MonthCalendar>\-Steuerelemen
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  Legen Sie die <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>\-Eigenschaft fest.  
+2.  Legen Sie die <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>-Eigenschaft fest.  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -60,9 +65,9 @@ Ein wichtige Feature des <xref:System.Windows.Forms.MonthCalendar>\-Steuerelemen
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – oder –  
+     – oder –  
   
-     Legen Sie die <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A>\-Eigenschaft und die <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>\-Eigenschaft fest.  
+     Legen Sie für die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> und <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> fest.  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -79,8 +84,8 @@ Ein wichtige Feature des <xref:System.Windows.Forms.MonthCalendar>\-Steuerelemen
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## Siehe auch  
- [MonthCalendar\-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [Gewusst wie: Ändern der Darstellung des MonthCalendar\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)   
- [Gewusst wie: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
- [Gewusst wie: Anzeigen mehrerer Monate mit dem MonthCalendar\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Siehe auch  
+ [MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Gewusst wie: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
+ [Gewusst wie: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ [Gewusst wie: Anzeigen mehrerer Monate mit dem MonthCalendar-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

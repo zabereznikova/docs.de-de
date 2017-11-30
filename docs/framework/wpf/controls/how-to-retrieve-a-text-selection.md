@@ -1,41 +1,47 @@
 ---
-title: "Gewusst wie: Abrufen einer Textauswahl | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Abrufen von Text"
-  - "Text, Abrufen"
-  - "TextBox-Steuerelement, Abrufen von Text"
+title: 'Gewusst wie: Abrufen einer Textauswahl'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [WPF], retrieving
+- TextBox control [WPF], retrieving text
+- retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d5e1c362c02d2d1d9e1840ea2a55df6875a80ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Abrufen einer Textauswahl
-In diesem Beispiel wird eine Möglichkeit veranschaulicht, um mit der <xref:System.Windows.Controls.TextBox.SelectedText%2A>\-Eigenschaft Text abzurufen, den der Benutzer in einem <xref:System.Windows.Controls.TextBox>\-Steuerelement ausgewählt hat.  
+# <a name="how-to-retrieve-a-text-selection"></a>Gewusst wie: Abrufen einer Textauswahl
+Dieses Beispiel zeigt eine Möglichkeit zum Verwenden der <xref:System.Windows.Controls.TextBox.SelectedText%2A> Eigenschaft, um Text abzurufen, die der Benutzer, in ausgewählt hat einem <xref:System.Windows.Controls.TextBox> Steuerelement.  
   
-## Beispiel  
- Im folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]\-Beispiel wird die Definition eines <xref:System.Windows.Controls.TextBox>\-Steuerelements dargestellt, das auswählbaren Text enthält sowie ein <xref:System.Windows.Controls.Button>\-Steuerelement mit einer angegebenen <xref:System.Windows.Controls.Button.OnClick%2A>\-Methode.  
+## <a name="example"></a>Beispiel  
+ Die folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Beispiel zeigt die Definition eine <xref:System.Windows.Controls.TextBox> Steuerelement, das Text ausgewählt haben, enthält und eine <xref:System.Windows.Controls.Button> Steuerelement mit einem angegebenen <xref:System.Windows.Controls.Button.OnClick%2A> Methode.  
   
- In diesem Beispiel wird eine Schaltfläche mit einem verknüpften <xref:System.Windows.Controls.Primitives.ButtonBase.Click>\-Ereignishandler zum Abrufen der Textauswahl verwendet.  Wenn der Benutzer auf die Schaltfläche klickt, kopiert die <xref:System.Windows.Controls.Button.OnClick%2A>\-Methode im Textfeld ausgewählten Text in eine Zeichenfolge.  Die besonderen Umstände, unter denen die Textauswahl abgerufen wird \(Klicken auf eine Schaltfläche\), und die mit dieser Auswahl durchgeführte Aktion \(Kopieren der Textauswahl in eine Zeichenfolge\) können problemlos geändert und an eine Vielzahl von Szenarien angepasst werden.  
+ In diesem Beispiel eine Schaltfläche mit einem zugeordneten <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignishandler dient zum Abrufen der Textauswahl. Wenn der Benutzer die Schaltfläche klickt der <xref:System.Windows.Controls.Button.OnClick%2A> Methode alle markierten Text im Textfeld in eine Zeichenfolge kopiert. Die besonderen Umständen nach denen die Textauswahl abgerufen wird (Klicken auf eine Schaltfläche), sowie die Aktion, die mit dieser Auswahl (kopieren den markierten Text in eine Zeichenfolge), können problemlos geändert werden, um eine Vielzahl von Szenarien zu ermöglichen.  
   
- [!code-xml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
   
-## Beispiel  
- Das folgende [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]\-Beispiel zeigt einen <xref:System.Windows.Controls.Button.OnClick%2A>\-Ereignishandler für die Schaltfläche, die in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] für dieses Beispiel definiert wurde.  
+## <a name="example"></a>Beispiel  
+ Die folgenden [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] Beispiel zeigt eine <xref:System.Windows.Controls.Button.OnClick%2A> -Ereignishandler für die Schaltfläche definiert, der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] für dieses Beispiel.  
   
  [!code-csharp[TextBox_MiscCode#_SelectText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
  [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
-## Siehe auch  
- [Übersicht über TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

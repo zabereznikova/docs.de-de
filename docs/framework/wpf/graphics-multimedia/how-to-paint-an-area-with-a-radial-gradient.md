@@ -1,40 +1,46 @@
 ---
-title: "Gewusst wie: Zeichnen eines Bereichs mit einem radialen Farbverlauf | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Pinsel, Zeichnen mit einem radialen Farbverlauf"
-  - "Zeichnen, Mit radialen Farbverläufen"
-  - "Radiale Farbverläufe, Zeichnen mit"
+title: 'Gewusst wie: Zeichnen eines Bereichs mit einem radialen Farbverlauf'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], painting with radial gradients
+- radial gradients [WPF], painting with
+- painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b707e4738a77a8fb093071ef6f5105b2200c16
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/22/2017
 ---
-# Gewusst wie: Zeichnen eines Bereichs mit einem radialen Farbverlauf
-Dieses Beispiel zeigt, wie Sie die <xref:System.Windows.Media.RadialGradientBrush>\-Klasse verwenden, um einen Bereich mit einem radialen Farbverlauf zu zeichnen.  
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Gewusst wie: Zeichnen eines Bereichs mit einem radialen Farbverlauf
+Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.RadialGradientBrush> Klasse, um einen Bereich mit einem radialen Farbverlauf zu zeichnen.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein <xref:System.Windows.Media.RadialGradientBrush> verwendet, um ein Rechteck mit einem radialen Farbverlauf zu zeichnen, in dem die Farbe von Gelb in Rot in Blau und in Gelbgrün übergeht.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.RadialGradientBrush> ein Rechteck mit einem radialen Farbverlauf gezeichnet, die von Gelb zu rot Gelbgrün Blau übergeht.  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
- [!code-xml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
+ [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- Die folgende Abbildung zeigt den Farbverlauf des vorangegangenen Beispiels.  Die Farbverlaufsunterbrechungspunkte wurden hervorgehoben.  
+ Die folgende Abbildung zeigt den Farbverlauf aus dem vorherigen Beispiel. Der Farbverlauf beendet wurden hervorgehoben.  
   
- ![Farbverlaufstopps in einem radialen Farbverlauf](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk\_graphicsmm\_4gradientstops\_rg")  
+ ![Farbverlaufstopps in einem radialen Farbverlauf](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "Wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  In den Beispielen in diesem Thema wird zum Festlegen der Kontrollpunkte das Standardkoordinatensystem verwendet.  Das Standardkoordinatensystem ist relativ zu einem umgebenden Rechteck: 0 gibt 0 Prozent des umgebenden Rechtecks an, und 1 gibt 100 Prozent des umgebenden Rechtecks an.  Sie können dieses Koordinatensystem ändern, indem Sie den Wert der <xref:System.Windows.Media.GradientBrush.MappingMode%2A>\-Eigenschaft auf den Wert <xref:System.Windows.Media.BrushMappingMode> festlegen.  Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Rechteck.  Werte werden direkt im lokalen Raum interpretiert.  
+>  In den Beispielen in diesem Thema verwenden Sie das Standard-Koordinatensystem für Steuerpunkte festlegen. Der Standard-Koordinatensystem ist relativ zu einem umgebenden Feld: 0 gibt 0 Prozent des umgebenden Felds und 1 gibt 100 Prozent des umgebenden Felds an. Sie können dieses Koordinatensystems ändern, durch Festlegen der <xref:System.Windows.Media.GradientBrush.MappingMode%2A> -Eigenschaft auf den Wert <xref:System.Windows.Media.BrushMappingMode.Absolute>. Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Feld. Werte werden direkt im lokalen Raum interpretiert.  
   
- Weitere <xref:System.Windows.Media.RadialGradientBrush>\-Beispiele finden Sie unter [Beispiel für Pinsel](http://go.microsoft.com/fwlink/?LinkID=159973).  Weitere Informationen zu Farbverläufen und anderen Typen von Pinseln finden Sie unter [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).
+ Für zusätzliche <xref:System.Windows.Media.RadialGradientBrush> finden Sie unter der [Pinsel Beispiel](http://go.microsoft.com/fwlink/?LinkID=159973). Weitere Informationen zu Farbverläufen und anderen Typen von Pinseln finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).

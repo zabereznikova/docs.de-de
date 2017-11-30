@@ -1,50 +1,48 @@
 ---
-title: "&lt;c&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "c XML tag"
-  - "<c> XML tag"
+title: '&lt;c&gt; (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- c XML tag
+- <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e57cae8fd4b93fee59992d717135ad7d3d78be5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;c&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Gibt an, dass es sich bei Text innerhalb einer Beschreibung um Code handelt.  
+# <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
+Gibt an, dass Text in einer Beschreibung Code ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```xml  
 <c>text</c>  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
-|||  
-|-|-|  
 |Parameter|Beschreibung|  
-|`text`|der Text, der als Code angegeben werden soll.|  
+|---|---|  
+|`text`|Der Text, der als Code angegeben werden soll.|  
   
-## Hinweise  
- Mit dem `<c>`\-Tag kann angegeben werden, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.  Verwenden Sie [\<code\>](../../../visual-basic/language-reference/xmldoc/code.md), um mehrere Zeilen als Code anzugeben.  
+## <a name="remarks"></a>Hinweise  
+ Die `<c>` Tag bietet Ihnen eine Möglichkeit, um anzugeben, dass Text in einer Beschreibung als Code markiert werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) verwendet.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
   
-## Beispiel  
- In diesem Beispiel wird mit dem `<c>`\-Tag im Zusammenfassungsabschnitt angegeben, dass es sich bei `Counter` um Code handelt.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet die `<c>` Tags im Abschnitt "Zusammenfassung", um anzugeben, dass `Counter` Code ist.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
-## Siehe auch  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

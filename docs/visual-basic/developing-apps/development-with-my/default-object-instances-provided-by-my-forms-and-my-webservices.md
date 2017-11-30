@@ -1,39 +1,38 @@
 ---
-title: "Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.WebServices object, developing applications"
-  - "My.Forms object, developing applications"
-  - "rapid application development (RAD), My.Forms"
-  - "rapid application development (RAD), My.WebServices"
+title: Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.WebServices object [Visual Basic], developing applications
+- My.Forms object [Visual Basic], developing applications
+- rapid application development (RAD), My.Forms
+- rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 44265c3f6f38a001192a8d92f2fbb6edeaca21cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Das [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)\-Objekt und das [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)\-Objekt bieten Zugriff auf die von der Anwendung verwendeten Formulare, Datenquellen und XML\-Webdienste.  Dazu werden Auflistungen der *Standardinstanzen* von jedem dieser Objekte bereitgestellt.  
+# <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen (Visual Basic)
+Die [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) und [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) -Objekte ermöglichen den Zugriff auf Formulare, Datenquellen und XML-Webdienste, die von Ihrer Anwendung verwendet. Dies geschieht durch die Bereitstellung von Auflistungen von *Standardinstanzen* jedes dieser Objekte.  
   
-## Standardinstanzen  
- Eine Standardinstanz ist eine Instanz der Klasse, die von der Laufzeit bereitgestellt wird und nicht mithilfe der `Dim`\-Anweisung und der `New`\-Anweisung deklariert und instanziiert werden muss.  Das folgende Beispiel veranschaulicht eine Möglichkeit der Deklaration und Instanziierung einer <xref:System.Windows.Forms.Form>\-Klasse mit dem Namen `Form1` und den anschließenden Abruf einer Standardinstanz dieser <xref:System.Windows.Forms.Form>\-Klasse mithilfe von `My.Forms`.  
+## <a name="default-instances"></a>Standard-Instanzen  
+ Eine Standardinstanz ist eine Instanz der Klasse, die von der Laufzeit bereitgestellt und muss nicht werden deklariert und instanziiert wird, mithilfe der `Dim` und `New` Anweisungen. Im folgende Beispiel wird veranschaulicht, wie Sie möglicherweise haben deklariert und instanziiert eine Instanz von einem <xref:System.Windows.Forms.Form> Klasse mit dem Namen `Form1`, und wie Sie jetzt eine Standardinstanz dieser abrufen können <xref:System.Windows.Forms.Form> -Klasse über `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_1.vb)]  
   
  [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_2.vb)]  
   
- Das `My.Forms`\-Objekt gibt eine Auflistung von Standardinstanzen für jede im Projekt vorhandene `Form`\-Klasse zurück.  Ebenso stellt `My.WebServices` eine Standardinstanz der Proxyklasse für jeden Webdienst bereit, der Ziel eines in der Anwendung enthaltenen Verweises ist.  
+ Die `My.Forms` Objekt zurückgibt, eine Auflistung von Standardinstanzen für jede `Form` -Klasse, die in Ihrem Projekt vorhanden ist. Auf ähnliche Weise `My.WebServices` bietet Sie einer Standardinstanz der Proxyklasse für jeden Webdienst, dass Sie einen Verweis auf in der Anwendung erstellt haben.  
   
-## Siehe auch  
- [My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.WebServices Object](../../../visual-basic/language-reference/objects/my-webservices-object.md)   
- [How My Depends on Project Type](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>Siehe auch  
+ [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
+ [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

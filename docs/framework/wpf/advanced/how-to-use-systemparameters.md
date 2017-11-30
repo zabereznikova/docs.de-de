@@ -1,44 +1,48 @@
 ---
-title: "Gewusst wie: Verwenden von SystemParameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen, SystemParameters"
-  - "SystemParameters-Klasse"
+title: 'Gewusst wie: Verwenden von SystemParameters'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Verwenden von SystemParameters
-Dieses Beispiel veranschaulicht den Zugriff auf und die Verwendung der Eigenschaften von <xref:System.Windows.SystemParameters> zum Formatieren oder Anpassen einer Schaltfläche.  
+# <a name="how-to-use-systemparameters"></a>Gewusst wie: Verwenden von SystemParameters
+In diesem Beispiel wird gezeigt, wie zugreifen auf und verwenden die Eigenschaften des <xref:System.Windows.SystemParameters> um formatieren oder Anpassen einer Schaltfläche.  
   
-## Beispiel  
- Systemressourcen machen verschiedene systembasierte Einstellungen als Ressourcen verfügbar, damit Sie visuelle Objekte erstellen können, die den Systemeinstellungen entsprechen.  <xref:System.Windows.SystemParameters> ist eine Klasse, die sowohl Eigenschaftswerte von Systemparametern als auch Ressourcenschlüssel enthält, die an die Werte gebunden werden.  Zum Beispiel ist <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> ein <xref:System.Windows.SystemParameters>\-Eigenschaftswert und <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> der entsprechende Ressourcenschlüssel.  
+## <a name="example"></a>Beispiel  
+ Systemressourcen machen mehrere systembasierte Einstellungen als Ressourcen verfügbar, um visuelle Elemente zu erstellen, die mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemParameters>ist eine Klasse, die sowohl Systemparametern und Ressourcenschlüssel, das Binden an die Werte enthält. Beispielsweise <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> ist ein <xref:System.Windows.SystemParameters> Eigenschaftswert und <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> wird der entsprechende Ressourcenschlüssel.  
   
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] können Sie die Member von <xref:System.Windows.SystemParameters> entweder als statische Eigenschaft oder als dynamischen Ressourcenverweis verwenden \(wobei der statische Eigenschaftswert als Schlüssel dient\).  Verwenden Sie einen dynamischen Ressourcenverweis, wenn der systembasierte Wert automatisch aktualisiert werden soll, während die Anwendung ausgeführt wird. Andernfalls verwenden Sie einen statischen Verweis.  Bei Ressourcenschlüsseln wird das Suffix `Key` an den Eigenschaftennamen gehängt.  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], können Sie die Mitglieder der <xref:System.Windows.SystemParameters> als statische Eigenschaft oder eine dynamische Ressourcenverweise (mit der statischen Eigenschaft-Wert als Schlüssel). Verwenden Sie einen dynamischen Ressourcenverweis, wenn der systembasierte Wert automatisch beim Ausführen der Anwendung aktualisiert werden soll; verwenden Sie andernfalls einen statischen Verweis. / / Ressourcenschlüssel haben das Suffix `Key` des Eigenschaftennamens angefügt.  
   
- Das folgende Beispiel veranschaulicht den Zugriff auf und die Verwendung der statischen Werte von <xref:System.Windows.SystemParameters> zum Formatieren oder Anpassen einer Schaltfläche.  In diesem Markupbeispiel wird die Größe einer Schaltfläche angepasst, indem <xref:System.Windows.SystemParameters>\-Werte auf eine Schaltfläche angewendet werden.  
+ Im folgende Beispiel wird gezeigt, wie zugreifen auf und verwenden die statische Werte der <xref:System.Windows.SystemParameters> zu formatieren oder Anpassen einer Schaltfläche. In diesem Markupbeispiel Größen eine Schaltfläche durch Anwenden von <xref:System.Windows.SystemParameters> Werte mit einer Schaltfläche.  
   
- [!code-xml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- Um die Werte von <xref:System.Windows.SystemParameters> im Code verwenden zu können, ist es nicht erforderlich, statische Verweise oder dynamische Ressourcenverweise zu verwenden.  Verwenden Sie stattdessen die Werte der <xref:System.Windows.SystemParameters>\-Klasse.  Obwohl die Nicht\-Schlüsseleigenschaften anscheinend als statische Eigenschaften definiert sind, wertet das vom System gehostete [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Laufzeitverhalten die Eigenschaften in Echtzeit erneut aus, und vom Benutzer ausgelöste Änderungen von Systemwerten werden berücksichtigt. Im folgenden Beispiel wird veranschaulicht, wie die Breite und Höhe einer Schaltfläche mit <xref:System.Windows.SystemParameters>\-Werten festgelegt wird.  
+ Verwenden Sie die Werte der <xref:System.Windows.SystemParameters> in Code können Sie keine statische Verweise oder dynamische Ressourcenverweise zu verwenden. Verwenden Sie stattdessen die Werte der <xref:System.Windows.SystemParameters> Klasse. Obwohl die nicht schlüsselbezogene Eigenschaften als statische Eigenschaften, die das Laufzeitverhalten des offensichtlich definiert sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] als gehostete vom System wird, wertet die Eigenschaften in Echtzeit und ordnungsgemäß ein Konto, damit Benutzer vorgenommene Änderungen Systemwerte wird. Im folgende Beispiel wird gezeigt, wie die Breite und Höhe einer Schaltfläche festlegen, indem <xref:System.Windows.SystemParameters> Werte.  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## Siehe auch  
- <xref:System.Windows.SystemParameters>   
- [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Verwenden von SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)   
- [Verwenden von Systemparameterschlüsseln](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.SystemParameters>  
+ [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [Verwenden von SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [Verwenden von Systemparameterschlüsseln](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

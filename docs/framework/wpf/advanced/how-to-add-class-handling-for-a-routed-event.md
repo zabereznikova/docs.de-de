@@ -1,43 +1,49 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen einer Klassenbehandlung f&#252;r ein Routingereignis | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Klassen-Handler, Routingereignisse"
-  - "Routingereignisse, Klassen-Handler"
-  - "task_core_add_class_handling_routed_event"
+title: "Gewusst wie: Hinzufügen einer Klassenbehandlung für ein Routingereignis"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], class handlers
+- task_core_add_class_handling_routed_properties [WPF]
+- class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen einer Klassenbehandlung f&#252;r ein Routingereignis
-Routingereignisse können entweder von Klassenhandlern oder Instanzhandlern verarbeitet werden, die sich auf beliebigen Knoten der Route befinden.  Klassenhandler werden zuerst aufgerufen und können von Klassenimplementierungen verwendet werden, um Ereignisse der Instanzbehandlung zu unterdrücken oder um andere ereignisspezifische Verhalten für Ereignisse auszulösen, deren Besitzer Basisklassen sind.  Dieses Beispiel zeigt zwei eng miteinander verwandte Verfahren zum Implementieren von Klassenhandlern.  
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Gewusst wie: Hinzufügen einer Klassenbehandlung für ein Routingereignis
+Routingereignisse können entweder durch die Klasse oder Instanzhandler auf einen beliebigen Knoten in der Route behandelt werden. Klassenhandler werden zuerst aufgerufen und können von Klasse-Implementierungen verwendet werden, um Ereignisse aus der Instanz Behandlung zu unterdrücken, oder dass Sie andere Ereignis spezifische Verhalten auf Ereignisse, die im Besitz von Basisklassen eingeführt. Dieses Beispiel veranschaulicht zwei eng verwandte Techniken zum Implementieren von Klassenhandler.  
   
-## Beispiel  
- In diesem Beispiel wird eine benutzerdefinierte Klasse basierend auf dem <xref:System.Windows.Controls.Canvas>\-Bereich verwendet.  Die Grundvoraussetzung der Anwendung besteht darin, dass die benutzerdefinierte Klasse Verhalten für ihre untergeordneten Elemente einführt, zum Beispiel das Abfangen aller Klicks mit der linken Maustaste und das Markieren als behandelt, bevor die Klasse des untergeordneten Elements oder beliebige Instanzhandler aufgerufen werden.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel verwendet eine benutzerdefinierte Klasse, die auf der Grundlage der <xref:System.Windows.Controls.Canvas> Bereich. Die grundlegende Prämisse der Anwendung ist, dass die benutzerdefinierte Klasse Verhaltensweisen auf seine untergeordneten Elemente einschließlich abfangen, die linken Maustaste drückt, und behandelt führt, bevor die Klasse des untergeordneten Elements oder beliebige Instanzhandler aufgerufen werden, markieren.  
   
- Die <xref:System.Windows.UIElement>\-Klasse legt eine virtuelle Methode offen, die die Klassenbehandlung für das <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>\-Ereignis ermöglicht, indem das Ereignis einfach überschrieben wird.  Auf diese Weise können Sie die Klassenbehandlung am einfachsten implementieren, wenn eine virtuelle Methode dieser Art in der Klassenhierarchie verfügbar ist.  Der folgende Code zeigt die <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A>\-Implementierung in "MyEditContainer", die von <xref:System.Windows.Controls.Canvas> abgeleitet wird.  Die Implementierung markiert das Ereignis in den Argumenten als behandelt und fügt dann Code hinzu, um das Quellelement mit einer grundlegenden sichtbaren Änderung zu versehen.  
+ Die <xref:System.Windows.UIElement> Klasse bereitstellt, eine virtuelle Methode, die ermöglicht eine Klassenbehandlung für das <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> Ereignis, indem das Ereignis einfach überschrieben. Dies ist die einfachste Methode zum Klassenbehandlung implementieren, wenn eine solche virtuelle Methode an einer beliebigen Stelle in der Klassenhierarchie verfügbar ist. Der folgende code zeigt die <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> Implementierung in "MyEditContainer", die abgeleitet ist <xref:System.Windows.Controls.Canvas>. Die Implementierung kennzeichnet das Ereignis in den Argumenten behandelt, und fügt dann Code für dem Quellelement eine grundlegende sichtbare Änderung erteilen.  
   
  [!code-csharp[ClassHandling#OnStarClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
  [!code-vb[ClassHandling#OnStarClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
   
- Wenn für die Basisklassen bzw. für die jeweilige Methode kein virtuelles Element verfügbar ist, können Sie die Klassenbehandlung direkt mithilfe einer Hilfsmethode der <xref:System.Windows.EventManager>\-Klasse hinzufügen, nämlich <xref:System.Windows.EventManager.RegisterClassHandler%2A>.  Sie sollten diese Methode nur innerhalb der statischen Initialisierung von Klassen aufrufen, die die Klassenbehandlung hinzufügen.  In diesem Beispiel wird ein weiterer Handler für <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> hinzugefügt, und in diesem Fall handelt es sich bei der registrierten Klasse um eine benutzerdefinierte Klasse.  Im Gegensatz dazu ist die registrierte Klasse bei Verwendung von virtuellen Elementen tatsächlich die <xref:System.Windows.UIElement>\-Basisklasse.  Falls Basisklassen und Unterklasse jeweils die Klassenbehandlung registrieren, werden die Unterklassenhandler zuerst aufgerufen.  In einer Anwendung wird dann ein Verhalten ausgeführt, bei dem dieser Handler zuerst ein Meldungsfeld anzeigt, bevor die visuelle Änderung im Handler der virtuellen Methode dargestellt wird.  
+ Wenn kein virtuelles auf Basisklassen oder für die jeweilige Methode verfügbar ist, Klassenbehandlung kann hinzugefügt werden direkt über eine Hilfsprogrammmethode, die von der <xref:System.Windows.EventManager> Klasse <xref:System.Windows.EventManager.RegisterClassHandler%2A>. Diese Methode sollte nur innerhalb der statischen Initialisierung von Klassen aufgerufen werden, die Klassenbehandlung hinzufügen möchten. In diesem Beispiel fügt einen anderen Handler für <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> , und die registrierte Klasse wird in diesem Fall die benutzerdefinierte Klasse. Im Gegensatz dazu bei Verwendung die registrierte Klasse wird tatsächlich die <xref:System.Windows.UIElement> Basisklasse. In Fällen, wo Basisklassen und -Unterklasse Klassenbehandlung registrieren, werden die Unterklassenhandler zuerst aufgerufen. Das Verhalten in einer Anwendung wäre, dass dieser Handler diese zuerst den Posteingang anzeigen würde und dann die visuelle Änderung im Handler für die virtuelle Methode angezeigt werden würden.  
   
  [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
-## Siehe auch  
- <xref:System.Windows.EventManager>   
- [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
- [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.EventManager>  
+ [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
  [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

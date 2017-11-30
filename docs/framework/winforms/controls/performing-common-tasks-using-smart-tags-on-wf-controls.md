@@ -1,82 +1,83 @@
 ---
-title: "Exemplarische Vorgehensweise: Ausf&#252;hren von h&#228;ufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Designeraktionen"
-  - "DesignerAction-Objektmodell"
-  - "Smarttags"
+title: "Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DesignerAction object model
+- smart tags
+- designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Ausf&#252;hren von h&#228;ufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen
-Bei der Erstellung von Formularen und Steuerelementen für die Windows Forms\-Anwendung müssen viele Aufgaben wiederholt ausgeführt werden.  Zu diesen häufigen Aufgaben gehören unter anderem folgende:  
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen
+Wie Sie Formulare und Steuerelemente für Windows Forms-Anwendung erstellen, sind viele Aufgaben, die wiederholt ausgeführt werden. Dies sind einige der häufig ausgeführten Aufgaben, die auftreten können:  
   
--   Hinzufügen oder Entfernen einer Registerkarte auf einem <xref:System.Windows.Forms.TabControl>  
+-   Hinzufügen oder Entfernen einer Registerkarte auf eine <xref:System.Windows.Forms.TabControl>.  
   
--   Andocken eines Steuerelements an sein übergeordnetes Element  
+-   Andocken eines Steuerelements an seinem übergeordneten Element.  
   
--   Ändern der Ausrichtung eines <xref:System.Windows.Forms.SplitContainer>\-Steuerelements  
+-   Ändern der Ausrichtung eines ein <xref:System.Windows.Forms.SplitContainer> Steuerelement.  
   
- Um die Entwicklung zu beschleunigen, verfügen viele Steuerelemente über Smarttags, d. h. kontextbezogene Menüs, mit denen häufige Aufgaben mit nur einer Aktion zur Entwurfszeit ausgeführt werden können.  Diese Aufgaben werden als *Smarttagverben* bezeichnet.  
+ Zum Beschleunigen der Entwicklung bieten viele Steuerelemente Smarttags kontextbezogene Menüs sind, mit die häufige Aufgaben wie diese in eine einzelne Geste zur Entwurfszeit ausführen kann. Diese Aufgaben heißen *Smarttag-Verben*.  
   
- Smarttags bleiben während ihrer gesamten Lebensdauer im Designer einem Steuerelement zugeordnet und sind stets sichtbar.  
+ Smarttags für seine Lebensdauer im Designer mit einer Instanz des Steuerelements verbunden bleiben und sind immer verfügbar.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms\-Projekts  
+-   Erstellen eines Windows Forms-Projekts  
   
--   Verwenden von Smarttags  
+-   Mithilfe der Smarttags  
   
 -   Aktivieren und Deaktivieren von Smarttags  
   
- Anschließend werden Sie verstehen, welche Rolle diese wichtigen Layoutfeatures spielen.  
+ Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Erstellen des Projekts  
- Zunächst wird das Projekt erstellt und das Formular eingerichtet.  
+## <a name="creating-the-project"></a>Erstellen des Projekts  
+ Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
-#### So erstellen Sie das Projekt  
+#### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie ein Windows\-basiertes Anwendungsprojekt mit dem Namen "SmartTagsExample".  Ausführliche Informationen finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen Sie ein Windows-basierten Anwendung mit dem Namen "SmartTagsExample". Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Wählen Sie im **Windows Forms\-Designer** das Formular aus.  
+2.  Wählen Sie das Formular in der **Windows Forms-Designer**.  
   
-## Verwenden von Smarttags  
- Smarttags sind zur Entwurfszeit auf den zugehörigen Steuerelementen stets verfügbar.  
+## <a name="using-smart-tags"></a>Mithilfe der Smarttags  
+ Smarttags sind zur Entwurfszeit auf Steuerelemente, die sie bieten immer verfügbar.  
   
-#### So verwenden Sie Smarttags  
+#### <a name="to-use-smart-tags"></a>Verwendung von smart tags  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TabControl> aus der **Toolbox** auf das Formular.  Beachten Sie das Smarttagsymbol \(![Smarttag&#45;Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\), das an der Seite des <xref:System.Windows.Forms.TabControl> angezeigt wird.  
+1.  Ziehen Sie eine <xref:System.Windows.Forms.TabControl> aus der **Toolbox** auf das Formular. Beachten Sie das Smarttag-Symbol (![Smart Tag-Glyphe](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), die angezeigt wird, auf der Seite des der <xref:System.Windows.Forms.TabControl>.  
   
-2.  Klicken Sie auf das Smarttagsymbol.  Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Registerkarte hinzufügen** aus.  Beachten Sie, dass dem <xref:System.Windows.Forms.TabControl> eine neue Registerkartenseite hinzugefügt wird.  
+2.  Klicken Sie auf das Smarttag-Symbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, die **Registerkarte hinzufügen** Element. Beachten Sie, dass eine neue Registerkarte hinzugefügt wird die <xref:System.Windows.Forms.TabControl>.  
   
-3.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement aus der **Toolbox** auf das Formular.  
+3.  Ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-4.  Klicken Sie auf das Smarttagsymbol.  Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Spalte hinzufügen** aus.  Beachten Sie, dass dem <xref:System.Windows.Forms.TableLayoutPanel>\-Steuerelement eine neue Spalte hinzugefügt wird.  
+4.  Klicken Sie auf das Smarttag-Symbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, die **Add Column** Element. Beachten Sie, dass eine neue Spalte hinzugefügt wird die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
   
-5.  Ziehen Sie ein <xref:System.Windows.Forms.SplitContainer>\-Steuerelement aus der **Toolbox** auf das Formular.  
+5.  Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-6.  Klicken Sie auf das Smarttagsymbol.  Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **Horizontale Aufteilungsausrichtung** aus.  Beachten Sie, dass die Aufteilungsleiste des <xref:System.Windows.Forms.SplitContainer>\-Steuerelements nun horizontal ausgerichtet ist.  
+6.  Klicken Sie auf das Smarttag-Symbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, die **horizontale aufteilungsausrichtung** Element. Beachten Sie, dass die <xref:System.Windows.Forms.SplitContainer> des Steuerelements Teilerleiste ist jetzt horizontal ausgerichtet.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.TextBox>   
- <xref:System.Windows.Forms.TabControl>   
- <xref:System.Windows.Forms.SplitContainer>   
- <xref:System.ComponentModel.Design.DesignerActionList>   
- [Walkthrough: Adding Smart Tags to a Windows Forms Component](../Topic/Walkthrough:%20Adding%20Smart%20Tags%20to%20a%20Windows%20Forms%20Component.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:System.Windows.Forms.TabControl>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ <xref:System.ComponentModel.Design.DesignerActionList>  
+ [Exemplarische Vorgehensweise: Hinzufügen von Smarttags in eine Komponente für Windows Forms](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

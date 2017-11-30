@@ -1,64 +1,65 @@
 ---
-title: "Tastenkombinationen f&#252;r das DataGrid-Steuerelement von Windows&#160;Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid-Steuerelement [Windows Forms], Navigationstasten"
-  - "Tastenkombinationen, DataGrid-Steuerelement"
+title: "Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Tastenkombinationen f&#252;r das DataGrid-Steuerelement von Windows&#160;Forms
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- In der folgenden Tabelle sind die Tastenkombinationen aufgelistet, die innerhalb des <xref:System.Windows.Forms.DataGrid>\-Steuerelements in Windows Forms zur Navigation verwendet werden können:  
+ Die folgende Tabelle enthält die Tastenkombinationen aufgeführt, die für die Navigation in Windows Forms verwendet werden können <xref:System.Windows.Forms.DataGrid> Steuerelement:  
   
-|Aktion|Tastenkombination|  
-|------------|-----------------------|  
-|Bestätigen einer Zelleingabe und Wechseln um eine Zelle nach unten.<br /><br /> Wenn sich der Fokus auf einem Link mit einer untergeordneten Tabelle befindet, navigieren zu dieser Tabelle.|EINGABETASTE|  
-|Abbrechen der Zellenbearbeitung im Zellenbearbeitungsmodus.<br /><br /> Abbrechen der Zeilenbearbeitung in einer Laufschriftmarkierung.|ESC|  
-|Löschen des Zeichens vor der Einfügemarke beim Bearbeiten einer Zelle.|RÜCKTASTE|  
-|Löschen des Zeichens nach der Einfügemarke beim Bearbeiten einer Zelle.|ENTFERNEN|  
-|Wechseln zur ersten Zelle der aktuellen Zeile.|POS1|  
-|Wechseln zur letzten Zelle der aktuellen Zeile.|ENDE|  
-|Markieren der Zeichen in der aktuellen Zelle und Positionieren der Einfügemarke am Zeilenende.  Gleiches Verhalten wie beim Doppelklicken auf eine Zelle.|F2|  
-|Wenn sich der Fokus auf einer Zelle befindet, Wechseln zur nächsten Zelle in der Zeile.<br /><br /> Wenn sich der Fokus auf der letzten Zelle einer Zeile befindet, Wechseln zum ersten Link mit einer untergeordneten Tabelle in der Zeile und Erweitern des Links.<br /><br /> Wenn sich der Fokus auf einem Link mit einem untergeordneten Element befindet, Navigieren zum nächsten Link mit einem untergeordneten Element.<br /><br /> Wenn sich der Fokus auf dem letzten Link mit einem untergeordneten Element befindet, Wechseln zur ersten Zelle der nächsten Zeile.|TAB|  
-|Wenn sich der Fokus auf einer Zelle befindet, Wechseln zur vorherigen Zelle in der Zeile.<br /><br /> Wenn sich der Fokus auf der ersten Zelle einer Zeile befindet, Wechseln zum letzten erweiterten Link mit einer untergeordneten Tabelle in der vorherigen Zeile oder zur letzten Zelle der vorherigen Zeile.<br /><br /> Wenn sich der Fokus auf einem Link mit einem untergeordneten Element befindet, Navigieren zum vorherigen Link mit einem untergeordneten Element.<br /><br /> Wenn sich der Fokus auf dem ersten Link mit einem untergeordneten Element befindet, Wechseln zur letzten Zelle der vorherigen Zeile.|UMSCHALT\+TAB|  
-|Wechseln zum nächsten Steuerelement in der Aktivierreihenfolge.|STRG\+TAB|  
-|Wechseln zum vorherigen Steuerelement in der Aktivierreihenfolge.|STRG\+UMSCHALT \+TAB|  
-|Wechseln aus einer untergeordneten Tabelle zur übergeordneten Tabelle.  Gleiches Verhalten wie beim Klicken auf die Schaltfläche Zurück.|ALT\+NACH\-LINKS|  
-|Erweitern von Links mit untergeordneten Tabellen.  Mit ALT\+NACH\-UNTEN werden alle Links erweitert, nicht nur die markierten.|ALT\+NACH\-UNTEN  oder  STRG\+PLUSZEICHEN|  
-|Reduzieren von Links mit untergeordneten Tabellen.  Mit ALT\+NACH\-OBEN werden alle Links reduziert, nicht nur die markierten.|ALT\+NACH\-OBEN  oder  STRG\+MINUSZEICHEN|  
-|Wechseln zur am weitesten entfernten, nicht leeren Zelle in Richtung des Pfeils.|STRG\+PFEILTASTE|  
-|Erweitern der Markierung um eine Zeile in Richtung des Pfeils \(ohne Links mit untergeordneten Tabellen zu berücksichtigen\).|UMSCHALT\+NACH\-OBEN\/UNTEN|  
-|Erweitern der Markierung bis zur am weitesten entfernten, nicht leeren Zeile in Richtung des Pfeils \(ohne Links mit untergeordneten Tabellen zu berücksichtigen\).|STRG\+UMSCHALT\+ NACH\-OBEN\/UNTEN|  
-|Wechseln zur obersten linken Zelle.|STRG\+POS1|  
-|Wechseln zur untersten rechten Zelle.|STRG\+ENDE|  
-|Erweitern der Markierung bis zur ersten Zeile.|STRG\+UMSCHALT\+POS1|  
-|Erweitern der Markierung bis zur letzten Zeile.|STRG\+UMSCHALT\+ENDE|  
-|Markieren der aktuellen Zeile \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+LEERTASTE|  
-|Markieren des gesamten Rasters \(außer Links mit untergeordneten Tabellen\).|STRG\+A|  
-|In einer untergeordneten Tabelle: Anzeigen der übergeordneten Zeile.|STRG\+BILD\-AB|  
-|In einer untergeordneten Tabelle: Ausblenden der übergeordneten Zeile.|STRG\+BILD\-AUF|  
-|Erweitern der Markierung um eine Seite nach unten \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+BILD\-AB|  
-|Erweitern der Markierung um eine Seite nach oben \(außer Links mit untergeordneten Tabellen\).|UMSCHALT\+BILD\-AUF|  
-|Aufrufen der <xref:System.Windows.Forms.DataGrid.EndEdit%2A>\-Methode für die aktuelle Zeile.|STRG\+EINGABE|  
-|Geben Sie im Bearbeitungsmodus einen <xref:System.DBNull.Value?displayProperty=fullName>\-Wert in eine Zelle ein.|CTRL\+0|  
+|Aktion|Verknüpfung|  
+|------------|--------------|  
+|Schließen Sie die Eingabe in eine Zelle, und nach unten zur nächsten Zelle zu verschieben.<br /><br /> Wenn der Fokus auf die Verknüpfung mit einer untergeordneten Tabelle befindet, navigieren Sie zu dieser Tabelle.|EINGABETASTE|  
+|Abbrechen der Bearbeitung der Zelle befindet sich im Bearbeitungsmodus für die Zelle.<br /><br /> Wenn in Auswahlrahmen, brechen Sie auf die Zeile Bearbeitung ab.|ESC|  
+|Löschen Sie die Zeichen vor der Einfügemarke beim Bearbeiten einer Zelle.|RÜCKTASTE|  
+|Löschen Sie das Zeichen nach der Einfügemarke beim Bearbeiten einer Zelle.|DELETE|  
+|Wechseln Sie zur ersten Zelle in der aktuellen Zeile.|START|  
+|Wechselt zur letzten Zelle in der aktuellen Zeile.|ENDE|  
+|Markieren Sie die Zeichen in der aktiven Zelle, und positionieren Sie die Einfügemarke an das Ende der Zeile. Dasselbe Verhalten wie beim Doppelklicken auf eine Zelle.|F2|  
+|Wenn der Fokus auf einer Zelle befindet, verschieben Sie zur nächsten Zelle in der Zeile.<br /><br /> Wenn der Fokus auf die letzte Zelle in einer Zeile befindet, verschieben Sie die erste untergeordnete Tabelle Verknüpfung der Zeile, und erweitern Sie ihn.<br /><br /> Wenn der Fokus auf einen untergeordneten Link ist, verschieben Sie auf den nächsten untergeordneten Link.<br /><br /> Wenn der Fokus auf den letzten untergeordneten Link ist, verschieben Sie bis zur ersten Zelle der nächsten Zeile.|TAB|  
+|Wenn der Fokus auf einer Zelle befindet, verschoben Sie und die vorherige Zelle in der Zeile.<br /><br /> Wenn der Fokus auf die erste Zelle in einer Zeile befindet, verschieben Sie in den letzten Link der erweiterten untergeordneten Tabelle der vorherigen Zeile oder wechselt zur letzten Zelle der vorherigen Zeile.<br /><br /> Fahren Sie Fokus auf einen untergeordneten Link ist, mit der vorherigen Untergeordnet-Links.<br /><br /> Wenn der Fokus auf den ersten untergeordneten Link befindet, verschieben Sie bis zum letzten Zelle der vorherigen Zeile.|UMSCHALT+TAB|  
+|Wechseln Sie zum nächsten Steuerelement in der Aktivierreihenfolge.|STRG+TAB|  
+|Wechseln Sie zum vorherigen Steuerelement in der Aktivierreihenfolge.|STRG+UMSCHALT +TAB|  
+|Nach oben an die übergeordnete Tabelle in einer untergeordneten Tabelle. Dasselbe Verhalten wie das Klicken auf die Schaltfläche "zurück".|ALT+NACH-UNTEN|  
+|Erweitern Sie die untergeordnete Tabelle verknüpft. ALT + nach-unten werden alle Links, nicht nur die markierten erweitert.|ALT + nach-unten oder STRG + Pluszeichen|  
+|Reduzieren Sie die untergeordnete Tabelle verknüpft. ALT + nach-oben werden alle Links, nicht nur die markierten reduziert.|ALT + nach-oben-Taste oder Strg + Minuszeichen ()|  
+|Wechseln Sie zur äußersten nicht leeren Zelle in die Richtung des Pfeils.|STRG + PFEILTASTE|  
+|Erweitern der Markierung um eine Zeile in die Richtung des Pfeils (ausgenommen der untergeordneten Tabelle verknüpft).|UMSCHALT + NACH-OBEN/NACH-UNTEN|  
+|Erweitern der Markierung zum am weitesten nicht leeren Zeile in die Richtung des Pfeils (ausgenommen der untergeordneten Tabelle verknüpft).|STRG + UMSCHALT + NACH-OBEN/NACH-UNTEN|  
+|Auf die linke obere Zelle zu verschieben.|STRG + POS1|  
+|Wechseln Sie zur Zelle unten rechts.|STRG + ENDE|  
+|Erweitern der Markierung an die oberste Zeile.|STRG + UMSCHALT + POS1|  
+|Erweitern Sie die Auswahl auf der untersten Zeile.|STRG + UMSCHALT + ENDE|  
+|Wählen Sie die aktuelle Zeile (mit Ausnahme von untergeordneten Tabelle verknüpft).|UMSCHALT + LEERTASTE|  
+|Wählen Sie das gesamte Raster (mit Ausnahme von untergeordneten Tabelle verknüpft).|STRG+A|  
+|Anzeigen der übergeordneten Zeile in einer untergeordneten Tabelle an.|STRG+BILD-AB|  
+|Ausblenden der übergeordneten Zeile in einer untergeordneten Tabelle an.|STRG+BILD-AUF|  
+|Erweitern der Auswahl nach unten einen Bildschirm (ausgenommen der untergeordneten Tabelle verknüpft).|UMSCHALT+BILD-AB|  
+|Erweitern der Markierung Bildschirmseite (ausgenommen der untergeordneten Tabelle verknüpft).|UMSCHALT+BILD-AUF|  
+|Rufen Sie die <xref:System.Windows.Forms.DataGrid.EndEdit%2A> Methode für die aktuelle Zeile.|STRG+EINGABE|  
+|Geben Sie einen <xref:System.DBNull.Value?displayProperty=nameWithType> Wert in einer Zelle im Bearbeitungsmodus.|STRG+0|  
   
-## Siehe auch  
- [Übersicht über das DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über das DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

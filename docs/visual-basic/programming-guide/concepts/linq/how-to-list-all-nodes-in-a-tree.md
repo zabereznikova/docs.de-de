@@ -1,31 +1,27 @@
 ---
-title: 'Gewusst wie: Auflisten aller Knoten in einer Struktur (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Auflisten aller Knoten in einer Struktur (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Gewusst wie: Auflisten aller Knoten in einer Struktur (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Vorgehensweise: Auflisten aller Knoten in einer Struktur (Visual Basic)
 Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten. Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt. Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.  
   
- Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] ist nicht besonders hilfreich. XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]-Abfragen sind deutlich leistungsfähiger. Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.  
+ Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist nicht besonders hilfreich. XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen sind deutlich leistungsfähiger. Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt eine Funktion mit dem Namen `GetXPath`, die für jeden Knoten in der XML-Struktur einen spezifischen XPath-Ausdruck generiert. Sie generiert auch dann entsprechende XPath-Ausdrücke, wenn sich Knoten in einem Namespace befinden. Die XPath-Ausdrücke werden unter Verwendung von Namespacepräfixen generiert.  
@@ -245,7 +241,7 @@ End Module
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

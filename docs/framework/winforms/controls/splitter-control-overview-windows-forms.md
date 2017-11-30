@@ -1,37 +1,36 @@
 ---
-title: "&#220;bersicht &#252;ber das Splitter-Steuerelement (Windows&#160;Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Splitter"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Splitter-Steuerelement [Windows Forms], Informationen über das Splitter-Steuerelement"
+title: "Übersicht über das Splitter-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Splitter
+helpviewer_keywords: Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e4602796a1a7740adb9a352d0a21fb6c2a58959d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber das Splitter-Steuerelement (Windows&#160;Forms)
+# <a name="splitter-control-overview-windows-forms"></a>Übersicht über das Splitter-Steuerelement (Windows Forms)
 > [!IMPORTANT]
->  Obwohl <xref:System.Windows.Forms.SplitContainer> das <xref:System.Windows.Forms.Splitter>\-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.Splitter>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+>  Obwohl <xref:System.Windows.Forms.SplitContainer> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.Splitter> -Steuerelement früherer Versionen <xref:System.Windows.Forms.Splitter> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
   
- <xref:System.Windows.Forms.Splitter>\-Steuerelemente werden in Windows Forms dazu verwendet, die Größe angedockter Steuerelemente zur Laufzeit anzupassen.  Das <xref:System.Windows.Forms.Splitter>\-Steuerelement wird häufig in Formularen mit Steuerelementen eingesetzt, in denen Daten variabler Länge dargestellt werden müssen. Beispielsweise enthalten die Fensterbereiche in Windows Explorer zu unterschiedlichen Zeiten Informationen unterschiedlicher Länge bzw. Breite.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> Steuerelemente werden verwendet, um die Größe der angedockten Steuerelemente zur Laufzeit. Die <xref:System.Windows.Forms.Splitter> Steuerelement wird in Formularen mit Steuerelementen, die Daten an, wie Windows-Explorer, deren Daten Bereiche Informationen zu unterschiedlichen breiten zu unterschiedlichen Zeiten enthalten variabler Länge haben häufig verwendet.  
   
-## Verwenden des Splitter\-Steuerelements  
- Wenn der Benutzer mit dem Mauszeiger auf den nicht angedockten Rahmen eines Steuerelements zeigt, dessen Größe durch ein Aufteilungssteuerelement geändert werden kann, ändert sich die Zeigerdarstellung, um zu signalisieren, dass das Steuerelement vergrößert bzw. verkleinert werden kann.  Mit dem Splitter\-Steuerelement kann der Benutzer die Größe des angedockten Steuerelements ändern, das direkt vor dem Splitter\-Steuerelement positioniert ist.  Daher müssen Sie, um die Größenanpassung bei angedockten Steuerelementen zur Laufzeit zu ermöglichen, zunächst das anzupassende Steuerelement am Rand eines Containers andocken und anschließend ein Aufteilungssteuerelement an derselben Seite des Containers andocken.  
+## <a name="working-with-the-splitter-control"></a>Arbeiten mit dem Splittersteuerelement  
+ Wenn der Benutzer den Mauszeiger am Rand eines Steuerelements nicht angedockter, die vom Splitter-Steuerelement angepasst werden kann verweist, ändert sich seine Darstellung, um anzugeben, dass das Steuerelement, dessen Größe angepasst werden kann. Der Benutzer kann mit der Splitter-Steuerelement verankerte Steuerelement ändern, das unmittelbar davor ist. Aus diesem Grund, um dem Benutzer die Größe eines angedockten Steuerelements zur Laufzeit zu ermöglichen, docken Sie das Steuerelement an den Rand eines Containers geändert werden soll, und docken Sie anschließend auf der gleichen Seite des Containers mit einem Splittersteuerelement.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>   
- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [Steuerelemente für Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

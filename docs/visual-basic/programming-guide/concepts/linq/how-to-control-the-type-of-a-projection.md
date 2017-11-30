@@ -1,34 +1,30 @@
 ---
-title: 'Gewusst wie: Steuern des Typs einer Projektion (Visual Basic) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Festlegen einer Projektion (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32c2c747fd2f1137fbf2ead28886669c041d065c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Gewusst wie: Steuern des Typs einer Projektion (Visual Basic)
-Bei einer Projektion wird ein Satz von Daten gefiltert und in der Form und sogar im Typ geändert. Die meisten Abfrageausdrücke führen Projektionen aus. Die meisten Abfrageausdrücken in diesem Abschnitt ergeben <xref:System.Collections.Generic.IEnumerable%601>von <xref:System.Xml.Linq.XElement>, aber Sie können den Typ der Projektion zum Erstellen von Sammlungen von anderen Typen steuern.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Vorgehensweise: Festlegen einer Projektion (Visual Basic)
+Bei einer Projektion wird ein Satz von Daten gefiltert und in der Form und sogar im Typ geändert. Die meisten Abfrageausdrücke führen Projektionen aus. Bei den meisten Abfrageausdrücken in diesem Abschnitt ist das Ergebnis der Auswertung eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>, aber Sie können festlegen, welcher Projektionstyp verwendet werden soll, um Auflistungen eines anderen Typs zu erstellen. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel definiert einen neuen Typ: `Customer`. Der Abfrageausdruck instanziiert dann in der `Customer`-Klausel neue `Select`-Objekte. Dadurch wird der Typ des Abfrageausdrucks sein <xref:System.Collections.Generic.IEnumerable%601>von `Customer`.</xref:System.Collections.Generic.IEnumerable%601>  
+ Das folgende Beispiel definiert einen neuen Typ: `Customer`. Der Abfrageausdruck instanziiert dann in der `Customer`-Klausel neue `Select`-Objekte. Damit ist der Typ des Abfrageausdrucks eine <xref:System.Collections.Generic.IEnumerable%601> von `Customer`.  
   
- Dieses Beispiel verwendet die folgende XML-Dokument: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -88,7 +84,6 @@ Sub Main()
         Console.WriteLine(cust)  
     Next  
 End Sub  
-  
 ```  
   
  Dieser Code erzeugt die folgende Ausgabe:  
@@ -101,5 +96,5 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
  [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

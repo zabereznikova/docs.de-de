@@ -1,35 +1,34 @@
 ---
-title: "How to: Assign One Array to Another Array (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "covariance, arrays"
-  - "arrays [Visual Basic], assigning"
-  - "arrays [Visual Basic], covariance"
+title: 'Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- covariance, arrays
+- arrays [Visual Basic], assigning
+- arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Assign One Array to Another Array (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Da Arrays Objekte sind, können Sie sie wie andere Objekttypen in Zuweisungsanweisungen verwenden.  Eine Arrayvariable enthält einen Zeiger auf die Daten, die die Arrayelemente sowie die Rang\- und Längeninformationen bilden. Eine Zuweisung kopiert nur diesen Zeiger.  
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Gewusst wie: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
+Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Objekttypen. Eine Arrayvariable enthält einen Zeiger auf die Daten enthalten sind, die die Elemente des Arrays und die Informationen Rang und die Länge und eine Zuordnung kopiert nur this-Zeiger.  
   
-### So weisen Sie ein Array einem anderen Array zu  
+### <a name="to-assign-one-array-to-another-array"></a>Zuweisen eines Arrays in ein anderes array  
   
-1.  Stellen Sie sicher, dass die beiden Arrays den gleichen Rang \(Anzahl der Dimensionen\) und kompatible Elementdatentypen haben.  
+1.  Stellen Sie sicher, dass die beiden Arrays den gleichen Rang (Anzahl der Dimensionen) und kompatible Datentypen haben.  
   
-2.  Weisen Sie mit einer Standardzuweisungsanweisung das Quellarray dem Zielarray zu.  Setzen Sie nach dem Arraynamen keine Klammern.  
+2.  Verwenden Sie eine standardmäßige zuweisungsanweisung Zielarray Quellarray zuweisen. Führen Sie nicht entweder Arrayname mit Klammern.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -37,22 +36,22 @@ Da Arrays Objekte sind, können Sie sie wie andere Objekttypen in Zuweisungsanwe
     controlArray = formArray  
     ```  
   
- Wenn Sie ein Array einem anderen Array zuweisen, gelten folgende Regeln:  
+ Wenn Sie ein Array in einen anderen zuweisen, gelten die folgenden Regeln:  
   
--   **Gleicher Rang.** Der Rang \(Anzahl der Dimensionen\) des Zielarrays muss dem des Quellarrays entsprechen.  
+-   **Gleicher Rang.** Der Rang (Anzahl der Dimensionen) des Zielarrays muss das Quellarray identisch sein.  
   
-     Wenn die Rangwerte der beiden Arrays übereinstimmen, müssen die Dimensionen nicht übereinstimmen.  Die Anzahl der Elemente in einer bestimmten Dimension kann sich während der Zuweisung ändern.  
+     Bereitgestellten den Rang der zwei Arrays gleich sind, müssen die Dimensionen nicht identisch sein. Die Anzahl der Elemente in einer bestimmten Dimension kann bei der Zuordnung ändern.  
   
--   **Elementtypen.** Beide Arrays müssen entweder über *Verweistyp*elemente oder über *Werttyp*elemente verfügen.  Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Elementtypen.** Entweder beide Arrays müssen *Verweistyp* Elemente oder beide Arrays müssen *Werttyp* Elemente. Weitere Informationen finden Sie unter [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-    -   Wenn beide Arrays über Werttypelemente verfügen, müssen die Elementdatentypen genau identisch sein.  Einzige Ausnahme: Sie können ein Array von `Enum`\-Elementen einem Array des Basistyps dieser `Enum`\-Elemente zuweisen.  
+    -   Wenn beide Arrays Wertelemente-Typ haben, müssen die Element-Datentypen dem genau übereinstimmen. Die einzige Ausnahme hierbei ist, dass Sie ein Array von zuweisen können `Enum` Elemente in ein Array des Basistyps dieses `Enum`.  
   
-    -   Wenn beide Arrays über Verweistypelemente verfügen, muss der Quellelementtyp aus dem Zielelementtyp abgeleitet werden.  In diesem Fall haben die beiden Arrays die gleiche Vererbungsbeziehung wie ihre Elemente.  Dies wird als *Arraykovarianz* bezeichnet.  
+    -   Wenn beide Arrays Referenztyp Elemente verfügen, muss die Datenquellen-Elementtyp der Ziel-Elementtyp abgeleitet werden. Wenn dies der Fall ist, haben die beiden Arrays den gleichen vererbungsbeziehung als ihre Elemente. Hierbei spricht *Array-Kovarianz*.  
   
- Wenn die oben genannten Regeln verletzt werden, meldet der Compiler einen Fehler. Dies ist z. B. der Fall, wenn die Datentypen nicht kompatibel oder die Rangwerte nicht identisch sind.  Sie können dem Code vor der Durchführung der Zuweisung Fehlerbehandlung hinzufügen, um sicherzustellen, dass die Arrays kompatibel sind.  Sie können auch das [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md)\-Schlüsselwort verwenden, wenn Sie das Auslösen einer Ausnahme vermeiden möchten.  
+ Der Compiler meldet einen Fehler, wenn die oben genannten Regeln, z. B. verletzt werden die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können die Fehlerbehandlung in den Code, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie versuchen, eine Zuordnung hinzufügen. Sie können auch die [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) Schlüsselwort, wenn Sie, um zu vermeiden, dass eine Ausnahme ausgelöst möchten.  
   
-## Siehe auch  
- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Arraykonvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

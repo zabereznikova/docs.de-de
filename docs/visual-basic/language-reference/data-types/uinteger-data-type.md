@@ -1,62 +1,84 @@
 ---
-title: "UInteger Data Type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.uinteger"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "numbers, whole"
-  - "UInteger data type"
-  - "literal type characters, UI"
-  - "whole numbers"
-  - "integral data types"
-  - "integer numbers"
-  - "numbers, integer"
-  - "integers, data types"
-  - "integers, types"
-  - "UI literal type characters"
-  - "data types [Visual Basic], integral"
+title: UInteger-Datentyp
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.uinteger
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- UInteger data type
+- literal type characters [Visual Basic], UI
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- UI literal type characters [Visual Basic]
+- data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# UInteger Data Type
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="uinteger-data-type"></a>UInteger-Datentyp
 
-Speichert 32\-Bit\-\(4\-Byte\-\)Ganzzahlen ohne Vorzeichen mit einem Wert zwischen 0 und 4.294.967.295.  
+Enthält 32-Bit (4-Byte)-Ganzzahlen ohne Vorzeichen im Bereich von 0 bis 4.294.967.295.  
   
-## Hinweise  
- Der `UInteger`\-Datentyp stellt den größten Wert ohne Vorzeichen in der rationellsten Datenbreite bereit.  
+## <a name="remarks"></a>Hinweise
+
+ Die `UInteger` -Datentyp stellt den größten Wert ohne Vorzeichen in die effizienteste Datenbreite bereit.  
   
- Der Standardwert von `UInteger` ist 0 \(null\).  
+ Der Standardwert von `UInteger` lautet 0.  
   
-## Programmiertipps  
- Der `UInteger`\-Datentyp und der `Integer`\-Datentyp bieten auf einem 32\-Bit\-Prozessor optimale Leistung, weil das Laden, Speichern und Abrufen der kleineren ganzzahligen Typen \(`UShort`, `Short`, `Byte` und `SByte`\) länger dauert, obwohl bei diesen Typen weniger Bits verwendet werden.  
+## <a name="literal-assignments"></a>Literal Zuweisungen
+
+Sie können deklarieren und Initialisieren einer `UInteger` Variable, indem ein decimal Literal, einen hexadezimalen Literalwert ein oktales Literal Vorlagenkörpers oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `UInteger` befindet – sprich, wenn es kleiner als <xref:System.UInt32.MinValue?displayProperty=nameWithType> oder größer als <xref:System.UInt32.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+
+Im folgenden Beispiel werden Ganzzahlen wie 3.000.000.000, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `UInteger`-Werten zugewiesen.
   
--   **Negative Zahlen.** Da `UInteger` ein Typ ohne Vorzeichen ist, kann er keine negativen Zahlen darstellen.  Wenn Sie den unären Minusoperator \(`-`\) in einem Ausdruck verwenden, der vom Typ `UInteger` ist, wandelt Visual Basic den Ausdruck zunächst in den `Long`\-Typ um.  
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]  
+
+> [!NOTE] 
+> Verwenden Sie das Präfix `&h` oder `&H` zur Angabe einer hexadezimalen Literalwert, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix zu bezeichnen `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+
+Beginnend mit Visual Basic 2017, Sie können auch den Unterstrich `_`, als Ziffer Trennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel dargestellt.
+
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
+
+Numerische Literale zählen auch die `UI` oder `ui` [-Typzeichen](../../programming-guide\language-features\data-types/type-characters.md) zur Angabe der `UInteger` -Datentyp, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim number = &H0FAC14D7ui
+```
+
+## <a name="programming-tips"></a>Tipps für die Programmierung
+
+ Die `UInteger` und `Integer` Datentypen bereitstellen auf einem 32-Bit-Prozessor eine optimale Leistung, weil die kleineren ganzzahlige Typen (`UShort`, `Short`, `Byte`, und `SByte`), auch wenn sie weniger Bits verwendet mehr Zeit in Anspruch nehmen Laden, speichern und abrufen.  
   
--   **CLS\-Kompatibilität.** Der `UInteger`\-Datentyp ist nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), d. h. CLS\-kompatibler Code kann keine Komponente verwenden, die diesen Datentyp nutzt.  
+-   **Negative Zahlen.** Da `UInteger` ein Typ ohne Vorzeichen ist es nicht darstellen kann eine negative Zahl. Bei Verwendung der unäres minus (`-`) Operator auf einen Ausdruck, der ausgewertet wird, um geben `UInteger`, konvertiert den Ausdruck, der Visual Basic `Long` erste.  
   
--   **Interop\-Überlegungen.** Wenn eine Schnittstelle mit Komponenten vorhanden ist, die nicht für .NET Framework geschrieben wurden \(z. B. Automatisierungs\- oder COM\-Objekte\), ist zu beachten, dass Typen wie `uint` in anderen Umgebungen eine andere Datenbreite \(16 Bit\) haben können.  Wenn Sie ein 16\-Bit\-Argument an eine solche Komponente übergeben, deklarieren Sie es im verwalteten Visual Basic\-Code als `UShort` und nicht als `UInteger`.  
+-   **CLS-Kompatibilität.** Die `UInteger` Datentyp ist nicht Teil der [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), d. h. CLS-kompatiblem Code kann keine Komponente verwenden, die verwendet werden.
   
--   **Erweiterung.** Der Datentyp `UInteger` wird zu `Long`, `ULong`, `Decimal`, `Single` und `Double` erweitert.  Dies bedeutet, dass Sie `UInteger` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=fullName>\-Fehler auftritt.  
+-   **Interop-Überlegungen.** Wenn Sie Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen Datenbreite bedenken, die von wie z. B. Typen `uint` in anderen Umgebungen können eine andere Datenbreite (16 Bits) vorhanden sein. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `UShort` anstelle von `UInteger` im verwalteten Visual Basic-Code.  
   
--   **Typzeichen.** Durch Anhängen der Literaltypzeichen `UI` an ein Literal wird der `UInteger`\-Datentyp erzwungen.  `UInteger` hat kein Typkennzeichen.  
+-   **Widening.** Die `UInteger` -Datentyp zu `Long`, `ULong`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `UInteger` keinem dieser Typen ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt32?displayProperty=fullName>\-Struktur.  
+-   **Typzeichen.** Anhängen des Literaltypzeichens `UI` an ein Literal wird der `UInteger` -Datentyp. `UInteger`verfügt über keine Typkennzeichen aus.  
   
-## Siehe auch  
- <xref:System.UInt32>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt32?displayProperty=nameWithType>-Struktur.  
+  
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.UInt32>  
+ [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

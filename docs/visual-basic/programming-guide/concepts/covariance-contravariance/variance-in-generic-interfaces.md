@@ -1,62 +1,95 @@
 ---
-title: Varianz in generischen Schnittstellen (Visual Basic) | Microsoft-Dokumentation
+title: Varianz in generischen Schnittstellen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c53c27bdb085213046553fc4b08f11336880a7c2
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianz in generischen Schnittstellen (Visual Basic)
-Varianz-Unterstützung für mehrere vorhandene generische Schnittstellen wurde in .NET Framework 4 eingeführt. Varianz-Unterstützung ermöglicht die implizite Konvertierung von Klassen, die diese Schnittstellen implementieren. Die folgenden Schnittstellen sind jetzt Variant:  
+In .NET Framework 4 wurde die Varianzunterstützung für mehrere vorhandene generische Schnittstellen eingeführt. Die Varianzunterstützung lässt eine implizite Konvertierung von Klassen zu, die diese Schnittstellen implementieren. Die folgenden Schnittstellen sind jetzt variant:  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T ist kovariant)</xref:System.Collections.Generic.IEnumerable%601>  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T ist kovariant)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T ist kovariant)</xref:System.Collections.Generic.IEnumerator%601>  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T ist kovariant)  
   
--   <xref:System.Linq.IQueryable%601>(T ist kovariant)</xref:System.Linq.IQueryable%601>  
+-   <xref:System.Linq.IQueryable%601> (T ist kovariant)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` und `TElement` sind kovariant)</xref:System.Linq.IGrouping%602>  
+-   <xref:System.Linq.IGrouping%602> (`TKey` und `TElement` sind kovariant)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T ist kontravariant)</xref:System.Collections.Generic.IComparer%601>  
+-   <xref:System.Collections.Generic.IComparer%601> (T ist kontravariant)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T ist kontravariant)</xref:System.Collections.Generic.IEqualityComparer%601>  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T ist kontravariant)  
   
--   <xref:System.IComparable%601>(T ist kontravariant)</xref:System.IComparable%601>  
+-   <xref:System.IComparable%601> (T ist kontravariant)  
   
- Kovarianz unterstützt eine Methode mit einem stärker abgeleiteten Rückgabetyp, als durch den generischen Typparameter der Schnittstelle definiert. Die Kovarianzfunktion betrachten Sie zur Veranschaulichung folgenden generischen Schnittstellen: `IEnumerable(Of Object)` und `IEnumerable(Of String)`. Die `IEnumerable(Of String)` Schnittstelle erbt nicht die `IEnumerable(Of Object)` Schnittstelle. Allerdings die `String` Typ erbt die `Object` Typ, und in einigen Fällen Sie möglicherweise Objekte dieser Schnittstellen einander zuweisen möchten. Dies wird im folgenden Codebeispiel gezeigt.  
+ Kovarianz ermöglicht einer Methode, stärker abgeleitete Rückgabetypen zu verwenden, als durch die generischen Typparameter der Schnittstelle definiert sind. Betrachten Sie diese generischen Schnittstellen zur Veranschaulichung der Kovarianzfunktionen: `IEnumerable(Of Object)` und `IEnumerable(Of String)`. Die Schnittstelle `IEnumerable(Of Object)` wird nicht von der Schnittstelle `IEnumerable(Of String)` geerbt. Allerdings erbt der Typ `String` den Typ `Object`. In einigen Fällen können Sie vielleicht auch die Objekte dieser Schnittstellen einander zuweisen. Dies wird im folgenden Codebeispiel gezeigt.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- In früheren Versionen von .NET Framework, dieser Code verursacht einen Kompilierungsfehler in Visual Basic mit `Option Strict On`. Aber jetzt können Sie `strings` anstelle von `objects`, wie im vorherigen Beispiel dargestellt, da die <xref:System.Collections.Generic.IEnumerable%601>Schnittstelle ist kovariant.</xref:System.Collections.Generic.IEnumerable%601>  
+```vb  
+Dim strings As IEnumerable(Of String) = New List(Of String)  
+Dim objects As IEnumerable(Of Object) = strings  
+```  
   
- Kontravarianz unterstützt eine Methode von Argumenttypen, die weniger stark abgeleitet sind, als durch den generischen Parameter der Schnittstelle angegeben. Zur Veranschaulichung der Kontravarianz wird angenommen, Sie erstellt haben eine `BaseComparer` zum Vergleichen von Instanzen der Klasse die `BaseClass` Klasse. Die `BaseComparer`-Klasse implementiert die `IEqualityComparer(Of BaseClass)`-Schnittstelle. Da die <xref:System.Collections.Generic.IEqualityComparer%601>-Schnittstelle kontravariant ist, können Sie `BaseComparer` Instanzen von Klassen vergleichen, die erben die `BaseClass` Klasse</xref:System.Collections.Generic.IEqualityComparer%601> Dies wird im folgenden Codebeispiel gezeigt.  
+ In früheren Versionen von .NET Framework dieser Code verursacht einen Kompilierungsfehler in Visual Basic mit `Option Strict On`. Jetzt können Sie aber `strings` anstelle von `objects` verwenden, wie im vorherigen Beispiel gezeigt wurde, da die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle kovariant ist.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+ Kontravarianz ermöglicht einer Methode, Argumenttypen zu verwenden, die weniger stark abgeleitet sind als durch die generischen Parameter der Schnittstelle angegeben. Nehmen Sie zur Veranschaulichung der Kontravarianz an, dass Sie eine `BaseComparer`-Klasse zum Vergleich von Instanzen der `BaseClass`-Klasse erstellt haben. Die `BaseComparer`-Klasse implementiert die `IEqualityComparer(Of BaseClass)`-Schnittstelle. Da die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> jetzt kontravariant ist, können Sie `BaseComparer` verwenden, um Instanzen von Klassen zu vergleichen, die die Klasse `BaseClass` erben. Dies wird im folgenden Codebeispiel gezeigt.  
+  
+```vb  
+' Simple hierarchy of classes.  
+Class BaseClass  
+End Class  
+  
+Class DerivedClass  
+    Inherits BaseClass  
+End Class  
+  
+' Comparer class.  
+Class BaseComparer  
+    Implements IEqualityComparer(Of BaseClass)  
+  
+    Public Function Equals1(ByVal x As BaseClass,  
+                            ByVal y As BaseClass) As Boolean _  
+                            Implements IEqualityComparer(Of BaseClass).Equals  
+        Return (x.Equals(y))  
+    End Function  
+  
+    Public Function GetHashCode1(ByVal obj As BaseClass) As Integer _  
+        Implements IEqualityComparer(Of BaseClass).GetHashCode  
+        Return obj.GetHashCode  
+    End Function  
+End Class  
+Sub Test()  
+    Dim baseComparer As IEqualityComparer(Of BaseClass) = New BaseComparer  
+    ' Implicit conversion of IEqualityComparer(Of BaseClass) to   
+    ' IEqualityComparer(Of DerivedClass).  
+    Dim childComparer As IEqualityComparer(Of DerivedClass) = baseComparer  
+End Sub  
+```  
+  
  Weitere Beispiele finden Sie unter [Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
- Varianz in generischen Schnittstellen ist nur für Verweistypen unterstützt. Werttypen unterstützen keine Varianz. Beispielsweise `IEnumerable(Of Integer)` kann implizit in konvertiert `IEnumerable(Of Object)`, da ganze Zahlen durch einen Werttyp dargestellt werden.  
+ Varianz in generischen Typparametern wird nur für Referenztypen unterstützt. Werttypen unterstützen keine Varianz. Beispielweise kann `IEnumerable(Of Integer)` nicht implizit in `IEnumerable(Of Object)` konvertiert werden, da Ganzzahlen durch Werttypen dargestellt werden.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Es ist auch wichtig zu beachten, dass Klassen, die Variante Schnittstellen implementieren, immer noch invariant sind. Z. B. zwar <xref:System.Collections.Generic.List%601>implementiert die Schnittstelle kovariante <xref:System.Collections.Generic.IEnumerable%601>, können nicht implizit konvertiert `List(Of Object)` , `List(Of String)`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.List%601> Dies wird im folgenden Codebeispiel veranschaulicht.  
+```vb  
+Dim integers As IEnumerable(Of Integer) = New List(Of Integer)  
+' The following statement generates a compiler error  
+' with Option Strict On, because Integer is a value type.  
+' Dim objects As IEnumerable(Of Object) = integers  
+```  
+  
+ Es ist auch wichtig zu beachten, dass Klassen, die variante Schnittstellen implementieren, trotzdem noch invariant sind. Obwohl <xref:System.Collections.Generic.List%601> beispielsweise die kovariante Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie `List(Of Object)` implizit in `List(Of String)` konvertieren. Dies wird im folgenden Codebeispiel veranschaulicht.  
   
 ```vb  
 ' The following statement generates a compiler error  
@@ -68,7 +101,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
- [Erstellen von Varianten generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [Generische Schnittstellen](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
- [Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+ [Using Variance in Interfaces for Generic Collections (Visual Basic) (Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
+ [Creating Variant Generic Interfaces (Visual Basic) (Erstellen varianter generischer Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
+ [Generische Schnittstellen](../../../../standard/generics/interfaces.md)  
+ [Variance in Delegates (Visual Basic) (Varianz in Delegaten (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

@@ -1,88 +1,92 @@
 ---
-title: "Gewusst wie: Erstellen eines linearen Farbverlaufs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farben, Erstellen linearer Farbverläufe"
-  - "Farbverläufe"
-  - "Farbverläufe, Erstellen von linearen"
-  - "Lineare Farbverläufe, Erstellen"
+title: 'Gewusst wie: Erstellen eines linearen Farbverlaufs'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- linear gradients [Windows Forms], creating
+- gradients [Windows Forms], creating linear
+- colors [Windows Forms], creating linear gradients
+- gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbf3b1657a5a6b91ba88a0968b6b92d4e4bdbf0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines linearen Farbverlaufs
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet horizontale, vertikale und diagonale lineare Farbverläufe.  Die Farbe in einem linearen Farbverlauf wird im Normalfall gleichmäßig geändert.  Sie können einen linearen Farbverlauf jedoch auch anpassen, sodass die Farbe ungleichmäßig geändert wird.  
+# <a name="how-to-create-a-linear-gradient"></a>Gewusst wie: Erstellen eines linearen Farbverlaufs
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bietet horizontale, vertikale und diagonale lineare Farbverläufe. Standardmäßig ändert sich die Farbe in einem linearen Farbverlauf einheitlich. Allerdings können Sie einen linearen Farbverlauf anpassen, sodass sich die Farbe auf nicht einheitliche Weise ändert.  
   
- Im folgenden Beispiel werden eine Linie, eine Ellipse und ein Rechteck mit einem Pinsel mit horizontalem linearem Farbverlauf ausgefüllt.  
+ Im folgenden Beispiel wird eine Zeile und einer Ellipse, die ein Rechteck mit einem horizontalen linearen Farbverlaufspinsel.  
   
- Der <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>\-Konstruktor empfängt vier Argumente: zwei Punkte und zwei Farben.  Der erste Punkt \(0, 10\) ist mit der ersten Farbe \(Rot\) und der zweite Punkt \(200, 10\) mit der zweiten Farbe \(Blau\) verknüpft.  Erwartungsgemäß ändert sich die Farbe der Linie, die von \(0, 10\) nach \(200, 10\) gezeichnet wird, graduell von Rot nach Blau.  
+ Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor empfängt vier Argumente: zwei Punkten und mit zwei Farben aus. Der erste Punkt (0, 10) bezieht sich auf der ersten Farbe (Rot), und der zweite Punkt (200, 10) der zweiten Farbe (Blau) zugeordnet ist. Erwartungsgemäß, der Linie von (0, 10), (200, 10) ändert sich allmählich von Rot und Blau.  
   
- Die Werte 10 in den Punkten \(50, 10\) und \(200, 10\) sind nicht wichtig.  Es kommt lediglich darauf an, dass die zweite Koordinate der beiden Punkte identisch ist, die Verbindungslinie also horizontal verläuft.  Auch die Farbe der Ellipse und des Rechtecks ändert sich von Rot nach Blau, wenn die horizontale Koordinate von 0 auf 200 ansteigt.  
+ Die Werte 10 in den Punkten (50, 10) und (200, 10) sind nicht wichtig. Wichtig ist, dass die beiden Punkte derselben zweite Koordinate haben – die verbindenden Zeile ist horizontal. Ellipse und des Rechtecks ändert auch allmählich von Rot in Blau, da die horizontale Koordinate von 0 bis 200 wird.  
   
- In der folgenden Abbildung werden die Linie, die Ellipse und das Rechteck angezeigt.  Beachten Sie, dass der Farbverlauf sich wiederholt, wenn die horizontale Koordinate über den Wert 200 hinausgeht.  
+ Die folgende Abbildung zeigt die Zeile, das die Ellipse und das Rechteck. Beachten Sie, dass der Farbverlauf wird wiederholt als die horizontale Koordinate 200 hinausgeht.  
   
  ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
   
-### So verwenden Sie horizontale lineare Farbverläufe  
+### <a name="to-use-horizontal-linear-gradients"></a>Verwenden Sie horizontale lineare Farbverläufe  
   
--   Übergeben Sie die nicht transparenten Farben Rot und Blau als drittes bzw. viertes Argument.  
+-   Übergeben Sie die nicht transparenten Rot und Blau als die dritte und vierte Argument.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- Die Farbkomponenten im vorhergehenden Beispiel verändern sich beim Verschieben der horizontalen Koordinate von 0 auf 200 linear.  Wenn sich beispielsweise ein Punkt genau zwischen 0 und 200 befindet, liegt sein Blauwert genau in der Mitte zwischen 0 und 255.  
+ Im vorherigen Beispiel Ändern der Farbkomponenten linear beim Wechseln von einer horizontale Koordinate von 0 bis zu einer horizontalen Koordinate 200. Beispielsweise wird ein Punkt, dessen erste Koordinate in der Mitte zwischen 0 und 200 ist, eine blaue Komponente aufweisen, in der Mitte zwischen 0 und 255 ist.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ermöglicht es Ihnen, die Art des Farbwechsels von einem Ende des Farbverlaufs zum anderen anzupassen.  Angenommen, Sie möchten einen Farbverlaufspinsel erstellen, der entsprechend der folgenden Tabelle von Schwarz in Rot übergeht:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]können Sie, wie eine Farbe aus einer Kante eines Farbverlaufs zum anderen anzupassen. Angenommen Sie, Sie möchten einen Pinsel mit Farbverlauf erstellen, der sich in Rot entsprechend der folgenden Tabelle aus Schwarz ändert.  
   
-|Horizontale Koordinate|RGB\-Komponenten|  
-|----------------------------|----------------------|  
-|0|\(0, 0, 0\)|  
-|40|\(128, 0, 0\)|  
-|200|\(255, 0, 0\)|  
+|Horizontale Koordinate|RGB-Komponenten|  
+|---------------------------|--------------------|  
+|0|(0, 0, 0)|  
+|40|(128, 0, 0)|  
+|300|(255, 0, 0)|  
   
- Beachten Sie, dass der Rotanteil bereits die Hälfte der maximalen Intensität hat, wenn die horizontale Koordinate erst 20 Prozent der Strecke von 0 nach 200 entspricht.  
+ Beachten Sie, dass Rotanteils zur Hälfte Intensität ist, wird die horizontale Koordinate nur 20 Prozent der Möglichkeit von 0 bis 200.  
   
- Im folgenden Beispiel wird die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>\-Eigenschaft eines <xref:System.Drawing.Drawing2D.LinearGradientBrush>\-Objekts festgelegt, um drei relative Intensitäten mit drei relativen Positionen zu verknüpfen.  Wie in der vorangehenden Tabelle wird die relative Intensität 0.5 mit der relativen Position 0.2 verknüpft.  Durch den Code werden eine Ellipse und ein Rechteck mit dem Farbverlaufspinsel ausgefüllt.  
+ Im folgenden Beispiel wird die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> Eigenschaft von einem <xref:System.Drawing.Drawing2D.LinearGradientBrush> Objekt, das drei relative Intensitäten mit drei relativen Positionen zu verknüpfen. Wie in der obigen Tabelle ist eine relative Intensität von 0,5 eine relative Position von 0,2 zugeordnet. Der Code füllt eine Ellipse und ein Rechteck mit dem Farbverlaufspinsel.  
   
- In der folgenden Abbildung sind die resultierende Ellipse und das resultierende Rechteck dargestellt.  
+ Die folgende Abbildung zeigt das resultierende Ellipse und das Rechteck.  
   
  ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
   
-### So passen Sie lineare Farbverläufe an  
+### <a name="to-customize-linear-gradients"></a>Lineare Farbverläufe anpassen  
   
--   Übergeben Sie die nicht transparenten Farben Schwarz und Rot als drittes bzw. viertes Argument.  
+-   Übergeben Sie die deckend Schwarz und Rot als die dritte und vierte Argument.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- Die Farbverläufe in den bisherigen Beispielen verlaufen in horizontaler Richtung, d. h., die Farbe wechselt graduell entlang einer beliebigen horizontalen Linie.  Darüber hinaus können Sie auch vertikale und diagonale Farbverläufe festlegen.  
+ Die Farbverläufe in den vorherigen Beispielen wurden horizontale; d. h. ändert sich die Farbe graduell ab, wie Sie auf einer horizontalen Linie verschieben. Sie können auch die vertikale und diagonale Farbverläufe definieren.  
   
- Im folgenden Beispiel werden die Punkte \(0, 0\) und \(200, 100\) an einen <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>\-Konstruktor übergeben.  Die Farbe Blau wird mit \(0, 0\) und die Farbe Grün mit \(200, 100\) verknüpft.  Eine Linie \(mit Stiftbreite 10\) und eine Ellipse werden mit dem Pinsel mit linearem Farbverlauf ausgefüllt.  
+ Das folgende Beispiel übergibt die Punkte (0, 0) und (200, 100), um eine <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor. Die Farbe Blau zugeordnet ist (0, 0), und die Farbe Grün zugeordnet ist (200, 100). Eine Linie (mit Stiftbreite 10) und einer Ellipse, die sind mit der linearen Farbverlaufspinsel gefüllt.  
   
- In der folgenden Abbildung sind die Linie und die Ellipse dargestellt.  Die Farbe in der Ellipse wechselt graduell entlang einer beliebigen Linie, die parallel zu der Linie mit den Punkten \(0, 0\) und \(200, 100\) verläuft.  
+ Die folgende Abbildung zeigt die Zeile und die Ellipse. Beachten Sie, dass die Farbe in der Ellipse wechselt allmählich entlang einer Linie wird parallel zu der Position übergeben (0, 0) und (200, 100).  
   
  ![Linearer Farbverlauf](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
   
-### So erstellen Sie diagonale lineare Farbverläufe  
+### <a name="to-create-diagonal-linear-gradients"></a>So erstellen diagonaler, linearer Farbverläufe  
   
--   Übergeben Sie die nicht transparenten Farben Blau und Grün als drittes bzw. viertes Argument.  
+-   Übergeben Sie die nicht transparenten Blau und Grün als die dritte und vierte Argument.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## Siehe auch  
- [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
  [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

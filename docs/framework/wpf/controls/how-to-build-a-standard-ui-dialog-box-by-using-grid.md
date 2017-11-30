@@ -1,43 +1,49 @@
 ---
-title: "Gewusst wie: Erstellen eines Benutzeroberfl&#228;chen-Standarddialogfelds unter Verwendung des Grid-Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dialogfelder, Erstellen"
-  - "Grid-Steuerelement, Erstellen, Dialogfeld"
+title: "Gewusst wie: Erstellen eines Benutzeroberflächen-Standarddialogfelds unter Verwendung des Grid-Elements"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dialog boxes [WPF], creating
+- Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 641e74d8c9f8db1afde19c008de08f0029b0bf90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Erstellen eines Benutzeroberfl&#228;chen-Standarddialogfelds unter Verwendung des Grid-Elements
-In diesem Beispiel wird gezeigt, wie ein [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]\-Standarddialogfeld mithilfe des <xref:System.Windows.Controls.Grid>\-Elements erstellt wird.  
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Gewusst wie: Erstellen eines Benutzeroberflächen-Standarddialogfelds unter Verwendung des Grid-Elements
+In diesem Beispiel wird gezeigt, wie eine Standard- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Dialogfeld mithilfe der <xref:System.Windows.Controls.Grid> Element.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein Dialogfeld erstellt, das dem Dialogfeld **Ausführen** im [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]\-Betriebssystem ähnlich ist.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel erstellt ein Dialogfeld an, wie die **ausführen** im Dialogfeld die [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Betriebssystem.  
   
- In diesem Beispiel wird ein <xref:System.Windows.Controls.Grid> erstellt. Dabei werden die Klassen <xref:System.Windows.Controls.ColumnDefinition> und <xref:System.Windows.Controls.RowDefinition> verwendet, um fünf Spalten und vier Zeilen zu definieren.  
+ Das Beispiel erstellt eine <xref:System.Windows.Controls.Grid> und verwendet die <xref:System.Windows.Controls.ColumnDefinition> und <xref:System.Windows.Controls.RowDefinition> Klassen zum Definieren von fünf Spalten und vier Zeilen.  
   
- Anschließend wird ein <xref:System.Windows.Controls.Image>, `RunIcon.png`, hinzugefügt und positioniert, um das Bild im Dialogfeld darzustellen.  Das Bild wird in der ersten Zeile der ersten Spalte des <xref:System.Windows.Controls.Grid>\-Elements \(linke, obere Ecke\) platziert.  
+ Anschließend fügt hinzu und platziert eine <xref:System.Windows.Controls.Image>, `RunIcon.png`, zum Darstellen des Bilds, das Sie im Dialogfeld gefunden wird. Das Bild wird in der ersten Spalte und Zeile platziert die <xref:System.Windows.Controls.Grid> (der oberen linken Ecke).  
   
- Dann wird der ersten Spalte ein <xref:System.Windows.Controls.TextBlock>\-Element hinzugefügt, das sich über die verbleibenden Spalten der ersten Zeile erstreckt.  Der zweiten Zeile in der ersten Spalte wird ein weiteres <xref:System.Windows.Controls.TextBlock>\-Element hinzugefügt, um das Textfeld **Öffnen** darzustellen.  Es folgt ein <xref:System.Windows.Controls.TextBlock>\-Element, das den Dateneingabebereich darstellt.  
+ Als Nächstes das Beispiel fügt eine <xref:System.Windows.Controls.TextBlock> Element der ersten Spalte, der die übrigen Spalten der ersten Zeile erstreckt. Fügt eine andere <xref:System.Windows.Controls.TextBlock> Element der zweiten Zeile in der ersten Spalte zur Darstellung der **öffnen** Textfeld. Ein <xref:System.Windows.Controls.TextBlock> folgt, das den Dateneingabebereich darstellt.  
   
- Abschließend werden in dem Beispiel drei <xref:System.Windows.Controls.Button>\-Elemente zur letzten Zeile hinzugefügt, die die Ereignisse **OK**, **Abbrechen** und **Durchsuchen** darstellen.  
+ Schließlich im Beispiel fügt drei <xref:System.Windows.Controls.Button> Elemente, die auf die letzte Zeile darstellen der **OK**, **"Abbrechen"**, und **Durchsuchen** Ereignisse.  
   
  [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
-## Siehe auch  
- <xref:System.Windows.Controls.Grid>   
- <xref:System.Windows.GridUnitType>   
- [Übersicht über Panel\-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Controls.Grid>  
+ <xref:System.Windows.GridUnitType>  
+ [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)

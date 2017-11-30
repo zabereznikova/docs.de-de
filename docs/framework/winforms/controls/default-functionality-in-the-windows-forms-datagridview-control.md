@@ -1,60 +1,61 @@
 ---
-title: "Standardfunktionalit&#228;t des DataGridView-Steuerelements von Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Datenblätter, Standardfunktionen im DataGridView-Steuerelement"
-  - "DataGridView-Steuerelement [Windows Forms], Standardfunktionen"
+title: "Standardfunktionalität des DataGridView-Steuerelements von Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Standardfunktionalit&#228;t des DataGridView-Steuerelements von Windows Forms
-Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement in Windows Forms bietet Benutzern ein erhebliches Maß an Standardfunktionalität.  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Standardfunktionalität des DataGridView-Steuerelements von Windows Forms
+Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement bietet Benutzern eine beträchtliche Menge an Standardeinstellung Funktionalität.  
   
-## Standardfunktionalität  
- Ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement verfügt standardmäßig über folgende Funktionen:  
+## <a name="default-functionality"></a>Standardfunktionen  
+ Wird standardmäßig ein <xref:System.Windows.Forms.DataGridView> Steuerelement:  
   
--   Automatische Anzeige von Spalten\- und Zeilenheader, die bei vertikalem Bildlauf der Tabelle sichtbar bleiben  
+-   Zeigt automatisch Spaltenüberschriften und Zeilenüberschriften, die sichtbar bleiben, wenn die Tabelle vertikal einen Bildlauf durchführt.  
   
--   Zeilenheader mit einem Auswahlindikator für die aktuelle Zeile  
+-   Verfügt über einen Zeilenkopf, der einen Auswahlindikator für die aktuelle Zeile enthält.  
   
--   Auswahlrechteck in der ersten Zelle  
+-   Verfügt über ein Auswahlrechteck in der ersten Zelle ein.  
   
--   Spalten, deren Größe mit einem Doppelklick auf den Spaltenunterteiler automatisch angepasst werden kann  
+-   Enthält Spalten, die automatisch angepasst werden können, wenn der Benutzer die Spaltenunterteiler doppelklickt.  
   
--   Automatische Unterstützung von visuellen Stilen unter Windows XP und Windows Server 2003, wenn die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>\-Methode in der `Main`\-Methode der Anwendung aufgerufen wird.  
+-   Automatisch visuelle Stile unter Windows XP und Windows Server 2003-Produktfamilie unterstützt bei der <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Methode wird aufgerufen, aus der Anwendungsverzeichnis `Main` Methode.  
   
- Der Inhalt eines <xref:System.Windows.Forms.DataGridView>\-Steuerelements kann zudem standardmäßig bearbeitet werden:  
+ Darüber hinaus den Inhalt einer <xref:System.Windows.Forms.DataGridView> -Steuerelement standardmäßig bearbeitet werden kann:  
   
--   Wenn der Benutzer in einer Zelle doppelklickt oder die Taste F2 drückt, aktiviert das Steuerelement automatisch den Bearbeitungsmodus für die Zelle und aktualisiert den Inhalt der Zelle während der Eingabe.  
+-   Wenn der Benutzer doppelklickt oder in einer Zelle F2 drückt, wird das Steuerelement automatisch versetzt die Zelle in den Bearbeitungsmodus, und aktualisiert den Inhalt der Zelle als vom Benutzer eingegebenen.  
   
--   Am Ende des Datenblatts wird eine zusätzliche Zeile zum Hinzufügen neuer Datensätze angezeigt.  Wenn der Benutzer auf diese Zeile klickt, wird dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement eine neue Zeile hinzugefügt.  Durch Drücken der Taste ESC wird diese neue Zeile wieder gelöscht.  
+-   Wenn der Benutzer einen Bildlauf bis zum Ende des Rasters durchführt, wird der Benutzer angezeigt, dass eine Zeile für neue Datensätze hinzufügen vorhanden ist. Wenn der Benutzer diese Zeile klickt, wird eine neue Zeile hinzugefügt, um die <xref:System.Windows.Forms.DataGridView> Steuerelement mit Standardwerten. Wenn der Benutzer die ESC-Taste drückt, verschwindet dieser neuen Zeile auf.  
   
 -   Wenn der Benutzer auf einen Zeilenheader klickt, wird die gesamte Zeile ausgewählt.  
   
- Wenn Sie ein <xref:System.Windows.Forms.DataGridView>\-Steuerelement an eine Datenquelle binden, indem Sie dessen <xref:System.Windows.Forms.DataGridView.DataSource%2A>\-Eigenschaft festlegen, erhält das Steuerelement folgende Funktionalität:  
+ Beim Binden einer <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle durch Festlegen seiner <xref:System.Windows.Forms.DataGridView.DataSource%2A> -Eigenschaft, die das Steuerelement:  
   
--   Automatische Verwendung der Spaltennamen der Datenquelle als Spaltenheadertext  
+-   Verwendet automatisch die Namen der Spalten der Datenquelle, wie der Text der Spaltenüberschrift.  
   
--   Füllung mit dem Inhalt der Datenquelle.  Für die einzelnen Spalten der Datenquelle werden automatisch <xref:System.Windows.Forms.DataGridView>\-Spalten erstellt.  
+-   Wird mit dem Inhalt der Datenquelle aufgefüllt. <xref:System.Windows.Forms.DataGridView>Spalten werden für jede Spalte in der Datenquelle automatisch erstellt.  
   
--   Automatische Erstellung einer Zeile für jede sichtbare Zeile der Tabelle  
+-   Erstellt eine Zeile für jede sichtbare Zeile in der Tabelle an.  
   
--   Wenn der Benutzer auf einen Spaltenheader klickt, werden die Zeilen automatisch nach den zugrunde liegenden Daten sortiert.  
+-   Automatisch sortiert die Zeilen basierend auf den zugrunde liegenden Daten, wenn der Benutzer auf einen Spaltenheader klickt.  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- [DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

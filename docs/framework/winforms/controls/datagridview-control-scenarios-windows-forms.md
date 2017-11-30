@@ -1,100 +1,101 @@
 ---
-title: "Szenarien f&#252;r das DataGridView-Steuerelement (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Daten [Windows Forms], Anzeigen im tabellarischen Format"
-  - "Datenblätter, Informationen über Datenblätter"
-  - "DataGridView-Steuerelement [Windows Forms], Szenarien"
+title: "Szenarien für das DataGridView-Steuerelement (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], about data grids
+- DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Szenarien f&#252;r das DataGridView-Steuerelement (Windows Forms)
-Mit dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement können Sie Tabellendaten aus einer Vielzahl von Datenquellen anzeigen.  Bei einer einfacheren Verwendungsweise können Sie <xref:System.Windows.Forms.DataGridView> manuell füllen und die Daten direkt über das Steuerelement bearbeiten.  Normalerweise speichern Sie Ihre Daten jedoch in einer externen Datenquelle und binden das Steuerelement über eine <xref:System.Windows.Forms.BindingSource>\-Komponente an die Datenquelle.  
+# <a name="datagridview-control-scenarios-windows-forms"></a>Szenarien für das DataGridView-Steuerelement (Windows Forms)
+Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, Sie können Tabellendaten aus einer Vielzahl von Datenquellen anzeigen. Für einfache verwendet wird, können Sie manuell Auffüllen einer <xref:System.Windows.Forms.DataGridView> und bearbeiten Sie die Daten nicht direkt über das Steuerelement. In der Regel jedoch Sie Speichern Ihrer Daten in einer externen Datenquelle und Binden des Steuerelements an ihn über eine <xref:System.Windows.Forms.BindingSource> Komponente.  
   
- In diesem Thema werden einige häufige Szenarien in Zusammenhang mit dem <xref:System.Windows.Forms.DataGridView>\-Steuerelement beschrieben.  
+ Dieses Thema beschreibt einige allgemeine Szenarien, bei denen, die <xref:System.Windows.Forms.DataGridView> Steuerelement.  
   
-## Szenario 1: Anzeigen kleinerer Datenmengen  
- Daten müssen nicht in einer externen Datenquelle gespeichert werden, damit sie im <xref:System.Windows.Forms.DataGridView>\-Steuerelement angezeigt werden können.  Bei der Bearbeitung geringerer Datenmengen können Sie diese manuell in das Steuerelement einfügen und die Daten über das Steuerelement bearbeiten.  Dies wird als *Ungebunden\-Modus* bezeichnet.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines ungebundenen DataGridView\-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+## <a name="scenario-1-displaying-small-amounts-of-data"></a>Szenario 1: Anzeige kleiner Mengen von Daten  
+ Sie müssen keine Speichern Ihrer Daten in einer externen Datenquelle, um es im Bereich der <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn Sie eine kleine Menge von Daten arbeiten, können Sie füllen Sie das Steuerelement selbst und die Daten über das Steuerelement bearbeiten. Hierbei spricht *ungebundenen Modus*. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Im Ungebunden\-Modus wird das Steuerelement manuell gefüllt.  
+-   Ungebunden-Modus füllen Sie das Steuerelement manuell.  
   
--   Der Ungebunden\-Modus ist insbesondere für kleine Mengen schreibgeschützter Daten geeignet.  
+-   Ungebunden-Modus eignet sich besonders für kleine Mengen von schreibgeschützten Daten.  
   
--   Der Ungebunden\-Modus eignet sich auch für mit Arbeitsblättern vergleichbare oder mit wenig Daten gefüllte Tabellen.  
+-   Ungebunden-Modus ist für die Kalkulationstabelle ähnelt oder gefüllten Tabellen geeignet ist.  
   
-## Szenario 2: Anzeigen und Aktualisieren von in einer externen Datenquelle gespeicherten Daten  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement kann als Benutzeroberfläche verwendet werden, über die Benutzer auf Daten zugreifen können, die in einer Datenquelle, z. B. einer Datenbanktabelle oder einer Auflistung von Geschäftsobjekten, gespeichert sind.  Weitere Informationen finden Sie unter [Gewusst wie: Binden von Daten an das DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Szenario 2: Anzeigen und Aktualisieren von Daten in einer externen Datenquelle gespeichert  
+ Sie können die <xref:System.Windows.Forms.DataGridView> als Benutzeroberfläche (UI) zu steuern, über welche Benutzer Daten in einer Datenquelle, z. B. einer Datenbanktabelle oder eine Auflistung von Geschäftsobjekten beibehalten zugreifen können. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Im Gebunden\-Modus können Sie eine Verbindung zu einer Datenquelle herstellen, automatisch Spalten auf der Grundlage der Datenquelleneigenschaften oder Datenbankspalten generieren und das Steuerelement anschließend automatisch füllen lassen.  
+-   Gebundenen Modus können Sie eine Verbindung mit einer Datenquelle herstellen, automatisch auf Grundlage des Datenquelleneigenschaften oder Datenbankspalten Spalten generieren und füllen Sie das Steuerelement automatisch.  
   
--   Der Gebunden\-Modus ist für die intensive Benutzerinteraktion mit Daten geeignet.  Daten können für die Anzeige formatiert werden, und von Benutzern festgelegte Daten können in das von der Datenquelle erwartete Format analysiert werden.  Formatierungsfehler bei der Dateneingabe und Fehler in Bezug auf Datenbankeinschränkungen können ermittelt werden, sodass Benutzer gewarnt und fehlerhafte Zellen korrigiert werden können.  
+-   Gebundene Modus eignet sich für intensive Benutzerinteraktion mit Daten. Daten können für die Anzeige formatiert werden, und Benutzer angegebenen Daten analysiert werden können, in dem von der Datenquelle erwarteten Format. Dateneingabe Formatieren von Fehlern und Einschränkung Datenbankfehler kann erkannt werden, damit Benutzer darüber informiert werden können und fehlerhafte Zellen korrigiert werden können.  
   
--   Zusätzliche Funktionen, wie das Sortieren, Fixieren und Neuanordnen von Spalten, ermöglichen es Benutzern, die Anzeige von Daten auf bequeme Weise an ihren Arbeitsablauf anzupassen.  
+-   Zusätzliche Funktionen wie z. B. den Spalte sortieren, aktivieren Sie fixieren und Neuanordnen von Benutzern, Daten in die Möglichkeit, die am einfachsten für ihren Workflow anzuzeigen.  
   
--   Durch die Unterstützung der Zwischenablage können Benutzer Daten aus Ihrer Anwendung in andere Anwendungen kopieren.  
+-   Unterstützung der Zwischenablage ermöglicht Benutzern das Kopieren von Daten aus Ihrer Anwendung in andere Anwendungen.  
   
-## Szenario 3: Erweiterte Daten  
- Bei speziellen, vom standardmäßigen Datenbindungsmodell nicht abgedeckten Anforderungen kann die Interaktion zwischen Steuerelement und Daten durch die Implementierung des *virtuellen Modus* verwaltet werden.  Bei der Implementierung des virtuellen Modus wird mindestens ein Ereignishandler implementiert, über den das Steuerelement Informationen zu Zellen anfordern kann, sobald diese benötigt werden.  
+## <a name="scenario-3-advanced-data"></a>Szenario 3: Erweiterte Daten  
+ Wenn Sie besondere Anforderungen, die nicht das standard-Datenbindungsmodell berücksichtigt wird verfügen, können Sie die Interaktion zwischen dem Steuerelement und Ihre Daten verwalten, durch die Implementierung *Virtueller Modus*. Implementieren des virtuellen Modus bedeutet, dass implementieren eine oder mehrere Ereignishandler, mit die das Steuerelement Anfordern von Informationen zu den Zellen als die Informationen können ist erforderlich.  
   
- Bei der Verarbeitung umfangreicher Datenmengen wird durch die Implementierung des virtuellen Modus beispielsweise optimale Effizienz gewährleistet.  Der virtuelle Modus eignet sich auch für die Verwaltung der Werte ungebundener Spalten, die zusammen mit aus einer anderen Datenquelle abgerufenen Spalten angezeigt werden.  
+ Wenn Sie mit großen Datenmengen arbeiten, sollten Sie z. B. Implementieren des virtuellen Modus um optimaler Effizienz sicherzustellen. Virtueller Modus eignet sich auch für die Verwaltung der Werte von ungebundenen Spalten, die Sie zusammen mit einer Spalte abgerufen, die aus einer anderen Datenquelle anzeigen.  
   
- Weitere Informationen zum virtuellen Modus finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Weitere Informationen zum virtuellen Modus finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Der virtuelle Modus eignet sich für die Anzeige sehr großer Datenmengen, wenn die Leistung optimiert werden soll.  
+-   Virtueller Modus eignet sich für sehr große Mengen von Daten anzeigen, wenn Sie die Leistung optimieren müssen.  
   
-## Szenario 4: Automatische Größenanpassung bei Zeilen und Spalten  
- Bei der Anzeige von Daten, die regelmäßig aktualisiert werden, können Sie die Größe von Zeilen und Spalten automatisch anpassen und so sicherstellen, dass sämtliche Inhalte sichtbar sind.  Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement umfasst mehrere Optionen, mit denen die manuelle Größenanpassung aktiviert oder deaktiviert und die Größe zu bestimmten Zeiten programmgesteuert bzw. bei geänderten Inhalten automatisch angepasst werden kann.  Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Szenario 4: Automatische Größenänderung von Zeilen und Spalten  
+ Wenn Sie Daten, die regelmäßig aktualisiert wird anzeigen, können Sie automatisch ändern, Zeilen und Spalten, um sicherzustellen, dass der gesamte Inhalt sichtbar ist. Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet mehrere Optionen, mit denen Sie aktivieren oder deaktivieren Sie manuelle Ändern der Größe, programmgesteuert zu bestimmten Zeitpunkten Ändern der Größe oder skalieren Inhalte automatisch bei jedem ändern. Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Die manuelle Größenanpassung ermöglicht es Benutzern, die Zellhöhe und \-breite festzulegen.  
+-   Manuelles Ändern der Größe ermöglicht Benutzern das Anpassen der Zelle Höhe und Breite.  
   
--   Die automatische Größenanpassung ermöglicht es Ihnen, die Zellgröße anzupassen und zu gewährleisten, dass kein Zelleninhalt abgeschnitten wird.  
+-   Automatische Größenänderung ermöglicht Zellengrößen zu behalten, sodass Zelleninhalt nie abgeschnitten wird.  
   
--   Die programmgesteuerte Größenanpassung ermöglicht es Ihnen, die Zellgröße zu bestimmten Zeiten zu ändern und Leistungseinbußen zu vermeiden, die bei einer ständigen automatischen Größenanpassung auftreten.  
+-   Programmgesteuerten größenanpassung ermöglicht es Ihnen, um die Größe von Zellen zu bestimmten Zeiten von kontinuierlichen automatische Größenänderung Leistungseinbußen zu vermeiden.  
   
-## Szenario 5: Einfache Anpassung  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement bietet zahlreiche Möglichkeiten, die grundlegende Darstellung und das grundlegende Verhalten zu ändern.  Weitere Informationen finden Sie unter [Zellstile im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-5-simple-customization"></a>Szenario 5: Einfache Anpassung  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet viele Möglichkeiten, die grundlegende Darstellung und Verhalten zu ändern. Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Mithilfe von <xref:System.Windows.Forms.DataGridViewCellStyle>\-Objekten können Sie auf mehreren Ebenen und für einzelne Elemente des Steuerelements Farb\-, Schriftart\-, Formatierungs\- und Positionierungsinformationen angeben.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle>Objekte können Sie die Farbe, Schriftart, Formatierung und Positionierung von Informationen auf mehreren Ebenen und für einzelne Elemente des Steuerelements angeben.  
   
--   Zellenstile können geschichtet und von mehreren Elementen gemeinsam genutzt werden, was die Wiederverwendung von Code ermöglicht.  
+-   Zellstile im Protokollstapel zugeordnet, und von mehreren Elementen, da Sie die Wiederverwendung von Code dar, sondern gemeinsam genutzt werden können.  
   
-## Szenario 6: Erweiterte Anpassung  
- Das <xref:System.Windows.Forms.DataGridView>\-Steuerelement bietet zahlreiche Möglichkeiten, die grundlegende Darstellung und das grundlegende Verhalten anzupassen.  
+## <a name="scenario-6-advanced-customization"></a>Szenario 6: Erweiterte Anpassung  
+ Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet viele Methoden für die Darstellung und Verhalten anpassen.  
   
-### Hauptmerkmale des Szenarios  
+### <a name="scenario-key-points"></a>Szenario wesentliche Punkte  
   
--   Sie können eigenen Code zum Zeichnen von Zellen bereitstellen.  Weitere Informationen finden Sie unter [Gewusst wie: Anpassen der Darstellung von Zellen im DataGridView\-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   Sie können Ihren eigenen Code zum Zeichnen von Zelle bereitstellen. Weitere Informationen finden Sie unter [wie: Anpassen der Darstellung von Zellen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
   
--   Sie können eigenen Code zum Zeichnen von Zeilen bereitstellen.  Dies ist beispielsweise beim Erstellen von Zeilen von Vorteil, deren Inhalt mehrere Spalten umfasst.  Weitere Informationen finden Sie unter [Gewusst wie: Anpassen der Darstellung von Zeilen im DataGridView\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   Sie können eine eigene Zeile zeichnen bereitstellen. Dies ist nützlich, z. B. Zeilen mit Inhalt zu erstellen, die mehrere Spalten umfasst. Weitere Informationen finden Sie unter [wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
   
--   Sie können eigene Zell\- und Spaltenklassen implementieren, um die Zelldarstellung anzupassen.  Weitere Informationen finden Sie unter [Gewusst wie: Anpassen von Zellen und Spalten im DataGridView\-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   Sie können Ihren eigenen Zellen- und Spaltentyps Klassen zum Anpassen der Darstellung Zelle implementieren. Weitere Informationen finden Sie unter [wie: Anpassen von Zellen und Spalten in Windows Forms-DataGridView-Steuerelements durch Erweitern von deren Verhalten und Aussehen](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
   
--   Sie können eigene Zell\- und Spaltenklassen implementieren, um andere als die durch die integrierten Spaltentypen bereitgestellten Steuerelemente zu hosten.  Weitere Informationen finden Sie unter [Gewusst wie: Hosten von Steuerelementen in DataGridView\-Zellen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   Sie können Ihren eigenen Klassen Zellen- und Spaltentyps an Hoststeuerelemente als diejenigen, die von der integrierten Spaltentypen bereitgestellten implementieren. Weitere Informationen finden Sie unter [wie: Hosten-Steuerelementen in Windows Forms-DataGridView-Zellen](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.DataGridView>   
- [Übersicht über das DataGridView\-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Übersicht über das DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

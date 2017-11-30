@@ -1,42 +1,40 @@
 ---
-title: "Richtlinien f&#252;r die Benennung | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "[Namen [.NET Framework], Informationen über Benennungsrichtlinien"
-  - "Benennungsrichtlinien [.NET Framework]"
-  - "Klassenbibliotheken – Entwurfsrichtlinien [.NET Framework], Namen"
-  - "[Formatieren [.NET Framework], Namen"
-  - "Bezeichner, Klassenbibliotheken – Elementnamen"
-  - "Namen [.NET Framework]"
-  - "formatbenennungsrichtlinien Sie [.NET Framework]"
+title: "Richtlinien für die Benennung"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], about naming guidelines
+- naming guidelines [.NET Framework]
+- class library design guidelines [.NET Framework], names
+- formatting [.NET Framework], names
+- identifiers, class library element names
+- names [.NET Framework]
+- format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 40da7449c88eaaba92e34374c002c7e175b2ef16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Richtlinien f&#252;r die Benennung
-Befolgen einen konsistenten Satz von Benennungskonventionen in die Entwicklung eines Frameworks kann einen wichtigen Beitrag zur Handhabung des Frameworks. Sie können das Framework von vielen Entwicklern weit auseinander Projekte verwendet werden. Über die Konsistenz des Formulars Namen von FrameworkElement\-Objekte leicht verstanden werden müssen und müssen die Funktion jedes Elements zu vermitteln.  
+# <a name="naming-guidelines"></a>Richtlinien für die Benennung
+Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framework kann einen wesentlichen Beitrag das Framework verwendbarkeits-sein. Es kann das Framework weit getrennte Projekte für viele Entwickler verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelemente leicht verstanden werden müssen und müssen die Funktion der einzelnen Elemente zu vermitteln.  
   
- Ziel dieses Kapitels ist es, einen konsistenten Satz von Benennungskonventionen angeben, der Namen führt, die sofortige für Entwickler sinnvoll.  
+ Das Ziel dieses Kapitels ist konsistente Benennungskonventionen angeben, die sich im Namen ergibt, die sofortige für Entwickler sinnvoll.  
   
- Obwohl diese Namenskonventionen übernehmen, wie Richtlinien für die Entwicklung von allgemeinen Code führen würde, konsistente Benennung im gesamten Code, Sie sind nur erforderlich, um diese APIs zuweisen, die öffentlich verfügbar gemacht werden \(öffentliche oder geschützte Typen und Member und explizit implementierten Schnittstellen\).  
+ Obwohl diese Benennungskonventionen einführen, da mit Richtlinien für die allgemeine Entwicklung konsistenter Benennung im gesamten Code führen würde, Sie sind nur erforderlich, um deren Anwendung auf APIs an, die öffentlich verfügbar gemacht werden (öffentliche oder geschützte Typen und Member, und explizit implementierte Schnittstellen).  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Großschreibung Konventionen](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
  [Allgemeine Benennungskonventionen](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
  [Namen von Assemblys und DLLs](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
@@ -45,9 +43,9 @@ Befolgen einen konsistenten Satz von Benennungskonventionen in die Entwicklung e
  [Namen von Typmembern](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [Benennen von Parametern](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [Benennen von Ressourcen](../../../docs/standard/design-guidelines/naming-resources.md)  
- *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc. aus [Framework\-Entwurfsrichtlinien: Konventionen, Ausdrücke und Muster für wieder verwendbare .NET\-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) vom 22. Oktober 2008 von Addison\-Wesley Professional als Teil der Microsoft Windows Development\-Reihe von Krzysztof Cwalina und Brad Abrams, veröffentlicht.*  
+ *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
   
-## Siehe auch  
- [Framework\-Entwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch  
+ [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

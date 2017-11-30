@@ -1,104 +1,109 @@
 ---
-title: "Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hosten eines Win32-Steuerelements in WPF"
-  - "Win32-Code, WPF-Interoperation"
+title: 'Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hosting Win32 control in WPF [WPF]
+- Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 566be72cf330f6da83987f5e693176552471f091
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit.  Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]\-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes in Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Anwendung wieder zu verwenden, anstatt ihn vollständig neu zu schreiben.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosten eines [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fensters auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite.  
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Code möglicherweise effektiver mindestens wiederverwenden Teil des Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendung, anstatt es vollständig neu zu schreiben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet ein einfaches Verfahren zum Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster auf eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite.  
   
- Dieses Thema führt Sie durch eine Anwendung, [Beispiel für das Hosten eines Win32\-Listenfeld\-Steuerelements in Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkID=159998), die ein [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Listenfeldsteuerelement hostet.  Dieses allgemeine Verfahren kann für das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fenster erweitert werden.  
+ Dieses Thema führt Sie durch eine Anwendung [hosten ein Win32-ListBox-Steuerelement in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159998), die Hosts eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Listenfeld-Steuerelement. Diese allgemeine Prozedur kann erweitert werden, für das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
   
-   
   
 <a name="requirements"></a>   
-## Anforderungen  
- In diesem Thema wird davon ausgegangen, dass Sie mit den Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Programmierung und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Programmierung vertraut sind.  Eine Einführung in die Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Programmierung finden Sie unter [Erste Schritte](../../../../docs/framework/wpf/getting-started/index.md).  Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Programmierung finden Sie in zahlreichen Büchern zu diesem Thema, insbesondere in *Windows\-Programmierung* von Charles Petzold.  
+## <a name="requirements"></a>Anforderungen  
+ Dieses Thema setzt voraus, grundlegende Kenntnisse von sowohl [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programmieren. Eine grundlegende Einführung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programmierung, finden Sie unter [Einstieg](../../../../docs/framework/wpf/getting-started/index.md). Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programmierung, Sie sollten verweisen zahlreiche Büchern zu diesem Thema, insbesondere *Windows-Programmierung* von Charles Petzold.  
   
- Da das Beispiel für dieses Thema in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] implementiert wurde, werden die [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] für den Zugriff auf die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] verwendet.  Grundkenntnisse in [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] sind hilfreich, aber keine Voraussetzung.  
+ Da der Implementierung des Beispiels, die mit diesem Thema in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], er nutzt [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] für den Zugriff auf die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Einige Kenntnisse [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] ist hilfreich, aber nicht unbedingt.  
   
 > [!NOTE]
->  Dieses Thema enthält eine Reihe von Codebeispielen aus dem genannten Beispiel.  Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt.  Den vollständigen Code können Sie unter [Beispiel für das Hosten eines Win32\-Listenfeld\-Steuerelements in Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkID=159998) abrufen oder dort einsehen.  
+>  Dieses Lernprogramm enthält eine Reihe von Codebeispielen aus dem genannten Beispiel. Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt. Sie erhalten oder vollständige Code einsehen können [hosten ein Win32-ListBox-Steuerelement in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159998).  
   
 <a name="basic_procedure"></a>   
-## Das grundlegende Verfahren  
- Dieser Abschnitt umfasst das grundlegende Verfahren zum Hosten eines [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fensters auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite.  In den weiteren Abschnitten werden die einzelnen Schritte näher erläutert.  
+## <a name="the-basic-procedure"></a>Das grundlegende Verfahren  
+ Dieser Abschnitt beschreibt das grundlegende Verfahren zum Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Fenster auf einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite. In den weiteren Abschnitten werden die einzelnen Schritte näher erläutert.  
   
- Das grundlegende Hostingverfahren verläuft wie folgt:  
+ Die grundlegende Vorgehensweise beim Hosten ist:  
   
-1.  Implementieren Sie eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite, um das Fenster zu hosten.  Eine Möglichkeit ist das Erstellen eines <xref:System.Windows.Controls.Border>\-Elements, um einen Abschnitt der Seite für das gehostete Fenster zu reservieren.  
+1.  Implementieren einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auf der Seite des Fensters. Eine Möglichkeit besteht darin, erstellen Sie eine <xref:System.Windows.Controls.Border> Element um einen Abschnitt der Seite für das gehostete Fenster zu reservieren.  
   
-2.  Implementieren Sie eine Klasse, um das Steuerelement zu hosten, das von <xref:System.Windows.Interop.HwndHost> erbt.  
+2.  Implementieren Sie eine Klasse, um das Steuerelement zu hosten, die von erben <xref:System.Windows.Interop.HwndHost>.  
   
-3.  Überschreiben Sie in dieser Klasse den <xref:System.Windows.Interop.HwndHost>\-Klassenmember <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3.  In dieser Klasse überschreiben, die <xref:System.Windows.Interop.HwndHost> Klassenmember <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Erstellen Sie das gehostete Fenster als untergeordnetes Element des Fensters, das die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite enthält.  Obwohl es bei der herkömmlichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Programmierung nicht explizit verwendet werden muss, stellt die Hostingseite ein Fenster mit einem Handle \(HWND\) dar.  Sie erhalten das HWND der Seite durch den `hwndParent`\-Parameter der <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>\-Methode.  Das gehostete Fenster sollte als untergeordnetes Element von diesem HWND erstellt werden.  
+4.  Erstellen Sie das gehostete Fenster als untergeordnetes Element des Fensters, enthält die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite. Obwohl herkömmliche [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programmierung muss nicht explizit verwendet, die Seite "hosting" ist ein Fenster mit einem Handle (HWND). Erhalten Sie auf die Seite HWND über die `hwndParent` Parameter von der <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> Methode. Das gehostete Fenster sollte als untergeordnetes Element dieses HWND erstellt werden.  
   
-5.  Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück.  Wenn Sie ein oder mehrere [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Steuerelemente hosten möchten, erstellen Sie in der Regel ein Hostfenster als untergeordnetes Element des HWND und machen die Steuerelemente zu untergeordneten Elementen dieses Hostfensters.  Durch Umschließen der Steuerelemente mit einem Hostfenster kann die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite Benachrichtigungen von den Steuerelementen erhalten. Dabei geht es um bestimmte Probleme von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] im Zusammenhang mit Benachrichtigungen über die HWND\-Grenze hinweg.  
+5.  Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück. Wenn Sie eine oder mehrere hosten möchten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Steuerelemente in der Regel müssen Sie erstellen ein Hostfenster als untergeordnetes Element des HWND und die untergeordneten Steuerelemente Elemente dieser Hostfenster. Umschließen die Steuerelemente in einem Hostfenster bietet eine einfache Möglichkeit für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite zum Empfangen von Benachrichtigungen von den Steuerelementen der befasst sich mit bestimmten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Probleme mit Benachrichtigungen über die HWND-Grenze.  
   
-6.  Verarbeiten Sie ausgewählte Meldungen, die an das Hostfenster gesendet wurden, z. B. Benachrichtigungen von untergeordneten Steuerelementen.  Hierfür gibt es zwei Möglichkeiten.  
+6.  Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Hierfür gibt es zwei Möglichkeiten.  
   
-    -   Wenn Sie Meldungen bevorzugt in der Hostingklasse verarbeiten, überschreiben Sie die <xref:System.Windows.Interop.HwndHost.WndProc%2A>\-Methode der <xref:System.Windows.Interop.HwndHost>\-Klasse.  
+    -   Überschreiben, falls gewünscht, um Meldungen in die Hostingklasse zu verarbeiten, die <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methode der <xref:System.Windows.Interop.HwndHost> Klasse.  
   
-    -   Sollen die Meldungen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verarbeitet werden, verarbeiten Sie das <xref:System.Windows.Interop.HwndHost.MessageHook>\-Ereignis der <xref:System.Windows.Interop.HwndHost>\-Klasse im Code\-Behind.  Dieses Ereignis tritt für jede Meldung auf, die vom gehosteten Fenster empfangen wird.  Wenn Sie diese Option auswählen, müssen Sie <xref:System.Windows.Interop.HwndHost.WndProc%2A> zwar immer noch überschreiben, benötigen jedoch nur eine minimale Implementierung.  
+    -   Wenn Sie es vorziehen, haben die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Nachrichten behandeln, behandeln die <xref:System.Windows.Interop.HwndHost> Klasse <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis im Code-Behind. Dieses Ereignis tritt für jede Nachricht auf, die vom gehosteten Fenster empfangen wird. Wenn Sie diese Option auswählen, müssen Sie dennoch überschreiben <xref:System.Windows.Interop.HwndHost.WndProc%2A>, aber Sie benötigen nur eine minimale Implementierung.  
   
-7.  Überschreiben Sie die <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>\-Methode und <xref:System.Windows.Interop.HwndHost.WndProc%2A>\-Methode von <xref:System.Windows.Interop.HwndHost>.  Sie müssen diese Methoden überschreiben, um dem <xref:System.Windows.Interop.HwndHost>\-Vertrag zu entsprechen, aber müssen u. U. nur eine minimale Implementierung bereitstellen.  
+7.  Überschreiben Sie die <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> und <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methoden der <xref:System.Windows.Interop.HwndHost>. Müssen Sie diese Methoden nicht erfüllen, überschreiben die <xref:System.Windows.Interop.HwndHost> Vertrag, aber Sie können nur eine minimale Implementierung bereitstellen müssen.  
   
-8.  Erstellen Sie in der Code\-Behind\-Datei eine Instanz der Hostingklasse des Steuerelements, und machen Sie diese zu einem untergeordneten Element des <xref:System.Windows.Controls.Border>\-Elements, das das Fenster hosten soll.  
+8.  In der Code-Behind-Datei, erstellen Sie eine Instanz des Steuerelements Hostingklasse, und stellen Sie es ein untergeordnetes Element eines der <xref:System.Windows.Controls.Border> Element, das zum Hosten des Fensters vorgesehen ist.  
   
-9. Kommunizieren Sie mit dem gehosteten Fenster, indem Sie [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]\-Meldungen dorthin senden und Meldungen der untergeordneten Fenster verarbeiten, z. B. Benachrichtigungen von Steuerelementen.  
+9. Kommunikation mit dem gehosteten Fenster senden [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Nachrichten und Behandeln von Nachrichten aus zugehöriges untergeordnetes Fenster, z. B. Benachrichtigungen von Steuerelementen.  
   
 <a name="page_layout"></a>   
-## Implementieren des Seitenlayouts  
- Das Layout für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite, die das ListBox\-Steuerelement hostet, besteht aus zwei Bereichen.  Auf der linken Seite werden verschiedene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelemente gehostet, die eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bereitstellen, mit der Sie das [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Steuerelement bearbeiten können.  In der rechten oberen Ecke der Seite befindet sich ein quadratischer Bereich für das gehostete ListBox\-Steuerelement.  
+## <a name="implement-the-page-layout"></a>Implementieren des Seitenlayouts  
+ Das Layout für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite, die das ListBox-Steuerelement hostet besteht aus zwei Bereichen. Der linken Seite der Seite hostet mehrere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, die eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , mit der Sie zum Bearbeiten der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Steuerelement. In der oberen rechten Ecke der Seite befindet sich ein quadratischer Bereich für das gehostete ListBox-Steuerelement.  
   
- Der Code zum Implementieren dieses Layouts ist ganz einfach.  Das Stammelement entspricht <xref:System.Windows.Controls.DockPanel> mit zwei untergeordneten Elementen.  Das erste ist ein <xref:System.Windows.Controls.Border>\-Element, das das ListBox\-Steuerelement hostet.  Es belegt einen quadratischen Bereich von 200x200 in der rechten oberen Ecke der Seite.  Das zweite ist ein <xref:System.Windows.Controls.StackPanel>\-Element mit einer Gruppe von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Steuerelementen, die Informationen anzeigen und Ihnen Änderungen am ListBox\-Steuerelement ermöglichen, indem verfügbar gemachte Interoperationseigenschaften festgelegt werden.  Die einzelnen Elemente, die untergeordnete Elemente von <xref:System.Windows.Controls.StackPanel> darstellen, werden im Referenzmaterial für die verschiedenen Elemente näher erläutert. Dort wird erklärt, worum es sich bei den Elementen handelt und was sie bewirken. Sie sind im Beispielcode unten aufgelistet, werden aber an dieser Stelle nicht erklärt \(sie sind nicht für das grundlegende Interoperationsmodell erforderlich, sondern werden bereitgestellt, um Interaktivität im Beispiel zu ermöglichen\).  
+ Der Code zum Implementieren dieses Layout ist ganz einfach. Das Stammelement ist eine <xref:System.Windows.Controls.DockPanel> , zwei untergeordnete Elemente besitzt. Der erste ist ein <xref:System.Windows.Controls.Border> -Element, das das ListBox-Steuerelement hostet. Es belegt einen 200x200 großen quadratischen Bereich in der oberen rechten Ecke der Seite. Das zweite ist eine <xref:System.Windows.Controls.StackPanel> Element, das einen Satz von enthält [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, die Informationen angezeigt und ermöglichen es Ihnen, durch Festlegen der ListBox-Steuerelement bearbeiten verfügbar gemacht, interoperation Eigenschaften. Für die einzelnen Elemente, die untergeordneten Elemente sind die <xref:System.Windows.Controls.StackPanel>, finden Sie unter das Referenzmaterial für die verschiedenen Elemente Was ist, wird diese im Beispielcode unten aufgeführt sind, aber nicht hier erläuterten (die grundlegenden Interoperation Modell einer von ihnen nicht erforderlich ist, werden sie bereitgestellt, um das Beispiel einige Interaktivität hinzuzufügen).  
   
- [!code-xml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
-## Implementieren einer Klasse zum Hosten des Microsoft Win32\-Steuerelements  
- Der Kern dieses Beispiels ist die Klasse, die das Steuerelement ControlHost.cs tatsächlich hostet.  Sie erbt von <xref:System.Windows.Interop.HwndHost>.  Der Konstruktor verwendet zwei Parameter, Höhe und Breite, die der Höhe und Breite des <xref:System.Windows.Controls.Border>\-Elements entsprechen, das das ListBox\-Steuerelement hostet.  Diese Werte werden später verwendet, um sicherzustellen, dass die Größe des Steuerelements dem <xref:System.Windows.Controls.Border>\-Element entspricht.  
+## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Implementieren einer Klasse zum Hosten des Microsoft Win32-Steuerelements  
+ Der Kern dieses Beispiels ist die Klasse ControlHost.cs, die das Steuerelement tatsächlich hostet. Es erbt von <xref:System.Windows.Interop.HwndHost>. Der Konstruktor akzeptiert zwei Parameter, Höhe und Breite, die die Höhe und Breite der entsprechen den <xref:System.Windows.Controls.Border> Element, das das ListBox-Steuerelement hostet. Diese Werte werden später verwendet, um sicherzustellen, dass die Größe des Steuerelements Übereinstimmungen die <xref:System.Windows.Controls.Border> Element.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- Außerdem ist ein Satz von Konstanten verfügbar.  Die Konstanten stammen zum großen Teil aus Winuser.h und ermöglichen die Verwendung konventioneller Namen beim Aufrufen von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Funktionen.  
+ Des Weiteren gibt es auch einen Satz von Konstanten. Diese Konstanten Winuser.h größtenteils entnommen werden, und ermöglichen es Ihnen, die herkömmliche Namen verwenden, beim Aufrufen von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Funktionen.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
-### Überschreiben von BuildWindowCore zum Erstellen des Microsoft Win32\-Fensters  
- Sie überschreiben diese Methode zum Erstellen des von der Seite gehosteten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Fensters und stellen die Verbindung zwischen dem Fenster und der Seite her.  Da in diesem Beispiel auch ein ListBox\-Steuerelement gehostet wird, werden zwei Fenster erstellt.  Das erste ist das tatsächlich von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]\-Seite gehostete Fenster.  Das ListBox\-Steuerelement wird als untergeordnetes Element dieses Fensters erstellt.  
+### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Überschreiben von BuildWindowCore zum Erstellen des Microsoft Win32-Fensters  
+ Sie überschreiben diese Methode zum Erstellen der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster, das von der Seite gehostet wird, und stellen die Verbindung zwischen dem Fenster und der Seite. Da dieses Beispiel das Hosten eines ListBox-Steuerelements umfasst, werden zwei Fenster erstellt. Die erste ist das Fenster, die tatsächlich von gehostet ist die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite. Das ListBox-Steuerelement wird als untergeordnetes Element dieses Fensters erstellt.  
   
- Mit diesem Ansatz soll der Prozess des Empfangens von Benachrichtigungen vom Steuerelement vereinfacht werden.  Mit der <xref:System.Windows.Interop.HwndHost>\-Klasse können Sie Meldungen verarbeiten, die an das Fenster gesendet wurden, in dem sie gehostet wird.  Wenn Sie ein [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Steuerelement direkt hosten, empfangen Sie die Meldungen, die an die interne Nachrichtenschleife des Steuerelements gesendet wurden.  Sie können das Steuerelement anzeigen und Meldungen daran senden, aber Sie empfangen nicht die Benachrichtigungen, die vom Steuerelement an das übergeordnete Fenster gesendet werden.  Das bedeutet u. a., dass Sie nicht erkennen können, wann der Benutzer mit dem Steuerelement interagiert.  Erstellen Sie stattdessen ein Hostfenster, und machen Sie das Steuerelement zu einem untergeordneten Element dieses Fensters.  Dadurch können Sie die Meldungen für das Hostfenster verarbeiten, darunter die Benachrichtigungen, die vom Steuerelement dorthin gesendet wurden.  Der Einfachheit halber wird das Paket als ListBox\-Steuerelement bezeichnet, da das Hostfenster im Grunde nur einen einfachen Wrapper für das Steuerelement darstellt.  
+ Dieser Ansatz wurde bewusst gewählt, um den Empfang von Benachrichtigungen aus dem Steuerelement zu vereinfachen. Die <xref:System.Windows.Interop.HwndHost> Klasse bietet die Möglichkeit zum Verarbeiten von Nachrichten an das Fenster, das sie hostet. Wenn Sie Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] direkt steuern, erhalten Sie die Nachrichten in der internen Nachrichtenschleife des Steuerelements. Sie können das Steuerelement anzeigen und ihm Nachrichten senden, aber Sie erhalten keine der Benachrichtigungen, die das Steuerelement an das übergeordnete Fenster sendet. Dies bedeutet unter anderem, dass Sie keine Möglichkeit haben, zu erkennen, wann der Benutzer mit dem Steuerelement interagiert. Erstellen Sie stattdessen ein Hostfenster, und machen Sie das Steuerelement zu einem untergeordneten Element dieses Fensters. Dadurch können Sie sowohl Nachrichten für das Hostfenster als auch vom Steuerelement gesendete Benachrichtigungen verarbeiten. Da das Hostfenster kaum mehr als ein einfacher Wrapper für das Steuerelement ist, bezeichnen wir das Gesamtpaket der Einfachheit halber künftig als ListBox-Steuerelement.  
   
 <a name="create_the_window_and_listbox"></a>   
-#### Erstellen des Hostfensters und des ListBox\-Steuerelements  
- Sie können mit [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] ein Hostfenster für das Steuerelement erstellen, indem Sie eine Fensterklasse erstellen und registrieren usw.  Einfacher ist es jedoch, ein Fenster mit der vordefinierten "statischen" Fensterklasse zu erstellen.  Dadurch verfügen Sie über die Fensterprozedur, die Sie zum Empfangen von Benachrichtigungen vom Steuerelement benötigen, und der Codierungsaufwand ist minimal.  
+#### <a name="create-the-host-window-and-listbox-control"></a>Erstellen des Hostfensters und des ListBox-Steuerelements  
+ Sie können [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] auf ein Hostfenster für das Steuerelement erstellen und registrieren eine Fensterklasse erstellen und so weiter. Ein wesentlicher einfacherer Ansatz ist jedoch, ein Fenster mithilfe der vordefinierten „statischen“ Fensterklasse zu definieren. Dadurch erhalten Sie mit minimalem Codieraufwand die Fensterprozedur, die Sie benötigen, um Benachrichtigungen vom Steuerelement zu empfangen.  
   
- Das HWND des Steuerelements wird durch eine schreibgeschützte Eigenschaft verfügbar gemacht, sodass die Hostseite Meldungen an das Steuerelement senden kann.  
+ Das HWND des Steuerelements wird über eine schreibgeschützte Eigenschaft verfügbar gemacht, sodass es von der Hostseite zum Senden von Nachrichten an das Steuerelement verwendet werden kann.  
   
  [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
  [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
- Das ListBox\-Steuerelement wird als untergeordnetes Element des Hostfensters erstellt.  Die Höhe und die Breite beider Fenster werden auf die Werte festgelegt, die an den Konstruktor übergeben werden, wie oben beschrieben.  Damit ist sichergestellt, dass die Größe von Hostfenster und Steuerelement mit dem reservierten Bereich auf der Seite übereinstimmen.  Nachdem die Fenster erstellt wurden, gibt das Beispiel ein <xref:System.Runtime.InteropServices.HandleRef>\-Objekt zurück, dass das HWND des Hostfensters enthält.  
+ Das ListBox-Steuerelement wird als untergeordnetes Element des Hostfensters erstellt. Die Höhe und Breite beider Fenster werden wie oben erläutert auf die an den Konstruktor übergebenen Werte festgelegt. Dadurch wird sichergestellt, dass die Größe von Hostfenster und Steuerelement exakt dem auf der Seite reservierten Bereich entspricht.  Nachdem die Windows erstellt wurden, gibt das Beispiel ein <xref:System.Runtime.InteropServices.HandleRef> -Objekt, das HWND des Hostfensters enthält.  
   
  [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
  [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
@@ -107,8 +112,8 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
-### Implementieren von DestroyWindow und WndProc  
- Zusätzlich zu <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> müssen Sie auch die <xref:System.Windows.Interop.HwndHost.WndProc%2A>\-Methode und <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>\-Methode von <xref:System.Windows.Interop.HwndHost> überschreiben.  In diesem Beispiel werden die Meldungen für das Steuerelement vom <xref:System.Windows.Interop.HwndHost.MessageHook>\-Handler verarbeitet, daher ist die Implementierung von <xref:System.Windows.Interop.HwndHost.WndProc%2A> und <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> minimal.  Im Fall von <xref:System.Windows.Interop.HwndHost.WndProc%2A> legen Sie `handled` auf `false` fest, um anzugeben, dass die Meldung nicht verarbeitet wurde und geben 0 \(null\) zurück.  Für <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> löschen Sie einfach das Fenster.  
+### <a name="implement-destroywindow-and-wndproc"></a>Implementieren von DestroyWindow und WndProc  
+ Zusätzlich zu <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, müssen Sie auch überschreiben die <xref:System.Windows.Interop.HwndHost.WndProc%2A> und <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> Methoden die <xref:System.Windows.Interop.HwndHost>. In diesem Beispiel werden die Nachrichten für das Steuerelement behandelt, durch die <xref:System.Windows.Interop.HwndHost.MessageHook> Handler auf, daher wird die Implementierung der <xref:System.Windows.Interop.HwndHost.WndProc%2A> und <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ist minimal. Im Fall von <xref:System.Windows.Interop.HwndHost.WndProc%2A>legen `handled` auf `false` , um anzugeben, dass die Nachricht nicht verarbeitet wurde, und geben 0 zurück. Für <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, löschen Sie einfach das Fenster.  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -117,13 +122,13 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
-## Hosten des Steuerelements auf der Seite  
- Um das Steuerelement auf der Seite zu hosten, erstellen Sie zuerst eine neue Instanz der `ControlHost`\-Klasse.  Übergeben Sie die Höhe und die Breite des Rahmenelements, das das Steuerelement \(`ControlHostElement`\) enthält, an den `ControlHost`\-Konstruktor.  Dadurch ist sichergestellt, dass das Listenfeld die richtige Größe hat.  Anschließend hosten Sie das Steuerelement auf der Seite, indem Sie das `ControlHost`\-Objekt der <xref:System.Windows.Controls.Decorator.Child%2A>\-Eigenschaft von <xref:System.Windows.Controls.Border> des Hosts zuweisen.  
+## <a name="host-the-control-on-the-page"></a>Hosten des Steuerelements auf der Seite  
+ Um das Steuerelement auf der Seite zu hosten, erstellen Sie zunächst eine neue Instanz der dem `ControlHost` Klasse. Übergeben Sie die Höhe und Breite des Rahmenelements, das das Steuerelement enthält (`ControlHostElement`), die `ControlHost` Konstruktor. Dadurch wird sichergestellt, dass das Listenfeld die richtige Größe hat. Anschließend hosten Sie das Steuerelement auf der Seite durch Zuweisen der `ControlHost` -Objekt an die <xref:System.Windows.Controls.Decorator.Child%2A> Eigenschaft des Hosts <xref:System.Windows.Controls.Border>.  
   
- Im Beispiel wird ein Handler an das <xref:System.Windows.Interop.HwndHost.MessageHook>\-Ereignis von `ControlHost` angefügt, um Meldungen vom Steuerelement zu empfangen.  Dieses Ereignis wird für jede Meldung ausgelöst, die an das gehostete Fenster gesendet wird.  In diesem Fall handelt es sich dabei um die Meldungen, die an das Fenster gesendet wurden, das das tatsächliche ListBox\-Steuerelement umschließt, darunter Benachrichtigungen des Steuerelements.  Im Beispiel wird SendMessage aufgerufen, um Informationen aus dem Steuerelement abzurufen und dessen Inhalt zu ändern.  Im nächsten Abschnitt wird die Kommunikation zwischen Seite und Steuerelement ausführlicher erläutert.  
+ Im Beispiel fügt einen Handler, der die <xref:System.Windows.Interop.HwndHost.MessageHook> -Ereignis für die `ControlHost` zum Empfangen von Nachrichten aus dem Steuerelement. Dieses Ereignis wird für jede Nachricht ausgelöst, die an das gehostete Fenster gesendet wird. In diesem Fall sind dies die Nachrichten, die an das das eigentliche ListBox-Steuerelement umschließende Fenster gesendet werden, einschließlich der Benachrichtigungen aus dem Steuerelement. Das Beispiel ruft die SendMessage-Methode auf, um Informationen aus dem Steuerelement abzurufen und dessen Inhalt zu ändern. Wie die Seite im Detail mit dem Steuerelement kommuniziert, wird im nächsten Abschnitt erläutert.  
   
 > [!NOTE]
->  Beachten Sie, dass es zwei [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]\-Deklarationen für SendMessage gibt.  Das ist erforderlich, weil der `wParam`\-Parameter von einer Deklaration zum Übergeben einer Zeichenfolge und von der anderen zum Übergeben einer ganzen Zahl verwendet wird.  Sie benötigen für jede Signatur eine separate Deklaration, um sicherzustellen, dass die Daten ordnungsgemäß gemarshallt werden.  
+>  Beachten Sie, dass es zwei existieren [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] Deklarationen für SendMessage. Dies ist notwendig, da eine verwendet den `wParam` Übergabe einer Zeichenfolge und der andere Parameter verwendet, um eine ganze Zahl übergeben. Um sicherzustellen, dass die Daten ordnungsgemäß gemarshallt werden, wird daher eine separate Deklaration für jede Signatur benötigt.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -132,33 +137,33 @@ caps.handback.revision: 17
  [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
-## Implementieren der Kommunikation zwischen dem Steuerelement und der Seite  
- Sie bearbeiten das Steuerelement, indem Sie [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]\-Meldungen an das Steuerelement senden.  Sie werden vom Steuerelement benachrichtigt, wenn der Benutzer damit interagiert, indem es Benachrichtigungen an dessen Hostfenster sendet.  Das [Beispiel für das Hosten eines Win32\-Listenfeld\-Steuerelements in Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkID=159998) umfasst eine Benutzeroberfläche, mit der folgende Funktionen veranschaulicht werden:  
+## <a name="implement-communication-between-the-control-and-the-page"></a>Implementieren der Kommunikation zwischen dem Steuerelement und der Seite  
+ Bearbeiten Sie das Steuerelement, durch Senden [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] Nachrichten. Das Steuerelement benachrichtigt Sie, wenn der Benutzer durch Senden von Benachrichtigungen an das Hostfenster mit ihm interagiert. Die [hosten ein Win32-ListBox-Steuerelement in WPF-Beispiel](http://go.microsoft.com/fwlink/?LinkID=159998) Beispiel enthält eine Benutzeroberfläche, mehrere Beispiele für die Funktionsweise bereitstellt:  
   
--   Anfügen eines Elements an die Liste  
+-   Der Liste ein Element hinzufügen.  
   
--   Löschen des ausgewählten Elements aus der Liste  
+-   Das markierte Element aus der Liste löschen  
   
--   Anzeigen des Texts des zurzeit ausgewählten Elements  
+-   Den Text des aktuell markierten Elements anzeigen.  
   
--   Anzeigen der Anzahl der Elemente in der Liste  
+-   Die Anzahl der Elemente in der Liste anzeigen.  
   
- Der Benutzer kann auch ein Element im Listenfeld auswählen, indem er wie bei einer normalen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]\-Anwendung darauf klickt.  Die angezeigten Daten werden jedes Mal aktualisiert, wenn der Benutzer den Status des Listenfelds durch Auswählen, Hinzufügen oder Anfügen eines Elements ändert.  
+ Der Benutzer kann auch wählen Sie ein Element in der Liste durch Klicken auf, genauso wie für eine herkömmliche [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendung. Die angezeigten Daten werden bei jeder Zustandsänderung des Listenfelds durch den Benutzer aktualisiert, egal ob ein Element ausgewählt, hinzugefügt oder angefügt wurde.  
   
- Um Elemente anzufügen, senden Sie eine LB\_ADDSTRING\-Meldung an das Listenfeld.  Wenn Sie Elemente löschen möchten, senden Sie LB\_GETCURSEL, um den Index der aktuellen Auswahl abzurufen, und dann LB\_DELETESTRING, um das Element zu löschen.  In dem Beispiel wird außerdem LB\_GETCOUNT gesendet und der zurückgegebene Wert verwendet, um die Anzeige mit der Anzahl der Elemente zu aktualisieren.  Diese beiden Instanzen von SendMessage verwenden eine der [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]\-Deklarationen, die im vorherigen Abschnitt erläutert wurden.  
+ Um Elemente anzufügen, senden Sie dem Listenfeld eine LB_ADDSTRING-Nachricht. Um Elemente zu löschen, senden Sie zunächst LB_GETCURSEL, um den Index der aktuellen Auswahl abzurufen, und dann LB_DELETESTRING, um das Element zu löschen. Das Beispiel sendet auch LB_GETCOUNT, und nutzt den zurückgegebenen Wert zum Aktualisieren der Anzeige, die die Anzahl der Elemente angibt. Diese beiden Instanzen von SendMessage gehen die [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] Deklarationen, die im vorherigen Abschnitt erläutert.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Wenn der Benutzer ein Element auswählt oder die Auswahl ändert, benachrichtigt das Steuerelement das Hostfenster durch Senden einer WM\_COMMAND\-Meldung, die das <xref:System.Windows.Interop.HwndHost.MessageHook>\-Ereignis für die Seite auslöst.  Der Handler empfängt dieselben Informationen wie die Hauptfensterprozedur des Hostfensters.  Außerdem wird ein Verweis an einen booleschen Wert übergeben: `handled`.  Sie legen `handled` auf `true` fest, um anzugeben, dass die Meldung verarbeitet wurde und keine weitere Verarbeitung erforderlich ist.  
+ Wenn der Benutzer ein Element wählt oder die Auswahl ändert, benachrichtigt das Steuerelement das Hostfenster durch Senden einer WM_COMMAND-Meldung, löst die <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis für die Seite. Der Handler empfängt dieselben Informationen wie die Hauptfensterprozedur des Hostfensters. Sie übergibt außerdem einen Verweis auf einen booleschen Wert `handled`. Festlegen der `handled` auf `true` , um anzugeben, dass die Nachricht verarbeitet und keine weitere Verarbeitung erforderlich ist.  
   
- Da WM\_COMMAND aus den unterschiedlichsten Gründen gesendet wird, müssen Sie die Benachrichtigungs\-ID daraufhin überprüfen, ob ein Ereignis behandelt werden soll.  Die ID ist im hohen WORD des `wParam`\-Parameters enthalten.  Da [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] kein HIWORD\-Makro aufweist, werden im Beispiel zum Extrahieren der ID bitweise Operatoren verwendet.  Wenn der Benutzer die Auswahl vorgenommen oder geändert hat, lautet die ID LBN\_SELCHANGE.  
+ WM_COMMAND wird aus verschiedensten Gründen gesendet, weshalb Sie die Benachrichtigungs-ID überprüfen müssen, um festzustellen, ob es sich um ein Ereignis handelt, das Sie behandeln möchten. Die ID ist im hohen Word des enthalten die `wParam` Parameter. Da [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] ist keine HIWORD-Makro, das Beispiel verwendet die bitweise Operatoren zum Extrahieren der ID. Wenn der Benutzer eine Auswahl vorgenommen oder geändert hat, wird die ID LBN_SELCHANGE sein.  
   
- Wird LBN\_SELCHANGE empfangen, wird im Beispiel der Index des ausgewählten Elements abgerufen. Dies geschieht durch Senden einer LB\_GETCURSEL\-Meldung an das Steuerelement.  Zum Abrufen des Texts erstellen Sie zuerst <xref:System.Text.StringBuilder>.  Anschließend senden Sie eine LB\_GETTEXT\-Meldung an das Steuerelement.  Übergeben Sie das leere <xref:System.Text.StringBuilder>\-Objekt als `wParam`\-Parameter.  Wenn SendMessage zurückgegeben wird, enthält <xref:System.Text.StringBuilder> den Text des ausgewählten Elements.  Diese Verwendung von SendMessage erfordert eine weitere [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]\-Deklaration.  
+ Wenn LBN_SELCHANGE empfangen wird, ruft das Beispiel den Index des ausgewählten Elements ab, indem es eine LB_GETCURSEL-Nachricht an das Steuerelements sendet. Um den Text zu erhalten, erstellen Sie zunächst eine <xref:System.Text.StringBuilder>. Anschließend senden Sie eine LB_GETTEXT-Nachricht an das Steuerelement. Übergeben Sie die leere <xref:System.Text.StringBuilder> -Objekts entsprechend der `wParam` Parameter. Wenn SendMessage zurückgibt, wird die <xref:System.Text.StringBuilder> enthält den Text des ausgewählten Elements. Diese Verwendung von SendMessage erfordert noch eine andere [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] Deklaration.  
   
- Legen Sie abschließend `handled` auf `true` fest, um anzugeben, dass die Meldung verarbeitet wurde.  
+ Legen Sie schließlich `handled` zu `true` um anzugeben, dass die Meldung verarbeitet wurde.  
   
-## Siehe auch  
- <xref:System.Windows.Interop.HwndHost>   
- [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [Exemplarische Vorgehensweise: Erste Schritte mit WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Interop.HwndHost>  
+ [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)

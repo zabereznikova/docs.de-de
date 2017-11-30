@@ -1,34 +1,32 @@
 ---
-title: "Array subscript expression missing | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30306"
-  - "vbc30306"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30306"
+title: Fehlender Arraysubscriptausdruck
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30306
+- vbc30306
+helpviewer_keywords: BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac09a90abf69fe53f46910fe4b542c6cc632c3a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Array subscript expression missing
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-In einer Arrayinitialisierung fehlen ein Subscript oder mehrere Subscripts zur Definition der Arraygrenzen.  Zum Beispiel könnte die Anweisung den Ausdruck `myArray (5,5,,10)` enthalten, in dem das dritte Subscript fehlt.  
+# <a name="array-subscript-expression-missing"></a>Fehlender Arraysubscriptausdruck
+Eine Arrayinitialisierung verlässt, eine oder mehrere der Indizes, die die Arraygrenzen definieren. Die Anweisung kann beispielsweise den Ausdruck enthalten `myArray (5,5,,10)`, belässt das dritte Subscript.  
   
- **Fehler\-ID:** BC30306  
+ **Fehler-ID:** BC30306  
   
-### So beheben Sie diesen Fehler  
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie das fehlende Subscript an.  
+-   Geben Sie den fehlenden Index.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -1,28 +1,24 @@
 ---
-title: "Gewusst wie: Ändern eines Office Open XML-Dokuments (Visual Basic) | Microsoft-Dokumentation"
+title: "Vorgehensweise: Ändern eines Office Open XML-Dokuments (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04de8ce23af62d7abb6bc5274e96868f830c4320
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0d2f6b9bc7acf7c9108112b61fe8edf70c549cac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Gewusst wie: Ändern eines Office Open XML-Dokuments (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Vorgehensweise: Ändern eines Office Open XML-Dokuments (Visual Basic)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ändert und speichert.  
   
  Weitere Informationen zu Office Open XML finden Sie unter [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
@@ -30,7 +26,7 @@ Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ä
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach dem ersten Absatzelement im Dokument, ruft den Text aus dem Absatz ab und löscht dann alle Textruns im Absatz. Daraufhin wird ein neuer Textrun erstellt, der aus dem Text des ersten Absatzes, umgewandelt in Großbuchstaben, besteht. Anschließend wird das geänderte XML in ein Open XML-Paket serialisiert und das Paket wird geschlossen.  
   
- Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Er verwendet die Typen in der <xref:System.IO.Packaging?displayProperty=fullName>Namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -150,7 +146,7 @@ End Module
   
  Wenn Sie `SampleDoc.docx` nach der Ausführung dieses Programms öffnen, sehen Sie, dass der erste Absatz des Dokuments in Großbuchstaben umgewandelt wurde.  
   
- Bei der Ausführung mit der in beschriebenen Open XML-Beispieldokument [Erstellen von Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), dieses Beispiel erzeugt die folgende Ausgabe:  
+ Bei der Ausführung mit der beschrieben, die im Open XML-Beispieldokument [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), dieses Beispiel erzeugt die folgende Ausgabe:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

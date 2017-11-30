@@ -1,69 +1,67 @@
 ---
-title: "Vorgehensweise: Abfrage von nicht persistenten Instanzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Abfrage von nicht persistenten Instanzen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Vorgehensweise: Abfrage von nicht persistenten Instanzen
-Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL\-Workflowinstanzspeicher\-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher.Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL\-Workflowinstanzspeicher\-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.  
+# <a name="how-to-query-for-non-persisted-instances"></a>Vorgehensweise: Abfrage von nicht persistenten Instanzen
+Wenn eine neue Dienstinstanz erstellt wird und für den Dienst das SQL-Workflowinstanzspeicher-Verhalten definiert ist, erstellt der Diensthost einen ersten Eintrag für diese Dienstinstanz im Instanzspeicher. Bei der ersten permanenten Speicherung der Dienstinstanz speichert das SQL-Workflowinstanzspeicher-Verhalten den aktuellen Instanzstatus zusammen mit weiteren Daten, die zur Aktivierung, Wiederherstellung und Steuerung erforderlich sind.  
   
- Wenn eine Instanz nach dem Erstellen des ersten Eintrags nicht permanent gespeichert wird, ist der Status der Instanz "nicht permanent".Alle permanent gespeicherten Dienstinstanzen können abgefragt und gesteuert werden.Nicht permanente Dienstinstanzen können weder abgefragt noch gesteuert werden.Wenn eine nicht permanente Instanz aufgrund einer nicht behandelten Ausnahme angehalten wird, kann diese abgefragt, jedoch nicht gesteuert werden.  
+ Wenn eine Instanz nach dem Erstellen des ersten Eintrags nicht permanent gespeichert wird, ist der Status der Instanz "nicht permanent". Alle permanent gespeicherten Dienstinstanzen können abgefragt und gesteuert werden. Nicht permanente Dienstinstanzen können weder abgefragt noch gesteuert werden. Wenn eine nicht permanente Instanz aufgrund einer nicht behandelten Ausnahme angehalten wird, kann diese abgefragt, jedoch nicht gesteuert werden.  
   
  Permanente Dienstinstanzen, die noch nicht persistent gespeichert wurden, behalten in den folgenden Szenarios den Status "nicht persistent":  
   
--   Der Diensthost stürzt ab, bevor die Instanz zum ersten Mal persistent gespeichert wurde.Der ursprüngliche Eintrag für die Instanz verbleibt im Instanzspeicher.Die Instanz ist nicht wiederherstellbar.Bei Empfang einer korrelierten Meldung wird die Instanz erneut aktiviert.  
+-   Der Diensthost stürzt ab, bevor die Instanz zum ersten Mal persistent gespeichert wurde. Der ursprüngliche Eintrag für die Instanz verbleibt im Instanzspeicher. Die Instanz ist nicht wiederherstellbar. Bei Empfang einer korrelierten Meldung wird die Instanz erneut aktiviert.  
   
--   Es tritt eine nicht behandelte Ausnahme auf, bevor die Instanz zum ersten Mal persistent gespeichert wurde.Die folgenden Szenarios treten auf:  
+-   Es tritt eine nicht behandelte Ausnahme auf, bevor die Instanz zum ersten Mal persistent gespeichert wurde. Die folgenden Szenarios treten auf:  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **Abandon** festgelegt ist, werden die Dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und die Instanz wird aus dem Arbeitsspeicher entladen.Die Instanz verbleibt in der Persistenzdatenbank im nicht persistenten Status.  
+    -   Wenn der Wert der **UnhandledExceptionAction** -Eigenschaftensatz auf **verwerfen**, die dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und die Instanz wird aus dem Arbeitsspeicher entladen. Die Instanz verbleibt in der Persistenzdatenbank im nicht persistenten Status.  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **AbandonAndSuspsend** festgelegt ist, werden die Dienstbereitstellungsinformationen in die Persistenzdatenbank geschrieben, und der Instanzstatus wird auf **Angehalten** festgelegt.Die Instanz kann nicht fortgesetzt, abgebrochen oder beendet werden.Der Diensthost kann die Instanz nicht laden, da die Instanz noch nicht persistent gespeichert wurde, d. h. der Datenbankeintrag für die Instanz ist noch nicht abgeschlossen.  
+    -   Wenn der Wert der **UnhandledExceptionAction** -Eigenschaftensatz auf **AbandonAndSuspsend**, die dienstbereitstellungsinformationen in die Persistenzdatenbank geschrieben, und der Instanzstatus auf festgelegtist **Angehalten**. Die Instanz kann nicht fortgesetzt, abgebrochen oder beendet werden. Der Diensthost kann die Instanz nicht laden, da die Instanz noch nicht persistent gespeichert wurde, d. h. der Datenbankeintrag für die Instanz ist noch nicht abgeschlossen.  
   
-    -   Wenn der Wert der **UnhandledExceptionAction**\-Eigenschaft auf **Cancel** oder **Terminate** festgelegt ist, werden die Dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und der Instanzstatus wird auf **Abgeschlossen** festgelegt.  
+    -   Wenn der Wert des der **UnhandledExceptionAction** -Eigenschaftensatz auf **"Abbrechen"** oder **terminieren**, die dienstbereitstellungsinformationen in den Instanzspeicher geschrieben und die Instanzstatus wird festgelegt, um **abgeschlossen**.  
   
- Die folgenden Abschnitte enthalten Beispielabfragen zur Suche von nicht persistenten Instanzen in der SQL\-Persistenzdatenbank und zum Löschen dieser Instanzen aus der Datenbank.  
+ Die folgenden Abschnitte enthalten Beispielabfragen zur Suche von nicht persistenten Instanzen in der SQL-Persistenzdatenbank und zum Löschen dieser Instanzen aus der Datenbank.  
   
-## So suchen Sie nach allen noch nicht persistenten Instanzen  
- Die folgende SQL\-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die noch nicht persistent in der Persistenzdatenbank gespeichert wurden.  
+## <a name="to-find-all-instances-not-persisted-yet"></a>So suchen Sie nach allen noch nicht persistenten Instanzen  
+ Die folgende SQL-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die noch nicht persistent in der Persistenzdatenbank gespeichert wurden.  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0;  
-  
 ```  
   
-## So suchen Sie nach allen noch nicht persistenten und nicht geladenen Instanzen  
- Die folgende SQL\-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die nicht persistent gespeichert und auch nicht geladen wurden.  
+## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a>So suchen Sie nach allen noch nicht persistenten und nicht geladenen Instanzen  
+ Die folgende SQL-Abfrage gibt die ID und den Erstellungszeitpunkt für alle Instanzen zurück, die nicht persistent gespeichert und auch nicht geladen wurden.  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and CurrentMachine is NULL;  
-  
 ```  
   
-## So suchen Sie nach allen angehaltenen noch nicht persistenten Instanzen  
- Die folgende SQL\-Abfrage gibt die ID, den Erstellungszeitpunkt, den Unterbrechungsgrund und den Namen der Unterbrechungsausnahme für alle Instanzen an, die nicht persistent sind und angehalten wurden.  
+## <a name="to-find-all-suspended-instances-not-persisted-yet"></a>So suchen Sie nach allen angehaltenen noch nicht persistenten Instanzen  
+ Die folgende SQL-Abfrage gibt die ID, den Erstellungszeitpunkt, den Unterbrechungsgrund und den Namen der Unterbrechungsausnahme für alle Instanzen an, die nicht persistent sind und angehalten wurden.  
   
 ```  
-  
 select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and IsSuspended = 1;  
-  
 ```  
   
-## So löschen Sie nicht persistente Instanzen aus der Persistenzdatenbank  
- Es wird empfohlen, den Instanzspeicher in regelmäßigen Abständen auf nicht persistente Instanzen zu überprüfen und diese aus dem Instanzspeicher zu entfernen, wenn Sie sicher sind, dass die Instanz keine korrelierte Meldung empfangen wird.Beispiel: Wenn eine Instanz sich bereits mehrere Monate in der Datenbank befindet und Sie wissen, dass der Workflow in der Regel eine Lebensdauer von einigen Tagen hat, können Sie sicher annehmen, dass es sich um eine nicht initialisierte Instanz handelt, die abgestürzt ist.  
+## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a>So löschen Sie nicht persistente Instanzen aus der Persistenzdatenbank  
+ Es wird empfohlen, den Instanzspeicher in regelmäßigen Abständen auf nicht persistente Instanzen zu überprüfen und diese aus dem Instanzspeicher zu entfernen, wenn Sie sicher sind, dass die Instanz keine korrelierte Meldung empfangen wird. Beispiel: Wenn eine Instanz sich bereits mehrere Monate in der Datenbank befindet und Sie wissen, dass der Workflow in der Regel eine Lebensdauer von einigen Tagen hat, können Sie sicher annehmen, dass es sich um eine nicht initialisierte Instanz handelt, die abgestürzt ist.  
   
- Im Allgemeinen ist es sicher, nicht persistente Instanzen zu löschen, die nicht angehalten oder geladen wurden.Löschen Sie nicht **alle** nicht persistenten Instanzen. Darunter sind auch gerade erstellte Instanzen, die noch nicht persistent gespeichert werden konnten.Löschen Sie nur nicht persistente Instanzen, die nicht mehr verwendet werden können, da beim Laden der Instanz durch den Workflowdiensthost oder durch die Instanz selbst eine Ausnahme ausgelöst wurde.  
+ Im Allgemeinen ist es sicher, nicht persistente Instanzen zu löschen, die nicht angehalten oder geladen wurden. Sie sollten nicht löschen **alle** nicht persistenter Instanzen, da diese Instanz Instanzen enthält, die gerade erstellt haben, aber nicht noch beibehalten. Löschen Sie nur nicht persistente Instanzen, die nicht mehr verwendet werden können, da beim Laden der Instanz durch den Workflowdiensthost oder durch die Instanz selbst eine Ausnahme ausgelöst wurde.  
   
 > [!WARNING]
 >  Durch das Löschen nicht persistenter Instanzen aus dem Instanzspeicher wird weniger Speicher belegt und die Leistung von Speichervorgängen möglicherweise verbessert.

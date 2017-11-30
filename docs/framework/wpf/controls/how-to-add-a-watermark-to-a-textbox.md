@@ -1,38 +1,44 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen eines Wasserzeichens zu einer TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unterstützen der Verwendbarkeit von TextBox mit einem Hintergrundbild [WPF]"
-  - "Anzeigen eines Hintergrundbilds in einem Textfeld zur Unterstützung der Benutzereingabe [WPF]"
+title: "Gewusst wie: Hinzufügen eines Wasserzeichens zu einer TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- displaying a background image inside a text box to aid user input [WPF]
+- aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4497b72f229a8f3d62ecb1829fda88ea3d76bbb0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Hinzuf&#252;gen eines Wasserzeichens zu einer TextBox
-Im folgenden Beispiel wird veranschaulicht, wie die Verwendbarkeit eines <xref:System.Windows.Controls.TextBox> unterstützt wird, indem ein erklärendes Hintergrundbild im <xref:System.Windows.Controls.TextBox> angezeigt wird, bis der Benutzer Text eingibt. Dann wird das Bild entfernt.  Außerdem wird das Hintergrundbild wiederhergestellt, wenn der Benutzer die Eingabe entfernt.  Siehe folgende Abbildung.  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a>Gewusst wie: Hinzufügen eines Wasserzeichens zu einer TextBox
+Im folgende Beispiel wird gezeigt, wie die Verwendbarkeit einer <xref:System.Windows.Controls.TextBox> durch Anzeigen eines erläuternden Hintergrundbilds innerhalb eines der <xref:System.Windows.Controls.TextBox> bis der Benutzer Text eingibt, an welchem Punkt das Bild wird entfernt. Darüber hinaus wird das Hintergrundbild erneut wiederhergestellt werden, wenn der Benutzer die Eingabe entfernt. Siehe folgende Abbildung.  
   
- ![Eine TextBox mit einem Hintergrundbild](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing\_TextBox\_using\_background\_image")  
+ ![Ein Textfeld mit einem Hintergrundbild](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  Der Grund für die Verwendung eines Hintergrundbilds in diesem Beispiel, statt einfach die <xref:System.Windows.Controls.TextBox.Text%2A>\-Eigenschaft von <xref:System.Windows.Controls.TextBox> zu bearbeiten, ist, dass das Hintergrundbild keine Auswirkungen auf die Datenbindung hat.  
+>  Der Grund, ein Hintergrundbild wird in diesem Beispiel stattdessen dann einfach bearbeiten verwendet, die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft <xref:System.Windows.Controls.TextBox>, darin, dass ein Hintergrundbild nicht in Konflikt mit dem Datenbindung wird.  
   
-## Beispiel  
- [!code-xml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
+## <a name="example"></a>Beispiel  
+ [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
   
  [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
-## Siehe auch  
- [Übersicht über TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
