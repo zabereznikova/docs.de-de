@@ -12,16 +12,16 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5dd488a01e00af0661ee7ee110c79d2c56a0b777
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aacc20bf483877ac501fd8b35c04f6e3f9311afb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>Verwenden der InvokeMethod-Aktivität
 Dieses Beispiel veranschaulicht, wie die <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) Aktivität, um öffentliche Methoden in öffentlichen Klassen aufzurufen. Die <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) -Aktivität ermöglicht einem Workflow, Methoden für Objekte aufzurufen, Parameter zu übergeben, den Rückgabewert abzurufen, Typen für generische Methoden anzugeben und anzugeben, ob die Methode synchron ist oder asynchrone. 
   
- Ist eine nicht generische Version der der <xref:System.Activities.Statements.InvokeMethod> Aktivität, die der Rückgabewert auf festgelegt ist, die <xref:System.Activities.Statements.InvokeMethod.Result%2A> -Eigenschaft und eine generische Version von der <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) Aktivität, die der Rückgabewert zurückgegeben, über die <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) Eigenschaft vom Typ `TResult`.  
+Ist eine nicht generische Version der der <xref:System.Activities.Statements.InvokeMethod> Aktivität, die der Rückgabewert auf festgelegt ist, die <xref:System.Activities.Statements.InvokeMethod.Result%2A> -Eigenschaft und eine generische Version von der <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) Aktivität, die der Rückgabewert zurückgegeben, über die <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) Eigenschaft vom Typ `TResult`. 
   
  In diesem Beispiel wird veranschaulicht, wie verschiedene Methodentypen aufgerufen werden. In der folgenden Liste sind die in diesem Beispiel veranschaulichten Methodentypen aufgeführt:  
   
@@ -62,6 +62,4 @@ Dieses Beispiel veranschaulicht, wie die <!--zz <xref:System.Activities.Statemen
 >   
 >  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
-  
-## <a name="see-also"></a>Siehe auch
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

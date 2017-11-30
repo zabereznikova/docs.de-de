@@ -1,41 +1,22 @@
 ---
 title: sbyte (C#-Referenz)
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - sbyte_CSharpKeyword
 - sbyte
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- sbyte keyword [C#]
+helpviewer_keywords: sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 010ac98f523eca5929100f7c51b8b6ef5d11de30
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 69741a5b9556c769156687584041667312550c17
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C#-Referenz)
 
@@ -43,7 +24,7 @@ ms.lasthandoff: 07/28/2017
   
 |Typ|Bereich|Größe|.NET Framework-Typ|  
 |----------|-----------|----------|-------------------------|  
-|`sbyte`|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|<xref:System.SByte?displayProperty=fullName>|  
+|`sbyte`|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|<xref:System.SByte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literale  
 
@@ -51,16 +32,20 @@ Sie können eine `sbyte`-Variable deklarieren und initialisieren, indem Sie ihr 
 
 Im folgenden Beispiel werden Ganzzahlen wie -102, die als dezimale, hexadezimale und binäre Literale dargestellt werden, aus [int](../../../csharp/language-reference/keywords/int.md) in `sbyte`-Werte konvertiert.    
   
-[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]  
+[!code-csharp[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]  
 
 > [!NOTE] 
 > Verwenden Sie das Präfix `0x` oder `0X` zum Kennzeichnen eines hexadezimalen Literals und das Präfix `0b` oder `0B` zum Kennzeichnen eines binären Literals. Dezimale Literale haben kein Präfix.
 
-Ab C# 7 können Sie auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit verwenden, wie im folgenden Beispiel veranschaulicht.
+Beginnend mit C#-7, eine Reihe von Features hinzugefügt wurden zur Verbesserung der Lesbarkeit. 
+ - C#-7.0 ermöglicht die Verwendung des Zeichens Unterstrich `_`, als Trennzeichen für Ziffern.
+ - 7.2 c# ermöglicht `_` als Trennzeichen für ein Literal binäre oder hexadezimale Ziffer nach dem Präfix verwendet werden soll. Ein decimal-Literal ist nicht berechtigt, auf einem führenden Unterstrich.
 
-[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
+ Einige Beispiele werden unten gezeigt.
 
-Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `sbyte` befindet – sprich, wenn es kleiner als <xref:System.SByte.MinValue?displayProperty=fullName> oder größer als <xref:System.SByte.MaxValue?displayProperty=fullName> ist – tritt ein Kompilierfehler auf. Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste dieser Typen, in dem sein Wert dargestellt werden kann: [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md). Dies bedeutet, dass in diesem Beispiel die numerischen Literale `0x9A` und `0b10011010` als 32-Bit Ganzzahlen mit Vorzeichen mit einem Wert von 156 interpretiert werden, was <xref:System.SByte.MaxValue?displayProperty=fullName> übersteigt. Aus diesem Grund wird der Umwandlungsoperator benötigt, und die Zuordnung muss in einem [unchecked](unchecked.md) Kontext erfolgen. 
+[!code-csharp[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
+
+Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `sbyte` befindet – sprich, wenn es kleiner als <xref:System.SByte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.SByte.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf. Wenn ein Ganzzahlliteral kein Suffix besitzt, ist sein Typ der erste dieser Typen, in dem sein Wert dargestellt werden kann: [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md). Dies bedeutet, dass in diesem Beispiel die numerischen Literale `0x9A` und `0b10011010` als 32-Bit Ganzzahlen mit Vorzeichen mit einem Wert von 156 interpretiert werden, was <xref:System.SByte.MaxValue?displayProperty=nameWithType> übersteigt. Aus diesem Grund wird der Umwandlungsoperator benötigt, und die Zuordnung muss in einem [unchecked](unchecked.md) Kontext erfolgen. 
 
 ## <a name="compiler-overload-resolution"></a>Überladungsauflösung des Compiler
 
@@ -124,12 +109,11 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.SByte>   
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.SByte>  
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+ [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

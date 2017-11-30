@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
@@ -250,11 +251,12 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 3.  Fügen Sie oben in der Datei Form1 im Code-Editor die folgenden Statements hinzu.  
   
-     [!code-csharp[Clientanwendungsdienste#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)] [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
+     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]
+     [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
   
 4.  Doppelklicken Sie im **Projektmappen-Explorer**auf Form1, um den Designer anzuzeigen.  
   
-5.  Doppelklicken Sie im Designer auf die Formularoberfläche, um einen <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> Ereignishandler mit dem Namen `Form1_Load`anzulegen.  
+5.  Doppelklicken Sie im Designer auf die Formularoberfläche, um einen <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType> Ereignishandler mit dem Namen `Form1_Load`anzulegen.  
   
      Der Code-Editor wird mit dem Cursor im `Form1_Load` -Verfahren angezeigt.  
   
@@ -262,9 +264,10 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      Dieser Code verweigert nicht authentifizierten Benutzern den Zugriff, indem er die Anwendung beendet. Alternativ könnten Sie nicht authentifizierten Benutzern den Zugriff auf das Formular gestatten, ihren zugriff auf bestimmte Funktionen hingegen verweigern. Normalerweise nehmen Sie keine Hardcodierung des Benutzernamens und des Kennwortes vor, es ist jedoch hilfreich zu Testzwecken. Im nächsten Abschnitt ersetzen Sie diesen Code durch einen robusteren Code, der ein Anmeldedialogfeld aufruft und der die Ausnahmebehandlung beinhaltet.  
   
-     Beachten Sie, dass die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> -Methode in [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]vorhanden ist. Diese Methode delegiert die Arbeit an den konfigurierten Authentifizierungsanbieter und kehrt zurück, wenn die `true` -Authentifizierung erfolgreich war. Ihr Anwendungscode erfordert keinen direkten Verweis auf den Dienstanbieter.  
+     Beachten Sie, dass die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> -Methode in [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]vorhanden ist. Diese Methode delegiert die Arbeit an den konfigurierten Authentifizierungsanbieter und kehrt zurück, wenn die `true` -Authentifizierung erfolgreich war. Ihr Anwendungscode erfordert keinen direkten Verweis auf den Dienstanbieter.  
   
-     [!code-csharp[Clientanwendungsdienste#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)] [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
+     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]
+     [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
   
  Sie können jetzt F5 drücken, um die Anwendung auszuführen. Da Sie einen gültigen Benutzernamen und ein Kennwort angeben, wird das Formular angezeigt.  
   
@@ -294,15 +297,17 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      Dieser Code zeigt eine Begrüßungsnachricht an. Dann ruft er die `ValidateUsingCredentialsProvider` -Methode auf, die im nächsten Schritt hinzugefügt wird. Wenn der Benutzer nicht authentifiziert ist, gibt die `ValidateUsingCredentialsProvider` -Methode `false` aus, und die Methode `Form1_Load` wird wiederhergestellt. Dadurch wird verhindert, dass durch eine Ausführung vor Anwendungsende zusätzlicher Code ausgeführt wird. Die Willkommensnachricht ist nützlich, um zu verdeutlichen, wann die Anwendung neu gestartet wird. Sie fügen Code hinzugefügt, um die Anwendung neu zu starten, wenn Sie später in dieser exemplarischen Vorgehensweise die Abmeldung implementieren.  
   
-     [!code-csharp[Clientanwendungsdienste#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)] [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
+     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]
+     [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
   
 4.  Fügen Sie die folgende Methode nach der `Form1_Load` -Methode hinzu.  
   
-     Diese Methode transferiert leere Zeichenfolgen an die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> -Methode, wodurch das Anmeldedialogfeld angezeigt wird. Wenn der Authentifizierungsdienst nicht verfügbar ist, gibt die <xref:System.Web.Security.Membership.ValidateUser%2A> -Methode <xref:System.Net.WebException>aus. In diesem Fall zeigt die `ValidateUsingCredentialsProvider` -Methode eine Warnmeldung an und fragt, ob der Benutzer den Vorgang im Offline-Modus wiederholen möchte. Diese Funktionalität erfordert die Funktion **Kennworthash lokal speichern, um Offlineanmeldung zu ermöglichen** , die in [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)beschrieben wird. Dieses Feature wird standardmäßig für neue Projekte aktiviert.  
+     Diese Methode transferiert leere Zeichenfolgen an die `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> -Methode, wodurch das Anmeldedialogfeld angezeigt wird. Wenn der Authentifizierungsdienst nicht verfügbar ist, gibt die <xref:System.Web.Security.Membership.ValidateUser%2A> -Methode <xref:System.Net.WebException>aus. In diesem Fall zeigt die `ValidateUsingCredentialsProvider` -Methode eine Warnmeldung an und fragt, ob der Benutzer den Vorgang im Offline-Modus wiederholen möchte. Diese Funktionalität erfordert die Funktion **Kennworthash lokal speichern, um Offlineanmeldung zu ermöglichen** , die in [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)beschrieben wird. Dieses Feature wird standardmäßig für neue Projekte aktiviert.  
   
      Wenn der Benutzer nicht überprüft wird, zeigt die `ValidateUsingCredentialsProvider` -Methode eine Fehlermeldung an und beendet die Anwendung. Schließlich gibt diese Methode das Ergebnis des Authentifizierungsversuchs aus.  
   
-     [!code-csharp[Clientanwendungsdienste#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)] [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
+     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]
+     [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>Erstellen eines Anmeldeformulars  
  Ein Anmeldeinformationsanbieter ist eine Klasse oder eine Struktur, die die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> -Schnittstelle implementiert. Diese Schnittstelle verfügt über eine einzelne Methode namens <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> , die ein <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> Objekt ausgibt. In den folgenden Verfahren wird beschrieben, wie ein Anmeldedialogfeld zu erstellen ist, das <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> implementiert, um sich selbst darzustellen und um die vom Benutzer angegebenen Anmeldeinformationen auszugeben.  
@@ -329,7 +334,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      [!code-vb[ClientApplicationServices#101](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#101)]  
   
-8.  Ändern Sie als Nächstes die Klassensignatur, sodass die Klasse die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>-Schnittstelle implementiert.  
+8.  Ändern Sie als Nächstes die Klassensignatur, sodass die Klasse die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> -Schnittstelle implementiert.  
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
@@ -379,20 +384,22 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      Dieser Code ruft die `DisplayButtonForManagerRole` -Methode auf, die im nächsten Schritt hinzugefügt wird.  
   
-     [!code-csharp[Clientanwendungsdienste#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)] [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
+     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]
+     [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
   
 5.  Fügen Sie der Formular1-Klasse die folgende Methode hinzu.  
   
-     Diese Methode ruft die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode von <xref:System.Security.Principal.IPrincipal> auf, die von der Eigenschaft `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> ausgegeben wurde. Für Anwendungen, die für die Verwendung von Clientanwendungsdiensten konfiguriert sind, gibt diese Eigenschaft eine(n) <xref:System.Web.ClientServices.ClientRolePrincipal>aus. Da diese Klasse die <xref:System.Security.Principal.IPrincipal> -Schnittstelle implementiert, müssen Sie nicht explizit auf diese verweisen.  
+     Diese Methode ruft die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode von <xref:System.Security.Principal.IPrincipal> auf, die von der Eigenschaft `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> ausgegeben wurde. Für Anwendungen, die für die Verwendung von Clientanwendungsdiensten konfiguriert sind, gibt diese Eigenschaft eine(n) <xref:System.Web.ClientServices.ClientRolePrincipal>aus. Da diese Klasse die <xref:System.Security.Principal.IPrincipal> -Schnittstelle implementiert, müssen Sie nicht explizit auf diese verweisen.  
   
      Wenn sich der Benutzer in der „Manager“-Rolle befindet, dann legt die `DisplayButtonForManagerRole` -Methode die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft von `managerOnlyButton` auf `true`fest. Bei dieser Methode wird außerdem eine Fehlermeldung angezeigt, wenn eine <xref:System.Net.WebException> ausgelöst wird, was bedeutet, dass der Rollendienst nicht verfügbar ist.  
   
     > [!NOTE]
-    >  Die <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> Methode gibt stets `false` aus, wenn die Benutzeranmeldung abgelaufen ist. Dies geschieht nicht, wenn die Anwendung die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode einmal kurz nach der Authentifizierung aufruft, wie im Beispielcode für diese exemplarische Vorgehensweise dargestellt. Wenn Ihre Anwendung Benutzerrollen zu anderen Zeiten abrufen muss, empfiehlt es sich, Code hinzufügen, um Benutzer, deren Anmeldung abgelaufen ist, erneut zu überprüfen. Wenn allen gültigen Benutzern Rollen zugewiesen sind, können Sie bestimmen, ob die Anmeldung, abgelaufen ist, in dem Sie die <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> -Methode aufrufen. Wenn keine Rollen ausgegeben, ist die Anmeldung abgelaufen. Ein Beispiel für diese Funktion finden Sie unter der <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> -Methode. Diese Funktion ist nur erforderlich, wenn Sie die Option **Verlangen, dass sich der Benutzer bei Ablauf des Cookies erneut anmelden** in der Anwendungskonfiguration ausgewählt haben. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  Die <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> Methode gibt stets `false` aus, wenn die Benutzeranmeldung abgelaufen ist. Dies geschieht nicht, wenn die Anwendung die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> Methode einmal kurz nach der Authentifizierung aufruft, wie im Beispielcode für diese exemplarische Vorgehensweise dargestellt. Wenn Ihre Anwendung Benutzerrollen zu anderen Zeiten abrufen muss, empfiehlt es sich, Code hinzufügen, um Benutzer, deren Anmeldung abgelaufen ist, erneut zu überprüfen. Wenn allen gültigen Benutzern Rollen zugewiesen sind, können Sie bestimmen, ob die Anmeldung, abgelaufen ist, in dem Sie die <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> -Methode aufrufen. Wenn keine Rollen ausgegeben, ist die Anmeldung abgelaufen. Ein Beispiel für diese Funktion finden Sie unter der <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> -Methode. Diese Funktion ist nur erforderlich, wenn Sie die Option **Verlangen, dass sich der Benutzer bei Ablauf des Cookies erneut anmelden** in der Anwendungskonfiguration ausgewählt haben. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
-     [!code-csharp[Clientanwendungsdienste#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)] [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
+     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
+     [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Wenn die Authentifizierung erfolgreich ist, legt der Client-Authentifizierungsanbieter die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName>-Eigenschaft auf eine Instanz der <xref:System.Web.ClientServices.ClientRolePrincipal>-Klasse fest. Diese Klasse implementiert die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode, damit die Arbeit an den konfigurierten Rollenanbieter delegiert werden kann. Wie zuvor erfordert Ihr Anwendungscode keinen direkten Verweis auf den Dienstanbieter.  
+ Wenn die Authentifizierung erfolgreich ist, legt der Client-Authentifizierungsanbieter die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft auf eine Instanz der <xref:System.Web.ClientServices.ClientRolePrincipal>-Klasse fest. Diese Klasse implementiert die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode, damit die Arbeit an den konfigurierten Rollenanbieter delegiert werden kann. Wie zuvor erfordert Ihr Anwendungscode keinen direkten Verweis auf den Dienstanbieter.  
   
  Sie können die Anwendung jetzt ausführen und sich als Mitarbeiter anmelden, um festzustellen, dass die Schaltfläche nicht eingeblendet wird. Dann melden Sie sich als Manager an,  um festzustellen, dass die Schaltfläche nun angezeigt wird.  
   
@@ -425,18 +432,21 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      Dieser Code ruft die `BindWebSettingsTestTextBox` -Methode auf, die im nächsten Schritt hinzugefügt wird.  
   
-     [!code-csharp[Clientanwendungsdienste#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)] [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
+     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]
+     [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
   
 9. Fügen Sie der Formular1-Klasse die folgende Methode hinzu.  
   
      Diese Methode bindet die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft von `webSettingsTestTextBox` an die `WebSettingsTestText` -Eigenschaft  der `Settings` -Klasse, die früher bei diesem Verfahren generiert wurde. Bei dieser Methode wird außerdem eine Fehlermeldung angezeigt, wenn <xref:System.Net.WebException> ausgelöst wird, was bedeutet, dass der Webeinstellungsdienst nicht verfügbar ist.  
   
-     [!code-csharp[Clientanwendungsdienste#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)] [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
+     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]
+     [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
     > [!NOTE]
     >  Sie verwenden die Datenbindung in der Regel, um die automatische bidirektionale Kommunikation zwischen einem Steuerelement und einer Webeinstellung zu aktivieren. Sie können jedoch auf Web-Einstellungen, wie im folgenden Beispiel dargestellt, auch direkt zugreifen:  
   
-     [!code-csharp[Clientanwendungsdienste#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)] [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
+     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]
+     [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
   
 10. Wählen Sie im Designer das Formular aus. Klicken Sie dann im Fenster **Eigenschaften** auf die Schaltfläche **Ereignisse** .  
   
@@ -444,21 +454,23 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 12. Ersetzen Sie die generierte Methode durch den folgenden Code:  
   
-     Der <xref:System.Windows.Forms.Form.FormClosing> -Ereignishandler ruft die `SaveSettings` -Methode ab, welche auch von der Abmeldefunktion verwendet wird, die Sie im nächsten Abschnitt hinzufügen werden. Bei der `SaveSettings` -Methode wird zunächst verifiziert, dass sich der Benutzer nicht abgemeldet hat. Dies geschieht durch die Überprüfung der <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> -Eigenschaft von <xref:System.Security.Principal.IIdentity> , die vom derzeitigen Rektor zurückgegeben wurde. Der aktuelle Rektor wird über die Eigenschaft `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> aufgerufen. Wenn der Benutzer für Clientanwendungsdienste authentifiziert wurde, ist der Authentifizierungstyp „ClientForms“. Die `SaveSettings` -Methode kann nicht einfach nur die <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> -Eigenschaft überprüfen, da der Benutzer nach der Abmeldung über eine gültige Windows-Identität verfügen mag.  
+     Der <xref:System.Windows.Forms.Form.FormClosing> -Ereignishandler ruft die `SaveSettings` -Methode ab, welche auch von der Abmeldefunktion verwendet wird, die Sie im nächsten Abschnitt hinzufügen werden. Bei der `SaveSettings` -Methode wird zunächst verifiziert, dass sich der Benutzer nicht abgemeldet hat. Dies geschieht durch die Überprüfung der <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> -Eigenschaft von <xref:System.Security.Principal.IIdentity> , die vom derzeitigen Rektor zurückgegeben wurde. Der aktuelle Rektor wird über die Eigenschaft `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> aufgerufen. Wenn der Benutzer für Clientanwendungsdienste authentifiziert wurde, ist der Authentifizierungstyp „ClientForms“. Die `SaveSettings` -Methode kann nicht einfach nur die <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> -Eigenschaft überprüfen, da der Benutzer nach der Abmeldung über eine gültige Windows-Identität verfügen mag.  
   
      Wenn sich der Benutzer nicht abgemeldet hat, erfasst die `SaveSettings` -Methode die <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode der `Settings` -Klasse, die zuvor in diesem Verfahren weiter oben in diesem Verfahren generiert wurde. Diese Methode kann eine(n) <xref:System.Net.WebException> auslösen, wenn der Authentifizierungscookie abgelaufen ist. Dies tritt nur ein, wenn Sie die Option **Verlangen, dass sich der Benutzer bei Ablauf des Cookies erneut anmelden** in der Anwendungskonfiguration ausgewählt haben. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Die `SaveSettings` -Methode verarbeitet den Ablauf der Cookies durch den Aufruf <xref:System.Web.Security.Membership.ValidateUser%2A> des Anmeldedialogfeldes. Wenn sich der Benutzer erfolgreich anmeldet, versucht die `SaveSettings` -Methode, die Einstellungen erneut zu speichern, indem sie sich selbst aufruft.  
   
      Wie beim vorherigen Code gibt die `SaveSettings` -Methode eine Fehlermeldung aus, wenn der Remotedienst nicht verfügbar ist. Wenn der Einstellungsanbieter nicht auf den Remotedienst zugreifen kann, werden die Einstellungen weiterhin im lokalen Cache gespeichert und erneut geladen, wenn die Anwendung neu gestartet wird.  
   
-     [!code-csharp[Clientanwendungsdienste#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)] [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
+     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]
+     [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
   
 13. Fügen Sie der Formular1-Klasse die folgende Methode hinzu.  
   
-     Dieser Code behandelt das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> -Ereignis und zeigt eine Warnung an, wenn eine oder mehrere der Einstellungen nicht gespeichert werden konnten. Das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> -Ereignis tritt nicht ein, wenn der Einstellungsdienst nicht verfügbar ist, oder wenn der Authentifizierungscookie abgelaufen ist. Das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> -Ereignis tritt beispielsweise ein, wenn sich ein Benutzer bereits abgemeldet hat. Sie können diesen Ereignishandler testen, indem Sie den Abmeldungscode unmittelbar vor dem Aufruf der `SaveSettings` -Methode direkt zur <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode hinzufügen. Der von Ihnen verwendbare Abmeldungscode ist im nächsten Abschnitt beschrieben.  
+     Dieser Code behandelt das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> -Ereignis und zeigt eine Warnung an, wenn eine oder mehrere der Einstellungen nicht gespeichert werden konnten. Das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> -Ereignis tritt nicht ein, wenn der Einstellungsdienst nicht verfügbar ist, oder wenn der Authentifizierungscookie abgelaufen ist. Das <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> -Ereignis tritt beispielsweise ein, wenn sich ein Benutzer bereits abgemeldet hat. Sie können diesen Ereignishandler testen, indem Sie den Abmeldungscode unmittelbar vor dem Aufruf der `SaveSettings` -Methode direkt zur <xref:System.Configuration.ApplicationSettingsBase.Save%2A> -Methode hinzufügen. Der von Ihnen verwendbare Abmeldungscode ist im nächsten Abschnitt beschrieben.  
   
-     [!code-csharp[Clientanwendungsdienste#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)] [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
+     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]
+     [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
-14. Fügen Sie bei C# den folgenden Code am Ende der `Form1_Load` -Methode hinzu. Dieser Code weist die Methode zu, die Sie im letzten Schritt mit dem <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved>-Ereignis hinzugefügt haben.  
+14. Fügen Sie bei C# den folgenden Code am Ende der `Form1_Load` -Methode hinzu. Dieser Code weist die Methode zu, die Sie im letzten Schritt mit dem <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> -Ereignis hinzugefügt haben.  
   
      [!code-csharp[ClientApplicationServices#015](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#015)]  
   
@@ -479,16 +491,17 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 4.  Ersetzen Sie die `logoutButton_Click` -Methode durch folgenden Code:  
   
-     Dieser Ereignishandler ruft zuerst die `SaveSettings` -Methode auf, die Sie im vorherigen Abschnitt hinzugefügt haben. Anschließend ruft der Ereignishandler die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> -Methode auf. Wenn der Authentifizierungsdienst nicht verfügbar ist, gibt die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> -Methode <xref:System.Net.WebException>aus. In diesem Fall die `logoutButton_Click` Methode zeigt eine Warnmeldung an und wechselt vorübergehend in den Offline-Modus, um den Benutzer abzumelden. Der Offline-Modus wird im nächsten Abschnitt beschrieben.  
+     Dieser Ereignishandler ruft zuerst die `SaveSettings` -Methode auf, die Sie im vorherigen Abschnitt hinzugefügt haben. Anschließend ruft der Ereignishandler die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=nameWithType> -Methode auf. Wenn der Authentifizierungsdienst nicht verfügbar ist, gibt die <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> -Methode <xref:System.Net.WebException>aus. In diesem Fall die `logoutButton_Click` Methode zeigt eine Warnmeldung an und wechselt vorübergehend in den Offline-Modus, um den Benutzer abzumelden. Der Offline-Modus wird im nächsten Abschnitt beschrieben.  
   
      Beim Abmelden wird der lokale Authentifizierungscookie gelöscht, sodass beim Neustart der Anwendung eine Anmeldung erforderlich ist. Nach der Abmeldung startet der Ereignishandler die Anwendung neu. Wenn die Anwendung neu gestartet wird, wird die Begrüßungsnachricht, gefolgt vom Dialogfeld „Anmelden“ angezeigt. Die Begrüßungsnachricht verdeutlicht, dass die Anwendung neu gestartet wurde. Dadurch wird eine mögliche Verwirrung vermieden, wenn sich der Benutzer anmelden muss, um die Einstellungen zu speichern, und sich dann erneut anmelden muss, weil die Anwendung neu gestartet wurde.  
   
-     [!code-csharp[Clientanwendungsdienste#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)] [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
+     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]
+     [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
   
  Um die Abmeldefunktionalität zu testen, führen Sie die Anwendung aus, und wählen Sie **Anmeldedaten** aus dem Dialogfeld „Anmelden“ aus. Als Nächstes schließen Sie die Anwendung und starten Sie sie neu, um zu verifizieren, dass Sie sich nicht mehr anmelden müssen. Schließlich starten Sie die Anwendung durch Klicken auf Abmelden.  
   
 ## <a name="enabling-offline-mode"></a>Aktivieren des Offline-Modus  
- Im folgenden Verfahren fügen Sie dem Formular ein Kontrollkästchen hinzu, um den Benutzer den Wechsel in den Offline-Modus zu ermöglichen. Die Anwendung zeigt den Offline-Modus an, indem die `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> -Eigenschaft auf `true`festgelegt wird. Der Offline-Status wird auf der lokalen Festplatte an dem Speicherort gespeichert, den die <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> -Eigenschaft angibt. Dies bedeutet, dass der Offline-Status je nach Benutzer und Anwendung gespeichert wird.  
+ Im folgenden Verfahren fügen Sie dem Formular ein Kontrollkästchen hinzu, um den Benutzer den Wechsel in den Offline-Modus zu ermöglichen. Die Anwendung zeigt den Offline-Modus an, indem die `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=nameWithType> -Eigenschaft auf `true`festgelegt wird. Der Offline-Status wird auf der lokalen Festplatte an dem Speicherort gespeichert, den die <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> -Eigenschaft angibt. Dies bedeutet, dass der Offline-Status je nach Benutzer und Anwendung gespeichert wird.  
   
  Im Offline-Modus werden bei allen Kundenanwendungsdienst-Anforderungen Daten aus dem lokalen Cache abgerufen, statt zu versuchen, ob die Dienste zuzugreifen In der Standardkonfiguration enthalten die lokalen Daten das Benutzerkennwort in verschlüsselter Form. Dadurch kann sich der Benutzer anmelden, während sich die Anwendung im Offline-Modus befindet. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -506,18 +519,20 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
 6.  Ersetzen Sie die generierte Methode durch den folgenden Code:  
   
-     Dieser Code aktualisiert den <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> Wert und validiert den Benutzer, wenn dieser wieder in den Online-Modus wechselt, im Hintergrund neu. Bei der <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=fullName> -Methode werden die zwischengespeicherten Anmeldeinformationen verwendet, sodass sich der Benutzer nicht explizit neu anmelden muss. Wenn der Authentifizierungsdienst nicht verfügbar ist, wird eine Warnmeldung angezeigt, und die Anwendung bleibt offline.  
+     Dieser Code aktualisiert den <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> Wert und validiert den Benutzer, wenn dieser wieder in den Online-Modus wechselt, im Hintergrund neu. Bei der <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=nameWithType> -Methode werden die zwischengespeicherten Anmeldeinformationen verwendet, sodass sich der Benutzer nicht explizit neu anmelden muss. Wenn der Authentifizierungsdienst nicht verfügbar ist, wird eine Warnmeldung angezeigt, und die Anwendung bleibt offline.  
   
     > [!NOTE]
     >  Die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> -Methode wird nur ergänzend bereitgestellt. Da sie nicht über einen Rückgabewert verfügt, kann sie nicht angeben, ob die erneute Überprüfung fehlgeschlagen ist. Die erneute Überprüfung kann z. B. fehlschlagen, wenn die Anmeldeinformationen des Benutzers auf dem Server geändert wurden. In diesem Fall ist es ratsam, Code einzuschließen, der die Benutzer nach dem Fehlschlagen eines Dienstaufrufs explizit validiert. Weitere Informationen finden Sie im Abschnitt Zugriff auf Webeinstellungen weiter oben in dieser exemplarischen Vorgehensweise.  
   
-     Nach der erneuten Validierung speichert dieser Code alle Änderungen an den lokalen Webeinstellungen durch Aufrufen der `SaveSettings` -Methode, die Sie zuvor hinzugefügt haben. Dann werden alle neuen Werte auf dem Server mithilfe der <xref:System.Configuration.ApplicationSettingsBase.Reload%2A>-Methode der Projekt `Settings`-Klasse aufgerufen (als `Properties.Settings.Default` in c# und `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Nach der erneuten Validierung speichert dieser Code alle Änderungen an den lokalen Webeinstellungen durch Aufrufen der `SaveSettings` -Methode, die Sie zuvor hinzugefügt haben. Dann werden alle neuen Werte auf dem Server mithilfe der <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> -Methode der Projekt `Settings` -Klasse aufgerufen (als `Properties.Settings.Default` in c# und `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
   
-     [!code-csharp[Clientanwendungsdienste#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)] [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
+     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
+     [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
   
 7.  Fügen Sie den folgenden Code am Ende der `Form1_Load` -Methode ein, um sicherzustellen, dass das Kontrollkästchen den aktuellen Verbindungsstatus anzeigt.  
   
-     [!code-csharp[Clientanwendungsdienste#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)] [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
+     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]
+     [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
   
  Dadurch ist die exemplarische Anwendung abgeschlossen. Um den Offlinebetrieb zu testen, führen Sie die Anwendung aus. Melden Sie sich als Mitarbeiter oder Manager an, und wählen Sie dann **Offline arbeiten**aus. Ändern Sie den Wert im Textfeld, und schließen Sie die Anwendung. Starten Sie die Anwendung neu. Bevor Sie sich anmelden, klicken Sie im Infobereich der Taskleiste mit der rechten Maustaste auf ASP.NET Development Server. Klicken Sie dann auf **Stopp**. Melden Sie sich dann wie üblich an. Selbst wenn der Server nicht ausgeführt wird, können Sie sich dennoch anmelden. Ändern Sie den Wert im Textfeld, beenden Sie den Server und starten Sie ihn neu, um den geänderten Wert anzuzeigen.  
   
@@ -530,10 +545,9 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  Zur Erhöhung der Sicherheit Ihrer Anwendung stellen Sie sicher, dass Anwendung und Server vor der Bereitstellung gründlich getestet wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
- [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)   
+ [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [ASP.NET Websiteverwaltungs-Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Exemplarische Vorgehensweise: Verwenden von ASP.NET-Anwendungsdiensten](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
+ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b164198f5fbbae5ebc6164fc281dd7de8172b70
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017
 
 Visual Studio 2017 bietet eine umfassende Entwicklungsumgebung für die Entwicklung von .NET Core-Anwendungen. Die Verfahren in diesem Dokument beschreiben die erforderlichen Schritte zum Erstellen einer herkömmlichen .NET Core-Lösung, die wiederverwendbare Bibliotheken, Tests und das Verwenden von Bibliotheken von Drittanbietern vorsieht. 
@@ -29,7 +27,7 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 
 ### <a name="writing-the-library"></a>Schreiben der Bibliothek
 
-1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#**. Wählen Sie den Knoten **.NET Core** und anschließend den Knoten **Klassenbibliothek (.NET Standard)** aus. 
+1. Klicken Sie in Visual Studio auf **Datei** > **Neu** > **Projekt**. In der **neues Projekt** Dialogfeld erweitern Sie die **Visual C#-** Knoten, und wählen Sie die **.NET Standard** Knoten, und wählen Sie dann **-Klassenbibliothek (.NET Standard)**. 
 
 2. Geben Sie dem Projekt den Namen „Library“ und der Projektmappe den Namen „Golden“. Lassen Sie **Projektmappenverzeichnis erstellen** aktiviert. Klicken Sie auf **OK**.
 
@@ -81,4 +79,3 @@ Befolgen Sie die Anweisungen auf [unserer Seite über erforderliche Komponenten]
 9. Drücken Sie F5, um die Anwendung auszuführen.
 
    Die Anwendung sollte ohne Fehler erstellt werden, und Sie sollten beim Haltepunkt ankommen. Darüber hinaus sollten Sie prüfen können, ob die Ausgabe der Anwendung „42“ lautet.
-

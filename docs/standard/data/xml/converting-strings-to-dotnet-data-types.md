@@ -1,53 +1,53 @@
 ---
-title: "Konvertieren von Zeichenfolgen in .NET&#160;Framework-Datentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Konvertieren von Zeichenfolgen in .NET Framework-Datentypen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Konvertieren von Zeichenfolgen in .NET&#160;Framework-Datentypen
-Wenn Sie eine Zeichenfolge in einen .NET Framework\-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert**\-Methode, die den Erfordernissen der Anwendung entspricht.  Eine Liste sämtlicher in der **XmlConvert**\-Klasse verfügbarer Konvertierungsmethoden finden Sie unter [XmlConvert\-Member](frlrfSystemXmlXmlConvertMembersTopic).  
+# <a name="converting-strings-to-net-framework-data-types"></a>Konvertieren von Zeichenfolgen in .NET Framework-Datentypen
+Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert** Methode, die den Anforderungen der Anwendung entspricht. Eine Liste aller Konvertierung Methoden zur Verfügung, in der **XmlConvert** Klasse, finden Sie unter <xref:System.Xml.XmlConvert>.  
   
- Die von der **ToString**\-Methode zurückgegebene Zeichenfolge ist eine Zeichenfolgenversion der Daten, die übergeben werden.  Darüber hinaus gibt es mehrere .NET Framework\-Typen, die mit der **XmlConvert**\-Klasse konvertiert werden können, wobei sie jedoch nicht die Methoden in der **System.Convert**\-Klasse verwenden.  Die **XmlConvert**\-Klasse entspricht der Spezifikation für XSD\-Datentypen \(XML\-Schema\) und besitzt einen Datentyp, dem **XmlConvert** zugeordnet werden kann.  
+ Die Zeichenfolge zurückgegeben, die von der **ToString** Methode ist eine Zeichenfolgenversion der Daten, die übergeben werden. Darüber hinaus stehen mehrere .NET Framework-Typen, die konvertieren Sie mithilfe der **XmlConvert** -Klasse noch keine Methoden verwendet wird die **System.Convert** Klasse. Die **XmlConvert** Klasse folgt die Datentypspezifikation für XML-Schema (XSD) und weist einen Datentyp der **XmlConvert** zuordnen können.  
   
- Die folgende Tabelle enthält die .NET Framework\-Datentypen und die Zeichenfolgentypen, die unter Verwendung der XSD\-Datentypzuordnung \(XML Schema\) zurückgegeben werden.  Diese .NET Framework\-Typen können nicht mit **System.Convert** verarbeitet werden.  
+ Die folgende Tabelle enthält die .NET Framework-Datentypen und die Zeichenfolgentypen, die unter Verwendung der XSD-Datentypzuordnung (XML Schema) zurückgegeben werden. Diese .NET Framework-Typen können nicht verarbeitet werden, mithilfe von **System.Convert**.  
   
-|.NET Framework\-Typ|Zurückgegebene Zeichenfolge|  
-|-------------------------|---------------------------------|  
+|.NET Framework-Typ|Zurückgegebene Zeichenfolge|  
+|-------------------------|---------------------|  
 |Boolean|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
-|Single.NegativeInfinity|"\-INF"|  
+|Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
-|Double.NegativeInfinity|"\-INF"|  
-|DateTime|Das Format ist "jjjj\-mm\-ddTHH:mm:sszzzzzz" und die entsprechenden Unterteilungen.|  
+|Double.NegativeInfinity|"-INF"|  
+|DateTime|Das Format ist "jjjj-mm-ddTHH:mm:sszzzzzz" und die entsprechenden Unterteilungen.|  
 |Timespan|Das Format lautet "PnYnMnTnHnMnS". Die bedeutet für `P2Y10M15DT10H30M20S` eine Dauer von 2 Jahren, 10 Monaten, 15 Tagen, 10 Stunden, 30 Minuten und 20 Sekunden.|  
   
 > [!NOTE]
->  Wenn einer der in der Tabelle aufgeführten .NET Framework\-Typen mit der **ToString**\-Methode in eine Zeichenfolge umgewandelt wird, ist die zurückgegebene Zeichenfolge nicht der Basistyp, sondern der dem XML\-Schema \(XSD\) entsprechende Zeichenfolgentyp.  
+>  Wenn in der Tabelle in eine Zeichenfolge mit den .NET Framework-Typen konvertieren aufgeführt werden. die **ToString** -Methode, die zurückgegebene Zeichenfolge ist nicht der Basistyp, sondern den String-Datentyp XML-Schema (XSD).  
   
- Der **DateTime**\-Werttyp und der **Timespan**\-Werttyp unterscheiden sich voneinander in dem Punkt, dass **DateTime** einen Zeitpunkt darstellt, während **TimeSpan** einen Zeitraum wiedergibt.  Das **DateTime**\- und das **Timespan**\-Format werden in der Spezifikation für XSD\-Datentypen \(XML\-Schema\) festgelegt.  Beispiel:  
+ Die **"DateTime"** und **Timespan** Werttyp unterscheidet sich insofern ein **"DateTime"** einen Zeitpunkt darstellt, während eine **TimeSpan** Stellt ein Zeitintervall dar. Die **"DateTime"** und **Timespan** Formate werden in der XML-Schema (XSD) Data-Typen-Spezifikation angegeben. Zum Beispiel:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
 Dim [date] As New DateTime(2001, 8, 4)  
 writer.WriteElementString("Date", XmlConvert.ToString([date]))  
-  
 ```  
   
 ```csharp  
@@ -66,7 +66,6 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
 Dim value As Int32 = 200  
 writer.WriteElementString("Number", XmlConvert.ToString(value))  
-  
 ```  
   
 ```csharp  
@@ -79,34 +78,33 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Wenn Sie jedoch eine Zeichenfolge in einen der Typen **Boolean**, **Single** oder **Double** konvertieren, ist der zurückgegebene .NET Framework\-Typ mit dem bei Verwendung der **System.Convert**\-Klasse zurückgegebenen Typ nicht identisch.  
+ Jedoch wenn Sie eine Zeichenfolge zu konvertieren, **booleschen**, **einzelne**, oder **doppelte**, der .NET Framework-Typ, der zurückgegeben wird entspricht nicht der Rückgabetyp, die bei Verwendung der **System.Convert** Klasse.  
   
-## Zeichenfolge in Boolean  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToBoolean**\-Methode in **Boolean** konvertiert wird.  
+## <a name="string-to-boolean"></a>Zeichenfolge in Boolean  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren **booleschen** mithilfe der **ToBoolean** Methode.  
   
-|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework\-Ausgabetyp|  
-|----------------------------------------------------|--------------------------------|  
+|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
+|----------------------------------|--------------------------------|  
 |"true"|Boolean.True|  
 |"1"|Boolean.True|  
 |"false"|Boolean.False|  
 |"0"|Boolean.False|  
   
- Betrachten Sie beispielsweise den folgenden XML\-Code:  
+ Betrachten Sie beispielsweise den folgenden XML-Code:  
   
  **Eingabe**  
   
-```  
+```xml  
 <Boolean>true</Boolean>  
 <Boolean>1</Boolean>   
 ```  
   
- Beide werden vom folgenden Code verstanden, und **bvalue** ist **System.Boolean.True**:  
+ Beide können durch den folgenden Code verstanden werden und **Bvalue** ist **System.Boolean.True**:  
   
 ```vb  
 Dim bvalue As Boolean = _  
    XmlConvert.ToBoolean(reader.ReadElementString())  
 Console.WriteLine(bvalue)  
-  
 ```  
   
 ```csharp  
@@ -114,28 +112,27 @@ Boolean bvalue = XmlConvert.ToBoolean(reader.ReadElementString());
 Console.WriteLine(bvalue);  
 ```  
   
-## String in Single  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToSingle**\-Methode in **Single** konvertiert wird.  
+## <a name="string-to-single"></a>String in Single  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren einer **einzelne** mithilfe der **ToSingle** Methode.  
   
-|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework\-Ausgabetyp|  
-|----------------------------------------------------|--------------------------------|  
+|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
+|----------------------------------|--------------------------------|  
 |"INF"|Single.PositiveInfinity|  
-|"\-INF"|Single.NegativeInfinity|  
+|"-INF"|Single.NegativeInfinity|  
   
-## String in Double  
- Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToDouble**\-Methode in **Single** konvertiert wird.  
+## <a name="string-to-double"></a>String in Double  
+ Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge zu konvertieren einer **einzelne** mithilfe der **ToDouble** Methode.  
   
-|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework\-Ausgabetyp|  
-|----------------------------------------------------|--------------------------------|  
+|Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
+|----------------------------------|--------------------------------|  
 |"INF"|Double.PositiveInfinity|  
-|"\-INF"|Double.NegativeInfinity|  
+|"-INF"|Double.NegativeInfinity|  
   
  Der folgende Code schreibt `<Infinity>INF</Infinity>`:  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
 writer.WriteElementString("Infinity", XmlConvert.ToString(value))  
-  
 ```  
   
 ```csharp  
@@ -143,6 +140,6 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## Siehe auch  
- [Konvertierung von XML\-Datentypen](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)   
- [Konvertieren von .NET Framework\-Typen in Zeichenfolgen](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+## <a name="see-also"></a>Siehe auch  
+ [Konvertierung von XML-Datentypen](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [Konvertieren von .NET Framework-Typen in Zeichenfolgen](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

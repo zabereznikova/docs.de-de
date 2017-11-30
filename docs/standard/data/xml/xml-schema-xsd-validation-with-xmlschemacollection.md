@@ -1,44 +1,45 @@
 ---
-title: "XSD-Validierung (XML Schema) mit &quot;XmlSchemaCollection&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XSD-Validierung (XML Schema) mit „XmlSchemaCollection“"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XSD-Validierung (XML Schema) mit &quot;XmlSchemaCollection&quot;
-Mit der <xref:System.Xml.Schema.XmlSchemaCollection> können XML\-Dokumente anhand von XSD\-Schemata \(XML Schema Definition Language\) validiert werden.  Die <xref:System.Xml.Schema.XmlSchemaCollection> verbessert die Leistung, indem die Schemata in der Auflistung gespeichert werden, sodass sie nicht bei jeder Validierung erneut in den Speicher geladen werden müssen.  Wenn das Schema in der Auflistung der Schemata enthalten ist, wird es mithilfe des `schemaLocation`\-Attributs in der Auflistung gesucht.  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XSD-Validierung (XML Schema) mit „XmlSchemaCollection“
+Mit der <xref:System.Xml.Schema.XmlSchemaCollection> können XML-Dokumente anhand von XSD-Schemata (XML Schema Definition Language) validiert werden. Die <xref:System.Xml.Schema.XmlSchemaCollection> verbessert die Leistung, indem die Schemata in der Auflistung gespeichert werden, sodass sie nicht bei jeder Validierung erneut in den Speicher geladen werden müssen. Wenn das Schema in der Auflistung der Schemata enthalten ist, wird es mithilfe des `schemaLocation`-Attributs in der Auflistung gesucht.  
   
 > [!IMPORTANT]
->  Die <xref:System.Xml.Schema.XmlSchemaCollection>\-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>\-Klasse ersetzt.  Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>\-Klasse finden Sie unter ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zu den <xref:System.Xml.Schema.XmlSchemaSet> Klasse finden Sie unter ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  Im folgenden Beispiel wird das Stammelement der Datendatei veranschaulicht.  
   
-```  
+```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns="urn:bookstore-schema"  
     elementFormDefault="qualified"  
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- In diesem Beispiel lautet der Wert des `targetNamespace`\-Attributs `urn:bookstore-schema`. Es wird also derselbe Namespace verwendet, der beim Hinzufügen des Schemas zur <xref:System.Xml.Schema.XmlSchemaCollection> verwendet wird.  
+ In diesem Beispiel lautet der Wert des `targetNamespace`-Attributs `urn:bookstore-schema`. Es wird also derselbe Namespace verwendet, der beim Hinzufügen des Schemas zur <xref:System.Xml.Schema.XmlSchemaCollection> verwendet wird.  
   
- Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML\-Schema hinzugefügt.  
+ Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML-Schema hinzugefügt.  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -58,9 +59,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- Das `targetNamespace`\-Attribut wird normalerweise verwendet, wenn in der <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>\-Methode die `namespaceURI`\-Eigenschaft für die <xref:System.Xml.Schema.XmlSchemaCollection> hinzugefügt wird.  Sie können einen NULL\-Verweis angeben, bevor Sie der <xref:System.Xml.Schema.XmlSchemaCollection> das Schema hinzufügen.  Für Schemata ohne Namespace muss eine leere Zeichenfolge \(""\) verwendet werden.  In der <xref:System.Xml.Schema.XmlSchemaCollection> kann nur ein Schema ohne Namespace enthalten sein.  
+ Das `targetNamespace`-Attribut wird normalerweise verwendet, wenn in der `namespaceURI`-Methode die <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Eigenschaft für die <xref:System.Xml.Schema.XmlSchemaCollection> hinzugefügt wird. Sie können einen NULL-Verweis angeben, bevor Sie der <xref:System.Xml.Schema.XmlSchemaCollection> das Schema hinzufügen. Für Schemata ohne Namespace muss eine leere Zeichenfolge ("") verwendet werden. In der <xref:System.Xml.Schema.XmlSchemaCollection> kann nur ein Schema ohne Namespace enthalten sein.  
   
- Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML\-Schema \(**HeadCount.xsd**\) hinzugefügt, und **HeadCount.xml** wird validiert.  
+ Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML-Schema (HeadCount.xsd) hinzugefügt, und HeadCount.xml wird validiert.  
   
 ```vb  
 Imports System  
@@ -131,9 +132,9 @@ namespace ValidationSample
 }  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei **HeadCount.xml** dargestellt.  
+ Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei HeadCount.xml dargestellt.  
   
-```  
+```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
 <hc:HeadCount xmlns:hc='xsdHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -141,9 +142,9 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der XML\-Schemadatei **HeadCount.xsd** dargestellt, die zur Validierung herangezogen wird.  
+ Im folgenden Beispiel wird der Inhalt der XML-Schemadatei HeadCount.xsd dargestellt, die zur Validierung herangezogen wird.  
   
-```  
+```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
    <xs:element name='HeadCount' type="HEADCOUNT"/>  
    <xs:complexType name="HEADCOUNT">  
@@ -155,7 +156,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Im folgenden Codebeispiel wird ein <xref:System.Xml.XmlValidatingReader> erstellt, der einen <xref:System.Xml.XmlTextReader> erfordert.  Die Eingabedatei **sample4.xml** wird anhand des XML\-Schemas **sample4.xsd** validiert.  
+ Im folgenden Codebeispiel wird ein <xref:System.Xml.XmlValidatingReader> erstellt, der einen <xref:System.Xml.XmlTextReader> erfordert. Die Eingabedatei sample4.xml wird anhand des XML-Schemas sample4.xsd validiert.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -179,9 +180,9 @@ while(vr.Read()) {
     }  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei **sample4.xml** dargestellt.  
+ Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei sample4.xml dargestellt.  
   
-```  
+```xml  
 <datatypes xmlns="datatypesTest">  
     <number>  
         <number_1>123</number_1>  
@@ -189,9 +190,9 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der XML\-Schemadatei **sample4.xsd** dargestellt, die zur Validierung herangezogen wird.  
+ Im folgenden Beispiel wird der Inhalt der XML-Schemadatei sample4.xsd dargestellt, die zur Validierung herangezogen wird.  
   
-```  
+```xml  
 <xs:schema   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     xmlns:tns="datatypesTest"   
@@ -214,8 +215,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## Siehe auch  
- <xref:System.Xml.XmlParserContext>   
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=fullName>   
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=fullName>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Xml.XmlParserContext>  
+ <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+ <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
  [Schemakompilierung mit "XmlSchemaCollection"](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

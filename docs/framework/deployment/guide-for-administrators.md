@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -39,8 +32,8 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Bereitstellungsprozess](#the_deployment_process)   
- [Bereitstellen von .NET Framework](#deploying_in_a_test_environment)   
+ [Der Bereitstellungsprozess](#the_deployment_process)  
+ [Bereitstellen von .NET Framework](#deploying_in_a_test_environment)  
  [Erstellen einer Sammlung](#creating_a_collection)  
  [Erstellen eines Pakets und Programms](#creating_a_package)  
  [Auswählen eines Verteilungspunkts](#select_dist_point)  
@@ -145,8 +138,8 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|  
 |**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim [Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"**.|  
   
- Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer in den Installationsvorgang nicht ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der MSDN-Bibliothek im Artikel zum [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606).  
-  
+ Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. Bei einer automatischen Installation-Benutzer interagieren nicht mit der Installation, und die chaining Anwendung muss den Rückgabecode erfassen und den Neustart initiieren; finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Auswählen eines Verteilungspunkts  
  Um das Paket und Programm von einem Server an Clientcomputer zu verteilen, müssen Sie zuerst ein Standortsystem als Verteilungspunkt festlegen und das Paket dann an den Verteilungspunkt verteilen.  
@@ -236,7 +229,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ### <a name="log-file-locations"></a>Protokolldateispeicherorte  
  Beim [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup werden die folgenden Protokolldateien generiert:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  Mit dem [Protokollerfassungstool (Log Collection Tool)](http://www.microsoft.com/download/details.aspx?id=12493) können Sie die [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Protokolldateien erfassen und eine komprimierte CAB-Datei erstellen, um die Größe der Dateien zu reduzieren.  
@@ -272,6 +265,5 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 -   [Ergebniscodes für Windows Update Agent](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
-

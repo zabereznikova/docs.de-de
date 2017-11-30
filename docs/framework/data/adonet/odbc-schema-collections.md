@@ -1,26 +1,29 @@
 ---
-title: "ODBC-Schemaauflistungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ODBC-Schemaauflistungen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# ODBC-Schemaauflistungen
-In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC\-Treiber für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
+# <a name="odbc-schema-collections"></a>ODBC-Schemaauflistungen
+In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC-Treiber für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
   
-## Microsoft SQL Server\-ODBC\-Treiber  
- Der Microsoft SQL Server\-ODBC\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server-ODBC-Treiber  
+ Der Microsoft SQL Server-ODBC-Treiber unterstützt die folgenden spezifischen schemaauflistungen zusätzlich zu den allgemeinen schemaauflistungen:  
   
 -   Tabellen  
   
@@ -36,131 +39,131 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Ansichten  
   
-### Tables und Views  
+### <a name="tables-and-views"></a>Tables und Views  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CAT|Zeichenfolge|  
-|TABLE\_SCHEM|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_CAT|Zeichenfolge|  
+|TABLE_SCHEM|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
 |REMARKS|Zeichenfolge|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CAT|Zeichenfolge|  
-|TABLE\_SCHEM|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|NON\_UNIQUE|Int16|  
-|INDEX\_QUALIFIER|Zeichenfolge|  
-|INDEX\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_CAT|Zeichenfolge|  
+|TABLE_SCHEM|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|NON_UNIQUE|Int16|  
+|INDEX_QUALIFIER|Zeichenfolge|  
+|INDEX_NAME|Zeichenfolge|  
 |TYPE|Int16|  
-|ORDINAL\_POSITION|Int16|  
-|COLUMN\_NAME|Zeichenfolge|  
-|ASC\_OR\_DESC|Zeichenfolge|  
+|ORDINAL_POSITION|Int16|  
+|COLUMN_NAME|Zeichenfolge|  
+|ASC_OR_DESC|Zeichenfolge|  
 |CARDINATLITY|Int32|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Zeichenfolge|  
-|SS\_TYPE\_SCHEMA|Zeichenfolge|  
-|SS\_DATA\_TYPE|Byte|  
+|FILTER_CONDITION|Zeichenfolge|  
+|SS_TYPE_SCHEMA|Zeichenfolge|  
+|SS_DATA_TYPE|Byte|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_CAT|Zeichenfolge|  
-|TABLE\_SCHEM|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|TABLE_CAT|Zeichenfolge|  
+|TABLE_SCHEM|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|COLUMN\_DEF|Zeichenfolge|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|Zeichenfolge|  
-|SS\_TYPE\_CATALOG|Zeichenfolge|  
-|SS\_TYPE\_SCHEMA|Zeichenfolge|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|Zeichenfolge|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|Zeichenfolge|  
+|SS_TYPE_CATALOG|Zeichenfolge|  
+|SS_TYPE_SCHEMA|Zeichenfolge|  
+|SS_DATA_TYPE|Byte|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CAT|Zeichenfolge|  
-|PROCEDURE\_SCHEM|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|NUM\_INPUT\_PARAMS|Int32|  
-|NUM\_OUTPUT\_PARAMS|Int32|  
-|NUM\_RESULT\_SETS|Int32|  
+|----------------|--------------|  
+|PROCEDURE_CAT|Zeichenfolge|  
+|PROCEDURE_SCHEM|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|NUM_INPUT_PARAMS|Int32|  
+|NUM_OUTPUT_PARAMS|Int32|  
+|NUM_RESULT_SETS|Int32|  
 |REMARKS|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CAT|Zeichenfolge|  
-|PROCEDURE\_SCHEM|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|Zeichenfolge|  
+|PROCEDURE_SCHEM|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|COLUMN\_DEF|Zeichenfolge|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|Zeichenfolge|  
-|SS\_TYPE\_CATALOG|Zeichenfolge|  
-|SS\_TYPE\_SCHEMA|Zeichenfolge|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|Zeichenfolge|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|Zeichenfolge|  
+|SS_TYPE_CATALOG|Zeichenfolge|  
+|SS_TYPE_SCHEMA|Zeichenfolge|  
+|SS_DATA_TYPE|Byte|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CAT|Zeichenfolge|  
-|PROCEDURE\_SCHEM|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|Zeichenfolge|  
+|PROCEDURE_SCHEM|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|COLUMN\_DEF|Zeichenfolge|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|Zeichenfolge|  
-|SS\_TYPE\_CATALOG|Zeichenfolge|  
-|SS\_TYPE\_SCHEMA|Zeichenfolge|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|Zeichenfolge|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|Zeichenfolge|  
+|SS_TYPE_CATALOG|Zeichenfolge|  
+|SS_TYPE_SCHEMA|Zeichenfolge|  
+|SS_DATA_TYPE|Byte|  
   
-## Microsoft Oracle ODBC\-Treiber  
- Der Microsoft SQL Server Oracle ODBC\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC-Treiber  
+ Microsoft SQL Server Oracle ODBC-Treiber unterstützt die folgenden spezifischen schemaauflistungen zusätzlich zu den allgemeinen schemaauflistungen:  
   
 -   Tabellen  
   
@@ -176,58 +179,58 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Indexes  
   
-### Tables und Views  
+### <a name="tables-and-views"></a>Tables und Views  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_QUALIFIER|Zeichenfolge|  
-|TABLE\_OWNER|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|Zeichenfolge|  
+|TABLE_OWNER|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
 |REMARKS|Zeichenfolge|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_QUALIFIER|Zeichenfolge|  
-|TABLE\_OWNER|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|Zeichenfolge|  
+|TABLE_OWNER|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_QUALIFIER|Zeichenfolge|  
-|PROCEDURE\_OWNER|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|Zeichenfolge|  
+|PROCEDURE_OWNER|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_QUALIFIER|Zeichenfolge|  
-|PROCEDURE\_OWNER|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|Zeichenfolge|  
+|PROCEDURE_OWNER|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -235,10 +238,10 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-## Microsoft Jet ODBC\-Treiber  
- Der Microsoft Jet ODBC\-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
+## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC-Treiber  
+ Der Microsoft Jet ODBC-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
 -   Tabellen  
   
@@ -254,58 +257,58 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Ansichten  
   
-### Tables und Views  
+### <a name="tables-and-views"></a>Tables und Views  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_QUALIFIER|Zeichenfolge|  
-|TABLE\_OWNER|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|TABLE\_TYPE|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|Zeichenfolge|  
+|TABLE_OWNER|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|TABLE_TYPE|Zeichenfolge|  
 |REMARKS|Zeichenfolge|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|TABLE\_QUALIFIER|Zeichenfolge|  
-|TABLE\_OWNER|Zeichenfolge|  
-|TABLE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|Zeichenfolge|  
+|TABLE_OWNER|Zeichenfolge|  
+|TABLE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### Verfahren  
+### <a name="procedures"></a>Verfahren  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_QUALIFIER|Zeichenfolge|  
-|PROCEDURE\_OWNER|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|Zeichenfolge|  
+|PROCEDURE_OWNER|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|Zeichenfolge|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_QUALIFIER|Zeichenfolge|  
-|PROCEDURE\_OWNER|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|Zeichenfolge|  
+|PROCEDURE_OWNER|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -313,31 +316,31 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |Spaltenname|DataType|  
-|-----------------|--------------|  
-|PROCEDURE\_CAT|Zeichenfolge|  
-|PROCEDURE\_SCHEM|Zeichenfolge|  
-|PROCEDURE\_NAME|Zeichenfolge|  
-|COLUMN\_NAME|Zeichenfolge|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|Zeichenfolge|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|Zeichenfolge|  
+|PROCEDURE_SCHEM|Zeichenfolge|  
+|PROCEDURE_NAME|Zeichenfolge|  
+|COLUMN_NAME|Zeichenfolge|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|Zeichenfolge|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|Zeichenfolge|  
-|COLUMN\_DEF|Zeichenfolge|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|Zeichenfolge|  
+|COLUMN_DEF|Zeichenfolge|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|Zeichenfolge|  
   
-## Siehe auch  
- [ADO.NET Verwaltete Anbieter und DataSet\-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch  
+ [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)

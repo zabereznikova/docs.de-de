@@ -1,12 +1,9 @@
 ---
 title: "Lambda-Ausdrücke (C#-Programmierhandbuch)"
-ms.date: 2017-03-03
+ms.date: 03/03/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -14,30 +11,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda-Ausdrücke (C#-Programmierhandbuch)
 Ein Lambda-Ausdruck ist eine [anonyme Funktion](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , mit der Typen für [Delegaten](../../../csharp/programming-guide/delegates/using-delegates.md) oder die [Ausdrucksbaumstruktur](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) erstellt werden können. Mit Lambda-Ausdrücken können lokale Funktionen geschrieben werden, die als Argumente übergeben oder als Wert von Funktionsaufrufen zurückgegeben werden können. Lambda-Ausdrücke sind besonders für das Schreiben von LINQ-Abfrageausdrücken hilfreich.  
@@ -74,7 +55,7 @@ namespace ConsoleApplication1
   
  Lambdas werden in methodenbasierten [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen als Argumente für Standardabfrageoperator-Methoden wie <xref:System.Linq.Enumerable.Where%2A> verwendet.  
   
- Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Where%2A> -Methode in der <xref:System.Linq.Enumerable> -Klasse methodenbasierte Syntax verwenden (wie in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]), ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=fullName>. Ein Lambda-Ausdruck ist die einfachste Möglichkeit zum Erstellen dieses Delegaten. Wenn Sie dieselbe Methode z.B. in der <xref:System.Linq.Queryable?displayProperty=fullName>-Klasse aufrufen (wie in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), handelt es sich bei dem Parametertyp um eine <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Funktion\>, wobei „Funktion“ für beliebige Funktionsdelegaten mit bis zu 16 Eingabeparametern steht. Wie gesagt, ein Lambda-Ausdruck ist eine sehr präzise Methode, diese Ausdrucksbaumstruktur zu erstellen. Durch die Lambdas können die `Where` -Aufrufe ähnlich aussehen, obwohl sich der mithilfe des Lambdas erstellte Objekttyp unterscheidet.  
+ Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Where%2A> -Methode in der <xref:System.Linq.Enumerable> -Klasse methodenbasierte Syntax verwenden (wie in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]), ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=nameWithType>. Ein Lambda-Ausdruck ist die einfachste Möglichkeit zum Erstellen dieses Delegaten. Wenn Sie dieselbe Methode z.B. in der <xref:System.Linq.Queryable?displayProperty=nameWithType>-Klasse aufrufen (wie in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), handelt es sich bei dem Parametertyp um eine <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Funktion\>, wobei „Funktion“ für beliebige Funktionsdelegaten mit bis zu 16 Eingabeparametern steht. Wie gesagt, ein Lambda-Ausdruck ist eine sehr präzise Methode, diese Ausdrucksbaumstruktur zu erstellen. Durch die Lambdas können die `Where` -Aufrufe ähnlich aussehen, obwohl sich der mithilfe des Lambdas erstellte Objekttyp unterscheidet.  
   
  Beachten Sie im vorigen Beispiel, dass die Signatur des Delegaten über einen implizit typisierten Eingabeparameter vom Typ `int`verfügt und `int`zurückgibt. Der Lambda-Ausdruck kann in einen Delegaten dieses Typs konvertiert werden, da er auch über einen Eingabeparameter (`x`) und einen Rückgabewert verfügt, der vom Compiler implizit in den Typ `int` konvertiert werden kann. (Der Typrückschluss wird in den folgenden Abschnitten ausführlicher erläutert.) Wenn der Delegat durch Verwendung des Eingabeparameters 5 aufgerufen wird, wird als Ergebnis 25 zurückgegeben.  
   
@@ -296,11 +277,10 @@ class Test
  [Delegaten, Ereignisse und Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=195395) im [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [Visual Studio 2008 C#-Beispiele (siehe LINQ-Beispielabfragedateien und XQuery-Programm)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [Ausdrucksbaumstrukturen](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Visual Studio 2008 C#-Beispiele (Siehe LINQ Beispielabfragedateien und XQuery-Programm)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
  [Rekursive Lambda-Ausdrücke](http://go.microsoft.com/fwlink/?LinkId=112395)
-

@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
@@ -165,7 +165,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Referenzierter Typ|Vom referenzierten Typ implementierte Schnittstelle|Beispiel|Typ behandelt als|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oder<br /><br /> `MyType<T> : IDictionary` , wobei T=`int`|Geschlossenes generisches `IDictionary<object,object>`|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary\<string, bool>` , wobei T=`int`|Geschlossen generisch (z. B. `IDIctionary\<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType\<T,U,V> : IDictionary\<string,V>` , wobei T=`int`, U=`float`, V=`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary\<Z,bool>` , wobei Z=`string`|Geschlossen generisch (z. B. `IDictionary\<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType\<T,U,V> : IDictionary\<V,U>` , wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary\<string,bool>`)|  
-|Offen generisch (zwei Parameter)|Generisches <xref:System.Collections.Generic.IDictionary%602>, offen, verwendet beide generischen Parametern des Typs in der Reihenfolge, in der sie angezeigt werden.|`MyType\<K,V> : IDictionary\<K,V>`, K und V beide offen|Offen generisch (z. B. `IDictionary\<K,V>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>`wobei T =`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>`wobei T =`int`, U =`float`, V =`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>`wobei Z =`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>`, wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Offen generisch (zwei Parameter)|Generisches <xref:System.Collections.Generic.IDictionary%602>, offen, verwendet beide generischen Parametern des Typs in der Reihenfolge, in der sie angezeigt werden.|`MyType<K,V> : IDictionary<K,V>`, K und V beide offen|Offen generisch (z. B. `IDictionary<K,V>`)|  
   
  Wenn der Typ sowohl das <xref:System.Collections.IDictionary> als auch das generische <xref:System.Collections.Generic.IDictionary%602>implementiert, wird nur das generische <xref:System.Collections.Generic.IDictionary%602> betrachtet.  
   

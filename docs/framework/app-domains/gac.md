@@ -42,7 +42,7 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt e
 -   Die Verwendung des Entwicklertools [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) aus [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Bei Bereitstellungsszenarien sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Da das Global Assembly Cache-Tool nur die Assemblyverweiszählung und andere von Windows Installer bereitgestellte Funktionen unterstützt, sollten Sie das Tool nur in Entwicklungsszenarien verwenden.  
+    >  Bei Bereitstellungsszenarien sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
   
  Ab .NET Framework 4 lautet die Standardposition des globalen Assemblycache **%windir%\Microsoft.NET\assembly**. In früheren Versionen von .NET Framework lautet der Standardspeicherort **%windir%\assembly**.  
   

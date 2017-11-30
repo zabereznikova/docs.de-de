@@ -1,50 +1,53 @@
 ---
-title: "Using Threads and Threading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], about threading"
-  - "managed threading"
+title: Verwenden von Threads und Threading
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], about threading
+- managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 80eb4c3bb98acdd1f83dbf5bcf57b2f7b295742b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Using Threads and Threading
-Die Themen in diesem Abschnitt behandeln das Erstellen und Verwalten verwalteter Threads, das Übergeben von Daten an verwaltete Threads und das Abrufen von Ergebnissen sowie das Zerstören von Threads und Behandeln einer <xref:System.Threading.ThreadAbortException>.  
+# <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
+Die Themen in diesem Abschnitt erläutert die Erstellung und Verwaltung von verwalteten Threads, die zum Übergeben von Daten an verwaltete Threads und Abrufen von Ergebnissen und das Zerstören von Threads und Behandeln einer <xref:System.Threading.ThreadAbortException>.  
   
-## In diesem Abschnitt  
- [Creating Threads and Passing Data at Start Time](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- Erläutert und veranschaulicht das Erstellen verwalteter Threads, einschließlich der Übergabe von Daten an neue Threads und das Abrufen von Daten.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Erstellen von Threads und Übergeben von Daten zur Startzeit](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
+ Erläutert und veranschaulicht die Erstellung von verwalteten Threads, einschließlich der Übergabe von Daten für neue Threads und zum Abrufen von Daten.  
   
- [Pausing and Resuming Threads](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- Erörtert die Verzweigungen beim Anhalten und Fortsetzen verwalteter Threads.  
+ [Anhalten und Fortsetzen von Threads](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
+ Erläutert die Auswirkungen des Anhaltens und fortsetzens verwaltete Threads an.  
   
- [Destroying Threads](../../../docs/standard/threading/destroying-threads.md)  
- Erörtert die Konsequenzen der Zerstörung verwalteter Threads und die Behandlung einer <xref:System.Threading.ThreadAbortException>.  
+ [Zerstören von Threads](../../../docs/standard/threading/destroying-threads.md)  
+ Erläutert die Konsequenzen der Zerstörung verwaltete Threads und zum Behandeln einer <xref:System.Threading.ThreadAbortException>.  
   
- [Scheduling Threads](../../../docs/standard/threading/scheduling-threads.md)  
- Erörtert Threadprioritäten und deren Auswirkungen auf die Threadplanung.  
+ [Scheduling von Threads](../../../docs/standard/threading/scheduling-threads.md)  
+ Erläutert Threadprioritäten und deren Threadplanung Einfluss auf.  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Threading.Thread>  
- Referenzdokumentation für die <xref:System.Threading.Thread>\-Klasse, die einen verwalteten Thread unabhängig davon repräsentiert, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  
+ Enthält die Referenzdokumentation für die <xref:System.Threading.Thread> Klasse, die einen verwalteten Thread darstellt, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  
   
  <xref:System.Threading.ThreadStart>  
- Stellt Referenzdokumentation für den <xref:System.Threading.ThreadStart>\-Delegaten zur Verfügung, der parameterlose Threadprozeduren darstellt.  
+ Enthält die Referenzdokumentation für die <xref:System.Threading.ThreadStart> Delegat, parameterlosen Threadprozeduren darstellt.  
   
  <xref:System.Threading.ParameterizedThreadStart>  
- Bietet ein einfaches Verfahren zum Übergeben von Daten an eine Threadprozedur, bei dem keine starke Typisierung eingesetzt wird.  
+ Bietet eine einfache Möglichkeit, Daten an eine Threadprozedur übergeben allerdings ohne starke Typisierung.  
   
-## Verwandte Abschnitte  
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)  
- Gibt eine Einführung in verwaltetes Threading.
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)  
+ Bietet eine Einführung zum verwalteten threading.

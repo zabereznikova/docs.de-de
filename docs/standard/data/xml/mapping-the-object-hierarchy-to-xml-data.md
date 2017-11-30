@@ -1,36 +1,37 @@
 ---
-title: "Zuordnen der Objekthierarchie zu XML-Daten | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Zuordnen der Objekthierarchie zu XML-Daten
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Zuordnen der Objekthierarchie zu XML-Daten
-Wenn sich ein XML\-Dokument im Speicher befindet, ist seine konzeptionelle Darstellung eine Struktur.  Für das Programmieren verwenden Sie eine Objekthierarchie, um auf die Knoten der Struktur zuzugreifen.  Im folgenden Beispiel wird veranschaulicht, wie aus dem XML\-Inhalt Knoten werden.  
+# <a name="mapping-the-object-hierarchy-to-xml-data"></a>Zuordnen der Objekthierarchie zu XML-Daten
+Wenn sich ein XML-Dokument im Speicher befindet, ist seine konzeptionelle Darstellung eine Struktur. Für das Programmieren verwenden Sie eine Objekthierarchie, um auf die Knoten der Struktur zuzugreifen. Im folgenden Beispiel wird veranschaulicht, wie aus dem XML-Inhalt Knoten werden.  
   
- Wenn der XML\-Code in das Dokumentobjektmodell \(DOM\) eingelesen wird, werden die einzelnen Teile in Knoten umgesetzt, und diese enthalten zusätzliche Metadaten über sich selbst, z. B. ihren Knotentyp und ihre Werte.  Der Knotentyp besteht aus seinem Objekt und bestimmt, welche Aktionen ausgeführt und welche Eigenschaften festgelegt oder abgerufen werden.  
+ Wenn der XML-Code in das Dokumentobjektmodell (DOM) eingelesen wird, werden die einzelnen Teile in Knoten umgesetzt, und diese enthalten zusätzliche Metadaten über sich selbst, z. B. ihren Knotentyp und ihre Werte. Der Knotentyp besteht aus seinem Objekt und bestimmt, welche Aktionen ausgeführt und welche Eigenschaften festgelegt oder abgerufen werden.  
   
- Angenommen, Sie haben folgenden einfachen XML\-Code:  
+ Angenommen, Sie haben folgenden einfachen XML-Code:  
   
  **Eingabe**  
   
-```  
+```xml  
 <book>  
     <title>The Handmaid's Tale</title>  
 </book>  
@@ -38,16 +39,16 @@ Wenn sich ein XML\-Dokument im Speicher befindet, ist seine konzeptionelle Darst
   
  Diese Eingabe wird im Speicher als die folgende Knotenstruktur mit der zugewiesenen Knotentypeigenschaft dargestellt:  
   
- ![Beispiel für Knotenstruktur](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple\_XML")  
-Darstellung von "book" und "title" in der Knotenstruktur  
+ ![Beispiel für Knotenstruktur](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+Darstellung von „book“ und „title“ in der Knotenstruktur  
   
- Das `book`\-Element wird zu einem **XmlElement**\-Objekt, ebenso wie das nächste Element, `title` zu einem**XmlElement**, während der Elementinhalt zu einem **XmlText**\-Objekt wird.  Die Methoden und Eigenschaften von **XmlElement** unterscheiden sich von denen, die für ein **XmlText**\-Objekt verfügbar sind.  Folglich ist es wichtig, zu wissen, in welchen Knotentyp das XML\-Markup umgesetzt wird, da der Knotentyp bestimmt, welche Aktionen ausgeführt werden können.  
+ Die `book` Element wird ein **XmlElement** -Objekt, das nächste Element `title`, wird ein **XmlElement**, während der Elementinhalt wird eine **XmlText** Objekt. Anschauen der **XmlElement** Methoden und Eigenschaften, die Methoden und Eigenschaften unterscheiden sich die verfügbaren Methoden und Eigenschaften auf eine **XmlText** Objekt. Folglich ist es wichtig, zu wissen, in welchen Knotentyp das XML-Markup umgesetzt wird, da der Knotentyp bestimmt, welche Aktionen ausgeführt werden können.  
   
- Im folgenden Beispiel werden XML\-Daten eingelesen, und je nach Knotentyp wird unterschiedlicher Text ausgegeben.  Dabei wird die folgende XML\-Datendatei, **Items.xml**, als Eingabe verwendet:  
+ Im folgenden Beispiel werden XML-Daten eingelesen, und je nach Knotentyp wird unterschiedlicher Text ausgegeben. Mithilfe der folgenden XML-Datei als Eingabe, **items.xml**:  
   
  **Eingabe**  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <!-- This is a sample XML document -->  
 <!DOCTYPE Items [<!ENTITY number "123">]>  
@@ -61,7 +62,7 @@ Darstellung von "book" und "title" in der Knotenstruktur
 </Items>  
 ```  
   
- Im folgenden Codebeispiel wird die Datei **Items.xml** gelesen, dann werden für jeden Knotentyp Informationen angezeigt.  
+ Im folgenden Codebeispiel wird die **items.xml** Datei und werden für jeden Knotentyp Informationen angezeigt.  
   
 ```vb  
 Imports System  
@@ -186,46 +187,45 @@ public class Sample
   
  **Ausgabe**  
   
-```  
-  
+```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
 ```  
   
- Wenn Sie die Eingabe und die daraus generierte Ausgabe Zeile für Zeile betrachten, können Sie anhand der folgenden Tabelle untersuchen, welcher Knotentest welche Ausgabezeilen generiert hat. Dadurch lässt sich feststellen, welche XML\-Daten in welchen Knotentyp umgesetzt wurden.  
+ Wenn Sie die Eingabe und die daraus generierte Ausgabe Zeile für Zeile betrachten, können Sie anhand der folgenden Tabelle untersuchen, welcher Knotentest welche Ausgabezeilen generiert hat. Dadurch lässt sich feststellen, welche XML-Daten in welchen Knotentyp umgesetzt wurden.  
   
 |Eingabe|Ausgabe|Knotentyptest|  
-|-------------|-------------|-------------------|  
-|\<?xml version\="1.0"?\>|\<?xml version\='1.0'?\>|XmlNodeType.XmlDeclaration|  
-|\<\!\-\- This is a sample XML document \-\-\>|\<\!\-\- This is a sample XML document \-\-\>|XmlNodeType.Comment|  
-|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]\>|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]|XmlNodeType.DocumentType|  
-|\<Items\>|\<Items\>|XmlNodeType.Element|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Test mit einer Entität: &number;|Test mit einer Entität: 123|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmNodeType.Element|  
+|-----------|------------|--------------------|  
+|\<? Xml Version = "1.0"? >|\<? Xml Version = "1.0'? >|XmlNodeType.XmlDeclaration|  
+|\<!--Dies ist ein XML-Beispieldokument-->|\<!--Dies ist ein XML-Beispieldokument-->|XmlNodeType.Comment|  
+|\<! DOCTYPE-Elemente [\<! Anzahl der ENTITÄT "123" >] >|\<! DOCTYPE-Elemente [\<! Anzahl der ENTITÄT "123" >]|XmlNodeType.DocumentType|  
+|\<Elemente >|\<Elemente >|XmlNodeType.Element|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Testen Sie mit einer Entität:&number;|Test mit einer Entität: 123|XmlNodeType.Text|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmNodeType.Element|  
 |Test mit einem untergeordneten Element|Test mit einem untergeordneten Element|XmlNodeType.Text|  
-|\<more\>|\<more\>|XmlNodeType.Element|  
+|\<Weitere >|\<Weitere >|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |test with a CDATA section|test with a CDATA section|XmlTest.Text|  
-|\<\!\[CDATA\[\<456\>\]\]\>|\<\!\[CDATA\[\<456\>\]\]\>|XmlTest.CDATA|  
+|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Test with a char entity: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\!\-\- Fourteen chars in this element.\-\-\>|\<\-\-Fourteen chars in this element.\-\-\>|XmlNodeType.Comment|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Test mit einer Char-Entität: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\<!--14 Zeichen in diesem Element-->|\<– 14 Zeichen in diesem Element-->|XmlNodeType.Comment|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\/Items\>|\<\/Items\>|XmlNodeType.EndElement|  
+|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</ Items >|\</ Items >|XmlNodeType.EndElement|  
   
  Sie müssen wissen, welcher Knotentyp zugewiesen wird, da der Knotentyp steuert, welche Arten von Aktionen zulässig sind und welche Eigenschaften Sie festlegen und abrufen können.  
   
- Die Knotenerstellung für Leerraum wird gesteuert, wenn die Daten durch das **PreserveWhitespace**\-Flag in das DOM geladen werden.  Weitere Informationen finden Sie unter [Behandlung von Leerräumen und signifikanten Leerräumen beim Laden des DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ Knotenerstellung für Leerraum wird gesteuert, beim Laden der Daten in das DOM von ist das **PreserveWhitespace** Flag. Weitere Informationen finden Sie unter [signifikanten Leerraum Behandlung von Leerräumen und beim Laden des DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Weitere Informationen zum Hinzufügen von neuen Knoten zum DOM finden Sie unter [Einfügen von Knoten in ein XML\-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  Weitere Informationen zum Entfernen von Knoten aus dem DOM finden Sie unter [Entfernen von Knoten, Inhalten und Werten aus einem XML\-Dokument](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  Weitere Informationen zum Ändern des Inhalts von Knoten im DOM finden Sie unter [Ändern von Knoten, Inhalten und Werten in einem XML\-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Zum Hinzufügen neuer Knoten mit dem DOM finden Sie unter [Einfügen von Knoten in einem XML-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Zum Entfernen von Knoten aus dem DOM finden Sie unter [Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Zum Ändern des Inhalts von Knoten im DOM finden Sie unter [Ändern von Knoten, Inhalten und Werten in einem XML-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
+ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
-ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -34,7 +32,11 @@ Verwenden Sie zum Erstellen und Ausführen der Beispiele in diesem Tutorial das 
 1. Geben Sie den Befehl [dotnet new console](../../core/tools/dotnet-new.md) in einer Befehlszeile ein, um ein neues .NET Core-Projekt zu erstellen.
 1. Kopieren Sie den Code aus dem Beispiel, und fügen Sie ihn in den Code-Editor ein.
 1. Geben Sie den Befehl [dotnet restore](../../core/tools/dotnet-restore.md) in der Befehlszeile ein, um die Abhängigkeiten des Projekts zu laden oder wiederherzustellen.
+
+  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. Geben Sie den Befehl [dotnet run](../../core/tools/dotnet-run.md) zum Kompilieren und Ausführen des Beispiels ein.
+
 
 ## <a name="background-what-is-inheritance"></a>Hintergrund: Was ist Vererbung?
 
@@ -54,15 +56,15 @@ Während alle anderen Member einer Basisklasse von abgeleiteten Klassen geerbt w
 
 - [Private](../language-reference/keywords/private.md) Member sind nur in abgeleiteten Klassen sichtbar, die in ihrer Basisklasse geschachtelt sind. Andernfalls sind sie in abgeleiteten Klassen nicht sichtbar. Im folgenden Beispiel ist `A.B` eine geschachtelte Klasse, die sich von `A` ableitet, und `C` leitet sich von `A` ab. Das private Feld `A.value` ist in A.B sichtbar. Wenn Sie jedoch die Kommentare aus der `C.GetValue`-Methode entfernen und versuchen, das Beispiel zu kompilieren, verursacht dies Compilerfehler CS0122: „Der Zugriff auf "A.value" ist aufgrund des Schutzgrads nicht möglich.“
 
-  [!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - [Geschützte](../language-reference/keywords/protected.md) Member sind nur in abgeleiteten Klassen sichtbar.
 
-- [Interne](../language-reference/keywords/protected.md) Member sind nur in abgeleiteten Klassen sichtbar, die sich in der gleichen Assembly wie die Basisklasse befinden. Sie sind nicht in abgeleiteten Klassen sichtbar, die sich in einer anderen Assembly als die Basisklasse befinden.
+- [Interne](../language-reference/keywords/internal.md) Member sind nur in abgeleiteten Klassen sichtbar, die sich in der gleichen Assembly wie die Basisklasse befinden. Sie sind nicht in abgeleiteten Klassen sichtbar, die sich in einer anderen Assembly als die Basisklasse befinden.
 
-- [Öffentliche] (../language-reference/keywords/protected.md) Member sind in abgeleiteten Klassen sichtbar und Teil der öffentlichen Schnittstelle der abgeleiteten Klasse. Öffentlich geerbte Member können so aufgerufen werden, als ob sie in der abgeleiteten Klasse definiert wurden. Im folgenden Beispiel definiert Klasse `A` eine Methode namens `Method1`, und Klasse `B` erbt von Klasse `A`. Das Beispiel ruft dann `Method1` auf, als wäre sie eine Instanzmethode von `B`.
+- [Öffentliche](../language-reference/keywords/public.md) Datenmember in abgeleiteten Klassen angezeigt werden, und sind Teil der öffentlichen Schnittstelle der abgeleiteten Klasse. Öffentlich geerbte Member können so aufgerufen werden, als ob sie in der abgeleiteten Klasse definiert wurden. Im folgenden Beispiel definiert Klasse `A` eine Methode namens `Method1`, und Klasse `B` erbt von Klasse `A`. Das Beispiel ruft dann `Method1` auf, als wäre sie eine Instanzmethode von `B`.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 Abgeleitete Klassen können auch geerbte Member *überschreiben*, indem sie eine alternative Implementierung bereitstellen. Um einen Member überschreiben zu können, muss der Member in der Basisklasse mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) markiert sein. Standardmäßig sind Member der Basisklasse nicht als `virtual` markiert und können nicht überschrieben werden. Der Versuch, wie im folgenden Beispiel einen nicht virtuellen Member zu überschreiben, verursacht den Compilerfehler CS0506: „"<member>" : Der geerbte Member "<member>" kann nicht überschrieben werden, da er nicht als "virtual", "abstract" oder "override" markiert ist.“
 
@@ -117,11 +119,11 @@ Neben Typen, die sie vielleicht über die einzelne Vererbung erben, erben alle T
 
 Um zu sehen, was implizite Vererbung bedeutet, definieren wir eine neue Klasse `SimpleClass`, die einfach eine leere Klassendefinition ist:
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
 Wir können dann die Reflektion (die uns ermöglicht, die Metadaten eines Typs zu überprüfen, um Informationen zu diesem Typ zu erhalten) verwenden, um eine Liste der Member abzurufen, die zum `SimpleClass`-Typ gehören. Obwohl wir keine Member in unserer `SimpleClass`-Klasse definiert haben, gibt die Ausgabe des Beispiels an, dass sie tatsächlich neun Member hat. Einer davon ist ein parameterloser (oder standardmäßiger) Konstruktor, der automatisch vom C#-Compiler für den `SimpleClass`-Typ angegeben wird. Die verbleibenden acht sind Member von <xref:System.Object>, dem Typ, von dem alle Klassen und Schnittstellen im .NET-Typsystem letztlich implizit erben.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 Implizite Vererbung von der <xref:System.Object> -Klasse macht diese Methoden der `SimpleClass`-Klasse verfügbar:
 
@@ -139,7 +141,7 @@ Implizite Vererbung von der <xref:System.Object> -Klasse macht diese Methoden de
 
 Aufgrund der impliziten Vererbung können wir alle geerbten Member aus einem `SimpleClass`-Objekt einfach aufrufen, als wären sie tatsächlich in der `SimpleClass`-Klasse definierte Member. Im folgenden Beispiel wird die `SimpleClass.ToString`-Methode aufgerufen, die `SimpleClass` von <xref:System.Object> erbt.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 Die folgende Tabelle enthält die Kategorien von Typen, die Sie in C# erstellen können, und die Typen, von denen sie implizit erben. Jeder Basistyp macht implizit abgeleiteten Typen über Vererbung einen anderen Satz von Membern verfügbar.
 
@@ -157,13 +159,13 @@ Mit Vererbung wird normalerweise eine „ist ein“-Beziehung zwischen einer Bas
 > [!NOTE]
 > Eine Klasse oder Struktur kann eine oder mehrere Schnittstellen implementieren. Die Schnittstellenimplementierung wird zwar oft als Problemumgehung für einzelne Vererbung oder Möglichkeit der Verwendung von Vererbung mit Strukturen dargestellt, doch sie soll eine andere Beziehung (eine „tun können“-Beziehung) zwischen einer Schnittstelle und ihrem implementierenden Typ ausdrücken als Vererbung. Eine Schnittstelle definiert eine Teilmenge der Funktionalität (z.B. die Möglichkeit zum Testen auf Gleichheit, zum Vergleichen oder Sortieren von Objekten oder zum Unterstützen kulturspezifischer Analyse und Formatierung), die die Schnittstelle den implementierenden Typen zur Verfügung stellt.
 
-Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Make`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile` -Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die <xref:System.Object.ToString%2A?displayProperty=fullName> -Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile` -Instanz anstelle der `Automobile` -Klasse identifiziert.
+Beachten Sie, dass „ist ein“ auch die Beziehung zwischen einem Typ und einer bestimmten Instanziierung des betreffenden Typs ausdrückt. Im folgenden Beispiel ist `Automobile` eine Klasse mit drei eindeutigen schreibgeschützten Eigenschaften: `Make`, der Autohersteller; `Model`, den Autotyp, und `Year`, das Herstellungsjahr. Unsere `Automobile`-Klasse verfügt auch über einen Konstruktor, dessen Argumente den Eigenschaftswerten zugewiesen werden, und er überschreibt die <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode, um eine Zeichenfolge zu erzeugen, die eindeutig die `Automobile`-Instanz anstelle der `Automobile`-Klasse identifiziert.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 In diesem Fall sollten wir uns nicht auf die Vererbung verlassen, um bestimmte Automarken und Modelle darzustellen. Wir müssen z.B. keinen `Packard`-Typ definieren, um Autos darzustellen, die von der Packard Motor Car Company hergestellt werden. Stattdessen können wir sie durch Erstellen eines `Automobile`-Objekts darstellen, wobei die entsprechenden Werten an dessen Klassenkonstruktor übergeben werden, wie es im folgenden Beispiel geschieht.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 Eine auf Vererbung basierende „ist ein“-Beziehung wird am besten auf eine Basisklasse und abgeleitete Klassen angewendet, die der Basisklasse weitere Member hinzufügen oder zusätzliche Funktionalität erfordern, die in der Basisklasse nicht vorhanden ist.
 
@@ -201,7 +203,7 @@ Beim Entwurf unserer `Publication`-Klasse müssen wir einige Entwurfsentscheidun
 
 Das folgende Beispiel zeigt sowohl den Quellcode für die `Publication`-Klasse als auch eine `PublicationType`-Enumeration, die von der Eigenschaft `Publication.PublicationType` zurückgegeben wird. Zusätzlich zu den Membern, die sie von <xref:System.Object> erbt, definiert die `Publication`-Klasse die folgenden eindeutigen Member und Memberüberschreibungen:
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - Ein Konstruktor
 
@@ -234,7 +236,7 @@ Das folgende Beispiel zeigt sowohl den Quellcode für die `Publication`-Klasse a
 
 - Eine Überschreibung der `ToString`-Methode
 
-  Wenn ein Typ die <xref:System.Object.ToString%2A?displayProperty=fullName> -Methode nicht überschreibt, gibt sie den vollqualifizierten Namen des Typs zurück, was zur Unterscheidung einer Instanz von einer anderen von geringem Nutzen ist. Die `Publication`-Klasse überschreibt <xref:System.Object.ToString%2A?displayProperty=fullName>, um den Wert der Eigenschaft `Title` zurückzugeben.
+  Wenn ein Typ die <xref:System.Object.ToString%2A?displayProperty=nameWithType> -Methode nicht überschreibt, gibt sie den vollqualifizierten Namen des Typs zurück, was zur Unterscheidung einer Instanz von einer anderen von geringem Nutzen ist. Die `Publication`-Klasse überschreibt <xref:System.Object.ToString%2A?displayProperty=nameWithType>, um den Wert der Eigenschaft `Title` zurückzugeben.
 
 Die folgende Abbildung veranschaulicht die Beziehung zwischen unserer Basis-`Publication` -Klasse und der implizit geerbten <xref:System.Object> -Klasse.
 
@@ -244,7 +246,7 @@ Die folgende Abbildung veranschaulicht die Beziehung zwischen unserer Basis-`Pub
 
 Die `Book`-Klasse stellt ein Buch als einen speziellen Typ der Publikation dar. Das folgende Beispiel zeigt den Quellcode für die `Book`-Klasse.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`-Klasse die folgenden eindeutigen Member und Memberüberschreibungen:
 
@@ -264,11 +266,11 @@ Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`
 
 - Eine `SetPrice`-Methode, die die Werte der Felder `bookPrice` und `ISOCurrencySymbol` festlegt. Dies sind die Rückgabewerte der Eigenschaften `Price` und `Currency`.
 
-- Überschreibt die `ToString`-Methode (geerbt von `Publication`) und die Methoden <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> und <xref:System.Object.GetHashCode%2A> (geerbt von <xref:System.Object>).
+- Überschreibt die `ToString`-Methode (geerbt von `Publication`) und die Methoden <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> und <xref:System.Object.GetHashCode%2A> (geerbt von <xref:System.Object>).
 
-  Sofern sie nicht überschrieben wird, führt die Methode <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> Tests hinsichtlich der Verweisgleichheit durch. D.h., zwei Objektvariablen werden als gleich betrachtet, wenn sie auf das gleiche Objekt verweisen. Andererseits sollten im Fall der `Book`-Klasse zwei `Book`-Objekte gleich sein, wenn sie die gleiche ISBN haben.
+  Sofern sie nicht überschrieben wird, führt die Methode <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Tests hinsichtlich der Verweisgleichheit durch. D.h., zwei Objektvariablen werden als gleich betrachtet, wenn sie auf das gleiche Objekt verweisen. Andererseits sollten im Fall der `Book`-Klasse zwei `Book`-Objekte gleich sein, wenn sie die gleiche ISBN haben.
 
-  Wenn Sie die <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>-Methode überschreiben, müssen Sie auch die <xref:System.Object.GetHashCode%2A>-Methode überschreiben. Diese gibt einen Wert zurück, den die Laufzeit zum Speichern von Elementen in Hashauflistungen für einen effizienten Abruf verwendet. Der Hashcode sollte einen Wert zurückgeben, der mit dem Test auf Gleichheit konsistent ist. Da wir <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> überschrieben haben, sodass `true` zurückgegeben wird, wenn die ISBN-Eigenschaften von zwei `Book`-Objekten gleich sind, geben wir den Hashcode zurück, der durch Aufrufen der <xref:System.String.GetHashCode%2A>-Methode der von der Eigenschaft `ISBN` zurückgegebenen Zeichenfolge berechnet wurde.
+  Wenn Sie die <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methode überschreiben, müssen Sie auch die <xref:System.Object.GetHashCode%2A>-Methode überschreiben. Diese gibt einen Wert zurück, den die Laufzeit zum Speichern von Elementen in Hashauflistungen für einen effizienten Abruf verwendet. Der Hashcode sollte einen Wert zurückgeben, der mit dem Test auf Gleichheit konsistent ist. Da wir <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> überschrieben haben, sodass `true` zurückgegeben wird, wenn die ISBN-Eigenschaften von zwei `Book`-Objekten gleich sind, geben wir den Hashcode zurück, der durch Aufrufen der <xref:System.String.GetHashCode%2A>-Methode der von der Eigenschaft `ISBN` zurückgegebenen Zeichenfolge berechnet wurde.
 
 Die folgende Abbildung veranschaulicht die Beziehung zwischen der `Book`-Klasse und `Publication`, ihrer Basisklasse.
 
@@ -276,7 +278,7 @@ Die folgende Abbildung veranschaulicht die Beziehung zwischen der `Book`-Klasse 
 
 Wir können jetzt ein `Book`-Objekt instanziieren, sowohl dessen eindeutige als auch geerbte Member aufrufen und es als Argument an eine Methode übergeben, die einen Parameter des Typs `Publication` oder `Book` erwartet, wie im folgenden Beispiel gezeigt.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Entwerfen abstrakter Basisklassen und der von ihnen abgeleiteten Klassen
 <a name="abstract"></a>
@@ -285,20 +287,19 @@ Im vorherigen Beispiel definierten wir eine Basisklasse, die eine Implementierun
 
 Jede geschlossene zweidimensionale geometrische Form besitzt beispielsweise zwei Eigenschaften: den Flächeninhalt, die innere Ausdehnung der Form; und den Umfang, d.h. die Länge der Kanten der Form. Wie diese Eigenschaften berechnet werden, hängt jedoch vollständig von der jeweiligen Form ab. Die Formel zum Berechnen des Umfangs eines Kreises unterscheidet sich z.B. grundlegend von der zum Berechnen des Umfangs eines Dreiecks.
 
-Das folgende Beispiel definiert eine abstrakte Basisklasse mit dem Namen `Shape`, die zwei Eigenschaften definiert: `Area` und `Perimeter`. Beachten Sie, dass zusätzlich zum Markieren der Klasse mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort auch jeder Instanzmember mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort markiert wird. In diesem Fall überschreibt `Shape` auch die <xref:System.Object.ToString%2A?displayProperty=fullName> -Methode, um den Namen des Typs anstelle dessen vollqualifizierten Namens zurückzugeben. Außerdem definiert sie zwei statische Member, `GetArea` und `GetPerimeter`, die Aufrufern ermöglichen, mühelos Fläche und Umfang einer Instanz einer beliebigen abgeleiteten Klasse abzurufen. Wenn wir eine Instanz einer abgeleiteten Klasse an eine der beiden Methoden übergeben, ruft die Laufzeit die Methodenüberschreibung der abgeleiteten Klasse auf.
+Das folgende Beispiel definiert eine abstrakte Basisklasse mit dem Namen `Shape`, die zwei Eigenschaften definiert: `Area` und `Perimeter`. Beachten Sie, dass zusätzlich zum Markieren der Klasse mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort auch jeder Instanzmember mit dem [abstract](../language-reference/keywords/abstract.md)-Schlüsselwort markiert wird. In diesem Fall überschreibt `Shape` auch die <xref:System.Object.ToString%2A?displayProperty=nameWithType> -Methode, um den Namen des Typs anstelle dessen vollqualifizierten Namens zurückzugeben. Außerdem definiert sie zwei statische Member, `GetArea` und `GetPerimeter`, die Aufrufern ermöglichen, mühelos Fläche und Umfang einer Instanz einer beliebigen abgeleiteten Klasse abzurufen. Wenn wir eine Instanz einer abgeleiteten Klasse an eine der beiden Methoden übergeben, ruft die Laufzeit die Methodenüberschreibung der abgeleiteten Klasse auf.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 Dann können wir einige Klassen von `Shape` ableiten, die bestimmte Formen darstellen. Das folgende Beispiel definiert drei Klassen, `Triangle`, `Rectangle` und `Circle`. Jede verwendet eine Formel, die für die Berechnung von Fläche und Umfang der betreffenden Form eindeutig ist. Einige der abgeleiteten Klassen definieren auch Eigenschaften, z.B. `Rectangle.Diagonal` und `Circle.Diameter`, die für die Form, die sie darstellen, eindeutig sind.
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Im folgenden Beispiel werden von `Shape` abgeleitete Objekte verwendet. Es instanziiert ein Array von Objekten, die von `Shape` abgeleitet sind, und ruft die statischen Methoden der `Shape`-Klasse auf, deren Umschließungen `Shape`-Eigenschaftswerte zurückgeben. Beachten Sie, dass die Laufzeit Werte aus den überschriebenen Eigenschaften der abgeleiteten Typen abruft. Das Beispiel wandelt auch jedes `Shape` -Objekt im Array in seinen abgeleiteten Typ um, und wenn die Umwandlung erfolgreich ist, ruft es Eigenschaften dieser bestimmten Unterklasse von `Shape` auf. 
+Im folgenden Beispiel werden von `Shape` abgeleitete Objekte verwendet. Es instanziiert ein Array von Objekten, die von `Shape` abgeleitet sind, und ruft die statischen Methoden der `Shape`-Klasse auf, deren Umschließungen `Shape`-Eigenschaftswerte zurückgeben. Beachten Sie, dass die Laufzeit Werte aus den überschriebenen Eigenschaften der abgeleiteten Typen abruft. Das Beispiel wandelt auch jedes `Shape`-Objekt im Array in seinen abgeleiteten Typ um, und wenn die Umwandlung erfolgreich ist, ruft es Eigenschaften dieser bestimmten Unterklasse von `Shape` auf. 
 
-[!code-csharp[Vererbung](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>Siehe auch
 
 [Klassen und Objekte](../tour-of-csharp/classes-and-objects.md)   
 [Vererbung (C#-Programmierhandbuch)](../programming-guide/classes-and-structs/inheritance.md)
-

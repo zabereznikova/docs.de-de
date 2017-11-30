@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
+ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 3ca0dce8053b9b0ac36728d6b1e00021df66345d
-ms.openlocfilehash: c0a4eda863ca586db9f712ed55fe675872981300
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
 C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (sogenannte „Kardinalitäten“) und Typen von Elementen sowie konsistente Regeln für Kopien und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt über Tupel im Thema [Neues in C# 7](whats-new/csharp-7.md#tuples) einen Überblick.
@@ -25,7 +23,7 @@ C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den 
 In diesem Thema lernen Sie die Sprachregeln, die Tupel in C# 7 steuern, verschiedene Verwendungsarten und einen ersten Leitfaden über das Arbeiten mit Tupel.
 
 > [!NOTE]
-> Die neuen Tupeleigenschaften benötigen die @System.ValueTuple-Typen.
+> Die neuen Tupeleigenschaften benötigen die <xref:System.ValueTuple>-Typen.
 > Sie müssen das NuGet-Paket [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, um es auf Plattformen zu verwenden, die keine Typen enthalten.
 >
 > Dies ist ähnlich wie bei anderen Sprachfunktionen, die auf im Framework übermittelten Typen basieren. Beispiele hierfür sind `async` und `await`, die auf der `INotifyCompletion`-Schnittstelle basieren, und LINQ, das auf `IEnumerable<T>` basiert. Allerdings ändert sich der Übermittlungsmechanismus, da .NET plattformunabhängiger wird. .NET Framework wird möglicherweise nicht immer im gleichen Rhythmus wie der Sprachcompiler ausgeliefert. Wenn neue Sprachfunktionen auf neuen Typen basieren, sind diese Typen als NuGet-Pakete bei der Auslieferung der Sprachfunktionen verfügbar. Da diese neuen Typen dem standardmäßigen .NET API hinzugefügt und als Teil des Frameworks bereitgestellt werden, wird die Anforderung des NuGet-Pakets entfernt.
@@ -48,7 +46,7 @@ Tupel sind sowohl einfachere als auch flexiblere Datencontainer als `class`- und
 Die `ValueTuple`-Struktur hat Felder mit den Namen `Item1`, `Item2`, `Item3` usw., die den Eigenschaften ähnlich sind, die in den vorhandenen `Tuple`-Typen definiert wurden.
 Diese Namen sind die einzigen Namen, die Sie für *unbenannte Tupel* verwenden können. Wenn Sie einem Tupel keine alternativen Feldnamen bereitstellen, haben Sie einen unbenannten Tupel erstellt:
 
-[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "unbenannte Tupel")]
+[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
 Das Tupel im vorherigen Beispiel wurde mithilfe von Literalkonstanten initialisiert und verfügt nicht über Elementnamen, die mithilfe von *Projektionen für Tupel-Feldnamen* in C# 7.1 erstellt wurden.
 
@@ -57,15 +55,15 @@ Benannte Tupel haben immer noch Elemente mit den Namen `Item1`, `Item2`, `Item3`
 Sie haben jedoch auch Synonyme für alle Elemente, die Sie benannt haben.
 Sie erstellen einen benannten Tupel, indem Sie den Namen für jedes Element angeben. Eine Möglichkeit ist es, die Namen als Teil der Initialisierung des Tupel anzugeben:
 
-[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Benannter Tupel")]
+[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
 Diese Synonyme werden vom Compiler und der Sprache verarbeitet, sodass Sie benannte Tupel effektiv verwenden können. IDEs und Editoren können die semantischen Namen mithilfe der Roslyn-APIs lesen. Dadurch können Sie die Elemente eines benannten Tupels durch diese semantischen Namen an einer beliebigen Stelle in der gleichen Assembly verweisen. Der Compiler ersetzt die Namen, die Sie definiert haben, mit `Item*`-Äquivalenten, wenn die Compilerausgabe erzeugt wird. Die kompilierte Microsoft Intermediate Language (MSIL) enthält nicht die Namen, die Sie diesen Elementen gegeben haben.
 
 Ab C# 7.1 können die Feldnamen für ein Tupel von den Variablen bereitgestellt werden, die zum Initialisieren des Tupels verwendet werden. Diese werden als **[Tupel-Projektionsinitialisierer](#tuple-projection-initializers)** bezeichnet. Der folgende Code erstellt ein Tupel namens `accumulation` mit den Elementen `count` (ein integer-Typ Zahl) und `sum` (ein Double-Typ).
 
-[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Projizierter Tupel")]
+[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-Der Compiler muss diese Namen kommunizieren, die Sie für Tupel erstellt haben, die von öffentlichen Methoden oder Eigenschaften zurückgegeben wurden. In diesen Fällen fügt der Compiler ein Attribut @System.Runtime.CompilerServices.TupleElementNames zur Methode hinzu. Dieses Attribut enthält eine @System.Runtime.CompilerServices.TupleElementNames.TransformNames-Listeneigenschaft, die die Namen für jedes der Elemente im Tupel enthält.
+Der Compiler muss diese Namen kommunizieren, die Sie für Tupel erstellt haben, die von öffentlichen Methoden oder Eigenschaften zurückgegeben wurden. In diesen Fällen fügt der Compiler ein Attribut <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> zur Methode hinzu. Dieses Attribut enthält eine <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames>-Listeneigenschaft, die die Namen für jedes der Elemente im Tupel enthält.
 
 > [!NOTE]
 > Entwicklungstools wie Visual Studio lesen auch diese Metadaten und stellen IntelliSense und andere Funktionen bereit, die die Feldnamen der Metadaten verwenden.
@@ -77,11 +75,11 @@ Es ist wichtig, diese zugrunde liegenden Grundlagen der neuen Tupel sowie den `V
 Im allgemeinen funktionieren Tupel-Projektionsinitialisierer, indem die Variablen- oder Feldnamen von der rechten Seite der Initialisierungsanweisung eines Tupels verwendet werden.
 Wenn ein expliziter Name vergeben wird, hat dieser vor jedem projizierten Namen Vorrang. Im folgenden Initialisierer sind die Elemente beispielsweise `explicitFieldOne` und `explicitFieldTwo`, nicht `localVariableOne` und `localVariableTwo`:
 
-[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explizit benannte Tupel")]
+[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Beachten Sie, dass es weder explizit noch implizit nötig ist, semantische Namen bereitzustellen. Die folgenden Initialisierer besitzen die Feldnamen `Item1`, dessen Wert `42` ist und `StringContent`, dessen Wert „Die Antwort auf alles“ ist:
+Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Beachten Sie, dass es weder explizit noch implizit nötig ist, semantische Namen bereitzustellen. Die folgenden Initialisierer müssen Feldnamen `Item1`, dessen Wert `42` und `StringContent`, deren Wert "Die Antwort auf alle Elemente" ist:
 
-[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "Gemischte Tupel")]
+[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
 Es gibt zwei Bedingungen, unter denen die Feldnamen von Kandidaten nicht auf das Tupelfeld projiziert werden:
 
@@ -90,7 +88,7 @@ Es gibt zwei Bedingungen, unter denen die Feldnamen von Kandidaten nicht auf das
 
 Durch diese Bedingungen wird Mehrdeutigkeit vermieden. Diese Namen würden eine Mehrdeutigkeit verursachen, wenn sie als Feldnamen für das Feld eines Tupels verwendet würden. Keine dieser Bedingungen verursacht Kompilierzeitfehler. Stattdessen werden für die Elemente, die nicht über projizierte Namen verfügen, keine semantischen Namen projiziert.  In den folgenden Beispielen werden diese Bedingungen veranschaulicht:
 
-[!code-csharp[Mehrdeutige](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities " Tupel, auf die keine Projektionen ausgeführt werden")]
+[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Diese Situationen verursachen keine Compilerfehler, da diese eine grundlegende Änderung für mit C# 7.0 geschriebenen Code darstellen würden, bei dem die Projektionen für Tupel-Feldnamen noch nicht verfügbar waren.
 
@@ -100,14 +98,14 @@ Die Sprache unterstützt die Zuweisung zwischen Tupeltypen, die über die gleich
 
 Berücksichtigen Sie diese Variablen, die in den folgenden Beispielen verwendet werden:
 
-[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Erstellung einer Variable")]
+[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 Die ersten zwei Variablen (`unnamed` und `anonymous`) haben keine semantischen Namen für die Elemente bereitgestellt. Die Feldnamen lauten `Item1` und `Item2`.
 Die letzten zwei Variablen (`named` und `differentName`) haben semantische Namen für die Elemente angegeben. Beachten Sie, dass diese zwei Tupel unterschiedliche Namen für die Elemente besitzen.
 
 Alle vier dieser Tupel haben die gleiche Anzahl von Elementen (als „Kardinalität“ bezeichnet), und die Typen dieser Elemente sind identisch. Daher funktionieren alle Zuweisungen:
 
-[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Zuweisen einer Variable")]
+[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
 Beachten Sie, dass die Namen der Tupel nicht zugewiesen sind. Die Werte der Elemente werden nach der Reihenfolge der Elemente im Tupel zugewiesen.
 
@@ -124,7 +122,7 @@ named = differentShape;
 
 Einer der häufigsten Verwendungszwecke für Tupel ist der Methodenrückgabewert. Lassen Sie uns ein ausführliches Beispiel ansehen. Betrachten Sie diese Methode, die die Standardabweichung für eine Sequenz von Zahlen berechnet:
 
-[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Berechnen der Standardabweichung")]
+[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
 > In diesem Beispiel wird die unkorrigierte Beispielstandardabweichung berechnet.
@@ -135,7 +133,7 @@ Dies entspricht der lehrbuchmäßigen Formel für die Standardabweichung. Die ri
 
 Es gibt eine alternative Formel, die eine Standardabweichung anhand einer Enumeration der Sequenz berechnet.  Diese Berechnung erzeugt zwei Werte, da sie die Sequenz auflistet: Die Summe aller Elemente in der Sequenz und die Summe jedes Werts im Quadrat:
 
-[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Berechnen der Standardabweichung mit der Quadratsumme")]
+[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
 Diese Version listet die Sequenz genau einmal auf. Der Code kann jedoch nicht wirklich wieder verwendet werden. Während Sie arbeiten, werden Sie sehen, dass viele unterschiedliche statistische Berechnungen die Anzahl von Elementen in der Sequenz, die Summe der Sequenzen und die Summe der Quadrate der Sequenz verwenden. Gestalten Sie diese Methode um und schreiben Sie eine Hilfsmethode, die alle diese Werte erzeugt.
 
@@ -143,15 +141,15 @@ Dafür sind Tupel sehr nützlich.
 
 Wir aktualisieren diese Methoden, sodass die drei Werte, die während der Enumeration berechnet werden, in einem Tupel gespeichert werden. Dadurch wird diese Version erstellt:
 
-[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Umgestaltung zur Verwendung von Tupel")]
+[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Die Unterstützung von Refactoring von Visual Studio vereinfacht es, die Funktionalität für die Kernstatistik in eine private Methode zu extrahieren. Das gibt Ihnen eine `private static`-Methode, die den Tupeltyp mit den drei Werten von `Sum`, `SumOfSquares` und `Count` zurückgibt:
+Refactoring-Unterstützung für Visual Studio erleichtert es, um die Funktionalität für die Core-Statistik in eine private Methode extrahieren. Das gibt Ihnen eine `private static`-Methode, die den Tupeltyp mit den drei Werten von `Sum`, `SumOfSquares` und `Count` zurückgibt:
 
-[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "Nach dem Extrahieren der Hilfsmethode")]
+[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
 Die Sprache aktiviert einige weitere Optionen, die Sie verwenden können, wenn Sie ein Paar schnelle manuelle Bearbeitungen vornehmen möchten. Sie können zuerst die Deklaration `var` verwenden, um das Tupelergebnis vom Methodenaufruf `ComputeSumAndSumOfSquares` zu initialisieren. Sie können auch drei diskrete Variablen in der Methode `ComputeSumAndSumOfSquares` erstellen. Die endgültige Version ist wie folgt:
 
-[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "Nach der letzten Bereinigung")]
+[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
 Die endgültige Version kann für jede Methode, die diese drei Werte oder einen Teil davon benötigt, verwendet werden.
 
@@ -187,11 +185,11 @@ Sie würden normalerweise die Abfrageergebnisse in eine Sequenz von Objekten pro
 Das Zurückgeben einer Sequenz eines Tupeltyps ist einfach, und die Namen und Typen der Elemente sind zur Kompilierzeit und über die IDE-Tools verfügbar.
 Betrachten Sie z B. eine ToDo-Anwendung. Sie könnten eine Klassen vielleicht so ähnlich wie folgt definieren, um einen einzelnen Eintrag in der ToDo-Liste darzustellen:
 
-[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To-Do-Element")]
+[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
 Ihre mobile Anwendung unterstützt vielleicht ein kompaktes Format der aktuellen ToDo-Elemente, die nur den Titel anzeigen. LINQ-Abfragen würden eine Projektion erstellen, die nur die ID und den Titel enthält. Eine Methode, die eine Tupelsequenz zurückgibt, drückt den Entwurf sehr gut aus:
 
-[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Abfrage, die ein Tupel zurückgibt")]
+[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
 > In C# 7.1 ermöglichen Tupelprojektionen Ihnen das Erstellen benannter Tupel mithilfe von Elementen, ähnlich wie beim Benennen von Eigenschaften bei anonymen Typen. Im obigen Code erstellt die `select`-Anweisung in der Abfrageprojektionen ein Tupel, das die Elemente `ID` und `Title` besitzt.
@@ -200,13 +198,13 @@ Das benannte Tupel kann Teil der Signatur sein. Es lässt den Compiler und IDE-T
 
 ## <a name="deconstruction"></a>Dekonstruktion
 
-Sie können alle Elemente in einem Tupel entpacken, indem das Tupel, das von einer Methode zurückgegeben wurde, *dekonstruiert* wird. Es gibt zwei unterschiedliche Ansätze zum Dekonstruieren von Tupeln.  Zuerst können Sie ausdrücklich den Typ von jedem Feld in Klammern deklarieren, um diskrete Variablen für jedes der Elemente im Tupel zu erstellen:
+Sie können alle Elemente in einem Tupel entpacken, indem das Tupel, das von einer Methode zurückgegeben wurde, *dekonstruiert* wird. Es gibt drei verschiedene Ansätze zum Zerlegen von Tupeln aus.  Zuerst können Sie ausdrücklich den Typ von jedem Feld in Klammern deklarieren, um diskrete Variablen für jedes der Elemente im Tupel zu erstellen:
 
-[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Dekonstruieren")]
+[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
 Sie können auch typisierte Variablen für jedes Feld in ein Tupel deklarieren, indem das Schlüsselwort `var` außerhalb der Klammern verwendet wird:
 
-[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Dekonstruieren nach Var")]
+[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
 Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendeklarationen in den Klammern ist auch zulässig. 
 
@@ -216,27 +214,42 @@ Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendekla
 
 Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern verwenden können, auch wenn jedes Feld im Tupel den selben Typ hat.
 
+Sie können Tupeln mit vorhandenen Deklarationen sowie löschen:
+
+```csharp
+public class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y) => (X, Y) = (x, y);
+}
+```
+
+> [!WARNING]
+>  Sie können keine vorhandene Deklarationen mit Deklarationen innerhalb der Klammern kombinieren. Folgendes ist z. B. nicht zulässig: `(var x, y) = MyMethod();`. Dadurch wird der Fehler CS8184 generiert, da *x* wird innerhalb der Klammern deklariert und *y* ist bereits an anderer Stelle deklariert.
+
 ### <a name="deconstructing-user-defined-types"></a>Dekonstruieren von benutzerdefinierten Typen
 
 Jeder Tupeltyp kann dekonstruiert werden, wie oben gezeigt wurde. Es ist genau so einfach, die Dekonstruktion in beliebigen benutzerdefinierten Typen (Klassen, Strukturen oder sogar Oberflächen) zu aktivieren.
 
 Der Autor des Typs kann eine oder mehrere `Deconstruct`-Methoden definieren, die einer beliebigen Anzahl von `out`-Variablen Werte zuweisen, die die Datenelemente darstellen, die den Typ ausmachen. Der folgende `Person`-Typ definiert z.B. eine `Deconstruct`-Methode, die ein Personenobjekt in die Elemente dekonstruiert, die dem Vor- und Nachnamen entsprechen:
 
-[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Typ mit einer Dekonstruktionsmethode")]
+[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
 Die Dekonstruktionsmethode ermöglicht die Zuordnung von einer `Person` zu zwei Zeichenfolgen, die die Eigenschaften `FirstName` und `LastName` darstellen:
 
-[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Dekonstruieren von einem Klassentyp")]
+[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 Sie können Dekonstruktion selbst für Typen aktivieren, die Sie nicht geschrieben haben.
 Die `Deconstruct`-Methode kann eine Erweiterungsmethode sein, die die zugänglichen Datenmember eines Objekts entpackt. Das folgende Beispiel zeigt einen `Student`-Typ, der vom `Person`-Typ abgeleitet wurde, sowie eine Erweiterungsmethode, die ein `Student` in drei Variablen dekonstruiert, die den `FirstName`, `LastName` und `GPA` darstellen:
 
-[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Typ mit einer Dekonstruktionserweiterungsmethode")]
+[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
 Ein `Student`-Objekt hat jetzt zwei zugängliche `Deconstruct`-Methoden: Die Erweiterungsmethode, die für `Student`-Typen deklariert wurde, und die Member des `Person`-Typs. Beide befinden sich im Geltungsbereich, womit ein `Student` entweder in zwei oder drei Variablen dekonstruiert werden kann.
 Wenn Sie einem Studenten drei Variablen zuweisen, werden der Vorname, der Nachname sowie das GPA zurückgegeben. Wenn Sie einem Studenten zwei Variablen zuweisen, werden nur Vor- und Nachname zurückgegeben.
 
-[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Dekonstruieren eines Klassentyps mithilfe einer Erweiterungsmethode")]
+[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
 Sie sollten sehr vorsichtig mit dem Definieren von mehreren `Deconstruct`-Methoden in einer Klasse oder einer Klassenhierarchie sein. Mehrere `Deconstruct`-Methoden, die die gleiche Anzahl von `out`-Parameter haben, können schnell zu Mehrdeutigkeiten führen. Aufrufer können dann vielleicht nicht die gewünschte `Deconstruct`-Methode aufrufen.
 
@@ -245,4 +258,3 @@ In diesem Beispiel besteht eine minimale Wahrscheinlichkeit für einen mehrdeuti
 ## <a name="conclusion"></a>Schlussfolgerung 
 
 Die neue Sprach- und Bibliotheksunterstützung für benannte Tupel vereinfacht es, mit Entwürfen zu arbeiten, die Datenstrukturen verwenden, die mehrere Elemente definieren, aber keine Verhalten definieren, wie es Klassen und Strukturen tun. Die Verwendung von Tupeln ist für diese Typen einfach und präzise. Sie erhalten alle Vorteile der Überprüfung von statischen Typen, ohne Typen mithilfe der ausführlicheren `class`- oder `struct`-Syntax schreiben zu müssen. Dennoch sind sie für Hilfsmethoden, die `private` oder `internal` sind, am nützlichsten. Erstellen Sie benutzerdefinierte Typen, entweder Typen `class` oder `struct`, wenn Ihre öffentlichen Methoden einen Wert mit mehreren Elementen zurückgeben.
-

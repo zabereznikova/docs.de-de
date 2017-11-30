@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
@@ -242,6 +242,4 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 1.  Löschen Sie den SQL Server-Instanzspeicher, indem Sie die Datei Cleanup.bat im Ordner DbSetup ausführen.  
   
-2.  Entfernen Sie den Quellcode von Ihrer Festplatte.  
-  
-## <a name="see-also"></a>Siehe auch
+2.  Entfernen Sie den Quellcode von Ihrer Festplatte.

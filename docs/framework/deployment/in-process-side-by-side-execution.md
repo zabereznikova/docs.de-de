@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -47,7 +40,7 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
   
 -   **Anwendungsentwickler**. Das parallele Hosting hat so gut wie keine Auswirkungen auf Anwendungsentwickler. Standardmäßig werden Anwendungen immer auf der Version des .NET Framework ausgeführt, auf dem sie erstellt wurden; dies hat sich nicht verändert. Jedoch können Entwickler dieses Verhalten außer Kraft setzen und Anwendungen dazu bringen, unter einer neueren Version des .NET Framework zu laufen (siehe [Szenario 2](#scenarios)).  
   
--   **Bibliotheksentwickler und Consumer**. Das parallele Hosting löst nicht die Probleme mit der Kompatibilität, denen Bibliotheksentwickler gegenüberstehen. Eine Bibliothek, die direkt durch eine Anwendung geladen wird, entweder durch einen Direktverweis oder einen <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>-Aufruf, verwendet weiterhin die Runtime von <xref:System.AppDomain>, in der sie geladen wurde. Sie sollten Ihre Bibliotheken für alle .NET Framework-Versionen testen, die Sie unterstützen möchten. Wenn eine Anwendung mithilfe der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime kompiliert wird, jedoch eine Bibliothek enthält, die mit einer früheren Runtime erstellt wurde, wird dies Bibliothek ebenso die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime verwenden. Wenn Sie jedoch über eine Anwendung verfügen, die mithilfe einer früheren Runtime erstellt wurde, sowie eine Bibliothek, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erstellt wurde, müssen Sie Ihre Anwendung dazu zwingen, auch [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zu verwenden (siehe [Szenario 3](#scenarios)).  
+-   **Bibliotheksentwickler und Consumer**. Das parallele Hosting löst nicht die Probleme mit der Kompatibilität, denen Bibliotheksentwickler gegenüberstehen. Eine Bibliothek, die direkt durch eine Anwendung geladen wird, entweder durch einen Direktverweis oder einen <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Aufruf, verwendet weiterhin die Runtime von <xref:System.AppDomain>, in der sie geladen wurde. Sie sollten Ihre Bibliotheken für alle .NET Framework-Versionen testen, die Sie unterstützen möchten. Wenn eine Anwendung mithilfe der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime kompiliert wird, jedoch eine Bibliothek enthält, die mit einer früheren Runtime erstellt wurde, wird dies Bibliothek ebenso die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Runtime verwenden. Wenn Sie jedoch über eine Anwendung verfügen, die mithilfe einer früheren Runtime erstellt wurde, sowie eine Bibliothek, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erstellt wurde, müssen Sie Ihre Anwendung dazu zwingen, auch [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zu verwenden (siehe [Szenario 3](#scenarios)).  
   
 -   **Entwickler verwalteter COM-Komponenten**. Früher wurden die verwalteten COM-Komponenten automatisch mithilfe der aktuellsten Version der Runtime ausgeführt, die auf dem Computer installiert war. Sie können nun COM-Komponenten für die Version der Runtime ausführen, mit der sie erstellt wurden.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<Startup >-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

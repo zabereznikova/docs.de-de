@@ -1,38 +1,39 @@
 ---
-title: "&quot;XPathNavigator&quot; in Transformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "„XPathNavigator“ in Transformationen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &quot;XPathNavigator&quot; in Transformationen
-Die <xref:System.Xml.XPath.XPathNavigator>\-Klasse ermöglicht zufälligen schreibgeschützten Datenzugriff und ist als Eingabe für XSLT \(Extensible Stylesheet Language for Transformations\).  Sie ist im <xref:System.Xml.XPath.XPathDocument>, im <xref:System.Xml.XmlDataDocument> und im <xref:System.Xml.XmlDocument> implementiert.  Der <xref:System.Xml.XPath.XPathNavigator> basiert auf dem W3C\-Datenmodell \(World Wide Web Consortium\) wie in Abschnitt 5 der XPath\-Empfehlung \(XML Path Language\) beschrieben.  
+# <a name="xpathnavigator-in-transformations"></a>„XPathNavigator“ in Transformationen
+Die <xref:System.Xml.XPath.XPathNavigator>-Klasse ermöglicht zufälligen schreibgeschützten Datenzugriff und ist als Eingabe für XSLT (Extensible Stylesheet Language for Transformations). Sie ist im <xref:System.Xml.XPath.XPathDocument>, im <xref:System.Xml.XmlDataDocument> und im <xref:System.Xml.XmlDocument> implementiert. Der <xref:System.Xml.XPath.XPathNavigator> basiert auf dem W3C-Datenmodell (World Wide Web Consortium) wie in Abschnitt 5 der XPath-Empfehlung (XML Path Language) beschrieben.  
   
- Der <xref:System.Xml.XPath.XPathNavigator> definiert ein Modell eines Cursors für einen beliebigen Datenspeicher und ermöglicht schnelle schreibgeschützte XPath\-Abfragen für einen beliebigen Datenspeicher.  Der <xref:System.Xml.XPath.XPathNavigator> ist auch die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird.  
+ Der <xref:System.Xml.XPath.XPathNavigator> definiert ein Modell eines Cursors für einen beliebigen Datenspeicher und ermöglicht schnelle schreibgeschützte XPath-Abfragen für einen beliebigen Datenspeicher. Der <xref:System.Xml.XPath.XPathNavigator> ist auch die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird.  
   
- Mithilfe der API können Sie Informationen aus dem aktuellen Knoten in dem Speicher abrufen und zu verbundenen Knoten wechseln.  Der <xref:System.Xml.XPath.XPathNavigator> ist ein Cursormodell, bei dem das Durchlaufen eines Speichers mithilfe einer Gruppe von **Move**\-Methoden durchgeführt wird.  Der <xref:System.Xml.XPath.XPathNavigator> ist immer auf einem Knoten positioniert.  Bei einem fehlgeschlagenen Aufruf einer **Move**\-Methode wird der <xref:System.Xml.XPath.XPathNavigator> nicht geändert.  
+ Mithilfe der API können Sie Informationen aus dem aktuellen Knoten in dem Speicher abrufen und zu verbundenen Knoten wechseln. Die <xref:System.Xml.XPath.XPathNavigator> ist ein Cursormodell, das Durchlaufen eines Speichers mithilfe einer Reihe von Durchlauf ausführt **verschieben** Methoden. Der <xref:System.Xml.XPath.XPathNavigator> ist immer auf einem Knoten positioniert. Alle **verschieben** Methode bewirkt, dass ein Fehler auftritt, die die <xref:System.Xml.XPath.XPathNavigator> unverändert.  
   
- Der <xref:System.Xml.XPath.XPathNavigator> ist die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird.  Im folgenden Codebeispiel wird ein Ergebnisstrukturfragment in einem Stylesheet erstellt. Dabei wird die Funktion mit dem Parameter `fragment` aufgerufen, der XML enthält.  
+ Der <xref:System.Xml.XPath.XPathNavigator> ist die Klasse, die zum Durchlaufen von Ereignisstrukturfragmenten verwendet wird. Im folgenden Codebeispiel wird ein Ergebnisstrukturfragment in einem Stylesheet erstellt. Dabei wird die Funktion mit dem Parameter `fragment` aufgerufen, der XML enthält.  
   
-## test.xsl  
+## <a name="testxsl"></a>test.xsl  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl ="urn:schemas-microsoft-com:xslt"  
                 xmlns:user="http://www.adventure-works.com"  
@@ -61,16 +62,15 @@ Die <xref:System.Xml.XPath.XPathNavigator>\-Klasse ermöglicht zufälligen schre
 </xsl:template>  
   
 </xsl:stylesheet>  
-  
 ```  
   
-## test.xml  
+## <a name="testxml"></a>test.xml  
   
-```  
+```xml  
 <root>Some text</root>  
 ```  
   
- Im folgenden Codebeispiel werden das **test.xsl**\-Stylesheet und die **test.xml**\-Eingabedaten verwendet.  
+ Der folgende code verwendet die **test.xsl** Stylesheet und **test.xml** Eingabedaten.  
   
 ```vb  
 Imports System  
@@ -91,7 +91,6 @@ Public Class sample
         xslt.Transform(xd, Nothing, strmTemp, Nothing)  
     End Sub 'Main  
 End Class 'sample  
-  
 ```  
   
 ```csharp  
@@ -117,13 +116,12 @@ public class sample
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
  Das Ergebnis der Transformation befindet sich in der Datei **out.xml**:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
-  
 ```  
   
-## Siehe auch  
- [Implementierung des XSLT\-Prozessors durch die XslTransform\-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Siehe auch  
+ [XslTransform-Klasse implementiert die XSLT-Prozessor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

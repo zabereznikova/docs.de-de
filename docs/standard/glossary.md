@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
+ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
-ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-glossary"></a>.NET-Glossar
 
 Der primäre Zweck dieses Glossars ist die Klärung der Bedeutungen der ausgewählten Begriffe und Akronyme, die häufig ohne Definitionen in der .NET-Dokumentation auftauchen.
@@ -31,15 +29,15 @@ Ahead-of-Time-Compiler
 
 Die ursprüngliche ASP.NET-Implementierung, die im Lieferumfang von .NET Framework enthalten ist.
 
-Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. 
+Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Verweisen auf ASP.NET 4.x, wenn Sie erleichtern, die Sie löschen möchten können nicht mithilfe von ASP.NET beide Implementierungen zu verstehen. 
 
-Siehe [ASP.NET](/aspnet/#pivot=aspnet).
+Finden Sie unter [Dokumentation zu ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von ASP.NET, die auf .NET Core basiert.
 
-Siehe [ASP.NET Core](/aspnet/#pivot=core).
+Finden Sie unter [Dokumentation zu ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>Assembly
 
@@ -278,5 +276,4 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 [.NET Core](../core/index.md)  
 [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)  
 [ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)  
-
 

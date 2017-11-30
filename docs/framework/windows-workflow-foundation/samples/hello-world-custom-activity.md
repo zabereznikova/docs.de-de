@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b05608ca0704483f4318342a733ce363c0a66fc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 75f4a75a38b79e7b7ab18ac2ce3eff2a13aab15f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hello-world-custom-activity"></a>Benutzerdefinierte Aktivität „Hello World“
 In diesem Beispiel werden mehrere Hauptfunktionen von [!INCLUDE[wf](../../../../includes/wf-md.md)] veranschaulicht, einschließlich der Erstellung einer einfachen benutzerdefinierten Aktivität. Einige der Funktionen, die in diesem Beispiel veranschaulicht werden, erstellen eine benutzerdefinierte Aktivität in C# und verwenden `in`-Argumente und `out`-Argumente (<xref:System.Activities.InArgument> und <xref:System.Activities.OutArgument>).  
@@ -59,6 +59,4 @@ In diesem Beispiel werden mehrere Hauptfunktionen von [!INCLUDE[wf](../../../../
   
 2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Drücken Sie F5, um die Projektmappe auszuführen.  
-  
-## <a name="see-also"></a>Siehe auch
+3.  Drücken Sie F5, um die Projektmappe auszuführen.

@@ -1,39 +1,21 @@
 ---
 title: "Erstellen über die Befehlszeile mit csc.exe"
-ms.date: 2017-04-19
+ms.date: 04/19/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.
@@ -119,12 +101,11 @@ csc /target:library /out:Something.xyz *.cs
 Durch den Aufruf des C#-Compilers werden keine Objektdateien (*.obj*) erstellt, stattdessen werden die Ausgabedateien direkt erstellt. Daher benötigt der C#-Compiler keinen Linker.
 
 ## <a name="see-also"></a>Siehe auch
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)   
- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+ [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+ [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-

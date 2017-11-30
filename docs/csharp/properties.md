@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="properties"></a>Eigenschaften
 
 Eigenschaften sind Bürger erster Klasse in C#. Die Sprache definiert die Syntax, mit der Entwickler Code schreiben können, der genau ihre Entwurfsabsicht ausdrückt.
@@ -151,7 +149,7 @@ public class Person
 
 Nun, kann auf die `FirstName`-Eigenschaft von einem beliebigen Code zugegriffen werden, aber es kann nur von einem anderem Code in der `Person`-Klasse zugewiesen werden.
 
-Sie können einen restriktiven Zugriffsmodifizierer zum set- oder get-Accessor hinzufügen. Jeder Zugriffsmodifizierer, den Sie auf den einzelnen Accessor platzieren, muss eingeschränkter sein als der Zugriffsmodifizierer für die Eigenschaftsdefinition. Das Obige ist zulässig, da die `FirstName`-Eigenschaft `public` ist, aber der set-Accessor ist `private`. Sie können keine `private`-Eigenschaft mit einem `public`-Accessor deklarieren. Eigenschaftendeklarationen können ebenfalls als `protected`, `internal`, `protected internal` oder sogar `private` deklariert werden.   
+Sie können einen restriktiven Zugriffsmodifizierer zum set- oder get-Accessor hinzufügen. Jeder Zugriffsmodifizierer, den Sie auf den einzelnen Accessor platzieren, muss eingeschränkter sein als der Zugriffsmodifizierer für die Eigenschaftsdefinition. Das Obige ist zulässig, da die `FirstName`-Eigenschaft `public` ist, aber der set-Accessor ist `private`. Sie können keine `private`-Eigenschaft mit einem `public`-Accessor deklarieren. Eigenschaftsdeklarationen können ebenfalls deklariert werden `protected`, `internal`, `protected internal`, `private protected` oder sogar `private`.   
 
 Es ist auch zulässig, den restriktiveren Modifizierer auf dem `get`-Accessor zu platzieren. Sie verfügen z.B. über eine `public`-Eigenschaft, schränken jedoch den `get`-Accessor auf `private` ein. Dieses Szenario wird in der Praxis nur selten ausgeführt.
 
@@ -317,4 +315,3 @@ Erneut ist dies ein Beispiel für einen Fall, in dem Sie Code in Ihren Accessore
 
 Eigenschaften sind eine Form intelligenter Felder in einer Klasse oder einem Objekt. Außerhalb des Objekts wirken diese wie Felder in dem Objekt. Eigenschaften können jedoch mithilfe der vollständigen Palette der C#-Funktionalität implementiert werden.
 Sie können Überprüfung, verschiedene Eingabehilfen, verzögerte Auswertung oder alle Anforderungen, die Ihre Szenarios benötigen, bereitstellen.
-

@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
+ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c1639651699afbe5fb768db26b98a9b2d734315
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-query-results"></a>Gruppieren von Abfrageergebnissen
 
@@ -37,52 +35,51 @@ Das Gruppieren ist eine der leistungsstärksten Funktionen von LINQ. Die folgend
 ## <a name="example"></a>Beispiel  
  Alle Beispiele in diesem Thema verwenden die folgenden Hilfsklassen und Datenquellen.  
   
- [!code-cs[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Gruppierung von Quellelementen mithilfe einer einzelnen Eigenschaft des Elements als Gruppenschlüssel. In diesem Fall ist der Schlüssel ein `string`, der Nachname des Studenten. Es ist auch möglich, eine Teilzeichenfolge als Schlüssel zu verwenden. Bei der Gruppierungsoperation wird der als Standard für diesen Typ festgelegte Gleichheitsvergleich verwendet.  
   
  Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie die aufrufende Anweisung in der Methode `Main` in `sc.GroupBySingleProperty()`.  
   
- [!code-cs[csProgGuideLINQ#17](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#17](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_2.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Gruppierung von Quellelemente ohne eine Objekteigenschaft als Gruppenschlüssel zu verwenden. In diesem Beispiel ist der Schlüssel der erste Buchstabe des Nachnamens des Studenten.  
   
  Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie die aufrufende Anweisung in der Methode `Main` in `sc.GroupBySubstring()`.  
   
- [!code-cs[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
+ [!code-csharp[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Gruppierung von Quellelementen mithilfe eines numerischen Bereichs als Gruppenschlüssel. Die Abfrage projiziert dann die Ergebnisse in einen anonymen Typ, der nur den Vor- und Nachnamen und den Prozentbereich enthält, dem der Student angehört. Ein anonymer Typ wird verwendet, da es nicht notwendig ist, das gesamte `Student`-Objekt zu nutzen, um die Ergebnisse anzuzeigen. `GetPercentile` ist eine Hilfsfunktion, die einen Prozentwert berechnet, der auf dem Durchschnittsergebnis des Studenten basiert. Die Methode gibt eine ganze Zahl zwischen 0 und 10 zurück.  
   
- [!code-cs[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
+ [!code-csharp[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
   
  Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie die aufrufende Anweisung in der Methode `Main` in `sc.GroupByRange()`.  
   
- [!code-cs[csProgGuideLINQ#19](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_5.cs)]  
+ [!code-csharp[csProgGuideLINQ#19](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_5.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Gruppierung von Vergleichselementen mithilfe eines booleschen Vergleichsausdrucks. In diesem Beispiel testet der boolesche Ausdruck, ob die durchschnittliche Bewertung der Tests eines Studenten größer als 75 ist. Wie in den vorherigen Beispielen werden die Ergebnisse in einen anonymen Typ projiziert, da nicht das gesamte Quellelement benötigt wird. Beachten Sie, dass die Eigenschaften im anonymen Typ Eigenschaften des `Key`-Members werden und dass über den Namen auf sie zugegriffen werden kann, wenn die Abfrage ausgeführt wird.  
   
  Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie die aufrufende Anweisung in der Methode `Main` in `sc.GroupByBoolean()`.  
   
- [!code-cs[csProgGuideLINQ#20](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_6.cs)]  
+ [!code-csharp[csProgGuideLINQ#20](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_6.cs)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung eines anonymen Typs für die Kapselung eines Schlüssels mit mehreren Werten. In diesem Beispiel ist der erste Schlüsselwert der erste Buchstabe des Nachnamens des Studenten. Der zweite Schlüsselwert ist ein boolescher Wert, der angibt, ob der Student in der ersten Prüfung ein Ergebnis über 85 erzielt hat. Sie können die Gruppen anhand jeder Eigenschaft im Schlüssel sortieren.  
   
  Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie die aufrufende Anweisung in der Methode `Main` in `sc.GroupByCompositeKey()`.  
   
- [!code-cs[csProgGuideLINQ#21](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]  
+ [!code-csharp[csProgGuideLINQ#21](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable.GroupBy%2A>   
- <xref:System.Linq.IGrouping%602>   
- [LINQ-Abfrageausdrücke](index.md)   
- [group-Klausel](../language-reference/keywords/group-clause.md)   
- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)   
- [Perform a Subquery on a Grouping Operation (Ausführen einer Unterabfrage für eine Gruppierungsoperation)](perform-a-subquery-on-a-grouping-operation.md)   
- [Create a Nested Group (Erstellen einer geschachtelten Gruppe)](create-a-nested-group.md)   
+ <xref:System.Linq.Enumerable.GroupBy%2A>  
+ <xref:System.Linq.IGrouping%602>  
+ [LINQ-Abfrageausdrücke](index.md)  
+ [group-Klausel](../language-reference/keywords/group-clause.md)  
+ [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
+ [Ausführen einer Unterabfrage für eine Gruppierungsoperation](perform-a-subquery-on-a-grouping-operation.md)  
+ [Erstellen einer geschachtelten Gruppe](create-a-nested-group.md)  
  [Gruppieren von Daten](../programming-guide/concepts/linq/grouping-data.md)
-

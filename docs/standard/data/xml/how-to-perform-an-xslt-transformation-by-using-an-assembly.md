@@ -1,34 +1,35 @@
 ---
-title: "Vorgehensweise: Ausf&#252;hren einer XSLT-Transformation mittels einer Assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Ausf&#252;hren einer XSLT-Transformation mittels einer Assembly
-Der XSLT\-Compiler \(xsltc.exe\) kompiliert XSLT\-Stylesheets und generiert eine Assembly.  Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=fullName>\-Methode übergeben werden.  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly
+Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.  
   
-### So kopieren Sie die XML\- und die XSLT\-Dateien auf den lokalen Computer  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>So kopieren Sie die XML- und die XSLT-Dateien auf den lokalen Computer  
   
--   Kopieren Sie die XSLT\-Datei auf den lokalen Computer, und nennen Sie sie \<legacyBold\>Transform.xsl\<\/legacyBold\>.  
+-   Kopieren Sie die XSLT-Datei auf den lokalen Computer, und nennen Sie sie <legacyBold>Transform.xsl</legacyBold>.  
   
-    ```  
+    ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
       xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
       xmlns:user="urn:my-scripts">  
@@ -93,9 +94,9 @@ Der XSLT\-Compiler \(xsltc.exe\) kompiliert XSLT\-Stylesheets und generiert eine
     </xsl:stylesheet>  
     ```  
   
--   Kopieren Sie die XML\-Datei auf den lokalen Computer, und nennen Sie sie `books.xml`.  
+-   Kopieren Sie die XML-Datei auf den lokalen Computer, und nennen Sie sie `books.xml`.  
   
-    ```  
+    ```xml  
     <?xml version="1.0"?>  
     <catalog>  
        <book id="bk101">  
@@ -136,25 +137,25 @@ Der XSLT\-Compiler \(xsltc.exe\) kompiliert XSLT\-Stylesheets und generiert eine
     </catalog>  
     ```  
   
-### So kompilieren Sie das Stylesheet mit aktiviertem Skript  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>So kompilieren Sie das Stylesheet mit aktiviertem Skript  
   
-1.  Bei Ausführung des folgenden Befehls von der Eingabeaufforderung werden die beiden Assemblys `Transform.dll` und `Transform_Script1.dll` erstellt. \(Dies ist das Standardverhalten.  Sofern nicht anders angegeben, erhalten die Klasse und die Assembly standardmäßig denselben Namen wie das Hauptstylesheet.\):  
+1.  Bei Ausführung des folgenden Befehls von der Eingabeaufforderung werden die beiden Assemblys `Transform.dll` und `Transform_Script1.dll` erstellt. (Dies ist das Standardverhalten. Sofern nicht anders angegeben, erhalten die Klasse und die Assembly standardmäßig denselben Namen wie das Hauptstylesheet.):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- Der folgende Befehl legt den Klassennamen explizit auf \<legacyBold\>Transform\<\/legacyBold\> fest:  
+ Der folgende Befehl legt den Klassennamen explizit auf <legacyBold>Transform</legacyBold> fest:  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### So binden Sie die kompilierte Assembly beim Kompilieren Ihres Codes als Verweis ein  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>So binden Sie die kompilierte Assembly beim Kompilieren Ihres Codes als Verweis ein  
   
-1.  Sie können in Visual Studio eine Assembly einbinden, indem Sie im Projektmappen\-Explorer oder von der Eingabeaufforderung aus einen Verweis hinzufügen.  
+1.  Sie können in Visual Studio eine Assembly einbinden, indem Sie im Projektmappen-Explorer oder von der Eingabeaufforderung aus einen Verweis hinzufügen.  
   
-2.  Wenn Sie mit der Eingabeaufforderung und C\# arbeiten, verwenden Sie folgenden Befehl:  
+2.  Wenn Sie mit der Eingabeaufforderung und C# arbeiten, verwenden Sie folgenden Befehl:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -166,9 +167,9 @@ xsltc /settings:script+ /class:Transform Transform.xsl
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### So verwenden Sie die kompilierte Assembly in Ihrem Code  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a>So verwenden Sie die kompilierte Assembly in Ihrem Code  
   
-1.  Im folgenden Beispiel wird gezeigt, wie Sie die XSLT\-Transformation mithilfe des kompilierten Stylesheets ausführen können.  
+1.  Im folgenden Beispiel wird gezeigt, wie Sie die XSLT-Transformation mithilfe des kompilierten Stylesheets ausführen können.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
@@ -185,10 +186,10 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- im oben aufgeführten Beispiel.  Weitere Informationen zur Assembly.Load\-Methode finden Sie unter <xref:System.Reflection.Assembly.Load%2A>  
+ im oben aufgeführten Beispiel. Weitere Informationen zur Assembly.Load-Methode finden Sie unter <xref:System.Reflection.Assembly.Load%2A>  
   
-## Siehe auch  
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [XSLT\-Compiler \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)   
- [XSLT\-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [Erstellen über die Befehlszeile mit csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [XSLT-Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [Erstellen über die Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

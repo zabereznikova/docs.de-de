@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
-ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Entwickeln von Clientanwendungen mit .NET Framework
 Es gibt mehrere Möglichkeiten zum Entwickeln Windows-basierter Anwendungen mit .NET Framework, die lokal auf den Computern oder Geräten der Benutzer ausgeführt werden. Dieser Abschnitt enthält Themen, in denen beschrieben wird, wie Windows-basierte Anwendungen mit Windows Presentation Foundation (WPF) oder mit Windows Forms erstellt werden. Sie können jedoch außerdem Webanwendungen mit .NET Framework sowie Clientanwendungen für Computer oder Geräte erstellen, die Sie über den Windows Store oder den Windows Phone Store verfügbar machen.  
@@ -62,9 +60,8 @@ Es gibt mehrere Möglichkeiten zum Entwickeln Windows-basierter Anwendungen mit 
  Beschreibt die Arten, auf die Sie mit ASP.NET Web-Apps entwickeln können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Portable Klassenbibliothek](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)   
- [Übersicht](../../docs/framework/get-started/overview.md)   
- [Entwicklungshandbuch](../../docs/framework/development-guide.md)   
- [Gewusst wie: Erstellen einer Windows-Desktopanwendung](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)   
+ [Portable Klassenbibliothek](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
+ [Übersicht](../../docs/framework/get-started/overview.md)  
+ [Entwicklungshandbuch](../../docs/framework/development-guide.md)  
+ [Vorgehensweise: Erstellen einer Windows-Desktop-Anwendung](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Windows-Dienstanwendungen](../../docs/framework/windows-services/index.md)
-

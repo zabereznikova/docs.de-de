@@ -1,77 +1,83 @@
 ---
-title: "Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Konvertieren einer numerischen Benutzereingabe in eine Zahl"
-  - "Formatieren [.NET Framework], Zahlen"
-  - "Zahlenformatierung [.NET Framework]"
-  - "Zahlen [.NET Framework], Konvertieren einer numerischen Benutzereingabe in eine Zahl"
-  - "Numerische Formatzeichenfolgen [.NET Framework]"
-  - "Analysieren von Zeichenfolgen [.NET Framework], Numerische Zeichenfolgen"
+title: 'Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- parsing strings [.NET Framework], numeric strings
+- converting numeric user input to number
+- numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 92e28e3b303a7523b9da69b7eb283e0261fc681c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
-Da eine Webseite auf der ganzen Welt angezeigt werden kann, können Benutzer numerische Daten unter Verwendung unbegrenzt vieler Formate in ein <xref:System.Web.UI.WebControls.TextBox>\-Steuerelement eingeben.  Folglich ist es sehr wichtig, das Gebietsschema und die Kultur des Webseitenbenutzers zu ermitteln.  Wenn Sie eine Benutzereingabe analysieren, können Sie die Formatierungskonventionen übernehmen, die vom Gebietsschema und der Kultur des Benutzers vorgegeben werden.  
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
+Da eine Webseite an einer beliebigen Stelle in der ganzen Welt angezeigt werden kann, können Benutzer eingegeben numerische Daten in eine <xref:System.Web.UI.WebControls.TextBox> -Steuerelement in eine nahezu unbegrenzte Anzahl von Formaten. Daher ist es sehr wichtig, um zu bestimmen, das Gebietsschema und die Kultur des Benutzers für die Webseite. Wenn Sie Benutzereingaben analysieren, können Sie dann die Formatierungskonventionen definiert, die vom Gebietsschema und die Kultur des Benutzers anwenden.  
   
-### So konvertieren Sie numerische Eingaben aus einem TextBox\-Websteuerelement in eine Zahl  
+### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Numerische Eingabe aus einem Web TextBox-Steuerelement in eine Zahl zu konvertieren.  
   
-1.  Stellen Sie fest, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName>\-Eigenschaft zurückgegebene Zeichenfolgenarray Daten enthält.  Falls nicht, fahren Sie mit Schritt 6 fort.  
+1.  Bestimmen, ob das Zeichenfolgenarray zurückgegebene der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> Eigenschaft wird aufgefüllt. Wenn sie nicht der Fall ist, fahren Sie mit Schritt 6.  
   
-2.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>\-Eigenschaft zurückgegebene Zeichenfolgenarray Daten enthält, rufen Sie dessen erstes Element ab.  Das erste Element gibt die standardmäßige bzw. bevorzugte Sprache und Region des Benutzers an.  
+2.  Wenn das Array von Zeichenfolgen von zurückgegeben der <xref:System.Web.HttpRequest.UserLanguages%2A> Eigenschaft wird angegeben, das erste Element abzurufen. Das erste Element gibt an Standardeinstellung oder bevorzugte Sprache und Region des Benutzers.  
   
-3.  Instanziieren Sie ein <xref:System.Globalization.CultureInfo>\-Objekt, das die bevorzugte Kultur des Benutzers darstellt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName>\-Konstruktor aufrufen.  
+3.  Instanziieren einer <xref:System.Globalization.CultureInfo> -Objekt, das den Benutzer darstellt bevorzugte Kultur durch Aufrufen der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Konstruktor.  
   
-4.  Rufen Sie entweder die `TryParse`\-Methode oder die `Parse`\-Methode des numerischen Typs auf, in den die Benutzereingabe konvertiert werden soll.  Verwenden Sie eine Überladung der `TryParse`\-Methode oder der `Parse`\-Methode mit einem `provider`\-Parameter, und übergeben Sie eines der folgenden Objekte:  
+4.  Rufen Sie entweder die `TryParse` oder die `Parse` -Methode des numerischen Typs, die den Benutzer konvertiert werden sollen die Eingabe an. Verwenden Sie eine Überladung der der `TryParse` oder `Parse` Methode mit einer `provider` Parameter, und übergeben sie eine der folgenden:  
   
-    -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>\-Objekt.  
+    -   Die <xref:System.Globalization.CultureInfo> in Schritt 3 erstellten Objekt.  
   
-    -   Das <xref:System.Globalization.NumberFormatInfo>\-Objekt, das durch die <xref:System.Globalization.CultureInfo.NumberFormat%2A>\-Eigenschaft des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>\-Objekts zurückgegeben wird.  
+    -   Die <xref:System.Globalization.NumberFormatInfo> von zurückgegebene Objekt der <xref:System.Globalization.CultureInfo.NumberFormat%2A> Eigenschaft von der <xref:System.Globalization.CultureInfo> in Schritt 3 erstellten Objekt.  
   
-5.  Wenn die Konvertierung fehlschlägt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element in dem durch die <xref:System.Web.HttpRequest.UserLanguages%2A>\-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
+5.  Wenn die Konvertierung fehlschlägt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im Zeichenfolgenarray zurückgegebenes der <xref:System.Web.HttpRequest.UserLanguages%2A> Eigenschaft.  
   
-6.  Wenn die Konvertierung weiterhin fehlschlägt oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>\-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge unter Verwendung der invarianten Kultur, die von der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>\-Eigenschaft zurückgegeben wird.  
+6.  Wenn die Konvertierung weiterhin fehlschlägt oder von der String-Array zurückgegeben der <xref:System.Web.HttpRequest.UserLanguages%2A> -Eigenschaft leer ist, analysiert die Zeichenfolge mit der invarianten Kultur zurückgegeben, durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> Eigenschaft.  
   
-## Beispiel  
- Das folgende Beispiel stellt eine vollständige Code\-Behind\-Seite für ein Web Form dar, in dem der Benutzer zur Eingabe eines numerischen Wertes in ein <xref:System.Web.UI.WebControls.TextBox>\-Steuerelement aufgefordert und der Wert in eine Zahl konvertiert wird.  Diese Zahl wird dann verdoppelt und unter Verwendung derselben wie für die Originaleingabe verwendeten Formatierungsregeln angezeigt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird der vollständige Code-Behind-Seite für ein Web Form, die den Benutzer auffordert, geben Sie einen numerischen Wert in einer <xref:System.Web.UI.WebControls.TextBox> steuern und konvertiert ihn in eine Zahl. Diese Anzahl ist dann verdoppelt und mit den gleichen Formatierungsregeln wie die ursprüngliche Eingabe angezeigt.  
   
  [!code-csharp[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/cs/NumericUserInput1.aspx.cs#1)]
  [!code-vb[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/vb/NumericUserInput1.aspx.vb#1)]  
   
- Die <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName>\-Eigenschaft wird unter Verwendung der Kulturnamen aufgefüllt, die in `Accept-Language`\-Headern innerhalb einer HTTP\-Anforderung enthalten sind.  Allerdings schließen nicht alle Browser `Accept-Language`\-Header in ihre Anforderungen ein, und die Header können vom Benutzer auch vollständig unterdrückt werden.  Daher ist es wichtig, bei der Analyse der Benutzereingabe über eine Fallbackkultur zu verfügen.  Die Fallbackkultur ist in der Regel die von der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>\-Eigenschaft zurückgegebene invariante Kultur.  Benutzer können auch Kulturnamen für Internet Explorer bereitstellen, die sie in ein Textfeld eingeben. Dabei ist es möglich, dass die Kulturnamen nicht gültig sind.  Aus diesem Grund sollte beim Instanziieren eines <xref:System.Globalization.CultureInfo>\-Objekts unbedingt eine Ausnahmebehandlung verwendet werden.  
+ Die <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> Eigenschaft wird angegeben, aus den Kulturnamen, die in enthaltenen `Accept-Language` Header in einer HTTP-Anforderung. Allerdings enthalten, nicht von allen Browsern `Accept-Language` Header in ihren Anforderungen und die Benutzer können auch unterdrückt werden die Kopfzeilen vollständig. Daher ist es wichtig, eine Fallbackkultur haben bei der Analyse der Benutzereingabe. In der Regel ist die Fallbackkultur der invarianten Kultur zurückgegebenes <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Benutzer können Internet Explorer auch mit Kulturnamen bereitstellen, dass sie in einem Textfeld, die die Möglichkeit, dass erstellt eingegeben, die den Kulturnamen möglicherweise nicht gültig sind. Daher ist es wichtig, eine Ausnahmebehandlung verwendet, bei der Instanziierung einer <xref:System.Globalization.CultureInfo> Objekt.  
   
- Wenn das <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName>\-Array durch eine von Internet Explorer gesendeten HTTP\-Anforderung abgerufen wird, wird es in der Reihenfolge der Benutzereinstellungen aufgefüllt.  Das erste Element im Array enthält den Namen der primären Kultur\/Region des Benutzers.  Wenn das Array zusätzliche Elemente enthält, weist Ihnen Internet Explorer beliebig einen Qualitätsbezeichner zu, der durch ein Semikolon vom Kulturnamen getrennt ist.  Beispielsweise könnte ein Eintrag für die Kultur fr\-FR wie folgt aussehen: `fr-FR;q=0.7`.  
+ Beim Abrufen der aus einer HTTP-Anforderung von Internet Explorer, übermittelt der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> Array wird aufgefüllt, in der Reihenfolge der benutzereinstellung. Das erste Element im Array enthält den Namen des primären Kultur bzw. der Region des Benutzers. Wenn das Array zusätzliche Elemente enthält, weist Internet Explorer werden nach dem Zufallsprinzip einen Spezifizierer Qualität, die aus den Namen der Kultur, die durch ein Semikolon getrennt wird. Beispielsweise kann ein Eintrag für die Kultur fr-FR Form dauern `fr-FR;q=0.7`.  
   
- Im Beispiel wird der <xref:System.Globalization.CultureInfo.%23ctor%2A>\-Konstruktor, dessen `useUserOverride`\-Parameter auf `false` festgelegt ist, aufgerufen, um ein neues <xref:System.Globalization.CultureInfo>\-Objekt zu erstellen.  So wird sichergestellt, dass, wenn der Kulturname dem standardmäßigen Kulturnamen auf dem Server entspricht, das neue, vom Klassenkonstruktor erstellte <xref:System.Globalization.CultureInfo>\-Objekt die Standardkultureinstellungen beinhaltet und keine Einstellungen widerspiegelt, die durch die Anwendung **Regions\- und Sprachoptionen** des Servers überschrieben wurden.  Es ist unwahrscheinlich, dass die Werte von auf dem Server überschriebenen Einstellungen auf dem Benutzersystem vorhanden sind oder in der Benutzereingabe wiedergegeben werden.  
+ Im Beispiel wird die <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor mit seiner `useUserOverride` Parametersatz auf `false` zum Erstellen eines neuen <xref:System.Globalization.CultureInfo> Objekt. Dadurch wird sichergestellt, dass, wenn der Name der Kultur der Standardname für die Kultur auf dem Server ist die neue <xref:System.Globalization.CultureInfo> Objekt erstellt, indem der Konstruktor der Klasse enthält die Standardeinstellungen für eine Kultur und reflektiert keine Einstellungen, die mit des Servers überschrieben  **Regionalen und Sprachoptionen** Anwendung. Die Werte in "alle Einstellungen außer Kraft gesetzte" auf dem Server sind wahrscheinlich nicht auf dem System des Benutzers vorhanden ist oder in der Eingabe des Benutzers berücksichtigt werden.  
   
- Durch Ihren Code kann entweder die `Parse`\-Methode oder die `TryParse`\-Methode des numerischen Typs aufgerufen werden, in den die Benutzereingabe konvertiert wird.  Für einen einzelnen Analysevorgang muss eine Analysemethode möglicherweise wiederholt aufgerufen werden.  Folglich ist die `TryParse`\-Methode besser geeignet, da sie `false` zurückgibt, falls ein Analysevorgang fehlschlägt.  Die Behandlung wiederholter Ausnahmen, die von der `Parse`\-Methode ausgelöst werden können, kann sich in einer Webanwendung hingegen als kostenintensives Unterfangen herausstellen.  
+ Kann Ihren Code rufen Sie entweder die `Parse` oder `TryParse` Methode des numerischen Typs, der die Benutzereingabe wird in konvertiert werden. Wiederholte Aufrufe an eine Analysemethode können für eine einzelnes Analysevorgang erforderlich sein. Daher die `TryParse` Methode ist besser, weil sie zurückgibt `false` Wenn es sich bei einem Analysevorgang misslingt. Im Gegensatz dazu Behandeln der wiederholten Ausnahmen, die von ausgelöst werden möglicherweise die `Parse` Methode kann ein sehr ressourcenintensiver Vorgang in einer Webanwendung sein.  
   
-## Kompilieren des Codes  
- Um den Code zu kompilieren, kopieren Sie ihn in eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Code\-Behind\-Seite, um den gesamten vorhandenen Code zu ersetzen.  Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Webseite sollte die folgenden Steuerelemente enthalten:  
+## <a name="compiling-the-code"></a>Kompilieren des Codes  
+ Um den Code zu kompilieren, kopieren Sie ihn in ein [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Code-Behind-Seite, damit diese sie den vorhandenen Code ersetzt. Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Webseite sollte die folgenden Steuerelemente enthalten:  
   
--   Ein <xref:System.Web.UI.WebControls.Label>\-Steuerelement, auf das im Code nicht verwiesen wird.  Legen Sie die zugehörige <xref:System.Web.UI.WebControls.TextBox.Text%2A>\-Eigenschaft auf "Enter a Number:" fest.  
+-   Ein <xref:System.Web.UI.WebControls.Label> -Steuerelement, das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A> -Eigenschaft auf "Geben Sie eine Zahl:".  
   
--   Ein <xref:System.Web.UI.WebControls.TextBox>\-Steuerelement mit dem Namen `NumericString`.  
+-   Ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement namens `NumericString`.  
   
--   Ein <xref:System.Web.UI.WebControls.Button>\-Steuerelement mit dem Namen `OKButton`.  Legen Sie die entsprechende <xref:System.Web.UI.WebControls.Button.Text%2A>\-Eigenschaft auf "OK" fest.  
+-   Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement namens `OKButton`. Legen Sie dessen <xref:System.Web.UI.WebControls.Button.Text%2A> Eigenschaft auf "OK".  
   
- Ändern Sie den Namen der Klasse von `NumericUserInput` in den durch das `Inherits`\-Attribut der `Page`\-Direktive der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Seite definierten Klassennamen.  Ändern Sie den Namen des `NumericInput`\-Objektverweises in den Namen, der vom `id`\-Attribut des `form`\-Tags der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]\-Seite definiert wird.  
+ Ändern Sie den Namen der Klasse aus `NumericUserInput` auf den Namen der Klasse, die von definiert wird die `Inherits` Attribut des der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Seite `Page` Richtlinie. Ändern Sie den Namen des der `NumericInput` -Objektverweis auf den Namen von definiert die `id` Attribut der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Seite `form` Tag.  
   
-## .NET Framework-Sicherheit  
- Um zu verhindern, dass ein Benutzer Skriptcode in den HTML\-Stream einfügt, sollte die Benutzereingabe in der Serverantwort nie direkt wiedergegeben werden.  Stattdessen sollte sie mithilfe der <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=fullName>\-Methode codiert werden.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Um zu verhindern, dass einen Benutzer Räumen Skript in den HTML-Stream, sollte eine Benutzereingabe nie direkt wieder in die Antwort des Servers wiederholt werden. Sie sollten stattdessen codiert werden, mithilfe der <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> Methode.  
   
-## Siehe auch  
- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
  [Verarbeiten numerischer Zeichenfolgen](../../../docs/standard/base-types/parsing-numeric.md)

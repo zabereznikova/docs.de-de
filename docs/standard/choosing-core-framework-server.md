@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: de-de
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -40,7 +39,7 @@ In den folgenden Abschnitten werden die zuvor genannten Gründe für eine Entsch
 
 Wenn Ihre Anwendung (Web/Dienst) auf mehreren Plattformen ausgeführt werden muss (Windows, Linux und macOS), verwenden Sie .NET Core.
 
-.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) für Windows und Mac. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editors von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editors von Drittanbietern rufen IntelliSense mit [OmniSharp](http://www.omnisharp.net/) ab. Da Sie die [.NET Core-Befehlszeilentools](../core/tools/index.md) direkt verwenden können, die für alle unterstützten Plattformen verfügbar sind, ist ein Code-Editor überflüssig.
+.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine Umgebung IDE (Integrated Development) für Windows und Mac OS. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editors von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editors von Drittanbietern rufen IntelliSense mit [OmniSharp](http://www.omnisharp.net/) ab. Da Sie die [.NET Core-Befehlszeilentools](../core/tools/index.md) direkt verwenden können, die für alle unterstützten Plattformen verfügbar sind, ist ein Code-Editor überflüssig.
 
 ### <a name="microservices-architecture"></a>Microservicearchitektur
 
@@ -48,7 +47,7 @@ Durch eine Microservicearchitektur ist eine dienstübergreifende Kombination aus
 
 Es stehen viele verschiedene Infrastrukturplattformen zur Verfügung. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) wurde für große und komplexe Microservicesysteme entwickelt. [Azure App Service](https://azure.microsoft.com/services/app-service/) ist eine gute Wahl bei zustandslosen Microservices. Auf Docker basierende Alternativen zu Microservices sind – wie im Abschnitt [Container](#containers) erläutert – mit allen Arten von Microserviceimplementierungen kompatibel. All diese Plattformen unterstützen .NET Core und eignen sich daher ideal zum Hosten Ihrer Microservices.
 
-Weitere Informationen zur Microservicearchitektur finden Sie unter [.NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md).
+Weitere Informationen zur Microservicearchitektur finden Sie [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md).
 
 ### <a name="containers"></a>Container
 
@@ -107,10 +106,9 @@ Zusätzlich zum offiziellen Meilensteinplan werden auch andere Frameworks in .NE
 Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nicht. Zum Beispiel wird für einige Azure-Dienste, wie z.B. Service Fabric Stateful Reliable Services und Service Fabric Reliable Actors, .NET Framework benötigt. Einige andere Dienste stellen ein SDK bereit, das noch nicht für die Nutzung in .NET Core verfügbar ist. Dies ist allerdings nur vorübergehend der Fall, weil .NET Core von sämtlichen Azure-Diensten verwendet wird. In der Zwischenzeit können Sie anstelle des Client-SDKs stets die entsprechende REST-API verwenden.
 
 ## <a name="see-also"></a>Siehe auch
- [Choose between ASP.NET and ASP.NET Core (Wahl zwischen ASP.NET und ASP.NET Core)](/aspnet/core/choose-aspnet-framework)   
- [Leitfaden für .NET Core](../core/index.md)   
- [Porting from .NET Framework to .NET Core (Portieren von .NET Framework zu .NET Core)](../core/porting/index.md)   
- [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)   
- [.NET-Komponenten – Übersicht](components.md)   
+ [Wählen Sie zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
+ [Leitfaden für .NET Core](../core/index.md)  
+ [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)  
+ [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)  
+ [.NET-Komponenten – Übersicht](components.md)  
  [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)
-

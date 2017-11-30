@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
 [Zurück](delegates-overview.md)
@@ -26,7 +24,7 @@ Dieser Artikel behandelt die Klassen in .NET Framework, die Delegaten unterstüt
 
 ## <a name="defining-delegate-types"></a>Definieren von Delegattypen
 
-Wir beginnen mit dem Schlüsselwort „delegate“, da Sie dieses beim Arbeiten mit Delegaten hauptsächlich verwenden werden. Der Code, der vom Compiler bei Verwendung des `delegate`-Schlüsselworts generiert wird, verweist auf Methodenaufrufe, die Member der Klassen @System.Delegate und @System.MulticastDelegate aufrufen. 
+Wir beginnen mit dem Schlüsselwort „delegate“, da Sie dieses beim Arbeiten mit Delegaten hauptsächlich verwenden werden. Der Code, der vom Compiler bei Verwendung des `delegate`-Schlüsselworts generiert wird, verweist auf Methodenaufrufe, die Member der Klassen <xref:System.Delegate> und <xref:System.MulticastDelegate> aufrufen. 
 
 Sie definieren einen Delegattyp, der Syntax verwendet, die dem Definieren einer Methodensignatur ähnlich ist. Sie fügen das `delegate`-Schlüsselwort einfach der Definition hinzu.
 
@@ -122,7 +120,7 @@ Das Sort()-Beispiel fügt dem Delegaten typischerweise eine einzelne Zielmethode
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Delegatklassen und MulticastDelegate-Klassen
 
-Die oben beschriebene Sprachunterstützung bietet die Funktionen und Unterstützung, die Sie in der Regel bei der Arbeit mit Delegaten benötigen. Diese Funktionen beruhen auf zwei Klassen in .NET Core Framework: @System.Delegate und @„System.MulticastDelegate“.
+Die oben beschriebene Sprachunterstützung bietet die Funktionen und Unterstützung, die Sie in der Regel bei der Arbeit mit Delegaten benötigen. Diese Funktionen basieren auf zwei Klassen von .NET Core-Framework: <xref:System.Delegate> und <xref:System.MulticastDelegate>.
 
 Die `System.Delegate`-Klasse und ihre einzige direkte untergeordnete Klasse `System.MulticastDelegate` bieten die Framework-Unterstützung für das Erstellen von Delegaten, das Registrieren von Methoden als Delegatziele und das Aufrufen aller Methoden, die als Delegatziel registriert sind. 
 
@@ -143,4 +141,3 @@ Die Methoden, die Sie bei der Arbeit mit Delegaten am häufigsten verwenden, sin
 Nun haben Sie die Sprachsyntax und die Klassen gesehen, die Delegaten unterstützen. Als Nächstes untersuchen wir, wie stark typisierte Delegaten verwendet, erstellt und aufgerufen werden.
 
 [Weiter](delegates-strongly-typed.md)
-

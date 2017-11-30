@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client application services, configuring
+helpviewer_keywords: client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -54,7 +51,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
   
 6.  Wenn Sie **Formularauthentifizierung verwenden** ausgewählt haben, können Sie optional einen Wert im Feld **Anmeldeinformationsanbieter** angeben. Der Anmeldeinformationsanbieter muss die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>-Schnittstelle implementieren. Durch Verwenden eines Anmeldeinformationsanbieters können Sie die Anmeldebenutzeroberfläche vom übrigen Anwendungscode trennen. Dadurch können Sie ein einzelnes Anmeldedialogfeld erstellen, das in mehreren Anwendungen verwendet wird. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).  
   
-     Wenn Sie einen Anmeldeinformationsanbieter angeben, müssen Sie ihn als einen von der Assembly qualifizierten Typnamen angeben. Weitere Informationen finden Sie unter <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> und [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md). In seiner einfachsten Form sieht ein von der Assembly qualifizierter Typname wie im folgenden Beispiel aus:  
+     Wenn Sie einen Anmeldeinformationsanbieter angeben, müssen Sie ihn als einen von der Assembly qualifizierten Typnamen angeben. Weitere Informationen finden Sie unter <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> und [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md). In seiner einfachsten Form sieht ein von der Assembly qualifizierter Typname wie im folgenden Beispiel aus:  
   
     ```  
     MyNamespace.MyLoginClass, MyAssembly  
@@ -99,7 +96,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
   
      Der Standardwert von `Data Source = |SQL/CE|` wird im Textfeld angezeigt.  
   
-3.  Behalten Sie den Standardwert für die Verbindungszeichenfolge bei, um eine SQL Server Compact-Datenbank zu generieren und zu verwenden. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generiert eine Datenbankdatei und speichert sie im Verzeichnis, das von der <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName>-Eigenschaft angegeben wird.  
+3.  Behalten Sie den Standardwert für die Verbindungszeichenfolge bei, um eine SQL Server Compact-Datenbank zu generieren und zu verwenden. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generiert eine Datenbankdatei und speichert sie im Verzeichnis, das von der <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>-Eigenschaft angegeben wird.  
   
 4.  Fügen Sie zum Generieren und Verwenden einer verschlüsselten [!INCLUDE[ssEW](../../../includes/ssew-md.md)]-Datenbank der Verbindungszeichenfolge die Werte `password` und `encrypt database` hinzu, wie im folgenden Beispiel gezeigt.  
   
@@ -124,7 +121,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
     ```  
   
 ## <a name="using-custom-providers"></a>Verwenden von benutzerdefinierten Anbietern  
- Die Clientanwendungsdienste-Funktion verwendet standardmäßig die Anbieter im <xref:System.Web.ClientServices.Providers?displayProperty=fullName>-Namespace. Wenn Sie die Anwendung mithilfe der Seite **Dienste** im **Projekt-Designer** konfigurieren, werden der Datei „App.config“ Verweise auf diese Anbieter hinzugefügt. Diese Standardanbieter greifen auf entsprechende Anbieter auf dem Server zu. Webdienste werden häufig so konfiguriert, dass sie über Anbieter, wie z. B. <xref:System.Web.Security.SqlMembershipProvider> und <xref:System.Web.Security.SqlRoleProvider>, auf Benutzerdaten zugreifen.  
+ Die Clientanwendungsdienste-Funktion verwendet standardmäßig die Anbieter im <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>-Namespace. Wenn Sie die Anwendung mithilfe der Seite **Dienste** im **Projekt-Designer** konfigurieren, werden der Datei „App.config“ Verweise auf diese Anbieter hinzugefügt. Diese Standardanbieter greifen auf entsprechende Anbieter auf dem Server zu. Webdienste werden häufig so konfiguriert, dass sie über Anbieter, wie z. B. <xref:System.Web.Security.SqlMembershipProvider> und <xref:System.Web.Security.SqlRoleProvider>, auf Benutzerdaten zugreifen.  
   
  Wenn Sie benutzerdefinierte Dienstanbieter verwenden möchten, ändern Sie normalerweise die Anbieter auf Serverseite, sodass sie für alle Clientanwendungen gelten, die auf den Server zugreifen. Sie haben allerdings die Möglichkeit, nicht standardmäßige Anbieter auf Clientseite zu verwenden. Sie können benutzerdefinierte Authentifizierungs- oder Rollenanbieter in der Datei "App.config" des Projekts angeben, wie im folgenden Verfahren gezeigt. Informationen zum Erstellen von benutzerdefinierten Authentifizierungs- und Rollenanbietern finden Sie unter [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) und [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Sie können auch einen benutzerdefinierten Einstellungsanbieter verwenden, indem Sie die `Settings`-Klasse (Zugriff als `Properties.Settings.Default` in C# und als `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) in Ihrem Projekt ändern. Weitere Informationen finden Sie unter [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
@@ -140,7 +137,7 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
   
 4.  Gehen Sie zum `<providers>`-Element innerhalb des `<membership>`- oder `<roleManager>`-Elements. Diese Elemente sind untergeordnete Elemente des `<system.web>`-Elements. Das `<membership>`-Element wird verwendet, um den Authentifizierungsanbieter anzugeben, und das `<roleManager>`-Element wird zur Angabe von Rollenanbietern verwendet.  
   
-5.  Fügen Sie ein `<add>`-Element als untergeordnetes Element des `<providers>`-Elements hinzu. Sie müssen die `name`- und `type`-Attribute wie im folgenden Beispiel gezeigt festlegen. Der `type`-Attributswert muss ein von einer Assembly qualifizierter Typname sein. Weitere Informationen finden Sie unter <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> und [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md).  
+5.  Fügen Sie ein `<add>`-Element als untergeordnetes Element des `<providers>`-Elements hinzu. Sie müssen die `name`- und `type`-Attribute wie im folgenden Beispiel gezeigt festlegen. Der `type`-Attributswert muss ein von einer Assembly qualifizierter Typname sein. Weitere Informationen finden Sie unter <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> und [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md).  
   
     ```xml  
     <add name="MyCustomRoleProvider" type="MyNamespace.MyRoleProvider, MyAssembly" />  
@@ -153,14 +150,13 @@ In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[vsprvs](../../../include
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Services-Seite, Projekt-Designer](https://msdn.microsoft.com/library/bb398109)   
- [Dialogfeld „Erweiterte Einstellungen für Dienste“](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)   
- [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)   
- [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
- [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)   
- [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)   
- [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
+ [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Seite „Services“, Projekt-Designer](https://msdn.microsoft.com/library/bb398109)  
+ [Dialogfeld „Erweiterte Einstellungen für Dienste“](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Implementieren eines Mitgliedschaftsanbieters](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [Implementieren eines Rollenanbieters](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [Architektur der Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="64-bit-applications"></a>64-Bit-Anwendungen
 Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll. WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht. WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.  
@@ -48,7 +46,7 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
   
 -   Code, der `IntPtr` in `Int32` umwandelt.  
   
- Weitere Informationen zum Portieren einer 32-Bit-Anwendung auf die 64-Bit-CLR finden Sie in der MSDN Library unter [Migrieren von verwaltetem Code (32 Bit) zu Code mit 64 Bit](http://go.microsoft.com/fwlink/?LinkId=150542).  
+ Weitere Informationen zum Portieren einer 32-Bit-Anwendung auf 64-Bit-CLR ausgeführt wird, finden Sie unter [Migrieren von 32-Bit-verwaltetem Code auf 64-Bit](https://msdn.microsoft.com/library/ms973190.aspx).  
   
 ## <a name="general-64-bit-programming-information"></a>Allgemeine Informationen zur 64-Bit-Programmierung  
  Allgemeine Informationen zur 64-Bit-Programmierung finden Sie in den folgenden Dokumenten:  
@@ -73,5 +71,4 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bestimmen des Status einer EXE- oder DLL-Datei  
  Um zu bestimmen, ob eine EXE- oder DLL-Datei nur auf einer bestimmten Plattform oder unter WOW64 ausgeführt werden soll, verwenden Sie das [CorFlags.exe (Konvertierungstool CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) ohne Optionen. Weiterhin können Sie mit "CorFlags.exe" auch den Plattformstatus einer EXE- oder DLL-Datei ändern. Im CLR-Header einer Visual Studio-Assembly ist die Nummer der Hauptversion der Laufzeit auf 2 und die Nummer der Nebenversion auf 5 festgelegt. Anwendungen, für die die Nebenversionsnummer der Laufzeit auf 0 festgelegt ist, werden als ältere Anwendungen behandelt und auf 64-Bit-Computern unter WOW64 ausgeführt.  
   
- Wenn Sie eine EXE- oder DLL-Datei programmgesteuert abfragen möchten, um festzustellen, ob sie nur auf einer bestimmten Plattform oder unter WOW64 ausgeführt werden kann, verwenden Sie die <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName>-Methode.
-
+ Wenn Sie eine EXE- oder DLL-Datei programmgesteuert abfragen möchten, um festzustellen, ob sie nur auf einer bestimmten Plattform oder unter WOW64 ausgeführt werden kann, verwenden Sie die <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType>-Methode.

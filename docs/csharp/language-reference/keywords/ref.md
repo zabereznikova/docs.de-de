@@ -1,42 +1,24 @@
 ---
 title: ref (C#-Referenz)
-ms.date: 2017-05-30
+ms.date: 05/30/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
 - ref
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 003125ca6218d42a919d8bb592b5454a7cb387c7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -57,17 +39,17 @@ In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein A
 
 Um einen `ref`-Parameter zu verwenden, müssen sowohl die Methodendefinition als auch die aufrufende Methode explizit das Schlüsselwort `ref` verwenden, wie im folgenden Beispiel gezeigt.  
 
-[!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
 
 Ein Argument, das an einen `ref`-Parameter übergeben wird, muss vor der Übergabe initialisiert werden. Dies unterscheidet sich von den [out](out.md)-Parametern, deren Argumente nicht explizit initialisiert werden müssen, bevor sie übergeben werden.
 
 Member einer Klasse können keine Signaturen haben, die sich nur durch `ref` und `out` voneinander unterscheiden. Es tritt ein Compilerfehler auf, wenn der einzige Unterschied zwischen beiden Member eines Typs der ist, dass einer von ihnen über einen `ref`-Parameter und der andere über einen `out`-Parameter verfügt. Der folgende Code wird z. B. nicht kompiliert.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+ [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
   
  Allerdings können Methoden überladen werden, wenn eine Methode einen `ref`- oder `out`-Parameter hat und die andere über einen Werteparameter verfügt, wie im folgenden Beispiel gezeigt.
   
- [!code-cs[Ref-und-Überladungen](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
+ [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
   
  In anderen Situationen, die eine Signaturabstimmung benötigen, z. B. beim Ausblenden oder Überschreiben, sind `ref` und `out` Bestandteil der Signatur und passen nicht zueinander.  
   
@@ -85,7 +67,7 @@ Member einer Klasse können keine Signaturen haben, die sich nur durch `ref` und
 
 In den vorherigen Beispielen wurden Werttypen als Verweis übergeben. Sie können das `ref`-Schlüsselwort auch verwenden, um Verweistypen als Verweis zu übergeben. Die Übergabe eines Verweistyps als Verweis ermöglicht es der aufgerufenen Methode, das Objekt, auf die der Verweisparameter im Aufrufer verweist, zu ersetzen. Der Speicherort des Objekts wird als Wert des Verweisparameters an die Methode übergeben. Wenn Sie den Wert am Speicherort des Parameters ändern (um auf ein neues Objekt zu verweisen), ändern Sie auch den Speicherort, auf den der Aufrufer verweist. Im folgenden Beispiel wird eine Instanz eines Verweistyps als ein `ref`-Parameter übergeben.   
   
- [!code-cs[Verweise nach Verweisen](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+ [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
 
 Weitere Informationen zum Übergeben von Verweistypen durch einen Wert und durch einen Verweis finden Sie unter [Übergeben von Verweistypparametern](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
@@ -106,7 +88,7 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
    ref return Decimal.Zero;
    ``` 
 
-Zum Ändern des Zustands des Objekts durch den Aufrufer muss der Verweisrückgabewert in einer Variable gespeichert werden, die explizit als [lokale ref-Variable](#ref-locals) definiert wird. 
+In der Reihenfolge für den Aufrufer zum Ändern des Zustands des Objekts, den Verweis zurückzugeben Wert muss gespeichert werden, um eine Variable, die als explizit definiert ist ein [Ref lokale](#ref-locals). 
 
 Ein Beispiel finden Sie unter [Beispiel für ref-Rückgaben und lokale ref-Variablen](#a-ref-returns-and-ref-locals-example).
 
@@ -128,19 +110,18 @@ Beachten Sie, dass das `ref`-Schlüsselwort an beiden Stellen verwendet werden m
 
 Im folgenden Beispiel wird eine `Book`-Klasse mit zwei <xref:System.String>-Feldern definiert: `Title` und `Author`. Außerdem wird eine `BookCollection`-Klasse definiert, die ein privates Array von `Book`-Objekten enthält. Einzelne Buchobjekte werden durch Aufrufen der `GetBookByTitle`-Methode als Verweis zurückgegeben.
 
-[!code-cs[csrefRückgaben](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
 
 Speichert der Aufrufer den von der `GetBookByTitle`-Methode zurückgegeben Wert als lokale ref-Variable, werden Änderungen, die der Aufrufer am Rückgabewert vornimmt, im `BookCollection`-Objekt wiedergegeben. Dies wird im folgenden Beispiel gezeigt:
 
-[!code-cs[csrefRückgaben](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)   
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [Methodenparameter](../../../csharp/language-reference/keywords/method-parameters.md)   
+ [C#-Referenz](../../../csharp/language-reference/index.md)  
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [Methodenparameter](../../../csharp/language-reference/keywords/method-parameters.md)  
  [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-

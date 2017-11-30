@@ -3,16 +3,15 @@ title: "Verweisbefehl „dotnet-add“ – .NET Core-CLI"
 description: "Der dotnet add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add-Verweis
 
@@ -42,7 +41,7 @@ Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen 
 
 `PROJECT`
 
-Gibt die Projektdatei an. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einer Projektmappendatei.
+Gibt die Projektdatei an. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei.
 
 `PROJECT_REFERENCES`
 
@@ -64,7 +63,7 @@ Projektverweis hinzufügen:
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-Mehrere Projektverweise hinzufügen:
+Fügen Sie dem Projekt mehrere Projektverweise im aktuellen Verzeichnis hinzu:
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

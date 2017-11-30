@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 2943cc58d29323afb81f1c9ae7fc71b538851186
-ms.openlocfilehash: e1cb22d78ab9a28cbcd28a99b0b44415b5c46a4d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -86,7 +85,7 @@ Es gibt einige Aspekte zu RIDs, die Sie bei der Verwendung bedenken müssen:
 Um RIDs verwenden zu können, müssen Sie wissen, welche RIDs es gibt. Zur Plattform werden regelmäßig neue Werte hinzugefügt.
 Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) im CoreFX-Repository auf die neueste und vollständige Version.
 
-Mit dem .NET Core 2.0 SDK wird das Konzept von portablen RIDs eingeführt. Dabei handelt es sich um neue zum RID-Diagramm hinzugefügte Werte, die nicht an eine bestimmte Version oder Betriebssystemverteilung gebunden sind. Sie sind besonders bei mehreren Linux-Distributionen nützlich.
+Mit dem .NET Core 2.0 SDK wird das Konzept von portablen RIDs eingeführt. Dabei handelt es sich um neue zum RID-Diagramm hinzugefügte Werte, die nicht an eine bestimmte Version oder Betriebssystemverteilung gebunden sind. Sie sind besonders nützlich, beim Umgang mit mehreren Linux-Distributionen.
 
 Die folgende Liste enthält die am häufigsten verwendeten RIDs für jedes Betriebssystem. Die Werte `arm` oder `corert` werden nicht behandelt.
 
@@ -111,6 +110,8 @@ Die folgende Liste enthält die am häufigsten verwendeten RIDs für jedes Betri
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
+
+Finden Sie unter [Voraussetzungen für die .NET Core unter Windows](windows-prerequisites.md) für Weitere Informationen.
 
 ## <a name="linux-rids"></a>RIDs für Linux
 
@@ -164,12 +165,19 @@ Die folgende Liste enthält die am häufigsten verwendeten RIDs für jedes Betri
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 oder höher)
 
-## <a name="os-x-rids"></a>RIDs für OS X
+Finden Sie unter [Voraussetzungen für die .NET Core unter Linux](linux-prerequisites.md) für Weitere Informationen.
 
-- `osx-x64` (.NET Core 2.0 oder höher)
+## <a name="macos-rids"></a>MacOS RIDs
+
+MacOS RIDs verwenden das ältere "OSX" branding.
+
+- `osx-x64`(.NET Core 2.0 oder höher, ist mindestens Version `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 oder höher)
+- `osx.10.13-x64`
+
+Finden Sie unter [Voraussetzungen für die .NET Core auf MacOS](macos-prerequisites.md) für Weitere Informationen.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Android-RIDs (.NET Core 2.0 oder höher)
 
@@ -177,5 +185,5 @@ Die folgende Liste enthält die am häufigsten verwendeten RIDs für jedes Betri
 - `android.21`
 
 ## <a name="see-also"></a>Siehe auch
- [Runtime-IDs](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
 
+[Runtime-IDs](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

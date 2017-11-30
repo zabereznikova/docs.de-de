@@ -6,12 +6,11 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 84f1eaf5fbfcdf8d1dd1b90545f9236e2daedd15
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -39,9 +38,9 @@ Eine umfassende Liste mit von .NET Core 1.x unterstützten Betriebssystemen find
 
 ## <a name="net-core-dependencies"></a>.NET Core-Abhängigkeiten
 
-.NET Core benötigt Visual C++ Redistributable zur Ausführung unter Windows-Versionen vor Windows 10 und Windows Server 2016. Diese Abhängigkeit wird automatisch durch das .NET Core-Installationsprogramm installiert.
+.NET Core 1.1 und früher erfordert Visual C++ Redistributable, wenn auf Windows-Versionen vor Windows 10 und Windows Server 2016 ausgeführt wird. Diese Abhängigkeit wird automatisch durch das .NET Core-Installationsprogramm installiert.
 
-[Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685) muss in folgenden Fällen installiert werden:
+[Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685) muss in folgenden Fällen installiert werden:
 
    * Beim Installieren von .NET Core mit dem [Installationsprogrammskript](./tools/dotnet-install-script.md).
    * Beim Bereitstellen einer eigenständigen .NET Core-Anwendung.
@@ -95,4 +94,3 @@ Sobald die .NET Core 2.x SDK installiert ist, verwendet Visual Studio 2017 diese
      > * Verifizieren Sie die Versionsnummer im Dialogfeld **Info zu Microsoft Visual Studio**.
 >     * Für .NET Core 2.x-Apps muss diese Visual Studio 2017 Version 15.3. (26730.01) oder höher sein.
 >     * Für .NET Core 1.x-Apps muss diese Visual Studio 2017 Version 15.0. (26228.04) oder höher sein.
-

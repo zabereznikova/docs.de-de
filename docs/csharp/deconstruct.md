@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen #
 
@@ -34,7 +34,7 @@ Die Features von C# bieten eine integrierte Unterstützung für Dekonstruieren v
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Es gibt zwei Wege zum Dekonstruieren eines Tupel:
+Es gibt drei Möglichkeiten, ein Tupel löschen:
 
 - Sie können den Typ jedes Felds innerhalb der Klammern explizit deklarieren. Das folgende Beispiel verwendet diese Methode, um den 3-Tupel zu dekonstruieren, der von der Methode `QueryCityData` zurückgegeben wurde.
 
@@ -50,9 +50,15 @@ Es gibt zwei Wege zum Dekonstruieren eines Tupel:
 
     Dies ist jedoch sehr mühselig und wird nicht empfohlen.
 
+- Schließlich können Sie das Tupel in Variablen löschen, die bereits deklariert wurde.
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 Beachten Sie, dass Sie einen bestimmten Typ außerhalb der Klammern nicht spezifizieren können, auch wenn jedes Feld im Tupel den selben Typ hat. Dadurch wird der Compilerfehler CS8136 „Durch die Dekonstruktion der Form „var (...)“ wird ein bestimmter Typ für „var“ unzulässig.“ generiert.
 
 Beachten Sie, dass Sie ebenfalls jedes Element des Tupel einer Variable zuweisen müssen. Wenn Sie Elemente auslassen, generiert der Compiler den Fehler: CS8132, „Tupel mit x Elementen kann nicht in y Variablen dekonstruiert werden.“
+
+Beachten Sie, dass die Deklarationen und Zuweisungen durch, die vorhandenen Variablen auf der linken Seite von einem Deconstruction gemischt werden dürfen. Der Compiler generiert Fehler CS8184, "eine Deconstruction kann nicht Deklarationen und Ausdrücke auf der linken Seite mix." Wenn die Member neu deklarierte und vorhandene Variablen enthalten.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Dekonstruieren von Tupelelementen mit Ausschüssen
 

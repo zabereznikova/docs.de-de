@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
+ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
 
@@ -32,11 +30,11 @@ ms.lasthandoff: 07/28/2017
   
 -   Abrufen einer Teilmenge der Elemente zum Erstellen einer neuen Sequenz ohne die einzelnen Elemente zu verändern. Die Abfrage kann die zurückgegebenen Sequenzen dann auf verschiedene Arten sortieren oder gruppieren, wie im folgenden Beispiel gezeigt wird (Annahme: `scores` ist `int[]`):  
   
-     [!code-cs[csrefQueryExpBasics#45](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_1.cs)]  
+     [!code-csharp[csrefQueryExpBasics#45](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_1.cs)]  
   
 -   Abrufen einer Sequenz von Elementen wie im vorherigen Beispiel, aber mit Transformation der Elemente in einen neuen Objekttyp. Eine Abfrage kann z.B. nur die Nachnamen aus bestimmten Kundendatensätzen in einer Datenquelle abrufen. Sie kann möglicherweise auch den vollständigen Datensatz abrufen und ihn zum Erstellen eines anderen Objekttyps im Arbeitsspeicher oder sogar XML-Daten vor dem Generieren der endgültigen Ergebnissequenz verwenden. Im folgenden Beispiel wird eine Projektion von `int` in `string` veranschaulicht. Beachten Sie den neuen Typ von `highScoresQuery`.  
   
-     [!code-cs[csrefQueryExpBasics#46](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_2.cs)]  
+     [!code-csharp[csrefQueryExpBasics#46](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_2.cs)]  
   
 -   Abrufen eines Singleton-Werts zu den Quelldaten, z.B.:  
   
@@ -46,11 +44,11 @@ ms.lasthandoff: 07/28/2017
   
     -   Das erste Element, das einer Bedingung entspricht oder die Summe bestimmter Werte in einer angegebenen Menge von Elementen Die folgende Abfrage gibt z.B. die Anzahl von Ergebnissen aus dem `scores`-Ganzzahlarray zurück, die höher als 80 sind:  
   
-     [!code-cs[csrefQueryExpBasics#47](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_3.cs)]  
+     [!code-csharp[csrefQueryExpBasics#47](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_3.cs)]  
   
      Beachten Sie im vorherigen Beispiel die Verwendung von Klammern um den Abfrageausdruck vor dem Aufruf der `Count`-Methode. Sie können dies auch mit einer neuen Variable ausdrücken, um das konkrete Ergebnis zu speichern. Diese Technik ist besser lesbar, da die Variablen, die die Abfrage speichern, von der Abfrage getrennt sind, die ein Ergebnis speichert.  
   
-     [!code-cs[csrefQueryExpBasics#48](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_4.cs)]  
+     [!code-csharp[csrefQueryExpBasics#48](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_4.cs)]  
   
  Im vorherigen Beispiel wird die Abfrage im Aufruf von `Count` ausgeführt, da `Count` die Ergebnisse durchlaufen muss, um die Anzahl der von `highScoresQuery` zurückgegebenen Elemente zu bestimmen.  
   
@@ -66,17 +64,17 @@ ms.lasthandoff: 07/28/2017
   
  Das folgende Codebeispiel zeigt einen einfachen Abfrageausdruck mit einer Datenquelle, einer Filtering-Klausel, einer Ordering-Klausel und ohne Transformationen der Quellelemente. Die Klausel `select` beendet die Abfrage.  
   
- [!code-cs[csrefQueryExpBasics#49](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_5.cs)]  
+ [!code-csharp[csrefQueryExpBasics#49](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_5.cs)]  
   
  Im vorherigen Beispiel ist `scoreQuery` eine *Abfragevariable*, die manchmal auch einfach als *Abfrage* bezeichnet wird. Die Abfragevariable speichert keine tatsächlichen Ergebnisdaten, die in der `foreach`-Schleife erzeugt werden. Wenn die `foreach`-Anweisung ausgeführt wird, werden die Ergebnisse der Abfrage nicht über die Abfragevariable `scoreQuery` zurückgegeben. Stattdessen werden sie über die Iterationsvariable `testScore` zurückgegeben. Die `scoreQuery`-Variable kann in einer zweiten `foreach`-Schleife durchlaufen werden. Die gleichen Ergebnisse werden erzeugt, solange weder die Variable noch die Datenquelle geändert wurde.  
   
  Eine Abfragevariable kann eine Abfrage speichern, die in einer Abfragesyntax oder Methodensyntax oder einer Kombination aus beiden ausgedrückt wird. In den folgenden Beispielen sind sowohl `queryMajorCities` als auch `queryMajorCities2` Abfragevariablen:  
   
- [!code-cs[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
+ [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
  Andererseits zeigen die beiden nächsten Beispiele Variablen, die keine Abfragevariablen sind, obwohl beide mit einer Abfrage initialisiert werden. Sie sind keine Abfragevariablen, da sie Ergebnisse speichern:  
   
- [!code-cs[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
+ [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   
  Weitere Informationen zu den verschiedenen Verfahren zum Ausdrücken von Abfragen finden Sie unter [Query syntax and method syntax in LINQ (Abfragesyntax und Methodensyntax in LINQ)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 07/28/2017
  
  Diese Dokumentation enthält normalerweise den expliziten Typ der Abfragevariablen, um die Typbeziehung zwischen der Abfrage und der [select-Klausel](../language-reference/keywords/select-clause.md) darzustellen. Sie können aber auch das Schlüsselwort [var](../language-reference/keywords/var.md) verwenden, um den Compiler anzuweisen, den Typ einer Abfragevariable (oder eine andere lokale Variable) zur Kompilierzeit abzuleiten. Das Beispiel einer Abfrage, das vorher in diesem Thema gezeigt wurde, kann beispielsweise auch durch implizierte Typisierung ausgedrückt werden:  
   
- [!code-cs[csrefQueryExpBasics#52](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_8.cs)]  
+ [!code-csharp[csrefQueryExpBasics#52](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_8.cs)]  
   
  Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) und [Type relationships in LINQ query operations (Typbeziehungen in LINQ-Abfragevorgängen)](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
@@ -92,13 +90,13 @@ ms.lasthandoff: 07/28/2017
  
  Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Er gibt eine Datenquelle zusammen mit einer Bereichsvariablen an. Die Bereichsvariable stellt jedes darauffolgende Element in der Quellsequenz dar, wenn das Quellelement durchsucht wird. Die Bereichsvariable ist, basierend auf den Typen des Elements in der Datenquelle, stark typisiert. Im folgenden Beispiel ist die Bereichsvariable auch als `Country` typisiert, da `countries` ein Array von `Country`-Objekten ist. Da die Bereichsvariable stark typisiert ist, können Sie den Punktoperator verwenden, um auf verfügbare Member des Typs zuzugreifen.  
   
- [!code-cs[csrefQueryExpBasics#53](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_9.cs)]  
+ [!code-csharp[csrefQueryExpBasics#53](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_9.cs)]  
   
  Die Bereichsvariable befindet sich im Geltungsbereich, bis die Abfrage entweder mit einem Semikolon oder einer *continuation*-Klausel beendet wird.  
   
  Ein Abfrageausdruck enthält möglicherweise mehrere `from`-Klauseln. Verwenden Sie zusätzliche `from`-Klauseln, wenn jedes Element in der Quellsequenz selbst eine Auflistung ist oder eine Auflistung enthält. Nehmen wir beispielsweise an, dass Sie über eine Auflistung von `Country`-Objekten verfügen, von der jedes eine Auflistung von `City`-Objekten mit dem Namen `Cities` enthält. Verwenden Sie zwei `from`-Klauseln, um die `City`-Objekte in jedem `Country` abzufragen, wie hier gezeigt:  
   
- [!code-cs[csrefQueryExpBasics#54](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_10.cs)]  
+ [!code-csharp[csrefQueryExpBasics#54](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_10.cs)]  
   
  Weitere Informationen finden Sie unter [from-Klausel](../language-reference/keywords/from-clause.md).  
   
@@ -110,18 +108,18 @@ ms.lasthandoff: 07/28/2017
  
  Verwenden Sie die `group`-Klausel, um eine Sequenz von Gruppen zu erzeugen, die von einem von Ihnen angegebenen Schüssel organisiert wird. Der Schlüssel kann ein beliebiger Datentyp sein. Die folgende Abfrage erstellt z.B. eine Sequenz von Gruppen, die ein oder mehrere `Country`-Objekte enthält und deren Schlüssel ein `char`-Wert ist.  
   
- [!code-cs[csrefQueryExpBasics#55](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_11.cs)]  
+ [!code-csharp[csrefQueryExpBasics#55](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_11.cs)]  
   
  Weitere Informationen zum Gruppieren finden Sie unter [group-Klausel](../language-reference/keywords/group-clause.md).  
   
 #### <a name="select-clause"></a>select-Klausel  
  Verwenden Sie die `select`-Klausel, um alle anderen Typen von Sequenzen zu erzeugen. Eine einfache `select`-Klausel erzeugt nur eine Sequenz von Objekten desselben Typs wie die Objekte, die in der Datenquelle enthalten sind. In diesem Beispiel enthält die Datenquelle `Country`-Objekte. Die `orderby`-Klausel sortiert die Elemente in eine neue Reihenfolge, und die `select`-Klausel erzeugt eine Sequenz der neu angeordneten `Country`-Objekte.  
   
- [!code-cs[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
+ [!code-csharp[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
   
  Die `select`-Klausel kann zum Transformieren von Quelldaten in Sequenzen neuer Typen verwendet werden. Diese Transformation wird auch als *Projektion* bezeichnet. Im folgenden Beispiel *projiziert`select` die* -Klausel eine Sequenz anonymer Typen, die nur eine Teilmenge der Felder im originalen Element enthalten. Beachten Sie, dass die neuen Objekte mit einem Objektinitialisierer initialisiert werden.  
   
- [!code-cs[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
+ [!code-csharp[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
   
  Weitere Informationen zu allen Verfahren, in denen eine `select`-Klausel zum Transformieren von Daten verwendet werden kann, finden Sie unter [select-Klausel](../language-reference/keywords/select-clause.md).  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 07/28/2017
  
  Sie können das Schlüsselwort `into` in einer `select`- oder `group`-Klausel verwenden, um einen temporären Bezeichner zu erstellen, der eine Abfrage speichert. Dieses Vorgehen ist ratsam, wenn Sie zusätzliche Abfragevorgänge nach einem grouping- oder einem select-Vorgang auf eine Abfrage ausführen müssen. Im folgenden Beispiel werden `countries` gemäß der Bevölkerung in Bereiche von 10 Millionen gruppiert. Nachdem diese Gruppen erstellt wurden, filtern zusätzliche Klauseln einige Gruppen heraus und sortieren die Gruppen dann in aufsteigender Reihenfolge. Um diese zusätzlichen Vorgänge durchzuführen, wird die von `countryGroup` dargestellte Fortsetzung benötigt.  
   
- [!code-cs[csrefQueryExpBasics#58](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_14.cs)]  
+ [!code-csharp[csrefQueryExpBasics#58](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_14.cs)]  
   
  Weitere Informationen finden Sie unter [into](../language-reference/keywords/into.md).  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 07/28/2017
 
  Verwenden Sie die Klausel `where` zum Herausfiltern von Elementen aus den Quelldaten basierend auf einem oder mehreren Prädikatausdrücken. Im folgenden Beispiel verfügt die Klausel `where` über ein Prädikat mit zwei Bedingungen.  
   
- [!code-cs[csrefQueryExpBasics#59](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]  
+ [!code-csharp[csrefQueryExpBasics#59](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]  
   
  Weitere Informationen finden Sie unter [where-Klausel](../language-reference/keywords/where-clause.md).  
   
@@ -149,7 +147,7 @@ ms.lasthandoff: 07/28/2017
 
  Verwenden Sie die `orderby`-Klausel zum Sortieren der Ergebnisse in auf- oder absteigender Reihenfolge. Sie können auch eine sekundäre Sortierreihenfolge angeben. Im folgenden Beispiel wird mit der Eigenschaft `Area` eine primäre Sortierung der `country`-Objekte durchgeführt. Anschließend wird eine sekundäre Sortierung mit der Eigenschaft `Population` durchgeführt.  
   
- [!code-cs[csrefQueryExpBasics#60](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_16.cs)]  
+ [!code-csharp[csrefQueryExpBasics#60](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_16.cs)]  
   
  Das Schlüsselwort `ascending` ist optional; wenn keine andere Reihenfolge angegeben ist, ist dies die Standardreihenfolge. Weitere Informationen finden Sie unter [orderby-Klausel](../language-reference/keywords/orderby-clause.md).  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 07/28/2017
 
  Verwenden Sie die `join`-Klausel zum Zuordnen und/oder Kombinieren von Elementen aus einer Datenquelle mit Elementen aus einer anderen Datenquelle basierend auf einem Gleichheitsvergleich zwischen angegebenen Schlüsseln in jedem Element. In LINQ werden Verknüpfungsvorgänge für Sequenzen von Objekten ausgeführt, deren Elemente unterschiedliche Typen haben. Nachdem Sie zwei Segmente verknüpft haben, müssen Sie eine `select`- oder `group`-Anweisung verwenden, um anzugeben, welches Element in der Ausgabesequenz gespeichert werden soll. Sie können auch einen anonymen Typ verwenden, um Eigenschaften aus jedem Satz der zugewiesenen Elemente in einem neuen Typ für die Ausgabesequenz zu kombinieren. Im folgenden Beispiel werden `prod`-Objekte, deren `Category`-Eigenschaft einer der Kategorien im `categories`-Zeichenfolgearray entspricht, zugewiesen. Produkte, deren `Category` keiner Zeichenfolge in `categories` entspricht, werden herausgefiltert. Die `select`-Anweisung projiziert einen neuen Typ, dessen Eigenschaften aus `cat` und `prod` stammen.  
   
- [!code-cs[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
+ [!code-csharp[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
   
  Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [join-Klausel](../language-reference/keywords/join-clause.md).  
   
@@ -165,7 +163,7 @@ ms.lasthandoff: 07/28/2017
 
  Verwenden Sie die `let`-Klausel zum Speichern der Ergebnisse eines Ausdrucks, z.B. eines Methodenaufrufs, in einer neuen Bereichsvariable. Im folgenden Beispiel speichert die Bereichsvariable `firstName` das erste Elemente eines Arrays von Zeichenfolgen, das von `Split` zurückgegeben wird.  
   
- [!code-cs[csrefQueryExpBasics#62](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_18.cs)]  
+ [!code-csharp[csrefQueryExpBasics#62](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_18.cs)]  
   
  Weitere Informationen finden Sie unter [let-Klausel](../language-reference/keywords/let-clause.md).  
   
@@ -173,13 +171,12 @@ ms.lasthandoff: 07/28/2017
 
  Ein Abfrageausdruck selbst kann eine Abfrageklausel enthalten, die manchmal als *Unterabfrage* bezeichnet wird. Jede Unterabfrage beginnt mit ihrer eigenen `from`-Klausel, die nicht unbedingt auf die gleiche Datenquelle in der ersten `from`-Klausel zeigt. Die folgende Abfrage zeigt z.B. einen Abfrageausdruck, der in der Select-Anweisung zum Abrufen der Ergebnisse eines Gruppierungsvorganges verwendet wird.  
   
- [!code-cs[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
+ [!code-csharp[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
   
  Weitere Informationen finden Sie unter [How to: perform a subquery on a grouping operation (Vorgehensweise: Ausführen einer Unterabfrage für einen Gruppierungsvorgang)](perform-a-subquery-on-a-grouping-operation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../programming-guide/index.md)   
- [LINQ query expressions (LINQ-Abfrageausdrücke)](index.md)   
- [Query keywords (LINQ) (Abfrageschlüsselwörter (LINQ))](../language-reference/keywords/query-keywords.md)   
- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../programming-guide/concepts/linq/standard-query-operators-overview.md)
-
+ [C#-Programmierhandbuch](../programming-guide/index.md)  
+ [LINQ-Abfrageausdrücke](index.md)  
+ [Abfrageschlüsselwörter (LINQ)](../language-reference/keywords/query-keywords.md)  
+ [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)

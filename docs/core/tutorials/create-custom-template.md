@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
+ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
-ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
 In diesem Tutorial lernen Sie:
@@ -41,7 +39,7 @@ Wenn Sie das heruntergeladenen Beispiel mit einer Dateisystemverteilung verwende
 
 ## <a name="create-a-template-from-a-project"></a>Erstellen einer Vorlage aus einem Projekt
 
-Verwenden Sie ein vorhandenes Projekt, von dem Sie wissen, dass es ordnungsgemäß kompiliert und ausgeführt wird, oder erstellen Sie ein neues Konsolenanwendungsprojekt in einem Ordner auf Ihrer Festplatte. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents/Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
+Verwenden Sie ein vorhandenes Projekt, das Sie sich überzeugt haben kompiliert und ausgeführt wird, oder erstellen ein neuen Konsolenprojekts für die app in einem Ordner auf der Festplatte freigeben. In diesem Tutorial wird davon ausgegangen, dass der Name des Projektordners *GarciaSoftware.ConsoleTemplate.CSharp* ist und dieser unter *Documents/Templates* im Benutzerprofil gespeichert ist. Der Projektvorlagenname im Tutorial folgt dem Format *\<Unternehmensname>.\<Vorlagentyp>.\<Programmiersprache>*, aber Sie können Ihrem Projekt und Ihrer Vorlage einen beliebigen anderen Namen geben.
 
 1. Fügen Sie dem Stamm des Projekts einen Ordner mit dem Namen *.template.config* hinzu.
 1. Erstellen Sie im Ordner *.template.config* eine *template.json*-Datei, um Ihre Vorlage zu konfigurieren. Weitere Informationen und Memberdefinitionen für die *template.json*-Datei finden Sie unter [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](../tools/custom-templates.md#templatejson) und im [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template).
@@ -219,4 +217,3 @@ dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate
 [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
 [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)  
-

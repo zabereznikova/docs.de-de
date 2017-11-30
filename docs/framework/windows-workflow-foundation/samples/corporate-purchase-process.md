@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.  
@@ -180,6 +180,4 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 -   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   **Verbinden als**: der Benutzer zugreifen kann die Ausschreibung mit verschiedenen Identitäten, indem er den gewünschten Teilnehmer in der **anzeigen als** Kombinationsfeld auswählt.  
-  
-## <a name="see-also"></a>Siehe auch
+-   **Verbinden als**: der Benutzer zugreifen kann die Ausschreibung mit verschiedenen Identitäten, indem er den gewünschten Teilnehmer in der **anzeigen als** Kombinationsfeld auswählt.

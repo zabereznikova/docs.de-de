@@ -9,14 +9,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
+ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="pattern-matching"></a>Musterabgleich #
 
 Muster testen, ob ein Wert eine bestimmte *Form* hat, und können Informationen vom Wert *extrahieren*, wenn er die entsprechende Form hat. Der Musterabgleich stellt eine kürzere Syntax für Algorithmen bereit, die Sie bereits verwenden. Sie erstellen bereits mithilfe vorhandener Syntax Musterabgleichalgorithmen. Sie schreiben `if`- oder `switch`-Anweisungen, die Werte testen. Wenn diese Anweisungen anschließend übereinstimmen, extrahieren und verwenden Sie die Informationen von diesem Wert. Die neuen Syntaxelemente sind Erweiterungen für Anweisungen, mit denen Sie bereits vertraut sind: `is` und `switch`. Diese neuen Erweiterungen kombinieren das Testen von Werten mit dem Extrahieren dieser Information.
@@ -33,7 +31,7 @@ Während Sie dieses Beispiel bearbeiten, vergleichen Sie diesen Code damit, wie 
 
 Anstatt mit einer Definition einer abstrakten Form zu starten und verschiedene bestimmte Formklassen hinzuzufügen, beginnen wir mit einfachen reinen Datendefinitionen für jede der geometrischen Formen:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Formdefinitionen")]
+[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Wir schreiben von diesen Strukturen eine Methode, die den Bereich einiger Formen berechnet.
 
@@ -41,13 +39,13 @@ Wir schreiben von diesen Strukturen eine Methode, die den Bereich einiger Formen
 
 Vor C# 7 mussten Sie jeden Typ in einer Reihe von `if`- und `is`-Anweisungen testen:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Klassisches Typmuster mit „is“")]
+[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 Der oben dargestellte Code ist ein klassischer Ausdruck des *Typmusters*: Sie testen eine Variable, um ihren Typ zu bestimmen, und handeln anhand dieses Typs unterschiedlich.
 
 Dieser Code wird einfacher, indem Sie Erweiterungen für den `is`-Ausdruck verwenden, um eine Variable zuzuweisen, wenn der Test erfolgreich ausgeführt wird:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "Musterausdruck „is“")]
+[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 In dieser aktualisierten Version testet der `is`-Ausdruck die Variable und weist sie einer neuen Variablen des richtigen Typs zu. Beachten Sie ebenfalls, dass die Version den `Rectangle`-Typ enthält, der ein `struct` ist. Der neue `is`-Ausdruck funktioniert mit Werttypen sowie mit Verweistypen.
 
@@ -70,12 +68,12 @@ Im Laufe der Zeit müssen Sie vielleicht andere Formtypen unterstützen. Mit der
 Die herkömmliche `switch`-Anweisung war ein Musterausdruck: Sie unterstützte das Konstantenmuster.
 Sie können eine Variable mit einer beliebigen Konstante vergleichen, die in einer `case`-Anweisung verwendet wird:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Klassische switch-Anweisung")]
+[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 Das einzige Muster, das von der `switch`-Anweisung unterstützt wurde, war das Konstantenmuster. Sie war zudem auf numerische Typen und den `string`-Typ beschränkt.
 Diese Einschränkungen wurden entfernt, und Sie können nun eine `switch`-Anweisung mit dem Typmuster schreiben:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Mit switch-Ausdruck berechnen")]
+[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 Die `switch`-Anweisung des Musterabgleichs verwendet ähnliche Syntax für Entwickler, die die `switch`-Anweisung im klassischen C-Stil verwendet haben. Jede `case` wird ausgewertet und der Code unterhalb der Bedingung, die mit der Eingabevariablen übereinstimmt, wird ausgeführt. Die Codeausführung kann nicht von einem case-Ausdruck in den nächsten „fortfahren“; die Syntax der `case`-Anweisung erfordert, dass jede `case` mit `break`, `return` oder `goto` endet.
 
@@ -93,7 +91,7 @@ Beachten Sie, dass der `default`-case nur ausgeführt wird, wenn keine andere ca
 
 Sie können Sonderfälle für diese Formen erstellen, die einen 0-Bereich haben, indem Sie eine `when`-Klausel in der `case`-Bezeichnung verwenden. Ein Quadrat mit einer Seitenlänge von 0 oder ein Kreis mit einem Radius von 0 hat einen 0-Bereich. Sie geben diese Bedingung mithilfe einer `when`-Klausel für die `case`-Bezeichnung an:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Formen mit 0-Bereich berechnen")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Diese Änderung veranschaulicht einige wichtige Punkte hinsichtlich der neuen Syntax. Zuerst können mehrere `case`-Bezeichnungen auf den `switch`-Abschnitt angewendet werden. Der Anweisungsblock wird ausgeführt, wenn eine dieser Bezeichnungen `true` ist. Wenn in diesem Fall der `switch`-Ausdruck entweder ein Kreis oder ein Quadrat mit einem 0-Bereich ist, gibt die Methode die Konstante 0 zurück.
 
@@ -104,15 +102,37 @@ Allerdings ist es unmöglich zu sagen, *welche* während der Kompilierung zugewi
 
 Nachdem diese Formen mit 0-Bereich hinzugefügt wurden, werden wir ein paar weitere Formtypen einfügen: ein Rechteck und ein Dreieck:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Rechteck und Dreieck hinzufügen")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  Dieser Satz von Änderungen fügt `case`-Bezeichnungen für den degenerierten case und Bezeichnungen und Blöcke für jede der neuen Formen hinzu. 
 
 Zuletzt können Sie einen `null`-case hinzufügen, um sicherzustellen, dass das Argument nicht `null` ist:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "NULL-Case hinzufügen")]
+[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstante `null` im Muster keinen Typ besitzt, aber in jeden Verweis- oder Nullable-Typ konvertiert werden kann. Statt `null` in einen beliebigen Typ zu konvertieren, definiert die Sprache, dass ein `null`-Wert keinem Typmuster entspricht, unabhängig Typ zur Kompilierzeit der Variablen. Dieses Verhalten macht das neue `switch`-basierte Typmuster konsistent mit der `is`-Anweisung: `is`-Anweisungen geben stets `false` zurück, wenn der überprüfte Wert `null` ist. Außerdem ist es einfacher: Nachdem Sie den Typ überprüft haben, ist keine zusätzliche NULL-Überprüfung erforderlich. Das erkennen Sie daran, dass in keinem der Case-Blocks oben genannten Beispiele NULL-Überprüfungen durchgeführt werden: Sie sind schlicht nicht erforderlich, da der Abgleich des Typmusters einen Wert ungleich NULL garantiert.
+
+## <a name="var-declarations-in-case-expressions"></a>`var`Deklarationen in `case` Ausdrücke
+
+Die Einführung von `var` als einer der Ausdrücke Übereinstimmung neue Regeln zur Musterübereinstimmung eingeführt.
+
+Die erste Regel ist, die die `var` Deklaration folgt den Typ "normal" Rückschlussregeln: der Typ werden von den statischen Typ des Switch-Ausdrucks abgeleitet wird. Von dieser Regel übereinstimmt immer mit dem Typ.
+
+Die zweite Regel ist, die eine `var` Deklaration keine Überprüfung auf null, der andere Typ Muster Ausdrücke enthalten. Bedeutet, dass die Variable kann null sein und eine null-Prüfung ist in diesem Fall erforderlich.
+
+Diese zwei Regeln bedeuten, dass in vielen Fällen eine `var` Deklaration in einem `case` Ausdruck übereinstimmt, die gleichen Bedingungen wie eine `default` Ausdruck.
+Da jeder Fall nicht standardmäßiger bevorzugt wird die `default` Fall die `default` Fall werden nie ausgeführt.
+
+> [!NOTE]
+> Der Compiler gibt keine Warnung in diesen Fällen, in denen eine `default` Fall geschrieben wurde, aber nie ausgeführt. Dies ist konsistent mit aktuellen `switch` Anweisung Verhalten, in denen alle möglichen Fälle eingestellt wurden.
+
+Die dritte Regel führt verwendet, in denen eine `var` Fall kann nützlich sein. Stellen Sie sich vor, dass Sie einen Mustervergleich ausführen, wobei die Eingabe eine Zeichenfolge ist und Sie bekannter Befehl Werten gesucht werden. Sie können Folgendes schreiben:
+
+[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+
+Die `var` Fall Übereinstimmungen `null`, die leere Zeichenfolge oder eine Zeichenfolge, die nur Leerzeichen enthält. Beachten Sie, die der obige Code verwendet die `?.` Operator, um sicherzustellen, dass keine versehentlich ausgelöst wird, eine <xref:System.NullReferenceException>. Die `default` -Fall verarbeitet, andere Zeichenfolgenwerte, die vom Befehlsparser für diesen nicht verstanden werden.
+
+Dies ist ein Beispiel, in dem sollten Sie in Betracht ziehen einer `var` case-Ausdruck, der sich von einem `default` Ausdruck.
 
 ## <a name="conclusions"></a>Zusammenfassung
 
@@ -120,5 +140,4 @@ Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstan
 Musterabgleich funktioniert mit jedem Datentyp. Sie erstellen Ausdrücke, die das Objekt untersuchen und Steuerungsflussentscheidungen anhand dieser Bedingungen treffen.
 
 Vergleichen Sie den Code in diesem Beispiel mit dem Entwurf, der aus dem Erstellen einer Klassenhierarchie für eine abstrakte `Shape` und spezifisch abgeleitete Formen folgen würde, von denen jede ihre eigene Implementierung einer virtuellen Methode hat, um den Bereich zu berechnen. Sie werden häufig feststellen, dass Musterabgleichausdrücke sehr nützlich sein können, wenn Sie mit Daten arbeiten und die Datenspeicherprobleme von den Verhaltensproblemen trennen möchten.
-
 

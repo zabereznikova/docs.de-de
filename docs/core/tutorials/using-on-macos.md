@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
+ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
 
 Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe für macOS. Erfahren Sie, wie Projekte und Unittests erstellt, die Debuggingtools verwendet und Bibliotheken von Drittanbietern über [NuGet](https://www.nuget.org/) eingebunden werden.
@@ -82,7 +80,7 @@ Dadurch werden `Newtonsoft.Json` und dessen Abhängigkeiten zum Klassenbibliothe
 </ItemGroup>
 ```
 
-Führen Sie [`dotnet restore`](../tools/dotnet-restore.md) aus, wodurch Abhängigkeiten wiederhergestellt und ein *obj*-Ordner innerhalb der *Bibliothek* mit drei Dateien darin erstellt wird, einschließlich einer *project.assets.json*-Datei:
+Führen Sie [ `dotnet restore` ](../tools/dotnet-restore.md), ([Siehe Hinweis](#dotnet-restore-note)) das Abhängigkeiten wiederhergestellt und erstellt eine *Obj* Ordner innerhalb der *Bibliothek* mit drei Dateien, einschließlich einer *project.assets.json* Datei:
 
 ```console
 dotnet restore
@@ -162,7 +160,7 @@ Beachten Sie, dass der Wert 42 nicht 19+23 (oder 42) entspricht, wenn Sie zum er
 Führen Sie im *golden*-Ordner die folgenden Befehle aus:
 
 ```console
-dotnet restore
+dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
 
@@ -196,7 +194,7 @@ Erstellen Sie die Abhängigkeit von der Bibliothek, indem Sie den `dotnet add re
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Führen Sie `dotnet restore` aus, um die Abhängigkeiten der drei Projekte in der Projektmappe wiederherzustellen. Öffnen Sie *Program.cs*, und ersetzen Sie den Inhalt der `Main`-Methode durch diese Zeile:
+Führen Sie `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) zum Wiederherstellen der Abhängigkeiten der drei Projekte in der Projektmappe. Öffnen Sie *Program.cs*, und ersetzen Sie den Inhalt der `Main`-Methode durch diese Zeile:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
@@ -225,3 +223,5 @@ Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt f
 
 Klicken Sie auf die Schaltfläche „Wiedergabe“, um die Anwendung unter dem Debugger zu starten. Die App startet mit der Ausführung und läuft bis zum Haltepunkt, wo sie anhält. Führen Sie die `Get`-Methode schrittweise aus, und stellen Sie sicher, dass Sie die richtigen Argumente eingefügt haben. Bestätigen Sie, dass die Antwort 42 ist.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

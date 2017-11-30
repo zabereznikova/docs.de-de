@@ -1,21 +1,17 @@
 ---
 title: "dotnet publish-Befehl – .NET Core-CLI"
 description: "Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Projekt in einem Verzeichnis."
-keywords: dotnet-publish, CLI, CLI-Befehl, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
+ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -95,10 +91,11 @@ Führt kein implizites Wiederherstellen durch, wenn der Befehl ausgeführt wird
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Gibt den Pfad für das Ausgabeverzeichnis an. Wenn nicht angegeben, wird standardmäßig *./bin/[configuration]/[framework]/* für eine Framework-abhängige Bereitstellung oder *./bin/[configuration]/[framework]/[runtime]* für eine eigenständige Bereitstellung gewählt.
+Wenn ein relativer Pfad angegeben wird, ist das Ausgabeverzeichnis generiert relativ zum Speicherort Projekts-Datei nicht in das aktuelle Arbeitsverzeichnis.
 
 `--self-contained`
 
-Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Wenn ein Runtimebezeichner angegeben ist, ist der Standardwert `true`. Weitere Informationen zu verschiedenen Bereitstellungstypen finden Sie unter [.NET Core Anwendungsbereitstellung](../deploying/index.md).
+Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Wenn ein Runtimebezeichner angegeben ist, ist der Standardwert `true`. Weitere Informationen zu anderen Bereitstellungstypen finden Sie unter [.NET Core-anwendungsbereitstellung](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -133,6 +130,7 @@ Gibt mindestens ein [Zielmanifest](../deploying/runtime-store.md) an, das verwen
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Gibt den Pfad für das Ausgabeverzeichnis an. Wenn nicht angegeben, wird standardmäßig *./bin/[configuration]/[framework]/* für eine Framework-abhängige Bereitstellung oder *./bin/[configuration]/[framework]/[runtime]* für eine eigenständige Bereitstellung gewählt.
+Wenn ein relativer Pfad angegeben wird, ist das Ausgabeverzeichnis generiert relativ zum Speicherort Projekts-Datei nicht in das aktuelle Arbeitsverzeichnis.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -170,4 +168,3 @@ Veröffentlichen der aktuellen Anwendung mithilfe des `netcoreapp1.1`-Frameworks
 
 * [Zielframeworks](../../standard/frameworks.md)
 * [Runtime-ID-Katalog (RID)](../rid-catalog.md)
-

@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -74,6 +73,8 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
     - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die von der enthaltenden Klasse abgeleitet sind.
 * `private`
     - Der Zugriff ist auf diese Klasse beschränkt.
+* `private protected`
+    - Zugriff eingeschränkt auf die enthaltende Klasse oder Klassen abgeleitet aus dem enthaltenden Typ innerhalb die gleiche assembly
 
 ## <a name="type-parameters"></a>Typparameter
 
@@ -140,7 +141,7 @@ Ein *Ausgabeparameter* wird zum Übergeben von Argumenten als Verweis verwendet.
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-Ein *Parameterarray* ermöglicht es, eine variable Anzahl von Argumenten an eine Methode zu übergeben. Ein Parameterarray wird mit dem `params`-Modifizierer deklariert. Nur der letzte Parameter einer Methode kann ein Parameterarray sein, und es muss sich um ein eindimensionales Parameterarray handeln. Die Write- und WriteLine-Methoden der `@System.Console`-Klasse sind gute Beispiele für die Verwendung eines Parameterarrays. Sie werden folgendermaßen deklariert.
+Ein *Parameterarray* ermöglicht es, eine variable Anzahl von Argumenten an eine Methode zu übergeben. Ein Parameterarray wird mit dem `params`-Modifizierer deklariert. Nur der letzte Parameter einer Methode kann ein Parameterarray sein, und es muss sich um ein eindimensionales Parameterarray handeln. Die Write- und WriteLine-Methoden der <xref:System.Console?displayProperty=nameWithType>-Klasse sind gute Beispiele für die Verwendung eines Parameterarrays. Sie werden folgendermaßen deklariert.
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -260,7 +261,7 @@ Die Accessors einer Eigenschaft können virtuell sein. Wenn eine Eigenschaftende
 
 Ein *Indexer* ist ein Member, mit dem Objekte wie ein Array indiziert werden können. Ein Indexer wird wie eine Eigenschaft deklariert, abgesehen davon, dass an den Membernamen eine in die Trennzeichen `[` und `]` eingefügte Parameterliste angehängt wird. Die Parameter stehen im Accessor des Indexers zur Verfügung. Ähnlich wie Eigenschaften können Indexer Lese-/Schreibzugriff besitzen, schreibgeschützt und lesegeschützt sein und virtuelle Accessors verwenden.
 
-Die `List`-Klasse deklariert einen einzigen Indexer mit Lese-/Schreibzugriff, der einen `int`-Parameter akzeptiert. Der Indexer ermöglicht es, Instanzen von `List` mit `int`-Werten zu indizieren. Beispiel:
+Die `List`-Klasse deklariert einen einzigen Indexer mit Lese-/Schreibzugriff, der einen `int`-Parameter akzeptiert. Der Indexer ermöglicht es, Instanzen von `List` mit `int`-Werten zu indizieren. Zum Beispiel:
 
 [!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
@@ -301,4 +302,3 @@ Die `using`-Anweisung bietet einen besseren Ansatz für die Objektzerstörung.
 >[!div class="step-by-step"]
 [Zurück](statements.md)
 [Weiter](structs.md)
-

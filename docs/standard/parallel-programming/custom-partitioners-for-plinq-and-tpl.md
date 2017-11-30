@@ -1,127 +1,132 @@
 ---
-title: "Custom Partitioners for PLINQ and TPL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasks, partitioners"
+title: "Benutzerdefinierte Partitionierer für PLINQ und TPL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 12d234b86b0067178d54d2fdcb5d37ceaee6109d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Custom Partitioners for PLINQ and TPL
-Um einen Vorgang in einer Datenquelle zu parallelisieren, ist einer der wesentlichen Schritte das *Partitionieren* der Quelle in mehrere Abschnitte, auf die gleichzeitig von mehreren Threads zugegriffen werden kann.  PLINQ und die Task Parallel Library \(TPL\) bieten standardmäßige Partitionierer, die transparent funktionieren, wenn Sie eine parallele Abfrage oder <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife schreiben.  Für komplexere Szenarien können Sie Ihren eigenen Partitionierer verwenden.  
+# <a name="custom-partitioners-for-plinq-and-tpl"></a>Benutzerdefinierte Partitionierer für PLINQ und TPL
+Um einen Vorgang für eine Datenquelle zu parallelisieren, besteht eine der wesentlichen Schritte darin *Partition* der Quelle in mehrere Abschnitte, die gleichzeitig durch mehrere Threads zugegriffen werden kann. PLINQ und der Task Parallel Library (TPL) bieten standardmäßige Partitionierer, die transparent arbeiten, wenn Sie eine parallele Abfrage schreiben oder <xref:System.Threading.Tasks.Parallel.ForEach%2A> Schleife. Für erweiterte Szenarien können Sie Ihren eigenen Partitionierer anschließen.  
   
-## Arten der Partitionierung  
- Es gibt viele Möglichkeiten, eine Datenquelle zu partitionieren.  Bei den effizientesten Methoden kooperieren mehrere Threads, um die ursprüngliche Quellsequenz zu verarbeiten, anstatt die Quelle physisch in mehrere Untersequenzen zu trennen.  Für Arrays und andere indizierte Quellen wie z. B. <xref:System.Collections.IList>\-Auflistungen, in denen die Länge im Voraus bekannt ist, ist die *Bereichspartitionierung* die einfachste Art der Partitionierung.  Jeder Thread empfängt eindeutige Anfangs\- und Endindizes, damit der Bereich der Quelle verarbeitet werden kann, ohne dass dieser bzw. ein anderer Thread überschrieben wird.  Der einzige durch Bereichspartitionierung entstehende Mehraufwand ist die ursprüngliche Erstellung von Bereichen. Danach ist keine zusätzliche Synchronisierung erforderlich.  Daher kann eine gute Leistung erzielt werden, solange die Arbeitsauslastung gleichmäßig geteilt wird.  Ein Nachteil der Bereichspartitionierung ist, dass bei frühzeitigem Beenden eines Threads für die anderen Threads keine Unterstützung bei deren Arbeit mehr zur Verfügung steht.  
+## <a name="kinds-of-partitioning"></a>Art der Partitionierung  
+ Es gibt viele Möglichkeiten, eine Datenquelle zu partitionieren. Ermöglichen in das effizientesten Verfahren mehrere Threads zum Prozess der ursprünglichen Quellsequenz, anstatt die Quelle in mehrere Untersequenzen physisch zu trennen. Für Arrays und andere Datenquellen wie z. B. indiziert werden <xref:System.Collections.IList> Sammlungen, bei die Länge im Voraus bekannt ist *Bereichspartitionierung* ist die einfachste Art der Partitionierung. Jeder Thread empfängt eindeutig ist, werden öffnend und schließend Indizes, damit dessen Bereich der Quelle ohne überschreiben oder überschrieben wird, indem ein anderer Thread verarbeitet werden können. Der einzige Aufwand Bereichspartitionierung ist die ursprüngliche Erstellung von Bereichen; Danach ist keine zusätzliche Synchronisierung erforderlich. Aus diesem Grund können sie gute Leistung bereitstellen, solange die arbeitsauslastung gleichmäßig verteilt wird. Ein Nachteil der Bereichspartitionierung ist, wenn ein Thread frühzeitig beendet wird, die andere Threads ihre Arbeit abgeschlossen helfen kann nicht an.  
   
- Für verknüpfte Listen oder andere Auflistungen, deren Länge nicht bekannt ist, können Sie *Blockpartitionierung* verwenden.  Bei der Blockpartitionierung verwendet jeder Thread oder jede Aufgabe in einer parallelen Schleife oder Abfrage eine gewisse Anzahl von Quellelementen in einem Block, verarbeitet diese und ruft anschließend zusätzliche Elemente ab.  Der Partitionierer stellt sicher, dass alle Elemente verteilt werden, und dass keine Duplikate vorhanden sind.  Ein Block kann jede beliebige Größe besitzen.  Der Partitionierer, der in [How to: Implement Dynamic Partitions](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) veranschaulicht wird, erstellt z. B. Ausschnitte, die nur ein Element enthalten.  Solange die Blöcke nicht zu groß sind, sorgt diese Art von Partitionierung grundsätzlich für Lastenausgleich, da die Zuweisung von Elementen zu Threads nicht vorgegeben ist.  Allerdings tritt beim Partitionierer ein Synchronisierungsmehraufwand auf, wenn der Thread einen weiteren Block abrufen muss.  Der Synchronisierungsaufwand in diesen Fällen ist umgekehrt proportional zur Größe der Blöcke.  
+ Für verknüpfte Listen oder anderen Auflistungen, dessen Länge nicht bekannt ist, können Sie *Blockpartitionierung*. Segment zu partitionieren, jeder Thread oder eine Aufgabe in einer parallelen Schleife oder einer Abfrage nutzt eine Anzahl von Quellelementen in einem Block, verarbeitet sie und dann zurückkehrt, zusätzliche Elemente abzurufen. Mit dem Partitionierer wird sichergestellt, dass alle Elemente verteilt werden und keine Duplikate vorhanden sind. Ein Block kann eine beliebige Größe sein. Z. B. mit dem Partitionierer, der in gezeigt [Vorgehensweise: Implementieren dynamische Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) erstellt Segmente, die nur ein Element enthalten. Solange die Blöcke nicht zu groß sind, ist diese Art der Partitionierung auch grundsätzlich auf den Lastenausgleich, da die Zuweisung von Elementen, die Threads nicht vorgegeben ist. Allerdings mit dem Partitionierer den Synchronisierung jedes Mal Mehraufwand der Thread einen anderen Block abrufen muss. Die Menge der Synchronisierungsaufwand in diesen Fällen ist umgekehrt proportional zur Größe der Segmente.  
   
- Im Allgemeinen ist die Bereichspartitionierung nur dann schneller, wenn die Ausführungszeit des Delegaten kurz oder von mittlerer Länge ist, die Quelle eine große Anzahl von Elementen enthält und die gesamte Arbeitslast jeder Partition ungefähr gleich ist.  Blockpartitionierung ist daher im Allgemeinen in den meisten Fällen schneller.  In Quellen mit einer geringen Anzahl von Elementen oder längeren Ausführungszeiten für den Delegaten ist die Leistung der Block\- und Bereichspartitionierung ungefähr gleich.  
+ Im Allgemeinen ist die Range-Partitionierung nur schneller, wenn die Ausführungszeit des Delegaten klein ist, Mittel, die Quelle verfügt über eine große Anzahl von Elementen und die gesamte Arbeit in jeder Partition ungefähr entspricht. Blockpartitionierung ist daher im Allgemeinen schneller in den meisten Fällen. Auf Datenquellen mit einer kleinen Anzahl von Elementen oder längere Ausführungszeiten für den Delegaten ist die Leistung des Blocks und Bereichspartitionierung ungefähr gleich.  
   
- Die TPL\-Partitionierer unterstützen auch eine dynamische Anzahl von Partitionen.  Dies bedeutet, dass Partitionen direkt erstellt werden können, z. B., wenn die <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife eine neue Aufgabe erzeugt.  Diese Funktion ermöglicht dem Partitionierer eine gemeinsame Skalierung mit der Schleife.  Dynamische Partitionierer sorgen zudem grundsätzlich für Lastenausgleich.  Wenn Sie einen benutzerdefinierten Partitionierer erstellen, müssen Sie dynamische Partitionierung unterstützen, um eine Verwendung von einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Schleife zu gewährleisten.  
+ Die TPL-Partitionierer unterstützen auch eine dynamische Anzahl von Partitionen. Dies bedeutet, sie können Partitionen auf dynamische, z. B. erstellen, wenn die <xref:System.Threading.Tasks.Parallel.ForEach%2A> Schleife erzeugt eine neue Aufgabe. Dieses Feature ermöglicht den Partitionierer zusammen mit der Schleife selbst zu skalieren. Dynamische Partitionierer sind auch die grundsätzlich auf den Lastenausgleich. Wenn Sie einen benutzerdefinierten Partitionierer erstellen, müssen Sie unterstützen, dynamische Partitionierung, um in werden eine <xref:System.Threading.Tasks.Parallel.ForEach%2A> Schleife.  
   
-### Konfigurieren von Lastenausgleichspartitionierern für PLINQ  
- Einige Überladungen der <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=fullName>\-Methode ermöglichen die Erstellung eines Partitioners für ein Array oder eine <xref:System.Collections.IList>\-Quelle und die Angabe, ob die Arbeitslast zwischen den Threads gleichmäßig verteilt werden soll.  Wenn der Partitionierer für Lastenausgleich konfiguriert wird, wird Blockpartitionierung verwendet, und die Elemente werden gemäß Anforderung in kleinen Blöcken an jede Partition übergeben.  Durch diese Methode wird gewährleistet, dass alle Partitionen zu verarbeitende Elemente enthalten, bis die gesamte Schleife oder Abfrage abgeschlossen ist.  Mit einer zusätzlichen Überladung kann Lastenausgleichspartitionierung einer beliebigen <xref:System.Collections.IEnumerable>\-Quelle bereitgestellt werden.  
+### <a name="configuring-load-balancing-partitioners-for-plinq"></a>Konfigurieren von Lastenausgleich Partitionierer für PLINQ  
+ Einige Überladungen der <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> Methode können Sie die eines Partitionierers für ein Array oder <xref:System.Collections.IList> Datenquelle aus, und gibt an, ob die arbeitsauslastung zwischen den Threads verteilen versucht werden soll. Wenn mit dem Partitionierer für den Lastenausgleich konfiguriert ist, Segment Partitionierung wird verwendet, und die Elemente werden aus auf jede Partition in kleinen Blöcken übergeben, bei deren Anforderung. Dieser Ansatz wird sichergestellt, dass alle Partitionen Elemente haben, bis die gesamte Schleife verarbeitet oder die Abfrage abgeschlossen ist. Eine weitere Überladung kann verwendet werden, um den Lastenausgleich Partitionierung eines beliebigen <xref:System.Collections.IEnumerable> Quelle.  
   
- Im Allgemeinen erfordert Lastenausgleich, dass die Partitionen relativ häufig Elemente vom Partitionierer anfordern.  Im Gegensatz dazu kann ein Partitionierer, der eine statische Partitionierung vornimmt, jedem Partitionierer sofort alle Elemente zuweisen, wenn er entweder Bereichs\- oder Blockpartitionierung verwendet.  Dies erfordert weniger Aufwand als Lastenausgleich, doch die Ausführung kann mehr Zeit in Anspruch nehmen, wenn in einem Thread deutlich mehr Arbeit als in den anderen Threads anfällt.  Wenn eine IList oder ein Array an PLINQ übergeben wird, wird immer Bereichspartitionierung ohne Lastenausgleich verwendet.  Um Lastenausgleich für PLINQ zu aktivieren, verwenden Sie die `Partitioner.Create`\-Methode \(siehe folgendes Beispiel\).  
+ Lastenausgleich erfordert im Allgemeinen die Partitionen auf Elemente relativ häufig von der Partitionierer anfordern. Dagegen kann ein Partitionierer, der statische Partitionierung ist die Elemente jeder Partitionierer gleichzeitig zuweisen mithilfe von Bereich oder Blockpartitionierung. Dies erfordert weniger Aufwand als Lastenausgleich, aber es möglicherweise länger ausgeführt werden, wenn ein Thread deutlich mehr Arbeit als die anderen endet. Wenn sie IList oder ein Array übergeben wird verwendet standardmäßig PLINQ immer Bereichspartitionierung ohne Lastenausgleich. Um einen Lastenausgleich für PLINQ zu aktivieren, verwenden die `Partitioner.Create` Methode, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[TPL_Partitioners#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#02)]
  [!code-vb[TPL_Partitioners#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionsnippets_vb.vb#02)]  
   
- Die beste Möglichkeit, zu bestimmen, ob in einem gegebenen Szenario Lastenausgleich verwendet werden soll, besteht darin durch Experimentieren zu ermitteln, wie viel Zeit Vorgänge bei repräsentativer Auslastung und mit entsprechenden Computerkonfigurationen in Anspruch nehmen.  Statische Partitionierung kann z. B. für beträchtliche Geschwindigkeitssteigerungen auf einem Multikerncomputer sorgen, der nur einige Kerne besitzt, doch auf Computern mit verhältnismäßig vielen Kernen kann es zu einer Verlangsamung kommen.  
+ Die beste Möglichkeit zu bestimmen, ob Laden mit Lastenausgleich in einem gegebenen Szenario experimentieren und messen, wie lange dauert Vorgänge unter repräsentative Lade- und Computerkonfigurationen abgeschlossen. Z. B. statische Partitionierung möglicherweise erhebliche Beschleunigung auf einem Multikern-Computer, der nur wenige Kernen bereit, aber es unter Umständen in verlangsamungen auf Computern, die relativ viele Kerne verfügen.  
   
- In der folgenden Tabelle sind die verfügbaren Überladungen der <xref:System.Collections.Concurrent.Partitioner.Create%2A>\-Methode aufgelistet.  Für diese Partitionierer gilt keine Einschränkung, dass sie nur mit PLINQ oder <xref:System.Threading.Tasks.Task> verwendet werden dürfen.  Sie können auch mit jedem benutzerdefinierten parallelen Konstrukt verwendet werden.  
+ Die folgende Tabelle listet die verfügbaren Überladungen der <xref:System.Collections.Concurrent.Partitioner.Create%2A> Methode. Diese Partitionierer gilt keine Einschränkung für die Verwendung nur mit PLINQ oder <xref:System.Threading.Tasks.Task>. Sie können auch mit jedem benutzerdefinierten parallelen Konstrukt verwendet werden.  
   
-|Überladung|Verwendet Lastenausgleich|  
-|----------------|-------------------------------|  
+|überladen|Mithilfe des Lastenausgleichs|  
+|--------------|-------------------------|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Immer|  
-|[Create\<TSource\>\(TSource\<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Wenn das boolesche Argument als "true" \(wahr\) angegeben wird|  
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Wenn das boolesche Argument als "true" \(wahr\) angegeben wird|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Wenn das boolesche Argument als "true" angegeben wird|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Wenn das boolesche Argument als "true" angegeben wird|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Nie|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Nie|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Nie|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Nie|  
   
-### Konfigurieren von statischen Bereichspartitionierern für "Parallel.ForEach"  
- In einer <xref:System.Threading.Tasks.Parallel.For%2A>\-Schleife wird der Text der Schleife für die Methode als Delegat bereitgestellt.  Der Aufwand für einen Delegatenaufruf entspricht ungefähr dem für einen virtuellen Methodenaufruf.  In einigen Szenarien ist der Text einer parallelen Schleife möglicherweise so klein, dass der Aufwand für einen Delegataufruf in jeder Schleifeniteration ein beträchtliches Ausmaß erreicht.  In solchen Situationen können Sie mit einer der <xref:System.Collections.Concurrent.Partitioner.Create%2A>\-Überladungen ein <xref:System.Collections.Generic.IEnumerable%601>\-Objekt von Bereichspartitionen über den Quellelementen erstellen.  Anschließend können Sie diese Bereichsauflistung an eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Methode übergeben, deren Text aus einer regulären `for`\-Schleife besteht.  Der Vorteil dieser Methode liegt darin, dass der Aufwand für einen Delegataufruf nur einmal pro Bereich und nicht einmal pro Element anfällt.  Das grundlegende Muster wird im folgenden Beispiel veranschaulicht.  
+### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Bereich für statische Partitionierer für Parallel.ForEach konfigurieren  
+ In einem <xref:System.Threading.Tasks.Parallel.For%2A> Schleife, den Text der Schleife wird bereitgestellt, um die Methode als Delegaten vor. Die Kosten für diesen Delegaten aufrufen geht es um den Aufruf einer virtuellen Methode identisch. In einigen Szenarien ist der Text einer parallelen Schleife klein genug möglicherweise, dass die Kosten der Delegataufruf in jeder Schleifeniteration erhebliche wird. In solchen Situationen können Sie mithilfe eines der <xref:System.Collections.Concurrent.Partitioner.Create%2A> Überladungen zum Erstellen einer <xref:System.Collections.Generic.IEnumerable%601> von Bereichspartitionen über die Quellelemente. Übergeben Sie Sie dann diese Auflistung von Bereichen an, um eine <xref:System.Threading.Tasks.Parallel.ForEach%2A> Methode, deren Text eine reguläre besteht `for` Schleife. Der Vorteil dieses Ansatzes ist, dass die Kosten für Delegaten Aufruf nur einmal pro Bereich und nicht einmal pro Element entstanden ist. Das folgende Beispiel zeigt das grundlegende Muster.  
   
  [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
  [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]  
   
- Jeder Thread in der Schleife empfängt ein eigenes <xref:System.Tuple%602>\-Objekt, das die Anfangs\- und Endindexwerte im angegebenen Teilbereich enthält.  Die innere `for`\-Schleife verwendet den `fromInclusive`\-Wert und den `toExclusive`\-Wert, um das Array oder das <xref:System.Collections.IList>\-Objekt direkt in einer Schleife zu durchlaufen.  
+ Jeder Thread in der Schleife empfängt ein eigenes <xref:System.Tuple%602> , enthält das Start- und Enddatum Indexwerte in der angegebenen untergeordneten Bereich. Die innere `for` -Schleife verwendet die `fromInclusive` und `toExclusive` Werte in einer Schleife über das Array oder die <xref:System.Collections.IList> direkt.  
   
- Eine der <xref:System.Collections.Concurrent.Partitioner.Create%2A>\-Überladungen ermöglicht die Angabe der Größe und der Anzahl der Partitionen.  Diese Überladung kann in Szenarien verwendet werden, in denen die Arbeit pro Element so geringfügig ist, dass sogar ein einzelner virtueller Methodenaufruf pro Element beträchtliche Auswirkungen auf die Leistung hat.  
+ Eines der <xref:System.Collections.Concurrent.Partitioner.Create%2A> Überladungen können Sie angeben, die Größe der Partitionen und die Anzahl der Partitionen. Diese Überladung kann in Szenarien verwendet, wird die Arbeit pro Element so niedrig ist, dass auch eine virtuelle Methodenaufruf pro Element eine merkliche Auswirkungen auf die Leistung hat.  
   
-## Benutzerdefinierte Partitionierer  
- In einigen Szenarien kann es empfehlenswert oder sogar erforderlich sein, einen eigenen Partitionierer zu implementieren.  Beispiel: Sie besitzen eine benutzerdefinierte Auflistungsklasse, die Sie aufgrund Ihrer Kenntnisse der internen Struktur der Klasse effizienter als Standardpartitionierer partitionieren können.  Möglicherweise möchten Sie auch unter Berücksichtigung Ihrer Kenntnis der Verarbeitungsdauer von Elementen an verschiedenen Orten in der Quellauflistung unterschiedlich große Bereichspartitionen erstellen.  
+## <a name="custom-partitioners"></a>Benutzerdefinierte Partitionierer  
+ In einigen Szenarien kann es empfehlenswert oder sogar erforderlich, Ihren eigenen Partitionierer zu implementieren sein. Beispielsweise müssen Sie eine benutzerdefinierte Auflistungsklasse möglicherweise, die Sie partitionieren, können effizienter als die Standardzeit Partitionierer können basierend auf Ihrer Kenntnisse der internen Struktur der-Klasse. Oder Sie Bereichspartitionen mit unterschiedlichen Größen basierend auf Ihrer Kenntnisse darüber, wie lange Prozess Elementen an verschiedenen Standorten in der quellauflistung dafür erstellen möchten.  
   
- Zum Erstellen eines grundlegenden benutzerdefinierten Partitioners muss eine Klasse von <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=fullName> abgeleitet werden, und die virtuellen Methoden müssen überschrieben werden. Eine entsprechende Beschreibung finden Sie in der folgenden Tabelle.  
-  
-|||  
-|-|-|  
-|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt einen IList\(IEnumerator\(TSource\)\) zurück.  Jeder Arbeitsthread in der Schleife oder Abfrage kann `GetEnumerator` in der Liste aufrufen, um über eine unterschiedliche Partition einen <xref:System.Collections.Generic.IEnumerator%601> abzurufen.|  
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Gibt `true` zurück, wenn Sie <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>implementieren, andernfalls `false`.|  
-|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> den Wert `true` ergibt, kann optional diese Methode anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|  
-  
- Wenn die Ergebnisse sortierbar sein müssen, oder wenn Sie indizierten Zugriff auf die Elemente benötigen, führen Sie eine Ableitung von <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=fullName> aus, und überschreiben Sie die virtuellen Methoden entsprechend der Beschreibung in der folgenden Tabelle.  
+ Zum Erstellen eines einfachen benutzerdefinierten Partitionierers leiten Sie eine Klasse von <xref:System.Collections.Concurrent.Partitioner%601?displayProperty=nameWithType> und die virtuellen Methoden überschreiben, wie in der folgenden Tabelle beschrieben.  
   
 |||  
 |-|-|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt einen `IList(IEnumerator(TSource))` zurück.  Jeder Arbeitsthread in der Schleife oder Abfrage kann `GetEnumerator` in der Liste aufrufen, um über eine unterschiedliche Partition einen <xref:System.Collections.Generic.IEnumerator%601> abzurufen.|  
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Gibt `true` zurück, wenn Sie <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>implementieren, andernfalls "false".|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|In der Regel wird dabei nur <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> aufgerufen.|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> den Wert `true` ergibt, kann optional diese Methode anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|  
+|<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt die IList(IEnumerator(TSource)) zurück. Jeder Arbeitsthread in der Schleife oder einer Abfrage aufrufen kann `GetEnumerator` in der Liste zum Abrufen einer <xref:System.Collections.Generic.IEnumerator%601> über eine unterschiedliche Partition.|  
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zurückgeben `true` bei Implementierung <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, und andernfalls `false`.|  
+|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> ist `true`, diese Methode kann optional aufgerufen werden, anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>.|  
   
- Die folgende Tabelle enthält weitere Details darüber, wie die drei Arten von Lastenausgleichspartitionierern die <xref:System.Collections.Concurrent.OrderablePartitioner%601>\-Klasse implementieren.  
+ Wenn die Ergebnisse sortierbar sein müssen, oder Sie indizierten Zugriff auf die Elemente benötigen, klicken Sie dann eine Ableitung von <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> und ihre virtuellen Methoden überschreiben, wie in der folgenden Tabelle beschrieben.  
   
-|Methode\/Eigenschaft|IList\/Array ohne Lastenausgleich|IList\/Array mit Lastenausgleich|IEnumerable|  
-|--------------------------|---------------------------------------|--------------------------------------|-----------------|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Verwendet Bereichspartitionierung|Verwendet Blockpartitionierung, die für Listen für die angegebene Partitionsanzahl \(partitionCount\) optimiert ist|Verwendet Blockpartitionierung durch Erstellen einer statischen Anzahl von Partitionen.|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=fullName>|Löst eine nicht unterstützte Ausnahme aus|Verwendet für Listen und dynamische Partitionen optimierte Blockpartitionierung|Verwendet Blockpartitionierung durch Erstellen einer dynamischen Anzahl von Partitionen.|  
+|||  
+|-|-|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt eine `IList(IEnumerator(TSource))`. Jeder Arbeitsthread in der Schleife oder einer Abfrage aufrufen kann `GetEnumerator` in der Liste zum Abrufen einer <xref:System.Collections.Generic.IEnumerator%601> über eine unterschiedliche Partition.|  
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Zurückgeben `true` bei Implementierung <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>, andernfalls "false".|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|In der Regel wird dies ruft nur <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>.|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> ist `true`, diese Methode kann optional aufgerufen werden, anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>.|  
+  
+ Die folgende Tabelle enthält weitere Details dazu, wie die drei Arten von Lastenausgleich Partitionierer implementieren die <xref:System.Collections.Concurrent.OrderablePartitioner%601> Klasse.  
+  
+|Methode/Eigenschaft|IList / Array ohne Lastenausgleich|IList / Array mit Lastenausgleich|IEnumerable|  
+|----------------------|-------------------------------------------|----------------------------------------|-----------------|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Verwendet die Range-Partitionierung|Verwendet die Chunk Partitionierung für Listen für die angegebene PartitionCount optimiert|Verwendet Blockpartitionierung, indem Sie eine statische Anzahl von Partitionen erstellen.|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Löst das nicht unterstützte-Ausnahme|Verwendet in Blöcken Partitionierung, optimiert für Listen und dynamische Partitionen|Verwendet Blockpartitionierung, durch das Erstellen einer dynamischen Anzahl von Partitionen.|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Gibt `true` zurück.|Gibt `true` zurück.|Gibt `true` zurück.|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Gibt `true` zurück.|Gibt `false` zurück.|Gibt `false` zurück.|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Gibt `true` zurück.|Gibt `true` zurück.|Gibt `true` zurück.|  
 |<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Gibt `false` zurück.|Gibt `true` zurück.|Gibt `true` zurück.|  
   
-### Dynamische Partitionen  
- Wenn Sie den Partitionierer in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>\-Methode verwenden möchten, muss eine dynamische Anzahl von Partitionen zurückgegeben werden können.  Dies bedeutet, dass der Partitionierer jederzeit während der Schleifenausführung für eine neue Partition bedarfsabhängig einen Enumerator angeben kann.  Grundsätzlich wird beim Hinzufügen einer neuen parallelen Aufgabe durch die Schleife eine neue Partition für diese Aufgabe angefordert.  Wenn die Daten sortierbar sein müssen, nehmen Sie eine Ableitung von <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=fullName> vor, damit jedem Element in jeder Partition ein eindeutiger Index zugewiesen wird.  
+### <a name="dynamic-partitions"></a>Dynamische Partitionen  
+ Wenn Sie, mit dem Partitionierer beabsichtigen zu verwendende eine <xref:System.Threading.Tasks.Parallel.ForEach%2A> -Methode, Sie müssen möglicherweise eine dynamische Anzahl von Partitionen zurückgibt. Dies bedeutet, dass mit dem Partitionierer einen Enumerator für eine neue Partition bei Bedarf zu einem beliebigen Zeitpunkt während der schleifenausführung bereitstellen kann. Wenn die Schleife eine neue parallele Aufgabe hinzufügt, fordert er im Grunde eine neue Partition für diese Aufgabe. Wenn Sie die Daten bestellt werden müssen, klicken Sie dann Ableiten aus <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> so, dass jedes Element in jeder Partition einen eindeutigen Index zugewiesen ist.  
   
- Weitere Informationen und ein Beispiel finden Sie unter [How to: Implement Dynamic Partitions](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Weitere Informationen und ein Beispiel finden Sie unter [Vorgehensweise: Implementieren dynamische Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
   
-### Vertrag für Partitionierer  
- Wenn Sie einen benutzerdefinierten Partitionierer implementieren, gehen Sie folgendermaßen vor, um eine ordnungsgemäße Interaktion mit PLINQ und <xref:System.Threading.Tasks.Parallel.ForEach%2A> in der TPL sicherzustellen:  
+### <a name="contract-for-partitioners"></a>Vertrag für Partitionierer  
+ Wenn Sie einen benutzerdefinierten Partitionierer implementieren, befolgen Sie diese Richtlinien, um sicherzustellen, dass ordnungsgemäße Interaktion mit PLINQ und <xref:System.Threading.Tasks.Parallel.ForEach%2A> in der TPL:  
   
--   Wenn <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> mit einem Argument kleiner oder gleich 0 \(null\) für `partitionsCount` aufgerufen wird, wird <xref:System.ArgumentOutOfRangeException> ausgelöst.  Obwohl PLINQ und TPL niemals eine `partitionCount` gleich 0 übergeben, empfiehlt es sich trotzdem, sich davor zu schützen.  
+-   Wenn <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> ist mit einem Argument von 0 (null) oder weniger für `partitionsCount`, lösen <xref:System.ArgumentOutOfRangeException>. Obwohl PLINQ und TPL niemals übergeben wird eine `partitionCount` gleich 0, dennoch sollten Sie davor zu schützen.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> geben immer die folgende Partitionsanzahl zurück: `partitionsCount` Wenn dem Partitionierer keine Daten mehr zur Verfügung stehen und nicht so viele Partitionen wie gewünscht erstellt werden können, wird von dieser Methode für jede der verbleibenden Partitionen ein leerer Enumerator zurückgegeben.  Andernfalls lösen sowohl PLINQ als auch TPL eine <xref:System.InvalidOperationException> aus.  
+-   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> sollte stets `partitionsCount` Anzahl von Partitionen. Wenn der Partitionierer aus Daten, die ausgeführt wird und so viele Partitionen wie angefordert wird, kann nicht erstellt werden, und klicken Sie dann die Methode einen leeren Enumerator für jede der verbleibenden Partitionen zurückgeben soll. Andernfalls löst PLINQ und TPL ein <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> geben niemals `null` zurück \(`Nothing` in Visual Basic\).  Wenn dies doch der Fall ist, löst PLINQ\/TPL eine <xref:System.InvalidOperationException> aus.  
+-   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> sollte nie zurückgeben `null` (`Nothing` in Visual Basic). Wenn dies der Fall, PLINQ / TPL löst eine <xref:System.InvalidOperationException>.  
   
--   Methoden, die Partitionen zurückgeben, geben immer Partitionen zurück, die die Datenquelle vollständig und eindeutig auflisten können.  Es darf keine doppelten Vorkommen in der Datenquelle oder übersprungene Elementen geben, sofern dies die Struktur des Partitionierers nicht ausdrücklich erfordert.  Wenn diese Regel nicht befolgt wird, gerät die Ausgabereihenfolge möglicherweise durcheinander.  
+-   Methoden, die Partitionen zurückgeben sollte immer Partitionen zurückgegeben, die vollständig und eindeutig die Datenquelle aufgelistet werden können. Es darf keine Duplikate in der Datenquelle oder übersprungene Elemente, sofern nicht ausdrücklich vom Entwurf der mit dem Partitionierer erforderlich. Wenn diese Regel nicht befolgt werden, kann die Ausgabe Reihenfolge Datenschutzaspekten.  
   
--   Die folgenden booleschen Getter müssen immer exakt die folgenden Werte zurückgeben, damit die Ausgabereihenfolge nicht durcheinander gerät:  
+-   Die folgenden booleschen Getter müssen immer genau die folgenden Werte zurückgeben, damit, dass die Reihenfolge der Ausgabe nicht verschlüsselt wurde:  
   
-    -   `KeysOrderedInEachPartition`: Jede Partition gibt Elemente mit zunehmenden Schlüsselindizes zurück.  
+    -   `KeysOrderedInEachPartition`: Jede Partition gibt Elemente mit zunehmenden Key Indizes zurück.  
   
-    -   `KeysOrderedAcrossPartitions`: Für alle Partitionen, die zurückgegeben werden, sind die Schlüsselindizes in Partition *i* höher als die Schlüsselindizes in Partition *i*\-1.  
+    -   `KeysOrderedAcrossPartitions`: Für alle Partitionen, die die Schlüssel Indizes in der Partition zurückgegeben werden *ich* höher sind als die wichtigsten Indizes in der Partition *ich*-1 zurück.  
   
-    -   `KeysNormalized`: Alle Schlüsselindizes steigen monoton ohne Lücken an \(ausgehend von 0 \(null\)\).  
+    -   `KeysNormalized`: Der gesamte Schlüssel Indizes sind monoton ohne Lücken, beginnend mit 0 (null).  
   
--   Alle Indizes müssen eindeutig sein.  Es darf keine doppelten Indizes geben.  Wenn diese Regel nicht befolgt wird, gerät die Ausgabereihenfolge möglicherweise durcheinander.  
+-   Alle Indizes müssen eindeutig sein. Es kann nicht doppelten Indizes vorhanden sein. Wenn diese Regel nicht befolgt werden, kann die Ausgabe Reihenfolge Datenschutzaspekten.  
   
--   Alle Indizes müssen nicht negativ sein.  Wenn diese Regel nicht befolgt wird, löst PLINQ\/TPL möglicherweise Ausnahmen aus.  
+-   Alle Indizes darf nicht negativ sein. Wenn diese Regel nicht befolgt werden, kann PLINQ/TPL Ausnahmen auslösen.  
   
-## Siehe auch  
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)   
- [How to: Implement Dynamic Partitions](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)   
- [How to: Implement a Partitioner for Static Partitioning](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>Siehe auch  
+ [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+ [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+ [Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

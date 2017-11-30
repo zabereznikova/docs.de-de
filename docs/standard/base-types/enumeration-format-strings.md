@@ -1,56 +1,58 @@
 ---
-title: "Enumerationsformatzeichenfolgen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Enumerationsformatzeichenfolgen"
-  - "Formatbezeichner, Enumerationsformatzeichenfolgen"
-  - "Formatieren [.NET Framework], Enumeration"
+title: Enumerationsformatzeichenfolgen
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, enumeration format strings
+- enumeration format strings
+- formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Enumerationsformatzeichenfolgen
-Sie können mit der <xref:System.Enum.ToString%2A?displayProperty=fullName>\-Methode ein neues Zeichenfolgenobjekt erstellen, das den numerischen, hexadezimalen oder den Zeichenfolgenwert eines Enumerationsmembers darstellt.  Diese Methode übernimmt eine der Enumerationsformatzeichenfolgen, um den Wert anzugeben, den Sie zurückgeben möchten.  
+# <a name="enumeration-format-strings"></a>Enumerationsformatzeichenfolgen
+Sie können die <xref:System.Enum.ToString%2A?displayProperty=nameWithType> Methode, um ein neues Zeichenfolgeobjekt zu erstellen, die numerische, hexadezimalen oder String-Wert, der einen Enumerationsmember darstellt. Diese Methode akzeptiert eine der Enumerationsformatzeichenfolgen, um den Wert anzugeben, der zurückgegeben werden soll.  
   
- In der folgenden Tabelle werden die Enumerationsformatzeichenfolgen und die Werte aufgelistet, die von diesen zurückgegeben werden.  Bei diesen Formatbezeichnern wird die Groß\- und Kleinschreibung nicht berücksichtigt.  
+ In der folgenden Tabelle sind die Enumerationsformatzeichenfolgen sowie die Werte aufgeführt, die diese zurückgeben. Bei diesen Formatbezeichnern wird die Groß- und Kleinschreibung nicht berücksichtigt.  
   
-|Formatzeichenfolge|Ergebnis|  
-|------------------------|--------------|  
-|G oder g|Zeigt, soweit möglich, den Enumerationseintrag als Zeichenfolgenwert an. Andernfalls wird der Ganzzahlwert der aktuellen Instanz angezeigt.  Wenn die Enumeration mit festgelegtem **Flags**\-Attribut definiert ist, werden die Zeichenfolgenwerte der einzelnen gültigen Einträge verkettet und durch Kommas getrennt.  Wenn das **Flags**\-Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt.  Im folgenden Beispiel wird der G\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
- [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]|  
-|F oder f|Zeigt den Enumerationseintrag, soweit möglich, als Zeichenfolgenwert an.  Wenn der Wert vollständig als eine Summe der Einträge in der Enumeration angezeigt werden kann \(auch wenn das **Flags**\-Attribut fehlt\), werden die Zeichenfolgenwerte der einzelnen gültigen Einträge verkettet und durch Kommas getrennt.  Wenn der Wert nicht vollständig durch die Enumerationseinträge bestimmt werden kann, wird der Wert als Ganzzahlwert formatiert.  Im folgenden Beispiel wird der F\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
- [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]|  
-|D oder d|Zeigt den Enumerationseintrag als Ganzzahlwert in der kürzesten möglichen Darstellung an.  Im folgenden Beispiel wird der D\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
- [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]|  
-|X oder x|Zeigt den Enumerationseintrag als hexadezimalen Wert an.  Der Wert wird mit ggf. mit vorangestellten Nullen dargestellt, damit der Wert mindestens acht Ziffern enthält.  Im folgenden Beispiel wird der X\-Formatbezeichner veranschaulicht.<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
- [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]|  
+| Formatierungszeichenfolge | Ergebnis |  
+| ------------- | ------ |  
+| G oder g | Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an, zeigt andernfalls den ganzzahligen Wert der aktuellen Instanz an. Wenn die Enumeration mit festgelegtem **Flags**-Attribut definiert ist, werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn das **Flags**-Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt. Das folgende Beispiel veranschaulicht den Formatbezeichner „G“.<br><br>[!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)] |  
+| F oder f | Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an. Wenn der Wert vollständig als Summe der Einträge in der Enumeration angezeigt werden kann (selbst wenn das **Flags**-Attribut nicht vorhanden ist), werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn der Wert nicht vollständig durch die Enumerationseinträge ermittelt werden kann, wird der Wert als ganzzahliger Wert formatiert. Das folgende Beispiel veranschaulicht den Formatbezeichner „F“.<br><br>[!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)] |  
+| D oder d | Zeigt den Enumerationseintrag in der kürzestmöglichen Darstellung als ganzzahligen Wert an. Das folgende Beispiel veranschaulicht den Formatbezeichner „D“.<br><br>[!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)] |  
+| X oder x | Zeigt den Enumerationseintrag als Hexadezimalwert an. Der Wert wird mit so vielen führenden Nullen wie nötig dargestellt, um sicherzustellen, dass der Wert mindestens acht Stellen lang ist. Das folgende Beispiel veranschaulicht den Formatbezeichner „X“.<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)] |  
   
-## Beispiel  
- Im folgenden Beispiel wird eine Enumeration mit der Bezeichnung `Colors` definiert, die drei Einträge enthält: `Red`, `Blue` und `Green`.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel definiert eine Enumeration namens `Colors`, die aus drei Einträgen besteht: `Red`, `Blue` und `Green`.  
   
  [!code-csharp[Formatting.Enum#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
  [!code-vb[Formatting.Enum#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]  
   
- Nachdem die Enumeration definiert wurde, kann folgendermaßen eine Instanz deklariert werden.  
+ Nachdem die Enumeration definiert wurde, kann auf folgende Weise eine Instanz deklariert werden.  
   
  [!code-csharp[Formatting.Enum#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
  [!code-vb[Formatting.Enum#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]  
   
- Die `Color.ToString(System.String)`\-Methode kann dann dazu verwendet werden, den Enumerationswert auf verschiedene Arten anzuzeigen. Wie er angezeigt wird, hängt vom übergebenen Formatbezeichner ab.  
+ Dann kann die `Color.ToString(System.String)`-Methode verwendet werden, um den Enumerationswert je nach übergebenem Formatbezeichner auf verschiedene Arten anzuzeigen.  
   
  [!code-csharp[Formatting.Enum#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
  [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
 - WCF [.NET Framework Client Profile]
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0c93019b2024029fd27d78ac191f0f99bc9b0ce9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae285c931ccabf8d16250f3260a344f1bbbd6467
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 Das .NET Client Profile stellt eine Teilmenge des .NET Framework dar, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und früheren Versionen bereitgestellt wurde und für Anwendungen auf dem Client optimiert war. Das .NET Framework ist eine Entwicklungsplattform für Windows, Windows Phone und Microsoft Azure und stellt eine verwaltete App-Ausführungsumgebung und die .NET Framework-Klassenbibliothek bereit. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und frühere Versionen verfügten über zwei Bereitstellungsoptionen: vollständiges .NET Framework oder .NET Client Profile. Das Client Profile ermöglichte eine schnellere Bereitstellung und kleinere App-Installationspakete als das vollständige .NET Framework.  
@@ -43,8 +36,7 @@ Das .NET Client Profile stellt eine Teilmenge des .NET Framework dar, die mit [!
  Wenn Sie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] installieren, wird .NET Framework 4 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Install the .NET Framework for developers (Installieren von .NET Framework für Entwickler)](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [.NET Framework Client Profile (.NET Framework 4) (.NET Framework-Clientprofil (.NET Framework 4))](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)   
- [Übersicht über die Ausrichtung auf mehrere Zielversionen in Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)   
- [Problembehandlung bei .NET Framework-Zielversionsfehlern](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)   
+ [.NET Framework Client Profile ((.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
+ [Übersicht über die Ausrichtung auf mehrere Zielversionen in Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [Problembehandlung bei .NET Framework-Zielversionsfehlern](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
  [Gewusst wie: .NET Framework-Version als Ziel](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
-

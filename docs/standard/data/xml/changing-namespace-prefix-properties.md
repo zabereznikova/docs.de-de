@@ -1,28 +1,29 @@
 ---
-title: "&#196;ndern der Eigenschaften von Namespacepr&#228;fixen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Ändern der Eigenschaften von Namespacepräfixen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7ce6e4b705188b9c1d0949703991633e3f450689
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &#196;ndern der Eigenschaften von Namespacepr&#228;fixen
-Mit der **XmlNode**\-Klasse können Sie das Namespacepräfix ändern, das mit einem bestimmten Knoten verknüpft ist.  Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  
+# <a name="changing-namespace-prefix-properties"></a>Ändern der Eigenschaften von Namespacepräfixen
+Die **XmlNode** -Klasse ermöglicht es Ihnen, die einem bestimmten Knoten zugeordnete Namespacepräfix ändern. Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -42,11 +43,11 @@ Console.WriteLine(doc.InnerXml);
   
  **Ausgabe**  
   
-```  
+```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- Wenn Sie das Präfix eines Knotens ändern, ändert sich dessen Namespace dadurch nicht.  Der Namespace kann nur bei der Erstellung des Knotens festgelegt werden.  Wenn die Struktur erhalten bleiben soll, können neue Namespaceattribute nicht mit übernommen werden, damit die Anforderungen für das festgelegte Präfix erfüllt werden.  	Wenn der neue Namespace nicht erstellt werden kann, wird das Präfix geändert, sodass der Knoten seinen lokalen Namen und Namespace beibehält.  Im folgenden Beispiel wird dargestellt, wie ein Namespaceattribut hinzugefügt wird.  
+ Wenn Sie das Präfix eines Knotens ändern, ändert sich dessen Namespace dadurch nicht. Der Namespace kann nur bei der Erstellung des Knotens festgelegt werden. Wenn die Struktur erhalten bleiben soll, können neue Namespaceattribute nicht mit übernommen werden, damit die Anforderungen für das festgelegte Präfix erfüllt werden. 	Wenn der neue Namespace nicht erstellt werden kann, wird das Präfix geändert, sodass der Knoten seinen lokalen Namen und Namespace beibehält. Im folgenden Beispiel wird dargestellt, wie ein Namespaceattribut hinzugefügt wird.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -66,11 +67,11 @@ Console.WriteLine(doc.InnerXml);
   
  **Ausgabe**  
   
-```  
+```xml  
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Wenn die Struktur als Folge des Aufrufs von **doc.InnerXml** in Form einer Zeichenfolge erhalten blieb, wurde das `xmlns:a='123'`\-Attribut hinzugefügt, damit der Namespace des `test`\-Elements beibehalten wird.  Er war und bleibt `'123'`.  
+ Wenn die Struktur in eine Zeichenfolge als Folge des Aufrufs zum beibehalten wurde **Doc. InnerXml**, `xmlns:a='123'` Attribut wurde hinzugefügt, um den Namespace des erhalten die `test` Element. Er war `'123'` und bleibt `'123'`.  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

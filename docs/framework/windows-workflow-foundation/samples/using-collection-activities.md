@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: aa7b3b6815adfba9367585174b242aa7410d578e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 84218f16f846e640baea663efc7153a40a6c764a
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-collection-activities"></a>Verwenden von Auflistungsaktivitäten
 In diesem Beispiel wird veranschaulicht, wie die Auflistungsaktivitäten mit (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> und <xref:System.Activities.Statements.RemoveFromCollection%601>) mit einer Klasse verwendet werden, die die <xref:System.Collections.ICollection>-Schnittstelle implementiert, und wie eine benutzerdefinierte Aktivität erstellt wird, die eine Auflistung durchläuft, um den Inhalt jedes Elements in der Auflistung auszugeben. Die benutzerdefinierte Aktivität mit dem Namen `PrintCollection` gibt die Elementmember einer Auflistung mit dem Namen `Numbers` in der Konsole aus.  
@@ -54,6 +54,4 @@ In diesem Beispiel wird veranschaulicht, wie die Auflistungsaktivitäten mit (<x
 >   
 >  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
-  
-## <a name="see-also"></a>Siehe auch
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

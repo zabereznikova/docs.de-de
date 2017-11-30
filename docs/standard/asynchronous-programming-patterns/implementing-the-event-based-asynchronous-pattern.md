@@ -1,84 +1,90 @@
 ---
-title: "Implementieren des ereignisbasierten asynchronen Entwurfsmusters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ereignisbasiertes asynchrones Muster"
-  - "ProgressChangedEventArgs-Klasse"
-  - "BackgroundWorker-Komponente"
-  - "Ereignisse [.NET Framework], Asynchron"
-  - "Asynchrones Muster"
-  - "AsyncOperationManager-Klasse"
-  - "Threading [.NET Framework], Asynchrone Funktionen"
-  - "Komponenten [.NET Framework], asynchrone"
-  - "AsyncOperation-Klasse"
-  - "AsyncCompletedEventArgs-Klasse"
+title: Implementieren des ereignisbasierten asynchronen Entwurfsmusters
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b4df5e4df914d932c7413e9330e8663753456c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Implementieren des ereignisbasierten asynchronen Entwurfsmusters
-Wenn Sie eine Klasse mit einigen Vorgängen schreiben, die merkliche Verzögerung verursachen kann, sollten Sie es asynchrone Funktionalität durch die Implementierung [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+# <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementieren des ereignisbasierten asynchronen Entwurfsmusters
+Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Das ereignisbasierte asynchrone Muster bietet eine standardisierte Möglichkeit zum Verpacken einer Klasse, die über asynchrone Features verfügt. Wenn mit Hilfsklassen implementiert wie <xref:System.ComponentModel.AsyncOperationManager>, Ihre Klasse ordnungsgemäß funktioniert unter jedem beliebigen Anwendungsmodell, einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsolenanwendungen und Windows Forms-Anwendung.  
+ Das ereignisbasierte asynchrone Muster bietet eine standardisierte Möglichkeit zum Verpacken einer Klasse, die asynchrone Features hat. Wenn Hilfsklassen implementiert wie <xref:System.ComponentModel.AsyncOperationManager>, Ihre Klasse funktionieren ordnungsgemäß unter jedem beliebigen Anwendungsmodell einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsolenanwendungen und Windows Forms-Anwendungen.  
   
- Ein Beispiel, das ereignisbasierte asynchrone Muster implementiert, wird, finden Sie unter [Gewusst wie: implementieren eine Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Ein Beispiel, in dem das ereignisbasierte asynchrone Muster implementiert ist, finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
- Für einfache asynchrone Operationen finden Sie möglicherweise die <xref:System.ComponentModel.BackgroundWorker> Komponente geeignet ist. Weitere Informationen zu <xref:System.ComponentModel.BackgroundWorker>, finden Sie unter [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Für einfache asynchrone Operationen finden Sie möglicherweise die <xref:System.ComponentModel.BackgroundWorker> Komponente geeignet ist. Weitere Informationen zu <xref:System.ComponentModel.BackgroundWorker>, finden Sie unter [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
- Die folgende Liste beschreibt die Funktionen des ereignisbasierten asynchronen Musters in diesem Thema erläutert.  
+ In der folgenden Liste sind die Features des ereignisbasierten asynchronen Musters aufgeführt, die in diesem Thema beschrieben sind.  
   
--   Chancen für das ereignisbasierte asynchrone Muster implementieren  
+-   Gelegenheiten für Implementieren des ereignisbasierten asynchronen Entwurfsmusters  
   
 -   Benennen von asynchronen Methoden  
   
--   Optionale Unterstützung von Abbrüchen  
+-   Optionales Unterstützen von Abbruch  
   
--   Optionale Unterstützung der IsBusy-Eigenschaft  
+-   Optionales Unterstützen der „IsBusy“-Eigenschaft  
   
--   Optional bieten Sie Unterstützung für Fortschrittsberichte  
+-   Optionales Unterstützen von Statusberichterstellung  
   
--   Optional bieten Sie Unterstützung für die Rückgabe von inkrementeller Ergebnis  
+-   Optionales Unterstützen der Rückgabe von inkrementellen Ergebnissen  
   
--   Behandlung Out und Ref-Parameter in Methoden  
+-   Verarbeiten von „out“- und „ref“-Parametern in Methoden  
   
-## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Chancen für das ereignisbasierte asynchrone Muster implementieren  
- Implementieren Sie das ereignisbasierte asynchrone Muster bei:  
+## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Gelegenheiten für Implementieren des ereignisbasierten asynchronen Entwurfsmusters  
+ Implementieren des ereignisbasierten asynchronen Entwurfsmusters bietet sich an, wenn Folgendes zutrifft:  
   
--   Clients einer Klasse müssen nicht <xref:System.Threading.WaitHandle> und <xref:System.IAsyncResult> für asynchrone Vorgänge, d. h., die Abfrage der verfügbaren Objekte und <xref:System.Threading.WaitHandle.WaitAll%2A> oder <xref:System.Threading.WaitHandle.WaitAny%2A> müssen vom Client erstellt werden.  
+-   Clients einer Klasse müssen nicht <xref:System.Threading.WaitHandle> und <xref:System.IAsyncResult> für die asynchrone Operationen, d. h., die Abfrage der verfügbaren Objekte und <xref:System.Threading.WaitHandle.WaitAll%2A> oder <xref:System.Threading.WaitHandle.WaitAny%2A> müssen vom Client aufgebaut werden.  
   
--   Asynchrone Vorgänge vom Client mit der vertrauten Ereignis-und Delegatmodells verwaltet werden sollen.  
+-   Asynchrone Vorgänge sollen vom Client mit dem vertrauten Ereignis/Delegat-Modell verwaltet werden.  
   
- Jeder Vorgang ist ein Kandidat für eine asynchrone Implementierung, aber Sie solche lange Wartezeiten übernommen wird, sollte berücksichtigt werden. Besonders geeignet sind Vorgänge, in denen Clients eine Methode aufrufen und bei Abschluss benachrichtigt werden, und kein weiterer Benutzereingriff erforderlich. Außerdem eignen sich Vorgänge, die fortlaufend ausgeführt werden in regelmäßigen Abständen Clients Fortschritte, inkrementelle Ergebnisse oder Zustandsänderungen benachrichtigen.  
+ Jeder Vorgang ist ein Kandidat für eine asynchrone Implementierung, aber ein Vorgang, für den Sie lange Wartezeiten erwarten, sollte auf alle Fälle berücksichtigt werden. Besonders geeignet sind Vorgänge, in denen Clients eine Methode aufrufen und bei Abschluss benachrichtigt werden, ohne dass weiteres Eingreifen erforderlich ist. Geeignet sind außerdem Vorgänge, die durchgängig ausgeführt werden und dabei Clients regelmäßig über Fortschritte, inkrementelle Ergebnisse oder Zustandsänderungen benachrichtigen.  
   
- Weitere Informationen über die Gründe für die das ereignisbasierte asynchrone Muster unterstützen, finden Sie unter [entscheiden, wenn das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).  
+ Weitere Informationen dazu, wie entschieden werden soll, ob das ereignisbasierte asynchrone Muster unterstützt werden sollte, finden Sie unter [Gründe für das Implementieren des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="naming-asynchronous-methods"></a>Benennen von asynchronen Methoden  
- Für jede synchrone Methode *MethodName* für die Sie ein asynchrones Gegenstück bereitstellen möchten:  
+ Definieren Sie für jede synchrone Methode *MethodName*, für die Sie ein asynchrones Gegenstück bereitstellen möchten, Folgendes:  
   
- Definieren einer *MethodName* `Async` Methode, die:  
+ Eine *MethodName*`Async`-Methode, die:  
   
 -   Gibt `void`zurück.  
   
--   Verwendet die gleichen Parameter wie der *MethodName* Methode.  
+-   Dieselben Parameter hat wie die *MethodName*-Methode.  
   
--   Akzeptiert mehrere Aufrufe.  
+-   Mehrere Aufrufe akzeptiert.  
   
- Definieren Sie optional eine *MethodName* `Async` Überladung, die mit *MethodName*`Async`, aber mit einem zusätzlichen Parameter Objektwerten aufgerufen `userState`. Wenn Sie vorbereitet sind, um mehrere gleichzeitige Aufrufe der Methode, in diesem Fall zu verwalten, müssen Sie der `userState` Wert an alle Ereignishandler, die Aufrufe der Methode zu unterscheiden, übermittelt werden. Außerdem können Sie dazu einfach als ein Ausgangspunkt für den späteren Abruf speichern.  
+ Definieren Sie optional eine *MethodName*`Async`-Überladung, die mit *MethodName*`Async` identisch ist, aber einen zusätzlichen Objekt-Parameter namens `userState` hat. Dies sollten Sie tun, wenn Sie mehrere gleichzeitige Aufrufe der Methode verwalten möchten. In diesem Fall wird der `userState`-Wert an alle Ereignishandler zurückgegeben, um die Aufrufe der Methode zu unterscheiden. Diese Vorgehensweise bietet sich auch an, wenn Sie einfach einen Platz haben möchten, in dem der Benutzerstatus für spätere Abrufe gespeichert werden soll.  
   
- Für jede Separate *MethodName* `Async` Methodensignatur:  
+ Definieren Sie für jede einzelne *MethodName*`Async`-Methodensignatur:  
   
-1.  Definieren Sie das folgende Ereignis in der gleichen Klasse wie die Methode ein:  
+1.  Das folgende Ereignis in derselben Klasse wie die Methode:  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -88,7 +94,7 @@ Wenn Sie eine Klasse mit einigen Vorgängen schreiben, die merkliche Verzögerun
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Der folgende Delegat definieren und <xref:System.ComponentModel.AsyncCompletedEventArgs>. Diese werden wahrscheinlich außerhalb der Klasse selbst, aber im selben Namespace definiert.  
+2.  Der folgende Delegat definieren und <xref:System.ComponentModel.AsyncCompletedEventArgs>. Diese sind wahrscheinlich außerhalb der Klasse selbst, aber im selben Namespace definiert.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -111,108 +117,108 @@ Wenn Sie eine Klasse mit einigen Vorgängen schreiben, die merkliche Verzögerun
     }  
     ```  
   
-    -   Sicherstellen, dass die *MethodName* `CompletedEventArgs` Klasse macht Member als schreibgeschützte Eigenschaften und keine Felder verfügbar, wie Felder binden von Daten verhindern.  
+    -   Stellen Sie sicher, dass die *MethodName*`CompletedEventArgs`-Klasse ihre Member als schreibgeschützte Eigenschaften, nicht als Felder verfügbar macht, weil Felder Datenbindung verhindern.  
   
-    -   Definieren einer <xref:System.ComponentModel.AsyncCompletedEventArgs>-abgeleitete Klassen für Methoden, die keine Ergebnisse erzeugen. Verwenden Sie einfach eine Instanz des <xref:System.ComponentModel.AsyncCompletedEventArgs> selbst.  
+    -   Definiert keine <xref:System.ComponentModel.AsyncCompletedEventArgs>-abgeleitete Klassen für Methoden, die keine Ergebnisse erzeugen. Verwenden Sie einfach eine Instanz von <xref:System.ComponentModel.AsyncCompletedEventArgs> selbst.  
   
         > [!NOTE]
-        >  Es ist durchaus akzeptabel, wenn möglich und zweckmäßig, Wiederverwendung von Delegat und <xref:System.ComponentModel.AsyncCompletedEventArgs> Typen. In diesem Fall die Benennung nicht konsistent sein werden, wie mit dem Methodennamen, da ein gegebener Delegat und <xref:System.ComponentModel.AsyncCompletedEventArgs> wird nicht an eine einzelne Methode gebunden werden.  
+        >  Es ist durchaus akzeptabel, wenn machbar und angemessen, Delegaten wiederverwenden und <xref:System.ComponentModel.AsyncCompletedEventArgs> Typen. In diesem Fall die Benennung nicht konsistent sein werden, wie durch den Methodennamen, da ein gegebener Delegat und <xref:System.ComponentModel.AsyncCompletedEventArgs> wird nicht an eine einzelne Methode gebunden werden.  
   
-## <a name="optionally-support-cancellation"></a>Optionale Unterstützung von Abbrüchen  
- Wenn Ihre Klasse Abbruch asynchroner Operationen unterstützen, sollte die Abbruch an den Client bereitgestellt werden, wie unten beschrieben. Beachten Sie, dass zwei Entscheidungspunkte, die vor dem Definieren der Unterstützung für den Abbruch erreicht werden müssen:  
+## <a name="optionally-support-cancellation"></a>Optionales Unterstützen von Abbruch  
+ Wenn Ihre Klasse das Abbrechen von asynchronen Vorgängen unterstützt, sollte Abbruch so für den Client verfügbar gemacht werden, wie dies weiter unten beschrieben ist. Es gibt zwei Entscheidungspunkte, die erreicht sein müssen, bevor Abbruchunterstützung definiert wird:  
   
--   Verfügt Ihre Klasse, einschließlich erwarteten zukünftig zu erwartende, nur eine asynchrone Operation, die Abbruch unterstützt?  
+-   Hat die Klasse, einschließlich zukünftiger zu erwartender Erweiterungen, nur einen asynchronen Vorgang, der Abbruch unterstützt?  
   
--   Können Sie die asynchronen Vorgänge, die Unterstützung für den Abbruch mehrere ausstehende Vorgänge unterstützen? Ist, ist die *MethodName* `Async` -Methode einen `userState` -Parameter, und lässt mehrere Aufrufe Aufrufes gewartet?  
+-   Können die asynchronen Vorgänge, die Abbruch unterstützen, mehrere ausstehende Vorgänge unterstützen? Das heißt, hat die *MethodName* `Async`-Methode den `userState`-Parameter, und lässt sie mehrere Aufrufe zu, bevor sie für jeden auf dessen Beendigung wartet?  
   
- Verwenden Sie die Antworten auf diese beiden Fragen in der folgenden Tabelle, um zu bestimmen, welche die Signatur Ihrer Abbruchmethode werden soll.  
+ Entscheiden Sie anhand der Antworten auf die beiden Fragen in der folgenden Tabelle, welche Signatur für die Abbruchmethode zu verwenden ist.  
   
 ### <a name="visual-basic"></a>Visual Basic  
   
-||Gleichzeitige Unterstützung mehrerer Operationen|Nur ein Vorgang zu einem Zeitpunkt|  
+||Mehrere gleichzeitige Vorgänge unterstützt|Nur immer jeweils ein Vorgang|  
 |------|------------------------------------------------|----------------------------------|  
-|Eine asynchrone Operation in der gesamten Klasse|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
-|Mehrere asynchrone Operationen in der Klasse|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
+|Ein asynchroner Vorgang in der gesamten Klasse|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
+|Mehrere asynchrone Vorgänge in der Klasse|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>A#  
+### <a name="c"></a>C#  
   
-||Gleichzeitige Unterstützung mehrerer Operationen|Nur ein Vorgang zu einem Zeitpunkt|  
+||Mehrere gleichzeitige Vorgänge unterstützt|Nur immer jeweils ein Vorgang|  
 |------|------------------------------------------------|----------------------------------|  
-|Eine asynchrone Operation in der gesamten Klasse|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
-|Mehrere asynchrone Operationen in der Klasse|`void CancelAsync(object userState);`|`void CancelAsync();`|  
+|Ein asynchroner Vorgang in der gesamten Klasse|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
+|Mehrere asynchrone Vorgänge in der Klasse|`void CancelAsync(object userState);`|`void CancelAsync();`|  
   
- Wenn Sie definieren die `CancelAsync(object userState)` -Methode, Clients müssen vorsichtig bei der Auswahl von deren Diese Statuswerte zwischen allen im Objekt aufgerufenen asynchronen Methoden und nicht nur zwischen allen Aufrufen einer einzelnen asynchronen Methode sein.  
+ Wenn Sie die `CancelAsync(object userState)`-Methode definieren, müssen Clients bei der Auswahl ihrer Statuswerte vorsichtig sein, damit sie in der Lage sind, zwischen allen für das Objekt aufgerufenen asynchronen Methoden, nicht nur zwischen allen Aufrufen einer einzigen asynchronen Methode zu unterscheiden.  
   
- Die Entscheidung, benennen Sie die einzelnen asynchronen Operation Version *MethodName* `AsyncCancel` basiert auf wird die Methode in einer entwurfsumgebung wie Visual Studio IntelliSense leichter ermitteln können. Diese Gruppen von verwandten Elementen und unterscheiden sie sich von anderen Mitgliedern, die nichts mit der asynchronen Funktionalität zu tun haben. Wenn Sie davon ausgehen, dass möglicherweise weitere asynchrone Operationen hinzugefügt werden in zukünftigen Versionen ist es besser, definieren Sie `CancelAsync`.  
+ Die Entscheidung, die Version mit einzelnem asynchronen Vorgang als *MethodName*`AsyncCancel` zu benennen, basiert darauf, die Möglichkeit zu haben, die Methode in einer Entwurfsumgebung wie Visual Studios IntelliSense einfacher erkennen zu können. Dadurch werden die zusammengehörenden Member gruppiert und lassen sich von anderen Membern unterscheiden, die nichts mit der asynchronen Funktionalität zu tun haben. Wenn Sie davon ausgehen, dass in späteren Versionen weitere asynchrone Vorgänge hinzugefügt werden, sollten Sie `CancelAsync` definieren.  
   
- Definieren Sie mehrere Methoden aus der obigen Tabelle nicht in der gleichen Klasse. Wird, die keinen Sinn machen, oder es wird die Klassenschnittstelle mit einer Verbreitung von Methoden überladen.  
+ Definieren Sie nicht mehrere Methoden aus der obigen Tabelle in derselben Klasse. Dies ist nicht sinnvoll oder führt dazu, dass in der Klassenschnittstelle unnötig viele Methoden bereitgestellt werden.  
   
- Diese Methoden in der Regel werden sofort zurückgegeben, und der Vorgang kann oder möglicherweise nicht tatsächlich abgebrochen. Im Ereignishandler für die *MethodName* `Completed` -Ereignis, das *MethodName* `CompletedEventArgs` Objekt enthält eine `Cancelled` -Feld, das Clients verwenden können, um zu bestimmen, ob ein Abbruch aufgetreten ist.  
+ Diese Methoden führen üblicherweise sofort eine Rückkehr aus, und der Vorgang wird möglicherweise tatsächlich abgebrochen (oder nicht). Im Ereignishandler für das *MethodName*`Completed`-Ereignis enthält das *MethodName* `CompletedEventArgs`-Objekt ein `Cancelled`-Feld, anhand dem Clients ermitteln können, ob der Abbruch aufgetreten ist.  
   
- Halten Sie sich an das beschriebene Semantik [Best Practices für das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ Halten Sie sich an die Abbruchsemantik, die unter [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md) beschrieben ist.  
   
-## <a name="optionally-support-the-isbusy-property"></a>Optionale Unterstützung der IsBusy-Eigenschaft  
- Wenn Ihre Klasse mehrere gleichzeitige Aufrufe nicht unterstützt, ist es ein `IsBusy` Eigenschaft. Dies ermöglicht Entwicklern, um zu bestimmen, ob ein *MethodName* `Async` -Methode wird ausgeführt, ohne Abfangen einer Ausnahme von der *MethodName* `Async` Methode.  
+## <a name="optionally-support-the-isbusy-property"></a>Optionales Unterstützen der „IsBusy“-Eigenschaft  
+ Unterstützt die Klasse nicht mehrere gleichzeitige Aufrufe, sollten Sie eine `IsBusy`-Eigenschaft verfügbar machen. Dies ermöglicht Entwicklern, zu bestimmen, ob eine *MethodName*`Async`-Methode ausgeführt wird, ohne eine Ausnahme von der *MethodName*`Async`-Methode abzufangen.  
   
- Halten Sie sich an den `IsBusy` Semantik beschrieben [Best Practices für das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ Halten Sie sich an die `IsBusy`-Semantik, die unter [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md) beschrieben ist.  
   
-## <a name="optionally-provide-support-for-progress-reporting"></a>Optional bieten Sie Unterstützung für Fortschrittsberichte  
- Es ist häufig wünschenswert, dass ein asynchroner Vorgang zum Fortschritt während des Betriebs. Das ereignisbasierte asynchrone Muster bietet eine Richtlinie dafür angeben.  
+## <a name="optionally-provide-support-for-progress-reporting"></a>Optionales Unterstützen von Statusberichterstellung  
+ Es ist häufig wünschenswert, dass ein asynchroner Vorgang während seiner Ausführung den Status mitteilt. Das ereignisbasierte asynchrone Muster stellt eine Richtlinie dafür bereit.  
   
--   Definieren Sie optional eine Ereignis, um den asynchronen Vorgang ausgelöst und im entsprechenden Thread aufgerufen. Die <xref:System.ComponentModel.ProgressChangedEventArgs> -Objekt enthält eine Ganzzahlwert Statusanzeige, die zwischen 0 und 100 liegen soll.  
+-   Definieren Sie optional ein Ereignis, das vom asynchronen Vorgang ausgelöst und im entsprechenden Thread aufgerufen wird. Die <xref:System.ComponentModel.ProgressChangedEventArgs> Objekt enthält eine Ganzzahlwerttyp Statusanzeige, die zwischen 0 und 100 liegen soll.  
   
--   Nennen Sie dieses Ereignis wie folgt:  
+-   Benennen Sie dieses Ereignis wie folgt:  
   
-    -   `ProgressChanged`Wenn die Klasse mehrere asynchrone Operationen besitzt (oder vermutlich noch um mehrere asynchrone Operationen in zukünftigen Versionen erweitert wird);  
+    -   `ProgressChanged`, wenn die Klasse mehrere asynchrone Vorgänge hat (oder vermutlich so erweitert wird, dass sie in zukünftigen Versionen mehrere asynchrone Vorgänge haben wird)  
   
-    -   *MethodName* `ProgressChanged` Wenn die Klasse über eine einzelne asynchrone Operation verfügt.  
+    -   *MethodName*`ProgressChanged`, wenn die Klasse einen einzelnen asynchronen Vorgang hat  
   
-     Diese Benennungskonvention Auswahl entspricht, die für die Abbruchmethode, wie in der Abbruchmethode beschrieben.  
+     Diese Benennungskonvention entspricht derjenigen für die Abbruchmethode, wie im Abschnitt „Optionales Unterstützen von Abbruch“ beschrieben.  
   
- Dieses Ereignis sollte verwenden die <xref:System.ComponentModel.ProgressChangedEventHandler> Signatur des Delegaten und <xref:System.ComponentModel.ProgressChangedEventArgs> Klasse. Auch wenn eine Anwendungsdomäne spezifischere Statusanzeige (für die Instanz, gelesene Bytes und die Gesamtanzahl der Bytes für ein Download-Vorgang) bereitgestellt werden kann, Sie sollten definieren eine abgeleitete Klasse von <xref:System.ComponentModel.ProgressChangedEventArgs>.  
+ Verwenden Sie dieses Ereignis sollte die <xref:System.ComponentModel.ProgressChangedEventHandler> Signatur des Delegaten und der <xref:System.ComponentModel.ProgressChangedEventArgs> Klasse. Auch wenn eine Statusanzeige mehr domänenspezifische (für die Instanz Bytes liest und die Gesamtanzahl der Bytes für ein Download-Vorgang) bereitgestellt werden kann, Sie sollten definieren eine abgeleitete Klasse von <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
- Beachten Sie, dass nur ein `ProgressChanged` oder *MethodName* `ProgressChanged` -Ereignis für die Klasse, unabhängig von der Anzahl von asynchronen Methoden unterstützt. Clients verwenden sollen die `userState` -Objekt, das an die *MethodName* `Async` Methoden um Statusupdates auf mehrere gleichzeitige Vorgänge unterscheiden zu können.  
+ Beachten Sie, dass es nur ein `ProgressChanged`- oder *MethodName*`ProgressChanged`-Ereignis für die Klasse gibt, unabhängig davon, wie viele asynchrone Methoden sie unterstützt. Für Clients wird vorausgesetzt, dass sie das `userState`-Objekt, das an die *MethodName*`Async`-Methoden übergeben wird, verwenden, um zwischen Statusupdates bei mehreren gleichzeitigen Vorgängen zu unterscheiden.  
   
- Es gibt möglicherweise Situationen, in der mehrere Vorgänge unterstützt, und einen anderen Indikator für Status zurück. In diesem Fall kann ein einzelner `ProgressChanged` Ereignis ist nicht zulässig, und Sie sollten unterstützen mehrerer `ProgressChanged` Ereignisse. Verwenden Sie in diesem Fall einem Benennungsmuster *MethodName* `ProgressChanged` für jede *MethodName* `Async` Methode.  
+ Es kann Situationen geben, in denen mehrere Vorgänge einen Status unterstützen und jeder Vorgang einen anderen Indikator für den Status zurückgibt. In diesem Fall ist ein einzelnes `ProgressChanged`-Ereignis nicht geeignet, und Sie sollten Unterstützung für mehrere `ProgressChanged`-Ereignisse erwägen. Verwenden Sie für diesen Fall das Benennungsmuster *MethodName*`ProgressChanged` für jede *MethodName*`Async`-Methode.  
   
- Halten Sie sich an die Fortschrittsberichterstattung Semantik beschrieben [Best Practices für das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ Halten Sie sich an die Statusberichte-Semantik, die unter [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md) beschrieben ist.  
   
-## <a name="optionally-provide-support-for-returning-incremental-results"></a>Optional bieten Sie Unterstützung für die Rückgabe von inkrementeller Ergebnis  
- Manchmal kann ein asynchroner Vorgang inkrementelle Ergebnisse vor dem Abschluss zurückgeben. Es gibt eine Reihe von Optionen, die zur Unterstützung dieses Szenarios verwendet werden können. Es folgen einige Beispiele.  
+## <a name="optionally-provide-support-for-returning-incremental-results"></a>Optionales Unterstützen der Rückgabe von inkrementellen Ergebnissen  
+ Möglicherweise gibt ein asynchroner Vorgang vor seiner Beendigung inkrementelle Ergebnisse zurück. Zur Unterstützung dieses Szenarios gibt es eine Reihe von Optionen, die verwendet werden können. Es folgen einige Beispiele.  
   
-### <a name="single-operation-class"></a>Einzelnen Operation-Klasse  
- Wenn Ihre Klasse nur eine einzelne asynchrone Operation unterstützt, und der Vorgang ist dann inkrementelle Ergebnisse zurückgeben:  
+### <a name="single-operation-class"></a>Klasse mit einem einzigen Vorgang  
+ Unterstützt die Klasse nur einen einzigen asynchronen Vorgang, und kann dieser Vorgang inkrementelle Ergebnisse zurückgeben, dann gehen Sie wie folgt vor:  
   
--   Erweitern der <xref:System.ComponentModel.ProgressChangedEventArgs> damit die inkrementellen Ergebnisdaten aufnehmen, und Definieren einer *MethodName* `ProgressChanged` Ereignis mit diesen erweiterten Daten.  
+-   Erweitern der <xref:System.ComponentModel.ProgressChangedEventArgs> um inkrementelle Ergebnisdaten durchzuführen, und definieren einen *MethodName* `ProgressChanged` Ereignis mit dieser erweiterten Daten.  
   
--   Dies wird *MethodName* `ProgressChanged` Ereignis, wenn es ein inkrementelles Ergebnis zu Berichten.  
+-   Lösen Sie dieses *MethodName*`ProgressChanged`-Ereignis aus, sobald ein zu berichtendes inkrementelles Ergebnis vorliegt.  
   
- Diese Lösung bezieht sich ausdrücklich auf einer einzelnen asynchronen Operation-Klasse, da kein Problem mit dem gleichen Ereignis auftreten kann, dass inkrementelle Ergebnisse für "alle Operationen" zurückgegeben wird, als die *MethodName* `ProgressChanged` -Ereignis der Fall ist.  
+ Diese Lösung ist speziell für eine Klasse mit einzelnem asynchronen Vorgang anwendbar, weil es kein Problem damit gibt, dass dasselbe auftretende Ereignis inkrementelle Ergebnisse für „alle Vorgänge“ zurückgibt, denn das *MethodName*`ProgressChanged`-Ereignis erledigt dies.  
   
-### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Klasse mit mehreren Operationen mit homogenen, inkrementellen Ergebnissen  
- In diesem Fall die Klasse unterstützt mehrere asynchrone Methoden, die jeweils der inkrementelle Ergebnisse zurückgeben kann, und diese alle inkrementellen Ergebnisse haben denselben Datentyp aufweisen.  
+### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Klasse mit mehreren Vorgängen und homogenen inkrementellen Ergebnissen  
+ In diesem Fall unterstützt die Klasse mehrere asynchrone Methoden, von denen jede inkrementelle Ergebnisse zurückgeben kann, wobei diese inkrementellen Ergebnisse alle denselben Datentyp haben.  
   
- Befolgen Sie die einzelnen Operation-Klassen, wie dem oben beschriebenen <xref:System.EventArgs> -Struktur für alle inkrementellen Ergebnisse geeignet ist. Definieren einer `ProgressChanged` Ereignis, sondern mit einer *MethodName* `ProgressChanged` Ereignis, da es für mehrere asynchrone Methoden gilt.  
+ Führen Sie das Modell, die einzelnen Operation-Klassen wie dem oben beschriebenen <xref:System.EventArgs> Struktur funktioniert für alle inkrementellen Ergebnisse. Definieren Sie ein `ProgressChanged`-Ereignis anstelle eines *MethodName*`ProgressChanged`-Ereignisses, weil es für mehrere asynchrone Methoden gilt.  
   
-### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Klasse mit mehreren Operationen mit heterogenen, inkrementellen Ergebnissen  
- Wenn Ihre Klasse mehrere asynchrone Methoden unterstützt, sollte jeder eine andere Art von Daten zurückgeben Sie:  
+### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Klasse mit mehreren Vorgängen und heterogenen inkrementellen Ergebnissen  
+ Wenn die Klasse mehrere asynchrone Methoden unterstützt, wobei jede Methode Daten eines anderen Typs zurückgibt, sollten Sie wie folgt vorgehen:  
   
--   Trennen des inkrementellen Resultsets aus Ihrem Fortschrittsberichterstattung reporting.  
+-   Trennen Sie die Mitteilungen über inkrementelle Ergebnisse von den Statusmitteilungen.  
   
--   Definieren Sie eine Separate *MethodName* `ProgressChanged` -Ereignis mit den entsprechenden <xref:System.EventArgs> für jede asynchrone Methode, diese Methode inkrementellen Ergebnisdaten behandeln.  
+-   Definieren Sie eine Separate *MethodName* `ProgressChanged` Ereignis mit der entsprechenden <xref:System.EventArgs> für jede asynchrone Methode, inkrementelle Ergebnisdaten dieser Methode zu behandeln.  
   
- Rufen Sie diesen Ereignishandler für den entsprechenden Thread wie unter [Best Practices für das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ Rufen Sie diesen Ereignishandler für den entsprechenden Thread auf, wie dies unter [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md) beschrieben ist.  
   
-## <a name="handling-out-and-ref-parameters-in-methods"></a>Behandlung Out und Ref-Parameter in Methoden  
- Obwohl die Verwendung von `out` und `ref` ist, im Allgemeinen abgeraten, in .NET Framework, hier sind die Regeln zu beachten, wenn sie vorhanden sind:  
+## <a name="handling-out-and-ref-parameters-in-methods"></a>Verarbeiten von „out“- und „ref“-Parametern in Methoden  
+ Grundsätzlich wird davon abgeraten, `out` und `ref` in .NET Framework zu verwenden. Sind diese aber vorhanden, sollten die folgenden Regeln beachtet werden:  
   
- Eine synchrone Methode *MethodName*:  
+ Angenommen, es gibt die synchrone Methode *MethodName*:  
   
--   `out`Parameter für *MethodName* muss nicht Teil des *MethodName*`Async`. Sie sollten stattdessen Teil sein *MethodName* `CompletedEventArgs` mit dem gleichen Namen wie dessen Parameter in *MethodName* (es sei denn, ein geeigneter Namen).  
+-   `out`-Parameter für *MethodName* dürfen keine Bestandteile von *MethodName*`Async` sein. Stattdessen müssen sie Bestandteile von *MethodName*`CompletedEventArgs` mit denselben Namen wie ihre Parametergegenstücke in *MethodName* sein (es sei denn, es gibt geeignetere Namen).  
   
--   `ref`Parameter für *MethodName* sollte angezeigt werden, als Teil des *MethodName*`Async`, und als Teil der *MethodName* `CompletedEventArgs` mit dem gleichen Namen wie dessen Parameter in *MethodName* (es sei denn, ein geeigneter Namen).  
+-   `ref`-Parameter für *MethodName* müssen als Bestandteile von *MethodName*`Async` und als Bestandteile von *MethodName*`CompletedEventArgs` mit denselben Namen wie ihre Parametergegenstücke in *MethodName* vorhanden sein (es sei denn, es gibt geeignetere Namen).  
   
- Angenommen:  
+ Angenommen, dies liegt vor:  
   
 ```vb  
 Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg3 As String) As Integer  
@@ -222,7 +228,7 @@ Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg
 public int MethodName(string arg1, ref string arg2, out string arg3);  
 ```  
   
- Die asynchrone Methode und ihre <xref:System.ComponentModel.AsyncCompletedEventArgs> Klasse sieht wie folgt:  
+ Die asynchrone Methode und die zugehörige <xref:System.ComponentModel.AsyncCompletedEventArgs> Klasse würde wie folgt aussehen:  
   
 ```vb  
 Public Sub MethodNameAsync(ByVal arg1 As String, ByVal arg2 As String)  
@@ -250,11 +256,11 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ComponentModel.ProgressChangedEventArgs>   
- <xref:System.ComponentModel.AsyncCompletedEventArgs>   
- [Gewusst wie: implementieren eine Komponente, die das ereignisbasierte asynchrone Muster unterstützt,](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [Gewusst wie: implementieren ein Formulars, das eine Hintergrundoperation verwendet](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [Gründe für das ereignisbasierte asynchrone Muster implementieren.](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)   
- [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Bewährte Methoden für das ereignisbasierte asynchrone Muster implementieren](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+ <xref:System.ComponentModel.ProgressChangedEventArgs>  
+ <xref:System.ComponentModel.AsyncCompletedEventArgs>  
+ [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)

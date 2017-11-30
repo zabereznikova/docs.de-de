@@ -1,12 +1,9 @@
 ---
 title: Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - type conversion [C#]
 - data type conversion [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: f5844cab81f194b9301a394117e92305eaa45e62
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 Weil C# zur Laufzeit statisch kompiliert ist, kann eine Variable, nachdem sie deklariert wurde, nicht noch einmal deklariert oder dazu verwendet werden, Werte anderer Typen zu speichern, es sei denn, der Wert ist in den Wert der Variablen konvertierbar. Es gibt z.B. keine Konvertierung einer Ganzzahl in eine willkürliche Zeichenfolge. Deshalb können Sie, nachdem Sie `i` Ganzzahl deklariert haben, die Zeichenfolge „Hello“ nicht zuweisen, wie in folgendem Codebeispiel gezeigt.  
@@ -60,7 +42,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen  
  Eine implizite Konvertierung kann für integrierte numerische Typen durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder abgerundet zu werden. Eine Variable den Typs [long](../../../csharp/language-reference/keywords/long.md) (8-Byte-Ganzzahl) kann z.B. jeden Wert speichern, den eine Variable des Typs [int](../../../csharp/language-reference/keywords/int.md) (4-Bytes auf einem 32-Bit-Computer) speichern kann. In folgendem Beispiel konvertiert der Compiler den Wert auf der rechten Seite implizit in einen Typ `long`, bevor er ihn `bigNum` zuweist.  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  Eine vollständige Liste aller impliziten numerischen Konvertierungen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -74,7 +56,7 @@ Base b = d; // Always OK.
 ## <a name="explicit-conversions"></a>Explizite Konvertierungen  
  Wenn allerdings eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann, fordert der Compiler eine explizite Konvertierung; diese wird als *Umwandlung* bezeichnet. Eine Umwandlung bietet die Möglichkeit, den Compiler explizit zu verständigen, dass Sie eine Konvertierung vornehmen möchten, und dass es Ihnen bewusst ist, dass dies einen Datenverlust zur Folge haben kann. Wenn Sie eine Umwandlung durchführen möchten, geben Sie den Typ, in den umgewandelt werden soll, in Klammern am Anfang des zu konvertierenden Wertes oder der zu konvertierenden Variablen an. Das folgende Programm wandelt ein [double](../../../csharp/language-reference/keywords/double.md) in ein [int](../../../csharp/language-reference/keywords/int.md) um. Das Programm führt ohne die Umwandlung keine Kompilierung durch.  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
+ [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  Eine Liste der zulässigen expliziten numerischen Konvertierungen finden Sie unter [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
@@ -99,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 ## <a name="type-conversion-exceptions-at-run-time"></a>Typkonvertierungsausnahmen zur Laufzeit  
  In manchen Verweistypkonvertierungen kann der Compiler nicht bestimmen, ob eine Umwandlung zulässig wäre. Es ist möglich, dass ein Umwandlungsvorgang, der ordnungsgemäß kompiliert, zur Laufzeit fehlschlägt. Eine fehlgeschlagene Typumwandlung zur Laufzeit löst wie in folgendem Beispiel dargestellt eine <xref:System.InvalidCastException> aus.  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C# stellt die Operatoren [is](../../../csharp/language-reference/keywords/is.md) und [as](../../../csharp/language-reference/keywords/as.md) bereit, mit denen Sie vor einer Umwandlung auf Kompatibilität prüfen können. Weitere Informationen finden Sie unter [Vorgehensweise: Sichere Umwandlung mit den Operatoren „as“ und „is“](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
   
@@ -107,13 +89,12 @@ Giraffe g2 = (Giraffe) a;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Typen](../../../csharp/programming-guide/types/index.md)   
- [()-Operator](../../../csharp/language-reference/operators/invocation-operator.md)   
- [explicit](../../../csharp/language-reference/keywords/explicit.md)   
- [implicit](../../../csharp/language-reference/keywords/implicit.md)   
- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)   
- [Verallgemeinerte Typkonvertierung](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)   
- [Konvertieren exportierter Typen](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Typen](../../../csharp/programming-guide/types/index.md)  
+ [()-Operator](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+ [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+ [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+ [Verallgemeinerte Typkonvertierung](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [Exportierte Typkonvertierung](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
-
