@@ -1,36 +1,37 @@
 ---
-title: "Extrahieren von XML-Daten mit &#39;XPathNavigator&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Extrahieren von XML-Daten mit XPathNavigator
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c42539db3750ebc2a4220ef776b89bbabe6aaca3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Extrahieren von XML-Daten mit &#39;XPathNavigator&#39;
-Es gibt in Microsoft .NET Framework mehre Möglichkeiten zur Darstellung eines XML\-Dokuments.  Es kann ein <xref:System.String> oder eine der Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathDocument> verwendet werden.  Um den Wechsel zwischen verschiedenen Darstellungen eines XML\-Dokuments zu erleichtern, stellt die <xref:System.Xml.XPath.XPathNavigator>\-Klasse eine Reihe von Methoden und Eigenschaften zum Extrahieren von XML als <xref:System.String>, als <xref:System.Xml.XmlReader>\-Objekt oder als <xref:System.Xml.XmlWriter>\-Objekt bereit.  
+# <a name="extract-xml-data-using-xpathnavigator"></a>Extrahieren von XML-Daten mit XPathNavigator
+Es gibt in Microsoft .NET Framework mehre Möglichkeiten zur Darstellung eines XML-Dokuments. Es kann ein <xref:System.String> oder eine der Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathDocument> verwendet werden. Um den Wechsel zwischen verschiedenen Darstellungen eines XML-Dokuments zu erleichtern, stellt die <xref:System.Xml.XPath.XPathNavigator>-Klasse eine Reihe von Methoden und Eigenschaften zum Extrahieren von XML als <xref:System.String>, als <xref:System.Xml.XmlReader>-Objekt oder als <xref:System.Xml.XmlWriter>-Objekt bereit.  
   
-## Konvertiert einen "XPathNavigator" in eine Zeichenfolge.  
- Die <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A>\-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>\-Klasse wird zum Abrufen des Markups des ganzen XML\-Dokuments oder des Markups eines einzelnen Knotens und seiner untergeordneten Knoten verwendet.  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Konvertiert einen "XPathNavigator" in eine Zeichenfolge.  
+ Die <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse wird zum Abrufen des Markups des ganzen XML-Dokuments oder des Markups eines einzelnen Knotens und seiner untergeordneten Knoten verwendet.  
   
 > [!NOTE]
->  Die <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>\-Eigenschaft ruft das Markup der einem Knoten untergeordneten Knoten ab.  
+>  Die <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>-Eigenschaft ruft das Markup der einem Knoten untergeordneten Knoten ab.  
   
- Im folgenden Codebeispiel wird das ganze in einem <xref:System.Xml.XPath.XPathNavigator>\-Objekt enthaltene XML\-Dokument sowohl als <xref:System.String> als auch als einzelner Knoten mit untergeordneten Knoten gespeichert.  
+ Im folgenden Codebeispiel wird das ganze in einem <xref:System.Xml.XPath.XPathNavigator>-Objekt enthaltene XML-Dokument sowohl als <xref:System.String> als auch als einzelner Knoten mit untergeordneten Knoten gespeichert.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -56,14 +57,14 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## Konvertiert von "XPathNavigator" in "XmlReader"  
- Mit der <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>\-Methode wird gesamte Inhalt eines XML\-Dokuments oder nur ein einzelner Knoten und seine untergeordneten Knoten als Stream in ein <xref:System.Xml.XmlReader>\-Objekt übertragen.  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Konvertiert von "XPathNavigator" in "XmlReader"  
+ Mit der <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>-Methode wird gesamte Inhalt eines XML-Dokuments oder nur ein einzelner Knoten und seine untergeordneten Knoten als Stream in ein <xref:System.Xml.XmlReader>-Objekt übertragen.  
   
- Beim Erstellen des <xref:System.Xml.XmlReader>\-Objekts aus dem aktuellen Knoten und den untergeordneten Knoten wird die <xref:System.Xml.XmlReader.ReadState%2A>\-Eigenschaft des <xref:System.Xml.XmlReader>\-Objekts auf <xref:System.Xml.ReadState> festgelegt.  Beim ersten Aufruf der <xref:System.Xml.XmlReader.Read%2A>\-Methode des <xref:System.Xml.XmlReader>\-Objekts wird die Position des <xref:System.Xml.XmlReader> auf den aktuellen Knoten des <xref:System.Xml.XPath.XPathNavigator> verschoben.  Das neue <xref:System.Xml.XmlReader>\-Objekt setzt den Lesevorgang bis zum Ende der XML\-Struktur fort.  In diesem Fall gibt die <xref:System.Xml.XmlReader.Read%2A>\-Methode `false` zurück und die <xref:System.Xml.XmlReader.ReadState%2A>\-Eigenschaft des <xref:System.Xml.XmlReader>\-Objekts wird auf <xref:System.Xml.ReadState> festgelegt.  
+ Beim Erstellen des <xref:System.Xml.XmlReader>-Objekts aus dem aktuellen Knoten und den untergeordneten Knoten wird die <xref:System.Xml.XmlReader>-Eigenschaft des <xref:System.Xml.XmlReader.ReadState%2A>-Objekts auf <xref:System.Xml.ReadState.Initial> festgelegt. Beim ersten Aufruf der <xref:System.Xml.XmlReader>-Methode des <xref:System.Xml.XmlReader.Read%2A>-Objekts wird die Position des <xref:System.Xml.XmlReader> auf den aktuellen Knoten des <xref:System.Xml.XPath.XPathNavigator> verschoben. Das neue <xref:System.Xml.XmlReader>-Objekt setzt den Lesevorgang bis zum Ende der XML-Struktur fort. In diesem Fall gibt die <xref:System.Xml.XmlReader.Read%2A>-Methode `false` zurück und die <xref:System.Xml.XmlReader>-Eigenschaft des <xref:System.Xml.XmlReader.ReadState%2A>-Objekts wird auf <xref:System.Xml.ReadState.EndOfFile> festgelegt.  
   
- Die Position des <xref:System.Xml.XPath.XPathNavigator>\-Objekts wird durch das Erstellen oder das Verschieben des <xref:System.Xml.XmlReader>\-Objekts nicht geändert.  Ein Aufruf der <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>\-Methode ist nur dann zulässig, wenn das Objekt auf einem Element oder auf dem Stammknoten positioniert ist.  
+ Die Position des <xref:System.Xml.XPath.XPathNavigator>-Objekts wird durch das Erstellen oder das Verschieben des <xref:System.Xml.XmlReader>-Objekts nicht geändert. Ein Aufruf der <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>-Methode ist nur dann zulässig, wenn das Objekt auf einem Element oder auf dem Stammknoten positioniert ist.  
   
- Im folgenden Beispiel wird ein <xref:System.Xml.XmlReader>\-Objekt erstellt, das das ganze XML\-Dokument sowohl in einem <xref:System.Xml.XPath.XPathDocument>\-Objekt als auch als einzelnen Knoten mit untergeordneten Knoten enthält.  
+ Im folgenden Beispiel wird ein <xref:System.Xml.XmlReader>-Objekt erstellt, das das ganze XML-Dokument sowohl in einem <xref:System.Xml.XPath.XPathDocument>-Objekt als auch als einzelnen Knoten mit untergeordneten Knoten enthält.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -123,12 +124,12 @@ book.Close();
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## Konvertieren von "XPathNavigator" in "XmlWriter"  
- Mit der <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A>\-Methode wird gesamte Inhalt eines XML\-Dokuments oder nur ein einzelner Knoten und seine untergeordneten Knoten als Stream in ein <xref:System.Xml.XmlWriter>\-Objekt übertragen.  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Konvertieren von "XPathNavigator" in "XmlWriter"  
+ Mit der <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A>-Methode wird gesamte Inhalt eines XML-Dokuments oder nur ein einzelner Knoten und seine untergeordneten Knoten als Stream in ein <xref:System.Xml.XmlWriter>-Objekt übertragen.  
   
- Die Position des <xref:System.Xml.XPath.XPathNavigator>\-Objekts wird durch das Erstellen des <xref:System.Xml.XmlWriter>\-Objekts nicht geändert.  
+ Die Position des <xref:System.Xml.XPath.XPathNavigator>-Objekts wird durch das Erstellen des <xref:System.Xml.XmlWriter>-Objekts nicht geändert.  
   
- Im folgenden Beispiel wird ein <xref:System.Xml.XmlWriter>\-Objekt erstellt, das das ganze XML\-Dokument sowohl in einem <xref:System.Xml.XPath.XPathDocument>\-Objekt als auch als einzelnen Knoten mit untergeordneten Knoten enthält.  
+ Im folgenden Beispiel wird ein <xref:System.Xml.XmlWriter>-Objekt erstellt, das das ganze XML-Dokument sowohl in einem <xref:System.Xml.XPath.XPathDocument>-Objekt als auch als einzelnen Knoten mit untergeordneten Knoten enthält.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -168,11 +169,11 @@ book.Close();
   
  In dem Beispiel wird die bereits erwähnte Datei `books.xml` als Eingabe verwendet.  
   
-## Siehe auch  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Verarbeiten von XML\-Daten mithilfe des XPath\-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Navigieren in Knotengruppen mit "XPathNavigator"](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [Das Navigieren durch Attribut\- und Namespaceknoten mit "XPathNavigator"](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)   
- [Zugreifen auf streng typisierte XML\-Daten mit 'XPathNavigator'](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [In Knotengruppen mit "XPathNavigator"](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Attribut und Namespace-Knoten Navigation mit "XPathNavigator"](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [Zugreifen auf streng typisierte XML-Daten mit "XPathNavigator"](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

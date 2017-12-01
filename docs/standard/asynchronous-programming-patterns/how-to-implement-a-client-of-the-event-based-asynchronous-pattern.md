@@ -1,48 +1,54 @@
 ---
-title: "How to: Implement a Client of the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "Asynchronous Pattern"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "components [.NET Framework], asynchronous"
-  - "AsyncOperation class"
-  - "threading [Windows Forms], asynchronous features"
-  - "AsyncCompletedEventArgs class"
+title: 'Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- threading [Windows Forms], asynchronous features
+- AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Implement a Client of the Event-based Asynchronous Pattern
-Im folgenden Codebeispiel wird die Verwendung einer Komponente veranschaulicht, die der [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) folgt.  Das Formular für dieses Beispiel verwendet die unter [How to: Implement a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) beschriebene  `PrimeNumberCalculator` \-Komponente.  
+# <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Komponente, die entspricht der [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Das Formular für dieses Beispiel verwendet die `PrimeNumberCalculator` Komponente, die in beschriebenen [wie: implementieren eine Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
- Sofern Sie ein Projekt mit diesem Beispiel ausführen, wird Ihnen das "Primzahlenrechner"\-Formular mit einem Datenblatt und den folgenden zwei Schaltflächen angezeigt: **Neuen Task starten** und **Abbrechen**.  Sie können auf die Schaltfläche **Neuen Task starten** mehrmals hintereinander klicken. Bei jedem Klick wird durch eine asynchrone Operation ein Rechenvorgang gestartet, um zu bestimmen, ob es sich bei einer zufällig generierten Testzahl um eine Primzahl handelt.  Das Formular zeigt in periodischen Abständen Fortschritt und inkrementelle Ergebnisse an.  Jeder Operation wird eine eindeutige Aufgaben\-ID zugewiesen.  Das Ergebnis der Berechnung wird in der **Ergebnis**\-Spalte angezeigt. Wenn die Testzahl keine Primzahl ist, wird sie als **Zusammengesetzt** bezeichnet und deren erster Primfaktor angezeigt.  
+ Wenn Sie ein Projekt, die in diesem Beispiel verwendet ausführen, wird ein Formular "Primzahl Calculator" mit zwei Schaltflächen und ein Raster angezeigt: **neuen Task starten** und **"Abbrechen"**. Klicken Sie auf die **neuen Task starten** mehrmals nacheinander die Schaltfläche, und klicken, startet ein asynchroner Vorgang eine Berechnung aus, um festzustellen, ob eine zufällig generierter Testzahl eine Primzahl ist. Das Formular wird in regelmäßigen Abständen und inkrementelle Ergebnisse anzuzeigen. Jeder Vorgang ist eine eindeutige Aufgaben-ID zugewiesen. Das Ergebnis der Berechnung wird angezeigt, der **Ergebnis** Spalte; Wenn die Anzahl der Tests keine Primzahl ist, wird Sie als beschriftet **zusammengesetzt –** und seine erste Divisor wird angezeigt.  
   
- Jede ausstehende Operation kann mit der Schaltfläche **Abbrechen** abgebrochen werden.  Es besteht die Möglichkeit der Mehrfachauswahl.  
+ Alle ausstehenden Vorgang abgebrochen werden kann, mit der **"Abbrechen"** Schaltfläche. Mehrfachauswahl können vorgenommen werden.  
   
 > [!NOTE]
->  Bei den meisten Zahlen handelt es sich nicht um Primzahlen.  Wenn Sie nach mehreren abgeschlossenen Operationen keine Primzahl gefunden haben, starten Sie einfach zusätzliche Tasks, sodass schließlich einige Primzahlen ermittelt werden.  
+>  Die meisten Zahlen ist es sich um Primzahlen nicht. Wenn Sie nicht nach mehreren abgeschlossenen Vorgänge eine Primzahl gefunden haben, einfach weitere Aufgaben starten und schließlich finden Sie einige Primzahlen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]
  [!code-vb[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#10)]  
   
-## Siehe auch  
- <xref:System.ComponentModel.AsyncOperation>   
- <xref:System.ComponentModel.AsyncOperationManager>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.ComponentModel.AsyncOperation>  
+ <xref:System.ComponentModel.AsyncOperationManager>  
  <xref:System.Windows.Forms.WindowsFormsSynchronizationContext>

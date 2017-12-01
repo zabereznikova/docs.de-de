@@ -13,14 +13,14 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3d18626412c0a6233c8792a4f19d5d05ef083333
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Zugreifen auf OperationContext aus einem Workflowdienst
-Für den Zugriff auf den <xref:System.ServiceModel.OperationContext> in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren. Überschreiben Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & AutoUpgrade = "true" Methode, die einen Verweis zu übergeben, wird die <xref:System.ServiceModel.OperationContext>. In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft, um einen benutzerdefinierten Header sowie eine benutzerdefinierte Aktivität abzurufen, die diese Eigenschaft zur Laufzeit für <xref:System.ServiceModel.Activities.Receive> sichtbar macht.  Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität, wenn jedoch eine <xref:System.ServiceModel.Activities.Receive> darin platziert wird, die <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen wird, und die <xref:System.ServiceModel.OperationContext> Informationen abgerufen werden soll.  In diesem Thema wird zudem veranschaulicht, wie auf den clientseitigen <xref:System.ServiceModel.OperationContext> zugegriffen wird, um über die <xref:System.ServiceModel.Activities.ISendMessageCallback>-Schnittstelle ausgehende Header hinzuzufügen.  
+Für den Zugriff auf den <xref:System.ServiceModel.OperationContext> in einem Workflowdienst müssen Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback>-Schnittstelle in einer benutzerdefinierten Ausführungseigenschaft implementieren. Überschreiben Sie die <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>-Methode, die als Verweis an den <xref:System.ServiceModel.OperationContext> übergeben wird. In diesem Thema erhalten Sie schrittweise Anweisungen zum Implementieren dieser Ausführungseigenschaft, um einen benutzerdefinierten Header sowie eine benutzerdefinierte Aktivität abzurufen, die diese Eigenschaft zur Laufzeit für <xref:System.ServiceModel.Activities.Receive> sichtbar macht.  Die benutzerdefinierte Aktivität implementiert dasselbe Verhalten wie eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität, wenn jedoch eine <xref:System.ServiceModel.Activities.Receive> darin platziert wird, die <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aufgerufen wird, und die <xref:System.ServiceModel.OperationContext> Informationen abgerufen werden soll.  In diesem Thema wird zudem veranschaulicht, wie auf den clientseitigen <xref:System.ServiceModel.OperationContext> zugegriffen wird, um über die <xref:System.ServiceModel.Activities.ISendMessageCallback>-Schnittstelle ausgehende Header hinzuzufügen.  
   
 ### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementieren des dienstseitigen IReceiveMessageCallback  
   

@@ -1,31 +1,32 @@
 ---
-title: "Ereignisbehandlung in einem XML-Dokument mit &quot;XmlNodeChangedEventArgs&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Ereignisbehandlung in einem XML-Dokument mit &quot;XmlNodeChangedEventArgs&quot;
-**XmlNodeChangedEventArgs** kapselt die Argumente ein, die den beim **XmlDocument**\-Objekt zur Behandlung von Ereignissen registrierten Ereignishandlern übergeben werden.  	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
+Die **"XmlNodeChangedEventArgs"** kapselt die Argumente, die an die registrierten Ereignishandlern übergeben der **XmlDocument** Objekt für die Behandlung von Ereignissen. 	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
   
 |Ereignis|Wird ausgelöst|  
-|--------------|--------------------|  
+|-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wird.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade in einen anderen Knoten eingefügt wurde.|  
 |<xref:System.Xml.XmlDocument.NodeRemoving>|Wenn ein Knoten, der zum aktuellen Dokument gehört, gerade aus dem Dokument entfernt wird.|  
@@ -34,7 +35,7 @@ caps.handback.revision: 3
 |<xref:System.Xml.XmlDocument.NodeChanged>|Wenn der Wert eines Knotens geändert wurde.|  
   
 > [!NOTE]
->  Wenn die Speichernutzung von **XmlDataDocument** vollständig für die **DataSet**\-Speicherung optimiert ist, wird durch **XmlDataDocument** bei Änderungen des zugrunde liegenden **DataSet** möglicherweise keines der oben aufgeführten Ereignisse ausgelöst.  Wenn diese Ereignisse benötigt werden, muss das ganze **XmlDocument** einmal durchlaufen werden, damit die Speichernutzung nicht vollständig optimiert wird.  
+>  Wenn die **XmlDataDocument** speicherauslastung wird vollständig optimiert, um verwenden **DataSet** Speicher, der **XmlDataDocument** möglicherweise nicht ausgelöst, wenn Änderungen sind oben aufgeführten Ereignisse versucht, die zugrunde liegende **DataSet**. Wenn Sie diese Ereignisse benötigt werden, müssen Sie die gesamte durchlaufen **XmlDocument** einmal, um die Auslastung des Speichers nicht vollständig optimiert stellen.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie ein Ereignishandler definiert und dann einem Ereignis hinzugefügt wird.  
   
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Manche DOM\-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können.  **AppendChild** muss den gerade angefügten Knoten möglicherweise aus dem übergeordneten Element entfernen.  In diesem Fall wird zuerst ein **NodeRemoved**\-Ereignis und dann ein **NodeInserted**\-Ereignis ausgelöst.  Operationen \(z. B. das Festlegen von **InnerXml**\) können zu mehreren Ereignissen führen.  
+ Manche DOM-Operationen sind Verbundoperationen, die mehrere Ereignisse auslösen können. Beispielsweise **AppendChild** ggf. So entfernen Sie den Knoten aus dem übergeordneten Element angefügt wird. In diesem Fall finden Sie unter einem **NodeRemoved** zunächst ausgelöste Ereignis gefolgt von einer **NodeInserted** Ereignis. Vorgänge wie Einstellung **InnerXml** mehrere Ereignisse verursachen.  
   
- Im folgenden Codebeispiel wird das Erstellen des Ereignishandlers und die Behandlung des **NodeInserted**\-Ereignisses veranschaulicht.  
+ Im folgenden Codebeispiel wird veranschaulicht, die Erstellung des ereignishandlers und die Fehlerbehandlung der **NodeInserted** Ereignis.  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- Weitere Informationen finden Sie unter [XmlNodeChangeEventArgs\-Member](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic) und [XmlNodeChangedEventHandler\-Delegat](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ Weitere Informationen finden Sie unter <xref:System.Xml.XmlNodeChangedEventArgs> und <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

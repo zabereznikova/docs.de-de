@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d4f9d9e966a0a6d8fa48d195b17438b3d78b32a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 01d5d6f35ed9eaa64786d18c2477862594c546be
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-transactionscope"></a>Grundlegender TransactionScope
 Dieses Beispiel veranschaulicht die Schachtelung von <xref:System.Activities.Statements.TransactionScope>-Instanzen anhand von vier Szenarios. Im ersten Szenario wird die Aktivität eines Drittanbieters geschachtelt, deren Konstruktionsmethode dem Autor nicht bekannt ist. Im zweiten und dritten Szenario wird die Einhaltung von Timeouts veranschaulicht, und im letzten Szenario wird die <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>-Einstellung gezeigt.  
@@ -47,6 +47,4 @@ Dieses Beispiel veranschaulicht die Schachtelung von <xref:System.Activities.Sta
 >   
 >  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) auf, um alle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] -Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`  
-  
-## <a name="see-also"></a>Siehe auch
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

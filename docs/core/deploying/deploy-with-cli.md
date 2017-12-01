@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
+ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
 Sie können eine .NET Core-Anwendung entweder als *Framework-abhängige Bereitstellung* bereitstellen, was die Binärdateien Ihrer Anwendung einschließt, jedoch von Präsenz von .NET Core auf dem Zielsystem abhängt, oder als *eigenständige Bereitstellung*,die jeweils Ihre Anwendung sowie die .NET Core-Binärdateien einschließt. Eine Übersicht finden Sie unter [.NET Core-Anwendungsbereitstellung](index.md).
@@ -46,11 +44,11 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
    Öffnen Sie die *Program.cs*-Datei in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Aktualisieren Sie die Abhängigkeiten und Tools des Projekts.
  
-   Führen Sie den Befehl [dotnet restore](../tools/dotnet-restore.md) aus, um die im Projekt angegebenen Abhängigkeiten wiederherzustellen.
+   Führen Sie die [Dotnet Wiederherstellung](../tools/dotnet-restore.md) ([Siehe Hinweis](#dotnet-restore-note)) Befehl ein, um die Abhängigkeiten im Projekt angegebene wiederherstellen.
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
 
@@ -73,7 +71,7 @@ Das Installationsprogramm sollte zusätzlich zu den Binärdateien der Anwendung 
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens einer Drittanbieterabhängigkeit erfordert, dass diese Abhängigkeiten für Ihr Projekt verfügbar sind. Es sind noch zwei zusätzliche Schritte nötig, bevor Sie den `dotnet restore`-Befehl ausführen können.
+Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens einer Drittanbieterabhängigkeit erfordert, dass diese Abhängigkeiten für Ihr Projekt verfügbar sind. Zwei zusätzliche Schritte sind erforderlich, vor dem Ausführen der `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) Befehl:
 
 1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer *CSPROJ*-Datei hinzu. Der folgende `<ItemGroup>`-Abschnitt verwendet [Json.NET](http://www.newtonsoft.com/json) als Drittanbieter-Bibliothek:
 
@@ -83,7 +81,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens ein
       </ItemGroup>
       ```
 
-1. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit herunter. Um das Paket herunterzuladen, führen Sie nach dem Hinzufügen der Abhängigkeit den `dotnet restore`-Befehl aus. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
+1. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit herunter. Um das Paket herunterzuladen, führen Sie die `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) Befehl nach dem Hinzufügen der Abhängigkeitsverhältnis. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
 
 Beachten Sie, dass eine Framework-abhängige Bereitstellung mit Drittanbieter-Abhängigkeiten nur so tragbar wie ihre Drittanbieter-Abhängigkeiten ist. Falls eine Drittanbieter-Bibliothek nur macOS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel dafür ist der [Kestrel-Server](/aspnet/core/fundamentals/servers/kestrel), der eine native Abhängigkeit unter [libuv](https://github.com/libuv/libuv) erfordert. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
 
@@ -103,7 +101,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Öffnen Sie die *Program.cs*-Datei in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Definieren Sie die Zielplattformen für Ihre App.
 
@@ -121,7 +119,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
 1. Aktualisieren Sie die Abhängigkeiten und Tools des Projekts.
 
-   Führen Sie den Befehl [dotnet restore](../tools/dotnet-restore.md) aus, um die im Projekt angegebenen Abhängigkeiten wiederherzustellen.
+   Führen Sie die [Dotnet Wiederherstellung](../tools/dotnet-restore.md) ([Siehe Hinweis](#dotnet-restore-note)) Befehl ein, um die Abhängigkeiten im Projekt angegebene wiederherstellen.
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
 
@@ -156,7 +154,7 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst das Hinzufügen der Abhängigkeiten: Es sind noch zwei zusätzliche Schritte nötig, bevor Sie den `dotnet restore`-Befehl ausführen können.
+Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren Drittanbieter-Abhängigkeiten umfasst das Hinzufügen der Drittanbieter-Abhängigkeit: Zwei zusätzliche Schritte sind erforderlich, vor dem Ausführen der `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) Befehl:
 
 1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer *CSPROJ*-Datei hinzu. Der folgende `<ItemGroup>`-Abschnitt verwendet Json.NET als Drittanbieter-Bibliothek.
 
@@ -166,7 +164,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren D
       </ItemGroup>
     ```
 
-1. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit auf Ihr System herunter. Nach dem Hinzufügen der Abhängigkeit, führen Sie den `dotnet restore`-Befehl aus, um über die Abhängigkeit auf Ihrer Anwendung zu verfügen. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
+1. Wenn noch nicht geschehen, laden Sie das NuGet-Paket mit der Drittanbieter-Abhängigkeit auf Ihr System herunter. Um die Abhängigkeit für Ihre app verfügbar zu machen, führen Sie die `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) Befehl nach dem Hinzufügen der Abhängigkeitsverhältnis. Da die Abhängigkeit zum Zeitpunkt der Veröffentlichung aus dem lokalen NuGet-Cache aufgelöst wurde, muss sie auf Ihrem System verfügbar sein.
 
 Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 
@@ -186,6 +184,9 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 Wenn Sie Ihre Anwendung bereitstellen, sind die Drittanbieter-Abhängigkeiten, die in Ihrer Anwendung verwendet werden, auch in Ihren Anwendungsdateien enthalten. Drittanbieter-Bibliotheken müssen nicht auf dem System vorhanden sein, auf dem die Anwendung ausgeführt wird.
 
 Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbieter-Bibliothek nur auf von dieser Bibliothek unterstützten Plattformen bereitstellen können. Dies ist ähnlich, als wenn Sie über Drittanbieter-Abhängigkeiten mit nativen Abhängigkeiten in einer Framework-abhängigen Bereitstellung verfügen, wobei die nativen Abhängigkeiten mit der Plattform kompatibel sein müssen, auf der die App bereitgestellt wird.
+
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # <a name="see-also"></a>Siehe auch
 

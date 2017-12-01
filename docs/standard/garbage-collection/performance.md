@@ -1,26 +1,29 @@
 ---
-title: "Garbage Collection and Performance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, troubleshooting"
-  - "garbage collection, performance"
+title: Garbage Collection und Leistung
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, troubleshooting
+- garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 35
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "35"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection and Performance
-In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen.  Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können.  Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
+# <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
+<a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -33,45 +36,45 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
 -   [Prozeduren zur Leistungsüberprüfung](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
-## Tools zur Leistungsanalyse  
- In den folgenden Abschnitten werden Tools beschrieben, die zum Untersuchen von Problemen mit der Speicherauslastung und Garbage Collection verfügbar sind.  Die [Prozeduren](#performance_check_procedures), die weiter unten in diesem Thema aufgeführt sind, beziehen sich auf diese Tools.  
+## <a name="performance-analysis-tools"></a>Tools zur Leistungsanalyse  
+ In den folgenden Abschnitten werden Tools beschrieben, die zum Untersuchen von Problemen mit der Speicherauslastung und Garbage Collection verfügbar sind. Die [Prozeduren](#performance_check_procedures), die weiter unten in diesem Thema aufgeführt sind, beziehen sich auf diese Tools.  
   
 <a name="perf_counters"></a>   
-### Speicherleistungsindikatoren  
- Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen.  Anweisungen hierzu finden Sie unter [Laufzeit\-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md).  Die Leistungsindikatorkategorie .NET CLR\-Speicher, die in [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.  
+### <a name="memory-performance-counters"></a>Speicherleistungsindikatoren  
+ Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen. Anweisungen hierzu finden Sie unter [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md). Die Leistungsindikatorkategorie .NET CLR-Speicher, die in [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.  
   
 <a name="sos"></a>   
-### Debuggen mit SOS  
- Sie können den [Windows\-Debugger \(WinDbg\)](http://go.microsoft.com/fwlink/?LinkId=186482) verwenden, um Objekte auf dem verwalteten Heap zu überprüfen.  
+### <a name="debugging-with-sos"></a>Debuggen mit SOS  
+ Sie können den [Windows-Debugger (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) verwenden, um Objekte auf dem verwalteten Heap zu überprüfen.  
   
- Um WinDbg zu installieren, installieren Sie die Debugtools für Windows von der [WDK\- und Entwicklertool\-Website](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Um WinDbg zu installieren, installieren Sie die Debugtools für Windows von der [WDK- und Entwicklertool-Website](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
 <a name="etw"></a>   
-### Garbage Collection\-ETW\-Ereignisse  
- Die Ereignisablaufverfolgung für Windows \(ETW\) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden.  Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] erfassen [ETW\-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps.  Beispielsweise liefert das `GCStart_V1`\-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
+### <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse  
+ Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] erfassen [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
   
 -   Welche Generation von Objekten wird erfasst.  
   
 -   Was hat die Garbage Collection ausgelöst.  
   
--   Typ der Garbage Collection \(gleichzeitig oder nicht gleichzeitig\).  
+-   Typ der Garbage Collection (gleichzeitig oder nicht gleichzeitig).  
   
- Die ETW\-Ereignisprotokollierung ist effizient und wird keine Leistungsprobleme bei der Garbage Collection maskieren.  Ein Prozess kann seine eigenen Ereignisse zusätzlich zu den ETW\-Ereignissen bereitstellen.  Bei der Protokollierung können die Ereignisse der Anwendung und die Garbage Collection\-Ereignisse korreliert werden, um zu bestimmen, wie und wann Probleme mit dem Heap auftreten.  Beispielsweise könnte eine Serveranwendung Ereignisse am Anfang und am Ende einer Clientanforderung bereitstellen.  
+ Die ETW-Ereignisprotokollierung ist effizient und wird keine Leistungsprobleme bei der Garbage Collection maskieren. Ein Prozess kann seine eigenen Ereignisse zusätzlich zu den ETW-Ereignissen bereitstellen. Bei der Protokollierung können die Ereignisse der Anwendung und die Garbage Collection-Ereignisse korreliert werden, um zu bestimmen, wie und wann Probleme mit dem Heap auftreten. Beispielsweise könnte eine Serveranwendung Ereignisse am Anfang und am Ende einer Clientanforderung bereitstellen.  
   
 <a name="profiling_api"></a>   
-### Die Profilerstellungs\-API  
- Die Profilerstellungsschnittstellen der Common Language Runtime \(CLR\) enthalten ausführliche Informationen zu den Objekten, die von einer Garbage Collection betroffen sind.  Ein Profiler kann benachrichtigt werden, wenn eine Garbage Collection beginnt oder endet.  Es kann Berichte über die Objekte im verwalteten Heap bereitstellen, einschließlich einer Identifikation von Objekten in jeder Generation.  Weitere Informationen finden Sie unter [Übersicht über die Profilerstellung](../../../ocs/framework/unmanaged-api/profiling/profiling-overview.md).  
+### <a name="the-profiling-api"></a>Die Profilerstellungs-API  
+ Die Profilerstellungsschnittstellen der Common Language Runtime (CLR) enthalten ausführliche Informationen zu den Objekten, die von einer Garbage Collection betroffen sind. Ein Profiler kann benachrichtigt werden, wenn eine Garbage Collection beginnt oder endet. Es kann Berichte über die Objekte im verwalteten Heap bereitstellen, einschließlich einer Identifikation von Objekten in jeder Generation. Weitere Informationen finden Sie unter [Übersicht über die Profilerstellung](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).  
   
- Profiler können umfassende Informationen bereitstellen.  Allerdings können komplexe Profiler das Verhalten der Anwendung beeinflussen.  
+ Profiler können umfassende Informationen bereitstellen. Allerdings können komplexe Profiler das Verhalten der Anwendung beeinflussen.  
   
-### Überwachung von Anwendungsdomänenressourcen  
- Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne \(ARM\) die CPU\- und Speicherauslastung pro Anwendungsdomäne überwachen.  Weitere Informationen finden Sie unter [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+### <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen  
+ Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
-## Problembehandlung bei Performanceproblemen  
- Der erste Schritt besteht darin [zu bestimmen, ob das Problem tatsächlich bei der Garbage Collection liegt](#IsGC).  Wenn dies der Fall ist, treffen Sie eine Auswahl in der folgenden Liste, um das Problem zu beheben.  
+## <a name="troubleshooting-performance-issues"></a>Problembehandlung bei Performanceproblemen  
+ Der erste Schritt besteht darin, [zu bestimmen, ob das Problem tatsächlich bei der Garbage Collection liegt](#IsGC). Wenn dies der Fall ist, treffen Sie eine Auswahl in der folgenden Liste, um das Problem zu beheben.  
   
 -   [Es wird eine Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst](#Issue_OOM)  
   
@@ -85,20 +88,20 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   [Generation 0 ist zu groß](#Issue_Gen0)  
   
--   [Die CPU\-Auslastung während einer Garbage Collection ist zu hoch](#Issue_HighCPU)  
+-   [Die CPU-Auslastung während einer Garbage Collection ist zu hoch](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### Problem: Es wird eine Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problem: Es wird eine Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst  
  Es gibt zwei legitime Fälle, in denen eine verwaltete <xref:System.OutOfMemoryException> ausgelöst werden kann:  
   
 -   Ungenügender virtueller Arbeitsspeicher.  
   
-     Der Garbage Collector belegt Systemspeicher in Segmenten mit einer vordefinierten Größe.  Wenn eine Belegung ein zusätzliches Segment erfordert, jedoch kein freier zusammenhängender Block im virtuellen Arbeitsspeicher des Prozesses vorhanden ist, schlägt die Zuordnung für den verwalteten Heap fehl.  
+     Der Garbage Collector belegt Systemspeicher in Segmenten mit einer vordefinierten Größe. Wenn eine Belegung ein zusätzliches Segment erfordert, jedoch kein freier zusammenhängender Block im virtuellen Arbeitsspeicher des Prozesses vorhanden ist, schlägt die Zuordnung für den verwalteten Heap fehl.  
   
 -   Ungenügender physischer Arbeitsspeicher für eine Belegung.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
+|------------------------|  
 |[Bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist.](#OOMIsManaged)<br /><br /> [Ermitteln Sie, wie viel virtueller Speicher reserviert werden kann.](#GetVM)<br /><br /> [Bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist.](#Physical)|  
   
  Wenn Sie feststellen, dass die Ausnahme nicht legitim ist, wenden Sie sich mit folgenden Informationen an den Kundenservice und Support von Microsoft:  
@@ -110,100 +113,100 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
 -   Daten, die zeigen, dass es sich nicht um eine legitime Ausnahme aufgrund ungenügenden Arbeitsspeichers handelt, einschließlich Daten, die zeigen, dass virtueller oder physischer Speicher kein Problem darstellt.  
   
 <a name="Issue_TooMuchMemory"></a>   
-### Problem: Der Prozess verwendet zu viel Arbeitsspeicher  
- Eine häufige Annahme ist, dass die Speicherauslastungsanzeige auf der Registerkarte **Leistung** des Windows Task\-Managers anzeigen kann, wann zu viel Arbeitsspeicher verwendet wird.  Allerdings betrifft diese Anzeige lediglich das Workingset. Sie stellt keine Informationen zur virtuellen Arbeitsspeicherverwendung bereit.  
+### <a name="issue-the-process-uses-too-much-memory"></a>Problem: Der Prozess verwendet zu viel Arbeitsspeicher  
+ Eine häufige Annahme ist, dass die Speicherauslastungsanzeige auf der Registerkarte **Leistung** des Windows Task-Managers anzeigen kann, wann zu viel Arbeitsspeicher verwendet wird. Allerdings betrifft diese Anzeige lediglich das Workingset. Sie stellt keine Informationen zur virtuellen Arbeitsspeicherverwendung bereit.  
   
  Wenn Sie feststellen, dass das Problem durch den verwalteten Heap verursacht wird, müssen Sie den verwalteten Heap über einen bestimmten Zeitraum überwachen, um ein Muster zu ermitteln.  
   
  Wenn Sie feststellen, dass das Problem nicht durch den verwalteten Heap verursacht wird, müssen Sie ein systemeigenes Debugging durchführen.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
+|------------------------|  
 |[Ermitteln Sie, wie viel virtueller Speicher reserviert werden kann.](#GetVM)<br /><br /> [Bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap zusichert.](#ManagedHeapCommit)<br /><br /> [Bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap reserviert.](#ManagedHeapReserve)<br /><br /> [Bestimmen Sie große Objekte in Generation 2.](#ExamineGen2)<br /><br /> [Bestimmen Sie die Verweise auf Objekte.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### Problem: Der Garbage Collector gibt Objekte nicht schnell genug frei  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problem: Der Garbage Collector gibt Objekte nicht schnell genug frei  
  Wenn es scheint, als ob Objekte nicht wie erwartet von der Garbage Collection freigegeben werden, müssen Sie ermitteln, ob starke Verweise auf diese Objekte vorhanden sind.  
   
- Dieses Problem kann auch auftreten, wenn keine Garbage Collection für die Generation durchgeführt wurde, die ein totes Objekt enthält. Dies zeigt an, dass der Finalizer für die inaktiven Objekt nicht ausgeführt wurde.  Dies ist z. B. möglich, wenn Sie eine Anwendung mit einem Singlethread\-Apartment \(STA\) ausführen und der Thread, der die Warteschlange des Finalizers verwaltet, keinen Aufruf in das Apartment ausführen kann.  
+ Dieses Problem kann auch auftreten, wenn keine Garbage Collection für die Generation durchgeführt wurde, die ein totes Objekt enthält. Dies zeigt an, dass der Finalizer für die inaktiven Objekt nicht ausgeführt wurde. Dies ist z. B. möglich, wenn Sie eine Anwendung mit einem Singlethread-Apartment (STA) ausführen und der Thread, der die Warteschlange des Finalizers verwaltet, keinen Aufruf in das Apartment ausführen kann.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
+|------------------------|  
 |[Überprüfen Sie die Verweise auf Objekte.](#ObjRef)<br /><br /> [Bestimmen Sie, ob ein Finalizer ausgeführt wurde.](#Induce)<br /><br /> [Bestimmen Sie, ob Objekte auf einen Abschluss warten.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### Problem: Der verwaltete Heap ist zu sehr fragmentiert  
- Der Fragmentierungsgrad wird als das Verhältnis zwischen freiem Speicherplatz und dem insgesamt belegten Speicher für die Generation berechnet.  Für Generation 2 gelten nicht mehr als 20% als akzeptabler Wert für die Fragmentierung.  Da Generation 2 sehr groß werden kann, ist das Verhältnis der Fragmentierung wichtiger als der absolute Wert.  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problem: Der verwaltete Heap ist zu sehr fragmentiert  
+ Der Fragmentierungsgrad wird als das Verhältnis zwischen freiem Speicherplatz und dem insgesamt belegten Speicher für die Generation berechnet. Für Generation 2 gelten nicht mehr als 20% als akzeptabler Wert für die Fragmentierung. Da Generation 2 sehr groß werden kann, ist das Verhältnis der Fragmentierung wichtiger als der absolute Wert.  
   
  Viele freier Speicherplatz in Generation 0 ist kein Problem, da in dieser Generation neue Objekte belegt werden.  
   
- Fragmentierung tritt immer im Heap für große Objekte auf, da dieser nicht komprimiert ist.  Freie einander angrenzende Objekte werden immer in einem einzelnen Bereich zusammengefasst, um große Objektanforderungen erfüllen zu können.  
+ Fragmentierung tritt immer im Heap für große Objekte auf, da dieser nicht komprimiert ist. Freie einander angrenzende Objekte werden immer in einem einzelnen Bereich zusammengefasst, um große Objektanforderungen erfüllen zu können.  
   
- Die Fragmentierung kann in Generation 1 und in Generation 2 zu einem Problem werden.  Wenn diese Generationen nach einer Garbage Collection viel freien Speicherplatz aufweisen, muss die Objektverwendung einer Anwendung möglicherweise angepasst werden, und Sie sollten die Lebensdauer von langfristigen Objekten neu prüfen.  
+ Die Fragmentierung kann in Generation 1 und in Generation 2 zu einem Problem werden. Wenn diese Generationen nach einer Garbage Collection viel freien Speicherplatz aufweisen, muss die Objektverwendung einer Anwendung möglicherweise angepasst werden, und Sie sollten die Lebensdauer von langfristigen Objekten neu prüfen.  
   
- Ein übermäßiges Fixieren von Objekten kann die Fragmentierung erhöhen.  Wenn die Fragmentierung zu groß ist, wurden eventuell zu viele Objekte fixiert.  
+ Ein übermäßiges Fixieren von Objekten kann die Fragmentierung erhöhen. Wenn die Fragmentierung zu groß ist, wurden eventuell zu viele Objekte fixiert.  
   
  Wenn die Fragmentierung des virtuellen Arbeitsspeichers verhindert, dass der Garbage Collector Segmente hinzufügen kann, kann dies eine der folgenden Ursachen haben:  
   
 -   Häufiges Laden und Entladen von vielen kleinen Assemblys.  
   
--   Zu viele Verweise auf COM\-Objekte bei der Interoperation mit nicht verwaltetem Code.  
+-   Zu viele Verweise auf COM-Objekte bei der Interoperation mit nicht verwaltetem Code.  
   
 -   Erstellung von großen flüchtigen Objekten. Dies zwingt den großen Objektheap, häufig Heapsgmente zu reservieren und wieder freizugeben.  
   
-     Wenn die CLR gehostet wird, kann eine Anwendung anfordern, dass der Garbage Collector seine Segmente beibehält.  Dadurch wird die Häufigkeit von Segmentbelegungen reduziert.  Dies wird mit dem Flag STARTUP\_HOARD\_GC\_VM in [STARTUP\_FLAGS\-Enumeration](../../../ocs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) erreicht.  
+     Wenn die CLR gehostet wird, kann eine Anwendung anfordern, dass der Garbage Collector seine Segmente beibehält. Dadurch wird die Häufigkeit von Segmentbelegungen reduziert. Dies wird mit dem Flag STARTUP_HOARD_GC_VM in der [STARTUP_FLAGS-Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) erreicht.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
+|------------------------|  
 |[Bestimmen Sie den freien Speicherplatz im verwalteten Heap.](#Fragmented)<br /><br /> [Bestimmen Sie die Anzahl der fixierten Objekte.](#Pinned)|  
   
  Wenn Sie glauben, dass keine legitime Ursache für die Fragmentierung vorliegt, wenden Sie sich an den Kundenservice und Support von Microsoft.  
   
 <a name="Issue_LongPauses"></a>   
-### Problem: Die Pausen der Garbage Collections sind zu lang  
- Die Garbage Collection arbeitet in verzögerter Echtzeit. Daher muss eine Anwendung gewisse Pausen tolerieren können.  Ein Kriterium für die verzögerte Echtzeit besteht darin, dass 95% der Vorgänge zeitgenau beendet werden müssen.  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problem: Die Pausen der Garbage Collections sind zu lang  
+ Die Garbage Collection arbeitet in verzögerter Echtzeit. Daher muss eine Anwendung gewisse Pausen tolerieren können. Ein Kriterium für die verzögerte Echtzeit besteht darin, dass 95% der Vorgänge zeitgenau beendet werden müssen.  
   
  Bei der gleichzeitigen Garbage Collection dürfen während einer Garbage Collection verwaltete Threads ausgeführt werden. Dies bedeutet, dass die Pausen sehr klein sind.  
   
- Kurzlebige Garbage Collections \(Generationen 0 und 1\) dauern nur einige Millisekunden, sodass das Verringern der Pausen normalerweise nicht sinnvoll ist.  Sie können jedoch die Pausen in Garbage Collections der Generation 2 verringern, indem Sie das Muster der Belegungsanforderungen in einer Anwendung anpassen.  
+ Kurzlebige Garbage Collections (Generationen 0 und 1) dauern nur einige Millisekunden, sodass das Verringern der Pausen normalerweise nicht sinnvoll ist. Sie können jedoch die Pausen in Garbage Collections der Generation 2 verringern, indem Sie das Muster der Belegungsanforderungen in einer Anwendung anpassen.  
   
- Eine andere und genauere Methode ist die Verwendung von [ETW\-Ereignissen der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md).  Sie können die Intervalle der Collections ermitteln, indem Sie die Zeitstempeldifferenzen einer bestimmten Ereignissequenz addieren.  Die gesamte Collection\-Sequenz beinhaltet die Unterbrechung des Ausführungsmoduls, die Garbage Collection selbst und die Wiederaufnahme des Ausführungsmoduls.  
+ Eine andere und genauere Methode ist die Verwendung von [ETW-Ereignissen der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md). Sie können die Intervalle der Collections ermitteln, indem Sie die Zeitstempeldifferenzen einer bestimmten Ereignissequenz addieren. Die gesamte Collection-Sequenz beinhaltet die Unterbrechung des Ausführungsmoduls, die Garbage Collection selbst und die Wiederaufnahme des Ausführungsmoduls.  
   
- Verwenden Sie [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md), um zu ermitteln, ob ein Server im Begriff ist, eine Collection der Generation 2 durchzuführen, und ob Umleitungsanforderungen an einen anderen Server die Probleme mit Pausen verringern könnten.  
+ Verwenden Sie [Garbage Collection-Benachrichtigungen](../../../docs/standard/garbage-collection/notifications.md), um zu ermitteln, ob ein Server im Begriff ist, eine Collection der Generation 2 durchzuführen, und ob Umleitungsanforderungen an einen anderen Server die Probleme mit Pausen verringern könnten.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
+|------------------------|  
 |[Bestimmen Sie die Dauer einer Garbage Collection.](#TimeInGC)<br /><br /> [Ermitteln Sie, was eine Garbage Collection ausgelöst hat.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### Problem: Generation 0 ist zu groß  
- Generation 0 enthält auf einem 64\-Bit\-System häufig eine größere Anzahl von Objekten, insbesondere, wenn Sie die Garbage Collection auf dem Server statt der Garbage Collection für die Arbeitsstation verwenden.  Dies liegt daran, dass der Schwellenwert zum Auslösen einer Garbage Collection der Generation 0 in dieser Umgebung höher ist und Collections der Generation 0 viel größer werden können.  Die Leistung wird verbessert, wenn eine Anwendung mehr Arbeitsspeicher belegt, bevor eine Garbage Collection ausgelöst wird.  
+### <a name="issue-generation-0-is-too-big"></a>Problem: Generation 0 ist zu groß  
+ Generation 0 enthält auf einem 64-Bit-System häufig eine größere Anzahl von Objekten, insbesondere, wenn Sie die Garbage Collection auf dem Server statt der Garbage Collection für die Arbeitsstation verwenden. Dies liegt daran, dass der Schwellenwert zum Auslösen einer Garbage Collection der Generation 0 in dieser Umgebung höher ist und Collections der Generation 0 viel größer werden können. Die Leistung wird verbessert, wenn eine Anwendung mehr Arbeitsspeicher belegt, bevor eine Garbage Collection ausgelöst wird.  
   
 <a name="Issue_HighCPU"></a>   
-### Problem: Die CPU\-Auslastung während einer Garbage Collection ist zu hoch  
- Die CPU\-Auslastung ist während einer Garbage Collection hoch.  Wenn sehr viel Prozessorzeit für eine Garbage Collection aufgewendet wird, erfolgen die Collections zu häufig, oder die Collection dauert zu lang.  Eine zu hohe Belegungsrate für Objekte auf dem verwalteten Heap führt zu häufigeren Garbage Collections.  Das Verringern der Belegungsrate verringert die Häufigkeit der Garbage Collections.  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problem: Die CPU-Auslastung während einer Garbage Collection ist zu hoch  
+ Die CPU-Auslastung ist während einer Garbage Collection hoch. Wenn sehr viel Prozessorzeit für eine Garbage Collection aufgewendet wird, erfolgen die Collections zu häufig, oder die Collection dauert zu lang. Eine zu hohe Belegungsrate für Objekte auf dem verwalteten Heap führt zu häufigeren Garbage Collections. Das Verringern der Belegungsrate verringert die Häufigkeit der Garbage Collections.  
   
- Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen.  Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen. Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
- Die Dauer einer Collection wird wesentlich durch die Anzahl der Objekte bestimmt, die nach der Belegung noch vorhanden sind.  Der Garbage Collector muss einen sehr großen Speicherbereich durchlaufen, wenn viele freizugebende Objekte verblieben sind.  Der Aufwand für die Komprimierung der Überlebenden ist sehr zeitintensiv.  Um zu bestimmen, wie viele Objekte während einer Collection verarbeitet wurden, legen Sie einen Haltepunkt im Debugger am Ende einer Garbage Collection für eine bestimmte Generation fest.  
+ Die Dauer einer Collection wird wesentlich durch die Anzahl der Objekte bestimmt, die nach der Belegung noch vorhanden sind. Der Garbage Collector muss einen sehr großen Speicherbereich durchlaufen, wenn viele freizugebende Objekte verblieben sind. Der Aufwand für die Komprimierung der Überlebenden ist sehr zeitintensiv. Um zu bestimmen, wie viele Objekte während einer Collection verarbeitet wurden, legen Sie einen Haltepunkt im Debugger am Ende einer Garbage Collection für eine bestimmte Generation fest.  
   
 |Überprüfen der Leistung|  
-|-----------------------------|  
-|[Ermitteln Sie, ob die hohe CPU\-Auslastung durch die Garbage Collection verursacht wird.](#HighCPU)<br /><br /> [Legen Sie einen Haltepunkt am Ende der Garbage Collection fest.](#GenBreak)|  
+|------------------------|  
+|[Ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird.](#HighCPU)<br /><br /> [Legen Sie einen Haltepunkt am Ende der Garbage Collection fest.](#GenBreak)|  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
-## Richtlinien für die Problembehandlung  
+## <a name="troubleshooting-guidelines"></a>Richtlinien für die Problembehandlung  
  In diesem Abschnitt werden Richtlinien beschrieben, die Sie zu Beginn der Prüfungen und Analysen berücksichtigen sollten.  
   
-### Garbage Collection für die Arbeitsstation oder Garbage Collection auf dem Server  
- Ermitteln Sie, ob Sie den richtigen Typ der Garbage Collection verwenden.  Wenn Ihre Anwendung mehrere Threads und Objektinstanzen verwendet, verwenden Sie die Garbage Collection auf dem Server statt der Garbage Collection für die Arbeitsstation.  Die Garbage Collection auf dem Server kann in mehreren Threads ausgeführt werden, wohingegen die Garbage Collection für die Arbeitsstation erfordert, dass mehrere Instanzen einer Anwendung eigene Garbage Collection\-Threads ausführen, die um die Prozessorzeit konkurrieren.  
+### <a name="workstation-or-server-garbage-collection"></a>Garbage Collection für die Arbeitsstation oder Garbage Collection auf dem Server  
+ Ermitteln Sie, ob Sie den richtigen Typ der Garbage Collection verwenden. Wenn Ihre Anwendung mehrere Threads und Objektinstanzen verwendet, verwenden Sie die Garbage Collection auf dem Server statt der Garbage Collection für die Arbeitsstation. Die Garbage Collection auf dem Server kann in mehreren Threads ausgeführt werden, wohingegen die Garbage Collection für die Arbeitsstation erfordert, dass mehrere Instanzen einer Anwendung eigene Garbage Collection-Threads ausführen, die um die Prozessorzeit konkurrieren.  
   
  Eine Anwendung mit einer geringen Auslastung, die nur selten im Hintergrund Aufgaben ausführt, z. B. ein Dienst, kann die Garbage Collection für die Arbeitsstation mit deaktivierter gleichzeitiger Garbage Collection verwenden.  
   
-### Wann sollte die Größe des verwalteten Heaps gemessen werden  
- Sofern Sie keinen Profiler verwenden, müssen Sie ein einheitliches Messmuster erzielen, um Leistungsprobleme effektiv bestimmen zu können.  Beachten Sie bei der Messplanung die folgenden Punkte:  
+### <a name="when-to-measure-the-managed-heap-size"></a>Wann sollte die Größe des verwalteten Heaps gemessen werden  
+ Sofern Sie keinen Profiler verwenden, müssen Sie ein einheitliches Messmuster erzielen, um Leistungsprobleme effektiv bestimmen zu können. Beachten Sie bei der Messplanung die folgenden Punkte:  
   
 -   Wenn Sie nach einer Garbage Collection in Generation 2 messen, ist der gesamte verwaltete Heap frei von inaktiven Objekten.  
   
@@ -211,31 +214,31 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   Wenn Sie direkt vor einer Garbage Collection messen, messen Sie die maximale Belegung vor Beginn der Garbage Collection.  
   
--   Das Messen während einer Garbage Collection ist problematisch, da die Garbage Collector\-Datenstrukturen sich nicht in einem gültigen Zustand für einen Durchlauf befinden und möglicherweise nicht in der Lage sind, vollständige Ergebnisse zu liefern.  Dieser Fehler ist entwurfsbedingt.  
+-   Das Messen während einer Garbage Collection ist problematisch, da die Garbage Collector-Datenstrukturen sich nicht in einem gültigen Zustand für einen Durchlauf befinden und möglicherweise nicht in der Lage sind, vollständige Ergebnisse zu liefern. Dieser Fehler ist entwurfsbedingt.  
   
--   Wenn Sie die Garbage Collection für die Arbeitsstation mit gleichzeitiger Garbage Collection verwenden, werden die freigegebenen Objekte nicht komprimiert, sodass die Heapgröße identisch oder größer sein kann \(sie kann durch die Fragmentierung größer erscheinen\).  
+-   Wenn Sie die Garbage Collection für die Arbeitsstation mit gleichzeitiger Garbage Collection verwenden, werden die freigegebenen Objekte nicht komprimiert, sodass die Heapgröße identisch oder größer sein kann (sie kann durch die Fragmentierung größer erscheinen).  
   
 -   Die gleichzeitige Garbage Collection in Generation 2 wird verzögert, wenn die Auslastung des physischen Arbeitsspeichers zu hoch ist.  
   
  Im folgenden Verfahren wird beschrieben, wie Sie einen Haltepunkt festlegen, sodass Sie den verwalteten Heap messen können.  
   
 <a name="GenBreak"></a>   
-##### So legen Sie einen Haltepunkt am Ende der Garbage Collection fest  
+##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>So legen Sie einen Haltepunkt am Ende der Garbage Collection fest  
   
--   Geben Sie in WinDbg bei geladener SOS\-Debuggererweiterung folgenden Befehl ein:  
+-   Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein:  
   
-     **bp mscorwks\!WKS::GCHeap::RestartEE "j \(dwo\(mscorwks\!WKS::GCHeap::GcCondemnedGeneration\)\=\=2\) 'kb';'g'"**  
+     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
-     wobei **GcCondemnedGeneration** auf die gewünschte Generation festgelegt wird.  Dieser Befehl erfordert private Symbole.  
+     wobei **GcCondemnedGeneration** auf die gewünschte Generation festgelegt ist. Dieser Befehl erfordert private Symbole.  
   
      Mit diesem Befehl wird eine Unterbrechung erzwungen, wenn **RestartEE** ausgeführt wird, nachdem die Objekte der Generation 2 für die Garbage Collection freigegeben wurden.  
   
      Bei der Garbage Collection auf dem Server ruft nur ein Thread **RestartEE** auf, sodass der Haltepunkt nur einmal während einer Garbage Collection der Generation 2 angelaufen wird.  
   
- [Zurück nach oben](#top)  
+ [Zurück zum Anfang](#top)  
   
 <a name="performance_check_procedures"></a>   
-## Prozeduren zur Leistungsüberprüfung  
+## <a name="performance-check-procedures"></a>Prozeduren zur Leistungsüberprüfung  
  In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache des Leistungsproblems zu isolieren:  
   
 -   [Stellen Sie fest, ob das Problem durch die Garbage Collection verursacht wird.](#IsGC)  
@@ -266,25 +269,25 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   [Ermitteln Sie, was eine Garbage Collection ausgelöst hat.](#Triggered)  
   
--   [Ermitteln Sie, ob die hohe CPU\-Auslastung durch die Garbage Collection verursacht wird.](#HighCPU)  
+-   [Ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird.](#HighCPU)  
   
 <a name="IsGC"></a>   
-##### So stellen Sie fest, ob das Problem durch die Garbage Collection verursacht wird  
+##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>So stellen Sie fest, ob das Problem durch die Garbage Collection verursacht wird  
   
 -   Überprüfen Sie die folgenden beiden Leistungsindikatoren für den Arbeitsspeicher:  
   
-    -   **GC\-Zeitdauer in Prozent**.  Zeigt an, wie viel Prozent der vergangenen Zeit seit dem letzten Garbage Collection\-Durchlauf mit der Durchführung der Garbage Collection verbracht wurde.  Mit diesem Indikator können Sie bestimmen, ob die Garbage Collection zu viel Zeit benötigt, um Speicherplatz auf dem verwalteten Heap verfügbar zu machen.  Wenn die für die Garbage Collection aufgewendete Zeit relativ gering ist, kann dies auf ein Ressourcenproblem außerhalb des verwalteten Heaps hindeuten.  Dieser Indikator ist möglicherweise nicht präzise, wenn die gleichzeitige oder die Garbage Collection im Hintergrund aktiviert ist.  
+    -   **GC-Zeitdauer in Prozent**. Zeigt an, wie viel Prozent der vergangenen Zeit seit dem letzten Garbage Collection-Durchlauf mit der Durchführung der Garbage Collection verbracht wurde. Mit diesem Indikator können Sie bestimmen, ob die Garbage Collection zu viel Zeit benötigt, um Speicherplatz auf dem verwalteten Heap verfügbar zu machen. Wenn die für die Garbage Collection aufgewendete Zeit relativ gering ist, kann dies auf ein Ressourcenproblem außerhalb des verwalteten Heaps hindeuten. Dieser Indikator ist möglicherweise nicht präzise, wenn die gleichzeitige oder die Garbage Collection im Hintergrund aktiviert ist.  
   
-    -   **Festgelegte Bytes insgesamt**.  Zeigt den virtuellen Speicher an, der momentan durch den Garbage Collector belegt ist.  Mit diesem Indikator können Sie bestimmen, ob der Garbage Collector einen übermäßig großen Teil des Arbeitsspeichers im Verhältnis zur Anwendung selbst belegt.  
+    -   **Zugesicherte Bytes gesamt**. Zeigt den virtuellen Speicher an, der momentan durch den Garbage Collector belegt ist. Mit diesem Indikator können Sie bestimmen, ob der Garbage Collector einen übermäßig großen Teil des Arbeitsspeichers im Verhältnis zur Anwendung selbst belegt.  
   
-     Die meisten Speicherleistungsindikatoren werden am Ende jeder Garbage Collection aktualisiert.  Daher geben sie möglicherweise nicht die aktuellen Bedingungen an, zu denen Sie Informationen benötigen.  
+     Die meisten Speicherleistungsindikatoren werden am Ende jeder Garbage Collection aktualisiert. Daher geben sie möglicherweise nicht die aktuellen Bedingungen an, zu denen Sie Informationen benötigen.  
   
 <a name="OOMIsManaged"></a>   
-##### So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist  
+##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist  
   
-1.  Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen \(**pe**\) ein:  
+1.  Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:  
   
-     **\!pe**  
+     **!pe**  
   
      Wenn die Ausnahme verwaltet ist, wird <xref:System.OutOfMemoryException> als Ausnahmetyp angezeigt, wie im folgenden Beispiel dargestellt.  
   
@@ -296,11 +299,11 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     StackTrace (generated):  
     ```  
   
-2.  Wenn die Ausgabe keine Ausnahme angibt, müssen Sie ermitteln, welcher Thread die Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst hat.  Geben Sie im Debugger den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
+2.  Wenn die Ausgabe keine Ausnahme angibt, müssen Sie ermitteln, welcher Thread die Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst hat. Geben Sie im Debugger den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
   
      **~\*kb**  
   
-     Der Thread mit dem Stapel, der Ausnahmeaufrufe enthält, wird durch das `RaiseTheException`\-Argument angegeben.  Dies ist das verwaltete Ausnahmeobjekt.  
+     Der Thread mit dem Stapel, der Ausnahmeaufrufe enthält, wird durch das `RaiseTheException`-Argument angegeben. Dies ist das verwaltete Ausnahmeobjekt.  
   
     ```  
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
@@ -308,16 +311,16 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 3.  Sie können den folgenden Befehl verwenden, um geschachtelte Ausnahmen zu speichern.  
   
-     **\!pe \-nested**  
+     **!pe -nested**  
   
      Wenn Sie keine Ausnahmen finden können, stammt die Ausnahme aufgrund ungenügenden Arbeitsspeichers aus nicht verwaltetem Code.  
   
 <a name="GetVM"></a>   
-##### So ermitteln Sie, wie viel virtueller Speicher reserviert werden kann  
+##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>So ermitteln Sie, wie viel virtueller Speicher reserviert werden kann  
   
--   Geben Sie in WinDbg bei geladener SOS\-Debuggererweiterung folgenden Befehl ein, um den größten freien Bereich abzurufen:  
+-   Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein, um den größten freien Bereich abzurufen:  
   
-     **\!address \-summary**  
+     **!address -summary**  
   
      Der größte freie Bereich wird wie in der folgenden Ausgabe angezeigt.  
   
@@ -325,13 +328,13 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     Largest free region: Base 54000000 - Size 0003A980  
     ```  
   
-     In diesem Beispiel ist die Größe des größten freien Bereichs ungefähr 24.000 KB \(3A980 als Hexadezimalwert\).  Dieser Bereich ist wesentlich kleiner als der Bereich, den die Garbage Collection für ein Segment benötigt.  
+     In diesem Beispiel ist die Größe des größten freien Bereichs ungefähr 24.000 KB (3A980 als Hexadezimalwert). Dieser Bereich ist wesentlich kleiner als der Bereich, den die Garbage Collection für ein Segment benötigt.  
   
-     \- oder \-  
+     - oder -   
   
 -   Verwenden Sie den Befehl **vmstat**:  
   
-     **\!vmstat**  
+     **!vmstat**  
   
      Der größte freie Bereich ist der größte Wert in der Spalte MAXIMUM, wie in der folgenden Ausgabe gezeigt.  
   
@@ -346,35 +349,35 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     ```  
   
 <a name="Physical"></a>   
-##### So bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist  
+##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>So bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist  
   
-1.  Starten Sie Windows Task\-Manager.  
+1.  Starten Sie Windows Task-Manager.  
   
-2.  Prüfen Sie auf der Registerkarte **Leistung** Sie den zugesicherten Wert.  \(Prüfen Sie unter Windows 7 den Wert **Zugesichert \(KB\)** in der **Systemgruppe**.\)  
+2.  Prüfen Sie auf der Registerkarte **Leistung** den zugesicherten Wert. (Prüfen Sie unter Windows 7 den Wert **Zugesichert (KB)** in der **Systemgruppe**.)  
   
      Wenn **Gesamt** nahe der **Grenze** ist, ist nicht genügend physischer Arbeitsspeicher verfügbar.  
   
 <a name="ManagedHeapCommit"></a>   
-##### So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap zusichert  
+##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap zusichert  
   
--   Verwenden Sie den Speicherleistungsindikator `# Total committed bytes`, um die Anzahl an Bytes abzurufen, die der verwaltete Heap zusichert.  Der Garbage Collector sichert nach Bedarf Ausschnitte in einem Segment zu, niemals alle zur selben Zeit.  
+-   Verwenden Sie den Speicherleistungsindikator `# Total committed bytes`, um die Anzahl an Bytes abzurufen, die der verwaltete Heap zusichert. Der Garbage Collector sichert nach Bedarf Ausschnitte in einem Segment zu, niemals alle zur selben Zeit.  
   
     > [!NOTE]
-    >  Verwenden Sie nicht den Leistungsindikator `# Bytes in all Heaps`, da dieser nicht die tatsächliche Speicherauslastung des verwalteten Heaps angibt.  Die Größe einer Generation ist in diesem Wert enthalten, und es handelt sich eigentlich um den Schwellenwert, d. h. um die Größe, bei der eine Garbage Collection ausgelöst wird, wenn die Generation mit Objekten gefüllt ist.  Daher ist dieser Wert 0 \(null\).  
+    >  Verwenden Sie nicht den Leistungsindikator `# Bytes in all Heaps`, da dieser nicht die tatsächliche Speicherauslastung des verwalteten Heaps angibt. Die Größe einer Generation ist in diesem Wert enthalten, und es handelt sich eigentlich um den Schwellenwert, d. h. um die Größe, bei der eine Garbage Collection ausgelöst wird, wenn die Generation mit Objekten gefüllt ist. Daher ist dieser Wert 0 (null).  
   
 <a name="ManagedHeapReserve"></a>   
-##### So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap reserviert  
+##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap reserviert  
   
 -   Verwenden Sie den Speicherleistungsindikator `# Total reserved bytes`.  
   
      Der Garbage Collector reserviert Speicherplatz in Segmenten. Sie können den Anfang eines Segments ermitteln, indem Sie den Befehl **eeheap** verwenden.  
   
     > [!IMPORTANT]
-    >  Obwohl Sie die Größe des Arbeitsspeichers ermitteln können, der vom Garbage Collector für jedes Segment zugewiesen wird, ist die Segmentgröße von der Implementierung abhängig und kann jederzeit geändert werden, auch bei regelmäßigen Updates.  Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen, und es darf in ihr auch nicht versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  
+    >  Obwohl Sie die Größe des Arbeitsspeichers ermitteln können, der vom Garbage Collector für jedes Segment zugewiesen wird, ist die Segmentgröße von der Implementierung abhängig und kann jederzeit geändert werden, auch bei regelmäßigen Updates. Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen, und es darf in ihr auch nicht versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  
   
--   Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein:  
+-   Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
-     **\!eeheap \-gc**  
+     **!eeheap -gc**  
   
      Daraus ergibt sich folgendes Ergebnis.  
   
@@ -411,15 +414,15 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
      Die Adressen, die durch "segment" angegeben werden, sind die Startadressen der Segmente.  
   
 <a name="ExamineGen2"></a>   
-##### So bestimmen Sie große Objekte in Generation 2  
+##### <a name="to-determine-large-objects-in-generation-2"></a>So bestimmen Sie große Objekte in Generation 2  
   
--   Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein:  
+-   Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
      Wenn der verwaltete Heap groß ist, kann die Ausführung von **dumpheap** eine Weile dauern.  
   
-     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden.  Beispiel:  
+     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Beispiel:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -435,9 +438,9 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     Total 8454945 objects  
     ```  
   
-     Das letzte aufgelistete Objekt ist eine Zeichenfolge, die den meisten Platz beansprucht.  Sie können Ihre Anwendung überprüfen, um zu ermitteln, wie die Zeichenfolgenobjekte optimiert werden können.  Um Zeichenfolgen anzuzeigen, die zwischen 150 und 200 Byte groß sind, geben Sie Folgendes ein:  
+     Das letzte aufgelistete Objekt ist eine Zeichenfolge, die den meisten Platz beansprucht. Sie können Ihre Anwendung überprüfen, um zu ermitteln, wie die Zeichenfolgenobjekte optimiert werden können. Um Zeichenfolgen anzuzeigen, die zwischen 150 und 200 Byte groß sind, geben Sie Folgendes ein:  
   
-     **\!dumpheap \-type System.String \-min 150 \-max 200**  
+     **!dumpheap -type System.String -min 150 -max 200**  
   
      Ein Beispielergebnis sieht wie folgt aus.  
   
@@ -447,22 +450,22 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     …  
     ```  
   
-     Das Verwenden einer ganzen Zahl anstelle einer Zeichenfolge für eine ID kann effizienter sein.  Wenn dieselbe Zeichenfolge viele tausend Mal wiederholt wird, sollten Sie eine Internalisierung der Zeichenfolgen in Betracht ziehen.  Weitere Informationen zur Internalisierung von Zeichenfolgen finden Sie im Referenzthema für die <xref:System.String.Intern%2A?displayProperty=fullName>\-Methode.  
+     Das Verwenden einer ganzen Zahl anstelle einer Zeichenfolge für eine ID kann effizienter sein. Wenn dieselbe Zeichenfolge viele tausend Mal wiederholt wird, sollten Sie eine Internalisierung der Zeichenfolgen in Betracht ziehen. Weitere Informationen zur Internalisierung von Zeichenfolgen finden Sie im Referenzthema für die <xref:System.String.Intern%2A?displayProperty=nameWithType>-Methode.  
   
 <a name="ObjRef"></a>   
-##### So bestimmen Sie Verweise auf Objekte  
+##### <a name="to-determine-references-to-objects"></a>So bestimmen Sie Verweise auf Objekte  
   
--   Geben Sie in WinDbg bei geladener SOS\-Debuggererweiterung folgenden Befehl ein, um Objektverweise aufzulisten:  
+-   Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein, um Objektverweise aufzulisten:  
   
-     **\!gcroot**  
+     **!gcroot**  
   
      `-or-`  
   
 -   Um die Verweise für ein bestimmtes Objekt zu ermitteln, geben Sie zusätzlich die Adresse an:  
   
-     **\!gcroot 1c37b2ac**  
+     **!gcroot 1c37b2ac**  
   
-     Die Stammelemente, die in Stapeln gefunden werden, sind möglicherweise falsche positive Ergebnisse.  Weitere Informationen erhalten Sie mit dem Befehl `!help gcroot`.  
+     Die Stammelemente, die in Stapeln gefunden werden, sind möglicherweise falsche positive Ergebnisse. Weitere Informationen erhalten Sie mit dem Befehl `!help gcroot`.  
   
     ```  
     ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->  
@@ -480,10 +483,10 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     Scan Thread 6 OSTHread 484  
     ```  
   
-     Der Befehl **gcroot** kann eine lange Zeit in Anspruch nehmen.  Jedes Objekt, das nicht von der Garbage Collection freigegeben wurfde, ist ein aktives Objekt.  Das heißt, dass ein Stamm direkt oder indirekt das Objekt hält, sodass **gcroot** Pfadinformationen zum Objekt zurückgeben sollte.  Sie sollten die zurückgegebenen Diagramme untersuchen und feststellen, warum auf diese Objekte immer noch verwiesen wird.  
+     Ein Ausführen des Befehls **gcroot** kann lange dauern. Jedes Objekt, das nicht von der Garbage Collection freigegeben wurde, ist ein aktives Objekt. Das heißt, dass ein Stamm direkt oder indirekt das Objekt hält, sodass **gcroot** Pfadinformationen zum Objekt zurückgeben sollte. Sie sollten die zurückgegebenen Diagramme untersuchen und feststellen, warum auf diese Objekte immer noch verwiesen wird.  
   
 <a name="Induce"></a>   
-##### So bestimmen Sie, ob ein Finalizer ausgeführt wurde  
+##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>So bestimmen Sie, ob ein Finalizer ausgeführt wurde  
   
 -   Führen Sie ein Testprogramm aus, das den folgenden Code enthält:  
   
@@ -493,20 +496,20 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     GC.Collect();  
     ```  
   
-     Wenn der Test das Problem behebt, heißt dies, dass der Garbage Collector keine Objekte freigegeben hat, da die Finalizer für diese Objekte unterbrochen wurden.  Mithilfe der <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=fullName>\-Methode können die Finalizer ihre Aufgaben abschließen und das Problem beheben.  
+     Wenn der Test das Problem behebt, heißt dies, dass der Garbage Collector keine Objekte freigegeben hat, da die Finalizer für diese Objekte unterbrochen wurden. Mithilfe der <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>-Methode können die Finalizer ihre Aufgaben abschließen und das Problem beheben.  
   
 <a name="Finalize"></a>   
-##### So bestimmen Sie, ob Objekte auf einen Abschluss warten  
+##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>So bestimmen Sie, ob Objekte auf einen Abschluss warten  
   
-1.  Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein:  
+1.  Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
-     **\!finalizequeue**  
+     **!finalizequeue**  
   
-     Prüfen Sie die Anzahl der Objekte, die auf einen Abschluss warten.  Wenn die Zahl hoch ist, müssen Sie überprüfen, weshalb diese Finalizer nicht schnell genug bzw. überhaupt nicht fortgesetzt werden können.  
+     Prüfen Sie die Anzahl der Objekte, die auf einen Abschluss warten. Wenn die Zahl hoch ist, müssen Sie überprüfen, weshalb diese Finalizer nicht schnell genug bzw. überhaupt nicht fortgesetzt werden können.  
   
 2.  Um eine Ausgabe der Threads abzurufen, geben Sie den folgenden Befehl ein:  
   
-     **threads \-special**  
+     **threads -special**  
   
      Dieser Befehl stellt folgende Ausgabe bereit.  
   
@@ -517,14 +520,14 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     4    df0    GC SuspendEE   
     ```  
   
-     Der Finalizerthread gibt an, welcher Finalizer, sofern vorhanden, aktuell ausgeführt wird.  Wenn ein Finalizerthread keine Finalizer ausführt, wartet er auf ein Ereignis, das die Ausführung startet.  Der Finalizerthread befindet sich meistens in diesem Zustand, da er mit THREAD\_HIGHEST\_PRIORITY ausgeführt wird und die Ausführung von Finalizern i. d. R. sehr schnell abschließen sollte.  
+     Der Finalizerthread gibt an, welcher Finalizer, sofern vorhanden, aktuell ausgeführt wird. Wenn ein Finalizerthread keine Finalizer ausführt, wartet er auf ein Ereignis, das die Ausführung startet. Der Finalizerthread befindet sich meistens in diesem Zustand, da er mit THREAD_HIGHEST_PRIORITY ausgeführt wird und die Ausführung von Finalizern i. d. R. sehr schnell abschließen sollte.  
   
 <a name="Fragmented"></a>   
-##### So bestimmen Sie den freien Speicherplatz im verwalteten Heap  
+##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>So bestimmen Sie den freien Speicherplatz im verwalteten Heap  
   
--   Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein:  
+-   Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
-     **\!dumpheap \-type Free \-stat**  
+     **!dumpheap -type Free -stat**  
   
      Dieser Befehl zeigt die Gesamtgröße aller freien Objekte im verwalteten Heap an, wie im folgenden Beispiel gezeigt.  
   
@@ -538,9 +541,9 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   Um den freien Speicherplatz in Generation 0 zu ermitteln, geben Sie den folgenden Befehl ein, um Informationen zum Speicherverbrauch jeder Generation zu erhalten:  
   
-     **\!eeheap \-gc**  
+     **!eeheap -gc**  
   
-     Dieser Befehl zeigt eine Ausgabe ähnlich der folgenden an.  Die letzte Zeile zeigt das kurzlebige Segment an.  
+     Dieser Befehl zeigt eine Ausgabe ähnlich der folgenden an. Die letzte Zeile zeigt das kurzlebige Segment an.  
   
     ```  
     Heap 0 (0015ad08)  
@@ -558,9 +561,9 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   Berechnen Sie den Speicherplatz für Generation 0:  
   
-     **?  49e05d04\-0x49521f8c**  
+     **? 49e05d04-0x49521f8c**  
   
-     Daraus ergibt sich folgendes Ergebnis.  Generation 0 belegt ungefähr 9 MB.  
+     Daraus ergibt sich folgendes Ergebnis. Generation 0 belegt ungefähr 9 MB.  
   
     ```  
     Evaluate expression: 9321848 = 008e3d78  
@@ -568,7 +571,7 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
 -   Der folgende Befehl gibt den freien Platz im Bereich der Generation 0 aus:  
   
-     **\!dumpheap \-type Free \-stat 0x49521f8c 49e05d04**  
+     **! Dumpheap-Geben Sie kostenlose - Stat 0x49521f8c 49e05d04**  
   
      Daraus ergibt sich folgendes Ergebnis.  
   
@@ -593,14 +596,14 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     Total 409 objects  
     ```  
   
-     Diese Ausgabe zeigt, dass der Bereich der Generation 0 im Heap 9 MB Speicherplatz für Objekte verwendet, von denen 7 MB frei sind.  Diese Analyse zeigt, in welchem Maße Generation 0 zur Fragmentierung beiträgt.  Dieser Anteil des verwendeten Heaps sollte, als Ursache für die Fragmentierung von Langzeitobjekten, von der Gesamtgröße abgezogen werden.  
+     Diese Ausgabe zeigt, dass der Bereich der Generation 0 im Heap 9 MB Speicherplatz für Objekte verwendet, von denen 7 MB frei sind. Diese Analyse zeigt, in welchem Maße Generation 0 zur Fragmentierung beiträgt. Dieser Anteil des verwendeten Heaps sollte, als Ursache für die Fragmentierung von Langzeitobjekten, von der Gesamtgröße abgezogen werden.  
   
 <a name="Pinned"></a>   
-##### So bestimmen Sie die Anzahl der fixierten Objekte  
+##### <a name="to-determine-the-number-of-pinned-objects"></a>So bestimmen Sie die Anzahl der fixierten Objekte  
   
--   Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein:  
+-   Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
-     **\!gchandles**  
+     **!gchandles**  
   
      Die angezeigte Statistik beinhaltet die Anzahl der festen Handles, wie im folgenden Beispiel gezeigt.  
   
@@ -611,15 +614,15 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     ```  
   
 <a name="TimeInGC"></a>   
-##### So bestimmen Sie die Dauer einer Garbage Collection  
+##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>So bestimmen Sie die Dauer einer Garbage Collection  
   
 -   Überprüfen Sie den Speicherleistungsindikator `% Time in GC`.  
   
-     Der Wert wird anhand eines Samplingintervalls berechnet.  Da die Indikatoren am Ende jeder Garbage Collection aktualisiert werden, hat die aktuelle Messung den gleichen Wert wie die vorhergehende Messung, wenn während des Intervalls keine Collections aufgetreten sind.  
+     Der Wert wird anhand eines Samplingintervalls berechnet. Da die Indikatoren am Ende jeder Garbage Collection aktualisiert werden, hat die aktuelle Messung den gleichen Wert wie die vorhergehende Messung, wenn während des Intervalls keine Collections aufgetreten sind.  
   
      Die Dauer der Collection wird durch die Multiplikation der Samplingintervalldauer mit dem Prozentwert ermittelt.  
   
-     Die folgenden Daten zeigen vier Messintervalle von 2 Sekunden in einer Messung über 8 Sekunden.  Die Spalten `Gen0`, `Gen1` und `Gen2` zeigen die Anzahl der Garbage Collections, die während dieses Intervalls für diese Generation aufgetreten sind.  
+     Die folgenden Daten zeigen vier Messintervalle von 2 Sekunden in einer Messung über 8 Sekunden. Die Spalten `Gen0`, `Gen1` und `Gen2` zeigen die Anzahl der Garbage Collections, die während dieses Intervalls für diese Generation aufgetreten sind.  
   
     ```  
     Interval    Gen0    Gen1    Gen2    % Time in GC  
@@ -629,7 +632,7 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
            4      11       3       1               3  
     ```  
   
-     Diese Informationen geben nicht an, wann die Garbage Collection erfolgt ist, Sie können aber die Anzahl der Garbage Collections ermitteln, die in einem bestimmten Zeitintervall aufgetreten sind.  Im schlimmsten Fall wurde die Garbage Collection der zehnten Generation 0 zu Beginn des zweiten Intervalls abgeschlossen und die Garbage Collection der elften Generation 0 zum Ende des fünften Intervalls.  Die Zeit zwischen dem Ende der zehnten und dem Ende der elften Garbage Collection ist ungefähr 2 Sekunden, und der Leistungsindikator zeigt 3%. Daher war die Dauer der elften Garbage Collection der Generation 0 \(2 Sekunden \* 3% \= 60ms\).  
+     Diese Informationen geben nicht an, wann die Garbage Collection erfolgt ist, Sie können aber die Anzahl der Garbage Collections ermitteln, die in einem bestimmten Zeitintervall aufgetreten sind. Im schlimmsten Fall wurde die Garbage Collection der zehnten Generation 0 zu Beginn des zweiten Intervalls abgeschlossen und die Garbage Collection der elften Generation 0 zum Ende des fünften Intervalls. Die Zeit zwischen dem Ende der zehnten und dem Ende der elften Garbage Collection ist ungefähr 2 Sekunden, und der Leistungsindikator zeigt 3%. Daher war die Dauer der elften Garbage Collection der Generation 0 (2 Sekunden * 3% = 60ms).  
   
      In diesem Beispiel gibt es 5 Intervalle.  
   
@@ -642,9 +645,9 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
            5      11       4       2               20  
     ```  
   
-     Die zweite Garbage Collection der Generation 2 wurde während des dritten Intervalls gestartet und im fünften Intervall abgeschlossen.  Im schlimmsten Fall erfolgte die letzte Garbage Collection für eine Collection der Generation 0, die zu Beginn des zweiten Intervalls abgeschlossen wurde, und die Garbage Collection der Generation 2 wurde zum Ende des fünften Intervalls abgeschlossen.  Daher ist die Zeit zwischen dem Ende der Garbage Collection der Generation 0 und dem Ende der Garbage Collection der Generation 2 4 Sekunden.  Da der `% Time in GC`\-Indikator 20% angibt, beträgt die maximale Zeitdauer, die die Garbage Collection der Generation 2 benötigt haben kann: \(4 Sekunden \* 20% \= 800ms\).  
+     Die zweite Garbage Collection der Generation 2 wurde während des dritten Intervalls gestartet und im fünften Intervall abgeschlossen. Im schlimmsten Fall erfolgte die letzte Garbage Collection für eine Collection der Generation 0, die zu Beginn des zweiten Intervalls abgeschlossen wurde, und die Garbage Collection der Generation 2 wurde zum Ende des fünften Intervalls abgeschlossen. Daher ist die Zeit zwischen dem Ende der Garbage Collection der Generation 0 und dem Ende der Garbage Collection der Generation 2 4 Sekunden. Da der `% Time in GC`-Indikator 20% angibt, beträgt die maximale Zeitdauer, die die Garbage Collection der Generation 2 benötigt haben kann: (4 Sekunden * 20% = 800ms).  
   
--   Alternativ können Sie die Länge einer Garbage Collection mithilfe der [ETW\-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) bestimmen und die Informationen analysieren, um so die Dauer der Garbage Collection zu ermitteln.  
+-   Alternativ können Sie die Länge einer Garbage Collection mithilfe der [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) bestimmen und die Informationen analysieren, um so die Dauer der Garbage Collection zu ermitteln.  
   
      Beispielsweise enthalten die folgenden Daten eine Ereignissequenz, die während einer nicht gleichzeitigen Garbage Collection aufgetreten ist.  
   
@@ -659,13 +662,13 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     517918        GCRestartEEEnd  
     ```  
   
-     Das Anhalten des verwalteten Threads dauerte 26us \(`GCSuspendEEEnd` \- `GCSuspendEEBegin_V1`\).  
+     Das Anhalten des verwalteten Threads dauerte 26us (`GCSuspendEEEnd` - `GCSuspendEEBegin_V1`).  
   
-     Die tatsächliche Garbage Collection dauerte 4,8ms \(`GCEnd_V1` \- `GCStart_V1`\).  
+     Die tatsächliche Garbage Collection dauerte 4,8ms (`GCEnd_V1` - `GCStart_V1`).  
   
-     Das Fortsetzen der verwalteten Threads dauerte 21us \(`GCRestartEEEnd` \- `GCRestartEEBegin`\).  
+     Das Fortsetzen der verwalteten Threads dauerte 21us (`GCRestartEEEnd` - `GCRestartEEBegin`).  
   
-     Die folgende Ausgabe zeigt ein Beispiel für eine Garbage Collection im Hintergrund und enthält Felder für den Prozess, den Thread und das Ereignis.  \(Es werden nicht alle Daten gezeigt.\)  
+     Die folgende Ausgabe zeigt ein Beispiel für eine Garbage Collection im Hintergrund und enthält Felder für den Prozess, den Thread und das Ereignis. (Es werden nicht alle Daten gezeigt.)  
   
     ```  
     timestamp(us)    event name            process    thread    event field  
@@ -685,22 +688,22 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     Das `GCStart_V1`\-Ereignis bei 42504816 gibt an, dass dies eine Garbage Collection im Hintergrund ist, da das letzte Feld `1` ist.  Dies wird Garbage Collection Nr.  102019.  
+     Das `GCStart_V1`-Ereignis bei 42504816 gibt an, dass dies eine Garbage Collection im Hintergrund ist, da das letzte Feld `1` ist. Dies wird Garbage Collection Nr. 102019.  
   
-     Das `GCStart`\-Ereignis tritt auf, weil eine kurzlebige Garbage Collection erforderlich ist, bevor eine Garbage Collection im Hintergrund gestartet wird.  Dies wird Garbage Collection Nr.  102020.  
+     Das `GCStart`-Ereignis tritt auf, weil eine kurzlebige Garbage Collection erforderlich ist, bevor eine Garbage Collection im Hintergrund gestartet wird. Dies wird Garbage Collection Nr. 102020.  
   
-     Bei 42514170 wird Garbage Collection Nr.  102020 beendet.  Die verwalteten Threads werden an diesem Punkt neu gestartet.  Dies wird im Thread 4372 abgeschlossen, der diese Garbage Collection im Hintergrund ausgelöst hat.  
+     Bei 42514170 wird Garbage Collection Nr. 102020 beendet. Die verwalteten Threads werden an diesem Punkt neu gestartet. Dies wird im Thread 4372 abgeschlossen, der diese Garbage Collection im Hintergrund ausgelöst hat.  
   
-     Im Thread 4744 tritt eine Unterbrechung auf.  Dies ist das einzige Mal, dass die Garbage Collection im Hintergrund verwaltete Threads anhalten muss.  Die Dauer beträgt ungefähr 99ms \(\(63784407\-63685394\)\/1000\).  
+     Im Thread 4744 tritt eine Unterbrechung auf. Dies ist das einzige Mal, dass die Garbage Collection im Hintergrund verwaltete Threads anhalten muss. Die Dauer beträgt ungefähr 99ms ((63784407-63685394)/1000).  
   
-     Das `GCEnd`\-Ereignis für die Garbage Collection im Hintergrund wird bei 89931423 angezeigt.  Dies bedeutet, dass die Garbage Collection im Hintergrund etwa 47 Sekunden gedauert hat \(\(89931423\-42504816\)\/1000\).  
+     Das `GCEnd`-Ereignis für die Garbage Collection im Hintergrund wird bei 89931423 angezeigt. Dies bedeutet, dass die Garbage Collection im Hintergrund etwa 47 Sekunden gedauert hat ((89931423-42504816)/1000).  
   
      Während die verwalteten Threads ausgeführt werden, können beliebig viele kurzlebige Garbage Collections stattfinden.  
   
 <a name="Triggered"></a>   
-##### So ermitteln Sie, was eine Garbage Collection ausgelöst  
+##### <a name="to-determine-what-triggered-a-garbage-collection"></a>So ermitteln Sie, was eine Garbage Collection ausgelöst  
   
--   Geben Sie im WinDbg\-Debugger oder im Visual Studio\-Debugger bei geladener SOS\-Debuggererweiterung den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
+-   Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
   
      **~\*kb**  
   
@@ -712,7 +715,7 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48  
     ```  
   
-     Wenn die Garbage Collection durch eine Benachrichtigung über unzureichenden Arbeitsspeicher vom Betriebssystem verursacht wurde, sieht die Aufrufliste ähnlich aus, mit dem Unterschied, dass der Thread ein Finalizerthread ist.  Der Finalizerthread erhält eine asynchrone Benachrichtigung über unzureichenden Arbeitsspeicher und führt die Garbage Collection aus.  
+     Wenn die Garbage Collection durch eine Benachrichtigung über unzureichenden Arbeitsspeicher vom Betriebssystem verursacht wurde, sieht die Aufrufliste ähnlich aus, mit dem Unterschied, dass der Thread ein Finalizerthread ist. Der Finalizerthread erhält eine asynchrone Benachrichtigung über unzureichenden Arbeitsspeicher und führt die Garbage Collection aus.  
   
      Wenn die Garbage Collection durch die Speicherbelegung verursacht wurde, sieht der Stapel wie folgt aus:  
   
@@ -728,13 +731,13 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     Ein Just\-In\-Time\-Hilfsprogramm \(`JIT_New*`\) ruft schließlich `GCHeap::GarbageCollectGeneration` auf.  Wenn Sie feststellen, dass die Garbage Collections der Generation 2 durch Belegungen verursacht werden, müssen Sie ermitteln, welche Objekte von einer Garbage Collection der Generation 2 freigegeben werden und wie sie dies vermeiden können.  Das heißt, Sie müssen den Unterschied zwischen dem Anfang und am Ende einer Garbage Collection der Generation 2 sowie die Objekte bestimmen, welche die Collection der Generation 2 verursacht haben.  
+     Ein Just-In-Time-Hilfsprogramm (`JIT_New*`) ruft schließlich `GCHeap::GarbageCollectGeneration` auf. Wenn Sie feststellen, dass die Garbage Collections der Generation 2 durch Belegungen verursacht werden, müssen Sie ermitteln, welche Objekte von einer Garbage Collection der Generation 2 freigegeben werden und wie sie dies vermeiden können. Das heißt, Sie müssen den Unterschied zwischen dem Anfang und am Ende einer Garbage Collection der Generation 2 sowie die Objekte bestimmen, welche die Collection der Generation 2 verursacht haben.  
   
      Geben Sie beispielsweise den folgenden Befehl im Debugger ein, um den Anfang einer Collection der Generation 2 anzuzeigen:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
-     Beispielausgabe \(gekürzt, um die Objekte anzuzeigen, die den meisten Platz benötigen\):  
+     Beispielausgabe (gekürzt, um die Objekte anzuzeigen, die den meisten Platz benötigen):  
   
     ```  
     79124228    31857      9862328 System.Object[]  
@@ -754,9 +757,9 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
   
      Wiederholen Sie den Befehl am Ende der Generation 2:  
   
-     **\!dumpheap –stat**  
+     **!dumpheap –stat**  
   
-     Beispielausgabe \(gekürzt, um die Objekte anzuzeigen, die den meisten Platz benötigen\):  
+     Beispielausgabe (gekürzt, um die Objekte anzuzeigen, die den meisten Platz benötigen):  
   
     ```  
     79124228    26648      9314256 System.Object[]  
@@ -773,14 +776,14 @@ In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speic
     Total 6417525 objects  
     ```  
   
-     Die `double[]`\-Objekte am Ende der Ausgabe sind verschwunden, das heißt, sie wurden freigegeben.  Diese Objekte umfassen etwa 70 MB.  Bei den übrigen Objekten gab es kaum Änderungen.  Daher waren diese `double[]`\-Objekte der Grund, weshalb diese Garbage Collection der Generation 2 ausgeführt wurde.  Der nächster Schritt besteht darin, zu bestimmen, warum die `double[]`\-Objekte vorhanden sind und warum sie inaktiv waren.  Sie können den Codeentwickler fragen, woher diese Objekte stammen, oder Sie können den Befehl **gcroot** verwenden.  
+     Die `double[]`-Objekte am Ende der Ausgabe sind verschwunden, das heißt, sie wurden freigegeben. Diese Objekte umfassen etwa 70 MB. Bei den übrigen Objekten gab es kaum Änderungen. Daher waren diese `double[]`-Objekte der Grund, weshalb diese Garbage Collection der Generation 2 ausgeführt wurde. Der nächster Schritt besteht darin, zu bestimmen, warum die `double[]`-Objekte vorhanden sind und warum sie inaktiv waren. Sie können den Codeentwickler fragen, woher diese Objekte stammen, oder Sie können den Befehl **gcroot** verwenden.  
   
 <a name="HighCPU"></a>   
-##### So ermitteln Sie, ob die hohe CPU\-Auslastung durch die Garbage Collection verursacht wird  
+##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>So ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird  
   
 -   Setzen Sie den Wert des Speicherleistungsindikators `% Time in GC` zur Prozesszeit in Beziehung.  
   
-     Wenn der `% Time in GC`\-Wert zum selben Zeitpunkt einen Spitzenwert erreicht wie die Prozesszeit, dann verursacht die Garbage Collection die hohe CPU\-Auslastung.  Erstellen Sie andernfalls ein Profil der Anwendung, um zu ermitteln, wie die hohe Auslastung zustande kommt.  
+     Wenn der `% Time in GC`-Wert zum selben Zeitpunkt einen Spitzenwert erreicht wie die Prozesszeit, dann verursacht die Garbage Collection die hohe CPU-Auslastung. Erstellen Sie andernfalls ein Profil der Anwendung, um zu ermitteln, wie die hohe Auslastung zustande kommt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

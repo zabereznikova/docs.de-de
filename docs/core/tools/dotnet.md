@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -48,7 +47,7 @@ Nur bei [Framework-abhängigen Apps](../deploying/index.md) wird `dotnet` als ei
 
 `--additionaldeps <PATH>`
 
-Pfad zur zusätzlichen *deps.json*-Datei.
+Pfad zur zusätzlichen *deps.json* Datei.
 
 `--additionalprobingpath <PATH>`
 
@@ -187,6 +186,8 @@ Wiederherstellen von Abhängigkeiten für eine bestimmte Anwendung:
 
 `dotnet restore`
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Erstellen eines Projekts und seiner Abhängigkeiten in einem vorgegebenen Verzeichnis:
 
 `dotnet build`
@@ -208,4 +209,3 @@ Gibt den Speicherort des Wartungsindex an, der vom freigegebenen Host verwendet 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft gesendet werden. Legen Sie sie auf `true` fest, um die Telemetriefunktion zu deaktivieren (Werte `true`, `1` oder `yes` werden akzeptiert); legen Sie sie andernfalls auf `false` fest, um die Telemetriefunktionen zu aktivieren (Werte `false`, `0` oder `no` werden akzeptiert). Wenn sie nicht festgelegt wird, ist der Standardwert `false`, und die Telemetriefunktion ist aktiviert.
-

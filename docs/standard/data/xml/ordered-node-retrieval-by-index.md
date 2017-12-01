@@ -1,28 +1,29 @@
 ---
-title: "Abrufen von geordneten Knoten anhand des Indexes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Abrufen von geordneten Knoten anhand des Indexes
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# Abrufen von geordneten Knoten anhand des Indexes
-Das W3C\-XML\-Dokumentobjektmodell \(Document Object Model \- DOM\) beschreibt auch eine NodeList. Diese kann eine geordnete Liste von Knoten behandeln, anders als die **XmlNamedNodeMap**, die einen ungeordneten Knotensatz behandelt.  Die NodeList in Microsoft .NET Framework wird als **XmlNodeList** bezeichnet.  Folgende Methoden und Eigenschaften geben eine **XmlNodeList** zurück:  
+# <a name="ordered-node-retrieval-by-index"></a>Abrufen von geordneten Knoten anhand des Indexes
+Der World Wide Web Consortium (W3C) XML-Dokument Objekt Model (DOM) beschreibt auch eine NodeList, diese kann eine geordnete Liste von Knoten, im Gegensatz zu den ungeordneten Knotensatz behandelt behandeln die **XmlNamedNodeMap**. Die NodeList in Microsoft .NET Framework heißt **XmlNodeList**. Methoden und Eigenschaften, die Zurückgeben einer **XmlNodeList** sind:  
   
 -   XmlNode.ChildNodes  
   
@@ -32,7 +33,7 @@ Das W3C\-XML\-Dokumentobjektmodell \(Document Object Model \- DOM\) beschreibt a
   
 -   XmlNode.SelectNodes  
   
- Die **XmlNodeList** weist eine **Count**\-Eigenschaft auf, mit der eine Schleife zum Durchlaufen der Knoten in der **XmlNodeList** geschrieben werden kann, wie im folgenden Codebeispiel gezeigt:  
+ Die **XmlNodeList** verfügt über eine **Anzahl** -Eigenschaft, die verwendet werden kann, um das Durchlaufen der Knoten in Schleifen zu schreiben der **XmlNodeList**, wie im folgenden Codebeispiel gezeigt:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -46,7 +47,6 @@ Dim doc as XmlDocument = new XmlDocument()
         ' Display all book titles in the Node List.  
         Console.WriteLine(elemList.ItemOf(i).InnerXml)  
     next  
-  
 ```  
   
 ```csharp  
@@ -62,7 +62,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- Zusätzlich zur **Count**\-Eigenschaft gibt es die **GetEnumerator**\-Methode, die eine `foreach`\-Iteration der Knotenauflistung in der **XmlNodeList** ermöglicht.  Im folgenden Codebeispiel wird die Verwendung der `foreach`\-Anweisung veranschaulicht.  
+ Zusätzlich zu den **Anzahl** -Eigenschaft, besteht eine **GetEnumerator** -Methode bereit, a, `foreach` -Iteration für die Auflistung von Knoten in der **XmlNodeList**. Im folgenden Codebeispiel wird die Verwendung der `foreach`-Anweisung veranschaulicht.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -99,7 +99,7 @@ End While
   }  
 ```  
   
- Weitere Informationen zu den für die **XmlNodeList** verfügbaren Methoden und Eigenschaften finden Sie unter [XmlNodeList Members](frlrfSystemXmlXmlNodeListMembersTopic).  
+ Weitere Informationen zu den verfügbaren Methoden und Eigenschaften für die **XmlNodeList**, finden Sie unter <xref:System.Xml.XmlNodeList>.  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

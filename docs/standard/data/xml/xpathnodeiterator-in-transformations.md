@@ -1,30 +1,31 @@
 ---
-title: "&quot;XPathNodeIterator&quot; in Transformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "„XPathNodeIterator“ in Transformationen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-# &quot;XPathNodeIterator&quot; in Transformationen
-<xref:System.Xml.XPath.XPathNodeIterator> stellt Methoden zum Durchlaufen einer Knotengruppe dar, die als Ergebnis einer XPath\-Abfrage \(XML Path Language\) oder als Konvertierung eines Ergebnisstrukturfragments mit der node\-set\-Methode in eine Knotengruppe erstellt wurde.  Mit <xref:System.Xml.XPath.XPathNodeIterator> können die Knoten innerhalb dieser Knotengruppe durchlaufen werden.  Nach dem Abrufen der Knotengruppe stellt die <xref:System.Xml.XPath.XPathNodeIterator>\-Klasse einen schreibgeschützten vorwärtsgerichteten Cursor für die ausgewählte Knotengruppe bereit.  Die Knotengruppe wird in der Dokumentreihenfolge erstellt, sodass beim Aufrufen dieser Methode mit dem nächsten Knoten in der Dokumentreihenfolge fortgefahren wird.  <xref:System.Xml.XPath.XPathNodeIterator> erstellt keine Knotenstruktur aller Knoten im Satz.  Stattdessen stellt er ein Fenster bereit, wodurch der zugrunde liegende Knoten, auf den er verweist, während der Bewegung durch die Struktur verfügbar gemacht wird.  Mit den Methoden und Eigenschaften der <xref:System.Xml.XPath.XPathNodeIterator>\-Klasse können Sie Informationen aus dem aktuellen Knoten abrufen.  Eine Liste der verfügbaren Methoden und Eigenschaften finden Sie unter [XPathNodeIterator\-Member](frlrfsystemxmlxpathxpathnodeiteratormemberstopic).  
+# <a name="xpathnodeiterator-in-transformations"></a>„XPathNodeIterator“ in Transformationen
+<xref:System.Xml.XPath.XPathNodeIterator> stellt Methoden zum Durchlaufen einer Knotengruppe dar, die als Ergebnis einer XPath-Abfrage (XML Path Language) oder als Konvertierung eines Ergebnisstrukturfragments mit der node-set-Methode in eine Knotengruppe erstellt wurde. Mit <xref:System.Xml.XPath.XPathNodeIterator> können die Knoten innerhalb dieser Knotengruppe durchlaufen werden. Nach dem Abrufen der Knotengruppe stellt die <xref:System.Xml.XPath.XPathNodeIterator>-Klasse einen schreibgeschützten vorwärtsgerichteten Cursor für die ausgewählte Knotengruppe bereit. Die Knotengruppe wird in der Dokumentreihenfolge erstellt, sodass beim Aufrufen dieser Methode mit dem nächsten Knoten in der Dokumentreihenfolge fortgefahren wird. <xref:System.Xml.XPath.XPathNodeIterator> erstellt keine Knotenstruktur aller Knoten im Satz. Stattdessen stellt er ein Fenster bereit, wodurch der zugrunde liegende Knoten, auf den er verweist, während der Bewegung durch die Struktur verfügbar gemacht wird. Mit den Methoden und Eigenschaften der <xref:System.Xml.XPath.XPathNodeIterator>-Klasse können Sie Informationen aus dem aktuellen Knoten abrufen. Eine Liste der verfügbaren Methoden und Eigenschaften, finden Sie unter <xref:System.Windows.Forms.ToolBar>.  
   
- Da sich ein <xref:System.Xml.XPath.XPathNodeIterator> nur vorwärts durch eine Gruppe von Knoten bewegt, die aus einer XPath\-Abfrage erstellt wurden, wird die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>\-Methode zum Durchlaufen verwendet.  Der Rückgabetyp dieser Methode ist `Boolean`. Es wird `true` zurückgegeben, wenn zum nächsten ausgewählten Knoten gewechselt wird, und es wird `false` zurückgegeben, wenn kein ausgewählter Knoten mehr vorhanden ist.  In der folgenden Liste werden die Eigenschaften aufgeführt, die verfügbar sind, wenn `true` zurückgegeben wird:  
+ Da sich ein <xref:System.Xml.XPath.XPathNodeIterator> nur vorwärts durch eine Gruppe von Knoten bewegt, die aus einer XPath-Abfrage erstellt wurden, wird die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>-Methode zum Durchlaufen verwendet. Der Rückgabetyp dieser Methode ist `Boolean`. Es wird `true` zurückgegeben, wenn zum nächsten ausgewählten Knoten gewechselt wird, und es wird `false` zurückgegeben, wenn kein ausgewählter Knoten mehr vorhanden ist. In der folgenden Liste werden die Eigenschaften aufgeführt, die verfügbar sind, wenn `true` zurückgegeben wird:  
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -32,9 +33,9 @@ caps.handback.revision: 3
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- Nach der Erstellen einer Knotengruppe muss <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> aufgerufen werden, um den <xref:System.Xml.XPath.XPathNodeIterator> auf dem ersten Knoten der ausgewählten Gruppe zu positionieren.  Dies ermöglicht die Verwendung einer while\-Schleife.  
+ Nach der Erstellen einer Knotengruppe muss <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> aufgerufen werden, um den <xref:System.Xml.XPath.XPathNodeIterator> auf dem ersten Knoten der ausgewählten Gruppe zu positionieren. Dies ermöglicht die Verwendung einer while-Schleife.  
   
- Im folgenden Codebeispiel wird gezeigt, wie ein <xref:System.Xml.XPath.XPathNodeIterator> für eine <xref:System.Xml.Xsl.XslTransform> als Parameter in der <xref:System.Xml.Xsl.XsltArgumentList> übergeben wird.  Die Eingabe im Code ist **books.xml**, und das Stylesheet ist **text.xsl**.  Die Datei **test.xml** ist das <xref:System.Xml.XPath.XPathDocument>.  
+ Im folgenden Codebeispiel wird gezeigt, wie ein <xref:System.Xml.XPath.XPathNodeIterator> für eine <xref:System.Xml.Xsl.XslTransform> als Parameter in der <xref:System.Xml.Xsl.XsltArgumentList> übergeben wird. Die Eingabe im Code ist **books.xml**, und das Stylesheet ist **text.xsl**. Die Datei **test.xml** ist die <xref:System.Xml.XPath.XPathDocument>.  
   
 ```vb  
 Imports System  
@@ -63,7 +64,6 @@ Public Class sample
       xslt.Transform(xd, arg, strmTemp, Nothing)  
    End Sub 'Main  
 End Class 'sample  
-  
 ```  
   
 ```csharp  
@@ -96,9 +96,9 @@ public class sample
 }  
 ```  
   
-## books.xml  
+## <a name="booksxml"></a>books.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <!-- This file represents a fragment of a book store inventory database. -->  
 <bookstore specialty="novel">  
@@ -129,9 +129,9 @@ public class sample
 </bookstore>  
 ```  
   
-## test.xsl  
+## <a name="testxsl"></a>test.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
 xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">  
   
@@ -149,15 +149,15 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## test.xml  
+## <a name="testxml"></a>test.xml  
   
-```  
+```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## Ausgabe \(out.xml\)  
+## <a name="output-outxml"></a>Ausgabe (out.xml)  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <out>  
   <title>Seven Years in Trenton</title>  
@@ -165,5 +165,5 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## Siehe auch  
- [Implementierung des XSLT\-Prozessors durch die XslTransform\-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Siehe auch  
+ [XslTransform-Klasse implementiert die XSLT-Prozessor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

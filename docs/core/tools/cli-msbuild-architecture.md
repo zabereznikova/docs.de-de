@@ -9,14 +9,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
+ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6830cc46994aa44d46a9c862efff525142578003
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Allgemeine Übersicht über Änderungen in .NET Core-Tools
 
 Dieses Dokument beschreibt die Änderungen im Zusammenhang mit dem Verschieben von *project.json* nach MSBuild und das Projektsystem *csproj* mit Informationen zu den Änderungen an den Schichten der .NET Core-Tools und die Implementierung der CLI-Befehle. Diese Änderungen sind mit der Version von .NET Core SDK 1.0 und Visual Studio 2017 am 7. März 2017 aufgetreten (weitere Informationen finden Sie in der [Ankündigung](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), aber sie wurden zuerst mit der Version von .NET Core SDK Preview 3 implementiert.
@@ -36,7 +34,7 @@ Lassen Sie uns als schnelle Auffrischung mit den Schichten in Preview 2 beginnen
 
 ![Allgemeine Architektur der Preview 2-Tools](media/cli-msbuild-architecture/p2-arch.png)
 
-Die Schichtung der Tools ist recht einfach. Ganz unten haben wir die .NET Core-Befehlszeilentools als Fundament. Alle weiteren Tools auf höherer Ebene, z.B. Visual Studio oder Visual Studio Code, hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Dies bedeutete, dass wenn Visual Studio z.B. eine Wiederherstellung durchführen wollte, der Befehl `dotnet restore` in der CLI aufgerufen werden musste. 
+Die Schichtung der Tools ist recht einfach. Ganz unten haben wir die .NET Core-Befehlszeilentools als Fundament. Alle weiteren Tools auf höherer Ebene, z.B. Visual Studio oder Visual Studio Code, hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Dies bedeutet, dass z. B. wenn Visual Studio einen Wiederherstellungsvorgang ausführen möchten, sie in aufrufen würde `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note))-Befehl in der CLI. 
 
 Durch den Wechsel zum neuen Projektsystem ändert sich die vorherige Abbildung: 
 
@@ -47,7 +45,7 @@ Der Hauptunterschied besteht darin, dass die CLI nicht mehr die Fundamentschicht
 > [!NOTE]
 > Ein „Ziel“ ist ein MSBuild-Ausdruck, der einen benannten Vorgang angibt, den MSBuild aufrufen kann. Es ist in der Regel an eine oder mehrere Aufgaben gekoppelt, die dem Ziel entsprechende Logik ausführen. MSBuild unterstützt viele vorgefertigte Ziele, z.B. `Copy` oder `Execute`. Außerdem können Benutzer mithilfe von verwaltetem Code eigene Aufgaben schreiben und Ziele definieren, um diese Aufgaben ausführen. Weitere Informationen finden Sie unter [MSBuild-Aufgaben](/visualstudio/msbuild/msbuild-tasks). 
 
-Alle Toolsets nutzen nun die freigegebene SDK-Komponente und ihre Ziele. Das gibt auch für die CLI. Beispielsweise ruft die nächste Version von Visual Studio nicht den Befehl `dotnet restore` auf, um die Abhängigkeiten für .NET Core-Projekte wiederherzustellen, sondern direkt das Ziel von „restore“. Da es sich MSBuild-Ziele handelt, können Sie MSBuild auch „roh“ verwenden, um sie mit dem Befehl [dotnet msbuild](dotnet-msbuild.md) auszuführen. 
+Alle Toolsets nutzen nun die freigegebene SDK-Komponente und ihre Ziele. Das gibt auch für die CLI. Beispielsweise ruft die nächste Version von Visual Studio nicht in `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note))-Befehl, um die Abhängigkeiten für Projekte von .NET Core wiederherzustellen, verwenden sie das Ziel "Restore" direkt. Da es sich MSBuild-Ziele handelt, können Sie MSBuild auch „roh“ verwenden, um sie mit dem Befehl [dotnet msbuild](dotnet-msbuild.md) auszuführen. 
 
 ### <a name="cli-commands"></a>CLI-Befehle
 Die freigegebene SDK-Komponente bedeutet, dass die meisten vorhandenen CLI-Befehle als MSBuild-Aufgaben und -Ziele neu implementiert wurden. Was bedeutet dies für die CLI-Befehle und Ihre Nutzung des Toolsets? 
@@ -74,3 +72,4 @@ Mit diesem Befehl wird eine Anwendung im Ordner `pub` mithilfe der Konfiguration
 
 Die wichtige Ausnahme dieser Regel sind die Befehle `new` und `run`, da sie nicht als MSBuild-Ziele implementiert wurden.
 
+<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

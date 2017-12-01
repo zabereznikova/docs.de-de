@@ -1,29 +1,23 @@
 ---
 title: Veraltete Elemente in der .NET Framework-Klassenbibliothek
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
@@ -67,7 +61,7 @@ ms.lasthandoff: 07/28/2017
   
 |.NET Framework-Version|`version`-Zeichenfolge|
 |-|-|  
-|4.7|v4.0|  
+|4.7 (einschließlich 4.7.1)|v4.0|  
 |4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|  
 |4.5 (inklusive 4.5.1 und 4.5.2)|v4.0|  
 |4|v4.0|  
@@ -92,4 +86,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

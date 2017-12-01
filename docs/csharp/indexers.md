@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>Indexer
 
 *Indexer* sind ähnlich wie Eigenschaften. In vielen Aspekten bauen Indexer genauso wie [Eigenschaften](properties.md) auf den gleichen Sprachfunktionen auf. Indexer ermöglichen *indizierte* Eigenschaften: Eigenschaften, auf die von mindestens einem Argument verwiesen wird. Diese Argumente stellen einen Index in einer Auflistung von Werten bereit.
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Dieses erste Beispiel veranschaulicht die Beziehung zwischen der Syntax der Eigenschaften und der Indexer. Diese Analogie wirkt sich auf die meisten Syntaxregeln für Indexer auf. Indexer können beliebige Zugriffsmodifizierer aufweisen (öffentliche, geschützte interne, geschützte, interne oder private). Sie können versiegelt, virtuell oder abstrakt sein. Bei Eigenschaften können Sie verschiedene Zugriffsmodifizierer für die get- und set-Zugriffsmethoden eines Indexers angeben.
+Dieses erste Beispiel veranschaulicht die Beziehung zwischen der Syntax der Eigenschaften und der Indexer. Diese Analogie wirkt sich auf die meisten Syntaxregeln für Indexer auf. Indexer können keine gültigen Zugriffsmodifizierer haben (öffentliche, geschützte interne, geschützte, interne, private oder private geschützte). Sie können versiegelt, virtuell oder abstrakt sein. Bei Eigenschaften können Sie verschiedene Zugriffsmodifizierer für die get- und set-Zugriffsmethoden eines Indexers angeben.
 Außerdem können Sie schreibgeschützte Indexer (indem Sie die set-Zugriffsmethode auslassen) oder lesegeschützte Indexer (indem Sie die get-Zugriffsmethode auslassen) angeben.
 
 Fast alles, was Sie von der Arbeit mit Eigenschaften kennen, können sie auch für Indexer anwenden. Die einzige Ausnahme von dieser Regel sind *automatisch implementierte Eigenschaften*. Der Compiler kann nicht immer angemessenen Speicher für einen Indexer generieren.
@@ -335,4 +333,3 @@ Entwickler verwenden den `DateTime`-Typ, aber die `Date`-Eigenschaft, um sicherz
 
 Sie sollten Indexer immer dann erstellen, wenn Sie ein Element, das einer Eigenschaft ähnelt, in Ihrer Klasse vorliegen haben, und wenn diese Eigenschaft nicht einen einzelnen Wert repräsentiert, sondern eine Auflistung von Werten, in der jedes einzelne Element durch einen Satz von Argumenten identifiziert wird. Diese Argumente können eindeutig identifizieren, auf welches Element in der Auflistung verwiesen werden sollte.
 Indexer erweitern das Konzept der [Eigenschaften](properties.md), wo ein Member außerhalb der Klasse nicht wie ein Datenelement behandelt wird, sondern wie eine Methode von innen. Indexer ermöglichen es Argumenten, ein einzelnes Element in einer Eigenschaft zu finden, das einen Satz von Elementen repräsentiert.
-

@@ -1,45 +1,27 @@
 ---
 title: 'Gewusst wie: Verwenden der XML-Dokumentationsfunktionen (C#-Programmierhandbuch)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Gewusst wie: Verwenden der XML-Dokumentationsfunktionen (C#-Programmierhandbuch)
 Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der dokumentierten wurde.  
   
 ## <a name="example"></a>Beispiel  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// Diese XML-Datei wurde mit dem vorherigen Codebeispiel generiert.**  
 **\<?xml version="1.0"?>**  
@@ -52,7 +34,7 @@ Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der d
  **\<summary>**  
  **Hier eine Zusammenfassung der Klassenebene dokumentieren.\</summary>**  
  **\<remarks>**  
- **Mit den remarks-Tags können einem Typ oder Member längere**   
+ **Längere Kommentare können einen Typ oder Member zugeordnet werden.**  
  **Kommentare zugeordnet werden.\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -60,14 +42,14 @@ Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der d
  **Speicher für die Name-Eigenschaft\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<summary>Konstruktor der Klasse.\</summary>**   
+ **\<Zusammenfassung > Klassenkonstruktor.  \< /summary >**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Beschreibung von SomeMethod.\</summary>**  
  **\<param name="s">Hier Beschreibung für den Parameter „s“ einfügen.\</param>**  
  **\<seealso cref="T:System.String">**  
- **Sie können für alle Tags das cref-Attribut verwenden, um auf einen Typ oder Member**   
+ **Sie können auf einem beliebigen Tag Cref-Attribut verwenden, auf einen Typ oder Member verweisen**  
  **zu verweisen. Der Compiler prüft dann, ob der Verweis vorhanden ist. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -116,7 +98,6 @@ Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der d
         >  Die XML-Datei enthält keine vollständigen Informationen über den Typ und die Member (z. B. fehlen Typinformationen). Um vollständige Informationen zu einem Typ oder Member zu erhalten, muss die Dokumentationsdatei zusammen mit Reflektion über den tatsächlichen Typ oder Member verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [/doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [/ doc (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

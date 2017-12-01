@@ -1,42 +1,23 @@
 ---
 title: -win32manifest (C#-Compileroptionen)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: de-de
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (C#-Compileroptionen)
 Verwenden Sie die Option **/win32manifest**, um eine benutzerdefinierte Win32-Anwendungsmanifestdatei anzugeben, die in die übertragbare ausführbare Datei (portable executable, PE) eines Projekts eingebettet werden soll.  
@@ -57,7 +38,7 @@ Verwenden Sie die Option **/win32manifest**, um eine benutzerdefinierte Win32-An
 > [!NOTE]
 >  Diese Option und die Option [/win32res (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) schließen sich gegenseitig aus. Wenn Sie versuchen, beide Optionen in derselben Befehlszeile zu verwenden, erhalten Sie einen Buildfehler.  
   
- Eine Anwendung ohne Anwendungsmanifest, das eine angeforderte Anwendungsebene angibt, unterliegt der Datei- und Registrierungsvirtualisierung unter der Benutzerkontensteuerung in Windows Vista. Weitere Informationen zur Virtualisierung finden Sie unter [Windows Vista für Entwickler: Windows Vista Anwendungsentwicklungsanforderungen für die Benutzerkontensteuerung](http://go.microsoft.com/fwlink/?LinkId=95452).  
+ Eine Anwendung, die kein Anwendungsmanifest besitzt gibt an, dass Datei-/Registrierungsvirtualisierung das User Account Control-Feature in Windows eine angeforderte Ausführungsebene unterliegen wird. Weitere Informationen finden Sie unter [User Account Control](/windows/access-protection/user-account-control/user-account-control-overview).  
   
  Die Anwendung unterliegt der Virtualisierung, wenn eine dieser Bedingungen erfüllt ist:  
   
@@ -90,7 +71,6 @@ Verwenden Sie die Option **/win32manifest**, um eine benutzerdefinierte Win32-An
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)   
- [/nowin32manifest (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+ [/NoWin32Manifest (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-

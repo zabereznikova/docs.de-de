@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>C#-Schnellstart: Sammlungen #
 
-Dieses Tutorial bietet eine Einführung in die C#-Sprache und die Grundlagen der <xref:System.Collections.Generic.List%601>-Klasse.
+Dieser Schnellstart bietet eine Einführung in die C#-Sprache und die Grundlagen der <xref:System.Collections.Generic.List%601> Klasse.
 
-## <a name="a-simple-list-example"></a>Ein Beispiel für eine einfache Liste.
+Dieser Schnellstart erwartet, dass Sie einen Computer verfügen, den Sie für die Entwicklung verwenden können. Das Thema .NET [Einstieg in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten der lokalen Entwicklungsumgebung auf Mac, PC oder Linux.
 
-> [!NOTE]
-> Wenn Sie ausgehend von dem Code beginnen, den Sie in [dot.net](https://dot.net/) geschrieben haben, können Sie den bereits in diesem Abschnitt geschriebenen Code nutzen. Fahren Sie mit [Ändern von Listeninhalten](#modify-list-contents) fort.
-
-In dieser Lektion wird vorausgesetzt, dass Sie die Onlineschnellstarts abgeschlossen und [.NET Core SDK](http://dot.net/core) und [Visual Studio Code](https://code.visualstudio.com/) installiert haben. 
+## <a name="a-basic-list-example"></a>Ein Beispiel für einfache Liste.
 
 Erstellen Sie ein Verzeichnis mit dem Namen **list-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console` aus.
 
+> [!NOTE]
+> Wenn Sie soeben [erste Schritte mit .NET in 10 Minuten](https://www.microsoft.com/net), Sie können behalten mithilfe der "MyApp"-Anwendung, die Sie gerade erstellt haben.
+ 
 Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie den vorhandenen Code durch Folgendes:
 
 ```csharp
@@ -213,10 +214,10 @@ Versuchen Sie, einige dieser Lektionen und frühere Lektionen in einen Zusammenh
 
 ## <a name="complete-challenge"></a>Herausforderung erfüllen
 
-Als Beispiel für eine Lösung finden Sie [fertig gestellten Code auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs).
+Als Beispiel für eine Lösung finden Sie [fertig gestellten Code auf GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23).
 
 Mit jeder Iteration der Schleife werden die letzten beiden Ganzzahlen in der Liste summiert, und dieser Wert wird der Liste hinzugefügt. Die Schleife wird wiederholt, bis der Liste 20 Elemente hinzugefügt worden sind.
 
-Herzlichen Glückwunsch, Sie haben das Listentutorial abgeschlossen.
+Herzlichen Glückwunsch, Sie den Schnellstart der Liste abgeschlossen haben. Sie können weiterhin mit der [Einführung in Klassen](introduction-to-classes.md) schnellen Einstieg in die Entwicklungsumgebung vorbereiten.
 
 Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im [Leitfaden für .NET](../../standard/index.md) im Thema [Sammlungen](../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.

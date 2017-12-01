@@ -1,39 +1,40 @@
 ---
-title: "XDR-Validierung mit &quot;XmlSchemaCollection&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XDR-Validierung mit „XmlSchemaCollection“"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# XDR-Validierung mit &quot;XmlSchemaCollection&quot;
-Wenn das XDR\-Schema \(XML\-Data Reduced\), anhand dessen validiert wird, in der **XmlSchemaCollection** gespeichet ist, wird es dem beim Hinzufügen des Schemas zur Auflistung angegebenen Namespace\-URI zugeordnet.  **XmlValidatingReader** ordnet den Namespace\-URI im XML\-Dokument dem Schema zu, das diesem URI in der Auflistung entspricht.  
+# <a name="xdr-validation-with-xmlschemacollection"></a>XDR-Validierung mit „XmlSchemaCollection“
+Wenn das XML-Data Reduced (XDR) Schema anhand, in gespeichert ist der **"XmlSchemaCollection"**, er bezieht sich auf den Namespace-URI angegeben, wenn das Schema der Auflistung hinzugefügt wurde. **XmlValidatingReader** dem Schema, das diesem URI in der Auflistung entspricht, den Namespace-URI in das XML-Dokument zugeordnet.  
   
 > [!IMPORTANT]
->  Die <xref:System.Xml.Schema.XmlSchemaCollection>\-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>\-Klasse ersetzt.  Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>\-Klasse finden Sie unter ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zu den <xref:System.Xml.Schema.XmlSchemaSet> Klasse finden Sie unter ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- Beispiel: Wenn das Stammelement des XML\-Dokuments `<bookstore xmlns="urn:newbooks-schema">` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:  
+ Beispielsweise ist das Stammelement des XML-Dokuments `<bookstore xmlns="urn:newbooks-schema">`, wenn das Schema hinzugefügt wird die **"XmlSchemaCollection"** er verweist auf denselben Namespace wie folgt:  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- Im folgenden Codebeispiel wird ein **XmlValidatingReader** erstellt, der einen **XmlTextReader** übernimmt und der **XmlSchemaCollection** das XDR\-Schema HeadCount.xdr hinzufügt.  
+ Das folgende Codebeispiel erstellt eine **XmlValidatingReader** , akzeptiert eine **XmlTextReader** und fügt Sie einem XDR-Schema HeadCount.xdr, zu der **"XmlSchemaCollection"**.  
   
 ```vb  
 Imports System  
@@ -140,9 +141,9 @@ namespace ValidationSample
 }  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei **HeadCount.xml** dargestellt.  
+ Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei HeadCount.xml dargestellt.  
   
-```  
+```xml  
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->  
 <HeadCount xmlns='xdrHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -150,9 +151,9 @@ namespace ValidationSample
 </HeadCount>  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der XDR\-Schemadatei HeadCount.xdr dargestellt, die zur Validierung herangezogen wird.  
+ Im folgenden Beispiel wird der Inhalt der XDR-Schemadatei HeadCount.xdr dargestellt, die zur Validierung herangezogen wird.  
   
-```  
+```xml  
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">  
    <ElementType name="Name" content="textOnly"/>  
    <AttributeType name="Bldg" default="2"/>  
@@ -163,7 +164,7 @@ namespace ValidationSample
 </Schema>  
 ```  
   
-## Siehe auch  
- <xref:System.Xml.XmlValidatingReader.ValidationType%2A>   
- <xref:System.Xml.XmlValidatingReader.Settings%2A>   
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
+ <!--zz <xref:System.Xml.XmlValidatingReader.Settings%2A>-->  `System.Xml.XmlValidatingReader.Settings`  
  [Schemakompilierung mit "XmlSchemaCollection"](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

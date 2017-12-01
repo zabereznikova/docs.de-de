@@ -1,55 +1,37 @@
 ---
 title: Erweiterungsmethoden (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
-ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
-ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
   
- Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=fullName>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
+ Die häufigsten Erweiterungsmethoden sind die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperatoren, die vorhandenen <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- und <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>-Typen Funktionalität hinzufügen. Um die Standardabfrageoperatoren zu verwenden, müssen Sie sie zuerst mit einer `using System.Linq`-Direktive einbinden. Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, scheint Instanzmethoden zu haben, wie z. B. <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>. Sie können diese zusätzlichen Methoden in der IntelliSense-Anweisungsvervollständigung sehen, wenn Sie nach einer Instanz eines <xref:System.Collections.Generic.IEnumerable%601>-Typs, z.B. <xref:System.Collections.Generic.List%601> oder <xref:System.Array>, "dot" eingeben.  
   
  Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  Erweiterungsmethoden werden als statische Methoden definiert, jedoch mithilfe einer Instanzmethodensyntax aufgerufen. Der erste Parameter bestimmt, für welchen Typ die Methode gilt, und vor dem Parameter steht der [this](../../../csharp/language-reference/keywords/this.md)-Modifizierer. Erweiterungsmethoden befinden sich nur dann im Bereich, wenn Sie den Namespace explizit mit einer `using`-Direktive in Ihren Quellcode importieren.  
   
- Im folgenden Beispiel wird eine für die <xref:System.String?displayProperty=fullName>-Klasse definierte Erweiterungsmethode veranschaulicht. Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
+ Im folgenden Beispiel wird eine für die <xref:System.String?displayProperty=nameWithType>-Klasse definierte Erweiterungsmethode veranschaulicht. Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  Die `WordCount`-Erweiterungsmethode kann mit dieser `using`-Direktive eingebunden werden:  
   
@@ -89,7 +71,7 @@ using System.Linq;
   
  Wenn der Compiler keine Instanzmethode mit einer entsprechenden Signatur findet, stellt er ggf. eine Bindung mit einer entsprechenden Erweiterungsmethode her.  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## <a name="general-guidelines"></a>Allgemeine Richtlinien  
  Im Allgemeinen wird empfohlen, dass Sie Erweiterungsmethoden sparsam und nur wenn unbedingt notwendig implementieren. Wenn möglich sollte der Clientcode, der einen vorhandenen Typ erweitern muss, dies durch die Erstellung eines neuen, vom vorhandenen Typ abgeleiteten Typs durchführen. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
@@ -105,12 +87,11 @@ using System.Linq;
  Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](https://msdn.microsoft.com/library/51ket42z).  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Parallel Programming Samples (these include many example extension methods) (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)   
- [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Übersicht über Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)   
- [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](http://go.microsoft.com/fwlink/?LinkId=112385)   
- [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](http://go.microsoft.com/fwlink/?LinkId=112386)   
- [Extension methods and Curried Delegates (Erweiterungsmethoden und Curry-Delegaten)](http://go.microsoft.com/fwlink/?LinkId=112387)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Parallele Programmierbeispiele (dazu gehören viele Beispiele für Erweiterungsmethoden)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Übersicht über Standardabfrageoperatoren](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Konvertierung Regeln z. B. Parameter und ihre Auswirkung](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [Erweiterungsmethoden Interoperabilität von Sprachen](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [Erweiterungsmethoden [c#] und Delegaten mit Currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [Extension method Binding and Error reporting (Binden von Erweiterungsmethoden und Problemberichten)](http://go.microsoft.com/fwlink/?LinkId=112388)
-

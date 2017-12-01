@@ -1,41 +1,42 @@
 ---
-title: "Erweitern des DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Erweitern des DOM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Erweitern des DOM
-Microsoft .NET Framework enthält einen Basisgruppe an Klassen, die eine Implementierung des XML\-DOM \(Document Object Model\) bereitstellt.  Die <xref:System.Xml.XmlNode>\-Klasse und deren abgeleitete Klassen stellen Methoden und Eigenschaften zum Navigieren, Abfragen und Ändern des Inhalts und der Struktur von XML\-Dokumenten bereit.  
+# <a name="extending-the-dom"></a>Erweitern des DOM
+Microsoft .NET Framework enthält einen Basisgruppe an Klassen, die eine Implementierung des XML-Dokument Objekt Model (DOM) bereitstellt. Die <xref:System.Xml.XmlNode>-Klasse und deren abgeleitete Klassen stellen Methoden und Eigenschaften zum Navigieren, Abfragen und Ändern des Inhalts und der Struktur von XML-Dokumenten bereit.  
   
- Wenn XML\-Inhalte mit einem DOM in den Speicher geladen werden, entalten die erstellten Knoten Informationen wie Knotenname, Knotentyp usw.  Es kann durchaus vorkommen, dass Sie bestimmte Knoteninformationen benötigen, die von den Basisklassen nicht bereitgestellt werden.  Sie möchten beispielsweise eventuell die Zeilennummer und die Position des Knotens wissen.  In diesem Fall können Sie von den vorhandenen DOM\-Klassen neue Klassen ableiten und zusätzliche Funktionalitäten hinzufügen.  
+ Wenn XML-Inhalte mit einem DOM in den Speicher geladen werden, entalten die erstellten Knoten Informationen wie Knotenname, Knotentyp usw. Es kann durchaus vorkommen, dass Sie bestimmte Knoteninformationen benötigen, die von den Basisklassen nicht bereitgestellt werden. Sie möchten beispielsweise eventuell die Zeilennummer und die Position des Knotens wissen. In diesem Fall können Sie von den vorhandenen DOM-Klassen neue Klassen ableiten und zusätzliche Funktionalitäten hinzufügen.  
   
  Beim Ableiten von neuen Klassen existieren zwei allgemeine Richtlinien:  
   
--   Es wird empfohlen, niemals Klassen von der <xref:System.Xml.XmlNode>\-Klasse abzuleiten.  Stattdessen wird empfohlen, Klassen von der Klasse abzuleiten, die dem Knotentyp entspricht, an dem Sie interessiert sind.  Wenn Sie beispielsweise zusätzliche Informationen über Attributknoten zurückgeben möchten, können Sie Klassen von der <xref:System.Xml.XmlAttribute>\-Klasse ableiten.  
+-   Es wird empfohlen, niemals Klassen von der <xref:System.Xml.XmlNode>-Klasse abzuleiten. Stattdessen wird empfohlen, Klassen von der Klasse abzuleiten, die dem Knotentyp entspricht, an dem Sie interessiert sind. Wenn Sie beispielsweise zusätzliche Informationen über Attributknoten zurückgeben möchten, können Sie Klassen von der <xref:System.Xml.XmlAttribute>-Klasse ableiten.  
   
 -   Mit Ausnahme der Methoden zur Knotenerstellung wird empfohlen, beim Überschreiben einer Funktion immer die Basisversion der Funktion aufzurufen und erst dann zusätzliche Verarbeitungen hinzuzufügen.  
   
-## Erstellen von eigenen Knoteninstanzen  
- Die <xref:System.Xml.XmlDocument>\-Klasse enthält Methoden zur Knotenerstellung.  Beim Laden einer XML\-Datei werden diese Methoden zur Erstellung der Knoten aufgerufen.  Sie können diese Methoden überschreiben, damit die Knoteninstanzen beim Laden eines Dokuments erstellt werden.  Wenn beispielsweise die <xref:System.Xml.XmlElement>\-Klasse erweitert wurde, wird die <xref:System.Xml.XmlDocument>\-Klasse geerbt und die <xref:System.Xml.XmlDocument.CreateElement%2A>\-Methode überschrieben.  
+## <a name="creating-your-own-node-instances"></a>Erstellen von eigenen Knoteninstanzen  
+ Die <xref:System.Xml.XmlDocument>-Klasse enthält Methoden zur Knotenerstellung. Beim Laden einer XML-Datei werden diese Methoden zur Erstellung der Knoten aufgerufen. Sie können diese Methoden überschreiben, damit die Knoteninstanzen beim Laden eines Dokuments erstellt werden. Wenn beispielsweise die <xref:System.Xml.XmlElement>-Klasse erweitert wurde, wird die <xref:System.Xml.XmlDocument>-Klasse geerbt und die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode überschrieben.  
   
- Im folgenden Beispiel wird dargestellt, wie die <xref:System.Xml.XmlDocument.CreateElement%2A>\-Methode überschrieben werden muss, damit die Implementierung der <xref:System.Xml.XmlElement>\-Klasse zurückgegeben wird.  
+ Im folgenden Beispiel wird dargestellt, wie die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode überschrieben werden muss, damit die Implementierung der <xref:System.Xml.XmlElement>-Klasse zurückgegeben wird.  
   
 ```vb  
 Class LineInfoDocument  
@@ -55,10 +56,10 @@ class LineInfoDocument : XmlDocument {
   }  
 ```  
   
-## Erweitern einer Klasse  
- Um eine Klasse zu erweitern, leiten Sie die Klasse von einer der vorhandenen DOM\-Klassen ab.  Anschließend können Sie eine der virtuellen Methoden oder Eigenschaften in der Basisklasse überschreiben oder Ihre eigene Klasse hinzufügen.  
+## <a name="extending-a-class"></a>Erweitern einer Klasse  
+ Um eine Klasse zu erweitern, leiten Sie die Klasse von einer der vorhandenen DOM-Klassen ab. Anschließend können Sie eine der virtuellen Methoden oder Eigenschaften in der Basisklasse überschreiben oder Ihre eigene Klasse hinzufügen.  
   
- Im folgenden Beispiel wird eine neue Klasse erstellt, die die <xref:System.Xml.XmlElement>\-Klasse und die <xref:System.Xml.IXmlLineInfo>\-Schnittstelle implementiert.  Es werden zusätzliche Methoden und Eigenschaften definiert, mit denen Benutzer Zeileninformationen erfassen können.  
+ Im folgenden Beispiel wird eine neue Klasse erstellt, die die <xref:System.Xml.XmlElement>-Klasse und die <xref:System.Xml.IXmlLineInfo>-Schnittstelle implementiert. Es werden zusätzliche Methoden und Eigenschaften definiert, mit denen Benutzer Zeileninformationen erfassen können.  
   
 ```vb  
 Class LineInfoElement  
@@ -122,8 +123,8 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.  
 ```  
   
-### Beispiel  
- Im folgenden Beispiel wird die Anzahl der Elemente in einem XML\-Dokument gezählt.  
+### <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die Anzahl der Elemente in einem XML-Dokument gezählt.  
   
 ```vb  
 Imports System  
@@ -164,7 +165,7 @@ Class LineInfoElement
       CType(doc, LineInfoDocument).IncrementElementCount()  
    End Sub 'New  
 End Class 'LineInfoElement  
- _ 'End LineInfoElement class.   
+ _ 'End LineInfoElement class.  
   
 Public Class Test  
   
@@ -225,10 +226,10 @@ public class Test {
 }   
 ```  
   
-##### Eingabe  
+##### <a name="input"></a>Eingabe  
  book.xml  
   
-```  
+```xml  
 <!--sample XML fragment-->  
 <book genre='novel' ISBN='1-861001-57-5' misc='sale-item'>  
   <title>The Handmaid's Tale</title>  
@@ -236,23 +237,23 @@ public class Test {
 </book>  
 ```  
   
-##### Ausgabe  
+##### <a name="output"></a>Ausgabe  
   
 ```  
 Number of elements in book.xml: 3  
 ```  
   
- Ein Beispiel, in dem die Erweiterung von XML\-DOM\-Klassen \(System.Xml\) dargestellt wird, finden Sie unter www.gotdotnet.com\/userfiles\/XMLDom\/extendDOM.zip.  
+ Ein Beispiel, in dem die Erweiterung von XML-DOM-Klassen (System.Xml) dargestellt wird, finden Sie unter www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.  
   
-## Knotenereignishandler  
- Die .NET Framework\-Implementierung des DOM enthält auch ein Ereignissystem, mit dem Sie Ereignisse empfangen und behandeln können, wenn Knoten in einem XML\-Dokument geändert werden.  Mit den Klassen <xref:System.Xml.XmlNodeChangedEventHandler> und <xref:System.Xml.XmlNodeChangedEventArgs> können die Ereignisse `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved` und `NodeRemoving` aufgezeichnet werden.  
+## <a name="node-event-handler"></a>Knotenereignishandler  
+ Die .NET Framework-Implementierung des DOM enthält auch ein Ereignissystem, mit dem Sie Ereignisse empfangen und behandeln können, wenn Knoten in einem XML-Dokument geändert werden. Mit den Klassen <xref:System.Xml.XmlNodeChangedEventHandler> und <xref:System.Xml.XmlNodeChangedEventArgs> können die Ereignisse `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved` und `NodeRemoving` aufgezeichnet werden.  
   
- Der Prozess der Ereignisbehandlung läuft in den abgeleiteten Klassen genauso ab wie in den urspünglichen DOM\-Klassen.  
+ Der Prozess der Ereignisbehandlung läuft in den abgeleiteten Klassen genauso ab wie in den urspünglichen DOM-Klassen.  
   
- Weitere Informationen zur Behandlung von Knotenereignissen erhalten Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und [XmlNodeChangedEventHandler\-Delegat](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ Weitere Informationen zur Behandlung von Ereignissen Knoten finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md) und <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## Standardattribute und die CreateElement\-Methode  
- Wenn Sie die <xref:System.Xml.XmlDocument.CreateElement%2A>\-Methode in einer abgeleiteten Klasse überschreiben, werden keine Standardattribute hinzugefügt, wenn Sie während der Bearbeitung des Dokuments neue Elemente erstellen.  Dieses Problem besteht nur während der Bearbeitung.  Da die <xref:System.Xml.XmlDocument.CreateElement%2A>\-Methode für das Hinzufügen von Standardattributen zu einer <xref:System.Xml.XmlDocument>\-Klasse verantwortlich ist, müssen Sie die Funktionalität in der <xref:System.Xml.XmlDocument.CreateElement%2A>\-Methode codieren.  Wenn Sie eine <xref:System.Xml.XmlDocument>\-Klasse laden, die Standardattribute enthält, werden diese korrekt behandelt.  Weitere Informationen zu Standardattributen finden Sie unter [Erstellen neuer Attribute für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+## <a name="default-attributes-and-the-createelement-method"></a>Standardattribute und die CreateElement-Methode  
+ Wenn Sie die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode in einer abgeleiteten Klasse überschreiben, werden keine Standardattribute hinzugefügt, wenn Sie während der Bearbeitung des Dokuments neue Elemente erstellen. Dieses Problem besteht nur während der Bearbeitung. Da die <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode für das Hinzufügen von Standardattributen zu einer <xref:System.Xml.XmlDocument>-Klasse verantwortlich ist, müssen Sie die Funktionalität in der <xref:System.Xml.XmlDocument.CreateElement%2A>-Methode codieren. Wenn Sie eine <xref:System.Xml.XmlDocument>-Klasse laden, die Standardattribute enthält, werden diese korrekt behandelt. Weitere Informationen zu Standardattributen finden Sie unter [Erstellen von neuen Attributen für Elemente im DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
-## Siehe auch  
- [XML\-Dokumentobjektmodell \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch  
+ [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

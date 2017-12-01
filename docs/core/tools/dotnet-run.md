@@ -3,16 +3,15 @@ title: "dotnet run-Befehl – .NET Core-CLI"
 description: "Der dotnet run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -74,6 +73,10 @@ Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
 Erstellt und führt die Anwendung mithilfe des angegebenen [Frameworks](../../standard/frameworks.md) aus. Das Framework muss in der Projektdatei angegeben werden.
 
+`--force`
+
+Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dies entspricht dem Löschen *project.assets.json*.
+
 `-h|--help`
 
 Druckt eine kurze Hilfe für den Befehl.
@@ -85,6 +88,10 @@ Der Name des beim Start einer Anwendung zu verwendenden Startprofils (falls vorh
 `--no-build`
 
 Erstellt das Projekt nicht vor der Ausführung.
+
+`--no-dependencies`
+
+Wenn Sie ein Projekt mit Projekt-zu-Projekt-Verweisen (P2P) wiederherstellen, stellen Sie das Stammprojekt wieder her und nicht die Verweise.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ Führt das angegebene Projekt aus:
 Führt das Projekt im aktuellen Verzeichnis aus (das Argument `--help` in diesem Beispiel wird der Anwendung übergeben, da das Argument `--` verwendet wird):
 
 `dotnet run --configuration Release -- --help`
-

@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -212,12 +211,11 @@ Ausdrücke können mit bedingten Operatoren verknüpft werden:
 | <code>&#124;</code>      | ODER       |
 | `&`      | UND      |
 
-Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren verwenden (Beispiel: `(Name~TestMethod1) | (Name~TestMethod2)`).
+Sie können Ausdrücke in Klammern einschließen, wenn bedingte Operatoren verwenden (z. B. `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Siehe auch
 
- [Frameworks und Ziele](../../standard/frameworks.md)   
+ [Frameworks und Ziele](../../standard/frameworks.md)  
  [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
-

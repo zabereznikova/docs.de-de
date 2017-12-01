@@ -1,68 +1,50 @@
 ---
 title: Zugriffsmodifizierer (C#-Programmierhandbuch)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 38b259b4d85d54467cd15cd49e5987f6198e8d99
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Zugriffsmodifizierer (C#-Programmierhandbuch)
 Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von anderem Code in Ihrer Assembly oder anderen Assemblys verwendet werden können. Sie können die folgenden Zugriffsmodifizierer verwenden, um den Zugriff auf einen Typ oder Member anzugeben, wenn Sie sie deklarieren:  
   
  [public](../../../csharp/language-reference/keywords/public.md)  
- Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden.  
+ Auf den Typ oder Member kann von jedem Code in der gleichen Assembly oder einer anderen Assembly, die darauf verweist, zugegriffen werden. 
   
  [private](../../../csharp/language-reference/keywords/private.md)  
  Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder Struktur zugegriffen werden.  
   
  [protected](../../../csharp/language-reference/keywords/protected.md)  
- Auf den Typ oder Member kann nur von Code in der gleichen Klasse oder Struktur oder in einer Klasse, die von dieser Klasse abgeleitet ist, zugegriffen werden.  
-  
+ Der Typ oder Member kann zugegriffen werden, nur von Code in der gleichen Klasse oder in einer Klasse, die von dieser Klasse abgeleitet ist.  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.  
   
- `protected internal`  
- Auf den Typ oder Member kann von jedem Code in der gleichen Assembly, in der er deklariert ist, oder von jeder abgeleiteten Klasse in einer anderen Assembly zugegriffen werden. Zugriff von einer anderen Assembly muss innerhalb einer Klassendeklaration erfolgen, die von der Klasse abgeleitet ist, in der das geschützte interne Element deklariert wird, und dies muss über eine Instanz des Typs der abgeleiteten Klasse erfolgen.  
+ [geschützte interne](../../../csharp/language-reference/keywords/protected-internal.md) den Typ oder Member kann von jedem Code in der Assembly, in dem sie deklariert ist, oder in zugegriffen werden einer abgeleiteten Klasse in einer anderen Assembly. 
+
+ [geschützt privat](../../../csharp/language-reference/keywords/private-protected.md) den Typ oder Member kann nur innerhalb der deklarierende Assembly zugegriffen werden, durch Code in derselben Klasse oder ein Typ, der von dieser Klasse abgeleitet ist.
   
  Die folgenden Beispiele veranschaulichen, wie Zugriffsmodifizierer für einen Typ und Member angegeben werden:  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  Nicht alle Zugriffsmodifizierer können von allen Typen oder Membern in allen Kontexten verwendet werden, und in einigen Fällen wird der Zugriff auf einen Typmember vom Zugriff auf den enthaltenden Typ eingeschränkt. Die folgenden Abschnitte enthalten ausführlichere Informationen zu diesem Zugriff.  
   
 ## <a name="class-and-struct-accessibility"></a>Zugriff auf Klasse und Strukturen  
  Klassen und Strukturen, die innerhalb eines Namespace (mit anderen Worten, die nicht in anderen Klassen oder Strukturen geschachtelt sind) direkt deklariert werden, können entweder öffentlich oder intern sein. Wenn kein Modifizierer angegeben ist, wird standardmäßig „internal“ verwendet.  
   
- Strukturmember, einschließlich geschachtelter Klassen und Strukturen, können als öffentlich, intern oder privat deklariert werden. Klassenmember, einschließlich geschachtelter Klassen und Strukturen, können public, protected internal, protected, internal oder private sein. Die Zugriffsebene für Klassenmember und Strukturmember, einschließlich geschachtelter Klassen und Strukturen, ist standardmäßig privat. Auf private geschachtelte Typen kann nicht von außerhalb des enthaltenden Typs zugegriffen werden.  
+ Strukturmember, einschließlich geschachtelter Klassen und Strukturen, können als öffentlich, intern oder privat deklariert werden. Klassenmember, einschließlich geschachtelter Klassen und Strukturen, öffentlich, geschützt intern, geschützt, intern, privat geschützt oder privat. Die Zugriffsebene für Klassenmember und Strukturmember, einschließlich geschachtelter Klassen und Strukturen, ist standardmäßig privat. Auf private geschachtelte Typen kann nicht von außerhalb des enthaltenden Typs zugegriffen werden.  
   
  Abgeleitete Klassen können keine höhere Verfügbarkeit als ihre Basistypen aufweisen. Das heißt, dass Sie über keine öffentliche Klasse `B` verfügen können, die von einer internen Klasse `A` abgeleitet wird. Wenn dies zulässig wäre, müssten Sie `A` öffentlich machen, da auf alle geschützten oder internen Member von `A` aus der abgeleiteten Klasse zugegriffen werden kann.  
   
@@ -81,10 +63,10 @@ Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von ander
   
  Um die Zugriffsebene für eine Klasse oder Struktur festzulegen, fügen Sie das entsprechende Schlüsselwort zur Memberdeklaration hinzu, wie im folgenden Beispiel dargestellt.  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  Die geschützte interne Zugriffsebene heißt geschützt ODER intern, nicht geschützt UND intern. Anders gesagt, kann auf einen geschützten internen Member aus einer Klasse in der gleichen Assembly, einschließlich der abgeleiteten Klassen, zugegriffen werden. Um Zugriff auf abgeleitete Klassen in derselben Assembly zu beschränken, deklarieren Sie die Klasse selbst als intern, und ihre Member als geschützt.  
+>  Die geschützte interne Zugriffsebene heißt geschützt ODER intern, nicht geschützt UND intern. Anders gesagt, kann auf einen geschützten internen Member aus einer Klasse in der gleichen Assembly, einschließlich der abgeleiteten Klassen, zugegriffen werden. Um Zugriff auf abgeleitete Klassen in derselben Assembly zu beschränken, deklarieren Sie die Klasse selbst als intern, und ihre Member als geschützt. Darüber hinaus können c# 7.2 ab, die private protected-Zugriffsmodifizierer Sie ohne die enthaltende Klasse interne machen das gleiche Ergebnis erzielen.  
   
 ## <a name="other-types"></a>Andere Typen  
  Schnittstellen, die direkt innerhalb eines Namespace deklariert werden, können als öffentlich oder intern deklariert werden, und haben wie Klassen und Strukturen standardmäßig internen Zugriff. Schnittstellenmember sind immer öffentlich, da es der Zweck einer Schnittstelle ist, anderen Typen den Zugriff auf eine Klasse oder Struktur zu ermöglichen. Auf Schnittstellenmember können keine Zugriffsmodifizierer angewendet werden.  
@@ -97,14 +79,15 @@ Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von ander
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)   
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
+ [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+ [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [interne geschützt](../../../csharp/language-reference/keywords/protected-internal.md)  
+ [geschützt privat](../../../csharp/language-reference/keywords/private-protected.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [interface](../../../csharp/language-reference/keywords/interface.md)
-

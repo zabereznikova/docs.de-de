@@ -1,23 +1,19 @@
 ---
 title: Zielframeworks
 description: "Erfahren Sie mehr über Zielframeworks für .NET Core-Anwendungen und -Bibliotheken."
-keywords: .NET, .NET Core, Framework, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 09/22/2017
 ms.topic: article
+ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
+ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
-ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="target-frameworks"></a>Zielframeworks
 
 Wenn Sie ein Framework in einer App oder Bibliothek als Ziel verwenden, geben Sie mehrere APIs an, die Sie für die App oder Bibliothek verfügbar machen möchten. Sie geben das Zielframework mit Zielframeworkmonikers (TFMs) in Ihrer Projektdatei an.
@@ -34,11 +30,11 @@ Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die 
 
 Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](~/docs/standard/net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek. 
 
-| Zielframework      | Letzte Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | .NET-Standardversion | Metapaket |
-| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| .NET-Standard         | 2.0.0          | netstandard2.0                 | Nicht zutreffend                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core-Anwendung | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.7            | net47                          | 1.5                   | Nicht zutreffend |
+| Zielframework      | Letzte Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | Implementiert <br/> .NET-Standardversion |
+| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
+| .NET-Standard         | 2.0            | netstandard2.0                 | Nicht zutreffend                                     |
+| .NET Core-Anwendung | 2.0            | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Unterstützte Zielframeworkversionen
 
@@ -48,7 +44,7 @@ Auf ein Zielframework wird normalerweise mit einem TFM verwiesen. In der folgend
 | -------------------------- | --- |
 | .NET-Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -143,4 +139,3 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die für diese Zielframework
 [dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)  
 [GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)  
 [Frameworkprofile in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
-
