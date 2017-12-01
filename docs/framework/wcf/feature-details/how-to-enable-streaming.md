@@ -1,22 +1,28 @@
 ---
-title: "Vorgehensweise: Aktivieren des Streamingmodus | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Vorgehensweise: Aktivieren des Streamingmodus'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Vorgehensweise: Aktivieren des Streamingmodus
+# <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kann Nachrichten entweder unter Verwendung des gepufferten Übertragungsmodus oder des Streamingmodus senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
  Um den Streamingmodus zu aktivieren, definieren Sie den `OperationContract` angemessen, und aktivieren Sie den Streamingmodus auf Transportebene.  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  Der Parameter, der die zu übermittelten Daten enthält, muss der einzige Parameter der Methode sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben.  
   
-    2.  Mindestens eine der Typen der Parameter und Rückgabetypen-Wert muss entweder <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, oder <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2.  Mindestens einer der Parameter bzw. der Rückgabewert muss vom Typ <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> oder <xref:System.Xml.Serialization.IXmlSerializable> sein  
   
      Das folgende Beispiel enthält einen Vertrag für im Streamingmodus zu übertragende Daten.  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  Der folgende Codeausschnitt zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>Schreiben einer benutzerdefinierten Streamklasse  
   
-1.  Spezielle Verarbeitung auf jedes Element einen Datenstrom wie senden oder empfangen, leiten Sie von eine abgeleiteten Streamklasse <xref:System.IO.Stream>. Der folgende Code enthält als Beispiel für einen benutzerdefinierten Stream die `GetReversedStream`-Methode und die `ReverseStream`-Klasse.  
+1.  Wenn jedes Element eines Datenstreams beim Senden oder Empfangen auf eine besondere Weise verarbeitet werden soll, müssen Sie eine benutzerdefinierte Streamklasse von der <xref:System.IO.Stream>-Klasse ableiten Der folgende Code enthält als Beispiel für einen benutzerdefinierten Stream die `GetReversedStream`-Methode und die `ReverseStream`-Klasse.  
   
      `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus dem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Methode liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Diese Methode invertiert nicht den gesamten Dateiinhalt, sondern jeweils nur eine Gruppe von Bytes. Dieses Beispiel zeigt, wie Daten im Streamingmodus verarbeitet werden, wenn Daten aus dem Stream gelesen oder in den Stream geschrieben werden.  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
- [Datenstrom](../../../../docs/framework/wcf/samples/stream.md)
+ [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Stream](../../../../docs/framework/wcf/samples/stream.md)

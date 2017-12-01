@@ -1,84 +1,82 @@
 ---
-title: "OrElse Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "OrElse"
-  - "vb.OrElse"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "short-circuiting"
-  - "operators [Visual Basic], short-circuiting"
-  - "operators [Visual Basic], disjunction"
-  - "short-circuit evaluation"
-  - "OrElse operator [Visual Basic]"
+title: OrElse-Operator (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- OrElse
+- vb.OrElse
+helpviewer_keywords:
+- short-circuiting
+- operators [Visual Basic], short-circuiting
+- operators [Visual Basic], disjunction
+- short-circuit evaluation
+- OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 47239a1d2b5b20f2b8cacc9b9185a0f95f63dc84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# OrElse Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Führt eine inklusive logische Kurzschlussdisjunktion an zwei Ausdrücken aus.  
+# <a name="orelse-operator-visual-basic"></a>OrElse-Operator (Visual Basic)
+Führt eine inklusiven logischen Disjunktion zweier Ausdrücke aus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 result = expression1 OrElse expression2  
 ```  
   
-## Teile  
+## <a name="parts"></a>Teile  
  `result`  
- Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.  
+ Erforderlich. Beliebiger `Boolean`-Ausdruck.  
   
  `expression1`  
- Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.  
+ Erforderlich. Beliebiger `Boolean`-Ausdruck.  
   
  `expression2`  
- Erforderlich.  Ein beliebiger `Boolean`\-Ausdruck.  
+ Erforderlich. Beliebiger `Boolean`-Ausdruck.  
   
-## Hinweise  
- Eine logische Operation wird als *Kurzschlussoperation* bezeichnet, wenn der kompilierte Code die Auswertung eines Ausdrucks abhängig von dem Ergebnis eines anderen Ausdrucks umgehen kann.  Wenn das Ergebnis des ersten ausgewerteten Ausdrucks das Endergebnis der Operation bestimmt, muss der zweite Ausdruck nicht ausgewertet werden, da dieser das Endergebnis nicht ändern kann.  Kurzschlussoperationen können zu einer Leistungssteigerung führen, wenn der umgangene Ausdruck sehr komplex ist oder Prozeduraufrufe enthält.  
+## <a name="remarks"></a>Hinweise  
+ Eine logische Operation gilt als *verkürzte* Wenn der kompilierte Code die Auswertung eines Ausdrucks abhängig vom Ergebnis eines anderen Ausdrucks umgehen kann. Wenn das Ergebnis des ersten Ausdrucks, ausgewertet über das endgültige Ergebnis des Vorgangs feststellt, besteht keine Notwendigkeit, der zweite Ausdruck ausgewertet werden, da das Endergebnis nicht geändert werden kann. Verkürzte kann die Leistung verbessern, wenn der umgehen Ausdruck komplex ist oder sie Prozeduraufrufe umfasst.  
   
- Wenn einer der beiden oder beide Ausdrücke `True` ergeben, hat `result` den Wert `True`.  Die folgende Tabelle veranschaulicht, wie `result` bestimmt wird.  
+ Wenn eine oder beide Ausdrücke `True`, `result` ist `True`. Die folgende Tabelle veranschaulicht wie `result` bestimmt wird.  
   
-|Wert von `expression1`|Und `expression2` gleich|hat `result` den Wert|  
-|----------------------------|------------------------------|---------------------------|  
-|`True`|\(nicht ausgewertet\)|`True`|  
+|Wenn `expression1` ist|Und `expression2` ist|Der Wert des `result` ist|  
+|-------------------------|--------------------------|------------------------------|  
+|`True`|(nicht ausgewertet)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
-## Datentypen  
- Der Operator `OrElse` wird nur für den [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) definiert.  Visual Basic konvertiert jeden Operanden je nach Bedarf in `Boolean`\-Werte und führt die Operation ganz als `Boolean` aus.  Wenn Sie das Ergebnis einem numerischen Typ zuweisen, konvertiert Visual Basic es vom `Boolean`\-Typ in diesen Typ.  Dies kann zu unerwartetem Verhalten führen.  Bei der Konvertierung in `Integer` ergibt `5 OrElse 12` z. B. `–1`.  
+## <a name="data-types"></a>Datentypen  
+ Die `OrElse` Operator definiert ist, nur für die [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert jeden Operanden nach Bedarf `Boolean` und führt den Vorgang, die vollständig in `Boolean`. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ. Dies kann zu unerwartetem Verhalten führen. Beispielsweise `5 OrElse 12` führt `–1` bei der Konvertierung in `Integer`.  
   
-## Überladen  
- Der [Or Operator](../../../visual-basic/language-reference/operators/or-operator.md) und der [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) können *überladen* werden. Das bedeutet, dass eine Klasse oder Struktur ihr Verhalten neu definiert, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist.  Das Überladen des Operators `Or` und des Operators `IsTrue` beeinflusst das Verhalten des Operators `OrElse`.  Wenn im Code `OrElse` für eine Klasse oder Struktur verwendet wird, die `Or` und `IsTrue` überlädt, müssen Sie das neu definierte Verhalten der Operatoren kennen.  Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Überladen  
+ Die [oder-Operator](../../../visual-basic/language-reference/operators/or-operator.md) und [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur ihr Verhalten definieren kann, wenn ein Operand den Typ dieser Klasse hat oder Struktur. Überladen der `Or` und `IsTrue` Operatoren wirkt sich auf das Verhalten der `OrElse` Operator. Wenn im Code verwendet `OrElse` auf eine Klasse oder Struktur, die Überladungen `Or` und `IsTrue`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird mit dem Operator `OrElse` an zwei Ausdrücken eine logische Disjunktion ausgeführt.  Das Ergebnis ist ein `Boolean`\-Wert, der darstellt, ob einer der beiden Ausdrücke **True** ist.  Wenn der erste Ausdruck `True` ist, wird der zweite nicht ausgewertet.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die `OrElse` Operator, um eine logische Disjunktion zweier Ausdrücke ausgeführt. Das Ergebnis ist ein `Boolean` Wert, der darstellt, ob eine der beiden Ausdrücke zutrifft. Wenn der erste Ausdruck ist `True`, die zweite wird nicht ausgewertet.  
   
  [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
   
- Durch das vorangehende Beispiel werden die Ergebnisse `True`, `True` bzw. `False` erzeugt.  Bei der Berechnung von `firstCheck` wird der zweite Ausdruck nicht ausgewertet, da der erste Ausdruck bereits `True` ist.  Der zweite Ausdruck wird jedoch bei der Berechnung von `secondCheck` ausgewertet.  
+ Das obige Beispiel erzeugt die Ergebnisse der `True`, `True`, und `False` bzw.. Bei der Berechnung der `firstCheck`, der zweite Ausdruck nicht ausgewertet, da die erste bereits ist `True`. Allerdings wird der zweite Ausdruck ausgewertet, bei der Berechnung der `secondCheck`.  
   
-## Beispiel  
- Im folgenden Beispiel wird eine `If`...`Then`\-Anweisung mit zwei Prozeduraufrufen dargestellt.  Wenn der erste Aufruf `True` zurückgibt, wird die zweite Prozedur nicht aufgerufen.  Dies kann zu unerwarteten Ergebnissen führen, wenn die zweite Prozedur wichtige Aufgaben ausführt, die bei Ausführung dieses Codeabschnitts stets ausgeführt werden müssen.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt eine `If`... `Then` Anweisung, die zwei Prozeduraufrufe enthält. Wenn der erste Aufruf gibt `True`, im zweite Verfahren wird nicht aufgerufen. Dies kann zu unerwarteten Ergebnissen führen, wenn das zweite Verfahren wichtige Aufgaben, die immer ausgeführt werden soll ausführt, wenn dieser Abschnitt des Codes ausgeführt wird.  
   
  [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
   
-## Siehe auch  
- [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Or Operator](../../../visual-basic/language-reference/operators/or-operator.md)   
- [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>Siehe auch  
+ [Logische/bitweise Operatoren (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Or-Operator](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [Logische und bitweise Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

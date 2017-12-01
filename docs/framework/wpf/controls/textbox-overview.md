@@ -1,79 +1,82 @@
 ---
-title: "&#220;bersicht &#252;ber TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, TextBox"
-  - "TextBox-Steuerelement, Informationen über das TextBox-Steuerelement"
+title: "Übersicht über TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], TextBox
+- TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# &#220;bersicht &#252;ber TextBox
-Mit der <xref:System.Windows.Controls.TextBox>\-Klasse können Sie unformatierten Text anzeigen oder bearbeiten.  <xref:System.Windows.Controls.TextBox> wird häufig verwendet, um unformatierten Text in einem Formular zu bearbeiten.  Zum Beispiel verwendet ein Formular, in dem nach dem Benutzernamen, der Telefonnummer usw. gefragt wird, <xref:System.Windows.Controls.TextBox>\-Steuerelemente für die Texteingabe.  In diesem Thema wird die <xref:System.Windows.Controls.TextBox>\-Klasse eingeführt. Außerdem sind Beispiele für ihre Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] enthalten.  
+# <a name="textbox-overview"></a>Übersicht über TextBox
+Die <xref:System.Windows.Controls.TextBox> -Klasse ermöglicht es Ihnen, anzeigen oder Bearbeiten von nicht formatiertem Text. Eine häufige Verwendung einer <xref:System.Windows.Controls.TextBox> Bearbeiten von nicht formatiertem Text in einem Formular ist. Z. B. ein Formular in der der Benutzername, Telefonnummer, usw. verwenden <xref:System.Windows.Controls.TextBox> Steuerelemente für die Texteingabe. Dieses Thema enthält die <xref:System.Windows.Controls.TextBox> -Klasse und stellt Beispiele für die Verwendung in beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
-   
+ 
   
 <a name="textbox_or_richtextbox"></a>   
-## TextBox oder RichTextBox?  
- Sowohl mit <xref:System.Windows.Controls.TextBox> als auch mit <xref:System.Windows.Controls.RichTextBox> können Benutzer Text eingeben. Die zwei Steuerelemente werden jedoch in unterschiedlichen Szenarien eingesetzt.  Ein <xref:System.Windows.Controls.TextBox> erfordert weniger Systemressourcen als ein <xref:System.Windows.Controls.RichTextBox>. Es ist daher ideal, wenn nur reiner Text bearbeitet werden muss \(d. h. bei der Verwendung in einem Formular\).  Ein <xref:System.Windows.Controls.RichTextBox> ist die bessere Wahl, wenn der Benutzer formatierten Text, Bilder, Tabellen oder andere unterstützte Inhalte bearbeiten muss.  So lässt sich das Bearbeiten von Dokumenten, Artikeln oder Blogs, die Formatierung, Bilder usw. benötigen, am besten mit einem <xref:System.Windows.Controls.RichTextBox> erreichen.  In der folgenden Tabelle werden die primären Features von <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.TextBox> zusammengefasst.  
+## <a name="textbox-or-richtextbox"></a>TextBox oder RichTextBox?  
+ Beide <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> ermöglicht Benutzern die Eingabe von Text, jedoch die beiden Steuerelemente für verschiedene Szenarien verwendet werden. Ein <xref:System.Windows.Controls.TextBox> erfordert weniger Systemressourcen und dann eine <xref:System.Windows.Controls.RichTextBox> daher ist es ideal, wenn nur nur-Text bearbeitet werden muss (d. h. die Verwendung in einem Formular). Ein <xref:System.Windows.Controls.RichTextBox> ist die bessere Wahl, wenn es ist notwendig, damit der Benutzer bearbeiten formatierten Text, Bilder, Tabellen oder anderen unterstützten Inhalt. Z. B. Bilder bearbeiten, ein Dokument, Artikel oder Blogs, die Formatierung erforderlich sind, usw. erfolgt am besten mit einer <xref:System.Windows.Controls.RichTextBox>. In der folgenden Tabelle werden die wichtigsten Features von zusammengefasst <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.TextBox>.  
   
-|Steuerelement|Rechtschreibprüfung in Echtzeit|Kontextmenü|Formatierungsbefehle wie <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(STRG\+B\)|<xref:System.Windows.Documents.FlowDocument>\-Inhalte wie Bilder, Absätze, Tabellen usw.|  
-|-------------------|-------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Steuerelement|Rechtschreibprüfung in Echtzeit|Kontextmenü|Befehle wie <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (STRG + B)|<xref:System.Windows.Documents.FlowDocument>Inhalt wie Bilder, Absätze, Tabellen usw..|  
+|-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Ja|Ja|Nein|Nein.|  
-|<xref:System.Windows.Controls.RichTextBox>|Ja|Ja|Ja \(siehe [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)\)|Ja \(siehe [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)\)|  
+|<xref:System.Windows.Controls.RichTextBox>|Ja|Ja|Ja (Siehe [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|Ja (Siehe [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  
   
 > [!NOTE]
->  Obwohl <xref:System.Windows.Controls.TextBox> keine formatierungsbezogenen Bearbeitungsbefehle wie <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(STRG\+B\) unterstützt, werden viele Grundbefehle, z. B. <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>, von beiden Steuerelementen unterstützt.  Weitere Informationen finden Sie unter <xref:System.Windows.Documents.EditingCommands>.  
+>  Obwohl <xref:System.Windows.Controls.TextBox> wird nicht unterstützt, die Formatierung der zugehörigen bearbeiten wie Befehle <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (STRG + B) viele grundlegende Befehle werden von beide Steuerelemente unterstützt, z. B. <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Weitere Informationen finden Sie unter <xref:System.Windows.Documents.EditingCommands>.  
   
- Von <xref:System.Windows.Controls.TextBox> unterstützte Features werden in den Abschnitten weiter unten behandelt.  Weitere Informationen über <xref:System.Windows.Controls.RichTextBox> finden Sie unter [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md).  
+ Funktionen, die von unterstützt <xref:System.Windows.Controls.TextBox> werden in den folgenden Abschnitten behandelt. Weitere Informationen zu <xref:System.Windows.Controls.RichTextBox>, finden Sie unter [RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md).  
   
-### Rechtschreibprüfung in Echtzeit  
- Sie können die Rechtschreibprüfung in Echtzeit in einem <xref:System.Windows.Controls.TextBox> oder einem <xref:System.Windows.Controls.RichTextBox> aktivieren.  Bei aktivierter Rechtschreibprüfung wird eine rote Linie unter allen falsch geschriebenen Wörtern angezeigt \(siehe Abbildung unten\).  
+### <a name="real-time-spellchecking"></a>Rechtschreibprüfung in Echtzeit  
+ Sie können die Rechtschreibprüfung in Echtzeit in ein <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox>. Wenn die Rechtschreibprüfung aktiviert ist, wird eine rote Linie unter falsch geschriebenen Wörtern angezeigt (siehe Abbildung unten).  
   
- ![TextBox mit Rechtschreibprüfung](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing\_TextBox\_with\_Spellchecking")  
+ ![TextBox mit Rechtschreibprüfung](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
- Weitere Informationen zur Aktivierung der Rechtschreibprüfung finden Sie unter [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
+ Wie Sie die Rechtschreibprüfung aktivieren, erfahren Sie unter [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
   
-### Kontextmenü  
- Standardmäßig verfügen <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> über ein Kontextmenü, das angezeigt wird, wenn ein Benutzer mit der rechten Maustaste auf das Steuerelement klickt.  Mithilfe des Kontextmenüs kann der Benutzer die Vorgänge Ausschneiden, Kopieren bzw. Einfügen ausführen \(siehe Abbildung unten\).  
+### <a name="context-menu"></a>Kontextmenü  
+ Standardmäßig sowohl <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> haben Sie ein Kontextmenü, das angezeigt wird, wenn ein Benutzer auf das Steuerelement klickt. Das Kontextmenü ermöglicht dem Benutzer das Ausschneiden, Kopieren und Einfügen (siehe Bild unten).  
   
- ![TextBox mit Kontextmenü](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing\_TextBox\_with\_Context\_Menu")  
+ ![TextBox mit Kontextmenü](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")  
   
- Sie können ein eigenes benutzerdefiniertes Kontextmenü erstellen, um das Standardverhalten zu überschreiben.  Weitere Informationen finden Sie unter [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md).  
+ Sie können Ihr eigenes benutzerdefiniertes Kontextmenü erstellen, um das Standardverhalten zu überschreiben. Weitere Informationen finden Sie unter [Verwenden eines benutzerdefinierten Kontextmenüs mit „TextBox“](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md).  
   
 <a name="creating_textboxes"></a>   
-## Erstellen von TextBoxes  
- Ein <xref:System.Windows.Controls.TextBox> kann eine einzelne Zeile hoch sein oder mehrere Zeilen umfassen.  Ein einzeiliges <xref:System.Windows.Controls.TextBox>\-Element eignet sich am besten, um geringe Textmengen im Nur\-Text\-Format einzugeben \(z. B. "  Name", "Telefonnummer" usw.  in einem Formular\).  Im folgenden Beispiel wird das Erstellen eines einfachen einzeiligen <xref:System.Windows.Controls.TextBox>\-Elements veranschaulicht.  
+## <a name="creating-textboxes"></a>Erstellen von TextBoxes  
+ Ein <xref:System.Windows.Controls.TextBox> kann eine einzelne Zeile im Höhe oder mehrere Zeilen umfassen. Eine einzelne Zeile <xref:System.Windows.Controls.TextBox> ist am besten für kleine Mengen von nur-Text (d. h. eingeben „Name“, „Telefonnummer“ usw. in einem Formular). Im folgende Beispiel wird gezeigt, wie zum Erstellen einer einzelnen Zeile <xref:System.Windows.Controls.TextBox>.  
   
- [!code-xml[TextBoxMiscSnippets_snip#BasicTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/basictextboxexample.xaml#basictextboxexamplewholepage)]  
+ [!code-xaml[TextBoxMiscSnippets_snip#BasicTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/basictextboxexample.xaml#basictextboxexamplewholepage)]  
   
- Sie können auch ein <xref:System.Windows.Controls.TextBox> erstellen, mit dem der Benutzer mehrere Textzeilen eingeben kann.  Wenn z. B. der Benutzer im Formular um die Eingabe eines kurzen Lebenslaufs gebeten wird, verwenden Sie dazu ein <xref:System.Windows.Controls.TextBox>, das mehrere Zeilen Text aufnimmt.  Im folgenden Beispiel wird verdeutlicht, wie mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ein <xref:System.Windows.Controls.TextBox>\-Steuerelement definiert wird, das sich automatisch vergrößert, um mehrere Zeilen Text aufzunehmen.  
+ Sie können auch erstellen eine <xref:System.Windows.Controls.TextBox> , mit dessen Hilfe des Benutzers, mehrere Textzeilen einzugeben. Z. B. wenn das Formular für einen Lebenslaufs der Benutzer aufgefordert werden, würde möchten Sie verwenden eine <xref:System.Windows.Controls.TextBox> , die mehrere Textzeilen unterstützt. Das folgende Beispiel zeigt, wie Sie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] zum Definieren einer <xref:System.Windows.Controls.TextBox> Steuerelement, das automatisch vergrößert, um mehrere Textzeilen.  
   
- [!code-xml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
- Durch Festlegen des <xref:System.Windows.Controls.TextBox.TextWrapping%2A>\-Attributs auf `Wrap` wird Text auf eine neue Zeile umbrochen, wenn der Rand des <xref:System.Windows.Controls.TextBox>\-Steuerelements erreicht wird. Dabei wird ggf. automatisch das <xref:System.Windows.Controls.TextBox>\-Steuerelement angepasst, um die neue Zeile aufzunehmen.  
+ Festlegen der <xref:System.Windows.Controls.TextBox.TextWrapping%2A> -Attribut auf `Wrap` bewirkt, dass Text umbrochen, um eine neue Zeile am Rand des der <xref:System.Windows.Controls.TextBox> Steuerelement erreicht ist der <xref:System.Windows.Controls.TextBox> Steuerelement, um Platz für eine neue Zeile enthalten, bei Bedarf.  
   
- Durch Festlegen des <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A>\-Attributs auf `true` wird eine neue Zeile eingefügt, wenn die EINGABETASTE gedrückt wird, wodurch ggf. auch wieder das <xref:System.Windows.Controls.TextBox> automatisch angepasst wird, um die neue Zeile aufzunehmen.  
+ Festlegen der <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> -Attribut auf `true` bewirkt, dass eine neue Zeile eingefügt, wenn die RETURN-Taste wieder automatisch zu erweitern gedrückt wird, die <xref:System.Windows.Controls.TextBox> Platz für eine neue Zeile bei Bedarf enthalten.  
   
- Das <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A>\-Attribut fügt dem <xref:System.Windows.Controls.TextBox> eine Bildlaufleiste hinzu, sodass für die Inhalte des <xref:System.Windows.Controls.TextBox>\-Elements ein Bildlauf durchgeführt werden kann, wenn das <xref:System.Windows.Controls.TextBox> die Größe des umgebenden Rahmens oder Fensters überschreitet.  
+ Die <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> Attribut fügt eine Bildlaufleiste, um die <xref:System.Windows.Controls.TextBox>, sodass den Inhalt des der <xref:System.Windows.Controls.TextBox> Bildlauf durchgeführt werden kann, wenn die <xref:System.Windows.Controls.TextBox> erweitert die Größe des den Frame oder das Fenster, das es umschließt.  
   
- Weitere Informationen über andere Aufgaben im Zusammenhang mit dem Verwenden eines <xref:System.Windows.Controls.TextBox>\-Elements finden Sie unter [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md).  
+ Weitere Informationen über andere Aufgaben im Zusammenhang mit der Verwendung einer <xref:System.Windows.Controls.TextBox>, finden Sie unter [Gewusst-wie-Themen](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md).  
   
 <a name="editing_commands"></a>   
-## Erkennen von Inhaltsänderungen  
- Sie sollten i. d. R. mit dem <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>\-Ereignis ermitteln, wann Text in einem <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox> geändert wird, und dafür nicht, wie zu erwarten wäre, <xref:System.Windows.UIElement.KeyDown> verwenden.  Ein Beispiel finden Sie unter [Erkennen von Änderungen an Text in einem Textfeld](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
+## <a name="detect-when-content-changes"></a>Erkennen, wenn Inhalt geändert wird  
+ In der Regel die <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Ereignis sollte ermitteln, wann verwendet werden der Text in einer <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox> geändert wird, klicken Sie dann stattdessen <xref:System.Windows.UIElement.KeyDown> wie zu erwarten. Ein Beispiel finden Sie unter [Erkennen von Änderungen an Text in einem Textfeld](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
-## Siehe auch  
- [Gewusst wie\-Themen](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Themen zur Vorgehensweise](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

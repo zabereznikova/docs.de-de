@@ -1,114 +1,115 @@
 ---
-title: "Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Farben, Anwenden auf DataGrid-Steuerelemente"
-  - "Spalten [Windows Forms], DataGrid-Steuerelemente"
-  - "DataGrid-Steuerelement [Windows Forms], Standardformate"
-  - "DataGrid-Steuerelement [Windows Forms], Formatierung"
-  - "Formatieren [Windows Forms]"
-  - "Tabellen [Windows Forms], Formatieren im DataGrid-Steuerelement"
+title: 'Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid controls
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>\-Steuerelement das <xref:System.Windows.Forms.DataGrid>\-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>\-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView\-Steuerelement und dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Durch die Anwendung verschiedener Farben auf die unterschiedlichen Teile eines <xref:System.Windows.Forms.DataGrid>\-Steuerelements können Sie die Lesbarkeit und die Verständlichkeit der darin enthaltenen Informationen verbessern.  Farben können sowohl auf Zeilen als auch auf Spalten angewendet werden.  Je nach Bedarf können Zeilen und Spalten auch ausgeblendet oder angezeigt werden.  
+ Verschiedene Farben für verschiedene Teile des Anwenden einer <xref:System.Windows.Forms.DataGrid> bestimmen können, stellen die Informationen in diesem einfacher zu lesen und zu interpretieren. Farbe kann in Zeilen und Spalten angewendet werden. Zeilen und Spalten können auch ausgeblendet oder angezeigt, die in Ihrem eigenen Ermessen.  
   
- Die Formatierung des <xref:System.Windows.Forms.DataGrid>\-Steuerelements umfasst drei grundlegende Aspekte:  
+ Es gibt drei grundlegende Aspekte der Formatierung der <xref:System.Windows.Forms.DataGrid> Steuerelement:  
   
--   Mithilfe von Eigenschaften können Sie ein Standardformat für die Datenanzeige einrichten.  
+-   Sie können festlegen, dass Eigenschaften herstellen ein Standardformat, in dem Daten angezeigt werden.  
   
--   Auf dieser Basis können Sie anschließend anpassen, wie bestimmte Tabellen zur Laufzeit angezeigt werden.  
+-   Auf dieser Basis können Sie dann die Möglichkeit anpassen, die bestimmte Tabellen zur Laufzeit angezeigt werden.  
   
--   Schließlich können Sie auch festlegen, welche Spalten im Datenblatt angezeigt und welche Farben und Formatierungen dabei verwendet werden.  
+-   Schließlich können Sie ändern, welche Spalten im Datenraster sowie die Farben angezeigt werden, und andere Formatierung aus, die angezeigt wird.  
   
- Sie können mit der Formatierung des Datenblatts beginnen, indem Sie die Eigenschaften von <xref:System.Windows.Forms.DataGrid> selbst festlegen.  Auf der Grundlage dieser Festlegungen für Farben und Formate können Sie dann je nach den angezeigten Datentabellen und \-spalten weitere Anpassungen vornehmen.  
+ Als ersten Schritt bei der Formatierung eines Datenrasters können Sie die Eigenschaften der Festlegen der <xref:System.Windows.Forms.DataGrid> selbst. Diese Optionen Farbe und Format bilden eine Basis, von der Sie dann ändert sich je nach den Datentabellen und Spalten angezeigt, können.  
   
- Für das folgende Verfahren wird ein Projekt vom Typ **Windows\-Anwendung** mit einem Formular benötigt, das ein <xref:System.Windows.Forms.DataGrid>\-Steuerelement enthält.  Weitere Informationen zum Einrichten eines solchen Projekts finden Sie unter [How to: Create a Windows Application Project](http://msdn.microsoft.com/de-de/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Gewusst wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] ist das <xref:System.Windows.Forms.DataGrid>\-Steuerelement in der **Toolbox** standardmäßig nicht enthalten.  Weitere Informationen finden Sie unter [How to: Add Items to the Toolbox](http://msdn.microsoft.com/de-de/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.DataGrid> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) und [wie: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> Steuerelement befindet sich nicht in der **Toolbox** standardmäßig. Weitere Informationen finden Sie unter [wie: Hinzufügen von Elementen zur Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.  Wählen Sie im Menü **Extras** die Option **Einstellungen importieren und exportieren** aus, um die Einstellungen zu ändern.  Weitere Informationen finden Sie unter [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/de-de/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### So richten Sie ein Standardformat für das DataGrid\-Steuerelement ein  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Herstellen einer Standardformat für das DataGrid-Steuerelement  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.DataGrid>\-Steuerelement aus.  
+1.  Wählen Sie das <xref:System.Windows.Forms.DataGrid>-Steuerelement.  
   
-2.  Legen Sie im **Eigenschaftenfenster** ggf. die folgenden Eigenschaften fest.  
+2.  In der **Eigenschaften** die folgenden Eigenschaften fest, nach Bedarf.  
   
-    |Property|Beschreibung|  
-    |--------------|------------------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Die `BackColor`\-Eigenschaft legt die Farbe der Zeilen mit geraden Zeilennummern fest.  Wenn Sie für die <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>\-Eigenschaft eine andere Farbe festlegen, werden alle anderen Zeilen in dieser neuen Farbe angezeigt \(Zeilen 1, 3, 5 usw.\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Die Hintergrundfarbe der Rasterzeilen mit geraden Zeilennummern \(Zeilen 0, 2, 4, 6 usw.\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Während die <xref:System.Windows.Forms.DataGrid.BackColor%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>\-Eigenschaft die Farbe der Datenblattzeilen bestimmen, wird durch die <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>\-Eigenschaft die Farbe des Bereichs außerhalb der Zeilen festgelegt, der nur sichtbar ist, wenn Sie einen Bildlauf zum unteren Ende des Datenblatts durchführen oder wenn das Datenblatt nur wenige Zeilen enthält.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Das Rahmenformat des Rasters \(einer der <xref:System.Windows.Forms.BorderStyle>\-Enumerationswerte\).|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Die Hintergrundfarbe der Fensterbeschriftung des Datenblatts, die unmittelbar über dem Datenblatt angezeigt wird.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Die Schriftart, die für die Fensterbeschriftung über dem Raster verwendet wird.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Die Hintergrundfarbe der Fensterbeschriftung des Rasters.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|Die zur Anzeige des im Raster enthaltenen Textes verwendete Schriftart.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Die Farbe der Schrift, in der die Daten in den Zeilen des Datenblatts angezeigt werden.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Die Farbe der Rasterzeilen im Datenblatt.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Die Art der Linien zwischen den Zellen des Rasters, d. h. einer der <xref:System.Windows.Forms.DataGridLineStyle>\-Enumerationswerte.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Die Hintergrundfarbe von Zeilen\- und Spaltenüberschriften.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Die für Spaltenüberschriften verwendete Schriftart.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Die Vordergrundfarbe der Spaltenüberschriften des Rasters, einschließlich des Spaltenüberschriftentextes und der Plus\/Minus\-Symbole zum Erweitern und Reduzieren von Zeilen, wenn mehrere zusammengehörige Tabellen angezeigt werden.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Die Textfarbe aller Links innerhalb des Datenblatts, einschließlich der Links zu untergeordneten Tabellen, dem Relationsnamen usw.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Die Hintergrundfarbe der übergeordneten Zeilen in einer untergeordneten Tabelle.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Die Vordergrundfarbe der übergeordneten Zeilen in einer untergeordneten Tabelle.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Legt fest, ob die Tabellen\- und Spaltennamen in der übergeordneten Zeile angezeigt werden. Dazu wird die <xref:System.Windows.Forms.DataGridParentRowsLabelStyle>\-Enumeration verwendet.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Die Standardbreite der Spalten des Rasters in Pixel.  Legen Sie diese Eigenschaft fest, bevor Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft zurücksetzen \(entweder einzeln oder mit der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\-Methode\). Andernfalls kann die Eigenschaft nicht angewendet werden.<br /><br /> Für diese Eigenschaft kann kein geringerer Wert als 0 festgelegt werden.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Die Höhe der Zeilen des Rasters in Pixel.  Legen Sie diese Eigenschaft fest, bevor Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A>\-Eigenschaft und die <xref:System.Windows.Forms.DataGrid.DataMember%2A>\-Eigenschaft zurücksetzen \(entweder einzeln oder mit der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\-Methode\). Andernfalls kann die Eigenschaft nicht angewendet werden.<br /><br /> Für diese Eigenschaft kann kein geringerer Wert als 0 festgelegt werden.|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Die Breite der Zeilenüberschriften des Rasters.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Diese Hintergrundfarbe wird beim Auswählen von Zeilen oder Zellen verwendet.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Diese Vordergrundfarbe wird beim Auswählen von Zeilen oder Zellen verwendet.|  
+    |Eigenschaft|Beschreibung|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Die `BackColor` Eigenschaft definiert die Farbe der geraden Zeilen des Rasters. Beim Festlegen der <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> -Eigenschaft auf eine andere Farbe, jeder anderen Zeile in dieser neuen Farbe festgelegt ist (Zeilen 1, 3, 5 und So weiter).|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Die Hintergrundfarbe der geraden Zeilen des Rasters (Zeilen 0, 2, 4, 6 usw.).|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Während der <xref:System.Windows.Forms.DataGrid.BackColor%2A> und <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> Eigenschaften bestimmt die Farbe der Zeilen im Raster die <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> Eigenschaft bestimmt die Farbe des Bereichs außerhalb der Zeile, der ist nur sichtbar, wenn das Raster unten Bildlauf durchgeführt wird oder wenn nur wenige Zeilen sind im Raster enthalten.|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Die Rahmenart des Datenblatts, eines der <xref:System.Windows.Forms.BorderStyle> Enumerationswerte.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Farbe des Hintergrunds des Datenblatts fensterbeschriftung unmittelbar oberhalb des Rasters angezeigt wird.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Die Schriftart der Beschriftung oben im Raster.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Die Hintergrundfarbe der Beschriftung des Datenblatts.|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|Die Schriftart verwendet, um den Text im Raster anzuzeigen.|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Die Farbe der Schriftart an, durch die Daten in den Zeilen des Datenblatts angezeigt.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Die Farbe der Datenblattlinien des Datenblatts.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Der Stil der Linien zwischen den Zellen des Rasters, eines der <xref:System.Windows.Forms.DataGridLineStyle> Enumerationswerte.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Die Hintergrundfarbe von Zeilen- und Spaltenüberschriften.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Die für die Spaltenüberschriften verwendete Schriftart.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Die Vordergrundfarbe der Spaltenköpfe des Datenblatts, einschließlich der Spaltenkopftexte und das Pluszeichen (+) und Minuszeichen (-) Symbole zum Erweitern und Reduzieren von Zeilen, wenn mehrere Tabellen zusammengehörige werden angezeigt.|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Die Farbe des Texts für alle Verknüpfungen im Datenraster, einschließlich Links zu untergeordneten Tabellen, die Namen der Geschäftsbeziehung usw..|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|In einer untergeordneten Tabelle ist dies die Hintergrundfarbe der übergeordneten Zeilen.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|In einer untergeordneten Tabelle ist dies die Vordergrundfarbe der übergeordneten Zeilen.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Bestimmt, ob die Tabellen- und Spaltennamen in der übergeordneten Zeile, von der angezeigt werden die <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> Enumeration.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Die Standardbreite der Spalten des Rasters in Pixel. Legen Sie diese Eigenschaft vor dem Zurücksetzen der <xref:System.Windows.Forms.DataGrid.DataSource%2A> und <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaften (entweder einzeln oder über die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode), oder die Eigenschaft hat keine Auswirkung.<br /><br /> Die Eigenschaft kann nicht auf einen Wert kleiner als 0 festgelegt werden.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Die Zeilenhöhe (in Pixel) von Zeilen im Raster. Legen Sie diese Eigenschaft vor dem Zurücksetzen der <xref:System.Windows.Forms.DataGrid.DataSource%2A> und <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaften (entweder einzeln oder über die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode), oder die Eigenschaft hat keine Auswirkung.<br /><br /> Die Eigenschaft kann nicht auf einen Wert kleiner als 0 festgelegt werden.|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Die Breite der Zeilenheader des Rasters.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Wenn eine Zeile oder Zelle ausgewählt ist, ist dies die Farbe des Hintergrunds.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Wenn eine Zeile oder Zelle ausgewählt ist, ist dies die Vordergrundfarbe.|  
   
     > [!NOTE]
-    >  Wenn Sie Farben für die Steuerelemente anpassen, kann es vorkommen, dass diese nicht mehr aufgerufen werden können, weil nur eine geringe Anzahl von Farben zur Auswahl steht \(beispielsweise Rot und Grün\).  Sie können dieses Problem vermeiden, indem Sie die Farben aus der Palette **Systemfarben** verwenden.  
+    >  Wenn Sie die Farben der Steuerelemente anpassen, ist es möglich, das Steuerelement kann nicht zugegriffen werden aufgrund einer schlechten Farbauswahl (z. B. "Rot" und "Grün") ist. Verwenden Sie die Farben auf die **Systemfarben** Palette, um dieses Problem zu vermeiden.  
   
-     Für das folgende Verfahren ist ein <xref:System.Windows.Forms.DataGrid>\-Steuerelement erforderlich, das an eine Datentabelle gebunden ist.  Weitere Informationen finden Sie unter [Gewusst wie: Binden des DataGrid\-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     Das folgende Verfahren erfordert eine <xref:System.Windows.Forms.DataGrid> -Steuerelements an eine Datentabelle gebunden. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
-### So legen Sie das Tabellenformat und das Spaltenformat von Datentabellen zur Entwurfszeit fest  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Den Tabellen und Spalten einer Datentabelle zur Entwurfszeit fest  
   
-1.  Wählen Sie im Formular das <xref:System.Windows.Forms.DataGrid>\-Steuerelement aus.  
+1.  Wählen Sie die <xref:System.Windows.Forms.DataGrid> Steuerelement auf dem Formular.  
   
-2.  Wählen Sie im **Eigenschaftenfenster** die <xref:System.Windows.Forms.DataGrid.TableStyles%2A>\-Eigenschaft aus, und klicken Sie auf die Schaltfläche mit dem **Auslassungszeichen** \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\).  
+2.  In der **Eigenschaften** wählen die <xref:System.Windows.Forms.DataGrid.TableStyles%2A> -Eigenschaft, und klicken Sie auf die **Auslassungszeichen** (![von VisualStudioEllipsesButton] (../../../../docs/framework/winforms/media/vbellipsesbutton.png " VbEllipsesButton")) Schaltfläche.  
   
-3.  Klicken Sie im Dialogfeld **DataGridTableStyle\-Auflistungs\-Editor** auf **Hinzufügen**, um der Auflistung ein Tabellenformat hinzuzufügen.  
+3.  In der **DataGridTableStyle Auflistungs-Editor** (Dialogfeld), klicken Sie auf **hinzufügen** ein Tabellenformat in der Auflistung hinzu.  
   
-     Mit dem **DataGridTableStyle\-Auflistungs\-Editor** können Sie Tabellenformate hinzufügen und entfernen, Anzeige\- und Layouteigenschaften festlegen sowie den Zuordnungsnamen für die Tabellenformate festlegen.  
+     Mit der **DataGridTableStyle Auflistungs-Editor**, können Sie hinzufügen und Tabellenformate entfernen, Set-Anzeige und Layout-Eigenschaften und Set benennen Sie die Zuordnung für die Tabelle Stile.  
   
-4.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>\-Eigenschaft auf den Zuordnungsnamen der einzelnen Tabellenformate fest.  
+4.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> -Eigenschaft auf den Zuordnungsnamen für jede Tabellenformat.  
   
-     Der Zuordnungsname wird verwendet, um anzugeben, welches Tabellenformat für welche Tabelle zu verwenden ist.  
+     Der Zuordnungsname wird verwendet, um anzugeben, welche Tabellenformat für die Tabelle verwendet werden soll.  
   
-5.  Wählen Sie im **DataGridTableStyle\-Auflistungs\-Editor** die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>\-Eigenschaft aus, und klicken Sie auf die Schaltfläche mit dem Auslassungszeichen \(![VisualStudioEllipsesButton&#45;Bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\).  
+5.  In der **DataGridTableStyle Auflistungs-Editor**, wählen die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![von VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton ")).  
   
-6.  Fügen Sie dem erstellten Tabellenformat im Dialogfeld **DataGridColumnStyle\-Auflistungs\-Editor** Spaltenformate hinzu.  
+6.  In der **DataGridColumnStyle Auflistungs-Editor** Dialogfeld fügen Spaltenformate den Tabelle-Stil, die Sie erstellt haben.  
   
-     Im **DataGridColumnStyle\-Auflistungs\-Editor** können Sie Spaltenformate hinzufügen und entfernen, Anzeige\- und Layouteigenschaften sowie den Zuordnungsnamen und die Formatierungszeichenfolgen für die Datenspalten festlegen.  
+     Mit der **DataGridColumnStyle Auflistungs-Editor**, Sie können hinzufügen und entfernen Sie Spaltenformate, legen Sie Eigenschaften anzeigen und Layout und legen Sie den Zuordnungsnamen und Formatieren von Zeichenfolgen für die Daten Spalten.  
   
     > [!NOTE]
-    >  Weitere Informationen zu Formatierungszeichenfolgen finden Sie unter [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md).  
+    >  Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierung von Typen](../../../../docs/standard/base-types/formatting-types.md).  
   
-## Siehe auch  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid\-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [DataGrid\-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
