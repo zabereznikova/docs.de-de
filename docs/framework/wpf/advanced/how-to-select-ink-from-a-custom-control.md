@@ -1,97 +1,103 @@
 ---
-title: "Gewusst wie: Ausw&#228;hlen von Freihandeingaben aus einem benutzerdefinierten Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Steuerelemente, Freihandeingabenauswahl"
-  - "Benutzerdefinierte Steuerelemente, Freihandeingabenauswahl"
-  - "Freihandeingaben, Auswählen aus einem benutzerdefinierten Steuerelement"
+title: "Gewusst wie: Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], ink selection
+- ink [WPF], selecting from custom control
+- custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd9693209cc35ecd3c0473133b7c21639a239ff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# Gewusst wie: Ausw&#228;hlen von Freihandeingaben aus einem benutzerdefinierten Steuerelement
-Durch Hinzufügen eines <xref:System.Windows.Ink.IncrementalLassoHitTester> zu einem benutzerdefinierten Steuerelement können Sie ermöglichen, dass ein Benutzer Freihandeingaben mit einem Lassowerkzeug auswählen kann, ähnlich wie das Auswählen von Freihandeingaben mit einem Lasso bei <xref:System.Windows.Controls.InkCanvas>.  
+# <a name="how-to-select-ink-from-a-custom-control"></a><span data-ttu-id="9fdff-102">Gewusst wie: Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9fdff-102">How to: Select Ink from a Custom Control</span></span>
+<span data-ttu-id="9fdff-103">Durch Hinzufügen einer <xref:System.Windows.Ink.IncrementalLassoHitTester> an das benutzerdefinierte Steuerelement können Sie das Steuerelement aktivieren, damit ein Benutzer mit einem Lassowerkzeug, ähnlich wie die auswählen kann die <xref:System.Windows.Controls.InkCanvas> Freihandeingaben mit einem Lasso wählt.</span><span class="sxs-lookup"><span data-stu-id="9fdff-103">By adding an <xref:System.Windows.Ink.IncrementalLassoHitTester> to your custom control, you can enable your control so that a user can select ink with a lasso tool, similar to the way the <xref:System.Windows.Controls.InkCanvas> selects ink with a lasso.</span></span>  
   
- In diesem Beispiel wird davon ausgegangen, dass Sie mit dem Erstellen eines benutzerdefinierten Steuerelements für Freihandeingaben vertraut sind.  Informationen zum Erstellen eines benutzerdefinierten Steuerelements, das Freihandeingabe akzeptiert, finden Sie unter [Erstellen eines Freihandeingabesteuerelements](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+ <span data-ttu-id="9fdff-104">In diesem Beispiel wird davon ausgegangen, dass Sie mit Erstellen eines benutzerdefinierten Steuerelements in Freihandeingaben vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="9fdff-104">This example assumes you are familiar with creating an ink-enabled custom control.</span></span>  <span data-ttu-id="9fdff-105">Um ein benutzerdefiniertes Steuerelement zu erstellen, das Freihandeingaben akzeptiert, finden Sie unter [Erstellen eines Eingabesteuerelements Freihand-](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span><span class="sxs-lookup"><span data-stu-id="9fdff-105">To create a custom control that accepts ink input, see [Creating an Ink Input Control](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span></span>  
   
-## Beispiel  
- Beim Ziehen eines Lassos durch den Benutzer berechnet der <xref:System.Windows.Ink.IncrementalLassoHitTester>, welche Striche sich nach der Fertigstellung des Lassos innerhalb des Lassobereiches befinden werden.  Striche, die sich innerhalb des Lassobereiches befinden, gelten dabei als ausgewählt.  Die Auswahl von ausgewählten Strichen kann auch wieder aufgehoben werden.  Wenn der Benutzer zum Beispiel die Richtung umkehrt, während er das Lasso zieht, kann der <xref:System.Windows.Ink.IncrementalLassoHitTester> die Auswahl von Strichen wieder aufheben.  
+## <a name="example"></a><span data-ttu-id="9fdff-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9fdff-106">Example</span></span>  
+ <span data-ttu-id="9fdff-107">Wenn der Benutzer ein Lasso zeichnet die <xref:System.Windows.Ink.IncrementalLassoHitTester> vorhersagt, welche Striche innerhalb der Lassobereiches werden, nachdem der Benutzer das Lasso abgeschlossen hat.</span><span class="sxs-lookup"><span data-stu-id="9fdff-107">When the user draws a lasso, the <xref:System.Windows.Ink.IncrementalLassoHitTester> predicts which strokes will be within the lasso path's boundaries after the user completes the lasso.</span></span>  <span data-ttu-id="9fdff-108">Striche, die innerhalb der Lassobereiches bestimmt werden können als ausgewählt betrachtet werden.</span><span class="sxs-lookup"><span data-stu-id="9fdff-108">Strokes that are determined to be within the lasso path's boundaries can be thought of as being selected.</span></span>  <span data-ttu-id="9fdff-109">Ausgewählten Striche können auch wieder aufgehoben werden.</span><span class="sxs-lookup"><span data-stu-id="9fdff-109">Selected strokes can also become unselected.</span></span>  <span data-ttu-id="9fdff-110">Wenn der Benutzer während der Lasso Richtung kehrt z. B. die <xref:System.Windows.Ink.IncrementalLassoHitTester> möglicherweise einige Striche deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="9fdff-110">For example, if the user reverses direction while drawing the lasso, the <xref:System.Windows.Ink.IncrementalLassoHitTester> may unselect some strokes.</span></span>  
   
- Der <xref:System.Windows.Ink.IncrementalLassoHitTester> löst das <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged>\-Ereignis aus, sodass ein benutzerdefiniertes Steuerelement reagieren kann, während der Benutzer das Lasso zieht.  So können Sie zum Beispiel die Darstellung von Strichen ändern, wenn sie vom Benutzer ausgewählt werden oder ihre Auswahl wieder aufgehoben wird.  
+ <span data-ttu-id="9fdff-111">Die <xref:System.Windows.Ink.IncrementalLassoHitTester> löst die <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> Ereignis, das Ihr benutzerdefinierte Steuerelement reagieren, während der Benutzer das Lasso ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="9fdff-111">The <xref:System.Windows.Ink.IncrementalLassoHitTester> raises the <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> event, which enables your custom control to respond while the user is drawing the lasso.</span></span>  <span data-ttu-id="9fdff-112">Beispielsweise können Sie die Darstellung der Striche ändern, wie der Benutzer wählt und Ihre Auswahl wieder aufgehoben.</span><span class="sxs-lookup"><span data-stu-id="9fdff-112">For example, you can change the appearance of strokes as the user selects and unselects them.</span></span>  
   
-## Verwalten des Freihandmodus  
- Es ist für den Benutzer hilfreich, wenn das Lasso anders angezeigt wird, als die Freihandeingabe im Steuerelement.  Dazu muss das benutzerdefinierte Steuerelement verfolgen, ob der Benutzer Freihandeingaben durchführt oder auswählt.  Am einfachsten lässt sich dies erreichen, indem man eine Enumeration mit zwei Werten deklariert: Ein Wert zum Anzeigen, dass der Benutzer Freihandeingaben durchführt, und der andere Wert zum Anzeigen, dass der Benutzer Freihandeingaben auswählt.  
+## <a name="managing-the-ink-mode"></a><span data-ttu-id="9fdff-113">Verwalten des Freihandmodus</span><span class="sxs-lookup"><span data-stu-id="9fdff-113">Managing the Ink Mode</span></span>  
+ <span data-ttu-id="9fdff-114">Es ist für den Benutzer hilfreich, wenn das Lasso anders als die Freihandeingabe im Steuerelement angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="9fdff-114">It is helpful to the user if the lasso appears differently than the ink on your control.</span></span> <span data-ttu-id="9fdff-115">Um dies zu erreichen, das benutzerdefinierte Steuerelement muss Nachverfolgen von, ob der Benutzer schreibt oder Freihand auswählen.</span><span class="sxs-lookup"><span data-stu-id="9fdff-115">To accomplish this, your custom control must keep track of whether the user is writing or selecting ink.</span></span> <span data-ttu-id="9fdff-116">Die einfachste Möglichkeit hierzu ist, deklariert eine Enumeration mit zwei Werten: eine, um anzugeben, dass der Benutzer schreibt Freihand- und einen, um anzugeben, dass der Benutzer Freihandeingaben auswählt.</span><span class="sxs-lookup"><span data-stu-id="9fdff-116">The easiest way to do this is to declare an enumeration with two values: one to indicate that the user is writing ink and one to indicate that the user is selecting ink.</span></span>  
   
  [!code-csharp[HowToSelectInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#2)]
  [!code-vb[HowToSelectInk#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#2)]  
   
- Anschließend fügen Sie der Klasse zwei <xref:System.Windows.Ink.DrawingAttributes> hinzu: Eins, das verwendet werden soll, wenn der Benutzer Freihandeingaben durchführt, und das andere, wenn der Benutzer Freihandeingaben auswählt.  Initialisieren Sie im Konstruktor die <xref:System.Windows.Ink.DrawingAttributes>, und weisen Sie beide <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged>\-Ereignisse demselben Ereignishandler zu.  Legen Sie dann für die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A>\-Eigenschaft von <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die Freihandeingabe\-<xref:System.Windows.Ink.DrawingAttributes> fest.  
+ <span data-ttu-id="9fdff-117">Als Nächstes fügen Sie zwei <xref:System.Windows.Ink.DrawingAttributes> der Klasse: soll, wenn der Benutzer, soll Freihandeingaben, wenn der Benutzer Freihandeingaben auswählt.</span><span class="sxs-lookup"><span data-stu-id="9fdff-117">Next, add two <xref:System.Windows.Ink.DrawingAttributes> to the class: one to use when the user writes ink, one to use when the user selects ink.</span></span>  <span data-ttu-id="9fdff-118">Im Konstruktor initialisiert die <xref:System.Windows.Ink.DrawingAttributes> , und fügen Sie beide <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged> Ereignisse an den gleichen Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="9fdff-118">In the constructor, initialize the <xref:System.Windows.Ink.DrawingAttributes> and attach both <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged> events to the same event handler.</span></span> <span data-ttu-id="9fdff-119">Legen Sie dann die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A> Eigenschaft von der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die Ink <xref:System.Windows.Ink.DrawingAttributes>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-119">Then set the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A> property of the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the ink <xref:System.Windows.Ink.DrawingAttributes>.</span></span>  
   
  [!code-csharp[HowToSelectInk#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#3)]
  [!code-vb[HowToSelectInk#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#3)]  
 [!code-csharp[HowToSelectInk#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#4)]
 [!code-vb[HowToSelectInk#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#4)]  
   
- Fügen Sie eine Eigenschaft hinzu, die den Auswahlmodus verfügbar macht.  Wenn der Benutzer den Auswahlmodus ändert, legen Sie für die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A>\-Eigenschaft des <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> das entsprechende <xref:System.Windows.Ink.DrawingAttributes>\-Objekt fest, und fügen Sie dann die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A>\-Eigenschaft wieder dem <xref:System.Windows.Controls.InkPresenter> hinzu.  
+ <span data-ttu-id="9fdff-120">Fügen Sie eine Eigenschaft, die den Auswahlmodus verfügbar macht.</span><span class="sxs-lookup"><span data-stu-id="9fdff-120">Add a property that exposes the selection mode.</span></span> <span data-ttu-id="9fdff-121">Festgelegt, wenn der Benutzer den Auswahlmodus ändert, die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A> Eigenschaft von der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> an die entsprechende <xref:System.Windows.Ink.DrawingAttributes> Objekt, und verbinden Sie dann erneut die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> Eigenschaft, um die <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-121">When the user changes the selection mode, set the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.DrawingAttributes%2A> property of the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the appropriate <xref:System.Windows.Ink.DrawingAttributes> object and then reattach the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> Property to the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
  [!code-csharp[HowToSelectInk#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#5)]
  [!code-vb[HowToSelectInk#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#5)]  
   
- Machen Sie die <xref:System.Windows.Ink.DrawingAttributes> als Eigenschaften verfügbar, sodass Anwendungen die Darstellung von Freihandstrichen und Auswahlstrichen bestimmen können.  
+ <span data-ttu-id="9fdff-122">Verfügbarmachen der <xref:System.Windows.Ink.DrawingAttributes> als Eigenschaften, sodass Anwendungen die Darstellung der Freihandstriche und der Auswahl Striche ermitteln können.</span><span class="sxs-lookup"><span data-stu-id="9fdff-122">Expose the <xref:System.Windows.Ink.DrawingAttributes> as properties so applications can determine the appearance of the ink strokes and selection strokes.</span></span>  
   
  [!code-csharp[HowToSelectInk#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#6)]
  [!code-vb[HowToSelectInk#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#6)]  
   
- Wenn sich eine Eigenschaft eines <xref:System.Windows.Ink.DrawingAttributes>\-Objekts ändert, muss der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> dem <xref:System.Windows.Controls.InkPresenter> neu zugewiesen werden.  Weisen Sie im Ereignishandler für das <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged>\-Ereignis den <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> erneut dem <xref:System.Windows.Controls.InkPresenter> zu.  
+ <span data-ttu-id="9fdff-123">Wenn eine Eigenschaft einer <xref:System.Windows.Ink.DrawingAttributes> Objekts ändert, die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> erneut angefügt werden muss, um die <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-123">When a property of a <xref:System.Windows.Ink.DrawingAttributes> object changes, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> must be reattached to the <xref:System.Windows.Controls.InkPresenter>.</span></span>  <span data-ttu-id="9fdff-124">Im Ereignishandler für die <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged> Ereignis Anfügen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> auf die <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-124">In the event handler for the <xref:System.Windows.Ink.DrawingAttributes.AttributeChanged> event, reattach the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> to the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
  [!code-csharp[HowToSelectInk#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#7)]
  [!code-vb[HowToSelectInk#7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#7)]  
   
-## Verwenden von IncrementalLassoHitTester  
- Erstellen und initialisieren Sie eine <xref:System.Windows.Ink.StrokeCollection>, die die ausgewählten Striche enthält.  
+## <a name="using-the-incrementallassohittester"></a><span data-ttu-id="9fdff-125">Verwenden von IncrementalLassoHitTester</span><span class="sxs-lookup"><span data-stu-id="9fdff-125">Using the IncrementalLassoHitTester</span></span>  
+ <span data-ttu-id="9fdff-126">Erstellen und initialisieren Sie ein <xref:System.Windows.Ink.StrokeCollection> , das die ausgewählten Striche enthält.</span><span class="sxs-lookup"><span data-stu-id="9fdff-126">Create and initialize a <xref:System.Windows.Ink.StrokeCollection> that contains the selected strokes.</span></span>  
   
  [!code-csharp[HowToSelectInk#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#8)]
  [!code-vb[HowToSelectInk#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#8)]  
   
- Wenn der Benutzer beginnt, per Freihandeingabe oder per Lasso einen Strich zu ziehen, heben Sie die Auswahl aller aktuell ausgewählten Striche auf.  Erstellen Sie dann – wenn der Benutzer ein Lasso zieht – einen <xref:System.Windows.Ink.IncrementalLassoHitTester> durch Aufrufen von <xref:System.Windows.Ink.StrokeCollection.GetIncrementalLassoHitTester%2A>, abonnieren Sie das <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged>\-Ereignis, und rufen Sie <xref:System.Windows.Ink.IncrementalHitTester.AddPoints%2A> auf.  Dieser Code kann eine separate Methode sein und von der <xref:System.Windows.UIElement.OnStylusDown%2A>\-Methode und der <xref:System.Windows.UIElement.OnMouseDown%2A>\-Methode aufgerufen werden.  
+ <span data-ttu-id="9fdff-127">Wenn der Benutzer beginnt, einen Strich gezeichnet werden soll, deaktivieren Sie Freihand- oder Lasso ausgewählten Striche.</span><span class="sxs-lookup"><span data-stu-id="9fdff-127">When the user starts to draw a stroke, either ink or the lasso, unselect any selected strokes.</span></span> <span data-ttu-id="9fdff-128">Erstellen Sie Sie dann, wenn der Benutzer ein Lasso ist ein <xref:System.Windows.Ink.IncrementalLassoHitTester> durch Aufrufen von <xref:System.Windows.Ink.StrokeCollection.GetIncrementalLassoHitTester%2A>, abonnieren Sie die <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> Ereignis, und rufen <xref:System.Windows.Ink.IncrementalHitTester.AddPoints%2A>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-128">Then, if the user is drawing a lasso, create an <xref:System.Windows.Ink.IncrementalLassoHitTester> by calling <xref:System.Windows.Ink.StrokeCollection.GetIncrementalLassoHitTester%2A>, subscribe to the <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> event, and call <xref:System.Windows.Ink.IncrementalHitTester.AddPoints%2A>.</span></span> <span data-ttu-id="9fdff-129">Dieser Code kann eine separate Methode und aufgerufen werden aus der <xref:System.Windows.UIElement.OnStylusDown%2A> und <xref:System.Windows.UIElement.OnMouseDown%2A> Methoden.</span><span class="sxs-lookup"><span data-stu-id="9fdff-129">This code can be a separate method and called from the <xref:System.Windows.UIElement.OnStylusDown%2A> and <xref:System.Windows.UIElement.OnMouseDown%2A> methods.</span></span>  
   
  [!code-csharp[HowToSelectInk#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#9)]
  [!code-vb[HowToSelectInk#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#9)]  
   
- Fügen Sie die Tablettstiftpunkte zum <xref:System.Windows.Ink.IncrementalLassoHitTester> hinzu, während der Benutzer das Lasso zieht.  Rufen Sie die folgende Methode aus den Methoden <xref:System.Windows.UIElement.OnStylusMove%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, <xref:System.Windows.UIElement.OnMouseMove%2A> und <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> auf.  
+ <span data-ttu-id="9fdff-130">Hinzufügen der Tablettstift verweist auf die <xref:System.Windows.Ink.IncrementalLassoHitTester> während der Benutzer das Lasso zieht.</span><span class="sxs-lookup"><span data-stu-id="9fdff-130">Add the stylus points to the <xref:System.Windows.Ink.IncrementalLassoHitTester> while the user draws the lasso.</span></span>  <span data-ttu-id="9fdff-131">Rufen Sie die folgende Methode aus der <xref:System.Windows.UIElement.OnStylusMove%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, <xref:System.Windows.UIElement.OnMouseMove%2A>, und <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> Methoden.</span><span class="sxs-lookup"><span data-stu-id="9fdff-131">Call the following method from the <xref:System.Windows.UIElement.OnStylusMove%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, <xref:System.Windows.UIElement.OnMouseMove%2A>, and <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> methods.</span></span>  
   
  [!code-csharp[HowToSelectInk#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#10)]
  [!code-vb[HowToSelectInk#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#10)]  
   
- Verarbeiten Sie das <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged?displayProperty=fullName>\-Ereignis als Reaktion, wenn der Benutzer Striche auswählt oder deren Auswahl wieder aufhebt.  Die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs>\-Klasse verfügt über die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.SelectedStrokes%2A>\-Eigenschaft und die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.DeselectedStrokes%2A>\-Eigenschaft, die die Striche enthalten, die ausgewählt wurden bzw. deren Auswahl wieder aufgehoben wurde.  
+ <span data-ttu-id="9fdff-132">Behandeln der <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged?displayProperty=nameWithType> Ereignis reagiert, wenn der Benutzer wählt aus, und hebt die Auswahl Striche.</span><span class="sxs-lookup"><span data-stu-id="9fdff-132">Handle the <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged?displayProperty=nameWithType> event to respond when the user selects and unselects strokes.</span></span>  <span data-ttu-id="9fdff-133">Die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs> -Klasse verfügt über die <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.SelectedStrokes%2A> und <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.DeselectedStrokes%2A> Eigenschaften, die die Striche abgerufen werden, die ausgewählt wurden, und bzw..</span><span class="sxs-lookup"><span data-stu-id="9fdff-133">The <xref:System.Windows.Ink.LassoSelectionChangedEventArgs> class has the <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.SelectedStrokes%2A> and <xref:System.Windows.Ink.LassoSelectionChangedEventArgs.DeselectedStrokes%2A> properties that get the strokes that were selected and unselected, respectively.</span></span>  
   
  [!code-csharp[HowToSelectInk#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#11)]
  [!code-vb[HowToSelectInk#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#11)]  
   
- Wenn der Benutzer das Ziehen des Lasso beendet, kündigen Sie das Abonnement vom <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged>\-Ereignis, und rufen Sie <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> auf.  
+ <span data-ttu-id="9fdff-134">Wenn der Benutzer das Lasso hat, kündigen von Ereignisabonnements der <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> Ereignis, und rufen <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A>.</span><span class="sxs-lookup"><span data-stu-id="9fdff-134">When the user finishes drawing the lasso, unsubscribe from the <xref:System.Windows.Ink.IncrementalLassoHitTester.SelectionChanged> event and call <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A>.</span></span>  
   
  [!code-csharp[HowToSelectInk#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#12)]
  [!code-vb[HowToSelectInk#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#12)]  
   
-## Die Komponenten im Zusammenhang  
- Das folgende Beispiel zeigt ein benutzerdefiniertes Steuerelement, mit dem ein Benutzer Freihandeingaben mit einem Lasso auswählen kann.  
+## <a name="putting-it-all-together"></a><span data-ttu-id="9fdff-135">Platzieren sie alle zusammen.</span><span class="sxs-lookup"><span data-stu-id="9fdff-135">Putting it All Together.</span></span>  
+ <span data-ttu-id="9fdff-136">Im folgende Beispiel wird ein benutzerdefiniertes Steuerelement, mit der einen Benutzer mit einem Lasso auswählen kann.</span><span class="sxs-lookup"><span data-stu-id="9fdff-136">The following example is a custom control that enables a user to select ink with a lasso.</span></span>  
   
  [!code-csharp[HowToSelectInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToSelectInk/CSharp/InkSelector.cs#1)]
  [!code-vb[HowToSelectInk#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#1)]  
   
-## Siehe auch  
- <xref:System.Windows.Ink.IncrementalLassoHitTester>   
- <xref:System.Windows.Ink.StrokeCollection>   
- <xref:System.Windows.Input.StylusPointCollection>   
- [Erstellen eines Freihandeingabesteuerelements](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)
+## <a name="see-also"></a><span data-ttu-id="9fdff-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9fdff-137">See Also</span></span>  
+ <xref:System.Windows.Ink.IncrementalLassoHitTester>  
+ <xref:System.Windows.Ink.StrokeCollection>  
+ <xref:System.Windows.Input.StylusPointCollection>  
+ [<span data-ttu-id="9fdff-138">Erstellen eines Freihandeingabesteuerelements</span><span class="sxs-lookup"><span data-stu-id="9fdff-138">Creating an Ink Input Control</span></span>](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)
